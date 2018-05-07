@@ -1,13 +1,10 @@
 ---
-title: "Servery: Serverové položky | Microsoft Docs"
-ms.custom: 
+title: 'Servery: Serverové položky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-server-items"></a>Servery: Serverové položky
 Když kontejner spouští server tak, aby smí uživatel upravovat položky vložené nebo propojené OLE, je serverová aplikace vytvoří "položka serveru". Položka serveru, který je objektem třídy odvozené od `COleServerItem`, poskytuje rozhraní mezi dokumentu na serveru a aplikace kontejneru.  
@@ -36,7 +31,7 @@ Když kontejner spouští server tak, aby smí uživatel upravovat položky vlo�
   
  V [HIERSVR](../visual-cpp-samples.md) ukázkové, například třída položka na serveru, **CServerItem**, má člena, který je ukazatelem na objekt třídy **CServerNode**. **CServerNode** objektu je uzel v dokumentu HIERSVR aplikace, která je stromu. Když **CServerNode** objekt je kořenový uzel **CServerItem** objekt představuje celý dokument. Když **CServerNode** objekt je podřízený uzel, **CServerItem** objekt představuje část dokumentu. Viz ukázka MFC OLE [HIERSVR](../visual-cpp-samples.md) příklad této interakce.  
   
-##  <a name="_core_implementing_server_items"></a>Implementace položky na serveru  
+##  <a name="_core_implementing_server_items"></a> Implementace položky na serveru  
  Pokud použijete Průvodce aplikace k vytvoření "počáteční" kódu pro aplikace, všechny, které pokud chcete zahrnout položky na serveru do počáteční kód stačí je vyberte jednu z možností serveru na stránce možnosti OLE. Pokud přidáváte server položky do existující aplikace, proveďte následující kroky:  
   
 #### <a name="to-implement-a-server-item"></a>K implementaci položku serveru  
@@ -51,7 +46,7 @@ Když kontejner spouští server tak, aby smí uživatel upravovat položky vlo�
   
 4.  Implementace třídy položku serveru `OnGetExtent` – členská funkce. Volá rámec této funkci můžete načíst velikost položky. Výchozí implementace neprovede žádnou akci.  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a>Tip pro architekturu položka na serveru  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Tip pro architekturu položka na serveru  
  Jak jsme uvedli v [implementace položky na serveru](#_core_implementing_server_items), serverové aplikace musí být schopna vykreslit položky v zobrazení serveru i v metasoubory používá aplikace kontejneru. V knihovny serveru Microsoft Foundation Class architektury aplikací, zobrazení třídy na `OnDraw` – členská funkce vykreslí položka, pokud je upravována (najdete v části [CView::OnDraw](../mfc/reference/cview-class.md#ondraw) v *knihovny tříd* ). Položku serveru `OnDraw` vykreslí položky do metafile ve všech ostatních případech (viz [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
  Duplikace kódu se můžete vyhnout tak, že zápis pomocných funkcí v třídě serveru dokumentu a volání je z `OnDraw` funkce ve vaší třídy zobrazení a položka na serveru. Ukázka MFC OLE [HIERSVR](../visual-cpp-samples.md) používá tato strategie: funkce **CServerView::OnDraw** a **CServerItem::OnDraw** obě volání **CServerDoc::DrawTree**  k vykreslení položky.  

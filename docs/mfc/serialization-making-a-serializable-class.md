@@ -1,13 +1,10 @@
 ---
-title: "Serializace: Příprava serializovatelné třídy | Microsoft Docs"
-ms.custom: 
+title: 'Serializace: Příprava serializovatelné třídy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializace: Příprava serializovatelné třídy
 Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níže a vysvětlené v následujících částech:  
@@ -52,10 +47,10 @@ Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níž
   
  Když zavoláte `Serialize` přímo spíše než pomocí >> a << operátorů [CArchive](../mfc/reference/carchive-class.md), poslední tři kroky nejsou potřeba pro serializaci.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a>Odvození vaší třídy z objektu CObject  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Odvození vaší třídy z objektu CObject  
  Základní serializace protokol a funkce jsou definovány v `CObject` třídy. Odvozené třídě z `CObject` (nebo z třídy odvozené od `CObject`), jak je znázorněno v následující deklaraci třídy `CPerson`, získáte přístup k serializaci protokol a funkce `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a>Přepsání serializaci – členská funkce  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Přepsání serializaci – členská funkce  
  `Serialize` Členská funkce, která je definována v `CObject` třídy, je zodpovědný za ve skutečnosti serializaci data potřebná k zachycení aktuální stav daného objektu. `Serialize` Funkce má `CArchive` argument, který používá ke čtení a zápis dat objektů. [CArchive](../mfc/reference/carchive-class.md) objekt má členské funkce, `IsStoring`, která označuje, zda `Serialize` je ukládání (zápis dat) nebo načtení (čtení dat). Pomocí výsledků `IsStoring` jako vodítko, můžete buď vložit data tohoto objektu v `CArchive` objektu s operátorem vložení (**<\<**) nebo extrahovat data s operátorem extrakce ( **>>**).  
   
  Vezměte v úvahu třídu, která je odvozená od `CObject` a má dva nové proměnné členů typů `CString` a **WORD**. Následující fragment deklaraci třídy ukazuje nového člena proměnné a deklarace pro přepsané `Serialize` – členská funkce:  
@@ -74,12 +69,12 @@ Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níž
   
  Můžete také [CArchive::Read](../mfc/reference/carchive-class.md#read) a [CArchive::Write](../mfc/reference/carchive-class.md#write) členské funkce pro čtení a zápis velkých objemů dat bez typu.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a>Pomocí declare_serial – makro  
+##  <a name="_core_using_the_declare_serial_macro"></a> Pomocí declare_serial – makro  
  `DECLARE_SERIAL` Makro je nutné v deklaraci třídy, které budou podporovat serializace, jak je vidět tady:  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a>Definování konstruktor bez argumentů.  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Definování konstruktor bez argumentů.  
  MFC vyžaduje výchozí konstruktor, pokud jej znovu vytvoří vašich objektů, jako jejich se deserializovat (načten z disku). Proces deserializace všechny proměnné členů vyplní hodnoty požadované znovu vytvořit objekt.  
   
  Veřejné, chráněný nebo privátní lze deklarovat tento konstruktor. Pokud provedete je chráněný nebo privátních, pomůže vám, ujistěte se, že se bude použit pouze pomocí funkce serializace. Konstruktor musíte umístit objekt ve stavu, který mohou být odstraněn v případě potřeby.  
@@ -87,7 +82,7 @@ Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níž
 > [!NOTE]
 >  Pokud zapomenete zadat konstruktor bez argumentů ve třídě, která používá `DECLARE_SERIAL` a `IMPLEMENT_SERIAL` makra, zobrazí se upozornění kompilátoru "žádný výchozí konstruktor dostupný" na řádku kde `IMPLEMENT_SERIAL` makro se používá.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a>V souboru implementace pomocí implement_serial – makro  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> V souboru implementace pomocí implement_serial – makro  
  `IMPLEMENT_SERIAL` Makro se používá k definování různých funkcí, třeba při odvozování serializovatelné třídy z `CObject`. Použití tohoto makra v souboru implementace (. CPP) pro třídu. První dva argumenty, které mají makro jsou název třídy a název své okamžitou základní třídy.  
   
  Třetí argument toto makro je číslo schématu. Číslo schématu je v podstatě číslo verze pro objekty třídy. Použijte celé číslo větší než nebo rovna 0 pro číslo schématu. (Nezaměňujte toto číslo schématu s terminologie databáze.)  

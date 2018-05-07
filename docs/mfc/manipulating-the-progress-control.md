@@ -1,13 +1,10 @@
 ---
-title: "Manipulace s ovládacím prvkem průběh | Microsoft Docs"
-ms.custom: 
+title: Manipulace s ovládacím prvkem průběh | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>Manipulace s ovládacím prvkem průběh
 Existují tři způsoby, jak změnit aktuální pozici ovládací prvek průběh ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
@@ -45,11 +40,11 @@ Existují tři způsoby, jak změnit aktuální pozici ovládací prvek průběh
 2.  Použití [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) – členská funkce se zvýší pozici. To způsobí, že k překreslit ovládacího prvku.  
   
     > [!NOTE]
-    >  `StepIt`způsobí, že pozice zabalit. Například zadaný rozsah 1 -100, krok 20 a pozice 90 `StepIt` nastaví pozici na hodnotu 10.  
+    >  `StepIt` způsobí, že pozice zabalit. Například zadaný rozsah 1 -100, krok 20 a pozice 90 `StepIt` nastaví pozici na hodnotu 10.  
   
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Chcete-li změnit umístění pomocí libovolné množství  
   
-1.  Použití [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) – členská funkce chcete změnit umístění. `OffsetPos`přijme záporné hodnoty.  
+1.  Použití [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) – členská funkce chcete změnit umístění. `OffsetPos` přijme záporné hodnoty.  
   
     > [!NOTE]
     >  `OffsetPos`, na rozdíl od `StepIt`, nebude zabalení pozici. Nové pozice se upraví zůstat v rozsahu.  

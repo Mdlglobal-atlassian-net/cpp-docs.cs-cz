@@ -1,13 +1,10 @@
 ---
-title: "Třídy objektů Factory a licencování | Microsoft Docs"
-ms.custom: 
+title: Třídy objektů Factory a licencování | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>Objekty pro vytváření tříd a licencování
 K vytvoření instance ovládacího prvku OLE, zavolá aplikace kontejneru členské funkce ovládacího prvku třídy objektu pro vytváření. Vlastní ovládací prvek je skutečný objekt OLE, objektu pro vytváření tříd je zodpovědný za vytváření instancí ovládacího prvku. Třída ovládacích prvků každé OLE musí mít objekt pro vytváření tříd.  
@@ -44,7 +39,7 @@ K vytvoření instance ovládacího prvku OLE, zavolá aplikace kontejneru člen
 |[END_OLEFACTORY –](#end_olefactory)|Ukončí deklaraci všechny funkce správy licencí.|  
 |[Afxverifylicfile –](#afxverifylicfile)|Ověřuje, zda je ovládací prvek licenci pro použití v určitém počítači.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX –  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX –  
  Deklaruje objekt pro vytváření tříd a `GetClassID` funkce člena třídy ovládacího prvku.  
   
 ```   
@@ -65,7 +60,7 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX –  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX –  
  Implementuje objekt pro vytváření tříd ovládacího prvku a [Funkce GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) funkce člena třídy ovládacího prvku.  
   
 ```   
@@ -101,7 +96,7 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY –  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY –  
  Zahájí deklarace objektu pro vytváření vaší třídy v záhlaví souboru třídy ovládacího prvku.  
   
 ``` 
@@ -118,7 +113,7 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY –  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY –  
  Ukončí deklarace objektu pro vytváření tříd ovládacího prvku.  
   
 ```  
@@ -132,7 +127,7 @@ END_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>Afxverifylicfile –  
+##  <a name="afxverifylicfile"></a>  Afxverifylicfile –  
  Volání této funkce můžete ověřit, že licenční soubor s názvem podle `pszLicFileName` je platný pro ovládací prvek OLE.  
   
 ```   

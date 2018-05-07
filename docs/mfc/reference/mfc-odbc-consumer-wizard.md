@@ -1,13 +1,10 @@
 ---
-title: "Průvodce příjemcem knihovny MFC rozhraní ODBC | Microsoft Docs"
-ms.custom: 
+title: Průvodce příjemcem knihovny MFC rozhraní ODBC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9e4aeb15d2af04987883b6554d569e3cc16b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8a707df6878cd0031cb2ec9b06285e568503992
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Průvodce příjemcem knihovny MFC ODBC
 Sem vložte "Search" shrnutí výsledků.  
@@ -42,7 +37,7 @@ Sem vložte "Search" shrnutí výsledků.
      Chcete-li vytvořit nový soubor zdroje dat z tohoto dialogového okna, klikněte na tlačítko `New` k zadání názvu DSN; **vytvořit nový zdroj dat** zobrazí se dialogové okno. V **vytvořit nový zdroj dat** dialogovém okně vyberte příslušný ovladač a klikněte na tlačítko `Next`; klikněte na tlačítko **Procházet**a vyberte název souboru, který se použije jako zdroj dat (budete muset vybrat "všechny soubory. zobrazení bez DSN soubory, jako jsou soubory XLS); Klikněte na tlačítko `Next`a potom klikněte na **Dokončit**. (Pokud jste vybrali soubor názvu DSN, zobrazí se ovladačem dialogového okna, jako je například "Nastavení rozhraní ODBC Microsoft Excel," který převede soubor názvu DSN.)  
   
     > [!NOTE]
-    >  Můžete také vytvořit nový zdroj dat souboru předem pomocí Správce zdrojů dat ODBC. Z **spustit** nabídce vyberte možnost **nastavení**, **ovládací panely**, **nástroje pro správu**, **datové zdroje (ODBC)**a potom **správce zdrojů dat ODBC**.  
+    >  Můžete také vytvořit nový zdroj dat souboru předem pomocí Správce zdrojů dat ODBC. Z **spustit** nabídce vyberte možnost **nastavení**, **ovládací panely**, **nástroje pro správu**, **datové zdroje (ODBC)** a potom **správce zdrojů dat ODBC**.  
   
      **Název DSN** pole můžete zadat název pro zdroj dat souboru. Je nutné zajistit, že název DSN končí příslušnou příponu souboru, například .xls souborů aplikace Excel nebo .mdb pro přístup k souborům.  
   

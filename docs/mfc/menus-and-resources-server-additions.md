@@ -1,13 +1,10 @@
 ---
-title: "Nabídky a prostředky: serverové doplňky | Microsoft Docs"
-ms.custom: 
+title: 'Nabídky a prostředky: serverové doplňky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 dev_langs:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7aaf4a087fbcfc28686e7ec8d2411d6f7531466
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy (součást). Serverová aplikace požaduje mnoho doplňky strukturu nabídky a jiné prostředky, protože může být spuštěno v jednom ze tří režimů: stát samostatného embedded, nebo na místě. Jak je popsáno v [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) článek, jsou maximálně čtyři sady nabídky. Všechny čtyři se používají pro aplikace MDI úplný server při pouze tři se používají pro miniserver. V Průvodce vytvořením aplikace vytvoří rozložení nabídky potřebné pro typ serveru, který má být. Některé přizpůsobení může být nutné.  
@@ -53,7 +48,7 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
 -   [Přidání miniserver](#_core_mini.2d.server_additions)  
   
-##  <a name="_core_server_menu_additions"></a>Přidání serveru do nabídky  
+##  <a name="_core_server_menu_additions"></a> Přidání serveru do nabídky  
  Aplikace serveru (součást) musí mít prostředků nabídky přidaná kvůli podpoře úpravy s náhledem OLE. Není nutné změnit v nabídkách používá při spuštění aplikace v samostatném režimu, ale před vytvořením aplikace musíte přidat dva nové nabídky prostředky: jednu pro podporu aktivace na místě a jeden pro podporu serveru, se plně otevřené. Obě nabídky prostředky jsou používány úplné a miniserver aplikace.  
   
 -   Kvůli podpoře aktivace na místě, je nutné vytvořit nabídky prostředek, který je velmi podobný prostředků nabídky použitou při spuštění v samostatném režimu. Rozdíl v této nabídce je, že chybí soubor a okno položky (a všechny ostatní položky nabídky, které pracují s aplikace a nikoli data). Kontejner aplikace bude zadejte tyto položky nabídky. Další informace o a příklad, tato technika slučování nabídek, najdete v článku [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).  
@@ -62,21 +57,21 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
  Kromě změn uvedené v tomto článku musí obsahovat AFXOLESV souboru prostředků. RC, který je nutný k provedení Microsoft Foundation Class Library. Tento soubor je v podadresáři MFC\Include.  
   
-##  <a name="_core_server_application_accelerator_table_additions"></a>Přidání tabulka akcelerátoru aplikace serveru  
+##  <a name="_core_server_application_accelerator_table_additions"></a> Přidání tabulka akcelerátoru aplikace serveru  
  Dva nové prostředky tabulky akcelerátorů musí být přidaný do serverové aplikace; Tyto nekorespondují přímo do nové nabídky prostředky, které se popisuje výš. První tabulky akcelerátorů se používá, pokud je serverová aplikace aktivován na místě. Obsahuje všechny položky v tabulce akcelerátorů zobrazení s výjimkou těch, které svázané k souboru a okno nabídky.  
   
  Druhá tabulka je téměř přesnou kopii tabulky akcelerátorů tohoto zobrazení. Případné rozdíly paralelní změny provedené ve plně otevřít nabídku uvedený v [přidání serveru do nabídky](#_core_server_menu_additions).  
   
  Příklad těchto změn tabulky akcelerátorů porovnat **IDR_HIERSVRTYPE_SRVR_IP** a **IDR_HIERSVRTYPE_SRVR_EMB** akcelerátoru tabulky s **IDR_MAINFRAME** v HIERSVR. RC soubor zahrnutý v ukázce MFC OLE [HIERSVR](../visual-cpp-samples.md). Souborová služba a okno akcelerátorů chybí z tabulky na místě a přesné kopie jsou v vložené tabulky.  
   
-##  <a name="_core_string_table_additions_for_server_applications"></a>Přidání tabulky řetězec pro serverové aplikace  
+##  <a name="_core_string_table_additions_for_server_applications"></a> Přidání tabulky řetězec pro serverové aplikace  
  Přidání pouze jeden řetězec tabulky je nutné v serveru aplikace – řetězec tak, aby označily, že inicializace OLE se nezdařila. Jako příklad uvádíme tabulky řetězců položku, která generuje Průvodce aplikací:  
   
 |ID|String|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED –**|Nepodařilo se inicializovat OLE. Ujistěte se, že jsou knihoven OLE správná verze.|  
   
-##  <a name="_core_mini.2d.server_additions"></a>Přidání miniserver  
+##  <a name="_core_mini.2d.server_additions"></a> Přidání miniserver  
  Přidání stejné platí pro miniservers jako uvedených výše pro úplné servery. Protože miniserver nelze spustit v samostatném režimu, je mnohem menší jeho hlavní nabídky. V hlavní nabídce vytvořené průvodcem aplikací má pouze nabídku souborů, obsahující pouze položky ukončení a o. Vložené a místní nabídky a akcelerátorů pro miniservers jsou stejné jako v případě úplné servery.  
   
 ## <a name="see-also"></a>Viz také  

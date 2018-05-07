@@ -1,12 +1,9 @@
 ---
-title: "Třída CDockingPanesRow | Microsoft Docs"
-ms.custom: 
+title: Třída CDockingPanesRow | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockingPanesRow
@@ -99,17 +96,15 @@ helpviewer_keywords:
 - CDockingPanesRow [MFC], ShowPane
 - CDockingPanesRow [MFC], UpdateVisibleState
 ms.assetid: e7a17832-0ebb-4bce-b799-cec9b60f76fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8cb38c8ad5f744cab49c25d8de9c7cea58959a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43372dd34088b8adda3f5fc8a9f5573695f0c93c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow – třída
 Spravuje seznam podokna, které se nacházejí ve stejném vodorovné nebo svislé řádku (sloupec) lokality ukotvení.  
@@ -178,7 +173,7 @@ class CDockingPanesRow : public CObject
 |[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||  
   
 ## <a name="remarks"></a>Poznámky  
- `CDockingPanesRow`objekty jsou vytvořené interně pomocí ukotvení objekty lokality.  
+ `CDockingPanesRow` objekty jsou vytvořené interně pomocí ukotvení objekty lokality.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak získat `CDockingPanesRow` objektu z `CMFCAutoHideBar` objektu.  
@@ -193,7 +188,7 @@ class CDockingPanesRow : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxDockingPanesRow.h  
   
-##  <a name="addpane"></a>CDockingPanesRow::AddPane  
+##  <a name="addpane"></a>  CDockingPanesRow::AddPane  
 
   
 ```  
@@ -205,14 +200,14 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
- [v]`dockMethod`  
- [v]`lpRect`  
- [v]`bAddLast`  
+ [v] `pControlBar`  
+ [v] `dockMethod`  
+ [v] `lpRect`  
+ [v] `bAddLast`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addpanefromrow"></a>CDockingPanesRow::AddPaneFromRow  
+##  <a name="addpanefromrow"></a>  CDockingPanesRow::AddPaneFromRow  
 
   
 ```  
@@ -222,12 +217,12 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
- [v]`dockMethod`  
+ [v] `pControlBar`  
+ [v] `dockMethod`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="arrangepanes"></a>CDockingPanesRow::ArrangePanes  
+##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
  Uspořádá ukotvení podokna v řádku podle zadaný okraj a mezer parametry.  
   
 ```  
@@ -237,16 +232,16 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nMargin`  
+ [v] `nMargin`  
  Určuje posun v pixelech podokně první z levého horního rohu řádku.  
   
- [v]`nSpacing`  
+ [v] `nSpacing`  
  Určuje mezery, v pixelech, mezi podokna.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem uspořádání podoken v řádku, kde bude ukotvení. Po volání metody tuto metodu, musí volat `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
   
-##  <a name="calcfixedlayout"></a>CDockingPanesRow::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 
   
 ```  
@@ -256,14 +251,14 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bStretch`  
- [v]`bHorz`  
+ [v] `bStretch`  
+ [v] `bHorz`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="cdockingpanesrow"></a>CDockingPanesRow::CDockingPanesRow  
+##  <a name="cdockingpanesrow"></a>  CDockingPanesRow::CDockingPanesRow  
 
   
 ```  
@@ -274,13 +269,13 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentDockBar`  
- [v]`nOffset`  
- [v]`nHeight`  
+ [v] `pParentDockBar`  
+ [v] `nOffset`  
+ [v] `nHeight`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="create"></a>CDockingPanesRow::Create  
+##  <a name="create"></a>  CDockingPanesRow::Create  
 
   
 ```  
@@ -291,7 +286,7 @@ virtual BOOL Create();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="expandstretchedpanes"></a>CDockingPanesRow::ExpandStretchedPanes  
+##  <a name="expandstretchedpanes"></a>  CDockingPanesRow::ExpandStretchedPanes  
 
   
 ```  
@@ -300,7 +295,7 @@ void ExpandStretchedPanes();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="expandstretchedpanesrect"></a>CDockingPanesRow::ExpandStretchedPanesRect  
+##  <a name="expandstretchedpanesrect"></a>  CDockingPanesRow::ExpandStretchedPanesRect  
 
   
 ```  
@@ -309,7 +304,7 @@ void ExpandStretchedPanesRect();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="fixupvirtualrects"></a>CDockingPanesRow::FixupVirtualRects  
+##  <a name="fixupvirtualrects"></a>  CDockingPanesRow::FixupVirtualRects  
 
   
 ```  
@@ -319,12 +314,12 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bMoveBackToVirtualRect`  
- [v]`pBarToExclude`  
+ [v] `bMoveBackToVirtualRect`  
+ [v] `pBarToExclude`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getavailablelength"></a>CDockingPanesRow::GetAvailableLength  
+##  <a name="getavailablelength"></a>  CDockingPanesRow::GetAvailableLength  
 
   
 ```  
@@ -332,13 +327,13 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bUseVirtualRect`  
+ [v] `bUseVirtualRect`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getavailablespace"></a>CDockingPanesRow::GetAvailableSpace  
+##  <a name="getavailablespace"></a>  CDockingPanesRow::GetAvailableSpace  
 
   
 ```  
@@ -346,11 +341,11 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getclientrect"></a>CDockingPanesRow::GetClientRect  
+##  <a name="getclientrect"></a>  CDockingPanesRow::GetClientRect  
 
   
 ```  
@@ -358,11 +353,11 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getdocksite"></a>CDockingPanesRow::GetDockSite  
+##  <a name="getdocksite"></a>  CDockingPanesRow::GetDockSite  
 
   
 ```  
@@ -373,7 +368,7 @@ CDockSite* GetDockSite() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getextraspace"></a>CDockingPanesRow::GetExtraSpace  
+##  <a name="getextraspace"></a>  CDockingPanesRow::GetExtraSpace  
 
   
 ```  
@@ -384,7 +379,7 @@ int GetExtraSpace() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getgroupfrompane"></a>CDockingPanesRow::GetGroupFromPane  
+##  <a name="getgroupfrompane"></a>  CDockingPanesRow::GetGroupFromPane  
 
   
 ```  
@@ -394,12 +389,12 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
- [v]`lst`  
+ [v] `pBar`  
+ [v] `lst`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getid"></a>CDockingPanesRow::GetID  
+##  <a name="getid"></a>  CDockingPanesRow::GetID  
 
   
 ```  
@@ -410,7 +405,7 @@ int GetID() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getmaxpanesize"></a>CDockingPanesRow::GetMaxPaneSize  
+##  <a name="getmaxpanesize"></a>  CDockingPanesRow::GetMaxPaneSize  
 
   
 ```  
@@ -418,13 +413,13 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bSkipHiddenBars`  
+ [v] `bSkipHiddenBars`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getpanecount"></a>CDockingPanesRow::GetPaneCount  
+##  <a name="getpanecount"></a>  CDockingPanesRow::GetPaneCount  
 
   
 ```  
@@ -435,7 +430,7 @@ int GetPaneCount() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getpanelist"></a>CDockingPanesRow::GetPaneList  
+##  <a name="getpanelist"></a>  CDockingPanesRow::GetPaneList  
 
   
 ```  
@@ -446,7 +441,7 @@ const CObList& GetPaneList() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getrowalignment"></a>CDockingPanesRow::GetRowAlignment  
+##  <a name="getrowalignment"></a>  CDockingPanesRow::GetRowAlignment  
 
   
 ```  
@@ -457,7 +452,7 @@ DWORD GetRowAlignment() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getrowheight"></a>CDockingPanesRow::GetRowHeight  
+##  <a name="getrowheight"></a>  CDockingPanesRow::GetRowHeight  
 
   
 ```  
@@ -468,7 +463,7 @@ int GetRowHeight() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getrowoffset"></a>CDockingPanesRow::GetRowOffset  
+##  <a name="getrowoffset"></a>  CDockingPanesRow::GetRowOffset  
 
   
 ```  
@@ -479,7 +474,7 @@ int GetRowOffset() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getvisiblecount"></a>CDockingPanesRow::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CDockingPanesRow::GetVisibleCount  
 
   
 ```  
@@ -490,7 +485,7 @@ virtual int GetVisibleCount();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getwindowrect"></a>CDockingPanesRow::GetWindowRect  
+##  <a name="getwindowrect"></a>  CDockingPanesRow::GetWindowRect  
 
   
 ```  
@@ -498,11 +493,11 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="haspane"></a>CDockingPanesRow::HasPane  
+##  <a name="haspane"></a>  CDockingPanesRow::HasPane  
 
   
 ```  
@@ -510,13 +505,13 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
+ [v] `pControlBar`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isempty"></a>CDockingPanesRow::IsEmpty  
+##  <a name="isempty"></a>  CDockingPanesRow::IsEmpty  
 
   
 ```  
@@ -527,7 +522,7 @@ virtual BOOL IsEmpty() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isexclusiverow"></a>CDockingPanesRow::IsExclusiveRow  
+##  <a name="isexclusiverow"></a>  CDockingPanesRow::IsExclusiveRow  
 
   
 ```  
@@ -538,7 +533,7 @@ virtual BOOL IsExclusiveRow() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ishorizontal"></a>CDockingPanesRow::IsHorizontal  
+##  <a name="ishorizontal"></a>  CDockingPanesRow::IsHorizontal  
 
   
 ```  
@@ -549,7 +544,7 @@ bool IsHorizontal() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isvisible"></a>CDockingPanesRow::IsVisible  
+##  <a name="isvisible"></a>  CDockingPanesRow::IsVisible  
 
   
 ```  
@@ -560,7 +555,7 @@ virtual BOOL IsVisible() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="move"></a>CDockingPanesRow::Move  
+##  <a name="move"></a>  CDockingPanesRow::Move  
 
   
 ```  
@@ -568,11 +563,11 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nOffset`  
+ [v] `nOffset`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="movepane"></a>CDockingPanesRow::MovePane  
+##  <a name="movepane"></a>  CDockingPanesRow::MovePane  
 
   
 ```  
@@ -603,18 +598,18 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
- [v]`ptOffset`  
- [v]`bSwapControlBars`  
- [v]`hdwp`  
- [v]`rectTarget`  
- [v]`nOffset`  
- [v]`bForward`  
- [v]`nAbsolutOffset`  
+ [v] `pControlBar`  
+ [v] `ptOffset`  
+ [v] `bSwapControlBars`  
+ [v] `hdwp`  
+ [v] `rectTarget`  
+ [v] `nOffset`  
+ [v] `bForward`  
+ [v] `nAbsolutOffset`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onresizepane"></a>CDockingPanesRow::OnResizePane  
+##  <a name="onresizepane"></a>  CDockingPanesRow::OnResizePane  
 
   
 ```  
@@ -622,11 +617,11 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
+ [v] `pControlBar`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="redrawall"></a>CDockingPanesRow::RedrawAll  
+##  <a name="redrawall"></a>  CDockingPanesRow::RedrawAll  
 
   
 ```  
@@ -635,7 +630,7 @@ void RedrawAll();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removepane"></a>CDockingPanesRow::RemovePane  
+##  <a name="removepane"></a>  CDockingPanesRow::RemovePane  
 
   
 ```  
@@ -643,11 +638,11 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
+ [v] `pControlBar`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="replacepane"></a>CDockingPanesRow::ReplacePane  
+##  <a name="replacepane"></a>  CDockingPanesRow::ReplacePane  
 
   
 ```  
@@ -657,14 +652,14 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBarOld`  
- [v]`pBarNew`  
+ [v] `pBarOld`  
+ [v] `pBarNew`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="repositionpanes"></a>CDockingPanesRow::RepositionPanes  
+##  <a name="repositionpanes"></a>  CDockingPanesRow::RepositionPanes  
 
   
 ```  
@@ -676,14 +671,14 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rectNewParentBarArea`  
- [v]`nSide`  
- [v]`bExpand`  
- [v]`nOffset`  
+ [v] `rectNewParentBarArea`  
+ [v] `nSide`  
+ [v] `bExpand`  
+ [v] `nOffset`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="resize"></a>CDockingPanesRow::Resize  
+##  <a name="resize"></a>  CDockingPanesRow::Resize  
 
   
 ```  
@@ -691,13 +686,13 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nOffset`  
+ [v] `nOffset`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="resizebypanedivider"></a>CDockingPanesRow::ResizeByPaneDivider  
+##  <a name="resizebypanedivider"></a>  CDockingPanesRow::ResizeByPaneDivider  
 
   
 ```  
@@ -705,13 +700,13 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`int`  
+ [v] `int`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="screentoclient"></a>CDockingPanesRow::ScreenToClient  
+##  <a name="screentoclient"></a>  CDockingPanesRow::ScreenToClient  
 
   
 ```  
@@ -719,11 +714,11 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setextra"></a>CDockingPanesRow::SetExtra  
+##  <a name="setextra"></a>  CDockingPanesRow::SetExtra  
 
   
 ```  
@@ -733,12 +728,12 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nExtraSpace`  
- [v]`rowExtraAlign`  
+ [v] `nExtraSpace`  
+ [v] `rowExtraAlign`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="showdocksiterow"></a>CDockingPanesRow::ShowDockSiteRow  
+##  <a name="showdocksiterow"></a>  CDockingPanesRow::ShowDockSiteRow  
 
   
 ```  
@@ -748,12 +743,12 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bShow`  
- [v]`bDelay`  
+ [v] `bShow`  
+ [v] `bDelay`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="showpane"></a>CDockingPanesRow::ShowPane  
+##  <a name="showpane"></a>  CDockingPanesRow::ShowPane  
 
   
 ```  
@@ -764,15 +759,15 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pControlBar`  
- [v]`bShow`  
- [v]`bDelay`  
+ [v] `pControlBar`  
+ [v] `bShow`  
+ [v] `bDelay`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="updatevisiblestate"></a>CDockingPanesRow::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>  CDockingPanesRow::UpdateVisibleState  
 
   
 ```  
@@ -780,7 +775,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bDelay`  
+ [v] `bDelay`  
   
 ### <a name="remarks"></a>Poznámky  
   

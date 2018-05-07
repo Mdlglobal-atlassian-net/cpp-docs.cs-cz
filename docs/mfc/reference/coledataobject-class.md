@@ -1,12 +1,9 @@
 ---
-title: "Třída COleDataObject | Microsoft Docs"
-ms.custom: 
+title: Třída COleDataObject | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataObject
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledataobject-class"></a>COleDataObject – třída
 Používá se v přenosech souborů pro načítání dat v různých formátech ze schránky, prostřednictvím přetažení, nebo z vložené položky OLE.  
@@ -82,7 +77,7 @@ class COleDataObject
 |[COleDataObject::Release](#release)|Umožňuje odpojit a uvolní přidruženého `IDataObject` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `COleDataObject`nemá základní třídu.  
+ `COleDataObject` nemá základní třídu.  
   
  Tyto typy přenosů dat patří zdroj a cíl. Zdroj dat je implementovaný jako objekt [coledatasource –](../../mfc/reference/coledatasource-class.md) třídy. Vždy, když cílová aplikace obsahuje data vyřadit v ní nebo se zobrazí výzva k provedení operace vložte ze schránky, objekt `COleDataObject` musí vytvořit třídu.  
   
@@ -98,7 +93,7 @@ class COleDataObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>  COleDataObject::Attach  
  Volání této funkce pro přidružení `COleDataObject` objektu s objektem dat OLE.  
   
 ```  
@@ -117,7 +112,7 @@ void Attach(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) ve Windows SDK.  
   
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  Volání této funkce připojit datový objekt, který je aktuálně ze schránky do `COleDataObject` objektu.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  Volání této funkce zamkne schránky, dokud tento objekt dat vydání. V destruktoru pro vydání datový objekt `COleDataObject`. Další informace najdete v tématu [Modul OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) a [Modul CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) v dokumentaci Win32.  
   
-##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  Volání této funkce připravte následující volání `GetNextFormat` pro načtení seznamu formáty dat z položky.  
   
 ```  
@@ -146,7 +141,7 @@ void BeginEnumFormats();
   
  Další informace najdete v tématu [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) ve Windows SDK.  
   
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  Vytvoří `COleDataObject` objektu.  
   
 ```  
@@ -159,7 +154,7 @@ COleDataObject();
 > [!NOTE]
 >  Protože jeden z parametrů na obslužné rutiny a přetažení ukazatele na `COleDataObject`, není nutné volat tento konstruktor pro podporu přetažení.  
   
-##  <a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>  COleDataObject::Detach  
  Volání této funkce se odpojit `COleDataObject` objekt z jeho přidružených datový objekt OLE bez uvolnění. datový objekt.  
   
 ```  
@@ -171,7 +166,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>  COleDataObject::GetData  
  Volání této funkce k načtení dat z položky v zadaném formátu.  
   
 ```  
@@ -199,7 +194,7 @@ BOOL GetData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  Volání této funkce můžete vytvořit `CFile` nebo `CFile`-odvozené objektu a k načítání dat v zadaném formátu do `CFile` ukazatel.  
   
 ```  
@@ -228,7 +223,7 @@ CFile* GetFileData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  Volání této funkce přidělit globální paměť bloku a k načítání dat v zadaném formátu do `HGLOBAL`.  
   
 ```  
@@ -252,7 +247,7 @@ HGLOBAL GetGlobalData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  Volání této funkce opakovaně k získání všechny formáty, které jsou k dispozici pro načítání dat z položky.  
   
 ```  
@@ -273,7 +268,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  Další informace najdete v tématu [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) ve Windows SDK.  
   
-##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable  
  Volání této funkce lze zjistit konkrétní formát je k dispozici pro načítání dat z položky OLE.  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
-##  <a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>  COleDataObject::Release  
  Volání této funkce k uvolnění vlastnictví [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objekt, který byl dříve přidružen `COleDataObject` objektu.  
   
 ```  

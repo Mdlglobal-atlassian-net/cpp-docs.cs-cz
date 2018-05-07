@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonApplicationButton | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonApplicationButton | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c8dac406a70edd5782e4ca1962aa36b0175ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton – třída
 Implementuje speciální tlačítko nachází v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevření nabídky, která obvykle obsahuje běžné **soubor** příkazy jako **otevřete**, **Uložit**, a **ukončení**.  
@@ -74,7 +69,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonBar.h  
   
-##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  Vytvoří a inicializuje [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objektu.  
   
 ```  
@@ -93,7 +88,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>Poznámky  
  Na pásu karet tlačítko aplikace je speciální tlačítko, které se nachází v levém horním rohu okna aplikace. Když uživatel klikne na toto tlačítko, aplikace otevření nabídky, která obvykle obsahuje běžné **soubor** příkazy, jako **otevřete**, **Uložit**, a **ukončovací**.  
   
-##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
  Přiřadí obrázek pro tlačítko aplikace.  
   
 ```  
@@ -102,10 +97,10 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiBmpResID`  
+ [v] `uiBmpResID`  
  ID prostředku bitové kopie pro zobrazení na tlačítko aplikace.  
   
- [v]`hBmp`  
+ [v] `hBmp`  
  Popisovač pro rastrový obrázek pro zobrazení na tlačítko aplikace.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -1,13 +1,10 @@
 ---
-title: "Postupy: Příprava typově bezpečné kolekce | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: Příprava typově bezpečné kolekce | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Postupy: Příprava typově bezpečné kolekce
 Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní datové typy. Témata zahrnují:  
@@ -42,7 +37,7 @@ Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní
   
  Knihovny Microsoft Foundation Class poskytuje předdefinované kolekce bezpečného typu na základě šablon C++. Protože jsou šablony, tyto třídy zajišťuje bezpečnost typů a snadné použití bez přetypování typu a dalších další práci zahrnutých v použití třídy objektu bez šablony pro tento účel. Ukázka MFC [SHROMAŽĎOVAT](../visual-cpp-samples.md) demonstruje použití v aplikaci MFC – třídy kolekce na základě šablon. Obecně platí použijte tyto třídy při každém vytvoření nového kódu kolekce.  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a>Pomocí třídy založené na šabloně pro zabezpečení typů  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Pomocí třídy založené na šabloně pro zabezpečení typů  
   
 #### <a name="to-use-template-based-classes"></a>Použít na základě šablon třídy  
   
@@ -58,10 +53,10 @@ Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní
   
  Tento příklad ukazuje deklaraci seznam celých čísel. První parametr v kroku 1 je typ dat uložených jako prvky v seznamu. Druhý parametr určuje, jak se data předaný a vrácená z členské funkce kolekce třídy, jako například **přidat** a `GetAt`.  
   
-##  <a name="_core_implementing_helper_functions"></a>Implementace pomocných funkcí  
+##  <a name="_core_implementing_helper_functions"></a> Implementace pomocných funkcí  
  Třídy kolekcí založených na šabloně `CArray`, `CList`, a `CMap` použít pět globální pomocných funkcí, které můžete přizpůsobit podle potřeby pro třídy odvozené kolekce. Informace o těchto pomocných funkcí najdete v tématu [pomocné rutiny třídy kolekce](../mfc/reference/collection-class-helpers.md) v *odkaz knihovny MFC*. Implementace funkce serializace je potřebný u většiny použití třídy kolekcí založených na šablonu.  
   
-###  <a name="_core_serializing_elements"></a>Serializace prvků  
+###  <a name="_core_serializing_elements"></a> Serializace prvků  
  `CArray`, `CList`, A `CMap` třídy volání `SerializeElements` elementy z kolekce k uložení nebo číst z archivu.  
   
  Výchozí implementaci `SerializeElements` pomocné funkce nemá bitové zápisu z objekty do archivu nebo bitové pro objekty, v závislosti na tom, jestli jsou objekty uložené ve čtení z archivu nebo načíst z archivu. Přepsání `SerializeElements` Pokud tato akce není vhodná.  
@@ -72,7 +67,7 @@ Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní
   
  Vložení přetížené operátory `CArchive` volání `CObject::Serialize` (nebo přepsání této funkce) pro každou **CPerson** objektu.  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a>Pomocí objektu bez šablony třídy kolekce  
+##  <a name="_core_using_nontemplate_collection_classes"></a> Pomocí objektu bez šablony třídy kolekce  
  MFC podporuje také kolekce tříd zavedených se MFC verze 1.0. Tyto třídy nejsou založené na šablonách. Lze tak, aby obsahovala data z podporovaných typů `CObject*`, **Celé_číslo**, `DWORD`, a `CString`. Můžete použít tyto předdefinované kolekce (například `CObList`) pro uložení kolekce všech objektů, které jsou odvozené z `CObject`. MFC poskytuje také jiné předdefinované kolekce pro primitivní typy, jako **Celé_číslo** a void ukazatele (`void`*). Obecně platí ale je často užitečné k definování vlastní kolekce bezpečného typu pro uložení objektů konkrétnější třída a odvozené. Všimněte si, že není to s třídy kolekcí založených na šablonách je další práci než použití třídy na základě šablon.  
   
  Existují dva způsoby vytvoření kolekce bezpečného typu objektu bez šablony kolekcím:  

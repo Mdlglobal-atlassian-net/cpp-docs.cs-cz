@@ -1,12 +1,9 @@
 ---
-title: "CMetaFileDC – třída | Microsoft Docs"
-ms.custom: 
+title: CMetaFileDC – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC – třída
 Implementuje WMF, který obsahuje posloupnost grafiky zařízení rozhraní GDI příkazy, které můžete přehráním vytvořit požadovanou image nebo text.  
@@ -90,7 +85,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  Zavře kontextu zařízení metafile a vytvoří popisovačů metafile systému Windows, který slouží k přehrávání metafile pomocí [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) – členská funkce.  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  Odstranit metafile po použití voláním Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce.  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Zavře kontextu zařízení enhanced metafile a vrátí popisovač, který identifikuje metafile rozšířeného formátu.  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  Pokud aplikace již nepotřebuje EMF popisovač, ho měli uvolnit popisovač voláním Win32 **DeleteEnhMetaFile** funkce.  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  Vytvořit `CMetaFileDC` objektu ve dvou krocích.  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Poznámky  
  Nejprve volání `CMetaFileDC`, pak zavolají **vytvořit**, která vytvoří kontext Windows metafile zařízení a připojí jej k `CMetaFileDC` objektu.  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  Vytvořit `CMetaFileDC` objektu ve dvou krocích.  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Poznámky  
  Nejprve volat konstruktor `CMetaFileDC`, pak zavolají **vytvořit**, která vytvoří kontext Windows metafile zařízení a připojí jej k `CMetaFileDC` objektu.  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  Vytvoří kontext zařízení pro metafile rozšířeného formátu.  
   
 ```  

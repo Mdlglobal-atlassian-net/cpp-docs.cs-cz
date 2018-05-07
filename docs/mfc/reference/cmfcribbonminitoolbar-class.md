@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonMiniToolBar | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonMiniToolBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a2006423f8e6196f9fac4d8f336ced8b5416f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar – třída
 Implementuje kontextové místní panel nástrojů.  
@@ -92,7 +87,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonMiniToolBar.h  
   
-##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
  Nastaví seznam příkazů, který se má zobrazit na panelu nástrojů.  
   
 ```  
@@ -102,10 +97,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pRibbonBar`  
+ [v] `pRibbonBar`  
  Panel pásu karet, který vyhledá malém panelu nástrojů tlačítka pro zobrazení.  
   
- [v]`lstCommands`  
+ [v] `lstCommands`  
  Seznam příkazů, který se má zobrazit v malém panelu nástrojů. Najít tlačítka přidružené budou prohledány všechny kategorie pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -116,7 +111,7 @@ void SetCommands(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
  Zobrazí malém panelu nástrojů v souřadnice zadaný obrazovky.  
   
 ```  
@@ -126,16 +121,16 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`x`  
+ [v] `x`  
  Určuje vodorovné umístění malém panelu nástrojů v souřadnice obrazovky.  
   
- [v]`y`  
+ [v] `y`  
  Určuje svislé umístění malém panelu nástrojů v souřadnice obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se úspěšně; zobrazila malém panelu nástrojů v opačném `FALSE`.  
+ `TRUE` Pokud se úspěšně; zobrazila malém panelu nástrojů v opačném `FALSE`.  
   
-##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Zobrazí mini nástrojů společně s z kontextové nabídky.  
   
 ```  
@@ -147,25 +142,25 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`x`  
+ [v] `x`  
  Určuje vodorovné umístění v místní nabídce v souřadnice obrazovky.  
   
- [v]`y`  
+ [v] `y`  
  Určuje svislé umístění v místní nabídce v souřadnice obrazovky.  
   
- [v]`uiMenuResID`  
+ [v] `uiMenuResID`  
  Určuje ID prostředku v místní nabídce k zobrazení.  
   
- [v]`pWndOwner`  
+ [v] `pWndOwner`  
  Identifikuje okna, která přijímá zprávy z místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v místní nabídce zobrazila úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud v místní nabídce zobrazila úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete zobrazit mini nástrojů, který má z kontextové nabídky. V místní nabídce je umístěného 15 pixelů níže malém panelu nástrojů.  
   
-##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +171,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

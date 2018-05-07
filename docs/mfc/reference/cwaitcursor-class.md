@@ -1,12 +1,9 @@
 ---
-title: "Třída CWaitCursor | Microsoft Docs"
-ms.custom: 
+title: Třída CWaitCursor | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor – třída
 Poskytuje způsob jednořádkové čekání kurzor, který je obvykle zobrazený jako přesýpací hodiny, když provádíte časově náročná operace.  
@@ -55,7 +50,7 @@ class CWaitCursor
 |[CWaitCursor::Restore](#restore)|Obnoví kurzor čekání po byl změněn.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CWaitCursor`nemá základní třídu.  
+ `CWaitCursor` nemá základní třídu.  
   
  Dobrý Windows programování postupy vyžadují zobrazit čekání kurzoru, vždy, když provádíte operace, která přebírá znatelné množství času.  
   
@@ -82,7 +77,7 @@ class CWaitCursor
 ## <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
  Počkejte kurzoru zobrazíte právě deklarovat `CWaitCursor` objekt před kód, který provádí náročná operace.  
   
 ```  
@@ -102,7 +97,7 @@ CWaitCursor();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>  CWaitCursor::Restore  
  Pokud chcete obnovit kurzor čekání, volejte tuto funkci po provedení operace, jako je například zobrazení okno se zprávou nebo dialogové okno, které mohou změnit kurzor čekání na jiný kurzor.  
   
 ```  

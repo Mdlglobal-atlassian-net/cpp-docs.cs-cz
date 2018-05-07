@@ -1,12 +1,9 @@
 ---
-title: "Třída CAsyncMonikerFile | Microsoft Docs"
-ms.custom: 
+title: Třída CAsyncMonikerFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile – třída
 Poskytuje funkce pro použití asynchronní monikery v ovládacích prvcích ActiveX (dříve OLE prvky).  
@@ -117,7 +112,7 @@ class CAsyncMonikerFile : public CMonikerFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
  Vytvoří `CAsyncMonikerFile` objektu.  
   
 ```  
@@ -125,11 +120,11 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nedojde k vytvoření `IBindHost` rozhraní. `IBindHost`se používá pouze v případě, že ho zadáte **otevřete** – členská funkce.  
+ Nedojde k vytvoření `IBindHost` rozhraní. `IBindHost` se používá pouze v případě, že ho zadáte **otevřete** – členská funkce.  
   
  Popis `IBindHost` rozhraní, najdete v části Windows SDK.  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
  Volání této funkce zavřete a uvolní všechny prostředky.  
   
 ```  
@@ -139,7 +134,7 @@ virtual void Close();
 ### <a name="remarks"></a>Poznámky  
  Je možné volat na soubory vyberte nebo již uzavřené.  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
  Vytvoří objekt COM, který implementuje `IBindStatusCallback`.  
   
 ```  
@@ -154,7 +149,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
  Pokud `pUnkControlling` není **NULL**, funkce vrátí ukazatel k vnitřnímu **IUnknown** na nový objekt COM podporu `IBindStatusCallback`. Pokud `pUnkControlling` je **NULL**, funkce vrátí hodnotu ukazatel na **IUnknown** na nový objekt COM podporu `IBindStatusCallback`.  
   
 ### <a name="remarks"></a>Poznámky  
- `CAsyncMonikerFile`vyžaduje objektu COM, který implementuje `IBindStatusCallback`. MFC implementuje takového objektu a je agregovatelné. Můžete přepsat `CreateBindStatusCallback` vrátit vlastního objektu COM. Objektu COM můžete agregovat implementace MFC voláním `CreateBindStatusCallback` s řízení Neznámý objektu COM. COM – objekty implementovaná pomocí `CCmdTarget` Podpora COM můžete načíst řízení neznámé pomocí **CCmdTarget::GetControllingUnknown**.  
+ `CAsyncMonikerFile` vyžaduje objektu COM, který implementuje `IBindStatusCallback`. MFC implementuje takového objektu a je agregovatelné. Můžete přepsat `CreateBindStatusCallback` vrátit vlastního objektu COM. Objektu COM můžete agregovat implementace MFC voláním `CreateBindStatusCallback` s řízení Neznámý objektu COM. COM – objekty implementovaná pomocí `CCmdTarget` Podpora COM můžete načíst řízení neznámé pomocí **CCmdTarget::GetControllingUnknown**.  
   
  Alternativně můžete delegovat objektu COM na implementace MFC voláním **CreateBindStatusCallback (NULL)**.  
   
@@ -162,7 +157,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  Další informace o asynchronní monikery a asynchronní vazby najdete v tématu [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) rozhraní a [pracovní úložiště a jak asynchronní vazeb](http://msdn.microsoft.com/library/windows/desktop/aa379152). Informace agregace, naleznete v [agregace](http://msdn.microsoft.com/library/windows/desktop/ms686558). Všechny tři témata jsou ve Windows SDK.  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  Volá se z klienta asynchronní Přezdívka říct asynchronní Přezdívka jak chce vytvořit vazbu.  
   
 ```  
@@ -177,7 +172,7 @@ virtual DWORD GetBindInfo() const;
   
  Jedním z důvodů to může být vytvořit vazbu pomocí model data pull místo model data push. Ve model vyžádání dat klienta jednotky operaci vazby a Přezdívka pouze poskytuje data pro klienta, pokud je pro čtení. Ve model datová oznámení Přezdívka jednotky operace asynchronní vazby a průběžně upozorní klient vždy, když je k dispozici nová data.  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
  Volání této funkce načíst ukazatel na asynchronní přenos vazby.  
   
 ```  
@@ -192,7 +187,7 @@ IBinding* GetBinding() const;
   
  Popis `IBinding` rozhraní, najdete v části Windows SDK.  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
  Volání této funkce načíst formát dat v datovém proudu.  
   
 ```  
@@ -202,7 +197,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na strukturu Windows [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) pro aktuálně otevřenou datového proudu. Vrátí **NULL** Pokud Přezdívka nebyla byla svázána, pokud není asynchronní, nebo pokud ještě nebylo spuštěno asynchronní operaci.  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  Vyvolání z klienta asynchronní Přezdívka spustí proces vytváření vazby pro příjem přednostně vlákno pro operace vazby.  
   
 ```  
@@ -213,9 +208,9 @@ virtual LONG GetPriority() const;
  Priorita, kdy bude asynchronní přenos probíhat. Jeden z příznaků priority standardní vláken: **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**,  **THREAD_PRIORITY_IDLE**, **THREAD_PRIORITY_LOWEST**, **THREAD_PRIORITY_NORMAL**, a **THREAD_PRIORITY_TIME_CRITICAL**. Najdete v části funkce systému Windows [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) popis tyto hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetPriority`nelze volat přímo. **THREAD_PRIORITY_NORMAL** je vrácen výchozí implementace.  
+ `GetPriority` nelze volat přímo. **THREAD_PRIORITY_NORMAL** je vrácen výchozí implementace.  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  Volá asynchronní Přezdívka `OnDataAvailable` poskytování dat pro klienta, jakmile je k dispozici, vazby během asynchronní operace.  
   
 ```  
@@ -241,7 +236,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
  Voláno rozhraním Přezdívka po nízkou prostředky.  
   
 ```  
@@ -251,7 +246,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace volá `GetBinding( )-> Abort( )`.  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
  Voláno rozhraním Přezdívka opakovaně udávajících aktuální průběh této operace vazby, obvykle v přiměřené intervalech během časově náročná operace.  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  Instance objektu je svázán, je jenom o který se má vytvořit. `szStatusText` Poskytuje CLSID nového objektu ve formátu řetězce, a umožnil tak klientovi příležitost ke zrušení operace vazby, v případě potřeby.  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  Potlačí tuto funkci v odvozených tříd pro provádění akcí po spuštění vazby.  
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána zpět přezdívka. Výchozí implementace neprovede žádnou akci.  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
  Voláno rozhraním Přezdívka na konci operace vazby.  
   
 ```  
@@ -334,7 +329,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  Popis `IBinding` rozhraní, najdete v části Windows SDK.  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
  Volání této funkce člen a otevřete soubor asynchronně.  
   
 ```  
@@ -385,7 +380,7 @@ virtual BOOL Open(
  Ukazatel na soubor výjimky. V případě chyby nastaví se na příčinu.  
   
  `pMoniker`  
- Ukazatel rozhraní asynchronní Přezdívka `IMoniker`, přesné přezdívka, který je kombinací Přezdívka dokumentu vlastní, který může načíst s **IOleClientSite::GetMoniker (** *OLEWHICHMK_ KONTEJNER* **)**a moniker vytvořené z název cesty. Ovládací prvek můžete použít tento Přezdívka pro vazbu, ale nejedná se o Přezdívka měli uložit ovládacího prvku.  
+ Ukazatel rozhraní asynchronní Přezdívka `IMoniker`, přesné přezdívka, který je kombinací Přezdívka dokumentu vlastní, který může načíst s **IOleClientSite::GetMoniker (** *OLEWHICHMK_ KONTEJNER* **)** a moniker vytvořené z název cesty. Ovládací prvek můžete použít tento Přezdívka pro vazbu, ale nejedná se o Přezdívka měli uložit ovládacího prvku.  
   
  *pBindHost*  
  Ukazatel `IBindHost` rozhraní, které se použije k vytvoření Přezdívka z potenciálně relativní cesta. Pokud hostitel vazby je neplatný nebo neposkytuje přezdívka, volání výchozí **otevřete (** `lpszFileName` **,**`pError`**)**. Popis `IBindHost` rozhraní, najdete v části Windows SDK.  

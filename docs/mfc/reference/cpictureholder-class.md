@@ -1,12 +1,9 @@
 ---
-title: "Třída CPictureHolder | Microsoft Docs"
-ms.custom: 
+title: Třída CPictureHolder | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPictureHolder
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder – třída
 Implementuje vlastnosti obrázku, která umožňuje uživatelům zobrazit obrázek v vlastního ovládacího prvku.  
@@ -87,7 +82,7 @@ class CPictureHolder
 |[CPictureHolder::m_pPict](#m_ppict)|Ukazatel na objekt obrázku.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CPictureHolder`nemá základní třídu.  
+ `CPictureHolder` nemá základní třídu.  
   
  Pomocí uložených vlastností obrázků můžete určit vývojář rastrového obrázku, ikona nebo metafile pro zobrazení.  
   
@@ -99,14 +94,14 @@ class CPictureHolder
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxctl.h  
   
-##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
  Vytvoří `CPictureHolder` objektu.  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>  CPictureHolder::CreateEmpty  
  Vytvoří prázdnou `CPictureHolder` objektu a připojí jej k `IPicture` rozhraní.  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud objekt je úspěšně vytvořen; jinak 0.  
   
-##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap  
  Rastrový obrázek používá k chybě při inicializaci objektu obrázek ve `CPictureHolder`.  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>Poznámky  
  Pokud `bTransferOwnership` je **TRUE**, volající neměli používat bitmapy nebo vrátí objekt palety žádným způsobem po toto volání. Pokud `bTransferOwnership` je **FALSE**, volající zodpovídá za zajištění, že objekty rastrového obrázku a palety jsou dál platné po dobu jeho existence objektu obrázku.  
   
-##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  Používá ikonu k chybě při inicializaci objektu obrázek ve `CPictureHolder`.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>Poznámky  
  Pokud `bTransferOwnership` je **TRUE**, volající neměli používat objekt ikonu žádným způsobem po vrátí toto volání. Pokud `bTransferOwnership` je **FALSE**, volající zodpovídá za zajištění, že objekt ikonu zůstane platný po dobu jeho existence objektu obrázku.  
   
-##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  Používá k inicializaci objektu obrázku v metasoubory `CPictureHolder`.  
   
 ```  
@@ -220,7 +215,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>Poznámky  
  Pokud `bTransferOwnership` je **TRUE**, volající neměli používat objekt metafile žádným způsobem po vrátí toto volání. Pokud `bTransferOwnership` je **FALSE**, volající zodpovídá za zajištění, že objekt metafile zůstane platný po dobu jeho existence objektu obrázku.  
   
-##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  Načte řetězec, který se zobrazí v prohlížeči vlastností kontejneru.  
   
 ```  
@@ -234,7 +229,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud řetězec je úspěšně načetl; jinak 0.  
   
-##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch  
  Tato funkce vrátí ukazatel `CPictureHolder` objektu `IPictureDisp` rozhraní.  
   
 ```  
@@ -247,7 +242,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>Poznámky  
  Volající musí volat **verze** na tento ukazatel po dokončení s ním.  
   
-##  <a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>  CPictureHolder::GetType  
  Určuje, zda je na obrázku rastrového obrázku, metafile nebo ikonu.  
   
 ```  
@@ -259,20 +254,20 @@ short GetType();
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|**PICTYPE_UNINITIALIZED**|`CPictureHolder`objekt je unititialized.|  
-|**PICTYPE_NONE**|`CPictureHolder`objekt je prázdný.|  
+|**PICTYPE_UNINITIALIZED**|`CPictureHolder` objekt je unititialized.|  
+|**PICTYPE_NONE**|`CPictureHolder` objekt je prázdný.|  
 |**PICTYPE_BITMAP**|Obrázek je rastrový obrázek.|  
 |**PICTYPE_METAFILE**|Obrázek je metasoubory.|  
 |**PICTYPE_ICON**|Obrázek je ikonu.|  
   
-##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>  CPictureHolder::m_pPict  
  Ukazatel `CPictureHolder` objektu `IPicture` rozhraní.  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="render"></a>CPictureHolder::Render  
+##  <a name="render"></a>  CPictureHolder::Render  
  Vykreslí obrázek v obdélníku odkazuje `rcRender`.  
   
 ```  
@@ -292,7 +287,7 @@ void Render(
  *rcWBounds*  
  Obdélník představující ohraničující obdélník objekt vykreslování obrázku. Pro ovládací prvek, je tento obdélník `rcBounds` parametr předaný přepsání [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
-##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  Připojí `CPictureHolder` do objektu `IPictureDisp` rozhraní.  
   
 ```  

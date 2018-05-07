@@ -1,12 +1,9 @@
 ---
-title: "COleControl – třída | Microsoft Docs"
-ms.custom: 
+title: COleControl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 Efektivní základní třída pro vývoj ovládací prvky OLE.  
@@ -854,7 +849,7 @@ virtual void DisplayError(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *scode*  
+ *kód SCODE*  
  Hodnota kódu stavu třeba ohlásit. Úplný seznam možných kódů, najdete v článku [– ovládací prvky ActiveX: Advanced témata](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1062,7 +1057,7 @@ void FireError(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *scode*  
+ *kód SCODE*  
  Hodnota kódu stavu třeba ohlásit. Úplný seznam možných kódů, najdete v článku [– ovládací prvky ActiveX: Advanced témata](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1106,10 +1101,10 @@ void AFX_CDECL FireEvent(
 |------------|--------------------|  
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_FONT**|**IFontDisp\***|  
-|**VTS_HANDLE**|`HWND`|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
-|**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE\***|  
-|**VTS_TRISTATE**|**OLE_TRISTATE**|  
+|**VTS_HANDLE –**|`HWND`|  
+|**VTS_PICTURE –**|**IPictureDisp\***|  
+|**VTS_OPTEXCLUSIVE –**|**OLE_OPTEXCLUSIVE\***|  
+|**VTS_TRISTATE –**|**OLE_TRISTATE**|  
 |**VTS_XPOS_HIMETRIC**|**OLE_XPOS_HIMETRIC**|  
 |**VTS_YPOS_HIMETRIC**|**OLE_YPOS_HIMETRIC**|  
 |**VTS_XPOS_PIXELS**|**OLE_XPOS_PIXELS**|  
@@ -2030,7 +2025,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *strNewPath*  
  Ukazatel na řetězec obsahující cestu, která odkazuje na absolutní umístění vlastnost asynchronní ovládací prvek.  
   
- *prop*  
+ *Prop*  
  A [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) objekt implementující ve vlastnosti asynchronní ovládací prvek.  
   
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive  
@@ -2418,7 +2413,7 @@ virtual BOOL OnGetNaturalExtent(
  `dwAspect`  
  Určuje, jak má být reprezentován objektu. Reprezentace zahrnovat obsah, ikonu, miniaturu nebo tištěných dokumentu. Platné hodnoty jsou převzaty z výčtu [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) nebo **DVASPECT2**.  
   
- *lindex*  
+ *index*  
  Část objektu, který je určen. Aktuálně jedinou hodnotu -1 je platný.  
   
  `ptd`  
@@ -2521,7 +2516,7 @@ virtual BOOL OnGetViewExtent(
  *dwDrawAspect*  
  `DWORD` popisující, které tvoří nebo aspekt, objektu se mají zobrazit. Platné hodnoty jsou převzaty z výčtu [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) nebo **DVASPECT2**.  
   
- *lindex*  
+ *index*  
  Část objektu, který je určen. Aktuálně jedinou hodnotu -1 je platný.  
   
  `ptd`  

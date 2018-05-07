@@ -1,13 +1,10 @@
 ---
-title: "Pole, seznamu a mapování tříd | Microsoft Docs"
-ms.custom: 
+title: Pole, seznamu a mapování tříd | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41dfe0b36548d87b5e0501c557e70f3cf11eea5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-list-and-map-classes"></a>Třídy pole, seznamu a mapy
 Pro zpracování agregace dat, poskytuje knihovna tříd skupinu typu tříd kolekce – polí, seznamy a mapy, které mohou být uloženy různé objektu a předdefinovaných typů. Kolekce jsou dynamicky velikost. Tyto třídy lze v žádné program zapsán pro Windows, nebo ne. Jsou však velmi užitečné pro implementaci datové struktury, které definují vaší třídy dokumentů v rozhraní. Třídy specializované kolekce můžete snadno odvozena z nich, nebo můžete je vytvořit podle třídy šablony. Další informace o těchto přístupů, najdete v článku [kolekce](../mfc/collections.md). Seznam tříd kolekce šablony, najdete v článku [třídy šablon pro pole, seznamy a mapy](../mfc/template-classes-for-arrays-lists-and-maps.md).  

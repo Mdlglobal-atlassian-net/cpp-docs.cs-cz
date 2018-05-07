@@ -1,12 +1,9 @@
 ---
-title: "CProgressCtrl – třída | Microsoft Docs"
-ms.custom: 
+title: CProgressCtrl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CProgressCtrl
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7def2d1a6b421259a2b0d5e8229165ea0593874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6317ce9484cc471611762d10e6f1482f24c2742a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl – třída
 Poskytuje funkce ovládacího panelu Windows běžné průběh.  
@@ -121,7 +116,7 @@ class CProgressCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="cprogressctrl"></a>CProgressCtrl::CProgressCtrl  
+##  <a name="cprogressctrl"></a>  CProgressCtrl::CProgressCtrl  
  Vytvoří `CProgressCtrl` objektu.  
   
 ```  
@@ -134,7 +129,7 @@ CProgressCtrl();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CProgressCtrl::Create  
+##  <a name="create"></a>  CProgressCtrl::Create  
  Ovládací prvek panelu průběhu vytvoří a připojí jej k `CProgressCtrl` objektu.  
   
 ```  
@@ -149,9 +144,9 @@ virtual BOOL Create(
  `dwStyle`  
  Určuje styl ovládacího panelu průběhu. Použít libovolnou kombinaci okno stylesdescribed v [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ve Windows SDK kromě následující průběh panelu Styly ovládacího prvku do ovládacího prvku:  
   
-- `PBS_VERTICAL`Zobrazí informace o průběhu svisle, shora dolů. Bez tento příznak zobrazí ovládací panel prvek průběh vodorovně, vlevo vpravo.  
+- `PBS_VERTICAL` Zobrazí informace o průběhu svisle, shora dolů. Bez tento příznak zobrazí ovládací panel prvek průběh vodorovně, vlevo vpravo.  
   
-- `PBS_SMOOTH`Zobrazí postupné, technologie smooth naplnění v ovládacím prvku panel průběhu. Bez tento příznak bude bloky vyplníte ovládací prvek.  
+- `PBS_SMOOTH` Zobrazí postupné, technologie smooth naplnění v ovládacím prvku panel průběhu. Bez tento příznak bude bloky vyplníte ovládací prvek.  
   
  `rect`  
  Určuje velikost a umístění ovládacích prvků panelu průběhu. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Protože ovládací prvek musí být podřízeného okna, zadaný souřadnice jsou relativní vzhledem k klientské oblasti `pParentWnd`.  
@@ -171,7 +166,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CProgressCtrl::CreateEx  
+##  <a name="createex"></a>  CProgressCtrl::CreateEx  
  Vytvoří ovládací prvek (podřízeného okna) a přidruží ji s `CProgressCtrl` objektu.  
   
 ```  
@@ -205,7 +200,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
-##  <a name="getbarcolor"></a>CProgressCtrl::GetBarColor  
+##  <a name="getbarcolor"></a>  CProgressCtrl::GetBarColor  
  Získá aktuální ovládací panel prvek průběh barva indikátoru indikátor průběhu.  
   
 ```  
@@ -218,7 +213,7 @@ COLORREF GetBarColor() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getbkcolor"></a>CProgressCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Získá barvu pozadí aktuální indikátor průběhu.  
   
 ```  
@@ -231,7 +226,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getpos"></a>CProgressCtrl::GetPos  
+##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Načte aktuální pozici indikátor průběhu.  
   
 ```  
@@ -247,7 +242,7 @@ int GetPos();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]  
   
-##  <a name="getrange"></a>CProgressCtrl::GetRange  
+##  <a name="getrange"></a>  CProgressCtrl::GetRange  
  Získá aktuální horní a dolní mez, nebo rozsah, ovládacího panelu průběhu.  
   
 ```  
@@ -269,7 +264,7 @@ void GetRange(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
   
-##  <a name="getstate"></a>CProgressCtrl::GetState  
+##  <a name="getstate"></a>  CProgressCtrl::GetState  
  Získá stav aktuální ovládací panel prvek průběh.  
   
 ```  
@@ -298,7 +293,7 @@ int GetState() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]  
   
-##  <a name="getstep"></a>CProgressCtrl::GetStep  
+##  <a name="getstep"></a>  CProgressCtrl::GetStep  
  Načte krok krok pro indikátor průběhu aktuální ovládacího panelu průběhu.  
   
 ```  
@@ -323,7 +318,7 @@ int GetStep() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
-##  <a name="offsetpos"></a>CProgressCtrl::OffsetPos  
+##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
  Posune průběh panelu aktuální pozici ovládacího prvku pomocí určeného přírůstek `nPos` nebo ho překreslí panelu tak, aby odrážely novou pozici.  
   
 ```  
@@ -340,7 +335,7 @@ int OffsetPos(int nPos);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]  
   
-##  <a name="setbarcolor"></a>CProgressCtrl::SetBarColor  
+##  <a name="setbarcolor"></a>  CProgressCtrl::SetBarColor  
  Nastaví barvu indikátoru průběhu indikátoru v ovládacím panelu aktuální průběh.  
   
 ```  
@@ -351,7 +346,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`clrBar`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která určuje nové barva indikátoru indikátor průběhu. Zadejte `CLR_DEFAULT` způsobí indikátor průběhu používat jeho výchozí barvu.|  
+|[v] `clrBar`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která určuje nové barva indikátoru indikátor průběhu. Zadejte `CLR_DEFAULT` způsobí indikátor průběhu používat jeho výchozí barvu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí barva indikátoru průběhu, vyjádřené [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, nebo `CLR_DEFAULT` Pokud výchozí barvu barva indikátoru indikátor průběhu.  
@@ -371,7 +366,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]  
   
-##  <a name="setbkcolor"></a>CProgressCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CProgressCtrl::SetBkColor  
  Nastaví barvu pozadí pro indikátor průběhu.  
   
 ```  
@@ -388,7 +383,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
   
-##  <a name="setmarquee"></a>CProgressCtrl::SetMarquee  
+##  <a name="setmarquee"></a>  CProgressCtrl::SetMarquee  
  Změní režim výběr zapnout nebo vypnout pro aktuální ovládací panel prvek průběh.  
   
 ```  
@@ -401,8 +396,8 @@ BOOL SetMarquee(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`fMarqueeMode`|`true`Zapnutí režimu výběr, nebo `false` Chcete-li režim výběru vypnout.|  
-|[v]`nInterval`|Čas v milisekundách mezi aktualizace animace běžícího textu.|  
+|[v] `fMarqueeMode`|`true` Zapnutí režimu výběr, nebo `false` Chcete-li režim výběru vypnout.|  
+|[v] `nInterval`|Čas v milisekundách mezi aktualizace animace běžícího textu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vždy vrátí hodnotu `true`.  
@@ -422,7 +417,7 @@ BOOL SetMarquee(
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
-##  <a name="setpos"></a>CProgressCtrl::SetPos  
+##  <a name="setpos"></a>  CProgressCtrl::SetPos  
  Nastaví průběh panelu Ovládací prvek na aktuální pozici podle specifikace `nPos` nebo ho překreslí panelu tak, aby odrážely novou pozici.  
   
 ```  
@@ -442,7 +437,7 @@ int SetPos(int nPos);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]  
   
-##  <a name="setrange"></a>CProgressCtrl::SetRange  
+##  <a name="setrange"></a>  CProgressCtrl::SetRange  
  Nastaví horní a dolní limity průběh panelu ovládacího prvku rozsah nebo ho překreslí panelu tak, aby odrážely novou rozsahy.  
   
 ```  
@@ -469,7 +464,7 @@ void SetRange32(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]  
   
-##  <a name="setstate"></a>CProgressCtrl::SetState  
+##  <a name="setstate"></a>  CProgressCtrl::SetState  
  Nastaví stav aktuální ovládací panel prvek průběh.  
   
 ```  
@@ -480,7 +475,7 @@ int SetState(int iState);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`iState`|Stav, který se má nastavit indikátor průběhu. Použijte jednu z následujících hodnot:<br /><br /> - `PBST_NORMAL`– V průběhu<br />- `PBST_ERROR`– Chyba<br />- `PBST_PAUSED`-Pozastavena|  
+|[v] `iState`|Stav, který se má nastavit indikátor průběhu. Použijte jednu z následujících hodnot:<br /><br /> - `PBST_NORMAL` – V průběhu<br />- `PBST_ERROR` – Chyba<br />- `PBST_PAUSED` -Pozastavena|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí stav aktuální ovládací panel prvek průběh.  
@@ -498,7 +493,7 @@ int SetState(int iState);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]  
   
-##  <a name="setstep"></a>CProgressCtrl::SetStep  
+##  <a name="setstep"></a>  CProgressCtrl::SetStep  
  Určuje krok krok pro ovládací prvek panelu průběhu.  
   
 ```  
@@ -520,7 +515,7 @@ int SetStep(int nStep);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]  
   
-##  <a name="stepit"></a>CProgressCtrl::StepIt  
+##  <a name="stepit"></a>  CProgressCtrl::StepIt  
  Přejde na aktuální pozici pro ovládací prvek panelu průběhu krok krok nebo ho překreslí panelu tak, aby odrážely novou pozici.  
   
 ```  

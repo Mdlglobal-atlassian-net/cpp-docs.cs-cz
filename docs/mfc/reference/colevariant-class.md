@@ -1,12 +1,9 @@
 ---
-title: "Třída COleVariant | Microsoft Docs"
-ms.custom: 
+title: Třída COleVariant | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleVariant
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3c9d961c69616df05975f2d484d0bbfd43f514
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colevariant-class"></a>COleVariant – třída
 Zapouzdří [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) datového typu.  
@@ -77,7 +72,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Převede `COleVariant` objektu do `LPVARIANT`.|  
 |[COleVariant::operator =](#operator_eq)|Kopie `COleVariant` hodnotu.|  
 |[COleVariant::operator ==](#operator_eq_eq)|Porovná dva `COleVariant` hodnoty.|  
-|[COleVariant::operator &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|Výstupy `COleVariant` hodnotu `CArchive` nebo `CDumpContext` a vstup `COleVariant` objektu z `CArchive`.|  
+|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Výstupy `COleVariant` hodnotu `CArchive` nebo `CDumpContext` a vstup `COleVariant` objektu z `CArchive`.|  
   
 ## <a name="remarks"></a>Poznámky  
  Tento datový typ se používá v automatizace OLE. Konkrétně [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b) struktura obsahuje ukazatele na pole **VARIANT** struktury. A **DISPPARAMS** struktura slouží k předat parametry do [volání metody IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
@@ -99,7 +94,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
   
-##  <a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>  COleVariant::Attach  
  Volání této funkce pro připojení danou [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) objektu na aktuální `COleVariant` objektu.  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(VARIANT& varSrc);
   
  Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) a [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) položky v sadě Windows SDK.  
   
-##  <a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Vytvoří `COleVariant` objektu.  
   
 ```  
@@ -213,7 +208,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  Další informace o `SCODE`, najdete v části [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
   
-##  <a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>  COleVariant::ChangeType  
  Převede typ variant hodnoty v tomto `COleVariant` objektu.  
   
 ```  
@@ -230,7 +225,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), a [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) položky v sadě Windows SDK.  
   
-##  <a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>  COleVariant::Clear  
  Vymaže **VARIANT**.  
   
 ```  
@@ -242,7 +237,7 @@ void Clear();
   
  Další informace najdete v tématu `VARIANT`, `VARTYPE`, a `VariantClear` položky v sadě Windows SDK.  
   
-##  <a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>  COleVariant::Detach  
  Umožňuje odpojit základní [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) objekt z tohoto `COleVariant` objektu.  
   
 ```  
@@ -257,7 +252,7 @@ VARIANT Detach();
   
  Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), a [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) položky v sadě Windows SDK.  
   
-##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Načte bajtové pole z existující variant pole  
   
 ```  
@@ -268,7 +263,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  Odkaz na existující [CByteArray](../../mfc/reference/cbytearray-class.md) objektu.  
   
-##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
  Tento operátor přetypování vrátí `VARIANT` struktura, jehož hodnota je zkopírována z tohoto `COleVariant` objektu.  
   
 ```  
@@ -277,7 +272,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT  
  Volání tento operátor přetypování pro přístup k základní `VARIANT` struktury pro tuto `COleVariant` objektu.  
   
 ```  
@@ -289,7 +284,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  Změna hodnoty v **VARIANT** struktura přístup ukazatele, vrátí tato funkce se změní hodnota této `COleVariant` objektu.  
   
-##  <a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>  COleVariant::operator =  
  Tyto operátory přetížené přiřazení zkopírujte zdrojové hodnoty do této `COleVariant` objektu.  
   
 ```  
@@ -312,7 +307,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 ### <a name="remarks"></a>Poznámky  
  Následuje stručný popis jednotlivých operátor:  
   
-- **Operator = (** *varSrc***)** zkopíruje existující **VARIANT** nebo `COleVariant` objektu do tohoto objektu.  
+- **Operator = (** *varSrc ***)** zkopíruje existující **VARIANT** nebo `COleVariant` objektu do tohoto objektu.  
   
 - **Operator = (** `pSrc` **)** kopie **VARIANT** objekt `pSrc` do tohoto objektu.  
   
@@ -338,7 +333,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  Další informace najdete v tématu [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) a [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) položky v sadě Windows SDK.  
   
-##  <a name="operator_eq_eq"></a>COleVariant::operator ==  
+##  <a name="operator_eq_eq"></a>  COleVariant::operator ==  
  Tento operátor porovná dvě hodnoty typu variant a vrátí nenulové hodnoty v případě, že jsou stejné; jinak 0.  
   
 ```  
@@ -346,7 +341,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;  
  Výstupy `COleVariant` hodnotu `CArchive` nebo **CdumpContext** a vstup `COleVariant` objektu z `CArchive`.  
   
 ```  
@@ -364,9 +359,9 @@ friend CArchive& AFXAPI operator>>(
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `COleVariant` Vložení (  **< \<** ) operátor podporuje diagnostiku vypsání a ukládání do archivu. Extrahování (  **>>** ) operátor podporuje načítání z archivu.  
+ `COleVariant` Vložení ( **< \<**) operátor podporuje diagnostiku vypsání a ukládání do archivu. Extrahování ( **>>**) operátor podporuje načítání z archivu.  
   
-##  <a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>  COleVariant::SetString  
  Nastaví pro konkrétní typ řetězec.  
   
 ```  
@@ -381,7 +376,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
  **VARTYPE** pro nové `COleVariant` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametr `vtSrc` musí být `VT_BSTR` (UNICODE) nebo `VT_BSTRT` (ANSI). `SetString`se obvykle používá ke nastavena řetězce na ANSI, protože je výchozí hodnotou [COleVariant::COleVariant](#colevariant) konstruktor s řetězec nebo řetězec ukazatel parametr a ne **VARTYPE** je kódování UNICODE.  
+ Parametr `vtSrc` musí být `VT_BSTR` (UNICODE) nebo `VT_BSTRT` (ANSI). `SetString` se obvykle používá ke nastavena řetězce na ANSI, protože je výchozí hodnotou [COleVariant::COleVariant](#colevariant) konstruktor s řetězec nebo řetězec ukazatel parametr a ne **VARTYPE** je kódování UNICODE.  
   
  Sady záznamů rozhraní DAO v kódování UNICODE sestavení očekává řetězců, které mají být ANSI. Proto pro rozhraní DAO funkce využívající `COleVariant` objekty, pokud nejsou vytvoření sady záznamů znakové sady UNICODE, je nutné použít **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  formu konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo použijte `SetString` s `vtSrc` nastavena na `VT_BSTRT` aby řetězců v kódu ANSI. Například `CDaoRecordset` funkce [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) a [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) použít `COleVariant` objektů jako parametry. Tyto objekty musí být ANSI, pokud sady záznamů rozhraní DAO není kódování UNICODE.  
   

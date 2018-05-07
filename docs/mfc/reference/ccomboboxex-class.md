@@ -2,11 +2,8 @@
 title: CComboBoxEx – třída | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aecbb168316b3d6416d3a41a6f6a56b04aeb990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx – třída
 Rozšiřuje ovládacího prvku pole se seznamem se tím, že poskytuje podporu pro seznamy obrázků.  
@@ -100,7 +95,7 @@ class CComboBoxEx : public CComboBox
  V poli se seznamem standardní vlastník pole se seznamem zodpovídá za kreslení obrázku tak, že vytvoříte pole se seznamem jako ovládací prvek vykreslování vlastníka. Při použití `CComboBoxEx`, není nutné nastavovat kreslení styly **cbs_ownerdrawfixed –** a **cbs_hasstrings –** vzhledem k tomu, že implicitní. Jinak musíte napsat kód k provádění operací kreslení. A `CComboBoxEx` řízení podporuje až tři bitové kopie na každou položku: jeden pro vybraném stavu, jeden pro nezaškrtnuté stavu a jeden pro bitovou kopii překrytí.  
   
 ## <a name="styles"></a>Styly  
- `CComboBoxEx`podporuje styly **cbs_simple –**, **cbs_dropdown –**, **cbs_dropdownlist –**, a **ws_child –**. Všechny ostatní styly se předá, když vytvoříte okna se ignorují pomocí ovládacího prvku. Po vytvoření okně můžete zadat další pole se seznamem styly voláním `CComboBoxEx` – členská funkce [SetExtendedStyle](#setextendedstyle). Tyto styly můžete:  
+ `CComboBoxEx` podporuje styly **cbs_simple –**, **cbs_dropdown –**, **cbs_dropdownlist –**, a **ws_child –**. Všechny ostatní styly se předá, když vytvoříte okna se ignorují pomocí ovládacího prvku. Po vytvoření okně můžete zadat další pole se seznamem styly voláním `CComboBoxEx` – členská funkce [SetExtendedStyle](#setextendedstyle). Tyto styly můžete:  
   
 -   Sada řetězec hledání v seznamu být malá a velká písmena.  
   
@@ -131,14 +126,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>  CComboBoxEx::CComboBoxEx  
  Volání této funkce člen k vytvoření `CComboBoxEx` objektu.  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>  CComboBoxEx::Create  
  Pole se seznamem vytvoří a připojí jej k `CComboBoxEx` objektu.  
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL Create(
   
  Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo **vytvořit**.  
   
-##  <a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  Volání této funkce vytvoření ovládacího prvku rozšířené pole se seznamem (podřízeného okna) a její přidružení `CComboBoxEx` objektu.  
   
 ```  
@@ -224,9 +219,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo **vytvořit** použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
- `CreateEx`Vytvoří ovládacího prvku rozšířené styly Windows určeného `dwExStyle`. Musíte nastavit rozšířené styly konkrétní k pomocí ovládacího prvku rozšířené pole se seznamem pole [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **CBES_EX_CASESENSITIVE**. Další informace najdete v tématu styly popsané v tématu [– styly ovládacího prvku rozšířené ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) ve Windows SDK.  
+ `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného `dwExStyle`. Musíte nastavit rozšířené styly konkrétní k pomocí ovládacího prvku rozšířené pole se seznamem pole [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **CBES_EX_CASESENSITIVE**. Další informace najdete v tématu styly popsané v tématu [– styly ovládacího prvku rozšířené ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) ve Windows SDK.  
   
-##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Odebere položku z **ComboBoxEx** ovládacího prvku.  
   
 ```  
@@ -243,7 +238,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje funkce zprávy [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), jak je popsáno v sadě Windows SDK. Při volání DeleteItem, [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zpráv s **CBEN_DELETEITEM** odešle upozornění do nadřazeného okna.  
   
-##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  Volání této funkce člen získání ukazatele do ovládacího prvku pole se seznamem v rámci `CComboBoxEx` objektu.  
   
 ```  
@@ -258,7 +253,7 @@ CComboBox* GetComboBoxCtrl();
   
  `CComboBox` Objekt ukazuje návratová hodnota je dočasný objekt a zničen během další dobu nečinnosti, po zpracování.  
   
-##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl  
  Volání této funkce člen získání ukazatele na ovládací prvek úprav pro pole se seznamem.  
   
 ```  
@@ -273,7 +268,7 @@ CEdit* GetEditCtrl();
   
  `CEdit` Objekt ukazuje návratová hodnota je dočasný objekt a zničen během další dobu nečinnosti, po zpracování.  
   
-##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle  
  Volání této funkce člen získat rozšířené styly využívané pro `CComboBoxEx` ovládacího prvku.  
   
 ```  
@@ -286,7 +281,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Poznámky  
  V tématu [– styly ovládacího prvku rozšířené ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) ve Windows SDK pro další informace o těchto stylů.  
   
-##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  Volání této funkce člen k získání ukazatele na seznamu obrázků používané `CComboBoxEx` ovládacího prvku.  
   
 ```  
@@ -299,7 +294,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>Poznámky  
  `CImageList` Objekt ukazuje návratová hodnota je dočasný objekt a zničen během další dobu nečinnosti, po zpracování.  
   
-##  <a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>  CComboBoxEx::GetItem  
  Načte položku informace o danou **ComboBoxEx** položky.  
   
 ```  
@@ -316,7 +311,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje funkce zprávy [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  Určuje, jestli uživatel změnil obsah **ComboBoxEx** ovládacích prvků pro úpravy zadáním.  
   
 ```  
@@ -329,7 +324,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje funkce zprávy [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>  CComboBoxEx::InsertItem  
  Vloží novou položku v **ComboBoxEx** ovládacího prvku.  
   
 ```  
@@ -346,7 +341,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Poznámky  
  Při volání `InsertItem`, [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zpráv s [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) odešle upozornění do nadřazeného okna.  
   
-##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  Volání této funkce člen nastavit rozšířené styly využívané pro ovládacího prvku rozšířené pole se seznamem.  
   
 ```  
@@ -370,7 +365,7 @@ DWORD SetExtendedStyle(
   
  K vytvoření pole se seznamem rozšířené ovládací prvek s styly rozšířené windows, použijte [CreateEx](#createex).  
   
-##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList  
  Nastaví pro seznamu obrázků **ComboBoxEx** ovládacího prvku.  
   
 ```  
@@ -389,7 +384,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  `CImageList` Objekt ukazuje návratová hodnota je dočasný objekt a zničen během další dobu nečinnosti, po zpracování.  
   
-##  <a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>  CComboBoxEx::SetItem  
  Nastaví atributy pro položku v **ComboBoxEx** ovládacího prvku.  
   
 ```  
@@ -406,7 +401,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje funkce zprávy [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  Nastaví vizuální styl rozšířeného pole se seznamem ovládacích prvků pole.  
   
 ```  

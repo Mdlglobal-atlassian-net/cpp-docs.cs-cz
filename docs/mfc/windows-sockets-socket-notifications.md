@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Soketu oznámení | Microsoft Docs"
-ms.custom: 
+title: 'Windows Sockets: Soketu oznámení | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkce jsou funkce zpětného volání, které volá framework oznámit vaše objekt soketu se o důležitých událostech. Funkce oznámení jsou:  
@@ -45,7 +40,7 @@ Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkc
   
  Pokud odvozujete od třídy `CAsyncSocket`, je nutné přepsat funkce oznámení pro ty síťové události týkající se do vaší aplikace. Pokud odvodíte třídu od třídy `CSocket`, je věcí vaší volby zda mají být přepsány funkce oznámení, které vás zajímají. Můžete také použít `CSocket` samostatně, v takovém případě oznámení funkce výchozí k žádným způsobem.  
   
- Tyto funkce jsou funkce přepisovatelné zpětného volání. `CAsyncSocket`a `CSocket` převést zprávy pro oznámení, ale musí implementovat, jak oznámení funkce reakce, pokud chcete používat. Funkce oznámení se označují jako v době, kdy je vaše soketu upozornění na událost, které vás zajímají, jako je například přítomnosti dat čtení.  
+ Tyto funkce jsou funkce přepisovatelné zpětného volání. `CAsyncSocket` a `CSocket` převést zprávy pro oznámení, ale musí implementovat, jak oznámení funkce reakce, pokud chcete používat. Funkce oznámení se označují jako v době, kdy je vaše soketu upozornění na událost, které vás zajímají, jako je například přítomnosti dat čtení.  
   
  MFC volá funkce oznámení k umožňují přizpůsobit chování vaší soketu v době, kdy je upozornění. Například může volat **Receive** z vaší `OnReceive` funkce oznámení, tedy na vrácení oznámení data ke čtení, zavoláte **Receive** k jeho čtení. Tento přístup není nutné, ale je platný scénář. Jako alternativu, můžete použít funkce oznámení sledovat průběh, vytisknout **trasování** zprávy a tak dále.  
   

@@ -1,12 +1,9 @@
 ---
-title: "vnitřní funkce _interlockedbittestandreset | Microsoft Docs"
-ms.custom: 
+title: vnitřní funkce _interlockedbittestandreset | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _interlockedbittestandreset_rel
@@ -27,20 +24,18 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12ade2e7eb61c996300dc4208e45f571a5108a46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c292d344727f2cc473dc444853a2c46d94150dd0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset vnitřní funkce
-**Microsoft Specific**  
+**Konkrétní Microsoft**  
   
  Generuje instrukci, která nastaví chvíli `b` adresy `a` na hodnotu nula a vrátí původní hodnotu.  
   
@@ -86,10 +81,10 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
+ [v] `a`  
  Ukazatel na paměť pro zjištění.  
   
- [in] `b`  
+ [v] `b`  
  Bit pozice pro testování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
@@ -99,11 +94,11 @@ unsigned char _interlockedbittestandreset64_HLERelease(
   
 |Vnitřní funkce|Architektura|Záhlaví|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandreset`|x86 ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h >|  
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_interlockedbittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Poznámky  
  Na x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] procesory, tyto vnitřní funkce používají `lock btr` instrukce, který čte a nastaví zadaný bit nule v atomické operace.  

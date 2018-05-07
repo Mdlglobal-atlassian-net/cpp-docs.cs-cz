@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCToolBarDateTimeCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCToolBarDateTimeCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarDateTimeCtrl
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f7bdc964da8df8d8a402ae70b38eec1dbbf436
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 340f9f698d63587b7a3812d5922d8963c87751ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl – třída
 Tlačítka panelu nástrojů, který obsahuje ovládací prvek pro výběr data a času.  
@@ -134,7 +129,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbardatetimectrl.h  
   
-##  <a name="canbestretched"></a>CMFCToolBarDateTimeCtrl::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCToolBarDateTimeCtrl::CanBeStretched  
  Určuje, zda uživatele lze roztáhnout tlačítko při přizpůsobení.  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení rozhraní neumožňuje uživateli při přizpůsobení funkce stretch tlačítka panelu nástrojů. Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) tím, že se uživateli při přizpůsobení funkce stretch tlačítka panelu nástrojů datum a čas.  
   
-##  <a name="cmfctoolbardatetimectrl"></a>CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
+##  <a name="cmfctoolbardatetimectrl"></a>  CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
  Vytvoří a inicializuje [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md) objektu.  
   
 ```  
@@ -159,16 +154,16 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiID`  
+ [v] `uiID`  
  ID ovládacího prvku.  
   
- [v]`iImage`  
+ [v] `iImage`  
  Index bitové kopie na panelu nástrojů `CMFCToolBarImages` objektu.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Styl `CMFCToolBarDateTimeCtrlImpl` okno, které se vytvoří, když uživatel klikne na tlačítko.  
   
- [v]`iWidth`  
+ [v] `iWidth`  
  Šířka ovládacího prvku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -179,7 +174,7 @@ CMFCToolBarDateTimeCtrl(
   
  [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCToolBarDateTimeCtrl::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarDateTimeCtrl::CopyFrom  
  Kopíruje vlastnosti z jiného tlačítka panelu nástrojů na tlačítko aktuální.  
   
 ```  
@@ -187,13 +182,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`src`  
+ [v] `src`  
  Odkaz na tlačítko zdroj ze kterého chcete zkopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu pro kopírování jiný tlačítka panelu nástrojů do tohoto tlačítka panelu nástrojů. `src`musí být typu `CMFCToolBarDateTimeCtrl`.  
+ Volejte tuto metodu pro kopírování jiný tlačítka panelu nástrojů do tohoto tlačítka panelu nástrojů. `src` musí být typu `CMFCToolBarDateTimeCtrl`.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarDateTimeCtrl::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarDateTimeCtrl::ExportToMenuButton  
  Zkopíruje text tlačítka na panelu nástrojů k nabídce.  
   
 ```  
@@ -201,7 +196,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`menuButton`  
+ [v] `menuButton`  
  Odkaz na tlačítko nabídky Cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -210,7 +205,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepsání implementace třídy base ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) načtením řetězec prostředku, který je přidružený k příkazu ID ovládacího prvku. Další informace o řetězce prostředků najdete v tématu [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring).  
   
-##  <a name="getbycmd"></a>CMFCToolBarDateTimeCtrl::GetByCmd  
+##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd  
  Načte první `CMFCToolBarDateTimeCtrl` objekt v aplikaci, která má zadaný příkaz ID.  
   
 ```  
@@ -218,7 +213,7 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmd`  
+ [v] `uiCmd`  
  ID příkazu pro načtení tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -227,7 +222,7 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda sdílené nástroj se používá metodami, jako [CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall) a [CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall) nastavit nebo získat data a času všech instancí času ovládací prvek výběru, které mají zadaný příkaz ID.  
   
-##  <a name="getdatetimectrl"></a>CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
+##  <a name="getdatetimectrl"></a>  CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
  Vrátí ukazatel do ovládacího prvku pro výběr data a času.  
   
 ```  
@@ -240,7 +235,7 @@ CDateTimeCtrl* GetDateTimeCtrl() const;
 ### <a name="remarks"></a>Poznámky  
  `CMFCToolBarDateTimeCtrl` Třídy inicializuje `m_pWndDateTime` – datový člen při vložení `CMFCToolBarDateTimeCtrl` objektu do panelu nástrojů.  
   
-##  <a name="gethwnd"></a>CMFCToolBarDateTimeCtrl::GetHwnd  
+##  <a name="gethwnd"></a>  CMFCToolBarDateTimeCtrl::GetHwnd  
  Načte popisovač okna, který je přidružen tlačítka panelu nástrojů.  
   
 ```  
@@ -253,7 +248,7 @@ virtual HWND GetHwnd();
 ### <a name="remarks"></a>Poznámky  
  Přepíše tuto metodu [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) metoda.  
   
-##  <a name="gettime"></a>CMFCToolBarDateTimeCtrl::GetTime  
+##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
  Získá vybrané časové z přidružených datum a čas ovládací prvek pro výběr a umístí jej v zadané [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura  
   
 ```  
@@ -275,7 +270,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ### <a name="remarks"></a>Poznámky  
  Metoda nastaví [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) struktury člen dwFlags indikující, zda je nastaven pro výběr data a času datum a čas. Pokud se hodnota rovná GDT_NONE, ovládacího prvku nastavena na `no date` stav a používá styl DTS_SHOWNONE. Pokud se hodnota vrácená rovná GDT_VALID, systémového času je úspěšně uložen v cílovém umístění.  
   
-##  <a name="gettimeall"></a>CMFCToolBarDateTimeCtrl::GetTimeAll  
+##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
  Vrátí čas vybraný uživatelem z tlačítko čas výběr ovládacího prvku, který má zadaný příkaz ID.  
   
 ```  
@@ -308,7 +303,7 @@ static DWORD GetTimeAll(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyhledá tlačítka panelu nástrojů, který má zadaný příkaz ID a volání [CMFCToolBarDateTimeCtrl::GetTime](#gettime) metoda na toto tlačítko.  
   
-##  <a name="havehotborder"></a>CMFCToolBarDateTimeCtrl::HaveHotBorder  
+##  <a name="havehotborder"></a>  CMFCToolBarDateTimeCtrl::HaveHotBorder  
  Určuje, jestli okrajem tlačítko se zobrazí, když uživatel vybere tlačítko.  
   
 ```  
@@ -321,7 +316,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vrátí nenulovou hodnotu, pokud je ovládací prvek viditelný.  
   
-##  <a name="notifycommand"></a>CMFCToolBarDateTimeCtrl::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
  Určuje, zda tlačítko zpracovává [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy.  
   
 ```  
@@ -329,18 +324,18 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iNotifyCode`  
+ [v] `iNotifyCode`  
  Oznámení, které souvisí s příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tlačítko zpracovává `WM_COMMAND` zprávy, nebo `FALSE` indikující, že zpráva měla by ji zpracovat panelu nástrojů nadřazené.  
+ `TRUE` Pokud tlačítko zpracovává `WM_COMMAND` zprávy, nebo `FALSE` indikující, že zpráva měla by ji zpracovat panelu nástrojů nadřazené.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework volá tuto metodu, když je odeslání [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zpráva do nadřazeného okna.  
   
  Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) zpracováním [dtn_datetimechange –](http://msdn.microsoft.com/library/windows/desktop/bb761737) oznámení. Ho aktualizuje stav interní čas a aktualizuje vlastnost čas všech `CMFCToolBarDateTimeCtrl` příkaz objektů se stejným ID.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  Voláno rámcem při přidání tlačítka do **přizpůsobit** dialogové okno.  
   
 ```  
@@ -352,7 +347,7 @@ virtual void OnAddToCustomizePage();
   
  Další informace o **přizpůsobit** dialogové okno, najdete v části [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
  Voláno rámcem při vložení do nového panelu nástrojů na tlačítko.  
   
 ```  
@@ -360,13 +355,13 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Nové nadřazené okno.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepsání implementace třídy base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) opětovným vytvořením interní `CMFCToolBarDateTimeCtrlImpl` objektu.  
   
-##  <a name="onclick"></a>CMFCToolBarDateTimeCtrl::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarDateTimeCtrl::OnClick  
  Voláno rámcem, když uživatel klikne ovládací prvek.  
   
 ```  
@@ -376,10 +371,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Nepoužívá se.  
   
- [v]`bDelay`  
+ [v] `bDelay`  
  Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -388,7 +383,7 @@ virtual BOOL OnClick(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepsání implementace základní třídy [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), vrácením nenulovou hodnotu, pokud interní `CMFCToolBarDateTimeCtrlImpl` objekt je zobrazen.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarDateTimeCtrl::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCToolBarDateTimeCtrl::OnCtlColor  
  Voláno rámcem při zpracovává nadřazené nástrojů `WM_CTLCOLOR` zprávy.  
   
 ```  
@@ -398,10 +393,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v]`nCtlColor`  
+ [v] `nCtlColor`  
  Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -412,7 +407,7 @@ virtual HBRUSH OnCtlColor(
   
  Další informace o globální možnosti, které jsou k dispozici pro aplikaci najdete v tématu [afx_global_data – struktura](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
  Voláno rámcem, pokud došlo ke změně globální písmo.  
   
 ```  
@@ -424,7 +419,7 @@ virtual void OnGlobalFontsChanged();
   
  Další informace o globální možnosti, které jsou k dispozici pro aplikaci najdete v tématu [afx_global_data – struktura](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onmove"></a>CMFCToolBarDateTimeCtrl::OnMove  
+##  <a name="onmove"></a>  CMFCToolBarDateTimeCtrl::OnMove  
  Voláno rámcem, pokud se přesune panel nástrojů nadřazené.  
   
 ```  
@@ -434,7 +429,7 @@ virtual void OnMove();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepíše výchozí implementaci třídy ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) tím, že aktualizuje pozici interní `CMFCToolBarDateTimeCtrlImpl` objektu.  
   
-##  <a name="onshow"></a>CMFCToolBarDateTimeCtrl::OnShow  
+##  <a name="onshow"></a>  CMFCToolBarDateTimeCtrl::OnShow  
  Voláno rámcem když se stane tlačítko viditelný nebo neviditelná.  
   
 ```  
@@ -442,13 +437,13 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bShow`  
+ [v] `bShow`  
  Určuje, zda je tlačítko viditelná. Pokud tento parametr je `TRUE`, tlačítko je viditelné. Tlačítko, jinak hodnota není viditelný.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) tím, že pokud se zobrazuje na tlačítko `bShow` je `TRUE`. Tuto metodu, jinak hodnota skryje tlačítko.  
   
-##  <a name="onsize"></a>CMFCToolBarDateTimeCtrl::OnSize  
+##  <a name="onsize"></a>  CMFCToolBarDateTimeCtrl::OnSize  
  Voláno rámcem, když nadřazené nástrojů změní jeho velikost nebo pozice a tato změna způsobí, že na tlačítko Změnit velikost.  
   
 ```  
@@ -456,13 +451,13 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iSize`  
+ [v] `iSize`  
  Nové šířka tlačítko v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přepíše výchozí implementaci třídy ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) tím, že aktualizuje velikost a umístění interního `CMFCToolBarDateTimeCtrlImpl` objektu.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
  Voláno rámcem po aktualizaci jeho text popisu tlačítka panelu nástrojů nadřazené.  
   
 ```  
@@ -474,16 +469,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Nadřazené okno.  
   
- [v]`iButtonIndex`  
+ [v] `iButtonIndex`  
  Index založený na nule tlačítka v nadřazené tlačítko kolekce.  
   
- [v]`wndToolTip`  
+ [v] `wndToolTip`  
  Ovládací prvek, který zobrazí text popisku.  
   
- [out]`str`  
+ [out] `str`  
  A `CString` objekt, který přijme text aktualizované popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -492,7 +487,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) tím, že zobrazuje text popisku, který je přidružen tlačítko. Pokud tlačítko není ukotven vodorovně, tato metoda neprovede žádnou akci a vrátí `FALSE`.  
   
-##  <a name="settime"></a>CMFCToolBarDateTimeCtrl::SetTime  
+##  <a name="settime"></a>  CMFCToolBarDateTimeCtrl::SetTime  
  Nastaví datum a čas v ovládacím prvku pro výběr čas.  
   
 ```  
@@ -514,7 +509,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ### <a name="remarks"></a>Poznámky  
  Nastaví dobu v ovládacím prvku pro výběr data a času voláním [CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime).  
   
-##  <a name="settimeall"></a>CMFCToolBarDateTimeCtrl::SetTimeAll  
+##  <a name="settimeall"></a>  CMFCToolBarDateTimeCtrl::SetTimeAll  
  Nastaví datum a čas ve všech instancích ovládacího prvku pro výběr času, které mají zadaný příkaz ID.  
   
 ```  

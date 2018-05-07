@@ -1,12 +1,9 @@
 ---
-title: "CHeaderCtrl – třída | Microsoft Docs"
-ms.custom: 
+title: CHeaderCtrl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl – třída
 Poskytuje funkci ovládacím prvku Windows běžné záhlaví.  
@@ -166,7 +161,7 @@ class CHeaderCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
  Vytvoří `CHeaderCtrl` objektu.  
   
 ```  
@@ -176,7 +171,7 @@ CHeaderCtrl();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
  Vymaže všechny filtry ovládacím prvkem záhlaví.  
   
 ```  
@@ -184,7 +179,7 @@ BOOL ClearAllFilters();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda implementuje chování zprávy Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) s sloupec hodnota -1, jak je popsáno v sadě Windows SDK.  
@@ -192,7 +187,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
  Vymaže filtr pro ovládacím prvkem záhlaví.  
   
 ```  
@@ -204,7 +199,7 @@ BOOL ClearFilter(int nColumn);
  Sloupec hodnotu určující, který filtr vymazat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda implementuje chování zprávy Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), jak je popsáno v sadě Windows SDK.  
@@ -212,7 +207,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl::Create  
+##  <a name="create"></a>  CHeaderCtrl::Create  
  Vytvoří ovládacím prvkem záhlaví a připojí jej k `CHeaderCtrl` objektu.  
   
 ```  
@@ -244,17 +239,17 @@ virtual BOOL Create(
   
  Kromě styly ovládacího prvku záhlaví, můžete použít následující běžné styly ovládacího prvku určit, jak ovládací prvky záhlaví umisťuje a změní velikost sebe sama (viz [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) Další informace):  
   
-- `CCS_BOTTOM`Způsobí, že ovládací prvek na pozici sám v dolní části okna nadřazené klientské oblasti a nastaví šířku, která má být stejná jako nadřazená položka šířku uživatele systému Windows.  
+- `CCS_BOTTOM` Způsobí, že ovládací prvek na pozici sám v dolní části okna nadřazené klientské oblasti a nastaví šířku, která má být stejná jako nadřazená položka šířku uživatele systému Windows.  
   
-- `CCS_NODIVIDER`Zabrání přitahuje v horní části ovládacího prvku zvýraznění dva pixelů.  
+- `CCS_NODIVIDER` Zabrání přitahuje v horní části ovládacího prvku zvýraznění dva pixelů.  
   
-- `CCS_NOMOVEY`Způsobí, že změna velikosti a přesunout sám sebe vodorovně, ale není svisle v reakci na ovládacího prvku `WM_SIZE` zprávy. Pokud `CCS_NORESIZE` styl se používá, tento styl nevztahuje. Ovládací prvky hlavičky mají tento styl ve výchozím nastavení.  
+- `CCS_NOMOVEY` Způsobí, že změna velikosti a přesunout sám sebe vodorovně, ale není svisle v reakci na ovládacího prvku `WM_SIZE` zprávy. Pokud `CCS_NORESIZE` styl se používá, tento styl nevztahuje. Ovládací prvky hlavičky mají tento styl ve výchozím nastavení.  
   
-- `CCS_NOPARENTALIGN`Zabrání automaticky Přesun do horní nebo dolní části okna nadřazeného ovládacího prvku. Místo toho ovládacího prvku udržuje pozici v rámci nadřazeného okna navzdory změny velikosti nadřazeného okna. Pokud `CCS_TOP` nebo `CCS_BOTTOM` styl se také používá, výška se upraví na výchozí hodnoty, ale zůstávají pozice a šířka beze změn.  
+- `CCS_NOPARENTALIGN` Zabrání automaticky Přesun do horní nebo dolní části okna nadřazeného ovládacího prvku. Místo toho ovládacího prvku udržuje pozici v rámci nadřazeného okna navzdory změny velikosti nadřazeného okna. Pokud `CCS_TOP` nebo `CCS_BOTTOM` styl se také používá, výška se upraví na výchozí hodnoty, ale zůstávají pozice a šířka beze změn.  
   
-- `CCS_NORESIZE`Ovládací prvek bránit v použití výchozí šířku a výšku při nastavování jeho počáteční velikost nebo novou velikost. Místo toho ovládací prvek používá šířku a výšku určený v požadavku pro vytvoření nebo velikosti.  
+- `CCS_NORESIZE` Ovládací prvek bránit v použití výchozí šířku a výšku při nastavování jeho počáteční velikost nebo novou velikost. Místo toho ovládací prvek používá šířku a výšku určený v požadavku pro vytvoření nebo velikosti.  
   
-- `CCS_TOP`Způsobí, že ovládací prvek na pozici sám v horní části okna nadřazené klientské oblasti a nastaví šířku, která má být stejná jako nadřazená položka šířku uživatele systému Windows.  
+- `CCS_TOP` Způsobí, že ovládací prvek na pozici sám v horní části okna nadřazené klientské oblasti a nastaví šířku, která má být stejná jako nadřazená položka šířku uživatele systému Windows.  
   
  Můžete taky použít následující styly oken do ovládacího prvku záhlaví (viz [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) Další informace):  
   
@@ -273,7 +268,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
  Vytvoří ovládacího prvku (podřízeného okna) a přidružit ho pomocí `CHeaderCtrl` objektu.  
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo **vytvořit** použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Vytvoří transparentní verze obrázku položky v ovládacím prvku hlavička.  
   
 ```  
@@ -326,7 +321,7 @@ CImageList* CreateDragImage(int nIndex);
   
  `CImageList` Objekt, ke které body Vrácený ukazatel je dočasný objekt a bude odstraněn ze další zpracování doby nečinnosti.  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
  Vymaže položku z ovládacího prvku záhlaví.  
   
 ```  
@@ -343,7 +338,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
  Voláno rámcem při visual aspekt vykreslování vlastníka záhlaví řízení změn.  
   
 ```  
@@ -364,7 +359,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
  Zahájí upravit zadaný filtr ovládacího prvku záhlaví.  
   
 ```  
@@ -383,7 +378,7 @@ BOOL EditFilter(
  Zadejte `true` se zahodit změny provedené uživatelem, nebo `false` tak, aby přijímal změny provedené uživatelem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda implementuje chování zprávy Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), jak je popsáno v sadě Windows SDK.  
@@ -391,7 +386,7 @@ BOOL EditFilter(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
  Načte Šířka okraje bitmapu v ovládacím prvku hlavička.  
   
 ```  
@@ -407,7 +402,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
  Získá index položky, který je aktivní v ovládacím prvku aktuální záhlaví.  
   
 ```  
@@ -430,7 +425,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
  Načte popisovač používá pro vykreslování položek záhlaví v ovládacím prvku hlavička seznamu obrázků.  
   
 ```  
@@ -446,7 +441,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>CHeaderCtrl::GetItem  
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem  
  Načte informace o položkách ovládacího prvku záhlaví.  
   
 ```  
@@ -468,7 +463,7 @@ BOOL GetItem(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
  Načte počet položek v ovládacím prvku hlavička.  
   
 ```  
@@ -481,7 +476,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
  Získá ohraničující obdélník rozevírací tlačítko pro položky záhlaví v ovládacím prvku aktuální záhlaví.  
   
 ```  
@@ -494,11 +489,11 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`iItem`|Index položky záhlaví, jehož styl je počítáno od nuly `HDF_SPLITBUTTON`. Další informace najdete v tématu `fmt` členem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
-|[out]`lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura získat ohraničující obdélník informace.|  
+|[v] `iItem`|Index položky záhlaví, jehož styl je počítáno od nuly `HDF_SPLITBUTTON`. Další informace najdete v tématu `fmt` členem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
+|[out] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura získat ohraničující obdélník informace.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`je-li tuto funkci úspěšně; v opačném `false`.  
+ `true` je-li tuto funkci úspěšně; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) zprávy, která je popsána v sadě Windows SDK.  
@@ -513,7 +508,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
  Načte ohraničující obdélník pro danou položku v ovládacím prvku hlavička.  
   
 ```  
@@ -535,7 +530,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda implementuje chování zprávy Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="getorderarray"></a>CHeaderCtrl::GetOrderArray  
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray  
  Načte zleva doprava pořadí položek v ovládacím prvku hlavička.  
   
 ```  
@@ -560,7 +555,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
  Získá ohraničující obdélník tlačítko přetečení aktuální ovládacího prvku záhlaví.  
   
 ```  
@@ -571,10 +566,10 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out]`lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník informace.|  
+|[out] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník informace.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`je-li tuto funkci úspěšně; v opačném `false`.  
+ `true` je-li tuto funkci úspěšně; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud ovládacím prvku záhlaví obsahuje více položek, než lze zobrazit najednou, můžete ovládací prvek zobrazeno tlačítko přetečení, posouvá k položkám, které nejsou viditelné. Ovládací prvek záhlaví musí mít `HDS_OVERFLOW` a `HDF_SPLITBUTTON` stylů se zobrazí tlačítko přetečení. Ohraničující obdélník uzavře tlačítko přetečení a existuje jenom v případě, že se zobrazí tlačítko přetečení. Další informace najdete v tématu [styly ovládacího prvku záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
@@ -591,7 +586,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
  Určuje, které položky záhlaví, pokud existuje, se nachází v určitém bodě.  
   
 ```  
@@ -602,7 +597,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[ve out]`phdhti`|Ukazatel na [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktura, která určuje bod k testování a přijímá výsledky testu.|  
+|[ve out] `phdhti`|Ukazatel na [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktura, která určuje bod k testování a přijímá výsledky testu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule položky záhlaví, pokud existuje, na zadané pozici; jinak hodnota -1.  
@@ -620,7 +615,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>CHeaderCtrl::InsertItem  
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem  
  Vloží novou položku do ovládacího prvku záhlaví v zadaném indexu.  
   
 ```  
@@ -642,7 +637,7 @@ int InsertItem(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl::Layout  
+##  <a name="layout"></a>  CHeaderCtrl::Layout  
  Načte velikost a umístění ovládacího prvku záhlaví v rámci dané obdélníku.  
   
 ```  
@@ -662,7 +657,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
+##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
  Načte hodnotu indexu pro položky na základě jeho pořadí v ovládacím prvku záhlaví.  
   
 ```  
@@ -679,7 +674,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování makro Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), jak je popsáno v sadě Windows SDK. Je poskytována pro podporu řazení položky záhlaví.  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Nastaví šířku okraje bitmapu v ovládacím prvku hlavička.  
   
 ```  
@@ -699,7 +694,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
  Nastaví interval časového limitu mezi časem změnu probíhá v atributy filtru a účtování [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) oznámení.  
   
 ```  
@@ -719,7 +714,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
  Zadaná hlavička položky v ovládacím prvku aktuální záhlaví nastaví fokus.  
   
 ```  
@@ -730,10 +725,10 @@ BOOL SetFocusedItem(int iItem);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`iItem`|Index položky záhlaví počítáno od nuly.|  
+|[v] `iItem`|Index položky záhlaví počítáno od nuly.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) zprávy, která je popsána v sadě Windows SDK.  
@@ -748,7 +743,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
  Přetáhněte oddělovač mezi položky hlavičky k označení ruční změny a drop položky záhlaví.  
   
 ```  
@@ -772,7 +767,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>CHeaderCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList  
  Seznam obrázků přiřadí ovládacím prvkem záhlaví.  
   
 ```  
@@ -792,7 +787,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setitem"></a>CHeaderCtrl::SetItem  
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem  
  Nastaví atributy zadané položky v ovládacím prvku hlavička.  
   
 ```  
@@ -814,7 +809,7 @@ BOOL SetItem(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CHeaderCtrl::GetItem](#getitem).  
   
-##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray  
  Nastaví zleva doprava pořadí položek v ovládacím prvku hlavička.  
   
 ```  

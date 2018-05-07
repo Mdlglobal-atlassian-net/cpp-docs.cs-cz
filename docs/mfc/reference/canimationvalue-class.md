@@ -1,12 +1,9 @@
 ---
-title: "Třída CAnimationValue | Microsoft Docs"
-ms.custom: 
+title: Třída CAnimationValue | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationValue
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue – třída
 Implementuje funkce animace objektu, který má jednu hodnotu.  
@@ -100,7 +95,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
  Přidá přechod má být použita pro hodnotu.  
   
 ```  
@@ -114,7 +109,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce můžete přidat přechod do interní seznamu přechodů má být použita pro proměnnou animace. Když přidáte přechody, jejich nejsou použije okamžitě a uložená v interní seznamu. Přechody se použijí (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup.  
   
-##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue  
  Vytvoří objekt CAnimationValue.  
   
 ```  
@@ -144,7 +139,7 @@ CAnimationValue(
 ### <a name="remarks"></a>Poznámky  
  Vytvoří objekt CAnimationValue s výchozí vlastnosti: výchozí, ID skupiny a ID objektu je nastavena na hodnotu 0.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
  Vloží proměnnou zapouzdřené animace do seznamu.  
   
 ```  
@@ -157,7 +152,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Když funkce vrátí hodnotu, obsahuje ukazatel na CAnimationVariable představující animovaný hodnotu.  
   
-##  <a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>  CAnimationValue::GetValue  
  Načte aktuální hodnotu.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst aktuální hodnotu. Tato implementace volá zapouzdřené objektu COM, a pokud volání selže, vrátí tato metoda výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo s SetDefaultValue.  
   
-##  <a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>  CAnimationValue::GetVariable  
  Poskytuje přístup k proměnné zapouzdřené animace.  
   
 ```  
@@ -191,14 +186,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte pro přístup k proměnné zapouzdřené animace. Z CAnimationVariable získat přístup k základní IUIAnimationVariable objekt, jehož ukazatel může mít hodnotu NULL, pokud nebyla vytvořena proměnná animace.  
   
-##  <a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>  CAnimationValue::m_value  
  Obsah zapouzdřeného animace proměnné, která představuje hodnotu animace.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="operator_double"></a>CAnimationValue::operator DOUBLE  
+##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE  
  Poskytuje převody mezi CAnimationValue a DVOJITOU hodnotu.  
   
 ```  
@@ -211,7 +206,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>Poznámky  
  Poskytuje převody mezi CAnimationValue a DVOJITOU hodnotu. Interně tato metoda volá GetValue a neohlásí chyby. Pokud GetValue selže, bude vrácená hodnota obsahovat výchozí hodnotu, dříve nastavené v konstruktoru nebo s SetDefaultValue.  
   
-##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
  Poskytuje převody mezi CAnimationValue a INT32.  
   
 ```  
@@ -224,7 +219,7 @@ operator INT32();
 ### <a name="remarks"></a>Poznámky  
  Poskytuje převody mezi CAnimationValue a INT32. Interně tato metoda volá GetValue a neohlásí chyby. Pokud GetValue selže, bude vrácená hodnota obsahovat výchozí hodnotu, dříve nastavené v konstruktoru nebo s SetDefaultValue.  
   
-##  <a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>  CAnimationValue::operator =  
  Hodnota typu DOUBLE přiřadí CAnimationValue.  
   
 ```  
@@ -242,7 +237,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>Poznámky  
  Hodnota typu DOUBLE přiřadí CAnimationValue. Tato hodnota nastavena jako výchozí hodnotu pro proměnnou zapouzdřené animace. Pokud odebíráte tento objekt animace události (ValueChanged nebo IntegerValueChanged), budete muset znovu povolit tyto události.  
   
-##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
  Nastaví výchozí hodnotu.  
   
 ```  

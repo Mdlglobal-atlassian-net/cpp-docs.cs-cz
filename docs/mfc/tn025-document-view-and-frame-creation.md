@@ -1,13 +1,10 @@
 ---
-title: "Tn025: vytvoření Dokumentu, zobrazení a rámečku | Microsoft Docs"
-ms.custom: 
+title: 'Tn025: vytvoření Dokumentu, zobrazení a rámečku | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: Vytvoření dokumentu, zobrazení a rámečku
 > [!NOTE]
@@ -52,13 +47,13 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>DocTemplates  
  `CDocTemplate` Je creator a správce dokumentů. Vlastní dokumenty, které vytvoří. Pokud vaše aplikace používá přístup podle prostředků popsaných níže, nebude potřebovat k odvozování z `CDocTemplate`.  
   
- Pro aplikace SDI třída `CSingleDocTemplate` uchovává informace o jeden dokument otevřít. Pro aplikace MDI třída `CMultiDocTemplate` udržuje seznam ( `CPtrList`) z všechny aktuálně otevřené dokumenty vytvořené z této šablony. `CDocTemplate::AddDocument`a `CDocTemplate::RemoveDocument` zadejte člena virtuální funkce pro přidání nebo odebrání dokumentu ze šablony. `CDocTemplate`je přítel z **CDocument** tak jsme můžete nastavit chráněného **CDocument::m_pDocTemplate** zpětný ukazatel odkazovat zpět do dokumentů šablony, která vytvořila dokumentu.  
+ Pro aplikace SDI třída `CSingleDocTemplate` uchovává informace o jeden dokument otevřít. Pro aplikace MDI třída `CMultiDocTemplate` udržuje seznam ( `CPtrList`) z všechny aktuálně otevřené dokumenty vytvořené z této šablony. `CDocTemplate::AddDocument` a `CDocTemplate::RemoveDocument` zadejte člena virtuální funkce pro přidání nebo odebrání dokumentu ze šablony. `CDocTemplate` je přítel z **CDocument** tak jsme můžete nastavit chráněného **CDocument::m_pDocTemplate** zpětný ukazatel odkazovat zpět do dokumentů šablony, která vytvořila dokumentu.  
   
- `CWinApp`zpracovává výchozí `OnFileOpen` implementace, které pak odešle dotaz všech šablon dokumentů. Implementace zahrnuje hledá již otevřené dokumenty a při rozhodování o tom, co chcete-li otevřít nové dokumenty ve formátu.  
+ `CWinApp` zpracovává výchozí `OnFileOpen` implementace, které pak odešle dotaz všech šablon dokumentů. Implementace zahrnuje hledá již otevřené dokumenty a při rozhodování o tom, co chcete-li otevřít nové dokumenty ve formátu.  
   
- `CDocTemplate`spravuje vazby uživatelského rozhraní pro dokumenty a rámce.  
+ `CDocTemplate` spravuje vazby uživatelského rozhraní pro dokumenty a rámce.  
   
- `CDocTemplate`zachová počet nepojmenované dokumenty.  
+ `CDocTemplate` zachová počet nepojmenované dokumenty.  
   
 ## <a name="cdocument"></a>CDocument  
  A **CDocument** je vlastněna `CDocTemplate`.  

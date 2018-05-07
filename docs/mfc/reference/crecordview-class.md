@@ -1,12 +1,9 @@
 ---
-title: "CRecordView – třída | Microsoft Docs"
-ms.custom: 
+title: CRecordView – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordView
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ffc45e73a2e56acf17bd1a7107e599967b3279b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordview-class"></a>CRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -71,7 +66,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 |[CRecordView::OnMove](#onmove)|Pokud došlo ke změně aktuální záznam aktualizací ve zdroji dat a pak přejde na zadaný záznam (Další, předchozí, první nebo poslední).|  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazení je přímo připojený k zobrazení formuláře `CRecordset` objektu. Zobrazení je vytvořený z prostředku šablony dialogovém okně a zobrazí pole `CRecordset` objektu v ovládacích prvcích šablony dialogového okna. `CRecordView` Objektu používá výměna dialogových dat (DDX) a pole záznamu (exchange – RFX) k automatizaci přesun dat mezi ovládacími prvky na formuláři a pole sady záznamů. `CRecordView`také poskytuje výchozí implementaci pro přesun na první další, předchozí nebo poslední záznam a rozhraní pro aktualizaci záznamu aktuálně pro zobrazení.  
+ Zobrazení je přímo připojený k zobrazení formuláře `CRecordset` objektu. Zobrazení je vytvořený z prostředku šablony dialogovém okně a zobrazí pole `CRecordset` objektu v ovládacích prvcích šablony dialogového okna. `CRecordView` Objektu používá výměna dialogových dat (DDX) a pole záznamu (exchange – RFX) k automatizaci přesun dat mezi ovládacími prvky na formuláři a pole sady záznamů. `CRecordView` také poskytuje výchozí implementaci pro přesun na první další, předchozí nebo poslední záznam a rozhraní pro aktualizaci záznamu aktuálně pro zobrazení.  
   
 > [!NOTE]
 >  Pokud pracujete s třídy objektů DAO (Data Access), nikoli třídy připojení ODBC (Open Database), použijte třídu [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) místo. Další informace najdete v článku [přehled: programování databáze](../../data/data-access-programming-mfc-atl.md).  
@@ -82,7 +77,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  Informace o výchozí implementace pro přesun mezi záznamy najdete v tématu `IsOnFirstRecord` a `IsOnLastRecord` a v článku [použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
- `CRecordView`uchovává informace o umístění uživatele v sadě záznamů tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Pokud se uživatel přesune na obou koncích sady záznamů, zobrazení záznamu zakáže objekty uživatelského rozhraní – například položek nabídky nebo tlačítka panelu nástrojů – pro přesun další ve stejném směru.  
+ `CRecordView` uchovává informace o umístění uživatele v sadě záznamů tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Pokud se uživatel přesune na obou koncích sady záznamů, zobrazení záznamu zakáže objekty uživatelského rozhraní – například položek nabídky nebo tlačítka panelu nástrojů – pro přesun další ve stejném směru.  
   
  Další informace o deklarování a použití zobrazení záznamů a záznamů třídy najdete v tématu "Navrhování a vytváření záznam zobrazení" v článku [zobrazení záznamů](../../data/record-views-mfc-data-access.md). Další informace o způsobu zobrazení záznamu pracovní a jejich použití naleznete v článku [použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -104,7 +99,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
   
-##  <a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>  CRecordView::CRecordView  
  Když vytvoříte objekt typ odvozený z `CRecordView`, volání buď formu konstruktor k inicializaci objektu zobrazení a identifikovat prostředku dialogového okna, na kterých je založena zobrazení.  
   
 ```  
@@ -133,7 +128,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CRecordView::IsOnFirstRecord  
  Volání této funkce člen můžete určit, zda je na aktuální záznam na první záznam v objektu sady záznamů spojeného s tímto zobrazením záznamu.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL IsOnFirstRecord();
   
  Pokud se uživatel přesune na první záznam, rozhraní zakáže všechny objekty uživatelského rozhraní, které máte pro přesun na první nebo předchozího záznamu.  
   
-##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CRecordView::IsOnLastRecord  
  Volání této funkce člen můžete určit, zda je na aktuální záznam poslední záznam v objektu sady záznamů spojeného s tímto zobrazením záznamu.  
   
 ```  
@@ -162,9 +157,9 @@ BOOL IsOnLastRecord();
  Tato funkce je užitečná pro psaní vlastního implementace výchozí obslužné rutiny aktualizace příkazů, které ClassWizard zapíše pro podporu uživatelského rozhraní pro přesun mezi záznamy.  
   
 > [!CAUTION]
->  Výsledkem této funkce je spolehlivé, s tím rozdílem, že zobrazení nedokáže detekovat konec sady záznamů, dokud uživatel má přesunuty za ho. Uživatel musí přesunout mimo poslední záznam před zobrazení záznamu zjistíte, že je nutné zakázat všechny objekty uživatelského rozhraní pro přesun na další nebo poslední záznam. Pokud uživatel přesune za poslední záznam a pak přejde zpět na poslední záznam (nebo před ním), můžete zobrazení záznamů sledovat pozici uživatele v sadě záznamů a správně zakázat objekty uživatelského rozhraní. `IsOnLastRecord`je také po volání funkce implementace nespolehlivé **OnRecordLast**, která zpracovává `ID_RECORD_LAST` příkazu, nebo `CRecordset::MoveLast`.  
+>  Výsledkem této funkce je spolehlivé, s tím rozdílem, že zobrazení nedokáže detekovat konec sady záznamů, dokud uživatel má přesunuty za ho. Uživatel musí přesunout mimo poslední záznam před zobrazení záznamu zjistíte, že je nutné zakázat všechny objekty uživatelského rozhraní pro přesun na další nebo poslední záznam. Pokud uživatel přesune za poslední záznam a pak přejde zpět na poslední záznam (nebo před ním), můžete zobrazení záznamů sledovat pozici uživatele v sadě záznamů a správně zakázat objekty uživatelského rozhraní. `IsOnLastRecord` je také po volání funkce implementace nespolehlivé **OnRecordLast**, která zpracovává `ID_RECORD_LAST` příkazu, nebo `CRecordset::MoveLast`.  
   
-##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Vrátí ukazatel `CRecordset`-odvozené objekt přidružený k zobrazení záznamu.  
   
 ```  
@@ -179,7 +174,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Další informace a příklady naleznete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>  CRecordView::OnMove  
  Volání této funkce člen přesunout na jiný záznam v sadě záznamů a zobrazte její pole v ovládací prvky zobrazení záznamu.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Jedna z následujících hodnot ID standardních příkazů:  
   
-- `ID_RECORD_FIRST`Přesunout na první záznam v sadě záznamů.  
+- `ID_RECORD_FIRST` Přesunout na první záznam v sadě záznamů.  
   
-- `ID_RECORD_LAST`Přechod na poslední záznam v sadě záznamů.  
+- `ID_RECORD_LAST` Přechod na poslední záznam v sadě záznamů.  
   
-- `ID_RECORD_NEXT`Přejděte na další záznam v sadě záznamů.  
+- `ID_RECORD_NEXT` Přejděte na další záznam v sadě záznamů.  
   
-- `ID_RECORD_PREV`Přesuňte do předchozího záznamu v sadě záznamů.  
+- `ID_RECORD_PREV` Přesuňte do předchozího záznamu v sadě záznamů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud byl přesun úspěšný; jinak hodnota 0, pokud žádost o přesunutí byl odepřen.  

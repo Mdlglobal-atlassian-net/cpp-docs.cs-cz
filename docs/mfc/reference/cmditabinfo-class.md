@@ -1,12 +1,9 @@
 ---
-title: "Třída CMDITabInfo | Microsoft Docs"
-ms.custom: 
+title: Třída CMDITabInfo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b670b26855f5edcfb955d3dd0f8150a999f3a8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo – třída
 `CMDITabInfo` Třída se používá k předat parametry do [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metoda. – Skupiny se záložkami sadu členů této třídy pro řízení chování MDI.  
@@ -102,7 +97,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;  
  Určuje, zda **Zavřít** tlačítko se zobrazí na název active karty.  
   
 ```  
@@ -112,7 +107,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, se zobrazí popisek aktivní karty **Zavřít** tlačítko. **Zavřít** tlačítko bude odebrána z pravém horním rohu oblast karty. Jinak název active karty nezobrazí **Zavřít** tlačítko. **Zavřít** tlačítko se zobrazí v pravém horním rohu oblast karty.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Určuje, zda je každé kartě MDI vlastní barvy.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, každé kartě bude mít svůj vlastní barvy. Knihovny MFC spravuje sadu barev. Karty, jinak se zobrazí v prázdné. Výchozí hodnota je `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Určuje, zda na jednotlivých kartách místní nabídky, které obsahuje seznam otevřených dokumentů na pravé straně oblast karty.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, každé kartě windows zobrazí místní nabídky, které obsahuje seznam otevřených dokumentů na pravé straně oblast karty; Karta okna, jinak hodnota zobrazí Posunutí tlačítek v pravé hrany oblast karty. Výchozí hodnota je `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
  Určuje, zda uživatel zaměnit polohy karty přetažením.  
   
 ```  
@@ -142,14 +137,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, uživatel může změnit pozice karty přetažením karty. Uživatele nelze změnit, jinak hodnota pozice karty. Výchozí hodnota je `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Určuje, zda je každý okno s kartou ploché rámce.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
  Určuje, zda se má zobrazit každý okno s kartou **Zavřít** tlačítko.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, zobrazí na každé kartě okno **Zavřít** na pravý okraj kartě tlačítko. Jinak **Zavřít** se nezobrazí tlačítko. Výchozí hodnota je `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
  Určuje, zda karty zobrazí popisy ovládacích prvků.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, odešle aplikace `AFX_WM_ON_GET_TAB_TOOLTIP` zprávu, která se hlavního rámce. Tuto zprávu můžete řešit pomocí `ON_REGISTERED_MESSAGE` makro.  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Určuje, jestli se má zobrazit ikony na kartách MDI.  
   
 ```  
@@ -179,7 +174,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Poznámky  
  Pokud `TRUE`, ikony se zobrazí na každé kartě MDI. Ikony, jinak hodnota nejsou zobrazeny na kartách. Výchozí hodnota je `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Určuje velikost ohraničení okna v pixelech, každé kartě.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Poznámky  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) vrátí výchozí hodnota.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
  Určuje styl popisků kartě.  
   
 ```  
@@ -217,7 +212,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  3D styl se zaokrouhlí karta štítky.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Určuje, zda budou popisky karty v horní nebo dolní části stránky.  
   
 ```  
@@ -231,7 +226,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: popisky karty jsou umístěné v horní části stránky  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
  Čtení nebo zápisu tento objekt z archivu nebo do archivu.  
   
 ```  
@@ -239,7 +234,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ar`  
+ [v] `ar`  
  A [CArchive – třída](../../mfc/reference/carchive-class.md) objektu k serializaci.  
   
 ## <a name="see-also"></a>Viz také  

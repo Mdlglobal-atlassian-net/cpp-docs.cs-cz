@@ -1,12 +1,9 @@
 ---
-title: "CAnimateCtrl – třída | Microsoft Docs"
-ms.custom: 
+title: CAnimateCtrl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58918a45daa1a6f64c160d79f52503e3a3c61cff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl – třída
 Poskytuje funkce Windows běžné ovládacího prvku animace.  
@@ -112,7 +107,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
  Vytvoří `CAnimateCtrl` objektu.  
   
 ```  
@@ -125,7 +120,7 @@ CAnimateCtrl();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>  CAnimateCtrl::Close  
  Zavře klip souborů AVI, který byl dříve otevřen v ovládacím prvku animace (pokud existuje) a odebere ji z paměti.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL Close();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>  CAnimateCtrl::Create  
  Vytvoří ovládacího prvku animace a připojí jej k `CAnimateCtrl` objektu.  
   
 ```  
@@ -183,7 +178,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
  Vytvoří ovládací prvek (podřízeného okna) a přidruží ji s `CAnimateCtrl` objektu.  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
-##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying  
  Určuje, zda je přehrávání klip Audio a Video prokládaný (AVI).  
   
 ```  
@@ -225,12 +220,12 @@ BOOL IsPlaying() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud je AVI klip přehrávání; v opačném `false`.  
+ `true` Pokud je AVI klip přehrávání; v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>  CAnimateCtrl::Open  
  Volání této funkce otevřete klip souborů AVI a zobrazíte jeho první snímek.  
   
 ```  
@@ -262,7 +257,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>  CAnimateCtrl::Play  
  Volání této funkce přehrávání AVI klip v ovládacím prvku animace.  
   
 ```  
@@ -291,7 +286,7 @@ BOOL Play(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>  CAnimateCtrl::Seek  
  Volání této funkce na statické zobrazení jeden snímek klip souborů AVI.  
   
 ```  
@@ -311,7 +306,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>  CAnimateCtrl::Stop  
  Volání této funkce přehrávání AVI klip v ovládacím prvku animace.  
   
 ```  

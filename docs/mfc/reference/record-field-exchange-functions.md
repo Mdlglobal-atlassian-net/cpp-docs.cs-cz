@@ -1,13 +1,10 @@
 ---
-title: "Funkce výměny polí záznamů | Microsoft Docs"
-ms.custom: 
+title: Funkce výměny polí záznamů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>Funkce výměny polí v záznamu
 Toto téma obsahuje seznam výměna pole záznamu (RFX, hromadné RFX a DFX) použít k automatizaci přenos dat mezi objekt sady záznamů a zdrojem dat a provádění dalších operací data funkce.  
@@ -128,7 +123,7 @@ Toto téma obsahuje seznam výměna pole záznamu (RFX, hromadné RFX a DFX) pou
 
  =============================================
 
-## <a name="rfx_binary"></a>RFX_Binary –
+## <a name="rfx_binary"></a>  RFX_Binary –
 Přenosy mezi pole datových členů z pole bajtů `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_BINARY**, **SQL_VARBINARY**, nebo **SQL_ LONGVARBINARY**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -163,7 +158,7 @@ void RFX_Binary(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_bool"></a>Rfx_bool –
+## <a name="rfx_bool"></a>  Rfx_bool –
 Boolean – datový přenos mezi pole datových členů z `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_BIT**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -191,7 +186,7 @@ void RFX_Bool(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_byte"></a>Rfx_byte –
+## <a name="rfx_byte"></a>  Rfx_byte –
 Přenosy jednotné bajtů mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_TINYINT**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -219,7 +214,7 @@ void RFX_Byte(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_date"></a>RFX_Date –
+## <a name="rfx_date"></a>  RFX_Date –
 Přenosy `CTime` nebo **TIMESTAMP_STRUCT z** dat mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_DATE**, **SQL_TIME**, nebo **SQL_TIMESTAMP**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -264,7 +259,7 @@ void RFX_Date(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_double"></a>Rfx_double –
+## <a name="rfx_double"></a>  Rfx_double –
 Přenosy **dvojité float** dat mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_DOUBLE**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -292,7 +287,7 @@ void RFX_Double(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_int"></a>Rfx_int –
+## <a name="rfx_int"></a>  Rfx_int –
 Přenosy dat celé číslo mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -320,7 +315,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_long"></a>Rfx_long –
+## <a name="rfx_long"></a>  Rfx_long –
 Přenosy dat dlouhé celé číslo mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_INTEGER**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -349,7 +344,7 @@ value );
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
   
-## <a name="rfx_longbinary"></a>Rfx_longbinary –
+## <a name="rfx_longbinary"></a>  Rfx_longbinary –
 Přenosy dat binární rozsáhlý objekt (binární rozsáhlý OBJEKT) pomocí třídy [CLongBinary](clongbinary-class.md) mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_LONGVARBINARY**nebo **SQL_LONGVARCHAR**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -377,7 +372,7 @@ void RFX_LongBinary(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_single"></a>Rfx_single –
+## <a name="rfx_single"></a>  Rfx_single –
 Přenosy dat s plovoucí desetinnou čárkou mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_REAL**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -406,7 +401,7 @@ void RFX_Single(
  **Záhlaví:** afxdb.h  
   
 
-## <a name="rfx_text"></a>RFX_Text –
+## <a name="rfx_text"></a>  RFX_Text –
 Přenosy `CString` dat mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_ VARCHAR**, **SQL_DECIMAL**, nebo **SQL_NUMERIC**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -438,7 +433,7 @@ void RFX_Text(
  Používá se především pro parametry. Celé číslo, která určuje datový typ parametru. Typ je typ dat rozhraní ODBC formuláře **SQL_XXX**.  
   
  `nScale`  
- Určuje měřítko pro hodnoty typu ODBC **SQL_DECIMAL** nebo **SQL_NUMERIC**. `nScale`je užitečné pouze při nastavování hodnot parametrů. Další informace naleznete v tématu "Přesnost, měřítko, délku a zobrazovaná velikost" v dodatku D *referenční příručka programátora SDK ODBC*.  
+ Určuje měřítko pro hodnoty typu ODBC **SQL_DECIMAL** nebo **SQL_NUMERIC**. `nScale` je užitečné pouze při nastavování hodnot parametrů. Další informace naleznete v tématu "Přesnost, měřítko, délku a zobrazovaná velikost" v dodatku D *referenční příručka programátora SDK ODBC*.  
   
 ### <a name="remarks"></a>Poznámky  
  Data ve zdroji dat všech těchto typů je mapována do a z `CString` v sadě záznamů.  
@@ -468,7 +463,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
  **Záhlaví:** afxdb.h  
 
 
-## <a name="rfx_binary_bulk"></a>Rfx_binary_bulk –
+## <a name="rfx_binary_bulk"></a>  Rfx_binary_bulk –
 Přenosy více řádků bajtů dat ze sloupce zdroje dat ODBC na odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -514,7 +509,7 @@ void RFX_Binary_Bulk(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_bool_bulk"></a>Rfx_bool_bulk –
+## <a name="rfx_bool_bulk"></a>  Rfx_bool_bulk –
 Přenosy více řádků Boolean dat ze sloupce zdroje dat ODBC na odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -556,7 +551,7 @@ void RFX_Bool_Bulk(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_byte_bulk"></a>Rfx_byte_bulk –
+## <a name="rfx_byte_bulk"></a>  Rfx_byte_bulk –
 Přenese jeden bajtů více řádků ze sloupce zdroje dat ODBC odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -598,7 +593,7 @@ void RFX_Byte_Bulk(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
   
-## <a name="rfx_date_bulk"></a>Rfx_date_bulk –
+## <a name="rfx_date_bulk"></a>  Rfx_date_bulk –
 Přenosy z více řádků **TIMESTAMP_STRUCT z** data ze sloupce zdroje dat ODBC do odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -640,7 +635,7 @@ void RFX_Date_Bulk(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_double_bulk"></a>Rfx_double_bulk –
+## <a name="rfx_double_bulk"></a>  Rfx_double_bulk –
 Přenosy více řádků s dvojitou přesností a s plovoucí desetinnou čárkou dat ze sloupce zdroje dat ODBC na odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -682,7 +677,7 @@ void RFX_Double_Bulk(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_int_bulk"></a>Rfx_int_bulk –
+## <a name="rfx_int_bulk"></a>  Rfx_int_bulk –
 Přenosy dat celé číslo mezi členy pole data `CRecordset` objekt a sloupce ve zdroji dat rozhraní ODBC typu záznamu **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -710,7 +705,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_long_bulk"></a>Rfx_long_bulk –
+## <a name="rfx_long_bulk"></a>  Rfx_long_bulk –
 Přenosy více řádků dlouhých celočíselných dat ze sloupce zdroje dat ODBC na odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -752,7 +747,7 @@ void RFX_Long_Bulk(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="rfx_single_bulk"></a>Rfx_single_bulk –
+## <a name="rfx_single_bulk"></a>  Rfx_single_bulk –
 Přenosy více řádků s plovoucí desetinnou čárkou dat ze sloupce zdroje dat ODBC na odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -795,7 +790,7 @@ void RFX_Single_Bulk(
  **Záhlaví:** afxdb.h  
   
 
-## <a name="rfx_text_bulk"></a>Rfx_text_bulk –
+## <a name="rfx_text_bulk"></a>  Rfx_text_bulk –
 Přenosy více řádků dat znaků ze sloupce zdroje dat ODBC na odpovídající pole v `CRecordset`-odvozené objektu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -856,7 +851,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
 
-## <a name="dfx_binary"></a>Dfx_binary –
+## <a name="dfx_binary"></a>  Dfx_binary –
 Přenosy mezi pole datových členů z pole bajtů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -899,7 +894,7 @@ void AFXAPI DFX_Binary(
  **Záhlaví:** afxdao.h  
   
 
-## <a name="dfx_bool"></a>Dfx_bool –
+## <a name="dfx_bool"></a>  Dfx_bool –
 Boolean – datový přenos mezi pole datových členů z [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -937,7 +932,7 @@ void AFXAPI DFX_Bool(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_byte"></a>Dfx_byte –
+## <a name="dfx_byte"></a>  Dfx_byte –
 Přenosy jednotné bajtů mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -975,7 +970,7 @@ void AFXAPI DFX_Byte(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_currency"></a>Dfx_currency –
+## <a name="dfx_currency"></a>  Dfx_currency –
 Přenosy dat měny mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1013,7 +1008,7 @@ void AFXAPI DFX_Currency(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_datetime"></a>Dfx_datetime –
+## <a name="dfx_datetime"></a>  Dfx_datetime –
 Přenosy dat a času mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1046,7 +1041,7 @@ void AFXAPI DFX_DateTime(
  Data je mapována mezi typy **DAO_DATE** v rozhraní DAO a typ [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) v sadě záznamů.  
   
 > [!NOTE]
->  `COleDateTime`nahradí [CTime](../../atl-mfc-shared/reference/ctime-class.md) a **TIMESTAMP_STRUCT z** pro tento účel v třídy DAO. `CTime`a **TIMESTAMP_STRUCT z** jsou nadále používat pro přístup na základě ODBC datových tříd.  
+>  `COleDateTime` nahradí [CTime](../../atl-mfc-shared/reference/ctime-class.md) a **TIMESTAMP_STRUCT z** pro tento účel v třídy DAO. `CTime` a **TIMESTAMP_STRUCT z** jsou nadále používat pro přístup na základě ODBC datových tříd.  
   
 ### <a name="example"></a>Příklad  
  V tématu [dfx_text –](#dfx_text).  
@@ -1054,7 +1049,7 @@ void AFXAPI DFX_DateTime(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_double"></a>Dfx_double –
+## <a name="dfx_double"></a>  Dfx_double –
 Přenosy **dvojité float** dat mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1092,7 +1087,7 @@ void AFXAPI DFX_Double(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_long"></a>Dfx_long –
+## <a name="dfx_long"></a>  Dfx_long –
 Přenosy dat dlouhé celé číslo mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1131,7 +1126,7 @@ void AFXAPI DFX_Long(
  **Záhlaví:** afxdao.h  
   
 
-## <a name="dfx_longbinary"></a>Dfx_longbinary –
+## <a name="dfx_longbinary"></a>  Dfx_longbinary –
 **Důležité** se doporučuje použít [dfx_binary –](#dfx_binary) místo této funkce.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1165,7 +1160,7 @@ void AFXAPI DFX_LongBinary(
 >  Můžete řídit, jestli data jsou dvojité vyrovnávací paměti ve výchozím nastavení nastavením [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
 ### <a name="remarks"></a>Poznámky  
- `DFX_LongBinary`slouží k zajištění kompatibility s třídy knihovny MFC rozhraní ODBC. `DFX_LongBinary` Funkce přenáší binární-data rozsáhlého objektu (binární rozsáhlý OBJEKT) pomocí třídy `CLongBinary` mezi pole datových členů z [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji. Data je mapována mezi typy **DAO_BYTES** v rozhraní DAO a typ [CLongBinary](clongbinary-class.md) v sadě záznamů.  
+ `DFX_LongBinary` slouží k zajištění kompatibility s třídy knihovny MFC rozhraní ODBC. `DFX_LongBinary` Funkce přenáší binární-data rozsáhlého objektu (binární rozsáhlý OBJEKT) pomocí třídy `CLongBinary` mezi pole datových členů z [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji. Data je mapována mezi typy **DAO_BYTES** v rozhraní DAO a typ [CLongBinary](clongbinary-class.md) v sadě záznamů.  
   
 ### <a name="example"></a>Příklad  
  V tématu [dfx_text –](#dfx_text).  
@@ -1173,7 +1168,7 @@ void AFXAPI DFX_LongBinary(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_short"></a>Dfx_short –
+## <a name="dfx_short"></a>  Dfx_short –
 Přenosy krátkodobých dat celé číslo mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1206,7 +1201,7 @@ void AFXAPI DFX_Short(
  Data je mapována mezi typy **DAO_I2** v rozhraní DAO a typ **krátké** v sadě záznamů.  
   
 > [!NOTE]
->  `DFX_Short`je ekvivalentní [rfx_int –](#rfx_int) pro třídy založené na rozhraní ODBC.  
+>  `DFX_Short` je ekvivalentní [rfx_int –](#rfx_int) pro třídy založené na rozhraní ODBC.  
   
 ### <a name="example"></a>Příklad  
  V tématu [dfx_text –](#dfx_text).  
@@ -1215,7 +1210,7 @@ void AFXAPI DFX_Short(
  **Záhlaví:** afxdao.h  
   
 
-## <a name="dfx_single"></a>Dfx_single –
+## <a name="dfx_single"></a>  Dfx_single –
 Přenosy dat s plovoucí desetinnou čárkou mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -1253,7 +1248,7 @@ void AFXAPI DFX_Single(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
 
-## <a name="dfx_text"></a>Dfx_text –
+## <a name="dfx_text"></a>  Dfx_text –
 Přenosy `CString` dat mezi pole datových členů [CDaoRecordset](cdaorecordset-class.md) objekt a sloupce záznamu na datovém zdroji.  
   
 ### <a name="syntax"></a>Syntaxe  

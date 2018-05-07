@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonSlider | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonSlider | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSlider
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e485afac346be1f21a0b3088367be5b9bf02e2ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider – třída
 `CMFCRibbonSlider` Třída implementuje ovládací prvek typu jezdec, který můžete přidat na pásu karet řádek nebo pásu karet stavový řádek. V ovládacím prvku posuvník pásu karet se podobá posuvníků zvětšení, které se zobrazují v aplikacích Office 2007.  
@@ -106,7 +101,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribbonslider.h  
   
-##  <a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
+##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
  Vytvořte jezdce pásu karet.  
   
 ```  
@@ -116,7 +111,7 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nID`  
+ [v] `nID`  
  ID posuvníku.  
   
  [v]. `nWidth`  
@@ -125,7 +120,7 @@ CMFCRibbonSlider(
 ### <a name="remarks"></a>Poznámky  
  Vytvoří posuvníku pásu karet, která je `nWidth` pixelů v panelu kategorie, kde se přidá posuvníku. Ve výchozím nastavení je vodorovný posuvníku.  
   
-##  <a name="getpos"></a>CMFCRibbonSlider::GetPos  
+##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Vrátí aktuální pozici v ovládacím prvku posuvník.  
   
 ```  
@@ -135,7 +130,7 @@ int GetPos() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální umístění v ovládacím prvku posuvník, což je pozice relativně k začátku posuvníku.  
   
-##  <a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
+##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax  
  Získá maximální přírůstek dráze jezdce, která mohou projít jezdec na posuvníku.  
   
 ```  
@@ -145,7 +140,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Maximální přírůstek dráze jezdce, která mohou projít jezdec na posuvníku.  
   
-##  <a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
+##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin  
  Vrátí minimální přírůstek, která mohou projít jezdec na posuvníku.  
   
 ```  
@@ -155,7 +150,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Minimální přírůstek, která mohou projít jezdec na posuvníku.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -163,13 +158,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
+##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
  Získáte přírůstek zvětšení ovládacího prvku posuvník.  
   
 ```  
@@ -179,7 +174,7 @@ int GetZoomIncrement() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Přírůstek zvětšení ovládacího prvku posuvník.  
   
-##  <a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
+##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
  Určuje, zda je jezdec tlačítka přiblížení.  
   
 ```  
@@ -187,9 +182,9 @@ BOOL HasZoomButtons() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud má posuvník tlačítka přiblížení; `FALSE` jinak.  
+ `TRUE` Pokud má posuvník tlačítka přiblížení; `FALSE` jinak.  
   
-##  <a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -197,11 +192,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setpos"></a>CMFCRibbonSlider::SetPos  
+##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos  
  Nastavte aktuální pozici v ovládacím prvku posuvník.  
   
 ```  
@@ -211,13 +206,13 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nPos`  
+ [v] `nPos`  
  Určuje pozici pro posuvníku. Pozice je relativní vzhledem k začátku posuvníku.  
   
- [v]`bRedraw`  
+ [v] `bRedraw`  
  Pokud `TRUE`, bude překreslit posuvníku.  
   
-##  <a name="setrange"></a>CMFCRibbonSlider::SetRange  
+##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Nastavte rozsah hodnot pro ovládací prvek posuvníku.  
   
 ```  
@@ -227,16 +222,16 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nMin`  
+ [v] `nMin`  
  Určuje minimální hodnotu jezdce.  
   
- [v]`nMax`  
+ [v] `nMax`  
  Určuje maximální hodnotu jezdce.  
   
 ### <a name="remarks"></a>Poznámky  
  Určuje rozsah hodnot pro ovládací prvek jezdec nastavením minimální a maximální hodnoty.  
   
-##  <a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
+##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
  Zobrazení nebo skrytí tlačítka přiblížení.  
   
 ```  
@@ -245,9 +240,9 @@ void SetZoomButtons(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [v]. `bSet`  
- `TRUE`k zobrazení tlačítka přiblížení; `FALSE` jejich skrytí.  
+ `TRUE` k zobrazení tlačítka přiblížení; `FALSE` jejich skrytí.  
   
-##  <a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
+##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
  Nastavte přírůstek zvětšení ovládacího prvku posuvník.  
   
 ```  
@@ -255,7 +250,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nZoomIncrement`  
+ [v] `nZoomIncrement`  
  Určuje přírůstek zvětšení ovládacího prvku posuvník.  
   
 ## <a name="see-also"></a>Viz také  

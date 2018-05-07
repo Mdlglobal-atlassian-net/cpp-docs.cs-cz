@@ -1,13 +1,10 @@
 ---
-title: "TN071: MFC IOleCommandTarget – implementace | Microsoft Docs"
-ms.custom: 
+title: 'TN071: MFC IOleCommandTarget – implementace | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f97774036c42fa0f681a65e0a335f944daf09c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21745762fb6f6eb1eb324013db12207c4b3b81d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC IOleCommandTarget – implementace
 > [!NOTE]
@@ -34,11 +29,11 @@ ms.lasthandoff: 12/21/2017
   
  `IOleCommandTarget` Rozhraní umožňuje objekty a jejich kontejnery odesílání příkazů k sobě navzájem. Například objektu panely nástrojů může obsahovat tlačítka pro příkazy, jako například **tiskových**, **Náhled**, **Uložit**, `New`, a **přiblížení**. Pokud byly v kontejneru, který podporuje vložených takového objektu `IOleCommandTarget`, může povolit jeho tlačítka a předávat příkazy ke kontejneru pro zpracování při kliknutí na uživatele, je objekt. Pokud kontejner chtěli vložený objekt tisknout sám sebe, vytvoření této žádosti odesláním příkazu prostřednictvím `IOleCommandTarget` rozhraní vložený objekt.  
   
- `IOleCommandTarget`Automatizace jako rozhraní je v tom, že klient je používána k vyvolání metody na serveru. Však pomocí `IOleCommandTarget` uloží režii volání prostřednictvím rozhraní automatizace protože programátory nemusíte používat obvykle levnější `Invoke` metodu `IDispatch`.  
+ `IOleCommandTarget` Automatizace jako rozhraní je v tom, že klient je používána k vyvolání metody na serveru. Však pomocí `IOleCommandTarget` uloží režii volání prostřednictvím rozhraní automatizace protože programátory nemusíte používat obvykle levnější `Invoke` metodu `IDispatch`.  
   
  V prostředí MFC `IOleCommandTarget` rozhraní používá servery pro aktivní dokument k povolení kontejnery pro aktivní dokument k odesílání příkazů na server. Třída serveru aktivní dokument, `CDocObjectServerItem`, používá mapy rozhraní MFC (najdete v části [TN038: MFC/OLE – implementace třídy IUnknown](../mfc/tn038-mfc-ole-iunknown-implementation.md)) k implementaci `IOleCommandTarget` rozhraní.  
   
- `IOleCommandTarget`také je implementována ve **COleFrameHook** třídy. **COleFrameHook** nedokumentovanými třídy MFC, která implementuje funkce okno rámečkem na místě upravuje kontejnery. **COleFrameHook** také používá mapy MFC rozhraní k implementaci `IOleCommandTarget` rozhraní. **COleFrameHook**na implementaci `IOleCommandTarget` předává OLE příkazů `COleDocObjectItem`-odvozené kontejnery pro aktivní dokument. To umožňuje žádné kontejner služby MFC Active dokumentu pro příjem zpráv ze serverů obsažené aktivní dokument.  
+ `IOleCommandTarget` také je implementována ve **COleFrameHook** třídy. **COleFrameHook** nedokumentovanými třídy MFC, která implementuje funkce okno rámečkem na místě upravuje kontejnery. **COleFrameHook** také používá mapy MFC rozhraní k implementaci `IOleCommandTarget` rozhraní. **COleFrameHook**na implementaci `IOleCommandTarget` předává OLE příkazů `COleDocObjectItem`-odvozené kontejnery pro aktivní dokument. To umožňuje žádné kontejner služby MFC Active dokumentu pro příjem zpráv ze serverů obsažené aktivní dokument.  
   
 ## <a name="mfc-ole-command-maps"></a>Mapy příkazů OLE MFC  
  MFC vývojáři mohou využít výhod `IOleCommandTarget` pomocí MFC OLE příkaz mapy. Mapy příkazů OLE jsou jako mapy zpráv, protože je možné použít k mapování příkazy OLE na členské funkce třídy, která obsahuje příkaz mapy. Chcete-li tato práce, umístěte makra v mapě příkaz zadat příkaz OLE skupiny chcete zpracovat příkaz, příkaz OLE a ID příkazu [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávu, která bude odeslána, když je obdržena příkaz OLE. MFC také poskytuje řadu předdefinovaných makra pro standardní příkazy OLE. Seznam standardní OLE příkazy, které byly původně navrženy pro pomocí aplikace Microsoft Office naleznete v tématu OLECMDID výčtu, která je definována v docobj.h.  

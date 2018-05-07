@@ -1,12 +1,9 @@
 ---
-title: "Třída CWinFormsControl | Microsoft Docs"
-ms.custom: 
+title: Třída CWinFormsControl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e6bf46cf28c3bca3d71f85cdd681745a0379bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl – třída
 Poskytuje základní funkce pro hostování ovládacího prvku Windows Forms.  
@@ -85,7 +80,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwinforms.h  
   
-##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
  Vytvoří ovládacího prvku Windows Forms v MFC kontejner.  
   
 ```  
@@ -144,7 +139,7 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vytvoří instanci ovládacího prvku rozhraní .NET Framework Windows Forms v MFC kontejner.  
   
- První přetížení metody přijímá datový typ rozhraní .NET Framework `pType` tak, aby MFC můžete vytvořit nový objekt tohoto typu. `pType`musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
+ První přetížení metody přijímá datový typ rozhraní .NET Framework `pType` tak, aby MFC můžete vytvořit nový objekt tohoto typu. `pType` musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
   
  Vytvoří druhý přetížení metody ovládacího prvku Windows Forms na základě `TManagedControl` parametr šablony `CWinFormsControl` třídy. Na základě velikost a umístění ovládacího prvku `RECT` struktura předaný metodě. Pouze `dwStyle` záleží pro stylů.  
   
@@ -154,7 +149,7 @@ inline BOOL CreateManagedControl(
   
  V tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) ukázky na pomocí formuláře Windows ovládací prvky.  
   
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
  Vytvoří objekt obálky knihovny MFC Windows Forms ovládací prvek.  
   
 ```  
@@ -164,7 +159,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>Poznámky  
  Vytvoření ovládacího prvku Windows Forms instance při volání [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
  Načte ukazatel ovládacího prvku Windows Forms.  
   
 ```  
@@ -177,7 +172,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>Příklad  
   V tématu [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
  Načte popisovač do ovládacího prvku Windows Forms.  
   
 ```  
@@ -188,9 +183,9 @@ inline HWND GetControlHandle() const;
  Vrátí popisovač do ovládacího prvku Windows Forms.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetControlHandle`je pomocná metoda, která vrátí popisovač okna, které jsou uložené ve vlastnostech ovládacího prvku rozhraní .NET Framework. Hodnota popisovač okna se zkopíruje do [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) během volání [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
+ `GetControlHandle` je pomocná metoda, která vrátí popisovač okna, které jsou uložené ve vlastnostech ovládacího prvku rozhraní .NET Framework. Hodnota popisovač okna se zkopíruje do [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) během volání [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
-##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  Nahradí [CWinFormsControl::GetControl](#getcontrol) ve výrazech.  
   
 ```  
@@ -202,7 +197,7 @@ inline TManagedControl^  operator->() const;
   
  Další informace o Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
  Vrhá typu jako ukazatel do ovládacího prvku Windows Forms.  
   
 ```  

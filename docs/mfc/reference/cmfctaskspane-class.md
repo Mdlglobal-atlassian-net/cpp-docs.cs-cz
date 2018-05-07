@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCTasksPane | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCTasksPane | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPane
@@ -203,17 +200,15 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf35669ba71c900a67f98fb9ee303c723546f94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane – třída
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -383,7 +378,7 @@ class CMFCTasksPane : public CDockablePane
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxTasksPane.h  
   
-##  <a name="addgroup"></a>CMFCTasksPane::AddGroup  
+##  <a name="addgroup"></a>  CMFCTasksPane::AddGroup  
  Přidá novou skupinu úloh do ovládacího prvku podokno úlohy.  
   
 ```  
@@ -403,19 +398,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nPageIdx`  
+ [v] `nPageIdx`  
  Určuje index počítaný od nuly stránky.  
   
- [v]`lpszGroupName`  
+ [v] `lpszGroupName`  
  Určuje název skupiny.  
   
- [v]`bBottomLocation`  
- `TRUE`Vytvořte skupinu v dolní části ovládacího prvku podokno úloha; v opačném `FALSE`.  
+ [v] `bBottomLocation`  
+ `TRUE` Vytvořte skupinu v dolní části ovládacího prvku podokno úloha; v opačném `FALSE`.  
   
- [v]`bSpecial`  
- `TRUE`k označení této skupiny jako *speciální* skupiny; v opačném `FALSE`. Další informace o speciální skupiny, najdete v části poznámky `CMFCTasksPane`.  
+ [v] `bSpecial`  
+ `TRUE` k označení této skupiny jako *speciální* skupiny; v opačném `FALSE`. Další informace o speciální skupiny, najdete v části poznámky `CMFCTasksPane`.  
   
- [v]`hIcon`  
+ [v] `hIcon`  
  Určuje ikonu zobrazíte v záhlaví skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -426,7 +421,7 @@ int AddGroup(
   
  Rozhraní framework zobrazí skupiny úloh v horní části ovládacího prvku podokno úlohy nebo v dolní části. Rozhraní framework můžete zobrazit jenom jedné skupiny v dolní části; Tato skupina je nutné přidat jako poslední.  
   
-##  <a name="addlabel"></a>CMFCTasksPane::AddLabel  
+##  <a name="addlabel"></a>  CMFCTasksPane::AddLabel  
  Popisek přidává ke skupině zadané úloze.  
   
 ```  
@@ -438,17 +433,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index skupiny, kde se přidá popisku.  
   
- [v]`lpszLabelName`  
+ [v] `lpszLabelName`  
  Určuje název popisku.  
   
- [v]`nTaskIcon`  
+ [v] `nTaskIcon`  
  Určuje ikonu, který se zobrazí vedle popisku. Rozhraní framework uloží ikony v seznamu obrázků. Tento parametr je index do tohoto seznamu.  
   
- [v]`bIsBold`  
- `TRUE`Chcete-li zobrazit popisek tučným písmem; v opačném `FALSE`.  
+ [v] `bIsBold`  
+ `TRUE` Chcete-li zobrazit popisek tučným písmem; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule skupiny, kde byla přidána popisek nebo -1, pokud skupině určeného `nGroup` neexistuje.  
@@ -456,7 +451,7 @@ int AddLabel(
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework zpracovává úlohy a popisky jiným způsobem. Když uživatel klikne na úkol, spustí rozhraní příkazu. Když uživatel klikne na štítek, je proveden žádný příkaz. Další informace najdete v tématu [CMFCTasksPane::AddTask](#addtask).  
   
-##  <a name="addmrufileslist"></a>CMFCTasksPane::AddMRUFilesList  
+##  <a name="addmrufileslist"></a>  CMFCTasksPane::AddMRUFilesList  
  Přidá úlohu pro každý soubor uložený v seznamu nejvíce naposledy použitých souborů do skupiny.  
   
 ```  
@@ -466,16 +461,16 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index skupiny. Tato metoda přidá seznamu naposledy použitých souborů do skupiny určeného tento parametr.  
   
- [v]`nMaxFiles`  
+ [v] `nMaxFiles`  
  Určuje počet souborů, které chcete zobrazit v seznamu naposledy použitých souborů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule skupiny, kde byla přidána seznamu naposledy použitých souborů nebo -1, pokud skupině určeného `nGroup` neexistuje.  
   
-##  <a name="addpage"></a>CMFCTasksPane::AddPage  
+##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  Na stránce se přidá do podokna úloh.  
   
 ```  
@@ -483,13 +478,13 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszPageLabel`  
+ [v] `lpszPageLabel`  
  Určuje popisek pro stránku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule nové stránky.  
   
-##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
+##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator  
 
   
 ```  
@@ -497,13 +492,13 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addtask"></a>CMFCTasksPane::AddTask  
+##  <a name="addtask"></a>  CMFCTasksPane::AddTask  
  Přidat úlohu ke skupině zadané úloze.  
   
 ```  
@@ -516,25 +511,25 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje skupinu index, kde je přidat úloha.  
   
- [v]`lpszTaskName`  
+ [v] `lpszTaskName`  
  Určuje název úlohy.  
   
- [v]`nTaskIcon`  
+ [v] `nTaskIcon`  
  Určuje ikonu, který se zobrazí vedle úlohy. Rozhraní framework uloží ikony v seznamu obrázků. Tento parametr je index do tohoto seznamu.  
   
- [v]`uiCommandID`  
+ [v] `uiCommandID`  
  Určuje příkaz ID příkazu k provedení po kliknutí na úlohu. Úloha je považován za štítek, pokud `uiCommandID` je 0.  
   
- [v]`dwUserData`  
+ [v] `dwUserData`  
  Určuje uživatelská data přidruženou úlohu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule skupiny, kde byla přidána úloha nebo -1, pokud skupině určeného `nGroup` neexistuje.  
   
-##  <a name="addwindow"></a>CMFCTasksPane::AddWindow  
+##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  Přidá podřízeného okna do podokna úloh.  
   
 ```  
@@ -547,19 +542,19 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje skupiny index, kde se přidá okna.  
   
- [v]`hwndTask`  
+ [v] `hwndTask`  
  Určuje popisovač okna Přidat.  
   
- [v]`nWndHeight`  
+ [v] `nWndHeight`  
  Určuje výšku okna.  
   
- [v]`bAutoDestroyWindow`  
- `TRUE`zrušení okna, když dojde k odebrání úlohu; v opačném `FALSE`.  
+ [v] `bAutoDestroyWindow`  
+ `TRUE` zrušení okna, když dojde k odebrání úlohu; v opačném `FALSE`.  
   
- [v]`dwUserData`  
+ [v] `dwUserData`  
  Určuje uživatelská data související s úlohu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -568,14 +563,14 @@ int AddWindow(
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem přidání ovládacího prvku do podokna úloh. Například můžete přidat ovládací prvek úprav, který funguje jako panelu vyhledávání.  
   
-##  <a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
+##  <a name="cmfctaskspane"></a>  CMFCTasksPane::CMFCTasksPane  
  Vytvoří [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) objektu.  
   
 ```  
 CMFCTasksPane();
 ```  
   
-##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
+##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups  
 
   
 ```  
@@ -588,12 +583,12 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bCollapse`  
- [v]`nPageIdx`  
+ [v] `bCollapse`  
+ [v] `nPageIdx`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
+##  <a name="collapsegroup"></a>  CMFCTasksPane::CollapseGroup  
  Sbalí nebo je jejich rozšířením skupinu.  
   
 ```  
@@ -608,22 +603,22 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pGroup`  
+ [v] `pGroup`  
  Určuje skupinu na Sbalit.  
   
- [v]`bCollapse`  
- `TRUE`Chcete-li sbalit skupiny; `FALSE` rozbalte skupinu.  
+ [v] `bCollapse`  
+ `TRUE` Chcete-li sbalit skupiny; `FALSE` rozbalte skupinu.  
   
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny na Sbalit ve vnitřní seznam skupin.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud skupina sbalí nebo rozšíří úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud skupina sbalí nebo rozšíří úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Sbalené skupiny zobrazuje pouze titulek skupiny; seznam úloh je skrytý.  
   
-##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe  
 
   
 ```  
@@ -631,13 +626,13 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rectInitial`  
+ [v] `rectInitial`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="createmenu"></a>CMFCTasksPane::CreateMenu  
+##  <a name="createmenu"></a>  CMFCTasksPane::CreateMenu  
  Vytvoří nabídky, která se zobrazí, když uživatel klikne **Další podokna úloh** tlačítka nabídky.  
   
 ```  
@@ -652,7 +647,7 @@ HMENU CreateMenu() const;
   
  Místní nabídky, který tato metoda vytvoří obsahuje seznam stránek v podokně úloh. V nabídce Zobrazit domovskou stránku aktivní.  
   
-##  <a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
+##  <a name="enableanimation"></a>  CMFCTasksPane::EnableAnimation  
  Povolí nebo zakáže animace, který nastane, když skupinu úkolů rozbalí či sbalí.  
   
 ```  
@@ -660,13 +655,13 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit animace, který nastane, když skupinu úkolů rozbalí či sbalí; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit animace, který nastane, když skupinu úkolů rozbalí či sbalí; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení je povoleno animace, který nastane, když skupinu úkolů rozbalí či sbalí.  
   
-##  <a name="enablegroupcollapse"></a>CMFCTasksPane::EnableGroupCollapse  
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse  
  Určuje, zda uživatele lze sbalit skupiny úloh.  
   
 ```  
@@ -674,13 +669,13 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Pokud uživatele lze sbalit skupiny úloh; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Pokud uživatele lze sbalit skupiny úloh; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Skupinu úloh, která je zobrazí pouze titulek skupiny; seznam úloh je skrytý.  
   
-##  <a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
+##  <a name="enablehistorymenubuttons"></a>  CMFCTasksPane::EnableHistoryMenuButtons  
  Umožňuje rozevíracích nabídek na **Další** a **předchozí** navigačních tlačítek.  
   
 ```  
@@ -688,15 +683,15 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit rozevíracích nabídek na **Další** a **předchozí** navigačních tlačítek, jinak hodnota `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit rozevíracích nabídek na **Další** a **předchozí** navigačních tlačítek, jinak hodnota `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, rozevíracích nabídek na **Další** a **předchozí** tlačítka jsou zakázány.  
   
  V nabídkách obsahovat historie úlohy stránek, které uživatel používá.  
   
-##  <a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
+##  <a name="enablenavigationtoolbar"></a>  CMFCTasksPane::EnableNavigationToolbar  
  Povolí nebo zakáže navigačním panelu.  
   
 ```  
@@ -710,16 +705,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit navigačním panelu; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit navigačním panelu; v opačném `FALSE`.  
   
- [v]`uiToolbarBmpRes`  
+ [v] `uiToolbarBmpRes`  
  Určuje ID prostředku bitové mapy, který obsahuje Image, která se zobrazí na panelu nástrojů.  
   
- [v]`sizeToolbarImage`  
+ [v] `sizeToolbarImage`  
  Určuje velikost obrázku panelu nástrojů.  
   
- [v]`sizeToolbarButton`  
+ [v] `sizeToolbarButton`  
  Určuje velikost tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -727,7 +722,7 @@ void EnableNavigationToolbar(
   
  Ve výchozím nastavení rozhraní nezobrazuje navigačním panelu. Pokud se nezobrazí navigačním panelu navigačních tlačítek jsou umístěny na titulek ukotvení panelu.  
   
-##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
+##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls  
 
   
 ```  
@@ -735,11 +730,11 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
+ [v] `bEnable`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>  CMFCTasksPane::EnableScrollButtons  
  Umožňuje posuňte tlačítka místo posuvníku.  
   
 ```  
@@ -747,13 +742,13 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`k zobrazení tlačítek přejděte v podokně úloh místo posuvníku; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` k zobrazení tlačítek přejděte v podokně úloh místo posuvníku; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení zobrazí rozhraní Posunutí tlačítek v podokně úloh.  
   
-##  <a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
+##  <a name="enablewraplabels"></a>  CMFCTasksPane::EnableWrapLabels  
  Povolí nebo zakáže zalamování textu v popiskách.  
   
 ```  
@@ -761,13 +756,13 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li uveďte text v popisky, které se zobrazují v podokně úloh; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li uveďte text v popisky, které se zobrazují v podokně úloh; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení rozhraní není zalomen textu v popiskách. Pokud je povoleno zalamování řádků, textu v popiskách může vyskytovat v více řádků. Popisek může zahrnovat ukončování značek, jako `\n` a značky podtržení `&`.  
   
-##  <a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
+##  <a name="enablewraptasks"></a>  CMFCTasksPane::EnableWrapTasks  
  Povolí nebo zakáže zalamování textu v úlohách.  
   
 ```  
@@ -775,13 +770,13 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li zalomení úlohy v podokně úloh; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li zalomení úlohy v podokně úloh; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Zalamování řádků pro úlohy, je ve výchozím nastavení zakázaná.  
   
-##  <a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
+##  <a name="getactivepage"></a>  CMFCTasksPane::GetActivePage  
  Vrátí index o základu 0 pro stránku aktivní.  
   
 ```  
@@ -791,7 +786,7 @@ int GetActivePage() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule aktivní stránky.  
   
-##  <a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
+##  <a name="getgroupcaptionheight"></a>  CMFCTasksPane::GetGroupCaptionHeight  
  Vrátí výšku titulek skupiny.  
   
 ```  
@@ -801,7 +796,7 @@ int GetGroupCaptionHeight() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Výška titulek skupiny v pixelech.  
   
-##  <a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
+##  <a name="getgroupcaptionhorzoffset"></a>  CMFCTasksPane::GetGroupCaptionHorzOffset  
  Vrátí vodorovný posun popisek skupiny.  
   
 ```  
@@ -811,7 +806,7 @@ int GetGroupCaptionHorzOffset() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Vodorovný posun popisek skupiny. Vodorovný posun je vzdálenost v pixelech z levé nebo pravé hrany v podokně úloh.  
   
-##  <a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
+##  <a name="getgroupcaptionvertoffset"></a>  CMFCTasksPane::GetGroupCaptionVertOffset  
  Vrátí svislý posun popisek skupiny.  
   
 ```  
@@ -824,7 +819,7 @@ int GetGroupCaptionVertOffset() const;
 ### <a name="remarks"></a>Poznámky  
  Výchozí hodnota pro svislé posunutí je 7 pixelů.  
   
-##  <a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
+##  <a name="getgroupcount"></a>  CMFCTasksPane::GetGroupCount  
  Vrátí celkový počet skupin.  
   
 ```  
@@ -834,7 +829,7 @@ int GetGroupCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Celkový počet skupin v podokně úloh.  
   
-##  <a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
+##  <a name="getgrouplocation"></a>  CMFCTasksPane::GetGroupLocation  
  Vrátí index vnitřní skupina pro zadanou skupinu.  
   
 ```  
@@ -844,16 +839,16 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pGroup`  
+ [v] `pGroup`  
  Určuje skupinu úloh, jejichž umístění je načíst.  
   
- [out]`nGroup`  
+ [out] `nGroup`  
  Obsahuje index založený na nule skupiny úloh.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla nalezena skupina úkolů; v opačném `FALSE`.  
+ `TRUE` Pokud byla nalezena skupina úkolů; v opačném `FALSE`.  
   
-##  <a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
+##  <a name="getgroupvertoffset"></a>  CMFCTasksPane::GetGroupVertOffset  
  Vrátí svislé posunutí skupiny.  
   
 ```  
@@ -863,7 +858,7 @@ int GetGroupVertOffset() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Svislý posun skupinu v pixelech.  
   
-##  <a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
+##  <a name="gethorzmargin"></a>  CMFCTasksPane::GetHorzMargin  
  Vrátí vodorovný rozestup mezi podokna úloh a hrany klientské oblasti.  
   
 ```  
@@ -876,7 +871,7 @@ int GetHorzMargin() const;
 ### <a name="remarks"></a>Poznámky  
  Výchozí mezery mezi podokna úloh a hrany klientské oblasti je 12 pixelů.  
   
-##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
+##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages  
 
   
 ```  
@@ -884,11 +879,11 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lstNextPages`  
+ [v] `lstNextPages`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
+##  <a name="getpagebygroup"></a>  CMFCTasksPane::GetPageByGroup  
  Načte index stránky pro zadanou skupinu.  
   
 ```  
@@ -898,16 +893,16 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny úloh.  
   
- [out]`nPage`  
+ [out] `nPage`  
  Index stránky pro zadanou skupinu obsahuje. Pokud skupina úkolů obsahuje pouze výchozí stránku, vrácená hodnota je 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud skupině `nGroup` existuje, jinak hodnota `FALSE`.  
+ `TRUE` Pokud skupině `nGroup` existuje, jinak hodnota `FALSE`.  
   
-##  <a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
+##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  Vrátí počet stránek.  
   
 ```  
@@ -917,7 +912,7 @@ int GetPagesCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet stránek v podokně úloh.  
   
-##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
+##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages  
 
   
 ```  
@@ -925,11 +920,11 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lstPrevPages`  
+ [v] `lstPrevPages`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl  
 
   
 ```  
@@ -937,13 +932,13 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nBar`  
+ [v] `nBar`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gettask"></a>CMFCTasksPane::GetTask  
+##  <a name="gettask"></a>  CMFCTasksPane::GetTask  
  Načte úlohu.  
   
 ```  
@@ -953,16 +948,16 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny, která obsahuje úlohu.  
   
- [v]`nTask`  
+ [v] `nTask`  
  Určuje index založený na nule úlohy v seznamu určeného `nGroup`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Úloha v zadaném indexu.  
   
-##  <a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
+##  <a name="gettaskcount"></a>  CMFCTasksPane::GetTaskCount  
  Vrátí počet úloh v zadané skupině.  
   
 ```  
@@ -970,13 +965,13 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index skupiny úloh.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet úloh v zadané skupině nebo 0, pokud `nGroup` je neplatný.  
   
-##  <a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
+##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  Vrátí skupinu úloh pro index zadané skupiny.  
   
 ```  
@@ -984,13 +979,13 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Skupiny úloh v zadaném indexu.  
   
-##  <a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
+##  <a name="gettasklocation"></a>  CMFCTasksPane::GetTaskLocation  
  Vrátí skupinu a index pro zadanou úlohu.  
   
 ```  
@@ -1011,28 +1006,28 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCommandID`  
+ [v] `uiCommandID`  
  Určuje příkaz ID úlohy k vyhledání.  
   
- [out]`nGroup`  
+ [out] `nGroup`  
  Obsahuje index skupiny úloh.  
   
- [out]`nTask`  
+ [out] `nTask`  
  Obsahuje index úlohu ve skupině úloh.  
   
- [v]`hwndTask`  
+ [v] `hwndTask`  
  Určuje okno přidruženého k úloze.  
   
- [v]`pTask`  
+ [v] `pTask`  
  Určuje úlohu, která najít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud umístění úloh byla nalezena; `FALSE` Pokud zadané úloze neexistuje.  
+ `TRUE` Pokud umístění úloh byla nalezena; `FALSE` Pokud zadané úloze neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda načte index skupiny a index úlohy pro zadanou úlohu. Pokud metoda vrátí `FALSE`, `nGroup` a `nTask` jsou nastaveny na hodnotu -1.  
   
-##  <a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
+##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  Vrátí vodorovný posun úlohy.  
   
 ```  
@@ -1045,7 +1040,7 @@ int GetTasksHorzOffset() const;
 ### <a name="remarks"></a>Poznámky  
  Výchozí vodorovný posun úlohy je 12 pixelů.  
   
-##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
+##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset  
 
   
 ```  
@@ -1056,7 +1051,7 @@ int GetTasksIconHorzOffset() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
+##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset  
 
   
 ```  
@@ -1067,7 +1062,7 @@ int GetTasksIconVertOffset() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
+##  <a name="getvertmargin"></a>  CMFCTasksPane::GetVertMargin  
  Vrátí svislé okraje mezi podokna úloh a okrajů oblasti klienta.  
   
 ```  
@@ -1080,7 +1075,7 @@ int GetVertMargin() const;
 ### <a name="remarks"></a>Poznámky  
  Svislý okraj je místa mezi podokna úloh a okrajů oblasti klienta. Výchozí hodnota svislý okraj je 12 pixelů.  
   
-##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible  
 
   
 ```  
@@ -1091,7 +1086,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
+##  <a name="isanimationenabled"></a>  CMFCTasksPane::IsAnimationEnabled  
  Určuje, zda je povoleno animace.  
   
 ```  
@@ -1099,12 +1094,12 @@ BOOL IsAnimationEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno animace, který nastane, když uživatel rozbalí či sbalí skupinu; v opačném `FALSE`.  
+ `TRUE` Pokud je povoleno animace, který nastane, když uživatel rozbalí či sbalí skupinu; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCTasksPane::EnableAnimation](#enableanimation) k povolení nebo zakázání animace.  
   
-##  <a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
+##  <a name="isbackbuttonenabled"></a>  CMFCTasksPane::IsBackButtonEnabled  
  Určuje, zda je povoleno tlačítko Zpět.  
   
 ```  
@@ -1112,12 +1107,12 @@ BOOL IsBackButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno tlačítko Zpět; v opačném `FALSE`.  
+ `TRUE` Pokud je povoleno tlačítko Zpět; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Když uživatel klikne na tlačítko Zpět, zobrazí rozhraní na předchozí stránku úloh.  
   
-##  <a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
+##  <a name="isforwardbuttonenabled"></a>  CMFCTasksPane::IsForwardButtonEnabled  
  Určuje, zda je povoleno tlačítko Předat dál.  
   
 ```  
@@ -1125,12 +1120,12 @@ BOOL IsForwardButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno tlačítko Předat dál; v opačném `FALSE`.  
+ `TRUE` Pokud je povoleno tlačítko Předat dál; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tlačítko Předat dál umožňuje předat dál navigace v historii úloh stránek.  
   
-##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
+##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled  
 
   
 ```  
@@ -1141,7 +1136,7 @@ BOOL IsGroupCollapseEnabled() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
+##  <a name="ishistorymenubuttonsenabled"></a>  CMFCTasksPane::IsHistoryMenuButtonsEnabled  
  Určuje, zda **Další** a **předchozí** navigační tlačítka mít rozevíracích nabídek.  
   
 ```  
@@ -1149,9 +1144,9 @@ BOOL IsHistoryMenuButtonsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud **Další** a **předchozí** navigační tlačítka mít rozevíracích nabídek, jinak hodnota `FALSE`.  
+ `TRUE` Pokud **Další** a **předchozí** navigační tlačítka mít rozevíracích nabídek, jinak hodnota `FALSE`.  
   
-##  <a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
+##  <a name="isnavigationtoolbarenabled"></a>  CMFCTasksPane::IsNavigationToolbarEnabled  
  Určuje, zda je povoleno navigačním panelu.  
   
 ```  
@@ -1159,9 +1154,9 @@ BOOL IsNavigationToolbarEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno navigačním panelu; v opačném `FALSE`.  
+ `TRUE` Pokud je povoleno navigačním panelu; v opačném `FALSE`.  
   
-##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
+##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox  
 
   
 ```  
@@ -1172,7 +1167,7 @@ virtual BOOL IsToolBox() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
+##  <a name="iswraplabelsenabled"></a>  CMFCTasksPane::IsWrapLabelsEnabled  
  Určuje, zda zabalí do podokna úloh slova v popiscích.  
   
 ```  
@@ -1180,9 +1175,9 @@ BOOL IsWrapLabelsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou zabalené slova v popiscích; v opačném `FALSE`.  
+ `TRUE` Pokud jsou zabalené slova v popiscích; v opačném `FALSE`.  
   
-##  <a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
+##  <a name="iswraptasksenabled"></a>  CMFCTasksPane::IsWrapTasksEnabled  
  Určuje, zda rozhraní sbalí řetězec úloh.  
   
 ```  
@@ -1190,9 +1185,9 @@ BOOL IsWrapTasksEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud úloha řetězec zabalená; v opačném `FALSE`.  
+ `TRUE` Pokud úloha řetězec zabalená; v opačném `FALSE`.  
   
-##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
+##  <a name="loadstate"></a>  CMFCTasksPane::LoadState  
 
   
 ```  
@@ -1203,15 +1198,15 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
- [v]`nIndex`  
- [v]`uiID`  
+ [v] `lpszProfileName`  
+ [v] `nIndex`  
+ [v] `uiID`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
+##  <a name="onactivatetaskspanepage"></a>  CMFCTasksPane::OnActivateTasksPanePage  
  Voláno rámcem, když se aktivuje na stránce podokně úloh.  
   
 ```  
@@ -1221,7 +1216,7 @@ virtual void OnActivateTasksPanePage();
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě přizpůsobit vzhled stránky podokně úloh.  
   
-##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
+##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel  
 
   
 ```  
@@ -1230,7 +1225,7 @@ virtual void OnCancel();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
+##  <a name="onclicktask"></a>  CMFCTasksPane::OnClickTask  
  Voláno rámcem, když uživatel klikne na položku v podokně úloh.  
   
 ```  
@@ -1242,16 +1237,16 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroupNumber`  
+ [v] `nGroupNumber`  
  Určuje index skupiny, která obsahuje úlohu kliknutelnou založený na nule.  
   
- [v]`nTaskNumber`  
+ [v] `nTaskNumber`  
  Určuje index založený na nule kliknutelnou úlohy.  
   
- [v]`uiCommandID`  
+ [v] `uiCommandID`  
  Určuje ID příkazu, který je přidružený k úkolu.  
   
- [v]`dwUserData`  
+ [v] `dwUserData`  
  Obsahuje uživatelská data přidružená k kliknutelnou úloh.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1259,7 +1254,7 @@ virtual void OnClickTask(
   
  Potlačí tuto metodu v odvozené třídě provést vlastní kód při kliknutí na úlohu.  
   
-##  <a name="onok"></a>CMFCTasksPane::OnOK  
+##  <a name="onok"></a>  CMFCTasksPane::OnOK  
 
   
 ```  
@@ -1268,7 +1263,7 @@ virtual void OnOK();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
+##  <a name="onpressbackbutton"></a>  CMFCTasksPane::OnPressBackButton  
  Voláno rámcem, když uživatel klikne na tlačítko Zpět.  
   
 ```  
@@ -1280,7 +1275,7 @@ virtual void OnPressBackButton();
   
  Potlačí tuto metodu v odvozené třídě provést vlastní kód, když uživatel klikne na tlačítko Zpět.  
   
-##  <a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
+##  <a name="onpressforwardbutton"></a>  CMFCTasksPane::OnPressForwardButton  
  Voláno rámcem, když uživatel klikne na tlačítko Předat dál navigace.  
   
 ```  
@@ -1292,7 +1287,7 @@ virtual void OnPressForwardButton();
   
  Potlačí tuto metodu v odvozené třídě provést vlastní kód, když uživatel klikne na tlačítko Předat dál.  
   
-##  <a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
+##  <a name="onpresshomebutton"></a>  CMFCTasksPane::OnPressHomeButton  
  Voláno rámcem, když uživatel klikne na domácí navigační tlačítko.  
   
 ```  
@@ -1304,7 +1299,7 @@ virtual void OnPressHomeButton();
   
  Potlačí tuto metodu v odvozené třídě provést vlastní kód, když uživatel klikne na domácí navigační tlačítko.  
   
-##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
+##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton  
 
   
 ```  
@@ -1314,12 +1309,12 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pbtn`  
- [v]`pWndOwner`  
+ [v] `pbtn`  
+ [v] `pWndOwner`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData  
 
   
 ```  
@@ -1327,13 +1322,13 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lVal`  
+ [v] `lVal`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI  
 
   
 ```  
@@ -1343,12 +1338,12 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pTarget`  
- [v]`bDisableIfNoHndler`  
+ [v] `pTarget`  
+ [v] `bDisableIfNoHndler`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage  
 
   
 ```  
@@ -1356,13 +1351,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pMsg`  
+ [v] `pMsg`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout  
 
   
 ```  
@@ -1370,11 +1365,11 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bRedraw`  
+ [v] `bRedraw`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
+##  <a name="removeallgroups"></a>  CMFCTasksPane::RemoveAllGroups  
  Odebere všechny skupiny v zadané stránky.  
   
 ```  
@@ -1382,20 +1377,20 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nPageIdx`  
+ [v] `nPageIdx`  
  Určuje index založený na nule stránky.  
   
 ### <a name="remarks"></a>Poznámky  
  Odebere všechny skupiny v stránkou určenou parametrem `nPageIdx`, nebo všechny skupiny, pokud je výchozí stránky.  
   
-##  <a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
+##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  Odebere všechny stránky v podokně úloh s výjimkou výchozí (první).  
   
 ```  
 void RemoveAllPages();
 ```  
   
-##  <a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
+##  <a name="removealltasks"></a>  CMFCTasksPane::RemoveAllTasks  
  Odebere všechny úlohy ze zadané skupiny.  
   
 ```  
@@ -1403,10 +1398,10 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny.  
   
-##  <a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
+##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Odebere skupinu.  
   
 ```  
@@ -1414,7 +1409,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1422,7 +1417,7 @@ void RemoveGroup(int nGroup);
   
  Když rozhraní Odebere skupinu, všechny úlohy a uživatele systému windows s ním spojená zničena.  
   
-##  <a name="removepage"></a>CMFCTasksPane::RemovePage  
+##  <a name="removepage"></a>  CMFCTasksPane::RemovePage  
  Odebere zadané stránky v podokně úloh.  
   
 ```  
@@ -1430,10 +1425,10 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nPageIdx`  
+ [v] `nPageIdx`  
  Určuje index založený na nule stránky k odebrání.  
   
-##  <a name="removetask"></a>CMFCTasksPane::RemoveTask  
+##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Úloha se odebere ze skupiny úloh.  
   
 ```  
@@ -1444,19 +1439,19 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule úlohy, chcete-li odebrat skupiny úloh.  
   
- [v]`nTask`  
+ [v] `nTask`  
  Určuje index založený na nule úlohy k odebrání.  
   
- [v]`bRedraw`  
- `TRUE`Chcete-li ho překreslit podokna úloh. v opačném `FALSE`.  
+ [v] `bRedraw`  
+ `TRUE` Chcete-li ho překreslit podokna úloh. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud funkci úspěšně. `FALSE` Pokud `nGroup` nebo `nTask` je neplatný.  
+ `TRUE` Pokud funkci úspěšně. `FALSE` Pokud `nGroup` nebo `nTask` je neplatný.  
   
-##  <a name="savestate"></a>CMFCTasksPane::SaveState  
+##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
   
 ```  
@@ -1467,15 +1462,15 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszProfileName`  
- [v]`nIndex`  
- [v]`uiID`  
+ [v] `lpszProfileName`  
+ [v] `nIndex`  
+ [v] `uiID`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="serialize"></a>CMFCTasksPane::Serialize  
+##  <a name="serialize"></a>  CMFCTasksPane::Serialize  
 
   
 ```  
@@ -1483,11 +1478,11 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ar`  
+ [v] `ar`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
+##  <a name="setactivepage"></a>  CMFCTasksPane::SetActivePage  
  Aktivuje zadaný stránky v podokně úloh.  
   
 ```  
@@ -1495,13 +1490,13 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nPageIdx`  
+ [v] `nPageIdx`  
  Určuje index stránky zobrazíte založený na nule.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyhodnotí, pokud `nPageIdx` je neplatný.  
   
-##  <a name="setcaption"></a>CMFCTasksPane::SetCaption  
+##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  Nastaví název záhlaví podokna úloh.  
   
 ```  
@@ -1509,13 +1504,13 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [v] `lpszName`  
  Určuje název záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud podokno úloh obsahuje více stránek, má výchozí stránku popisek, který byl nastaven pomocí této funkce.  
   
-##  <a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
+##  <a name="setgroupcaptionheight"></a>  CMFCTasksPane::SetGroupCaptionHeight  
  Nastaví výšku popisek skupiny.  
   
 ```  
@@ -1523,7 +1518,7 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje výšku záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1531,7 +1526,7 @@ void SetGroupCaptionHeight(int n = -1);
   
  Pokud `n` je -1, rozhraní určuje hodnota okraje pomocí visual správce ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Výška titulek výchozí je 25 pixelů.  
   
-##  <a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
+##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  Nastaví vodorovný posun popisek skupiny.  
   
 ```  
@@ -1539,10 +1534,10 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje vodorovný posun titulek skupiny.  
   
-##  <a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
+##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Nastaví svislé posunutí popisek skupiny.  
   
 ```  
@@ -1550,10 +1545,10 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje svislý posun v pixelech titulek skupiny.  
   
-##  <a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
+##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Nastaví název skupiny.  
   
 ```  
@@ -1563,16 +1558,16 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny.  
   
- [v]`lpszGroupName`  
+ [v] `lpszGroupName`  
  Určuje název skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je název skupiny byl úspěšně nastaven; v opačném `FALSE`.  
+ `TRUE` Pokud je název skupiny byl úspěšně nastaven; v opačném `FALSE`.  
   
-##  <a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
+##  <a name="setgrouptextcolor"></a>  CMFCTasksPane::SetGroupTextColor  
  Nastaví barvu textu pro popisek skupiny.  
   
 ```  
@@ -1583,19 +1578,19 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny.  
   
- [v]`color`  
+ [v] `color`  
  Určuje barvu textu.  
   
- [v]`colorHot`  
+ [v] `colorHot`  
  Určuje barvu textu pro vybranou skupinu. Pokud-1, použije se výchozí barvu zvýraznění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud barvu textu skupina byla úspěšně změněna; v opačném `FALSE`.  
+ `TRUE` Pokud barvu textu skupina byla úspěšně změněna; v opačném `FALSE`.  
   
-##  <a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
+##  <a name="setgroupvertoffset"></a>  CMFCTasksPane::SetGroupVertOffset  
  Nastaví svislé posunutí pro skupinu.  
   
 ```  
@@ -1603,7 +1598,7 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje svislý posun.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1611,7 +1606,7 @@ void SetGroupVertOffset(int n = -1);
   
  Volejte tuto metodu za účelem přizpůsobení okraje prvky v podokně úloh. Pokud `n` je -1, rozhraní určuje hodnota okraje pomocí visual správce ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Posun výchozím nastavení je 15 pixelů.  
   
-##  <a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
+##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  Nastaví vodorovnou okraj.  
   
 ```  
@@ -1619,7 +1614,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje, v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1627,7 +1622,7 @@ void SetHorzMargin(int n = -1);
   
  Pokud je n -1 a rozhraní určuje hodnota okraje pomocí visual správce ( `CMFCVisualManager::GetTasksPaneHorzMargin`). Vodorovné okraj výchozí je 12 pixelů.  
   
-##  <a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
+##  <a name="seticonslist"></a>  CMFCTasksPane::SetIconsList  
  Nastaví seznamu obrázků.  
   
 ```  
@@ -1640,16 +1635,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiImageListResID`  
+ [v] `uiImageListResID`  
  Určuje ID prostředku seznamu obrázků.  
   
- [v]`cx`  
+ [v] `cx`  
  Určuje velikost ikony v seznamu obrázků.  
   
- [v]`clrTransparent`  
+ [v] `clrTransparent`  
  Určuje průhlednou barvu.  
   
- [v]`hIcons`  
+ [v] `hIcons`  
  Určuje seznam obrázků, který obsahuje ikony pro do podokna úloh.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1657,7 +1652,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  Tato metoda přidruží seznamu obrázků s ovládacím prvkem podokně úloh. Chcete-li nastavit ikonu pro úlohu při volání [CMFCTasksPane::AddTask](#addtask), nastavte `nTaskIcon` k příslušné index o základu 0 v tomto seznamu bitové kopie.  
   
-##  <a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
+##  <a name="setpagecaption"></a>  CMFCTasksPane::SetPageCaption  
  Nastaví titulek textu pro stránku podokně úloh.  
   
 ```  
@@ -1667,16 +1662,16 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nPageIdx`  
+ [v] `nPageIdx`  
  Určuje index založený na nule stránky.  
   
- [v]`lpszName`  
+ [v] `lpszName`  
  Určuje text titulku zobrazíte na stránce.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud podokno úloh obsahuje více stránek, má výchozí stránku popisek, který byl nastaven pomocí této metody.  
   
-##  <a name="settaskname"></a>CMFCTasksPane::SetTaskName  
+##  <a name="settaskname"></a>  CMFCTasksPane::SetTaskName  
  Nastaví název pro úlohu.  
   
 ```  
@@ -1687,19 +1682,19 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny úloh.  
   
- [v]`nTask`  
+ [v] `nTask`  
  Určuje index založený na nule úlohy.  
   
- [v]`lpszTaskName`  
+ [v] `lpszTaskName`  
  Určuje název úlohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud název úlohy byl úspěšně nastaven; v opačném `FALSE`.  
+ `TRUE` Pokud název úlohy byl úspěšně nastaven; v opačném `FALSE`.  
   
-##  <a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
+##  <a name="settaskshorzoffset"></a>  CMFCTasksPane::SetTasksHorzOffset  
  Nastaví vodorovné posunutí pro úlohy.  
   
 ```  
@@ -1707,7 +1702,7 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje vodorovný posun.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1717,7 +1712,7 @@ void SetTasksHorzOffset(int n = -1);
   
  Vodorovný posun výchozí je 12 pixelů.  
   
-##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
+##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset  
 
   
 ```  
@@ -1725,11 +1720,11 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
+##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset  
 
   
 ```  
@@ -1737,11 +1732,11 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
+##  <a name="settasktextcolor"></a>  CMFCTasksPane::SetTaskTextColor  
  Nastaví barvu textu pro úlohu.  
   
 ```  
@@ -1753,22 +1748,22 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny úloh, která obsahuje úlohu.  
   
- [v]`nTask`  
+ [v] `nTask`  
  Určuje index založený na nule úlohy.  
   
- [v]`color`  
+ [v] `color`  
  Určuje barvu textu pro úlohu.  
   
- [v]`colorHot`  
+ [v] `colorHot`  
  Určuje barvu textu pro vybranou skupinu. Pokud-1, tato metoda používá výchozí barvu zvýraznění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud barvu textu pro úlohy byl úspěšně nastaven; v opačném `FALSE`.  
+ `TRUE` Pokud barvu textu pro úlohy byl úspěšně nastaven; v opačném `FALSE`.  
   
-##  <a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
+##  <a name="setvertmargin"></a>  CMFCTasksPane::SetVertMargin  
  Nastaví svislé okraj.  
   
 ```  
@@ -1776,7 +1771,7 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`n`  
+ [v] `n`  
  Určuje svislé nastavit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1784,7 +1779,7 @@ void SetVertMargin(int n = -1);
   
  Pokud `n` je -1, rozhraní určuje hodnota okraje pomocí visual správce ( `CMFCVisualManager::GetTasksPaneVertMargin`). Výchozí okraj je 12 pixelů.  
   
-##  <a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
+##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  Nastaví výšku okna ovládacího prvku.  
   
 ```  
@@ -1800,22 +1795,22 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny, která obsahuje ovládacího prvku okno.  
   
- [v]`hwndTask`  
+ [v] `hwndTask`  
  Určuje popisovač do ovládacího prvku okno.  
   
- [v]`nWndHeight`  
+ [v] `nWndHeight`  
  Určuje výšku nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl úspěšně nastaven ovládacího prvku okno; `FALSE` Pokud `nGroup` je neplatný nebo pokud `hwndTask` neexistuje.  
+ `TRUE` Pokud byl úspěšně nastaven ovládacího prvku okno; `FALSE` Pokud `nGroup` je neplatný nebo pokud `hwndTask` neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCTasksPane::AddWindow](#addwindow) k přidání úloh s ovládacími prvky okna.  
   
-##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString  
 
   
 ```  
@@ -1823,11 +1818,11 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdId`  
+ [v] `uiCmdId`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="showtask"></a>CMFCTasksPane::ShowTask  
+##  <a name="showtask"></a>  CMFCTasksPane::ShowTask  
  Zobrazí nebo skryje úlohu.  
   
 ```  
@@ -1839,25 +1834,25 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nGroup`  
+ [v] `nGroup`  
  Určuje index založený na nule skupiny.  
   
- [v]`nTask`  
+ [v] `nTask`  
  Určuje index založený na nule úlohy můžete zobrazit nebo skrýt.  
   
- [v]`bShow`  
- `TRUE`Chcete-li zobrazit úlohy; `FALSE` ke skrytí úlohu.  
+ [v] `bShow`  
+ `TRUE` Chcete-li zobrazit úlohy; `FALSE` ke skrytí úlohu.  
   
- [v]`bRedraw`  
- `TRUE`Chcete-li ho překreslit podokna úloh. v opačném `FALSE`.  
+ [v] `bRedraw`  
+ `TRUE` Chcete-li ho překreslit podokna úloh. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla úloha úspěšně zobrazen nebo skryt; `FALSE` Pokud zadané skupině nebo úloh neexistuje.  
+ `TRUE` Pokud byla úloha úspěšně zobrazen nebo skryt; `FALSE` Pokud zadané skupině nebo úloh neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid) zobrazit nebo skrýt úlohu na základě jeho ID příkazu.  
   
-##  <a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
+##  <a name="showtaskbycmdid"></a>  CMFCTasksPane::ShowTaskByCmdId  
  Zobrazí nebo skryje úlohu na základě jeho ID příkazu.  
   
 ```  
@@ -1868,22 +1863,22 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCommandID`  
+ [v] `uiCommandID`  
  Určuje ID příkazu úlohy, který chcete zobrazit nebo skrýt.  
   
- [v]`bShow`  
- `TRUE`Chcete-li zobrazit úlohy; `FALSE` ke skrytí úlohu.  
+ [v] `bShow`  
+ `TRUE` Chcete-li zobrazit úlohy; `FALSE` ke skrytí úlohu.  
   
- [v]`bRedraw`  
- `TRUE`Chcete-li ho překreslit podokna úloh. v opačném `FALSE`.  
+ [v] `bRedraw`  
+ `TRUE` Chcete-li ho překreslit podokna úloh. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla úloha úspěšně zobrazen nebo skryt; `FALSE` Pokud úloha s ID zadaný příkaz neexistuje.  
+ `TRUE` Pokud byla úloha úspěšně zobrazen nebo skryt; `FALSE` Pokud úloha s ID zadaný příkaz neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCTasksPane::ShowTask](#showtask) zobrazit nebo skrýt úlohu na základě jeho ID příkazu.  
   
-##  <a name="update"></a>CMFCTasksPane::Update  
+##  <a name="update"></a>  CMFCTasksPane::Update  
  Aktualizuje všechny ovládací prvky v podokně úloh.  
   
 ```  

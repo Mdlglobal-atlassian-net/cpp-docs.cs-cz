@@ -1,12 +1,9 @@
 ---
-title: "CStatusBarCtrl – třída | Microsoft Docs"
-ms.custom: 
+title: CStatusBarCtrl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBarCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ee095257ddf3fd322a7e42e3f6fff6ac7cec76a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl – třída
 Poskytuje funkce ovládacího panelu Windows běžné stavu.  
@@ -124,7 +119,7 @@ class CStatusBarCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="create"></a>CStatusBarCtrl::Create  
+##  <a name="create"></a>  CStatusBarCtrl::Create  
  Vytvoří ovládací panel stav a připojí jej k `CStatusBarCtrl` objektu.  
   
 ```  
@@ -161,7 +156,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CStatusBarCtrl::CreateEx  
+##  <a name="createex"></a>  CStatusBarCtrl::CreateEx  
  Vytvoří ovládací prvek (podřízeného okna) a přidruží ji s `CStatusBarCtrl` objektu.  
   
 ```  
@@ -195,14 +190,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
-##  <a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
+##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl  
  Vytvoří `CStatusBarCtrl` objektu.  
   
 ```  
 CStatusBarCtrl();
 ```  
   
-##  <a name="drawitem"></a>CStatusBarCtrl::DrawItem  
+##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem  
  Voláno rámcem při visual aspektů změny ovládací prvek panelu stavu vykreslování vlastníka.  
   
 ```  
@@ -220,7 +215,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v `lpDrawItemStruct` před tento člen funkce ukončí.  
   
-##  <a name="getborders"></a>CStatusBarCtrl::GetBorders  
+##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  Načte ovládací prvek panelu Stav aktuální šířky vodorovného a svislého ohraničení a mezery mezi obdélníky.  
   
 ```  
@@ -254,7 +249,7 @@ BOOL GetBorders(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
   
-##  <a name="geticon"></a>CStatusBarCtrl::GetIcon  
+##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon  
  Načte ikonu pro část (také označované jako podokno) v ovládacím panelu aktuální stav.  
   
 ```  
@@ -265,7 +260,7 @@ HICON GetIcon(int iPart) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`iPart`|Index založený na nule části, která obsahuje ikonu, která mají být načteny. Pokud má parametr hodnotu -1, se předpokládá stavového řádku, jako jednoduchý režim stavového řádku.|  
+|[v] `iPart`|Index založený na nule části, která obsahuje ikonu, která mají být načteny. Pokud má parametr hodnotu -1, se předpokládá stavového řádku, jako jednoduchý režim stavového řádku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač ikonu Pokud metoda úspěšná. v opačném `NULL`.  
@@ -285,7 +280,7 @@ HICON GetIcon(int iPart) const;
   
  [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
   
-##  <a name="getparts"></a>CStatusBarCtrl::GetParts  
+##  <a name="getparts"></a>  CStatusBarCtrl::GetParts  
  Načte počet částí v ovládacím prvku panel stav.  
   
 ```  
@@ -310,7 +305,7 @@ int GetParts(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
   
-##  <a name="getrect"></a>CStatusBarCtrl::GetRect  
+##  <a name="getrect"></a>  CStatusBarCtrl::GetRect  
  Načte ohraničující obdélník součástí v ovládacím prvku panel stav.  
   
 ```  
@@ -332,7 +327,7 @@ BOOL GetRect(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
   
-##  <a name="gettext"></a>CStatusBarCtrl::GetText  
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText  
  Načte text z části daného ovládacího prvku panel stav.  
   
 ```  
@@ -358,11 +353,11 @@ int GetText(
   
 - **0** text se vykresluje ohraničení zobrazí nižší než roviny tohoto stavový řádek.  
   
-- `SBT_NOBORDERS`Text se nevykreslí bez ohraničení.  
+- `SBT_NOBORDERS` Text se nevykreslí bez ohraničení.  
   
-- `SBT_POPOUT`Text je vykresluje ohraničení zobrazí vyšší než roviny tohoto stavový řádek.  
+- `SBT_POPOUT` Text je vykresluje ohraničení zobrazí vyšší než roviny tohoto stavový řádek.  
   
-- `SBT_OWNERDRAW`Pokud má text `SBT_OWNERDRAW` kreslení typu `pType` obdrží tuto zprávu a vrátí hodnotu 32-bit přidružené textu místo typ délku a operace.  
+- `SBT_OWNERDRAW` Pokud má text `SBT_OWNERDRAW` kreslení typu `pType` obdrží tuto zprávu a vrátí hodnotu 32-bit přidružené textu místo typ délku a operace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Délka ve znacích textu nebo [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující aktuální text.  
@@ -370,7 +365,7 @@ int GetText(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
   
-##  <a name="gettextlength"></a>CStatusBarCtrl::GetTextLength  
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength  
  Načte délka ve znacích textu z části daného ovládacího prvku panel stav.  
   
 ```  
@@ -388,11 +383,11 @@ int GetTextLength(
   
 - **0** text se vykresluje ohraničení zobrazí nižší než roviny tohoto stavový řádek.  
   
-- `SBT_NOBORDERS`Text se nevykreslí bez ohraničení.  
+- `SBT_NOBORDERS` Text se nevykreslí bez ohraničení.  
   
-- `SBT_OWNERDRAW`Text je vykreslen pomocí nadřazeného okna.  
+- `SBT_OWNERDRAW` Text je vykreslen pomocí nadřazeného okna.  
   
-- `SBT_POPOUT`Text je vykresluje ohraničení zobrazí vyšší než roviny tohoto stavový řádek.  
+- `SBT_POPOUT` Text je vykresluje ohraničení zobrazí vyšší než roviny tohoto stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Délka ve znacích textu.  
@@ -400,7 +395,7 @@ int GetTextLength(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
   
-##  <a name="gettiptext"></a>CStatusBarCtrl::GetTipText  
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText  
  Načte text popisku pro podokně ve stavovém řádku.  
   
 ```  
@@ -420,7 +415,7 @@ CString GetTipText(int nPane) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
   
-##  <a name="issimple"></a>CStatusBarCtrl::IsSimple  
+##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple  
  Ověří prvku okno Stav zjistit, pokud je v jednoduchém režimu.  
   
 ```  
@@ -433,7 +428,7 @@ BOOL IsSimple() const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Nastaví barvu pozadí ve stavovém řádku.  
   
 ```  
@@ -453,7 +448,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
   
-##  <a name="seticon"></a>CStatusBarCtrl::SetIcon  
+##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon  
  Nastaví na ikonu podokno ve stavovém řádku.  
   
 ```  
@@ -478,7 +473,7 @@ BOOL SetIcon(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CStatusBarCtrl::SetBkColor](#setbkcolor).  
   
-##  <a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
+##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight  
  Nastaví minimální výšku stav panelu oblast vykreslování ovládacího prvku.  
   
 ```  
@@ -495,7 +490,7 @@ void SetMinHeight(int nMin);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
   
-##  <a name="setparts"></a>CStatusBarCtrl::SetParts  
+##  <a name="setparts"></a>  CStatusBarCtrl::SetParts  
  Nastaví počet částí ve stavovém řádku řízení a souřadnice pravého okraje jednotlivých součástí.  
   
 ```  
@@ -517,7 +512,7 @@ BOOL SetParts(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
   
-##  <a name="setsimple"></a>CStatusBarCtrl::SetSimple  
+##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple  
  Určuje, zda ovládacího prvku stav panelu zobrazí jednoduchý text nebo zobrazí všechny části řízení nastavit voláním předchozí [SetParts](#setparts).  
   
 ```  
@@ -525,7 +520,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bSimple`  
+ [v] `bSimple`  
  Příznak zobrazení type. Pokud tento parametr je `TRUE`, tento ovládací prvek zobrazí jednoduchý text; Pokud je `FALSE`, zobrazí se více částí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -534,7 +529,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ### <a name="remarks"></a>Poznámky  
  Pokud vaše aplikace změní ovládacího prvku panel stav z nejednoduchý na jednoduchý nebo naopak, systém okamžitě překreslí ovládacího prvku.  
   
-##  <a name="settext"></a>CStatusBarCtrl::SetText  
+##  <a name="settext"></a>  CStatusBarCtrl::SetText  
  Nastaví text, pro danou část ovládacího prvku panel stav.  
   
 ```  
@@ -563,7 +558,7 @@ BOOL SetText(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
   
-##  <a name="settiptext"></a>CStatusBarCtrl::SetTipText  
+##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText  
  Nastaví text popisku pro podokno ve stavovém řádku.  
   
 ```  

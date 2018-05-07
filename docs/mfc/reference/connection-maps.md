@@ -1,13 +1,10 @@
 ---
-title: "Mapy připojení | Microsoft Docs"
-ms.custom: 
+title: Mapy připojení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>Mapy připojení
 Ovládací prvky OLE dokážou vystavit rozhraní k ostatním aplikacím. Tato rozhraní pouze povolit přístup z kontejneru do ovládacího prvku. Pokud ovládací prvek OLE požaduje přístup k externí rozhraní jiných objektů OLE, je nutné vytvořit bod připojení. Tento spojovací bod umožňuje odchozí přístup k externí expediční mapy, jako je například mapy událostí nebo funkce oznámení ovládacího prvku.  
@@ -55,7 +50,7 @@ Ovládací prvky OLE dokážou vystavit rozhraní k ostatním aplikacím. Tato r
 |[Afxconnectionadvise –](#afxconnectionadvise)|Naváže připojení mezi zdroj a jímka.|  
 |[Afxconnectionunadvise –](#afxconnectionunadvise)|Dělí připojení mezi zdroj a jímka.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART –  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART –  
  Použití `BEGIN_CONNECTION_PART` makro zahájíte definici další spojovací body nad rámec události a vlastnost oznámení spojovací body.  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART –  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART –  
  Ukončí deklaraci spojovacího bodu.  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID –  
+##  <a name="connection_iid"></a>  CONNECTION_IID –  
  Mezi použijte `BEGIN_CONNECTION_PART` a `END_CONNECTION_PART` makra zadat ID rozhraní pro bod připojení vaší OLE ovládacím prvkem podporována.  
   
 ```   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP –  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP –  
  Každý `COleControl`-odvozené třídy v programu můžete zadat mapu připojení k určení dalších spojovací body, které podporuje vlastní ovládací prvek.  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP –  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP –  
  Každý `COleControl`-odvozené třídy v programu můžete zadat mapu připojení k určení spojovací body, které budou podporovat vlastního ovládacího prvku.  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP –  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP –  
  Ukončí definici mapy připojení.  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART –  
+##  <a name="connection_part"></a>  CONNECTION_PART –  
  Bod připojení pro ovládací prvek OLE se mapuje na ID konkrétní rozhraní.  
   
 ```   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>Afxconnectionadvise –  
+##  <a name="afxconnectionadvise"></a>  Afxconnectionadvise –  
  Volání této funkce k navázání připojení mezi zdroji, zadán pomocí `pUnkSrc`a jímka, určeného `pUnkSink`.  
   
 ```   
@@ -217,7 +212,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>Afxconnectionunadvise –  
+##  <a name="afxconnectionunadvise"></a>  Afxconnectionunadvise –  
  Volání této funkce přerušit spojení mezi zdroji, zadán pomocí `pUnkSrc`a jímka, určeného `pUnkSink`.  
   
 ```   

@@ -1,12 +1,9 @@
 ---
-title: "Třída COleIPFrameWnd | Microsoft Docs"
-ms.custom: 
+title: Třída COleIPFrameWnd | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd – třída
 Základ pro úpravy okna aplikace na místě.  
@@ -76,7 +71,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
  Vytvoří `COleIPFrameWnd` objektu a inicializuje informace o jeho stavu na místě, který je uložený ve struktuře typu **OLEINPLACEFRAMEINFO**.  
   
 ```  
@@ -86,7 +81,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) ve Windows SDK.  
   
-##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  Volání framework `OnCreateControlBars` fungovat, pokud je aktivován položku pro úpravy na místě.  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace neprovede žádnou akci. Funkci provést žádné speciální zpracování požadováno, když jsou vytvořeny ovládací pruhy přepište.  
   
-##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
  Volání framework `RepositionFrame` – členská funkce Rozvrhněte ovládací pruhy a změnit umístění okna pro úpravy v místě, tak, aby všechny viditelné.  
   
 ```  

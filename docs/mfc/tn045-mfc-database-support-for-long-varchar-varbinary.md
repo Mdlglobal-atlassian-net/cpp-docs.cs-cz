@@ -1,13 +1,10 @@
 ---
-title: "TN045: Podpora MFC databáze pro Long Varchar Varbinary | Microsoft Docs"
-ms.custom: 
+title: 'TN045: Podpora MFC databáze pro Long Varchar Varbinary | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd5201661afcdf6f4ae9676323f3f644817bcf7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Podpora prostředí MFC a databáze pro typy Long Varchar/Varbinary
 > [!NOTE]
@@ -76,7 +71,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
  Pokud načtení long – datový sloupec do `CString` nebo `CByteArray`, vrátí maximální množství dat, je ve výchozím nastavení, 255 bajtů. Nic nad tuto hranici se ignoruje. V takovém případě rozhraní vyvolá výjimku **AFX_SQL_ERROR_DATA_TRUNCATED**. Naštěstí můžete explicitně zvýšit nMaxLength větší hodnoty, až **MAXINT**.  
   
 > [!NOTE]
->  Hodnota nMaxLength je využívané prostředím MFC nastavit místní vyrovnávací paměti **SQLBindColumn** funkce. Toto je místní vyrovnávací paměti pro úložiště dat a nemá vliv na ve skutečnosti množství dat vrácených ovladač ODBC. `RFX_Text`a `RFX_Binary` pouze si ho volat pomocí **SQLFetch** k načtení dat z databáze back-end. Každý ovladač ODBC má jiné omezení na množství dat, které vracejí v jednoho načtení. Tento limit, může být mnohem menší než hodnotu nastavenou v nMaxLength, ve kterém případ výjimka **AFX_SQL_ERROR_DATA_TRUNCATED** bude vyvolána. Za těchto okolností, přejít k používání `RFX_LongBinary` místo `RFX_Text` nebo `RFX_Binary` tak, aby se nedají načíst všechna data.  
+>  Hodnota nMaxLength je využívané prostředím MFC nastavit místní vyrovnávací paměti **SQLBindColumn** funkce. Toto je místní vyrovnávací paměti pro úložiště dat a nemá vliv na ve skutečnosti množství dat vrácených ovladač ODBC. `RFX_Text` a `RFX_Binary` pouze si ho volat pomocí **SQLFetch** k načtení dat z databáze back-end. Každý ovladač ODBC má jiné omezení na množství dat, které vracejí v jednoho načtení. Tento limit, může být mnohem menší než hodnotu nastavenou v nMaxLength, ve kterém případ výjimka **AFX_SQL_ERROR_DATA_TRUNCATED** bude vyvolána. Za těchto okolností, přejít k používání `RFX_LongBinary` místo `RFX_Text` nebo `RFX_Binary` tak, aby se nedají načíst všechna data.  
   
  Vytvoří vazbu ClassWizard **SQL_LONGVARCHAR** k `CString`, nebo **SQL_LONGVARBINARY** k `CByteArray` za vás. Pokud chcete přidělit více než 255 bajtů, do kterých načíst vaše long – datový sloupec, potom můžete zadat explicitní hodnotu pro nMaxLength.  
   

@@ -2,11 +2,8 @@
 title: Třída CWnd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 Poskytuje základní funkce všech tříd oken v knihovny Microsoft Foundation Class.  
@@ -1632,7 +1627,7 @@ virtual void CalcWindowRect(
  [ve out] `lpClientRect`  
  Ukazatel na strukturu rámečku. Tato struktura na vstup, obsahuje rámeček klienta. Po dokončení metody obsahuje tato struktura okno obdélníku, která může obsahovat rámeček zadaného klienta.  
   
- [in] `nAdjustType`  
+ [v] `nAdjustType`  
  Použít `CWnd::adjustBorder` k výpočtu okno souřadnice bez `WS_EX_CLIENTEDGE` styl; jinak použijte `CWnd::adjustOutside`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1838,25 +1833,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszClassName`  
+ [v] `lpszClassName`  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje název třídy okna registrované systému; nebo název třídy okno předdefinované systému.  
   
- [in] `lpszWindowName`  
+ [v] `lpszWindowName`  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje okno zobrazovaný název; v opačném případě `NULL` pro žádné okno zobrazovaný název.  
   
- [in] `dwStyle`  
+ [v] `dwStyle`  
  Bitové kombinace (nebo) [styly oken](styles-used-by-mfc.md#window-styles). `WS_POPUP` Možnost není platný styl.  
   
- [in] `rect`  
+ [v] `rect`  
  Velikost a umístění okna relativně k levého horního rohu nadřazeného okna.  
   
- [in] `pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna.  
   
- [in] `nID`  
+ [v] `nID`  
  ID okna.  
   
- [in] `pContext`  
+ [v] `pContext`  
  Ukazatel na [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktura, která slouží k přizpůsobení architektuře dokument zobrazení pro aplikaci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- V tomto příkladu `drive` je písmeno jednotky, `directory` je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník (*), což znamená, odpovídají libovolný znak a znak hvězdičky (  **\*** ), což znamená odpovídat jakýkoli počet znaků.  
+ V tomto příkladu `drive` je písmeno jednotky, `directory` je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník (*), což znamená, odpovídají libovolný znak a znak hvězdičky ( **\***), což znamená odpovídat jakýkoli počet znaků.  
   
  Pokud zadáte řetězec s délkou 0 pro `lpPathSpec`, nebo pokud zadáte pouze název adresáře, ale neobsahují žádné specifikaci souboru, řetězec bude změněno na "*.\*".  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- V tomto příkladu `drive` je písmeno jednotky, `directory` je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník (*), což znamená, odpovídají libovolný znak a znak hvězdičky (  **\*** ), což znamená odpovídat jakýkoli počet znaků.  
+ V tomto příkladu `drive` je písmeno jednotky, `directory` je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník (*), což znamená, odpovídají libovolný znak a znak hvězdičky ( **\***), což znamená odpovídat jakýkoli počet znaků.  
   
  Pokud zadáte řetězec nulové délky pro `lpPathSpec`, použije se aktuální adresář a `lpPathSpec` se nezmění. Pokud zadáte pouze název adresáře, ale neobsahují žádné specifikaci souboru, řetězec bude změněno na "*".  
   
@@ -4323,7 +4318,7 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *pti*  
+ *PTI*  
  Ukazatel na [TITLEBARINFO](http://msdn.microsoft.com/library/windows/desktop/ms632608) struktura, která přijímá informace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![Zastavit &#40; x &#41; ikona](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **mb_iconstop –**, a **MB_ICONERROR**|  
-|![Nápověda &#40; &#41; ikona](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![Důležité &#40; & č. 33; &#41; ikona](../../mfc/reference/media/vc364f3.gif "vc364f3")|**Mb_iconexclamation –** a **MB_ICONWARNING**|  
-|![Informace o &#40; i &#41; ikona](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** a **mb_iconinformation –**|  
+|![Zastavit &#40;x&#41; ikonu](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **mb_iconstop –**, a **MB_ICONERROR**|  
+|![Pomůže &#40; &#41; ikonu](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
+|![Důležité &#40; &#33; &#41; ikonu](../../mfc/reference/media/vc364f3.gif "vc364f3")|**Mb_iconexclamation –** a **MB_ICONWARNING**|  
+|![Informace o &#40;i&#41; ikonu](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** a **mb_iconinformation –**|  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5363,10 +5358,10 @@ afx_msg void OnAppCommand(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `pWnd`|Ukazatel na `CWnd` objekt, který reprezentuje okno, kde uživatel kliknutí na tlačítko oddělený nebo stisknutí klávesy příkaz. Toto okno lze podřízeného okna okna danou zprávu přijala.|  
-|[in] `nCmd`|Určuje příkaz aplikace. Seznam možných hodnot najdete v tématu příkazy v části *cmd* části `lParam` parametr [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275).|  
-|[in] `nDevice`|Vstupní zařízení, které vygenerovalo vstupní událost. Seznam možných hodnot najdete v tématu zařízení v části *uDevice* části `lParam` parametr [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275).|  
-|[in] `nKey`|Označuje všechny virtuální klíče, které jsou mimo provoz, například klávesu CTRL nebo levým tlačítkem myši. Seznam možných hodnot najdete v tématu v části klíče *dwKeys* části `lParam` parametr [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275). Další informace najdete v tématu "Parametry zpráva" podnadpisu v [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
+|[v] `pWnd`|Ukazatel na `CWnd` objekt, který reprezentuje okno, kde uživatel kliknutí na tlačítko oddělený nebo stisknutí klávesy příkaz. Toto okno lze podřízeného okna okna danou zprávu přijala.|  
+|[v] `nCmd`|Určuje příkaz aplikace. Seznam možných hodnot najdete v tématu příkazy v části *cmd* části `lParam` parametr [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275).|  
+|[v] `nDevice`|Vstupní zařízení, které vygenerovalo vstupní událost. Seznam možných hodnot najdete v tématu zařízení v části *uDevice* části `lParam` parametr [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275).|  
+|[v] `nKey`|Označuje všechny virtuální klíče, které jsou mimo provoz, například klávesu CTRL nebo levým tlačítkem myši. Seznam možných hodnot najdete v tématu v části klíče *dwKeys* části `lParam` parametr [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275). Další informace najdete v tématu "Parametry zpráva" podnadpisu v [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275) oznámení, která je popsána v sadě Windows SDK.  
@@ -5621,8 +5616,8 @@ afx_msg void OnColorizationColorChanged(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `dwColorizationColor`|Určuje barvu nové zabarvení.<br /><br /> Formát barvy se o hexadecimální číslo 0xAARRGGBB formulář, kde každý ze čtyř součástí rozsahu od 0x00 do 0xFF. Součást AA je hodnotu alfa, RR je červenou barvu, GG je zobrazen zeleně a BB je modrá.|  
-|[in] `bOpacity`|`true` Pokud je nové barvu smíšený s krytí; `false` Pokud není.|  
+|[v] `dwColorizationColor`|Určuje barvu nové zabarvení.<br /><br /> Formát barvy se o hexadecimální číslo 0xAARRGGBB formulář, kde každý ze čtyř součástí rozsahu od 0x00 do 0xFF. Součást AA je hodnotu alfa, RR je červenou barvu, GG je zobrazen zeleně a BB je modrá.|  
+|[v] `bOpacity`|`true` Pokud je nové barvu smíšený s krytí; `false` Pokud není.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388198) zprávy oznámení, která je popsána v sadě Windows SDK.  
@@ -5828,7 +5823,7 @@ afx_msg HBRUSH OnCtlColor(
   
 - **CTLCOLOR_LISTBOX** ovládacího prvku pole se seznamem  
   
-- **CTLCOLOR_MSGBOX** Message box  
+- **CTLCOLOR_MSGBOX** okno se zprávou  
   
 - **CTLCOLOR_SCROLLBAR** ovládací prvek typu posuvník  
   
@@ -6377,9 +6372,9 @@ afx_msg void OnHotKey(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nHotKeyId`|Identifikátor pro aktivní klíč, který vygeneroval zprávu. Pokud zpráva vygenerovalo definovaná systémem klávesové zkratky, tento parametr bude jeden z následujících hodnot:<br /><br /> - `IDHOT_SNAPDESKTOP` Klávesové zkratky stolní-snap došlo ke stisknutí tlačítka.<br />- `IDHOT_SNAPWINDOW` Klávesové zkratky-snap okno došlo ke stisknutí tlačítka.|  
-|[in] `nKey1`|Bitová kombinace (nebo) příznaky, které indikují klíčů, které byly stisknutí v kombinaci s klíčem určeného `nKey2` parametr. Možné hodnoty jsou:<br /><br /> - `MOD_ALT` – Byla stisknuta buď klávesy ALT.<br />- `MOD_CONTROL` – Byla stisknuta buď klávesu CTRL.<br />- `MOD_SHIFT` – Byla stisknuta buď klávesu SHIFT.<br />- `MOD_WIN` -Buď WINDOWS klíč byl uchovávat. Tyto klíče jsou označeny logem systému Windows.|  
-|[in] `nKey2`|Virtuální kód klávesové zkratky.|  
+|[v] `nHotKeyId`|Identifikátor pro aktivní klíč, který vygeneroval zprávu. Pokud zpráva vygenerovalo definovaná systémem klávesové zkratky, tento parametr bude jeden z následujících hodnot:<br /><br /> - `IDHOT_SNAPDESKTOP` Klávesové zkratky stolní-snap došlo ke stisknutí tlačítka.<br />- `IDHOT_SNAPWINDOW` Klávesové zkratky-snap okno došlo ke stisknutí tlačítka.|  
+|[v] `nKey1`|Bitová kombinace (nebo) příznaky, které indikují klíčů, které byly stisknutí v kombinaci s klíčem určeného `nKey2` parametr. Možné hodnoty jsou:<br /><br /> - `MOD_ALT` – Byla stisknuta buď klávesy ALT.<br />- `MOD_CONTROL` – Byla stisknuta buď klávesu CTRL.<br />- `MOD_SHIFT` – Byla stisknuta buď klávesu SHIFT.<br />- `MOD_WIN` -Buď WINDOWS klíč byl uchovávat. Tyto klíče jsou označeny logem systému Windows.|  
+|[v] `nKey2`|Virtuální kód klávesové zkratky.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) oznámení, která je popsána v sadě Windows SDK. Tato zpráva je umístěna na začátek fronty zpráv přidružené vlákno, které registrované klávesové zkratky. Použití [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) funkce k registraci klávesové zkratky celého systému.  
@@ -6553,7 +6548,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `uFlag`|Tento příznak může obsahovat následující hodnoty:<br /><br /> - `GIDC_ARRIVAL` -Nové zařízení přidaná do systému.<br />- `GIDC_REMOVAL` -A zařízení bylo odebráno ze systému.|  
+|[v] `uFlag`|Tento příznak může obsahovat následující hodnoty:<br /><br /> - `GIDC_ARRIVAL` -Nové zařízení přidaná do systému.<br />- `GIDC_REMOVAL` -A zařízení bylo odebráno ze systému.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_INPUT_DEVICE_CHANGE](http://msdn.microsoft.com/library/windows/desktop/ms645591) oznámení, která je popsána v sadě Windows SDK. Zprávu obecné vstupní zařízení.  
@@ -6574,8 +6569,8 @@ afx_msg void OnInputLangChange(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nCharSet`|Znakovou sadu nové národní prostředí. Další informace najdete v tématu `lfCharSet` parametr [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.|  
-|[in] `nLocaleId`|Identifikátor národního prostředí. Další informace najdete v tématu [konstanty jazyka a řetězce](http://msdn.microsoft.com/library/windows/desktop/dd318693).|  
+|[v] `nCharSet`|Znakovou sadu nové národní prostředí. Další informace najdete v tématu `lfCharSet` parametr [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.|  
+|[v] `nLocaleId`|Identifikátor národního prostředí. Další informace najdete v tématu [konstanty jazyka a řetězce](http://msdn.microsoft.com/library/windows/desktop/dd318693).|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_INPUTLANGCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms632629) zprávy oznámení, která je popsána v sadě Windows SDK.  
@@ -6596,8 +6591,8 @@ afx_msg void OnInputLangChangeRequest(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nFlags`|Bitová kombinace (OR) příznaky, které označují nové národní prostředí nebyl vybrán z předchozí nebo další národního prostředí v seznamu nainstalovaných národních prostředí, nebo že rozložení klávesnice nové národní prostředí lze použít s znaková sada systému.<br /><br /> Možné hodnoty jsou `INPUTLANGCHANGE_BACKWARD`, `INPUTLANGCHANGE_FORWARD`, a `INPUTLANGCHANGE_SYSCHARSET`.|  
-|[in] `nLocaleId`|Identifikátor národního prostředí. Další informace najdete v tématu [konstanty jazyka a řetězce](http://msdn.microsoft.com/library/windows/desktop/dd318693).|  
+|[v] `nFlags`|Bitová kombinace (OR) příznaky, které označují nové národní prostředí nebyl vybrán z předchozí nebo další národního prostředí v seznamu nainstalovaných národních prostředí, nebo že rozložení klávesnice nové národní prostředí lze použít s znaková sada systému.<br /><br /> Možné hodnoty jsou `INPUTLANGCHANGE_BACKWARD`, `INPUTLANGCHANGE_FORWARD`, a `INPUTLANGCHANGE_SYSCHARSET`.|  
+|[v] `nLocaleId`|Identifikátor národního prostředí. Další informace najdete v tématu [konstanty jazyka a řetězce](http://msdn.microsoft.com/library/windows/desktop/dd318693).|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_INPUTLANGCHANGEREQUEST](http://msdn.microsoft.com/library/windows/desktop/ms632630) zprávy oznámení, která je popsána v sadě Windows SDK. Tato zpráva je odeslání, když uživatel vybere nový vstupní jazyk s buď kláves, která je určená v aplikaci klávesnice ovládacího panelu nebo z ukazatele na hlavním panelu systému.  
@@ -6993,8 +6988,8 @@ afx_msg UINT OnMenuDrag(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nPos`|Umístění indexu položky nabídky při zahájení operace přetažení.|  
-|[in] `pMenu`|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který obsahuje položky nabídky.|  
+|[v] `nPos`|Umístění indexu položky nabídky při zahájení operace přetažení.|  
+|[v] `pMenu`|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který obsahuje položky nabídky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -7020,7 +7015,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `pMenu`|Ukazatel na [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) je struktura, která obsahuje informace o nabídce a přetažení myší na.|  
+|[v] `pMenu`|Ukazatel na [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) je struktura, která obsahuje informace o nabídce a přetažení myší na.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -7048,8 +7043,8 @@ afx_msg void OnMenuRButtonUp(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nPos`|Umístění indexu položky nabídky, když byla vydána pravým tlačítkem myši.|  
-|[in] `pMenu`|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který obsahuje položky nabídky.|  
+|[v] `nPos`|Umístění indexu položky nabídky, když byla vydána pravým tlačítkem myši.|  
+|[v] `pMenu`|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který obsahuje položky nabídky.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610) oznámení, která je popsána v sadě Windows SDK. [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610) zpráv umožňuje aplikaci přinášejí nabídce položky zadaný ve zprávě kontextové nabídky.  
@@ -7156,8 +7151,8 @@ afx_msg void OnMouseHover(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
+|[v] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_MOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645613) oznámení, která je popsána v sadě Windows SDK.  
@@ -7191,9 +7186,9 @@ afx_msg void OnMouseHWheel(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.<br /><br /> Seznam příznaky, naleznete v části "Parametry zpráva" podnadpisu v [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
-|[in] `zDelta`|Určuje vzdálenost kolečka otočen, vyjádřené v násobky nebo divizí `WHEEL_DELTA`, což je 120. Kladné celé číslo označuje, že byl kolečka otáčet zprava. Záporná označuje, že kolečka byl otáčet doleva.|  
-|[in] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
+|[v] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.<br /><br /> Seznam příznaky, naleznete v části "Parametry zpráva" podnadpisu v [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
+|[v] `zDelta`|Určuje vzdálenost kolečka otočen, vyjádřené v násobky nebo divizí `WHEEL_DELTA`, což je 120. Kladné celé číslo označuje, že byl kolečka otáčet zprava. Záporná označuje, že kolečka byl otáčet doleva.|  
+|[v] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_MOUSEHWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645614) zprávy oznámení, která je popsána v sadě Windows SDK. Tato zpráva je odeslána do okna, který je aktivní, když vodorovné kolečka myši na naklonění nebo otočen.  
@@ -7573,8 +7568,8 @@ afx_msg void OnNcMouseHover(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu obrazovky.|  
+|[v] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu obrazovky.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_NCMOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645625) oznámení, která je popsána v sadě Windows SDK.  
@@ -7703,7 +7698,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `bIsRendering`|`true` Pokud je povoleno vykreslování plochy okno správce (správce) oblasti nonclient okna; `false` Pokud vykreslování je zakázána.|  
+|[v] `bIsRendering`|`true` Pokud je povoleno vykreslování plochy okno správce (správce) oblasti nonclient okna; `false` Pokud vykreslování je zakázána.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388200) oznámení, která je popsána v sadě Windows SDK.  
@@ -7725,9 +7720,9 @@ void OnNcXButtonDblClk(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
-|[in] `nButton`|Hodnota `XBUTTON1` Pokud je na první tlačítko Microsoft Intellimouse X dvakrát kliknete, nebo `XBUTTON2` Pokud druhý tlačítko X je dvakrát kliknete.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
+|[v] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
+|[v] `nButton`|Hodnota `XBUTTON1` Pokud je na první tlačítko Microsoft Intellimouse X dvakrát kliknete, nebo `XBUTTON2` Pokud druhý tlačítko X je dvakrát kliknete.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244) oznámení, která je popsána v sadě Windows SDK. Tato zpráva je odeslána do okna, který obsahuje kurzor. Pokud okno má zachycení myši není odeslat tuto zprávu.  
@@ -7749,9 +7744,9 @@ afx_msg void OnNcXButtonDown(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
-|[in] `nButton`|Hodnota `XBUTTON1` při stisknutí tlačítka myši X první, nebo `XBUTTON2` Pokud druhý stisknutí tlačítka X.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu obrazovky.|  
+|[v] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
+|[v] `nButton`|Hodnota `XBUTTON1` při stisknutí tlačítka myši X první, nebo `XBUTTON2` Pokud druhý stisknutí tlačítka X.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu obrazovky.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_NCXBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645632) oznámení, která je popsána v sadě Windows SDK. Tato zpráva je odeslána do okna, který obsahuje kurzor. Pokud okno má zachycení myši není odeslat tuto zprávu.  
@@ -7773,9 +7768,9 @@ afx_msg void OnNcXButtonUp(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
-|[in] `nButton`|Hodnota `XBUTTON1` Pokud první tlačítko myši X vydání, nebo `XBUTTON2` Pokud druhý uvolnění tlačítka X.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu obrazovky.|  
+|[v] `nHitTest`|Stiskněte klávesu testovací hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) zprávy.|  
+|[v] `nButton`|Hodnota `XBUTTON1` Pokud první tlačítko myši X vydání, nebo `XBUTTON2` Pokud druhý uvolnění tlačítka X.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu obrazovky.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_NCXBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646240) oznámení, která je popsána v sadě Windows SDK. Tato zpráva je odeslána do okna, který obsahuje kurzor. Pokud okno má zachycení myši není odeslat tuto zprávu.  
@@ -7796,8 +7791,8 @@ afx_msg void OnNextMenu(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nKey`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.<br /><br /> Seznam příznaky, naleznete v části "Parametry zpráva" podnadpisu v [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
-|[in] `lpMdiNextMenu`|Ukazatel na [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) struktura, která obsahuje informace o nabídce chcete aktivovat.|  
+|[v] `nKey`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.<br /><br /> Seznam příznaky, naleznete v části "Parametry zpráva" podnadpisu v [o vstup z myši](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
+|[v] `lpMdiNextMenu`|Ukazatel na [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) struktura, která obsahuje informace o nabídce chcete aktivovat.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) oznámení, která je popsána v sadě Windows SDK. V odpovědi na tuto zprávu, vaše aplikace může nastavit `hmenuNext` členem [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) k nabídce přejděte na, zadejte strukturu a `hwndNext` člena zadejte okna pro příjem zpráv s oznámením nabídky .  
@@ -7848,8 +7843,8 @@ afx_msg UINT OnNotifyFormat(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `pWnd`|Ukazatel `CWnd` objekt, který reprezentuje okno odesílání [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy.<br /><br /> Tento parametr je ukazatel do ovládacího prvku, pokud `nCommand` parametr `NF_QUERY`, nebo má ukazatel na nadřazené okno ovládacího prvku Pokud `nCommand` je `NF_REQUERY`.|  
-|[in] `nCommand`|Hodnota příkazu, který se specializuje **wm_notify –** zprávy. Možné hodnoty jsou:<br /><br /> - `NF_QUERY` -<br />     Zpráva je lze určit, zda má být použita ANSI nebo Unicode struktury v **wm_notify –** zprávy. Tato zpráva se odešle z ovládacího prvku do jeho nadřazeného okna při vytváření ovládacího prvku a v reakci `NF_REQUERY` formuláře této zprávy.<br />- `NF_REQUERY` -<br />     Zpráva je žádost pro ovládací prvek odeslat `NF_QUERY` formu této zprávy jeho nadřazeného okna. Tato žádost se odesílá z nadřazeného okna a požádá ovládacího prvku na Requery – nadřazené o typu struktury pro použití v **wm_notify –** zprávy. Pokud `nCommand` parametr `NF_REQUERY`, vrácená hodnota je výsledek operace opakování dotazu.|  
+|[v] `pWnd`|Ukazatel `CWnd` objekt, který reprezentuje okno odesílání [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy.<br /><br /> Tento parametr je ukazatel do ovládacího prvku, pokud `nCommand` parametr `NF_QUERY`, nebo má ukazatel na nadřazené okno ovládacího prvku Pokud `nCommand` je `NF_REQUERY`.|  
+|[v] `nCommand`|Hodnota příkazu, který se specializuje **wm_notify –** zprávy. Možné hodnoty jsou:<br /><br /> - `NF_QUERY` -<br />     Zpráva je lze určit, zda má být použita ANSI nebo Unicode struktury v **wm_notify –** zprávy. Tato zpráva se odešle z ovládacího prvku do jeho nadřazeného okna při vytváření ovládacího prvku a v reakci `NF_REQUERY` formuláře této zprávy.<br />- `NF_REQUERY` -<br />     Zpráva je žádost pro ovládací prvek odeslat `NF_QUERY` formu této zprávy jeho nadřazeného okna. Tato žádost se odesílá z nadřazeného okna a požádá ovládacího prvku na Requery – nadřazené o typu struktury pro použití v **wm_notify –** zprávy. Pokud `nCommand` parametr `NF_REQUERY`, vrácená hodnota je výsledek operace opakování dotazu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -7997,8 +7992,8 @@ afx_msg UINT OnPowerBroadcast(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nPowerEvent`|Událost řízení spotřeby.|  
-|[in] `nEventData`|Data události specifické.|  
+|[v] `nPowerEvent`|Událost řízení spotřeby.|  
+|[v] `nEventData`|Data události specifické.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud se žádost o události se vrátit `true` žádosti, nebo `BROADCAST_QUERY_DENY` tak, aby odepřel požadavek.  
@@ -8092,8 +8087,8 @@ afx_msg void OnRawInput(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nInputCode`|Vstupní kód, který označuje, zda vstup došlo k chybě aplikace byla v popředí, nebo ne. V obou případech aplikace musí volat [CWnd::DefWindowProc](#defwindowproc) tak systému můžete provést čištění.<br /><br /> Tento parametr může být jedna z následujících hodnot:<br /><br /> - `RIM_INPUT` -Vstupu došlo k chybě aplikace byla v popředí.<br />- `RIM_INPUTSINK` -Vstupu došlo k chybě aplikace nebyla v popředí.|  
-|[in] `hRawInput`|Popisovač [RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562) struktura, která obsahuje nezpracovaná vstup ze zařízení.|  
+|[v] `nInputCode`|Vstupní kód, který označuje, zda vstup došlo k chybě aplikace byla v popředí, nebo ne. V obou případech aplikace musí volat [CWnd::DefWindowProc](#defwindowproc) tak systému můžete provést čištění.<br /><br /> Tento parametr může být jedna z následujících hodnot:<br /><br /> - `RIM_INPUT` -Vstupu došlo k chybě aplikace byla v popředí.<br />- `RIM_INPUTSINK` -Vstupu došlo k chybě aplikace nebyla v popředí.|  
+|[v] `hRawInput`|Popisovač [RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562) struktura, která obsahuje nezpracovaná vstup ze zařízení.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_INPUT](http://msdn.microsoft.com/library/windows/desktop/ms646275) oznámení, která je popsána v sadě Windows SDK.  
@@ -8258,8 +8253,8 @@ afx_msg void OnSessionChange(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nSessionState`|Stavový kód popisuje změnu stavu relace.|  
-|[in] `nId`|Identifikátor relace.|  
+|[v] `nSessionState`|Stavový kód popisuje změnu stavu relace.|  
+|[v] `nId`|Identifikátor relace.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) oznámení, která je popsána v sadě Windows SDK.  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **(UINT) hWndChild** popisovače podřízeného okna  
   
-- `uFlags` &#124; = **TTF_IDISHWND** popisovač nástroje  
+- `uFlags` &#124;= **TTF_IDISHWND** popisovač nástroje  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK** ukazatel na řetězec, který je zobrazený v okně zadaný  
   
@@ -8954,9 +8949,9 @@ afx_msg void OnUniChar(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nChar`|Určuje kód znaku stisknuté klávesy.|  
-|[in] `nRepCnt`|Určuje počet opakování pro aktuální zprávu. Hodnota je počet, který klávesová zkratka není autorepeated v důsledku uživatele podržíte stisknutou klávesu. Pokud klávesu trvá dostatečně dlouhé, odešlou se více zpráv. Počet opakování však není kumulativní.|  
-|[in] `nFlags`|Příznaky, které zadejte kód kontroly, rozšířené klíč, kontextu kódu, předchozí klíče stavu a stavu přechodu, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód kontroly. Hodnota závisí na výrobce (OEM).<br /><br /> **8:** Určuje rozšířené klíč, jako je například pravém klávesy ALT a CTRL, která se zobrazují na rozšířené klávesnice 101 nebo 102 klíč. Příznak je 1, pokud je klíč klíčem rozšířené; v opačném případě je 0.<br /><br /> **9 – 12:** používaná interně k systému Windows.<br /><br /> **13:** Určuje kód kontextu. Příznak je 1, pokud je při stisknutí klávesy; stisknuta klávesa ALT hodnota, jinak hodnota je 0.<br /><br /> **14:** určuje předchozí klíče stavu. Příznak je 1, pokud je klíč dolů, než je zpráva odeslána nebo 0, pokud je klíč nahoru.<br /><br /> **15:** Určuje přechodový stav. Příznak je 1, pokud je vydán klíč, nebo 0, pokud bylo stisknuto klíč.|  
+|[v] `nChar`|Určuje kód znaku stisknuté klávesy.|  
+|[v] `nRepCnt`|Určuje počet opakování pro aktuální zprávu. Hodnota je počet, který klávesová zkratka není autorepeated v důsledku uživatele podržíte stisknutou klávesu. Pokud klávesu trvá dostatečně dlouhé, odešlou se více zpráv. Počet opakování však není kumulativní.|  
+|[v] `nFlags`|Příznaky, které zadejte kód kontroly, rozšířené klíč, kontextu kódu, předchozí klíče stavu a stavu přechodu, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód kontroly. Hodnota závisí na výrobce (OEM).<br /><br /> **8:** Určuje rozšířené klíč, jako je například pravém klávesy ALT a CTRL, která se zobrazují na rozšířené klávesnice 101 nebo 102 klíč. Příznak je 1, pokud je klíč klíčem rozšířené; v opačném případě je 0.<br /><br /> **9 – 12:** používaná interně k systému Windows.<br /><br /> **13:** Určuje kód kontextu. Příznak je 1, pokud je při stisknutí klávesy; stisknuta klávesa ALT hodnota, jinak hodnota je 0.<br /><br /> **14:** určuje předchozí klíče stavu. Příznak je 1, pokud je klíč dolů, než je zpráva odeslána nebo 0, pokud je klíč nahoru.<br /><br /> **15:** Určuje přechodový stav. Příznak je 1, pokud je vydán klíč, nebo 0, pokud bylo stisknuto klíč.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288) oznámení, která je popsána v sadě Windows SDK. [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288) zpráva slouží k odeslání nebo odeslání znaky znakové sady Unicode na ANSI windows. Ta je ekvivalentní [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) zpráva, ale používá kódování Unicode transformace formát-32 (ve formátu UTF-32), zatímco [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) zprávy používá UTF-16.  
@@ -8977,8 +8972,8 @@ afx_msg void OnUnInitMenuPopup(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `pMenu`|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který reprezentuje nabídky nebo podnabídky.|  
-|[in] `nFlags`|V nabídce, který byl zničen. V současné době je možné ho pouze nabídce okno `MF_SYSMENU`.|  
+|[v] `pMenu`|Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který reprezentuje nabídky nebo podnabídky.|  
+|[v] `nFlags`|V nabídce, který byl zničen. V současné době je možné ho pouze nabídce okno `MF_SYSMENU`.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) oznámení, která je popsána v sadě Windows SDK.  
@@ -9158,7 +9153,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `bIsMaximized`|`true` Pokud je aktuální okno maximalizované, a `false` Pokud není.|  
+|[v] `bIsMaximized`|`true` Pokud je aktuální okno maximalizované, a `false` Pokud není.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_DWMWINDOWMAXIMIZEDCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd388201) zprávy oznámení, která je popsána v sadě Windows SDK.  
@@ -9271,9 +9266,9 @@ afx_msg void OnXButtonDblClk(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
-|[in] `nButton`|Hodnota `XBUTTON1` Pokud je na první tlačítko Microsoft Intellimouse X dvakrát kliknete, nebo `XBUTTON2` Pokud druhý tlačítko X je dvakrát kliknete.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
+|[v] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
+|[v] `nButton`|Hodnota `XBUTTON1` Pokud je na první tlačítko Microsoft Intellimouse X dvakrát kliknete, nebo `XBUTTON2` Pokud druhý tlačítko X je dvakrát kliknete.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244) oznámení, která je popsána v sadě Windows SDK. Pokud není zachycení myši zprávy je odeslána do okna pod kurzor. Jinak je zpráva odeslána do okně, které má zachycení myši.  
@@ -9307,9 +9302,9 @@ afx_msg void OnXButtonDown(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
-|[in] `nButton`|Hodnota `XBUTTON1` Pokud bylo stisknuto tlačítko první Microsoft Intellimouse X, nebo `XBUTTON2` Pokud druhý bylo stisknuto tlačítko X.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
+|[v] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
+|[v] `nButton`|Hodnota `XBUTTON1` Pokud bylo stisknuto tlačítko první Microsoft Intellimouse X, nebo `XBUTTON2` Pokud druhý bylo stisknuto tlačítko X.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_XBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646245) oznámení, která je popsána v sadě Windows SDK. Pokud není zachycení myši zprávy je odeslána do okna pod kurzor. Jinak je zpráva odeslána do okně, které má zachycení myši.  
@@ -9343,9 +9338,9 @@ afx_msg void OnXButtonUp(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[in] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
-|[in] `nButton`|Hodnota `XBUTTON1` Pokud byl na první tlačítko Microsoft Intellimouse X dvakrát kliknete, nebo `XBUTTON2` Pokud druhý bylo neotevřou tlačítko X.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
+|[v] `nFlags`|Bitová kombinace (nebo) příznaky, které označují, které modifikační klávesy stisknutí. Například `MK_CONTROL` příznak označuje, že po stisknutí klávesy CTRL.|  
+|[v] `nButton`|Hodnota `XBUTTON1` Pokud byl na první tlačítko Microsoft Intellimouse X dvakrát kliknete, nebo `XBUTTON2` Pokud druhý bylo neotevřou tlačítko X.|  
+|[v] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje *x* a *y* souřadnice kurzor relativně k levého horního rohu klientské oblasti.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přijímá [WM_XBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646246) oznámení, která je popsána v sadě Windows SDK. Pokud není zachycení myši zprávy je odeslána do okna pod kurzor. Jinak je zpráva odeslána do okně, které má zachycení myši.  

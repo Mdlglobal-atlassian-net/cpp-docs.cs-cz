@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCCmdUsageCount | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCCmdUsageCount | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCmdUsageCount
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db24894777170d2860ba8d1639fd44e3893732a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount – třída
 Sleduje počet použití zpráv systému Windows, například když uživatel vybere položku z nabídky.  
@@ -84,7 +79,7 @@ class CMFCCmdUsageCount : public CObject
 |`m_nTotalUsage`|Počet všechny sledované příkazy.|  
   
 ### <a name="remarks"></a>Poznámky  
- `CMFCCmdUsageCount` Třída mapuje každý číselný identifikátor zprávy Windows čítač 32bitové celé číslo bez znaménka. `CMFCToolBar`Tato třída se používá pro zobrazení položek používaných nástrojů. Další informace o `CMFCToolBar`, najdete v části [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md).  
+ `CMFCCmdUsageCount` Třída mapuje každý číselný identifikátor zprávy Windows čítač 32bitové celé číslo bez znaménka. `CMFCToolBar` Tato třída se používá pro zobrazení položek používaných nástrojů. Další informace o `CMFCToolBar`, najdete v části [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md).  
   
  Můžete zachovat `CMFCCmdUsageCount` třídy dat mezi spustí vašeho programu. Použití [CMFCCmdUsageCount::Serialize](#serialize) metoda k serializaci dat člena třídy a [CMFCCmdUsageCount::SetOptions](#setoptions) metodu a nastavit dat sdíleného člena.  
   
@@ -96,7 +91,7 @@ class CMFCCmdUsageCount : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmdusagecount.h  
   
-##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
+##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
  Zvýší jedním čítač, který je přidružen daný příkaz.  
   
 ```  
@@ -108,7 +103,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`uiCmd`|Určuje příkaz čítače se zvýší.|  
+|[v] `uiCmd`|Určuje příkaz čítače se zvýší.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přidá novou položku mapy struktura příkaz počty `m_CmdUsage`, pokud položka již neexistuje.  
@@ -119,9 +114,9 @@ void AddCmd(UINT uiCmd);
   
 -   Příkaz odkazuje na dílčí nebo nabídky oddělovače ( `uiCmd` rovná 0 nebo -1).  
   
-- `uiCmd`odkazuje na standardních příkazů (na globální `IsStandardCommand` funkce vrátí nenulovou hodnotu).  
+- `uiCmd` odkazuje na standardních příkazů (na globální `IsStandardCommand` funkce vrátí nenulovou hodnotu).  
   
-##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
+##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Načte počet použití, který je přidružen ID daného příkazu.  
   
 ```  
@@ -133,12 +128,12 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`uiCmd`|ID čítač příkaz pro načtení.|  
+|[v] `uiCmd`|ID čítač příkaz pro načtení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet použití, který je přidružen ID daného příkazu.  
   
-##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
+##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation  
  Určuje, zda tento objekt byl přijat minimální množství data sledování.  
   
 ```  
@@ -153,7 +148,7 @@ BOOL HasEnoughInformation() const;
   
  Tato metoda se používá ve [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) k určení, zda se zobrazí všechny dostupné příkazy nabídek.  
   
-##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
  Určuje, zda daný příkaz se často používá.  
   
 ```  
@@ -165,7 +160,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`uiCmd`|Určuje příkaz, který chcete zkontrolovat.|  
+|[v] `uiCmd`|Určuje příkaz, který chcete zkontrolovat.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se často používá příkaz; jinak 0.  
@@ -175,7 +170,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
  [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) tato metoda používá k určení, jestli příkaz zřídka se používá.  
   
-##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
+##  <a name="reset"></a>  CMFCCmdUsageCount::Reset  
  Vymaže počet použití všech příkazů.  
   
 ```  
@@ -185,7 +180,7 @@ void Reset();
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze vymazat všechny položky ze struktury mapy příkaz počty `m_CmdUsage`a resetovat využití celkový příkaz `m_nTotalUsage`, čítač na hodnotu 0.  
   
-##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
+##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize  
  Čte tento objekt z archivu nebo zapíše ho do archivu.  
   
 ```  
@@ -197,14 +192,14 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`ar`|A `CArchive` objektu k serializaci z nebo na.|  
+|[v] `ar`|A `CArchive` objektu k serializaci z nebo na.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda serializuje strukturu mapy příkaz počty `m_CmdUsage`a celkový počet příkaz využití `m_nTotalUsage`, čítač z nebo na zadané archivu.  
   
  Serializace příklady najdete v tématu [serializace: serializace objektu](../../mfc/serialization-serializing-an-object.md).  
   
-##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
+##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions  
  Nastaví hodnoty sdílené `CMFCCmdUsageCount` třídy datových členů.  
   
 ```  
@@ -218,14 +213,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`nStartCount`|Nové počáteční počet všechny sledované příkazy.|  
-|[v]`nMinUsagePercentage`|Nové procento minimální využití.|  
+|[v] `nStartCount`|Nové počáteční počet všechny sledované příkazy.|  
+|[v] `nMinUsagePercentage`|Nové procento minimální využití.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud metoda bude úspěšná, `FALSE` Pokud `nMinUsagePercentage` parametr je větší než nebo roven 100.  
+ `TRUE` Pokud metoda bude úspěšná, `FALSE` Pokud `nMinUsagePercentage` parametr je větší než nebo roven 100.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nastaví sdílený `CMFCCmdUsageCount` třídy datových členů `m_nStartCount` a `m_nMinUsagePercentage` k `nStartCount` a `nMinUsagePercentage`, v uvedeném pořadí. `m_nStartCount`je používán [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) metoda k určení, zda tento objekt se budou shromažďovat data sledování minimální velikost. `m_nMinUsagePercentage`je používán [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) metoda k určení, zda daný příkaz se často používá.  
+ Tato metoda nastaví sdílený `CMFCCmdUsageCount` třídy datových členů `m_nStartCount` a `m_nMinUsagePercentage` k `nStartCount` a `nMinUsagePercentage`, v uvedeném pořadí. `m_nStartCount` je používán [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) metoda k určení, zda tento objekt se budou shromažďovat data sledování minimální velikost. `m_nMinUsagePercentage` je používán [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) metoda k určení, zda daný příkaz se často používá.  
   
  V sestavení pro ladění tato metoda generuje chybu assertion, pokud `nMinUsagePercentage` parametr je větší než nebo roven 100.  
   

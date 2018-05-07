@@ -1,13 +1,10 @@
 ---
-title: "Zobrazí třídy (Windows) | Microsoft Docs"
-ms.custom: 
+title: Zobrazí třídy (Windows) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Třídy zobrazení (Windows)
-`CView`a jejich odvozené třídy jsou podřízená okna, které představují klientské oblasti okně s rámečkem. Zobrazení zobrazit data a přijímat vstup pro dokument.  
+`CView` a jejich odvozené třídy jsou podřízená okna, které představují klientské oblasti okně s rámečkem. Zobrazení zobrazit data a přijímat vstup pro dokument.  
   
  Třídy zobrazení je přidružen dokumentové třídy a třídy oken s rámečkem pomocí objektu šablony dokumentu.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Zobrazení, které obsahuje ovládacím prvkem strom systému Windows (viz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ovládací prvek stromu zobrazí hierarchické seznam ikon a popisky uspořádané podobným způsobem, v levém podokně v Průzkumníku souborů.  
   
 ## <a name="related-classes"></a>Související třídy  
- `CSplitterWnd`Můžete mít více zobrazení v rámci jedné rámce okna. `CPrintDialog`a `CPrintInfo` kvůli podpoře možnosti tisku a tiskového náhledu zobrazení. `CRichEditDoc`a `CRichEditCntrItem` se používají s `CRichEditView` implementovat možnosti kontejneru OLE.  
+ `CSplitterWnd` Můžete mít více zobrazení v rámci jedné rámce okna. `CPrintDialog` a `CPrintInfo` kvůli podpoře možnosti tisku a tiskového náhledu zobrazení. `CRichEditDoc` a `CRichEditCntrItem` se používají s `CRichEditView` implementovat možnosti kontejneru OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Okno, které uživatel můžete rozdělit do několika podoken. Tyto podokna může být umožňující změnu velikosti uživatelem nebo pevné velikosti.  

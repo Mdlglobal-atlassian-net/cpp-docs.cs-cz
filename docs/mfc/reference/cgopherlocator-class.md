@@ -1,12 +1,9 @@
 ---
-title: "Třída CGopherLocator | Microsoft Docs"
-ms.custom: 
+title: Třída CGopherLocator | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffe833195e665fad37c6638c83170a1913197d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator – třída
 Získá gopher "Lokátor" ze serveru gopher, určuje typ lokátoru a zpřístupní Lokátor [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -80,7 +75,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
  Tato funkce člen je volána k vytvoření `CGopherLocator` objektu.  
   
 ```  
@@ -94,7 +89,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>Poznámky  
  Nikdy vytvoříte `CGopherLocator` objektu přímo. Místo toho volat [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) vytvořte a vraťte ukazatel `CGopherLocator` objektu.  
   
-##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
  Volání této funkce člen získat typ lokátoru.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Požádejte + položku.|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + položku.|  
   
-##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
  Tento operátor přetypování užitečné poskytuje efektivní metodu pro přístup k součástí C řetězce ukončené hodnotou null `CGopherLocator` objektu.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Práce s ovládacím prvkem panel nástrojů | Microsoft Docs"
-ms.custom: 
+title: Práce s ovládacím prvkem panel nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>Práce s ovládacím prvkem panel nástrojů
 Tento článek vysvětluje, jak se dostanete [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) základní objekt [ctoolbar –](../mfc/reference/ctoolbar-class.md) pro větší kontrolu nad panely nástrojů. To je rozšířená.  
@@ -37,7 +32,7 @@ Tento článek vysvětluje, jak se dostanete [CToolBarCtrl](../mfc/reference/cto
   
 1.  Volání [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl`Vrátí odkaz na [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu. Odkaz na můžete volat funkce člena třídy ovládacího prvku panel nástrojů.  
+ `GetToolBarCtrl` Vrátí odkaz na [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu. Odkaz na můžete volat funkce člena třídy ovládacího prvku panel nástrojů.  
   
 > [!CAUTION]
 >  Při volání `CToolBarCtrl` **získat** funkce je bezpečné, buďte opatrní při volání **nastavit** funkce. To je rozšířená. Za normálních okolností by neměl potřebujete přístup k podkladové ovládací prvek panelu nástrojů.  

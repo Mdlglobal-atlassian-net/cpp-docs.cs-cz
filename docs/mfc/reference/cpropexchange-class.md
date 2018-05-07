@@ -1,12 +1,9 @@
 ---
-title: "Třída CPropExchange | Microsoft Docs"
-ms.custom: 
+title: Třída CPropExchange | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>CPropExchange – třída
 Podporuje provádění trvalosti pro vaše ovládací prvky OLE.  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|Určuje, zda vlastnosti bude načten do ovládacího prvku nebo uložit z něj.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CPropExchange`nemá základní třídu.  
+ `CPropExchange` nemá základní třídu.  
   
  Určuje kontextu a směr vlastnost exchange.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  Rozhraní framework předá ukazatel to `CPropExchange` objekt ovládacího prvku `DoPropExchange` funkce. Pokud jste použili průvodce k vytvoření počáteční soubory pro vaše ovládacího prvku, vlastní ovládací prvek `DoPropExchange` volání funkce `COleControl::DoPropExchange`. Základní třída verze výměny uložených vlastností ovládacího prvku; můžete upravit odvozené třídy verze na vlastnosti serveru exchange, že jste přidali do vlastního ovládacího prvku.  
   
- `CPropExchange`slouží k serializaci vlastností ovládacího prvku nebo inicializace vlastností ovládacího prvku při zatížení nebo vytvoření ovládacího prvku. `ExchangeProp` a `ExchangeFontProp` členské funkce `CPropExchange` dokážou a uložit vlastnosti, které chcete je načíst z různých média.  
+ `CPropExchange` slouží k serializaci vlastností ovládacího prvku nebo inicializace vlastností ovládacího prvku při zatížení nebo vytvoření ovládacího prvku. `ExchangeProp` a `ExchangeFontProp` členské funkce `CPropExchange` dokážou a uložit vlastnosti, které chcete je načíst z různých média.  
   
  Další informace o používání `CPropExchange`, najdete v článku [MFC – ovládací prvky ActiveX: stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  Serializuje vlastnost, která ukládá data binární rozsáhlý objekt (binární rozsáhlý OBJEKT).  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  Funkce **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, a **CPropsetPropExchange::ExchangeBlobProp** přepsání Tato čistý virtuální funkce.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  Výměny vlastnost písma mezi střední úložiště a ovládacího prvku.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  Funkce **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, a **CPropsetPropExchange::ExchangeFontProp** přepsání Tato čistý virtuální funkce.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  Výměny vlastnost mezi ovládacího prvku a soubor.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  Funkce **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, a **CPropsetPropExchange::ExchangePersistentProp** čistý virtuální funkci přepsat.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  Výměny vlastnost mezi střední úložiště a ovládacího prvku.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  Funkce **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, a **CPropsetPropExchange::ExchangeProp** přepsat tuto čisté virtuální funkce.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  Voláno rámcem pro zpracování trvalost číslo verze.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se funkce úspěšně; jinak 0.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  Volání této funkce načíst číslo verze ovládacího prvku.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Návratová hodnota  
  Číslo verze ovládacího prvku.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  Určuje, pokud vlastnost výměnu hotovi asynchronně.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu TRUE, pokud jsou vlastnosti vyměňují asynchronně, jinak hodnota FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  Volání této funkce k určení, zda vlastnosti bude načten do ovládacího prvku nebo uložit z něj.  
   
 ```  

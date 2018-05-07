@@ -1,12 +1,9 @@
 ---
-title: "Třída CCheckListBox | Microsoft Docs"
-ms.custom: 
+title: Třída CCheckListBox | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox – třída
 Poskytuje funkci Windows kontrolní seznam pole.  
@@ -84,7 +79,7 @@ class CCheckListBox : public CListBox
 ## <a name="remarks"></a>Poznámky  
  "Políčko kontrolního seznamu" zobrazí seznam položek, jako jsou názvy souborů. Každá položka v seznamu má zaškrtávací políčko vedle sebe, který uživatel může zaškrtněte nebo zrušte zaškrtnutí.  
   
- `CCheckListBox`je pouze pro ovládací prvky vykreslované uživatelem, protože seznam obsahuje více než textové řetězce. V nejjednodušším pole kontrolní seznam obsahuje textové řetězce a zaškrtávací políčka, ale není potřeba mít textu vůbec. Například můžete mít seznam malé bitmap s zaškrtávací políčko vedle každé položky.  
+ `CCheckListBox` je pouze pro ovládací prvky vykreslované uživatelem, protože seznam obsahuje více než textové řetězce. V nejjednodušším pole kontrolní seznam obsahuje textové řetězce a zaškrtávací políčka, ale není potřeba mít textu vůbec. Například můžete mít seznam malé bitmap s zaškrtávací políčko vedle každé položky.  
   
  Pokud chcete vytvořit vlastní pole kontrolní seznam, musí být vaše vlastní třídy z `CCheckListBox`. Vlastní třída odvozena zápis konstruktoru odvozené třídy, pak zavolají **vytvořit**.  
   
@@ -92,7 +87,7 @@ class CCheckListBox : public CListBox
   
  Každá položka mapování zpráv má následující podobu:  
   
- **ON_**oznámení **(**`id`, `memberFxn` **)**  
+ **ON_** oznámení **(**`id`, `memberFxn` **)**  
   
  kde `id` Určuje ID okno podřízeného prvku odesílání oznámení a `memberFxn` je název nadřazeného člena funkce napsané pro zpracování oznámení.  
   
@@ -122,7 +117,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
  Vytvoří `CCheckListBox` objektu.  
   
 ```  
@@ -135,7 +130,7 @@ CCheckListBox();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>  CCheckListBox::Create  
  Políčko kontrolního seznamu Windows vytvoří a připojí jej k `CCheckListBox` objektu.  
   
 ```  
@@ -185,7 +180,7 @@ virtual BOOL Create(
   
 - **Ws_tabstop –** umožňující pomocí klávesy tabulátor do tohoto ovládacího prvku  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
  Voláno rámcem při řídit se změní vykreslovaných vlastníkem kontrolní seznam.  
   
 ```  
@@ -205,7 +200,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Pokud políčko položky kontrolního seznamu nejsou stejné výška, v seznamu úkolů pole styl (zadaný v **vytvořit**) musí být **LBS_OWNERVARIABLE**, a je nutné přepsat [measureitem –](#measureitem) funkce.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>  CCheckListBox::Enable  
  Volání této funkce, které chcete povolit nebo zakázat položku kontrolní seznam pole.  
   
 ```  
@@ -221,7 +216,7 @@ void Enable(
  `bEnabled`  
  Určuje, zda je povoleno položky.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
  Načte stav zadané políčko.  
   
 ```  
@@ -241,7 +236,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|Není zaškrtnuté políčko.|  
 |`BST_INDETERMINATE`|Je v neurčitém stavu zaškrtávací políčko.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
  Volání této funkce můžete získat styl políčko kontrolního seznamu.  
   
 ```  
@@ -254,7 +249,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>Poznámky  
  Informace o možných styly najdete v tématu [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
  Volání této funkce určete, zda je povoleno položku.  
   
 ```  
@@ -268,7 +263,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je položka povolena; jinak 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
  Voláno rámcem, když se vytvoří kontrolní seznam pole s jiný než výchozí styl.  
   
 ```  
@@ -282,7 +277,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato funkce člen neprovede žádnou akci. Funkci člena přepsat a vyplňte `MEASUREITEMSTRUCT` struktura k informování Windows dimenzí políčko kontrolního seznamu položek. Pokud políčko kontrolního seznamu je vytvořen s [lbs_ownerdrawvariable –](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) volá framework styl, tato funkce člena pro každou položku v seznamu. Tento člen, jinak je volat pouze jednou.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
  Tato funkce se získat umístění a velikost zaškrtávacího políčka v položku volá framework.  
   
 ```  
@@ -304,7 +299,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace vrací pouze výchozí umístění a velikost zaškrtávacího políčka ( `rectCheckBox`). Ve výchozím nastavení zaškrtněte políčko zarovnán v levém horním rohu položky a je velikost standardní zaškrtávací políčko. Můžou nastat případy, kde mají zaškrtávací políčka na pravé straně, nebo chcete zaškrtávací políčko větší nebo menší. V těchto případech přepsat `OnGetCheckPosition` změnit políčko pozice a velikosti v rámci položky.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
  Nastaví stav zadané políčko.  
   
 ```  
@@ -329,7 +324,7 @@ void SetCheck(
 |**BST_UNCHECKED**|Zrušte zaškrtnutí políčka zadaný.|  
 |**BST_INDETERMINATE**|Nastavte stav políčko zadaný na neurčitou.<br /><br /> Tento stav je k dispozici, pokud je styl políčko pouze `BS_AUTO3STATE` nebo `BS_3STATE`. Další informace najdete v tématu [styly tlačítek](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
  Volání této funkce lze nastavit v rozevíracím seznamu kontrolní seznam styl zaškrtávacích políček.  
   
 ```  

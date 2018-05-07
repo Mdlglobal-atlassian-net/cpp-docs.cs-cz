@@ -1,13 +1,10 @@
 ---
-title: "TN002: Formát dat trvalých objektů | Microsoft Docs"
-ms.custom: 
+title: 'TN002: Formát dat trvalých objektů | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Formát dat trvalých objektů
 Tato poznámka popisuje MFC rutiny, které podporují trvalé objekty C++ a formát data objektu, když je uložena v souboru. Vztahuje se pouze na tříd pomocí [declare_serial –](../mfc/reference/run-time-object-model-services.md#declare_serial) a [implement_serial –](../mfc/reference/run-time-object-model-services.md#implement_serial) makra.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Pokud objekt ještě nebyl uložen před, máte dvě možnosti ke zvážení: buď objekt a přesný typ objektu (třídy) jsou nové pro tento kontext archivu, nebo objekt je už viděli přesně typu. K určení, zda typ ukázala, kód dotazy `m_pStoreMap` pro [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objekt, který odpovídá `CRuntimeClass` objekt přidružený k objektu. Pokud není nalezena shoda, `WriteObject` vloží značku, která je bitového `OR` z `wOldClassTag` a tento index. Pokud `CRuntimeClass` je pro tento kontext archivu nová `WriteObject` přiřadí nový PID třídy a vloží ho do archivu, před sebou `wNewClassTag` hodnotu.  
   
- Popisovač pro tuto třídu se pak vloží do archivu pomocí `CRuntimeClass::Store` metoda. `CRuntimeClass::Store`Vloží číslo schématu třídy (viz níže) a název text ASCII třídy. Všimněte si, že použití názvu text ASCII nezaručuje jedinečnosti archivu napříč aplikacemi. Proto by mělo být označení datové soubory do zabránit poškození. Následující vkládání informace o třídě archivu převádí objekt do `m_pStoreMap` a potom zavolá `Serialize` metoda vložit data specifická pro třídu. Objekt do umístění `m_pStoreMap` před voláním `Serialize` brání více kopií objektu, neuloží se do úložiště.  
+ Popisovač pro tuto třídu se pak vloží do archivu pomocí `CRuntimeClass::Store` metoda. `CRuntimeClass::Store` Vloží číslo schématu třídy (viz níže) a název text ASCII třídy. Všimněte si, že použití názvu text ASCII nezaručuje jedinečnosti archivu napříč aplikacemi. Proto by mělo být označení datové soubory do zabránit poškození. Následující vkládání informace o třídě archivu převádí objekt do `m_pStoreMap` a potom zavolá `Serialize` metoda vložit data specifická pro třídu. Objekt do umístění `m_pStoreMap` před voláním `Serialize` brání více kopií objektu, neuloží se do úložiště.  
   
  Při vracení na počáteční volající (obvykle kořen síťových objektů), musí volat [CArchive::Close](../mfc/reference/carchive-class.md#close). Pokud máte v plánu k dalším [cfile –](../mfc/reference/cfile-class.md)operace, je třeba zavolat `CArchive` metoda [vyprázdnění](../mfc/reference/carchive-class.md#flush) zabránit poškození archivu.  
   

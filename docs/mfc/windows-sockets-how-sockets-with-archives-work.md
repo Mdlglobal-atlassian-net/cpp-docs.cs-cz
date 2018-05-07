@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Jak pracují sokety s archivy | Microsoft Docs"
-ms.custom: 
+title: 'Windows Sockets: Jak pracují sokety s archivy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak pracují sokety s archivy
 Tento článek vysvětluje, jak [CSocket](../mfc/reference/csocket-class.md) objekt, [CSocketFile](../mfc/reference/csocketfile-class.md) objekt a [CArchive](../mfc/reference/carchive-class.md) objekt se zkombinují zjednodušit odesílat a přijímat data prostřednictvím systému Windows Časový limit soketu.  
@@ -37,7 +32,7 @@ Tento článek vysvětluje, jak [CSocket](../mfc/reference/csocket-class.md) obj
   
  A `CArchive` objekt spravuje vyrovnávací paměti. Při ukládání (odesílajícím) archivu vyrovnávací paměť je plná, přiřazený `CFile` objekt zapíše se do vyrovnávací paměti obsah. Probíhá vyprazdňování vyrovnávací paměti archivu připojit k soketu je ekvivalentní volání odesílání zprávy. Po zaplnění vyrovnávací paměti načtení (příjem) archivu `CFile` objekt čtení přestane, dokud vyrovnávací paměť je opět k dispozici.  
   
- Třída `CSocketFile` je odvozena z `CFile`, ale nepodporuje [cfile –](../mfc/reference/cfile-class.md) členské funkce jako je například umísťovací funkce (`Seek`, `GetLength`, `SetLength`a tak dále), blokovací funkce ( `LockRange`, `UnlockRange`), nebo `GetPosition` funkce. Všechny [CSocketFile](../mfc/reference/csocketfile-class.md) musíte udělat objektu je zápisu nebo čtení pořadí bajtů do nebo z přidruženého `CSocket` objektu. Vzhledem k tomu, že soubor není zahrnut, operace, jako `Seek` a `GetPosition` žádné smysl. `CSocketFile`je odvozený od `CFile`, takže by za normálních okolností zdědit všechny tyto členských funkcí. Chcete-li tomu zabránit, nepodporovanou `CFile` členské funkce jsou přepsaná v `CSocketFile` má být vyvolána [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
+ Třída `CSocketFile` je odvozena z `CFile`, ale nepodporuje [cfile –](../mfc/reference/cfile-class.md) členské funkce jako je například umísťovací funkce (`Seek`, `GetLength`, `SetLength`a tak dále), blokovací funkce ( `LockRange`, `UnlockRange`), nebo `GetPosition` funkce. Všechny [CSocketFile](../mfc/reference/csocketfile-class.md) musíte udělat objektu je zápisu nebo čtení pořadí bajtů do nebo z přidruženého `CSocket` objektu. Vzhledem k tomu, že soubor není zahrnut, operace, jako `Seek` a `GetPosition` žádné smysl. `CSocketFile` je odvozený od `CFile`, takže by za normálních okolností zdědit všechny tyto členských funkcí. Chcete-li tomu zabránit, nepodporovanou `CFile` členské funkce jsou přepsaná v `CSocketFile` má být vyvolána [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
   
  `CSocketFile` Objekt volání členských funkcí jeho `CSocket` objekt, který chcete odesílat nebo přijímat data.  
   

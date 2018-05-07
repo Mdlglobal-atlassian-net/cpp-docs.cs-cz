@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Licencování ovládacích prvků ActiveX | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Licencování ovládacích prvků ActiveX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - COleObjectFactory
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b90000279e00c9be8f43ecdb33f8e3dedf6b8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX
 Licencování podpory, volitelná funkce ovládacích prvků ActiveX, můžete určit, kdo může použít nebo distribuovat ovládacího prvku. (Další informace o licenčních podmínkách, najdete v části licencování problémy v [upgradování existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -47,7 +42,7 @@ Licencování podpory, volitelná funkce ovládacích prvků ActiveX, můžete u
   
  Ovládací prvky ActiveX, které implementovat licencování, povolit jako vývojář ovládacího prvku, chcete-li zjistit, jak jiní lidé bude používat ovládací prvek ActiveX. Zadejte nakupující ovládacího prvku pomocí ovládacího prvku a. Soubor – licenční smlouva s smlouvu, kupující může distribuci ovládacího prvku, ale ne. Soubor – licenční smlouva s aplikaci, která používá ovládacího prvku. To zabrání uživatelům této aplikace z zápis nové aplikace, které používají řízení, bez první licencování ovládacího prvku od vás.  
   
-##  <a name="_core_overview_of_activex_control_licensing"></a>Přehled ovládacích prvků ActiveX pro licencování  
+##  <a name="_core_overview_of_activex_control_licensing"></a> Přehled ovládacích prvků ActiveX pro licencování  
  K podpoře licencování pro ovládací prvky ActiveX, [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) třída poskytuje implementaci pro několik funkcí v **IClassFactory2** rozhraní: **IClassFactory2 :: RequestLicKey**, **IClassFactory2::GetLicInfo**, a **IClassFactory2::CreateInstanceLic**. Když vývojář aplikace kontejneru vytváří požadavek na vytvoření instance ovládacího prvku, volání `GetLicInfo` Přišla žádost o ověřte, že ovládací prvek. Soubor – licenční smlouva není k dispozici. Pokud ovládací prvek je licencována, instanci ovládacího prvku můžete vytvořit a umístěna v kontejneru. Po dokončení vytváření aplikací kontejneru vývojář jinou funkci volat, tentokrát s `RequestLicKey`, se provádí. Tato funkce vrátí do kontejnerové aplikace licenční klíč (řetězec jednoduchého znaků). Vrácený klíč je pak vloženy do aplikace.  
   
  Následující obrázek ukazuje ověření licencí ovládacího prvku ActiveX, který se použije během vývoje aplikace kontejneru. Jak je uvedeno nahoře, musí mít vývojář aplikace kontejneru správné. Soubor – licenční smlouva nainstalovaný na vývojovém počítači k vytvoření instance ovládacího prvku.  
@@ -64,7 +59,7 @@ Ověření licencované ovládací prvek ActiveX během provádění
   
  Licencování ovládacích obsahuje dvě základní součásti: konkrétní kód v implementaci ovládacího prvku knihovna DLL a soubor licencí. Kód se skládá z volání funkce dva (nebo případně tří) a řetězec znaků, dále jen "licenční řetězec", obsahující autorských právech. Řetězec licence a těchto volání, které se nacházejí v implementaci ovládacího prvku (. Soubor CPP). Soubor licencí generované průvodcem ovládací prvek ActiveX, je textový soubor s prohlášení o autorských právech. Pomocí názvu projektu s je název. Rozšíření – licenční smlouva, například ukázka. – LICENČNÍ SMLOUVA. Licencované ovládací prvek musí být doplněn licenční soubor je podle potřeby použijte návrhu.  
   
-##  <a name="_core_creating_a_licensed_control"></a>Vytvoření ovládacího prvku licencovanou  
+##  <a name="_core_creating_a_licensed_control"></a> Vytvoření ovládacího prvku licencovanou  
  Pokud použijete Průvodce ovládacím prvkem ActiveX k vytvoření rozhraní ovládací prvek, je snadné zahrnují licencování podpory. Pokud určíte, že ovládacího prvku by měl mít licenci běhu, Průvodce ovládacím prvkem ActiveX přidá kód na ovládací prvek třídy pro podporu licencování. Kód obsahuje funkce, které použít pro ověření licenční soubor klíče a licence. Tyto funkce můžete také upravit tak, aby přizpůsobení ovládacího prvku licencování. Další informace o přizpůsobení licencí najdete v tématu [přizpůsobení Licensing ovládacího prvku ActiveX](#_core_customizing_the_licensing_of_an_activex_control) dále v tomto článku.  
   
 #### <a name="to-add-support-for-licensing-with-the-activex-control-wizard-when-you-create-your-control-project"></a>Chcete-li přidat podporu pro licencování s Průvodce ovládacím prvkem ActiveX při vytváření projektu ovládací prvek  
@@ -73,7 +68,7 @@ Ověření licencované ovládací prvek ActiveX během provádění
   
  Průvodce ovládacím prvkem ActiveX nyní generuje představuje rozhraní pro ovládací prvek ActiveX, které zahrnuje podporu základní licencování. Podrobné vysvětlení licenční kód naleznete v tématu Další.  
   
-##  <a name="_core_licensing_support"></a>Licencování podpory  
+##  <a name="_core_licensing_support"></a> Licencování podpory  
  Pokud použijete Průvodce ovládacím prvkem ActiveX přidání licencování podpory do ovládacího prvku ActiveX, Průvodce ovládacím prvkem ActiveX přidá kód, který deklaruje a implementuje licencování schopnosti je přidán do ovládacího prvku záhlaví a implementace soubory. Tento kód se skládá z `VerifyUserLicense` – členská funkce a `GetLicenseKey` členská funkce, které potlačí výchozí implementace najít v [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) . Tyto funkce načíst a ověření licence na ovládací prvek.  
   
 > [!NOTE]
@@ -93,12 +88,12 @@ Ověření licencované ovládací prvek ActiveX během provádění
   
      Ověřuje, že embedded klíč a jedinečný klíč ovládacího prvku jsou stejné. To umožňuje kontejneru pro vytvoření instance ovládacího prvku pro jeho použití. Tato funkce je volána rozhraním framework jako součást zpracování **IClassFactory2::CreateInstanceLic** a může být potlačena za účelem poskytovat přizpůsobené ověření licenční klíč. Výchozí implementace provede porovnání řetězců. Další informace najdete v tématu [přizpůsobení Licensing ovládacího prvku ActiveX](#_core_customizing_the_licensing_of_an_activex_control)dál v tomto článku.  
   
-###  <a name="_core_header_file_modifications"></a>Úpravy soubor hlaviček  
+###  <a name="_core_header_file_modifications"></a> Úpravy soubor hlaviček  
  Průvodce ovládacím prvkem ActiveX umístí následující kód do ovládacího prvku záhlaví souboru. V tomto příkladu dva členské funkce `CSampleCtrl`je objekt `factory` jsou deklarovány, ten, který ověří přítomnost ovládacího prvku. Soubor – licenční smlouva a druhý, který načte licenční klíč, který se má použít v aplikaci obsahující ovládacího prvku:  
   
  [!code-cpp[NVC_MFC_AxUI#39](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_1.h)]  
   
-###  <a name="_core_implementation_file_modifications"></a>Implementace úpravy souborů  
+###  <a name="_core_implementation_file_modifications"></a> Implementace úpravy souborů  
  Průvodce ovládacím prvkem ActiveX umístí následující dva příkazy v řídicím souboru implementace deklarovat název souboru licencí a licencí řetězec:  
   
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
@@ -114,7 +109,7 @@ Ověření licencované ovládací prvek ActiveX během provádění
   
  [!code-cpp[NVC_MFC_AxUI#42](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_4.idl)]  
   
-##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a>Přizpůsobení licencování ovládacího prvku ActiveX  
+##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a> Přizpůsobení licencování ovládacího prvku ActiveX  
  Protože `VerifyUserLicense`, `GetLicenseKey`, a `VerifyLicenseKey` jsou deklarovány jako virtuální členské funkce ovládacího prvku objekt pro vytváření třídy, můžete přizpůsobit chování licencování ovládacího prvku.  
   
  Například můžete zadat několik úrovní licencování pro ovládací prvek přepsáním `VerifyUserLicense` nebo `VerifyLicenseKey` členské funkce. Uvnitř této funkce může upravit, které vlastnosti nebo metody jsou viditelné na uživatele podle úrovně licencí, které jste rozpoznali.  

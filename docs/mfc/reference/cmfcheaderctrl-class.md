@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCHeaderCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCHeaderCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCHeaderCtrl
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8b95b161704d5d5b2ca56e22cfe818e4785d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl – třída
 `CMFCHeaderCtrl` Třída podporuje řazení více sloupců v ovládacím prvku hlavička.  
@@ -113,7 +108,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxheaderctrl.h  
   
-##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
+##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
  Vytvoří `CMFCHeaderCtrl` objektu.  
   
 ```  
@@ -133,7 +128,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
  Povolí nebo zakáže *více sloupec řazení* režimu pro aktuální ovládací prvek záhlaví.  
   
 ```  
@@ -141,13 +136,13 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Pokud chcete povolit režim řazení více sloupců; `FALSE` zakázat více režim řazení sloupců a odebrat ze seznamu sloupců seřazené žádné sloupce. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` Pokud chcete povolit režim řazení více sloupců; `FALSE` zakázat více režim řazení sloupců a odebrat ze seznamu sloupců seřazené žádné sloupce. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte, pokud chcete povolit nebo zakázat režim řazení více sloupců. Dvě nebo více sloupců účastnit řazení Pokud ovládacím prvku záhlaví je v režimu řazení více sloupců.  
   
-##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
+##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
  Určuje, zda sloupec není seřazen nebo je seřadit ve vzestupném nebo sestupném pořadí.  
   
 ```  
@@ -155,7 +150,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iColumn`  
+ [v] `iColumn`  
  Index založený na nule sloupce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -169,7 +164,7 @@ int GetColumnState(int iColumn) const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
+##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
  Načte index první seřazený sloupec v ovládacím prvku záhlaví na nule.  
   
 ```  
@@ -182,7 +177,7 @@ int GetSortColumn() const;
 ### <a name="remarks"></a>Poznámky  
  Pokud v ovládacím prvku záhlaví *více sloupec řazení* režimu a kompilované aplikace v režimu ladění, tato metoda vyhodnotí a informuje o tom, abyste použili [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) metoda místo. Pokud ovládacím prvku záhlaví více režim řazení sloupců a kompilované aplikace v režimu prodejní, tato metoda vrátí hodnotu -1.  
   
-##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
+##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
  Určuje, zda všechny sloupce v ovládacím prvku záhlaví je seřadit ve vzestupném pořadí.  
   
 ```  
@@ -190,12 +185,12 @@ BOOL IsAscending() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud žádné sloupce v ovládacím prvku záhlaví je seřadit ve vzestupném pořadí. v opačném `FALSE`.  
+ `TRUE` Pokud žádné sloupce v ovládacím prvku záhlaví je seřadit ve vzestupném pořadí. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Hodnota, vrátí tato metoda slouží k zobrazení šipku odpovídající řazení položku ovládacího prvku záhlaví. Použití [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) metodu a nastavit pořadí řazení.  
   
-##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
  Určuje, zda okno nadřazeného prvku aktuální záhlaví dialogového okna.  
   
 ```  
@@ -203,9 +198,9 @@ BOOL IsDialogControl() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je dialogové okno nadřazené aktuální ovládacího prvku záhlaví v opačném `FALSE`.  
+ `TRUE` Pokud je dialogové okno nadřazené aktuální ovládacího prvku záhlaví v opačném `FALSE`.  
   
-##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
  Určuje, zda je aktuální ovládacího prvku záhlaví v *více sloupec řazení* režimu.  
   
 ```  
@@ -213,12 +208,12 @@ BOOL IsMultipleSort() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno více režim řazení sloupce; v opačném `FALSE`.  
+ `TRUE` Pokud je povoleno více režim řazení sloupce; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) metoda chcete povolit nebo zakázat režim řazení více sloupců. Dvě nebo více sloupců účastnit řazení Pokud ovládacím prvku záhlaví je v režimu řazení více sloupců.  
   
-##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
+##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
  Voláno rámcem k vykreslení sloupec ovládacího prvku záhlaví.  
   
 ```  
@@ -231,22 +226,22 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`iItem`  
+ [v] `iItem`  
  Index založený na nule položky k vykreslení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník položky k vykreslení.  
   
- [v]`bIsPressed`  
- `TRUE`k položce v při stisknutí tlačítka stavu; v opačném `FALSE`.  
+ [v] `bIsPressed`  
+ `TRUE` k položce v při stisknutí tlačítka stavu; v opačném `FALSE`.  
   
- [v]`bIsHighlighted`  
- `TRUE`k položce v zvýrazněná stavu; v opačném `FALSE`.  
+ [v] `bIsHighlighted`  
+ `TRUE` k položce v zvýrazněná stavu; v opačném `FALSE`.  
   
-##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
+##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  Voláno rámcem k vykreslení šipku řazení.  
   
 ```  
@@ -256,13 +251,13 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectArrow`  
+ [v] `rectArrow`  
  Ohraničující obdélník šipku řazení.  
   
-##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  Voláno rámcem k vyplnění na pozadí ovládacího prvku záhlaví sloupce.  
   
 ```  
@@ -270,12 +265,12 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
  Odebere zadaný sloupec v seznamu řadit sloupce.  
   
 ```  
@@ -283,10 +278,10 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iColumn`  
+ [v] `iColumn`  
  Index založený na nule sloupce, který se odebrat.  
   
-##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  Nastaví pořadí řazení zadané sloupce v ovládacím prvku hlavička.  
   
 ```  
@@ -297,20 +292,20 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iColumn`  
+ [v] `iColumn`  
  Index založený na nule ovládacího prvku záhlaví sloupce. Pokud tento parametr menší než nula, tato metoda odebere všechny sloupce v seznamu řadit sloupce.  
   
- [v]`bAscending`  
- Určuje pořadí řazení sloupce, který `iColumn` určuje parametr. `TRUE`Chcete-li nastavit vzestupné pořadí; `FALSE` nastavit sestupném pořadí. Výchozí hodnota je `TRUE`.  
+ [v] `bAscending`  
+ Určuje pořadí řazení sloupce, který `iColumn` určuje parametr. `TRUE` Chcete-li nastavit vzestupné pořadí; `FALSE` nastavit sestupném pořadí. Výchozí hodnota je `TRUE`.  
   
- [v]`bAdd`  
- `TRUE`k nastavení pořadí řazení sloupce, který `iColumn` určuje parametr.  
+ [v] `bAdd`  
+ `TRUE` k nastavení pořadí řazení sloupce, který `iColumn` určuje parametr.  
   
  Pokud je aktuální ovládací prvek záhlaví v *více sloupec řazení* režimu, tato metoda přidá zadaný sloupec do seznamu řazení sloupců. Použití [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) nastavit režim řazení více sloupců.  
   
  Pokud není nastaven více režim řazení sloupců a tato metoda kompiluje v režimu ladění, vyhodnotí se tato metoda. Pokud není nastaven více režim řazení sloupců a tato metoda kompiluje v režimu prodejní, tato metoda nejprve odebere všechny sloupce ze seznamu řazení sloupců a potom přidá zadaný sloupec do seznamu.  
   
- `FALSE`nejdřív odebrat všechny sloupce ze seznamu řazení sloupců a poté přidejte zadaný sloupec do seznamu. Výchozí hodnota je `FALSE`.  
+ `FALSE` nejdřív odebrat všechny sloupce ze seznamu řazení sloupců a poté přidejte zadaný sloupec do seznamu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k nastavení pořadí řazení sloupce. V případě potřeby tato metoda přidá sloupec do seznamu řazení sloupců. Ovládací prvek záhlaví používá pořadí řazení k vykreslení šipku řazení, který odkazuje nahoru nebo dolů.  

@@ -1,13 +1,10 @@
 ---
-title: "Internetové adresy URL globální funkce pro analýzu a pomocníky | Microsoft Docs"
-ms.custom: 
+title: Internetové adresy URL globální funkce pro analýzu a pomocníky | Microsoft Docs
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internetové adresy URL globální funkce pro analýzu a pomocníky
 Když klient odešle dotaz na server Internet, můžete jednu adresu URL, globální funkce pro analýzu extrahovat informace o klientovi. Podpůrné funkce nabízí jiné funkce Internetu.
@@ -44,7 +39,7 @@ Když klient odešle dotaz na server Internet, můžete jednu adresu URL, globá
 |[Afxthrowinternetexception –](#afxthrowinternetexception)|Vyvolá výjimku týkající se připojení k Internetu.|
 |[Afxgetinternethandletype –](#afxgetinternethandletype)|Určuje typ internetového popisovače.|
   
-##  <a name="afxparseurl"></a>Afxparseurl –  
+##  <a name="afxparseurl"></a>  Afxparseurl –  
  Tuto globální se používá v [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ```   
@@ -110,13 +105,13 @@ BOOL AFXAPI AfxParseURL(
   
  Například `AfxParseURL` analyzuje adresy URL ve formátu **service://server/dir/dir/object.ext:port** a vrátí jeho komponenty uložené následujícím způsobem:  
   
- `strServer`== "server"  
+ `strServer` == "server"  
   
- `strObject`== "/ dir/dir/object/object.ext"  
+ `strObject` == "/ dir/dir/object/object.ext"  
   
- `nPort`== #port  
+ `nPort` == #port  
   
- `dwServiceType`== #service  
+ `dwServiceType` == #service  
   
 > [!NOTE]
 >  Pro volání této funkce, musí obsahovat projektu AFXINET. H.  
@@ -124,7 +119,7 @@ BOOL AFXAPI AfxParseURL(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxinet.h  
   
-##  <a name="afxparseurlex"></a>Afxparseurlex –  
+##  <a name="afxparseurlex"></a>  Afxparseurlex –  
  Globální funkce je rozšířené verze [afxparseurl –](#afxparseurl) a používá se v [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ```   
@@ -219,7 +214,7 @@ BOOL AFXAPI AfxParseURLEx(
 ## <a name="see-also"></a>Viz také  
  [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>Afxgetinternethandletype –
+## <a name="afxgetinternethandletype"></a>  Afxgetinternethandletype –
 Pomocí této globální funkce můžete určit typ internetového popisovače.  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -272,7 +267,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [Afxparseurl –](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>Afxthrowinternetexception –
+## <a name="afxthrowinternetexception"></a>  Afxthrowinternetexception –
 Vyvolá výjimku Internetu.  
    
 ### <a name="syntax"></a>Syntaxe    

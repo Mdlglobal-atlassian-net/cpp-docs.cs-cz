@@ -1,29 +1,24 @@
 ---
-title: "Návod: Aktualizace aplikace MFC Scribble (část 2) | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Aktualizace aplikace MFC Scribble (část 2) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Návod: Aktualizace aplikace MFC Scribble (část 2)
 [Část 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) Tento průvodce vám ukázal, jak přidat Office Fluent Ribbon do classic Klikyháky aplikace. Tato část popisuje postup pro přidání panelů pásu karet a ovládacích prvků, které uživatelé můžou použít místo nabídek a příkazů.  
@@ -31,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="prerequisites"></a>Požadavky  
  [Visual C++ – ukázky](../visual-cpp-samples.md)  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tato část průvodce obsahuje následující části:  
   
 - [Přidávání nových panelů na pásu karet](#addnewpanel)  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Inicializace pera a ukládání předvoleb](#initpensave)  
   
-##  <a name="addnewpanel"></a>Přidávání nových panelů na pásu karet  
+##  <a name="addnewpanel"></a> Přidávání nových panelů na pásu karet  
  Tyto kroky ukazují, jak přidat **zobrazení** panel, který obsahuje dvě zaškrtávací políčka, která řídí viditelnost panelu nástrojů a na stavovém řádku, a také **okno** panel, který obsahuje svisle orientované rozdělení tlačítko, které řídí vytváření a uspořádání systému windows, rozhraní více dokumentů (MDI).  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>K přidání panelů zobrazení a oken panelech na panelu pásu karet  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Části](#top)]  
   
-##  <a name="addhelppanel"></a>Přidávání panelů nápovědy na pásu karet  
+##  <a name="addhelppanel"></a> Přidávání panelů nápovědy na pásu karet  
  Nyní můžete přiřadit dvě položky nabídky, které jsou definovány v aplikaci Scribble tlačítka pásu karet, které jsou s názvem **témata nápovědy** a **o Klikyháky**. Tlačítka se přidají do nových panelů s názvem **pomoci**.  
   
 #### <a name="to-add-a-help-panel"></a>K přidání panelu nápovědy  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Části](#top)]  
   
-##  <a name="addpenpanel"></a>Přidávání panelů pera na pásu karet  
+##  <a name="addpenpanel"></a> Přidávání panelů pera na pásu karet  
  Nyní přidejte panel pro zobrazení tlačítka, která řídí tloušťka a barvy pera. Tento panel obsahuje zaškrtávací políčko, které přepíná mezi pera silné a dynamické. Jeho funkce podobá se **konvenčním řádku** položky nabídky v aplikaci Scribble.  
   
  Původní Scribble aplikace umožňuje uživateli vybrat pera šířek z dialogu, který se zobrazí, když uživatel klikne na **pera šířek** v nabídce. Protože panelu pásu karet má dostatečným místo pro nové ovládací prvky, můžete nahradit dialogové okno s použitím dvě pole se seznamem na pásu karet. Jednoho pole se seznamem upraví šířku dynamické pera a další pole se seznamem upraví šířku silných pera.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Části](#top)]  
   
-##  <a name="addcolorbutton"></a>Přidání tlačítka barvy pera panely  
+##  <a name="addcolorbutton"></a> Přidání tlačítka barvy pera panely  
  Dál přidejte [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) objekt, který umožňuje uživatelům scribble barvou.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Přidání tlačítka barvy pera panely  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Části](#top)]  
   
-##  <a name="addcolormember"></a>Přidání člena barvu k třídě dokumentů  
- Vzhledem k tomu, že původní Scribble aplikace nemá barvy pera, musí zapsat implementace pro ně. K uložení barvy pera dokumentu, přidejte nový člen k třídě dokumentů`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Přidání člena barvu k třídě dokumentů  
+ Vzhledem k tomu, že původní Scribble aplikace nemá barvy pera, musí zapsat implementace pro ně. K uložení barvy pera dokumentu, přidejte nový člen k třídě dokumentů `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Barva člena přidat do třídy dokumentů  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Části](#top)]  
   
-##  <a name="initpensave"></a>Inicializace pera a ukládání předvoleb  
+##  <a name="initpensave"></a> Inicializace pera a ukládání předvoleb  
  V dalším kroku inicializujte barva a šířka per. Nakonec uložit a načíst barvy kreslení ze souboru.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>K chybě při inicializaci ovládacích prvků na panelu pásu karet  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Přidejte následující kód do scribdoc.cpp, v `CScribbleDoc::InitDocument` metoda, po `m_sizeDoc = CSize(200,200)` příkaz.  
   
- ```*/ / Reset uživatelské rozhraní pásu karet na jeho počáteční hodnoty CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Obnovit uživatelské rozhraní pásu karet na jeho počáteční hodnoty CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = dynamic_downcast – (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Set ColorButton do černé  
     pColorBtn -> setcolor – (RGB (0, 0, 0));

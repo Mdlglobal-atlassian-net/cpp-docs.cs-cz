@@ -1,12 +1,9 @@
 ---
-title: "Třída CByteArray | Microsoft Docs"
-ms.custom: 
+title: Třída CByteArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CByteArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b45de74c53ce24d64dc93e73f2195df76bd1152
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbytearray-class"></a>CByteArray – třída
 Podporuje dynamická pole bajtů.  
@@ -116,7 +111,7 @@ class CByteArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá element v zadaném indexu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CByteArray`zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud je pole bajtů uložen do archivu, buď pomocí přetížené vložení (  **<<** ) operátor nebo s `Serialize` – členská funkce každý prvek se naopak serializovat.  
+ `CByteArray` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud je pole bajtů uložen do archivu, buď pomocí přetížené vložení ( **<<**) operátor nebo s `Serialize` – členská funkce každý prvek se naopak serializovat.  
   
 > [!NOTE]
 >  Před použitím pole, použijte `SetSize` k zahájení jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidávání elementů do pole způsobí, že se často znovu přidělit a zkopírovat. Časté opakované přidělení a kopírování jsou neefektivní a může fragmentovat paměti.  

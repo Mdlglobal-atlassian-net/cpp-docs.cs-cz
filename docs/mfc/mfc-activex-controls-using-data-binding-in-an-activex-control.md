@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Použití datových vazeb v ovládacím prvku ActiveX | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Použití datových vazeb v ovládacím prvku ActiveX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
 Jedno z výkonnější použití ovládacích prvků ActiveX je datovou vazbu, která umožňuje vlastnost ovládacího prvku, který má být svázána s konkrétní pole v databázi. Když uživatel upravuje data v této vázané vlastnosti, upozorní ovládacího prvku databáze a požadavky aktualizovat pole záznamu. Databáze poté oznámí kontrolu nad úspěch nebo selhání žádosti.  
   
  Tento článek se zabývá řízení straně vaším úkolem. Implementace vazby dat interakce s databází má na starosti kontejneru ovládacího prvku. Jak spravovat interakce databáze v vašeho kontejneru je nad rámec této dokumentace. Jak připravit pro datovou vazbu ovládacího prvku je vysvětleno v zbývající části tohoto článku.  
   
- ![Koncepční diagram dat & č. 45; připojeného ovládacího prvku](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Koncepční diagram dat.&#45;vázaný ovládací prvek](../mfc/media/vc374v1.gif "vc374v1")  
 Koncepční Diagram ovládacího prvku typu vázané na Data  
   
  `COleControl` Třída poskytuje dva členské funkce, které datové vazby jednoduchý proces pro implementaci. První funkce [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), slouží k vyžádání oprávnění ke změně hodnoty vlastnosti. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druhý funkce je volána po hodnotu vlastnosti se úspěšně změnila.  
@@ -51,7 +46,7 @@ Koncepční Diagram ovládacího prvku typu vázané na Data
   
 -   [Vytváření vazbu Get/Set – metoda](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Vytváření vazbu uložených vlastností  
+##  <a name="vchowcreatingbindablestockproperty"></a> Vytváření vazbu uložených vlastností  
  Je možné vytvořit uložených vlastností vázané na data, i když je pravděpodobnější, že budete chtít [vazbu get/set – metoda](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Koncepční Diagram ovládacího prvku typu vázané na Data
   
  Teď můžete sestavit projekt, který bude zaregistrovat ovládací prvek. Při vložení ovládacího prvku v dialogovém okně, **datové pole** a **zdroj dat** vlastnosti bude byly přidány a teď si můžete vybrat zdroj dat a pole pro zobrazení v ovládacím prvku.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Vytváření vazbu Get/Set – metoda  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Vytváření vazbu Get/Set – metoda  
  Kromě vázané na data Metoda get nebo nastavení, můžete také vytvořit [vazbu uložených vlastností](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

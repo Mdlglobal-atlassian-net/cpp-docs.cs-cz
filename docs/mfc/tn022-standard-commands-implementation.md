@@ -1,13 +1,10 @@
 ---
-title: "TN022: Standardní příkazy implementace | Microsoft Docs"
-ms.custom: 
+title: 'TN022: Standardní příkazy implementace | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementace standardních příkazů
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnFileNew`implementuje tento příkaz odlišně v závislosti na počtu šablony dokumentů v aplikaci. Pokud existuje pouze jeden `CDocTemplate`, `CWinApp::OnFileNew` vytvoří nový dokument typu, jakož i správnou třídu rámec a zobrazení.  
+     `CWinApp::OnFileNew` implementuje tento příkaz odlišně v závislosti na počtu šablony dokumentů v aplikaci. Pokud existuje pouze jeden `CDocTemplate`, `CWinApp::OnFileNew` vytvoří nový dokument typu, jakož i správnou třídu rámec a zobrazení.  
   
      Pokud je více než jedna `CDocTemplate`, `CWinApp::OnFileNew` vyzve uživatele, se dialogové okno (**AFX_IDD_NEWTYPEDLG**) aby vyberte typů dokumentů, které se mají použít. Vybraný `CDocTemplate` se používá k vytvoření dokumentu.  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnFileOpen`je velmi jednoduchá implementace volání **CWinApp::DoPromptFileName** následuje `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k otevření souboru. `CWinApp` Implementace rutiny **DoPromptFileName** přináší standardní FileOpen – dialogové okno a doplní s příponami souborů získali z aktuální šablony dokumentů.  
+     `CWinApp::OnFileOpen` je velmi jednoduchá implementace volání **CWinApp::DoPromptFileName** následuje `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k otevření souboru. `CWinApp` Implementace rutiny **DoPromptFileName** přináší standardní FileOpen – dialogové okno a doplní s příponami souborů získali z aktuální šablony dokumentů.  
   
      Jeden běžné přizpůsobení `ID_FILE_OPEN` je FileOpen – dialogové okno Upravit a přidat další filtry souborů. Doporučeným způsobem, jak přizpůsobit toto je výchozí implementace nahraďte vlastní FileOpen – dialogové okno a volání `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k dokumentu. Není nutné volat základní třídy.  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      Tento příkaz vyvolá standardní instalaci tiskových dialog, který umožňuje uživateli upravit tiskárny a tisku nastavení pro alespoň tento dokument nebo maximálně všechny dokumenty v této aplikaci. Chcete-li změnit výchozí nastavení tiskárny pro celý systém musí používat ovládací panely.  
   
-     `CWinApp::OnFilePrintSetup`je velmi jednoduchá implementace vytváření `CPrintDialog` objekt a volání **CWinApp::DoPrintDialog** implementace funkce. Nastaví tato výchozí nastavení tiskárny aplikace.  
+     `CWinApp::OnFilePrintSetup` je velmi jednoduchá implementace vytváření `CPrintDialog` objekt a volání **CWinApp::DoPrintDialog** implementace funkce. Nastaví tato výchozí nastavení tiskárny aplikace.  
   
      Běžné potřebu přizpůsobení tento příkaz je umožnit pro každý dokument nastavení tiskárny, které by měly být uložené s dokumentem, když se uloží. Uděláte to tak měli byste přidat obslužnou rutinu map zpráv ve vaší **CDocument** třídu, která vytvoří `CPrintDialog` objektu, inicializuje s atributy odpovídající tiskárny (obvykle **hDevMode** a **hDevNames je**), volání **CPrintDialog::DoModal,** a uložte nastavení změněné tiskárny. Pro implementaci robustní, by měla vypadat v provádění **CWinApp::DoPrintDialog** pro zjišťování chyb a **CWinApp::UpdatePrinterSelection** pro práci s rozumný výchozí hodnoty a sledování změn systémové tiskárny.  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz pomocí `CEdit::Clear`. Příkaz vypnutá, pokud není aktuální výběr.  
+     `CEditView` poskytuje implementaci pro tento příkaz pomocí `CEdit::Clear`. Příkaz vypnutá, pokud není aktuální výběr.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz, který zkopíruje aktuálně vybraný text do schránky jako CF_TEXT pomocí `CEdit::Copy`. Příkaz vypnutá, pokud není aktuální výběr.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který zkopíruje aktuálně vybraný text do schránky jako CF_TEXT pomocí `CEdit::Copy`. Příkaz vypnutá, pokud není aktuální výběr.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz, který ořízne aktuálně vybraný text do schránky jako CF_TEXT pomocí `CEdit::Cut`. Příkaz vypnutá, pokud není aktuální výběr.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který ořízne aktuálně vybraný text do schránky jako CF_TEXT pomocí `CEdit::Cut`. Příkaz vypnutá, pokud není aktuální výběr.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace **OnEditFindReplace** můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu pro výzvy pro uživatele.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace **OnEditFindReplace** můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu pro výzvy pro uživatele.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz, který zkopíruje aktuální data ze schránky, nahraďte vybraný text použití `CEdit::Paste`. Příkaz vypnutá, pokud neexistuje žádné **CF_TEXT** do schránky.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který zkopíruje aktuální data ze schránky, nahraďte vybraný text použití `CEdit::Paste`. Příkaz vypnutá, pokud neexistuje žádné **CF_TEXT** do schránky.  
   
      **COleClientDoc** právě poskytuje obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz. Pokud schránka neobsahuje li položky OLE nebo objekt, bude příkaz zakázána. Jste zodpovědní za zápis obslužné rutiny pro příkaz skutečné provedete skutečné vkládání. Pokud aplikaci OLE můžete také vložit dalších formátů, měli byste jim poskytnout vlastní aktualizace uživatelského rozhraní obslužná rutina příkazu v zobrazení nebo dokumentu (tedy někde před **COleClientDoc** v cílové směrování příkazů).  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `COleDocument`právě poskytuje obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz. Pokud schránka neobsahuje korelovat OLE položky nebo objekt, bude příkaz zakázána. Jste zodpovědní za zápis obslužné rutiny pro příkaz skutečné provedete skutečné vkládání. Pokud aplikaci OLE můžete také vložit dalších formátů, měli byste jim poskytnout vlastní aktualizace uživatelského rozhraní obslužná rutina příkazu v zobrazení nebo dokumentu (tedy někde před `COleDocument` v cílové směrování příkazů).  
+     `COleDocument` právě poskytuje obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz. Pokud schránka neobsahuje korelovat OLE položky nebo objekt, bude příkaz zakázána. Jste zodpovědní za zápis obslužné rutiny pro příkaz skutečné provedete skutečné vkládání. Pokud aplikaci OLE můžete také vložit dalších formátů, měli byste jim poskytnout vlastní aktualizace uživatelského rozhraní obslužná rutina příkazu v zobrazení nebo dokumentu (tedy někde před `COleDocument` v cílové směrování příkazů).  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci tohoto příkazu se zopakovat poslední akci najít. Proměnné privátní implementace poslední hledání se používají. Příkaz vypnutá, pokud nelze k pokusu o hledání.  
+     `CEditView` poskytuje implementaci tohoto příkazu se zopakovat poslední akci najít. Proměnné privátní implementace poslední hledání se používají. Příkaz vypnutá, pokud nelze k pokusu o hledání.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace **OnEditFindReplace** můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu, který zobrazí výzvu.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace **OnEditFindReplace** můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu, který zobrazí výzvu.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci pro tento příkaz, který vybere veškerý text v dokumentu. Příkaz vypnutá, pokud neexistuje žádný text k výběru.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který vybere veškerý text v dokumentu. Příkaz vypnutá, pokud neexistuje žádný text k výběru.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView`poskytuje implementaci tohoto příkazu, pomocí `CEdit::Undo`. Příkaz vypnutá, pokud `CEdit::CanUndo` vrátí hodnotu FALSE.  
+     `CEditView` poskytuje implementaci tohoto příkazu, pomocí `CEdit::Undo`. Příkaz vypnutá, pokud `CEdit::CanUndo` vrátí hodnotu FALSE.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_window_arrange – Uspořádá ikony v dolní části okna MDI  
   
-     `CMDIFrameWnd`implementuje tento standardní příkaz MDI v implementaci pomocné funkci **OnMDIWindowCmd**. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
+     `CMDIFrameWnd` implementuje tento standardní příkaz MDI v implementaci pomocné funkci **OnMDIWindowCmd**. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
   
      Jako většina příkazy nabídky okna MDI příkaz vypnutá, pokud neexistuje žádné aktivní podřízeného okna MDI.  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_window_cascade – Cascades windows, aby se překrývala.  
   
-     `CMDIFrameWnd`implementuje tento standardní příkaz MDI v implementaci pomocné funkci **OnMDIWindowCmd**. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
+     `CMDIFrameWnd` implementuje tento standardní příkaz MDI v implementaci pomocné funkci **OnMDIWindowCmd**. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
   
      Jako většina příkazy nabídky okna MDI příkaz vypnutá, pokud neexistuje žádné aktivní podřízeného okna MDI.  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_window_split – klávesnice rozhraní rozdělovače.  
   
-     `CView`Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace `CSplitterWnd::DoKeyboardSplit`. To umístí rozdělovače v režimu, který vám umožní uživatelům klávesnice rozdělení nebo zrušit rozdělení rozděleném okně.  
+     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace `CSplitterWnd::DoKeyboardSplit`. To umístí rozdělovače v režimu, který vám umožní uživatelům klávesnice rozdělení nebo zrušit rozdělení rozděleném okně.  
   
      Tento příkaz je zakázán, pokud není v rozdělovač zobrazení.  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnHelpIndex`Tento příkaz zpracovává trivially voláním `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpIndex` Tento příkaz zpracovává trivially voláním `CWinApp::WinHelp`.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnHelpUsing`Tento příkaz zpracovává trivially voláním `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpUsing` Tento příkaz zpracovává trivially voláním `CWinApp::WinHelp`.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnContextHelp`nastavení režimu kurzor nápovědy, zadáním modální smyčky a čekání uživateli vybrat a údržbu za účelem získání nápovědy zpracovává tento příkaz. Naleznete [Technická poznámka 28](../mfc/tn028-context-sensitive-help-support.md) další podrobnosti o implementace MFC pomoct.  
+     `CWinApp::OnContextHelp` nastavení režimu kurzor nápovědy, zadáním modální smyčky a čekání uživateli vybrat a údržbu za účelem získání nápovědy zpracovává tento příkaz. Naleznete [Technická poznámka 28](../mfc/tn028-context-sensitive-help-support.md) další podrobnosti o implementace MFC pomoct.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnHelp`Tento příkaz zpracovává získáním kontext správnou nápovědu pro aktuální kontext aplikace. Zpracovává jednoduché F1 – Nápověda, nápovědy na okna zpráv a tak dále. Naleznete [Technická poznámka 28](../mfc/tn028-context-sensitive-help-support.md) pro další podrobnosti o knihovny MFC pomoct implementace.  
+     `CWinApp::OnHelp` Tento příkaz zpracovává získáním kontext správnou nápovědu pro aktuální kontext aplikace. Zpracovává jednoduché F1 – Nápověda, nápovědy na okna zpráv a tak dále. Naleznete [Technická poznámka 28](../mfc/tn028-context-sensitive-help-support.md) pro další podrobnosti o knihovny MFC pomoct implementace.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_next_pane – přejde na další podokno  
   
-     `CView`Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace **CSplitterWnd::OnNextPaneCmd**. Tím se posunou aktivní zobrazení do dalšího podokna v rozdělovače.  
+     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace **CSplitterWnd::OnNextPaneCmd**. Tím se posunou aktivní zobrazení do dalšího podokna v rozdělovače.  
   
      Tento příkaz je zakázán, pokud toto zobrazení není rozdělovač nebo je k dispozici žádné další podokno přejít na.  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_prev_pane – přejde na předchozí podokno  
   
-     `CView`Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace **CSplitterWnd::OnNextPaneCmd**. Tím se posunou aktivní zobrazení v rozdělovače do předchozího podokna.  
+     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace **CSplitterWnd::OnNextPaneCmd**. Tím se posunou aktivní zobrazení v rozdělovače do předchozího podokna.  
   
      Tento příkaz je zakázán, pokud toto zobrazení není rozdělovač nebo je k dispozici žádné předchozí podokno přejít na.  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_ole_edit_links – upraví OLE odkazy  
   
-     `COleDocument`Tento příkaz zpracovává pomocí zadané MFC implementace standardní dialog odkazy OLE. Implementace toto dialogové okno, které je přístupné přes `COleLinksDialog` třídy. Pokud aktuální dokument neobsahuje žádné odkazy, příkaz je zakázané.  
+     `COleDocument` Tento příkaz zpracovává pomocí zadané MFC implementace standardní dialog odkazy OLE. Implementace toto dialogové okno, které je přístupné přes `COleLinksDialog` třídy. Pokud aktuální dokument neobsahuje žádné odkazy, příkaz je zakázané.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
 -   ID_OLE_VERB_FIRST –... Poslední rozsah ID pro příkazy OLE  
   
-     `COleDocument`používá tento rozsah ID příkazu pro příkazy nepodporuje aktuálně vybrané položky nebo objekt OLE. Toto musí být rozsahu vzhledem k tomu, že daný typ položky nebo objektu OLE může podporovat nula nebo více vlastních příkazů. V nabídce aplikace, musí mít jednu položku nabídky s ID **id_ole_verb_first –**. Při spuštění programu v nabídce bude aktualizována popis příkaz příslušné nabídky (nebo místní nabídky s mnoha příkazů). Správu nabídce OLE se zpracovává souborem `AfxOleSetEditMenu`, done v obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz.  
+     `COleDocument` používá tento rozsah ID příkazu pro příkazy nepodporuje aktuálně vybrané položky nebo objekt OLE. Toto musí být rozsahu vzhledem k tomu, že daný typ položky nebo objektu OLE může podporovat nula nebo více vlastních příkazů. V nabídce aplikace, musí mít jednu položku nabídky s ID **id_ole_verb_first –**. Při spuštění programu v nabídce bude aktualizována popis příkaz příslušné nabídky (nebo místní nabídky s mnoha příkazů). Správu nabídce OLE se zpracovává souborem `AfxOleSetEditMenu`, done v obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz.  
   
      Neexistují žádné explicitní příkaz obslužné rutiny pro zpracování každé ID příkazu, který v tomto rozsahu. **COleDocument::OnCmdMsg** přepsána depeše všechny identifikátory příkazů v tomto rozsahu, je převádět na nule příkaz čísla a server pro tento příkaz spusťte (pomocí `COleClientItem::DoVerb`).  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Id_view_toolbar – přepíná panelu nástrojů zapnout a vypnout  
   
-     `CFrameWnd`zpracuje tento příkaz a aktualizace obslužná rutina uživatelského rozhraní pro přepnutí viditelné stavu panelu nástrojů. Panelu nástrojů musí být podřízeného okna rámce s ID podřízené okno `AFX_IDW_TOOLBAR`. Obslužná rutina ve skutečnosti přepíná viditelnost panelu nástrojů okna. `CFrameWnd::RecalcLayout`slouží k ho překreslit okno rámečku panelu nástrojů v jeho nového stavu. Aktualizace obslužná rutina uživatelského rozhraní kontroluje položky nabídky, pokud je zobrazen panel nástrojů.  
+     `CFrameWnd` zpracuje tento příkaz a aktualizace obslužná rutina uživatelského rozhraní pro přepnutí viditelné stavu panelu nástrojů. Panelu nástrojů musí být podřízeného okna rámce s ID podřízené okno `AFX_IDW_TOOLBAR`. Obslužná rutina ve skutečnosti přepíná viditelnost panelu nástrojů okna. `CFrameWnd::RecalcLayout` slouží k ho překreslit okno rámečku panelu nástrojů v jeho nového stavu. Aktualizace obslužná rutina uživatelského rozhraní kontroluje položky nabídky, pokud je zobrazen panel nástrojů.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje. Pokud chcete přidat další panely nástrojů, budete chtít klonovat a úpravám obslužná rutina příkazu a aktualizace obslužná rutina uživatelského rozhraní pro tento příkaz.  
   

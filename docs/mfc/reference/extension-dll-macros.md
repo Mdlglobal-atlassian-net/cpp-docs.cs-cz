@@ -1,29 +1,24 @@
 ---
-title: "Makra a funkce pro správu knihoven DLL | Microsoft Docs"
-ms.custom: 
+title: Makra a funkce pro správu knihoven DLL | Microsoft Docs
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 535045d715651d6393227457068a86f240c27dce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e79556bf6e3ae92f7a8d4975dbd30f199e2ca8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra a funkce pro správu knihoven DLL
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxTermExtensionModule]()#afxtermextensionmodule)|Umožňuje MFC čištění rozšíření MFC DLL při každém odpojení procesu z knihovny DLL.|
 
 
-## <a name="afx_ext_class"></a>AFX_EXT_CLASS
+## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 [MFC – rozšiřující knihovny DLL](../../build/extension-dlls.md) použijte makro **AFX_EXT_CLASS** export tříd, spustitelné soubory, které odkazují MFC – rozšiřující knihovny DLL pomocí makro postup importu tříd.  
    
 ### <a name="remarks"></a>Poznámky  
@@ -58,9 +53,9 @@ class AFX_EXT_CLASS CMyClass : public CDocument
  Další informace najdete v tématu [Export a Import pomocí AFX_EXT_CLASS](../../build/exporting-and-importing-using-afx-ext-class.md).  
    
 ### <a name="requirements"></a>Požadavky  
- Záhlaví: **afxv_**dll.h  
+ Záhlaví: **afxv_** dll.h  
    
-## <a name="afx_manage_state"></a>AFX_MANAGE_STATE –
+## <a name="afx_manage_state"></a>  AFX_MANAGE_STATE –
 Volání této makro k ochraně exportované funkce v knihovně DLL.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -89,7 +84,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 ### <a name="see-also"></a>Viz také  
  [Afxgetstaticmodulestate –](#afxgetstaticmodulestate)
 
-## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/>AfxOleInitModule –
+## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule –
 Podpora OLE z regulární knihovny MFC DLL dynamicky propojené s knihovnou MFC volání této funkce ve vašem regulární MFC DLL `CWinApp::InitInstance` funkce inicializace MFC OLE knihovny DLL.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -98,7 +93,7 @@ void AFXAPI AfxOleInitModule( );
 ```  
    
 ### <a name="remarks"></a>Poznámky  
- Knihovny MFC OLE DLL je knihovnu DLL; v pořadí pro knihovnu DLL do **CDynLinkLibrary** řetězci, musíte vytvořit **CDynLinkLibrary** objektu v kontextu každý modul, který bude používat ho. `AfxOleInitModule`vytvoří **CDynLinkLibrary** objektu v kontextu vaší regulární MFC DLL tak, aby získá přes drátové sítě do **CDynLinkLibrary** objektu řetězu běžné knihovny MFC DLL.  
+ Knihovny MFC OLE DLL je knihovnu DLL; v pořadí pro knihovnu DLL do **CDynLinkLibrary** řetězci, musíte vytvořit **CDynLinkLibrary** objektu v kontextu každý modul, který bude používat ho. `AfxOleInitModule` vytvoří **CDynLinkLibrary** objektu v kontextu vaší regulární MFC DLL tak, aby získá přes drátové sítě do **CDynLinkLibrary** objektu řetězu běžné knihovny MFC DLL.  
   
  Pokud vytváříte ovládacího prvku OLE a používáte `COleControlModule`, by neměl volání **AfxOleInitModule –** protože `InitInstance` – členská funkce pro `COleControlModule` volání `AfxOleInitModule`.  
    
@@ -109,7 +104,7 @@ void AFXAPI AfxOleInitModule( );
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [AfxMessageBox –](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
-## <a name="afxnetinitmodule"></a>Afxnetinitmodule –
+## <a name="afxnetinitmodule"></a>  Afxnetinitmodule –
 Pro MFC sokety z regulární knihovny MFC DLL dynamicky propojené s knihovnou MFC, přidejte volání této funkce ve vašem regulární MFC DLL **CWinApp::InitInstance** funkce inicializace MFC DLL sokety.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -118,7 +113,7 @@ void AFXAPI AfxNetInitModule( );
 ```  
    
 ### <a name="remarks"></a>Poznámky  
- MFC Sockets DLL je knihovnu DLL; v pořadí pro knihovnu DLL do **CDynLinkLibrary** řetězci, musíte vytvořit **CDynLinkLibrary** objektu v kontextu každý modul, který bude používat ho. `AfxNetInitModule`vytvoří **CDynLinkLibrary** objektu v kontextu vaší regulární MFC DLL tak, aby získá přes drátové sítě do **CDynLinkLibrary** objektu řetězu běžné knihovny MFC DLL.  
+ MFC Sockets DLL je knihovnu DLL; v pořadí pro knihovnu DLL do **CDynLinkLibrary** řetězci, musíte vytvořit **CDynLinkLibrary** objektu v kontextu každý modul, který bude používat ho. `AfxNetInitModule` vytvoří **CDynLinkLibrary** objektu v kontextu vaší regulární MFC DLL tak, aby získá přes drátové sítě do **CDynLinkLibrary** objektu řetězu běžné knihovny MFC DLL.  
    
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** < afxdll_.h >  
@@ -127,7 +122,7 @@ void AFXAPI AfxNetInitModule( );
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [AfxMessageBox –](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
-## <a name="afxgetambientactctx"></a>Afxgetambientactctx –
+## <a name="afxgetambientactctx"></a> Afxgetambientactctx –
 Pomocí této funkce můžete získat aktuální stav příznak stavu modulu, který má vliv na chování WinSxS MFC.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -154,7 +149,7 @@ BOOL AFXAPI AfxGetAmbientActCtx();
  [Správa údajů o stavu modulů knihovny MFC](../managing-the-state-data-of-mfc-modules.md)   
  [Afxsetambientactctx –](#setambientactctx)
  
-## <a name="afxgetstaticmodulestate"></a>Afxgetstaticmodulestate –
+## <a name="afxgetstaticmodulestate"></a> Afxgetstaticmodulestate –
 Volání této funkce pro nastavení stavu modulu před inicializací nebo po vyčištění obnovit předchozí stav modulu.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -183,7 +178,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
  **Záhlaví:** afxstat_.h  
    
 
-## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule –
+## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule –
 Volání této funkce v MFC rozšiřující knihovny DLL na `DllMain` inicializovat knihovnu DLL.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -221,7 +216,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 ```
   
- `AfxInitExtensionModule`Vytvoří kopii knihovnu DLL **HMODULE** a zachytí knihovnu DLL modulu runtime – třídy (`CRuntimeClass` struktury) i jeho objekt Factory (`COleObjectFactory` objekty) pro použití novější při **CDynLinkLibrary**je vytvořen objekt.    
+ `AfxInitExtensionModule` Vytvoří kopii knihovnu DLL **HMODULE** a zachytí knihovnu DLL modulu runtime – třídy (`CRuntimeClass` struktury) i jeho objekt Factory (`COleObjectFactory` objekty) pro použití novější při **CDynLinkLibrary**je vytvořen objekt.    
  MFC – rozšiřující knihovny DLL je potřeba udělat dvě věci v jejich `DllMain` funkce:    
 -   Volání [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) a zkontrolujte návratovou hodnotu.   
 -   Vytvoření **CDynLinkLibrary** objektu, pokud bude export knihovny DLL [CRuntimeClass struktura](cruntimeclass-structure.md) objekty nebo má svou vlastní vlastní prostředky.    
@@ -234,7 +229,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
  [Makra a globální prvky](mfc-macros-and-globals.md)   
  [AfxTermExtensionModule –](#afxtermextensionmodule)
 
- ## <a name="afxsetambientactctx"></a>Afxsetambientactctx –
+ ## <a name="afxsetambientactctx"></a>  Afxsetambientactctx –
 Pomocí této funkce můžete nastavit příznak stavu modulu, které ovlivňují chování WinSxS MFC.  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -268,7 +263,7 @@ BOOL CMFCListViewApp::InitInstance()
  [AFX_MANAGE_STATE –](#afx_manage_state)   
  [Správa údajů o stavu modulů knihovny MFC](../managing-the-state-data-of-mfc-modules.md) 
 
-## <a name="afxtermextensionmodule"></a>AfxTermExtensionModule –
+## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule –
 
 Volání této funkce umožníte MFC čištění rozšíření MFC DLL při každém odpojení procesu z knihovny DLL (který se stane, když proces bude ukončen, nebo když je na základě těchto uvolněna z knihovny DLL `AfxFreeLibrary` volání).  
    
@@ -284,7 +279,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
  Pokud **TRUE**, vyčistit všechny moduly knihoven DLL rozšíření MFC. Čištění, jinak hodnota aktuální modulu DLL.  
    
 ### <a name="remarks"></a>Poznámky  
- `AfxTermExtensionModule`Odstraní všechny místní úložiště připojené k modulu a odeberte všechny položky z mezipaměti mapy zpráv. Příklad:  
+ `AfxTermExtensionModule` Odstraní všechny místní úložiště připojené k modulu a odeberte všechny položky z mezipaměti mapy zpráv. Příklad:  
   
 ```cpp
 static AFX_EXTENSION_MODULE NVC_MFC_DLLDLL = { NULL, NULL };

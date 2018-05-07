@@ -1,13 +1,10 @@
 ---
-title: "Zpracování výjimek | Microsoft Docs"
-ms.custom: 
+title: Zpracování výjimek | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 Když je program spuštěn, může dojít, počet nestandardní podmínky a chyby nazývají "výjimky". Ty mohou obsahovat vyčerpání paměti, chyb přidělení prostředků a nepodařilo se najít soubory.  
@@ -101,7 +96,7 @@ Když je program spuštěn, může dojít, počet nestandardní podmínky a chyb
 |-|-|  
 |[Afxabort –](#afxabort)|Volá se ukončit aplikaci po závažné chybě dochází.|  
   
-##  <a name="try"></a>ZKUSTE  
+##  <a name="try"></a>  ZKUSTE  
  Nastaví **zkuste** bloku.  
   
 ```   
@@ -119,7 +114,7 @@ TRY
 ### <a name="requirements"></a>Požadavky
 Záhlaví: afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  Definuje blok kódu, který zachytí první typ výjimky vyvolány v předchozím **zkuste** bloku.  
   
 ```   
@@ -149,7 +144,7 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL –  
+##  <a name="catch_all"></a>  CATCH_ALL –  
  Definuje blok kódu, který zachytí všechny typy výjimka vyvolána v předchozím **zkuste** bloku.  
   
 ```   
@@ -174,7 +169,7 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH –  
+##  <a name="and_catch"></a>  AND_CATCH –  
  Definuje blok kódu pro zachytávání typy další výjimka vyvolána v předchozích **zkuste** bloku.  
   
 ```   
@@ -191,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>Poznámky  
  Použití **CATCH** makro k zachycení jeden typ výjimky, pak se `AND_CATCH` makro k zachycení každý další typ. End **zkuste** blokovat s `END_CATCH` makro.  
   
- Kód zpracování výjimek můžete objekt výjimky, zjistěte, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. Volání `THROW_LAST` makro v rámci `AND_CATCH` zablokujte shift zpracování do dalšího rámečku vnější výjimka. `AND_CATCH`označuje konec předchozím **CATCH** nebo `AND_CATCH` bloku.  
+ Kód zpracování výjimek můžete objekt výjimky, zjistěte, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. Volání `THROW_LAST` makro v rámci `AND_CATCH` zablokujte shift zpracování do dalšího rámečku vnější výjimka. `AND_CATCH` označuje konec předchozím **CATCH** nebo `AND_CATCH` bloku.  
   
 > [!NOTE]
 >  `AND_CATCH` Bloku je definován jako obor C++ (vymezeny hranatými složené závorky). Pokud je deklarovat proměnné v tomto rozsahu, mějte na paměti, že jsou přístupné pouze v rámci tohoto oboru. To platí také pro *exception_object_pointer_name* proměnné.  
@@ -201,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL –  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL –  
  Definuje blok kódu pro zachytávání typy další výjimka vyvolána v předchozích **zkuste** bloku.  
   
 ```   
@@ -215,7 +210,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>Poznámky  
  Použití **CATCH** makro k zachycení jeden typ výjimky, pak se `AND_CATCH_ALL` makro k zachycení všech ostatních dalších typů. Pokud používáte `AND_CATCH_ALL`, end **zkuste** blokovat s `END_CATCH_ALL` makro.  
   
- Kód zpracování výjimek můžete objekt výjimky, zjistěte, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. Volání `THROW_LAST` makro v rámci `AND_CATCH_ALL` zablokujte shift zpracování do dalšího rámečku vnější výjimka. `AND_CATCH_ALL`označuje konec předchozím **CATCH** nebo `AND_CATCH_ALL` bloku.  
+ Kód zpracování výjimek můžete objekt výjimky, zjistěte, pokud je to vhodné, chcete-li získat další informace o konkrétní příčina výjimky. Volání `THROW_LAST` makro v rámci `AND_CATCH_ALL` zablokujte shift zpracování do dalšího rámečku vnější výjimka. `AND_CATCH_ALL` označuje konec předchozím **CATCH** nebo `AND_CATCH_ALL` bloku.  
   
 > [!NOTE]
 >  `AND_CATCH_ALL` Bloku je definován jako obor C++ (vymezeny hranatými závorkami). Pokud je deklarovat proměnné v tomto rozsahu, mějte na paměti, že jsou přístupné pouze v rámci tohoto oboru.  
@@ -223,7 +218,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH –  
+##  <a name="end_catch"></a>  END_CATCH –  
  Označuje konec posledního **CATCH** nebo `AND_CATCH` bloku.  
   
 ```   
@@ -236,7 +231,7 @@ END_CATCH
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL –  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL –  
  Označuje konec posledního `CATCH_ALL` nebo `AND_CATCH_ALL` bloku.  
   
 ```   
@@ -246,7 +241,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="throw"></a>THROW (MFC)  
+##  <a name="throw"></a>  THROW (MFC)  
  Vyvolá zadanou výjimkou.  
   
 ```   
@@ -265,7 +260,7 @@ THROW(exception_object_pointer)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST –  
+##  <a name="throw_last"></a>  THROW_LAST –  
  Vyvolá výjimku zpět na další vnější **CATCH** bloku.  
   
 ```   
@@ -283,7 +278,7 @@ THROW_LAST()
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>Afxthrowarchiveexception –  
+##  <a name="afxthrowarchiveexception"></a>  Afxthrowarchiveexception –  
  Vyvolá výjimku archivu.  
   
 ```   
@@ -300,7 +295,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrowfileexception"></a>Afxthrowfileexception –  
+##  <a name="afxthrowfileexception"></a>  Afxthrowfileexception –  
  Vyvolá výjimku souborů.  
   
 ```   
@@ -326,7 +321,7 @@ void AfxThrowFileException(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 Vyvolá výjimku neplatný argument.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -346,7 +341,7 @@ void AfxThrowInvalidArgException( );
  [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>Afxthrowmemoryexception –  
+##  <a name="afxthrowmemoryexception"></a>  Afxthrowmemoryexception –  
  Vyvolá výjimku paměti.  
   
 ```   
@@ -359,7 +354,7 @@ void AfxThrowMemoryException();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>Afxthrownotsupportedexception –  
+##  <a name="afxthrownotsupportedexception"></a>  Afxthrownotsupportedexception –  
  Vyvolá výjimku, která je výsledkem požadavku nepodporované funkce.  
   
 ```  
@@ -369,7 +364,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>Afxthrowresourceexception –  
+##  <a name="afxthrowresourceexception"></a>  Afxthrowresourceexception –  
  Vyvolá výjimku prostředků.  
   
 ```   
@@ -382,7 +377,7 @@ void  AfxThrowResourceException();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrowuserexception"></a>Afxthrowuserexception –  
+##  <a name="afxthrowuserexception"></a>  Afxthrowuserexception –  
  Vyvolá výjimku pro ukončení operace koncového uživatele.  
   
 ```   
@@ -395,7 +390,7 @@ void AfxThrowUserException();
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>Afxthrowoledispatchexception –  
+##  <a name="afxthrowoledispatchexception"></a>  Afxthrowoledispatchexception –  
  Pomocí této funkce můžete vyvolat výjimku v rámci funkce automatizace OLE.  
   
 ```   
@@ -432,7 +427,7 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxthrowoleexception"></a>Afxthrowoleexception –  
+##  <a name="afxthrowoleexception"></a>  Afxthrowoleexception –  
  Vytvoří objekt typu `COleException` a vyvolá výjimku.  
   
 ``` 
@@ -453,7 +448,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>Afxthrowdaoexception –  
+##  <a name="afxthrowdaoexception"></a>  Afxthrowdaoexception –  
  Volání této funkce můžete vyvolat výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z vlastního kódu.  
   
 ```   
@@ -477,7 +472,7 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>Afxthrowdbexception –  
+##  <a name="afxthrowdbexception"></a>  Afxthrowdbexception –  
  Volání této funkce můžete vyvolat výjimku typu `CDBException` z vlastního kódu.  
   
 ```  
@@ -505,7 +500,7 @@ void AfxThrowDBException(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afx.h  
   
-##  <a name="afxabort"></a>Afxabort –  
+##  <a name="afxabort"></a>  Afxabort –  
  Výchozí funkce ukončení poskytl MFC.  
   
 ```   
@@ -513,7 +508,7 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `AfxAbort`je volána interně členské funkce MFC po závažné chybě, jako je například nezachycenou výjimku, která nelze zpracovat. Můžete volat `AfxAbort` v případě výjimečných, když dojde k závažné chybě ze kterého nelze obnovit.  
+ `AfxAbort` je volána interně členské funkce MFC po závažné chybě, jako je například nezachycenou výjimku, která nelze zpracovat. Můžete volat `AfxAbort` v případě výjimečných, když dojde k závažné chybě ze kterého nelze obnovit.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CATCH](#catch).  

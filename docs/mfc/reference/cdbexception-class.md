@@ -1,12 +1,9 @@
 ---
-title: "Třída CDBException | Microsoft Docs"
-ms.custom: 
+title: Třída CDBException | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>CDBException – třída
 Představuje podmínku vzniklých databázové třídy.  
@@ -53,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Obsahuje řetězec popisující chyby z hlediska kódů chyb vrácených nástrojem ODBC.|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída obsahuje dva členy veřejná data, které můžete použít a zjistěte příčinu výjimky nebo zobrazíte textovou zprávu s popisem výjimky. `CDBException`objekty jsou vytvořená a vyvolané členské funkce tříd databáze.  
+ Třída obsahuje dva členy veřejná data, které můžete použít a zjistěte příčinu výjimky nebo zobrazíte textovou zprávu s popisem výjimky. `CDBException` objekty jsou vytvořená a vyvolané členské funkce tříd databáze.  
   
 > [!NOTE]
 >  Tato třída je jedním z třídy knihovny MFC připojení ODBC (Open Database). Pokud místo toho používáte novější třídy objektů DAO (Data Access), použijte [CDaoException](../../mfc/reference/cdaoexception-class.md) místo. Všechny názvy tříd DAO mít jako předponu "CDao". Další informace najdete v článku [přehled: programování databáze](../../data/data-access-programming-mfc-atl.md).  
@@ -74,7 +69,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  Obsahuje kód chyby rozhraní ODBC typu **RETCODE** vrácený aplikace rozhraní ODBC programovací rozhraní (API), funkce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  Kódy předponu SQL jsou definovány ODBC. Afx – předponu kódy jsou definovány v AFXDB. H v MFC\INCLUDE nalezen.  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  Obsahuje řetězec popisující chybu, která způsobila výjimku.  
   
 ### <a name="remarks"></a>Poznámky  
  Řetězec popisuje chybu v alfanumerické podmínky. Podrobnější informace a příklad najdete v článku **m_strStateNativeOrigin**.  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  Obsahuje řetězec popisující chybu, která způsobila výjimku.  
   
 ### <a name="remarks"></a>Poznámky  

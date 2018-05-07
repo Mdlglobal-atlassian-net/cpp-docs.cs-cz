@@ -1,30 +1,25 @@
 ---
-title: "Nastavení pro ovládací prvek panelu nástrojů | Microsoft Docs"
-ms.custom: 
+title: Nastavení pro ovládací prvek panelu nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - toolbar controls [MFC], about toolbar controls
 - CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1290e8769bfd072ac66c2e4d981eb6b4d641fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03ff905b76ba4a215f6993c1bb0002dd1f87e06b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="settings-for-the-toolbar-control"></a>Nastavení pro ovládací prvek panelu nástrojů
 Tlačítka na panelu nástrojů můžete zobrazit rastrový obrázek, řetězce nebo obojí. Ve výchozím nastavení je velikost bitové kopie hodnotu rozměry 16 podle 15 pixelů. Všechny tlačítka jsou stejné šířky, o výchozí 24 ve 22 pixelů. Panelu nástrojů výška je dáno výšku tlačítka a panelu nástrojů šířka je stejný jako šířku nadřazeného okna klientské oblasti také ve výchozím nastavení.  

@@ -1,12 +1,9 @@
 ---
-title: "Cprintinfo – struktura | Microsoft Docs"
-ms.custom: 
+title: Cprintinfo – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintInfo
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4943554e67d43b6dc1652a984a0e758af9d6951b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1da952e14158ab92d888a703aa8451c0ca39406
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo – struktura
 Obsahuje informace o náhledu nebo tiskové úlohy.  
@@ -69,17 +64,17 @@ struct CPrintInfo
 |[CPrintInfo::m_strPageDesc](#m_strpagedesc)|Obsahuje řetězec formátu pro číslo stránky zobrazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CPrintInfo`je struktura a nemá základní třídu.  
+ `CPrintInfo` je struktura a nemá základní třídu.  
   
  Rozhraní framework vytvoří objekt `CPrintInfo` pokaždé, když Print nebo příkaz Náhled je zvolen a zničí ji po dokončení příkazu.  
   
- `CPrintInfo`obsahuje informace o se tisková úloha jako celek, například rozsah stránek pro tisk a aktuální stav tiskové úlohy, jako je například právě tištěné stránky. Některé informace jsou uloženy v přidružené [CPrintDialog](../../mfc/reference/cprintdialog-class.md) objektu; tento objekt obsahuje hodnoty zadá uživatel v dialogovém okně tisku.  
+ `CPrintInfo` obsahuje informace o se tisková úloha jako celek, například rozsah stránek pro tisk a aktuální stav tiskové úlohy, jako je například právě tištěné stránky. Některé informace jsou uloženy v přidružené [CPrintDialog](../../mfc/reference/cprintdialog-class.md) objektu; tento objekt obsahuje hodnoty zadá uživatel v dialogovém okně tisku.  
   
  A `CPrintInfo` objekt je předán mezi rozhraní a zobrazení třídy během procesu tisku a slouží k výměně informací mezi nimi. Například rozhraní informuje třídy zobrazení kterou stránku dokumentu tisknout přiřazením hodnoty do `m_nCurPage` členem `CPrintInfo`; zobrazení třídy načte hodnotu a provede skutečný tisk na určenou stránku.  
   
  Dalším příkladem je případ nezná délka dokumentu dokud vytištění. V takovém případě testů třídy zobrazení pro konec dokumentu pokaždé, když tisknout. Když je dosaženo konce, nastaví třídu zobrazení `m_bContinuePrinting` členem `CPrintInfo` k **FALSE**; tento příkaz informuje rozhraní zastavit tiskové smyčky.  
   
- `CPrintInfo`Členské funkce používá `CView` uvedené v části "Viz také." Další informace o architektura pro tisk poskytované knihovny Microsoft Foundation Class najdete v tématu [okna s rámečkem](../../mfc/frame-windows.md) a [Document/View – architektura](../../mfc/document-view-architecture.md) a články [ Tisk](../../mfc/printing.md) a [tisk: vícestránkové dokumenty](../../mfc/multipage-documents.md).  
+ `CPrintInfo` Členské funkce používá `CView` uvedené v části "Viz také." Další informace o architektura pro tisk poskytované knihovny Microsoft Foundation Class najdete v tématu [okna s rámečkem](../../mfc/frame-windows.md) a [Document/View – architektura](../../mfc/document-view-architecture.md) a články [ Tisk](../../mfc/printing.md) a [tisk: vícestránkové dokumenty](../../mfc/multipage-documents.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CPrintInfo`  
@@ -87,7 +82,7 @@ struct CPrintInfo
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxext.h  
   
-##  <a name="getfrompage"></a>CPrintInfo::GetFromPage  
+##  <a name="getfrompage"></a>  CPrintInfo::GetFromPage  
  Volání této funkce načíst číslo první stránky k tisku.  
   
 ```  
@@ -102,7 +97,7 @@ UINT GetFromPage() const;
 ### <a name="remarks"></a>Poznámky  
  Toto je hodnota zadaná uživatelem v dialogovém okně tisku a uloží se do `CPrintDialog` objekt odkazuje `m_pPD` člen. Pokud uživatel nemá zadanou hodnotu, výchozí hodnota je na první stránku dokumentu.  
   
-##  <a name="getmaxpage"></a>CPrintInfo::GetMaxPage  
+##  <a name="getmaxpage"></a>  CPrintInfo::GetMaxPage  
  Volání této funkce načíst číslo poslední stránky z dokumentu.  
   
 ```  
@@ -117,7 +112,7 @@ UINT GetMaxPage() const;
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota je uložena v `CPrintDialog` objekt odkazuje `m_pPD` člen.  
   
-##  <a name="getminpage"></a>CPrintInfo::GetMinPage  
+##  <a name="getminpage"></a>  CPrintInfo::GetMinPage  
  Volání této funkce načíst číslo první stránky z dokumentu.  
   
 ```  
@@ -132,7 +127,7 @@ UINT GetMinPage() const;
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota je uložena v `CPrintDialog` objekt odkazuje `m_pPD` člen.  
   
-##  <a name="getoffsetpage"></a>CPrintInfo::GetOffsetPage  
+##  <a name="getoffsetpage"></a>  CPrintInfo::GetOffsetPage  
  Volání této funkce se při tisku více položek DocObject z klienta DocObject načíst posun.  
   
 ```  
@@ -147,7 +142,7 @@ UINT GetOffsetPage() const;
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota se odkazuje **m_nOffsetPage** člen. Na první stránku dokumentu bude mít číslované **m_nOffsetPage** hodnota + 1 při tisku jako DocObject s další aktivní dokumenty. **M_nOffsetPage** člen je platná pouze v případě **m_bDocObject** hodnota je **TRUE**.  
   
-##  <a name="gettopage"></a>CPrintInfo::GetToPage  
+##  <a name="gettopage"></a>  CPrintInfo::GetToPage  
  Volání této funkce načíst číslo poslední stránky k tisku.  
   
 ```  
@@ -162,13 +157,13 @@ UINT GetToPage() const;
 ### <a name="remarks"></a>Poznámky  
  Toto je hodnota zadaná uživatelem v dialogovém okně tisku a uloží se do `CPrintDialog` objekt odkazuje `m_pPD` člen. Pokud uživatel nemá zadanou hodnotu, výchozí hodnota je na poslední stránku dokumentu.  
   
-##  <a name="m_bcontinueprinting"></a>CPrintInfo::m_bContinuePrinting  
+##  <a name="m_bcontinueprinting"></a>  CPrintInfo::m_bContinuePrinting  
  Obsahuje příznak, který udává, zda rozhraní by měly pokračovat tiskové smyčky.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud byste stránkování čas tisku, můžete nastavit tento člen na **FALSE** v přepsání z `CView::OnPrepareDC` po bylo dosaženo konce dokumentu. Není nutné upravit tato proměnná, pokud jste zadali délka dokumentu na začátku pomocí tiskové úlohy `SetMaxPage` – členská funkce. `m_bContinuePrinting` Člen je veřejné proměnné typu **BOOL**.  
   
-##  <a name="m_bdirect"></a>CPrintInfo::m_bDirect  
+##  <a name="m_bdirect"></a>  CPrintInfo::m_bDirect  
  Rozhraní framework nastaví tento člen **TRUE** Pokud dialogové okno tisku bude možné obejít pro přímý tisk z; **FALSE** jinak.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -176,19 +171,19 @@ UINT GetToPage() const;
   
  Jste normálně neměnit tento člen, ale pokud změníte, změňte jej před volání [CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting) v přepsání z [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).  
   
-##  <a name="m_bdocobject"></a>CPrintInfo::m_bDocObject  
+##  <a name="m_bdocobject"></a>  CPrintInfo::m_bDocObject  
  Obsahuje příznak, který udává, zda je dokument tisku DocObject.  
   
 ### <a name="remarks"></a>Poznámky  
  Datové členy `m_dwFlags` a **m_nOffsetPage** jsou neplatné, pokud je tento příznak **TRUE**.  
   
-##  <a name="m_bpreview"></a>CPrintInfo::m_bPreview  
+##  <a name="m_bpreview"></a>  CPrintInfo::m_bPreview  
  Obsahuje příznak, který udává, zda je náhledu dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
  Toto nastavení podle rozhraní v závislosti na tom, který příkaz uživatel provést. Pro úlohu náhledu není zobrazí dialogové okno tisku. **M_bPreview** člen je veřejné proměnné typu **BOOL**.  
   
-##  <a name="m_dwflags"></a>CPrintInfo::m_dwFlags  
+##  <a name="m_dwflags"></a>  CPrintInfo::m_dwFlags  
  Obsahuje kombinaci příznaky určující DocObject tisk operace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -210,13 +205,13 @@ UINT GetToPage() const;
   
 - **PRINTFLAG_PRINTTOFILE**  
   
-##  <a name="m_lpuserdata"></a>CPrintInfo::m_lpUserData  
+##  <a name="m_lpuserdata"></a>  CPrintInfo::m_lpUserData  
  Obsahuje ukazatel na strukturu vytvořené uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete použít k ukládání dat specifické pro tisk, které nechcete ukládat ve třídě zobrazení. **M_lpUserData** člen je veřejné proměnné typu **LPVOID**.  
   
-##  <a name="m_ncurpage"></a>CPrintInfo::m_nCurPage  
+##  <a name="m_ncurpage"></a>  CPrintInfo::m_nCurPage  
  Obsahuje počet aktuální stránku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -224,40 +219,40 @@ UINT GetToPage() const;
   
  Při prvním vyvolání režim náhledu, rozhraní přečte hodnotu této vlastnosti k určení, které stránky dokumentu by měl zobrazit jejich náhled původně. Můžete nastavit hodnotu člen v přepsání z `CView::OnPreparePrinting` zachovat aktuální pozici uživatele v dokumentu, při zadávání režim náhledu. `m_nCurPage` Člen je veřejné proměnné typu **Celé_číslo**.  
   
-##  <a name="m_njobnumber"></a>CPrintInfo::m_nJobNumber  
+##  <a name="m_njobnumber"></a>  CPrintInfo::m_nJobNumber  
  Označuje číslo projektu přiřadila operační systém pro aktuální tiskové úlohy.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato hodnota může být **SP_ERROR** Pokud úloha nebyla dosud vytištěna (tj. Pokud `CPrintInfo` je nově vytvořený objekt a nebyl dosud použit k vytištění), nebo pokud došlo k chybě při spouštění úlohy.  
   
-##  <a name="m_nnumpreviewpages"></a>CPrintInfo::m_nNumPreviewPages  
+##  <a name="m_nnumpreviewpages"></a>  CPrintInfo::m_nNumPreviewPages  
  Obsahuje počet stránek zobrazených v režimu náhledu; může být buď 1 nebo 2.  
   
 ### <a name="remarks"></a>Poznámky  
  **M_nNumPreviewPages** člen je veřejné proměnné typu **Celé_číslo**.  
   
-##  <a name="m_noffsetpage"></a>CPrintInfo::m_nOffsetPage  
+##  <a name="m_noffsetpage"></a>  CPrintInfo::m_nOffsetPage  
  Obsahuje počet stránek před první stránka konkrétní DocObject v kombinované DocObject tiskové úlohy.  
   
-##  <a name="m_ppd"></a>CPrintInfo::m_pPD  
+##  <a name="m_ppd"></a>  CPrintInfo::m_pPD  
  Obsahuje odkazy `CPrintDialog` objekt použitý k zobrazení dialogového okna tisku pro tisková úloha.  
   
 ### <a name="remarks"></a>Poznámky  
  `m_pPD` Člen je deklarován jako ukazatel na veřejné proměnné `CPrintDialog`.  
   
-##  <a name="m_rectdraw"></a>CPrintInfo::m_rectDraw  
+##  <a name="m_rectdraw"></a>  CPrintInfo::m_rectDraw  
  Určuje oblasti použitelné vykreslení stránky v logické souřadnice.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete chtít podívejte se na to v přepsání z `CView::OnPrint`. Tento člen můžete použít ke sledování jaké oblasti zůstává použitelný po tisku záhlaví, zápatí a tak dále. **M_rectDraw** člen je veřejné proměnné typu `CRect`.  
   
-##  <a name="m_strpagedesc"></a>CPrintInfo::m_strPageDesc  
+##  <a name="m_strpagedesc"></a>  CPrintInfo::m_strPageDesc  
  Obsahuje řetězec formátu použitý k zobrazení číslo stránky během náhledu tisku; Tento řetězec se skládá z dvě dílčích řetězců, jeden pro zobrazení jednostránkové a jeden pro zobrazení stránky double, každý ukončena znakem '\n'.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní používá jako výchozí hodnota "Stránka %u\nPages % u-%u\n". Pokud chcete do jiného formátu pro číslo stránky, zadejte řetězec formátu v přepsání z `CView::OnPreparePrinting`. **M_strPageDesc** člen je veřejné proměnné typu `CString`.  
   
-##  <a name="setmaxpage"></a>CPrintInfo::SetMaxPage  
+##  <a name="setmaxpage"></a>  CPrintInfo::SetMaxPage  
  Volání této funkce můžete zadat číslo poslední stránky z dokumentu.  
   
 ```  
@@ -274,7 +269,7 @@ void SetMaxPage(UINT nMaxPage);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting).  
   
-##  <a name="setminpage"></a>CPrintInfo::SetMinPage  
+##  <a name="setminpage"></a>  CPrintInfo::SetMinPage  
  Volání této funkce můžete zadat číslo první stránky z dokumentu.  
   
 ```  

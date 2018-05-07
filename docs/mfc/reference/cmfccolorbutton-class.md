@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCColorButton | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCColorButton | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorButton
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49cec1c34af066d6f30cf70003252f28e2bb8dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton – třída
 `CMFCColorButton` a [CMFCColorBar třída](../../mfc/reference/cmfccolorbar-class.md) třídy se společně používají k implementaci ovládacího prvku pro výběr barev.  
@@ -145,14 +140,14 @@ class CMFCColorButton : public CMFCButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcolorbutton.h  
   
-##  <a name="cmfccolorbutton"></a>CMFCColorButton::CMFCColorButton  
+##  <a name="cmfccolorbutton"></a>  CMFCColorButton::CMFCColorButton  
  Vytvoří nový `CMFCColorButton` objektu.  
   
 ```  
 CMFCColorButton();
 ```  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCColorButton::EnableAutomaticButton  
  Povolit nebo zakázat tlačítko "automatické" v ovládacím prvku pro výběr barev a nastavte barvu automaticky (výchozí).  
   
 ```  
@@ -163,18 +158,18 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje text automatické tlačítka.  
   
- [v]`colorAutomatic`  
+ [v] `colorAutomatic`  
  Hodnota RGB, která určuje výchozí barvu automatické tlačítko.  
   
- [v]`bEnable`  
+ [v] `bEnable`  
  Určuje, zda je povoleno automatické tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enableotherbutton"></a>CMFCColorButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCColorButton::EnableOtherButton  
  Povolit nebo zakázat "ostatní" tlačítko, které se zobrazí pod regulární barva tlačítek.  
   
 ```  
@@ -185,19 +180,19 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje text, na tlačítko.  
   
- [v]`bAltColorDlg`  
+ [v] `bAltColorDlg`  
  Určuje, zda [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) otevřít dialogové okno nebo dialogové okno barvy systém když uživatel klikne na tlačítko.  
   
- [v]`bEnable`  
+ [v] `bEnable`  
  Určuje, zda je povoleno tlačítko "ostatní".  
   
 ### <a name="remarks"></a>Poznámky  
  Klikněte na tlačítko "ostatní" zobrazíte dialogové okno barvy. Pokud *bAltColorDlg* parametr `TRUE`, [CMFCColorDialog třída](../../mfc/reference/cmfccolordialog-class.md) se zobrazí; jinak se zobrazí dialogové okno barev systému.  
   
-##  <a name="getautomaticcolor"></a>CMFCColorButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>  CMFCColorButton::GetAutomaticColor  
  Načte aktuální barvu automaticky (výchozí).  
   
 ```  
@@ -210,7 +205,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>Poznámky  
  Aktuální automatické barva nastavena [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton) metoda.  
   
-##  <a name="getcolor"></a>CMFCColorButton::GetColor  
+##  <a name="getcolor"></a>  CMFCColorButton::GetColor  
  Načte aktuálně vybrané barvy.  
   
 ```  
@@ -222,7 +217,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isdrawxptheme"></a>CMFCColorButton::IsDrawXPTheme  
+##  <a name="isdrawxptheme"></a>  CMFCColorButton::IsDrawXPTheme  
  Označuje, zda aktuální barva tlačítko se zobrazí v vizuální styl systému Windows XP.  
   
 ```  
@@ -230,9 +225,9 @@ BOOL IsDrawXPTheme() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou podporovány vizuální styly a aktuální barva tlačítko se zobrazí v vizuální styl Windows XP. v opačném `FALSE`.  
+ `TRUE` Pokud jsou podporovány vizuální styly a aktuální barva tlačítko se zobrazí v vizuální styl Windows XP. v opačném `FALSE`.  
   
-##  <a name="m_benabledincustomizemode"></a>CMFCColorButton::m_bEnabledInCustomizeMode  
+##  <a name="m_benabledincustomizemode"></a>  CMFCColorButton::m_bEnabledInCustomizeMode  
  Barva tlačítko nastaví do režimu přizpůsobení.  
   
 ```  
@@ -242,7 +237,7 @@ BOOL m_bEnabledInCustomizeMode;
 ### <a name="remarks"></a>Poznámky  
  Pokud potřebujete přidat tlačítko barvy na stránku přizpůsobení dialog (nebo uživateli umožní vybrat jinou možnost Barva během přizpůsobování), povolte tlačítko nastavením `m_bEnabledInCustomizeMode` člena `TRUE`. Ve výchozím nastavení je tento člen nastavena na `FALSE`.  
   
-##  <a name="ondraw"></a>CMFCColorButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCColorButton::OnDraw  
  Voláno rámcem Vykreslit obrázek na tlačítko.  
   
 ```  
@@ -253,19 +248,19 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Body do kontextu zařízení, která se použije k vykreslení bitové kopie na tlačítko.  
   
- [v]`rect`  
+ [v] `rect`  
  Obdélníku, která bounds tlačítko.  
   
- [v]`uiState`  
+ [v] `uiState`  
  Určuje vizuální stav zobrazí tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem přizpůsobení proces vykreslování.  
   
-##  <a name="ondrawborder"></a>CMFCColorButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCColorButton::OnDrawBorder  
  Voláno rámcem zobrazíte ohraničení tlačítko.  
   
 ```  
@@ -276,19 +271,19 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Body do kontextu zařízení použít k vykreslení ohraničení.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Obdélníku v kontextu zařízení, která je zadána `pDC` parametr, který definuje hranice tlačítka, které se mají vykreslovat.  
   
- [v]`uiState`  
+ [v] `uiState`  
  Určuje vizuální stav zobrazí tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkci můžete přizpůsobit vzhled tlačítka Barva ohraničení.  
   
-##  <a name="ondrawfocusrect"></a>CMFCColorButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCColorButton::OnDrawFocusRect  
  Voláno rámcem zobrazíte rámečku fokusu, když má právě fokus, tlačítko.  
   
 ```  
@@ -298,16 +293,16 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Body použitý k vykreslení rámečku fokusu v kontextu zařízení.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Obdélníku v kontextu zařízení určeného `pDC` parametr, který definuje hranice tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem přizpůsobení vzhledu rámečku fokusu.  
   
-##  <a name="onshowcolorpopup"></a>CMFCColorButton::OnShowColorPopup  
+##  <a name="onshowcolorpopup"></a>  CMFCColorButton::OnShowColorPopup  
  Voláno před provedením pruhu barev v automaticky otevřeném okně se zobrazí.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void OnShowColorPopup();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="rebuildpalette"></a>CMFCColorButton::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorButton::RebuildPalette  
  Inicializuje `m_pPalette` chráněné zadaný palety nebo výchozí systémové palety – datový člen.  
   
 ```  
@@ -327,9 +322,9 @@ void RebuildPalette(CPalette* pPal);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pPal`|Ukazatel na logické palety nebo `NULL`. Pokud `NULL`, je použit výchozí systémové palety.|  
+|[v] `pPal`|Ukazatel na logické palety nebo `NULL`. Pokud `NULL`, je použit výchozí systémové palety.|  
   
-##  <a name="setcolor"></a>CMFCColorButton::SetColor  
+##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  Určuje barvu tlačítka.  
   
 ```  
@@ -337,12 +332,12 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnotu RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setcolorname"></a>CMFCColorButton::SetColorName  
+##  <a name="setcolorname"></a>  CMFCColorButton::SetColorName  
  Určuje název barvy.  
   
 ```  
@@ -352,16 +347,16 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnoty RGB barvy.  
   
- [v]`strName`  
+ [v] `strName`  
  Názvu barvy.  
   
 ### <a name="remarks"></a>Poznámky  
  Seznam názvů barva je globální na aplikaci. V důsledku toho tato metoda přenáší jeho parametry [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
   
-##  <a name="setcolumnsnumber"></a>CMFCColorButton::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCColorButton::SetColumnsNumber  
  Definuje počet sloupců, které se zobrazují v tabulce barev, které se zobrazí uživatelům během procesu výběru barva uživatele.  
   
 ```  
@@ -369,13 +364,13 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nColumns`  
+ [v] `nColumns`  
  Určuje počet sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
  Uživatel může vybrat barvu z pruhu barev místní nabídka, která zobrazuje tabulku předdefinované barvy. Tuto metodu použijte k definování počet sloupců v tabulce.  
   
-##  <a name="setdocumentcolors"></a>CMFCColorButton::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>  CMFCColorButton::SetDocumentColors  
  Určuje sadu barev a název sady pro. Se zobrazí sada barvy, použití [CMFCColorBar třída](../../mfc/reference/cmfccolorbar-class.md) objektu.  
   
 ```  
@@ -385,16 +380,16 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje popisek, který se má zobrazit sadou barvy dokumentu.  
   
- [v]`lstColors`  
+ [v] `lstColors`  
  Odkaz na seznam hodnoty RGB.  
   
 ### <a name="remarks"></a>Poznámky  
  A `CMFCColorButton` objekt udržuje seznam hodnoty RGB, které se přenáší do [CMFCColorBar třída](../../mfc/reference/cmfccolorbar-class.md) objektu. Když se zobrazí pruhu barev, tyto barvy se zobrazují v speciální části, jejichž popisek je zadána `lpszLabel` parametr.  
   
-##  <a name="setpalette"></a>CMFCColorButton::SetPalette  
+##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
  Určuje standardní barvy zobrazíte na pruhu barev v automaticky otevřeném okně.  
   
 ```  
@@ -402,12 +397,12 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pPalette`  
+ [v] `pPalette`  
  Ukazatel na paletu barev.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sizetocontent"></a>CMFCColorButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCColorButton::SizeToContent  
  Změní velikost ovládacího prvku tlačítko podle jeho textových a obrázkových.  
   
 ```  
@@ -415,7 +410,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bCalcOnly`  
+ [v] `bCalcOnly`  
  Pokud nenulové hodnoty, se vypočítává nové velikosti ovládacího prvku tlačítko však skutečná velikost se nezmění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -423,7 +418,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="updatecolor"></a>CMFCColorButton::UpdateColor  
+##  <a name="updatecolor"></a>  CMFCColorButton::UpdateColor  
  Voláno rámcem, když uživatel vybere barvu, která z pruhu barev, které se zobrazí, když uživatel klikne na tlačítko barvy.  
   
 ```  
@@ -431,7 +426,7 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Barva vybraná uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  

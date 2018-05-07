@@ -1,13 +1,10 @@
 ---
-title: "Funkce výměny dat dialogových oken pro ovládací prvky OLE | Microsoft Docs"
-ms.custom: 
+title: Funkce výměny dat dialogových oken pro ovládací prvky OLE | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkce výměny dat dialogových oken pro ovládací prvky OLE
 Toto téma uvádí DDX_OC funkce, které slouží pro výměnu dat mezi vlastností ovládacího prvku OLE ve dialogového okna, formátu zobrazení nebo objekt zobrazení ovládacího prvku a datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
@@ -59,7 +54,7 @@ Toto téma uvádí DDX_OC funkce, které slouží pro výměnu dat mezi vlastnos
 |[Ddx_octext –](#ddx_octext)|Spravuje přenos **CString** dat mezi vlastností ovládacího prvku OLE a **CString** – datový člen.|  
 |[Ddx_octextro –](#ddx_octextro)|Spravuje přenos **CString** dat mezi jen pro čtení vlastnost ovládacího prvku OLE a **CString** – datový člen.|  
   
-##  <a name="ddx_ocbool"></a>Ddx_ocbool –  
+##  <a name="ddx_ocbool"></a>  Ddx_ocbool –  
  `DDX_OCBool` Funkce spravuje přenos **BOOL** formuláři dat mezi vlastností ovládacího prvku OLE v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **BOOL** – datový člen dialogu, zobrazení formuláře, nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -89,7 +84,7 @@ void AFXAPI DDX_OCBool(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví:** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>Ddx_ocboolro –  
+##  <a name="ddx_ocboolro"></a>  Ddx_ocboolro –  
  `DDX_OCBoolRO` Funkce spravuje přenos **BOOL** formuláři dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **BOOL** dialogového okna, – datový člen zobrazení formuláře, nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -119,7 +114,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>Ddx_occolor –  
+##  <a name="ddx_occolor"></a>  Ddx_occolor –  
  `DDX_OCColor` Funkce spravuje přenos **OLE_COLOR** formuláři dat mezi vlastností ovládacího prvku OLE v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **OLE_COLOR** dialogového okna, – datový člen zobrazení formuláře, nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -149,7 +144,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>Ddx_occolorro –  
+##  <a name="ddx_occolorro"></a>  Ddx_occolorro –  
  `DDX_OCColorRO` Funkce spravuje přenos **OLE_COLOR** formuláři dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **OLE_COLOR** členem data Dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -179,7 +174,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>Ddx_ocfloat –  
+##  <a name="ddx_ocfloat"></a>  Ddx_ocfloat –  
  `DDX_OCFloat` Funkce spravuje přenos **float** (nebo **dvojité**) dat mezi vlastností ovládacího prvku OLE v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a **float** (nebo **dvojité**) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -215,7 +210,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>Ddx_ocfloatro –  
+##  <a name="ddx_ocfloatro"></a>  Ddx_ocfloatro –  
  `DDX_OCFloatRO` Funkce spravuje přenos **float** (nebo **dvojité**) dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a  **float** (nebo **dvojité**) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -251,7 +246,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>Ddx_ocint –  
+##  <a name="ddx_ocint"></a>  Ddx_ocint –  
  `DDX_OCInt` Funkce spravuje přenos `int` (nebo **dlouho**) dat mezi vlastností ovládacího prvku OLE v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a `int` (nebo **dlouho**) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -287,7 +282,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>Ddx_ocintro –  
+##  <a name="ddx_ocintro"></a>  Ddx_ocintro –  
  `DDX_OCIntRO` Funkce spravuje přenos `int` (nebo **dlouho**) dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a `int` (nebo **dlouho** ) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -323,7 +318,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>Ddx_ocshort –  
+##  <a name="ddx_ocshort"></a>  Ddx_ocshort –  
  `DDX_OCShort` Funkce spravuje přenos krátké dat mezi vlastností ovládacího prvku OLE v dialogovém okně, zobrazení formuláře, nebo objekt zobrazení ovládacího prvku a short – datový člen dialogovém okně zobrazení formuláře nebo řízení objekt zobrazení.  
   
 ```   
@@ -353,7 +348,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>Ddx_ocshortro –  
+##  <a name="ddx_ocshortro"></a>  Ddx_ocshortro –  
  `DDX_OCShortRO` Funkce spravuje přenos krátké dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, zobrazení formuláře, nebo objekt zobrazení ovládacího prvku a short – datový člen dialogovém okně zobrazení formuláře nebo řízení objekt zobrazení.  
   
 ```   
@@ -383,7 +378,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_octext"></a>Ddx_octext –  
+##  <a name="ddx_octext"></a>  Ddx_octext –  
  **Ddx_octext –** funkce spravuje přenos **CString** formuláři dat mezi vlastností ovládacího prvku OLE v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **CString** dat člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
@@ -413,7 +408,7 @@ void AFXAPI DDX_OCText(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>Ddx_octextro –  
+##  <a name="ddx_octextro"></a>  Ddx_octextro –  
  `DDX_OCTextRO` Funkce spravuje přenos `CString` formuláři dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `CString` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  

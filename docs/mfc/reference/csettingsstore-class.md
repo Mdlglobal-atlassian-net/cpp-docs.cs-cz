@@ -1,12 +1,9 @@
 ---
-title: "Třída CSettingsStore | Microsoft Docs"
-ms.custom: 
+title: Třída CSettingsStore | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore – třída
 Zabalí funkcí rozhraní API systému Windows, poskytnutím objektově orientované rozhraní, které používáte pro přístup k registru.  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  Zavře otevřít klíč registru.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení, tato metoda je volána z destruktoru objektu [CSettingsStore třída](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  Otevře se klíč registru nebo ji vytvoří, pokud neexistuje.  
   
 ```  
@@ -106,16 +101,16 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pszPath`  
+ [v] `pszPath`  
  Určuje název klíče pro vytvořit nebo otevřít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  0 v případě úspěšného; v opačném případě nenulovou hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- `CreateKey`používá `m_hKey` jako kořen registru dotazy. Vyhledá `pszPath` jako podklíč `m_hKey`. Pokud klíč neexistuje, `CreateKey` ji vytvoří. Jinak otevře se klíč. `CreateKey`potom nastaví `m_hKey` ke klíči vytvořený nebo je otevřen.  
+ `CreateKey` používá `m_hKey` jako kořen registru dotazy. Vyhledá `pszPath` jako podklíč `m_hKey`. Pokud klíč neexistuje, `CreateKey` ji vytvoří. Jinak otevře se klíč. `CreateKey` potom nastaví `m_hKey` ke klíči vytvořený nebo je otevřen.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Vytvoří `CSettngsStore` objektu.  
   
 ```  
@@ -125,10 +120,10 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bAdmin`  
+ [v] `bAdmin`  
  Logický parametr, který určuje, zda `CSettingsStore` objekt funguje v režimu správce.  
   
- [v]`bReadOnly`  
+ [v] `bReadOnly`  
  Logický parametr, který určuje, zda `CSettingsStore` objekt se vytvoří v režimu jen pro čtení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  Destruktor pro `CSettingsStore` uvolní `m_hKey` automaticky.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  Odstraní klíče a všechny její podřízené položky z registru.  
   
 ```  
@@ -148,10 +143,10 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pszPath`  
+ [v] `pszPath`  
  Název klíče, který se odstranit.  
   
- [v]`bAdmin`  
+ [v] `bAdmin`  
  Přepínač, který určuje umístění klíč, který chcete odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  Pokud parametr `bAdmin` rovná nule, `DeleteKey` vyhledá klíč, který chcete odstranit v rámci `HKEY_CURRENT_USER`. Pokud `bAdmin` nenulový, `DeleteKey` vyhledá klíč, který chcete odstranit v rámci `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Odstraní hodnotu z `m_hKey`.  
   
 ```  
@@ -170,13 +165,13 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pszValue`  
+ [v] `pszValue`  
  Určuje hodnotu pole, které chcete odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  Otevře se klíč registru.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pszPath`  
+ [v] `pszPath`  
  Název klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Poznámky  
  Když se tato metoda úspěšně otevře okno se zadaným klíčem, nastaví `m_hKey` k popisovači tohoto klíče.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  Načte hodnotu z klíče v registru.  
   
 ```  
@@ -269,61 +264,61 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pszKey`  
+ [v] `pszKey`  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje název hodnoty ke čtení z registru.  
   
- [out]`iVal`  
+ [out] `iVal`  
  Odkaz na proměnnou celé číslo, která přijímá hodnotu čtení z klíče registru.  
   
- [out]`dwVal`  
+ [out] `dwVal`  
  Odkaz na 32-bit dvojité slovo proměnné, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`sVal`  
+ [out] `sVal`  
  Odkaz na proměnnou string, který obdrží hodnotu čtení z klíče registru.  
   
- [out]`scStringList`  
+ [out] `scStringList`  
  Odkaz na proměnnou string seznamu, která přijímá hodnotu čtení z klíče registru.  
   
- [out]`scArray`  
+ [out] `scArray`  
  Odkaz na proměnnou string pole, která přijímá hodnotu čtení z klíče registru.  
   
- [out]`dwcArray`  
+ [out] `dwcArray`  
  Odkaz na proměnné pole 32-bit dvojitou slova, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`wcArray`  
+ [out] `wcArray`  
  Odkaz na proměnné pole 16bitové slova, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`bcArray`  
+ [out] `bcArray`  
  Odkaz na proměnné pole bajtů, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`lpPoint`  
+ [out] `lpPoint`  
  Odkaz na ukazatel na `POINT` struktura, která přijímá hodnota čtení z klíče registru.  
   
- [out]`rect`  
+ [out] `rect`  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) proměnné, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`ppData`  
+ [out] `ppData`  
  Ukazatel na ukazatel na data, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`pBytes`  
+ [out] `pBytes`  
  Ukazatel na proměnnou celé číslo bez znaménka. Tato proměnná obdrží velikost vyrovnávací paměti, `ppData` odkazuje na.  
   
- [out]`list`  
+ [out] `list`  
  Odkaz na [CObList](../../mfc/reference/coblist-class.md) proměnné, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`obj`  
+ [out] `obj`  
  Odkaz na [CObject](../../mfc/reference/cobject-class.md) proměnné, která obdrží hodnotu čtení z klíče registru.  
   
- [out]`pObj`  
+ [out] `pObj`  
  Odkaz na ukazatel na `CObject` proměnné, která obdrží hodnotu čtení z klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- `Read`zkontroluje `pszKey` jako podklíč `m_hKey`.  
+ `Read` zkontroluje `pszKey` jako podklíč `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  Zapíše hodnotu registru pod klíčem otevřete.  
   
 ```  
@@ -399,56 +394,56 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pszKey`  
+ [v] `pszKey`  
  Ukazatel na řetězec, který obsahuje název hodnota k nastavení.  
   
- [v]`iVal`  
+ [v] `iVal`  
  Odkaz na proměnnou celé číslo, který obsahuje data k uložení.  
   
- [v]`dwVal`  
+ [v] `dwVal`  
  Odkaz na 32-bit dvojité slovo proměnné, která obsahuje data k uložení.  
   
- [v]`pszVal`  
+ [v] `pszVal`  
  Ukazatel na proměnnou string ukončené hodnotou null, který obsahuje data k uložení.  
   
- [v]`scStringList`  
+ [v] `scStringList`  
  Odkaz na [CStringList](../../mfc/reference/cstringlist-class.md) proměnné, která obsahuje data k uložení.  
   
- [v]`bcArray`  
+ [v] `bcArray`  
  Odkaz na proměnnou pole bajtů obsahující data k uložení.  
   
- [v]`scArray`  
+ [v] `scArray`  
  Odkaz na proměnnou string pole, která obsahuje data k uložení.  
   
- [v]`dwcArray`  
+ [v] `dwcArray`  
  Odkaz na 32-bit double aplikace word proměnné pole, která obsahuje data k uložení.  
   
- [v]`wcArray`  
+ [v] `wcArray`  
  Odkaz na proměnné pole 16bitové slova, která obsahuje data k uložení.  
   
- [v]`rect`  
+ [v] `rect`  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) proměnné, která obsahuje data k uložení.  
   
- [v]`lpPoint`  
+ [v] `lpPoint`  
  Odkaz na ukazatel na `POINT` proměnné, která obsahuje data k uložení.  
   
- [v]`pData`  
+ [v] `pData`  
  Ukazatel na vyrovnávací paměť, která obsahuje data k uložení.  
   
- [v]`nBytes`  
+ [v] `nBytes`  
  Určuje velikost v bajtech, dat, ke kterému `pData` parametr body.  
   
- [v]`list`  
+ [v] `list`  
  Odkaz na [CObList](../../mfc/reference/coblist-class.md) proměnné, která obsahuje data k uložení.  
   
- [v]`obj`  
+ [v] `obj`  
  Odkaz na [CObject](../../mfc/reference/cobject-class.md) proměnné, která obsahuje data k uložení.  
   
- [v]`pObj`  
+ [v] `pObj`  
  Ukazatel na ukazatel na `CObject` proměnné, která obsahuje data k uložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Aby bylo možné zapsat do registru, je nutné nastavit `bReadOnly` nenulovou hodnotu, při vytváření [CSettingsStore](../../mfc/reference/csettingsstore-class.md) objektu. Další informace najdete v tématu [CSettingsStore::CSettingsStore](#csettingsstore).  

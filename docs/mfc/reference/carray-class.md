@@ -1,12 +1,9 @@
 ---
-title: "Carray – třída | Microsoft Docs"
-ms.custom: 
+title: Carray – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7bf9518ad96e5a67f2d19d3729e5813d3f84d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carray-class"></a>Carray – třída
 Podporuje pole, které jsou podobné C pole, ale může dynamicky snížit a růst podle potřeby.  
@@ -75,10 +70,10 @@ class CArray : public CObject
   
 #### <a name="parameters"></a>Parametry  
  `TYPE`  
- Parametr šablony, která určuje typ objektů, které jsou uložené v poli. `TYPE`je parametr, který je vrácen `CArray`.  
+ Parametr šablony, která určuje typ objektů, které jsou uložené v poli. `TYPE` je parametr, který je vrácen `CArray`.  
   
  `ARG` *_* `TYPE`  
- Parametr šablony, která určuje typ argumentu, který se používá pro přístup k objektům, které jsou uložené v poli. Často odkaz na `TYPE`. `ARG_TYPE`je parametr, který je předán `CArray`.  
+ Parametr šablony, která určuje typ argumentu, který se používá pro přístup k objektům, které jsou uložené v poli. Často odkaz na `TYPE`. `ARG_TYPE` je parametr, který je předán `CArray`.  
   
 ## <a name="members"></a>Členové  
   
@@ -114,7 +109,7 @@ class CArray : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operátor &#91; &#93;](#operator_at)|Nastaví nebo získá element v zadaném indexu.|  
+|[operátor&#91;&#93;](#operator_at)|Nastaví nebo získá element v zadaném indexu.|  
   
 ## <a name="remarks"></a>Poznámky  
  Indexy pole vždy spustit na pozici 0. Můžete se rozhodnout, zda pro opravu horní mez nebo povolit pole pro rozbalit, pokud přidáte elementy za aktuální vázána. Se přidělí paměť souvisle horní mez, i když některé prvky jsou null.  
@@ -141,9 +136,9 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Požadavky  
- `Header:`afxtempl.h  
+ `Header:` afxtempl.h  
   
-##  <a name="add"></a>CArray::Add  
+##  <a name="add"></a>  CArray::Add  
  Přidá nový prvek na konec pole, pole narůstají o 1.  
   
 ```  
@@ -166,7 +161,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="append"></a>CArray::Append  
+##  <a name="append"></a>  CArray::Append  
  Volání této funkce člen přidat na konec jiné obsah jedno pole.  
   
 ```  
@@ -188,7 +183,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="carray"></a>CArray::CArray  
+##  <a name="carray"></a>  CArray::CArray  
  Vytvoří prázdné pole.  
   
 ```  
@@ -201,7 +196,7 @@ CArray();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="copy"></a>CArray::Copy  
+##  <a name="copy"></a>  CArray::Copy  
  Pomocí této funkce člen kopírování prvků jedno pole do jiné.  
   
 ```  
@@ -220,7 +215,7 @@ void Copy(const CArray& src);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CArray::ElementAt  
+##  <a name="elementat"></a>  CArray::ElementAt  
  Vrátí dočasné odkaz na zadaný element v rámci pole.  
   
 ```  
@@ -241,7 +236,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [getsize –](#getsize).  
   
-##  <a name="freeextra"></a>CArray::FreeExtra  
+##  <a name="freeextra"></a>  CArray::FreeExtra  
  Uvolní všechny paměť navíc, který byl přidělen při se zvětšil pole.  
   
 ```  
@@ -254,7 +249,7 @@ void FreeExtra();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [GetData](#getdata).  
   
-##  <a name="getat"></a>CArray::GetAt  
+##  <a name="getat"></a>  CArray::GetAt  
  Vrátí pole element v zadaném indexu.  
   
 ```  
@@ -278,7 +273,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CArray::GetCount  
+##  <a name="getcount"></a>  CArray::GetCount  
  Vrátí počet prvků pole.  
   
 ```  
@@ -294,7 +289,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CArray::GetData  
+##  <a name="getdata"></a>  CArray::GetData  
  Pomocí této funkce člen můžete získat přímý přístup k prvků v poli.  
   
 ```  
@@ -317,7 +312,7 @@ TYPE* GetData();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CArray::GetSize  
+##  <a name="getsize"></a>  CArray::GetSize  
  Vrátí velikost pole.  
   
 ```  
@@ -330,7 +325,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CArray::GetUpperBound  
  Vrátí aktuální horní mez toto pole.  
   
 ```  
@@ -345,7 +340,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CArray::GetAt](#getat).  
   
-##  <a name="insertat"></a>CArray::InsertAt  
+##  <a name="insertat"></a>  CArray::InsertAt  
  První verze součásti `InsertAt` Vloží jednu elementu (nebo více kopií elementu) na zadaný index v poli.  
   
 ```  
@@ -388,7 +383,7 @@ void InsertAt(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CArray::IsEmpty  
+##  <a name="isempty"></a>  CArray::IsEmpty  
  Určuje, zda je pole prázdné.  
   
 ```  
@@ -398,7 +393,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud toto pole neobsahuje žádné elementy. jinak 0.  
   
-##  <a name="operator_at"></a>CArray::operator\[\]  
+##  <a name="operator_at"></a>  CArray::operator \[\]  
  Tyto dolního indexu jsou vhodnou náhradu za [SetAt](#setat) a [GetAt](#getat) funkce.  
   
 ```  
@@ -421,7 +416,7 @@ const TYPE& operator[](int_ptr nindex) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="relocateelements"></a>CArray::RelocateElements  
+##  <a name="relocateelements"></a>  CArray::RelocateElements  
  Když toto pole by měl zvětšovat a zmenšovat přemístí vyrovnávací paměť nového data.  
   
 ```  
@@ -443,13 +438,13 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
  Počet prvků v poli starý.  
   
 ### <a name="remarks"></a>Poznámky  
- `pNewData`je vždy dostatečně velký pro uložení všech `pData` elementy.  
+ `pNewData` je vždy dostatečně velký pro uložení všech `pData` elementy.  
   
  [Carray –](../../mfc/reference/carray-class.md) implementace používá tato metoda zkopírovat stará data do vyrovnávací paměť nového, pokud má pole zvětšovat a zmenšovat (když [SetSize](#setsize) nebo [FreeExtra](#freeextra) se nazývají). Výchozí implementace právě zkopíruje data.  
   
  Pro pole, ve kterých element obsahující ukazatel na jednoho ze svých vlastních členů, nebo jinou strukturu obsahuje ukazatel na jeden z elementů pole: neaktualizují následující ukazatele v prostý kopií. V takovém případě můžete opravit ukazatele implementací specializace z `RelocateElements` s příslušných typů. Také jste zodpovědní za data kopírování.  
   
-##  <a name="removeall"></a>CArray::RemoveAll  
+##  <a name="removeall"></a>  CArray::RemoveAll  
  Odebere všechny elementy z tohoto pole.  
   
 ```  
@@ -462,7 +457,7 @@ void RemoveAll();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="removeat"></a>CArray::RemoveAt  
+##  <a name="removeat"></a>  CArray::RemoveAt  
  Odebere jeden či více elementů počínaje zadaným indexem v matici.  
   
 ```  
@@ -486,7 +481,7 @@ void RemoveAt(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="setat"></a>CArray::SetAt  
+##  <a name="setat"></a>  CArray::SetAt  
  Nastaví element pole u zadaného indexu.  
   
 ```  
@@ -504,14 +499,14 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
  Nová hodnota elementu ukládaly na zadané pozici.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetAt`nezpůsobí pole pro růst. Použití [SetAtGrow](#setatgrow) Pokud chcete, aby pole automaticky zvětšovat.  
+ `SetAt` nezpůsobí pole pro růst. Použití [SetAtGrow](#setatgrow) Pokud chcete, aby pole automaticky zvětšovat.  
   
  Je nutné zajistit, že hodnota indexu představuje platnou pozici v poli. Pokud je mimo rozsah, pak vyhodnotí ladicí verze knihovny.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [GetAt](#getat).  
   
-##  <a name="setatgrow"></a>CArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CArray::SetAtGrow  
  Nastaví element pole u zadaného indexu.  
   
 ```  
@@ -534,7 +529,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="setsize"></a>CArray::SetSize  
+##  <a name="setsize"></a>  CArray::SetSize  
  Určuje velikost prázdný nebo stávajícímu poli; v případě potřeby přidělí paměť.  
   
 ```  

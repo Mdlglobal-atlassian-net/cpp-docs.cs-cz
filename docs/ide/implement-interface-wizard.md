@@ -1,13 +1,10 @@
 ---
-title: "Průvodce implementací rozhraní | Microsoft Docs"
-ms.custom: 
+title: Průvodce implementací rozhraní | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.interface.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Implement Interface Wizard [C++]
 ms.assetid: 947c329e-0815-4ca7-835e-c41dfeb75f9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-interface-wizard"></a>Průvodce implementací rozhraní
 Tento průvodce implementuje rozhraní pro objekt COM. Implementace mnoho rozhraní jsou součástí knihovny COM, která je k dispozici v sadě Visual Studio a Windows. Implementace rozhraní je přidružená objektu, když je vytvořena instance tohoto objektu, a poskytuje služby, které nabízí objekt.  
@@ -44,7 +39,7 @@ Tento průvodce implementuje rozhraní pro objekt COM. Implementace mnoho rozhra
  **Dostupné knihovny typů**  
  Zobrazí dostupné knihovny typů obsahující definice rozhraní, které můžete implementovat. Pokud kliknete na tlačítko **soubor** pod **implementovat rozhraní z**, toto políčko není možné měnit.  
   
- **Umístění**  
+ **Poloha**  
  Zobrazí umístění knihovny typů v aktuálně vybranou **dostupné knihovny typů** seznamu. Pokud jste vybrali **soubor** pod **implementovat rozhraní z**, klikněte na tlačítko se třemi tečkami vyhledat soubor obsahující typ knihovnu, která má použít.  
   
  **Rozhraní**  

@@ -1,13 +1,10 @@
 ---
-title: "TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO | Microsoft Docs"
-ms.custom: 
+title: 'TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date –\***|**DFX_Date** (`COleDateTime`– na základě)|  
+|**RFX_Date – \***|**DFX_Date** (`COleDateTime`– na základě)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*`RFX_Date` Funkce je založena na `CTime` a **TIMESTAMP_STRUCT z**.  
+ \*    `RFX_Date` Funkce je založena na `CTime` a **TIMESTAMP_STRUCT z**.  
   
  Hlavní změny na funkce, které můžou ovlivnit vaše aplikace a vyžadují více než jednoduchý název změny jsou uvedeny níže.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Třídy výjimek byl změněn. **CDBExceptions** jsou vyvolány v třídy rozhraní ODBC a **CDaoExceptions** v třídy DAO.  
   
--   `RFX_Date`používá `CTime` a **TIMESTAMP_STRUCT z** objekty při **DFX_Date** používá `COleDateTime`. `COleDateTime` Je téměř shodná `CTime`, ale je založena na 8 bajtů OLE **datum** místo 4 bajtů `time_t` tak může uchovávat mnohem větší rozsah data.  
+-   `RFX_Date` používá `CTime` a **TIMESTAMP_STRUCT z** objekty při **DFX_Date** používá `COleDateTime`. `COleDateTime` Je téměř shodná `CTime`, ale je založena na 8 bajtů OLE **datum** místo 4 bajtů `time_t` tak může uchovávat mnohem větší rozsah data.  
   
     > [!NOTE]
     >  Rozhraní DAO (`CDaoRecordset`) snímky jsou jen pro čtení při ODBC (`CRecordset`) snímky mohou být v aktualizovatelné v závislosti na ovladače a použití knihovny kurzorů ODBC. Pokud používáte knihovna kurzorů `CRecordset` snímky jsou lze aktualizovat. Pokud používáte některou z plochy ovladač Pack 3.0 ovladače společnosti Microsoft bez knihovna kurzorů rozhraní ODBC `CRecordset` snímky jsou jen pro čtení. Pokud používáte jiný ovladač, podívejte se do dokumentace ovladače a zjistěte, zda snímků (**STATIC_CURSORS**) jsou jen pro čtení.  

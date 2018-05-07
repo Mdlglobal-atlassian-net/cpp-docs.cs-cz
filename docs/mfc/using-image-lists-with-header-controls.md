@@ -1,13 +1,10 @@
 ---
-title: "Použití seznamů obrázků s ovládacími prvky záhlaví | Microsoft Docs"
-ms.custom: 
+title: Použití seznamů obrázků s ovládacími prvky záhlaví | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-with-header-controls"></a>Použití seznamů obrázků s ovládacími prvky záhlaví
 Položky hlavičky mít možnost zobrazit obrázek v rámci položky záhlaví. Tuto bitovou kopii, uložené v seznamu přidruženou bitovou kopii, je velikosti 16 x 16 pixelů a má stejné vlastnosti jako ikona obrázků použitých v ovládacím prvku zobrazení seznamu. Aby bylo možné úspěšně implementovat toto chování, musíte nejprve vytvořit a Inicializace seznamu obrázků, přidružit seznamu pomocí ovládacího prvku záhlaví a potom upravte atributy položky záhlaví, který se zobrazí bitovou kopii.  

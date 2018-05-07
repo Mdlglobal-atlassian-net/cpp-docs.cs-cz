@@ -1,13 +1,10 @@
 ---
-title: "Kreslení v zobrazení | Microsoft Docs"
-ms.custom: 
+title: Kreslení v zobrazení | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc716800c35aa922f7912f586d6e5b8429593615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-in-a-view"></a>Kreslení v zobrazení
 Téměř všechny kreslení v aplikaci dojde v zobrazení `OnDraw` členská funkce, které je nutné přepsat ve třídě zobrazení. (Výjimkou je myši kreslení, popsané v [interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md).) Vaše `OnDraw` přepsání:  
@@ -39,9 +34,9 @@ Téměř všechny kreslení v aplikaci dojde v zobrazení `OnDraw` členská fun
   
 2.  Zobrazí data pomocí volání členské funkce objektu kontextu zařízení, který předává rozhraní `OnDraw`.  
   
- Při změně dokumentu dat nějakým způsobem, musí být zobrazení překreslen tak, aby odrážely změny. Obvykle se to stane, když uživatel provede změny prostřednictvím zobrazení na dokumentu. V takovém případě zobrazení volá dokumentu [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) – členská funkce oznámit všechna zobrazení dokumentem aktualizovat sami. `UpdateAllViews`volá jednotlivých zobrazení [OnUpdate](../mfc/reference/cview-class.md#onupdate) – členská funkce. Výchozí implementaci `OnUpdate` by způsobila neplatnost zobrazení celého klienta. Je možné přepsat jeho zneplatní pouze tyto oblasti klientské oblasti, které jsou mapovány na změněné části dokumentu.  
+ Při změně dokumentu dat nějakým způsobem, musí být zobrazení překreslen tak, aby odrážely změny. Obvykle se to stane, když uživatel provede změny prostřednictvím zobrazení na dokumentu. V takovém případě zobrazení volá dokumentu [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) – členská funkce oznámit všechna zobrazení dokumentem aktualizovat sami. `UpdateAllViews` volá jednotlivých zobrazení [OnUpdate](../mfc/reference/cview-class.md#onupdate) – členská funkce. Výchozí implementaci `OnUpdate` by způsobila neplatnost zobrazení celého klienta. Je možné přepsat jeho zneplatní pouze tyto oblasti klientské oblasti, které jsou mapovány na změněné části dokumentu.  
   
- `UpdateAllViews` Funkce člena třídy **CDocument** a `OnUpdate` funkce člena třídy `CView` umožňují předávat informace, které popisují, které části dokumentu byly upraveny. Tento mechanismus "pomocný parametr" umožňuje omezit k oblasti, která musí ho překreslit zobrazení. `OnUpdate`přebírá dva argumenty "pomocný parametr". První, `lHint`, typu **LPARAM**, vám umožní předat žádná data, která se vám líbí, zatímco druhý, `pHint`, typu `CObject`*, vám umožní předat ukazatel u všech objektů odvozených od `CObject`.  
+ `UpdateAllViews` Funkce člena třídy **CDocument** a `OnUpdate` funkce člena třídy `CView` umožňují předávat informace, které popisují, které části dokumentu byly upraveny. Tento mechanismus "pomocný parametr" umožňuje omezit k oblasti, která musí ho překreslit zobrazení. `OnUpdate` přebírá dva argumenty "pomocný parametr". První, `lHint`, typu **LPARAM**, vám umožní předat žádná data, která se vám líbí, zatímco druhý, `pHint`, typu `CObject`*, vám umožní předat ukazatel u všech objektů odvozených od `CObject`.  
   
  Při zobrazení stává neplatným, systém Windows odešle ji `WM_PAINT` zprávy. Zobrazení [OnPaint](../mfc/reference/cwnd-class.md#onpaint) obslužné rutiny funkce reaguje na zprávy vytvoření třídy kontextu zařízení objektu [CPaintDC](../mfc/reference/cpaintdc-class.md) a volání do zobrazení `OnDraw` – členská funkce. Za normálních okolností nemáte zápis přepsání `OnPaint` funkce obslužné rutiny.  
   

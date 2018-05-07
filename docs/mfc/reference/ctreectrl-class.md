@@ -1,12 +1,9 @@
 ---
-title: "CTreeCtrl – třída | Microsoft Docs"
-ms.custom: 
+title: CTreeCtrl – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTreeCtrl
@@ -171,17 +168,15 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 573b81ce8d78cde67b63579caa5ed96bbe557ae3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 44e7afd1362064faa19d013da1ee61d32d03227a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl – třída
 Poskytuje funkci běžné stromové zobrazení ovládacího prvku Windows.  
@@ -309,7 +304,7 @@ class CTreeCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcmn.h  
   
-##  <a name="create"></a>CTreeCtrl::Create  
+##  <a name="create"></a>  CTreeCtrl::Create  
  Pokud zadáte v poli šablony dialogového okna Ovládací prvek stromu, nebo pokud používáte [CTreeView](../../mfc/reference/ctreeview-class.md), vaše ovládací prvek stromu se vytvoří automaticky při vytvoření dialogového nebo zobrazení.  
   
 ```  
@@ -346,7 +341,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CTreeCtrl::CreateEx  
+##  <a name="createex"></a>  CTreeCtrl::CreateEx  
  Volání této funkce vytvoření ovládacího prvku (podřízeného okna) a její přidružení `CTreeCtrl` objektu.  
   
 ```  
@@ -380,7 +375,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CTreeCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage  
  Volání této funkce k vytvoření přetahování rastrového obrázku pro danou položku v ovládacím prvku stromu zobrazení, vytvořte seznam obrázků pro bitovou mapu a přidejte do seznamu obrázků bitové mapy.  
   
 ```  
@@ -401,14 +396,14 @@ CImageList* CreateDragImage(HTREEITEM hItem);
   
  [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]  
   
-##  <a name="ctreectrl"></a>CTreeCtrl::CTreeCtrl  
+##  <a name="ctreectrl"></a>  CTreeCtrl::CTreeCtrl  
  Vytvoří `CTreeCtrl` objektu.  
   
 ```  
 CTreeCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTreeCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>  CTreeCtrl::DeleteAllItems  
  Volání této funkce se odstranit všechny položky z ovládacího prvku zobrazení stromu.  
   
 ```  
@@ -421,7 +416,7 @@ BOOL DeleteAllItems();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_3.cpp)]  
   
-##  <a name="deleteitem"></a>CTreeCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CTreeCtrl::DeleteItem  
  Volání této funkce se odstranit položku z ovládacího prvku zobrazení stromu.  
   
 ```  
@@ -438,7 +433,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_4.cpp)]  
   
-##  <a name="editlabel"></a>CTreeCtrl::EditLabel  
+##  <a name="editlabel"></a>  CTreeCtrl::EditLabel  
  Volání této funkce zahájíte úpravy textu zadanou položku na místě.  
   
 ```  
@@ -458,7 +453,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_5.cpp)]  
   
-##  <a name="endeditlabelnow"></a>CTreeCtrl::EndEditLabelNow  
+##  <a name="endeditlabelnow"></a>  CTreeCtrl::EndEditLabelNow  
  Ukončí operaci upravit na popisek položky zobrazení stromu v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -469,15 +464,15 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`fCancelWithoutSave`|`true`Zahodit změny položky zobrazení stromu před uzavřením operace upravování nebo `false` se uložit změny do položky zobrazení stromu před uzavřením operaci.|  
+|[v] `fCancelWithoutSave`|`true` Zahodit změny položky zobrazení stromu před uzavřením operace upravování nebo `false` se uložit změny do položky zobrazení stromu před uzavřením operaci.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_ENDEDITLABELNOW](http://msdn.microsoft.com/library/windows/desktop/bb773564) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="ensurevisible"></a>CTreeCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CTreeCtrl::EnsureVisible  
  Volání této funkce pro zajištění viditelné položku zobrazení stromu.  
   
 ```  
@@ -497,7 +492,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_6.cpp)]  
   
-##  <a name="expand"></a>CTreeCtrl::Expand  
+##  <a name="expand"></a>  CTreeCtrl::Expand  
  Volání této funkce můžete rozbalit nebo sbalit seznam podřízené položky, pokud existuje, spojené s danou nadřazené položky.  
   
 ```  
@@ -513,13 +508,13 @@ BOOL Expand(
  `nCode`  
  Příznak, který udává typ akce, které mají být provedeny. Tento příznak může mít jednu z následujících hodnot:  
   
-- `TVE_COLLAPSE`Sbalí seznamu.  
+- `TVE_COLLAPSE` Sbalí seznamu.  
   
-- `TVE_COLLAPSERESET`Sbalí seznamu a odebere podřízené položky. **TVIS_EXPANDEDONCE** příznak stavu je obnovit. Tento příznak se musí používat s `TVE_COLLAPSE` příznak.  
+- `TVE_COLLAPSERESET` Sbalí seznamu a odebere podřízené položky. **TVIS_EXPANDEDONCE** příznak stavu je obnovit. Tento příznak se musí používat s `TVE_COLLAPSE` příznak.  
   
-- `TVE_EXPAND`Rozbalí seznam.  
+- `TVE_EXPAND` Rozbalí seznam.  
   
-- `TVE_TOGGLE`Sbalí seznamu, pokud je aktuálně rozšířit nebo ho rozšíří, pokud je sbalená.  
+- `TVE_TOGGLE` Sbalí seznamu, pokud je aktuálně rozšířit nebo ho rozšíří, pokud je sbalená.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -527,7 +522,7 @@ BOOL Expand(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::EnsureVisible](#ensurevisible).  
   
-##  <a name="getbkcolor"></a>CTreeCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CTreeCtrl::GetBkColor  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773570), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -540,7 +535,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetTextColor](#settextcolor).  
   
-##  <a name="getcheck"></a>CTreeCtrl::GetCheck  
+##  <a name="getcheck"></a>  CTreeCtrl::GetCheck  
  Volání této funkce člen načíst položku na kontrolu stavu.  
   
 ```  
@@ -557,7 +552,7 @@ BOOL GetCheck(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="getchilditem"></a>CTreeCtrl::GetChildItem  
+##  <a name="getchilditem"></a>  CTreeCtrl::GetChildItem  
  Volání této funkce načtení stromu zobrazení položek je podřízená položka určeného `hItem`.  
   
 ```  
@@ -574,7 +569,7 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]  
   
-##  <a name="getcount"></a>CTreeCtrl::GetCount  
+##  <a name="getcount"></a>  CTreeCtrl::GetCount  
  Volání této funkce se načíst počet položek v ovládacím prvkem strom zobrazení.  
   
 ```  
@@ -587,7 +582,7 @@ UINT GetCount() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_8.cpp)]  
   
-##  <a name="getdrophilightitem"></a>CTreeCtrl::GetDropHilightItem  
+##  <a name="getdrophilightitem"></a>  CTreeCtrl::GetDropHilightItem  
  Volejte tuto funkci k získání položky, která je cílem operací přetažení myší.  
   
 ```  
@@ -600,7 +595,7 @@ HTREEITEM GetDropHilightItem() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
-##  <a name="geteditcontrol"></a>CTreeCtrl::GetEditControl  
+##  <a name="geteditcontrol"></a>  CTreeCtrl::GetEditControl  
  Volání této funkce pro načtení popisovače ovládacích prvků pro úpravy používá upravit text položky zobrazení stromu.  
   
 ```  
@@ -613,7 +608,7 @@ CEdit* GetEditControl() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#10](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]  
   
-##  <a name="getextendedstyle"></a>CTreeCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CTreeCtrl::GetExtendedStyle  
  Načte rozšířené styly, které používá aktuální ovládacího prvku zobrazení stromu.  
   
 ```  
@@ -626,7 +621,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb773580) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstVisibleItem  
+##  <a name="getfirstvisibleitem"></a>  CTreeCtrl::GetFirstVisibleItem  
  Volání této funkce načíst první položky zobrazené stromové zobrazení.  
   
 ```  
@@ -639,7 +634,7 @@ HTREEITEM GetFirstVisibleItem() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="getimagelist"></a>CTreeCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CTreeCtrl::GetImageList  
  Volání této funkce můžete získat popisovač normální nebo seznamu obrázků stavu přidruženého k ovládacímu prvku zobrazení stromu.  
   
 ```  
@@ -650,9 +645,9 @@ CImageList* GetImageList(UINT nImageList) const;
  `nImageList`  
  Typ seznamu obrázků pro načtení. Seznam obrázků může být jedna z následujících hodnot:  
   
-- `TVSIL_NORMAL`Načte seznam normální bitové kopie, který obsahuje vybrané a nevybrané bitových kopií pro položky zobrazení stromu.  
+- `TVSIL_NORMAL` Načte seznam normální bitové kopie, který obsahuje vybrané a nevybrané bitových kopií pro položky zobrazení stromu.  
   
-- `TVSIL_STATE`Načte seznamu obrázků stavu, který obsahuje Image pro strom zobrazit položky, které jsou ve stavu, uživatelem definované.  
+- `TVSIL_STATE` Načte seznamu obrázků stavu, který obsahuje Image pro strom zobrazit položky, které jsou ve stavu, uživatelem definované.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na ovládací prvek seznamu obrázků v případě úspěšného; v opačném případě **NULL**.  
@@ -665,7 +660,7 @@ CImageList* GetImageList(UINT nImageList) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#11](../../mfc/reference/codesnippet/cpp/ctreectrl-class_11.cpp)]  
   
-##  <a name="getindent"></a>CTreeCtrl::GetIndent  
+##  <a name="getindent"></a>  CTreeCtrl::GetIndent  
  Volání této funkce načíst velikost, v pixelech, že podřízené položky odsazeny vzhledem k jejich nadřazené položky.  
   
 ```  
@@ -678,7 +673,7 @@ UINT GetIndent() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#12](../../mfc/reference/codesnippet/cpp/ctreectrl-class_12.cpp)]  
   
-##  <a name="getinsertmarkcolor"></a>CTreeCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>  CTreeCtrl::GetInsertMarkColor  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773590), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -691,7 +686,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#13](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]  
   
-##  <a name="getitem"></a>CTreeCtrl::GetItem  
+##  <a name="getitem"></a>  CTreeCtrl::GetItem  
  Volání této funkce načíst atributy položky stromové zobrazení.  
   
 ```  
@@ -708,7 +703,7 @@ BOOL GetItem(TVITEM* pItem) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdata"></a>CTreeCtrl::GetItemData  
+##  <a name="getitemdata"></a>  CTreeCtrl::GetItemData  
  Volání této funkce můžete načíst hodnotu 32-bit specifické pro aplikace přidružené k zadané položky.  
   
 ```  
@@ -725,7 +720,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#14](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]  
   
-##  <a name="getitemexpandedimageindex"></a>CTreeCtrl::GetItemExpandedImageIndex  
+##  <a name="getitemexpandedimageindex"></a>  CTreeCtrl::GetItemExpandedImageIndex  
  Načte index bitovou kopii k zobrazení, pokud zadaná položka aktuální zobrazení stromu ovládacího prvku v rozšířené stavu.  
   
 ```  
@@ -736,7 +731,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
+|[v] `hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index bitové kopie k zobrazení, pokud zadaná položka v rozšířené stavu.  
@@ -744,7 +739,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) zprávy, která je popsána v sadě Windows SDK. Který zprávy vrátí [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) načte struktura, která popisuje položky ovládacího prvku zobrazení stromu a pak tato metoda `iExpandedImage` člena z této struktury.  
   
-##  <a name="getitemheight"></a>CTreeCtrl::GetItemHeight  
+##  <a name="getitemheight"></a>  CTreeCtrl::GetItemHeight  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_GETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773599), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -757,7 +752,7 @@ SHORT GetItemHeight() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#15](../../mfc/reference/codesnippet/cpp/ctreectrl-class_15.cpp)]  
   
-##  <a name="getitemimage"></a>CTreeCtrl::GetItemImage  
+##  <a name="getitemimage"></a>  CTreeCtrl::GetItemImage  
  Každá položka v ovládacím prvku stromu zobrazení může mít pár rastrových obrázků s ním spojená.  
   
 ```  
@@ -788,7 +783,7 @@ BOOL GetItemImage(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#16](../../mfc/reference/codesnippet/cpp/ctreectrl-class_16.cpp)]  
   
-##  <a name="getitempartrect"></a>CTreeCtrl::GetItemPartRect  
+##  <a name="getitempartrect"></a>  CTreeCtrl::GetItemPartRect  
  Načte ohraničující obdélník pro zadanou součást zadaná položka v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -802,12 +797,12 @@ BOOL GetItemPartRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
-|[v]`nPart`|Identifikátor pro část. musí být nastavena na `TVGIPR_BUTTON`.|  
-|[out]`lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Pokud tato metoda je úspěšné, struktura obdrží obdélníku souřadnice část určeného `hItem` a `nPart`.|  
+|[v] `hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
+|[v] `nPart`|Identifikátor pro část. musí být nastavena na `TVGIPR_BUTTON`.|  
+|[out] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Pokud tato metoda je úspěšné, struktura obdrží obdélníku souřadnice část určeného `hItem` a `nPart`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Každá položka ovládací prvek stromu ohraničená obdélníku grafiky. Vždy, když po kliknutí na bod v obdélníku, položka se říká, že *dosáhl*. Tato metoda vrátí největší rámeček tak, že když bod v obdélníku po kliknutí na položku identifikovaný `hItem` parametr je přístupů.  
@@ -824,7 +819,7 @@ BOOL GetItemPartRect(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
-##  <a name="getitemrect"></a>CTreeCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CTreeCtrl::GetItemRect  
  Volání této funkce načíst ohraničující obdélník pro `hItem` a zjistit, zda je viditelná nebo ne.  
   
 ```  
@@ -850,7 +845,7 @@ BOOL GetItemRect(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#17](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]  
   
-##  <a name="getitemstate"></a>CTreeCtrl::GetItemState  
+##  <a name="getitemstate"></a>  CTreeCtrl::GetItemState  
  Vrátí stav položky určeného `hItem`.  
   
 ```  
@@ -872,7 +867,7 @@ UINT GetItemState(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#18](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]  
   
-##  <a name="getitemstateex"></a>CTreeCtrl::GetItemStateEx  
+##  <a name="getitemstateex"></a>  CTreeCtrl::GetItemStateEx  
  Načte stav rozšířené zadané položky v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -883,7 +878,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
+|[v] `hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Rozšířené stavové položky. Další informace najdete v tématu `uStateEx` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.  
@@ -891,7 +886,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) zprávy, která je popsána v sadě Windows SDK. Který zprávy vrátí [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) načte struktura, která popisuje položky ovládacího prvku zobrazení stromu, přičemž tuto metodu `uStateEx` člena z této struktury.  
   
-##  <a name="getitemtext"></a>CTreeCtrl::GetItemText  
+##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText  
  Vrátí text položky určeného `hItem`.  
   
 ```  
@@ -908,7 +903,7 @@ CString GetItemText(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetNextItem](#getnextitem).  
   
-##  <a name="getlastvisibleitem"></a>CTreeCtrl::GetLastVisibleItem  
+##  <a name="getlastvisibleitem"></a>  CTreeCtrl::GetLastVisibleItem  
  Načte poslední unexpanded uzlu položky v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -931,7 +926,7 @@ HTREEITEM GetLastVisibleItem() const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_21.cpp)]  
   
-##  <a name="getlinecolor"></a>CTreeCtrl::GetLineColor  
+##  <a name="getlinecolor"></a>  CTreeCtrl::GetLineColor  
  Tato funkce člen implementuje chování zprávy win32 [TVM_GETLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773619), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -944,7 +939,7 @@ COLORREF GetLineColor() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#19](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]  
   
-##  <a name="getnextitem"></a>CTreeCtrl::GetNextItem  
+##  <a name="getnextitem"></a>  CTreeCtrl::GetNextItem  
  Volání této funkce načtení stromu zobrazit položky, má zadaný vztah, uvedené `nCode` parametr, do `hItem`.  
   
 ```  
@@ -960,27 +955,27 @@ HTREEITEM GetNextItem(
  `nCode`  
  Příznak, který udává typ vztahu k `hItem`. Tento příznak může být jedna z následujících hodnot:  
   
-- `TVGN_CARET`Načte aktuálně vybrané položky.  
+- `TVGN_CARET` Načte aktuálně vybrané položky.  
   
-- `TVGN_CHILD`Načte první položka podřízené položky určeného `hItem` parametr.  
+- `TVGN_CHILD` Načte první položka podřízené položky určeného `hItem` parametr.  
   
-- `TVGN_DROPHILITE`Načte položku, která je cílem operací přetažení myší.  
+- `TVGN_DROPHILITE` Načte položku, která je cílem operací přetažení myší.  
   
-- `TVGN_FIRSTVISIBLE`Načte první položky zobrazené.  
+- `TVGN_FIRSTVISIBLE` Načte první položky zobrazené.  
   
-- `TVGN_LASTVISIBLE`Načte poslední rozbalené položky ve stromové struktuře. Není to načíst poslední položky viditelné v okně zobrazení stromu.  
+- `TVGN_LASTVISIBLE` Načte poslední rozbalené položky ve stromové struktuře. Není to načíst poslední položky viditelné v okně zobrazení stromu.  
   
-- `TVGN_NEXT`Načte další položky na stejné úrovni.  
+- `TVGN_NEXT` Načte další položky na stejné úrovni.  
   
-- `TVGN_NEXTVISIBLE`Načte další položky zobrazené, který následuje zadanou položku.  
+- `TVGN_NEXTVISIBLE` Načte další položky zobrazené, který následuje zadanou položku.  
   
-- `TVGN_PARENT`Načte nadřazené zadané položky.  
+- `TVGN_PARENT` Načte nadřazené zadané položky.  
   
-- `TVGN_PREVIOUS`Načte předchozí položky na stejné úrovni.  
+- `TVGN_PREVIOUS` Načte předchozí položky na stejné úrovni.  
   
-- `TVGN_PREVIOUSVISIBLE`Načte první položky zobrazené předcházejícího zadanou položku.  
+- `TVGN_PREVIOUSVISIBLE` Načte první položky zobrazené předcházejícího zadanou položku.  
   
-- `TVGN_ROOT`Načte první položce kořenové položky, které zadaná položka je součástí.  
+- `TVGN_ROOT` Načte první položce kořenové položky, které zadaná položka je součástí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač další položky v případě úspěšného; v opačném případě **NULL**.  
@@ -993,7 +988,7 @@ HTREEITEM GetNextItem(
   
  [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]  
   
-##  <a name="getnextsiblingitem"></a>CTreeCtrl::GetNextSiblingItem  
+##  <a name="getnextsiblingitem"></a>  CTreeCtrl::GetNextSiblingItem  
  Volání této funkce pro načtení další úrovni `hItem`.  
   
 ```  
@@ -1010,7 +1005,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#21](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]  
   
-##  <a name="getnextvisibleitem"></a>CTreeCtrl::GetNextVisibleItem  
+##  <a name="getnextvisibleitem"></a>  CTreeCtrl::GetNextVisibleItem  
  Volání této funkce pro načtení další viditelné položce `hItem`.  
   
 ```  
@@ -1027,7 +1022,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="getparentitem"></a>CTreeCtrl::GetParentItem  
+##  <a name="getparentitem"></a>  CTreeCtrl::GetParentItem  
  Volání této funkce načíst nadřazeného `hItem`.  
   
 ```  
@@ -1047,7 +1042,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::EnsureVisible](#ensurevisible).  
   
-##  <a name="getprevsiblingitem"></a>CTreeCtrl::GetPrevSiblingItem  
+##  <a name="getprevsiblingitem"></a>  CTreeCtrl::GetPrevSiblingItem  
  Volání této funkce načíst předchozí úrovni `hItem`.  
   
 ```  
@@ -1064,7 +1059,7 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#22](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]  
   
-##  <a name="getprevvisibleitem"></a>CTreeCtrl::GetPrevVisibleItem  
+##  <a name="getprevvisibleitem"></a>  CTreeCtrl::GetPrevVisibleItem  
  Volání této funkce načíst předchozí položce viditelné `hItem`.  
   
 ```  
@@ -1081,7 +1076,7 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#23](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]  
   
-##  <a name="getrootitem"></a>CTreeCtrl::GetRootItem  
+##  <a name="getrootitem"></a>  CTreeCtrl::GetRootItem  
  Volání této funkce načíst kořenovou položku ovládacího prvku zobrazení stromu.  
   
 ```  
@@ -1094,7 +1089,7 @@ HTREEITEM GetRootItem() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::EditLabel](#editlabel).  
   
-##  <a name="getscrolltime"></a>CTreeCtrl::GetScrollTime  
+##  <a name="getscrolltime"></a>  CTreeCtrl::GetScrollTime  
  Volání této funkce člen k načtení času maximální posuňte zobrazení ovládacího prvku strom.  
   
 ```  
@@ -1107,7 +1102,7 @@ UINT GetScrollTime() const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy win32 [TVM_GETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773625), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="getselectedcount"></a>CTreeCtrl::GetSelectedCount  
+##  <a name="getselectedcount"></a>  CTreeCtrl::GetSelectedCount  
  Načte počet vybraných položek v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -1120,7 +1115,7 @@ UINT GetSelectedCount();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_GETSELECTEDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb773629) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="getselecteditem"></a>CTreeCtrl::GetSelectedItem  
+##  <a name="getselecteditem"></a>  CTreeCtrl::GetSelectedItem  
  Volání této funkce načíst aktuálně vybrané položky ovládacího prvku zobrazení stromu.  
   
 ```  
@@ -1133,7 +1128,7 @@ HTREEITEM GetSelectedItem() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#24](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]  
   
-##  <a name="gettextcolor"></a>CTreeCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>  CTreeCtrl::GetTextColor  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773633), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1146,7 +1141,7 @@ COLORREF GetTextColor() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetTextColor](#settextcolor).  
   
-##  <a name="gettooltips"></a>CTreeCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CTreeCtrl::GetToolTips  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773729), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1162,7 +1157,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#25](../../mfc/reference/codesnippet/cpp/ctreectrl-class_28.cpp)]  
   
-##  <a name="getvisiblecount"></a>CTreeCtrl::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CTreeCtrl::GetVisibleCount  
  Volání této funkce se načíst počet viditelné položky v ovládacím prvku stromu zobrazení.  
   
 ```  
@@ -1175,7 +1170,7 @@ UINT GetVisibleCount() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="hittest"></a>CTreeCtrl::HitTest  
+##  <a name="hittest"></a>  CTreeCtrl::HitTest  
  Volání této funkce k určení umístění zadaná bodu relativně k klientské oblasti zobrazení ovládacího prvku strom.  
   
 ```  
@@ -1222,7 +1217,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
-##  <a name="insertitem"></a>CTreeCtrl::InsertItem  
+##  <a name="insertitem"></a>  CTreeCtrl::InsertItem  
  Volání této funkce Vložit novou položku ve stromovém zobrazení.  
   
 ```  
@@ -1295,7 +1290,7 @@ HTREEITEM InsertItem(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#27](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]  
   
-##  <a name="itemhaschildren"></a>CTreeCtrl::ItemHasChildren  
+##  <a name="itemhaschildren"></a>  CTreeCtrl::ItemHasChildren  
  Tato funkce slouží k určení, zda položka stromové struktury určeného `hItem` obsahuje podřízené položky.  
   
 ```  
@@ -1315,7 +1310,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetSelectedItem](#getselecteditem).  
   
-##  <a name="mapaccidtoitem"></a>CTreeCtrl::MapAccIdToItem  
+##  <a name="mapaccidtoitem"></a>  CTreeCtrl::MapAccIdToItem  
  Mapuje zadané usnadnění identifikátor popisovač položku zobrazení stromu v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -1326,7 +1321,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`uAccId`|Identifikátor usnadnění pro nějaký element v položce zobrazení stromu.|  
+|[v] `uAccId`|Identifikátor usnadnění pro nějaký element v položce zobrazení stromu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač položku zobrazení stromu ( `HTREEITEM`), který odpovídá `uAccId` parametr. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.  
@@ -1346,7 +1341,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
-##  <a name="mapitemtoaccid"></a>CTreeCtrl::MapItemToAccID  
+##  <a name="mapitemtoaccid"></a>  CTreeCtrl::MapItemToAccID  
  Mapuje zadaný popisovač položku zobrazení stromu v ovládacím prvku aktuální zobrazení stromu identifikátorem usnadnění.  
   
 ```  
@@ -1357,7 +1352,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Obslužná rutina položky zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
+|[v] `hItem`|Obslužná rutina položky zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Identifikátor usnadnění přístupu, která odpovídá `hItem` parametr.  
@@ -1377,7 +1372,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_31.cpp)]  
   
-##  <a name="select"></a>CTreeCtrl::Select  
+##  <a name="select"></a>  CTreeCtrl::Select  
  Volání této funkce, vyberte položku dané stromové zobrazení, přejděte do zobrazení položky nebo ho překreslit položky ve stylu slouží k určení cíl operace přetažení myší.  
   
 ```  
@@ -1393,11 +1388,11 @@ BOOL Select(
  `nCode`  
  Typ akce se má provést. Tento parametr může být jedna z následujících hodnot:  
   
-- `TVGN_CARET`Nastaví výběr na danou položku.  
+- `TVGN_CARET` Nastaví výběr na danou položku.  
   
-- `TVGN_DROPHILITE`Daná položka překreslí ve stylu slouží k určení cíl operace přetažení myší.  
+- `TVGN_DROPHILITE` Daná položka překreslí ve stylu slouží k určení cíl operace přetažení myší.  
   
-- `TVGN_FIRSTVISIBLE`Zobrazení stromu posune svisle tak, aby daná položka představuje první položku viditelné.  
+- `TVGN_FIRSTVISIBLE` Zobrazení stromu posune svisle tak, aby daná položka představuje první položku viditelné.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -1408,7 +1403,7 @@ BOOL Select(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::HitTest](#hittest).  
   
-##  <a name="selectdroptarget"></a>CTreeCtrl::SelectDropTarget  
+##  <a name="selectdroptarget"></a>  CTreeCtrl::SelectDropTarget  
  Volání této funkce můžete ho překreslit položky ve stylu slouží k určení cíl operace přetažení myší.  
   
 ```  
@@ -1425,7 +1420,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
-##  <a name="selectitem"></a>CTreeCtrl::SelectItem  
+##  <a name="selectitem"></a>  CTreeCtrl::SelectItem  
  Volání této funkce, vyberte položku dané stromové zobrazení.  
   
 ```  
@@ -1445,7 +1440,7 @@ BOOL SelectItem(HTREEITEM hItem);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
-##  <a name="selectsetfirstvisible"></a>CTreeCtrl::SelectSetFirstVisible  
+##  <a name="selectsetfirstvisible"></a>  CTreeCtrl::SelectSetFirstVisible  
  Volání této funkce můžete tak, aby daná položka se první položky zobrazené svisle posuňte zobrazení stromu.  
   
 ```  
@@ -1465,7 +1460,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]  
   
-##  <a name="setautoscrollinfo"></a>CTreeCtrl::SetAutoscrollInfo  
+##  <a name="setautoscrollinfo"></a>  CTreeCtrl::SetAutoscrollInfo  
  Nastaví počet nadřazená aktuální ovládacího prvku zobrazení stromu.  
   
 ```  
@@ -1478,8 +1473,8 @@ BOOL SetAutoscrollInfo(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`uPixelsPerSec`|Počet pixelů na posuňte za sekundu.|  
-|[v]`uUpdateTime`|Časový interval mezi aktualizace ovládacího prvku.|  
+|[v] `uPixelsPerSec`|Počet pixelů na posuňte za sekundu.|  
+|[v] `uUpdateTime`|Časový interval mezi aktualizace ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy vrátí hodnotu `true`.  
@@ -1499,7 +1494,7 @@ BOOL SetAutoscrollInfo(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_33.cpp)]  
   
-##  <a name="setbkcolor"></a>CTreeCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CTreeCtrl::SetBkColor  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773741), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1516,7 +1511,7 @@ COLORREF SetBkColor(COLORREF clr);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::SetTextColor](#settextcolor).  
   
-##  <a name="setcheck"></a>CTreeCtrl::SetCheck  
+##  <a name="setcheck"></a>  CTreeCtrl::SetCheck  
  Volání této funkce člena pro nastavení kontroly stavu pro položku ovládacího prvku strom.  
   
 ```  
@@ -1546,7 +1541,7 @@ BOOL SetCheck(
   
  [!code-cpp[NVC_MFC_CTreeCtrl#30](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]  
   
-##  <a name="setextendedstyle"></a>CTreeCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CTreeCtrl::SetExtendedStyle  
  Nastaví rozšířené styly pro ovládací prvek aktuální zobrazení stromu.  
   
 ```  
@@ -1559,8 +1554,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`dwExMask`|Bitová maska, která určuje, jaké styly v ovládacím prvku aktuální zobrazení stromu ovlivněných touto metodou. Pokud má parametr hodnotu nula, bude ignorováno a hodnota `dwExStyles` parametr je přiřazen do ovládacího prvku zobrazení stromu.<br /><br /> Zadejte nula nebo bitovou kombinaci (nebo) styly popsané v [– styly ovládacího prvku rozšířené zobrazení stromu](http://msdn.microsoft.com/library/windows/desktop/bb759981).|  
-|[v]`dwExStyles`|Bitová maska, která určuje, jaké styly v aktuálním zobrazení stromu řídit k nastavení nebo zrušení.<br /><br /> Nastavit kombinaci stylů, zadejte bitovou kombinaci (nebo) styly popsané v [– styly ovládacího prvku rozšířené zobrazení stromu](http://msdn.microsoft.com/library/windows/desktop/bb759981). Chcete-li zaškrtnutí sady stylů, zadejte nula.|  
+|[v] `dwExMask`|Bitová maska, která určuje, jaké styly v ovládacím prvku aktuální zobrazení stromu ovlivněných touto metodou. Pokud má parametr hodnotu nula, bude ignorováno a hodnota `dwExStyles` parametr je přiřazen do ovládacího prvku zobrazení stromu.<br /><br /> Zadejte nula nebo bitovou kombinaci (nebo) styly popsané v [– styly ovládacího prvku rozšířené zobrazení stromu](http://msdn.microsoft.com/library/windows/desktop/bb759981).|  
+|[v] `dwExStyles`|Bitová maska, která určuje, jaké styly v aktuálním zobrazení stromu řídit k nastavení nebo zrušení.<br /><br /> Nastavit kombinaci stylů, zadejte bitovou kombinaci (nebo) styly popsané v [– styly ovládacího prvku rozšířené zobrazení stromu](http://msdn.microsoft.com/library/windows/desktop/bb759981). Chcete-li zaškrtnutí sady stylů, zadejte nula.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota, která obsahuje předchozí rozšířené styly ovládacího prvku.  
@@ -1580,7 +1575,7 @@ DWORD SetExtendedStyle(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]  
   
-##  <a name="setimagelist"></a>CTreeCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CTreeCtrl::SetImageList  
  Volání této funkce můžete nastavit normální nebo seznamu obrázků stavu pro strom zobrazení ovládacího prvku nebo ho překreslit ovládacího prvku pomocí nových bitových kopií.  
   
 ```  
@@ -1596,9 +1591,9 @@ CImageList* SetImageList(
  `nImageListType`  
  Typ seznamu obrázků nastavit. Seznam obrázků může být jedna z následujících hodnot:  
   
-- `TVSIL_NORMAL`Nastaví normální image seznam, který obsahuje vybrané a nevybrané bitových kopií pro položky zobrazení stromu. Tento stav je nutné použít pro bitové kopie překrytí.  
+- `TVSIL_NORMAL` Nastaví normální image seznam, který obsahuje vybrané a nevybrané bitových kopií pro položky zobrazení stromu. Tento stav je nutné použít pro bitové kopie překrytí.  
   
-- `TVSIL_STATE`Nastaví seznamu obrázků stavu, který obsahuje Image pro strom zobrazit položky, které jsou ve stavu, uživatelem definované.  
+- `TVSIL_STATE` Nastaví seznamu obrázků stavu, který obsahuje Image pro strom zobrazit položky, které jsou ve stavu, uživatelem definované.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na předchozí seznamu obrázků, pokud existuje; v opačném případě **NULL**.  
@@ -1606,7 +1601,7 @@ CImageList* SetImageList(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setindent"></a>CTreeCtrl::SetIndent  
+##  <a name="setindent"></a>  CTreeCtrl::SetIndent  
  Volání této funkce můžete nastavit šířku odsazení pro ovládací prvek stromu zobrazení nebo ho překreslit ovládacího prvku tak, aby odrážely novou šířku.  
   
 ```  
@@ -1620,7 +1615,7 @@ void SetIndent(UINT nIndent);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetIndent](#getindent).  
   
-##  <a name="setinsertmark"></a>CTreeCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>  CTreeCtrl::SetInsertMark  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb773753), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1642,7 +1637,7 @@ BOOL SetInsertMark(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#31](../../mfc/reference/codesnippet/cpp/ctreectrl-class_37.cpp)]  
   
-##  <a name="setinsertmarkcolor"></a>CTreeCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>  CTreeCtrl::SetInsertMarkColor  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773755), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1659,7 +1654,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor).  
   
-##  <a name="setitem"></a>CTreeCtrl::SetItem  
+##  <a name="setitem"></a>  CTreeCtrl::SetItem  
  Volejte tuto funkci nastavit atributy položky stromové zobrazení.  
   
 ```  
@@ -1716,7 +1711,7 @@ BOOL SetItem(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#32](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]  
   
-##  <a name="setitemdata"></a>CTreeCtrl::SetItemData  
+##  <a name="setitemdata"></a>  CTreeCtrl::SetItemData  
  Volání této funkce můžete nastavit hodnotu 32-bit specifické pro aplikace přidružené k zadané položky.  
   
 ```  
@@ -1738,7 +1733,7 @@ BOOL SetItemData(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#33](../../mfc/reference/codesnippet/cpp/ctreectrl-class_39.cpp)]  
   
-##  <a name="setitemexpandedimageindex"></a>CTreeCtrl::SetItemExpandedImageIndex  
+##  <a name="setitemexpandedimageindex"></a>  CTreeCtrl::SetItemExpandedImageIndex  
  Nastaví index bitovou kopii k zobrazení, pokud zadaná položka aktuální zobrazení stromu ovládacího prvku v rozšířené stavu.  
   
 ```  
@@ -1751,11 +1746,11 @@ BOOL SetItemExpandedImageIndex(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
-|[v]`iExpandedImage`|Index bitové kopie k zobrazení, pokud zadaná položka v rozšířené stavu.|  
+|[v] `hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
+|[v] `iExpandedImage`|Index bitové kopie k zobrazení, pokud zadaná položka v rozšířené stavu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) zprávy, která je popsána v sadě Windows SDK. Tato metoda přiřadí `iExpandedImage` parametru `iExpandedImage` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) strukturu a pak používá, které struktury ve zprávě.  
@@ -1770,7 +1765,7 @@ BOOL SetItemExpandedImageIndex(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_40.cpp)]  
   
-##  <a name="setitemheight"></a>CTreeCtrl::SetItemHeight  
+##  <a name="setitemheight"></a>  CTreeCtrl::SetItemHeight  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_SETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773761), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1787,7 +1782,7 @@ SHORT SetItemHeight(SHORT cyHeight);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetItemHeight](#getitemheight).  
   
-##  <a name="setitemimage"></a>CTreeCtrl::SetItemImage  
+##  <a name="setitemimage"></a>  CTreeCtrl::SetItemImage  
  Přidruží položku bitové kopie.  
   
 ```  
@@ -1820,7 +1815,7 @@ BOOL SetItemImage(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetItemImage](#getitemimage).  
   
-##  <a name="setitemstate"></a>CTreeCtrl::SetItemState  
+##  <a name="setitemstate"></a>  CTreeCtrl::SetItemState  
  Nastaví stav položky určeného `hItem`.  
   
 ```  
@@ -1849,7 +1844,7 @@ BOOL SetItemState(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetItemState](#getitemstate).  
   
-##  <a name="setitemstateex"></a>CTreeCtrl::SetItemStateEx  
+##  <a name="setitemstateex"></a>  CTreeCtrl::SetItemStateEx  
  Nastaví stav rozšířené zadané položky v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -1862,11 +1857,11 @@ BOOL SetItemStateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
-|[v]`uStateEx`|Rozšířené stavové položky. Další informace najdete v tématu `uStateEx` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
+|[v] `hItem`|Zpracování položky ovládacího prvku zobrazení stromu.|  
+|[v] `uStateEx`|Rozšířené stavové položky. Další informace najdete v tématu `uStateEx` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `true`Pokud tato metoda je úspěšná. v opačném `false`.  
+ `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) zprávy, která je popsána v sadě Windows SDK. Tato metoda přiřadí `uStateEx` parametru `uStateEx` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) strukturu a pak používá, které struktury ve zprávě.  
@@ -1881,7 +1876,7 @@ BOOL SetItemStateEx(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]  
   
-##  <a name="setitemtext"></a>CTreeCtrl::SetItemText  
+##  <a name="setitemtext"></a>  CTreeCtrl::SetItemText  
  Nastaví text položky určeného `hItem`.  
   
 ```  
@@ -1903,7 +1898,7 @@ BOOL SetItemText(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#34](../../mfc/reference/codesnippet/cpp/ctreectrl-class_42.cpp)]  
   
-##  <a name="setlinecolor"></a>CTreeCtrl::SetLineColor  
+##  <a name="setlinecolor"></a>  CTreeCtrl::SetLineColor  
  Volání této funkce člen nastavit aktuální barvu čáry pro ovládací prvek zobrazení stromu.  
   
 ```  
@@ -1923,7 +1918,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#35](../../mfc/reference/codesnippet/cpp/ctreectrl-class_43.cpp)]  
   
-##  <a name="setscrolltime"></a>CTreeCtrl::SetScrollTime  
+##  <a name="setscrolltime"></a>  CTreeCtrl::SetScrollTime  
  Volání této funkce člen nastavení scroll maximální doby pro ovládací prvek zobrazení stromu.  
   
 ```  
@@ -1940,7 +1935,7 @@ UINT SetScrollTime(UINT uScrollTime);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy win32 [TVM_SETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773767), jak je popsáno v sadě Windows SDK.  
   
-##  <a name="settextcolor"></a>CTreeCtrl::SetTextColor  
+##  <a name="settextcolor"></a>  CTreeCtrl::SetTextColor  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773769), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1957,7 +1952,7 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#36](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]  
   
-##  <a name="settooltips"></a>CTreeCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CTreeCtrl::SetToolTips  
  Tato funkce člen implementuje chování zprávy Win32 [TVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773772), jak je popsáno v sadě Windows SDK.  
   
 ```  
@@ -1977,7 +1972,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CTreeCtrl::GetToolTips](#gettooltips).  
   
-##  <a name="showinfotip"></a>CTreeCtrl::ShowInfoTip  
+##  <a name="showinfotip"></a>  CTreeCtrl::ShowInfoTip  
  Zobrazí informační tip pro zadanou položku v ovládacím prvku aktuální zobrazení stromu.  
   
 ```  
@@ -1988,14 +1983,14 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`hItem`|Popisovač pro položku zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
+|[v] `hItem`|Popisovač pro položku zobrazení stromu v ovládacím prvku. Další informace najdete v tématu `hItem` členem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace o rozdílu mezi popisy tlačítek a infotips, naleznete v tématu "Popisy tlačítek a Infotips" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Tato metoda odesílá [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) zprávy, která je popsána v sadě Windows SDK.  
   
-##  <a name="sortchildren"></a>CTreeCtrl::SortChildren  
+##  <a name="sortchildren"></a>  CTreeCtrl::SortChildren  
  Volání této funkce abecedně seřaďte podřízené položky daného nadřazené položky v ovládacím prvku stromu zobrazení.  
   
 ```  
@@ -2010,12 +2005,12 @@ BOOL SortChildren(HTREEITEM hItem);
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- `SortChildren`nebude recurse prostřednictvím stromu; pouze bezprostředně podřízené `hItem` seřadí.  
+ `SortChildren` nebude recurse prostřednictvím stromu; pouze bezprostředně podřízené `hItem` seřadí.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTreeCtrl#37](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]  
   
-##  <a name="sortchildrencb"></a>CTreeCtrl::SortChildrenCB  
+##  <a name="sortchildrencb"></a>  CTreeCtrl::SortChildrenCB  
  Volání této funkce seřadíte položky zobrazení stromu pomocí funkce zpětné volání definované aplikací, který porovnává položky.  
   
 ```  

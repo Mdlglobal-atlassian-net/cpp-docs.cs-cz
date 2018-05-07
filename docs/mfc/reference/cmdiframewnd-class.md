@@ -1,12 +1,9 @@
 ---
-title: "CMDIFrameWnd – třída | Microsoft Docs"
-ms.custom: 
+title: CMDIFrameWnd – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd – třída
 Poskytuje funkci Windows více okna rámce rozhraní (MDI) dokumentu, společně s členů pro správu okna.  
@@ -99,7 +94,7 @@ class CMDIFrameWnd : public CFrameWnd
   
  Použití **vytvořit** – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
   
- `LoadFrame`vyžaduje argumenty méně než **vytvořit**a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Přístup `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
+ `LoadFrame` vyžaduje argumenty méně než **vytvořit**a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Přístup `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
   
  I když **MDIFrameWnd** je odvozený od `CFrameWnd`, třídy oken s rámečkem odvozené od `CMDIFrameWnd` nemusí deklarovat s `DECLARE_DYNCREATE`.  
   
@@ -141,7 +136,7 @@ class CMDIFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
+##  <a name="cmdiframewnd"></a>  CMDIFrameWnd::CMDIFrameWnd  
  Vytvoří `CMDIFrameWnd` objektu.  
   
 ```  
@@ -154,7 +149,7 @@ CMDIFrameWnd();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
+##  <a name="createclient"></a>  CMDIFrameWnd::CreateClient  
  Vytvoří okna MDI klienta, který spravuje `CMDIChildWnd` objekty.  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL CreateClient(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
+##  <a name="createnewchild"></a>  CMDIFrameWnd::CreateNewChild  
  Vytvoří nového podřízeného okna.  
   
 ```  
@@ -209,9 +204,9 @@ CMDIChildWnd* CreateNewChild(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]  
   
- V tomto příkladu je výňatek ze článku znalostní báze Q201045, "postupy: přidat více typy oken MDI Non-Document/View – aplikace." Články znalostní báze jsou k dispozici na [http://support.microsoft.com](http://support.microsoft.com/).  
+ V tomto příkladu je výňatek ze článku znalostní báze Q201045, "postupy: přidat více typy oken MDI Non-Document/View – aplikace." Články znalostní báze jsou k dispozici na [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
-##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
+##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup  
  Volání této funkce člen se získat popisovač pro aktuální místní nabídky s názvem "Okno" (místní nabídky k položkám nabídky pro Správa oken MDI).  
   
 ```  
@@ -233,7 +228,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
+##  <a name="mdiactivate"></a>  CMDIFrameWnd::MDIActivate  
  Aktivuje různých podřízeného okna MDI.  
   
 ```  
@@ -255,7 +250,7 @@ void MDIActivate(CWnd* pWndActivate);
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).  
   
-##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
+##  <a name="mdicascade"></a>  CMDIFrameWnd::MDICascade  
  Uspořádá všechny podřízených oken MDI ve formátu cascade.  
   
 ```  
@@ -273,7 +268,7 @@ void MDICascade(int nType);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
+##  <a name="mdigetactive"></a>  CMDIFrameWnd::MDIGetActive  
  Načte aktuální aktivní MDI podřízené okno, společně s příznak označující, zda je maximalizovaný podřízeného okna.  
   
 ```  
@@ -290,7 +285,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
+##  <a name="mdiiconarrange"></a>  CMDIFrameWnd::MDIIconArrange  
  Uspořádá okna podřízené všechny minimalizovaném okně dokumentu.  
   
 ```  
@@ -303,7 +298,7 @@ void MDIIconArrange();
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMDIFrameWnd::MDICascade](#mdicascade).  
   
-##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>  CMDIFrameWnd::MDIMaximize  
  Maximalizuje zadaný podřízeného okna MDI.  
   
 ```  
@@ -322,7 +317,7 @@ void MDIMaximize(CWnd* pWnd);
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
+##  <a name="mdinext"></a>  CMDIFrameWnd::MDINext  
  Aktivuje podřízeného okna hned za aktuálně aktivní podřízeného okna a umístí aktuálně aktivní podřízeného okna za všechny ostatní podřízená okna.  
   
 ```  
@@ -335,7 +330,7 @@ void MDINext();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
+##  <a name="mdiprev"></a>  CMDIFrameWnd::MDIPrev  
  Aktivuje předchozí podřízeného okna a umístí aktuálně aktivní podřízeného okna hned za.  
   
 ```  
@@ -345,7 +340,7 @@ void MDIPrev();
 ### <a name="remarks"></a>Poznámky  
  Pokud je aktuálně aktivní podřízeného okna MDI maximalizované, – členská funkce obnoví aktuálně aktivních podřízených a maximalizuje nově aktivovaný podřízené.  
   
-##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
+##  <a name="mdirestore"></a>  CMDIFrameWnd::MDIRestore  
  Podřízená okna MDI obnoví z velikost maximalizovaném okně nebo minimalizovaném okně.  
   
 ```  
@@ -359,7 +354,7 @@ void MDIRestore(CWnd* pWnd);
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).  
   
-##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
+##  <a name="mdisetmenu"></a>  CMDIFrameWnd::MDISetMenu  
  Nahradí v nabídce rámce okna MDI, v rozbalovací nabídce okno nebo obojí.  
   
 ```  
@@ -392,7 +387,7 @@ CMenu* MDISetMenu(
   
  [!code-cpp[NVC_MFCWindowing#20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
+##  <a name="mditile"></a>  CMDIFrameWnd::MDITile  
  Uspořádá okna všechny podřízené ve formátu vedle sebe.  
   
 ```  
@@ -404,11 +399,11 @@ void MDITile(int nType);
  `nType`  
  Určuje příznak vedle sebe. Tento parametr může být některého z následujících příznaků:  
   
-- `MDITILE_HORIZONTAL`Dlaždice podřízených oken MDI tak dané jeden okno se zobrazí nad jiné.  
+- `MDITILE_HORIZONTAL` Dlaždice podřízených oken MDI tak dané jeden okno se zobrazí nad jiné.  
   
-- `MDITILE_SKIPDISABLED`Zabrání zakázané podřízených oken MDI se vedle sebe.  
+- `MDITILE_SKIPDISABLED` Zabrání zakázané podřízených oken MDI se vedle sebe.  
   
-- `MDITILE_VERTICAL`Dlaždice podřízených oken MDI tak dané jeden okno se zobrazí vedle jiné.  
+- `MDITILE_VERTICAL` Dlaždice podřízených oken MDI tak dané jeden okno se zobrazí vedle jiné.  
   
 ### <a name="remarks"></a>Poznámky  
  První verze součásti `MDITile`, bez parametrů, dlaždice windows svisle v systémech Windows verze 3.1 nebo novější. Druhá verze dlaždice windows vertikálně nebo horizontálně, v závislosti na hodnotě `nType` parametr.  

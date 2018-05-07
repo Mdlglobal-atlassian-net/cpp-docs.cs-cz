@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Převádění řetězců | Microsoft Docs"
-ms.custom: 
+title: 'Windows Sockets: Převádění řetězců | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - sockets [MFC], multibyte character string conversion issues
 - string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87d200ca6c5b0b1edb003636e5f8c33570da50d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad57be68ce716cddf2ce44f12e94c545a7bbfd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: Převádění řetězců
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá převádění řetězců. Další problémy, které jsou popsané v [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).  

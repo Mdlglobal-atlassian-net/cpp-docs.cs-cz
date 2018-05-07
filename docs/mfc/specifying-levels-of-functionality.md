@@ -1,13 +1,10 @@
 ---
-title: "Určení úrovní funkčnosti | Microsoft Docs"
-ms.custom: 
+title: Určení úrovní funkčnosti | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-levels-of-functionality"></a>Určení úrovní funkčnosti
 Tento článek popisuje, jak přidat následující úrovně funkcí, které vaše [CObject](../mfc/reference/cobject-class.md)-odvozené třídy:  
@@ -43,7 +38,7 @@ Tento článek popisuje, jak přidat následující úrovně funkcí, které va�
  Obecné popis `CObject` funkce, najdete v článku [odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md).  
   
 -   [Informace o run-time třída](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a>Chcete-li přidat informace run-time třída  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> Chcete-li přidat informace run-time třída  
   
 1.  Odvození třídě z `CObject`, jak je popsáno v [odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md) článku.  
   
@@ -58,7 +53,7 @@ Tento článek popisuje, jak přidat následující úrovně funkcí, které va�
 > [!NOTE]
 >  Vždy uvést `IMPLEMENT_DYNAMIC` v souboru implementace (. CPP) pro třídu. `IMPLEMENT_DYNAMIC` – Makro by mělo být vyhodnoceno pouze jednou během kompilace a proto by neměl být použit v soubor rozhraní (. H), může potenciálně obsahovat více než jeden soubor.  
   
-#### <a name="_core_to_add_dynamic_creation_support"></a>Chcete-li přidat Podpora dynamického vytváření  
+#### <a name="_core_to_add_dynamic_creation_support"></a> Chcete-li přidat Podpora dynamického vytváření  
   
 1.  Odvození třídě z `CObject`.  
   
@@ -68,7 +63,7 @@ Tento článek popisuje, jak přidat následující úrovně funkcí, které va�
   
 4.  Použití `IMPLEMENT_DYNCREATE` makro v souboru implementace třídy.  
   
-#### <a name="_core_to_add_serialization_support"></a>Chcete-li přidat podporu serializace  
+#### <a name="_core_to_add_serialization_support"></a> Chcete-li přidat podporu serializace  
   
 1.  Odvození třídě z `CObject`.  
   

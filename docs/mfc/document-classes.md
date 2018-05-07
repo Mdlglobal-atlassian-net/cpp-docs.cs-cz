@@ -1,13 +1,10 @@
 ---
-title: "Třídy dokumentů | Microsoft Docs"
-ms.custom: 
+title: Třídy dokumentů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2436b46b7486bd30398dffc530d2adea3d2e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-classes"></a>Třídy dokumentů
 Objekty třídy dokumentu, vytvořené objekty šablony dokumentu, spravovat data aplikace. Pro vaše dokumenty budou odvození třídy z jedné z těchto tříd.  
@@ -45,7 +40,7 @@ Objekty třídy dokumentu, vytvořené objekty šablony dokumentu, spravovat dat
  Udržuje seznam položek OLE klienta, které jsou v ovládacím prvku RichEdit. Použít s [cricheditview –](../mfc/reference/cricheditview-class.md) a [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- Použít jako základní třída pro třídy dokumentů serverových aplikací. `COleServerDoc`objekty poskytují hromadným podpora serveru prostřednictvím interakce s [COleServerItem](../mfc/reference/coleserveritem-class.md) objekty. Visual úpravy funkce je k dispozici pomocí architektury dokument/zobrazení knihovny tříd.  
+ Použít jako základní třída pro třídy dokumentů serverových aplikací. `COleServerDoc` objekty poskytují hromadným podpora serveru prostřednictvím interakce s [COleServerItem](../mfc/reference/coleserveritem-class.md) objekty. Visual úpravy funkce je k dispozici pomocí architektury dokument/zobrazení knihovny tříd.  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
  Poskytuje, s [CHtmlEditView](../mfc/reference/chtmleditview-class.md), funkce úpravy platformy WebBrowser HTML v kontextu architektury MFC zobrazení dokumentu.  
@@ -56,7 +51,7 @@ Objekty třídy dokumentu, vytvořené objekty šablony dokumentu, spravovat dat
  [CArchive](../mfc/reference/carchive-class.md)  
  Spolupracuje s [cfile –](../mfc/reference/cfile-class.md) objektu k implementaci trvalého úložiště pro objekty prostřednictvím serializace (viz [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- Dokumenty může také obsahovat objekty OLE. `CDocItem`je základní třída položek serveru a klienta.  
+ Dokumenty může také obsahovat objekty OLE. `CDocItem` je základní třída položek serveru a klienta.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  Abstraktní základní třídu [COleClientItem](../mfc/reference/coleclientitem-class.md) a [COleServerItem](../mfc/reference/coleserveritem-class.md). Objekty třídy odvozené od `CDocItem` představují částí dokumentů.  

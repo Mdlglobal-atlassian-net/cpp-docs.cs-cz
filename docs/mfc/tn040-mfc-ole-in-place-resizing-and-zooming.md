@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE na místě změny velikosti a měřítka | Microsoft Docs"
-ms.custom: 
+title: 'TN040: MFC OLE na místě změny velikosti a měřítka | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: změny velikosti a měřítka na místě v prostředích MFC/OLE
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  K zobrazení příkladu správně přibližování najdete v části ukázka MFC OLE [HIERSVR](../visual-cpp-samples.md). Přiblížení a oddálení v HIERSVR ztěžuje skutečnost, že se zobrazí text a text, obecně není vhodné lineárně (pomocné parametry, typografických zásad, návrh šířky a výšky všechny zkomplikovat věci). Přesto HIERSVR je přiměřené odkaz pro implementaci přibližování správně, a stejně tak kurzu MFC [KLIKYHÁKY](../visual-cpp-samples.md) (krok 7).  
   
- `COleServerDoc::GetZoomFactor`Určuje, na faktor zvětšování na základě počtu jiné metriky dostupné z kontejneru nebo z implementace vaše `COleServerItem` a `COleServerDoc` třídy. Stručně řečeno aktuální faktor zvětšování je dáno následující vzorec:  
+ `COleServerDoc::GetZoomFactor` Určuje, na faktor zvětšování na základě počtu jiné metriky dostupné z kontejneru nebo z implementace vaše `COleServerItem` a `COleServerDoc` třídy. Stručně řečeno aktuální faktor zvětšování je dáno následující vzorec:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  ROZSAH KONTEJNERU, je trochu složitější k výpočtu. Pokud je volána kontejneru `COleServerItem::OnSetExtent` (pomocí volání `COleClientItem::SetExtent`), pak rozsah KONTEJNERU, je tato hodnota převést na pixelů na základě počtu pixelů na logický palec. Pokud kontejneru nebyla zavolána SetExtent (což se obvykle stává), pak v KONTEJNERU rozsahu je velikost vrácená z `COleServerItem::OnGetExtent`. Ano, pokud kontejneru nebyla volána SetExtent, rozhraní předpokládá, že pokud to kontejneru by mít volány ho s 100 % přirozené rozsah (hodnota vrácená z **COleServerItem::GetExtent**). Uvádí další způsob, rozhraní se předpokládá, že kontejner zobrazuje 100 % (ne více, ani méně) položky.  
   
- Je důležité si uvědomit, že i když `COleServerItem::OnSetExtent` a `COleServerItem::OnGetExtent` mají podobné názvy, není jejich zpracování stejný atribut položky. `OnSetExtent`je volána umožníte serveru vědět, kolik objektu je viditelný v kontejneru (bez ohledu na faktor zvětšování) a `OnGetExtent` volá kontejneru ideální velikost objektu.  
+ Je důležité si uvědomit, že i když `COleServerItem::OnSetExtent` a `COleServerItem::OnGetExtent` mají podobné názvy, není jejich zpracování stejný atribut položky. `OnSetExtent` je volána umožníte serveru vědět, kolik objektu je viditelný v kontejneru (bez ohledu na faktor zvětšování) a `OnGetExtent` volá kontejneru ideální velikost objektu.  
   
  Pohledem na každé rozhraní API související se situací, můžete získat lepší přehled:  
   

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCImagePaintArea | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCImagePaintArea | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f4af09ad1da91e3d59f82736ae9b240812069eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea – třída
 Poskytuje oblast obrázku, který používáte k úpravě bitovou kopii v dialogovém okně editor bitové kopie.  
@@ -90,7 +85,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afximagepaintarea.h  
   
-##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
  Vytvoří `CMFCImagePaintArea` objektu.  
   
 ```  
@@ -102,9 +97,9 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`pParentDlg`|Ukazatel na okno, které je nadřazená image editoru.|  
+|[v] `pParentDlg`|Ukazatel na okno, které je nadřazená image editoru.|  
   
-##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Načte aktuální režim kreslení.  
   
 ```  
@@ -114,7 +109,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>Návratová hodnota  
  [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.  
   
-##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
  Nastaví rastrový obrázek oblasti obrázku.  
   
 ```  
@@ -126,12 +121,12 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`pBitmap`|Nový rastrový obrázek pro zobrazení.|  
+|[v] `pBitmap`|Nový rastrový obrázek pro zobrazení.|  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud `pBitmap` je `NULL`, tato metoda nastaví velikost oblasti upravitelnými Malování na nulu. Nastaví, jinak hodnota velikosti oblasti upravitelnými Malování velikost zadaná rastrového obrázku.  
   
-##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Nastaví barvu aktuální kreslení.  
   
 ```  
@@ -143,14 +138,14 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`color`|Nové kreslení barva.|  
+|[v] `color`|Nové kreslení barva.|  
   
 ### <a name="remarks"></a>Poznámky  
  Když vyberte barvu z panelu image editor palety nebo volby barev, rozhraní volá tuto metodu za účelem aktualizace aktuální kreslení barvu. Černá je počáteční barvu kreslení ( `COLORREF` hodnota 0).  
   
  Kreslení barvu používá dialogové okno editor bitové kopie pro všechny režimy kreslení s výjimkou `IMAGE_EDIT_MODE_COLOR`. Další informace o kreslení režimy najdete v tématu [CMFCImagePaintArea::IMAGE_EDIT_MODE – výčet](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
-##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  Nastaví aktuální režim kreslení.  
   
 ```  
@@ -162,7 +157,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v]`mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.|  
+|[v] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

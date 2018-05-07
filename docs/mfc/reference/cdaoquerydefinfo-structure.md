@@ -1,13 +1,10 @@
 ---
-title: "Cdaoquerydefinfo – struktura | Microsoft Docs"
-ms.custom: 
+title: Cdaoquerydefinfo – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo – struktura
 `CDaoQueryDefInfo` Struktura obsahuje informace o objektu querydef definované pro přístup k objektům dat (DAO).  
@@ -106,7 +101,7 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>Poznámky  
  Je třída objektu querydef [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Odkazy na primární, sekundární a všechny výše označuje, jak je vrácené informace [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) členské funkce ve třídě `CDaoDatabase`.  
   
- Načte informace [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) – členská funkce je uložen v `CDaoQueryDefInfo` struktura. Volání `GetQueryDefInfo` pro objekt databáze, v jehož querydefs – kolekce querydef objekt se uloží. `CDaoQueryDefInfo`také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoQueryDefInfo` objektu. Třída `CDaoDatabase` také poskytuje členské funkce pro přímý přístup k všechny vlastnosti, vrátí se v `CDaoQueryDefInfo` objektu, takže bude pravděpodobně málokdy potřeba volat `GetQueryDefInfo`.  
+ Načte informace [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) – členská funkce je uložen v `CDaoQueryDefInfo` struktura. Volání `GetQueryDefInfo` pro objekt databáze, v jehož querydefs – kolekce querydef objekt se uloží. `CDaoQueryDefInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoQueryDefInfo` objektu. Třída `CDaoDatabase` také poskytuje členské funkce pro přímý přístup k všechny vlastnosti, vrátí se v `CDaoQueryDefInfo` objektu, takže bude pravděpodobně málokdy potřeba volat `GetQueryDefInfo`.  
   
  Když přidáte nové pole nebo objekt parametr kolekci polí nebo parametry objektu querydef, je vyvolána výjimka, pokud základní databáze nepodporuje datový typ zadaný pro nový objekt.  
   

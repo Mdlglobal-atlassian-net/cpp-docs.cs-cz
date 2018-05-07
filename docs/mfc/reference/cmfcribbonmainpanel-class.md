@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonMainPanel | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonMainPanel | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b5508abdc90c4c566d078f2f75c30822c7a18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel – třída
 Implementuje panely pásu karet, která se zobrazí po kliknutí na tlačítko [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -86,7 +81,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonMainPanel.h  
   
-##  <a name="add"></a>CMFCRibbonMainPanel::Add  
+##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
  Přidá element pásu karet do levého podokna tlačítko panelu aplikace.  
   
 ```  
@@ -94,13 +89,13 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out]`pElem`  
+ [v] [out] `pElem`  
  Ukazatel na pásu karet elementu, který chcete přidat do hlavní panel.  
   
 ### <a name="remarks"></a>Poznámky  
  Přidá element pásu karet na panel. Elementy přidané pomocí této metody bude nacházet v levém sloupci na hlavním panelu.  
   
-##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
+##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
  Přidá do nabídky seznam posledních souborů v textovém řetězci.  
   
 ```  
@@ -118,7 +113,7 @@ void AddRecentFilesList(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
+##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
  Přidá element pásu karet na dolním podokně panelu aplikace pásu karet.  
   
 ```  
@@ -126,12 +121,12 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out]`pElem`  
+ [v] [out] `pElem`  
  Ukazatel na pásu karet elementu, který chcete přidat do dolní části na hlavním panelu.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
+##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
  Přidá element pásu karet do pravého podokna tlačítko panelu aplikace.  
   
 ```  
@@ -150,7 +145,7 @@ void AddToRight(
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete přidat element pásu karet na pravém panelu. Na pravém panelu obvykle zobrazí seznam naposledy použitých souborů, ale můžete přidat jakýkoli další pásu karet prvek sem.  
   
-##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
+##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
  Vrátí obdélníku, který představuje oblasti na hlavním panelu pásu karet.  
   
 ```  

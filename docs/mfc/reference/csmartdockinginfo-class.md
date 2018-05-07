@@ -1,12 +1,9 @@
 ---
-title: "Třída CSmartDockingInfo | Microsoft Docs"
-ms.custom: 
+title: Třída CSmartDockingInfo | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2954e3fc6a0a8ee7265c5b2baa29d391aa52329c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo – třída
 Definuje vzhled elementů inteligentní značky ukotvení.  
@@ -115,7 +110,7 @@ class CSmartDockingInfo : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
  Zkopíruje aktuální inteligentní ukotvení parametry do zadaných [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objektu.  
   
 ```  
@@ -123,10 +118,10 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`params`  
+ [out] `params`  
  Objekt typu `CSmartDockingInfo` , se zobrazí v parametrech aktuální inteligentní ukotvení.  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Určuje, jestli se má použít aktuální barevný motiv při rozhraní zobrazí inteligentní značky ukotvení.  
   
 ```  
@@ -138,14 +133,14 @@ BOOL m_bUseThemeColorInShading;
   
  Výchozí hodnota je `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
  Určuje barvu pozadí základní inteligentní ukotvení značek.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
  Určuje barvu, která nahradí `m_clrToneSrc` v inteligentní ukotvení bitmap značky.  
   
 ```  
@@ -157,7 +152,7 @@ COLORREF m_clrToneDest;
   
  Chcete-li změnit barvu vlastní značky, musíte zadat oba `m_clrToneDest` a `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
  Určuje barvu inteligentního ukotvení bitmap značky.  
   
 ```  
@@ -169,7 +164,7 @@ COLORREF m_clrToneSrc;
   
  Použití `(COLORREF)-1` člen skupiny inteligentní ukotvení ponechat prázdné.  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
  Určuje barvu inteligentního ukotvení bitmap značky, když jsou transparentní.  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>Poznámky  
  Je nutné nastavit tuto hodnotu, při zobrazení vlastní značky a vlastní bitmap ve skupině ukotvení.  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
  Určuje odsazení mezi centrální skupina inteligentní značky ukotvení a hranice obdélníku centrální skupiny.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>Poznámky  
  Tuto hodnotu zadejte, pokud chcete změnit výchozí posun mezi vlastní značky a rozsah skupiny centrální inteligentní značky ukotvení. Výchozí posun je 5 pixelů.  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
  Určuje celkovou velikost ohraničující obdélník ohraničující všechny značky inteligentního ukotvení v centrální skupinu.  
   
 ```  
@@ -199,7 +194,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>Poznámky  
  Nastavit `m_sizeTotal` velikosti ohraničující obdélník centrální skupinu značky. Musíte zadat tuto hodnotu, pokud používáte vlastní bitmap pro označení.  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
  Definuje ID rastrových obrázků, které se používají pro – zvýrazněná vlastní značky inteligentního dokování prostředků.  
   
 ```  
@@ -207,7 +202,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Toto pole vyplníte ID rastrových obrázků představující inteligentní značky ukotvení prostředků. `AFX_SD_MARKERS_NUM`aktuálně je definován jako 5. Vyplňte pole následujícím způsobem:  
+ Toto pole vyplníte ID rastrových obrázků představující inteligentní značky ukotvení prostředků. `AFX_SD_MARKERS_NUM` aktuálně je definován jako 5. Vyplňte pole následujícím způsobem:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -219,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Definuje ID rastrových obrázků, které se používají pro zvýrazněná vlastní značky inteligentního ukotvení prostředků.  
   
 ```  
@@ -227,7 +222,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Toto pole vyplníte ID rastrových obrázků představující zvýrazněná inteligentních značek ukotvení prostředků. `AFX_SD_MARKERS_NUM`aktuálně je definován jako 5. Vyplňte pole následujícím způsobem:  
+ Toto pole vyplníte ID rastrových obrázků představující zvýrazněná inteligentních značek ukotvení prostředků. `AFX_SD_MARKERS_NUM` aktuálně je definován jako 5. Vyplňte pole následujícím způsobem:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   

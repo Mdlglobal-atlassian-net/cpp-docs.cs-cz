@@ -1,30 +1,25 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Přidání přizpůsobených vlastností | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Přidání přizpůsobených vlastností | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC – ovládací prvky ActiveX: Přidání přizpůsobených vlastností
 Vlastní vlastnosti se liší od uložených vlastností, že vlastní vlastnosti nejsou už implementované `COleControl` třídy. Vlastní vlastnost se používá ke zveřejnění stavu nebo vzhledu ovládacího prvku ActiveX pro programátory, pomocí ovládacího prvku.  
@@ -53,7 +48,7 @@ Vlastní vlastnosti se liší od uložených vlastností, že vlastní vlastnost
   
      Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (někdy nazývané vlastnost pole) slouží pro přístup k sadu hodnot prostřednictvím jedné vlastnosti ovládacího prvku. Makro položka mapy odeslání pro tuto implementaci je `DISP_PROPERTY_PARAM`. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v článku – ovládací prvky ActiveX: Advanced témata.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>Pomocí Průvodce přidáním vlastnosti přidat vlastní vlastnosti  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Pomocí Průvodce přidáním vlastnosti přidat vlastní vlastnosti  
  Následující postup předvádí, přidání vlastní vlastnosti, CircleOffset, který používá implementace metody Get/Set. Vlastní vlastnost CircleOffset umožňuje uživatelům ovládacího prvku posun kruhu z centra ohraničující obdélník ovládacího prvku. Je velmi podobný postup pro přidání vlastních vlastností s implementace než metody Get/Set.  
   
  Stejný postup lze také přidat další požadované vlastní vlastnosti. Nahraďte název vlastní vlastnost pro název vlastnosti CircleOffset a parametry.  
@@ -80,7 +75,7 @@ Vlastní vlastnosti se liší od uložených vlastností, že vlastní vlastnost
   
 9. Klikněte na tlačítko **Dokončit**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>Přidat vlastnost průvodce změní pro vlastní vlastnosti  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Přidat vlastnost průvodce změní pro vlastní vlastnosti  
  Když přidáte vlastní vlastnost CircleOffset, Průvodce přidáním vlastnosti provede změny v hlavičce (. H) a implementaci (. Soubory CPP) třídy ovládacího prvku.  
   
  Následující řádky jsou přidány do. Soubor H deklarovat dvě funkce volané `GetCircleOffset` a `SetCircleOffset`:  

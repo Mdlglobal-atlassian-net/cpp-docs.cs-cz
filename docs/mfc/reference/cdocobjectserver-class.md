@@ -1,12 +1,9 @@
 ---
-title: "Třída CDocObjectServer | Microsoft Docs"
-ms.custom: 
+title: Třída CDocObjectServer | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocObjectServer
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnApplyViewState
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912262c4f1ba85c181bb30ee5d6f38a0defe5d5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer – třída
 Implementuje rozhraní OLE další potřebné ke změně normální `COleDocument` serveru do celého serveru DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, a `IPrint`.  
@@ -69,7 +64,7 @@ class CDocObjectServer : public CCmdTarget
 |[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|Uloží stav DocObject zobrazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDocObjectServer`je odvozený od `CCmdTarget` a úzce spolupracuje s `COleServerDoc` vystavit rozhraní.  
+ `CDocObjectServer` je odvozený od `CCmdTarget` a úzce spolupracuje s `COleServerDoc` vystavit rozhraní.  
   
  Dokument DocObject serveru může obsahovat [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) objekty, které představují rozhraní serveru DocObject položek.  
   
@@ -91,7 +86,7 @@ class CDocObjectServer : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdocob.h  
   
-##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
+##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject  
  Volání této funkce můžete aktivovat (ale nezobrazovat) serveru objektu dokumentu.  
   
 ```  
@@ -99,11 +94,11 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `ActivateDocObject`volání `IOleDocumentSite`na **ActivateMe** metoda, ale nezobrazuje zobrazení, protože se čeká na konkrétní pokyny o tom, jak nastavit a zobrazit, zadaný ve volání [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` volání `IOleDocumentSite`na **ActivateMe** metoda, ale nezobrazuje zobrazení, protože se čeká na konkrétní pokyny o tom, jak nastavit a zobrazit, zadaný ve volání [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Společně `ActivateDocObject` a `OnActivateView` aktivovat a zobrazit DocObject. Aktivace DocObject se liší od jiných druhů OLE – aktivace na místě. Aktivace DocObject obchází zobrazení ohraničení šrafování na místě a vylepšení objektu (například úchyty), ignoruje objektu rozsah funkcí a nevykresluje posuvníky v rámci obdélník zobrazení a kreslení je mimo obdélníku (jako normální aktivace na místě).  
   
-##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
+##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer  
  Vytvoří a inicializuje `CDocObjectServer` objektu.  
   
 ```  
@@ -122,7 +117,7 @@ explicit CDocObjectServer(
 ### <a name="remarks"></a>Poznámky  
  Když je aktivní DocObject, klient lokality rozhraní OLE ( `IOleDocumentSite`) je co umožňuje serveru DocObject ke komunikaci s svého klienta (kontejner). Při aktivaci serveru DocObject nejdřív zkontroluje, že kontejner implementuje `IOleDocumentSite` rozhraní. Pokud ano, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) je volána, pokud kontejner podporuje DocObjects. Ve výchozím nastavení `GetDocObjectServer` vrátí **NULL**. Je nutné přepsat `COleServerDoc::GetDocObjectServer` vytvořit novou `CDocObjectServer` objekt nebo objekt odvozené vlastní, ukazatele na `COleServerDoc` kontejner a jeho `IOleDocumentSite` rozhraní jako argumenty pro konstruktor.  
   
-##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
+##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView  
  Volání této funkce Zobrazit DocObject.  
   
 ```  
@@ -135,7 +130,7 @@ virtual HRESULT OnActivateView();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce vytvoří okno s rámečkem na místě, nevykresluje posuvníky v rámci zobrazení, nastaví nabídky serveru sdílí s jeho kontejneru, přidá rámce ovládací prvky, nastaví objekt aktivní, pak nakonec zobrazuje okně s rámečkem na místě a nastaví fokus.  
   
-##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
+##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState  
  Funkci k obnovení stavu zobrazení DocObject přepište.  
   
 ```  
@@ -147,11 +142,11 @@ virtual void OnApplyViewState(CArchive& ar);
  A `CArchive` objekt, ze kterého k serializaci stav zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je volána, když se zobrazuje zobrazení poprvé po jeho vytvoření instance. `OnApplyViewState`dá pokyn zobrazení znovu inicializovat samotné podle dat v `CArchive` objekt dříve uložit s [OnSaveViewState](#onsaveviewstate). Zobrazení musí ověřit data v `CArchive` objekt, protože kontejneru nebude pokoušet o interpretovat data o stavu zobrazit libovolným způsobem.  
+ Tato funkce je volána, když se zobrazuje zobrazení poprvé po jeho vytvoření instance. `OnApplyViewState` dá pokyn zobrazení znovu inicializovat samotné podle dat v `CArchive` objekt dříve uložit s [OnSaveViewState](#onsaveviewstate). Zobrazení musí ověřit data v `CArchive` objekt, protože kontejneru nebude pokoušet o interpretovat data o stavu zobrazit libovolným způsobem.  
   
  Můžete použít `OnSaveViewState` k uložení trvalé informace specifické pro vaše zobrazení stavu. Pokud přepíšete `OnSaveViewState` k ukládání informací, můžete přepsat `OnApplyViewState` a přečtěte si tyto informace platí pro zobrazení, když je nově aktivován.  
   
-##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
+##  <a name="onsaveviewstate"></a>  CDocObjectServer::OnSaveViewState  
  Přepsání této funkci můžete uložit informace o zobrazení DocObject navíc stavu.  
   
 ```  

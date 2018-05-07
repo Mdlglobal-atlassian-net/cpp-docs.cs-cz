@@ -1,13 +1,10 @@
 ---
-title: "Použití tříd pro psaní aplikací pro Windows | Microsoft Docs"
-ms.custom: 
+title: Použití tříd pro psaní aplikací pro Windows | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a8edcabee2f835bd3a3acd0ff3789690764c397
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa126f2772e1672a1484453fdffdd487b6c45959
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Použití tříd pro psaní aplikací pro Windows
 Dohromady třídy v knihovně Microsoft Foundation Class (MFC) tvoří "aplikační rozhraní," na kterém vytváříte aplikaci pro operační systém Windows. Velmi obecné úrovni rozhraní definuje kostru aplikace a poskytuje implementace standardní uživatelského rozhraní, které se dají umístit do kostru. Je vaše úloha jako programátory vyplnit zbytek kostru, které jsou všechny tyto věci, které jsou specifické pro vaši aplikaci. Začít můžete získat pomocí Průvodce aplikací MFC k vytvoření těchto souborů pro velmi důkladné Startovní aplikace. Implementace logika specifické pro aplikaci pomocí Microsoft Visual C++ editory prostředků vizuálně, navrhnout vaše prvky uživatelského rozhraní zobrazení tříd příkazů pro připojení k kód a knihovna tříd těchto elementů.  

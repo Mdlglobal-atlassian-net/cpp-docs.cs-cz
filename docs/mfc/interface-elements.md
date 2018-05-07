@@ -1,30 +1,25 @@
 ---
-title: "Prvky rozhraní | Microsoft Docs"
-ms.custom: 
+title: Prvky rozhraní | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>Prvky rozhraní
 Tento dokument popisuje elementy rozhraní, které byly zavedeny v [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 a také popisuje rozdíly mezi starší verzi knihovny.  
@@ -49,7 +44,7 @@ Tento dokument popisuje elementy rozhraní, které byly zavedeny v [!INCLUDE[vs_
  Ukotvení lokality (nebo hlavního rámce okna) vlastní všechny podokna a okna s rámečkem zkrácená v aplikaci. Ukotvení lokalita obsahuje [CDockingManager](../mfc/reference/cdockingmanager-class.md) člen. Tento člen udržuje seznam všech podokna, které patří k webu ukotvení. Seznam tak, aby podokna vytvořený v částí webu ukotvení jsou umístěny na začátku seznamu. Když rozhraní ho překreslí webu ukotvení, cyklicky prochází přes tento seznam a upraví rozložení jednotlivých panelech zahrnout aktuální ohraničující obdélník webu ukotvení. Můžete volat `AdjustDockingLayout` nebo `RecalcLayout` když budete muset upravit ukotvení rozložení a rozhraní přesměruje volání správce ukotvení.  
   
 ## <a name="dock-bars"></a>Ukotvení pruhy  
- Každý hlavní rámec okna, můžete umístit *ukotvení řádky* podél jeho hranice. Ukotvení panelu je podokno, které patří [CDockSite třída](../mfc/reference/cdocksite-class.md). Ukotvení řádky může přijmout objekty, které jsou odvozené z [CPane](../mfc/reference/cpane-class.md), jako je například panely nástrojů. Chcete-li vytvořit panely ukotvení při inicializaci hlavního okna rámce, volejte `EnableDocking`. Chcete-li povolit automatické skrýt řádky, volejte `EnableAutoHideBars`. `EnableAutoHideBars`vytvoří [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objekty a jejich umisťuje vedle jednotlivých ukotvení panelu.  
+ Každý hlavní rámec okna, můžete umístit *ukotvení řádky* podél jeho hranice. Ukotvení panelu je podokno, které patří [CDockSite třída](../mfc/reference/cdocksite-class.md). Ukotvení řádky může přijmout objekty, které jsou odvozené z [CPane](../mfc/reference/cpane-class.md), jako je například panely nástrojů. Chcete-li vytvořit panely ukotvení při inicializaci hlavního okna rámce, volejte `EnableDocking`. Chcete-li povolit automatické skrýt řádky, volejte `EnableAutoHideBars`. `EnableAutoHideBars` vytvoří [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objekty a jejich umisťuje vedle jednotlivých ukotvení panelu.  
   
  Každý ukotvení panelu je rozdělena na řádky ukotvení. Ukotvení řádky jsou reprezentované pomocí [CDockingPanesRow třída](../mfc/reference/cdockingpanesrow-class.md). Každý řádek ukotvení obsahuje seznam panely nástrojů. Pokud uživatel ukotvené panelu nástrojů nebo Přesune panel nástrojů z jeden řádek do jiné v rámci stejné ukotvení panelu, rozhraní framework vytvoří nový řádek a odpovídajícím způsobem změní na ukotvení panelu, nebo ji umisťuje panelu nástrojů na stávající řádek.  
   
@@ -66,7 +61,7 @@ Tento dokument popisuje elementy rozhraní, které byly zavedeny v [!INCLUDE[vs_
  Ve výchozím nastavení každý `CDockablePane` podporuje funkci automaticky skrýt. Když uživatel klikne na tlačítko PIN kód na titulek `CDockablePane`, v podokně rozhraní se přepne do režimu automaticky skrýt. Pro zpracování kliknutím na možnost, vytvoří rozhraní [CMFCAutoHideBar – třída](../mfc/reference/cmfcautohidebar-class.md) a [CMFCAutoHideButton třída](../mfc/reference/cmfcautohidebutton-class.md) přidružené `CMFCAutoHideBar` objektu. Rozhraní framework vloží novou `CMFCAutoHideBar` na [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). Rozhraní framework také připojí `CMFCAutoHideButton` na panelu nástrojů. [CDockingManager třída](../mfc/reference/cdockingmanager-class.md) udržuje `CDockablePane`.  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Ovládací pruhy s kartami a Outlook řádky  
- [CMFCBaseTabCtrl třída](../mfc/reference/cmfcbasetabctrl-class.md) implementuje základní funkce okno s kartami odpojitelných karty. Použít `CMFCBaseTabCtrl` objektu, inicializovat [CBaseTabbedPane třída](../mfc/reference/cbasetabbedpane-class.md) ve vaší aplikaci. `CBaseTabbedPane`je odvozený od `CDockablePane` a uchovává ukazatel `CMFCBaseTabCtrl` objektu. `CBaseTabbedPane` Umožňuje uživatelům ukotvení a změňte velikost záložkách ovládací pruhy. Použití [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) vytvořit dynamicky ovládací pruhy, které jsou ukotvena a na kartách.  
+ [CMFCBaseTabCtrl třída](../mfc/reference/cmfcbasetabctrl-class.md) implementuje základní funkce okno s kartami odpojitelných karty. Použít `CMFCBaseTabCtrl` objektu, inicializovat [CBaseTabbedPane třída](../mfc/reference/cbasetabbedpane-class.md) ve vaší aplikaci. `CBaseTabbedPane` je odvozený od `CDockablePane` a uchovává ukazatel `CMFCBaseTabCtrl` objektu. `CBaseTabbedPane` Umožňuje uživatelům ukotvení a změňte velikost záložkách ovládací pruhy. Použití [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) vytvořit dynamicky ovládací pruhy, které jsou ukotvena a na kartách.  
   
  Ovládací prvek panelu aplikace Outlook je také založená na záložkách řádky. [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md) je odvozený od `CBaseTabbedPane`. Další informace o tom, jak pomocí Outlooku panelu najdete v tématu [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md).  
   

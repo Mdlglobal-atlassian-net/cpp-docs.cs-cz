@@ -1,13 +1,10 @@
 ---
-title: "Stránky vlastností (MFC) | Microsoft Docs"
-ms.custom: 
+title: Stránky vlastností (MFC) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53260457470ef75ac706779cea323aa5b73da2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0895cd22870b3a4a266e9be12f0000fae7f7101a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-mfc"></a>Stránky vlastností (MFC)
 Stránky vlastností zobrazí aktuální hodnoty konkrétní vlastnosti ovládacích prvků OLE přizpůsobitelné, grafické rozhraní pro prohlížení a úpravy díky podpoře dat mapování mechanismus založený na výměna dialogových dat (DDX).  
@@ -60,7 +55,7 @@ Stránky vlastností zobrazí aktuální hodnoty konkrétní vlastnosti ovládac
 |[END_PROPPAGEIDS –](#end_proppageids)|Ukončí seznam identifikátorů stránky vlastností.|  
 |[PROPPAGEID –](#proppageid)|Deklaruje stránky vlastností třídy ovládacího prvku.|  
   
-##  <a name="ddp_cbindex"></a>Ddp_cbindex –  
+##  <a name="ddp_cbindex"></a>  Ddp_cbindex –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce synchronizovat hodnotu vlastnosti celé číslo s indexem aktuální výběr v poli se seznamem na stránce vlastností.  
   
 ```   
@@ -90,7 +85,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>Ddp_cbstring –  
+##  <a name="ddp_cbstring"></a>  Ddp_cbstring –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce k synchronizaci s aktuálním výběrem pole se seznamem na stránce vlastností hodnotu vlastnosti řetězce.  
   
 ```  
@@ -120,7 +115,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>Ddp_cbstringexact –  
+##  <a name="ddp_cbstringexact"></a>  Ddp_cbstringexact –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce synchronizace hodnotu vlastnosti řetězce, který přesně odpovídá aktuální výběr v poli se seznamem na stránce vlastností.  
   
 ```  
@@ -150,7 +145,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_check"></a>Ddp_check –  
+##  <a name="ddp_check"></a>  Ddp_check –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce synchronizace hodnotu vlastnosti s ovládací prvek zaškrtávací políčko stránky přidružené vlastnosti.  
   
 ```   
@@ -180,7 +175,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>Ddp_lbindex –  
+##  <a name="ddp_lbindex"></a>  Ddp_lbindex –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce synchronizovat hodnotu vlastnosti celé číslo s indexem aktuální výběr v seznamu na stránce vlastností.  
   
 ```   
@@ -210,7 +205,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>Ddp_lbstring –  
+##  <a name="ddp_lbstring"></a>  Ddp_lbstring –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce k synchronizaci s aktuálním výběrem v seznamu na stránce vlastností hodnotu vlastnosti řetězce.  
   
 ```   
@@ -240,7 +235,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>Ddp_lbstringexact –  
+##  <a name="ddp_lbstringexact"></a>  Ddp_lbstringexact –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce synchronizace hodnotu vlastnosti řetězce, který přesně odpovídá aktuální výběr v seznamu na stránce vlastností.  
   
 ```   
@@ -270,7 +265,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>Ddp_postprocessing –  
+##  <a name="ddp_postprocessing"></a>  Ddp_postprocessing –  
  Volání této funkce na stránce vlastností `DoDataExchange` funkce ukončíte přenos hodnot vlastností na stránce vlastností do vlastního ovládacího prvku, pokud hodnoty vlastnosti jsou uloženy.  
   
 ```   
@@ -289,7 +284,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_radio"></a>Ddp_radio –  
+##  <a name="ddp_radio"></a>  Ddp_radio –  
  Volání této funkce ve vašem ovládacím prvku `DoPropExchange` funkce synchronizovat hodnotu vlastnosti se přidružené vlastnosti stránky ovládací prvek přepínač.  
   
 ```   
@@ -319,7 +314,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="ddp_text"></a>Ddp_text –  
+##  <a name="ddp_text"></a>  Ddp_text –  
  Volání této funkce ve vašem ovládacím prvku `DoDataExchange` funkce synchronizace hodnotu vlastnosti s ovládacím prvkem přidružené vlastnosti stránky.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS –  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS –  
  Zahájí definici ovládacího prvku seznam identifikátorů stránky vlastností.  
   
 ```   
@@ -402,7 +397,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
  *class_name*  
  Název třídy ovládacího prvku pro vlastností, které jsou určené stránky.  
   
- *počet*  
+ *Počet*  
  Počet stránek vlastností, které používá třída ovládacích prvků.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -413,7 +408,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS –  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS –  
  Ukončí definici vašeho seznamu ID stránky vlastností.  
   
 ```   
@@ -427,7 +422,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID –  
+##  <a name="proppageid"></a>  PROPPAGEID –  
  Stránky vlastností pro použití se přidá váš ovládací prvek OLE.  
   
 ```   

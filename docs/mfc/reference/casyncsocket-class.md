@@ -1,12 +1,9 @@
 ---
-title: "CAsyncSocket – třída | Microsoft Docs"
-ms.custom: 
+title: CAsyncSocket – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaefa40be2a6cf1d57326c2135d848fa08dbc87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket – třída
 Představuje Windows soketu – koncový bod síťové komunikace.  
@@ -187,7 +182,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
  Volání této funkce člen přijmout připojení na soket.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL Accept(
   
 - **WSAEMFILE** je fronta prázdná při vstupu, tak, aby přijímal a nejsou k dispozici žádné popisovače.  
   
-- `WSAENOBUFS`Vyrovnávací paměť není k dispozici.  
+- `WSAENOBUFS` Vyrovnávací paměť není k dispozici.  
   
 - **WSAENOTSOCK** popisovač není soket.  
   
@@ -235,7 +230,7 @@ virtual BOOL Accept(
   
  Argument `lpSockAddr` je parametr výsledek, který obsahuje adresu připojování soketu jako ví, že komunikace vrstvy. **Přijměte** je třeba použít s typy založeného na připojení soketu **SOCK_STREAM**.  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  Volání této funkce člen požádat o oznámení události pro soket.  
   
 ```  
@@ -270,9 +265,9 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 - **WSAEINPROGRESS** blokování Windows Sockets operace probíhá.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce slouží k určení, které funkce MFC zpětné volání oznámení bude volána pro soket. `AsyncSelect`automaticky nastaví tato soketu neblokový režimu. Další informace najdete v článku [Windows Sockets: oznámení soketů](../../mfc/windows-sockets-socket-notifications.md).  
+ Tato funkce slouží k určení, které funkce MFC zpětné volání oznámení bude volána pro soket. `AsyncSelect` automaticky nastaví tato soketu neblokový režimu. Další informace najdete v článku [Windows Sockets: oznámení soketů](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
  Volání této funkce člen připojit `hSocket` popisovače `CAsyncSocket` objektu.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL Attach(
 ### <a name="remarks"></a>Poznámky  
  **SOKETU** popisovač je uložený v objektu [m_hSocket](#m_hsocket) – datový člen.  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
  Volání této funkce člena pro přidružení místní adresu soketu.  
   
 ```  
@@ -349,14 +344,14 @@ BOOL Bind (
   
 - **WSAEINVAL** soket je již vázána na adresu.  
   
-- `WSAENOBUFS`Nedostatek vyrovnávací paměti k dispozici příliš mnoho připojení.  
+- `WSAENOBUFS` Nedostatek vyrovnávací paměti k dispozici příliš mnoho připojení.  
   
 - **WSAENOTSOCK** popisovač není soket.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato rutina se používá na nepřipojené datagram nebo datový proud soketu před následné **připojit** nebo `Listen` volání. Předtím, než může přijímat žádosti o připojení, naslouchá server soketu musí vybrat číslo portu a nastavit ho známé rozhraní Windows Sockets voláním **vazby**. **Vytvoření vazby** vytvoří místní přidružení (číslo adresy a portu hostitele) soketu přiřazením místní název nepojmenované soketu.  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
  Vytvoří objekt prázdné soketu.  
   
 ```  
@@ -366,7 +361,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>Poznámky  
  Po vytváření objektu, musí volat jeho **vytvořit** – členská funkce vytvořit **SOKETU** datové struktury a vytvořte vazbu adresy. (Na straně serveru Windows Sockets komunikace, když vytváří naslouchání soketu soket pro použití v **přijmout** volání, nevolejte **vytvořit** této soketu.)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>  CAsyncSocket::Close  
  Zavře soketu.  
   
 ```  
@@ -378,7 +373,7 @@ virtual void Close();
   
  Pro `CAsyncSocket`, ale ne pro `CSocket`, sémantika **Zavřít** jsou ovlivněné možnosti soketu **SO_LINGER** a **SO_DONTLINGER**. Další informace najdete v tématu – členská funkce `GetSockOpt`.  
   
-##  <a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>  CAsyncSocket::Connect  
  Volání této funkce člen k navázání připojení k bez připojení datového proudu nebo datagram soketu.  
   
 ```  
@@ -434,7 +429,7 @@ BOOL Connect(
   
 - **WSAENETUNREACH** síti není dosažitelné z tohoto hostitele v tuto chvíli.  
   
-- `WSAENOBUFS`Vyrovnávací paměť není k dispozici. Soket nemůže být připojen.  
+- `WSAENOBUFS` Vyrovnávací paměť není k dispozici. Soket nemůže být připojen.  
   
 - **WSAENOTSOCK** popisovač není soket.  
   
@@ -449,7 +444,7 @@ BOOL Connect(
   
  Datagram soketu (typ **SOCK_DGRAM**), výchozí cíl nastavená, který se použije při následných **odeslat** a **Receive** volání.  
   
-##  <a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>  CAsyncSocket::Create  
  Volání **vytvořit** – členská funkce poté, co vytvořen objekt soketu se vytvořit soket Windows a jeho připojení.  
   
 ```  
@@ -498,7 +493,7 @@ BOOL Create(
   
 - **WSAEMFILE** jsou k dispozici žádné další popisovače souborů.  
   
-- `WSAENOBUFS`Vyrovnávací paměť není k dispozici. Nelze vytvořit soket.  
+- `WSAENOBUFS` Vyrovnávací paměť není k dispozici. Nelze vytvořit soket.  
   
 - **WSAEPROTONOSUPPORT** nepodporuje zadaný port.  
   
@@ -521,14 +516,14 @@ BOOL Create(
   
  Další informace o sokety datového proudu a datagram, najdete v článcích [Windows Sockets: pozadí](../../mfc/windows-sockets-background.md) a [Windows Sockets: porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md) a [2rozhraníAPIsystémuWindowsSockets](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
  Volání této funkce člen odpojit **SOKETU** zpracování v `m_hSocket` – datový člen z `CAsyncSocket` objektu a nastavte `m_hSocket` k **NULL**.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
  Vrátí ukazatel na `CAsyncSocket` objektu.  
   
 ```  
@@ -545,7 +540,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>Poznámky  
  Při zadané **SOKETU** zpracování, pokud `CAsyncSocket` objektu není připojený k popisovač, vrátí funkce člen **NULL**.  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
  Volání této funkce člen získat stav chyby poslední operace, která se nezdařila.  
   
 ```  
@@ -560,7 +555,7 @@ static int PASCAL GetLastError();
   
  Další informace o chybových kódech najdete v tématu [rozhraní API systému Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Volání této funkce člen získat adresu soketu sdílené, ke kterému je připojený tento soketu.  
   
 ```  
@@ -605,7 +600,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>Poznámky  
  Chcete-li zpracovat adresy IPv6, použijte [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
  Volání této funkce člen získat adresu partnera soketu, ke kterému je tento soketu připojené (popisovačů adresy IPv6).  
   
 ```  
@@ -639,7 +634,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je stejný jako [CAsyncSocket::GetPeerName](#getpeername) s tím rozdílem, že zpracovává IPv6 adres i starší protokoly.  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
  Volání této funkce člen získat místní název pro soket.  
   
 ```  
@@ -686,7 +681,7 @@ BOOL GetSockName(
   
  Chcete-li zpracovat adresy IPv6, použijte [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
  Volání této funkce člen získat název místního soketu (popisovačů adresy IPv6).  
   
 ```  
@@ -722,7 +717,7 @@ BOOL GetSockNameEx(
   
  Toto volání je obzvláště užitečná při **připojit** aniž by to byl proveden volání **vazby** nejprve; toto volání poskytuje pouze prostředky, pomocí kterého můžete určit místní přidružení, která byla nastavena pomocí systém.  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
  Volání této funkce člen načíst možnost soketu.  
   
 ```  
@@ -762,7 +757,7 @@ BOOL GetSockOpt(
 - **WSAENOTSOCK** popisovač není soket.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetSockOpt`načte aktuální hodnota možnosti soketu přidružená k soketu libovolného typu, v libovolném stavu a ukládá výsledky v `lpOptionValue`. Možnosti ovlivňují soketů operace, například směrování paketů, přenos dat out-of-band a tak dále.  
+ `GetSockOpt` načte aktuální hodnota možnosti soketu přidružená k soketu libovolného typu, v libovolném stavu a ukládá výsledky v `lpOptionValue`. Možnosti ovlivňují soketů operace, například směrování paketů, přenos dat out-of-band a tak dále.  
   
  Jsou podporovány následující možnosti pro `GetSockOpt`. Typ jsou uvedeny typy dat používala `lpOptionValue`. **TCP_NODELAY** možnost používá úroveň **IPPROTO_TCP**; všechny ostatní možnosti použít úroveň **SOL_SOCKET**.  
   
@@ -796,7 +791,7 @@ BOOL GetSockOpt(
   
  Volání metody `GetSockOpt` s Nepodporovaná možnost bude mít za následek chybový kód **WSAENOPROTOOPT** návratu z `GetLastError`.  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
  Volání této funkce člen k řízení režimu soketu.  
   
 ```  
@@ -836,7 +831,7 @@ BOOL IOCtl(
   
  Tato funkce je podmnožinou **ioctl()** v rámci Berkeley sokety. Zejména, neexistuje žádný příkaz, který je ekvivalentní **FIOASYNC**, zatímco **SIOCATMARK** je příkaz pouze soketu úrovni, který není podporován.  
   
-##  <a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>  CAsyncSocket::Listen  
  Volání této funkce člen naslouchat pro příchozí požadavky na připojení.  
   
 ```  
@@ -864,27 +859,27 @@ BOOL Listen(int nConnectionBacklog = 5);
   
 - **WSAEMFILE** jsou k dispozici žádné další popisovače souborů.  
   
-- `WSAENOBUFS`Vyrovnávací paměť není k dispozici.  
+- `WSAENOBUFS` Vyrovnávací paměť není k dispozici.  
   
 - **WSAENOTSOCK** popisovač není soket.  
   
 - **WSAEOPNOTSUPP** odkazované soketu není typu, který podporuje `Listen` operaci.  
   
 ### <a name="remarks"></a>Poznámky  
- Přijmout připojení, je prvním vytvoření soketu s **vytvořit**, nevyřízených položek pro příchozí připojení je definován s `Listen`, a pak přijímat připojení jsou s **přijmout**. `Listen`platí pouze pro soketů, které podporují připojení, který je typu **SOCK_STREAM**. Tato soketu je uvést do "pasivní" režim, kde jsou příchozí připojení potvrzeny a ve frontě čekajících přijetí procesem.  
+ Přijmout připojení, je prvním vytvoření soketu s **vytvořit**, nevyřízených položek pro příchozí připojení je definován s `Listen`, a pak přijímat připojení jsou s **přijmout**. `Listen` platí pouze pro soketů, které podporují připojení, který je typu **SOCK_STREAM**. Tato soketu je uvést do "pasivní" režim, kde jsou příchozí připojení potvrzeny a ve frontě čekajících přijetí procesem.  
   
  Tato funkce se obvykle používá servery (nebo jakékoli aplikace, která chce, aby se tak, aby přijímal připojení), může mít více než jeden požadavek na připojení najednou: Pokud dorazí požadavek na připojení s úplné fronty, klient se zobrazí chyba s uvedením  **WSAECONNREFUSED**.  
   
- `Listen`pokusí se i nadále fungovat nejracionálnější, pokud nejsou dostupné žádné porty (popisovače). Dokud vyprázdnění fronty se bude akceptovat připojení. Pokud porty k dispozici, novější volání `Listen` nebo **přijmout** doplnění fronty k aktuální nebo poslední "backlogu,", pokud je to možné a pokračovat v čekání na příchozí připojení.  
+ `Listen` pokusí se i nadále fungovat nejracionálnější, pokud nejsou dostupné žádné porty (popisovače). Dokud vyprázdnění fronty se bude akceptovat připojení. Pokud porty k dispozici, novější volání `Listen` nebo **přijmout** doplnění fronty k aktuální nebo poslední "backlogu,", pokud je to možné a pokračovat v čekání na příchozí připojení.  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
  Obsahuje **SOKETU** zpracování soketu zapouzdřené to `CAsyncSocket` objektu.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
  Voláno rámcem oznámit naslouchání soketu, který může přijmout čekající žádosti o připojení pomocí volání [přijmout](#accept) – členská funkce.  
   
 ```  
@@ -902,7 +897,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [Windows Sockets: oznámení soketů](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
  Voláno rámcem upozornit tento soketu, zpracování uzavřené připojené soketu.  
   
 ```  
@@ -924,7 +919,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [Windows Sockets: oznámení soketů](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
  Voláno rámcem tento připojování soketu oznámit, že skončí její pokus o připojení, ať už úspěšně nebo chyba.  
   
 ```  
@@ -957,7 +952,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAENETUNREACH** síti není dosažitelné z tohoto hostitele v tuto chvíli.  
   
-- `WSAENOBUFS`Vyrovnávací paměť není k dispozici. Soket nemůže být připojen.  
+- `WSAENOBUFS` Vyrovnávací paměť není k dispozici. Soket nemůže být připojen.  
   
 - **WSAENOTCONN** soket není připojen.  
   
@@ -975,7 +970,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
  Voláno rámcem přijímající soketu, který odesílání soketu má out-of-band data k odeslání oznámení.  
   
 ```  
@@ -995,7 +990,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC podporuje out-of-band data, ale uživatelé třídy `CAsyncSocket` se nedoporučuje v jeho použití. Jednodušší způsob je vytvořit druhý soket pro předávání taková data. Další informace o datech out-of-band najdete v tématu [Windows Sockets: oznámení soketů](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
  Voláno rámcem upozornit tento soketu se data ve vyrovnávací paměti, který může načíst volání **Receive** – členská funkce.  
   
 ```  
@@ -1016,7 +1011,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
  Voláno rámcem oznámit soket, kterou nyní odesílat data volání **odeslat** – členská funkce.  
   
 ```  
@@ -1037,7 +1032,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
  Přiřadí novou hodnotu k `CAsyncSocket` objektu.  
   
 ```  
@@ -1051,7 +1046,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce můžete zkopírovat stávající `CAsyncSocket` objektu na jiný `CAsyncSocket` objektu.  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator SOKETŮ  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOKETŮ  
  Tento operátor umožňuje načíst **SOKETU** zpracování z `CAsyncSocket` objektu.  
   
 ```  
@@ -1064,7 +1059,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>Poznámky  
  Popisovač můžete přímo volat rozhraní API systému Windows.  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
  Volání této funkce člena na příjem dat ze soketu.  
   
 ```  
@@ -1129,7 +1124,7 @@ virtual int Receive(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
  Volání této funkce člen přijmout datagram a ukládání zdrojovou adresu v [sockaddr –](../../mfc/reference/sockaddr-structure.md) struktura nebo v `rSocketAddress`.  
   
 ```  
@@ -1217,7 +1212,7 @@ int ReceiveFrom(
   
  Pokud je časový limit soketu typu **SOCK_STREAM** a na vzdálené straně má řádné ukončení připojení, `ReceiveFrom` dokončí okamžitě s 0 bajtů přijatých.  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
  Volání této funkce člen přijmout datagram a ukládání zdrojovou adresu v [sockaddr –](../../mfc/reference/sockaddr-structure.md) struktura nebo v `rSocketAddress` (zpracovává adresy IPv6).  
   
 ```  
@@ -1291,7 +1286,7 @@ int ReceiveFromEx(
   
  Pokud je časový limit soketu typu **SOCK_STREAM** a na vzdálené straně má řádné ukončení připojení, `ReceiveFromEx` dokončí okamžitě s 0 bajtů přijatých.  
   
-##  <a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>  CAsyncSocket::Send  
  Volání této funkce člen odeslat data na připojených soketu.  
   
 ```  
@@ -1330,7 +1325,7 @@ virtual int Send(
   
 - **WSAENETRESET** připojení, musí se obnovit, protože implementace rozhraní Windows Sockets ho vyřadit.  
   
-- `WSAENOBUFS`Implementace rozhraní Windows Sockets hlásí zablokování vyrovnávací paměti.  
+- `WSAENOBUFS` Implementace rozhraní Windows Sockets hlásí zablokování vyrovnávací paměti.  
   
 - **WSAENOTCONN** soket není připojen.  
   
@@ -1360,7 +1355,7 @@ virtual int Send(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAsyncSocket::OnSend](#onsend).  
   
-##  <a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>  CAsyncSocket::SendTo  
  Volání této funkce člen k odesílání dat na určité cíle.  
   
 ```  
@@ -1423,7 +1418,7 @@ int SendTo(
   
 - **WSAENETRESET** připojení, musí se obnovit, protože implementace rozhraní Windows Sockets ho vyřadit.  
   
-- `WSAENOBUFS`Implementace rozhraní Windows Sockets hlásí zablokování vyrovnávací paměti.  
+- `WSAENOBUFS` Implementace rozhraní Windows Sockets hlásí zablokování vyrovnávací paměti.  
   
 - **WSAENOTCONN** soket není připojen ( **SOCK_STREAM** pouze).  
   
@@ -1450,17 +1445,17 @@ int SendTo(
 - **WSAENETUNREACH** síti není dosažitelné z tohoto hostitele v tuto chvíli.  
   
 ### <a name="remarks"></a>Poznámky  
- `SendTo`se používá na sokety datagramů nebo datový proud a slouží k zápisu odchozích dat na soket. Pro sokety datagramu, se musí věnovat nepřesahující maximální velikost paketu IP základní podsítě, která je **iMaxUdpDg** element v [wsadata –](../../mfc/reference/wsadata-structure.md) struktura vyplňuje [ Afxsocketinit –](../../mfc/reference/application-information-and-management.md#afxsocketinit). Pokud data je příliš dlouhý a předáte atomicky základního protokolu chyba **WSAEMSGSIZE** se vrátí, a je odesláno žádná data.  
+ `SendTo` se používá na sokety datagramů nebo datový proud a slouží k zápisu odchozích dat na soket. Pro sokety datagramu, se musí věnovat nepřesahující maximální velikost paketu IP základní podsítě, která je **iMaxUdpDg** element v [wsadata –](../../mfc/reference/wsadata-structure.md) struktura vyplňuje [ Afxsocketinit –](../../mfc/reference/application-information-and-management.md#afxsocketinit). Pokud data je příliš dlouhý a předáte atomicky základního protokolu chyba **WSAEMSGSIZE** se vrátí, a je odesláno žádná data.  
   
  Všimněte si, že úspěšné dokončení `SendTo` nevyplývá, že data byla úspěšně doručena.  
   
- `SendTo`používá se jenom na **SOCK_DGRAM** soketu odeslat datagram na konkrétní soket identifikovaný `lpSockAddr` parametr.  
+ `SendTo` používá se jenom na **SOCK_DGRAM** soketu odeslat datagram na konkrétní soket identifikovaný `lpSockAddr` parametr.  
   
  K odeslání vysílání (na **SOCK_DGRAM** pouze), adresu v `lpSockAddr` parametr by měl vytvořená pomocí speciální IP adresy **INADDR_BROADCAST** (definovanou v hlavičce Windows Sockets soubor rozhraní WINSOCK. H) společně s určený port číslo. Nebo, pokud `lpszHostAddress` parametr **NULL**, soketu je nakonfigurován pro všesměrové vysílání. Je obecně není vhodné pro všesměrového vysílání datagram překročení velikosti, kdy může docházet k fragmentace, což naznačuje, že data část datagram (s výjimkou hlavičky) by neměl být delší než 512 bajtů.  
   
  Chcete-li zpracovat adresy IPv6, použijte [CAsyncSocket::SendToEx](#sendtoex).  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
  Volání této funkce člen k odesílání dat na určité cílové místo (popisovačů adresy IPv6).  
   
 ```  
@@ -1509,7 +1504,7 @@ int SendToEx(
   
 - **WSAENETRESET** připojení, musí se obnovit, protože implementace rozhraní Windows Sockets ho vyřadit.  
   
-- `WSAENOBUFS`Implementace rozhraní Windows Sockets hlásí zablokování vyrovnávací paměti.  
+- `WSAENOBUFS` Implementace rozhraní Windows Sockets hlásí zablokování vyrovnávací paměti.  
   
 - **WSAENOTCONN** soket není připojen ( **SOCK_STREAM** pouze).  
   
@@ -1538,15 +1533,15 @@ int SendToEx(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je stejný jako [CAsyncSocket::SendTo](#sendto) s tím rozdílem, že zpracovává IPv6 adres i starší protokoly.  
   
- `SendToEx`se používá na sokety datagramů nebo datový proud a slouží k zápisu odchozích dat na soket. Pro sokety datagramu, se musí věnovat nepřesahující maximální velikost paketu IP základní podsítě, která je **iMaxUdpDg** element v [wsadata –](../../mfc/reference/wsadata-structure.md) struktura vyplňuje [ Afxsocketinit –](../../mfc/reference/application-information-and-management.md#afxsocketinit). Pokud data je příliš dlouhý a předáte atomicky základního protokolu chyba **WSAEMSGSIZE** se vrátí, a je odesláno žádná data.  
+ `SendToEx` se používá na sokety datagramů nebo datový proud a slouží k zápisu odchozích dat na soket. Pro sokety datagramu, se musí věnovat nepřesahující maximální velikost paketu IP základní podsítě, která je **iMaxUdpDg** element v [wsadata –](../../mfc/reference/wsadata-structure.md) struktura vyplňuje [ Afxsocketinit –](../../mfc/reference/application-information-and-management.md#afxsocketinit). Pokud data je příliš dlouhý a předáte atomicky základního protokolu chyba **WSAEMSGSIZE** se vrátí, a je odesláno žádná data.  
   
  Všimněte si, že úspěšné dokončení `SendToEx` nevyplývá, že data byla úspěšně doručena.  
   
- `SendToEx`používá se jenom na **SOCK_DGRAM** soketu odeslat datagram na konkrétní soket identifikovaný `lpSockAddr` parametr.  
+ `SendToEx` používá se jenom na **SOCK_DGRAM** soketu odeslat datagram na konkrétní soket identifikovaný `lpSockAddr` parametr.  
   
  K odeslání vysílání (na **SOCK_DGRAM** pouze), adresu v `lpSockAddr` parametr by měl vytvořená pomocí speciální IP adresy **INADDR_BROADCAST** (definovanou v hlavičce Windows Sockets soubor rozhraní WINSOCK. H) společně s určený port číslo. Nebo, pokud `lpszHostAddress` parametr **NULL**, soketu je nakonfigurován pro všesměrové vysílání. Je obecně není vhodné pro všesměrového vysílání datagram překročení velikosti, kdy může docházet k fragmentace, což naznačuje, že data část datagram (s výjimkou hlavičky) by neměl být delší než 512 bajtů.  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
  Volání této funkce člen nastavit možnost soketu.  
   
 ```  
@@ -1592,9 +1587,9 @@ BOOL SetSockOpt(
 - **WSAENOTSOCK** popisovač není soket.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetSockOpt`Nastaví aktuální hodnotu pro možnost soketu, přidružená k soketu libovolného typu, v libovolném stavu. I když možnosti může existovat na více úrovních protokol, definuje tato specifikace pouze možnosti, které existují na úrovni nejvyšší "soketu". Možnosti ovlivňují soketů operace, např. zda rychlé přijatá data v normálním datový proud, zda lze odesílat na soket zprávy všesměrového vysílání a tak dále.  
+ `SetSockOpt` Nastaví aktuální hodnotu pro možnost soketu, přidružená k soketu libovolného typu, v libovolném stavu. I když možnosti může existovat na více úrovních protokol, definuje tato specifikace pouze možnosti, které existují na úrovni nejvyšší "soketu". Možnosti ovlivňují soketů operace, např. zda rychlé přijatá data v normálním datový proud, zda lze odesílat na soket zprávy všesměrového vysílání a tak dále.  
   
- Existují dva typy možností soketu: logická hodnota možnosti, které povolí nebo zakáže funkce nebo chování a možnosti, které vyžadují celočíselná hodnota nebo struktura. Logická hodnota možnost, povolit `lpOptionValue` odkazuje na nenulové hodnoty v celé číslo. Chcete-li zakázat možnost `lpOptionValue` odkazuje na celé číslo, která je rovna hodnotě nula. `nOptionLen`musí být roven **sizeof(BOOL)** logická hodnota možnosti. Pro další možnosti `lpOptionValue` odkazuje na celé číslo nebo struktura, která obsahuje požadovanou hodnotu pro možnost a `nOptionLen` je délka celé číslo nebo strukturu.  
+ Existují dva typy možností soketu: logická hodnota možnosti, které povolí nebo zakáže funkce nebo chování a možnosti, které vyžadují celočíselná hodnota nebo struktura. Logická hodnota možnost, povolit `lpOptionValue` odkazuje na nenulové hodnoty v celé číslo. Chcete-li zakázat možnost `lpOptionValue` odkazuje na celé číslo, která je rovna hodnotě nula. `nOptionLen` musí být roven **sizeof(BOOL)** logická hodnota možnosti. Pro další možnosti `lpOptionValue` odkazuje na celé číslo nebo struktura, která obsahuje požadovanou hodnotu pro možnost a `nOptionLen` je délka celé číslo nebo strukturu.  
   
  **SO_LINGER** ovládací prvky akce při unsent data je do fronty na soket a **zavřete** funkce je volána, zavřete soketu.  
   
@@ -1637,7 +1632,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|Typ soketu.|  
 |**IP_OPTIONS**||Nastavte možnosti pole v hlavičce protokolu IP.|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
  Volání odešle tento – členská funkce zakázat, obdrží, nebo obojí na soketu.  
   
 ```  
@@ -1670,7 +1665,7 @@ BOOL ShutDown(int nHow = sends);
 - **WSAENOTSOCK** popisovač není soket.  
   
 ### <a name="remarks"></a>Poznámky  
- `ShutDown`se používá na všech typech sockets zakázat příjem, přenos nebo obojí. Pokud `nHow` je 0, následných obdrží na soket bude zakázán. Tato akce nemá vliv na nižších vrstvách protokolu.  
+ `ShutDown` se používá na všech typech sockets zakázat příjem, přenos nebo obojí. Pokud `nHow` je 0, následných obdrží na soket bude zakázán. Tato akce nemá vliv na nižších vrstvách protokolu.  
   
  Změnit není okno TCP pro protokol TCP (Transmission Control), a příchozích dat bude přijato (ale ne potvrzené) až do vyčerpání okna. Pro protokol UDP (User Datagram), příchozí datagramy jsou přijaty a zařazených do fronty. V žádném případě bude paketu ICMP chybě vygenerována. Pokud `nHow` je 1, následných zasílá nejsou povoleny. Sokety TCP bude odeslána najít. Nastavení `nHow` 2 zakáže oba odešle a přijme, jak je popsáno výše.  
   
@@ -1679,7 +1674,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>  CASyncSocket::Socket  
  Přiděluje popisovač soketu.  
   
 ```  

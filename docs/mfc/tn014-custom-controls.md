@@ -1,13 +1,10 @@
 ---
-title: "TN014: Vlastní ovládací prvky | Microsoft Docs"
-ms.custom: 
+title: 'TN014: Vlastní ovládací prvky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 Tato poznámka popisuje Podpora MFC pro samoobslužné vykreslování a vlastní ovládací prvky. Také popisuje dynamické vytváření podtříd a popisuje vztah mezi [CWnd](../mfc/reference/cwnd-class.md) objekty a `HWND`s.  
@@ -128,15 +123,15 @@ Tato poznámka popisuje Podpora MFC pro samoobslužné vykreslování a vlastní
   
  Existují tři běžné způsoby, které se týkají:  
   
-- `CWnd`vytvoří `HWND`. Můžete změnit chování v odvozené třídě vytvořením třídy odvozené od `CWnd`. `HWND` Se vytvoří, když aplikace volá [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
+- `CWnd` vytvoří `HWND`. Můžete změnit chování v odvozené třídě vytvořením třídy odvozené od `CWnd`. `HWND` Se vytvoří, když aplikace volá [CWnd::Create](../mfc/reference/cwnd-class.md#create).  
   
 -   Aplikace připojí `CWnd` na stávající `HWND`. Chování existující okna se nemění. Toto je případ delegování a je možné díky volání [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias stávající `HWND` k `CWnd` objektu.  
   
-- `CWnd`je připojena k existující `HWND` a můžete změnit chování v odvozené třídě. Tomu se říká dynamické vytvoření podtřídy, protože jsme se změna chování a proto třídu objektu systému Windows v době běhu.  
+- `CWnd` je připojena k existující `HWND` a můžete změnit chování v odvozené třídě. Tomu se říká dynamické vytvoření podtřídy, protože jsme se změna chování a proto třídu objektu systému Windows v době běhu.  
   
  Dynamické vytváření podtříd můžete dosáhnout pomocí metody [CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) a[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).  
   
- Připojte oba rutiny `CWnd` objekt, který má na existující `HWND`. `SubclassWindow`provede `HWND` přímo. `SubclassDlgItem`je pomocné funkce, která přebírá ID ovládacího prvku a nadřazeného okna. `SubclassDlgItem`je určený pro připojení objekty C++ pro ovládací prvky dialogového okna, které jsou vytvořené z šablony dialogového okna.  
+ Připojte oba rutiny `CWnd` objekt, který má na existující `HWND`. `SubclassWindow` provede `HWND` přímo. `SubclassDlgItem` je pomocné funkce, která přebírá ID ovládacího prvku a nadřazeného okna. `SubclassDlgItem` je určený pro připojení objekty C++ pro ovládací prvky dialogového okna, které jsou vytvořené z šablony dialogového okna.  
   
  Najdete v článku [CTRLTEST](../visual-cpp-samples.md) příklad několik příkladů použití `SubclassWindow` a `SubclassDlgItem`.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonStatusBar | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonStatusBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar – třída
 `CMFCRibbonStatusBar` Třída implementuje ovládacích prvků na panelu stavu, která může zobrazovat prvky pásu karet.  
@@ -145,7 +140,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribbonstatusbar.h  
   
-##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
+##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement  
  Přidá element dynamické stavového pásu karet.  
   
 ```  
@@ -153,13 +148,13 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pElement`  
+ [v] `pElement`  
  Ukazatel na dynamické elementu.  
   
 ### <a name="remarks"></a>Poznámky  
  Na rozdíl od regulární elementy dynamických elementů nejsou přizpůsobitelné a v nabídce Upravit stavový řádek je nezobrazí.  
   
-##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
+##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement  
  Přidá nového elementu pásu karet na stavovém řádku pásu karet.  
   
 ```  
@@ -170,16 +165,16 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pElement`  
+ [v] `pElement`  
  Ukazatel na přidaný prvek.  
   
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Text popisku elementu.  
   
- [v]`bIsVisible`  
- `TRUE`Pokud chcete přidat jako viditelná, element `FALSE` Pokud chcete přidat prvek jako skrytá.  
+ [v] `bIsVisible`  
+ `TRUE` Pokud chcete přidat jako viditelná, element `FALSE` Pokud chcete přidat prvek jako skrytá.  
   
-##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
+##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Přidá element pásu karet do oblasti rozšířené stavového řádku pásu karet.  
   
 ```  
@@ -190,19 +185,19 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pElement`  
+ [v] `pElement`  
  Ukazatel na přidaný prvek.  
   
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Textový popisek elementu.  
   
- [v]`bIsVisible`  
- `TRUE`Pokud chcete přidat jako viditelná, element `FALSE` Pokud chcete přidat prvek jako skrytá.  
+ [v] `bIsVisible`  
+ `TRUE` Pokud chcete přidat jako viditelná, element `FALSE` Pokud chcete přidat prvek jako skrytá.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozšířené oblast je na pravé straně ovládacího panelu stavu.  
   
-##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
+##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator  
  Přidá Oddělovač stavového pásu karet.  
   
 ```  
@@ -212,7 +207,7 @@ void AddSeparator();
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework přidá oddělovače za metodu [CMFCRibbonStatusBar::AddElement](#addelement). Vloží posledním elementem.  
   
-##  <a name="create"></a>CMFCRibbonStatusBar::Create  
+##  <a name="create"></a>  CMFCRibbonStatusBar::Create  
  Vytvoří stavového řádku pásu karet.  
   
 ```  
@@ -223,19 +218,19 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Logická nebo kombinace styly ovládacího prvku.  
   
- [v]`nID`  
+ [v] `nID`  
  ID ovládacího prvku na stavovém řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud stavový řádek je vytvořen úspěšně, `FALSE` jinak.  
+ `TRUE` Pokud stavový řádek je vytvořen úspěšně, `FALSE` jinak.  
   
-##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
+##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx  
  Vytvoří stavového řádku pásu karet, který má rozšířené stylu.  
   
 ```  
@@ -260,9 +255,9 @@ BOOL CreateEx(
  ID ovládacího prvku na stavovém řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud stavový řádek je vytvořen úspěšně, `FALSE` jinak.  
+ `TRUE` Pokud stavový řádek je vytvořen úspěšně, `FALSE` jinak.  
   
-##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -270,14 +265,14 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
- [v]`BOOL`  
+ [v] `uiCmdID`  
+ [v] `BOOL`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
+##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement  
  Vrací ukazatel na elementu, který má zadaný příkaz ID.  
   
 ```  
@@ -285,13 +280,13 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiID`  
+ [v] `uiID`  
  ID elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na elementu, který má zadaný příkaz ID. `NULL`Pokud neexistuje žádný takový prvek.  
+ Ukazatel na elementu, který má zadaný příkaz ID. `NULL` Pokud neexistuje žádný takový prvek.  
   
-##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount  
  Vrátí počet prvků, které se nacházejí v oblasti hlavního panelu Stav pásu karet.  
   
 ```  
@@ -301,7 +296,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet elementů, které se nacházejí v oblasti hlavního panelu Stav pásu karet.  
   
-##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
+##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement  
  Vrací ukazatel na element, který se nachází na zadaný index.  
   
 ```  
@@ -309,15 +304,15 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Určuje index počítaný od nuly elementu, který je umístěný v oblasti hlavního panelu řízení stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na element, který se nachází v zadaném indexu. `NULL`Pokud index je záporný nebo větší než počet elementů ve stavovém řádku.  
+ Ukazatel na element, který se nachází v zadaném indexu. `NULL` Pokud index je záporný nebo větší než počet elementů ve stavovém řádku.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
+##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount  
  Vrátí počet prvků, které se nacházejí v oblasti rozšířené stavového řádku pásu karet.  
   
 ```  
@@ -327,7 +322,7 @@ int GetExCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet elementů, které se nacházejí v oblasti rozšířené stavového řádku pásu karet.  
   
-##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
+##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement  
  Vrací ukazatel na element, který se nachází na zadaný index v oblasti rozšířené stavového řádku pásu karet. Rozšířené oblast je na pravé straně ovládacího panelu stavu.  
   
 ```  
@@ -335,15 +330,15 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Určuje index elementu, který je umístěný v oblasti rozšířené ovládacího panelu Stav založený na nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na element, který se nachází na zadaný index v oblasti rozšířené stavového řádku pásu karet. `NULL`Pokud `nIndex` je záporný nebo větší než počet elementů v oblasti rozšířené stavového řádku pásu karet.  
+ Ukazatel na element, který se nachází na zadaný index v oblasti rozšířené stavového řádku pásu karet. `NULL` Pokud `nIndex` je záporný nebo větší než počet elementů v oblasti rozšířené stavového řádku pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -351,13 +346,13 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -368,7 +363,7 @@ int GetSpace() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -379,7 +374,7 @@ BOOL IsBottomFrame() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -387,13 +382,13 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pElement`  
+ [v] `pElement`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
+##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode  
  Určuje, jestli je povolený režim informace na pásu karet stavový řádek.  
   
 ```  
@@ -401,12 +396,12 @@ BOOL IsInformationMode() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud stavový řádek můžete pracovat v režimu informace; v opačném případě `FALSE`.  
+ `TRUE` Pokud stavový řádek můžete pracovat v režimu informace; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  V režimu informace stavového řádku skryje všechny regulární podokna a zobrazí řetězec zprávy.  
   
-##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
+##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation  
  Zobrazí řetězec, který se zobrazí na pásu karet stavovém řádku když je povolený režim informace.  
   
 ```  
@@ -417,19 +412,19 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`strInfo`  
+ [v] `strInfo`  
  Informace o řetězce.  
   
- [v]`rectInfo`  
+ [v] `rectInfo`  
  Ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled řetězec informací na stavovém řádku. Použití [CMFCRibbonStatusBar::SetInformation](#setinformation) metoda uvést do režimu informace na stavovém řádku. V tomto režimu se na stavovém řádku skryje všechny podokna a zobrazí informace o řetězec určený `strInfo`.  
   
-##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -438,14 +433,14 @@ virtual void RecalcLayout();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll  
  Odebere všechny elementy z pásu karet stavový řádek.  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
+##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement  
  Odebere element, který má zadaný příkaz ID z pásu karet stavový řádek.  
   
 ```  
@@ -453,13 +448,13 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiID`  
+ [v] `uiID`  
  ID elementu k odebrání stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud element se zadaným `uiID` se odebere. `FALSE`jinak.  
+ `TRUE` Pokud element se zadaným `uiID` se odebere. `FALSE` jinak.  
   
-##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
+##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Povolí nebo zakáže režimu informace na pásu karet stavový řádek.  
   
 ```  
@@ -467,7 +462,7 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszInfo`  
+ [v] `lpszInfo`  
  Informace o řetězce.  
   
 ### <a name="remarks"></a>Poznámky  

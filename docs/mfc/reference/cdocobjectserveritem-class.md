@@ -1,12 +1,9 @@
 ---
-title: "Třída CDocObjectServerItem | Microsoft Docs"
-ms.custom: 
+title: Třída CDocObjectServerItem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7627fbc7cb5d36bd82e130264d2653d5a8464545
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem – třída
 Implementuje server OLE příkazy speciálně pro DocObject servery.  
@@ -66,7 +61,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|Voláno rámcem, aby DocObject položky místní active. Pokud položka není DocObject, zavolá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDocObjectServerItem`Definuje přepisovatelné členské funkce: [skrytí](#onhide), [při otevření](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), a [viditelnost](#onshow).  
+ `CDocObjectServerItem` Definuje přepisovatelné členské funkce: [skrytí](#onhide), [při otevření](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), a [viditelnost](#onshow).  
   
  Použít `CDocObjectServerItem`, zajistil, který [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) potlačení v vaše `COleServerDoc`-odvozené třídě vrátí novou `CDocObjectServerItem` objektu. Pokud potřebujete změnit všechny funkce v dané položce, můžete vytvořit novou instanci třídy vlastní `CDocObjectServerItem`-odvozené třídy.  
   
@@ -86,7 +81,7 @@ class CDocObjectServerItem : public COleServerItem
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdocob.h  
   
-##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem  
  Vytvoří `CDocObjectServerItem` objektu.  
   
 ```  
@@ -100,7 +95,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  Určuje, zda lze po vydání odkazu na Odstranit objekt. Argument na **FALSE** Pokud `CDocObjectServerItem` objekt je nedílnou součástí vašeho dokumentu data. Nastavte ji na **TRUE** Pokud se objekt sekundární struktura použít k identifikaci rozsah v datech vašeho dokumentu, který může odstranit rozhraní.  
   
-##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
  Načte ukazatel na dokument, který obsahuje položku.  
   
 ```  
@@ -113,7 +108,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Poznámky  
  To umožňuje přístup k dokumentu serveru, který můžete předat jako argument k [CDocObjectServerItem](#cdocobjectserveritem) konstruktor.  
   
-##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
  Voláno rámcem skrytí položky.  
   
 ```  
@@ -123,7 +118,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace vyvolá výjimku, pokud je položka DocObject. Aktivní DocObject položku nelze skrýt, protože trvá celého zobrazení. Je nutné deaktivovat položce DocObject zmizí. Pokud položka není DocObject, výchozí implementace volá [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
-##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
  Voláno rámcem dáte pokyn, aby serverová aplikace, aby DocObject položky místní active.  
   
 ```  

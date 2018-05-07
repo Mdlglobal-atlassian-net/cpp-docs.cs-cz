@@ -1,13 +1,10 @@
 ---
-title: "Principy panelů nástrojů | Microsoft Docs"
-ms.custom: 
+title: Principy panelů nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RT_TOOLBAR
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 Tento článek popisuje základní implementace MFC, která umožňuje přidat výchozí panel nástrojů k vaší aplikaci výběrem možnosti v Průvodci aplikací. Obsahuje následující témata:  
@@ -52,14 +47,14 @@ Tento článek popisuje základní implementace MFC, která umožňuje přidat v
   
 -   [Více panelů nástrojů](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a>Možnost aplikace Průvodce panelu nástrojů  
+##  <a name="_core_the_appwizard_toolbar_option"></a> Možnost aplikace Průvodce panelu nástrojů  
  Chcete-li získat jeden panel nástrojů s výchozích tlačítek, vyberte možnost Standardní ukotvení panelu nástrojů na stránce s názvem bez přípony funkce uživatelského rozhraní. Tento postup přidá kódu do vaší aplikace který:  
   
 -   Vytvoří objekt panelu nástrojů.  
   
 -   Spravuje panelu nástrojů, včetně jeho schopnost ukotvení nebo float.  
   
-##  <a name="_core_the_toolbar_in_code"></a>Panelu nástrojů v kódu  
+##  <a name="_core_the_toolbar_in_code"></a> Panelu nástrojů v kódu  
  Panel nástrojů je [ctoolbar –](../mfc/reference/ctoolbar-class.md) objekt deklarován jako datový člen vaší aplikace **CMainFrame** třídy. Jinými slovy je objekt nástrojů vložený objekt hlavního rámce okna. To znamená, že MFC vytvoří panelu nástrojů při vytvoří okně s rámečkem a zničí panelu nástrojů, když ho zničí rámce okna. Následující prohlášení třídu pro více aplikací rozhraní (MDI) dokumentu ukazuje datových členů pro embedded panelu nástrojů a embedded stavový řádek. Také ukazuje přepis metody `OnCreate` – členská funkce.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
@@ -77,7 +72,7 @@ Tento článek popisuje základní implementace MFC, která umožňuje přidat v
   
  Ukotvení, číslo s plovoucí čárkou a nástroj tipy volání jsou volitelné. Můžete odebrat tyto řádky z `OnCreate` Pokud dáváte přednost. Výsledkem je zbývající pevné, nelze float nebo redock a nelze zobrazit popisy tlačítek panelu nástrojů.  
   
-##  <a name="_core_editing_the_toolbar_resource"></a>Úpravy prostředek panelu nástrojů  
+##  <a name="_core_editing_the_toolbar_resource"></a> Úpravy prostředek panelu nástrojů  
  Výchozí panel nástrojů získáte pomocí Průvodce aplikací je založena na **rt_toolbar –** vlastní prostředek, zavedená v prostředí MFC verze 4.0. Můžete upravit tento prostředek s [editor panelu nástrojů](../windows/toolbar-editor.md). Editor umožňuje snadno přidat, odstranit a změna uspořádání tlačítek. Obsahuje grafický editor pro tlačítka, který je velmi podobný editor obecné grafiky v jazyce Visual C++. Pokud jste upravili panely nástrojů v předchozích verzích Visual C++, najdete v ní úlohu mnohem snazší teď.  
   
  Tlačítka panelu nástrojů připojit k příkazu, dáváte tlačítko ID příkazu, například `ID_MYCOMMAND`. Zadejte ID příkazu, který na stránce vlastností tlačítka v editoru panelu nástrojů. Pak vytvořte obslužnou rutinu pro příkaz (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md) Další informace).  
@@ -86,7 +81,7 @@ Tento článek popisuje základní implementace MFC, která umožňuje přidat v
   
  Podrobnosti o použití editoru panelu nástrojů najdete v tématu [Editor panelu nástrojů](../windows/toolbar-editor.md).  
   
-##  <a name="_core_multiple_toolbars"></a>Více panelů nástrojů  
+##  <a name="_core_multiple_toolbars"></a> Více panelů nástrojů  
  Průvodce aplikací poskytuje jedno panelu nástrojů. Pokud potřebujete více než jeden panelu nástrojů v aplikaci, můžete model kódu pro další panely nástrojů na základě vygenerované Průvodcem kódu pro výchozí panel nástrojů.  
   
  Pokud chcete zobrazit panel nástrojů v důsledku příkaz, musíte:  

@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Pozadí | Microsoft Docs"
-ms.custom: 
+title: 'Windows Sockets: Pozadí | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Pozadí
 Tento článek popisuje povahu a účel rozhraní Windows Sockets. Tento článek také:  
@@ -62,7 +57,7 @@ Tento článek popisuje povahu a účel rozhraní Windows Sockets. Tento článe
 > [!TIP]
 >  Protože sokety používají sadu protokolů sítě Internet, jsou upřednostňovanou trasou pro aplikace, které podporují komunikaci na Internetu prostřednictvím „informační dálnice“.  
   
-##  <a name="_core_definition_of_a_socket"></a>Definice soket  
+##  <a name="_core_definition_of_a_socket"></a> Definice soket  
  Soket je koncový bod komunikace – objekt, jehož prostřednictvím aplikace rozhraní Windows Sockets odesílá nebo přijímá pakety dat v síti. Soket má typ, je přidružen ke spuštěnému procesu a může mít název. V současné době sokety obecně vyměňují data pouze s jinými sokety ve stejné „doméně komunikace“, která používá sadu protokolů sítě Internet.  
   
  Oba druhy soketů jsou obousměrné. Jsou to datové toky, kterými lze komunikovat současně v obou směrech (plně duplexní).  
@@ -84,12 +79,12 @@ Tento článek popisuje povahu a účel rozhraní Windows Sockets. Tento článe
   
  Informace o těchto typech a jaký druh soketu používat v situacích, které, najdete v článku [Windows Sockets: sokety datového proudu](../mfc/windows-sockets-stream-sockets.md) a [Windows Sockets: sokety datagramů](../mfc/windows-sockets-datagram-sockets.md).  
   
-##  <a name="_core_the_socket_data_type"></a>Datový typ SOKETŮ  
+##  <a name="_core_the_socket_data_type"></a> Datový typ SOKETŮ  
  Každý objekt soketu knihovny MFC zapouzdřuje popisovač objektu rozhraní Windows Sockets. Datový typ tento popisovač je **SOKETU**. A **SOKETU** obslužná rutina je podobná `HWND` v časovém období. Třídy soketů knihovny MFC poskytují operace zapouzdřené popisovačem.  
   
  **SOKETU** datový typ je podrobně popsaná v ve Windows SDK. Další informace naleznete v části „Datový typ soketu a chybové hodnoty“ v tématu Rozhraní Windows Sockets.  
   
-##  <a name="_core_uses_for_sockets"></a>Používá pro Sockets  
+##  <a name="_core_uses_for_sockets"></a> Používá pro Sockets  
  Sokety jsou velmi užitečné v nejméně třech kontextech komunikace:  
   
 -   Modely klient/server.  

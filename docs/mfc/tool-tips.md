@@ -1,13 +1,10 @@
 ---
-title: "Nástroj tipy | Microsoft Docs"
-ms.custom: 
+title: Nástroj tipy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - buttons [MFC], tool tips
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a2d1c22255342d41e03c41892f2b21ea76b1e2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tool-tips"></a>Popisy tlačítek
 Postupy jsou jedinečné pro přidávání popisů tlačítek do ovládacích prvků obsažené v systému windows odvozené z třídy knihovny MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) a systému windows není odvozen od `CFrameWnd`.  

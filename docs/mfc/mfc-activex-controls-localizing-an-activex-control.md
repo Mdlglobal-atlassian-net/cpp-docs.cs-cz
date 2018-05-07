@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Lokalizace ovládacího prvku ActiveX | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Lokalizace ovládacího prvku ActiveX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Lokalizace ovládacího prvku ActiveX
 Tento článek popisuje postupy pro lokalizace rozhraní ovládacího prvku ActiveX.  
@@ -52,7 +47,7 @@ Tento článek popisuje postupy pro lokalizace rozhraní ovládacího prvku Acti
   
  Zbývající část tohoto článku popisuje dva lokalizace strategie. První strategie [lokalizováno programovatelnosti rozhraní ovládacího prvku](#_core_localizing_your_control.92.s_programmability_interface) (názvy vlastností, metod a událostí). Druhý strategie [lokalizováno uživatelské rozhraní ovládacího prvku](#_core_localizing_the_control.92.s_user_interface), pomocí kontejneru – vedlejší vlastnost identifikátor národního prostředí. Ukázka lokalizace ovládacího prvku, najdete v části Ukázka ovládací prvky MFC ActiveX [LOCALIZE](../visual-cpp-samples.md).  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>Lokalizace programovatelnosti rozhraní ovládacího prvku  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalizace programovatelnosti rozhraní ovládacího prvku  
  Při lokalizaci programovatelnosti rozhraní ovládacího prvku (rozhraní používané programátory, kteří vytvářejí aplikace, které používají vlastní ovládací prvek), je nutné vytvořit upravenou verzi ovládacího prvku. IDL souboru (skriptu pro vytváření knihovně typu ovládacího prvku) pro jednotlivé jazyky, které chcete podporovat. Toto je jediným místem, které potřebujete k lokalizaci názvy vlastností ovládacího prvku.  
   
  Při vývoji ovládacího prvku lokalizované zahrnují ID národního prostředí jako atribut na úrovni knihovny typu. Pokud chcete poskytnout knihovny typů francouzštině lokalizovanou vlastnost názvy, například vytvořte kopii UKÁZKY. IDL souboru a pojmenujte ji SAMPLEFR. IDL. Přidání atributu ID národního prostředí do souboru (ID národního prostředí pro francouzštinu je 0x040c), podobně jako následující:  
@@ -89,7 +84,7 @@ Tento článek popisuje postupy pro lokalizace rozhraní ovládacího prvku Acti
   
  Po registraci vlastního ovládacího prvku `AfxOleRegisterTypeLib` funkce automaticky vyhledá zadaný. TLB souboru ve stejném adresáři jako ovládací prvek a zaregistruje ho v databázi registrace systému Windows. Pokud. TLB soubor nebyl nalezen, funkce nemá žádný vliv.  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>Lokalizace ovládacího prvku uživatelského rozhraní  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Lokalizace ovládacího prvku uživatelského rozhraní  
  O lokalizaci uživatelské rozhraní ovládacího prvku, umístěte do knihoven DLL prostředků pro specifický jazyk všechny ovládacího prvku zobrazovanou uživateli prostředky (například stránky vlastností a chybové zprávy). Potom můžete kontejneru – vedlejší vlastnost identifikátor národního prostředí a vyberte příslušné knihovny DLL pro národní prostředí uživatele.  
   
  Následující příklad kódu ukazuje jeden ze způsobů pro vyhledání a načtení knihovny DLL prostředků pro konkrétní národní prostředí. Tento člen, volaná funkce `GetLocalizedResourceHandle` v tomto příkladu může být funkce člena třídy ovládacího prvku ActiveX:  

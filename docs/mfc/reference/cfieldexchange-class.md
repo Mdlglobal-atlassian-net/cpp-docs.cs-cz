@@ -2,11 +2,8 @@
 title: Třída CFieldExchange | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange – třída
 Podporuje pole záznamu (exchange – RFX) a rutiny exchange (Bulk RFX) pole záznamu hromadné používá databázové třídy.  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[CFieldExchange::SetFieldType](#setfieldtype)|Určuje typ člena data sady záznamů – sloupec nebo parametr – reprezentována všechny následující volání funkce RFX až další volání `SetFieldType`.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CFieldExchange`nemá základní třídu.  
+ `CFieldExchange` nemá základní třídu.  
   
  Tuto třídu použít, pokud píšete rutiny výměny dat pro vlastní datové typy nebo když jsou implementace hromadné načítání řádků; jinak nebudete používat přímo tuto třídu. RFX a Bulk RFX výměnu dat mezi pole datových členů z objektu sady záznamů a odpovídající pole ve zdroji dat na aktuální záznam.  
   
 > [!NOTE]
 >  Pokud pracujete s třídy objektů DAO (Data Access), nikoli třídy připojení ODBC (Open Database), použijte třídu [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) místo. Další informace najdete v článku [programování přehled: databáze](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` objekt poskytuje kontextové informace potřebné pro – record field exchange nebo hromadná výměna pole záznamu provést umístit. `CFieldExchange`objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. RFX a Bulk RFX operací na členy třídy sady záznamů dat typy definované `enum` **typ pole** v `CFieldExchange`. Možné **typ pole** hodnoty jsou:  
+ A `CFieldExchange` objekt poskytuje kontextové informace potřebné pro – record field exchange nebo hromadná výměna pole záznamu provést umístit. `CFieldExchange` objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. RFX a Bulk RFX operací na členy třídy sady záznamů dat typy definované `enum` **typ pole** v `CFieldExchange`. Možné **typ pole** hodnoty jsou:  
   
 - **CFieldExchange::outputColumn** pro pole datových členů.  
   
@@ -75,7 +70,7 @@ class CFieldExchange
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  Pokud píšete funkce RFX, zavolejte `IsFieldType` na začátku funkce k určení, zda aktuální operaci lze provést na konkrétní pole nebo parametr data člena typu ( **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, nebo **CFieldExchange::inoutParam** ).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>Poznámky  
  Postupujte podle modelu existující funkce RFX.  
   
-##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
  Je třeba volání `SetFieldType` ve třídě sady záznamů [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) přepsat.  
   
 ```  

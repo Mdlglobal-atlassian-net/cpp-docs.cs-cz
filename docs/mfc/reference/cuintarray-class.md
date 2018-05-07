@@ -1,12 +1,9 @@
 ---
-title: "Třída CUIntArray | Microsoft Docs"
-ms.custom: 
+title: Třída CUIntArray | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>CUIntArray – třída
 Podporuje pole celých čísel bez znaménka.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>Poznámky  
  Celé číslo bez znaménka nebo **Celé_číslo**, se liší od slova a doublewords v tom, že fyzické velikosti **Celé_číslo** můžete změnit v závislosti na cíl provozní prostředí. A **Celé_číslo** se stejnou velikost jako doubleword.  
   
- `CUIntArray`zahrnuje [implement_dynamic –](run-time-object-model-services.md#implement_dynamic) makro pro podporu přístupu běhového typu a k vypsání [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objektu. Pokud potřebujete výpis elementů jednotlivých celé číslo bez znaménka, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší. Celé číslo bez znaménka pole nelze serializovat.  
+ `CUIntArray` zahrnuje [implement_dynamic –](run-time-object-model-services.md#implement_dynamic) makro pro podporu přístupu běhového typu a k vypsání [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objektu. Pokud potřebujete výpis elementů jednotlivých celé číslo bez znaménka, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší. Celé číslo bez znaménka pole nelze serializovat.  
   
 > [!NOTE]
 >  Před použitím pole, použijte `SetSize` k zahájení jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidávání elementů do pole způsobí, že se často znovu přidělit a zkopírovat. Časté opakované přidělení a kopírování jsou neefektivní a může fragmentovat paměti.  

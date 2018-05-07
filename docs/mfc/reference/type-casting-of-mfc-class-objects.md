@@ -1,13 +1,10 @@
 ---
-title: "Typ přetypování objektů tříd MFC | Microsoft Docs"
-ms.custom: 
+title: Typ přetypování objektů tříd MFC | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc887ad855b00b525c74b66bfc70f2adb3312e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 217be53a78a65a0f617438127b922b20c950853d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Přetypování objektů tříd MFC
 Typ přetypování makra poskytují způsob, jak převést danou ukazatel na ukazatele, který odkazuje na objekt určité třídy, s nebo bez kontroly, zda je právní přetypování.  
@@ -43,7 +38,7 @@ Typ přetypování makra poskytují způsob, jak převést danou ukazatel na uka
 |[DYNAMIC_DOWNCAST –](#dynamic_downcast)|Ukazatel na ukazatel na objekt třídy vrhá při kontrole, jestli je právní přetypování.|  
 |[STATIC_DOWNCAST –](#static_downcast)|Vrhá ukazatel na objekt z jednu třídu k ukazatel souvisejícího typu. V sestavení ladicí verze, způsobí, že **ASSERT** Pokud objekt se nenachází "druh" typu cíle.|  
   
-##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST –  
+##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST –  
  Umožňuje snadno přetypovat ukazatel na ukazatel na objekt třídy při kontrole, jestli je právní přetypování.  
   
 ```   
@@ -62,7 +57,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Pokud je objekt odkazuje ukazatele "druh" zjištěné třídy makro vrátí odpovídající ukazatele. Pokud není právní přetypování, vrátí makro **NULL**.  
   
-##  <a name="static_downcast"></a>STATIC_DOWNCAST –  
+##  <a name="static_downcast"></a>  STATIC_DOWNCAST –  
  Přetypování *pobject* na ukazatel *class_name* objektu.  
   
 ```   

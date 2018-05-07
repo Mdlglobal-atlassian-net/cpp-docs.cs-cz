@@ -2,11 +2,8 @@
 title: Třída CHttpFile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpFile
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e9af23bb74ba8e96f29a5b7cc4139d2932df8c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpfile-class"></a>CHttpFile – třída
 Poskytuje funkce pro žádosti a číst soubory na serveru HTTP.  
@@ -97,7 +92,7 @@ class CHttpFile : public CInternetFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
+##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders  
  Volání této funkce člen přidat jeden nebo více hlavičkách žádosti protokolu HTTP na požadavek HTTP zpracovat.  
   
 ```  
@@ -119,13 +114,13 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Změní sémantiku na záhlaví nového. Může být jedna z následujících akcí:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE`Sloučí hlavičky se stejným názvem, pomocí příznaku přidat hlavičku první pro následné hlavička najít. Například "přijmout: text / *" následované "přijmout: zvuk nebo\*" výsledkem je tvorba jeden hlavičky "přijmout: text /\*, zvuk nebo\*". Je volající aplikace k zajištění získá na ucelenosti schéma s ohledem na data, která přijímá požadavky odeslané s záhlaví sloučené nebo samostatné.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Sloučí hlavičky se stejným názvem, pomocí příznaku přidat hlavičku první pro následné hlavička najít. Například "přijmout: text / *" následované "přijmout: zvuk nebo\*" výsledkem je tvorba jeden hlavičky "přijmout: text /\*, zvuk nebo\*". Je volající aplikace k zajištění získá na ucelenosti schéma s ohledem na data, která přijímá požadavky odeslané s záhlaví sloučené nebo samostatné.  
   
-- `HTTP_ADDREQ_FLAG_REPLACE`Provede odebrat a přidejte do nahradit aktuální záhlaví. Název hlavičky se použije k odebrat aktuální záhlaví a úplná hodnota se použije pro přidání nové záhlaví. Pokud je hodnota hlavičky prázdný a se nachází záhlaví, bude odebrán. Pokud není prázdná, je hodnota hlavičky nahrazena.  
+- `HTTP_ADDREQ_FLAG_REPLACE` Provede odebrat a přidejte do nahradit aktuální záhlaví. Název hlavičky se použije k odebrat aktuální záhlaví a úplná hodnota se použije pro přidání nové záhlaví. Pokud je hodnota hlavičky prázdný a se nachází záhlaví, bude odebrán. Pokud není prázdná, je hodnota hlavičky nahrazena.  
   
-- `HTTP_ADDREQ_FLAG_ADD_IF_NEW`Přidá hlavičku, pouze pokud ještě neexistuje. Pokud existuje, je vrácena chyba.  
+- `HTTP_ADDREQ_FLAG_ADD_IF_NEW` Přidá hlavičku, pouze pokud ještě neexistuje. Pokud existuje, je vrácena chyba.  
   
-- `HTTP_ADDREQ_FLAG_ADD`Použít s nahradit. Přidá hlavičku, pokud neexistuje.  
+- `HTTP_ADDREQ_FLAG_ADD` Použít s nahradit. Přidá hlavičku, pokud neexistuje.  
   
  `dwHeadersLen`  
  Délka ve znacích, z `pstrHeaders`. Pokud je to L-1, pak `pstrHeaders` bude ukončen nula hodnota a délka je počítaný.  
@@ -137,12 +132,12 @@ BOOL AddRequestHeaders(
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `AddRequestHeaders`připojí další, volného formátu hlavičky k obslužná rutina požadavků HTTP. Je určena pro použití sofistikované klienty, kteří potřebují podrobnou kontrolu nad přesný požadavek odeslaný na server HTTP.  
+ `AddRequestHeaders` připojí další, volného formátu hlavičky k obslužná rutina požadavků HTTP. Je určena pro použití sofistikované klienty, kteří potřebují podrobnou kontrolu nad přesný požadavek odeslaný na server HTTP.  
   
 > [!NOTE]
 >  Aplikace můžete předat více záhlaví v `pstrHeaders` nebo `str` pro `AddRequestHeaders` volat pomocí `HTTP_ADDREQ_FLAG_ADD` nebo `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Pokud se aplikace pokusí odeberte nebo nahraďte záhlaví pomocí **HTTP_ADDREQ_FLAG_REMOVE** nebo `HTTP_ADDREQ_FLAG_REPLACE`, můžete zadat pouze jedno záhlaví v `lpszHeaders`.  
   
-##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
+##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  Tato funkce člen je volána k sestavení `CHttpFile` objektu.  
   
 ```  
@@ -189,7 +184,7 @@ CHttpFile(
   
  Výchozí hodnota pro `dwContext` odesílají MFC k `CHttpFile` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání `CInternetSession::OpenURL` nebo `CHttpConnection` k vytvoření `CHttpFile` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="endrequest"></a>CHttpFile::EndRequest  
+##  <a name="endrequest"></a>  CHttpFile::EndRequest  
  Volání této funkce člena na konec požadavek HTTP serveru se odesílají [SendRequestEx](#sendrequestex) – členská funkce.  
   
 ```  
@@ -215,7 +210,7 @@ BOOL EndRequest(
 ### <a name="remarks"></a>Poznámky  
  Výchozí hodnota pro `dwContext` odesílají MFC k `CHttpFile` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [CHttpConnection](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
-##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
+##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  Volání této funkce člen získat název souboru protokolu HTTP jako adresu URL.  
   
 ```  
@@ -228,7 +223,7 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="getobject"></a>CHttpFile::GetObject  
+##  <a name="getobject"></a>  CHttpFile::GetObject  
  Volání této funkce člen získat název přidružený k tomuto objektu `CHttpFile`.  
   
 ```  
@@ -241,7 +236,7 @@ CString GetObject() const;
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="getverb"></a>CHttpFile::GetVerb  
+##  <a name="getverb"></a>  CHttpFile::GetVerb  
  Volání této funkce člen získat akce HTTP (ani metody) přidružený k tomuto `CHttpFile`.  
   
 ```  
@@ -254,7 +249,7 @@ CString GetVerb() const;
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="queryinfo"></a>CHttpFile::QueryInfo  
+##  <a name="queryinfo"></a>  CHttpFile::QueryInfo  
  Volání této funkce člen vrátí odpověď nebo hlavičky požadavku z požadavku HTTP.  
   
 ```  
@@ -317,9 +312,9 @@ BOOL QueryInfo(
   
 -   řetězce (výchozí)  
   
-- `SYSTEMTIME`(pro "Data:" "Expires:" apod, hlavičky)  
+- `SYSTEMTIME` (pro "Data:" "Expires:" apod, hlavičky)  
   
-- `DWORD`(pro **STATUS_CODE**, **CONTENT_LENGTH**atd.)  
+- `DWORD` (pro **STATUS_CODE**, **CONTENT_LENGTH**atd.)  
   
  Pokud řetězec je zapsán do vyrovnávací paměti a členské funkce úspěšné, `lpdwBufferLength` obsahuje délku řetězce ve znacích minus 1 pro ukončení **NULL** znak.  
   
@@ -371,7 +366,7 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
+##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
  Volání této funkce člen k získání stavového kódu přidružené k požadavku HTTP a umístěte ji do zadané `dwStatusCode` parametr.  
   
 ```  
@@ -408,7 +403,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 |500|Neznámou chybu serveru|  
 |503|Dosaženo kapacity serveru|  
   
-##  <a name="sendrequest"></a>CHttpFile::SendRequest  
+##  <a name="sendrequest"></a>  CHttpFile::SendRequest  
  Volání této funkce člen odeslat požadavek na HTTP server.  
   
 ```  
@@ -444,7 +439,7 @@ BOOL SendRequest(
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.  
   
-##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
+##  <a name="sendrequestex"></a>  CHttpFile::SendRequestEx  
  Volání této funkce člen odeslat požadavek na HTTP server.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Výjimky: Převádění z maker výjimek prostředí MFC | Microsoft Docs"
-ms.custom: 
+title: 'Výjimky: Převádění z maker výjimek prostředí MFC | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Výjimky: Převádění z maker výjimek prostředí MFC
 To je rozšířená.  
@@ -44,7 +39,7 @@ To je rozšířená.
   
 -   [Převod kódu s použitím makra výjimek používat výjimky jazyka C++](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>Výhody převodu  
+##  <a name="_core_advantages_of_converting"></a> Výhody převodu  
  Pravděpodobně není nutné převést stávající kód, i když byste měli znát rozdíly mezi implementací makra v MFC verze 3.0 a implementace v dřívějších verzích. Tyto rozdíly a následné změny v chování kódu jsou popsané v [výjimky: změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
  Hlavní výhody převodu jsou:  
@@ -67,7 +62,7 @@ To je rozšířená.
   
      Výjimka deklaraci pro **catch** – klíčové slovo používá tuto syntaxi:  
   
-     **catch (** *exception_type* *exception_name***)**  
+     **catch (** *exception_type* *exception_name ***)**  
   
      Tento příkaz deklarace výjimka označuje typ výjimky catch blokovat obslužné rutiny.  
   
@@ -81,7 +76,7 @@ To je rozšířená.
   
      Použití makra `THROW_LAST` znovu vyvolat aktuální výjimku. `throw` – Klíčové slovo s žádný argument má stejný účinek.  
   
-##  <a name="_core_doing_the_conversion"></a>Provádění převod  
+##  <a name="_core_doing_the_conversion"></a> Provádění převod  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Chcete-li převést kódu pomocí makra používat klíčová slova, C++ zpracování výjimek  
   
@@ -93,13 +88,13 @@ To je rozšířená.
   
      **CATCH –** (nahraďte ho **catch**)  
   
-     `AND_CATCH`(Nahraďte ho **catch**)  
+     `AND_CATCH` (Nahraďte ho **catch**)  
   
-     `END_CATCH`(Odstranit)  
+     `END_CATCH` (Odstranit)  
   
      **THROW** (nahraďte ho `throw`)  
   
-     `THROW_LAST`(Nahraďte ho `throw`)  
+     `THROW_LAST` (Nahraďte ho `throw`)  
   
 3.  Argumenty – makro upravte tak, aby tvoří platný výjimka deklarace.  
   

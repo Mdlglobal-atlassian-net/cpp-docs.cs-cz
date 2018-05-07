@@ -1,12 +1,9 @@
 ---
-title: "Třída COleLinkingDoc | Microsoft Docs"
-ms.custom: 
+title: Třída COleLinkingDoc | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc – třída
 Základní třída pro dokumenty kontejneru OLE, které podporují propojování vložené položky, které obsahují.  
@@ -105,7 +100,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
  Vytvoří `COleLinkingDoc` objektu bez od komunikace se službou OLE systémové knihovny DLL.  
   
 ```  
@@ -115,7 +110,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>Poznámky  
  Je třeba zavolat `Register` – členská funkce OLE informovat, že dokument je otevřené.  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
  Voláno rámcem k určení, zda dokument obsahuje vložené položky OLE se zadaným názvem.  
   
 ```  
@@ -132,7 +127,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace vyhledá seznam vložených položek pro položku se zadaným názvem (název porovnání se velká a malá písmena). Tato funkce přepsání, pokud máte vlastní metodu ukládání nebo pojmenování vložené položky OLE.  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
  Voláno rámcem zkontrolujte, zda dokument obsahuje odkazovaný server položku se zadaným názvem.  
   
 ```  
@@ -149,7 +144,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Poznámky  
  Výchozí hodnota `COleLinkingDoc` implementace vždy vrátí **NULL**. Tato funkce je elementem v odvozené třídě `COleServerDoc` k vyhledání seznam položek OLE serveru pro propojené položky se zadaným názvem (název porovnání se velká a malá písmena). Tato funkce přepsání, pokud jste implementovali vlastní metodu ukládání nebo načítání položek odkazovaný server.  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>  COleLinkingDoc::Register  
  Informuje o OLE systémové knihovny DLL, že dokument je otevřené.  
   
 ```  
@@ -173,7 +168,7 @@ BOOL Register(
   
  Pokud používáte `COleTemplateServer` ve vaší aplikaci, `Register` je volána pro vám `COleLinkingDoc`na implementaci `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
  Informuje o OLE systémové knihovny DLL, že dokument je již otevřený.  
   
 ```  
@@ -183,7 +178,7 @@ void Revoke();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce zrušení registrace dokumentu pomocí OLE systémové knihovny DLL.  
   
- Tato funkce by měly volat, při zavření soubor s názvem, ale obvykle není potřeba volat přímo. `Revoke`je volána pro vám `COleLinkingDoc`na implementaci `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.  
+ Tato funkce by měly volat, při zavření soubor s názvem, ale obvykle není potřeba volat přímo. `Revoke` je volána pro vám `COleLinkingDoc`na implementaci `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka MFC OCLIENT](../../visual-cpp-samples.md)   

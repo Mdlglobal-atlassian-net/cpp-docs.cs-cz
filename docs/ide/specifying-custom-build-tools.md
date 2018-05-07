@@ -1,13 +1,10 @@
 ---
-title: "Určení vlastního nástroje sestavení | Microsoft Docs"
-ms.custom: 
+title: Určení vlastního nástroje sestavení | Microsoft Docs
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>Zadejte vlastní sestavovací nástroje
 
@@ -65,7 +61,7 @@ Obecné informace o vlastní sestavovací nástroje a vlastní kroky sestavení 
 
       Více vstupních a výstupních souborů může být zadáno symbolicky s makry MSBuild. Informace o tom, jak zadat umístění souborů nebo názvy sad souborů najdete v tématu [běžné makra pro příkazy sestavení a vlastnosti](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Protože znak "%" je rezervován MSBuild, pokud zadáte proměnnou prostředí nahradit každý  **%**  znaku s **% 25** šestnáctková řídicí sekvence. Například nahradit **% WINDIR %** s **25WINDIR % 25**. MSBuild nahradí každý **% 25** pořadí se  **%**  znak před přistupuje k proměnné prostředí.
+      Protože znak "%" je rezervován MSBuild, pokud zadáte proměnnou prostředí nahradit každý **%** znaku s **% 25** šestnáctková řídicí sekvence. Například nahradit **% WINDIR %** s **25WINDIR % 25**. MSBuild nahradí každý **% 25** pořadí se **%** znak před přistupuje k proměnné prostředí.
 
    - V **popis**, zadejte popisný zprávu o tomto nástroji vlastní sestavení. Zpráva tisku **výstup** okno, pokud systém sestavení zpracovává tento nástroj.
 

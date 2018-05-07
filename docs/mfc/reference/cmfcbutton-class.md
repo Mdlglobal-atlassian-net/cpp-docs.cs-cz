@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCButton | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCButton | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCButton
@@ -89,17 +86,15 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d496cf079cd56d8260c5fd8072809bc05559ef2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton – třída
 `CMFCButton` Třída přidává funkce [CButton](../../mfc/reference/cbutton-class.md) třída například zarovnání text tlačítka, kombinace text tlačítka a bitovou kopii, vyberete kurzoru a zadat popis tlačítka.  
@@ -207,14 +202,14 @@ class CMFCButton : public CButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxbutton.h  
   
-##  <a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>  CMFCButton::CleanUp  
  Obnoví interní proměnné a uvolní přidělené prostředky, např. obrázky, rastrové obrázky a ikony.  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>  CMFCButton::EnableFullTextTooltip  
  Určuje, jestli chcete zobrazit úplný text popisu tlačítka v okně velké popisu nebo zkrácený verzi text v okně malé popisu.  
   
 ```  
@@ -222,12 +217,12 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bOn`  
- `TRUE`Chcete-li zobrazit celý text; `FALSE` na text zobrazení zkrácen.  
+ [v] `bOn`  
+ `TRUE` Chcete-li zobrazit celý text; `FALSE` na text zobrazení zkrácen.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>  CMFCButton::EnableMenuFont  
  Určuje, jestli písmo pro text tlačítka je stejný jako písmo nabídce aplikace.  
   
 ```  
@@ -237,16 +232,16 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bOn`  
- `TRUE`Písmo nabídky aplikace používat jako písmo textu tlačítka; `FALSE` používat systém písmo. Výchozí hodnota je `TRUE`.  
+ [v] `bOn`  
+ `TRUE` Písmo nabídky aplikace používat jako písmo textu tlačítka; `FALSE` používat systém písmo. Výchozí hodnota je `TRUE`.  
   
- [v]`bRedraw`  
- `TRUE`okamžitě ho překreslit obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bRedraw`  
+ `TRUE` okamžitě ho překreslit obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud použijete tuto metodu určit písmo textu tlačítka, můžete zadat písma s [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) metoda. Pokud jste písmo nezadávejte vůbec, rozhraní nastaví výchozí písmo.  
   
-##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>  CMFCButton::EnableWindowsTheming  
  Určuje, zda styl ohraničení tlačítko odpovídá aktuální motiv systému Windows.  
   
 ```  
@@ -254,13 +249,13 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`aktuální motiv systému Windows použít k vykreslení ohraničení tlačítko; `FALSE` nechcete použít motiv systému Windows. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` aktuální motiv systému Windows použít k vykreslení ohraničení tlačítko; `FALSE` nechcete použít motiv systému Windows. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda ovlivňuje všechny tlačítka v aplikaci, které jsou odvozeny od `CMFCButton` třídy.  
   
-##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>  CMFCButton::GetToolTipCtrl  
  Vrátí odkaz na základní ovládacího prvku popisek.  
   
 ```  
@@ -272,7 +267,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>  CMFCButton::IsAutoCheck  
  Určuje, zda zaškrtávací políčko nebo přepínač Automatické tlačítko.  
   
 ```  
@@ -280,11 +275,11 @@ BOOL IsAutoCheck() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud má tlačítko Styl bs_autocheckbox – nebo bs_autoradiobutton –; v opačném `FALSE`.  
+ `TRUE` Pokud má tlačítko Styl bs_autocheckbox – nebo bs_autoradiobutton –; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>  CMFCButton::IsAutorepeatCommandMode  
  Označuje, zda je tlačítko nastavit do režimu automatické opakování.  
   
 ```  
@@ -297,7 +292,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCButton::SetAutorepeatMode](#setautorepeatmode) metodu a nastavit tlačítko do režimu automatické opakování.  
   
-##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>  CMFCButton::IsCheckBox  
  Určuje, zda je tlačítko tlačítka zaškrtávací políčko.  
   
 ```  
@@ -309,7 +304,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>  CMFCButton::IsChecked  
  Určuje, zda je aktuální tlačítko zaškrtnuto.  
   
 ```  
@@ -317,12 +312,12 @@ BOOL IsChecked() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je aktuální tlačítko označeno; v opačném `FALSE`.  
+ `TRUE` Pokud je aktuální tlačítko označeno; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní používá různé způsoby, jak určit, zda jsou zrušena zaškrtnutí různé druhy tlačítka. Například je kontrolován přepínače, když obsahuje tečku; zaškrtávací políčko je zaškrtnuto, pokud obsahuje **X**.  
   
-##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCButton::IsHighlighted  
  Určuje, zda je označený tlačítko.  
   
 ```  
@@ -335,7 +330,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>Poznámky  
  Tlačítko se změní na zvýrazněné, když ukazatel myši nachází na tlačítko.  
   
-##  <a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>  CMFCButton::IsPressed  
  Určuje, jestli je tlačítko Poslat a zvýrazní.  
   
 ```  
@@ -347,7 +342,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>  CMFCButton::IsPushed  
  Určuje, zda je tlačítko Poslat.  
   
 ```  
@@ -359,7 +354,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>  CMFCButton::IsRadioButton  
  Označuje, zda je tlačítko přepínače.  
   
 ```  
@@ -371,7 +366,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>  CMFCButton::IsWindowsThemingEnabled  
  Určuje, zda styl ohraničení tlačítko odpovídá aktuální motiv systému Windows.  
   
 ```  
@@ -379,9 +374,9 @@ static BOOL IsWindowsThemingEnabled();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud styl ohraničení tlačítko odpovídá aktuální motiv systému Windows. v opačném `FALSE`.  
+ `TRUE` Pokud styl ohraničení tlačítko odpovídá aktuální motiv systému Windows. v opačném `FALSE`.  
   
-##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Označuje, zda se k vykreslení rámečku fokusu kolem tlačítko.  
   
 ```  
@@ -393,7 +388,7 @@ BOOL m_bDrawFocus;
   
  `CMFCButton` Konstruktor inicializuje tohoto člena `TRUE`.  
   
-##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Označuje, zda chcete zvýraznit stylu bs_checkbox – tlačítko při ukazatel myši nad ním.  
   
 ```  
@@ -403,7 +398,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>Poznámky  
  Nastavte `m_bHighlightChecked` člena `TRUE` k určení, zda bude rozhraní při ponechán ukazatel myši nad ním zvýrazněte stylu bs_checkbox – tlačítko.  
   
-##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Označuje, zda zobrazíte bitovou kopii na pravé straně tlačítko.  
   
 ```  
@@ -413,7 +408,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>Poznámky  
  Nastavte `m_bRightImage` člena `TRUE` k určení, že rozhraní zobrazí obrázek na tlačítko vpravo od textu popisku tlačítka.  
   
-##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>  CMFCButton::m_bTransparent  
  Určuje, zda je tlačítko transparentní.  
   
 ```  
@@ -423,7 +418,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>Poznámky  
  Nastavte `m_bTransparent` člena `TRUE` k určení, které rozhraní provede tlačítko transparentní. `CMFCButton` Konstruktor inicializuje tohoto člena `FALSE`.  
   
-##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>  CMFCButton::m_nAlignStyle  
  Určuje zarovnání textu tlačítka.  
   
 ```  
@@ -441,7 +436,7 @@ AlignStyle m_nAlignStyle;
   
  `CMFCButton` Konstruktor inicializuje ALIGN_CENTER tohoto člena.  
   
-##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Určuje styl tlačítka, jako je například bez okrajů, ploché, oddělte dvojrozměrném nebo 3D.  
   
 ```  
@@ -466,7 +461,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCButton::OnDraw  
  Voláno rámcem k vykreslení tlačítko.  
   
 ```  
@@ -477,19 +472,19 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Odkaz na obdélníku bounds tlačítko.  
   
- [v]`uiState`  
+ [v] `uiState`  
  Aktuální stav tlačítko. Další informace najdete v tématu `itemState` členem [drawitemstruct – struktura](../../mfc/reference/drawitemstruct-structure.md) tématu.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu pro kreslení tlačítko pomocí vlastní kód.  
   
-##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCButton::OnDrawBorder  
  Voláno rámcem k vykreslení ohraničení tlačítko.  
   
 ```  
@@ -500,19 +495,19 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Odkaz na obdélníku bounds tlačítko.  
   
- [v]`uiState`  
+ [v] `uiState`  
  Aktuální stav tlačítko. Další informace najdete v tématu `itemState` členem [drawitemstruct – struktura](../../mfc/reference/drawitemstruct-structure.md) tématu.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu použít vlastní kód k vykreslení ohraničení.  
   
-##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCButton::OnDrawFocusRect  
  Voláno rámcem k vykreslení rámečku fokusu pro tlačítko.  
   
 ```  
@@ -522,16 +517,16 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Odkaz na obdélníku bounds tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu pro kreslení rámečku fokusu pomocí vlastní kód.  
   
-##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>  CMFCButton::OnDrawText  
  Voláno rámcem k vykreslení text tlačítka.  
   
 ```  
@@ -544,25 +539,25 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Odkaz na obdélníku bounds tlačítko.  
   
- [v]`strText`  
+ [v] `strText`  
  Text k vykreslení.  
   
- [v]`uiDTFlags`  
+ [v] `uiDTFlags`  
  Příznaky, které určují způsob formátování textu. Další informace najdete v tématu `nFormat` parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda.  
   
- [v]`uiState`  
+ [v] `uiState`  
  (Vyhrazené).  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu pro kreslení text tlačítka pomocí vlastní kód.  
   
-##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCButton::OnFillBackground  
  Voláno rámcem k vykreslení pozadí textu tlačítka.  
   
 ```  
@@ -572,16 +567,16 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Odkaz na obdélníku bounds tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu pro kreslení na pozadí tlačítko pomocí vlastní kód.  
   
-##  <a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>  CMFCButton::SelectFont  
  Načte písma, který je přidružený kontext zadané zařízení.  
   
 ```  
@@ -589,7 +584,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -597,7 +592,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>  CMFCButton::SetAutorepeatMode  
  Nastaví tlačítka režimu automatické opakování.  
   
 ```  
@@ -605,13 +600,13 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nTimeDelay`  
+ [v] `nTimeDelay`  
  Nezáporné číslo, které udává interval mezi zprávy odeslané do nadřazeného okna. Interval se měří v milisekundách a jeho výchozí hodnota je 500 milisekund. Zadejte nula. Chcete-li zakázat režim automatické opakování zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda způsobí, že tlačítko neustále odesílání wm_command – zprávy do nadřazeného okna, dokud tlačítko vydání, nebo `nTimeDelay` parametr je nastaven na hodnotu nula.  
   
-##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  Nastaví obrázek pro tlačítko zaškrtnuté.  
   
 ```  
@@ -638,45 +633,45 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hIcon`  
+ [v] `hIcon`  
  Zpracování na ikonu, který obsahuje bitovou mapu a maska pro novou bitovou kopii.  
   
- [v]`bAutoDestroy`  
- `TRUE`Chcete-li určit, že rastrový obrázek prostředky ukončit automaticky; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bAutoDestroy`  
+ `TRUE` Chcete-li určit, že rastrový obrázek prostředky ukončit automaticky; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
- [v]`hIconHot`  
+ [v] `hIconHot`  
  Zpracování na ikonu, která obsahuje bitovou kopii pro vybraný stav.  
   
- [v]`hBitmap`  
+ [v] `hBitmap`  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro jiný vybraný stav.  
   
- [v]`hBitmapHot`  
+ [v] `hBitmapHot`  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro vybraný stav.  
   
- [v]`bMap3dColors`  
- Určuje průhlednou barvu pozadí tlačítko; To znamená, vzhled tlačítka. `TRUE`Chcete použít hodnotu barva RGB (192, 192, 192); `FALSE` použít hodnoty barvy definované `AFX_GLOBAL_DATA::clrBtnFace`.  
+ [v] `bMap3dColors`  
+ Určuje průhlednou barvu pozadí tlačítko; To znamená, vzhled tlačítka. `TRUE` Chcete použít hodnotu barva RGB (192, 192, 192); `FALSE` použít hodnoty barvy definované `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [v]`uiBmpResId`  
+ [v] `uiBmpResId`  
  ID prostředku bitové kopie není vybraná.  
   
- [v]`uiBmpHotResId`  
+ [v] `uiBmpHotResId`  
  ID prostředku pro vybranou image.  
   
- [v]`hIconDisabled`  
+ [v] `hIconDisabled`  
  Zpracování na ikonu pro bitovou kopii zakázané.  
   
- [v]`hBitmapDisabled`  
+ [v] `hBitmapDisabled`  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii zakázané.  
   
- [v]`uiBmpDsblResID`  
+ [v] `uiBmpDsblResID`  
  ID prostředku zakázané rastrového obrázku.  
   
- [v]`bAlphaBlend`  
- `TRUE`Chcete-li používat pouze 32-bit Image, které používají alfa kanálu; `FALSE`, nechcete použít pouze obrázky alfa kanálu. Výchozí hodnota je `FALSE`.  
+ [v] `bAlphaBlend`  
+ `TRUE` Chcete-li používat pouze 32-bit Image, které používají alfa kanálu; `FALSE`, nechcete použít pouze obrázky alfa kanálu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>  CMFCButton::SetFaceColor  
  Nastaví barvu pozadí pro text tlačítka.  
   
 ```  
@@ -686,16 +681,16 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`crFace`  
+ [v] `crFace`  
  Hodnotu barva RGB.  
   
- [v]`bRedraw`  
- `TRUE`na obrazovce ho překreslit okamžitě; v opačném `FALSE`.  
+ [v] `bRedraw`  
+ `TRUE` na obrazovce ho překreslit okamžitě; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte, chcete-li definovat nové barvu výplně pozadí tlačítko (vzhled). Všimněte si, že na pozadí není vyplněno, kdy [CMFCButton::m_bTransparent](#m_btransparent) členské proměnné je `TRUE`.  
   
-##  <a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>  CMFCButton::SetImage  
  Nastaví obrázek pro tlačítko.  
   
 ```  
@@ -722,41 +717,41 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hIcon`  
+ [v] `hIcon`  
  Zpracování na ikonu, který obsahuje bitovou mapu a maska pro novou bitovou kopii.  
   
- [v]`bAutoDestroy`  
- `TRUE`Chcete-li určit, že rastrový obrázek prostředky ukončit automaticky; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bAutoDestroy`  
+ `TRUE` Chcete-li určit, že rastrový obrázek prostředky ukončit automaticky; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
- [v]`hIconHot`  
+ [v] `hIconHot`  
  Zpracování na ikonu, která obsahuje bitovou kopii pro vybraný stav.  
   
- [v]`hBitmap`  
+ [v] `hBitmap`  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro jiný vybraný stav.  
   
- [v]`hBitmapHot`  
+ [v] `hBitmapHot`  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro vybraný stav.  
   
- [v]`uiBmpResId`  
+ [v] `uiBmpResId`  
  ID prostředku bitové kopie není vybraná.  
   
- [v]`uiBmpHotResId`  
+ [v] `uiBmpHotResId`  
  ID prostředku pro vybranou image.  
   
- [v]`bMap3dColors`  
- Určuje průhlednou barvu pozadí tlačítko; To znamená, vzhled tlačítka. `TRUE`Chcete použít hodnotu barva RGB (192, 192, 192); `FALSE` použít hodnoty barvy definované `AFX_GLOBAL_DATA::clrBtnFace`.  
+ [v] `bMap3dColors`  
+ Určuje průhlednou barvu pozadí tlačítko; To znamená, vzhled tlačítka. `TRUE` Chcete použít hodnotu barva RGB (192, 192, 192); `FALSE` použít hodnoty barvy definované `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [v]`hIconDisabled`  
+ [v] `hIconDisabled`  
  Zpracování na ikonu pro bitovou kopii zakázané.  
   
- [v]`hBitmapDisabled`  
+ [v] `hBitmapDisabled`  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii zakázané.  
   
- [v]`uiBmpDsblResID`  
+ [v] `uiBmpDsblResID`  
  ID prostředku zakázané rastrového obrázku.  
   
- [v]`bAlphaBlend`  
- `TRUE`Chcete-li používat pouze 32-bit Image, které používají alfa kanálu; `FALSE`, nechcete použít pouze obrázky alfa kanálu. Výchozí hodnota je `FALSE`.  
+ [v] `bAlphaBlend`  
+ `TRUE` Chcete-li používat pouze 32-bit Image, které používají alfa kanálu; `FALSE`, nechcete použít pouze obrázky alfa kanálu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -766,7 +761,7 @@ void SetImage(
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>  CMFCButton::SetMouseCursor  
  Nastavuje obrázek, kurzoru.  
   
 ```  
@@ -774,7 +769,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`hcursor`  
+ [v] `hcursor`  
  Popisovač kurzoru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -786,7 +781,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>  CMFCButton::SetMouseCursorHand  
  Nastaví kurzor na bitovou kopii dlaně.  
   
 ```  
@@ -796,7 +791,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte pro přidružení kurzoru bitové kopie ruční tlačítko. Kurzor je načten z prostředků aplikace.  
   
-##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>  CMFCButton::SetStdImage  
  Používá `CMenuImages` objekt, který chcete nastavit obrázek tlačítka.  
   
 ```  
@@ -807,18 +802,18 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`id`  
+ [v] `id`  
  Jeden z identifikátorů tlačítko bitové kopie, které je definováno v `CMenuImage::IMAGES_IDS` výčtu. Hodnoty bitové kopie specifikujte bitové kopie, jako je například šipky, kódy PIN a přepínače.  
   
- [v]`state`  
+ [v] `state`  
  Jeden z identifikátorů stavu tlačítko bitové kopie, které je definováno v `CMenuImages::IMAGE_STATE` výčtu. Stavy image zadat tlačítko barvy například černé, šedé, světla šedá bílé a tmavým šedá. Výchozí hodnota je `CMenuImages::ImageBlack`.  
   
- [v]`idDisabled`  
+ [v] `idDisabled`  
  Jeden z identifikátorů tlačítko bitové kopie, které je definováno v `CMenuImage::IMAGES_IDS` výčtu. Obrázek označuje, že tlačítko zakázána. Výchozí hodnota je první obrázek tlačítka ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>  CMFCButton::SetTextColor  
  Nastaví barvu textu tlačítka pro tlačítko, které není vybraná.  
   
 ```  
@@ -826,12 +821,12 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clrText`  
+ [v] `clrText`  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>  CMFCButton::SetTextHotColor  
  Nastaví barvu textu tlačítka pro tlačítko, který je vybraný.  
   
 ```  
@@ -839,12 +834,12 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clrTextHot`  
+ [v] `clrTextHot`  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>  CMFCButton::SetTooltip  
  Přidruží popisek tlačítka.  
   
 ```  
@@ -852,12 +847,12 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszToolTipText`  
+ [v] `lpszToolTipText`  
  Ukazatel na hodnotu text pro popis tlačítka. Zadejte hodnotu NULL zakázat popisek.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCButton::SizeToContent  
  Změní velikost tlačítko obsahovat jeho text tlačítka a bitové kopie.  
   
 ```  
@@ -865,8 +860,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bCalcOnly`  
- `TRUE`vypočítat, ale nemění velikost nového tlačítka; `FALSE` ke změně velikosti tlačítka. Výchozí hodnota je `FALSE`.  
+ [v] `bCalcOnly`  
+ `TRUE` vypočítat, ale nemění velikost nového tlačítka; `FALSE` ke změně velikosti tlačítka. Výchozí hodnota je `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A `CSize` objekt, který obsahuje novou velikost tlačítka.  

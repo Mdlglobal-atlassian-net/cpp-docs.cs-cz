@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCPropertyGridFontProperty | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCPropertyGridFontProperty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFontProperty
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 505f48bcfb867ae8444d8dbbee360bb04e23d8e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty – třída
 `CMFCPropertyGridFileProperty` Třída podporuje ovládací prvek položky seznamu vlastnosti, které se otevře dialogové okno Výběr písma.  
@@ -73,7 +68,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfontproperty"></a>CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
+##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
  Vytvoří `CMFCPropertyGridFontProperty` objektu.  
   
 ```  
@@ -87,22 +82,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`strName`  
+ [v] `strName`  
  Název vlastnosti  
   
- [v]`lf`  
+ [v] `lf`  
  Struktura logické písma, která určuje atributy písma.  
   
- [v]`dwFontDialogFlags`  
+ [v] `dwFontDialogFlags`  
  Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnota rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu `Flags` parametr [CHOOSEFONT struktura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [v]`lpszDescr`  
+ [v] `lpszDescr`  
  Popis vlastnosti písma. Výchozí hodnota je `NULL`.  
   
- [v]`dwData`  
+ [v] `dwData`  
  Specifické pro aplikaci data, jako třeba celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
- [v]`color`  
+ [v] `color`  
  Barva písma. Výchozí hodnota je výchozí barvu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -113,7 +108,7 @@ CMFCPropertyGridFontProperty(
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
-##  <a name="getcolor"></a>CMFCPropertyGridFontProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
  Načte Barva písma, který si uživatel vybere ze dialogové okno písmo.  
   
 ```  
@@ -125,7 +120,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getlogfont"></a>CMFCPropertyGridFontProperty::GetLogFont  
+##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
  Načte písmo, které si uživatel vybere ze dialogové okno písmo.  
   
 ```  

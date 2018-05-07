@@ -1,12 +1,9 @@
 ---
-title: "CPalette – třída | Microsoft Docs"
-ms.custom: 
+title: CPalette – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPalette
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486338d579f304a6de1a54674a7711bb6c56f38c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpalette-class"></a>CPalette – třída
 Zapouzdří palety barev systému Windows.  
@@ -101,7 +96,7 @@ class CPalette : public CGdiObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="animatepalette"></a>CPalette::AnimatePalette  
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
  Nahradí položky v logické palety připojené k `CPalette` objektu.  
   
 ```  
@@ -126,7 +121,7 @@ void AnimatePalette(
   
  `AnimatePalette` Funkce se změní pouze položky s **PC_RESERVED** nastaven do odpovídajícího příznak **palPaletteEntry** členem [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktura připojená k `CPalette` objektu. V tématu **LOGPALETTE** ve Windows SDK pro další informace o tuto strukturu.  
   
-##  <a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>  CPalette::CPalette  
  Vytvoří `CPalette` objektu.  
   
 ```  
@@ -136,7 +131,7 @@ CPalette();
 ### <a name="remarks"></a>Poznámky  
  Objekt nemá žádné připojené palety, dokud zavoláte `CreatePalette` jeden připojit.  
   
-##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
  Vytvoří se paleta polotónování pro kontext zařízení.  
   
 ```  
@@ -155,7 +150,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  Najdete v části sada Windows SDK pro další informace `CreateHalftonePalette` a **StretchDIBits**.  
   
-##  <a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>  CPalette::CreatePalette  
  Inicializuje `CPalette` objekt vytvořením palety barev logické Windows a připojíte ho k `CPalette` objektu.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>Poznámky  
  Najdete v části sada Windows SDK pro další informace **LOGPALETTE** struktury.  
   
-##  <a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>  CPalette::FromHandle  
  Vrátí ukazatel na `CPalette` objektu, pokud Zadaný popisovač na objekt palety Windows.  
   
 ```  
@@ -189,7 +184,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>Poznámky  
  Pokud `CPalette` objekt není už připojený k Windows palety, dočasného `CPalette` objekt se vytvoří a připojené. Toto dočasný `CPalette` je objekt platný pouze dokud příště aplikace má čas nečinnosti v jeho událostí smyčky, na který čas všechny dočasné obrázek objekty jsou odstraněny. Jinými slovy dočasný objekt platí pouze při zpracování zprávy jeden interval.  
   
-##  <a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
  Volání této funkce člen načíst počet položek v dané logické palety.  
   
 ```  
@@ -199,7 +194,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek v logické palety.  
   
-##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
  Vrátí index položky v logické palety, která nejvíce odpovídá implementované hodnoty zadané barvy.  
   
 ```  
@@ -213,7 +208,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Index položky v logické palety. Položka obsahuje barvu, která co nejvíce shoduje zadaná barva.  
   
-##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
  Načte rozsah palety v logické palety.  
   
 ```  
@@ -236,7 +231,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek, které jsou načteny z logické palety; 0, pokud funkce se nezdařilo.  
   
-##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
+##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
  Tento operátor. použijte k získání připojené popisovač GDI systému Windows `CPalette` objektu.  
   
 ```  
@@ -251,7 +246,7 @@ operator HPALETTE() const;
   
  Další informace o použití grafických objektů najdete v článku [obrázek objekty](http://msdn.microsoft.com/library/windows/desktop/dd144962) ve Windows SDK.  
   
-##  <a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Změní velikost logické palety připojené k `CPalette` objekt, který má počet položek určeného `nNumEntries`.  
   
 ```  
@@ -270,7 +265,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Další informace o rozhraní API systému Windows `ResizePalette`, najdete v části [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) ve Windows SDK.  
   
-##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Nastaví v rozsahu položek v logické palety RGB – hodnoty barev a značky.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCPropertyGridFileProperty | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCPropertyGridFileProperty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4111c7da24300d83128d56b85266ee808b304ace
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty – třída
 `CMFCPropertyGridFileProperty` Třída podporuje vlastnost řízení položky seznamu, které se otevře dialogové okno Výběr souboru.  
@@ -66,7 +61,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
+##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
  Vytvoří `CMFCPropertyGridFileProperty` objektu.  
   
 ```  
@@ -82,28 +77,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`strName`  
+ [v] `strName`  
  Název vlastnosti  
   
- [v]`bOpenFileDialog`  
- `TRUE`Chcete-li spustit **otevřít soubor** dialogové okno; `FALSE` otevřete **uložit soubor** dialogové okno.  
+ [v] `bOpenFileDialog`  
+ `TRUE` Chcete-li spustit **otevřít soubor** dialogové okno; `FALSE` otevřete **uložit soubor** dialogové okno.  
   
- [v]`strFileName`  
+ [v] `strFileName`  
  Počáteční název.  
   
- [v]`lpszDefExt`  
+ [v] `lpszDefExt`  
  Řetězec, jeden nebo více přípon názvů souborů. Výchozí hodnota je `NULL`.  
   
- [v]`dwFlags`  
+ [v] `dwFlags`  
  Dialogové okno pole příznaky. Výchozí hodnota je bitovou kombinaci (nebo) `OFN_HIDEREADONLY` a `OFN_OVERWRITEPROMPT`.  
   
- [v]`lpszFilter`  
+ [v] `lpszFilter`  
  Řetězec filtry jeden nebo více souborů. Výchozí hodnota je `NULL`.  
   
- [v]`lpszDescr`  
+ [v] `lpszDescr`  
  Vlastnost popis položky. Výchozí hodnota je `NULL`.  
   
- [v]`dwData`  
+ [v] `dwData`  
  Data specifické pro aplikaci, která je přidružená k položce vlastnost. Například 32bitové celé číslo nebo ukazatel na další data. Výchozí hodnota je 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  

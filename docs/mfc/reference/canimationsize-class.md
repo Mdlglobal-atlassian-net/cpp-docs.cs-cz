@@ -1,12 +1,9 @@
 ---
-title: "Třída CAnimationSize | Microsoft Docs"
-ms.custom: 
+title: Třída CAnimationSize | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationSize
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationsize-class"></a>CAnimationSize – třída
 Implementuje funkce velikost objektu může být animovaný jejíž dimenze.  
@@ -108,7 +103,7 @@ class CAnimationSize : public CAnimationBaseObject;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationSize::AddTransition  
+##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
  Přidá přechody pro šířku a výšku.  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce, které chcete přidat zadaný přechody do seznamu interní přechodů má být použita pro proměnné animace pro šířku a výšku. Když přidáte přechody, jejich nejsou použije okamžitě a uložená v interní seznamu. Přechody se použijí (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup. Pokud nemusíte použít přechod na jednu z dimenzí, můžete předat hodnotu NULL.  
   
-##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
+##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
  Vytvoří objekt velikost animace.  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationSize(
 ### <a name="remarks"></a>Poznámky  
  Objekt je vytvořený pomocí výchozí hodnoty pro šířky, výšky objekt ID a ID skupiny, které bude nastavena na hodnotu 0. Může se změnit později v době běhu pomocí SetDefaultValue a ID sady.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
  Zařadí do seznamu proměnných zapouzdřené animace.  
   
 ```  
@@ -170,7 +165,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Když funkce vrátí hodnotu, obsahuje odkazy na dva objekty CAnimationVariable představující šířku a výšku.  
   
-##  <a name="getcx"></a>CAnimationSize::GetCX  
+##  <a name="getcx"></a>  CAnimationSize::GetCX  
  Poskytuje přístup k CAnimationVariable představující šířku.  
   
 ```  
@@ -183,7 +178,7 @@ CAnimationVariable& GetCX();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující šířku.  
   
-##  <a name="getcy"></a>CAnimationSize::GetCY  
+##  <a name="getcy"></a>  CAnimationSize::GetCY  
  Poskytuje přístup k CAnimationVariable představující výšku.  
   
 ```  
@@ -196,7 +191,7 @@ CAnimationVariable& GetCY();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující výšku.  
   
-##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
  Vrátí výchozí hodnoty pro šířku a výšku.  
   
 ```  
@@ -209,7 +204,7 @@ CSize GetDefaultValue();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst výchozí hodnotu, která byla dříve nastavena pomocí konstruktoru nebo SetDefaultValue.  
   
-##  <a name="getvalue"></a>CAnimationSize::GetValue  
+##  <a name="getvalue"></a>  CAnimationSize::GetValue  
  Vrací aktuální hodnotu.  
   
 ```  
@@ -226,21 +221,21 @@ BOOL GetValue(CSize& szValue);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst aktuální hodnotu velikosti animace. Pokud tato metoda selže nebo neinicializovali základní COM – objekty pro šířku a velikost, szValue obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.  
   
-##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
+##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
  Obsah zapouzdřeného animace proměnné, která představuje šířku velikosti animace.  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
+##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
  Obsah zapouzdřeného animace proměnné, která představuje výšku velikosti animace.  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
+##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
  Převede CAnimationSize CSize.  
   
 ```  
@@ -253,7 +248,7 @@ operator CSize();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže, bude vrácená velikost obsahovat výchozí hodnoty pro šířku a výšku.  
   
-##  <a name="operator_eq"></a>CAnimationSize::operator =  
+##  <a name="operator_eq"></a>  CAnimationSize::operator =  
  Přiřadí szSrc CAnimationSize.  
   
 ```  
@@ -267,7 +262,7 @@ void operator=(const CSize& szSrc);
 ### <a name="remarks"></a>Poznámky  
  Přiřadí szSrc CAnimationSize. Se doporučuje udělat před animace spustit, protože tento operátor volání SetDefaultValue, který vytvoří základní objektů COM pro šířku a výšku, pokud byly vytvořeny. Pokud odebíráte tento objekt animace události (ValueChanged nebo IntegerValueChanged), budete muset znovu povolit tyto události.  
   
-##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
  Nastaví výchozí hodnotu.  
   
 ```  

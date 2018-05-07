@@ -1,30 +1,25 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Vykreslování ovládacího prvku ActiveX | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Vykreslování ovládacího prvku ActiveX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX
 Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak můžete změnit kód Malování optimalizovat proces. (Viz [optimalizace vykreslování ovládacího prvku](../mfc/optimizing-control-drawing.md) pro techniky o tom, jak optimalizovat kreslení pomocí nemá ovládací prvky jednotlivě obnovit dříve vybrané objekty GDI. Po vykreslení všechny ovládací prvky kontejneru automaticky obnovit původní objekty.)  
@@ -39,7 +34,7 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
   
 -   [Postupy pro vaše ovládací prvek s použitím metasoubory Malování](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>Proces vykreslování ovládacího prvku ActiveX  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> Proces vykreslování ovládacího prvku ActiveX  
  Pokud ovládací prvky ActiveX se zpočátku zobrazují nebo jsou překreslen, se řídí podobně jako ostatní aplikace vyvinuté pomocí jednoho zásadní rozdíl MFC, proces vykreslování: ovládací prvky ActiveX může být aktivní nebo neaktivní stavu.  
   
  Aktivní ovládací prvek je reprezentována v kontejneru ovládacího prvku ActiveX ve podřízeného okna. Jako další windows je zodpovědná za samotný vykreslování při `WM_PAINT` je přijatá zpráva. Základní třída ovládacího prvku, [COleControl](../mfc/reference/colecontrol-class.md), zpracovává tuto zprávu v jeho `OnPaint` funkce. Tato výchozí implementace volá `OnDraw` funkce ovládacího prvku.  
@@ -62,14 +57,14 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
 > [!NOTE]
 >  Při vykreslování ovládacího prvku, neprovádějte předpoklady o stavu zařízení kontext, který se předá jako *primárního řadiče domény* parametru `OnDraw` funkce. Příležitostně kontextu zařízení poskytl kontejneru aplikace a nebude nutně inicializovat do výchozího stavu. Konkrétně se explicitně vyberte per, štětce, barvy, písma a další prostředky, které závisí kreslení kódu.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>Optimalizace kódu Malování  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimalizace kódu Malování  
  Po ovládací prvek je úspěšně vykreslování sám sebe, dalším krokem je za účelem optimalizace `OnDraw` funkce.  
   
  Výchozí implementace vykreslování ovládacího prvku ActiveX vybarví oblasti celý ovládací prvek. Toto je dostačující pro jednoduché ovládací prvky, ale v mnoha případech překreslení ovládacího prvku by rychleji, pokud jenom překreslen části potřebné aktualizace, ale místo celý ovládací prvek.  
   
  `OnDraw` Funkce způsobem snadno optimalizace předáním `rcInvalid`, obdélníkovou oblast ovládací prvek, který potřebuje překreslování. Pomocí této oblasti, obvykle menší než oblasti celý ovládací prvek pro urychlení proces vykreslování.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>Vykreslování ovládacího prvku pomocí metasoubory  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Vykreslování ovládacího prvku pomocí metasoubory  
  Ve většině případů `pdc` parametru `OnDraw` funkce odkazuje na obrazovce kontextu zařízení (DC). Při tisku bitových kopií ovládací prvek nebo během relace náhledu tisku, je řadič domény pro vykreslování však speciální typu s názvem "metasoubory řadiče domény". Na rozdíl od obrazovky řadiče domény, která okamžitě zpracovává požadavky do něj odeslané, metafile řadič domény ukládá žádosti o přehrání později. Některé aplikace typu kontejner se také rozhodnout k vykreslení ovládacího prvku obrázek s použitím metafile řadiče domény v režimu návrhu.  
   
  Metafile kreslení požadavků můžete provést pomocí kontejneru, přistoupit přes dvě funkce rozhraní: **IViewObject::Draw** (Tato funkce také lze volat pro jiný metafile kreslení) a **IDataObject::GetData**. Když metasoubory řadiče domény se předá jako jeden z parametrů, rozhraní MFC framework zavolá [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Funkci ve třídě ovládacího prvku udělat žádné speciální zpracování přepište, protože člen virtuální funkce. Výchozí chování volání `COleControl::OnDraw`.  
@@ -80,11 +75,11 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
   
 |Oblouk|BibBlt|Tětivy|  
 |---------|------------|-----------|  
-|**Třemi tečkami**|**Řídicí**|`ExcludeClipRect`|  
+|**třemi tečkami**|**Řídicí**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**Mnohoúhelníku**|`Polyline`|  
+|`Pie`|**mnohoúhelníku**|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  

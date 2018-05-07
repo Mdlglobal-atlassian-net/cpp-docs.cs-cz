@@ -1,12 +1,9 @@
 ---
 title: Struktura CRuntimeClass | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>Struktura CRuntimeClass
 Jednotlivé třídy odvozené od `CObject` je přidružen `CRuntimeClass` struktura, která můžete použít k získání informací o objektu nebo její základní třída za běhu.  
@@ -61,11 +56,11 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|Číslo schématu třídy.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CRuntimeClass`je struktura a proto nemá základní třídu.  
+ `CRuntimeClass` je struktura a proto nemá základní třídu.  
   
  Možnost určit třídu objektu v době běhu je užitečné, když je potřeba další typ kontroly argumenty funkce, nebo když musíte napsat kód speciální na základě třídy objektu. Run-time třída informace nepodporují přímo jazyka C++.  
   
- `CRuntimeClass`poskytuje informace o související objekt C++, jako je například ukazatel `CRuntimeClass` základní třídy a název třídy ASCII související třídy. Tato struktura je navíc implementovaná různé funkce, které lze vytvořit dynamicky objekty, určení typu objektu pomocí názvu obeznámeni, a určení, pokud je související třída odvozená z určité třídy.  
+ `CRuntimeClass` poskytuje informace o související objekt C++, jako je například ukazatel `CRuntimeClass` základní třídy a název třídy ASCII související třídy. Tato struktura je navíc implementovaná různé funkce, které lze vytvořit dynamicky objekty, určení typu objektu pomocí názvu obeznámeni, a určení, pokud je související třída odvozená z určité třídy.  
   
  Další informace o používání `CRuntimeClass`, najdete v článku [informace o třídě přístup k Run-Time](../../mfc/accessing-run-time-class-information.md).  
   
@@ -75,7 +70,7 @@ struct CRuntimeClass
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  Volání této funkce pro zadanou třídu vytvořit dynamicky za běhu.  
   
 ```  
@@ -99,7 +94,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="fromname"></a>CRuntimeClass::FromName  
+##  <a name="fromname"></a>  CRuntimeClass::FromName  
  Volání této funkce můžete získat `CRuntimeClass` struktura přidružené k názvu seznámit.  
   
 ```  
@@ -118,7 +113,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  Volání této funkce k určení, pokud je volání třída odvozená z třídy zadané v *pBaseClass* parametr.  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  Ukončené hodnotou null řetězec obsahující název třídy ASCII.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -154,7 +149,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  Velikost objektu v bajtech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -163,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  Pokud vaše aplikace staticky odkazuje na knihovny MFC a tento – datový člen obsahuje odkazy `CRuntimeClass` struktura základní třídy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -172,13 +167,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  Ukazatel na výchozí konstruktor, který vytvoří objekt vaší třídy.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento ukazatel je platná pouze v případě třída podporuje dynamické vytvoření; jinak, funkce vrátí hodnotu **NULL**.  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  Pokud vaše aplikace používá knihovny MFC jako sdílenou knihovnu DLL, tento člen dat odkazuje na funkci, která vrátí `CRuntimeClass` struktura základní třídy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -187,7 +182,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  Číslo schématu (-1 pro třídy nonserializable).  
   
 ### <a name="remarks"></a>Poznámky  

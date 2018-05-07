@@ -1,12 +1,9 @@
 ---
-title: "Třída CCachedDataPathProperty | Microsoft Docs"
-ms.custom: 
+title: Třída CCachedDataPathProperty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb62a905d092a347103ea98fcd323e3778ed458
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty – třída
 Vlastnost asynchronně přenáší a uložené v mezipaměti v paměti soubor ovládacího prvku implementuje OLE.  
@@ -52,7 +47,7 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`objekt ve kterém data do mezipaměti.|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` objekt ve kterém data do mezipaměti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Soubor paměti je uložená v paměti RAM místo na disku a je užitečné pro přenosy prostřednictvím rychlého dočasné.  
@@ -85,7 +80,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxctl.h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
  Vytvoří `CCachedDataPathProperty` objektu.  
   
 ```  
@@ -102,12 +97,12 @@ CCachedDataPathProperty(
  Ukazatel na objekt ovládací prvek ActiveX, který má být přidruženy s tímto `CCachedDataPathProperty` objektu.  
   
  `lpszPath`  
- Cesta, která může být absolutní nebo relativní, použít k vytvoření asynchronní přezdívka, který odkazuje na skutečnou absolutní umístění vlastnosti. `CCachedDataPathProperty`adresy URL, ne názvy souborů používá. Pokud chcete `CCachedDataPathProperty` objektu pro soubor, předřazení file:// k cestě.  
+ Cesta, která může být absolutní nebo relativní, použít k vytvoření asynchronní přezdívka, který odkazuje na skutečnou absolutní umístění vlastnosti. `CCachedDataPathProperty` adresy URL, ne názvy souborů používá. Pokud chcete `CCachedDataPathProperty` objektu pro soubor, předřazení file:// k cestě.  
   
 ### <a name="remarks"></a>Poznámky  
  `COleControl` Objektu na kterou odkazuje `pControl` používá [otevřete](../../mfc/reference/cdatapathproperty-class.md#open) a načíst odvozené třídy. Pokud `pControl` je **NULL**, ovládací prvek použít s **otevřete** musí být nastavená s [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Pokud `lpszPath` je **NULL**, můžete předat v cestě prostřednictvím **otevřete** nebo nastavte její [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Obsahuje název třídy paměti souboru, do kterého se data uloží do mezipaměti.  
   
 ```  

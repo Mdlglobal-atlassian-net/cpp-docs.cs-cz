@@ -1,12 +1,9 @@
 ---
-title: "CDaoRecordView – třída | Microsoft Docs"
-ms.custom: 
+title: CDaoRecordView – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fffeed33d5b966faf511f60da740c39f2b91581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -64,7 +59,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 |[CDaoRecordView::OnMove](#onmove)|Pokud došlo ke změně aktuální záznam aktualizací ve zdroji dat a pak přejde na zadaný záznam (Další, předchozí, první nebo poslední).|  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazení je přímo připojený k zobrazení formuláře `CDaoRecordset` objektu. Zobrazení je vytvořený z prostředku šablony dialogovém okně a zobrazí pole `CDaoRecordset` objektu v ovládacích prvcích šablony dialogového okna. `CDaoRecordView` Objektu používá výměna dialogových dat (DDX) a rozhraní DAO výměna pole záznamu (DFX) k automatizaci přesun dat mezi ovládacími prvky na formuláři a pole sady záznamů. `CDaoRecordView`také poskytuje výchozí implementaci pro přesun na první další, předchozí nebo poslední záznam a rozhraní pro aktualizaci záznamu aktuálně v zobrazení.  
+ Zobrazení je přímo připojený k zobrazení formuláře `CDaoRecordset` objektu. Zobrazení je vytvořený z prostředku šablony dialogovém okně a zobrazí pole `CDaoRecordset` objektu v ovládacích prvcích šablony dialogového okna. `CDaoRecordView` Objektu používá výměna dialogových dat (DDX) a rozhraní DAO výměna pole záznamu (DFX) k automatizaci přesun dat mezi ovládacími prvky na formuláři a pole sady záznamů. `CDaoRecordView` také poskytuje výchozí implementaci pro přesun na první další, předchozí nebo poslední záznam a rozhraní pro aktualizaci záznamu aktuálně v zobrazení.  
   
 > [!NOTE]
 >  Databázové třídy DAO se liší od třídami databází MFC založené na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mít předponu "CDao". Můžete i nadále přístup ke zdrojům dat ODBC s třídy DAO; třídy DAO obecně nabízí vynikající funkcí, protože používají databázový stroj Microsoft Jet.  
@@ -77,7 +72,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  Informace o výchozí implementace pro přesun mezi záznamy najdete v tématu `IsOnFirstRecord` a `IsOnLastRecord` a v článku [použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md), které se vztahují na obou `CRecordView` a `CDaoRecordView`.  
   
- `CDaoRecordView`uchovává informace o umístění uživatele v sadě záznamů tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Pokud se uživatel přesune na obou koncích sady záznamů, zobrazení záznamu zakáže objekty uživatelského rozhraní – například položek nabídky nebo tlačítka panelu nástrojů – pro přesun další ve stejném směru.  
+ `CDaoRecordView` uchovává informace o umístění uživatele v sadě záznamů tak, aby zobrazení záznamů můžete aktualizovat uživatelské rozhraní. Pokud se uživatel přesune na obou koncích sady záznamů, zobrazení záznamu zakáže objekty uživatelského rozhraní – například položek nabídky nebo tlačítka panelu nástrojů – pro přesun další ve stejném směru.  
   
  Další informace o deklarování a použití zobrazení záznamů a záznamů třídy najdete v tématu "Navrhování a vytváření záznam zobrazení" v článku [zobrazení záznamů](../../data/record-views-mfc-data-access.md). Další informace o způsobu zobrazení záznamu pracovní a jejich použití naleznete v článku [použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md). Všechny články zmíněné platí pro `CRecordView` a `CDaoRecordView`.  
   
@@ -99,7 +94,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
  Když vytvoříte objekt typ odvozený z `CDaoRecordView`, volání buď formu konstruktor k inicializaci objektu zobrazení a identifikovat prostředku dialogového okna, na kterých je založena zobrazení.  
   
 ```  
@@ -127,7 +122,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
  Volání této funkce člen můžete určit, zda je na aktuální záznam na první záznam v objektu sady záznamů spojeného s tímto zobrazením záznamu.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL IsOnFirstRecord();
   
  Pokud se uživatel přesune na první záznam, zakáže framework žádné uživatelské rozhraní objekty (pro příklad položky nabídky nebo tlačítka panelu nástrojů) máte pro přesun na první nebo předchozího záznamu.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
  Volání této funkce člen můžete určit, zda je na aktuální záznam poslední záznam v objektu sady záznamů spojeného s tímto zobrazením záznamu.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Výsledkem této funkce je spolehlivé, s tím rozdílem, že zobrazení nemusí být možné zjistit konec sady záznamů, dokud uživatel má přesunuty za ho. Uživatel může mít přesunout mimo poslední záznam před zobrazení záznamu zjistíte, že je nutné zakázat všechny objekty uživatelského rozhraní pro přesun na další nebo poslední záznam. Pokud uživatel přesune za poslední záznam a pak přejde zpět na poslední záznam (nebo před ním), můžete zobrazení záznamů sledovat pozici uživatele v sadě záznamů a správně zakázat objekty uživatelského rozhraní.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
  Vrátí ukazatel `CDaoRecordset`-odvozené objekt přidružený k zobrazení záznamu.  
   
 ```  
@@ -173,7 +168,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Další informace a příklady naleznete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
  Volání této funkce člen přesunout na jiný záznam v sadě záznamů a zobrazte její pole v ovládací prvky zobrazení záznamu.  
   
 ```  
@@ -184,13 +179,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Jedna z následujících hodnot ID standardních příkazů:  
   
-- `ID_RECORD_FIRST`Přesunout na první záznam v sadě záznamů.  
+- `ID_RECORD_FIRST` Přesunout na první záznam v sadě záznamů.  
   
-- `ID_RECORD_LAST`Přechod na poslední záznam v sadě záznamů.  
+- `ID_RECORD_LAST` Přechod na poslední záznam v sadě záznamů.  
   
-- `ID_RECORD_NEXT`Přejděte na další záznam v sadě záznamů.  
+- `ID_RECORD_NEXT` Přejděte na další záznam v sadě záznamů.  
   
-- `ID_RECORD_PREV`Přesuňte do předchozího záznamu v sadě záznamů.  
+- `ID_RECORD_PREV` Přesuňte do předchozího záznamu v sadě záznamů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud byl přesun úspěšný; jinak hodnota 0, pokud žádost o přesunutí byl odepřen.  

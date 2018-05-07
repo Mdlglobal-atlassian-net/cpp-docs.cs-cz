@@ -1,13 +1,10 @@
 ---
-title: "TN065: Podpora duálního rozhraní u automatizačních serverů OLE | Microsoft Docs"
-ms.custom: 
+title: 'TN065: Podpora duálního rozhraní u automatizačních serverů OLE | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní u automatizačních serverů OLE
 > [!NOTE]
@@ -390,25 +385,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
     Návratový pThis -> ExternalAddRef();
 
 }   
 STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
     Návratový pThis -> ExternalRelease();
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID * ppvObj)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
-    return pThis->ExternalQueryInterface(&iid, ppvObj);
+    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
+    Návratový pThis -> ExternalQueryInterface (& iid, ppvObj);
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    Method_prologue – (CAutoClickDoc, SupportErrorInfo)   
     Vrátí (iid == IID_IDualAClick) S_OK: S_FALSE;   
 }  
 ```  

@@ -1,29 +1,24 @@
 ---
-title: "Třída CMFCStandardColorsPropertyPage | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCStandardColorsPropertyPage | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60deb16628802e61ac411d576558a8659a638410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abaad4870354ba331e615e0739dc7526dd39607d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage – třída
 Představuje stránku vlastností, která uživatelé použít k výběru standardní barvy v dialogovém okně barvy.  

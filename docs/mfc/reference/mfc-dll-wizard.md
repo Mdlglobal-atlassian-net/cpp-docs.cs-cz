@@ -1,13 +1,10 @@
 ---
-title: "MFC DLL – Průvodce | Microsoft Docs"
-ms.custom: 
+title: MFC DLL – Průvodce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.overview
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d02d6e6f598d6d18a6e17e9a99a3190a836dc780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL – průvodce knihovnou
 Pokud použijete Průvodce MFC DLL vytvořit projektu knihovny MFC, dostanete výchozí s integrovanou funkci, když kompilovat, bude implementace základní funkce [DLL](../../build/dlls-in-visual-cpp.md). Výchozí program knihovny MFC zahrnuje C++ zdrojové (sada) soubory, soubory prostředků (RC) a soubor projektu (VCXPROJ). Kód, který vygenerovala v těchto souborech starter vychází MFC. Podrobnější informace naleznete v souboru Readme.txt, který se vygeneruje pro svůj projekt v sadě Visual Studio a [třídy a funkce generované průvodcem MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

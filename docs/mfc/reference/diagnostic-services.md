@@ -1,13 +1,10 @@
 ---
-title: "Diagnostické služby | Microsoft Docs"
-ms.custom: 
+title: Diagnostické služby | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 Knihovny Microsoft Foundation Class poskytuje mnoho diagnostiky službách, díky kterým ladění programy jednodušší. Tyto diagnostické služby zahrnují makra a globální funkce, které vám umožní sledovat paměti pro vaše programy přidělení, dump obsah objektů za běhu a Tisk zprávy ladění za běhu. Makra a globální funkce pro diagnostické služby jsou seskupené do následujících kategorií:  
@@ -106,7 +101,7 @@ Knihovny Microsoft Foundation Class poskytuje mnoho diagnostiky službách, dík
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Upozornění kompilátoru pro použití zastaralé funkce MFC potlačí.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 Upozornění kompilátoru pro použití zastaralé funkce MFC potlačí.  
    
 ### <a name="syntax"></a>Syntaxe   
@@ -128,7 +123,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>Afxdebugbreak –
+## <a name="afxdebugbreak"></a> Afxdebugbreak –
 Volání této funkce způsobí zalomení (v umístění volání `AfxDebugBreak`) v provádění ladicí verzi vaší aplikace knihovny MFC.  
 
 ### <a name="syntax"></a>Syntaxe    
@@ -137,12 +132,12 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>Poznámky  
- `AfxDebugBreak`nemá žádný vliv v verze aplikace MFC a měla by být odebrána. Tato funkce slouží pouze v aplikacích MFC. Použijte verzi rozhraní API Win32 **debugbreak –**, aby způsobí přerušení mimo MFC aplikace.  
+ `AfxDebugBreak` nemá žádný vliv v verze aplikace MFC a měla by být odebrána. Tato funkce slouží pouze v aplikacích MFC. Použijte verzi rozhraní API Win32 **debugbreak –**, aby způsobí přerušení mimo MFC aplikace.  
    
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxver_.h   
 
-##  <a name="assert"></a>ASSERT
+##  <a name="assert"></a>  ASSERT
  Vyhodnotí jeho argumentem.  
   
 ```   
@@ -173,7 +168,7 @@ ASSERT(booleanExpression)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="assert_kindof"></a>ASSERT_KINDOF –  
+##  <a name="assert_kindof"></a>  ASSERT_KINDOF –  
  Toto makro vyhodnotí objekt ukazuje je objekt pro zadanou třídu, zda je objekt třídy odvozené od pro zadanou třídu.  
   
 ```   
@@ -204,7 +199,7 @@ ASSERT_KINDOF(classname, pobject)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="assert_valid"></a>ASSERT_VALID –  
+##  <a name="assert_valid"></a>  ASSERT_VALID –  
  Použijte k testování předpokladů o platnost vnitřní stav objektu.  
   
 ```   
@@ -216,7 +211,7 @@ ASSERT_VALID(pObject)
  Určuje objekt třídy odvozené od `CObject` s přepsání verzi `AssertValid` – členská funkce.  
   
 ### <a name="remarks"></a>Poznámky  
- `ASSERT_VALID`volání `AssertValid` jako její argument předaná – členská funkce objektu.  
+ `ASSERT_VALID` volání `AssertValid` jako její argument předaná – členská funkce objektu.  
   
  Ve verzi knihovny MFC `ASSERT_VALID` se nic nestane. V ladicí verze, ověřuje ukazatele, ověří proti **NULL**a zavolá metodu objektu vlastní `AssertValid` členské funkce. Pokud některý z těchto testů selže, se zobrazí zpráva s upozorněním stejným způsobem jako [ASSERT](#assert).  
   
@@ -231,7 +226,7 @@ ASSERT_VALID(pObject)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
-##  <a name="debug_new"></a>DEBUG_NEW –  
+##  <a name="debug_new"></a>  DEBUG_NEW –  
  Pomáhá v hledání nevrácené paměti.  
   
 ```   
@@ -255,7 +250,7 @@ ASSERT_VALID(pObject)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
-##  <a name="debug_only"></a>DEBUG_ONLY –  
+##  <a name="debug_only"></a>  DEBUG_ONLY –  
  V režimu ladění (když **_DEBUG –** symbol je definována), `DEBUG_ONLY` vyhodnotí jako její argument.  
   
 ```   
@@ -273,7 +268,7 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
- ### <a name="ensure"></a>Zajistěte, aby a ENSURE_VALID
+ ### <a name="ensure"></a>  Zajistěte, aby a ENSURE_VALID
 Slouží k ověření správnosti data.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -303,7 +298,7 @@ ENSURE_VALID( booleanExpression  )
  [OVĚŘENÍ](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE –
+## <a name="this_file"></a> THIS_FILE –
 Rozšíří na název souboru, který se bude kompilovat.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -334,7 +329,7 @@ static char THIS_FILE[] = __FILE__;
  [OVĚŘENÍ](#verify)
 
 
-##  <a name="trace"></a>TRASOVÁNÍ  
+##  <a name="trace"></a>  TRASOVÁNÍ  
  Zadaný řetězec se odešle do ladicího programu aktuální aplikace.  
   
 ```   
@@ -352,7 +347,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
-##  <a name="verify"></a>OVĚŘENÍ  
+##  <a name="verify"></a>  OVĚŘENÍ  
  V ladicí verze knihovny MFC vyhodnotí jeho argumentem.  
   
 ```   
@@ -380,7 +375,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>afxdump – (cdumpcontext v prostředí MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>  afxdump – (cdumpcontext v prostředí MFC)  
  Poskytuje základní objekt vypsání možnost ve vaší aplikaci.  
   
 ```   
@@ -388,7 +383,7 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `afxDump`je i předdefinovanou [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objekt, který umožňuje odeslat `CDumpContext` informace do okna výstupu ladicí program nebo k ladění terminálu. Obvykle je zadat `afxDump` jako parametr pro `CObject::Dump`.  
+ `afxDump` je i předdefinovanou [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objekt, který umožňuje odeslat `CDumpContext` informace do okna výstupu ladicí program nebo k ladění terminálu. Obvykle je zadat `afxDump` jako parametr pro `CObject::Dump`.  
   
  V systému Windows NT a všechny verze systému Windows `afxDump` výstup je odeslán do okna výstupu ladění jazyka Visual C++ při ladění aplikace.  
   
@@ -401,7 +396,7 @@ CDumpContext  afxDump;
  **Záhlaví:** afx.h
 
 
-## <a name="afxdump"></a>Afxdump – (interní)
+## <a name="afxdump"></a> Afxdump – (interní)
 Vnitřní funkce, která používá MFC vypsat stav objektu při ladění.  
 
 ### <a name="syntax"></a>Syntaxe    
@@ -425,7 +420,7 @@ void AfxDump(const CObject* pOb);
 
 
 
-##  <a name="afxmemdf"></a>afxmemdf –  
+##  <a name="afxmemdf"></a>  afxmemdf –  
  Tato proměnná je dostupné z ladicí program nebo program a umožňuje vám umožní ladit přidělení diagnostiky.  
   
 ```   
@@ -433,7 +428,7 @@ int  afxMemDF;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `afxMemDF`může mít následující hodnoty podle specifikace výčtu `afxMemDF`:  
+ `afxMemDF` může mít následující hodnoty podle specifikace výčtu `afxMemDF`:  
   
 - **allocmemdf –** Zapne ladění allocator (výchozí nastavení v ladicí knihovny).  
   
@@ -447,7 +442,7 @@ int  afxMemDF;
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
-##  <a name="afxcheckerror"></a>Afxcheckerror –  
+##  <a name="afxcheckerror"></a>  Afxcheckerror –  
  Tato funkce testy předaný **kód SCODE** chcete zobrazit, pokud je k chybě.  
   
 ```   
@@ -470,7 +465,7 @@ throw COleException*
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h
 
-##  <a name="afxcheckmemory"></a>Afxcheckmemory –  
+##  <a name="afxcheckmemory"></a>  Afxcheckmemory –  
  Tato funkce ověří volné paměti fondu a vypíše chybové zprávy podle potřeby.  
   
 ```   
@@ -502,7 +497,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
  
-##  <a name="afxdump"></a>Afxdump – (MFC)  
+##  <a name="afxdump"></a>  Afxdump – (MFC)  
  Volání této funkce v ladicím programu pro výpis stavu objektu při ladění.  
   
 ```   
@@ -526,7 +521,7 @@ void AfxDump(const CObject* pOb);
 
 
   
-##  <a name="afxdumpstack"></a>Afxdumpstack –  
+##  <a name="afxdumpstack"></a>  Afxdumpstack –  
  Globální funkce slouží ke generování bitové kopie aktuálního zásobníku.  
   
 ```   
@@ -605,7 +600,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 |`void AfxDumpStack(unsigned long)`|Prototyp funkce volána.|  
 |`+ 181 bytes`|Posun v bajtech z adresy prototyp funkce (v tomto případě `void AfxDumpStack(unsigned long)`) na návratovou adresu (v tomto případě `00427D55`).|  
   
- `AfxDumpStack`je k dispozici v ladění a nondebug verze knihovny MFC; však funkce vždy souvisí staticky, i v případě, že spustitelný soubor používá MFC v sdílenou knihovnu DLL. V implementacích sdílené knihovny funkce nachází v MFCS42. Knihovny LIB (a jeho variant).  
+ `AfxDumpStack` je k dispozici v ladění a nondebug verze knihovny MFC; však funkce vždy souvisí staticky, i v případě, že spustitelný soubor používá MFC v sdílenou knihovnu DLL. V implementacích sdílené knihovny funkce nachází v MFCS42. Knihovny LIB (a jeho variant).  
   
  Úspěšné použití této funkce:  
   
@@ -615,7 +610,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>Afxenablememoryleakdump –  
+##  <a name="afxenablememoryleakdump"></a>  Afxenablememoryleakdump –  
  Povolí nebo zakáže stav nevracení paměti v `AFX_DEBUG_STATE` destruktor.  
   
 ```  
@@ -623,8 +618,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bDump`  
- `TRUE`Určuje, jestli že je zapnutá výpisu paměti k úniku; `FALSE` označuje stav nevracení paměti je vypnuto.  
+ [v] `bDump`  
+ `TRUE` Určuje, jestli že je zapnutá výpisu paměti k úniku; `FALSE` označuje stav nevracení paměti je vypnuto.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí hodnotu pro tento příznak.  
@@ -640,7 +635,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxenablememorytracking"></a>Afxenablememorytracking –  
+##  <a name="afxenablememorytracking"></a>  Afxenablememorytracking –  
  Sledování diagnostiky paměti je obvykle ve ladicí verze knihovny MFC povolené.  
   
 ```   
@@ -668,7 +663,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxismemoryblock"></a>Afxismemoryblock –  
+##  <a name="afxismemoryblock"></a>  Afxismemoryblock –  
  Testuje adresu paměti a ujistěte se, reprezentuje blok aktuálně aktivní paměti, který byl přidělen diagnostiky verze **nové**.  
   
 ```   
@@ -700,7 +695,7 @@ BOOL AfxIsMemoryBlock(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxisvalidaddress"></a>Afxisvalidaddress –  
+##  <a name="afxisvalidaddress"></a>  Afxisvalidaddress –  
  Testy libovolná adresa paměti zajistit, že ho je celý vešel do jednoho místa paměti programu.  
   
 ```   
@@ -734,7 +729,7 @@ BOOL AfxIsValidAddress(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxisvalidstring"></a>Afxisvalidstring –  
+##  <a name="afxisvalidstring"></a>  Afxisvalidstring –  
  Pomocí této funkce můžete určit, zda je ukazatel na řetězec platný.  
   
 ```   
@@ -761,7 +756,7 @@ BOOL  AfxIsValidString(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxsetallochook"></a>Afxsetallochook –  
+##  <a name="afxsetallochook"></a>  Afxsetallochook –  
  Nastaví háku, která umožňuje volání zadaná funkce předtím, než je přidělená každého bloku paměti.  
   
 ```   
@@ -794,7 +789,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxdoforallclasses"></a>AfxDoForAllClasses –  
+##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses –  
  Volá funkci zadaný iterace pro všechny serializovatelný `CObject`-odvozených tříd v paměti aplikace.  
   
 ```   
@@ -825,7 +820,7 @@ AFXAPI AfxDoForAllClasses(
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h 
 
-##  <a name="afxdoforallobjects"></a>Afxdoforallobjects –  
+##  <a name="afxdoforallobjects"></a>  Afxdoforallobjects –  
  Spustí zadaný iterace funkce pro všechny objekty odvozené od `CObject` , byl přidělen s **nové**.  
   
 ```   

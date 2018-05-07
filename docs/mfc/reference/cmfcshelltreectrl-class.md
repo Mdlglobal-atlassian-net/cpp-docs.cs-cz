@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCShellTreeCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCShellTreeCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCShellTreeCtrl
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 727b0032687ed22692f07f9b5e9e5fe8b2813071
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl – třída
 `CMFCShellTreeCtrl` Rozšiřuje třídu [CTreeCtrl – třída](../../mfc/reference/ctreectrl-class.md) funkce zobrazením hierarchie položek prostředí.  
@@ -100,7 +95,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
  [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]  
   
-##  <a name="enableshellcontextmenu"></a>CMFCShellTreeCtrl::EnableShellContextMenu  
+##  <a name="enableshellcontextmenu"></a>  CMFCShellTreeCtrl::EnableShellContextMenu  
  Umožňuje místní nabídky.  
   
 ```  
@@ -108,10 +103,10 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
+ [v] `bEnable`  
  Logická hodnota, která určuje, jestli se má povolit místní nabídky.  
   
-##  <a name="getflags"></a>CMFCShellTreeCtrl::GetFlags  
+##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  Vrací příznaky pro nastavit [CMFCShellTreeCtrl třída](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  
   
 ```  
@@ -124,7 +119,7 @@ DWORD GetFlags() const;
 ### <a name="remarks"></a>Poznámky  
  Příznaky nastavené `CMFCShellTreeCtrl` se odesílají do metody [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066) vždy, když je aktualizován objekt. Příznaky s, můžete změnit [CMFCShellTreeCtrl::SetFlags](#setflags) metoda.  
   
-##  <a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath  
+##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  Načte cestu položku v [CMFCShellTreeCtrl třída](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  
   
 ```  
@@ -134,10 +129,10 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`strPath`  
+ [out] `strPath`  
  Odkaz na parametr řetězce. Metoda zapíše cesta položky do tohoto parametru.  
   
- [v]`htreeItem`  
+ [v] `htreeItem`  
  Metoda načte cestu pro tuto položku ovládacího prvku strom.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -148,7 +143,7 @@ BOOL GetItemPath(
   
  Pokud nezadáte `hTreeItem`, tato metoda se pokusí získat řetězec pro aktuálně vybrané položky. Pokud není vybrána žádná položka a `hTreeItem` je `NULL`, tato metoda selže.  
   
-##  <a name="getrelatedlist"></a>CMFCShellTreeCtrl::GetRelatedList  
+##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  Vrátí ukazatel na [CMFCShellListCtrl třída](../../mfc/reference/cmfcshelllistctrl-class.md) objekt, který je přidružen to [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  
   
 ```  
@@ -161,7 +156,7 @@ CMFCShellListCtrl* GetRelatedList() const;
 ### <a name="remarks"></a>Poznámky  
  Pomocí `CMFCShellListCtrl` objektu společně s `CMFCShellTreeCtrl` objekt, můžete vytvořit okno s stylu Průzkumníka. Pomocí této metody [CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist) přidružit dvou tříd. Jakmile jsou přidružené, rozhraní automaticky aktualizuje `CMFCShellListCtrl` Pokud výběr v `CMFCShellTreeCtrl` změny.  
   
-##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
+##  <a name="onchildnotify"></a>  CMFCShellTreeCtrl::OnChildNotify  
 
   
 ```  
@@ -173,16 +168,16 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`message`  
- [v]`wParam`  
- [v]`lParam`  
- [v]`pLResult`  
+ [v] `message`  
+ [v] `wParam`  
+ [v] `lParam`  
+ [v] `pLResult`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
+##  <a name="ongetitemicon"></a>  CMFCShellTreeCtrl::OnGetItemIcon  
 
   
 ```  
@@ -192,14 +187,14 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pItem`  
- [v]`bSelected`  
+ [v] `pItem`  
+ [v] `bSelected`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
+##  <a name="ongetitemtext"></a>  CMFCShellTreeCtrl::OnGetItemText  
 
   
 ```  
@@ -207,13 +202,13 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pItem`  
+ [v] `pItem`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="refresh"></a>CMFCShellTreeCtrl::Refresh  
+##  <a name="refresh"></a>  CMFCShellTreeCtrl::Refresh  
  Aktualizuje a překreslí [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md).  
   
 ```  
@@ -223,7 +218,7 @@ void Refresh();
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze aktualizovat zobrazení položek v hierarchii `CMFCShellTreeCtrl`.  
   
-##  <a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath  
+##  <a name="selectpath"></a>  CMFCShellTreeCtrl::SelectPath  
  Vybere položku v [CMFCShellTreeCtrl třída](../../mfc/reference/cmfcshelltreectrl-class.md) na základě zadané cesty.  
   
 ```  
@@ -232,16 +227,16 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszPath`  
+ [v] `lpszPath`  
  Řetězec, který určuje cestu položce.  
   
- [v]`lpidl`  
+ [v] `lpidl`  
  PIDL, která určuje položku  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `S_OK`v případě úspěšného; `E_FAIL` jinak.  
+ `S_OK` v případě úspěšného; `E_FAIL` jinak.  
   
-##  <a name="setflags"></a>CMFCShellTreeCtrl::SetFlags  
+##  <a name="setflags"></a>  CMFCShellTreeCtrl::SetFlags  
  Nastaví příznaky vyfiltrujete kontextu stromu.  
   
 ```  
@@ -251,16 +246,16 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwFlags`  
+ [v] `dwFlags`  
  Příznaky nastavit.  
   
- [v]`bRefresh`  
+ [v] `bRefresh`  
  Logická hodnota, která určuje, zda `CMFCShellTreeCtrl` by měl být aktualizovat okamžitě.  
   
 ### <a name="remarks"></a>Poznámky  
  `CMFCShellTreeCtrl` Předává všechny příznaky nastaveny na [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066). Další informace o hodnotách různé příznaky najdete v tématu [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).  
   
-##  <a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList  
+##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  Přidruží [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objektu s [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) objektu.  
   
 ```  
@@ -268,7 +263,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pShellList`  
+ [v] `pShellList`  
  Ukazatel na `CMFCShellListCtrl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  

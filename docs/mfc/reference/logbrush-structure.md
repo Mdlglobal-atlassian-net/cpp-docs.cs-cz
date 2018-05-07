@@ -1,13 +1,10 @@
 ---
-title: "Logbrush – struktura | Microsoft Docs"
-ms.custom: 
+title: Logbrush – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH – struktura
 `LOGBRUSH` Struktura definuje styl, barvu a vzor fyzické štětce. Se používají v systému Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) a [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funkce.  
@@ -68,17 +63,17 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  Určuje styl šrafování. Význam závisí na styl štětce definované `lbStyle`. Pokud `lbStyle` je **BS_DIBPATTERN**, **lbHatch** člen obsahuje popisovač pro sbalený DIB. Pokud `lbStyle` je **BS_DIBPATTERNPT**, **lbHatch** člen obsahuje ukazatel sbalené DIB. Pokud `lbStyle` je **BS_HATCHED**, **lbHatch** člen Určuje orientaci čáry použité k vytvoření šrafování. Může být jedna z následujících hodnot:  
   
-- `HS_BDIAGONAL`45 stupňů vzestupný, zleva doprava šrafování  
+- `HS_BDIAGONAL` 45 stupňů vzestupný, zleva doprava šrafování  
   
-- `HS_CROSS`Mřížkovaný vodorovně a svisle  
+- `HS_CROSS` Mřížkovaný vodorovně a svisle  
   
-- `HS_DIAGCROSS`Mřížkovaný 45 stupňů  
+- `HS_DIAGCROSS` Mřížkovaný 45 stupňů  
   
-- `HS_FDIAGONAL`45 stupňů směrem dolů, doleva doprava šrafování  
+- `HS_FDIAGONAL` 45 stupňů směrem dolů, doleva doprava šrafování  
   
-- `HS_HORIZONTAL`Vodorovné šrafování  
+- `HS_HORIZONTAL` Vodorovné šrafování  
   
-- `HS_VERTICAL`Vertikální šrafování  
+- `HS_VERTICAL` Vertikální šrafování  
   
  Pokud `lbStyle` je **BS_PATTERN**, **lbHatch** je popisovač pro bitovou mapu, která definuje vzoru. Pokud `lbStyle` je **BS_SOLID** nebo **BS_HOLLOW**, **lbHatch** je ignorována.  
   

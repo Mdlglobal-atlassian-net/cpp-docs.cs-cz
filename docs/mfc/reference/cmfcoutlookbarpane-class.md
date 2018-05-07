@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCOutlookBarPane | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCOutlookBarPane | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarPane
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eb92e44a26577866a797243f3a32d53b854365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane – třída
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -147,7 +142,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxoutlookbarpane.h  
   
-##  <a name="addbutton"></a>CMFCOutlookBarPane::AddButton  
+##  <a name="addbutton"></a>  CMFCOutlookBarPane::AddButton  
  Přidá tlačítko panelu řádku aplikace Outlook.  
   
 ```  
@@ -188,35 +183,35 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiImage`  
+ [v] `uiImage`  
  Určuje identifikátor prostředku bitmapy.  
   
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Určuje text, na tlačítko.  
   
- [v]`iIdCommand`  
+ [v] `iIdCommand`  
  Určuje ID ovládacího prvku tlačítko.  
   
- [v]`iInsertAt`  
+ [v] `iInsertAt`  
  Na stránce panelu aplikace outlook, kam chcete vložit tlačítko Určuje index založený na nule.  
   
- [v]`uiLabel`  
+ [v] `uiLabel`  
  Řetězec prostředku.  
   
- [v]`szBmpFileName`  
+ [v] `szBmpFileName`  
  Určuje název souboru bitové kopie disku načíst.  
   
- [v]`szLabel`  
+ [v] `szLabel`  
  Určuje text, na tlačítko.  
   
- [v]`hBmp`  
+ [v] `hBmp`  
  Popisovač pro rastrový obrázek na tlačítko.  
   
- [v]`hIcon`  
+ [v] `hIcon`  
  Popisovač pro ikonu tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl úspěšně; přidán tlačítka v opačném případě `FALSE`.  
+ `TRUE` Pokud byl úspěšně; přidán tlačítka v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k vložení nového tlačítka na panelu aplikace Outlook stránku. Obrázek na tlačítko se dají načíst z prostředky aplikace nebo z soubor na disku.  
@@ -225,7 +220,7 @@ BOOL AddButton(
   
  Pokud index zadaný `iInsertAt` je -1, na tlačítko se přidá na konci stránky.  
   
-##  <a name="canbeattached"></a>CMFCOutlookBarPane::CanBeAttached  
+##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -236,7 +231,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="clearall"></a>CMFCOutlookBarPane::ClearAll  
+##  <a name="clearall"></a>  CMFCOutlookBarPane::ClearAll  
  Uvolní prostředky využívané třídou bitové kopie v podokně panelu aplikace Outlook.  
   
 ```  
@@ -246,7 +241,7 @@ void ClearAll();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda volá přímo [CMFCToolBarImages::Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear), která je volána pro Image, které jsou používány v podokně panelu aplikace Outlook.  
   
-##  <a name="create"></a>CMFCOutlookBarPane::Create  
+##  <a name="create"></a>  CMFCOutlookBarPane::Create  
  Vytvoří v podokně panelu aplikace Outlook.  
   
 ```  
@@ -258,27 +253,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Určuje nadřazeného okna Ovládací prvek panelu podokně aplikace Outlook. Nesmí být `NULL`.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Styl okna.  Seznam styly oken, naleznete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v]`uiID`  
+ [v] `uiID`  
  ID ovládacího prvku. Musí být jedinečný pro povolení ukládání stavu ovládacího prvku.  
   
- [v]`dwControlBarStyle`  
+ [v] `dwControlBarStyle`  
  Určuje zvláštní stylů, které definují chování ovládacího prvku panel podokně Outlook, když je odpojený od panelu aplikace Outlook.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
+ `TRUE` Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  K vytvoření `CMFCOutlookBarPane` objekt, první volání konstruktoru a pak zavolají `Create`, který vytvoří Outlook panelu Ovládací prvek podokna a připojí jej k `CMFCOutlookBarPane` objektu.  
   
  Další informace o `dwControlBarStyle` najdete v části [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
-##  <a name="enablecontextmenuitems"></a>CMFCOutlookBarPane::EnableContextMenuItems  
+##  <a name="enablecontextmenuitems"></a>  CMFCOutlookBarPane::EnableContextMenuItems  
  Určuje, které položky místní nabídky se zobrazí v režimu vlastní nastavení.  
   
 ```  
@@ -288,10 +283,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pButton`  
+ [v] `pButton`  
  Ukazatel na tlačítka panelu nástrojů, který klikl na uživatele.  
   
- [v]`pPopup`  
+ [v] `pPopup`  
  Ukazatel na místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -305,7 +300,7 @@ virtual BOOL EnableContextMenuItems(
 > [!NOTE]
 > *Kontextové nabídky* je synonymum pro místní nabídky.  
   
-##  <a name="enablepagescrollmode"></a>CMFCOutlookBarPane::EnablePageScrollMode  
+##  <a name="enablepagescrollmode"></a>  CMFCOutlookBarPane::EnablePageScrollMode  
  Určuje, zda posouvacích šipek na panelu aplikace Outlook řádku zálohy seznamu tlačítka po stránkách nebo tlačítko pomocí tlačítka.  
   
 ```  
@@ -313,10 +308,10 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bPageScroll`  
+ [v] `bPageScroll`  
  Pokud `TRUE`, povolte režim scroll stránky. Pokud `FALSE`, zakázat režim scroll stránky.  
   
-##  <a name="getregularcolor"></a>CMFCOutlookBarPane::GetRegularColor  
+##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  Vrátí běžné (tedy bez vybrané) Barva textu v podokně panelu aplikace Outlook.  
   
 ```  
@@ -329,7 +324,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
 ### <a name="remarks"></a>Poznámky  
  Použití [CMFCOutlookBarPane::SetTextColor](#settextcolor) nastavit aktuální barva textu (normální a vybrané) na panelu aplikace Outlook. Výchozí barvy můžete získat pomocí volání [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) fungovat s `COLOR_WINDOW` index.  
   
-##  <a name="isbackgroundtexture"></a>CMFCOutlookBarPane::IsBackgroundTexture  
+##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Určuje, zda je obrázek pozadí načten pro podokně panelu aplikace Outlook.  
   
 ```  
@@ -337,14 +332,14 @@ BOOL IsBackgroundTexture() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je obrázek pozadí zobrazíte; v opačném případě `FALSE`.  
+ `TRUE` Pokud je obrázek pozadí zobrazíte; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete přidat obrázek pozadí voláním [CMFCOutlookBarPane::SetBackImage](#setbackimage) funkce.  
   
  Pokud žádný obrázek na pozadí, pozadí se vykresluje barvou zadat pomocí [CMFCOutlookBarPane::SetBackColor](#setbackcolor).  
   
-##  <a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane::IsDrawShadedHighlight  
+##  <a name="isdrawshadedhighlight"></a>  CMFCOutlookBarPane::IsDrawShadedHighlight  
  Určuje, zda je tlačítko ohraničení šedou barvou při tlačítko zvýrazněn a zobrazí se obrázek na pozadí.  
   
 ```  
@@ -352,16 +347,16 @@ BOOL IsDrawShadedHighlight() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou zobrazena šedě; okraje tlačítka v opačném případě `FALSE`.  
+ `TRUE` Pokud jsou zobrazena šedě; okraje tlačítka v opačném případě `FALSE`.  
   
-##  <a name="removeallbuttons"></a>CMFCOutlookBarPane::RemoveAllButtons  
+##  <a name="removeallbuttons"></a>  CMFCOutlookBarPane::RemoveAllButtons  
  Odebere všechny tlačítek z panelu řádku aplikace Outlook.  
   
 ```  
 virtual void RemoveAllButtons();
 ```  
   
-##  <a name="removebutton"></a>CMFCOutlookBarPane::RemoveButton  
+##  <a name="removebutton"></a>  CMFCOutlookBarPane::RemoveButton  
  Odebere tlačítka, který má zadaný příkaz ID.  
   
 ```  
@@ -369,13 +364,13 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iIdCommand`  
+ [v] `iIdCommand`  
  Určuje ID příkazového tlačítka s odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud tlačítko byla úspěšně odebrána; `FALSE` Pokud zadaný příkaz ID je neplatné.  
+ `TRUE` Pokud tlačítko byla úspěšně odebrána; `FALSE` Pokud zadaný příkaz ID je neplatné.  
   
-##  <a name="setbackcolor"></a>CMFCOutlookBarPane::SetBackColor  
+##  <a name="setbackcolor"></a>  CMFCOutlookBarPane::SetBackColor  
  Nastaví barvu pozadí panelu aplikace Outlook.  
   
 ```  
@@ -383,13 +378,13 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Určuje barvu pozadí nové.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto funkci nastavit aktuální barvu pozadí panelu aplikace Outlook. Barva pozadí se používá pouze v případě, že neexistuje žádný obrázek pozadí.  
   
-##  <a name="setbackimage"></a>CMFCOutlookBarPane::SetBackImage  
+##  <a name="setbackimage"></a>  CMFCOutlookBarPane::SetBackImage  
  Nastaví obrázku pozadí.  
   
 ```  
@@ -397,13 +392,13 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiImageID`  
+ [v] `uiImageID`  
  Určuje ID prostředku bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
  Volat tuto metodu a nastavit možnost aplikace Outlook obrázek pozadí panelu. Seznam obrázky na pozadí probíhá podle vložený [CMFCToolBarImages třída](../../mfc/reference/cmfctoolbarimages-class.md) objektu.  
   
-##  <a name="setdefaultstate"></a>CMFCOutlookBarPane::SetDefaultState  
+##  <a name="setdefaultstate"></a>  CMFCOutlookBarPane::SetDefaultState  
  Obnoví původní sadu tlačítek panelu řádku aplikace Outlook.  
   
 ```  
@@ -413,14 +408,14 @@ void SetDefaultState();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda obnoví původní sadu tlačítek na panelu aplikace Outlook. Tato metoda je jako `CMFCOutlookBarPane::RestoreOriginalstate`kromě toho, že neaktivuje překreslování podokně panelu aplikace Outlook.  
   
-##  <a name="setextraspace"></a>CMFCOutlookBarPane::SetExtraSpace  
+##  <a name="setextraspace"></a>  CMFCOutlookBarPane::SetExtraSpace  
  Nastaví počet pixelů odsazení používá kolem tlačítka v podokně panelu aplikace Outlook.  
   
 ```  
 void SetExtraSpace()  
 ```  
   
-##  <a name="settextcolor"></a>CMFCOutlookBarPane::SetTextColor  
+##  <a name="settextcolor"></a>  CMFCOutlookBarPane::SetTextColor  
  Nastaví barvy text regulární a zvýrazněných v podokně panelu aplikace Outlook.  
   
 ```  
@@ -430,13 +425,13 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`clrRegText`  
+ [v] `clrRegText`  
  Určuje barvu nové-vybraný text.  
   
- [v]`clrSelText`  
+ [v] `clrSelText`  
  Určuje barvu nové pro vybraný text.  
   
-##  <a name="settransparentcolor"></a>CMFCOutlookBarPane::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  Nastaví průhlednou barvu v podokně panelu aplikace Outlook.  
   
 ```  

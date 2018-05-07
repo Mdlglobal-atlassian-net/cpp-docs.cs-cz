@@ -1,12 +1,9 @@
 ---
-title: "Třída CAnimationColor | Microsoft Docs"
-ms.custom: 
+title: Třída CAnimationColor | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationColor
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6ec3b6d8ee6a37fbe189ff70a2a633cfda9c8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor – třída
 Implementuje funkce barvu, která může být animovaný jejichž červené, zelené a modré součásti.  
@@ -114,7 +109,7 @@ class CAnimationColor : public CAnimationBaseObject;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationColor::AddTransition  
+##  <a name="addtransition"></a>  CAnimationColor::AddTransition  
  Přidá přechody pro červená, zelená a modrá součásti.  
   
 ```  
@@ -137,7 +132,7 @@ void AddTransition(
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce lze přidat zadané přechody do seznamu interní přechodů má být použita pro proměnné animace představující součásti barev. Když přidáte přechody, jejich nejsou použije okamžitě a uložená v interní seznamu. Přechody se použijí (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup. Pokud nemusíte použít přechod na jednu z komponenty barvu, můžete předat hodnotu NULL.  
   
-##  <a name="canimationcolor"></a>CAnimationColor::CAnimationColor  
+##  <a name="canimationcolor"></a>  CAnimationColor::CAnimationColor  
  Vytvoří objekt CAnimationColor.  
   
 ```  
@@ -166,7 +161,7 @@ CAnimationColor(
 ### <a name="remarks"></a>Poznámky  
  Objekt je vytvořený pomocí výchozí hodnoty pro červená, zelená, blue ID objektu a ID skupiny, které bude nastavena na hodnotu 0. Může se změnit později v době běhu pomocí SetDefaultValue a ID sady.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationColor::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationColor::GetAnimationVariableList  
  Zařadí do seznamu proměnných zapouzdřené animace.  
   
 ```  
@@ -177,7 +172,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
  `lst`  
  Když funkce vrátí hodnotu, obsahuje odkazy na tři objekty CAnimationVariable představující červené, zelené a modré součásti.  
   
-##  <a name="getb"></a>CAnimationColor::GetB  
+##  <a name="getb"></a>  CAnimationColor::GetB  
  Poskytuje přístup k CAnimationVariable představující modré součásti.  
   
 ```  
@@ -190,7 +185,7 @@ CAnimationVariable& GetB();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující modré součásti.  
   
-##  <a name="getdefaultvalue"></a>CAnimationColor::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationColor::GetDefaultValue  
  Vrátí výchozí hodnoty pro součásti barev.  
   
 ```  
@@ -203,7 +198,7 @@ COLORREF GetDefaultValue();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst výchozí hodnotu, která byla dříve nastavena pomocí konstruktoru nebo SetDefaultValue.  
   
-##  <a name="getg"></a>CAnimationColor::GetG  
+##  <a name="getg"></a>  CAnimationColor::GetG  
  Poskytuje přístup k CAnimationVariable představující zelená součásti.  
   
 ```  
@@ -216,7 +211,7 @@ CAnimationVariable& GetG();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující zelená součásti.  
   
-##  <a name="getr"></a>CAnimationColor::GetR  
+##  <a name="getr"></a>  CAnimationColor::GetR  
  Poskytuje přístup k CAnimationVariable představující Red součásti.  
   
 ```  
@@ -229,7 +224,7 @@ CAnimationVariable& GetR();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující Red součásti.  
   
-##  <a name="getvalue"></a>CAnimationColor::GetValue  
+##  <a name="getvalue"></a>  CAnimationColor::GetValue  
  Vrací aktuální hodnotu.  
   
 ```  
@@ -246,28 +241,28 @@ BOOL GetValue(COLORREF& color);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst aktuální hodnotu barvy animace. Pokud tato metoda selže nebo neinicializovali základní COM – objekty pro barvu součásti, barva obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.  
   
-##  <a name="m_bvalue"></a>CAnimationColor::m_bValue  
+##  <a name="m_bvalue"></a>  CAnimationColor::m_bValue  
  Obsah zapouzdřeného animace proměnné, která představuje Blue součást barvy animace.  
   
 ```  
 CAnimationVariable m_bValue;  
 ```  
   
-##  <a name="m_gvalue"></a>CAnimationColor::m_gValue  
+##  <a name="m_gvalue"></a>  CAnimationColor::m_gValue  
  Obsah zapouzdřeného animace proměnné, která představuje zelenou součást barvy animace.  
   
 ```  
 CAnimationVariable m_gValue;  
 ```  
   
-##  <a name="m_rvalue"></a>CAnimationColor::m_rValue  
+##  <a name="m_rvalue"></a>  CAnimationColor::m_rValue  
  Obsah zapouzdřeného animace proměnné, která představuje Red součást barvy animace.  
   
 ```  
 CAnimationVariable m_rValue;  
 ```  
   
-##  <a name="operator_colorref"></a>CAnimationColor::operator COLORREF  
+##  <a name="operator_colorref"></a>  CAnimationColor::operator COLORREF  
   
 ```  
 operator COLORREF();
@@ -275,7 +270,7 @@ operator COLORREF();
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="operator_eq"></a>CAnimationColor::operator =  
+##  <a name="operator_eq"></a>  CAnimationColor::operator =  
  Barva přiřadí CAnimationColor.  
   
 ```  
@@ -289,7 +284,7 @@ void operator=(COLORREF color);
 ### <a name="remarks"></a>Poznámky  
  Se doporučuje udělat před animace spustit, protože tento operátor volání SetDefaultValue, který vytvoří základní objekty modelu COM pro barvu součásti, pokud byly vytvořeny. Pokud odebíráte tento objekt animace události (ValueChanged nebo IntegerValueChanged), budete muset znovu povolit tyto události.  
   
-##  <a name="setdefaultvalue"></a>CAnimationColor::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationColor::SetDefaultValue  
  Nastaví výchozí hodnotu.  
   
 ```  

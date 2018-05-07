@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCCaptionButton | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCCaptionButton | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton – třída
 `CMFCCaptionButton` Třída implementuje tlačítko, které se zobrazí na panelu popisek pro ukotvené podokno nebo zkrácená rámce okna. Obvykle rozhraní popisek tlačítka automaticky vytvoří.  
@@ -97,7 +92,7 @@ class CMFCCaptionButton : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
  Vytvoří `CMFCCaptionButton` objektu.  
   
 ```  
@@ -110,10 +105,10 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nHit`  
+ [v] `nHit`  
  Příkaz přidružený tlačítko.  
   
- [v]`bLeftAlign`  
+ [v] `bLeftAlign`  
  Určuje, zda je tlačítko zarovnán doleva.  
   
  Následující tabulka uvádí možné hodnoty pro `nHit` parametr.  
@@ -133,7 +128,7 @@ CMFCCaptionButton(
   
  Popisek tlačítka je zarovnán buď na doleva či doprava.  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
  Vrátí příkaz reprezentována tlačítko.  
   
 ```  
@@ -155,7 +150,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|Šipku dolů nabídky.|  
 |`HTNOWHERE`|Výchozí hodnota. představuje žádný příkaz.|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
  Vrátí ID bitové kopie přidružený tlačítko.  
   
 ```  
@@ -165,11 +160,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bHorz`  
- `TRUE`Šipka doleva nebo doprava bitové kopie ID; `FALSE` pro nahoru nebo šipku dolů bitové kopie ID.  
+ [v] `bHorz`  
+ `TRUE` Šipka doleva nebo doprava bitové kopie ID; `FALSE` pro nahoru nebo šipku dolů bitové kopie ID.  
   
- [v]`bMaximized`  
- `TRUE`pro bitovou kopii s ID maximalizovat; `FALSE` minimalizovat bitové kopie ID.  
+ [v] `bMaximized`  
+ `TRUE` pro bitovou kopii s ID maximalizovat; `FALSE` minimalizovat bitové kopie ID.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  ID obrázku.  
@@ -177,7 +172,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>Poznámky  
  Parametry zadejte ID bitové kopie pro minimalizaci nebo maximalizovat popisek tlačítka.  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  Vrátí rámeček obsazena tlačítko.  
   
 ```  
@@ -190,7 +185,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>Poznámky  
  Pokud tlačítko nevidíte, velikost vrátil je 0.  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  Vrátí šířka a výška tlačítko.  
   
 ```  
@@ -203,7 +198,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>Poznámky  
  Velikost vrátil zahrnuje okrajem tlačítko a ohraničení.  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
  Označuje, zda je název výška panelu nastavit minimální velikost.  
   
 ```  
@@ -211,11 +206,11 @@ BOOL IsMiniFrameButton() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud nastavení titulek mini velikost; v opačném případě `FALSE`.  
+ `TRUE` Pokud nastavení titulek mini velikost; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
  Nastaví tlačítko Kreslení umístění a okno zobrazení stavu.  
   
 ```  
@@ -225,13 +220,13 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`ptTo`  
+ [v] `ptTo`  
  Nové umístění.  
   
- [v]`bHide`  
+ [v] `bHide`  
  Určuje, zda se zobrazí tlačítko.  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Nakreslí tlačítko titulek.  
   
 ```  
@@ -244,25 +239,25 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontext zařízení pro tlačítko.  
   
- [v]`bActive`  
+ [v] `bActive`  
  Určuje, zda se k vykreslení bitovou kopii aktivní tlačítko.  
   
- [v]`bHorz`  
+ [v] `bHorz`  
  Vyhrazené pro použití v odvozené třídě.  
   
- [v]`bMaximized`  
+ [v] `bMaximized`  
  Určuje, zda se k vykreslení obrázek tlačítka maximalizovaném okně.  
   
- [v]`bDisabled`  
+ [v] `bDisabled`  
  Určuje, zda se k vykreslení image povoleno tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  `bMaximized` Parametr se používá při tlačítko Maximalizovat nebo minimalizovat tlačítko.  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Nastaví minimální velikost záhlaví.  
   
 ```  
@@ -270,8 +265,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bSet`  
- `TRUE`pro výška panelu mini title; `FALSE` pro výchozí název panelu výšku.  
+ [v] `bSet`  
+ `TRUE` pro výška panelu mini title; `FALSE` pro výchozí název panelu výšku.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

@@ -1,12 +1,9 @@
 ---
-title: "Třída CSplitterWnd | Microsoft Docs"
-ms.custom: 
+title: Třída CSplitterWnd | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 Poskytuje funkci rozděleném okně, které je okno, které obsahuje více podokna.  
@@ -207,7 +202,7 @@ class CSplitterWnd : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxext.h  
   
-##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext  
  Voláno rámcem provést další podokně nebo předchozí příkaz.  
   
 ```  
@@ -221,7 +216,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je nejvyšší úrovni příkaz, který je používán [CView](../../mfc/reference/cview-class.md) třída delegovat `CSplitterWnd` implementace.  
   
-##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext  
  Voláno rámcem k zkontrolujte, zda příkaz Další podokno nebo předchozí podokno je nyní možné.  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je nejvyšší úrovni příkaz, který je používán [CView](../../mfc/reference/cview-class.md) třída delegovat `CSplitterWnd` implementace.  
   
-##  <a name="create"></a>CSplitterWnd::Create  
+##  <a name="create"></a>  CSplitterWnd::Create  
  Chcete-li vytvořit dynamické rozdělovače oken, zavolejte **vytvořit** – členská funkce.  
   
 ```  
@@ -295,7 +290,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl  
  Voláno rámcem vytvořit ovládací prvek sdílené posuvníku.  
   
 ```  
@@ -317,7 +312,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>Poznámky  
  Přepsání `CreateScrollBarCtrl` zahrnout další ovládací prvky vedle posuvníku. Výchozí chování je vytvoření ovládací prvky panelu přejděte normální Windows.  
   
-##  <a name="createstatic"></a>CSplitterWnd::CreateStatic  
+##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic  
  Chcete-li vytvořit statické rozdělovače oken, zavolejte `CreateStatic` – členská funkce.  
   
 ```  
@@ -367,7 +362,7 @@ virtual BOOL CreateStatic(
   
  Najdete v části "Rozdělovače Windows" v článku [více typů dokumentů, zobrazení a oken s rámečkem](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technická poznámka 29](../../mfc/tn029-splitter-windows.md)a `CSplitterWnd` přehledu třídy pro další informace o statické rozdělovače oken.  
   
-##  <a name="createview"></a>CSplitterWnd::CreateView  
+##  <a name="createview"></a>  CSplitterWnd::CreateView  
  Vytvoří podokna pro statické rozdělovače oken.  
   
 ```  
@@ -406,7 +401,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd  
  Volání k vytvoření `CSplitterWnd` objektu.  
   
 ```  
@@ -416,7 +411,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>Poznámky  
  Vytvořit `CSplitterWnd` objektu ve dvou krocích. Nejprve volání konstruktoru, který vytvoří `CSplitterWnd` objektu a pak zavolají [vytvořit](#create) členská funkce, který vytvoří okno rozdělovače a připojí jej k `CSplitterWnd` objektu.  
   
-##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn  
  Z okna rozdělovače odstraní sloupec.  
   
 ```  
@@ -430,7 +425,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
   
-##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  Odstranění řádku z okna rozdělovače.  
   
 ```  
@@ -444,7 +439,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
   
-##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  Odstraní z okna rozdělovače zobrazení.  
   
 ```  
@@ -465,7 +460,7 @@ virtual void DeleteView(
   
  Tato funkce člen je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
   
-##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  Provede klávesnice split příkazu, obvykle "rozdělení na okna".  
   
 ```  
@@ -478,7 +473,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je nejvyšší úrovni příkaz, který je používán [CView](../../mfc/reference/cview-class.md) třída delegovat `CSplitterWnd` implementace.  
   
-##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>  CSplitterWnd::DoScroll  
  Provede synchronizované posouvání rozdělení windows.  
   
 ```  
@@ -516,7 +511,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>Poznámky  
  Tento člen funkce je volána rámcem provést synchronizované posouvání rozdělení windows, když zobrazení přijme zprávu o scroll. Přepsání nastavení za účelem vyžadovat akci uživatele předtím, než je povoleno posouvání synchronizované.  
   
-##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy  
  Posouvá rozdělit windows zadaný počet pixelů.  
   
 ```  
@@ -544,7 +539,7 @@ virtual BOOL DoScrollBy(
   
  Přepsání nastavení za účelem vyžadovat zásah uživatele před povolením scroll.  
   
-##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane  
  Určuje podokně active z fokus nebo aktivní zobrazení v rámečku.  
   
 ```  
@@ -566,7 +561,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen je voláno rámcem k určení podokně aktivní v rozděleném okně. Přepsání nastavení za účelem vyžadovat zásah uživatele před získáním podokně aktivní.  
   
-##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount  
  Vrátí aktuální počet sloupců podokně.  
   
 ```  
@@ -576,7 +571,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktuální počet sloupců rozdělovače. U statické rozdělovače to bude také maximální počet sloupců.  
   
-##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo  
  Vrátí informace na zadaný sloupec.  
   
 ```  
@@ -596,7 +591,7 @@ void GetColumnInfo(
  `cxMin`  
  Odkaz na `int` být nastavena na aktuální minimální šířka sloupce.  
   
-##  <a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  Vrátí panelu v zadané řádků a sloupců.  
   
 ```  
@@ -615,7 +610,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí panelu v zadané řádků a sloupců. Vrácený podokno je obvykle [CView](../../mfc/reference/cview-class.md)-odvozené třídy.  
   
-##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount  
  Vrátí aktuální počet řádků podokně.  
   
 ```  
@@ -625,7 +620,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí aktuální počet řádků v rozděleném okně. Statické rozdělovače období to také bude maximální počet řádků.  
   
-##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo  
  Vrátí informace na zadaný řádek.  
   
 ```  
@@ -648,7 +643,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce člen získat informace o zadané řádku. `cyCur` Parametr je vyplněn aktuální výšku řádku zadaný a `cyMin` je vyplněn minimální výška řádku.  
   
-##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  Vrátí styl sdílené posuvníku pro okno rozdělovače.  
   
 ```  
@@ -664,7 +659,7 @@ DWORD GetScrollStyle() const;
   
  Pokud nula, okno rozdělovače aktuálně nespravuje žádné sdílené posuvníky.  
   
-##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol  
  Získá podřízená okna ID pro panelu v zadané řádků a sloupců.  
   
 ```  
@@ -689,7 +684,7 @@ int IdFromRowCol(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
  Určuje, zda `pWnd` je aktuálně podřízený podokně tohoto okna rozdělovače.  
   
 ```  
@@ -719,7 +714,7 @@ BOOL IsChildPane(
   
  Tato verze je zastaralá a by se neměla používat.  
   
-##  <a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>  CSplitterWnd::IsTracking  
  Volání této funkce člen k určení, pokud tento panel v okně právě přesouvá.  
   
 ```  
@@ -729,7 +724,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud operace rozdělovače probíhá; jinak 0.  
   
-##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter  
  Vykreslí obrázek rozděleném okně.  
   
 ```  
@@ -748,7 +743,7 @@ virtual void OnDrawSplitter(
   
 - **splitBox** rozdělovače přetáhněte pole.  
   
-- `splitBar`Panel, který se zobrazí mezi dvěma rozdělení windows.  
+- `splitBar` Panel, který se zobrazí mezi dvěma rozdělení windows.  
   
 - **splitIntersection** průnik rozdělení windows. Tento element nebude volána, když se používá systém Windows 95/98.  
   
@@ -762,7 +757,7 @@ virtual void OnDrawSplitter(
   
  Další informace o dynamické rozdělovače oken, najdete v části "Rozdělovače Windows" v článku [více typů dokumentů, zobrazení a oken s rámečkem](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technická poznámka 29](../../mfc/tn029-splitter-windows.md)a `CSplitterWnd` přehledu třídy.  
   
-##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker  
  Vykreslí bitové kopie rozděleném okně stejnou velikost a tvar jako rámce okna.  
   
 ```  
@@ -778,7 +773,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  Další informace o dynamické rozdělovače oken, najdete v části "Rozdělovače Windows" v článku [více typů dokumentů, zobrazení a oken s rámečkem](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technická poznámka 29](../../mfc/tn029-splitter-windows.md)a `CSplitterWnd` přehledu třídy.  
   
-##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout  
  Volání k opětovnému zobrazení okna rozdělovače po nastavení velikosti sloupce či řádku.  
   
 ```  
@@ -793,7 +788,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CSplitterWnd::SetColumnInfo](#setcolumninfo).  
   
-##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane  
  Nastaví podokně být aktivní v rámečku.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void SetActivePane(
   
  Zadejte podokně tím, že poskytuje řádků a sloupců, **nebo** tím, že poskytuje `pWnd`.  
   
-##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  Volání nastavení informací o zadaný sloupec.  
   
 ```  
@@ -846,7 +841,7 @@ void SetColumnInfo(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo  
  Volání se nastavit informace o zadané řádek.  
   
 ```  
@@ -871,7 +866,7 @@ void SetRowInfo(
   
  Pokud rozhraní zobrazí okno rozdělovače, rozložen podokna ve sloupci a řádky podle jejich ideální dimenze práce z levého horního do pravém dolním rohu okna rozdělovače klientské oblasti.  
   
-##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle  
  Určuje, že nový styl posunutí pro okno rozdělovače posuvníku podpora sdílených.  
   
 ```  
@@ -889,7 +884,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Poznámky  
  Po vytvoření posuvníku nebude zničen i v případě `SetScrollStyle` je volána bez této styl; místo toho jsou tyto posuvníky skryté. To umožňuje posuvníky zachování jejich stavu, i když jejich skrytí. Po volání `SetScrollStyle` je nutné volat [recalclayout –](#recalclayout) pro všechny změny se projeví.  
   
-##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn  
  Určuje, kde okně s rámečkem rozdělí svisle.  
   
 ```  
@@ -904,11 +899,11 @@ virtual BOOL SplitColumn(int cxBefore);
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen funkce je volána při vytvoření svislé rozděleném okně. `SplitColumn`Určuje výchozí umístění, kde dojde k rozdělení.  
+ Tento člen funkce je volána při vytvoření svislé rozděleném okně. `SplitColumn` Určuje výchozí umístění, kde dojde k rozdělení.  
   
- `SplitColumn`je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
+ `SplitColumn` je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
   
-##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  Určuje, kde okně s rámečkem rozdělí vodorovně.  
   
 ```  
@@ -923,11 +918,11 @@ virtual BOOL SplitRow(int cyBefore);
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen funkce je volána, když se vytvoří okno vodorovný rozdělovač. `SplitRow`Určuje výchozí umístění, kde dojde k rozdělení.  
+ Tento člen funkce je volána, když se vytvoří okno vodorovný rozdělovač. `SplitRow` Určuje výchozí umístění, kde dojde k rozdělení.  
   
- `SplitRow`je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
+ `SplitRow` je voláno rámcem implementovat logiku okna dynamické rozdělovače (tj. Pokud má rozdělovače oken **SPLS_DYNAMIC_SPLIT** styl). Lze jej upravit, společně s virtuální funkcí [objektu CreateView](#createview), implementovat pokročilejší dynamické příčky.  
   
-##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  Voláno rámcem k vykreslení rozdělovače oken.  
   
 ```  

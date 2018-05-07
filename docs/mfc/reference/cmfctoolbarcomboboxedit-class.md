@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCToolBarComboBoxEdit | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCToolBarComboBoxEdit | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarComboBoxEdit
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCToolBarComboBoxEdit [MFC], CMFCToolBarComboBoxEdit
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d7e83351c9adbf7730fad04f2e4d73431694f3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d541702d73befedab72ad7b130b56a125a5817aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit – třída
 Rozhraní používá `CMFCToolBarComboBoxEdit` třídy za účelem vytvoření tlačítka panelu nástrojů, který se chová jako prvek upravitelné pole se seznamem.  
@@ -70,7 +65,7 @@ class CMFCToolBarComboBoxEdit : public CEdit
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbarcomboboxbutton.h  
   
-##  <a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit  
+##  <a name="cmfctoolbarcomboboxedit"></a>  CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit  
  Vytvoří `CMFCToolBarComboBoxEdit` objektu.  
   
 ```  
@@ -78,7 +73,7 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`combo`  
+ [v] `combo`  
  Odkaz na [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objekt, který je tlačítka panelu nástrojů, který obsahuje prvek pole se seznamem.  
   
 ### <a name="example"></a>Příklad  

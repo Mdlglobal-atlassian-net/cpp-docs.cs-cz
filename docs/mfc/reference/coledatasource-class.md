@@ -1,12 +1,9 @@
 ---
-title: "Coledatasource – třída | Microsoft Docs"
-ms.custom: 
+title: Coledatasource – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataSource
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledatasource-class"></a>Coledatasource – třída
 Jednání jako mezipaměť, do které aplikace umístí data, která nabízí během data přenášet operace, např. schránku nebo operací přetažení myší.  
@@ -110,7 +105,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>  COleDataSource::CacheData  
  Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
   
 ```  
@@ -143,7 +138,7 @@ void CacheData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
   
 ```  
@@ -172,14 +167,14 @@ void CacheGlobalData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Vytvoří `COleDataSource` objektu.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
  Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
   
 ```  
@@ -206,7 +201,7 @@ void DelayRenderData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
   
 ```  
@@ -233,7 +228,7 @@ void DelayRenderFileData(
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  Volání této funkce můžete podporovat změnu obsah datového zdroje.  
   
 ```  
@@ -250,13 +245,13 @@ void DelaySetData(
  Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být nahrazen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného `cfFormat`. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
   
 ### <a name="remarks"></a>Poznámky  
- [OnSetData](#onsetdata) bude volat rozhraní v takovém případě. Používá se jen při rozhraní vrátí zdroj dat z [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Pokud `DelaySetData` není volán, vaše `OnSetData` funkce nebude nikdy volat. `DelaySetData`by měla být volána pro každý schránky nebo **FORMATETC** formátu, které podporujete.  
+ [OnSetData](#onsetdata) bude volat rozhraní v takovém případě. Používá se jen při rozhraní vrátí zdroj dat z [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Pokud `DelaySetData` není volán, vaše `OnSetData` funkce nebude nikdy volat. `DelaySetData` by měla být volána pro každý schránky nebo **FORMATETC** formátu, které podporujete.  
   
  Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura ve Windows SDK.  
   
  Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
   
-##  <a name="dodragdrop"></a>COleDataSource::DoDragDrop  
+##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
  Volání `DoDragDrop` – členská funkce k provedení operace přetažení myší pro tento zdroj dat, obvykle v [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) obslužné rutiny.  
   
 ```  
@@ -270,13 +265,13 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  Přetažení myší operace, které jsou povoleny na tomto datovém zdroji. Může být jeden nebo více následujících akcí:  
   
-- `DROPEFFECT_COPY`Operace kopírování můžete provést.  
+- `DROPEFFECT_COPY` Operace kopírování můžete provést.  
   
-- `DROPEFFECT_MOVE`Můžete provést operaci přesunutí.  
+- `DROPEFFECT_MOVE` Můžete provést operaci přesunutí.  
   
-- `DROPEFFECT_LINK`Může vytvořit odkaz z vynechaných dat na původní data.  
+- `DROPEFFECT_LINK` Může vytvořit odkaz z vynechaných dat na původní data.  
   
-- `DROPEFFECT_SCROLL`Označuje, že mohlo dojít posuňte operaci přetažení.  
+- `DROPEFFECT_SCROLL` Označuje, že mohlo dojít posuňte operaci přetažení.  
   
  `lpRectStartDrag`  
  Ukazatel na obdélníku, která definuje, kde přetáhněte skutečně spustí. Další informace naleznete v následující části poznámky.  
@@ -302,7 +297,7 @@ DROPEFFECT DoDragDrop(
   
  Další informace najdete v článku [přetažení: implementace zdroje přetažení](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>  COleDataSource::Empty  
  Volání této funkce na prázdnou `COleDataSource` objekt data.  
   
 ```  
@@ -314,7 +309,7 @@ void Empty();
   
  Další informace najdete v tématu [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) ve Windows SDK.  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  Vykreslí data, která je do schránky a pak umožňuje vložení dat ze schránky po vypnutí aplikace.  
   
 ```  
@@ -324,7 +319,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>Poznámky  
  Použití [Modul SetClipboard](#setclipboard) dávat data do schránky.  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
  Určuje, zda data do schránky došlo ke změně od [Modul SetClipboard](#setclipboard) poslední volala a pokud ano, identifikuje aktuálního vlastníka.  
   
 ```  
@@ -334,7 +329,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>Návratová hodnota  
  Zdroj dat aktuálně na do schránky nebo **NULL** Pokud není nic do schránky nebo pokud schránky není vlastníkem je volající aplikace.  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
  Voláno rámcem k načtení dat v zadaném formátu.  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL OnRenderData(
   
  Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktur, [objekt TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) typ výčtu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) v systému Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  Voláno rámcem k načtení dat v zadaném formátu, pokud zadaný úložné médium je soubor.  
   
 ```  
@@ -388,7 +383,7 @@ virtual BOOL OnRenderFileData(
   
  Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  Voláno rámcem k načtení dat v zadaném formátu, když střední zadané úložiště je globální paměť.  
   
 ```  
@@ -416,7 +411,7 @@ virtual BOOL OnRenderGlobalData(
   
  Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  Voláno rámcem nastavit nebo nahradit data v `COleDataSource` objekt v zadaném formátu.  
   
 ```  
@@ -446,7 +441,7 @@ virtual BOOL OnSetData(
   
  Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury a [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) funkce ve Windows SDK.  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  Převádí data obsažená v `COleDataSource` objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), nebo [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  

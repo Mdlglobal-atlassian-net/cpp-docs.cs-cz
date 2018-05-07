@@ -1,12 +1,9 @@
 ---
-title: "Třída CMonikerFile | Microsoft Docs"
-ms.custom: 
+title: Třída CMonikerFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfdf86a4375521d7db084b60c549b08a54dc992
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile – třída
 Představuje datový proud ( [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034)) s názvem podle [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -76,7 +71,7 @@ class CMonikerFile : public COleStreamFile
   
  Odvozené z `COleStreamFile`, `CMonikerFile` trvá přezdívka nebo řetězcová reprezentace mohl zajistit do přezdívka a sváže datového proudu, pro kterou je přezdívka název. Pak můžete číst a zapisovat do tohoto datového proudu. Skutečnému účelu `CMonikerFile` je jednoduchý přístup k poskytnutí `IStream`s s názvem podle `IMoniker`s tak, že nemáte k vytvoření vazby na datový proud sami, ještě `CFile` funkce do datového proudu.  
   
- `CMonikerFile`nelze použít k vytvoření vazby na jakoukoli jinou hodnotu než datového proudu. Pokud chcete vytvořit vazbu úložiště nebo objekt, je nutné použít `IMoniker` rozhraní přímo.  
+ `CMonikerFile` nelze použít k vytvoření vazby na jakoukoli jinou hodnotu než datového proudu. Pokud chcete vytvořit vazbu úložiště nebo objekt, je nutné použít `IMoniker` rozhraní přímo.  
   
  Další informace o datových proudů a zástupných názvů najdete v tématu [COleStreamFile](../../mfc/reference/colestreamfile-class.md) v *odkaz knihovny MFC* a [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034) a [imoniker –](http://msdn.microsoft.com/library/windows/desktop/ms679705) v Windows SDK.  
   
@@ -92,7 +87,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>  CMonikerFile::Close  
  Volání této funkce odpojit a verze datového proudu a vydání přezdívka.  
   
 ```  
@@ -102,14 +97,14 @@ virtual void Close();
 ### <a name="remarks"></a>Poznámky  
  Je možné volat na datové proudy vyberte nebo již uzavřen.  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
  Vytvoří `CMonikerFile` objektu.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
  Volání této funkce můžete vytvořit výchozí inicializovat kontext vazby.  
   
 ```  
@@ -126,7 +121,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>Poznámky  
  Kontext vazby je objekt, který obsahuje informace o operaci vazbu na konkrétní přezdívka. Tato funkce vám umožňuje kontext vlastní vazby můžete přepsat.  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>  CMonikerFile::Detach  
  Volání této funkce můžete zavřít datový proud.  
   
 ```  
@@ -140,7 +135,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
  Volání této funkce načíst ukazatel na aktuální přezdívka.  
   
 ```  
@@ -153,7 +148,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>Poznámky  
  Vzhledem k tomu `CMonikerFile` není rozhraní, vrácený ukazatel nezvyšuje počet odkazů (prostřednictvím [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379)), a vydání Přezdívka při `CMonikerFile` uvolnění objektu. Pokud chcete k uložení do přezdívka nebo verzi sami, je nutné `AddRef` ho.  
   
-##  <a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>  CMonikerFile::Open  
  Volání této funkce člena pro otevření objektu souboru nebo přezdívka.  
   
 ```  

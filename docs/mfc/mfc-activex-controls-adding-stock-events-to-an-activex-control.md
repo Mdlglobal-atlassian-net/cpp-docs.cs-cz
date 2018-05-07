@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky MFC ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX | Microsoft Docs"
-ms.custom: 
+title: 'Ovládací prvky MFC ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX
-Uložených událostí se liší od vlastních událostí v tom, že jsou automaticky aktivována třída [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`obsahuje předdefinované členské funkce, které budou spuštěny událostí vyplývající z běžné akce. Některé běžné akce implementované `COleControl` zahrnují single - a double - clicks na ovládací prvek, události klávesnice a změny ve stavu tlačítka myši. Záznamy událostí mapy pro uložených událostí jsou vždy uvedeny **event_stock –** předponu.  
+Uložených událostí se liší od vlastních událostí v tom, že jsou automaticky aktivována třída [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` obsahuje předdefinované členské funkce, které budou spuštěny událostí vyplývající z běžné akce. Některé běžné akce implementované `COleControl` zahrnují single - a double - clicks na ovládací prvek, události klávesnice a změny ve stavu tlačítka myši. Záznamy událostí mapy pro uložených událostí jsou vždy uvedeny **event_stock –** předponu.  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>Stock události nepodporuje Průvodce přidáním události  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> Stock události nepodporuje Průvodce přidáním události  
  `COleControl` Třída poskytuje deset uložených událostí uvedené v následující tabulce. Můžete zadat událostí, které chcete v pomocí ovládacího prvku [Průvodce přidáním události](../ide/add-event-wizard.md).  
   
 ### <a name="stock-events"></a>Uložených událostí  
@@ -84,7 +79,7 @@ Uložených událostí se liší od vlastních událostí v tom, že jsou automa
 |MouseUp|**firemouseup – void (krátký** `nButton` **, krátké** `nShiftState` **, float***x* **, float** *y***)** |Aktivováno případných **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši vydání předtím, než tato událost je aktivována.<br /><br /> Položku mapování události: **(event_stock_mouseup –)**|  
 |ReadyStateChange –|**void (FireReadyStateChange)**|Aktivována, jestliže řízení přechody do dalšího připravené stavu z důvodu přijatá data.<br /><br /> Položku mapování události: **(event_stock_readystatechange –)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>Přidání uložených událostí pomocí Průvodce přidáním události  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Přidání uložených událostí pomocí Průvodce přidáním události  
  Přidání uložených událostí vyžaduje méně práce než přidání vlastních událostí, protože pálení skutečné události se automaticky zpracovává základní třídou `COleControl`. Následující postup přidá uložených událostí do ovládacího prvku, která byla vyvinuta pomocí [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md). Události, názvem KeyPress, aktivuje se při stisknutí klávesy a řízení je aktivní. Tento postup lze také přidat další uložených událostí. Nahraďte název vybrané uložené události KeyPress.  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Chcete-li přidat KeyPress – událost uložené pomocí Průvodce přidáním události  
@@ -101,7 +96,7 @@ Uložených událostí se liší od vlastních událostí v tom, že jsou automa
   
 5.  Klikněte na tlačítko **Dokončit**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>Přidání události průvodce změní pro uložených událostí  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Přidání události průvodce změní pro uložených událostí  
  Protože uložených událostí zpracovává základní třídy ovládacího prvku, Průvodce přidání události deklarace třídy nijak nezmění. Přidá událost mapa událostí ovládacího prvku a vytvoří položku v jeho. IDL soubor. Následující řádek je přidán do ovládacího prvku mapa událostí, umístěný v implementaci třídy ovládacího prvku (. Soubor CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  

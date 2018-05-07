@@ -2,11 +2,8 @@
 title: Třída CD2DSolidColorBrush | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DSolidColorBrush
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd1f4d6de1565ae4c457a562d9056c020d44f771
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9020eb0165a0f06e430caa6a0e1641ea1afb3d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush – třída
 Obálka pro ID2D1SolidColorBrush.  
@@ -102,14 +97,14 @@ class CD2DSolidColorBrush : public CD2DBrush;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
  Destruktor. Voláno, když je zničen objektu D2D plného štětce.  
   
 ```  
 virtual ~CD2DSolidColorBrush();
 ```  
   
-##  <a name="attach"></a>CD2DSolidColorBrush::Attach  
+##  <a name="attach"></a>  CD2DSolidColorBrush::Attach  
  Připojí existující prostředek rozhraní k objektu  
   
 ```  
@@ -120,7 +115,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
  `pResource`  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
-##  <a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
+##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
  Vytvoří objekt CD2DSolidColorBrush.  
   
 ```  
@@ -155,7 +150,7 @@ CD2DSolidColorBrush(
  `nAlpha`  
  Neprůhlednost stopy barvy.  
   
-##  <a name="create"></a>CD2DSolidColorBrush::Create  
+##  <a name="create"></a>  CD2DSolidColorBrush::Create  
  Vytvoří CD2DSolidColorBrush.  
   
 ```  
@@ -169,14 +164,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
   
-##  <a name="destroy"></a>CD2DSolidColorBrush::Destroy  
+##  <a name="destroy"></a>  CD2DSolidColorBrush::Destroy  
  Zničí CD2DSolidColorBrush objektu.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DSolidColorBrush::detach  
+##  <a name="detach"></a>  CD2DSolidColorBrush::detach  
  Umožňuje odpojit prostředek rozhraní z objektu  
   
 ```  
@@ -186,7 +181,7 @@ ID2D1SolidColorBrush* Detach();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní odpojit prostředků.  
   
-##  <a name="get"></a>CD2DSolidColorBrush::Get  
+##  <a name="get"></a>  CD2DSolidColorBrush::Get  
  Vrátí ID2D1SolidColorBrush rozhraní  
   
 ```  
@@ -196,7 +191,7 @@ ID2D1SolidColorBrush* Get();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na rozhraní ID2D1SolidColorBrush nebo hodnota NULL, pokud objekt dosud není inicializován.  
   
-##  <a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
+##  <a name="getcolor"></a>  CD2DSolidColorBrush::GetColor  
  Načte barva plnobarevné štětce  
   
 ```  
@@ -206,21 +201,21 @@ D2D1_COLOR_F GetColor() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Barva tento plnobarevné štětce  
   
-##  <a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
+##  <a name="m_colorsolid"></a>  CD2DSolidColorBrush::m_colorSolid  
  Plnobarevné štětce.  
   
 ```  
 D2D1_COLOR_F m_colorSolid;  
 ```  
   
-##  <a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
+##  <a name="m_psolidcolorbrush"></a>  CD2DSolidColorBrush::m_pSolidColorBrush  
  Ukládá ukazatel na objekt ID2D1SolidColorBrush.  
   
 ```  
 ID2D1SolidColorBrush* m_pSolidColorBrush;  
 ```  
   
-##  <a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::Operator ID2D1SolidColorBrush *  
+##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::Operator ID2D1SolidColorBrush *  
  Vrátí ID2D1SolidColorBrush rozhraní  
   
 ```  
@@ -230,7 +225,7 @@ operator ID2D1SolidColorBrush*();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na rozhraní ID2D1SolidColorBrush nebo hodnota NULL, pokud objekt dosud není inicializován.  
   
-##  <a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
+##  <a name="setcolor"></a>  CD2DSolidColorBrush::SetColor  
  Určuje barvu tohoto plnobarevné štětce  
   
 ```  

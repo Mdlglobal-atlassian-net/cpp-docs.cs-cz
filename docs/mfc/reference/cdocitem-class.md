@@ -1,12 +1,9 @@
 ---
-title: "Třída CDocItem | Microsoft Docs"
-ms.custom: 
+title: Třída CDocItem | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>CDocItem – třída
 Základní třída pro položky dokumentů, které jsou součástí data dokumentu.  
@@ -50,7 +45,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|Určuje, zda položka obsahuje všechny informace.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDocItem`objekty se používají k vyjádření OLE – položky v dokumentech klient i server.  
+ `CDocItem` objekty se používají k vyjádření OLE – položky v dokumentech klient i server.  
   
  Další informace najdete v článku [kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md).  
   
@@ -64,7 +59,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  Volání této funkce můžete získat dokument, který obsahuje položku.  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je přepsání v odvozené třídy [COleClientItem](../../mfc/reference/coleclientitem-class.md) a [COleServerItem](../../mfc/reference/coleserveritem-class.md), ukazatel vrácením buď [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), nebo [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objektu.  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  Voláno rámcem, když dojde k výchozí serializace.  
   
 ```  

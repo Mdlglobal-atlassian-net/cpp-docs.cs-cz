@@ -1,29 +1,24 @@
 ---
-title: "Rutiny výměny dat standardního dialogového okna | Microsoft Docs"
-ms.custom: 
+title: Rutiny výměny dat standardního dialogového okna | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c79a96439605bcf9ab670c1f75dda2d50169f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutiny výměny dat standardního dialogového okna
 Toto téma uvádí rutiny exchange (DDX) dat standardního dialogového okna použít pro běžné ovládací prvky MFC dialogové okno.  
@@ -52,7 +47,7 @@ Toto téma uvádí rutiny exchange (DDX) dat standardního dialogového okna pou
 |[Ddx_slider –](#ddx_slider)|Inicializuje nebo načte aktuální pozici prvku posuvník jezdce.|  
 |[DDX_Text –](#ddx_text)|Inicializuje nebo načte aktuální hodnotu ovládacích prvků pro úpravy.|  
   
-##  <a name="ddx_cbindex"></a>Ddx_cbindex –  
+##  <a name="ddx_cbindex"></a>  Ddx_cbindex –  
  `DDX_CBIndex` Funkce spravuje přenos `int` formuláři dat mezi prvek pole se seznamem v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -80,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>Ddx_cbstring –  
+##  <a name="ddx_cbstring"></a>  Ddx_cbstring –  
  `DDX_CBString` Funkce spravuje přenos `CString` formuláři dat mezi ovládacího prvku úprav ovládacího prvku pole se seznamem v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `CString` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -111,7 +106,7 @@ void AFXAPI DDX_CBString(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>Ddx_cbstringexact –  
+##  <a name="ddx_cbstringexact"></a>  Ddx_cbstringexact –  
  `DDX_CBStringExact` Funkce spravuje přenos `CString` formuláři dat mezi ovládacího prvku úprav ovládacího prvku pole se seznamem v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `CString` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -142,7 +137,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_check"></a>Ddx_check –  
+##  <a name="ddx_check"></a>  Ddx_check –  
  `DDX_Check` Funkce spravuje přenos `int` formuláři dat mezi ovládací prvek zaškrtávací políčko v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -170,7 +165,7 @@ void AFXAPI DDX_Check(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_control"></a>Ddx_control –  
+##  <a name="ddx_control"></a>  Ddx_control –  
  `DDX_Control` Funkce podtřídy ovládacího prvku, určeného `nIDC`, dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -198,7 +193,7 @@ void AFXAPI DDX_Control(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>Ddx_datetimectrl –  
+##  <a name="ddx_datetimectrl"></a>  Ddx_datetimectrl –  
  `DDX_DateTimeCtrl` Funkce spravuje přenos dat datum nebo čas mezi ovládací prvek pro výběr data a času ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) v objekt zobrazení nebo formuláře dialogové okno a buď [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) – datový člen objektu dialogové okno pole nebo formátu zobrazení.  
   
 ```  
@@ -241,7 +236,7 @@ void AFXAPI DDX_DateTimeCtrl(
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl –
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl –
 Vytvoří ovládacího prvku .NET odpovídající ID ovládacího prvku prostředku.  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -263,7 +258,7 @@ void DDX_ManagedControl(
  Odkaz na [CWinFormsControl třída](cwinformscontrol-class.md) objektu.  
    
 ### <a name="remarks"></a>Poznámky  
- `DDX_ManagedControl`volání [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) k vytvoření ovládacího prvku odpovídající ID prostředku ovládacího prvku. Použití `DDX_ManagedControl` k vytvoření ovládacích prvků z ID prostředků v [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Pro data systému exchange není potřeba použít funkce DDX/DDV s Windows Forms – ovládací prvky.  
+ `DDX_ManagedControl` volání [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) k vytvoření ovládacího prvku odpovídající ID prostředku ovládacího prvku. Použití `DDX_ManagedControl` k vytvoření ovládacích prvků z ID prostředků v [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Pro data systému exchange není potřeba použít funkce DDX/DDV s Windows Forms – ovládací prvky.  
   
  Další informace najdete v tématu [postup: provést vazby dat k DDX/DDV s modelem Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
    
@@ -276,7 +271,7 @@ void DDX_ManagedControl(
  
 
   
-##  <a name="ddx_ipaddress"></a>Ddx_ipaddress –  
+##  <a name="ddx_ipaddress"></a>  Ddx_ipaddress –  
  `DDX_IPAddress` Funkce spravuje přenos dat mezi ovládací prvek adresy IP a členem data objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -313,7 +308,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>Ddx_lbindex –  
+##  <a name="ddx_lbindex"></a>  Ddx_lbindex –  
  `DDX_LBIndex` Funkce spravuje přenos `int` formuláři dat mezi ovládací prvek seznamu v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -341,7 +336,7 @@ void AFXAPI DDX_LBIndex(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>Ddx_lbstring –  
+##  <a name="ddx_lbstring"></a>  Ddx_lbstring –  
  `DDX_LBString` Funkce spravuje přenos `CString` formuláři dat mezi ovládací prvek seznamu v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `CString` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -374,7 +369,7 @@ void AFXAPI DDX_LBString(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>Ddx_lbstringexact –  
+##  <a name="ddx_lbstringexact"></a>  Ddx_lbstringexact –  
  `DDX_CBStringExact` Funkce spravuje přenos `CString` formuláři dat mezi úpravy kontrolu nad ovládací prvek seznamu v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `CString` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -407,7 +402,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>Ddx_monthcalctrl –  
+##  <a name="ddx_monthcalctrl"></a>  Ddx_monthcalctrl –  
  `DDX_MonthCalCtrl` Funkce spravuje přenosu dat data mezi ovládací prvek měsíční kalendář ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) v dialogového okna, formátu zobrazení, nebo objekt zobrazení ovládacího prvku a buď [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -444,7 +439,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_radio"></a>Ddx_radio –  
+##  <a name="ddx_radio"></a>  Ddx_radio –  
  `DDX_Radio` Funkce spravuje přenos `int` data mezi skupinou přepínačů ovládacího prvku v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku. Hodnota `int` – datový člen je určen podle přepínačů, které je vybráno tlačítko ve skupině.  
   
 ```  
@@ -474,7 +469,7 @@ void AFXAPI DDX_Radio(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>Ddx_scroll –  
+##  <a name="ddx_scroll"></a>  Ddx_scroll –  
  `DDX_Scroll` Funkce spravuje přenos `int` formuláři dat mezi ovládací prvek typu posuvník v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  
@@ -502,7 +497,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_slider"></a>Ddx_slider –  
+##  <a name="ddx_slider"></a>  Ddx_slider –  
  `DDX_Slider` Funkce spravuje přenos `int` dat mezi ovládací prvek typu jezdec v dialogovém okně zobrazení pole nebo formuláře a `int` data členem objektu zobrazení nebo formuláře dialogového okna.  
   
 ```  
@@ -530,7 +525,7 @@ void AFXAPI DDX_Slider(
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text –  
+##  <a name="ddx_text"></a>  DDX_Text –  
  `DDX_Text` Funkce spravuje přenos `int`, **Celé_číslo**, **dlouho**, `DWORD`, `CString`, **float**, nebo  **dvojité** dat mezi ovládací prvek upravit v dialogovém okně, zobrazení formuláře nebo řízení zobrazení a [CString](../../atl-mfc-shared/reference/cstringt-class.md) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```  

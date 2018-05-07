@@ -1,13 +1,10 @@
 ---
-title: "TN021: Příkazů a zpráv směrování | Microsoft Docs"
-ms.custom: 
+title: 'TN021: Příkazů a zpráv směrování | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Směrování příkazů a zpráv
 > [!NOTE]
@@ -200,7 +195,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  Na poznámky na okraj jsou uvedeny dvě **CWnd** odvozené třídy, kde doba pro vytvoření stylů panelu přejděte na jsou do pasti a nebyl předán do systému Windows. Když předána běžný postup vytvoření **ws_hscroll –** a **ws_vscroll –** lze nezávisle nastavit, ale po vytvoření nedá změnit. By měl samozřejmě není přímo testů nebo nastavit službu bits WS_SCROLL styl okna, které budou vytvořeny.  
   
- Pro **CMDIFrameWnd** styly posuvníku panelu můžete předat **vytvořit** nebo **loadframe –** slouží k vytváření MDICLIENT. Pokud chcete mít posouvatelného MDICLIENT oblasti (jako správce systému Windows Program) pro nastavte oba posuvníku styly (**ws_hscroll –** &#124; **Ws_vscroll –**) pro styl použitý k vytvoření **CMDIFrameWnd**.  
+ Pro **CMDIFrameWnd** styly posuvníku panelu můžete předat **vytvořit** nebo **loadframe –** slouží k vytváření MDICLIENT. Pokud chcete mít posouvatelného MDICLIENT oblasti (jako správce systému Windows Program) pro nastavte oba posuvníku styly (**ws_hscroll –** &#124; **ws_vscroll –**) pro styl použitý k vytvoření **CMDIFrameWnd**.  
   
  Pro **CSplitterWnd** styly posuvníku panelu, na které se týkají posuvníků speciální sdílené přesunout pro rozdělovače oblasti. Pro statické rozdělovače oken bude obvykle není nastavit buď styl panelu přejděte. Dynamické rozdělovače oken, bude obvykle mají posuvník styl nastavte směr bude rozdělíte, který je **ws_hscroll –** rozdělit řádky, **ws_vscroll –** rozdělit sloupce.  
   

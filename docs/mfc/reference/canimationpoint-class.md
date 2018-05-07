@@ -1,12 +1,9 @@
 ---
-title: "Třída CAnimationPoint | Microsoft Docs"
-ms.custom: 
+title: Třída CAnimationPoint | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationPoint
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab685c223c4a86c35ba0feb578d93f58844734b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint – třída
 Implementuje funkce, které může být animovaný jejichž souřadnice bodu.  
@@ -108,7 +103,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationPoint::AddTransition  
+##  <a name="addtransition"></a>  CAnimationPoint::AddTransition  
  Přidá přechody pro X a Y souřadnice.  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce, které chcete přidat zadané přechody do seznamu interní přechodů má být použita pro proměnné animace pro X a Y souřadnice. Když přidáte přechody, jejich nejsou použije okamžitě a uložená v interní seznamu. Přechody se použijí (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup. Pokud nemusíte použít přechod na jednu z souřadnice, lze předat hodnotu NULL.  
   
-##  <a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint  
+##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint  
  Vytvoří objekt CAnimationPoint.  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationPoint(
 ### <a name="remarks"></a>Poznámky  
  Vytvoří objekt CAnimationPoint s výchozí vlastnosti: výchozí bod souřadnice, ID skupiny a ID objektu jsou nastaveny na hodnotu 0.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList  
  Zařadí do seznamu proměnných zapouzdřené animace.  
   
 ```  
@@ -168,7 +163,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
  `lst`  
  Když funkce vrátí hodnotu, obsahuje odkazy na dva objekty CAnimationVariable představující souřadnice X a Y.  
   
-##  <a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
  Vrátí výchozí hodnoty pro X a Y souřadnice.  
   
 ```  
@@ -181,7 +176,7 @@ CPoint GetDefaultValue();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst výchozí hodnotu, která byla dříve nastavena pomocí konstruktoru nebo SetDefaultValue.  
   
-##  <a name="getvalue"></a>CAnimationPoint::GetValue  
+##  <a name="getvalue"></a>  CAnimationPoint::GetValue  
  Vrací aktuální hodnotu.  
   
 ```  
@@ -198,7 +193,7 @@ BOOL GetValue(CPoint& ptValue);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce se načíst aktuální hodnotu bodu animace. Pokud tato metoda selže nebo základní COM objekty pro X a Y souřadnice nebyly inicializovány, ptValue obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.  
   
-##  <a name="getx"></a>CAnimationPoint::GetX  
+##  <a name="getx"></a>  CAnimationPoint::GetX  
  Poskytuje přístup k CAnimationVariable pro souřadnici X.  
   
 ```  
@@ -211,7 +206,7 @@ CAnimationVariable& GetX();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující X koordinaci.  
   
-##  <a name="gety"></a>CAnimationPoint::GetY  
+##  <a name="gety"></a>  CAnimationPoint::GetY  
  Poskytuje přístup k CAnimationVariable pro souřadnici Y.  
   
 ```  
@@ -224,21 +219,21 @@ CAnimationVariable& GetY();
 ### <a name="remarks"></a>Poznámky  
  Můžete volat tuto metodu za účelem získání přímý přístup k podkladové CAnimationVariable představující souřadnici Y.  
   
-##  <a name="m_xvalue"></a>CAnimationPoint::m_xValue  
+##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue  
  Obsah zapouzdřeného animace proměnné, která představuje X souřadnice bodu animace.  
   
 ```  
 CAnimationVariable m_xValue;  
 ```  
   
-##  <a name="m_yvalue"></a>CAnimationPoint::m_yValue  
+##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue  
  Obsah zapouzdřeného animace proměnné, která představuje souřadnici Y bodu animace.  
   
 ```  
 CAnimationVariable m_yValue;  
 ```  
   
-##  <a name="operator_cpoint"></a>CAnimationPoint::operator CPoint  
+##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint  
  Převede CAnimationPoint CPoint.  
   
 ```  
@@ -251,7 +246,7 @@ operator CPoint();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže, bude vrácená bodu obsahovat výchozí hodnoty pro X a Y souřadnice.  
   
-##  <a name="operator_eq"></a>CAnimationPoint::operator =  
+##  <a name="operator_eq"></a>  CAnimationPoint::operator =  
  Přiřadí ptSrc CAnimationPoint.  
   
 ```  
@@ -265,7 +260,7 @@ void operator=(const CPoint& ptSrc);
 ### <a name="remarks"></a>Poznámky  
  Přiřadí ptSrc CAnimationPoint. Se doporučuje se, že před animace start a vzhledem k tomu tento operátor volání SetDefaultValue, který vytvoří základní COM objekty pro souřadnice X a Y Pokud byly vytvořeny. Pokud odebíráte tento objekt animace události (ValueChanged nebo IntegerValueChanged), budete muset znovu povolit tyto události.  
   
-##  <a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue  
  Nastaví výchozí hodnotu.  
   
 ```  

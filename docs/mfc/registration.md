@@ -1,13 +1,10 @@
 ---
 title: Registrace | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>Registrace
 Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů můžete vybrat ze seznamu. OLE získá tento seznam z registrační databáze systému, který obsahuje informace, které poskytuje všechny serverové aplikace. Když server registruje, položky, které se uloží do databáze systému registrace (registr) popisují každý typ objektu, který poskytne, soubor rozšíření a cestu sama na sebe, mimo jiné informace o.  
@@ -41,7 +36,7 @@ Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů m
   
  Podrobné informace o systémovou databázi registrace a formát souboru .reg používat k aktualizaci, najdete v článku *OLE referenční informace pro programátory*.  
   
-##  <a name="_core_server_installation"></a>Instalace serveru  
+##  <a name="_core_server_installation"></a> Instalace serveru  
  Při první instalaci aplikace server, se musí zaregistrovat všechny typy položek OLE, které podporuje. Můžete taky nechat serveru aktualizovat systémové databáze registrace pokaždé, když ji spustí jako samostatné aplikace. Díky tomu registrační databáze aktuální Pokud se přesune spustitelný soubor serveru.  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů m
   
  RegEdit sloučí obsah textový soubor .reg registrační databáze. Ověření databázi nebo ji opravit, pomocí Editoru registru. Postará neodstraňujte nezbytné položky OLE.  
   
-##  <a name="_core_server_initialization"></a>Inicializace serveru  
+##  <a name="_core_server_initialization"></a> Inicializace serveru  
  Když vytvoříte aplikaci server pomocí Průvodce aplikací, průvodce dokončí všechny úlohy inicializace pro vás automaticky. Tato část popisuje, co musíte udělat ručně zápisu serverová aplikace.  
   
  Při spuštění aplikace server aplikace kontejneru OLE systémové knihovny DLL přidáním možnost "/ vnoření" na serveru příkazový řádek. Aplikace serveru chování se liší v závislosti na tom, jestli ho byl spuštěn kontejner, takže první věc, kterou by aplikace měla provést při jeho spuštění se kontrola "/ vnoření" nebo "-vkládání objektů" možnost na příkazovém řádku. Pokud existuje tento přepínač, načíst jinou sadu prostředků, které se zobrazí server jako aktivní buď místní nebo plně otevřít. Další informace najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).  
@@ -69,7 +64,7 @@ Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů m
   
 ## <a name="see-also"></a>Viz také  
  [OLE](../mfc/ole-in-mfc.md)   
- [Servers](../mfc/servers.md)   
+ [Servery](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
  [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
  [COleTemplateServer – třída](../mfc/reference/coletemplateserver-class.md)

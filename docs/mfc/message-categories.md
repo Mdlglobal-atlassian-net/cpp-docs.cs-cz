@@ -1,13 +1,10 @@
 ---
-title: "Kategorie zpráv | Microsoft Docs"
-ms.custom: 
+title: Kategorie zpráv | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-categories"></a>Kategorie zpráv
 Jaké zprávy napíšete obslužné rutiny pro existují tří kategorií:  
@@ -48,10 +43,10 @@ Jaké zprávy napíšete obslužné rutiny pro existují tří kategorií:
   
      To zahrnuje **wm_command –** zpráv s oznámením z objektů uživatelského rozhraní: nabídky, tlačítek panelu nástrojů a klávesy akcelerátoru. Rozhraní framework zpracovává příkazy jinak než ostatní zprávy a může zpracovat pomocí další typy objektů, jak je popsáno v [cíle příkazů](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a>Zprávy Windows a zpráv s oznámením ovládacího prvku  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Zprávy Windows a zpráv s oznámením ovládacího prvku  
  Zprávy v kategoriích 1 a 2 – zpráv systému Windows a oznámení ovládacích prvků – jsou zpracovávány v systému windows: objekty třídy odvozené od třídy `CWnd`. To zahrnuje `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, a vlastní třídy odvozené od těchto základní třídy. Tyto objekty zapouzdřují `HWND`, popisovač pro okno systému Windows.  
   
-##  <a name="_core_command_messages"></a>Příkaz zprávy  
+##  <a name="_core_command_messages"></a> Příkaz zprávy  
  Zprávy v kategorii 3 – příkazy – může zpracovávat širší různé objekty: dokumenty, šablony dokumentů a objektu application kromě windows a zobrazení. Pokud příkaz přímo ovlivňuje některé konkrétní objekt, má smysl mít tento objekt zpracování příkazu. Příkaz Otevřít v nabídce Soubor je třeba logicky spojený s aplikací: aplikace otevře zadaný dokument po přijetí příkazu. Obslužná rutina pro příkaz otevřete tak je funkce člena třídy aplikace. Další informace o příkazech a jak se směrují na objekty najdete v tématu [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).  
   
 ## <a name="see-also"></a>Viz také  

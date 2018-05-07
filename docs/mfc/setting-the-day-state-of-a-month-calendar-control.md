@@ -1,13 +1,10 @@
 ---
-title: "Nastavení stavu dne v měsíci v ovládacím prvku Kalendář | Microsoft Docs"
-ms.custom: 
+title: Nastavení stavu dne v měsíci v ovládacím prvku Kalendář | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MCN_GETDAYSTATE
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c634815065c68cceb3c528222c0fd60e19b6827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 611397a329e177689a7bd8386963ea1c29ce9e5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Nastavení stavu dne v ovládacím prvku měsíční kalendář
 Jeden z atributů prvku měsíční kalendář je možnost ukládat informace, označuje jako stavu dne v ovládacím prvku pro každý den v měsíci. Tyto informace slouží k zdůraznil určitá data pro aktuálně zobrazený měsíc.  

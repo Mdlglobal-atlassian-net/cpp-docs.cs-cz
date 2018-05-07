@@ -1,12 +1,9 @@
 ---
-title: "CPen – třída | Microsoft Docs"
-ms.custom: 
+title: CPen – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>CPen – třída
 Zapouzdří pera Windows zařízení grafické rozhraní (GDI).  
@@ -85,7 +80,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  Vytvoří `CPen` objektu.  
   
 ```  
@@ -124,7 +119,7 @@ CPen(
   
 - **PS_INSIDEFRAME** vytvoří pera, který se vykreslí řádku uvnitř rámečku uzavřené obrazce vytvořeného pomocí funkcí výstup GDI systému Windows, které určují ohraničující obdélník (například **elipsy**, **obdélníku** , `RoundRect`, `Pie`, a `Chord` členské funkce). Když tento styl se používá s funkcemi výstup GDI systému Windows, které neurčují ohraničující obdélník (například `LineTo` – členská funkce), oblasti výkresu pera není omezeno rámečku.  
   
- Druhá verze `CPen` konstruktor Určuje kombinaci typu, stylu, zakončení a atributy spojení. Hodnoty z každé kategorie by měl společně s použitím bitový operátor OR (&#124;). Typ pera může být jedna z následujících hodnot:  
+ Druhá verze `CPen` konstruktor Určuje kombinaci typu, stylu, zakončení a atributy spojení. Hodnoty z každé kategorie by měl být kombinaci pomocí bitový operátor OR (&#124;). Typ pera může být jedna z následujících hodnot:  
   
 - **PS_GEOMETRIC** vytvoří pera geometrickou.  
   
@@ -179,7 +174,7 @@ CPen(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  Vytvoří logickou kosmetické nebo geometrickou pera s určený styl, šířku a atributy štětce a připojí jej k `CPen` objektu.  
   
 ```  
@@ -243,7 +238,7 @@ BOOL CreatePen(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  Inicializuje pera, který má styl, šířku a barvu uvedené ve struktuře, na kterou odkazuje `lpLogPen`.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  Vrátí ukazatel na `CPen` objekt daný popisovač na objekt pera GDI systému Windows.  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>Parametry  
  *hPen*  
- `HPEN`Popisovač pera GDI systému Windows.  
+ `HPEN` Popisovač pera GDI systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel `CPen` objekt, je-li úspěšná, jinak hodnota **NULL**.  
@@ -285,7 +280,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  Získá **EXTLOGPEN** základní struktura.  
   
 ```  
@@ -317,7 +312,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  Získá `LOGPEN` základní struktura.  
   
 ```  
@@ -347,7 +342,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
  Získá popisovač Windows GDI připojených `CPen` objektu.  
   
 ```  

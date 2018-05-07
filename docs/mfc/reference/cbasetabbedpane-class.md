@@ -1,12 +1,9 @@
 ---
-title: "Třída CBaseTabbedPane | Microsoft Docs"
-ms.custom: 
+title: Třída CBaseTabbedPane | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseTabbedPane
@@ -71,17 +68,15 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be9752822ee009ceddb735806d36ea3507242951
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d628758f19c36112bf896e11c97df3e1f92cbc47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane – třída
 Rozšiřuje funkce [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) pro podporu vytváření záložkách windows.  
@@ -165,7 +160,7 @@ class CBaseTabbedPane : public CDockablePane
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxBaseTabbedPane.h  
   
-##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab  
  Přidá novou kartu záložkách podokna.  
   
 ```  
@@ -177,25 +172,25 @@ virtual BOOL AddTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out]`pNewBar`  
+ [v] [out] `pNewBar`  
  Ukazatel na podokno přidat. Po volání této metody se může stát neplatný ukazatel this. Další informace najdete v části poznámky.  
   
- [v]`bVisible`  
- `TRUE`ke zviditelnění kartě; v opačném `FALSE`.  
+ [v] `bVisible`  
+ `TRUE` ke zviditelnění kartě; v opačném `FALSE`.  
   
- [v]`bSetActive`  
- `TRUE`Chcete-li na kartě kartě active; v opačném `FALSE`.  
+ [v] `bSetActive`  
+ `TRUE` Chcete-li na kartě kartě active; v opačném `FALSE`.  
   
- [v]`bDetachable`  
- `TRUE`Chcete-li na kartě odpojitelných; v opačném `FALSE`.  
+ [v] `bDetachable`  
+ `TRUE` Chcete-li na kartě odpojitelných; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně byl úspěšně přidán jako na kartě a nebyl zrušen v procesu. `FALSE`Pokud je objekt typu podokno přidávané `CBaseTabbedPane`. Další informace najdete v části poznámky.  
+ `TRUE` Pokud v podokně byl úspěšně přidán jako na kartě a nebyl zrušen v procesu. `FALSE` Pokud je objekt typu podokno přidávané `CBaseTabbedPane`. Další informace najdete v části poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem přidání podokna jako novou kartu v záložkách podokně. Pokud `pNewBar` odkazuje na objekt typu `CBaseTabbedPane`, všechny její karty se zkopírují do podokna s kartami a potom `pNewBar` zničena. Proto `pNewBar` stane neplatný ukazatel, které by se neměla používat.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  Určuje, zda může být zničený záložkách podokně aplikace prázdný.  
   
 ```  
@@ -203,12 +198,12 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud prázdnou – záložkami může být zničený podokně; v opačném `FALSE`. Výchozí implementace vždy vrátí `TRUE`.  
+ `TRUE` Pokud prázdnou – záložkami může být zničený podokně; v opačném `FALSE`. Výchozí implementace vždy vrátí `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud podokně aplikace prázdný záložkách nesmí být zničený, skryje rozhraní v podokně.  
   
-##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
+##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo  
  Načte nastavení na kartě z registru a použije je na kartách podokně.  
   
 ```  
@@ -216,13 +211,13 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bUseTabIndexes`  
+ [v] `bUseTabIndexes`  
  Tento parametr se používá interně rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána rámcem, když ho znovu načte ukotvení informace o stavu z registru. Metoda získává informace o pořadí a názvy karet pro podokno s kartami.  
   
-##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
+##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat  
  Určuje, zda lze v záložkách podokně float.  
   
 ```  
@@ -230,9 +225,9 @@ virtual BOOL CanFloat() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně můžete float; v opačném `FALSE`.  
+ `TRUE` Pokud v podokně můžete float; v opačném `FALSE`.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName  
  Určuje, zda má popisek pro záložkách podokně zobrazit stejný text jako aktivní karty.  
   
 ```  
@@ -240,12 +235,12 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud text titulku na kartách panelu je nastavený na text kartě active; v opačném `FALSE`.  
+ `TRUE` Pokud text titulku na kartách panelu je nastavený na text kartě active; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Metoda slouží k určení, zda text na duplikáty titulek záložkách podokně zobrazí popisek kartě active. Můžete povolit nebo zakázat tuto funkci voláním [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
   
-##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument  
  Jeden nebo více lze ukotvit podokna převede do dokumentů s kartami MDI.  
   
 ```  
@@ -253,10 +248,10 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bActiveTabOnly`  
+ [v] `bActiveTabOnly`  
  Při převodu záložkách podokně zadejte `TRUE` převést pouze aktivní karty. Zadejte `FALSE` převést všechny karty v podokně.  
   
-##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
  Umožňuje odpojit podokně z podokna s kartami.  
   
 ```  
@@ -266,19 +261,19 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na podokně odpojit.  
   
- [v]`bHide`  
+ [v] `bHide`  
  Logický parametr, který určuje, zda rozhraní skryje panel po je odpojená.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud rozhraní úspěšně odpojí podokna. `FALSE` Pokud `pBar` je `NULL` nebo odkazuje na podokně, který není v podokně s kartami.  
+ `TRUE` Pokud rozhraní úspěšně odpojí podokna. `FALSE` Pokud `pBar` je `NULL` nebo odkazuje na podokně, který není v podokně s kartami.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework obtéká podokně odpojit Pokud je to možné. Další informace najdete v tématu [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
   
-##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
+##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName  
  Povolí nebo zakáže schopnost podokně záložkách s text popisku na kartě active synchronizovat text titulku.  
   
 ```  
@@ -286,10 +281,10 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Proveďte synchronizaci s active karta titulek; titulek podokno s kartami v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Proveďte synchronizaci s active karta titulek; titulek podokno s kartami v opačném `FALSE`.  
   
-##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
+##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
  Interní pořadí se obnoví do výchozího stavu.  
   
 ```  
@@ -299,7 +294,7 @@ void FillDefaultTabsOrderArray();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána, když rozhraní obnoví panel aplikace Outlook počátečního stavu.  
   
-##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
+##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID  
  Vrátí podokno identifikovaný podokně ID.  
   
 ```  
@@ -307,7 +302,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uBarID`  
+ [v] `uBarID`  
  Určuje ID podokně, který se má najít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -316,7 +311,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda Porovná všechny karty v podokně a vrátí jednu s ID určeného `uBarID` parametr.  
   
-##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
+##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
  Vrátí podokně, který se nachází na kartě.  
   
 ```  
@@ -326,11 +321,11 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nTabNum`  
+ [v] `nTabNum`  
  Určuje index založený na nule karty pro načtení.  
   
- [v]`bGetWrappedBar`  
- `TRUE`Chcete-li vrátit okno základní (zabalené) v podokně místo v podokně sama o sobě; v opačném případě `FALSE`. To platí jenom pro odvozený z podokna [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
+ [v] `bGetWrappedBar`  
+ `TRUE` Chcete-li vrátit okno základní (zabalené) v podokně místo v podokně sama o sobě; v opačném případě `FALSE`. To platí jenom pro odvozený z podokna [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud je nalezena v podokně, je vrácena platný ukazatel do podokna prohledávaný pro; v opačném `NULL`.  
@@ -338,7 +333,7 @@ virtual CWnd* FindBarByTabNumber(
 ### <a name="remarks"></a>Poznámky  
  Volat tuto metodu za účelem načtení podokně umístěných v kartě určeného `nTabNum` parametr.  
   
-##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
  Obtéká podokno, ale pouze, pokud se v podokně se aktuálně nachází v odpojitelných kartě.  
   
 ```  
@@ -350,27 +345,27 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out]`pBar`  
+ [v] [out] `pBar`  
  Ukazatel na podokno float.  
   
- [v]`nTabID`  
+ [v] `nTabID`  
  Určuje index založený na nule karty na float.  
   
- [v]`dockMethod`  
+ [v] `dockMethod`  
  Určuje metodu sloužící k uvolnit podokně. Další informace najdete v části poznámky.  
   
- [v]`bHide`  
- `TRUE`Chcete-li skrýt podokno před plovoucí; v opačném `FALSE`.  
+ [v] `bHide`  
+ `TRUE` Chcete-li skrýt podokno před plovoucí; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně obtékané; v opačném `FALSE`.  
+ `TRUE` Pokud v podokně obtékané; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem podokně, který se aktuálně nachází na kartě odpojitelných float.  
   
  Pokud chcete odpojit podokno prostřednictvím kódu programu, zadejte `DM_SHOW` pro `dockMethod` parametr. Pokud chcete uvolnit podokno ve stejné pozici, kde obtékané dříve, zadejte `DM_DBL_CLICK` jako `dockMethod` parametr.  
   
-##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
+##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
  Vrátí výchozí pořadí karet v podokně.  
   
 ```  
@@ -383,7 +378,7 @@ const CArray<int,int>& GetDefaultTabsOrder();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda volá framework při panel aplikace Outlook se resetují na počátečního stavu.  
   
-##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
+##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab  
  Načte ukazatel na první kartě Zobrazit.  
   
 ```  
@@ -391,13 +386,13 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`iTabNum`  
+ [v] `iTabNum`  
  Odkaz na celé číslo. Tato metoda zapíše index založený na nule první zobrazené karty tento parametr nebo -1, pokud ne, zobrazí je zjištěno, že karta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V případě úspěšného ukazatel na první kartě zobrazených; v opačném `NULL`.  
   
-##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
+##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize  
  Načte minimální povolená velikost podokna.  
   
 ```  
@@ -405,13 +400,13 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`size`  
+ [out] `size`  
  A `CSize` objekt, který je vyplněn minimální povolená velikost.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je aktivní konzistentní zpracování podokně minimální velikostí ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` je vyplněn minimální povolená velikost active karty. V opačném `size` je vyplněn návratová hodnota [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
+##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
  Načte minimální povolená velikost podokna.  
   
 ```  
@@ -419,13 +414,13 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`size`  
+ [out] `size`  
  A `CSize` objekt, který je vyplněn minimální povolená velikost.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud je aktivní konzistentní zpracování podokně minimální velikostí ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` je vyplněn minimální povolená velikost active karty. V opačném `size` je vyplněn návratová hodnota [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
+##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
  Vrátí seznam hodnot podokna, které jsou obsaženy v podokně s kartami.  
   
 ```  
@@ -435,13 +430,13 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`lst`  
+ [out] `lst`  
  A `CObList` je vyplněn podokna, které jsou obsaženy v podokně s kartami.  
   
- [v]`pRTCFilter`  
+ [v] `pRTCFilter`  
  Pokud není `NULL`, vrácený seznam obsahuje pouze podokna, které jsou zadané runtime třídy.  
   
-##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
  Vrátí ohraničující rámečky pro horní a dolní části karty.  
   
 ```  
@@ -451,16 +446,16 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectTabAreaTop`  
+ [out] `rectTabAreaTop`  
  Souřadnice obrazovky oblasti horní karty obdrží.  
   
- [out]`rectTabAreaBottom`  
+ [out] `rectTabAreaBottom`  
  Souřadnice obrazovky nižší oblast karty obdrží.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu za účelem určení ohraničující obdélníky v souřadnice obrazovky pro horní a dolní karta oblasti.  
   
-##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
+##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum  
  Vrátí počet karty v okně Karta.  
   
 ```  
@@ -470,7 +465,7 @@ virtual int GetTabsNum() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet karet v podokně s kartami.  
   
-##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
+##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow  
  Získá základní okno Karta (zabalená).  
   
 ```  
@@ -480,7 +475,7 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na základní okno s kartou.  
   
-##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
+##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum  
  Vrátí počet viditelné karty.  
   
 ```  
@@ -493,7 +488,7 @@ virtual int GetVisibleTabsNum() const;
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu můžete určit počet viditelné karty v podokně s kartami.  
   
-##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode  
  Určuje, zda v záložkách podokně můžete přepnout do režimu autohide –.  
   
 ```  
@@ -501,12 +496,12 @@ virtual BOOL HasAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně můžete přepnout do režimu autohide –; v opačném `FALSE`.  
+ `TRUE` Pokud v podokně můžete přepnout do režimu autohide –; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud autohide – režimu je zakázané, žádné tlačítko PIN kódu se zobrazí na titulek podokno s kartami.  
   
-##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
+##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab  
  Určuje, zda je v záložkách podokně skryty-li jen jedné karty se zobrazí.  
   
 ```  
@@ -514,12 +509,12 @@ virtual BOOL IsHideSingleTab() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud není okno s kartou zobrazeny po pouze jedna karta viditelná; v opačném `FALSE`.  
+ `TRUE` Pokud není okno s kartou zobrazeny po pouze jedna karta viditelná; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud se v podokně se nezobrazí, protože je otevřena pouze jedna karta, můžete volat tuto metodu za účelem určení, zda v záložkách podokně pracuje správně.  
   
-##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
+##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane  
  Podokno se odebere z podokna s kartami.  
   
 ```  
@@ -527,16 +522,16 @@ virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out]`pBar`  
+ [v] [out] `pBar`  
  Ukazatel na podokno odebrat z podokna s kartami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud v podokně byla úspěšně odebrána z podokna s kartami a v podokně s kartami je stále platný. `FALSE`Pokud podokně poslední byla odebrána z podokna s kartami a podokně záložkách je zničena. Pokud je vrácenou hodnotou `FALSE`, nepoužívejte v záložkách podokně víc.  
+ `TRUE` Pokud v podokně byla úspěšně odebrána z podokna s kartami a v podokně s kartami je stále platný. `FALSE` Pokud podokně poslední byla odebrána z podokna s kartami a podokně záložkách je zničena. Pokud je vrácenou hodnotou `FALSE`, nepoužívejte v záložkách podokně víc.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze odebrat podokně určeného `pBar` parametr z podokna s kartami.  
   
-##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
  Určuje, zda budou záložkách ovládacích pruhů automaticky zničena.  
   
 ```  
@@ -544,13 +539,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bAutoDestroy`  
- `TRUE`Pokud podokno s kartami byl vytvořen dynamicky a nejsou řízení celé jeho životnosti; v opačném `FALSE`.  
+ [v] `bAutoDestroy`  
+ `TRUE` Pokud podokno s kartami byl vytvořen dynamicky a nejsou řízení celé jeho životnosti; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastavit režim pro automatické zrušení `TRUE` Pokud vytvoříte záložkách podokně dynamicky a nejsou řízení celé jeho životnosti. Pokud automatické zrušení režim je `TRUE`, v podokně s kartami budou automaticky zničena rámcem.  
   
-##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
+##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab  
  Zobrazí nebo skryje na kartě.  
   
 ```  
@@ -562,25 +557,25 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na podokně můžete zobrazit nebo skrýt.  
   
- [v]`bShow`  
- `TRUE`k zobrazení podokna. `FALSE` ke skrytí podokna.  
+ [v] `bShow`  
+ `TRUE` k zobrazení podokna. `FALSE` ke skrytí podokna.  
   
- [v]`bDelay`  
- `TRUE`zpoždění před úpravou na kartě rozložení; v opačném `FALSE`.  
+ [v] `bDelay`  
+ `TRUE` zpoždění před úpravou na kartě rozložení; v opačném `FALSE`.  
   
- [v]`bActivate`  
- `TRUE`Chcete-li na kartě kartě active; v opačném `FALSE`.  
+ [v] `bActivate`  
+ `TRUE` Chcete-li na kartě kartě active; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud na kartě byla buď zobrazen nebo skryt úspěšně; v opačném `FALSE`.  
+ `TRUE` Pokud na kartě byla buď zobrazen nebo skryt úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Když zavoláte tuto metodu, podokno je buď zobrazen nebo skryt, v závislosti na hodnotě `bShow` parametr. Pokud skrýt na kartě a je kartě poslední viditelné v okně základní karta, v podokně s kartami je skrytá. Pokud na kartě se zobrazují, když bylo dříve žádné karty viditelné, zobrazí se podokno s kartami.  
   
-##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
+##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
  Přepočítá rozložení informace o podokně.  
   
 ```  
@@ -592,7 +587,7 @@ virtual void RecalcLayout();
   
  Pokud je ukotveno podokně, tato metoda neprovede žádnou akci.  
   
-##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
+##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode  
  V podokně s kartami nastaví režim automaticky skrýt pro odpojitelných podokna.  
   
 ```  
@@ -604,16 +599,16 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bMode`  
- `TRUE`Pokud chcete povolit režim automaticky skrýt; `FALSE` povolení regulární ukotvení režimu.  
+ [v] `bMode`  
+ `TRUE` Pokud chcete povolit režim automaticky skrýt; `FALSE` povolení regulární ukotvení režimu.  
   
- [v]`dwAlignment`  
+ [v] `dwAlignment`  
  Určuje zarovnání automaticky skrýt podokno, které se má vytvořit. Seznam možných hodnot najdete v tématu [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [v] [out]`pCurrAutoHideBar`  
+ [v] [out] `pCurrAutoHideBar`  
  Ukazatel na panelu nástrojů aktuální automaticky skrýt. Může být `NULL`.  
   
- [v]`bUseTimer`  
+ [v] `bUseTimer`  
  Určuje, jestli použít účinek automaticky skrýt, když uživatel přejde do režimu automaticky skrýt v podokně nebo skrýt podokno okamžitě.  
   
 ### <a name="return-value"></a>Návratová hodnota  

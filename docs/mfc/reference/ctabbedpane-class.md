@@ -1,12 +1,9 @@
 ---
-title: "Třída CTabbedPane | Microsoft Docs"
-ms.custom: 
+title: Třída CTabbedPane | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c18d8f5aed3a5adb66575dd05533aa19a1ba79b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane – třída
 Implementuje funkce podokně odpojitelných karty.  
@@ -171,7 +166,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxTabbedPane.h  
   
-##  <a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
 
   
 ```  
@@ -181,14 +176,14 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
- [v]`bHide`  
+ [v] `pBar`  
+ [v] `bHide`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
  Povolí nebo zakáže automatické barevné zvýrazňování karet.  
   
 ```  
@@ -196,8 +191,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit automatické barevné zvýrazňování karet; v opačném `FALSE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit automatické barevné zvýrazňování karet; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto statickou metodu použijte k povolení nebo zakázání automatické barevné zvýrazňování karet ve všech záložkách podokna v aplikaci. Pokud je tato funkce povolena, každé kartě vyplní vlastní barvy. Můžete najít seznam barev, které se používají k barva karty voláním [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metoda.  
@@ -206,7 +201,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  Ve výchozím nastavení je tato možnost vypnuta.  
   
-##  <a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
   
 ```  
@@ -218,16 +213,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pBar`  
- [v]`nTabID`  
- [v]`dockMethod`  
- [v]`bHide`  
+ [v] `pBar`  
+ [v] `nTabID`  
+ [v] `dockMethod`  
+ [v] `bHide`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
  Vrátí velikost a umístění oblast karty v okně s kartami.  
   
 ```  
@@ -237,10 +232,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectTabAreaTop`  
+ [out] `rectTabAreaTop`  
  Obsahuje velikost a umístění, v souřadnice obrazovky oblasti nejvyšší karet.  
   
- [out]`rectTabAreaBottom`  
+ [out] `rectTabAreaBottom`  
  Obsahuje velikost a umístění, v souřadnice obrazovky oblasti dolní karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -248,7 +243,7 @@ virtual void GetTabArea(
   
  Potlačí tuto metodu v `CTabbedPane`-odvozené třídy toto chování změnit.  
   
-##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
   
 ```  
@@ -259,7 +254,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode  
 
   
 ```  
@@ -270,7 +265,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom  
  Určuje, zda karty jsou umístěné v dolní části okna.  
   
 ```  
@@ -278,11 +273,11 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud oblast karty se nachází v dolní části okna s kartami; v opačném `FALSE`.  
+ `TRUE` Pokud oblast karty se nachází v dolní části okna s kartami; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop  
  Výchozí umístění pro karty v aplikaci.  
   
 ```  
@@ -296,7 +291,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  Výchozí hodnota je `FALSE`.  
   
-##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozené objektu.  
   
 ```  
@@ -306,7 +301,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>Poznámky  
  Tuto proměnnou statický člen nastavit na ukazatel na informace třída runtime `CMFCTabCtrl`-odvozené objektu, pokud používáte vlastní okno s kartami v záložkách podokně.  
   
-##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  Všechny záložkách podokna obnoví do výchozího stavu.  
   
 ```  
@@ -316,7 +311,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody vrátit zpět všechny záložkách podokna do výchozího stavu. Při volání, tato metoda obnoví ohraničení velikosti a stav barva automatické všech záložkách podoken.  
   
-##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
  Nastaví seznam vlastních barev, které se používají, pokud je povolena funkce barva automaticky.  
   
 ```  
@@ -324,7 +319,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`arColors`  
+ [v] `arColors`  
  Obsahuje-li nastavit pole.  
   
 ### <a name="remarks"></a>Poznámky  

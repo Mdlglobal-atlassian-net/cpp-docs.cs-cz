@@ -1,12 +1,9 @@
 ---
-title: "COleObjectFactory – třída | Microsoft Docs"
-ms.custom: 
+title: COleObjectFactory – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleObjectFactory
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f853939ae7960dd865f560d480366ff95a73a990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory – třída
 Implementuje OLE třídy factory, který vytvoří objekty OLE například servery, objekty automatizace a dokumenty.  
@@ -121,7 +116,7 @@ class COleObjectFactory : public CCmdTarget
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  
   
-##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
+##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory  
  Vytvoří `COleObjectFactory` objekt, inicializuje jako registrace objekt pro vytváření a přidá ji do seznamu objektů Factory.  
   
 ```  
@@ -157,7 +152,7 @@ COleObjectFactory(
   
 - **afxreginsertable –** umožňuje zobrazit v **vložit objekt** dialogové okno pro objekty OLE.  
   
-- `afxRegApartmentThreading`Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
+- `afxRegApartmentThreading` Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
   
 - **afxregfreethreading –** nastaví model vláken v registru na ThreadingModel = volné.  
   
@@ -171,7 +166,7 @@ COleObjectFactory(
   
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
   
-##  <a name="getclassid"></a>COleObjectFactory::GetClassID  
+##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  Vrátí odkaz na ID třídy OLE představuje tento objekt pro vytváření.  
   
 ```  
@@ -184,7 +179,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
   
-##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
+##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  Požadavky jedinečný licenční klíč z ovládacího prvku DLL a uloží jej do `BSTR` na kterou odkazuje `pbstrKey`.  
   
 ```  
@@ -206,7 +201,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této funkce vrátí hodnotu 0 a ukládá ustanovení v `BSTR`. Pokud použijete k vytvoření projektu knihovny MFC ActiveX ControlWizard, poskytuje ControlWizard přepsání, který načte ovládacího prvku licenční klíč.  
   
-##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
+##  <a name="islicensevalid"></a>  COleObjectFactory::IsLicenseValid  
  Určuje, zda je platná licence ovládacího prvku.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL IsLicenseValid();
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud úspěšně; jinak hodnota false.  
   
-##  <a name="isregistered"></a>COleObjectFactory::IsRegistered  
+##  <a name="isregistered"></a>  COleObjectFactory::IsRegistered  
  Vrátí nenulovou hodnotu, pokud objekt factory je registrován s OLE systémové knihovny DLL.  
   
 ```  
@@ -226,7 +221,7 @@ virtual BOOL IsRegistered() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud objekt factory je zaregistrován; jinak 0.  
   
-##  <a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
+##  <a name="oncreateobject"></a>  COleObjectFactory::OnCreateObject  
  Voláno rámcem vytvořit nový objekt.  
   
 ```  
@@ -239,7 +234,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="remarks"></a>Poznámky  
  Funkci k vytvoření objektu z něco, jiné než přepsat [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) předaný konstruktoru.  
   
-##  <a name="register"></a>COleObjectFactory::Register  
+##  <a name="register"></a>  COleObjectFactory::Register  
  Registruje tento objekt pro vytváření objektů OLE systémové knihovny DLL.  
   
 ```  
@@ -252,7 +247,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána obvykle [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.  
   
-##  <a name="registerall"></a>COleObjectFactory::RegisterAll  
+##  <a name="registerall"></a>  COleObjectFactory::RegisterAll  
  Registruje všechny objekty aplikace objektu Factory OLE systémové knihovny DLL.  
   
 ```  
@@ -265,7 +260,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána obvykle [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.  
   
-##  <a name="revoke"></a>COleObjectFactory::Revoke  
+##  <a name="revoke"></a>  COleObjectFactory::Revoke  
  Odvolá tento objekt factory registrace OLE systémové knihovny DLL.  
   
 ```  
@@ -275,7 +270,7 @@ void Revoke();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce volá framework automaticky předtím, než se aplikace ukončí. V případě potřeby ji volat z přepsání [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
+##  <a name="revokeall"></a>  COleObjectFactory::RevokeAll  
  Odvolá všechny aplikace objektu Factory registrací s OLE systémové knihovny DLL.  
   
 ```  
@@ -285,7 +280,7 @@ static void PASCAL RevokeAll();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce volá framework automaticky předtím, než se aplikace ukončí. V případě potřeby ji volat z přepsání [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
+##  <a name="unregisterall"></a>  COleObjectFactory::UnregisterAll  
  Zruší registraci všechny objekty aplikace objektu Factory.  
   
 ```  
@@ -295,7 +290,7 @@ static BOOL PASCAL UnregisterAll();
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud je úspěšné; jinak hodnota FALSE.  
   
-##  <a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleObjectFactory::UpdateRegistry  
  Registruje všechny objekty aplikace objektu Factory OLE systémový registr.  
   
 ```  
@@ -319,7 +314,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
      Pokud použijete k vytvoření projektu knihovny MFC ActiveX ControlWizard, poskytuje ControlWizard přepsání tohoto čistý virtuální funkce.  
   
-##  <a name="updateregistryall"></a>COleObjectFactory::UpdateRegistryAll  
+##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll  
  Registruje všechny objekty aplikace objektu Factory OLE systémový registr.  
   
 ```  
@@ -336,7 +331,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána obvykle [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.  
   
-##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
+##  <a name="verifylicensekey"></a>  COleObjectFactory::VerifyLicenseKey  
  Ověřuje, že je kontejner licenci k používání ovládacího prvku OLE.  
   
 ```  
@@ -357,7 +352,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
   
  Funkce [verifyuserlicense –](#verifyuserlicense) ověřuje licence návrhu.  
   
-##  <a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
+##  <a name="verifyuserlicense"></a>  COleObjectFactory::VerifyUserLicense  
  Ověřuje licence návrhu pro ovládací prvek OLE.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCPropertyGridToolTipCtrl | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCPropertyGridToolTipCtrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0b4a43da8943bc196a799ca4419dea7f34ed76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl – třída
 Implementuje a popisku řídit, která [CMFCPropertyGridCtrl třída](../../mfc/reference/cmfcpropertygridctrl-class.md) používá zobrazíte popisy tlačítek.  
@@ -95,14 +90,14 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
  Vytvoří `CMFCPropertyGridToolTipCtrl` objektu.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
  Vytvoří okna pro ovládací prvek popis tlačítka.  
   
 ```  
@@ -110,13 +105,13 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParent`  
+ [v] `pWndParent`  
  Ukazatel do nadřazeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud byl úspěšně vytvořen okna; jinak hodnota FALSE.  
   
-##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
  Deaktivuje a skryje ovládacího prvku popisek.  
   
 ```  
@@ -126,7 +121,7 @@ void Deactivate();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví poslední pozice a text na prázdné hodnoty, tak, aby budoucí volá, aby se [CMFCPropertyGridToolTipCtrl::Track](#track) zobrazí popisek.  
   
-##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
  Vrátí poslední pozice ovládacího prvku tooltip souřadnice.  
   
 ```  
@@ -134,17 +129,17 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rect`  
+ [out] `rect`  
  Obsahuje poslední pozice ovládacího prvku popisek.  
   
-##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Skryje ovládacího prvku popisek.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
  Nastaví mezery mezi text popisku a ohraničení popisku okna.  
   
 ```  
@@ -152,10 +147,10 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nTextMargin`  
+ [v] `nTextMargin`  
  Určuje mezery mezi ovládací prvek text popisku a ohraničení popisku okna. Výchozí hodnota je 10 pixelů.  
   
-##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Zobrazí ovládací prvek popis tlačítka.  
   
 ```  
@@ -165,10 +160,10 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`rect`  
+ [v] `rect`  
  Určuje umístění a velikost ovládacího prvku tooltip.  
   
- [v]`strText`  
+ [v] `strText`  
  Určuje text, který se zobrazí v popisu.  
   
 ### <a name="remarks"></a>Poznámky  

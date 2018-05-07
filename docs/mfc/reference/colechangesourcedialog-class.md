@@ -1,12 +1,9 @@
 ---
-title: "Třída COleChangeSourceDialog | Microsoft Docs"
-ms.custom: 
+title: Třída COleChangeSourceDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog – třída
 Používá se pro dialogové okno OLE změnit zdroj.  
@@ -105,7 +100,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxodlgs.h  
   
-##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
  Tato funkce vytvoří `COleChangeSourceDialog` objektu.  
   
 ```  
@@ -126,7 +121,7 @@ explicit COleChangeSourceDialog(
   
  Další informace najdete v tématu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktura a [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) funkce ve Windows SDK.  
   
-##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Volání této funkce můžete zobrazit dialogové okno OLE změnit zdroj.  
   
 ```  
@@ -153,7 +148,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
  Volání této funkce načíst se úplný zobrazovaný název pro položku propojené klienta.  
   
 ```  
@@ -163,7 +158,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>Návratová hodnota  
  Úplný zdrojový zobrazovaný název (Přezdívka) [COleClientItem](../../mfc/reference/coleclientitem-class.md) zadaným v konstruktoru.  
   
-##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
  Volání této funkce můžete načíst část souboru Přezdívka zobrazovaný název pro položku propojené klienta.  
   
 ```  
@@ -176,7 +171,7 @@ CString GetFileName();
 ### <a name="remarks"></a>Poznámky  
  Soubor Přezdívka společně s Přezdívka položky poskytuje úplný zobrazovaný název.  
   
-##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  Volání této funkce můžete získat předchozí předpona řetězec pro zdroj.  
   
 ```  
@@ -193,7 +188,7 @@ CString GetFromPrefix();
   
  Další informace najdete v tématu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktura ve Windows SDK.  
   
-##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Volání této funkce můžete načíst část položek Přezdívka zobrazovaný název pro položku propojené klienta.  
   
 ```  
@@ -206,7 +201,7 @@ CString GetItemName();
 ### <a name="remarks"></a>Poznámky  
  Soubor Přezdívka společně s Přezdívka položky poskytuje úplný zobrazovaný název.  
   
-##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  Volání této funkce můžete získat nový řetězec předpony pro zdroj.  
   
 ```  
@@ -223,7 +218,7 @@ CString GetToPrefix();
   
  Další informace najdete v tématu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktura ve Windows SDK.  
   
-##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
  Tento člen dat je struktura typu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
   
 ```  
@@ -231,11 +226,11 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `OLEUICHANGESOURCE`slouží k řízení chování dialogových oken OLE změnit zdroj. Členové této struktury můžete přímo upravovat.  
+ `OLEUICHANGESOURCE` slouží k řízení chování dialogových oken OLE změnit zdroj. Členové této struktury můžete přímo upravovat.  
   
  Další informace najdete v tématu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktura ve Windows SDK.  
   
-##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Volání této funkce lze zjistit nový zdroj je neplatný.  
   
 ```  

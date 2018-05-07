@@ -1,12 +1,9 @@
 ---
-title: "Třída CMapWordToPtr | Microsoft Docs"
-ms.custom: 
+title: Třída CMapWordToPtr | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapWordToPtr
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d900a941b6612cdb1774302a2897d44d17c3ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0c20de761f91f304c1d7684dbd19a03c0b8efa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr – třída
 Podporuje mapy neplatné ukazatele s klíči 16bitové slova.  
@@ -106,7 +101,7 @@ class CMapWordToPtr : public CObject
 |[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Vloží element do mapy – operátor nahrazování pro `SetAt`.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMapWordToPtr`zahrnuje `IMPLEMENT_DYNAMIC` makro pro podporu přístupu běhového typu a k vypsání `CDumpContext` objektu. Pokud potřebujete výpis prvků jednotlivých mapy, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
+ `CMapWordToPtr` zahrnuje `IMPLEMENT_DYNAMIC` makro pro podporu přístupu běhového typu a k vypsání `CDumpContext` objektu. Pokud potřebujete výpis prvků jednotlivých mapy, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
   
  Word ukazatel mapy nesmí být serializován.  
   

@@ -1,37 +1,32 @@
 ---
-title: "Schránka: Kopírování a vkládání dat | Microsoft Docs"
-ms.custom: 
+title: 'Schránka: Kopírování a vkládání dat | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
 Toto téma popisuje minimální práce nezbytné k implementaci pro kopírování a vkládání ze schránky v aplikaci OLE. Doporučujeme, abyste si přečetli [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) témata než budete pokračovat.  
   
  Než budete moct implementovat kopírování nebo vložením, je nutné zadat funkce pro zpracování kopírovat, vyjmout a Vložit možnosti v nabídce Upravit.  
   
-##  <a name="_core_copying_or_cutting_data"></a>Kopírování nebo vyjímání Data  
+##  <a name="_core_copying_or_cutting_data"></a> Kopírování nebo vyjímání Data  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Zkopírujte data do schránky.  
   
@@ -47,7 +42,7 @@ Toto téma popisuje minimální práce nezbytné k implementaci pro kopírován�
   
  Příkladem tohoto pořadí najdete v sekci **OnEditCut** a **OnEditCopy** funkcí v MFC OLE ukázkové programy [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Všimněte si, že tyto ukázky zachovat ukazatel aktuálně vybraná data, takže krok 1 je již dokončena.  
   
-##  <a name="_core_pasting_data"></a>Vkládání dat  
+##  <a name="_core_pasting_data"></a> Vkládání dat  
  Vkládání dat je složitější než kopírování, protože je třeba vybrat formát pro použití v vložení dat do vaší aplikace.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Chcete-li vložit data ze schránky  

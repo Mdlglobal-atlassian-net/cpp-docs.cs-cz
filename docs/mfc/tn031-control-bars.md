@@ -1,13 +1,10 @@
 ---
-title: "TN031: Ovládací pruhy | Microsoft Docs"
-ms.custom: 
+title: 'TN031: Ovládací pruhy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4ea57f77c615ba439f2d07c3926cde5efa0c27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn031-control-bars"></a>TN031: Ovládací pruhy
 > [!NOTE]
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  Tato poznámka popisuje třídy panelu ovládacích prvků v prostředí MFC: Obecné [ccontrolbar –](#_mfcnotes_ccontrolbar), [cstatusbar –](#_mfcnotes_cstatusbar), [ctoolbar –](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)a  **CDockBar**.  
   
-## <a name="_mfcnotes_ccontrolbar"></a>Ccontrolbar – 
+## <a name="_mfcnotes_ccontrolbar"></a> Ccontrolbar – 
   
  A **ControlBar** je `CWnd`-odvozené třídy, který:  
   
@@ -51,19 +46,19 @@ ms.lasthandoff: 12/21/2017
   
  Ovládací pruhy podporují další styly:  
   
-- `CBRS_TOP`(Výchozí) připnout na ovládací prvek panelu na začátek.  
+- `CBRS_TOP` (Výchozí) připnout na ovládací prvek panelu na začátek.  
   
-- `CBRS_BOTTOM`Připnete na ovládací prvek panelu do dolní.  
+- `CBRS_BOTTOM` Připnete na ovládací prvek panelu do dolní.  
   
-- `CBRS_NOALIGN`Když změní velikost nadřazené není přemístit na ovládací prvek panelu.  
+- `CBRS_NOALIGN` Když změní velikost nadřazené není přemístit na ovládací prvek panelu.  
   
  Třídy odvozené od `CControlBar` poskytovat zajímavějšího implementace:  
   
-- `CStatusBar`Stavový řádek položky jsou podokna panelu Stav obsahující text.  
+- `CStatusBar` Stavový řádek položky jsou podokna panelu Stav obsahující text.  
   
-- `CToolBar`Panelu nástrojů položky jsou rastrového obrázku tlačítka zarovnán v řádku.  
+- `CToolBar` Panelu nástrojů položky jsou rastrového obrázku tlačítka zarovnán v řádku.  
   
-- `CDialogBar`Rámeček panelu nástrojů jako obsahující standardní windows ovládacích prvků (vytvořené z prostředku šablony dialogové okno).  
+- `CDialogBar` Rámeček panelu nástrojů jako obsahující standardní windows ovládacích prvků (vytvořené z prostředku šablony dialogové okno).  
   
 - **CDockBar** zobecněný ukotvení oblasti pro ostatní `CControlBar` odvozené objekty. Konkrétní členské funkce a proměnné, které jsou k dispozici v této třídě jsou pravděpodobně v budoucích verzích změnit.  
   
@@ -104,7 +99,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  MFC privátní Windows zprávy, včetně **WM_SIZEPARENT**, jsou dokumentovány v článku [Technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
-## <a name="_mfcnotes_cstatusbar"></a>Cstatusbar –  
+## <a name="_mfcnotes_cstatusbar"></a>  Cstatusbar –  
   
  Stavový řádek je ovládací prvek panel, který má řádek podokna výstup textu. Existují dvě běžné způsoby použití podokna výstup textu:  
   
@@ -141,7 +136,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  Stavový řádek podporuje pouze jeden pružně roztáhnout podokno, obvykle první. Velikost tohoto panelu je skutečně minimální velikost. Pokud stavový řádek je větší, než je minimální velikost všech podoken, bude mu udělená žádné další šířka do podokna pružně roztáhnout. Vzhledem k tomu, že se první podokno pružně roztáhnout má výchozí aplikace s stavového řádku zarovnaný doprava indikátory Zakončení, počtu a SCRL.  
   
-## <a name="_mfcnotes_ctoolbar"></a>Ctoolbar –  
+## <a name="_mfcnotes_ctoolbar"></a>  Ctoolbar –  
   
  Panel nástrojů je ovládací prvek panel s řádek rastrový obrázek tlačítka, která může obsahovat oddělovače. Podporují se dva styly tlačítek: tlačítek a tlačítka, zaškrtněte políčko. Funkce skupiny přepínačů mohou být vytvořeny políčko tlačítka a `ON_UPDATE_COMMAND_UI`.  
   
@@ -173,13 +168,13 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
  Přizpůsobení rozhraní API slouží k úpravě tlačítko ID, styly, šířka oddělovací a které image glyfy se používá pro jaké tlačítko. Ve výchozím nastavení není potřeba použijte tato rozhraní API.  
   
 ## <a name="ccmdui-support-for-ctoolbar"></a>Ctoolbar – podpora CCmdUI  
- Způsob, jakým jsou vždy aktualizovány tlačítka panelu nástrojů je prostřednictvím `ON_UPDATE_COMMAND_UI` mechanismus. Na dobu nečinnosti, bude volat panelu nástrojů `ON_UPDATE_COMMAND_UI` obslužná rutina s ID příkazu, který tohoto tlačítka. `ON_UPDATE_COMMAND_UI`není volán pro oddělovače, ale je volána pro tlačítek a tlačítka, zaškrtněte políčko.  
+ Způsob, jakým jsou vždy aktualizovány tlačítka panelu nástrojů je prostřednictvím `ON_UPDATE_COMMAND_UI` mechanismus. Na dobu nečinnosti, bude volat panelu nástrojů `ON_UPDATE_COMMAND_UI` obslužná rutina s ID příkazu, který tohoto tlačítka. `ON_UPDATE_COMMAND_UI` není volán pro oddělovače, ale je volána pro tlačítek a tlačítka, zaškrtněte políčko.  
   
  `ON_UPDATE_COMMAND_UI` Můžete volat obslužné rutiny:  
   
 - **Povolit**: Pokud chcete povolit nebo zakázat tlačítko. Tento postup funguje stejně pro tlačítek a tlačítka, zaškrtněte políčko.  
   
-- `SetCheck`: Chcete-li nastavení kontroly stavu tlačítko. Toto volání pro tlačítka panelu nástrojů zapněte i do tlačítka zaškrtávací políčko. `SetCheck`přebírá parametr, který může být 0 (není zaškrtnuto), 1 (zaškrtnuto) nebo 2 (neurčitém)  
+- `SetCheck`: Chcete-li nastavení kontroly stavu tlačítko. Toto volání pro tlačítka panelu nástrojů zapněte i do tlačítka zaškrtávací políčko. `SetCheck` přebírá parametr, který může být 0 (není zaškrtnuto), 1 (zaškrtnuto) nebo 2 (neurčitém)  
   
 - `SetRadio`: Sdružená vlastnost pro `SetCheck`.  
   
@@ -203,7 +198,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   Až = 0  
   
--   Myš dolů = TBBS_PRESSED (&#124; žádný jiný styl)  
+-   Myš dolů = TBBS_PRESSED (&#124; jiný styl)  
   
 -   Zakázané = TBBS_DISABLED  
   
@@ -213,7 +208,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   Neurčitém = TBBS_INDETERMINATE  
   
-##  <a name="_mfcnotes_cdialogbar"></a>CDialogBar  
+##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
  Panel dialogového okna je ovládací prvek panel, který obsahuje standardní ovládací prvky systému Windows. V, aby obsahuje ovládací prvky a podporuje použití tabulátoru mezi nimi, chová se jako dialogové okno. Je taky funguje jako dialogové okno v tom, že používá šablony dialogového okna představují panelu.  
   
  A `CDialogBar` slouží k náhledu nástrojů, který obsahuje standardní uzavření tlačítkem ovládací prvky.  

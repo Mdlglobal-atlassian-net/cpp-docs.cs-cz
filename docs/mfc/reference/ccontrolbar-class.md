@@ -1,12 +1,9 @@
 ---
-title: "Ccontrolbar – třída | Microsoft Docs"
-ms.custom: 
+title: Ccontrolbar – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CControlBar
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911ff6251a6b34162377610ae139cfa3a7cefaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar – třída
 Základní třída pro třídy ovládacích pruhů [cstatusbar –](../../mfc/reference/cstatusbar-class.md), [ctoolbar –](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), a [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -135,7 +130,7 @@ class CControlBar : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxext.h  
   
-##  <a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout  
+##  <a name="calcdynamiclayout"></a>  CControlBar::CalcDynamicLayout  
  Volá rámec této – členská funkce pro výpočet dimenze dynamické panelu nástrojů.  
   
 ```  
@@ -149,12 +144,12 @@ virtual CSize CalcDynamicLayout(
  Požadovaný dimenzi ovládacích pruhů vodorovné nebo svislé, v závislosti na `dwMode`.  
   
  `nMode`  
- Následující předdefinované příznaky se používají k určení výška a Šířka pruhu dynamické řízení. Bitový operátor OR (&#124;) pomocí operátor kombinovat příznaků.  
+ Následující předdefinované příznaky se používají k určení výška a Šířka pruhu dynamické řízení. Použít bitové operace OR (&#124;) operátor kombinovat příznaků.  
   
 |Příznaky režimu rozložení|Co znamená|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|Určuje, zda by měl být roztažen tak ovládacích pruhů, aby velikost rámečku. Nastavit, pokud panelu není ukotvení panelu (není k dispozici pro ukotvení). Není nastaven při panelu ukotvený nebo plovoucí (k dispozici pro ukotvení). Pokud nastavíte, `LM_STRETCH` ignoruje `nLength` a vrátí dimenze na základě `LM_HORZ` stavu. `LM_STRETCH`Podobně jako funguje `bStretch` parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
-|`LM_HORZ`|Označuje, že je na panelu orientované vodorovně nebo svisle. Nastavte, pokud je vodorovně orientované na panelu, a pokud je svisle orientované, není nastaven. `LM_HORZ`Podobně jako funguje `bHorz` parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
+|`LM_STRETCH`|Určuje, zda by měl být roztažen tak ovládacích pruhů, aby velikost rámečku. Nastavit, pokud panelu není ukotvení panelu (není k dispozici pro ukotvení). Není nastaven při panelu ukotvený nebo plovoucí (k dispozici pro ukotvení). Pokud nastavíte, `LM_STRETCH` ignoruje `nLength` a vrátí dimenze na základě `LM_HORZ` stavu. `LM_STRETCH` Podobně jako funguje `bStretch` parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
+|`LM_HORZ`|Označuje, že je na panelu orientované vodorovně nebo svisle. Nastavte, pokud je vodorovně orientované na panelu, a pokud je svisle orientované, není nastaven. `LM_HORZ` Podobně jako funguje `bHorz` parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
 |**LM_MRUWIDTH**|Naposledy použité dynamické šířku. Ignoruje `nLength` parametr a používá zapamatovaných naposledy použité šířky.|  
 |`LM_HORZDOCK`|Vodorovný ukotven dimenzí. Ignoruje `nLength` parametr a vrátí velikost dynamické s největší šířku.|  
 |`LM_VERTDOCK`|Svislý ukotven dimenzí. Ignoruje `nLength` parametr a vrátí velikost dynamické s největší výšku.|  
@@ -167,7 +162,7 @@ virtual CSize CalcDynamicLayout(
 ### <a name="remarks"></a>Poznámky  
  Člen funkci poskytnout vlastní dynamické rozložení v odvozujete od třídy přepsat `CControlBar`. MFC – třídy odvozené od `CControlBar`, jako například [ctoolbar –](../../mfc/reference/ctoolbar-class.md), funkci člena přepsat a zadat své vlastní implementaci.  
   
-##  <a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CControlBar::CalcFixedLayout  
  Volání této funkce člen k výpočtu vodorovné velikosti ovládacích pruhů.  
   
 ```  
@@ -198,7 +193,7 @@ virtual CSize CalcFixedLayout(
 |**FALSE**|**HODNOTA TRUE**|Žádné roztažení k dispozici|Vodorovně|Ukotvení|  
 |**FALSE**|**FALSE**|Žádné roztažení k dispozici|Orientovány svisle|Ukotvení|  
   
-##  <a name="calcinsiderect"></a>CControlBar::CalcInsideRect  
+##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect  
  Tato funkce pro výpočet klientské oblasti ovládacích pruhů volá framework.  
   
 ```  
@@ -219,14 +214,14 @@ virtual void CalcInsideRect(
   
  Funkci pro přizpůsobení vykreslování ohraničení a panelu úchytu ovládacího panelu přepište.  
   
-##  <a name="ccontrolbar"></a>CControlBar::CControlBar  
+##  <a name="ccontrolbar"></a>  CControlBar::CControlBar  
  Vytvoří `CControlBar` objektu.  
   
 ```  
 CControlBar();
 ```  
   
-##  <a name="dopaint"></a>CControlBar::DoPaint  
+##  <a name="dopaint"></a>  CControlBar::DoPaint  
  Voláno rámcem k vykreslení ohraničení a panelu úchytu ovládacího panelu.  
   
 ```  
@@ -242,7 +237,7 @@ virtual void DoPaint(CDC* pDC);
   
  Další metodou přizpůsobení je přepsat `DrawBorders` a `DrawGripper` funkce a přidat vlastní kód vykreslování ohraničení a úchytu. Protože tyto metody jsou volány výchozí `DoPaint` metodu, pomocí přepsání `DoPaint` není potřeba.  
   
-##  <a name="drawborders"></a>CControlBar::DrawBorders  
+##  <a name="drawborders"></a>  CControlBar::DrawBorders  
  Voláno rámcem k vykreslení ohraničení panelu ovládacího prvku.  
   
 ```  
@@ -261,7 +256,7 @@ virtual void DrawBorders(
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto funkci k přizpůsobení vzhledu ohraničení panelu ovládacího prvku.  
   
-##  <a name="drawgripper"></a>CControlBar::DrawGripper  
+##  <a name="drawgripper"></a>  CControlBar::DrawGripper  
  Voláno rámcem k vykreslení úchytu ovládacího panelu.  
   
 ```  
@@ -280,7 +275,7 @@ virtual void DrawGripper(
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkci můžete přizpůsobit vzhled úchytu ovládacího panelu.  
   
-##  <a name="enabledocking"></a>CControlBar::EnableDocking  
+##  <a name="enabledocking"></a>  CControlBar::EnableDocking  
  Volejte tuto funkci povolit ovládacích pruhů chcete ukotvit.  
   
 ```  
@@ -291,24 +286,24 @@ void EnableDocking(DWORD dwDockStyle);
  `dwDockStyle`  
  Určuje, jestli ovládacích pruhů podporuje ukotvení a postranní jeho nadřazeného okna, do kterého lze ukotvit ovládacích pruhů, pokud podporován. Může být jeden nebo více následujících akcí:  
   
-- `CBRS_ALIGN_TOP`Umožňuje ukotvení v horní části oblasti klienta.  
+- `CBRS_ALIGN_TOP` Umožňuje ukotvení v horní části oblasti klienta.  
   
-- `CBRS_ALIGN_BOTTOM`Umožňuje ukotvení v dolní části klientské oblasti.  
+- `CBRS_ALIGN_BOTTOM` Umožňuje ukotvení v dolní části klientské oblasti.  
   
-- `CBRS_ALIGN_LEFT`Umožňuje ukotvení na levé straně klienta.  
+- `CBRS_ALIGN_LEFT` Umožňuje ukotvení na levé straně klienta.  
   
-- `CBRS_ALIGN_RIGHT`Umožňuje ukotvení na pravé straně klienta.  
+- `CBRS_ALIGN_RIGHT` Umožňuje ukotvení na pravé straně klienta.  
   
-- `CBRS_ALIGN_ANY`Umožňuje ukotvení na žádné straně klientské oblasti.  
+- `CBRS_ALIGN_ANY` Umožňuje ukotvení na žádné straně klientské oblasti.  
   
-- `CBRS_FLOAT_MULTI`Umožňuje více ovládací pruhy k obtékání v rámci jedné zkrácená okna.  
+- `CBRS_FLOAT_MULTI` Umožňuje více ovládací pruhy k obtékání v rámci jedné zkrácená okna.  
   
  Pokud je 0 (značí, to znamená, že žádné příznaky), nebude ukotvení panelu ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
  Postranní zadaný musí shodovat s jedním postranní povolené pro ukotvení v rámci okna cílové nebo ovládacích pruhů nelze jej ukotven k této oken s rámečkem.  
   
-##  <a name="getbarstyle"></a>CControlBar::GetBarStyle  
+##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle  
  Volání této funkce určete, který **CBRS_** (styly ovládacího prvku panel) aktuálně nastavení pro ovládací prvek panelu.  
   
 ```  
@@ -321,7 +316,7 @@ DWORD GetBarStyle();
 ### <a name="remarks"></a>Poznámky  
  Nezpracovává **WS_** styly (styl okna).  
   
-##  <a name="getborders"></a>CControlBar::GetBorders  
+##  <a name="getborders"></a>  CControlBar::GetBorders  
  Vrátí aktuální hodnoty ohraničení panelu ovládacího prvku.  
   
 ```  
@@ -331,7 +326,7 @@ CRect GetBorders() const;
 ### <a name="return-value"></a>Návratová hodnota  
  A `CRect` objekt, který obsahuje aktuální šířku každé straně objekt ovládacího prvku panel (v pixelech). Například hodnota `left` člena z [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu, je šířka ohraničení vlevo.  
   
-##  <a name="getcount"></a>CControlBar::GetCount  
+##  <a name="getcount"></a>  CControlBar::GetCount  
  Vrátí počet jinou hodnotu než `HWND` položky na `CControlBar` objektu.  
   
 ```  
@@ -344,7 +339,7 @@ int GetCount() const;
 ### <a name="remarks"></a>Poznámky  
  Typ položky závisí na objekt odvozené: podokna pro [cstatusbar –](../../mfc/reference/cstatusbar-class.md) objekty a tlačítka a oddělovače pro [ctoolbar –](../../mfc/reference/ctoolbar-class.md) objekty.  
   
-##  <a name="getdockingframe"></a>CControlBar::GetDockingFrame  
+##  <a name="getdockingframe"></a>  CControlBar::GetDockingFrame  
  Volání této funkce člen k získání ukazatele na aktuální rámce okna, ke kterému je ukotven ovládacích pruhů.  
   
 ```  
@@ -359,7 +354,7 @@ CFrameWnd* GetDockingFrame() const;
 ### <a name="remarks"></a>Poznámky  
  Další informace o lze ukotvit ovládací pruhy najdete v tématu [CControlBar::EnableDocking](#enabledocking) a [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
-##  <a name="isfloating"></a>CControlBar::IsFloating  
+##  <a name="isfloating"></a>  CControlBar::IsFloating  
  Volání této funkce člen můžete určit, zda je plovoucí nebo ukotveného panelu ovládacího prvku.  
   
 ```  
@@ -372,7 +367,7 @@ BOOL IsFloating() const;
 ### <a name="remarks"></a>Poznámky  
  Změnit stav ovládacích pruhů z ukotven číslo na plovoucí, volání [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).  
   
-##  <a name="m_bautodelete"></a>CControlBar::m_bAutoDelete  
+##  <a name="m_bautodelete"></a>  CControlBar::m_bAutoDelete  
  Pokud nenulové hodnoty, `CControlBar` je odstraněn objekt, když je zničení ovládacího panelu Windows.  
   
 ```  
@@ -380,20 +375,20 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_bAutoDelete`je veřejné proměnné typu **BOOL**.  
+ `m_bAutoDelete` je veřejné proměnné typu **BOOL**.  
   
  Objekt ovládacího prvku panel je obvykle vložený objekt oken s rámečkem. V takovém případě `m_bAutoDelete` je 0, protože objekt embedded ovládací prvek panelu zničen při zničena rámce okna.  
   
  Tuto proměnnou nastavit na nenulovou hodnotu, pokud přidělíte `CControlBar` objekt na haldě a vy nemáte v plánu volání **odstranit**.  
   
-##  <a name="m_pinplaceowner"></a>CControlBar::m_pInPlaceOwner  
+##  <a name="m_pinplaceowner"></a>  CControlBar::m_pInPlaceOwner  
  Vlastník místní ovládacích pruhů.  
   
 ```  
 CWnd* m_pInPlaceOwner;  
 ```  
   
-##  <a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CControlBar::OnUpdateCmdUI  
  Tato funkce člen je voláno rámcem k aktualizaci stavu na panelu nástrojů nebo stav.  
   
 ```  
@@ -412,9 +407,9 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>Poznámky  
  Chcete-li aktualizovat podokna nebo jednotlivé tlačítko, použijte `ON_UPDATE_COMMAND_UI` makro mapy zpráv správně nastavit obslužnou rutinu aktualizace. V tématu [on_update_command_ui –](message-map-macros-mfc.md#on_update_command_ui) Další informace o použití této makra.  
   
- `OnUpdateCmdUI`je voláno rámcem, když je aplikace nečinnosti. Okně s rámečkem aktualizovat musí být podřízeného okna alespoň nepřímo viditelné rámce okna. `OnUpdateCmdUI`je rozšířené přepisovatelné.  
+ `OnUpdateCmdUI` je voláno rámcem, když je aplikace nečinnosti. Okně s rámečkem aktualizovat musí být podřízeného okna alespoň nepřímo viditelné rámce okna. `OnUpdateCmdUI` je rozšířené přepisovatelné.  
   
-##  <a name="setbarstyle"></a>CControlBar::SetBarStyle  
+##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle  
  Volání této funkce můžete nastavit požadovanou **CBRS_** styly pro ovládací prvek panelu.  
   
 ```  
@@ -425,36 +420,36 @@ void SetBarStyle(DWORD dwStyle);
  `dwStyle`  
  Požadované styly pro ovládací prvek panelu. Může být jeden nebo více následujících akcí:  
   
-- `CBRS_ALIGN_TOP`Umožňuje panelu řízení ukotvit do horní části klientské oblasti okně s rámečkem.  
+- `CBRS_ALIGN_TOP` Umožňuje panelu řízení ukotvit do horní části klientské oblasti okně s rámečkem.  
   
-- `CBRS_ALIGN_BOTTOM`Umožňuje panelu řízení ukotvit k dolnímu okraji klientské oblasti okně s rámečkem.  
+- `CBRS_ALIGN_BOTTOM` Umožňuje panelu řízení ukotvit k dolnímu okraji klientské oblasti okně s rámečkem.  
   
-- `CBRS_ALIGN_LEFT`Umožňuje panelu řízení ukotveny na levé straně klientské oblasti okně s rámečkem.  
+- `CBRS_ALIGN_LEFT` Umožňuje panelu řízení ukotveny na levé straně klientské oblasti okně s rámečkem.  
   
-- `CBRS_ALIGN_RIGHT`Umožňuje panelu řízení ukotveny na pravé straně klientské oblasti okně s rámečkem.  
+- `CBRS_ALIGN_RIGHT` Umožňuje panelu řízení ukotveny na pravé straně klientské oblasti okně s rámečkem.  
   
-- `CBRS_ALIGN_ANY`Umožňuje panelu řízení ukotveny na žádné straně klientské oblasti okně s rámečkem.  
+- `CBRS_ALIGN_ANY` Umožňuje panelu řízení ukotveny na žádné straně klientské oblasti okně s rámečkem.  
   
-- `CBRS_BORDER_TOP`Způsobí, že ohraničení, které se mají vykreslovat na horním okraji ovládacích pruhů, pokud je viditelné.  
+- `CBRS_BORDER_TOP` Způsobí, že ohraničení, které se mají vykreslovat na horním okraji ovládacích pruhů, pokud je viditelné.  
   
-- `CBRS_BORDER_BOTTOM`Způsobí, že ohraničení, které se mají vykreslovat na dolním okraji ovládacích pruhů, pokud je viditelné.  
+- `CBRS_BORDER_BOTTOM` Způsobí, že ohraničení, které se mají vykreslovat na dolním okraji ovládacích pruhů, pokud je viditelné.  
   
-- `CBRS_BORDER_LEFT`Způsobí, že ohraničení, které se mají vykreslovat na levém okraji ovládacích pruhů, pokud je viditelné.  
+- `CBRS_BORDER_LEFT` Způsobí, že ohraničení, které se mají vykreslovat na levém okraji ovládacích pruhů, pokud je viditelné.  
   
-- `CBRS_BORDER_RIGHT`Způsobí, že ohraničení, které se mají vykreslovat na pravý okraj ovládacích pruhů, pokud je viditelné.  
+- `CBRS_BORDER_RIGHT` Způsobí, že ohraničení, které se mají vykreslovat na pravý okraj ovládacích pruhů, pokud je viditelné.  
   
-- `CBRS_FLOAT_MULTI`Umožňuje více ovládací pruhy k obtékání v rámci jedné zkrácená okna.  
+- `CBRS_FLOAT_MULTI` Umožňuje více ovládací pruhy k obtékání v rámci jedné zkrácená okna.  
   
-- `CBRS_TOOLTIPS`Způsobí, že popisy tlačítek, který se má zobrazit pro ovládací prvek panelu.  
+- `CBRS_TOOLTIPS` Způsobí, že popisy tlačítek, který se má zobrazit pro ovládací prvek panelu.  
   
-- `CBRS_FLYBY`Způsobí, že text zprávy aktualizovat ve stejnou dobu jako popisy.  
+- `CBRS_FLYBY` Způsobí, že text zprávy aktualizovat ve stejnou dobu jako popisy.  
   
 - **CBRS_GRIPPER** způsobí, že úchytu, podobně jako využívá pruhy v **CReBar** objekt, které se mají vykreslovat pro žádné `CControlBar`-odvozené třídy.  
   
 ### <a name="remarks"></a>Poznámky  
  Nemá vliv **WS_** nastavení (styl okna).  
   
-##  <a name="setborders"></a>CControlBar::SetBorders  
+##  <a name="setborders"></a>  CControlBar::SetBorders  
  Volání této funkce k nastavení velikosti ovládacích pruhů ohraničení.  
   
 ```  
@@ -488,7 +483,7 @@ void SetBorders(LPCRECT lpRect);
   
  [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
   
-##  <a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner  
+##  <a name="setinplaceowner"></a>  CControlBar::SetInPlaceOwner  
  Změní vlastníka místní ovládacích pruhů.  
   
 ```  

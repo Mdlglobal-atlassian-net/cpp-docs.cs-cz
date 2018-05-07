@@ -1,13 +1,10 @@
 ---
-title: "Globální klávesové zkratky | Microsoft Docs"
-ms.custom: 
+title: Globální klávesové zkratky | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82297507d8725e6292def759272f48d0d63e84b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd597271d949770ec1a5871cad3ea7be0004e288
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="global-hot-keys"></a>Globální klávesové zkratky
 Globální klávesové zkratky je přidružen konkrétní nonchild období. Umožňuje uživatelům aktivovat v okně libovolná součást systému. Aplikace nastaví globální klávesové zkratky pro konkrétní okno odesláním [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) zpráva, která má toto okno. Například pokud `m_HotKeyCtrl` je [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objektu a `pMainWnd` ukazatel do okna aktivovaná, při stisknutí klávesové zkratky, můžete použít následující kód k přidružení aktivní klíč zadaný v ovládacím prvku s okno na kterou odkazuje `pMainWnd`.  

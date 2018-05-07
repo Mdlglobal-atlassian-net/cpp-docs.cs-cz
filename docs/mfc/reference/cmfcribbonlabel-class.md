@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonLabel | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonLabel | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel – třída
 Implementuje nelze klepnout textový popisek pro pásu karet.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Vytvoří a inicializuje [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objekt, který zobrazí zadaný textový řetězec.  
   
 ```  
@@ -84,13 +79,13 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszText`  
+ [v] `lpszText`  
  Text se zobrazí v popisku.  
   
- [v]`bIsMultiLine`  
- `TRUE`k určení, že je popisek popisek Víceřádkový; v opačném `FALSE`.  
+ [v] `bIsMultiLine`  
+ `TRUE` k určení, že je popisek popisek Víceřádkový; v opačném `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Určuje nastavení dat pro usnadnění přístupu pro aktuální element label pásu karet.  
   
 ```  
@@ -100,14 +95,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParent`  
+ [v] `pParent`  
  Představuje nadřazeného okna aktuální popisku pásu karet.  
   
- [out]`data`  
+ [out] `data`  
  Objekt typu `CAccessibilityData` který naplněný daty usnadnění aktuální popisku pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud `data` parametr byl úspěšně vyplněná s daty usnadnění aktuální popisku pásu karet, jinak hodnota `FALSE`.  
+ `TRUE` Pokud `data` parametr byl úspěšně vyplněná s daty usnadnění aktuální popisku pásu karet, jinak hodnota `FALSE`.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

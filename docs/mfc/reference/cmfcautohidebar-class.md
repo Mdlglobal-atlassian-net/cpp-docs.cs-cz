@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCAutoHideBar | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCAutoHideBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideBar
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf8ae6346335b54e22170d4397ac95e8918470
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar – třída
 `CMFCAutoHideBar` Třída je speciální nástrojů třídu, která implementuje funkce automatického skrytí.  
@@ -130,7 +125,7 @@ class CMFCAutoHideBar : public CPane
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxautohidebar.h  
   
-##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
+##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
  Přidá funkce `CDockablePane` okno, které umožní, aby automaticky skrýt.  
   
 ```  
@@ -140,10 +135,10 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pAutoHideWnd`  
+ [v] `pAutoHideWnd`  
  Okno, které chcete skrýt.  
   
- [v]`dwAlignment`  
+ [v] `dwAlignment`  
  Hodnota, která určuje zarovnání automaticky skrýt tlačítko s okna aplikace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -159,7 +154,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -170,7 +165,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
   
 ```  
@@ -180,14 +175,14 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bStretch`  
- [v]`bHorz`  
+ [v] `bStretch`  
+ [v] `bHorz`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
+##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
  Vytvoří objekt CMFCAutoHideBar.  
   
 ```  
@@ -196,7 +191,7 @@ CMFCAutoHideBar();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
   
 ```  
@@ -211,19 +206,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszClassName`  
- [v]`dwStyle`  
- [v]`rect`  
- [v]`pParentWnd`  
- [v]`nID`  
- [v]`dwControlBarStyle`  
- [v]`pContext`  
+ [v] `lpszClassName`  
+ [v] `dwStyle`  
+ [v] `rect`  
+ [v] `pParentWnd`  
+ [v] `nID`  
+ [v] `dwControlBarStyle`  
+ [v] `pContext`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
+##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
  Vrací ukazatel na první okno automaticky skrýt v aplikaci.  
   
 ```  
@@ -235,7 +230,7 @@ CDockablePane* GetFirstAHWindow();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
  Získá počet viditelné automaticky skrýt tlačítka.  
   
 ```  
@@ -247,7 +242,7 @@ int GetVisibleCount();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
+##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
  Prodlevu mezi okamžikem, kdy uživatel umístí myší nad [CMFCAutoHideButton třída](../../mfc/reference/cmfcautohidebutton-class.md) a okamžikem, kdy rozhraní ukazuje přidružené okno.  
   
 ```  
@@ -257,7 +252,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ### <a name="remarks"></a>Poznámky  
  Když uživatel umístí myší nad `CMFCAutoHideButton`, než rozhraní zobrazí okno přidružené k mírnému zpoždění je. Tento parametr určuje délku tohoto zpoždění v milisekundách.  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
   
 ```  
@@ -265,13 +260,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`CPoint`  
+ [v] `CPoint`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
+##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
  Odebere a zničí automaticky skrýt okna.  
   
 ```  
@@ -279,7 +274,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- CDockablePane *`pAutoHideWnd`  
+ CDockablePane * `pAutoHideWnd`  
  Automaticky skrýt okna odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -287,7 +282,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
  Příznaky automaticky skrýt panel jako aktivní.  
   
 ```  
@@ -295,13 +290,13 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] BOOL`bActive`  
+ [v] BOOL `bActive`  
  Hodnota TRUE, mají-li nastavená jako aktivní; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  V tématu [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
   
 ```  
@@ -309,11 +304,11 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bState`  
+ [v] `bState`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
+##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
  Zobrazí okno automaticky skrýt.  
   
 ```  
@@ -324,11 +319,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] CDockablePane *`pAutoHideWnd`  
- [v] BOOL`bShow`  
+ [v] CDockablePane * `pAutoHideWnd`  
+ [v] BOOL `bShow`  
  Hodnota TRUE, mají-li zobrazit okno.  
   
- [v] BOOL`bDelay`  
+ [v] BOOL `bDelay`  
  Tento parametr je ignorován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -336,7 +331,7 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
+##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
  Změní velikost panelu automaticky skrýt v sbalené stavu podle `CMFCAutoHideButton` objektu.  
   
 ```  
@@ -346,10 +341,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nLength`  
+ [v] `nLength`  
  Tato hodnota se nepoužívá v základní implementaci. V odvozených implementace používá se k označení délka podokně změněnou tuto hodnotu.  
   
- [v]`bVert`  
+ [v] `bVert`  
  Tato hodnota se nepoužívá v základní implementaci. V odvozených implementacích použít `TRUE` pro případ, kdy panelu automaticky skrýt sbalena ve svislém směru, zpracování a `FALSE` pro případ, kdy panelu automaticky skrýt sbalena vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -358,7 +353,7 @@ virtual CSize StretchPane(
 ### <a name="remarks"></a>Poznámky  
  Odvozené třídy mohou přepsat tuto metodu pro přizpůsobení chování.  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
  Zakáže automatické skrytí režimu pro skupinu automaticky skrýt řádky.  
   
 ```  
@@ -371,7 +366,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
  Voláno rámcem při panelu automaticky skrýt musí být překreslen.  
   
 ```  

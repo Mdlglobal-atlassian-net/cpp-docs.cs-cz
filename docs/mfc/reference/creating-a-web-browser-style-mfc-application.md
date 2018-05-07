@@ -1,13 +1,10 @@
 ---
-title: "Vytváření webové aplikace MFC stylu prohlížeče | Microsoft Docs"
-ms.custom: 
+title: Vytváření webové aplikace MFC stylu prohlížeče | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Vytváření aplikací MFC ve stylu webového prohlížeče
 Webové prohlížeče stylu aplikace k dispozici informace z Internetu (například HTML nebo aktivní dokumenty) nebo intranetu, jakož i složky v místním systému souborů a v síti. Odvozené třídy zobrazení aplikace z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektivně provedete webový prohlížeč pro aplikaci tím, že poskytuje zobrazení pomocí ovládacího prvku WebBrowser.  
@@ -52,7 +47,7 @@ Webové prohlížeče stylu aplikace k dispozici informace z Internetu (napřík
   
  Protože `CHtmlView` jednoduše implementuje Microsoft ovládacího prvku webového prohlížeče, jeho podporu pro tisk není jako jiný [CView](../../mfc/reference/cview-class.md)-odvozených třídách. Místo toho ovládacího prvku WebBrowser implementuje v uživatelském rozhraní tiskárny a tisku. V důsledku toho `CHtmlView` nemá náhled tisku a rozhraní pro ostatní tisk podpory funkce neposkytuje: například [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), a [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), které jsou k dispozici v ostatních aplikacích MFC.  
   
- `CHtmlView`funguje jako obálka pro ovládací prvek webového prohlížeče, které poskytuje vaší aplikaci zobrazení webu nebo stránku HTML. Průvodce vytvoří přepsání pro [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkce ve třídě zobrazení, poskytne navigační odkaz na web Microsoft Visual C++:  
+ `CHtmlView` funguje jako obálka pro ovládací prvek webového prohlížeče, které poskytuje vaší aplikaci zobrazení webu nebo stránku HTML. Průvodce vytvoří přepsání pro [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkce ve třídě zobrazení, poskytne navigační odkaz na web Microsoft Visual C++:  
   
 ```  
 void CWebView::OnInitialUpdate()  

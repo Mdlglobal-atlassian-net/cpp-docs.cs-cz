@@ -1,13 +1,10 @@
 ---
-title: "Ukotvitelné a plovoucí panely nástrojů | Microsoft Docs"
-ms.custom: 
+title: Ukotvitelné a plovoucí panely nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>Ukotvitelné a plovoucí panely nástrojů
 Knihovny Microsoft Foundation Class podporuje lze ukotvit panely nástrojů. Lze ukotvit panelu nástrojů můžete připojit nebo ukotven na žádné straně nadřazené okno, nebo může být odpojený od, nebo obtékané v samostatném okně zkrácená rámce. Tento článek vysvětluje, jak používat lze ukotvit panely nástrojů ve svých aplikacích.  
@@ -65,27 +60,27 @@ Knihovny Microsoft Foundation Class podporuje lze ukotvit panely nástrojů. Lze
   
  Viz ukázka MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) příklady.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>Povolení ukotvení v okně s rámečkem  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Povolení ukotvení v okně s rámečkem  
  Pokud chcete ukotvit panely nástrojů k okně s rámečkem, musí být oken s rámečkem (nebo cílové) povolený a umožňuje ukotvení. To se provádí pomocí [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) funkce, která přebírá jeden `DWORD` parametr, který je sada styl bits, která určuje, které straně okna rámce přijímá ukotvení. Pokud panelu nástrojů je možné ukotvena a více stran, které by mohly být ukotvena se Postranní uvedené v parametru předaný `EnableDocking` se používají v následujícím pořadí: nahoře, dole, vlevo, vpravo. Pokud chcete mít možnost ukotvení ovládacího prvku panely odkudkoli, předat `CBRS_ALIGN_ANY` k `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>Povolení ukotvení pro panel nástrojů  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> Povolení ukotvení pro panel nástrojů  
  Jakmile dokončíte přípravu cíl pro ukotvení, je nutné připravit panelu nástrojů (nebo zdroj) podobným způsobem. Volání [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) pro každý chcete ukotvení panelu nástrojů zadání cílové strany, na který by měl ukotvení panelu nástrojů. Pokud žádná z konce zadané ve volání `CControlBar::EnableDocking` postranní povolené pro ukotvení v rámci okna se shodují, nelze ukotvení panelu nástrojů – bude float. Jakmile byl obtékané, zůstane plovoucí panel nástrojů nelze ukotvit do okna s rámečkem.  
   
  Pokud chcete efekt je trvale plovoucí panel nástrojů, zavolejte `EnableDocking` s parametrem 0. Potom zavolejte [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). Panelu nástrojů zůstává plovoucí, trvale nelze ukotvit kdekoli.  
   
-##  <a name="_core_docking_the_toolbar"></a>Ukotvení panelu nástrojů  
+##  <a name="_core_docking_the_toolbar"></a> Ukotvení panelu nástrojů  
  Volání framework [CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) když se uživatel pokusí o vyřadit na straně okna rámce, který umožňuje ukotvení panelu nástrojů.  
   
  Kromě toho můžete volat tuto funkci kdykoli ukotvení ovládací pruhy do rámce okna. To se obvykle provádí během inicializace. Více než jeden nástrojů můžete jej ukotven k okraji rámce okna.  
   
-##  <a name="_core_floating_the_toolbar"></a>Plovoucí panelu nástrojů  
+##  <a name="_core_floating_the_toolbar"></a> Plovoucí panelu nástrojů  
  Odpojování lze ukotvit panelu nástrojů v okně rámce se nazývá plovoucí panelu nástrojů. Volání [CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) k tomu. Zadejte panelu nástrojů obtékání bodu, kde se má umístit a zarovnání styl, který určuje, zda je plovoucí panel nástrojů vodorovně nebo svisle.  
   
  Rozhraní framework volá tuto funkci, když uživatel nastavuje tažením panelu nástrojů vypnout místa ukotvení a zahodí v umístění, kde není povoleno ukotvení. To může být kdekoli uvnitř nebo vně rámce okna. Stejně jako u `DockControlBar`, můžete také volání této funkce během inicializace.  
   
  Implementace MFC lze ukotvit panely nástrojů neposkytuje některé rozšířené funkce některé aplikace, které podporují lze ukotvit panely nástrojů. Funkce, jako je přizpůsobitelné panely nástrojů nejsou zadány.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>Dynamicky Změna velikosti panelu nástrojů  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Dynamicky Změna velikosti panelu nástrojů  
  Od verze Visual C++ verze 4.0 můžete můžete umožnit uživatelům vaší aplikace ke změně velikosti plovoucí panely nástrojů dynamicky. Panel nástrojů má obvykle, dlouhé, lineární obrazce zobrazovat vodorovně. Ale můžete změnit orientaci panelu nástrojů a jeho tvaru. Například pokud uživatel ukotvené panelu nástrojů pro jeden z svislého strany rámce okna, tvar, který se změní na svislém rozložení. Také je možné změnit tvar panelu nástrojů do obdélníku s více řádky tlačítka.  
   
  Můžeš:  
@@ -106,7 +101,7 @@ Knihovny Microsoft Foundation Class podporuje lze ukotvit panely nástrojů. Lze
   
  Můžete také použít [CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) k vrácení stavu a stylu pro tlačítka v panelech nástrojů. Určuje styl tlačítko vzhled tlačítka a odpovědí na vstup uživatele; Stav informuje, zda je tlačítko v zabalené stavu.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>Pozice Wrap nastavení pro panel nástrojů – styl  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Pozice Wrap nastavení pro panel nástrojů – styl  
  Panel nástrojů s velikostí pevné styl určete panelu nástrojů tlačítko indexy, na kterých budou zahrnovat panelu nástrojů. Následující kód ukazuje, jak to udělat v okně hlavního rámce `OnCreate` přepsání:  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  

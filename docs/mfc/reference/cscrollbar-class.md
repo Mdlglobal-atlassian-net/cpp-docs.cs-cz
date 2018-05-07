@@ -1,12 +1,9 @@
 ---
-title: "Třída CScrollBar | Microsoft Docs"
-ms.custom: 
+title: Třída CScrollBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollBar
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollbar-class"></a>CScrollBar – třída
 Poskytuje funkce ovládacího prvku Windows posuvníku.  
@@ -109,7 +104,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>  CScrollBar::Create  
  Posuvník Windows vytvoří a připojí jej k `CScrollBar` objektu.  
   
 ```  
@@ -152,7 +147,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
  Vytvoří `CScrollBar` objektu.  
   
 ```  
@@ -165,7 +160,7 @@ CScrollBar();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
  Povolí nebo zakáže jeden nebo oba šipek na posuvníku.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
  Načte informace, **SCROLLBARINFO** struktura udržuje o posuvníku.  
   
 ```  
@@ -207,7 +202,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen emuluje funkce [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) zprávy, jak je popsáno v sadě Windows SDK.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Načte informace o který `SCROLLINFO` struktura udržuje o posuvníku.  
   
 ```  
@@ -227,16 +222,16 @@ BOOL GetScrollInfo(
  Pokud zpráva načíst všechny hodnoty, je návratový **TRUE**. Jinak je **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetScrollInfo`umožňuje aplikacím používat 32-bit posuňte pozic.  
+ `GetScrollInfo` umožňuje aplikacím používat 32-bit posuňte pozic.  
   
  [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktura obsahuje informace o posuvníku panelu, včetně minimální a maximální posouvání pozic, velikost stránky a pozice posuvníku (Flash). Najdete v článku `SCROLLINFO` tématu Struktura ve Windows SDK pro další informace o změně výchozí hodnoty strukturu.  
   
- Zprávy MFC Windows obslužné rutiny, které indikují pozici posunutí panelu, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) a [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), zadejte umístění dat pouze 16 bitů. `GetScrollInfo`a `SetScrollInfo` poskytují 32 bity posuvník pozice data. Proto aplikace může volat `GetScrollInfo` při zpracování buď `CWnd::OnHScroll` nebo `CWnd::OnVScroll` můžete získat data pozici panelu přejděte 32-bit.  
+ Zprávy MFC Windows obslužné rutiny, které indikují pozici posunutí panelu, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) a [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), zadejte umístění dat pouze 16 bitů. `GetScrollInfo` a `SetScrollInfo` poskytují 32 bity posuvník pozice data. Proto aplikace může volat `GetScrollInfo` při zpracování buď `CWnd::OnHScroll` nebo `CWnd::OnVScroll` můžete získat data pozici panelu přejděte 32-bit.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
  Načte maximální posouvání pozice posuvníku.  
   
 ```  
@@ -249,7 +244,7 @@ int GetScrollLimit();
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
  Načte aktuální pozici jezdce.  
   
 ```  
@@ -265,7 +260,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
  Zkopíruje aktuální minimální a maximální posuvníku pozice pro danou posuvník do umístění určeného `lpMinPos` a `lpMaxPos`.  
   
 ```  
@@ -287,7 +282,7 @@ void GetScrollRange(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
  Nastaví informace, které `SCROLLINFO` struktura udržuje o posuvníku.  
   
 ```  
@@ -314,7 +309,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
  Nastaví aktuální pozici jezdce, určeného `nPos` a -li zadána, je vykreslován posuvník tak, aby odrážely novou pozici.  
   
 ```  
@@ -339,7 +334,7 @@ int SetScrollPos(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
  Nastaví pozici minimální a maximální hodnoty pro danou posuvníku.  
   
 ```  
@@ -371,7 +366,7 @@ void SetScrollRange(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
  Zobrazí nebo skryje posuvníku.  
   
 ```  

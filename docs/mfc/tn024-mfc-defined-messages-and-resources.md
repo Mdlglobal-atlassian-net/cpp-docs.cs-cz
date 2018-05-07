@@ -1,13 +1,10 @@
 ---
-title: "TN024: Zprávy definované MFC a prostředky | Microsoft Docs"
-ms.custom: 
+title: 'TN024: Zprávy definované MFC a prostředky | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Zprávy a prostředky definované knihovnou MFC
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- Tato zpráva se odešle pomocí `COleResizeBar` do okna jeho vlastníka (prostřednictvím `GetOwner`) když uživatel změní velikost panelu změny velikosti s popisovači změny velikosti. `COleIPFrameWnd`Probíhá pokus o změnit umístění okně s rámečkem jako uživatel vyžaduje reaguje na tuto zprávu.  
+ Tato zpráva se odešle pomocí `COleResizeBar` do okna jeho vlastníka (prostřednictvím `GetOwner`) když uživatel změní velikost panelu změny velikosti s popisovači změny velikosti. `COleIPFrameWnd` Probíhá pokus o změnit umístění okně s rámečkem jako uživatel vyžaduje reaguje na tuto zprávu.  
   
  Je nové obdélníku, zadaný v klienta souřadnicích relativních k rámce okna, která obsahuje změny velikosti panelu, na kterou lParam odkazoval.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|Je jedním z následujících hodnot:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|Nepoužívá se (0)|  
   
- Návratová hodnota by měla být nulová Pokud **FS_SYNCACTIVE** je sada a synchronizuje okno její aktivaci s použitím nadřazeného rámce. `CMiniFrameWnd`vrátí nenulový styl nastavena na **MFS_SYNCACTIVE.**  
+ Návratová hodnota by měla být nulová Pokud **FS_SYNCACTIVE** je sada a synchronizuje okno její aktivaci s použitím nadřazeného rámce. `CMiniFrameWnd` vrátí nenulový styl nastavena na **MFS_SYNCACTIVE.**  
   
  Další informace najdete v tématu implementace `CMiniFrameWnd`.  
   

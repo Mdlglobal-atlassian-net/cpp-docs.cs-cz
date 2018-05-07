@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky typu virtuální seznam | Microsoft Docs"
-ms.custom: 
+title: Ovládací prvky typu virtuální seznam | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>Ovládací prvky typu virtuální seznam
 Ovládacího prvku typu virtuální seznam je zobrazení ovládací prvek seznamu, který má **LVS_OWNERDATA** stylu. Tento styl umožňuje kontrolu pro podporu až počet položek `DWORD` (počet položek výchozí rozšiřuje pouze k `int`). Možnost mít pouze podmnožinu dat položky do paměti v jednom okamžiku je však největších výhod poskytované tento styl. To umožňuje ovládacího prvku zobrazení virtuální seznam jít pro použití s velké databáze informací, kde konkrétní metody přístupu k datům, jsou již na místě.  
@@ -43,15 +38,15 @@ Ovládacího prvku typu virtuální seznam je zobrazení ovládací prvek seznam
   
  V obslužné rutině **LVN_GETDISPINFO** oznámení, musíte zkontrolovat, v tématu, jaké typy informací je požadováno. Možné hodnoty jsou:  
   
--   `LVIF_TEXT``pszText` Člena musí být vyplněna.  
+-   `LVIF_TEXT` `pszText` Člena musí být vyplněna.  
   
--   `LVIF_IMAGE``iImage` Člena musí být vyplněna.  
+-   `LVIF_IMAGE` `iImage` Člena musí být vyplněna.  
   
 -   **LVIF_INDENT** *iIndent* člena musí být vyplněna.  
   
--   `LVIF_PARAM`*LParam* člena musí být vyplněna. (Není k dispozici pro dílčí položky.)  
+-   `LVIF_PARAM` *LParam* člena musí být vyplněna. (Není k dispozici pro dílčí položky.)  
   
--   `LVIF_STATE`*Stavu* člena musí být vyplněna.  
+-   `LVIF_STATE` *Stavu* člena musí být vyplněna.  
   
  Potom, zadejte libovolnou informace se požaduje zpět na rozhraní.  
   

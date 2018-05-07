@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCPropertyGridColorProperty | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCPropertyGridColorProperty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c807343c29fca74168167ef5d784e056b350fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty – třída
 `CMFCPropertyGridColorProperty` Třída podporuje položka ovládací prvek seznamu vlastnosti, které se otevře dialogové okno Výběr barev.  
@@ -94,7 +89,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  Vytvoří `CMFCPropertyGridColorProperty` objektu.  
   
 ```  
@@ -107,22 +102,22 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`strName`  
+ [v] `strName`  
  Název vlastnosti  
   
- [v]`color`  
+ [v] `color`  
  Barva hodnotu vlastnosti.  
   
- [v]`pPalette`  
+ [v] `pPalette`  
  Ukazatel na paletu barev. Výchozí hodnota je `NULL`.  
   
- [v]`lpszDescr`  
+ [v] `lpszDescr`  
  Popis vlastnosti. Výchozí hodnota je `NULL`.  
   
- [v]`dwData`  
+ [v] `dwData`  
  Specifické pro aplikaci data, jako třeba celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
-##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Umožňuje *automatické* tlačítka v dialogovém okně Výběr barev. (Standardní automatické tlačítko jmenuje **automatické**.)  
   
 ```  
@@ -133,18 +128,18 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Text popisku tlačítka automatické.  
   
- [v]`colorAutomatic`  
+ [v] `colorAutomatic`  
  Hodnota Barva RGB barvu automaticky (výchozí).  
   
- [v]`bEnable`  
- `TRUE`Chcete-li povolit automatické tlačítko; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit automatické tlačítko; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
  Umožňuje *jiných* tlačítka v dialogovém okně Výběr barev. (Standardní jiné tlačítko jmenuje **Další barvy**.)  
   
 ```  
@@ -155,18 +150,18 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszLabel`  
+ [v] `lpszLabel`  
  Text popisku tlačítko Další.  
   
- [v]`bAltColorDlg`  
- `TRUE`Chcete-li zobrazit `CMFCColorDialog` dialogové okno; `FALSE` zobrazíte dialogové okno Výběr standardní barev. Výchozí hodnota je `TRUE`.  
+ [v] `bAltColorDlg`  
+ `TRUE` Chcete-li zobrazit `CMFCColorDialog` dialogové okno; `FALSE` zobrazíte dialogové okno Výběr standardní barev. Výchozí hodnota je `TRUE`.  
   
- [v]`bEnable`  
- `TRUE`Chcete-li zobrazit další tlačítka; v opačném `FALSE`.  Výchozí hodnota je `TRUE`.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li zobrazit další tlačítka; v opačném `FALSE`.  Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor  
  Získá aktuální barvu vlastnosti.  
   
 ```  
@@ -178,7 +173,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor  
  Nastaví novou barvu pro vlastnost.  
   
 ```  
@@ -186,12 +181,12 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`color`  
+ [v] `color`  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber  
  Určuje počet sloupců v aktuální tabulce vlastností barev.  
   
 ```  
@@ -199,13 +194,13 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nColumnsNumber`  
+ [v] `nColumnsNumber`  
  Upřednostňovaný počet sloupců v tabulce vlastností barev.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda nastaví hodnotu `m_nColumnsNumber` chráněné – datový člen.  
   
-##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue  
  Nastaví původní hodnota upravovat vlastnosti.  
   
 ```  
@@ -213,7 +208,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`varValue`  
+ [v] `varValue`  
  Hodnota.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -1,12 +1,9 @@
 ---
-title: "Třída CMemFile | Microsoft Docs"
-ms.custom: 
+title: Třída CMemFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemFile
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411d89c7796ea9ab48c013d4efd53aedd9225aba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemfile-class"></a>CMemFile – třída
 [Cfile –](../../mfc/reference/cfile-class.md)– odvozené třídy, která podporuje soubory paměti.  
@@ -80,7 +75,7 @@ class CMemFile : public CFile
 ## <a name="remarks"></a>Poznámky  
  Tyto soubory paměti chovat jako soubory disku s tím rozdílem, že je soubor uložený v paměti RAM místo na disku. Soubor paměti je užitečná pro rychlé dočasné úložiště nebo přenos nezpracovaná bajtů nebo serializovat objekty mezi nezávislé procesy.  
   
- `CMemFile`objekty lze automaticky přidělit vlastní paměti nebo můžete připojit vlastní blok paměti k `CMemFile` objekt voláním [Attach](#attach). V obou případech se přidělí paměť pro rostoucí soubor paměti automaticky v `nGrowBytes`– velikost se zvýší, pokud `nGrowBytes` není nula.  
+ `CMemFile` objekty lze automaticky přidělit vlastní paměti nebo můžete připojit vlastní blok paměti k `CMemFile` objekt voláním [Attach](#attach). V obou případech se přidělí paměť pro rostoucí soubor paměti automaticky v `nGrowBytes`– velikost se zvýší, pokud `nGrowBytes` není nula.  
   
  Bloku paměti bude automaticky odstraněna po zničení `CMemFile` objektu, pokud je paměť byla původně přidělena `CMemFile` objektu; jinak, je zodpovědná za rušení přidělení paměti připojen k objektu.  
   
@@ -90,7 +85,7 @@ class CMemFile : public CFile
   
  `CFile` Členské funkce [duplicitní](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), a [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) nejsou implementované pro `CMemFile`. Když zavoláte na tyto funkce `CMemFile` objektů, zobrazí se [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- `CMemFile`využívá funkce běhové knihovny [malloc –](../../c-runtime-library/reference/malloc.md), [realloc –](../../c-runtime-library/reference/realloc.md), a [volné](../../c-runtime-library/reference/free.md) přidělit, znovu přidělte a zrušit přidělení paměti; a vnitřní [memcpy – ](../../c-runtime-library/reference/memcpy-wmemcpy.md) blokování kopírování paměti při čtení a zápisu. Pokud chcete změnit toto chování nebo chování při `CMemFile` zvětšování soubor odvodit vlastní třídu z `CMemFile` a přepsat příslušné funkce.  
+ `CMemFile` využívá funkce běhové knihovny [malloc –](../../c-runtime-library/reference/malloc.md), [realloc –](../../c-runtime-library/reference/realloc.md), a [volné](../../c-runtime-library/reference/free.md) přidělit, znovu přidělte a zrušit přidělení paměti; a vnitřní [memcpy –](../../c-runtime-library/reference/memcpy-wmemcpy.md) blokování kopírování paměti při čtení a zápisu. Pokud chcete změnit toto chování nebo chování při `CMemFile` zvětšování soubor odvodit vlastní třídu z `CMemFile` a přepsat příslušné funkce.  
   
  Další informace o `CMemFile`, najdete v článcích [soubory v prostředí MFC](../../mfc/files-in-mfc.md) a [správy paměti (MFC)](../../mfc/memory-management.md) a zobrazit [zpracování souborů](../../c-runtime-library/file-handling.md) v *Run-Time Referenční příručka knihovny*.  
   
@@ -104,7 +99,7 @@ class CMemFile : public CFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afx.h  
   
-##  <a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>  CMemFile::Alloc  
  Tato funkce je volána `CMemFile` členské funkce.  
   
 ```  
@@ -123,7 +118,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  Výchozí implementace používá funkce běhové knihovny [malloc](../../c-runtime-library/reference/malloc.md) přidělit paměť.  
   
-##  <a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>  CMemFile::Attach  
  Volání této funkce připojit blok paměti, která se `CMemFile`.  
   
 ```  
@@ -152,7 +147,7 @@ void Attach(
   
  Pokud `nGrowBytes` je větší než 0, `CMemFile` bude ignorovat obsah bloku paměti, který jste připojili. Budete mít k zápisu obsahu souboru paměti od začátku pomocí `CMemFile` přepsat z `CFile::Write`. Pokud se pokusíte zapsat za koncem souboru nebo zvětšení souboru voláním `CMemFile` přepsat z `CFile::SetLength`, `CMemFile` se zvýší přidělení paměti v přírůstcích po `nGrowBytes`. Přidělení paměti se rozšiřující se nezdaří, pokud blok paměti, můžete předat **Attach** nebyla přidělena pomocí metody kompatibilní s [alokační](#alloc). Aby byl kompatibilní s výchozí implementaci `Alloc`, musíte přidělit paměť pomocí funkce běhové knihovny [malloc –](../../c-runtime-library/reference/malloc.md) nebo [calloc –](../../c-runtime-library/reference/calloc.md).  
   
-##  <a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  První přetížení otevře soubor prázdný paměti.  
   
 ```  
@@ -183,7 +178,7 @@ CMemFile(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>  CMemFile::Detach  
  Volání této funkce získání ukazatele na blok paměti používá `CMemFile`.  
   
 ```  
@@ -196,7 +191,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce také zavře `CMemFile`. Můžete znovu připojte blok paměti k `CMemFile` voláním [Attach](#attach). Pokud chcete používat data při ji a připojte soubor, by měly volat [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) získat délku souboru před voláním **odpojení**. Všimněte si, že pokud připojíte bloku paměti, aby `CMemFile` tak, aby jeho data můžete použít ( `nGrowBytes` == 0), pak nebude možné pro zvětšení souboru paměti.  
   
-##  <a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>  CMemFile::Free  
  Tato funkce je volána `CMemFile` členské funkce.  
   
 ```  
@@ -210,7 +205,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci implementovat zrušení přidělení paměti vlastní přepište. Pokud přepíšete tuto funkci, budete pravděpodobně chtít přepsat [alokační](#alloc) a [realloc –](#realloc) také.  
   
-##  <a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>  CMemFile::GrowFile  
  Tato funkce je volána řadou `CMemFile` členské funkce.  
   
 ```  
@@ -224,7 +219,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>Poznámky  
  Je možné přepsat, pokud chcete změnit jak `CMemFile` zvětšování jeho souboru. Výchozí implementace volá [realloc –](#realloc) růst existující blok (nebo [alokační](#alloc) vytvořit blok paměti), přidělování paměti v násobcích `nGrowBytes` hodnotu zadaným v konstruktoru nebo [Attach](#attach) volání.  
   
-##  <a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>  CMemFile::Memcpy  
  Tato funkce je volána `CMemFile` přepsání [CFile::Read](../../mfc/reference/cfile-class.md#read) a [CFile::Write](../../mfc/reference/cfile-class.md#write) k přenosu dat do a ze souboru paměti.  
   
 ```  
@@ -250,7 +245,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>Poznámky  
  Funkci přepsat, pokud chcete změnit způsob, `CMemFile` nemá tyto kopie paměti.  
   
-##  <a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>  CMemFile::Realloc  
  Tato funkce je volána `CMemFile` členské funkce.  
   
 ```  

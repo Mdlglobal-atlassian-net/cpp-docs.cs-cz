@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCKeyMapDialog | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCKeyMapDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCKeyMapDialog
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog – třída
 `CMFCKeyMapDialog` Třída podporuje ovládací prvek, který mapuje příkazy kláves na klávesnici.  
@@ -104,7 +99,7 @@ class CMFCKeyMapDialog : public CDialogEx
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxkeymapdialog.h  
   
-##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
  Vytvoří `CMFCKeyMapDialog` objektu.  
   
 ```  
@@ -114,11 +109,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWndParentFrame`  
+ [v] `pWndParentFrame`  
  Ukazatel na okno nadřazené `CMFCKeyMapDialog` objektu.  
   
- [v]`bEnablePrint`  
- `TRUE`Pokud je seznam klávesy akcelerátoru můžete vytisknout; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [v] `bEnablePrint`  
+ `TRUE` Pokud je seznam klávesy akcelerátoru můžete vytisknout; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -127,7 +122,7 @@ CMFCKeyMapDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
  Zobrazí dialogové okno mapování klávesnice.  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Poznámky  
  Dialogové okno mapování klávesnice umožňuje vybrat a přiřadit různé kategorie příkazy klávesy akcelerátoru. Kromě toho můžete zkopírovat vybrané přístupové klávesy a jejich popis do schránky.  
   
-##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
  Voláno rámcem vytvořit řetězec, který popisuje klíčové mapování. Ve výchozím nastavení řetězec obsahuje název příkazu, klávesové zkratky používá a Popis klíče zástupce.  
   
 ```  
@@ -148,7 +143,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nItem`  
+ [v] `nItem`  
  Index založený na nule položky v seznamu interní klíče mapování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -156,7 +151,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
  Načte hodnotu řetězce. Řetězec obsahuje seznam klávesové zkratky, které jsou přidruženy zadaný příkaz.  
   
 ```  
@@ -164,7 +159,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -172,7 +167,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
  Voláno rámcem, než je vložit novou položku do prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
   
 ```  
@@ -182,15 +177,15 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pButton`  
+ [v] `pButton`  
  Ukazatel na tlačítka panelu nástrojů, který se používá k mapování kombinaci kláves klávesnice na příkaz název a popis. Položka klíče mapy je uložena v ovládacím prvku vnitřní seznam.  
   
- [v]`nItem`  
+ [v] `nItem`  
  Index počítaný od nuly, který určuje, kam chcete vložit novou položku klíče mapy v ovládacím prvku vnitřní seznam.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
  Voláno rámcem tisknout hlavičku pro mapu klávesnice na novou stránku.  
   
 ```  
@@ -201,13 +196,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dc`  
+ [v] `dc`  
  Kontext zařízení pro tiskárny.  
   
- [v]`nPage`  
+ [v] `nPage`  
  Číslo stránky k vytištění.  
   
- [v]`cx`  
+ [v] `cx`  
  Vodorovný posun záhlaví má v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -216,7 +211,7 @@ virtual int OnPrintHeader(
 ### <a name="remarks"></a>Poznámky  
  Rozhraní používá tato metoda tisknout mapy klávesnice. Ve výchozím nastavení vytiskne tato metoda číslo stránky, název aplikace a dialogové okno název.  
   
-##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
  Voláno rámcem tisknout položku mapování klávesnice.  
   
 ```  
@@ -229,20 +224,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dc`  
+ [v] `dc`  
  Kontext zařízení tiskárny.  
   
- [v]`nItem`  
+ [v] `nItem`  
  Index založený na nule položky k vytištění.  
   
- [v]`y`  
+ [v] `y`  
  Svislý posun od pozice položky horní části stránky.  
   
- [v]`cx`  
+ [v] `cx`  
  Vodorovný posun mezi levé části stránky a umístění položky.  
   
- [v]`bCalcHeight`  
- `TRUE`Chcete-li vypočítat nejlepší výšku pro položku tiskové; `FALSE` zkrátit tiskové položky tak, aby odpovídal výchozí místo.  
+ [v] `bCalcHeight`  
+ `TRUE` Chcete-li vypočítat nejlepší výšku pro položku tiskové; `FALSE` zkrátit tiskové položky tak, aby odpovídal výchozí místo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výška tištěných položky.  
@@ -250,7 +245,7 @@ virtual int OnPrintItem(
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework volá tuto metodu za účelem tisku položky dialogového okna klíče mapy. Ve výchozím nastavení vytiskne tato metoda název příkazu, klávesové zkratky a příkaz popis položky.  
   
-##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
  Voláno rámcem nastavit titulky pro sloupce v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
   
 ```  
@@ -260,7 +255,7 @@ virtual void OnSetColumns();
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda získá titulky pro sloupce z tři zdroje. Popisek sloupce příkaz je z IDS_AFXBARRES_COMMAND, titulek klíčový sloupec je z IDS_AFXBARRES_KEYS a titulek popis sloupce je z IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
  Voláno rámcem, když uživatel klikne **tiskových** tlačítko.  
   
 ```  
@@ -270,7 +265,7 @@ virtual void PrintKeyMap();
 ### <a name="remarks"></a>Poznámky  
  `PrintKeyMap` Metoda vytiskne klíče mapy. Inicializuje nové tiskové úlohy a pak opakovaně zavolá [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) a [CMFCKeyMapDialog::OnPrintItem](#onprintitem) metody, dokud se všechny klíče mapování jsou vytisknout.  
   
-##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
  Voláno rámcem nastavit šířku sloupců v ovládacím prvku vnitřní seznam, který podporuje ovládací prvek mapování klávesnice.  
   
 ```  

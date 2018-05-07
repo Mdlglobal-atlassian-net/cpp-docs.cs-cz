@@ -2,11 +2,8 @@
 title: Třída CMFCLinkCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl – třída
 `CMFCLinkCtrl` Třída zobrazí tlačítko jako hypertextový odkaz a vyvolá na odkaz cíl při kliknutí na tlačítko.  
@@ -85,7 +80,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
  Voláno rámcem před vykreslením rámečku fokusu tlačítka.  
   
 ```  
@@ -95,16 +90,16 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Obdélníku, která bounds ovládací prvek odkazu.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu, pokud chcete použít k vykreslení rámečku fokusu na tlačítko Vlastní kód.  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  Zadaná adresa URL se zobrazí jako text tlačítka.  
   
 ```  
@@ -112,12 +107,12 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszURL`  
+ [v] `lpszURL`  
  Text tlačítka pro zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  Nastaví implicitní protokol (například "http:") adresy URL.  
   
 ```  
@@ -125,13 +120,13 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszPrefix`  
+ [v] `lpszPrefix`  
  Předponu adresy URL protokolu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte, chcete-li nastavit předponu adresy URL. Předpona se nezobrazí na vzhled tlačítka, ale slouží ke procházet cílovou adresu URL.  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  Změní velikost tlačítko tak, aby obsahovala text tlačítka nebo rastrového obrázku.  
   
 ```  
@@ -141,11 +136,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bVCenter`  
- `TRUE`na střed tlačítko text a rastrový obrázek svisle mezi horní a dolní část řízení propojení; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [v] `bVCenter`  
+ `TRUE` na střed tlačítko text a rastrový obrázek svisle mezi horní a dolní část řízení propojení; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
- [v]`bHCenter`  
- `TRUE`na střed tlačítko text a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkaz; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
+ [v] `bHCenter`  
+ `TRUE` na střed tlačítko text a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkaz; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje nové velikosti ovládacího prvku odkazu.  

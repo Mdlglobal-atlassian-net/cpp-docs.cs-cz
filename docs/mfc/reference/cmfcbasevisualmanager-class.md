@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCBaseVisualManager | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCBaseVisualManager | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
@@ -37,22 +34,20 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb579cff639da9965c7214c2dd8abce8459d254
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager – třída
 Vrstva mezi odvozené visual správci a rozhraní API motiv systému Windows.  
   
- `CMFCBaseVisualManager`načte UxTheme.dll, pokud je k dispozici a spravuje přístup k rozhraní API systému Windows motiv metody.  
+ `CMFCBaseVisualManager` načte UxTheme.dll, pokud je k dispozici a spravuje přístup k rozhraní API systému Windows motiv metody.  
   
  Tato třída je pouze pro interní použití.  
   
@@ -107,7 +102,7 @@ class CMFCBaseVisualManager: public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxvisualmanager.h  
   
-##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
+##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes  
  Volání `CloseThemeData` pro všechny popisovače získaných v `UpdateSystemColors`.  
   
 ```  
@@ -117,14 +112,14 @@ void CleanUpThemes();
 ### <a name="remarks"></a>Poznámky  
  Pouze pro interní použití.  
   
-##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
+##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager  
  Vytvoří a inicializuje `CMFCBaseVisualManager` objektu.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
+##  <a name="drawcheckbox"></a>  CMFCBaseVisualManager::DrawCheckBox  
  Ovládací prvek zaškrtávací políčko nevykresluje pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -140,28 +135,28 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník políčko.  
   
- [v]`bHighlighted`  
+ [v] `bHighlighted`  
  Určuje, zda je označený políčko.  
   
- [v]`nState`  
+ [v] `nState`  
  0 pro není zaškrtnuto, 1 pro zaškrtnuté normální  
   
  2 pro smíšený normální.  
   
- [v]`bEnabled`  
+ [v] `bEnabled`  
  Určuje, zda je políčko povoleno.  
   
- [v]`bPressed`  
+ [v] `bPressed`  
  Určuje, zda je políčko stisknutí tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Hodnoty `nState` odpovídají následující styly zaškrtávací políčko.  
@@ -172,7 +167,7 @@ virtual BOOL DrawCheckBox(
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
+##  <a name="drawcomboborder"></a>  CMFCBaseVisualManager::DrawComboBorder  
  Nakreslí okraj pole se seznamem pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -185,25 +180,25 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník okraj pole se seznamem.  
   
- [v]`bDisabled`  
+ [v] `bDisabled`  
  Určuje, zda je zakázána okraj pole se seznamem.  
   
- [v]`bIsDropped`  
+ [v] `bIsDropped`  
  Určuje, jestli je okraj pole se seznamem zahodit.  
   
- [v]`bIsHighlighted`  
+ [v] `bIsHighlighted`  
  Určuje, zda je označený okraj pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
-##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
+##  <a name="drawcombodropbutton"></a>  CMFCBaseVisualManager::DrawComboDropButton  
  Nakreslí tlačítko rozevírací pole se seznamem pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -219,16 +214,16 @@ virtual BOOL DrawComboDropButton(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v]`pDC`|Ukazatel na kontextu zařízení.|  
-|[v]`rect`|Ohraničující obdélník rozevírací tlačítko pole se seznamem.|  
-|[v]`bDisabled`|Určuje, zda je vypnuté rozevírací tlačítko pole se seznamem.|  
-|[v]`bIsDropped`|Určuje, zda je tlačítko rozevírací pole se seznamem vyřazen.|  
-|[v]`bIsHighlighted`|Určuje, zda je označený rozevírací tlačítko pole se seznamem.|  
+|[v] `pDC`|Ukazatel na kontextu zařízení.|  
+|[v] `rect`|Ohraničující obdélník rozevírací tlačítko pole se seznamem.|  
+|[v] `bDisabled`|Určuje, zda je vypnuté rozevírací tlačítko pole se seznamem.|  
+|[v] `bIsDropped`|Určuje, zda je tlačítko rozevírací pole se seznamem vyřazen.|  
+|[v] `bIsHighlighted`|Určuje, zda je označený rozevírací tlačítko pole se seznamem.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
-##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
+##  <a name="drawpushbutton"></a>  CMFCBaseVisualManager::DrawPushButton  
  Nakreslí tlačítka pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -240,22 +235,22 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník tlačítko.  
   
- [v]`pButton`  
+ [v] `pButton`  
  Ukazatel [CMFCButton třída](../../mfc/reference/cmfcbutton-class.md) objektu k vykreslení.  
   
- [v]`uiState`  
+ [v] `uiState`  
  Ignorovat. Stav je převzat ze `pButton`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
-##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
+##  <a name="drawradiobutton"></a>  CMFCBaseVisualManager::DrawRadioButton  
  Kreslení ovládací prvek přepínač pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -269,28 +264,28 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`rect`  
+ [v] `rect`  
  Ohraničující obdélník přepínač.  
   
- [v]`bHighlighted`  
+ [v] `bHighlighted`  
  Určuje, zda je označený přepínač.  
   
- [v]`bChecked`  
+ [v] `bChecked`  
  Určuje, jestli je zaškrtnuté přepínač.  
   
- [v]`bEnabled`  
+ [v] `bEnabled`  
  Určuje, zda je povoleno přepínač.  
   
- [v]`bPressed`  
+ [v] `bPressed`  
  Určuje, zda je stisknutí přepínač.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
-##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
+##  <a name="drawstatusbarprogress"></a>  CMFCBaseVisualManager::DrawStatusBarProgress  
  Nakreslí indikátor průběhu na ovládací prvek panelu Stav ( [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md)) pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -307,37 +302,37 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`pStatusBar`  
+ [v] `pStatusBar`  
  Ukazatel na stavovém řádku. Tato hodnota je ignorována.  
   
- [v]`rectProgress`  
+ [v] `rectProgress`  
  Ohraničující obdélník indikátoru průběhu ve `pDC` souřadnice.  
   
- [v]`nProgressTotal`  
+ [v] `nProgressTotal`  
  Hodnota celkový průběh.  
   
- [v]`nProgressCurr`  
+ [v] `nProgressCurr`  
  Aktuální hodnota průběhu.  
   
- [v]`clrBar`  
- Počáteční barvu. `CMFCBaseVisualManager`to bude ignorovat. Odvozené třídy, můžete tyto informace použít pro barevné přechody.  
+ [v] `clrBar`  
+ Počáteční barvu. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy, můžete tyto informace použít pro barevné přechody.  
   
- [v]`clrProgressBarDest`  
- Koncová barva. `CMFCBaseVisualManager`to bude ignorovat. Odvozené třídy, můžete tyto informace použít pro barevné přechody.  
+ [v] `clrProgressBarDest`  
+ Koncová barva. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy, můžete tyto informace použít pro barevné přechody.  
   
- [v]`clrProgressText`  
- Barva textu v průběhu. `CMFCBaseVisualManager`to bude ignorovat. Barva textu je definována `afxGlobalData.clrBtnText`.  
+ [v] `clrProgressText`  
+ Barva textu v průběhu. `CMFCBaseVisualManager` to bude ignorovat. Barva textu je definována `afxGlobalData.clrBtnText`.  
   
- [v]`bProgressText`  
+ [v] `bProgressText`  
  Určuje, jestli chcete-li zobrazit průběh text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
-##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
+##  <a name="fillrebarpane"></a>  CMFCBaseVisualManager::FillReBarPane  
  Vyplní celé pozadí ovládacího prvku matrice pomocí aktuální motiv systému Windows.  
   
 ```  
@@ -348,19 +343,19 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontextu zařízení.  
   
- [v]`pBar`  
+ [v] `pBar`  
  Ukazatel na podokno vykreslovat jejichž pozadí.  
   
- [v]`rectClient`  
+ [v] `rectClient`  
  Ohraničující obdélník oblasti, aby byla vyplněna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
-##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
+##  <a name="getstandardwindowstheme"></a>  CMFCBaseVisualManager::GetStandardWindowsTheme  
  Získá aktuální motiv systému Windows.  
   
 ```  
@@ -370,17 +365,17 @@ virtual WinXpTheme GetStandardWindowsTheme();
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuálně vybraná barva motivu systému Windows. Může být jedna z následujících výčtové hodnoty:  
   
-- `WinXpTheme_None`-neexistuje žádné motiv povolena.  
+- `WinXpTheme_None` -neexistuje žádné motiv povolena.  
   
-- `WinXpTheme_NonStandard`-je vybrán jiný standardní motiv (tj. je vybraný motiv, ale žádné ze seznamu níže).  
+- `WinXpTheme_NonStandard` -je vybrán jiný standardní motiv (tj. je vybraný motiv, ale žádné ze seznamu níže).  
   
-- `WinXpTheme_Blue`-motiv modrý (vzhled Luna).  
+- `WinXpTheme_Blue` -motiv modrý (vzhled Luna).  
   
-- `WinXpTheme_Olive`-oliv motivu.  
+- `WinXpTheme_Olive` -oliv motivu.  
   
-- `WinXpTheme_Silver`-stříbrným motivu.  
+- `WinXpTheme_Silver` -stříbrným motivu.  
   
-##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
+##  <a name="updatesystemcolors"></a>  CMFCBaseVisualManager::UpdateSystemColors  
  Volání `OpenThemeData` k získání popisovačů pro vykreslení ovládacích prvků různých: windows, panely nástrojů, tlačítek a tak dále.  
   
 ```  

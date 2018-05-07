@@ -1,13 +1,10 @@
 ---
-title: "Zprávy s oznámením posuvníku | Microsoft Docs"
-ms.custom: 
+title: Zprávy s oznámením posuvníku | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages, notification
 - notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a4fc9e9065017e04b6375d1e5a8e336d4366755
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b003e23a1fef2b44600b9fd15dfe4ca541df5369
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-notification-messages"></a>Zprávy s oznámením pro posuvník
 Ovládací prvek typu jezdec upozorní jeho nadřazeného okna akcí uživatele zasláním nadřazené `WM_HSCROLL` nebo `WM_VSCROLL` zprávy, v závislosti na orientaci posuvníku. Chcete-li zpracovat tyto zprávy, přidejte obslužné rutiny pro `WM_HSCROLL` a `WM_VSCROLL` zprávy do nadřazeného okna. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) a [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) členské funkce se předají kód oznámení, pozice posuvníku a odkazy [CSliderCtrl](../mfc/reference/csliderctrl-class.md) objektu. Všimněte si, že je ukazatel typu **CScrollBar \***  to i v případě, že odkazuje `CSliderCtrl` objektu. Budete muset přiřazení tento ukazatel typu, pokud budete potřebovat k manipulaci s posuvníku.  
@@ -38,12 +33,12 @@ Ovládací prvek typu jezdec upozorní jeho nadřazeného okna akcí uživatele 
 |Zpráva upozornění|Události, která způsobila oznámení k odeslání|  
 |--------------------------|-------------------------------------------|  
 |**TB_BOTTOM**|**VK_END**|  
-|**TB_ENDTRACK**|`WM_KEYUP`(uživatel vydané klíč, který odeslal relevantní virtuální klíče kód)|  
+|**TB_ENDTRACK**|`WM_KEYUP` (uživatel vydané klíč, který odeslal relevantní virtuální klíče kód)|  
 |**TB_LINEDOWN**|**VK_RIGHT** nebo **VK_DOWN**|  
 |**TB_LINEUP**|**VK_LEFT** nebo **VK_UP**|  
 |**TB_PAGEDOWN**|**VK_NEXT** (uživatel klepl kanál pod nebo napravo od jezdce.)|  
 |**TB_PAGEUP**|**VK_PRIOR** (uživatel klepl kanál nad nebo nalevo od jezdce.)|  
-|**TB_THUMBPOSITION**|`WM_LBUTTONUP`Následující **TB_THUMBTRACK** oznámení|  
+|**TB_THUMBPOSITION**|`WM_LBUTTONUP` Následující **TB_THUMBTRACK** oznámení|  
 |**TB_THUMBTRACK**|Přesun posuvník (uživatel přetažením jezdec)|  
 |**TB_TOP**|**VK_HOME**|  
   

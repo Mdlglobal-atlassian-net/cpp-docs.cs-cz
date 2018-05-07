@@ -1,12 +1,9 @@
 ---
-title: "Třída CInternetFile | Microsoft Docs"
-ms.custom: 
+title: Třída CInternetFile | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetfile-class"></a>CInternetFile – třída
 Umožňuje přístup k souborům na vzdálené systémy, které používají internetové protokoly.  
@@ -117,7 +112,7 @@ class CInternetFile : public CStdioFile
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxinet.h  
   
-##  <a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>  CInternetFile::Abort  
  Zavře soubor přidružené k tomuto objektu a soubor, nebude možné čtení nebo zápis.  
   
 ```  
@@ -129,7 +124,7 @@ virtual void Abort();
   
  Při zpracování výjimek, **Abort** se liší od [Zavřít](#close) důležité dvěma způsoby. Nejdřív **Abort** funkce nevyvolá výjimku o selhání, protože ignoruje selhání. Druhý, **Abort** nemá **ASSERT** Pokud je soubor nebyl otevřen nebo dříve bylo ukončeno.  
   
-##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  Tento člen funkce je volána, když `CInternetFile` je vytvořen objekt.  
   
 ```  
@@ -174,7 +169,7 @@ CInternetFile(
 ### <a name="remarks"></a>Poznámky  
  Nikdy vytvoříte `CInternetFile` objektu přímo. Místo toho vytvořte objekt jednoho z jeho odvozené třídy voláním [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) nebo [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Také můžete vytvořit `CInternetFile` objekt voláním [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>  CInternetFile::Close  
  Zavře `CInternetFile` a uvolní všechny jeho prostředky.  
   
 ```  
@@ -184,7 +179,7 @@ virtual void Close();
 ### <a name="remarks"></a>Poznámky  
  Pokud soubor byla otevřena pro zápis, je implicitní volání [vyprázdnění](#flush) , aby zajistil, že všechny do vyrovnávací paměti data se zapisují do hostitele. By měly volat **Zavřít** po dokončení pomocí souboru.  
   
-##  <a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>  CInternetFile::Flush  
  Volání této funkce člen vyprázdnění obsah vyrovnávací paměť pro zápis.  
   
 ```  
@@ -192,30 +187,30 @@ virtual void Flush();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `Flush` , aby zajistil, že všechna data v paměti ve skutečnosti byla zapsána na cílovém počítači a chcete-li zajistit vaší transakce s hostitelský počítač byla dokončena. `Flush`platí pouze na `CInternetFile` objekty otevřena pro zápis.  
+ Použití `Flush` , aby zajistil, že všechna data v paměti ve skutečnosti byla zapsána na cílovém počítači a chcete-li zajistit vaší transakce s hostitelský počítač byla dokončena. `Flush` platí pouze na `CInternetFile` objekty otevřena pro zápis.  
   
-##  <a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>  CInternetFile::GetLength  
  Vrátí velikost souboru.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
  Popisovač pro soubor přidružené k tomuto objektu.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
  Tento operátor. použijte k získání popisovačů systému Windows pro aktuální relaci Internet.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>CInternetFile::Read  
+##  <a name="read"></a>  CInternetFile::Read  
  Volání této funkce člen k načtení do dané paměti, počínaje `lpvBuf`, zadaný počet bajtů, `nCount`.  
   
 ```  
@@ -239,7 +234,7 @@ virtual UINT Read(
   
  Aby se načítají všechna data, musí aplikace nadále volání **CInternetFile::Read** metoda dokud vrátí tato metoda hodnotu nula.  
   
-##  <a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>  CInternetFile::ReadString  
  Volání této funkce členů ke čtení znaků, dokud nenajde znak nového řádku.  
   
 ```  
@@ -271,7 +266,7 @@ virtual LPTSTR ReadString(
   
  Když zavoláte `ReadString` bez první volání [SetReadBufferSize](#setreadbuffersize), zobrazí se vyrovnávací paměť 4096 bajtů.  
   
-##  <a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>  CInternetFile::Seek  
  Volání této funkce člen, aby přemístil ukazatel v dříve otevřený soubor.  
   
 ```  
@@ -291,7 +286,7 @@ virtual ULONGLONG Seek(
   
 - **CFile::current** přesunout ukazatel souboru `lOff` bajtů z aktuální pozice v souboru.  
   
-- **CFile::end** přesunout ukazatel souboru `lOff` bajtů od konce souboru. `lOff`musí být záporné k vyhledání do existující soubor; kladné hodnoty bude hledat za koncem souboru.  
+- **CFile::end** přesunout ukazatel souboru `lOff` bajtů od konce souboru. `lOff` musí být záporné k vyhledání do existující soubor; kladné hodnoty bude hledat za koncem souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Posun od začátku souboru, pokud je požadovaný pozice právní; bajtů, nové jinak hodnota je definovaný a [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu je vyvolána výjimka.  
@@ -309,7 +304,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro implementaci třídy base ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
  Volání této funkce člen nastavit velikost dočasné čtení vyrovnávací paměti používané `CInternetFile`-odvozené objektu.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  Velikost vyrovnávací paměti můžete zvýšit kdykoli, ale zmenšit velikost vyrovnávací paměti nebude mít žádný vliv. Když zavoláte [ReadString](#readstring) bez první volání `SetReadBufferSize`, zobrazí se vyrovnávací paměť 4096 bajtů.  
   
-##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
  Volání této funkce člen nastavit velikost vyrovnávací paměti pro dočasné zápis používané `CInternetFile`-odvozené objektu.  
   
 ```  
@@ -349,7 +344,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  Ve výchozím nastavení `CInternetFile` objekt neposkytuje žádné ukládání do vyrovnávací paměti pro zápis. Když zavoláte tuto – členská funkce, musí být jisti, že soubor byla otevřena pro zápis. Velikost vyrovnávací paměti pro zápis můžete změnit kdykoli, ale to způsobí tak, že implicitní volání [vyprázdnění](#flush).  
   
-##  <a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>  CInternetFile::Write  
  Volání této funkce členů k zápisu do daného paměti `lpvBuf`, zadaný počet bajtů, `nCount`.  
   
 ```  
@@ -368,7 +363,7 @@ virtual void Write(
 ### <a name="remarks"></a>Poznámky  
  Pokud dojde k chybě při zápisu dat, funkce vyvolá [CInternetException](../../mfc/reference/cinternetexception-class.md) objekt popisující chybu.  
   
-##  <a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>  CInternetFile::WriteString  
  Tato funkce zapíše související soubor řetězce ukončené hodnotou null.  
   
 ```  

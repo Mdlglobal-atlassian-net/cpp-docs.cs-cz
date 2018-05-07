@@ -1,13 +1,10 @@
 ---
-title: "Upgradování existujícího ovládacího prvku ActiveX | Microsoft Docs"
-ms.custom: 
+title: Upgradování existujícího ovládacího prvku ActiveX | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Internetu bez úprav. Můžete však změnit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, existují další aspekty. Soubor .ocx a všechny podpůrné soubory musí být v cílovém počítači nebo stáhnout přes Internet. Díky velikosti kódu a stažení čas důležitý faktor. Stahování se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit ovládací prvek jako bezpečné pro skriptování a jako bezpečné pro inicializaci.  
@@ -52,11 +47,11 @@ Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Intern
   
  Můžete také přidat optimalizace, jak je popsáno v [– ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md). Monikery lze stáhnout vlastnosti a velké objekty BLOB asynchronně, jak je popsáno v [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md).  
   
-##  <a name="_core_packaging_code_for_downloading"></a>Balení kódu pro stahování  
- Další informace o této problematice naleznete v článku znalostní báze Knowledge Base "Balení MFC – ovládací prvky pro použití přes Internet" (Q167158). Můžete najít články znalostní báze Knowledge Base na [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+##  <a name="_core_packaging_code_for_downloading"></a> Balení kódu pro stahování  
+ Další informace o této problematice naleznete v článku znalostní báze Knowledge Base "Balení MFC – ovládací prvky pro použití přes Internet" (Q167158). Můžete najít články znalostní báze Knowledge Base na [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
 ### <a name="the-codebase-tag"></a>CODEBASE značky  
- ActiveX – ovládací prvky jsou vloženy do webových stránek pomocí `<OBJECT>` značky. `CODEBASE` Parametr `<OBJECT>` značka udává umístění, ze kterého mají být staženy ovládacího prvku. `CODEBASE`může ukazovat na mnoha různých typech souborů úspěšně.  
+ ActiveX – ovládací prvky jsou vloženy do webových stránek pomocí `<OBJECT>` značky. `CODEBASE` Parametr `<OBJECT>` značka udává umístění, ze kterého mají být staženy ovládacího prvku. `CODEBASE` může ukazovat na mnoha různých typech souborů úspěšně.  
   
 ### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Pomocí značky CODEBASE se souborem OCX  
   
@@ -144,7 +139,7 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
   
  V závislosti na verzi zadaný můžete vynutit stažení ovládacího prvku. Pro dokončení specifikace `OBJECT` včetně značky `CODEBASE` parametr a referenční dokumentace najdete W3C.  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>Označení řízení bezpečné pro skriptování a inicializaci  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Označení řízení bezpečné pro skriptování a inicializaci  
  Ovládací prvky ActiveX, které používají ve webových stránkách by měl být označen jako bezpečné pro skriptování a inicializaci, pokud jsou ve skutečnosti bezpečné. Bezpečné ovládací prvek nebude provádět v/v disku nebo přístup k paměti nebo registry počítače.  
   
  Ovládací prvky můžete označit jako bezpečné pro skriptování a inicializaci prostřednictvím registru. Upravit `DllRegisterServer` přidat položky podobné následující k označení prvku jako bezpečné pro skriptování a trvalost v registru. Je to alternativní metoda je implementace `IObjectSafety`.  
@@ -168,7 +163,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}   
 ```  
   
-##  <a name="_core_licensing_issues"></a>Problémy s licencí  
+##  <a name="_core_licensing_issues"></a> Problémy s licencí  
  Pokud chcete použít licencovanou ovládacího prvku na webové stránce, je nutné ověřit, že licenční smlouva umožňuje jeho použití na Internetu a vytvoření souboru (LPK) pro něj.  
   
  Licencované ovládací prvek ActiveX nebude správně načíst na stránce HTML, pokud počítači aplikace Internet Explorer nemá licenci pro používání ovládacího prvku. Například pokud licencované ovládací prvek byl vytvořený pomocí Visual C++, stránky HTML pomocí ovládacího prvku načte správně v počítači, kde byl sestaven ovládacího prvku, ale nebude načtena v jiném počítači, pokud jsou zahrnuty licenční informace.  
@@ -181,7 +176,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   Použití parametru základu kódu  
   
- Chcete-li použít licencované ovládací prvek na stránce HTML na nonlicensed počítači, musíte vygenerovat souboru (LPK). Soubor LPK obsahuje běhu licencí pro licencované ovládací prvky na stránce HTML. Tento soubor je generována pomocí LPK_TOOL. Soubor EXE, který se dodává s ActiveX SDK. Další informace najdete v článku na webu MSDN na [http://msdn.microsoft.com](http://msdn.microsoft.com).  
+ Chcete-li použít licencované ovládací prvek na stránce HTML na nonlicensed počítači, musíte vygenerovat souboru (LPK). Soubor LPK obsahuje běhu licencí pro licencované ovládací prvky na stránce HTML. Tento soubor je generována pomocí LPK_TOOL. Soubor EXE, který se dodává s ActiveX SDK. Další informace najdete v článku na webu MSDN na [ http://msdn.microsoft.com ](http://msdn.microsoft.com).  
   
 #### <a name="to-create-an-lpk-file"></a>Vytvořit soubor LPK  
   
@@ -222,7 +217,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Další informace o licencích řízení, najdete v části [– ovládací prvky ActiveX: licencování ovládacích prvků ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
-##  <a name="_core_signing_code"></a>Podepisování kódu  
+##  <a name="_core_signing_code"></a> Podepisování kódu  
  Podepisování kódu slouží k identifikaci zdrojového kódu a zaručit, že se od jeho nezměnil kód byl podepsán. V závislosti na nastavení zabezpečení prohlížeče uživatelé mohou se zobrazit upozornění před stažením kódu. Uživatelé mohou zvolit za určité vlastníky certifikát nebo společnosti, ve kterých případu kód podepsaný tyto důvěryhodné, budou staženy bez upozornění. Aby se zabránilo zneužití digitálně podepsaný kód.  
   
  Zajistěte, aby že konečné kódu je podepsaný tak, aby vlastní ovládací prvek lze automaticky stáhnout bez zobrazení zprávy upozornění vztah důvěryhodnosti. Podrobnosti o tom, jak podepsat kód, naleznete v dokumentaci na Authenticode v sadě SDK ActiveX a najdete v tématu [podepsání souboru CAB](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
@@ -231,7 +226,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Digitální podepisování kódu záruky nebylo změněno vzhledem k tomu, že je podepsaný. Hodnota hash kód je přijatá a vkládat v certifikátu. Tato hodnota hash se později porovná se hodnota hash kód prováděné po stažení kód, ale před jeho spuštěním. Společnosti, jako je například Verisign může poskytovat privátní a veřejné klíče, které jsou potřebné pro podepsání kódu. Sada SDK ActiveX se dodává s MakeCert, nástroj pro vytváření testovací certifikáty.  
   
-##  <a name="_core_managing_the_palette"></a>Správa palety  
+##  <a name="_core_managing_the_palette"></a> Správa palety  
  Kontejnery určit palety a zpřístupní ji jako vedlejší vlastnost, **DISPID_AMBIENT_PALETTE**. Kontejner (například Internet Explorer) zvolí palety, který je používán všechny ovládací prvky ActiveX na stránce určit vlastní paletu. Tím se zabrání zobrazení blikání a uvede konzistentní vzhled.  
   
  Můžete přepsat ovládacího prvku `OnAmbientPropertyChange` pro zpracování oznámení o změnách paletě.  
@@ -242,7 +237,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Odešle starší kontejnery, které nepoužívají vlastnost palette vedlejším `WM_QUERYNEWPALETTE` a `WM_PALETTECHANGED` zprávy. Můžete přepsat ovládacího prvku `OnQueryNewPalette` a `OnPaletteChanged` pro zpracování těchto zpráv.  
   
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>Řízení chování a úrovně zabezpečení prohlížeče Internet Explorer  
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Řízení chování a úrovně zabezpečení prohlížeče Internet Explorer  
  Prohlížeč obsahuje možnosti pro úroveň zabezpečení, konfigurovatelná uživatelem. Protože webové stránky může obsahovat aktivní obsah, který může potenciálně poškodit počítač uživatele prohlížečů umožňuje uživateli vybrat možnosti pro úroveň zabezpečení. V závislosti na způsobu, prohlížeč implementuje úrovně zabezpečení ovládacího prvku nemusí vůbec stáhnout, nebo se zobrazí certifikát nebo upozornění chcete umožnit uživatelům zvolit za běhu, zda ke stažení ovládacího prvku. Níže je uveden seznam chování ovládacích prvků ActiveX v části zabezpečení Vysoká, střední a nízké úrovně v Internet Exploreru.  
   
 ### <a name="high-safety-mode"></a>Režim vysoké zabezpečení  

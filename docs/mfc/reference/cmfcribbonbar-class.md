@@ -1,12 +1,9 @@
 ---
-title: "Třída CMFCRibbonBar | Microsoft Docs"
-ms.custom: 
+title: Třída CMFCRibbonBar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBar
@@ -197,17 +194,15 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ea33fbd2f9517734c2dcb15fd434e8ddcc36b41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar – třída
 `CMFCRibbonBar` Třída implementuje pásu karet panelu podobná použít v Office 2007.  
@@ -349,7 +344,7 @@ class CMFCRibbonBar : public CPane
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxribbonbar.h  
   
-##  <a name="activatecontextcategory"></a>CMFCRibbonBar::ActivateContextCategory  
+##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory  
  Aktivuje kontextu kategorii, která je již zobrazen.  
   
 ```  
@@ -357,13 +352,13 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiContextID`  
+ [v] `uiContextID`  
  ID kontextu kategorie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud kontextu kategorie s `uiContextID` je najít a aktivovaná; jinak hodnota `FALSE`.  
+ `TRUE` Pokud kontextu kategorie s `uiContextID` je najít a aktivovaná; jinak hodnota `FALSE`.  
   
-##  <a name="addcategory"></a>CMFCRibbonBar::AddCategory  
+##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  Vytvoří a inicializuje novou kategorii pásu karet pro panelu pásu karet.  
   
 ```  
@@ -380,25 +375,25 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [v] `lpszName`  
  Název kategorie pásu karet.  
   
- [v]`uiSmallImagesResID`  
+ [v] `uiSmallImagesResID`  
  ID prostředku seznamu malý obrázek pro kategorii pásu karet.  
   
- [v]`uiLargeImagesResID`  
+ [v] `uiLargeImagesResID`  
  ID prostředku seznamu velký obrázek pro kategorii pásu karet.  
   
- [v]`sizeSmallImage`  
+ [v] `sizeSmallImage`  
  Určuje velikost malých obrázků pro kategorii pásu karet.  
   
- [v]`sizeLargeImage`  
+ [v] `sizeLargeImage`  
  Určuje velikost velkých obrázků pro kategorii pásu karet.  
   
- [v]`nInsertAt`  
+ [v] `nInsertAt`  
  Nulové založené na index umístění kategorie.  
   
- [v]`pRTI`  
+ [v] `pRTI`  
  Ukazatel na [CMFCRibbonCategory třída](../../mfc/reference/cmfcribboncategory-class.md) run-time třída dynamicky vytvořit kategorii pásu karet za běhu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -412,7 +407,7 @@ CMFCRibbonCategory* AddCategory(
   
  [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]  
   
-##  <a name="addcontextcategory"></a>CMFCRibbonBar::AddContextCategory  
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory  
  Vytvoří a inicializuje novou kategorii kontext pro panelu pásu karet.  
   
 ```  
@@ -431,31 +426,31 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [v] `lpszName`  
  Název kategorie.  
   
- [v]`lpszContextName`  
+ [v] `lpszContextName`  
  Název kategorie titulek kontextu.  
   
- [v]`uiContextID`  
+ [v] `uiContextID`  
  ID kontextu.  
   
- [v]`clrContext`  
+ [v] `clrContext`  
  Barva titulek kategorie kontextu.  
   
- [v]`uiSmallImagesResID`  
+ [v] `uiSmallImagesResID`  
  ID prostředku malý obrázek kategorie kontextu.  
   
- [v]`uiLargeImagesResID`  
+ [v] `uiLargeImagesResID`  
  ID prostředku velký obrázek kategorie kontextu.  
   
- [v]`sizeSmallImage`  
+ [v] `sizeSmallImage`  
  Velikost malý obrázek.  
   
- [v]`sizeLargeImage`  
+ [v] `sizeLargeImage`  
  Velikost velký obrázek.  
   
- [v]`pRTI`  
+ [v] `pRTI`  
  Ukazatel na třídy modulu runtime.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -482,7 +477,7 @@ CMFCRibbonCategory* AddContextCategory(
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="addmaincategory"></a>CMFCRibbonBar::AddMainCategory  
+##  <a name="addmaincategory"></a>  CMFCRibbonBar::AddMainCategory  
  Vytvoří novou kategorii hlavní pásu karet pro panelu pásu karet.  
   
 ```  
@@ -497,19 +492,19 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [v] `lpszName`  
  Název kategorie hlavní pásu karet.  
   
- [v]`uiSmallImagesResID`  
+ [v] `uiSmallImagesResID`  
  ID prostředku malé bitových kopií.  
   
- [v]`uiLargeImagesResID`  
+ [v] `uiLargeImagesResID`  
  ID prostředku velkých obrázků.  
   
- [v]`sizeSmallImage`  
+ [v] `sizeSmallImage`  
  Velikost malých obrázků.  
   
- [v]`sizeLargeImage`  
+ [v] `sizeLargeImage`  
  Velikost velkých obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -523,7 +518,7 @@ CMFCRibbonMainPanel* AddMainCategory(
   
  [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]  
   
-##  <a name="addprintpreviewcategory"></a>CMFCRibbonBar::AddPrintPreviewCategory  
+##  <a name="addprintpreviewcategory"></a>  CMFCRibbonBar::AddPrintPreviewCategory  
  Vytvoří kategorii náhledu tisku na panelu pásu karet.  
   
 ```  
@@ -536,7 +531,7 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vytvoří kategorie pásu karet a ovládacích prvků, které je nutné, chcete-li poskytovat náhledu tisku.  
   
-##  <a name="addqatonlycategory"></a>CMFCRibbonBar::AddQATOnlyCategory  
+##  <a name="addqatonlycategory"></a>  CMFCRibbonBar::AddQATOnlyCategory  
  Vytvoří kategorii pásu karet nástrojů Rychlý přístup.  
   
 ```  
@@ -548,13 +543,13 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lpszName`  
+ [v] `lpszName`  
  Název kategorie.  
   
- [v]`uiSmallImagesResID`  
+ [v] `uiSmallImagesResID`  
  ID prostředku ze seznamu obrázků pro kategorii.  
   
- [v]`sizeSmallImage`  
+ [v] `sizeSmallImage`  
  Velikost bitové kopie pro prvky pásu karet v kategorii.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -563,7 +558,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ### <a name="remarks"></a>Poznámky  
  Kategorie pásu karet nástrojů Rychlý přístup se používá pouze v dialogovém okně přizpůsobení panelu nástrojů Rychlý přístup.  
   
-##  <a name="addtotabs"></a>CMFCRibbonBar::AddToTabs  
+##  <a name="addtotabs"></a>  CMFCRibbonBar::AddToTabs  
  Přidá element zadaný pásu karet na řádek kartách panelu pásu karet.  
   
 ```  
@@ -571,13 +566,13 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pElement`  
+ [v] `pElement`  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="remarks"></a>Poznámky  
  Element pásu karet je umístěn před všechny tlačítka systému.  
   
-##  <a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar  
+##  <a name="cmfcribbonbar"></a>  CMFCRibbonBar::CMFCRibbonBar  
  Vytvoří a inicializuje [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) objektu.  
   
 ```  
@@ -585,12 +580,12 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bReplaceFrameCaption`  
- `TRUE`pro panelu pásu karet k nahrazení Titulek hlavního rámce okna; `FALSE` najít panelu pásu karet v části Titulek hlavního rámce okna.  
+ [v] `bReplaceFrameCaption`  
+ `TRUE` pro panelu pásu karet k nahrazení Titulek hlavního rámce okna; `FALSE` najít panelu pásu karet v části Titulek hlavního rámce okna.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="create"></a>CMFCRibbonBar::Create  
+##  <a name="create"></a>  CMFCRibbonBar::Create  
  Vytvoří okna pro panelu pásu karet.  
   
 ```  
@@ -601,17 +596,17 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna pro panelu pásu karet.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Logická kombinace styly v novém okně.  
   
- [v]`nID`  
+ [v] `nID`  
  ID nové okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla vytvořena okna; v opačném případě `FALSE`.  
+ `TRUE` Pokud byla vytvořena okna; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -620,7 +615,7 @@ BOOL Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]  
   
-##  <a name="createex"></a>CMFCRibbonBar::CreateEx  
+##  <a name="createex"></a>  CMFCRibbonBar::CreateEx  
  Vytvoří okna pro panelu pásu karet.  
   
 ```  
@@ -632,24 +627,24 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pParentWnd`  
+ [v] `pParentWnd`  
  Ukazatel do nadřazeného okna pro panelu pásu karet.  
   
- [v]`dwCtrlStyle`  
+ [v] `dwCtrlStyle`  
  Tento parametr není používán.  
   
- [v]`dwStyle`  
+ [v] `dwStyle`  
  Logická kombinace styly v novém okně.  
   
- [v]`nID`  
+ [v] `nID`  
  ID nové okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla vytvořena okna; v opačném případě `FALSE`.  
+ `TRUE` Pokud byla vytvořena okna; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::DeactivateKeyboardFocus  
+##  <a name="deactivatekeyboardfocus"></a>  CMFCRibbonBar::DeactivateKeyboardFocus  
  Zavře všechny ovládací prvky keytip na panelu pásu karet.  
   
 ```  
@@ -657,12 +652,12 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bSetFocus`  
- `TRUE`k nastavení fokusu do nadřazeného okna panelu pásu karet.  
+ [v] `bSetFocus`  
+ `TRUE` k nastavení fokusu do nadřazeného okna panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="drawmenuimage"></a>CMFCRibbonBar::DrawMenuImage  
+##  <a name="drawmenuimage"></a>  CMFCRibbonBar::DrawMenuImage  
  Nakreslí obrázek pro tlačítko nabídky.  
   
 ```  
@@ -673,21 +668,21 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pDC`  
+ [v] `pDC`  
  Ukazatel na kontext zařízení pro tlačítko nabídky.  
   
- [v]`pMenuItem`  
+ [v] `pMenuItem`  
  Ukazatel na tlačítka nabídky panelu nástrojů.  
   
- [v]`rectImage`  
+ [v] `rectImage`  
  Obdélník zobrazení pro tlačítka s nabídkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud bitovou kopii vykreslení; v opačném případě `FALSE`.  
+ `TRUE` Pokud bitovou kopii vykreslení; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="dwmcompositionchanged"></a>CMFCRibbonBar::DWMCompositionChanged  
+##  <a name="dwmcompositionchanged"></a>  CMFCRibbonBar::DWMCompositionChanged  
  Upraví displej pruhu pásu karet, pokud je zapnutá nebo vypnutá složení plochy okno správce (správce).  
   
 ```  
@@ -696,7 +691,7 @@ virtual void DWMCompositionChanged();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="enablekeytips"></a>CMFCRibbonBar::EnableKeyTips  
+##  <a name="enablekeytips"></a>  CMFCRibbonBar::EnableKeyTips  
  Povolí nebo zakáže funkci keytip pro panelu pásu karet.  
   
 ```  
@@ -704,13 +699,13 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit funkci popisy tlačítek; `FALSE` popisy tlačítek funkci zakázat.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit funkci popisy tlačítek; `FALSE` popisy tlačítek funkci zakázat.  
   
 ### <a name="remarks"></a>Poznámky  
  Když povolíte tuto funkci, klíče tipy se zobrazují, když uživatel stiskne tlačítko ALT nebo F10. Po stisknutí klávesy ALT, zobrazí se klíče tipy se zpožděním 200 milisekundu. Tato prodleva umožňuje zástupce provést tak, aby stisknuté klávesy ALT nebudou v konfliktu s další kombinace, které zahrnují klávesu ALT.  
   
-##  <a name="enableprintpreview"></a>CMFCRibbonBar::EnablePrintPreview  
+##  <a name="enableprintpreview"></a>  CMFCRibbonBar::EnablePrintPreview  
  Povolí nebo zakáže **Náhled** funkce.  
   
 ```  
@@ -718,15 +713,15 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit **Náhled** funkci; `FALSE` zakázat **Náhled** funkce.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit **Náhled** funkci; `FALSE` zakázat **Náhled** funkce.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud `bEnable` je `FALSE` a kategorie náhledu tisku existuje, je odstraněn.  
   
  Ve výchozím nastavení **Náhled** je povolena funkce.  
   
-##  <a name="enabletooltips"></a>CMFCRibbonBar::EnableToolTips  
+##  <a name="enabletooltips"></a>  CMFCRibbonBar::EnableToolTips  
  Povolí nebo zakáže popisy tlačítek a popisy volitelný popis tlačítka na panelu pásu karet.  
   
 ```  
@@ -736,16 +731,16 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bEnable`  
- `TRUE`Chcete-li povolit popisy tlačítek na panelu pásu karet; `FALSE` zakázat popisy tlačítek na panelu pásu karet.  
+ [v] `bEnable`  
+ `TRUE` Chcete-li povolit popisy tlačítek na panelu pásu karet; `FALSE` zakázat popisy tlačítek na panelu pásu karet.  
   
- [v]`bEnableDescr`  
- `TRUE`Chcete-li povolit popisy popisek na popisek; `FALSE` zakázat popisy popisek na popisek.  
+ [v] `bEnableDescr`  
+ `TRUE` Chcete-li povolit popisy popisek na popisek; `FALSE` zakázat popisy popisek na popisek.  
   
 ### <a name="remarks"></a>Poznámky  
  `bEnable` Parametr určuje, zda popisy tlačítek se zobrazí, pokud ukazatel myši nachází na pásu karet element. `bEnableDescr` Parametr určuje, zda další popisný text se zobrazí se text popisku.  
   
-##  <a name="findbydata"></a>CMFCRibbonBar::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  Načte ukazatel na pásu karet elementu, pokud má zadaná data a viditelnosti.  
   
 ```  
@@ -755,11 +750,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwData`  
+ [v] `dwData`  
  Data související s element pásu karet.  
   
- [v]`bVisibleOnly`  
- `TRUE`Chcete-li hledat pouze; prvky viditelné pásu karet `FALSE` k vyhledání všech prvků pásu karet.  
+ [v] `bVisibleOnly`  
+ `TRUE` Chcete-li hledat pouze; prvky viditelné pásu karet `FALSE` k vyhledání všech prvků pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na pásu karet elementu, pokud má zadaná data a viditelnost; v opačném případě `NULL`.  
@@ -767,7 +762,7 @@ CMFCRibbonBaseElement* FindByData(
 ### <a name="remarks"></a>Poznámky  
  Element pásu karet je libovolný ovládací prvek, který můžete přidat na pásu karet, jako je tlačítko pásu karet, nebo kategorii pásu karet nebo jezdce pásu karet.  
   
-##  <a name="findbyid"></a>CMFCRibbonBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonBar::FindByID  
  Načte ukazatel na pásu karet elementu, který má zadaný příkaz ID a vyhledávání hodnoty.  
   
 ```  
@@ -778,14 +773,14 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID příkazu pro element pásu karet.  
   
- [v]`bVisibleOnly`  
- `TRUE`Chcete-li hledat pouze; prvky viditelné pásu karet `FALSE` k vyhledání všech prvků pásu karet.  
+ [v] `bVisibleOnly`  
+ `TRUE` Chcete-li hledat pouze; prvky viditelné pásu karet `FALSE` k vyhledání všech prvků pásu karet.  
   
- [v]`bExcludeQAT`  
- `TRUE`vyloučení prvky panelu nástrojů Rychlý přístup z prohledávání. v opačném `FALSE`.  
+ [v] `bExcludeQAT`  
+ `TRUE` vyloučení prvky panelu nástrojů Rychlý přístup z prohledávání. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na pásu karet elementu, pokud má zadaný příkaz ID a hledání hodnoty; v opačném `NULL`.  
@@ -795,7 +790,7 @@ CMFCRibbonBaseElement* FindByID(
   
  Obecně platí že může být více než jeden element pásu karet, který má stejné ID příkazu. Pokud chcete získat ukazatele na všechny prvky pásu karet, které používají ID zadaný příkaz, použít [CMFCRibbonBar::GetElementsByID](#getelementsbyid) metoda.  
   
-##  <a name="findcategoryindexbydata"></a>CMFCRibbonBar::FindCategoryIndexByData  
+##  <a name="findcategoryindexbydata"></a>  CMFCRibbonBar::FindCategoryIndexByData  
  Načte index kategorii pásu karet, která obsahuje zadaná data.  
   
 ```  
@@ -803,13 +798,13 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`dwData`  
+ [v] `dwData`  
  Data související s kategorie pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule kategorie pásu karet, pokud metoda byla úspěšná. jinak-1.  
   
-##  <a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout  
+##  <a name="forcerecalclayout"></a>  CMFCRibbonBar::ForceRecalcLayout  
  Upraví rozložení všechny položky v panelu pásu karet a nadřazeného okna a překreslí ho celé okno.  
   
 ```  
@@ -818,7 +813,7 @@ void ForceRecalcLayout();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getactivecategory"></a>CMFCRibbonBar::GetActiveCategory  
+##  <a name="getactivecategory"></a>  CMFCRibbonBar::GetActiveCategory  
  Načte ukazatel na kategorii active pásu karet.  
   
 ```  
@@ -833,7 +828,7 @@ CMFCRibbonCategory* GetActiveCategory() const;
   
  Hlavní kategorie se zobrazí, když uživatel stiskne tlačítko aplikace a nesmí být aktivní kategorie.  
   
-##  <a name="getapplicationbutton"></a>CMFCRibbonBar::GetApplicationButton  
+##  <a name="getapplicationbutton"></a>  CMFCRibbonBar::GetApplicationButton  
  Načte ukazatel na tlačítka aplikace.  
   
 ```  
@@ -843,7 +838,7 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na tlačítka aplikace; nebo `NULL` Pokud tlačítko nebyl nastaven.  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonBar::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCRibbonBar::GetCaptionHeight  
  Načte výšku oblasti popisek pruhu pásu karet.  
   
 ```  
@@ -855,7 +850,7 @@ int GetCaptionHeight() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getcategory"></a>CMFCRibbonBar::GetCategory  
+##  <a name="getcategory"></a>  CMFCRibbonBar::GetCategory  
  Načte ukazatel na pásu karet kategorii v zadaném indexu.  
   
 ```  
@@ -863,13 +858,13 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Index založený na nule kategorie pásu karet v seznamu kategorií pásu karet, který je obsažen v panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na pásu karet kategorii v zadaném indexu; v opačném `NULL` Pokud `nIndex` je mimo rozsah.  
   
-##  <a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount  
+##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  Načte počet kategorií pásu karet na panelu pásu karet.  
   
 ```  
@@ -879,7 +874,7 @@ int GetCategoryCount() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Počet kategorií pásu karet v panelu pásu karet.  
   
-##  <a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight  
+##  <a name="getcategoryheight"></a>  CMFCRibbonBar::GetCategoryHeight  
  Načte výšku kategorii.  
   
 ```  
@@ -892,7 +887,7 @@ int GetCategoryHeight() const;
 ### <a name="remarks"></a>Poznámky  
  Výška kategorie zahrnuje výšku kartě kategorie.  
   
-##  <a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex  
+##  <a name="getcategoryindex"></a>  CMFCRibbonBar::GetCategoryIndex  
  Načte index kategorie zadaný pásu karet.  
   
 ```  
@@ -900,13 +895,13 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pCategory`  
+ [v] `pCategory`  
  Ukazatel na pásu karet kategorie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule kategorie pásu karet určeného `pCategory`; nebo -1, pokud není nalezena kategorie pásu karet.  
   
-##  <a name="getcontextname"></a>CMFCRibbonBar::GetContextName  
+##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  Načte název titulek kategorie kontext určeného kontextu ID.  
   
 ```  
@@ -916,16 +911,16 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiContextID`  
+ [v] `uiContextID`  
  ID pásu karet kategorie kontextu.  
   
- [out]`strName`  
+ [out] `strName`  
  Název kategorie popisek kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud metoda byla úspěšná. v opačném `FALSE` Pokud `uiContextID` byl nula nebo titulek kategorie kontextu nebyla nalezena.  
+ `TRUE` Pokud metoda byla úspěšná. v opačném `FALSE` Pokud `uiContextID` byl nula nebo titulek kategorie kontextu nebyla nalezena.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBar::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  Načte pásu karet elementu, který je nyní otevřeno.  
   
 ```  
@@ -937,7 +932,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBar::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBar::GetElementsByID  
  Načte pole ukazatele na všechny elementy pásu karet, které mají ID konkrétní příkazu.  
   
 ```  
@@ -947,16 +942,16 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID příkazu elementu pásu karet.  
   
- [out]`arButtons`  
+ [out] `arButtons`  
  Pole ukazatele na pásu karet elementy.  
   
 ### <a name="remarks"></a>Poznámky  
  Více prvků pásu karet může mít stejné ID příkazu, protože některé prvky pásu karet je možné zkopírovat do panelu nástrojů Rychlý přístup.  
   
-##  <a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags  
+##  <a name="gethideflags"></a>  CMFCRibbonBar::GetHideFlags  
  Načte příznaky, které označují, kolik z panelu pásu karet je viditelná.  
   
 ```  
@@ -975,7 +970,7 @@ DWORD GetHideFlags() const;
  `AFX_RIBBONBAR_HIDE_ALL`  
  Šířka pruhu pásu karet je menší než minimální šířku a je úplně skrytá.  
   
-##  <a name="getitemidslist"></a>CMFCRibbonBar::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonBar::GetItemIDsList  
  Načte ID příkazu pro zadanou kolekci elementů pásu karet na panelu pásu karet.  
   
 ```  
@@ -984,15 +979,15 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`lstItems`  
+ [out] `lstItems`  
  Seznam ID příkazu pro prvky pásu karet, které jsou obsaženy v panelu pásu karet.  
   
- [v]`bHiddenOnly`  
- `TRUE`vyloučit prvky pásu karet, které se zobrazují; `FALSE` zahrnout všechny prvky pásu karet na panelu pásu karet.  
+ [v] `bHiddenOnly`  
+ `TRUE` vyloučit prvky pásu karet, které se zobrazují; `FALSE` zahrnout všechny prvky pásu karet na panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel  
+##  <a name="getkeyboardnavigationlevel"></a>  CMFCRibbonBar::GetKeyboardNavigationLevel  
  Načte aktuální úroveň navigace jako uživatel stiskne popisy tlačítek, které jsou obsaženy na panelu pásu karet.  
   
 ```  
@@ -1013,7 +1008,7 @@ int GetKeyboardNavigationLevel() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent  
+##  <a name="getkeyboardnavlevelcurrent"></a>  CMFCRibbonBar::GetKeyboardNavLevelCurrent  
  Načte aktuální objekt navigační klávesnice na panelu pásu karet.  
   
 ```  
@@ -1026,7 +1021,7 @@ CObject* GetKeyboardNavLevelCurrent() const;
 ### <a name="remarks"></a>Poznámky  
  Objekt, který je aktuálně zobrazení popisy tlačítek je aktuální objekt navigační klávesnice.  
   
-##  <a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent  
+##  <a name="getkeyboardnavlevelparent"></a>  CMFCRibbonBar::GetKeyboardNavLevelParent  
  Načte nadřazený objekt navigace klávesnice na panelu pásu karet.  
   
 ```  
@@ -1039,7 +1034,7 @@ CObject* GetKeyboardNavLevelParent() const;
 ### <a name="remarks"></a>Poznámky  
  Když uživatel stiskne keytip na panelu pásu karet, stane se aktuální objekt navigační klávesnice nadřazený objekt navigace klávesnice.  
   
-##  <a name="getmaincategory"></a>CMFCRibbonBar::GetMainCategory  
+##  <a name="getmaincategory"></a>  CMFCRibbonBar::GetMainCategory  
  Načte ukazatel na pásu karet hlavní kategorie.  
   
 ```  
@@ -1052,7 +1047,7 @@ CMFCRibbonCategory* GetMainCategory() const;
 ### <a name="remarks"></a>Poznámky  
  Pás karet hlavní kategorie obsahuje panelu hlavní pásu karet.  
   
-##  <a name="getqatcommandslocation"></a>CMFCRibbonBar::GetQATCommandsLocation  
+##  <a name="getqatcommandslocation"></a>  CMFCRibbonBar::GetQATCommandsLocation  
  Načte zobrazení rámeček pro část příkazy panelu nástrojů Rychlý přístup.  
   
 ```  
@@ -1065,7 +1060,7 @@ CRect GetQATCommandsLocation() const;
 ### <a name="remarks"></a>Poznámky  
  V části příkazy obdélníku zobrazení nezahrnuje tlačítko přizpůsobení.  
   
-##  <a name="getqatdroppeddown"></a>CMFCRibbonBar::GetQATDroppedDown  
+##  <a name="getqatdroppeddown"></a>  CMFCRibbonBar::GetQATDroppedDown  
  Načte ukazatel na pásu karet elementu na panelu nástrojů Rychlý přístup, který má svůj místní nabídky vyřadit.  
   
 ```  
@@ -1077,7 +1072,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="getquickaccesscommands"></a>CMFCRibbonBar::GetQuickAccessCommands  
+##  <a name="getquickaccesscommands"></a>  CMFCRibbonBar::GetQuickAccessCommands  
  Načte seznam ID příkazu pro prvky pásu karet na panelu nástrojů Rychlý přístup.  
   
 ```  
@@ -1085,13 +1080,13 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`lstCommands`  
+ [out] `lstCommands`  
  Seznam ID příkazu pro prvky pásu karet na panelu nástrojů Rychlý přístup.  
   
 ### <a name="remarks"></a>Poznámky  
  Seznam neobsahuje prvky pásu karet, které jsou ovládací prvek oddělovače.  
   
-##  <a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::GetQuickAccessToolbarLocation  
+##  <a name="getquickaccesstoolbarlocation"></a>  CMFCRibbonBar::GetQuickAccessToolbarLocation  
  Načte zobrazení rámeček pro panel nástrojů Rychlý přístup.  
   
 ```  
@@ -1103,7 +1098,7 @@ CRect GetQuickAccessToolbarLocation() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio  
+##  <a name="gettabtrancateratio"></a>  CMFCRibbonBar::GetTabTrancateRatio  
  Načte snížení procenta velikosti Šířka zobrazení karet kategorie.  
   
 ```  
@@ -1116,7 +1111,7 @@ int GetTabTrancateRatio() const;
 ### <a name="remarks"></a>Poznámky  
  Kategorie karty jsou snížit šířku při není dostatečná šířka na panelu pásu karet.  
   
-##  <a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
+##  <a name="gettooltipfixedwidthlargeimage"></a>  CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
  Načte velké šířky popisek pruhu pásu karet.  
   
 ```  
@@ -1129,7 +1124,7 @@ int GetTooltipFixedWidthLargeImage() const;
 ### <a name="remarks"></a>Poznámky  
  Pokud velká velikost popisku šířku 0, se liší šířku.  
   
-##  <a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GetTooltipFixedWidthRegular  
+##  <a name="gettooltipfixedwidthregular"></a>  CMFCRibbonBar::GetTooltipFixedWidthRegular  
  Získá regulární velikost popisku Šířka pruhu pásu karet.  
   
 ```  
@@ -1142,7 +1137,7 @@ int GetTooltipFixedWidthRegular() const;
 ### <a name="remarks"></a>Poznámky  
  Pokud regulární velikost popisku šířku 0, se liší šířku.  
   
-##  <a name="getvisiblecategorycount"></a>CMFCRibbonBar::GetVisibleCategoryCount  
+##  <a name="getvisiblecategorycount"></a>  CMFCRibbonBar::GetVisibleCategoryCount  
  Načte počet viditelné kategorií na panelu pásu karet.  
   
 ```  
@@ -1154,7 +1149,7 @@ int GetVisibleCategoryCount() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories  
+##  <a name="hideallcontextcategories"></a>  CMFCRibbonBar::HideAllContextCategories  
  Skryje všechny kategorie kontext na panelu pásu karet.  
   
 ```  
@@ -1162,12 +1157,12 @@ BOOL HideAllContextCategories();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se skryté alespoň jeden kontextu kategorie; v opačném `FALSE`.  
+ `TRUE` Pokud se skryté alespoň jeden kontextu kategorie; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud kategorie kontextu je aktivní, aktivní kategorie se resetuje do první viditelné kategorie v seznamu kategorie.  
   
-##  <a name="hidekeytips"></a>CMFCRibbonBar::HideKeyTips  
+##  <a name="hidekeytips"></a>  CMFCRibbonBar::HideKeyTips  
  Skryje všechny popisy tlačítek na panelu pásu karet.  
   
 ```  
@@ -1176,7 +1171,7 @@ void HideKeyTips();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="hittest"></a>CMFCRibbonBar::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonBar::HitTest  
  Načte ukazatel na pásu karet element určeného umístění bodu.  
   
 ```  
@@ -1187,14 +1182,14 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`point`  
+ [v] `point`  
  Umístění bodu v souřadnicích panelu pásu karet.  
   
- [v]`bCheckActiveCategory`  
- `TRUE`k vyhledání aktivní kategorie; `FALSE` není pro vyhledávání aktivní kategorie.  
+ [v] `bCheckActiveCategory`  
+ `TRUE` k vyhledání aktivní kategorie; `FALSE` není pro vyhledávání aktivní kategorie.  
   
- [v]`bCheckPanelCaption`  
- `TRUE`k testování titulek panelu pásu karet s bod umístěný v. `FALSE` nechcete testování titulek panelu pásu karet pomocí bod umístěný v ní. Další informace naleznete v části Poznámky.  
+ [v] `bCheckPanelCaption`  
+ `TRUE` k testování titulek panelu pásu karet s bod umístěný v. `FALSE` nechcete testování titulek panelu pásu karet pomocí bod umístěný v ní. Další informace naleznete v části Poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na pásu karet element nacházející se v zadané čárky. v opačném případě `NULL` Pokud není bod v elementu pásu karet.  
@@ -1202,7 +1197,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 ### <a name="remarks"></a>Poznámky  
  Titulek panelu pásu karet s bod umístěný v něm není testována, pokud `bCheckActiveCategory` parametr `TRUE`.  
   
-##  <a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTipEnabled  
+##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Určuje, zda je povolena funkce popisy tlačítek.  
   
 ```  
@@ -1210,9 +1205,9 @@ BOOL IsKeyTipEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je povolená funkce popisy tlačítek; v opačném případě `FALSE`.  
+ `TRUE` Pokud je povolená funkce popisy tlačítek; v opačném případě `FALSE`.  
   
-##  <a name="ismainribbonbar"></a>CMFCRibbonBar::IsMainRibbonBar  
+##  <a name="ismainribbonbar"></a>  CMFCRibbonBar::IsMainRibbonBar  
  Určuje, zda je na pásu karet panelu panelu primární pásu karet.  
   
 ```  
@@ -1225,7 +1220,7 @@ virtual BOOL IsMainRibbonBar() const;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda vždy vrátí `TRUE`. Potlačí tuto metodu pro indikaci, zda je na pásu karet panelu panelu primární pásu karet.  
   
-##  <a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreviewEnabled  
+##  <a name="isprintpreviewenabled"></a>  CMFCRibbonBar::IsPrintPreviewEnabled  
  Určuje, zda **Náhled** je povolena funkce.  
   
 ```  
@@ -1233,9 +1228,9 @@ BOOL IsPrintPreviewEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud **Náhled** funkce je povoleno; jinak hodnota `FALSE`.  
+ `TRUE` Pokud **Náhled** funkce je povoleno; jinak hodnota `FALSE`.  
   
-##  <a name="isqatempty"></a>CMFCRibbonBar::IsQATEmpty  
+##  <a name="isqatempty"></a>  CMFCRibbonBar::IsQATEmpty  
  Určuje, jestli panelu nástrojů Rychlý přístup obsahuje příkazová tlačítka.  
   
 ```  
@@ -1243,11 +1238,11 @@ BOOL IsQATEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud panelu nástrojů Rychlý přístup obsahuje příkazová tlačítka; v opačném případě `FALSE`.  
+ `TRUE` Pokud panelu nástrojů Rychlý přístup obsahuje příkazová tlačítka; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar::IsQuickAccessToolbarOnTop  
+##  <a name="isquickaccesstoolbarontop"></a>  CMFCRibbonBar::IsQuickAccessToolbarOnTop  
  Určuje, zda je umístěna nad nebo pod panelem pásu karet nástrojů Rychlý přístup.  
   
 ```  
@@ -1255,9 +1250,9 @@ BOOL IsQuickAccessToolbarOnTop() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud na pásu karet pruh; se nachází panelu nástrojů Rychlý přístup `FALSE` Pokud panelu nástrojů Rychlý přístup se nachází v panelu pásu karet.  
+ `TRUE` Pokud na pásu karet pruh; se nachází panelu nástrojů Rychlý přístup `FALSE` Pokud panelu nástrojů Rychlý přístup se nachází v panelu pásu karet.  
   
-##  <a name="isreplaceframecaption"></a>CMFCRibbonBar::IsReplaceFrameCaption  
+##  <a name="isreplaceframecaption"></a>  CMFCRibbonBar::IsReplaceFrameCaption  
  Určuje, zda nahrazuje panelu pásu karet, nebo je pod Titulek hlavního rámce okna.  
   
 ```  
@@ -1265,9 +1260,9 @@ BOOL IsReplaceFrameCaption() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud na pásu karet panelu nahrazuje Titulek hlavního rámce okna; `FALSE` Pokud je panel pásu karet v části Titulek hlavního rámce okna.  
+ `TRUE` Pokud na pásu karet panelu nahrazuje Titulek hlavního rámce okna; `FALSE` Pokud je panel pásu karet v části Titulek hlavního rámce okna.  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBar::IsShowGroupBorder  
  Udává, zda skupin umístěna na pásu karet řádku zobrazit ohraničení skupiny.  
   
 ```  
@@ -1275,7 +1270,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pGroup`  
+ [v] `pGroup`  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1284,7 +1279,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda vždy vrátí `FALSE`. Potlačí tuto metodu indikující, zda zobrazit skupiny tlačítko umístěna na pásu karet řádku ohraničení skupiny.  
   
-##  <a name="istooltipdescrenabled"></a>CMFCRibbonBar::IsToolTipDescrEnabled  
+##  <a name="istooltipdescrenabled"></a>  CMFCRibbonBar::IsToolTipDescrEnabled  
  Určuje, zda jsou povolena popisy popisku.  
   
 ```  
@@ -1292,12 +1287,12 @@ BOOL IsToolTipDescrEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou povolené popisek popisy; `FALSE` Pokud popisek popisy jsou zakázány.  
+ `TRUE` Pokud jsou povolené popisek popisy; `FALSE` Pokud popisek popisy jsou zakázány.  
   
 ### <a name="remarks"></a>Poznámky  
  Popisek popisy jsou další popisný text, zobrazí se text popisku.  
   
-##  <a name="istooltipenabled"></a>CMFCRibbonBar::IsToolTipEnabled  
+##  <a name="istooltipenabled"></a>  CMFCRibbonBar::IsToolTipEnabled  
  Určuje, zda jsou popisy tlačítek zapnutá nebo vypnutá pro panelu pásu karet.  
   
 ```  
@@ -1305,9 +1300,9 @@ BOOL IsToolTipEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou povolené popisy tlačítek; `FALSE` Pokud popisy tlačítek jsou zakázány.  
+ `TRUE` Pokud jsou povolené popisy tlačítek; `FALSE` Pokud popisy tlačítek jsou zakázány.  
   
-##  <a name="istransparentcaption"></a>CMFCRibbonBar::IsTransparentCaption  
+##  <a name="istransparentcaption"></a>  CMFCRibbonBar::IsTransparentCaption  
  Určuje, zda zobrazení je nastaven pro rozhraní Windows Aero barevné schéma.  
   
 ```  
@@ -1315,11 +1310,11 @@ BOOL IsTransparentCaption() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud je na barevném schématu rozhraní Windows Aero; v opačném případě `FALSE`.  
+ `TRUE` Pokud je na barevném schématu rozhraní Windows Aero; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onclickbutton"></a>CMFCRibbonBar::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCRibbonBar::OnClickButton  
  Tato metoda se zachovává kvůli zpětné kompatibilitě se stávajícími aplikacemi a by se neměla používat pro vývoj.  
   
 ```  
@@ -1329,15 +1324,15 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pButton`  
+ [v] `pButton`  
  Ukazatel na tlačítko označeného.  
   
- [v]`point`  
+ [v] `point`  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu  
+##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu  
 
   
 ```  
@@ -1347,12 +1342,12 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pEdit`  
- [v]`point`  
+ [v] `pEdit`  
+ [v] `point`  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBar::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBar::OnRTLChanged  
  Voláno rámcem při změně rozložení směr.  
   
 ```  
@@ -1360,13 +1355,13 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bIsRTL`  
- `TRUE`Pokud je rozložení-doleva; `FALSE` Pokud je rozložení zleva doprava.  
+ [v] `bIsRTL`  
+ `TRUE` Pokud je rozložení-doleva; `FALSE` Pokud je rozložení zleva doprava.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda upraví rozložení všechny ovládací prvky na panelu pásu karet pro nové směru rozložení.  
   
-##  <a name="onsetaccdata"></a>CMFCRibbonBar::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCRibbonBar::OnSetAccData  
  Tato metoda je interní rozhraní Framework a není určená k volání přímo z uživatelského kódu.  
   
 ```  
@@ -1374,7 +1369,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- dlouhá`lVal`  
+ dlouhá `lVal`  
  Index objektu přístupné.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1382,7 +1377,7 @@ BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextMenu  
+##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu  
 
   
 ```  
@@ -1394,16 +1389,16 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
- [v]`x`  
- [v]`y`  
- [v]`pHit`  
+ [v] `pWnd`  
+ [v] `x`  
+ [v] `y`  
+ [v] `pHit`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbonQATMenu  
+##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu  
 
   
 ```  
@@ -1415,16 +1410,16 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
- [v]`x`  
- [v]`y`  
- [v]`pHit`  
+ [v] `pWnd`  
+ [v] `x`  
+ [v] `y`  
+ [v] `pHit`  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown  
+##  <a name="onsyskeydown"></a>  CMFCRibbonBar::OnSysKeyDown  
  Voláno rámcem, když uživatel stiskne klávesu F10 nebo obsahuje klávesu ALT a potom stiskne jiný klíč.  
   
 ```  
@@ -1435,21 +1430,21 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pFrameWnd`  
+ [v] `pFrameWnd`  
  Ukazatel na nadřazeného hlavního rámce okna panelu pásu karet.  
   
- [v]`wParam`  
+ [v] `wParam`  
  Virtuální klíče kód se stisknuta klávesa.  
   
- [v]`lParam`  
+ [v] `lParam`  
  Příznaky stavu klávesnice byl stisknutí klávesy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla zpracována událost klávesu; v opačném případě `FALSE`.  
+ `TRUE` Pokud byla zpracována událost klávesu; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp  
+##  <a name="onsyskeyup"></a>  CMFCRibbonBar::OnSysKeyUp  
  Voláno rámcem, když uživatel uvolní klíč F10, klávesu ALT nebo klíče, která byla stisknuta při byla stisknuta klávesa ALT.  
   
 ```  
@@ -1460,21 +1455,21 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pFrameWnd`  
+ [v] `pFrameWnd`  
  Ukazatel na nadřazeného hlavního rámce okna panelu pásu karet.  
   
- [v]`wParam`  
+ [v] `wParam`  
  Virtuální klíče kód klíče vydán.  
   
- [v]`lParam`  
+ [v] `lParam`  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byla zpracována událost klávesu; v opačném případě `FALSE`.  
+ `TRUE` Pokud byla zpracována událost klávesu; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="poptooltip"></a>CMFCRibbonBar::PopTooltip  
+##  <a name="poptooltip"></a>  CMFCRibbonBar::PopTooltip  
  Odebere popisek ze zobrazení.  
   
 ```  
@@ -1483,7 +1478,7 @@ void PopTooltip();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="pretranslatemessage"></a>CMFCRibbonBar::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCRibbonBar::PreTranslateMessage  
  Určuje, pokud je zadaná zpráva zpracovány panelu pásu karet.  
   
 ```  
@@ -1491,15 +1486,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pMsg`  
+ [v] `pMsg`  
  Ukazatel na zprávu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl zpracovat zprávu panelem pásu karet. v opačném případě `FALSE`.  
+ `TRUE` Pokud byl zpracovat zprávu panelem pásu karet. v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonBar::RecalcLayout  
  Upraví rozložení všech ovládacích prvků na pásu karet panelu.  
   
 ```  
@@ -1509,7 +1504,7 @@ virtual void RecalcLayout();
 ### <a name="remarks"></a>Poznámky  
  Po úpravě rozložení se aktualizuje zobrazení panelu pásu karet.  
   
-##  <a name="removeallcategories"></a>CMFCRibbonBar::RemoveAllCategories  
+##  <a name="removeallcategories"></a>  CMFCRibbonBar::RemoveAllCategories  
  Odstraní všechny kategorie pásu karet z panelu pásu karet.  
   
 ```  
@@ -1519,7 +1514,7 @@ void RemoveAllCategories();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odstraní všechny kategorie pásu karet z paměti a v seznamu kategorie.  
   
-##  <a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs  
+##  <a name="removeallfromtabs"></a>  CMFCRibbonBar::RemoveAllFromTabs  
  Odebere všechny prvky pásu karet z oblast karty.  
   
 ```  
@@ -1529,7 +1524,7 @@ void RemoveAllFromTabs();
 ### <a name="remarks"></a>Poznámky  
  Tuto funkci použít, pokud chcete odebrat všechny prvky, které jste přidali do oblast karty pomocí [CMFCRibbonBar::AddToTabs](#addtotabs) metoda.  
   
-##  <a name="removecategory"></a>CMFCRibbonBar::RemoveCategory  
+##  <a name="removecategory"></a>  CMFCRibbonBar::RemoveCategory  
  Odstraní zadaný pásu karet kategorii z panelu pásu karet.  
   
 ```  
@@ -1537,16 +1532,16 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Index založený na nule kategorie v seznamu kategorií pásu karet, který je obsažen v panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud byl odstraněn kategorie zadaný pásu karet; v opačném případě `FALSE`.  
+ `TRUE` Pokud byl odstraněn kategorie zadaný pásu karet; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Kategorie zadaný pásu karet se odstraní z paměti a v seznamu kategorie.  
   
-##  <a name="setactivecategory"></a>CMFCRibbonBar::SetActiveCategory  
+##  <a name="setactivecategory"></a>  CMFCRibbonBar::SetActiveCategory  
  Nastaví zadaný pásu karet kategorii jako aktivní kategorie.  
   
 ```  
@@ -1556,21 +1551,21 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pCategory`  
+ [v] `pCategory`  
  Kategorie pásu karet, která se nachází v panelu pásu karet.  
   
- [v]`bForceRestore`  
- `TRUE`aby maximalizovala panelu pásu karet, pokud jeho minimalizaci; `FALSE` zobrazit aktivní kategorie v místním okně, pokud je minimalizován panelu pásu karet.  
+ [v] `bForceRestore`  
+ `TRUE` aby maximalizovala panelu pásu karet, pokud jeho minimalizaci; `FALSE` zobrazit aktivní kategorie v místním okně, pokud je minimalizován panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud zadaná kategorie bylo nastaveno jako aktivní kategorie; v opačném případě `FALSE`.  
+ `TRUE` Pokud zadaná kategorie bylo nastaveno jako aktivní kategorie; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Pás karet hlavní kategorie nesmí být aktivní kategorie.  
   
  Pokud kategorie určuje `pCategory` se nezobrazí, nemůže být nastavená jako aktivní kategorie.  
   
-##  <a name="setactivemdichild"></a>CMFCRibbonBar::SetActiveMDIChild  
+##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  Přidruží systému tlačítek na panelu pásu karet, které patří do zadané podřízeného okna MDI podřízeného okna rozhraní více dokumentů (MDI).  
   
 ```  
@@ -1578,12 +1573,12 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na podřízené okna MDI.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton  
+##  <a name="setapplicationbutton"></a>  CMFCRibbonBar::SetApplicationButton  
  Přiřadí aplikace pásu karet tlačítko panelu pásu karet.  
   
 ```  
@@ -1593,10 +1588,10 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pButton`  
+ [v] `pButton`  
  Ukazatel na pásu karet tlačítko aplikace.  
   
- [v]`sizeButton`  
+ [v] `sizeButton`  
  Velikost na pásu karet tlačítko aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1607,7 +1602,7 @@ void SetApplicationButton(
   
  [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]  
   
-##  <a name="setelementkeys"></a>CMFCRibbonBar::SetElementKeys  
+##  <a name="setelementkeys"></a>  CMFCRibbonBar::SetElementKeys  
  Nastaví popisy tlačítek pro všechny elementy pásu karet, které mají zadaný příkaz ID.  
   
 ```  
@@ -1618,22 +1613,22 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiCmdID`  
+ [v] `uiCmdID`  
  ID příkazu elementu pásu karet.  
   
- [v]`lpszKeys`  
+ [v] `lpszKeys`  
  Keytip.  
   
- [v]`lpszMenuKeys`  
+ [v] `lpszMenuKeys`  
  Keytip nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud jsou popisy tlačítek pásu karet alespoň jeden element; v opačném případě `FALSE`.  
+ `TRUE` Pokud jsou popisy tlačítek pásu karet alespoň jeden element; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Keytip volitelné nabídky je pro prvky pásu karet pomocí tlačítka rozdělení, které se otevře místní nabídky.  
   
-##  <a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::SetKeyboardNavigationLevel  
+##  <a name="setkeyboardnavigationlevel"></a>  CMFCRibbonBar::SetKeyboardNavigationLevel  
  Nastaví úroveň navigace klávesnice jako uživatel stiskem tlačítka popisy tlačítek, které jsou obsaženy na panelu pásu karet.  
   
 ```  
@@ -1643,16 +1638,16 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`pLevel`  
+ [v] `pLevel`  
  Ukazatel na aktuální objekt navigační klávesnice.  
   
- [v]`bSetFocus`  
- `TRUE`nastavit fokus klávesnice na panelu pásu karet.  
+ [v] `bSetFocus`  
+ `TRUE` nastavit fokus klávesnice na panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Klávesnice navigačním panelu pásu karet spustí, když uživatel stiskne klávesu ALT nebo F10. Uživatel vybere další úroveň navigace stisknutím kombinace kláves keytip na panelu pásu karet. Uživatel může vrátit k předchozí úroveň navigace stisknutím klávesy ESC.  
   
-##  <a name="setmaximizemode"></a>CMFCRibbonBar::SetMaximizeMode  
+##  <a name="setmaximizemode"></a>  CMFCRibbonBar::SetMaximizeMode  
  Upraví na pásu karet panelu při velikost okna podřízeného okna rozhraní více dokumentů (MDI) vstoupí do nebo ji opustí maximalizovaném okně Stav.  
   
 ```  
@@ -1662,16 +1657,16 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bMax`  
- `TRUE`k zobrazení tlačítka systému pro podřízené okna MDI na pásu karet panelu; `FALSE` tlačítka systému pro podřízené okna MDI odebrání panelu pásu karet.  
+ [v] `bMax`  
+ `TRUE` k zobrazení tlačítka systému pro podřízené okna MDI na pásu karet panelu; `FALSE` tlačítka systému pro podřízené okna MDI odebrání panelu pásu karet.  
   
- [v]`pWnd`  
+ [v] `pWnd`  
  Ukazatel na rámec hlavního okna pro panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Panelu pásu karet zobrazuje systému tlačítka pro podřízené okna MDI v řádku záložek, když je maximalizovaný podřízeného okna MDI.  
   
-##  <a name="setquickaccesscommands"></a>CMFCRibbonBar::SetQuickAccessCommands  
+##  <a name="setquickaccesscommands"></a>  CMFCRibbonBar::SetQuickAccessCommands  
  Přidá jeden či více elementů pásu karet na panelu nástrojů Rychlý přístup.  
   
 ```  
@@ -1681,18 +1676,18 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`lstCommands`  
+ [v] `lstCommands`  
  Seznam příkazů, které chcete umístit na panelu nástrojů Rychlý přístup.  
   
- [v]`bRecalcLayout`  
- `TRUE`Pokud chcete po přidání prvky pásu karet; ho překreslit pásu karet `FALSE` jinak.  
+ [v] `bRecalcLayout`  
+ `TRUE` Pokud chcete po přidání prvky pásu karet; ho překreslit pásu karet `FALSE` jinak.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `SetQuickAccessCommands` metoda v `CMFCRibbonBar` třídy.  
   
  [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
   
-##  <a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::SetQuickAccessDefaultState  
+##  <a name="setquickaccessdefaultstate"></a>  CMFCRibbonBar::SetQuickAccessDefaultState  
  Nastaví panelu nástrojů Rychlý přístup do výchozího stavu.  
   
 ```  
@@ -1700,7 +1695,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`state`  
+ [v] `state`  
  Výchozí stav panelu nástrojů Rychlý přístup.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1711,7 +1706,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
   
  [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]  
   
-##  <a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar::SetQuickAccessToolbarOnTop  
+##  <a name="setquickaccesstoolbarontop"></a>  CMFCRibbonBar::SetQuickAccessToolbarOnTop  
  Umisťuje panelu nástrojů Rychlý přístup nad nebo pod panelem pásu karet.  
   
 ```  
@@ -1719,10 +1714,10 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`bOnTop`  
- `TRUE`na pozici panelu nástrojů Rychlý přístup nad panelem pásu karet. `FALSE` na pozici panelu nástrojů Rychlý přístup pod panelem pásu karet.  
+ [v] `bOnTop`  
+ `TRUE` na pozici panelu nástrojů Rychlý přístup nad panelem pásu karet. `FALSE` na pozici panelu nástrojů Rychlý přístup pod panelem pásu karet.  
   
-##  <a name="settooltipfixedwidth"></a>CMFCRibbonBar::SetTooltipFixedWidth  
+##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  Nastaví obyčejnými a velké velikosti popisek pevnou šířku pro panelu pásu karet.  
   
 ```  
@@ -1732,16 +1727,16 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nWidthRegular`  
+ [v] `nWidthRegular`  
  Šířka v pixelech regulární pevné velikosti popisek.  
   
- [v]`nWidthLargeImage`  
+ [v] `nWidthLargeImage`  
  Šířka v pixelech velkým pevnou velikost popisku.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastavení parametru na hodnotu 0 způsobí, že odpovídající šířku, která má lišit.  
   
-##  <a name="showcategory"></a>CMFCRibbonBar::ShowCategory  
+##  <a name="showcategory"></a>  CMFCRibbonBar::ShowCategory  
  Zobrazí nebo skryje kategorie zadaný pásu karet.  
   
 ```  
@@ -1751,13 +1746,13 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nIndex`  
+ [v] `nIndex`  
  Index kategorie pásu karet.  
   
- [v]`bShow`  
+ [v] `bShow`  
  Pokud `TRUE`, zobrazit na pásu karet kategorii; jinak skrýt kategorie pásu karet.  
   
-##  <a name="showcontextcategories"></a>CMFCRibbonBar::ShowContextCategories  
+##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  Zobrazí nebo skryje kontextu kategorií, které mají zadané ID.  
   
 ```  
@@ -1767,13 +1762,13 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`uiContextID`  
+ [v] `uiContextID`  
  ID kontextu kategorie.  
   
- [v]`bShow`  
+ [v] `bShow`  
  Pokud `TRUE`, Zobrazit kategorie, které mají zadané ID; jinak hodnota skrýt kategorií, které mají zadané ID.  
   
-##  <a name="showkeytips"></a>CMFCRibbonBar::ShowKeyTips  
+##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  Zobrazuje popisy tlačítek pro každý prvek pásu karet na panelu pásu karet.  
   
 ```  
@@ -1782,7 +1777,7 @@ void ShowKeyTips();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState  
+##  <a name="togglemimimizestate"></a>  CMFCRibbonBar::ToggleMimimizeState  
  Přepne na pásu karet pruh mezi stavy minimalizovaném okně a maximalizovaném okně.  
   
 ```  
@@ -1794,7 +1789,7 @@ void ToggleMimimizeState();
   
  V minimalizovaném okně stavu je skrytý ovládací prvek pásu karet a zobrazí se pouze karty. Když uživatel klikne na kartě, se zobrazí místní okno ovládacího prvku pásu karet. Okno zavřete, když uživatel klikne na možnost rychle nebo provede příkaz.  
   
-##  <a name="translatechar"></a>CMFCRibbonBar::TranslateChar  
+##  <a name="translatechar"></a>  CMFCRibbonBar::TranslateChar  
  Určuje, zda kód zadaný klávesu zpracovává panelu pásu karet.  
   
 ```  
@@ -1802,16 +1797,16 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]`nChar`  
+ [v] `nChar`  
  Kód znaku klávesu uživatele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud kód znaku zpracování panelem pásu karet. v opačném případě `FALSE`.  
+ `TRUE` Pokud kód znaku zpracování panelem pásu karet. v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Popisy tlačítek funkce umožňuje uživatelům procházet panelu pásu karet pomocí klávesnice.  
   
-##  <a name="getfocused"></a>CMFCRibbonBar::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonBar::GetFocused  
  Vrátí element cílených.  
   
 ```  
@@ -1823,7 +1818,7 @@ virtual CMFCRibbonBaseElement* GetFocused();
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonBar::IsWindows7Look  
  Označuje, zda má na pásu karet Windows 7, podívejte se (tlačítko malá obdélníková aplikace).  
   
 ```  
@@ -1831,11 +1826,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud systém Windows 7 vypadat; má na pásu karet v opačném případě `FALSE`.  
+ `TRUE` Pokud systém Windows 7 vypadat; má na pásu karet v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="loadfromresource"></a>CMFCRibbonBar::LoadFromResource  
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource  
  Přetíženo. Načte panelu pásu karet z prostředků aplikace.  
   
 ```  
@@ -1865,11 +1860,11 @@ virtual BOOL LoadFromResource(
  Určuje ID prostředku (ve formátu řetězce) s informacemi o panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`Pokud se podaří zatížení; v opačném případě `FALSE`.  
+ `TRUE` Pokud se podaří zatížení; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="savetoxmlbuffer"></a>CMFCRibbonBar::SaveToXMLBuffer  
+##  <a name="savetoxmlbuffer"></a>  CMFCRibbonBar::SaveToXMLBuffer  
  Na pásu karet panelu uloží do vyrovnávací paměti.  
   
 ```  
@@ -1881,11 +1876,11 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
  Po návratu tato funkce `ppBuffer` body do vyrovnávací paměti přidělené touto metodou a obsahuje informace o pásu karet panelu ve formátu XML.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="savetoxmlfile"></a>CMFCRibbonBar::SaveToXMLFile  
+##  <a name="savetoxmlfile"></a>  CMFCRibbonBar::SaveToXMLFile  
  Na pásu karet panelu uloží do souboru XML.  
   
 ```  
@@ -1897,11 +1892,11 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
  Určuje výstupní soubor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE`v případě úspěšného; v opačném případě `FALSE`.  
+ `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="setwindows7look"></a>CMFCRibbonBar::SetWindows7Look  
+##  <a name="setwindows7look"></a>  CMFCRibbonBar::SetWindows7Look  
  Povolí nebo zakáže vzhledu Windows 7 (malá obdélníková aplikace tlačítko) pro pás karet.  
   
 ```  
@@ -1912,10 +1907,10 @@ void SetWindows7Look(
   
 ### <a name="parameters"></a>Parametry  
  `bWindows7Look`  
- `TRUE`Nastaví Windows 7 naleznete; `FALSE` jinak.  
+ `TRUE` Nastaví Windows 7 naleznete; `FALSE` jinak.  
   
  `bRecalc`  
- `TRUE`přepočítá rozložení pásu karet; `FALSE` jinak.  
+ `TRUE` přepočítá rozložení pásu karet; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
   

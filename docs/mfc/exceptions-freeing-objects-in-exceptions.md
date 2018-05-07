@@ -1,13 +1,10 @@
 ---
-title: "Výjimky: Uvolnění objektů ve výjimkách | Microsoft Docs"
-ms.custom: 
+title: 'Výjimky: Uvolnění objektů ve výjimkách | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a422347e319fabbd91f20e0ebf7897865f1ca4c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21a63a55103cbefda2ba501c5609b772b2203166
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Výjimky: Uvolnění objektů ve výjimkách
 Tento článek vysvětluje potřeba a metodě uvolnění objektů, když dojde k výjimce. Témata zahrnují:  
@@ -53,14 +48,14 @@ Tento článek vysvětluje potřeba a metodě uvolnění objektů, když dojde k
   
  Jak je uvedeno výše, `myPerson` nebudou odstraněna, pokud je vyvolána výjimka podle `SomeFunc`. Provádění přejde přímo na další vnější obslužná rutina výjimky, obcházení ukončení normální funkce a kód, který odstraní objekt. Ukazatele na objekt je mimo rozsah při výjimka ponechá funkce a paměti obsazené objekt se obnoví nikdy tak dlouho, dokud je aplikace spuštěna. Toto je nevrácená paměť systému; by být zjistil, že pomocí diagnostiky paměti.  
   
-##  <a name="_core_handling_the_exception_locally"></a>Zpracování výjimek místně  
+##  <a name="_core_handling_the_exception_locally"></a> Zpracování výjimek místně  
  **Try/catch –** zlepší poskytuje Obranným programovací metodu pro vyloučení nevracení paměti a zajištění, že jsou při výskytu výjimek zničen vašich objektů. Například z příkladu výše v tomto článku by mohla být přepsána následujícím způsobem:  
   
  [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]  
   
  Tento nový příklad nastaví obslužnou rutinu výjimky pro zachycení výjimky a zacházejte s ním místně. Potom obvykle ukončí funkce a zničí objektu. Důležitým aspektem tohoto příkladu je, že se naváže kontext k zachycení výjimky **try/catch –** bloky. Bez lokálních výjimek rámečku by funkce nikdy vědět, že výjimku měl nebyly vytvořeny a nebude mít možnost ukončení normálně a odstraňte objekt.  
   
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a>Vyvolání výjimek po zničení objektů  
+##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Vyvolání výjimek po zničení objektů  
  Dalším způsobem zpracování výjimek je je předat další vnější kontext zpracování výjimek. Ve vaší **catch** blok, můžete provést některé čištění místně přidělené objektů a poté vyvolat výjimku pro další zpracování.  
   
  Aktivační funkce může nebo nemusí být nutné se zrušit přidělení haldy objekty. Pokud funkci vždy zruší přidělení haldy objekt před vrácením v případě, že normální, potom funkce by také navrácení objektu haldy před způsobující výjimku. Na druhé straně Pokud funkce není navrátit normálně objekt před vrácením v případě, že normální, pak musíte se rozhodnout případ od případu zda objektu haldy by měl být navrácena.  

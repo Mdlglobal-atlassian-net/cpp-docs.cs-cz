@@ -1,12 +1,9 @@
 ---
-title: "Třída COleConvertDialog | Microsoft Docs"
-ms.custom: 
+title: Třída COleConvertDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog – třída
 Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura ve Windows SDK.  
@@ -102,7 +97,7 @@ class COleConvertDialog : public COleDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
  Vytvoří pouze `COleConvertDialog` objektu.  
   
 ```  
@@ -124,7 +119,7 @@ explicit COleConvertDialog (
   
 - **CF_SELECTACTIVATEAS** Určuje, že přepínač aktivovat jako vybere původně při volání dialogové okno.  
   
-- **CF_SETCONVERTDEFAULT** Určuje, že třída jejichž **CLSID** je zadána **clsidConvertDefault** členem `m_cv` struktura bude sloužit jako výchozí Výběr v poli seznam tříd, pokud je vybrána přepínač převést na.  
+- **CF_SETCONVERTDEFAULT** Určuje, že třída jejichž **CLSID** je zadána **clsidConvertDefault** členem `m_cv` struktura se použije jako výchozí výběr v seznamu tříd zaškrtnuto políčko převést na přepínač.  
   
 - **CF_SETACTIVATEDEFAULT** Určuje, že třída jejichž **CLSID** je zadána **clsidActivateDefault** členem `m_cv` struktura bude sloužit jako výchozí Výběr v seznamu Třída při aktivaci jako přepínač vybrán.  
   
@@ -141,7 +136,7 @@ explicit COleConvertDialog (
   
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) a [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktury.  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  Volání této funkce po vrácení úspěšně z [DoModal](#domodal), buď převést nebo aktivovat objekt typu [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
   
 ```  
@@ -158,7 +153,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>Poznámky  
  Převést nebo aktivovat podle informace uživatelem v dialogovém okně Převést vybrané položky.  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
  Volání této funkce můžete zobrazit dialogové okno Převést OLE.  
   
 ```  
@@ -179,7 +174,7 @@ virtual INT_PTR DoModal();
   
  Pokud `DoModal` vrátí **IDOK**, můžete volat jiné členské funkce načíst nastavení nebo informace, které se vstup uživatelem na dialogové okno.  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
  Volání této funkce můžete získat **CLSID** přidružené k položce vyberte v dialogovém okně Převést uživatele.  
   
 ```  
@@ -194,7 +189,7 @@ REFCLSID GetClassID() const;
   
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  Volání této funkce určete, zda se uživatel rozhodl zobrazit vybranou položku jako ikonu.  
   
 ```  
@@ -204,16 +199,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Metoda potřebné k vykreslení objektu.  
   
-- `DVASPECT_CONTENT`Vrátí, pokud není zaškrtnuto zaškrtávací políčko Zobrazit jako ikonu.  
+- `DVASPECT_CONTENT` Vrátí, pokud není zaškrtnuto zaškrtávací políčko Zobrazit jako ikonu.  
   
-- `DVASPECT_ICON`Vrátí, pokud byl zaškrtnutí zaškrtávacího políčka Zobrazit jako ikonu.  
+- `DVASPECT_ICON` Vrátí, pokud byl zaškrtnutí zaškrtávacího políčka Zobrazit jako ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce až po volání [DoModal](#domodal) vrátí **IDOK**.  
   
  Další informace o kreslení aspekt najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura dat ve Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  Volání této funkce se získat popisovač pro metafile, který obsahuje ikony aspekt vybrané položky.  
   
 ```  
@@ -223,7 +218,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač metafile obsahující ikony aspekt vybrané položky, pokud byl zaškrtněte políčko Zobrazit jako ikonu zaškrtnutí, když se tak, že zvolíte zavřel dialogové okno **OK**jinak **NULL**.  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
  Volání této funkce se zjistit typ převodu vybrané v dialogovém okně Převést.  
   
 ```  
@@ -252,7 +247,7 @@ enum Selection {
   
 - **COleConvertDialog::activateAs** vrácena, pokud byl zaškrtnutí přepínač aktivovat jako uživatel vybral jinou položku chcete aktivovat, a `DoModal` vrátil **IDOK**.  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
  Struktura typu **OLEUICONVERT** používat k ovládání chování dialogové okno Převést.  
   
 ```  

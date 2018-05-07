@@ -1,12 +1,9 @@
 ---
-title: "Třída COleChangeIconDialog | Microsoft Docs"
-ms.custom: 
+title: Třída COleChangeIconDialog | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog – třída
 Používá se pro dialogové okno OLE změnit ikonu.  
@@ -93,7 +88,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  Tato funkce se vytvoří pouze `COleChangeIconDialog` objektu.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  Další informace najdete v tématu [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struktura ve Windows SDK.  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Volání této funkce můžete změnit ikonu představující položku do vybraného v dialogovém okně po [DoModal](#domodal) vrátí **IDOK**.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je změna úspěšná; jinak 0.  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  Volání této funkce můžete zobrazit dialogové okno OLE změnit ikonu.  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  Pokud `DoModal` vrátí **IDOK**, můžete volat jiné členské funkce načíst nastavení nebo informace, které se vstup uživatelem na dialogové okno.  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  Volání této funkce se získat popisovač pro metafile, který obsahuje ikony aspekt vybrané položky.  
   
 ```  
@@ -173,7 +168,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač metafile obsahující ikony aspekt na novou ikonu, pokud dialogové okno se zavře výběrem **OK**, jinak hodnota ikonu, protože byla předtím, než se zobrazí dialogové okno.  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  Struktura typu **OLEUICHANGEICON** používat k ovládání chování dialogové okno Změnit ikonu.  
   
 ```  
