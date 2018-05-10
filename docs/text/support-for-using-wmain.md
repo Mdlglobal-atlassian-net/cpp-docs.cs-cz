@@ -1,13 +1,10 @@
 ---
-title: "Podpora použití funkce wmain | Microsoft Docs"
-ms.custom: 
+title: Podpora použití funkce wmain | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - wWinMain
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721915ca5ebbc75b17771dae0804e94aa360177c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8b82b9f13da1b7c4884001fed5afce832147714
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-using-wmain"></a>Podpora použití funkce wmain
 Visual C++ podporuje definování **wmain** funkce a předání argumentů široká charakterová do vaší aplikace kódování Unicode. Deklarovat formální parametry **wmain**, formátu podobná **hlavní**. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. `argv` a `envp` parametry, které **wmain** typu `wchar_t*`. Příklad:  

@@ -1,30 +1,25 @@
 ---
-title: "Souhrn programování Unicode | Microsoft Docs"
-ms.custom: 
+title: Souhrn programování Unicode | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unicode-programming-summary"></a>Souhrn programování s kódem Unicode
 Abyste mohli využívat MFC a C Runtime podpora pro Unicode, budete muset:  
@@ -90,13 +85,13 @@ Abyste mohli využívat MFC a C Runtime podpora pro Unicode, budete muset:
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut`přijímá a počet znaků, ne počet bajtů.  
+     `CDC::TextOut` přijímá a počet znaků, ne počet bajtů.  
   
 -   Použití [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) otevírat soubory Unicode.  
   
  To Shrneme, MFC a knihovna RTL – poskytuje následující podporu pro programování Unicode:  
   
--   S výjimkou funkce člena třídy databáze, jsou všechny funkce MFC kódování Unicode, včetně `CString`. `CString`také poskytuje funkce převodu znakové sady Unicode nebo ANSI.  
+-   S výjimkou funkce člena třídy databáze, jsou všechny funkce MFC kódování Unicode, včetně `CString`. `CString` také poskytuje funkce převodu znakové sady Unicode nebo ANSI.  
   
 -   Knihovna RTL – poskytuje Unicode verze všechny funkce zpracování řetězců. (Běhové knihovny také poskytuje přenositelné verze vhodné pro kódování Unicode nebo MBCS. Jedná se o **_tcs** makra.)  
   

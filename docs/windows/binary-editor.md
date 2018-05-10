@@ -1,13 +1,10 @@
 ---
-title: "Binární Editor | Microsoft Docs"
-ms.custom: 
+title: Binární Editor | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource editors, Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="binary-editor"></a>Binární editor
 > [!WARNING]
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  Binární editor umožňuje upravovat libovolný prostředek na binární úrovni v šestnáctkovém formátu nebo ve formátu ASCII. Můžete také [najít – příkaz](/visualstudio/ide/reference/find-command) k vyhledání řetězců ASCII nebo hexadecimální bajty. Binární editor by měl být použit pouze v případě, že je zapotřebí zobrazit nebo mírně upravit vlastní prostředky nebo typy prostředků, které nejsou podporovány prostředím Visual Studio.  
   
- Otevřete Editor pro binární, nejprve vyberte **soubor &#124; Nové &#124; Soubor** z hlavní nabídky, vyberte soubor, který chcete upravit, a potom klikněte na rozevírací šipku vedle položky **otevřete** tlačítko a zvolte **otevřít v &#124; Binární Editor**.  
+ Otevřete Editor pro binární, nejprve vyberte **soubor &#124; nový &#124; soubor** z hlavní nabídky, vyberte soubor, který chcete upravit, a potom klikněte na rozevírací šipku vedle položky **otevřete** tlačítko a zvolte **Otevřít protokolem &#124; binární Editor**.  
   
 > [!CAUTION]
 >  Úprava prostředků jako dialogová okna, obrázky nebo nabídky pomocí binárního editoru není bezpečná. Nesprávné úpravy mohou prostředek poškodit a učinit jej nečitelným v jeho nativním editoru.  

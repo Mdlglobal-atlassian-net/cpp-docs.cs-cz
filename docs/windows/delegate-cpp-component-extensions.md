@@ -1,13 +1,10 @@
 ---
-title: "Delegát (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: Delegát (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (rozšíření komponent C++)
 Deklaruje typ, který reprezentuje ukazatel na funkci.  
@@ -36,7 +31,7 @@ Deklaruje typ, který reprezentuje ukazatel na funkci.
  Prostředí Windows Runtime i modul common language runtime podporují delegáti.  
   
 ### <a name="remarks"></a>Poznámky  
- `delegate`je kontextová – klíčové slovo. Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `delegate` je kontextová – klíčové slovo. Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Detekuje v době kompilace, pokud je typem delegáta, použijte `__is_delegate()` typ znak. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
@@ -57,7 +52,7 @@ delegate-type-identifier
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *přístup*  
+ *Přístup*  
  (volitelné) Usnadnění přístupu delegáta, který může být `public` (výchozí) nebo `private`. Prototyp funkce může být také kvalifikovaný pomocí `const` nebo `volatile` klíčová slova.  
   
  *Návratový typ*  
@@ -88,7 +83,7 @@ function_declaration
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *přístup*  
+ *Přístup*  
  (volitelné) Usnadnění přístupu delegáta mimo sestavení může být veřejné nebo soukromé.  Výchozí hodnota je soukromé.  Uvnitř třídy může mít delegáta žádné usnadnění.  
   
  *function_declaration*  

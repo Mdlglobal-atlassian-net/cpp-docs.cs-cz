@@ -1,13 +1,10 @@
 ---
-title: "registration_script – | Microsoft Docs"
-ms.custom: 
+title: registration_script – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.registration_script
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40790788fdb5ce73a6c33e62b6ee55d2da4c5364
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="registrationscript"></a>registration_script
 Spustí skript zadanou vlastní registraci.  
@@ -41,7 +36,7 @@ Spustí skript zadanou vlastní registraci.
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *skript*  
+ *Skript*  
  Úplná cesta k souboru vlastní registrace skript (.). Hodnota **žádné**, jako například `script = "none"`, označuje, že coclass nemá žádné požadavky na registraci.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -77,7 +72,7 @@ class CMyClass:public IFace {};
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**,`struct`|  
+|**Platí pro**|**Třída**, `struct`|  
 |**Opakovatelných**|Ne|  
 |**Povinné atributy**|Jeden nebo více z následujících: **třída typu coclass**, **progid**, nebo **vi_progid –**.|  
 |**Neplatné atributy**|Žádné|  

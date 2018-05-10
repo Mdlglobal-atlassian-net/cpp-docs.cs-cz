@@ -1,13 +1,10 @@
 ---
-title: "Portování ze systému UNIX do Win32 | Microsoft Docs"
-ms.custom: 
+title: Portování ze systému UNIX do Win32 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 Při migraci aplikací ze systému UNIX do systému Windows, máte několik možností:  
@@ -48,11 +43,11 @@ Při migraci aplikací ze systému UNIX do systému Windows, máte několik mož
 ### <a name="unix-migration-guides"></a>Příručky k migraci UNIX  
  Průvodce migrací UNIX vlastní aplikace obsahuje technickou nápovědu migrace kódu ze systému UNIX do Win32 prostředí.  
   
- [http://go.microsoft.com/fwlink/p/?LinkId=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Průvodce projektem migrace Unix doplňuje Průvodce migrací UNIX vlastní aplikace poskytnutím vysokoúrovňové pomoci s přenesením podstatných projektů ze systému UNIX do Win32. Průvodce poskytuje Rady na problémy, které je třeba zvážit v každé fázi migrace projektu. Průvodce může být stažen:  
   
- [http://go.microsoft.com/fwlink/p/?LinkId=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Služby Microsoft Windows pro UNIX (SFU)  
  Služby systému Windows pro UNIX (SFU) poskytuje celou řadu napříč platformami služby pro integraci systému Windows do existujících prostředí založené na systému UNIX. Služby pro systém UNIX poskytuje sdílení souborů, vzdálený přístup a správu, synchronizace hesel, společnou správu adresářů, společnou sadu nástrojů a prostředí.  
@@ -65,9 +60,9 @@ Při migraci aplikací ze systému UNIX do systému Windows, máte několik mož
  Třetí straně lokality pro společnost poskytuje softwarem, který podporuje přenos ze systému UNIX do Win32.  
   
 ### <a name="c-boost-web-site"></a>Nárůst C++ webu  
- [http://Boost.sourceforge.NET/Regression-Logs/](http://boost.sourceforge.net/regression-logs/)  
+ [http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)  
   
- [http://Boost.sourceforge.NET/Boost-build2/](http://boost.sourceforge.net/boost-build2/)  
+ [http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)  
   
 ## <a name="porting-unix-applications-directly-to-win32"></a>Přenos aplikací systému UNIX přímo do Win32  
  Další možností je portování aplikací systému UNIX do Win32 přímo. Pomocí knihovny ANSI C/C++ a komerčních knihoven kompilátoru C, mnoho tradiční systému, který volání spoléhali na aplikací pro systém UNIX jsou k dispozici v aplikace Win32.  

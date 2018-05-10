@@ -1,12 +1,9 @@
 ---
 title: Makra (C/C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
-Předběžné zpracování rozšíří makra v všechny řádky, které nejsou preprocesor – direktivy (řádky, které nemají  **#**  jako první znak prázdných znaků) a v části některé direktivy, které nejsou v rámci přeskočeny Podmíněná kompilace. Direktivy „podmíněné kompilace“ umožňují potlačit kompilace částí zdrojového souboru testováním konstantního výrazu nebo identifikátoru k určení, které textové bloky jsou předány kompilátoru a které textové bloky jsou odstraněny ze zdrojového souboru během předběžného zpracování.  
+Předběžné zpracování rozšíří makra v všechny řádky, které nejsou preprocesor – direktivy (řádky, které nemají **#** jako první znak prázdných znaků) a v části některé direktivy, které nejsou v rámci přeskočeny Podmíněná kompilace. Direktivy „podmíněné kompilace“ umožňují potlačit kompilace částí zdrojového souboru testováním konstantního výrazu nebo identifikátoru k určení, které textové bloky jsou předány kompilátoru a které textové bloky jsou odstraněny ze zdrojového souboru během předběžného zpracování.  
   
  Direktiva `#define` je obvykle použita pro přiřazení smysluplných identifikátorů konstantám, klíčovým slovům a běžně používaným příkazům a výrazům. Identifikátory, které představují konstanty, jsou někdy označovány jako „symbolické konstanty“ nebo „konstanty manifestu“. Identifikátory, které představují příkazy nebo výrazy, jsou označovány jako „makra“. V této dokumentaci preprocesoru se používá pouze termín „makro“.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Předdefinované klávesy akcelerátoru | Microsoft Docs"
-ms.custom: 
+title: Předdefinované klávesy akcelerátoru | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - keyboard shortcuts, predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="predefined-accelerator-keys"></a>Předdefinované klávesy akcelerátoru
 Existuje několik předdefinovaných přístupové klávesy, které může být součástí projekt aplikace Windows. Některé z těchto virtuálních klíčů jsou pro prostředí Windows. Další podpora prohlížeče nebo aplikace kódování Unicode. Můžete používat kterýkoli z těchto klíčů v jakékoli akcelerátoru.  
@@ -69,7 +64,7 @@ Existuje několik předdefinovaných přístupové klávesy, které může být 
 |VK_OEM_2|Windows: pro standardní klávesnice USA "/?" klíč|  
 |VK_OEM_3|Windows: pro standardní klávesnice USA % ~' klíč|  
 |VK_OEM_4|Windows: pro standardní klávesnice USA. [{"klíč|  
-|VK_OEM_5|Windows: pro standardní klávesnice USA "\\&#124; klíč|  
+|VK_OEM_5|Windows: pro standardní klávesnice USA "\\&#124;' klíč|  
 |VK_OEM_6|Windows: pro standardní klávesnice USA, "]}" klíč|  
 |VK_OEM_7|Windows: pro standardní klávesnice USA, klíč 'single uvozovky nebo dvojitou quote'|  
 |VK_OEM_COMMA|Windows: pro jakékoli zemi či oblasti, klíč ''|  

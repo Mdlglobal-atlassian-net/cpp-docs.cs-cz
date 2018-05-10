@@ -1,13 +1,10 @@
 ---
-title: "Výběr barvy z obrázku, která se použije jinde (Editor obrázků pro ikony) | Microsoft Docs"
-ms.custom: 
+title: Výběr barvy z obrázku, která se použije jinde (Editor obrázků pro ikony) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
 dev_langs:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a42e514c3b13a1e958c4ff08d51bb330653ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c8c946d0343c45ca5223f9bf976a94b67c70a2b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Výběr barvy z obrázku, která se použije jinde (editor obrázků pro ikony)
 **Vybrat barvu**, nebo barva vyzvednutí, nástroj umožňuje libovolnou barvu na bitovou kopii aktuální barvu popředí nebo pozadí barvy, v závislosti na tom, jestli stiskněte levé nebo pravé tlačítko myši. Chcete-li zrušit **vybrat barvu** nástroj, vyberte jiný nástroj.  

@@ -1,29 +1,24 @@
 ---
-title: "Visual C++ změnit historie 2003 2015 | Microsoft Docs"
-ms.custom: 
+title: Visual C++ změnit historie 2003 2015 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie 2003 2015 změn Visual C++
 
@@ -65,7 +60,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
      Pokud chcete použít pro národní prostředí vlákna, zkontrolujte používání localeconv – Pokud chcete zobrazit, pokud kód předpokládá, že data lconv – vrátí je pro globální národní prostředí a příslušným způsobem upravte.  
   
-#### <a name="mathh"></a>\<math.h>  
+#### <a name="mathh"></a>\<Math.h >  
   
 -   **C++ přetížení funkce knihovny math** v předchozích verzích \<math.h > definované některé, ale ne všechny přetížení C++ pro matematické funkce knihovny. \<cmath – > definované zbývající přetížení, takže zobrazíte všechny přetížení, jeden obsahovat \<cmath – > záhlaví. To vedlo k problémům s překladem přetížení funkce v kódu, který zahrnuty pouze \<math.h >. Nyní, byly odebrány všechny přetížení C++ z \<math.h > a jsou nyní k dispozici pouze v \<cmath – >.  
   
@@ -99,7 +94,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
      Toto není narušující změně pro smíšený nebo nativní kód (/ clr), ale pro zkompilovaný kód jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), to může způsobit selhání kompilace kódu. Pokud při kompilaci kódu jako/CLR: pure, budete muset přidat #include \<nové > nebo #include \<new.h > obejít sestavení chyb v důsledku této změny. Všimněte si, že/CLR: pure je zastaralé v sadě Visual Studio 2015 a v budoucích verzích může být odstraněna. Kód, který musí být "čistý" musí být přesně do jazyka C#.  
   
-#### <a name="processh"></a>\<process.h>  
+#### <a name="processh"></a>\<Process.h >  
   
 -   **_beginthread – a _beginthreadex** [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) a [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) funkce teď obsahovat odkaz na modul, ve kterém je definovaný postup vlákno po dobu trvání přístup z více vláken. To pomáhá zajistit, že moduly nejsou odstraněny, až do dokončení má spuštění vlákna.  
   
@@ -226,7 +221,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
      Byla přidána nové funkce _wcstok s původním podpisu k usnadnění portování. Při kompilování kódu C++, je také vložené přetížení wcstok –, které má starý podpis. Toto přetížení je deklarován jako zastaralé. V kódu jazyka C může define_CRT_NON_CONFORMING_WCSTOK způsobí _wcstok má být použit místo wcstok –.  
   
-#### <a name="timeh"></a>\<time.h>  
+#### <a name="timeh"></a>\<Time.h >  
   
 -   **hodiny** v předchozích verzích [hodiny](../c-runtime-library/reference/clock.md) funkce byla implementována pomocí rozhraní API systému Windows [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). S touto implementací funkce hodin byl citlivé systémového času a nebyl proto nutně monotónní. Funkce hodin má byla reimplemented z hlediska [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a nyní je monotónní.  
   
@@ -289,9 +284,9 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
     |has_default_constructor|is_default_constructible|  
     |has_copy_constructor|is_copy_constructible|  
     |has_move_constructor|is_move_constructible|  
-    |has_nothrow_constructor|is_nothrow_default_constructible|  
+    |has_nothrow_|is_nothrow_default_constructible|  
     |has_nothrow_default_constructor|is_nothrow_default_constructible|  
-    |has_nothrow_copy|is_nothrow_copy_constructible|  
+    |has_nothrow_copy –|is_nothrow_copy_constructible|  
     |has_nothrow_copy_constructor|is_nothrow_copy_constructible|  
     |has_nothrow_move_constructor|is_nothrow_move_constructible|  
     |has_nothrow_assign|is_nothrow_copy_assignable|  
@@ -305,7 +300,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **zásady Launch::Any a launch::sync** nestandardní zásady launch::any a launch::sync byly odebrány. Místo toho pro launch::any, použijte spuštění: asynchronní &#124; Spusťte: odložené. Pro launch::sync použijte launch::deferred. V tématu [launch – výčet](../standard-library/future-enums.md#launch).  
+-   **zásady Launch::Any a launch::sync** nestandardní zásady launch::any a launch::sync byly odebrány. Místo toho použijte pro launch::any, spusťte: asynchronní &#124; spusťte: odložené. Pro launch::sync použijte launch::deferred. V tématu [launch – výčet](../standard-library/future-enums.md#launch).  
   
 ####  <a name="BK_MFC"></a> MFC a knihovna ATL  
   
@@ -338,7 +333,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
 -   [Shoda vylepšení v aktualizaci 3](#VS_Update3)  
   
-###  <a name="VS_RTM">Vylepšení shoda v sadě Visual Studio 2015</a>  
+###  <a name="VS_RTM"></a> Vylepšení shoda v sadě Visual Studio 2015  
   
 -   Možnost /Zc:forScope-  
   
@@ -1408,7 +1403,7 @@ struct S2 : public S1 {
 ```
 Postup řešení chyby, v S2 odeberte volání S1() z konstruktoru a v případě potřeby ji umístit do jiné funkce.
 
--   **{} brání převod na ukazatele**  
+-   **{} zabraňuje převod na ukazatele**  
 
 Následující kód vytvoří teď C2439 'S::p': člen nebylo možné inicializovat.   
 ```cpp
@@ -2854,7 +2849,7 @@ C c;
   
      V sadě Visual Studio 2012 E1 ve výrazu E1::b přeložit na:: E1 v globálním oboru. V sadě Visual Studio 2013, E1 ve výrazu E1::b přeloží na typedef E2 definice v main() a má typ:: E2.  
   
--   Došlo ke změně rozložení objektu. Na platformě x 64 se může v porovnání z předchozími verzemi změnit rozložení objektů třídy. Pokud má virtuální funkci, ale neobsahuje základní třídu, která obsahuje virtuální funkci, objektový model kompilátoru vloží ukazatel na tabulku virtuálních funkcí za rozložení datových členů. To znamená, že rozložení nemusí být ve všech případech optimální. V předchozích verzích představuje optimalizaci pro x64 se pokusit o zlepšení rozložení pro vás, ale protože se nepodařilo správně fungovat v situacích, složitý kód, byla odebrána v sadě Visual Studio 2013. Podívejte se například na tento kód:  
+-   Rozložení objektů se změnilo. Na platformě x 64 se může v porovnání z předchozími verzemi změnit rozložení objektů třídy. Pokud má virtuální funkci, ale neobsahuje základní třídu, která obsahuje virtuální funkci, objektový model kompilátoru vloží ukazatel na tabulku virtuálních funkcí za rozložení datových členů. To znamená, že rozložení nemusí být ve všech případech optimální. V předchozích verzích představuje optimalizaci pro x64 se pokusit o zlepšení rozložení pro vás, ale protože se nepodařilo správně fungovat v situacích, složitý kód, byla odebrána v sadě Visual Studio 2013. Podívejte se například na tento kód:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2973,7 +2968,7 @@ C c;
   
 -   Metoda CDatabase::GetConnect se odebere. Pokud chcete zvýšit zabezpečení, jsou teď uložená připojovací řetězec zašifrována a dešifrována pouze v případě potřeby; nemůže být vrácen jako prostý text.  Řetězec lze získat pomocí metody CDatabase::Dump.  
   
--   Podpis CWnd::OnPowerBroadcast se změní. Podpis tohoto popisovače zprávy se změní na LPARAM jako druhý parametr.  
+-   Podpis CWnd::OnPowerBroadcast se změnil. Podpis tohoto popisovače zprávy se změní na LPARAM jako druhý parametr.  
   
 -   Podpisy jsou změnit zohlednit obslužné rutiny zpráv. Seznamy parametrů u následujících funkcí se změnily a používají nově přidané popisovače zpráv ON_WM_ *:  
   
@@ -3106,7 +3101,7 @@ C c;
   
 -   Removed AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
   
--   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
+-   Odebrané AFX_GLOBAL_DATA::DwmDefWindowProc. Volání Windows API přímo v systému Windows Vista, Windows 7 a Windows 8.  
   
 -   AFX_GLOBAL_DATA::DwmIsCompositionEnabled přejmenován na isdwmcompositionenabled – eliminovat kolize názvů.  
   
@@ -3204,11 +3199,11 @@ C c;
   
     -   Getwicfactory –  
   
-    -   InitD2D  
+    -   Initd2d –  
   
     -   ReleaseD2DRefs  
   
-    -   IsD2DInitialized  
+    -   Isd2dinitialized –  
   
     -   D2D1MakeRotateMatrix  
   

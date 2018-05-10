@@ -1,12 +1,9 @@
 ---
 title: '#Pokud, #elif, #else a #endif (C/C++) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direktivy #if, #elif, #else a #endif (C/C++)
 `#if` Direktivy s `#elif`, `#else`, a `#endif` direktivy, ovládací prvky kompilaci části zdrojového souboru. Pokud píšete výraz (po `#if`) má nenulovou hodnotu, skupině řádek hned za `#if` – direktiva se uchovávají v jednotce překlad.  
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  Preprocesor procesů vybrané *text* a předává je kompilátoru. Pokud *text* obsahuje preprocesor – direktivy preprocesoru neprovede tyto direktivy. Pouze text bloky vybraná preprocesor kompilovány.  
   
- Preprocesor vybere jeden *text* položky vyhodnocením konstantní výraz, který následuje každý `#if` nebo `#elif` – direktiva, dokud nenajde true (nenulové) konstantní výraz. Vybere veškerý text (včetně jiných preprocesor – direktivy počínaje  **#** ) až přidružené `#elif`, `#else`, nebo `#endif`.  
+ Preprocesor vybere jeden *text* položky vyhodnocením konstantní výraz, který následuje každý `#if` nebo `#elif` – direktiva, dokud nenajde true (nenulové) konstantní výraz. Vybere veškerý text (včetně jiných preprocesor – direktivy počínaje **#**) až přidružené `#elif`, `#else`, nebo `#endif`.  
   
  Pokud všechny výskyty *konstantní výraz* jsou nastavena hodnota false, nebo pokud žádné `#elif` direktivy nezobrazí, preprocesor vybere bloku textu po `#else` klauzule. Pokud `#else` je vynechaná klauzule a všechny instance *konstantní výraz* v `#if` bloku jsou false, je vybrán žádný text blok.  
   

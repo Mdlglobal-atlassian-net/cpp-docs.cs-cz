@@ -1,13 +1,10 @@
 ---
-title: "Přidat prostředek – dialogové okno | Microsoft Docs"
-ms.custom: 
+title: Přidat prostředek – dialogové okno | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.insertresource
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c420a1d72aa4ceca7d71840fcccb451b6e0aba0f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="add-resource-dialog-box"></a>Dialogové okno Přidat prostředek
 Pomocí tohoto dialogového okna Přidat prostředky do projektu aplikace pracovní plochy C++ Windows.  
@@ -42,7 +37,7 @@ Pomocí tohoto dialogového okna Přidat prostředky do projektu aplikace pracov
   
  Prostředky zobrazené na nejvyšší úrovni stromové struktury jsou výchozí prostředky, které jsou k dispozici v systému Visual Studio.  
   
- **New**  
+ **Nový**  
  Vytvoří prostředek na základě výběru v typu **typ prostředku** pole. Prostředek se otevře ve vhodném editoru. Například pokud vytvoříte zdroj dialogového okna, otevře se v [editoru dialogového okna](../windows/dialog-editor.md).  
   
  **Import**  

@@ -1,13 +1,10 @@
 ---
-title: "appobject – | Microsoft Docs"
-ms.custom: 
+title: appobject – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.appobject
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19462987cf4f9b5cc295766a694f01b8b4fac8ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="appobject"></a>appobject
 Identifikuje třída typu coclass jako objekt aplikace, který je přidružen k aplikaci úplné .exe a označuje, že jsou globálně dostupnou v této funkce a vlastnosti coclass [knihovny typů](../mfc/automation-clients-using-type-libraries.md).  
@@ -66,7 +61,7 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**,`struct`|  
+|**Platí pro**|**Třída**, `struct`|  
 |**Opakovatelných**|Ne|  
 |**Povinné atributy**|**coclass**|  
 |**Neplatné atributy**|Žádné|  

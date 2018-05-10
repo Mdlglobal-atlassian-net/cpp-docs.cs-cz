@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view – třída | Microsoft Docs"
-ms.custom: 
+title: accelerator_view – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 Představuje virtuální zařízení abstrakce na akcelerátor C++ AMP paralelní data.  
@@ -58,7 +53,7 @@ class accelerator_view;
 |Název|Popis|  
 |----------|-----------------|  
 |[accelerator_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator_view` třídy.|  
-|[~accelerator_view Destructor](#dtor)|Zničí `accelerator_view` objektu.|  
+|[~ accelerator_view – destruktor](#dtor)|Zničí `accelerator_view` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -69,23 +64,23 @@ class accelerator_view;
 |[get_accelerator](#get_accelerator)|Vrátí `accelerator` objekt pro `accelerator_view` objektu.|  
 |[get_is_auto_selection](#get_is_auto_selection)|Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátoru při `accelerator_view` předaný objekt [parallel_for_each –](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[get_is_debug](#get_is_debug)|Vrátí logickou hodnotu, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
-|[get_queuing_mode](#get_queuing_mode)|Vrátí hodnotu režimu front zpráv pro `accelerator_view` objektu.|  
-|[get_version](#get_version)|Vrátí verzi `accelerator_view`.|  
-|[wait](#wait)|Všechny příkazy odeslané na čeká `accelerator_view` objekt, který chcete dokončit.|  
+|[get_queuing_mode –](#get_queuing_mode)|Vrátí hodnotu režimu front zpráv pro `accelerator_view` objektu.|  
+|[get_version –](#get_version)|Vrátí verzi `accelerator_view`.|  
+|[Počkej](#wait)|Všechny příkazy odeslané na čeká `accelerator_view` objekt, který chcete dokončit.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
-|[operator=](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` objekt s touto.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` objekt s touto.|  
 |[operator==](#operator_eq_eq)|Porovná tato `accelerator_view` objekt s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accelerator](#accelerator)|Získá `accelerator` objekt pro `accelerator_view` objektu.|  
+|[akcelerátoru](#accelerator)|Získá `accelerator` objekt pro `accelerator_view` objektu.|  
 |[is_auto_selection](#is_auto_selection)|Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátoru při `accelerator_view` předaný objekt [parallel_for_each –](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[is_debug](#is_debug)|Získá logickou hodnotu, která určuje, zda `accelerator_view` objekt má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
 |[queuing_mode](#queuing_mode)|Získá režim front zpráv pro `accelerator_view` objektu.|  

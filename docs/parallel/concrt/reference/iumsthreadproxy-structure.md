@@ -1,12 +1,9 @@
 ---
-title: "Iumsthreadproxy – struktura | Microsoft Docs"
-ms.custom: 
+title: Iumsthreadproxy – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy – struktura
 Abstrakci pro vlákno provádění. Pokud chcete vašeho scheduleru udělit oprávnění uživatelského režimu které lze plánovat vláken (UMS), nastavte hodnotu pro element zásad plánovače `SchedulerKind` k `UmsThreadDefault`a implementovat `IUMSScheduler` rozhraní. UMS vláken jsou pouze podporované v operačních systémech 64bitové verze Windows 7 a vyšší.  
@@ -48,11 +43,11 @@ struct IUMSThreadProxy : public IThreadProxy;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Voláno k zadání důležité oblasti. Když uvnitř důležité oblasti, nebude sledovat Plánovač asynchronní blokování operace, které dojít během oblasti. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vláken, volání asynchronní procedur jádra (APCs) a tak dále, UMS vlákna.|  
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Voláno k zadání technologie hyper důležité oblasti. Když uvnitř technologie hyper důležité oblasti, nebude sledovat Plánovač žádné blokování operace, které dojít během oblasti. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku chyb stránek, které bloku vláken pozastavení, volání asynchronní procedur jádra (APCs) a tak dále, pro UMS vláken.|  
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Volá, aby bylo možné ukončit důležité oblasti.|  
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Volá, aby bylo možné ukončit technologie hyper důležité oblasti.|  
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Vrátí jaký druh důležité oblasti proxy vlákno je v rámci. Protože technologie hyper důležité oblasti jsou nadmnožinou důležité oblasti, pokud je zadán kód důležité oblasti a pak technologie hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|  
+|[Iumsthreadproxy::entercriticalregion –](#entercriticalregion)|Voláno k zadání důležité oblasti. Když uvnitř důležité oblasti, nebude sledovat Plánovač asynchronní blokování operace, které dojít během oblasti. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vláken, volání asynchronní procedur jádra (APCs) a tak dále, UMS vlákna.|  
+|[Iumsthreadproxy::enterhypercriticalregion –](#enterhypercriticalregion)|Voláno k zadání technologie hyper důležité oblasti. Když uvnitř technologie hyper důležité oblasti, nebude sledovat Plánovač žádné blokování operace, které dojít během oblasti. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku chyb stránek, které bloku vláken pozastavení, volání asynchronní procedur jádra (APCs) a tak dále, pro UMS vláken.|  
+|[Iumsthreadproxy::exitcriticalregion –](#exitcriticalregion)|Volá, aby bylo možné ukončit důležité oblasti.|  
+|[Iumsthreadproxy::exithypercriticalregion –](#exithypercriticalregion)|Volá, aby bylo možné ukončit technologie hyper důležité oblasti.|  
+|[Iumsthreadproxy::getcriticalregiontype –](#getcriticalregiontype)|Vrátí jaký druh důležité oblasti proxy vlákno je v rámci. Protože technologie hyper důležité oblasti jsou nadmnožinou důležité oblasti, pokud je zadán kód důležité oblasti a pak technologie hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [IThreadProxy](ithreadproxy-structure.md)  

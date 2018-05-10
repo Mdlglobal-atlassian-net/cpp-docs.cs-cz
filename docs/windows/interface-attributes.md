@@ -1,31 +1,26 @@
 ---
-title: "Atributy rozhraní | Microsoft Docs"
-ms.custom: 
+title: Atributy rozhraní | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff84939b3211633e199066e1a38da2e91efb1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-attributes"></a>Atributy rozhraní
 Následující atributy se používají na [rozhraní (nebo __interface)](../cpp/interface.md) C++ – klíčové slovo.  
@@ -33,7 +28,7 @@ Následující atributy se používají na [rozhraní (nebo __interface)](../cpp
 |Atribut|Popis|  
 |---------------|-----------------|  
 |[async_uuid](../windows/async-uuid.md)|Určuje identifikátor UUID, který přesměruje MIDL kompilátoru k definování synchronní a asynchronní verzích rozhraní modelu COM.|  
-|[vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atributy.|  
+|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atributy.|  
 |[dispinterface](../windows/dispinterface.md)|Umístí rozhraní v souboru IDL jako rozhraní odesílání.|  
 |[dual](../windows/dual.md)|Umístí rozhraní v souboru IDL jako duální rozhraní.|  
 |[export](../windows/export.md)|Způsobí, že datová struktura umístit do souboru.|  
@@ -52,7 +47,7 @@ Následující atributy se používají na [rozhraní (nebo __interface)](../cpp
 |[pointer_default](../windows/pointer-default.md)|Určuje výchozí atribut ukazatele pro všechny ukazatele s výjimkou ukazatele nejvyšší úrovně, které se zobrazují v seznamy parametrů.|  
 |[ptr](../windows/ptr.md)|Ukazatel se označí jako úplné ukazatel.|  
 |[restricted](../windows/restricted.md)|Označí, kteří členové knihovny nelze volat libovolně.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Poskytuje jedinečné ID pro knihovnu|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Poskytuje jedinečné ID pro knihovnu|  
   
  Musí odpovídat těchto pravidel pro definování rozhraní:  
   

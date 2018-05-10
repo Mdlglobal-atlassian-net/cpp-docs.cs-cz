@@ -1,13 +1,10 @@
 ---
-title: "Postupy: zahrnutí prostředků v době kompilace | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: zahrnutí prostředků v době kompilace | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.including
 - vc.resvw.resource.including
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 201985a10d0f5a58fc7d617e307d2715bf29be32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Postupy: Zahrnutí prostředků v čase kompilace
 Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všechny prostředky v souboru skriptu (.rc) jeden prostředek. Však přidáním prostředků v dalších souborů do aktuálního projektu v době kompilace tak, že je v uvedete **kompilaci direktivy** pole [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md).  

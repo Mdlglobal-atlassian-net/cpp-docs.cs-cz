@@ -1,13 +1,10 @@
 ---
-title: "zapečetěné (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: zapečetěné (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
@@ -16,21 +13,19 @@ dev_langs:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (rozšíření komponent C++)
-`sealed`kontextové klíčové slovo pro ref třídy, které určuje, že nebylo možné přepsat člena virtuální nebo že typu nelze použít jako základní typ je.  
+`sealed` kontextové klíčové slovo pro ref třídy, které určuje, že nebylo možné přepsat člena virtuální nebo že typu nelze použít jako základní typ je.  
   
 > [!NOTE]
 >  ISO C ++ 11 standardní jazyk má [konečné](../cpp/final-specifier.md) – klíčové slovo, který není podporován v sadě Visual Studio. Použití `final` na standardní třídy a `sealed` na ref třídy.  
@@ -46,7 +41,7 @@ virtual return-type identifier() sealed {...};
   
 ### <a name="parameters"></a>Parametry  
   
- *identifikátor*  
+ *Identifikátor*  
  Název třídy nebo funkce.  
   
  *Návratový typ*  
@@ -60,7 +55,7 @@ virtual return-type identifier() sealed {...};
   
  V době kompilace může zjistit, zda je typ zapečetěná pomocí `__is_sealed(type)` typ znak. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `sealed`je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `sealed` je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
  V tématu [Ref třídy a struktury](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  

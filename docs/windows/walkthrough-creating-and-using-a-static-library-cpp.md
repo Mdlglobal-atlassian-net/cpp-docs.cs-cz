@@ -1,31 +1,26 @@
 ---
-title: "Návod: Vytvoření a použití statické knihovny (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření a použití statické knihovny (C++) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
 Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) pro použití s aplikací C++. Použití statické knihovny je skvělým způsobem, jak kód opakovaně. Místo znovu implementace stejných rutin v každé aplikaci, která vyžaduje funkci, je napsat jednou v statické knihovny a pak na ni odkazujte z aplikací. Kód odkazované z statické knihovny stane součástí aplikace – nemusíte instalovat k použití kódu jiný soubor.  
@@ -45,13 +40,13 @@ Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) p
 ## <a name="prerequisites"></a>Požadavky  
  Pochopení základy jazyka C++.  
   
-##  <a name="BKMK_CreateLibProject"></a>Vytvoření projektu statické knihovny  
+##  <a name="BKMK_CreateLibProject"></a> Vytvoření projektu statické knihovny  
   
 #### <a name="to-create-a-static-library-project"></a>Vytvoření projektu statické knihovny  
   
 1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu**.  
   
-2.  V levém podokně **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná**, **šablony**, **Visual C++**a potom vyberte  **Win32**.  
+2.  V levém podokně **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná**, **šablony**, **Visual C++** a potom vyberte  **Win32**.  
   
 3.  V prostředním podokně vyberte **Konzolová aplikace Win32**.  
   
@@ -65,7 +60,7 @@ Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) p
   
 8.  Vyberte **Dokončit** tlačítko pro vytvoření projektu.  
   
-##  <a name="BKMK_AddClassToLib"></a>Přidání třídy se statickou knihovnou  
+##  <a name="BKMK_AddClassToLib"></a> Přidání třídy se statickou knihovnou  
   
 #### <a name="to-add-a-class-to-the-static-library"></a>Přidání třídy se statickou knihovnou  
   
@@ -86,7 +81,7 @@ Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) p
     > [!NOTE]
     >  Při sestavování v sadě Visual Studio příkazového řádku, musíte sestavit programu ve dvou krocích. Nejprve spustit **cl /c /EHsc MathFuncsLib.cpp** zkompilovat kód a vytvořte soubor objektu, který je pojmenován **MathFuncsLib.obj**. ( **Cl** příkaz vyvolá Kompilátor Cl.exe a **/c** možnost určuje kompilovat bez propojení. Další informace najdete v tématu [/c (Kompilovat bez propojení)](../build/reference/c-compile-without-linking.md).) Druhý, spusťte **lib MathFuncsLib.obj** k propojení kód a vytvořit se statickou knihovnou **MathFuncsLib.lib**. ( **Lib** příkaz vyvolá správce knihovny, Lib.exe. Další informace najdete v tématu [LIB odkaz](../build/reference/lib-reference.md).)  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a>Vytvoření konzolové aplikace C++, který odkazuje na statické knihovny  
+##  <a name="BKMK_CreateAppToRefTheLib"></a> Vytvoření konzolové aplikace C++, který odkazuje na statické knihovny  
   
 #### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>K vytvoření aplikace konzoly C++, která odkazuje na statické knihovny  
   
@@ -106,7 +101,7 @@ Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) p
   
 8.  Vyberte **Dokončit** tlačítko pro vytvoření projektu.  
   
-##  <a name="BKMK_UseLibInApp"></a>Pomocí funkce ze statické knihovny v aplikaci  
+##  <a name="BKMK_UseLibInApp"></a> Pomocí funkce ze statické knihovny v aplikaci  
   
 #### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Chcete použít funkci z se statickou knihovnou v aplikaci  
   
@@ -126,7 +121,7 @@ Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) p
   
 6.  Sestavení spustitelný soubor výběrem **sestavení**, **sestavit řešení** v řádku nabídek.  
   
-##  <a name="BKMK_RunApp"></a>Spuštění aplikace  
+##  <a name="BKMK_RunApp"></a> Spuštění aplikace  
   
 #### <a name="to-run-the-app"></a>Ke spuštění aplikace  
   

@@ -1,31 +1,26 @@
 ---
 title: Atributy metody | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>Atributy metody
 Následující atributy se používají metody ve třídě, třída typu coclass nebo rozhraní.  
@@ -34,7 +29,7 @@ Následující atributy se používají metody ve třídě, třída typu coclass
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Označuje, že vlastnost podporuje datovou vazbu.|  
 |[call_as](../windows/call-as.md)|Umožňuje nonremotable funkce nejde mapovat na vzdálené funkce.|  
-|[vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atribut.|  
+|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atribut.|  
 |[db_column](../windows/db-column.md)|Vytvoří vazbu zadaný sloupec sady řádků.|  
 |[db_command](../windows/db-command.md)|Vytvoří příkaz OLE DB.|  
 |[db_param](../windows/db-param.md)|Přidruží zadané členské proměnné vstupní nebo výstupní parametr a vymezuje proměnnou.|  
@@ -62,7 +57,7 @@ Následující atributy se používají metody ve třídě, třída typu coclass
 |[requestedit](../windows/requestedit.md)|Označuje, že vlastnost podporuje **OnRequestEdit, viz** oznámení.|  
 |[restricted](../windows/restricted.md)|Určuje, že členem modulu, rozhraní nebo dispinterface nelze volat libovolně.|  
 |[satype](../windows/satype.md)|Určuje datový typ **SAFEARRAY** struktura.|  
-|[zdroj](../windows/source-cpp.md)|Určuje zdroj rozhraní ovládacího prvku pro spojovací body na třídu. Na vlastnosti nebo metody **zdroj** atribut označuje, že člen vrátí objekt, nebo typu VARIANT, která je zdroj událostí systému.|  
+|[Zdroj](../windows/source-cpp.md)|Určuje zdroj rozhraní ovládacího prvku pro spojovací body na třídu. Na vlastnosti nebo metody **zdroj** atribut označuje, že člen vrátí objekt, nebo typu VARIANT, která je zdroj událostí systému.|  
 |[synchronize](../windows/synchronize.md)|Synchronizuje přístup k cílové metody.|  
 |[vararg](../windows/vararg.md)|Určuje, že funkce trvat proměnný počet argumentů.|  
   

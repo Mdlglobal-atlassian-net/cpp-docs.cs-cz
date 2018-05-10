@@ -1,23 +1,18 @@
 ---
-title: "Přehled upgradu potenciální problémy (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Přehled upgradu potenciální problémy (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled upgradu potenciální problémy (Visual C++)
 
@@ -176,7 +171,7 @@ ATL a MFC jsou relativně stabilní rozhraní API, ale někdy změn. Najdete v �
 
 Této chybě může dojít v aplikacích MFC. Označuje, řazení problém mezi knihovna MFC a Knihovna CRT. MFC musí být propojená nejprve tak, aby poskytuje nové a odstranit operátory. Chcete-li opravit chyby, použijte přepínač /NODEFAULTLIB ignorovat tyto výchozí knihovny: MSVCRTD.lib a mfcs140d.lib. Pak přidejte tyto stejné knihovny jako další závislosti.
 
-## <a name="32-vs-64-bit"></a>32 vs 64 bit
+## <a name="32-vs-64-bit"></a>64bitová verze 32 vs
 
 Pokud je původní kód zkompilován pro 32bitové systémy, máte možnost vytvořit 64bitovou verzi místo nebo kromě nového 32bitovou aplikaci. Obecně platí by měl získat váš program kompilace v režimu 32-bit první a pokusíte se 64-bit. Kompilování pro 64bitové prostředí je jednoduchá, ale v některých případech může odhalit chyby, které byly skryt. 32bitová verze sestavení.
 

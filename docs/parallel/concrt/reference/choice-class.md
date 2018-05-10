@@ -1,12 +1,9 @@
 ---
-title: "Třída Choice | Microsoft Docs"
-ms.custom: 
+title: Třída Choice | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>Třída choice
 A `choice` zasílání zpráv blok je více zdroje, jeden cílový blok, který představuje tok řízení interakci s sadu zdrojů. Výběr bloku bude čekat na některém z více zdrojů pro vytvoření zprávy a rozšíří index zdroje, který vytváří zprávu.  
@@ -69,22 +64,22 @@ class choice: public ISource<size_t>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[choice](#ctor)|Přetíženo. Vytvoří `choice` zasílání zpráv bloku.|  
-|[~choice Destructor](#dtor)|Zničí `choice` zasílání zpráv bloku.|  
+|[Volba](#ctor)|Přetíženo. Vytvoří `choice` zasílání zpráv bloku.|  
+|[~ choice – destruktor](#dtor)|Zničí `choice` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept](#accept)|Přijme zprávu, která byla nabízí to `choice` bloku, přenos vlastnictví volajícímu.|  
+|[Přijmout](#accept)|Přijme zprávu, která byla nabízí to `choice` bloku, přenos vlastnictví volajícímu.|  
 |[acquire_ref](#acquire_ref)|Získá počet odkazů v tomto `choice` zasílání zpráv bloku, aby se zabránilo odstranění.|  
 |[Využívat](#consume)|Využívá zprávu dříve nabízí to `choice` zasílání zpráv na úrovni bloku a úspěšně rezervován cíl, přenos vlastnictví volajícímu.|  
 |[has_value](#has_value)|Kontroluje, zda tato `choice` zasílání zpráv bloku byl inicializován s hodnotou ještě.|  
 |[index](#index)|Vrátí index do `tuple` představující prvek ve vybrané `choice` zasílání zpráv bloku.|  
 |[link_target](#link_target)|Cílový blok odkazuje na tato `choice` zasílání zpráv bloku.|  
-|[release](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
+|[Verze](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
 |[release_ref](#release_ref)|Uvolní počet odkazů v tomto `choice` zasílání zpráv bloku.|  
-|[reserve](#reserve)|Rezervuje zprávu dříve nabízí to `choice` zasílání zpráv bloku.|  
+|[Rezervovat](#reserve)|Rezervuje zprávu dříve nabízí to `choice` zasílání zpráv bloku.|  
 |[unlink_target](#unlink_target)|Zruší propojení cílový blok z tohoto `choice` zasílání zpráv bloku.|  
 |[unlink_targets](#unlink_targets)|Zruší všechny cíle z tohoto propojení `choice` zasílání zpráv bloku. (Přepisuje [isource::unlink_targets –](isource-class.md#unlink_targets).)|  
 |[value](#value)|Získá zprávu, jejíž index nebyla vybrána pomocí `choice` zasílání zpráv bloku.|  
@@ -267,7 +262,7 @@ virtual void release(
  `_PTarget`  
  Ukazatel na cílový blok, který volá `release` metoda.  
   
-##  <a name="release_ref"></a> release_ref 
+##  <a name="release_ref"></a> release_ref – 
 
  Uvolní počet odkazů v tomto `choice` zasílání zpráv bloku.  
   

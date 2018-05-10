@@ -1,13 +1,10 @@
 ---
-title: "Upozornění kompilátoru kompilátoru verzí | Microsoft Docs"
-ms.custom: 
+title: Upozornění kompilátoru kompilátoru verzí | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru verzí kompilátoru
 
@@ -549,7 +545,7 @@ C4531|Zpracování výjimek jazyka C++ není k dispozici na systém Windows CE. 
 C4532|'*popis*': přejít z *nakonec* bloku má undefined chování při ukončení zpracování
 C4533|Inicializace se*deklarace*' je vynecháno, goto *deklarace*.
 C4534|'*deklarace*, nebude pro výchozí konstruktor *– třída* '*typ*' z důvodu argument výchozí
-C4535|calling _set_se_translator() requires /EHa
+C4535|volání _set_se_translator() vyžaduje/EHa
 C4536|'*popis*': název typu překračuje limit meta-data "*číslo*' znaků
 C4537|'*deklarace*': '.' u jiných UDT typu
 C4542|Přeskočení generování sloučené vložený text souboru nelze zapisovat *typ* souboru: "*filename*': *chyba*

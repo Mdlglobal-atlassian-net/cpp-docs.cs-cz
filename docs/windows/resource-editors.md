@@ -1,13 +1,10 @@
 ---
-title: "Editory prostředků | Microsoft Docs"
-ms.custom: 
+title: Editory prostředků | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.editors.resource
 - vc.resvw.resource.editors
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - resource editors
 - Windows [C++], application resource editing
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ac8f9546703e326128218537e0bc392d2ec6eb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91151b215a180fd926acf1205d810fc8eb6fd6f9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-editors"></a>Editory prostředků
 Editor prostředků je specializovaná prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků sady Visual Studio technik a rozhraní, které se vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují [zobrazení a úprava prostředků v editoru odpovídající](../windows/viewing-and-editing-resources-in-a-resource-editor.md) a [náhled prostředků](../windows/previewing-resources.md).  

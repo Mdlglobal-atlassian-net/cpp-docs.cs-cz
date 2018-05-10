@@ -1,13 +1,10 @@
 ---
-title: "Atributy abecedně řazená referenční dokumentace | Microsoft Docs"
-ms.custom: 
+title: Atributy abecedně řazená referenční dokumentace | Microsoft Docs
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>Abecedně řazená referenční dokumentace k atributům
 Následující atributy jsou k dispozici v jazyce Visual C++.  
@@ -40,12 +35,12 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 |[attribute](../windows/attribute.md)|Umožňuje vytvořit vlastní atribut.|  
 |[bindable](../windows/bindable.md)|Označuje, že vlastnost podporuje datovou vazbu.|  
 |[call_as](../windows/call-as.md)|Umožňuje nonremotable funkce nejde mapovat na vzdálené funkce.|  
-|[případ](../windows/case-cpp.md)|Používá se [switch_type –](../windows/switch-type.md) atribut v spojení.|  
+|[Případ](../windows/case-cpp.md)|Používá se [switch_type –](../windows/switch-type.md) atribut v spojení.|  
 |[coclass](../windows/coclass.md)|Vytvoří objekt COM, které můžete implementovat rozhraní modelu COM.|  
 |[COM_INTERFACE_ENTRY –](../windows/com-interface-entry-cpp.md)|Přidá položku rozhraní COM mapu.|  
 |[control](../windows/control.md)|Určuje, že je uživatelem definovaný typ ovládacího prvku.|  
 |[cpp_quote](../windows/cpp-quote.md)|Zadaný řetězec bez znaky uvozovek za sebou vysílá do souboru generovaného záhlaví.|  
-|[vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atributy.|  
+|[Vlastní](../windows/custom-cpp.md)|Umožňuje definovat vlastní atributy.|  
 |[db_accessor](../windows/db-accessor.md)|Váže sloupců v sadě řádků a sváže jejich odpovídající mapy přistupujícího objektu.|  
 |[db_column](../windows/db-column.md)|Vytvoří vazbu zadaný sloupec sady řádků.|  
 |[db_command](../windows/db-command.md)|Spustí příkaz OLE DB.|  
@@ -76,7 +71,7 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 |[idl_quote](../windows/idl-quote.md)|Umožňuje použít atributy nebo IDL vytvoří, které nejsou podporovány v aktuální verzi Visual C++.|  
 |[iid_is](../windows/iid-is.md)|Určuje identifikátory IID rozhraní modelu COM, na kterou ukazatele rozhraní odkazuje.|  
 |[immediatebind](../windows/immediatebind.md)|Označuje, že databáze bude okamžitě informováni o všechny změny vlastností objektu vázané na data.|  
-|[implementuje](../windows/implements-cpp.md)|Určuje odesílání rozhraní, které mají být členy třída typu coclass IDL vynuceně přesunuty.|  
+|[Implementuje](../windows/implements-cpp.md)|Určuje odesílání rozhraní, které mají být členy třída typu coclass IDL vynuceně přesunuty.|  
 |[implements_category](../windows/implements-category.md)|Určuje implementovaná součást kategorie pro třídu.|  
 |[import](../windows/import.md)|Určuje jiný .idl, .odl nebo hlavičce soubor obsahující definice, které chcete odkazovat z hlavní .idl souboru.|  
 |[importidl](../windows/importidl.md)|Vloží zadaný .idl soubor do souboru generovaného IDL.|  
@@ -91,7 +86,7 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 |[licensed](../windows/licensed.md)|Označuje, že třída typu coclass, které se má licenci a musí být vytvořena pomocí **IClassFactory2**.|  
 |[místní](../windows/local-cpp.md)|Umožňuje použít MIDL kompilátoru jako generátor záhlaví při použití v hlavičce rozhraní. Při použití v jednotlivé funkce, označí místní postupu, pro které jsou generovány žádné zástupných procedur.|  
 |[max_is](../windows/max-is.md)|Určuje maximální hodnotu platné pole indexu.|  
-|[modul](../windows/module-cpp.md)|Knihovna bloku definuje v souboru.|  
+|[Modul](../windows/module-cpp.md)|Knihovna bloku definuje v souboru.|  
 |[ms_union](../windows/ms-union.md)|Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.|  
 |[no_injected_text](../windows/no-injected-text.md)|Kompilátor brání vložení kódu v důsledku použití atributu.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Označuje, že člena rozhraní by se neměly zobrazovat v prohlížeči vlastností.|  
@@ -100,7 +95,7 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 |[object](../windows/object-cpp.md)|Určuje vlastní rozhraní; shodný s vlastních atributů.|  
 |[odl](../windows/odl.md)|Identifikuje rozhraní jako objekt popis jazyk (ODL) rozhraní.|  
 |[oleautomation](../windows/oleautomation.md)|Označuje, že rozhraní je kompatibilní s automatizace.|  
-|[volitelné](../windows/optional-cpp.md)|Určuje volitelný parametr členské funkce.|  
+|[Volitelné](../windows/optional-cpp.md)|Určuje volitelný parametr členské funkce.|  
 |[out](../windows/out-cpp.md)|Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volání procedury (ze serveru do klienta).|  
 |[pointer_default](../windows/pointer-default.md)|Určuje výchozí atribut ukazatele pro všechny ukazatele s výjimkou ukazatele nejvyšší úrovně, které se zobrazují v seznamy parametrů.|  
 |[pragma](../windows/pragma.md)|Do souboru generovaného .idl vysílá zadaný řetězec bez znaky uvozovek za sebou.|  
@@ -121,21 +116,21 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 |[retval](../windows/retval.md)|Označí parametr, který obdrží hodnotu vrácenou člena.|  
 |[satype](../windows/satype.md)|Určuje datový typ **SAFEARRAY**.|  
 |[size_is](../windows/size-is.md)|Určuje velikost paměti přidělené velikostí ukazatele, velikost ukazatele na velikosti ukazatele a jedním - nebo vícerozměrná pole.|  
-|[zdroj](../windows/source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí systému.|  
+|[Zdroj](../windows/source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí systému.|  
 |[string](../windows/string-cpp.md)|Určuje, že jednorozměrná `char`, `wchar_t`, **bajtů**, nebo ekvivalentní pole nebo má ukazatel na takové pole musí být považované za řetězec.|  
 |[support_error_info](../windows/support-error-info.md)|Podporuje odesílání sestav chyb pro cílový objekt.|  
 |[switch_is](../windows/switch-is.md)|Určuje výraz nebo identifikátor, který funguje jako union discriminant, která vybere položku členů sjednocení.|  
 |[switch_type](../windows/switch-type.md)|Určuje typ proměnnou použít jako union discriminant.|  
 |[synchronize](../windows/synchronize.md)|Synchronizuje přístup k metodě.|  
-|[dělení na vlákna](../windows/threading-cpp.md)|Určuje model vláken pro objekt COM.|  
+|[Dělení na vlákna](../windows/threading-cpp.md)|Určuje model vláken pro objekt COM.|  
 |[transmit_as](../windows/transmit-as.md)|Dá pokyn kompilátoru k vidění typu, které klientské a serverové aplikace manipulaci, přidružení přenášená typu.|  
 |[uidefault](../windows/uidefault.md)|Označuje, že je člen informace typu výchozího člena pro zobrazení v uživatelském rozhraní.|  
-|[jedinečné](../windows/unique-cpp.md)|Určuje jedinečný ukazatel.|  
+|[Jedinečné](../windows/unique-cpp.md)|Určuje jedinečný ukazatel.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Informuje volající, pokud dojde k chybě při volání této funkce, volající potom může volat `GetLastError` načíst kód chyby.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídy nebo rozhraní.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídy nebo rozhraní.|  
 |[v1_enum](../windows/v1-enum.md)|Přesměruje, že zadaného výčtového typu předávají jako 32bitová verze entity, nikoli výchozí 16 bitů.|  
 |[vararg](../windows/vararg.md)|Určuje, že funkce trvat proměnný počet argumentů.|  
-|[verze](../windows/version-cpp.md)|Identifikuje na konkrétní verzi mezi více verzí třídy nebo rozhraní.|  
+|[Verze](../windows/version-cpp.md)|Identifikuje na konkrétní verzi mezi více verzí třídy nebo rozhraní.|  
 |[vi_progid](../windows/vi-progid.md)|Určuje nezávislé na verzi forma identifikátor ProgID.|  
 |[wire_marshal](../windows/wire-marshal.md)|Určuje datový typ, který se použije pro přenos místo specifické pro aplikaci datového typu.|  
   

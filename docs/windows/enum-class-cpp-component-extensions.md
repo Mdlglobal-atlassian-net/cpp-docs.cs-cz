@@ -1,28 +1,23 @@
 ---
-title: "Výčet tříd (C++ Component Extensions) | Microsoft Docs"
-ms.custom: 
+title: Výčet tříd (C++ Component Extensions) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876cab344f1177000f63740ca6c33bc1db1afefe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (rozšíření komponent C++)
 Deklaruje výčet v oboru názvů, což je uživatelsky definovaný typ. skládající se z sadu pojmenované konstanty, výčty volat.  
@@ -46,7 +41,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
  **Parametry**  
   
- *přístup*  
+ *Přístup*  
  Usnadnění výčtu, což může být `public` nebo `private`.  
   
  *identifikátor – výčet*  
@@ -102,10 +97,10 @@ accessenum structname [:type] { enumerator-list } var;
  `name`  
  Název výčtu.  Anonymní spravované výčty nejsou povoleny.  
   
- `type`(volitelné)  
- Základní typ *identifikátory*.  To může být jakékoli skalární typu, například podepsaný držitelem nebo bez znaménka verzích int, kratší nebo delší.  `bool`nebo `char` je také povoleno.  
+ `type` (volitelné)  
+ Základní typ *identifikátory*.  To může být jakékoli skalární typu, například podepsaný držitelem nebo bez znaménka verzích int, kratší nebo delší.  `bool` nebo `char` je také povoleno.  
   
- `var`(volitelné)  
+ `var` (volitelné)  
  Název proměnné typu výčtu.  
   
  **Poznámky**  

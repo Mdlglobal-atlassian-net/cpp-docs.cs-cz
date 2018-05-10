@@ -1,12 +1,9 @@
 ---
-title: "scheduler_ptr – struktura | Microsoft Docs"
-ms.custom: 
+title: scheduler_ptr – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - scheduler_ptr
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr Structure
 Představuje ukazatel plánovače. Tato třída existuje umožňující specifikace sdílené životnost pomocí shared_ptr nebo jen prostý odkaz pomocí nezpracovaná ukazatele.  
@@ -56,7 +51,7 @@ struct scheduler_ptr;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[scheduler_ptr::operator bool](#operator_bool)|Otestovat, zda je ukazatel scheduler jinou hodnotu než null|  
+|[scheduler_ptr::Operator – bool](#operator_bool)|Otestovat, zda je ukazatel scheduler jinou hodnotu než null|  
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|Chovají jako ukazatel|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -95,9 +90,9 @@ scheduler_interface – * – operátor -> () const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+explicitní scheduler_ptr – (std::shared_ptr < scheduler_interface – > scheduler);
 
-explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
+explicitní scheduler_ptr – (_In_opt_ scheduler_interface – * pScheduler);
 ```  
   
 ### Parameters  

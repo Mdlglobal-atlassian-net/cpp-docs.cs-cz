@@ -1,27 +1,22 @@
 ---
-title: "Přenos aplikací do univerzální platformy Windows (C++) | Microsoft Docs"
-ms.custom: 
+title: Přenos aplikací do univerzální platformy Windows (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f2f94e54a8525d8d633374b3a23bafdfd93fee56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 V tomto tématu najdete informace o tom, jak portu existujícího kódu C++ pro aplikace platformy Windows 10, univerzální platformu Windows. Pojmy termín *universal* je, že váš kód můžete spustit u zařízení se systémem Windows 10, včetně stolní počítače, telefon, tablety a budoucí zařízení se systémem Windows 10. Vytvoříte projekt a jeden XAML základní uživatelské rozhraní, které funguje dobře na jakémkoli zařízení se systémem Windows 10. Dynamické rozložení funkce můžete v jazyce XAML umožňující uživatelském rozhraní aplikace se různé velikosti zobrazení přizpůsobit.  
@@ -36,7 +31,7 @@ V tomto tématu najdete informace o tom, jak portu existujícího kódu C++ pro 
   
  Pokud máte klasické pracovní plochy Win32 knihovny DLL a chcete volat z aplikace UPW, můžete to udělat i. Pomocí těchto postupů, můžete vytvořit vrstvu UWP uživatelské rozhraní pro existující classic Windows desktop aplikace C++ a standardní kódu C++ napříč platformami. V tématu [postupy: použití existujícího kódu C++ v aplikaci pro platformu Universal Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
-##  <a name="BK_81StoreApp">Portování aplikací Windows 8.1 Store, aby UWP</a>  
+##  <a name="BK_81StoreApp"></a> Portování aplikací Windows 8.1 Store, aby UWP  
  Pokud máte aplikaci ve Windows 8.1 Store, můžete tento postup se dá stáhnout pracující na UWP a z jakéhokoliv zařízení se systémem Windows 10.  Je vhodné první sestavení projektu s Visual Studio 2017 jako projekt Windows 8.1, nejprve odstranit veškeré problémy, které jsou vyvolány změny v kompilátoru a knihovny. Jakmile provedete tento krok, převeďte ho do projektu UPW Windows 10 dvěma způsoby. Nejjednodušším způsobem (jak je popsáno v následujícím postupu) je vytvoření projektu Universal Windows a zkopírujte do něj váš stávající kód. Pokud jste používali univerzální projekt pro stolní počítače s Windows 8.1 a Windows 8.1 Phone, projekt bude začínat dvě různé rozložení v jazyce XAML, ale end s jedno dynamické rozložení, která se přizpůsobí Zobrazovaná velikost.  
   
 #### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Port aplikaci ve Windows 8.1 Store do UWP  
@@ -80,7 +75,7 @@ V tomto tématu najdete informace o tom, jak portu existujícího kódu C++ pro 
   
 11. Spuštění a ladění aplikace na emulátoru nebo fyzické zařízení, pro každý typ zařízení, které podporuje vaše aplikace. Pokud chcete spustit emulátoru, musíte spustit Visual Studio na fyzickém počítači, není virtuální počítač.  
   
-##  <a name="BK_81Component">Portování součásti modulu Runtime Windows 8.1 do UWP</a>  
+##  <a name="BK_81Component"></a> Portování součásti modulu Runtime Windows 8.1 do UWP  
  Pokud máte knihovny DLL nebo komponent prostředí Windows Runtime, která již pracuje s aplikací pro Windows 8.1 Store, můžete tento postup slouží k získání součásti nebo DLL práce s UWP a Windows 10. Základní postup se týká vytvoření nového projektu a zkopírujte do ní kód.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Port komponent prostředí Windows 8.1 Runtime do UWP  

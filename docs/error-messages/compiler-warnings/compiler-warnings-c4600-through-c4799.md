@@ -1,8 +1,8 @@
 ---
-title: "C4600 upozornění kompilátoru prostřednictvím C4799 | Microsoft Docs"
+title: C4600 upozornění kompilátoru prostřednictvím C4799 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>C4600 upozornění kompilátoru prostřednictvím C4799
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 12/21/2017
 |[C4687 kompilátoru upozornění (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': zapečetěné abstraktní třídy nelze implementovat rozhraní 'rozhraní.|
 |Upozornění kompilátoru (úroveň 1) C4688|'omezení': omezení seznam obsahuje sestavení privátního typu "typ"|
 |Upozornění kompilátoru (úroveň 1) C4689|'%c': Nepodporovaný znak v #pragma detect_mismatch; #pragma ignorovat|
-|Upozornění kompilátoru (úroveň 4) C4690|[ emitidl( pop ) ]: více bodů POP než nabízených oznámení|
+|Upozornění kompilátoru (úroveň 4) C4690|[ emitidl – ( pop ) ]: více bodů POP než nabízených oznámení|
 |[Upozornění kompilátoru (úroveň 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': v neregistrované sestavení 'file' typem definovaným v aktuální jednotku překlad místo toho použít byl očekáván typ odkazuje|
 |[Upozornění kompilátoru (úroveň 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'function': podpis nesoukromého členu obsahuje sestavení privátního nativního typu 'native_type'|
 |[Upozornění kompilátoru (úroveň 1, chyba) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': zapečetěné abstraktní třídy nemůže mít žádné instance členy člen instance.|
@@ -204,7 +203,7 @@ ms.lasthandoff: 12/21/2017
 |[Upozornění kompilátoru (úroveň 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'příkaz var' má jiné zarovnání v 'file1' a 'file2': číslo a číslo|
 |[Upozornění kompilátoru (úroveň 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|"typ" má jinou velikost v 'file1' a 'file2': číslo a počet bajtů|
 |[Upozornění kompilátoru (úroveň 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'příkaz var' má jiný typ v 'file1' a 'file2': 'type1' a 'type2'.|
-|[Upozornění kompilátoru C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile přístup '*výraz*' podléhá/volatile:\<iso &#124; ms > nastavení; zvažte použití __iso_volatile_load/úložiště vnitřní funkce|
+|[Upozornění kompilátoru C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile přístup '*výraz*' podléhá/volatile:\<iso&#124;ms > nastavení; zvažte použití __iso_volatile_load/úložiště vnitřní funkce|
 |[Upozornění kompilátoru (úroveň 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Volání metody spravované 'entrypoint': spravovaného kódu nemusí být možné spustit v zavaděči, včetně vstupní bod knihovny DLL a volání z vstupní bod knihovny DLL|
 |Upozornění kompilátoru (úroveň 4) C4749|podmíněná podporována: offsetof – použít u typu standard non-rozložení '*typ*.|
 |Upozornění kompilátoru (úroveň 1) C4750|"identifikátor": funkce s _alloca() vložená do smyčky|

@@ -1,27 +1,22 @@
 ---
-title: "Postupy: použití existujícího kódu C++ v aplikaci pro platformu Universal Windows | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: použití existujícího kódu C++ v aplikaci pro platformu Universal Windows | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3f8cb26a66fce9c4b87822ffbfa4005f3a2e758
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Návody: Použití existujícího kódu C++ v aplikaci pro univerzální platformu pro Windows
 Nejjednodušší způsob, jak získat vaše desktopovému programu spuštěným v prostředí UWP je možná použití technologie most plochy. Patří mezi ně aplikace převaděč plochy, která bude balíček aplikace pro UPW aplikaci bez kódu na změny. Další informace najdete v tématu [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
@@ -63,7 +58,7 @@ Zbývající část tohoto tématu popisuje, jak k portu knihovny jazyka C++ (kn
   
 3.  [Portování C++ knihovnu, kterou chcete komponent prostředí Windows Runtime](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL">Pomocí Win32 knihovny DLL v aplikaci UWP</a>  
+##  <a name="BK_Win32DLL"></a> Pomocí Win32 knihovny DLL v aplikaci UWP  
  Pro lepší zabezpečení a spolehlivost spusťte univerzálních aplikací pro Windows v prostředí s omezeným přístupem modulu runtime, nemůžete stačí použít všechny nativní knihovny DLL způsob, jakým byste v klasická desktopová aplikace systému Windows. Pokud máte zdrojový kód pro knihovnu DLL, můžete se tak, aby běžel na UWP portu kód. Spuštění změnou k identifikaci projektu jako projektu UPW několik nastavení projektu a metadata souboru projektu. Budete muset zkompilovat kód knihovny pomocí možnosti /ZW, která umožňuje C + +/ CX. Některé volání rozhraní API nejsou povoleny v aplikacích pro UPW z důvodu přísnější ovládací prvky přidružené k prostředí. V tématu [Win32 a COM pro prostředí Windows Runtime aplikace a Universal Windows Platform (UWP) aplikace](https://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
  Následující postup platí pro případ, kdy máte nativní knihovny DLL, která zveřejňuje funkcí pomocí deklarace __declspec(dllexport).  
@@ -198,7 +193,7 @@ Zbývající část tohoto tématu popisuje, jak k portu knihovny jazyka C++ (kn
   
     ```  
   
-##  <a name="BK_StaticLib">Použití nativních statické knihovny C++ v aplikaci UWP</a>  
+##  <a name="BK_StaticLib"></a> Použití nativních statické knihovny C++ v aplikaci UWP  
  Můžete použít nativní statické knihovny C++ v projektu UPW, ale existují určitá omezení a omezení znát. Začněte tím, že to čtení [tématu](https://msdn.microsoft.com/library/hh771041.aspx) o statických knihoven v jazyce C + +/ CX. Nativní kód v statickou knihovnu získáváte přístup z vaší aplikace pro UPW, ale nedoporučujeme vytvoření veřejné ref typů v statické knihovny. Pokud při kompilaci s parametrem /ZW statickou knihovnu, upozorní librarian (ve skutečnosti linker v maskování):  
   
 ```  
@@ -219,7 +214,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      Nepřidávejte odkaz v **odkazy** uzlu v **Průzkumníku řešení**. Tento mechanismus funguje pouze pro součásti režimu Runtime systému Windows.  
   
-##  <a name="BK_WinRTComponent">Portování C++ knihovnu, kterou chcete komponent prostředí Windows Runtime</a>  
+##  <a name="BK_WinRTComponent"></a> Portování C++ knihovnu, kterou chcete komponent prostředí Windows Runtime  
  Pokud chcete využívat nativní rozhraní API v statické knihovny z aplikace pro UPW, a mít zdrojový kód pro nativní knihovny, můžete portu kód, který komponent prostředí Windows Runtime. Statické knihovny už nebude, bude knihovny DLL. Můžete ji použít v jakékoli aplikaci, C++ UWP, ale na rozdíl od případu statické knihovny, můžete přidat ref typy a dalších C + +/ CX konstrukce, které jsou k dispozici pro klienty v žádný kód aplikace UPW, bez ohledu na jazyk. Tyto typy tedy můžete přistupovat z jazyka C#, Visual Basic nebo JavaScript.  Základní postup se týká vytvoření projektu komponenty prostředí Windows Runtime, zkopírujte do ní kód pro statické knihovny a vyřešte všechny chyby, které jsou vyvolány přesunutí kód ze standardní C++ kompilace /ZW kompilace.  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>K portu C++ knihovnu, kterou chcete komponent prostředí Windows Runtime  

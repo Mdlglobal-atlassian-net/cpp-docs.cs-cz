@@ -1,13 +1,10 @@
 ---
-title: "Multithreading: Vytváření vláken uživatelského rozhraní | Microsoft Docs"
-ms.custom: 
+title: 'Multithreading: Vytváření vláken uživatelského rozhraní | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Multithreading: Vytváření vláken uživatelského rozhraní
 Vlákna uživatelského rozhraní se často používá ke zpracování uživatelského vstupu a reakce na události uživatele nezávisle na vláken provádění dalších částí aplikace. Hlavní vlákno aplikace (součástí vaší `CWinApp`-odvozené třídy) je již vytvořena a spuštěna pro vás. Toto téma popisuje kroky potřebné k vytvoření vlákna další uživatelského rozhraní.  
@@ -62,7 +57,7 @@ Vlákna uživatelského rozhraní se často používá ke zpracování uživatel
   
 -   (Volitelné) Požadované zabezpečení atributy. Výchozí hodnota je stejný přístup jako nadřazené vlákno. Další informace o formátu informací zabezpečení najdete v tématu [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `AfxBeginThread`provede většinu práce. Vytvoří nový objekt vaší třídy, inicializuje s informací, které zadáte a volá [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) spustit provádění vlákna. Kontroly se provádějí v celém procesu zajistit, že všechny objekty jsou deallocated správně má libovolná součást vytvoření selhat.  
+ `AfxBeginThread` provede většinu práce. Vytvoří nový objekt vaší třídy, inicializuje s informací, které zadáte a volá [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) spustit provádění vlákna. Kontroly se provádějí v celém procesu zajistit, že všechny objekty jsou deallocated správně má libovolná součást vytvoření selhat.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o?  
   

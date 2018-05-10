@@ -1,13 +1,10 @@
 ---
-title: "Pomocí Tchar –. Datové typy H s kódováním _MBCS | Microsoft Docs"
-ms.custom: 
+title: Pomocí Tchar –. Datové typy H s kódováním _MBCS | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 - TCHAR
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Použití datových typů TCHAR.H s kódováním _MBCS
 Když manifestu konstanta **_MBCS** je definován, daná rutina obecného textu se mapuje na jednu z následujících druhů rutin:  
@@ -48,7 +43,7 @@ Když manifestu konstanta **_MBCS** je definován, daná rutina obecného textu 
     char * _tcsrev(char *);  
     ```  
   
-     V případě výchozí prototypu pro `_tcsrev` mapuje `_mbsrev` prostřednictvím převodu v Libc.lib. Tato operace změní typy `_mbsrev` příchozí parametry a odchozí návratová hodnota z **_TCHAR \***  (to znamená, `char`  **\*** ) k `unsigned` `char` **\***. Tato metoda zajišťuje typ odpovídající při použití **_TCHAR**, ale je relativně pomalá kvůli režii volání funkce.  
+     V případě výchozí prototypu pro `_tcsrev` mapuje `_mbsrev` prostřednictvím převodu v Libc.lib. Tato operace změní typy `_mbsrev` příchozí parametry a odchozí návratová hodnota z **_TCHAR \***  (to znamená, `char` **\***) k `unsigned` `char` **\***. Tato metoda zajišťuje typ odpovídající při použití **_TCHAR**, ale je relativně pomalá kvůli režii volání funkce.  
   
 -   Pomocí funkce vložené začleněním následující preprocesoru ve vašem kódu.  
   

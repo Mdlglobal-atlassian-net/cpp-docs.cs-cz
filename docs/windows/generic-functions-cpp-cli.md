@@ -1,13 +1,10 @@
 ---
-title: "Obecné funkce (C + +/ CLI) | Microsoft Docs"
-ms.custom: 
+title: Obecné funkce (C + +/ CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
 Obecné funkce je funkce, která je deklarovaný s parametry typu. Při volání, skutečné typy se používají místo parametrů typu.  
@@ -66,12 +61,12 @@ return-type identifier<type-parameter identifier(s)>
  Další deklarativní informace. Další informace o atributy a třídy atributů najdete v tématu atributy.  
   
  *Modifikátory* (volitelné)  
- Modifikátor pro funkce, například statický.  `virtual`není povolená, protože virtuální metody nesmí být obecný.  
+ Modifikátor pro funkce, například statický.  `virtual` není povolená, protože virtuální metody nesmí být obecný.  
   
  *Návratový typ*  
  Typ vrácený metodou Pokud je návratový typ void, není potřeba žádnou návratovou hodnotu.  
   
- *identifikátor*  
+ *Identifikátor*  
  Název funkce.  
   
  *parametr typu identifikátory*  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **Příklad**  
   
- Následující příklad používá obecné funkce Najít první prvek v poli. Deklaruje `MyClass`, který dědí ze základní třídy `MyBaseClass`. `MyClass`obsahuje obecné funkci `MyFunction`, která volá jinou funkci Obecné, `MyBaseClassFunction`, v rámci základní třídy. V **hlavní**, obecné funkce `MyFunction`, se nazývá pomocí jiného typu argumentů.  
+ Následující příklad používá obecné funkce Najít první prvek v poli. Deklaruje `MyClass`, který dědí ze základní třídy `MyBaseClass`. `MyClass` obsahuje obecné funkci `MyFunction`, která volá jinou funkci Obecné, `MyBaseClassFunction`, v rámci základní třídy. V **hlavní**, obecné funkce `MyFunction`, se nazývá pomocí jiného typu argumentů.  
   
 ```  
 // generics_generic_function_3.cpp  

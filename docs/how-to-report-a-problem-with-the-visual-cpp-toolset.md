@@ -1,22 +1,20 @@
 ---
-title: "Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs"
+title: Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Postup nahlásit problém s sady nástrojů Visual C++
 
@@ -108,7 +106,7 @@ Zkopírujte je příklad dokončení, úplný a samostatný zdrojového kódu, k
 
 Je dobré postup:
 
-- **Minimální.** Repros by měl být co nejmenší ještě stále ukazují přesně problému, který jste se setkali. Repros nemusí být komplexní nebo realistické; Stačí, když se zobrazí kód, který vyhovuje standardní nebo implementace zdokumentovaných kompilátoru nebo v případě chybějící diagnostiky, kód, který není vyhovující. Je jednoduché, k bodu repros, které obsahují přesně akorát kód k předvedení problém. Pokud můžete eliminovat nebo zjednodušit kód a zůstanou vyhovující a také ponechat beze změny problém, proveďte tuto operaci, tak. Nemusíte zahrnovat kontrolní příklady kódu, který funguje. 
+- **Minimální.** Repros by měl být co nejmenší ještě stále ukazují přesně problému, který jste se setkali. Repros nemusí být komplexní nebo realistické; Stačí, když se zobrazí kód, který vyhovuje standardní nebo implementace zdokumentovaných kompilátoru nebo v případě chybějící diagnostiky, kód, který není vyhovující. Je jednoduché, k bodu repros, které obsahují přesně akorát kód k předvedení problém. Pokud můžete eliminovat nebo zjednodušit kód a zůstanou vyhovující a také ponechat beze změny problém, proveďte tuto operaci, tak. Nemusíte zahrnovat kontrolní příklady kódu, který funguje.
 
 - **Úplný a samostatný.** Repros byste neměli nepotřebné závislosti. Pokud můžete reprodukujte problém bez knihovny třetích stran, prosím učiňte. Pokud jste reprodukování problému bez jakékoli kódu knihovna kromě jednoduché výstupní příkazy (například `puts("this shouldn't compile");`, `std::cout << value;`, a `printf("%d\n", value);` jsou v pořádku), proveďte tuto akci. Je ideální v příkladu můžete vyjádřit do souboru kódu jednoho zdroje, bez ohledu na všechny uživatele hlavičky. Snižuje množství kód, který se musí vzít v úvahu jako Přispěvatel možné tento problém je pro nás enormously užitečné.
 
@@ -116,13 +114,13 @@ Je dobré postup:
 
 - **Kontrolovat další kompilátory** podle potřeby. Repros, které zahrnují přenosné C++ – kód by měl ověřit chování pro jiné kompilátory Pokud je to možné. Standardní konečném důsledku určuje správnost program a žádné kompilátoru je ideální, ale když Clang a RSZ přijmout kódu bez Diagnostika a MSVC neexistuje, je pravděpodobné, že zvažujete chybou v našem kompilátoru. (Další možnosti zahrnují rozdíly v chování systému Unix a Windows nebo různé úrovně implementace standardy C++ a tak dále.) Na druhé straně Pokud všechny kompilátory odmítnout kódu, je pravděpodobné, že váš kód je nesprávný. Zobrazuje různé chybové zprávy mohou pomoci problém diagnostikovat sami.
 
-   Můžete najít seznam online kompilátory k testování kódu proti v [Online C++ kompilátory](https://isocpp.org/blog/2013/01/online-c-compilers) na webu ISO C++, nebo se kurátorované [seznamu z Online C++ kompilátory](https://arnemertz.github.io/online-compilers/) na Githubu. Mezi některé konkrétní příklady patří [Wandbox](https://wandbox.org/), [kompilátoru Explorer](https://godbolt.org/), a [Coliru](http://coliru.stacked-crooked.com/). 
+   Můžete najít seznam online kompilátory k testování kódu proti v [Online C++ kompilátory](https://isocpp.org/blog/2013/01/online-c-compilers) na webu ISO C++, nebo se kurátorované [seznamu z Online C++ kompilátory](https://arnemertz.github.io/online-compilers/) na Githubu. Mezi některé konkrétní příklady patří [Wandbox](https://wandbox.org/), [kompilátoru Explorer](https://godbolt.org/), a [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Online kompilátoru weby nejsou ve skupině se společností Microsoft. Mnohé weby online kompilátoru jsou spouštěny jako osobní projekty a některé z těchto lokalit nemusí být k dispozici, když si přečíst toto, ale hledání by měl zjistit ostatní, které můžete použít.
 
 Problémy v kompilátoru, linkeru a v knihovnách, zpravidla sami zobrazit zejména způsoby. Druh problému, které zaznamenáte určí, jaký druh zkopírujte by měla obsahovat v sestavě. Bez odpovídající postup máme nic k prozkoumání. Tady jsou některé druhy problémů, které se může zobrazit a pokyny pro generování druhy repros, že měli byste použít k hlášení jednotlivé typy problémů.
- 
+
 #### <a name="frontend-parser-crash"></a>Havárie front-endu (Analyzátor)
 
 Front-endu havárií dojde během analýzy fáze kompilátoru. Obvykle bude emitování kompilátor [závažná chyba C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) a odkazovat na zdrojový kód souborové služby a řádku číslo na kterém se stala chyba; ho bude často zmínili msc1.cpp souboru, ale můžete ignorovat této jsou podrobně popsané.

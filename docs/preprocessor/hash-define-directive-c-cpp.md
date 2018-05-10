@@ -1,12 +1,9 @@
 ---
-title: "##define – direktiva (C/C++) | Microsoft Docs"
-ms.custom: 
+title: '##define – direktiva (C/C++) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#define'
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8875c2b2c744a16f936fd2220826f23413a0e6c9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="define-directive-cc"></a>#define – direktiva (C++)
 `#define` Vytvoří *makro*, což je identifikátor nebo identifikátor parametrizované přidružení k řetězec tokenu. Po definování makro kompilátor můžete nahradit řetězec tokenu pro každý výskyt identifikátor ve zdrojovém souboru.  
@@ -73,7 +68,7 @@ ms.lasthandoff: 02/23/2018
   
  Druhý `#define` pro makro se stejným názvem generuje upozornění, pokud druhé tokenu pořadí je stejný jako první.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Microsoft C/C++ umožňuje znovu definovat makra, pokud je syntakticky stejný jako původní definici novou definici. Jinými slovy dvě definice může mít jiný parametr názvy. Toto chování se liší od [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C, která vyžaduje, aby dvě definice lexikálně identické.  
   
@@ -120,7 +115,7 @@ var = 80 + 10 * 20;
   
  která se vyhodnotí jako 280.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Definice makra a konstant s [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru má stejný účinek jako použití `#define` předběžného zpracování direktiva na začátku souboru. Až 30 makra lze definovat pomocí možnosti /D.  
   

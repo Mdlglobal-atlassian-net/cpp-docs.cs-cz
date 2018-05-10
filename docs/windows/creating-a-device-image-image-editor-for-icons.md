@@ -1,13 +1,10 @@
 ---
-title: "Vytvoření obrázku zařízení (Editor obrázků pro ikony) | Microsoft Docs"
-ms.custom: 
+title: Vytvoření obrázku zařízení (Editor obrázků pro ikony) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Vytvoření obrázku zařízení (editor obrázků pro ikony)
 Když vytvoříte nový ikony nebo kurzoru prostředek, bitovou kopii, editor nejprve vytvoří bitovou kopii v konkrétním stylu (32 x 32, 16 barvy u ikon a 32 × 32, černobílý tisk pro kurzory). Můžete přidat Image do počáteční ikony nebo kurzoru v různých velikostech a styly a upravit každé další bitové kopie, podle potřeby pro zařízení s jiným zobrazením. Můžete taky upravit bitovou kopii pomocí operace vyjímání a vkládání z existujícího typu image nebo rastrového obrázku vytvořeného v grafickém programu.  

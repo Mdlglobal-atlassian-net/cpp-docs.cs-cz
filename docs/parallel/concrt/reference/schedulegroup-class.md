@@ -1,12 +1,9 @@
 ---
-title: "ScheduleGroup – třída | Microsoft Docs"
-ms.custom: 
+title: ScheduleGroup – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ScheduleGroup
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup – třída
 Představuje abstrakci pro skupinu plánu. Skupiny plánů uspořádání sady souvisejících pracovních této výhody z naplánován blízko sebe, buď dočasně, a to spuštěním jiná úloha ve stejné skupině před přesunutím do jiné skupiny, nebo jinými objekty, spuštěním více položek v jedné skupině na stejné Nebo soket fyzického uzlu NUMA.  
@@ -56,7 +51,7 @@ class ScheduleGroup;
 |[ID](#id)|Vrátí identifikátor skupiny plán, který je v rámci scheduler, do které patří skupině jedinečné.|  
 |[Referenční informace](#reference)|Zvýší počet odkazů skupiny plánu.|  
 |[Vydaná verze](#release)|Snižuje počet referenční příručka skupiny plánovače.|  
-|[ScheduleTask](#scheduletask)|Naplánuje úlohu šedé – v rámci skupiny pro plán.|  
+|[Scheduletask –](#scheduletask)|Naplánuje úlohu šedé – v rámci skupiny pro plán.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `ScheduleGroup`  
@@ -66,7 +61,7 @@ class ScheduleGroup;
   
  **Namespace:** souběžnosti  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> ID 
 
  Vrátí identifikátor skupiny plán, který je v rámci scheduler, do které patří skupině jedinečné.  
   
@@ -156,7 +151,7 @@ virtual void ScheduleTask(
  [Namespace souběžnosti](concurrency-namespace.md)   
  [CurrentScheduler – třída](currentscheduler-class.md)   
  [Scheduler – třída](scheduler-class.md)   
- [Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+ [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 
 

@@ -1,12 +1,9 @@
 ---
-title: "Třída CD2DGeometry | Microsoft Docs"
-ms.custom: 
+title: Třída CD2DGeometry | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGeometry
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9d8373bdf1cba1c57936dfb4d98c5401c80476
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry – třída
 Obálka pro ID2D1Geometry.  
@@ -130,14 +125,14 @@ class CD2DGeometry : public CD2DResource;
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry  
  Destruktor. Voláno, když je zničen geometrický objekt D2D.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="attach"></a>CD2DGeometry::Attach  
+##  <a name="attach"></a>  CD2DGeometry::Attach  
  Připojí existující prostředek rozhraní k objektu  
   
 ```  
@@ -148,7 +143,7 @@ void Attach(ID2D1Geometry* pResource);
  `pResource`  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
-##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
  Vytvoří objekt CD2DGeometry.  
   
 ```  
@@ -164,7 +159,7 @@ CD2DGeometry(
  `bAutoDestroy`  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
-##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
  Kombinuje tento geometrie pomocí zadaná geometrie a výsledek je uložen ve ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -195,7 +190,7 @@ BOOL CombineWithGeometry(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
  Popisuje průnik mezi tato geometrie a zadaná geometrie. Porovnání se provádí pomocí zadané sloučení tolerance.  
   
 ```  
@@ -218,7 +213,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
  Vypočítá oblasti geometrického útvaru. po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.  
   
 ```  
@@ -241,7 +236,7 @@ BOOL ComputeArea(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
  Vypočítá délku geometrie, jako by byl každý segment unrolled na čáru.  
   
 ```  
@@ -264,7 +259,7 @@ BOOL ComputeLength(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
  Vypočítá bod a tangens vektoru v zadané vzdálenosti podél geometrie po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.  
   
 ```  
@@ -295,14 +290,14 @@ BOOL ComputePointAtLength(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="destroy"></a>CD2DGeometry::Destroy  
+##  <a name="destroy"></a>  CD2DGeometry::Destroy  
  Zničí CD2DGeometry objektu.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DGeometry::detach  
+##  <a name="detach"></a>  CD2DGeometry::detach  
  Umožňuje odpojit prostředek rozhraní z objektu  
   
 ```  
@@ -312,7 +307,7 @@ ID2D1Geometry* Detach();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní odpojit prostředků.  
   
-##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
  Určuje, zda oblasti sestavil geometrie by obsahovat zadaný bod zadané zadanou toleranci sloučení.  
   
 ```  
@@ -339,7 +334,7 @@ BOOL FillContainsPoint(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="get"></a>CD2DGeometry::Get  
+##  <a name="get"></a>  CD2DGeometry::Get  
  Vrátí ID2D1Geometry rozhraní  
   
 ```  
@@ -349,7 +344,7 @@ ID2D1Geometry* Get();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na rozhraní ID2D1Geometry nebo hodnota NULL, pokud objekt dosud není inicializován.  
   
-##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -363,7 +358,7 @@ CD2DRectF& bounds) const;
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
  Získá hranice geometrického útvaru. poté, co byla rozšířit zadaný tahu šířkou a stylu a transformovat zadaný matice.  
   
 ```  
@@ -394,7 +389,7 @@ BOOL GetWidenedBounds(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="isvalid"></a>CD2DGeometry::IsValid  
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
  Kontrola platnosti prostředků  
   
 ```  
@@ -404,14 +399,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud prostředek je platná. jinak hodnota FALSE.  
   
-##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
  Ukazatel ID2D1Geometry.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::Operator ID2D1Geometry *  
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::Operator ID2D1Geometry *  
  Vrátí ID2D1Geometry rozhraní  
   
 ```  
@@ -421,7 +416,7 @@ operator ID2D1Geometry*();
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na rozhraní ID2D1Geometry nebo hodnota NULL, pokud objekt dosud není inicializován.  
   
-##  <a name="outline"></a>CD2DGeometry::Outline  
+##  <a name="outline"></a>  CD2DGeometry::Outline  
  Vypočítá obrys geometrie a zapíše výsledek ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -444,7 +439,7 @@ BOOL Outline(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="simplify"></a>CD2DGeometry::Simplify  
+##  <a name="simplify"></a>  CD2DGeometry::Simplify  
  Vytvoří zjednodušenou verzi geometry, který obsahuje pouze řádky a (volitelně) krychlový Bézierových křivek a zapíše výsledek ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -471,7 +466,7 @@ BOOL Simplify(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
  Určuje, zda geometrie tahu obsahuje zadaný bod daného sílu tahu zadaný, styl a transformace.  
   
 ```  
@@ -506,7 +501,7 @@ BOOL StrokeContainsPoint(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
  Vytvoří sadu trojúhelníčky po směru hodinových ručiček vinutým, které zahrnují geometrie po byla transformována, pomocí zadané matice a průmětu pomocí zadané tolerance.  
   
 ```  
@@ -529,7 +524,7 @@ BOOL Tessellate(
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
   
-##  <a name="widen"></a>CD2DGeometry::widen  
+##  <a name="widen"></a>  CD2DGeometry::widen  
  Rozšiřuje geometrie podle zadaného tahu a zapíše výsledek ID2D1SimplifiedGeometrySink po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.  
   
 ```  

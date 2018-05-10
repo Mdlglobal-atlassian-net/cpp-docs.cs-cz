@@ -1,30 +1,25 @@
 ---
-title: "Postupy: použití zpracování přerušení paralelní smyčky výjimek | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: použití zpracování přerušení paralelní smyčky výjimek | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29140c339614e572733988bd7ca5e14561cee5dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bacb9ea6a451026f7a515878cb649090ed9cbf4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Postupy: Přerušení paralelní smyčky pomocí zpracování výjimek
 Toto téma ukazuje, jak zápis vyhledávacího algoritmu pro základní stromové struktury.  
@@ -83,6 +78,6 @@ Did not find node with value 17522.
  [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)   
  [task_group – třída](reference/task-group-class.md)   
  [structured_task_group – třída](../../parallel/concrt/reference/structured-task-group-class.md)   
- [parallel_for_each – funkce](reference/concurrency-namespace-functions.md#parallel_for_each)
+ [parallel_for_each Function](reference/concurrency-namespace-functions.md#parallel_for_each)
 
 

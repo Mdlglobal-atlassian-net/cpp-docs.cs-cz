@@ -1,28 +1,23 @@
 ---
-title: "Postupy: vytváření souborů .h z metadat windows pomocí winmdidl.exe a midlrt.exe | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: vytváření souborů .h z metadat windows pomocí winmdidl.exe a midlrt.exe | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe
 Winmdidl.exe a midlrt.exe povolit COM úrovni interakce mezi nativního kódu C++ a prostředí Windows Runtime součásti. Winmdidl.exe přijímá jako vstup .winmd soubor, který obsahuje metadata pro součást prostředí Windows Runtime a uloží soubor IDL. Midlrt.exe převede tento soubor IDL hlavičkových souborů, které můžou využívat kódu C++. Oba nástroje spusťte na příkazovém řádku.  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Zobrazí celkový čas spuštění ve výstupu konzoly.  
   
  Company:\<dir >  
- Určuje cílový adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí adresář výstupu  *\<jednotky >*: \Users\\*\<uživatelské jméno >*\AppData\Local\VirtualStore\Program soubory (x86) \Microsoft Visual Studio 12.0\\.  
+ Určuje cílový adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí adresář výstupu  *\<jednotky >*: \Users\\*\<uživatelské jméno >* \AppData\Local\VirtualStore\Program soubory (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Určuje soubor, který obsahuje vlastní text pro předřazení výchozí zprávu o autorských právech a číslo verze winmdidl v horní části souboru generovaného IDL. Pokud cesta obsahuje mezery, použijte uvozovky.  

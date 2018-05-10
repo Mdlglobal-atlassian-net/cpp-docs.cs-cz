@@ -1,29 +1,24 @@
 ---
 title: Preprocesor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3bb5a9740bab3f69ff66a51cd58e6e1378e178f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor"></a>Preprocesor
 Preprocesor je textový procesor, který pracuje s textem zdrojového souboru v rámci první fáze překladu. Preprocesor neanalyzuje zdrojový text, ale rozdělí jej na tokeny za účelem vyhledání volání maker. Ačkoli kompilátor obvykle vyvolá preprocesor v první fázi, pro zpracování textu bez kompilace lze preprocesor vyvolat také samostatně.  
@@ -38,7 +33,7 @@ Preprocesor je textový procesor, který pracuje s textem zdrojového souboru v 
   
 -   [Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Můžete získat seznam vašeho zdrojového kódu po předběžného zpracování pomocí [/E](../build/reference/e-preprocess-to-stdout.md) nebo [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) – možnost kompilátoru. Obě možnosti vyvolají preprocesor a způsobí zobrazení výsledného textu na standardním výstupním zařízení, které ve většině případů představuje konzole. Rozdíl mezi dvěma možnostmi je, že /E obsahuje direktivy `#line` a /EP tyto direktivy vyjme.  
   

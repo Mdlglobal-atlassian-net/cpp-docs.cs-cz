@@ -1,30 +1,25 @@
 ---
 title: Atribut kontexty | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e220eb0e7eb80d01d70aed82e773c46fe6704c7d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-contexts"></a>Kontexty atributů
 Atributy C++ lze popsat pomocí čtyři základní pole: je možné použít pro cíl (**platí pro**), pokud jsou opakovatelných, nebo ne (**Repeatable**), vyžaduje přítomnost další atributy ( **Atributy požadované**) a nekompatibilitu s další atributy (**neplatné atributy**). Tato pole jsou uvedeny v doprovodné tabulce v tématu referenční každý atribut. Každá z těchto polí je popsána níže.  

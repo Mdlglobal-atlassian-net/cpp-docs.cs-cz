@@ -1,13 +1,10 @@
 ---
-title: "Editor obrázků pro ikony | Microsoft Docs"
-ms.custom: 
+title: Editor obrázků pro ikony | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - Image editor [C++]
 - resource editors, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 932afdf219e302459d7c1908cb2220e754d68ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41c4bf71d8d3479f8353c1f57e725f07926dee47
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-editor-for-icons"></a>Editor obrázků pro ikony
 Editor obrázků má rozsáhlou sadu nástrojů pro vytváření a úpravu obrázků a také funkce, které vám pomohou vytvořit rastry pro panel nástrojů. Kromě rastrové obrázky, ikony a kurzory, můžete upravit bitové kopie ve formátu GIF nebo JPEG pomocí příkazů na **Image** nabídky a nástroje na **Editor obrázků** panelu nástrojů.  

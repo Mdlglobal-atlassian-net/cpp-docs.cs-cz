@@ -1,13 +1,10 @@
 ---
 title: Podpora pro Unicode | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - Unicode [C++], installing support
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde7674d30d84385eb1f94f42056a82bfaac99fe
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b9d5a435339e366d70749d64e5aae9264fe12b1f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-unicode"></a>Podpora pro Unicode
 
@@ -46,8 +42,8 @@ Rozhraní MFC framework je kódování Unicode a MFC provede, povolení Unicode 
 |Bez přenositelností datový typ|Nahrazuje tento – makro|
 |-----------------------------|----------------------------|
 |`char`, `wchar_t`|`_TCHAR`|
-|`char*`, `LPSTR` (Win32 datový typ)`LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Win32 datový typ)`LPCWSTR`|`LPCTSTR`|
+|`char*`, `LPSTR` (Win32 datový typ) `LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Win32 datový typ) `LPCWSTR`|`LPCTSTR`|
 
 Třída `CString` používá `_TCHAR` jako jeho základní a poskytuje konstruktory a operátory pro snadné převody. Většina řetězcových operací pro kódování Unicode lze zapsat pomocí stejné logiky, která používá pro zpracování znakovou sadu ANSI systému Windows, s tím rozdílem, že základní jednotkou operace je znak 16bitové místo 8bitové bajtů. Na rozdíl od práce vícebajtových znakových sad, můžete nemusíte (a neměli) zacházet se znaky Unicode, jako by šlo dva rozdílné bajty. Máte, ale, jak nakládat s možností jednoho znaku reprezentována pár náhradní široké znaky. Obecně platí není napsat kód, který předpokládá, že délka řetězce je stejný jako počet znaků, ať už úzké nebo široké, aby obsahoval.
 

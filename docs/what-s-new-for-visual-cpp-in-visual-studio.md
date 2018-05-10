@@ -1,22 +1,21 @@
 ---
-title: "Co je nového pro Visual C++ v sadě Visual Studio | Microsoft Docs"
+title: Co je nového pro Visual C++ v sadě Visual Studio | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
-- vs-ide-general
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Co je nového pro Visual C++ v[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Co je nového pro Visual C++ v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] poskytuje mnoho aktualizací a opravy pro prostředí Visual C++. Jsme vyřešili více než 250 chyb a hlášené problémy v kompilátoru a nástroje, mnoho odeslané zákazníky pomocí [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poskytují zlepšení](https://visualstudio.uservoice.com/) možnosti v části **odeslat zpětnou vazbu** . Děkujeme vám, že hlásíte chyby! Další informace o co je nového ve všech sady Visual Studio, navštivte [co je nového v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
@@ -82,17 +81,17 @@ Visual C++ podporuje AVX společnosti Intel-512, včetně vektoru délka pokynů
 - Zlepšení výkonu: `basic_string::operator==` nyní kontroluje velikost řetězec před porovnáním obsah na řetězce.
 - Zlepšení výkonu: odebrat řízení spojovacích v `basic_string`, který se těžko optimalizace kompilátoru k analýze. Všimněte si, že se pro všechny krátké řetězce volání `reserve` má stále nenulové hodnoty náklady se nic nestane.
 - Jsme přidali \<žádné\>, \<string_view\>, `apply()`, `make_from_tuple()`.
-- `std::vector`má byla přepracována správnost a výkon: aliasy během vkládání a. uložení je nyní správně spravovány jako vyžadovanou standardní, záruku silné výjimky se teď poskytují pokud to vyžaduje standardní prostřednictvím `move_if_noexcept()` a jiné logiky a vkládání nebo. uložení provádět méně operace s elementy.
+- `std::vector` má byla přepracována správnost a výkon: aliasy během vkládání a. uložení je nyní správně spravovány jako vyžadovanou standardní, záruku silné výjimky se teď poskytují pokud to vyžaduje standardní prostřednictvím `move_if_noexcept()` a jiné logiky a vkládání nebo. uložení provádět méně operace s elementy.
 - Standardní knihovna C++ nyní zabraňuje vyhodnocení zvláštní ukazatelé s hodnotou null.
 - Přidat \<volitelné\>, \<variant\>, `shared_ptr::weak_type`, a \<cstdalign\>.
 - Povolit C ++ 14 `constexpr` v `min(initializer_list)`, `max(initializer_list)`, a `minmax(initializer_list)`, a `min_element()`, `max_element()`, a `minmax_element()`.
 - Vylepšené `weak_ptr::lock()` výkonu.
 - Pevné `std::promise` přesunutí přiřazení operátor, který dříve by mohlo způsobit kód blokování navždy.
 - Chyby kompilátoru s pevnou `atomic<T*>` implicitní převod na `T*`.
-- `pointer_traits<Ptr>`nyní správně rozpozná `Ptr::rebind<U>`.
+- `pointer_traits<Ptr>` nyní správně rozpozná `Ptr::rebind<U>`.
 - Pevné chybějící `const` kvalifikátor v `move_iterator` operátor odčítání.
 - Pevné bezobslužná nesprávná funkce codegen pro stavových vlastní alokátorů požaduje `propagate_on_container_copy_assignment` a `propagate_on_container_move_assignment`.
-- `atomic<T>`Nyní toleruje přetížený `operator&()`.
+- `atomic<T>` Nyní toleruje přetížený `operator&()`.
 - Ke zvýšení propustnosti kompilátoru, hlavičky standardní knihovna C++ nyní vyhnout, včetně deklarace pro vnitřní funkce kompilátoru zbytečné.
 - Mírně vylepšení kompilátoru diagnostiku pro nesprávné `bind()` volání.
 - Vylepšený výkon `std::string` a `std::wstring` přesunout konstruktory tak, že více než třikrát.
@@ -116,11 +115,11 @@ Je implementovaná několik dalších funkce C ++ 17. Další informace najdete 
 - Standardní knihovna kontejnery nyní svorka jejich `max_size()` k `numeric_limits<difference_type>::max()` místo `max()` z `size_type`. To zajistí, že výsledek `distance()` na iterátory kontejneru, v němž je reprezentovat návratový typ `distance()`.
 - Pevné nalezen specializace `auto_ptr<void>`.
 - `for_each_n()`, `generate_n()`, A `search_n()` algoritmy se dříve nepodařilo kompilovat argument délka nebyla integrální typu; se nyní pokusí převést délky celé číslo iterátory `difference_type`.
-- `normal_distribution<float>`už vydá upozornění ve standardní knihovně o zužující z dvojitou na float.
+- `normal_distribution<float>` už vydá upozornění ve standardní knihovně o zužující z dvojitou na float.
 - Některé pevné `basic_string` operací, které byly porovnávání s `npos` místo `max_size()` při kontrole přetečení maximální velikost.
-- `condition_variable::wait_for(lock, relative_time, predicate)`by počkejte po celou dobu relativní v případě nesprávné probuzení. Nyní bude čekat pouze jeden interval relativní času.
-- `future::get()`teď by způsobila neplatnost `future`, protože vyžaduje standardní.
-- `iterator_traits<void *>`použít za chybu hardwaru, protože se pokusil formuláře `void&`; nyní řádně informovat prázdná struktura k povolení použití `iterator_traits` v "je iterator" podmínky sfinae u výrazů.
+- `condition_variable::wait_for(lock, relative_time, predicate)` by počkejte po celou dobu relativní v případě nesprávné probuzení. Nyní bude čekat pouze jeden interval relativní času.
+- `future::get()` teď by způsobila neplatnost `future`, protože vyžaduje standardní.
+- `iterator_traits<void *>` použít za chybu hardwaru, protože se pokusil formuláře `void&`; nyní řádně informovat prázdná struktura k povolení použití `iterator_traits` v "je iterator" podmínky sfinae u výrazů.
 - Některá upozornění hlášené Clang **wsystem –--headers** jsme vyřešili.
 - Také vyřešili "specifikace výjimek v deklaraci neodpovídá předchozí deklarace" hlášené Clang **- Wmicrosoft. výjimka specifikace**.
 - Také vyřešili mem. inicializátoru seznamu hlášené Clang a C1XX řazení upozornění.
@@ -129,8 +128,8 @@ Je implementovaná několik dalších funkce C ++ 17. Další informace najdete 
 - Mnoho `vector<bool>` operace jsou nyní označeny `noexcept`.
 - Standardní knihovna teď vynutí odpovídající allocator `value_type` (v C ++ 17 režim) s vyjádření výslovného nesouhlasu s řídicí šrafování.
 - Pevné některé podmínky, kde samoobslužných-range-vložení do `basic_string` by promíchání obsahu řetězce. (Poznámka: standardní stále zakazuje samoobslužných-range-vložení do vektory.)
-- `basic_string::shrink_to_fit()`už je ovlivňován přidělujícího modulu `propagate_on_container_swap`.
-- `std::decay`Teď zpracovává typy abominable funkce (tj. typů funkce, které jsou kvalifikovaný odchylka nákladů nebo kvalifikovaný ref).
+- `basic_string::shrink_to_fit()` už je ovlivňován přidělujícího modulu `propagate_on_container_swap`.
+- `std::decay` Teď zpracovává typy abominable funkce (tj. typů funkce, které jsou kvalifikovaný odchylka nákladů nebo kvalifikovaný ref).
 - Změnit zahrnují direktivy používat správné rozlišování velkých a malých písmen a lomítka, vylepšení přenositelnost.
 - Pevné upozornění C4061 "enumerátor '*enumerátor*'v přepínači výčtu'*– výčet*' není explicitně zpracovávaných případu popisek". Toto upozornění je vypnuto výchozím a byla opravena jako výjimku do zásad obecné standardní knihovna pro upozornění. (Standardní knihovna je **/W4** vyčistit, ale nebude pokoušet o být **/horní** vyčistit. Mnoho vypnout výchozím upozornění jsou velmi aktivní a není určena pro použití v pravidelných intervalech.)
 - Vylepšené `std::list` ladění kontroly. Seznam iterátory nyní kontrola `operator->()`, a `list::unique()` nyní označí iterátory jako zrušena.
@@ -143,9 +142,9 @@ Je implementovaná několik dalších funkce C ++ 17. Další informace najdete 
 - Změnit `std::try_lock()` používat rozšíření pack namísto rekurze.
 - Vylepšené `std::lock()` zablokování předcházení algoritmu použití `lock()` operations místo roztočený na `try_lock()` na všech zámků.
 - Povolené pojmenované návratovou hodnotu optimalizace v nástroji `system_category::message()`.
-- `conjunction`a `disjunction` nyní doložit N + 1 typy místo 2 n + 2 typy.
-- `std::function`už vytvoří strojů podporu přidělování pro každý typ vymazat volatelná aplikacemi, vylepšení propustnost a snížení velikosti .obj v programech, které předat mnoho různých lambdas k `std::function`.
-- `allocator_traits<std::allocator>`obsahuje ručně vložená `std::allocator` operace, zmenšení velikosti kódu v kódu, který komunikuje s `std::allocator` prostřednictvím `allocator_traits` pouze (to znamená, ve většině kód).
+- `conjunction` a `disjunction` nyní doložit N + 1 typy místo 2 n + 2 typy.
+- `std::function` už vytvoří strojů podporu přidělování pro každý typ vymazat volatelná aplikacemi, vylepšení propustnost a snížení velikosti .obj v programech, které předat mnoho různých lambdas k `std::function`.
+- `allocator_traits<std::allocator>` obsahuje ručně vložená `std::allocator` operace, zmenšení velikosti kódu v kódu, který komunikuje s `std::allocator` prostřednictvím `allocator_traits` pouze (to znamená, ve většině kód).
 - Rozhraní C ++ 11 minimální allocator teď používá standardní knihovna volání `allocator_traits` přímo, namísto zabalení přidělujícího modulu v interní třída `_Wrap_alloc`. To snižuje velikost kódu vygenerované allocator podpory, zlepšuje schopnost okně Optimalizace důvod o standardní knihovna kontejnery v některých případech a nabízí lepší ladění prostředí (jak je vidět typ vašeho allocator místo `_Wrap_alloc<your_allocator_type>` v ladicí program).
 - Odebrat metaprogramování upravené `allocator::reference`, které alokátorů nejsou povoleny ve skutečnosti k přizpůsobení. (Alokátorů provádět kontejnery použít zvláštní ukazatele, ale není zvláštní odkazy.)
 - Front-endu kompilátoru byl výukové rozbalení ladění iterátory v založený na rozsahu pro smyčky, zvýšení výkonu sestavení pro ladění.
@@ -158,7 +157,7 @@ Je implementovaná několik dalších funkce C ++ 17. Další informace najdete 
 - Změna na základě funkce výraz sfinae u výrazů k dokončení `struct` a `void_t`– na základě.
 - Standardní knihovny algoritmů teď Vyhněte se postincrementing iterátory.
 - Opravené zkrácení upozornění při použití 32-bit alokátorů na 64bitových systémech.
-- `std::vector`Přesuňte přiřazení je nyní efektivnější v případě jiných POCMA rovná allocator opětovným použitím vyrovnávací paměti, pokud je to možné.
+- `std::vector` Přesuňte přiřazení je nyní efektivnější v případě jiných POCMA rovná allocator opětovným použitím vyrovnávací paměti, pokud je to možné.
 
 #### <a name="readability-and-other-improvements"></a>Přehlednosti a další vylepšení
 
@@ -201,25 +200,25 @@ Několik funkce standardní knihovny byly přidány, zastaralé nebo odebrat v s
 
 #### <a name="performance-fixes-and-improvements"></a>Vylepšení a opravy výkonu
 
-- `basic_string<char16_t>`Nyní zapojí stejné `memcmp`, `memcpy`a podobné optimalizace, které `basic_string<wchar_t>` zapojí.
+- `basic_string<char16_t>` Nyní zapojí stejné `memcmp`, `memcpy`a podobné optimalizace, které `basic_string<wchar_t>` zapojí.
 - Omezení optimalizace, které brání ukazatelů na funkce nebudou vloženou obslužnou vystavené naše "vyhnout kopírování funkcí" v sadě Visual Studio 2015 Update 3 byla fungovala kolem, obnovení výkon `lower_bound(iter, iter, function pointer)`.
 - Režii iterator ladění je pořadí ověření vstupy `includes`, `set_difference`, `set_symmetric_difference`, a `set_union` se snížila o rozbalení iterátory před zaškrtnutím pořadí.
-- `std::inplace_merge`Nyní přeskočí přes prvky, které jsou již v pozici.
+- `std::inplace_merge` Nyní přeskočí přes prvky, které jsou již v pozici.
 - Vytváření `std::random_device` už vytvoří a pak zničí `std::string`.
-- `std::equal`a `std::partition` měli přechod threading průchodu optimalizace, které ukládá porovnávání iterator.
+- `std::equal` a `std::partition` měli přechod threading průchodu optimalizace, které ukládá porovnávání iterator.
 - Když `std::reverse` předaný ukazatele trivially kopírovatelná `T`, bude nyní dispatch psané vectorized implementaci.
 - `std::fill`, `std::equal`, a `std::lexicographical_compare` byly výukové postupy, do kterého se má `memset` a `memcmp` pro `std::byte` a `gsl::byte` (a další výčty jako char a výčet tříd). Všimněte si, že `std::copy` odešle zprávu pomocí `is_trivially_copyable` a proto nebylo nutné žádné změny.
 - Standardní knihovna již obsahuje prázdný závorky destruktory jejichž pouze chování byla aby jiný trivially zničitelné typy.
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Správnost opravy v aplikaci Visual Studio 2017 verze 15,5
 
-- `std::partition`nyní volání predikát N časy místo N + 1 dobu, jako standardní vyžaduje.
+- `std::partition` nyní volání predikát N časy místo N + 1 dobu, jako standardní vyžaduje.
 - Pokusí se vyhnout statické objekty magic ve verzi 15.3 opravili ve verzi 15,5.
-- `std::atomic<T>`nevyžaduje již `T` jako výchozí zkonstruovatelný.
+- `std::atomic<T>` nevyžaduje již `T` jako výchozí zkonstruovatelný.
 - Halda algoritmy, které už logaritmické časově udělat lineární čas assertion, že vstup je ve skutečnosti haldy Pokud je povoleno ladění iterátorů.
-- `__declspec(allocator)`Nyní je chráněn pro C1XX pouze, aby se zabránilo upozornění Clang, který nerozumí tento declspec.
-- `basic_string::npos`je k dispozici jako konstanta doba kompilace.
-- `std::allocator`v C ++ 17 režimu je větší než teď správně obslužné rutiny přidělení přepsání zarovnaný typy, typy to znamená, jejichž zarovnání `max_align_t`, pokud zakázal **/Zc:alignedNew-**.  Například vektory objektů s 16 nebo 32 bajtů zarovnání bude nyní správně zarovnán SSE a AVX pokyny.
+- `__declspec(allocator)` Nyní je chráněn pro C1XX pouze, aby se zabránilo upozornění Clang, který nerozumí tento declspec.
+- `basic_string::npos` je k dispozici jako konstanta doba kompilace.
+- `std::allocator` v C ++ 17 režimu je větší než teď správně obslužné rutiny přidělení přepsání zarovnaný typy, typy to znamená, jejichž zarovnání `max_align_t`, pokud zakázal **/Zc:alignedNew-**.  Například vektory objektů s 16 nebo 32 bajtů zarovnání bude nyní správně zarovnán SSE a AVX pokyny.
 
 ## <a name="other-libraries"></a>Další knihovny
 
@@ -262,7 +261,7 @@ Několik operací v jazyce C++ využívající modul IntelliSense pro refaktorin
 |||
 |-|-|
 |Funkce|Zlepšení výkonu|
-|přejmenování|5.3x|
+|přejmenování|5.3 x|
 |Změna podpisu |4.5 x|
 |Najít všechny odkazy|4.7 x|
 
@@ -394,7 +393,7 @@ Nové kontroly C++ základní pokyny zahrnují správnost chytré ukazatele, spr
 
 Některá čísla upozornění, která najdete v 15.3, už nejsou k dispozici v 15.5. Tato upozornění byla nahrazena specifičtějšími kontrolami.
 
-## <a name="unit-testing"></a>Testování částí
+## <a name="unit-testing"></a>Testování jednotek
 
 **Visual Studio 2017 verze 15,5**:
 

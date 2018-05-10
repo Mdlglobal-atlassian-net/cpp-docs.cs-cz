@@ -1,13 +1,10 @@
 ---
 title: SafeLessThan | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThan
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthan"></a>SafeLessThan
 Určuje, zda je jedno číslo menší než jiné.  
@@ -42,14 +37,14 @@ inline bool SafeLessThan (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`t`  
+ [v] `t`  
  První číslo. Toto musí být typu T.  
   
- [v]`u`  
+ [v] `u`  
  Druhé číslo. Musí se jednat o typ U.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true`Pokud `t` je menší než `u`jinak `false`.  
+ `true` Pokud `t` je menší než `u`jinak `false`.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda rozšiřuje standardní relační operátor, protože `SafeLessThan` umožňuje porovnat dva různé typy číslo.  

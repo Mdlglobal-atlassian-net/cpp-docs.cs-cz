@@ -1,12 +1,9 @@
 ---
-title: "CDaoRecordset – třída | Microsoft Docs"
-ms.custom: 
+title: CDaoRecordset – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset – třída
 Představuje sadu záznamy ze zdroje dat vybraná.  
@@ -327,7 +322,7 @@ class CDaoRecordset : public CObject
   
  Pomocí objektu členských funkcí a data členy procházet záznamů a pracovat s nimi. K dispozici operace závisí na tom, jestli je objekt sadu záznamů typu tabulky, sadě záznamů nebo sadu záznamů typu snímek a zda je možné aktualizovat nebo jen pro čtení – to závisí na možnosti databáze nebo připojení ODBC (Open Database) zdroj dat. K aktualizaci záznamů, které může mít změnily nebo přibyly od **otevřete** volání, volání objektu [Requery –](#requery) – členská funkce. Volání objektu **Zavřít** členské funkce a odstraňte objekt po dokončení s ním.  
   
- `CDaoRecordset`používá rozhraní DAO výměna pole záznamu (DFX) k čtení a aktualizaci polí záznamů prostřednictvím bezpečnost typů C++ členy vaší `CDaoRecordset` nebo `CDaoRecordset`-odvozené třídy. Můžete taky implementovat dynamické vazby sloupců v databázi bez použití DFX mechanismus pomocí [GetFieldValue](#getfieldvalue) a [SetFieldValue](#setfieldvalue).  
+ `CDaoRecordset` používá rozhraní DAO výměna pole záznamu (DFX) k čtení a aktualizaci polí záznamů prostřednictvím bezpečnost typů C++ členy vaší `CDaoRecordset` nebo `CDaoRecordset`-odvozené třídy. Můžete taky implementovat dynamické vazby sloupců v databázi bez použití DFX mechanismus pomocí [GetFieldValue](#getfieldvalue) a [SetFieldValue](#setfieldvalue).  
   
  Související informace naleznete v tématu "Objekt sady záznamů" v nápovědě rozhraní DAO.  
   
@@ -339,7 +334,7 @@ class CDaoRecordset : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
-##  <a name="addnew"></a>CDaoRecordset::AddNew  
+##  <a name="addnew"></a>  CDaoRecordset::AddNew  
  Volání této funkce člen přidat nový záznam na sadu záznamů typu tabulky nebo dynamické sady.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void AddNew();
   
  Související informace najdete v tématech "AddNew – metoda", "CancelUpdate metodu", "Změněno vlastnost" a "EditMode vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>  CDaoRecordset::CanAppend  
  Volání této funkce člen k určení, zda dříve otevřen sada záznamů umožňuje přidat nové záznamy voláním [AddNew](#addnew) – členská funkce.  
   
 ```  
@@ -385,12 +380,12 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě, že sada záznamů umožňuje přidání nové záznamy; jinak 0. `CanAppend`Vrátí 0, pokud jste otevřeli sada záznamů jen pro čtení.  
+ Nenulové hodnoty v případě, že sada záznamů umožňuje přidání nové záznamy; jinak 0. `CanAppend` Vrátí 0, pokud jste otevřeli sada záznamů jen pro čtení.  
   
 ### <a name="remarks"></a>Poznámky  
  Související informace naleznete v tématu "Připojit způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark  
  Volání této funkce člen k určení, zda dříve otevřen sada záznamů umožňuje jednotlivě označit záznamů pomocí záložky.  
   
 ```  
@@ -405,7 +400,7 @@ BOOL CanBookmark();
   
  Související informace naleznete v tématu "Bookmarkable vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate  
  `CancelUpdate` – Členská funkce zruší všechny čekající aktualizace z důvodu [upravit](#edit) nebo [AddNew](#addnew) operaci.  
   
 ```  
@@ -422,7 +417,7 @@ virtual void CancelUpdate();
   
  Související informace naleznete v tématu "CancelUpdate způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
  Volání této funkce člen k určení, zda sada záznamů umožňuje restartování jeho dotaz (Chcete-li obnovit svoje záznamy o) voláním **Requery –** – členská funkce.  
   
 ```  
@@ -439,7 +434,7 @@ BOOL CanRestart();
   
  Související informace naleznete v tématu "Nabízet možnost restartování vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>  CDaoRecordset::CanScroll  
  Volání této funkce člen k určení, zda sada záznamů umožňuje posouvání.  
   
 ```  
@@ -454,7 +449,7 @@ BOOL CanScroll() const;
   
  Související informace naleznete v tématu "Umístění aktuální záznam ukazatel s DAO" v nápovědě rozhraní DAO.  
   
-##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>  CDaoRecordset::CanTransact  
  Volání této funkce člen k určení, zda sada záznamů umožňuje transakce.  
   
 ```  
@@ -467,7 +462,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>Poznámky  
  Související informace naleznete v tématu "Transakce vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate  
  Volání této funkce člen k určení, zda lze aktualizovat sadu záznamů.  
   
 ```  
@@ -482,7 +477,7 @@ BOOL CanUpdate() const;
   
  Související informace najdete v tématech "AddNew – metoda", "Upravit způsob", "Odstranit metodu", "Metoda aktualizace" a "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset  
  Vytvoří `CDaoRecordset` objektu.  
   
 ```  
@@ -501,7 +496,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  Předat **NULL** do sady záznamů konstruktoru tak, aby měl `CDaoDatabase` objekt vytvořený a připojení pro vás automaticky. To je užitečné zástupce, který nevyžaduje můžete vytvořit a připojit `CDaoDatabase` objekt před vytvořením sady záznamů. Pokud `CDaoDatabase` objekt není otevřený, [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objektu bude vytvořen také pro vás, který používá výchozí pracovní prostor. Další informace najdete v tématu [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
   
-##  <a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>  CDaoRecordset::Close  
  Zavřením `CDaoRecordset` objekt odstraní ji z kolekce otevřete sad záznamů v přidružené databáze.  
   
 ```  
@@ -517,7 +512,7 @@ virtual void Close();
   
  Související informace naleznete v tématu "Zavřít způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>  CDaoRecordset::Delete  
  Volání této funkce člena odstranit záznam na aktuální záznam otevřený objekt sady záznamů dynamické sady nebo typ tabulky.  
   
 ```  
@@ -538,7 +533,7 @@ virtual void Delete();
   
  Související informace najdete v tématech "AddNew – metoda", "Upravit způsob", "Odstranit metodu", "Metoda aktualizace" a "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange  
  Volá rámec této – členská funkce pro automaticky výměnu dat mezi pole datových členů z objektu sady záznamů a na odpovídající sloupce ve zdroji dat na aktuální záznam.  
   
 ```  
@@ -558,7 +553,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="edit"></a>CDaoRecordset::Edit  
+##  <a name="edit"></a>  CDaoRecordset::Edit  
  Volání této funkce člen k povolení změn na aktuální záznam.  
   
 ```  
@@ -598,7 +593,7 @@ virtual void Edit();
   
  Související informace najdete v tématech "AddNew – metoda", "Upravit způsob", "Odstranit metodu", "Metoda aktualizace" a "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="fillcache"></a>CDaoRecordset::FillCache  
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache  
  Volání této funkce člena pro ukládání do mezipaměti zadaný počet záznamů ze sady záznamů.  
   
 ```  
@@ -623,11 +618,11 @@ void FillCache(
   
  Zaznamenává načítat z mezipaměti nereflektuje změny provedené současně ke zdrojovým datům jiných uživatelů.  
   
- `FillCache`načte pouze záznamy ještě není v mezipaměti. Chcete-li vynutit aktualizaci všech dat uložených v mezipaměti, volejte `SetCacheSize` – členská funkce s `lSize` parametr rovná 0, volání `SetCacheSize` znovu s `lSize` parametr rovná velikosti mezipaměti jste původně požádal a pak zavolají `FillCache`.  
+ `FillCache` načte pouze záznamy ještě není v mezipaměti. Chcete-li vynutit aktualizaci všech dat uložených v mezipaměti, volejte `SetCacheSize` – členská funkce s `lSize` parametr rovná 0, volání `SetCacheSize` znovu s `lSize` parametr rovná velikosti mezipaměti jste původně požádal a pak zavolají `FillCache`.  
   
  Související informace naleznete v tématu "FillCache způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>  CDaoRecordset::Find  
  Volání této funkce člen zjistit konkrétní řetězec v sadě záznamů typu dynamická sada nebo snímek pomocí operátoru porovnání.  
   
 ```  
@@ -666,7 +661,7 @@ virtual BOOL Find(
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>  CDaoRecordset::FindFirst  
  Volání této funkce člen najít na první záznam, který odpovídá zadanou podmínku.  
   
 ```  
@@ -716,7 +711,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>  CDaoRecordset::FindLast  
  Volání této funkce člen najít poslední záznam, který odpovídá zadanou podmínku.  
   
 ```  
@@ -754,7 +749,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>  CDaoRecordset::FindNext  
  Volání této funkce člen najít další záznam, který odpovídá zadanou podmínku.  
   
 ```  
@@ -792,7 +787,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>  CDaoRecordset::FindPrev  
  Volání této funkce člen najít předchozí záznam, který odpovídá zadanou podmínku.  
   
 ```  
@@ -830,7 +825,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition  
  Vrátí záznam počet aktuální záznam. objekt sady záznamů.  
   
 ```  
@@ -853,7 +848,7 @@ long GetAbsolutePosition();
   
  Související informace naleznete v tématu "AbsolutePosition vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark  
  Volání této funkce člen k získání hodnoty záložku v určitém záznamu.  
   
 ```  
@@ -873,7 +868,7 @@ COleVariant GetBookmark();
   
  Související informace naleznete v tématu "Záložku vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize  
  Volání této funkce člen získat počet záznamů v mezipaměti.  
   
 ```  
@@ -890,7 +885,7 @@ long GetCacheSize();
   
  Související informace naleznete v tématu "Velikost paměti, vlastnosti CacheStart" v nápovědě rozhraní DAO.  
   
-##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart  
  Volání této funkce člen získat hodnotu záložku na první záznam v sadě záznamů do mezipaměti.  
   
 ```  
@@ -908,7 +903,7 @@ COleVariant GetCacheStart();
   
  Související informace naleznete v tématu "Velikost paměti, vlastnosti CacheStart" v nápovědě rozhraní DAO.  
   
-##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex  
  Volání této funkce člen k určení index aktuálně nepoužívá v indexované typ tabulky `CDaoRecordset` objektu.  
   
 ```  
@@ -925,7 +920,7 @@ CString GetCurrentIndex();
   
  Související informace najdete v tématu "Index objekt" a definice "aktuální index" v nápovědě rozhraní DAO.  
   
-##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated  
  Volání této funkce člen načíst datum a čas, kdy byl vytvořen na základní tabulku.  
   
 ```  
@@ -940,7 +935,7 @@ COleDateTime GetDateCreated();
   
  Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
   
-##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated  
  Volání této funkce člen načíst datum a čas poslední aktualizace schématu.  
   
 ```  
@@ -955,7 +950,7 @@ COleDateTime GetDateLastUpdated();
   
  Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
   
-##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName  
  Volání této funkce člen určit název databáze pro tuto sadu záznamů.  
   
 ```  
@@ -972,7 +967,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL  
  Tato funkce člen získat příkaz výchozí SQL, na kterých je založena na sadu záznamů volá framework.  
   
 ```  
@@ -989,7 +984,7 @@ virtual CString GetDefaultSQL();
   
  Pokud předáte hodnotu null. řetězec SQL tak, aby [otevřete](#open), pak tato funkce je volána k určení názvu tabulky nebo SQL sady záznamů.  
   
-##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode  
  Volání této funkce člen k určení stavu úpravám, což je jedna z následujících hodnot:  
   
 ```  
@@ -1005,11 +1000,11 @@ short GetEditMode();
 |-----------|-----------------|  
 |**dbEditNone**|Probíhá operace bez úprav.|  
 |**dbEditInProgress**|**Upravit** byla volána.|  
-|**dbEditAdd**|`AddNew`byla volána.|  
+|**dbEditAdd**|`AddNew` byla volána.|  
   
  Související informace naleznete v tématu "EditMode vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount  
  Volání této funkce člen načíst počet polí (sloupce) definované v sadě záznamů.  
   
 ```  
@@ -1022,7 +1017,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>Poznámky  
  Související informace naleznete v tématu "Počet vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo  
  Volání této funkce člen ke získání informací o pole v sadě záznamů.  
   
 ```  
@@ -1048,11 +1043,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  Možnosti, které určují, které informace o sadě záznamů k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit. Pro nejlepší výkon získat pouze úroveň informací, které budete potřebovat:  
   
-- `AFX_DAO_PRIMARY_INFO`(Výchozí) Název, typ, velikost, atributy  
+- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikost, atributy  
   
-- `AFX_DAO_SECONDARY_INFO`Primární informace, plus: pořadí pozice, potřeby povolit nulové délky, pořadí řazení, cizí název pole zdroje, zdrojová tabulka  
+- `AFX_DAO_SECONDARY_INFO` Primární informace, plus: pořadí pozice, potřeby povolit nulové délky, pořadí řazení, cizí název pole zdroje, zdrojová tabulka  
   
-- `AFX_DAO_ALL_INFO`Informace o primární a sekundární plus: Text pro ověření výchozí hodnotu ověřovacího pravidla  
+- `AFX_DAO_ALL_INFO` Informace o primární a sekundární plus: Text pro ověření výchozí hodnotu ověřovacího pravidla  
   
  `lpszName`  
  Název pole.  
@@ -1064,7 +1059,7 @@ void GetFieldInfo(
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
-##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue  
  Volání této funkce člen k načtení dat v sadě záznamů.  
   
 ```  
@@ -1102,11 +1097,11 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  Použití `GetFieldValue` a [SetFieldValue](#setfieldvalue) dynamicky svázat pole v době běhu spíše než staticky vazba sloupce pomocí [DoFieldExchange](#dofieldexchange) mechanismus.  
   
- `GetFieldValue`a `DoFieldExchange` mechanismus mohou být kombinovány ke zlepšení výkonu. Například použít `GetFieldValue` načíst hodnotu, která budete potřebovat pouze na vyžádání a přiřazení této volání tlačítko "Další informace" v rozhraní.  
+ `GetFieldValue` a `DoFieldExchange` mechanismus mohou být kombinovány ke zlepšení výkonu. Například použít `GetFieldValue` načíst hodnotu, která budete potřebovat pouze na vyžádání a přiřazení této volání tlačítko "Další informace" v rozhraní.  
   
  Související informace najdete v tématech "Objekt pole" a "Hodnota vlastnosti" v nápovědě rozhraní DAO.  
   
-##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount  
  Volání této funkce člen k určení počtu indexy, které jsou k dispozici v sadě záznamů typu tabulky.  
   
 ```  
@@ -1117,11 +1112,11 @@ short GetIndexCount();
  Počet indexů v sadě záznamů typu tabulky.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetIndexCount`je užitečné pro ve smyčce přes všechny indexy v sadě záznamů. K tomuto účelu použít `GetIndexCount` ve spojení s [GetIndexInfo](#getindexinfo). Při volání této funkce člena na dynamické sady nebo sady záznamů typu snímek, MFC vyvolá výjimku.  
+ `GetIndexCount` je užitečné pro ve smyčce přes všechny indexy v sadě záznamů. K tomuto účelu použít `GetIndexCount` ve spojení s [GetIndexInfo](#getindexinfo). Při volání této funkce člena na dynamické sady nebo sady záznamů typu snímek, MFC vyvolá výjimku.  
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
-##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo  
  Volání této funkce člen získat různých typů informací o indexu definované v základní tabulce základní sady záznamů.  
   
 ```  
@@ -1147,11 +1142,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  Možnosti, které určují, které informace o index pro načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit. Pro nejlepší výkon získat pouze úroveň informací, které budete potřebovat:  
   
-- `AFX_DAO_PRIMARY_INFO`(Výchozí) Název, informace o pole, pole  
+- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, informace o pole, pole  
   
-- `AFX_DAO_SECONDARY_INFO`Primární informace, plus: primární, jedinečný, clusteru, Ignorovat hodnoty Null, vyžaduje, cizí  
+- `AFX_DAO_SECONDARY_INFO` Primární informace, plus: primární, jedinečný, clusteru, Ignorovat hodnoty Null, vyžaduje, cizí  
   
-- `AFX_DAO_ALL_INFO`Informace o primární a sekundární plus: jednoznačného počtu  
+- `AFX_DAO_ALL_INFO` Informace o primární a sekundární plus: jednoznačného počtu  
   
  `lpszName`  
  Ukazatel na název indexu objekt, pro vyhledávání podle názvu.  
@@ -1163,7 +1158,7 @@ void GetIndexInfo(
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
-##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark  
  Volání této funkce člen k načtení záložky nejvíce nedávno přidané nebo aktualizované záznamu.  
   
 ```  
@@ -1180,7 +1175,7 @@ COleVariant GetLastModifiedBookmark();
   
  Související informace naleznete v tématu "Změněno vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode  
  Volání této funkce člen k určení typu uzamčení platit pro sadu záznamů.  
   
 ```  
@@ -1199,7 +1194,7 @@ BOOL GetLockingMode();
   
  Související informace najdete v tématech "LockEdits vlastnost" a "Uzamčení chování v s více uživateli aplikace" v nápovědě rozhraní DAO.  
   
-##  <a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>  CDaoRecordset::GetName  
  Volání této funkce člen načíst název sady záznamů.  
   
 ```  
@@ -1214,7 +1209,7 @@ CString GetName();
   
  Související informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
   
-##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue  
  Volání této funkce člen načíst aktuální hodnota zadaný parametr uložené v základní objekt DAOParameter.  
   
 ```  
@@ -1237,7 +1232,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  Související informace naleznete v tématu "Parametr objekt" v nápovědě rozhraní DAO.  
   
-##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition  
  Při práci s dynamické sady nebo sadu záznamů typu snímek, když zavoláte `GetPercentPosition` před plně sestavování sady záznamů, množství přesun je relativní vzhledem k počtu záznamů získat přístup, které je uvedené voláním [getrecordcount –](#getrecordcount).  
   
 ```  
@@ -1254,7 +1249,7 @@ float GetPercentPosition();
   
  Související informace naleznete v tématu "PercentPosition vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount  
  Volání této funkce člen a zjistěte, kolik záznamy v sadě záznamů byl získat přístup.  
   
 ```  
@@ -1265,7 +1260,7 @@ long GetRecordCount();
  Vrátí počet záznamů, které jsou přístupné v objekt sady záznamů.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetRecordCount`neindikuje počet záznamů, jsou obsažené v dynamické sady nebo sadu záznamů typu snímek, dokud všechny záznamy byla získat přístup. Toto volání funkce člen může trvat poměrně dlouhou dobu.  
+ `GetRecordCount` neindikuje počet záznamů, jsou obsažené v dynamické sady nebo sadu záznamů typu snímek, dokud všechny záznamy byla získat přístup. Toto volání funkce člen může trvat poměrně dlouhou dobu.  
   
  Jakmile přistupoval poslední záznam návratovou hodnotu Určuje celkový počet neodstraněných záznamů v sadě záznamů. Chcete-li vynutit poslední záznam nelze přistupovat, zavolejte `MoveLast` nebo `FindLast` – členská funkce sady záznamů. Počet SQL můžete použít také k určení přibližný počet záznamů, které vrátí dotaz.  
   
@@ -1279,7 +1274,7 @@ long GetRecordCount();
   
  Související informace naleznete v tématu "%d{RecordCount/ vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>  CDaoRecordset::GetSQL  
  Volání této funkce člen získat příkaz jazyka SQL, která byla použita k výběru sady záznamů záznamů, pokud byl otevřen.  
   
 ```  
@@ -1299,7 +1294,7 @@ CString GetSQL() const;
   
  Související informace naleznete v tématu "Vlastnost SQL" v nápovědě rozhraní DAO.  
   
-##  <a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>  CDaoRecordset::GetType  
  Volání této funkce člen po otevření sady záznamů se zjistit typ objektu sady záznamů.  
   
 ```  
@@ -1318,7 +1313,7 @@ short GetType();
 ### <a name="remarks"></a>Poznámky  
  Související informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
   
-##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule  
  Volání této funkce člen k určení pravidlo slouží k ověření data.  
   
 ```  
@@ -1335,7 +1330,7 @@ CString GetValidationRule();
   
  Související informace naleznete v tématu "Vlastnosti Ověřovací pravidlo" v nápovědě rozhraní DAO.  
   
-##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText  
  Volání této funkce člen k získání textu vlastnost ověřovací text podkladového objektu pole.  
   
 ```  
@@ -1348,7 +1343,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>Poznámky  
  Související informace naleznete v tématu "Vlastnost Ověřovací text" v nápovědě rozhraní DAO.  
   
-##  <a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>  CDaoRecordset::IsBOF  
  Volání této funkce člen před posunutí ze záznamu záznam se dozvíte, zda jste došli před na první záznam sady záznamů.  
   
 ```  
@@ -1388,14 +1383,14 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst –**,`MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
+|**MoveFirst –**, `MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
 |**Přesunout** 0|Žádná změna|Žádná změna|  
 |`MovePrev`, **Přesunout** < 0|Nenulové hodnoty|Žádná změna|  
 |`MoveNext`, **Přesunout** > 0|Žádná změna|Nenulové hodnoty|  
   
  Související informace naleznete v tématu "BOF, vlastnosti EOF" v nápovědě rozhraní DAO.  
   
-##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted  
  Volání této funkce člen k určení, zda byl odstraněn záznam na aktuální záznam.  
   
 ```  
@@ -1415,7 +1410,7 @@ BOOL IsDeleted() const;
   
  Související informace najdete v tématech "Odstranit způsob", "Změněno vlastnost" a "EditMode vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>  CDaoRecordset::IsEOF  
  Volání této funkce člen při posunutí ze záznamu záznamu zjistěte, zda jste došli nad rámec poslední záznam sady záznamů.  
   
 ```  
@@ -1455,14 +1450,14 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst –**,`MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
+|**MoveFirst –**, `MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
 |**Přesunout** 0|Žádná změna|Žádná změna|  
 |`MovePrev`, **Přesunout** < 0|Nenulové hodnoty|Žádná změna|  
 |`MoveNext`, **Přesunout** > 0|Žádná změna|Nenulové hodnoty|  
   
  Související informace naleznete v tématu "BOF, vlastnosti EOF" v nápovědě rozhraní DAO.  
   
-##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty  
  Volání této funkce člen k určení, zda zadaná pole data členem dynamická sada má byla označena jako "Chybná" (změnit).  
   
 ```  
@@ -1479,9 +1474,9 @@ BOOL IsFieldDirty(void* pv);
 ### <a name="remarks"></a>Poznámky  
  Data v všechny změny pole datových členů budou přeneseny na záznam ve zdroji dat při aktualizaci na aktuální záznam voláním **aktualizace** členské funkce `CDaoRecordset` (následující volání **upravit**nebo `AddNew`). Replikace, můžete provést další kroky, jako například unflagging pole datového člena k označení sloupce, takže ho nebude možné zapsat do zdroje dat.  
   
- `IsFieldDirty`se implementuje pomocí `DoFieldExchange`.  
+ `IsFieldDirty` se implementuje pomocí `DoFieldExchange`.  
   
-##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull  
  Volání této funkce člen k určení, zda zadaná pole datových členů sady záznamů byl označen příznakem jako hodnotu Null.  
   
 ```  
@@ -1506,7 +1501,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  Pokud používáte dynamické vazby záznamů, bez odvozování z `CDaoRecordset`, je nutné používat **VT_NULL** jak je znázorněno v příkladu.  
   
-##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable  
  Volání této funkce člen k určení, zda je zadaná pole datového člena "null" (může být nastavena na hodnotu Null; C++ **NULL** není stejná jako hodnota Null, což v terminologii databáze znamená "s žádnou hodnotu").  
   
 ```  
@@ -1523,7 +1518,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>Poznámky  
  Pole, která nemůže mít hodnotu Null, musí mít hodnotu. Pokud se pokusíte toto pole nastavíte na hodnotu Null při přidávání nebo aktualizaci záznamu, zdroj dat odmítne přidání nebo aktualizace, a **aktualizace** vyvolá výjimku. Výjimka nastává při volání **aktualizace**, není při volání `SetFieldNull`.  
   
-##  <a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  Volání této funkce člen k určení, pokud sada záznamů je otevřený.  
   
 ```  
@@ -1535,7 +1530,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Poznámky  
   
-##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset::m_bCheckCacheForDirtyFields  
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields  
  Obsahuje příznak, který udává, zda v mezipaměti pole jsou automaticky označeny jako nesprávné (změněné) a hodnotu Null.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1543,7 +1538,7 @@ BOOL IsOpen() const;
   
  Tento člen data před voláním **otevřete**. Tento mechanismus je určen pro snadné použití. Výkon může být pomalejší kvůli ukládání polí, jakmile jsou změny.  
   
-##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  Obsahuje počet pole datových členů ve třídě sady záznamů a počet sloupců vybraných funkcí sady záznamů z datového zdroje.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1556,7 +1551,7 @@ BOOL IsOpen() const;
   
  Můžete vytvořit vazbu sloupců dynamicky ve své `CDaoRecordset::GetFieldValue` a `CDaoRecordset::SetFieldValue`. Pokud tak učiníte, není potřeba zvýšit počet v `m_nFields` tak, aby odrážela počet DFX funkce volání vaší `DoFieldExchange` – členská funkce.  
   
-##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams  
  Obsahuje počet parametry datových členů v třídě sady záznamů – počet parametrů předaných s dotaz sady záznamů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1569,7 +1564,7 @@ BOOL IsOpen() const;
   
  Související informace naleznete v tématu "Parametr objekt" v nápovědě rozhraní DAO.  
   
-##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset  
  Obsahuje ukazatel na rozhraní OLE pro základní objekt sady záznamů rozhraní DAO `CDaoRecordset` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1577,7 +1572,7 @@ BOOL IsOpen() const;
   
  Související informace naleznete v tématu "Objekt sady záznamů" v nápovědě rozhraní DAO.  
   
-##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase  
  Obsahuje odkazy `CDaoDatabase` objekt, pomocí kterého je sada záznamů připojený ke zdroji dat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1587,7 +1582,7 @@ BOOL IsOpen() const;
   
  Související informace naleznete v tématu "Objekt databáze" v nápovědě rozhraní DAO.  
   
-##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter  
  Obsahuje řetězec, který se používá pro konstrukci **kde** klauzuli příkazu SQL.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1597,7 +1592,7 @@ BOOL IsOpen() const;
   
  Související informace naleznete v tématu "Vlastnost filtru" v nápovědě rozhraní DAO.  
   
-##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort  
  Obsahuje řetězec obsahující **ORDERBY** klauzuli příkazu SQL bez vyhrazených slov **ORDERBY**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1609,7 +1604,7 @@ BOOL IsOpen() const;
   
  Související informace naleznete v tématu "Vlastnosti řazení" v nápovědě rozhraní DAO.  
   
-##  <a name="move"></a>CDaoRecordset::Move  
+##  <a name="move"></a>  CDaoRecordset::Move  
  Volání této funkce člen na pozici sady záznamů `lRows` záznamy na aktuální záznam.  
   
 ```  
@@ -1621,7 +1616,7 @@ virtual void Move(long lRows);
  Počet záznamů k přesunutí nebo předchozí. Kladné hodnoty. přesuňte směrem vpřed, na konci sady záznamů. Záporné hodnoty přesunout zpátky, zpět na začátek.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete přesunout nebo předchozí. `Move( 1 )`je ekvivalentní `MoveNext`, a `Move( -1 )` je ekvivalentní `MovePrev`.  
+ Můžete přesunout nebo předchozí. `Move( 1 )` je ekvivalentní `MoveNext`, a `Move( -1 )` je ekvivalentní `MovePrev`.  
   
 > [!CAUTION]
 >  Žádné z volání **přesunout** funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody **otevřete** nebo **Requery –**, volání buď `IsBOF` nebo `IsEOF`.  
@@ -1638,7 +1633,7 @@ virtual void Move(long lRows);
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst  
  Volání této funkce člen, aby na první záznam v sadě záznamů (pokud existuje) záznam na aktuální záznam.  
   
 ```  
@@ -1666,7 +1661,7 @@ void MoveFirst();
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>  CDaoRecordset::MoveLast  
  Volání této funkce člen, aby poslední záznam (pokud existuje) v sadě záznamů na aktuální záznam.  
   
 ```  
@@ -1691,7 +1686,7 @@ void MoveLast();
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>  CDaoRecordset::MoveNext  
  Volání této funkce člen, aby se na další záznam v sadě záznamů na aktuální záznam.  
   
 ```  
@@ -1715,7 +1710,7 @@ void MoveNext();
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>  CDaoRecordset::MovePrev  
  Volání této funkce člen aby předchozího záznamu v sadě záznamů na aktuální záznam.  
   
 ```  
@@ -1741,7 +1736,7 @@ void MovePrev();
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
-##  <a name="open"></a>CDaoRecordset::Open  
+##  <a name="open"></a>  CDaoRecordset::Open  
  Tato funkce člen načíst záznamy pro sadu záznamů musí volat.  
   
 ```  
@@ -1863,7 +1858,7 @@ virtual void Open(
   
  Související informace naleznete v tématu "OpenRecordset způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>  CDaoRecordset::Requery  
  Volání této funkce člena pro opětovné sestavení (Aktualizovat) sady záznamů.  
   
 ```  
@@ -1877,7 +1872,7 @@ virtual void Requery();
   
  Dynamická sada nebo snímek, volání **Requery** kdykoli chcete znovu vytvořit sadu záznamů pomocí hodnoty parametrů. Nastavte nový filtr nebo řazení nastavením [m_strFilter](#m_strfilter) a [m_strSort](#m_strsort) před voláním **Requery –**. Nastavit nové parametry přiřazením nové hodnoty pro parametry datových členů před voláním **Requery –**.  
   
- Pokud se nezdaří pokus o znovu vytvoření sady záznamů, sada záznamů je zavřený. Před voláním **Requery –**, můžete určit, zda může být sada záznamů fokusu voláním [CanRestart](#canrestart) – členská funkce. `CanRestart`není zaručeno, který **Requery** bude úspěšné.  
+ Pokud se nezdaří pokus o znovu vytvoření sady záznamů, sada záznamů je zavřený. Před voláním **Requery –**, můžete určit, zda může být sada záznamů fokusu voláním [CanRestart](#canrestart) – členská funkce. `CanRestart` není zaručeno, který **Requery** bude úspěšné.  
   
 > [!CAUTION]
 >  Volání **Requery –** až poté, co můžete volat **otevřete**.  
@@ -1891,7 +1886,7 @@ virtual void Requery();
   
  Související informace naleznete v tématu "Requery – metoda" v nápovědě rozhraní DAO.  
   
-##  <a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>  CDaoRecordset::Seek  
  Volání této funkce člen najít záznam v objektu indexované typ tabulky záznamů splňující zadaná kritéria pro aktuální index a že záznam na aktuální záznam.  
   
 ```  
@@ -1936,11 +1931,11 @@ BOOL Seek(
 ### <a name="remarks"></a>Poznámky  
  Druhý (pole) verzi nástroje `Seek` pro zpracování indexy pole čtyři nebo více.  
   
- `Seek`Umožňuje vysoce výkonné indexu vyhledávání na sady záznamů typu tabulky. Je nutné nastavit aktuální index voláním `SetCurrentIndex` před voláním `Seek`. Pokud index identifikuje nejedinečný klíčové pole nebo polí `Seek` vyhledá na první záznam, který splňuje kritéria. Pokud nezadáte žádnou index, je vyvolána výjimka.  
+ `Seek` Umožňuje vysoce výkonné indexu vyhledávání na sady záznamů typu tabulky. Je nutné nastavit aktuální index voláním `SetCurrentIndex` před voláním `Seek`. Pokud index identifikuje nejedinečný klíčové pole nebo polí `Seek` vyhledá na první záznam, který splňuje kritéria. Pokud nezadáte žádnou index, je vyvolána výjimka.  
   
  Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekty musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
   
- Při volání `Seek`, předáte jednu nebo více hodnot klíče a operátor porovnání ("<","\<=", "=", "> =", nebo ">"). `Seek`Vyhledá prostřednictvím zadaná pole klíče a vyhledá na první záznam, který splňuje kritériím `lpszComparison` a `pKey1`. Jednou najde, `Seek` vrátí nenulovou hodnotu a díky záznamů aktuální. Pokud `Seek` nepodaří najít shodu, `Seek` vrátí nula, a na aktuální záznam není definován. Pokud používáte rozhraní DAO přímo, je nutné zkontrolovat explicitně NoMatch vlastnost.  
+ Při volání `Seek`, předáte jednu nebo více hodnot klíče a operátor porovnání ("<","\<=", "=", "> =", nebo ">"). `Seek` Vyhledá prostřednictvím zadaná pole klíče a vyhledá na první záznam, který splňuje kritériím `lpszComparison` a `pKey1`. Jednou najde, `Seek` vrátí nenulovou hodnotu a díky záznamů aktuální. Pokud `Seek` nepodaří najít shodu, `Seek` vrátí nula, a na aktuální záznam není definován. Pokud používáte rozhraní DAO přímo, je nutné zkontrolovat explicitně NoMatch vlastnost.  
   
  Pokud `lpszComparison` je "=", "> =", nebo ">", `Seek` spustí na začátku index. Pokud `lpszComparison` je "<" nebo "< =", `Seek` spustí na konci index a hledá zpětně, pokud existují duplicitní index položky na konci. V takovém případě `Seek` začíná na libovolného položku mezi duplicitní index položky na konci index.  
   
@@ -1952,7 +1947,7 @@ BOOL Seek(
   
  Související informace naleznete v tématu "Hledat způsob" v nápovědě rozhraní DAO.  
   
-##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition  
  Nastaví počet relativní záznam aktuální záznam. objekt sady záznamů.  
   
 ```  
@@ -1978,7 +1973,7 @@ void SetAbsolutePosition(long lPosition);
   
  Související informace naleznete v tématu "AbsolutePosition vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark  
  Volání této funkce člen na pozici sadu záznamů na záznam obsahující zadanou záložkou.  
   
 ```  
@@ -1999,7 +1994,7 @@ void SetBookmark(COleVariant varBookmark);
   
  Související informace najdete v tématech "Záložku vlastnost" a Bookmarkable vlastnost"v nápovědě rozhraní DAO.  
   
-##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize  
  Volání této funkce člen nastavit počet záznamů v mezipaměti.  
   
 ```  
@@ -2017,7 +2012,7 @@ void SetCacheSize(long lSize);
   
  Související informace naleznete v tématu "Velikost paměti, vlastnosti CacheStart" v nápovědě rozhraní DAO.  
   
-##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart  
  Volání této funkce člen k určení záložku na první záznam v sadě záznamů do mezipaměti.  
   
 ```  
@@ -2041,7 +2036,7 @@ void SetCacheStart(COleVariant varBookmark);
   
  Související informace naleznete v tématu velikost paměti, vlastnosti CacheStart"v nápovědě rozhraní DAO.  
   
-##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex  
  Volání této funkce člen nastavit indexu v sadě záznamů typu tabulky.  
   
 ```  
@@ -2061,7 +2056,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  Související informace najdete v tématu "Index objekt" a definice "aktuální index" v nápovědě rozhraní DAO.  
   
-##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty  
  Volání této funkce člena na příznak pole datových členů sady záznamů jako změněné nebo jako beze změny.  
   
 ```  
@@ -2099,9 +2094,9 @@ void SetFieldDirty(
   
  To znamená, že nelze nastavit všechny **param** polí k **NULL**, stejně jako **outputColumn** pole.  
   
- `SetFieldDirty`se implementuje pomocí `DoFieldExchange`.  
+ `SetFieldDirty` se implementuje pomocí `DoFieldExchange`.  
   
-##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull  
  Volání této funkce člena na příznak pole datových členů sady záznamů jako hodnotu Null (konkrétně nutnosti žádná hodnota) nebo jinou hodnotu než Null.  
   
 ```  
@@ -2118,7 +2113,7 @@ void SetFieldNull(
  Nenulové hodnoty, pokud je pole data člen bude označen jako s žádnou hodnotu (Null). Jinak hodnota 0, pokud datový člen pole bude označen jako nesmí být nulová.  
   
 ### <a name="remarks"></a>Poznámky  
- `SetFieldNull`se používá pro pole hranice ve `DoFieldExchange` mechanismus.  
+ `SetFieldNull` se používá pro pole hranice ve `DoFieldExchange` mechanismus.  
   
  Když přidáte nový záznam do sady záznamů, jsou všechny datové členy původně nastavená na hodnotu Null a označené jako "nesprávné" (změněné). Pokud načítáte záznam ze zdroje dat, její sloupce buď již mít hodnoty, nebo hodnotu Null. Pokud není vhodné vytvořit pole hodnotu Null, [CDaoException](../../mfc/reference/cdaoexception-class.md) je vyvolána výjimka.  
   
@@ -2137,7 +2132,7 @@ void SetFieldNull(
   
  Nastaví pouze **outputColumn** polí k **NULL**; **param** pole, zůstanou beze změn.  
   
-##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue  
  Volání této funkce člen, nastavit hodnotu pole, podle pořadí pozice nebo změnou hodnoty řetězce.  
   
 ```  
@@ -2181,7 +2176,7 @@ void SetFieldValue(
   
  Související informace najdete v tématech "Objekt pole" a "Hodnota vlastnosti" v nápovědě rozhraní DAO.  
   
-##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull  
  Volání této funkce člen má být nastavena na hodnotu Null.  
   
 ```  
@@ -2201,7 +2196,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  Související informace najdete v tématech "Objekt pole" a "Hodnota vlastnosti" v nápovědě rozhraní DAO.  
   
-##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode  
  Volání této funkce člen nastavení uzamčení pro sadu záznamů typu.  
   
 ```  
@@ -2223,7 +2218,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  Při práci s zdroje dat ODBC, je vždy optimistické zamykání režimu.  
   
-##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue  
  Volání této funkce člen k nastavení hodnoty parametru v sadě záznamů v době běhu.  
   
 ```  
@@ -2252,7 +2247,7 @@ virtual void SetParamValue(
   
  Zadejte hodnotu pro nastavení jako `COleVariant` objektu. Informace o nastavení požadovanou hodnotu a pak zadejte vaše `COleVariant` objektů najdete v tématu třídy [COleVariant](../../mfc/reference/colevariant-class.md). Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
   
-##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  Volání této funkce člen nastavit parametr na hodnotu Null.  
   
 ```  
@@ -2270,7 +2265,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>Poznámky  
  C++ **NULL** není stejná jako hodnota Null, což v terminologii databáze znamená "s žádnou hodnotu."  
   
-##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition  
  Volání této funkce člen nastavit hodnotu, která změní přibližnou umístění na aktuální záznam v objektu sady záznamů na základě procenta záznamy v sadě záznamů.  
   
 ```  
@@ -2291,7 +2286,7 @@ void SetPercentPosition(float fPosition);
   
  Související informace naleznete v tématu "PercentPosition vlastnost" v nápovědě rozhraní DAO.  
   
-##  <a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>  CDaoRecordset::Update  
  Volání této funkce člen po volání `AddNew` nebo **upravit** – členská funkce.  
   
 ```  

@@ -1,34 +1,29 @@
 ---
-title: "Příklady výrazů Lambda | Microsoft Docs"
-ms.custom: 
+title: Příklady výrazů Lambda | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Příklady výrazů lambda
 Tento článek ukazuje, jak můžete použít výrazy lambda v programech. Přehled výrazů lambda v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md). Další informace o struktuře výrazu lambda najdete v tématu [syntaxe výrazu Lambda](../cpp/lambda-expression-syntax.md).  
   
-##  <a name="declaringLambdaExpressions"></a>Deklarování výrazy Lambda  
+##  <a name="declaringLambdaExpressions"></a> Deklarování výrazy Lambda  
   
 ### <a name="example-1"></a>Příklad 1  
  Protože je zadán výraz lambda, můžete je přiřadit `auto` proměnné nebo [funkce](../standard-library/function-class.md) objektu, jak je vidět tady:  
@@ -109,7 +104,7 @@ int main()
   
  [[v tomto článku](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>Výrazy Lambda volání  
+##  <a name="callingLambdaExpressions"></a> Výrazy Lambda volání  
  Výraz lambda můžete volat ihned, jak je znázorněno v následujícím fragmentu kódu. Druhý fragment kódu ukazuje, jak mají být předány lambda jako argument standardní knihovna C++ algoritmy, jako `find_if`.  
   
 ### <a name="example-1"></a>Příklad 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[v tomto článku](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>Vnořování výrazů Lambda  
+##  <a name="nestingLambdaExpressions"></a> Vnořování výrazů Lambda  
   
 ### <a name="example"></a>Příklad  
  Výraz lambda můžete vnořit do jiného tak, jak je ukázáno v následujícím příkladu. Vnitřní výraz lambda vynásobí svůj argument 2 a vrátí výsledek. Vnější výraz lambda volá vnitřní výraz lambda s argumentem a k výsledku přičte 3.  
@@ -222,7 +217,7 @@ int main()
   
  [[v tomto článku](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>Funkce vyšší pořadí Lambda  
+##  <a name="higherOrderLambdaExpressions"></a> Funkce vyšší pořadí Lambda  
   
 ### <a name="example"></a>Příklad  
  Koncept podporují řadu programovacích jazyků *funkce vyšší pořadí.* Funkce vyššího řádu je výraz lambda, který bere další výraz lambda jako svůj argument nebo který vrací výraz lambda. Můžete použít [funkce](../standard-library/function-class.md) třída povolit výrazu lambda C++ se bude chovat, jako jsou funkce vyšší pořadí. Následující příklad ukazuje výraz lambda, který vrací `function` objekt a výraz lambda, která přijímá `function` objektu jako její argument.  
@@ -271,7 +266,7 @@ int main()
   
  [[v tomto článku](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>Ve funkci pomocí výrazu Lambda  
+##  <a name="methodLambdaExpressions"></a> Ve funkci pomocí výrazu Lambda  
   
 ### <a name="example"></a>Příklad  
  Výrazy lambda v těle funkce můžete použít. Výraz lambda mají přístup všechny funkce nebo data člena, který nadřazených funkce přistupovat. Můžete explicitně nebo implicitně zaznamenat `this` ukazatele pro poskytnutí přístupu k funkce a data členy nadřazených tříd.  
@@ -366,7 +361,7 @@ int main()
   
  [[v tomto článku](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>Lambda – výrazy pomocí šablony  
+##  <a name="templateLambdaExpressions"></a> Lambda – výrazy pomocí šablony  
   
 ### <a name="example"></a>Příklad  
  Protože výrazy lambda mají typ, můžete je použít s šablonami jazyka C++. Následující příklad ukazuje `negate_all` a `print_all` funkce. `negate_all` Funkce se vztahuje unární `operator-` pro každý prvek v `vector` objektu. `print_all` Funkce vytiskne každý prvek v `vector` objektu do konzoly.  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[v tomto článku](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>Zpracování výjimek  
+##  <a name="ehLambdaExpressions"></a> Zpracování výjimek  
   
 ### <a name="example"></a>Příklad  
  Tělo výrazu lambda je v souladu s pravidly pro strukturované zpracování výjimek (SEH) i zpracování výjimek jazyka C++. V těle výrazu lambda můžete zpracovat vyvolanou výjimku nebo pozdržet zpracování výjimek pro nadřazený obor. Následující příklad používá `for_each` funkce a výrazu lambda k vyplnění `vector` hodnotami jiný objekt. Použije `try` / `catch` bloku pro zpracování Neplatný přístup k první vektoru.  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[v tomto článku](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>Použití výrazů Lambda s spravované typy (C + +/ CLI)  
+##  <a name="managedLambdaExpressions"></a> Použití výrazů Lambda s spravované typy (C + +/ CLI)  
   
 ### <a name="example"></a>Příklad  
  Klauzule zachycení výrazu lambda nemůže obsahovat proměnnou se spravovaným typem. Můžete však předat argument se spravovaným typem do seznamu parametrů výrazu lambda. Následující příklad obsahuje výraz lambda, který zachycuje místní proměnné nespravované `ch` tak, že hodnota a trvá <xref:System.String?displayProperty=fullName> objektu jako její parametr.  
@@ -526,7 +521,7 @@ Hello!
 ## <a name="see-also"></a>Viz také  
  [Lambda – výrazy](../cpp/lambda-expressions-in-cpp.md)   
  [Syntaxe výrazu lambda](../cpp/lambda-expression-syntax.md)   
- [automaticky](../cpp/auto-cpp.md)   
+ [Automaticky](../cpp/auto-cpp.md)   
  [Function – třída](../standard-library/function-class.md)   
  [find_if –](../standard-library/algorithm-functions.md#find_if)   
  [\<algoritmus >](../standard-library/algorithm.md)   
