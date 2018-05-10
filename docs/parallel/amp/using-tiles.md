@@ -1,32 +1,27 @@
 ---
-title: "Pomocí dlaždice | Microsoft Docs"
-ms.custom: 
+title: Pomocí dlaždice | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Používání bloků
 Dlaždice můžete maximalizovat akcelerace vaší aplikace. Dlaždice rozdělí vláken na stejné obdélníková podmnožiny nebo *dlaždice*. Pokud používáte příslušné dlaždice velikost a algoritmus vedle sebe, můžete získat i další akcelerace z vašeho kódu C++ AMP. Základní součásti dlaždice jsou:  
   
-- `tile_static`proměnné. Hlavní výhodou dlaždice je výkonnější z `tile_static` přístup. Přístup k datům v `tile_static` paměti může být výrazně rychlejší než přístup k datům v globálním prostoru (`array` nebo `array_view` objektů). Instance `tile_static` proměnné se vytvoří pro každou dlaždici, a všechna vlákna v dlaždici mají přístup k proměnné. V typické vedle sebe algoritmu data zkopírována do `tile_static` paměti jednou z globální paměti a potom k němu přistupovat mnohokrát z `tile_static` paměti.  
+- `tile_static` proměnné. Hlavní výhodou dlaždice je výkonnější z `tile_static` přístup. Přístup k datům v `tile_static` paměti může být výrazně rychlejší než přístup k datům v globálním prostoru (`array` nebo `array_view` objektů). Instance `tile_static` proměnné se vytvoří pro každou dlaždici, a všechna vlákna v dlaždici mají přístup k proměnné. V typické vedle sebe algoritmu data zkopírována do `tile_static` paměti jednou z globální paměti a potom k němu přistupovat mnohokrát z `tile_static` paměti.  
   
 - [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait). Volání `tile_barrier::wait` pozastaví spuštění aktuální vlákno, dokud všechny podprocesy v dlaždici stejné nezobrazí volání `tile_barrier::wait`. Nebudete moct zaručit pořadí, který se spustí vláken v, pouze to, že žádné vláken v dlaždici, budou spuštěny po volání `tile_barrier::wait` dokud všechny podprocesy dosáhli volání. To znamená, že pomocí `tile_barrier::wait` metodu, můžete provádět úlohy na základě dlaždice dlaždice než základ vlákno podprocesu. Typické dlaždice algoritmus má kód pro inicializaci `tile_static` paměti pro celou dlaždici následuje volání `tile_barrer::wait`. Kód, který následuje `tile_barrier::wait` obsahuje výpočty, které vyžadují přístup ke všem `tile_static` hodnoty.  
 
@@ -40,7 +35,7 @@ Dlaždice můžete maximalizovat akcelerace vaší aplikace. Dlaždice rozdělí
 ## <a name="example-of-global-tile-and-local-indices"></a>Příklad globální, dlaždice a místní indexů  
  Následující diagram představuje matici 8 x 9 dat, která jsou uspořádána ve 2 × 3 dlaždice.  
   
- ![8 & č. 45; pomocí & č. 45; 9 matice rozdělené do 2 & č. 45; pomocí & č. 45; 3 dlaždice](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;podle&#45;9 matice rozdělené do 2&#45;podle&#45;3 dlaždice](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  Následující příklad zobrazí globální, dlaždice, a místní indexy tohoto rozložen formou dlaždic matice. `array_view` Objekt se vytvoří pomocí elementy typu `Description`. `Description` Obsahuje globální, dlaždice a místní indexy elementu v matici. Kód ve volání `parallel_for_each` nastaví hodnoty na globální, dlaždice a místní indexy jednotlivých prvků. Výstup zobrazuje hodnoty `Description` struktury.  
   

@@ -1,27 +1,22 @@
 ---
-title: "Určení pevný počet vláken A.11 | Microsoft Docs"
-ms.custom: 
+title: Určení pevný počet vláken A.11 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1d06b142-4c35-44b8-994b-20f2aed5462b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c8aca2b90f021771ba9f9fc8a86d784ffe24a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71d09c470b76b61c6737566f7833334aeec6c63a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Určení pevného počtu vláken
 Některé programy spoléhají na pevnou, prespecified počet vláken správně spustit.  Protože výchozí nastavení pro dynamické přizpůsobení počet vláken je definované implementací, takové programy můžete vypnout funkce dynamické vláken a nastavte počet vláken explicitně zajistit přenositelnost. Následující příklad ukazuje, jak to provést pomocí `omp_set_dynamic` ([části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39), a `omp_set_num_threads` ([bod 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stránce 36):  

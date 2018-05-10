@@ -1,13 +1,10 @@
 ---
-title: "IDL – atributy | Microsoft Docs"
-ms.custom: 
+title: IDL – atributy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>IDL – atributy
 Zachování souboru IDL tradičně, znamenalo, že jste měl na:  
@@ -50,7 +45,7 @@ Zachování souboru IDL tradičně, znamenalo, že jste měl na:
 |[async_uuid](../windows/async-uuid.md)|Určuje identifikátor UUID, který přesměruje MIDL kompilátoru k definování synchronní a asynchronní verzích rozhraní modelu COM.|  
 |[bindable](../windows/bindable.md)|Označuje, že vlastnost podporuje datovou vazbu.|  
 |[call_as](../windows/call-as.md)|Umožňuje nonremotable funkce nejde mapovat na vzdálené funkce.|  
-|[případ](../windows/case-cpp.md)|Používá se [switch_type –](../windows/switch-type.md) atribut v spojení.|  
+|[Případ](../windows/case-cpp.md)|Používá se [switch_type –](../windows/switch-type.md) atribut v spojení.|  
 |[coclass](../windows/coclass.md)|Definici do souboru IDL jako třída typu coclass třídy místech.|  
 |[control](../windows/control.md)|Určuje, že je uživatelem definovaný typ ovládacího prvku.|  
 |[cpp_quote](../windows/cpp-quote.md)|Zadaný řetězec bez znaky uvozovek za sebou vysílá do souboru generovaného záhlaví.|  
@@ -86,7 +81,7 @@ Zachování souboru IDL tradičně, znamenalo, že jste měl na:
 |[licensed](../windows/licensed.md)|Označuje, že třída typu coclass, které se má licenci a musí být vytvořena pomocí **IClassFactory2**.|  
 |[místní](../windows/local-cpp.md)|Umožňuje použít MIDL kompilátoru jako generátor záhlaví při použití v hlavičce rozhraní. Při použití v jednotlivé funkce, označí místní postupu, pro které jsou generovány žádné zástupných procedur.|  
 |[max_is](../windows/max-is.md)|Určuje maximální hodnotu platné pole indexu.|  
-|[modul](../windows/module-cpp.md)|Knihovna bloku definuje v souboru.|  
+|[Modul](../windows/module-cpp.md)|Knihovna bloku definuje v souboru.|  
 |[ms_union](../windows/ms-union.md)|Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.|  
 |[no_injected_text](../windows/no-injected-text.md)|Kompilátor brání vložení kódu v důsledku použití atributu.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Označuje, že člena rozhraní by se neměly zobrazovat v prohlížeči vlastností.|  
@@ -95,7 +90,7 @@ Zachování souboru IDL tradičně, znamenalo, že jste měl na:
 |[object](../windows/object-cpp.md)|Určuje vlastní rozhraní; shodný s vlastních atributů.|  
 |[odl](../windows/odl.md)|Identifikuje rozhraní jako objekt popis jazyk (ODL) rozhraní.|  
 |[oleautomation](../windows/oleautomation.md)|Označuje, že rozhraní je kompatibilní s automatizace.|  
-|[volitelné](../windows/optional-cpp.md)|Určuje volitelný parametr členské funkce.|  
+|[Volitelné](../windows/optional-cpp.md)|Určuje volitelný parametr členské funkce.|  
 |[out](../windows/out-cpp.md)|Identifikuje ukazatel parametry, které jsou vráceny z volané procedury volání procedury (ze serveru do klienta).|  
 |[pointer_default](../windows/pointer-default.md)|Určuje výchozí atribut ukazatele pro všechny ukazatele s výjimkou ukazatele nejvyšší úrovně, které se zobrazují v seznamy parametrů.|  
 |[pragma](../windows/pragma.md)|Do souboru generovaného .idl vysílá zadaný řetězec bez znaky uvozovek za sebou.|  
@@ -112,15 +107,15 @@ Zachování souboru IDL tradičně, znamenalo, že jste měl na:
 |[restricted](../windows/restricted.md)|Určuje, že knihovna, nebo člen modulu, rozhraní nebo dispinterface nelze volat libovolně.|  
 |[retval](../windows/retval.md)|Označí parametr, který obdrží hodnotu vrácenou člena.|  
 |[size_is](../windows/size-is.md)|Určuje velikost paměti přidělené velikostí ukazatele, velikost ukazatele na velikosti ukazatele a jedním - nebo vícerozměrná pole.|  
-|[zdroj](../windows/source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí systému.|  
+|[Zdroj](../windows/source-cpp.md)|Označuje, že je členem třídy, vlastnosti nebo metody zdroj událostí systému.|  
 |[string](../windows/string-cpp.md)|Určuje, že jednorozměrná `char`, `wchar_t`, **bajtů**, nebo ekvivalentní pole nebo má ukazatel na takové pole musí být považované za řetězec.|  
 |[switch_is](../windows/switch-is.md)|Určuje výraz nebo identifikátor, který funguje jako union discriminant, která vybere položku členů sjednocení.|  
 |[switch_type](../windows/switch-type.md)|Určuje typ proměnnou použít jako union discriminant.|  
 |[transmit_as](../windows/transmit-as.md)|Dá pokyn kompilátoru k vidění typu, které klientské a serverové aplikace manipulaci, přidružení přenášená typu.|  
 |[uidefault](../windows/uidefault.md)|Označuje, že je člen informace typu výchozího člena pro zobrazení v uživatelském rozhraní.|  
-|[jedinečné](../windows/unique-cpp.md)|Určuje jedinečný ukazatel.|  
+|[Jedinečné](../windows/unique-cpp.md)|Určuje jedinečný ukazatel.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Informuje volající, pokud dojde k chybě při volání této funkce, volající potom může volat `GetLastError` načíst kód chyby.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídy nebo rozhraní.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Určuje jedinečné ID pro třídy nebo rozhraní.|  
 |[v1_enum](../windows/v1-enum.md)|Přesměruje, že zadaného výčtového typu předávají jako 32bitová verze entity, nikoli výchozí 16 bitů.|  
 |[vararg](../windows/vararg.md)|Určuje, že funkce trvat proměnný počet argumentů.|  
 |[vi_progid](../windows/vi-progid.md)|Určuje nezávislé na verzi forma identifikátor ProgID.|  

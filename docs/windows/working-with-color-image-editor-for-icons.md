@@ -1,13 +1,10 @@
 ---
-title: "Práce s barvou (Editor obrázků pro ikony) | Microsoft Docs"
-ms.custom: 
+title: Práce s barvou (Editor obrázků pro ikony) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - foreground colors, Image editor
 - colors [C++]
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ad0c7df6804667c3bd243668193283ecee61c8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f9016e36ce6b081446a00136445fd7ebdd5a341
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Práce s barvou (editor obrázků pro ikony)
 Editor obrázků obsahuje řadu funkcí, které konkrétně zpracování a přizpůsobení barev. Můžete nastavit barvu popředí nebo pozadí, vyplnění ohraničené oblasti barvou nebo vybrat barvu v obrázku chcete použít jako aktuální barvu popředí nebo pozadí. Můžete použít nástroje na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) společně s barevná paleta v [barvy – okno](../windows/colors-window-image-editor-for-icons.md) k vytvoření bitové kopie.  

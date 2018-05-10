@@ -1,12 +1,9 @@
 ---
-title: "propagator_block – třída | Microsoft Docs"
-ms.custom: 
+title: propagator_block – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - propagator_block
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eb908bf108bb3ddff375506225b9be97b2898ca5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block – třída
 `propagator_block` Třída je abstraktní základní třídu pro bloky zpráv, které jsou zdrojovém i cílovém. Kombinuje funkci i `source_block` a `target_block` třídy.  
@@ -89,16 +84,16 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[decline_incoming_messages](#decline_incoming_messages)|Označuje do bloku, musí být odmítnuta nové zprávy.|  
-|[initialize_source_and_target](#initialize_source_and_target)|Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializován.|  
-|[link_source](#link_source)|Blok zadaný zdroj odkazuje na tato `propagator_block` objektu.|  
+|[decline_incoming_messages –](#decline_incoming_messages)|Označuje do bloku, musí být odmítnuta nové zprávy.|  
+|[initialize_source_and_target –](#initialize_source_and_target)|Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializován.|  
+|[link_source –](#link_source)|Blok zadaný zdroj odkazuje na tato `propagator_block` objektu.|  
 |[process_input_messages](#process_input_messages)|Zpracování vstupu zpráv. To je vhodné pro Šiřitel bloků, které jsou odvozeny od source_block (přepíše [source_block::process_input_messages –](source-block-class.md#process_input_messages).)|  
 |[propagate_message](#propagate_message)|Při přepisu v odvozené třídě, tato metoda asynchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[register_filter](#register_filter)|Zaregistruje metodu filtru, která bude volána pro všechny přijaté zprávy.|  
+|[register_filter –](#register_filter)|Zaregistruje metodu filtru, která bude volána pro všechny přijaté zprávy.|  
 |[remove_network_links](#remove_network_links)|Odebere všechny zdrojové a cílové sítě odkazy z tohoto `propagator_block` objektu.|  
 |[send_message –](#send_message)|Při přepisu v odvozené třídě, tato metoda synchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
 |[unlink_source](#unlink_source)|Zruší propojení blok zadaného zdroje. z tohoto `propagator_block` objektu.|  
-|[unlink_sources](#unlink_sources)|Zruší všechny bloky zdroje z tohoto propojení `propagator_block` objektu. (Přepisuje [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|  
+|[unlink_sources –](#unlink_sources)|Zruší všechny bloky zdroje z tohoto propojení `propagator_block` objektu. (Přepisuje [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|  
   
 ## <a name="remarks"></a>Poznámky  
  Aby se zabránilo vícenásobná dědičnost `propagator_block` třída dědí z `source_block` – třída a `ITarget` abstraktní třídy. Většina funkcí v `target_block` třídy se replikují sem.  
@@ -241,7 +236,7 @@ void register_filter(filter_method const& _Filter);
  `_Filter`  
  Metoda filtru.  
   
-##  <a name="remove_network_links"></a> remove_network_links 
+##  <a name="remove_network_links"></a> remove_network_links – 
 
  Odebere všechny zdrojové a cílové sítě odkazy z tohoto `propagator_block` objektu.  
   
@@ -249,7 +244,7 @@ void register_filter(filter_method const& _Filter);
 void remove_network_links();
 ```  
   
-##  <a name="send">Odeslat</a> 
+##  <a name="send"></a> Odeslat 
 
  Synchronně zahájí zprávu, která tento blok. Voláno rozhraním `ISource` bloku. Po dokončení této funkce bude mít zpráva již rozšíří do bloku.  
   
@@ -272,7 +267,7 @@ virtual message_status send(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-class.md) Pokud buď `_PMessage` nebo `_PSource` parametr `NULL`.  
   
-##  <a name="send_message">send_message –</a> 
+##  <a name="send_message"></a> send_message – 
 
  Při přepisu v odvozené třídě, tato metoda synchronně předá zprávu od `ISource` bloku k tomuto `propagator_block` objektu. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   

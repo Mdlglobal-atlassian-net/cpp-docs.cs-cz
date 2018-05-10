@@ -1,13 +1,10 @@
 ---
-title: "Používání nástroje kreslení (Editor obrázků pro ikony) | Microsoft Docs"
-ms.custom: 
+title: Používání nástroje kreslení (Editor obrázků pro ikony) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.drawing
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], toolbar
 - drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2f6d310bedd3a2a523112d57ece2dcc54fb3fd1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17211518789113c11194314b57b741ab2b274ddc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Používání nástroje kreslení (editor obrázků pro ikony)
 Editor obrázků je od ruky kreslení a mazání nástroje všechny fungovat stejným způsobem: Vyberte nástroj a v případě potřeby [vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikost a tvar. Můžete pak přesuňte ukazatel na bitovou kopii a klikněte na tlačítko nebo přetáhněte kreslení a vymazat.  

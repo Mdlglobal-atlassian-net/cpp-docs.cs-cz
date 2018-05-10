@@ -1,12 +1,9 @@
 ---
-title: "combinable – třída | Microsoft Docs"
-ms.custom: 
+title: combinable – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - combinable
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="combinable-class"></a>combinable – třída
 `combinable<T>` Objektu slouží jako vlákno privátní kopií dat, provádět výpočty dílčí uvolnění zámku místní během paralelní algoritmy. Na konci paralelní operace dílčí výpočty vlákno privátní můžete pak sloučit konečný výsledek. Tato třída je možné místo sdílené proměnné a může mít za následek zlepšování výkonu Pokud by jinak byly spoustu kolizí sdílené proměnné.  
@@ -54,13 +49,13 @@ class combinable;
 |Název|Popis|  
 |----------|-----------------|  
 |[combinable](#ctor)|Přetíženo. Vytvoří nový `combinable` objektu.|  
-|[~combinable Destructor](#dtor)|Zničí `combinable` objektu.|  
+|[~ combinable – destruktor](#dtor)|Zničí `combinable` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[clear](#clear)|Vymaže všechny zprostředkující výpočetní výsledky z předchozí využití.|  
+|[Zrušte zaškrtnutí](#clear)|Vymaže všechny zprostředkující výpočetní výsledky z předchozí využití.|  
 |[kombinování](#combine)|Vypočítá konečná hodnota ze sady dílčí výpočty místní voláním functor zadané kombinační.|  
 |[combine_each](#combine_each)|Vypočítá konečná hodnota ze sady dílčí výpočty místní voláním functor zadané kombinační jednou za výpočetní dílčí místní. Konečný výsledek je shromážděných řešením objekt funkce.|  
 |[místní](#local)|Přetíženo. Vrátí odkaz na dílčí výpočet privátní přístup z více vláken.|  
@@ -69,7 +64,7 @@ class combinable;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Přiřadí `combinable` objekt z jiné `combinable` objektu.|  
+|[operátor =](#operator_eq)|Přiřadí `combinable` objekt z jiné `combinable` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -128,7 +123,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine">kombinování</a> 
+##  <a name="combine"></a> kombinování 
 
  Vypočítá konečná hodnota ze sady dílčí výpočty místní voláním functor zadané kombinační.  
   
@@ -147,7 +142,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Návratová hodnota  
  Konečný výsledek kombinace všechny výpočty dílčí privátní přístup z více vláken.  
   
-##  <a name="combine_each"></a> combine_each 
+##  <a name="combine_each"></a> combine_each – 
 
  Vypočítá konečná hodnota ze sady dílčí výpočty místní voláním functor zadané kombinační jednou za výpočetní dílčí místní. Konečný výsledek je shromážděných řešením objekt funkce.  
   
@@ -163,7 +158,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Functor, který kombinuje jeden dílčí výpočtu. Podpis je `void (T)` nebo `void (const T&)`a musí být asociativní a komutativní.  
   
-##  <a name="local">místní</a> 
+##  <a name="local"></a> místní 
 
  Vrátí odkaz na dílčí výpočet privátní přístup z více vláken.  
   

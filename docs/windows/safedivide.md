@@ -1,13 +1,10 @@
 ---
 title: SafeDivide | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeDivide
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0264fbd8df7f1dec5d20b40a67299cb4502b72aa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safedivide"></a>SafeDivide
 Provede podíl dvou čísel způsobem, který chrání před dělení nulou.  
@@ -43,17 +38,17 @@ inline bool SafeDivide (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`t`  
+ [v] `t`  
  Dělitel. Toto musí být typu T.  
   
- [v]`u`  
+ [v] `u`  
  Dividenda. Musí se jednat o typ U.  
   
- [out]`result`  
+ [out] `result`  
  Parametr kde `SafeDivide` ukládá výsledek.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true`Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
+ `true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci na jednu oblast bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  

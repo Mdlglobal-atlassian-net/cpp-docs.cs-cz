@@ -1,29 +1,24 @@
 ---
-title: ". Zpracování souboru XML | Microsoft Docs"
-ms.custom: 
+title: . Zpracování souboru XML | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-file-processing"></a>Zpracování souboru XML
 Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který se označí ke generování dokumentace. Další informace najdete v tématu [doporučené značky dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). ID řetězec jednoznačně identifikuje konstruktu. Programy, které zpracovávají soubor .xml můžete použít ID řetězec k identifikaci odpovídající rozhraní .NET Framework metadata nebo reflexe položky na které se vztahuje na dokumentaci.  
@@ -61,7 +56,7 @@ Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který
   
     -   ELEMENT_TYPE_PINNED je reprezentován jako ' ^' následující změny typu. Visual C++ compiler nikdy vygeneruje.  
   
-    -   ELEMENT_TYPE_CMOD_REQ je reprezentován jako "&#124; a plně kvalifikovaný název třídy modifikátor následující změny typu. Visual C++ compiler nikdy vygeneruje.  
+    -   ELEMENT_TYPE_CMOD_REQ je reprezentován jako '&#124;a plně kvalifikovaný název třídy modifikátor následující změny typu. Visual C++ compiler nikdy vygeneruje.  
   
     -   ELEMENT_TYPE_CMOD_OPT je reprezentován jako '!' a plně kvalifikovaný název třídy modifikátor následující změny typu.  
   

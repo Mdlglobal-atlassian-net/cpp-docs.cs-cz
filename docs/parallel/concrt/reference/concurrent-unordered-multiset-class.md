@@ -1,12 +1,9 @@
 ---
-title: "concurrent_unordered_multiset – třída | Microsoft Docs"
-ms.custom: 
+title: concurrent_unordered_multiset – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multiset
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48b73be3a16fd42da097ed402588df988415c8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb187e49302f9d885c8810636f1ed638257675
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset – třída
 `concurrent_unordered_multiset` Třída je concurrency bezpečných kontejner, který určuje posloupnost různých délka elementy typu K. Pořadí je reprezentována způsobem, který umožňuje bezpečné souběžnosti připojit, iterator traversal operace, iterator přístup a přístup k elementu.  
@@ -99,17 +94,17 @@ template <typename K,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[hash_function](#hash_function)|Vrátí objekt funkce uložené hodnoty hash.|  
-|[insert](#insert)|Přetíženo. Přidá elementy na `concurrent_unordered_multiset` objektu.|  
+|[hash_function –](#hash_function)|Vrátí objekt funkce uložené hodnoty hash.|  
+|[Vložení](#insert)|Přetíženo. Přidá elementy na `concurrent_unordered_multiset` objektu.|  
 |[key_eq](#key_eq)|Objekt funkce porovnání rovnosti uložené.|  
-|[swap](#swap)|Prohození obsahu dvou `concurrent_unordered_multiset` objekty. Tato metoda není bezpečná souběžnosti.|  
+|[Swap](#swap)|Prohození obsahu dvou `concurrent_unordered_multiset` objekty. Tato metoda není bezpečná souběžnosti.|  
 |[unsafe_erase](#unsafe_erase)|Přetíženo. Odebere elementy z `concurrent_unordered_multiset` v zadaných pozic. Tato metoda není bezpečná souběžnosti.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_unordered_multiset` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
+|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_unordered_multiset` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Podrobné informace o `concurrent_unordered_multiset` třídy najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -278,7 +273,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor do umístění posledním prvkem v kontejneru souběžných úspěšné.  
   
-##  <a name="equal_range"></a> equal_range 
+##  <a name="equal_range"></a> equal_range – 
 
  Vyhledá rozsah, který odpovídá zadaným klíčem. Tato funkce je bezpečné souběžnosti.  
   
@@ -400,7 +395,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Poslední dva členské funkce chovají stejně jako první dvě, vyjma toho, že `value` se používá pro konstrukci zadaná hodnota.  
   
-##  <a name="key_eq"></a> key_eq 
+##  <a name="key_eq"></a> key_eq – 
 
  Objekt funkce porovnání rovnosti uložené.  
   
@@ -438,7 +433,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Návratová hodnota  
  První člen funkce vrátí Multi-Factor uložené maximální zatížení. Druhý členská funkce nevrací hodnotu, ale vyvolá [out_of_range](../../../standard-library/out-of-range-class.md) výjimka, pokud zadaná zatížení faktor je neplatný...  
   
-##  <a name="max_size"></a> max_size 
+##  <a name="max_size"></a> max_size – 
 
  Vrátí maximální velikost souběžných kontejneru, určit pomocí přidělujícího modulu. Tato metoda je bezpečné souběžnosti.  
   
@@ -558,7 +553,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální počet intervalů, v tomto kontejneru.  
   
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size – 
 
  Vrátí počet položek v konkrétní sady tohoto kontejneru.  
   
@@ -653,7 +648,7 @@ size_type unsafe_erase(
   
  Třetí členská funkce odebere elementy v rozsahu oddělená [equal_range –](#equal_range)(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count – 
 
  Vrátí maximální počet intervalů, v tomto kontejneru.  
   

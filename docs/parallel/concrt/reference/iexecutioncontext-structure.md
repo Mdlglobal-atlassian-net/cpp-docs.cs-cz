@@ -1,12 +1,9 @@
 ---
-title: "Iexecutioncontext – struktura | Microsoft Docs"
-ms.custom: 
+title: Iexecutioncontext – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionContext
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c194dc7ecd4af0092dd304b17a8230cda6a8598
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext – struktura
 Rozhraní na kontext spuštění, který můžete spustit na danou virtuálních procesorů a být spolupráce při přepnout kontext.  
@@ -48,7 +43,7 @@ struct IExecutionContext;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IExecutionContext::Dispatch](#dispatch)|Metoda, která je volána, když proxy vlákna spustí provádění kontextu konkrétní spuštění. To by měl být hlavní pracovní rutiny pro vašeho scheduleru.|  
+|[Iexecutioncontext::Dispatch –](#dispatch)|Metoda, která je volána, když proxy vlákna spustí provádění kontextu konkrétní spuštění. To by měl být hlavní pracovní rutiny pro vašeho scheduleru.|  
 |[IExecutionContext::GetId](#getid)|Vrací jedinečný identifikátor pro kontext spuštění.|  
 |[IExecutionContext::GetProxy](#getproxy)|Vrátí rozhraní proxy přístup z více vláken, která provádí tohoto kontextu.|  
 |[IExecutionContext::GetScheduler](#getscheduler)|Vrátí rozhraní pro Plánovač patří tento kontext spuštění.|  

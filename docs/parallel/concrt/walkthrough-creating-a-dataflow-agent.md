@@ -1,30 +1,25 @@
 ---
-title: "Návod: Vytvoření agenta toku dat | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření agenta toku dat | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Postupy: Vytvoření agenta toku dat
 Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou založené na toku dat, místo tok řízení.  
@@ -42,7 +37,7 @@ Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou
   
 - [Postupy: Použití filtru bloku zpráv](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento názorný postup obsahuje následující části:  
   
 - [Vytvoření agenta základní tok řízení](#control-flow)  
@@ -51,7 +46,7 @@ Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou
   
 - [Vytvoření agenta protokolování zpráv](#logging)  
   
-##  <a name="control-flow"></a>Vytvoření agenta základní tok řízení  
+##  <a name="control-flow"></a> Vytvoření agenta základní tok řízení  
  Podívejte se na následující příklad, který definuje `control_flow_agent` třídy. `control_flow_agent` Třída slouží na tři vyrovnávacích pamětí zpráv: jeden vstupní vyrovnávací paměti a dva výstupní vyrovnávací paměti. `run` Metoda čte z zdrojová vyrovnávací paměť zprávy ve smyčce a používá podmíněného příkaz k přímé toku spuštění programu. Agent zvýší jeden čítač nulová, záporné hodnoty a zvýší jiný čítač nenulové, kladné hodnoty. Po agenta obdrží sentinel hodnota nula, odešle hodnoty čítačů výstupní vyrovnávací paměti zpráv. `negatives` a `positives` metody povolit aplikaci číst počty kladné i záporné hodnoty od agenta.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ Tento dokument ukazuje, jak vytvářet na základě agenta aplikace, které jsou
   
  [[Horní](#top)]  
   
-##  <a name="dataflow"></a>Vytvoření základní agenta toku dat  
+##  <a name="dataflow"></a> Vytvoření základní agenta toku dat  
  V této části ukazuje, jak převést `control_flow_agent` třídy pomocí modelu toku dat si provést stejný úkol.  
   
  Agenta toku dat funguje tak, že vytvoření sítě vyrovnávacích pamětí zpráv, z nichž každá má konkrétní účel. Určité bloky zpráv pomocí funkce filtru k přijetí nebo odmítnutí zprávu na základě jeho datové části. Funkce filtru zajistí, že blok zpráv přijímá jenom určité hodnoty.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[Horní](#top)]  
   
-##  <a name="logging"></a>Vytvoření agenta protokolování zpráv  
+##  <a name="logging"></a> Vytvoření agenta protokolování zpráv  
  Následující příklad ukazuje `log_agent` třídy, která vypadá přibližně takto: `dataflow_agent` třídy. `log_agent` Třída implementuje asynchronní protokolování agenta, zápisy do souboru a ke konzole protokolu zpráv. `log_agent` Třída umožňuje aplikaci zařadit do kategorií jako informační zprávy, varování nebo chyba. Umožňuje také aplikace k určení, zda je každá kategorie protokolu zapisovány do souboru, konzole nebo obojí. Tento příklad zapíše všechny zprávy protokolu do souboru a pouze chybové zprávy do konzoly.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

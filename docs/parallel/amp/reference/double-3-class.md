@@ -1,12 +1,9 @@
 ---
-title: "double_3 – třída | Microsoft Docs"
-ms.custom: 
+title: double_3 – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13862855b0377efe481cde68c349f1ba3d11e45
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double3-class"></a>double_3 – třída
 Představuje krátký vektor tři hodnoty Double.  
@@ -162,13 +157,13 @@ class double_3;
 |Název|Popis|  
 |----------|-----------------|  
 |double_3::Operator-||  
-|double_3::operator--||  
-|double_3::operator*=||  
+|double_3::Operator--||  
+|double_3::Operator * =||  
 |/ double_3::Operator = – operátor||  
-|double_3::operator++||  
-|double_3::operator+=||  
-|double_3::operator=||  
-|double_3::operator-=||  
+|double_3::Operator ++||  
+|double_3::Operator +=||  
+|double_3::Operator =||  
+|double_3::Operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -181,8 +176,8 @@ class double_3;
 |Název|Popis|  
 |----------|-----------------|  
 |double_3::b||  
-|double_3::bg||  
-|double_3::bgr||  
+|double_3::BG||  
+|double_3::BGR||  
 |double_3::br||  
 |double_3::brg||  
 |double_3::g||  
@@ -194,9 +189,9 @@ class double_3;
 |double_3::RB||  
 |double_3::rbg||  
 |double_3::rg||  
-|double_3::rgb||  
+|double_3::RGB||  
 |double_3::x||  
-|double_3::xy||  
+|double_3::XY||  
 |double_3::xyz||  
 |double_3::xz||  
 |double_3::xzy||  
@@ -209,7 +204,7 @@ class double_3;
 |double_3::zx||  
 |double_3::zxy||  
 |double_3::Zy||  
-|double_3::zyx||  
+|double_3::Zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `double_3`  

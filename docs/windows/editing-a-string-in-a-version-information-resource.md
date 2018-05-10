@@ -1,13 +1,10 @@
 ---
-title: "Úprava řetězce v prostředku informací o verzi | Microsoft Docs"
-ms.custom: 
+title: Úprava řetězce v prostředku informací o verzi | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
 dev_langs:
@@ -16,25 +13,23 @@ helpviewer_keywords:
 - version information resources
 - resources [Visual Studio], editing version information
 ms.assetid: d3a7d4e4-7d31-47c2-902c-f50b8404ba4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5add7bfb11b1c416853bb10ddbb2956885e181ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80795f912ab41809b19e77bd33f56243541d4de1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-a-string-in-a-version-information-resource"></a>Úprava řetězce v prostředku informací o verzi
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>Chcete-li upravit řetězec v prostředku informací o verzi  
   
 1.  Klikněte na položku jednou, potom znovu vyberte můžete začít s jeho úpravami. Provést změny přímo v tabulce informace o verzi nebo v [vlastnosti – okno](/visualstudio/ide/reference/properties-window). Provedené změny se projeví na obou místech.  
   
-     **Poznámka:** při úpravě **FILEFLAGS** klíče v editoru informací o verzi, můžete si všimnout nelze nastavit **ladění**, **privátní sestavení**, nebo  **Speciální sestavení** vlastnosti (v okně vlastností) pro soubory .rc:  
+     **Poznámka:** při úpravě **FILEFLAGS** klíče v editoru informací o verzi, můžete si všimnout nelze nastavit **ladění**, **privátní sestavení**, nebo **Speciální sestavení** vlastnosti (v okně vlastností) pro soubory .rc:  
   
     -   Nastaví editor informací o verzi **ladění** vlastnost s #ifdef ve skriptu prostředků na základě **_DEBUG –** sestavení příznak.  
   

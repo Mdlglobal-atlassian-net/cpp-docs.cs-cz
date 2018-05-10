@@ -1,12 +1,9 @@
 ---
-title: "Accelerator – třída | Microsoft Docs"
-ms.custom: 
+title: Accelerator – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 Je akcelerátor schopnost hardwaru, která je optimalizovaná pro data paralelní výpočty. Akcelerátor může být zařízení připojené ke sběrnici PCIe (například grafického procesoru), nebo může být rozšířené instrukce nastavit na hlavní procesoru.  
@@ -77,7 +72,7 @@ class accelerator;
 |Název|Popis|  
 |----------|-----------------|  
 |[Accelerator – konstruktor](#ctor)|Inicializuje novou instanci třídy `accelerator` třídy.|  
-|[~accelerator Destructor](#ctor)|Zničí `accelerator` objektu.|  
+|[~ accelerator – destruktor](#ctor)|Zničí `accelerator` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -86,10 +81,10 @@ class accelerator;
 |[create_view](#create_view)|Vytvoří a vrátí `accelerator_view` objektu na tento akcelerátoru.|  
 |[get_all](#get_all)|Vrátí vektor `accelerator` objekty, které představují všechny dostupné akcelerátorů.|  
 |[get_auto_selection_view](#get_auto_selection_view)|Vrátí automatický výběr `accelerator_view`.|  
-|[get_dedicated_memory](#get_dedicated_memory)|Vrátí vyhrazené paměti pro `accelerator`, v kilobajtech.|  
+|[get_dedicated_memory –](#get_dedicated_memory)|Vrátí vyhrazené paměti pro `accelerator`, v kilobajtech.|  
 |[get_default_cpu_access_type](#get_default_cpu_access_type)|Vrátí výchozí [access_type](concurrency-namespace-enums-amp.md#access_type) pro vyrovnávací paměti na této akcelerátoru vytvořit.|  
 |[get_default_view](#get_default_view)|Vrátí výchozí `accelerator_view` objekt, který je přidružen `accelerator`.|  
-|[get_description](#get_description)|Vrátí krátký popis `accelerator` zařízení.|  
+|[get_description –](#get_description)|Vrátí krátký popis `accelerator` zařízení.|  
 |[get_device_path](#get_device_path)|Vrátí cestu zařízení.|  
 |[get_has_display](#get_has_display)|Určuje, zda `accelerator` je připojen k zobrazení.|  
 |[get_is_debug](#get_is_debug)|Určuje, zda `accelerator` má vrstvě ladění pro rozsáhlé zasílání zpráv o chybách povoleno.|  
@@ -97,7 +92,7 @@ class accelerator;
 |[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|Určuje, zda `accelerator` podporuje sdílené paměti|  
 |[get_supports_double_precision](#get_supports_double_precision)|Určuje, zda `accelerator` je připojen k zobrazení.|  
 |[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Určuje, zda `accelerator` má omezenou podporu pro matematické dvojitou přesností.|  
-|[get_version](#get_version)|Vrátí verzi `accelerator`.|  
+|[get_version –](#get_version)|Vrátí verzi `accelerator`.|  
 |[set_default](#set_default)|Vrátí cestu akcelerátoru výchozí.|  
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|Nastaví výchozí procesoru [access_type](concurrency-namespace-enums-amp.md#access_type)pro pole a přidělení paměti implicitní provedené v tomto `accelerator`.|  
   
@@ -106,7 +101,7 @@ class accelerator;
 |Název|Popis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Porovná tato `accelerator` objekt s jinou a vrátí `false` případě, že jsou totožné; jinak vrátí `true`.|  
-|[operator=](#operator_eq)|Zkopíruje obsah zadaného `accelerator` k tomuto objektu.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator` k tomuto objektu.|  
 |[operator==](#operator_eq_eq)|Porovná tato `accelerator` objekt s jinou a vrátí `true` případě, že jsou totožné; jinak vrátí `false`.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
@@ -237,7 +232,7 @@ __declspec(property(get= get_default_view)) accelerator_view default_view;
 __declspec(property(get= get_description)) std::wstring description;  
 ```  
   
-##  <a name="device_path"></a> device_path 
+##  <a name="device_path"></a> device_path – 
 
  Získá cestu akcelerátor. Cesta je jedinečná v systému.  
   
@@ -253,7 +248,7 @@ __declspec(property(get= get_device_path)) std::wstring device_path;
 static const wchar_t direct3d_ref[];  
 ```  
   
-##  <a name="direct3d_warp"></a> direct3d_warp 
+##  <a name="direct3d_warp"></a> direct3d_warp – 
 
  Získá řetězec konstantní pro `accelerator` objektů, které můžete pro spouštění vašeho kódu C++ AMP v vícejádrovými procesory pomocí Streaming SIMD Extensions (SSE).  
   
@@ -335,7 +330,7 @@ std::wstring get_description() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Krátký popis `accelerator` zařízení.  
   
-##  <a name="get_device_path"></a> get_device_path 
+##  <a name="get_device_path"></a> get_device_path – 
 
  Vrátí cestu akcelerátor. Cesta je jedinečná v systému.  
   

@@ -1,36 +1,31 @@
 ---
-title: "Soubory (Nápověda jazyka HTML) nápovědy | Microsoft Docs"
-ms.custom: 
+title: Soubory (Nápověda jazyka HTML) nápovědy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-files-html-help"></a>Soubory nápovědy (Nápověda jazyka HTML)
 Následující soubory se vytvoří při přidání HTML – Nápověda typu nápovědy do aplikace tak, že vyberete **Kontextová nápověda** zaškrtávací políčko a potom vyberete **formát HTML – Nápověda** v [Upřesňující funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací MFC.  
   
 |Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|  
 |---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*.hhp|*Projname*\hlp|soubory nápovědy HTML|Soubor projektu nápovědy. Obsahuje data potřebná k zkompilovat soubory nápovědy do souboru .hxs nebo soubor CHM.|  
+|*Projname*hhp|*Projname*\hlp|soubory nápovědy HTML|Soubor projektu nápovědy. Obsahuje data potřebná k zkompilovat soubory nápovědy do souboru .hxs nebo soubor CHM.|  
 |*Projname*.hhk|*Projname*\hlp|soubory nápovědy HTML|Obsahuje index témat nápovědy.|  
 |*Projname*.hhc|*Projname*\hlp|soubory nápovědy HTML|Obsah nápovědy projektu.|  
 |Makehtmlhelp.bat|*Projname*|Zdrojové soubory|Používá systém pro sestavení projektu nápovědy během kompilace projektu.|  

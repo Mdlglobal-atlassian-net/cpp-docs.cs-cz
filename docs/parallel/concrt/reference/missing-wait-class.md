@@ -1,12 +1,9 @@
 ---
-title: "missing_wait – třída | Microsoft Docs"
-ms.custom: 
+title: missing_wait – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - missing_wait
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66feb4d39d08b4a9ae9b3a6099c32d2d15f1a5f1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="missingwait-class"></a>missing_wait – třída
 Tato třída popisuje výjimka vyvolaná při stále naplánované úlohy `task_group` nebo `structured_task_group` objektu v době tento objekt destruktor. Tato výjimka bude vyvolána nikdy Pokud destruktoru je dostupný z důvodu unwinding v důsledku výjimky zásobníku.  
@@ -77,5 +72,5 @@ missing_wait() throw();
  [Namespace souběžnosti](concurrency-namespace.md)   
  [task_group – třída](task-group-class.md)   
  [Počkej](task-group-class.md)   
- [run_and_wait](task-group-class.md)   
+ [run_and_wait –](task-group-class.md)   
  [structured_task_group – třída](structured-task-group-class.md)

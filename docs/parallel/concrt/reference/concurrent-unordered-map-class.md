@@ -1,12 +1,9 @@
 ---
-title: "concurrent_unordered_map – třída | Microsoft Docs"
-ms.custom: 
+title: concurrent_unordered_map – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map – třída
 `concurrent_unordered_map` Třída je bezpečné souběžnosti kontejner, který určuje posloupnost různých délka elementy typu `std::pair<const K, _Element_type>`. Pořadí je reprezentována způsobem, který umožňuje bezpečné souběžnosti připojit, iterator traversal operace, iterator přístup a přístup k elementu.  
@@ -109,18 +104,18 @@ template <typename K,
 |Název|Popis|  
 |----------|-----------------|  
 |[at](#at)|Přetíženo. Vyhledá v elementu `concurrent_unordered_map` se zadanou hodnotou klíče... Tato metoda je bezpečné souběžnosti.|  
-|[hash_function](#hash_function)|Získá uložený objekt hashovací funkce.|  
-|[insert](#insert)|Přetíženo. Přidá elementy na `concurrent_unordered_map` objektu.|  
+|[hash_function –](#hash_function)|Získá uložený objekt hashovací funkce.|  
+|[Vložení](#insert)|Přetíženo. Přidá elementy na `concurrent_unordered_map` objektu.|  
 |[key_eq](#key_eq)|Získá objekt funkce porovnání rovnosti uložené.|  
-|[swap](#swap)|Prohození obsahu dvou `concurrent_unordered_map` objekty. Tato metoda není bezpečná souběžnosti.|  
+|[Swap](#swap)|Prohození obsahu dvou `concurrent_unordered_map` objekty. Tato metoda není bezpečná souběžnosti.|  
 |[unsafe_erase](#unsafe_erase)|Přetíženo. Odebere elementy z `concurrent_unordered_map` v zadaných pozic. Tato metoda není bezpečná souběžnosti.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator[]](#operator_at)|Přetíženo. Vyhledá nebo vloží prvek se zadaným klíčem. Tato metoda je bezpečné souběžnosti.|  
-|[operator=](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_unordered_map` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
+|[[] – operátor](#operator_at)|Přetíženo. Vyhledá nebo vloží prvek se zadaným klíčem. Tato metoda je bezpečné souběžnosti.|  
+|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_unordered_map` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Podrobné informace o `concurrent_unordered_map` třídy najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -133,7 +128,7 @@ template <typename K,
  `concurrent_unordered_map`  
   
 ## <a name="requirements"></a>Požadavky  
- **Header:** concurrent_unordered_map.h  
+ **Záhlaví:** concurrent_unordered_map.h  
   
  **Namespace:** souběžnosti  
   
@@ -313,7 +308,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor do umístění posledním prvkem v kontejneru souběžných úspěšné.  
   
-##  <a name="equal_range"></a> equal_range 
+##  <a name="equal_range"></a> equal_range – 
 
  Vyhledá rozsah, který odpovídá zadaným klíčem. Tato funkce je bezpečné souběžnosti.  
   
@@ -437,7 +432,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Poslední dva členské funkce chovají stejně jako první dvě, vyjma toho, že `value` se používá pro konstrukci zadaná hodnota.  
   
-##  <a name="key_eq"></a> key_eq 
+##  <a name="key_eq"></a> key_eq – 
 
  Získá objekt funkce porovnání rovnosti uložené.  
   
@@ -475,7 +470,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Návratová hodnota  
  První člen funkce vrátí Multi-Factor uložené maximální zatížení. Druhý členská funkce nevrací hodnotu, ale vyvolá [out_of_range](../../../standard-library/out-of-range-class.md) výjimka, pokud zadaná zatížení faktor je neplatný...  
   
-##  <a name="max_size"></a> max_size 
+##  <a name="max_size"></a> max_size – 
 
  Vrátí maximální velikost souběžných kontejneru, určit pomocí přidělujícího modulu. Tato metoda je bezpečné souběžnosti.  
   
@@ -621,7 +616,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální počet intervalů, v tomto kontejneru.  
   
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size – 
 
  Vrátí počet položek v konkrétní sady tohoto kontejneru.  
   
@@ -720,7 +715,7 @@ size_type unsafe_erase(
   
  Třetí členská funkce odebere elementy v rozsahu oddělená `concurrent_unordered_map::equal_range`(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count – 
 
  Vrátí maximální počet intervalů, v tomto kontejneru.  
   

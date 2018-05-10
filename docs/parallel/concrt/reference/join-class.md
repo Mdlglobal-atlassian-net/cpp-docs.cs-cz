@@ -1,12 +1,9 @@
 ---
-title: "JOIN – třída | Microsoft Docs"
-ms.custom: 
+title: JOIN – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - join
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a37b6d3dce5d41578999aa54c8dff2dd2271fe9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="join-class"></a>join – třída
 A `join` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který kombinuje společně zprávy typu `T` z každé její zdroje.  
@@ -62,7 +57,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 |Název|Popis|  
 |----------|-----------------|  
-|[join](#ctor)|Přetíženo. Vytvoří `join` zasílání zpráv bloku.|  
+|[Připojení k](#ctor)|Přetíženo. Vytvoří `join` zasílání zpráv bloku.|  
 |[~join Destructor](#dtor)|Zničí `join` bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
@@ -70,7 +65,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 |Název|Popis|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `join` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
-|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `join` zasílání zpráv na úrovni bloku a rezervován cíl, přenos vlastnictví volajícímu.|  
+|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `join` zasílání zpráv na úrovni bloku a rezervován cíl, přenos vlastnictví volajícímu.|  
 |[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `join` zasílání zpráv bloku.|  
 |[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `join` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
 |[propagate_to_any_targets](#propagate_to_any_targets)|Vytvoří zprávu výstup obsahujícím zprávu vstupní z každého zdroje při mít rozšíří zprávu. Odešle tento výstup zprávu pro každý z jeho cíle.|  
@@ -179,7 +174,7 @@ join(
   
  Typ `filter_method` je functor podpisem `bool (T const &)` který lze vyvolat to `join` zasílání zpráv blok k určení, zda by měl přijímat nabízený zprávy.  
   
-##  <a name="dtor"></a> ~join 
+##  <a name="dtor"></a> ~ join 
 
  Zničí `join` bloku.  
   
@@ -253,7 +248,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a> resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation – 
 
  Obnoví šíření po vydala rezervace.  
   

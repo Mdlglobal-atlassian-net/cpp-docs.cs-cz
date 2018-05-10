@@ -1,12 +1,10 @@
 ---
-title: "Návod: Vytvoření tradiční aplikace Windows Desktop (C++) | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření tradiční aplikace Windows Desktop (C++) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace Windows Desktop (C++)
 
@@ -74,11 +71,11 @@ Postupujte podle těchto kroků vytvořte svůj první projekt plochy Windows a 
 
 Nyní vytvoření projektu a váš zdrojový soubor se otevře v editoru. Chcete-li pokračovat, přejděte rovnou na [vytvořit kód](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>Vytvoření projektu plochy Windows ve Visual Studio 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> Vytvoření projektu plochy Windows ve Visual Studio 2017 RTM
 
 1. Na **soubor** nabídce zvolte **nový** a potom zvolte **projektu**.
 
-1. V **nový projekt** dialogové okno, v levém podokně rozbalte **nainstalovaná**, **šablony**, **Visual C++**a potom vyberte **Win32**. V prostředním podokně vyberte **projektu Win32**.
+1. V **nový projekt** dialogové okno, v levém podokně rozbalte **nainstalovaná**, **šablony**, **Visual C++** a potom vyberte **Win32**. V prostředním podokně vyberte **projektu Win32**.
 
    V **název** pole, zadejte název projektu, například *DesktopApp*. Zvolte **OK**.
 
@@ -108,7 +105,7 @@ Dále budete zjistěte, jak vytvořit kód pro aplikace Windows v sadě Visual S
 
 ### <a name="to-start-a-windows-desktop-application"></a>Spuštění aplikace Windows
 
-1. Stejně jako všechny C musí mít aplikace a aplikace C++ `main` fungovat jako výchozí bod, každý Windows desktop aplikace musí mít `WinMain` funkce. `WinMain`má následující syntaxi.
+1. Stejně jako všechny C musí mít aplikace a aplikace C++ `main` fungovat jako výchozí bod, každý Windows desktop aplikace musí mít `WinMain` funkce. `WinMain` má následující syntaxi.
 
    ```cpp
    int CALLBACK WinMain(
@@ -131,7 +128,7 @@ Dále budete zjistěte, jak vytvořit kód pro aplikace Windows v sadě Visual S
    #include <tchar.h>
    ```
 
-1. Kromě `WinMain` funkce, každá aplikace Windows desktop musí mít také funkci proceduru okna. Tato funkce je obvykle s názvem `WndProc` , ale můžete pojmenovat se vám líbí. `WndProc`má následující syntaxi.
+1. Kromě `WinMain` funkce, každá aplikace Windows desktop musí mít také funkci proceduru okna. Tato funkce je obvykle s názvem `WndProc` , ale můžete pojmenovat se vám líbí. `WndProc` má následující syntaxi.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -369,7 +366,7 @@ Dále budete zjistěte, jak vytvořit kód pro aplikace Windows v sadě Visual S
    }
    ```
 
-   `HDC`Tento kód je popisovač pro kontext zařízení, což je datová struktura, která Windows používá k aktivaci aplikace ke komunikaci s grafiky subsystému. `BeginPaint` a `EndPaint` funkce zajistěte, aby vaše aplikace se chová jako dobrý občanem a nepoužívá kontextu zařízení po delší dobu, než je potřeba. To pomáhá zajistit, že grafický subsystém je k dispozici pro použití jinými aplikacemi.
+   `HDC` Tento kód je popisovač pro kontext zařízení, což je datová struktura, která Windows používá k aktivaci aplikace ke komunikaci s grafiky subsystému. `BeginPaint` a `EndPaint` funkce zajistěte, aby vaše aplikace se chová jako dobrý občanem a nepoužívá kontextu zařízení po delší dobu, než je potřeba. To pomáhá zajistit, že grafický subsystém je k dispozici pro použití jinými aplikacemi.
 
 1. Aplikace obvykle zpracovává mnoho dalších zpráv, například [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) při prvním vytvoření okna a [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) při zavření okna. Následující kód ukazuje základní ale Dokončit `WndProc` funkce.
 

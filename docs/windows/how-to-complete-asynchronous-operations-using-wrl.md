@@ -1,28 +1,23 @@
 ---
-title: "Postupy: dokončení asynchronních operací s použitím knihovny WRL | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: dokončení asynchronních operací s použitím knihovny WRL | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Postupy: Dokončení asynchronních operací s použitím knihovny WRL
 Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL) ke spuštění asynchronní operace a práci při dokončení operace.  
@@ -80,7 +75,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
  Kompilace kódu, zkopírujte jej a vložte ji do projektu sady Visual Studio nebo ho vložte do souboru, který je pojmenován `wrl-consume-async.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
   
- **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
+ **cl.exe knihovny wrl využívat async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>Příklad: Práce s vlákna na pozadí  
  Následující kroky spustit pracovní vlákno a definovat akci, kterou provádí tento přístup z více vláken. Úplný příklad následuje.  
@@ -128,7 +123,7 @@ Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL)
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu  
  Kompilace kódu, zkopírujte jej a vložte ji do projektu sady Visual Studio nebo ho vložte do souboru, který je pojmenován `wrl-consume-asyncOp.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
   
- **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
+ **cl.exe knihovny wrl využívat asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Viz také  
  [Knihovna šablon C++ prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

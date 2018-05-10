@@ -1,12 +1,9 @@
 ---
-title: "SchedulerPolicy – třída | Microsoft Docs"
-ms.custom: 
+title: SchedulerPolicy – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy – třída
 `SchedulerPolicy` Třída obsahuje sadu páry klíč/hodnota, jeden pro každý prvek zásady, které řídí chování instance plánovače.  
@@ -54,7 +49,7 @@ class SchedulerPolicy;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[GetPolicyValue](#getpolicyvalue)|Načte hodnotu klíče zásad zadán jako `key` parametr.|  
+|[Getpolicyvalue –](#getpolicyvalue)|Načte hodnotu klíče zásad zadán jako `key` parametr.|  
 |[Setconcurrencylimits –](#setconcurrencylimits)|Současně nastaví `MinConcurrency` a `MaxConcurrency` zásad na `SchedulerPolicy` objektu.|  
 |[Setpolicyvalue –](#setpolicyvalue)|Nastaví jako zadána hodnota klíče zásad `key` parametr a vrátí původní hodnotu.|  
   
@@ -62,7 +57,7 @@ class SchedulerPolicy;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Přiřadí zásady plánovače z jiné zásady plánovače.|  
+|[operátor =](#operator_eq)|Přiřadí zásady plánovače z jiné zásady plánovače.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace o zásady, které se dá řídit pomocí `SchedulerPolicy` třídy najdete v tématu [PolicyElementKey](concurrency-namespace-enums.md).  
@@ -148,7 +143,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="setconcurrencylimits">Setconcurrencylimits –</a> 
+##  <a name="setconcurrencylimits"></a> Setconcurrencylimits – 
 
  Současně nastaví `MinConcurrency` a `MaxConcurrency` zásad na `SchedulerPolicy` objektu.  
   
@@ -170,7 +165,7 @@ void SetConcurrencyLimits(
   
  Můžete také vyvolat metodu [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pro ostatní neplatné hodnoty.  
   
-##  <a name="setpolicyvalue">Setpolicyvalue –</a> 
+##  <a name="setpolicyvalue"></a> Setpolicyvalue – 
 
  Nastaví jako zadána hodnota klíče zásad `key` parametr a vrátí původní hodnotu.  
   
@@ -202,7 +197,7 @@ unsigned int SetPolicyValue(
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler – třída](currentscheduler-class.md)   
  [Scheduler – třída](scheduler-class.md)   
- [Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+ [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 
 

@@ -1,10 +1,7 @@
 ---
-title: "Concurrency::precise_math – obor názvů funkce | Microsoft Docs"
-ms.custom: 
+title: Concurrency::precise_math – obor názvů funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,66 +94,64 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funkce Concurrency::precise_math – obor názvů
 ||||  
 |-|-|-|  
-|[ACOS](#acos)|[acosf](#acosf)|[acosh](#acosh)|  
-|[acoshf](#acoshf)|[asin](#asin)|[asinf –](#asinf)|  
-|[asinh](#asinh)|[asinhf](#asinhf)|[atan](#atan)|  
-|[atan2](#atan2)|[atan2f](#atan2f)|[atanf](#atanf)|  
-|[atanh](#atanh)|[atanhf](#atanhf)|[cbrt](#cbrt)|  
-|[cbrtf](#cbrtf)|[ceil](#ceil)|[ceilf](#ceilf)|  
-|[copysign –](#copysign)|[copysignf](#copysignf)|[Cos](#cos)|  
-|[cosf](#cosf)|[cosh](#cosh)|[coshf](#coshf)|  
-|[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|  
-|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv](#erfcinv)|  
-|[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv](#erfinv)|  
-|[erfinvf](#erfinvf)|[exp](#exp)|[exp10](#exp10)|  
-|[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|  
+|[ACOS](#acos)|[acosf](#acosf)|[acosh –](#acosh)|  
+|[acoshf](#acoshf)|[ASIN](#asin)|[asinf –](#asinf)|  
+|[asinh –](#asinh)|[asinhf –](#asinhf)|[Atan](#atan)|  
+|[atan2](#atan2)|[atan2f](#atan2f)|[atanf –](#atanf)|  
+|[atanh –](#atanh)|[atanhf –](#atanhf)|[cbrt](#cbrt)|  
+|[cbrtf](#cbrtf)|[ceil](#ceil)|[ceilf –](#ceilf)|  
+|[copysign –](#copysign)|[copysignf –](#copysignf)|[Cos](#cos)|  
+|[cosf](#cosf)|[COSH](#cosh)|[coshf](#coshf)|  
+|[cospi](#cospi)|[cospif –](#cospif)|[erf](#erf)|  
+|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv –](#erfcinv)|  
+|[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv –](#erfinv)|  
+|[erfinvf –](#erfinvf)|[exp](#exp)|[exp10](#exp10)|  
+|[exp10f –](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|  
 |[expf](#expf)|[expm1](#expm1)|[expm1f](#expm1f)|  
-|[fabs](#fabs)|[fabsf](#fabsf)|[Floor](#floor)| 
+|[fabs](#fabs)|[fabsf –](#fabsf)|[Floor](#floor)| 
 |[fdim –](#fdim)|[fdimf –](#fdimf)|| 
-|[floorf](#floorf)|[fma](#fma)|[fmaf](#fmaf)|
+|[floorf](#floorf)|[fma](#fma)|[fmaf –](#fmaf)|
 [fmax](#fmax)|[fmaxf](#fmaxf)|| 
 |[Fmin](#fmin)|[fminf –](#fminf)|[fmod](#fmod)|  
-|[fmodf –](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
-|[frexpf](#frexpf)|[hypot](#hypot)|[hypotf](#hypotf)|  
-|[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|  
-|[isinf –](#isinf)|[isnan](#isnan)|[isnormal –](#isnormal)|  
+|[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
+|[frexpf](#frexpf)|[hypot –](#hypot)|[hypotf –](#hypotf)|  
+|[ilogb –](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|  
+|[isinf –](#isinf)|[isNaN](#isnan)|[isnormal –](#isnormal)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[lgamma](#lgamma)|  
-|[lgammaf](#lgammaf)|[log](#log)|[log10](#log10)|  
-|[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|  
-|[log2](#log2)|[log2f](#log2f)|[logb](#logb)|  
-|[logbf](#logbf)|[logf](#logf)|[modf –](#modf)|  
-|[modff](#modff)|[nan](#nan)|[nanf](#nanf)|  
-|[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|  
-|[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|  
-|[pow](#pow)|[powf](#powf)|[probit](#probit)|  
+|[lgammaf](#lgammaf)|[Protokolu](#log)|[log10](#log10)|  
+|[log10f](#log10f)|[log1p –](#log1p)|[log1pf](#log1pf)|  
+|[log2](#log2)|[log2f](#log2f)|[logb –](#logb)|  
+|[logbf –](#logbf)|[logf –](#logf)|[modf –](#modf)|  
+|[modff](#modff)|[NaN.](#nan)|[nanf –](#nanf)|  
+|[nearbyint –](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter –](#nextafter)|  
+|[nextafterf](#nextafterf)|[Phi –](#phi)|[phif –](#phif)|  
+|[Pow](#pow)|[powf –](#powf)|[probit –](#probit)|  
 |[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|  
-|[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
+|[Zbývající](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
 |[remquof](#remquof)|[Zaokrouhlit](#round)|[roundf –](#roundf)|  
-|[rsqrt](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb](#scalb)|  
+|[rsqrt –](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb –](#scalb)|  
 |[scalbf](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|  
-|[signbit –](#signbit)|[signbitf](#signbitf)|[sin](#sin)|  
+|[signbit –](#signbit)|[signbitf –](#signbitf)|[Sin](#sin)|  
 |[sincos –](#sincos)|[sincosf](#sincosf)|[sinf –](#sinf)|  
-|[sinh](#sinh)|[sinhf](#sinhf)|[sinpi](#sinpi)|  
-|[sinpif](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|  
-|[tan](#tan)|[tanf –](#tanf)|[tanh](#tanh)|  
-|[tanhf](#tanhf)|[tanpi](#tanpi)|[tanpif](#tanpif)|  
-|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[trunc](#trunc)|  
-|[truncf](#truncf)|  
+|[SINH](#sinh)|[sinhf](#sinhf)|[sinpi –](#sinpi)|  
+|[sinpif –](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|  
+|[Tan](#tan)|[tanf –](#tanf)|[TANH](#tanh)|  
+|[tanhf](#tanhf)|[tanpi –](#tanpi)|[tanpif –](#tanpif)|  
+|[tgamma](#tgamma)|[tgammaf](#tgammaf)|[TRUNC](#trunc)|  
+|[truncf –](#truncf)|  
   
 ##  <a name="acos"></a>  ACOS  
  Vypočítá Arkus kosinus argument  
@@ -387,7 +382,7 @@ inline float atanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí inverzní hyperbolický tangens hodnota argumentu  
   
-##  <a name="cbrt"></a>  cbrt  
+##  <a name="cbrt"></a>  cbrt –  
  Vypočítá skutečné kořenové datové krychle argumentu  
   
 ```  
@@ -404,7 +399,7 @@ inline double cbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí skutečné kořenové datové krychle argumentu  
   
-##  <a name="cbrtf"></a>  cbrtf  
+##  <a name="cbrtf"></a>  cbrtf –  
  Vypočítá skutečné kořenové datové krychle argumentu  
   
 ```  
@@ -709,7 +704,7 @@ inline float erfinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí inverzní Chyba funkce _X  
   
-##  <a name="exp10"></a>  exp10  
+##  <a name="exp10"></a>  exp10 –  
  Vypočítá exponenciální argumentu základních-10  
   
 ```  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametry  
  `exponent`  
- Exponenciální termín  *n*  matematickém výrazu `e` <sup> n </sup>, kde `e` je základ přirozeného logaritmu.  
+ Exponenciální termín *n* matematickém výrazu `e` <sup>n</sup>, kde `e` je základ přirozeného logaritmu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu exponenciální funkce argumentu o základu e a odečte 1.  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametry  
  `exponent`  
- Exponenciální termín  *n*  matematickém výrazu `e` <sup> n </sup>, kde `e` je základ přirozeného logaritmu.  
+ Exponenciální termín *n* matematickém výrazu `e` <sup>n</sup>, kde `e` je základ přirozeného logaritmu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu exponenciální funkce argumentu o základu e a odečte 1.  
@@ -802,7 +797,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu exponenciálního argumentu základem e  
   
-##  <a name="exp2"></a>  exp2  
+##  <a name="exp2"></a>  exp2 –  
  Vypočítá exponenciální argumentu základní-2  
   
 ```  
@@ -928,7 +923,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí podlaží argumentu  
 
-## <a name="a-namefma-fma"></a><a name="fma"> fma  
+## <a name="a-namefma-fma"></a><a name="fma"> FMA –  
 Vypočítá produktu jsou zadané argumenty první a druhý, pak přidá třetí argument zadaný na výsledek; celý výpočet se provádí jako jednu operaci.
 ```
 inline float fma(
@@ -968,7 +963,7 @@ inline float fmaf(
 ### <a name="return-value"></a>Návratová hodnota
 Výsledkem výrazu (_X * _Y) + _Z –. Celý výpočet se provádí jako jednu operaci; To znamená, dílčí výrazy jsou vypočítávány k nekonečné přesnost a konečný výsledek zaokrouhlen.
   
-##  <a name="fmax"></a>  fmax  
+##  <a name="fmax"></a>  Fmax  
  Určit maximální číselná hodnota, která jsou argumenty  
   
 ```  
@@ -992,7 +987,7 @@ inline double fmax(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="fmaxf"></a>  fmaxf  
+##  <a name="fmaxf"></a>  fmaxf –  
  Určit maximální číselná hodnota, která jsou argumenty  
   
 ```  
@@ -1076,7 +1071,7 @@ inline double fmod(
  Druhý argument s plovoucí desetinnou čárkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Zbývající část `_X` dělený `_Y`; to znamená, hodnota `_X`  -  `_Y`  *n* , kde  *n*  je celé číslo tak, aby odhad `_X`  -  `_Y`  *n*  je menší než odhad `_Y`.  
+ Zbývající část `_X` dělený `_Y`; to znamená, hodnota `_X`  -  `_Y` *n*, kde *n* je celé číslo typu integer tak, aby odhad `_X`  -  `_Y` *n* je menší než odhad `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf –  
  Vypočítá zbytek první zadaného argumentu dělený druhý zadaného argumentu.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  Druhý argument s plovoucí desetinnou čárkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Zbývající část `_X` dělený `_Y`; to znamená, hodnota `_X`  -  `_Y`  *n* , kde  *n*  je celé číslo tak, aby odhad `_X`  -  `_Y`  *n*  je menší než odhad `_Y`.  
+ Zbývající část `_X` dělený `_Y`; to znamená, hodnota `_X`  -  `_Y` *n*, kde *n* je celé číslo typu integer tak, aby odhad `_X`  -  `_Y` *n* je menší než odhad `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify –  
  Klasifikuje hodnota argumentu jako nula NaN, nekonečné, normální subnormal,  
@@ -1321,9 +1316,9 @@ inline double ldexp(
  Celočíselná hodnota, exponentu  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Returns _X * 2^_Exp  
+ Vrátí _X * 2 ^ _Exp  
   
-##  <a name="ldexpf"></a>  ldexpf  
+##  <a name="ldexpf"></a>  ldexpf –  
  Vypočítá reálné číslo ze zadaného mantisa a exponent.  
   
 ```  
@@ -1340,7 +1335,7 @@ inline float ldexpf(
  Celočíselná hodnota, exponentu  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Returns _X * 2^_Exp  
+ Vrátí _X * 2 ^ _Exp  
   
 ##  <a name="lgamma"></a>  lgamma –  
  Vypočítá přirozený logaritmus absolutní hodnotu gama argumentu  
@@ -1540,7 +1535,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí logaritmus základem e argumentu  
   
-##  <a name="modf"></a>  modf  
+##  <a name="modf"></a>  modf –  
  Rozdělí zadaný argument do zlomkové a částí celé číslo.  
   
 ```  
@@ -1564,7 +1559,7 @@ inline double modf(
 ### <a name="return-value"></a>Návratová hodnota  
  Podepsaný zlomkové části `_X`.  
   
-##  <a name="modff"></a>  modff  
+##  <a name="modff"></a>  modff –  
  Rozdělí zadaný argument do zlomkové a částí celé číslo.  
   
 ```  
@@ -1583,7 +1578,7 @@ inline float modff(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí podepsaný zlomkové části `_X`.  
   
-##  <a name="nan"></a>  nan  
+##  <a name="nan"></a>  NaN.  
  Vrátí quiet NaN  
   
 ```  
@@ -1597,7 +1592,7 @@ inline double nan(int _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí quiet NaN, pokud se obsah k dispozici v _X  
   
-##  <a name="nanf"></a>  nanf  
+##  <a name="nanf"></a>  nanf –  
  Vrátí quiet NaN  
   
 ```  
@@ -1685,7 +1680,7 @@ inline float nextafterf(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí hodnotu dalšího reprezentovat v typu funkce, po _X ve směru _Y  
   
-##  <a name="phi"></a>  phi  
+##  <a name="phi"></a>  Phi –  
  Vrátí kumulativní distribuční funkci argumentu  
   
 ```  
@@ -2249,7 +2244,7 @@ inline double sqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí kořenu squre argumentu  
   
-##  <a name="sqrtf"></a>  sqrtf  
+##  <a name="sqrtf"></a>  sqrtf –  
  Vypočítá kořenu squre argumentu  
   
 ```  

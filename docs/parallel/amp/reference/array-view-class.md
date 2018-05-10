@@ -1,12 +1,9 @@
 ---
-title: "array_view – třída | Microsoft Docs"
-ms.custom: 
+title: array_view – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view – třída
 Reprezentuje N-trojrozměrné zobrazení přes data ukládaná v jiném kontejneru.  
@@ -80,7 +75,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |Název|Popis|  
 |----------|-----------------|  
 |[array_view – konstruktor](#ctor)|Inicializuje novou instanci třídy `array_view` třídy. Neexistuje žádný výchozí konstruktor `array<T,N>`. Všechny konstruktory jsou omezeny na procesoru pouze spouštět a se nedá spustit na Direct3D – cíl.|  
-|[~array_view Destructor](#ctor)|Zničí `array_view` objektu.|  
+|[~ array_view – destruktor](#ctor)|Zničí `array_view` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -92,7 +87,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|Vrací objekt rozsah array_view objektu.|  
 |[get_ref](#get_ref)|Vrátí odkaz na element indexovaný.|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|Vrátí [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází.|  
-|[refresh](#refresh)|Upozorní `array_view` objekt, který jeho vázané paměť byla změněna mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralé.|  
+|[Aktualizace](#refresh)|Upozorní `array_view` objekt, který jeho vázané paměť byla změněna mimo `array_view` rozhraní. Volání tato metoda vykreslí všechny informace uložené v mezipaměti zastaralé.|  
 |[reinterpret_as](#reinterpret_as)|Vrací jednorozměrné pole, která obsahuje všechny elementy ve `array_view` objektu.|  
 |[section](#section)|Vrátí dílčí části `array_view` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah.|  
 |[synchronize](#synchronize)|Synchronizuje všechny změny provedené `array_view` objektu zpět na jeho zdrojová data.|  
@@ -105,9 +100,9 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Vrátí hodnotu elementu, který je zadán parametr nebo parametry.|  
-|[operator[]](#operator_at)|Vrátí element, který je zadanou parametry.|  
-|[operator=](#operator_eq)|Zkopíruje obsah zadaného `array_view` objekt s touto.|  
+|[Operator() –](#operator_call)|Vrátí hodnotu elementu, který je zadán parametr nebo parametry.|  
+|[[] – operátor](#operator_at)|Vrátí element, který je zadanou parametry.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array_view` objekt s touto.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -119,7 +114,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |Název|Popis|  
 |----------|-----------------|  
-|[extent](#extent)|Získá `extent` objekt, který definuje tvar `array_view` objektu.|  
+|[rozsah](#extent)|Získá `extent` objekt, který definuje tvar `array_view` objektu.|  
 |[source_accelerator_view](#source_accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) kde zdroj dat `array_view` nachází|  
 |[value_type](#value_type)|Typ hodnoty `array_view` a vázané pole.|  
   
@@ -586,7 +581,7 @@ static const int rank = _Rank;
 ```  
 void refresh() const restrict(cpu);
 ```  
-## <a name="reinterpret_as"></a> reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as – 
 
 Reinterprets array_view prostřednictvím jednorozměrné array_view, který jako možnost může mít typ jinou hodnotu než array_view zdroje.  
   
@@ -797,7 +792,7 @@ concurrency::completion_future synchronize_to_async(
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="view_as"></a> view_as 
+##  <a name="view_as"></a> view_as – 
 
  To reinterprets `array_view` jako `array_view` z jiné pořadí.  
   

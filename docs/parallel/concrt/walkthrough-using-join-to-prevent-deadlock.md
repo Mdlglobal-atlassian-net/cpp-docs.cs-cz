@@ -1,13 +1,10 @@
 ---
-title: "Návod: Použití metody join k zabránění vzájemnému zablokování | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Použití metody join k zabránění vzájemnému zablokování | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Návod: Použití metody join k zabránění vzájemnému zablokování
 Toto téma používá nabízet filosofů problém pro ilustraci použití [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy, aby zablokování v aplikaci. V aplikaci softwaru *zablokování* nastane, když minimálně dva procesy každý uložení prostředku a vzájemně čekat na jiný proces k uvolnění jiný prostředek.  
@@ -46,7 +41,7 @@ Toto téma používá nabízet filosofů problém pro ilustraci použití [concu
   
 - [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento názorný postup obsahuje následující části:  
   
 - [Nabízet filosofů problém](#problem)  
@@ -55,7 +50,7 @@ Toto téma používá nabízet filosofů problém pro ilustraci použití [concu
   
 - [Použití metody join k zabránění vzájemnému zablokování](#solution)  
   
-##  <a name="problem"></a>Nabízet filosofů problém  
+##  <a name="problem"></a> Nabízet filosofů problém  
  Nabízet problém filosofů ukazuje, jak dojde k zablokování v aplikaci. V tento problém pět filosofů nacházejí se na kulatého stolu. Každý filosofovi střídá myslím a pít. Každý filosofovi musí sdílet s sousedním na levé straně a druhý chopstick chopstick s sousedním vpravo. Následující obrázek znázorňuje tuto rozložení.  
   
  ![Problém jídlo filosofů](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ Toto téma používá nabízet filosofů problém pro ilustraci použití [concu
   
  [[Horní](#top)]  
   
-##  <a name="deadlock"></a>Implementace Naïve  
+##  <a name="deadlock"></a> Implementace Naïve  
  Následující příklad ukazuje implementaci naïve nabízet filosofů problému. `philosopher` Třída, která je odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md), umožňuje každý filosofovi tak, aby fungoval nezávisle. Tento příklad používá sdílené pole [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objekty, které chcete poskytnout každý `philosopher` objektu výhradní přístup k pár chopsticks.  
   
  Chcete-li se týkají implementace na obrázku, `philosopher` třída reprezentuje jeden filosofovi. `int` Každý chopstick představuje proměnnou. `critical_section` Objekty sloužit jako držitelé, na kterých chopsticks rest. `run` Metoda simuluje dobu životnosti filosofovi. `think` Metoda simuluje v rámci přemýšlení a `eat` metoda simuluje v rámci pít.  
@@ -87,7 +82,7 @@ Toto téma používá nabízet filosofů problém pro ilustraci použití [concu
   
  [[Horní](#top)]  
   
-##  <a name="solution"></a>Použití metody join k zabránění vzájemnému zablokování  
+##  <a name="solution"></a> Použití metody join k zabránění vzájemnému zablokování  
  Tato část ukazuje způsob použití vyrovnávacích pamětí zpráv a funkce pro předávání zpráv omezit riziko vzájemného zablokování.  
   
  Pro tento příklad starší tomu se týkají `philosopher` třída nahrazuje každý `critical_section` objekt pomocí [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu a `join` objektu. `join` Objektu slouží jako arbiter poskytující chopsticks k filosofovi.  

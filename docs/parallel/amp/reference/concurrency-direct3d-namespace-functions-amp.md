@@ -2,9 +2,6 @@
 title: Concurrency::Direct3D – obor názvů funkcí (a) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,30 +24,28 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funkce Concurrency::Direct3D – obor názvů (AMP)
 ||||  
 |-|-|-|  
-|[Abs](#abs)|[clamp](#clamp)|[countbits –](#countbits)|
+|[Abs](#abs)|[svorka](#clamp)|[countbits –](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[firstbithigh –](#firstbithigh)|[firstbitlow –](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
+|[MAD –](#mad)|[make_array](#make_array)|[šumu](#noise)|  
 |[radiánech](#radians)|[rcp](#rcp)|[reversebits –](#reversebits)|  
-|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
-|[step](#step)|[umax](#umax)|[umin](#umin)|  
+|[saturate –](#saturate)|[sign](#sign)|[smoothstep –](#smoothstep)|  
+|[Krok](#step)|[umax](#umax)|[umin –](#umin)|  
 
 ## <a name="requirements"></a>Požadavky
 **Záhlaví:** amp.h **Namespace:** souběžnosti
@@ -152,7 +147,7 @@ accelerator_view create_accelerator_view(
  Modul runtime C++ AMP poskytuje podrobné informace o chybě v režimu ladění pomocí vrstvě D3D ladění, pokud použijete `D3D11_CREATE_DEVICE_DEBUG` příznak.  
   
   
-##  <a name="d3d_access_lock"></a>  d3d_access_lock  
+##  <a name="d3d_access_lock"></a>  d3d_access_lock –  
  Získejte zámek na accelerator_view za účelem provádění bezpečně D3D operací s prostředky, které jsou sdíleny s accelerator_view. Accelerator_view a všechny prostředky C++ AMP přidružené k této accelerator_view interně trvat tento zámek při provádění operací a bude blokovat, zatímco jiné vlákno obsahuje zámek D3D přístup. Tato zámek je tohoto nerekurzivního: je nedefinovaný chování pro volání této funkce z vlákna, která již obsahuje zámek. Je definován chování k provádění operací na accelerator_view nebo všech dat kontejneru přidruženého k accelerator_view z vlákna, která obsahuje zámek D3D přístup. Další informace najdete v části scoped_d3d_access_lock, třídu stylu RAII na obor D3D přístup zámek.  
   
 ```  
@@ -177,7 +172,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud se získal zámek, nebo hodnotu NEPRAVDA, pokud je aktuálně uchovávat jiné vlákno.  
   
-##  <a name="d3d_access_unlock"></a>  d3d_access_unlock  
+##  <a name="d3d_access_unlock"></a>  d3d_access_unlock –  
  Uvolní zámek D3D přístup na danou accelerator_view. Pokud volající vlákno nemá zámek accelerator_view výsledky nejsou definovány.  
   
 ```  
@@ -216,7 +211,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první nastavit chvíli umístění  
   
-##  <a name="get_buffer"></a>  get_buffer  
+##  <a name="get_buffer"></a>  get_buffer –  
  Získáte rozhraní vyrovnávací paměti Direct3D – základní zadané pole.  
   
 ```  
@@ -241,7 +236,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel rozhraní IUnknown odpovídající do vyrovnávací paměti Direct3D – základní pole.  
   
-##  <a name="imax"></a>  imax  
+##  <a name="imax"></a>  Imax –  
  Určit maximální číselná hodnota, která jsou argumenty  
   
 ```  
@@ -260,7 +255,7 @@ inline int imax(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="imin"></a>  imin  
+##  <a name="imin"></a>  imin –  
  Určení minimální číselná hodnota z argumentů  
   
 ```  
@@ -334,7 +329,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>Návratová hodnota  
  Výsledek `_X`  *  `_Y`  +  `_Z`.  
   
-##  <a name="make_array"></a>  make_array  
+##  <a name="make_array"></a>  make_array –  
  Vytvořte pole z Direct3D – ukazatele rozhraní vyrovnávací paměti.  
   
 ```  
@@ -515,7 +510,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí maximální hodnotu číselného argumenty  
   
-##  <a name="umin"></a>  umin  
+##  <a name="umin"></a>  umin –  
  Určení minimální číselná hodnota z argumentů  
   
 ```  

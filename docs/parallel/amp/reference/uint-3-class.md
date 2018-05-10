@@ -1,12 +1,9 @@
 ---
-title: "uint_3 – třída | Microsoft Docs"
-ms.custom: 
+title: uint_3 – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::get_xz
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434089802bcb054bf07c7b20a48bc384d06693e3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint3-class"></a>uint_3 – třída
 Představuje krátký vektoru tři celých čísel bez znaménka.  
@@ -165,7 +160,7 @@ class uint_3;
 |uint_3::operator%=||  
 |uint_3::operator&=||  
 |uint_3::operator*=||  
-|uint_3::operator/=||  
+|/ uint_3::Operator = – operátor||  
 |uint_3::operator^=||  
 |uint_3::operator&#124;=||  
 |uint_3::operator~||  
@@ -193,14 +188,14 @@ class uint_3;
 |uint_3::brg||  
 |uint_3::g||  
 |uint_3::GB||  
-|uint_3::gbr||  
+|uint_3::GBR||  
 |uint_3::GR||  
 |uint_3::grb||  
 |uint_3::r||  
 |uint_3::rb||  
 |uint_3::rbg||  
 |uint_3::rg||  
-|uint_3::rgb||  
+|uint_3::RGB||  
 |uint_3::x||  
 |uint_3::xy||  
 |uint_3::xyz||  
@@ -209,12 +204,12 @@ class uint_3;
 |uint_3::y||  
 |uint_3::yx||  
 |uint_3::yxz||  
-|uint_3::yz||  
+|uint_3::YZ||  
 |uint_3::yzx||  
 |uint_3::z||  
 |uint_3::zx||  
 |uint_3::zxy||  
-|uint_3::zy||  
+|uint_3::Zy||  
 |uint_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  

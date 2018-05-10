@@ -1,13 +1,10 @@
 ---
-title: "vlastnost (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: vlastnost (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - property_cpp
 - property
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9d310043a2693eaef254256385becc0bcc7d501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="property--c-component-extensions"></a>property (rozšíření komponent C++)
 Deklaruje *vlastnost*, což je členské funkce, který se chová a je přístupný jako člena dat nebo k elementu pole.  
@@ -169,7 +164,7 @@ modifier property type default[index];
   
  Různé usnadnění je povolena pro přístupových metod v bloku vlastnost.  To znamená metoda sada může být veřejné a metody get může být privátní.  Je však chybu pro metodu přistupujícího objektu tak, aby měl méně omezující usnadnění, než jaký je v prohlášení o samotné vlastnosti.  
   
- `property`je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `property` je kontextová – klíčové slovo.  Další informace najdete v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
   
 ### <a name="requirements"></a>Požadavky  

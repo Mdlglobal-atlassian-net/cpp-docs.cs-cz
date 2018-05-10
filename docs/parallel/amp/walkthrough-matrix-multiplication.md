@@ -1,27 +1,22 @@
 ---
-title: "Návod: Násobení matic | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Násobení matic | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 Tento podrobný návod ukazuje, jak používat C++ AMP k urychlení provádění násobení matic. Dva algoritmy uvádíme jednu bez dlaždic a jednu s vedle sebe.  
@@ -52,13 +47,13 @@ Tento podrobný návod ukazuje, jak používat C++ AMP k urychlení provádění
 ## <a name="multiplication-without-tiling"></a>Násobení bez dlaždic  
  V této části vezměte v úvahu násobení matic dva, A a B, které jsou definovány takto:  
   
- ![3 &#45; pomocí & č. 45; 2 matice](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;podle&#45;2 matice](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 & č. 45; pomocí & č. 45; 3 matice](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;podle&#45;3 matice](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  Matice 3 2 je A a B 2 3 matice. Produkt součin hodnot a b se následující matice 3 x 3. Produkt je vypočtena vynásobením řádků A sloupců b elementu pomocí elementu.  
   
- ![3 &#45; pomocí & č. 45; 3 matice](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;podle&#45;3 matice](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>Mají vynásobit bez použití C++ AMP  
   
@@ -172,21 +167,21 @@ void main() {
   
  Pokud chcete využít výhod dlaždice v násobení matic, použije algoritmus oddílu matice do dlaždice a potom zkopírovat data dlaždice do `tile_static` proměnných pro rychlejší přístup. V tomto příkladu je matice rozděleny do submatrices rovna velikosti. Produkt je nalezen vynásobením submatrices. Jsou dvě matic a jejich produktu v tomto příkladu:  
   
- ![4 &#45; pomocí & č. 45; 4 matice](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; pomocí & č. 45; 4 matice](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; pomocí & č. 45; 4 matice](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  Matice jsou rozděleny do čtyř 2 x 2 matice, které jsou definovány takto:  
   
- ![4 &#45; pomocí & č. 45; 4 matice rozdělena na oddíly do 2 & č. 45; pomocí & č. 45; 2 dílčí & č. 45; matic](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;podle&#45;4 matice rozdělena na oddíly do 2&#45;podle&#45;2 dílčí&#45;matice](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; pomocí & č. 45; 4 matice rozdělena na oddíly do 2 & č. 45; pomocí & č. 45; 2 dílčí & č. 45; matic](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;podle&#45;4 matice rozdělena na oddíly do 2&#45;podle&#45;2 dílčí&#45;matice](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  Produkt A a B nyní může zapisovat a vypočítávány následujícím způsobem:  
   
- ![4 &#45; pomocí & č. 45; 4 matice rozdělena na oddíly do 2 & č. 45; pomocí & č. 45; 2 dílčí & č. 45; matic](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;podle&#45;4 matice rozdělena na oddíly do 2&#45;podle&#45;2 dílčí&#45;matice](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  Protože matice `a` prostřednictvím `h` jsou matice 2 x 2, všechny produkty a součtů z nich jsou také matice 2 x 2. Také vyplývá, že A * B je matice 4 x 4, podle očekávání. Pokud chcete rychle zkontrolovat algoritmus, vypočítejte hodnotu elementu v prvním řádku, první sloupec v rámci produktu. V příkladu, který bude hodnota elementu v prvním řádku a první sloupec `ae + bg`. Budete muset vypočítat první sloupec, první řádek `ae` a `bg` ke každému termínu. Tuto hodnotu pro `ae` je `1*1 + 2*5 = 11`. Hodnota `bg` je `3*1 + 4*5 = 23`. Konečná hodnota je `11 + 23 = 34`, který je správný.  
   

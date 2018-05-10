@@ -1,12 +1,9 @@
 ---
-title: "Location – třída | Microsoft Docs"
-ms.custom: 
+title: Location – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - location
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="location-class"></a>location – třída
 Abstrakci fyzické umístění na hardwaru.  
@@ -53,7 +48,7 @@ class location;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[current](#current)|Vrátí `location` objekt reprezentující nejvíce místní volající vlákno je prováděna.|  
+|[Aktuální](#current)|Vrátí `location` objekt reprezentující nejvíce místní volající vlákno je prováděna.|  
 |[from_numa_node](#from_numa_node)|Vrátí `location` objekt, který představuje daný uzel NUMA.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
@@ -61,7 +56,7 @@ class location;
 |Název|Popis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Určuje, zda dva `location` představovat jiné umístění.|  
-|[operator=](#operator_eq)|Přiřadí obsah jiné `location` k tomuto objektu.|  
+|[operátor =](#operator_eq)|Přiřadí obsah jiné `location` k tomuto objektu.|  
 |[operator==](#operator_eq_eq)|Určuje, zda dva `location` představovat stejné umístění.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -106,7 +101,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Návratová hodnota  
  Umístění představující určeného uzlu NUMA `_NumaNodeNumber` parametr.  
   
-##  <a name="ctor">Umístění</a> 
+##  <a name="ctor"></a> Umístění 
 
  Vytvoří `location` objektu.  
   

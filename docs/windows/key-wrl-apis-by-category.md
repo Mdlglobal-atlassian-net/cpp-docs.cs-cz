@@ -1,28 +1,23 @@
 ---
-title: "Klíč rozhraní API knihovny WRL podle kategorie | Microsoft Docs"
-ms.custom: 
+title: Klíč rozhraní API knihovny WRL podle kategorie | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>Nejdůležitější rozhraní API knihovny WRL podle kategorie
 V následujících tabulkách jsou uvedeny primární třídy, struktury, funkcemi a makry v knihovna šablon C++ prostředí Windows Runtime. Konstrukce v pomocná obory názvů a třídy byly vynechány. Tyto seznamy posílení dokumentaci rozhraní API, která jsou uspořádána podle oboru názvů.  
@@ -36,7 +31,7 @@ V následujících tabulkách jsou uvedeny primární třídy, struktury, funkce
 |[ClassFactory – třída](../windows/classfactory-class.md)|Implementuje základních funkcí `IClassFactory` rozhraní.|  
 |[ComPtr – třída](../windows/comptr-class.md)|Vytvoří *chytré ukazatele* typ, který reprezentuje rozhraní zadané parametr šablony. ComPtr automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, kdy přestane počet odkazů na nulu.|  
 |[Event – třída (knihovna šablon C++ prostředí Windows Runtime)](../windows/event-class-windows-runtime-cpp-template-library.md)|Představuje událost.|  
-|[EventSource – třída](../windows/eventsource-class.md)|Představuje událost. `EventSource`Členské funkce přidání, odebrání a vyvolání obslužné rutiny událostí.|  
+|[EventSource – třída](../windows/eventsource-class.md)|Představuje událost. `EventSource` Členské funkce přidání, odebrání a vyvolání obslužné rutiny událostí.|  
 |[FtmBase – třída](../windows/ftmbase-class.md)|Představuje objekt volné zařazování vláken.|  
 |[HandleT – třída](../windows/handlet-class.md)|Představuje popisovač objektu.|  
 |[HString – třída](../windows/hstring-class.md)|Poskytuje podporu pro manipulaci s HSTRING obslužné rutiny.|  

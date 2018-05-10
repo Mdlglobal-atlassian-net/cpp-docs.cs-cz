@@ -1,13 +1,10 @@
 ---
-title: "safe_cast (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: safe_cast (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (rozšíření komponent C++)
 `safe_cast` Operace v případě úspěchu vrátí zadaný výraz jako zadaný typ; jinak vyvolá `InvalidCastException`.  
@@ -52,7 +47,7 @@ expression
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
- `safe_cast`Umožňuje změnit typ zadaného výrazu. V situacích, kdy plně očekáváte proměnné nebo parametru být převoditelná na určitý typ můžete použít safe_cast bez bloku try-catch – ke zjištění programovací chyby během vývoje. Další informace najdete v tématu [přetypování (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+ `safe_cast` Umožňuje změnit typ zadaného výrazu. V situacích, kdy plně očekáváte proměnné nebo parametru být převoditelná na určitý typ můžete použít safe_cast bez bloku try-catch – ke zjištění programovací chyby během vývoje. Další informace najdete v tématu [přetypování (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -73,7 +68,7 @@ expression
  Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hodnoty nebo sledovací odkaz na typ hodnotou nebo odkazem.  
   
 ### <a name="remarks"></a>Poznámky  
- `safe_cast`Vyvolá `InvalidCastException` Pokud nemůže převést *výraz* na typ určený *id typu*. K zachycení `InvalidCastException`, zadejte [/EH (Model zpracování výjimek)](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru a použijte příkaz try/catch.  
+ `safe_cast` Vyvolá `InvalidCastException` Pokud nemůže převést *výraz* na typ určený *id typu*. K zachycení `InvalidCastException`, zadejte [/EH (Model zpracování výjimek)](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru a použijte příkaz try/catch.  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  
@@ -116,7 +111,7 @@ Caught expected exception: InvalidCastException
 ```  
   
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime) 
- `safe_cast`Umožňuje změnit typ výrazu a generovat ověřitelný kód MSIL.  
+ `safe_cast` Umožňuje změnit typ výrazu a generovat ověřitelný kód MSIL.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -145,9 +140,9 @@ expression
   
  Další informace o přetypování najdete v tématu [operátory přetypování](../cpp/casting-operators.md).  
   
- `safe_cast`se nevztahuje **const_cast –** (přetypovat rychle **const**).  
+ `safe_cast` se nevztahuje **const_cast –** (přetypovat rychle **const**).  
   
- `safe_cast`je v oboru názvů rozhraní příkazového řádku.  V tématu [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Další informace.  
+ `safe_cast` je v oboru názvů rozhraní příkazového řádku.  V tématu [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Další informace.  
   
  Další informace o **safe_cas**t, najdete v části:  
   

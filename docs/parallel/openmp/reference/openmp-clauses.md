@@ -1,27 +1,22 @@
 ---
-title: "OpenMP – klauzule | Microsoft Docs"
-ms.custom: 
+title: OpenMP – klauzule | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a63dacb8da2b7c4b1c7264cfccc6d2839db1b8b1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7abe5a637a2a32c696f19f5ab9988f1be361f647
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-clauses"></a>OpenMP – klauzule
 Obsahuje odkazy na používá v rozhraní API OpenMP – klauzule.  
@@ -42,7 +37,7 @@ Obsahuje odkazy na používá v rozhraní API OpenMP – klauzule.
 |[private](../../../parallel/openmp/reference/private-openmp.md)|Určuje, že každé vlákno má mít svou vlastní instanci proměnné.|  
 |[reduction](../../../parallel/openmp/reference/reduction.md)|Určuje, že jeden nebo více proměnných, které jsou soukromé pro každé vlákno jsou předmětem snížení operaci na konci paralelní oblast.|  
 |[schedule](../../../parallel/openmp/reference/schedule.md)|Platí pro [pro](../../../parallel/openmp/reference/for-openmp.md) – direktiva.|  
-|[shared](../../../parallel/openmp/reference/shared-openmp.md)|Určuje, že jeden nebo více proměnných by měl sdílen všechna vlákna.|  
+|[Sdílené](../../../parallel/openmp/reference/shared-openmp.md)|Určuje, že jeden nebo více proměnných by měl sdílen všechna vlákna.|  
   
 ## <a name="see-also"></a>Viz také  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)   

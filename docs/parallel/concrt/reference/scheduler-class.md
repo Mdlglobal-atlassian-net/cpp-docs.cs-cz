@@ -1,12 +1,9 @@
 ---
-title: "Třída plánovače | Microsoft Docs"
-ms.custom: 
+title: Třída plánovače | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Třída plánovače
 Představuje abstrakci pro Concurrency Runtime plánovače.  
@@ -68,14 +63,14 @@ class Scheduler;
 |[Vytvoření](#create)|Vytvoří nový scheduler, jehož chování je popsán `_Policy` parametr umístí odkaz na počáteční na Plánovač a vrátí ukazatel na ni.|  
 |[CreateScheduleGroup](#createschedulegroup)|Přetíženo. Vytvoří novou skupinu plánu v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v rámci skupiny nově vytvořený plán můžete být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Vrátí aktuální počet virtuálních procesorů pro Plánovač.|  
-|[GetPolicy](#getpolicy)|Vrátí kopii zásad, který byl vytvořený plánovače.|  
+|[Getpolicy –](#getpolicy)|Vrátí kopii zásad, který byl vytvořený plánovače.|  
 |[ID](#id)|Vrací jedinečný identifikátor pro Plánovač.|  
 |[Isavailablelocation –](#isavailablelocation)|Určuje, zda je k dispozici na Plánovač daného umístění.|  
 |[Referenční informace](#reference)|Zvýší počet odkazů plánovače.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Příčiny předaná popisovač události systému Windows `_Event` parametr signál při Plánovač ukončí a zničí sám sebe. V době, kdy signalizace události všechny práci, kterou naplánoval Plánovač je dokončena. Prostřednictvím této metody může být registrováno více událostí vypnutí.|  
 |[Vydaná verze](#release)|Snižuje počet odkaz na plánovače.|  
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Výchozí zásady plánovače obnoví na výchozí modul runtime. Při příštím vytvoření plánovače výchozí použije výchozí nastavení zásady modulu runtime.|  
-|[ScheduleTask](#scheduletask)|Přetíženo. Naplánuje úlohu šedé – v rámci plánovače. Šedé – úloha bude umístěna ve skupině plán určit modulem runtime. Verze, která přebírá parametr `_Placement` úlohu být tendenční směrem k provádění do zadaného umístění.|  
+|[Scheduletask –](#scheduletask)|Přetíženo. Naplánuje úlohu šedé – v rámci plánovače. Šedé – úloha bude umístěna ve skupině plán určit modulem runtime. Verze, která přebírá parametr `_Placement` úlohu být tendenční směrem k provádění do zadaného umístění.|  
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Umožňuje použít k vytvoření plánovače výchozí zásad definované uživatelem. Tuto metodu lze volat pouze v případě, že žádná výchozí plánovač existuje v rámci procesu. Po nastavení výchozích zásad, zůstává v platnosti, dokud další platný volání buď `SetDefaultSchedulerPolicy` nebo [resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy) metoda.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -130,7 +125,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  Tuto metodu můžete vyvolat různé výjimky, včetně [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) a [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="createschedulegroup"></a> CreateScheduleGroup 
+##  <a name="createschedulegroup"></a> Createschedulegroup – 
 
  Vytvoří novou skupinu plánu v rámci plánovače. Verze, která přebírá parametr `_Placement` způsobí, že úlohy v rámci skupiny nově vytvořený plán můžete být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.  
   
@@ -152,7 +147,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  Poznámka: Pokud jste vytvořili explicitně tento plánovač, je nutné uvolnit všechny odkazy na plánování skupin v rámci, před uvolnit vaše odkazy na plánovače.  
   
-##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a> Getnumberofvirtualprocessors – 
 
  Vrátí aktuální počet virtuálních procesorů pro Plánovač.  
   
@@ -174,7 +169,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Návratová hodnota  
  Kopie zásad, který byl vytvořený plánovače.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> ID 
 
  Vrací jedinečný identifikátor pro Plánovač.  
   
@@ -219,7 +214,7 @@ virtual unsigned int Reference() = 0 ;
   
  Vyvolá metodu [improper_scheduler_reference](improper-scheduler-reference-class.md) Pokud odkaz na počet před voláním `Reference` metoda byla nula a při volání z kontextu, který není vlastníkem plánovače.  
   
-##  <a name="registershutdownevent"></a> RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a> Registershutdownevent – 
 
  Příčiny předaná popisovač události systému Windows `_Event` parametr signál při Plánovač ukončí a zničí sám sebe. V době, kdy signalizace události všechny práci, kterou naplánoval Plánovač je dokončena. Prostřednictvím této metody může být registrováno více událostí vypnutí.  
   
@@ -245,7 +240,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>Poznámky  
  To se obvykle používá ke správě životnost Plánovač pro složení. Když počet scheduler spadá nule odkazů Plánovač se zastaví a destruct samotné po všech práce na Plánovač byla dokončena.  
   
-##  <a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a> Resetdefaultschedulerpolicy – 
 
  Výchozí zásady plánovače obnoví na výchozí modul runtime. Při příštím vytvoření plánovače výchozí použije výchozí nastavení zásady modulu runtime.  
   
@@ -302,7 +297,7 @@ virtual void ScheduleTask(
  `_Placement`  
  Odkaz na umístění, kde bude s úlohu šedé – předpětím směrem provádění na.  
   
-##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a> Setdefaultschedulerpolicy – 
 
  Umožňuje použít k vytvoření plánovače výchozí zásad definované uživatelem. Tuto metodu lze volat pouze v případě, že žádná výchozí plánovač existuje v rámci procesu. Po nastavení výchozích zásad, zůstává v platnosti, dokud další platný volání buď `SetDefaultSchedulerPolicy` nebo [resetdefaultschedulerpolicy –](#resetdefaultschedulerpolicy) metoda.  
   
@@ -321,7 +316,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
  [Namespace souběžnosti](concurrency-namespace.md)   
  [Scheduler – třída](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
- [Task Scheduler](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+ [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 
 

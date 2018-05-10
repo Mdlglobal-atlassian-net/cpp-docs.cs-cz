@@ -1,13 +1,10 @@
 ---
-title: "TN048: Psaní pro databázové aplikace MFC ODBC nastavení a programy pro správu | Microsoft Docs"
-ms.custom: 
+title: 'TN048: Psaní pro databázové aplikace MFC ODBC nastavení a programy pro správu | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  Aplikace, které používají třídami databází MFC potřebovat instalační program, který nainstaluje komponenty ODBC. Také potřebovat program pro správu rozhraní ODBC, který načte informace o dostupných ovladačů, můžete určit výchozí ovladače a konfigurace zdroje dat. Tato poznámka popisuje použití rozhraní API ODBC Instalační služby pro zápis tyto programy.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>Zápis instalačního programu rozhraní ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Zápis instalačního programu rozhraní ODBC  
  Databázové aplikace MFC vyžaduje správce ovladačů ODBC (rozhraní ODBC. Knihovny DLL) a se získají ke zdrojům dat, aby ovladače ODBC. Mnoho ovladačů ODBC také vyžadovat další sítě a komunikace knihovny DLL. Většina ovladačů ODBC dodávají spolu s instalační program, který bude instalovat požadované součásti ODBC. Mohou vývojáři aplikace použití databázových tříd MFC:  
   
 -   Spoléhají na ovladačem instalační programy pro instalaci součástí rozhraní ODBC. To bude vyžadovat žádné další pracovní na vývojáře pro část – stačí znovu distribuovat ovladače instalační program.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Další informace o rozhraní ODBC. INF, ODBCINST. INI a pomocí Instalační služby rozhraní API, najdete v části sada SDK rozhraní ODBC *referenční informace pro programátory,* kapitoly 19, instalace softwaru ODBC.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>Zápis správce rozhraní ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Zápis správce rozhraní ODBC  
  Databázové aplikace MFC můžete nastavit a nakonfigurovat zdroje dat ODBC v jednom ze dvou způsobů, následujícím způsobem:  
   
 -   Pomocí Správce rozhraní ODBC (k dispozici jako program nebo některou položku Ovládacích panelů).  

@@ -1,13 +1,10 @@
 ---
-title: "Přehled produktu C++ AMP | Microsoft Docs"
-ms.custom: 
+title: Přehled produktu C++ AMP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8de31ab9009a84c04e594837a0c4fbf30758fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) zrychluje spuštění kódu C++ a využívají data paralelní hardwaru, jako jsou grafický procesor (GPU) na kartě diskrétní grafiky. Pomocí C++ AMP můžete kódu algoritmy vícerozměrných dat tak, aby spuštění lze urychlit pomocí paralelismus na heterogenní hardwaru. Programovací model C++ AMP zahrnuje vícerozměrná pole, indexování, přenos paměti, dlaždice a knihovnu matematické funkce. Rozšíření jazyka C++ AMP můžete použít k řízení, jak přesunout data z procesoru na grafický procesor a zpět, takže může zlepšit výkon.  
@@ -503,6 +498,6 @@ void MathExample() {
   
 ## <a name="see-also"></a>Viz také  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Lambda Expression Syntax](../../cpp/lambda-expression-syntax.md)   
+ [Syntaxe výrazu lambda](../../cpp/lambda-expression-syntax.md)   
  [Referenční dokumentace (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
  [Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=238472)

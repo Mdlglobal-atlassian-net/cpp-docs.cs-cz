@@ -1,12 +1,9 @@
 ---
-title: "Agent – třída | Microsoft Docs"
-ms.custom: 
+title: Agent – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent – třída
 Třída určena pro použití jako základní třída pro všechny agenty nezávislé. Umožňuje skrýt stavu z jiné agenty a komunikovat pomocí přenosu zpráv.  
@@ -60,11 +55,11 @@ class agent;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[cancel](#cancel)|Přesune agenta z buď `agent_created` nebo `agent_runnable` stavy do `agent_canceled` stavu.|  
-|[start](#start)|Přesune agenta z `agent_created` stavu na `agent_runnable` stavu a plány pro spuštění.|  
+|[Zrušit](#cancel)|Přesune agenta z buď `agent_created` nebo `agent_runnable` stavy do `agent_canceled` stavu.|  
+|[Spuštění](#start)|Přesune agenta z `agent_created` stavu na `agent_runnable` stavu a plány pro spuštění.|  
 |[Stav](#status)|Synchronní zdroj informace o stavu z agenta.|  
 |[status_port](#status_port)|Asynchronní zdroj informací o stavu z agenta.|  
-|[wait](#wait)|Čeká na agenta a dokončení úkolu.|  
+|[Počkej](#wait)|Čeká na agenta a dokončení úkolu.|  
 |[wait_for_all](#wait_for_all)|Čeká na všechny zadané agentů k dokončení úkolů.|  
 |[wait_for_one](#wait_for_one)|Čeká se pro každý zadaný agentů a dokončení úkolu.|  
   
@@ -73,7 +68,7 @@ class agent;
 |Název|Popis|  
 |----------|-----------------|  
 |[Provést](#done)|Přesune do agenta `agent_done` stavu, která určuje, zda agent byla dokončena.|  
-|[run](#run)|Představuje hlavní úlohy agenta. `run` by měla být potlačena v odvozené třídě a určuje, co má provést agenta po jeho spuštění.|  
+|[Spustit](#run)|Představuje hlavní úlohy agenta. `run` by měla být potlačena v odvozené třídě a určuje, co má provést agenta po jeho spuštění.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronních agentů](../../../parallel/concrt/asynchronous-agents.md).  
@@ -86,7 +81,7 @@ class agent;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor">Agent</a> 
+##  <a name="ctor"></a> Agent 
 
  Vytvoří agenta.  
   
@@ -130,7 +125,7 @@ bool cancel();
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud agenta byla zrušena, `false` jinak. Agenta nelze zrušit, pokud byl již spuštěn nebo je již dokončena.  
   
-##  <a name="done">Provést</a> 
+##  <a name="done"></a> Provést 
 
  Přesune do agenta `agent_done` stavu, která určuje, zda agent byla dokončena.  
   
@@ -166,7 +161,7 @@ bool start();
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud agent spuštěn správně, `false` jinak. Nelze spustit, agenta, který byl zrušen.  
   
-##  <a name="status">Stav</a> 
+##  <a name="status"></a> Stav 
 
  Synchronní zdroj informace o stavu z agenta.  
   

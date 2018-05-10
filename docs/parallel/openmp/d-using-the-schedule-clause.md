@@ -1,27 +1,22 @@
 ---
-title: "D. Pomocí klauzule plán | Microsoft Docs"
-ms.custom: 
+title: D. Pomocí klauzule plán | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Pomocí klauzule plán
 Paralelní oblast má alespoň jeden bariéry při ukončení a může mít další překážky v něm. V každé bariéry ostatní členové týmu musí čekat poslední vlákno k doručení. Chcete-li minimalizovat této čekací doby, by měly být distribuovány sdílené pracovní tak, aby přicházejí všechna vlákna na bariéry v přibližně ve stejnou dobu. Pokud některé této sdílené je součástí pracovní **pro** vytvoří, `schedule` klauzuli lze použít pro tento účel.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Jako **dynamické**, **na základě** naplánovat záruky, které žádný přístup z více vláken čeká na bariéry déle, než bude trvat jiné vlákno k provedení jeho poslední iterace nebo konečné *tisíc* Pokud velikost bloku dat iterací *tisíc* je zadán. Mezi tyto plány **na základě** plán je charakteristické vlastnosti, vyžaduje nejmenší počet synchronizace. Pro velikost bloku *tisíc*, přiřadí Typická implementace *q = ceiling(n/p)* iterací první dostupné vlákno, nastavte  *n*  se větší z *n-q* a *p\*tisíc*a opakujte, dokud jsou přiřazeny všech iterací.  
+ Jako **dynamické**, **na základě** naplánovat záruky, které žádný přístup z více vláken čeká na bariéry déle, než bude trvat jiné vlákno k provedení jeho poslední iterace nebo konečné *tisíc* Pokud velikost bloku dat iterací *tisíc* je zadán. Mezi tyto plány **na základě** plán je charakteristické vlastnosti, vyžaduje nejmenší počet synchronizace. Pro velikost bloku *tisíc*, přiřadí Typická implementace *q = ceiling(n/p)* iterací první dostupné vlákno, nastavte *n* se větší z *n-q* a *p\*tisíc*a opakujte, dokud jsou přiřazeny všech iterací.  
   
  Pokud není volba optimální plán vymazat, protože je pro tyto příklady **runtime** plán je vhodné pro zkoušení různé plány a velikosti bloku, aniž byste museli upravit a znovu zkompiluje program. Může také být užitečné při optimální plán závisí (nějakým způsobem předvídatelný) na vstupní data, ke které se použije program.  
   

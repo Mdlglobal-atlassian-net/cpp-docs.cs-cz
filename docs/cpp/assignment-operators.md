@@ -43,11 +43,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89363e49b2f8a1691ee897c6acae6b4f67f5b9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="assignment-operators"></a>Operátory přiřazení
 ## <a name="syntax"></a>Syntaxe  
@@ -73,15 +73,15 @@ Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = 
 |--------------|-------------|  
 |**=**|Uloží hodnotu druhého operandu v objektu určeném prvním operandem (jednoduché přiřazení).|  
 |**\*=**|Vynásobí hodnotu prvního operandu hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
-|`/=`|Vydělí hodnotu prvního operandu hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
-|`%=`|Vezme numerický zbytek prvního operandu určený hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
-|`+=`|Přičte hodnotu druhého operandu k hodnotě prvního operandu a uloží výsledek v objektu určeném prvním operandem.|  
+|**/=**|Vydělí hodnotu prvního operandu hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
+|**%=**|Vezme numerický zbytek prvního operandu určený hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
+|**+=**|Přičte hodnotu druhého operandu k hodnotě prvního operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**-=**|Odečte hodnotu druhého operandu od hodnoty prvního operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**<\<=**|Posune hodnotu prvního operandu vlevo o počet bitů určený hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**>>=**|Posune hodnotu prvního operandu vpravo o počet bitů určený hodnotou druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
 |**&=**|Získá bitový AND prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
-|`^=`|Získá bitový exkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
-|`&#124;=`|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
+|**^=**|Získá bitový exkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|  
+|**\|=**|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
 |**&&=**| Operátor Move assignment (třída pouze pro typy). Je-li druhý operand rvalue, přesuňte její prostředky první operand (bez kopírování). V tématu [přesunutí konstruktory a operátory přiřazení](move-constructors-and-move-assignment-operators-cpp.md) Další informace.|
   
  **Klíčová slova operátorů**  
@@ -91,8 +91,8 @@ Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = 
 |Operátor|Ekvivalent|  
 |--------------|----------------|  
 |**&=**|`and_eq`|  
-|`&#124;=`|`or_eq`|  
-|`^=`|`xor_eq`|  
+|**\|=**|`or_eq`|  
+|**^=**|`xor_eq`|  
   
  Existují dva způsoby pro přístup k tato klíčová slova operátorů v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
   

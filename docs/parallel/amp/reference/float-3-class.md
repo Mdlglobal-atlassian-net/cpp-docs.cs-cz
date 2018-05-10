@@ -1,12 +1,9 @@
 ---
-title: "float_3 – třída | Microsoft Docs"
-ms.custom: 
+title: float_3 – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::get_zyx
@@ -83,17 +80,15 @@ dev_langs:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda70c9e19e4b446ac0e3cec8f3358732f4c57f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0579a728210dc74db13faaae7ea4c7161ad4142e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float3-class"></a>float_3 – třída
 Představuje krátký vektor tři obtékaných objektů.  
@@ -166,10 +161,10 @@ class float_3;
 |float_3::operator-||  
 |float_3::operator--||  
 |float_3::operator*=||  
-|float_3::operator/=||  
-|float_3::operator++||  
+|/ float_3::Operator = – operátor||  
+|float_3::Operator ++||  
 |float_3::operator+=||  
-|float_3::operator=||  
+|float_3::Operator =||  
 |float_3::operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
@@ -183,8 +178,8 @@ class float_3;
 |Název|Popis|  
 |----------|-----------------|  
 |float_3::b||  
-|float_3::bg||  
-|float_3::bgr||  
+|float_3::BG||  
+|float_3::BGR||  
 |float_3::br||  
 |float_3::brg||  
 |float_3::g||  
@@ -193,10 +188,10 @@ class float_3;
 |float_3::GR||  
 |float_3::grb||  
 |float_3::r||  
-|float_3::rb||  
+|float_3::RB||  
 |float_3::rbg||  
 |float_3::rg||  
-|float_3::rgb||  
+|float_3::RGB||  
 |float_3::x||  
 |float_3::xy||  
 |float_3::xyz||  
@@ -205,12 +200,12 @@ class float_3;
 |float_3::y||  
 |float_3::yx||  
 |float_3::yxz||  
-|float_3::yz||  
+|float_3::YZ||  
 |float_3::yzx||  
 |float_3::z||  
 |float_3::zx||  
 |float_3::zxy||  
-|float_3::zy||  
+|float_3::Zy||  
 |float_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  

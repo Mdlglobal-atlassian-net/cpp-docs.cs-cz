@@ -1,12 +1,9 @@
 ---
-title: "Třída single_assignment | Microsoft Docs"
-ms.custom: 
+title: Třída single_assignment | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_assignment
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4bacbdaa4af141101863b4d6d81d114d43aced9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singleassignment-class"></a>Třída single_assignment
 A `single_assignment` zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání jedinou zápisu-po `message`.  
@@ -61,7 +56,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Název|Popis|  
 |----------|-----------------|  
 |[single_assignment](#ctor)|Přetíženo. Vytvoří `single_assignment` zasílání zpráv bloku.|  
-|[~single_assignment Destructor](#dtor)|Zničí `single_assignment` zasílání zpráv bloku.|  
+|[~ single_assignment – destruktor](#dtor)|Zničí `single_assignment` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -75,7 +70,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Název|Popis|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `single_assignment` zasílání zpráv bloku vrácením volající kopii zprávy.|  
-|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `single_assignment` a vyhrazený pro cíl, vrácením volající kopii zprávy.|  
+|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `single_assignment` a vyhrazený pro cíl, vrácením volající kopii zprávy.|  
 |[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `single_assignment` zasílání zpráv bloku.|  
 |[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
 |[propagate_to_any_targets](#propagate_to_any_targets)|Míst `message _PMessage` v tomto `single_assignment` zasílání zpráv na úrovni bloku a nabízí ji na všechny propojené cíle.|  
@@ -226,7 +221,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a> resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation – 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -234,7 +229,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message">send_message –</a> 
+##  <a name="send_message"></a> send_message – 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `single_assignment` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   

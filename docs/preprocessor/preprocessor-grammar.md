@@ -1,12 +1,9 @@
 ---
 title: Gramatika preprocesoru | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,38 +12,36 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>Gramatika preprocesoru
-**#define***identifikátor* *token řetězec*opt    
+**#define***identifikátor* *token řetězec*opt  
   
- *#* **definování***identifikátor*[**(** *identifikátor*opt**,** *...*  **,** *identifikátor*opt **)**] *token řetězec*opt    
+ *#* **definování***identifikátor*[**(** *identifikátor*opt **,** *...*  **,** *identifikátor*opt **)**] *token řetězec*opt  
   
- **definované (***identifikátor* **)**   
+ **definované (***identifikátor* **)**  
   
- **definované***identifikátor*   
+ **definované***identifikátor*  
   
- `#include` **"***path-spec***"**  
+ `#include` **"***cesta specifikace***"**  
   
- `#include` **\<***path-spec***>**  
+ `#include` **\<***Specifikace cesta***>**  
   
- **#line***číslice pořadí***"** *filename* **"**opt      
+ **#line***číslice pořadí***"** *filename* **"** opt  
   
- *#* **undef***identifikátor*   
+ *#* **undef***identifikátor*  
   
- **#error***token řetězec*   
+ **#error***token řetězec*  
   
- **#pragma***token řetězec*   
+ **#pragma***token řetězec*  
   
  *Podmíněné* :  
  *Pokud část elif částí*vyjádřit výslovný*část else*opt*endif řádku*  
@@ -55,11 +50,11 @@ ms.lasthandoff: 02/23/2018
  *if-linetext*  
   
  *Pokud line* :  
- **#if***konstantní výraz*   
+ **#if***konstantní výraz*  
   
- **#ifdef***identifikátor*   
+ **#ifdef***identifikátor*  
   
- **#ifndef***identifikátor*   
+ **#ifndef***identifikátor*  
   
  *elif – částí* :  
  *elif – řádek textu*  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/23/2018
  *elif – částí elif – řádek textu*  
   
  *elif-line* :  
- **#elif***konstantní výraz*   
+ **#elif***konstantní výraz*  
   
  *část else* :  
  *else-linetext*  
@@ -90,7 +85,7 @@ ms.lasthandoff: 02/23/2018
  Řetězec tokenů  
   
  *token* :  
- *keyword*  
+ *– Klíčové slovo*  
   
  *Identifikátor*  
   

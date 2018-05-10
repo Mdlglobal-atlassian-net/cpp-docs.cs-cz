@@ -2,11 +2,8 @@
 title: completion_future – třída | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="completionfuture-class"></a>completion_future – třída
 Představuje budoucí odpovídající C++ AMP asynchronní operaci.  
@@ -50,7 +45,7 @@ class completion_future;
 |Název|Popis|  
 |----------|-----------------|  
 |[completion_future – konstruktor](#ctor)|Inicializuje novou instanci třídy `completion_future` třídy.|  
-|[~completion_future Destructor](#dtor)|Zničí `completion_future` objektu.|  
+|[~ completion_future – destruktor](#dtor)|Zničí `completion_future` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -69,7 +64,7 @@ class completion_future;
 |Název|Popis|  
 |----------|-----------------|  
 |[operátor std::shared_future\<void >](#operator_shared_future)|Implicitně převede `completion_future` do objektu `std::shared_future` objektu.|  
-|[operator=](#operator_eq)|Zkopíruje obsah zadaného `completion_future` objekt s touto.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `completion_future` objekt s touto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `completion_future`  

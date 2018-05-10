@@ -1,36 +1,31 @@
 ---
 title: C.2 pravidla | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Pravidla
 Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje rozšíření pro gramatika základní jazyk pro direktivy OpenMP C a C++.  
   
- **/\*v jazyce C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* v jazyce C++ (ISO/IEC 14882:1998) \*/**  
   
  *příkaz seq*:  
   
- *příkaz*  
+ *Příkaz*  
   
  *OpenMP – direktiva*  
   
@@ -38,11 +33,11 @@ Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje 
   
  *příkaz seq openmp – direktiva*  
   
- **/\*v C90 (ISO/IEC 9899:1990)\*/**  
+ **/\* v C90 (ISO/IEC 9899:1990) \*/**  
   
  *seznam příkazů*:  
   
- *příkaz*  
+ *Příkaz*  
   
  *OpenMP – direktiva*  
   
@@ -50,19 +45,19 @@ Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje 
   
  *seznam příkazů openmp – direktiva*  
   
- **/\*v C99 (ISO/IEC 9899:1999)\*/**  
+ **/\* v C99 (ISO/IEC 9899:1999) \*/**  
   
  *položka bloku*:  
   
  *deklarace*  
   
- *příkaz*  
+ *Příkaz*  
   
  *OpenMP – direktiva*  
   
  *příkaz*:  
   
- **/\*standardní příkazy\*/**  
+ **/\* standardní příkazy \*/**  
   
  *OpenMP – konstrukce*  
   
@@ -96,7 +91,7 @@ Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje 
   
  *strukturovaná bloku*:  
   
- *příkaz*  
+ *Příkaz*  
   
  *paralelní konstrukce*:  
   
@@ -150,7 +145,7 @@ Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje 
   
  **na základě**  
   
- **modul runtime**  
+ **Modul runtime**  
   
  *konstrukce části*:  
   
@@ -272,9 +267,9 @@ Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje 
   
  **omp – Direktiva pragma # seřazené** *nový řádek*  
   
- *deklarace*:  
+ *Deklarace*:  
   
- **/\*Standardní deklarace\*/**  
+ **/\* Standardní deklarace \*/**  
   
  *threadprivate – direktiva*  
   
@@ -304,17 +299,17 @@ Notace je popsané v části 6.1 standardní C. Tento dodatek gramatika ukazuje 
   
  *operátor snížení*:  
   
- *Jeden z*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Jeden z*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*v jazyce C\*/**  
+ **/\* v jazyce C \*/**  
   
  *Proměnná seznamu*:  
   
- *identifikátor*  
+ *Identifikátor*  
   
  *Proměnná seznamu* **,** *identifikátor*  
   
- **/\*v jazyce C++\*/**  
+ **/\* v jazyce C++ \*/**  
   
  *Proměnná seznamu*:  
   

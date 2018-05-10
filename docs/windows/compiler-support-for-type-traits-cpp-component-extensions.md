@@ -1,13 +1,10 @@
 ---
-title: "Podpora kompilátoru pro typové vlastnosti (C++ Component Extensions) | Microsoft Docs"
-ms.custom: 
+title: Podpora kompilátoru pro typové vlastnosti (C++ Component Extensions) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
 - __has_trivial_destructor
@@ -69,18 +66,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Podpora kompilátoru pro typové vlastnosti (C++ Component Extensions)
 Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat různé vlastnosti typu.  
@@ -287,7 +282,7 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
   
      Vrátí hodnotu true Pokud má typ virtuální destruktor.  
   
-     `__has_virtual_destructor`virtuální destruktor je také funguje na typech platforem a všechny – destruktor uživatelem definované v typu platformy.  
+     `__has_virtual_destructor` virtuální destruktor je také funguje na typech platforem a všechny – destruktor uživatelem definované v typu platformy.  
   
     ```  
   
@@ -308,7 +303,7 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
   
      Vrátí hodnotu true Pokud abstraktní typ je typ. Další informace o nativní abstraktní typy najdete v tématu [abstraktní](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract`funguje i pro typy platformy. Rozhraní s nejméně jeden člen je abstraktní typ, stejně jako odkaz na typ s nejméně jeden člen abstraktní. Další informace o typech abstraktní platforem najdete v tématu [abstraktní třídy](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` funguje i pro typy platformy. Rozhraní s nejméně jeden člen je abstraktní typ, stejně jako odkaz na typ s nejméně jeden člen abstraktní. Další informace o typech abstraktní platforem najdete v tématu [abstraktní třídy](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -329,7 +324,7 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
   
      Vrátí hodnotu true Pokud je první typ základní třídu druhého typu, pokud oba typy jsou stejné.  
   
-     `__is_base_of`funguje taky na typech platforem. Například, vrátí hodnotu true, pokud je první typ [třída rozhraní](../windows/interface-class-cpp-component-extensions.md) a druhý typ implementuje rozhraní.  
+     `__is_base_of` funguje taky na typech platforem. Například, vrátí hodnotu true, pokud je první typ [třída rozhraní](../windows/interface-class-cpp-component-extensions.md) a druhý typ implementuje rozhraní.  
   
     ```  
   
@@ -459,7 +454,7 @@ Podporuje kompilátoru *zadejte vlastnosti*, které v době kompilace znamenat r
   
      Typ třídy nebo sjednocení se žádný konstruktor nebo soukromé nebo chráněné členy nestatické, žádné základní třídy a bez virtuální funkce vrátí hodnotu PRAVDA. C++ standard části 8.5.1/1, 9 nebo 4 a 3.9/10 pro další informace najdete na pracovními stanicemi soustředěnými kolem.  
   
-     `__is_pod`Vrátí hodnotu false na základní typy.  
+     `__is_pod` Vrátí hodnotu false na základní typy.  
   
     ```  
   

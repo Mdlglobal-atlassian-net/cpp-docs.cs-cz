@@ -1,13 +1,10 @@
 ---
-title: "Přehled obecných typů v jazyce Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Přehled obecných typů v jazyce Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Přehled obecných typů ve Visual C++
 Obecné typy jsou parametrizované typy podporované systémem modul common language runtime. Parametrizované typ je typ, který je definován s parametrem neznámého typu, která je zadána při Obecné se používá.  
@@ -77,7 +72,7 @@ Obecné typy jsou parametrizované typy podporované systémem modul common lang
  Omezení je omezení na typy, které mohou být použity jako parametr typu. Například dané obecná třída může přijímat pouze třídy, které dědí od zadané třídy, nebo jsou implementovány specifikované rozhraní. Další informace najdete v tématu [omezení obecných parametrů typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="reference-types-and-value-types"></a>Odkazové typy a typy hodnot  
- Obslužné rutiny a hodnotové typy slouží jako argumenty typu. V definici obecné, ve kterém mohou být použity buď typ, syntaxe je u odkazové typy. Například  **->**  operátor se používá pro přístup k členům typ parametru typu, zda je typ nakonec používá odkazového typu nebo typ hodnoty. Pokud je jako argument typu použit typ hodnoty, modul runtime generuje kód, který používá typy hodnot přímo bez zabalení typů hodnot.  
+ Obslužné rutiny a hodnotové typy slouží jako argumenty typu. V definici obecné, ve kterém mohou být použity buď typ, syntaxe je u odkazové typy. Například **->** operátor se používá pro přístup k členům typ parametru typu, zda je typ nakonec používá odkazového typu nebo typ hodnoty. Pokud je jako argument typu použit typ hodnoty, modul runtime generuje kód, který používá typy hodnot přímo bez zabalení typů hodnot.  
   
  Při použití typu odkazu. jako argument obecného typu, použijte syntaxi popisovač. Pokud používáte typ hodnoty jako argument obecného typu, použijte název typu přímo.  
   

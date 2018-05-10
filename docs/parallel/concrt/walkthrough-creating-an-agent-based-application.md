@@ -1,30 +1,25 @@
 ---
-title: "Návod: Vytvoření aplikace založené na agentovi | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření aplikace založené na agentovi | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
 Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V tomto návodu vytvoříte agenta, který asynchronně čte data z textového souboru. Aplikace používá algoritmus kontrolního součtu Adler-32 vypočítat kontrolní součet obsah tohoto souboru.  
@@ -40,7 +35,7 @@ Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V
   
 - [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento návod ukazuje, jak provádět následující úlohy:  
   
 - [Vytvoření konzolové aplikace](#createapplication)  
@@ -49,7 +44,7 @@ Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V
   
 - [V aplikaci pomocí file_reader – třída](#useagentclass)  
   
-##  <a name="createapplication"></a>Vytvoření konzolové aplikace  
+##  <a name="createapplication"></a> Vytvoření konzolové aplikace  
  V této části ukazuje, jak k vytvoření konzolové aplikace Visual C++, který odkazuje na soubory hlaviček, které bude program používat.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Vytvoření aplikace Visual C++ pomocí Průvodce konzolovou aplikací Win32  
@@ -70,7 +65,7 @@ Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V
   
  [[Horní](#top)]  
   
-##  <a name="createagentclass"></a>Vytváření file_reader – třída  
+##  <a name="createagentclass"></a> Vytváření file_reader – třída  
  V této části ukazuje, jak vytvořit `file_reader` třídy. Modul runtime naplánuje každého agenta pro práci v jeho vlastní kontextu. Proto můžete vytvořit agenta, který provede práci synchronně, ale komunikuje s jinými součástmi asynchronně. `file_reader` Třída čte data z daného vstupního souboru a odesílá data z tohoto souboru pro danou cílovou součásti.  
   
 #### <a name="to-create-the-filereader-class"></a>Vytvoření třídy file_reader  
@@ -120,7 +115,7 @@ Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V
   
  [[Horní](#top)]  
   
-##  <a name="useagentclass"></a>V aplikaci pomocí file_reader – třída  
+##  <a name="useagentclass"></a> V aplikaci pomocí file_reader – třída  
  Tato část ukazuje způsob použití `file_reader` třídy ke čtení obsahu textového souboru. Také ukazuje, jak vytvořit [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který obdrží tato data souborů a vypočítá jeho kontrolní součet Adler-32.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>Použití třídy file_reader v aplikaci  

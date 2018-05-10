@@ -1,12 +1,9 @@
 ---
-title: "tiled_index – třída | Microsoft Docs"
-ms.custom: 
+title: tiled_index – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 Poskytuje index do [tiled_extent](tiled-extent-class.md) objektu. Tato třída obsahuje vlastnosti, které chcete přístup k elementům relativně ke zdroji místní dlaždice a relativně ke zdroji globální. Další informace o vedle sebe prostorech najdete v tématu [pomocí dlaždice](../../../parallel/amp/using-tiles.md).  
@@ -102,10 +97,10 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[Local – konstanta](#tiled_index__local)|Úložiště `index` objekt pořadí 1, 2 nebo 3, která představuje relativní indexu v aktuální dlaždici [tiled_extent](tiled-extent-class.md) objektu.|  
 |[pořadí konstanta](#tiled_index__rank)|Ukládá pořadí `tiled_index` objektu.|  
 |[Tile – konstanta](#tiled_index__tile)|Úložiště `index` objekt pořadí 1, 2 nebo 3, který představuje souřadnice aktuální dlaždici `tiled_extent` objektu.|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|Ukládá délka nejvýznamnějších dimenze.|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|Ukládá délka další většinu významné dimenze.|  
+|[tile_dim0 konstanta](#tiled_index__tile_dim0)|Ukládá délka nejvýznamnějších dimenze.|  
+|[tile_dim1 konstanta](#tiled_index__tile_dim1)|Ukládá délka další většinu významné dimenze.|  
 |[tile_dim2 konstanta](#tiled_index__tile_dim2)|Ukládá délku nejméně významný dimenze.|  
-|[tile_origin Constant](#tiled_index__tile_origin)|Úložiště `index` objekt pořadí 1, 2 nebo 3, který představuje na globální souřadnice počátečního aktuální dlaždice v `tiled_extent` objektu.|  
+|[tile_origin konstanta](#tiled_index__tile_origin)|Úložiště `index` objekt pořadí 1, 2 nebo 3, který představuje na globální souřadnice počátečního aktuální dlaždice v `tiled_extent` objektu.|  
 
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
@@ -126,7 +121,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Namespace:** souběžnosti  
 
 
-## <a name="tiled_index__ctor">tiled_index – konstruktor</a>  
+## <a name="tiled_index__ctor"></a>  tiled_index – konstruktor  
 Inicializuje novou instanci třídy `tiled_index` třídy.  
   
 ## <a name="syntax"></a>Syntaxe  

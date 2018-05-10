@@ -1,13 +1,10 @@
 ---
-title: "Paralelní kontejnery a objekty | Microsoft Docs"
-ms.custom: 
+title: Paralelní kontejnery a objekty | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168705c5d7497a0bcbede505760d49cdb63a3762
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-containers-and-objects"></a>Paralelní kontejnery a objekty
 Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které poskytují přístup z více vláken bezpečný přístup k jejich elementů.  
@@ -34,7 +29,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
  A *souběžných objekt* souběžně sdílí součásti. Proces, který vypočítává stav souběžných objektu paralelně vytváří stejný výsledek jako jiný proces, který vypočítá stejného stavu sériově. [Concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třída je příkladem typu souběžných objektu. `combinable` Třída umožňuje provádět paralelní výpočty a pak tyto výpočty do konečný výsledek. Používejte souběžné objekty, když používáte synchronizační mechanismus, například mutex by jinak synchronizovat přístup ke sdílené proměnné nebo prostředků.  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Toto téma popisuje následující paralelní kontejnery a objekty podrobně.  
   
  Souběžné kontejnery:  
@@ -75,10 +70,10 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
     -   [Příklady](#combinable-examples)  
   
-##  <a name="vector"></a>concurrent_vector – třída  
+##  <a name="vector"></a> concurrent_vector – třída  
  [Concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) třídy je třída pořadí kontejneru, která, stejně jako [std::vector](../../standard-library/vector-class.md) třídy, vám umožní náhodně přístup k jeho elementy. `concurrent_vector` Elementu a třída umožňuje připojit souběžnosti bezpečné pro přístup k operace. Připojit operace zneplatnění existující ukazatele nebo iterátory. Iterator přístup a traversal operace jsou také bezpečných souběžnosti.  
   
-###  <a name="vector-differences"></a>Rozdíly mezi concurrent_vector a vektoru  
+###  <a name="vector-differences"></a> Rozdíly mezi concurrent_vector a vektoru  
  `concurrent_vector` Třída podobá `vector` třídy. Složitost připojení, element přístup a operace přístupu iterator na `concurrent_vector` objekt jsou stejné jako u `vector` objektu. Následující body ilustrují, kde `concurrent_vector` se liší od `vector`:  
   
 -   Připojit iterator traversal operace, iterator přístup a přístup k elementu na `concurrent_vector` objekt jsou bezpečné souběžnosti.  
@@ -98,7 +93,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
 -   Modul runtime nedefinuje specializovanou verzi `concurrent_vector` pro typ `bool`.  
   
-###  <a name="vector-safety"></a>Operace bezpečné souběžnosti  
+###  <a name="vector-safety"></a> Operace bezpečné souběžnosti  
  Všechny metody, které se připojí k nebo zvětšete velikost `concurrent_vector` objektu nebo přístup k elementu v `concurrent_vector` objektu, jsou bezpečné souběžnosti. Výjimka, která má toto pravidlo je `resize` metoda.  
   
  Následující tabulka uvádí nejběžnější `concurrent_vector` metody a operátory, které jsou bezpečné pro souběžnosti.  
@@ -106,7 +101,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
 ||||  
 |-|-|-|  
 
-|[v](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[operátor &#91; &#93;](reference/concurrent-vector-class.md#operator_at)|  
+|[v](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[– operátor&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|  
 |[Začněte](reference/concurrent-vector-class.md#begin)|[přední](reference/concurrent-vector-class.md#front)|[push_back –](reference/concurrent-vector-class.md#push_back)|  
 |[zpět](reference/concurrent-vector-class.md#back)|[grow_by –](reference/concurrent-vector-class.md#grow_by)|[rbegin –](reference/concurrent-vector-class.md#rbegin)|  
 |[kapacita](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least –](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|  
@@ -131,7 +126,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
 
  I když `end` metoda je souběžnosti bezpečných souběžných volání [push_back –](reference/concurrent-vector-class.md#push_back) metoda způsobí, že hodnota, kterou vrátí `end` změnit. Počet elementů, které překračují iteraci je neurčitou. Tento program proto může vytvářet různé výsledek pokaždé, když ji spustit.  
   
-###  <a name="vector-exceptions"></a>Bezpečnost výjimek  
+###  <a name="vector-exceptions"></a> Bezpečnost výjimek  
  Pokud operace růstu nebo přiřazení vyvolá výjimku, stav `concurrent_vector` se objekt stane neplatným. Chování `concurrent_vector` není definován objekt, který je v neplatném stavu, pokud není uvedeno jinak. Však destruktoru vždycky uvolní paměť, která objekt přiděluje, i v případě, že objekt je v neplatném stavu.  
   
  Datový typ elementů vektorové `T`, musí splňovat následující požadavky. V opačném chování `concurrent_vector` třída není definován.  
@@ -142,10 +137,10 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
  [[Horní](#top)]  
   
-##  <a name="queue"></a>concurrent_queue – třída  
+##  <a name="queue"></a> concurrent_queue – třída  
  [Concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) třídy, podobně jako [std::queue](../../standard-library/queue-class.md) třídy, vám umožní přístup k jeho dopředu a zpět elementy. `concurrent_queue` Třída umožňuje bezpečné souběžnosti zařazování a dequeue – operace. `concurrent_queue` Třída rovněž poskytuje podporu iterator, která není bezpečná souběžnosti.  
   
-###  <a name="queue-differences"></a>Rozdíly mezi concurrent_queue a fronty  
+###  <a name="queue-differences"></a> Rozdíly mezi concurrent_queue a fronty  
  `concurrent_queue` Třída podobá `queue` třídy. Následující body ilustrují, kde `concurrent_queue` se liší od `queue`:  
   
 -   Zařazování a dequeue – operací na `concurrent_queue` objekt jsou bezpečné souběžnosti.  
@@ -160,7 +155,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
 -   `concurrent_queue` Třída poskytuje [unsafe_size –](reference/concurrent-queue-class.md#unsafe_size) metoda místo `size` metoda. `unsafe_size` Metoda není bezpečná souběžnosti.  
 
   
-###  <a name="queue-safety"></a>Operace bezpečné souběžnosti  
+###  <a name="queue-safety"></a> Operace bezpečné souběžnosti  
  Všechny metody této zařadit do nebo dequeue – z `concurrent_queue` objekt jsou bezpečné souběžnosti.  
   
  Následující tabulka uvádí nejběžnější `concurrent_queue` metody a operátory, které jsou bezpečné pro souběžnosti.  
@@ -168,7 +163,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
 |||  
 |-|-|  
 |[prázdný](reference/concurrent-queue-class.md#empty)|[push](reference/concurrent-queue-class.md#push)|  
-|[get_allocator –](reference/concurrent-queue-class.md#get_allocator)|[try_pop –](reference/concurrent-queue-class.md#try_pop)|  
+|[get_allocator](reference/concurrent-queue-class.md#get_allocator)|[try_pop](reference/concurrent-queue-class.md#try_pop)|  
 
 
   
@@ -178,12 +173,12 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
 |||  
 |-|-|  
-|[Vymazat](reference/concurrent-queue-class.md#clear)|[unsafe_end –](reference/concurrent-queue-class.md#unsafe_end)|  
-|[unsafe_begin –](reference/concurrent-queue-class.md#unsafe_begin)|[unsafe_size –](reference/concurrent-queue-class.md#unsafe_size)|  
+|[Zrušte zaškrtnutí](reference/concurrent-queue-class.md#clear)|[unsafe_end](reference/concurrent-queue-class.md#unsafe_end)|  
+|[unsafe_begin](reference/concurrent-queue-class.md#unsafe_begin)|[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)|  
 
 
   
-###  <a name="queue-iterators"></a>Podpora iterátorů  
+###  <a name="queue-iterators"></a> Podpora iterátorů  
  `concurrent_queue` Poskytuje iterátory, které nejsou bezpečné souběžnosti. Doporučujeme použít tyto iterátory pouze pro ladění.  
   
  A `concurrent_queue` iterator prochází směrem dopředu pouze elementy. Následující tabulka uvádí operátory, že každý iterator podporuje.  
@@ -196,7 +191,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
  [[Horní](#top)]  
   
-##  <a name="unordered_map"></a>concurrent_unordered_map – třída  
+##  <a name="unordered_map"></a> concurrent_unordered_map – třída  
  [HYPERLINK "file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 "concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) třída je Třída asociativní kontejneru, který stejně jako [std::unordered_map](../../standard-library/unordered-map-class.md) třídy, ovládací prvky různých délka posloupnost elementy typu [std::pair\<const klíč, Ty >](../../standard-library/pair-structure.md). Neseřazený mapy si můžete představit jako slovník, který můžete přidat dvojici klíč a hodnotu do nebo najít hodnotu podle klíče. Tato třída je užitečná, když máte více vláken nebo úlohy, které mají přístup k kontejner sdílené souběžně, vložte do něj nebo jej aktualizovat.  
   
  Následující příklad ukazuje, využít základní strukturu pro používání `concurrent_unordered_map`. Tento příklad vloží znak klíče v rozsahu ['a', ' i']. Protože neurčená pořadí operací, je také neurčená konečná hodnota pro každý klíč. Je však bezpečné provést vložení paralelně.  
@@ -205,27 +200,27 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
  Pro příklad, který používá `concurrent_unordered_map` provést mapu a snížit operace paralelně najdete v tématu [postup: provedení mapy a snížit operace paralelně](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).  
   
-###  <a name="map-differences"></a>Rozdíly mezi concurrent_unordered_map a unordered_map  
+###  <a name="map-differences"></a> Rozdíly mezi concurrent_unordered_map a unordered_map  
  `concurrent_unordered_map` Třída podobá `unordered_map` třídy. Následující body ilustrují, kde `concurrent_unordered_map` se liší od `unordered_map`:  
   
 -   `erase`, `bucket`, `bucket_count`, A `bucket_size` metody jsou pojmenované `unsafe_erase`, `unsafe_bucket`, `unsafe_bucket_count`, a `unsafe_bucket_size`, v uvedeném pořadí. `unsafe_` Zásady vytváření názvů označuje, že tyto metody není bezpečné souběžnosti. Další informace o zabezpečení souběžného zpracování najdete v tématu [operace souběžnosti bezpečné](#map-safety).  
   
 -   Operace INSERT není zneplatnit existující ukazatele nebo iterátory, ani se změnit pořadí položek, které již existují v mapě. Vložení a procházení operations dochází současně.  
   
--   `concurrent_unordered_map`podporuje předávání pouze iterací.  
+-   `concurrent_unordered_map` podporuje předávání pouze iterací.  
   
 -   Vložení zneplatnit nebo aktualizovat iterátory, které se vrátí pomocí `equal_range`. Vložení můžete připojit nerovné položky na konec rozsahu. Begin iterator odkazuje na položku stejné.  
   
  Abyste se vyhnuli zablokování, žádná metoda `concurrent_unordered_map` obsahuje zámek při volání přidělení paměti, funkce hash nebo jiný kód, uživatelem definované. Navíc je nutné zajistit, že funkce hash vždy vyhodnotí rovna klíči na stejnou hodnotu. Nejlepší funkce hash distribuci klíčů jednotně prostoru kód hash.  
   
-###  <a name="map-safety"></a>Operace bezpečné souběžnosti  
+###  <a name="map-safety"></a> Operace bezpečné souběžnosti  
  `concurrent_unordered_map` Třída umožňuje operace insert a element přístup bezpečných souběžnosti. Operace INSERT není zneplatnit existující ukazatele nebo iterátory. Iterator přístup a traversal operace jsou také bezpečných souběžnosti. V následující tabulce jsou běžně používané `concurrent_unordered_map` metody a operátory, které jsou bezpečné pro souběžnosti.  
   
 |||||  
 |-|-|-|-|  
-|[v](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq –](reference/concurrent-unordered-map-class.md#key_eq)|  
+|[at](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq](reference/concurrent-unordered-map-class.md#key_eq)|  
 |`begin`|`empty`|`get_allocator`|`max_size`|  
-|`cbegin`|`end`|`hash_function`|[operátor &#91; &#93;](reference/concurrent-unordered-map-class.md#operator_at)|  
+|`cbegin`|`end`|`hash_function`|[operátor&#91;&#93;](reference/concurrent-unordered-map-class.md#operator_at)|  
 |`cend`|`equal_range`|[Vložení](reference/concurrent-unordered-map-class.md#insert)|`size`|  
   
  I když `count` nelze volat metodu bezpečně z souběžně běžících vláken, různých vláknech může přijímat odlišné výsledky, pokud nová hodnota je současně vloženy do kontejneru.  
@@ -243,7 +238,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
  [[Horní](#top)]  
   
-##  <a name="unordered_multimap"></a>concurrent_unordered_multimap – třída  
+##  <a name="unordered_multimap"></a> concurrent_unordered_multimap – třída  
  [Concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) třída podobá `concurrent_unordered_map` třídy s tím rozdílem, že umožňuje pro více hodnot pro mapování na stejný klíč. Se také liší od `concurrent_unordered_map` následujícími způsoby:  
   
 -   [Concurrent_unordered_multimap::Insert –](reference/concurrent-unordered-multimap-class.md#insert) metoda vrátí iterovat místo `std::pair<iterator, bool>`.  
@@ -251,13 +246,13 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
 -   `concurrent_unordered_multimap` Třída neposkytuje `operator[]` ani `at` metoda.  
   
- Následující příklad ukazuje, využít základní strukturu pro používání `concurrent_unordered_multimap`. Tento příklad vloží znak klíče v rozsahu ['a', ' i']. `concurrent_unordered_multimap`umožňuje klíč do mají více hodnot.  
+ Následující příklad ukazuje, využít základní strukturu pro používání `concurrent_unordered_multimap`. Tento příklad vloží znak klíče v rozsahu ['a', ' i']. `concurrent_unordered_multimap` umožňuje klíč do mají více hodnot.  
   
  [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]  
   
  [[Horní](#top)]  
   
-##  <a name="unordered_set"></a>concurrent_unordered_set – třída  
+##  <a name="unordered_set"></a> concurrent_unordered_set – třída  
  [Concurrency::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) třída podobá `concurrent_unordered_map` třídy s tím rozdílem, že spravuje hodnoty místo páry klíč-hodnota. `concurrent_unordered_set` Třída neposkytuje `operator[]` ani `at` metoda.  
   
  Následující příklad ukazuje, využít základní strukturu pro používání `concurrent_unordered_set`. Tento příklad vloží znak hodnoty v rozsahu ['a', ' i']. Je bezpečné provést vložení paralelně.  
@@ -266,7 +261,7 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
  [[Horní](#top)]  
   
-##  <a name="unordered_multiset"></a>concurrent_unordered_multiset – třída  
+##  <a name="unordered_multiset"></a> concurrent_unordered_multiset – třída  
  [Concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) třída podobá `concurrent_unordered_set` třídy s tím rozdílem, že umožňuje duplicitní hodnoty. Se také liší od `concurrent_unordered_set` následujícími způsoby:  
   
 
@@ -275,31 +270,31 @@ Paralelní vzory knihovny (PPL) obsahuje několik kontejnery a objekty, které p
   
 -   `concurrent_unordered_multiset` Třída neposkytuje `operator[]` ani `at` metoda.  
   
- Následující příklad ukazuje, využít základní strukturu pro používání `concurrent_unordered_multiset`. Tento příklad vloží znak hodnoty v rozsahu ['a', ' i']. `concurrent_unordered_multiset`umožňuje hodnotu do více než jednou.  
+ Následující příklad ukazuje, využít základní strukturu pro používání `concurrent_unordered_multiset`. Tento příklad vloží znak hodnoty v rozsahu ['a', ' i']. `concurrent_unordered_multiset` umožňuje hodnotu do více než jednou.  
   
  [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]  
   
  [[Horní](#top)]  
   
-##  <a name="combinable"></a>combinable – třída  
+##  <a name="combinable"></a> combinable – třída  
  [Concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třída poskytuje opakovaně použitelný, místní úložiště, které vám umožní provádět podrobné výpočty a pak sloučit těchto výpočtů do konečný výsledek. Si můžete představit `combinable` objektu jako redukční proměnnou.  
   
  `combinable` Třída je užitečná v případě, že máte na prostředek, který sdílí několik vláken nebo úlohy. `combinable` Třída pomáhá eliminovat sdíleného stavu tím, že poskytuje přístup ke sdíleným prostředkům způsobem uvolnění zámku. Proto tato třída poskytuje alternativu k použití synchronizační mechanismus, například mutex synchronizovat přístup ke sdíleným datům z více vláken.  
   
-###  <a name="combinable-features"></a>Metody a funkce  
+###  <a name="combinable-features"></a> Metody a funkce  
  V následující tabulce jsou uvedeny některé důležité metody `combinable` třídy. Další informace o všech `combinable` metody třídy najdete v tématu [combinable – třída](../../parallel/concrt/reference/combinable-class.md).  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[místní](reference/combinable-class.md#local)|Získá odkaz na místní proměnné, která souvisí s aktuálním kontextu přístup z více vláken.|  
-|[Vymazat](reference/combinable-class.md#clear)|Odebere všechny lokální proměnné vláken z `combinable` objektu.|  
-|[kombinování](reference/combinable-class.md#combine)<br /><br /> [combine_each –](reference/combinable-class.md#combine_each)|Zadané kombinační funkcí používá ke generování konečná hodnota ze sady všechny místní výpočty.|  
+|[Zrušte zaškrtnutí](reference/combinable-class.md#clear)|Odebere všechny lokální proměnné vláken z `combinable` objektu.|  
+|[kombinování](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Zadané kombinační funkcí používá ke generování konečná hodnota ze sady všechny místní výpočty.|  
   
  `combinable` Třída je šablona třídu, která je na konečný výsledek sloučené s parametry. Pokud volat výchozí konstruktor `T` typ parametru šablony musí mít výchozí konstruktor a kopírovacího konstruktoru. Pokud `T` typ šablony parametr nemá výchozí konstruktor, volání přetížené verzi konstruktor, který přebírá inicializační funkce jako jeho parametr.  
   
  Další data v můžete uložit `combinable` objektu po zavolání metody [kombinovat](reference/combinable-class.md#combine) nebo [combine_each –](reference/combinable-class.md#combine_each) metody. Můžete také zavolat `combine` a `combine_each` metody vícekrát. Pokud žádná místní hodnota v `combinable` objektu změny, `combine` a `combine_each` metody pokaždé, když jsou volány vytvořila stejný výsledek.  
   
-###  <a name="combinable-examples"></a>Příklady  
+###  <a name="combinable-examples"></a> Příklady  
  Příklady týkající se použití `combinable` třídy, najdete v následujících tématech:  
   
 -   [Postupy: Použití objektu combinable ke zlepšení výkonu](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)  

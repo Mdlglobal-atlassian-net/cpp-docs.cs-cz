@@ -1,12 +1,9 @@
 ---
-title: "Iresourcemanager – struktura | Microsoft Docs"
-ms.custom: 
+title: Iresourcemanager – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager – struktura
 Rozhraní pro správce prostředků Concurrency Runtime. Toto je rozhraní, pomocí kterého plánovače komunikovat se správcem prostředků.  
@@ -57,10 +52,10 @@ struct IResourceManager;
 |Název|Popis|  
 |----------|-----------------|  
 |[Iresourcemanager::createnodetopology –](#createnodetopology)|Nachází pouze v ladění sestavení modulu runtime, tato metoda je test háku, navrženy k usnadnění testování služby Správce prostředků v různých topologiích hardwaru, bez nutnosti skutečné hardwarové odpovídající konfiguraci. Prodejní sestavení modulu runtime tato metoda vrátí bez provedení všech akcí.|  
-|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.|  
+|[Iresourcemanager::getavailablenodecount –](#getavailablenodecount)|Vrátí počet uzlů, které jsou k dispozici pro správce prostředků.|  
 |[Iresourcemanager::getfirstnode –](#getfirstnode)|Vrátí první uzel v pořadí výčtu definovaným pomocí Správce prostředků.|  
 |[Iresourcemanager::Reference –](#reference)|Zvýší počet odkazů na instanci Resource Manager.|  
-|[IResourceManager::RegisterScheduler](#registerscheduler)|Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.|  
+|[Iresourcemanager::registerscheduler –](#registerscheduler)|Zaregistruje plánovače s Resource Managerem. Po registraci Plánovač měli komunikovat s pomocí Správce prostředků `ISchedulerProxy` rozhraní, která je vrácena.|  
 |[Iresourcemanager::Release –](#release)|Snižuje počet odkaz na instanci Resource Manager. Resource Manager zničen při jeho počet odkazů přejde na `0`.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -176,5 +171,5 @@ virtual unsigned int Release() = 0;
   
 ## <a name="see-also"></a>Viz také  
  [Namespace souběžnosti](concurrency-namespace.md)   
- [ISchedulerProxy Structure](ischedulerproxy-structure.md)   
+ [Ischedulerproxy – struktura](ischedulerproxy-structure.md)   
  [IScheduler – struktura](ischeduler-structure.md)

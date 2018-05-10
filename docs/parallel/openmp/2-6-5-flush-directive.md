@@ -1,27 +1,22 @@
 ---
-title: "2.6.5 flush – direktiva | Microsoft Docs"
-ms.custom: 
+title: 2.6.5 flush – direktiva | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush – direktiva
 **Vyprázdnění** – direktiva, ať už explicitní nebo implicitní, určuje bod sekvence "mezi vlákny", kdy je potřeba zajistit, aby měly všechny vlákna v týmu konzistentní zobrazení určité objekty (uvedené níže) v implementaci paměť. To znamená, že předchozí vyhodnocení výrazů, které odkazují na tyto objekty dokončení a následné hodnocení není zahájeno. Například kompilátory musí obnovení hodnot objektů z registrů v paměti a hardwaru pravděpodobně muset vyprázdnění zápis vyrovnávací paměti do paměti a znovu načíst hodnoty objekty z paměti.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Na vstupu a výstupu z **kritické**  
   
--   Na vstupu a výstupu z`ordered`  
+-   Na vstupu a výstupu z `ordered`  
   
 -   Na vstupu a výstupu z **paralelní**  
   

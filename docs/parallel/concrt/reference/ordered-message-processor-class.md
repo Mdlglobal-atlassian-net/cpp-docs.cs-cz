@@ -1,12 +1,9 @@
 ---
-title: "ordered_message_processor – třída | Microsoft Docs"
-ms.custom: 
+title: ordered_message_processor – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ordered_message_processor
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83f3181d797b0146cc7e57950da6b5e9569b2ab1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27dfb6c1a64d3a4e9df24f3966ec89db1dfbe10c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor – třída
 `ordered_message_processor` Je `message_processor` umožňuje bloky zpráv ke zpracování zpráv v pořadí, které byly přijaty.  
@@ -62,7 +57,7 @@ class ordered_message_processor : public message_processor<T>;
 |Název|Popis|  
 |----------|-----------------|  
 |[ordered_message_processor](#ctor)|Vytvoří `ordered_message_processor` objektu.|  
-|[~ordered_message_processor Destructor](#dtor)|Zničí `ordered_message_processor` objektu.|  
+|[~ ordered_message_processor – destruktor](#dtor)|Zničí `ordered_message_processor` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -72,13 +67,13 @@ class ordered_message_processor : public message_processor<T>;
 |[Inicializace](#initialize)|Inicializuje `ordered_message_processor` objekt ke skupině odpovídající zpětného volání funkce, Plánovač a plán.|  
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializace zpracování dávkové zprávy|  
 |[sync_send](#sync_send)|Synchronně fronty zpráv a spustí úlohu zpracování, pokud to není již bylo provedeno. (Přepisuje [message_processor::sync_send –](message-processor-class.md#sync_send).)|  
-|[wait](#wait)|Specifické pro procesor otočení čekání, který používá v destruktorech bloky zpráv a ujistěte se, že všechny úlohy asynchronního zpracování mají čas na dokončení před zničení bloku. (Přepisuje [message_processor::wait –](message-processor-class.md#wait).)|  
+|[Počkej](#wait)|Specifické pro procesor otočení čekání, který používá v destruktorech bloky zpráv a ujistěte se, že všechny úlohy asynchronního zpracování mají čas na dokončení před zničení bloku. (Přepisuje [message_processor::wait –](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|Zpracování funkce, která je volána asynchronně. To dequeues zprávy a zahájí zpracování je. (Přepisuje [message_processor::process_incoming_message –](message-processor-class.md#process_incoming_message).)|  
+|[process_incoming_message –](#process_incoming_message)|Zpracování funkce, která je volána asynchronně. To dequeues zprávy a zahájí zpracování je. (Přepisuje [message_processor::process_incoming_message –](message-processor-class.md#process_incoming_message).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [message_processor](message-processor-class.md)  
@@ -102,7 +97,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  Ukazatel na zprávu.  
   
-##  <a name="initialize">Inicializace</a> 
+##  <a name="initialize"></a> Inicializace 
 
  Inicializuje `ordered_message_processor` objekt ke skupině odpovídající zpětného volání funkce, Plánovač a plán.  
   

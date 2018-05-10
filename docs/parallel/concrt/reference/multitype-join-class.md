@@ -1,12 +1,9 @@
 ---
-title: "multitype_join – třída | Microsoft Docs"
-ms.custom: 
+title: multitype_join – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join – třída
 A `multitype_join` zasílání zpráv blok je více zdroje, jeden cílový blok zasílání zpráv, který kombinuje společně zprávy různých typů z každé její zdroje a nabízí řazené kolekce členů kombinované zpráv k jeho cílům.  
@@ -77,13 +72,13 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept](#accept)|Přijme zprávu, která byla nabízí to `multitype_join` bloku, přenos vlastnictví volajícímu.|  
+|[Přijmout](#accept)|Přijme zprávu, která byla nabízí to `multitype_join` bloku, přenos vlastnictví volajícímu.|  
 |[acquire_ref](#acquire_ref)|Získá počet odkazů v tomto `multitype_join` zasílání zpráv bloku, aby se zabránilo odstranění.|  
 |[Využívat](#consume)|Využívá dříve nabízené zprávy `multitype_join` zasílání zpráv na úrovni bloku a úspěšně rezervován cíl, přenos vlastnictví volajícímu.|  
 |[link_target](#link_target)|Cílový blok odkazuje na tato `multitype_join` zasílání zpráv bloku.|  
-|[release](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
+|[Verze](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
 |[release_ref](#release_ref)|Uvolní počet odkazů v tomto `multiple_join` zasílání zpráv bloku.|  
-|[reserve](#reserve)|Rezervuje zprávu dříve nabízí to `multitype_join` zasílání zpráv bloku.|  
+|[Rezervovat](#reserve)|Rezervuje zprávu dříve nabízí to `multitype_join` zasílání zpráv bloku.|  
 |[unlink_target](#unlink_target)|Zruší propojení cílový blok z tohoto `multitype_join` zasílání zpráv bloku.|  
 |[unlink_targets](#unlink_targets)|Zruší všechny cíle z tohoto propojení `multitype_join` zasílání zpráv bloku. (Přepisuje [isource::unlink_targets –](isource-class.md#unlink_targets).)|  
   
@@ -135,7 +130,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je volána `ITarget` objekt, který je propojena k tomuto zdroji během `link_target` metoda.  
   
-##  <a name="consume">Využívat</a> 
+##  <a name="consume"></a> Využívat 
 
  Využívá dříve nabízené zprávy `multitype_join` zasílání zpráv na úrovni bloku a úspěšně rezervován cíl, přenos vlastnictví volajícímu.  
   
@@ -236,7 +231,7 @@ virtual void release(
  `_PTarget`  
  Ukazatel na cílový blok, který volá `release` metoda.  
   
-##  <a name="release_ref"></a> release_ref 
+##  <a name="release_ref"></a> release_ref – 
 
  Uvolní počet odkazů v tomto `multiple_join` zasílání zpráv bloku.  
   

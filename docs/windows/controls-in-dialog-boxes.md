@@ -1,13 +1,10 @@
 ---
-title: "Ovládací prvky v dialogových oknech | Microsoft Docs"
-ms.custom: 
+title: Ovládací prvky v dialogových oknech | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02ca3523de9341c14d2e2a9837ba84f5625a3379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="controls-in-dialog-boxes"></a>Ovládací prvky v dialogových oknech
 Ovládací prvky můžete přidat pomocí dialogu pole [Karta Editor dialogového okna](../windows/dialog-editor-tab-toolbox.md) v [okno sady nástrojů](/visualstudio/ide/reference/toolbox), který umožňuje volbu ovládacího prvku chcete a přetáhněte ji na dialogové okno. Ve výchozím okno sady nástrojů nastavena na automatické skrýt. Při otevření editoru dialogových oken, zobrazí se jako karty na levém okraji řešení. Však můžete Připnout okno sady nástrojů do pozice kliknutím **automaticky skrýt** tlačítko v pravém horním rohu okna. Další informace o tom, jak řídit chování tohoto okna najdete v tématu [Správa oken](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

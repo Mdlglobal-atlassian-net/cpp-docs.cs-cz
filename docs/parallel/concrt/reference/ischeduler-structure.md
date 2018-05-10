@@ -1,12 +1,9 @@
 ---
-title: "Struktura rozhraní IScheduler | Microsoft Docs"
-ms.custom: 
+title: Struktura rozhraní IScheduler | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>Struktura rozhraní IScheduler
 Rozhraní pro abstrakci pracovní plánovače. Concurrency Runtime Resource Manager používá ke komunikaci s pracovní plánovače toto rozhraní.  
@@ -50,10 +45,10 @@ struct IScheduler;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Poskytuje plánovače sadu kořeny virtuálních procesorů pro jeho použití. Každý `IVirtualProcessorRoot` rozhraní představuje práva k provedení jednoho vlákno, které můžete provádět práci jménem plánovače.|  
-|[IScheduler::GetId](#getid)|Vrací jedinečný identifikátor pro Plánovač.|  
-|[IScheduler::GetPolicy](#getpolicy)|Vrátí kopii zásad plánovače. Další informace o zásady plánovače najdete v tématu [SchedulerPolicy](schedulerpolicy-class.md).|  
-|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Upozorní tento plánovač, která vláken hardwaru reprezentována sadu kořenových virtuálních procesorů v poli `ppVirtualProcessorRoots` jsou nyní používány jiné plánovače.|  
+|[Ischeduler::addvirtualprocessors –](#addvirtualprocessors)|Poskytuje plánovače sadu kořeny virtuálních procesorů pro jeho použití. Každý `IVirtualProcessorRoot` rozhraní představuje práva k provedení jednoho vlákno, které můžete provádět práci jménem plánovače.|  
+|[Ischeduler::getid –](#getid)|Vrací jedinečný identifikátor pro Plánovač.|  
+|[Ischeduler::getpolicy –](#getpolicy)|Vrátí kopii zásad plánovače. Další informace o zásady plánovače najdete v tématu [SchedulerPolicy](schedulerpolicy-class.md).|  
+|[Ischeduler::notifyresourcesexternallybusy –](#notifyresourcesexternallybusy)|Upozorní tento plánovač, která vláken hardwaru reprezentována sadu kořenových virtuálních procesorů v poli `ppVirtualProcessorRoots` jsou nyní používány jiné plánovače.|  
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Upozorní tento plánovač, která vláken hardwaru reprezentována sadu kořenových virtuálních procesorů v poli `ppVirtualProcessorRoots` nejsou používány jiné plánovače.|  
 |[Ischeduler::removevirtualprocessors –](#removevirtualprocessors)|Inicializuje odstranění kořeny virtuálních procesorů, které byly dříve přiděleny na tento plánovače.|  
 |[Ischeduler::Statistics –](#statistics)|Obsahuje informace související s příchodem a dokončení sazby úlohy a změna v délka fronty pro plánovače.|  

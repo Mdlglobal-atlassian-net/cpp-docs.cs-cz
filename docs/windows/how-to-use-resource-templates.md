@@ -1,13 +1,10 @@
 ---
-title: "Postupy: použití šablon prostředků | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: použití šablon prostředků | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>Postupy: Použití šablon prostředků
 Prostředek šablony je vlastní prostředek, který jste uložili jako soubor .rct. Šablony prostředků může potom sloužit jako výchozí bod pro vytvoření další prostředky. Šablony prostředků ušetřit čas při vývoji další prostředky nebo skupiny zdroje, které mají funkce, jako je standardní ovládací prvky a další opakovaných elementy. Například můžete chtít zahrnout tlačítko Nápověda a ikona logo společnosti několik dialogových oken. Uděláte to tak rychle, vytvořte novou šablonu pole dialogové okno a upravit pomocí logo a na tlačítko Nápověda.  
@@ -61,7 +56,7 @@ Prostředek šablony je vlastní prostředek, který jste uložili jako soubor .
   
 1.  [Otevřete soubor .rc jako samostatný soubor](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-2.  Na **soubor** nabídky, klikněte na tlačítko  **Uložit \<* vaše filename*> jako **.  
+2.  Na **soubor** nabídky, klikněte na tlačítko **Uložit \< *vaše filename*> jako**.  
   
 3.  Zadejte umístění a klikněte na tlačítko **OK**.  
   

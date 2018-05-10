@@ -1,12 +1,9 @@
 ---
-title: "texture_view – třída | Microsoft Docs"
-ms.custom: 
+title: texture_view – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>texture_view – třída
 Poskytuje přístup pro čtení a zápis do texturou. `texture_view` můžete použít pouze ke čtení textury, jehož typ hodnoty je `int`, `unsigned int`, nebo `float` mají výchozí 32-bit bpse. Číst ostatní formáty texture, použijte `texture_view<const value_type, _Rank>`.  
@@ -86,16 +81,16 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí zelený (y) součástí čtyři jen Vzorkovaná texels.|  
 |[gather_red](#gather_red)|Přetíženo. Ukázky texture v zadaných souřadnic pomocí zadané vzorkování konfigurace a vrátí čtyři jen Vzorkovaná texels součásti červený (x).|  
 |[get](#get)|Přetíženo. Získá hodnotu elementu index.|  
-|[sample](#sample)|Přetíženo. Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.|  
+|[Ukázka](#sample)|Přetíženo. Ukázky texture v zadaných souřadnic a úroveň podrobností pomocí konfigurace zadané vzorkování.|  
 |[set](#set)|Nastaví hodnotu elementu index.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Přetíženo. Získá hodnotu elementu index.|  
-|[operator[]](#operator_at)|Přetíženo. Získá hodnotu elementu index.|  
-|[operator=](#operator_eq)|Přetíženo. Operátor přiřazení.|  
+|[Operator() –](#operator_call)|Přetíženo. Získá hodnotu elementu index.|  
+|[[] – operátor](#operator_at)|Přetíženo. Získá hodnotu elementu index.|  
+|[operátor =](#operator_eq)|Přetíženo. Operátor přiřazení.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -113,7 +108,7 @@ class texture_view<const value_type, _Rank>
   
  **Namespace:** concurrency::graphics  
   
-##  <a name="dtor"></a> ~texture_view 
+##  <a name="dtor"></a> ~ texture_view 
 
  Zničí `texture_view` instance.  
   

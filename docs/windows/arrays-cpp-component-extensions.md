@@ -1,13 +1,10 @@
 ---
-title: "Pole (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: Pole (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
 `Platform::Array<T>` Typ v jazyce C + +/ CX, nebo `array` – klíčové slovo v jazyce C + +/ CLI, deklaruje pole zadaného typu a počáteční hodnota.  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  `array-type`  
  Typ proměnné pole. Platné typy jsou třídy prostředí Windows Runtime a základní typy, ref třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).  
   
- `rank`[Nepovinné]  
+ `rank` [Nepovinné]  
  Počet rozměrů pole. Musí být 1.  
   
  `identifier`  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
  `initialization-type`  
  Typ hodnoty, které inicializovat pole. Obvykle `array-type` a `initialization-type` jsou stejného typu. Typy však může být různé, pokud je převod z `initialization-type` k `array-type`– například pokud `initialization-type` je odvozený od `array-type`.  
   
- `initialization-list`[Nepovinné]  
+ `initialization-list` [Nepovinné]  
  Čárkami oddělený seznam hodnot v složené závorky, které inicializovat elementy pole. Například pokud `rank-size-list` byly `(3)`, který deklaruje jednorozměrné pole 3 elementů `initialization list` může být `{1,2,3}`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  Typ proměnné pole. Platné typy jsou třídy prostředí Windows Runtime a základní typy, ref třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (prostý stará data).  
   
- `rank`[Nepovinné]  
+ `rank` [Nepovinné]  
  Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé pole je sám pole.  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  Čárkami oddělený seznam velikost Každá dimenze v poli. Případně pokud `initialization-list` je zadán parametr, kompilátor lze odvodit velikost Každá dimenze a `rank-size-list` lze vynechat. 
   
- `initialization-list`[Nepovinné]  
+ `initialization-list` [Nepovinné]  
  Čárkami oddělený seznam hodnot v složené závorky, které inicializovat elementy pole. Nebo vnořený seznam s položkami oddělenými čárkou *Inicializace seznamu* položky, které inicializovat elementů v vícerozměrné.  
   
  Například pokud `rank-size-list` byly `(3)`, který deklaruje jednorozměrné pole 3 elementů `initialization list` může být `{1,2,3}`. Pokud `rank-size-list` byly `(3,2,4)`, který deklaruje trojrozměrné 3 elementů v první dimenze, 2 prvky za sekundu a 4 elementy do třetího `initialization-list` může být `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Poznámky  
   
- `array`Probíhá [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.  
+ `array` Probíhá [Platform, default a rozhraní příkazového řádku obory názvů](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) oboru názvů.  
   
  Jako standardní C++ indexy pole jsou od nuly, a pole je dolního indexu pomocí hranaté závorky ([]). Na rozdíl od standardní C++ jsou indexy vícerozměrné určené v seznamu indexy, které pro každý dimenzi namísto sadu operátory hranaté závorky ([]) pro každý dimenzi. Například *identifikátor*[*index1*, *index2*] místo *identifikátor*[*index1*] [ *index2*].  
   

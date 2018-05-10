@@ -1,13 +1,10 @@
 ---
-title: "Převádění bitmap na panely nástrojů | Microsoft Docs"
-ms.custom: 
+title: Převádění bitmap na panely nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Toolbar editor, converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d189395bbedff4d73cc690d454ddd07af4d109e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e80bee7ef9bfe52abf63ac959475c5d8dbcf0ece
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Převádění bitmap na panely nástrojů
 Převádění rastrový obrázek můžete vytvořit nový panel nástrojů. Na obrázku z bitmapy převede na pro obrázky tlačítka panelu nástrojů. Obvykle bitmapy obsahuje několik tlačítko bitových kopií na jednom rastrového obrázku, jednu bitovou kopií pro každé tlačítko. Bitové kopie může mít libovolnou velikost; Výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost tlačítko obrázků v [dialogové okno Nový prostředek panelu nástrojů](../windows/new-toolbar-resource-dialog-box.md) Pokud vyberete Editor panelu nástrojů z **Image** nabídky v editoru obrázků.  

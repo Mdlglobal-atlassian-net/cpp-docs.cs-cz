@@ -1,12 +1,9 @@
 ---
-title: "Třída unbounded_buffer | Microsoft Docs"
-ms.custom: 
+title: Třída unbounded_buffer | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 `unbounded_buffer` Zasílání zpráv blok je více cíl, více zdroje, seřazených `propagator_block` umožňující ukládání bez vazby počet zpráv.  
   
@@ -62,7 +57,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |Název|Popis|  
 |----------|-----------------|  
 |[unbounded_buffer](#ctor)|Přetíženo. Vytvoří `unbounded_buffer` zasílání zpráv bloku.|  
-|[~unbounded_buffer Destructor](#dtor)|Zničí `unbounded_buffer` zasílání zpráv bloku.|  
+|[~ unbounded_buffer – destruktor](#dtor)|Zničí `unbounded_buffer` zasílání zpráv bloku.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -76,7 +71,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |Název|Popis|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `unbounded_buffer` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
-|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `unbounded_buffer` zasílání zpráv na úrovni bloku a rezervován cíl, přenos vlastnictví volajícímu.|  
+|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `unbounded_buffer` zasílání zpráv na úrovni bloku a rezervován cíl, přenos vlastnictví volajícímu.|  
 |[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `unbounded_buffer` zasílání zpráv bloku.|  
 |[process_input_messages](#process_input_messages)|Míst `message` `_PMessage` v tomto `unbounded_buffer` zasílání zpráv blokování a pokusí se ji na všechny propojené cíle nabízejí.|  
 |[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `unbounded_buffer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
@@ -85,7 +80,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |[reserve_message](#reserve_message)|Rezervuje zprávu dříve nabízí to `unbounded_buffer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
 |[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `unbounded_buffer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
 
  Další informace najdete v tématu [asynchronní bloky zpráv](../asynchronous-message-blocks.md).  
   
@@ -142,7 +137,7 @@ virtual message<_Type> * consume_message(
 ### <a name="remarks"></a>Poznámky  
  Podobně jako `accept`, ale je vždy před voláním `reserve`.  
   
-##  <a name="dequeue">Dequeue –</a> 
+##  <a name="dequeue"></a> Dequeue – 
 
  Odebere položku z `unbounded_buffer` zasílání zpráv bloku.  
   
@@ -153,7 +148,7 @@ _Type dequeue();
 ### <a name="return-value"></a>Návratová hodnota  
  Datová část zprávy odebrán z `unbounded_buffer`.  
   
-##  <a name="enqueue">Zařazování</a> 
+##  <a name="enqueue"></a> Zařazování 
 
  Přidá položku, kterou chcete `unbounded_buffer` zasílání zpráv bloku.  
   
@@ -205,7 +200,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md#message_status) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="propagate_output_messages"></a> propagate_output_messages 
+##  <a name="propagate_output_messages"></a> propagate_output_messages – 
 
  Míst `message` `_PMessage` v tomto `unbounded_buffer` zasílání zpráv blokování a pokusí se ji na všechny propojené cíle nabízejí.  
   
@@ -263,7 +258,7 @@ virtual bool reserve_message(
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a> resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation – 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -271,7 +266,7 @@ virtual bool reserve_message(
 virtual void resume_propagation();  
 ```  
   
-##  <a name="send_message">send_message –</a> 
+##  <a name="send_message"></a> send_message – 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `unbounded_buffer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   
@@ -303,7 +298,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>Návratová hodnota  
  `true` protože blok není odložit nabízené zprávy.  
   
-##  <a name="ctor">unbounded_buffer</a> 
+##  <a name="ctor"></a> unbounded_buffer 
 
  Vytvoří `unbounded_buffer` zasílání zpráv bloku.  
   

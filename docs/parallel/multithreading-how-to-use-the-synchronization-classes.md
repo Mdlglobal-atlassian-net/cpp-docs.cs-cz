@@ -1,13 +1,10 @@
 ---
-title: "Multithreading: Jak používat synchronizační třídy | Microsoft Docs"
-ms.custom: 
+title: 'Multithreading: Jak používat synchronizační třídy | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: Jak používat synchronizační třídy
 Synchronizace přístupu k prostředkům mezi vlákny problém je běžný, při zápisu vícevláknové aplikace. Má dva nebo více vlákna současně přístup, stejná data může vést k nežádoucím a nepředvídatelným výsledky. Například jedno vlákno může aktualizovat obsah struktury zatímco jiné vlákno čte obsah stejnou strukturu. Není známo, jaká data vlákno pro čtení obdrží: stará data, nově zapsaná data či kombinaci obou. MFC poskytuje řadu synchronizace a synchronizační přístupové třídy na pomoc při řešení tohoto problému. Toto téma vysvětluje třídy, které jsou k dispozici a jakým způsobem je použít k vytvoření třídy bezpečné pro přístup z více vláken v typické aplikaci s více vlákny.  
@@ -43,7 +38,7 @@ Synchronizace přístupu k prostředkům mezi vlákny problém je běžný, při
   
  Tato ukázková aplikace používá všechny tři typy třídy synchronizace. Protože umožňuje v jednom okamžiku až tři účty, používá [prohlížení](../mfc/reference/csemaphore-class.md) omezit přístup k tři objekty zobrazení. Při pokusu o zobrazení účet čtvrtý dojde, aplikace buď čeká, dokud jeden z prvních tří windows zavře nebo se nezdaří. Při aktualizaci účtu používá aplikace [CCriticalSection](../mfc/reference/ccriticalsection-class.md) zajistit, že je najednou aktualizován pouze jeden účet. Po úspěšné aktualizaci signalizuje [CEvent](../mfc/reference/cevent-class.md), což uvolní vlákno čeká na signál události. Tento přístup z více vláken odešle nová data do dat archivu.  
   
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>Navrhování třídy bezpečné pro přístup z více vláken  
+##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> Navrhování třídy bezpečné pro přístup z více vláken  
  Chcete-li třídu plně bezpečné pro přístup z více vláken, nejprve přidejte třídu příslušné synchronizace do sdílené třídy jako člena. V předchozím příkladu Správa účtů **prohlížení** – datový člen by byl přidán do zobrazení třídy `CCriticalSection` – datový člen by byl přidán k třídě-list a `CEvent` – datový člen by byl přidán k datům třídy úložiště.  
   
  Dále přidejte volání všechny členské funkce, které upravují data ve třídě nebo získat přístup k prostředku řízené synchronizace. V každé funkci, měli byste vytvořit buď [CSingleLock](../mfc/reference/csinglelock-class.md) nebo [CMultiLock](../mfc/reference/cmultilock-class.md) objektu a tento objekt volání `Lock` funkce. Pokud je objekt zámku ocitne mimo obor a zničen, volání destruktoru objektu `Unlock` , vydání prostředku. Samozřejmě můžete volat `Unlock` přímo podle potřeby.  

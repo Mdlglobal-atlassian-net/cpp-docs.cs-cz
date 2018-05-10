@@ -1,12 +1,9 @@
 ---
-title: "critical_section – třída | Microsoft Docs"
-ms.custom: 
+title: critical_section – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>critical_section – třída
 Mutex nejsou vícenásobně přístupné, což je explicitně vědět Concurrency Runtime.  
@@ -63,17 +58,17 @@ class critical_section;
 |Název|Popis|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Vytvoří novou část důležité.|  
-|[~critical_section Destructor](#dtor)|Zničí kritická sekce.|  
+|[~ critical_section – destruktor](#dtor)|Zničí kritická sekce.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[lock](#lock)|Získá tato část důležité.|  
-|[native_handle](#native_handle)|Pokud existuje, vrátí platformy konkrétní nativní popisovač.|  
+|[native_handle –](#native_handle)|Pokud existuje, vrátí platformy konkrétní nativní popisovač.|  
 |[try_lock](#try_lock)|Pokusí se získat zámek bez blokování.|  
 |[try_lock_for](#try_lock_for)|Pokusí se získat zámek bez pro konkrétní počet milisekund blokování.|  
-|[unlock](#unlock)|Odemkne kritická sekce.|  
+|[odemknutí](#unlock)|Odemkne kritická sekce.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [synchronizační datové struktury](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -132,7 +127,7 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>Poznámky  
  A `critical_section` objekt není spojen s konkrétní nativní popisovač platformu pro operační systém Windows. Metoda jednoduše vrátí odkaz na odkaz sám na sebe.  
   
-##  <a name="critical_section__scoped_lock_class">critical_section::scoped_lock – třída</a>  
+##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock – třída  
  Obálku výjimka bezpečné RAII pro `critical_section` objektu.  
   
 ```

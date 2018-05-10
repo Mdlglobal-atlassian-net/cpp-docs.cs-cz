@@ -1,30 +1,25 @@
 ---
-title: "Vytváření asynchronních operací v jazyce C++ pro aplikace UWP | Microsoft Docs"
-ms.custom: 
+title: Vytváření asynchronních operací v jazyce C++ pro aplikace UWP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace UWP
 Tento dokument popisuje některé z klíčových bodů třeba vzít v úvahu při použití třídy úlohy k vytvoření založené na Windows zachovalo asynchronních operací v aplikaci pro univerzální Windows Runtime (UWP).  
@@ -58,7 +53,7 @@ Tento dokument popisuje některé z klíčových bodů třeba vzít v úvahu př
   
 -   [Příklad: Řízení provádění v aplikaci Windows Runtime s C++ a XAML](#example-app)  
   
-##  <a name="create-async">Vytváření asynchronních operací</a>  
+##  <a name="create-async"></a> Vytváření asynchronních operací  
  Úloha a pokračování modelu můžete použít k definování úlohy na pozadí, jakož i další úkoly, které jsou spuštěny při dokončení předchozí úlohy v paralelní vzory knihovny (PPL). Tato funkce poskytuje [concurrency::task](../../parallel/concrt/reference/task-class.md) třídy. Další informace o tomto modelu a `task` třídy najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Prostředí Windows Runtime je programovací rozhraní, které můžete použít k vytvoření aplikace UPW, které spouští pouze v prostředí speciální operačního systému. Tyto aplikace použít oprávnění funkce, datové typy a zařízení a jsou distribuované z Microsoft Store. Prostředí Windows Runtime je reprezentována *binární rozhraní aplikace* (ABI). ABI je základní binární kontrakt, který zpřístupňuje rozhraní API systému Windows Runtime programovacích jazyků, jako je například Visual C++.  
@@ -71,10 +66,10 @@ Tento dokument popisuje některé z klíčových bodů třeba vzít v úvahu př
  [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Představuje asynchronní akce, která generuje sestavy průběhu.  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Reprezentuje asynchronní operaci, která vrací výsledek.  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Reprezentuje asynchronní operaci, která vrací výsledek a sestavy průběhu.  
   
  Znalost problematicky *akce* znamená, že asynchronní úloha neobsahuje hodnotu (Považujte funkci, která vrátí `void`). Znalost problematicky *operace* znamená, že asynchronní úlohu vytvoření hodnoty. Znalost problematicky *průběh* znamená, že úloha může sestavy zprávy o průběhu volajícímu. JavaScript, rozhraní .NET Framework a aplikace Visual C++ poskytuje vlastní způsob, jak vytvořit instance tato rozhraní pro použití v rámci hranic ABI. Pro Visual C++, poskytuje knihovně PPL [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) funkce. Tato funkce vytváří asynchronní akce prostředí Windows Runtime nebo operaci, která představuje dokončení úlohy. `create_async` Funkce trvá pracovní funkci (obvykle výrazu lambda), interně vytvoří `task` objekt a zabalí, které úlohy v jedné z čtyři asynchronní prostředí Windows Runtime rozhraní.  
@@ -142,7 +137,7 @@ Tento dokument popisuje některé z klíčových bodů třeba vzít v úvahu př
   
  Příklady, které používají `create_async` vytvoření asynchronní úlohy, které mohou být spotřebovávána dalších jazyků naleznete v tématu [pomocí C++ v ukázce Bing Maps cestě Optimalizátor](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) a [Windows 8 asynchronních operací v jazyce C++ s PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
-##  <a name="exethread">Řízení provádění vlákna</a>  
+##  <a name="exethread"></a> Řízení provádění vlákna  
  Prostředí Windows Runtime používá COM model vláken. V tomto modelu jsou objekty hostované v různých apartment, v závislosti na tom, jak budou pracovat s jejich synchronizaci. Objekty vláken jsou hostované v Vícevláknová typu apartment (MTA). Objekty, které musí být přístup jedním vláknem a jsou hostované v single-threaded apartment (STA).  
   
  V aplikaci, která má uživatelské rozhraní vlákno ASTA (aplikace STA) je zodpovědná za čerpání – zprávy okna a je pouze vláken v procesu, který může aktualizovat ovládací prvky hostované STA uživatelského rozhraní. To má dva důsledky. Nejdřív k tomu, aby aplikace zůstaly přizpůsobivý, všechny náročná na prostředky procesoru a vstupně-výstupních operací nesmí spustit na ASTA vlákno. Druhý výsledky, které pocházejí z vlákna na pozadí tvořit zpět na ASTA aktualizace uživatelského rozhraní. V aplikaci C++ UWP `MainPage` a dalších stránek XAML všechny spustili ATSA. Proto pokračování úlohy, které jsou deklarované v ASTA se spouštějí existuje ve výchozím nastavení, můžete aktualizovat ovládací prvky přímo v těle pokračování. Ale pokud je vnořovat úlohu v jiné úloze, všechny pokračování v této vnořené úlohy se spustí v MTA. Proto musíte zvážit, zda chcete explicitně určit, na jaké kontextu tyto pokračování spustit.  
@@ -168,7 +163,7 @@ Tento dokument popisuje některé z klíčových bodů třeba vzít v úvahu př
 
 >  Nevolejte [concurrency::task::wait](reference/task-class.md#wait) v těle pokračování, která běží na STA Jinak, modul runtime vyvolá [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane odpovídat. Můžete však volat [concurrency::task::get](reference/task-class.md#get) metodu výsledek předchozí úlohou v pokračování založený na úlohách.  
   
-##  <a name="example-app">Příklad: Řízení provádění v aplikaci Windows Runtime s C++ a XAML</a>  
+##  <a name="example-app"></a> Příklad: Řízení provádění v aplikaci Windows Runtime s C++ a XAML  
  Vezměte v úvahu aplikace C++ XAML, který čte soubor z disku, vyhledá nejčastější slova v tomto souboru a poté zobrazí výsledky v uživatelském rozhraní. Chcete-li vytvořit tuto aplikaci, spuštění, v sadě Visual Studio, tak, že vytvoříte **prázdná aplikace (univerzální pro Windows)** projektu a pojmenování ji `CommonWords`. V manifestu aplikace, zadejte **knihovna dokumentů** možnost povolit aplikaci pro přístup do složky Dokumenty. Typ souboru Text (TXT) můžete také přidáte do sekce deklarace manifest aplikace. Další informace o možnosti aplikace a deklarace najdete v tématu [balíčky aplikací a nasazení](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aktualizace `Grid` element v MainPage.xaml, zahrnout `ProgressRing` element a `TextBlock` elementu. `ProgressRing` Označuje, že operace je v průběhu a `TextBlock` zobrazuje výsledky výpočet.  

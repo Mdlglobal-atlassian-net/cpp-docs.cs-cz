@@ -1,13 +1,10 @@
 ---
-title: "Zpracování výjimek v Concurrency Runtime | Microsoft Docs"
-ms.custom: 
+title: Zpracování výjimek v Concurrency Runtime | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Zpracování výjimek v Concurrency Runtime
 Concurrency Runtime používá ke komunikaci různé druhy chyb pro zpracování výjimek C++. Tyto chyby patří neplatný použití za běhu, chyby za běhu, jako je například selhání získat prostředek a chyb vzniklých v pracovní funkce, které poskytnete úlohy a skupiny úloh. Pokud úlohy nebo skupina úloh vyvolá výjimku, modul runtime obsahuje této výjimky a zařazuje do kontextu, která čeká na úkolu nebo skupina úloh ukončíte. Modul runtime pro součásti, jako je například prosté úlohy a agenty, nespravuje výjimky za vás. V těchto případech je nutné implementovat vlastní mechanismus zpracování výjimek. Toto téma popisuje, jak modul runtime zpracovává výjimky, které jsou vyvolány úlohy, skupiny úloh, prosté úlohy a asynchronních agentů a jak reagovat na výjimky ve vašich aplikacích.  
@@ -47,7 +42,7 @@ Concurrency Runtime používá ke komunikaci různé druhy chyb pro zpracování
   
 -   Modul runtime nespravuje výjimky pro prosté úlohy a agenty.  
   
-##  <a name="top"></a>V tomto dokumentu  
+##  <a name="top"></a> V tomto dokumentu  
   
 - [Úlohy a pokračování](#tasks)  
   
@@ -63,7 +58,7 @@ Concurrency Runtime používá ke komunikaci různé druhy chyb pro zpracování
   
 - [Asynchronní agenti](#agents)  
   
-##  <a name="tasks"></a>Úlohy a pokračování  
+##  <a name="tasks"></a> Úlohy a pokračování  
  Tato část popisuje, jak modul runtime zpracovává výjimky, které jsou vyvolány [concurrency::task](../../parallel/concrt/reference/task-class.md) objekty a jejich pokračování. Další informace týkající se úloh a pokračování modelu najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Když vyvolat výjimku v těle pracovní funkci, která můžete předat `task` objektu modulu runtime ukládá této výjimky a zařazuje do kontextu, který volá [concurrency::task::get](reference/task-class.md#get) nebo [souběžnosti:: Task::wait –](reference/task-class.md#wait). Dokument [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md) popisuje podle úloh a pokračování na základě hodnoty, ale chcete shrnout, na základě hodnoty pokračování přebírá parametr typu `T` a pokračování založený na úlohách přebírá parametr typu `task<T>`. Pokud úloha, která vyvolá má jeden nebo více na základě hodnoty pokračování, nejsou tyto pokračování naplánovat na spuštění. Následující příklad ilustruje toto chování:  
@@ -97,7 +92,7 @@ Concurrency Runtime používá ke komunikaci různé druhy chyb pro zpracování
   
  [[Horní](#top)]  
   
-##  <a name="task_groups"></a>Skupin úloh a paralelní algoritmy  
+##  <a name="task_groups"></a> Skupin úloh a paralelní algoritmy  
 
  Tato část popisuje, jak modul runtime zpracovává výjimky, které jsou vyvolány skupiny úloh. Tato část platí také pro paralelní algoritmy, jako [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), protože tyto algoritmy sestavení na skupiny úloh.  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[Horní](#top)]  
   
-##  <a name="runtime"></a>Výjimky vyvolané modul Runtime  
+##  <a name="runtime"></a> Výjimky vyvolané modul Runtime  
  Volání modulu runtime může způsobit výjimku. Většina typů výjimek, s výjimkou [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md) a [concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), znamenat chybě programování. Tyto chyby jsou obvykle neopravitelné a proto by nemělo být zachycena nebo zpracovávaných kódu aplikace. Doporučujeme vám jenom catch nebo zpracovávat neopravitelné chyby v kódu aplikace, když potřebujete diagnostikovat programovací chyby. Ale Principy typů výjimek, které jsou definovány modulem runtime vám může pomoci diagnostikovat programovací chyby.  
   
  Zpracování mechanismus výjimek je stejný pro výjimky, které jsou vyvolány modulem runtime jako výjimky, které jsou vyvolány pracovních funkcí. Například [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkce vrátí `operation_timed_out` při neobdrží zprávu v zadaném časovém období. Pokud `receive` vyvolá výjimku ve funkci pracovní předáte pro skupinu úloh, modulu runtime ukládá této výjimky a zařazuje do kontextu, který volá `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait`, nebo `structured_task_group::run_and_wait`.  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[Horní](#top)]  
   
-##  <a name="multiple"></a>Několik výjimek  
+##  <a name="multiple"></a> Několik výjimek  
  Pokud úloha nebo paralelní algoritmus obdrží několik výjimek, modul runtime zařazuje pouze jeden z těchto výjimek kontext volání. Modul runtime nezaručuje výjimky, které je zařazuje.  
   
  Následující příklad používá `parallel_for` algoritmus tisknout čísla do konzoly. Ho vyvolá výjimku, pokud vstupní hodnota je menší než minimální hodnota nebo větší než některé maximální hodnota. V tomto příkladu můžete několik pracovních funkcí vyvolat výjimku.  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[Horní](#top)]  
   
-##  <a name="cancellation"></a>Zrušení  
+##  <a name="cancellation"></a> Zrušení  
  Ne všechny výjimky znamenat chybu. Vyhledávací algoritmus může například použít výjimek zastavit přidružené úkolu, pokud najde výsledek. Další informace o tom, jak použijte mechanismy pro zrušení ve vašem kódu najdete v tématu [zrušení v knihovně PPL](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
  [[Horní](#top)]  
   
-##  <a name="lwts"></a>Prosté úlohy  
+##  <a name="lwts"></a> Prosté úlohy  
  Prosté úlohy je úkol, který můžete naplánovat přímo z [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) objektu. Prosté úlohy provádění menší režii než běžné úlohy. Modul runtime však nezachytí výjimky, které jsou vyvolány prosté úlohy. Místo toho je výjimka zachycena obslužná rutina neošetřených výjimek, které ve výchozím nastavení tento proces se ukončuje. Proto použijte vhodný mechanismus zpracování chyb v aplikaci. Další informace o prosté úlohy najdete v tématu [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
  [[Horní](#top)]  
   
-##  <a name="agents"></a>Asynchronní agenti  
+##  <a name="agents"></a> Asynchronní agenti  
  Prosté úlohy, jako je modul runtime nespravuje výjimky, které jsou vyvolány asynchronních agentů.  
   
  Následující příklad ukazuje jeden ze způsobů zpracování výjimek ve třídě, která je odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md). Tento příklad definuje `points_agent` třídy. `points_agent::run` Metoda čtení `point` objekty z vyrovnávací paměti zpráv a vypíše je do konzoly. `run` Metoda vyvolá výjimku, pokud obdrží `NULL` ukazatel.  
@@ -193,7 +188,7 @@ the status of the agent is: done
   
  [[Horní](#top)]  
   
-##  <a name="summary"></a>Souhrn  
+##  <a name="summary"></a> Souhrn  
  [[Horní](#top)]  
   
 ## <a name="see-also"></a>Viz také  

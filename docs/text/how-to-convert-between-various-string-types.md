@@ -1,13 +1,10 @@
 ---
-title: "Postupy: převod mezi různými typy řetězců | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: převod mezi různými typy řetězců | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Postupy: Převody mezi různými typy řetězců
 Toto téma ukazuje, jak převést různými typy řetězců Visual C++ do jiných řetězců. Zahrnout typy řetězců, které jsou uvedeny `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), a <xref:System.String?displayProperty=fullName>. Ve všech případech přišla kopii řetězec převést na nový typ. Některé změny provedené nový řetězec nebude mít vliv na původním řetězcem a naopak.  
@@ -474,9 +469,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>Příklad  
   
 ### <a name="description"></a>Popis  
- Tento příklad ukazuje, jak převést `CString` na jiný typ řetězec uvedený výše. `CString`je založena na Tchar – typ dat, která zase závisí na tom, zda je symbol `_UNICODE` je definována. Pokud `_UNICODE` není definován, `TCHAR` je definován jako char a `CString` obsahuje vícebajtový řetězec; Pokud `_UNICODE` definované, `TCHAR` je definován `wchar_t` a `CString` obsahuje široké znaky řetězec.  
+ Tento příklad ukazuje, jak převést `CString` na jiný typ řetězec uvedený výše. `CString` je založena na Tchar – typ dat, která zase závisí na tom, zda je symbol `_UNICODE` je definována. Pokud `_UNICODE` není definován, `TCHAR` je definován jako char a `CString` obsahuje vícebajtový řetězec; Pokud `_UNICODE` definované, `TCHAR` je definován `wchar_t` a `CString` obsahuje široké znaky řetězec.  
   
- `CStringA`je vícebajtových vždy řetězce verze `CString`, `CStringW` je pouze verze široká znaková řetězec. Ani `CStringA` ani `CStringW` použít `_UNICODE` k určení, jak by měli kompilovat. `CStringA`a `CStringW` se používají v tomto příkladu k objasnění malé rozdíly v přidělení velikosti vyrovnávací paměti a zpracování výstupu.  
+ `CStringA` je vícebajtových vždy řetězce verze `CString`, `CStringW` je pouze verze široká znaková řetězec. Ani `CStringA` ani `CStringW` použít `_UNICODE` k určení, jak by měli kompilovat. `CStringA` a `CStringW` se používají v tomto příkladu k objasnění malé rozdíly v přidělení velikosti vyrovnávací paměti a zpracování výstupu.  
   
 ### <a name="code"></a>Kód  
   

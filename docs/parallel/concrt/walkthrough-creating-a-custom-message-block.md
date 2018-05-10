@@ -1,30 +1,25 @@
 ---
-title: "Návod: Vytvoření vlastního bloku zpráv | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření vlastního bloku zpráv | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Návod: Vytvoření vlastního bloku zpráv
 Tento dokument popisuje, jak vytvořit vlastní zprávu typ bloku, jemuž příchozí zprávy pořadí podle priority.  
@@ -38,7 +33,7 @@ Tento dokument popisuje, jak vytvořit vlastní zprávu typ bloku, jemuž příc
   
 - [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento názorný postup obsahuje následující části:  
   
 - [Navrhování vlastního bloku zpráv](#design)  
@@ -47,7 +42,7 @@ Tento dokument popisuje, jak vytvořit vlastní zprávu typ bloku, jemuž příc
   
 - [Úplný příklad](#complete)  
   
-##  <a name="design"></a>Navrhování vlastního bloku zpráv  
+##  <a name="design"></a> Navrhování vlastního bloku zpráv  
  Bloky zpráv účastnit operace odesílání a přijímání zpráv. Blok zpráva, která odesílá zprávy se označuje jako *zdrojového bloku*. Blok zpráv, která přijímá zprávy se označuje jako *cílový blok*. Blok zpráv, který odesílá i přijímá zprávy, se označuje jako *Šiřitel bloku*. Knihovna agentů používá abstraktní třídu [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) k reprezentaci zdroj bloky a abstraktní třída [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) představují cíl bloky. Blok zpráv typy které působí jako zdroje jsou odvozeny od `ISource`; bloku zpráv typy které působí jako cíle odvozena od `ITarget`.  
   
  I když můžete odvodit typ bloku vaše zprávy přímo z `ISource` a `ITarget`, knihovna agentů definuje tři základní třídy, které provádějí většinu funkce, které jsou společné pro všechny typy bloku zpráv, například zpracování chyb a připojení bloky zpráv společně způsobem bezpečných souběžnosti. [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md) třída odvozená z `ISource` a odešle zprávy do jiné bloky. [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md) třída odvozená z `ITarget` a přijímá zprávy od jiných bloky. [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md) třída odvozená z `ISource` a `ITarget` a odesílá zprávy do jiné bloky a přijímá zprávy od jiných bloky. Doporučujeme použít tyto tři základní třídy pro zpracování podrobnosti infrastruktury tak, aby se můžete soustředit na chování vaší bloku zpráv.  
@@ -73,10 +68,10 @@ Tento dokument popisuje, jak vytvořit vlastní zprávu typ bloku, jemuž příc
   
  [[Horní](#top)]  
   
-##  <a name="class"></a>Definování priority_buffer – třída  
+##  <a name="class"></a> Definování priority_buffer – třída  
  `priority_buffer` Třída je typ bloku vlastní zprávy, který řadí příchozí zprávy nejprve podle priority a poté podle pořadí, ve kterém jsou přijaty zprávy. `priority_buffer` Vypadá takto: Třída [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) třídy, protože drží frontu zprávy a také protože funguje jako zdroj a cíl bloku zpráv a může mít více zdrojů a více cíle. Ale `unbounded_buffer` základů zprávy šíření pouze v pořadí, ve kterém přijímá zprávy od její zdroje.  
   
- `priority_buffer` Třída přijímá zprávy typu – std::[řazené kolekce členů](../../standard-library/tuple-class.md) obsahující `PriorityType` a `Type` elementy. `PriorityType`odkazuje na typ, který obsahuje prioritu všech zpráv; `Type` odkazuje na datové části zprávy. `priority_buffer` Třída odesílající zprávy typu `Type`. `priority_buffer` Třída také spravuje dva fronty zpráv: [std::priority_queue](../../standard-library/priority-queue-class.md) objekt pro příchozí zprávy a – std::[fronty](../../standard-library/queue-class.md) objekt odesílaných zpráv. Řazení zpráv podle priority je užitečné, když `priority_buffer` objektu současně přijímá více zprávy nebo při přijetí více zpráv předtím, než jsou příjemci číst všechny zprávy.  
+ `priority_buffer` Třída přijímá zprávy typu – std::[řazené kolekce členů](../../standard-library/tuple-class.md) obsahující `PriorityType` a `Type` elementy. `PriorityType` odkazuje na typ, který obsahuje prioritu všech zpráv; `Type` odkazuje na datové části zprávy. `priority_buffer` Třída odesílající zprávy typu `Type`. `priority_buffer` Třída také spravuje dva fronty zpráv: [std::priority_queue](../../standard-library/priority-queue-class.md) objekt pro příchozí zprávy a – std::[fronty](../../standard-library/queue-class.md) objekt odesílaných zpráv. Řazení zpráv podle priority je užitečné, když `priority_buffer` objektu současně přijímá více zprávy nebo při přijetí více zpráv předtím, než jsou příjemci číst všechny zprávy.  
   
  Kromě sedm metod, třída odvozená z `propagator_block` musí implementovat `priority_buffer` třídy také přepsání `link_target_notification` a `send_message` metody. `priority_buffer` Třída také definuje dvě veřejné pomocné metody `enqueue` a `dequeue`a privátní Pomocná metoda, `propagate_priority_order`.  
   
@@ -193,7 +188,7 @@ Tento dokument popisuje, jak vytvořit vlastní zprávu typ bloku, jemuž příc
   
  [[Horní](#top)]  
   
-##  <a name="complete"></a>Úplný příklad  
+##  <a name="complete"></a> Úplný příklad  
  Následující příklad ukazuje definici dokončení `priority_buffer` třídy.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

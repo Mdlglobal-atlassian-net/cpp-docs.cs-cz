@@ -1,13 +1,10 @@
 ---
-title: "Postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění | Microsoft Docs"
-ms.custom: 
+title: 'Postupy: použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění
 Tento dokument popisuje postup použití [parallel_invoke –](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmus ke zlepšení výkonu algoritmus řazení bitonic. Rekurzivní algoritmus řazení bitonic rozdělí vstupní pořadí na menší oddíly seřazená. Algoritmus řazení bitonic můžete paralelně spustit, protože každý oddíl operace je nezávislé na dalších operací.  
@@ -37,21 +32,21 @@ Tento dokument popisuje postup použití [parallel_invoke –](../../parallel/co
 > [!NOTE]
 >  Tento příklad používá paralelní řazení rutiny pro obrázek. Můžete také použít integrované řazení algoritmy, které poskytuje knihovně PPL: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), a [concurrency::parallel_ radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Další informace najdete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento dokument popisuje následující úlohy:  
   
 - [Provádění Bitonic řazení sériově](#serial)  
   
 - [Použití algoritmu parallel_invoke k provedení řazení Bitonic paralelně](#parallel)  
   
-##  <a name="serial"></a>Provádění Bitonic řazení sériově  
+##  <a name="serial"></a> Provádění Bitonic řazení sériově  
  Následující příklad ukazuje sériové verzi algoritmus bitonic řazení. `bitonic_sort` Funkce rozdělí sekvenci na dva oddíly, tyto oddíly ve směru seřadí a pak sloučí výsledky. Tato funkce volá dvakrát rekurzivně sama k seřazení každý oddíl.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[Horní](#top)]  
   
-##  <a name="parallel"></a>Použití algoritmu parallel_invoke k provedení řazení Bitonic paralelně  
+##  <a name="parallel"></a> Použití algoritmu parallel_invoke k provedení řazení Bitonic paralelně  
  Tato část popisuje postup použití `parallel_invoke` algoritmus algoritmus řazení bitonic paralelně.  
   
 ### <a name="procedures"></a>Procedury  

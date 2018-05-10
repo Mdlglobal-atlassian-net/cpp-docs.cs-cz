@@ -1,13 +1,10 @@
 ---
-title: "Přehled Concurrency Runtime | Microsoft Docs"
-ms.custom: 
+title: Přehled Concurrency Runtime | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Přehled Concurrency Runtime
 Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurrency Runtime, kdy ji použít, a způsob jejich součástí interakce mezi sebou a se operační systém a aplikace.  
@@ -98,7 +93,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
   
  [[Horní](#top)]  
   
-##  <a name="lambda"></a> C++ Lambda Expressions  
+##  <a name="lambda"></a> Výrazy C++ Lambda  
  Mnoho typů a algoritmy, které jsou definovány Concurrency Runtime jsou implementované jako šablony jazyka C++. Některé z těchto typů a algoritmy trvat jako parametr rutiny, která provede práci. Tento parametr může být lambda funkce, funkce objektu nebo ukazatel na funkci. Tyto entity jsou také označovány jako *pracovních funkcí* nebo *fungovat rutiny*.  
   
  Lambda – výrazy jsou důležitou součást nového jazyka Visual C++, protože poskytují stručného způsob, jak definovat pracovních funkcí pro paralelní zpracování. Objekty funkcí a ukazatelů na funkce umožňují použití Concurrency Runtime s váš stávající kód. Doporučujeme však při vytvoření nového kódu z důvodu zabezpečení a produktivitu výhody, které obsahují použití výrazů lambda.  
@@ -127,7 +122,7 @@ Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurren
 |Součást|Soubory hlaviček|  
 |---------------|------------------|  
 |Knihovna PPL (Parallel Patterns Library)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
-|Knihovna asynchronních agentů|agents.h|  
+|Knihovna asynchronních agentů|Agents.h|  
 |Plánovač úloh|concrt.h|  
 |Správce prostředků|concrtrm.h|  
   

@@ -1,13 +1,10 @@
 ---
-title: "Osvědčené postupy v knihovně Parallel Patterns | Microsoft Docs"
-ms.custom: 
+title: Osvědčené postupy v knihovně Parallel Patterns | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Osvědčené postupy v knihovně PPL (Parallel Patterns Library)
 Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knihovny (PPL). Knihovně PPL poskytuje pro obecné účely kontejnerů, objektů a algoritmy pro provádění podrobného paralelismu.  
   
  Další informace o knihovně PPL najdete v tématu [paralelní vzory knihovna PPL ()](../../parallel/concrt/parallel-patterns-library-ppl.md).  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento dokument obsahuje následující části:  
   
 - [Není paralelní malých smyček](#small-loops)  
@@ -56,7 +51,7 @@ Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knih
   
 - [Ujistěte se, že jsou platné po celou dobu úlohy](#lifetime)  
   
-##  <a name="small-loops"></a>Není paralelní malých smyček  
+##  <a name="small-loops"></a> Není paralelní malých smyček  
  Paralelizace relativně malých smyček může způsobit přidružené plánování režie převažují nad přínosy paralelní zpracování. Prohlédněte si následující příklad přidá každý pár elementů v dvěma poli.  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knih
   
  [[Horní](#top)]  
   
-##  <a name="highest"></a>Express paralelismus na nejvyšší možné úrovni  
+##  <a name="highest"></a> Express paralelismus na nejvyšší možné úrovni  
  Pokud jste paralelní kód pouze na nižší úrovni, je připojení k rozvětvení konstruktor, který se nedá použít jako počet procesorů zvyšuje zavést. A *připojení k rozvětvení* konstrukce je konstrukce, kde jeden úkol rozdělí svou práci na menší paralelní dílčí úkoly a čeká na tyto dílčí úkoly k dokončení. Každý dílčí úlohy můžete rekurzivně dělení sám sebe na další dílčí úkoly.  
   
  Přestože se připojení k rozvětvení modelu může být užitečná pro řešení různé problémy, se situací, kdy režii synchronizace může snížit škálovatelnost. Zvažte například následující kód sériového portu, který zpracovává data bitové kopie.  
@@ -92,7 +87,7 @@ Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knih
   
  [[Horní](#top)]  
   
-##  <a name="divide-and-conquer"></a>Použití algoritmu parallel_invoke k řešení problémů dělení a dobytí  
+##  <a name="divide-and-conquer"></a> Použití algoritmu parallel_invoke k řešení problémů dělení a dobytí  
 
  A *dělení a dobytí* problém je forma konstrukce rozvětvení spojení, která používá rekurze pro přerušení úlohu na dílčí úkoly. Kromě [concurrency::task_group](reference/task-group-class.md) a [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) třídy, můžete použít také [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus řešte problémy dělení a dobytí. `parallel_invoke` Algoritmus má více stručného syntaxi než objekty skupiny úloh a je užitečné, když máte pevný počet paralelních úloh.  
   
@@ -106,7 +101,7 @@ Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knih
   
  [[Horní](#top)]  
   
-##  <a name="breaking-loops"></a>Použijte zrušení nebo zpracování přerušení paralelní smyčky výjimek  
+##  <a name="breaking-loops"></a> Použijte zrušení nebo zpracování přerušení paralelní smyčky výjimek  
  Knihovně PPL nabízí dva způsoby, jak zrušit paralelní práce, které se provádí pomocí paralelní algoritmus nebo skupina úloh. Jedním ze způsobů je používat zrušení mechanismy, které poskytuje [concurrency::task_group](reference/task-group-class.md) a [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) třídy. Druhý způsob je vyvolána výjimka v těle funkce pracovních úkolů. Tento mechanismus zrušení je efektivnější než zpracování na zrušení strom paralelní práce výjimek. A *paralelní práce stromu* je skupina úlohy související s skupin, ve kterých některé skupiny úloh obsahovat jiné skupiny úloh. Tento mechanismus zrušení zruší skupinu úloh a její podřízené skupiny úloh způsobem shora dolů. Zpracovávání výjimek v jazyce naopak funguje způsobem zdola nahoru a musí zrušit každou podřízenou skupinu úloh nezávisle jako výjimka šíří směrem nahoru.  
   
 
@@ -132,7 +127,7 @@ Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knih
   
  [[Horní](#top)]  
   
-##  <a name="object-destruction"></a>Pochopit vliv zrušení a zpracování výjimek na odstranění objektu  
+##  <a name="object-destruction"></a> Pochopit vliv zrušení a zpracování výjimek na odstranění objektu  
  Ve stromu paralelní pracovní úlohu, která se zruší, zabraňuje spuštění podřízené úlohy. To může způsobit problémy, pokud jeden z podřízené úlohy provádí operaci, která je důležité pro vaši aplikaci, třeba uvolnění prostředku. Zrušení úlohy kromě toho může způsobit výjimku rozšíří v rámci destruktoru objektu a způsobit nedefinované chování vaší aplikace.  
   
  V následujícím příkladu `Resource` třída popisuje prostředek a `Container` třída popisuje kontejner, který obsahuje prostředky. V jeho destruktor `Container` třídy volání `cleanup` metoda dvěma z jeho `Resource` členy v paralelní a poté zavolá `cleanup` metoda na jeho třetí `Resource` člen.  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Horní](#top)]  
   
-##  <a name="repeated-blocking"></a>Opakovaně nebrání v paralelní smyčky  
+##  <a name="repeated-blocking"></a> Opakovaně nebrání v paralelní smyčky  
 
  Paralelní smyčky, jako [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) nebo [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) , je při ovládnutí blokování operace může způsobit, že modul runtime prostřednictvím po krátkou dobu vytvořit mnoho vláken.  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Horní](#top)]  
   
-##  <a name="blocking"></a>Neprovádějte blokování operace při zrušení paralelní práce  
+##  <a name="blocking"></a> Neprovádějte blokování operace při zrušení paralelní práce  
 
  Pokud je to možné, neprovádějte blokování operations před voláním [concurrency::task_group::cancel](reference/task-group-class.md#cancel) nebo [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metoda zrušit paralelní práce.  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Horní](#top)]  
   
-##  <a name="shared-writes"></a>Nezapisovat sdílených dat v paralelní smyčky  
+##  <a name="shared-writes"></a> Nezapisovat sdílených dat v paralelní smyčky  
  Concurrency Runtime poskytuje několik datové struktury, například [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), které se synchronizují souběžný přístup ke sdíleným datům. Tyto datové struktury jsou užitečné v mnoha případech, například pokud více úkolů zřídka vyžadují sdílený přístup k prostředku.  
   
  Podívejte se na následující příklad, který používá [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus a `critical_section` objekt, který chcete vypočítat počet prvočísel v [std::array](../../standard-library/array-class-stl.md) objektu. V tomto příkladu se nedá použít, protože každé vlákno musí čekání na přístup k sdílené proměnné `prime_sum`.  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Horní](#top)]  
   
-##  <a name="false-sharing"></a>Pokud je to možné, vyhněte se False sdílení  
+##  <a name="false-sharing"></a> Pokud je to možné, vyhněte se False sdílení  
  *False sdílení* nastane, když více souběžných úloh, které jsou spuštěny na samostatné procesory zapisovat do proměnné, které jsou umístěny na stejném řádku mezipaměti. Pokud jeden úkol zapisuje do jedné z proměnných, řádek mezipaměti pro obě proměnné je neplatná. Každý procesor musí znovu načíst řádek mezipaměti pokaždé, když je řádek mezipaměti zrušena. Proto false sdílení může způsobit snížení výkonu ve vaší aplikaci.  
   
  Následující základní příklad ukazuje dva souběžné úlohy, každý zvýší čítače sdílené proměnné.  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Horní](#top)]  
   
-##  <a name="lifetime"></a>Ujistěte se, že jsou platné po celou dobu úlohy  
+##  <a name="lifetime"></a> Ujistěte se, že jsou platné po celou dobu úlohy  
  Když zadáte skupinu úloh nebo paralelní algoritmus výrazu lambda, klauzuli zachycení Určuje, zda text výrazu lambda přistupuje k proměnné ve vymezeném oboru hodnotou nebo odkazem. Pokud předáte proměnné výrazu lambda odkazem, musí zaručit, že životnost tuto proměnnou ukládá až do dokončení této úlohy.  
   
  Podívejte se na následující příklad, který definuje `object` třídy a `perform_action` funkce. `perform_action` Funkce vytvoří `object` proměnné a asynchronně provádí některé akce na tuto proměnnou. Protože není zaručeno, že úloha dokončit před `perform_action` funkce vrátí, program bude k chybě nebo vykazovat neurčené chování, pokud `object` proměnná zničen, když je spuštěn úkol.  

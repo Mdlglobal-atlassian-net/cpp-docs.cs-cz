@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Správce balíčků C++ pro Windows
 
@@ -31,7 +30,7 @@ Pomocí jednoho příkazu můžete stáhnout zdroje a sestavení knihovny. vcpkg
 
 ## <a name="sources-not-binaries"></a>Zdroje není binární soubory
 
-Pro knihovny v katalogu veřejné stáhne vcpkg zdroje místo binárních souborů [1]. Tyto zdroje pomocí Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalovaná 2017 kompilaci. V jazyce C++ je velmi důležité žádné knihovny, které používáte dodržení jsou stejné kompilátoru a verze kompilátoru jako odkazující na jeho kódu aplikace. Pomocí vcpkg eliminovat nebo alespoň výrazně předešli neodpovídající binární soubory a mohou způsobit problémy. Týmy, které jsou standardizované pro určitou verzi sady Visual C++ compiler slouží jeden člen seskupení vcpkg stáhnout zdroje a zkompilovat sadu binární soubory a pak použít příkaz export zip binární soubory a hlavičky pro ostatní členové týmu. Další informace najdete v tématu že export kompilovány binární soubory a hlavičky níže. 
+Pro knihovny v katalogu veřejné stáhne vcpkg zdroje místo binárních souborů [1]. Tyto zdroje pomocí Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalovaná 2017 kompilaci. V jazyce C++ je velmi důležité žádné knihovny, které používáte dodržení jsou stejné kompilátoru a verze kompilátoru jako odkazující na jeho kódu aplikace. Pomocí vcpkg eliminovat nebo alespoň výrazně předešli neodpovídající binární soubory a mohou způsobit problémy. Týmy, které jsou standardizované pro určitou verzi sady Visual C++ compiler slouží jeden člen seskupení vcpkg stáhnout zdroje a zkompilovat sadu binární soubory a pak použít příkaz export zip binární soubory a hlavičky pro ostatní členové týmu. Další informace najdete v tématu že export kompilovány binární soubory a hlavičky níže.
 
 Pokud vytvoříte klon vcpkg s privátní knihovny v kolekci porty, můžete přidat na port, který soubory ke stažení předem sestavené binární soubory a hlavičky a zápis do souboru portfile.cmake, který kopíruje jednoduše těchto souborů do požadovaného umístění.
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Vypisuje seznam knihoven již nainstalována
+
 Po instalaci některé knihovny, můžete použít **vcpkg seznamu** co máte:
 
 ```cmd
@@ -113,61 +113,63 @@ Teď můžete #include hlavičky jednoduše zadáním složky/záhlaví a automa
 
 Pokud potřebujete použít konkrétní verzi knihovny, která je odlišná od verze v instanci active vcpkg, postupujte takto:
 
-1. Ujistěte se, nový klon vcpkg 
+1. Ujistěte se, nový klon vcpkg
 1. Upravit portfile pro knihovnu verzi, které potřebujete
 1. Spustit **vcpkg nainstalovat \<Knihovna >**.
 1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na jednotlivých projektů.
 
 ## <a name="export-compiled-binaries-and-headers"></a>Export kompilovány binární soubory a hlavičky
 
-Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu. 
+Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu.
 
 ## <a name="updateupgrade-installed-libraries"></a>Aktualizovat nebo upgradovat nainstalované knihovny
 
 Veřejné katalogu je pořád aktuální a mají nejnovější verze knihoven. Chcete-li zjistit, které z vaší místní knihovny jsou zastaralé, použijte **vcpkg aktualizace**. Až budete připraveni k aktualizaci vaší kolekce porty na nejnovější verzi veřejné katalogu, spusťte **vcpkg upgrade** příkaz, který automaticky stáhnout a znovu sestavte některého nebo všech vaší nainstalované knihovny, které jsou zastaralé.
 
-Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, které jsou zastaralé; nemá upgradovat, je. Chcete-li provést upgrade, použijte **– ne test** možnost. 
+Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, které jsou zastaralé; nemá upgradovat, je. Chcete-li provést upgrade, použijte **– ne test** možnost.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Možnosti upgradu
 
-- **– Ne test** provést upgrade, není-li zadána, příkaz je uveden pouze zastaralé balíčky. 
-- **--zachovat probíhající** pokračovat v instalaci balíčků i v případě, že jeden server selže. 
-- **--Trojdílná \<t >** nastavit výchozí trojdílná nekvalifikované balíčků. 
-- **--vcpkg-root \<cesta >** zadejte vcpkg adresář, který chcete použít místo aktuální adresář nebo nástroj adresář. 
+- **– Ne test** provést upgrade, není-li zadána, příkaz je uveden pouze zastaralé balíčky.
+- **--zachovat probíhající** pokračovat v instalaci balíčků i v případě, že jeden server selže.
+- **--Trojdílná \<t >** nastavit výchozí trojdílná nekvalifikované balíčků.
+- **--vcpkg-root \<cesta >** zadejte vcpkg adresář, který chcete použít místo aktuální adresář nebo nástroj adresář.
 
 ### <a name="upgrade-example"></a>Příklad upgradu
 
 ### <a name="per-project"></a>Každý projekt
+
 Pokud potřebujete použít konkrétní verzi knihovny, která je odlišná od verze v instanci active vcpkg, postupujte takto:
 
-1. Ujistěte se, nový klon vcpkg 
+1. Ujistěte se, nový klon vcpkg
 1. Upravit portfile pro knihovnu verzi, které potřebujete
 1. Spustit **vcpkg nainstalovat \<Knihovna >**.
 1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na jednotlivých projektů.
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>Export kompilovány binární soubory a hlavičky
-Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu. 
+
+Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu.
 
 ## <a name="updateupgrade-installed-libraries"></a>Aktualizovat nebo upgradovat nainstalované knihovny
+
 Veřejné katalogu je pořád aktuální a mají nejnovější verze knihoven. Chcete-li zjistit, které z vaší místní knihovny jsou zastaralé, použijte **vcpkg aktualizace**. Až budete připraveni k aktualizaci vaší kolekce porty na nejnovější verzi veřejné katalogu, spusťte **vcpkg upgrade** příkaz, který automaticky stáhnout a znovu sestavte některého nebo všech vaší nainstalované knihovny, které jsou zastaralé.
 
-Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, které jsou zastaralé; nemá upgradovat, je. Chcete-li provést upgrade, použijte **– ne test** možnost. 
+Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, které jsou zastaralé; nemá upgradovat, je. Chcete-li provést upgrade, použijte **– ne test** možnost.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Možnosti upgradu
 
-- **– Ne test** provést upgrade, není-li zadána, příkaz je uveden pouze zastaralé balíčky. 
-- **--zachovat probíhající** pokračovat v instalaci balíčků i v případě, že jeden server selže. 
-- **--Trojdílná \<t >** nastavit výchozí trojdílná nekvalifikované balíčků. 
-- **--vcpkg-root \<cesta >** zadejte vcpkg adresář, který chcete použít místo aktuální adresář nebo nástroj adresář. 
+- **– Ne test** provést upgrade, není-li zadána, příkaz je uveden pouze zastaralé balíčky.
+- **--zachovat probíhající** pokračovat v instalaci balíčků i v případě, že jeden server selže.
+- **--Trojdílná \<t >** nastavit výchozí trojdílná nekvalifikované balíčků.
+- **--vcpkg-root \<cesta >** zadejte vcpkg adresář, který chcete použít místo aktuální adresář nebo nástroj adresář.
 
 ### <a name="upgrade-example"></a>Příklad upgradu
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Přispívat nové knihovny
+
 Můžete zahrnout všechny knihovny, které chcete v kolekci privátní porty. Navrhovat nová knihovna pro veřejné katalogu, otevřete na problém [GitHub vcpkg problém stránce](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Odebrání knihovny
+
 Typ **vcpkg odebrat** k odebrání nainstalované knihovny. Pokud jsou na ní závislé další knihovny, jste vyzváni k spusťte znovu příkaz s **--recurse**, což způsobí, že všechny podřízené knihovny odebrat.
 
 ## <a name="customize-vcpkg"></a>Přizpůsobení vcpkg
-Vaše klon vcpkg žádným způsobem, který chcete, můžete upravit. Můžete vytvořit více klonech vcpkg a upravit portfiles v každé z nich pro získání konkrétních verzí knihovny, nebo zadejte parametry příkazového řádku. Například v podniku, jedna skupina vývojářů může pracovat na softwaru, který má jednu sadu závislosti a jiné skupiny může mít jinou sadu. Můžete nastavit dva klony vcpkg a upravit každé z nich ke stažení verze knihovny a kompilace přepínače a podobně, podle svých potřeb. 
+
+Vaše klon vcpkg žádným způsobem, který chcete, můžete upravit. Můžete vytvořit více klonech vcpkg a upravit portfiles v každé z nich pro získání konkrétních verzí knihovny, nebo zadejte parametry příkazového řádku. Například v podniku, jedna skupina vývojářů může pracovat na softwaru, který má jednu sadu závislosti a jiné skupiny může mít jinou sadu. Můžete nastavit dva klony vcpkg a upravit každé z nich ke stažení verze knihovny a kompilace přepínače a podobně, podle svých potřeb.
 
 ## <a name="uninstall-vcpkg"></a>Odinstalace vcpkg
-Odstraňte adresář. 
+
+Odstraňte adresář.
 
 ## <a name="send-feedback-about-vcpkg"></a>Pošlete svůj názor vcpkg
+
 Použití **– průzkum** příkaz k odeslání zpětné vazby společnosti Microsoft o vcpkg, včetně sestav chyb a návrhy na funkce.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchie složky vcpkg
-Všechna data a funkce vcpkg je samostatný v hierarchii, jeden adresář, nazývá "instance". Neexistují žádné nastavení registru nebo proměnné prostředí. Může mít libovolný počet instancí vcpkg na počítači, a tedy nekolidují mezi sebou. 
 
-Obsah instance vcpkg jsou: 
+Všechna data a funkce vcpkg je samostatný v hierarchii, jeden adresář, nazývá "instance". Neexistují žádné nastavení registru nebo proměnné prostředí. Může mít libovolný počet instancí vcpkg na počítači, a tedy nekolidují mezi sebou.
+
+Obsah instance vcpkg jsou:
 
 - buildtrees – obsahuje podsložky zdrojů, ze kterých vychází jednotlivých knihoven
 - dokumentace – dokumentace a příklady
@@ -223,9 +231,9 @@ Obsah instance vcpkg jsou:
 |**hledání vcpkg [Jan]**|Vyhledejte balíčky, které jsou k dispozici pro instalaci|
 |**Nainstalujte vcpkg \<pkg >...**|Instalovat balíček|
 |**odebrat vcpkg \<pkg >...**|Odinstalace balíčku|
-|**vcpkg remove --outdated**|Odinstalujte všechny balíčky zastaralé|
-|**vcpkg list**|Výpis nainstalovaných balíčků|
-|**vcpkg update**|Zobrazení seznamu balíčků pro aktualizaci|
+|**odebrat vcpkg – zastaralá**|Odinstalujte všechny balíčky zastaralé|
+|**seznam vcpkg**|Výpis nainstalovaných balíčků|
+|**aktualizace vcpkg**|Zobrazení seznamu balíčků pro aktualizaci|
 |**vcpkg upgrade**|Znovu vytvořit všechny zastaralé balíčky|
 |**Hodnota hash vcpkg \<soubor > [alg]**|Konkrétní algoritmem hash souboru, výchozí SHA512|
 |**vcpkg integrovat instalace**|Zkontrolujte nainstalována balíčky k dispozici úrovni uživatele. Vyžaduje oprávnění správce na první použití|
@@ -235,13 +243,14 @@ Obsah instance vcpkg jsou:
 |**vcpkg edit \<pkg>**|Otevřete port pro úpravy (používá EDITOR %, výchozí kód)|
 |**vcpkg import \<pkg >**|Importujte předem připravený knihovny|
 |**Vytvoření vcpkg \<pkg > \<url > [archivename]**|Vytvořit nový balíček|
-|**vcpkg owns \<pat>**|Vyhledávání souborů v nainstalované balíčky|
+|**vlastní vcpkg \<pat >**|Vyhledávání souborů v nainstalované balíčky|
 |**vcpkg cache**|Seznam mezipaměti zkompilovat balíčky|
-|**vcpkg version**|Zobrazit informace o verzi|
-|**vcpkg contact**|Zobrazení informací o váš názor|
+|**vcpkg verze**|Zobrazit informace o verzi|
+|**Obraťte se na vcpkg**|Zobrazení informací o váš názor|
 
-### <a name="options"></a>Možnosti:
+### <a name="options"></a>Možnosti
+
 |Možnost|Popis|
 |---------|---------|
 |**--Trojdílná \<t >**|Zadejte trojdílná architektura cíl. (výchozí: `%VCPKG_DEFAULT_TRIPLET%`, viz také **vcpkg nápovědy trojdílná**)|
-|**--vcpkg-root \<path>**|Zadejte kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`)|
+|**--vcpkg-root \<cesta >**|Zadejte kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`)|

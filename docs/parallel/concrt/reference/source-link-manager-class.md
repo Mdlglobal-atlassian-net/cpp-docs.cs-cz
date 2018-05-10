@@ -1,12 +1,9 @@
 ---
-title: "source_link_manager – třída | Microsoft Docs"
-ms.custom: 
+title: source_link_manager – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager – třída
 `source_link_manager` Objekt spravuje zasílání zpráv bloku sítě odkazy na `ISource` bloky.  
@@ -78,9 +73,9 @@ class source_link_manager;
 |[Začátek](#begin)|Vrátí iterovat prvním elementem v `source_link_manager` objektu.|  
 |[Obsahuje](#contains)|Hledání `network_link_registry` v rámci to `source_link_manager` objekt pro zadaný blok.|  
 |[Počet](#count)|Spočítá počet propojené bloky v `source_link_manager` objektu.|  
-|[reference](#reference)|Získá odkaz na `source_link_manager` objektu.|  
+|[Referenční dokumentace](#reference)|Získá odkaz na `source_link_manager` objektu.|  
 |[register_target_block](#register_target_block)|Zaregistruje cílový blok, který obsahuje tento `source_link_manager` objektu.|  
-|[release](#release)|Uvolní odkaz na `source_link_manager` objektu.|  
+|[Verze](#release)|Uvolní odkaz na `source_link_manager` objektu.|  
 |[remove](#remove)|Odebere odkaz z `source_link_manager` objektu.|  
 |[set_bound](#set_bound)|Nastaví maximální počet odkazů zdroj, který jde přidat do tohoto `source_link_manager` objektu.|  
   
@@ -155,7 +150,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a> register_target_block 
+##  <a name="register_target_block"></a> register_target_block – 
 
  Zaregistruje cílový blok, který obsahuje tento `source_link_manager` objektu.  
   

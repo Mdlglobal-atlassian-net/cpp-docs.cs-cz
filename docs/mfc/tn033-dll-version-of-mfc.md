@@ -1,13 +1,10 @@
 ---
 title: 'TN033: DLL verze knihovny MFC | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
 Tato poznámka se popisuje, jak můžete použít MFCxx.DLL a MFCxxD.DLL (kde x je číslo verze knihovny MFC) sdílet dynamické knihovny s aplikací MFC a MFC – rozšiřující knihovny DLL. Další informace o pravidelných MFC – knihovny DLL najdete v tématu [pomocí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -97,7 +92,7 @@ Tato poznámka se popisuje, jak můžete použít MFCxx.DLL a MFCxxD.DLL (kde x 
   
 -   Přesouvání aplikace, která používá sdílenou knihovnu vyžaduje dodáte MFCxx.DLL (a ostatních) knihovny s vaším programem. MFCxx.DLL je volně redistributable jako mnoho knihoven DLL, ale stále je nutné nainstalovat knihovny DLL v instalačním programu. Kromě toho je nutné dodat MSVCRTxx.DLL, který obsahuje knihovna C runtime, která se používá jak podle vašeho programu a knihovny MFC DLL sami.  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>Jak napsat knihovnu DLL  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Jak napsat knihovnu DLL  
  Knihovna MFC DLL rozšíření je knihovny DLL obsahující třídy a funkce zapsána na tomto funkce třídy MFC. Knihovna MFC DLL rozšíření používá sdílené knihovny MFC DLL v stejným způsobem jako aplikace, používá několik dalších aspektů:  
   
 -   Proces sestavení je podobná vytváření aplikace, která používá sdílené knihovny MFC s několik dalších kompilátoru a linkeru možnosti.  
@@ -146,7 +141,7 @@ Tato poznámka se popisuje, jak můžete použít MFCxx.DLL a MFCxxD.DLL (kde x 
   
  Pokud to chcete provést musí zajistit, že každý z členské funkce je označena jako importovat nebo exportovat podle potřeby. To vyžaduje speciální deklarace: **__declspec(dllexport)** a **deklarace __declspec(dllimport)**. Pokud vaše třídy se používá klientskými aplikacemi, chcete, aby deklarovat jako **deklarace __declspec(dllimport)**. Když sestavujete rozšíření MFC DLL, musí být deklarována jako **__declspec(dllexport)**. Kromě toho funkce musí být ve skutečnosti exportován, tak, aby programy klienta vázání na ně době zatížení.  
   
- Chcete-li exportovat celou třídu, použijte **AFX_EXT_CLASS** v definici třídy. Toto makro je definováno rámcem jako **__declspec(dllexport)** při **_AFXDLL** a `_AFXEXT` je definován, ale definován jako **deklarace __declspec(dllimport)** při `_AFXEXT` není definován. `_AFXEXT`jak je popsáno výše, je definována pouze při vytváření vašeho MFC – rozšiřující knihovny DLL. Příklad:  
+ Chcete-li exportovat celou třídu, použijte **AFX_EXT_CLASS** v definici třídy. Toto makro je definováno rámcem jako **__declspec(dllexport)** při **_AFXDLL** a `_AFXEXT` je definován, ale definován jako **deklarace __declspec(dllimport)** při `_AFXEXT` není definován. `_AFXEXT` jak je popsáno výše, je definována pouze při vytváření vašeho MFC – rozšiřující knihovny DLL. Příklad:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -387,9 +382,9 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Pokud chcete načíst pouze prostředky z konkrétní místo, pomocí rozhraní API `AfxGetResourceHandle` a `AfxSetResourceHandle` uložte starý popisovač a nastavit nový popisovač. Ujistěte se, že obnovit starý popisovač prostředku, pak se vraťte do klientské aplikace. Ukázka TESTDLL2 používá tento přístup explicitně načítání nabídky.  
   
- Procházení seznamem má nevýhody, že je něco pomalejší a vyžaduje správu rozsahů ID prostředků. Má výhodu v podobě, klientská aplikace, která obsahuje odkazy na několik knihoven DLL rozšíření MFC můžete jakémukoli prostředku, poskytuje knihovnu DLL bez nutnosti zadávat popisovač instance knihovny DLL. `AfxFindResourceHandle`rozhraní API slouží k procházení seznamu prostředků a hledat odpovídající shody. Přebírá název a typ prostředku a vrátí popisovač prostředku, kde byl nalezen první (nebo hodnota NULL).  
+ Procházení seznamem má nevýhody, že je něco pomalejší a vyžaduje správu rozsahů ID prostředků. Má výhodu v podobě, klientská aplikace, která obsahuje odkazy na několik knihoven DLL rozšíření MFC můžete jakémukoli prostředku, poskytuje knihovnu DLL bez nutnosti zadávat popisovač instance knihovny DLL. `AfxFindResourceHandle` rozhraní API slouží k procházení seznamu prostředků a hledat odpovídající shody. Přebírá název a typ prostředku a vrátí popisovač prostředku, kde byl nalezen první (nebo hodnota NULL).  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>Zápis aplikaci, která používá verze knihoven DLL  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Zápis aplikaci, která používá verze knihoven DLL  
   
 ### <a name="application-requirements"></a>Požadavky na aplikace  
  Aplikace, která používá sdílená verze knihovny MFC třeba provést několik jednoduchých pravidel:  
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Opětovné sestavení knihovny MFC DLL se nedoporučuje.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>Jak je implementována MFCxx.DLL  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Jak je implementována MFCxx.DLL  
  Následující část popisuje, jak je implementována MFC DLL (MFCxx.DLL a MFCxxD.DLL). Podrobnosti na tomto místě jsou také není důležité, pokud se vše, co chcete udělat, je pochopení MFC DLL pomocí aplikace. Podrobnosti na tomto místě nejsou nezbytně nutné porozumět tomu, jak napsat knihovnu DLL, ale pochopení tuto implementaci vám mohou pomoci zápisu vlastní knihovny DLL.  
   
 ### <a name="implementation-overview"></a>Přehled implementace  

@@ -1,29 +1,24 @@
 ---
-title: "Paralelní algoritmy | Microsoft Docs"
-ms.custom: 
+title: Paralelní algoritmy | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>Paralelní algoritmy
 Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekcí dat v práci. Tyto algoritmy vypadat jako standardní knihovna C++ u.  
@@ -32,7 +27,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
  Paralelní algoritmy se skládají ze stávajících funkcí v Concurrency Runtime. Například [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus používá [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objekt, který chcete provést paralelní smyčky iterací. `parallel_for` Algoritmus oddíly pracovat s optimálně zadané dostupný počet výpočetních prostředků.  
 
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
   
 - [Parallel_for – algoritmus](#parallel_for)  
   
@@ -54,7 +49,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
     - [Výběr řazení algoritmus](#choose_sort)  
   
-##  <a name="parallel_for"></a>Parallel_for – algoritmus  
+##  <a name="parallel_for"></a> Parallel_for – algoritmus  
 
  [Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus opakovaně provede stejnou úlohu současně. Každý z těchto úloh je parametry podle hodnotou iterací. Tento algoritmus je užitečné, když máte těla smyčky, který není sdílet prostředky opakování tohoto smyčky.  
   
@@ -96,7 +91,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  [[Horní](#top)]  
   
-##  <a name="parallel_for_each"></a>Parallel_for_each – algoritmus  
+##  <a name="parallel_for_each"></a> Parallel_for_each – algoritmus  
 
  [Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus provádí iterativní kontejneru, jako třeba standardní knihovny C++, paralelní úlohy. Používá stejné logiky, která rozdělení oddílů, `parallel_for` algoritmus používá.  
   
@@ -121,7 +116,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  [[Horní](#top)]  
   
-##  <a name="parallel_invoke"></a>Parallel_invoke – algoritmus  
+##  <a name="parallel_invoke"></a> Parallel_invoke – algoritmus  
 
  [Concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus provede sadu úloh paralelně. Nevrací se dokud každý úkol dokončí. Tento algoritmus je užitečné, když máte několik nezávislých úkolů, které chcete provést ve stejnou dobu.  
   
@@ -144,14 +139,14 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  [[Horní](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Parallel_transform – a parallel_reduce – algoritmy  
+##  <a name="parallel_transform_reduce"></a> Parallel_transform – a parallel_reduce – algoritmy  
 
  [Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) a [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmy jsou paralelní verze algoritmů standardní knihovna C++ [std::transform](../../standard-library/algorithm-functions.md#transform)a [std::accumulate](../../standard-library/numeric-functions.md#accumulate), v uvedeném pořadí. Verze Concurrency Runtime chovat jako verze standardní knihovny C++ s tím rozdílem, že operace pořadí není určit, protože paralelně provádět. Použijte tyto algoritmy při práci s sadu dostatečně velký, aby se sám výkon a výhody škálování se zpracovávají paralelně.  
   
 > [!IMPORTANT]
 >  `parallel_transform` a `parallel_reduce` algoritmy podporovat pouze náhodný přístup obousměrný a předat dál iterátory, protože tyto iterátory vytvořit stabilní paměti adresy. Také musíte vytvořit tyto iterátory jinou hodnotu než`const` hodnoty l.  
   
-###  <a name="parallel_transform"></a>Parallel_transform – algoritmus  
+###  <a name="parallel_transform"></a> Parallel_transform – algoritmus  
  Můžete použít `parallel transform` algoritmus k provedení mnoha operací paralelizace data. Například můžete:  
   
 -   Upravte také průraznost bitové kopie a provádění dalších operací zpracování bitové kopie.  
@@ -174,7 +169,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
 > [!IMPORTANT]
 >  Iterator, kterou zadáte jako výstup `parallel_transform` musí zcela překrývat vstupní iterator nebo nepřekrývají vůbec. Chování tento algoritmus neurčené, pokud vstupní a výstupní iterátory částečně překrývají.  
   
-###  <a name="parallel_reduce"></a>Parallel_reduce – algoritmus  
+###  <a name="parallel_reduce"></a> Parallel_reduce – algoritmus  
  `parallel_reduce` Algoritmus je užitečné, když máte pořadí operací, které odpovídají asociativní vlastnost. (Tento algoritmus se nevyžaduje vlastnost komutativní). Zde jsou některé operace, které můžete provádět s `parallel_reduce`:  
   
 -   Vynásobte pořadí matice k vytvoření matice.  
@@ -191,7 +186,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  V mnoha případech si můžete představit `parallel_reduce` jako sdružená vlastnost pro použití `parallel_for_each` algoritmus společně s [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třídy.  
   
-###  <a name="map_reduce_example"></a>Příklad: Provádění mapování a snížit paralelně  
+###  <a name="map_reduce_example"></a> Příklad: Provádění mapování a snížit paralelně  
 
  A *mapy* operace platí pro každou hodnotu v pořadí funkce. A *snížit* operace kombinuje elementy sekvence do jednu hodnotu. Můžete použít standardní knihovna C++ [std::transform](../../standard-library/algorithm-functions.md#transform) a [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkce k provedení mapy a snížení operací. Mnohé problémy, ale můžete použít `parallel_transform` algoritmus k provedení operace mapy paralelně a `parallel_reduce` algoritmus provést operaci snižte paralelně.  
 
@@ -204,7 +199,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  [[Horní](#top)]  
   
-##  <a name="partitions"></a>Vytváření oddílů pracovní  
+##  <a name="partitions"></a> Vytváření oddílů pracovní  
  Učinit paralelní operace pro zdroj dat, je základním krokem *oddílu* zdroje do více oddílů, které dostanete souběžně několik vláken. Rozdělovače Určuje, jak by měla paralelní algoritmus oddílu rozsahy mezi vláken. Jak je popsáno dříve v tomto dokumentu, knihovně PPL používá výchozí dělení mechanismus, který vytvoří počáteční úlohu a potom pomocí krádež pracovní algoritmus a rozsah krádež vyvážit tyto oddíly po nevyváženou úlohy. Například po dokončení řadu iterací jeden iteraci smyčky provede modulu runtime redistribuci práce z jiná vlákna tento přístup z více vláken. V některých případech, můžete však zadat jiný rozdělení mechanismus, který je lepší hodí pro váš problém.  
   
  `parallel_for`, `parallel_for_each`, A `parallel_transform` algoritmy poskytují přetížené verze, která přebírají další parametr, `_Partitioner`. Tento parametr definuje dělicí metody typ, který rozděluje práci. Zde jsou druhy dělicí metody, které definuje knihovně PPL:  
@@ -239,7 +234,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  [[Horní](#top)]  
   
-##  <a name="parallel_sorting"></a>Paralelní řazení  
+##  <a name="parallel_sorting"></a> Paralelní řazení  
 
  Knihovně PPL poskytuje tři řazení algoritmy: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), a [concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Toto řazení algoritmy jsou užitečné v případě, že máte datové sady, které můžete využít řazen paralelně. Konkrétně řazení paralelně je užitečné, když máte velké datové sady nebo při použití operace výpočetně náročné porovnání řadit data. Všechny tyto algoritmy Seřadí prvky na místě.  
 
@@ -287,7 +282,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  Funkce hash musí vracet typ integrální ([std::is_integral::value](../../standard-library/is-integral-class.md) musí být `true`). Tento typ integrální musí být převoditelná na typ `size_t`.  
   
-###  <a name="choose_sort"></a>Výběr řazení algoritmus  
+###  <a name="choose_sort"></a> Výběr řazení algoritmus  
  V mnoha případech `parallel_sort` poskytuje optimální rovnováhu mezi rychlostí a paměti na výkon. Však jako můžete zvětšit velikost datové sady, počet dostupných procesorů nebo složitost funkce porovnání `parallel_buffered_sort` nebo `parallel_radixsort` můžete lépe provádět. Nejlepší způsob, jak určit, který algoritmus řazení pro použití v jakékoli této situaci je experiment a vyhodnocovat, jak dlouho trvá řazení typické dat v rámci reprezentativní konfiguraci počítače. Když zvolíte strategie řazení, mít na paměti následující pokyny.  
   
 -   Velikost datové sady. V tomto dokumentu *malé* datová sada obsahuje méně než 1 000 elementy *střední* datová sada obsahuje mezi elementy 10 000 a 100 000 a *velké* datová sada obsahuje více než 100 000 prvků.  
@@ -302,11 +297,11 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  Nemusí být smysl seřadit na malou datovou sadu paralelně, i v případě, že máte velký počet dostupných výpočetních prostředcích nebo porovnat funkce nebo funkce hash provede relativně velké množství práce. Můžete použít [std::sort](../../standard-library/algorithm-functions.md#sort) funkce seřadit malé datové sady. (`parallel_sort` a `parallel_buffered_sort` volání `sort` při zadávání velikost bloku, která je větší než datovou sadu; však `parallel_buffered_sort` se přidělit O(N) místa, což může trvat déle kvůli přidělení zámku kolizí nebo paměti.)  
   
- Pokud musí konzervaci paměti nebo váš přidělení paměti podléhá spory uzamčení, použijte `parallel_sort` seřadit střední datové sady. `parallel_sort`vyžaduje žádný další prostor; jiné algoritmy vyžadují O(N) místa.  
+ Pokud musí konzervaci paměti nebo váš přidělení paměti podléhá spory uzamčení, použijte `parallel_sort` seřadit střední datové sady. `parallel_sort` vyžaduje žádný další prostor; jiné algoritmy vyžadují O(N) místa.  
   
- Použití `parallel_buffered_sort` seřadit středně velkých datových sad a když aplikace splňuje požadavek na místo další O(N). `parallel_buffered_sort`může být obzvláště užitečný, když máte velký počet výpočetních prostředků nebo nákladné porovnat funkce nebo funkce hash.  
+ Použití `parallel_buffered_sort` seřadit středně velkých datových sad a když aplikace splňuje požadavek na místo další O(N). `parallel_buffered_sort` může být obzvláště užitečný, když máte velký počet výpočetních prostředků nebo nákladné porovnat funkce nebo funkce hash.  
   
- Použití `parallel_radixsort` seřadit rozsáhlých datových sad a když aplikace splňuje požadavek na další místa O(N). `parallel_radixsort`může být obzvláště užitečné, když je operace porovnání ekvivalentní dražší, nebo pokud jsou obě operace nákladné.  
+ Použití `parallel_radixsort` seřadit rozsáhlých datových sad a když aplikace splňuje požadavek na další místa O(N). `parallel_radixsort` může být obzvláště užitečné, když je operace porovnání ekvivalentní dražší, nebo pokud jsou obě operace nákladné.  
   
 > [!CAUTION]
 >  Implementace funkce dobrý hash je nutné znát rozsah datové sady, a jak je každý prvek v datové sadě transformován na odpovídající hodnotu bez znaménka. Protože operace hash funguje na nepodepsané hodnoty, zvažte strategie různých řazení Pokud není možné hodnoty hash bez znaménka.  
@@ -336,7 +331,7 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
 
  [parallel_for – funkce](reference/concurrency-namespace-functions.md#parallel_for)
   
- [parallel_for_each – funkce](reference/concurrency-namespace-functions.md#parallel_for_each)  
+ [parallel_for_each Function](reference/concurrency-namespace-functions.md#parallel_for_each)  
   
  [parallel_invoke – funkce](reference/concurrency-namespace-functions.md#parallel_invoke)  
 
@@ -354,6 +349,6 @@ Paralelní vzory knihovny (PPL) poskytuje algoritmy, které současně u kolekc�
   
  [parallel_buffered_sort – funkce](reference/concurrency-namespace-functions.md#parallel_buffered_sort)  
   
- [parallel_radixsort – funkce](reference/concurrency-namespace-functions.md#parallel_radixsort)
+ [parallel_radixsort Function](reference/concurrency-namespace-functions.md#parallel_radixsort)
 
 

@@ -1,34 +1,29 @@
 ---
 title: '#Import atributy (C++) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76507ef9d840b9d3544442af2881810d715bd4ca
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d1e69f977ffaacdfd2bb8bb0f53d3fe197af3fad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-attributes-c"></a>#import – atributy (C++)
 Obsahuje odkazy na atributy používané s #import – direktiva.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Následující atributy jsou k dispozici #import – direktiva.  
   
@@ -37,7 +32,7 @@ Obsahuje odkazy na atributy používané s #import – direktiva.
 |[auto_rename](../preprocessor/auto-rename.md)|Přejmenuje vyhrazená slova jazyka C++ přidáním dvou podtržítek (__) k názvu proměnné a vyřeší tak možné konflikty názvů.|  
 |[auto_search](../preprocessor/auto-search.md)|Určuje, že v případě, kdy je na knihovnu typů odkazováno direktivou #import a sama odkazuje na jinou knihovnu typů, může kompilátor zavést implicitní direktivu #import na tuto jinou knihovnu typů.|  
 |[embedded_idl](../preprocessor/embedded-idl.md)|Určuje, že knihovny typů je zapsán do souboru .tlh kódem generované atribut zachovaná.|  
-|[exclude](../preprocessor/exclude-hash-import.md)|Vyloučí položky z generovaných souborů hlaviček knihoven typů.|  
+|[Vyloučení](../preprocessor/exclude-hash-import.md)|Vyloučí položky z generovaných souborů hlaviček knihoven typů.|  
 |[high_method_prefix](../preprocessor/high-method-prefix.md)|Určuje předpony v názvu základní vlastnosti a metody.|  
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Určuje alternativní předpony pro tři metody vlastností.|  
 |[implementation_only](../preprocessor/implementation-only.md)|Potlačí generování hlavičkový soubor .tlh (primární hlavičkový soubor).|  
@@ -56,7 +51,7 @@ Obsahuje odkazy na atributy používané s #import – direktiva.
 |[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Určuje předponu různých předejdete kolize názvů.|  
 |[raw_native_types](../preprocessor/raw-native-types.md)|Zakáže použití třídy, které podporují COM v funkce vysoké úrovně obálku a místo toho vynutí používání nízké úrovně datových typů.|  
 |[raw_property_prefixes](../preprocessor/raw-property-prefixes.md)|Určuje alternativní předpony pro tři metody vlastností.|  
-|[rename](../preprocessor/rename-hash-import.md)|Funguje kolem název kolizí problémy.|  
+|[Přejmenování](../preprocessor/rename-hash-import.md)|Funguje kolem název kolizí problémy.|  
 |[rename_namespace](../preprocessor/rename-namespace.md)|Přejmenuje obor názvů, který obsahuje obsah knihovny typů.|  
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Má stejné funkce jako [rename_namespace –](../preprocessor/rename-namespace.md) atribut ale se používá na knihovny typů, které používají #import – direktiva s [auto_search –](../preprocessor/auto-search.md) atribut.|  
 |[tlbid](../preprocessor/tlbid.md)|Umožňuje načítání knihoven než knihovny primární typů.|  

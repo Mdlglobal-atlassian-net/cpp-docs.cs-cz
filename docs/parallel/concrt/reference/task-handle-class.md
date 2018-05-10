@@ -1,12 +1,9 @@
 ---
-title: "task_handle – třída | Microsoft Docs"
-ms.custom: 
+title: task_handle – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_handle
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskhandle-class"></a>task_handle – třída
 `task_handle` Třída reprezentuje jednotlivé paralelní pracovní položku. Zapouzdřit pokynů a data potřebná k provedení práce.  
@@ -58,7 +53,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator()](#task_handle__operator_call)|Operátor volání funkce, který vyvolá modulu runtime pro práci popisovače úloh.|  
+|[Operator() –](#task_handle__operator_call)|Operátor volání funkce, který vyvolá modulu runtime pro práci popisovače úloh.|  
   
 ## <a name="remarks"></a>Poznámky  
  `task_handle` objekty lze použít ve spojení s `structured_task_group` nebo další Obecné `task_group` objektu, k rozložení práce do paralelních úloh. Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -102,7 +97,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Poznámky  
  Modul runtime vytvoří kopii pracovní funkce, která je předat do konstruktoru. Proto změny stavu, ke kterým dochází ve funkci objektu je předat do `task_handle` objektu se nebude zobrazovat na vaší kopie tohoto objektu funkce.  
   
-##  <a name="dtor"></a> ~task_handle 
+##  <a name="dtor"></a> ~ task_handle 
 
  Zničí `task_handle` objektu.  
   

@@ -1,12 +1,9 @@
 ---
-title: "int_4 – třída | Microsoft Docs"
-ms.custom: 
+title: int_4 – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::get_ywxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947ed0a89e4b940a9c35e2b87eeeb860f71a7ab9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int4-class"></a>int_4 – třída
 Představuje krátký vektoru čtyři celých čísel.  
@@ -462,7 +457,7 @@ class int_4;
 |int_4::operator%=||  
 |int_4::operator&=||  
 |int_4::operator*=||  
-|int_4::operator/=||  
+|/ int_4::Operator = – operátor||  
 |int_4::operator^=||  
 |int_4::operator&#124;=||  
 |int_4::operator~||  
@@ -521,14 +516,14 @@ class int_4;
 |int_4::gabr||  
 |int_4::gar||  
 |int_4::garb||  
-|int_4::gb||  
-|int_4::gba||  
+|int_4::GB||  
+|int_4::GBA||  
 |int_4::gbar||  
-|int_4::gbr||  
-|int_4::gbra||  
-|int_4::gr||  
+|int_4::GBR||  
+|int_4::GBRA||  
+|int_4::GR||  
 |int_4::gra||  
-|int_4::grab||  
+|int_4::Grab||  
 |int_4::grb||  
 |int_4::grba||  
 |int_4::r||  

@@ -1,12 +1,9 @@
 ---
-title: "concurrent_priority_queue – třída | Microsoft Docs"
-ms.custom: 
+title: concurrent_priority_queue – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue – třída
 `concurrent_priority_queue` Třída je kontejner, který umožňuje více vláken současně nabízení a pop položek. Položky jsou odebrány v pořadí podle priority, kde je priorita určena functor, zadaný jako argument šablony.  
@@ -81,19 +76,19 @@ template <typename T,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[clear](#clear)|Vymaže všechny elementy ve souběžných prioritu. Tato metoda není bezpečná souběžnosti.|  
+|[Zrušte zaškrtnutí](#clear)|Vymaže všechny elementy ve souběžných prioritu. Tato metoda není bezpečná souběžnosti.|  
 |[prázdný](#empty)|Testy, pokud je v době prázdný souběžných priority fronty tato metoda je volána. Tato metoda je bezpečné souběžnosti.|  
 |[get_allocator](#get_allocator)|Vrátí kopii allocator použitý k vytvoření souběžných priority fronty. Tato metoda je bezpečné souběžnosti.|  
 |[push](#push)|Přetíženo. Přidá element do souběžných priority fronty. Tato metoda je bezpečné souběžnosti.|  
 |[Velikost](#size)|Vrátí počet elementů ve frontě souběžných priority. Tato metoda je bezpečné souběžnosti.|  
-|[swap](#swap)|Zamění obsah dvou souběžných priority fronty. Tato metoda není bezpečná souběžnosti.|  
+|[Swap](#swap)|Zamění obsah dvou souběžných priority fronty. Tato metoda není bezpečná souběžnosti.|  
 |[try_pop](#try_pop)|Odebere a vrátí nejvyšší prioritou element z fronty, pokud fronty je prázdný. Tato metoda je bezpečné souběžnosti.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_priority_queue` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
+|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_priority_queue` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Podrobné informace o `concurrent_priority_queue` třídy najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -181,7 +176,7 @@ concurrent_priority_queue(
   
  Konstruktory šesté a sedmého zadejte přesunu priority fronty `_Src`.  
   
-##  <a name="empty">prázdný</a> 
+##  <a name="empty"></a> prázdný 
 
  Testy, pokud je v době prázdný souběžných priority fronty tato metoda je volána. Tato metoda je bezpečné souběžnosti.  
   
@@ -234,7 +229,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  Elementu, který chcete přidat do souběžných priority fronty.  
   
-##  <a name="size">Velikost</a> 
+##  <a name="size"></a> Velikost 
 
  Vrátí počet elementů ve frontě souběžných priority. Tato metoda je bezpečné souběžnosti.  
   

@@ -1,12 +1,9 @@
 ---
-title: "source_block – třída | Microsoft Docs"
-ms.custom: 
+title: source_block – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>source_block – třída
 `source_block` Třída je abstraktní základní třídu pro jen zdroj bloky. Třída poskytuje funkce správy základní odkaz jako dobře běžné chyby kontroly.  
@@ -84,19 +79,19 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |Název|Popis|  
 |----------|-----------------|  
 |[source_block](#ctor)|Vytvoří `source_block` objektu.|  
-|[~source_block Destructor](#dtor)|Zničí `source_block` objektu.|  
+|[~ source_block – destruktor](#dtor)|Zničí `source_block` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[accept](#accept)|Přijme zprávu, která byla nabízí to `source_block` objekt, přenos vlastnictví volajícímu.|  
+|[Přijmout](#accept)|Přijme zprávu, která byla nabízí to `source_block` objekt, přenos vlastnictví volajícímu.|  
 |[acquire_ref](#acquire_ref)|Získá počet odkazů v tomto `source_block` objekt, aby se zabránilo odstranění.|  
 |[Využívat](#consume)|Využívá zprávu dříve nabízí to `source_block` objektu a úspěšně rezervován cíl, přenos vlastnictví volajícímu.|  
 |[link_target](#link_target)|Cílový blok odkazuje na tato `source_block` objektu.|  
-|[release](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
+|[Verze](#release)|Uvolní předchozí rezervace úspěšné zprávy.|  
 |[release_ref](#release_ref)|Uvolní počet odkazů v tomto `source_block` objektu.|  
-|[reserve](#reserve)|Rezervuje zprávu dříve nabízí to `source_block` objektu.|  
+|[Rezervovat](#reserve)|Rezervuje zprávu dříve nabízí to `source_block` objektu.|  
 |[unlink_target](#unlink_target)|Zruší propojení cílový blok z tohoto `source_block` objektu.|  
 |[unlink_targets](#unlink_targets)|Zruší všechny bloky cílový z tohoto propojení `source_block` objektu. (Přepisuje [isource::unlink_targets –](isource-class.md#unlink_targets).)|  
   
@@ -106,15 +101,15 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |----------|-----------------|  
 |[accept_message](#accept_message)|Při přepisu v odvozené třídě, přijme zprávu nabízený zdroj. Bloky zpráv by měly přepsat tuto metodu pro ověření `_MsgId` a vrátí zprávu.|  
 |[async_send](#async_send)|Asynchronně fronty zpráv a spustí úlohu šíření, pokud to není již bylo provedeno|  
-|[consume_message](#consume_message)|Při přepisu v odvozené třídě, využívá zprávu, která byla dříve vyhrazena.|  
-|[enable_batched_processing](#enable_batched_processing)|Umožňuje zpracovat v dávce zpracování tohoto bloku.|  
+|[consume_message –](#consume_message)|Při přepisu v odvozené třídě, využívá zprávu, která byla dříve vyhrazena.|  
+|[enable_batched_processing –](#enable_batched_processing)|Umožňuje zpracovat v dávce zpracování tohoto bloku.|  
 |[initialize_source –](#initialize_source)|Inicializuje `message_propagator` v rámci to `source_block`.|  
 |[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `source_block` objektu.|  
 |[process_input_messages](#process_input_messages)|Zpracování vstupu zpráv. To je vhodné pro Šiřitel bloků, které jsou odvozeny od source_block|  
 |[propagate_output_messages](#propagate_output_messages)|Rozšíří zprávy k cílům.|  
 |[propagate_to_any_targets](#propagate_to_any_targets)|Při přepisu v odvozené třídě, rozšíří danou zprávu, která se některé nebo všechny propojené cíle. Toto je hlavní šíření rutiny pro bloky zpráv.|  
 |[release_message](#release_message)|Při přepisu v odvozené třídě, uvolní předchozí zpráva rezervace.|  
-|[remove_targets](#remove_targets)|Odebere všechny odkazy cíl pro tento zdroj blok. To by měla být volána z destruktoru.|  
+|[remove_targets –](#remove_targets)|Odebere všechny odkazy cíl pro tento zdroj blok. To by měla být volána z destruktoru.|  
 |[reserve_message](#reserve_message)|Při přepisu v odvozené třídě, vyhrazuje zprávu dříve nabízí to `source_block` objektu.|  
 |[resume_propagation](#resume_propagation)|Při přepisu v odvozené třídě, obnoví šíření po vydala rezervace.|  
 |[sync_send](#sync_send)|Synchronně fronty zpráv a spustí úlohu šíření, pokud to není již bylo provedeno.|  
@@ -200,7 +195,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
  `_Msg`  
  Ukazatel na `message` objekt, který chcete odeslat asynchronně.  
   
-##  <a name="consume">Využívat</a> 
+##  <a name="consume"></a> Využívat 
 
  Využívá zprávu dříve nabízí to `source_block` objektu a úspěšně rezervován cíl, přenos vlastnictví volajícímu.  
   
@@ -253,7 +248,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 void enable_batched_processing();
 ```  
   
-##  <a name="initialize_source">initialize_source –</a> 
+##  <a name="initialize_source"></a> initialize_source – 
 
  Inicializuje `message_propagator` v rámci to `source_block`.  
   
@@ -304,7 +299,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ### <a name="parameters"></a>Parametry  
  `_PMessage`  
   
-##  <a name="propagate_output_messages"></a> propagate_output_messages 
+##  <a name="propagate_output_messages"></a> propagate_output_messages – 
 
  Rozšíří zprávy k cílům.  
   
@@ -358,7 +353,7 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
  `_MsgId`  
  `runtime_object_identity` z `message` objektu vydán.  
   
-##  <a name="release_ref"></a> release_ref 
+##  <a name="release_ref"></a> release_ref – 
 
  Uvolní počet odkazů v tomto `source_block` objektu.  
   
@@ -424,7 +419,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a> resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation – 
 
  Při přepisu v odvozené třídě, obnoví šíření po vydala rezervace.  
   

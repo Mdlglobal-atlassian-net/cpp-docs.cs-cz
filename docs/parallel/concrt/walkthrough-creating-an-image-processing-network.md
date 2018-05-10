@@ -1,30 +1,25 @@
 ---
-title: "Návod: Vytvoření sítě pro zpracování obrázků | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Vytvoření sítě pro zpracování obrázků | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytvoření sítě pro zpracování obrázků
 Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv provádějící zpracování obrázků.  
@@ -44,7 +39,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
  Doporučujeme taky, že chápete základní informace o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] před spuštěním tohoto průvodce.  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento názorný postup obsahuje následující části:  
   
 -   [Definování zpracování funkce obrázku](#functionality)  
@@ -53,7 +48,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
 -   [Úplný příklad](#complete)  
   
-##  <a name="functionality"></a>Definování zpracování funkce obrázku  
+##  <a name="functionality"></a> Definování zpracování funkce obrázku  
  Tato část uvádí podpory funkce, které používá síť zpracování bitové kopie pro práci s obrázky, které se načítají z disku.  
   
  Následující funkce `GetRGB` a `MakeColor`, extrahovat a kombinace jednotlivých součástí dané barvy, v uvedeném pořadí.  
@@ -80,7 +75,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
  [[Horní](#top)]  
   
-##  <a name="network"></a>Vytvoření sítě pro zpracování bitové kopie  
+##  <a name="network"></a> Vytvoření sítě pro zpracování bitové kopie  
  Tato část popisuje, jak vytvořit síť asynchronní bloky zpráv provádějící zpracování obrázků na každý [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] bitové kopie (.jpg) v daném adresáři. Síť provede následující operace zpracování obrázků:  
   
 1.  Pro všechny image, která je vytvořená tní převeďte na ve stupních šedi.  
@@ -135,7 +130,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
 |`colormask`|A `transformer` objekt, který odebere komponenty zelenou a modrou barvu z bitové kopie, které mají red jako dominantní barvu.|  
 |`darken`|A `transformer` objekt, který ztmaví bitové kopie, které mají red jako dominantní barvu.|  
 |`sepiatone`|A `transformer` objekt, který se vztahuje sépiový tónování bitové kopie, které nejsou autorem tní a nejsou převážně red.|  
-|`save_bitmap`|A `transformer` objekt, který uloží zpracování `image` na disk jako rastrový obrázek. `save_bitmap`načte původní název souboru z `map` objektu a jeho příponu názvu souboru se změní na .bmp.|  
+|`save_bitmap`|A `transformer` objekt, který uloží zpracování `image` na disk jako rastrový obrázek. `save_bitmap` načte původní název souboru z `map` objektu a jeho příponu názvu souboru se změní na .bmp.|  
 |`delete_bitmap`|A `transformer` objekt, který uvolní paměť pro bitové kopie.|  
 |`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který funguje jako terminálu uzlu v síti. Se snižuje `countdown_event` objektu k hlavní aplikaci signál, že byla zpracována bitovou kopii.|  
   
@@ -155,7 +150,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
  [[Horní](#top)]  
   
-##  <a name="complete"></a>Úplný příklad  
+##  <a name="complete"></a> Úplný příklad  
  Následující kód ukazuje kompletní příklad. `wmain` Spravuje funkce [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] knihovny a volání `ProcessImages` funkci, aby se proces [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] soubory `Sample Pictures` directory.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Tento dokument ukazuje, jak vytvořit síť asynchronní bloky zpráv prováděj
   
  ![Ukázkový výstup pro tento příklad](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`je vytvořená tní Alphin a je proto převedena na ve stupních šedi. `Chrysanthemum`, `Desert`, `Koala`, a `Tulips` mít red jako barvu dominantní a proto mít komponenty modré a zelenou barvu odebrat a jsou ztmaví. `Hydrangeas`, `Jellyfish`, a `Penguins` kritériím výchozí a proto je sépie toned.  
+ `Lighthouse` je vytvořená tní Alphin a je proto převedena na ve stupních šedi. `Chrysanthemum`, `Desert`, `Koala`, a `Tulips` mít red jako barvu dominantní a proto mít komponenty modré a zelenou barvu odebrat a jsou ztmaví. `Hydrangeas`, `Jellyfish`, a `Penguins` kritériím výchozí a proto je sépie toned.  
   
  [[Horní](#top)]  
   

@@ -1,13 +1,10 @@
 ---
-title: "Karta Editor dialogového okna, panel nástrojů | Microsoft Docs"
-ms.custom: 
+title: Karta Editor dialogového okna, panel nástrojů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Karta editoru dialogového okna, panel nástrojů
 Karta Editor dialogového okna se zobrazí v [okno sady nástrojů](/visualstudio/ide/reference/toolbox) když pracujete v editoru dialogového okna. Přidání ovládacích prvků do vašeho nové dialogové okno, přetáhněte ovládací prvky z panelu nástrojů na vytváření dialogových oken (Další informace najdete v tématu [přidání ovládacího prvku do dialogového okna](adding-a-control-to-a-dialog-box.md)). Potom můžete pohyb ovládací prvky nebo změnit jejich velikost a tvar.  
@@ -101,7 +96,7 @@ Karta Editor dialogového okna se zobrazí v [okno sady nástrojů](/visualstudi
  Win32  
   
 ## <a name="see-also"></a>Viz také  
- [Ovládací prvky](../mfc/controls-mfc.md)   
+ [ovládací prvky](../mfc/controls-mfc.md)   
  [Třídy ovládacích prvků](../mfc/control-classes.md)   
  [Třídy dialogových oken](../mfc/dialog-box-classes.md)   
  [Styly posuvníku](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   

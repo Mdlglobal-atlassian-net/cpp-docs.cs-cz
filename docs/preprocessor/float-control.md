@@ -1,12 +1,9 @@
 ---
-title: "float_control – | Microsoft Docs"
-ms.custom: 
+title: float_control – | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.float_control
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5c9d4e410c74957fad3816c6ba07ddcc724f37
-ms.sourcegitcommit: b597ef49b5b12fe2e54dc3d54619442879eca5a9
+ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="floatcontrol"></a>float_control
 Určuje s plovoucí desetinnou čárkou chování pro funkci.  
@@ -39,7 +34,7 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Příznaky  
- `value`, `setting` **[push]**  
+ `value`, `setting` **[nabízené]**  
  Určuje chování s plovoucí desetinnou čárkou. `value` může být **přesné** nebo **s výjimkou**. Další informace najdete v tématu [/fp (zadejte Floating-Point chování)](../build/reference/fp-specify-floating-point-behavior.md). `setting` lze buď **na** nebo **vypnout**.  
   
  Pokud `value` je **přesné**, nastavení pro **přesné** a **s výjimkou** jsou specifikované. **s výjimkou** lze nastavit pouze **na** při **přesné** je také nastavena na **na**.  
@@ -49,7 +44,7 @@ float_control( value,setting [push] | push | pop )
  **push**  
  Nabízená aktuální `float_control` nastavení k zásobníku vnitřní kompilátoru  
   
- **pop**  
+ **POP**  
  Odebere `float_control` nastavení z horní části zásobníku vnitřní kompilátoru a který zpřístupňuje nové `float_control` nastavení.  
   
 ## <a name="remarks"></a>Poznámky  

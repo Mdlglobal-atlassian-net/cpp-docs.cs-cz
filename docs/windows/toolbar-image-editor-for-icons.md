@@ -1,13 +1,10 @@
 ---
-title: "Panel nástrojů (Editor obrázků pro ikony) | Microsoft Docs"
-ms.custom: 
+title: Panel nástrojů (Editor obrázků pro ikony) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - Properties window
 - Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 800fb1007076902703abd3d3185c398dbf40fdb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3dd53a92168724748940ca2def17a359f1f23e80
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Panel nástrojů (editor obrázků pro ikony)
 **Editor obrázků** nástrojů obsahuje nástroje pro kreslení, Malování, zadáním textu, vymazání a manipulace s zobrazení. Obsahuje taky výběr možnosti, pomocí kterého si můžete vybrat možnosti pro každou nástroji. Například můžete z různých štětce šířek, zvětšení faktory a styly řádku.  
@@ -49,7 +44,7 @@ Panel nástrojů editoru obrázků
   
  Pomocí **možnost** selektor můžete zadat šířku čáry, tah štětce atd. Na ikonu na **možnost** selektor tlačítko se změní v závislosti na tom, který nástroj jste vybrali.  
   
- ![Kreslení & č. 45; tvar selektor na panelu nástrojů editoru obrázků](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
+ ![Kreslení&#45;tvar selektor na panelu nástrojů editoru obrázků](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
 Výběr možnosti na panelu nástrojů editoru obrázků  
   
  Informace o přidávání zdrojů do spravovaných projekty, najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index) v *rozhraní .NET Framework – příručka vývojáře.* Informace na ručně přidejte soubory prostředků na spravované projekty, přístup k prostředkům, zobrazení statické prostředky a přiřazení k vlastnosti řetězce prostředků najdete v tématu [vytváření souborů prostředků pro aplikace plochy](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).  

@@ -1,12 +1,9 @@
 ---
-title: "target_block – třída | Microsoft Docs"
-ms.custom: 
+title: target_block – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - target_block
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 754bc6add99974ff204c977e47f35486cc830d95
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="targetblock-class"></a>target_block – třída
 `target_block` Třída je abstraktní základní třída, která poskytuje funkce správy základní odkaz a kontrola chyb pro cíl pouze blokuje.  
@@ -76,7 +71,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 |Název|Popis|  
 |----------|-----------------|  
 |[target_block](#ctor)|Vytvoří `target_block` objektu.|  
-|[~target_block Destructor](#dtor)|Zničí `target_block` objektu.|  
+|[~ target_block – destruktor](#dtor)|Zničí `target_block` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -90,19 +85,19 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 |Název|Popis|  
 |----------|-----------------|  
 |[async_send](#async_send)|Asynchronně odešle zprávu pro zpracování.|  
-|[decline_incoming_messages](#decline_incoming_messages)|Označuje do bloku, musí být odmítnuta nové zprávy.|  
-|[enable_batched_processing](#enable_batched_processing)|Umožňuje zpracovat v dávce zpracování tohoto bloku.|  
+|[decline_incoming_messages –](#decline_incoming_messages)|Označuje do bloku, musí být odmítnuta nové zprávy.|  
+|[enable_batched_processing –](#enable_batched_processing)|Umožňuje zpracovat v dávce zpracování tohoto bloku.|  
 |[initialize_target](#initialize_target)|Inicializuje základní objekt. Konkrétně `message_processor` objekt musí být inicializován.|  
-|[link_source](#link_source)|Blok zadaný zdroj odkazuje na tato `target_block` objektu.|  
+|[link_source –](#link_source)|Blok zadaný zdroj odkazuje na tato `target_block` objektu.|  
 |[process_input_messages](#process_input_messages)|Zpracuje zprávy, které jsou přijaty jako vstupy.|  
-|[process_message](#process_message)|Při přepisu v odvozené třídě, zpracuje zprávu, která byla přijata to `target_block` objektu.|  
+|[process_message –](#process_message)|Při přepisu v odvozené třídě, zpracuje zprávu, která byla přijata to `target_block` objektu.|  
 |[propagate_message](#propagate_message)|Při přepisu v odvozené třídě, tato metoda asynchronně předá zprávu od `ISource` bloku k tomuto `target_block` objektu. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
-|[register_filter](#register_filter)|Zaregistruje metodu filtru, která bude volána pro každý přijatá zpráva.|  
-|[remove_sources](#remove_sources)|Zruší všechny zdroje propojení po čekání na dokončení operací nezpracovaných asynchronní odesílání.|  
+|[register_filter –](#register_filter)|Zaregistruje metodu filtru, která bude volána pro každý přijatá zpráva.|  
+|[remove_sources –](#remove_sources)|Zruší všechny zdroje propojení po čekání na dokončení operací nezpracovaných asynchronní odesílání.|  
 |[send_message –](#send_message)|Při přepisu v odvozené třídě, tato metoda synchronně předá zprávu od `ISource` bloku k tomuto `target_block` objektu. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
 |[sync_send](#sync_send)|Synchronně odešlete zprávu pro zpracování.|  
 |[unlink_source](#unlink_source)|Zruší propojení blok zadaného zdroje. z tohoto `target_block` objektu.|  
-|[unlink_sources](#unlink_sources)|Zruší všechny bloky zdroje z tohoto propojení `target_block` objektu. (Přepisuje [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|  
+|[unlink_sources –](#unlink_sources)|Zruší všechny bloky zdroje z tohoto propojení `target_block` objektu. (Přepisuje [itarget::unlink_sources –](itarget-class.md#unlink_sources).)|  
 |[wait_for_async_sends](#wait_for_async_sends)|Čeká se na všechny asynchronní šíření na dokončení.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -263,7 +258,7 @@ void remove_sources();
 ### <a name="remarks"></a>Poznámky  
  Všechny cílové bloky by měly volat tuto rutinu v jejich destruktor odebrat zdroje.  
   
-##  <a name="send">Odeslat</a> 
+##  <a name="send"></a> Odeslat 
 
  Synchronně předá zprávu z bloku zdroj tento cílový blok.  
   
@@ -290,7 +285,7 @@ virtual message_status send(
   
  Když `send` vrátí zprávu buď již byla přijata a přenést do cílový blok, nebo byla zamítnuta cíle.  
   
-##  <a name="send_message">send_message –</a> 
+##  <a name="send_message"></a> send_message – 
 
  Při přepisu v odvozené třídě, tato metoda synchronně předá zprávu od `ISource` bloku k tomuto `target_block` objektu. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   

@@ -2,11 +2,8 @@
 title: Task – třída (Concurrency Runtime) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task – třída (Concurrency Runtime)
 Paralelní vzory knihovny (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze spustit asynchronně a souběžně další úkoly a paralelní pracovní vytvořené paralelní algoritmy v Concurrency Runtime. Vyvolá výsledek typu `_ResultType` při úspěšném dokončení. Úlohy typu `task<void>` vytvořit žádný výsledek. Úlohu můžete čekali při a zrušení nezávisle na jiné úlohy. Můžete také skládat s ostatními úkoly pomocí pokračování ( `then`) a spojení ( `when_all`) a volba ( `when_any`) vzory.  
@@ -87,7 +82,7 @@ class task;
 |Název|Popis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Přetíženo. Určuje, zda dva `task` objekty představují různé interních úlohách.|  
-|[operator=](#operator_eq)|Přetíženo. Nahradí obsah jedné `task` objekt s jinou.|  
+|[operátor =](#operator_eq)|Přetíženo. Nahradí obsah jedné `task` objekt s jinou.|  
 |[operator==](#operator_eq_eq)|Přetíženo. Určuje, zda dva `task` objekty představují stejnou interní úlohu.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -97,7 +92,7 @@ class task;
  `task`  
   
 ## <a name="requirements"></a>Požadavky  
- **Header:** ppltasks.h  
+ **Záhlaví:** ppltasks.h  
   
  **Namespace:** souběžnosti  
   
@@ -120,7 +115,7 @@ void get() const;
 > [!IMPORTANT]
 >  V aplikaci pro univerzální platformu Windows (UWP), nevolejte [concurrency::task::wait](#wait) nebo `get` ( `wait` volání `get`) v kódu, který běží na STA Jinak, modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tyto metody blokovat aktuální vlákno a může způsobit, že aplikace přestane odpovídat. Můžete však volat `get` metoda přijímat výsledek předchozí úlohou v pokračování založený na úlohách, protože výsledek je ihned k dispozici.  
   
-##  <a name="is_apartment_aware"></a> is_apartment_aware 
+##  <a name="is_apartment_aware"></a> is_apartment_aware – 
 
  Určuje, zda úloha rozbalí prostředí Windows Runtime `IAsyncInfo` rozhraní nebo je následníky takových úloh.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Třída Transformer | Microsoft Docs"
-ms.custom: 
+title: Třída Transformer | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - transformer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac9ea43e1d3f6f369b93e92e91fa3606cf7d6af5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transformer-class"></a>Třída transformer
 A `transformer` zasílání zpráv blok je jeden cíl, více zdroje, seřazených `propagator_block` který může přijmout zprávy jednoho typu a je schopný ukládání bez vazby počet zpráv jiného typu.  
@@ -63,7 +58,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Název|Popis|  
 |----------|-----------------|  
-|[transformer](#ctor)|Přetíženo. Vytvoří `transformer` zasílání zpráv bloku.|  
+|[Transformer](#ctor)|Přetíženo. Vytvoří `transformer` zasílání zpráv bloku.|  
 |[~transformer Destructor](#dtor)|Zničí `transformer` zasílání zpráv bloku.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
@@ -71,7 +66,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 |Název|Popis|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Přijme zprávu, která byla nabízí to `transformer` bloku zasílání zpráv, přenos vlastnictví volajícímu.|  
-|[consume_message](#consume_message)|Využívá dříve nabízené zprávy `transformer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.|  
+|[consume_message –](#consume_message)|Využívá dříve nabízené zprávy `transformer` a vyhrazený pro cíl, přenos vlastnictví volajícímu.|  
 |[link_target_notification](#link_target_notification)|Zpětné volání, které oznamuje, že nová cílová souvisel s to `transformer` zasílání zpráv bloku.|  
 |[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
 |[propagate_to_any_targets](#propagate_to_any_targets)|Provede funkci transformer na vstupní zprávy.|  
@@ -79,7 +74,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 |[reserve_message](#reserve_message)|Rezervuje zprávu dříve nabízí to `transformer` zasílání zpráv bloku. (Přepisuje [source_block::reserve_message –](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Obnoví šíření po vydala rezervace. (Přepisuje [source_block::resume_propagation –](source-block-class.md#resume_propagation).)|  
 |[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -199,7 +194,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Poznámky  
  Po `reserve` je volána, vrátí-li `true`, buď `consume` nebo `release` musí být volána buď trvat nebo uvolnění vlastnictví zprávy.  
   
-##  <a name="resume_propagation"></a> resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation – 
 
  Obnoví šíření po vydala rezervace.  
   
@@ -207,7 +202,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message">send_message –</a> 
+##  <a name="send_message"></a> send_message – 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `transformer` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   

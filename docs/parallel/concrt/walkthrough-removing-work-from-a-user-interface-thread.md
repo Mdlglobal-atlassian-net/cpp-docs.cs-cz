@@ -1,30 +1,25 @@
 ---
-title: "Návod: Odstranění práce z vlákna uživatelského rozhraní | Microsoft Docs"
-ms.custom: 
+title: 'Návod: Odstranění práce z vlákna uživatelského rozhraní | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provádí pomocí uživatelského rozhraní (UI) vlákno v aplikaci Microsoft Foundation třídy (MFC) pracovní vlákno pomocí Concurrency Runtime. Tento dokument také ukazuje, jak zlepšit výkon časově náročná operace kreslení.  
@@ -46,7 +41,7 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
  Doporučujeme taky, že chápete základní informace o vývoji aplikací MFC a [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] před spuštěním tohoto průvodce. Další informace o rozhraní MFC najdete v tématu [aplikace MFC plochy](../../mfc/mfc-desktop-applications.md). Další informace o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)], najdete v části [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento názorný postup obsahuje následující části:  
   
 -   [Vytváření aplikací MFC](#application)  
@@ -59,14 +54,14 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
 -   [Přidání podpory pro zrušení](#cancellation)  
   
-##  <a name="application"></a>Vytváření aplikací MFC  
+##  <a name="application"></a> Vytváření aplikací MFC  
  Tato část popisuje, jak vytvořit základní aplikaci MFC.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Vytvoření aplikace Visual C++ MFC  
   
 1.  Na **soubor** nabídky, klikněte na tlačítko **nový**a potom klikněte na **projektu**.  
   
-2.  V **nový projekt** v dialogovém **nainstalovaných šablonách** podokně, vyberte **Visual C++**a pak na **šablony** vyberte možnost **Aplikace knihovny MFC**. Zadejte název projektu, například `Mandelbrot`a potom klikněte na **OK** zobrazíte **Průvodce aplikací knihovny MFC**.  
+2.  V **nový projekt** v dialogovém **nainstalovaných šablonách** podokně, vyberte **Visual C++** a pak na **šablony** vyberte možnost **Aplikace knihovny MFC**. Zadejte název projektu, například `Mandelbrot`a potom klikněte na **OK** zobrazíte **Průvodce aplikací knihovny MFC**.  
   
 3.  V **typ aplikace** podokně, vyberte **jednotlivý dokument**. Ujistěte se, že **Document/View – architektura podporu** zaškrtnutí políčka.  
   
@@ -74,7 +69,7 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
      Ověřte, že aplikace byl úspěšně vytvořen vytváření a jeho spuštěním. Vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Pokud aplikace sestavení úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky.  
   
-##  <a name="serial"></a>Implementace sériové verze Mandelbrot aplikace  
+##  <a name="serial"></a> Implementace sériové verze Mandelbrot aplikace  
  Tato část popisuje, jak k vykreslení fraktálový Mandelbrot. Tato verze nevykresluje fraktálový Mandelbrot k [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [rastrový obrázek](https://msdn.microsoft.com/library/ms534420.aspx) objektu a pak zkopíruje obsah bitovou mapu do okna klienta.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>K implementaci sériové verze Mandelbrot aplikace  
@@ -123,7 +118,7 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
  [[Horní](#top)]  
   
-##  <a name="removing-work"></a>Odstranění práce z vlákna uživatelského rozhraní  
+##  <a name="removing-work"></a> Odstranění práce z vlákna uživatelského rozhraní  
  V této části ukazuje, jak odebrat kreslení práce z vlákna uživatelského rozhraní v aplikaci Mandelbrot. Přesunutím kreslení práce z vlákna uživatelského rozhraní pro pracovní vlákno můžete vlákna uživatelského rozhraní zpracování zpráv, když pracovní vlákno generuje obrázek na pozadí.  
   
  Concurrency Runtime poskytuje tři způsoby, jak spouštět úlohy: [úkolů skupiny](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [asynchronních agentů](../../parallel/concrt/asynchronous-agents.md), a [prosté úlohy](../../parallel/concrt/task-scheduler-concurrency-runtime.md). I když používáte jednu z těchto mechanismů odebrání práce z vlákna uživatelského rozhraní v tomto příkladu [concurrency::task_group](reference/task-group-class.md) objekt, protože podporují zrušení skupiny úloh. Tento návod používá zrušení později, snížit množství práce, které se provádí při změně velikosti okna klienta a provést čištění, když okno zničena.  
@@ -162,7 +157,7 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
  [[Horní](#top)]  
   
-##  <a name="performance"></a>Zlepšení výkonu kreslení  
+##  <a name="performance"></a> Zlepšení výkonu kreslení  
 
  Generování fraktálový Mandelbrot je vhodným kandidátem na paralelizace, protože výpočet každý pixelů je nezávislý na jiné výpočty. Učinit paralelní kreslení postup, převést vnější `for` smyčky v `CChildView::DrawMandelbrot` metoda k volání [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus následujícím způsobem.  
 
@@ -173,7 +168,7 @@ Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provád
   
  [[Horní](#top)]  
   
-##  <a name="cancellation"></a>Přidání podpory pro zrušení  
+##  <a name="cancellation"></a> Přidání podpory pro zrušení  
  Tato část popisuje, jak zpracovat změny velikosti okna a jak zrušit všechny aktivní kreslení úkoly při zničena okna.  
   
  Dokument [zrušení v knihovně PPL](cancellation-in-the-ppl.md) vysvětluje, jak funguje zrušení v modulu runtime. Zrušení je spolupráci; proto ho neproběhne okamžitě. Pokud chcete zastavit úlohu zrušené, modul runtime vyvolá vnitřní výjimkou během následných volání z úlohy do modulu runtime. V předchozí části ukazuje, jak používat `parallel_for` algoritmus ke zlepšení výkonu kreslení úlohy. Volání `parallel_for` umožňuje modulu runtime ukončení úlohy a proto umožňuje zrušení pracovat.  

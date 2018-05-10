@@ -1,12 +1,9 @@
 ---
-title: "Array – třída | Microsoft Docs"
-ms.custom: 
+title: Array – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0a7d063d5e57d77735a33eac8ec944d41032fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="array-class"></a>array – třída
 Představuje kontejner dat používá k přesunu dat do akcelerátoru.  
@@ -87,9 +82,9 @@ friend class array;
 |Název|Popis|  
 |----------|-----------------|  
 |[operátor std::vector&lt;value_type&gt;](#operator_vec)|Používá `copy(*this, vector)` implicitně převést pole std::[vektoru](../../../standard-library/vector-class.md) objektu.|  
-|[operator()](#operator_call)|Vrátí element hodnotu, která je zadanou parametry.|  
-|[operator[]](#operator_at)|Vrátí element, který je v zadaném indexu.|  
-|[operator=](#operator_eq)|Zkopíruje obsah zadaného `array` objekt s touto.|  
+|[Operator() –](#operator_call)|Vrátí element hodnotu, která je zadanou parametry.|  
+|[[] – operátor](#operator_at)|Vrátí element, který je v zadaném indexu.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array` objekt s touto.|  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
   
@@ -104,7 +99,7 @@ friend class array;
 |[accelerator_view](#accelerator_view)|Získá [accelerator_view](accelerator-view-class.md) objekt, který reprezentuje umístění, kde je přidělen pole. Tato vlastnost je přístupná jenom na procesoru.|  
 |[associated_accelerator_view](#associated_accelerator_view)|Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který se předá jako parametr po pracovní konstruktor pro vytvoření instance `array` objektu.|  
 |[cpu_access_type](#cpu_access_type)|Získá [access_type](concurrency-namespace-enums-amp.md#access_type) představující jak procesoru mají přístup k úložišti pole.|  
-|[extent](#extent)|Získá v rozsahu, který definuje tvar pole.|  
+|[rozsah](#extent)|Získá v rozsahu, který definuje tvar pole.|  
   
 ## <a name="remarks"></a>Poznámky  
  Typ `array<T,N>` představuje hustých a běžné (není vícenásobná) *N*-jednorozměrné pole, která se nachází v konkrétní umístění, jako je akcelerátor nebo procesoru. Datový typ elementů v poli je `T`, která musí být typu, který je kompatibilní s akcelerátoru cíl. I když pořadí, `N`, (z tohoto pole je určena staticky a je součástí typu, v rozsahu pole je dáno modulu runtime a je vyjádřit pomocí třídy `extent<N>`.  
@@ -503,7 +498,7 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_accelerator_view"></a> get_accelerator_view 
+##  <a name="get_accelerator_view"></a> get_accelerator_view – 
 
  Vrátí [accelerator_view](accelerator-view-class.md) objekt, který reprezentuje umístění kde `array` objektu je přidělen. Tato vlastnost je přístupná jenom na procesoru.  
   
@@ -514,7 +509,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>Návratová hodnota  
  `accelerator_view` Objekt, který reprezentuje umístění kde `array` objektu je přidělen.  
   
-##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view – 
 
  Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který se předá jako parametr po pracovní konstruktor pro vytvoření instance `array` objektu.  
   
@@ -657,7 +652,7 @@ array& operator= (
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="reinterpret_as"></a> reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as – 
 
 Reinterprets pole prostřednictvím jednorozměrné array_view, který volitelně může mít typ jinou hodnotu než zdrojové pole.
 
@@ -793,7 +788,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí dílčí části `array` objekt, který je na zadaný zdrojový a volitelně, který má zadaný rozsah. Když pouze `index` je zadaný objekt, část obsahuje všechny elementy ve přidružené mřížky, které mají indexy, které jsou větší než indexy elementů v `index` objektu.  
   
-##  <a name="view_as"></a> view_as 
+##  <a name="view_as"></a> view_as – 
 
  Toto pole jako reinterprets [array_view](array-view-class.md) z jiné pořadí.  
   

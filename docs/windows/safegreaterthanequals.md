@@ -1,13 +1,10 @@
 ---
 title: SafeGreaterThanEquals | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeGreaterThanEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeGreaterThanEquals function
 ms.assetid: 43312fa9-d925-4f9f-a352-a190c02b3005
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e475214e38a69f3d6656b1a01ca4207604471fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c8b08e9262c1fc251de9ce2e23ba37783e97ab9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 Porovná dvě čísla.  
@@ -42,17 +37,17 @@ inline bool SafeGreaterThanEquals (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`t`  
+ [v] `t`  
  První číslo k porovnání. Toto musí být typu T.  
   
- [v]`u`  
+ [v] `u`  
  Druhé číslo k porovnání. Musí se jednat o typ U.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true`Pokud `t` je větší než nebo rovno `u`jinak `false`.  
+ `true` Pokud `t` je větší než nebo rovno `u`jinak `false`.  
   
 ## <a name="remarks"></a>Poznámky  
- `SafeGreaterThanEquals`standardní relační operátor vylepšuje, protože umožňuje porovnat dva různé typy čísel.  
+ `SafeGreaterThanEquals` standardní relační operátor vylepšuje, protože umožňuje porovnat dva různé typy čísel.  
   
  Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci jedno porovnání bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  
   

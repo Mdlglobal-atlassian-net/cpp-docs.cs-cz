@@ -1,27 +1,22 @@
 ---
-title: "2.4.1 for – konstrukce | Microsoft Docs"
-ms.custom: 
+title: 2.4.1 for – konstrukce | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 for – konstrukce
 **Pro** – direktiva identifikuje iterativní konstrukce sdílení práce, která určuje, že iterace smyčky přidružené spustí paralelně. Iterace z **pro** smyčky distribuováno napříč vlákny, které již existují v provádění paralelní konstrukce, ke kterému se váže týmu. Syntaxe **pro** konstrukce vypadá takto:  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  **lastprivate (** *seznamu proměnné* **)**  
   
- **snížení (** *operátor* **:** *seznamu proměnné***)**  
+ **snížení (** *operátor* **:** *proměnná-seznamu ***)**  
   
  **řazení**  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **Pro** – direktiva umístí omezení na strukturu odpovídající **pro** smyčky. Konkrétně odpovídající **pro** smyčky musí mít kanonický tvar:  
   
- **pro (** *init expr* **;** *var logické op b*; *incr expr***)**  
+ **pro (** *init expr* **;** *var logické op b*; *incr – expr ***)**  
   
  *Init – výraz*  
  Jeden z následujících postupů:  
@@ -103,9 +98,9 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|static|Když **plán (statické,** *chunk_size***)** není zadaný, iterací dělí do bloků velikosti určeného *chunk_size*. Bloky dat jsou staticky přiřazeny vláken v týmu v kruhového dotazování v pořadí podle počtu vláken. Pokud ne *chunk_size* není zadaný, iterace volné místo je rozděleno do bloků, které jsou přibližně stejnou velikost, se jeden blok přiřazené každé vlákno.|  
-|dynamické odkazy|Když **plán (dynamicky** *chunk_size***)** není zadaný, iterace dělí do bloků, každý obsahující řady *chunk_size* iterací. Každého bloku je přiřazený k vlákno, které se čeká na přiřazení. Vlákno provede u bloku iterací a potom počká, než jeho další přiřazení, dokud nezůstanou žádné bloky dat pro přiřazení. Všimněte si, že poslední bloku přiřazení může mít menší počet iterací. Pokud ne *chunk_size* je zadána výchozí hodnota 1.|  
-|na základě|Když **plán (na základě,** *chunk_size***)** není zadaný, iterace jsou přiřazeny k vláken v bloky dat s snížení velikosti. Po dokončení své přiřazené bloku iterací vlákno je dynamicky přiřazen jiný bloku, dokud žádné zůstanou. Pro *chunk_size* 1, velikost každého bloku je přibližně počet nepřiřazených iterací dělený počet vláken. Tyto velikosti snížit přibližně exponenciálnímu na 1. Pro *chunk_size* s hodnotou *tisíc* větší než 1, velikosti snížit přibližně exponenciálnímu na *tisíc*kromě toho, že poslední bloku dat může mít méně než  *k* iterací. Pokud ne *chunk_size* je zadána výchozí hodnota 1.|  
+|static|Když **plán (statické,** *chunk_size ***)** není zadaný, iterací dělí do bloků velikosti určeného *chunk_size*. Bloky dat jsou staticky přiřazeny vláken v týmu v kruhového dotazování v pořadí podle počtu vláken. Pokud ne *chunk_size* není zadaný, iterace volné místo je rozděleno do bloků, které jsou přibližně stejnou velikost, se jeden blok přiřazené každé vlákno.|  
+|dynamické odkazy|Když **plán (dynamicky** *chunk_size ***)** není zadaný, iterace dělí do bloků, každý obsahující řady *chunk_size* iterací. Každého bloku je přiřazený k vlákno, které se čeká na přiřazení. Vlákno provede u bloku iterací a potom počká, než jeho další přiřazení, dokud nezůstanou žádné bloky dat pro přiřazení. Všimněte si, že poslední bloku přiřazení může mít menší počet iterací. Pokud ne *chunk_size* je zadána výchozí hodnota 1.|  
+|na základě|Když **plán (na základě,** *chunk_size ***)** není zadaný, iterace jsou přiřazeny k vláken v bloky dat s snížení velikosti. Po dokončení své přiřazené bloku iterací vlákno je dynamicky přiřazen jiný bloku, dokud žádné zůstanou. Pro *chunk_size* 1, velikost každého bloku je přibližně počet nepřiřazených iterací dělený počet vláken. Tyto velikosti snížit přibližně exponenciálnímu na 1. Pro *chunk_size* s hodnotou *tisíc* větší než 1, velikosti snížit přibližně exponenciálnímu na *tisíc*kromě toho, že poslední bloku dat může mít méně než  *k* iterací. Pokud ne *chunk_size* je zadána výchozí hodnota 1.|  
 |modul runtime|Když **schedule(runtime)** není zadaný, rozhodnutí týkající se plánování je odložena až do modulu runtime. Plán *druhu* a velikost bloky dat je možné vybrat v době běhu nastavením proměnné prostředí **OMP_SCHEDULE**. Pokud není nastavena tato proměnná prostředí, výsledný plán je definované implementací. Když **schedule(runtime)** není zadaný, *chunk_size* nesmí být zadaný.|  
   
  Chybí explicitně definovaných **plán** klauzule, bude výchozí **plán** je definované implementací.  

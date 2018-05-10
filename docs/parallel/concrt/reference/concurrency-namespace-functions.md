@@ -2,9 +2,6 @@
 title: funkce obor názvů souběžnosti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,26 +37,24 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funkce obor názvů souběžnosti
 ||||  
 |-|-|-|  
-|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
-|[EnableTracing](#enabletracing)|[Volné](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
-|[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
+|[Alokační](#alloc)|[Createresourcemanager –](#createresourcemanager)|[Disabletracing –](#disabletracing)|  
+|[Enabletracing –](#enabletracing)|[Volné](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
+|[Getosversion –](#getosversion)|[Getprocessorcount –](#getprocessorcount)|[Getprocessornodecount –](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend –](#asend)|  
-|[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|  
+|[cancel_current_task](#cancel_current_task)|[Zrušte zaškrtnutí](#clear)|[create_async](#create_async)|  
 |[create_task](#create_task)|[get_ambient_scheduler](#get_ambient_scheduler)|[internal_assign_iterators](#internal_assign_iterators)|  
 |[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice](#make_choice)|  
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|  
@@ -67,11 +62,11 @@ ms.lasthandoff: 04/10/2018
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|  
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[Odeslat](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
-|[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
+|[set_task_execution_resources](#set_task_execution_resources)|[Swap](#swap)|[task_from_exception](#task_from_exception)|  
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Počkej](#wait)|  
 |[when_all](#when_all)|[when_any –](#when_any)|  
   
-##  <a name="alloc"></a>  Alloc  
+##  <a name="alloc"></a>  Alokační  
  Přiděluje blok paměti zadaná velikost z Suballocator ukládání do mezipaměti Concurrency Runtime.  
   
 ```
@@ -119,7 +114,7 @@ bool asend(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="cancel_current_task"></a>  cancel_current_task  
+##  <a name="cancel_current_task"></a>  cancel_current_task –  
  Zruší aktuálně spuštěné úlohy. Tuto funkci lze volat z v textu úlohu přerušit provádění úkolu a způsobit, že ho zadat `canceled` stavu.  
   
  Není podporováno pro volání této funkce, pokud nejsou v rámci textu `task`. Díky tomu bude mít za následek nedefinované chování například chybě nebo zablokování v aplikaci.  
@@ -264,7 +259,7 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
   
 ### <a name="return-value"></a>Návratová hodnota  
   
-##  <a name="getexecutioncontextid"></a>  GetExecutionContextId  
+##  <a name="getexecutioncontextid"></a>  Getexecutioncontextid –  
  Vrací jedinečný identifikátor, který lze přiřadit ke kontextu spuštění, který implementuje `IExecutionContext` rozhraní.  
   
 ```
@@ -277,7 +272,7 @@ unsigned int __cdecl GetExecutionContextId();
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete získat identifikátor pro váš kontext provádění před předáte `IExecutionContext` rozhraní jako parametr pro některou z metod nabízí Resource Manager.  
   
-##  <a name="getosversion"></a>  GetOSVersion  
+##  <a name="getosversion"></a>  Getosversion –  
  Vrátí verzi operačního systému.  
   
 ```
@@ -290,7 +285,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 ### <a name="remarks"></a>Poznámky  
  [unsupported_os](unsupported-os-class.md) je vyvolána, pokud se operační systém nepodporuje Concurrency Runtime.  
   
-##  <a name="getprocessorcount"></a>  GetProcessorCount  
+##  <a name="getprocessorcount"></a>  Getprocessorcount –  
  Vrátí počet vláken hardwaru v základním systému.  
   
 ```
@@ -318,7 +313,7 @@ unsigned int __cdecl GetProcessorNodeCount();
   
  [unsupported_os](unsupported-os-class.md) je vyvolána, pokud se operační systém nepodporuje Concurrency Runtime.  
   
-##  <a name="getschedulerid"></a>  GetSchedulerId  
+##  <a name="getschedulerid"></a>  Getschedulerid –  
  Vrací jedinečný identifikátor, který lze přiřadit k Plánovač, který implementuje `IScheduler` rozhraní.  
   
 ```
@@ -331,7 +326,7 @@ unsigned int __cdecl GetSchedulerId();
 ### <a name="remarks"></a>Poznámky  
  Pomocí této metody můžete získat identifikátor vašeho scheduleru před předáte `IScheduler` rozhraní jako parametr pro některou z metod nabízí Resource Manager.  
   
-##  <a name="internal_assign_iterators"></a>  internal_assign_iterators  
+##  <a name="internal_assign_iterators"></a>  internal_assign_iterators –  
   
 ```
 template<typename T, class _Ax>
@@ -371,7 +366,7 @@ bool __cdecl is_current_task_group_canceling();
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [zrušení](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="make_choice"></a>  make_choice  
+##  <a name="make_choice"></a>  make_choice –  
  Vytvoří `choice` zasílání zpráv bloku z volitelný `Scheduler` nebo `ScheduleGroup` a dvě nebo více vstupních zdrojů.  
   
 ```
@@ -627,7 +622,7 @@ inline void parallel_buffered_sort(
   
  Algoritmus rozdělí vstupní oblast na dva bloky a postupně rozdělí každého bloku na dvě dílčí bloky dat pro provedení paralelně. Nepovinný argument `_Chunk_size` slouží k označení algoritmus, že by měl zpracovává bloky o velikosti < `_Chunk_size` sériově.  
   
-##  <a name="parallel_for"></a>  parallel_for  
+##  <a name="parallel_for"></a>  parallel_for –  
  `parallel_for` iteruje nad rozsah indexy a provede funkci uživatelem zadané při každé iteraci paralelně.  
   
 ```
@@ -703,7 +698,7 @@ void parallel_for(
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="parallel_for_each"></a>  parallel_for_each  
+##  <a name="parallel_for_each"></a>  parallel_for_each –  
  `parallel_for_each` Zadaná funkce se vztahuje na každý prvek v rozsahu, paralelně. Je sémanticky ekvivalentní `for_each` v fungovat `std` obor názvů, s tím rozdílem, že iteraci přes elementy provádí paralelně a neurčené pořadí iterace. Argument `_Func` musí podporovat operátor volání funkce formuláře `operator()(T)` kde parametr `T` je typ položky kontejneru se vstupní přes.  
   
 ```
@@ -748,7 +743,7 @@ void parallel_for_each(
   
  Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="parallel_invoke"></a>  parallel_invoke  
+##  <a name="parallel_invoke"></a>  parallel_invoke –  
  Provede zadané jako parametry současně a bloky, dokud dokončily spouštění funkce objekty. Každý objekt funkce může být výraz lambda ukazatel na funkci, nebo žádný objektu, který podporuje operátor volání funkce s podpisem `void operator()()`.  
   
 ```
@@ -1093,7 +1088,7 @@ inline _Reduce_type parallel_reduce(
   
  Pro třetí přetížení typ hodnoty identity musí být stejný jako typ výsledku snížení, ale iteraci `value_type` může lišit od obě. Funkce snížení rozsah `_Range_fun` se používá v první fázi s hodnotu identity jako výchozí hodnoty a binární funkce `_Sym_reduce_fun` se použije na dílčí výsledky v druhé fázi.  
   
-##  <a name="parallel_sort"></a>  parallel_sort  
+##  <a name="parallel_sort"></a>  parallel_sort –  
  Uspořádá elementů v zadaném rozsahu do nondescending pořadí, nebo podle řazení kritérium určeného predikátu Binární paralelně. Tato funkce je sémanticky podobná `std::sort` v, že je na základě porovnání nestabilním, místní řazení.  
   
 ```
@@ -1136,7 +1131,7 @@ inline void parallel_sort(
   
  Algoritmus rozdělí vstupní oblast na dva bloky a postupně rozdělí každého bloku na dvě dílčí bloky dat pro provedení paralelně. Nepovinný argument `_Chunk_size` slouží k označení algoritmus, že by měl zpracovává bloky o velikosti < `_Chunk_size` sériově.  
   
-##  <a name="parallel_transform"></a>  parallel_transform  
+##  <a name="parallel_transform"></a>  parallel_transform –  
  Každý prvek v zdrojový rozsah, nebo pár elementy ze dvou zdrojových oblastí se vztahuje objekt zadaná funkce a zkopíruje návratové hodnoty funkce objektu do cílový rozsah, paralelně. Tuto funkční je sémanticky ekvivalentní `std::transform`.  
   
 ```
@@ -1427,7 +1422,7 @@ inline void swap(
   
  Tato metoda není bezpečná souběžnosti. Je nutné zajistit, že nejsou žádná jiná vlákna provádění operací na buď souběžných vektory při volání této metody.  
   
-##  <a name="task_from_exception"></a>  task_from_exception  
+##  <a name="task_from_exception"></a>  task_from_exception –  
   
 ```
 template<typename _TaskType, typename _ExType>

@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token – třída | Microsoft Docs"
-ms.custom: 
+title: cancellation_token – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token – třída
 `cancellation_token` Třída reprezentuje schopnosti určit, zda byla vyžádána některé operace zrušení. Daný token dají přidružit `task_group`, `structured_task_group`, nebo `task` zajistit implicitní zrušení. Můžete ho také dotazování pro zrušení nebo zpětné volání pro registrováno Pokud a při přidruženého `cancellation_token_source` je zrušená.  
@@ -50,14 +45,14 @@ class cancellation_token;
 |Název|Popis|  
 |----------|-----------------|  
 |[cancellation_token](#ctor)||  
-|[~cancellation_token Destructor](#dtor)||  
+|[~ cancellation_token – destruktor](#dtor)||  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[deregister_callback](#deregister_callback)|Odebere zpětné volání dříve registrován prostřednictvím `register` metoda na základě `cancellation_token_registration` objekt byl vrácen v době registrace.|  
-|[is_cancelable](#is_cancelable)|Vrátí údaj o tom, zda lze tento token zrušit nebo ne.|  
+|[is_cancelable –](#is_cancelable)|Vrátí údaj o tom, zda lze tento token zrušit nebo ne.|  
 |[is_canceled](#is_canceled)|Vrátí `true` Pokud token byla zrušena.|  
 |[None](#none)|Vrátí token zrušení, který může být nikdy předmětem zrušení.|  
 |[register_callback](#register_callback)|Zaregistruje funkci zpětného volání s tokenem. Pokud token je zrušená, budou provedeny zpětné volání. Všimněte si, že pokud token je zrušena již v okamžiku, kdy tato metoda je volána, zpětné volání budou provedeny, okamžitě a synchronně.|  
@@ -67,7 +62,7 @@ class cancellation_token;
 |Název|Popis|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)||  
-|[operator=](#operator_eq)||  
+|[operátor =](#operator_eq)||  
 |[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -95,7 +90,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Parametry  
  `_Src`  
   
-##  <a name="deregister_callback"></a> deregister_callback 
+##  <a name="deregister_callback"></a> deregister_callback – 
 
  Odebere zpětné volání dříve registrován prostřednictvím `register` metoda na základě `cancellation_token_registration` objekt byl vrácen v době registrace.  
   

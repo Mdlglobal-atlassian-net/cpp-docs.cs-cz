@@ -1,13 +1,10 @@
 ---
-title: "Multithreading: Vytváření pracovních vláken | Microsoft Docs"
-ms.custom: 
+title: 'Multithreading: Vytváření pracovních vláken | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>Multithreading: Vytváření pracovních vláken
 Pracovní podproces se často používá ke zpracování úlohy na pozadí, které uživatel by neměl mít čekat chcete pokračovat v používání aplikace. Úlohy, jako je při každém přepočítání a tisk na pozadí jsou dobrými příklady pracovních vláken. V tomto tématu najdete postup potřeba vytvořit pracovní vlákno. Témata zahrnují:  
@@ -42,7 +37,7 @@ Pracovní podproces se často používá ke zpracování úlohy na pozadí, kter
   
  Vytvoření pracovní vlákno je relativně jednoduché úlohy. Jsou zapotřebí pouze dva kroky pro spuštění vašeho vlákna: implementace řídící funkce a spuštění vlákna. Není nutné na odvození třídy z [CWinThread](../mfc/reference/cwinthread-class.md). Pokud budete potřebovat speciální verzi se můžete odvození třídy `CWinThread`, ale není nutné pro většinu jednoduchých pracovních vláken. Můžete použít `CWinThread` bez úprav.  
   
-##  <a name="_core_starting_the_thread"></a>Spuštění vlákna  
+##  <a name="_core_starting_the_thread"></a> Spuštění vlákna  
  Existují dvě přetížené verze `AfxBeginThread`: ten, který lze vytvořit pouze pracovních vláken a jeden, který může vytvářet vlákna uživatelského rozhraní a pracovních vláken. Chcete-li zahájit provádění vašeho pracovního vlákna pomocí první přetížení, volejte [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), poskytuje následující informace:  
   
 -   Adresa řídící funkce.  
@@ -57,9 +52,9 @@ Pracovní podproces se často používá ke zpracování úlohy na pozadí, kter
   
 -   (Volitelné) Požadované zabezpečení atributy. Výchozí hodnota je stejný přístup jako nadřazené vlákno. Další informace o formátu informací zabezpečení najdete v tématu [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) v [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `AfxBeginThread`vytvoří a inicializuje `CWinThread` objektu, se spustí a vrátí jeho adresu, takže můžete na něj odkazovat později. Kontroly se provádějí v celém procesu zajistit, že všechny objekty jsou deallocated správně má libovolná součást vytvoření selhat.  
+ `AfxBeginThread` vytvoří a inicializuje `CWinThread` objektu, se spustí a vrátí jeho adresu, takže můžete na něj odkazovat později. Kontroly se provádějí v celém procesu zajistit, že všechny objekty jsou deallocated správně má libovolná součást vytvoření selhat.  
   
-##  <a name="_core_implementing_the_controlling_function"></a>Implementace řídící funkce  
+##  <a name="_core_implementing_the_controlling_function"></a> Implementace řídící funkce  
  Řídící funkce definuje vlákno. Při zadání tato funkce se vlákna spustí a při jejím ukončení vlákno se ukončí. Tato funkce musí mít následující prototyp:  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  Existují některá omezení na co můžete dělat v vícevláknové programu napsané pomocí knihovny MFC. Popis těchto omezení a další tipy pro používání vláken najdete v tématu [Multithreading: tipy pro programování](../parallel/multithreading-programming-tips.md).  
   
-##  <a name="_core_controlling_function_example"></a>Příklad řídící funkce  
+##  <a name="_core_controlling_function_example"></a> Příklad řídící funkce  
  Následující příklad ukazuje, jak definovat řídící funkce a použít ho z jiného část programu.  
   
 ```  

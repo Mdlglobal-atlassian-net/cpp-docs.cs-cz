@@ -1,29 +1,24 @@
 ---
-title: "Zásady plánovače | Microsoft Docs"
-ms.custom: 
+title: Zásady plánovače | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Zásady plánovače
 Tento dokument popisuje roli zásady plánovače v Concurrency Runtime. A *zásad plánovače* prvky strategie používající Plánovač při správě úloh. Představte si třeba aplikaci, která vyžaduje některé úlohy provést v `THREAD_PRIORITY_NORMAL` a další úlohy provést v `THREAD_PRIORITY_HIGHEST`.  Můžete vytvořit dvě instance plánovače: ten, který určuje `ContextPriority` k zásad `THREAD_PRIORITY_NORMAL` a druhý, který určuje stejné zásady jako `THREAD_PRIORITY_HIGHEST`.  
@@ -43,12 +38,12 @@ Tento dokument popisuje roli zásady plánovače v Concurrency Runtime. A *zása
   
 |Klíč zásad|Popis|Výchozí hodnota|  
 |----------------|-----------------|-------------------|  
-|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) hodnotu, která určuje typ vláken používaných při plánování úloh.|`ThreadScheduler`(pomocí normální vláken). Toto je jediná platná hodnota pro tento klíč.|  
+|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) hodnotu, která určuje typ vláken používaných při plánování úloh.|`ThreadScheduler` (pomocí normální vláken). Toto je jediná platná hodnota pro tento klíč.|  
 |`MaxConcurrency`|`unsigned int` Hodnotu, která určuje maximální počet souběžnosti prostředky, které používá plánovače.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|`unsigned int` Hodnotu, která určuje minimální počet souběžnosti prostředky, které používá plánovače.|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int` Hodnotu, která určuje, kolik vláken přidělit všem prostředkům zpracování.|`1`|  
 |`LocalContextCacheSize`|`unsigned int` Hodnotu, která určuje maximální počet kontextů, které mohou být uloženy v mezipaměti v místní frontu každý virtuální procesor.|`8`|  
-|`ContextStackSize`|`unsigned int` Hodnotu, která určuje velikost zásobníku, v kilobajtech, můžete vyhradit pro každý kontext.|`0`(použít výchozí velikost zásobníku)|  
+|`ContextStackSize`|`unsigned int` Hodnotu, která určuje velikost zásobníku, v kilobajtech, můžete vyhradit pro každý kontext.|`0` (použít výchozí velikost zásobníku)|  
 |`ContextPriority`|`int` Hodnotu, která určuje prioritu vlákno každý kontext. To může být libovolná hodnota, která můžete předat do [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) nebo `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| A [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) hodnotu, která určuje plánování algoritmus použitý. |`EnhanceScheduleGroupLocality`|  

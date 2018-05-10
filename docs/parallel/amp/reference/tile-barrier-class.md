@@ -2,11 +2,8 @@
 title: tile_barrier – třída | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tile_barrier
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d868b4bd677d207590de6449e3d5643001e857
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tilebarrier-class"></a>tile_barrier – třída
 Synchronizuje provádění vláken, která běží ve skupině přístup z více vláken (dlaždice) pomocí `wait` metody. Pouze modul runtime, můžete vytvořit instanci této třídy.  
@@ -48,7 +43,7 @@ class tile_barrier;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[tile_barrier Constructor](#ctor)|Inicializuje novou instanci třídy `tile_barrier` třídy.|  
+|[tile_barrier – konstruktor](#ctor)|Inicializuje novou instanci třídy `tile_barrier` třídy.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -100,7 +95,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 ```  
   
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence   
+## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence –   
 Bloky provádění všechna vlákna v dlaždici dokud všechna vlákna v dlaždici dosáhli toto volání. To zajistí, že všechny přístupy globální paměť jsou viditelné pro jiná vlákna v dlaždici přístup z více vláken a byly provedeny v programu pořadí.  
   
 ### <a name="syntax"></a>Syntaxe 

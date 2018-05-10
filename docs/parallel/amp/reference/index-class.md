@@ -1,12 +1,9 @@
 ---
-title: "index – třída | Microsoft Docs"
-ms.custom: 
+title: index – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/index
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="index-class"></a>index – třída
 Definuje *N*-dimenzí index pographics-cpp-amp.md.  
@@ -55,15 +50,15 @@ class index;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator--](#operator--)|Snižuje každý element `index` objektu.|  
-|[operator(mod)=](#operator_mod_eq)|Vypočítá numerického zbytku (zbývající) každý prvek v `index` objektu při dělení čísla daný element.|  
-|[operator*=](#operator_star_eq)|Vynásobí jednotlivé prvky `index` objekt číslem.|  
+|[--– operátor](#operator--)|Snižuje každý element `index` objektu.|  
+|[Operator(MOD) =](#operator_mod_eq)|Vypočítá numerického zbytku (zbývající) každý prvek v `index` objektu při dělení čísla daný element.|  
+|[Operator * =](#operator_star_eq)|Vynásobí jednotlivé prvky `index` objekt číslem.|  
 |[/ = – operátor](#operator_div_eq)|Vydělí jednotlivé prvky `index` objekt číslem.|  
-|[index::operator\[\]](#operator_at)|Vrátí element, který je v zadaném indexu.|  
-|[operator++](#operator_add_add)|Zvýší jednotlivé prvky `index` objektu.|  
+|[index::Operator\[\]](#operator_at)|Vrátí element, který je v zadaném indexu.|  
+|[Operator ++](#operator_add_add)|Zvýší jednotlivé prvky `index` objektu.|  
 |[operator+=](#operator_add_eq)|Přidá zadané číslo na jednotlivé prvky `index` objektu.|  
-|[operator=](#operator_eq)|Zkopíruje obsah zadaného `index` objekt s touto.|  
-|[operator-=](#operator_-_eq)|Odečítá od zadané číslo z každý element `index` objektu.|  
+|[operátor =](#operator_eq)|Zkopíruje obsah zadaného `index` objekt s touto.|  
+|[-= – operátor](#operator_-_eq)|Odečítá od zadané číslo z každý element `index` objektu.|  
 
   
 ### <a name="public-constants"></a>Veřejné konstanty  
@@ -84,7 +79,7 @@ class index;
  **Namespace:** souběžnosti  
 
 
-## <a name="index_ctor">index – konstruktor</a>
+## <a name="index_ctor"></a> index – konstruktor
 Inicializuje novou instanci třídy index.
 
 ```  
@@ -164,7 +159,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Parametry
 _Rhs číslo, které má násobení.
 
-## <a name="operator_div_eq">/ = – operátor</a> 
+## <a name="operator_div_eq"></a>  / = – operátor 
 Vydělí každý element v indexu objektu podle zadaného čísla.
 
 ```

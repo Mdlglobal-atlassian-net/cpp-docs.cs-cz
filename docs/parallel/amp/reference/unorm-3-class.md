@@ -1,12 +1,9 @@
 ---
-title: "unorm_3 – třída | Microsoft Docs"
-ms.custom: 
+title: unorm_3 – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm3-class"></a>unorm_3 – třída
 Představuje krátký vektoru tři nepodepsané normální čísel.  
@@ -163,10 +158,10 @@ class unorm_3;
 |----------|-----------------|  
 |unorm_3::operator--||  
 |unorm_3::operator*=||  
-|unorm_3::operator/=||  
-|unorm_3::operator++||  
+|/ unorm_3::Operator = – operátor||  
+|unorm_3::Operator ++||  
 |unorm_3::operator+=||  
-|unorm_3::operator=||  
+|unorm_3::Operator =||  
 |unorm_3::operator-=||  
   
 ### <a name="public-constants"></a>Veřejné konstanty  
@@ -180,35 +175,35 @@ class unorm_3;
 |Název|Popis|  
 |----------|-----------------|  
 |unorm_3::b||  
-|unorm_3::bg||  
-|unorm_3::bgr||  
+|unorm_3::BG||  
+|unorm_3::BGR||  
 |unorm_3::br||  
 |unorm_3::brg||  
 |unorm_3::g||  
 |unorm_3::GB||  
-|unorm_3::gbr||  
+|unorm_3::GBR||  
 |unorm_3::GR||  
 |unorm_3::grb||  
 |unorm_3::r||  
 |unorm_3::rb||  
 |unorm_3::rbg||  
 |unorm_3::rg||  
-|unorm_3::rgb||  
+|unorm_3::RGB||  
 |unorm_3::x||  
-|unorm_3::xy||  
+|unorm_3::XY||  
 |unorm_3::xyz||  
 |unorm_3::xz||  
 |unorm_3::xzy||  
 |unorm_3::y||  
 |unorm_3::yx||  
 |unorm_3::yxz||  
-|unorm_3::yz||  
+|unorm_3::YZ||  
 |unorm_3::yzx||  
 |unorm_3::z||  
 |unorm_3::zx||  
 |unorm_3::zxy||  
 |unorm_3::Zy||  
-|unorm_3::zyx||  
+|unorm_3::Zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `unorm_3`  

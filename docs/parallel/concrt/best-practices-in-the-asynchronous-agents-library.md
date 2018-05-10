@@ -1,13 +1,10 @@
 ---
-title: "Osvědčené postupy v knihovně asynchronních agentů | Microsoft Docs"
-ms.custom: 
+title: Osvědčené postupy v knihovně asynchronních agentů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d4b52839675334ab343adf48790bdce390dd5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f1b20342ad6bb64c653a211f9af2fb9e9130286
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Osvědčené postupy v knihovně asynchronních agentů
 Tento dokument popisuje, jak provádět efektivní použití asynchronní knihovna agentů. Knihovna agentů zvýší úroveň služby založené na objektu actor programovací model a zprávy v procesu předávání pro hrubý toku dat a paralelní zpracování úlohy.  
   
  Další informace o knihovně agentů najdete v tématu [knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md).  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Tento dokument obsahuje následující části:  
   
 - [Pomocí agentů Isolate stavu](#isolation)  
@@ -46,7 +41,7 @@ Tento dokument popisuje, jak provádět efektivní použití asynchronní knihov
   
 - [Použití shared_ptr v datové sítě při vlastnictví je definován](#ownership)  
   
-##  <a name="isolation"></a>Pomocí agentů Isolate stavu  
+##  <a name="isolation"></a> Pomocí agentů Isolate stavu  
  Knihovna agentů poskytuje alternativy do sdíleného stavu tím, že umožňuje připojit izolované komponenty prostřednictvím asynchronní mechanismus předávání zpráv. Asynchronní agenti jsou co nejúčinnější, kdy budou izolovat jejich vnitřní stav z ostatních součástí. Prostřednictvím izolování stavu, více součástí, které není fungují obvykle na sdílená data. Stav izolace můžete povolit aplikaci škálovat, protože snižuje kolize na sdílené paměti. Stavu izolace také snižuje riziko zablokování a soupeření podmínky, protože komponenty nemusíte synchronizovat přístup ke sdíleným datům.  
   
  Obvykle tím, že se data členů v izolovat stavu agenta `private` nebo `protected` částech třídy agenta a pomocí vyrovnávacích pamětí zpráv pro komunikaci změny stavu. Následující příklad ukazuje `basic_agent` třída, která je odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md). `basic_agent` Třída používá dva vyrovnávacích pamětí zpráv ke komunikaci s externích součástí. Příchozí zprávy; obsahuje jednu vyrovnávací paměti zpráv Další vyrovnávací paměti zpráv uchovává odchozí zprávy.  
@@ -57,7 +52,7 @@ Tento dokument popisuje, jak provádět efektivní použití asynchronní knihov
   
  [[Horní](#top)]  
   
-##  <a name="throttling"></a>Použití omezení mechanismus a omezit počet zpráv v datovém kanálu  
+##  <a name="throttling"></a> Použití omezení mechanismus a omezit počet zpráv v datovém kanálu  
  Mnoho typů vyrovnávací paměť zpráv, jako například [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), může pojmout neomezený počet zpráv. Když autor zprávy odesílá zprávy do kanálu data rychleji, než příjemce může zpracovat tyto zprávy, můžete zadat aplikace stavu nedostatku paměti nebo z důvodu nedostatku paměti. Omezení mechanismus, například semafor, můžete omezit počet zpráv, které jsou aktuálně aktivních v datovém kanálu.  
   
  Základní následující příklad ukazuje, jak pomocí semafor omezit počet zpráv v datovém kanálu. Data kanálu používá [concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkce k simulaci operace, která trvá nejméně 100 milisekund. Protože odesílatel vytváří zprávy rychleji, než příjemce může zpracovat tyto zprávy, tento příklad definuje `semaphore` třídy, které chcete povolit aplikace a omezit počet active zpráv.  
@@ -72,14 +67,14 @@ Tento dokument popisuje, jak provádět efektivní použití asynchronní knihov
   
  [[Horní](#top)]  
   
-##  <a name="fine-grained"></a>Neprovádějte podrobných pracovní v datovém kanálu  
+##  <a name="fine-grained"></a> Neprovádějte podrobných pracovní v datovém kanálu  
  Knihovna agentů je nejvhodnější pro práci, kterou provádí datovém kanálu je docela hrubý. Jedna součást aplikace může například čtení dat ze souboru nebo připojení k síti a příležitostně odesílat data do jiné komponenty. Protokol, který používá knihovna agentů potřebný k šíření zprávy způsobí, že tento mechanismus předávání zpráv do mají další režii než paralelní konstrukce úloh, které jsou poskytovány [Parallel Library vzory](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Proto zkontrolujte, že je práce, které se provádí pomocí datovém kanálu dostatečně dlouhé, aby posun Tato dodatečná režie.  
   
  I když datový kanál je co nejúčinnější, pokud její úkoly hrubý, každá fáze v kanálu dat slouží k provádění více podrobných pracovní PPL konstrukce, jako je například skupin úloh a paralelní algoritmy. Příklad sítě hrubý data, která používá podrobných paralelismus v každé fázi zpracování naleznete v části [návod: vytváření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
   
  [[Horní](#top)]  
   
-##  <a name="large-payloads"></a>Nepředávejte datových částí velké zpráva podle hodnoty  
+##  <a name="large-payloads"></a> Nepředávejte datových částí velké zpráva podle hodnoty  
 
  V některých případech modul runtime vytvoří kopii každé zprávy, který předává z jedné vyrovnávací paměti zpráv do jiné vyrovnávací paměti zpráv. Například [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) třída nabízí kopii každou zprávu, která obdrží pro každý z jeho cíle. Modul runtime také vytvoří kopii daty zprávy, při použití funkce předávání zpráv, jako [concurrency::send](reference/concurrency-namespace-functions.md#send) a [concurrency::receive](reference/concurrency-namespace-functions.md#receive) pro zápis zpráv do a čtení zpráv z zpráv vyrovnávací paměť. Přestože tento mechanismus pomáhá eliminovat riziko souběžně zápis do sdílených dat, může vést k paměti nízký výkon při relativně velké datové části zprávy.  
   
@@ -100,7 +95,7 @@ took 47ms.
   
  [[Horní](#top)]  
   
-##  <a name="ownership"></a>Použití shared_ptr v datové sítě při vlastnictví je definován  
+##  <a name="ownership"></a> Použití shared_ptr v datové sítě při vlastnictví je definován  
  Při odesílání zpráv ukazatel prostřednictvím kanálu předávání zpráv nebo sítě obvykle přidělit paměť pro každou zprávu vpředu sítě a uvolnit paměť, že na konci sítě. I když tento mechanismus často funguje dobře, existují případy, ve které je obtížné nebo není možné ji použít. Představte si třeba tento případ, ve kterém datovou síť obsahuje více uzlů end. V takovém případě není žádná zrušte umístění pro uvolnění paměti pro zprávy.  
   
  Pokud chcete tento problém vyřešit, můžete použít mechanismus, například [std::shared_ptr](../../standard-library/shared-ptr-class.md), která umožňuje ukazatel na vlastnit více součástí. Když konečné `shared_ptr` zničena objektu, který vlastní prostředek, prostředek je také uvolněno.  

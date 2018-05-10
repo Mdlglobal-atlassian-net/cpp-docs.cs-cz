@@ -1,12 +1,9 @@
 ---
-title: "#řádek – direktiva (C/C++) | Microsoft Docs"
-ms.custom: 
+title: '#řádek – direktiva (C/C++) | Microsoft Docs'
+ms.custom: ''
 ms.date: 10/18/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#line'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - line directive (#line)
 - '#line directive'
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13760aa7c503339c16ed6418badc295170d2c938
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ebbcea7432b27e9269b5041d90d14534a77b812
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="line-directive-cc"></a>#line – direktiva (C++)
 
@@ -43,13 +38,13 @@ Kompilátor používá číslo řádku a volitelný název souboru pro odkazová
 
 *Číslice pořadí* hodnota může být jakékoli celočíselná konstanta. Nahrazení makrem lze provést u tokenů předběžného zpracování, ale výsledek musí být vyhodnocen na správnou syntaxi. *Filename* může být libovolnou kombinací znaků a musí být uzavřena v uvozovkách (**""**). Pokud *filename* je tento parametr vynechán, předchozí filename zůstává beze změny.
 
-Zapsáním direktivy `#line` je možné změnit číslo zdrojového řádku a název souboru. Překladač používá číslo řádku a název souboru k určení hodnoty předdefinovaná makra **&#95; &#95; SOUBOR &#95; &#95;**  a **&#95; &#95; Řádek &#95; &#95;** . Makra je možné použít k vložení samopopisných chybových zpráv do textu programu. Další informace o těchto předdefinovaná makra najdete v tématu [předdefinovaná makra](../preprocessor/predefined-macros.md).
+Zapsáním direktivy `#line` je možné změnit číslo zdrojového řádku a název souboru. Překladač používá číslo řádku a název souboru k určení hodnoty předdefinovaná makra **&#95; &#95;soubor&#95; &#95;** a **&#95; &#95;řádku&#95; &#95;**. Makra je možné použít k vložení samopopisných chybových zpráv do textu programu. Další informace o těchto předdefinovaná makra najdete v tématu [předdefinovaná makra](../preprocessor/predefined-macros.md).
 
-**&#95; &#95; SOUBOR &#95; &#95;**  makro rozšíří na řetězec, jehož obsah je název souboru v uvozovkách (**""**).
+**&#95; &#95;Soubor&#95; &#95;** makro rozšíří na řetězec, jehož obsah je název souboru v uvozovkách (**""**).
 
 Při změně čísla řádku a názvu souboru ignoruje kompilátor předchozí hodnoty a pokračuje ve zpracování s novými hodnotami. Direktiva `#line` je obvykle používána generátory programu pro odkazování chybových zpráv na původní zdrojový soubor namísto generovaného programu.
 
-Následující příklady ilustrují `#line` a **&#95; &#95; Řádek &#95; &#95;**  a **&#95; &#95; SOUBOR &#95; &#95;**  makra.
+Následující příklady ilustrují `#line` a **&#95; &#95;řádku&#95; &#95;** a **&#95; &#95;soubor&#95; &#95;** makra.
 
 V tomto prohlášení číslo řádku interně uložené nastavena na 151 a název souboru se změní na copy.c.
 
@@ -57,7 +52,7 @@ V tomto prohlášení číslo řádku interně uložené nastavena na 151 a náz
 #line 151 "copy.c"
 ```
 
- V tomto příkladu makro `ASSERT` používá předdefinovaná makra **&#95; &#95; Řádek &#95; &#95;**  a **&#95; &#95; SOUBOR &#95; &#95;**  pro tisk chybovou zprávu o zdrojový soubor, pokud daný assertion není pravda.
+ V tomto příkladu makro `ASSERT` používá předdefinovaná makra **&#95; &#95;řádku&#95; &#95;** a **&#95; &#95;soubor&#95; &#95;** tisknout chybová zpráva o zdrojový soubor, pokud daný assertion není pravda.
 
 ```cpp
 #define ASSERT(cond) if( !(cond) )\

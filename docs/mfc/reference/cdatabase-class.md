@@ -1,12 +1,9 @@
 ---
-title: "CDatabase – třída | Microsoft Docs"
-ms.custom: 
+title: CDatabase – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDatabase
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb71b31fa3133b4e1b93564ef0b530cb20bb3dfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatabase-class"></a>CDatabase – třída
 Reprezentuje připojení ke zdroji dat, pomocí kterého lze provozovat na datovém zdroji.  
@@ -137,7 +132,7 @@ class CDatabase : public CObject
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdb.h  
   
-##  <a name="begintrans"></a>CDatabase::BeginTrans  
+##  <a name="begintrans"></a>  CDatabase::BeginTrans  
  Volání této funkce člen k zahájení transakce s připojeného zdroje dat.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL BeginTrans();
 ### <a name="example"></a>Příklad  
   Najdete v článku [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="bindparameters"></a>CDatabase::BindParameters  
+##  <a name="bindparameters"></a>  CDatabase::BindParameters  
  Přepsání `BindParameters` když potřebujete pro svázání parametrů před voláním [CDatabase::ExecuteSQL](#executesql).  
   
 ```  
@@ -185,7 +180,7 @@ virtual void BindParameters(HSTMT hstmt);
   
  V přepsání, volat **SQLBindParameters** a souvisejících funkcí rozhraní ODBC pro vazbu parametrů. MFC volá přepsání před volání `ExecuteSQL`. Není potřeba volat **SQLPrepare**; `ExecuteSQL` volání **SQLExecDirect** a zničí **hstmt**, který je použit pouze jednou.  
   
-##  <a name="cancel"></a>CDatabase::Cancel  
+##  <a name="cancel"></a>  CDatabase::Cancel  
  Volání této funkce člen k vyžádání, že zdroj dat zrušit asynchronní operace probíhá nebo proces z druhé vlákna.  
   
 ```  
@@ -195,7 +190,7 @@ void Cancel();
 ### <a name="remarks"></a>Poznámky  
  Upozorňujeme, že třídy knihovny MFC rozhraní ODBC už použít asynchronní zpracování; k provedení určité operace asychronous, musí přímo volat rozhraní API ODBC funkce [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Další informace najdete v tématu [asynchronního spuštění](https://msdn.microsoft.com/library/ms713563.aspx) ve Windows SDK.  
   
-##  <a name="cantransact"></a>CDatabase::CanTransact  
+##  <a name="cantransact"></a>  CDatabase::CanTransact  
  Volání této funkce člen k určení, zda databáze umožňuje transakce.  
   
 ```  
@@ -208,7 +203,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Poznámky  
  Informace o transakcích, najdete v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CDatabase::CanUpdate  
+##  <a name="canupdate"></a>  CDatabase::CanUpdate  
  Volání této funkce člen můžete určit, zda `CDatabase` objekt umožňuje aktualizace.  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Poznámky  
  Ne všechny ovladače podporovat aktualizace.  
   
-##  <a name="cdatabase"></a>CDatabase::CDatabase  
+##  <a name="cdatabase"></a>  CDatabase::CDatabase  
  Vytvoří `CDatabase` objektu.  
   
 ```  
@@ -240,7 +235,7 @@ CDatabase();
   
  [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="close"></a>CDatabase::Close  
+##  <a name="close"></a>  CDatabase::Close  
  Pokud chcete odpojit ze zdroje dat, volání této funkce člen.  
   
 ```  
@@ -255,7 +250,7 @@ virtual void Close();
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="committrans"></a>CDatabase::CommitTrans  
+##  <a name="committrans"></a>  CDatabase::CommitTrans  
  Volání této funkce člen po dokončení transakce.  
   
 ```  
@@ -275,7 +270,7 @@ BOOL CommitTrans();
 ### <a name="example"></a>Příklad  
   Najdete v článku [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="executesql"></a>CDatabase::ExecuteSQL  
+##  <a name="executesql"></a>  CDatabase::ExecuteSQL  
  Volání této funkce člen, pokud budete potřebovat k provedení příkazu SQL přímo.  
   
 ```  
@@ -287,14 +282,14 @@ void ExecuteSQL(LPCTSTR lpszSQL);
  Ukazatel na ukončené hodnotou null řetězec obsahující platný příkaz SQL k provedení. Můžete předat [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Příkaz vytvořte jako řetězce ukončené hodnotou null. `ExecuteSQL`nevrací datových záznamů. Pokud chcete pracovat záznamů, použijte místo toho objekt sady záznamů.  
+ Příkaz vytvořte jako řetězce ukončené hodnotou null. `ExecuteSQL` nevrací datových záznamů. Pokud chcete pracovat záznamů, použijte místo toho objekt sady záznamů.  
   
  Většina příkazů pro zdroj dat jsou vydávány prostřednictvím sady záznamů objekty, které podporují příkazy pro výběr dat, vkládání nových záznamů, odstraňování záznamů a úpravy záznamů. Ale ne všechny funkce ODBC je přímo podporované databázové třídy, takže může v některých případech třeba, aby přímá volání SQL s `ExecuteSQL`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
+##  <a name="getbookmarkpersistence"></a>  CDatabase::GetBookmarkPersistence  
  Volání této funkce člen k určení zachování záložek na objekt sady záznamů po určité operace.  
   
 ```  
@@ -321,7 +316,7 @@ DWORD GetBookmarkPersistence() const;
   
  Další informace o této návratovou hodnotu, najdete v části funkce rozhraní API ODBC **SQLGetInfo** ve Windows SDK. Další informace o záložky, najdete v článku [sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="getconnect"></a>CDatabase::GetConnect  
+##  <a name="getconnect"></a>  CDatabase::GetConnect  
  Volání této funkce člen načíst připojovací řetězec použitý při volání `OpenEx` nebo `Open` který připojený `CDatabase` objekt ke zdroji dat.  
   
 ```  
@@ -334,7 +329,7 @@ const CString GetConnect() const;
 ### <a name="remarks"></a>Poznámky  
  V tématu [CDatabase::Open](#open) popis vytvoření připojovacího řetězce.  
   
-##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
+##  <a name="getcursorcommitbehavior"></a>  CDatabase::GetCursorCommitBehavior  
  Volání této funkce člen k určení jak [CommitTrans](#committrans) operaci ovlivňuje kurzory na objekty otevřete sady záznamů.  
   
 ```  
@@ -355,7 +350,7 @@ int GetCursorCommitBehavior() const;
   
  Další informace o této návratovou hodnotu, najdete v části funkce rozhraní API ODBC **SQLGetInfo** ve Windows SDK. Další informace o transakcích, najdete v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
+##  <a name="getcursorrollbackbehavior"></a>  CDatabase::GetCursorRollbackBehavior  
  Volání této funkce člen k určení jak [vrácení zpět](#rollback) operaci ovlivňuje kurzory na objekty otevřete sady záznamů.  
   
 ```  
@@ -376,7 +371,7 @@ int GetCursorRollbackBehavior() const;
   
  Další informace o této návratovou hodnotu, najdete v části funkce rozhraní API ODBC **SQLGetInfo** ve Windows SDK. Další informace o transakcích, najdete v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+##  <a name="getdatabasename"></a>  CDatabase::GetDatabaseName  
  Volání této funkce člen získávání názvu aktuálně připojené databáze (za předpokladu, že zdroje dat definuje s názvem objektu s názvem "databáze").  
   
 ```  
@@ -391,7 +386,7 @@ CString GetDatabaseName() const;
   
  Můžete například zobrazit tento název v nadpisu. Pokud dojde k chybě při načítání názvu z rozhraní ODBC, `GetDatabaseName` vrátí prázdnou **Cstring**.  
   
-##  <a name="isopen"></a>CDatabase::IsOpen  
+##  <a name="isopen"></a>  CDatabase::IsOpen  
  Volání této funkce člen můžete určit, zda `CDatabase` objekt je aktuálně připojený ke zdroji dat.  
   
 ```  
@@ -401,7 +396,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud nenulové hodnoty `CDatabase` objektu je aktuálně připojen; jinak hodnota 0.  
   
-##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
+##  <a name="m_hdbc"></a>  CDatabase::m_hdbc  
  Obsahuje veřejné popisovač pro připojení zdroje dat ODBC – "popisovač připojení".  
   
 ### <a name="remarks"></a>Poznámky  
@@ -412,7 +407,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
+##  <a name="onsetoptions"></a>  CDatabase::OnSetOptions  
  Při provádění přímo příkazu jazyka SQL s volá rámec této – členská funkce `ExecuteSQL` – členská funkce.  
   
 ```  
@@ -424,9 +419,9 @@ virtual void OnSetOptions(HSTMT hstmt);
  Popisovač příkazu ODBC, pro které jsou nastavené možnosti.  
   
 ### <a name="remarks"></a>Poznámky  
- `CRecordset::OnSetOptions`také volá tuto funkci člen.  
+ `CRecordset::OnSetOptions` také volá tuto funkci člen.  
   
- `OnSetOptions`Nastaví hodnotu časového limitu přihlášení. Pokud zde nejsou předchozích volání `SetQueryTimeout` a členské funkce `OnSetOptions` odráží aktuální hodnoty, jinak, nastaví výchozí hodnoty.  
+ `OnSetOptions` Nastaví hodnotu časového limitu přihlášení. Pokud zde nejsou předchozích volání `SetQueryTimeout` a členské funkce `OnSetOptions` odráží aktuální hodnoty, jinak, nastaví výchozí hodnoty.  
   
 > [!NOTE]
 >  Před MFC 4.2 `OnSetOptions` buď snychronous nebo asynchronní také nastavit režim zpracovávání. Počínaje MFC 4.2, všechny operace jsou synchronní. Chcete-li provést asynchronní operaci, musíte provést přímé volání rozhraní API ODBC funkce **SQLSetPos**.  
@@ -435,7 +430,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  Přepsání `OnSetOptions` Pokud chcete nastavit další možnosti. Přepsání by měly volat základní třídy `OnSetOptions` před nebo po volání funkce rozhraní API ODBC **SQLSetStmtOption**. Postupujte podle metoda v rozhraní framework výchozí implementaci `OnSetOptions`.  
   
-##  <a name="open"></a>CDatabase::Open  
+##  <a name="open"></a>  CDatabase::Open  
  Volání této funkce člen k chybě při inicializaci nově vytvořený `CDatabase` objektu.  
   
 ```  
@@ -483,7 +478,7 @@ virtual BOOL Open(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="openex"></a>CDatabase::OpenEx  
+##  <a name="openex"></a>  CDatabase::OpenEx  
  Volání této funkce člen k chybě při inicializaci nově vytvořený `CDatabase` objektu.  
   
 ```  
@@ -526,7 +521,7 @@ virtual BOOL OpenEx(
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="rollback"></a>CDatabase::Rollback  
+##  <a name="rollback"></a>  CDatabase::Rollback  
  Volání této funkce člen změny provedené během transakce.  
   
 ```  
@@ -546,7 +541,7 @@ BOOL Rollback();
 ### <a name="example"></a>Příklad  
   Najdete v článku [transakce: provádění transakcí v sadě záznamů (rozhraní ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout  
  Volání této funkce člen – před voláním `OpenEx` nebo **otevřete** – přepsat výchozí počet sekund, než pokus o data připojení ke zdroji časového limitu.  
   
 ```  
@@ -562,7 +557,7 @@ void SetLoginTimeout(DWORD dwSeconds);
   
  Výchozí hodnota pro vypršení časových limitů přihlášení je 15 sekund. Ne všechny zdroje dat podporují možnost zadat hodnotu časového limitu přihlášení. Pokud zdroj dat nepodporuje časový limit, získáte výstup trasování, ale ne k výjimce. Hodnota 0 znamená "nekonečné."  
   
-##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>  CDatabase::SetQueryTimeout  
  Volání této funkce člena přepsat výchozí počet sekund před dalších operacích na připojené datový zdroj časový limit.  
   
 ```  

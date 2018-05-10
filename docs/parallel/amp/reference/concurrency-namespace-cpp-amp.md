@@ -1,12 +1,9 @@
 ---
-title: "Namespace souběžnosti (C++ AMP) | Microsoft Docs"
-ms.custom: 
+title: Namespace souběžnosti (C++ AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Obor názvů souběžnosti (C++ AMP)
 Poskytuje třídy a funkce, které urychlit spuštění kódu C++ na data paralelní hardwaru. Další informace najdete v tématu [přehled produktu C++ AMP](../cpp-amp-overview.md)  
@@ -91,12 +86,12 @@ namespace Concurrency;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloky provádění všechna vlákna v dlaždici dokud byly dokončeny všechny přístupy paměti.|  
+|[all_memory_fence –](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloky provádění všechna vlákna v dlaždici dokud byly dokončeny všechny přístupy paměti.|  
 |[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Uninitializes C++ AMP runtime.|  
 |[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Přetíženo. Pokud stejná jako první zadaná hodnota porovná s hodnotou uloženou v zadaném umístění, druhý zadaná hodnota je uložena ve stejném umístění jako atomickou operaci.|  
 |[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění jako atomickou operaci se zadanou hodnotou.|  
 |[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění součtu tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
-|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `and` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
+|[atomic_fetch_and –](concurrency-namespace-functions-amp.md#atomic_fetch_and)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění bitové hodnotě `and` tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
 |[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|Přetíženo. Sníží hodnotu uloží do zadaného umístění a výsledek je uložen ve stejném umístění jako atomickou operaci.|  
 |[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|Přetíženo. Zvýší s hodnotou uloženou v zadaném umístění a výsledek je uložen ve stejném umístění jako atomickou operaci.|  
 |[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|Přetíženo. Nastaví hodnotu uloženou v zadaném umístění se větší tuto hodnotu a zadanou hodnotu jako atomickou operaci.|  
@@ -109,9 +104,9 @@ namespace Concurrency;
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Zruší provádění funkci, která má `restrict(amp)` klauzule omezení.|  
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Vytiskne formátovaný řetězec k sadě Visual Studio **výstup** okno a vyvolá [runtime_exception](runtime-exception-class.md) výjimka, která má stejné formátování řetězce.|  
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Vytiskne formátovaný řetězec k sadě Visual Studio **výstup** okno. Je volána z funkce, která má `restrict(amp)` klauzule omezení.|  
-|[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloky provádění všechna vlákna v dlaždici, dokud všechny globální paměť přistupuje byly dokončeny.|  
+|[global_memory_fence –](concurrency-namespace-functions-amp.md#global_memory_fence)|Bloky provádění všechna vlákna v dlaždici, dokud všechny globální paměť přistupuje byly dokončeny.|  
 |[parallel_for_each – funkce (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Spustí funkci napříč výpočetní doméně.|  
-|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blokování provádění všechna vlákna v dlaždici až `tile_static` dokončili paměti přístupů.|  
+|[tile_static_memory_fence –](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blokování provádění všechna vlákna v dlaždici až `tile_static` dokončili paměti přístupů.|  
   
 ## <a name="constants"></a>Konstanty  
   

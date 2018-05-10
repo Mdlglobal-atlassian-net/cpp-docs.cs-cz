@@ -1,13 +1,10 @@
 ---
 title: UUID (atributy C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uuid-c-attributes"></a>uuid (atributy C++)
 Určuje jedinečné ID pro třídy nebo rozhraní.  
@@ -41,7 +36,7 @@ Určuje jedinečné ID pro třídy nebo rozhraní.
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *UUID*  
+ *uuid*  
  128-bit, jedinečný identifikátor.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -62,7 +57,7 @@ Určuje jedinečné ID pro třídy nebo rozhraní.
   
 |||  
 |-|-|  
-|**Platí pro**|**Třída**, `struct`, `interface`, **– typ union**,`enum`|  
+|**Platí pro**|**Třída**, `struct`, `interface`, **– typ union**, `enum`|  
 |**Opakovatelných**|Ne|  
 |**Povinné atributy**|Žádné|  
 |**Neplatné atributy**|Žádné|  
@@ -74,4 +69,4 @@ Určuje jedinečné ID pro třídy nebo rozhraní.
  [Atributy rozhraní](../windows/interface-attributes.md)   
  [Class – atributy](../windows/class-attributes.md)   
  [TypeDef, Enum, Union a Struct – atributy](../windows/typedef-enum-union-and-struct-attributes.md)   
- [UUID](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
+ [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

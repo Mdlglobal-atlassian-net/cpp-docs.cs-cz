@@ -1,13 +1,10 @@
 ---
-title: "Obecné třídy (C + +/ CLI) | Microsoft Docs"
-ms.custom: 
+title: Obecné třídy (C + +/ CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Obecné třídy (C++/CLI)
 Obecné třídy je deklarován v následující podobě:  
@@ -49,11 +44,11 @@ class-body
 ## <a name="remarks"></a>Poznámky  
  Ve výše uvedené syntaxe se používají následující termíny:  
   
- `attributes`(volitelné)  
+ `attributes` (volitelné)  
  Další deklarativní informace. Další informace o atributy a třídy atributů najdete v tématu atributy.  
   
  *klíč třídy*  
- Buď `class` nebo`typename`  
+ Buď `class` nebo `typename`  
   
  *Typ-parametr-identifikátory*,  
  Seznam oddělený čárkami identifikátorů zadání názvy parametrů typu.  
@@ -69,7 +64,7 @@ class-body
  *Modifikátory dostupnosti*  
  Modifikátory dostupnosti pro obecná třída Pro prostředí Windows Runtime pouze povolené Modifikátor je `private`. Pro modul CLR, jsou povolené modifikátory `private` a `public`.  
   
- *identifikátor*  
+ *Identifikátor*  
  Název třídy Obecné, všechny platný identifikátor C++.  
   
  *Modifikátory* (volitelné)  
@@ -81,10 +76,10 @@ class-body
  *text – třída*  
  Tělo třídy, která obsahuje pole, členské funkce atd.  
   
- *deklarátory*  
+ *Deklarátory*  
  Deklarace žádné proměnné tohoto typu. Příklad: `^` *identifikátor*[`,` ...]  
   
- Obecné třídy takovéto můžou deklarovat (Všimněte si, že klíčové slovo **třída** lze namísto **typename**). V tomto příkladu `ItemType`, `KeyType` a `ValueType` jsou neznámé typy, které jsou určené v místě, kde typ. `HashTable<int, int>`je vytvořený typ obecného typu `HashTable<KeyType, ValueType>`. Počet různých sestavené typy konstruovat z jednoho obecného typu. Sestavené typy, které se vytvářejí na základě obecné třídy jsou zpracovány jako libovolný jiný typ třídy ref.  
+ Obecné třídy takovéto můžou deklarovat (Všimněte si, že klíčové slovo **třída** lze namísto **typename**). V tomto příkladu `ItemType`, `KeyType` a `ValueType` jsou neznámé typy, které jsou určené v místě, kde typ. `HashTable<int, int>` je vytvořený typ obecného typu `HashTable<KeyType, ValueType>`. Počet různých sestavené typy konstruovat z jednoho obecného typu. Sestavené typy, které se vytvářejí na základě obecné třídy jsou zpracovány jako libovolný jiný typ třídy ref.  
   
 ```  
 // generic_classes_1.cpp  

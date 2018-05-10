@@ -1,12 +1,9 @@
 ---
-title: "Call – třída | Microsoft Docs"
-ms.custom: 
+title: Call – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - call
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="call-class"></a>Třída call
 A `call` zasílání zpráv blok je více zdroje, seřazené `target_block` , který spustí zadaná funkce při přijímání zprávy.  
@@ -65,10 +60,10 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 |Název|Popis|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Provede volání funkce na vstupní zprávy.|  
-|[process_message](#process_message)|Zpracuje zprávu, která byla přijata to `call` zasílání zpráv bloku.|  
+|[process_message –](#process_message)|Zpracuje zprávu, která byla přijata to `call` zasílání zpráv bloku.|  
 |[propagate_message](#propagate_message)|Asynchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `propagate` metoda, když volá blok zdroje.|  
 |[send_message –](#send_message)|Synchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source –](#supports_anonymous_source)|Přepsání `supports_anonymous_source` metoda indikující, že tento blok může přijmout zprávy nabízené zdroji, který není přidružený k němu. (Přepisuje [itarget::supports_anonymous_source –](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [asynchronní bloky zpráv](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -85,7 +80,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor">Volání</a> 
+##  <a name="ctor"></a> Volání 
 
  Vytvoří `call` zasílání zpráv bloku.  
   
@@ -187,7 +182,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Návratová hodnota  
  A [message_status](concurrency-namespace-enums.md) znamenat cíl rozhodli udělat se zprávou.  
   
-##  <a name="send_message">send_message –</a> 
+##  <a name="send_message"></a> send_message – 
 
  Synchronně předá zprávu od `ISource` bloku k tomuto `call` zasílání zpráv bloku. Je volána, pomocí `send` metoda, když volá blok zdroje.  
   

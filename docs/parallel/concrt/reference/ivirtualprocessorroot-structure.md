@@ -1,12 +1,9 @@
 ---
-title: "Ivirtualprocessorroot – struktura | Microsoft Docs"
-ms.custom: 
+title: Ivirtualprocessorroot – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot – struktura
 Abstrakci pro hardware vláken, ve kterém můžete spustit vlákno proxy.  
@@ -47,9 +42,9 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[IVirtualProcessorRoot::Activate](#activate)|Způsobí, že proxy vlákno přidružené k rozhraní kontext provádění `pContext` spustit provádění v této kořenové virtuálních procesorů.|  
-|[IVirtualProcessorRoot::Deactivate](#deactivate)|Způsobí, že proxy vlákno aktuálně spuštěných v kořenovém adresáři tohoto virtuálního procesoru zastavit odesílání kontextu spuštění. Vlákno proxy bude pokračovat v provádění na volání `Activate` metoda.|  
-|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů se viditelné pro všechny procesory systému. Zajišťuje, že ochranná úplné paměti provedl na všechny procesory než metoda vrátí.|  
+|[Ivirtualprocessorroot::Activate –](#activate)|Způsobí, že proxy vlákno přidružené k rozhraní kontext provádění `pContext` spustit provádění v této kořenové virtuálních procesorů.|  
+|[Ivirtualprocessorroot::Deactivate –](#deactivate)|Způsobí, že proxy vlákno aktuálně spuštěných v kořenovém adresáři tohoto virtuálního procesoru zastavit odesílání kontextu spuštění. Vlákno proxy bude pokračovat v provádění na volání `Activate` metoda.|  
+|[Ivirtualprocessorroot::ensurealltasksvisible –](#ensurealltasksvisible)|Způsobí, že data uložená v hierarchii paměti jednotlivých procesorů se viditelné pro všechny procesory systému. Zajišťuje, že ochranná úplné paměti provedl na všechny procesory než metoda vrátí.|  
 |[IVirtualProcessorRoot::GetId](#getid)|Vrací jedinečný identifikátor pro kořenovou virtuální procesor.|  
   
 ## <a name="remarks"></a>Poznámky  

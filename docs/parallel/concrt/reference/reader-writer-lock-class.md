@@ -1,12 +1,9 @@
 ---
-title: reader_writer_lock Class | Microsoft Docs
-ms.custom: 
+title: reader_writer_lock – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock – třída
 Zapisovač předvoleb zámku na základě fronty čtení a zápis s místní pouze otáčí. Zámek uděluje nejprve v – nejprve out (FIFO) přístup k zapisovače a starves čtečky průběžné zatížení zapisovačů.  
@@ -51,8 +46,8 @@ class reader_writer_lock;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[reader_writer_lock::scoped_lock Class](#scoped_lock_class)|K výjimce bezpečné RAII obálku kterého lze získat `reader_writer_lock` zamknout objekty jako zapisovač.|  
-|[reader_writer_lock::scoped_lock_read Class](#scoped_lock_read_class)|K výjimce bezpečné RAII obálku kterého lze získat `reader_writer_lock` zamknout objekty jako čtečka čipových karet.|  
+|[reader_writer_lock::scoped_lock – třída](#scoped_lock_class)|K výjimce bezpečné RAII obálku kterého lze získat `reader_writer_lock` zamknout objekty jako zapisovač.|  
+|[reader_writer_lock::scoped_lock_read – třída](#scoped_lock_read_class)|K výjimce bezpečné RAII obálku kterého lze získat `reader_writer_lock` zamknout objekty jako čtečka čipových karet.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
@@ -69,7 +64,7 @@ class reader_writer_lock;
 |[lock_read](#lock_read)|Získá zámek čtení a zápis pro čtenáře. Pokud existují uživatelé vytvářející obsah, je nutné čekat, až se provádí pomocí active čtečky. Čtečka jednoduše zaregistruje zájmu o zámek a čeká zapisovače pro uvolnění.|  
 |[try_lock](#try_lock)|Pokusí se získat zámek čtení a zápis jako zapisovač bez blokování.|  
 |[try_lock_read](#try_lock_read)|Pokusí se získat zámek čtení a zápis pro čtenáře bez blokování.|  
-|[unlock](#unlock)|Odemkne zámek čtení a zápis podle kdo uzamkne ji čtečka nebo zapisovač.|  
+|[odemknutí](#unlock)|Odemkne zámek čtení a zápis podle kdo uzamkne ji čtečka nebo zapisovač.|  
   
 ## <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [synchronizační datové struktury](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ reader_writer_lock 
 
  Zničí `reader_writer_lock` objektu.  
   

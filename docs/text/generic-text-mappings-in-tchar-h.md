@@ -1,13 +1,10 @@
 ---
-title: "Mapování obecného textu v souboru Tchar.h | Microsoft Docs"
-ms.custom: 
+title: Mapování obecného textu v souboru Tchar.h | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapování obecného textu v souboru Tchar.h
 Pro zjednodušení migrace kódu pro mezinárodní použití [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] poskytuje běhové knihovny [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-konkrétní mapování obecného textu pro mnoho typů dat, rutiny a jiné objekty. Můžete použít tyto mapování, které jsou definovány v souboru Tchar.h zápis obecný kód, který může být sestaven pro jednobajtové, vícebajtové, nebo [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] znakových sad, v závislosti na manifestu konstanta, která je definována pomocí `#define` příkaz. Mapování obecného textu jsou [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] rozšíření, které nejsou [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] kompatibilní.  
@@ -52,22 +47,22 @@ Pro zjednodušení migrace kódu pro mezinárodní použití [!INCLUDE[TLA#tla_m
   
 |definování #|Kompilované verze|Příklad|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)](široké znaky)|`_tcsrev`se mapuje na`_wcsrev`|  
-|`_MBCS`|Vícebajtových znaků|`_tcsrev`se mapuje na`_mbsrev`|  
-|Žádný (výchozí hodnota je ani `_UNICODE` ani `_MBCS` definované)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev`se mapuje na`strrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (široké znaky)|`_tcsrev` Se mapuje na `_wcsrev`|  
+|`_MBCS`|Vícebajtových znaků|`_tcsrev` Se mapuje na `_mbsrev`|  
+|Žádný (výchozí hodnota je ani `_UNICODE` ani `_MBCS` definované)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` Se mapuje na `strrev`|  
   
  Například funkce obecného textu `_tcsrev`, který je definován v souboru Tchar.h, se mapuje na `_mbsrev` Pokud jste definovali `_MBCS` v programu, nebo na `_wcsrev` Pokud jste definovali `_UNICODE`. V opačném `_tcsrev` mapuje `strrev`. Jiné mapování datového typu jsou uvedeny v Tchar.h pro programování jednoduchost, ale `_TCHAR` je velmi užitečné.  
   
 ### <a name="generic-text-data-type-mappings"></a>Mapování obecného textu datového typu  
   
-|Obecného textu<br /><br /> Název datového typu|_UNICODE &<br /><br /> Není definována kódováním _MBCS|_MBCS<br /><br /> Definované|_UNICODE<br /><br /> Definované|  
+|Obecného textu<br /><br /> Název datového typu|_UNICODE &AMP;<br /><br /> Není definována kódováním _MBCS|_MBCS<br /><br /> Definované|_UNICODE<br /><br /> Definované|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`unsigned int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T`nebo`_TEXT`|Neplatí (odebraná pomocí preprocessor)|Neplatí (odebraná pomocí preprocessor)|`L`(převede následující znak nebo řetězec na jeho [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] protějšek)|  
+|`_T` Nebo `_TEXT`|Neplatí (odebraná pomocí preprocessor)|Neplatí (odebraná pomocí preprocessor)|`L` (převede následující znak nebo řetězec na jeho [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] protějšek)|  
   
  Seznam mapování obecného textu rutin, proměnné a další objekty, naleznete v části [mapování obecného textu](../c-runtime-library/generic-text-mappings.md) v referenci běhové knihovny.  
   

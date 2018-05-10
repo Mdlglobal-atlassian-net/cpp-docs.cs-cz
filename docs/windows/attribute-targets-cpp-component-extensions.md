@@ -1,30 +1,25 @@
 ---
-title: "Atribut cíle (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: Atribut cíle (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Cíle atributů (rozšíření komponent C++)
 Specifikátory využití atributů umožňují určit cíle atributů.  Každý atribut je definována pro použití určitých jazykové elementy. Atribut například mohou být definovány pouze pro třídy a struktury.  Následující seznam uvádí možné syntaktické elementy, na které můžete použít vlastní atribut. Kombinace tyto hodnoty (pomocí logických nebo) mohou být použity.  
@@ -33,7 +28,7 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
   
  Následuje seznam platný atribut cíle:  
   
--   `All`(platí pro všechny konstrukce)  
+-   `All` (platí pro všechny konstrukce)  
   
     ```  
   
@@ -45,7 +40,7 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
   
     ```  
   
--   `Assembly`(platí pro sestavení jako celek)  
+-   `Assembly` (platí pro sestavení jako celek)  
   
     ```  
   
@@ -57,7 +52,7 @@ Specifikátory využití atributů umožňují určit cíle atributů.  Každý 
   
     ```  
   
--   `Module`(platí pro modul jako celek)  
+-   `Module` (platí pro modul jako celek)  
   
     ```  
   

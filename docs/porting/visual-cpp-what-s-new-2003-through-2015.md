@@ -1,30 +1,25 @@
 ---
-title: "Visual C++ Co & č. 39; s novou 2003 až 2015 | Microsoft Docs"
-ms.custom: 
+title: Visual C++ co&#39;s novou 2003 až 2015 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ Co & č. 39; s novou 2003 až 2015
+# <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 až 2015
 
 Tato stránka obsahuje všechny "Novinky" stránky pro všechny verze aplikace Visual C++ z Visual Studia 2015 zpět na 2003. Tyto informace mají sloužit jako v zájmu usnadnění práce v případě, že může být užitečné při upgradu z předchozích verzí aplikace Visual C++.
 
@@ -46,7 +41,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
 - [Shoda vylepšení v nástroji Visual Studio 2015 Update 3](#VS_Update3)
 
-### <a name="VS_RTM">Vylepšení shoda v sadě Visual Studio 2015</a>
+### <a name="VS_RTM"></a> Vylepšení shoda v sadě Visual Studio 2015
 
 - **Možnost /Zc:forScope-** možnost kompilátoru **/Zc:forScope-** je zastaralá a bude v budoucí verzi odebrána.
 
@@ -503,7 +498,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
 - **Zkopírujte konstruktory** v obou [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] a Visual Studio 2015, kompilátor generuje kopírovacího konstruktoru třídy Pokud třídy má konstruktor move definovaný uživatelem, ale žádné uživatelem definované kopírovacího konstruktoru. Dev14 je tento konstruktor implicitně generovaného kopie také označený "= odstranění".
 
-### <a name="VS_Update1">Shoda vylepšení v nástroji Visual Studio 2015 Update 1</a>
+### <a name="VS_Update1"></a> Shoda vylepšení v nástroji Visual Studio 2015 Update 1
 
 - **Privátní virtuální základní třídy a nepřímé dědění** předchozí verze kompilátoru povolené odvozené třídy za účelem zavolejte členské funkce jeho *nepřímo odvozené* `private virtual` základní třídy. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor už akceptuje kód napsaný v tímto způsobem a v důsledku vydá Chyba kompilátoru C2280.
 
@@ -996,7 +991,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
     }
    ```
 
-### <a name="VS_Update2">Shoda vylepšení v nástroji Visual Studio 2015 Update 2</a>
+### <a name="VS_Update2"></a> Shoda vylepšení v nástroji Visual Studio 2015 Update 2
 
 - **Další upozornění a chyby může být vydaný v důsledku částečné podporu pro výraz sfinae u výrazů** předchozí verze kompilátoru analyzovat určité druhy výrazů uvnitř `decltype` specifikátory z důvodu nedostatku podpory pro výraz. SFINAE U VÝRAZŮ. Toto chování staré nebyla správná a neodpovídá C++ standard. Kompilátor teď analyzuje tyto výrazy a částečné podporu pro výraz sfinae u výrazů z důvodu vylepšení probíhající shoda. V důsledku toho nyní vydá upozornění a chyby nalezené ve výrazech, že předchozí verze kompilátoru není analyzovat.
 
@@ -1251,7 +1246,7 @@ V sadě Visual Studio 2015 a novější můžete probíhající vylepšení shod
 
    Opravě kód, který je zapsaný tímto způsobem může vyžadovat, aby definice operátor přesunout mimo soubor hlaviček a do odpovídající zdrojový soubor.
 
-### <a name="VS_Update3">Shoda vylepšení v nástroji Visual Studio 2015 Update 3</a>
+### <a name="VS_Update3"></a> Shoda vylepšení v nástroji Visual Studio 2015 Update 3
 
 - **std::is_convertable nyní rozpozná vlastní přiřazení** (standardní knihovna) předchozí verze `std::is_convertable` typ znak se nepodařilo rozpoznat správně vlastní přiřazení typu třídy, když se odstraní. jeho kopie konstruktoru nebo privátní. Nyní `std::is_convertable<>::value` je správně nastavena na `false` při použití typu třídy s odstraněný nebo soukromý kopírovacího konstruktoru.
 
@@ -1553,7 +1548,7 @@ Tato vylepšená podpora pro standardy ISO C/C++ může vyžadovat změny existu
 - **Širší informace o výjimce.** C + +/ CX podporuje nový model chyby systému Windows, který umožňuje zaznamenat a šíření bohaté výjimka informace napříč binární rozhraní aplikace (ABI); To zahrnuje zásobníky volání a vlastní zprávu řetězce.
 - **Teď je virtuální objekt:: ToString().** Nyní můžete přepsat ToString v uživatelem definované typy ref prostředí Windows Runtime.
 - **Podpora pro zastaralé rozhraní API.** Veřejné rozhraní API systému Windows Runtime můžete nyní označeny jako zastaralé a mají vlastní zprávu, která se zobrazí jako upozornění sestavení a může poskytnout pokyny pro migraci.
-- Ladicí program vylepšení. Podpora pro nativní/JavaScript spolupráce ladění, prostředí Windows Runtime výjimka diagnostiky a kód asynchronní ladění (prostředí Windows Runtime a PPL).
+- **Ladicí program vylepšení.** Podpora pro nativní/JavaScript spolupráce ladění, prostředí Windows Runtime výjimka diagnostiky a kód asynchronní ladění (prostředí Windows Runtime a PPL).
   - Poznámka: Kromě C++ specifické funkce a vylepšení, které jsou popsané v této části, další vylepšení v sadě Visual Studio také můžete zapsat lepší aplikace Windows Runtime.
 
 ### <a name="diagnostics-enhancements"></a>Vylepšení diagnostiky
@@ -1684,7 +1679,7 @@ Kromě okno paralelních úloh a okna paralelní zásobníky Visual Studio 2012 
 
 **Automatické nasazení pro vzdálené ladění.** Nasazení souborů pro vzdálené ladění v jazyce Visual C++ je jednodušší. Ke vzdálenému počítači možnost nasazení na místní nabídky projektu automaticky zkopíruje soubory, které jsou určené v ladění vlastnosti konfigurace. Ruční kopírování souborů do vzdáleného počítače se už nevyžaduje.
 
-**C++/CLI IntelliSense.** C + +/ CLI nyní má plnou podporu technologie IntelliSense. IntelliSense funkce, jako je rychlé informace, parametr nápovědy, vypsat členy a automatické doplňování teď pracovat pro C + +/ CLI. Kromě toho ostatní IntelliSense a IDE rozšířením uvedené v tomto dokumentu také funkční pro C + +/ CLI.
+**C + +/ CLI IntelliSense.** C + +/ CLI nyní má plnou podporu technologie IntelliSense. IntelliSense funkce, jako je rychlé informace, parametr nápovědy, vypsat členy a automatické doplňování teď pracovat pro C + +/ CLI. Kromě toho ostatní IntelliSense a IDE rozšířením uvedené v tomto dokumentu také funkční pro C + +/ CLI.
 
 **Popisy tlačítek bohatší IntelliSense.** Širší dokumentační komentáře XML C++ IntelliSense rychlé informace nyní zobrazit informace o stylu. Pokud používáte rozhraní API z knihovny – například C++ AMP, který má dokumentační komentáře XML a potom popis tlačítka IntelliSense zobrazí další informace než jenom deklarace. Navíc má váš kód dokumentační komentáře XML, popisy tlačítek IntelliSense zobrazí rozsáhlejší informace.
 
@@ -1730,11 +1725,11 @@ Pokrytí kódu se aktualizovalo a dynamicky nástrojích binárních souborů za
 
 ### <a name="c-compiler-and-linker"></a>Kompilátor C++ a Linkeru
 
-**auto Keyword.** Auto – klíčové slovo má nový účel. Použijte výchozí význam auto – klíčové slovo deklarovat proměnnou, jejichž typ je odvozen z inicializace výrazu v deklaraci proměnné. Možnost/Zc: Auto kompilátoru vyvolá nový nebo předchozí význam auto – klíčové slovo.
+**Auto – klíčové slovo.** Auto – klíčové slovo má nový účel. Použijte výchozí význam auto – klíčové slovo deklarovat proměnnou, jejichž typ je odvozen z inicializace výrazu v deklaraci proměnné. Možnost/Zc: Auto kompilátoru vyvolá nový nebo předchozí význam auto – klíčové slovo.
 
 **decltype – specifikátor typu.** Specifikátor typu decltype vrátí typ zadaného výrazu. Specifikátor typu decltype použijte v kombinaci s auto – klíčové slovo deklarovat typ, který je komplexní nebo známý pouze kompilátoru. Například pomocí kombinace deklarovat funkce šablony, jejichž návratový typ závisí na typech argumentů šablony. Nebo deklarovat funkci šablony, která volá jinou funkci a vrátí návratový typ volaná funkce.
 
-**Lambda Expressions.** Lambda funkce mají tělo funkce, ale žádný název. Lambda funkce kombinují nejlepší vlastnosti ukazatelů na funkce a objekty funkcí.
+**Výrazy lambda.** Lambda funkce mají tělo funkce, ale žádný název. Lambda funkce kombinují nejlepší vlastnosti ukazatelů na funkce a objekty funkcí.
 Použijte funkci lambda samostatně, jako parametr funkce šablony místo objekt funkce nebo společně s auto – klíčové slovo deklarovat proměnnou jejichž typ je lambda.
 
 **Deklarátor odkazu.** Rvalue – deklarátor odkazu (& &) deklaruje odkaz na rvalue. Umožňuje odkaz rvalue, které používáte, přesuňte sémantiku a ideální předávání zápis efektivnější konstruktory, funkce a šablony.
@@ -1761,7 +1756,7 @@ Trigraph se skládá ze dvou po sobě jdoucích otazníky (?) následuje jedine�
 
 **Adresáře VC ++.** Nastavení adresáře VC ++ se nyní nachází na dvou místech. Stránky vlastností projektu slouží k nastavení hodnoty na projekt pro adresáře VC ++. Pomocí Správce vlastností a seznamu vlastností pro globální nastavení konfiguračních hodnot pro adresáře VC ++.
 
-**Project-to-Project Dependencies.** V dřívějších verzích byly definované závislostí mezi projekty uložené v souboru řešení. Když tato řešení se převedou na nový formát souboru projektu, závislosti jsou převedeny na odkazy na projekt na projekt. Tato změna může ovlivnit aplikace, protože se koncepty závislostí řešení a odkazy na projekt na projekt se liší.
+**Závislosti projektu k projektu.** V dřívějších verzích byly definované závislostí mezi projekty uložené v souboru řešení. Když tato řešení se převedou na nový formát souboru projektu, závislosti jsou převedeny na odkazy na projekt na projekt. Tato změna může ovlivnit aplikace, protože se koncepty závislostí řešení a odkazy na projekt na projekt se liší.
 
 **Makra a proměnných prostředí.** Nové makro _ITERATOR_DEBUG_LEVEL vyvolá podpora ladění iterátorů. Použití tohoto makra místo starší _SECURE_SCL a _HAS_ITERATOR_DEBUGGING makra.
 
@@ -1784,7 +1779,7 @@ Trigraph se skládá ze dvou po sobě jdoucích otazníky (?) následuje jedine�
 
 ### <a name="microsoft-foundation-class-mfc-library"></a>Knihovny Microsoft Foundation Class (MFC)
 
-**Windows 7 Features.** MFC podporuje mnoho funkcí systému Windows 7, například uživatelské rozhraní (UI) pásu karet, hlavní panel, seznam odkazů, záložkách miniatur, miniaturami, indikátor průběhu, překryvnou ikonu a indexování pro hledání. Protože MFC automaticky podporuje mnoho funkcí systému Windows 7, nemusí mít k úpravě stávající aplikace. Pro podporu dalších funkcí v nové aplikace, použijte Průvodce aplikací MFC k zadání funkce, kterou chcete použít.
+**Funkce systému Windows 7.** MFC podporuje mnoho funkcí systému Windows 7, například uživatelské rozhraní (UI) pásu karet, hlavní panel, seznam odkazů, záložkách miniatur, miniaturami, indikátor průběhu, překryvnou ikonu a indexování pro hledání. Protože MFC automaticky podporuje mnoho funkcí systému Windows 7, nemusí mít k úpravě stávající aplikace. Pro podporu dalších funkcí v nové aplikace, použijte Průvodce aplikací MFC k zadání funkce, kterou chcete použít.
 
 **Zvýšení povědomí více touch.** MFC podporuje aplikace, které mají více touch uživatelské rozhraní, například aplikace, které jsou určeny pro operační systém Microsoft Surface. Aplikace s více touch dokáže zpracovat touch zpráv systému Windows a gesto zprávy, které jsou kombinace touch zprávy. Právě registrace vaší aplikace pro dotykové ovládání a gesto události a operační systém bude směrovat více touch události vaší obslužné rutiny událostí.
 
@@ -2179,7 +2174,7 @@ Byly přidány následující linkerů přepínače:
 - / ASSEMBLYDEBUG
 - / ASSEMBLYLINKRESOURCE
 - DELAYSIGN
-- /KEYFILE
+- / KEYFILE
 - / KEYCONTAINER
 - / SAFESEH
 

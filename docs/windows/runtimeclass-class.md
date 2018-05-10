@@ -1,12 +1,9 @@
 ---
-title: "RuntimeClass – třída | Microsoft Docs"
-ms.custom: 
+title: RuntimeClass – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
 Představuje třídu WinRT nebo COM, která dědí zadaný rozhraní a poskytuje zadané prostředí Windows Runtime, classic COM a slabé odkaz na podporu.  
@@ -48,7 +43,7 @@ Volitelný parametr. Kombinace jednoho nebo více [RuntimeClassType](../windows/
 Seznam rozhraní objekt implementuje nad rámec IUnknown, IInspectable nebo dalších rozhraní řízené [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Je taky mohou ostatní třídy pocházet ze, zejména Microsoft::WRL::FtmBase byl objekt agilní a způsobit, že ho implementovat imarshal – seznam.
   
 ## <a name="members"></a>Členové  
-`RuntimeClassInitialize`Funkci, která inicializuje objekt, pokud funkce šablony makeandinitialize – slouží k vytvoření objektu. Pokud se inicializace vrátí S_OK, pokud daný objekt byl úspěšně inicializován nebo COM kód chyby. Kód chyby COM jako návratová hodnota makeandinitialize – rozšířena. Všimněte si, že RuntimeClassInitialize metoda není volána, pokud funkce šablony zkontrolujte slouží k vytvoření objektu.
+`RuntimeClassInitialize` Funkci, která inicializuje objekt, pokud funkce šablony makeandinitialize – slouží k vytvoření objektu. Pokud se inicializace vrátí S_OK, pokud daný objekt byl úspěšně inicializován nebo COM kód chyby. Kód chyby COM jako návratová hodnota makeandinitialize – rozšířena. Všimněte si, že RuntimeClassInitialize metoda není volána, pokud funkce šablony zkontrolujte slouží k vytvoření objektu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   

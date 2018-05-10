@@ -1,13 +1,10 @@
 ---
-title: "Podokna (Editor obrázků pro ikony) | Microsoft Docs"
-ms.custom: 
+title: Podokna (Editor obrázků pro ikony) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e899729e70db089c1c55f00aa9c4196a22c67060
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Podokna (editor obrázků pro ikony)
 Okno Editor obrázků obvykle zobrazí obrázek v oddělených rozdělovač dvě podokna. Zobrazení je skutečná velikost a dalších se zvětší (výchozí zvětšení faktor je 6). Tyto dvě podokna zobrazení se automaticky aktualizují: změny v jednom podokně jsou okamžitě uvedené v dalších. Dvě podokna usnadnit práci zvětšeným zobrazením bitové kopie, ve kterém můžete rozlišení jednotlivých pixelů a, ve stejnou dobu, můžete sledovat účinek práce na zobrazení skutečná velikost bitové kopie.  

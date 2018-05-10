@@ -1,13 +1,10 @@
 ---
-title: "Osvědčené postupy zabezpečení pro jazyk C++ | Microsoft Docs"
-ms.custom: 
+title: Osvědčené postupy zabezpečení pro jazyk C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
 Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich používání není zpřístupnit aplikace útokům imunní, ale umožňuje méně pravděpodobné, že úspěšné útoky.  
@@ -35,22 +30,22 @@ Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich
 ## <a name="visual-c-security-features"></a>Funkce zabezpečení Visual C++  
  Tyto funkce zabezpečení jsou součástí Visual C++ kompilátoru a linkeru:  
   
- [/ Guard (povolení ochrany toku řízení)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (povolení ochrany toku řízení)](../build/reference/guard-enable-control-flow-guard.md)  
  Způsobí, že kompilátor k analýze tok řízení pro cíle nepřímé volání při kompilaci a potom pro vložení kódu k ověření cílů v době běhu.  
   
- [/GS (Kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md)  
+ [/GS (kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md)  
  Dá pokyn kompilátoru vložení zjištění přetečení kódu do funkce, které jsou na riziko zneužití. Když se detekuje překročení, provádění je zastavena. Ve výchozím nastavení je tato možnost je na.  
   
- [/ SAFESEH (bitová kopie má bezpečné obslužné rutiny výjimek)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (image má bezpečné obslužné rutiny výjimek)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  Dá pokyn linkeru pro zahrnutí do bitové kopie výstupní tabulku, která obsahuje adresu každé obslužné rutiny výjimky. V době běhu operačního systému používá tuto tabulku a ujistěte se, že jsou spuštěny pouze potřebné výjimky obslužné rutiny. To pomáhá zabránit spuštění obslužné rutiny výjimek, které jsou zavedené službou napadením se zlými úmysly za běhu. Tento parametr je standardně vypnutý.  
   
  [/ NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (kompatibilní s předcházením spuštění dat)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  Tyto kompilátoru a linkeru možnosti umožňují kompatibility Zabránění spuštění dat (DEP). Zabránění spuštění dat chrání procesor před provádění jiných znakové stránky.  
   
- [/ analyze (Analýza kódu)](../build/reference/analyze-code-analysis.md)  
+ [/analyze (analýza kódu)](../build/reference/analyze-code-analysis.md)  
  Tato možnost kompilátoru aktivuje analýza kódu, která generuje sestavy možné problémy zabezpečení, jako je přetečení vyrovnávací paměti, zrušení inicializovaného paměť, vyhodnocení ukazatele null a nevracení paměti. Tento parametr je standardně vypnutý. Další informace najdete v tématu [analýzy kódu pro C/C++ – přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
- [/ DYNAMICBASE (použít adresu místa rozložení náhodné)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (použití modulu pro náhodné rozložení adresního prostoru)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  Tato možnost linkeru umožňuje vytvářet spustitelné bitové kopie, který lze načíst v různých umístěních v paměti na začátku spuštění. Tato možnost také vytváří zásobníku umístění v paměti mnohem méně předvídatelný.  
   
 ## <a name="security-enhanced-crt"></a>Rozšířené zabezpečení CRT  

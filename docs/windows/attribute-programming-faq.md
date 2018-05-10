@@ -1,13 +1,10 @@
 ---
-title: "Atribut nejčastější dotazy k programování | Microsoft Docs"
-ms.custom: 
+title: Atribut nejčastější dotazy k programování | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Nejčastější dotazy k programování s atributy
 Toto téma poskytuje odpovědi na následující nejčastější dotazy:  
@@ -49,7 +44,7 @@ Toto téma poskytuje odpovědi na následující nejčastější dotazy:
   
 -   [Můžete použít atributy na třídy odvozené od třídy, který také používá atributy?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Co je HRESULT?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Co je HRESULT?  
  `HRESULT` Je jednoduchý datový typ, který se často používá jako typ návratové hodnoty atributů a ATL obecně. Následující tabulka popisuje různé hodnoty. Další hodnoty jsou obsažené v winerror.h soubor hlavičky.  
   
 |Název|Popis|Hodnota|  
@@ -66,7 +61,7 @@ Toto téma poskytuje odpovědi na následující nejčastější dotazy:
 |E_FAIL|Nespecifikovaná chyba|0x80004005|  
 |E_ACCESSDENIED|Obecná chyba odepření přístupu|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Když je nutné zadat název parametru pro atribut?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Když je nutné zadat název parametru pro atribut?  
  Ve většině případů je atribut má jeden parametr-li název tohoto parametru. Tento název se nevyžaduje při vkládání atribut v kódu. Například následující využití [agregovatelné](../windows/aggregatable.md) atribut:  
   
 ```  
@@ -91,7 +86,7 @@ class CMyClass
   
 ||||  
 |-|-|-|  
-|[call_as](../windows/call-as.md)|[případ](../windows/case-cpp.md)|[cpp_quote](../windows/cpp-quote.md)|  
+|[call_as](../windows/call-as.md)|[Případ](../windows/case-cpp.md)|[cpp_quote](../windows/cpp-quote.md)|  
 |[default](../windows/default-cpp.md)|[defaultvalue](../windows/defaultvalue.md)|[defaultvtable](../windows/defaultvtable.md)|  
 |[emitidl](../windows/emitidl.md)|[entry](../windows/entry.md)|[first_is](../windows/first-is.md)|  
 |[helpcontext](../windows/helpcontext.md)|[helpfile](../windows/helpfile.md)|[helpstring](../windows/helpstring.md)|  
@@ -100,10 +95,10 @@ class CMyClass
 |[Zahrnout](../windows/include-cpp.md)|[includelib –](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[zdroj](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[Zdroj](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>Můžete použít komentáře v bloku atribut?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Můžete použít komentáře v bloku atribut?  
  Můžete použít jeden řádek a více řádků komentáře v rámci bloku atribut. Nelze však použít buď Styl komentáře v závorkách, která uchovává parametry do atribut.  
   
  Je povoleno následující:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Jak atributy komunikovat s dědičnosti?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Jak atributy komunikovat s dědičnosti?  
  S atributy i bez atributů třídy lze dědit z jiné třídy, které mohou sami přičítají nebo ne. Výsledek odvozování z s atributy třídy je stejný jako odvozování z třídy po zprostředkovatele atribut má transformaci jeho kód. Atributy nejsou přenášeny do odvozené třídy prostřednictvím dědičnosti jazyka C++. Poskytovatele atribut pouze transformuje kódu v blízkosti jeho atributy.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Jak můžete použít atributy v neoznačené atributy projektu knihovny ATL?  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Jak můžete použít atributy v neoznačené atributy projektu knihovny ATL?  
  Můžete mít neoznačené atributy ATL projektu, který má souboru IDL, a chcete začít přidávat objekty s atributy. V takovém případě použijte Průvodce přidáním jak poskytnout kódu.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Jak můžete použít soubor .idl v projektu s atributy?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Jak můžete použít soubor .idl v projektu s atributy?  
  Můžete mít .idl souboru, který chcete použít v projektu knihovny ATL s atributy. V takovém případě byste použili [importidl –](../windows/importidl.md) atribut, kompilovat .idl soubor do souboru .h (najdete v článku [MIDL – stránky vlastností](../ide/midl-property-pages.md) v dialogovém okně stránky vlastností projektu) a pak zahrnout soubor hlaviček v projektu .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>Můžete upravit kód, který je vloženy atribut?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Můžete upravit kód, který je vloženy atribut?  
  Některé atributy vložení kódu do vašeho projektu. Vložený kód můžete zobrazit pomocí [/Fx](../build/reference/fx-merge-injected-code.md) – možnost kompilátoru. Také je možné zkopírovat kód z vloženého souboru a vložte jej do vašeho zdrojového kódu. To umožňuje upravovat chování atribut. Ale budete muset upravit dalších částí kódu také.  
   
  Následující příklad je výsledkem kopírování vložený kód do souboru zdrojového kódu:  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Jak můžu dál deklarovat s atributy rozhraní?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Jak můžu dál deklarovat s atributy rozhraní?  
  Pokud chcete předat dál prohlášení rozhraní s atributy, je nutné použít stejné atributy pro dopředného deklarace, které se vztahují k deklaraci skutečné rozhraní. Musíte také použít [exportovat](../windows/export.md) atribut Dopředná deklarace.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Můžete použít atributy na třídy odvozené od třídy, který také používá atributy?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Můžete použít atributy na třídy odvozené od třídy, který také používá atributy?  
  Ne, není podporován pomocí atributů na třídy odvozené od třídy, který také používá atributy.  
   
 ## <a name="see-also"></a>Viz také  

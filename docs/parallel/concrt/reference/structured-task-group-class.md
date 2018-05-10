@@ -1,12 +1,9 @@
 ---
-title: "structured_task_group – třída | Microsoft Docs"
-ms.custom: 
+title: structured_task_group – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group – třída
 `structured_task_group` Třída reprezentuje kolekci vysoce strukturovaných paralelní práce. Jednotlivé paralelní úlohy pro můžete fronty `structured_task_group` pomocí `task_handle` objekty a počkat na jejich dokončení nebo zrušte skupiny úloh před dokončením provádění, který bude všech úloh, které nebyly zahájení zpracování přerušeno.  
@@ -50,17 +45,17 @@ class structured_task_group;
 |Název|Popis|  
 |----------|-----------------|  
 |[structured_task_group](#ctor)|Přetíženo. Vytvoří nový `structured_task_group` objektu.|  
-|[~structured_task_group Destructor](#dtor)|Zničí `structured_task_group` objektu. Předpokládá se, že buď volání `wait` nebo `run_and_wait` metoda pro objekt před spuštěním destruktor, pokud je destruktor provádí na základě těchto zásobníku unwinding kvůli výjimce.|  
+|[~ structured_task_group – destruktor](#dtor)|Zničí `structured_task_group` objektu. Předpokládá se, že buď volání `wait` nebo `run_and_wait` metoda pro objekt před spuštěním destruktor, pokud je destruktor provádí na základě těchto zásobníku unwinding kvůli výjimce.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[cancel](#cancel)|Díky usilovně pokus o zrušení podstromu pracovní root v této skupině úloh. Každý úkol naplánovat na skupině úloh bude získat zrušena přechodně Pokud je to možné.|  
-|[is_canceling](#is_canceling)|Informuje o volající, jestli je skupina úkolů aktuálně in the midst of zrušení. To nemusí znamenat, který `cancel` byla volána metoda `structured_task_group` objektu (i když například tato metoda vrátí vyfiltrování určitě `true`). Může být tento případ, `structured_task_group` objektu provádí vložené a další skupinu úkolů až ve stromové struktuře pracovní byla zrušena. V případech, například tyto kde můžete určit modulu runtime dopředu, který zrušení bude procházet přes tento `structured_task_group` objekt, `true` bude vrácen také.|  
-|[run](#run)|Přetíženo. Naplánuje úlohu na `structured_task_group` objektu. Volající spravuje životnost `task_handle` objekt předaná `_Task_handle` parametr. Verze, která přebírá parametr `_Placement` úlohu být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.|  
+|[Zrušit](#cancel)|Díky usilovně pokus o zrušení podstromu pracovní root v této skupině úloh. Každý úkol naplánovat na skupině úloh bude získat zrušena přechodně Pokud je to možné.|  
+|[is_canceling –](#is_canceling)|Informuje o volající, jestli je skupina úkolů aktuálně in the midst of zrušení. To nemusí znamenat, který `cancel` byla volána metoda `structured_task_group` objektu (i když například tato metoda vrátí vyfiltrování určitě `true`). Může být tento případ, `structured_task_group` objektu provádí vložené a další skupinu úkolů až ve stromové struktuře pracovní byla zrušena. V případech, například tyto kde můžete určit modulu runtime dopředu, který zrušení bude procházet přes tento `structured_task_group` objekt, `true` bude vrácen také.|  
+|[Spustit](#run)|Přetíženo. Naplánuje úlohu na `structured_task_group` objektu. Volající spravuje životnost `task_handle` objekt předaná `_Task_handle` parametr. Verze, která přebírá parametr `_Placement` úlohu být tendenční směrem k provádění v umístění zadaném hodnotou tohoto parametru.|  
 |[run_and_wait](#run_and_wait)|Přetíženo. Plány úlohy ke spuštění vložené na kontext volání s pomocí `structured_task_group` objekt pro podporu úplné zrušení. Pokud `task_handle` objekt je předán jako parametr, který se `run_and_wait`, volající zodpovídá za správu životnost `task_handle` objektu. Funkce pak čeká, dokud všechny práci `structured_task_group` objekt buď dokončit nebo byla zrušena.|  
-|[wait](#wait)|Čeká, dokud všechny práci `structured_task_group` již byla dokončena nebo je zrušena.|  
+|[Počkej](#wait)|Čeká, dokud všechny práci `structured_task_group` již byla dokončena nebo je zrušena.|  
   
 ## <a name="remarks"></a>Poznámky  
  Existuje několik závažné omezení vztahujících se na využití `structured_task_group` objektu, aby získal výkonu:  

@@ -1,29 +1,24 @@
 ---
-title: "Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování | Microsoft Docs"
-ms.custom: 
+title: Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování
 Tento dokument popisuje rozdíly mezi funkcí a programovacích modelů Concurrency Runtime a další technologie. Podle porozumět tomu, jak výhody Concurrency Runtime porovnávají výhody jinými programovací modely, můžete vybrat technologie, která nejlépe splňuje požadavky aplikací.  
@@ -32,7 +27,7 @@ Tento dokument popisuje rozdíly mezi funkcí a programovacích modelů Concurre
   
  Funkce a výhody produktivitu Concurrency Runtime můžete použít tak, aby doplňovala existující aplikace, který používá jiný model souběžnosti. Concurrency Runtime nemůže zaručit, Vyrovnávání zatížení při víc plánovače úloh pokouší o stejné výpočetní prostředky. Ale při zatížení se nepřekrývají, tento efekt je minimální.  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
   
 -   [Porovnání preemptivní plánování pro spolupráci plánování](#models)  
   
@@ -40,11 +35,11 @@ Tento dokument popisuje rozdíly mezi funkcí a programovacích modelů Concurre
   
 -   [Porovnání modelu Concurrency Runtime s OpenMP](#openmp)  
   
-##  <a name="models"></a>Porovnání preemptivní plánování pro spolupráci plánování  
+##  <a name="models"></a> Porovnání preemptivní plánování pro spolupráci plánování  
  Preemptivní modelu a spolupráce plánování modely dvěma způsoby běžné povolit více úkolů sdílet výpočetní prostředky, například procesory nebo hardwaru vláken.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Preemptivní a spolupráci plánování  
- *Preemptivní plánování* kruhového dotazování, na základě priority mechanismus, který dává každý úkol výhradní přístup k výpočetnímu prostředku v daném časovém období a dojde k přepnutí do jiná úloha. Preemptivní plánování je běžné v multitasking operační systémy, třeba Windows*. Plánování spolupráci* mechanismus, který poskytuje každý úkol výhradní přístup k výpočetních prostředků, dokud na dokončení úlohy nebo úlohu poskytuje přístup k prostředku. Concurrency Runtime používá k dosažení maximální využití prostředků zpracování spolupráci plánování spolu s plánovači preemptivní operačního systému.  
+ *Preemptivní plánování* kruhového dotazování, na základě priority mechanismus, který dává každý úkol výhradní přístup k výpočetnímu prostředku v daném časovém období a dojde k přepnutí do jiná úloha. Preemptivní plánování je běžné v multitasking operační systémy, třeba Windows *. Plánování spolupráci* mechanismus, který poskytuje každý úkol výhradní přístup k výpočetních prostředků, dokud na dokončení úlohy nebo úlohu poskytuje přístup k prostředku. Concurrency Runtime používá k dosažení maximální využití prostředků zpracování spolupráci plánování spolu s plánovači preemptivní operačního systému.  
   
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Rozdíly mezi preemptivní a spolupráci plánovače  
  Preemptivní plánovače se snaží poskytnout více vláken rovna přístup k výpočetních prostředků, která zajistí, že každé vlákno umožňuje průběh. Na počítačích, které mají mnoho výpočetních prostředků zajištění správného přístup stane méně problematické; zajistíte efektivní využití prostředků stane však více problematické.  
@@ -59,7 +54,7 @@ Tento dokument popisuje rozdíly mezi funkcí a programovacích modelů Concurre
   
  [[Horní](#top)]  
   
-##  <a name="winapi"></a>Porovnání modelu Concurrency Runtime s rozhraním API systému Windows  
+##  <a name="winapi"></a> Porovnání modelu Concurrency Runtime s rozhraním API systému Windows  
  Microsoft Windows rozhraní, která je obvykle označována jako rozhraní API systému Windows (a dříve označované jako Win32), poskytuje programovací model, který umožňuje souběžnosti v aplikacích. Concurrency Runtime založený na rozhraní API systému Windows k poskytování dalších programovací modely, které nejsou k dispozici prostřednictvím příslušný operační systém.  
   
  Concurrency Runtime založený na rozhraní API systému Windows modelu vláken pro paralelní práci. Také používá rozhraní API systému Windows Správa paměti a úložiště thread-local mechanismy. V systému Windows 7 a Windows Server 2008 R2 využívá podporu rozhraní API systému Windows pro které lze uživatele plánovat vláken a počítačů, které mají víc než 64 vláken hardwaru. Concurrency Runtime rozšiřuje možnosti rozhraní API systému Windows poskytnutím plánovače úloh spolupráci a algoritmus krádež pracovní maximalizovat využití výpočetních prostředků a povolením více souběžných scheduler instancí.  
@@ -85,7 +80,7 @@ Tento dokument popisuje rozdíly mezi funkcí a programovacích modelů Concurre
   
  [[Horní](#top)]  
   
-##  <a name="openmp"></a>Porovnání modelu Concurrency Runtime s OpenMP  
+##  <a name="openmp"></a> Porovnání modelu Concurrency Runtime s OpenMP  
  Concurrency Runtime umožňuje celou řadu programovacích modelů. Tyto modely můžou překrývat nebo doplňují modely další knihovny. Tato část porovná Concurrency Runtime s [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
   
  Programovací model OpenMP je určené o otevřený standard a je dobře definovaný vazby na Fortran a C/C++ programovací jazyky. Jsou vhodné pro paralelní algoritmy, které jsou iterativní; OpenMP verze 2.0 a 2.5 To znamená že provádět paralelní iterace přes pole dat. OpenMP je nejúčinnější, když stupně paralelního zpracování je předem určit a odpovídá dostupných prostředků systému. OpenMP model se zejména dobrý shodu vysoce výkonné výpočty, kde jsou velmi velké výpočetní problémy distribuovány na zpracování prostředků do jednoho počítače. V tomto scénáři je známý hardwarového prostředí a vývojář přiměřeně očekávat výhradní přístup k výpočetních prostředků, když se spustí algoritmus.  

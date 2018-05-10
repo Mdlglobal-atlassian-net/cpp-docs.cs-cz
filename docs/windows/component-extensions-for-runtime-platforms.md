@@ -1,13 +1,10 @@
 ---
-title: "Rozšíření komponent pro platformy běhového prostředí | Microsoft Docs"
-ms.custom: 
+title: Rozšíření komponent pro platformy běhového prostředí | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Přípony komponent pro platformy běhového prostředí
 Visual C++ poskytuje jazyková rozšíření pomohou program pro platformy běhového prostředí. Pomocí C + +/ CX, můžete naprogramovat aplikace pro univerzální platformu Windows a součástí, které kompilace nativního kódu. I když aplikace pro univerzální platformu Windows můžete vytvořit pomocí programování přímo na rozhraní Windows Runtime COM pomocí C + +/ CX, můžete pracovat s konstruktory výjimky a další moderní verze jazyka C++ programování idioms. Chcete-li povolit C++ programování v spravovaného spouštění prostředí na platformě .NET, můžete použít C + +/ CLI.  
@@ -86,7 +81,7 @@ Visual C++ poskytuje jazyková rozšíření pomohou program pro platformy běho
 |`gcnew`|Ne|Přiděluje typy v haldě uvolňování paměti. Použít místo `new` a `delete`.|[nové, gcnew REF](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`ref new`|Ano|Přiděluje typu prostředí Windows Runtime. Použít místo `new` a `delete`.|[nové, gcnew REF](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|Ano|Označuje členem lze inicializovat pouze v prohlášení nebo ve statického konstruktoru.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Ano|Vytvoří literálu proměnnou.|[literál](../windows/literal-cpp-component-extensions.md)|  
+|`literal`|Ano|Vytvoří literálu proměnnou.|[Literál](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|Ne|Označuje, že popisovač nebo ukazatel neodkazuje na objekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Konstrukce šablony  
@@ -116,7 +111,7 @@ Visual C++ poskytuje jazyková rozšíření pomohou program pro platformy běho
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Prostředí Windows Runtime a CLR) Umožňuje použití klíčová slova jako identifikátory.|  
 |[Seznamy argumentů s proměnnou délkou (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Prostředí Windows Runtime a CLR) Povolí funkci, kterou chcete provést proměnný počet argumentů.|  
 |[.NET Framework – ekvivalenty nativních typů C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Seznam typů CLR, které se používají místo integrální typy C++.|  
-|[doména AppDomain](../cpp/appdomain.md) `__declspec` – modifikátor|`__declspec`Modifikátor, který vyžaduje, aby statické a globální proměnné existovat jednotlivé domény aplikace.|  
+|[doména AppDomain](../cpp/appdomain.md) `__declspec` – modifikátor|`__declspec` Modifikátor, který vyžaduje, aby statické a globální proměnné existovat jednotlivé domény aplikace.|  
 |[Přetypování ve stylu jazyka pomocí možnosti/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Popisuje, jak se interpretují přetypování ve stylu jazyka.|  
 |[__clrcall](../cpp/clrcall.md) konvence volání|Označuje kompatibilní se standardem CLR konvence volání.|  
 |`__cplusplus_cli`|[Předdefinovaná makra](../preprocessor/predefined-macros.md)|  
@@ -127,7 +122,7 @@ Visual C++ poskytuje jazyková rozšíření pomohou program pro platformy běho
 |[Zabalení](../windows/boxing-cpp-component-extensions.md)|Demonstruje podmínky v hodnot, které jsou do pole typů.|  
 |[Podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|Popisuje, jak zjistit vlastnosti typů v době kompilace.|  
 |[spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivách pragma|Ukazuje, jak spravovaných a nespravovaných funkcí mohou společně existovat ve stejném modulu.|  
-|[proces](../cpp/process.md) `__declspec` – modifikátor|`__declspec`Modifikátor, který vyžaduje, aby statické a globální proměnné existovat podle procesu.|  
+|[proces](../cpp/process.md) `__declspec` – modifikátor|`__declspec` Modifikátor, který vyžaduje, aby statické a globální proměnné existovat podle procesu.|  
 |[Reflexe (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Demonstruje verzi informace běhového typu CLR.|  
 |[Řetězec](../windows/string-cpp-component-extensions.md)|Popisuje převod kompilátoru textových literálů k <xref:System.String>.|  
 |[Předávání typů (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Přesun k typu v sestavení přesouvání do jiného sestavení umožňuje, aby kód klienta není nutné zopakovat.|  

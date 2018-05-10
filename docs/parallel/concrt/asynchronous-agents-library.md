@@ -1,30 +1,25 @@
 ---
-title: "Knihovna asynchronních agentů | Microsoft Docs"
-ms.custom: 
+title: Knihovna asynchronních agentů | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>Knihovna asynchronních agentů
 Knihovna asynchronních agentů (nebo jenom *knihovna agentů*) poskytuje programovací model, který umožňuje zvýšit robustnost vývoj aplikace s povolenými souběžnosti. Knihovna agentů je knihovny šablon jazyka C++, který podporuje služby založené na objektu actor programovací model a zprávy v procesu předávání pro hrubý toku dat a paralelní zpracování úlohy. Knihovna agentů je založený na plánování a prostředků součásti správy Concurrency Runtime.  
@@ -36,7 +31,7 @@ Knihovna asynchronních agentů (nebo jenom *knihovna agentů*) poskytuje progra
   
  Knihovna agentů se skládá ze tří součástí: *asynchronních agentů*, *asynchronní bloky zpráv*, a *funkce předávání zpráv*. Agenti uchování stavu a používat bloky zpráv a funkce předávání zpráv pro komunikaci mezi sebou a se externích součástí. Funkce pro předávání zpráv umožňují agentům odesílat a přijímat zprávy do a z externích součástí. Asynchronní bloky zpráv podržte zprávy a aktivovat agenty ke komunikaci synchronizované způsobem.  
   
- Následující obrázek znázorňuje jak dva agenti použití bloky zpráv a funkce předávání zpráv pro komunikaci. V tomto obrázku `agent1` odešle zprávu do `agent2` pomocí [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce a [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu. `agent2`používá [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkce na tuto zprávu přečíst. `agent2`stejnou metodu používá k odeslání zprávy do `agent1`. Přerušovanou šipky představují tok dat mezi agenty. Plnou šipky připojit k bloky zpráv, které budou zápisu nebo čtení z agentů.  
+ Následující obrázek znázorňuje jak dva agenti použití bloky zpráv a funkce předávání zpráv pro komunikaci. V tomto obrázku `agent1` odešle zprávu do `agent2` pomocí [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce a [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu. `agent2` používá [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkce na tuto zprávu přečíst. `agent2` stejnou metodu používá k odeslání zprávy do `agent1`. Přerušovanou šipky představují tok dat mezi agenty. Plnou šipky připojit k bloky zpráv, které budou zápisu nebo čtení z agentů.  
   
  ![Součástí knihovna agentů](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

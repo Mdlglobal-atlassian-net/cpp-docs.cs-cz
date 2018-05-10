@@ -1,12 +1,9 @@
 ---
-title: "Itopologynode – struktura | Microsoft Docs"
-ms.custom: 
+title: Itopologynode – struktura | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITopologyNode
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1c4168fbfbd2bf17ad8b8b752d2843c8f57b0f3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode – struktura
 Rozhraní pro uzel topologie, jak jsou definovány pomocí Správce prostředků. Uzel obsahuje jeden nebo více prostředků provádění.  
@@ -52,7 +47,7 @@ struct ITopologyNode;
 |[Itopologynode::getfirstexecutionresource –](#getfirstexecutionresource)|Vrátí první provádění prostředku seskupené v rámci tohoto uzlu v pořadí výčtu.|  
 |[Itopologynode::getid –](#getid)|Vrátí správce prostředků jedinečný identifikátor pro tento uzel.|  
 |[Itopologynode::GetNext –](#getnext)|Vrátí rozhraní na další uzel topologie v pořadí výčtu.|  
-|[ITopologyNode::GetNumaNode](#getnumanode)|Vrátí Windows přiřadit číslo uzlu NUMA, do které patří tento uzel Maanger prostředků.|  
+|[Itopologynode::getnumanode –](#getnumanode)|Vrátí Windows přiřadit číslo uzlu NUMA, do které patří tento uzel Maanger prostředků.|  
   
 ## <a name="remarks"></a>Poznámky  
  Toto rozhraní je obvykle využité vás topologii tohoto systému jako zjištěnými Resource Manager.  

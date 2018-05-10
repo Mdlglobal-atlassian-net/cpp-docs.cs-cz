@@ -1,12 +1,9 @@
 ---
 title: Microsoft::WRL Namespace | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL – obor názvů
 Definuje základní typy, které tvoří knihovna šablon C++ Runtime systému Windows.  
@@ -61,7 +56,7 @@ namespace Microsoft::WRL;
 |[ClassFactory – třída](../windows/classfactory-class.md)|Implementuje základních funkcí `IClassFactory` rozhraní.|  
 |[ComPtr – třída](../windows/comptr-class.md)|Vytvoří *chytré ukazatele* typ, který reprezentuje rozhraní zadané parametr šablony. ComPtr automaticky udržuje počet odkazů pro základní ukazatel rozhraní a uvolní rozhraní, kdy přestane počet odkazů na nulu.|  
 |[DeferrableEventArgs – třída](../windows/deferrableeventargs-class.md)|Třída Šablona používaná pro typy argumentů událostí pro rozlišených položek.|  
-|[EventSource – třída](../windows/eventsource-class.md)|Představuje událost. `EventSource`Členské funkce přidání, odebrání a vyvolání obslužné rutiny událostí.|  
+|[EventSource – třída](../windows/eventsource-class.md)|Představuje událost. `EventSource` Členské funkce přidání, odebrání a vyvolání obslužné rutiny událostí.|  
 |[FtmBase – třída](../windows/ftmbase-class.md)|Představuje objekt volné zařazování vláken.|  
 |[Module – třída](../windows/module-class.md)|Představuje kolekci související objekty.|  
 |[RuntimeClass – třída](../windows/runtimeclass-class.md)|Představuje instancí třídu, která dědí zadaný počet rozhraní a obsahuje zadané prostředí Windows Runtime, classic COM a slabé odkaz na podporu.|  

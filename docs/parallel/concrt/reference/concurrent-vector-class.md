@@ -1,12 +1,9 @@
 ---
-title: "concurrent_vector – třída | Microsoft Docs"
-ms.custom: 
+title: concurrent_vector – třída | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_vector
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e120e072fb3f56788cbf39fbbc3887f5c816f4ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector – třída
 `concurrent_vector` Třídy je třída kontejneru pořadí, která umožňuje náhodný přístup k libovolného elementu. Umožňuje bezpečné souběžnosti připojit, iterator traversal operace, iterator přístup a přístup k elementu.  
@@ -97,44 +92,44 @@ class concurrent_vector: protected details::_Allocator_base<T,
 |Název|Popis|  
 |----------|-----------------|  
 |[concurrent_vector](#ctor)|Přetíženo. Vytvoří souběžných vektoru.|  
-|[~concurrent_vector Destructor](#dtor)|Vymaže všechny elementy a zničí tento souběžných vektoru.|  
+|[~ concurrent_vector – destruktor](#dtor)|Vymaže všechny elementy a zničí tento souběžných vektoru.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[assign](#assign)|Přetíženo. Vymaže elementy souběžných vektoru a přiřadí ji buď `_N` zkopíruje z `_Item`, nebo hodnoty zadané ve iterator rozsah [ `_Begin`, `_End`). Tato metoda není bezpečná souběžnosti.|  
+|[přiřazení](#assign)|Přetíženo. Vymaže elementy souběžných vektoru a přiřadí ji buď `_N` zkopíruje z `_Item`, nebo hodnoty zadané ve iterator rozsah [ `_Begin`, `_End`). Tato metoda není bezpečná souběžnosti.|  
 |[at](#at)|Přetíženo. Poskytuje přístup k elementu u daného indexu v souběžných vektoru. Tato metoda je souběžnosti bezpečných pro operace čtení a také během růstu vektoru, tak dlouho, dokud zajistíte, že hodnota `_Index` je menší než velikost souběžných vektoru.|  
 |[zpět](#back)|Přetíženo. Vrátí a odkaz, nebo `const` odkazovat na poslední prvek v souběžných vektoru. Pokud souběžných vektoru je prázdná, není definován návratovou hodnotu. Tato metoda je bezpečné souběžnosti.|  
 |[Začátek](#begin)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[capacity](#capacity)|Vrátí maximální velikost, do kterého můžete dosáhnout souběžných vektoru bez nutnosti přidělení více paměti. Tato metoda je bezpečné souběžnosti.|  
-|[cbegin](#cbegin)|Vrátí iterovat typu `const_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
+|[Kapacita](#capacity)|Vrátí maximální velikost, do kterého můžete dosáhnout souběžných vektoru bez nutnosti přidělení více paměti. Tato metoda je bezpečné souběžnosti.|  
+|[cbegin –](#cbegin)|Vrátí iterovat typu `const_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
 |[cend –](#cend)|Vrátí iterovat typu `const_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[clear](#clear)|Vymaže všechny elementy ve souběžných vektoru. Tato metoda není bezpečná souběžnosti.|  
+|[Zrušte zaškrtnutí](#clear)|Vymaže všechny elementy ve souběžných vektoru. Tato metoda není bezpečná souběžnosti.|  
 |[crbegin](#crbegin)|Vrátí iterovat typu `const_reverse_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
 |[crend –](#crend)|Vrátí iterovat typu `const_reverse_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
 |[prázdný](#empty)|Testy, pokud je v době prázdný souběžných vektoru tato metoda je volána. Tato metoda je bezpečné souběžnosti.|  
 |[End](#end)|Přetíženo. Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
 |[Přední](#front)|Přetíženo. Vrátí a odkaz, nebo `const` odkaz na prvním elementem v souběžných vektoru. Pokud souběžných vektoru je prázdná, není definován návratovou hodnotu. Tato metoda je bezpečné souběžnosti.|  
 |[get_allocator](#get_allocator)|Vrátí kopii allocator použitý k vytvoření souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[grow_by](#grow_by)|Přetíženo. Zvětšování tento souběžných vektoru podle `_Delta` elementy. Tato metoda je bezpečné souběžnosti.|  
+|[grow_by –](#grow_by)|Přetíženo. Zvětšování tento souběžných vektoru podle `_Delta` elementy. Tato metoda je bezpečné souběžnosti.|  
 |[grow_to_at_least](#grow_to_at_least)|Zvětšování tento souběžných vektoru, dokud má nejméně `_N` elementy. Tato metoda je bezpečné souběžnosti.|  
 |[max_size](#max_size)|Vrátí maximální počet prvky, které mohou být uloženy souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[push_back](#push_back)|Přetíženo. Daná položka připojí na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[rbegin](#rbegin)|Přetíženo. Vrátí iterovat typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
+|[push_back –](#push_back)|Přetíženo. Daná položka připojí na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
+|[rbegin –](#rbegin)|Přetíženo. Vrátí iterovat typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
 |[rend –](#rend)|Přetíženo. Vrátí iterovat typu `reverse_iterator` nebo `const_reverse_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[reserve](#reserve)|Přiděluje dostatek místa pro souběžné vektoru dosáhnout velikost `_N` bez nutnosti později přidělení více paměti. Tato metoda není bezpečná souběžnosti.|  
-|[resize](#resize)|Přetíženo. Změní velikost souběžných vektoru na požadovanou velikost, odstranění nebo přidávání elementů podle potřeby. Tato metoda není bezpečná souběžnosti.|  
+|[Rezervovat](#reserve)|Přiděluje dostatek místa pro souběžné vektoru dosáhnout velikost `_N` bez nutnosti později přidělení více paměti. Tato metoda není bezpečná souběžnosti.|  
+|[Změna velikosti](#resize)|Přetíženo. Změní velikost souběžných vektoru na požadovanou velikost, odstranění nebo přidávání elementů podle potřeby. Tato metoda není bezpečná souběžnosti.|  
 |[shrink_to_fit](#shrink_to_fit)|Zkomprimuje interního vyjádření souběžných vektoru zmenšíte fragmentace a optimalizovat využití paměti. Tato metoda není bezpečná souběžnosti.|  
 |[Velikost](#size)|Vrátí počet prvků v souběžných vektoru. Tato metoda je bezpečné souběžnosti.|  
-|[swap](#swap)|Zamění obsah dvou souběžných vektory. Tato metoda není bezpečná souběžnosti.|  
+|[Swap](#swap)|Zamění obsah dvou souběžných vektory. Tato metoda není bezpečná souběžnosti.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[operator[]](#operator_at)|Přetíženo. Poskytuje přístup k elementu u daného indexu v souběžných vektoru. Tato metoda je souběžnosti bezpečných pro operace čtení a také během růstu vektoru, tak dlouho, dokud zajistíte, že hodnota `_Index` je menší než velikost souběžných vektoru.|  
-|[operator=](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_vector` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
+|[[] – operátor](#operator_at)|Přetíženo. Poskytuje přístup k elementu u daného indexu v souběžných vektoru. Tato metoda je souběžnosti bezpečných pro operace čtení a také během růstu vektoru, tak dlouho, dokud zajistíte, že hodnota `_Index` je menší než velikost souběžných vektoru.|  
+|[operátor =](#operator_eq)|Přetíženo. Přiřadí obsah jiného `concurrent_vector` k tomuto objektu. Tato metoda není bezpečná souběžnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
  Podrobné informace o `concurrent_vector` třídy najdete v tématu [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -206,7 +201,7 @@ const_reference at(size_type _Index) const;
   
  Vyvolá metoda `out_of_range` Pokud `_Index` je větší než nebo rovna velikosti souběžných vektoru a `range_error` Pokud index je poškozený část vektoru. Podrobnosti o jak vektor porušený se může stát, najdete v části [paralelní kontejnery a objekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
-##  <a name="back">zpět</a> 
+##  <a name="back"></a> zpět 
 
  Vrátí a odkaz, nebo `const` odkazovat na poslední prvek v souběžných vektoru. Pokud souběžných vektoru je prázdná, není definován návratovou hodnotu. Tato metoda je bezpečné souběžnosti.  
   
@@ -219,7 +214,7 @@ const_reference back() const;
 ### <a name="return-value"></a>Návratová hodnota  
  A odkaz nebo `const` odkazovat na poslední prvek v souběžných vektoru.  
   
-##  <a name="begin">Začátek</a> 
+##  <a name="begin"></a> Začátek 
 
  Vrátí iterovat typu `iterator` nebo `const_iterator` na začátek souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   
@@ -257,7 +252,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace typu `const_iterator` na začátek souběžných vektoru.  
   
-##  <a name="cend">cend –</a> 
+##  <a name="cend"></a> cend – 
 
  Vrátí iterovat typu `const_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   
@@ -372,7 +367,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace typu `const_reverse_iterator` na začátek souběžných vektoru.  
   
-##  <a name="crend">crend –</a> 
+##  <a name="crend"></a> crend – 
 
  Vrátí iterovat typu `const_reverse_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   
@@ -383,7 +378,7 @@ const_reverse_iterator crend() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace typu `const_reverse_iterator` na konec souběžných vektoru.  
   
-##  <a name="empty">prázdný</a> 
+##  <a name="empty"></a> prázdný 
 
  Testy, pokud je v době prázdný souběžných vektoru tato metoda je volána. Tato metoda je bezpečné souběžnosti.  
   
@@ -394,7 +389,7 @@ bool empty() const;
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud v tuto chvíli funkce byla zavolána, byla prázdná vektoru `false` jinak.  
   
-##  <a name="end">End</a> 
+##  <a name="end"></a> End 
 
  Vrátí iterovat typu `iterator` nebo `const_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   
@@ -407,7 +402,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace typu `iterator` nebo `const_iterator` na konec souběžných vektoru.  
   
-##  <a name="front">Přední</a> 
+##  <a name="front"></a> Přední 
 
  Vrátí a odkaz, nebo `const` odkaz na prvním elementem v souběžných vektoru. Pokud souběžných vektoru je prázdná, není definován návratovou hodnotu. Tato metoda je bezpečné souběžnosti.  
   
@@ -457,7 +452,7 @@ iterator grow_by(
 ### <a name="remarks"></a>Poznámky  
  Pokud `_Item` nezadáte, nové prvky jsou výchozí zkonstruovat.  
   
-##  <a name="grow_to_at_least"></a> grow_to_at_least 
+##  <a name="grow_to_at_least"></a> grow_to_at_least – 
 
  Zvětšování tento souběžných vektoru, dokud má nejméně `_N` elementy. Tato metoda je bezpečné souběžnosti.  
   
@@ -472,7 +467,7 @@ iterator grow_to_at_least(size_type _N);
 ### <a name="return-value"></a>Návratová hodnota  
  Iterátor, který odkazuje na začátek pořadí připojením, nebo element v indexu `_N` Pokud byly připojeny žádné elementy.  
   
-##  <a name="max_size"></a> max_size 
+##  <a name="max_size"></a> max_size – 
 
  Vrátí maximální počet prvky, které mohou být uloženy souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   
@@ -561,7 +556,7 @@ const_reverse_iterator rbegin() const;
 ### <a name="return-value"></a>Návratová hodnota  
  Iterace typu `reverse_iterator` nebo `const_reverse_iterator` na začátek souběžných vektoru.  
   
-##  <a name="rend">rend –</a> 
+##  <a name="rend"></a> rend – 
 
  Vrátí iterovat typu `reverse_iterator` nebo `const_reverse_iterator` na konec souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   
@@ -625,7 +620,7 @@ void shrink_to_fit();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda bude interně znovu přidělit paměť přesunutí elementy kolem, zneplatnění všechny iterátory. `shrink_to_fit` není bezpečné souběžnosti. Je nutné zajistit, že jsou nejsou žádná jiná vlákna vyvolání metody na souběžných vektoru při volání této funkce.  
   
-##  <a name="size">Velikost</a> 
+##  <a name="size"></a> Velikost 
 
  Vrátí počet prvků v souběžných vektoru. Tato metoda je bezpečné souběžnosti.  
   

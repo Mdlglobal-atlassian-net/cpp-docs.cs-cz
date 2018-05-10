@@ -1,13 +1,10 @@
 ---
 title: db_command | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_command
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87209d673da47827723198697a26300d4056d3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0fe3f712566345bb069b798207cfdb10a0aa636
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbcommand"></a>db_command
 Vytvoří příkaz OLE DB.  
@@ -118,7 +113,7 @@ TCHAR m_state[3] = 'CA';
   
  **db_command** kontroluje, ujistěte se, že proměnná používá pro *source_name* je platný, takže by měly mít zadanou proměnnou funkce nebo globální obor.  
   
- `hresult`(volitelné)  
+ `hresult` (volitelné)  
  Určuje proměnné, která se zobrazí `HRESULT` tohoto příkazu databáze. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.  
   
  *vazby* (volitelné)  
@@ -126,7 +121,7 @@ TCHAR m_state[3] = 'CA';
   
  Pokud zadáte hodnotu `bindings`, **db_command** provede analýzu přidružená hodnota a nebude analyzovat [`bindtype`] parametr. Toto použití umožňuje použijte syntaxi zprostředkovatele OLE DB. Pokud chcete zakázat analýza bez vazby parametrů, zadejte **vazby = ""**.  
   
- Pokud nezadáte hodnotu `bindings`, **db_command** provede analýzu bloku vazby parametrů, hledá se**(**", za nímž následují **[** `bindtype` **]**  v závorkách, za nímž následuje jeden nebo více dříve deklarované C++ členské proměnné, následuje '**)**'. Veškerého textu v závorkách se odstraní z výsledné příkazu a tyto parametry se použije ke konstrukci sloupce a parametr vazby pro tento příkaz.  
+ Pokud nezadáte hodnotu `bindings`, **db_command** provede analýzu bloku vazby parametrů, hledá se **(**", za nímž následují **[** `bindtype` **]**  v závorkách, za nímž následuje jeden nebo více dříve deklarované C++ členské proměnné, následuje '**)**'. Veškerého textu v závorkách se odstraní z výsledné příkazu a tyto parametry se použije ke konstrukci sloupce a parametr vazby pro tento příkaz.  
   
  *bulk_fetch*(volitelné)  
  Celočíselná hodnota, která určuje počet řádků, které mají načíst.  

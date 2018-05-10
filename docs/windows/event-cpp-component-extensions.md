@@ -1,13 +1,10 @@
 ---
-title: "události (rozšíření komponent C++) | Microsoft Docs"
-ms.custom: 
+title: události (rozšíření komponent C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event (rozšíření komponent C++)
 `event` Deklaruje – klíčové slovo *událostí*, který je registrovaný odběratelům oznámení (*obslužné rutiny událostí*), něco zájmu došlo k chybě.  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  Můžete použít `operators+=` a `operator-=` přidávat a odebírat událost obslužné rutiny nebo volání `add()` a `remove()` metody explicitně.  
   
- `event`je kontextové klíčové slovo; v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Další informace.  
+ `event` je kontextové klíčové slovo; v tématu [klíčová slova Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md) Další informace.  
   
 ## <a name="windows-runtime"></a>prostředí Windows Runtime  
   

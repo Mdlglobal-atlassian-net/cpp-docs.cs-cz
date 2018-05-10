@@ -1,36 +1,31 @@
 ---
-title: "Funkce usnadnění | Microsoft Docs"
-ms.custom: 
+title: Funkce usnadnění | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>Funkce usnadnění
 Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují předávání zpráv mezi součástmi.  
   
  Tyto funkce pro předávání zpráv se používají s různými typy bloku zpráv. Další informace o typech bloku zpráv, které jsou definovány Concurrency Runtime najdete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-##  <a name="top"></a>Oddíly  
+##  <a name="top"></a> Oddíly  
  Toto téma popisuje následující funkce předávání zpráv:  
   
 -   [odesílání a asend –](#send)  
@@ -39,7 +34,7 @@ Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují p
   
 -   [Příklady](#examples)  
   
-##  <a name="send"></a>odesílání a asend –  
+##  <a name="send"></a> odesílání a asend –  
 
  [Concurrency::send](reference/concurrency-namespace-functions.md#send) funkce odešle zprávu do zadané cílové synchronně a [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkce odešle zprávu do zadané cílové asynchronně. Jak `send` a `asend` funkce Počkejte, dokud cíl Určuje, že se bude nakonec přijmout nebo odmítnout zprávy.  
   
@@ -49,7 +44,7 @@ Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují p
   
  [[Horní](#top)]  
   
-##  <a name="receive"></a>přijímat a try_receive –  
+##  <a name="receive"></a> přijímat a try_receive –  
 
  [Concurrency::receive](reference/concurrency-namespace-functions.md#receive) a [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) funkce Číst data z daného zdroje. `receive` Funkce čeká data k dispozici, zatímco `try_receive` funkce vrátí okamžitě.  
   
@@ -57,7 +52,7 @@ Knihovna asynchronních agentů poskytuje několik funkcí, které umožňují p
   
  [[Horní](#top)]  
   
-##  <a name="examples"></a>Příklady  
+##  <a name="examples"></a> Příklady  
  Příklady, které používají `send` a `asend`, a `receive` funkce, najdete v následujících tématech:  
   
 -   [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
