@@ -1,13 +1,10 @@
 ---
 title: SafeMultiply | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeMultiply
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeMultiply function
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37ea091136521fc83fc63a8fb752e0f4f72cb49f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89581544e203249a548b49f0695b28662407229b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemultiply"></a>SafeMultiply
 Vynásobí dvou čísel společně způsobem, který chrání před přetečení.  
@@ -43,17 +38,17 @@ inline bool SafeMultiply (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`t`  
+ [v] `t`  
  První číslo, které má násobení. Toto musí být typu T.  
   
- [v]`u`  
+ [v] `u`  
  Druhé číslo, které má násobení. Musí se jednat o typ U.  
   
- [out]`result`  
+ [out] `result`  
  Parametr kde `SafeMultiply` ukládá výsledek.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true`Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
+ `true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a je určená pro operaci jeden násobení bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  

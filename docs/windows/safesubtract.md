@@ -1,13 +1,10 @@
 ---
 title: SafeSubtract | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeSubtract
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b94d84e6a348b68258fc1b57c2e0ad9ad30e36d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safesubtract"></a>SafeSubtract
 Odečítá od dvou čísel způsobem, který chrání před přetečení.  
@@ -43,17 +38,17 @@ inline bool SafeSubtract (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v]`t`  
+ [v] `t`  
  První číslo v odčítání. Toto musí být typu T.  
   
- [v]`u`  
+ [v] `u`  
  Číslo, které má odečíst od `t`. Musí se jednat o typ U.  
   
- [out]`result`  
+ [out] `result`  
  Parametr kde `SafeSubtract` ukládá výsledek.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `true`Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
+ `true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda je součástí [SafeInt – knihovna](../windows/safeint-library.md) a slouží k odečtení jedné operace bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md).  

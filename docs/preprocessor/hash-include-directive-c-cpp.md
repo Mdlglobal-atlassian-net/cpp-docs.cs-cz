@@ -1,12 +1,9 @@
 ---
-title: "#include – direktiva (C/C++) | Microsoft Docs"
-ms.custom: 
+title: '#include – direktiva (C/C++) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#include'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee268b68d9be823c6919780f8f4f25e78e1eb74
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64cd6098f7a539fd883a9c8e0e0c116590a2f38f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="include-directive-cc"></a>#include – direktiva (C++)
 Informuje preprocesor zacházet s obsah zadaného souboru, jako kdyby se objeví v zdrojový program v místě, kde se zobrazí direktivu.  
@@ -82,7 +77,7 @@ Informuje preprocesor zacházet s obsah zadaného souboru, jako kdyby se objeví
   
  Vnoření zahrnout soubory můžete pokračovat až 10 úrovně. Když vnořeného `#include` je zpracování preprocesor pokračuje vložení nadřazených soubor do původní zdrojový soubor.  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  Najít includable zdrojové soubory, preprocesoru první hledání adresáře, které jsou určené /I – možnost kompilátoru. Pokud není k dispozici možnost /I nebo selže, preprocesor používá proměnnou prostředí pro zahrnutí nalézt žádné soubory zahrnout v rámci lomené závorky. Zahrnout prostředí proměnnou a /I – možnost kompilátoru může obsahovat více cest, oddělených středníkem (;). Pokud se více než jeden adresář se zobrazí jako součást možnost /I nebo v rámci proměnné prostředí zahrnout, preprocesor je prohledává v pořadí, ve kterém jsou zobrazeny.  
   

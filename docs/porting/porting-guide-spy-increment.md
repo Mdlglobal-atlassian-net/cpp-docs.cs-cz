@@ -1,27 +1,22 @@
 ---
-title: "Průvodce přenosem: Spy ++ | Microsoft Docs"
-ms.custom: 
+title: 'Průvodce přenosem: Spy ++ | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 Tato přenosem Případová studie slouží k získáte představu o jaké typické přenosem projekt je stejně jako typy problémů, může dojít k a některé obecné tipy a triky pro adresování přenosem problémy. Smyslem není jako spolehlivý Průvodce přenosem, protože možností portování projektu velmi mnohem závisí na specifika kódu.  
@@ -31,16 +26,16 @@ Tato přenosem Případová studie slouží k získáte představu o jaké typic
   
  Jsme považován za tento případ typická pro přenos aplikací klasické pracovní plochy Windows využívající rozhraní MFC a rozhraní API Win32 hlavně pro původní projekty, které nebyly aktualizovány při každém vydání Visual C++ od Visual C++ verze 6.0.  
   
-##  <a name="convert_project_file"></a>Krok 1. Převádění souboru projektu.  
+##  <a name="convert_project_file"></a> Krok 1. Převádění souboru projektu.  
  Soubor projektu, dvě staré .dsw soubory z Visual C++ verze 6.0, převést snadno bez problémů, které vyžadují další pozornost. Aplikace nástroje Spy ++ je jeden projekt. Druhá je SpyHk, které jsou napsané v jazyce C, podpůrné knihovny DLL. Složitější projekty nemusí upgradovat snadno, jak je popsáno [zde](../porting/visual-cpp-porting-and-upgrading-guide.md).  
   
  Po dokončení upgradu dva projekty naše řešení hledá takto:  
   
- ![Nástroji Spy & č. 43; & č. 43; Řešení](../porting/media/spyxxsolution.PNG "SpyxxSolution")  
+ ![Nástroji Spy&#43; &#43; řešení](../porting/media/spyxxsolution.PNG "SpyxxSolution")  
   
  Máme dva projekty, jeden s velkým počtem C++ soubory a jiné knihovny DLL, která je napsána v C.  
   
-##  <a name="header_file_problems"></a>Krok 2. Záhlaví souboru problémy  
+##  <a name="header_file_problems"></a> Krok 2. Záhlaví souboru problémy  
  Při sestavování nově převedený projekt, jedním z nejdůležitějších věcí, které budete často zjistíte je, že nebyly nalezeny soubory hlaviček, které používá váš projekt.  
   
  Byl jeden ze souborů, které se nenašel v nástroji Spy ++ verstamp.h. Z hledání v Internetu jsme určili, to pochází DAO SDK, technologie zastaralá data. Jsme chtěli zjistit, jaké symboly byly používá z hlavičkový soubor, pokud byl tento soubor skutečně potřeba, nebo zda tyto symboly nebyly definované jinam, takže jsme označeno jako komentář deklaraci hlavičky souboru a překompilovat. Stane se z odhlašování došlo je jen jeden symbol, který je potřeba, VER_FILEFLAGSMASK.  
@@ -51,7 +46,7 @@ Tato přenosem Případová studie slouží k získáte představu o jaké typic
   
  Nejjednodušší způsob, jak najít v souborech k dispozici zahrnout symbol je používání funkce najít v souborech (Ctrl + Shift + F) a zadejte **adresáře Include Visual C++**. Jsme našli v ntverp.h. Jsme nahradit verstamp.h zahrnout ntverp.h a tato chyba není dostupné.  
   
-##  <a name="linker_output_settings"></a>Krok 3. Nastavení výstupní soubor linkeru  
+##  <a name="linker_output_settings"></a> Krok 3. Nastavení výstupní soubor linkeru  
  Starší projekty někdy nutné soubory umístěné v neobvyklé umístění, které mohou způsobovat problémy po upgradu. V takovém případě máme $(solutiondir) – přidejte do cesty k zahrnutí ve vlastnostech projektu zajistit, že Visual Studio můžete najít některé soubory hlavičky, které jsou umístěny existuje, a nikoli v jednom ze složky projektu.  
   
  MSBuild complains, že vlastnost Link.OutputFile neodpovídá hodnoty TargetPath a TargetName vystavování MSB8012.  
@@ -64,7 +59,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
   
  V takovém případě **Link.OutputFile** v převedený projektu byla nastavena na.\Debug\Spyxx.exe a.\Release\Spyxx.exe nástroje Spy ++ projektu, v závislosti na konfiguraci. Nejvhodnější dokument je jednoduše nahradit tyto hodnoty pevně zakódované $(TargetDir)$(TargetName)$(TargetExt) u všech konfigurací. Pokud to nefunguje, můžete přizpůsobit odtud nebo změny vlastností v části Obecné, kde jsou tyto hodnoty nastavené (vlastnosti jsou **výstupního adresáře**, **cílová**, a  **Cíl rozšíření**. Mějte na paměti, že pokud vlastnost prohlížíte používá makra, můžete zvolit **upravit** v rozevíracím seznamu se zprovoznit dialogové okno se zobrazuje posledním řetězci s provedeny náhrady makro. Všechny dostupné makra a jejich aktuální hodnoty můžete zobrazit výběrem **makra** tlačítko.  
   
-##  <a name="updating_winver"></a>Krok 4. Aktualizace na cílovou verzi systému Windows  
+##  <a name="updating_winver"></a> Krok 4. Aktualizace na cílovou verzi systému Windows  
  Další chyba označuje, že WINVER verzi není podporován v prostředí MFC. WINVER pro systém Windows XP je 0x0501.  
   
 ```Output  
@@ -90,7 +85,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7  
 ```  
   
-##  <a name="linker_errors"></a>Krok 5. Chybami linkeru  
+##  <a name="linker_errors"></a> Krok 5. Chybami linkeru  
  Tyto změny sestavení projektu SpyHk (DLL) ale způsobí chybu linkeru.  
   
 ```  
@@ -107,14 +102,14 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
  Projekt C DLL, SpyHK.dll, teď sestavení a propojuje bez chyby.  
   
-##  <a name="outdated_header_files"></a>Krok 6. Více zastaralé soubory hlaviček  
+##  <a name="outdated_header_files"></a> Krok 6. Více zastaralé soubory hlaviček  
  V tuto chvíli jsme začátek práce na hlavní spustitelný projekt, Spyxx.  
   
  Nebyl nalezen pár dalších zahrnout soubory: ctl3d.h a penwin.h. Může být užitečné pro vyhledávání v Internetu a pokouší se určit, co zahrnuté záhlaví, někdy informace není to užitečné. Zjistili jsme, ctl3d.h se součást Exchange Development Kit a poskytuje podporu pro určité styl ovládacích prvků v systému Windows 95, a penwin.h má vztah k okno pera Computing zastaralá rozhraní API. V takovém případě můžeme jednoduše komentář #include řádek a řešit nedefinované symboly, jako jsme to udělali s verstamp.h. Všechno, co se má vztah k 3D ovládací prvky nebo pera Computing byla odebrána z projektu.  
   
  Vzhledem k projektu s mnoha kompilace chyb, které jsou postupně odstraňuje, není realistické najít všechny používá zastaralá rozhraní API hned, když odeberete #include – direktiva. Jsme nebyla zjišťovat okamžitě, ale spíše na některé pozdější místo byla přijata chyba, WM_DLGBORDER nebyla definována. Ve skutečnosti pouze jeden, je mnoho nedefinované symboly, které pocházejí z ctl3d.h. Jakmile jste jsme určili, že má vztah k rozhraní API zastaralé, jsme odebrali všechny odkazy v kódu na ni.  
   
-##  <a name="updating_iostreams_code"></a>Krok 7. Aktualizace staré iostreams kódu  
+##  <a name="updating_iostreams_code"></a> Krok 7. Aktualizace staré iostreams kódu  
  Další chyba je běžné s původním C++ kód, který používá iostreams.  
   
  mstream.h(40): závažná chyba C1083: Nelze otevřít vložený soubor: 'iostream.h': podobný soubor nebo adresář  
@@ -267,7 +262,7 @@ mstream& operator<<(LPTSTR psz)
   
  Tento typ převodu byla povolena v kompilátoru starší, méně přísná, ale novější shoda změny vyžadují více správný kód.  
   
-##  <a name="stricter_conversions"></a>Krok 8. Převody více striktní kompilátoru  
+##  <a name="stricter_conversions"></a> Krok 8. Převody více striktní kompilátoru  
  Můžeme také získat mnoho chyb takto:  
   
 ```  
@@ -306,7 +301,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
  Vzhledem k tomu, že jsou přibližně deset výskyty této funkce ve různé třídy odvozené od CWnd, je vhodné použít **přechod na definici** (klávesové: F12) a **přejít na deklaraci** (klávesové: Ctrl + F12) při kurzor je na funkci v editoru a najděte tyto přejděte do jim **najít Symbol** okno nástroje. **Přejděte do definice** je obvykle užitečnější dvou. **Přejděte na deklaraci** bude deklarace najít než definice deklarace, jako je například třída friend – deklarace třídy nebo předávat odkazy.  
   
-##  <a name="mfc_changes"></a>Krok 9. Změny MFC  
+##  <a name="mfc_changes"></a> Krok 9. Změny MFC  
  Další chyba také má vztah k typu změněné deklarace a také výskytu v makru.  
   
 ```Output  
@@ -327,7 +322,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
   
  Snažíme se v tuto chvíli ke zkompilování projektu. Existuje několik upozornění fungovat prostřednictvím, ale a jsou volitelné části upgradu, jako je například převod z MBCS do kódu Unicode nebo zvýšení zabezpečení pomocí funkce zabezpečení CRT.  
   
-##  <a name="compiler_warnings"></a>Krok 10. Adresování upozornění kompilátoru  
+##  <a name="compiler_warnings"></a> Krok 10. Adresování upozornění kompilátoru  
  Chcete-li získat úplný seznam upozornění, měli byste udělat **znovu vytvořit všechny** na řešení spíše než obyčejnou sestavení, stačí, abyste měli jistotu, že vše, co dříve zkompilovat bude zopakovat, vzhledem k tomu, že pouze získat upozornění sestavy z aktuální kompilace. Další otázka se jestli souhlasíte aktuální úroveň pro upozornění nebo používat vyšší úroveň pro upozornění.  Pokud přenášíte velké množství kódu, zejména původní kód, může být vhodné pomocí vyšší úroveň pro upozornění.  Můžete také chtít začít s výchozí úroveň pro upozornění a poté zvýšit úroveň pro upozornění k získání všech upozornění. Pokud používáte /Wall, dostanete upozornění. v systému soubory hlaviček, mnoho lidí používá /W4 získat většinu upozornění na svůj kód bez získávání upozornění pro systémové hlavičky. Pokud chcete upozornění objeví jako chyby, přidejte wdn možnost. Tato nastavení jsou v části C/C++ dialogové okno Vlastnosti projektu.  
   
  Jednu z metod ve třídě CSpyApp vyvolá upozornění o funkci, která již není podporována.  
@@ -517,7 +512,7 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  Tento problém nastane, když proměnná byla deklarována nejprve `extern`, později deklarovaný `static`. Význam tyto dvě specifikátory třídy úložiště se vzájemně vylučují, ale je to povoleno jako rozšíření Microsoft. Pokud jste chtěli kód přenosný na jiné kompilátory nebo jste chtěli kompilovat s /Za (režim kompatibility ANSI), změníte deklarace do mají odpovídající specifikátory třídy úložiště.  
   
-##  <a name="porting_to_unicode"></a>Krok 11. Portování ze MBCS do kódu Unicode
+##  <a name="porting_to_unicode"></a> Krok 11. Portování ze MBCS do kódu Unicode
 
  Všimněte si, že na světě Windows když říkáme kódování Unicode, jsme obvykle znamená UTF-16. Jiné operační systémy, jako je například Linux pomocí znakové sady UTF-8, ale Windows obecně neexistuje. MBCS verze knihovny MFC byla zrušena v sadě Visual Studio 2013 a 2015, ale už se nepoužívá v Visual Studio 2017. Pokud používáte Visual Studio 2013 nebo 2015, před provedením kroku k ve skutečnosti portu kód MBCS do kódu Unicode UTF-16, chceme může dočasně omezit upozornění, že je zastaralá MBCS, aby bylo možné provádět další činnosti nebo portování dokud vhodnou dobu odložit. Aktuální kód používá MBCS a chcete-li pokračovat, je potřeba nainstalovat verzi ANSI/MBCS MFC. Místo velké knihovny MFC není součástí výchozí sady Visual Studio **vývoj aplikací s jazykem C++** instalace, takže musíte ji vybrat z volitelných komponent v instalačním programu. V tématu [MFC MBCS DLL – doplněk](../mfc/mfc-mbcs-dll-add-on.md). Jakmile si stáhnout tuto a restartujte Visual Studio, můžete zkompilovat a propojit s verzí MFC MBCS, ale se jich zbavit upozornění o rozhraní MBCS Pokud používáte Visual Studio 2013 nebo 2015, měli byste také přidat **NO_WARN_MBCS_MFC_DEPRECATION**do seznamu předdefinovaná makra v části preprocesoru vlastnosti projektu, nebo na začátku souboru stdafx.h záhlaví nebo jiné běžné hlavičky souborů.  
   
@@ -637,7 +632,7 @@ strFace.ReleaseBuffer();
   
  V našem pracují se toto řešení nástroje Spy ++ trvalo o dvou dnů pro vývojář průměrná C++ převést kód na kódování Unicode. Retesting čas neobsahuje.  
   
-##  <a name="porting_to_secure_crt"></a>Krok 12. Portování používat zabezpečení CRT  
+##  <a name="porting_to_secure_crt"></a> Krok 12. Portování používat zabezpečení CRT  
  Portování kódu pro použití zabezpečeného verze funkcí CRT (verze s příponou _Malá) je další. V takovém případě je funkce nahraďte _M verze a potom obvykle přidat parametry velikost vyrovnávací paměti vyžaduje další obecné strategie. V mnoha případech jde přehledné vzhledem k tomu, že velikost je známý. V ostatních případech, kde velikost není ihned k dispozici, je potřeba přidat další parametry funkce, která používá funkci CRT nebo možná zkontrolujte využití cílové vyrovnávací paměti a najdete v části co odpovídající velikost jsou omezení.  
   
  Visual C++ poskytuje podvodné, aby bylo snazší získat zabezpečený kód bez přidání tolik parametrů velikost a který je pomocí šablony přetížení. Vzhledem k tomu, že tato přetížení jsou šablony, že jsou dostupná pouze při kompilování jako C++, není jako C. Spyxxhk je projekt C, takže nebudou fungovat efektu pro tento.  Však není Spyxx a používáme podvodné. Základem je na místě, kde se bude zkompilován v každém souboru projektu, například v stdafx.h přidá řádek takto:  
@@ -654,7 +649,7 @@ strFace.ReleaseBuffer();
   
  Pomocí těchto postupů převést kódu pro použití zabezpečeného funkcí CRT trvalo asi půl za den. Pokud si zvolíte možnost Ne přetížení šablony a k přidání parametrů velikost ručně, by pravděpodobně trvat dvakrát nebo třikrát delší dobu.  
   
-##  <a name="deprecated_forscope"></a>Krok 13. /Zc:forScope-je zastaralý.  
+##  <a name="deprecated_forscope"></a> Krok 13. /Zc:forScope-je zastaralý.  
  Od verze Visual C++ verze 6.0 kompilátor vyhovuje aktuální standard, což omezí obor proměnných deklarovaných ve smyčce do oboru smyčky. Možnost kompilátoru [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**vynutit dodržování pro obor cyklu for** ve vlastnostech projektu) určuje, zda bude ohlášena za chybu. Jsme by měl aktualizovat kódu jako vyhovující a přidejte deklarace právě mimo smyčku. Aby se zabránilo provedení změn kódu, můžete změnit toto nastavení v části jazyk C++ vlastností projektu a **žádné (/Zc:forScope-)**. Nicméně, mějte na paměti, **/Zc:forScope-** může být odebrán v budoucí verzi Visual C++, takže nakonec váš kód bude nutné změnit tak, aby odpovídala na standardní.  
   
  Tyto problémy jsou je poměrně snadné ho opravit, ale v závislosti na kódu, může to ovlivnit velké množství kódu. Zde je typické problém.  
