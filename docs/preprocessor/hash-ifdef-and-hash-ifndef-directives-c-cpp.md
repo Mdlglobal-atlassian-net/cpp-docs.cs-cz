@@ -1,12 +1,9 @@
 ---
-title: "#ifdef – a #ifndef – direktivy (C/C++) | Microsoft Docs"
-ms.custom: 
+title: '#ifdef – a #ifndef – direktivy (C/C++) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#ifndef'
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8f1a10e9d8437b71591efc9ce2915c9f485e0c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9a5ecfc9cc63fc4028e1f93d8f30e8d5cb9f9357
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef a #ifndef – direktivy (C/C++)
 **#Ifdef** a **#ifndef** direktivy provést stejný úkol jako `#if` – direktiva při použití s **definované**( *identifikátor* ).  
@@ -53,7 +48,7 @@ ms.lasthandoff: 02/23/2018
   
  **#Ifndef** – direktiva vyhledává opak podmínka kontrolovat pomocí **#ifdef**. Pokud nebyl definován identifikátor (nebo její definice byl odebrán s `#undef`), podmínka hodnotu true (nenulové hodnoty). Jinak je podmínka vyhodnocena jako false (0).  
   
- **Microsoft Specific**  
+ **Konkrétní Microsoft**  
   
  *Identifikátor* mohou být předány z příkazového řádku pomocí možnosti /D. Až 30 makra lze zadat s /D.  
   

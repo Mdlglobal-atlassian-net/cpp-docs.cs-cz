@@ -1,7 +1,7 @@
 ---
 title: Osvědčené postupy zabezpečení pro jazyk C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>Doporučené postupy zabezpečení pro jazyk C++
+
 Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich používání není zpřístupnit aplikace útokům imunní, ale umožňuje méně pravděpodobné, že úspěšné útoky.  
   
-## <a name="visual-c-security-features"></a>Funkce zabezpečení Visual C++  
+## <a name="visual-c-security-features"></a>Funkce zabezpečení Visual C++
+
  Tyto funkce zabezpečení jsou součástí Visual C++ kompilátoru a linkeru:  
   
  [/guard (povolení ochrany toku řízení)](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ Tento článek obsahuje informace o nástrojích zabezpečení a postupy. Jejich
 -   Test potenciální chyby kompatibility aplikací, které jsou způsobeny obvyklé programovací chyby.  
   
 -   Zkontrolujte aplikaci pro problémy související s pamětí.  
-  s
+
 -   Identifikujte potenciální potíže se zabezpečením v aplikaci.  
   
  Nástroj Ověřovatel aplikací je součástí sady Application Compatibility Toolkit, která je k dispozici z [kompatibilita aplikací](http://go.microsoft.com/fwlink/p/?linkid=91277) na webu TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Uživatelské účty systému Windows  
- Pomocí Windows uživatelské účty, které patří k vývojářům zpřístupňuje skupiny Administrators a--rozšíření – zákazníkům na bezpečnostní rizika. Další informace najdete v tématu [spuštění jako člen skupiny Users](running-as-a-member-of-the-users-group.md) a [jak řízení uživatelských účtů (UAC) má vliv na vaše aplikace](how-user-account-control-uac-affects-your-application.md).  
+ Pomocí Windows uživatelské účty, které patří k vývojářům zpřístupňuje skupiny Administrators a--rozšíření – zákazníkům na bezpečnostní rizika. Další informace najdete v tématu [spuštění jako člen skupiny Users](running-as-a-member-of-the-users-group.md) a [jak řízení uživatelských účtů (UAC) má vliv na vaše aplikace](how-user-account-control-uac-affects-your-application.md).
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>Pokyny pro kanály straně spekulativní provádění
+
+Informace o tom, jak usnadní identifikaci a zmírnit zranitelná spekulativní provádění straně kanál hardwaru v C++ softwaru najdete v tématu [Průvodce pro vývojáře C++ pro kanály straně provádění Speculative](developer-guidance-speculative-execution.md).
+
   
 ## <a name="see-also"></a>Viz také  
  <xref:System.Security>   
