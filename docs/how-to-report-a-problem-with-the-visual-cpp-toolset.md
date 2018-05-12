@@ -1,6 +1,6 @@
 ---
 title: Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs
-ms.date: 1/11/2018
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Postup nahlásit problém s sady nástrojů Visual C++
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak vytvářet sestavu o problém s Visual C++ nástrojů nebo dokumentace
 
-Pokud narazíte na potíže s Microsoft Visual C++ compiler, linkeru, nebo jiných nástrojů a knihovny, chceme vědět o nich.
+Pokud narazíte na potíže s Microsoft Visual C++ compiler, linkeru, nebo jiných nástrojů a knihovny, chceme vědět o nich. Pokud se potíže v naší dokumentaci, chceme, příliš seznámit.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>Jak vytvářet sestavu problémem dokumentaci jazyka C++
+
+Problémy GitHub používáme sledovat problémy hlášené v dokumentaci. Nyní můžete vytvořit Githubu problémy přímo ze stránky obsahu, která vám umožní komunikovat způsobem mnohem širší s zapisovače a týmy pro produkt. Pokud se problém s dokumentem, ukázku chybného kódu, matoucí vysvětlení, kritické vynechání nebo i právě překlepem, které můžete snadno dejte nám vědět. Přejděte do dolní části stránky a vyberte **Přihlaste se k dokumentaci váš názor**. Budete potřebovat pro vytvoření účtu GitHub, pokud již nemáte, ale až to uděláte, můžete zobrazit všechny problémy v naší dokumentaci, jejich stav a získat oznámení při změně pro problém, se kterým jste ohlásil. Další informace najdete v tématu [A nové zpětné vazby systému pochází k docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
+
+Když vytvoříte problém dokumentaci na Githubu pomocí tlačítka dokumentace zpětnou vazbu, problém automaticky vyplněno některé informace o stránku, kterou jste vytvořili problém, abychom věděli, kde se nachází problém. Nemáte upravte prosím tyto informace. Podrobnosti o tom, co je pokazilo a podle potřeby navrhované opravu právě připojte. [Dokumentaci je open source](https://github.com/MicrosoftDocs/cpp-docs/), takže pokud chcete ve skutečnosti proveďte opravu a navrhnout sami, můžete to udělat. Další informace o tom, jak můžete přispívat do naší dokumentaci najdete v tématu naše [Contributing průvodce](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) na Githubu.
+
+## <a name="how-to-report-a-c-product-issue"></a>Jak vytvářet sestavu problému s produktem C++
 
 Nejlepší způsob a dejte nám vědět o problému, je pošlete nám sestavu, která obsahuje popis problému byla zjištěna, podrobnosti o jak sestavujete vašeho programu a *zkopírujte*, můžeme použít pro reprodukci dokončení testovacího případu problém na vlastní počítače. Tyto informace umožňují nám rychle ověřte, zda problém existuje v našem kódu a není místní pro vaše prostředí a zjistit, zda ovlivňuje jiných verzích kompilátor a diagnostikovat jeho příčinu.
 
-V tomto dokumentu budete přečíst si o
-
-- [Postup přípravy sestavy](#how-to-prepare-your-report), a díky užitečnou sestavu.
-
-- [Jak vygenerovat zkopírujte](#how-to-generate-a-repro)a různé druhy repros.
-
-- [Způsoby odeslání sestavy](#ways-to-send-your-report), a jsou co pak jiný.
-
-Sestavy jsou důležité pro nás a ostatní vývojáři mohou. Děkujeme vám za pomoc při vylepšení Visual C++.
+V následujících částech upletené budete přečíst si o díky užitečnou sestavu, jak vygenerovat zkopírujte pro druh problém, který jste si našli a odesílat sestavy produktový tým. Sestavy jsou důležité pro nás a ostatní vývojáři mohou. Děkujeme vám za pomoc při vylepšení Visual C++.
 
 ## <a name="how-to-prepare-your-report"></a>Postup přípravy sestavy
 
@@ -291,7 +291,7 @@ Vytvořte vaše zkopírujte jako minimální IDE projekt, pak balíček komprima
 
 ## <a name="ways-to-send-your-report"></a>Způsoby odeslání sestavy
 
-Chcete-li získat sestavu do us několika způsoby. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Je také možné odeslat e-mail s sestavy, ale jsou upřednostněny první dvě metody. Výběr závisí na tom, jak chcete pracovat s technici, kteří budou prozkoumat sestavy a jestli chcete sledovat průběh nebo sdílení sestavy s komunitou.
+Chcete-li získat sestavu do us několika způsoby. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Získáte také přímo na stránkách k jednotlivým komunity vývojářů výběrem **názor produkt** tlačítko v dolní části této stránky. Je také možné odeslat e-mail s sestavy, ale jsou upřednostněny první dvě metody. Výběr závisí na tom, jak chcete pracovat s technici, kteří budou prozkoumat sestavy a jestli chcete sledovat průběh nebo sdílení sestavy s komunitou.
 
 > [!NOTE]
 > Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [Microsoft Visual Studio rodiny ochrany osobních údajů produktu](https://www.visualstudio.com/dn948229).
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> Pro jiné druhy problémů, ke kterým může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě) může být sestava nástroj problém hlavně dobrou volbou z důvodu možnosti snímek obrazovky a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému byla zjištěna. Měli byste nikdy nahlásit tyto jiné typy chyb zasláním e-mailu compilercrash@microsoft.com.
+> Pro jiné druhy problémů může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě), **nahlásit problém nástroj** může být obzvláště dobrý choice datu splatnosti k jeho snímek obrazovky jste možnosti a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému došlo. Tyto druhy chyby mohou být zaznamenány také na [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality. Měli byste nikdy nahlásit tyto jiné typy chyb zasláním e-mailu compilercrash@microsoft.com.
