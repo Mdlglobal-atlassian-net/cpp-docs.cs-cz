@@ -26,6 +26,7 @@
 # [Doporučené postupy zabezpečení pro jazyk C++](security/security-best-practices-for-cpp.md)
 ## [Spuštění jako člen skupiny Users](security/running-as-a-member-of-the-users-group.md)
 ## [Jak nástroj Řízení uživatelských účtů (UAC) ovlivňuje vaši aplikaci](security/how-user-account-control-uac-affects-your-application.md)
+## [Pokyny pro vývojáře C++ k útokům souvisejícím se spekulativním spouštěním postranních kanálů](security/developer-guidance-speculative-execution.md)
 # [Visual C++ – ukázky](visual-cpp-samples.md)
 # [Visual C++ – nápověda a komunita](visual-cpp-help-and-community.md)
 # [Postup nahlášení problému se sadou nástrojů Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
