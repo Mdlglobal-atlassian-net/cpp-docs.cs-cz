@@ -45,7 +45,7 @@ Můžete importovat grafických prostředků (rastrové obrázky, ikonami, kurzo
   
 2.  Klikněte na tlačítko **Import** v místní nabídce.  
   
-3.  Vyhledejte a vyberte název souboru rastrový obrázek (BMP), ikona (), kurzor (), soubor Html (*.htm) nebo jiný soubor, který chcete importovat.  
+3.  Vyhledejte a vyberte název souboru rastrový obrázek (BMP), ikona (), kurzor (), soubor Html (.htm) nebo jiný soubor, který chcete importovat.  
   
 4.  Klikněte na tlačítko **OK** pro daný prostředek přidejte do vybraného souboru v **prostředků** zobrazení.  
   
