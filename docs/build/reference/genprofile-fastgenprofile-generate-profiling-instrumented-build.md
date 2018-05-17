@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/ GENPROFILE, /FASTGENPROFILE (Generovat profilace instrumentovaného sestavení)
 
@@ -31,8 +30,8 @@ Určuje generování souboru .pgd podle linkeru pro podporu optimalizace na zák
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]<br/>
-> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]
+> **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [**EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**Cesta**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]<br/>
+> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [**EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [**Cesta**|**NOPATH** ] | [**TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
 
 ### <a name="arguments"></a>Arguments
 
@@ -47,10 +46,10 @@ Použití **EXACT** k určení interlocked přírůstcích vláken pro testy pam
 **MEMMAX**=*hodnotu*, **MEMMIN**=*hodnota*<br/>
 Použití **MEMMAX** a **MEMMIN** k určení rezervace maximální a minimální velikosti pro Cvičná data v paměti. Hodnota je množství paměti tak, aby vyhradil v bajtech. Ve výchozím nastavení tyto hodnoty jsou určeny interní heuristiky.
 
-**PATH**  &#124; **NOPATH** <br/>
+**CESTA** &AMP;#124; **NOPATH**  <br/>
 Použití **cesta** zadat samostatnou sadu čítačů PGO pro každý jedinečný cestu na funkci. Použití **NOPATH** zadat jen jednu sadu čítačů pro každou funkci. Pokud zadáte **/GENPROFILE**, výchozí hodnota je **CESTU** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOPATH** .
 
-**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
+**TRACKEH** &AMP;#124; **NOTRACKEH** <br/>
 Určuje, jestli se má používat další čítače zachovat aktuální přehled, pokud jsou výjimky vyvolány během cvičení. Použití **TRACKEH** zadat další čítače pro přesný počet. Použít **NOTRACKEH** k zadání jednoho čítače pro kód, který nepoužívá výjimka zpracování nebo které není dojde výjimky v vaše scénáře školení.  Pokud zadáte **/GENPROFILE**, výchozí hodnota je **TRACKEH** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOTRACKEH** .
 
 **PGD**=*filename*<br/>

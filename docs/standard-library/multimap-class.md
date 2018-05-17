@@ -96,11 +96,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 863d0c84d772de389affc8167e3a0f69b0e0fabe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 25dffabfe01bb68af180d67b5b47dfee44ce30ff
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="multimap-class"></a>multimap – třída
 
@@ -124,7 +124,7 @@ class multimap;
 
 `Traits` Typ, který poskytuje funkce objekt, který můžete porovnat dvě hodnoty element jako klíči řazení určit jejich relativní pořadí v multimap. Binární predikát `less<Key>` je výchozí hodnota.
 
-V C ++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativní kontejnery](../standard-library/stl-containers.md#sequence_containers)
+V C ++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativní kontejnery](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 `Allocator` Typ, který představuje uložené allocator objekt, který zapouzdřuje podrobnosti o přidělení a zrušení přidělení paměti na mapě. Tento argument je volitelný a výchozí hodnota je `allocator<pair <const Key, Type> >`.
 

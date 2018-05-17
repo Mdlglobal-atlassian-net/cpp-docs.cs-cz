@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Konkrétní Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Pořadí předávání argumentů|První dva DWORD nebo menší argumenty, které se nacházejí v seznamu argumentů zleva doprava se předávají v ECX a EDX registry; všechny další argumenty se předávají v zásobníku zprava doleva.|  
 |Odpovědnost za údržbu zásobníku|Volá argumenty bodů POP funkce v zásobníku.|  
-|Konvence pro vzhled názvu|Znaku zavináče (@) je předponou názvy; seznamu je znak následovaný počtem bajtů (decimální) v parametru na konci na názvy.|  
+|Konvence pro vzhled názvu|Znaku zavináče (\@) předponou názvy; je seznamu je znak následovaný počtem bajtů (decimální) v parametru na konci na názvy.|  
 |Konvence pro posunutí|Neprovádí se žádné posunutí.|  
   
 > [!NOTE]
