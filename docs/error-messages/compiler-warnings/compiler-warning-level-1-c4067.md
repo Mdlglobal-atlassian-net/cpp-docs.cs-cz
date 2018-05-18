@@ -16,42 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eccec985e6a9e652f18c6513542942351ff6efc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-warning-level-1-c4067"></a>C4067 kompilátoru upozornění (úroveň 1)
-neočekávané tokeny následující direktivy preprocesoru - očekává nový řádek  
-  
- Kompilátor najít a další znaky následující direktivy preprocesoru ignorovány. Toto upozornění se zobrazí pouze pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-```  
-// C4067a.cpp  
-// compile with: /DX /Za /W1  
-#pragma warning(default:4067)  
-#if defined(X)  
-#else  
-#endif v   // C4067  
-int main()  
-{  
-}  
-```  
-  
-### <a name="to-resolve-this-warning-try-the-following"></a>Chcete-li vyřešit toto upozornění, zkuste následující postup:  
-  
-1.  Kompilovat s **/Ze**.  
-  
-2.  Použijte komentář oddělovače:  
-  
-```  
-// C4067b.cpp  
-// compile with: /DX /Za /W1  
-#if defined(X)  
-#else  
-#endif  
-int main()  
-{  
-}  
+
+> neočekávané tokeny následující direktivy preprocesoru - očekává nový řádek
+
+## <a name="remarks"></a>Poznámky
+
+Kompilátor najít a další znaky následující direktivy preprocesoru ignorovány. Když obvyklou příčinou je stray středníkem po direktiva to může být způsobeno znaky neočekávané. Komentáře nezpůsobí toto upozornění. **/Za** – možnost kompilátoru umožňuje toto upozornění pro další preprocesor – direktivy než výchozí nastavení.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// C4067a.cpp
+// compile with: cl /EHsc /DX /W1 /Za C4067a.cpp
+#include <iostream>
+#include <string> s     // C4067
+#if defined(X);         // C4067
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif;                 // C4067 only under /Za
+int main()
+{
+    std::cout << s << std::endl;
+}
+```
+
+Toto upozornění vyřešit, odstraňte stray znaky nebo přesuňte je do blok komentáře. Některé C4067 upozornění mohou být zakázány odebráním **/Za** – možnost kompilátoru.
+
+```cpp
+// C4067b.cpp
+// compile with: cl /EHsc /DX /W1 C4067b.cpp
+#include <iostream>
+#include <string>
+#if defined(X)
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif
+int main()
+{
+    std::cout << s << std::endl;
+}
 ```

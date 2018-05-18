@@ -16,11 +16,11 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="platformtype-class"></a>Platform::type – třída
 Obsahuje informace o běhu o typu – konkrétně řetězec název a typ objektu typecode. Získá voláním [Object::gettype –](../cppcx/platform-object-class.md#gettype) libovolného objektu nebo nebo pomocí [typeid](../windows/typeid-cpp-component-extensions.md) operátor na třídě nebo struktuře název.  
@@ -54,8 +54,8 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type – operátor ^](../cppcx/operator-subtracttype-hat.md)|Umožňuje převod `Windows::UI::Xaml::Interop::TypeName` k `Platform::Type`.|  
-|[operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|Umožňuje převod `Platform::Type` k `Windows::UI::Xaml::Interop::TypeName`.|  
+|[Type – operátor ^](../cppcx/operator-type-hat.md)|Umožňuje převod `Windows::UI::Xaml::Interop::TypeName` k `Platform::Type`.|  
+|[operátor Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umožňuje převod `Platform::Type` k `Windows::UI::Xaml::Interop::TypeName`.|  
   
 ### <a name="requirements"></a>Požadavky  
  **Minimální podporovaná klienta:** Windows 8  

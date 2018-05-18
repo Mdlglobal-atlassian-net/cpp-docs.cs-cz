@@ -11,11 +11,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 722b1dadbdd5e1855ea8d8cc163de705f3e2cbcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70fc4705b6e150978812563fcde9e0f4d6b3cea1
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="visual-c-language-conformance"></a>Shoda jazyka Visual C++
 
@@ -32,8 +32,8 @@ Podrobnosti o shoda vylepšení a jiné změny ve Visual Studio 2017 najdete v t
 |----|---|
 |__C ++ 11. 03 základní jazykové funkce__|__Podporované__|
 |&nbsp;&nbsp;Všem ostatním|VS 2015 <sup> [A](#note_A)</sup>|
-|&nbsp;&nbsp;Vyhledání dvoufázového názvu|Částečné <sup> [B](#note_B)</sup>|
-|&nbsp;&nbsp;[N2634 Výraz sfinae u výrazů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|Částečné <sup> [C](#note_C)</sup>|
+|&nbsp;&nbsp;Vyhledání dvoufázového názvu|VS 2017 15.7 <sup> [B](#note_B)</sup>|
+|&nbsp;&nbsp;[N2634 Výraz sfinae u výrazů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99 preprocesoru](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Částečné <sup> [D](#note_D)</sup>|
 |&nbsp;&nbsp;[Rozšířené N1988 typy celého čísla](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|NENÍ K DISPOZICI <sup> [E](#note_E)</sup>|
 |__C ++ 14 základní jazykové funkce__|__Podporované__|
@@ -80,16 +80,34 @@ Podrobnosti o shoda vylepšení a jiné změny ve Visual Studio 2017 najdete v t
 |&nbsp;&nbsp;[P0386R2 vložené proměnné](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Odpovídající P0522R0 šablony parametry šablony k kompatibilní argumentů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Odebrání P0036R0 některé prázdný unární složení](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
-|&nbsp;&nbsp;[Oprava N4261 kvalifikace převody](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|Ne|
-|&nbsp;&nbsp;[Rozšířené P0017R1 inicializace agregace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|Ne|
-|&nbsp;&nbsp;[Odvození argumentu šablony P0091R3 pro šablony třídy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[Problémy odvození argumentu šablony P0512R0 – třída](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|Ne|
-|&nbsp;&nbsp;[P0127R2 deklarace parametry šablon bez typu s automatickým](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|Ne|
-|&nbsp;&nbsp;[Zaručit P0135R1 elision kopie](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|Ne <sup> [H](#note_H)</sup>|
-|&nbsp;&nbsp;[P0136R1 rozdělit dědění konstruktory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|Ne|
-|&nbsp;&nbsp;[Upřesnění P0145R3 pořadí vyhodnocení výrazu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 pořadí vyhodnocení argumenty funkce](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|Ne|
-|&nbsp;&nbsp;[Rozšíření P0195R2 Pack v pomocí deklarace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|Ne|
-|&nbsp;&nbsp;[P0283R2 ignoruje se nerozpoznaný atributy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|Ne|
-|&nbsp;&nbsp;[Oprava P0702R1 třída odvození argumentu šablony pro ctors inicializátoru seznamu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|Ne|
+|&nbsp;&nbsp;[Oprava N4261 kvalifikace převody](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Rozšířené P0017R1 inicializace agregace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Odvození argumentu šablony P0091R3 pro šablony třídy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[Problémy odvození argumentu šablony P0512R0 – třída](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0127R2 deklarace parametry šablon bez typu s automatickým](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Zaručit P0135R1 elision kopie](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|2017 VS 15,6 OPERACÍ<sup>[H](#note_H)</sup>|
+|&nbsp;&nbsp;[P0136R1 rozdělit dědění konstruktory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Upřesnění P0145R3 pořadí vyhodnocení výrazu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 pořadí vyhodnocení argumenty funkce](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Rozšíření P0195R2 Pack v pomocí deklarace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0283R2 ignoruje se nerozpoznaný atributy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Oprava P0702R1 třída odvození argumentu šablony pro ctors inicializátoru seznamu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+
+  
+  
+|Oblast funkcí| |
+|----|---|
+|__Funkce c ++ 17 základní jazyk (vadou sestavy)__|__Podporované__|
+|&nbsp;&nbsp;[Oprava P0702R1 třída odvození argumentu šablony pro ctors inicializátoru seznamu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Ke zjednodušení P0588R1 zachycení implicitní lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Ne|
+|&nbsp;&nbsp;[CWG 1581: Pokud jsou constexpr členské funkce definované?](https://wg21.cmeerw.net/cwg/issue1581)|Ne|
+|&nbsp;&nbsp;[P0962R1 uvolnit přizpůsobení strukturovaných vazby bodu hledání pravidla](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|Ne|
+|&nbsp;&nbsp;[P0962R2 uvolnit rozsahu – pro bod přizpůsobení smyčky hledání pravidla](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Ne|
+|&nbsp;&nbsp;[Povolení P0969R0 strukturovaná vazby na dostupné členy](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|Ne|
+
+  
+  
+|Oblast funkcí| |
+|----|---|
 |__Funkce jazyka 20 jader c ++__|__Podporované__|
 |&nbsp;&nbsp;[Přidání P0306R4 &#95; &#95;VA_OPT&#95; &#95; pro vynechání čárkami a odstranění čárkami](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|Ne|
 |&nbsp;&nbsp;[Určený P0329R4 inicializace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Ne|
@@ -105,25 +123,46 @@ Podrobnosti o shoda vylepšení a jiné změny ve Visual Studio 2017 najdete v t
 |Oblast funkcí| |
 |---|---|
 |__Funkce c ++ 20 standardní knihovny__|__Podporované__|
+|&nbsp;&nbsp; [P0777R1 vyloučení nepotřebných Decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup> [14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Ne|
 |&nbsp;&nbsp;[P0674R1 make_shared() pro pole](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Ne|
+|&nbsp;&nbsp;[Požadavky na P0858R0 Constexpr iterátorů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Porovnání P0809R0 neuspořádané kontejnery](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp; [P0020R3 atomic\<float >, atomic\<dvojité >, atomic\<long double >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Ne|
+|&nbsp;&nbsp; [P0053R7 \<syncstream >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br />&nbsp;&nbsp; [P0753R2 osyncstream manipulátory](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Ne|
+|&nbsp;&nbsp; [P0122R7 \<span >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Ne|
+|&nbsp;&nbsp; [P0202R3 constexpr pro \<algoritmus > a Exchange)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Ne|
+|&nbsp;&nbsp; [P0355R7 \<typu chrono > kalendáře a časová pásma](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Ne|
+|&nbsp;&nbsp; [P0415R1 constexpr pro \<komplexní > (opětovně)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Ne|
+|&nbsp;&nbsp; [Memory_order – třída P0439R0 výčtu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Ne|
+|&nbsp;&nbsp; [P0457R2 starts_with()/ends_with() pro basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|Ne|
+|&nbsp;&nbsp; [P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|Ne|
+|&nbsp;&nbsp; [P0551R3 Zvu tě Shalt není Specialize – std funkce šablony!](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0551r3.pdf)|Ne|
+|&nbsp;&nbsp; [P0600R1 \[ \[nodiscard\] \] pro STL, část 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Ne|
+|&nbsp;&nbsp; [Pomocí P0616R0 move() v \<číselné >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Ne|
+|&nbsp;&nbsp; [P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Ne|
+|&nbsp;&nbsp; [P0718R2 atomic\<shared_ptr\<T >>, atomic\<weak_ptr\<T >>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|Ne|
+|&nbsp;&nbsp; [P0754R2 \<verze >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|Ne|
+|&nbsp;&nbsp; [Místo začne P0767R1 is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Ne|
+|&nbsp;&nbsp; [Podpora knihovny P0768R1 pro relační operátor kosmické lodě \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Ne|
+|&nbsp;&nbsp; [P0966R1 řetězec:: reserve() by měl není zmenšit.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|Ne|
 |__Funkce c ++ 17 standardní knihovny__|__Podporované__|
-|&nbsp;&nbsp;[Integrace P0433R2 odvození šablony pro šablony třídy do standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[Vylepšení P0739R0 – třída argument odvození integraci šablony do standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|Ne|
-|&nbsp;&nbsp;[P0426R1 constexpr pro char_traits –](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|Ne|
-|&nbsp;&nbsp;[Hypot – P0030R1 (x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|Ne|
-|&nbsp;&nbsp;[P0220R1 knihovny základy V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|Částečné <sup> [J](#note_J)</sup>|
-|&nbsp;&nbsp;[P0067R5 základní řetězec převody](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|Ne|
-|&nbsp;&nbsp;[N4562 Základy knihovny: \<memory_resource >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[Odstranění P0337R0 polymorphic_allocator přiřazení](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|Ne|
-|&nbsp;&nbsp;[Paralelní algoritmy P0024R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 přejmenování paralelní zpracování zásad](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[Paralelní algoritmy P0394R4 terminate() měli pro výjimky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 sjednotit \<číselné > paralelní algoritmy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|Ne|
-|&nbsp;&nbsp;[Matematické funkce speciální P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|Ne|
-|&nbsp;&nbsp;[P0218R1 \<filesystem >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 relativní cesty k systému souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[Záznam adresáře P0317R1 ukládání do mezipaměti pro systém souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[Podpora P0392R0 string_view v cestách souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 podpora jiných POSIX systémy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 komentáře NB řešení pro systém souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|Ne <sup> [kB](#note_K)</sup>|
+|&nbsp;&nbsp;[Integrace P0433R2 odvození šablony pro šablony třídy do standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[Vylepšení P0739R0 – třída argument odvození integraci šablony do standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0426R1 constexpr pro char_traits –](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[Hypot – P0030R1 (x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0220R1 knihovny základy V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|2017 VS 15,6 OPERACÍ <sup> [J](#note_J)</sup>|
+|&nbsp;&nbsp;[P0067R5 základní řetězec převody](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|VS 2017 15.7 <sup> [charconv](#note_charconv)</sup>|
+|&nbsp;&nbsp;[N4562 Základy knihovny: \<memory_resource >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[Odstranění P0337R0 polymorphic_allocator přiřazení](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|2017 VS 15,6 OPERACÍ|
+|&nbsp;&nbsp;[Paralelní algoritmy P0024R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 přejmenování paralelní zpracování zásad](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[Paralelní algoritmy P0394R4 terminate() měli pro výjimky](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 sjednotit \<číselné > paralelní algoritmy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|VS 2017 15.7|
+|&nbsp;&nbsp;[Matematické funkce speciální P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
+|&nbsp;&nbsp;[P0218R1 \<filesystem >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 relativní cesty k systému souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[Záznam adresáře P0317R1 ukládání do mezipaměti pro systém souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[Podpora P0392R0 string_view v cestách souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 podpora jiných POSIX systémy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 komentáře NB řešení pro systém souborů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup> [KB](#note_K)</sup>|
 |&nbsp;&nbsp;[P0003R5 odebrání specifikace dynamické výjimek](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 opravy pro not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
-|&nbsp;&nbsp;[Enable_shared_from_this P0033R1 rozdělit](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Enable_shared_from_this P0033R1 rozdělit](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|2017 VS 15,5 <sup> [14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0083R3 splétání mapuje a nastaví](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0, které toto vyjasňují insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0174R2 místo začne Vestigial knihovny částí](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Std::function P0302R1 odebrání Allocator podpory v](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0414R2 shared_ptr\<[] – T >, shared_ptr\<T [N] >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[Oprava P0497R0 shared_ptr pro pole](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0414R2 shared_ptr\<[] – T >, shared_ptr\<T [N] >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[Oprava P0497R0 shared_ptr pro pole](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|2017 VS 15,5 <sup> [14](#note_14)</sup>|
 |&nbsp;&nbsp;[Místo začne P0521R0 shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Vložené proměnné P0607R0 standardní knihovny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Místo začne P0618R0 \<codecvt – >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|2017 VS 15,5 <sup> [17](#note_17)</sup>|
@@ -148,7 +187,7 @@ Podrobnosti o shoda vylepšení a jiné změny ve Visual Studio 2017 najdete v t
 |&nbsp;&nbsp;[Změna P0604R0 je\_volatelná aplikacemi nebo výsledky\_z k vyvolání\_dojít, je\_invocable, je\_nothrow\_invocable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html)|VS 2017 15.3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4562 Základy knihovny: \<algoritmus > sample()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#alg.random.sample)|VS 2017|
 |&nbsp;&nbsp;[N4562 Základy knihovny: \<žádné >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#any)|VS 2017|
-|&nbsp;&nbsp;[N4562 Základy knihovny: \<volitelné >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017|
+|&nbsp;&nbsp;[N4562 Základy knihovny: \<volitelné >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017 |
 |&nbsp;&nbsp;[N4562 Základy knihovny: \<string_view >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#string.view)|VS 2017|
 |&nbsp;&nbsp;[N4562 Základy knihovny: \<řazené kolekce členů > apply()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#tuple)|VS 2017|
 |&nbsp;&nbsp;[Rozhraní pro homogenní P0032R3 variant/any/volitelný](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0032r3.pdf)|VS 2017|
@@ -228,30 +267,48 @@ __VS 2015.2__ a __VS 2015.3__ označit součásti, které jsou podporovány v sa
 __VS 2017__ určuje funkce, které jsou podporovány v aplikaci Visual Studio 2017 RTM.  
 __VS 2017 15.3__ určuje funkce, které jsou podporovány v aplikaci Visual Studio 2017 verze 15.3.  
 __VS 2017 15,5__ určuje funkce, které jsou podporovány v aplikaci Visual Studio 2017 verze 15,5.
+__VS 2017 15.7__ určuje funkce, které jsou podporovány v aplikaci Visual Studio 2017 verze 15.7.
 
 ### <a name="notes"></a>Poznámky
 
-<a name="note_A"></a>__A__ to ignoruje specifikace C ++ 03's dynamické výjimek, které byly ve C ++ 11 zastaralá. Neexistuje žádný plán zavedení, v očekávání, budete ji odebrat z budoucí C++ Standard.  
-<a name="note_B"></a>__B__ podpora kompilátoru pro vyhledání dvoufázového názvu je vyšší, ale stále neúplné.  
-<a name="note_C"></a>__C__ kompilátoru podpora sfinae u výrazů výraz byl dostatek standardní knihovny od Visual Studio 2015 Update 2, ale podpora zůstane neúplné.  
-<a name="note_D"></a>__D__ podpora kompilátoru pro preprocesor C99 pravidla je nekompletní v Visual Studio 2017. Variadická makra jsou podporované, ale v chování preprocesor jsou celou řadu chyb.  
+<a name="note_A"></a>__A__ v/std: c ++ 14 režimu, zůstanou neimplementované specifikace dynamické výjimek a throw() se přesto považuje za synonymum pro \_ \_declspec(nothrow). Součástí C ++ 17, specifikace dynamické výjimek byly odebrány většinou podle P0003R5, a jeden vestige: throw() je zastaralá a vyžaduje se bude chovat, jako synonymum pro noexcept. V/std: c ++ 17 režimu MSVC teď vyhovuje standardní tím, že throw() stejné chování jako noexcept, tj. vynucení prostřednictvím ukončení.
+Možnost kompilátoru /Zc:noexceptTypes-požadavky Naše staré chování \_ \_declspec(nothrow). Je pravděpodobné, že throw() bude odebráno za C ++ 20. Usnadní migrace kódu v reakci na tyto změny v standardní a naše implementace nové upozornění kompilátoru problémů specifikace výjimek přidané pod **/std: c ++ 17** a **/permissive-**.  
+<a name="note_B"></a>__B__ v /permissive-mode ve Visual Studio 2017 verze 15.7 podporovány. V tématu [dvoufázového název vyhledávání podpora je teď dostupná MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) Další informace.  
+<a name="note_C"></a>__C__ kompilátoru podpora sfinae u výrazů výraz byl dostatek standardní knihovny od Visual Studio 2015 Update 2. Podporováno v aplikaci Visual Studio 2017 15.7 bez ohledu na to, jestli je nastavená /permissive-mode. Některé chyby i nadále opravit. Alternativní řešení "jedinečný značku typu" již není potřebné a odebrali jsme toto řešení od našich STL implementace.  
+<a name="note_D"></a>__D__ podpora kompilátoru pro preprocesor C99 pravidla je nekompletní v Visual Studio 2017. Variadická makra jsou podporované, ale v chování preprocesor jsou celou řadu chyb.  Jsme se overhauling preprocesor a bude experimentálně dodávat tyto změny v části **/ projektovou-** brzy režimu.  
 <a name="note_E"></a>__E__ to je označena jako není k dispozici, protože kompilátory jsou povolené, ale není vyžadována k podpoře typy rozšířené celé číslo.  Jako RSZ a Clang jsme zvolili není je podporují.  
 <a name="note_F"></a>__F__ podobně to je označena jako není k dispozici protože kompilátory jsou povolené, ale není vyžadována k implementaci optimalizace.  
 <a name="note_G"></a>__G__ podporován v rámci [/std: c ++ 14](./build/reference/std-specify-language-standard-version.md) suppressible upozornění.  
-<a name="note_H"></a>__H__ tato funkce byla k dispozici v náhledy Visual Studio 2017 verze 15.3, ale protože byly nalezeny chyby, byla odebrána z verze.  
 <a name="note_J"></a>__J__ jsou funkce, které nebyly dokončeny v sadě Visual Studio 2015 rozdělená jinde v této tabulce.  
-<a name="note_K"></a>__K__ Terminálové služby systému souborů je implementována v obou \<experimentální/filesystem > a \<filesystem > pro historické důvodů, ale jeho implementace musí být opraveny předtím, než se přesune jeho obor názvů. Až to uděláte, tato funkce je označena jako ještě nebyla implementována.  
-<a name="note_L"></a>__L__ nepodporuje kompilátor vnitřní. Tento vnitřní ještě není k dispozici v Clang. Tato funkce je k dispozici, ale není ještě povoleno v technologii Intellisense.   
-<a name="note_14"></a>__14__ tyto funkce C ++ 17 jsou vždy povolena, i v případě [/std: c ++ 14](./build/reference/std-specify-language-standard-version.md) (výchozí) je zadán. Je to způsobeno funkci byl implementován před zavedením **/std** možnosti, nebo protože podmíněného implementace bylo by složité.  
+<a name="note_K"></a>__K__ Toto je zcela nové implementace kompatibilní s předchozí verze std::experimental vyžadovaných symlink podporu oprav chyb a změny v chování požadované standard. V současné době včetně \<filesystem > poskytuje nové std::filesystem a předchozí std::experimental::filesystem a včetně \<experimentální nebo systému souborů > poskytuje jenom původní experimentální implementaci. ODEBERE experimentální implementace v příštím vydání ABI ukončování knihoven.  
+<a name="note_L"></a>__L__ nepodporuje kompilátor vnitřní.   
+<a name="note_14"></a>__14__ tyto 17/20 funkce C ++ jsou vždy povolena, i v případě [/std: c ++ 14](build/reference/std-specify-language-standard-version.md) (výchozí) je zadán. Je to způsobeno funkci byl implementován před zavedením **/std** možnosti, nebo protože podmíněného implementace bylo by složité.  
 <a name="note_17"></a>__17__ tyto funkce jsou povolené [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) – možnost kompilátoru.  
 <a name="note_byte"></a>__Byte__ `std::byte` je povoleno podle [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)), ale protože můžete v konfliktu s Windows SDK hlavičky v některých případech, má podrobných makro výslovný nesouhlas s. Lze ji vypnout tak, že definujete `_HAS_STD_BYTE` jako `0`.  
 <a name="note_C11"></a>__C11__ The Universal CRT implementována části C11 standardní knihovny, které jsou vyžadované C ++ 17, s výjimkou C99 `strftime()` E/O alternativní převod specifikátory, C11 `fopen()` výhradním režimu a C11 `aligned_alloc()`. Je pravděpodobně třeba implementovat, protože zadaný C11 `aligned_alloc()` způsobem, který není kompatibilní s implementací Microsoft `free()`, a to, který `free()` musí být schopna zpracovávat vysoce zarovnaný přidělení.  
-<a name="note_rem"></a>__rem__ funkce odstraněny, kdy [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) je zadána možnost kompilátoru. Tyto funkce mají výslovný nesouhlas s makra: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, a `_HAS_UNEXPECTED`.
-  
+<a name="note_rem"></a>__rem__ funkce odstraněny, kdy [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) je zadána možnost kompilátoru. Tyto funkce mají výslovný nesouhlas s makra: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, a `_HAS_UNEXPECTED`.  
+<a name="note_charconv"></a>__charconv__ from_chars() a to_chars() jsou k dispozici pro celá čísla. Právě jsme pracujete s plovoucí desetinnou čárkou from_chars(), které s plovoucí desetinnou čárkou to_chars() dodržovat.  
+<a name ="note_parallel"></a> __paralelní__ C ++ 17 na paralelní algoritmy knihovna je dokončena. Všimněte si, že to neznamená, že každý algoritmus je paralelizovaná několika málo v každém případě; Nejdůležitější algoritmy byla paralelizovaná málo a provádění zásady podpisy jsou dostupné i kde algoritmy nejsou paralelizovaná málo. Naše implementace STL centrálního interní hlavičky, yvals.h, obsahuje následující "paralelní algoritmy poznámky": C++ umožňuje implementace implementovat paralelní algoritmy jako volání na sériové algoritmy.   Tato implementace parallelizes několik běžných algoritmus volání, ale ne všechny.  
+
+Tyto algoritmy jsou paralelizovaná několika málo:
+
+- adjacent_difference, adjacent_find –, all_of, any_of, count, count_if –, rovná, exclusive_scan, najít, find_end –, find_first_of –, find_if –, for_each –, for_each_n, inclusive_scan, neshoda, none_of, snížit, odebrat, remove_if –, vyhledávání, search_n –, řazení, stable_ Seřadit, transformace, transform_exclusive_scan, transform_inclusive_scan, transform_reduce.
+
+Následující nejsou paralelizovaná málo v současné době:
+
+- Žádné zřejmá paralelismus zvýšit výkon na hardwaru cíl; Všechny algoritmy, které jenom zkopírovat nebo permute elementů pomocí žádné větve mají obvykle omezené šířky pásma paměti:
+  - kopírování, copy_backward –, copy_n, výplň, fill_n, přesunutí, move_backward, odebrat, remove_if –, nahraďte, replace_if –, zpětného, reverse_copy –, otáčení, rotate_copy –, swap_ranges –
+- Existuje nedorozuměním přes uživatelské požadavky paralelismus; pravděpodobně do této kategorie přesto:
+  - vygenerovat, generate_n –
+- Efektivní paralelismus mohlo být je nemožné:
+  - partial_sort –, partial_sort_copy –
+- Ještě nebyl vyhodnocen; paralelismus mohou být prováděny v budoucí verzi a by mohlo být užitečné:
+  - copy_if, zahrnuje, inplace_merge, is_heap, is_heap_until –, is_partitioned, is_sorted, is_sorted_until –, lexicographical_compare –, max_element –, sloučení, min_element –, minmax_element, nth_element, partition_copy –, remove_copy –, remove_copy_if –, replace_ kopírování, replace_copy_if –, set_difference –, set_intersection –, set_symmetric_difference –, set_union –, stable_partition –, jedinečné, unique_copy –
+
 ## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](cpp/cpp-language-reference.md)  
-[Standardní knihovna C++](standard-library/cpp-standard-library-reference.md)   
+[Standardní knihovna C++](standard-library/cpp-standard-library-reference.md)  
 [Vylepšení shody C++ se sadou Visual Studio 2017](cpp-conformance-improvements-2017.md)  
 [Novinky v jazyce Visual C++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)  
 [Visual C++ historie změn 2003 až 2015](porting/visual-cpp-change-history-2003-2015.md)  

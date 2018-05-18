@@ -1,7 +1,7 @@
 ---
-title: Třídy ATL | Microsoft Docs
+title: ATL – třídy a struktury | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL – třídy
-Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité třídy podle kategorie naleznete v tématu [přehledu třídy ATL](../../atl/atl-class-overview.md).  
+# <a name="atl-classes-and-structs"></a>ATL – třídy a struktury
+Aktivní šablony Library (ATL) zahrnuje následující třídy a struktury. Určité třídy podle kategorie naleznete v tématu [přehledu třídy ATL](../../atl/atl-class-overview.md).  
   
-|Třída|Popis|Soubor hlaviček|  
+|Třída nebo struktura|Popis|Soubor hlaviček|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Obsahuje informace, které slouží pro vykreslení na různé cíle, jako jsou tiskárny, metafile nebo ovládací prvek ActiveX.|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Obsahuje data instance třídy v oddílová kódu v ATL.|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|Použít žádný projekt, který používá ATL.|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|Používaný kód související s COM v ATL.| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|Obsahuje informace o typu, které používají k popisu metody nebo vlastnosti na odesílajícím rozhraním.|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|Obsahuje data využívaná každých ATL modulu.|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|Používaný kód oddílová v ATL.|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Tato třída se používá ve makra převodů řetězec `CA2TEX` a `CT2AEX`a typedef **CA2A**.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Tato třída se používá ve makra převodů řetězec `CA2CTEX` a `CT2CAEX`a typedef **CA2CA**.|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|Tato třída se používá ve makra převodů řetězec `CA2TEX`, `CA2CTEX`, `CT2WEX`, a `CT2CWEX`a typedef **CA2W**.|atlconv.h|  
@@ -224,7 +231,6 @@ Aktivní šablony Library (ATL) zahrnuje následující třídy. Určité tříd
  [ATL COM plochy součásti](../../atl/atl-com-desktop-components.md)   
  [Funkce](../../atl/reference/atl-functions.md)   
  [Globální proměnné](../../atl/reference/atl-global-variables.md)   
- [Struktury](../../atl/reference/atl-structures.md)   
  [Definice TypeDef](../../atl/reference/atl-typedefs.md)   
  [Přehled třídy](../../atl/atl-class-overview.md)
 

@@ -1,10 +1,10 @@
 ---
-title: vcpkg – Správce balíčků C++ pro Windows | Microsoft Docs
+title: vcpkg – Správce balíčků A C++ součásti pro Windows, Linux a systému MacOS | Microsoft Docs
 description: vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje získání a instalaci knihovny open-source C++ v systému Windows.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 04/06/2018
+ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -14,15 +14,15 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca2bfee3ac9e244402b8a987e30988384b96fcd2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Správce balíčků C++ pro Windows
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků C++ pro Windows, Linux a systému MacOS
 
-vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje získání a instalace knihoven třetích stran v systému Windows. Pokud projekt používá knihovny třetích stran, doporučujeme použít vcpkg k instalaci. vcpkg podporuje open source a vlastní knihovny. Všechny knihovny v katalogu veřejné vcpkg byly testovány z hlediska kompatibility s Visual Studio 2015 a Visual Studio 2017. Komunita C++ je přidání dalších knihoven průběžně od ledna 2018 neobsahuje více než 600 knihovny v katalogu.
+vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje získání a instalace knihoven třetích stran v systému Windows, Linux a systému MacOS. Pokud projekt používá knihovny třetích stran, doporučujeme použít vcpkg k instalaci. vcpkg podporuje open source a vlastní knihovny. Všechny knihovny v katalogu Windows vcpkg byly testovány z hlediska kompatibility s Visual Studio 2015 a Visual Studio 2017. Od verze 2018 pravděpodobně nejsou více než 900 knihovny v katalogu systému Windows a přes 350 v katalogu systému Linux nebo MacOS. Komunita C++ je přidání dalších knihoven obou katalogů průběžně.
 
 ## <a name="simple-yet-flexible"></a>Jednoduché, ale flexibilní
 
@@ -30,17 +30,19 @@ Pomocí jednoho příkazu můžete stáhnout zdroje a sestavení knihovny. vcpkg
 
 ## <a name="sources-not-binaries"></a>Zdroje není binární soubory
 
-Pro knihovny v katalogu veřejné stáhne vcpkg zdroje místo binárních souborů [1]. Tyto zdroje pomocí Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalovaná 2017 kompilaci. V jazyce C++ je velmi důležité žádné knihovny, které používáte dodržení jsou stejné kompilátoru a verze kompilátoru jako odkazující na jeho kódu aplikace. Pomocí vcpkg eliminovat nebo alespoň výrazně předešli neodpovídající binární soubory a mohou způsobit problémy. Týmy, které jsou standardizované pro určitou verzi sady Visual C++ compiler slouží jeden člen seskupení vcpkg stáhnout zdroje a zkompilovat sadu binární soubory a pak použít příkaz export zip binární soubory a hlavičky pro ostatní členové týmu. Další informace najdete v tématu že export kompilovány binární soubory a hlavičky níže.
+Pro knihovny v katalogu systému Windows stáhne vcpkg zdroje místo binárních souborů [1]. Tyto zdroje pomocí Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalovaná 2017 kompilaci. V jazyce C++ je velmi důležité žádné knihovny, které používáte dodržení jsou stejné kompilátoru a verze kompilátoru jako odkazující na jeho kódu aplikace. Pomocí vcpkg eliminovat nebo alespoň výrazně předešli neodpovídající binární soubory a mohou způsobit problémy. Týmy, které jsou standardizované pro určitou verzi sady Visual C++ compiler slouží jeden člen seskupení vcpkg stáhnout zdroje a zkompilovat sadu binární soubory a pak použít příkaz export zip binární soubory a hlavičky pro ostatní členové týmu. Další informace najdete v tématu [Export kompilovány binární soubory a hlavičky](#export_binaries_per_project) níže.
 
 Pokud vytvoříte klon vcpkg s privátní knihovny v kolekci porty, můžete přidat na port, který soubory ke stažení předem sestavené binární soubory a hlavičky a zápis do souboru portfile.cmake, který kopíruje jednoduše těchto souborů do požadovaného umístění.
 
 [1] *Poznámka: některá vlastnické knihovny zdrojů nejsou k dispozici. Vcpkg stáhne kompatibilní předem sestavené binární soubory v těchto případech.*
 
-## <a name="installation"></a>Instalace
+## <a name="installation"></a>Instalace 
 
 Naklonujte úložiště vcpkg z Githubu: https://github.com/Microsoft/vcpkg. Můžete si stáhnout do libovolného umístění složky, kterému dáváte přednost.
 
-Spustit zavaděč v kořenové složce: **bootstrap vcpkg.bat**.
+Spusťte zavaděč v kořenové složce: 
+- **Bootstrap vcpkg.bat** (Windows)
+- ./Bootstrap-vcpkg.SH (Linux, systému MacOS)
 
 ## <a name="basic-tasks"></a>Základní úlohy
 
@@ -72,7 +74,11 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>Nainstalujte knihovnu na místním počítači
 
-Po získání názvu knihovny pomocí **vcpkg vyhledávání**, použijete **vcpkg nainstalovat** stáhnout knihovny a jeho kompilace. vcpkg používá portfile knihovny v adresáři porty. Pokud není zadaný žádný trojdílná, vcpkg nainstaluje a kompilace pro x86 windows. Pokud portfile Určuje závislosti, vcpkg stáhne a nainstaluje ty také. Po stažení, vcpkg sestavení knihovny pomocí ať sestavení systému, který používá knihovna. CMake a MSBuild projekty soubory jsou upřednostňované, ale je podporovaná ZKONTROLUJTE společně s všechny ostatní systémy sestavení. Pokud vcpkg nemůže najít zadaný sestavení systému v místním počítači, stáhne a nainstaluje se.
+Po získání názvu knihovny pomocí **vcpkg vyhledávání**, použijete **vcpkg nainstalovat** stáhnout knihovny a jeho kompilace. vcpkg používá portfile knihovny v adresáři porty. Pokud není zadaný žádný trojdílná, vcpkg nainstaluje a kompilace pro výchozí trojdílná pro cílovou platformu: x86 windows, x64 linux.cmake nebo x64 osx.cmake.
+
+Pro Linux knihovny vcpkg závisí na RSZ během instalace na místním počítači. V systému MacOS používá vcpkg Clang. 
+
+Pokud portfile Určuje závislosti, vcpkg stáhne a nainstaluje ty také. Po stažení, vcpkg sestavení knihovny pomocí ať sestavení systému, který používá knihovna. CMake a (v systému Windows) projektů MSBuild jsou upřednostňované, ale je podporovaná ZKONTROLUJTE společně s všechny ostatní systémy sestavení. Pokud vcpkg nemůže najít zadaný sestavení systému v místním počítači, stáhne a nainstaluje se.
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -82,6 +88,14 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
+
+```
+
+Pro projekty CMAKE použít CMAKE_TOOLCHAIN_FILE Pokud chcete zpřístupnit knihovny s `find_package()`. Příklad:  
+
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Vypisuje seznam knihoven již nainstalována
@@ -99,7 +113,7 @@ websocketpp:x86-windows 0.7.0    Library that implements RFC6455 The WebSocket P
 zlib:x86-windows        1.2.11   A compression library
 ```
 
-## <a name="integrate-with-visual-studio"></a>Integrace se sadou Visual Studio
+## <a name="integrate-with-visual-studio-windows"></a>Integrace se sadou Visual Studio (Windows)
 
 ### <a name="per-user"></a>Na uživatele
 
@@ -118,7 +132,12 @@ Pokud potřebujete použít konkrétní verzi knihovny, která je odlišná od v
 1. Spustit **vcpkg nainstalovat \<Knihovna >**.
 1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na jednotlivých projektů.
 
-## <a name="export-compiled-binaries-and-headers"></a>Export kompilovány binární soubory a hlavičky
+## <a name="target-linux-from-windows-via-wsl"></a>Cíl Linux ze systému Windows prostřednictvím WSL
+
+Linux binární soubory z počítače s Windows můžete vytvořit pomocí subsystému Windows pro Linux (WSL). Postupujte podle pokynů a [nastavit WSL ve Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)a nakonfigurujte ho s [rozšíření sady Visual Studio pro Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Můžete umístit všechny vytvořené knihovny pro Windows a Linux do stejné složky a k němu přístup z Windows i WSL.
+
+
+## <a name="export_binaries_per_project"></a> Export kompilovány binární soubory a hlavičky
 
 Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu.
 
@@ -241,7 +260,6 @@ Obsah instance vcpkg jsou:
 |**vcpkg integrovat projektu**|Generovat odkazující balíček NuGet pro jednotlivé použití projektu VS|
 |**vcpkg export \<pkg >... [opt]...**|Exportovat balíček|
 |**vcpkg edit \<pkg>**|Otevřete port pro úpravy (používá EDITOR %, výchozí kód)|
-|**vcpkg import \<pkg >**|Importujte předem připravený knihovny|
 |**Vytvoření vcpkg \<pkg > \<url > [archivename]**|Vytvořit nový balíček|
 |**vlastní vcpkg \<pat >**|Vyhledávání souborů v nainstalované balíčky|
 |**vcpkg cache**|Seznam mezipaměti zkompilovat balíčky|

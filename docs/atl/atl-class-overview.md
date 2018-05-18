@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>Přehled třídy ATL
 Třídy v aktivní knihovny šablony (ATL) můžete rozdělit takto:  
@@ -49,11 +49,10 @@ Třídy v aktivní knihovny šablony (ATL) můžete rozdělit takto:
  Pro další třídy, které mohou být používány projekty knihovny ATL, najdete v části [sdílené třídy](../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Třídy](../atl/reference/atl-classes.md)   
- [ATL COM plochy součásti](../atl/atl-com-desktop-components.md)   
+ [Třídy a struktury](../atl/reference/atl-classes.md)   
+ [Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)  
  [Funkce](../atl/reference/atl-functions.md)   
  [Globální proměnné](../atl/reference/atl-global-variables.md)   
  [Makra](../atl/reference/atl-macros.md)   
- [Struktury](../atl/reference/atl-structures.md)   
  [Definice TypeDef](../atl/reference/atl-typedefs.md)
 

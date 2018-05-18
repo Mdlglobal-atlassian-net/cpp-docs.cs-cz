@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientské a serverové aplikace. Mnoho nových aplikací se zapisují pro Internet, a jako technologie, možnosti prohlížeče a změnit možnosti zabezpečení, budou zapisovat nových typů aplikací. Spuštění prohlížeče na klientských počítačích, které umožňují přístup k Internetu a zobrazení stránky HTML, které obsahují text, grafiky, ovládací prvky ActiveX a dokumenty. Servery poskytují FTP, HTTP a gopher služby a spuštění aplikací rozšíření server použití rozhraní CGI. Vlastní aplikace můžete načíst informace a poskytování dat na Internetu.  
@@ -52,8 +52,6 @@ Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientsk�
 -   [WinInet – základy](../mfc/wininet-basics.md)  
   
 -   [HTML – základy](../mfc/html-basics.md)  
-  
--   [HTTP – základy](../mfc/http-basics.md)  
   
 ## <a name="related-sections"></a>Související oddíly  
   

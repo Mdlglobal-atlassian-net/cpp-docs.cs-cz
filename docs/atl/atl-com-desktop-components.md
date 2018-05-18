@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d50ca37b90251a797f70129e4b8ce1778b4d73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM plochy součásti
 Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablon C++ třídy, které zjednodušují programování objekty modelu COM (Component Object). Pokud chcete plně využít výhod ATL, se důrazně doporučuje pracovní znalost COM.  
@@ -28,8 +28,8 @@ Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablo
  [Přehled třídy ATL](../atl/atl-class-overview.md)  
  Obsahuje odkazy na a stručný popis třídy ATL uspořádané podle kategorie.  
   
- [ATL – třídy](../atl/reference/atl-classes.md)  
- Poskytuje referenční materiál na třídách abecedním pořadí.  
+ [Třídy a struktury ATL](../atl/reference/atl-classes.md)  
+ Poskytuje referenční materiál na třídy a struktury abecedním pořadí.  
   
  [Funkce ATL](../atl/reference/atl-functions.md)  
  Poskytuje referenční materiál na globální funkce abecedním pořadí. Obsahuje témata uspořádání funkce do kategorií.  
@@ -40,14 +40,11 @@ Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablo
  [Makra ATL](../atl/reference/atl-macros.md)  
  Poskytuje referenční materiál na makra abecedním pořadí. Obsahuje témata uspořádání makra do kategorií.  
   
- [Struktury knihovny ATL](../atl/reference/atl-structures.md)  
- Poskytuje referenční materiál na struktury abecedním pořadí.  
-  
  [ATL – definice TypeDef](../atl/reference/atl-typedefs.md)  
  Poskytuje referenční materiál na definice TypeDef abecedním pořadí  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- Obsahuje odkazy na archetypes ATL, které jsou teoretické třídy, které poskytují kolekci metod, datové členy, statické funkce, definice TypeDef nebo jinými funkcemi, které jsou uvedeny v abecedním pořadí.  
+ [Archetyp pracovního procesu](../atl/reference/worker-archetype.md)  
+ Obsahuje odkazy na archetype ATL pracovního procesu.  
   
  [Zastaralé tématech knihovny ATL](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
  Poskytuje referenční materiál na třídy, makra a funkce, které jsou zastaralé nebo zastaralé.  
