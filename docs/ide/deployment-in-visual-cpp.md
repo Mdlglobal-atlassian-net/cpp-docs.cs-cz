@@ -1,7 +1,7 @@
 ---
 title: Nasazení v jazyce Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Nasazení ve Visual C++
 
 Instalace aplikace na jiném počítači než vývojovém počítači se označuje jako *nasazení*. Při nasazení aplikace Visual C++ do jiného počítače, je nutné nainstalovat aplikace a všechny soubory knihovny, které závisí na. Sada Visual Studio umožňuje tři způsoby, jak nasadit knihovny jazyka Visual C++ společně s aplikací: *centrální nasazení*, *místní nasazení*, a *statické propojení*. Centrální nasazení převádí soubory knihovny v adresáři systému Windows, kde služby Windows Update můžete je aktualizovat automaticky. Místní nasazení převádí soubory knihovny ve stejném adresáři jako aplikace. Je nutné znovu nasadit všechny místně nasazené knihovny sami, abyste provedli jejich aktualizaci. Statické propojení váže knihovny kódu do své aplikace. Je nutné znovu zkompiluje a znovu nasaďte aplikace využít výhod všech aktualizací do knihoven, pokud používáte statické propojení.
+
+V sadě Visual Studio 2015 byla knihovna Microsoft C Runtime rozdělili do místní knihovny specifické pro verzi komponenty a novou knihovnu Universal C Runtime, který je teď součástí Windows. Informace o nasazení Universal CRT v [Universal CRT nasazení](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Centrální nasazení
 
@@ -59,4 +61,5 @@ Pořadí načítání knihoven Visual C++ je závislá na systému. Chcete-li di
 
 ## <a name="see-also"></a>Viz také
 
-[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Nasazení Universal CRT](universal-crt-deployment.md)

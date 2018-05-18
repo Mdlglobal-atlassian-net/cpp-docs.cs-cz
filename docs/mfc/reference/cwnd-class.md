@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 Poskytuje základní funkce všech tříd oken v knihovny Microsoft Foundation Class.  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|Upozorní, že zadané okno je odebírán z řetězu.|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|Voláno, pokud by mělo být změněno stav rozhraní (UI) uživatele.|  
 |[CWnd::OnChar](#onchar)|Volá se při stisknutí klávesy překládá nesystémové znak.|  
-|[CWnd::OnCharToItem](#onchartoitem)|Volá pole se seznamem podřízené [lbs_wantkeyboardinput –](list-box-styles.md) styl v reakci na [WM_CHAR](#onchar) zprávy.|  
+|[CWnd::OnCharToItem](#onchartoitem)|Volá pole se seznamem podřízené [lbs_wantkeyboardinput –](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) styl v reakci na [WM_CHAR](#onchar) zprávy.|  
 |[CWnd::OnChildActivate](#onchildactivate)|Volá se pro více dokumentů (MDI) rozhraní podřízená okna vždy, když velikost nebo pozice `CWnd` změny nebo `CWnd` se aktivuje.|  
 |[CWnd::OnChildNotify](#onchildnotify)|Voláno rozhraním nadřazeného okna umožnit oznamující řízení reakce na oznámení ovládacího prvku.|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Voláno, když obsah schránky se změnil.|  
