@@ -2,9 +2,6 @@
 title: '&lt;číselné&gt; funkce | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - numeric/std::accumulate
@@ -13,19 +10,17 @@ f1_keywords:
 - numeric/std::iota
 - numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-caps.latest.revision: 13
-manager: ghogen
 helpviewer_keywords:
 - std::accumulate [C++]
 - std::adjacent_difference [C++]
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 73c17151ac0fcedd53872273bd248d5825b0161c
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
-ms.translationtype: HT
+ms.openlocfilehash: d5504ed83ce41f38dc69f3fb612438800285d905
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;číselné&gt; funkce
 
@@ -311,7 +306,7 @@ Type inner_product(
 
 První člen funkce vrátí součet element-wise produkty a přidá do něj zadaná počáteční hodnota. Ano pro rozsahy hodnot *a*i a *b*i, vrátí hodnotu:
 
-`val` + ( ** 1 \* *b*1) + ( ** 2 \* *b*2) +... + ( ** n \* *b*n)
+`val` + ( *a*1 \* *b*1) + ( *a*2 \* *b*2) +... + ( *a*n \* *b*n)
 
 opakované nahrazením `val` s `val` + ( *a*i \* *b*i).
 

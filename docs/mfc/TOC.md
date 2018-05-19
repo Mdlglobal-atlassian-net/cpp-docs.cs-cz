@@ -136,7 +136,6 @@
 ### [Technologie Active na internetu](active-technology-on-the-internet.md)
 ### [WinInet – základy](wininet-basics.md)
 ### [HTML – základy](html-basics.md)
-### [HTTP – základy](http-basics.md)
 ## [Úlohy internetového programování MFC](mfc-internet-programming-tasks.md)
 ### [Volby při návrhu aplikací](application-design-choices.md)
 ### [Psaní aplikací MFC](writing-mfc-applications.md)

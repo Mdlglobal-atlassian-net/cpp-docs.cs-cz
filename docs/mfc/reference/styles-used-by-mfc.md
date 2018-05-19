@@ -1,7 +1,7 @@
 ---
 title: Styly využívané prostředím MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC  
   
 Pomocí následující příznaky styl můžete určit okno nebo řízení vzhledu a chování při vytváření odpovídající MFC objektu. Ve většině případů jsou tyto styly nastavené `dwStyle` parametr třídy `Create` funkce.  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>Styly tlačítek  
+## <a name="button-styles"></a> Styly tlačítek  
   
 Styly tlačítek, na které se týkají [CButton třída](../../mfc/reference/cbutton-class.md) objekty, jako jsou přepínače, zkontrolujte pole a tlačítka zámků. Zadejte kombinaci styly v `dwStyle` parametr [CButton::Create](../../mfc/reference/cbutton-class.md#create). Další informace o styly tlačítek v systému Windows najdete v tématu [styly tlačítek (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
@@ -287,9 +285,7 @@ Následující tabulka uvádí další možnosti, které můžete použít s ž�
 |`BS_MULTILINE`|Zabalí text tlačítka na více řádků, pokud je příliš dlouhý, nevejde na jeden řádek v obdélníku tlačítko textový řetězec.|  
 |`BS_NOTIFY`|Povolí tlačítko pro odesílání `BN_DBLCLK`, `BN_KILLFOCUS`, a `BN_SETFOCUS` zpráv s oznámením do jeho nadřazeného okna. Všimněte si, že tlačítka Odeslat `BN_CLICKED` oznámení bez ohledu na to, zda je zadán tento styl.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>Pole se seznamem styly  
+## <a name="combo-box-styles"></a>  Pole se seznamem styly  
   
 Následující pole se seznamem styly jsou dostupné v prostředí MFC. Další informace o pole se seznamem styly v systému Windows najdete v tématu [pole se seznamem styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
   
@@ -309,9 +305,7 @@ Následující pole se seznamem styly jsou dostupné v prostředí MFC. Další 
 |`CBS_SORT`|Automaticky seřadí řetězce zadali do pole se seznamem.|  
 |`CBS_UPPERCASE`|Převede na velká písmena veškerého textu v poli Výběr a v seznamu.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>Styly pro úpravy  
+## <a name="edit-styles"></a>  Styly pro úpravy  
   
 Upravit styly týkají [CEdit třída](../../mfc/reference/cedit-class.md) objekty. Zadejte kombinaci styly v `dwStyle` parametr [CEdit::Create](../../mfc/reference/cedit-class.md#create). Další informace o upravit styly ovládacího prvku v systému Windows najdete v tématu [upravit styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
@@ -332,9 +326,7 @@ Upravit styly týkají [CEdit třída](../../mfc/reference/cedit-class.md) objek
 |`ES_UPPERCASE`|Převede všechny znaky na velká písmena, jako jsou zadané v textové pole.|  
 |`ES_WANTRETURN`|Určuje, že návrat vložit při stisknutí klávesy ENTER při zadávání textu do ovládacího prvku v dialogovém okně Upravit více řádků. Bez této styl stisknutím klávesy ENTER má stejný účinek jako stisknutím pushbutton výchozí polí dialogové okno. Tento styl nemá žádný vliv na jeden řádek ovládacích prvků pro úpravy.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>Styly oken s rámečkem  
+## <a name="frame-window-styles-mfc"></a> Styly oken s rámečkem  
   
 Styly oken s rámečkem týkají [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md) objekty. Zadejte kombinaci styly v `dwStyle` parametr [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
@@ -342,11 +334,9 @@ Styly oken s rámečkem týkají [CFrameWnd – třída](../../mfc/reference/cfr
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|Určuje informace, které má být připojen na konec na záhlaví okna rámce. Například "Microsoft kreslení – kreslení v Dokument1". Můžete zadat řetězce zobrazí na kartě řetězce šablony dokumentu v Průvodci aplikací. Pokud potřebujete vypnout tuto možnost, mají přednost před `CWnd::PreCreateWindow` – členská funkce.|  
 |`FWS_PREFIXTITLE`|Zobrazuje název dokumentu před název aplikace v názvu rámce okna. Například "Dokumentu – WordPad". Můžete zadat řetězce zobrazí na kartě řetězce šablony dokumentu v Průvodci aplikací. Pokud potřebujete vypnout tuto možnost, mají přednost před `CWnd::PreCreateWindow` – členská funkce.|  
-|`FWS_SNAPTOBARS`|Nastavení velikosti ovládacích prvků okna rámečku, která obklopuje ovládacího panelu při v plovoucího okna místo bude ukotvena okně s rámečkem. Tento styl velikostí okno přizpůsobit ovládacích pruhů.|  
+|`FWS_SNAPTOBARS`|Nastavení velikosti ovládacích prvků okna rámečku, která obklopuje ovládacího panelu při v plovoucího okna místo bude ukotvena okně s rámečkem. Tento styl velikostí okno přizpůsobit ovládacích pruhů.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>Styly seznamů  
+## <a name="list-box-styles"></a> Styly seznamů  
   
 Styly seznamů, na které se týkají [clistbox – třída](../../mfc/reference/clistbox-class.md) objekty. Zadejte kombinaci styly v `dwStyle` parametr [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Další informace o seznamu styly v systému Windows najdete v tématu [seznamu styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
   
@@ -369,9 +359,7 @@ Styly seznamů, na které se týkají [clistbox – třída](../../mfc/reference
 |`LBS_USETABSTOPS`|Umožňuje pole se seznamem rozpoznat a rozbalte karta znaků při kreslení jeho řetězce. Výchozí polohy karty jsou 32 jednotky dialogu. (Jednotky dialogu je vzdálenost vodorovně nebo svisle. Jednu jednotku vodorovné dialogové okno se rovná jeden čtvrtý aktuální základní šířka jednotky dialogu. Základní jednotky dialogu se vypočítávají podle výšky a šířky aktuálním písmem systému. `GetDialogBaseUnits` Funkce systému Windows vrátí dialogu aktuální základní jednotky v pixelech.) Tento styl by neměl být použit s `LBS_OWNERDRAWFIXED`.|  
 |`LBS_WANTKEYBOARDINPUT`|Obdrží majitel pole se seznamem `WM_VKEYTOITEM` nebo `WM_CHARTOITEM` zprávy vždy, když uživatel stiskne klávesu při pole se seznamem má vstupu fokus. Umožňuje aplikaci k provedení speciální zpracování na vstupu klávesnice.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>Styly oken zpráv  
+##<a name="message-box-styles"></a>  Styly oken zpráv  
   
 Styly oken zpráv, na které se týkají [AfxMessageBox –](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) položky. Zadejte kombinaci styly v `nType` parametr `AfxMessageBox`. Další informace o styly oken zpráv v systému Windows najdete v tématu [funkce MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
   
@@ -412,9 +400,7 @@ Následující styly oken zpráv jsou k dispozici.
 |`MB_DEFBUTTON2`|Tlačítko druhé je výchozí.|  
 |`MB_DEFBUTTON3`|Tlačítko třetí je výchozí.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>Styly posuvníku  
+## <a name="scroll-bar-styles"></a> Styly posuvníku  
   
 Styly posuvníku týkají [CScrollBar třída](../../mfc/reference/cscrollbar-class.md) objekty. Zadejte kombinaci styly v `dwStyle` parametr [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o posuvník – styly ovládacích prvků ve Windows najdete v tématu [posuvníku panelu – Styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
@@ -431,9 +417,7 @@ Styly posuvníku týkají [CScrollBar třída](../../mfc/reference/cscrollbar-cl
 |`SBS_TOPALIGN`|Používá se `SBS_HORZ` stylu. Jsou horní okraje posuvníku je zarovnáno s jsou horní okraje obdélníku zadaný v `Create` – členská funkce. Posuvník má výchozí výšku pro systém posuvníky.|  
 |`SBS_VERT`|Označuje svislý posuvníku. Pokud `SBS_RIGHTALIGN` ani `SBS_LEFTALIGN` zadán styl, posuvník má výška, šířku a pozici zadané `Create` – členská funkce.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>Statické styly  
+## <a name="static-styles"></a> Statické styly  
   
 Statické styly týkají [CStatic třída](../../mfc/reference/cstatic-class.md) objekty. Zadejte kombinaci styly v `dwStyle` parametr [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Další informace o styly statické ovládacích prvků ve Windows najdete v tématu [statické styly ovládacího prvku (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
@@ -467,9 +451,7 @@ Statické styly týkají [CStatic třída](../../mfc/reference/cstatic-class.md)
 |`SS_WHITERECT`|Určuje obdélníku, naplní se barvu použitou jako výplň pozadí okna. Výchozí hodnota je bílé.|  
 |`SS_WORDELLIPSIS`|Zkrátí text, který se nevejde a přidá symbol tří teček.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>Styly oken  
+## <a name="window-styles"></a> Styly oken  
   
 Styly oken, na které se týkají [třída CWnd](../../mfc/reference/cwnd-class.md) objekty. Zadejte kombinaci styly v `dwStyle` parametr [CWnd::Create](../../mfc/reference/cwnd-class.md#create) nebo [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o styly oken v systému Windows najdete v tématu [styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
@@ -503,9 +485,7 @@ Styly oken, na které se týkají [třída CWnd](../../mfc/reference/cwnd-class.
 |`WS_VISIBLE`|Vytvoří okno, které je původně viditelná.|  
 |`WS_VSCROLL`|Vytvoří okno, které má svislého posuvníku.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>Rozšířené styly oken  
+## <a name="extended-window-styles"></a> Rozšířené styly oken  
   
 Rozšířené styly oken, na které se týkají [třída CWnd](../../mfc/reference/cwnd-class.md) objekty. Zadejte kombinaci styly v `dwExStyle` parametr [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o rozšířené styly oken v systému Windows najdete v tématu [rozšířené styly oken (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
   

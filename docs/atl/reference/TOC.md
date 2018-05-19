@@ -1,3 +1,4 @@
+
 # [Třídy a struktury ATL](atl-classes.md)
 ## [_ATL_BASE_MODULE70 – struktura](atl-base-module70-structure.md)
 ## [_ATL_COM_MODULE70 – struktura](atl-com-module70-structure.md)
@@ -204,6 +205,7 @@
 ## [IWorkerThreadClient – rozhraní](iworkerthreadclient-interface.md)
 ## [Win32ThreadTraits – třída](win32threadtraits-class.md)
 ## [Archetyp pracovního procesu](worker-archetype.md)
+# [ATL_URL_SCHEME](atl-url-scheme-enum.md)
 # [Funkce ATL](atl-functions.md)
 ## [Funkce nástrojů ATL HTTP](atl-http-utility-functions.md)
 ## [Funkce kódování textu ATL](atl-text-encoding-functions.md)
@@ -242,7 +244,9 @@
 ## [Makra převodu řetězců](string-conversion-macros.md)
 ## [Makra třídy okna](window-class-macros.md)
 ## [Makra zpráv Windows](windows-messages-macros.md)
+# [Operátory ATL](atl-operators.md)
 # [Globální proměnné ATL](atl-global-variables.md)
+# [Definice Typedef ATL](atl-typedefs.md)
 # [Průvodci a dialogová okna ATL](atl-wizards-and-dialog-boxes.md)
 ## [Nastavení aplikace, průvodce projektem ATL](application-settings-atl-project-wizard.md)
 ## [Průvodce komponentami ATL Active Server Pages, ASP](asp-atl-active-server-page-component-wizard.md)

@@ -419,6 +419,7 @@
 ## [CSpinButtonCtrl – třída](cspinbuttonctrl-class.md)
 ## [CSplitButton – třída](csplitbutton-class.md)
 ## [CSplitterWnd – třída](csplitterwnd-class.md)
+## [CSplitterWndEx – třída](csplitterwndex-class.md)
 ## [CStatic – třída](cstatic-class.md)
 ## [CStatusBar – třída](cstatusbar-class.md)
 ## [CStatusBarCtrl – třída](cstatusbarctrl-class.md)
