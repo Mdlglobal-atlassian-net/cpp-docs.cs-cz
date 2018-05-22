@@ -53,6 +53,7 @@
 #### [/favor (optimalizace pro konkrétní architekturu)](favor-optimize-for-architecture-specifics.md)
 #### [/FC (úplná cesta k souboru zdrojového kódu v diagnostice)](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp (určení chování hodnot s plovoucí desetinnou čárkou)](fp-specify-floating-point-behavior.md)
+##### [Optimalizace plovoucí desetinné čárky v jazyce Microsoft Visual C++](floating-point-optimization.md)
 #### [/FS (vynucení synchronních zápisů do souboru PDB)](fs-force-synchronous-pdb-writes.md)
 #### [/GA (optimalizace pro aplikaci systému Windows)](ga-optimize-for-windows-application.md)
 #### [/Gd, /Gr, /Gv, /Gz (konvence volání)](gd-gr-gv-gz-calling-convention.md)

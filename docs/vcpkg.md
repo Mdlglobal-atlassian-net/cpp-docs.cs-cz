@@ -14,11 +14,11 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2bfee3ac9e244402b8a987e30988384b96fcd2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků C++ pro Windows, Linux a systému MacOS
 
@@ -30,7 +30,7 @@ Pomocí jednoho příkazu můžete stáhnout zdroje a sestavení knihovny. vcpkg
 
 ## <a name="sources-not-binaries"></a>Zdroje není binární soubory
 
-Pro knihovny v katalogu systému Windows stáhne vcpkg zdroje místo binárních souborů [1]. Tyto zdroje pomocí Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalovaná 2017 kompilaci. V jazyce C++ je velmi důležité žádné knihovny, které používáte dodržení jsou stejné kompilátoru a verze kompilátoru jako odkazující na jeho kódu aplikace. Pomocí vcpkg eliminovat nebo alespoň výrazně předešli neodpovídající binární soubory a mohou způsobit problémy. Týmy, které jsou standardizované pro určitou verzi sady Visual C++ compiler slouží jeden člen seskupení vcpkg stáhnout zdroje a zkompilovat sadu binární soubory a pak použít příkaz export zip binární soubory a hlavičky pro ostatní členové týmu. Další informace najdete v tématu [Export kompilovány binární soubory a hlavičky](#export_binaries_per_project) níže.
+Pro knihovny v katalogu systému Windows stáhne vcpkg zdroje místo binárních souborů [1]. Tyto zdroje pomocí Visual Studio 2017 nebo Visual Studio 2015, pokud není nainstalovaná 2017 kompilaci. V jazyce C++ je velmi důležité žádné knihovny, které používáte dodržení jsou stejné kompilátoru a verze kompilátoru jako odkazující na jeho kódu aplikace. Pomocí vcpkg eliminovat nebo alespoň výrazně předešli neodpovídající binární soubory a mohou způsobit problémy. V týmy, které jsou standardizované pro určitou verzi kompilátor můžete jeden člen seskupení použít vcpkg ke stažení zdroje a zkompilujte sadu binární soubory a pak použít příkaz export zip binární soubory a hlavičky pro ostatní členové týmu. Další informace najdete v tématu [Export kompilovány binární soubory a hlavičky](#export_binaries_per_project) níže.
 
 Pokud vytvoříte klon vcpkg s privátní knihovny v kolekci porty, můžete přidat na port, který soubory ke stažení předem sestavené binární soubory a hlavičky a zápis do souboru portfile.cmake, který kopíruje jednoduše těchto souborů do požadovaného umístění.
 
@@ -41,10 +41,9 @@ Pokud vytvoříte klon vcpkg s privátní knihovny v kolekci porty, můžete př
 Naklonujte úložiště vcpkg z Githubu: https://github.com/Microsoft/vcpkg. Můžete si stáhnout do libovolného umístění složky, kterému dáváte přednost.
 
 Spusťte zavaděč v kořenové složce: 
-- **Bootstrap vcpkg.bat** (Windows)
-- ./Bootstrap-vcpkg.SH (Linux, systému MacOS)
 
-## <a name="basic-tasks"></a>Základní úlohy
+- **Bootstrap vcpkg.bat** (Windows)
+- **./Bootstrap-vcpkg.SH** (Linux, systému MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>Hledat seznam dostupných knihoven
 
@@ -132,6 +131,10 @@ Pokud potřebujete použít konkrétní verzi knihovny, která je odlišná od v
 1. Spustit **vcpkg nainstalovat \<Knihovna >**.
 1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na jednotlivých projektů.
 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrace s Visual Studio Code (Linux/systému MacOS) 
+
+Spustit **vcpkg integrovat instalace** konfigurace Visual Studio Code na systému Linux nebo MacOS s umístění vcpkg enlistement a povolení IntelliSense na zdrojové soubory.
+
 ## <a name="target-linux-from-windows-via-wsl"></a>Cíl Linux ze systému Windows prostřednictvím WSL
 
 Linux binární soubory z počítače s Windows můžete vytvořit pomocí subsystému Windows pro Linux (WSL). Postupujte podle pokynů a [nastavit WSL ve Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)a nakonfigurujte ho s [rozšíření sady Visual Studio pro Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Můžete umístit všechny vytvořené knihovny pro Windows a Linux do stejné složky a k němu přístup z Windows i WSL.
@@ -139,39 +142,7 @@ Linux binární soubory z počítače s Windows můžete vytvořit pomocí subsy
 
 ## <a name="export_binaries_per_project"></a> Export kompilovány binární soubory a hlavičky
 
-Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu.
-
-## <a name="updateupgrade-installed-libraries"></a>Aktualizovat nebo upgradovat nainstalované knihovny
-
-Veřejné katalogu je pořád aktuální a mají nejnovější verze knihoven. Chcete-li zjistit, které z vaší místní knihovny jsou zastaralé, použijte **vcpkg aktualizace**. Až budete připraveni k aktualizaci vaší kolekce porty na nejnovější verzi veřejné katalogu, spusťte **vcpkg upgrade** příkaz, který automaticky stáhnout a znovu sestavte některého nebo všech vaší nainstalované knihovny, které jsou zastaralé.
-
-Ve výchozím nastavení **upgrade** příkazu jsou uvedeny pouze knihovny, které jsou zastaralé; nemá upgradovat, je. Chcete-li provést upgrade, použijte **– ne test** možnost.
-
-```cmd
-  vcpkg upgrade --no-dry-run
-```
-
-### <a name="upgrade-options"></a>Možnosti upgradu
-
-- **– Ne test** provést upgrade, není-li zadána, příkaz je uveden pouze zastaralé balíčky.
-- **--zachovat probíhající** pokračovat v instalaci balíčků i v případě, že jeden server selže.
-- **--Trojdílná \<t >** nastavit výchozí trojdílná nekvalifikované balíčků.
-- **--vcpkg-root \<cesta >** zadejte vcpkg adresář, který chcete použít místo aktuální adresář nebo nástroj adresář.
-
-### <a name="upgrade-example"></a>Příklad upgradu
-
-### <a name="per-project"></a>Každý projekt
-
-Pokud potřebujete použít konkrétní verzi knihovny, která je odlišná od verze v instanci active vcpkg, postupujte takto:
-
-1. Ujistěte se, nový klon vcpkg
-1. Upravit portfile pro knihovnu verzi, které potřebujete
-1. Spustit **vcpkg nainstalovat \<Knihovna >**.
-1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na jednotlivých projektů.
-
-## <a name="export-compiled-binaries-and-headers"></a>Export kompilovány binární soubory a hlavičky
-
-Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlaviček, které je možné snadno sdílet s dalšími členy týmu.
+Vyžadování všichni členové týmu a stáhněte si a sestavte knihovny může být neefektivní. Jeden seskupení můžete dělat svou práci a pak použít **vcpkg export** vytvořte soubor zip binární soubory a hlavičky nebo balíček NuGet (různé formátu k dispozici), které je možné snadno sdílet s ostatními členy týmu.
 
 ## <a name="updateupgrade-installed-libraries"></a>Aktualizovat nebo upgradovat nainstalované knihovny
 
@@ -225,7 +196,7 @@ Odstraňte adresář.
 
 ## <a name="send-feedback-about-vcpkg"></a>Pošlete svůj názor vcpkg
 
-Použití **– průzkum** příkaz k odeslání zpětné vazby společnosti Microsoft o vcpkg, včetně sestav chyb a návrhy na funkce.
+Použití **vcpkg kontakt – průzkum** příkaz k odeslání zpětné vazby společnosti Microsoft o vcpkg, včetně sestav chyb a návrhy na funkce.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchie složky vcpkg
 
@@ -261,10 +232,9 @@ Obsah instance vcpkg jsou:
 |**vcpkg export \<pkg >... [opt]...**|Exportovat balíček|
 |**vcpkg edit \<pkg>**|Otevřete port pro úpravy (používá EDITOR %, výchozí kód)|
 |**Vytvoření vcpkg \<pkg > \<url > [archivename]**|Vytvořit nový balíček|
-|**vlastní vcpkg \<pat >**|Vyhledávání souborů v nainstalované balíčky|
 |**vcpkg cache**|Seznam mezipaměti zkompilovat balíčky|
 |**vcpkg verze**|Zobrazit informace o verzi|
-|**Obraťte se na vcpkg**|Zobrazení informací o váš názor|
+|**Obraťte se na vcpkg – průzkum**|Zobrazení informací o váš názor.|
 
 ### <a name="options"></a>Možnosti
 
@@ -272,3 +242,4 @@ Obsah instance vcpkg jsou:
 |---------|---------|
 |**--Trojdílná \<t >**|Zadejte trojdílná architektura cíl. (výchozí: `%VCPKG_DEFAULT_TRIPLET%`, viz také **vcpkg nápovědy trojdílná**)|
 |**--vcpkg-root \<cesta >**|Zadejte kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`)|
+

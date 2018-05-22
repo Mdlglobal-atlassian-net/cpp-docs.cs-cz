@@ -71,6 +71,7 @@
 ## [Principy závislostí v aplikacích Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [Zjištění, které knihovny DLL je třeba redistribuovat](determining-which-dlls-to-redistribute.md)
 ## [Volba metody nasazení](choosing-a-deployment-method.md)
+## [Univerzální nasazení CRT](universal-crt-deployment.md)
 ## [Redistribuce souborů Visual C++](redistributing-visual-cpp-files.md)
 ### [Redistribuce součástí s použitím modulů sloučení](redistributing-components-by-using-merge-modules.md)
 ### [Redistribuce souborů ovládacích prvků ActiveX jazyka Visual C++](redistributing-visual-cpp-activex-controls.md)

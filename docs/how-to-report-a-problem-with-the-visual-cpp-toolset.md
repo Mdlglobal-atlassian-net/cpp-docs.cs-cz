@@ -10,27 +10,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
-ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
+ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
+ms.sourcegitcommit: 06b1f7bde6b3f8bed0f3db91d14e2d974444c1e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/20/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak vytvářet sestavu o problém s Visual C++ nástrojů nebo dokumentace
 
 Pokud narazíte na potíže s Microsoft Visual C++ compiler, linkeru, nebo jiných nástrojů a knihovny, chceme vědět o nich. Pokud se potíže v naší dokumentaci, chceme, příliš seznámit.
 
-## <a name="how-to-report-a-c-documentation-issue"></a>Jak vytvářet sestavu problémem dokumentaci jazyka C++
-
-Problémy GitHub používáme sledovat problémy hlášené v dokumentaci. Nyní můžete vytvořit Githubu problémy přímo ze stránky obsahu, která vám umožní komunikovat způsobem mnohem širší s zapisovače a týmy pro produkt. Pokud se problém s dokumentem, ukázku chybného kódu, matoucí vysvětlení, kritické vynechání nebo i právě překlepem, které můžete snadno dejte nám vědět. Přejděte do dolní části stránky a vyberte **Přihlaste se k dokumentaci váš názor**. Budete potřebovat pro vytvoření účtu GitHub, pokud již nemáte, ale až to uděláte, můžete zobrazit všechny problémy v naší dokumentaci, jejich stav a získat oznámení při změně pro problém, se kterým jste ohlásil. Další informace najdete v tématu [A nové zpětné vazby systému pochází k docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
-
-Když vytvoříte problém dokumentaci na Githubu pomocí tlačítka dokumentace zpětnou vazbu, problém automaticky vyplněno některé informace o stránku, kterou jste vytvořili problém, abychom věděli, kde se nachází problém. Nemáte upravte prosím tyto informace. Podrobnosti o tom, co je pokazilo a podle potřeby navrhované opravu právě připojte. [Dokumentaci je open source](https://github.com/MicrosoftDocs/cpp-docs/), takže pokud chcete ve skutečnosti proveďte opravu a navrhnout sami, můžete to udělat. Další informace o tom, jak můžete přispívat do naší dokumentaci najdete v tématu naše [Contributing průvodce](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) na Githubu.
-
-## <a name="how-to-report-a-c-product-issue"></a>Jak vytvářet sestavu problému s produktem C++
+## <a name="how-to-report-a-c-toolset-issue"></a>Jak vytvářet sestavu problémem nástrojů C++
 
 Nejlepší způsob a dejte nám vědět o problému, je pošlete nám sestavu, která obsahuje popis problému byla zjištěna, podrobnosti o jak sestavujete vašeho programu a *zkopírujte*, můžeme použít pro reprodukci dokončení testovacího případu problém na vlastní počítače. Tyto informace umožňují nám rychle ověřte, zda problém existuje v našem kódu a není místní pro vaše prostředí a zjistit, zda ovlivňuje jiných verzích kompilátor a diagnostikovat jeho příčinu.
 
-V následujících částech upletené budete přečíst si o díky užitečnou sestavu, jak vygenerovat zkopírujte pro druh problém, který jste si našli a odesílat sestavy produktový tým. Sestavy jsou důležité pro nás a ostatní vývojáři mohou. Děkujeme vám za pomoc při vylepšení Visual C++.
+V následujících částech vám přečíst si o díky užitečnou sestavu, jak vygenerovat zkopírujte pro druh problém, který jste si našli a odesílat sestavy produktový tým. Sestavy jsou důležité pro nás a ostatní vývojáři mohou. Děkujeme vám za pomoc při vylepšení Visual C++.
 
 ## <a name="how-to-prepare-your-report"></a>Postup přípravy sestavy
 
@@ -56,16 +50,25 @@ Potřebujeme informace plnou verzi a architekturu cílové sady nástrojů, kter
 
 1. Otevřete **příkazový řádek vývojáře** odpovídající verze a konfigurace architektura sady Visual Studio používanou pro sestavení projektu. Například pokud vytvoříte pomocí Visual Studio 2017 na x64 pro x64 cíle, zvolte **x64 nativní nástroje příkazového řádku pro VS 2017**. Další informace najdete v tématu [zástupce příkazového řádku vývojáře](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl**.
+1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /Bv**.
 
 Výstup by měl vypadat podobně jako tento:
 
 ```Output
-C:\Users\username\Source>cl
-Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
+C:\Users\username\Source>cl /Bv
+Microsoft (R) C/C++ Optimizing Compiler Version 19.14.26428.1 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-usage: cl [ option... ] filename... [ /link linkoption... ]
+Compiler Passes:
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\cl.exe:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1xx.dll:      Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c2.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\link.exe:      Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\mspdb140.dll:  Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\1033\clui.dll: Version 19.14.26428.1
+
+cl : Command line error D8003 : missing source filename
 ```
 
 Zkopírujte a vložte na celou výstupu do sestavy.
@@ -90,11 +93,11 @@ Zkopírujte a vložte celý příkazového řádku do sestavy.
 
 Potřebujeme podrobný popis problému, který jste došlo tak, aby bylo možné ověřit, že vidíte stejného efektu na našem počítačích; jeho také někdy užitečné pro nám vědět, co jste se pokoušeli provést a co jste očekávali.
 
-Zadejte přesnou chybové zprávy poskytují sadu nástrojů nebo přesnou modul runtime chování, že se zobrazí. Potřebujeme tyto informace k ověření, že jsme jste správně reprodukovat problém. Uveďte všechny výstupu kompilátoru, nikoli pouze poslední chybová zpráva. Musíme vidět všechny objekty, které vedly k problému, které ohlásíte. Pokud tento problém můžete duplikovat pomocí příkazového řádku kompilátoru, je tento výstup kompilátoru upřednostňované; prostředí IDE a dalšími systémy sestavení může filtrovat chybové zprávy, které najdete v článku, nebo jenom zaznamenat první řádek chybovou zprávu.
+Zadejte prosím **přesnou chybové zprávy** poskytují sadu nástrojů nebo přesnou modul runtime chování zobrazí. Potřebujeme tyto informace k ověření, že jsme jste správně reprodukovat problém. Uveďte **všechny** kompilátoru výstup, nikoli pouze poslední chybová zpráva. Musíme vidět všechny objekty, které vedly k problému, které ohlásíte. Pokud tento problém můžete duplikovat pomocí příkazového řádku kompilátoru, je tento výstup kompilátoru upřednostňované; prostředí IDE a dalšími systémy sestavení může filtrovat chybové zprávy, které najdete v článku, nebo jenom zaznamenat první řádek chybovou zprávu.
 
 Pokud tento problém je, že kompilátor přijme neplatný kód a negeneruje Diagnostika, je potřeba počítat to v sestavě.
 
-Chcete-li nahlásit problém chování za běhu, obsahovat přesnou kopii program vytiskne a co byste měli vidět. V ideálním případě by tato vložené v výstup příkazu samostatně, například `printf("This should be 5: %d\n", actual_result);`. Pokud dojde k chybě programu, nebo přestane reagovat, zmínili, také.
+Chcete-li nahlásit problém chování za běhu, zahrňte **přesnou kopie** program vytiskne a co byste měli vidět. V ideálním případě by tato vložené v výstup příkazu samostatně, například `printf("This should be 5: %d\n", actual_result);`. Pokud dojde k chybě programu, nebo přestane reagovat, zmínili, také.
 
 Přidáte další podrobnosti, které nám mohou pomoci diagnostikovat problém, který se vyskytl, například všechny postupy, které může našli. Vyhněte se opakují. informace o nacházejí jinde v sestavě.
 
@@ -247,15 +250,75 @@ A *zpracované zkopírujte* je jeden zdrojový soubor, který ukazuje na problé
 
 1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů zachytit výše, a *filename.cpp* je název souboru zkopírujte zdroje. Tento příkaz replikuje příkazovým řádkem použitým pro postup, ale zastaví kompilace po průchodu preprocesoru a výstupy předběžně zpracované zdrojový kód a *filename*. i.
 
+Pokud se předběžné zpracování C + +/ CX souboru se zdrojovým kódem, nebo můžete používáte funkci moduly C++, nejsou potřeba některé další kroky. Další informace najdete v tématu v níže uvedených částech.
+
 Po vygenerování můžete předběžně zpracované souboru, je vhodné Ujistěte se, že stále repros problém pomocí předběžně zpracované souboru.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Potvrďte, že chyba stále repros předběžně zpracované souborem
 
-1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl** *argumenty* **/TP** *filename *** .i** říct cl.exe na zkompilovat soubor předběžně zpracované jako C++ zdrojového souboru, kde *argumenty* je seznam argumentů zachytit výše, ale s žádným **/D** a **/I** argumenty odebrat (vzhledem k tomu, že již byly zahrnuty v předběžně zpracované souboru); a kde *filename *** .i** je název souboru předběžně zpracované.
+1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl** *argumenty* **/TP** *filename*.i říct cl.exe zkompilovat předběžně zpracované souboru jako C++ zdrojového souboru, kde *argumenty* je seznam argumentů zachytit výše, ale s žádným **/D** a **/I** argumenty odebrat, (protože budou již byly zahrnuty v předběžně zpracované souboru); a kde *filename*.i je název souboru předběžně zpracované.
 
 1. Zkontrolujte, zda je problém reprodukovat.
 
 Nakonec připojit předběžně zpracované zkopírujte *filename*.i do sestavy.
+
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>Zpracované C + +/ CX WinRT/UWP repros kódu
+
+Pokud používáte C + +/ CX Sestavit vaše spustitelný soubor, nejsou některé další kroky potřebné k vytvoření a ověření předběžně zpracované zkopírujte.
+
+#### <a name="to-preprocess-ccx-source-code"></a>Chcete-li předběžné zpracování C + +/ CX zdrojového kódu
+
+1. Vytvoření předběžně zpracované zdrojového souboru, jak je popsáno v [pro předběžné zpracování souboru zdrojového kódu](#to-preprocess-a-source-code-file).
+
+1. Hledání vygenerovaného _filename_.i souboru **#using** direktivy.
+
+1. Zkontrolujte seznam všechny odkazované soubory. Vynechte oknech\*.winmd soubory, soubory platform.winmd a mscorlib.dll.
+
+Abyste mohli ověřit, že soubor předběžně zpracované se stále shoduje s problém,
+
+1. Vytvořte nový adresář pro předběžně zpracované soubor a zkopírujte jej do nového adresáře.
+
+1. Zkopírujte soubory .winmd z vaší **#using** seznamu do nového adresáře.
+
+1. Vytvořte soubor prázdný vccorlib.h v adresáři nové.
+
+1. Upravte předběžně zpracované soubor odstraňte přitom všechny **#using** direktivy pro mscorlib.dll.
+
+1. Upravte soubor předběžně zpracované změnit jakékoli absolutní cesty na právě úplné názvy souborů pro soubory zkopírovaný .winmd.
+
+Potvrďte, že soubor předběžně zpracované se stále shoduje s problému, jak je uvedeno výše.
+
+### <a name="preprocessed-c-modules-repros"></a>Předběžně zpracované repros moduly C++
+
+Pokud používáte funkci moduly C++ compiler, nejsou některé jiné kroky potřebné k vytvoření a ověření předběžně zpracované zkopírujte.
+
+#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>Předběžné zpracování souboru se zdrojovým kódem, který používá modul
+
+1. Zaznamenat argumenty příkazového řádku, který je použit k vytvoření postup, jak je popsáno v [tak, aby odesílaly obsah příkazového řádku](#to-report-the-contents-of-the-command-line).
+
+1. Otevřete **příkazový řádek vývojáře** odpovídající verze a konfigurace architektura sady Visual Studio používanou pro sestavení projektu.
+
+1. Přejděte do adresáře, který obsahuje postup projektu.
+
+1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /P** *argumenty* *filename.cpp*, kde *argumenty* je Seznam argumentů zachytit výše, a *filename.cpp* je název zdrojového souboru, který využívá modul.
+
+1. Přejděte do adresáře, který obsahuje postup projekt, který vytvořené rozhraní modulu (.ifc výstup).
+
+1. Zaznamenejte argumenty příkazového řádku, který je použit k vytvoření vaše rozhraní modulu.
+
+1. V okně konzoly vývojáře příkazového řádku zadejte příkaz **cl /P** *argumenty* *modulename.ixx*, kde *argumenty* je Seznam argumentů zachytit výše, a *modulename.ixx* je název souboru, který vytvoří rozhraní modulu.
+
+Po vygenerování můžete předběžně zpracované soubory, je vhodné zajistit stále repros problém pomocí předběžně zpracované souboru.
+
+#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Potvrďte, že chyba stále repros předběžně zpracované souborem
+
+1. V okně konzoly vývojáře změňte zpět na adresář, který obsahuje postup projektu.
+
+1. Zadejte příkaz **cl** *argumenty* **/TP** *filename*.i, jak je uvedeno výše pro kompilaci předběžně zpracované souboru, jako by šlo C++ zdrojového souboru.
+
+1. Potvrďte, že problém je stále opakuje předběžně zpracované souborem.
+
+Nakonec připojit předběžně zpracované zkopírujte soubory (*filename*.i a *modulename*.i) společně s výstupem .ifc do sestavy.
 
 ### <a name="link-repros"></a>Odkaz repros
 
@@ -291,10 +354,10 @@ Vytvořte vaše zkopírujte jako minimální IDE projekt, pak balíček komprima
 
 ## <a name="ways-to-send-your-report"></a>Způsoby odeslání sestavy
 
-Chcete-li získat sestavu do us několika způsoby. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Získáte také přímo na stránkách k jednotlivým komunity vývojářů výběrem **názor produkt** tlačítko v dolní části této stránky. Je také možné odeslat e-mail s sestavy, ale jsou upřednostněny první dvě metody. Výběr závisí na tom, jak chcete pracovat s technici, kteří budou prozkoumat sestavy a jestli chcete sledovat průběh nebo sdílení sestavy s komunitou.
+Existuje několik dobrý způsoby, jak získat sestavy do us. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Získáte také přímo na stránkách k jednotlivým komunity vývojářů výběrem **názor produkt** tlačítko v dolní části této stránky. Výběr závisí na, zda chcete pomocí nástrojů integrovaných v prostředí IDE pro snímání obrazovky a uspořádání sestavy pro příspěvků na stránkách komunity vývojářů, nebo pokud chcete používat přímo na webu.
 
 > [!NOTE]
-> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [Microsoft Visual Studio rodiny ochrany osobních údajů produktu](https://www.visualstudio.com/dn948229).
+> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Společnost Microsoft se zavazuje dodržování všechny data o ochraně osobních údajů zákony a nařízení. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [Microsoft Visual Studio rodiny ochrany osobních údajů produktu](https://www.visualstudio.com/dn948229).
 
 ### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroj problém
 
@@ -312,26 +375,34 @@ Do komunity vývojářů je informační zpráva v horní části každé strán
 
 Pokud váš problém nebyla hlášena před, vyberte **nahlásit problém** tlačítko vedle do vyhledávacího pole na stránce komunity vývojářů. Můžete být vyzváni k přihlášení k účtu sady Visual Studio a vyjádřete umožnit přístup k aplikaci komunity vývojářů k profilu. Pokud jste přihlášeni, přejdete přímo na stránku kde můžete nahlásit problém. Můžete zahrnout kódu zkopírujte a příkazového řádku, snímky obrazovky, odkazy na související diskusí a další informace, které si myslíte, že je relevantní a užitečné.
 
-### <a name="send-an-email"></a>Odeslat E-mail
-
-E-mailu je další způsob k odeslání zprávy přímo do týmu Visual C++. Můžete kontaktovat nás na adrese [ compilercrash@microsoft.com ](mailto:compilercrash@microsoft.com). Tuto metodu použijte pouze v případě, že další dvě nejsou k dispozici, protože e-mailu není sledována úzce problémy hlášené do komunity vývojářů pomocí **nahlásit problém** nejsou nástroj nebo webové stránky a komentářů a řešení viditelné pro ostatní uživatelé v sadě Visual Studio.
-
-Pokud si zvolíte sestavu odeslat e-mailem, můžete použít následující šablonu jako text e-mailové zprávy. Nezapomeňte si připojit zdrojový kód nebo další soubory, pokud nejsou včetně těchto informací v obsahu e-mailu.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
 > [!TIP]
-> Pro jiné druhy problémů může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě), **nahlásit problém nástroj** může být obzvláště dobrý choice datu splatnosti k jeho snímek obrazovky jste možnosti a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému došlo. Tyto druhy chyby mohou být zaznamenány také na [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality. Měli byste nikdy nahlásit tyto jiné typy chyb zasláním e-mailu compilercrash@microsoft.com.
+> Pro jiné druhy problémů může dojít v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémy, porušený funkce IDE nebo dojde k obecné chybě), **nahlásit problém nástroj** může být obzvláště dobrý choice datu splatnosti k jeho snímek obrazovky jste možnosti a jeho schopnosti záznamu akcí uživatelského rozhraní, které vést k problému došlo. Tyto druhy chyby mohou být zaznamenány také na [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality.
+
+### <a name="reports-and-privacy"></a>Sestavy a ochrana osobních údajů
+
+Ve výchozím nastavení **všechny informace v sestavách a všechny komentáře a odpovědi jsou veřejně viditelný**. Za normálních okolností jde výhody, protože umožňuje celé komunitě zobrazíte problémy, řešení a řešení, které jiní uživatelé našli. Pokud máte obavy o tom, jak veřejné, ochrany osobních údajů nebo duševní vlastnictví důvodů data nebo identity, ale máte možnosti.
+
+Pokud máte obavy o odhalil svoji identitu, [vytvořit nový účet Microsoft](https://signup.live.com/) nezveřejňuje všechny podrobnosti o vás. Tento účet použijte pro vytvoření sestavy. 
+
+**Nevkládejte nic, co chcete v názvu nebo obsah počáteční sestavy, který je veřejný soukromé.** Místo toho Všimněte si, že chcete odeslat podrobnosti soukromě v samostatných komentář. Pokud chcete mít jistotu, že sestavy se přesměruje příslušní lidé, obsahovat **cppcompiler** v seznamu témat sestavy problém. Po vytvoření sestavy problém je nyní možné určit, kdo může zobrazit odpovědi a přílohy.
+
+#### <a name="to-create-a-problem-report-for-private-information"></a>Vytvoření sestavy problém pro soukromé informace
+
+1. V sestavě, které jste vytvořili, zvolte **, přidejte komentář** k vytvoření vaší privátní popis problému.
+
+1. v editoru odpovědět, použijte níže ovládací prvek rozevírací seznam **odeslání** a **zrušit** tlačítka k určení cílové skupiny v odpovědi. Tyto privátní odpovědi a všechny bitové kopie, odkazů nebo kód, který je v nich zahrnuta, můžete zobrazit pouze uživatelé, které zadáte. Zvolte **Viewable moderátorů a původní plakáty** omezit viditelnost zaměstnancům společnosti Microsoft a sami.
+
+1. Přidejte popis a žádné jiné informace, Image a potřebné pro vaše zkopírujte přiložených souborů. Vyberte **odeslání** tlačítko soukromě odesílat výše uvedené informace.
+
+   Všimněte si, že je 2GB omezení na připojené soubory a maximálně 10 souborů. Pro všechny větší nahrávání požádejte o adresu URL pro odeslání v privátní komentáře.
+
+Všechny odpovědi v rámci tohoto komentáře mít stejné viditelnost s omezeným přístupem, které jste zadali. To platí i v případě, že ovládací prvek rozevírací seznam v odpovědi nezobrazuje stav zobrazení s omezeným přístupem správně.
+
+Chcete-li udržovat vaše osobní údaje a zachovat vaše citlivé informace z veřejné zobrazení, Postarejte se prosím na odpovědi v rámci této omezené komentář zachovat veškerou interakci s Microsoft. Odpovědi na jiné připomínky může vést k omylem prozrazeny citlivé informace.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>Jak vytvářet sestavu problémem dokumentaci jazyka C++
+
+Problémy GitHub používáme sledovat problémy hlášené v dokumentaci. Nyní můžete vytvořit Githubu problémy přímo ze stránky obsahu, která vám umožní komunikovat způsobem mnohem širší s zapisovače a týmy pro produkt. Pokud se problém s dokumentem, ukázku chybného kódu, matoucí vysvětlení, kritické vynechání nebo i právě překlepem, které můžete snadno dejte nám vědět. Přejděte do dolní části stránky a vyberte **Přihlaste se k dokumentaci váš názor**. Budete potřebovat pro vytvoření účtu GitHub, pokud již nemáte, ale až to uděláte, můžete zobrazit všechny problémy v naší dokumentaci, jejich stav a získat oznámení při změně pro problém, se kterým jste ohlásil. Další informace najdete v tématu [A nové zpětné vazby systému pochází k docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs).
+
+Když vytvoříte problém dokumentaci na Githubu pomocí tlačítka dokumentace zpětnou vazbu, problém automaticky vyplněno některé informace o stránku, kterou jste vytvořili problém, abychom věděli, kde se nachází problém. Nemáte upravte prosím tyto informace. Podrobnosti o tom, co je pokazilo a podle potřeby navrhované opravu právě připojte. [Dokumentaci je open source](https://github.com/MicrosoftDocs/cpp-docs/), takže pokud chcete ve skutečnosti proveďte opravu a navrhnout sami, můžete to udělat. Další informace o tom, jak můžete přispívat do naší dokumentaci najdete v tématu naše [Contributing průvodce](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) na Githubu.
+

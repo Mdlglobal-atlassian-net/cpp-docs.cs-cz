@@ -1,7 +1,9 @@
 ---
 title: Konfigurace Linux CMake projektu v sadě Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2107
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 43d29513b41cc89f7d4b6ba4e33365dfa60a761a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49d9364b7b39dfddd982519416c9a12b7adf9e6
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
   
@@ -44,7 +46,8 @@ int main(int argc, char* argv[])
 }
 ```
 
-CMakeLists.txt: 
+CMakeLists.txt:
+
 ```cmd
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
@@ -58,6 +61,8 @@ Ve výchozím nastavení, Visual Studio vybere první vzdáleného systému, v s
 Po zadání cíle Linuxu, váš zdroj se zkopíruje na počítači pro Linux. CMake je spusťte na počítači Linux pro generování mezipaměti CMake pro váš projekt.  
 
 ![Generovat CMake mezipaměti v systému Linux](media/cmake-linux-1.png "generování mezipaměti CMake v systému Linux")  
+
+**Visual Studio 2017 verze 15.7 a novější:** zajistit podporu technologie IntelliSense pro vzdálené hlavičky Visual Studio automaticky kopíruje je do adresáře na místní počítač se systémem Windows. Další informace najdete v tématu [IntelliSense pro vzdálené hlavičky](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Ladění projektu  
 Chcete-li ladit kód ve vzdáleném systému, nastavit zarážky, vyberte cíl CMake jako položku při spuštění v nabídce panelu nástrojů vedle nastavení projektu a klikněte na tlačítko spustit (nebo stiskněte klávesu F5).
@@ -84,6 +89,7 @@ Chcete-li změnit výchozí nastavení CMake, zvolte **CMake | Změna nastavení
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 `name` Hodnota může být vám líbí. `remoteMachineName` Hodnota určuje cíl, který vzdáleného systému, v případě, že máte více než jednou. IntelliSense je povolený pro toto pole, aby vám pomohou vybrat správné systému. Pole `remoteCMakeListsRoot` Určuje, kde vaše zdroje projektu budou zkopírovány do vzdáleného systému. Pole `remoteBuildRoot` je, kde se budou generovat výstup sestavení do vzdáleného systému. Že výstup je také zkopírován místně do umístění, které `buildRoot`.
 
 ## <a name="building-a-supported-cmake-release-from-source"></a>Vytváření podporované verze CMake ze zdroje.

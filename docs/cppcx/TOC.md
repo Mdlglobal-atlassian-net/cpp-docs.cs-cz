@@ -75,6 +75,7 @@
 #### [Platform::String – třída](platform-string-class.md)
 #### [Platform::StringReference – třída](platform-stringreference-class.md)
 #### [Platform::Type – třída](platform-type-class.md)
+#### [Platform::Type^ – operátor](operator-type-hat.md)
 #### [Platform::TypeCode – výčet](platform-typecode-enumeration.md)
 #### [Platform::UIntPtr – hodnotová třída](platform-uintptr-value-class.md)
 #### [Platform::ValueType – třída](platform-valuetype-class.md)
@@ -113,4 +114,5 @@
 #### [begin – funkce](begin-function.md)
 #### [end – funkce](end-function.md)
 #### [to_vector – funkce](to-vector-function.md)
+### [Windows::UI::Xaml::Interop::TypeName – operátor](operator-windows-ui-xaml-interop-typename.md)
 ## [Nepodporované funkce CRT v aplikacích pro Univerzální platformu Windows](crt-functions-not-supported-in-universal-windows-platform-apps.md)

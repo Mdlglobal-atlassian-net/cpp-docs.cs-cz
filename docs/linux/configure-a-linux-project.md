@@ -1,7 +1,9 @@
 ---
 title: Konfigurace projektu C++ Linux v sadě Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 Toto téma popisuje postup konfigurace projektu Visual Studio Linux. Informace o projektech CMake Linux najdete v tématu [konfigurace projektu CMake Linux ](cmake-linux-project.md).
@@ -40,8 +42,10 @@ Chcete-li změnit nastavení, která se týkají vzdáleného počítače se sys
 > [!NOTE]
 > Chcete-li změnit výchozí C a C++ kompilátory nebo Linkeru a Archiver používanou pro sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** části a **Linkeru > Obecné** části.  To může být nastaven na použít konkrétní verzi RSZ nebo i kompilátoru Clang, například.
 
-## <a name="vc-directories"></a>Adresáře VC ++
-Visual Studio ve výchozím nastavení, nezahrnuje žádné úrovni systému zahrnout soubory z počítače se systémem Linux.  Například v položky **/usr/zahrnují** directory nejsou k dispozici v sadě Visual Studio.  Pro úplnou [IntelliSense](/visualstudio/ide/using-intellisense) podporu, budete muset zkopírujte tyto soubory do vhodného umístění ve svém vývojovém počítači a Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovací bod služby (kopie Secure) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  Pro předchozí verze systému Windows, můžete použít něco jako [PSCP (PuTTY zabezpečení kopie)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+## <a name="include-directories-and-intellisense-support"></a>Zahrnout adresáře a podporu technologie IntelliSense
+
+**Visual Studio 2017 15.6 a starší verze:** Visual Studio ve výchozím nastavení, nezahrnuje žádné úrovni systému zahrnout soubory z počítače se systémem Linux.  Například v položky **/usr/zahrnují** directory nejsou k dispozici v sadě Visual Studio.
+Pro úplnou [IntelliSense](/visualstudio/ide/using-intellisense) podporu, budete muset zkopírujte tyto soubory do vhodného umístění ve svém vývojovém počítači a Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovací bod služby (kopie Secure) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  Pro předchozí verze systému Windows, můžete použít něco jako [PSCP (PuTTY zabezpečení kopie)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Můžete zkopírovat soubory pomocí příkazu, který je podobný následujícímu:
 
@@ -52,6 +56,8 @@ Samozřejmě, nahraďte **linux_username** a **remote_host** hodnoty výše pro 
 Po zkopírování souborů, použijte **adresáře VC ++** položky v okně Vlastnosti projektu říct sadě Visual Studio, kde najít zahrnout další soubory, které byly právě zkopírovali.
 
 ![Adresáře VC ++](media/settings_directories.png)
+
+**Visual Studio 2017 verze 15.7 a novější:** najdete v části [spravovat vzdálené hlavičky pro IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopírovat zdroje
 Při vytváření, ke zdrojovým souborům na váš vývojový počítač jsou zkopírovány do počítače se systémem Linux a zkompilovat existuje.  Ve výchozím nastavení všechny zdroje v projektu sady Visual Studio se zkopírují do umístění v výše uvedené nastavení.  Však další zdroje lze také přidat do seznamu, nebo zkopírování zdroje může být vypnuto zcela, což je výchozí nastavení pro projektu souboru pravidel.
@@ -68,6 +74,20 @@ Při vytváření, ke zdrojovým souborům na váš vývojový počítač jsou z
 Vzhledem k tomu, že všechny kompilace se děje ve vzdáleném počítači, několik dalších událostí sestavení jsou přidané do části události sestavení v okně Vlastnosti projektu.  Jedná se o **vzdáleného události před sestavením**, **vzdáleného událost před propojením**, a **vzdáleného události po sestavení**a dojde na vzdáleném počítači před nebo po jednotlivých kroků v proces.
 
 ![Události sestavení](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> IntelliSense pro vzdálené hlavičky (Visual Studio 2017 verze 15.7 a novější)
+
+Když přidáte nové připojení v **Správce připojení**, Visual Studio automaticky rozpozná zahrnout adresáře pro kompilátor ve vzdáleném systému. Visual Studio pak Zpráva prolétne a zkopíruje tyto soubory do adresáře na místní počítač se systémem Windows. Potom při každém použití připojení v sadě Visual Studio nebo CMake projektu hlavičky v těchto adresářů slouží k na poskytovat technologii IntelliSense.
+
+Tato funkce závisí na počítač Linux s zip nainstalována. Zip můžete nainstalovat pomocí tohoto příkazu výstižný get:
+
+```cmd
+apt install zip
+```
+
+Chcete-li spravovat vaše mezipaměť záhlaví, přejděte na **nástroje > Možnosti, křížové platformy > Správce připojení > Správce IntelliSense vzdálené hlavičky**. Po provedení změn v tomto počítači Linux aktualizace mezipaměti záhlaví, vyberte vzdáleného připojení a pak vyberte **aktualizace**. Vyberte **odstranit** odebrat hlavičky bez odstranění samotného připojení. Vyberte **prozkoumat** otevřete místní adresář v **Průzkumníka souborů**. Tato složka považovat jen pro čtení. Chcete-li stáhnout hlavičky pro existující připojení, která byla vytvořena starší než verze 15.3, vyberte připojení a pak vyberte **Stáhnout**.
+
+![Vzdálené záhlaví IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Viz také
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
