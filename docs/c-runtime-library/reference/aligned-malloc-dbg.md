@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ Velikost velikost paměti požadované přidělení.
 Zarovnání hodnota, která musí být celé číslo mocninou 2.
 
 *Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo hodnota NULL.
+Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
 *lineNumber*<br/>
-Číslo ve zdrojovém souboru, kde byla vyžádána operace přidělení řádku nebo hodnota NULL.
+Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
 

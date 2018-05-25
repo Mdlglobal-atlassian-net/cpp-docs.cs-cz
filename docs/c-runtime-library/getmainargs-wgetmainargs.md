@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 Vyvolá analýze příkazového řádku a zkopíruje argumenty, které mají `main()` zpět prostřednictvím předaný ukazatele.  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  Celé číslo, které obsahuje počet argumentů, které následují v `argv`. Parametr `argc` je vždy větší nebo roven 1.  
   
  `_Argv`  
- Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, ke které je voláno program, argv – [1] je první argument příkazového řádku a tak dále, dokud argv – [argc –], který je vždycky hodnotu NULL. První argument příkazového řádku je vždy `argv[1]` a je poslední `argv[argc - 1]`.  
+ Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, ke které je voláno program, argv – [1] je první argument příkazového řádku a tak dále, dokud argv – [argc –], který je vždycky **NULL**. První argument příkazového řádku je vždy `argv[1]` a je poslední `argv[argc - 1]`.  
   
  `_Env`  
- Pole řetězců, které představují proměnné nastavit v prostředí uživatele. Toto pole je ukončeno položku NULL.  
+ Pole řetězců, které představují proměnné nastavit v prostředí uživatele. Toto pole je ukončena **NULL** položku.  
   
  `_DoWildCard`  
  Celé číslo, pokud nastavenou na 1 rozšíří zástupné znaky v argumentech příkazového řádku, nebo pokud nastavení na hodnotu 0 se nic nestane.  

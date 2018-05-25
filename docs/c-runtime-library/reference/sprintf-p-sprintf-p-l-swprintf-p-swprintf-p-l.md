@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p –, _sprintf_p_l –, _swprintf_p –, _swprintf_p_l –
 
@@ -118,11 +118,11 @@ Počet znaků, které jsou zapsány nebo -1, pokud došlo k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Sprintf_p –** funkce naformátuje a ukládá řady znaků a hodnot v *vyrovnávací paměti*. Každý argument *argument_list* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. *Formátu* používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A **NULL** znak se připojí po poslední znak zapsána. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno. Rozdíl mezi **_sprintf_p –** a **sprintf_s –** je, že **_sprintf_p –** podporuje poziční parametry, které umožní určení pořadí, ve kterém jsou argumenty použít ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+**_Sprintf_p –** funkce naformátuje a ukládá řady znaků a hodnot v *vyrovnávací paměti*. Každý argument *argument_list* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. *Formátu* používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak hodnoty null se připojí po poslední znak zapsána. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno. Rozdíl mezi **_sprintf_p –** a **sprintf_s –** je, že **_sprintf_p –** podporuje poziční parametry, které umožní určení pořadí, ve kterém jsou argumenty použít ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_swprintf_p –** je verze široká charakterová **_sprintf_p –**; ukazatel argumenty, které mají **_swprintf_p –** jsou široká charakterová řetězce. Detekce chyb v kódování **_swprintf_p –** se můžou lišit od v **_sprintf_p –**. **_swprintf_p –** a **fwprintf_p –** vyjma toho, že se chovají stejně jako **_swprintf_p –** zapíše výstup na řetězec, spíše než do cílového umístění v typu **souboru**, a **_swprintf_p –** vyžaduje *počet* parametru určete maximální počet znaků, který má být zapsána. Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
 
-**_sprintf_p –** vrátí počet bajtů, které jsou uložené v *vyrovnávací paměti*, není počítání ukončení **NULL** znak. **_swprintf_p –** vrátí počet široké znaky, které jsou uložené v *vyrovnávací paměti*, není počítání ukončení **NULL** celý znak. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, nebo pokud řetězec formátu obsahuje neplatné znaky formátování, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru ](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+**_sprintf_p –** vrátí počet bajtů, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující znak hodnoty null. **_swprintf_p –** vrátí počet široké znaky, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující široká znaková hodnotu null. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, nebo pokud řetězec formátu obsahuje neplatné znaky formátování, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru ](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 

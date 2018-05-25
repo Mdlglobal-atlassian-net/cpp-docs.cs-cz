@@ -41,11 +41,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e4a4791092b93d04b06432a5294a11200ed879
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -77,10 +77,10 @@ wchar_t *_wcsdup_dbg(
 Požadovaný typ bloku paměti: **_client_block –** nebo **_normal_block –**.
 
 *Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo hodnota NULL.
+Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
 *lineNumber*<br/>
-Číslo ve zdrojovém souboru, kde byla vyžádána operace přidělení řádku nebo hodnota NULL.
+Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
 

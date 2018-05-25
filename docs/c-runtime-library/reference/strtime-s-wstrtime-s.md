@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ Pokud dojde k chybový stav, je obslužná rutina neplatný parametr vyvolána, 
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
-Předávání v neplatný NENULOVOU hodnotu pro velikost vyrovnávací paměti bude výsledkem narušení přístupu, pokud *numberOfElements* parametr je větší než 9.
+Předávání v neplatný jinou hodnotu než**NULL** hodnota vyrovnávací paměti bude výsledkem narušení přístupu, pokud *numberOfElements* parametr je větší než 9.
 
 Předáním hodnoty *numberOfElements* , je větší než skutečná velikost vyrovnávací paměti bude mít za následek přetečení vyrovnávací paměti.
 

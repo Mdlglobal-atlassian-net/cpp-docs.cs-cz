@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>C3533 chyby kompilátoru
 'type': Parametr nemůže mít typ, který obsahuje 'auto'  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  Odeberte `auto` – klíčové slovo z deklarací parametrů.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad vypočítá C3535, protože deklaruje parametr funkce s `auto` – klíčové slovo a je kompilovat s **/Zc: Auto**.  
+ Následující příklad vypočítá C3533, protože deklaruje parametr funkce s `auto` – klíčové slovo a je kompilovat s **/Zc: Auto**.  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad vypočítá C3535, protože deklaruje parametr šablony s `auto` – klíčové slovo a je kompilovat s **/Zc: Auto**.  
+ Následující příklad vypočítá C3533 v C ++ 14 režimu, protože deklaruje parametr šablony s `auto` – klíčové slovo a je kompilovat s **/Zc: Auto**. (V C ++ 17, je to platnou definici třídy šablony s parametrem jednu šablonu jiný typ, jejíž typ je odvozen.)
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>Viz také  

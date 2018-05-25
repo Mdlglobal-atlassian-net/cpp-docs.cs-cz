@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ Jednotlivé funkce vrátí ukazatel do vyrovnávací paměti obsahující absolu
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fullpath_dbg –** a **_wfullpath_dbg –** funkce jsou stejné jako **_fullpath –** a **_wfullpath –** s tím rozdílem, že když **_DEBUG –** je definován, tyto funkce používají verzi ladění **malloc –**, **_malloc_dbg –**, přidělit paměť, pokud je jako první parametr předána hodnota NULL. Informace o ladění funkce **_malloc_dbg –**, najdete v části [_malloc_dbg –](malloc-dbg.md).
+**_Fullpath_dbg –** a **_wfullpath_dbg –** funkce jsou stejné jako **_fullpath –** a **_wfullpath –** s tím rozdílem, že když **_DEBUG –** je definován, tyto funkce používají verzi ladění **malloc –**, **_malloc_dbg –**, přidělit paměť, pokud **NULL** je předán jako první parametr. Informace o ladění funkce **_malloc_dbg –**, najdete v části [_malloc_dbg –](malloc-dbg.md).
 
 Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat **_crtdbg_map_alloc –** příznak. Když **_crtdbg_map_alloc –** je definován, volání **_fullpath –** a **_wfullpath –** jsou mapovány na **_fullpath_dbg –** a **_wfullpath_dbg –**, s *blockType* nastavena na **_normal_block –**. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako **_client_block –**. Další informace najdete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 

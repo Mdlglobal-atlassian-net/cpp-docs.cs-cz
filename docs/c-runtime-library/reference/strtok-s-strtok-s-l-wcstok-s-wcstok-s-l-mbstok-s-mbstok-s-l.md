@@ -57,11 +57,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -129,7 +129,7 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na další token nalezen v *str*. Vrátí **NULL** při nebyly nalezeny žádné další tokeny. Každé volání upraví *str* nahrazením **NULL** znak pro první oddělovač, který se nachází po vrácený token.
+Vrátí ukazatel na další token nalezen v *str*. Vrátí **NULL** při nebyly nalezeny žádné další tokeny. Každé volání upraví *str* nahrazením znak hodnoty null pro první oddělovač, který se nachází po vrácený token.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
@@ -143,7 +143,7 @@ Pokud *str* je **NULL** ale *kontextu* ukazatel na ukazatel platný kontext, se 
 
 ## <a name="remarks"></a>Poznámky
 
-**Strtok_s –** řady funkcí vyhledá na další token v *str*. Sadu znaků *oddělovače* Určuje možné oddělovače token, který má být nalezena v *str* v aktuálním volání. **wcstok_s –** a **_mbstok_s –** jsou široká charakterová a vícebajtových znaků verze **strtok_s –**. Argumenty a návratové hodnoty **wcstok_s –** a **_wcstok_s_l –** jsou široká charakterová řetězce; u **_mbstok_s –** a **_mbstok_s_l –**jsou řetězců vícebajtových znaků. Tyto funkce chovají stejně jako jinak.
+**Strtok_s –** řady funkcí vyhledá na další token v *str*. Sadu znaků *oddělovače* Určuje možné oddělovače token, který má být nalezena v *str* v aktuálním volání. **wcstok_s –** a **_mbstok_s –** jsou široká charakterová a vícebajtových znaků verze **strtok_s –**. Argumenty a návratové hodnoty **wcstok_s –** a **_wcstok_s_l –** jsou široká charakterová řetězce; u **_mbstok_s –** a **_mbstok_s_l –** jsou řetězců vícebajtových znaků. Tyto funkce chovají stejně jako jinak.
 
 Tato funkce ověří jeho parametry. Pokud dojde k chybový stav, stejně jako chybové stavy tabulky, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **NULL**.
 

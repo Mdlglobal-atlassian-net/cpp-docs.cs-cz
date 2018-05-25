@@ -104,11 +104,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="cedit-class"></a>CEdit – třída
 Poskytuje funkce ovládacích prvků pro úpravy Windows.  
@@ -188,7 +188,7 @@ class CEdit : public CWnd
   
  Každá položka mapování zpráv má následující podobu:  
   
- **ON_** oznámení **(** *id, memberFxn ***)**  
+  **ON_**_oznámení_**(** _id_**,** _memberFxn_ **)**
   
  kde `id` Určuje ID okno podřízených ovládacích prvků pro úpravy odesílání oznámení, a `memberFxn` je název nadřazeného člena funkce napsané pro zpracování oznámení.  
   

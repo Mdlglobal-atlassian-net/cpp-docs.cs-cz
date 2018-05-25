@@ -28,11 +28,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5e491b9dc5035435fce16b704d28a71a1b0644de
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12840a7b48be897573e2041aa06fc7fdc8d15297
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip –&gt; funkce
 
@@ -125,7 +125,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulator vrátí objekt, který, když vložíte do datového proudu `str`, chová jako `formatted output function`. Výstup funkce volá funkci člen `put` pro národní prostředí omezující vlastnost `time_put` přidružené `str`. Používá funkci výstup `_Tptr` k označení struktury čas a `_Fmt` k označení začátku řetězce ukončené NUL formátu. V případě úspěšného volání vloží literálu text z formátovacího řetězce a převedené hodnoty z struktura časové. Vrátí manipulator `str`.
+Manipulator vrátí objekt, který, když vložíte do datového proudu `str`, chová jako `formatted output function`. Výstup funkce volá funkci člen `put` pro národní prostředí omezující vlastnost `time_put` přidružené `str`. Používá funkci výstup `_Tptr` k označení struktury čas a `_Fmt` označující začátek řetězec formátu ukončené hodnotou null. V případě úspěšného volání vloží literálu text z formátovacího řetězce a převedené hodnoty z struktura časové. Vrátí manipulator `str`.
 
 ## <a name="quoted"></a>  v uvozovkách
 

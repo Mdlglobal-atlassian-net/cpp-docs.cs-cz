@@ -62,4 +62,4 @@ Pořadí načítání knihoven Visual C++ je závislá na systému. Chcete-li di
 ## <a name="see-also"></a>Viz také
 
 - [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
-- [Nasazení Universal CRT](universal-crt-deployment.md)
+- [Univerzální nasazení CRT](universal-crt-deployment.md)

@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefe9bbfc1904847af5594a4d663b1eb8299fc9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -72,7 +72,7 @@ Ukazatel na uložené přihlašovací indikátoru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fcvt –** vrací ukazatel na řetězec číslic, NULL v případě chyby.
+**_fcvt –** vrací ukazatel na řetězec číslic, **NULL** k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -86,7 +86,7 @@ Rozdíl mezi **_ecvt –** a **_fcvt –** je při interpretaci *počet* paramet
 
 **_ecvt –** a **_fcvt –** ke konverzi použijte jeden staticky přidělené vyrovnávací paměti. Každé volání na jednu z těchto rutin zničí výsledky z předchozího volání.
 
-Tato funkce ověří jeho parametry. Pokud *dec* nebo *přihlašovací* má hodnotu NULL, nebo *počet* je 0, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a vrátí se hodnota NULL.
+Tato funkce ověří jeho parametry. Pokud *dec* nebo *přihlašovací* je **NULL**, nebo *počet* je 0, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a **NULL** je vrácen.
 
 ## <a name="requirements"></a>Požadavky
 

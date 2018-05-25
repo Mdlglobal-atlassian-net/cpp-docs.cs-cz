@@ -63,11 +63,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec – funkce
 Každá funkce této rodiny načte a spustí nový proces:  
@@ -120,9 +120,9 @@ Každá funkce této rodiny načte a spustí nový proces:
   
  Volání funkcí `_execl`, `_execle`, `_execlp` a `_execlpe` se obvykle používají, pokud je počet parametrů předem známý. Parametr `arg0` je obvykle ukazatel na parametr `cmdname`. Parametry `arg1` až `argn` odkazují na řetězce znaků, které tvoří nový seznam parametrů. Nulový ukazatel musí následovat parametr `argn`, což označuje konec seznamu parametrů.  
   
- Volání funkcí `_execv`, `_execve`, `_execvp` a `_execvpe` jsou užitečná, když je počet parametrů nového procesu proměnný. Odkazy na parametry jsou předány jako pole `argv`. Parametr `argv`[0] je obvykle ukazatel na parametr `cmdname`. Parametry `argv`[1] až `argv`[`n`] odkazují na řetězce znaků, které tvoří nový seznam parametrů. Parametr `argv`[`n`+1] musí být ukazatel s hodnotou `NULL` pro označení konce seznamu parametrů.  
+ Volání funkcí `_execv`, `_execve`, `_execvp` a `_execvpe` jsou užitečná, když je počet parametrů nového procesu proměnný. Odkazy na parametry jsou předány jako pole `argv`. Parametr `argv`[0] je obvykle ukazatel na parametr `cmdname`. Parametry `argv`[1] až `argv`[`n`] odkazují na řetězce znaků, které tvoří nový seznam parametrů. Parametr `argv`[`n`+ 1] musí být **NULL** ukazatel na konec seznamu parametrů.  
   
- Soubory, které jsou při volání funkce `_exec` otevřeny, zůstanou v novém procesu otevřeny. Při volání funkcí `_execl`, `_execlp`, `_execv` a `_execvp` nový proces zdědí prostředí volajícího procesu. Volání funkcí `_execle`, `_execlpe`, `_execve` a `_execvpe` změní prostředí nového procesu tím, že předají seznam nastavení prostředí pomocí parametru `envp`. Parametr `envp` je pole ukazatelů na znaky, kde každý prvek (s výjimkou posledního prvku) odkazuje na hodnotu null ukončující řetězec definující proměnnou prostředí. Takové řetězec obvykle má tento formulář `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je řetězcovou hodnotu, na kterou je nastavena tuto proměnnou. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední prvek pole `envp` by měl být `NULL`. Pokud je parametr `envp` sám o sobě `NULL`, nový proces zdědí nastavení prostředí volajícího procesu.  
+ Soubory, které jsou při volání funkce `_exec` otevřeny, zůstanou v novém procesu otevřeny. Při volání funkcí `_execl`, `_execlp`, `_execv` a `_execvp` nový proces zdědí prostředí volajícího procesu. Volání funkcí `_execle`, `_execlpe`, `_execve` a `_execvpe` změní prostředí nového procesu tím, že předají seznam nastavení prostředí pomocí parametru `envp`. Parametr `envp` je pole ukazatelů na znaky, kde každý prvek (s výjimkou posledního prvku) odkazuje na hodnotu null ukončující řetězec definující proměnnou prostředí. Takové řetězec obvykle má tento formulář `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je řetězcovou hodnotu, na kterou je nastavena tuto proměnnou. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední elementu `envp` pole by měla být **NULL**. Když `envp` sám o sobě představuje **NULL**, nový proces dědí nastavení prostředí volajícího procesu.  
   
  Program spuštěný pomocí jedné z funkcí `_exec` je vždy načten do paměti, jako by bylo pole maximálního přidělení v záhlaví souboru programu .exe nastaveno na výchozí hodnotu 0xFFFFH.  
   

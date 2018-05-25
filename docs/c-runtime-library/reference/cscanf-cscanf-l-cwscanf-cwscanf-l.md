@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ Počet polí, které byly úspěšně převést a přiřadit. Návratová hodnot
 
 **_Cscanf –** funkce čte data přímo z konzoly do umístění určeného vlastností *argument*. [_Getche –](getch-getwch.md) funkce slouží k načtení znaků. Všechny volitelné parametry musí být ukazatel na proměnnou s typem, který odpovídá specifikátor typu v *formátu*. Ovládací prvky formátu výklad vstupní pole a má stejnou tvoří a fungovat jako *formátu* parametr pro [scanf](scanf-scanf-l-wscanf-wscanf-l.md) funkce. Při **_cscanf –** normálně vrátí vstupní znak ji není provést, pokud byl posledním volání do **_ungetch –**.
 
-Tato funkce ověří jeho parametry. Pokud formát hodnotu NULL, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **EOF**.
+Tato funkce ověří jeho parametry. Pokud ve formátu **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **EOF**.
 
 Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
 

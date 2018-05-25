@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Pokud dojde k některé z výše uvedených podmínek chyba, je obslužná rutin
 
 **Wctomb_s –** funkce převede jeho *wchar* argument odpovídající vícebajtových znaků a ukládá výsledek v *mbchar*. Funkce můžete volat z libovolného bodu v libovolné aplikaci.
 
-Pokud **wctomb_s –** převede široká znaková k vícebajtových znaků, uloží je počet bajtů (které se nikdy větší než **mb_cur_max –**) v široká znaková do celé číslo, na kterou odkazuje*pRetValue*. Pokud *wchar* je znak hodnoty null široká charakterová (L '\0'), **wctomb_s –** doplní *pRetValue* s 1. Pokud cílový ukazatel *mbchar* má hodnotu NULL, **wctomb_s –** vloží 0 *pRetValue*. Pokud převod není pro aktuální prostředí **wctomb_s –** převádí na hodnotu -1 *pRetValue*.
+Pokud **wctomb_s –** převede široká znaková k vícebajtových znaků, uloží je počet bajtů (které se nikdy větší než **mb_cur_max –**) v široká znaková do celé číslo, na kterou odkazuje*pRetValue*. Pokud *wchar* je znak hodnoty null široká charakterová (L '\0'), **wctomb_s –** doplní *pRetValue* s 1. Pokud cílový ukazatel *mbchar* je **NULL**, **wctomb_s –** vloží 0 *pRetValue*. Pokud převod není pro aktuální prostředí **wctomb_s –** převádí na hodnotu -1 *pRetValue*.
 
 **wctomb_s –** používá aktuální národní prostředí informace závislých na národním prostředí; **_wctomb_s_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 

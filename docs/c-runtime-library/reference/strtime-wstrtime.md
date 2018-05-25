@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ Vrací ukazatel na výsledný řetězec znaků *timestr*.
 
 **_Strtime –** funkce zkopíruje aktuálním místním časem do vyrovnávací paměti, na kterou odkazuje *timestr*. Formát času je jako **hh: mm:** kde **hh** je dvě číslice představující hodinu ve 24hodinovém formátu **mm** je dvě číslice představující minut za hodinu a **ss** je dvě číslice představující sekund. Například řetězec **18:23:44** představuje 23 minut a 44 sekund po 6 hodin Vyrovnávací paměti musí být minimálně 9 bajtů.
 
-**_wstrtime –** je verze široká charakterová **_strtime –**; argument a vrátí hodnotu **_wstrtime –** jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak. Pokud *timestr* je **NULL** ukazatel nebo, pokud *timestr* je v nesprávném formátu, neplatný parametr rutina je vyvolána, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud výjimka může pokračovat, tyto funkce vrátí hodnotu NULL a sadu **errno** k **einval –** Pokud *timestr* byla NULL nebo nastavte **errno**k **erange –** Pokud *timestr* je v nesprávném formátu.
+**_wstrtime –** je verze široká charakterová **_strtime –**; argument a vrátí hodnotu **_wstrtime –** jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak. Pokud *timestr* je **NULL** ukazatel nebo, pokud *timestr* je v nesprávném formátu, neplatný parametr rutina je vyvolána, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud výjimka může pokračovat, vrátí tyto funkce **NULL** a nastavte **errno** k **einval –** Pokud *timestr* byl **NULL** nebo nastavte **errno** k **erange –** Pokud *timestr* je v nesprávném formátu.
 
 V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 

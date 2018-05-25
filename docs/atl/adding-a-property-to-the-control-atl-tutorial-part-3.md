@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3)
 `IPolyCtl` je rozhraní, které obsahuje ovládacího prvku vlastní metody a vlastnosti a vlastnosti přidáte k ní.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides` Metoda vrací aktuální hodnotu `Sides` vlastnosti prostřednictvím `pVal` ukazatel. V `put_Sides` metody kód zajišťuje uživatele se nastaví `Sides` vlastnost přijatelnou hodnotu. Minimální hodnota musí být 2 a vzhledem k tomu, že pole bodů se použije pro každé straně, 100 je přiměřené limit pro maximální hodnotu.  
+ `get_Sides` Metoda vrací aktuální hodnotu `Sides` vlastnosti prostřednictvím `pVal` ukazatel. V `put_Sides` metody kód zajišťuje uživatele se nastaví `Sides` vlastnost přijatelnou hodnotu. Minimální hodnota musí být 3 a vzhledem k tomu, že pole bodů se použije pro každé straně, 100 je přiměřené limit pro maximální hodnotu.  
   
  Nyní máte vlastnost s názvem `Sides`. V dalším kroku se změní kreslení kód, který se použije.  
   

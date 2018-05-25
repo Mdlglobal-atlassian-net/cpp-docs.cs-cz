@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>Ověřování parametru
-Většina funkcí Rozšířené zabezpečení CRT a řadu dříve existující funkce ověřit jejich parametrů. To může zahrnovat kontrola ukazatele NULL, kontrola, že celá spadat do platný rozsah nebo kontrola, zda jsou hodnoty výčtu platná. Pokud je nalezen neplatný parametr, spustit je obslužná rutina neplatný parametr.  
+Většina funkcí Rozšířené zabezpečení CRT a řadu dříve existující funkce ověřit jejich parametrů. To může zahrnovat kontrola ukazatele pro **NULL**, kontrola, že celá spadat do platný rozsah nebo kontrola, zda jsou hodnoty výčtu platná. Pokud je nalezen neplatný parametr, spustit je obslužná rutina neplatný parametr.  
   
 ## <a name="invalid-parameter-handler-routine"></a>Neplatný parametr rutiny ovladače  
  Zjistí-li funkce běhové knihovny jazyka C neplatný parametr, zaznamená některé informace o této chybě a pak zavolá makro, který zabalí neplatný parametr obslužná rutina odesílání funkce mezi [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md), nebo [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md). Volaná funkce odesílání závisí na tom, jestli váš kód je, v uvedeném pořadí, sestavení ladicí verze, prodejní sestavení nebo chyba, nepovažuje použitelná pro obnovení. 

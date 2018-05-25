@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic – struktura
 
@@ -63,7 +63,7 @@ struct atomic;
 
 Typ *Ty* musí být *trivially kopírovatelná*. To znamená, pomocí [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) pro kopírování jeho bajtů musí vytvořit platný *Ty* objekt, který porovnává stejný jako původní objekt. [Compare_exchange_weak](#compare_exchange_weak) a [compare_exchange_strong](#compare_exchange_strong) členské funkce použití [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) k určení, zda dva *Ty* hodnoty jsou stejné. Tato funkce nebude používat *Ty*-definované **operátor ==**. Členské funkce **atomic** použít **memcpy** ke kopírování hodnoty typu *Ty*.
 
-Částečná specializace ** atomic\<Ty * > **, existuje pro všechny typy ukazatele. Specializace umožňuje přidání posun na hodnotu spravované ukazatel nebo odčítání posun z něj. Aritmetické operace trvat argument typu **ptrdiff_t –** a upravit tento argument na základě velikosti *Ty* být konzistentní s aritmetické běžné adres.
+Částečná specializace **atomic\<Ty \* >** , existuje pro všechny typy ukazatele. Specializace umožňuje přidání posun na hodnotu spravované ukazatel nebo odčítání posun z něj. Aritmetické operace trvat argument typu **ptrdiff_t –** a upravit tento argument na základě velikosti *Ty* být konzistentní s aritmetické běžné adres.
 
 Pro všechny integrální typy s výjimkou existuje specializace **bool**. Každý specializace poskytuje bohatou sadu metody pro atomické aritmetické a logických operací.
 

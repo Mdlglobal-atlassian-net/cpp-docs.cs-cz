@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa20222a4d64afa9fcb8d0c1a91e63db989dae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 Implementace modulu runtime [dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.  
@@ -65,7 +65,7 @@ PVOID __RTDynamicCast (
  `true` Pokud vstup je odkaz; `false` Pokud vstup je ukazatel.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ukazatel na příslušnou dílčí objekt, v případě úspěšného; jinak hodnota NULL.  
+ Ukazatel na příslušnou dílčí objekt, v případě úspěšného; v opačném **NULL**.  
   
 ## <a name="exceptions"></a>Výjimky  
  `bad_cast()` Pokud vstup `dynamic_cast<>` je odkaz, přetypování selže.  

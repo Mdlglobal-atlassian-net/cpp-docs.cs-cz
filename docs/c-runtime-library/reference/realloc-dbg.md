@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ Požadovaná velikost reallocated bloku (v bajtech).
 Požadovaný typ pro reallocated blok: **_client_block –** nebo **_normal_block –**.
 
 *Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který vyžadují **realloc –** operace nebo hodnotu NULL.
+Ukazatel na název zdrojového souboru, který vyžadují **realloc –** operaci nebo **NULL**.
 
 *lineNumber*<br/>
-Číslo řádku na zdrojový soubor kde **realloc –** operace byla požadovaná nebo má hodnotu NULL.
+Číslo řádku na zdrojový soubor kde **realloc –** byla vyžádána operace nebo **NULL**.
 
 *Filename* a *linenumber* parametry jsou k dispozici pouze při **_realloc_dbg –** explicitně volané nebo [_crtdbg_map_alloc –](../../c-runtime-library/crtdbg-map-alloc.md) preprocesoru konstanta byla definována.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení této funkce buď vrací ukazatel na část uživatele k opětovnému přidělení paměti bloku, volá nové funkce obslužné rutiny nebo vrátí hodnotu NULL. Úplný popis návratový chování najdete v následující části poznámky. Další informace o používání nové funkce obslužné rutiny najdete v tématu [realloc –](realloc.md) funkce.
+Při úspěšném dokončení této funkce buď vrací ukazatel na část uživatele k opětovnému přidělení paměti bloku, volá nové funkce obslužné rutiny nebo vrátí **NULL**. Úplný popis návratový chování najdete v následující části poznámky. Další informace o používání nové funkce obslužné rutiny najdete v tématu [realloc –](realloc.md) funkce.
 
 ## <a name="remarks"></a>Poznámky
 

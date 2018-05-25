@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **wcstombs –** úspěšně převede vícebajtové řetězce, vrátí počet bajtů zapsaných do řetězce vícebajtových výstup, s výjimkou ukončení **NULL** (pokud existuje). Pokud *mbstr* argument je **NULL**, **wcstombs –** vrátí požadovaná velikost v bajtech cílový řetězec. Pokud **wcstombs –** zaznamená široká znaková nelze převést na vícebajtových znaků, vrátí hodnotu -1 přetypovat na typ **size_t –** a nastaví **errno** k **eilseq –** .
+Pokud **wcstombs –** úspěšně převede vícebajtové řetězce, vrátí počet bajtů zapsaných do řetězce vícebajtových výstup, s výjimkou ukončující null (pokud existuje). Pokud *mbstr* argument je **NULL**, **wcstombs –** vrátí požadovaná velikost v bajtech cílový řetězec. Pokud **wcstombs –** zaznamená široká znaková nelze převést na vícebajtových znaků, vrátí hodnotu -1 přetypovat na typ **size_t –** a nastaví **errno** k **eilseq –** .
 
 ## <a name="remarks"></a>Poznámky
 
-**Wcstombs –** funkce převede řetězec široká charakterová, na kterou odkazuje *wcstr* na odpovídající vícebajtových znaků a ukládá výsledky do *mbstr* pole. *Počet* určuje maximální počet bajtů, které mohou být uloženy v řetězci vícebajtové výstup (to znamená, velikost *mbstr*). Obecně platí není znám, kolik bajtů se bude vyžadovat při převodu řetězce široká charakterová. Některé široké znaky bude vyžadovat pouze jeden bajt do výstupního řetězce; jiné vyžadují dva. Pokud jsou dva bajty v vícebajtové výstupní řetězec pro každý široké znak ve vstupním řetězci (včetně široká znaková **NULL**), výsledek záruku, že se nevešla.
+**Wcstombs –** funkce převede řetězec široká charakterová, na kterou odkazuje *wcstr* na odpovídající vícebajtových znaků a ukládá výsledky do *mbstr* pole. *Počet* určuje maximální počet bajtů, které mohou být uloženy v řetězci vícebajtové výstup (to znamená, velikost *mbstr*). Obecně platí není znám, kolik bajtů se bude vyžadovat při převodu řetězce široká charakterová. Některé široké znaky bude vyžadovat pouze jeden bajt do výstupního řetězce; jiné vyžadují dva. Pokud existují dva bajty v řetězci vícebajtové výstup pro každý široké znak ve vstupním řetězci (včetně široká znaková null), výsledek záruku.
 
 Pokud **wcstombs –** zaznamená znak hodnoty null široká charakterová (L '\0') před nebo po *počet* dojde, převede ji 0 8bitové a zastaví se. Proto řetězce vícebajtových znaků na *mbstr* je ukončené hodnotou null jenom v případě **wcstombs –** širokého znaku prázdný znak, zaznamená při převodu. Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chování **wcstombs –** není definován.
 

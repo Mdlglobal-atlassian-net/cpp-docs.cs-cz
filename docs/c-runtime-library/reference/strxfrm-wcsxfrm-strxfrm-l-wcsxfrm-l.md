@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Po transformaci volání **strcmp –** s dva řetězce transformovaných dává
 
 **wcsxfrm –** je verze široká charakterová **strxfrm –**; argumenty řetězce **wcsxfrm –** jsou široká charakterová ukazatele. Pro **wcsxfrm –**, po transformaci řetězec, volání **wcscmp –** s dva řetězce transformovaných dává výsledky, které jsou stejné jako ty volání **wcscoll –** u původní dva řetězce. **wcsxfrm –** a **strxfrm –** chovat jinak shodně. **wcsxfrm –** používá aktuální národní prostředí pro své chování závislých na národním prostředí; **_wcsxfrm_l –** používá národní prostředí předaná místo aktuální národní prostředí.
 
-Tyto funkce ověřit jejich parametrů. Pokud *strSource* je ukazatel s hodnotou null, nebo *strDest* je ukazatele s hodnotou NULL (není-li počet nula), nebo pokud *počet* je větší než **INT_MAX**, Neplatný parametr rutina je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **INT_MAX**.
+Tyto funkce ověřit jejich parametrů. Pokud *strSource* je ukazatel s hodnotou null, nebo *strDest* je **NULL** ukazatele (Pokud počet není nula), nebo pokud *počet* je větší než **INT_MAX**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 

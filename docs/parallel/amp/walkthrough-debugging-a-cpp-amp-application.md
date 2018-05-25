@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 Toto téma ukazuje, jak ladit aplikaci, která používá C++ Accelerated Massive Parallelism (C++ AMP) využívat výhod grafický procesor (GPU). Využívá paralelní snížení program, který shrnuje velké pole celých čísel. Tento návod znázorňuje následující úlohy:  
@@ -228,7 +228,9 @@ Procesor zarážky
   
 3.  V **ladicí program ke spuštění** seznamu, vyberte **místní ladicí program Windows**.  
   
-4.  V **ladicí program typu** seznamu, vyberte **GPU pouze**.  
+4.  V **ladicí program typu** seznamu, ověřte, že **automaticky** je vybrána.
+
+    **Automatické** je výchozí hodnota. Před Windows 10 **GPU pouze** je požadovaná hodnota místo **automaticky**.
   
 5.  Vyberte **OK** tlačítko.  
   

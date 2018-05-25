@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36524cc2b7794c14a6262503095b5c52f631b653
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -62,7 +62,7 @@ Typ bloku zadaná paměťová: **_client_block –** nebo **_normal_block –**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení **_msize_dbg –** vrátí velikost (v bajtech) zadaná paměťová bloku; jinak vrátí hodnotu NULL.
+Při úspěšném dokončení **_msize_dbg –** vrátí velikost (v bajtech) zadaná paměťová bloku; v opačném případě vrátí **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 

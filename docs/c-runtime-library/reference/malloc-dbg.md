@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ Požadovaná velikost bloku paměti (v bajtech).
 Požadovaný typ bloku paměti: **_client_block –** nebo **_normal_block –**.
 
 *Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo hodnota NULL.
+Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
 *lineNumber*<br/>
-Číslo ve zdrojovém souboru, kde byla vyžádána operace přidělení řádku nebo hodnota NULL.
+Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo **NULL**.
 
 *Filename* a *linenumber* parametry jsou k dispozici pouze při **_malloc_dbg –** explicitně volané nebo [_crtdbg_map_alloc –](../../c-runtime-library/crtdbg-map-alloc.md)preprocesoru konstanta byla definována.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení této funkce vrací ukazatel na části uživatele bloku přidělenou paměť, volá nové funkce obslužné rutiny nebo vrátí hodnotu NULL. Úplný popis návratový chování najdete v následující části poznámky. Další informace o používání nové funkce obslužné rutiny najdete v tématu [malloc](malloc.md) funkce.
+Při úspěšném dokončení této funkce vrací ukazatel na části uživatele bloku přidělenou paměť, volá nové funkce obslužné rutiny nebo vrátí **NULL**. Úplný popis návratový chování najdete v následující části poznámky. Další informace o používání nové funkce obslužné rutiny najdete v tématu [malloc](malloc.md) funkce.
 
 ## <a name="remarks"></a>Poznámky
 

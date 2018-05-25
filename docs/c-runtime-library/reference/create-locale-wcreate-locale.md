@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -94,7 +94,7 @@ Ověří, tato funkce *kategorie* a *národního prostředí* parametry. Pokud p
 
 *Národního prostředí* argument je ukazatel na řetězec, který určuje národní prostředí. Informace o formátu *národního prostředí* argument, najdete v části [názvy národních prostředí, jazyků a řetězce zemí/oblastí](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-*Národního prostředí* argument může trvat název národního prostředí, jazyk řetězec, řetězec jazyka a kód země nebo oblasti, znakové stránky, nebo řetězec jazyka, kód země nebo oblasti a znaková stránka. Sada názvy dostupné národních prostředí, jazyků, kódy zemí a znakové stránky obsahuje všechny, které podporuje rozhraní API systému Windows NLS kromě znakové stránky, které vyžadují více než dva bajty na znak – například ve formátu UTF-7 a UTF-8. Pokud zadáte znakové stránky, jako je UTF-7 nebo UTF-8, **_create_locale –** se nezdaří a vrátit hodnotu NULL. Sada názvů národního prostředí podporuje **_create_locale –** jsou popsané v [názvy národních prostředí, jazyků a řetězce zemí/oblastí](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Sada jazyka a země nebo oblast řetězce nepodporuje **_create_locale –** jsou uvedeny v [řetězce jazyků](../../c-runtime-library/language-strings.md) a [řetězce zemí/oblastí](../../c-runtime-library/country-region-strings.md).
+*Národního prostředí* argument může trvat název národního prostředí, jazyk řetězec, řetězec jazyka a kód země nebo oblasti, znakové stránky, nebo řetězec jazyka, kód země nebo oblasti a znaková stránka. Sada názvy dostupné národních prostředí, jazyků, kódy zemí a znakové stránky obsahuje všechny, které podporuje rozhraní API systému Windows NLS kromě znakové stránky, které vyžadují více než dva bajty na znak – například ve formátu UTF-7 a UTF-8. Pokud zadáte znakové stránky, jako je UTF-7 nebo UTF-8, **_create_locale –** se nezdaří a vrátí **NULL**. Sada názvů národního prostředí podporuje **_create_locale –** jsou popsané v [názvy národních prostředí, jazyků a řetězce zemí/oblastí](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Sada jazyka a země nebo oblast řetězce nepodporuje **_create_locale –** jsou uvedeny v [řetězce jazyků](../../c-runtime-library/language-strings.md) a [řetězce zemí/oblastí](../../c-runtime-library/country-region-strings.md).
 
 Další informace o nastavení národního prostředí naleznete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md).
 

@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` Proměnné je ukazatel na pole ukazatele na řetězců vícebajtových znaků, které tvoří proces prostředí. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [getenv_s –, _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md) a [_putenv_s –, _wputenv_s –](../c-runtime-library/reference/putenv-s-wputenv-s.md), který má být použit místo globální proměnné. `_environ` je v Stdlib.h deklarována.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  široká charakterová verze `_environ`. V programu, který používá `wmain` funkce, `_wenviron` je inicializován při spuštění programu podle nastavení, které jsou převzaty z prostředí operačního systému.  
   
- V programu, který používá `main`, `_wenviron` je původně `NULL` protože prostředí se skládá z řetězců vícebajtových znaků. Při prvním volání `_wgetenv` nebo `_wputenv`, odpovídající prostředí široká charakterová řetězec je vytvořen a je na kterou odkazuje `_wenviron`.  
+ V programu, který používá `main`, `_wenviron` je původně **NULL** protože prostředí se skládá z řetězců vícebajtových znaků. Při prvním volání `_wgetenv` nebo `_wputenv`, odpovídající prostředí široká charakterová řetězec je vytvořen a je na kterou odkazuje `_wenviron`.  
   
- Podobně, v programu, který používá `wmain`, `_environ` je původně `NULL` protože prostředí se skládá z řetězce široká charakterová. Při prvním volání `_getenv` nebo `_putenv`, odpovídající řetězce vícebajtových znaků prostředí je vytvořen a je na kterou odkazuje `_environ`.  
+ Podobně, v programu, který používá `wmain`, `_environ` je původně **NULL** protože prostředí se skládá z řetězce široká charakterová. Při prvním volání `_getenv` nebo `_putenv`, odpovídající řetězce vícebajtových znaků prostředí je vytvořen a je na kterou odkazuje `_environ`.  
   
  Pokud dvě kopie prostředí (MBCS a Unicode) existují současně v programu, musíte udržovat běhu systému obě kopie, výsledkem je pomalejší dobu provádění. Například když zavoláte `_putenv`, volání `_wputenv` je také provést automaticky, takže odpovídají řetězce dvě prostředí.  
   

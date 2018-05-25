@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfaa3b8e7fd8705f23b78b7b4ba4238631cfa4cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf –, _snprintf –, _snprintf_l –, _snwprintf –, _snwprintf_l –
 Zapisuje formátovaná data do řetězce. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_snprintf_s –, _snprintf_s_l –, _snwprintf_s –, _snwprintf_s_l –](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -174,7 +174,7 @@ Informace o těchto a dalších kódy chyb naleznete v tématu [errno, _doserrno
 **Snprintf –** funkce a **_snprintf –** rodiny formátu funkce a úložiště *počet* nebo méně znaků v *vyrovnávací paměti*. **Snprintf –** vždycky uložena ukončující prázdný znak, zkrátit výstup v případě potřeby. **_Snprintf –** řady funkcí pouze připojí ukončující znak hodnoty null, pokud je délka formátovaný řetězec striktně menší než *počet* znaků. Každý *argument* (pokud existuje) je převeden a je výstup podle odpovídající specifikaci formátu v *formátu*. Formát obsahuje obyčejnou znaky a má stejné tvoří a fungovat jako *formátu* argument pro [printf](printf-printf-l-wprintf-wprintf-l.md). Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formát* není řetězec definovaný uživatelem. Protože **_snprintf –** funkce nezaručují NULL ukončení – zejména, pokud je návratovou hodnotu *počet*– zajistěte, aby se následuje kód, který přidá null ukončení. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Ujistěte se, že *formát* není řetězec definovaný uživatelem. Protože **_snprintf –** funkce nezaručují null ukončení – zejména, pokud je návratovou hodnotu *počet*– zajistěte, aby se následuje kód, který přidá ukončení hodnotu null. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Počínaje UCRT v sadě Visual Studio 2015 a Windows 10, **snprintf –** již není stejný jako **_snprintf –**. **Snprintf –** chování funkce je nyní C99 standard kompatibilní.
 
@@ -234,7 +234,7 @@ int main(void)
 #else
    const double fp = 1.7320534;
 #endif
-   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   /* !subtract one to prevent "squeezing out" the terminal null! */
    const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
    int bufferUsed = 0;
    int bufferLeft = bufferSize - bufferUsed;
@@ -290,8 +290,8 @@ int main(void)
    }
    else
    {
-      /* !store nul because _snprintf doesn't necessarily (if the string
-       * fits without the terminal nul, but not with it)!
+      /* !store null because _snprintf doesn't necessarily (if the string
+       * fits without the terminal null, but not with it)!
        * bufferUsed might be as large as bufferSize, which normally is
        * like going one element beyond a buffer, but in this case
        * subtracted one from bufferSize, so we're ok.

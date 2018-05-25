@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ Pokud je nalezen klíč, **_lsearch –** vrací ukazatel na element pole v *zá
 
 *Porovnat* argument je ukazatel na rutiny zadanou uživatelem, který porovnává dva elementy pole a vrátí hodnotu udávající, jejich vztahu. **_lsearch –** volání *porovnat* rutiny jeden či více krát během hledání, předávání ukazatele na dva elementy pole při každém volání. *porovnání* musí porovnat elementy a vrátit buď nenulové hodnoty (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).
 
-Tato funkce ověří jeho parametry. Pokud *porovnat*, *klíč* nebo *číslo* je **NULL**, nebo pokud *základní* má hodnotu NULL a **číslo*  je nenulové hodnoty, nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **NULL**.
+Tato funkce ověří jeho parametry. Pokud *porovnat*, *klíč* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL**a *číslo* je nenulové hodnoty, nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **NULL**.
 
 ## <a name="requirements"></a>Požadavky
 

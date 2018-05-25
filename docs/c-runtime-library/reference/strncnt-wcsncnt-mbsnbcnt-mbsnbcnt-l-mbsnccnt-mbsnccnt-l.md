@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -118,7 +118,7 @@ Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsnbcnt –** a **_mbsnbcnt_l –** vrátí počet bajtů najít v prvním *počet* vícebajtové znaky z *str*. **_mbsnccnt –** a **_mbsnccnt_l –** vrátí počet znaků, najít v prvním *počet* bajtů *str*. Pokud je znak hodnoty NULL došlo před zkoumání *str* má dokončení vrátí počet bajtů nebo znaků, nalezeno před znak hodnoty NULL. Pokud *str* se skládá z méně než *počet* znaků nebo bajtů, vrátí počet znaků nebo bajtů v řetězci. Pokud *počet* je menší než nula, že budou vracet 0. V předchozích verzích se tyto funkce měl návratovou hodnotu typu **int** místo **size_t –**.
+**_mbsnbcnt –** a **_mbsnbcnt_l –** vrátí počet bajtů najít v prvním *počet* vícebajtové znaky z *str*. **_mbsnccnt –** a **_mbsnccnt_l –** vrátí počet znaků, najít v prvním *počet* bajtů *str*. Pokud je znak hodnoty null došlo před zkoumání *str* má dokončení vrátí počet bajtů nebo znaků, nalezeno před znak hodnoty null. Pokud *str* se skládá z méně než *počet* znaků nebo bajtů, vrátí počet znaků nebo bajtů v řetězci. Pokud *počet* je menší než nula, že budou vracet 0. V předchozích verzích se tyto funkce měl návratovou hodnotu typu **int** místo **size_t –**.
 
 **_strncnt –** vrátí počet znaků v prvním *počet* bajtů řetězce jednobajtové *str*. **_wcsncnt –** vrátí počet znaků v prvním *počet* široké znaky řetězce široká charakterová *str*.
 
@@ -126,9 +126,9 @@ Národní prostředí použít.
 
 **_mbsnbcnt –** a **_mbsnbcnt_l –** počet bajtů najít v prvním *počet* vícebajtové znaky z *str*. **_mbsnbcnt –** a **_mbsnbcnt_l –** nahradit **mtob** a mělo by se místě **mtob**.
 
-**_mbsnccnt –** a **_mbsnccnt_l –** určený počet znaků najít v prvním *počet* bajtů *str*. Pokud **_mbsnccnt –** a **_mbsnccnt_l –** stane s hodnotou NULL v druhé bajt dvoubajtové znakové, první bajt také se považuje za hodnotu NULL a není zahrnuta hodnota vrácená počtu. **_mbsnccnt –** a **_mbsnccnt_l –** nahradit **btom** a mělo by se místě **btom**.
+**_mbsnccnt –** a **_mbsnccnt_l –** určený počet znaků najít v prvním *počet* bajtů *str*. Pokud **_mbsnccnt –** a **_mbsnccnt_l –** stane znak hodnoty null v druhé bajt dvoubajtové znakové, první bajt považuje za také mít hodnotu null a není součástí hodnota vrácená počtu. **_mbsnccnt –** a **_mbsnccnt_l –** nahradit **btom** a mělo by se místě **btom**.
 
-Pokud *str* ukazatele null nebo je *počet* je 0, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), **errno** je nastaven na **einval –**, a funkce vrátí hodnotu 0.
+Pokud *str* je **NULL** ukazatel nebo *počet* je 0, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), **errno** je nastaven na **einval –**, a funkce vrátí hodnotu 0.
 
 Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 

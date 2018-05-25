@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parametry
 
 *absPath*<br/>
-Ukazatel na absolutní nebo úplnou cestu obsahující název nebo hodnota NULL.
+Ukazatel na vyrovnávací paměť obsahující název absolutní nebo úplné cesty, nebo **NULL**.
 
 *relPath*<br/>
 Relativní cesta.
@@ -82,7 +82,7 @@ Každá z těchto funkcí vrací ukazatel na vyrovnávací paměť obsahující 
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fullpath –** funkce rozšíří názvem relativní cesty v *relPath* jeho plně kvalifikovanou nebo absolutní cesta a ukládá tento název v *absPath*. Pokud *absPath* má hodnotu NULL, **malloc** se používá k přidělení vyrovnávací paměti dostatečně dlouhé, aby udržení název cesty. Je zodpovědností volajícího, aby bez této vyrovnávací paměti. Relativní cesta Určuje cestu do jiného umístění z aktuálního umístění (například aktuální pracovní adresář: "."). Název absolutní cesta je rozšíření relativní cesta název, který stavy celou cestu potřebné k dosažení požadované umístění z kořenového adresáře systému souborů. Na rozdíl od **_makepath –**, **_fullpath –** lze použít k získání názvu absolutní cesta relativní cesty (*relPath*), zahrnují ". /"nebo".. nebo "v jejich názvy.
+**_Fullpath –** funkce rozšíří názvem relativní cesty v *relPath* jeho plně kvalifikovanou nebo absolutní cesta a ukládá tento název v *absPath*. Pokud *absPath* je **NULL**, **malloc** se používá k přidělení vyrovnávací paměti dostatečně dlouhé, aby udržení název cesty. Je zodpovědností volajícího, aby bez této vyrovnávací paměti. Relativní cesta Určuje cestu do jiného umístění z aktuálního umístění (například aktuální pracovní adresář: "."). Název absolutní cesta je rozšíření relativní cesta název, který stavy celou cestu potřebné k dosažení požadované umístění z kořenového adresáře systému souborů. Na rozdíl od **_makepath –**, **_fullpath –** lze použít k získání názvu absolutní cesta relativní cesty (*relPath*), zahrnují ". /"nebo".. nebo "v jejich názvy.
 
 Pokud chcete používat C běhové rutiny, například žádost musí obsahovat soubory hlaviček, které obsahují deklarace pro rutiny. Každý soubor hlaviček patří příkaz odkazy na umístění souboru relativní způsobem (z pracovní adresář aplikace):
 

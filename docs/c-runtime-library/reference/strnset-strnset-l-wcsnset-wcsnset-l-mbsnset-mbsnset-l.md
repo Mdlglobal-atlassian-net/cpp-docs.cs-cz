@@ -75,11 +75,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -150,7 +150,7 @@ Vrací ukazatel na změněna řetězec.
 
 **_wcsnset –** a **_mbsnset –** jsou široká charakterová a vícebajtových znaků verze **_strnset –**. Argumenty řetězce a návratová hodnota **_wcsnset –** jsou široká charakterová řetězce; u **_mbsnset –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
 
-**_mbsnset –** ověří jeho parametrů, pokud *str* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění **_mbsnset –** vrátí hodnotu NULL a nastaví **errno** k **einval –**. **_strnset –** a **_wcsnset –** neověřují jejich parametrů.
+**_mbsnset –** ověří jeho parametrů, pokud *str* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění **_mbsnset –** vrátí **NULL** a nastaví **errno** k **einval –**. **_strnset –** a **_wcsnset –** neověřují jejich parametrů.
 
 Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 

@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mapuje jeden řetězec znaků do jiné, provádění Zadaná transformace závislých na národním prostředí. Tuto funkci lze také vygenerovat klíč řazení pro vstupní řetězec.  
@@ -59,7 +59,7 @@ int __crtLCMapStringW(
  Ukazatel na zdrojový řetězec, který mapuje funkce nebo používá pro generování klíčů pro řazení. Tento parametr se předpokládá, že jako řetězec znaků Unicode.  
   
  `cchSrc`  
- Velikost v znaků řetězce, na kterou odkazuje `lpSrcStr` parametr. Tento počet můžete zahrnout ukončení hodnotu NULL nebo není její zahrnutí.  
+ Velikost v znaků řetězce, na kterou odkazuje `lpSrcStr` parametr. Tento počet zahrnout ukončení hodnotu null, nebo není její zahrnutí.  
   
  A `cchSrc` hodnota -1 určuje, že řetězec na kterou odkazuje `lpSrcStr` je ukončené hodnotou null. Pokud ano, a tato funkce se používá v režimu řetězec mapování, vypočítá délku řetězce samotné funkce a null ukončí namapované řetězec uložena do `*lpDestStr`.  
   
@@ -70,9 +70,9 @@ int __crtLCMapStringW(
  Velikost vyrovnávací paměti, na kterou odkazuje znakům `lpDestStr`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud hodnota `cchDest` je nenulové hodnoty, počtu znaků nebo bajtů Pokud `LCMAP_SORTKEY` je zadán, zapisovat do vyrovnávací paměti označuje úspěch. Tento počet zahrnuje prostor pro ukončovací hodnotu NULL.  
+ Pokud hodnota `cchDest` je nenulové hodnoty, počtu znaků nebo bajtů Pokud `LCMAP_SORTKEY` je zadán, zapisovat do vyrovnávací paměti označuje úspěch. Tento počet zahrnuje prostor pro zakončením hodnotu null.  
   
- Pokud hodnota `cchDest` nula, velikost vyrovnávací paměti v znaků nebo bajtů, pokud je `LCMAP_SORTKEY` není zadaný, vyžaduje pro příjem přeložená řetězec nebo řazení klíč označuje úspěch. Tato velikost zahrnuje prostor pro ukončovací hodnotu NULL.  
+ Pokud hodnota `cchDest` nula, velikost vyrovnávací paměti v znaků nebo bajtů, pokud je `LCMAP_SORTKEY` není zadaný, vyžaduje pro příjem přeložená řetězec nebo řazení klíč označuje úspěch. Tato velikost zahrnuje prostor pro zakončením hodnotu null.  
   
  Nula naznačuje chybu. Chcete-li získat rozšířené informace o chybě, zavolejte `GetLastError` funkce.  
   

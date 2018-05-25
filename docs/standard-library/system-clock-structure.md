@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock – struktura
 
@@ -42,8 +42,6 @@ A *typ hodin* slouží k získání aktuální čas ve formátu UTC. Typ ztěles
 Hodiny, které je *monotónní* Pokud hodnotu, která je vrácen první volání `now()` je vždy menší než nebo rovna hodnotu, která je vrácena voláním následné `now()`.
 
 Hodiny, které je *konstantní* Pokud je *monotónní* a pokud je doba mezi počtu taktů konstantní.
-
-V této implementaci `system_clock` je totožná s `high_resolution_clock`.
 
 ## <a name="members"></a>Členové
 

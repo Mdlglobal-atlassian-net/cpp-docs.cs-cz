@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parametry
 
 *termstat*<br/>
-Ukazatel na vyrovnávací paměť, kde bude uložena kód výsledku určený proces, nebo hodnota NULL.
+Ukazatel na vyrovnávací paměť, kde bude uložena kód výsledku určený proces, nebo **NULL**.
 
 *procHandle*<br/>
 Proces pro čekání na popisovač (který je proces, který má ukončit před **_cwait –** může vrátit).
@@ -81,7 +81,7 @@ Další informace o těchto a dalších návratové kódy najdete v tématu [err
 
 **_Cwait –** funkce čeká na ukončení ID procesu zadaný procesu od *procHandle*. Hodnota *procHandle* předá do **_cwait –** by měla být hodnota, kterou vrátí volání [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkce, která vytvořila určený proces. Pokud ID procesu ukončí před **_cwait –** je volána, **_cwait –** vrátí okamžitě. **_cwait –** umožňuje žádné procesem čekat na jiný známé proces, pro který platný popisovač (*procHandle*) existuje.
 
-*termstat* body k uložení návratový kód určený proces vyrovnávací paměti. Hodnota *termstat* označuje, zda zadaný proces ukončen normálně voláním Windows [exitprocess –](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) rozhraní API. **Exitprocess –** je volána interně, pokud zadaný procesu volání **ukončete** nebo **_exit –**, vrátí z **hlavní**, nebo dosáhne konce **hlavní** . Další informace o hodnotě, který se předává zpátky pomocí *termstat*, najdete v části [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Pokud **_cwait –** nazývá pomocí hodnoty NULL pro *termstat*, není uložen návratový kód určený proces.
+*termstat* body k uložení návratový kód určený proces vyrovnávací paměti. Hodnota *termstat* označuje, zda zadaný proces ukončen normálně voláním Windows [exitprocess –](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) rozhraní API. **Exitprocess –** je volána interně, pokud zadaný procesu volání **ukončete** nebo **_exit –**, vrátí z **hlavní**, nebo dosáhne konce **hlavní** . Další informace o hodnotě, který se předává zpátky pomocí *termstat*, najdete v části [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Pokud **_cwait –** nazývá pomocí **NULL** hodnota *termstat*, není uložen návratový kód určený proces.
 
 *Akce* parametr je ignorován v operačního systému Windows, protože vztahů nadřazenosti a podřízenosti nejsou implementované v těchto prostředích.
 

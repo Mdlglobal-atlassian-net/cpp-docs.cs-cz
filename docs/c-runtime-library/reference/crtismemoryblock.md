@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Ukazatel na číslo řádku ve zdrojovém souboru nebo **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtismemoryblock –** funkce ověřuje, zda blok zadaná paměťová se nachází v rámci aplikace lokální haldy a že má identifikátor platný blok typem. Tato funkce slouží také k získání objektu přidělení pořadové číslo a číslo zdrojového souboru název nebo čáry kde původně požádal bloku přidělení paměti. Probíhá předání hodnoty NULL *requestNumber*, *filename*, nebo *linenumber* parametry příčiny **_crtismemoryblock –** nastavení Tyto parametry na hodnoty v bloku paměti ladění záhlaví, pokud najde bloku v haldě místní. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtismemoryblock –** jsou odebrány při předběžném zpracování.
+**_Crtismemoryblock –** funkce ověřuje, zda blok zadaná paměťová se nachází v rámci aplikace lokální haldy a že má identifikátor platný blok typem. Tato funkce slouží také k získání objektu přidělení pořadové číslo a číslo zdrojového souboru název nebo čáry kde původně požádal bloku přidělení paměti. Předávání jinou hodnotu než**NULL** hodnoty *requestNumber*, *filename*, nebo *linenumber* parametry příčiny **_ Crtismemoryblock –** pro tyto parametry nastavit na hodnoty v hlavičce ladění bloku paměti, pokud najde bloku v haldě místní. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtismemoryblock –** jsou odebrány při předběžném zpracování.
 
 Pokud **_crtismemoryblock –** nezdaří, vrátí **FALSE** a výstupní parametry se inicializovat výchozí hodnoty: *requestNumber* a **lineNumber**  jsou nastavena na hodnotu 0 a *filename* je nastaven na **NULL**.
 

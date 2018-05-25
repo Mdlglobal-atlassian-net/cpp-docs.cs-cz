@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>Funkce zabezpečení v CRT
 Mnoho staré funkcí CRT má bezpečnější, novější verze. Pokud existuje zabezpečené funkce, na méně bezpečné, starší verzi je označen jako zastaralý a obsahuje novou verzi `_s` přípony ("zabezpečení").  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. Parametry předané do funkcí CRT se ověřují v obou zabezpečené funkce a v předchozích verzích funkce. Tyto ověření patří:  
   
-    -   Kontrola `NULL` hodnoty předané funkcím.  
+    -   Kontrola **NULL** hodnoty předané funkcím.  
   
     -   Kontrola výčtové hodnoty pro platnosti.  
   
@@ -82,7 +82,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Sized Buffers`. Zabezpečení funkce vyžadují, aby velikost vyrovnávací paměti předat všechny funkce, která zapisuje do vyrovnávací paměti. Bezpečné verze ověřit, zda vyrovnávací paměť dostatečně velké na to před zápisem, pomáhá zabránit chybám přetečení nebezpečná vyrovnávací paměti, které by se mohl spuštění škodlivého kódu. Tyto funkce obvykle vrátit `errno` typ kód chyby a vyvolat obslužnou rutinu neplatný parametr, pokud je příliš malá velikost vyrovnávací paměti. Funkce, které čtou ze vstupní vyrovnávací paměti, jako například `gets`, mají zabezpečené verze, které vyžadují, abyste zadat maximální velikost.  
   
--   `Null termination`. Některé funkce, které mají levém potenciálně bez řetězce ukončené zabezpečené verze, které zajišťují, že řetězce mají správně null byla ukončena.  
+-   `Null termination`. Některé funkce, které zbývajících potenciálně bez řetězce ukončené mít zabezpečené verze, které zajišťují, že řetězce jsou správně ukončené hodnotou null.  
   
 -   `Enhanced error reporting`. Zabezpečení funkce návratové kódy chyb s další informace o chybě, než bylo k dispozici s dříve existující funkce. Zabezpečení funkce a mnoho dříve existující funkce nastaví `errno` a často vrátit `errno` code typ je také možné, zajistit lepší zasílání zpráv o chybách.  
   

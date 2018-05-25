@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ Ukazatel na **souboru** struktura
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; **Einval –** Pokud *datového proudu* má hodnotu NULL.
+Nula v případě úspěšného; **Einval –** Pokud *datového proudu* je **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
 **Clearerr_s –** funkce resetuje označení chyb a end souborového indikátor pro *datového proudu*. Chyba indikátory nejsou vymazána automaticky; Po nastavení označení chyb pro zadaného datového proudu nadále vrátí hodnotu chyby, dokud operace u tohoto datového proudu **clearerr_s –**, **clearerr –**, [fseek](fseek-fseeki64.md), **fsetpos –**, nebo [rewind](rewind.md) je volána.
 
-Pokud *datového proudu* má hodnotu NULL, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Pokud *datového proudu* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
 
 ## <a name="requirements"></a>Požadavky
 

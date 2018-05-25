@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Na platformách ARM **_control87 –** a **_controlfp –** funkce se týkají FPSCR registrace. Na x64 architektury, pouze řídicího slova SSE2, která je uložená v MXCSR registrace vliv. Na x86 platforem, **_control87 –** a **_controlfp –** ovlivnit slova ovládacího prvku x87 a SSE2, pokud je k dispozici. Funkce **__control87_2 –** umožňuje x87 a SSE2 s plovoucí desetinnou čárkou jednotky pro řízení společně nebo samostatně. Pokud chcete mít vliv na obou jednotky, předejte adresy dvou celých čísel na **x86_cw** a **sse2_cw**. Pokud chcete mít vliv na jednu jednotku, předat adresu pro tento parametr, ale předat 0 (nula) pro druhý. Pokud pro jeden z těchto parametrů je předán 0, funkce nemá žádný vliv na této jednotce, s plovoucí desetinnou čárkou. Tato funkce může být užitečné v situacích, kde součástí s plovoucí desetinnou čárkou jednotka používá x87 kódu a další část kód používá SSE2 jednotka s plovoucí desetinnou čárkou. Pokud používáte **__control87_2 –** v jedné části programu a nastavit různé hodnoty pro ovládací prvek s plovoucí desetinnou čárkou slova a pak použijte **_control87 –** nebo **_controlfp –** k dalšímu manipulace s řídicího slova, pak **_control87 –** a **_controlfp –** nemusí být schopen vrátí jeden ovládací prvek slovo představující stav obou jednotek s plovoucí desetinnou čárkou. V takovém případě nastavte tyto funkce **EM_AMBIGUOUS** příznak ve vrácené celočíselnou hodnotu indikující, že existuje nekonzistence mezi slovy dvě řízení. Toto je upozornění, že vrácený řídicího slova nemusí přesně vyjadřovat stav obou slova plovoucí desetinné čárky ovládacího prvku.
+Na platformách ARM **_control87 –** a **_controlfp –** funkce se týkají FPSCR registrace. Na x64 architektury, pouze řídicího slova SSE2, která je uložená v MXCSR registrace vliv. Na x86 platforem, **_control87 –** a **_controlfp –** ovlivnit slova ovládacího prvku x87 a SSE2, pokud je k dispozici. Funkce **__control87_2 –** umožňuje x87 a SSE2 s plovoucí desetinnou čárkou jednotky pro řízení společně nebo samostatně. Pokud chcete mít vliv na obou jednotky, předejte adresy dvou celých čísel na **x86_cw** a **sse2_cw**. Pokud chcete mít vliv na jednu jednotku, předat adresu pro tento parametr, ale předat 0 (**NULL**) pro druhý. Pokud pro jeden z těchto parametrů je předán 0, funkce nemá žádný vliv na této jednotce, s plovoucí desetinnou čárkou. Tato funkce může být užitečné v situacích, kde součástí s plovoucí desetinnou čárkou jednotka používá x87 kódu a další část kód používá SSE2 jednotka s plovoucí desetinnou čárkou. Pokud používáte **__control87_2 –** v jedné části programu a nastavit různé hodnoty pro ovládací prvek s plovoucí desetinnou čárkou slova a pak použijte **_control87 –** nebo **_controlfp –** k dalšímu manipulace s řídicího slova, pak **_control87 –** a **_controlfp –** nemusí být schopen vrátí jeden ovládací prvek slovo představující stav obou jednotek s plovoucí desetinnou čárkou. V takovém případě nastavte tyto funkce **EM_AMBIGUOUS** příznak ve vrácené celočíselnou hodnotu indikující, že existuje nekonzistence mezi slovy dvě řízení. Toto je upozornění, že vrácený řídicího slova nemusí přesně vyjadřovat stav obou slova plovoucí desetinné čárky ovládacího prvku.
 
 Na ARM a x64 architektury, změna režimu infinity nebo s plovoucí desetinnou čárkou přesnost nepodporuje. Pokud se používá maska přesnost ovládací prvek na x64 platformy, funkce vyvolá kontrolní výrazy a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
 

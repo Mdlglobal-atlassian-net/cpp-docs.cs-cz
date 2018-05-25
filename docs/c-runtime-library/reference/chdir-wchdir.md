@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -70,7 +70,7 @@ Cesta nové pracovní adresář.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátit hodnotu 0, pokud bylo úspěšné. Vrácená hodnota -1 označuje selhání. Pokud zadaná cesta nebyla nalezena, **errno** je nastaven na **enoent –**. Pokud *adresář* má hodnotu NULL, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu -1.
+Tyto funkce vrátit hodnotu 0, pokud bylo úspěšné. Vrácená hodnota -1 označuje selhání. Pokud zadaná cesta nebyla nalezena, **errno** je nastaven na **enoent –**. Pokud *adresář* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu -1.
 
 ## <a name="remarks"></a>Poznámky
 

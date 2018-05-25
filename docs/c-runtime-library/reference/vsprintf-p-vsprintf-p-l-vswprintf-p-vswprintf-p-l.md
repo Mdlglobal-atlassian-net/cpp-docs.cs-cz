@@ -50,11 +50,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f04031bd0d21ab0a4520820d433016497072e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -123,7 +123,7 @@ Tyto funkce se liší od **vsprintf_s –** a **vswprintf_s –** pouze v tomto 
 
 Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
 
-Pokud *vyrovnávací paměti* nebo *formát* parametry jsou ukazatele na hodnotu NULL, pokud je počet nula nebo pokud řetězec formátu obsahuje neplatné znaky formátování, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+Pokud *vyrovnávací paměti* nebo *formátu* parametry jsou **NULL** ukazatele, pokud je počet nula, nebo pokud řetězec formátu obsahuje neplatné formátování znaků, neplatný parametr vyvolat obslužnou rutinu, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 

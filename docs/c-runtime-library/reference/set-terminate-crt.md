@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017ea9d96cef9065ff82e7f3428e725b816c9319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -56,7 +56,7 @@ Ukazatel na funkci ukončit, která můžete zapsat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na funkci předchozí registrovaných **set_terminate –** , aby předchozí funkce můžete později obnovit. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu může použít k obnovení výchozího chování; Tato hodnota může mít hodnotu NULL.
+Vrací ukazatel na funkci předchozí registrovaných **set_terminate –** , aby předchozí funkce můžete později obnovit. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu může použít k obnovení výchozího chování; Tato hodnota může být **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 

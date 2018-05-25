@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3309aee316c3b067c9bd0ade4e1064289cb4ddaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a597ad1a72f903d08e848727045e05bf014879b1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gets-getws"></a>gets, _getws
 Získá řádek z `stdin` datového proudu. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [gets_s –, _getws_s –](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -76,7 +76,7 @@ wchar_t *_getws(
  Umístění úložiště pro vstupní řetězec.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Její argument vrací, pokud bylo úspěšné. A `NULL` ukazatel označuje podmínku chyby nebo end souboru. Použití [ferror –](../c-runtime-library/reference/ferror.md) nebo [feof –](../c-runtime-library/reference/feof.md) k určení, které z nich došlo k chybě. Pokud `buffer` je `NULL`, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí `NULL` a nastavte errno na `EINVAL`.  
+ Její argument vrací, pokud bylo úspěšné. A **NULL** ukazatel označuje podmínku chyby nebo end souboru. Použití [ferror –](../c-runtime-library/reference/ferror.md) nebo [feof –](../c-runtime-library/reference/feof.md) k určení, které z nich došlo k chybě. Pokud `buffer` je **NULL**, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **NULL** a nastavte errno na `EINVAL`.  
   
 ## <a name="remarks"></a>Poznámky  
  `gets` Funkce přečte řádek z standardní vstupní proud `stdin` a uloží jej do `buffer`. Tento řádek představuje všechny znaky do a včetně první znak nového řádku (\n). `gets` potom nahradí znak nového řádku znak hodnoty null (\0) před vrácením řádku. Naopak `fgets` funkce uchovává znak nového řádku. `_getws` široká charakterová verze `gets`; její argument a návratové hodnoty jsou široká charakterová řetězce.  

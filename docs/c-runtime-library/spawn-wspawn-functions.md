@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn – funkce
 Každý z `_spawn` funkce vytvoří a spustí nový proces:  
@@ -137,12 +137,12 @@ Každý z `_spawn` funkce vytvoří a spustí nový proces:
   
  Argument ukazatele můžete předat jako samostatné argumenty (v `_spawnl`, `_spawnle`, `_spawnlp`, a `_spawnlpe`) nebo jako pole ukazatele (v `_spawnv`, `_spawnve`, `_spawnvp`, a `_spawnvpe`). Musíte zadat alespoň jeden argument, `arg0` nebo `argv`[0], k proces spuštěný. Podle konvence tento argument je název aplikace, jako by ji zadejte na příkazovém řádku. Jinou hodnotu nevytváří k chybě.  
   
- `_spawnl`, `_spawnle`, `_spawnlp`, A `_spawnlpe` volání jsou obvykle používány v případech, kde je předem známo počet argumentů. `arg0` Argument je obvykle ukazatel na `cmdname`. Argumenty `arg1` prostřednictvím `argn` jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Následující `argn`, musí existovat `NULL` ukazatel na konec seznamu argumentů.  
+ `_spawnl`, `_spawnle`, `_spawnlp`, A `_spawnlpe` volání jsou obvykle používány v případech, kde je předem známo počet argumentů. `arg0` Argument je obvykle ukazatel na `cmdname`. Argumenty `arg1` prostřednictvím `argn` jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Následující `argn`, musí existovat **NULL** ukazatel na konec seznamu argumentů.  
   
- `_spawnv`, `_spawnve`, `_spawnvp`, A `_spawnvpe` volání jsou užitečné, když je proměnný počet argumentů pro nový proces. Ukazatelé na argumenty jsou předány jako pole, `argv` *.* Argument `argv`[0] je obvykle ukazatel na cestu v reálném režimu nebo název programu v chráněném režimu, a `argv`[1] prostřednictvím `argv`[`n`] jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Argument `argv`[`n` + 1] musí být `NULL` ukazatel na konec seznamu argumentů.  
+ `_spawnv`, `_spawnve`, `_spawnvp`, A `_spawnvpe` volání jsou užitečné, když je proměnný počet argumentů pro nový proces. Ukazatelé na argumenty jsou předány jako pole, `argv` *.* Argument `argv`[0] je obvykle ukazatel na cestu v reálném režimu nebo název programu v chráněném režimu, a `argv`[1] prostřednictvím `argv`[`n`] jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Argument `argv`[`n` + 1] musí být **NULL** ukazatel na konec seznamu argumentů.  
   
 ## <a name="environment-of-the-spawned-process"></a>Prostředí proces spuštěný  
- Soubory, které jsou při otevření `_spawn` volání zůstaly otevřené v novém procesu. V `_spawnl`, `_spawnlp`, `_spawnv`, a `_spawnvp` volání, nový proces dědí prostředí volajícího procesu. Můžete použít `_spawnle`, `_spawnlpe`, `_spawnve`, a `_spawnvpe` volání změnit prostředí pro nový proces předávání seznam nastavení prostředí prostřednictvím `envp` argument. Argument `envp` je pole znak ukazatele každý prvek (s výjimkou poslední element), které odkazuje na řetězec ukončené hodnotou null definování proměnné prostředí. Takové řetězec obvykle má tento formulář `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je řetězcovou hodnotu, na kterou je nastavena tuto proměnnou. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední prvek pole `envp` by měl být `NULL`. Když `envp` sám o sobě představuje `NULL`, proces spuštěný dědí nastavení prostředí nadřazeného procesu.  
+ Soubory, které jsou při otevření `_spawn` volání zůstaly otevřené v novém procesu. V `_spawnl`, `_spawnlp`, `_spawnv`, a `_spawnvp` volání, nový proces dědí prostředí volajícího procesu. Můžete použít `_spawnle`, `_spawnlpe`, `_spawnve`, a `_spawnvpe` volání změnit prostředí pro nový proces předávání seznam nastavení prostředí prostřednictvím `envp` argument. Argument `envp` je pole znak ukazatele každý prvek (s výjimkou poslední element), které odkazuje na řetězec ukončené hodnotou null definování proměnné prostředí. Takové řetězec obvykle má tento formulář `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je řetězcovou hodnotu, na kterou je nastavena tuto proměnnou. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední elementu `envp` pole by měla být **NULL**. Když `envp` sám o sobě představuje **NULL**, proces spuštěný dědí nastavení prostředí nadřazeného procesu.  
   
  `_spawn` Funkce můžete předat všechny informace o otevřených souborů, včetně překladu režim, nový proces. Tyto informace je předán v reálném režimu prostřednictvím `C_FILE_INFO` položky v prostředí. Kód spuštění normálně zpracuje tuto položku a odstraní ji z prostředí. Ale pokud `_spawn` funkce vytvoří proces jiný C, tato položka zůstane v prostředí. Tisk v prostředí zobrazí grafiky znaků v řetězci definice pro tuto položku, protože informace o prostředí, je předaná binárního formátu v reálném režimu. By neměl mít žádný vliv na běžný provoz. V chráněném režimu informace o prostředí je předán v textové podobě a proto nejsou žádné grafické znaky.  
   

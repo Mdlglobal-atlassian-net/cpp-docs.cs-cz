@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +89,22 @@ Počáteční adresa rutiny, která zahájí provádění nové vlákno. Pro **_
 Velikost zásobníku pro nové vlákno, nebo 0.
 
 *seznam_argumentů*<br/>
-Seznam argumentů mají být předány nové vlákno, nebo hodnota NULL.
+Seznam argumentů, které mají být předány nové vlákno, nebo **NULL**.
 
 *Zabezpečení*<br/>
-Ukazatel na [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje, zda může být vrácená popisovač zděděn podřízené procesy. Pokud *zabezpečení* má hodnotu NULL, nemůže být zděděna popisovač. Musí být NULL pro systém Windows 95 aplikace.
+Ukazatel na [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje, zda může být vrácená popisovač zděděn podřízené procesy. Pokud *zabezpečení* je **NULL**, nemůže být zděděna popisovač. Musí být **NULL** pro systém Windows 95 aplikace.
 
 *initflag*<br/>
 Příznaky, které řídí počáteční stav nové vlákno. Nastavit *initflag* na 0, budou-li spustit okamžitě, nebo k **CREATE_SUSPENDED** vytvořit vlákno v pozastaveném stavu; použít [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) provést vlákno. Nastavit *initflag* k **STACK_SIZE_PARAM_IS_A_RESERVATION** příznak pro použití *stack_size* jako počáteční rezervovat velikost zásobníku v bajtech; Pokud je tento příznak není zadaný, *stack_size* Určuje velikost potvrzení.
 
 *thrdaddr*<br/>
-Odkazuje na 32-bit proměnné, která přijímá identifikátor přístup z více vláken. Pokud je hodnota NULL, se nepoužije.
+Odkazuje na 32-bit proměnné, která přijímá identifikátor přístup z více vláken. Pokud je **NULL**, se nepoužije.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Pokud bylo úspěšné, každá z těchto funkcí vrátí popisovač nově vytvořený vlákno; ale pokud nově vytvořený vlákno ukončí příliš rychle **_beginthread** nemusí vracet platný popisovač. (Viz popis v oddílu Poznámky.) Při chybě **_beginthread –** vrátí hodnotu-1 L a **errno** je nastaven na **eagain –** Pokud jsou moc velký počet vláken, na **einval –** Pokud je argumentem Neplatný nebo velikost zásobníku je nesprávný, nebo **eacces –** Pokud není dostatek prostředků (např. paměti). Při chybě **_beginthreadex** vrátí hodnotu 0, a **errno** a **_doserrno –** jsou nastavené.
 
-Pokud *start_address* má hodnotu NULL, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
+Pokud *start_address* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
 
 Další informace o těchto a dalších návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,7 +137,7 @@ Můžete volat [_endthread –](endthread-endthreadex.md) nebo **_endthreadex** 
 
 Operační systém zpracovává přidělení zásobníku při buď **_beginthread** nebo **_beginthreadex** nazývá; nemáte adresu zásobníku vlákno předat některé z těchto funkcí. Kromě toho *stack_size* argument může mít hodnotu 0, ve kterém případ operačního systému používá stejnou hodnotu jako zásobníku, která je zadána pro hlavní vlákno.
 
-*seznam_argumentů* je parametr mají být předány nově vytvořený vlákno. Obvykle je to adresa položky dat, jako je řetězec znaků. *seznam_argumentů* může mít hodnotu NULL, pokud není nutné ji, ale **_beginthread** a **_beginthreadex** musí být uvedeny některé hodnoty, které mají být předána do nové vlákno. Všechna vlákna budou ukončena, pokud žádný přístup z více vláken volání [abort](abort.md), **ukončete**, **_exit –**, nebo **exitprocess –**.
+*seznam_argumentů* je parametr mají být předány nově vytvořený vlákno. Obvykle je to adresa položky dat, jako je řetězec znaků. *seznam_argumentů* může být **NULL** Pokud jej není nutné, ale **_beginthread** a **_beginthreadex** musí být uvedeny některé hodnoty, které mají být předána do nové vlákno. Všechna vlákna budou ukončena, pokud žádný přístup z více vláken volání [abort](abort.md), **ukončete**, **_exit –**, nebo **exitprocess –**.
 
 Národní prostředí nové vlákno se inicializuje pomocí na proces globální aktuální národní prostředí údaje. Pokud je ve volání povoleno národní prostředí podle vláken [_configthreadlocale –](configthreadlocale.md) (globálně nebo pro nové vlákna), vlákno lze změnit pouze jeho národního prostředí nezávisle z jiných vláken voláním **setlocale** nebo **_wsetlocale**. Informace o národním prostředí v všechna vlákna, které nemají taky nastavit příznak národní prostředí podle vláken, stejně jako všechny nově vytvořené vláken může ovlivnit vláken, které nemají nastaven příznak národní prostředí podle vláken. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 

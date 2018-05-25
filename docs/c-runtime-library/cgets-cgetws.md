@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Získá řetězec znaků z konzoly. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_cgets_s –, _cgetws_s –](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  Umístění úložiště pro data.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- `_cgets` a `_cgetws` vrátit ukazatel na začátek řetězci `buffer[2]`. Pokud `buffer` je `NULL`, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, že budou vracet `NULL` a nastavte `errno` k `EINVAL`.  
+ `_cgets` a `_cgetws` vrátit ukazatel na začátek řetězci `buffer[2]`. Pokud `buffer` je **NULL**, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, že budou vracet **NULL** a nastavte `errno` k `EINVAL`.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto funkce číst řetězec znaků z konzoly a uložení řetězec a jeho délka v umístění, na kterou odkazuje `buffer`. `buffer` Parametr musí být ukazatel na pole znaků. První prvek pole, `buffer[0]`, musí obsahovat maximální délku (ve znacích) řetězec, který má být pro čtení. Pole musí obsahovat dostatečný počet elementů k uchování řetězec ukončující znak hodnoty null (\0) a 2 Další bajtů. Funkce přečte znaky, dokud znaků CR vrátit-odřádkování kombinaci (CR-LF) nebo zadaný počet znaků je pro čtení. Řetězec je uložen počínaje `buffer[2]`. Pokud funkce přečte znaky CR LF, ukládá znak hodnoty null ('\0'). Funkce pak uloží skutečná délka řetězce v druhý prvkem pole `buffer[1]`.  

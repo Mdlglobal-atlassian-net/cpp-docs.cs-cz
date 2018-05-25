@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen –, wcslen –, _mbslen –, _mbslen_l –, _mbstrlen –, _mbstrlen_l –
 
@@ -106,7 +106,7 @@ Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí počet znaků v *str*, s výjimkou terminálu **NULL**. Je vyhrazené žádnou návratovou hodnotu udávající chybu, s výjimkou **_mbstrlen –** a **_mbstrlen_l –**, které vrátí `((size_t)(-1))` Pokud řetězec obsahuje neplatný vícebajtových znaků.
+Každá z těchto funkcí vrátí počet znaků v *str*, s výjimkou terminálu hodnotu null. Je vyhrazené žádnou návratovou hodnotu udávající chybu, s výjimkou **_mbstrlen –** a **_mbstrlen_l –**, které vrátí `((size_t)(-1))` Pokud řetězec obsahuje neplatný vícebajtových znaků.
 
 ## <a name="remarks"></a>Poznámky
 

@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -116,7 +116,7 @@ Každá z těchto funkcí vrátí hodnotu, která určuje vztah *řetězec1* k *
 |0|*řetězec1* identické *řetězec2*|
 |> 0|*řetězec1* větší než *řetězec2*|
 
-Každá z těchto funkcí vrátí **_NLSCMPERROR** na chybu. Chcete-li použít **_NLSCMPERROR**, zahrnout buď řetězec. H nebo MBSTRING. H. **wcscoll –** může selhat, pokud buď *řetězec1* nebo *řetězec2* je NULL nebo obsahuje kódy široká charakterová mimo doménu pořadí řazení. Když dojde k chybě, **wcscoll –** může nastavit **errno** k **einval –**. Zkontrolujte chybu na volání **wcscoll –**, nastavte **errno** na hodnotu 0 a poté zkontrolujte **errno** po volání **wcscoll –**.
+Každá z těchto funkcí vrátí **_NLSCMPERROR** na chybu. Chcete-li použít **_NLSCMPERROR**, zahrnout buď řetězec. H nebo MBSTRING. H. **wcscoll –** může selhat, pokud buď *řetězec1* nebo *řetězec2* je **NULL** nebo obsahuje kódy široká charakterová mimo doménu pořadí řazení. Když dojde k chybě, **wcscoll –** může nastavit **errno** k **einval –**. Zkontrolujte chybu na volání **wcscoll –**, nastavte **errno** na hodnotu 0 a poté zkontrolujte **errno** po volání **wcscoll –**.
 
 ## <a name="remarks"></a>Poznámky
 

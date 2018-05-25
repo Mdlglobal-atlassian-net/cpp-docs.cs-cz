@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341ffb176a82845ec515e2ab2ff9a6d19b7773ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a6b987faa30439f0f374838fe7fcd4d942b8cc7
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -83,7 +83,7 @@ Tyto funkce v případě úspěchu vrátí popisovače souborů k vytvoření so
 |**EMFILE –**|Nejsou k dispozici žádné další popisovače souborů.|
 |**ENOENT –**|Zadaný soubor nebyl nalezen.|
 
-Pokud *filename* má hodnotu NULL, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
+Pokud *filename* je **NULL**, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
 
 Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -107,7 +107,7 @@ Pokud soubor Určuje *filename* neexistuje, nový soubor je vytvořen s nastaven
 
 Není-li oprávnění k zápisu, soubor je jen pro čtení. Všechny soubory budou vždy čitelný; není možné udělit oprávnění jen pro zápis. Režimy **_s_iwrite –** a **_s_iread –** | **_s_iwrite –** jsou pak ekvivalentní. Soubory otevřené pomocí **_creat –** jsou vždy otevřít v režimu kompatibility (viz [_sopen –](sopen-wsopen.md)) s **_sh_denyno –**.
 
-**_creat –** použije aktuální maska souboru oprávnění k *pmode* před nastavením oprávnění (viz [_umask –](umask.md)). **_creat –** je k dispozici kvůli kompatibilitě s předchozí knihovny. Volání **_Otevřít** s **_o_creat –** a **_o_trunc –** v *oflag* parametr je ekvivalentní **_creat –**a je vhodnější pro nový kód.
+**_creat –** použije aktuální maska souboru oprávnění k *pmode* před nastavením oprávnění (viz [_umask –](umask.md)). **_creat –** je k dispozici kvůli kompatibilitě s předchozí knihovny. Volání **_Otevřít** s **_o_creat –** a **_o_trunc –** v *oflag* parametr je ekvivalentní **_creat –** a je vhodnější pro nový kód.
 
 ## <a name="requirements"></a>Požadavky
 
