@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02215cd585bf1644b5b01f779dd8ff46322c9181
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705397"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE a nástrojů pro vývoj Visual C++
 
@@ -28,7 +29,7 @@ Kromě sdílené nástrojů v prostředí Visual Studio IDE MSVC má několik n�
 
 ## <a name="creating-a-solution-and-projects"></a>Vytváření řešení a projekty
 
-A *projektu* je v podstatě sadu soubory zdrojového kódu a prostředkům, například bitové kopie nebo datové soubory, které jsou součástí spustitelného souboru. Visual Studio 2017 může podporovat všechny systém sestavení nebo vlastní sestavovací nástroje, které chcete použít s plnou podporu pro technologii Intellisense, procházení a ladění:
+A *projektu* je v podstatě sadu soubory zdrojového kódu a prostředkům, například bitové kopie nebo datové soubory, které jsou součástí spustitelného souboru. Visual Studio 2017 může podporovat všechny systém sestavení nebo vlastní sestavovací nástroje, které chcete použít s plnou podporu pro technologii IntelliSense, procházení a ladění:
 
 - MSBuild je systém nativní sestavení pro Visual Studio a často je nejlepší volbou pro aplikace pro univerzální platformu Windows (UWP) nebo starší verze aplikací klasické pracovní plochy Windows, které používají MFC nebo ATL. Další informace o projekty využívající MSBuild C++ najdete v tématu [vytváření a správa projekty využívající MSBuild](creating-and-managing-visual-cpp-projects.md).
 - CMake je systém, který je integrován do prostředí Visual Studio IDE, když instalujete vývoj aplikací C++ zatížení sestavení napříč platformami. Další informace najdete v tématu [CMake projektů v jazyce Visual C++](cmake-tools-for-visual-cpp.md).
@@ -58,11 +59,11 @@ Po vytvoření projektu, všechny soubory projektu, se zobrazují v **Průzkumn�
 
 ### <a name="intellisense"></a>IntelliSense
 
-Editor kódu také podporuje několik funkcí, které společně se označují jako Intellisense. Můžete najeďte myší na metodu a najdete některé základní dokumentaci pro ni. Jakmile zadáte název proměnné třídy a. nebo ->, zobrazí se seznam členů instance této třídy. Pokud zadáte název třídy a pak::, zobrazí se seznam statické členy. Když začnete psát název třída nebo metoda, bude editoru kódu nabízí návrhy pro dokončení příkazu. Další informace najdete v tématu [pomocí IntelliSense](/visualstudio/ide/using-intellisense).
+Editor kódu také podporuje několik funkcí, které společně se označují jako IntelliSense. Můžete najeďte myší na metodu a najdete některé základní dokumentaci pro ni. Jakmile zadáte název proměnné třídy a. nebo ->, zobrazí se seznam členů instance této třídy. Pokud zadáte název třídy a pak::, zobrazí se seznam statické členy. Když začnete psát název třída nebo metoda, bude editoru kódu nabízí návrhy pro dokončení příkazu. Další informace najdete v tématu [pomocí IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="code-snippets"></a>Fragmenty kódu
 
-Intellisense – fragmenty kódu můžete použít ke generování běžně používané nebo složitý kód vytvoří s klávesu zástupce. Další informace najdete v tématu [fragmenty kódu](/visualstudio/ide/code-snippets).
+IntelliSense – fragmenty kódu můžete použít ke generování běžně používané nebo složitý kód vytvoří s klávesu zástupce. Další informace najdete v tématu [fragmenty kódu](/visualstudio/ide/code-snippets).
 
 ## <a name="navigating-code"></a>Navigace v kódu
 

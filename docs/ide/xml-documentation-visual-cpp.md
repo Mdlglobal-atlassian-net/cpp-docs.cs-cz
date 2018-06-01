@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d763a62edc2f21d8a7669e409c164906c440f1d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705631"
 ---
 # <a name="xml-documentation-visual-c"></a>XML dokumentace (Visual C++)
 V jazyce Visual C++ můžete přidat komentář ke zdrojovému kódu, který bude zpracován do souboru .xml. Tento soubor pak může být vstup proces, který vytvoří dokument pro třídy v kódu.  
   
- V souboru kódu Visual C++ dokumentační komentáře XML musí být umístěn přímo před definici metody nebo typu. Komentáře můžete použít k naplnění dat tip Intellisense QuickInfo v následujících scénářích:  
+ V souboru kódu Visual C++ dokumentační komentáře XML musí být umístěn přímo před definici metody nebo typu. Komentáře můžete použít k naplnění dat tip IntelliSense QuickInfo v následujících scénářích:  
   
 1.  Pokud je kód kompilována jako součást prostředí Windows Runtime s přidružený soubor .winmd  
   

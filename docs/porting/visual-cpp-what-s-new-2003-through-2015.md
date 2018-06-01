@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705602"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 až 2015
 
@@ -1936,7 +1937,7 @@ Kompilátor má nejnovější změny v této verzi.
 - nativní ' 64bitová verze a mezi kompilátory.
 - / analyze (Analýza kódu Enterprise) – možnost kompilátoru byla přidána.
 - / bigobj – možnost kompilátoru byla přidána.
-- / CLR: pure, / CLR: safe a /clr:oldSyntax byly přidány. (Později nepoužívané ve Visual Studiu 2015.)
+- / CLR: pure, / CLR: safe a /clr:oldSyntax byly přidány. (Později nepoužívané v sadě Visual Studio 2015 a odebrat Visual Studio 2017.)
 - Možnosti kompilátoru zastaralé: v této verzi; jsou zastaralé mnoho – možnosti kompilátoru Další informace najdete v části – možnosti kompilátoru zastaralé.
 - Dvojitý převod adres v/CLR kódu se snižuje; Další informace najdete v části dvojitý převod adres (C++).
 - /EH (Model zpracování výjimek) nebo /EHs už umožňuje zachytit výjimku, která se vyvolá s něco jiného než throw; Použijte/EHa.

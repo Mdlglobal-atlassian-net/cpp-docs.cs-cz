@@ -12,22 +12,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09da159d982c0a286af36c9345299656772d1b50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a280d4dfe19d4f8c31e282a8138fc41152f9786a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704916"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Příručky pro programování výrobce procesoru
 Tento článek obsahuje odkazy na weby, které mohou obsahovat programovací informace o procesorů, které nejsou vyrobila, za účelem prodeje nebo podporovaný společností Microsoft. Microsoft není vlastníte nebo ovládáte weby nebo obsah na ně.  
   
 ## <a name="processor-manufacturer-websites"></a>Weby výrobce procesoru  
   
--   [Amd64 Instrukce sadu referenční příručky](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
-  
--   [Intel příručky pro vývojáře softwaru architekturami 64 a IA-32](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
-  
--   [Intel Advanced Vector rozšíření (AVX)](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
+- [Amd64 Instrukce sadu referenční příručky](https://developer.amd.com/resources/developer-guides-manuals/)  
+
+- [Intel příručky pro vývojáře softwaru architekturami 64 a IA-32](https://software.intel.com/en-us/documentation)  
+
+- [Intel Advanced Vector rozšíření (AVX)](https://software.intel.com/en-us/articles/introduction-to-intel-advanced-vector-extensions)  
   
 ## <a name="remarks"></a>Poznámky  
  Ani [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ani programu Microsoft Macro Assembler podporují všechny procesory.  

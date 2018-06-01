@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 000428ce3975dab108387ddb598bddf4a89fcfdd
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 977fc221a5a940e2446dbf0ede8445680218dc73
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705615"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Psaní a refaktoring kódu (C++)
 
 Editor kódu Visual C++ a IDE nabízí mnoho kódování pomůcky. Některé jsou jedinečné pro C++ a některé jsou v podstatě, stejné pro všechny jazyky, Visual Studio. Další informace o sdílené funkce, najdete v části [psaní kódu v editoru kódu a textovém editoru](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Možnosti pro povolení a konfigurace funkce specifické pro C++ jsou umístěny v **nástroje &#124; možnosti &#124; textového editoru &#124; C/C++**. Po výběru možnosti, kterou chcete nastavit, můžete získat další pomoc stisknutím **F1** dialogové okno když je aktivní. Pro obecné kód možnosti formátování, zadejte `Editor C++` do **QuickLaunch**.
 
-Povolenými experimentálními funkcemi, které mohou nebo nemusí být zahrnuty v budoucí verzi sady Visual Studio, jsou součástí [experimentální C++ textového editoru](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) dialogové okno. V aplikaci Visual Studio 2017 můžete povolit **prediktivní Intellisense** v tomto dialogu.
+Povolenými experimentálními funkcemi, které mohou nebo nemusí být zahrnuty v budoucí verzi sady Visual Studio, jsou součástí [experimentální C++ textového editoru](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) dialogové okno. V aplikaci Visual Studio 2017 můžete povolit **prediktivní IntelliSense** v tomto dialogu.
 
 ## <a name="adding-new-files"></a>Přidání nových souborů
 
@@ -42,7 +43,7 @@ IntelliSense je název pro sadu funkcí, které poskytují vložené informace o
 
 ![C&#43; &#43; člen seznamu rozevíracího seznamu](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
 
-Úplné informace najdete v části [Visual C++ Intellisense](/visualstudio/ide/visual-cpp-intellisense).
+Úplné informace najdete v části [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense).
 
 ## <a name="insert-snippets"></a>Vložit fragmenty kódu
 

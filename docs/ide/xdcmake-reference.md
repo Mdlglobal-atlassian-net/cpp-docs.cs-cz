@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33333902"
 ---
 # <a name="xdcmake-reference"></a>Referenční dokumentace nástroje XDCMake
 xdcmake.exe je program, který se zkompiluje soubory do souboru .xml. Projektový soubor je vytvoří – kompilátor Visual C++ pro každého souboru se zdrojovým kódem, když zdrojový kód je kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) a když souboru se zdrojovým kódem obsahuje označené značky XML – dokumentační komentáře.  

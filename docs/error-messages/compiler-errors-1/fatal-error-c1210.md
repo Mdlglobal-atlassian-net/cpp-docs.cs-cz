@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1b970454af8ab692aea949d437e4c1cce4e0cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704981"
 ---
 # <a name="fatal-error-c1210"></a>Závažná chyba C1210
-/ CLR: pure a verze modulu runtime nainstalován nepodporuje/CLR: safe  
-  
- **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
-  
- C1210 nastane, když máte kompilátoru pro aktuální verzi, ale CLR z předchozí verze.  
-  
- Některé funkce kompilátoru nemusí fungovat na předchozí verzi čas spuštění.  
-  
- Chcete-li vyřešit nainstalovat C1210 běžné verzi modulu runtime jazyka, která je určena pro použití s vaší kompilátoru.
+
+> / CLR: pure a verze modulu runtime nainstalován nepodporuje/CLR: safe
+
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+
+C1210 nastane, když máte kompilátoru pro aktuální verzi, ale CLR z předchozí verze.
+
+Některé funkce kompilátoru nemusí fungovat na předchozí verzi čas spuštění.
+
+Chcete-li vyřešit nainstalovat C1210 běžné verzi modulu runtime jazyka, která je určena pro použití s vaší kompilátoru.

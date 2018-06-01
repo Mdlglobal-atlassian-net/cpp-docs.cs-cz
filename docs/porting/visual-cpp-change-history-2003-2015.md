@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705683"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie 2003 2015 změn Visual C++
 
@@ -92,7 +93,7 @@ Při upgradu na novou verzi sady Visual Studio se můžete setkat, kompilace a/n
   
 -   **nové a odstranit** v předchozích verzích knihovny definované implementací new – operátor a odstranění funkce byly exportovány z modulu runtime knihovny DLL (například msvcr120.dll). Tyto funkce operátor jsou nyní vždy staticky propojené do vaší binární soubory, i když pomocí běhové knihovny DLL.  
   
-     Toto není narušující změně pro smíšený nebo nativní kód (/ clr), ale pro zkompilovaný kód jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), to může způsobit selhání kompilace kódu. Pokud při kompilaci kódu jako/CLR: pure, budete muset přidat #include \<nové > nebo #include \<new.h > obejít sestavení chyb v důsledku této změny. Všimněte si, že/CLR: pure je zastaralé v sadě Visual Studio 2015 a v budoucích verzích může být odstraněna. Kód, který musí být "čistý" musí být přesně do jazyka C#.  
+     Toto není narušující změně pro smíšený nebo nativní kód (/ clr), ale pro zkompilovaný kód jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), to může způsobit selhání kompilace kódu. Pokud při kompilaci kódu jako/CLR: pure, budete muset přidat #include \<nové > nebo #include \<new.h > obejít sestavení chyb v důsledku této změny. Všimněte si, že/CLR: pure je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017. Kód, který musí být "čistý" musí být přesně do jazyka C#.  
   
 #### <a name="processh"></a>\<Process.h >  
   

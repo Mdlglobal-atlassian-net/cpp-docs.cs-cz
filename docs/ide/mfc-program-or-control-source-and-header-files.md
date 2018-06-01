@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340226"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček
 Následující soubory se vytvoří při vytváření projektu knihovny MFC v sadě Visual Studio, v závislosti na možnosti, kterou jste vybrali pro projekt, který vytvoříte. Například projekt obsahuje *Projname*dlg.cpp a *Projname*dlg.h soubory pouze v případě, že vytvoříte třídu nebo na základě dialogovém okně projekt.  

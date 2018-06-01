@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33325114"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 \<Para > Značka je pro použití uvnitř značky, jako například [ \<souhrnné >](../ide/summary-visual-cpp.md), [ \<Poznámky >](../ide/remarks-visual-cpp.md), nebo [ \<vrátí >](../ide/returns-visual-cpp.md)a umožňuje přidat struktura na text.  

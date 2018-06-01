@@ -104,7 +104,6 @@
 #### [Seznamy inicializátorů](initializer-lists.md)
 #### [Zápis přetypování a úvod do operace safe_cast<>](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [Čistý a ověřitelný kód (C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
-### [Smíšené, čisté a ověřitelné porovnání funkcí (C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
 ### [Postupy: Vytvoření ověřitelných projektů jazyka C++ (C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [Postupy: Přechod na /clr:safe (C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [Použití ověřitelných sestavení s SQL Serverem (C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)

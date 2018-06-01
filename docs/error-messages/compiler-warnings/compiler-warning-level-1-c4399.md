@@ -16,24 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39f4919dd736e4bf2e6230fe68ea69c2b14766e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703717"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>C4399 kompilátoru upozornění (úroveň 1)
-'symbol': symbol na proces by neměl být označené jako deklarace __declspec(dllimport), když kompilujete s/clr: pure  
-  
- **/CLR: pure** – možnost kompilátoru je zastaralá ve Visual Studiu 2015.  
-  
- Data z nativní bitové kopie nebo bitové kopie pomocí nativní a konstrukce CLR nelze importovat do čisté bitové kopii. Toto upozornění vyřešíte kompilovat s **/CLR** (není **/CLR: pure**) nebo odstranění `__declspec(dllimport)`.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C4399.  
-  
-```  
-// C4399.cpp  
-// compile with: /clr:pure /doc /W1 /c  
-__declspec(dllimport) __declspec(process) extern const int i;   // C4399  
+
+> '*symbol*': symbol na proces by neměl být označené jako deklarace __declspec(dllimport), když kompilujete s/clr: pure
+
+## <a name="remarks"></a>Poznámky
+
+**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+
+Data z nativní bitové kopie nebo bitové kopie pomocí nativní a konstrukce CLR nelze importovat do čisté bitové kopii. Toto upozornění vyřešíte kompilovat s **/CLR** (není **/CLR: pure**) nebo odstranění `__declspec(dllimport)`.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C4399.
+
+```cpp
+// C4399.cpp
+// compile with: /clr:pure /doc /W1 /c
+__declspec(dllimport) __declspec(process) extern const int i;   // C4399
 ```
