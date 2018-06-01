@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33337347"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struktura souborů VCXPROJ a props
 
@@ -290,7 +291,7 @@ Následující fragment kódu XML je minimální rozložení souboru seznamu vla
 
 Chcete-li seznam vlastnosti, zkopírujte jeden ze souborů PROPS ve složce VCTargets a upravit pro vaše záměry. Pro Visual Studio 2017 Enterprise edition, je výchozí cesta VCTargets `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Práce s vlastnostmi projektu](working-with-project-properties.md)  
 [Soubory XML stránky vlastností](property-page-xml-files.md)  

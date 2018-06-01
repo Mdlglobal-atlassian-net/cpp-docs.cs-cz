@@ -15,10 +15,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33330294"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Příprava testovacího počítače ke spuštění ladicího spustitelného souboru
 Chcete-li připravit počítač na testování ladicí verze aplikace sestavené aplikací Visual C++, je zapotřebí nasadit ladicí verze knihoven DLL jazyka Visual C++, na kterých aplikace závisí. Chcete-li zjistit, které mají být nasazeny knihovny DLL, postupujte podle kroků v [Principy závislostí aplikace Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Ladicí verze knihoven DLL jazyka Visual C++ mají obvykle názvy končící písmenem „d“. Například ladicí verze knihovny msvcr100.dll má název msvcr100d.dll.  

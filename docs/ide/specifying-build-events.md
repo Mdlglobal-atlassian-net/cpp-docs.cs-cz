@@ -26,10 +26,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33334961"
 ---
 # <a name="specifying-build-events"></a>Určení událostí sestavení
 
@@ -61,7 +62,7 @@ Obecné informace o událostech sestavení najdete v tématu [kroky sestavení v
 
    - V **vyloučeno ze sestavení**, zadejte **Ano** Pokud nechcete, aby událost pro spuštění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Seznámení s kroky vlastního sestavení a s událostmi sestavení](../ide/understanding-custom-build-steps-and-build-events.md)  
 [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  

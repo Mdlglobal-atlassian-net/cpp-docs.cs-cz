@@ -22,10 +22,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33338780"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Principy závislostí v aplikacích Visual C++
 Chcete-li zjistit, které knihovny jazyka Visual C++ aplikace závisí na, můžete zobrazit vlastnosti projektu. (V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **vlastnosti** otevřete **stránky vlastností** dialogové okno.) Můžete použít také Prohlížeč závislostí (depends.exe), který vám poskytne komplexnější přehled o závislostech v projektu.  

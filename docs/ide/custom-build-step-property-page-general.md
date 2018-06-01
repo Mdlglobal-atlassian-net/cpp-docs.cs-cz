@@ -23,10 +23,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33325926"
 ---
 # <a name="custom-build-step-property-page-general"></a>Stránka vlastností vlastního kroku sestavení: Obecné
 Pro každou kombinaci konfigurace projektu a cílové platformy v projektu můžete zadat vlastní krok, který se má provést při sestavení projektu.  

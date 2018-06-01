@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704669"
 ---
 # <a name="platformarray-class"></a>Platform::Array – třída
 Představuje jednorozměrné, upravitelnými pole, které mohou být přijata a předán přes rozhraní binární aplikace (ABI).  
@@ -62,7 +63,7 @@ private ref class Array<TArg, 1> :
   
  Systém typů prostředí Windows Runtime nepodporuje koncept Vícenásobná pole a proto nemůžete předat IVector < Platform::Array\<T >> jako návratový parametr hodnotu nebo metoda. Chcete-li předat Vícenásobná pole nebo posloupnost pořadí napříč ABI, použijte `IVector<IVector<T>^>`.  
   
- Tato třída je definována v hlavičce vccorlib.h, která je automaticky součástí kompilátorem. Viditelné v technologii Intellisense, ale není v prohlížeči objektu je vzhledem k tomu, že se nejedná o veřejné typem definovaným v platform.winmd.  
+ Tato třída je definována v hlavičce vccorlib.h, která je automaticky součástí kompilátorem. Viditelné v technologii IntelliSense, ale není v prohlížeči objektu je vzhledem k tomu, že se nejedná o veřejné typem definovaným v platform.winmd.  
   
 ### <a name="requirements"></a>Požadavky  
  – Možnost kompilátoru: **/ZW**  

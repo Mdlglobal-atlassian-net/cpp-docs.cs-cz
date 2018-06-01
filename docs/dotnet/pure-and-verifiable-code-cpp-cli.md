@@ -28,22 +28,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 453bb40e94c1d345adbe22f8792b59d1e584499a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704825"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Čistý a ověřitelný kód (C++/CLI)
-Visual C++ v aplikaci Visual Studio 2017 programování rozhraní .NET podporuje vytváření smíšená sestavení pomocí [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. **/CLR: pure** a **CLR: safe** možnosti jsou zastaralé od verze sady Visual Studio 2015 a bude v budoucí verzi systému kompilátoru odebrána. Pokud musí být ověřitelný kód, pak doporučujeme portu jazyka C#.
-  
-## <a name="mixed-clr"></a>Smíšená (/ clr)  
- Smíšená sestavení (Kompilovat s **/CLR**), obsahuje obě nespravované a spravované části, což jim umožňuje používat funkce rozhraní .NET, ale stále obsahuje nativního kódu. To umožňuje aplikací a součástí aktualizovat bez nutnosti, že se celý projekt přepsaná použití funkcí rozhraní .NET. Pomocí Visual C++ kombinovat spravovaná a nativní kód tímto způsobem se nazývá zprostředkovatele komunikace C++. Další informace najdete v tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md).  
-  
-  
-Volání ze spravovaných sestavení do nativních knihoven DLL prostřednictvím P/Invoke bude kompilovat, ale může dojít k selhání za běhu v závislosti na nastavení zabezpečení.  
-  
-Existuje jedna situace kódování, která bude úspěšně zkompilována, ale povede k neověřitelnému sestavení: volání virtuální funkce instancí objektu pomocí operátoru pro rozlišení oboru.  Příklad: `MyObj -> A::VirtualFunction();`.  
-  
-## <a name="see-also"></a>Viz také  
- [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+# <a name="pure-and-verifiable-code-ccli"></a>Čistý a ověřitelný kód (C + +/ CLI)
+
+Visual C++ v aplikaci Visual Studio 2017 programování rozhraní .NET podporuje vytváření smíšená sestavení pomocí [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. **/CLR: pure** a **CLR: safe** možnosti jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017. Pokud váš kód musí být bezpečné nebo ověřitelný, pak doporučujeme portu jazyka C#.
+
+## <a name="mixed-clr"></a>Smíšená (/ clr)
+
+Smíšená sestavení (Kompilovat s **/CLR**), obsahuje obě nespravované a spravované části, což jim umožňuje používat funkce rozhraní .NET, ale stále obsahuje nativního kódu. To umožňuje aplikací a součástí aktualizovat bez nutnosti, že se celý projekt přepsaná použití funkcí rozhraní .NET. Pomocí Visual C++ kombinovat spravovaná a nativní kód tímto způsobem se nazývá zprostředkovatele komunikace C++. Další informace najdete v tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md).
+
+Volání ze spravovaných sestavení do nativních knihoven DLL prostřednictvím P/Invoke bude kompilovat, ale může dojít k selhání za běhu v závislosti na nastavení zabezpečení.
+
+Existuje jedna situace kódování, která bude úspěšně zkompilována, ale povede k neověřitelnému sestavení: volání virtuální funkce instancí objektu pomocí operátoru pro rozlišení oboru.  Příklad: `MyObj -> A::VirtualFunction();`.
+
+## <a name="see-also"></a>Viz také:
+
+- [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+

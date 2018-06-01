@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33328071"
 ---
 # <a name="midl-property-pages"></a>MIDL – stránky vlastností
 **MIDL** uzel obsahuje několik stránek vlastností. Chcete-li přistupovat k nim. Klikněte pravým tlačítkem na soubor .idl v **Průzkumníku řešení**.  

@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33339641"
 ---
 # <a name="property-page-xml-rule-files"></a>Soubory pravidlo XML stránky vlastností
 Soubory XML ve složce VCTargets jsou nakonfigurované na stránkách vlastností projektu v prostředí IDE. Přesnou cestu závisí na které edition(s) sady Visual Studio jsou nainstalované a jazyk produktu. Pro Visual Studio 2017 Enterprise Edition, v angličtině, cesta je `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Soubory XML popisují názvy pravidel, kategorie a jednotlivé vlastnosti, jejich datový typ, výchozí hodnoty, a způsob jejich zobrazení. Když nastavíte vlastnost v prostředí IDE, nová hodnota je uložena v souboru projektu.

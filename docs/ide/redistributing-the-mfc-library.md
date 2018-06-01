@@ -16,10 +16,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340395"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuce knihovny MFC
 Pokud jste dynamicky aplikace knihovny MFC, je třeba znovu distribuovat odpovídající MFC DLL. Například pokud aplikace MFC je integrovaný s použitím verze knihovny MFC, který se dodává s Visual Studiem 2015, je třeba znovu distribuovat mfc140.dll nebo mfc140u.dll, v závislosti na tom, jestli je vaše aplikace zkompilovaném pro úzké znaků nebo podpora kódování Unicode.  

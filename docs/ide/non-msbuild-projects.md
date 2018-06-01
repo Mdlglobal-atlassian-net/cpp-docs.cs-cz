@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33337282"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otevřete složku projektů v jazyce Visual C++
 Visual Studio 2017 zavádí funkci "Otevřete složku", která umožňuje otevřete složku zdrojových souborů a okamžitě psaní s podporou pro technologii IntelliSense, procházení, refaktoring, ladění a tak dále. Jsou načteny žádné soubory .sln nebo VCXPROJ; v případě potřeby můžete zadat vlastní úlohy a také sestavení a spuštění parametry prostřednictvím jednoduchého .json soubory. Používá technologii otevřít složku, Visual C++ teď podporuje pouze přijít kolekcí souborů, ale také prakticky jakékoli sestavení systému, včetně CMake, expertem, QMake (pro projekty RT), gyp, SCons, Gradle, Buck, zkontrolujte a další. 

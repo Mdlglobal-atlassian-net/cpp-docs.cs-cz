@@ -26,10 +26,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33335552"
 ---
 # <a name="specify-custom-build-tools"></a>Zadejte vlastní sestavovací nástroje
 
@@ -87,7 +88,7 @@ V **výstupy** vlastnost, zadejte následující:
 
 Při sestavování projektu systém sestavení porovná časová razítka parser.l a parser.c. Pokud je novější parser.l nebo parser.c neexistuje, spustí systém sestavení hodnotu **příkazového řádku** vlastnost aby parser.c aktuální. Vzhledem k tomu, že parser.c se taky přidala do projektu, systém sestavení pak zkompiluje parser.c.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  
 [Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md)  

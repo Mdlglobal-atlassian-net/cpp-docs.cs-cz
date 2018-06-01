@@ -1,6 +1,6 @@
 ---
 title: C4400 upozornění kompilátoru prostřednictvím C4599 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704682"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 upozornění kompilátoru prostřednictvím C4599
 
@@ -244,7 +245,7 @@ ms.lasthandoff: 05/04/2018
 |[C4485 kompilátoru upozornění (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'*override_function*': odpovídá základní metody třídy ref '*base_class_function*', ale není označen jako 'nové' nebo 'přepsání'; 'nové (a "virtuální") se předpokládá, že|
 |[Upozornění kompilátoru (úroveň 1) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)|'*funkce*': privátní virtuální metoda ref třídy nebo – hodnotová třída by měl být označen 'zapečetěné.|
 |[Upozornění kompilátoru (úroveň 4) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)|'*derived_class_function*': odpovídá zděděná nevirtuálních metoda '*base_class_function*', ale nebyla označena jako explicitně 'nové.|
-|[Upozornění kompilátoru (úroveň 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|'*funkce*': vyžaduje se*– klíčové slovo*'implementovat metodu rozhraní – klíčové slovo'*interface_method*.|
+|[Upozornění kompilátoru (úroveň 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|'*funkce*': vyžaduje se *– klíčové slovo*'implementovat metodu rozhraní – klíčové slovo'*interface_method*.|
 |[Upozornění kompilátoru (úroveň 1) C4489](../../error-messages/compiler-warnings/compiler-warning-level-1-c4489.md)|'*specifikátor*': není povoleno pro metodu rozhraní '*metoda*'; přepsání specifikátory jsou povolená jenom u metody třídy ref třídy a hodnota|
 |[Upozornění kompilátoru (úroveň 1) C4490](../../error-messages/compiler-warnings/compiler-warning-level-1-c4490.md)|'přepsání': nesprávné použití přepsání specifikátor; '*funkce*' neodpovídá metodu základní ref – třída|
 |Upozornění kompilátoru (úroveň 1) C4491|'*název*': má neplatný formát verze IDL|
@@ -319,7 +320,8 @@ ms.lasthandoff: 05/04/2018
 |Upozornění kompilátoru (úroveň 4) C4574|'*Identifikátor*'je definován jako ' 0': měli jste na mysli používat "#if identifikátor"?|
 |Upozornění kompilátoru (úroveň 1) C4575|'__vectorcall' není kompatibilní s ' nebo clr' možnost: převod '__stdcall.|
 |Upozornění kompilátoru (úroveň 1, chyba) C4576|v závorkách typ a inicializačním seznam je syntaxe převod nestandardní explicitního typu|
-|Upozornění kompilátoru (úroveň 1, chyba) C4578|'abs': převod '*type1*'do'*type2*', možné ztrátě dat. (měli jste na mysli volat '*funkce*' nebo #include <cmath>?)|
+|Upozornění kompilátoru (úroveň 1, vypnutí) C4577|použít s žádná výjimka zpracování zadaný; režim noexcept ukončení na výjimka není zaručena. Zadejte /EHsc|
+|Upozornění kompilátoru (úroveň 1, chyba) C4578|'abs': převod '*type1*'do'*type2*', možné ztrátě dat. (měli jste na mysli volat '*funkce*' nebo #include \<cmath – >?)|
 |[Upozornění kompilátoru (úroveň 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[atribut] je zastaralá; Místo toho zadejte System::Attribute nebo Platform::Metadata jako základní třída|
 |[Upozornění kompilátoru (úroveň 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|zastaralé chování: ' "*řetězec*", nahradí se*řetězec*' do atribut procesu|
 |Upozornění kompilátoru (úroveň 4) C4582|'*typ*': konstruktor není volán implicitně|

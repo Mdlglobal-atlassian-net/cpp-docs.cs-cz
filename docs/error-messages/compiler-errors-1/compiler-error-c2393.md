@@ -16,27 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efa8da496c6067381937820db365a5b37a19e843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704027"
 ---
 # <a name="compiler-error-c2393"></a>C2393 chyby kompilátoru
-'symbol': symbol na appdomain nelze přidělit v segmentu, segmentu.  
-  
- **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.  
-  
- Použití [appdomain](../../cpp/appdomain.md) proměnné znamená, že jsou kompilujete s **/CLR: pure** nebo **/CLR: safe**, a bezpečné nebo čisté bitové kopie nemůže obsahovat segmenty data.  
-  
- V tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2393.  
-  
-```  
-// C2393.cpp  
-// compile with: /clr:pure /c  
-#pragma data_seg("myseg")  
-int n = 0;   // C2393  
+
+> '*symbol*': symbol na appdomain nelze přidělit do segmentu '*segment*.
+
+## <a name="remarks"></a>Poznámky
+
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+
+Použití [appdomain](../../cpp/appdomain.md) proměnné znamená, že jsou kompilujete s **/CLR: pure** nebo **/CLR: safe**, a bezpečné nebo čisté bitové kopie nemůže obsahovat segmenty data.
+
+V tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2393. Chcete-li tento problém vyřešit, nevytvářejte datového segmentu.
+
+```cpp
+// C2393.cpp
+// compile with: /clr:pure /c
+#pragma data_seg("myseg")
+int n = 0;   // C2393
 ```

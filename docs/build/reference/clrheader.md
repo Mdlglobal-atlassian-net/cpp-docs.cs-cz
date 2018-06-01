@@ -18,35 +18,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5896e12d5e3b3b3984884388d11c6380e900d73d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6cda2f03e8a0473d2c45f54c96ca97b043d80d5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704438"
 ---
 # <a name="clrheader"></a>/CLRHEADER
-```  
-/CLRHEADER file  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- `file`  
- Soubor bitové kopie vytvořené s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="remarks"></a>Poznámky  
- CLRHEADER zobrazí informace o hlavičkách .NET použít libovolné spravované aplikace. Výstup zobrazuje umístění a velikost v bajtech v záhlaví .NET a částech v hlavičce.  
-  
- Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.  
-  
- Pokud /CLRHEADER se používá pro určitý soubor, který byl kompilován s volbou/CLR, budou existovat **clr záhlaví:** části ve výstupu nástroje dumpbin.  Hodnota **příznaky** označuje, která možnost/CLR byl použit:  
-  
--   0 – / CLR (image může obsahovat nativního kódu).  
-  
- Můžete také programově zkontrolovat, pokud byl vytvořený bitovou kopii pro modul common language runtime.  Další informace najdete v tématu [postupy: určení, pokud bitová kopie je nativní nebo CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
-  
- **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a bude v budoucí verzi systému kompilátoru odebrána. Kód, který musí být "čistý" nebo "bezpečnou" musí být přesně do jazyka C#. 
-  
-## <a name="see-also"></a>Viz také  
- [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)
+
+Zobrazí informace specifické pro CLR.
+
+## <a name="syntax"></a>Syntaxe
+
+> / CLRHEADER *souboru*
+
+### <a name="arguments"></a>Arguments
+
+|||
+|-|-|
+*Soubor*| Soubor bitové kopie vytvořené s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="remarks"></a>Poznámky
+
+**/ CLRHEADER** zobrazí informace o hlavičkách .NET použít libovolné spravované aplikace. Výstup zobrazuje umístění a velikost v bajtech v záhlaví .NET a částech v hlavičce.
+
+Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+
+Při **/CLRHEADER** se používá na soubor, který byl kompilován s volbou/CLR, budou existovat **clr záhlaví:** části ve výstupu dumpbin. Hodnota **příznaky** označuje, která možnost/CLR byl použit:
+
+- 0 – / CLR (image může obsahovat nativního kódu).
+
+Můžete také programově zkontrolovat, pokud byl vytvořený bitovou kopii pro modul common language runtime.  Další informace najdete v tématu [postupy: určení, pokud bitová kopie je nativní nebo CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
+
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017. Kód, který musí být "čistý" nebo "bezpečnou" musí být přesně do jazyka C#.
+
+## <a name="see-also"></a>Viz také:
+
+- [DUMPBIN – možnosti](../../build/reference/dumpbin-options.md)

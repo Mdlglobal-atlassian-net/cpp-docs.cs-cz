@@ -1,6 +1,6 @@
 ---
 title: Kompilátoru C4800 upozornění prostřednictvím C5999 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704747"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Kompilátoru C4800 upozornění prostřednictvím C5999
 
@@ -181,7 +182,7 @@ ms.lasthandoff: 05/04/2018
 |Upozornění kompilátoru (úroveň 1) C4934|'__delegate(multicast)' je zastaralý, použijte '\__delegate' místo toho|
 |Upozornění kompilátoru (úroveň 1) C4935|specifikátor přístupu sestavení změnil z '*přístup*.|
 |Upozornění kompilátoru (úroveň 1, chyba) C4936|Tato __declspec je podporována pouze, když kompilujete s/CLR nebo/CLR: pure|
-|Upozornění kompilátoru (úroveň 4) C4937|'*text1*'a'*text2*se neodlišuje jako argumenty pro*– direktiva*.|
+|Upozornění kompilátoru (úroveň 4) C4937|'*text1*'a'*text2*se neodlišuje jako argumenty pro *– direktiva*.|
 |Upozornění kompilátoru (úroveň 4) C4938|'*var*': plovoucí redukční proměnnou bod může způsobit nekonzistentní výsledky v rámci /fp: striktní nebo fenv_access – #pragma|
 |Upozornění C4939 kompilátoru|#pragma vtordisp je zastaralá a budou odebrány v budoucí verzi Visual C++|
 |Upozornění kompilátoru (úroveň 1) C4944|'*symbol*': nelze importovat symbol '*assembly1*': jako*symbol*' již existuje v aktuálním oboru|
@@ -242,10 +243,10 @@ ms.lasthandoff: 05/04/2018
 |Upozornění C5035 kompilátoru|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta|
 |Upozornění kompilátoru (úroveň 1) C5036|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.|
 |Upozornění kompilátoru (chyba) C5037|'*– členská funkce*': definici z přesahujících člena třídy šablony nemůže mít výchozí argumenty|
-|[Upozornění C5038 kompilátoru](c5038.md)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*.|
-|Upozornění C5039 kompilátoru|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku.|
-|Upozornění C5040 kompilátoru|specifikace výjimek dynamické jsou platné pouze v C ++ 14 a starší; práce jako s noexcept(false)|
-|Upozornění C5041 kompilátoru|'*definice*':--line definice pro constexpr statických dat člena není potřebné a je zastaralý součástí C ++ 17|
-|Upozornění C5042 kompilátoru|'*deklarace*': deklarace funkcí v oboru bloku nemůže být zadaný, vložené' ve standardní C++; odeberte specifikátor 'vložené.|
-|Upozornění C5043 kompilátoru|'*specifikace*': specifikace výjimek neodpovídá předchozí deklarace|
-|Upozornění C5044 kompilátoru|Argument pro možnost příkazového řádku *možnost* odkazuje na cestu, '*cesta*, který neexistuje|
+|[Upozornění kompilátoru (úroveň 4) C5038](c5038.md)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*.|
+|Upozornění kompilátoru (úroveň 4) C5039|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku.|
+|Upozornění kompilátoru (úroveň 3) C5040|specifikace výjimek dynamické jsou platné pouze v C ++ 14 a starší; práce jako s noexcept(false)|
+|Upozornění kompilátoru (úroveň 1) C5041|'*definice*':--line definice pro constexpr statických dat člena není potřebné a je zastaralý součástí C ++ 17|
+|Upozornění kompilátoru (úroveň 3) C5042|'*deklarace*': deklarace funkcí v oboru bloku nemůže být zadaný, vložené' ve standardní C++; odeberte specifikátor 'vložené.|
+|Upozornění kompilátoru (úroveň 2) C5043|'*specifikace*': specifikace výjimek neodpovídá předchozí deklarace|
+|Upozornění kompilátoru (úroveň 4) C5044|Argument pro možnost příkazového řádku *možnost* odkazuje na cestu, '*cesta*, který neexistuje|

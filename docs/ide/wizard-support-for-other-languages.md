@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 75aafd7177c3799c17b75419fd5ab9f54af91d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33332439"
 ---
 # <a name="wizard-support-for-other-languages"></a>Podpora průvodce pro ostatní jazyky
 Při instalaci sady Visual Studio, instalační program aplikace zjistí národní prostředí uvedené ve vašem systému a nainstaluje odpovídající jazyk šablony nebo šablony pro toto národní prostředí. Například pro prostředí západní Evropy, instalační program nainstaluje angličtina, francouzština, italština, španělština a němčina. Tyto jazyky se zobrazí v **jazyk prostředku** seznam na [typ aplikace](../mfc/reference/application-type-mfc-application-wizard.md) stránky Průvodce aplikací MFC.  

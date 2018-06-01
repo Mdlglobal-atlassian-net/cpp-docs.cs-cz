@@ -25,10 +25,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33336014"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy souborů vytvořených pro projekty Visual C++
 Toto téma popisuje všechny typy souborů, které jsou spojeny s projekty Visual C++ pro classic aplikací klasické pracovní plochy. Skutečné soubory obsažené v projektu závisí na typu projektu a možností, které jste vybrali při použití průvodce.  

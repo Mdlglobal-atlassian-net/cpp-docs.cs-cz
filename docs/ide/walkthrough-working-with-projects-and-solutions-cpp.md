@@ -18,10 +18,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33339132"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
@@ -221,7 +222,7 @@ Blahopřejeme, úspěšně jste vytvořili projekt aplikace a řešení. Další
 **Předchozí:** [pomocí sady Visual Studio IDE pro vývoj C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
 **Další krok:** [návod: sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)  
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)

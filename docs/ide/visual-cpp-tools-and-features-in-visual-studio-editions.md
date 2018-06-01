@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33337246"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Funkcí v edicích sady Visual Studio a nástrojů pro Visual C++
 
@@ -126,15 +127,15 @@ Funkce Visual C++, které jsou k dispozici v sadě Visual Studio naleznete v ná
 |Návrhář XAML|X||X|X|
 |Editor návrháře stylu CSS|X|X|X|X|
 |Návrhář/Editor HTML|X|X|X|X|
-|XML Editor|X|X|X|X|
+|Editor XML|X|X|X|X|
 |Editor zdrojového kódu|X|X|X|X|
 |Funkce produktivitu: Refaktoring, technologii IntelliSense, formátování kódu C++|X|X|X|X|
 |Návrhář formulářů Windows||X|X|X|
 |Návrhář dat|||X|X|
 |Editor prostředků nativní (soubory .rc)|||X|X|
 |Editory prostředků|X|X|X|X|
-|Editor modelu|X||X|X|
-|Návrhář shaderu|X||X|X|
+|Editor modelů|X||X|X|
+|Návrhář shaderů|X||X|X|
 
 ## <a name="data-features"></a>Datových funkcích
 

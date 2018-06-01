@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33328877"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
 
@@ -50,6 +51,6 @@ Chcete-li začít používat Visual Studio IDE můžete vytvářet aplikace, C++
 
 Po dokončení těchto návody, jste připravení začít vytvářet své vlastní projekty. Další informace a materiály pro vývoje v jazyce Visual C++, najdete v části [Visual C++ v sadě Visual Studio](../visual-cpp-in-visual-studio.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Začít s vývojem pomocí sady Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)

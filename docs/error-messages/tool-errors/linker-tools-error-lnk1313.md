@@ -16,40 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 613c2069443e580fb581798d9e1cc6d5781d7c91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705085"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Chyba linkerů LNK1313
-IJW nebo nativního modulu došlo k detekci; nelze propojit s čistě moduly  
-  
- Aktuální verze Visual C++ nepodporuje propojování nativní nebo smíšené spravované/nativní .obj soubory s soubory .obj kompilovat s **/CLR: pure**.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// LNK1313.cpp  
-// compile with: /c /clr:pure  
-// a pure module  
-int main() {}  
-```  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// LNK1313_b.cpp  
-// compile with: /c /clr  
-// an IJW module  
-void test(){}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří LNK1313.  
-  
-```  
-// LNK1313_c.cpp  
-// compile with: /link LNK1313.obj LNK1313_b.obj  
-// LNK1313 warning expected  
+
+> IJW nebo nativního modulu došlo k detekci; nelze propojit s čistě moduly
+
+## <a name="remarks"></a>Poznámky
+
+Aktuální verze Visual C++ nepodporuje propojování nativní nebo smíšené spravované/nativní .obj soubory s soubory .obj kompilovat s **/CLR: pure**.
+
+**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// LNK1313.cpp
+// compile with: /c /clr:pure
+// a pure module
+int main() {}
+```
+
+## <a name="example"></a>Příklad
+
+```cpp
+// LNK1313_b.cpp
+// compile with: /c /clr
+// an IJW module
+void test(){}
+```
+
+## <a name="example"></a>Příklad
+
+Následující příklad vytvoří LNK1313.
+
+```cpp
+// LNK1313_c.cpp
+// compile with: /link LNK1313.obj LNK1313_b.obj
+// LNK1313 warning expected
 ```

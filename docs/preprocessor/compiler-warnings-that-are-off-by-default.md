@@ -1,6 +1,6 @@
 ---
 title: Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 05/30/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,31 +14,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705563"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté
 
-Kompilátor obsahuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nechcete zobrazovat. V některých případech se představují stylových výběr, nebo jsou běžné idioms ve starším kódu nebo využívat výhod rozšíření Microsoft pro jazyk. V ostatních případech označují oblast, kde programátory často provést nesprávný předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Některá tato upozornění může být velmi aktivní v hlavičkách knihovny.
+Kompilátor obsahuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nechcete zobrazovat. V některých případech se představují stylových výběr, nebo jsou běžné idioms ve starším kódu nebo využívat výhod rozšíření Microsoft pro jazyk. V ostatních případech označují oblast, kde programátory často provést nesprávný předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Některá tato upozornění může být velmi aktivní v hlavičkách knihovny. Knihovny jazyka C runtime a standardní knihovny C++ jsou určené pro vydávání žádná varování jenom na úrovni upozornění [/W4](../build/reference/compiler-option-warning-level.md).
 
-Tato upozornění můžete povolit pomocí jedné z následujících možností:
+## <a name="enable-warnings-that-are-off-by-default"></a>Povolit upozornění, která jsou ve výchozím nastavení vypnuté
 
-- **#pragma – upozornění (výchozí:** *warning_number* **)**  
+Můžete povolit upozornění, která jsou obvykle vypnout ve výchozím nastavení pomocí jedné z následujících možností:
+
+- **#pragma – upozornění (výchozí:** *warning_number* **)**
+
    Zadaný upozornění (*warning_number*) je povoleno na výchozí úrovni. Dokumentace pro upozornění obsahuje výchozí úroveň upozornění.
 
-- **#pragma – upozornění (** *warning_level* **:** *warning_number* **)**  
+- **#pragma – upozornění (** *warning_level* **:** *warning_number* **)**
+
    Zadaný upozornění (*warning_number*) je povolena na zadané úrovni (*warning_level*).
 
-- [/ Wall](../build/reference/compiler-option-warning-level.md)  
+- [/ Wall](../build/reference/compiler-option-warning-level.md)
+
    **/ Horní** umožňuje všech upozornění, které jsou ve výchozím nastavení vypnuté. Pokud použijete tuto možnost, můžete vypnout jednotlivé upozornění pomocí [/wd](../build/reference/compiler-option-warning-level.md) možnost.
 
-- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   To umožňuje upozornění *nnnn* na úrovni *l*.
+- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-Následující upozornění jsou ve výchozím stavu vypnuta.
+   To umožňuje upozornění *nnnn* na úrovni *L*.
+
+## <a name="warnings-that-are-off-by-default"></a>Upozornění, která jsou ve výchozím nastavení vypnuté
+
+Ve výchozím nastavení v sadě Visual Studio 2015 a novějších verzích jsou vypnuté následující upozornění:
 
 |||
 |-|-|
@@ -64,11 +73,12 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |[C4371](../error-messages/compiler-warnings/c4371.md) (úroveň 3)|'*classname*': mohlo dojít ke změně rozložení třídy z předchozí verze kompilátoru kvůli lepší okolních člena '*člen*.|
 |C4388 (úroveň 4)|neshoda se znaménkem, nebo bez znaménka|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (úroveň 2)|'*funkce*': podpis funkce obsahuje typ '*typ*'; Objekty C++ jsou unsafe předat mezi čistý kód a smíšený nebo nativní|
-|C4426 (úroveň 1)|Optimalizace příznaky změněno poté, co včetně záhlaví, může být způsobeno #pragma optimize()|
+|C4426 (úroveň 1)|Optimalizace příznaky změněno poté, co včetně záhlaví, může být způsobeno #pragma optimize() <sup>14.1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (úroveň 4)|'*class1*': objekt rozložení pod /vd2 se změní z důvodu virtuální základní '*class2*.|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (úroveň 4)|dynamic_cast z virtuální základní '*class1*'do'*class2*' by mohlo selhat v některých kontextech|
 |C4444 (úroveň 3)|v tomto kontextu není implementována nejvyšší úroveň '__unaligned'|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (úroveň 4)|zahrnují relativní cesta obsahuje '..'|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (úroveň 4)|deklaraci předat dál bez ohledu na obor výčtu musí mít základní typ (int předpokládá, že) <sup>oprávnění</sup>|
 |C4472 (úroveň 1)|'*identifikátor*' je nativní výčet: přidejte specifikátor přístupu (soukromého a veřejného) deklarovat spravované výčtu|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (úroveň 4)|'*funkce*': byl odebrán neregistrované vložené funkce|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (úroveň 4)|"název typu": název typu překračuje limit meta-data "*limit*' znaků|
@@ -81,13 +91,16 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (úroveň 3)|'__assume' obsahuje vliv '*vliv*.|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (úroveň 4)|Informační: catch(...) sémantiku změněné od Visual C++ 7.1; strukturované výjimky (SEH) jsou již zachyceny|
 |C4574 (úroveň 4)|'*identifikátor*'je definován jako ' 0': měli jste na mysli používat ' #if *identifikátor*'?|
+|C4577 (úroveň 1)|použít s žádná výjimka zpracování zadaný; režim noexcept ukončení na výjimka není zaručena. Zadejte /EHsc|
 |C4582 (úroveň 4)|'*typ*': konstruktor není volán implicitně|
 |C4583 (úroveň 4)|'*typ*': implicitně nevolá – destruktor|
 |C4587 (úroveň 1)|'*anonymous_structure*': změna v chování: už implicitně volání konstruktoru|
 |C4588 (úroveň 1)|'*anonymous_structure*': změna v chování: už implicitně destruktoru|
-|C4598 (úroveň 1 a úroveň 3)|' #include "*záhlaví*"': číslo záhlaví *číslo* v předkompilovaných hlaviček neodpovídá aktuální kompilace na této pozici|
-|C4599 (úroveň 3)|'*možnost* *cesta*': argument příkazového řádku číslo *číslo* neodpovídá předem kompilovaném záhlaví|
+|C4596 (úroveň 4)|'*identifikátor*': Neplatný kvalifikovaný název do deklarace členů <sup>14.3</sup> <sup>oprávnění</sup>|
+|C4598 (úroveň 1 a úroveň 3)|' #include "*záhlaví*"': číslo záhlaví *číslo* v předkompilovaných hlaviček neodpovídá aktuální kompilace na této pozici <sup>14.3</sup>|
+|C4599 (úroveň 3)|'*možnost* *cesta*': argument příkazového řádku číslo *číslo* neodpovídá předem kompilovaném záhlaví <sup>14.3</sup>|
 |C4605 (úroveň 1)|' /D*makro*' zadaný u aktuálního příkazového řádku, ale nebyl zadán, pokud byl vytvořený předkompilovaných hlaviček|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (úroveň 3)|'*union_member*'již byl inicializován jiný union člen v seznamu inicializátor'*union_member*' <sup>oprávnění</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (úroveň 3)|#pragma – upozornění: neexistuje číslo upozornění "*číslo*.|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (úroveň 4)|'derived class': výchozí konstruktor nelze generovat, protože výchozí konstruktor základní třídy je nedostupný|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (úroveň 4)|'derived class': kopírovací konstruktor nelze generovat, protože kopírovací konstruktor základní třídy je nedostupný|
@@ -95,7 +108,7 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (úroveň 1)|spřežky nejsou podporovány se -Ze. Znak pořadí '*spřežka*'nebyl interpretován jako alternativní token pro'*char*.|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (úroveň 3)|'*instance*': vytváření místní statické objektu není bezpečné pro přístup z více vláken|
 |C4647 (úroveň 3)|Změna v chování: __is_pod (*typu*) má jinou hodnotu v předchozích verzích|
-|C4654 (úroveň 4)|Kód umístěna před patří předkompilovaných hlaviček řádek bude ignorován. Přidávání kódu do předkompilovaných hlaviček.|
+|C4654 (úroveň 4)|Kód umístěna před patří předkompilovaných hlaviček řádek bude ignorován. Přidávání kódu do předkompilovaných hlaviček. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (úroveň 4)|'*symbol*'není definován jako makro preprocesoru, nahraďte '0' pro'*direktivy*.|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (úroveň 4)|'*symbol*': atribut směrovou parametr zadán, jako výchozí bude použit [v]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (úroveň 3)|'*uživatelsky definovaný typ.*': vrátit změnu v hodnotě UDT možné změnu v chování konvence volání|
@@ -107,6 +120,7 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |C4767 (úroveň 4)|název sekce '*symbol*' je delší než 8 znaků a bude zkrácen podle linkeru|
 |C4768 (úroveň 3)|atributy __declspec před specifikaci propojení se ignorují.|
 |C4774 (úroveň 4)|'*řetězec*': v argument byl očekáván řetězec formátu *číslo* není řetězec literálu|
+|C4777 (úroveň 4)|'*funkce*': řetězec formátu,*řetězec*, vyžaduje argument typu'*type1*', ale argument variadická *číslo* má typ '*type2*.|
 |C4786 (úroveň 3)|'*symbol*': název objektu byl zkrácen na '*číslo*' znaků informace o ladění|
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (úroveň 4)|'*bajtů*'bajtů odsazení přidat po konstrukce'*member_name*.|
 |C4826 (úroveň 2)|Převod z '*type1*'do'*type2*' je rozšířeny. To může způsobit neočekávané modul runtime chování.|
@@ -131,18 +145,22 @@ Následující upozornění jsou ve výchozím stavu vypnuta.
 |C5026 (úroveň 1 a 4)|'*typ*': přesunout konstruktor byl implicitně definován jako odstranit|
 |C5027 (úroveň 1 a 4)|'*typ*': přesunout operátor přiřazení byl implicitně definován jako odstranit|
 |C5029 (úroveň 4)|nestandardní rozšíření používané: zarovnání atributy v jazyce C++ vztahuje na proměnné, datové členy a pouze typy značek|
-|C5031 (úroveň 4)|#pragma warning(pop): pravděpodobně neshoda, odebrání nabídnutých v jiném souboru stavu upozornění|
-|C5032 (úroveň 4)|zjištěna #pragma warning(push) se žádné odpovídající warning(pop) #pragma|
-|C5035|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta|
-|C5036 (úroveň 1)|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*.|
-|[C5038](../error-messages/compiler-warnings/c5038.md)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*.|
+|C5031 (úroveň 4)|#pragma warning(pop): pravděpodobně neshoda, odebrání stavu s varováním nabídnutých v jiném souboru <sup>14.1</sup>|
+|C5032 (úroveň 4)|zjištěna #pragma warning(push) se žádné odpovídající warning(pop) #pragma <sup>14.1</sup>|
+|C5034|použití vnitřní '*vnitřní*' způsobí, že funkce *funkce* sestavují jako kód hosta <sup>15.3</sup>|
+|C5035|pomocí funkce '*funkce*' způsobí, že funkce *funkce* sestavují jako kód hosta <sup>15.3</sup>|
+|C5036 (úroveň 1)|vararg funkce Převod ukazatele, když kompilujete s /hybrid:x86arm64 '*type1*'do'*type2*' <sup>15.3</sup>|
+|[C5038](../error-messages/compiler-warnings/c5038.md) (úroveň 4)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*' <sup>15.3</sup>|
+|C5039 (úroveň 4)|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku. <sup>15,5</sup>|
+|C5042 (úroveň 3)|'*funkce*': deklarace funkcí v oboru bloku nemůže být zadaný, vložené' ve standardní C++; odebrat, vložené' specifikátor <sup>15,5</sup>|
 
-Tato upozornění jsou vypnuté, pokud [/ projektovou-](../build/reference/permissive-standards-conformance.md) nastavena – možnost kompilátoru:
+<sup>14.1</sup> toto upozornění je k dispozici od ve Visual Studiu 2015 Update 1.<br>
+<sup>14.3</sup> toto upozornění je k dispozici od Visual Studio 2015 Update 3.<br>
+<sup>15.3</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15.3.<br>
+<sup>15,5</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15,5.<br>
+<sup>Oprávnění</sup> toto upozornění je vypnutý, pokud [/ projektovou-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru nastavena.
 
-|||
-|-|-|
-|[C4471 (úroveň 4)](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)|Dopředná deklarace výčtu bez ohledu na obor musí mít základní typ (předpokládá se int).|
-|[C4608 (úroveň 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|'*union_member*'již byl inicializován jiný union člen v seznamu inicializátor'*union_member*.|
+## <a name="warnings-off-by-default-in-earlier-versions"></a>Upozornění vypnutí ve výchozím nastavení v dřívějších verzích
 
 Tato upozornění byly vypnout ve výchozím nastavení ve verzích kompilátoru před Visual Studio 2015:
 
@@ -153,7 +171,7 @@ Tato upozornění byly vypnout ve výchozím nastavení ve verzích kompilátoru
 |[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) (úroveň 1)|'*operace*': převod '*type1*'do'*type2*' větší velikosti|
 |[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) (úroveň 1)|'*operátor*': nulové rozšíření '*type1*'do'*type2*' větší velikosti|
 
-Tato upozornění byly vypnout ve výchozím nastavení ve verzích kompilátoru před Visual Studio 2012:
+Toto upozornění se vypnout ve výchozím nastavení ve verzích kompilátoru před Visual Studio 2012:
 
 |||
 |-|-|

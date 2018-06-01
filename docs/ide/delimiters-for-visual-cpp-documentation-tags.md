@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33337571"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Oddělovače pro dokumentační značky ve Visual C++
 Použití značky dokumentace vyžaduje oddělovače, které označují kompilátoru kde komentáře dokumentace k zahájení a ukončení.  

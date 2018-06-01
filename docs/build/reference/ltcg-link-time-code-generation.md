@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703730"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (vytváření kódu v době propojování)
 
@@ -141,7 +142,7 @@ Pokud funkce, se nazývá prostřednictvím ukazatel na funkci, nebo pokud funkc
 
 Moduly, které jsou kompilovaná pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) a [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) lze použít jako vstup linkeru při **/ltgc** je zadán.
 
-- **/ LTCG** může přijmout soubory nativní objektů a smíšený nativní nebo spravovaný objekt soubory (zkompilovat pomocí **/CLR**). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015.
+- **/ LTCG** může přijmout soubory nativní objektů a smíšený nativní nebo spravovaný objekt soubory (zkompilovat pomocí **/CLR**). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
 
 - **/LTCG:PGI** nepřijímá nativní moduly zkompilovat pomocí **/GL** a   **/CLR**
 
@@ -159,7 +160,7 @@ Můžete taky použít **/ltgc** na konkrétní sestavení tak, že zvolíte **s
 
 - V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
-[Možnosti linkeru](../../build/reference/linker-options.md)<br/>
+- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
+- [Možnosti linkeru](../../build/reference/linker-options.md)
