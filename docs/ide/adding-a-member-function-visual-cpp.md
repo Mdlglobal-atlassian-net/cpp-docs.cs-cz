@@ -18,10 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33324184"
 ---
 # <a name="adding-a-member-function-visual-c"></a>Přidání členské funkce (Visual C++)
 V **zobrazení tříd**, členské funkce můžete přidat všechny třídy. Když to uděláte, deklaraci se přidá do hlavičky souboru a stub – členská funkce text se přidá do souboru implementace třídy, který poté můžete upravit.  

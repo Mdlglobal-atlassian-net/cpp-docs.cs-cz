@@ -23,10 +23,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33338663"
 ---
 # <a name="choosing-a-deployment-method"></a>Volba metody nasazení
 Pokud vaše aplikace Visual C++ je samostatný a dá se nasadit pomocí kopie příkazu, doporučujeme použít instalační služby systému Windows pro nasazení. Instalační služba systému Windows podporuje instalace, opravy a odinstalace a také atomické aktualizace souborů aplikace, závislostí a položek registru.  

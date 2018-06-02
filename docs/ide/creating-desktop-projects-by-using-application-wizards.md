@@ -21,10 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33334012"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Tvorba běžných projektů pomocí průvodců aplikací
 Každý typ projektu jazyka Visual C++ obsahuje průvodce aplikací, který pomáhá rychle a snadno generovat nové projekty modelované ze šablony projektu.  Pokud chcete otevřít Průvodce aplikací, použijte **nový projekt** dialogové okno k určení vlastností projektu, například název projektu, nebo adresář a řešení kde se bude nacházet projektu.  

@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340005"
 ---
 # <a name="event-handler-wizard"></a>Průvodce obslužnou rutinou události
 Tento průvodce přidá obslužné rutiny události pro ovládací prvek dialogového okna pro třídu podle svého výběru. Pokud přidáte obslužné rutiny události z [vlastnosti – okno](/visualstudio/ide/reference/properties-window), můžete ho přidat pouze pro třídu, která implementuje dialogové okno. V tématu [přidání obslužné rutiny události pro ovládací prvky dialogové okno](../windows/adding-event-handlers-for-dialog-box-controls.md) Další informace.  

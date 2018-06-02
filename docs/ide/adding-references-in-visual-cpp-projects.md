@@ -18,10 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33336105"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Přidání odkazů v projektech v jazyce Visual C++
 Je velmi běžné programy provést volání do rozhraní API v jiné binární soubory, například knihovny DLL, komponent prostředí Windows Runtime, rozšíření sady SDK, komponenty modelu COM a sestavení .NET. Tak, aby váš program vyhledá tyto další binární soubory závisí typu projektu a typ binárního souboru.  

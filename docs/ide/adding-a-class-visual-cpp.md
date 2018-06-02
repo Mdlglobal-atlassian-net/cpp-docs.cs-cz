@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33333281"
 ---
 # <a name="adding-a-class-visual-c"></a>Přidání třídy (Visual C++)
 Přidání třídy v projektu Visual C++ v **Průzkumníku řešení**, klikněte pravým tlačítkem na projekt, klikněte na **přidat**a potom klikněte na **třída**. Tím se otevře [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) dialogové okno.  

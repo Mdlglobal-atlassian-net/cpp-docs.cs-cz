@@ -22,10 +22,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33336694"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 A *soubor pokynů* pomáhá sady Visual Studio integrované vývojové prostředí (IDE) interpretovat identifikátory Visual C++, jako jsou názvy funkcemi a makry. Když otevřete projektu Visual C++, rozhraní IDE *systém analýzy* analyzuje kód do každého souboru zdroje v projektu a shromažďuje informace o každém identifikátoru. Prostředí IDE použije tyto informace k podpoře funkce, jako **zobrazení tříd** prohlížeče a **navigační panel**.  

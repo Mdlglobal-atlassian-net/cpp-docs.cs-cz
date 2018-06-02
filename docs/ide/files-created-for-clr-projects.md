@@ -16,10 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b9d66c3f55164a743bc395dc5e9b48f8bcd57654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33334662"
 ---
 # <a name="files-created-for-clr-projects"></a>Soubory vytvořené pro projekty CLR
 Použijete-li vytvořit projekty Visual C++ šablony, jsou vytvořeny několik souborů, v závislosti na šablonu, kterou používáte. Následující tabulka uvádí všechny soubory, které jsou vytvořené pomocí šablon projektu pro projekty rozhraní .NET Framework.  

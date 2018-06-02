@@ -22,10 +22,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33332420"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Vytváření a správa projekty využívající MSBuild Visual C++
 MSBuild je systém nativní sestavení pro Visual C++ a je obecně že nejvhodnější vytvořit systému pro aplikace UWP a také aplikací klasické pracovní plochy, které používají knihovny MFC nebo ATL. MSBuild je úzce integrovaná s Visual Studio IDE a systému projektu, ale můžete ji použít i z příkazového řádku. Počínaje Visual Studio 2017, Visual C++ podporuje [CMake a dalšími systémy bez MSBuild prostřednictvím funkce Otevřít složku](non-msbuild-projects.md).

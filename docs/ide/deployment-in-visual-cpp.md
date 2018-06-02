@@ -16,10 +16,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34256093"
 ---
 # <a name="deployment-in-visual-c"></a>Nasazení ve Visual C++
 
@@ -59,7 +60,7 @@ Kromě dynamicky propojené knihovny Visual Studio poskytuje většinu jeho knih
 
 Pořadí načítání knihoven Visual C++ je závislá na systému. Chcete-li diagnostikovat problémy zavaděče, použijte nástroj depends.exe nebo where.exe. Další informace najdete v tématu [pořadí hledání knihovny DLL (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
 - [Univerzální nasazení CRT](universal-crt-deployment.md)
