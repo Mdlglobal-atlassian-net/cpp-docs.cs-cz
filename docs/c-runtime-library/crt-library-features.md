@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b0ccedc3a1794b34fce3ad773e44155f7602d3b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704721"
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 
@@ -85,7 +86,7 @@ Pomocí staticky propojené CRT znamená, že bude místní pro tuto instanci CR
 
 Protože vytvořené propojení s statické CRT knihovny DLL, bude mít stav CRT, není doporučeno staticky propojit CRT v knihovně DLL Pokud důsledky tohoto konkrétně potřeby a rozumím jim. Například, pokud zavoláte [_set_se_translator –](../c-runtime-library/reference/set-se-translator.md) v spustitelné soubory, které propojené s vlastním statické CRT knihovnu DLL načte, všechny výjimky hardwaru generované kód v knihovně DLL nebude možné zachytila překladač, ale výjimky hardwaru generuje kód v hlavní vzniká, spustitelný soubor.
 
-Pokud používáte **/CLR** přepínače kompilátoru váš kód bude propojen s statickou knihovnu, msvcmrt.lib. Statické knihovny poskytuje server proxy mezi spravovaného kódu a nativní CRT. Nemůžete použít staticky propojené CRT ( **/MT** nebo **/MTd** možnosti) s **/CLR**. Používat dynamicky propojené knihovny (**/MD** nebo **/MDd**) místo.
+Pokud používáte **/CLR** přepínače kompilátoru váš kód bude propojen s statickou knihovnu, msvcmrt.lib. Statické knihovny poskytuje server proxy mezi spravovaného kódu a nativní CRT. Nemůžete použít staticky propojené CRT ( **/MT** nebo **/MTd** možnosti) s **/CLR**. Používat dynamicky propojené knihovny (**/MD** nebo **/MDd**) místo. Čistý spravované knihovny CRT jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
 
 Další informace o používání CRT s **/CLR**, najdete v části [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -116,6 +117,6 @@ Pokud máte více než jeden DLL nebo EXE, pak můžete mít více než jeden CR
 
 Pokud váš program používá více než jedna verze CRT, některé péči při předávání určitých objektů CRT (jako jsou popisovače souborů, národní prostředí a proměnných prostředí) přes hranice knihovny DLL. Další informace o problematika a způsob jejich řešení najdete v tématu [potenciální chyby předávání CRT objekty přes hranice knihovny DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)
+- [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)

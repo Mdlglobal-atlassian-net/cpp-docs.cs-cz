@@ -27,42 +27,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe67e1804d436dbd44257f6d7670a71b7f74889
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 132bd8e5ba66cbf9486a6da4747994c667e2f6e7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705657"
 ---
 # <a name="reserved-words"></a>Vyhrazená slova
-Slova jsou vyhrazené linkeru. Názvy těchto lze použít jako argumenty v [příkazy definice modulu](../../build/reference/module-definition-dot-def-files.md) pouze v případě, že název je uzavřena v uvozovkách ("").  
-  
-||||  
-|-|-|-|  
-|**OBJEKTU APPLOADER**1|**INITINSTANCE –**2|**PŘEDBĚŽNÉHO NAČÍTÁNÍ**|  
-|**ZÁKLADNÍ**|**IOPL**|**PRIVÁTNÍ**|  
-|**KÓD**|**KNIHOVNA**1|**PROTMODE**2|  
-|**VYHOVUJÍCÍ**|**LOADONCALL**1|**ČISTÝ**1|  
-|**DATA**|**LONGNAMES**2|**JEN PRO ČTENÍ**|  
-|**POPIS**|**MOBILNÍ**1|**READWRITE**|  
-|**DEV386**|**LZE PŘESUNOUT**1|**PODSLOŽEK REALMODE**1|  
-|**DISCARDABLE**|**VÍCE**|**REZIDENTNÍ**|  
-|**DYNAMICKÉ**|**JMÉNO**|**RESIDENTNAME**1|  
-|**JEN PRO SPUŠTĚNÍ**|**NEWFILES**2|**ODDÍLY**|  
-|**EXECUTEONLY**|**NODATA**1|**SEGMENTY**|  
-|**EXECUTEREAD**|**NOIOPL**1|**SDÍLENÉ**|  
-|**EXETYPE**|**NONAME**|**JEDEN**|  
-|**EXPORTY**|**NEODPOVÍDAJÍCÍ**1|**VELIKOST ZÁSOBNÍKU**|  
-|**OPRAVENÉ**1|**NONDISCARDABLE**|**ZÁSTUPNÁ PROCEDURA**|  
-|**FUNKCE**2|**NONE**|**VERZE**|  
-|**VELIKOST HALDY**|**SDÍLENÉM**|**WINDOWAPI**|  
-|**IMPORTY**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
-|**ZNEČIŠTĚNÁ**1|**OBJEKTY**|**WINDOWS**|  
-|**ZAHRNOUT**2|**PŮVODNÍ**1||  
-  
- 1 linkeru vydá upozornění ("Ignorovat"), pokud se setká s tímto výrazem. Je však stále vyhrazené slovo.  
-  
- 2 linkeru ignoruje slovo ale vysílá bez upozornění.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Slova jsou vyhrazené linkeru. Názvy těchto lze použít jako argumenty v [příkazy definice modulu](../../build/reference/module-definition-dot-def-files.md) pouze v případě, že název je uzavřena v uvozovkách ("").
+
+||||
+|-|-|-|
+|**OBJEKTU APPLOADER**<sup>1</sup>|**INITINSTANCE –**<sup>2</sup>|**PŘEDBĚŽNÉHO NAČÍTÁNÍ**|
+|**ZÁKLADNÍ**|**IOPL**|**PRIVÁTNÍ**|
+|**KÓD**|**KNIHOVNA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
+|**VYHOVUJÍCÍ**|**LOADONCALL**<sup>1</sup>|**ČISTÝ**<sup>1</sup>|
+|**DATA**|**LONGNAMES**<sup>2</sup>|**JEN PRO ČTENÍ**|
+|**POPIS**|**MOBILNÍ**<sup>1</sup>|**READWRITE**|
+|**DEV386**|**LZE PŘESUNOUT**<sup>1</sup>|**PODSLOŽEK REALMODE**<sup>1</sup>|
+|**DISCARDABLE**|**VÍCE**|**REZIDENTNÍ**|
+|**DYNAMICKÉ**|**JMÉNO**|**RESIDENTNAME**<sup>1</sup>|
+|**JEN PRO SPUŠTĚNÍ**|**NEWFILES**<sup>2</sup>|**ODDÍLY**|
+|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTY**|
+|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**SDÍLENÉ**|
+|**EXETYPE**|**NONAME**|**JEDEN**|
+|**EXPORTY**|**NEODPOVÍDAJÍCÍ**<sup>1</sup>|**VELIKOST ZÁSOBNÍKU**|
+|**OPRAVENÉ**<sup>1</sup>|**NONDISCARDABLE**|**ZÁSTUPNÁ PROCEDURA**|
+|**FUNKCE**<sup>2</sup>|**NONE**|**VERZE**|
+|**VELIKOST HALDY**|**SDÍLENÉM**|**WINDOWAPI**|
+|**IMPORTY**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
+|**ZNEČIŠTĚNÁ**<sup>1</sup>|**OBJEKTY**|**WINDOWS**|
+|**ZAHRNOUT**<sup>2</sup>|**PŮVODNÍ**<sup>1</sup>||
+
+<sup>1</sup> linkeru vydá upozornění ("Ignorovat"), pokud se setká s tímto výrazem. Je však stále vyhrazené slovo.
+
+<sup>2</sup> linkeru ignoruje slovo ale vysílá bez upozornění.
+
+## <a name="see-also"></a>Viz také:
+
+- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
+- [Možnosti linkeru](../../build/reference/linker-options.md)

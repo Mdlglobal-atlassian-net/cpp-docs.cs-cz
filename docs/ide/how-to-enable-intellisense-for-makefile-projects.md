@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705459"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel
 IntelliSense přestane fungovat v integrovaném vývojovém prostředí pro projekty makefile Visual C++ při určitých nastavení projektu a možnosti kompilátoru jsou nastaveny nesprávně. Pomocí tohoto postupu ke konfiguraci projekty makefile Visual C++, tak, aby IntelliSense funguje, když jsou projekty makefile otevřené ve vývojovém prostředí sady Visual Studio.  
@@ -46,7 +47,7 @@ IntelliSense přestane fungovat v integrovaném vývojovém prostředí pro proj
   
     -   Nastavte **vynucené použití sestavení** vlastnost sestavení .NET určených ke zpracování při sestavování projektu souboru pravidel. V tématu [/FU (vynuceným názvem #using souboru)](../build/reference/fu-name-forced-hash-using-file.md), další informace.  
   
-    -   Nastavte **další možnosti** vlastnosti k určení dalších přepínačů, který se má použít technologii Intellisense, při analýze souborů C++.  
+    -   Nastavte **další možnosti** vlastnosti k určení dalších přepínačů, který se má použít technologii IntelliSense, při analýze souborů C++.  
   
 4.  Klikněte na tlačítko **OK** zavřete stránky vlastností.  
   

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686848"
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- V předchozím příkladu `pwCaption` ukazatel do kteréhokoli člena třídy `Window` který má typ **char\***. Typ `pwCaption` je `char * Window::*`. Deklaruje ukazatele na další fragment kódu `SetCaption` a `GetCaption` členské funkce.  
+ V předchozím příkladu `pwCaption` ukazatel do kteréhokoli člena třídy `Window` který má typ **char\***. Typ `pwCaption` je `char * Window::* `. Deklaruje ukazatele na další fragment kódu `SetCaption` a `GetCaption` členské funkce.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  

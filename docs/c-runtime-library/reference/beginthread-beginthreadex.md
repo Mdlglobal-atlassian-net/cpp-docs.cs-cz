@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704656"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,7 +142,7 @@ Operační systém zpracovává přidělení zásobníku při buď **_beginthrea
 
 Národní prostředí nové vlákno se inicializuje pomocí na proces globální aktuální národní prostředí údaje. Pokud je ve volání povoleno národní prostředí podle vláken [_configthreadlocale –](configthreadlocale.md) (globálně nebo pro nové vlákna), vlákno lze změnit pouze jeho národního prostředí nezávisle z jiných vláken voláním **setlocale** nebo **_wsetlocale**. Informace o národním prostředí v všechna vlákna, které nemají taky nastavit příznak národní prostředí podle vláken, stejně jako všechny nově vytvořené vláken může ovlivnit vláken, které nemají nastaven příznak národní prostředí podle vláken. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 
-Pro smíšený a čistý kód **_beginthread** a **_beginthreadex** mají dvě přetížení. Má ukazatel na funkci nativní konvence volání, a dalších trvá **__clrcall** – ukazatel na funkci. První přetížení není aplikace bezpečných domény a nikdy bude možné. Pokud vytváříte smíšený nebo čistý kód je nutné zajistit, že nové vlákno zadá domény správné aplikace před přistupuje k spravované prostředky. To provedete, například pomocí [call_in_appdomain – funkce](../../dotnet/call-in-appdomain-function.md). Druhý přetížení je aplikace domény bezpečných; nově vytvořený vlákno vždycky skončí v doméně aplikace volající **_beginthread** nebo **_beginthreadex**.
+Pro **/CLR** kódu, **_beginthread** a **_beginthreadex** mají dvě přetížení. Má ukazatel na funkci nativní konvence volání, a dalších trvá **__clrcall** – ukazatel na funkci. První přetížení není aplikace bezpečných domény a nikdy bude možné. Pokud píšete **/CLR** kódu, ujistěte se, že nové vlákno zadá domény správné aplikace před přistupuje k spravované prostředky. To provedete, například pomocí [call_in_appdomain – funkce](../../dotnet/call-in-appdomain-function.md). Druhý přetížení je aplikace domény bezpečných; nově vytvořený vlákno vždycky skončí v doméně aplikace volající **_beginthread** nebo **_beginthreadex**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -328,10 +329,10 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

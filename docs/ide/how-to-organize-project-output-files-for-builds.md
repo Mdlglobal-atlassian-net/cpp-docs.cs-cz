@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5058493e93a89e64c87ef52b73ff8fe3272f8f99
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705342"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Postupy: Uspořádání výstupních souborů projektu pro sestavení
 Toto téma popisuje osvědčené postupy pro uspořádání výstupních souborů projektu. Sestavení při nesprávně nastavíte výstupních souborů projektu, může dojít k chybám. Toto téma také popisuje výhody a nevýhody jednotlivých možností uspořádání výstupních souborů projektu.  
@@ -30,7 +31,7 @@ Toto téma popisuje osvědčené postupy pro uspořádání výstupních soubor�
   
 1.  Odkazování na sestavení přímo z vašeho kódu pomocí #using – direktiva, jako například `#using <System.Data.dll>`. Další informace najdete v tématu [#using – direktiva](../preprocessor/hash-using-directive-cpp.md).  
   
-     Zadaný soubor může být .dll, .exe, .netmodule nebo .obj, dokud je v MSIL. Odkazovaná součást se dají vytvářet v libovolném jazyce. Použití této možnosti budete mít přístup technologie IntelliSense, protože metadata se extrahují z MSIL. V souboru musí být v cestě pro projekt; jinak nebude kompilace projektu a Intellisense nebudete mít k dispozici. Snadný způsob, jak určit, zda je soubor v cestě je klikněte pravým tlačítkem na #using řádku a vyberte **otevřít dokument** příkaz. Pokud soubor nelze nalézt, budete upozorněni.  
+     Zadaný soubor může být .dll, .exe, .netmodule nebo .obj, dokud je v MSIL. Odkazovaná součást se dají vytvářet v libovolném jazyce. Použití této možnosti budete mít přístup technologie IntelliSense, protože metadata se extrahují z MSIL. V souboru musí být v cestě pro projekt; jinak nebude kompilace projektu a IntelliSense nebudete mít k dispozici. Snadný způsob, jak určit, zda je soubor v cestě je klikněte pravým tlačítkem na #using řádku a vyberte **otevřít dokument** příkaz. Pokud soubor nelze nalézt, budete upozorněni.  
   
      Pokud nechcete uvést úplnou cestu k souboru, můžete použít **/AI** – možnost kompilátoru upravit cestu pro hledání #using. Další informace najdete v tématu [/AI (zadat adresáře metadat)](../build/reference/ai-specify-metadata-directories.md).  
   

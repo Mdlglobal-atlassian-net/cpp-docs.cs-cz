@@ -14,22 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705423"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Obecná pravidla přetížení operátoru
 Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Ale nelze je použít k [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory, které jsou popsané samostatně.  
   
--   Nelze definovat nové operátory, jako například **.  
+-   Nelze definovat nových operátorů, například **.**.  
   
 -   Nelze předefinovat význam operátorů při použití předdefinovaných datových typů.  
   
 -   Přetížené operátory musejí být členskými funkcemi nestatické třídy nebo globálními funkcemi. Globální funkce, která požaduje přístup k soukromým nebo chráněným členům, musí být pro danou třídu deklarována jako přátelská. Globální funkce musí přebírat alespoň jeden argument třídy nebo výčtového typu, případně odkazu na třídu nebo výčtový typ. Příklad:  
   
-    ```  
+    ```cpp  
     // rules_for_operator_overloading.cpp  
     class Point  
     {  
@@ -74,7 +75,7 @@ var++;
  Tuto identitu nelze dovolávat pro typy tříd, které přetěžují operátory. Kromě toho některé požadavky zahrnují použití těchto operátorů pro základní typy, které jsou zmírněny pro přetížené operátory. Například operátor přiřazení/sčítání `+=` vyžaduje, aby byl levý operand při použití na základní typy l-hodnotou. V případě, že je operátor přetížen, neexistuje žádný takový požadavek.  
   
 > [!NOTE]
->  V rámci konzistence je při definování přetížených operátorů často nejlepší postupovat podle modelu předdefinovaných typů. Liší-li se významně sémantika přetíženého operátoru od jeho významu v jiných kontextech, může být více matoucí než užitečný.  
+> V rámci konzistence je při definování přetížených operátorů často nejlepší postupovat podle modelu předdefinovaných typů. Liší-li se významně sémantika přetíženého operátoru od jeho významu v jiných kontextech, může být více matoucí než užitečný.  
   
 ## <a name="see-also"></a>Viz také  
  [Přetížení operátoru](../cpp/operator-overloading.md)
