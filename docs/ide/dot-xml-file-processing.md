@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340512"
 ---
 # <a name="xml-file-processing"></a>Zpracování souboru XML
 Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který se označí ke generování dokumentace. Další informace najdete v tématu [doporučené značky dokumentační komentáře](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). ID řetězec jednoznačně identifikuje konstruktu. Programy, které zpracovávají soubor .xml můžete použít ID řetězec k identifikaci odpovídající rozhraní .NET Framework metadata nebo reflexe položky na které se vztahuje na dokumentaci.  
