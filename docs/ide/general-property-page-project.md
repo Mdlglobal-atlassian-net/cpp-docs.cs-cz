@@ -36,10 +36,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33336489"
 ---
 # <a name="general-property-page-project"></a>Obecná stránka vlastností (projekt)
 
@@ -150,6 +151,6 @@ Určuje, [/GL](../build/reference/gl-whole-program-optimization.md) – možnost
 **Podpora aplikací pro Windows Store**  
 Určuje, jestli podporuje tento projekt aplikace Windows Runtime (Universal Windows Platform). Další informace najdete v tématu [/ZW (kompilace Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md)a Centrum vývojářů pro Windows.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Stránky vlastností](../ide/property-pages-visual-cpp.md)  

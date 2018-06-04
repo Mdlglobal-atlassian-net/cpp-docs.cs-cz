@@ -25,10 +25,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33339706"
 ---
 # <a name="property-pages-visual-c"></a>Stránky vlastností (Visual C++)
 
@@ -140,7 +141,7 @@ Všimněte si, že stránka vlastností na aktuální úrovni pro více hodnot v
 
 [Stránky vlastností nástroje Generátor dokumentů XML](../ide/xml-document-generator-tool-property-pages.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Postupy: Vytváření a odebrání závislostí projektu](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
 [Postupy: Vytvoření a úprava konfigurací](/visualstudio/ide/how-to-create-and-edit-configurations)  
