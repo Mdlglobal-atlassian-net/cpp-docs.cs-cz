@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762095"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153), [15,5](#improvements_155), [15,6 operací](#improvements_156), a [15.7](#improvements_157)
 
@@ -1582,6 +1583,46 @@ D<int> d;
 
 Postup řešení chyby, změňte výraz B() b\<T > ().
 
-## <a name="see-also"></a>Viz také
+### <a name="constexpr-aggregate-initialization"></a>Inicializace agregace constexpr
+
+Předchozí verze C++ compiler nesprávně zpracovává inicializace agregace constexpr; ho akceptovat neplatný kód, ve kterém byl příliš vysoký počet prvků seznamu init agregace a vytváří nesprávná funkce codegen pro ni. Následující kód je příkladem takového kódu: 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+Ve verzi Visual Studio 2017 15.7 aktualizací 3 nebo novější, teď vyvolá předchozí příklad *C2078 příliš mnoho inicializátory*. Následující příklad ukazuje, jak opravit kód. Při inicializaci `std::array` s vnořených závorek init seznamů, poskytnout vnitřní pole braced – seznam vlastní:
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
+
+## <a name="see-also"></a>Viz také:
 
 [Shoda jazyka Visual C++](visual-cpp-language-conformance.md)

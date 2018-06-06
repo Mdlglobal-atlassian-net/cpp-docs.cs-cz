@@ -18,7 +18,7 @@ ms.openlocfilehash: 4f3995b1a7227e4d2f0a531c86726b84e960d8ec
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340486"
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Specifikace konfigurace nastavení pro vydání , Průvodce vytvoření nového projektu z existujících souborů kódu
