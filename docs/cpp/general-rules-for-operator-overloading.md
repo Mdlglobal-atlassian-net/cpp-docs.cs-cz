@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705423"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814336"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Obecná pravidla přetížení operátoru
 Následující pravidla omezují způsob, jakým jsou implementovány přetížené operátory. Ale nelze je použít k [nové](../cpp/new-operator-cpp.md) a [odstranit](../cpp/delete-operator-cpp.md) operátory, které jsou popsané samostatně.  
@@ -55,7 +55,7 @@ Následující pravidla omezují způsob, jakým jsou implementovány přetíže
   
 -   Binární operátory, které jsou deklarovány jako členské funkce, přebírají jeden argument. Jsou-li deklarovány jako globální funkce, přebírají dva argumenty.  
   
--   Pokud operátor lze použít jako unární operátor nebo binární operátor (**&**, **\***, **+**, a **-**), můžete použít přetížení každém použití samostatně.  
+-   Pokud operátor lze použít jako unární operátor nebo binární operátor (__&__, __*__, __+__, a __-__), můžete použít přetížení každém použití samostatně.  
   
 -   Přetížené operátory nemohou mít výchozí argumenty.  
   

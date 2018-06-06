@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0ccedc3a1794b34fce3ad773e44155f7602d3b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34704721"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799191"
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 
@@ -113,9 +113,14 @@ Pro binární kompatibilitu je možné zadat více než jeden soubor knihovny DL
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Jaké problémy existovat, pokud aplikace používá více než jedna verze CRT?
 
-Pokud máte více než jeden DLL nebo EXE, pak můžete mít více než jeden CRT, zda používáte různé verze Visual C++. Například do více knihovny DLL staticky propojení CRT může být stejný problém. Vývojáři dochází k tomuto problému s statické CRTs jste dostali pokyn ke kompilaci s **/MD** používat CRT knihovny DLL. Pokud vaše knihovny DLL úspěšně prostředky CRT přes hranice knihovny DLL, může dojít k potížím s odlišnými CRTs a muset znovu zkompiluje váš projekt pomocí Visual C++.
+Každý spustitelné bitové kopie (soubor EXE nebo DLL) může mít svůj vlastní staticky propojené CRT nebo můžete dynamicky propojit CRT. Verze CRT staticky součástí nebo se dynamicky načíst konkrétní obrázek závisí na verzi nástroje a knihovny, který byl sestaven s. Najednou může načíst Image více EXE a knihovny DLL, každou s vlastním CRT. Každý z těchto CRTs mohou používat různé allocator, může mít jiný interní struktury rozložení a mohou používat uspořádání jiného úložiště. To znamená, že přidělit paměť, CRT prostředky nebo třídy předán přes hranice knihovny DLL může způsobit problémy v správy paměti, interní použití statické nebo interpretace rozložení. Například pokud třída je přidělené v jedné knihovny DLL, ale předaný a odstraněna jiným, které deallocator CRT bude použit? Chyb vzniklých můžete v rozsahu od jemně do okamžitě závažné a proto směrovat přenos těchto zdrojů je důrazně nedoporučuje.
 
-Pokud váš program používá více než jedna verze CRT, některé péči při předávání určitých objektů CRT (jako jsou popisovače souborů, národní prostředí a proměnných prostředí) přes hranice knihovny DLL. Další informace o problematika a způsob jejich řešení najdete v tématu [potenciální chyby předávání CRT objekty přes hranice knihovny DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Mnoho z těchto problémů se můžete vyhnout použitím binární rozhraní aplikace (ABI) technologií místo toho navrženou stabilní a verzování. Návrh vašich rozhraní export knihovny DLL předávat informace podle hodnoty, nebo pro práci na paměti, která je předaná volající funkcí místo přidělené místně a vrácen volajícímu. Použití zařazování techniky ke zkopírování strukturovaných dat mezi spustitelné bitové kopie. Zapouzdření prostředky místně a povolit pouze manipulaci prostřednictvím obslužné rutiny nebo funkce, které můžete zpřístupnit klientům.
+
+Je také možné, aby se zabránilo některé z těchto problémů, pokud všechny bitové kopie v procesu používat stejnou verzi dynamicky načíst CRT. Aby se zajistilo, že všechny součásti používat stejnou verzi CRT knihovny DLL, sestavení je pomocí **/MD** možnost a používat stejné nastavení vlastnosti a sady nástrojů kompilátoru.
+
+Některé pozor je nutný v případě, že váš program předá určitých CRT prostředků (například popisovače souborů, národní prostředí a proměnných prostředí) přes hranice knihovny DLL, i když se používá stejnou verzi nástroje CRT. Další informace o problematika a způsob jejich řešení najdete v tématu [potenciální chyby předávání CRT objekty přes hranice knihovny DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+
 
 ## <a name="see-also"></a>Viz také:
 

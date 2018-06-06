@@ -19,11 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
+ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34800083"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření standardního programu C++ (C++)
 Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slouží k vytvoření standardní C++ – programy. Podle kroků v tomto návodu, můžete vytvořit projekt, přidejte do projektu nový soubor, úpravou souboru přidejte kód C++ a pak zkompilování a spuštění programu pomocí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -42,7 +43,7 @@ Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slou�
   
 1.  Vytvoření projektu tak, že odkazuje na **nový** na **soubor** nabídce a potom kliknutím na **projektu**.  
   
-2.  V **Visual C++** projektu typy podokně, klikněte na tlačítko **Win32**a potom klikněte na **Konzolová aplikace Win32**.  
+2.  V **Visual C++** projektu typy podokně, klikněte na tlačítko **Windows Desktop**a potom klikněte na **konzolové aplikace pro Windows**.  
   
 3.  Zadejte název projektu.  
   
@@ -50,11 +51,9 @@ Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slou�
   
      Klikněte na tlačítko **OK** a vytvořte tak projekt.  
   
-4.  V **Win32 – Průvodce aplikací**, klikněte na tlačítko **Další**, vyberte **prázdný projekt**a potom klikněte na **Dokončit**.  
+4.  Pokud **Průzkumníku řešení** se nezobrazí na **zobrazení** nabídky, klikněte na tlačítko **Průzkumníku řešení**.  
   
-5.  Pokud **Průzkumníku řešení** se nezobrazí na **zobrazení** nabídky, klikněte na tlačítko **Průzkumníku řešení**.  
-  
-6.  Přidejte nové zdrojového souboru do projektu, následujícím způsobem.  
+5.  Přidejte nové zdrojového souboru do projektu, následujícím způsobem.  
   
     1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **zdrojové soubory** složku, přejděte na příkaz **přidat**a potom klikněte na **novou položku**.  
   
@@ -62,15 +61,15 @@ Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slou�
   
      Souboru se zobrazí ve složce zdrojové soubory v **Průzkumníku**, a soubor se otevře v editoru Visual Studio.  
   
-7.  V souboru v editoru zadejte platný programu C++, který používá standardní knihovna C++ nebo jedna z ukázkových aplikací zkopírujte a vložte ji v souboru.  
+6.  V souboru v editoru zadejte platný programu C++, který používá standardní knihovna C++ nebo jedna z ukázkových aplikací zkopírujte a vložte ji v souboru.  
   
-8.  Uložte soubor.  
+7.  Uložte soubor.  
   
-9. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
+8. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
   
      **Výstup** okně se zobrazí informace o průběhu kompilace, například umístění protokolu sestavení a zprávu, která označuje stav sestavení.  
   
-10. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.  
+9. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.  
   
      Pokud jste použili ukázkový program, zobrazí se okno příkazového řádku a zobrazuje, zda určitá celá čísla se nacházejí v sadě.  
   
