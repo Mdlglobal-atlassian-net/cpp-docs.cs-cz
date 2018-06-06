@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569807"
 ---
 # <a name="fatal-error-c1083"></a>Závažná chyba C1083
 
@@ -106,6 +107,8 @@ Pokud se v projektu používají předkompilované hlavičky, musí být vytvo�
 
 - Kompiluje soubor pomocí jiné **/ analyze** nastavení kompilátoru možnosti, než se používá k předkompilovat hlavičky. Když jsou předkompilované hlavičky pro projekt, všechny musí používat stejné **/ analyze** nastavení. Další informace najdete v tématu [/ analyze (Analýza kódu)](../../build/reference/analyze-code-analysis.md).
 
+- Soubor nebo adresář byl vytvořen subsystému Windows pro Linux, je povoleno rozlišování malých a adresář,- a v případě zadaná cesta nebo soubor neodpovídá v případě cestu nebo soubor na disku.
+
 - Soubor, adresář nebo disk je určen jen pro čtení.
 
 - Visual Studio nebo nástroje příkazového řádku nemají dostatečná oprávnění ke čtení soubor nebo adresář. To může nastat, například při soubory projektu mají různé vlastnictví než procesu spuštění sady Visual Studio nebo nástroje příkazového řádku. Někdy lze tento problém opravit spuštěním Visual Studio nebo příkazového řádku vývojáře jako správce.
@@ -125,6 +128,6 @@ Následující příklad generuje chyby C1083 při soubor hlaviček `"test.h"` z
 
 Informace o tom, jak vytvářet projekty C/C++ v prostředí IDE nebo na příkazovém řádku a informace o nastavení proměnných prostředí najdete v tématu [sestavení C/C++ programů](../../build/building-c-cpp-programs.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties)

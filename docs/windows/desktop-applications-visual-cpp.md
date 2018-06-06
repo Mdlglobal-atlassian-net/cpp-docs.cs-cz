@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569791"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikací klasické pracovní plochy (Visual C++)
-A *desktopová aplikace* v jazyce C++ je nativní aplikace, která přístup úplnou sadu rozhraní API systému Windows a buď běží v okně nebo v systémové konzoly. Aplikací klasické pracovní plochy v jazyce C++ můžete spustit v systému Windows XP do systému Windows 10 (i když je už oficiálně podporované systémem Windows XP a existuje mnoho rozhraní API systému Windows, které byly zavedeny od té doby).   Aplikace se liší od aplikace univerzální platformu Windows (UWP), který můžete spustit na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hub a dalších zařízení. Další informace o plochy vs. Aplikace UWP, najdete v části [zvolte technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+A *desktopová aplikace* v jazyce C++ je nativní aplikace, která přístup úplnou sadu rozhraní API systému Windows a buď běží v okně nebo v systémové konzoly. Aplikací klasické pracovní plochy v jazyce C++ můžete spustit v systému Windows XP do systému Windows 10 (i když je už oficiálně podporované systémem Windows XP a existuje mnoho rozhraní API systému Windows, které byly zavedeny od té doby).
+
+Aplikace se liší od aplikace univerzální platformu Windows (UWP), který můžete spustit na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hub a dalších zařízení. Další informace o plochy vs. Aplikace UWP, najdete v části [zvolte technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**Plocha most** nastavit ve Windows 10 můžete balíček existující aplikace pracovní plochy nebo objektu COM jako aplikaci UWP a přidat UWP funkce, například touch nebo volání rozhraní API z moderních rozhraní API systému Windows. Aplikace pro UPW můžete také přidat na ploše řešení v sadě Visual Studio a balíček je společně v jedné balíček a používat rozhraní API systému Windows pro komunikaci mezi nimi.  
+   
+V aplikaci Visual Studio 2017 verze 15,4 a novější můžete vytvořit projekt balíčku aplikace Windows výrazně zjednodušit práci při zabalení aplikace plochy. Několik omezení použít s ohledem na jaké registru volá nebo používá rozhraní API desktopová aplikace, ale v mnoha případech můžete vytvořit alternativní kód cesty k dosažení podobné funkce při spuštění balíčku aplikace. Další informace najdete v tématu [plochy most](/windows-uwp/porting/desktop-to-uwp-root).  
   
  **Terminologie**  
   

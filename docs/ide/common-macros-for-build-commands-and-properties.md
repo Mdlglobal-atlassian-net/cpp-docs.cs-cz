@@ -1,7 +1,7 @@
 ---
-title: Běžné makra pro příkazy a vlastnosti sestavení | Microsoft Docs
+title: Běžné makra pro příkazy a vlastnosti sestavení
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -102,62 +102,76 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 278cb34a49650d88b9e7de9efd8456ff430aca63
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569924"
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Běžné makra pro příkazy a vlastnosti sestavení
-V závislosti na možnosti instalace sady Visual Studio můžete zpřístupnit stovky makra pro vás. Tyto odpovídat vlastnosti nástroje MSBuild, které jsou nastavené ve výchozím nastavení, nebo soubory props nebo .targets nebo nastavení projektu. Tyto makra lze použít kdekoli v projektu na **stránky vlastností** dialogové, kde jsou přijímány řetězce. Tyto makra se nerozlišují malá a velká písmena.  
-  
- Pokud chcete zobrazit aktuálně k dispozici makra ve sloupci vpravo od názvu vlastnosti, klikněte na šipku rozevíracího seznamu. Pokud **upravit** je k dispozici, klikněte na něj a potom v dialogovém okně upravit, klikněte na **makra**. Další informace najdete v tématu **Specifying User-Defined hodnoty** části [stránky vlastností](../ide/property-pages-visual-cpp.md).  
-  
- Makra, které jsou označeny "Zastaralé" se již nepoužívají nebo byly nahrazeny ekvivalentní [makro metadata položky](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***název***)**). Makra, které jsou označeny "zastaralé; migrovat"je taky zastaralá. A kromě toho, pokud je projekt, který obsahuje makro migrovali ze sady Visual Studio 2008, Visual Studio převede makro na ekvivalentní aktuální makro.  
-  
- Následující tabulka popisuje podmnožinu běžně používané k dispozici makra. Tento seznam není vyčerpávající. Podrobnosti na způsob vytváření a použít jako makra v VCXPROJ soubory props, .targets a definice vlastnosti nástroje MSBuild najdete v tématu [vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties).  
-  
-|– Makro|Popis|  
-|-----------|-----------------|  
-|**$(RemoteMachine)**|Nastavte na hodnotu **vzdáleného počítače** vlastnost na stránce vlastností ladění. V tématu [Změna nastavení projektu pro konfiguraci ladění C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) Další informace.|  
-|**$(Configuration)**|Název aktuální konfigurací projektu, například "Debug".|  
-|**$(Platform)**|Název aktuální platformy projektu, například "Win32".|  
-|**$(Parentname) –**|(Nepoužívané). Název položky obsahující tuto položku projektu. To bude název nadřazené složky nebo název projektu.|  
-|**$(RootNameSpace)**|Obor názvů, pokud existuje, obsahující aplikaci.|  
-|**$(IntDir)**|Cesta k adresáři zadaná pro zprostředkující soubory. Pokud to je relativní cesta, zprostředkující soubory přejděte na tuto cestu k adresáři projektu. Tato cesta by měla mít koncové lomítko. To přeloží na hodnotu **zprostředkující Directory** vlastnost. Nepoužívejte **$(outdir) –** k definování této vlastnosti.|  
-|**$(Outdir) –**|Cesta k adresáři výstupního souboru. Pokud to je relativní cesta, výstupní soubory přejděte na tuto cestu k adresáři projektu. Tato cesta by měla mít koncové lomítko. To se přeloží na hodnotu **výstupního adresáře** vlastnost. Nepoužívejte **$(IntDir)** k definování této vlastnosti.|  
-|**$(Devenvdir) –**|Instalační adresář sady Visual Studio (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'.|  
-|**$(Inputdir) –**|(Nepoužívané; migrovat.) Adresář souboru vstupního souboru (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'. Pokud projekt se vstup, pak je ekvivalentní této makro **$(projectdir) –**.|  
-|**$(InputPath)**|(Nepoužívané; migrovat.) Absolutní cesta název souboru vstupního souboru (definován jako jednotka + cesta + základní název + přípona souboru). Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectPath)**.|  
-|**$(InputName)**|(Nepoužívané; migrovat.) Základní název souboru vstupního souboru. Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectName)**.|  
-|**$(InputFileName)**|(Nepoužívané; migrovat.) Název souboru vstupního souboru (definován jako základní název + přípona souboru). Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectFileName)**.|  
-|**$(Inputext) –**|(Nepoužívané; migrovat.) Přípona souboru vstupního souboru. Obsahuje,., před příponu souboru. Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectExt)**.|  
-|**$(Projectdir) –**|Do adresáře projektu (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'.|  
-|**$(ProjectPath)**|Absolutní cesta název projektu (definován jako jednotka + cesta + základní název + přípona souboru).|  
-|**$(ProjectName)**|Základní název projektu.|  
-|**$(ProjectFileName)**|Název souboru projektu (definován jako základní název + přípona souboru).|  
-|**$(ProjectExt)**|Přípona souboru projektu. Obsahuje,., před příponu souboru.|  
-|**$(Solutiondir) –**|Adresář řešení (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'. Definována pouze při sestavování řešení v prostředí IDE.|  
-|**$(Solutionpath) –**|Absolutní cesta název řešení (definován jako jednotka + cesta + základní název + přípona souboru). Definována pouze při sestavování řešení v prostředí IDE.|  
-|**$(SolutionName)**|Základní název řešení. Definována pouze při sestavování řešení v prostředí IDE.|  
-|**$(Solutionfilename) –**|Název souboru řešení (definován jako základní název + přípona souboru). Definována pouze při sestavování řešení v prostředí IDE.|  
-|**$(Solutionext) –**|Přípona souboru řešení. Obsahuje,., před příponu souboru. Definována pouze při sestavování řešení v prostředí IDE.|  
-|**$(TargetDir)**|Adresář primárního výstupního souboru pro sestavení (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'.|  
-|**$(TargetPath)**|Absolutní cesta název primárního výstupního souboru pro sestavení (definován jako jednotka + cesta + základní název + přípona souboru).|  
-|**$(TargetName)**|Základní název primárního výstupního souboru pro sestavení.|  
-|**$(Targetfilename) –**|Název souboru primárního výstupního souboru pro sestavení (definován jako základní název + přípona souboru).|  
-|**$(Targetext) –**|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje,., před příponu souboru.|  
-|**$(VSInstallDir)**|Adresář, do které jste nainstalovali Visual Studio.<br /><br /> Tato vlastnost obsahuje verzi cílové sady Visual Studio, který se může lišit, hostitelské sady Visual Studio. Například při sestavení s `$(PlatformToolset) = v110`, **$(VSInstallDir)** obsahuje cestu k instalaci sady Visual Studio 2012.|  
-|**$(VCInstallDir)**|Adresář, do které jste nainstalovali Visual C++.<br /><br /> Tato vlastnost obsahuje verzi cílové aplikace Visual C++, který se může lišit, hostitelské sady Visual Studio. Například při sestavení s `$(PlatformToolset) = v140`, **$(VCInstallDir)** obsahuje cestu k instalačním Visual C++ 2015.|  
-|**$(FrameworkDir)**|Adresář, do kterého byla nainstalována rozhraní .NET Framework.|  
-|**$(FrameworkVersion)**|Verze rozhraní .NET Framework, sada Visual Studio. V kombinaci s **$(FrameworkDir)**, úplná cesta k verzi rozhraní .NET Framework použití Visual Studio.|  
-|**$(Frameworksdkdir) –**|Adresář, do které jste nainstalovali rozhraní .NET Framework. Rozhraní .NET Framework je může nainstalovat jako součást sady Visual Studio, nebo samostatně.|  
-|**$(Webdeploypath) –**|Relativní cestu z kořene nasazení webu k kde výstup projektu patří. Vrací stejnou hodnotu jako <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|  
-|**$(Webdeployroot) –**|Absolutní cestu k umístění  **\<localhost >**. Například c:\inetpub\wwwroot.|  
-|**$(SafeParentName)**|(Nepoužívané). Název nadřazeného okamžitou ve formátu platný název. Například formulář je nadřazený tohoto souboru RESX.|  
-|**$(SafeInputName)**|(Nepoužívané). Název souboru jako platný název třídy, bez přípony souboru.|  
-|**$(Saferootnamespace) –**|(Nepoužívané). Název oboru názvů, ve kterém bude průvodců projektu přidejte kód. Tento název oboru názvů bude obsahovat pouze znaky, které jsou přípustné v platný identifikátor C++.|  
-|**$(Fxcopdir) –**|Cesta k souboru fxcop.cmd. Soubor fxcop.cmd není nainstalován ve všech edicích Visual C++.|  
-  
-## <a name="see-also"></a>Viz také  
- [Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)
+
+V závislosti na možnosti instalace sady Visual Studio můžete zpřístupnit stovky makra pro vás. Tyto odpovídat vlastnosti nástroje MSBuild, které jsou nastavené ve výchozím nastavení, nebo soubory props nebo .targets nebo nastavení projektu. Tyto makra lze použít kdekoli v projektu na **stránky vlastností** dialogové, kde jsou přijímány řetězce. Tyto makra se nerozlišují malá a velká písmena.
+
+## <a name="view-the-current-properties-and-macros"></a>Zobrazit aktuální vlastnosti a makra
+
+Zobrazit aktuálně k dispozici makra na libovolné stránce vlastnost **stránky vlastností** dialogové okno, vyberte na šipku rozevíracího seznamu na konci řádku vlastnost. Pokud **upravit** je k dispozici, zvolte jej a potom v dialogovém okně Upravit **makra** tlačítko. Aktuální sadu vlastností a makra viditelné pro Visual Studio je uveden spolu s aktuální hodnota pro každou. Další informace najdete v tématu **Specifying User-Defined hodnoty** části [stránky vlastností](../ide/property-pages-visual-cpp.md).
+
+## <a name="list-of-common-macros"></a>Seznam běžných makra
+
+Tato tabulka popisuje podmnožinu běžně používané k dispozici makra. Tento seznam je daleko od vyčerpávající. Podrobnosti na způsob vytváření a použít jako makra v VCXPROJ soubory props, .targets a definice vlastnosti nástroje MSBuild najdete v tématu [vlastnosti nástroje MSBuild](/visualstudio/msbuild/msbuild-properties).
+
+|– Makro|Popis|
+|-----------|-----------------|
+|**$(Configuration)**|Název aktuální konfigurací projektu, například "Debug".|
+|**$(Devenvdir) –**|Instalační adresář sady Visual Studio (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'.|
+|**$(FrameworkDir)**|Adresář, do kterého byla nainstalována rozhraní .NET Framework.|
+|**$(Frameworksdkdir) –**|Adresář, do které jste nainstalovali rozhraní .NET Framework. Rozhraní .NET Framework je může nainstalovat jako součást sady Visual Studio, nebo samostatně.|
+|**$(FrameworkVersion)**|Verze rozhraní .NET Framework, sada Visual Studio. V kombinaci s **$(FrameworkDir)**, úplná cesta k verzi rozhraní .NET Framework použití Visual Studio.|
+|**$(Fxcopdir) –**|Cesta k souboru fxcop.cmd. Soubor fxcop.cmd není nainstalován ve všech edicích Visual C++.|
+|**$(IntDir)**|Cesta k adresáři zadaná pro zprostředkující soubory. Pokud to je relativní cesta, zprostředkující soubory přejděte na tuto cestu k adresáři projektu. Tato cesta by měla mít koncové lomítko. To přeloží na hodnotu **zprostředkující Directory** vlastnost. Nepoužívejte **$(outdir) –** k definování této vlastnosti.|
+|**$(Outdir) –**|Cesta k adresáři výstupního souboru. Pokud to je relativní cesta, výstupní soubory přejděte na tuto cestu k adresáři projektu. Tato cesta by měla mít koncové lomítko. To se přeloží na hodnotu **výstupního adresáře** vlastnost. Nepoužívejte **$(IntDir)** k definování této vlastnosti.|
+|**$(Platform)**|Název aktuální platformy projektu, například "Win32".|
+|**$(Projectdir) –**|Do adresáře projektu (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'.|
+|**$(ProjectExt)**|Přípona souboru projektu. Obsahuje,., před příponu souboru.|
+|**$(ProjectFileName)**|Název souboru projektu (definován jako základní název + přípona souboru).|
+|**$(ProjectName)**|Základní název projektu.|
+|**$(ProjectPath)**|Absolutní cesta název projektu (definován jako jednotka + cesta + základní název + přípona souboru).|
+|**$(RemoteMachine)**|Nastavte na hodnotu **vzdáleného počítače** vlastnost na stránce vlastností ladění. V tématu [Změna nastavení projektu pro konfiguraci ladění C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) Další informace.|
+|**$(RootNameSpace)**|Obor názvů, pokud existuje, obsahující aplikaci.|
+|**$(Solutiondir) –**|Adresář řešení (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'. Definována pouze při sestavování řešení v prostředí IDE.|
+|**$(Solutionext) –**|Přípona souboru řešení. Obsahuje,., před příponu souboru. Definována pouze při sestavování řešení v prostředí IDE.|
+|**$(Solutionfilename) –**|Název souboru řešení (definován jako základní název + přípona souboru). Definována pouze při sestavování řešení v prostředí IDE.|
+|**$(SolutionName)**|Základní název řešení. Definována pouze při sestavování řešení v prostředí IDE.|
+|**$(Solutionpath) –**|Absolutní cesta název řešení (definován jako jednotka + cesta + základní název + přípona souboru). Definována pouze při sestavování řešení v prostředí IDE.|
+|**$(TargetDir)**|Adresář primárního výstupního souboru pro sestavení (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'.|
+|**$(Targetext) –**|Přípona souboru primárního výstupního souboru pro sestavení. Obsahuje,., před příponu souboru.|
+|**$(Targetfilename) –**|Název souboru primárního výstupního souboru pro sestavení (definován jako základní název + přípona souboru).|
+|**$(TargetName)**|Základní název primárního výstupního souboru pro sestavení.|
+|**$(TargetPath)**|Absolutní cesta název primárního výstupního souboru pro sestavení (definován jako jednotka + cesta + základní název + přípona souboru).|
+|**$(VCInstallDir)**|Adresář, který obsahuje obsah C++ instalace Visual Studia. Tato vlastnost obsahuje verzi cílové nástrojů Visual C++, který se může lišit, hostitelské sady Visual Studio. Například při sestavení s `$(PlatformToolset) = v140`, **$(VCInstallDir)** obsahuje cestu k instalačním Visual C++ 2015.|
+|**$(VSInstallDir)**|Adresář, do které jste nainstalovali Visual Studio. Tato vlastnost obsahuje verzi cílové nástrojů Visual Studio, který se může lišit, hostitelské sady Visual Studio. Například při sestavení s `$(PlatformToolset) = v110`, **$(VSInstallDir)** obsahuje cestu k instalaci sady Visual Studio 2012.|
+|**$(Webdeploypath) –**|Relativní cestu z kořene nasazení webu k kde výstup projektu patří. Vrací stejnou hodnotu jako <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
+|**$(Webdeployroot) –**|Absolutní cestu k umístění  **\<localhost >**. Například c:\inetpub\wwwroot.|
+
+## <a name="obsolete-macros"></a>Zastaralé makra
+
+Systém sestavení pro jazyk C++ byl výrazně změněn mezi Visual Studio 2008 a Visual Studio 2010. Mnoho makra použít ve starší typy projektů se změnil na nové. Tyto makra se již nepoužívají nebo byly nahrazeny jednu nebo více vlastností ekvivalentní nebo [makro metadata položky](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(**_název_**)**) hodnoty. Makra, které jsou označeny "migrované" můžete aktualizovat nástroj pro migraci projektu. Pokud projekt, který obsahuje makro migraci ze sady Visual Studio 2008 nebo nižší do sady Visual Studio 2010, Visual Studio převede makro na ekvivalentní aktuální makro. Novější verze sady Visual Studio se nedá převést projektů ze sady Visual Studio 2008 a dříve na nový typ projektu. Je nutné převést tyto projekty ve dvou krocích; Nejprve je převést na Visual Studio 2010 a výsledek pak převést na vaše novější verze sady Visual Studio. Další informace najdete v tématu [přehled potenciální problémy upgradu](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
+
+|– Makro|Popis|
+|-----------|-----------------|
+|**$(Inputdir) –**|(Migrováno.) Adresář souboru vstupního souboru (definovaný jako jednotka + cesta); zahrnuje koncové zpětné lomítko,\\'. Pokud projekt se vstup, pak je ekvivalentní této makro **$(projectdir) –**.|
+|**$(Inputext) –**|(Migrováno.) Přípona souboru vstupního souboru. Obsahuje,., před příponu souboru. Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectExt)**. U zdrojových souborů, je to **%(Extension)**.|
+|**$(InputFileName)**|(Migrováno.) Název souboru vstupního souboru (definován jako základní název + přípona souboru). Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectFileName)**. U zdrojových souborů, je to **%(Identity)**.|
+|**$(InputName)**|(Migrováno.) Základní název souboru vstupního souboru. Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectName)**. U zdrojových souborů, je to **%(Filename)**.|
+|**$(InputPath)**|(Migrováno.) Absolutní cesta název souboru vstupního souboru (definován jako jednotka + cesta + základní název + přípona souboru). Pokud projekt se vstup, pak je ekvivalentní této makro **$(ProjectPath)**. U zdrojových souborů, je to **%(FullPath)**.|
+|**$(Parentname) –**|Název položky obsahující tuto položku projektu. To bude název nadřazené složky nebo název projektu.|
+|**$(SafeInputName)**|Název souboru jako platný název třídy, bez přípony souboru. Tato vlastnost nemá naprosto stejný.|
+|**$(SafeParentName)**|Název nadřazeného okamžitou ve formátu platný název. Například formulář je nadřazený tohoto souboru RESX. Tato vlastnost nemá naprosto stejný.|
+|**$(Saferootnamespace) –**|Název oboru názvů, ve kterém bude průvodců projektu přidejte kód. Tento název oboru názvů bude obsahovat pouze znaky, které jsou přípustné v platný identifikátor C++. Tato vlastnost nemá naprosto stejný.|
+
+## <a name="see-also"></a>Viz také:
+
+- [Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)
+- [Visual C++ Průvodce přenosem a upgradováním](../porting/visual-cpp-porting-and-upgrading-guide.md)
+- [Přehled potenciální problémy upgradu](../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

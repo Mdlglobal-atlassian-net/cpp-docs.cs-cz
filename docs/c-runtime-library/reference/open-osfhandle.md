@@ -1,7 +1,7 @@
 ---
 title: _open_osfhandle – | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beb8c074beeb47274fbae21ea293d0ea55f28d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569833"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -67,19 +68,18 @@ V případě úspěšného **_open_osfhandle –** , vrátí se popisovač soubo
 
 ## <a name="remarks"></a>Poznámky
 
-**_Open_osfhandle –** funkce přiděluje popisovač soubor spouští za běhu C a přidruží ji popisovač souboru operačního systému určený *osfhandle*. *Příznaky* argument je vytvořen z jedné nebo více manifestu konstanty definované v Fcntl.h výraz celé číslo. Při použití dvou nebo více manifestu konstanty do formuláře *příznaky* argument, konstanty spolu se operátoru bitové operace OR ( **&#124;** ).
+**_Open_osfhandle –** funkce přiděluje popisovač soubor spouští za běhu C a přidruží ji popisovač souboru operačního systému určený *osfhandle*. Abyste se vyhnuli upozornění kompilátoru, přetypovat *osfhandle* argument z **zpracování** k **intptr_t –**. *Příznaky* argument je použit celočíselný výraz, který je vytvořen z jednoho nebo více manifestu konstanty definované v \<fcntl.h >. Při použití dvou nebo více manifestu konstanty do formuláře *příznaky* argument, konstanty spolu se operátoru bitové operace OR ( **&#124;** ).
 
-Fcntl.h definuje následující konstanty manifestu:
+Tyto manifestu konstanty jsou definovány v \<fcntl.h >:
 
-**\_O\_připojení** umisťuje soubor ukazatel na konec souboru před každou operaci zápisu.
+|||
+|-|-|
+**\_O\_PŘIPOJENÍ**|Umisťuje soubor ukazatel na konec souboru před každou operaci zápisu.
+**\_O\_RDONLY**|Otevře se soubor jen pro čtení.
+**\_O\_TEXT**|Otevře soubor v režimu textových (přeložit).
+**\_O\_WTEXT**|Soubor se otevře v režimu Unicode (přeložený UTF-16).
 
-**\_O\_RDONLY** otevře soubor jen pro čtení.
-
-**\_O\_TEXT** otevře soubor v režimu textových (přeložit).
-
-**\_O\_WTEXT** otevře soubor v režimu Unicode (přeložený UTF-16).
-
-Zavřete soubor otevřít s **_open_osfhandle –**, volání [ \_zavřete](close.md). Základní popisovač souboru je také uzavřený voláním **_close –**, takže není nutné volat funkci Win32 **funkce CloseHandle** na původní popisovač. Pokud je vlastníkem popisovače souborů **soubor &#42;**  datového proudu, pak volání [fclose –](fclose-fcloseall.md) na který **souboru &#42;**  datového proudu také zavře popisovač souboru a základní obslužná rutina. V takovém případě Nevolejte **_close –** na popisovače souborů.
+**_Open_osfhandle –** volání přenese vlastnictví popisovač souboru Win32 popisovače souborů. Zavřete soubor otevřít s **_open_osfhandle –**, volání [ \_zavřete](close.md). Základní popisovač souboru je také uzavřený voláním **_close –**, takže není nutné volat funkci Win32 **funkce CloseHandle** na původní popisovač. Pokud je vlastníkem popisovače souborů **soubor &#42;**  datového proudu, pak volání [fclose –](fclose-fcloseall.md) na který **souboru &#42;**  datového proudu také zavře popisovač souboru a základní obslužná rutina. V takovém případě Nevolejte **_close –** na popisovače souborů.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -89,6 +89,6 @@ Zavřete soubor otevřít s **_open_osfhandle –**, volání [ \_zavřete](clos
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>

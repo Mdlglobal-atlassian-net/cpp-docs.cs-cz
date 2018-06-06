@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569947"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Co je nového pro Visual C++ v [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
@@ -394,12 +395,10 @@ Mobilní aplikace teď můžete vytvářet a ladit pomocí sady Visual Studio, k
 C++ je volitelnou součástí úlohy Universal Windows App.  Upgrade projektů C++ se v tuto chvíli musí provést ručně. Pokud v sadě Visual Studio 2017 otevřete projekt UPW cílený na verzi 140 a nemáte nainstalovanou sadu Visual Studio 2015, musíte na stránkách vlastností projektu vybrat sadu nástrojů verze 141.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nové možnosti pro C++ na univerzální platformu Windows (UWP)
+Nyní máte nové možnosti pro zápis a balení aplikací C++ pro univerzální platformu Windows a Windows Store: plochy most infrastruktury můžete balíček existující aplikace pracovní plochy nebo objektu COM pro nasazení prostřednictvím systému Windows Úložiště nebo prostřednictvím vaší existující kanálů prostřednictvím zkušební načtení. Nové funkce v systému Windows 10 umožňují přidání funkce UPW do aplikace plochy různými způsoby. Další informace najdete v tématu [plochy most](/windows/uwp/porting/desktop-to-uwp-root).
 
-Nyní máte nové možnosti pro zápis a balení aplikací C++ pro univerzální platformu Windows a Microsoft Store. Převaděč aplikace Desktop vám pomůže balíček plochy aplikace pro nasazení prostřednictvím Microsoft Store. Další informace najdete v tématu [pomocí modulu Runtime Visual C++ v projektu Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) a [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](/windows/uwp/porting/desktop-to-uwp-root).
-
-**Visual Studio 2017 verze 15,5**:
-
-A **balení projekt aplikace Windows** projektu šablona se přidá, který podporuje balení aplikací klasické pracovní plochy pomocí most plochy. Je k dispozici v části **soubor > Nový > projekt** pod **nainstalovaná > Visual C++ > univerzální platformu Windows** při instalaci zatížení univerzální aplikace pro Windows.
+**Visual Studio 2017 verze 15.5**  
+A **balení projekt aplikace Windows** projektu šablona se přidá, což výrazně zjednodušuje práci balení aplikací klasické pracovní plochy s použitím most plochy. Je k dispozici v části **souboru | Nové | Projekt | Nainstalovat | Visual C++ | Univerzální platformu Windows**. Další informace najdete v tématu [balíčku aplikace pomocí sady Visual Studio (Desktop mostu)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Při zápisu nový kód, teď můžete použít C + +/ WinRT, standardní projekce jazyka C++ pro prostředí Windows Runtime implementována pouze v záhlaví soubory. Ho můžete obě autorovi a využívat žádné kompatibilní se standardy kompilátoru C++ pomocí rozhraní API systému Windows Runtime. C + +/ WinRT určená k poskytování C++ vývojáři prvotřídní přístup k moderní rozhraní API systému Windows. Další informace najdete v tématu [C + +/ WinRT dostupná na Githubu](https://moderncpp.com/).
 

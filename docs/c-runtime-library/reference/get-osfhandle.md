@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle – | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569846"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ Existující popisovače souborů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **INVALID_HANDLE_VALUE** (-1) a nastaví **errno** k **ebadf –**, označující neplatný popisovač souboru.
+Vrátí popisovač souboru operačního systému, pokud *fd* je platný. Jinak se obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **INVALID_HANDLE_VALUE** (-1) a nastaví **errno** k **ebadf –**, označující neplatný popisovač souboru. Abyste se vyhnuli upozornění kompilátoru při výsledek se používá v rutiny, které očekávají popisovač souboru Win32, vysílat **zpracování** typu.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -74,7 +75,7 @@ Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

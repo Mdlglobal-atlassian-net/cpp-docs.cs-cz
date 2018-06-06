@@ -1,7 +1,7 @@
 ---
-title: -DEFAULTLIB (zadat výchozí knihovnu) | Microsoft Docs
+title: / DEFAULTLIB (zadat výchozí knihovnu) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,36 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48db05ea50917a09e618c782d86dace73a1bf7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569778"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Zadat výchozí knihovnu)
-```  
-/DEFAULTLIB:library  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- kde:  
-  
- *Knihovna*  
- Název knihovnu, kterou chcete hledat při rozpoznávání externí odkazy.  
-  
-## <a name="remarks"></a>Poznámky  
- Možnost /DEFAULTLIB přidá jeden *knihovny* do seznamu knihovny, které odkaz vyhledá při rozpoznávání odkazy. Prohledají se zadaným /DEFAULTLIB knihovny po zadat na příkazovém řádku a před výchozí knihovny s názvem v soubory .obj knihovny.  
-  
- [Ignorovat všechny výchozí knihovny](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB) možnost přepsání /DEFAULTLIB:*knihovny*. [Ignorovat knihovny](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB:*knihovny*) možnost přepsání /DEFAULTLIB:*knihovny* při stejné *knihovny* je název zadaný v obou.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio  
-  
--   Tato možnost linkeru není k dispozici z vývojovém prostředí sady Visual Studio. K přidání do knihovny do fáze propojení, použijte **Další závislosti** vlastnost z **vstup** stránku vlastností.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru  
-  
--   V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení možností Linkeru](../../build/reference/setting-linker-options.md)   
- [Možnosti linkeru](../../build/reference/linker-options.md)
+
+Zadejte výchozí knihovnu, kterou chcete hledat externí odkazy.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/ DEFAULTLIB**:_knihovny_
+
+### <a name="arguments"></a>Arguments
+
+|Argument|Popis|
+|-|-|
+*Knihovna*|Název knihovnu, kterou chcete hledat při rozpoznávání externí odkazy.
+
+## <a name="remarks"></a>Poznámky
+
+**/DEFAULTLIB** možnost přidá jeden *knihovny* do seznamu knihovny, které odkaz vyhledá při rozpoznávání odkazy. Knihovnu zadaným **/DEFAULTLIB** prohledají se po explicitně zadat na příkazovém řádku a před výchozí knihovny s názvem v soubory .obj knihovny.
+
+Při použití bez argumentů, [/NODEFAULTLIB (ignorovat všechny výchozí knihovny)](../../build/reference/nodefaultlib-ignore-libraries.md) možnost přepsání všechny **/DEFAULTLIB**:*knihovny* možnosti. **/NODEFAULTLIB**:*knihovny* možnost přepsání **/DEFAULTLIB**:*knihovny* při stejné *knihovny*název je zadán v obou.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
+
+1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+
+1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+
+1. V **další možnosti**, zadejte **/DEFAULTLIB**:*knihovny* možnost pro každou knihovnu pro vyhledávání. Zvolte **OK** uložte provedené změny.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
+
+- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Viz také:
+
+- [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)
+- [Možnosti linkeru](../../build/reference/linker-options.md)
