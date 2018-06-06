@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753627"
 ---
 # <a name="linker-options"></a>Možnosti linkeru
 
@@ -67,6 +68,7 @@ Můžete použít [komentář](../../preprocessor/comment-c-cpp.md) – Direktiv
 |[/ DELAY](../../build/reference/delay-delay-load-import-settings.md)|Ovládací prvky zpožděné načítání knihovny DLL.|
 |[/ DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Způsobí, že zpožděné načítání určené knihovny DLL.|
 |[/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Částečně podepisuje sestavení.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Nastaví výchozí příznaky závislé načítání knihovny DLL.|
 |[/ DLL](../../build/reference/dll-build-a-dll.md)|Sestavení knihovny DLL.|
 |[/ DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Vytvoří ovladač režimu jádra.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Určuje, jestli se má generovat spustitelné bitové kopie, který může být náhodně rebased při načítání, pomocí funkce adresního prostoru rozložení náhodného přeskupování (technologie ASLR).|
@@ -128,7 +130,7 @@ Můžete použít [komentář](../../preprocessor/comment-c-cpp.md) – Direktiv
 |[/ TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Určuje ID prostředku knihovny typů generované linkeru.|
 |[/ TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Určuje název souboru .tlb a ostatní výstupní soubory MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Vytvoří aplikaci, která je určená speciálně ke spuštění v režimu terminálového serveru.|
-|[/ USEPROFILE](../../build/reference/useprofile.md)|Na základě profilu používá optimalizace Cvičná data vytvoření optimalizované bitové kopie.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Na základě profilu používá optimalizace Cvičná data vytvoření optimalizované bitové kopie.|
 |[/ VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Vytiskne hlášení průběhu linkeru.|
 |[/VERSION](../../build/reference/version-version-information.md)|Přiřadí číslo verze.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Zahrnuje každý soubor objekt ze zadané statické knihovny.|
