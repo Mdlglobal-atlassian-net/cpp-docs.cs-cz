@@ -18,7 +18,7 @@ ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705683"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historie 2003 2015 změn Visual C++

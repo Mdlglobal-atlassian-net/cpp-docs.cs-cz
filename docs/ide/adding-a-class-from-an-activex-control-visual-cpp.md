@@ -19,7 +19,7 @@ ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33322403"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Přidání třídy z ovládacího prvku ActiveX (Visual C++)

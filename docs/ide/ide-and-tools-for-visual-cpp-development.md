@@ -18,7 +18,7 @@ ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705397"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE a nástrojů pro vývoj Visual C++

@@ -1,7 +1,7 @@
 ---
 title: x64 (amd64) – seznam vnitřních objektů | Microsoft Docs
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9412d7f0d464c6d8b795214cba900f1ae24ab27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76fc614bae4e94ddfd0c2245971315be5f7e5ddf
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753692"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) – seznam vnitřních objektů
 
@@ -31,13 +32,13 @@ Informace o jednotlivých vnitřních objektech naleznete v následujících m
 
 - [Vnitřní funkce Průvodce Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Použijte pole hledání najít konkrétní vnitřní funkce.
 
-- [Intel příručky pro vývojáře softwaru architekturami 64 a IA-32](https://software.intel.com/articles/intel-sdm)
+- [Intel příručky pro vývojáře softwaru architekturami 64 a IA-32](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Rozšíření programování odkaz na sadu Intel architektura instrukcí](https://software.intel.com/en-us/isa-extensions)
+- [Rozšíření programování odkaz na sadu Intel architektura instrukcí](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Úvod do Intel Advanced Vector rozšíření](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [AMD vývojáře vodítka, příruček a dokumenty ISA](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD vývojáře vodítka, příruček a dokumenty ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 Následující tabulka uvádí vnitřní funkce, která je k dispozici na x64 procesory. Sloupec technologie uvádí vyžaduje podporu sada instrukcí. Použití [__cpuid](../intrinsics/cpuid-cpuidex.md) vnitřní určit podporu sada instrukcí v době běhu. Pokud dvě položky v jeden řádek, představují různé vstupní body pro vnitřní stejné. [1] označuje, že že vnitřní je k dispozici pouze u AMD procesorů. [2] označuje, že že vnitřní je dostupné pouze pro procesory Intel. [3] označuje, že prototyp je makro. Hlavička potřebná pro funkce prototypu je uveden v záhlaví sloupce. Záhlaví intrin.h obsahuje immintrin.h i ammintrin.h pro jednoduchost.
 
@@ -1279,7 +1280,7 @@ Následující tabulka uvádí vnitřní funkce, která je k dispozici na x64 pr
 |[_xsetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsetbv)|XSAVE [2]|immintrin.h|void _xsetbv (bez znaménka int, nepodepsané \__int64)|
 |[_xtest](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xtest)|XTEST [2]|immintrin.h|unsigned char _xtest(void)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)  
 [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md)  
