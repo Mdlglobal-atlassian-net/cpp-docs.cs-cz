@@ -204,7 +204,7 @@
 ### [/DELAY (nastavení importu zpožděného načtení)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (import zpožděného načtení)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (částečné podepsání sestavení)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (příznaky závislé zatížení výchozí sadu)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (příznaky závislé zatížení výchozí sadu)](dependentloadflag.md)
 ### [/DLL (sestavení knihovny DLL)](dll-build-a-dll.md)
 ### [/DRIVER (ovladač režimu jádra Windows NT)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (použití modulu pro náhodné rozložení adresního prostoru)](dynamicbase-use-address-space-layout-randomization.md)

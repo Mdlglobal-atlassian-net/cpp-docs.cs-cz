@@ -21,7 +21,7 @@ ms.openlocfilehash: dc854f96f1c41baf28a5af4ca1f253e47d9a8914
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336775"
 ---
 # <a name="creating-a-makefile-project"></a>Vytvoření projektu souboru pravidel

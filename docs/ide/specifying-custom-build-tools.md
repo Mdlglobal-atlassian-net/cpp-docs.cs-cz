@@ -1,7 +1,7 @@
 ---
 title: Určení vlastního nástroje sestavení | Microsoft Docs
 ms.custom: ''
-ms.date: 12/28/2017
+ms.date: 06/05/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
+ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33335552"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34798928"
 ---
 # <a name="specify-custom-build-tools"></a>Zadejte vlastní sestavovací nástroje
 
@@ -68,7 +68,7 @@ Obecné informace o vlastní sestavovací nástroje a vlastní kroky sestavení 
 
    - V **výstupy**, zadejte název souboru výstupního souboru. Toto je požadovaná položka; bez hodnoty pro tuto vlastnost nebude spustit nástroj pro vlastní sestavení. Pokud nástroj pro vlastní sestavení má více než jeden výstup, soubor názvy oddělte středníkem.
 
-      Název výstupního souboru, by měl být stejný jako jsou zadány v **příkazového řádku** vlastnost. Systém sestavení projektu se vyhledat soubor a zkontrolujte jeho data. Pokud výstupní soubor je novější než vstupní soubor nebo výstupní soubor nebyl nalezen, je spuštěn nástroj vlastní sestavení. Pokud všechny z **Další závislosti** jsou starší než vstupní soubor soubory a vstupní soubor je starší než v souboru určeném v **výstupy** vlastnost, nástroj pro vlastní sestavení není spuštěn.
+      Název výstupního souboru, by měl být stejný jako jsou zadány v **příkazového řádku** vlastnost. Systém sestavení projektu se vyhledat soubor a zkontrolujte jeho data. Pokud výstupní soubor je starší než vstupní soubor nebo výstupní soubor nebyl nalezen, je spuštěn nástroj vlastní sestavení. Pokud všechny z **Další závislosti** jsou starší než vstupní soubor soubory a vstupní soubor je starší než v souboru určeném v **výstupy** vlastnost, nástroj pro vlastní sestavení není spuštěn.
 
 Pokud chcete systém sestavení pracovat na soubor výstup generovaný nástrojem vlastní sestavení, je třeba ručně přidat do projektu. Vlastní sestavovací nástroje aktualizuje soubor během sestavení.
 

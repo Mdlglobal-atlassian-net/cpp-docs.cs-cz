@@ -19,7 +19,7 @@ ms.openlocfilehash: a51697367480569e2d27a4cb67791f5fe4d39a8f
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33323872"
 ---
 # <a name="redistributing-database-support-files"></a>Redistribuce pomocných souborů databáze

@@ -18,7 +18,7 @@ ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33321984"
 ---
 # <a name="manifest-tool-property-pages"></a>Stránky vlastností nástroje manifest

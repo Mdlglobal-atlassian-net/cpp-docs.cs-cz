@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
+ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755768"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů unique_ptr
 A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatele. Nemůže být zkopírován do jiného `unique_ptr`, podle hodnoty předaný funkci nebo použít v jakékoli standardní knihovna C++ algoritmus, který vyžaduje kopie má být provedeno. A `unique_ptr` se dá přesunout jedině. To znamená, že vlastnictví prostředků paměti je přenášet do jiného `unique_ptr` a původní `unique_ptr` už je jeho vlastníkem. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Proto když potřebujete chytré ukazatele pro objekt prostý C++, použít `unique_ptr`, a když vytvoříte `unique_ptr`, použijte [make_unique](../standard-library/memory-functions.md#make_unique) pomocné funkce.  
@@ -25,7 +26,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatele
   
  ![Přesunutí vlastnictví jedinečný&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` je definována v `<memory>` záhlaví ve standardní knihovně C++. Je přesně je efektivní jako nezpracovaná ukazatel a lze použít v kontejnerech standardní knihovna C++. Přidání `unique_ptr` instancí standardní knihovna C++ kontejnery je efektivní protože konstruktoru přesunout `unique_ptr` eliminuje potřebu operace kopírování.  
+ `unique_ptr` je definována v `<memory>` záhlaví ve standardní knihovně C++. Je přesně efektivní jako nezpracovaná ukazatel a mohou být používány kontejnery standardní knihovna C++. Přidání `unique_ptr` instancí standardní knihovna C++ kontejnery je efektivní protože konstruktoru přesunout `unique_ptr` eliminuje potřebu operace kopírování.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit `unique_ptr` instancí a jejich předání funkce.  

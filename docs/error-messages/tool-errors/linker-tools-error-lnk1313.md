@@ -20,7 +20,7 @@ ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705085"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Chyba linkerů LNK1313
