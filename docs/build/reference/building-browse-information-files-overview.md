@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843072"
 ---
 # <a name="building-browse-information-files-overview"></a>Sestavení souborů informací o procházení: Přehled
 K vytvoření informací procházení pro procházení symbol, kompilátor vytvoří soubor .sbr pro každý zdrojový soubor ve vašem projektu, pak BSCMAKE. EXE řetězí soubory .sbr do jednoho souboru BSC programem.  
@@ -49,7 +50,7 @@ K vytvoření informací procházení pro procházení symbol, kompilátor vytvo
   
 1.  Buď nemáte vytvoření .bsc souboru na úrovni projektu nebo použijte přepínač/n zabránit ke zkrácení soubory .sbr.  
   
-2.  Jakmile jsou všechny projekty vytvořen, spusťte BSCMAKE s všechny soubory .sbr jako vstup. Zástupné znaky. Například pokud jste měli adresáře projektu C:\X, C:\Y a C:\Z se soubory .sbr v nich a jste chtěli kombinovat všechny do jednoho souboru BSC programem, použijte BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. /o c:\whatever_directory\combined.bsc SBR k vytvoření souboru kombinované BSC programem.  
+2.  Jakmile jsou všechny projekty vytvořen, spusťte BSCMAKE s všechny soubory .sbr jako vstup. Zástupné znaky. Například pokud jste měli adresáře projektu C:\X, C:\Y a C:\Z se soubory .sbr v nich a jste chtěli kombinovat všechny do jednoho souboru BSC programem, použijte BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*.sbr /o c:\whatever_directory\combined.bsc k vytvoření souboru kombinované BSC programem.  
   
 ## <a name="see-also"></a>Viz také  
  [Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)   
