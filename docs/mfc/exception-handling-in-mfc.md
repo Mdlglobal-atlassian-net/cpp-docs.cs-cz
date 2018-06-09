@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239434"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování výjimek. K dispozici jsou dva mechanismů:  
@@ -63,7 +64,7 @@ Tento článek vysvětluje dostupné v prostředí MFC mechanismus zpracování 
  Pokud jste již vytvořili aplikaci pomocí maker výjimek prostředí MFC, můžete pokračovat v použití těchto maker v váš stávající kód, při použití výjimky jazyka C++ v váš nový kód. Článek [výjimky: změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) poskytuje pokyny, jak to udělat.  
   
 > [!NOTE]
->  Chcete-li C++ zpracování výjimek v kódu, vyberte na stránce vytváření kódu ve složce projektu C/C++ povolit výjimky jazyka C++ [stránky vlastností](../ide/property-pages-visual-cpp.md) dialogové okno, nebo použijte /GX – možnost kompilátoru. Výchozí hodnota je /GX-, což ho zakáže výjimek.  
+>  Chcete-li C++ zpracování výjimek v kódu, vyberte na stránce vytváření kódu ve složce projektu C/C++ povolit výjimky jazyka C++ [stránky vlastností](../ide/property-pages-visual-cpp.md) dialogové okno, nebo použijte [/EHsc](../build/reference/eh-exception-handling-model.md) – možnost kompilátoru.  
   
  Tento článek obsahuje následující témata:  
   

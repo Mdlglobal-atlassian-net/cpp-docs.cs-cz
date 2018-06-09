@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df6ecf03a5b1c92dc7e435fc014615db09422638
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcfac98c5ff36f84ec0b7c4d2fbd6ff40cbb0d4
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239447"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL – doplněk
 
@@ -28,9 +29,9 @@ Podpora MFC a knihovny jeho vícebajtové znakové sady MBCS vyžaduje další k
 
 **Visual Studio 2015**: jak kódování Unicode a MBCS MFC – knihovny DLL jsou součástí Visual C++ součástí instalace, ale podpora MFC není nainstalována ve výchozím nastavení. Visual C++ a rozhraní MFC jsou volitelné instalace konfigurace v instalačním programu sady Visual Studio. Chcete-li mít jistotu, že je nainstalována MFC, zvolte **vlastní** v instalačním programu a v části **programovací jazyky**, ujistěte se, že **Visual C++** a **Microsoft Foundation Třídy pro jazyk C++** jsou vybrány. Pokud jste již nainstalovali Visual Studio, budete vyzváni k instalaci Visual C++ nebo MFC, při pokusu o vytvoření projektu knihovny MFC.
 
-**Visual Studio 2017**: kódování Unicode a MBCS MFC – knihovny DLL, které jsou nainstalovány s **vývoj aplikací s jazykem C++** zatížení při výběru **MFC a knihovna ATL podporují** z **volitelné Součásti** podokně. Pokud vaše instalace neobsahuje tyto součásti, můžete spustit instalační program z **nové projekty** dialogové okno pomocí **otevřete instalační program Visual Studio** odkaz.
+**Visual Studio 2017**: kódování Unicode a MBCS MFC – knihovny DLL, které jsou nainstalovány s **vývoj aplikací s jazykem C++** zatížení při výběru **MFC a knihovna ATL podporují** z **volitelné Součásti** podokně. Pokud vaše instalace neobsahuje tyto součásti, přejděte na **souboru | Nové projekty** dialogové okno a kliknutím **otevřete instalační program Visual Studio** odkaz.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [MFC – knihovní verze](../mfc/mfc-library-versions.md)
 
