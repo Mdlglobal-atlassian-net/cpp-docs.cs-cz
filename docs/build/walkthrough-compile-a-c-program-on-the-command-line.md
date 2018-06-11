@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Kompilace programu v jazyce C na příkazovém řádku | Microsoft Docs'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,28 +15,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e303a9e1618c73d173e9d23c614cfc506ec68a
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253786"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Návod: Kompilace programu v jazyce C na příkazovém řádku
 Visual C++ obsahuje kompilátor C, který můžete použít k vytvoření všechno, co od základní konzoly programy úplné aplikace na ploše systému Windows, mobilní aplikace a další.  
   
  Tento návod ukazuje, jak vytvořit základní, "Hello, World"-stylu programu C pomocí textového editoru a pak jeho kompilace příkazového řádku. Pokud by se místo fungovat v jazyce C++ v příkazovém řádku, najdete v části [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Pokud chcete akci prostředí Visual Studio IDE místo pomocí příkazového řádku najdete v tématu [návod: práce s projekty a řešeními (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) nebo [pomocí prostředí Visual Studio IDE pro vývoje v jazyce C++ plochy](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="prerequisites"></a>Požadavky  
- Pro dokončení tohoto návodu, musíte instalaci sady Visual Studio a volitelné součásti Visual C++ nebo Microsoft Visual C++ sestavení nástroje.  
+## <a name="prerequisites"></a>Požadavky
+
+Pro dokončení tohoto návodu, musíte instalaci sady Visual Studio a volitelné součásti Visual C++ nebo nástroje pro sestavení pro Visual Studio.  
   
- Visual Studio je výkonný integrované vývojové prostředí, které podporuje o plně vybavený editor, správci prostředků, ladicí programy a kompilátory pro mnoho jazyky a platformy. Informace o těchto funkcích a o tom, jak stáhnout a nainstalovat Visual Studio, včetně edice free Visual Studio Community, najdete v části [VisualStudio.com](https://www.visualstudio.com/).  
+Visual Studio je výkonný integrované vývojové prostředí, které podporuje o plně vybavený editor, správci prostředků, ladicí programy a kompilátory pro mnoho jazyky a platformy. Informace o těchto funkcích a o tom, jak stáhnout a nainstalovat Visual Studio, včetně edice free Visual Studio Community, najdete v části [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio).  
   
- Visual Studio Tools sestavení nainstaluje pouze kompilátory příkazového řádku, nástroje a knihovny, které potřebujete k vytvoření programy C a C++. Je ideální pro prostředí sestavení nebo učebny vykonává a nainstaluje poměrně rychle. Chcete-li nainstalovat jenom nástroje příkazového řádku, stáhněte [sestavení nástroje sady Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) a spusťte instalační program. Další informace najdete v tématu [nástroje sestavení Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+Nástroje pro sestavení pro Visual Studio verzi sady Visual Studio nainstaluje pouze příkazového řádku sady nástrojů, kompilátory, nástroje a knihovny, které potřebujete k vytvoření programy C a C++. Je ideální pro prostředí sestavení nebo učebny vykonává a nainstaluje poměrně rychle. Chcete-li nainstalovat jenom příkazového řádku sady nástrojů, stáhněte [nástroje sestavení pro Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) a spusťte instalační program.  
   
- Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné ověřit, zda jsou nainstalovány nástroje a že se dostanete z příkazového řádku. Visual C++ má komplexní požadavky na prostředí příkazového řádku a hledat tak nástroje, hlavičky a knihovny, které používá. **Visual C++ nelze použít v okně příkazového řádku prostý**. Je nutné *příkazový řádek vývojáře* okno, které je okno regulární příkazového řádku, který nemá všechny požadované prostředí proměnné nastavit. Naštěstí Visual C++ nainstaluje zástupce můžete spustit na příkazovém řádku vývojáře se mají nastavit pro sestavení příkazového řádku prostředí. Bohužel názvy zástupce příkazového řádku vývojáře a kde se nacházejí se liší v téměř všechny verze aplikace Visual C++ a v různých verzích systému Windows. První úlohu návod je nalezení správné zástupce, který chcete použít.  
+Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné ověřit, zda jsou nainstalovány nástroje a že se dostanete z příkazového řádku. Visual C++ má komplexní požadavky na prostředí příkazového řádku a hledat tak nástroje, hlavičky a knihovny, které používá. **Visual C++ nelze použít v okně příkazového řádku prostý**. Je nutné *příkazový řádek vývojáře* okno, které je okno regulární příkazového řádku, který nemá všechny požadované prostředí proměnné nastavit. Naštěstí Visual C++ nainstaluje zástupce můžete spustit na příkazovém řádku vývojáře se mají nastavit pro sestavení příkazového řádku prostředí. Bohužel názvy zástupce příkazového řádku vývojáře a kde se nacházejí se liší v téměř všechny verze aplikace Visual C++ a v různých verzích systému Windows. První úlohu návod je nalezení správné zástupce, který chcete použít.  
   
 > [!NOTE]
->  Zástupce příkazového řádku vývojáře automaticky nastaví správné cesty pro kompilátoru a nástroje a pro všechny požadované hlavičky a knihovny. Některé z těchto hodnot se liší u každé konfiguraci sestavení. Je nutné nastavit tyto hodnoty prostředí sami Pokud nepoužijete mezi zástupce. Další informace najdete v tématu [nastavit cesty a proměnných prostředí pro sestavení příkazového řádku](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Protože je komplexní prostředí sestavení, důrazně doporučujeme, že abyste použili zástupce příkazového řádku vývojáře místo vytváření vlastní.  
+> Zástupce příkazového řádku vývojáře automaticky nastaví správné cesty pro kompilátoru a nástroje a pro všechny požadované hlavičky a knihovny. Některé z těchto hodnot se liší u každé konfiguraci sestavení. Je nutné nastavit tyto hodnoty prostředí sami Pokud nepoužijete mezi zástupce. Další informace najdete v tématu [nastavit cesty a proměnných prostředí pro sestavení příkazového řádku](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Protože je komplexní prostředí sestavení, důrazně doporučujeme, že abyste použili zástupce příkazového řádku vývojáře místo vytváření vlastní.  
   
 ## <a name="open-a-developer-command-prompt"></a>Otevřete příkazový řádek vývojáře  
   
@@ -63,7 +65,7 @@ Visual C++ obsahuje kompilátor C, který můžete použít k vytvoření všech
     > [!NOTE]
     >  Pokud dojde k chybě, jako je "'cl' nebyl rozpoznán jako vnitřního ani vnějšího příkazu, spustitelného programu nebo dávkového souboru" Chyba C1034 nebo chyba LNK1104 při spuštění **cl** příkaz, pak buď nejsou pomocí příkazového řádku vývojáře nebo je něco špatně s instalací sady Visual C++. Než budete pokračovat, je nutné opravit tento problém.  
   
-     Pokud nemůžete najít vývojář zástupce příkazového řádku, nebo pokud se zobrazí chybové hlášení, když zadáte `cl`, pak instalaci aplikace Visual C++ pravděpodobně došlo k potížím. Zkuste znovu nainstalovat součást Visual C++ v sadě Visual Studio nebo Visual Studio Tools sestavení přeinstalujte. Nemáte přejděte k další části dokud to funguje. Další informace o instalaci a řešení potíží s Visual C++ najdete v tématu [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio).  
+     Pokud nemůžete najít vývojář zástupce příkazového řádku, nebo pokud se zobrazí chybové hlášení, když zadáte `cl`, pak instalaci aplikace Visual C++ pravděpodobně došlo k potížím. Zkuste znovu nainstalovat součást Visual C++ v sadě Visual Studio nebo přeinstalovat nástroje sestavení pro Visual Studio. Nemáte přejděte k další části dokud to funguje. Další informace o instalaci a řešení potíží s Visual Studio najdete v tématu [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio).  
   
     > [!NOTE]
     >  V závislosti na verzi Windows na počítači a konfiguraci zabezpečení systému, možná budete muset pravým tlačítkem a otevřete místní nabídku pro vývojáře zástupce příkazového řádku a potom zvolte **spustit jako správce** na úspěšně sestavit a spustit program, který vytvoříte podle tohoto návodu.  

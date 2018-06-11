@@ -1,7 +1,7 @@
 ---
 title: MASM pro x64 (ml64.exe) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b17771239ff9c89b765576ba49515463db42386f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253799"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM pro x64 (ml64.exe)
 
-Visual Studio obsahuje 32bitové a 64bitové verze hostované verze MASM cíl x64 kódu. S názvem ml64.exe, to je assembleru, který přijímá x64 assembleru jazyk. Nástroje příkazového řádku MASM se instalují, když zvolíte C++ zatížení při instalaci sady Visual Studio. Tyto nástroje nejsou k dispozici jako samostatný soubor ke stažení. Stáhnout a nainstalovat kopii sady Visual Studio najdete v tématu [ https://www.visualstudio.com/ ](https://www.visualstudio.com/). Pokud chcete nainstalovat Visual Studio IDE, ale chcete jenom nástroje příkazového řádku, přečtěte si téma **nástroje sestavení pro Visual Studio 2017** možnost [Visual Studio stáhne](https://www.visualstudio.com/downloads/) stránky.
+Visual Studio obsahuje 32bitové a 64bitové verze hostované verze assembleru Microsoft (MASM) do cílové x64 kódu. S názvem ml64.exe, to je assembleru, který přijímá x64 assembleru jazyk. Nástroje příkazového řádku MASM se instalují, když zvolíte C++ zatížení při instalaci sady Visual Studio. Nástroje pro MASM nejsou k dispozici jako samostatný soubor ke stažení. Pokyny o tom, jak stáhnout a nainstalovat kopii sady Visual Studio najdete v tématu [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio). Pokud jste neinstalujte dokončení Visual Studio IDE, ale chcete jenom nástroje příkazového řádku, stáhněte si [nástroje sestavení pro Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).
 
 Použít vytvářet MASM kód pro x64 cílí na příkazovém řádku, musíte použít příkazový řádek vývojáře pro x64 cíle, které nastaví požadované cesty a jiných proměnných prostředí. Informace o tom, jak spustit příkazový řádek vývojáře najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../../build/building-on-the-command-line.md).
 

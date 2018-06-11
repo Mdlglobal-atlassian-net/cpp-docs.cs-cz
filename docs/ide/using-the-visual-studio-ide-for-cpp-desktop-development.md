@@ -1,6 +1,6 @@
 ---
 title: Pomocí sady Visual Studio IDE pro vývoj C++ plochy | Microsoft Docs
-ms.date: 11/27/2017
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328877"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253812"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
 
@@ -27,7 +27,7 @@ Prostředí Visual Studio integrované vývoj prostředí (IDE) nabízí sadu fu
 
 ## <a name="prerequisites"></a>Požadavky
 
-Pokud Visual Studio jste si ještě nenainstalovali, nyní je čas. Chcete-li získat sady Visual Studio, můžete stáhnout z [Visual Studio stáhne](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Nezapomeňte zahrnout nástroje pro vývoj Visual C++ při instalaci Visual Studio, protože nejsou nainstalované ve výchozím nastavení. Další informace o tom, jak instalaci sady Visual Studio najdete v tématu [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio).
+Pokud Visual Studio jste si ještě nenainstalovali, nyní je čas. Odkazy na stažení a rychlé návod najdete v tématu [podpory nainstalovat C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md). Další informace o instalaci sady Visual Studio obecně a tipy pro odstraňování potíží Pokud něco pokazí, najdete v [instalaci sady Visual Studio](/visualstudio/install/install-visual-studio). Při volbě **vývoj aplikací s jazykem C++** zatížení zahrnuje kompilátory C++, nástroje a knihovny při instalaci Visual Studio, protože nejsou nainstalované ve výchozím nastavení.
 
 Tyto postupy předpokládají, že jste nainstalovali Visual Studio a jazyka Visual C++ a komponent potřebných pro vývoj Windows Desktop. Také předpokládáme, že rozumíte základy jazyka C++. Pokud potřebujete další C++, existuje mnoho knihy a webové prostředky k dispozici. Jeden dobré spustit se [Začínáme](https://isocpp.org/get-started) stránky webu standardní C++ Foundation.
 

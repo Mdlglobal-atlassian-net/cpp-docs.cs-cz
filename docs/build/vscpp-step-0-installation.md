@@ -2,7 +2,7 @@
 title: Instalace podpory C++ v sadě Visual Studio | Microsoft Docs
 description: Nainstalovat Visual Studio – podpora pro Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/08/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253753"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory C++ v sadě Visual Studio
 
@@ -32,17 +33,17 @@ Pokud jste to ještě stáhli a nainstalovali Visual Studio a nástroje Visual C
 
 - Dostatek volného místa na disku. Visual Studio vyžaduje alespoň 7GB místa na disku a může trvat 50GB nebo více, pokud jsou nainstalovány mnoho běžných možností. Doporučujeme, abyste že ho nainstalujete na jednotce C:.
 
-Podrobnosti na místo na disku a požadavky na operační systém najdete v tématu [2017 požadavky sady Visual Studio](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). Instalační program sestavy, kolik místa na disku je vyžadován pro možnosti, které vyberete.
+Podrobnosti na místo na disku a požadavky na operační systém najdete v tématu [produktu rodiny požadavky sady Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). Instalační program sestavy, kolik místa na disku je vyžadován pro možnosti, které vyberete.
 
 ## <a name="installation"></a>Instalace
 
 1. Stáhněte si nejnovější verzi instalačního programu Visual Studio 2017 pro systém Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Nainstalovat Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Nainstalovat Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > Community edition je pro jednotlivé vývojáři, učebny learning, academic výzkum a vývoj s otevřeným zdrojem. Pro jiné účely, nainstalujte <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> nebo <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > Community edition je pro jednotlivé vývojáři, učebny learning, academic výzkum a vývoj s otevřeným zdrojem. Pro jiné účely, nainstalujte <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> nebo <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
 1. Najít soubor instalačního programu můžete stáhnout a spustit ho. Může se zobrazit v prohlížeči nebo může být ve složce pro stahování. Instalační program potřebuje správce oprávnění ke spouštění. Může se zobrazit **řízení uživatelských účtů** dialogové okno s výzvou, abyste udělit oprávnění, aby instalační program provést změny v systému; zvolte **Ano**. Pokud máte potíže, najít stažený soubor v Průzkumníku souborů, klikněte pravým tlačítkem myši na ikonu instalační program a vybrat **spustit jako správce** v místní nabídce.
 

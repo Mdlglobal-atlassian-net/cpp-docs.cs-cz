@@ -1,6 +1,6 @@
 ---
 title: Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs
-ms.date: 5/11/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34336335"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253877"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak vytvářet sestavu o problém s Visual C++ nástrojů nebo dokumentace
 
@@ -358,7 +358,7 @@ Vytvořte vaše zkopírujte jako minimální IDE projekt, pak balíček komprima
 Existuje několik dobrý způsoby, jak získat sestavy do us. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Získáte také přímo na stránkách k jednotlivým komunity vývojářů výběrem **názor produkt** tlačítko v dolní části této stránky. Výběr závisí na, zda chcete pomocí nástrojů integrovaných v prostředí IDE pro snímání obrazovky a uspořádání sestavy pro příspěvků na stránkách komunity vývojářů, nebo pokud chcete používat přímo na webu.
 
 > [!NOTE]
-> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Společnost Microsoft se zavazuje dodržování všechny data o ochraně osobních údajů zákony a nařízení. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [Microsoft Visual Studio rodiny ochrany osobních údajů produktu](https://www.visualstudio.com/dn948229).
+> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Společnost Microsoft se zavazuje dodržování všechny data o ochraně osobních údajů zákony a nařízení. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [prohlášení o ochraně osobních údajů Microsoft](https://www.visualstudio.com/dn948229).
 
 ### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroj problém
 
