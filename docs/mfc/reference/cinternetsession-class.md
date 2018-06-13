@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374562"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession – třída
 Vytvoří a inicializuje jeden nebo několik souběžných relací Internetu a v případě potřeby popisuje připojení k proxy serveru.  

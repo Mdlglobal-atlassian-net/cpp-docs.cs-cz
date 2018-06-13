@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094368"
 ---
 # <a name="type-system-ccx"></a>Systém typů (C + +/ CX)
 Pomocí prostředí Windows Runtime architektury, můžete pomocí C + +/ CX, Visual Basic, Visual C# a JavaScript pro zápis aplikace a součásti, které přímo přístup k rozhraní API systému Windows a zajistit vzájemnou funkční spolupráci s jinými aplikace Windows Runtime a součásti. Univerzální aplikace platformy Windows, které jsou napsané v jazyce C++ kompilace nativního kódu, které provádí přímo v procesoru. Univerzální platforma Windows aplikace, které jsou napsané v C# nebo Visual Basic zkompilovat do převodního jazyka Microsoft (MSIL) a spustit v common language runtime (CLR). Univerzální aplikace platformy Windows, které jsou napsané v jazyce JavaScript spustit v prostředí runtime. Sami součásti operačního systému Windows Runtime jsou napsané v jazyce C++ a spouštět v nativním kódu. Všechny tyto součásti a Universal Windows Platform apps komunikovat přímo přes rozhraní binární aplikace Windows Runtime (ABI).  

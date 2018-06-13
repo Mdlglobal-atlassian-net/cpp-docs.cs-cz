@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384017"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Návod: Přidání objektu D2D do projektu MFC
 Tento názorný postup učí, jak přidat základní Direct2D (D2D) objektu pro aplikaci Visual C++, projektu Microsoft Foundation Class Library (MFC) a poté sestavení projektu do aplikace, která vytiskne "Hello, world" v přechodu pozadí.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350846"
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
 MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velikost můžete vytvořit a můžete řídit způsob, jakým upraví rozložení pro změnu velikosti. Tlačítka v dolní části dialogového okna můžete například připojit k dolnímu okraji tak, aby zůstaly vždy v dolní části. Můžete také nastavit určité ovládací prvky, jako je například textová pole, rozevírací seznamy a editboxes rozbalte jako uživatel rozšíří dialogové okno.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377885"
 ---
 # <a name="event-maps"></a>Mapy událostí
 Vždy, když ovládacího prvku, které chcete upozornit jeho kontejner, který (například stisknutí klávesy, klikněte na tlačítko myši nebo ke změně stavu ovládacího prvku) některá z akcí (určené vývojář ovládacího prvku) došlo k volání funkce spouštění událostí. Tato funkce upozorní kontejneru ovládacího prvku, který některé důležité akce došlo k chybě ve ohlásí související události.  

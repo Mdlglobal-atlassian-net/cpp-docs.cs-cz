@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891718"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe
 Winmdidl.exe a midlrt.exe povolit COM úrovni interakce mezi nativního kódu C++ a prostředí Windows Runtime součásti. Winmdidl.exe přijímá jako vstup .winmd soubor, který obsahuje metadata pro součást prostředí Windows Runtime a uloží soubor IDL. Midlrt.exe převede tento soubor IDL hlavičkových souborů, které můžou využívat kódu C++. Oba nástroje spusťte na příkazovém řádku.  
