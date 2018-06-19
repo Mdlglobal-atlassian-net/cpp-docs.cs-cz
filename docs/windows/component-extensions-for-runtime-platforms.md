@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862637"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Přípony komponent pro platformy běhového prostředí
 Visual C++ poskytuje jazyková rozšíření pomohou program pro platformy běhového prostředí. Pomocí C + +/ CX, můžete naprogramovat aplikace pro univerzální platformu Windows a součástí, které kompilace nativního kódu. I když aplikace pro univerzální platformu Windows můžete vytvořit pomocí programování přímo na rozhraní Windows Runtime COM pomocí C + +/ CX, můžete pracovat s konstruktory výjimky a další moderní verze jazyka C++ programování idioms. Chcete-li povolit C++ programování v spravovaného spouštění prostředí na platformě .NET, můžete použít C + +/ CLI.  

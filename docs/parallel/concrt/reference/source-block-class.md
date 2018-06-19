@@ -48,6 +48,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694960"
 ---
 # <a name="sourceblock-class"></a>source_block – třída
 `source_block` Třída je abstraktní základní třídu pro jen zdroj bloky. Třída poskytuje funkce správy základní odkaz jako dobře běžné chyby kontroly.  

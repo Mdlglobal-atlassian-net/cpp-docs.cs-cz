@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342212"
 ---
 # <a name="common-dialog-classes"></a>Společné třídy dialogových oken
 Kromě třída [CDialog](../mfc/reference/cdialog-class.md), MFC poskytuje několik třídy odvozené od třídy `CDialog` zapouzdřují běžně používané dialogových oken, jak je znázorněno v následující tabulce. Dialogová okna zapouzdřené se používá označení "běžné dialogových oken" a jsou součástí Windows běžné dialogové okno knihovny (COMMDLG. KNIHOVNY DLL). Šablony dialogového okna prostředků a kód pro tyto třídy jsou uvedeny v systému Windows běžné dialogových oken, které jsou součástí systému Windows verze 3.1 nebo novější.  

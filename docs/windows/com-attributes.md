@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861383"
 ---
 # <a name="com-attributes"></a>COM – atributy
 Atributy COM vloží kód pro podporu mnoha oblastech vývoj COM a rozhraní .NET Framework common language runtime vývoj. Tyto oblasti v rozsahu od implementace vlastní rozhraní a podporu existující rozhraní podpory uložených vlastností, metod a události. Kromě toho podporu naleznete složené a implementaci ovládacího prvku ActiveX.  

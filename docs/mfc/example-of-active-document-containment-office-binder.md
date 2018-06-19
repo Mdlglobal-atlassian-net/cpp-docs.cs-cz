@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345957"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Příklad zahrnutí aktivního dokumentu: modul vazby sady Office
 Microsoft Office Binder je příkladem kontejner. Aplikace Office Binder obsahuje dvě podokna primární, stejně jako kontejnery obvykle. V levém podokně obsahuje ikony, které odpovídají aktivní dokumenty v vazače. Je volána každý dokument *části* v rámci vazače. Vazač může například obsahovat dokumenty aplikace Word, PowerPoint soubory, tabulky aplikace Excel a tak dále.  

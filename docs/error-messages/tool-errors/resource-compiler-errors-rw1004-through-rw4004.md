@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320102"
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>Chyby kompilátoru prostředků RW1004 až RW4004
 Tato část poskytuje přehled chyb generovaných sestavovacími nástroji. Nápovědu v konkrétní chybová zpráva, klikněte na tlačítko myši na číslo chyby v okně výstupu a stiskněte klávesu F1 nebo zadejte číslo chyby v **vyhledejte** pole v indexu.

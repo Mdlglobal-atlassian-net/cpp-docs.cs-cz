@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692087"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Postupy: Použití objektu combinable ke zlepšení výkonu
 Tento příklad ukazuje způsob použití [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třída vypočítat součet čísel v [std::array](../../standard-library/array-class-stl.md) objektu, která jsou prime. `combinable` Třída zlepšuje odstraněním sdílený stav.  

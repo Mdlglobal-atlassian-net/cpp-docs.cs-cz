@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863735"
 ---
 # <a name="atl-predefined-symbols"></a>Předdefinované symboly ATL
 Tyto symboly jsou definovány v ATL hlavičkových souborů, ale podporují standardní funkce aplikací systému Windows a akce. Tyto symboly jsou používány především s dialogová okna. Pokud pracujete s dialogů a ovládacích prvků v [editoru dialogového okna](../windows/dialog-editor.md), tyto symboly se zobrazí v okně vlastnosti přidružené k běžné ovládací prvky. Například pokud vašem dialogovém okně tlačítko Zrušit, tento příkaz bude spojený s symbol IDCANCEL v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  

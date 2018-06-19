@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847023"
 ---
 # <a name="hdrstop"></a>hdrstop
 Poskytuje větší kontrolu nad názvy souborů předkompilace a nad umístěním, ve kterém je uložen stav kompilace.  

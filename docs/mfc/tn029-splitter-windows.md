@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384720"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Dělená okna
 Tato poznámka se popisuje MFC [CSplitterWnd třída](../mfc/reference/csplitterwnd-class.md), který poskytuje okno rozdělí a spravuje Změna velikosti windows jiných podokně.  

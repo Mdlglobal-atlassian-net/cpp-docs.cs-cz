@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856498"
 ---
 # <a name="accelerator-type-property"></a>Vlastnost typu akcelerátoru
 Akcelerátor **typ** vlastnost určuje, zda je klávesová zkratka přidružené k ID akcelerátoru virtuální kombinace klíče nebo klíče hodnotu ASCII nebo ANSI:  

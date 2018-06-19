@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385414"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Formát dat trvalých objektů
 Tato poznámka popisuje MFC rutiny, které podporují trvalé objekty C++ a formát data objektu, když je uložena v souboru. Vztahuje se pouze na tříd pomocí [declare_serial –](../mfc/reference/run-time-object-model-services.md#declare_serial) a [implement_serial –](../mfc/reference/run-time-object-model-services.md#implement_serial) makra.  

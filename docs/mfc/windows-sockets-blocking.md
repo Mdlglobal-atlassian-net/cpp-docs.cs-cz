@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385947"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: Blokování
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá blokování. Další problémy, které jsou popsané v článcích: [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  

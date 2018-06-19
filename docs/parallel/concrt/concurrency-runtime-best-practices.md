@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695639"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Osvědčené postupy Concurrency Runtime
 Tato část popisuje doporučené postupy, které můžete využít Concurrency Runtime. Tyto doporučené postupy pro použití k [Parallel Library vzory](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), [knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)a [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  

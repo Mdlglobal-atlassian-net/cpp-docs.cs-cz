@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342586"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienti automatizace: Použití knihoven typů
 Klienti automatizace musí mít informace o vlastnosti a metody serveru objekty, když jsou klienti k manipulaci s objekty servery. Vlastnosti mají datové typy; metody často návratové hodnoty a přijměte parametry. Klient vyžaduje informace o typech dat všechny tyto staticky vytvořit vazbu na typ serveru.  

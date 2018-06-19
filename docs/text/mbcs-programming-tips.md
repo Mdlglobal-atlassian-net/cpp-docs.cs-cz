@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855276"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS – tipy pro programování
 Při vývoji nových aplikací byste měli používat kódování znaků Unicode pro všechny řetězce, které pravděpodobně koncoví uživatelé setkat. Znakové sady MBCS je starší verze technologie, která byla nahrazena kódování Unicode. Tento oddíl poskytuje tipy pro vývojáře, kteří musí zachovat existující programy, které používají rozhraní MBCS a pokud to není praktické převést na kódování Unicode. Doporučení platí pro aplikace MFC a aplikace napsané bez MFC. Témata zahrnují:  

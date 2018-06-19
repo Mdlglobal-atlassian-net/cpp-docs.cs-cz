@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334844"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Přístup ke všem členům kolekce
 Třídy MFC pole kolekce – i na základě šablon a není – používat pro přístup k jejich elementů indexy. Třídy MFC seznamu a mapy kolekce – i na základě šablon a není – použít jako ukazatel typu **pozice** k popisu dané pozici v rámci kolekce. Pro přístup k jedné nebo více členové těchto kolekcí, budete nejprve inicializovat označení pozice opakovaně předat tuto pozici do kolekce a požádejte ho vrátit na další prvek. Kolekce není zodpovědná za údržbu informace o průběhu iterace stavu. Tyto informace se ukládají v označení pozice. Ale s ohledem na konkrétní pozici, kolekce je odpovědná za vrácení na další prvek.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687189"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Postupy: Poskytování pracovních funkcí třídám call a transformer
 Toto téma znázorňuje několik způsobů, jak poskytování pracovních funkcí k [concurrency::call](../../parallel/concrt/reference/call-class.md) a [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) třídy.  

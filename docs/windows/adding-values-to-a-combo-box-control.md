@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858965"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Přidání hodnot do ovládacího prvku pole se seznamem
 Přidáním hodnoty do ovládacího prvku pole se seznamem, dokud máte otevřete dialogové okno editor.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861438"
 ---
 # <a name="class-attributes"></a>Atributy třídy
 Následující atributy se používají na [třída](../cpp/class-cpp.md) C++ – klíčové slovo.  

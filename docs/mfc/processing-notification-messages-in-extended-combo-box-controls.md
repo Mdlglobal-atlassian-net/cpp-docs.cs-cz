@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346773"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Zpracování zpráv s oznámením v ovládacích prvcích rozšířeného pole se seznamem
 Jak uživatelé pracují s pole rozšířeného pole se seznamem ovládacího prvku (`CComboBoxEx`) odešle zprávy s oznámením do nadřazeného okna, obvykle objekt zobrazení nebo dialogové okno. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Například pokud uživatel aktivuje rozevíracím seznamu nebo kliknutí v ovládacím prvku textového pole, **CBEN_BEGINEDIT** odeslání oznámení.  

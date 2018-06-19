@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687059"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP – rozhraní API pro jazyky C a C++
 Popisuje OpenMP C a C++ rozhraní API, jak je uvedeno ve specifikaci verze 2.0 z panelu zkontrolujte architektura OpenMP.  

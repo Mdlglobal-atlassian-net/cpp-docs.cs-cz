@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856593"
 ---
 # <a name="internationalization-strategies"></a>Strategie internacionalizace
 V závislosti na cílový operační systémy a trhy máte několik Strategie internacionalizace:  

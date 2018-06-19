@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345290"
 ---
 # <a name="array-list-and-map-classes"></a>Třídy pole, seznamu a mapy
 Pro zpracování agregace dat, poskytuje knihovna tříd skupinu typu tříd kolekce – polí, seznamy a mapy, které mohou být uloženy různé objektu a předdefinovaných typů. Kolekce jsou dynamicky velikost. Tyto třídy lze v žádné program zapsán pro Windows, nebo ne. Jsou však velmi užitečné pro implementaci datové struktury, které definují vaší třídy dokumentů v rozhraní. Třídy specializované kolekce můžete snadno odvozena z nich, nebo můžete je vytvořit podle třídy šablony. Další informace o těchto přístupů, najdete v článku [kolekce](../mfc/collections.md). Seznam tříd kolekce šablony, najdete v článku [třídy šablon pro pole, seznamy a mapy](../mfc/template-classes-for-arrays-lists-and-maps.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687540"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Multithreading s použitím jazyka C a prostředí Win32
 Microsoft Visual C++ poskytuje podporu pro vytváření aplikací s více vlákny. Měli byste zvážit použití více než jedno vlákno, pokud aplikace potřebuje k provedení drahými operacemi, které by způsobily uživatelského rozhraní pro přestat reagovat.  

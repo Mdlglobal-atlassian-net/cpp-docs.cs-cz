@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860057"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Nastavení aplikace, Průvodce projektem Win 32
 Tuto stránku průvodce použijte k nastavení voleb pro projekt Win32.  

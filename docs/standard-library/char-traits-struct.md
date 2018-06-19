@@ -42,6 +42,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848408"
 ---
 # <a name="chartraits-struct"></a>char_traits – struktura
 
@@ -482,7 +483,7 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-`_Ch1` První dva znaky má být testována rovnosti jako **int_type –**s.
+`_Ch1` První dva znaky má být testována rovnosti jako **int_type –** s.
 
 `_Ch2` Druhý dva znaky má být testována rovnosti jako `int_type`s.
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343710"
 ---
 # <a name="image-information-in-image-lists"></a>Informace o obrázku v seznamu obrázků
 [CImageList](../mfc/reference/cimagelist-class.md) zahrnuje několik funkcí, které načtení informací ze seznamu obrázků. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) – členská funkce doplní `IMAGEINFO` struktura s informacemi o jednu bitovou kopii, včetně popisovače bitmap bitové kopie a maska, počet barevných rovin a bitů na pixel a ohraničující obdélník bitové kopie v rámci rastrový obrázek bitové kopie. Tyto informace můžete použít k manipulaci se přímo bitmap pro bitovou kopii.  

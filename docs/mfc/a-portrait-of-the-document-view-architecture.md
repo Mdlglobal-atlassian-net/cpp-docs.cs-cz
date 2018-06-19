@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329813"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portrét architektury dokument/zobrazení
 V typické aplikaci MFC jsou spárován dokumentů a zobrazení. Data jsou uložena v dokumentu, ale zobrazení obsahuje privilegovaný přístup k datům. Oddělení dokumentu ze zobrazení odděluje úložiště a údržby dat od jeho zobrazení.  

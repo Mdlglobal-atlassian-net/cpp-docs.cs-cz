@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858991"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Přidání ovládacích prvků do dialogového okna způsobí nefunkčnost okna.
 Po přidání do běžného ovládacího prvku nebo ovládacího prvku RichEdit do dialogového okna, nebude se zobrazovat při testování dialogové okno nebo dialogové okno samotné se nezobrazí.  

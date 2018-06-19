@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332124"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Přístup k vloženému ovládacímu prvku měsíční kalendář
 Objekt ovládacího prvku Kalendář embedded měsíc je přístupná z `CDateTimeCtrl` objekt s volání [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) – členská funkce.  

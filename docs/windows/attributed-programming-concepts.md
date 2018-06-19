@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860187"
 ---
 # <a name="attributed-programming-concepts"></a>Koncepty programování s atributy
 Visual C++ zahrnuje celou řadu materiály, které vám pomohou při použití atributů v programy můžou. Atributy, nová funkce v jazyce Visual C++, jsou navrženy pro zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele dynamické knihovny (DLL) k vložení kódu nebo úpravě kódu v souborech generovaný objekt. Existují atributy, které pomáhají při vytváření soubory .idl, rozhraní, knihovny typů a další elementy COM. Atributy v integrované vývojové prostředí (IDE), jsou podporovány prostřednictvím průvodců a okno vlastností.  

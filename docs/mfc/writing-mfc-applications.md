@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385986"
 ---
 # <a name="writing-mfc-applications"></a>Psaní aplikací MFC
 Tento článek vysvětluje počáteční kroky, které je třeba provést vyvíjet aplikaci. Nejprve je nutné rozhodnout, jaký druh aplikace píšete. Některé z těchto možností se zabývá [volby při návrhu aplikací](../mfc/application-design-choices.md). Bude vaše aplikace:  

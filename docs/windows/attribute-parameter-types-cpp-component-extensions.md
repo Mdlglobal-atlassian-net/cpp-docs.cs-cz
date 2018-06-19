@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860304"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Typy parametrů atributů (rozšíření komponent C++)
 Hodnoty předaný atributy musí být známo kompilátoru v době kompilace.  Parametry atributu může být z následujících typů:  

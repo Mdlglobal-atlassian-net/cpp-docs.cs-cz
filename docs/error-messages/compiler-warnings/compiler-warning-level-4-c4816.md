@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303586"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>C4816 kompilátoru upozornění (úroveň 4)
 'param': parametr má nulovou velikostí pole, která bude zkrácen (Pokud je objekt předán odkazem)  

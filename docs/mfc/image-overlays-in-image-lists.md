@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345404"
 ---
 # <a name="image-overlays-in-image-lists"></a>Překryvy obrázků v seznamech obrázků
 Každý seznamu obrázků ([CImageList](../mfc/reference/cimagelist-class.md)) obsahuje seznam bitové kopie na použití jako překrytí masky. "Překrytí maska" je obrázek, který vykresluje transparentně přes jiné image. Žádný obrázek slouží jako masku překrytí. Můžete zadat až čtyři masek překrytí na seznamu obrázků.  

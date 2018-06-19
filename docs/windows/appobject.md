@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856970"
 ---
 # <a name="appobject"></a>appobject
 Identifikuje třída typu coclass jako objekt aplikace, který je přidružen k aplikaci úplné .exe a označuje, že jsou globálně dostupnou v této funkce a vlastnosti coclass [knihovny typů](../mfc/automation-clients-using-type-libraries.md).  

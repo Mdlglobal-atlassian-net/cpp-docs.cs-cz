@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854808"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Přiřazení klíče akcelerátoru k položce nabídky
 Tolikrát, kolikrát chcete položku nabídky a kombinace kláves pro vydejte stejný příkaz programu. Můžete provést přiřazením stejný identifikátor prostředku (ID) pro položku nabídky a položku v tabulce akcelerátorů vaší aplikace. Popisek položky nabídky Zobrazit název akcelerátor upravte. Další informace o položek nabídky a klávesy akcelerátoru najdete v tématu [přidružení položku nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md).  

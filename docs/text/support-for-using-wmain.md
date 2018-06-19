@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856485"
 ---
 # <a name="support-for-using-wmain"></a>Podpora použití funkce wmain
 Visual C++ podporuje definování **wmain** funkce a předání argumentů široká charakterová do vaší aplikace kódování Unicode. Deklarovat formální parametry **wmain**, formátu podobná **hlavní**. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. `argv` a `envp` parametry, které **wmain** typu `wchar_t*`. Příklad:  

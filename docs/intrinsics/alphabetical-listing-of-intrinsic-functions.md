@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336502"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Abecední seznam vnitřní funkce
 Následující části popisují specifické pro společnost Microsoft vnitřní funkce dostupné na některé nebo všechny architektury. Jiné podporované – vnitřní prvky jsou zdokumentovat výrobci procesorů, buď v hlavičkových souborů nebo na svých webech. Najdete v článku [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md), [x86 vnitřní funkce](../intrinsics/x86-intrinsics-list.md), a [x64 – vnitřní prvky](../intrinsics/x64-amd64-intrinsics-list.md) oddíly pro odkazy na dokumentaci výrobce. Funkce C Runtime Library (CRT), které mají vnitřní funkce je implementována nejsou uvedeny zde; Tyto funkce jsou dokumentovány v článku [referenční dokumentace knihoven C Run-Time](../c-runtime-library/c-run-time-library-reference.md).  

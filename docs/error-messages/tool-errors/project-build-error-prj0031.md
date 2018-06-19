@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318318"
 ---
 # <a name="project-build-error-prj0031"></a>Chyba sestavení projektu PRJ0031
 Vlastnost 'výstupy, pro vlastní sestavovací krok pro 'file' obsažené 'Makro souboru, který vyhodnocuje se na 'macro_expansion'.  

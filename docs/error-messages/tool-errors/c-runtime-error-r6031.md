@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303943"
 ---
 # <a name="c-runtime-error-r6031"></a>R6031 Chyba za běhu C
 Pokus o inicializaci CRT více než jednou. To znamená chyb v aplikaci.  

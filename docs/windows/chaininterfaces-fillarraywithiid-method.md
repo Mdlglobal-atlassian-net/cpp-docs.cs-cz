@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855939"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid – metoda
 Ukládá ID rozhraní definované `I0` parametr šablony do zadaného umístění v zadané pole rozhraní ID.  

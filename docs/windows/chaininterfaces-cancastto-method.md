@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860291"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo – metoda
 Určuje, zda zadaný rozhraní ID lze převést na každý specializací definované parametry jiné než výchozí šablony.  

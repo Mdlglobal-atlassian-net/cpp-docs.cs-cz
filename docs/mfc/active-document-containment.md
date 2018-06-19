@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332670"
 ---
 # <a name="active-document-containment"></a>Práce s kontejnery aktivních dokumentů
 Obsahování pro aktivní dokument je technologie, která poskytuje jeden rámec, ve kterém pro práci s dokumenty, namísto nutnosti vytvořit a použít více snímků aplikace pro každý typ dokumentu. V tomto OLE funguje s vložené objekty v rámci složeného dokumentu, ve kterém může být aktivní pouze jediný obsah, liší se od základní technologie OLE. V případě obsahování pro aktivní dokument aktivovat celý dokument (tedy celou aplikaci, včetně přidružených nabídek, panely nástrojů a tak dále) v kontextu jeden snímek.  

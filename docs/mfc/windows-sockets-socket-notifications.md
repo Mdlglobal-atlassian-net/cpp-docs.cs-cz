@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385577"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkce jsou funkce zpětného volání, které volá framework oznámit vaše objekt soketu se o důležitých událostech. Funkce oznámení jsou:  

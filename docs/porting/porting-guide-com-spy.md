@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845606"
 ---
 # <a name="porting-guide-com-spy"></a>Průvodce přenosem: COM Spy
 Toto téma je druhý v řadě články, které ukazuje upgradu starší projekty Visual C++ na nejnovější verzi sady Visual Studio. Ukázkový kód v tomto tématu se poslední kompilovat s Visual Studio 2005.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686123"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   Spuštění jednoduché paralelní smyčky
 Následující příklad ukazuje, jak učinit paralelní jednoduché smyčky pomocí `parallel for` – direktiva ([části 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) na stránce 16). Proměnné iterace smyčky je soukromé ve výchozím nastavení, takže není nutné explicitně zadat v klauzuli privátní.  

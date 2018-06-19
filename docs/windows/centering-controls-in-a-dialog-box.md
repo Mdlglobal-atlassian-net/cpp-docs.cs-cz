@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856681"
 ---
 # <a name="centering-controls-in-a-dialog-box"></a>Zarovnání ovládacích prvků v dialogovém okně
 ### <a name="to-center-controls-in-a-dialog-box"></a>Na střed ovládacích prvků v dialogovém okně  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342043"
 ---
 # <a name="creating-the-list-control"></a>Vytvoření ovládacího prvku seznam
 Jak řídit seznamu ([CListCtrl](../mfc/reference/clistctrl-class.md)) je vytvořen závisí na tom, jestli jste pomocí ovládacího prvku přímo nebo pomocí třídy [CListView](../mfc/reference/clistview-class.md) místo. Pokud používáte `CListView`, rozhraní framework vytvoří zobrazení v rámci jeho pořadí vytváření dokumentů/zobrazení. Vytváření zobrazení seznamu vytvoří ovládacího prvku seznam také (dva jsou samé). Ovládací prvek je vytvořen v zobrazení [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkce obslužné rutiny. V takovém případě je připraven k přidání položky prostřednictvím volání do ovládacího prvku [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

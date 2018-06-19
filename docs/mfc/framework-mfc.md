@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344393"
 ---
 # <a name="framework-mfc"></a>Framework (MFC)
 Práci s framework knihovna Microsoft Foundation Class (MFC) vychází z velké části několik hlavní třídy a několik nástrojů Visual C++. Některé třídy zapouzdřují velkou část Win32 aplikační programovací rozhraní (API). Ostatní třídy zapouzdřovat koncepty aplikace, jako jsou dokumenty, zobrazení a vlastní aplikace. Stále ostatní zapouzdřovat OLE a rozhraní ODBC a DAO funkcí přístup k datům.  

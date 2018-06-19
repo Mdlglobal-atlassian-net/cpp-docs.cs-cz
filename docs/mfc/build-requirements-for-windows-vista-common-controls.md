@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342157"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista
 Knihovna Microsoft Foundation Class (MFC) podporuje běžné ovládací prvky Windows verze 6.1. Běžné ovládací prvky jsou součástí [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a je součástí knihovny [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Knihovna poskytuje nové metody, které zlepšují existující třídy a nové třídy a metody, které podporují [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] běžné ovládací prvky. Když vytvoříte aplikaci, postupujte podle požadavků na kompilace a migrace, které jsou popsány v následujících částech.  

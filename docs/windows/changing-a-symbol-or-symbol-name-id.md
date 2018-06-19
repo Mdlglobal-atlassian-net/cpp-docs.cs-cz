@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857711"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Změna symbolu nebo názvu symbolu (ID)
 Když vytvoříte nový prostředek nebo objektu prostředků, přiřadí ji vývojového prostředí symbol výchozí název, například IDD_DIALOG1. Můžete použít [vlastnosti – okno](/visualstudio/ide/reference/properties-window) Chcete-li změnit výchozí název symbolu nebo chcete změnit název žádné symbolu již přidružených k prostředku.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385141"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Podpora kontextové nápovědy
 Tato poznámka popisuje pravidla pro přiřazování ID kontexty nápovědy a další pomoc problémy v prostředí MFC. Podpora kontextové nápovědy vyžaduje kompilátor nápovědy, která je k dispozici v jazyce Visual C++.  

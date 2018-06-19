@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858699"
 ---
 # <a name="international-enabling"></a>Podpora národních prostředí
 Nejvíce tradiční kód C a C++ provádí předpoklady o manipulaci znak a řetězce, které nefungují správně pro mezinárodní aplikace. Zatímco MFC a knihovna RTL – podporují kódování Unicode a MBCS, je stále pracovní musíte udělat. Vám tato část vysvětluje význam "podpora národních prostředí" v jazyce Visual C++:  

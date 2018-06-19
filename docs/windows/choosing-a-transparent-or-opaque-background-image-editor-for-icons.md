@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857909"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Výběr průhledného nebo neprůhledného pozadí (editor obrázků pro ikony)
 Při přesunutí nebo kopírování výběru z bitové kopie, pixelů ve výběru, které odpovídají aktuálním barvu pozadí jsou ve výchozím nastavení transparentní; není jejich skrývat pixelů v cílovém umístění.  

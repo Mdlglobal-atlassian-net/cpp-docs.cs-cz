@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856710"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Přidání, úprava nebo odstranění ovládacích prvků
 Použití editoru dialogových oken, můžete přidat, změnit velikost, upravit a odstranit ovládací prvky v dialogových oknech. Můžete také upravit vlastnosti ovládacího prvku, například jeho ID, nebo zda je původně viditelný v době běhu.  

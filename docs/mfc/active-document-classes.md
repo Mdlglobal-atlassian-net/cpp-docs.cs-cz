@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325913"
 ---
 # <a name="active-document-classes"></a>Třídy aktivních dokumentů
 Aktivní dokumenty mohou být zobrazeny v okně celého klientského webového prohlížeče, jako je například Internet Explorer 5.5, nebo v Active kontejneru, jako je například Microsoft Office vazač, který podporuje aktivní dokumenty.  

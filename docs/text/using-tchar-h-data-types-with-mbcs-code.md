@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858351"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Použití datových typů TCHAR.H s kódováním _MBCS
 Když manifestu konstanta **_MBCS** je definován, daná rutina obecného textu se mapuje na jednu z následujících druhů rutin:  

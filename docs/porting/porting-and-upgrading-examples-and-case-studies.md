@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850141"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Přenos a upgrade: Příklady a případové studie
 Můžete získat představu o druhy problémů, které můžete narazit trvání migrace z předchozí verze aplikace Visual C++ do stávající kontrolou scénářů migrace úspěšná.  

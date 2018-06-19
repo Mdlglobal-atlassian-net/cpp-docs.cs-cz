@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385895"
 ---
 # <a name="tree-control-item-selection"></a>Výběr položek ovládacího prvku strom
 Při výběru změní z jednu položku na jiný, ovládacím prvkem strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odešle [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) a [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) zpráv s oznámením. Obě oznámení zahrnují hodnotu, která určuje, zda změna výsledku kliknutí myši nebo stisknutí klávesy. Oznámení také obsahují informace o položce, který je získání výběru a položku, je ztráty výběr. Tyto informace slouží k nastavení atributů položky, které závisí na stavu výběru položky. Vrácení **TRUE** v reakci na **TVN_SELCHANGING** brání výběr z změna; vrácení **FALSE** umožňuje změnu.  

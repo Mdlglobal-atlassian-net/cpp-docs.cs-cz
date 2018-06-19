@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862719"
 ---
 # <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
 `Platform::Array<T>` Typ v jazyce C + +/ CX, nebo `array` – klíčové slovo v jazyce C + +/ CLI, deklaruje pole zadaného typu a počáteční hodnota.  

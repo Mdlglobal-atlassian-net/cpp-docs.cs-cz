@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334058"
 ---
 # <a name="accessing-run-time-class-information"></a>Přístup k běhovým informacím o třídě
 Tento článek vysvětluje, jak pro přístup k informacím o třídě objektu v době běhu.  

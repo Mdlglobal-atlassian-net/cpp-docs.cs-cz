@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344266"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Přetažení: Implementace cíle přetažení
 Tento článek popisuje jak provádět cíle přetažení vaší aplikace. Implementace cíle přetažení trvá mírně další práci než implementace zdroje přetažení, ale je stále poměrně jednoduché. Tyto postupy se rovněž vztahují na aplikacích jiných než OLE.  

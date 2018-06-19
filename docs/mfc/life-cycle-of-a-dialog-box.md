@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346178"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Životní cyklus dialogového okna
 Během životního cyklu dialogového okna uživatel vyvolá dialogové okno, obvykle uvnitř obslužná rutina, která vytvoří a inicializuje objektu dialogového okna, uživatel pracuje se dialogové okno a zavření dialogového okna.  

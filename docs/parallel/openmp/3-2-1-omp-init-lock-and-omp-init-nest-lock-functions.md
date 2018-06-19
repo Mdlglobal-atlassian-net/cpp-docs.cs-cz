@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695795"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock a omp_init_nest_lock – funkce
 Tyto funkce poskytují jediným způsobem, inicializace zámek. Jednotlivé funkce inicializuje zámek spojené s parametrem *zámku* pro použití při následných voláních. Formát vypadá takto:  

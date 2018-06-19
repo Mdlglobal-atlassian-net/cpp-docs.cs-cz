@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857835"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Zarovnání ovládacích prvků podle vodítka
 Úchyty ovládacích prvků Přichytit k vodítkům, když se přesouvají ovládací prvky a příručky Přichytit k ovládacím prvkům (pokud neexistují žádná opatření dříve přichyceno k průvodci). Po přesunu Průvodce je také přesunout ovládacích prvků, které jsou přichytávány k němu. Když je přesunut jeden příručky, změní se velikost ovládací prvky přichyceno k více než jeden průvodce.  

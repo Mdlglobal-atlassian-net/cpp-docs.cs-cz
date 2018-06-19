@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858143"
 ---
 # <a name="locales-and-code-pages"></a>Národní prostředí a kódové stránky
 ID národního prostředí odráží místní konvence a jazyk pro určitou zeměpisnou oblast. Daný jazyk může být používán ve více než jedné zemi nebo oblasti. Například portugalsky se hovoří v Brazílii stejně jako v Portugalsku. Naopak země nebo oblast může používat více než jeden úřední jazyk. Například Kanada používá dva jazyky: angličtinu a francouzštinu. Kanada má tedy dvě odlišná národní prostředí: kanadské s angličtinou a kanadské s francouzštinou. Ke kategoriím závislým na národním prostředí patří formátování dat nebo zobrazovací formát pro peněžní hodnoty.  

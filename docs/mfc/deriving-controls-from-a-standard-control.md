@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344497"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Odvozování ovládacích prvků ze standardního ovládacího prvku
 Stejně jako u některé [CWnd](../mfc/reference/cwnd-class.md)-odvozené třídy, můžete upravit chování ovládacího prvku odvozením novou třídu z existující třídy ovládacího prvku.  

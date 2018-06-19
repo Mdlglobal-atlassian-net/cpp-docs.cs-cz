@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858078"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Přiřazení příkazu nabídky ke klávese akcelerátoru
 Jsou často časy, kdy má příkaz nabídky a kombinace kláves vydejte stejný příkaz programu. Můžete to provést pomocí editoru nabídky přiřadit stejný identifikátor prostředku, na příkaz nabídky a položce v tabulce akcelerátorů vaší aplikace. Potom upravte [popisek](../windows/menu-command-properties.md) příkazu v nabídce Zobrazit název klíče akcelerátoru.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862274"
 ---
 # <a name="building-an-attributed-program"></a>Sestavení programu s atributy
 Po přepnutí atributy Visual C++ do zdrojového kódu, můžete kompilátor Visual C++ k vytvoření typu knihovny a .idl souboru pro vás. Následující linkeru možnosti nápovědy sestavení .tlb a .idl souborů:  
