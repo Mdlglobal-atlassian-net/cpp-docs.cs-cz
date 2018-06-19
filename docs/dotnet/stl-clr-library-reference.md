@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171819"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR – Referenční dokumentace knihoven
 Knihovny STL/CLR je balíčkovacím podmnožinu standardní knihovna C++ pro použití s C++ a rozhraní .NET Framework common language runtime (CLR). STL/CLR můžete všechny kontejnery, iterátory a algoritmy standardní knihovny ve spravovaném prostředí.  

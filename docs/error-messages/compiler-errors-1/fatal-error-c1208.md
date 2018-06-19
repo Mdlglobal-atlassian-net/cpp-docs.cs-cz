@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227789"
 ---
 # <a name="fatal-error-c1208"></a>Závažná chyba C1208
 Přidělování referenční třídy v zásobníku není podporována verze nainstalován modul runtime  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885149"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Úprava vlastností pro ovládací prvek ActiveX
 Ovládací prvky ActiveX, které poskytl nezávislí výrobci může jsou vybavené vlastní vlastnosti a vlastnosti. V okně Vlastnosti se zobrazí vlastnosti pro ovládací prvky ActiveX. Kromě toho se zobrazují všechny stránky vlastností vytvořené zapisovače ovládacího prvku ActiveX v **vlastnosti stránky** dialogové okno (Pokud chcete zobrazit na stránce vlastností pro určitý ovládací prvek ActiveX, klikněte na tlačítko Stránka vlastností v [Vlastnosti – okno](/visualstudio/ide/reference/properties-window)).  

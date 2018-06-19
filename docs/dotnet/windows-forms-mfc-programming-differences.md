@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172668"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Rozdíly v programování mezi prostředími Windows Forms a MFC
 Témata v [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) popisují Podpora MFC pro Windows Forms. Pokud nejste obeznámeni s rozhraní .NET Framework nebo programování MFC, toto téma obsahuje základní informace o programování rozdíly mezi nimi.  

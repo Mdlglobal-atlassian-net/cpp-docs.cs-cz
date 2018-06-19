@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244996"
 ---
 # <a name="compiler-error-c2978"></a>C2978 chyby kompilátoru
 Chyba syntaxe: byl očekáván 'keyword1' nebo 'keyword2'; byl nalezen typ 'keyword3'; parametry bez typu nejsou podporovány v obecných typech  

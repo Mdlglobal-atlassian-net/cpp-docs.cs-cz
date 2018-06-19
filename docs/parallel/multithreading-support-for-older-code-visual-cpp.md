@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687722"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Podpora více vláken ve starším kódu (Visual C++)
 Visual C++ můžete mít více souběžných vláken, která se provádí současně. S více vláken, můžete číselníku úlohy na pozadí, spravovat několik současných vstup, spravovat uživatelské rozhraní a mnoho dalšího.  

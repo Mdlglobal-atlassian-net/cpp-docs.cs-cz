@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879224"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Zahrnutí sdílených (jen pro čtení) nebo vypočtených symbolů
 Při prvním vývojového prostředí přečte soubor prostředků, která je vytvořena v jiné aplikaci, označí všechny zahrnuté záhlaví soubory jen pro čtení. Následně můžete použít [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md) přidat soubory hlaviček symbolů další jen pro čtení.  

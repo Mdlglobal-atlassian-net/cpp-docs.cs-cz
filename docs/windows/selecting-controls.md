@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892771"
 ---
 # <a name="selecting-controls"></a>Výběr ovládacích prvků
 Vyberte ovládací prvky na velikost, align, přesunout, kopírovat, nebo je odstranit a poté proveďte operaci, kterou chcete. Ve většině případů je nutné vybrat více než jeden ovládací prvek pro použití nástroje pro změnu velikosti a zarovnání na [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  

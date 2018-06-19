@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875731"
 ---
 # <a name="finding-a-string"></a>Hledání řetězce
 Můžete vyhledat jednoho nebo více řetězců v tabulce řetězců a použít [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) s **hledání v souborech** příkazu (**upravit** nabídky) najít všechny instance řetězce odpovídající vzor.  

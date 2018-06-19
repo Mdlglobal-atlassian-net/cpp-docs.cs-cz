@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882911"
 ---
 # <a name="manifest-resources"></a>Manifest prostředků
 Prostředky manifestu jsou soubory XML, které popisují závislosti, které aplikace používá. Například v sadě Visual Studio, MFC generované v Průvodci souboru manifestu definuje což Windows běžného ovládacího prvku by aplikace měla použít knihovny DLL, verze 5.0 nebo 6.0:  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881455"
 ---
 # <a name="key-wrl-apis-by-category"></a>Nejdůležitější rozhraní API knihovny WRL podle kategorie
 V následujících tabulkách jsou uvedeny primární třídy, struktury, funkcemi a makry v knihovna šablon C++ prostředí Windows Runtime. Konstrukce v pomocná obory názvů a třídy byly vynechány. Tyto seznamy posílení dokumentaci rozhraní API, která jsou uspořádána podle oboru názvů.  

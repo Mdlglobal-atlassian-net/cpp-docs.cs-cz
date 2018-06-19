@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873690"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definice klávesových zkratek (přístupové klávesy)
 Za normálních okolností klávesnice uživatelé Přesun zaměření pro vstup z jednoho ovládacího prvku do druhého v dialogovém okně s klíči KARTĚ a šipku. Však můžete definovat přístupový klíč (název klávesovými nebo snadno zapamatovat), který umožňuje uživatelům zvolit ovládacího prvku stisknutím jeden klíč.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382499"
 ---
 # <a name="servers-server-items"></a>Servery: Serverové položky
 Když kontejner spouští server tak, aby smí uživatel upravovat položky vložené nebo propojené OLE, je serverová aplikace vytvoří "položka serveru". Položka serveru, který je objektem třídy odvozené od `COleServerItem`, poskytuje rozhraní mezi dokumentu na serveru a aplikace kontejneru.  

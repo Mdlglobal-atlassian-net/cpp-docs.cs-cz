@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879058"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (rozšíření komponent C++)
 `ref new` Agregační – klíčové slovo přiděluje instance typu, který je uvolnění z paměti při objektu se změní na nedostupné a která vrací popisovač ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) k objektu přidělená.  

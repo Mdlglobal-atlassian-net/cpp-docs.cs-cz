@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881702"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Otevřete &lt;zařízení&gt; bitové kopie dialogové okno (Editor obrázků pro ikony)
 Tento dialog otevřete obrázky zařízení. Zobrazí se seznam existujících bitových kopií zařízení v rámci aktuální prostředku (bitové kopie, které jsou součástí aktuální prostředků).  

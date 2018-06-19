@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871377"
 ---
 # <a name="deleting-menus-and-menu-commands"></a>Odstranění nabídek a příkazů nabídky
 ### <a name="to-delete-a-menu-or-menu-command"></a>Chcete odstranit nabídky nebo příkazu nabídky  

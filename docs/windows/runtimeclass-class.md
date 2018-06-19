@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889004"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
 Představuje třídu WinRT nebo COM, která dědí zadaný rozhraní a poskytuje zadané prostředí Windows Runtime, classic COM a slabé odkaz na podporu.  

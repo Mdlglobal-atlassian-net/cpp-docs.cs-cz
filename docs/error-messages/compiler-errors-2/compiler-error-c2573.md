@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232284"
 ---
 # <a name="compiler-error-c2573"></a>C2573 chyby kompilátoru
 'class': ukazatelé na objekty tohoto typu; nelze odstranit. Třída nemá žádné přetížení jiné umístění pro 'odstranit operátor'.  

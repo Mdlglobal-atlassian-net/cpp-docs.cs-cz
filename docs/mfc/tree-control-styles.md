@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382034"
 ---
 # <a name="tree-control-styles"></a>Styly ovládacího prvku strom
 Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styly řídí aspektů vzhled ovládacího prvku strom. Při vytváření ovládacího prvku strom nastavte počáteční stylů. Můžete načíst a změnit po vytvoření ovládacího prvku strom pomocí stylů [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) a [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funkce systému Windows, zadání **GWL_STYLE** pro `nIndex` parametr. Úplný seznam styly, najdete v části [styly okno zobrazení ovládacího prvku strom](http://msdn.microsoft.com/library/windows/desktop/bb760013) ve Windows SDK.  

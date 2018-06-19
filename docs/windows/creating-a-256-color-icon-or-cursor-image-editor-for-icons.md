@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872358"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Vytvoření ikony nebo kurzoru s 256 barvami (editor obrázků pro ikony)
 Editor obrázků, ikony a kurzory může být použití velikostí velké (64 x 64) s 256 barvami palety lze vybírat. Po vytvoření prostředku, je vybrán zařízení styl bitové kopie.  

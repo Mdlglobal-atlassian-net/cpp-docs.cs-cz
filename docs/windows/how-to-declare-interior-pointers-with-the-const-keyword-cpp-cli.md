@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875042"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Postupy: Deklarace vnitřních ukazatelů s použitím klíčového slova const (C++/CLI)
 Následující příklad ukazuje způsob použití `const` v deklaraci vnitřní ukazatel.  

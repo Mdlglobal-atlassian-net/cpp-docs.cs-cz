@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236782"
 ---
 # <a name="compiler-error-c2664"></a>C2664 chyby kompilátoru
 'function': argument n z 'type1' na 'type2' nelze převést.  

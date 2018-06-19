@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891669"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Používání nástroje kreslení (editor obrázků pro ikony)
 Editor obrázků je od ruky kreslení a mazání nástroje všechny fungovat stejným způsobem: Vyberte nástroj a v případě potřeby [vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikost a tvar. Můžete pak přesuňte ukazatel na bitovou kopii a klikněte na tlačítko nebo přetáhněte kreslení a vymazat.  

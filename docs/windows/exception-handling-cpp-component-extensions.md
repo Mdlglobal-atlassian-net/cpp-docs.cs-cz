@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877732"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Zpracování výjimek (rozšíření komponent C++)
 Aplikace, kompilovat s **/ZW** – možnost kompilátoru nebo **/CLR** – možnost kompilátoru používejte *výjimky* ke zpracování neočekávaným chybám při spuštění programu. Následující témata popisují zpracování výjimek v buď C + +/ CX nebo C + +/ CLI aplikace.  

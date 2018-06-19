@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892400"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType – výčet
 Určuje typ [RuntimeClass](../windows/runtimeclass-class.md) instance, která je podporována.  

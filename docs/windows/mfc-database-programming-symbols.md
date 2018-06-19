@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877602"
 ---
 # <a name="mfc-database-programming-symbols"></a>Programovací symboly databáze MFC
 Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidána podpora databáze. Podporují MFC připojení k SQL Server a databáze programování.  

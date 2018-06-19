@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879845"
 ---
 # <a name="how-to-copy-resources"></a>Postupy: Kopírování prostředků
 Prostředky můžete zkopírovat z jednoho souboru do druhého, aniž byste museli měnit je nebo můžete [Změna jazyka nebo podmínky prostředku během kopírování](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  

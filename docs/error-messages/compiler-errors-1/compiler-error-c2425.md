@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196854"
 ---
 # <a name="compiler-error-c2425"></a>C2425 chyby kompilátoru
 "tokenu": není konstantní výraz ve "context"  

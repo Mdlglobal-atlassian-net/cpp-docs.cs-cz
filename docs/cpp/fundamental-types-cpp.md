@@ -58,6 +58,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417324"
 ---
 # <a name="fundamental-types--c"></a>Základní typy (C++)
 Základní typy v jazyce C++ jsou rozdělené do tří kategorií: integrální plovoucí bodu a void. Celočíselné typy jsou umožňuje zpracovávat celá čísla. Plovoucí typy bodů jsou schopná využívat zadání hodnoty, které může mít zlomkové části.  

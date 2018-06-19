@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880792"
 ---
 # <a name="predefined-accelerator-keys"></a>Předdefinované klávesy akcelerátoru
 Existuje několik předdefinovaných přístupové klávesy, které může být součástí projekt aplikace Windows. Některé z těchto virtuálních klíčů jsou pro prostředí Windows. Další podpora prohlížeče nebo aplikace kódování Unicode. Můžete používat kterýkoli z těchto klíčů v jakékoli akcelerátoru.  

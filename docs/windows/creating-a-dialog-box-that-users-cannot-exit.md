@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33884460"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Vytvoření dialogového okna, které uživatelé nemohou zavřít.
 Můžete vytvořit runtime dialogové okno s uživatele nelze ukončit. Tento druh dialogové okno je užitečný pro přihlášení a pro aplikace nebo dokumentu zámky.  

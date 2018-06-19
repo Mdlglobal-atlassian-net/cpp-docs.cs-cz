@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230581"
 ---
 # <a name="compiler-error-c2555"></a>C2555 chyby kompilátoru
 'class1::function1': přepisování virtuální funkce návratový typ se liší a není kovariantní z 'class2::function2.  

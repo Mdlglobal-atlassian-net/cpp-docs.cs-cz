@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891360"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime a spravované šablony (rozšíření komponent C++)
 Šablony umožňují definovat prototyp prostředí Windows Runtime nebo běžné typ modulu runtime jazyka a potom vytvořte instanci daného typu variant pomocí parametrů typu jinou šablonu.  

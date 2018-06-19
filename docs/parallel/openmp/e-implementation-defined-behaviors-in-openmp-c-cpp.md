@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688697"
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Chování definované implementací v OpenMP C/C++
 Tento dodatek shrnuje chování, které jsou popsány jako "definované implementací" v tomto rozhraní API.  Každý chování je zpět do jeho popis hlavních specifikací křížových odkazů.  

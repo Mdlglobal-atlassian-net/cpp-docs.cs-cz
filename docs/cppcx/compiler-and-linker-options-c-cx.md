@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088477"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C + +/ CX)
 Proměnné prostředí, C + +/ CX – možnosti kompilátoru a linkeru možnosti podporují vytváření aplikací pro prostředí Windows Runtime.  

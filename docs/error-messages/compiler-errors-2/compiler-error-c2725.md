@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236815"
 ---
 # <a name="compiler-error-c2725"></a>C2725 chyby kompilátoru
 'výjimka': nelze vyvolat nebo catch spravované nebo objekt WinRT hodnotou nebo odkazem  

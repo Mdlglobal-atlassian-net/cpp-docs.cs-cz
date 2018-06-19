@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878694"
 ---
 # <a name="generic-interfaces-visual-c"></a>Obecná rozhraní (Visual C++)
 Omezení, které se vztahují na parametry typu na třídy jsou stejné jako ty, které se vztahují na parametry typu na rozhraní (viz [obecné třídy (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  

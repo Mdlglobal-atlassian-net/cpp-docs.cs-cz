@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686611"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Obcházení problémových oblastí pomocí programů s více vlákny
 Existuje několik problémů, které mohou nastat při vytváření, propojení nebo spuštěním programu vícevláknový C. Některé z běžnějších problémy jsou popsány v následující tabulce. (Podobné informace z hlediska MFC, najdete v části [Multithreading: tipy pro programování](../parallel/multithreading-programming-tips.md).)  

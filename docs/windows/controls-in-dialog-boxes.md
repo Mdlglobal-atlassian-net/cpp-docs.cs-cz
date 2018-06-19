@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873118"
 ---
 # <a name="controls-in-dialog-boxes"></a>Ovládací prvky v dialogových oknech
 Ovládací prvky můžete přidat pomocí dialogu pole [Karta Editor dialogového okna](../windows/dialog-editor-tab-toolbox.md) v [okno sady nástrojů](/visualstudio/ide/reference/toolbox), který umožňuje volbu ovládacího prvku chcete a přetáhněte ji na dialogové okno. Ve výchozím okno sady nástrojů nastavena na automatické skrýt. Při otevření editoru dialogových oken, zobrazí se jako karty na levém okraji řešení. Však můžete Připnout okno sady nástrojů do pozice kliknutím **automaticky skrýt** tlačítko v pravém horním rohu okna. Další informace o tom, jak řídit chování tohoto okna najdete v tématu [Správa oken](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

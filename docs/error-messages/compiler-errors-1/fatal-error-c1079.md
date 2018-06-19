@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225326"
 ---
 # <a name="fatal-error-c1079"></a>Závažná chyba C1079
 omezení kompilátoru: byl překročen limit pro velikost PCH souboru  

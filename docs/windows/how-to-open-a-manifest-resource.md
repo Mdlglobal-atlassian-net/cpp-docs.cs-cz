@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881839"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Postupy: Otevření prostředku manifestu
 Pokud otevření prostředku manifestu z [zobrazení prostředků](../windows/resource-view-window.md), prostředek se otevře v binárním formátu. Chcete-li zobrazit obsah prostředku manifestu ve formátu, další zobrazit, je nutné otevřít prostředek v Průzkumníku řešení.  

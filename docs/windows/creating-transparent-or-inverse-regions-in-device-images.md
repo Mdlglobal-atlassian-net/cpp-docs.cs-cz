@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882547"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení (editor obrázků pro ikony)
 V [editor obrázků](../windows/image-editor-for-icons.md), má atribut transparentní počáteční obrázek ikony nebo kurzoru. I když jsou obdélníková ikonu a kurzor bitové kopie, mnoho se nezobrazí, protože částí obrázku jsou transparentní; základní bitovou kopii na obrazovce zobrazuje pomocí ikony nebo kurzoru. Při přetažení ikonu částí obrázku se mohou objevit v obráceným barev. Vytvoříte tento účinek nastavení barvy obrazovky a inverzní barvy v [barvy – okno](../windows/colors-window-image-editor-for-icons.md).  

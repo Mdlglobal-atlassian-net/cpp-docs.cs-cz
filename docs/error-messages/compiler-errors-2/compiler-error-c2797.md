@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238160"
 ---
 # <a name="compiler-error-c2797"></a>Chyba kompilátoru C2797
 (Zastaralé) Inicializace seznamu uvnitř inicializátoru seznamu členů nebo data nestatické členské inicializátoru není implementována.  

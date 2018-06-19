@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086509"
 ---
 # <a name="begin-function"></a>begin – funkce
 Vrátí iterátor, který odkazuje na začátek kolekce, které je přístupné parametrem specifikované rozhraní.  

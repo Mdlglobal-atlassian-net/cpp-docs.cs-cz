@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880681"
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ – datový člen
 Obsahuje lambda, functor nebo obslužná rutina události – ukazatel funkce související s aktuálním objektem Module::GenericReleaseNotifier.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871037"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Převod obrázku z jednoho formátu do druhého (editor obrázků pro ikony)
 Můžete otevřít obrázky GIF nebo JPEG v editoru obrázků a uložit je jako rastrové obrázky. Můžete také otevřít soubor rastrového obrázku a uložte ho jako GIF nebo JPEG. Práce s obrázky nemusí být součástí projekt, ve vývojovém prostředí (v tématu [úpravy samostatné image](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  

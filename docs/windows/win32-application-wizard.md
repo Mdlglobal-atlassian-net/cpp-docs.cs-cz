@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891422"
 ---
 # <a name="win32-application-wizard"></a>Win32 – průvodce aplikací
 Průvodce aplikace Win32 Visual C++ umožňuje vytvořit čtyři typy projektů (uvedené v záhlaví v následující tabulce). V každém případě můžete zadat další možnosti, které jsou vhodné pro typ projektu, který můžete otevřít. Následující tabulka uvádí, které možnosti jsou dostupné pro jednotlivé typy aplikací.  

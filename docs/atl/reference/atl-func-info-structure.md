@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255619"
 ---
 # <a name="atlfuncinfo-structure"></a>Struktura _ATL_FUNC_INFO
 Obsahuje informace o typu, které používají k popisu metody nebo vlastnosti na odesílajícím rozhraním.  

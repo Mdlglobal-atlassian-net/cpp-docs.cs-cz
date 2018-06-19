@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889303"
 ---
 # <a name="safeint-functions"></a>Funkce jazyka SafeInt
 Knihovna SafeInt nabízí několik funkcí, které můžete použít bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md). Pokud chcete chránit jedné matematické operace z přetečení celé číslo, můžete tyto funkce. Pokud chcete chránit více matematické operace, měli byste vytvořit `SafeInt` objekty. Chcete-li vytvořit je efektivnější `SafeInt` objekty než pomocí těchto funkcí vícekrát.  

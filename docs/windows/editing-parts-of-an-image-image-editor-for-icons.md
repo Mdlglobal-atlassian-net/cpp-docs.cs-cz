@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876849"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Úprava částí obrázku (editor obrázků pro ikony)
 Můžete provádět operace standardní úpravy – vyjímání, kopírování, vymazání a přesouvání – na [výběr](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), zda se jedná celého obrázku nebo jenom část ho. Protože editor obrázků používá schránky systému Windows, můžou přenášet obrázky mezi editor obrázků a dalších aplikacích pro Windows.  

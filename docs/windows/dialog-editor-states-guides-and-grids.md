@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872832"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>Stavy editoru dialogových oken (vodítka a mřížky)
 Ovládací prvky v dialogových oknech mohou dohodnout s editoru dialogových oken v jednom ze tří různých stavů:  

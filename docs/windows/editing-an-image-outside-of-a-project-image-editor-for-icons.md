@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873011"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Úprava obrázku mimo projekt (editor obrázků pro ikony)
 Můžete otevřít a upravit bitové kopie ve vývojovém prostředí, stejně jako v jakékoli aplikaci grafiky. Bitové kopie, se kterými můžete pracovat nemusí být součástí projektu sady Visual Studio pro samostatné úpravy.  

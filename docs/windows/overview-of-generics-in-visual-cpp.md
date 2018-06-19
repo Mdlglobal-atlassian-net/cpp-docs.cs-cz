@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880997"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Přehled obecných typů ve Visual C++
 Obecné typy jsou parametrizované typy podporované systémem modul common language runtime. Parametrizované typ je typ, který je definován s parametrem neznámého typu, která je zadána při Obecné se používá.  

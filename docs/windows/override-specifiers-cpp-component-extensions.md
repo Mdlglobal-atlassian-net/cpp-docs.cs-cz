@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882759"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Override – specifikátory (rozšíření komponent C++)
 *Override – specifikátory* upravit jak zděděné typy a členy zděděné typů chovat v odvozených typů.  

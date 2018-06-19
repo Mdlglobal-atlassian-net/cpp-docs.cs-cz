@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892875"
 ---
 # <a name="restricted"></a>restricted
 Určuje, že členem modulu, rozhraní nebo dispinterface nelze volat libovolně.  

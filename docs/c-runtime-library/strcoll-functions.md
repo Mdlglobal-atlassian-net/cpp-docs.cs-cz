@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418182"
 ---
 # <a name="strcoll-functions"></a>strcoll – funkce
 Každý z `strcoll` a `wcscoll` funkce porovnává dva řetězce podle požadavků `LC_COLLATE` kategorie nastavení znaková stránka národního prostředí aktuálně používán. Každý z `_mbscoll` funkce porovnává dva řetězce podle vícebajtové znakové stránky aktuálně používán. Použití `coll` funkce pro porovnání řetězců, když je rozdíl mezi pořadí sady znaků a pořadí lexicographic znaků na aktuální stránce kódu a tento rozdíl je určen pro porovnání. Použijte odpovídající `cmp` funkce otestovat jenom pro řetězec rovnosti.  

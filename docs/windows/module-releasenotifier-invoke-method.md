@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876199"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke – metoda
 Pokud je implementována, volá obslužnou rutinu události při vydání poslední objekt v modulu.  

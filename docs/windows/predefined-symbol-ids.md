@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876420"
 ---
 # <a name="predefined-symbol-ids"></a>ID předdefinovaných symbolů
 Abyste před zahájením nového projektu, v závislosti na typu projektu některé symbol ID předdefinovaných pro vaše použití. Tyto identifikátory symbol podporují různé typy projektů, jako je například MFC a knihovny. Představují běžné úkoly, které jsou obvykle součástí jakékoli aplikace, nebo akce hardwaru položek, jako jsou myši nebo tiskárny.  

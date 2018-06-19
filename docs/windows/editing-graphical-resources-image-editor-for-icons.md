@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882495"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Úprava grafických prostředků (editor obrázků pro ikony)
 Grafické prostředky jsou bitové kopie, které definujete pro vaši aplikaci. Můžete kreslení od ruky nebo kreslení pomocí tvarů. Můžete vybrat částí obrázku pro úpravy, překlopení nebo změna velikosti, nebo můžete vytvořit vlastního štětce z vybraných součástí bitové kopie a kreslení pomocí tento stopy. Můžete definovat vlastnosti bitové kopie, uložení bitové kopie v různých formátech a převést bitové kopie z jednoho formátu do druhého.  

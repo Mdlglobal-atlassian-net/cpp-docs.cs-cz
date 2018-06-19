@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880134"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Postupy: Změna jazyka nebo podmínky prostředku během kopírování
 Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka nebo podmínky vlastnost nebo obojí.  

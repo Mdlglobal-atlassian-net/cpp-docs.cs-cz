@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173135"
 ---
 # <a name="stlclr-containers"></a>STL/CLR – kontejnery
 Knihovny STL/CLR má stejné kontejnerů, které se nacházejí ve standardní knihovně C++, ale běží ve spravovaném prostředí rozhraní .NET Framework. Pokud jste již obeznámeni s standardní knihovna C++, STL/CLR je nejlepší způsob, jak pokračovat v používání dovedností, které jste již vytvořili při upgradu kódu k cíli common language runtime (CLR).  
