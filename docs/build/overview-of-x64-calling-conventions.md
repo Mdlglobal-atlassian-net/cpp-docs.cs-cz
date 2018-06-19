@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374905"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Přehled konvencí volání v prostředí x64
 Dvě důležité rozdíly mezi x86 a [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] jsou schopnosti adresování 64-bit a plochá sada 16 64-bit registrů pro obecné použití. Daná rozšířeného registru, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] používá [__fastcall](../cpp/fastcall.md) volání konvence a založených RISC model zpracování výjimek. `__fastcall` Konvence používá registry pro první čtyři argumenty a rámce zásobníku předat další argumenty.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373020"
 ---
 # <a name="output-file-f-options"></a>Možnosti výstupního souboru (/F)
 Možnosti výstupního souboru vytvořit nebo přejmenovat výstupní soubory. Ovlivní všechny jazyka C nebo C++ zdrojové soubory určeném v proměnné prostředí CL, na příkazovém řádku nebo v jakékoli příkazový soubor.  

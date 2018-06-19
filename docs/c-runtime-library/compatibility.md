@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390479"
 ---
 # <a name="compatibility"></a>Kompatibilita
 Univerzální knihoven C Run-Time (UCRT) podporuje většinu standardní knihovny jazyka C požadované pro přizpůsobení C++. Implementuje knihovnu C99 (ISO/IEC 9899:1999) s výjimky obecného typu makra definované v \<tgmath.h > a striktní typ kompatibility v \<complex.h >. UCRT také implementuje podmnožinu POSIX.1 velké (ISO/IEC 9945-1:1996, rozhraní API systému POSIX) knihovny jazyka C, ale není plně vyhovující pro všechny konkrétní standard POSIX.  Kromě toho UCRT implementuje několik specifické pro společnost Microsoft funkcemi a makry, které nejsou součástí standardní.  

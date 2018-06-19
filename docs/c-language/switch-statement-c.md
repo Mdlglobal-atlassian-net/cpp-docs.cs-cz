@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392156"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C)
 `switch` a **případ** příkazy Nápověda ovládacího prvku složité podmíněného větvení operace a. `switch` Příkaz předá řízení příkaz v jeho textu.  

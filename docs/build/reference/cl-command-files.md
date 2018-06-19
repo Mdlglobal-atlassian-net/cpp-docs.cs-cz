@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369874"
 ---
 # <a name="cl-command-files"></a>Soubory příkazů CL
 Příkaz Soubor je textový soubor, který obsahuje možnosti a názvy souborů, v opačném případě zadejte na [příkazového řádku](../../build/reference/compiler-command-line-syntax.md) nebo zadejte pomocí [proměnné prostředí CL](../../build/reference/cl-environment-variables.md). CL příkazového řádku kompilátoru přijímá jako argument v proměnné prostředí CL nebo na příkazovém řádku. Na rozdíl od příkazového řádku nebo proměnné prostředí CL umožňuje soubor příkazů použít několik řádků parametrů a názvů souborů.  

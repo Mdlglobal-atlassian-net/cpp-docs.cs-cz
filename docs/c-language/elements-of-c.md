@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383079"
 ---
 # <a name="elements-of-c"></a>Elementy jazyka C
 Tato část popisuje elementy jazyka C programovací jazyk, včetně názvů, číslice a znaky použitý k vytvoření programu C. Syntaxe ANSI C popisků tyto součásti tokeny.  

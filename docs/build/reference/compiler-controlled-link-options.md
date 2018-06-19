@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371993"
 ---
 # <a name="compiler-controlled-link-options"></a>Možnosti LINK řízené kompilátorem
 CL – kompilátor automaticky zavolá odkaz, pokud zadáte možnost /c. CL poskytuje určitou kontrolu nad linkeru prostřednictvím možnosti příkazového řádku a argumenty. Následující tabulka shrnuje funkce v CL, které ovlivňují propojování.  

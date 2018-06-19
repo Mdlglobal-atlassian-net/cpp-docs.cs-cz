@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371899"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
 Nastavení projektu Visual C++ jiné cílové verze rozhraní .NET Framework a používat modulové různé platformy, můžete změnit. Ve výchozím nastavení používá systém projektu verzi rozhraní .NET Framework a verzi sady nástrojů, které odpovídají verzi sady Visual Studio, který použijete k vytvoření projektu. Sada nástrojů platformy cíl, můžete změnit úpravou vlastností projektu. Cílový Framework můžete změnit úpravou souboru projektu (VCXPROJ). Nemáte udržovat samostatné kód základní pro každý cíl kompilace.  

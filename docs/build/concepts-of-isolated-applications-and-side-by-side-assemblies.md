@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368171"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Koncept izolovaných aplikací a souběžných sestavení
 Aplikace se považuje za [izolované aplikace](http://msdn.microsoft.com/library/aa375190) Pokud jsou všechny jeho komponenty [souběžně sdílená sestavení](http://msdn.microsoft.com/library/ff951640). Souběžné sestavení je kolekce prostředků – skupina knihoven DLL, tříd oken, serverů COM, knihoven typů nebo rozhraní – které se nasazují společně a které jsou dostupné spuštěné aplikaci. Souběžné sestavení je zpravidla jedna až několik knihoven DLL.  

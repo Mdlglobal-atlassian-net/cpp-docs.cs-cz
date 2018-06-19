@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134894"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Postupy: Zařazení vložených ukazatelů pomocí služby PInvoke
 Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze spravovaného kódu pomocí funkce pro vyvolání platformy (P/Invoke). Pokud zdrojový kód pro knihovnu DLL není k dispozici, P/Invoke je jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET, poskytuje Visual C++ alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) a [postupy: zařazení vložených ukazatelů pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  

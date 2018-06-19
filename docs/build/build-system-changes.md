@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363318"
 ---
 # <a name="build-system-changes"></a>Změny systému sestavení
 MSBuild systému se používá k sestavení projektů Visual C++. V sadě Visual Studio 2008 a starších verzích, ale byl použit VCBuild systému. Některé typy souborů a koncepty, které závisí na VCBuild neexistují nebo jsou v aktuálním systému zobrazovat jinak. Tento dokument popisuje rozdíly v aktuální systém sestavení.  

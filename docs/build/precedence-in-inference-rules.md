@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368483"
 ---
 # <a name="precedence-in-inference-rules"></a>Priorita odvozených pravidel
 Pokud pravidlo odvození násobkem definované, používá NMAKE definici nejvyšší prioritou. V následujícím seznamu jsou uvedeny pořadí priorit od nejvyšší po nejnižší:  

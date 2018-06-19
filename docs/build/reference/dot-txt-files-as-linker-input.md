@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369900"
 ---
 # <a name="txt-files-as-linker-input"></a>Soubory .Txt jako vstup linkeru
 Jako další vstup očekává odkaz různé textové soubory. [Soubor příkazů](../../build/reference/link-command-files.md) – specifikátor (@) a [základní adresu](../../build/reference/base-base-address.md) (/ základní), [/def](../../build/reference/def-specify-module-definition-file.md), a [/pořadí](../../build/reference/order-put-functions-in-order.md) všechny možnosti zadejte textových souborů. Tyto soubory mohou mít všechny rozšíření, ne jenom .txt.  

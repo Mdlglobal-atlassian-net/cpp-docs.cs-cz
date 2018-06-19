@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361148"
 ---
 # <a name="using-idispeventimpl"></a>Pomocí IDispEventImpl
 Při použití `IDispEventImpl` ke zpracování událostí, budete muset:  

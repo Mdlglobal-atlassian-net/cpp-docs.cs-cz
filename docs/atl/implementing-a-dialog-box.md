@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355849"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementace dialogové okno
 Existují dva způsoby, jak dialogové okno Přidat do projektu knihovny ATL: použijte dialogové okno průvodce ATL nebo je přidat ručně.  

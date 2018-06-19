@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371239"
 ---
 # <a name="extracting-a-library-member"></a>Extrahování člena knihovny
 Můžete vytvořit soubor objektu (.obj), který obsahuje kopii členem existující knihovny LIB. K extrakci kopii členem, použijte následující syntaxi:  

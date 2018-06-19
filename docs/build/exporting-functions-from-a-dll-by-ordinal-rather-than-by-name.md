@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367690"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Export funkcí z knihovny DLL podle pořadových čísel, nikoli podle názvu
 Nejjednodušší způsob, jak funkce exportu z vaší knihovny DLL je k jejich exportování podle názvu. To se stane, když používáte **__declspec(dllexport)**, např. Ale místo toho můžete exportovat funkce podle pořadí. S touto technikou, musíte použít soubor .def místo **__declspec(dllexport)**. K určení pořadového čísla funkce, připojí k názvu funkce v souboru .def jeho pořadí. Informace o určování pořadí najdete v tématu [export z knihovny DLL pomocí souborů .def](../build/exporting-from-a-dll-using-def-files.md).  

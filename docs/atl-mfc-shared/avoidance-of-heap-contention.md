@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358082"
 ---
 # <a name="avoidance-of-heap-contention"></a>Předcházení kolizí haldy
 Správci řetězec výchozí, poskytované MFC a knihovna ATL jsou jednoduché obálky nad globální haldy. Tato globální halda představuje plně vláken, což znamená, že více vláken můžete přidělit a volné paměti z něj současně bez poškozování halda. Zabezpečení vlákna pomáhají halda má k serializaci přístup na sebe sama. To se obvykle dosahuje kritická sekce nebo podobné uzamčení mechanismu. Vždy, když se dvěma vlákny došlo k pokusu o přístup k haldě současně, jedno vlákno je blokován, dokud dokončení požadavku jiné vlákno. Mnoho aplikací k této situaci dochází zřídka a dopad na výkon uzamčení mechanismu do haldy je nepatrné. Ale pro aplikace, které často halda přístup z více vláken může způsobit kolizí je halda zámek aplikace pomalejší, než pokud by měla jednovláknové (i u počítačů s více procesory).  

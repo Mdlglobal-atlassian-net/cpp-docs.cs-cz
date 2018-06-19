@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892836"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Podokna (editor obrázků pro ikony)
 Okno Editor obrázků obvykle zobrazí obrázek v oddělených rozdělovač dvě podokna. Zobrazení je skutečná velikost a dalších se zvětší (výchozí zvětšení faktor je 6). Tyto dvě podokna zobrazení se automaticky aktualizují: změny v jednom podokně jsou okamžitě uvedené v dalších. Dvě podokna usnadnit práci zvětšeným zobrazením bitové kopie, ve kterém můžete rozlišení jednotlivých pixelů a, ve stejnou dobu, můžete sledovat účinek práce na zobrazení skutečná velikost bitové kopie.  

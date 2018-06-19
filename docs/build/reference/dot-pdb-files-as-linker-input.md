@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370173"
 ---
 # <a name="pdb-files-as-linker-input"></a>Soubory .Pdb jako vstup linkeru
 Objekt, soubory (.obj) zkompilovat pomocí možnosti /Zi obsahovat název databáze programu (PDB). Nezadávejte název souboru PDB objektu linkeru; ODKAZ používá vložený název najít PDB, pokud je to potřeba. To platí také pro debuggable objekty obsažené v knihovně; PDB debuggable knihovny musí být k dispozici linkeru společně s knihovny.  

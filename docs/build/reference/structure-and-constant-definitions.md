@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376030"
 ---
 # <a name="structure-and-constant-definitions"></a>Struktura a definice konstant
 Výchozí pomocnou rutinou používá několik struktury ke komunikaci s funkce háku a během jakékoli výjimky. Zde jsou hodnoty upozornění a chyby, struktury informace a typ ukazatele na háku funkce předaný háky:  

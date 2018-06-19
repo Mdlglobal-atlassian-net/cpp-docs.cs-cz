@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890106"
 ---
 # <a name="sizing-individual-controls"></a>Změna velikosti jednotlivých ovládacích prvků
 Úchyty použijte ke změně velikosti ovládacího prvku. Když ukazatel je umístěn na úchyt, změní tvar, který má znamenat pokynů, ve kterých jde změnit, ovládacího prvku. Aktivní úchyty jsou plné; Pokud je dutý úchyt, ovládacího prvku nelze změnit velikost podél této osy.  

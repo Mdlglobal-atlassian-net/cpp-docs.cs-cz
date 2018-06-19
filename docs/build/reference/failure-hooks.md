@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371782"
 ---
 # <a name="failure-hooks"></a>Selhání háků
 Je povoleno hák selhání stejným způsobem jako [oznámení háku](../../build/reference/notification-hooks.md). Běžné potřeby háku vrátit vhodnou hodnotu tak, aby zpracování může pokračovat (HINSTANCE nebo FARPROC), nebo 0 k označení, že by měl být vyvolána výjimka.  

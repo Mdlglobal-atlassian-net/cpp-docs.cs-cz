@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378142"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Zakázat jazyková rozšíření)
 **/Za** – možnost kompilátoru vysílá chybu pro konstruktory jazyka, které nejsou kompatibilní s kompilátorem C89 ANSI nebo ISO C ++ 11. **/Ze** – možnost kompilátoru, která je ve výchozím, umožňuje rozšíření Microsoft.  

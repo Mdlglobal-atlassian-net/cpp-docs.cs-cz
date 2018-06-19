@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132827"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Postupy: Načtení doby uplynulé od spuštění (C++/CLI)
 Následující příklad kódu ukazuje, jak určit počet značek, nebo počet milisekund, které uplynuly od systému Windows byla spuštěna. Tato hodnota je uložena v <xref:System.Environment.TickCount%2A?displayProperty=fullName> člen a, protože je hodnotu 32-bit, obnoví na nulu přibližně každých 24.9 dnů.  

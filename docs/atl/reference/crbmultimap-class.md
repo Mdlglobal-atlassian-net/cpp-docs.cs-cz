@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365188"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap – třída
 Tato třída reprezentuje strukturu mapování, která umožňuje že každý klíč může být přidružen více než jednu hodnotu, pomocí binárního stromu Red černé.  

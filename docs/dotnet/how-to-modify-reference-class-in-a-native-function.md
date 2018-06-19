@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128349"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Postupy: Změna referenční třídy v nativní funkci
 Můžete předat referenční třídy s polem CLR nativní funkce a změnit třídu, pomocí služby PInvoke.  

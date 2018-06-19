@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377852"
 ---
 # <a name="bscmake-options"></a>Možnosti BSCMAKE
 Tato část popisuje možnosti dostupné pro řízení BSCMAKE. Několik možností obsah soubor s informacemi o procházení řídit vyloučení nebo zahrnutí určité informace. Možnosti vyloučení můžete povolit BSCMAKE spouštět rychleji a může mít za následek menší souboru BSC programem. Možnost názvů malá a velká písmena (s výjimkou **/HELP** a **/nologo**).  

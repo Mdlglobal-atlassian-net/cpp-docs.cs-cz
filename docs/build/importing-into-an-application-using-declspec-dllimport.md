@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368831"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Import do aplikace s použitím deklarace __declspec(dllimport)
 Program, který používá veřejné symboly definované knihovnou DLL říká, že je importovat. Když vytvoříte hlavičkových souborů pro aplikace, které používají váš knihovny DLL k sestavení, používat **deklarace __declspec(dllimport)** na prohlášení o veřejné symboly. Klíčové slovo **deklarace __declspec(dllimport)** funguje zda exportovat soubory .def nebo s **__declspec(dllexport)** – klíčové slovo.  

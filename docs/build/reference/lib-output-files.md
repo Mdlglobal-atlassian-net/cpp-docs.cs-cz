@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370485"
 ---
 # <a name="lib-output-files"></a>LIB – výstupní soubory
 Výstupní soubory vyprodukované LIB závisí na režimu, ve kterém se právě používá, jak je znázorněno v následující tabulce.  

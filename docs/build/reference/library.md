@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371161"
 ---
 # <a name="library"></a>KNIHOVNA
 Oznamuje odkaz pro vytvoření knihovny DLL. Ve stejnou dobu propojení vytvoří knihovnu importu, pokud soubor .exp není použit v sestavení.  

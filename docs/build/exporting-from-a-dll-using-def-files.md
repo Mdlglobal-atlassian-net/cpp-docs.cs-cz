@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369744"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Export z knihovny DLL pomocí souborů .DEF
 Soubor definice modulu (.def) je textový soubor obsahující jeden nebo více příkazů modulu, které popisují různé atributy knihovny DLL. Pokud nepoužíváte **__declspec(dllexport)** – klíčové slovo pro export funkcí knihovny DLL, knihovny DLL vyžaduje .def souboru.  

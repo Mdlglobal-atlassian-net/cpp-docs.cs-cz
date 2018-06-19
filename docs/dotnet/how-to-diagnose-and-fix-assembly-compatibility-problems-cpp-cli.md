@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133416"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Postupy: Diagnostikování a odstranění potíží s kompatibilitou sestavení (C++/CLI)
 Toto téma vysvětluje, co může dojít v případě verze odkazovaného sestavení v čase kompilace se neshoduje verze sestavení odkazuje za běhu a jak se tomuto problému vyhnout.  

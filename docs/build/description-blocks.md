@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367105"
 ---
 # <a name="description-blocks"></a>Bloky popisů
 Popis blok je řádek závislostí a za blok příkazů:  

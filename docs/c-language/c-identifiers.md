@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388666"
 ---
 # <a name="c-identifiers"></a>Identifikátory jazyka C
 "Identifikátory" nebo "symboly" jsou názvy, které zadáte pro proměnné, typy, funkce a popisky v programu. Identifikátor názvy se musí lišit v pravopis a případ z jakékoli klíčová slova. Klíčová slova (C nebo Microsoft) nelze použít jako identifikátory; jsou rezervovány pro speciální použití. Identifikátor vytvoříte tak, že zadáte v deklaraci proměnné, typ nebo funkci. V tomto příkladu `result` je identifikátor proměnné celé číslo, a `main` a `printf` jsou názvy identifikátor pro funkce.  

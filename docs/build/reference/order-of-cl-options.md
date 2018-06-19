@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372806"
 ---
 # <a name="order-of-cl-options"></a>Pořadí možností CL
 Možnosti může vyskytovat kdekoli na příkazovém řádku CL, s výjimkou/Link možnost, která musí objevit jako poslední. Kompilátor začíná zadaný v možnosti [proměnné prostředí CL](../../build/reference/cl-environment-variables.md) a potom načte příkazového řádku zleva doprava – soubory příkazů v pořadí, zjistí jejich zpracování. Každý možnost se vztahuje na všechny soubory na příkazovém řádku. Pokud CL zaznamená konfliktní možnosti, používá jako úplně vpravo.  

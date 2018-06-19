@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362184"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl – třída
 Tato třída je implementací ATL okno, které je umístěn na hostitelské okno poskytuje prostředí pro verzi Preview formátováním.  

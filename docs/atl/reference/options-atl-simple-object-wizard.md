@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364138"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Možnosti, Průvodce jednoduchého objektu knihovny ATL
 Tato stránka ATL Simple Object Wizard slouží k poskytují zvýšenou efektivitu a podpory chyb pro objekt.  

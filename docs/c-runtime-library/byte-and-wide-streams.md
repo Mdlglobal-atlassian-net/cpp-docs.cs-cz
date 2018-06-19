@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389881"
 ---
 # <a name="byte-and-wide-streams"></a>Bajtové a široké proudy
 Tok bajtů zpracovává soubor jako pořadí bajtů. Datový proud v rámci programu, je stejné pořadí bajtů.  

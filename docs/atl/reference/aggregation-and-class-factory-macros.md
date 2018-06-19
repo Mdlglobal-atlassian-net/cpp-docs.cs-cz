@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366416"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregace a makra objekt pro vytváření tříd
 Tyto makra nabízejí způsoby řízení agregace a deklarování tříd.  

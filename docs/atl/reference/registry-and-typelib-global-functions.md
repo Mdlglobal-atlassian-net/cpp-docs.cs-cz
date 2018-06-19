@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365504"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registru a knihovny typů
 Tyto funkce poskytuje podporu pro načítání a registraci knihovny typů.  

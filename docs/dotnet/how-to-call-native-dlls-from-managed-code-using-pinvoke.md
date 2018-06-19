@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129184"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke
 Funkce, které jsou implementované v nespravované knihovny DLL lze volat ze spravovaného kódu pomocí funkce pro vyvolání platformy (P/Invoke). Pokud zdrojový kód pro knihovnu DLL není k dispozici, P/Invoke je jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET, poskytuje Visual C++ alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  

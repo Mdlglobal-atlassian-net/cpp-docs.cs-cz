@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128024"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Postupy: Iterace v obecné kolekci s výrazem for each
 [Obecné typy](../windows/generics-cpp-component-extensions.md) součást Visual C++ vám umožní vytvořit obecné kolekce.  

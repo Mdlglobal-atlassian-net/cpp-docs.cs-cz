@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33126197"
 ---
 # <a name="hashmultisetgenericiterator-stlclr"></a>hash_multiset::generic_iterator (STL/CLR)
 Typ iterace pro použití s generické rozhraní pro kontejner.  

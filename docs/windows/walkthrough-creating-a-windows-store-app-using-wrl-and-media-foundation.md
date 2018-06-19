@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891682"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace pro UPW pomocí knihovny WRL a platformy Media Foundation
 Další informace o použití Windows Runtime C++ šablony knihovny (WRL) k vytvoření aplikace univerzální platformu Windows (UWP), která používá [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  

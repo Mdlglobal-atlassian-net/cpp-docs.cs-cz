@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362102"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI – třída
 Tato třída poskytuje statické funkce související s řetězce, které jsou uložené v objektech třídy kolekce. Je podobná [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ale provádí porovnávání.  

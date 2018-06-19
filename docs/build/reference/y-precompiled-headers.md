@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377535"
 ---
 # <a name="y-precompiled-headers"></a>/Y (předkompilované hlavičky)
 Generování a použití předkompilovaných hlaviček mít vliv následující možnosti kompilátoru:  

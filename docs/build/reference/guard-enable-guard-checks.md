@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375253"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (povolení kontroly ochrany)
 Určuje podporu pro ochranu toku řízení kontroly v spustitelné bitové kopie.  

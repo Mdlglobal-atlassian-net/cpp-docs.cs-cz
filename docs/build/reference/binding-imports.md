@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368925"
 ---
 # <a name="binding-imports"></a>Import vazeb
 Výchozí chování linkeru je vytvoření tabulku vazbu importních adres pro knihovny DLL načtené se zpožděním. Pokud je vázána knihovnu DLL, pomocné funkce se pokusí použít vázané informace namísto volání **GetProcAddress** na každém z odkazovaného importy. Pokud časové razítko nebo upřednostňovanou adresu neodpovídají definicím načtené knihovny DLL, pomocné funkce převezme tabulky adres vázané import je zastaralá a bude pokračovat, protože pokud neexistuje.  

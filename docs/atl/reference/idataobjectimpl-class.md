@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365478"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl – třída
 Tato třída poskytuje metody pro podporu Uniform přenos dat a správě připojení.  

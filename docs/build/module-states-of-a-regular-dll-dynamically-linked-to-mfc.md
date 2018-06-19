@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369367"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stavy modulů běžné knihovny MFC DLL dynamicky propojené s MFC
 Umožňuje dynamicky propojit běžný MFC DLL ke knihovně MFC DLL umožňuje některé konfigurace, které jsou velmi složité. Například běžné knihovny MFC DLL a spustitelný soubor, který použije dynamické propojení ke knihovně MFC DLL a všechny MFC – rozšiřující knihovny DLL.  

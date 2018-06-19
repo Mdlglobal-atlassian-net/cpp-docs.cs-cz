@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367079"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Volání funkcí knihovny DLL z aplikací jazyka Visual Basic
 Pro aplikace Visual Basic (nebo aplikací v jiných jazycích, jako je například Pascal nebo Fortran) k volání funkce v knihovně DLL C/C++ musí být exportován funkce pomocí správné konvence volání bez jakékoli dekorování názvů kompilátorem.  

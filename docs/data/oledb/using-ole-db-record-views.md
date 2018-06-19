@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111270"
 ---
 # <a name="using-ole-db-record-views"></a>Použití zobrazení záznamů technologie OLE DB
 Pokud chcete zobrazit data sady řádků OLE DB v aplikaci MFC, měli byste použít třídu MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Objekt zobrazení záznamu vytvořit z `COleDBRecordView` umožňuje zobrazit záznamy databáze v MFC – ovládací prvky. Zobrazení záznamů je přímo připojený k objektu sady řádků technologie OLE DB, který je vytvořený z zobrazení formuláře dialogové okno `CRowset` třídy šablony. Získání popisovače na objektu sady řádků je jednoduchý:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357880"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits – třída
 Tato třída poskytuje metody, statické funkce a definice TypeDef užitečné při vytváření kolekcí chytré ukazatele pomocí vektoru nové a odstranit operátory.  

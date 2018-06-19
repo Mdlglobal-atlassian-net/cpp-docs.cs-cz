@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377488"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (nastavit zdroj a spustitelný soubor znakových sad na UTF-8)
 Určuje, jak zdrojová znaková sada a znaková sada spuštění jako UTF-8.  

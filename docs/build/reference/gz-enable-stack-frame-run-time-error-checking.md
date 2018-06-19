@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373550"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Povolit běhovou kontrolu chyb rámce zásobníku)
 Provádí stejné operace, jako [/RTC (kontroluje chyby Run-Time)](../../build/reference/rtc-run-time-error-checks.md) možnost. Zastaralé  

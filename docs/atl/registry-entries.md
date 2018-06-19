@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359726"
 ---
 # <a name="registry-entries"></a>Položky registru
 Model DCOM zaveden koncept ID aplikace (AppIDs), které skupiny možností konfigurace pro jeden nebo více objektů DCOM v centrálním umístění v registru. AppID zadáte tak, že zadáte její hodnota v AppID s názvem hodnotu CLSID objektu.  

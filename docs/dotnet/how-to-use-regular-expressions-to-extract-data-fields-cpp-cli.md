@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129665"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Postupy: Použití regulárních výrazů k extrakci datových polí (C++/CLI)
 Následující příklad kódu ukazuje použití regulárních výrazů extrahovat data z formátovaný řetězec. Následující příklad kódu používá <xref:System.Text.RegularExpressions.Regex> třída zadat vzor, který odpovídá e-mailovou adresu. Tento vzor zahrnuje identifikátory pole, které lze použít k načtení uživatele a částí názvu hostitele každou e-mailovou adresu. <xref:System.Text.RegularExpressions.Match> Třída se používá k provádění skutečné vzor shody. Pokud daná e-mailová adresa je platná, jsou extrahována a zobrazí uživatelské jméno a názvy hostitelů.  

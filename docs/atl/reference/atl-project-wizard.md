@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357902"
 ---
 # <a name="atl-project-wizard"></a>Průvodce projektem knihovny ATL
 Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které zjednodušují zápis objektů COM malé a rychlé. Průvodce projektem ATL vytvoří projekt s struktury tak, aby obsahovala COM – objekty.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890856"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operátor sledovacího odkazu (rozšíření komponent C++)
 A *sledovací odkaz* (`%`) se chová stejně jako obyčejnou referenční příručka C++ (`&`) s tím rozdílem, že když je objekt přiřazení sledovací odkaz, se zvýší počet odkazů objektu.  

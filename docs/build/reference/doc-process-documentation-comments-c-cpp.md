@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371278"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (zpracování dokumentačních komentářů) (C/C++)
 V soubory zdrojového kódu a vytvořte projektový soubor pro každou souboru zdrojového kódu, který má dokumentační komentáře způsobí, že kompilátor zpracování dokumentačních komentářů.  

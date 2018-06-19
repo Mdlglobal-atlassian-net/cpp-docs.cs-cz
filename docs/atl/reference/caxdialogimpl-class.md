@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365074"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl – třída
 Tato třída implementuje dialogové okno (modální nebo nemodální), který je hostitelem – ovládací prvky ActiveX.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376556"
 ---
 # <a name="using-verify-instead-of-assert"></a>Použití příkazu VERIFY místo ASSERT
 Předpokládejme, že při spuštění ladicí verzi vaší aplikace knihovny MFC neexistují žádné problémy. Prodejní verze stejné aplikace však dojde k chybě, vrátí nesprávné výsledky nebo vykazuje některé neobvyklé chování.  

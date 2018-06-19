@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356136"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Průvodce komponentou stránky ASP knihovny ATL
 Na této stránce Průvodce komponentou ATL Active Server stránky a zadejte volitelné nastavení pro zpracování informací a stavu související s příslušné součásti ASP.  

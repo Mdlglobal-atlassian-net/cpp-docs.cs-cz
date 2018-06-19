@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132018"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Postupy: Analýza řetězců metodou split (C++/CLI)
 Následující příklad kódu ukazuje, jak pomocí <xref:System.String.Split%2A?displayProperty=fullName> metoda extrahování jednotlivých slov v řetězci. Řetězec obsahující více typů oddělovačů slov je vytvořená a potom analyzovat voláním <xref:System.String.Split%2A> se seznamem oddělovačů. Jednotlivých slov ve větě se potom zobrazí samostatně.  

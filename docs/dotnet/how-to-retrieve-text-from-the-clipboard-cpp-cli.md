@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127900"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Postupy: Načtení textu ze schránky (C++/CLI)
 Následující příklad kódu používá <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> – členská funkce vrátit ukazatel <xref:System.Windows.Forms.IDataObject> rozhraní. Toto rozhraní můžete potom dotaz pro formát data a používá se k načtení skutečná data.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376690"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Kontrola přepisování paměti použitím ladění sestavení
 Chcete-li kontrola přepisování paměti pomocí sestavení ladicí verze, musíte nejprve znovu sestavte projekt pro ladění. Potom přejděte na samém začátku vaší aplikace `InitInstance` funkce a přidejte následující řádek:  

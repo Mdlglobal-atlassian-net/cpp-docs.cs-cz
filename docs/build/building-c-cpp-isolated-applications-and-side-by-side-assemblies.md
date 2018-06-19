@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361281"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Sestavení izolovaných aplikací C/C++ a souběžných sestavení
 Visual C++ podporuje model nasazení pro klientské aplikace Windows podle představu o tom [izolovaných aplikací](http://msdn.microsoft.com/library/aa375190) a [souběžně sdílená sestavení](http://msdn.microsoft.com/library/ff951640). Ve výchozím nastavení, Visual C++ sestavení všechny nativní aplikace C/C++ jako izolované aplikace, které používají [manifesty](http://msdn.microsoft.com/library/aa375365) k popisu závislé na knihovny jazyka Visual C++.  

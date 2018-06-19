@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891815"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Zobrazení a úprava prostředků v editoru prostředků
 Každý typ prostředku má editoru prostředků specifické pro daný typ prostředku. Můžete Změna uspořádání, změnit velikost, přidávání ovládacích prvků a funkce nebo v opačném případě upravte aspektů prostředek přidružené editoru. Můžete také upravit prostředek v [textovém formátu](../windows/how-to-open-a-resource-script-file-in-text-format.md) a [binární formát](../windows/opening-a-resource-for-binary-editing.md).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373098"
 ---
 # <a name="structure-of-a-library"></a>Struktura knihovny
 Knihovnu obsahuje COFF objekty. Objekty v knihovně obsahují funkce a data, která může externě odkazují jiné objekty v programu. Objekt v knihovně se někdy označuje jako člena knihovny.  

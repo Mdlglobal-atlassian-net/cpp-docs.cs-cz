@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366260"
 ---
 # <a name="arm-exception-handling"></a>Zpracovávání výjimek v jazyce ARM
 Systém Windows na ARM používá stejné strukturovaného zpracování mechanismus pro asynchronní výjimky generované hardwaru a synchronní výjimky generované softwaru výjimek. Obslužné rutiny výjimek specifické pro jazyk je postavená na Windows strukturovaného zpracování pomocí jazyka podpůrné funkce výjimek. Tento dokument popisuje zpracování výjimek v systému Windows na ARM a pomocníky jazyk používaný kód, který je generován MASM a kompilátor Visual C++.  

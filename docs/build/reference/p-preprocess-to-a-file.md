@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377141"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (předběžné zpracování souboru)
 Upraví C a C++ zdrojových souborů a předběžně zpracované výstup zapisuje do souboru.  

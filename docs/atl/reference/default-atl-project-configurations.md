@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359042"
 ---
 # <a name="default-atl-project-configurations"></a>Výchozí konfigurace projektu knihovny ATL
 Průvodce projektem ATL vytvoří dvě konfigurace projektu ve výchozím nastavení:  

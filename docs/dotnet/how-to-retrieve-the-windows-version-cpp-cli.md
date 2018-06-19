@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128264"
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>Postupy: Načtení verze systému Windows (C++/CLI)
 Následující příklad kódu ukazuje, jak načíst informace o aktuální operační systém platformy a verzi. Tyto informace jsou uloženy v <xref:System.Environment.OSVersion%2A?displayProperty=fullName> vlastnost, která se skládá z výčtu, který popisuje verzi systému Windows v obecné podmínky a <xref:System.Environment.Version%2A> objekt, který obsahuje přesné sestavení operačního systému.  

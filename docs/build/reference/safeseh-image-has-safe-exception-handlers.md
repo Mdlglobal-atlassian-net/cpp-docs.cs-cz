@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377906"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (Bitová kopie má bezpečné obslužné rutiny výjimek)
 ```  

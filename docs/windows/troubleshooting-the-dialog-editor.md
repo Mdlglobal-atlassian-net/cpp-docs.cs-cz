@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889901"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Řešení potíží s editorem dialogového okna
 Níže jsou několik problémů, o kterých byste měli vědět při práci se v editoru dialogového okna.  

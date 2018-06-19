@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130861"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Postupy: Použití regulárních výrazů ke změně uspořádání dat (C++/CLI)
 Následující příklad kódu ukazuje, jak podporu regulárního výrazu rozhraní .NET Framework slouží k uspořádání nebo přeformátování data. Následující příklad kódu používá <xref:System.Text.RegularExpressions.Regex> a <xref:System.Text.RegularExpressions.Match> třídy k extrahování jména a příjmení z řetězce a následně se zobrazí tyto prvky název v obráceném pořadí.  

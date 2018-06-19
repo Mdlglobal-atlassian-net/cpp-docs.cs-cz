@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110935"
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>.NET Framework – Ekvivalenty k nativním typům C++ (C++/CLI)
 V následující tabulce jsou uvedeny klíčová slova pro vestavěné typy Visual C++, které jsou aliasy předdefinovaných typů v **systému** oboru názvů.  

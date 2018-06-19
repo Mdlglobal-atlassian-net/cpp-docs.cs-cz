@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128638"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Postupy: Načtení názvu místního počítače (C++/CLI)
 Následující příklad kódu ukazuje načtení názvu místního počítače (název počítače, protože se zobrazí v síti). Můžete to provést tím, že získáme <xref:System.Environment.MachineName%2A> řetězce, který je definován v <xref:System.Environment> oboru názvů.  

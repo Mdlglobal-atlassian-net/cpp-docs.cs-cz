@@ -17,6 +17,7 @@ ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472083"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3)
 `IPolyCtl` je rozhraní, které obsahuje ovládacího prvku vlastní metody a vlastnosti a vlastnosti přidáte k ní.  

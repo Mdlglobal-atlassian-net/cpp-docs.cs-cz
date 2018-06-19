@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382754"
 ---
 # <a name="enum-type"></a>enum – typ
 **ANSI 3.5.2.2** typ celé číslo má představovat hodnoty pro výčtový typ.  

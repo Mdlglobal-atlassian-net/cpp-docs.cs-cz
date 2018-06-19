@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891578"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
 Tento podrobný návod ukazuje, jak vytvořit statické knihovny (soubor .lib) pro použití s aplikací C++. Použití statické knihovny je skvělým způsobem, jak kód opakovaně. Místo znovu implementace stejných rutin v každé aplikaci, která vyžaduje funkci, je napsat jednou v statické knihovny a pak na ni odkazujte z aplikací. Kód odkazované z statické knihovny stane součástí aplikace – nemusíte instalovat k použití kódu jiný soubor.  

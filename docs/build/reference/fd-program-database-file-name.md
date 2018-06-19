@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375620"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Název souboru databáze programu)
 Určuje název souboru pro soubor databáze (PDB) programu vytvořené [/Z7, / zi, /ZI (formát informace ladění)](../../build/reference/z7-zi-zi-debug-information-format.md).  

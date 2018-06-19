@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368623"
 ---
 # <a name="mxcsr"></a>MxCsr
 Stav registru obsahuje také MxCsr. Konvence volání tento registr rozděluje volatile část a stálou část. Volatile část se skládá z příznaků 6 stavu, MXCSR [0:5], zatímco zbytek registru, MXCSR [6:15], je považován za stálý.  

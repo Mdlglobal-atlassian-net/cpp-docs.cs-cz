@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360755"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T – třída
 Tato třída poskytuje metody pro práci s okno, které hostuje ovládacího prvku ActiveX a má také podpora pro hostování licencované ovládací prvky ActiveX.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891091"
 ---
 # <a name="type-forwarding-ccli"></a>Předávání typů (C++/CLI)
 *Předávání typů* umožňuje přesunout typu z jednoho sestavení (sestavení A) do jiné sestavení (sestavení B), tak, aby ji není nutné znovu zkompiluje klienty, kteří sestavení A.  

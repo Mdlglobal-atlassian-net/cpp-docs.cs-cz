@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136562"
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 Šablony třídy popisuje functor, že při volání, vrátí hodnotu true pouze v případě, že první argument a druhý test jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  

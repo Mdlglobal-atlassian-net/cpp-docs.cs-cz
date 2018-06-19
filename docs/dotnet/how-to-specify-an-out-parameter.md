@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128290"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>Postupy: Určení výstupního parametru
 Tento příklad ukazuje, jak určit, že parametr funkce je výstupní parametr a jak pro volání této funkce z programu v C#.  

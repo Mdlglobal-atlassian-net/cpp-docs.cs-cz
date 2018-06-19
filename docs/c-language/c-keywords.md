@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388237"
 ---
 # <a name="c-keywords"></a>Klíčová slova jazyka C
 „Klíčová slova“ jsou slova, která mají pro kompilátor jazyka C zvláštní význam. Ve fázích překladu 7 a 8 nemůže mít identifikátor stejné pořadí a velikost písmen jako klíčové slovo jazyka C. (Viz popis [fáze překladu](../preprocessor/phases-of-translation.md) v *preprocesor odkaz*; informace o identifikátory, najdete v tématu [identifikátory](../c-language/c-identifiers.md).) Jazyk C používá následující klíčová slova:  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |||||  
 |-|-|-|-|  
 |**__asm**|**DllImport**2|**__int8**|**holé**2|  
-|**__based –**1|**__except**|**__int16**|**__stdcall**|  
+|**__based –** 1|**__except**|**__int16**|**__stdcall**|  
 |**__cdecl**|**__fastcall**|**__int32**|**vlákno**2|  
 |**__declspec**|**__finally**|**__int64**|**__try**|  
 |**dllexport**2|**__inline**|**__leave**||  

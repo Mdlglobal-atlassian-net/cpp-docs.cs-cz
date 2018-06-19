@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375913"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Omezení odloženého načítání knihoven DLL
 Existují omezení týkající se načítání zpoždění importy.  

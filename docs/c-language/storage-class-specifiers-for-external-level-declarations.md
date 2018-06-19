@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392114"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Specifikátory třídy úložiště pro deklarace na externí úrovni
 Externí proměnné jsou proměnné v rozsahu souboru. Jsou definovány mimo jakoukoliv funkci a jsou potenciálně dostupné pro mnoho funkcí. Funkce lze definovat pouze na externí úrovni, a proto nemohou být vnořeny. Ve výchozím nastavení jsou všechny odkazy na vnější proměnné a funkce se stejným názvem odkazy na stejný objekt, což znamená, že mají „vnější propojení“. (Můžete použít **statické** – klíčové slovo pro toto přepsání. Informace dále v této části Další podrobnosti o naleznete **statické**.)  

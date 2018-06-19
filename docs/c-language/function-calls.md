@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387860"
 ---
 # <a name="function-calls"></a>Volání funkcí
 A *volání funkce* je výraz, který předá řízení a argumenty (pokud existuje) funkce a formulář:  

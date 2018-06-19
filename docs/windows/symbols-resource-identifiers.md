@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891841"
 ---
 # <a name="symbols-resource-identifiers"></a>Symboly: identifikátory prostředků
 Symbol je resource identifier (ID), která se skládá ze dvou částí: textový řetězec (názvu symbolu) namapované na celočíselnou hodnotu (symbol hodnota). Příklad:  

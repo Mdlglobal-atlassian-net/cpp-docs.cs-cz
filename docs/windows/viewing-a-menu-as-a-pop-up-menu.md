@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891016"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Zobrazení nabídky jako místní nabídky
 Za normálních okolností při práci v editoru nabídky prostředků nabídky se zobrazí jako řádku nabídek. Můžete však mít prostředků nabídky, které jsou přidány do řádku nabídek aplikace při spuštění programu.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370524"
 ---
 # <a name="def-files-as-linker-input"></a>Soubory .Def jako vstup linkeru
 V tématu [soubory definice modulu (.def)](../../build/reference/module-definition-dot-def-files.md) Další informace. Použití [/def](../../build/reference/def-specify-module-definition-file.md) možnost zadat název souboru .def.  

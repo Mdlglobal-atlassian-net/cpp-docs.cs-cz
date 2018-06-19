@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374723"
 ---
 # <a name="module-definition-def-files"></a>Soubory definice modulu (.Def)
 Soubory definice modulu (.def) zadejte linkeru s informacemi o export, atributy a další informace o program, který má být propojena. Soubor .def je velmi užitečné při vytváření knihovny DLL. Protože nejsou k dispozici [možnosti linkeru](../../build/reference/linker-options.md) který lze použít místo příkazy definice modulu .def soubory jsou obecně není nutné. Můžete také použít [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako způsob, jak určit exportovaných funkcí.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129681"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Postupy: Definování a instalace globální obslužné rutiny výjimek
 Následující příklad kódu ukazuje, jak neošetřených výjimek, se dají zachytit. Tento příklad formulář obsahuje tlačítko, pokud bylo stisknuto, provede odkaz s hodnotou null, která způsobila výjimku, která je vyvolána. Tato funkce představuje selhání typické kódu. Výsledný výjimka je zpracována obslužná rutina výjimky celou aplikaci nainstalovat hlavní funkce.  

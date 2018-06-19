@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369049"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Postupy: Vložení manifestu do aplikace C/C++
 Je doporučeno, že aplikace C/C++ (nebo knihovna) mají jeho manifest vložená do konečné binární, protože zaručí se tím správný modul runtime chování ve většině scénářů. Ve výchozím nastavení [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pokusí k sestavení projektu ze zdrojových souborů pro vložení manifestu; viz [generování manifestu v sadě Visual Studio](../build/manifest-generation-in-visual-studio.md) Další informace. Ale pokud je aplikace vytvořené s použitím nmake, některé změny existujícího souboru pravidel jsou nezbytné. V této části ukazuje, jak změnit stávající soubory pravidel pro automaticky vložení manifestu do konečné binárního souboru.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378230"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umístit informace o ladění do souboru objektu)
 Mezerami dokončení ladicí informace ve všech souborů objektu vytvořeny ze souboru předkompilovaných hlaviček (.pch) při použití s [/Yc](../../build/reference/yc-create-precompiled-header-file.md) a [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) možnosti. Zastaralé  

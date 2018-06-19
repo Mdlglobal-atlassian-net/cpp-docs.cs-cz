@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367183"
 ---
 # <a name="exception-handling-x64"></a>Zpracování výjimek (x64)
 Tato část popisuje strukturované zpracování výjimek a v chování zpracování výjimek v C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  

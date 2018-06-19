@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111754"
 ---
 # <a name="supporting-schema-rowsets"></a>Podpora sad řádků schématu
 Schéma sad řádků umožňují spotřebitelům získat informace o úložišti dat bez znalosti jeho podkladová struktura nebo schéma. Úložiště dat, které může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, takže by být žádný způsob, jak zajistit, aby znalosti o schématu s výjimkou jeho čtení. (Například Upozorňujeme, že průvodci Visual C++ použít sady řádků schématu pro generování přístupových objektů pro spotřebitele.) Povolit příjemce k tomu, vystavuje objekt relace poskytovatele metody na [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) rozhraní. V aplikacích Visual C++, můžete použít [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci **IDBSchemaRowset**.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367989"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Postupy: Přidání vlastního kroku sestavení do projektů MSBuild
 Vlastní krok sestavení je krok uživatelem definované v sestavení. Vlastní krok sestavení se chová stejně jako jakýkoli jiný *nástroj příkazu* krok, jako je například standardní nástroj krok kompilaci nebo odkaz.  

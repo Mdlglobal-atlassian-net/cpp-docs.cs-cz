@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378594"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Použití knihovny importu a souboru exportu
 Když program na jiném programu, který také importovat z exportuje (spustitelného souboru nebo knihovny DLL), nebo pokud více než dva programy exportovat do a importovat od sebe navzájem, příkazy propojení tyto programy musí zohlednit kruhové exporty.  

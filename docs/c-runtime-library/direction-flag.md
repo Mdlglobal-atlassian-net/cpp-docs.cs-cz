@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387847"
 ---
 # <a name="direction-flag"></a>Příznak směru
 Příznak směru je příznak procesoru specifické pro procesory Intel 80 x 86. Platí pro všechny pokyny sestavení pomocí (opakování) předponu REP, jako je například MOVS, MOVSD, MOVSW a dalších. Adresy zadané na příslušné pokyny jsou zvýšena, pokud se vymaže příznak směru.  

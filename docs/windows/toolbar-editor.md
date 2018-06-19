@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891308"
 ---
 # <a name="toolbar-editor"></a>Editor panelu nástrojů
 Editor panelu nástrojů umožňuje vytvářet prostředky panelu nástrojů a převést bitmap na panelu nástrojů prostředky. Editor panelu nástrojů používá grafické zobrazení na panelu nástrojů a tlačítka, která velmi podobat, jak bude vypadat v dokončení aplikaci.  

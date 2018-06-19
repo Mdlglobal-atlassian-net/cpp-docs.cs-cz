@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369354"
 ---
 # <a name="parameter-passing"></a>Předávání parametrů
 První čtyři celočíselné argumenty jsou předány v registrech. Celočíselné hodnoty jsou předána (v pořadí zleva doprava) RCX, RDX, R8 a R9. Argumenty pět a vyšší se předávají v zásobníku. Všechny argumenty mají právo zarovnané v registrech. Důvodem je, pokud můžete volaného ignorovat horní bity registru musí být a k přístup jenom ta část registraci nezbytné.  

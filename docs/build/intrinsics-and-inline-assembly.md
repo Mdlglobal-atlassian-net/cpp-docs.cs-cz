@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367976"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Vnitřní objekty a vložené sestavení
 Jedním z omezení [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilátoru je, aby žádná podpora vloženého assembleru. To znamená, že funkce, které nelze zapsat do jazyka C nebo C++ bude buď mít k zapsání jako subrutiny nebo jako vnitřní funkce kompilátoru nepodporuje. Určité funkce jsou citlivé výkonu, zatímco jiné nejsou. Funkce náročné na výkon by měla být implementována jako vnitřní funkce.  

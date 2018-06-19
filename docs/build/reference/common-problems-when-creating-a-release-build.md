@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373163"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Běžné problémy při vytváření sestavení pro vydání
 Během vývoje bude obvykle sestavení a testů s sestavení ladicí verze projektu. Pokud potom vytvoříte aplikaci pro sestavení pro vydání, může dojít k porušení přístupu.  

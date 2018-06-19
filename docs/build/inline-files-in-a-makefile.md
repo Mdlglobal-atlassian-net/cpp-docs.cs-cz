@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368119"
 ---
 # <a name="inline-files-in-a-makefile"></a>Vložené soubory v souboru pravidel
 Vloženého souboru obsahuje text, který určíte v soubor pravidel. Jeho název můžete použít v příkazech jako vstup (například soubor příkazů odkaz), nebo je příkazy předat operačního systému. Soubor je vytvořen na disku, když se spustí příkaz, který vytvoří soubor.  

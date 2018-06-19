@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131352"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Postupy: Vlastnosti volání a metody ovládacího prvku modelu Windows Forms
 Protože [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) vrací ukazatel na <xref:System.Windows.Forms.Control?displayProperty=fullName>a nikoli ukazatel na `WindowsControlLibrary1::UserControl1`, je třeba přidat člena uživatelského ovládacího prvku typu a inicializovat jej v [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Nyní můžete volat metody a vlastnosti pomocí `m_ViewControl`.  

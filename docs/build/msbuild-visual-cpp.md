@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369302"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Můžete použít **MSBuild** nástroj pro vývoj aplikace Visual C++ z příkazového řádku. Informace v souboru projektu (VCXPROJ), který může vytvářet a upravovat řídí procesu sestavení. Soubor projektu určuje možnosti sestavení na základě sestavení fáze, podmínky a události.  

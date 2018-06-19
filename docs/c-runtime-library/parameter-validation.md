@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450248"
 ---
 # <a name="parameter-validation"></a>Ověřování parametru
 Většina funkcí Rozšířené zabezpečení CRT a řadu dříve existující funkce ověřit jejich parametrů. To může zahrnovat kontrola ukazatele pro **NULL**, kontrola, že celá spadat do platný rozsah nebo kontrola, zda jsou hodnoty výčtu platná. Pokud je nalezen neplatný parametr, spustit je obslužná rutina neplatný parametr.  

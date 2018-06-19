@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373719"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Určení knihoven DLL pro odložené načtení
 Můžete určit, které knihoven DLL pro odložené načítání vlivem [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` – možnost linkeru. Pokud neplánujete použít vlastní verzi pomocné funkce, je nutné také propojit váš program s delayimp.lib (pro desktopové aplikace) nebo dloadhelper.lib (pro aplikace pro store).  

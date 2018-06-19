@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368795"
 ---
 # <a name="language-specific-handler"></a>Obslužná rutina specifická pro jazyk
 Vždy, když jsou nastaveny příznaky UNW_FLAG_EHANDLER nebo UNW_FLAG_UHANDLER se nachází v UNWIND_INFO relativní adresu obslužná rutina pro konkrétní jazyk. Jak je popsáno v předchozí části, se nazývají obslužná rutina pro konkrétní jazyk, v rámci hledání pro obslužnou rutinu výjimky nebo jako součást unwind. Má následující prototyp:  

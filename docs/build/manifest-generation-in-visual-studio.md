@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370446"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generování manifestu v aplikaci Visual Studio
 Generování souboru manifestu pro konkrétní projekt se dá řídit v projektu **stránky vlastností** dialogové okno. Na **vlastnosti konfigurace** , klikněte na **Linkeru**, pak **souboru Manifest**, pak **generovat Manifest**. Ve výchozím nastavení jsou nastaveny vlastnosti projektu nové projekty generovat soubor manifestu. Je ale možné zakázat generování manifestu pro projekt pomocí **generovat Manifest** vlastnosti projektu. Pokud je tato vlastnost nastavená na **Ano**, se generuje manifest pro tento projekt. V opačném případě linkeru ignoruje informací o sestavení při rozpoznávání závislostem kódu aplikace a negeneruje manifest.  

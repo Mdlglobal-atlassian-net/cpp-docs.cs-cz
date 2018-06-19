@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359311"
 ---
 # <a name="interfaces-atl"></a>Rozhraní (ATL)
 Rozhraní je způsob, ve kterém objekt poskytuje jeho funkce vnějším světem. V modelu COM je rozhraní tabulku ukazatelé (např. C++ vtable) na funkce, které jsou implementované objektu. V tabulce představuje rozhraní, a metody tohoto rozhraní jsou funkce, na které odkazuje. Objekt můžou zpřístupnit tolik rozhraní zvolí.  

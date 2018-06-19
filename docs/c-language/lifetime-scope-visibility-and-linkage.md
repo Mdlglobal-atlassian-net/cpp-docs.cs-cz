@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384421"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Doba platnosti, rozsah, viditelnost a propojení
 Abyste pochopili, jak funguje programu C, musíte pochopit pravidla, která určují, jak proměnné a funkce lze v programu. Několik konceptů jsou klíčové pro vysvětlení těchto pravidel:  

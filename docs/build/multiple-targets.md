@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368184"
 ---
 # <a name="multiple-targets"></a>Několik cílů
 NMAKE vyhodnotí více cílů v jednom závislosti, jako v případě, že každý byl zadán v samostatné popis bloku.  

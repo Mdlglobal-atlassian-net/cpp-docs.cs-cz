@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358124"
 ---
 # <a name="date-type"></a>DATE – typ
 **Datum** typ je implementovaná pomocí číslo s plovoucí desetinnou čárkou 8 bajtů. Počet dnů jsou reprezentované pomocí přírůstcích celé číslo od 30 prosinec 1899, půlnoc jako čas nula. Hodnoty hodin jsou vyjádřené jako absolutní hodnotu čísla zlomkové části. Následující tabulka znázorňuje několik dat spolu s jejich **datum** číselný ekvivalent typu:  

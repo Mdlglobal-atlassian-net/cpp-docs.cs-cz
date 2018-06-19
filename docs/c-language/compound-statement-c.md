@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385722"
 ---
 # <a name="compound-statement-c"></a>Složený příkaz (C)
 Složený příkaz (také nazývané "blok") se obvykle zobrazují jako text jiného příkazu, jako **Pokud** příkaz. [Deklarace a typy](../c-language/declarations-and-types.md) popisuje formuláře a význam deklarace, které se mohou objevit v hlavě složený příkaz.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379091"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Přehled konvencí ABI ARM
 Binární rozhraní aplikace (ABI) pro kód zkompilovaném pro Windows na procesory ARM je založena na standardní EABI ARM. Tento článek popisuje klíčové rozdíly mezi Windows on ARM a standard. Další informace o standardní EABI ARM naleznete v tématu [aplikace binární rozhraní (ABI) pro architekturu ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

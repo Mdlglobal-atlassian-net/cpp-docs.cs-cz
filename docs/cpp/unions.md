@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32425696"
 ---
 # <a name="unions"></a>Sjednocení
 A `union` je uživatelsky definovaný typ., ve kterém všichni členové sdílet stejné umístění paměti. To znamená, že v každém okamžiku sjednocení může obsahovat více než jeden objekt z jeho seznam členů. Taky to znamená, že bez ohledu na to, kolik členů sjednocení má vždy používá jenom dostatek paměti k uložení největší člena.  

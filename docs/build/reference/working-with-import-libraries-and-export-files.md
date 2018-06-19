@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377929"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Práce s importovanými knihovnami a exportovanými soubory
 LIB s parametrem/DEF slouží k vytvoření knihovnu importu a souboru exportu. ODKAZ používá exportu souboru k vytvoření programu, který obsahuje vyexportuje (obvykle dynamické knihovny (DLL)) a používá knihovny importu odkazy na tyto exporty v jiných aplikacích.  

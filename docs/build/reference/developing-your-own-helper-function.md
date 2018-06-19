@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371395"
 ---
 # <a name="developing-your-own-helper-function"></a>Vývoj vlastní pomocné funkce
 Můžete zadat vlastní verzi rutiny udělat konkrétní zpracování na základě názvů importy nebo knihovny DLL. To provést dvěma způsoby: kódování vlastní, případně založená na zadaný kód, nebo jenom zapojování poskytnutá verze pomocí háky oznámení podrobné dříve.  

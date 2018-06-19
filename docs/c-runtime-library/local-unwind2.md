@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391376"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Vnitřní funkce CRT. Spouští všechny obslužné rutiny ukončení, které jsou uvedené v tabulce uvedené oboru.  

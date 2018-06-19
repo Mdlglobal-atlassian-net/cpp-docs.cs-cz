@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358826"
 ---
 # <a name="understanding-parse-trees"></a>Principy analýzy stromů
 Jeden nebo více stromy analýzy můžete definovat ve vašem Registrátor skriptu, kde každý strom analýzy má následující formát:  

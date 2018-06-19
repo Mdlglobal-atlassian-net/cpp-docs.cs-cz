@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891334"
 ---
 # <a name="safeint-class"></a>SafeInt – třída
 Rozšiřuje primitiv celé číslo, aby se zabránilo přetečení celé číslo a umožňují porovnat různé typy celých čísel.  

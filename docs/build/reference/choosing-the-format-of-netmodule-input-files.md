@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372718"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Výběr formátu vstupních souborů .netmodule
 Soubor .obj MSIL (Kompilovat s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) lze také použít jako soubor .netmodule.  soubory .obj obsahovat metadata a nativní symboly.  .netmodules obsahují pouze metadata.  

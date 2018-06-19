@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376911"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (předběžné zpracování výstupu stdout)
 Upraví C a C++ zdrojové soubory a zkopíruje předběžně zpracované soubory do standardního výstupního zařízení.  

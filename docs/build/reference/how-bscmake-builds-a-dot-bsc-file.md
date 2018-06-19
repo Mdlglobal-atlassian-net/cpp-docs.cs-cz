@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373485"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Postupy: Sestavení souboru BSC programem BSCMAKE
 BSCMAKE sestavení nebo znovu sestaví souboru BSC nejefektivnějším způsobem, může to. Aby nedocházelo k problémům, je důležité si uvědomit, procesu sestavení.  

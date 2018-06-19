@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110461"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Předávání testů shodnosti technologie OLE DB
 Chcete-li více konzistentní zprostředkovatelé, Data Access SDK poskytuje sadu testů shodnosti technologie OLE DB. Testy zkontrolujte všechny aspekty svého poskytovatele a získáte přiměřenou jistotu, že váš zprostředkovatel funguje podle očekávání. Můžete najít testů shodnosti technologie OLE DB na Microsoft Data Access SDK. Tato část se zaměřuje na věcí, které byste měli udělat předávání testů shodnosti. Informace o spuštění testů shodnosti technologie OLE DB naleznete v sadě SDK.  

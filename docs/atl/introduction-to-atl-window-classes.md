@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356683"
 ---
 # <a name="introduction-to-atl-window-classes"></a>Úvod do tříd oken ATL
 Následující třídy ATL jsou určené k implementaci a manipulaci s windows:  

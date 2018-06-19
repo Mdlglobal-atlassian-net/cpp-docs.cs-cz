@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374892"
 ---
 # <a name="dumpbin-options"></a>Možnosti DUMPBIN
 Možnost se skládá z specifikátor možnosti, která je pomlčkou (-) nebo lomítkem (/), za nímž následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argumenty zadané za dvojtečkou (:). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich klíčová slova nebo argumenty názvů souborů nerozlišují velikost písmen. Většinu možností lze použít pro všechny binární soubory. Některé však lze použít pouze pro určitý typ souborů. Ve výchozím nastavení nástroj DUMPBIN odesílá informace do standardního výstupu. Použití [/OUT](../../build/reference/out-dumpbin.md) možnost odeslat výstup do souboru.  

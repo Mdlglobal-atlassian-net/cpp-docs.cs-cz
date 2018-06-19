@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374918"
 ---
 # <a name="setting-linker-options"></a>Nastavení možností linkeru
 Možnosti linkeru můžete nastavit, uvnitř nebo vně vývojového prostředí. Téma pro jednotlivé možnosti linkeru popisuje, jak lze nastavit ve vývojovém prostředí. V tématu [možnosti Linkeru](../../build/reference/linker-options.md) úplný seznam.  

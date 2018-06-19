@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375594"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (Určení souboru winmd)
 Určuje název souboru pro výstupní soubor metadat Windows Runtime (.winmd), který je generovaný [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) – možnost linkeru.  

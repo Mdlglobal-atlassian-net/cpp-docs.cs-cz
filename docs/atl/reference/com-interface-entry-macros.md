@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366585"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra  
  Tyto makra zadejte rozhraní objektu do jeho mapy COM tak, aby přístupná pomocí `QueryInterface`. Pořadí položek v mapě COM je rozhraní pořadí bude ověřen odpovídající **IID** během `QueryInterface`.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367963"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Procesy explicitního propojení s volání knihovny DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) získat adresu exportované funkce v knihovně DLL. Použijete ukazatel vrácený funkce k volání funkce DLL. **GetProcAddress** přijímá jako parametry popisovač modulu DLL (vrácený buď **LoadLibrary**, `AfxLoadLibrary`, nebo **GetModuleHandle**) a načte název funkce, které chcete volání nebo pořadí export funkce.  

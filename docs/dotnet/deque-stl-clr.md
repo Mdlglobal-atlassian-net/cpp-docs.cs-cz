@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111143"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů s náhodným přístupem. Použít metodu kontejneru `deque` ke správě pořadí elementů, který vypadá jako souvislý blok úložiště, ale které zvětšit nebo zmenšit na obou koncích, aniž by bylo nutné zkopírovat všechny zbývající elementy. Proto můžete implementovat efektivně `double-ended queue`. (Proto název.)  

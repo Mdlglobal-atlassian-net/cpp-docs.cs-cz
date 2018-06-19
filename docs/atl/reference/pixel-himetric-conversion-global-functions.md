@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359423"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Globální funkce pro převod pixelu nebo HIMETRIC
 Tyto funkce poskytují podporu pro převod do a z pixelů a HIMETRIC jednotky.  

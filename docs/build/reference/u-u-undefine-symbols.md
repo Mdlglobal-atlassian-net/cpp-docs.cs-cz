@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378324"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (nedefinované symboly)
 **/U** – možnost kompilátoru undefines zadaný symbol preprocesoru. **/U** – možnost kompilátoru undefines symboly specifické pro společnost Microsoft, které definuje kompilátoru.  

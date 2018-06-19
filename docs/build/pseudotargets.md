@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368405"
 ---
 # <a name="pseudotargets"></a>Pseudocíle
 Pseudotarget je štítek použít místo název souboru na řádku závislostí. Je interpretován jako soubor, který neexistuje a proto je zastaralý. NMAKE předpokládá, že časové razítko pseudotarget je nejnovější všechny jeho závislé objekty. Pokud má žádné závislé objekty, se předpokládá, že aktuální čas. Pokud pseudotarget se používá jako cíl, jsou vždy provádět její příkazy. Pseudotarget, použít jako závislé musí zobrazit i jako cíl v jiné závislostí. Tuto závislost však nemusí mít blok příkazů.  

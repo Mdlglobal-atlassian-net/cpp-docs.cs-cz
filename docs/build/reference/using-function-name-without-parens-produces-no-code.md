@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373979"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Použití názvu funkce bez závorek () nevygeneruje žádný kód
 Pokud se použije v programu deklarovaný název funkce bez závorek, kompilátor nevytváří kódu. Důvodem je to bez ohledu na to, zda funkce využívá parametry, protože kompilátor vypočítá adresu funkce; ale protože operátor volání funkce "(") není dostupná, žádné Přišla žádost. Tento výsledek je podobný následujícímu:  

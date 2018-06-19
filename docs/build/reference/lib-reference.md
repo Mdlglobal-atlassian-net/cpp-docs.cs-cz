@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371938"
 ---
 # <a name="lib-reference"></a>Referenční dokumentace ke knihovně LIB
 Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu běžných objekt souboru formátu () objekt soubory COFF. LIB také slouží k vytvoření export souborů a knihoven importovat do definice odkaz exportovali.  

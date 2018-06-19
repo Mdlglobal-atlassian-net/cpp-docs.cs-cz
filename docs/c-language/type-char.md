@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386826"
 ---
 # <a name="type-char"></a>Znakový typ
 `char` Typ se používá k ukládání celočíselnou hodnotu členem reprezentovat znaková sada. Zda je celočíselná hodnota kód ASCII odpovídající zadanému znaku.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372149"
 ---
 # <a name="fixing-release-build-problems"></a>Oprava problémů se sestavením pro vydání
 Pokud váš kód vygeneruje chyby při kompilaci po přepnutí z sestavení ladicí verze na sestavení pro vydání, nejsou některé oblasti, byste měli zkontrolovat.  

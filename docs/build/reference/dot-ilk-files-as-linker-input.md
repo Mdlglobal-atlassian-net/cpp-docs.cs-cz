@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371681"
 ---
 # <a name="ilk-files-as-linker-input"></a>Soubory .Ilk jako vstup linkeru
 Při propojování postupně, aktualizuje odkaz stavový soubor .ilk vytvořený během první přírůstkové odkaz. Tento soubor má stejné základní název jako soubor .exe nebo .dll soubor a má .ilk rozšíření. Při následné přírůstkové odkazy aktualizuje odkaz .ilk soubor. Pokud chybí soubor .ilk, odkaz provede úplné odkaz a vytvoří nový soubor .ilk. Pokud je soubor .ilk nepoužitelný, provede odkaz nonincremental odkaz. Podrobnosti o přírůstkové propojování najdete v tématu [přírůstkově odkaz (/ PŘÍRŮSTKOVÉ)](../../build/reference/incremental-link-incrementally.md) možnost.  

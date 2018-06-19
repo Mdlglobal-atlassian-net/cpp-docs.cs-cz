@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375685"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (automatický modul pro paralelní zpracování)
 Umožňuje [automatickou vektorizací](../../parallel/auto-parallelization-and-auto-vectorization.md) funkce kompilátoru učinit automaticky paralelní smyčky v kódu.  

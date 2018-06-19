@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137624"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC
 MFC používá třídu CWinFormsView pro hostování uživatelského ovládacího prvku Windows Forms v MFC zobrazení. Jsou zobrazení MFC Windows Forms – ovládací prvky ActiveX. Uživatelský ovládací prvek je umístěn jako podřízený nativní zobrazení a zabírá celého klienta nativní zobrazení.  

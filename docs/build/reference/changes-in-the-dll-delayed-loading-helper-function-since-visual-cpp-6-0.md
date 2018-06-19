@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371850"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0
 Pokud máte více verzí aplikace Visual C++ v počítači, nebo pokud jste definovali vlastní pomocné funkce, které mohou být ovlivněny změny provedené na knihovnu DLL odložené načtení pomocné funkce. Příklad:  

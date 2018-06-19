@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132892"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Oddíly rozsahu prvků, správně hledání `n`element TD pořadí v rozsahu, aby všechny elementy úrovních před ním jsou menší než nebo rovna hodnotě ho a všechny elementy, které následují v pořadí jsou větší než nebo rovna hodnotě ho.  

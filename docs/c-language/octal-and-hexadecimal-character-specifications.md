@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387385"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Specifikace osmičkových a šestnáctkových znaků
 Pořadí **\\*** ooo* znamená můžete zadat libovolný znak v ASCII znaková sada jako osmičková znak třímístné kód. Číselná hodnota osmičkového čísla určuje hodnotu požadovaného znaku nebo širokého znaku.  

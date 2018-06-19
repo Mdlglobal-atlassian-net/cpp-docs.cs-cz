@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378402"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Potlačit _ftol)
 Zastaralé Potlačí volání pomocné funkce `_ftol` po vyžaduje převod z typu s plovoucí desetinnou čárkou integrální typu.  

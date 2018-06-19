@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891656"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Práce s barvou (editor obrázků pro ikony)
 Editor obrázků obsahuje řadu funkcí, které konkrétně zpracování a přizpůsobení barev. Můžete nastavit barvu popředí nebo pozadí, vyplnění ohraničené oblasti barvou nebo vybrat barvu v obrázku chcete použít jako aktuální barvu popředí nebo pozadí. Můžete použít nástroje na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) společně s barevná paleta v [barvy – okno](../windows/colors-window-image-editor-for-icons.md) k vytvoření bitové kopie.  

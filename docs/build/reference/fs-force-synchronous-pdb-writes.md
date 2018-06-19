@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374788"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Vynutit synchronní zápisy do souboru PDB)
 Vynutí zapisuje do souboru databáze (PDB) programu – vytvořené [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) nebo [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)– k serializaci prostřednictvím MSPDBSRV. SOUBOR EXE.  

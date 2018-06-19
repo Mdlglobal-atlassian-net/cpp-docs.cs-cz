@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391360"
 ---
 # <a name="language-strings"></a>Řetězce jazyků
 `setlocale` a `_create_locale` funkce můžete použít rozhraní API systému Windows NLS podporované jazyky v operačních systémech, které nepoužívají znaková stránka kódování Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v tématu [referenční dokumentace rozhraní API National jazykové podpory (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Řetězec jazyka může být některá z hodnot v **jazyk** a **zkratka jazyka** sloupce seznam podporovaných jazyků. Další informace o podpoře jazyka podle verze operačního systému najdete v tématu [příloha A: produktu chování](http://msdn.microsoft.com/goglobal/bb896001.aspx) v [MS-LCID]: odkaz na Windows jazyk kódu identifikátor (LCID).   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372305"
 ---
 # <a name="editbin-reference"></a>EDITBIN – odkaz
 Microsoft COFF binární soubor Editor (nástroje EDITBIN. Soubor EXE) upravuje binární soubory běžné objekt souboru formátu (COFF). Editbin – slouží k úpravě objektu soubory, spustitelné soubory a dynamické knihovny (DLL).  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363907"
 ---
 # <a name="snap-in-object-macros"></a>Modul snap-In objekt makra
 Tyto makra poskytuje podporu pro rozšíření modulu snap-in.  

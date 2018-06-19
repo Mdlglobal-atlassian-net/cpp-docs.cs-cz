@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890272"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 Informuje volající, že pokud dojde k chybě při volání této funkce, volající může potom zavolejte `GetLastError` načíst kód chyby.  

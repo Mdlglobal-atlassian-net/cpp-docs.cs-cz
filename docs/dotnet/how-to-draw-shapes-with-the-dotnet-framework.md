@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130032"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>Postupy: Kreslení tvarů s použitím rozhraní .NET Framework
 Následující příklad kódu používá <xref:System.Drawing.Graphics> třída změnit <xref:System.Windows.Forms.Form.OnPaint%2A> obslužné rutiny události pro načtení ukazatel na <xref:System.Drawing.Graphics> objekt pro hlavní formulář. Tento ukazatel je pak používá k nastavení barvy pozadí formuláře a nakreslení čáry a oblouku pomocí <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> a <xref:System.Drawing.Graphics.DrawArc%2A> metody.  

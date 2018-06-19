@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367430"
 ---
 # <a name="environment-variable-macros"></a>Makra proměnné prostředí
 NMAKE dědí definice maker pro proměnné prostředí, které existují před zahájením relace. Pokud proměnná nastavena v prostředí operačního systému, je k dispozici jako makra NMAKE. Zděděné názvy se převedou na velká písmena. Dědičnost dojde před předběžného zpracování. Pomocí možnosti /E způsobit makra zděděno z proměnných prostředí pro přepsání makra se stejným názvem v soubor pravidel.  

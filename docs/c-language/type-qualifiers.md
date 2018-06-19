@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389982"
 ---
 # <a name="type-qualifiers"></a>Kvalifikátory typu
 Kvalifikátory typu jednu ze dvou vlastností předáte identifikátor. **Const** kvalifikátor typu deklaruje objekt tak, aby se neupravitelnými. `volatile` Kvalifikátor typu deklaruje položku, jehož hodnota může být změněna legálně cokoli, co je nad rámec tohoto programu, ve kterém se zobrazí, jako je například souběžně spuštěných vláken ovládacího prvku.  

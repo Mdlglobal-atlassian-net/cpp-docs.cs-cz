@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372400"
 ---
 # <a name="exe-files-as-linker-input"></a>Soubory .Exe jako vstup linkeru
 [Název souboru zástupného kódu MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) možnost určuje název souboru .exe, který spouští se systémem MS-DOS. ODKAZ prověří zadaný soubor ujistit, že se jedná o platný program MS-DOS.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111091"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Vaše Role při práci se zobrazením záznamu (Data MFC Access)
 Následující tabulka uvádí, co je obvykle nutné udělat pro práci se zobrazením záznamu a co rozhraní framework za vás.  

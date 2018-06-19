@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374749"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Optimalizace pragmas a klíčových slov
 Několik klíčová slova a pragmas, který používáte v kódu jazyka C nebo C++ ovlivnit optimalizace:  

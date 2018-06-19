@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374463"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Výchozí znakový typ není podepsán)
 Změní výchozí `char` typu z `signed char` k `unsigned char`a `char` typ se rozšířené nula. Pokud je rozšířit do `int` typu.  

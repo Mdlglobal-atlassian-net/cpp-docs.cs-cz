@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130422"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++
 Můžete povolit nativní třídy C++ přijímat zpětná volání ze spravovaných událostí z ovládacích prvků Windows Forms nebo jiných formulářů s formátem mapy maker MFC. Zpracování událostí ve zobrazeních a dialogových oknech se podobá provedení stejné úlohy pro ovládací prvky.  

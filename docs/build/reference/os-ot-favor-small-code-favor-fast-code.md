@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378906"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Upřednostnit malý kód, upřednostnit rychlý kód)
 Minimalizuje nebo maximalizuje velikosti souborů exe a knihovny DLL.  

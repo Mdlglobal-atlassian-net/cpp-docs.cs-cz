@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371353"
 ---
 # <a name="errlook-reference"></a>ERRLOOK – odkaz
 Errlook – nástroj, který je k dispozici v nabídce nástroje jako **Chyba vyhledávání**, načte modul chybová zpráva nebo zpráva Chyba systému podle zadaná hodnota. Errlook – získá text chybové zprávy automaticky v případě, že jste přetažení hexadecimální nebo desetinná hodnota z ladicího programu sady Visual Studio do **hodnotu** ovládacích prvků pro úpravy. Můžete také zadat hodnotu buď zadáním **hodnotu** ovládacích prvků pro úpravy nebo pomocí vkládání ze schránky a kliknutím na tlačítko **Hledat**.  

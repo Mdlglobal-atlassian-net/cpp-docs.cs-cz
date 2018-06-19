@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363243"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>Co je ATL – hostování ovládacího prvku rozhraní API?
 Je ATL – hostování ovládacího prvku rozhraní API je sada funkcí, která umožňuje všechny okna tak, aby fungoval jako kontejneru ovládacího prvku ActiveX. Tyto funkce můžou být staticky nebo dynamicky propojené do projektu, protože jsou k dispozici jako zdrojový kód a vystavené ATL90.dll. V následující tabulce jsou uvedené funkce hostování ovládacího prvku.  

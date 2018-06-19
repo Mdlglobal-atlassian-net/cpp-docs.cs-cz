@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373397"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (minimální opětovné sestavení IDE)
 **/FD** není dostupná uživatelům s výjimkou v [příkazového řádku](../../ide/command-line-property-pages.md) stránce vlastností projektu C++ **stránky vlastností** dialogové okno pole, pokud a pouze v případě [/Gm (povolit minimální sestavení)](../../build/reference/gm-enable-minimal-rebuild.md) zároveň nevyberete. **/FD** nemá žádný vliv jiné než z vývojového prostředí. **/FD** nebude vystavena, ve výstupu **cl /?**.  

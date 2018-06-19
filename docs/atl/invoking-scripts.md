@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362268"
 ---
 # <a name="invoking-scripts"></a>Vyvolání skripty
 [Nahraditelné parametry (registrátora Preprocessor) pomocí](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) popisuje nahrazení mapy a uvádí metodu registrátora **AddReplacement**. Registrátora má osm jiné metody specifické pro skriptování a všechny jsou popsané v následující tabulce.  

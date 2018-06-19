@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373839"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Potlačit úvodní nápis při spouštění) (C/C++)
 Potlačí zobrazení Banner informující o autorských právech při spuštění kompilátor a zobrazení informačních zpráv během kompilace.  

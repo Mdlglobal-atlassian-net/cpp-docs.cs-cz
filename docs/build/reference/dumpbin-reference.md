@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372653"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN – odkaz
 Vypisovač binárních souborů Microsoft COFF (DUMPBIN. EXE) obsahuje informace o běžných objekt souboru formátu (COFF) binární soubory. DUMPBIN – můžete zkontrolovat soubory COFF objektů, standardní knihoven COFF objektů, spustitelné soubory a dynamické knihovny (DLL).  

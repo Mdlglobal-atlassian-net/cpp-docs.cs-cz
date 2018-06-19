@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357731"
 ---
 # <a name="what-is-a-host-object"></a>Co je objekt hostitele?
 Objekt hostitele je objekt modelu COM, který představuje kontejneru ovládacího prvku ActiveX poskytl ATL pro konkrétní okno. Hostitel objektu podtřídy okně kontejner, aby ho můžete podle zprávy pro ovládací prvek, poskytuje rozhraní nezbytné kontejneru má být používána ovládacího prvku, a zpřístupňuje [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) a [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) rozhraní, které se vám umožní nakonfigurovat prostředí ovládacího prvku.  

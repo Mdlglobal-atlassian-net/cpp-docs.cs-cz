@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112505"
 ---
 # <a name="provider-support-for-bookmarks"></a>Podpora zprostředkovatele pro záložky
 Příklad v tomto tématu přidá `IRowsetLocate` rozhraní k `CMyProviderRowset` třídy. Ve většině případů je nejprve přidání rozhraní ke stávající objekt COM. Potom ji můžete otestovat přidáním další volání z šablony příjemce. Příklad ukazuje, jak:  

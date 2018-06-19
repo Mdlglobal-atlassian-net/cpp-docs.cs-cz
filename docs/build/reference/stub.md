@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375198"
 ---
 # <a name="stub"></a>Zástupný procedura
 Při použití v souboru definice modulu, který sestaví ovladač virtuálního zařízení (VxD), můžete zadat název souboru, který obsahuje strukturu IMAGE_DOS_HEADER (definovanou v WINNT. H) pro použití v ovladač virtuálního zařízení (VxD), místo výchozí záhlaví.  

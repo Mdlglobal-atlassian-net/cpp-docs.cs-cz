@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356716"
 ---
 # <a name="multiple-dual-interfaces"></a>Více duální rozhraní
 Možná budete chtít kombinovat výhod duální rozhraní (to znamená, flexibilitu vtable a pozdní vazba, díky čemuž třídy, k dispozici skriptovací jazyky, jakož i C++) pomocí technik vícenásobná dědičnost.  
