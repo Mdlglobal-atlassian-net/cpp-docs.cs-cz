@@ -47,6 +47,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404646"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
@@ -93,7 +94,7 @@ Národní prostředí použít.
 
 **_Mbsnbset –** a **_mbsnbset_l –** funkce nastavovat maximálně první *počet* bajtů *str* k *c*. Pokud *počet* je větší než délka *str*, délka *str* se používá místo *počet*. Pokud *c* je vícebajtových znaků a nelze ji nastavit zcela do posledního bajtu určeného *počet*, poslední bajt doplněno prázdný znak. **_mbsnbset –** a **_mbsnbset_l –** neumístí ukončující null na konci *str*.
 
-**_mbsnbset –** a **_mbsnbset_l –** je podobná **_mbsnset –**kromě toho, že nastaví *počet* bajtů místo *počet* znaky *c*.
+**_mbsnbset –** a **_mbsnbset_l –** je podobná **_mbsnset –** kromě toho, že nastaví *počet* bajtů místo *počet* znaky *c*.
 
 Pokud *str* je **NULL** nebo *počet* rovná nule, tato funkce vygeneruje výjimku neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **NULL**. Navíc pokud *c* není platný vícebajtových znaků **errno** je nastaven na **einval –** a místo toho používá mezeru.
 

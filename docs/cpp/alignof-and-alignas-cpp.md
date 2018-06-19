@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407979"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof a alignas (C++)
 `alignas` Specifikátor typu je přenosné, C++ standardní způsob, jak určit vlastní zarovnání proměnných a uživatelem definované typy. `alignof` Operátor je podobně standardní, přenosný způsob, jak získat zarovnání zadaného typu nebo proměnné.  

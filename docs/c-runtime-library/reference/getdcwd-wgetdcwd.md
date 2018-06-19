@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404246"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -78,7 +79,7 @@ Pokud má určená jednotka není k dispozici, nebo typ jednotky (například vy
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro danou cestu nebo **NULL**.
 
-Pokud **NULL** není zadaný, tato funkce přiděluje vyrovnávací paměti alespoň *maxlen* velikost pomocí **malloc –**a vrátí hodnotu, která **_getdcwd –**je ukazatel na přidělené vyrovnávací paměti. Vyrovnávací paměť může být uvolněno voláním **volné** a předání ukazatele.
+Pokud **NULL** není zadaný, tato funkce přiděluje vyrovnávací paměti alespoň *maxlen* velikost pomocí **malloc –** a vrátí hodnotu, která **_getdcwd –** je ukazatel na přidělené vyrovnávací paměti. Vyrovnávací paměť může být uvolněno voláním **volné** a předání ukazatele.
 
 *MAXLEN*<br/>
 Nenulové hodnoty kladné celé číslo, které určuje maximální délku cesty, ve znacích: **char** pro **_getdcwd –** a **wchar_t** pro **_wgetdcwd –**.
@@ -95,7 +96,7 @@ Pokud *vyrovnávací paměti* je zadán jako **NULL** a není dostatek paměti k
 
 **_Getdcwd –** funkce získá úplnou cestu aktuálního pracovního adresáře na určené jednotce a ukládá je v *vyrovnávací paměti*. Pokud aktuální pracovní adresář se nastaví na kořen, řetězec končí zpětné lomítko (\\). Pokud aktuální pracovní adresář je nastavena do jiného adresáře než je kořenový adresář, ukončí řetězec s názvem adresáře a nikoli s lomítkem.
 
-**_wgetdcwd –** je verze široká charakterová **_getdcwd –**a jeho *vyrovnávací paměti* parametr a návratové hodnoty jsou široká charakterová řetězce. V opačném **_wgetdcwd –** a **_getdcwd –** chovají stejně jako.
+**_wgetdcwd –** je verze široká charakterová **_getdcwd –** a jeho *vyrovnávací paměti* parametr a návratové hodnoty jsou široká charakterová řetězce. V opačném **_wgetdcwd –** a **_getdcwd –** chovají stejně jako.
 
 Tato funkce je bezpečné pro přístup z více vláken, i když závisí na **GetFullPathName**, který je sám není bezpečné pro přístup z více vláken. Ale porušení zabezpečení vlákna Pokud vícevláknové aplikace volá obě tato funkce a **GetFullPathName**. Další informace, přejděte na [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) a poté vyhledejte **GetFullPathName**.
 

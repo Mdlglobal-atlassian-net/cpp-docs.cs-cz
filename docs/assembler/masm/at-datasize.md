@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049112"
 ---
 # <a name="datasize"></a>@DataSize
 0 pro **velmi malé**, **malé**, **střední**, a **ploché** modelů, 1 pro **COMPACT** a  **VELKÉ** modely a 2 pro **HUGE** modelu (číselný označení rovnosti).  

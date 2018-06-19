@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056922"
 ---
 # <a name="operator-eq"></a>operátor EQ
 Vrátí hodnotu true (-1) Pokud *expression1* rovná *Výraz2*, nebo vrátí hodnotu false (0), pokud neexistuje.  

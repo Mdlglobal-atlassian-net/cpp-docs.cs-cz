@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052583"
 ---
 # <a name="setframe"></a>.SETFRAME
 Vyplní rámečku zaregistrovat pole a posun v unwind informace, pomocí zadané registru (`reg`) a posunutí (`offset`). Posun musí být násobkem 16 a menší než nebo rovna 240. Tato direktiva rovněž vygeneruje `UWOP_SET_FPREG` unwind položku kódu pro zadaný zaregistrovat pomocí aktuální posun prologu.  

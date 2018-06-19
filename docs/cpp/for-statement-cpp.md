@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417181"
 ---
 # <a name="for-statement-c"></a>for – příkaz (C++)
 Spustí příkaz opakovaně, dokud podmínka nebude nepravda. Informace o založený na rozsahu pro příkaz, naleznete v části [na základě rozsahu pro příkaz (C++)](../cpp/range-based-for-statement-cpp.md).  

@@ -54,6 +54,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417939"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -141,7 +142,7 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 
 **vsnprintf_s –**, **_vsnprintf_s –** a **_vsnwprintf_s –** vrátí počet znaků zapsána, pokud dojde k chybě výstup není včetně ukončující hodnotu null nebo záporná hodnota. **vsnprintf_s –** je stejný jako **_vsnprintf_s –**. **vsnprintf_s –** je zahrnuté pro dodržování předpisů pro standardu ANSI. **_vnsprintf** se zachovává kvůli zpětné kompatibilitě.
 
-Pokud překročí úložiště potřebné pro uložení dat a ukončující null *sizeOfBuffer*, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), pokud *počet*  je [_truncate –](../../c-runtime-library/truncate.md), v takovém případě co nejvíc řetězec tak, jak se vejde *vyrovnávací paměti* je zapsán a vrátí hodnotu -1. Pokud pokračuje v provádění po obslužná rutina neplatný parametr, nastavte tyto funkce *vyrovnávací paměti* na prázdný řetězec, nastavte **errno** k **erange –**a vrátí hodnotu -1.
+Pokud překročí úložiště potřebné pro uložení dat a ukončující null *sizeOfBuffer*, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), pokud *počet*  je [_truncate –](../../c-runtime-library/truncate.md), v takovém případě co nejvíc řetězec tak, jak se vejde *vyrovnávací paměti* je zapsán a vrátí hodnotu -1. Pokud pokračuje v provádění po obslužná rutina neplatný parametr, nastavte tyto funkce *vyrovnávací paměti* na prázdný řetězec, nastavte **errno** k **erange –** a vrátí hodnotu -1.
 
 Pokud *vyrovnávací paměti* nebo *formátu* je **NULL** ukazatele, nebo pokud *počet* je menší než nebo rovna nule, je volána obslužná rutina neplatný parametr. Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
 

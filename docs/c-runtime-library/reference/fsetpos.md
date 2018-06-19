@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32399306"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -67,7 +68,7 @@ V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-r
 
 ## <a name="remarks"></a>Poznámky
 
-**Fsetpos –** funkce nastaví indikátor pozice souboru pro *datového proudu* na hodnotu *pos*, který byl získán v předchozí výzvy k **fgetpos –**proti *datového proudu*. Funkce vymaže indikátoru end souboru a vrátí zpět důsledky [ungetc –](ungetc-ungetwc.md) na *datového proudu*. Po volání **fsetpos –**, další operace na *datového proudu* může být buď vstup nebo výstup.
+**Fsetpos –** funkce nastaví indikátor pozice souboru pro *datového proudu* na hodnotu *pos*, který byl získán v předchozí výzvy k **fgetpos –** proti *datového proudu*. Funkce vymaže indikátoru end souboru a vrátí zpět důsledky [ungetc –](ungetc-ungetwc.md) na *datového proudu*. Po volání **fsetpos –**, další operace na *datového proudu* může být buď vstup nebo výstup.
 
 ## <a name="requirements"></a>Požadavky
 

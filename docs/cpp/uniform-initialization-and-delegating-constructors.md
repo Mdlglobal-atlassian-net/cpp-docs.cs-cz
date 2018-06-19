@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423519"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednotná inicializace a delegování konstruktorů
 V moderní verze jazyka C++, můžete použít *složených závorek inicializace* pro jakýkoli typ bez symbolem rovná se. Navíc můžete delegování konstruktorů zjednodušit kód, když máte více konstruktory, které provádějí podobné práci.  

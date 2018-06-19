@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408130"
 ---
 # <a name="setusermatherr"></a>__setusermatherr
 Určuje uživatelem zadané rountine se budou zpracovávat chyby matematické, místo [_matherr –](../c-runtime-library/reference/matherr.md) rutiny.  

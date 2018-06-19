@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053298"
 ---
 # <a name="arm-assembler-directives"></a>Direktivy assembleru ARM
 Ve většině případů assembleru Microsoft ARM používá jazyk sestavení ARM, která je popsána v kapitole 7 [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Ale implementace Microsoft direktiv některé sestavení se liší od direktivy sestavení ARM. Tento článek vysvětluje rozdíly.  

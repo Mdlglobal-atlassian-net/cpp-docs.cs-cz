@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415449"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Postupy: Vytváření a používání instancí objektů CComPtr a CComQIPtr
 V classic programování v systému Windows, jsou knihovny často implementovány jako objekty modelu COM (nebo přesněji řečeno, jako servery COM). Mnoho součásti systému Windows jsou implementované jako servery COM a počet přispěvatelů poskytnout knihovny v tomto formuláři. Informace o základech COM najdete v tématu [modelu COM (Component Object)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  

@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32401435"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -78,7 +79,7 @@ void _ftime64( struct __timeb64 *timeptr );
 |**Čas**|Čas v sekundách od půlnoc (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC).|
 |**Časové pásmo**|Rozdíl v minutách, westward, přesun mezi místním ČASEM a. Hodnota **časové pásmo** nastavena z hodnoty globální proměnné **_timezone** (najdete v části **_tzset –**).|
 
-**_Ftime64 –** funkci, která používá **__timeb64 –** struktury, umožňuje vytvoření souboru data, která se vyjádřit až do 23:59:59, 31. prosince 3000, UTC; zatímco **_ftime32 –**pouze představuje datům až 23:59:59 18 leden 2038 UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
+**_Ftime64 –** funkci, která používá **__timeb64 –** struktury, umožňuje vytvoření souboru data, která se vyjádřit až do 23:59:59, 31. prosince 3000, UTC; zatímco **_ftime32 –** pouze představuje datům až 23:59:59 18 leden 2038 UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
 
 **_Ftime –** funkce je ekvivalentní volání **_ftime64 –**, a **_timeb –** obsahuje čas 64-bit, pokud **_USE_32BIT_TIME_T** je definována v takovém případě staré chování je v platnosti; **_ftime –** používá čas 32bitová verze a **_timeb –** obsahuje 32-bit čas.
 

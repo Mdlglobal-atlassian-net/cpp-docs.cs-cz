@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053051"
 ---
 # <a name="operators-masm"></a>Operátory (MASM)
 Další informace o operátory v jazyce assembleru maker Microsoft najdete v tématu [referenční dokumentace k operátorům](../../assembler/masm/operators-reference.md).  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417429"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -142,7 +143,7 @@ Nula v případě úspěšného; Kód chyby při selhání.
 
 Pokud dojde k některé z výše uvedených podmínek, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **einval –**.
 
-Pokud některé z vyrovnávací paměti je příliš krátká pro uložení výsledek, tyto funkce zrušte všechny vyrovnávací paměti do prázdné řetězce, nastavte **errno** k **erange –**a vrátí **erange –**.
+Pokud některé z vyrovnávací paměti je příliš krátká pro uložení výsledek, tyto funkce zrušte všechny vyrovnávací paměti do prázdné řetězce, nastavte **errno** k **erange –** a vrátí **erange –**.
 
 ## <a name="remarks"></a>Poznámky
 

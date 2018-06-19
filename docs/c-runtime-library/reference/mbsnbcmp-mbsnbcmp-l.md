@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404633"
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 
@@ -97,7 +98,7 @@ Parametr chyby ověření **_mbsnbcmp –** a **_mbsnbcmp_l –** vrátit **_NLS
 
 **_Mbsnbcmp –** funkce Porovnat maximálně první *počet* bajtů *řetězec1* a *řetězec2* a vrátí hodnotu, která určuje vztah mezi dílčích řetězců. **_mbsnbcmp –** je malá a velká písmena verze **_mbsnbicmp –**. Na rozdíl od **_mbsnbcoll –**, **_mbsnbcmp –** nemá vliv pořadí kolace národní prostředí. **_mbsnbcmp –** rozpozná sekvencí vícebajtových znaků podle aktuální vícebajtových [znaková stránka](../../c-runtime-library/code-pages.md).
 
-**_mbsnbcmp –** vypadá takto: **_mbsncmp –**kromě toho, že **_mbsncmp –** porovná řetězce znaky, a nikoli bajtů.
+**_mbsnbcmp –** vypadá takto: **_mbsncmp –** kromě toho, že **_mbsncmp –** porovná řetězce znaky, a nikoli bajtů.
 
 Výstupní hodnota je ovlivňován **LC_CTYPE –** kategorie nastavení národního prostředí, která určuje počet bajtů realizace a na konci bajtů více-bajtové znaky. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). **_Mbsnbcmp –** funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí. **_Mbsnbcmp_l –** funkce se shoduje s tím rozdílem, že se používá *národního prostředí* parametr místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
 

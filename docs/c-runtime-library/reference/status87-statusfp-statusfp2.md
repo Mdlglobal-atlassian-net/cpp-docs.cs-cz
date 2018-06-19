@@ -53,6 +53,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412553"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 
@@ -76,7 +77,7 @@ Tato adresa je vyplněn stavového slova pro jednotku SSE2 s plovoucí desetinno
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pro **_status87 –** a **_statusfp –**, bity v hodnotě, která je vrácena označují stav s plovoucí desetinnou čárkou. Najdete v článku FLOAT. H zahrnují v souboru definice služby bits, které se vrátí pomocí **_statusfp –**. Mnoho funkcí knihovny math upravit s plovoucí desetinnou čárkou stavového slova, s vést k neočekávaným výsledkům. Optimalizace můžete změnit pořadí, kombinace a eliminovat s plovoucí desetinnou čárkou operations kolem volání **_status87 –**, **_statusfp –**a související funkce. Použití [/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md) – možnost kompilátoru nebo [fenv_access –](../../preprocessor/fenv-access.md) – Direktiva pragma aby optimalizace, které změní pořadí operací s plovoucí desetinnou čárkou. Návratové hodnoty z **_clearfp –** a **_statusfp –**a také návratových parametrů **_statusfp2 –**, jsou větší spolehlivost, pokud jsou prováděny méně operace s plovoucí desetinnou čárkou mezi známé stavy s plovoucí desetinnou čárkou stavového slova.
+Pro **_status87 –** a **_statusfp –**, bity v hodnotě, která je vrácena označují stav s plovoucí desetinnou čárkou. Najdete v článku FLOAT. H zahrnují v souboru definice služby bits, které se vrátí pomocí **_statusfp –**. Mnoho funkcí knihovny math upravit s plovoucí desetinnou čárkou stavového slova, s vést k neočekávaným výsledkům. Optimalizace můžete změnit pořadí, kombinace a eliminovat s plovoucí desetinnou čárkou operations kolem volání **_status87 –**, **_statusfp –** a související funkce. Použití [/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md) – možnost kompilátoru nebo [fenv_access –](../../preprocessor/fenv-access.md) – Direktiva pragma aby optimalizace, které změní pořadí operací s plovoucí desetinnou čárkou. Návratové hodnoty z **_clearfp –** a **_statusfp –** a také návratových parametrů **_statusfp2 –**, jsou větší spolehlivost, pokud jsou prováděny méně operace s plovoucí desetinnou čárkou mezi známé stavy s plovoucí desetinnou čárkou stavového slova.
 
 ## <a name="remarks"></a>Poznámky
 

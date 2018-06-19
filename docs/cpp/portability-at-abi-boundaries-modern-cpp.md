@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419658"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Přenositelnost u rozhraní ABI (moderní verze jazyka C++)
 Použití dostatečně přenosné typy a pravidla týkající se na binární rozhraní hranice. "Přenosné type" je předdefinovaný typ C nebo struktura, která obsahuje jenom vestavěné typy C. Typy tříd lze použít pouze když volající a volaný dohodnou na rozložení, volání konvence atd. To je možné pouze, pokud jsou obě kompilovat s stejné kompilátoru a nastavení kompilátoru.  

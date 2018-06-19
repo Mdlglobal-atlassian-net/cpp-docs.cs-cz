@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414780"
 ---
 # <a name="character-sets"></a>Znakové sady
 Text programu C++ je uložen ve zdrojových souborech, které používají konkrétní znaky kódování. Standardní C++ určuje základní zdrojová znaková sada pro zdrojové soubory a spuštění základní znaková sada pro zkompilované soubory. Visual C++ umožňuje další sadu znaků specifická pro národní prostředí pro použití ve zdrojových souborech a zkompilované soubory.  

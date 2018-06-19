@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405572"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 
@@ -103,7 +104,7 @@ Pokud nenastane některá z chybových stavech tyto funkce vyvolat obslužnou ru
 
 Neměňte položku prostředí přímo. Místo toho použijte **_putenv_s –** nebo **_wputenv_s –** ho změnit. Na konkrétní prvky uvolnění přímo **[] _environ –** globální pole může způsobit neplatná paměti vzít v úvahu.
 
-**GETENV –** a **_putenv_s –** pomocí globální proměnné **_environ –** pro přístup k tabulce prostředí; **_wgetenv –** a **_wputenv_s –** použít **_wenviron –**. **_putenv_s –** a **_wputenv_s –** může změnit hodnotu **_environ –** a **_wenviron –**a tím zneplatnit *envp –*argument **hlavní** a **_wenvp** argument **wmain**. Proto je bezpečnější používat **_environ –** nebo **_wenviron –** pro přístup k informacím prostředí. Další informace o vztah **_putenv_s –** a **_wputenv_s –** globální proměnné, najdete v tématu [_environ –, _wenviron –](../../c-runtime-library/environ-wenviron.md).
+**GETENV –** a **_putenv_s –** pomocí globální proměnné **_environ –** pro přístup k tabulce prostředí; **_wgetenv –** a **_wputenv_s –** použít **_wenviron –**. **_putenv_s –** a **_wputenv_s –** může změnit hodnotu **_environ –** a **_wenviron –** a tím zneplatnit *envp –* argument **hlavní** a **_wenvp** argument **wmain**. Proto je bezpečnější používat **_environ –** nebo **_wenviron –** pro přístup k informacím prostředí. Další informace o vztah **_putenv_s –** a **_wputenv_s –** globální proměnné, najdete v tématu [_environ –, _wenviron –](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
 > **_Putenv_s –** a **_getenv_s** řady funkcí nejsou bezpečné pro přístup z více vláken. **_getenv_s** může vrátit ukazatel řetězec při **_putenv_s –** je úprava řetězec a tím způsobit náhodné chyby. Ujistěte se, že jsou synchronizovány volání na tyto funkce.

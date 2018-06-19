@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417298"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -112,7 +113,7 @@ Pokud *počet* je speciální hodnota [_truncate –](../../c-runtime-library/tr
 
 Pokud **wcsrtombs_s –** úspěšně převede zdrojový řetězec, uloží je velikost v bajtech převedený řetězec, včetně null ukončení do  *&#42;pReturnValue* (zadat  *pReturnValue* není **NULL**). K tomu dojde i v případě *mbstr* argument je **NULL** a poskytuje způsob, jak určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *mbstr* je **NULL**, *počet* je ignorována.
 
-Pokud **wcsrtombs_s –** zaznamená široká znaková nelze převést na vícebajtových znaků, odešle -1 do  *\*pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **errno** k **eilseq –**a vrátí **eilseq –**.
+Pokud **wcsrtombs_s –** zaznamená široká znaková nelze převést na vícebajtových znaků, odešle -1 do  *\*pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **errno** k **eilseq –** a vrátí **eilseq –**.
 
 Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chování **wcsrtombs_s –** není definován. **wcsrtombs_s –** je ovlivňován LC_TYPE kategorii aktuální národní prostředí.
 

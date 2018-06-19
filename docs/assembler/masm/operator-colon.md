@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056236"
 ---
 # <a name="operator-"></a>: – operátor
 Přepíše výchozí segment *výraz* s `segment`. `segment` Možné registr segmentu, název skupiny, název segmentu nebo výraz segmentu. *Výraz* musí být konstanta.  

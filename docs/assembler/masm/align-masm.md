@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32048745"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 Zarovnává další proměnná nebo instrukcí na bajtů, které je násobkem `number`.  

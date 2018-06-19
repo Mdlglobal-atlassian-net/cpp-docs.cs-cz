@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410052"
 ---
 # <a name="comerror-member-functions"></a>_com_error – členské funkce
 Informace o **_com_error** členské funkce, najdete v části [_com_error – třída](../cpp/com-error-class.md).  

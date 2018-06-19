@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408912"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -100,7 +101,7 @@ Rutiny nejprve hledá soubor v aktuálním pracovním adresáři. Pokud nenajde 
 
 *Pathname* vyrovnávací paměti by měla být minimálně **_max_path –** znaků dlouhé zohlednit úplné délka sestavené cesta. V opačném **_searchenv –** může přetečení *pathname* vyrovnávací paměti a způsobit neočekávané chování.
 
-**_wsearchenv –** je verze široká charakterová **_searchenv –**a argumenty, které mají **_wsearchenv –** jsou široká charakterová řetězce. **_wsearchenv –** a **_searchenv –** chovat jinak shodně.
+**_wsearchenv –** je verze široká charakterová **_searchenv –** a argumenty, které mají **_wsearchenv –** jsou široká charakterová řetězce. **_wsearchenv –** a **_searchenv –** chovat jinak shodně.
 
 Pokud *filename* je řetězec prázdný, vrátí tyto funkce **enoent –**.
 

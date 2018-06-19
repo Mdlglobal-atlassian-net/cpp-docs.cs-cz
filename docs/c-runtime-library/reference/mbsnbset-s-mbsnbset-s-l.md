@@ -47,6 +47,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404731"
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -111,7 +112,7 @@ Nula v případě úspěšného; jinak kód chyby.
 
 **_Mbsnbset_s –** a **_mbsnbset_s_l –** funkce nastavovat maximálně první *počet* bajtů *str* k *c*. Pokud *počet* je větší než délka *str*, délka *str* se používá místo *počet*. Pokud *c* je vícebajtových znaků a nelze ji nastavit zcela do posledního bajtu, která je zadána *počet*, poslední bajt doplněno prázdný znak. **_mbsnbset_s –** a **_mbsnbset_s_l –** Neumísťujte ukončující null na konci *str*.
 
-**_mbsnbset_s –** a **_mbsnbset_s_l –** vypadat **_mbsnset –**kromě toho, že nastavují *počet* bajtů místo *počet* znaky *c*.
+**_mbsnbset_s –** a **_mbsnbset_s_l –** vypadat **_mbsnset –** kromě toho, že nastavují *počet* bajtů místo *počet* znaky *c*.
 
 Pokud *str* je **NULL** nebo *počet* rovná nule, tato funkce vygeneruje výjimku neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **NULL**. Navíc pokud *c* není platný vícebajtových znaků **errno** je nastaven na **einval –** a místo toho používá mezeru.
 

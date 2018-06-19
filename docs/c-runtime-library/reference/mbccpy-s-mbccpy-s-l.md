@@ -47,6 +47,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404025"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -109,7 +110,7 @@ Nula v případě úspěšného; Kód chyby při selhání. Pokud *src* nebo *c�
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbccpy_s –** funkce zkopíruje jeden vícebajtových znaků z *src* k *cíle*. Pokud *src* neukazuje na zájemce bajt vícebajtových znaků určeného implicitní volání [_ismbblead –](ismbblead-ismbblead-l.md), pak jeden bajt, *src* zkopíruje body. Pokud *src* bodů úvodní bajt, ale následující bajtu je 0 a proto neplatný pak 0 se zkopíruje do *cíle*, **errno** je nastaven na **eilseq –**a Funkce vrátí **eilseq –**.
+**_Mbccpy_s –** funkce zkopíruje jeden vícebajtových znaků z *src* k *cíle*. Pokud *src* neukazuje na zájemce bajt vícebajtových znaků určeného implicitní volání [_ismbblead –](ismbblead-ismbblead-l.md), pak jeden bajt, *src* zkopíruje body. Pokud *src* bodů úvodní bajt, ale následující bajtu je 0 a proto neplatný pak 0 se zkopíruje do *cíle*, **errno** je nastaven na **eilseq –** a Funkce vrátí **eilseq –**.
 
 **_mbccpy_s –** není připojit zakončením hodnotu null, nicméně pokud *src* odkazuje na prázdný znak, pak tuto hodnotu null se zkopíruje do *cíle* (Toto je právě regulární jednobajtové kopie).
 

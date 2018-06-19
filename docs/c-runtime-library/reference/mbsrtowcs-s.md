@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405442"
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 
@@ -115,7 +116,7 @@ Pokud *wcstr* ukazatel s hodnotou null, není objekt ukazatel na kterou odkazuje
 
 Pokud *mbstate* je ukazatel s hodnotou null, interní knihovna **mbstate_t** převodu stavu statické objekt se používá. Protože tato interní statické objekt není bezpečné pro přístup z více vláken, doporučujeme, předáte vlastní *mbstate* hodnotu.
 
-Pokud **mbsrtowcs_s –** zaznamená vícebajtových znaků, který není platný pro aktuální prostředí, odešle -1 do  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti *wcstr* prázdný řetězec, nastaví **errno** k **eilseq –**a vrátí **eilseq –**.
+Pokud **mbsrtowcs_s –** zaznamená vícebajtových znaků, který není platný pro aktuální prostředí, odešle -1 do  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti *wcstr* prázdný řetězec, nastaví **errno** k **eilseq –** a vrátí **eilseq –**.
 
 Pokud daná pořadí na kterou odkazuje *mbstr* a *wcstr* překrývají, chování **mbsrtowcs_s –** není definován. **mbsrtowcs_s –** je ovlivňován LC_TYPE kategorii aktuální národní prostředí.
 

@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409381"
 ---
 # <a name="sal-annotations"></a>Poznámky SAL
 Pokud si projdete soubory hlaviček knihovny, můžete si povšimnout některé neobvyklou poznámky, například `_In_z` a `_Out_z_cap_(_Size)`. Toto jsou příklady jazyka Microsoft zdrojového kódu poznámky (SAL), která poskytuje sada poznámky popisují, jak funkce používá jeho parametry, například předpoklady, které provádí o nich a záruky, které provádí na dokončení. Soubor hlaviček \<sal.h > definuje poznámky.  

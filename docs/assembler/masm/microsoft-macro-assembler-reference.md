@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052824"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler – referenční dokumentace
 Microsoft makro Assembler (MASM) poskytuje několik výhod oproti vloženého sestavení. MASM obsahuje makro jazyk, který obsahuje funkce, jako je zpracování řetězec opakování ve smyčce, aritmetické a text. MASM také vám dává větší kontrolu nad hardware, protože umožňuje sady instrukce 386, 486 a Pentium procesory. Pomocí MASM také můžete snížit režijní náklady na čas a paměti.  

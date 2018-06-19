@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408143"
 ---
 # <a name="additional-termination-considerations"></a>Další důležité informace k ukončování
 Můžete ukončení programu C++ pomocí **ukončete**, `return`, nebo **abort**. Pomocí funkce `atexit` lze přidat funkci, která bude zpracována před ukončením programu. Tyto funkce jsou popsány v následujících částech.  
