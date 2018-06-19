@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111052"
 ---
 # <a name="user-record"></a>Uživatelský záznam
 Záznamu uživatele obsahuje strukturu kód a data, která představuje data ve sloupci pro sadu řádků. Uživatelský záznam lze vytvořit v době kompilace nebo za běhu. Při vytváření zprostředkovatele pomocí Průvodce zprostředkovatele OLE DB ATL průvodce vytvoří výchozí záznam uživatele, který bude vypadat takto (za předpokladu, že jste zadali název zprostředkovatele [krátký název] "MyProvider"):  

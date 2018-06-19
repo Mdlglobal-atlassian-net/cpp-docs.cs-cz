@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129486"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>Postupy: Převod řetězce typu char * na pole System::Byte
 Nejúčinnější způsob, jak převést `char *` řetězec k <xref:System.Byte> pole, je použít <xref:System.Runtime.InteropServices.Marshal> třídy.  

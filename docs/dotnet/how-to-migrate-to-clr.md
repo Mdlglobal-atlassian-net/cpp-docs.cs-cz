@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138437"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 Toto téma popisuje problémy, které se vynoří během kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) informace). **/ CLR** umožňuje modulům Visual C++ pro vyvolání a jde volat z sestavení .NET a přitom zachovat kompatibilitu s nespravovanými moduly. V tématu [Mixed (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a interoperabilitě .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111468"
 ---
 # <a name="finally"></a>finally
 Kromě `try` a `catch` klauzule, podporuje zpracování výjimky CLR `finally` klauzule. Sémantika jsou stejné jako `__finally` blokovat v strukturovaného zpracování (SEH) výjimek. A `__finally` můžete postupovat podle bloku `try` nebo `catch` bloku.  

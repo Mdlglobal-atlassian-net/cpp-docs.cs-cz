@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171611"
 ---
 # <a name="compiler-error-c2268"></a>C2268 chyby kompilátoru
 'function' je pomocné rutiny knihovny kompilátoru předdefinované. Pomocné knihovny nepodporuje /GL; kompilace souboru objektu 'file' bez /GL.  

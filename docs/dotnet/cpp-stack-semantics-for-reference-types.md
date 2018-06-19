@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111351"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
 Před Visual C++ 2005 instance typu odkaz může vytvářet pouze pomocí `new` haldě operátor, který vytvořil objekt na paměti. Je však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které byste použili k vytvoření instance nativního typu v zásobníku. Ano, není potřeba použít [nové, gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu odkazového typu. A pokud objekt je mimo rozsah, kompilátor volání destruktoru objektu.  

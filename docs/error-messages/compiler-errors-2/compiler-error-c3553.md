@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255995"
 ---
 # <a name="compiler-error-c3553"></a>C3553 chyby kompilátoru
 decltype očekává výrazu není typu  

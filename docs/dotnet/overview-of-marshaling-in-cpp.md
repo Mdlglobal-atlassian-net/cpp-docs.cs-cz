@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137131"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Přehled zařazování v jazyku C++
 Ve smíšeném režimu někdy musí zařazování data mezi nativní a spravovaná typy. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] zavedly knihovny zařazování pomohou zařazování a převést data v jednoduchý způsob.  

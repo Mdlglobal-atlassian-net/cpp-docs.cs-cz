@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197907"
 ---
 # <a name="compiler-error-c2392"></a>C2392 chyby kompilátoru
 'method1': kovariantní vrátí typy nejsou podporovány v spravované nebo by být přepsána WinRTtypes, jinak hodnota 'method2'  

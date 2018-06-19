@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167330"
 ---
 # <a name="unarydelegate-stlclr"></a>unary_delegate (STL/CLR)
 Třída genereic popisuje delegáta jeden argument. Můžete ji použít zadejte delegáta z hlediska její argument a návratové typy.  

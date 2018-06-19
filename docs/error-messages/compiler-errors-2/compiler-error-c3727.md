@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263996"
 ---
 # <a name="compiler-error-c3727"></a>C3727 chyby kompilátoru
 'událost': spravované události musí být členské funkce nebo data člena, který je ukazatelem na delegáta  

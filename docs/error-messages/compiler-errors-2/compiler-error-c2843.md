@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247538"
 ---
 # <a name="compiler-error-c2843"></a>C2843 chyby kompilátoru
 "člen": nelze převést na adresu nestatické datový člen nebo metodu spravované nebo WinRT typu  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138516"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Postupy: Ukládání textu do schránky (C++/CLI)
 Následující příklad kódu používá <xref:System.Windows.Forms.Clipboard> objekt definovaný v <xref:System.Windows.Forms> obor názvů pro uložení řetězce. Tento objekt obsahuje dva členské funkce: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> a <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Data jsou uložena v schránky odesláním libovolného objektu odvozeného z <xref:System.Object> k <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

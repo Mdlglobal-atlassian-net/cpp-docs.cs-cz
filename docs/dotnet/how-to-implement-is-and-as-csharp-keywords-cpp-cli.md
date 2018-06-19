@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128615"
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Postupy: Implementace klíčových slov is a as jazyka C# (C++/CLI)
 Toto téma ukazuje, jak implementovat funkci `is` a `as` klíčová slova jazyka C# v jazyce Visual C++.  

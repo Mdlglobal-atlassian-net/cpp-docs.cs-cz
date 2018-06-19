@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270882"
 ---
 # <a name="compiler-warning-c4867"></a>C4867 upozornění kompilátoru
 'function': volání funkce chybí seznam argumentů; Vytvořte ukazatel na člena pomocí 'volání.  

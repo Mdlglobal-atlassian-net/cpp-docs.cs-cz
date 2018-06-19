@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135210"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Postupy: Implementace architektury komponenty modulu plugin pomocí reflexe (C++/CLI)
 Následující příklady kódu ukazují použití reflexe k implementaci jednoduché architektury "plug-in". První odkaz je aplikace, a druhá je modul plug-in. Aplikace je několik dokumentů formulář, který naplní samotné pomocí všechny nalezené v knihovnu DLL modulu plug-in zadaný jako argument příkazového řádku založené na formulářích třídy.  

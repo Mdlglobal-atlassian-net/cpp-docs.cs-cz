@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113184"
 ---
 # <a name="exceptions-in-ccli"></a>Výjimky v prostředích C++/CLI
 Články v této části dokumentace vysvětlují zpracování výjimek v jazyce C + +/ CLI a jak se liší od standardní výjimek.  

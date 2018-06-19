@@ -260,6 +260,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283530"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>C3500 chyby kompilátoru prostřednictvím C3999
 
@@ -665,7 +666,7 @@ ms.lasthandoff: 05/04/2018
 |[Chyba kompilátoru C3891](compiler-error-c3891.md)|'*člen*': literálové datové člena nelze použít jako hodnotu l|
 |[Chyba kompilátoru C3892](compiler-error-c3892.md)|'*proměnná*': nelze přiřadit do proměnné, která je const|
 |[Chyba kompilátoru C3893](compiler-error-c3893.md)|'*člen*': l-value použití initonly – datový člen je povoleno pouze v konstruktoru instance třídy '*třída*.|
-|[Chyba kompilátoru C3894](compiler-error-c3894.md)|'*člen*': použijte l-value initonly statických dat člena je povoleno pouze v konstruktoru třídy se třídy*– třída*.|
+|[Chyba kompilátoru C3894](compiler-error-c3894.md)|'*člen*': použijte l-value initonly statických dat člena je povoleno pouze v konstruktoru třídy se třídy *– třída*.|
 |[Chyba kompilátoru C3895](compiler-error-c3895.md)|'*člen*': *typ* dat členové nemohou být 'volatile.|
 |[Chyba kompilátoru C3896](compiler-error-c3896.md)|'*člen*': nesprávné inicializační: Tento člen literálové datové lze inicializovat pouze s 'nullptr.|
 |C3897 chyby kompilátoru|Zastaralé.|

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266627"
 ---
 # <a name="compiler-error-c3733"></a>C3733 chyby kompilátoru
 'událost': nesprávná syntaxe pro určení události COM; Zapomněli jste '__interface'?  

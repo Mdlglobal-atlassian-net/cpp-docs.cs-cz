@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163007"
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 Přeuspořádá posloupnost `N` elementy v rozsahu do jedné ze `N`! možné uspořádání náhodně vybrané.  

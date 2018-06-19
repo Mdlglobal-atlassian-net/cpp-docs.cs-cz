@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33262576"
 ---
 # <a name="compiler-error-c3538"></a>C3538 chyby kompilátoru
 v seznamu deklarátor 'auto' musí vždy odvodit do stejného typu  

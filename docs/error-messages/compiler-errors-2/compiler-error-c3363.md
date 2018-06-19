@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254092"
 ---
 # <a name="compiler-error-c3363"></a>C3363 chyby kompilátoru
 'type': 'typeid' lze použít pouze na typ  

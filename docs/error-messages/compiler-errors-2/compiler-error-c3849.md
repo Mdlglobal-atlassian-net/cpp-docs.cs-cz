@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270961"
 ---
 # <a name="compiler-error-c3849"></a>C3849 chyby kompilátoru
 volání funkce stylu výrazu typu "typ" by dojít ke ztrátě const nebo volatile kvalifikátory pro všechny číslo přetížení operátoru k dispozici  

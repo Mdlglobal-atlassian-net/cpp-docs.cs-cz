@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130702"
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>Postupy: Sledování změn systému souborů (C++/CLI)
 Následující příklad kódu používá <xref:System.IO.FileSystemWatcher> k registraci události pro odpovídající soubory vytvořené, změněné, deleted nebo přejmenovat. Namísto pravidelně cyklického dotazování adresáře pro změny souborů, můžete použít <xref:System.IO.FileSystemWatcher> třída k vyvolání události při zjištění změny.  

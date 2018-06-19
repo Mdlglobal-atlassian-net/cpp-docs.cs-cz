@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112742"
 ---
 # <a name="ole-db-provider-templates-c"></a>Šablony zprostředkovatele OLE DB (C++)
 OLE DB, je důležitou součástí strategie Microsoft Universal Data Access. OLE DB návrh umožňuje přístup k datům vysoce výkonné z jakéhokoli zdroje dat. Žádná tabulková data jsou viditelná prostřednictvím technologie OLE DB bez ohledu na to, jestli pochází z databáze. Flexibilitu poskytuje rozsáhlou napájení.  

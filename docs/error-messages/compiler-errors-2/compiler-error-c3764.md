@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273625"
 ---
 # <a name="compiler-error-c3764"></a>C3764 chyby kompilátoru
 'override_function': nejde přepsat metodu základní třídy, base_class_function.  

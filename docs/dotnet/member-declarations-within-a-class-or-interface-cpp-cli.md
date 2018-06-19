@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135115"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Deklarace členů v rámci třídy nebo rozhraní (C++/CLI)
 Deklarace vlastnosti a operátory hojně přepracovaná je ze spravovaných rozšíření jazyka C++ na Visual C++, skrytí základní podrobnosti implementace, které byly vystaveny v návrhu spravovaných rozšíření. Deklarace událostí bylo upraveno, také.  

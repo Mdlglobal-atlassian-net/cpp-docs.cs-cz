@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127819"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>Postupy: Načtení aktuálního jména uživatele (C++/CLI)
 Následující příklad kódu ukazuje načtení aktuální uživatelské jméno (název uživatele přihlášeného do systému Windows). Název je uložen v <xref:System.Environment.UserName%2A> řetězce, který je definován v <xref:System.Environment> oboru názvů.  

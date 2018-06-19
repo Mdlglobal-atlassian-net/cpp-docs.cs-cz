@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162322"
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Třída šablony, která zabalí pár iterátory, které se používají k implementaci několik rozhraní základní třídy knihovny (BCL). Použijete range_adapter – k manipulaci s rozsah STL/CLR, jako by šlo BCL kolekce.  

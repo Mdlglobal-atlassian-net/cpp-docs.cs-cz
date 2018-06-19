@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130500"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Postupy: Iterace v polích s použitím výrazu for each
 Toto téma ukazuje, jak používat [, v](../dotnet/for-each-in.md) – klíčové slovo v různých typů polí.  

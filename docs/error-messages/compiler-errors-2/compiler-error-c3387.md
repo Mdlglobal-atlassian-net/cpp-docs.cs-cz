@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249500"
 ---
 # <a name="compiler-error-c3387"></a>C3387 chyby kompilátoru
 "člen": __declspec(dllexport) /\__declspec(dllimport) nelze použít na členem spravované nebo WinRT typ  

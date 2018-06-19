@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128669"
 ---
 # <a name="lexicographicalcompare-stlclr"></a>lexicographical_compare (STL/CLR)
 Porovná prvek po prvku mezi dvěma sekvencemi k určení, která z nich je menší.  

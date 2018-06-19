@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130055"
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Postupy: Převod formátu souborů obrázků s použitím rozhraní .NET Framework
 Následující příklad kódu ukazuje <xref:System.Drawing.Image?displayProperty=fullName> třídy a <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> výčtu lze převést a uložit soubory obrázků. Následující kód načte obrázek ze souboru JPG a uloží ho do GIF a BMP formáty souborů.  

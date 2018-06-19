@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275301"
 ---
 # <a name="compiler-error-c3731"></a>C3731 chyby kompilátoru
 nekompatibilní událost 'function1' a obslužnou rutinu "funkce2"; Zdroj události a obslužné rutiny události musí být stejného typu  

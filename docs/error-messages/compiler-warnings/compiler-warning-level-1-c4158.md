@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277017"
 ---
 # <a name="compiler-warning-level-1-c4158"></a>C4158 kompilátoru upozornění (úroveň 1)
 za předpokladu, že pointers_to_members – #pragma (full_generality, dědičnost)  

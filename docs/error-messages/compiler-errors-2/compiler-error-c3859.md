@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272302"
 ---
 # <a name="compiler-error-c3859"></a>C3859 chyby kompilátoru
 rozsah virtuální paměti pro PCH překročena; prosím znovu zkompiluje s možností příkazového řádku z '-Zmvalue' nebo vyšší  

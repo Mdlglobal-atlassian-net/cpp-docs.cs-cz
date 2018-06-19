@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135544"
 ---
 # <a name="hashsethashdelegate-stlclr"></a>hash_set::hash_delegate (STL/CLR)
 Vyhledá prvek, který odpovídá zadanému klíči.  

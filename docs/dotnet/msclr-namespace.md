@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132905"
 ---
 # <a name="msclr-namespace"></a>msclr – obor názvů
 `msclr` Obor názvů obsahuje třídy knihovna podpory C++. Další informace o těchto tříd naleznete v tématu [knihovna podpory C++](../dotnet/cpp-support-library.md).  

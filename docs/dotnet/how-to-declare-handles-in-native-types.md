@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130968"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Postupy: Deklarace obslužných rutin v nativních typech
 Typ popisovače v nativním typu nelze deklarovat. Vcclr.h poskytuje šablony bezpečnost typů obálku `gcroot` odkazovat na objekt CLR z haldy jazyka C++. Tato šablona umožňuje vložit virtuální popisovač v nativním typu a s nimi zacházet jako by šlo podkladovým typem. Ve většině případů můžete použít `gcroot` objektu jako vložený typ bez žádné přetypování. Nicméně s [, v](../dotnet/for-each-in.md), budete muset použít `static_cast` načíst odkaz na základní spravovaný.  

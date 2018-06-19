@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232923"
 ---
 # <a name="compiler-error-c2771"></a>C2771 chyby kompilátoru
 \#Import je povolená jenom na globální nebo oboru názvů  

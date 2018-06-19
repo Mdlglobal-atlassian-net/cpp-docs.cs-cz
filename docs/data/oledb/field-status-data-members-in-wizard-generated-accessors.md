@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104396"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
 Při použití průvodce příjemcem knihovny ATL technologie OLE DB pro vytvoření příjemce, Průvodce vytvoří datový člen v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců. Každý člen dat je typu `DWORD` a obsahuje hodnotu stavu odpovídající její příslušné pole.  

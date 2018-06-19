@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277563"
 ---
 # <a name="compiler-warning-level-1-c4165"></a>C4165 kompilátoru upozornění (úroveň 1)
 "HRESULT" je převáděn na 'bool'; jste si jistí, že je to, co chcete použít?  

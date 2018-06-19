@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111078"
 ---
 # <a name="ole-db-object-model"></a>OLE DB – model objektů
 OLE DB objektový model obsahuje následující objekty nebo součásti. První čtyři objekty nebo součásti (zdrojů dat, relace, příkazy a sady řádků) umožňují připojení ke zdroji dat a jeho zobrazení. Rest, počínaje přístupové objekty, se vztahují k práci s daty, jakmile se zobrazí.  

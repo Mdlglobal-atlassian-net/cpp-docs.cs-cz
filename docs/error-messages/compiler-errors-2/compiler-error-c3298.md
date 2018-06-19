@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250873"
 ---
 # <a name="compiler-error-c3298"></a>C3298 chyby kompilátoru
 'constraint_1': 'constraint_2' nelze použít jako omezení, protože omezení ref má 'constraint_2' a 'constraint_1' omezení hodnoty  

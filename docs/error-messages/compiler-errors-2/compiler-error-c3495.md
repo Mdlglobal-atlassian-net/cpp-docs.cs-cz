@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253659"
 ---
 # <a name="compiler-error-c3495"></a>C3495 chyby kompilátoru
 'příkaz var': zachycení lambda musí mít trvání automatické uložení  

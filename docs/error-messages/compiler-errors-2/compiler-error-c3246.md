@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253249"
 ---
 # <a name="compiler-error-c3246"></a>C3246 chyby kompilátoru
 'class': nemůže Zdědit z "typ", jako byla deklarována jako 'zapečetěné.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128794"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Postupy: Vytváření typů hodnot pomocí výrazu gcnew s použitím implicitního zabalení
 Pomocí [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) na hodnotu typu vytvoří zabalené hodnoty typu, který můžete umístit v haldě spravovaná, uvolňování paměti.  

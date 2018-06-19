@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130111"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Postupy: Čtení čítačů výkonu systému Windows (C++/CLI)
 Některé aplikace a subsystémy Windows zobrazit data výkonu prostřednictvím výkonu systému Windows. Tyto čítače lze přistupovat pomocí <xref:System.Diagnostics.PerformanceCounterCategory> a <xref:System.Diagnostics.PerformanceCounter> třídy, které jsou umístěny ve <xref:System.Diagnostics?displayProperty=fullName> oboru názvů.  

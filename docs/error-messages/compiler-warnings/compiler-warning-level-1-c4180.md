@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278428"
 ---
 # <a name="compiler-warning-level-1-c4180"></a>C4180 kompilátoru upozornění (úroveň 1)
 Kvalifikátor použité pro typ funkce nemá žádný význam; Ignorovat  

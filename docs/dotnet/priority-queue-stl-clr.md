@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172537"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délkou seřazené pořadí prvků, které má omezený přístup. Můžete použít adaptér kontejneru `priority_queue` ke správě kontejner základní jako priority fronty.  

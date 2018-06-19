@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109804"
 ---
 # <a name="user-records"></a>Uživatelské záznamy
 Použití statické přístupového objektu (tedy přistupující objekt odvozený z **CAccessor)**, váš příjemce musí mít uživatelský záznam. Záznamu uživatele je C++ třídu, která obsahuje elementy data pro zpracování vstupu nebo výstupu. Průvodce příjemcem knihovny ATL technologie OLE DB generuje záznamu uživatele pro vaše příjemce. Metody můžete přidat do uživatelského záznamu pro volitelné úkoly, jako je zpracování příkazů.  

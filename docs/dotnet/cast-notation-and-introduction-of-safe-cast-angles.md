@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111637"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Zápis přetypování a úvod safe_cast&lt;&gt;
 Zápis přetypování změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  

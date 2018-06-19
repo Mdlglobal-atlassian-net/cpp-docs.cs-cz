@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129785"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Postupy: Uložení odkazu na typ hodnoty v nativním typu
 Použití `gcroot` na typ pevně určené k uložení odkazu na typ hodnoty v nativním typu.  

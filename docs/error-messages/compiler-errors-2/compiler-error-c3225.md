@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250576"
 ---
 # <a name="compiler-error-c3225"></a>C3225 chyby kompilátoru
 argument obecného typu 'arg' nemůže být "typ", musí to být hodnota typu nebo zpracovat typ  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127887"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Postupy: Vytvoření výčtu souborů v adresáři (C++/CLI)
 Následující příklad kódu ukazuje, jak načíst seznam souborů v adresáři. Kromě toho jsou vytvořeny podadresáře. Následující příklad kódu používá <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> a <xref:System.IO.Directory.GetDirectories%2A> způsoby, jak zobrazit obsah adresáře C:\Windows.  

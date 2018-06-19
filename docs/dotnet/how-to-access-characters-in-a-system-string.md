@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129746"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Postupy: Přístup ke znakům v datech třídy System::String
 Dostanete znaků <xref:System.String> objekt pro vysoce výkonné volání nespravovaných funkcí, které přijímají `wchar_t*` řetězce. Metoda poskytuje vnitřní ukazatel na první znak <xref:System.String> objektu. Ukazatel this můžete manipulovat přímo nebo připnuté a předaný funkci očekává běžný `wchar_t` řetězec.  

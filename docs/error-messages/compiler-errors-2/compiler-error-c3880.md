@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269754"
 ---
 # <a name="compiler-error-c3880"></a>C3880 chyby kompilátoru
 'příkaz var': nemůže být literál datový člen  

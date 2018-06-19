@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136350"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Postupy: Vytvoření uživatelského ovládacího prvku a vložení tohoto prvku do dialogového okna
 Postup v tomto článku předpokládá, že vytváříte dialogu založený ([CDialog – třída](../mfc/reference/cdialog-class.md)) projektu Microsoft Foundation třídy (MFC), ale také můžete přidat podporu pro ovládací prvek Windows Forms k existující dialogového okna knihovny MFC.  

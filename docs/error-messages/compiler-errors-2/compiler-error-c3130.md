@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248102"
 ---
 # <a name="compiler-error-c3130"></a>C3130 chyby kompilátoru
 Vnitřní chyba kompilátoru: se nepodařilo zapsat blok vloženého kódu do souboru PDB  

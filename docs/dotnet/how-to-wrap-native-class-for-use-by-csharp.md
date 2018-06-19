@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128690"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Postupy: Zabalení nativních tříd pro použití v jazyce C#
 Tento příklad ukazuje postup při zabalení nativních tříd jazyka C++, mohou být spotřebovávána kód vytvořené v C# nebo jiném jazyce .NET.  

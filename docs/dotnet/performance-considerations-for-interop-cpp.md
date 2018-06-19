@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164047"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++)
 Toto téma obsahuje pokyny pro snížení účinku spravované nebo nespravované spolupráce přechody na výkon.  

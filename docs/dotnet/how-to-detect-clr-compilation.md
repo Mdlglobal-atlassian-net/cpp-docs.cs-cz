@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130763"
 ---
 # <a name="how-to-detect-clr-compilation"></a>Postupy: Rozpoznání kompilace s volbou /clr
 Použití `_MANAGED` nebo `_M_CEE` makro chcete zobrazit, pokud je modul kompilován s **/CLR**. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  

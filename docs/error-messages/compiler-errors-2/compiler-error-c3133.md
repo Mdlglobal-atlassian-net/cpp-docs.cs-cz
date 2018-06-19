@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248101"
 ---
 # <a name="compiler-error-c3133"></a>C3133 chyby kompilátoru
 Atributy nelze použít jako vararg C++  

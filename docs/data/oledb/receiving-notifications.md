@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112313"
 ---
 # <a name="receiving-notifications"></a>Příjem oznámení
 OLE DB poskytuje rozhraní pro příjem oznámení, když dojde k události. Tyto možnosti jsou popsány v [oznámení objektu technologie OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) v *referenční příručka programátora technologie OLE DB*. Nastavení těchto událostí používá standardní mechanismus COM spojovacího bodu. Například ATL objekt, který chce načíst události prostřednictvím `IRowsetNotify` implementuje `IRowsetNotify` rozhraní přidáním `IRowsetNotify` seznamu odvozených tříd a přes vystavení **COM_INTERFACE_ENTRY** makro.  

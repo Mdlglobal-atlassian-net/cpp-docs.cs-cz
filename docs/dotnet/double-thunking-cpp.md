@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111205"
 ---
 # <a name="double-thunking-c"></a>Dvojitý převod adres na jinou bitovou šířku (C++)
 Dvojitý převod adres odkazuje ke ztrátě výkonu, které se mohou vyskytnout při volání funkce ve spravovaném kontextu volání Visual C++ spravovat funkce a kde provádění programu volá nativní vstupní bod funkce k volání spravované funkce. Toto téma popisuje, kde probíhá dvojitý převod adres a jak se můžete vyhnout ji ke zlepšení výkonu.  

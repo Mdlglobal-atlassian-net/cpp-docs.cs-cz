@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285857"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>C4532 kompilátoru upozornění (úroveň 1)
 'continue': přechod z __finally/finally bloku má undefined chování při ukončení zpracování  

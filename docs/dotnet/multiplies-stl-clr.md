@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134464"
 ---
 # <a name="multiplies-stlclr"></a>multiplies (STL/CLR)
 Šablony třídy popisuje functor, při volání, vrátí první argument časy druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  

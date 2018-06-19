@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256444"
 ---
 # <a name="compiler-error-c3370"></a>C3370 chyby kompilátoru
 "idl_module – název": idl_module – ještě není určen.  

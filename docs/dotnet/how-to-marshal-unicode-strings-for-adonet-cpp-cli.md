@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137371"
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>Postupy: Zařazování řetězců v kódu Unicode pro technologii ADO.NET (C++/CLI)
 Ukazuje, jak přidat nativní řetězec znaků Unicode (`wchar_t *`) k databázi a jak přeuspořádat <xref:System.String?displayProperty=fullName> z databáze na nativní řetězec.  

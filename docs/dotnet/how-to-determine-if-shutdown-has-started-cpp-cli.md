@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137699"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Postupy: Zjištění, zda bylo zahájeno vypínání (C++/CLI)
 Následující příklad kódu ukazuje, jak zjistit, zda je aktuálně ukončení aplikace nebo rozhraní .NET Framework. To je užitečné pro přístup k statických elementů v rozhraní .NET Framework, protože během vypnutí, tyto konstrukce, jsou dokončeny systémem a nelze jej použít spolehlivě. Kontrolou <xref:System.Environment.HasShutdownStarted%2A> vlastnost nejprve můžete vyhnout potenciální selhání přístupu k těmto prvkům.  

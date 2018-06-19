@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110338"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Podpora transakcí v prostředí OLE DB
 A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak skupinu nebo dávky, řadu aktualizací ke zdroji dat, takže buď všechny úspěšné a jsou najednou, nebo (Pokud některá z nich selže) žádná není potvrzena a celá transakce bude vrácena zpět. Tento proces zajišťuje integritu výsledku na datovém zdroji.  

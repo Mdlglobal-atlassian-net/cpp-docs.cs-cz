@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129613"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Postupy: Použití regulárních výrazů pro ověření formátu dat (C++/CLI)
 Následující příklad kódu ukazuje použití regulárních výrazů k ověření formátování řetězce. V následujícím příkladu kódu řetězec musí obsahovat platné telefonní číslo. Následující příklad kódu používá řetězec "\d{3}-\d{3}-\d{4}" k označení, že každé pole, představuje platné telefonní číslo. "D" v řetězci označuje číslici a argument po každém "d" označuje počet číslic, které musí být přítomen. Číslo je v tomto případě musí být odděleny pomlčky.  

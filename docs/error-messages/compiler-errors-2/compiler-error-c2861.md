@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247097"
 ---
 # <a name="compiler-error-c2861"></a>C2861 chyby kompilátoru
 "název funkce": nelze definovat rozhraní – členská funkce  

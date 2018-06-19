@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138675"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 MFC poskytuje šablony třídy [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) tak, aby je možné hostovat uživatelského ovládacího prvku Windows Forms (<xref:System.Windows.Forms.UserControl>) v modální nebo nemodálním dialogovém okně knihovny MFC. `CWinFormsDialog` je odvozena od třídy MFC [CDialog](../mfc/reference/cdialog-class.md), takže dialogové okno může být spuštěn jako modální nebo nemodální.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164557"
 ---
 # <a name="serialization-ccli"></a>Serializace (C++/CLI)
 Serializace (proces ukládání stavu objektu nebo člena do trvalého média) spravovaných tříd (včetně jednotlivých polí nebo vlastnosti) se nepodporuje <xref:System.SerializableAttribute> a <xref:System.NonSerializedAttribute> třídy.  

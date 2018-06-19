@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268889"
 ---
 # <a name="compiler-error-c3824"></a>C3824 chyby kompilátoru
 "člen": Tento typ se nemůže vyskytovat v tomto kontextu (parametr funkce, návratový typ nebo je statický člen)  

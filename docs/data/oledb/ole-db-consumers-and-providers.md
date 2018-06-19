@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111387"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Příjemci a zprostředkovatelé technologie OLE DB
 Architektura technologie OLE DB používá model příjemci a zprostředkovatelé. Příjemce vytváří požadavky na data. Zprostředkovatel reaguje na tyto požadavky uvedení v tabulkovém formátu data a vrátit k příjemce. Žádném volání, které uplatnit musí být implementované ve zprostředkovateli.  

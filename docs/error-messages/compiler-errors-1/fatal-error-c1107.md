@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199928"
 ---
 # <a name="fatal-error-c1107"></a>Závažná chyba C1107
 Nelze najít sestavení 'file': Zadejte cestu k sestavení vyhledávání pomocí /AI nebo nastavením LIBPATH – proměnná prostředí  

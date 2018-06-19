@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136610"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Postupy: Zařazení struktur pomocí služby PInvoke
 Tento dokument popisuje, jak nativních funkcí, které přijímají struktury stylu jazyka C je možné volat ze spravovaných funkcí podle pomocí P/Invoke. Přestože doporučujeme použít funkce interoperability C++ místo P/Invoke protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být obtížné implementovat, pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností. Jinak najdete v následujících dokumentech:  

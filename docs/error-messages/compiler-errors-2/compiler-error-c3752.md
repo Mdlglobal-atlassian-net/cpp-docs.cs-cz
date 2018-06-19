@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265282"
 ---
 # <a name="compiler-error-c3752"></a>C3752 chyby kompilátoru
 třídy atributů: nelze klasifikovat atributu. '– klíčové slovo' by neměl být v tomto kontextu použít.  

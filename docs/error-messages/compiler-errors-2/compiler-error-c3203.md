@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251121"
 ---
 # <a name="compiler-error-c3203"></a>C3203 chyby kompilátoru
 'type': Šablona unspecialized třídy nebo obecného nelze použít jako šablonu nebo obecné argument pro šablony nebo obecný parametr 'param', očekávaný skutečné typ  

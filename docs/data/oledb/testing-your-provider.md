@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104786"
 ---
 # <a name="testing-your-provider"></a>Testování zprostředkovatele
 Před uvolněním zprostředkovatele, měli byste provést následující testy v uvedeném pořadí. Tyto testy zajistěte, aby funkce zprostředkovatele správně pro většinu potenciální uživatelů.  

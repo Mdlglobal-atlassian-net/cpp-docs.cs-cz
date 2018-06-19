@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132411"
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Postupy: Použití regulárních výrazů k vyhledávání a nahrazení (C++/CLI)
 Následující příklad kódu ukazuje, jak třída regulárního výrazu <xref:System.Text.RegularExpressions.Regex> slouží k vyhledávání a nahrazování. To lze provést pomocí <xref:System.Text.RegularExpressions.Regex.Replace%2A> metoda. Je verze použitá přebírá dva řetězce jako vstup: řetězec, který má být změněn a řetězec, který má být vložen namísto oddílů (pokud existuje) odpovídající vzor zadané <xref:System.Text.RegularExpressions.Regex> objektu.  

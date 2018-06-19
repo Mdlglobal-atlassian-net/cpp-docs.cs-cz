@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129808"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 Vyhledá pozici první prvek v seřazené rozsahu, který má hodnotu menší než nebo odpovídající zadanou hodnotou, kde toto kritérium řazení může být určena binárního predikátu.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106983"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Ukládání řetězců ve zprostředkovateli OLE DB
 V souboru MyProviderRS.h, Průvodce zprostředkovatele OLE DB ATL vytvoří výchozí uživatelský záznam nazvaný `CWindowsFile`. Chcete-li zpracovat dva řetězce, buď změňte `CWindowsFile` nebo přidat vlastní záznam uživatele, jak je znázorněno v následujícím kódu:  

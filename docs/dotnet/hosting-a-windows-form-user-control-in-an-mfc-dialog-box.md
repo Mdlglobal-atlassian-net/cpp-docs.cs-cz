@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129434"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského rozhraní Windows Form v dialogovém okně knihovny MFC
 Hostitelem ovládacího prvku Windows Forms jako zvláštní druh ovládacího prvku ActiveX knihovny MFC a komunikuje pomocí ovládacího prvku pomocí vlastnosti a metody třídy a rozhraní ActiveX <xref:System.Windows.Forms.Control> třídy. Doporučujeme používat rozhraní .NET Framework vlastnosti a metody k provozu na ovládací prvek.  
