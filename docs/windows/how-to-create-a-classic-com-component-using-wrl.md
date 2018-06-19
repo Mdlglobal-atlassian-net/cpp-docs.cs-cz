@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880082"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Postupy: Vytvoření klasické komponenty COM s použitím knihovny WRL
 Windows Runtime C++ šablony knihovny (WRL) můžete použít k vytvoření základní klasické komponenty COM pro použití v aplikacích klasické pracovní plochy, kromě používání pro univerzální platformu Windows (UWP) aplikace. Vytváření komponenty modelu COM může knihovna šablon C++ Runtime Windows vyžadují méně kódu než ATL. Informace o podmnožinu COM, která podporuje knihovna šablon C++ Runtime Windows najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  

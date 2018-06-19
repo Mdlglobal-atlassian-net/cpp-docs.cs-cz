@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253797"
 ---
 # <a name="compiler-error-c3162"></a>C3162 chyby kompilátoru
 'type': odkaz na typ, který má destruktor nelze použít jako typ člena statických dat "člen"  

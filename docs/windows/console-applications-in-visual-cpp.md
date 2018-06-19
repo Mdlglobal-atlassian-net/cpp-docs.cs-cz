@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870299"
 ---
 # <a name="console-applications-in-visual-c"></a>Konzolové aplikace v jazyce Visual C++
 Konzolové aplikace přijímá vstup a odesílá výstup na konzolu, která je také označována jako příkazovém řádku. Můžete vytvořit aplikace konzoly základní práci nebo velmi sofistikované úkoly. Konzolové aplikace můžete použít také jako testování konceptu předvedení funkcí, které chcete později začlenit do aplikace pracovní plochy Windows nebo aplikaci pro univerzální platformu Windows. Aplikace konzoly může komunikovat s jinými aplikacemi plochy prostřednictvím kanály nebo jiných mechanismů RPC.  

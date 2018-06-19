@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879591"
 ---
 # <a name="resource-editors"></a>Editory prostředků
 Editor prostředků je specializovaná prostředí pro vytváření nebo úprav prostředky, které jsou součástí projektu sady Visual Studio. Editory prostředků sady Visual Studio technik a rozhraní, které se vám pomůžou vytvářet a upravovat prostředky aplikace rychle a snadno sdílet. Editory prostředků umožňují [zobrazení a úprava prostředků v editoru odpovídající](../windows/viewing-and-editing-resources-in-a-resource-editor.md) a [náhled prostředků](../windows/previewing-resources.md).  

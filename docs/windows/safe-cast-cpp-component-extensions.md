@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891513"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (rozšíření komponent C++)
 `safe_cast` Operace v případě úspěchu vrátí zadaný výraz jako zadaný typ; jinak vyvolá `InvalidCastException`.  

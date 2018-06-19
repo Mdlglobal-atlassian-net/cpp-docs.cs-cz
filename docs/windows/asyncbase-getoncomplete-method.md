@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865107"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete – metoda
 Zkopíruje adresu aktuální obslužné rutiny události dokončení na zadanou proměnnou.  

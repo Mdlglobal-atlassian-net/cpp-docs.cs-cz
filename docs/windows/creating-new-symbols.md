@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872293"
 ---
 # <a name="creating-new-symbols"></a>Vytváření nových symbolů
 Když zahájíte nový projekt, může být vhodnější zmapování symbol názvy, které je nutné před vytvořením prostředky, ke kterým budou přiřazena.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128576"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Postupy: Zobrazení obrázků s použitím rozhraní .NET Framework
 Následující příklad kódu upraví OnPaint obslužné rutiny události pro načtení ukazatel <xref:System.Drawing.Graphics> objekt pro hlavní formulář. <xref:System.Windows.Forms.Form.OnPaint%2A> Funkce je určena pro aplikaci Windows Forms, pravděpodobně vytvořené pomocí Průvodce aplikace Visual Studio.  

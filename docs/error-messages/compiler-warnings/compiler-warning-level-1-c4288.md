@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276627"
 ---
 # <a name="compiler-warning-level-1-c4288"></a>C4288 kompilátoru upozornění (úroveň 1)
 nestandardní rozšíření používané: 'var': mimo obor cyklu for; se používá proměnná řízení smyčky deklarované v pro – smyčky je v konfliktu s deklaraci ve vnějším oboru  

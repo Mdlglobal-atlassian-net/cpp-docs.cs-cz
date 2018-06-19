@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878109"
 ---
 # <a name="generics--c-component-extensions"></a>Obecné typy (rozšíření komponent C++)
 Obecné typy jsou parametrizované typy a metody. V této části zjistíte obecné funkce, které podporují prostředí Windows Runtime a modul common language runtime a které jsou podporovány pouze modul common language runtime. Také zjistěte, jak vytvořit vlastní obecné metody a typy v jazyce Visual C++ a použití obecných typů vytvořené v rozhraní .NET Framework jazyk v jazyce Visual C++. Nakonec Tato část obsahuje porovnání obecné typy a šablony jazyka C++.  

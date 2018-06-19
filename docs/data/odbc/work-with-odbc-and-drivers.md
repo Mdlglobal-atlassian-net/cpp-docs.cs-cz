@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095112"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Práce s rozhraním ODBC a ovladači
 ODBC umožňuje psát aplikace, které nejsou závislé na jenom jednom systému správy databáze (databázového systému). Můžete napsat jednu aplikaci, která může pracovat na více systémech DBMS, pro které mají vaši uživatelé správný ovladač ODBC specifické databázového systému.  

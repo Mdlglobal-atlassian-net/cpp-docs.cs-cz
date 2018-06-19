@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873206"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Hledání záznamu v tabulce akcelerátorů
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>K nalezení položky v tabulce otevřete akcelerátorů  

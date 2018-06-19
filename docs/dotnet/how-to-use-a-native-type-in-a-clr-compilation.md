@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128404"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Postupy: Použití nativního typu v kompilaci /clr
 Můžete definovat v nativním typu **/CLR** kompilace a jakékoli použití nativního typu v rámci sestavení je platný. Nativní typy však nebudou k dispozici pro použití z odkazovaného metadat.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289760"
 ---
 # <a name="compiler-warning-level-3-c4538"></a>C4538 kompilátoru upozornění (úroveň 3)
 'type': const nebo volatile kvalifikátory u tohoto typu nejsou podporovány.  

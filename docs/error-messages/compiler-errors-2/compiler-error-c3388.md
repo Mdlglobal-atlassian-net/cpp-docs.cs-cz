@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256121"
 ---
 # <a name="compiler-error-c3388"></a>C3388 chyby kompilátoru
 'type': není povolena jako omezení, za předpokladu, že 'ref class'. Chcete-li pokračovat, analýza  

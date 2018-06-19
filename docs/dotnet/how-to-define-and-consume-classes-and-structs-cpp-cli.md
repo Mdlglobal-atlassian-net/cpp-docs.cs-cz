@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138992"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Postupy: Definice a používání tříd a struktur (C++/CLI)
 Tento článek ukazuje, jak definovat a využívat uživatelem definované odkazové a hodnotové typy v jazyce C + +/ CLI.  

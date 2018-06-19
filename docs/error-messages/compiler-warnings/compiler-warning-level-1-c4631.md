@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284027"
 ---
 # <a name="compiler-warning-level-1-c4631"></a>C4631 kompilátoru upozornění (úroveň 1)
 MSXML nebo není k dispozici, XPath dokumentu XML, který komentáře nebude zpracováno. Důvod  

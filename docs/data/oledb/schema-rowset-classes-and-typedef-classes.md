@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111442"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Třídy sady řádků schématu a definiční třídy typů
 Schéma je kolekce databázové objekty, které jsou ve vlastnictví, nebo byly vytvořeny, konkrétním uživatelem. Katalog může obsahovat jeden nebo více schémat, ale musí obsahovat vždy schéma názvem INFORMATION_SCHEMA, která obsahuje zobrazení a domén informace o schématu. Informace o schématu v OLE DB se načítají pomocí předdefinované sady řádků schématu a obsahuje typy, tabulky, sloupce, indexy, zobrazení, kontrolní výrazy a omezení, statistiky, znakových sad, kolace a domén.  

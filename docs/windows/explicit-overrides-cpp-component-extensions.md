@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879500"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explicitní přepsání (rozšíření komponent C++)
 Toto téma popisuje postup explicitní přepsání člena rozhraní nebo základní třída. S názvem (explicitní) přepsání lze používat pouze přepsat metodu s odvozené metodu, která má jiný název.  

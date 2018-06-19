@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270277"
 ---
 # <a name="compiler-error-c3920"></a>C3920 chyby kompilátoru
 ' operátor '': nelze definovat operátory přírůstek nebo snížení WinRT nebo CLR operátor volání operátory operátor WinRT nebo CLR bude volat předponu odpovídající WinRT nebo CLR – operátor (op_Increment op_Decrement), ale s sémantiku operátory  

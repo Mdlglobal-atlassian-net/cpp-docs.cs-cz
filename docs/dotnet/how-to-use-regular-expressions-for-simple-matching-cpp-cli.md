@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128277"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Postupy: Použití regulárních výrazů pro jednoduché párování (C++/CLI)
 Následující příklad kódu používá regulární výrazy k vyhledání shodného podřetězce. Statickou se provádí vyhledávání <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metoda, která přebírá dva řetězce jako vstup. První je řetězec, který má být prohledán a druhý je vzor, který má být vyhledán.  

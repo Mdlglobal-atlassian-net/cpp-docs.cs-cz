@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870182"
 ---
 # <a name="comptroperator-gt-operator"></a>ComPtr::operator -&gt; – operátor
 Načte ukazatel na typ určený parametrem aktuální šablony.  

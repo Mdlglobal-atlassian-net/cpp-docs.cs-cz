@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870816"
 ---
 # <a name="consuming-generics-ccli"></a>Použití obecných typů (C++/CLI)
 Obecné typy vytvořené v jednom jazyce .NET je možné použít jinými jazyky rozhraní .NET. Na rozdíl od šablony obecný v kompilovaném sestavení stále zůstává Obecné. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a to i v jiném jazyce než sestavení, ve které byla definována obecného typu.  

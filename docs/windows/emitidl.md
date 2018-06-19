@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876589"
 ---
 # <a name="emitidl"></a>emitidl
 Určuje, zda jsou všechny následné IDL – atributy zpracovat a uložena v souboru generovaného IDL.  
@@ -44,7 +45,7 @@ Jednu z těchto hodnot: **true**, **false**, **vynutit**, **s omezeným přístu
   
 -   Pokud **vynutit**, přepsání následné **s omezeným přístupem** atribut, který vyžaduje soubor, který chcete mít **modulu** atribut v případě, že existují IDL atributy v souboru.  
   
--   **nabízená** umožňuje uložit aktuální **emitidl –** nastavení interní **emitidl –** zásobník a **pop** umožňuje nastavíte **emitidl –**na jakémkoli hodnota je v horní části interní **emitidl –** zásobníku.  
+-   **nabízená** umožňuje uložit aktuální **emitidl –** nastavení interní **emitidl –** zásobník a **pop** umožňuje nastavíte **emitidl –** na jakémkoli hodnota je v horní části interní **emitidl –** zásobníku.  
   
 `defaultimports=`*Logická hodnota* \(volitelné)  
 -   Pokud *boolean* je **true**, docobj.idl je importovat do generovaného .idl souboru. Navíc pokud souboru IDL se stejným názvem jako .h soubor, který `#include` do zdrojových kód najít ve stejném adresáři jako soubor h a potom soubor generovaný .idl obsahuje příkaz import pro tento soubor .idl.  

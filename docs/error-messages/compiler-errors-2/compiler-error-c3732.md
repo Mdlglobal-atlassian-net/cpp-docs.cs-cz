@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268566"
 ---
 # <a name="compiler-error-c3732"></a>C3732 chyby kompilátoru
 "rozhraní": vlastní rozhraní, které aktivuje události COM nemůže Zdědit z IDispatch  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244983"
 ---
 # <a name="compiler-error-c3035"></a>C3035 chyby kompilátoru
 OpenMP 'seřazené' – direktiva musí vázat přímo na a 'pro' nebo 'paralelní pro' direktivy s klauzulí 'objednáno'  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877693"
 ---
 # <a name="odl"></a>odl
 Identifikuje rozhraní jako objekt popis jazyk (ODL) rozhraní. MIDL kompilátoru nevyžaduje, aby **odl** atribut; je rozpoznán pouze pro kompatibilitu s starší soubory .odl.  

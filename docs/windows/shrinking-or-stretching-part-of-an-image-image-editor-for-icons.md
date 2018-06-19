@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888731"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>Zmenšení nebo roztažení části obrázku (editor obrázků pro ikony)
 ### <a name="to-shrink-or-stretch-part-of-an-image"></a>Zmenšení nebo roztažení části obrázku  

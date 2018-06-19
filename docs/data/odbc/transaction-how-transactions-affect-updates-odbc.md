@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098001"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakce: Vliv transakcí na aktualizace (rozhraní ODBC)
 Aktualizace [zdroj dat](../../data/odbc/data-source-odbc.md) jsou spravovány během transakcí prostřednictvím vyrovnávací paměti (stejnou metodu použít mimo transakce). Pole datových členů sady záznamů slouží jako vyrovnávací paměť úprav obsahující aktuální záznam, který zálohuje sady záznamů dočasně během `AddNew` nebo **upravit**. Během **odstranit** operaci, aktuální záznam se nezálohuje společně v rámci transakce. Další informace o upravené vyrovnávací paměti a jak ukládat aktualizace na aktuální záznam najdete v tématu [sada záznamů: Jak sady záznamů aktualizace záznamů (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

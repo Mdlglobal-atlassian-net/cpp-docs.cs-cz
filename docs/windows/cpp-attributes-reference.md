@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870842"
 ---
 # <a name="c-attributes-reference"></a>Referenční dokumentace k atributům C++
 Microsoft definuje sadu atributů, které zjednodušují programování COM a rozhraní .NET Framework common language runtime vývoj. Jakmile zahrnete atributy ve zdrojových souborech, kompilátor spolupracovat s zprostředkovatele knihoven DLL pro vložení kódu nebo změňte kód v soubory generované objektů.  

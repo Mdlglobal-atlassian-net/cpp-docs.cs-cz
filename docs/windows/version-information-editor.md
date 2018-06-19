@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890587"
 ---
 # <a name="version-information-editor"></a>Editor informací o verzi
 Informace o verzi se skládá z společnosti a identifikaci produktu, číslo verze produktu a oznámení o autorských právech a ochranná známka. Pomocí editoru informací o verzi můžete vytvořit a udržovat tato data, která je uložena v prostředku informací o verzi. Prostředku informací o verzi není vyžadována danou aplikací, ale je to užitečné místo shromažďovat informace, které identifikují aplikace. Informace o verzi se také používá při instalaci rozhraní API.  

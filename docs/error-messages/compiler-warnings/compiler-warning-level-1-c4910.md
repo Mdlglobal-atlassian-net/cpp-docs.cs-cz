@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290345"
 ---
 # <a name="compiler-warning-level-1-c4910"></a>C4910 kompilátoru upozornění (úroveň 1)
 '\<identifikátor >': '__declspec(dllexport)' a 'extern, jsou nekompatibilní na explicitní vytvoření instance  

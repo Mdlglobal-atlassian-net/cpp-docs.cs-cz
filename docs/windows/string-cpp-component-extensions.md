@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889237"
 ---
 # <a name="string--c-component-extensions"></a>String (rozšíření komponent C++)
 Podporuje kompilátoru Visual C++ *řetězce*, které jsou objekty, které představují text jako posloupnost znaků. Visual C++ podporuje proměnné řetězec, jehož hodnota je implicitní, a literály, jehož hodnota je řetězec v uvozovkách explicitní.  

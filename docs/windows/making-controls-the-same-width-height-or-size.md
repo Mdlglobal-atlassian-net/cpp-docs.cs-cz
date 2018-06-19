@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874795"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Nastavení stejné šířky, výšky nebo velikosti ovládacích prvků
 Můžete změnit velikost skupinu ovládací prvky založené na velikost dominantního ovládacího prvku. Můžete také [Změna velikosti ovládacího prvku podle dimenze jeho text titulku](../windows/sizing-individual-controls.md).  

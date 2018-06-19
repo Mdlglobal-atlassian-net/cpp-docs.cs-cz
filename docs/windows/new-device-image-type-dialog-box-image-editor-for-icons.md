@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879617"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nové &lt;zařízení&gt; bitové kopie dialogové okno typů (Editor obrázků pro ikony)
 Umožňuje vytvořit nový obrázek zařízení zadaného typu. Otevřete **nový \<zařízení > Image** dialogové okno, klikněte na tlačítko **typ obrázku** na **Image** nabídky.  

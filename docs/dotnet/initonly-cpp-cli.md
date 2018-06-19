@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130552"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **InitOnly** je kontextové klíčové slovo, které označuje, že přiřazení proměnné může dojít pouze v rámci prohlášení nebo ve statického konstruktoru ve stejné třídě.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882821"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Postupy: použití Windows 10 SDK v aplikaci Windows Desktop
 Vytváříte-li ve Visual Studio 2017 klasické pracovní plochy projektu pro Windows, můžete ho je nastavený ve výchozím nastavení k vytvoření s verzí Windows 10 SDK, která byla nainstalována při zatížení C++ plocha byla nainstalována nebo poslední aktualizace. Tato verze sady Windows SDK je kompatibilní s všechny poslední verze systému Windows. Pokud chcete zacílit starší verze sady SDK, můžete otevřít projekt | Vlastnosti a volbou z jiné k dispozici v rozevírací nabídce verze sady SDK Windows SDK verze.  

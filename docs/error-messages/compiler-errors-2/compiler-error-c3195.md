@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256883"
 ---
 # <a name="compiler-error-c3195"></a>C3195 chyby kompilátoru
 'operátor': je vyhrazena a nelze použít jako člena třídy nebo hodnota typu ref. Operátory CLR nebo WinRT musí být definován pomocí klíčového slova 'operátor'  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882690"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symboly pro programování oken MFC
 Tyto symboly jsou taky součástí MFC podpůrné soubory, ale podporují standardní funkce aplikací systému Windows a akce. Tyto symboly se používá hlavně s nabídkami. Při práci s nabídkami v editoru nabídky, tyto symboly se zobrazí v okně vlastnosti přidružené k běžné příkazy nabídky. Například pokud aplikace obsahuje nabídku souborů pomocí příkazu pro ukončení, tento příkaz bude spojený s symbol id_app_exit – v [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879354"
 ---
 # <a name="literal-c-component-extensions"></a>literal (rozšíření komponent C++)
 Proměnné (– datový člen) označen jako `literal` v **/CLR** kompilace je nativní ekvivalentem `static const` proměnné.  

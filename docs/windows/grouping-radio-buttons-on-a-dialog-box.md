@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879325"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Seskupení přepínačů v dialogovém okně
 Když přidáte přepínače do dialogového okna, je považovat za skupinu nastavením vlastnosti skupiny v okně Vlastnosti pro první tlačítko ve skupině. ID ovládacího prvku pro tento přepínač se potom zobrazí v [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md), umožňuje přidání členské proměnné skupiny přepínačů.  

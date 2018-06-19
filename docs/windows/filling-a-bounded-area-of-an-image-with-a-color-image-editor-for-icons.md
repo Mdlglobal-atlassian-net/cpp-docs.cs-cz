@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880566"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Vyplnění ohraničené oblasti obrázku barvou (editor obrázků pro ikony)
 Editor obrázků poskytuje **vyplnění** nástroj pro naplnění všechny uzavřené oblast bitové kopie s aktuální kreslení barvu nebo aktuální barvu pozadí.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269958"
 ---
 # <a name="compiler-error-c3918"></a>C3918 chyby kompilátoru
 využití vyžaduje "člen" jako datový člen  

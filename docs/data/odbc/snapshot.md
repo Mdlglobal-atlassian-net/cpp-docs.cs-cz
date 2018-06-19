@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094761"
 ---
 # <a name="snapshot"></a>Snímek
 Snímek je sada záznamů, které odráží statické zobrazení dat, která existovala v době vytvoření snímku. Když otevřete snímku a přesunout do všech záznamů, obsahuje sadu záznamů a jejich hodnoty se nezmění, dokud znovu sestavit snímku voláním **Requery –**.  

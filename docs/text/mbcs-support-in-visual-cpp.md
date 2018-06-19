@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865833"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Podpora znakové sady MBCS v jazyku Visual C++
 Při spuštění na znakovou sadou MBCS verzi Windows, vývoj systému Visual C++ (včetně nástroje editor, příkazový řádek a ladicí program integrované zdrojový kód) se znakovou sadou MBCS, s výjimkou paměť – okno.  

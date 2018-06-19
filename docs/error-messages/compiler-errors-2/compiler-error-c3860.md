@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268315"
 ---
 # <a name="compiler-error-c3860"></a>C3860 chyby kompilátoru
 Seznam argumentů typu následující název typu třídy musí seznam parametrů v pořadí, použít v seznamu parametrů typu  

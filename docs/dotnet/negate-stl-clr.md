@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135434"
 ---
 # <a name="negate-stlclr"></a>negate (STL/CLR)
 Šablony třídy popisuje functor, při volání, vrátí její argument Negované. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.  

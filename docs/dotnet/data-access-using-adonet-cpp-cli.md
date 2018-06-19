@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108273"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Přístup k datům s použitím technologie ADO.NET (C++/CLI)
 ADO.NET je rozhraní API rozhraní .NET Framework pro přístup k datům a poskytuje power a snadné použití neodpovídající pomocí řešení přístupu k předchozí data. Tato část popisuje některé otázky týkající se ADO.NET, které jsou jedinečné pro Visual C++ uživatele, například zařazování nativní typy.  

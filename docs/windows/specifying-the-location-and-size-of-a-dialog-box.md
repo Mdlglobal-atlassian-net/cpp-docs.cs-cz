@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890574"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Určení umístění a velikosti dialogového okna
 Umístění a velikost dialogového okna, stejně jako umístění a velikosti ovládacích prvků v něm, se měří v jednotky dialogu. Hodnoty jednotlivých ovládacích prvků a dialogové okno se zobrazí v pravém dolním rohu Visual Studio se na stavovém řádku po výběru.  

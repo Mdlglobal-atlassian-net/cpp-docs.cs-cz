@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291213"
 ---
 # <a name="compiler-warning-level-3-c4646"></a>C4646 kompilátoru upozornění (úroveň 3)
 funkce deklarovat s __declspec(noreturn) má návratový typ není void  

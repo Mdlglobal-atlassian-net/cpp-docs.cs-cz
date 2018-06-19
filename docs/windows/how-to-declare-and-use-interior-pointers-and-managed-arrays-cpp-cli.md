@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875302"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)
 Následující C + +/ CLI příklad ukazuje, jak můžete deklarování a použití vnitřního ukazatele na pole.  

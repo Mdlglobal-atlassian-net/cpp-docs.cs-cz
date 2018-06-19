@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160820"
 ---
 # <a name="pair-stlclr"></a>pair (STL/CLR)
 Šablony třídy popisuje objekt, který zabalí dvojici hodnot.  

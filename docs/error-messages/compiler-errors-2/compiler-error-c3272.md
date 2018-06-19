@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254154"
 ---
 # <a name="compiler-error-c3272"></a>C3272 chyby kompilátoru
 'symbol': symbol vyžaduje FieldOffset, jako je členem skupiny definované s StructLayout(LayoutKind::Explicit) typename typu  
