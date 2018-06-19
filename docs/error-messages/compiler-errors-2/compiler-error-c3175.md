@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246400"
 ---
 # <a name="compiler-error-c3175"></a>C3175 chyby kompilátoru
 'function1': z nespravovaných funkce "funkce2" nelze volat metodu spravovaného typu  

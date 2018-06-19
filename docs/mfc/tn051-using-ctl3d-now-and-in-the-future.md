@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382269"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: Současné a budoucí použití knihovny CTL3D
 Technická poznámka, která dřív popsané knihovny CTL3D a rozhraní MFC, je nyní zastaralá. Efekt 3D pro ovládací prvky je automaticky implementované MFC.  

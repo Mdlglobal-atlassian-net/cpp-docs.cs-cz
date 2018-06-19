@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690579"
 ---
 # <a name="243-single-construct"></a>2.4.3 single – konstrukce
 **Jeden** – direktiva identifikuje konstrukce, která určuje, že přidružené strukturovaných bloku provedený pouze jedno vlákno v týmu (nikoli nutně hlavní vlákno). Syntaxe **jeden** – Direktiva vypadá takto:  

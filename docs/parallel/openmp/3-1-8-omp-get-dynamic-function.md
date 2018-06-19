@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686188"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic – funkce
 **Omp_get_dynamic –** funkce vrátí nenulovou hodnotu, pokud je povolené dynamické přizpůsobení vláken a v opačném případě vrátí hodnotu 0. Formát vypadá takto:  

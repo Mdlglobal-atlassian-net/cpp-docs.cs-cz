@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244944"
 ---
 # <a name="compiler-error-c2883"></a>C2883 chyby kompilátoru
 "název": deklarace funkce je v konfliktu s identifikátorem zaváděné using – deklarace  

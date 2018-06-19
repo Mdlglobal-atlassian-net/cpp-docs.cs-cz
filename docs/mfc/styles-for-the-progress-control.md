@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380107"
 ---
 # <a name="styles-for-the-progress-control"></a>Styly pro ovládací prvek průběh
 Při počátečním vytváření ovládací prvek průběh ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), použijte `dwStyle` parametr k určení požadované okno Styly pro ovládací prvek průběh. V následujícím seznamu jsou styly použít oken. Ovládací prvek ignoruje všechny styl okna než ty, které jsou zde uvedeny. Vždy byste měli vytvořit ovládacího prvku jako podřízeného okna, obvykle z nadřazené pole dialogové okno.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385106"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelské rozhraní pásu karet. Visual Studio podporuje na pásu karet Office 2007 a pásu karet Scenic Windows 7. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233) na webu MSDN.  

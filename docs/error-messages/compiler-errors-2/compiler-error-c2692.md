@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230985"
 ---
 # <a name="compiler-error-c2692"></a>C2692 chyby kompilátoru
 'Název_funkce': plně deklaraci funkce vyžadované v kompilátoru jazyka C s ' / clr se možnost  

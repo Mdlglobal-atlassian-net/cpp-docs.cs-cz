@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379278"
 ---
 # <a name="rich-edit-control-examples"></a>Příklady ovládacích prvků pro úpravy s formátováním
 Ukázka MFC OLE [WORDPAD](../visual-cpp-samples.md) používá `CRichEditView`, `CRichEditDoc`, a `CRichEditCntrItem` třídy. Rozšíření, použije [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Rychlé popis těchto tří tříd naleznete v tématu [třídy související s ovládacími prvky upravit bohaté](../mfc/classes-related-to-rich-edit-controls.md).  

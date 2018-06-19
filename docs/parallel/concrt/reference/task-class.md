@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694092"
 ---
 # <a name="task-class-concurrency-runtime"></a>task – třída (Concurrency Runtime)
 Paralelní vzory knihovny (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze spustit asynchronně a souběžně další úkoly a paralelní pracovní vytvořené paralelní algoritmy v Concurrency Runtime. Vyvolá výsledek typu `_ResultType` při úspěšném dokončení. Úlohy typu `task<void>` vytvořit žádný výsledek. Úlohu můžete čekali při a zrušení nezávisle na jiné úlohy. Můžete také skládat s ostatními úkoly pomocí pokračování ( `then`) a spojení ( `when_all`) a volba ( `when_any`) vzory.  

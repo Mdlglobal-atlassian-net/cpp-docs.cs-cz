@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688993"
 ---
 # <a name="asynchronous-agents-library"></a>Knihovna asynchronních agentů
 Knihovna asynchronních agentů (nebo jenom *knihovna agentů*) poskytuje programovací model, který umožňuje zvýšit robustnost vývoj aplikace s povolenými souběžnosti. Knihovna agentů je knihovny šablon jazyka C++, který podporuje služby založené na objektu actor programovací model a zprávy v procesu předávání pro hrubý toku dat a paralelní zpracování úlohy. Knihovna agentů je založený na plánování a prostředků součásti správy Concurrency Runtime.  

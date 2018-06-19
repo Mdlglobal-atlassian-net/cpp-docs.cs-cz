@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385467"
 ---
 # <a name="template-based-classes"></a>Třídy založené na šablonách
 Tento článek vysvětluje typově bezpečné kolekce na základě šablon tříd v prostředí MFC verze 3.0 a novějších. Vytvoření kolekce bezpečného typu pomocí těchto šablon je pohodlnější a pomáhá poskytovat efektivnější než při použití třídy kolekce není založené na šablonách bezpečnost typů.  

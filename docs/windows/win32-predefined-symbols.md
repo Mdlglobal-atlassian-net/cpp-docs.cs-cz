@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891734"
 ---
 # <a name="win32-predefined-symbols"></a>Předdefinované symboly systému Win32
 Tyto symboly jsou definovány v záhlaví souborů Win32 a podporují standardní funkce aplikací systému Windows a akce. Tyto symboly jsou používány především s společné prvky uživatelského rozhraní. Při práci s ovládacími prvky v editory prostředků, zobrazí se tyto symboly v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) přidružené běžné ovládací prvky. Například pokud vaše panelu nástrojů by měla zobrazovat ikona aplikace, na ikonu bude spojený s symbol IDI_SMALL v okně Vlastnosti.  

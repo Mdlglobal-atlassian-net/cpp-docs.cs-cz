@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384059"
 ---
 # <a name="using-views"></a>Použití zobrazení
 Zobrazení odpovědnosti se grafické zobrazení data dokumentu pro uživatele a přijměte a interpretace vstupu uživatele jako operace v dokumentu. Vaše úkoly ve třídě zobrazení zápis je:  

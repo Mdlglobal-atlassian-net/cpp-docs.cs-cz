@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692142"
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 Poskytuje index do [tiled_extent](tiled-extent-class.md) objektu. Tato třída obsahuje vlastnosti, které chcete přístup k elementům relativně ke zdroji místní dlaždice a relativně ke zdroji globální. Další informace o vedle sebe prostorech najdete v tématu [pomocí dlaždice](../../../parallel/amp/using-tiles.md).  

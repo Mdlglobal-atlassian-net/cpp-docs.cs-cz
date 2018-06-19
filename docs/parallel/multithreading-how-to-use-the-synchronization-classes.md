@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689022"
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: Jak používat synchronizační třídy
 Synchronizace přístupu k prostředkům mezi vlákny problém je běžný, při zápisu vícevláknové aplikace. Má dva nebo více vlákna současně přístup, stejná data může vést k nežádoucím a nepředvídatelným výsledky. Například jedno vlákno může aktualizovat obsah struktury zatímco jiné vlákno čte obsah stejnou strukturu. Není známo, jaká data vlákno pro čtení obdrží: stará data, nově zapsaná data či kombinaci obou. MFC poskytuje řadu synchronizace a synchronizační přístupové třídy na pomoc při řešení tohoto problému. Toto téma vysvětluje třídy, které jsou k dispozici a jakým způsobem je použít k vytvoření třídy bezpečné pro přístup z více vláken v typické aplikaci s více vlákny.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686630"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Návody k Concurrency Runtime
 Na základě scénáře témata v této části ukazují použití mnoha funkcí Concurrency Runtime.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693260"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Postupy: Převedení smyčky OpenMP využívající zrušení na využití modulu Concurrency Runtime
 Některé paralelní smyčky nevyžadují provést všech iterací. Například můžete algoritmu, který hledá hodnotu ukončit po nalezení hodnota. OpenMP neposkytuje mechanismus pro přerušení mimo paralelní smyčky. Však můžete logickou hodnotu, nebo příznak, chcete-li povolit iterace smyčky indikující, že byl nalezen řešení. Concurrency Runtime poskytuje funkce, která umožňuje jednu úlohu zrušit dalších úlohách, které nebyly ještě nezačala.  

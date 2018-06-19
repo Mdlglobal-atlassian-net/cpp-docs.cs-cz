@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694053"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8   Určení paralelních oddílů
 V následujícím příkladu (pro [části 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) na stránce 14) funkce *xaxis*, *yaxis*, a *zaxis* mohou být provedeny souběžně. První `section` – direktiva je volitelný.  Všimněte si, že všechny `section` direktivy muset se zobrazí v lexikální rozsah `parallel sections` vytvořit.  

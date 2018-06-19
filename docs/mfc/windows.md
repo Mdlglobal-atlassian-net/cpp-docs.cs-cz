@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384462"
 ---
 # <a name="windows"></a>Windows
 Tato řada článků popisuje objekty oken v rozhraní MFC framework. Všechny systémy windows MFC odvozena od třídy [CWnd](../mfc/reference/cwnd-class.md), včetně okna s rámečkem, zobrazení, dialogových oken a ovládacích prvků.  

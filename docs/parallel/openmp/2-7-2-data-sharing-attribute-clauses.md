@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691899"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Klauzule atributů pro sdílení dat
 Několik direktivy přijmout klauzule, které umožňují uživateli řídit sdílení atributy proměnných po dobu trvání oblasti. Sdílení klauzule atributů platí pouze pro proměnné v lexikální rozsah direktiva, na kterém se zobrazí v klauzuli. Ne všechny následující klauzule jsou povoleny na všechny direktivy. Seznam věty, které jsou platné na konkrétní – direktiva jsou popsány s direktivou.  

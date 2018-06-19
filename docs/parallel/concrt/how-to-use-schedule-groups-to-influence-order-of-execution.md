@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691193"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Postupy: Použití skupin plánů k ovlivnění pořadí provádění
 Pořadí, ve kterém jsou naplánované úlohy v Concurrency Runtime je Nedeterministický. Plánování zásad můžete však použít k ovlivnění pořadí, ve kterém se spouštět úlohy. Toto téma ukazuje způsob použití skupin plánů společně s [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) zásad plánovače k ovlivnění pořadí, ve kterém se spouštět úlohy.  

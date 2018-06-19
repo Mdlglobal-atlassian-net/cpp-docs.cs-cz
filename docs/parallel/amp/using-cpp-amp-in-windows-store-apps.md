@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696147"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Používání modelu C++ AMP v aplikacích pro UPW
 C++ AMP (C++ Accelerated Massive Parallelism) ve vaší aplikaci pro univerzální platformu Windows (UWP) slouží k provádění výpočtů na grafický procesor (grafiky zpracování Unit) nebo jiné výpočetní akcelerátorů. Ale C++ AMP neposkytuje rozhraní API pro práci přímo s typy prostředí Windows Runtime a prostředí Windows Runtime neposkytuje obálku pro C++ AMP. Při použití prostředí Windows Runtime typy ve vašem kódu – včetně těch, které jste sami vytvořili, je nutné je převést na typy, které jsou kompatibilní s C++ AMP.  

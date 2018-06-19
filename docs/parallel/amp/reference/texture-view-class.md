@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696263"
 ---
 # <a name="textureview-class"></a>texture_view – třída
 Poskytuje přístup pro čtení a zápis do texturou. `texture_view` můžete použít pouze ke čtení textury, jehož typ hodnoty je `int`, `unsigned int`, nebo `float` mají výchozí 32-bit bpse. Číst ostatní formáty texture, použijte `texture_view<const value_type, _Rank>`.  

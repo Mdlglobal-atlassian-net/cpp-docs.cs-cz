@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382903"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Použití dialogového pruhu s ovládacím prvkem matrice
 Jak je uvedeno v [matrice – ovládací prvky a pruhy](../mfc/rebar-controls-and-bands.md), každý vzdálené správy může obsahovat pouze jeden podřízený okno (nebo ovládací prvek). To může být omezení, pokud chcete mít více než jeden podřízeného okna na vzdálené správy. Vhodné řešení je vytvořte zdroj panel dialogového okna s více ovládacích prvků a pak přidejte do ovládacího prvku matrice pásmo matrice (obsahující panel dialogového okna).  

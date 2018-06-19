@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382763"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operace přetažení u ovládacího prvku strom
 Ovládacím prvkem strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odešle oznámení, když uživatel spustí přetáhněte položku. Odešle ovládacího prvku [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) oznámení, když uživatel zahájí přetahování položky s levým tlačítkem myši a [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) oznámení, když uživatel zahájí přetahování s pravým tlačítkem. Můžete zabránit v ovládacím prvku stromu odesílání tato oznámení tím, že ovládací prvek stromu **TVS_DISABLEDRAGDROP** stylu.  

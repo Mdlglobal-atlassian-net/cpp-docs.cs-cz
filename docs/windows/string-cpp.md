@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889017"
 ---
 # <a name="string-c"></a>string (C++)
 Určuje, že jednorozměrná `char`, `wchar_t`, **bajtů** (nebo ekvivalentního) má ukazatel na takové pole nebo pole musí být považované za řetězec.  

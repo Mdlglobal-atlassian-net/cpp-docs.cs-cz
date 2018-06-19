@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381121"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Postup v typické aplikaci klienta FTP
 Vytvoří typické aplikaci klienta FTP [CInternetSession](../mfc/reference/cinternetsession-class.md) a [CFtpConnection](../mfc/reference/cftpconnection-class.md) objektu. Všimněte si, že těchto tříd WinInet knihovny MFC ve skutečnosti nebudete řídit typ nastavení proxy serveru; Služba IIS neodpovídá.  

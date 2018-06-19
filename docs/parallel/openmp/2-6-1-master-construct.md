@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689552"
 ---
 # <a name="261-master-construct"></a>2.6.1 master – konstrukce
 **Hlavní** – direktiva identifikuje konstruktor, který určuje strukturovaných blok, který se spustí hlavní vlákno týmu. Syntaxe **hlavní** – Direktiva vypadá takto:  

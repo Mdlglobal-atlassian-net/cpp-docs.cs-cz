@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244544"
 ---
 # <a name="compiler-error-c2896"></a>C2896 chyby kompilátoru
 'function1': funkce šablony "funkce2" nelze použít jako argument  

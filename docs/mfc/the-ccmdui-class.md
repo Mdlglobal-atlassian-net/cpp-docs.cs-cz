@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379805"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI – třída
 Když směruje příkazy aktualizace k její obslužnou rutinu, rozhraní předá obslužná rutina ukazatel na `CCmdUI` objektu (nebo na objekt `CCmdUI`-odvozené třídy). Tento objekt představuje nabídky položky nebo panelu nástrojů tlačítko nebo jiného objektu uživatelského rozhraní, který vygeneroval příkaz. Obslužná rutina aktualizace volání členských funkcí `CCmdUI` struktura prostřednictvím má ukazatel na aktualizace objektů uživatelského rozhraní. Zde je ukázka, obslužnou rutinu aktualizace pro položku nabídky Vymazat vše:  

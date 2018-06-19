@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689971"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Psaní programů s více vlákny pro prostředí Win32
 Při psaní programů s více vlákny musí koordinovat jejich chování a [využití prostředků programu](#_core_sharing_common_resources_between_threads). Také musíte zkontrolovat, že každé vlákno obdrží [vlastní zásobník](#_core_thread_stacks).  

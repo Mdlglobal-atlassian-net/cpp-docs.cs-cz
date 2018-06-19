@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686279"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel – funkce
 **Omp_in_parallel –** funkce vrátí nenulovou hodnotu, pokud je volána v rámci dynamické rozsah oblast paralelní provádění paralelně; jinak vrátí hodnotu 0. Formát vypadá takto:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688528"
 ---
 # <a name="iumsscheduler-structure"></a>Struktura rozhraní IUMSScheduler
 Rozhraní pro abstrakci plánovače pracovní, který chce Concurrency Runtime Resource Manager k ruční ho, které lze plánovat vláken (UMS) uživatelského režimu. Resource Manager používá toto rozhraní ke komunikaci s plánovače UMS přístup z více vláken. `IUMSScheduler` Rozhraní dědí z `IScheduler` rozhraní.  

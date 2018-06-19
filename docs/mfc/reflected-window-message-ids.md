@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379993"
 ---
 # <a name="reflected-window-message-ids"></a>Identifikátory reflektovaných zpráv oken
 Rychlé vytvoření ovládacího prvku ActiveX nebo jiné speciální ovládací prvek, je podtřídou časového období. Další informace najdete v tématu [MFC – ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  

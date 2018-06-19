@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241220"
 ---
 # <a name="compiler-error-c2912"></a>C2912 chyby kompilátoru
 explicitní specializace "prohlášení" není specializace šablony funkcí  

@@ -119,6 +119,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377768"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl – třída
 `CMFCTabCtrl` Třída poskytuje funkce pro ovládacího prvku karta. Ovládacího prvku karta zobrazí okno lze ukotvit ploché nebo trojrozměrné karty v její horní nebo dolní. Karet můžete zobrazit text a bitovou kopii a můžete změnit barvu, když je aktivní.  

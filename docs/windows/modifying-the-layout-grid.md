@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880316"
 ---
 # <a name="modifying-the-layout-grid"></a>Změna mřížky rozložení
 Pokud jsou umístění nebo uspořádání ovládacích prvků v dialogovém okně, můžete použít mřížku rozložení pro přesnější umístění. Pokud je zapnuta mřížky, pravděpodobně "Přichytit k" tečkovaná čar mřížky jakoby zmagnetizovat ovládací prvky. Můžete zapnout "Přichytit k mřížce" zapnout a vypnout a změna velikosti buněk mřížky rozložení.  

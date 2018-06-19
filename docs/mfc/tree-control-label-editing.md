@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381709"
 ---
 # <a name="tree-control-label-editing"></a>Úpravy štítků ovládacích prvků strom
 Uživatele můžete upravit přímo popisky položek v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) má **TVS_EDITLABELS** stylu. Uživatel začne úpravy klepnutím na popisek položky, který je aktivní. Aplikace začne úpravy pomocí [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) – členská funkce. Ovládací prvek stromu odešle oznámení při úpravě začne a kdy je zrušena nebo byla dokončena. Po dokončení úprav jste zodpovědní za aktualizace popisek položky, podle potřeby.  

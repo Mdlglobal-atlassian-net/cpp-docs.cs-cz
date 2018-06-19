@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688762"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor – třída
 `ordered_message_processor` Je `message_processor` umožňuje bloky zpráv ke zpracování zpráv v pořadí, které byly přijaty.  

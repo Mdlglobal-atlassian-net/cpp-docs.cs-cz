@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687384"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d – obor názvů
 `direct3d` Obor názvů obsahuje funkce, které podporují D3D interoperability. Ji umožňuje bezproblémové použít D3D prostředků pro výpočet v kódu AMP a také umožňuje používat prostředky vytvořené v AMP v kódu D3D bez vytvoření redundantní kopie zprostředkující. Můžete přírůstkově urychlit náročné části výpočetní DirectX aplikací s použitím C++ AMP a použít rozhraní API D3D na dat vytvářených z AMP výpočty.  

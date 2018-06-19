@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384368"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Příklady soketů využívajících archivy
 Tento článek představuje příklad použití třídy [CSocket](../mfc/reference/csocket-class.md). Aktivuje se v příkladu `CArchive` objekty k serializaci dat prostřednictvím soketu. Všimněte si, že se nejedná dokumentu serializace do nebo ze souboru.  

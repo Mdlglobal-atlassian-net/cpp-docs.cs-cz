@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889404"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Nastavení kurzoru&#39;s aktivního bodu (Editor obrázků pro ikony)
 Z aktivního bodu [kurzor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) je bod do systému Windows, které jsou odkazuje v sledování pozice kurzoru na. Ve výchozím nastavení je aktivní bod hodnotu levého horního rohu kurzoru (souřadnice 0,0). Vlastnost v hotspotů [vlastnosti – okno](/visualstudio/ide/reference/properties-window) zobrazí souřadnice aktivního bodu.  

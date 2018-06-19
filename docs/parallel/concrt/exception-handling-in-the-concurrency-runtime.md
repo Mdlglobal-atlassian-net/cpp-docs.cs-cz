@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695557"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Zpracování výjimek v Concurrency Runtime
 Concurrency Runtime používá ke komunikaci různé druhy chyb pro zpracování výjimek C++. Tyto chyby patří neplatný použití za běhu, chyby za běhu, jako je například selhání získat prostředek a chyb vzniklých v pracovní funkce, které poskytnete úlohy a skupiny úloh. Pokud úlohy nebo skupina úloh vyvolá výjimku, modul runtime obsahuje této výjimky a zařazuje do kontextu, která čeká na úkolu nebo skupina úloh ukončíte. Modul runtime pro součásti, jako je například prosté úlohy a agenty, nespravuje výjimky za vás. V těchto případech je nutné implementovat vlastní mechanismus zpracování výjimek. Toto téma popisuje, jak modul runtime zpracovává výjimky, které jsou vyvolány úlohy, skupiny úloh, prosté úlohy a asynchronních agentů a jak reagovat na výjimky ve vašich aplikacích.  

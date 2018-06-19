@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692987"
 ---
 # <a name="using-tiles"></a>Používání bloků
 Dlaždice můžete maximalizovat akcelerace vaší aplikace. Dlaždice rozdělí vláken na stejné obdélníková podmnožiny nebo *dlaždice*. Pokud používáte příslušné dlaždice velikost a algoritmus vedle sebe, můžete získat i další akcelerace z vašeho kódu C++ AMP. Základní součásti dlaždice jsou:  

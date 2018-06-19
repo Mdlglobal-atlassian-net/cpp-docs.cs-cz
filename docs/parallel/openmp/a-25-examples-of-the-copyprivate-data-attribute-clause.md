@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691687"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Příklady klauzule datového atributu copyprivate
 **Příklad 1:** `copyprivate` – klauzule ([části 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na stránce 32) slouží k vysílání hodnoty získané jedno vlákno přímo na všechny instance soukromé proměnné v jiná vlákna.  

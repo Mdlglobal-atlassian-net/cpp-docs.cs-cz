@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693374"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Obor názvů souběžnosti (C++ AMP)
 Poskytuje třídy a funkce, které urychlit spuštění kódu C++ na data paralelní hardwaru. Další informace najdete v tématu [přehled produktu C++ AMP](../cpp-amp-overview.md)  

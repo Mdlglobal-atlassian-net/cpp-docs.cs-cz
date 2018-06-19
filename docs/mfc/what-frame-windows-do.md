@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382564"
 ---
 # <a name="what-frame-windows-do"></a>Jak fungují okna s rámečkem
 Kromě zobrazení jednoduše rámců, okna s rámečkem zodpovídají za množství úkoly při spolupráci rámečku s jeho zobrazení a aplikace. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) a [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dědí [CFrameWnd](../mfc/reference/cframewnd-class.md), takže mají `CFrameWnd` možnosti, jakož i nové funkce, které si přidají. Podřízená okna příklady zobrazení, ovládací prvky, jako jsou tlačítka a seznamy a ovládací pruhy, včetně panely nástrojů, stavové řádky a řádky dialogové okno.  

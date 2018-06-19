@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690075"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10   Nastavení sekvenčního řazení
 Pořadí oddílů ([část 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stránce 22) jsou užitečné pro sekvenční řazení výstup práci, kterou se provádí současně. Následující program vytiskne indexy v sekvenčním pořadí:  

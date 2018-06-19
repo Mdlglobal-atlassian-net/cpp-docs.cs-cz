@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694284"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 Tento dokument ukazuje, jak pokud chcete přesunout pracovní, které se provádí pomocí uživatelského rozhraní (UI) vlákno v aplikaci Microsoft Foundation třídy (MFC) pracovní vlákno pomocí Concurrency Runtime. Tento dokument také ukazuje, jak zlepšit výkon časově náročná operace kreslení.  

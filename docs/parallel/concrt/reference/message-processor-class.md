@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689386"
 ---
 # <a name="messageprocessor-class"></a>message_processor – třída
 `message_processor` Třída je abstraktní základní třída pro zpracování `message` objekty. Neexistuje žádná záruka řazení zpráv v.  

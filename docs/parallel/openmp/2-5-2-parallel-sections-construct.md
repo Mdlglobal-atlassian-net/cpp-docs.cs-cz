@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689477"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections – konstrukce
 **Parallel sections –** – direktiva nabízí způsob zástupce pro zadání **paralelní** oblast obsahující pouze jeden **části** – direktiva. Sémantika jsou shodné s explicitním zadáním **paralelní** – direktiva bezprostředně následované **části** – direktiva. Syntaxe **parallel sections –** – Direktiva vypadá takto:  

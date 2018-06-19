@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233577"
 ---
 # <a name="compiler-error-c2770"></a>C2770 chyby kompilátoru
 explicitní template_or_generic neplatný argument nebo argumenty 'šablony.  

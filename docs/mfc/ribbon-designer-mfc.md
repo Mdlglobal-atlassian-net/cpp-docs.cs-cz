@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382096"
 ---
 # <a name="ribbon-designer-mfc"></a>Návrhář pásu karet (MFC)
 Návrhář pásu karet umožňuje vytvářet a přizpůsobovat pásů karet v aplikacích MFC. Pásu karet je element rozhraní (UI) uživatele, který slouží k uspořádání příkazy do logických skupin. Tyto skupiny se zobrazí v samostatných záložkách v pruhu v horní části okna. Na pásu karet nahrazuje řádku nabídek a panelů nástrojů. Pásu karet může výrazně zlepšit použitelnost aplikací. Další informace najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233). Následující obrázek znázorňuje pásu karet.  

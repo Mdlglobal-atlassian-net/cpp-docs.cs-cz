@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381033"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testování vlastností a událostí pomocí testovacího kontejneru
 Aplikace – kontejner testů dodaný v jazyce Visual C++, je kontejneru ovládacího prvku ActiveX pro testování a ladění ovládacích prvků ActiveX. Kontejner testů umožňuje vývojáři řízení testování funkčnosti ovládacího prvku změnou jeho vlastnosti, vyvolání její metody a aktivuje její události. Kontejner testů můžete zobrazit protokoly oznámení datové vazby a také zajišťuje funkce pro testování trvalost funkce ovládacího prvku ActiveX: vlastnosti uložte do datového proudu nebo podúložiště, je znovu načíst a kontrolovat data uložená datového proudu. Tato část popisuje postup použití základní funkce – kontejner testů. Další informace, vyberte **pomoci** nabídky při spuštění – kontejner testů.  

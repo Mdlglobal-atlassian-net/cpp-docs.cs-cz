@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381976"
 ---
 # <a name="slider-notification-messages"></a>Zprávy s oznámením pro posuvník
 Ovládací prvek typu jezdec upozorní jeho nadřazeného okna akcí uživatele zasláním nadřazené `WM_HSCROLL` nebo `WM_VSCROLL` zprávy, v závislosti na orientaci posuvníku. Chcete-li zpracovat tyto zprávy, přidejte obslužné rutiny pro `WM_HSCROLL` a `WM_VSCROLL` zprávy do nadřazeného okna. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) a [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) členské funkce se předají kód oznámení, pozice posuvníku a odkazy [CSliderCtrl](../mfc/reference/csliderctrl-class.md) objektu. Všimněte si, že je ukazatel typu **CScrollBar \***  to i v případě, že odkazuje `CSliderCtrl` objektu. Budete muset přiřazení tento ukazatel typu, pokud budete potřebovat k manipulaci s posuvníku.  

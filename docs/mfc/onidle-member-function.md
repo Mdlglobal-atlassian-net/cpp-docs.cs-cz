@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350364"
 ---
 # <a name="onidle-member-function"></a>OnIdle – členská funkce
 Při zpracování zprávy žádné Windows volá framework [CWinApp](../mfc/reference/cwinapp-class.md) – členská funkce [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (popsaný v referenční příručka knihovny MFC).  

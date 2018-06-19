@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385154"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Pořadí bajtů
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá pořadí bajtů. Další problémy, které jsou popsané v článcích: [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689295"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Kombinované paralelní konstrukce pro sdílení práce
 Kombinované paralelní konstrukce pro sdílení práce jsou zástupce pro zadání paralelní oblasti, která obsahuje pouze jeden konstrukce pro sdílení práce. Sémantika tyto direktivy je shodná s explicitním zadáním **paralelní** – direktiva následuje jeden sdílení práce konstrukce.  

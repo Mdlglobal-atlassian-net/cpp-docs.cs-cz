@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689490"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime – funkce
 `omp_get_wtime` Funkce vrátí hodnotu s plovoucí desetinnou Dvojitá přesnost rovno uplynulá skutečný čas v sekundách, protože některé "čas v minulosti".  Skutečný "čas v minulosti" je volitelný, ale je zaručeno nechcete změnit během provádění programu aplikace. Formát vypadá takto:  

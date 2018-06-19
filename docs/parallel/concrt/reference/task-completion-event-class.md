@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687878"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event – třída
 `task_completion_event` Třída umožňuje zpozdit provádění úlohy, dokud je podmínka nebo spustit úlohu v reakci na externí událost.  

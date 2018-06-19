@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891919"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Přepínání mezi ovládacími prvky a kódem dialogového okna
 V aplikacích MFC dvojitým kliknutím na dialogové okno Ovládací prvky na jejich kód obslužné rutiny nebo rychle vytvořit se zakázaným inzerováním funkce obslužných rutin.  

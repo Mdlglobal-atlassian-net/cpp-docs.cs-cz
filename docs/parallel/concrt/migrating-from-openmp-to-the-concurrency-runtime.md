@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690485"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrace z OpenMP do Concurrency Runtime
 Concurrency Runtime umožňuje celou řadu programovacích modelů. Tyto modely můžou překrývat nebo doplňují modely další knihovny. Dokumenty v této části porovnání [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do Concurrency Runtime a příklady o tom, jak migrovat existující kód OpenMP na využití modulu Concurrency Runtime.  

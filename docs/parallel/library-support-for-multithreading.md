@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685669"
 ---
 # <a name="library-support-for-multithreading"></a>Podpora knihovny pro multithreading
 Všechny verze CRT nyní podporují, Multithreading s výjimkou verzí bez uzamčení některých funkcí. V tématu [vícevláknové knihovny výkonu](../c-runtime-library/multithreaded-libraries-performance.md) Další informace.  

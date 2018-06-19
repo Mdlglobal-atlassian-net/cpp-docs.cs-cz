@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691600"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 **Copyprivate** klauzule poskytuje mechanismus pro privátní proměnnou použijte k vysílání hodnotu z jednoho člena týmu ostatním členům. Jde o alternativu k použití sdílené proměnné pro hodnotu, při poskytování sdílené proměnné může být obtížné (například v rekurze, vyžadování jiné proměnné na každé úrovni). **Copyprivate** klauzule se může vyskytovat pouze na **jeden** – direktiva.  

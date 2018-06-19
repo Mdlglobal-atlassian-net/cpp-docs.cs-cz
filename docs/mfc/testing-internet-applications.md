@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380066"
 ---
 # <a name="testing-internet-applications"></a>Testování internetových aplikací
 Existují některé jedinečné testování výzvy na Internetu, zejména pro aplikace spuštěné na webovém serveru. Počáteční testování bude pravděpodobně provedeno pomocí připojení k serveru testovacího klienta jednoho uživatele. To bude hodit pro ladění kódu.  

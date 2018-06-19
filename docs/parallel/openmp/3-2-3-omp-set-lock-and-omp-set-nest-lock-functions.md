@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689711"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock a omp_set_nest_lock – funkce
 Každá z těchto funkcí blokuje vlákno provádění funkce, dokud zadaný zámek je k dispozici a poté nastaví zámek. Jednoduché zámek je k dispozici, pokud je odemčený. Nestable zámek je k dispozici, pokud je odemčený, nebo pokud je již vlastněn vlákno provádění funkce. Formát vypadá takto:  

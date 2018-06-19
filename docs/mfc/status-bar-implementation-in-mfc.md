@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381085"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementace stavového řádku v prostředí MFC
 A [cstatusbar –](../mfc/reference/cstatusbar-class.md) objekt je ovládací prvek panel s řádek podokna výstup textu. Podokna výstup běžně se používají jako řádky zprávy a jako indikátory stavu. Mezi příklady patří řádky zprávu nápovědy nabídky, které stručně popisují příkaz vybrané nabídky a indikátory, které se zobrazí stav SCROLL LOCK NUMLOCK a jiných klíčů.  

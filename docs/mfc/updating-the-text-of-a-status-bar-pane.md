@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384475"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizace textu na panelu stavového řádku
 Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně panelu aplikace MFC stavu. Stavový řádek – objektem okna třídy [cstatusbar –](../mfc/reference/cstatusbar-class.md) – obsahuje několik "podokna." Každý podokno je obdélníkovou oblast stavový řádek, který můžete použít k zobrazení informací. Například mnoho aplikace se zobrazí stav klávesy CAPS LOCK NUMLOCK a jiných klíčů ve nejvíce vpravo podokna. Aplikace se zobrazí také často informativní text v krajní levé podokno (0), někdy označuje jako "podokno zpráva". Například výchozí MFC stavového řádku používá v podokně zpráv pro zobrazení řetězec vysvětlením tlačítko nabídky aktuálně vybrané položky nebo na panelu nástrojů. Na obrázku v [stavové řádky](../mfc/status-bar-implementation-in-mfc.md) zobrazuje indikátor stavu z aplikace vytvořené – Průvodce aplikací knihovny MFC.  

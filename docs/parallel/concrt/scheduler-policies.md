@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690404"
 ---
 # <a name="scheduler-policies"></a>Zásady plánovače
 Tento dokument popisuje roli zásady plánovače v Concurrency Runtime. A *zásad plánovače* prvky strategie používající Plánovač při správě úloh. Představte si třeba aplikaci, která vyžaduje některé úlohy provést v `THREAD_PRIORITY_NORMAL` a další úlohy provést v `THREAD_PRIORITY_HIGHEST`.  Můžete vytvořit dvě instance plánovače: ten, který určuje `ContextPriority` k zásad `THREAD_PRIORITY_NORMAL` a druhý, který určuje stejné zásady jako `THREAD_PRIORITY_HIGHEST`.  

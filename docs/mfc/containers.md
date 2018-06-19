@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342183"
 ---
 # <a name="containers"></a>Kontejnery
 Aplikace kontejneru je aplikace, která může obsahovat vložené nebo propojené položky do svých vlastních dokumentů. Dokumenty spravuje aplikace kontejneru musí být schopný k uložení a zobrazení OLE složeného dokumentu součásti a také data vytvořená vlastní aplikace. Aplikace kontejneru musí také umožňují uživatelům vložit nové položky nebo upravit existující položky.  

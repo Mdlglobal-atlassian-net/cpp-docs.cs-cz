@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890658"
 ---
 # <a name="v1enum"></a>v1_enum
 Přesměruje, že zadaného výčtového typu předávají jako 32bitová verze entity místo výchozího 16 bitů.  

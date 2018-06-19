@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381758"
 ---
 # <a name="using-ccomboboxex"></a>Používání atributu CComboBoxEx
 Pole ovládacího prvku rozšířené pole se seznamem je rozšířením pole se seznamem standardní ovládací prvek, který poskytuje nativní podporu pro obrázků položek. Tyto bitové kopie slouží k označení stavu jednotlivých položek v seznamu, jako je například položky aktuálně vybrané a nezaškrtnuté. Chcete-li obrázků položek snadno dostupný, ovládacího prvku poskytuje podporu seznamu bitové kopie.  

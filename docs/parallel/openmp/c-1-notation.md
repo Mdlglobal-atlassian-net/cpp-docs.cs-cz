@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686812"
 ---
 # <a name="c1-notation"></a>C.1 Zápis
 Gramatika pravidla obsahovat název pro jiný terminál, následovaným dvojtečkou, následuje nahrazení alternativy na samostatné řádky.  

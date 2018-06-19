@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243656"
 ---
 # <a name="compiler-error-c3050"></a>C3050 chyby kompilátoru
 'type1': třídu ref nemůže Zdědit z 'type1'  

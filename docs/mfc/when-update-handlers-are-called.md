@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384131"
 ---
 # <a name="when-update-handlers-are-called"></a>Kdy jsou volány obslužné rutiny aktualizace
 Předpokládejme, že uživatel klikne na tlačítko myši v nabídce Soubor, který generuje `WM_INITMENUPOPUP` zprávy. V rámci aktualizace Frameworku souhrnně aktualizuje všechny položky v nabídce soubor před rozbalení nabídky, takže uživatel uvidí.  

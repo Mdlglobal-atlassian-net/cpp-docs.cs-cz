@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382164"
 ---
 # <a name="using-cricheditctrl"></a>Používání atributu CRichEditCtrl
 Ovládacího prvku RichEdit je okno, ve kterém může uživatel zadat a upravit text. Text se dá přiřadit znak a formátování odstavce a může obsahovat vložené objekty OLE. Ovládací prvek RichEdit je reprezentována v prostředí MFC podle [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) třídy.  

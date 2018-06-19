@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691047"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE** se vztahují pouze na **pro** a **paralelní pro** direktivy, které mají typ plánu **runtime**. Plán typu a bloku velikost pro všechny tyto smyčky můžete nastavit v době běhu nastavením této proměnné prostředí pro jakýkoli z typů rozpoznaný plán a volitelné *chunk_size*.  

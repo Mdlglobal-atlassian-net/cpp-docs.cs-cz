@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383867"
 ---
 # <a name="technical-notes-by-category"></a>Technické poznámky podle kategorií
 Technické poznámky jsou rozdělené do následujících kategorií. Číselné seznam technické poznámky, najdete v části [technické poznámky podle čísel](../mfc/technical-notes-by-number.md).  

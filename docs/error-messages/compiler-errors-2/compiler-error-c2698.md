@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233814"
 ---
 # <a name="compiler-error-c2698"></a>C2698 chyby kompilátoru
 pomocí deklaraci pro ' Deklarace 1 nemohou existovat společně s existující pomocí deklaraci pro ' deklarace 2'  

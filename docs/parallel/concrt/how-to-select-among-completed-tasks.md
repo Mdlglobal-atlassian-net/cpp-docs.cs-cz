@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687111"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Postupy: Výběr z dokončených úloh
 Tento příklad ukazuje způsob použití [concurrency::choice](../../parallel/concrt/reference/choice-class.md) a [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy vyberte první úlohy k dokončení vyhledávacího algoritmu.  

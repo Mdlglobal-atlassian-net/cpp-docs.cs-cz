@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385908"
 ---
 # <a name="using-ctoolbarctrl"></a>Používání atributu CToolBarCtrl
 Můžete použít ovládací prvek panelu nástrojů ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) vytvořit okno Ovládací prvek obsahující tlačítka a volitelné mezery. Jako uživatel vybere ho každého tlačítka v okně Ovládací prvek panelu nástrojů odešle zprávu příkaz do nadřazeného okna. Tlačítka na panelu nástrojů, obvykle odpovídají položky v nabídce aplikace, že poskytuje další a více přímý způsob pro uživatele pro přístup aplikaci příkazy.  

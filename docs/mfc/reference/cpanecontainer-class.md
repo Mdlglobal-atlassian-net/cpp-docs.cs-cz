@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378165"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer – třída
 `CPaneContainer` Třída je základní součástí ukotvení modelu implementované MFC. Tato třída objektu ukládá ukazatele na dvě podokna ukotvení nebo na dvě instance `CPaneContainer.` ukládá také ukazatel na oddělovač, který odděluje podokny (nebo kontejnery). Pomocí vnoření kontejnery uvnitř kontejnery můžete vytvořit rozhraní binárního stromu, který představuje komplexní ukotvení rozložení. Kořenové binárního stromu je uložen v [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objektu.  

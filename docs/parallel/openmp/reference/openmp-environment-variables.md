@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692305"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP – proměnné prostředí
 Obsahuje odkazy na proměnné prostředí použít v rozhraní API OpenMP.  

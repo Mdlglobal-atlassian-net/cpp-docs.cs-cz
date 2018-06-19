@@ -359,6 +359,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378979"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager – třída
 Poskytuje podporu pro Změna vzhledu vaší aplikace na globální úrovni. `CMFCVisualManager` Třídy funguje nejlépe společně s třídu, která obsahuje pokyny k vykreslení ovládacích prvků grafického uživatelského rozhraní aplikace pomocí konzistentní styl. Tyto další třídy jsou označovány jako visual správci a dědí z `CMFCBaseVisualManager`.  

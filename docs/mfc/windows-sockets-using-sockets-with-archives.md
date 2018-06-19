@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385535"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Použití soketů s archivy
 Tento článek popisuje [CSocket programovací model](#_core_the_csocket_programming_model). Třída [CSocket](../mfc/reference/csocket-class.md) poskytuje podporu soketu na vyšší úrovni abstrakce než třída [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` používá verzi protokolu serializace MFC k předávání dat do a z objekt soketu prostřednictvím knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. `CSocket` poskytuje blokování (při správě zpracování na pozadí zpráv systému Windows) a poskytuje přístup k `CArchive`, který spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracovaná rozhraní API nebo třída `CAsyncSocket`.  

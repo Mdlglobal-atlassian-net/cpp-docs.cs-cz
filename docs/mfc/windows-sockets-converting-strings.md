@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383757"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: Převádění řetězců
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá převádění řetězců. Další problémy, které jsou popsané v [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md).  

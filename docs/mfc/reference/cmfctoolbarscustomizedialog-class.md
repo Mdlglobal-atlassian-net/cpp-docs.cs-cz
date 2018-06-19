@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378178"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog – třída
 Dialogové okno nemodální karta ( [cpropertysheet – třída](../../mfc/reference/cpropertysheet-class.md)), který umožňuje uživateli upravit panely nástrojů, nabídek, klávesové zkratky, uživatelem definované nástroje a vizuální styl v aplikaci. Obvykle se uživatel přistoupí k tohoto dialogového okna tak, že vyberete **přizpůsobit** z **nástroje** nabídky.  

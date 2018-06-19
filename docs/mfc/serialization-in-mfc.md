@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381020"
 ---
 # <a name="serialization-in-mfc"></a>Serializace v prostředí MFC
 Tento článek vysvětluje, že zadaná v knihovny pro třídu Foundation Microsoft (MFC) umožňující objekty, které chcete zachovat mezi mechanismu serializace spouští vašeho programu.  

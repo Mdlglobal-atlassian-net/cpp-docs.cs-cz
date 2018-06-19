@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692423"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Přehled Concurrency Runtime
 Tento dokument obsahuje přehled Concurrency Runtime. Popisuje výhody Concurrency Runtime, kdy ji použít, a způsob jejich součástí interakce mezi sebou a se operační systém a aplikace.  

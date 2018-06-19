@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381742"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Použití seznamu obrázků s ovládacím prvkem matrice
 Každé vzdálené matrice může obsahovat mimo jiné, bitovou kopii ze seznamu přidruženou bitovou kopii. Následující postup popisuje nezbytné kroky pro zobrazení ve svazku matrice bitovou kopii.  

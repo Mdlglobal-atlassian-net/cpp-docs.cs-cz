@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380575"
 ---
 # <a name="tool-tips"></a>Popisy tlačítek
 Postupy jsou jedinečné pro přidávání popisů tlačítek do ovládacích prvků obsažené v systému windows odvozené z třídy knihovny MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) a systému windows není odvozen od `CFrameWnd`.  

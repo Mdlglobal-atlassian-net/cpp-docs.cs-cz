@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383939"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Sokety datagramů
 Tento článek popisuje sokety datagramu, jeden ze dvou typů soketu Windows, která je k dispozici. (Další typ je [datového proudu soketu](../mfc/windows-sockets-stream-sockets.md).)  

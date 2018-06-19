@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383494"
 ---
 # <a name="toolbar-tool-tips"></a>Popisy tlačítek na panelu nástrojů
 Popisy jsou velmi malé místní windows, která představují krátký popis tlačítka panelu nástrojů účel při umístit ukazatel myši nad tlačítko pro určitou dobu. Když vytvoříte aplikaci pomocí Průvodce aplikací, který má panel nástrojů, nástroj tip podpora je k dispozici pro vás. Tento článek vysvětluje, jak nástroj tip podporu vytvořené v Průvodce vytvořením aplikace a jak přidat nástroj pro podporu tip do vaší aplikace.  
@@ -41,7 +42,7 @@ Popisy jsou velmi malé místní windows, která představují krátký popis tl
 ##  <a name="_core_activating_tool_tips"></a> Aktivace popisů tlačítek  
  Chcete-li aktivovat popisů tlačítek v aplikaci, musíte udělat dvě věci:  
   
--   Přidat `CBRS_TOOLTIPS` styl jiných stylů (například **ws_child –**, **ws_visible –**a dalších **CBRS_** styly) předán jako `dwStyle` parametru [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) funkce nebo v [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
+-   Přidat `CBRS_TOOLTIPS` styl jiných stylů (například **ws_child –**, **ws_visible –** a dalších **CBRS_** styly) předán jako `dwStyle` parametru [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) funkce nebo v [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
 -   Jak je popsáno v níže uvedeném postupu, připojí text tlačítka panelu nástrojů, oddělených znak nového řádku ("\n'), k prostředku řetězec obsahující řádku příkazového řádku pro příkaz panelu nástrojů. Řetězec prostředku sdílí ID tlačítka panelu nástrojů.  
   

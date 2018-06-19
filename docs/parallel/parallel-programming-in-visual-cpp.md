@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692230"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Paralelní programování v jazyce Visual C++
 Visual C++ poskytuje následující technologie, které vám pomůžou vytvořit Vícevláknová a paralelní programy, které využít výhod více jader a použít na grafický procesor pro obecné účel programování.  

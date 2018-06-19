@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380302"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: Podpora MFC pro znaky DBCS
 Tato technická Poznámka popsané podpory v prostředí MFC "dvoubajtové znakové sady" nebo DBCS. Tato informace, jakož i informace o MFC je podpora pro UNICODE je teď dostupná v *knihovny tříd*.  

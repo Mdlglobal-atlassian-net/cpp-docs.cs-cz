@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377607"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída
 Zapouzdřuje funkce ovládacího prvku"nástroj tip," malé místní okno, které zobrazuje jeden řádek textu popisující účel nástroj v aplikaci.  

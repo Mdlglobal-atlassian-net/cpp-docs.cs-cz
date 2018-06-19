@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229686"
 ---
 # <a name="compiler-error-c2567"></a>C2567 chyby kompilátoru
 Nelze otevřít metadata v 'file', soubor může byly odstraněny nebo přesunuty  

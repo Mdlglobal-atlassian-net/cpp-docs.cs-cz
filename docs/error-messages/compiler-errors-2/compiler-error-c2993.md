@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242312"
 ---
 # <a name="compiler-error-c2993"></a>C2993 chyby kompilátoru
 "identifikátor": Neplatný typ pro parametr šablony bez typu "parametr"  

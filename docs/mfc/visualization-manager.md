@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384212"
 ---
 # <a name="visualization-manager"></a>Správce vizualizace
 Visual správce je objekt, který řídí vzhled aplikaci jako celek. Jako jednu třídu funguje, kde můžete ukládat všechny kód vykreslování pro aplikaci. Knihovny MFC zahrnuje několik visual správci. Můžete také vytvořit vlastní visual správce, pokud chcete vytvořit vlastní zobrazení pro vaši aplikaci. Následující obrázky znázorňují stejnou aplikaci, pokud jsou povolené různé visual správce:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689607"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   Použití reprivatizace
 Následující příklad ukazuje reprivatization proměnných. Soukromé proměnné může být označen `private` znovu za vnořené direktivu. Nemají sdílet v oblasti nadřazených paralelní.  

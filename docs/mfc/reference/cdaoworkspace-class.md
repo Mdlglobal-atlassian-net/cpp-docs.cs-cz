@@ -77,6 +77,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377211"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace – třída
 Spravuje relaci databáze s názvem, chráněný heslem z přihlášení a odhlášení, jedním uživatelem.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685902"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Podmíněná kompilace
 _**OPENMP** název makra definované kompatibilní se standardem OpenMP implementace jako decimal konstanta *yyyymm*, která bude za rok a měsíc schválené specifikace. Toto makro nesmí být předmět **#define** nebo **#undef** předběžného zpracování direktiva.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341307"
 ---
 # <a name="application-and-thread-support-classes"></a>Třídy pro podporu aplikací a vláken
 Každá aplikace má pouze jeden objekt aplikace; Tento objekt koordinuje jiných objektů nástroje spuštěným programem a je odvozený od `CWinApp`.  

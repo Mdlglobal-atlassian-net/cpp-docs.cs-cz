@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889820"
 ---
 # <a name="variable-argument-lists--ccli"></a>Seznamy argumentů s proměnnou délkou (...) (C++/CLI)
 Tento příklad ukazuje, jak můžete použít `...` syntaxe v jazyce Visual C++ implementovat funkce, které mají proměnný počet argumentů.  

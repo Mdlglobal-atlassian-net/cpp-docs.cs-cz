@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691490"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Příklady nesprávného vnoření direktiv pro sdílení práce
 Příklady v této části ilustrují direktivy vnoření pravidla. Další informace o vnořování direktiv najdete v tématu [části 2.9](../../parallel/openmp/2-9-directive-nesting.md) na stránce 33.  

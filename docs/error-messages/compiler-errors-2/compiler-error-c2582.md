@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228810"
 ---
 # <a name="compiler-error-c2582"></a>C2582 chyby kompilátoru
 Funkce 'function' není k dispozici v "typ"  

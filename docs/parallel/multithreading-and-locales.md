@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692851"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading a národní prostředí
 Běhové knihovny jazyka C a standardní knihovny C++ poskytují podporu pro změnu národního prostředí vašeho programu. Toto téma popisuje problémy, které nastat při použití funkce národního prostředí obou knihoven v aplikaci s více vlákny.  

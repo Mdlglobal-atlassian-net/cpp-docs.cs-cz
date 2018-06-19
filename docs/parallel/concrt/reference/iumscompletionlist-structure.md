@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687072"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList – struktura
 Představuje seznam dokončení UMS. Při plánování vláken UMS bloky plánovače určené kontextu je odeslat, aby rozhodnutí o při plánování v kořenovém adresáři základní virtuálních procesorů, zatímco původní vlákno je blokované. Při původní vlákno odblokuje, fronty je operační systém do seznamu dokončení, která je přístupná prostřednictvím tohoto rozhraní. Plánovač můžete dotazovat seznamu dokončení v určené plánování kontext nebo jiné místo, které vyhledávání pro práci.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384433"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC
 Základ pro každý internetových klientských aplikací je relace Internetu. MFC implementuje relací Internetu jako objekty třídy [CInternetSession](../mfc/reference/cinternetsession-class.md). Pomocí této třídy, můžete vytvořit jednu relaci Internet nebo několik souběžných relací.  

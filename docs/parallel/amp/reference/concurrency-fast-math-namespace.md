@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692155"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math – obor názvů
 Funkce `fast_math` obor názvů mít nižší přesnost, podporují pouze jednoduchou přesností (`float`) a volání vnitřní funkce DirectX. Existují dvě verze jednotlivé funkce, například `cos` a `cosf`. Obě verze přijmout a vrátit `float`, ale každý volá stejné DirectX vnitřní.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385304"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Internetu bez úprav. Můžete však změnit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, existují další aspekty. Soubor .ocx a všechny podpůrné soubory musí být v cílovém počítači nebo stáhnout přes Internet. Díky velikosti kódu a stažení čas důležitý faktor. Stahování se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit ovládací prvek jako bezpečné pro skriptování a jako bezpečné pro inicializaci.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379629"
 ---
 # <a name="status-bars"></a>Stavové řádky
 Stavové řádky aplikaci poskytnout místo, kde můžete zobrazit zprávy a užitečné informace pro uživatele bez přerušení pracovní uživatele. Obvykle se zobrazí v dolní části okna, mají stavové řádky "podokna", mezi které patří "indikátory" a "řádek zpráva". Indikátory přiřadit stav prvků jako SCROLL LOCK, zda záznam makra bude převedena na, a tak dále. Řádek zprávy na stavovém řádku můžete zobrazit informace o programu stavu nebo o panelu nástrojů tlačítko nebo nabídky položku, která uživatel ukazovat na pomocí myši.  

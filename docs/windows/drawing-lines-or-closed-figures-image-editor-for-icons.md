@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882772"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Kreslení čar nebo uzavřených obrázků (editor obrázků pro ikony)
 Editor obrázků nástroje pro kreslení čar a uzavřených obrázků všechny fungovat stejným způsobem: Umístěte kurzor na jednom místě a přetáhněte ji do jiného. Pro řádky tyto body jsou koncové body. Pro uzavřených obrázků jsou tyto body opačné rozích obdélníku ohraničujícího na obrázku.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686669"
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 **OMP_DYNAMIC** proměnnou prostředí povolí nebo zakáže dynamické přizpůsobení počet vláken, které jsou k dispozici pro spouštění paralelní oblastí, pokud není explicitně povolená nebo zakázaná voláním Dynamicképřizpůsobení**omp_set_dynamic –** rutiny knihovny. Její hodnota musí být **TRUE** nebo **FALSE**.  

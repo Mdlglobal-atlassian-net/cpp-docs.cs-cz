@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378678"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement – třída
 `CMFCRibbonBaseElement` Třída je základní třída pro všechny elementy, které můžete přidat do [pásu karet panelu](../../mfc/reference/cmfcribbonbar-class.md). Příklad prvků pásu karet jsou pásu karet tlačítek, zaškrtněte políčka pásu karet a pásu karet pole se seznamem.  

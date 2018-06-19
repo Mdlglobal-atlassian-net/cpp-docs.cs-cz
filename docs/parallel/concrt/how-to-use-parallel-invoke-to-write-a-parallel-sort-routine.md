@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689165"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Postupy: Použití algoritmu parallel_invoke k zápisu rutiny paralelního třídění
 Tento dokument popisuje postup použití [parallel_invoke –](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmus ke zlepšení výkonu algoritmus řazení bitonic. Rekurzivní algoritmus řazení bitonic rozdělí vstupní pořadí na menší oddíly seřazená. Algoritmus řazení bitonic můžete paralelně spustit, protože každý oddíl operace je nezávislé na dalších operací.  

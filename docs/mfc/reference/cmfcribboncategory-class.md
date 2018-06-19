@@ -145,6 +145,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377967"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory – třída
 `CMFCRibbonCategory` Třída implementuje kartu pásu karet, která obsahuje skupinu [pásu karet panelů](../../mfc/reference/cmfcribbonpanel-class.md).  

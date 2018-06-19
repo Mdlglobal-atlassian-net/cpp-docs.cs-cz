@@ -44,6 +44,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381222"
 ---
 # <a name="wm-message-handlers-f---k"></a>WM_ – obslužné rutiny zpráv: F–K
 Následující položky mapy na levé straně odpovídají prototypy funkcí na pravé straně:  

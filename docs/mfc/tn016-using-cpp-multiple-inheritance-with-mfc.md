@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384085"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Použití vícenásobné dědičnosti jazyka C++ v prostředí MFC
 Tato poznámka popisuje, jak pomocí třídy Microsoft Foundation vícenásobná dědičnost (MI). Použití MI se nevyžaduje MFC. MI ještě není používáno ve všech tříd MFC a není nutné zapsat knihovny tříd.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339888"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX
 Pokud jste nepovolili podporu ovládacích prvků ActiveX při vygenerování aplikace pomocí Průvodce aplikací MFC, bude mít tato podpora přidat ručně. Tento článek popisuje proces pro ruční přidání uzavření ovládacího prvku ActiveX na existující aplikaci kontejneru OLE. Pokud znáte předem chcete podporu ovládacích prvků ActiveX v kontejneru vaší OLE, najdete v článku [vytvoření kontejneru ovládacího prvku ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).  

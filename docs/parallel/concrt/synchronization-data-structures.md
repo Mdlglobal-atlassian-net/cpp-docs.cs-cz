@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693803"
 ---
 # <a name="synchronization-data-structures"></a>Synchronizační datové struktury
 Concurrency Runtime poskytuje několik datové struktury, které umožňují synchronizovat přístup ke sdíleným datům z více vláken. Tyto datové struktury jsou užitečné, když jste sdíleli data, která upravíte zřídka. Objekt synchronizace, například důležitý oddíl, způsobí, že jiná vlákna počkat, dokud sdílený prostředek je k dispozici. Proto pokud používáte takového objektu synchronizovat přístup k datům, která se často používají, byste ztratili škálovatelnost ve vaší aplikaci. [Paralelní vzory knihovna PPL ()](../../parallel/concrt/parallel-patterns-library-ppl.md) poskytuje [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) třídy, která umožňuje sdílení prostředků mezi několik vláken nebo úloh bez nutnosti synchronizace. Další informace o `combinable` třídy najdete v tématu [paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md).  

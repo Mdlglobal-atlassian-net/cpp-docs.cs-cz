@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385921"
 ---
 # <a name="wininet-basics"></a>WinInet – základy
 WinInet můžete přidat podporu FTP ke stažení a ukládání souborů z v rámci vaší aplikace. Můžete přepsat [onstatuscallback –](../mfc/reference/cinternetsession-class.md#onstatuscallback) a použít `dwContext` parametr zadat informace o průběhu pro uživatele, jsou pro hledání a stahování souborů.  

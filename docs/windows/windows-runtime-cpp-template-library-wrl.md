@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891620"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, který poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.

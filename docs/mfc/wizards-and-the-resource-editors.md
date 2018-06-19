@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383832"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Průvodci a editory prostředků
 Visual C++ obsahuje několik průvodců pro použití v MFC – programování, společně s mnoha editory integrované prostředků. Pro programování, ovládací prvky ActiveX [Průvodce ovládacím prvkem ActiveX](../mfc/reference/mfc-activex-control-wizard.md) slouží k účelu, podobně jako u Průvodce aplikací MFC. Při můžete psát aplikace MFC bez většinu těchto nástrojů, nástroje výrazně zjednodušit a urychlit práci.  

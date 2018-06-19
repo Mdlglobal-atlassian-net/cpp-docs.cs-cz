@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891906"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Výběr více nabídek nebo příkazů nabídky
 Můžete vybrat více názvy nabídek nebo příkazů nabídky k provádění operací hromadné například odstranění nebo změna vlastností.  

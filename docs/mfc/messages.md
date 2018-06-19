@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344101"
 ---
 # <a name="messages"></a>Zprávy
 Ve smyčce zpráv **spustit** funkce člena třídy `CWinApp` načte zprávy vytvářené různých událostí zařazených do fronty. Například po kliknutí myší, systém Windows odešle několik zprávy týkající se myš, například `WM_LBUTTONDOWN` při stisknutí levým tlačítkem myši a `WM_LBUTTONUP` uvolnění levé tlačítko. Implementace rozhraní framework zpráva smyčky aplikace odešle zprávy do příslušné okna.  

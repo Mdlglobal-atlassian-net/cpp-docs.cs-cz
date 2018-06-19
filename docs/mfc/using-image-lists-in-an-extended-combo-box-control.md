@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383342"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Použití seznamů obrázků v ovládacím prvku rozšířené pole se seznamem
 Hlavní funkce ovládací prvky rozšířeného pole se seznamem je možnost k přidružení obrázků ze seznamu obrázků s jednotlivé položky v ovládacím prvku pole se seznamem. Každá položka je možné zobrazit tři různé bitové kopie: jednu pro vybraném stavu, jednu pro jeho nevybrané stavu a třetí pro bitovou kopii překrytí.  

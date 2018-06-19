@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383783"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Použití polí zpětného volání v ovládacím prvku pro výběr data a času
 Kromě standardní formát znaky, které definují polích pro výběr data a času můžete přizpůsobit výstupu tak, že zadáte určité části vlastní řetězec formátu jako pole zpětného volání. Chcete-li deklarovat pole zpětného volání, obsahovat jeden nebo více znaků "X" (ASCII kód 88) kdekoli v těle řetězec formátu. Například následující řetězec "" Dnes je: "rr" /, MM, nebo 'dd' (den 'X')'"způsobí, že zobrazit aktuální hodnotu jako rok a měsíc, datum a nakonec den v roce prvku pro výběr datum a čas.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385213"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak pracují sokety s archivy
 Tento článek vysvětluje, jak [CSocket](../mfc/reference/csocket-class.md) objekt, [CSocketFile](../mfc/reference/csocketfile-class.md) objekt a [CArchive](../mfc/reference/carchive-class.md) objekt se zkombinují zjednodušit odesílat a přijímat data prostřednictvím systému Windows Časový limit soketu.  

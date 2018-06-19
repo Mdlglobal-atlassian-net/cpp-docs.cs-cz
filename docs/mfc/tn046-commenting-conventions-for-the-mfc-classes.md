@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380822"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: Konvence při psaní komentářů pro třídy MFC
 Tato technická Poznámka původně popsané konvencemi použitými pro třídy MFC komentáře k. Tyto informace je nyní součástí [MFC: použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md).  

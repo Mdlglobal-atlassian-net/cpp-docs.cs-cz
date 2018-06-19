@@ -30,6 +30,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692266"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock – třída
 Zapisovač předvoleb zámku na základě fronty čtení a zápis s místní pouze otáčí. Zámek uděluje nejprve v – nejprve out (FIFO) přístup k zapisovače a starves čtečky průběžné zatížení zapisovačů.  

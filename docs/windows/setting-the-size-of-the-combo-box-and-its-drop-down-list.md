@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889342"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Nastavení velikosti pole se seznamem a jeho rozevíracího seznamu
 Pole se seznamem může velikost, při přidání do dialogových oken. Můžete také zadat velikost pole rozevíracího seznamu.  

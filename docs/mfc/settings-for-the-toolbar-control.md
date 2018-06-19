@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379704"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Nastavení pro ovládací prvek panelu nástrojů
 Tlačítka na panelu nástrojů můžete zobrazit rastrový obrázek, řetězce nebo obojí. Ve výchozím nastavení je velikost bitové kopie hodnotu rozměry 16 podle 15 pixelů. Všechny tlačítka jsou stejné šířky, o výchozí 24 ve 22 pixelů. Panelu nástrojů výška je dáno výšku tlačítka a panelu nástrojů šířka je stejný jako šířku nadřazeného okna klientské oblasti také ve výchozím nastavení.  

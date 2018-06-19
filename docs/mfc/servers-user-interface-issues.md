@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379668"
 ---
 # <a name="servers-user-interface-issues"></a>Servery: Problémy uživatelského rozhraní
 Serverová aplikace obsahuje řadu funkcí, které musí být přidaný do uživatelského rozhraní k poskytování položek OLE – aplikace typu kontejner. Další informace o nabídky a další prostředky, které je třeba přidat do aplikace server, najdete v části [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).  

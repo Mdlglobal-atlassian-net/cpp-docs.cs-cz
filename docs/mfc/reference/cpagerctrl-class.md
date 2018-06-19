@@ -63,6 +63,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377168"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl – třída
 `CPagerCtrl` Třída zabalí řízení pager Windows, které můžete přejděte do zobrazení obsažené okno, které nebudou vyhovovat obsahující okno.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344227"
 ---
 # <a name="global-hot-keys"></a>Globální klávesové zkratky
 Globální klávesové zkratky je přidružen konkrétní nonchild období. Umožňuje uživatelům aktivovat v okně libovolná součást systému. Aplikace nastaví globální klávesové zkratky pro konkrétní okno odesláním [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) zpráva, která má toto okno. Například pokud `m_HotKeyCtrl` je [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objektu a `pMainWnd` ukazatel do okna aktivovaná, při stisknutí klávesové zkratky, můžete použít následující kód k přidružení aktivní klíč zadaný v ovládacím prvku s okno na kterou odkazuje `pMainWnd`.  

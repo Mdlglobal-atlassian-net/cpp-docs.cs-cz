@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386070"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Podpora prostředí MFC a databáze pro typy Long Varchar/Varbinary
 > [!NOTE]

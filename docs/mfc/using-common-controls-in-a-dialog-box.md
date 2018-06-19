@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382688"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Použití běžných ovládacích prvků v dialogovém okně
 Běžné ovládací prvky Windows lze použít v [dialogová okna](../mfc/dialog-boxes.md), tvoří zobrazení, zobrazení záznamů a další okno, podle šablony dialogového okna. Následující postup s menšími změnami, budou fungovat v forms také.  

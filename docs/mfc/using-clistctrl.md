@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382983"
 ---
 # <a name="using-clistctrl"></a>Používání atributu CListCtrl
 Použijte ovládací prvek seznamu zobrazíte všechny uspořádání ikony s popisky, stejně jako v Průzkumníkovi souborů nebo sloupcové seznamy textu, s nebo bez ikon. Popis čtyř možné "zobrazení" (ne nelze zaměňovat s MFC zobrazení) může mít v ovládacím prvku seznamu – zobrazení ikon, malé ikony zobrazení, zobrazení seznamu a zobrazení sestavy – vidět v zobrazení [CListCtrl](../mfc/reference/clistctrl-class.md) přehledu třídy.  

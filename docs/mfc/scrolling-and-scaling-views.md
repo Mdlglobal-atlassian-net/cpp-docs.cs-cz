@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379265"
 ---
 # <a name="scrolling-and-scaling-views"></a>Posouvání a změna měřítka zobrazení
 MFC podporuje zobrazení, která přejděte a zobrazení, které jsou automaticky škálovat na velikost rámec okna, který je zobrazí. Třída `CScrollView` podporuje oba typy zobrazení.  

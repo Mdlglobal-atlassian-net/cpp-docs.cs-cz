@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690865"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   Vnořené direktivy for
 Na následující příklad `for` vnořování direktiv ([2.9 části](../../parallel/openmp/2-9-directive-nesting.md) na stránce 33) není kompatibilní s protože vnitřní a vnější `for` direktivy vytvořit vazbu na různých oblastech paralelní:  

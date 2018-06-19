@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687644"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS** proměnnou prostředí nastaví výchozí počet vláken používaných při spuštění, pokud toto číslo je explicitně změnit voláním **omp_set_num_threads –** rutiny knihovny nebo podle explicitního **num_threads** klauzule ve **paralelní** – direktiva.  

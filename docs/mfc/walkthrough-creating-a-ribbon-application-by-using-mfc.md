@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385226"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvořit aplikaci, která má ve výchozím nastavení pásu karet. Na pásu karet můžete rozbalit přidáním **vlastní** kategorie pásu karet, který má **oblíbených položek** pásu karet panelech a pak přidáte některé často používané příkazy do panelu.  

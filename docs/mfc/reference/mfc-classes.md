@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378745"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 Třídy v následujícím seznamu jsou zahrnuty v knihovně Microsoft Foundation Class (MFC).  

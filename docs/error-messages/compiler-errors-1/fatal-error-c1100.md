@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198401"
 ---
 # <a name="fatal-error-c1100"></a>Závažná chyba C1100
 Nepodařilo se inicializovat OLE: systému chybová zpráva  

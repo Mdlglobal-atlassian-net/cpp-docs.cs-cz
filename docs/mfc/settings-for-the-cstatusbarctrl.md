@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380159"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Nastavení pro třídu CStatusBarCtrl
 Výchozí umístění [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno Stav je podél dolního okraje nadřazeného okna, ale můžete zadat `CCS_TOP` styl, který se následně zobrazí v horní části okna nadřazené klientské oblasti.  

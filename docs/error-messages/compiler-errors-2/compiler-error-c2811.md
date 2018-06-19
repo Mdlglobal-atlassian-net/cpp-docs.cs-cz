@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236076"
 ---
 # <a name="compiler-error-c2811"></a>C2811 chyby kompilátoru
 'type1': nemůže Zdědit z 'type2' ref třída může dědit pouze z ref třídy nebo rozhraní – třída  

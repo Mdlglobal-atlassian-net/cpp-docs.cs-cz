@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688788"
 ---
 # <a name="schedule-groups"></a>Skupiny plánů
 Tento dokument popisuje roli skupiny plánu v Concurrency Runtime. A *plán skupiny* způsobem přidružuje nebo skupin, souvisejících úloh společně. Všechny plánovače má jeden nebo více skupin plán. Použití skupin plánů, pokud požadujete vysokou míru polohu mezi úlohy, například když skupinu souvisejících úloh těžit z provádění na stejném procesoru uzlu. Instance plánovače naopak používejte, když vaše aplikace má požadavky na konkrétní kvalitu, například pokud chcete omezit množství prostředků zpracování, které jsou přiděleny sadu úloh. Další informace o instance plánovače najdete v tématu [instance plánovače](../../parallel/concrt/scheduler-instances.md).  

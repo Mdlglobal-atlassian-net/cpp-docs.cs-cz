@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687410"
 ---
 # <a name="lightweight-tasks"></a>Prosté úlohy
 Tento dokument popisuje roli prosté úlohy v Concurrency Runtime. A *prostých úloh* je úkol, který můžete naplánovat přímo z `concurrency::Scheduler` nebo `concurrency::ScheduleGroup` objektu. Prosté úlohy se podobá funkci, která zadáte na rozhraní API systému Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkce. Prosté úlohy proto jsou užitečné při přizpůsobení stávajícího kódu pro použití funkce plánování Concurrency Runtime. Concurrency Runtime samotné používá prosté úlohy k plánování asynchronních agentů a odesílání zpráv mezi asynchronní bloky zpráv.  

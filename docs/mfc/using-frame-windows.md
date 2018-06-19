@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381914"
 ---
 # <a name="using-frame-windows"></a>Použití oken s rámečkem
 Rozhraní MFC framework vytvoří dokument okna s rámečkem – a jejich zobrazení a dokumenty – jako součást provádění nové a spuštění příkazů v nabídce Soubor. Protože systém provádí většinu práce oken s rámečkem pro vás, můžete přehrát jenom malé role v vytvoření, použití a odstraňování těchto windows. Můžete, ale explicitně vytvořit vlastní okna s rámečkem a podřízená okna pro zvláštní účely.  

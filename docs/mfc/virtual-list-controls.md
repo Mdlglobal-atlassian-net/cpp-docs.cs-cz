@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384189"
 ---
 # <a name="virtual-list-controls"></a>Ovládací prvky typu virtuální seznam
 Ovládacího prvku typu virtuální seznam je zobrazení ovládací prvek seznamu, který má **LVS_OWNERDATA** stylu. Tento styl umožňuje kontrolu pro podporu až počet položek `DWORD` (počet položek výchozí rozšiřuje pouze k `int`). Možnost mít pouze podmnožinu dat položky do paměti v jednom okamžiku je však největších výhod poskytované tento styl. To umožňuje ovládacího prvku zobrazení virtuální seznam jít pro použití s velké databáze informací, kde konkrétní metody přístupu k datům, jsou již na místě.  

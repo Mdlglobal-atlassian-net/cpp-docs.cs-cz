@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688567"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading s použitím jazyka C++ a prostředí MFC
 Knihovna Microsoft Foundation Class (MFC) poskytuje podporu pro vícevláknové aplikace. Toto téma popisuje procesy a vláken a MFC přístup k více vláken.  

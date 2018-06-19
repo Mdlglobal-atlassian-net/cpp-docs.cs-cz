@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382870"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Kdy je třeba inicializovat objekty CWnd
 Nelze vytvořit vlastní podřízenou windows nebo volat jakékoli funkce rozhraní API systému Windows v konstruktoru `CWnd`-odvozené objektu. Důvodem je, že `HWND` pro `CWnd` ještě nebyl vytvořen objekt. Inicializace nejvíce specifické pro systém Windows, jako je například přidávání podřízená okna, je třeba provést [OnCreate](../mfc/reference/cwnd-class.md#oncreate) obslužné rutiny zpráv.  

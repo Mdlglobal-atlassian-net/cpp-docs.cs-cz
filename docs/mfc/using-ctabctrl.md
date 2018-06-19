@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383679"
 ---
 # <a name="using-ctabctrl"></a>Používání atributu CTabCtrl
 "Ovládacího prvku karta" je obdobou rozdělení v poznámkovém bloku nebo s popiskem složky v souboru CAB. Použití ovládacího prvku karta reprezentována třída [CTabCtrl](../mfc/reference/ctabctrl-class.md), chcete-li zobrazit více stránek informace nebo ovládací prvky pro uživatele, jeden po druhém, ve formátu, který naznačuje sdílené nebo logické vztah mezi každé stránce.  

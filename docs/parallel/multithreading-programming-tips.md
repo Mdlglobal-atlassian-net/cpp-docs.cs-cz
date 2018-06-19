@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689984"
 ---
 # <a name="multithreading-programming-tips"></a>Multithreading: Tipy pro programování
 Vícevláknové aplikace vyžadují přísnější zacházení než jednovláknové aplikace při přístupu k datům. Protože existuje více, nezávislé cesty spouštění v používat současně v vícevláknové aplikace na algoritmy, data nebo obojí musí mít přehled dat může používat více než jedno vlákno najednou. Toto téma popisuje postupy pro předcházení potenciálních problémů při programování vícevláknové aplikace s knihovnou Microsoft Foundation Class (MFC).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340291"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX – kontejnery ovládacích prvků: Zobrazení a úpravy vlastností ovládacích prvků
 Při vložení ovládacího prvku ActiveX do projektu, je užitečné k zobrazení a změna vlastností nepodporuje ovládací prvek ActiveX. Tento článek popisuje, jak to udělat pomocí editoru prostředků Visual C++.  

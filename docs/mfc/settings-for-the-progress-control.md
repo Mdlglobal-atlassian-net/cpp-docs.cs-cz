@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380006"
 ---
 # <a name="settings-for-the-progress-control"></a>Nastavení pro ovládací prvek průběh
 Základní nastavení pro ovládací prvek průběh ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) jsou rozsah a aktuální pozici. Rozsah představuje celou dobu trvání operace. Aktuální pozice představuje proces, který vaše aplikace změněn směrem k dokončení operace. Při změně rozsah nebo pozice dojde k překreslit ovládací prvek průběh.  

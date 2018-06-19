@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381615"
 ---
 # <a name="using-canimatectrl"></a>Používání atributu CAnimateCtrl
 Ovládacího prvku animace reprezentována třída [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), je okno, které zobrazí klip ve formátu Audio Video prokládaný (AVI) – ve standardním formátu video nebo zvuk systému Windows. Klip souborů AVI je řady rastrový obrázek snímků, jako jsou videa.  

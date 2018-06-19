@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689906"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Použití vnořitelných zámků
 V následujícím příkladu (pro [části 3.2](../../parallel/openmp/3-2-lock-functions.md) na stránce 41) ukazuje, jak nestable lock slouží k synchronizaci aktualizací pro celou strukturu i do jednoho ze svých členů.  

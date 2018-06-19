@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694625"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) zrychluje spuštění kódu C++ a využívají data paralelní hardwaru, jako jsou grafický procesor (GPU) na kartě diskrétní grafiky. Pomocí C++ AMP můžete kódu algoritmy vícerozměrných dat tak, aby spuštění lze urychlit pomocí paralelismus na heterogenní hardwaru. Programovací model C++ AMP zahrnuje vícerozměrná pole, indexování, přenos paměti, dlaždice a knihovnu matematické funkce. Rozšíření jazyka C++ AMP můžete použít k řízení, jak přesunout data z procesoru na grafický procesor a zpět, takže může zlepšit výkon.  

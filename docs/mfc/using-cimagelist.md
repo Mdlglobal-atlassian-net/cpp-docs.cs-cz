@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385788"
 ---
 # <a name="using-cimagelist"></a>Používání atributu CImageList
 Seznam obrázků, reprezentována třída [CImageList](../mfc/reference/cimagelist-class.md), je kolekce stejnou velikost bitové kopie, z nichž každý lze odkazovat pomocí jeho index. Seznamy obrázků umožňují efektivně spravovat velké sady ikony nebo bitmapy. Obrázek seznamy není sami ovládací prvky, protože se nejedná o windows; však se používají s několika různých typů ovládacích prvků, včetně ovládacích prvcích seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), ovládací prvky stromové struktury ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a kartě ovládacích prvků ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693858"
 ---
 # <a name="scheduler-instances"></a>Instance plánovače
 Tento dokument popisuje roli instance plánovače v Concurrency Runtime a jak používat [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) a [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) třídy Vytvoření a Správa instance plánovače. Instance plánovače jsou užitečné, pokud chcete přidružit explicitní plánování zásady konkrétní typy úloh. Můžete například vytvořit jednu instanci plánovače spouštět některé úlohy prioritou zvýšenými vláken a používat výchozí plánovač při spouštění dalších úloh na normální vlákno prioritu.  

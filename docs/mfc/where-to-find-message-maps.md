@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383390"
 ---
 # <a name="where-to-find-message-maps"></a>Kde hledat mapy zpráv
 Když vytvoříte nové kostru aplikace pomocí Průvodce aplikací, Průvodce aplikací zapíše mapy zpráv pro jednotlivé příkaz cílové třídy, které vytvoří za vás. To zahrnuje odvozené aplikace, dokumentu, zobrazení a třídy oken s rámečkem. Některé z těchto mapy zpráv už máte položky zadaný pomocí Průvodce aplikací pro určité zprávy a příkazy předdefinované a některé jsou jenom zástupné symboly pro obslužné rutiny, které přidáte.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384579"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 Tato poznámka popisuje Podpora MFC pro samoobslužné vykreslování a vlastní ovládací prvky. Také popisuje dynamické vytváření podtříd a popisuje vztah mezi [CWnd](../mfc/reference/cwnd-class.md) objekty a `HWND`s.  

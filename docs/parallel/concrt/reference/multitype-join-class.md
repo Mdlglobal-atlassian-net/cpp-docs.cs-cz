@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692487"
 ---
 # <a name="multitypejoin-class"></a>multitype_join – třída
 A `multitype_join` zasílání zpráv blok je více zdroje, jeden cílový blok zasílání zpráv, který kombinuje společně zprávy různých typů z každé její zdroje a nabízí řazené kolekce členů kombinované zpráv k jeho cílům.  

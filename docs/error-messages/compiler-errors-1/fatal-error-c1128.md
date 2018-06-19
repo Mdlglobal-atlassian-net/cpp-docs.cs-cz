@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226262"
 ---
 # <a name="fatal-error-c1128"></a>Závažná chyba C1128
 Počet oddílů překročil limit formátu souboru objektu: zkompilujte s možností /bigobj  

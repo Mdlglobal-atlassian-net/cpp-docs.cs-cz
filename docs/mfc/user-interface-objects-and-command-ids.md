@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385596"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Identifikátory objektů uživatelského rozhraní a příkazů
 Položky nabídky, tlačítek panelu nástrojů a klávesy akcelerátoru jsou "objekty uživatelského rozhraní" schopný vytvářet příkazy. Každý uživatelského rozhraní objekt má identifikátor. Příkaz přiřazením stejné ID objektu a příkaz přidružíte objekt uživatelského rozhraní. Jak je popsáno v [zprávy](../mfc/messages.md), příkazy jsou implementované jako speciální zprávy. Obrázek "Příkazy v rámci" níže ukazuje, jak rozhraní spravuje příkazy. Objekt uživatelského rozhraní vygeneruje-li příkaz, jako například `ID_EDIT_CLEAR_ALL`, jeden z objektů v aplikaci zpracovává příkaz – na obrázku níže objekt dokumentu `OnEditClearAll` funkce je volána prostřednictvím mapy zpráv dokumentu.  

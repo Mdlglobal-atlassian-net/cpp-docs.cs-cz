@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385762"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem
 Prvním přístupem k vytvoření typově bezpečný přístup k ovládacím prvkům používá funkci člen vložené přetypovat návratový typ třídy `CWnd`na `GetDlgItem` – členská funkce odpovídající typ ovládacího prvku C++, jako v následujícím příkladu:  

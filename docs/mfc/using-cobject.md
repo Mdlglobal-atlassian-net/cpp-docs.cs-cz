@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382295"
 ---
 # <a name="using-cobject"></a>Použití objektů CObject
 [CObject](../mfc/reference/cobject-class.md) je kořenová základní třída pro většinu z Microsoft Foundation Class Library (MFC). `CObject` Třída obsahuje mnoho užitečných funkcí, které chcete zahrnout do vlastní objekty programu, včetně podpory serializace, run-time třída informace a výstup diagnostiky objektu. Pokud odvozujete třídě z `CObject`, třídě může zneužít tyto `CObject` funkce.  

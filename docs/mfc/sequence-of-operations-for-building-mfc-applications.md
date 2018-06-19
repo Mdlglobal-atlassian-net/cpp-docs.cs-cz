@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383806"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Posloupnost operací při sestavování aplikací MFC
 Následující tabulka popisuje obecné pořadí, které může být obvykle postupujte podle vyvíjet aplikace knihovny MFC.  

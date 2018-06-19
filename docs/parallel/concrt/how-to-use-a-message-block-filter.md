@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688268"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Postupy: Použití filtru bloku zpráv
 Tento dokument ukazuje, jak používat funkce filtru pro povolení bloku asynchronní zpráva k přijetí nebo odmítnutí zprávu na základě datovou část zprávy.  

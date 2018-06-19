@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234118"
 ---
 # <a name="compiler-error-c2694"></a>C2694 chyby kompilátoru
 'přepsání': přepisování virtuální funkce má méně omezující specifikace výjimek než základní třída člena virtuální funkce "base"  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687228"
 ---
 # <a name="14-compliance"></a>1.4 Kompatibilita
 Implementace rozhraní API jazyka C/C++ OpenMP je *kompatibilní se standardem OpenMP* pokud ji rozpozná a zachová sémantika všechny elementy této specifikace, který je uveden v kapitolách 1, 2, 3, 4, a příloha C. přílohy A, B, D, E a F jsou pro informace pouze účely a nejsou součástí specifikace. Implementace, které zahrnují jenom podmnožinu rozhraní API nejsou kompatibilní se standardem OpenMP.  

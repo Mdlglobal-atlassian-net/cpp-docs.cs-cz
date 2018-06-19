@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380706"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Podpora kontextů aktivace ve stavu modulu MFC
 MFC vytvoří aktivační kontext pomocí prostředku manifestu poskytované modulem uživatele. Další informace o vytváření kontexty aktivace najdete v následujících tématech:  

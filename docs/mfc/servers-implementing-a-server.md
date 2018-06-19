@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381690"
 ---
 # <a name="servers-implementing-a-server"></a>Servery: Implementace serveru
 Tento článek vysvětluje kód, který vytvoří Průvodce aplikací MFC pro visual úpravy serverová aplikace. Pokud nepoužíváte aplikaci průvodce, tento článek obsahuje seznam oblastí, kde musíte napsat kód pro implementaci serverové aplikace.  

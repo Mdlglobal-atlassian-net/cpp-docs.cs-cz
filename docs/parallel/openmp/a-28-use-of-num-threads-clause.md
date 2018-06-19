@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689113"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Použití klauzule num_threads
 Následující příklad ukazuje `num_threads` – klauzule ([části 2.3](../../parallel/openmp/2-3-parallel-construct.md) na stránce 8). Paralelní oblast se spustí s maximálně 10 vláken.  

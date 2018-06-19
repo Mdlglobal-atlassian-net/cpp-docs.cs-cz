@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381775"
 ---
 # <a name="servers"></a>Servery
 Aplikace serveru (nebo součásti aplikace) vytvoří aplikace typu kontejner OLE položky (nebo součásti) pro použití. Visual úpravy serverová aplikace také podporuje úpravy s náhledem nebo aktivace na místě. Jinou formu OLE serveru je [automatizační server](../mfc/automation-servers.md). Některé serverové aplikace podporují pouze vytváření vložené položky; ostatní podporují vytvoření vložené a propojené položky. I když toto je výjimečná některé podporují pouze propojení. Všechny aplikace server musí podporovat aktivace aplikace typu kontejner, pokud chce uživatel upravovat položky. Aplikace může být kontejner i server. Jinými slovy ho můžete obě začlenit dat do své dokumenty a vytvořit data, která lze vložit jako položky do dalších aplikací dokumenty.  

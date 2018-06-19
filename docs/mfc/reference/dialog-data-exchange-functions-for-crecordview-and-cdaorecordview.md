@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377514"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 Toto téma obsahuje seznam DDX_Field – funkce, které slouží pro výměnu dat mezi [CRecordset](../../mfc/reference/crecordset-class.md) a [CRecordView](../../mfc/reference/crecordview-class.md) formuláře nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) a [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formuláře.  

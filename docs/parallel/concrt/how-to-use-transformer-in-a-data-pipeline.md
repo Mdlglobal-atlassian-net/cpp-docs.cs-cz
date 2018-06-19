@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686578"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Postupy: Použití transformace v datovém kanálu
 Toto téma obsahuje základní příklad, který ukazuje způsob použití [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) – třída v datovém kanálu. Více kompletní příklad, který používá kanálu dat k provedení zpracování obrázků, najdete v části [návod: vytváření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  

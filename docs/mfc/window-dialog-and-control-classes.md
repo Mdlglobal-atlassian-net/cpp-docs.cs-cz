@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381843"
 ---
 # <a name="window-dialog-and-control-classes"></a>Třídy oken, dialogových oken a ovládacích prvků
 Třída `CWnd` a jejich odvozené třídy zapouzdření `HWND`, popisovač pro okno systému Windows. `CWnd` můžete použít samostatně nebo jako základ pro odvození nové třídy. Odvozené třídy knihovna tříd představují různé typy systému windows.  

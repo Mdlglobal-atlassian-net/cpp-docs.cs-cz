@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385067"
 ---
 # <a name="root-class-cobject"></a>Kořenová třída: CObject
 Většina tříd v knihovně Microsoft Foundation Class (MFC) jsou odvozeny od jedné základní třídu v kořenovém adresáři hierarchie tříd. `CObject` poskytuje několik užitečné funkcí pro všechny třídy odvozené z něj, s velmi nízké režijní náklady. Další informace o `CObject` a jeho funkce, najdete v části [pomocí CObject](../mfc/using-cobject.md).  

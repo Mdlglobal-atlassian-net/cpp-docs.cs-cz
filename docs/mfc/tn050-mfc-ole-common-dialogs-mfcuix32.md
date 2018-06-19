@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380900"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050: společná dialogová okna MFC/OLE (MFCUIx32)
 Tato poznámka původně zahrnutých některé problémy a budoucí běžné dialogů OLE k dispozici a využívané prostředím MFC. Společná dialogová okna OLE jsou nyní k dispozici jako součást integrované do systému (OLEDLG. Knihovny DLL) a jsou zcela zdokumentovány v dokumentaci k produktu.  

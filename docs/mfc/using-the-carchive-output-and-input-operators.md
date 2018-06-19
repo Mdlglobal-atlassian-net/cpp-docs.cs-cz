@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383329"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Pomocí CArchive &lt; &lt; a &gt; &gt; operátory
 `CArchive` poskytuje <\< a >> operátory pro zápis a čtení jednoduché datové typy a také `CObject`s do a ze souboru.  

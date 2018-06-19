@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381547"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Snímače: Implementace snímačů ve vašich aplikacích OLE
 Snímače nabízí grafické rozhraní, povolit uživatelům interakci s OLE klientské položky. Pomocí různých sledovací modul styly OLE klienta, které položky lze zobrazit pomocí šrafované ohraničení, změňte velikost obslužných rutin, nebo celou řadu jiných vizuálních efektů. Tento článek popisuje:  

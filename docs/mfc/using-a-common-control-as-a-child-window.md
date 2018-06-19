@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382821"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Použití běžného ovládacího prvku jako podřízeného okna
 Některé běžné ovládací prvky Windows lze použít jako podřízeného okna ostatní okna. Následující postup popisuje, jak vytvořit dynamicky běžného ovládacího prvku a pak s ním pracovat.  

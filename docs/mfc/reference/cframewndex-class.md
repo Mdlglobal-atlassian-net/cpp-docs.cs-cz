@@ -193,6 +193,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377820"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx – třída
 Implementuje jeden dokument (SDI rozhraní) překryté nebo oken s rámečkem místní funkci systému Windows a poskytuje členy pro správu okna. Ji rozšiřuje [CFrameWnd](../../mfc/reference/cframewnd-class.md) třídy.  

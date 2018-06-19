@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692779"
 ---
 # <a name="texture-class"></a>texture – třída
 Texturou je typu dat na agregační `accelerator_view` v doméně rozsah. Jedná se o kolekci proměnných, jednu pro každý prvek v doméně rozsah. Každá proměnná obsahuje hodnotu odpovídající primitivní typ C++ ( `unsigned int`, `int`, `float`, `double`), skalárního typu ( `norm`, nebo `unorm`), nebo zadejte krátký vektoru.  

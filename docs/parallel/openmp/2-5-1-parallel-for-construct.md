@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687150"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for – konstrukce
 **Paralelní pro** – direktiva je zkratkou pro **paralelní** oblast, která obsahuje pouze jedinou **pro** – direktiva. Syntaxe **paralelní pro** – Direktiva vypadá takto:  

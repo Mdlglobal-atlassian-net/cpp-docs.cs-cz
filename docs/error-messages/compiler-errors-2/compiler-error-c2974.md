@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242043"
 ---
 # <a name="compiler-error-c2974"></a>C2974 chyby kompilátoru
 Neplatný typ argumentu "číslo" očekáván typ  

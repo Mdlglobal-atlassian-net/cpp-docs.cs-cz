@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345137"
 ---
 # <a name="dialog-data-exchange"></a>Výměna dat dialogových oken
 Pokud chcete použít tento mechanismus DDX, nastavíte počáteční hodnoty dialogového okna objektu členské proměnné, obvykle v vaší `OnInitDialog` obslužná rutina nebo konstruktor dialogové okno. Okamžitě předtím, než se zobrazí dialogové okno, v rámci DDX Frameworku přenese hodnoty členské proměnné ovládacích prvků v dialogovém okně jejich umístění při samotné se zobrazí dialogové okno v reakci na `DoModal` nebo **vytvořit** . Výchozí implementaci `OnInitDialog` v `CDialog` volání `UpdateData` funkce člena třídy `CWnd` k chybě při inicializaci ovládacích prvků v dialogovém okně.  

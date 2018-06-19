@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385119"
 ---
 # <a name="using-your-old-toolbars"></a>Použití starých panelů nástrojů
 Pokud jste použili k vytvoření vlastní panely nástrojů, novou implementací třídy předchozích verzí aplikace Visual C++ [ctoolbar –](../mfc/reference/ctoolbar-class.md) by mohla způsobovat problémy. Takže nemáte k uvolnění starých panelů nástrojů využívat nové funkce, staré implementace je nadále podporován.  
