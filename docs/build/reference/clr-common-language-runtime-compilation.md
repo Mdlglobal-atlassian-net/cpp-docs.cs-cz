@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379611"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 Umožňuje aplikací a součástí, které chcete používat funkce z common language runtime (CLR).  

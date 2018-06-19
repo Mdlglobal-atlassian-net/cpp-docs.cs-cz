@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391897"
 ---
 # <a name="structure-declarations"></a>Deklarace struktury
 "Struktury deklarace" názvy typu a určuje pořadí proměnných hodnot (nazývané "členy" nebo "pole" struktury), které může mít různé typy. Volitelné identifikátor, s názvem "značku", poskytuje název typu Struktura a mohou být používány následující odkazy na typ struktury. Proměnné tohoto typu struktura obsahuje celého pořadí definované typu. Struktury v jazyce C jsou podobné typy označuje jako "záznamy" v dalších jazycích.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458911"
 ---
 # <a name="compiler-error-c3533"></a>C3533 chyby kompilátoru
 'type': Parametr nemůže mít typ, který obsahuje 'auto'  

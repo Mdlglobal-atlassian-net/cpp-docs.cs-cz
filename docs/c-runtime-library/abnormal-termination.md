@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385550"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
 Určuje, zda `__finally` blokovat z [try-finally – příkaz](../cpp/try-finally-statement.md) se zadá, když systému provádí vnitřní seznam obslužné rutiny ukončení.  

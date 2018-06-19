@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381717"
 ---
 # <a name="demotion-of-integers"></a>Degradace celých čísel
 **ANSI 3.2.1.2** výsledek převodu na kratší znaménkem celé číslo nebo výsledek převodu celé číslo bez znaménka k znaménkem stejné délky, pokud hodnota není možné vyjádřit  

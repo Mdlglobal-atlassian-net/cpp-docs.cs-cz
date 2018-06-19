@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385231"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Důležité znaky bez externího propojení
 **ANSI 3.1.2** počet důležité znaky bez externího propojení  

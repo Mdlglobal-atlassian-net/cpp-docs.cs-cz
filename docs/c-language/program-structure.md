@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385953"
 ---
 # <a name="program-structure"></a>Struktura programu
 Tato část poskytuje přehled programů jazyka C a vykonávání programu. Podmínky a funkce, které jsou důležité pro pochopení programů a komponent jazyka C, jsou rovněž popsány. Mezi uvedená témata patří:  

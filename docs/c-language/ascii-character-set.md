@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381119"
 ---
 # <a name="ascii-character-set"></a>Znaková sada ASCII
 **ANSI 2.2.1** členové zdroje a provádění znakových sad  

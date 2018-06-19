@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384964"
 ---
 # <a name="zero-length-files"></a>Pole s nulovou délkou
 **ANSI 4.9.3** jestli skutečně existuje soubor nulovou délkou  

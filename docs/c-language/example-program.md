@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387629"
 ---
 # <a name="example-program"></a>Ukázkový program
 Následující zdrojová aplikace jazyka C se skládá ze dvou zdrojových souborů. Poskytuje přehled o různých deklaracích a definicích, které je možné v aplikaci jazyka C použít. V dalších částech v této příručce popisují, jak napsat tyto deklarace, definice a inicializacích a použít klíčová slova jazyka C, jako je **statické** a `extern`. Funkce `printf` je deklarována v souboru záhlaví STDIO.H jazyka C.  

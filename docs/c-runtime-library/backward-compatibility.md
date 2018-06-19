@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386235"
 ---
 # <a name="backward-compatibility"></a>Zpětná kompatibilita
 Pro kompatibilitu mezi verzemi produktu, knihovna OLDNAMES. LIB mapuje názvy starého na nové názvy. Například `open` mapuje `_open`. Je nutné explicitně propojit s OLDNAMES. LIB jenom v případě, že je kompilovat s následující kombinace možností příkazového řádku:  

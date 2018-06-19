@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392358"
 ---
 # <a name="initializing-scalar-types"></a>Inicializace skalárních typů
 Při inicializaci Skalární typy, hodnota *přiřazení výraz* je přiřazen k proměnné. Pravidla převodu pro přiřazení platit. (Viz [převody typů](../c-language/type-conversions-c.md) informace o pravidel převodu.)  

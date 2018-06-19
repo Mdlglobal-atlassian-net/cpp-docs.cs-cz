@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392143"
 ---
 # <a name="data-type-constants"></a>Konstanty datového typu
 Konstanty datového typu jsou závislé na implementaci rozsahů povolených pro integrální datové typy hodnot. Konstanty uvedené níže zadejte rozsahy pro integrální datové typy a jsou definovány v omezení. H.  

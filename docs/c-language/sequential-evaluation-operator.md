@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388484"
 ---
 # <a name="sequential-evaluation-operator"></a>Operátor sekvenčního vyhodnocení
 Operátor sekvenčního vyhodnocení, označované taky jako "operátor čárka," vyhodnotí jeho dva operandy postupně zleva doprava.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391623"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Převody z podepsaných integrálních typů
 Když znaménkem je převést na celé číslo bez znaménka s stejné nebo větší velikosti a není záporná hodnota podepsaná hodnota typu integer, hodnota je beze změny. Převod přišla tím, že přihlašovací rozšíří číslo se znaménkem. Znaménkem jsou převedeny na kratší znaménkem zkrácením nejvyšších bitů. Výsledek interpretována jako hodnotu bez znaménka, jak je znázorněno v tomto příkladu.  

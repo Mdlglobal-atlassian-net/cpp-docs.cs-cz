@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381184"
 ---
 # <a name="c-language-reference"></a>Referenční dokumentace jazyka C
 *Referenční dokumentace jazyka C* programovacího jazyka C popisuje, jak jsou implementované v Microsoft C. Knihy organizace je založena na standardní ANSI C (někdy označované jako kompilátorem C89) s další materiály pro rozšíření Microsoft pro standardní ANSI C.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136064"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Postupy: Kompilování kódu knihovny MFC a knihovny ATL s použitím přepínače /clr
 Toto téma popisuje způsob kompilace existující MFC a knihovna ATL programů, pro které modul Common Language Runtime.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390558"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcí
 Deklarace funkce předchází v definici funkce a určuje název, návratový typ, třídy úložiště a dalších atributů funkce. Jako prototyp, třeba deklarace funkce vytvořit také typy a identifikátory pro argumenty funkce.  

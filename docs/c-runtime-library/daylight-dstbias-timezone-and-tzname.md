@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391454"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone a _tzname
 `_daylight`, `_dstbias`, `_timezone`, a `_tzname` se používají v některé rutiny datum a čas, aby úpravy místního času. Tyto globální proměnné jsou zastaralé pro bezpečnější funkční verze, které se mají používat místo globální proměnné.  

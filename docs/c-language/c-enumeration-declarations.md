@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389738"
 ---
 # <a name="c-enumeration-declarations"></a>Deklarace výčtů v jazyce C
 Výčet obsahuje sadu s názvem celočíselné konstanty. Deklarace typu výčtu poskytuje název značky – výčet (volitelné) a definuje sadu identifikátorů pojmenované celé číslo (nazývá "– výčet sady," "enumerátor konstanty," "výčty" nebo "členové"). Proměnné s typem výčtu ukládá jednu z hodnot – výčet sady definované typu.  

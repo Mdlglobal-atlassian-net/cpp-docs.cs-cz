@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385374"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Odsazení a zarovnání členů struktury
 **ANSI 3.5.2.1** odsazení a zarovnání členů struktury a jestli můžete vytvářet bitové pole kolem hranici jednotky úložiště  

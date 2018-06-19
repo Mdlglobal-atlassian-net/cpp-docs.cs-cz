@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386629"
 ---
 # <a name="wide-characters"></a>Široké znaky
 **ANSI 3.1.3.4** hodnota konstanta znaků celé číslo, které obsahuje více než jeden znak nebo široká Znaková konstanta, která obsahuje více než jeden vícebajtových znaků  

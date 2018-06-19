@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387606"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **NULL** je hodnota ukazatele null použít s mnoha ukazatel operací a funkcí. Je ekvivalentní na hodnotu 0. **NULL** je definována v následujících souborech záhlaví: CRTDBG. H, NÁRODNÍ PROSTŘEDÍ. H, STDDEF. H, STDIO. H, STDLIB. H, ŘETĚZEC. H, TCHAR –. H, ČAS. H a WCHAR. H.  

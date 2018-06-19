@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390057"
 ---
 # <a name="name-spaces"></a>Obory názvů
 Kompilátor vytvoří „obory názvů“ pro rozlišení mezi identifikátory použitými pro různé druhy položek. Názvy v rámci každého oboru názvů musejí být jedinečné, aby nedošlo ke konfliktu, ale stejný název se může objevit ve více než jednom oboru názvů. To znamená, že stejný identifikátor lze použít pro dvě nebo více různých položek za předpokladu, že se položky nacházejí v různých oborech názvů. Kompilátor může rozpoznat odkazy na základě syntaktického kontextu identifikátoru v programu.  

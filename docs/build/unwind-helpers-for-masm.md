@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380246"
 ---
 # <a name="unwind-helpers-for-masm"></a>Unwind pomocníci pro MASM
 Aby bylo možné zapsat řádné rutiny sestavení, existuje sada pseudo operací, které můžete použít souběžně s skutečné sestavení pokyny k vytvoření odpovídající .pdata a .xdata. Existují také sadu makra, které poskytují zjednodušenou použití pseudo operací pro jejich nejběžnější použití.  

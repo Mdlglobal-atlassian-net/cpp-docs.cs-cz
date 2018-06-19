@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382806"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Zprávy generované funkcí perror
 **ANSI 4.9.10.4** zprávy vytvářené `perror` – funkce  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382478"
 ---
 # <a name="remainders"></a>Připomenutí
 **ANSI 3.3.5** znaménko zbývající na celočíselné dělení  

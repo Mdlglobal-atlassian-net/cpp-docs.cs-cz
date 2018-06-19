@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384369"
 ---
 # <a name="incomplete-types"></a>Neúplné typy
 Nekompletní typ je typ, který popisuje identifikátor, ale neobsahuje informace potřebné k určení jeho velikosti. „Nekompletní typ“ může být:  

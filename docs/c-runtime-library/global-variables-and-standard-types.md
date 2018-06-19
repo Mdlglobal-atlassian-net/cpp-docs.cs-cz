@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388991"
 ---
 # <a name="global-variables-and-standard-types"></a>Globální proměnné a standardní typy
 Běhové knihovny Microsoft obsahuje definice pro [globální proměnné](../c-runtime-library/global-variables.md), [řízení příznaky](../c-runtime-library/control-flags.md), a [standardní typy](../c-runtime-library/standard-types.md) používané rutiny knihovny. Přístup k těchto proměnných, příznaky a typy deklarací je v programu nebo zahrnutím odpovídající hlavičkových souborů.  

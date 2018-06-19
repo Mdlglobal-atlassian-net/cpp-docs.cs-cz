@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379377"
 ---
 # <a name="decorated-names"></a>Dekorované názvy
 Funkce, dat a objektů v programy C a C++ jsou reprezentované interně pomocí jejich dekorované názvy. A *dekorované název* je zakódovaný řetězec vytvořený kompilátor při kompilaci objektu, dat nebo definici funkce. Zaznamenává konvence volání, typy, parametry funkce a další informace společně s názvem. Tato úprava názvu, také známé jako *úprava názvu*, pomáhá linkeru najít správné funkce a objekty při propojování spustitelný soubor.  

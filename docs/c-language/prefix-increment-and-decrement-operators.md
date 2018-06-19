@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384526"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operátory přírůstku a snížení předpony
 Unární operátory (`++` a **--**) se označují jako "předponu" přírůstek nebo snížení operátory, jakmile se zobrazí operátory zvýšení nebo snížení hodnoty před operand. Operátory přírůstku a snížení má vyšší prioritu než předpony přírůstek a snížení. Operand musí být celé číslo, číslo s plovoucí čárkou nebo ukazatel typu a musí být výraz upravitelnými l-value (výraz bez **const** atributu). Výsledkem je, l hodnota.  

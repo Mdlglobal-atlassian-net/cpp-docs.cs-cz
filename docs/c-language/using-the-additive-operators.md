@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385917"
 ---
 # <a name="using-the-additive-operators"></a>Používání operátorů sčítání
 Následující příklady ilustrující operátory sčítání a odčítání používají tyto deklarace:  

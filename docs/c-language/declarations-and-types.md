@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384539"
 ---
 # <a name="declarations-and-types"></a>Deklarace a typy
 Tento oddíl popisuje deklaraci a inicializaci proměnných, funkcí a typů. Jazyk C obsahuje standardní sadu základních datových typů. Deklarací nových datových typů založených na již definovaných typech lze také přidat vlastní typy označované za „odvozené“. Jsou popsané v následujících tématech:  

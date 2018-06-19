@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388854"
 ---
 # <a name="usual-arithmetic-conversions"></a>Obvyklé aritmetické převody
 Většina operátory jazyka C provést převody typů a dovést operandy výrazu do stejného typu nebo rozšířit krátké hodnoty použít v operacích počítač velikosti celé číslo. Převody provádí operátory jazyka C závisí na konkrétní operátor a typ operandu nebo operandy. Řada operátorů se ale provést převody podobně jako u operandů plovoucí a integrální typy. Tyto převody se označují jako "aritmetické převody." Převod hodnoty operand na kompatibilní typ. způsobí, že žádná změna na jeho hodnotu.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380547"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini a příkaz NMAKE
 NMAKE přečte Tools.ini před přečte soubory pravidel, pokud se používá /R. Hledá Tools.ini nejprve v aktuálním adresáři a pak v adresáři zadaném proměnnou prostředí INIT. V části Nastavení NMAKE v souboru inicializace začíná `[NMAKE]` a může obsahovat žádné informace o souboru pravidel. Zadejte komentář na samostatné řádky začínající symbolem čísla (#).  

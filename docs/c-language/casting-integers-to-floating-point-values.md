@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381624"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>Přetypování celých čísel na hodnoty s plovoucí desetinnou čárkou
 **ANSI 3.2.1.3** směr zkrácení při celé číslo je převedeno na číslo s plovoucí desetinnou čárkou, které nelze vyjádřit přesně původní hodnotu  

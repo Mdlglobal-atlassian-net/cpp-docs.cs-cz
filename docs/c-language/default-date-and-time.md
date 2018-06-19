@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382738"
 ---
 # <a name="default-date-and-time"></a>Výchozí datum a čas
 **ANSI 3.8.8** definice pro _DATE\_ a _TIME\_ , v uvedeném pořadí, datum a čas posunutí nejsou k dispozici  

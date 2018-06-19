@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379855"
 ---
 # <a name="stack-usage"></a>Použití zásobníku
 Všechna paměť za adresu aktuální konfigurace je považován za volatile: operačního systému nebo ladicí program, mohou přepsat tuto paměť během ladicí relace uživatele nebo obslužné rutiny přerušení. Konfigurace proto musí být vždy nastaven před pokusem o čtení nebo zápis hodnot rámce zásobníku.  

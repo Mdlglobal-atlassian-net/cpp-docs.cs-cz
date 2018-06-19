@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380430"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Unwind data pro zpracování výjimek, podpora ladění
 Tato část popisuje datové struktury potřebné pro zpracování výjimek a ladění podpory.  

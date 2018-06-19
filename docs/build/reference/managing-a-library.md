@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379637"
 ---
 # <a name="managing-a-library"></a>Správa knihovny
 K vytvoření nebo úpravě knihovnu COFF objektů, které je výchozí režim pro LIB. LIB běží v tomto režimu, když zadáte/extract (Chcete-li zkopírovat do souboru objektu) nebo/def (k vytvoření knihovnu importu).  

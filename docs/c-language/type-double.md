@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387340"
 ---
 # <a name="type-double"></a>Double – typ
 Hodnoty s dvojitou přesností typů double mají 8 bajtů. Tento formát je podobný formátu plovoucí desetinné čárky kromě toho, že obsahuje 11bitový exponent s přesahem 1023, 52bitovou mantisu a implikovaný 1 bit vyššího řádu. Tento formát poskytuje řadu přibližně 1, 7E-308 1, 7E + 308 pro typ double.  

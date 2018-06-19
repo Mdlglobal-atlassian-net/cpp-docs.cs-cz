@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383238"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 Informace o struktuře unwind dat se používá k zaznamenání účinků funkce, která má ukazatel na zásobník a kde jsou uloženy nezávislé registry v zásobníku:  

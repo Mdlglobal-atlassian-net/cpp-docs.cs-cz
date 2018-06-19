@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391467"
 ---
 # <a name="global-constants"></a>Globální konstanty
 Běhové knihovny Microsoft obsahuje definice pro globální konstanty používané rutiny knihovny. Pokud chcete použít tyto konstanty, zahrnují příslušné hlavičkových souborů, které je uvedené v popisu pro každý konstanta. Globální konstanty jsou uvedeny v následující tabulce.  

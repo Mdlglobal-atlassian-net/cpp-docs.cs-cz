@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387775"
 ---
 # <a name="statements-c"></a>Příkazy (C)
 Příkazy programu C řídí průběh provádění programu. V jazyce C, stejně jako v jiných programovacích jazycích, je pro provedení smyček, pro výběr vykonání ostatních příkazů a pro přenos řízení dostupných několik druhů příkazů. Následující brief [přehled syntaxe příkazu](../c-language/overview-of-c-statements.md), tato část popisuje příkazech jazyka C v abecedním pořadí:  

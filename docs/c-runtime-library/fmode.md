@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390119"
 ---
 # <a name="fmode"></a>_fmode
 `_fmode` Proměnná nastaví výchozí režim překladu souboru pro překlad textu nebo binárních. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [_get_fmode –](../c-runtime-library/reference/get-fmode.md) a [_set_fmode –](../c-runtime-library/reference/set-fmode.md), který má být použit místo globální proměnné. Je deklarován v Stdlib.h následujícím způsobem.  

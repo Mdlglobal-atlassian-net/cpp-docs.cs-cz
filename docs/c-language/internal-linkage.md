@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383992"
 ---
 # <a name="internal-linkage"></a>Vnitřní propojení
 Pokud obsahuje deklaraci rozsah souboru identifikátor pro objekt nebo funkce *specifikátor třídy úložiště* **statické**, vnitřní propojení nemá identifikátor. Jinak má identifikátor vnější propojení. V tématu [třídy úložiště](../c-language/c-storage-classes.md) diskuzi o *specifikátor třídy úložiště* nonterminal.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379559"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (obecná reprezentace)
 Použít, když [/vmb, / vmg (metoda reprezentace)](../../build/reference/vmb-vmg-representation-method.md) je vybrán jako [metoda reprezentace](../../build/reference/vmb-vmg-representation-method.md). Tyto možnosti znamenat model dědičnosti definice třídy není ještě došlo.  

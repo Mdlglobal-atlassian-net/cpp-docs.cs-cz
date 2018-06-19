@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379832"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 Když zahrnete setjmpex.h nebo setjmp.h, veškerá volání [setjmp](../c-runtime-library/reference/setjmp.md) nebo [longjmp](../c-runtime-library/reference/longjmp.md) bude mít za následek unwind, které vyvolá destruktory a finally.  To se liší od x86, kde včetně výsledků setjmp.h finally – klauzule a destruktory.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380937"
 ---
 # <a name="blocks"></a>Bloky
 Pořadí deklarací, definice a příkazy uzavřený do složených závorek (**{}**) se označuje jako "blokem". Existují dva typy bloků v C. Příkaz "složený příkaz," skládá z jednoho nebo více příkazů (najdete v části [The složený příkaz](../c-language/compound-statement-c.md)), je jeden typ bloku. Druhý typ je „definice funkce“, která se skládá ze složeného příkazu (tělo funkce) a přidruženého „záhlaví“ funkce (název funkce, návratový typ a formální parametry). Blok v rámci jiných bloků se označuje jako „vnořený“.  

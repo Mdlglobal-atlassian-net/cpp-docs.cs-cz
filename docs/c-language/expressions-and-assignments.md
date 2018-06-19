@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382712"
 ---
 # <a name="expressions-and-assignments"></a>Výrazy a přiřazení
 Tato část popisuje, jak k formuláři výrazy a k přiřazení hodnoty v jazyce C. Konstanty, identifikátory, řetězce a volání funkce jsou všechny operandy, které jsou s nimi manipulovat ve výrazech. Jazyk C má všechny operátory obvyklé jazyk. Tato část popisuje tyto operátory, jakož i operátory, které jsou jedinečné pro C nebo Microsoft C. Témata popsané:  

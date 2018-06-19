@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379598"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (vytvoření binárního režimu jádra)
 Vytvoří binární soubor, který lze spustit v jádru systému Windows.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382874"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostika vytištěná podle funkce assert
 **ANSI 4.2** diagnostiky tištěné a chování při ukončení **assert** – funkce  

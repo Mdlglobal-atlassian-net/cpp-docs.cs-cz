@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390688"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními
 Načítání aplikace C/C++ může selhat, pokud nelze nalézt závislé knihovny. Tento článek popisuje některé běžné příčiny, proč aplikace C/C++ nepodaří načíst, a navrhne postup řešení problémů.  

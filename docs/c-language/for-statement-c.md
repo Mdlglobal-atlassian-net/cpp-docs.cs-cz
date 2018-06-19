@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389278"
 ---
 # <a name="for-statement-c"></a>for – příkaz (C)
 **Pro** příkaz umožňuje opakujte příkaz nebo složený příkaz zadaného počtu opakování. Text **pro** je spustit příkaz vícekrát nebo dokud nepovinnou podmínku se změní na hodnotu false. Volitelné výrazy v rámci můžete použít **pro** příkaz k inicializaci a změnit hodnoty během **pro** provádění příkazu společnosti.  

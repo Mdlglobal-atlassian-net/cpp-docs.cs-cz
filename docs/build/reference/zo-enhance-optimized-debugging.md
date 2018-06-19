@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380272"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (rozšířené optimalizované ladění)
 Generuje rozšířené informace o ladění pro optimalizovaný kód v sestavení bez ladění.  

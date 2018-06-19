@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379507"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Tipy pro zlepšení časově kritického kódu
 Zápis rychlý kód vyžaduje pochopení všechny aspekty aplikace, a jak komunikuje se službou systému. Toto téma navrhuje alternativy k některé z zřejmější kódovacích postupů vám pomohou zajistit uspokojivému provádění části časově kritického kódu.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383745"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Regulární knihovny MFC DLL staticky propojené do MFC
 Knihovny DLL, která používá MFC interně je běžný, které MFC DLL staticky propojené do MFC a exportovaných funkcí v knihovně DLL lze volat pomocí knihovny MFC nebo mimo MFC spustitelné soubory. Podle názvu, popisu, tento druh DLL vytvořená s využitím staticky propojené verze knihovny MFC. Funkce jsou obvykle exportovány z běžný MFC DLL pomocí standardní rozhraní jazyka. Příklad toho, jak zapsat, vytvářet a používat běžné knihovny MFC DLL v tématu vzorku [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

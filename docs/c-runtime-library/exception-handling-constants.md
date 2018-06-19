@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388224"
 ---
 # <a name="exception-handling-constants"></a>Konstanty zpracování výjimek
 Konstanta `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, nebo `EXCEPTION_EXECUTE_HANDLER` je vrácena, pokud dojde k výjimce během zpracování chráněného oddílu **zkuste – s výjimkou** příkaz. Návratová hodnota určuje, jak je výjimka ošetřena. Další informace najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md) v *referenční příručka jazyka C++*.  

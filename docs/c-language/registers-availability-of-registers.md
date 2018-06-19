@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383940"
 ---
 # <a name="registers-availability-of-registers"></a>Registry: dostupnost registrů
 **ANSI 3.5.1** v rozsahu, ke kterému objekty ve skutečnosti se může v registrech pomocí register – specifikátor třídy úložiště  

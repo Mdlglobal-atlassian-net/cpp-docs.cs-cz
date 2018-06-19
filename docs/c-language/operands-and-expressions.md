@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383445"
 ---
 # <a name="operands-and-expressions"></a>Operandy a výrazy
 „Operand“ je entita, na které působí operátor. „Výraz“ je posloupnost operátorů a operandů, která provede jakoukoli kombinaci těchto akcí:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353855"
 ---
 # <a name="data-types-classes"></a>Datové typy třídy
 Následující třídy zabalení datové typy C++:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381691"
 ---
 # <a name="character-testing"></a>Testování znaků
 **ANSI 4.3.1** sady znaků testována pomocí `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint`, a `isupper` funkce  

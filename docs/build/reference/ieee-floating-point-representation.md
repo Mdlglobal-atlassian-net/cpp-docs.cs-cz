@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379429"
 ---
 # <a name="ieee-floating-point-representation"></a>Reprezentace plovoucí desetinné čárky IEEE
 Microsoft Visual C++ je konzistentní s číselné standardů IEEE. Existují tři typy interní reálná čísla. Skutečné\*4 a skutečné\*8 se používají v jazyce Visual C++. Skutečné\*4 je deklarováno s použitím slovo **float**. Skutečné\*8 je deklarováno s použitím slovo **dvojité**. V systému Windows 32-bit programování `long double` datový typ mapuje **dvojité**. Existuje, ale sestavení jazyková podpora pro výpočty pomocí skutečné * 10 datového typu.  

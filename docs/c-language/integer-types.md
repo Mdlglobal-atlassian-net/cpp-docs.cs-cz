@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386800"
 ---
 # <a name="integer-types"></a>Typy celého čísla
 Každé celočíselné konstantě je předán typ na základě její hodnoty a způsobu, jakým je vyjádřena. Můžete vynutit žádné celočíselná konstanta na typ **dlouho** připojením písmeno **l** nebo **L** na konec konstanta; můžete vynutit mohla být typu `unsigned` připojením **u** nebo **U** na hodnotu. Malé písmeno **l** může být zaměňovat s 1 číslice a je nutno. Některé formy **dlouho** podle celočíselné konstanty:  

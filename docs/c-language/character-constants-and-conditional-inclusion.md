@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381805"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Konstanty a podmíněné zahrnutí znaků
 **ANSI 3.8.1** jestli hodnota konstanta znaků délce jednoho znaku v konstantní výraz, který řídí podmíněné zahrnutí odpovídá hodnotě stejné konstanta znaků v znaková sada spuštění. Informace, zda taková znaková konstanta může mít zápornou hodnotu  

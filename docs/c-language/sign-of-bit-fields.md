@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385832"
 ---
 # <a name="sign-of-bit-fields"></a>Znak bitových polí
 **ANSI 3.5.2.1** zda "plain" `int` pole je považován za **podepsané int** bit pole nebo jako na nepodepsané int bitová pole  

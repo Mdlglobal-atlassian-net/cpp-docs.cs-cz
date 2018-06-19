@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055798"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 Kombinuje [ELSE](../../assembler/masm/else-masm.md) a [Pokud](../../assembler/masm/if-masm.md) do jeden příkaz.  

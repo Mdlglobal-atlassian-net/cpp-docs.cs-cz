@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354614"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL – principy vytváření složených prvků
 Složeného ovládacího prvku je typ ovládacího prvku ActiveX, který může obsahovat (podobně jako do dialogového okna) další ovládací prvky ActiveX nebo ovládací prvky systému Windows. Po složeného ovládacího prvku, vložením všude, kde může být hostovaný ovládacího prvku ActiveX.  

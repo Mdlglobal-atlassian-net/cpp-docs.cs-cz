@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382283"
 ---
 # <a name="c-character-constants"></a>Konstanty znaků jazyka C
 "Konstanta znaků" je vytvořen uzavřením jeden znak z reprezentovat znakovou sadu do jednoduchých uvozovek (**' '**). Konstanty znaků se používají k vyjádření znaků [znaková sada spuštění](../c-language/execution-character-set.md).  

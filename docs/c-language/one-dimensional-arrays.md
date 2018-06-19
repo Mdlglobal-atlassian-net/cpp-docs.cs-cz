@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388903"
 ---
 # <a name="one-dimensional-arrays"></a>Jednorozměrná pole
 Výraz operátory následováno výrazem do hranatých závorek (**[]**) je dolního indexu reprezentace elementu objektu array. Výraz dolního indexu představuje hodnotu na adresu, která je *výraz* umisťuje nad rámec *operátory výraz* při vyjádřený jako  

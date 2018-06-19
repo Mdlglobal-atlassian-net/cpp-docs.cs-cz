@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354276"
 ---
 # <a name="displaying-assertions"></a>Zobrazení kontrolní výrazy
 Pokud klient pro připojení ke službě se zobrazí přestane reagovat, může služba prohlašovanou a zobrazí okno se zprávou, není možné zobrazit. Můžete to ověřit pomocí ladicí program Visual C++ pro ladění kódu (viz [pomocí Správce úloh](../atl/using-task-manager.md) nahoře v této části).  

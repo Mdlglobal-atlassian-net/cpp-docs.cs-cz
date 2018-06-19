@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391311"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p – poziční parametry
 Poziční parametry umožňují zadat číslo, které z argumentů je nahrazena do pole v řetězci formátu. Tento parametr poziční `printf` funkce jsou k dispozici:  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391945"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pole specifikace formátu: funkce scanf a wscanf
 Zde uvedené informace platí pro celou `scanf` řadu funkcí, včetně zabezpečené verze a popisuje symboly použité říct `scanf` funguje jak analyzovat vstupního datového proudu, jako je například vstupního datového proudu `stdin` pro `scanf`, do hodnoty, které jsou vloženy do programu proměnné.  

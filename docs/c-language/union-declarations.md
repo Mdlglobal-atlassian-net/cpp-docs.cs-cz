@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391175"
 ---
 # <a name="union-declarations"></a>Deklarace sjednocení
 "Union prohlášení" Určuje sadu hodnot proměnných a volitelně značku pojmenování sjednocení. Hodnoty proměnné se nazývají "členové" sjednocení a může mít různé typy. Sjednocení se podobá "variantní záznamy" v dalších jazycích.  

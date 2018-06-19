@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380885"
 ---
 # <a name="x64-software-conventions"></a>x64 – softwarové konvence
 Tato část popisuje volání metody konvence pro Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 64-bit rozšíření x86 architektura.  

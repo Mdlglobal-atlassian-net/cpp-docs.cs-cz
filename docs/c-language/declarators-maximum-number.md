@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382143"
 ---
 # <a name="declarators-maximum-number"></a>Deklarátory: maximální počet
 **ANSI 3.5.4** maximální počet deklarátory, které můžete upravit aritmetické, struktura nebo sjednocovací typ.  

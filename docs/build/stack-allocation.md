@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380599"
 ---
 # <a name="stack-allocation"></a>Přidělení zásobníku
 Prolog funkce zodpovídá za přidělování místa v zásobníku pro místní proměnné, – uložené registry, zásobníku parametrů a parametry registru.  

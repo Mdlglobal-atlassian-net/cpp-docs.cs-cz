@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381223"
 ---
 # <a name="atexit-function-c"></a>atexit – funkce (C)
 **ANSI 4.10.4.3** stav vrácený `atexit` fungovat, pokud je hodnota argumentu než nula, exit_success – nebo exit_failure –  

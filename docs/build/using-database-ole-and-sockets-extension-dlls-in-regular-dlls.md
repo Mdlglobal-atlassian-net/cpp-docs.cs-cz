@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391402"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Pomocí databáze OLE a Sockets MFC rozšiřující knihovny DLL v běžných knihovnách DLL knihovny MFC
 Při použití knihovnu DLL z běžné knihovny MFC DLL, pokud MFC – rozšiřující knihovny DLL není připojená do **CDynLinkLibrary** objektu řetězu regulární knihovny MFC DLL, můžete narazit na jeden nebo více sady souvisejících problémech. Protože verze pro ladění MFC databáze, technologie OLE a Sockets podporují knihovny DLL jsou implementované jako MFC – rozšiřující knihovny DLL, může se zobrazit podobné problémy, pokud používáte tyto MFC funkce, i v případě, že nepoužíváte explicitně všechny vlastní MFC – rozšiřující knihovny DLL. Některé příznaky jsou:  

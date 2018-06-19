@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385413"
 ---
 # <a name="functions-c"></a>Funkce (C)
 Funkce je základní jednotkou modulární v C. Funkce obvykle slouží k provedení určitého úkolu, a jeho název odráží často tuto úlohu. Funkce obsahuje prohlášení a příkazy. Tato část popisuje, jak deklarovat, definovat a volání funkcí jazyka C. Další témata popsané jsou:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381168"
 ---
 # <a name="scalar-types"></a>Skalární typy
 I když přístupu k datům může pocházet z jakéhokoliv uspořádání, se doporučuje, aby se data zarovnán na jeho přirozené hranic, aby se zabránilo ztrátě výkonu (nebo jeho násobek). Výčty jsou konstantní celá čísla a jsou považovány za 32bitová celá čísla. Následující tabulka popisuje definice typu a doporučené úložiště pro ni, protože se vztahuje k přidružení pomocí následujících hodnot zarovnání:  

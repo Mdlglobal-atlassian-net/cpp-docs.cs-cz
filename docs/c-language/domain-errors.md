@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381730"
 ---
 # <a name="domain-errors"></a>Chyby domény
 **ANSI 4.5.1** hodnoty vrácené funkcí Matematika na chyby domény  

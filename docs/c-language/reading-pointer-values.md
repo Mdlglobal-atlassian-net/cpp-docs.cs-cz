@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384162"
 ---
 # <a name="reading-pointer-values"></a>Čtení hodnot ukazatele
 **ANSI 4.9.6.2** vstup pro **%p** převod v `fscanf` – funkce  

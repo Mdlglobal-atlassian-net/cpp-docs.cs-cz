@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380102"
 ---
 # <a name="specifying-an-inline-file"></a>Zadání vloženého souboru
 Zadejte dvě lomené závorky (<<) v příkazu kde *filename* se má zobrazit. Makro rozšíření nemůže být lomené závorky.  

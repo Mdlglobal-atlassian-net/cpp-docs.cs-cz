@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385894"
 ---
 # <a name="expression-statement-c"></a>Příkaz výrazu (C)
 Když je proveden příkaz výrazu, je tento výraz vyhodnocen podle pravidel uvedených v [výrazy a přiřazení](../c-language/expressions-and-assignments.md).  

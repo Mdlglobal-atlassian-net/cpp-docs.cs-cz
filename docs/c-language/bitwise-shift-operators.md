@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383251"
 ---
 # <a name="bitwise-shift-operators"></a>Operátory bitového posunutí
 Operátory posunutí posunutí doleva jejich první operand (`<<`) nebo doprava (`>>`) podle počtu pozic Druhý operand určuje.  

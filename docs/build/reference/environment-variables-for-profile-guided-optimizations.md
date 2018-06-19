@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379442"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Proměnné prostředí pro optimalizace na základě profilu
 

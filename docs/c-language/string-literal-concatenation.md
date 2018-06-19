@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388783"
 ---
 # <a name="string-literal-concatenation"></a>Zřetězení textového literálu
 Chcete-li vytvořit textové literály, které zabírají více než jeden řádek, lze dva řetězce zřetězit. Chcete-li to provést, zadejte zpětné lomítko a poté stiskněte klávesu RETURN. Zpětné lomítko způsobí, že kompilátor bude ignorovat následující znak nového řádku. Například textový literál  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132463"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Postupy: Používání sledovacích odkazů v jazyce C++/CLI
 Tento článek ukazuje, jak používat sledovací odkaz (%) v jazyce C + +/ CLI předat common language runtime (CLR) typy odkazem.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387031"
 ---
 # <a name="storage-of-string-literals"></a>Ukládání textových literálů
 Znaky textového literálu jsou uloženy v pořadí v oblastech souvislé paměti. Řídicí sekvence (například **\\ \\** nebo  **\\"**) v rámci řetězcový literál počítá jako jeden znak. Znak hodnoty null (reprezentována **\0** řídicí sekvenci) se automaticky připojí k a označí konce, každý řetězce literálu. (K tomu dojde během [fáze překladu](../preprocessor/phases-of-translation.md) 7.) Všimněte si, že kompilátor nemusí ukládat dva identické řetězce na dva různé adresy. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) vynutí kompilátoru umístit jenom jedna kopie identické řetězců do spustitelného souboru.  

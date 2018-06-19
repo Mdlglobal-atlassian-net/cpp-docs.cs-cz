@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382900"
 ---
 # <a name="directives-to-the-preprocessor"></a>Direktivy pro preprocesor
 „Direktiva“ dává pokyn preprocesoru jazyka C k provedení konkrétní akce týkající se textu programu před kompilací. [Preprocesor – direktivy](../preprocessor/preprocessor-directives.md) jsou podrobně popsán v *preprocesor odkaz*. V tomto příkladu je použita direktiva preprocesoru `#define`:  

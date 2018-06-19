@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380011"
 ---
 # <a name="special-nmake-macros"></a>Speciální makra NMAKE
 NMAKE poskytuje několik speciální makra k reprezentaci různých názvy souborů a příkazy. Je jedno použití pro některé z těchto maker v předdefinované odvozená pravidla. Makra NMAKE poskytované jsou stejně jako všechny makra velká a malá písmena.  

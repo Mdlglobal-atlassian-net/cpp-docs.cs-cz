@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389404"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 Vnitřní funkce CRT. Rozhraní používá k vyhledání příslušné výjimky obslužná rutina zpracovávala aktuální výjimku.  

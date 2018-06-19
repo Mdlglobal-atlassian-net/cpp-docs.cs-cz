@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387580"
 ---
 # <a name="c-relational-and-equality-operators"></a>Relační operátory a operátory rovnosti jazyka C
 Binární relační operátory a operátory rovnosti porovnat jejich první operand jejich Druhý operand k testování platnosti zadané relaci. Výsledek relační výrazu je 1, pokud je otestované vztah true a 0, pokud je hodnota false. Typ výsledku je `int`.  

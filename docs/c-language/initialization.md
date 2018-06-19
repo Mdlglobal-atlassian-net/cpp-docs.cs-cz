@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382845"
 ---
 # <a name="initialization"></a>Inicializace
 „Inicializátor“ je hodnota nebo posloupnost hodnot, která má být přiřazena k deklarované proměnné. Proměnnou lze nastavit na počáteční hodnotu použitím inicializátoru na deklarátor v deklaraci proměnné. Hodnota nebo hodnoty inicializátoru jsou přiřazeny proměnné.  

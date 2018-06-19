@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391649"
 ---
 # <a name="typedef-declarations"></a>Typedef – deklarace
 Deklarace definice typedef je deklaraci s typedef jako třídy úložiště. Nový typ se změní deklarátor. Typedef – deklarace můžete použít k vytvoření kratší nebo smysluplnější názvů pro typy už definované C nebo pro typy, které mají deklarován. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.  

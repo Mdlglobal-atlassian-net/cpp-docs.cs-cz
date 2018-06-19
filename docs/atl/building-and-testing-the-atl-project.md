@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354727"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Vytváření a testování projektu knihovny ATL
 Jak je uvedeno v [vkládání složeného ovládacího prvku](../atl/inserting-a-composite-control.md), jeden počáteční součástí projektu je výchozí stránku HTML, který je hostitelem nové složeného ovládacího prvku. Po dokončení úprav složeného ovládacího prvku, klikněte na tlačítko **sestavit řešení** nebo **znovu sestavit řešení** z **sestavení** nabídky. Jakmile úspěšně sestavení projektu, načtení stránky HTML, který je umístěný v kořenovém adresáři projektu složeného ovládacího prvku do aplikace Internet Explorer nebo jiný prohlížeč a otestovat funkčnost vlastního ovládacího prvku.  

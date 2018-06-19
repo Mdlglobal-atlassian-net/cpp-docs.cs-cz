@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381756"
 ---
 # <a name="environment"></a>Prostředí
 -   [Argumenty operace main](../c-language/arguments-to-main.md)  

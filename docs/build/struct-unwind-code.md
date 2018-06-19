@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390096"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 Unwind kódu se používá k zaznamenání posloupnost operací v prologu, které ovlivňují stálé registry a konfigurace. Každá položka kódu má následující formát:  

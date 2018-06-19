@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381926"
 ---
 # <a name="c-language-syntax-summary"></a>Souhrn syntaxe jazyka C
 Tato část poskytuje úplný popis jazyka C a funkcí jazyka C specifických pro společnost Microsoft. Syntaktický zápis v této části pomůže zjistit přesnou syntaxi pro každou komponentu jazyka. Vysvětlení pro syntaxi se zobrazí v části této příručky tam, kde je popisováno téma.  

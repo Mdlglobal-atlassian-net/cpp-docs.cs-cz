@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387457"
 ---
 # <a name="32-bit-windows-timedate-formats"></a>Formáty času a data 32bitového systému Windows
 Datum a čas souboru jsou uloženy jednotlivě, pomocí znaménka jako bitových polí. Datum a čas souboru plní následujícím způsobem:  

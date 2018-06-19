@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382780"
 ---
 # <a name="c-string-literals"></a>Textové literály jazyka C
 "Řetězcový literál" je posloupnost znaků ze zdrojové znakové sady uzavřené v uvozovkách (**""**). Textové literály slouží k reprezentaci posloupnost znaků, které, dohromady, tvoří řetězce ukončené hodnotou null. Je třeba vždy předponu celou textové literály písmenem **L**.  

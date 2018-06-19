@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389764"
 ---
 # <a name="simple-variable-declarations"></a>Deklarace jednoduchých proměnných
 Prohlášení o jednoduché proměnné nejjednodušší forma přímé deklarátor, určuje název a typ proměnné. Určuje také třídy úložiště proměnné a datového typu.  

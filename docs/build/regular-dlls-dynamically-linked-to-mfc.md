@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383723"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Regulární knihovny MFC DLL dynamicky propojené s MFC
 Knihovny DLL, která používá MFC interně je běžný, které MFC DLL dynamicky propojené s MFC a exportovaných funkcí v knihovně DLL lze volat pomocí knihovny MFC nebo mimo MFC spustitelné soubory. Podle názvu, popisu, tento druh DLL vytvořená s využitím knihovna DLL verze knihovny MFC (také označovaný jako sdílený verze knihovny MFC). Funkce jsou obvykle exportovány z běžný MFC DLL pomocí standardní rozhraní jazyka.  

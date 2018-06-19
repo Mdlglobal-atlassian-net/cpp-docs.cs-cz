@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055551"
 ---
 # <a name="dt"></a>DT
 Přiděluje a volitelně inicializuje 10 bajtů úložiště pro každou `initializer`. Můžete také použít jako specifikátor typu kdekoli je právní typu. `DT` je synonymum z [tbyte –](../../assembler/masm/tbyte.md).  

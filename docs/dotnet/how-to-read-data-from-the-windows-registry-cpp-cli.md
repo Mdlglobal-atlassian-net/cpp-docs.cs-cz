@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132551"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Postupy: Čtení dat z registru systému Windows (C++/CLI)
 Následující příklad kódu používá <xref:Microsoft.Win32.Registry.CurrentUser> klíč číst data z registru systému Windows. Nejprve podklíčů jsou uvedené pomocí <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> metoda a pak je podklíč identity je otevřena pomocí <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metoda. Podobně jako kořenového klíče, je reprezentována každý podklíč <xref:Microsoft.Win32.RegistryKey> třídy. Nakonec novou <xref:Microsoft.Win32.RegistryKey> objekt se používá k vytvoření výčtu páry klíč/hodnota.  

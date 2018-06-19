@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386901"
 ---
 # <a name="array-declarations"></a>Deklarace pole
 "Array deklarace" názvy pole a určuje typ jejích elementů. Můžete také definovat počet prvků v poli. Proměnná s typ pole je považován za ukazatel na typ prvků pole.  

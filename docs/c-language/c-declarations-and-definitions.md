@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381562"
 ---
 # <a name="c-declarations-and-definitions"></a>Deklarace a definice jazyka C
 „Deklarace“ vytvoří přidružení mezi určitou proměnnou, funkcí nebo typem a jejich atributy. [Přehled deklarací](../c-language/overview-of-declarations.md) dává ANSI syntaxe `declaration` nonterminal. Deklarace také určuje, kdy a kde lze k identifikátoru přistupovat („propojení“ identifikátoru). V tématu [doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md) informace o propojení.  

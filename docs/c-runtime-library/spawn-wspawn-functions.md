@@ -60,6 +60,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451768"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn – funkce
 Každý z `_spawn` funkce vytvoří a spustí nový proces:  

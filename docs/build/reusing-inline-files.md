@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379897"
 ---
 # <a name="reusing-inline-files"></a>Opětovné použití vložených souborů
 Chcete-li znovu použít vloženého souboru, zadejte <<*filename* tam, kde je soubor je definovaný a nejprve použít, pak znovu použít *filename* bez << novější ve stejné nebo jiné příkaz. Příkaz k vytvoření souboru vložené musí spustit před všechny příkazy, které používají soubor.  

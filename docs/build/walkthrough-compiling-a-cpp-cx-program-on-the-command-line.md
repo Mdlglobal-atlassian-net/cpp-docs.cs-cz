@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384802"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Návod: Kompilace C + +/ CX Program na příkazovém řádku
 Můžete vytvořit programy Visual C++, které cílí na prostředí Windows Runtime a sestavit je na příkazovém řádku. Visual C++ podporuje rozšíření komponent v jazyce Visual C++ (C + +/ CX), který má operátory a další typy, jehož cílem je programovací model Windows Runtime. Můžete použít C + +/ CX pro vývoj aplikací pro univerzální platformu Windows (UWP), Windows Phone 8.1 a Windows desktop. Další informace najdete v tématu [A prohlídka c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) a [rozšíření komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383199"
 ---
 # <a name="external-linkage"></a>Externí propojení
 Pokud první deklaraci na úrovni souboru rozsah pro identifikátor nepoužívá **statické** specifikátor třídy úložiště, objekt má externí propojení.  

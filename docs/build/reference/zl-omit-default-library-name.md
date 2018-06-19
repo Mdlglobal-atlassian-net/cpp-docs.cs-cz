@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379715"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (vypuštění názvu výchozí knihovny)
 Název výchozí C runtime knihovny ze souboru .obj vynechá. Ve výchozím nastavení kompilátoru zařadí do souboru .obj směrovat linkeru do správné knihovny název knihovny.  

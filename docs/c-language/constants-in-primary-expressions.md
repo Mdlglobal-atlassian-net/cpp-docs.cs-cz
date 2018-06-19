@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382270"
 ---
 # <a name="constants-in-primary-expressions"></a>Konstanty v primárních výrazech
 Konstantní operand má hodnotu a typ konstantní hodnoty, kterou operand představuje. Znaková konstanta je typu `int`. Má celočíselná konstanta `int`, **dlouho**, `unsigned int`, nebo `unsigned long` typu, v závislosti na velikosti na celé číslo a na cestě zadána hodnota. V tématu [konstanty](../c-language/c-constants.md) Další informace.  

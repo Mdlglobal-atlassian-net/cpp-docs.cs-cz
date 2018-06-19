@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386313"
 ---
 # <a name="static-storage-class-specifier"></a>Statický specifikátor třídy úložiště
 Proměnná definovaná na interní úrovni s **statické** – specifikátor třídy úložiště je globální doba platnosti, ale je viditelná pouze v rámci bloku v kterého je deklarovaná. Pro konstantní řetězce, pomocí **statické** je užitečné, protože ho nebude režii časté inicializace často říká funkcí.  

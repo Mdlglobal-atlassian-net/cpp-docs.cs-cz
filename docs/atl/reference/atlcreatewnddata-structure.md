@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255792"
 ---
 # <a name="atlcreatewnddata-structure"></a>Struktura _AtlCreateWndData
 Tato struktura obsahuje data instance třídy v oddílová kódu v ATL.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384715"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>Struktury, sjednocení, výčty a bitová pole
 -   [Nevhodný přístup ke sjednocení](../c-language/improper-access-to-a-union.md)  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384304"
 ---
 # <a name="c-sequence-points"></a>Body sekvence jazyka C
 Mezi po sobě jdoucích "body sekvence" hodnoty objektu lze upravit pouze jednou pomocí výrazu. Jazyk C definuje toto pořadí:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385081"
 ---
 # <a name="argument-description"></a>Popis argumentu
 `argc` Parametr ve **hlavní** a **wmain** functions je celé číslo určující, kolik argumenty jsou předány program z příkazového řádku. Vzhledem k tomu, že název programu je považován za argument, hodnota `argc` alespoň jeden.  

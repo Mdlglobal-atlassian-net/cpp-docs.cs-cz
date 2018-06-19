@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387896"
 ---
 # <a name="ansi-c-compliance"></a>Kompatibilita se specifikací ANSI C
 Zásady vytváření názvů pro všechny identifikátory specifické pro společnost Microsoft v běhu systému (například funkce, makra, konstanty, proměnné a definic typů) je kompatibilní se specifikací ANSI. V této dokumentaci je žádné běhové funkce, který dodržuje standardy ANSI/ISO C poznamenat, že je ANSI kompatibilní. Aplikace standardu ANSI měli používat jenom tyto funkce kompatibilní ANSI.  

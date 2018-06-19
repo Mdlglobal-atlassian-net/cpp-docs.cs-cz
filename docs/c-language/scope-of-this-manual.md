@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387509"
 ---
 # <a name="scope-of-this-manual"></a>Rozsah této příručky
 Jazyk C je flexibilní jazyk, který mnoho rozhodnutí o programování nechává na programátorovi. V souladu s touto filozofií zavádí jazyk C několik omezení v oblastech jako převod typů. Ačkoli tato charakteristika jazyka může programování usnadnit, je zapotřebí jazyk dobře znát, abyste porozuměli, jak se program bude chovat. Tato kniha poskytuje informace o součástech jazyka C a vlastnostech implementace společnosti Microsoft. Syntaxe pro jazyk C je z X3.159 ANSI-1989, *American National standardní systémů informace - programovací jazyk – C* (dále jen ANSI C – standard), i když není součástí standardu ANSI C. [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) syntaxe a popis toho, jak číst a používat definice syntaxe.  

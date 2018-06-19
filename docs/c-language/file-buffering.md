@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382650"
 ---
 # <a name="file-buffering"></a>Ukládání souboru do vyrovnávací paměti
 **ANSI 4.9.3** charakteristika ukládání souboru do vyrovnávací paměti  

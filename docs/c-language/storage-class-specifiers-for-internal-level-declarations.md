@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385761"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Specifikátory třídy úložiště pro deklarace na interní úrovni
 Můžete použít některou z čtyři *specifikátor třídy úložiště* terminály pro deklarace na interní úrovni proměnných. Pokud vynecháte *specifikátor třídy úložiště* z takové prohlášení, je výchozí třídu úložiště **automaticky**. Proto klíčové slovo **automaticky** zřídka se zobrazuje v programu C.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385107"
 ---
 # <a name="terminating-newline-characters"></a>Ukončení znaků nového řádku
 **ANSI 4.9.2** jestli poslední řádek textu datového proudu vyžaduje ukončující znak nového řádku  

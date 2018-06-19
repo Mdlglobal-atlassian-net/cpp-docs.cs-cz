@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385875"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Pravidla a omezení pro používání holých funkcí
 Informace o pravidla a omezení pro používání holých funkcí, naleznete v tématu odpovídající v referenční příručka jazyka C++: [pravidla a omezení pro holé funkce](../cpp/rules-and-limitations-for-naked-functions.md).  

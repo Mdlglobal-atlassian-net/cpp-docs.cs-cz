@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380612"
 ---
 # <a name="types-and-storage"></a>Typy a úložiště
 Tato část popisuje výčet a ukládání datových typů pro [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architektura.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379923"
 ---
 # <a name="struct-runtimefunction"></a>struct RUNTIME_FUNCTION
 Zpracování výjimek tabulky vyžaduje záznam tabulky pro všechny funkce, které přidělit prostor v zásobníku nebo volat jinou funkci (například ke funkce). Funkce tabulky položky mají formát:  

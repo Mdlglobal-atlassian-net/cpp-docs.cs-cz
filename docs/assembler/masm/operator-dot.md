@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058160"
 ---
 # <a name="operator-"></a>. – operátor
 Vrátí první operátor *výraz* plus posun *pole* v rámci jeho struktura nebo union. Vrátí druhou operátor hodnotu v umístění, na kterou odkazuje *zaregistrovat* plus posun *pole* v rámci jeho struktura nebo union.  

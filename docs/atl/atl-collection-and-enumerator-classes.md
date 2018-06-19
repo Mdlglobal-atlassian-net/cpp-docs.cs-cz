@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354443"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL – kolekce a Enumerátor třídy
 ATL obsahuje následující třídy, která vám pomůže implementovat kolekce a výčty.  

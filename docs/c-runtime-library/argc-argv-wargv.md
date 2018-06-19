@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390209"
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 `__argc` – Globální proměnná je počet argumentů příkazového řádku předaný do programu. `__argv` ukazatel na pole znaková jeden nebo více byte znakové řetězce, které obsahují argumenty program a `__wargv` je ukazatel na pole široká charakterová řetězců, které obsahují argumenty programu. Tyto globální proměnné zadejte argumenty, které mají `main` nebo `wmain`.  

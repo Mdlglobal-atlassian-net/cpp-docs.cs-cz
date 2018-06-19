@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387821"
 ---
 # <a name="underflow-of-floating-point-values"></a>Podtečení hodnot s plovoucí desetinnou čárkou
 **ANSI 4.5.1** nastavená celočíselný výraz funkce Matematika `errno` na hodnotu makro `ERANGE` na podtečení rozsah chyby  

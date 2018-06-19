@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391812"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Řetězce s názvy národních prostředí, jazyků a zemí/oblastí
 *Národního prostředí* argument `setlocale` a `_create_locale` funkce lze nastavit pomocí názvy národních prostředí, jazyků, kódy zemí a znakové stránky, které jsou podporované rozhraním API systému Windows NLS. *Národního prostředí* argument má následující podobu:  

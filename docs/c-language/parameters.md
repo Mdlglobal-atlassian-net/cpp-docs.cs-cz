@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391688"
 ---
 # <a name="parameters"></a>Parametry
 Argumenty jsou názvy hodnot předaná funkci volání funkce. Parametry jsou hodnoty, které funkce očekává přijímat. Prototyp funkce závorek název funkce obsahovat úplný seznam parametrů funkce a jejich typy. Deklarace parametru zadejte typy, velikosti a identifikátory hodnot uložených v parametrech.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353885"
 ---
 # <a name="date-and-time-database-support"></a>Datum a čas: Podpora databáze
 Od verze 4.0, MFC databáze používá programovací [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) a [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) třídy reprezentující data a času. Tyto třídy, používat i v automatizace, jsou odvozené od třídy [COleVariant](../mfc/reference/colevariant-class.md). Si poskytují lepší podporu pro správu dat, datum a čas, než se [CTime –](../atl-mfc-shared/reference/ctime-class.md) a [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  

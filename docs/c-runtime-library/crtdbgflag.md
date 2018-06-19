@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387259"
 ---
 # <a name="crtdbgflag"></a>_crtDbgFlag
 **_Crtdbgflag –** příznak se skládá z pěti bitových polí, která řídí jak jsou přidělení paměti na ladicí verze haldy sledovat, ověřit, hlášené a zálohované. Bitová pole vlajky jsou nastavené pomocí [_crtsetdbgflag –](../c-runtime-library/reference/crtsetdbgflag.md) funkce. Tento příznak a jeho bitová pole jsou deklarované v Crtdbg.h. Tento příznak je k dispozici pouze při [_DEBUG –](../c-runtime-library/debug.md) příznak byla definována v aplikaci.  

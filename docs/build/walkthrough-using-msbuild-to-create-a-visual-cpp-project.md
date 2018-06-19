@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392559"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Návod: Vytvoření projektu jazyka Visual C++ pomocí nástroje MSBuild
 Tento návod ukazuje, jak používat [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] pro vytvoření projektu Visual C++ v příkazovém řádku. Se dozvíte, jak vytvořit zdrojové soubory C++ a soubor projektu na základě XML pro konzolovou aplikaci Visual C++. Po vytvoření projektu, se dozvíte, jak k přizpůsobení procesu sestavení.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385608"
 ---
 # <a name="preprocessing-directives"></a>Direktivy předběžného zpracování
 -   [Konstanty a podmíněné zahrnutí znaků](../c-language/character-constants-and-conditional-inclusion.md)  

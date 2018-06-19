@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391675"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializace typů agregace
 Typ "aggregate" je struktury, sjednocení nebo typ pole. Pokud typ agregace obsahuje členy typů agregace, použít pravidla inicializace rekurzivně.  

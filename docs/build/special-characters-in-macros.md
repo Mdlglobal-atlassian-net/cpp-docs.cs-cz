@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380170"
 ---
 # <a name="special-characters-in-macros"></a>Speciální znaky v makrech
 Číslo přihlásit (#), po definici určuje komentář. Pokud chcete zadat literálu znaménko čísla v makru, použijte šipka nahoru (^), jako v ^ #.  

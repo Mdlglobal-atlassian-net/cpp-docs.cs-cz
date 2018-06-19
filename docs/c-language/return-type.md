@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390184"
 ---
 # <a name="return-type"></a>Návratový typ
 Návratový typ funkce vytváří velikost a typ hodnoty vrácené funkcí a odpovídá specifikátor typu níže uvedené syntaxe:  

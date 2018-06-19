@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386849"
 ---
 # <a name="storage-of-arrays"></a>Úložiště polí
 Úložiště přidružené k typu pole je úložištěm požadovaným pro všechny jeho prvky. Prvky pole jsou uloženy v souvislých a rostoucích paměťových umístěních, od prvního prvku po poslední.  

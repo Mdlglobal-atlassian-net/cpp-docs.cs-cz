@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135076"
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>Postupy: Výčet datových typů v sestaveních pomocí reflexe (C++/CLI)
 Následující kód ukazuje výčet veřejných typů a členů pomocí <xref:System.Reflection>.  

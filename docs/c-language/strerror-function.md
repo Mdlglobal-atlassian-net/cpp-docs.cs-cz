@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386355"
 ---
 # <a name="strerror-function"></a>strerror – funkce
 **ANSI 4.11.6.2** obsah chyby zprávy řetězce vrácené `strerror` – funkce  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354064"
 ---
 # <a name="dual-interfaces-and-events"></a>Duální rozhraní a události
 I když je možné k návrhu událostí rozhraní jako duální, existuje několik důvodů dobrý návrh není to udělat. Základní důvodem je skutečnost, že zdroj události bude platit pouze událostí prostřednictvím tabulce vtable nebo prostřednictvím `Invoke`, ne pomocí obou. Pokud zdroj události aktivuje událost jako přímý vtable volání metody, `IDispatch` metody nebude nikdy používat a je zřejmé, že rozhraní by byla čistý vtable rozhraní. Pokud zdroj události aktivuje událost jako volání `Invoke`, metody vtable nebude nikdy používat a je jasné, že rozhraní by byla odesílajícím rozhraním. Pokud definujete vašich rozhraní událostí jako duals, budete vyžadující klientům implementovat součástí rozhraní, které se nikdy používat.  

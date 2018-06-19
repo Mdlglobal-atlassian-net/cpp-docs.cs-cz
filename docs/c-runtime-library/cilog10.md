@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386388"
 ---
 # <a name="cilog10"></a>_CIlog10
 Provede `log10` operace na nejvyšší hodnotu v zásobníku.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354665"
 ---
 # <a name="atl-connection-points"></a>ATL – body připojení
 Objekt umožňující připojení je ten, který podporuje odchozí rozhraní. Odchozí rozhraní umožňuje objekt ke komunikaci s klientem. Objekt umožňující připojení odchozích rozhraní, zpřístupní bod připojení. Každý odchozí rozhraní je implementováno klientem na objektu s názvem jímky.  

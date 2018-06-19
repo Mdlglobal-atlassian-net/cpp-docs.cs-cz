@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383641"
 ---
 # <a name="reading-ranges"></a>Čtení rozsahů
 **ANSI 4.9.6.2** výklad znak pomlčka (-), který je ani první ani poslední znak v scanlist pro % [převod v `fscanf` – funkce  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380318"
 ---
 # <a name="return-values-c"></a>Návratové hodnoty (C++)
 Skalární návratovou hodnotu, která můžete začlenit do 64bitová verze je vráceny prostřednictvím RAX – to zahrnuje __m64 typy. Bez skalárních typů, včetně obtékaných objektů, Double a vektoru typy, jako [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) jsou vráceny v XMM0. Stav Nepoužité bity v hodnotě, vrátí se v RAX nebo XMM0 není definován.  

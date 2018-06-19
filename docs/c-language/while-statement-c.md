@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389914"
 ---
 # <a name="while-statement-c"></a>while – příkaz (C)
 `while` Příkaz umožňuje opakujte příkaz, dokud zadaného výrazu se změní na hodnotu false.  

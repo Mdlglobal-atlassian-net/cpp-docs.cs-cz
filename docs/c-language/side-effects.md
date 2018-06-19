@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387008"
 ---
 # <a name="side-effects"></a>Vedlejší efekty
 Pořadí vyhodnocení výrazu je definován konkrétní implementace, s výjimkou při jazyk zaručuje konkrétní pořadí vyhodnocení (jak je uvedeno v [přednost a pořadí vyhodnocení](../c-language/precedence-and-order-of-evaluation.md)). V následujících voláních funkce mohou například nastat vedlejší účinky:  

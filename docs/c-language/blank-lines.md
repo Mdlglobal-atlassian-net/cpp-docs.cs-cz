@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380651"
 ---
 # <a name="blank-lines"></a>Prázdné řádky
 **ANSI 4.9.2** zda místo znaků, které jsou zapsané do proudu textu bezprostředně před znak nového řádku zobrazit při čtení v  

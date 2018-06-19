@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389777"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 V následující tabulce je uveden seznam doby platnosti a viditelnosti charakteristiky pro většinu identifikátory. První tři sloupce zadejte atributy, které definují doby platnosti a viditelnosti. Identifikátor s atributy poskytují první tři sloupce má doby platnosti a viditelnosti, které jsou ve sloupci čtvrté a páté. V tabulce nepopisuje všechny možné případy. Odkazovat na [třídy úložiště](../c-language/c-storage-classes.md) Další informace.  

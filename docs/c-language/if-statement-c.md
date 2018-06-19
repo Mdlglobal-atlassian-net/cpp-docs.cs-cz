@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387047"
 ---
 # <a name="if-statement-c"></a>if – příkaz (C)
 **Pokud** příkaz Ovládací prvky podmíněného větvení. Text **Pokud** je spustit příkaz, pokud je hodnota výrazu nenulové hodnoty. Syntaxe **Pokud** příkaz má dva formuláře.  

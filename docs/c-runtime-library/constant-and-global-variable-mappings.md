@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387522"
 ---
 # <a name="constant-and-global-variable-mappings"></a>Mapování konstant a globálních proměnných
 Tyto obecného textu konstanta, globální proměnné a mapování typu standard jsou definovány v Tchar –. H a závisí na tom, zda konstanta `_UNICODE` nebo `_MBCS` byla definována v programu.  

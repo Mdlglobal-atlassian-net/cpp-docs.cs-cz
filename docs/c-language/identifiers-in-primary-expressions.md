@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384756"
 ---
 # <a name="identifiers-in-primary-expressions"></a>Identifikátory v primárních výrazech
 Identifikátory může mít integrální, **float**, `enum`, `struct`, **– typ union**, pole, ukazatele, nebo typ funkce. Identifikátor je primární výraz za předpokladu, že byl deklarován jako označující objekt (v tomto případě je to l hodnota) nebo jako funkce (v tomto případě je to označení funkce). V tématu [L-Value a R-Value výrazy](../c-language/l-value-and-r-value-expressions.md) pro definici l-value.  

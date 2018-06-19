@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380259"
 ---
 # <a name="targets"></a>Cíle
 V řádku závislostí, zadejte jeden nebo více cílů, pomocí libovolný platný název souboru, název adresáře nebo [pseudotarget](../build/pseudotargets.md). Oddělte více cílů jeden nebo více mezerami nebo karty. Cíle se nerozlišují malá a velká písmena. S názvy souborů je povoleno cesty. Cíl nesmí překročit 256 znaků. Pokud cílový před dvojtečkou jeden znak, použijte dělicí místa; jinak NMAKE interpretuje kombinaci písmeno dvojtečkou jako specifikátor jednotky.  

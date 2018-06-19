@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391256"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Možné chyby při předávání objektů CRT přes hranice knihovny DLL
 Při předání C Run-time (CRT) objekty například popisovače souborů, národní prostředí a proměnných prostředí do nebo z knihovny DLL (volání funkcí přes hranice knihovny DLL), můžete dojít k neočekávanému chování, pokud knihovnu DLL, stejně jako soubory volání do knihovny DLL, používat různé kopie Knihovny CRT.  

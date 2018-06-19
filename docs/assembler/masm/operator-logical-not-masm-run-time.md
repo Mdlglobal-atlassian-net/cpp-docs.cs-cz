@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057325"
 ---
 # <a name="operator--masm-run-time"></a>Operator – operátor! (Čas spuštění MASM)
 Logická negace. Použít jenom v [. Pokud](../../assembler/masm/dot-if.md), [. Při](../../assembler/masm/dot-while.md), nebo [. OPAKUJTE](../../assembler/masm/dot-repeat.md) blokuje a vyhodnocovány v době běhu, nikoli v době sestavení.  

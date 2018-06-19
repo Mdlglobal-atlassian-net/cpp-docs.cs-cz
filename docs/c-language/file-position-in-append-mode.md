@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381665"
 ---
 # <a name="file-position-in-append-mode"></a>Pozice souboru v režimu připojení
 **ANSI 4.9.3** jestli označení pozice souboru datového proudu připojení režimu je zpočátku nastavený na začátku nebo na konci souboru  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391204"
 ---
 # <a name="return-statement-c"></a>return – příkaz (C)
 `return` Příkaz ukončí provádění funkce a vrátí ovládací prvek volání funkce. Provádění pokračuje ve volání funkce okamžiku hned po volání. A `return` příkaz můžete také vrátit hodnotu volání funkce. V tématu [návratového typu](../c-language/return-type.md) Další informace.  

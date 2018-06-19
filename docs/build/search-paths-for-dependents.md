@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380482"
 ---
 # <a name="search-paths-for-dependents"></a>Cesty hledání pro závislosti
 Každé závislé má cestu volitelné vyhledávání zadaný následujícím způsobem:  

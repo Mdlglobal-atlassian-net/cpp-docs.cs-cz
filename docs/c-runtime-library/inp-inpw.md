@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388919"
 ---
 # <a name="inp-inpw"></a>inp, inpw
 Tyto funkce POSIX jsou zastaralé. Používat vyhovující ISO C++ [_inp – _inpw –, _inpd –](../c-runtime-library/inp-inpw-inpd.md) místo.  

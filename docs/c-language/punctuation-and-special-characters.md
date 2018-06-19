@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383901"
 ---
 # <a name="punctuation-and-special-characters"></a>Interpunkce a speciální znaky
 Interpunkce a speciální znaky ve znakové sadě C mají různé používá z uspořádání program text, který má definice úlohy, které kompilátor nebo zkompilovaný program provádí. Nezadávejte provést operaci. Některé interpunkčních znamének jsou také operátory (viz [operátory](../c-language/c-operators.md)). Kompilátor určuje jejich použití v kontextu.  

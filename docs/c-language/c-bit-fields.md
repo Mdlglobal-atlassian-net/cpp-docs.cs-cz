@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385673"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C
 Kromě deklarátory pro členové struktury a sjednocení může být struktura deklarátor také zadaný počet bitů, nazývá "pole bit". Jeho délka nastavena z deklarátor pro název pole dvojtečkou. Bitová pole interpretována jako typ integrální.  

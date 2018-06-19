@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382020"
 ---
 # <a name="unwind-procedure"></a>Unwind – procedura
 Unwind kódu jsou rozděleny na sestupném pořadí. Když dojde k výjimce celý kontext uložen operační systém v záznamu kontextu. Logika pro odesílání výjimek je pak vyvolána, která provádí následující kroky k nalezení obslužné rutiny výjimek.  

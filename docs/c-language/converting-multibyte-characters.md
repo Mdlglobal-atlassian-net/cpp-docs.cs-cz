@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381782"
 ---
 # <a name="converting-multibyte-characters"></a>Převod vícebajtových znaků
 **ANSI 3.1.3.4** aktuální národní prostředí používané k převedení více-bajtové znaky do odpovídající široké znaky (kódy) pro široké znak konstanta  

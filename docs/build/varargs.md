@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380505"
 ---
 # <a name="varargs"></a>Vararg
 Pokud parametry jsou předány prostřednictvím vararg (například třemi tečkami argumentů), pak v podstatě normální parametr předávání vztahuje, včetně přesahu pátého a následujících argumentů. Je znovu odpovědností volaného k výpisu argumentů, které adresu. Pouze hodnoty s plovoucí desetinnou čárkou celé číslo a s plovoucí desetinnou čárkou registrace obsahovat plovoucí hodnotu v případě, že volaného očekává hodnotu v registrech celé číslo.  

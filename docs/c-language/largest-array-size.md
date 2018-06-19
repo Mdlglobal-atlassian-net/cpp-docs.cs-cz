@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384477"
 ---
 # <a name="largest-array-size"></a>Maximální velikost pole
 **ANSI 3.3.3.4, 4.1.1** typ celé číslo, které jsou požadované pro uchovávání maximální velikost pole – to znamená, velikost **size_t –**  
