@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275146"
 ---
 # <a name="compiler-error-c3923"></a>C3923 chyby kompilátoru
 "člen": místní třída, struktura nebo union definice nejsou povoleny v členské funkce WinRT nebo spravované třídy  

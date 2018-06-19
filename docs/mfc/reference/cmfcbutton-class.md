@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378823"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton – třída
 `CMFCButton` Třída přidává funkce [CButton](../../mfc/reference/cbutton-class.md) třída například zarovnání text tlačítka, kombinace text tlačítka a bitovou kopii, vyberete kurzoru a zadat popis tlačítka.  

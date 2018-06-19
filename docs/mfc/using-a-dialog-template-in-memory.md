@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381235"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Použití šablony dialogového okna v paměti
 Místo použití metody v [dialogové okno Vytvoření tabulky](../mfc/creating-a-dialog-class-with-code-wizards.md), můžete vytvořit buď typ dialogového okna nepřímo z šablony dialogového okna v paměti. Další informace najdete v tématu třídy [CDialog](../mfc/reference/cdialog-class.md) v *odkaz knihovny MFC*.  

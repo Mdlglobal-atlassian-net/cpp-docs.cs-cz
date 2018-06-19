@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375683"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC – makra a globální prvky
 Knihovny Microsoft Foundation Class je možné rozdělit do dvou hlavních částech: (1) MFC – třídy a (2) makra a globální prvky. Pokud funkce nebo proměnná není členem třídy, je globální funkce nebo proměnná.  

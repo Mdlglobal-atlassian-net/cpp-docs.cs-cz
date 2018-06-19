@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380543"
 ---
 # <a name="slider-control-styles"></a>Posuvník – styly ovládacího prvku
 Ovládací prvky posuvníku ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) může mít svislé nebo vodorovné orientaci. Mají osové značky na obou stranách obě strany, nebo ani jeden z nich. Můžete také používají k určení rozsahu po sobě jdoucích hodnot. Tyto vlastnosti jsou řízena pomocí posuvník – styly ovládacích prvků, které určíte při vytváření ovládacího prvku posuvník.  

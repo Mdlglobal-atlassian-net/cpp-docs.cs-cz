@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367071"
 ---
 # <a name="class-factories-and-licensing"></a>Objekty pro vytváření tříd a licencování
 K vytvoření instance ovládacího prvku OLE, zavolá aplikace kontejneru členské funkce ovládacího prvku třídy objektu pro vytváření. Vlastní ovládací prvek je skutečný objekt OLE, objektu pro vytváření tříd je zodpovědný za vytváření instancí ovládacího prvku. Třída ovládacích prvků každé OLE musí mít objekt pro vytváření tříd.  

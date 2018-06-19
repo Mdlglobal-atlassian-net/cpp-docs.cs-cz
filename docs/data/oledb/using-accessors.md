@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104994"
 ---
 # <a name="using-accessors"></a>Použití přístupových objektů
 Následující témata popisují, jak určit typu přistupujícího objektu je nejvhodnější pro data aplikací a použití různé typy přístupových objektů, které jsou k dispozici:  

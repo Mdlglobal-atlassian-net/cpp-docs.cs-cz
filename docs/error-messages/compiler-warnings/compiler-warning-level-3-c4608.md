@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290683"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>Upozornění kompilátoru (úroveň 3) C4608
 'union_member' již byl inicializován jiný union člen v seznamu inicializátor 'union_member.  

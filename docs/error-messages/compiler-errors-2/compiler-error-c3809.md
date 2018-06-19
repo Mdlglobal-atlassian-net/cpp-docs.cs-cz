@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273037"
 ---
 # <a name="compiler-error-c3809"></a>C3809 chyby kompilátoru
 'class': spravované nebo WinRT typ nemůže mít žádné friend funkce nebo třídy nebo rozhraní  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358453"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Pokročilé funkce, Průvodce aplikací knihovny MFC
 Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je například nápověda, podpora tisku a tak dále. Každý oddíl popisuje doplňkovou podporu pro tyto rozšířené funkce.  

@@ -133,6 +133,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378636"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx – třída
 `CWinAppEx` Zpracovává stavu aplikace, uloží stav do registru, načte stav z registru, inicializuje správci aplikace a poskytuje odkazy na tyto stejné správci aplikace.  

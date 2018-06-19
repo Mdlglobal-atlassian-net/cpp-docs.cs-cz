@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381144"
 ---
 # <a name="specifying-levels-of-functionality"></a>Určení úrovní funkčnosti
 Tento článek popisuje, jak přidat následující úrovně funkcí, které vaše [CObject](../mfc/reference/cobject-class.md)-odvozené třídy:  

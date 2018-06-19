@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368810"
 ---
 # <a name="creating-an-mfc-application"></a>Vytvoření aplikace MFC
 Aplikace MFC je spustitelný soubor aplikace pro Windows, která je založena na knihovna Microsoft Foundation Class (MFC). Nejjednodušší způsob, jak vytvořit aplikaci MFC je použití Průvodce aplikací MFC.  

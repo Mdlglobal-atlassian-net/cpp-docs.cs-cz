@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291801"
 ---
 # <a name="compiler-warning-level-2-c4302"></a>C4302 kompilátoru upozornění (úroveň 2)
 'Převod': zkrácení z "typ 1" na "typ 2.  
