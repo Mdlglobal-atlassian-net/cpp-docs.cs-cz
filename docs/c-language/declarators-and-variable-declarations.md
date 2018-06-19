@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390603"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklarátor a deklarace proměnné
 Zbývající část tohoto oddílu popisuje formuláře a význam deklarace pro typy proměnných souhrnu v tomto seznamu. Konkrétně zbývající části popisují, jak deklarovat následující:  

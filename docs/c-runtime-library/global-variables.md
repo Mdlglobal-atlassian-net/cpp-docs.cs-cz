@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392036"
 ---
 # <a name="global-variables"></a>Globální proměnné
 Běhové knihovny Microsoft C poskytuje tyto globální proměnné nebo makra. Některé tyto globální proměnné nebo makra jsou zastaralé považuje bezpečnější verze funkční, které doporučujeme že používat místo globální proměnné.  

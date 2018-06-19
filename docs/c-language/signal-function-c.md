@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385833"
 ---
 # <a name="signal-function-c"></a>signal – funkce (C)
 **ANSI 4.7.1.1** sadu signály pro **signál** – funkce  

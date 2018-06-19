@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32396589"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv –, lldiv –
 
@@ -83,7 +84,7 @@ Jmenovatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**div** volat pomocí argumenty typu **int** vrací strukturu typu **div_t –**, což zahrnuje podílu a zbytek. Návratová hodnota s argumenty typu **dlouho** je **ldiv_t –**a návratovou hodnotu s argumenty typu **dlouho** **dlouho** je **lldiv_t**. **div_t –**, **ldiv_t –**, a **lldiv_t** jsou definovány v \<stdlib.h >.
+**div** volat pomocí argumenty typu **int** vrací strukturu typu **div_t –**, což zahrnuje podílu a zbytek. Návratová hodnota s argumenty typu **dlouho** je **ldiv_t –** a návratovou hodnotu s argumenty typu **dlouho** **dlouho** je **lldiv_t**. **div_t –**, **ldiv_t –**, a **lldiv_t** jsou definovány v \<stdlib.h >.
 
 ## <a name="remarks"></a>Poznámky
 

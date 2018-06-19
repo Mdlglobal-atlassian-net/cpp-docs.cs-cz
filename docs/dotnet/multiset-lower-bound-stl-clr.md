@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137293"
 ---
 # <a name="multisetlowerbound-stlclr"></a>multiset::lower_bound (STL/CLR)
 Najde začátek rozsahu, který odpovídá zadaným klíčem.  

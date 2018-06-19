@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385787"
 ---
 # <a name="truncation-of-floating-point-values"></a>Zkrácení hodnot s plovoucí desetinnou čárkou
 **ANSI 3.2.1.4** směr zkrácení nebo zaokrouhlení při s plovoucí desetinnou čárkou číslo je převedeno na užší číslo s plovoucí desetinnou čárkou  

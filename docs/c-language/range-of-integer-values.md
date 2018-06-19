@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385309"
 ---
 # <a name="range-of-integer-values"></a>Rozsah hodnot typu Integer
 **ANSI 3.1.2.5** reprezentace a nastaví hodnoty různých typů celých čísel  

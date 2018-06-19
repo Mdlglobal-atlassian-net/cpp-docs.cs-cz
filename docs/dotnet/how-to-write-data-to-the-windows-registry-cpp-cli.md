@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130799"
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Postupy: Zápis dat do registru systému Windows (C++/CLI)
 Následující příklad kódu používá <xref:Microsoft.Win32.Registry.CurrentUser> klíč k vytvoření zapisovatelné instance <xref:Microsoft.Win32.RegistryKey> třída odpovídající **softwaru** klíč. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> Metoda se pak používá k vytvoření nového klíče a přidejte do dvojice klíč/hodnota.  

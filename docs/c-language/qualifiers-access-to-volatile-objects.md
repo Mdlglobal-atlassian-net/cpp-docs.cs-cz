@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384675"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>Kvalifikátory: přístup k nestálým objektům
 **ANSI 3.5.5.3** co se považuje za přístup k objektu, který má volatile kvalifikovaný typ  

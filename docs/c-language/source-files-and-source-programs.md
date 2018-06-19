@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391191"
 ---
 # <a name="source-files-and-source-programs"></a>Zdrojové soubory a zdrojové programy
 Zdrojový program lze rozdělit do jednoho nebo více „zdrojových souborů“, tzv. „jednotek převodu“. Vstup kompilátoru se nazývá „jednotka převodu“.  

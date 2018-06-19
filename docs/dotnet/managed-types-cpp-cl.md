@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135856"
 ---
 # <a name="managed-types-ccl"></a>Spravované typy (C++/CL)
 Syntaxe deklarace spravované typy a vytváření a používání objektů z těchto typů výrazně upravíte ze spravovaných rozšíření jazyka C++ na Visual C++. K tomu bylo potřeba k podpoře jejich integrace v rámci systém typů ISO C++. Tyto změny jsou podrobně uvedeny v následující témata.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388279"
 ---
 # <a name="control-flags"></a>Příznaky ovládacích prvků
 Ladicí verze běhové knihovny Microsoft C používá následující příznaky tak, aby řízení přidělení haldy a procesu generování sestav. Další informace najdete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).  

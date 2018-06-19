@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380911"
 ---
 # <a name="where-to-define-macros"></a>Místo definice maker
 Definice maker v příkazového řádku, příkazového řádku, souboru pravidel nebo Tools.ini souboru.  

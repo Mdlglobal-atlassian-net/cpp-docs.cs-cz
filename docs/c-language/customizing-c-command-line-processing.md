@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384395"
 ---
 # <a name="customizing-c-command-line-processing"></a>Přizpůsobení zpracování příkazového řádku jazyka C
 Pokud aplikace nepřijímá argumenty příkazového řádku, je možné ušetřit malé množství místa potlačením použití rutiny knihovny, která vykonává zpracování příkazového řádku. Tato rutina se nazývá **_setargv –** (nebo **_wsetargv** v prostředí široká charakterová), jak je popsáno v [rozbalení argumentů zástupných znaků](../c-language/expanding-wildcard-arguments.md). Chcete-li potlačit jeho použití, definovat rutiny, která nemá žádnou v soubor obsahující **hlavní** funkce a pojmenujte ji **_setargv –** (nebo **_wsetargv** znakem celou prostředí). Volání **_setargv –** nebo **_wsetargv** pak splňují vaše definice **_setargv –** nebo **_wsetargv** , a je knihovní verze není načtená.  

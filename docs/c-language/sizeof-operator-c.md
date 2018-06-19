@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388322"
 ---
 # <a name="sizeof-operator-c"></a>sizeof – operátor (C)
 Operátor `sizeof` poskytuje velikost úložiště (v bajtech) potřebného k uložení objektu typu operandu. Tento operátor umožňuje Vyhněte se zadání velikosti data závislá na počítače ve vašich aplikacích.  

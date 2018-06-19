@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388572"
 ---
 # <a name="generic-text-mappings"></a>Mapování obecného textu
 Pro zjednodušení psaní kódu pro mezinárodní trhy, jsou definovány mapování obecného textu v Tchar –. H pro:  

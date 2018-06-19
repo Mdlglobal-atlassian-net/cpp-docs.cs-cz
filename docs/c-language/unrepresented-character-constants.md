@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385709"
 ---
 # <a name="unrepresented-character-constants"></a>Nereprezentované konstanty znaků
 **ANSI 3.1.3.4** nastavena hodnota konstanta znaků celé číslo, který obsahuje posloupnost znaků nebo řídicí není znázorněná znaková sada spuštění základní nebo rozšířené znak pro široká Znaková konstanta  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385094"
 ---
 # <a name="c-floating-point-constants"></a>Konstanty jazyka C s plovoucí desetinnou čárkou
 "S plovoucí desetinnou čárkou konstanta" je desetinné číslo představující podepsaný reálné číslo. Reprezentace podepsaný reálné číslo zahrnuje celočíselnou část, zlomkové části a exponentem. Konstanty s plovoucí desetinnou čárkou znázornit s plovoucí desetinnou čárkou, které nelze změnit.  

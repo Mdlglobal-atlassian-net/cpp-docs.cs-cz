@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32396193"
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 
@@ -111,7 +112,7 @@ Tyto funkce ověřit jejich parametrů. Pokud *timeptr* je ukazatel s hodnotou n
 
 ## <a name="example"></a>Příklad
 
-Tento program umístí systémového času v dlouhých celých čísel **aclock**, překládá do struktury **newtime** a převede jej na řetězec formulář pro výstup, pomocí **asctime –**funkce.
+Tento program umístí systémového času v dlouhých celých čísel **aclock**, překládá do struktury **newtime** a převede jej na řetězec formulář pro výstup, pomocí **asctime –** funkce.
 
 ```C
 // crt_asctime.c

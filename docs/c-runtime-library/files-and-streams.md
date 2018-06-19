@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390515"
 ---
 # <a name="files-and-streams"></a>Soubory a proudy
 Program komunikuje s cílové prostředí pomocí čtení a zápis souborů. Soubor může být:  

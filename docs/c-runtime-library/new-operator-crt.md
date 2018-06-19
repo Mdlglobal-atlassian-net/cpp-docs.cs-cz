@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389868"
 ---
 # <a name="operator-newcrt"></a>new(CRT) – operátor
 Od verze Visual Studio 2013, Universal C Runtime (UCRT) už podporuje nové C++ konkrétní operátor a operátor odstranit funkce. Tyto jsou teď součástí standardní knihovny C++. Další informace najdete v tématu [nové a odstraňte operátory](../cpp/new-and-delete-operators.md) a [operátor new](../cpp/new-operator-cpp.md) v referenční příručka jazyka C++. 

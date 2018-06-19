@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131339"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>Iterování přes kolekci knihoven C++ Standard pomocí pro každou
 `for each` – Klíčové slovo lze použít k iteraci přes kolekci standardní knihovna C++.  

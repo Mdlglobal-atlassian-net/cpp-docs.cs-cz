@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383433"
 ---
 # <a name="implementation-defined-behavior"></a>Chování definované implementací
 ANSI X3.159-1989, *American National standardní systémů informace* - *programovací jazyk* - *C*, obsahuje oddíl s názvem "Problémy s přenositelností." Část ANSI obsahuje seznam oblastí jazyka C, které standard ANSI nechává otevřené pro konkrétní implementaci. Tato část popisuje, jak jazyk Microsoft C zpracovává tyto oblasti definované implementací jazyka C.  

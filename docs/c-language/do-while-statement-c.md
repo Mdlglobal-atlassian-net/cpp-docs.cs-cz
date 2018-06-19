@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385429"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C)
 `do-while` Příkaz umožňuje opakujte příkaz nebo složený příkaz, dokud zadaného výrazu se změní na hodnotu false.  

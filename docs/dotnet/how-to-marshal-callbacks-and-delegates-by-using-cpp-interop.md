@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132775"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++
 Toto téma ukazuje zařazování zpětných volání a delegátů (spravovaná verze zpětné volání) mezi spravovanými a nespravovanými kódu pomocí Visual C++.  

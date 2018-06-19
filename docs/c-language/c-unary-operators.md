@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381236"
 ---
 # <a name="c-unary-operators"></a>Unární operátory jazyka C
 Unární operátory zobrazí před jejich operand a přidružit zprava doleva.  

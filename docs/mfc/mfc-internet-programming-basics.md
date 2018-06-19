@@ -31,6 +31,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255606"
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientské a serverové aplikace. Mnoho nových aplikací se zapisují pro Internet, a jako technologie, možnosti prohlížeče a změnit možnosti zabezpečení, budou zapisovat nových typů aplikací. Spuštění prohlížeče na klientských počítačích, které umožňují přístup k Internetu a zobrazení stránky HTML, které obsahují text, grafiky, ovládací prvky ActiveX a dokumenty. Servery poskytují FTP, HTTP a gopher služby a spuštění aplikací rozšíření server použití rozhraní CGI. Vlastní aplikace můžete načíst informace a poskytování dat na Internetu.  

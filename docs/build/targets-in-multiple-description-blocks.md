@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380285"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>Cíle v blocích několika popisů
 Chcete-li aktualizovat cíl v více než jeden blok popis pomocí jiné příkazy, zadejte dvě po sobě jdoucích dvojtečky (:) mezi cíle a závislé objekty.  

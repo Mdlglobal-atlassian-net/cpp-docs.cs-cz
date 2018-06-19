@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384343"
 ---
 # <a name="c-comments"></a>Komentáře v jazyce C
 "Komentář" je posloupnost znaků počínaje kombinaci dopředné lomítko/hvězdičky (<b>/\*</b>), je považován za jeden prázdný znak kompilátorem a v opačném případě je ignorováno. Komentář může obsahovat libovolnou kombinaci znaků z reprezentovat znaková sada, včetně znaky nového řádku, s výjimkou oddělovač "ukončení komentáře" (<b>\*/</b>). Komentáře mohou zaujímat více než jeden řádek, ale nelze je vnořovat.  

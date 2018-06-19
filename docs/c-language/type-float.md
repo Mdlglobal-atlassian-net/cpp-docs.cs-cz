@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390932"
 ---
 # <a name="type-float"></a>Float – typ
 Čísla s plovoucí desetinnou čárkou použijte formát IEEE (Institute of Electrical and Electronics Engineers). Hodnoty jednoduchou přesností s typ float mají 4 bajtů, skládající se z přihlašovací bit, exponentem binární nad 127 8bitové a mantisa 23 bitů. Mantisa představuje číslo mezi 1.0 a 2.0. Vzhledem k tomu, že vysoce bitem mantisa je vždy 1, se neukládají v číslo. Tento zápis poskytuje řadu přibližně 3.4E-38 3.4E + 38 pro typ float.  

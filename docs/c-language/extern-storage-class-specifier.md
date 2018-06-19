@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388725"
 ---
 # <a name="extern-storage-class-specifier"></a>extern – specifikátor třídy úložiště
 Proměnná deklarovaná pomocí specifikátoru paměťové třídy `extern` je odkaz na proměnnou se stejným názvem, která je definovaná na vnější úrovni v jakémkoli zdrojovém souboru programu. Pomocí vnitřní deklarace `extern` lze definice proměnné na vnější úrovni zviditelnit v rámci bloku. Není-li na vnější úrovni deklarováno jinak, je proměnná deklarovaná pomocí klíčového slova `extern` viditelná pouze v bloku, ve kterém je deklarována.  

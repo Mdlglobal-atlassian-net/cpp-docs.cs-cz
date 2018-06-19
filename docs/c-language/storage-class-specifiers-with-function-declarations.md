@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389660"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Specifikátory třídy úložiště s deklaracemi funkce
 Můžete použít buď **statické** nebo `extern` specifikátor třídy úložiště v deklaracích funkce. Funkce mají vždy globální životnost.  

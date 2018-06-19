@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389186"
 ---
 # <a name="scope-and-visibility"></a>Rozsah a viditelnost
 „Viditelnost“ identifikátoru určuje části programu, ve kterých lze na identifikátor odkazovat – jeho „rozsah“. Identifikátor je zobrazen (tj. lze jej použít) pouze v částech programu zahrnutých jeho „rozsahem“, což může představovat omezení (ve smyslu rostoucího omezení) souboru, funkce, bloku nebo prototypu funkce, ve kterých se vyskytuje. Rozsah identifikátoru je součástí programu, ve kterém lze použít název. Občas se nazývá „lexikální rozsah“. Existují čtyři druhy rozsahů: funkce, soubor, blok a prototyp funkce.  

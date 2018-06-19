@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380531"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Generovat prototypy funkcí)
 Odebrat. Vytvoří prototyp funkce pro každou funkci definovanou v zdrojový soubor, ale nejde kompilovat zdrojový soubor.  

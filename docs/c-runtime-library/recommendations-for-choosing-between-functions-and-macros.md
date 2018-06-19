@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389631"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Doporučení k výběru mezi funkcemi a makry
 Většina rutiny běhové knihovny Microsoft kompilované nebo sestaví funkce, ale některé rutiny jsou implementované jako makra. Když soubor hlaviček deklaruje funkci a verze makro rutiny, definici makra má přednost před, protože se zobrazí vždy po deklaraci funkce. Při vyvolání rutiny, která je implementovaná jako funkce a makra, můžete vynutit kompilátoru na použití funkce verze dvěma způsoby:  

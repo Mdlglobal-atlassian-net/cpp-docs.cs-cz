@@ -28,6 +28,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451396"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` Proměnné je ukazatel na pole ukazatele na řetězců vícebajtových znaků, které tvoří proces prostředí. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [getenv_s –, _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md) a [_putenv_s –, _wputenv_s –](../c-runtime-library/reference/putenv-s-wputenv-s.md), který má být použit místo globální proměnné. `_environ` je v Stdlib.h deklarována.  

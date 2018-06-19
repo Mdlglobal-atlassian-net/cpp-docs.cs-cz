@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382822"
 ---
 # <a name="execution-character-set"></a>Znaková sada spuštění
 Tento obsah se často odkazuje na „znakovou sadu spuštění“. Znaková sada spuštění není nutně shodná se zdrojovou znakovou sadou použitou pro psaní programů jazyka C. Znaková sada spuštění obsahuje všechny znaky zdrojové znakové sady spolu s nulovým znakem, znakem nového řádku, backspace, horizontálního tabulátoru, vertikálního tabulátoru, návratu na začátek řádku a řídicí sekvence. V jiných implementacích se znaková sada spuštění a zdrojová znaková sada mohou lišit.  

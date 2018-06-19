@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135882"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Postupy: Rozšíření knihovny zařazování
 Toto téma vysvětluje, jak rozšíření knihovny zařazování zajistit další převody mezi datovými typy. Uživatelé mohou rozšíření knihovny zařazování pro všechny převody dat není aktuálně podporovaná knihovny.  

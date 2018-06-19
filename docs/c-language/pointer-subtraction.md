@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383722"
 ---
 # <a name="pointer-subtraction"></a>Odečtení ukazatele
 **ANSI 3.3.6, 4.1.1** typ celé číslo, které jsou požadované pro uchovávání rozdíl mezi dvěma ukazatele k prvkům ve stejném poli **ptrdiff_t –**  

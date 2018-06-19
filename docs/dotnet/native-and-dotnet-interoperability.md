@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134088"
 ---
 # <a name="native-and-net-interoperability"></a>Nativní funkce a vzájemná funkční spolupráce rozhraní .NET
 Visual C++ podporuje funkce interoperability umožňujících spravovanými a nespravovanými konstrukce existovat a spolupracovat v rámci stejného sestavení a to i ve stejném souboru. Podporuje malou podmnožinu tuto funkci, jako je například P/Invoke i jinými jazyky rozhraní .NET, ale většina podpory interoperability poskytované Visual C++ není k dispozici v dalších jazycích.  

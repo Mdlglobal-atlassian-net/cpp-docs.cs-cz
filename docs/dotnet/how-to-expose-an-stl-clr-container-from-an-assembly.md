@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140170"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Postupy: Vystavení kontejneru STL/CLR ze sestavení
 STL/CLR – kontejnery, jako `list` a `map` jsou implementované jako třídy ref šablon. Protože jsou C++ šablony vytvořeny v době kompilace, dvě šablony třídy, které přesně stejným podpisem, ale jsou v různých sestavení jsou ve skutečnosti různých typů. To znamená, že šablona třídy nelze použít napříč hranicemi sestavení.  

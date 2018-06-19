@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381652"
 ---
 # <a name="c-constants"></a>Konstanty jazyka C
 "Konstanta" je číslo, znak nebo textový řetězec, který lze použít jako hodnotu v programu. Použít konstanty představují s plovoucí desetinnou čárkou, celé číslo, výčet nebo znakových hodnot, které nelze upravit.  

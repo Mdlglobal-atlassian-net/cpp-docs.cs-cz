@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255990"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM plochy součásti
 Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablon C++ třídy, které zjednodušují programování objekty modelu COM (Component Object). Pokud chcete plně využít výhod ATL, se důrazně doporučuje pracovní znalost COM.  
