@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254307"
 ---
 # <a name="compiler-error-c3395"></a>C3395 chyby kompilátoru
 'function': __declspec(dllexport) nelze použít pro funkci s \__clrcall konvence volání  

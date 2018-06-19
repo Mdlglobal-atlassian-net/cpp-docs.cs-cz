@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245365"
 ---
 # <a name="compiler-error-c3020"></a>C3020 chyby kompilátoru
 'příkaz var': index proměnná OpenMP smyčka for nemůže být upraven do těla smyčky  

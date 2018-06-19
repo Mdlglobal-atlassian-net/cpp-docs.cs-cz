@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355389"
 ---
 # <a name="adding-an-mfc-class"></a>Přidání třídy knihovny MFC
 Chcete-li přidat třídy odvozené od třídy knihovna Microsoft Foundation Class (MFC) do projektu, použijte **přidat třídu** příkaz k dispozici v [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Zadejte název nové třídy, vyberte základní třídy a vyberte ID dialogových oken, ke kterému je přiřazeno (pokud existuje). Kód průvodce vytvoří soubor hlaviček a soubor implementace a přidá je do projektu.  

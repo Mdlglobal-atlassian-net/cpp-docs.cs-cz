@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353692"
 ---
 # <a name="handling-customization-notifications"></a>Zpracování oznámení o přizpůsobení
 Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce přizpůsobení, včetně definovaná systémem přizpůsobení dialogové okno, umožnit uživatelům vložit, odstranit nebo změna uspořádání tlačítek panelu nástrojů. Aplikace určuje, zda jsou k dispozici funkce přizpůsobení a ovládací prvky v rozsahu, ke kterému se uživatel může přizpůsobit panelu nástrojů.  

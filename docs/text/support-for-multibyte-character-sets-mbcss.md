@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863631"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Podpora vícebajtových znakových sad (MBCS)
 Vícebajtové znakové sady (MBCS) jsou starším přístupem k potřebě podporovat znakové sady, které nelze reprezentovat jediným bajtem, jako například japonštinu a čínštinu. Při novém vývoji by měla být pro všechny textové řetězce použita sada Unicode, snad kromě systémových řetězců, které koncový uživatel neuvidí. Sada MBCS je starou technologií a pro nový vývoj se nedoporučuje.  

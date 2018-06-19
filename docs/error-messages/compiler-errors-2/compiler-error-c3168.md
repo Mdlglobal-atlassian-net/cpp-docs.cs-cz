@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245235"
 ---
 # <a name="compiler-error-c3168"></a>C3168 chyby kompilátoru
 'type': Neplatná základní typ pro příkaz enum  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349223"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 Implementace funkce OLE v programu ovlivní vaše uživatelské rozhraní několika způsoby:  

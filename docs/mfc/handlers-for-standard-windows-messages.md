@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348209"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Obslužné rutiny pro standardní zprávy Windows
 Výchozí obslužné rutiny pro standardní zprávy Windows (**WM_**) jsou předdefinované v třídě `CWnd`. Knihovny tříd základny názvy pro tyto obslužné rutiny na název zprávy. Třeba obslužná rutina pro `WM_PAINT` zprávy je deklarován v `CWnd` jako:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235518"
 ---
 # <a name="compiler-error-c2781"></a>C2781 chyby kompilátoru
 "prohlášení": očekává aspoň value1 argument - value2 poskytuje  

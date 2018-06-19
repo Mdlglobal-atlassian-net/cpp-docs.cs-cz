@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863403"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Klávesy akcelerátoru pro editor dialogového okna
 Níže jsou výchozí klávesy akcelerátoru pro editor příkazy dialogové okno. Klávesové zkratky, klepněte na tlačítko **možnosti** na **nástroje** nabídce zvolte **klávesnice** pod **prostředí** složky. Další informace najdete v tématu [identifikuje a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

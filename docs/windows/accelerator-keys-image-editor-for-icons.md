@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861529"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Klávesy akcelerátoru (editor obrázků pro ikony)
 V následující tabulce jsou klávesy akcelerátoru pro editor příkazy bitové kopie, které jsou vázány na klíče ve výchozím nastavení. Klávesy akcelerátoru změnit, klikněte na **možnosti** na **nástroje** nabídce a potom zvolte **klávesnice** pod **prostředí** složky. Další informace najdete v tématu [identifikuje a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

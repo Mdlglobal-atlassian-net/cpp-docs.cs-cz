@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351291"
 ---
 # <a name="optimizing-control-drawing"></a>Optimalizace vykreslování ovládacích prvků
 Při ovládacího prvku je odeslán pokyn k vykreslení sám v kontextu zadaný kontejner zařízení, je obvykle vybere objekty GDI (například pera, štětce a písem) do kontextu zařízení, provede jeho kreslení operací a obnoví předchozí objekty GDI. Pokud kontejneru má více ovládacích prvků, které mají být vykresleny do stejného kontextu zařízení a každý ovládací prvek vybere GDI objekty, které vyžaduje, čas může být uloženy ovládací prvky neobnovujte jednotlivě dříve vybrané objekty. Po čerpají všechny ovládací prvky kontejneru automaticky obnovit původní objekty.  

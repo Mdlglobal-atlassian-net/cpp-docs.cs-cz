@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252105"
 ---
 # <a name="compiler-error-c3044"></a>C3044 chyby kompilátoru
 'sekce': povoleny pouze přímo vnořené v části "části" OpenMP – direktiva  

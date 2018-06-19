@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861224"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Postupy: Převody mezi různými typy řetězců
 Toto téma ukazuje, jak převést různými typy řetězců Visual C++ do jiných řetězců. Zahrnout typy řetězců, které jsou uvedeny `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), a <xref:System.String?displayProperty=fullName>. Ve všech případech přišla kopii řetězec převést na nový typ. Některé změny provedené nový řetězec nebude mít vliv na původním řetězcem a naopak.  

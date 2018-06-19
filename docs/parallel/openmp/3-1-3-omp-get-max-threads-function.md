@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687508"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads – funkce
 **Omp_get_max_threads –** funkce vrátí celé číslo, které se musí být alespoň tak velké, jako je počet vláken, která se použije k vytvoření týmu, pokud paralelní oblast bez **num_threads** – klauzule měla být v tomto bodě došlo v kódu. Formát vypadá takto:  

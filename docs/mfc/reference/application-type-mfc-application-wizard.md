@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353436"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Typ aplikace, Průvodce aplikací knihovny MFC
 Pomocí této stránky [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md) návrh a přidat do nové aplikace MFC základní funkce.  

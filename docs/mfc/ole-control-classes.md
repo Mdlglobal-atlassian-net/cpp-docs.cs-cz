@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355350"
 ---
 # <a name="ole-control-classes"></a>OLE – třídy ovládacích prvků
 Toto jsou primární třídy, které chcete použít při zápisu ovládací prvky OLE. `COleControlModule` Třídy v modul OLE řízení je třeba [CWinApp](../mfc/reference/cwinapp-class.md) třídy v aplikaci. Každý modul implementuje jeden nebo více ovládacích prvků OLE; Tyto ovládací prvky jsou reprezentované pomocí `COleControl` objekty. Tyto ovládací prvky komunikovat s jejich kontejnery pomocí `CConnectionPoint` objekty.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861542"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Změna pořadí karet ovládacích prvků
 Pořadí je pořadí, ve kterém klávesy TAB přesune zaměření pro vstup z jeden ovládací prvek v rámci dialogového okna. Pořadí karet obvykle pokračuje zleva doprava a shora dolů v dialogovém okně. Má každý ovládací prvek **zarážek tabulátorů** vlastnost, která určuje, zda ovládacího prvku obdrží zaměření pro vstup.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352527"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidání vlastních událostí
 Vlastní události lišit od uložených událostí v tom, že nejsou automaticky aktivována třídou `COleControl`. Vlastní události rozpozná určité akce, dáno vývojář ovládacího prvku, jako událost. Položky mapy událostí pro vlastní události jsou reprezentované pomocí `EVENT_CUSTOM` makro. V následující části implementuje vlastní události pro projekt ovládací prvek ActiveX, který byl vytvořen pomocí Průvodce ovládacím prvkem ActiveX.  

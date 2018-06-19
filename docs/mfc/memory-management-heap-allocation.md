@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352409"
 ---
 # <a name="memory-management-heap-allocation"></a>Správa paměti: Přidělení haldy
 Halda je vyhrazená pro potřeby přidělení paměti programu. Je oblast kromě kód programu a zásobníku. Typické programy C použít funkce `malloc` a **volné** a přidělit paměť haldy navrácení. Ladicí verze knihovny MFC poskytuje upravené verze předdefinované operátory jazyka C++ **nové** a **odstranit** a přidělit navrácení objekty v halda paměti.  

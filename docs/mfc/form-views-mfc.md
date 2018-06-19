@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349041"
 ---
 # <a name="form-views-mfc"></a>Zobrazení formulářů (MFC)
 Forms můžete přidat do žádné aplikace Visual C++, který podporuje knihovny MFC, včetně [aplikace založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) (jedna třída jejichž zobrazení je odvozený od `CFormView`). Pokud nebyl vytvořen původně aplikace podporují formuláře, Visual C++ přidá tato podpora pro vás, když vložíte nového formuláře. V aplikaci SDI a MDI, který implementuje výchozí [document/view – architektura](../mfc/document-view-architecture.md), když uživatel vybere `New` příkaz (ve výchozím nastavení, na **souboru** nabídky), Visual C++ vyzývá uživatele k Vyberte z dostupných formulářů.  

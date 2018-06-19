@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349588"
 ---
 # <a name="managing-the-current-view"></a>Správa aktuálního zobrazení
 Jako součást výchozí implementaci třídy oken s rámečkem uchovává informace okně s rámečkem o aktuálně aktivní zobrazení. Pokud okně s rámečkem obsahuje více než jedno zobrazení, jako například v rozděleném okně, je aktuální zobrazení poslední zobrazení používá. Aktivní zobrazení je nezávislé na aktivní okno v systému Windows nebo aktuální zaměření pro vstup.  

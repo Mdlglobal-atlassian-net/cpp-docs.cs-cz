@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864912"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Třídy a struktury (rozšíření komponent C++)
 Deklaruje třídě nebo struktuře jejichž *doba života objektu* je spravována automaticky. Pokud objekt již není dostupný nebo mimo rozsah, Visual C++ automaticky zahodí paměti, který je přidělen k objektu.  

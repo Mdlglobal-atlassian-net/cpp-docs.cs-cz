@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348658"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>MFC – třídy pro tvorbu internetových klientských aplikací
 MFC poskytuje následující třídy a globální funkce pro psaní internetových klientských aplikací. Odsazení označuje, že třída je odvozena od třídy neodsazeného nad ním. `CGopherFile` a `CHttpFile` odvozena od `CInternetFile`, např. Tyto třídy a globální funkce jsou deklarované v AFXINET. H, s výjimkou `CFileFind`, kterého je deklarovaná v afx –. H.  

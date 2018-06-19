@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349464"
 ---
 # <a name="message-handling-and-command-targets"></a>Zpracování zpráv a cíle příkazů
 Rozhraní příkazového odesílání `IOleCommandTarget` definuje jednoduchý a rozšiřitelné mechanismus pro dotazování a spustit příkazy. Tento mechanismus je jednodušší než Automation `IDispatch` protože závisí na standardní sadu příkazů; zcela příkazy zřídka mají argumenty, a je zahrnuta žádné informace o typu (bezpečnost typů dojde ke snížení pro argumenty příkazu také).  

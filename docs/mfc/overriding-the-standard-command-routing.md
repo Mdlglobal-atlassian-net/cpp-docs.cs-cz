@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352809"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Přepsání standardního směrování příkazů
 Ve výjimečných případech při musí implementovat některé varianta standardní framework směrování, lze jej přepsat. Cílem je, chcete-li změnit směrování v jedné nebo více tříd přepsáním `OnCmdMsg` v těchto tříd. Postupujte následovně:  

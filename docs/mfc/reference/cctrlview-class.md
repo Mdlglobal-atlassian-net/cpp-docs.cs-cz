@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353163"
 ---
 # <a name="cctrlview-class"></a>CCtrlView – třída
 Přizpůsobení zobrazení dokumentu architekturu pro běžné ovládací prvky, které podporuje verze Windows 98 a systému Windows NT 3.51 a novější.  

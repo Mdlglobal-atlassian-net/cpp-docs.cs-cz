@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864931"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Základní mechanismy atributů
 Existují tři způsoby, jak vložit atributy do projektu. První můžete je ručně do zdrojového kódu. Druhý můžete vložit pomocí mřížku vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání okno Vlastnosti a různých průvodců najdete v tématu [vytváření a správa projekty Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

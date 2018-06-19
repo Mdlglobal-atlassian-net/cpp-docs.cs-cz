@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348544"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE – pozadí: Kontejnery a servery
 Aplikace kontejneru je aplikace, která může obsahovat vložené nebo propojené položky do svých vlastních dokumentů. Dokumenty spravuje aplikace kontejneru musí být schopný k uložení a zobrazení OLE dokumentu součásti a také data vytvořená pomocí vlastní aplikace. Aplikace kontejneru musí také umožňují uživatelům vložit nové položky nebo upravit existující položky tak, že aktivace serverové aplikace, pokud je to nezbytné. Požadavky uživatelského rozhraní aplikace kontejneru jsou uvedené v článku [kontejnery: problémy uživatelského rozhraní](../mfc/containers-user-interface-issues.md).  

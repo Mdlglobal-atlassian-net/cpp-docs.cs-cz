@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351490"
 ---
 # <a name="derived-window-classes"></a>Odvozené třídy oken
 Můžete vytvořit windows přímo z [CWnd](../mfc/reference/cwnd-class.md), nebo odvozovat nové okno z `CWnd`. Toto je, jak obvykle vytvoříte vlastní vlastní windows. Většina windows používá v rámci programu jsou však místo toho vytvářeny z jednoho z `CWnd`-odvozené třídy oken s rámečkem poskytl MFC.  

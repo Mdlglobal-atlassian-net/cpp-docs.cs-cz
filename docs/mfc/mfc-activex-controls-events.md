@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348387"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC – ovládací prvky ActiveX: Události
 Ovládací prvky ActiveX do kontejneru, který má se něco stalo do ovládacího prvku pomocí události. Běžné události příklady klikne na ovládací prvek, data zadaná pomocí klávesnice a změny ve stavu ovládacího prvku. Pokud dojde k těmto akcím, aktivuje se ovládacího prvku událost upozorní kontejneru.  

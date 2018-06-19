@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350778"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností
 Ovládací prvek ActiveX v některých případech bude mít více vlastností než to bude přiměřeně vejde na jednu stránku vlastností. V takovém případě můžete přidat stránky vlastností do ovládacího prvku ActiveX k zobrazení těchto vlastností.  

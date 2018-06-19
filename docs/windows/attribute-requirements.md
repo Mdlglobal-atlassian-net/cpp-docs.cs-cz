@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863566"
 ---
 # <a name="attribute-requirements"></a>Požadavky atributů
 Požadavky uvedené pro atributy C++ popisují typy projektů, nastavení kompilátoru a jiné informace potřebné pro atribut pracovat. Kategorie informací, jsou popsané níže.  

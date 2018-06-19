@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254534"
 ---
 # <a name="compiler-error-c3382"></a>C3382 chyby kompilátoru
 'sizeof' není podporován s/clr: safe  

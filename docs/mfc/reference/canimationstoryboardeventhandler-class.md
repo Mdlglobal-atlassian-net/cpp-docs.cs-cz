@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352220"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler – třída
 Implementuje zpětné volání, která je volána rozhraním API animace, když se změní stav storyboard nebo se aktualizuje scénáře.  

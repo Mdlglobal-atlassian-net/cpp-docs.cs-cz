@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348358"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Zpracování zpráv s oznámením ovládacího prvku karta
 Jak uživatelé kliknou na kartách nebo tlačítka, ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) odešle zprávy s oznámením jeho nadřazeného okna. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Když uživatel klikne na kartě, můžete chtít přednastavení data ovládacího prvku na stránce před jejich zobrazením.  

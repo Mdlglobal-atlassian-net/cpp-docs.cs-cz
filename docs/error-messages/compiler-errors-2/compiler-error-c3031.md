@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244970"
 ---
 # <a name="compiler-error-c3031"></a>C3031 chyby kompilátoru
 'příkaz var': proměnné v klauzuli 'snížení' musí být skalární aritmetické typu  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348176"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jakým způsobem volá rámec váš kód
 Je třeba pochopit o vztah mezi vašeho zdrojového kódu a kódu v rozhraní MFC framework. Při spuštění aplikace většinu toku řízení se nachází v rozhraní framework kódu. Rozhraní framework spravuje smyčce zpráv, který získá zprávy ze systému Windows se uživatel rozhodne příkazy a upravuje dat zobrazení. Události, které rozhraní může zpracovat samostatně nespoléhejte na váš kód vůbec. Například rozhraní znát postup zavřete okna a ukončete aplikaci v reakci na příkazy uživatele. Jako s tyto úlohy, používá rozhraní obslužné rutiny zpráv a virtuálních funkcí jazyka C++ tak, abyste získali příležitosti reagovat na tyto události také. Váš kód nejsou v ovládacím prvku, ale; rozhraní je.  

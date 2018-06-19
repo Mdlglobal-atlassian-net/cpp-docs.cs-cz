@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348480"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI – makro
 Použití **vlastnosti** okno pro připojení objektu uživatelského rozhraní pro obslužnou rutinu aktualizace příkaz v příkazu cílový objekt. Se automaticky připojí ID objektu uživatelské rozhraní `ON_UPDATE_COMMAND_UI` makro a vytvořit obslužnou rutinu v objektu, která zpracuje aktualizaci. V tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md) Další informace.  

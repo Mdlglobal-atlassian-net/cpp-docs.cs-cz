@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348677"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Nastavení aplikace, průvodce MFC DLL
 Na této stránce Průvodce MFC DLL návrh a přidat základní funkce do nového projektu knihovny MFC DLL.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348413"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Zpracování zpráv s oznámením v ovládacím prvku matrice
 V nadřazené třídě ovládacího prvku matrice, vytvořit `OnChildNotify` funkce obslužná rutina s příkazem přepínač pro libovolný matrice – ovládací prvek (`CReBarCtrl`) chcete zpracování zpráv s oznámením. Oznámení se odesílají do nadřazeného okna, když uživatel nastavuje tažením objekty v ovládacím prvku matrice změny rozložení pruhy matrice, odstraní pásmech z ovládacího prvku matrice a tak dále.  

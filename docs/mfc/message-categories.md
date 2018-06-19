@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348446"
 ---
 # <a name="message-categories"></a>Kategorie zpráv
 Jaké zprávy napíšete obslužné rutiny pro existují tří kategorií:  

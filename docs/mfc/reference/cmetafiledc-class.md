@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368144"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC – třída
 Implementuje WMF, který obsahuje posloupnost grafiky zařízení rozhraní GDI příkazy, které můžete přehráním vytvořit požadovanou image nebo text.  

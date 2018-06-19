@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690998"
 ---
 # <a name="4-environment-variables"></a>4. Proměnné prostředí
 Tato kapitola popisuje OpenMP C a C++ API proměnných prostředí (nebo ekvivalentní mechanismy specifických pro platformy), řídit spuštění paralelní kódu.  Názvy proměnných prostředí, musí být velkými písmeny. Hodnoty, které jsou jim přiřazeny jsou malá a velká písmena a může mít úvodní a koncové mezery.  Úpravy hodnot po spuštění programu se ignorují.  

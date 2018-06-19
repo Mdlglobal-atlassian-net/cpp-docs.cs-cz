@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349733"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Postupy: Implementace sledování v kódu
 Ke sledování OLE položku, je nutné zajistit určité události související s položkou, například kliknutí na položku nebo aktualizace zobrazení dokumentu. Ve všech případech je dostačující deklarovat dočasného [crecttracker –](../mfc/reference/crecttracker-class.md) objektu a pracovat s položka prostřednictvím tohoto objektu.  

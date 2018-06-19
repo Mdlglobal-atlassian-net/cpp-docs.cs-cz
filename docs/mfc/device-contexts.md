@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348567"
 ---
 # <a name="device-contexts"></a>Kontexty zařízení
 Kontext zařízení je datová struktura Windows obsahující informace o kreslení atributy zařízení, například zobrazení nebo tiskárnu. Všechny kreslení volání prostřednictvím objektu kontextu zařízení, který zapouzdřuje rozhraní API systému Windows pro kreslení čáry, tvary a text. Kontexty zařízení povolí kreslení nezávislé na zařízení v systému Windows. Kontexty zařízení lze použít k vykreslení na obrazovku, na tiskárnu nebo metasoubory.  

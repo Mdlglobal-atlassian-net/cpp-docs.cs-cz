@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863696"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Přidání obslužných rutin události pro ovládací prvky dialogového okna
 Pro projekt dialogových oken, které jsou spojeny s třídou můžete využít některé klávesových zkratek při vytváření obslužných rutin událostí. Dokáže rychle vytvořit obslužnou rutinu pro událost upozornění na výchozí ovládací prvek nebo pro všechny příslušné zpráv systému Windows.  

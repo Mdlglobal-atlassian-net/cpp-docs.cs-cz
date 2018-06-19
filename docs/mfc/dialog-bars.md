@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348804"
 ---
 # <a name="dialog-bars"></a>Dialogové pruhy
 Panel dialogového okna je panel nástrojů, typ z [ovládacích pruhů](../mfc/control-bars.md) , může obsahovat jakýkoli typ ovládacího prvku. Protože má charakteristiky nemodální dialogového okna, [CDialogBar](../mfc/reference/cdialogbar-class.md) objekt poskytuje výkonnější panelu nástrojů.  

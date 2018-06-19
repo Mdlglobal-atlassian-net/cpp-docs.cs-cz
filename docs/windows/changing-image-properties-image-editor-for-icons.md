@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863322"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Změna vlastností obrázku (editor obrázků pro ikony)
 Můžete nastavit nebo upravit vlastnosti použití bitové kopie [vlastnosti – okno](/visualstudio/ide/reference/properties-window).  

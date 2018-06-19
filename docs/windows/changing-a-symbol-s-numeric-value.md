@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860382"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>Změna symbolu&#39;s číselná hodnota
 Pro symboly přidružené jediný zdroj, můžete použít [vlastnosti – okno](/visualstudio/ide/reference/properties-window) ke změně hodnoty symbolu. Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) ke změně hodnoty symbolů prostředek není aktuálně přiřazen. Další informace najdete v tématu [změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md).  

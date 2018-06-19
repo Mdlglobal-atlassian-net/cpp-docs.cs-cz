@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349042"
 ---
 # <a name="ole-container-classes"></a>OLE – třídy kontejnerů
 Tyto třídy jsou používány – aplikace typu kontejner. Obě `COleLinkingDoc` a `COleDocument` spravovat kolekce `COleClientItem` objekty. Místo odvozování třídě dokumentu z **CDocument**, budete odvozena z `COleLinkingDoc` nebo `COleDocument`, v závislosti na tom, jestli mají podporu odkazy na objekty vložené v dokumentu.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245293"
 ---
 # <a name="compiler-error-c2842"></a>C2842 chyby kompilátoru
 'class': spravované WinRT typu nesmí definovat vlastní 'new – operátor' nebo 'operátor odstranit.  

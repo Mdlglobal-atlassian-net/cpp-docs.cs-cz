@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349354"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Odvození třídy z objektu CObject
 Tento článek popisuje minimální kroky potřebné k odvození třídy z [CObject](../mfc/reference/cobject-class.md). Další `CObject` třída články popisují kroky potřebné k využít výhod konkrétní `CObject` funkce, jako je serializace a diagnostiky podporu ladění.  

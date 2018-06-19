@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349996"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE – pozadí: Implementace MFC
 Kvůli velikost a složitost nezpracovaná OLE rozhraní API volání se přímo k psaní aplikací OLE může být časově velmi náročná. Cílem společnosti Microsoft Foundation Class Library implementace OLE je snížit objem práce, kterou je nutné provést pro psaní aplikací plně funkční, podporující OLE.  

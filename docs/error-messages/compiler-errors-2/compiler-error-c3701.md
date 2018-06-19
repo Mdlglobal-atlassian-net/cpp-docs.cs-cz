@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267138"
 ---
 # <a name="compiler-error-c3701"></a>C3701 chyby kompilátoru
 'function': event_source – nemá žádné události.  

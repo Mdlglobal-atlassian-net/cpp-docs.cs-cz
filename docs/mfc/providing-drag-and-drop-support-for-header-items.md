@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349341"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zajištění podpory přetažení u položek záhlaví
 Kvůli zajištění podpory přetažení a přetažení u položek záhlaví, zadejte `HDS_DRAGDROP` stylu. Podpory a přetažení u položek záhlaví dává uživateli možnost ke změně pořadí položek záhlaví ovládacího prvku záhlaví. Výchozí chování poskytuje poloprůhledných přetáhněte obrázek položky záhlaví přetažen a vizuální indikátor nové pozice, pokud hlavička položka byla vynechána.  

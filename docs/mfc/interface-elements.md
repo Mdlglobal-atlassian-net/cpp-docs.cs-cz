@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352574"
 ---
 # <a name="interface-elements"></a>Prvky rozhraní
 Tento dokument popisuje elementy rozhraní, které byly zavedeny v [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 a také popisuje rozdíly mezi starší verzi knihovny.  

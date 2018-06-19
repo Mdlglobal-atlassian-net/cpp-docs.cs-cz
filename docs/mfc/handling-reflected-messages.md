@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348973"
 ---
 # <a name="handling-reflected-messages"></a>Zpracování reflektovaných zpráv
 Zpráva reflexe umožňuje zpracovat zprávy pro ovládací prvek, jako například `WM_CTLCOLOR`, **wm_command –**, a **wm_notify –**, v samotném ovládacím prvku. Díky řízení více samostatné a přenosné. Tento mechanismus funguje s běžné ovládací prvky Windows, a také s ovládacími prvky ActiveX (dříve se označovaly jako ovládací prvky OLE).  

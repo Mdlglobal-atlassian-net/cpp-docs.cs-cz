@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246536"
 ---
 # <a name="compiler-error-c2970"></a>C2970 chyby kompilátoru
 'class': parametr šablony, param': 'arg': výraz zahrnující objekty s vnitřní propojení nelze použít jako argument bez typu  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246367"
 ---
 # <a name="compiler-error-c2891"></a>C2891 chyby kompilátoru
 "parametr": nelze převést na adresu parametr šablony  

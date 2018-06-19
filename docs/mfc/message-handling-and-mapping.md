@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348525"
 ---
 # <a name="message-handling-and-mapping"></a>Zpracování a mapování zpráv
 Rodina Tento článek popisuje zpracování zprávy a příkazy pomocí rozhraní MFC framework a jak se připojit je k jejich funkcím obslužných rutin.  

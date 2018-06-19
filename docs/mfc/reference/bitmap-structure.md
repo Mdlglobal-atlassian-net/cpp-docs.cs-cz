@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351634"
 ---
 # <a name="bitmap-structure"></a>BITMAP – struktura
 **Rastrový OBRÁZEK** struktura definuje výška, šířka, formát barvy a bitových hodnot logické rastrový obrázek **.**  

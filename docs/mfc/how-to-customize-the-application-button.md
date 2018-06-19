@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351361"
 ---
 # <a name="how-to-customize-the-application-button"></a>Postupy: Přizpůsobení tlačítka aplikace
 Když kliknete na tlačítko aplikace, zobrazí se nabídka příkazů. Obvykle se v nabídce obsahuje příkazů týkajících se souboru, jako **otevřete**, **Uložit**, **tiskových**, a **ukončení**.  

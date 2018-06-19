@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348873"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Zprávy a příkazy v prostředí .NET Framework
 Aplikace napsané pro Microsoft Windows jsou "zpráva řízené." V reakci na události, jako je například kliknutí myší, stisknutí kláves, okno pohybů a tak dále systém Windows odešle zprávy do okna správné. Framework – aplikace zpracování zpráv systému Windows jako jiná aplikace pro Windows. Ale rozhraní přináší také některé vylepšení, které zpracování zpráv jednodušší, více udržovatelný a lepší zapouzdřené.  

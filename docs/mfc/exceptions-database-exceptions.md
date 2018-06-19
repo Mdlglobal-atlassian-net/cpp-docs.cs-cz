@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354298"
 ---
 # <a name="exceptions-database-exceptions"></a>Výjimky: Výjimky databáze
 Tento článek vysvětluje způsob zpracování výjimek databáze. Většina materiálu v tomto článku platí jak pro práci s třídy MFC pro připojení ODBC (Open Database) nebo třídy MFC pro objekty DAO (Data Access). Materiály, které jsou specifické pro jednu nebo jiný model je explicitně označen. Témata zahrnují:  
