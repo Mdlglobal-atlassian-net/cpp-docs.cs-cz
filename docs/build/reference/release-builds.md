@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376647"
 ---
 # <a name="release-builds"></a>Sestavení pro vydání
 Sestavení pro vydání používá optimalizace. Použijete-li optimalizace vytvořit sestavení pro vydání, nebude kompilátor vytvořit symbolické ladicí informace. Neexistence symbolické ladicí informace, společně s fakt, že kód není vygenerovat pro trasování a ASSERT volá, znamená to, že se snižuje velikost spustitelného souboru a proto bude rychlejší.  

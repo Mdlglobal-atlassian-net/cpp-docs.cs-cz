@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378337"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (seznam vložených souborů)
 Způsobí, že kompilátor výstup seznam zahrnout soubory. Vnořené zahrnout soubory jsou také zobrazených (soubory, které jsou zahrnuty ze souborů, které zahrnete).  

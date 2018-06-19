@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377115"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (profiler nástrojů výkonu)
 Vytvoří výstupního souboru, který lze použít s profileru nástroje pro sledování výkonu.  

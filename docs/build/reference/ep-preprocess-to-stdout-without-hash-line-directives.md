@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375380"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (předběžné zpracování do direktiv bez příkazů #line)
 Upraví C a C++ zdrojové soubory a zkopíruje předběžně zpracované soubory do standardního výstupního zařízení.  

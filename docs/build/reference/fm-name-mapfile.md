@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374274"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (název souboru mapování)
 Informuje linkeru k vytvoření mapfile, který obsahuje seznam segmentů v pořadí, ve kterém se zobrazují v odpovídající soubor .exe nebo knihovny DLL.  

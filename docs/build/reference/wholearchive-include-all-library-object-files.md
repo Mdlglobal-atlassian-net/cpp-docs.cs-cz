@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376866"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (zahrnout všechny soubory objekt knihovny)
 Vynutí linkeru mají být zahrnuty všechny soubory objektu se statickou knihovnou v propojených spustitelný soubor.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389160"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 ## <a name="syntax"></a>Syntaxe  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Poznámky  
  Vrátí EOF rutiny vstupně-výstupní operace při end konec souboru (nebo v některých případech chybu) je došlo.  
   
- Weof – vypočítá návratovou hodnotu typu **wint_t –**používané signál konec široké datového proudu, nebo k hlášení chybový stav.  
+ Weof – vypočítá návratovou hodnotu typu **wint_t –** používané signál konec široké datového proudu, nebo k hlášení chybový stav.  
   
 ## <a name="see-also"></a>Viz také  
  [putc –, putwc –](../c-runtime-library/reference/putc-putwc.md)   

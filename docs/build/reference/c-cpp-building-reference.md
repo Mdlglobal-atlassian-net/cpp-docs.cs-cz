@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375481"
 ---
 # <a name="cc-building-reference"></a>Odkaz sestavení C/C++
 Visual C++ nabízí dva způsoby vytvoření programu C/C++. Způsob nejjednodušší (a nejběžnější) je [sestavení ve vývojovém prostředí Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Druhý způsob je [sestavení z příkazového řádku pomocí nástroje příkazového řádku](../../build/building-on-the-command-line.md). V obou případech můžete vytvořit pomocí editoru Visual C++ zdroje nebo třetích stran editoru podle své volby zdrojových souborů.  

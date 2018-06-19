@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375295"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Povolit sondy zásobníku)
 Aktivuje sondy zásobníku pro každé volání funkce, která vyžaduje úložiště pro místní proměnné.  

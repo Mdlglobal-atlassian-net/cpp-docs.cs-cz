@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379104"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (model zpracování výjimek)
 Určuje typ zpracování výjimky používané kompilátoru, když k optimalizaci tokeny výjimka kontroluje a jestli zrušení C++ objekty, které z důvodu výjimky se dostala mimo rozsah. Pokud **/EH** není zadán, kompilátor zachytí asynchronní strukturovaných výjimky a výjimky jazyka C++, ale nezničí C++ objekty, které z důvodu asynchronní výjimky se dostala mimo rozsah.  

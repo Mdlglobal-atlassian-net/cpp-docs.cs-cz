@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375672"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (soubor s vynuceným názvem #using)
 Možnost kompilátoru, která můžete použít jako alternativu k předání názvu souboru pro [#using – direktiva](../../preprocessor/hash-using-directive-cpp.md) ve zdrojovém kódu.  

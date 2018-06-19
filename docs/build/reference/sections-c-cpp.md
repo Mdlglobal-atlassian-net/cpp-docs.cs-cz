@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377297"
 ---
 # <a name="sections-cc"></a>ODDÍLY (C/C++)
 Představuje oddíl jednoho nebo více `definitions` , které jsou specifikátory přístupu v části v projektu na výstupní soubor.  

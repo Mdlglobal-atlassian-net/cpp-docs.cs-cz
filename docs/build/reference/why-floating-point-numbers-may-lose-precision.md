@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376134"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Proč čísla s plovoucí desetinnou čárkou mohou ztratit přesnost
 Desetinná čísla s plovoucí desetinnou čárkou obvykle nemají přesnou binární reprezentace. Toto je vedlejším účinkem jak procesoru reprezentuje data s plovoucí desetinnou. Z tohoto důvodu může dojít k některé ztrátu přesnosti a některé operace s plovoucí desetinnou čárkou mohou vést k neočekávaným výsledkům.  

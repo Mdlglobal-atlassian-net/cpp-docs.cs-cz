@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378256"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Použít běhovou knihovnu)
 Označuje, zda je vícevláknový modul knihovnou DLL, a určuje prodejní nebo ladicí verze knihovny runtime.  

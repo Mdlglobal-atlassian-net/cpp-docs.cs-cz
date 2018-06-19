@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374369"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Načtení všech importů pro knihovnu DLL se zpožděným načtením
 **__HrLoadAllImportsForDll** linkeru načtení všech importů z knihovny DLL, která byla zadána s informacemi o funkci, která je definována v delayhlp.cpp, [/delayload](../../build/reference/delayload-delay-load-import.md) – možnost linkeru.  

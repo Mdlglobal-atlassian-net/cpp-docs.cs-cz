@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375581"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Podpora linkeru pro knihovny DLL s odloženým načtením
 Visual C++ linkeru teď podporuje zpožděné načítání knihovny DLL. To zbavuje kterou přináší nutnost je potřeba použít funkce Windows SDK **LoadLibrary** a **GetProcAddress** implementovat odložené načtení knihoven DLL.  

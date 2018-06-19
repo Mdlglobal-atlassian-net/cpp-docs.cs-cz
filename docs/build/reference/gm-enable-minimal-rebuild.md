@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374567"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Povolit minimální opětovné sestavení)
 Umožňuje minimální opětovné sestavení, která určuje, jestli C++ zdrojové soubory, které zahrnují změněné definice tříd jazyka C++ (uložené v souborech hlavičky ()), který je potřeba zopakovat.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378633"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Zachovat poslední kód chyby pro volání PInvoke)
 **/ CLRSUPPORTLASTERROR**, který je ve výchozím, uchovává kód poslední chyby funkcí zavolaném prostřednictvím P/Invoke mechanismus, který umožňuje volání nativních funkcí ze kódu v knihovnách DLL, kompilovat s **/CLR**.  

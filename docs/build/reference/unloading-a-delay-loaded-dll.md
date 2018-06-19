@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375211"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Uvolnění knihovny DLL s odloženým načtením
 Zadaný výchozí zpoždění zatížení pomocné rutiny zkontroluje Pokud popisovače načtení zpoždění mít v poli pUnloadIAT ukazatel a kopii původní tabulky adres import (IAT). Pokud ano, uloží ukazatel v seznamu do popisovače zpoždění importu. To umožňuje pomocné funkce najít knihovnu DLL podle názvu pro podporu explicitně uvolnění této knihovny DLL.  

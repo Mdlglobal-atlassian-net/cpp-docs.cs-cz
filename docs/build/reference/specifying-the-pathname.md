@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375659"
 ---
 # <a name="specifying-the-pathname"></a>Určení názvu cesty
 Jednotlivé možnosti výstupního souboru přijme *pathname* argument, který můžete zadat umístění a název souboru výstupního souboru. Argument může zahrnovat název jednotky, adresář a název souboru. Žádné místo je povolena možnost až argument.  

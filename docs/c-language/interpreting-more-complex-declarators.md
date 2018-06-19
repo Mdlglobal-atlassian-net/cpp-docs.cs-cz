@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391662"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Výklad složitějších deklarací
 Je-li uzavřít všechny deklarátor v závorkách zadat konkrétní výklad "komplexní deklarátor". Komplexní deklarátor je identifikátor kvalifikovaný více než jeden pole, ukazatel nebo modifikační funkce. Můžete použít různé kombinace pole, ukazatelů a funkce modifikátory na jediný identifikátor. Obecně `typedef` lze zjednodušit deklarace. V tématu [Typedef – deklarace](../c-language/typedef-declarations.md).  

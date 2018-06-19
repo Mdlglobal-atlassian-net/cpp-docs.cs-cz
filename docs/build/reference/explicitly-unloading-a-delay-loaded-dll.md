@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374171"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Explicitní uvolnění knihovny DLL načtené se zpožděním
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): unload – možnost linkeru umožňuje uvolnění knihovny DLL, která byla načtena zpoždění. Ve výchozím nastavení při kódu uvolnění knihovny DLL (pomocí/delay: Unload a **__FUnloadDelayLoadedDLL2**), importy s odloženým načtením zůstat v tabulky import adres (IAT). Ale pokud používáte/delay: Unload na příkazový řádek linkeru, pomocné funkce bude podporovat explicitní uvolnění knihovny DLL, obnovena IAT původní podobě; Neplatný ukazatele budou přepsány. Tabulku IAT je pole v [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) obsahující adresu kopii původní IAT (pokud existuje).  

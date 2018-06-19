@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374255"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (optimalizace pro aplikaci systému Windows)
 Výsledkem efektivnější kód pro soubor .exe pro přístup k proměnným úložiště thread-local (TLS).  

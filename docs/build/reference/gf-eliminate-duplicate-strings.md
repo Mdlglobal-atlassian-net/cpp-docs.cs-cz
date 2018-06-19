@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375890"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (odstranění duplicitních řetězců)
 Umožňuje kompilátor vytvoří jednu kopii identické řetězce v bitové kopii program a v paměti při spuštění. Toto je optimalizace názvem *sdružování řetězec* , můžete vytvořit menší programy.  

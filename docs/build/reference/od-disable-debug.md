@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376257"
 ---
 # <a name="od-disable-debug"></a>/Od (Zakázat (ladění))
 Vypne všechny optimalizace programu a urychlí kompilace.  

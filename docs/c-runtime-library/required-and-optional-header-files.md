@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410512"
 ---
 # <a name="required-and-optional-header-files"></a>Povinné a nepovinné hlavičkové soubory
 Popis každé spuštění rutiny zahrnuje seznam požadované a volitelné zahrnout, nebo hlavičce (. H), soubory pro tuto rutinu. Požadovaná hlavička soubory musí být součástí získat deklarace funkce pro rutiny nebo definice používá jiné rutiny volá se interně. Nepovinné hlavičkové soubory jsou obvykle součástí využít předdefinované konstanty, definice typu nebo vložené makra. Následující tabulka uvádí některé příklady nepovinné hlavičkové obsah souboru:  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374824"
 ---
 # <a name="link-input-files"></a>Vstupní soubory LINK
 U souborů, které obsahují objekty, jejich import a standardní knihovny, prostředky, definice modulu a zadejte příkaz poskytnete linkeru. ODKAZ nepoužívá přípony souborů aby předpoklady o obsahu souboru. Místo toho odkaz prověří každý vstupní soubor zjistit, jaký typ souboru je.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374541"
 ---
 # <a name="lib-files-as-linker-input"></a>Soubory .Lib jako vstup linkeru
 ODKAZ přijímá standardní knihoven COFF a COFF importovat knihovny, které obvykle mají příponu. lib. Standardní knihovny obsahovat objekty a jsou vytvořené pomocí nástroje LIB. Import knihovny obsahují informace o export v ostatních aplikacích a vytvoří se buď odkaz k sestavení program, který obsahuje exportuje nebo nástrojem LIB. Informace o používání LIB vytvořit standardní nebo importovat knihovny najdete v tématu [LIB odkaz](../../build/reference/lib-reference.md). Podrobnosti o použití odkaz k vytvoření knihovnu importu najdete v tématu [/dll](../../build/reference/dll-build-a-dll.md) možnost.  

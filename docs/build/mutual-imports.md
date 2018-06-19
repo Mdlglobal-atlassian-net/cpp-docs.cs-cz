@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377754"
 ---
 # <a name="mutual-imports"></a>Vzájemné importy
 Export a import do jiného spustitelného souboru představuje komplikace, když jsou importy vzájemné (nebo cyklické). Například dvě knihovny importovat symboly od sebe navzájem, podobně jako vzájemně rekurzivní funkce.  

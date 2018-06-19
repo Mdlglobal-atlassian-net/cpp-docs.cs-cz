@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413242"
 ---
 # <a name="classes-and-structs-c"></a>Třídy a struktury (C++)
 Tato část představuje C++ třídy a struktury. Kromě toho, že v struktury je výchozí usnadnění veřejným, zatímco ve třídách výchozí hodnota je privátní, jsou identické v jazyce C++ dvěma konceptů.  

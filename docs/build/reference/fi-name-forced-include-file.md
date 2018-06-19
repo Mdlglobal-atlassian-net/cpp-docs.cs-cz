@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373371"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Zahrnutý soubor s povinným názvem)
 Způsobí, že preprocesor při zpracování souboru zadaná hlavička.  
