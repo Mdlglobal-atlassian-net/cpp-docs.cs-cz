@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839816"
 ---
 # <a name="deprecated-cc"></a>zastaralé (C/C++)
 **Zastaralé** – Direktiva pragma umožňuje znamenat, že funkce, typ nebo jakýkoli jiný identifikátor může být podporován budoucí verze nebo by měla být dále používán.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846100"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 V tomto tématu najdete informace o tom, jak portu existujícího kódu C++ pro aplikace platformy Windows 10, univerzální platformu Windows. Pojmy termín *universal* je, že váš kód můžete spustit u zařízení se systémem Windows 10, včetně stolní počítače, telefon, tablety a budoucí zařízení se systémem Windows 10. Vytvoříte projekt a jeden XAML základní uživatelské rozhraní, které funguje dobře na jakémkoli zařízení se systémem Windows 10. Dynamické rozložení funkce můžete v jazyce XAML umožňující uživatelském rozhraní aplikace se různé velikosti zobrazení přizpůsobit.  

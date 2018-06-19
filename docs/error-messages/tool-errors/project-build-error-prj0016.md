@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319049"
 ---
 # <a name="project-build-error-prj0016"></a>Chyba sestavení projektu PRJ0016
 Nastavení zabezpečení uživatele zabránit procesu vytváření. Tato nastavení se vyžadují pro vytvoření.  

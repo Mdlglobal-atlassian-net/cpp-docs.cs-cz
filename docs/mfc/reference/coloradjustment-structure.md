@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369961"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT – struktura
 `COLORADJUSTMENT` Struktura definuje barvu úpravu hodnoty používané Windows `StretchBlt` a **StretchDIBits** funkce při `StretchBlt` režim je **POLOTÓNOVÁNÍ**.  

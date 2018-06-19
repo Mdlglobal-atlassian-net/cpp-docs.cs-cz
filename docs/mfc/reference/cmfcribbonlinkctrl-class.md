@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368433"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl – třída
 Implementuje hypertextový odkaz, který je umístěn na pásu karet. Po kliknutí na tlačítko se otevře hypertextový odkaz na webové stránce.  

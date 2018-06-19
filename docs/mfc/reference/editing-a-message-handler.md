@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375626"
 ---
 # <a name="editing-a-message-handler"></a>Úpravy obslužné rutiny zpráv
 Jakmile je definován popisovač zpráv, můžete přejít na definici členskou funkci Přidat nebo upravit kód.  

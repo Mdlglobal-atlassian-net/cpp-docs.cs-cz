@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354086"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX
 Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak můžete změnit kód Malování optimalizovat proces. (Viz [optimalizace vykreslování ovládacího prvku](../mfc/optimizing-control-drawing.md) pro techniky o tom, jak optimalizovat kreslení pomocí nemá ovládací prvky jednotlivě obnovit dříve vybrané objekty GDI. Po vykreslení všechny ovládací prvky kontejneru automaticky obnovit původní objekty.)  

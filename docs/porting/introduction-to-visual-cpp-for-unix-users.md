@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845863"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Úvod do prostředí Visual C++ pro uživatele systému UNIX
 

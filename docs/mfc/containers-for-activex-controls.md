@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341443"
 ---
 # <a name="containers-for-activex-controls"></a>Kontejnery pro ovládací prvky ActiveX
 ActiveX – ovládací prvky vyvinuté v jazyce Visual C++ v ostatních aplikacích můžete použít také podporují uzavření ovládacího prvku ActiveX. Počet aplikací společnosti Microsoft, počínaje verzí uvedených, podporují uzavření ovládacího prvku ActiveX.  

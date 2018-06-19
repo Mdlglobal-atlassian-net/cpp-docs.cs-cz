@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354034"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Požadavky na třídy internetových klientů
 Některé akce provedenou internetového klienta (čtení souboru, třeba) (v tomto případě navazování připojení k Internetu) je nutné požadované akce. Následující tabulka uvádí požadavky pro některé akce klienta.  

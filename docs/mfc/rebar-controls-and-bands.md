@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349848"
 ---
 # <a name="rebar-controls-and-bands"></a>Matrice – ovládací prvky a pruhy
 Hlavním účelem ovládacím prvkem matrice je tak, aby fungoval jako kontejner pro podřízená okna, běžné ovládací prvky dialogového okna, nabídek, panely nástrojů a tak dále. Toto omezení je podporován koncepci "vzdálené". Každé vzdálené matrice může obsahovat libovolnou kombinaci úchytu panelu, rastrový obrázek, text popisku a podřízeného okna.  

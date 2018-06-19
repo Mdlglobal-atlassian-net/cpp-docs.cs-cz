@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694011"
 ---
 # <a name="propagatorblock-class"></a>propagator_block – třída
 `propagator_block` Třída je abstraktní základní třídu pro bloky zpráv, které jsou zdrojovém i cílovém. Kombinuje funkci i `source_block` a `target_block` třídy.  

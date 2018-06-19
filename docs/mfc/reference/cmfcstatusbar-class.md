@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376158"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar – třída
 `CMFCStatusBar` Třída implementuje podobná stavového řádku `CStatusBar` třídy. Ale `CMFCStatusBar` třída má funkce není služeb `CStatusBar` třídy, například možnost zobrazit obrázky, animace a indikátory průběhu; a schopnost reagovat na myši poklikáním. 

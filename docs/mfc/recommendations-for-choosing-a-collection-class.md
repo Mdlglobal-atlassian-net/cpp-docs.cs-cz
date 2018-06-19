@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353129"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Doporučení pro výběr třídy kolekce
 Tento článek obsahuje podrobné informace, které vám pomohou zvolit třídu kolekce pro vaše potřeby konkrétní aplikace.  

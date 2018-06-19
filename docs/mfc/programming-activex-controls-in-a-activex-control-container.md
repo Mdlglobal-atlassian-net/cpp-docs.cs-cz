@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355038"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX
 Tento článek popisuje proces pro přístup k zveřejněné [metody](../mfc/mfc-activex-controls-methods.md) a [vlastnosti](../mfc/mfc-activex-controls-properties.md) embedded ovládacích prvků ActiveX. V podstatě postupujte podle těchto kroků:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689373"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
 **Copyin** klauzule poskytuje mechanismus pro přiřadit stejnou hodnotu do **threadprivate** proměnných pro každé vlákno v týmu provádění paralelní oblast. Pro každou proměnnou, zadaný v **copyin** zkopírovali klauzule, hodnota proměnné v hlavní vlákno týmu, jako kdyby podle přiřazení, zkopíruje privátní přístup z více vláken na začátku paralelní oblast. Syntaxe **copyin** klauzule vypadá takto:  

@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357534"
 ---
 # <a name="carchive-class"></a>CArchive – třída
 Umožňuje uložit nejsložitějších sítí objektů v trvalé binárního formátu (obvykle úložiště disku), která je uchována po odstranění těchto objektů.  

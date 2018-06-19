@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375132"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapy příkazů DHTML pro úpravy
 Následující makra můžete použít k mapování DHTML pro úpravy příkazy v [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-odvozených třídách. Příklad jejich použití naleznete v části [HTMLEdit ukázka](../../visual-cpp-samples.md).  

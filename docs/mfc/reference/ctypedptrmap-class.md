@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376392"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap – třída
 Poskytuje bezpečnost typů "obálky" pro objekty třídy map ukazatel `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.  

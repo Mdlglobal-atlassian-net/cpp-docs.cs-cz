@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376042"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP – třída
 `CSettingsStoreSP` Třída je pomocná třída, která můžete použít k vytvoření instance [CSettingsStore třída](../../mfc/reference/csettingsstore-class.md).  

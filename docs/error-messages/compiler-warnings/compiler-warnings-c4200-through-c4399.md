@@ -48,6 +48,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302877"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Upozornění kompilátoru C4200 až C4399
 

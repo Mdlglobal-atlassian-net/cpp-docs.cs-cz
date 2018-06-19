@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841229"
 ---
 # <a name="dataseg"></a>data_seg
 Určuje, kde inicializovaného proměnné jsou uloženy v souboru .obj datového segmentu.  

@@ -127,6 +127,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377620"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
 `CMDIChildWndEx` Třída poskytuje funkci systému Windows více dokumentů (MDI) rozhraní podřízeného okna. Ji rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tato třída, pokud aplikace MDI používá některých tříd MFC.  

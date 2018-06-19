@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366340"
 ---
 # <a name="clistview-class"></a>CListView – třída
 Používání ovládacího prvku seznam, zjednodušuje [CListCtrl](../../mfc/reference/clistctrl-class.md), třídu, která zapouzdřuje funkce ovládací prvek seznamu, s architekturou MFC na zobrazení dokumentu.  

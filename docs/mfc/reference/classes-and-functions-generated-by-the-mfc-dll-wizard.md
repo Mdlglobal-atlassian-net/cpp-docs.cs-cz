@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366122"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Třídy a funkce generované průvodcem knihovnou MFC DLL
 Kód, který generuje Průvodce MFC DLL závisí na druhu knihovny DLL, kterou vytváříte a možnosti, které jste vybrali. Průvodce MFC DLL generuje stejný kód pro obě formy regulární MFC – knihovny DLL.  

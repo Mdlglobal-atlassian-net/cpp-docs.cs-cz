@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274752"
 ---
 # <a name="compiler-warning-c4484"></a>C4484 upozornění kompilátoru
 'override_function': odpovídá metody třídy base ref 'base_class_function', ale nebyla označena 'virtuální', 'nové' nebo 'přepsat'; se předpokládá, new' (a ne virtuální)  

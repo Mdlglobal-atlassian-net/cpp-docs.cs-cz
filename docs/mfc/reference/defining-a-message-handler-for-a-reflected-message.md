@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373166"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definování obslužné rutiny zpráv pro zrcadlené zprávy
 Po vytvoření nové třídě ovládacího prvku MFC, můžete definovat obslužné rutiny zpráv pro ni. Zrcadlených zpráv umožňují vaší třídě zpracování vlastní zprávy před nadřízený objekt doručení zprávy. Můžete použít MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkce k odesílání zpráv z ovládacího prvku do nadřazeného okna.  

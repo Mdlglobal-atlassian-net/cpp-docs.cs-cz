@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373622"
 ---
 # <a name="ctreeview-class"></a>CTreeView – třída
 Používání ovládacího prvku strom, zjednodušuje [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), třídu, která zapouzdřuje funkce ovládací prvek stromu s architekturou MFC na zobrazení dokumentu.  

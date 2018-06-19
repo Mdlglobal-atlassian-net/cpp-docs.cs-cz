@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348221"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem
 Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejším vlastnostem svého kontejneru ovládacího prvku.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379239"
 ---
 # <a name="rubber-banding-and-trackers"></a>Pružné čáry a snímače
 Další funkcí, které jsou součástí snímačů je výběr "pružné vzdálené správy", který umožňuje uživateli vybrat více položek OLE přetažením obdélníku velikosti kolem položky, které chcete vybrat. Když uživatel uvolní levé tlačítko myši, jsou vybrané položky v rámci oblasti vybraný uživatelem a práce s uživatelem. Uživatel může například přetáhněte výběr do jiné aplikace kontejneru.  

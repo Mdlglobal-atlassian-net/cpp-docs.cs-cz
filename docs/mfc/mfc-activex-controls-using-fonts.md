@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355136"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli řízení Změna vzhledu textu změnou vlastnosti písma. Vlastnosti písma jsou implementovány jako objekty písma a může mít jednu ze dvou typů: uložených nebo vlastní. Uložené vlastnosti písma jsou vlastnosti preimplemented písma, které můžete přidat pomocí Průvodce přidáním vlastnosti. Vlastní vlastnosti písma nejsou preimplemented a vývojář ovládacího prvku určuje tato vlastnost chování a využití.  

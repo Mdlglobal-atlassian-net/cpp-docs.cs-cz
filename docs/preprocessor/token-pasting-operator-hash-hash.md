@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842228"
 ---
 # <a name="token-pasting-operator-"></a>Operátor vložení tokenu (##)
 Operátor double. číslo podepsání nebo "vložení tokenu" (**##**), která se někdy označuje jako "slučovat" operátor je používán jako objekt a funkce jako makra. Umožňuje sloučit samostatné tokeny do jediného tokenu, a proto nemůže být prvním nebo posledním tokenem v definici makra.  

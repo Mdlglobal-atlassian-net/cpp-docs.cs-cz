@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841657"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Spuštění jako člen skupiny Users
 Toto téma vysvětluje, jak konfigurace uživatelské účty systému Windows jako člen skupiny Users (na rozdíl od skupiny Administrators) zvyšuje úroveň zabezpečení snižuje pravděpodobnost infekce škodlivým kódem.  

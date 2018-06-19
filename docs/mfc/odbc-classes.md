@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348137"
 ---
 # <a name="odbc-classes"></a>ODBC – třídy
 Tyto třídy pracovat s další aplikace framework třídy poskytují snadný přístup k široké škále databází, pro které jsou k dispozici ovladače připojení ODBC (Open Database).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687449"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Používání parametrů Lambda, objektů funkcí a omezených funkcí
 C++ AMP kód, který chcete spustit na akcelerátor je zadaný jako argument při volání [parallel_for_each –](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metoda. Výraz lambda nebo objekt funkce (functor) můžete zadat jako tento argument. Kromě toho můžete objekt funkce nebo výraz lambda volání funkce C++ AMP omezený. Toto téma používá nepodporovaný algoritmus přidání pole k předvedení lambdas, objektů funkcí a omezených funkcí. Následující příklad ukazuje, že algoritmus bez kódu C++ AMP. Jsou vytvořeny dva 1jednorozměrná pole stejné délky. Odpovídající elementy celé číslo se přidat a uložená v třetí dimenzí 1 pole. C++ AMP se nepoužije.  

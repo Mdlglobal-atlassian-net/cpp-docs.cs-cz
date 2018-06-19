@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353675"
 ---
 # <a name="controls-mfc"></a>Ovládací prvky (MFC)
 Ovládací prvky jsou objekty, které mohou uživatelé komunikovat s zadejte nebo pracovat s daty. Běžně zobrazují se v dialogových oknech nebo na panely nástrojů. Toto téma rodiny obsahuje tři hlavní typy ovládacích prvků:  

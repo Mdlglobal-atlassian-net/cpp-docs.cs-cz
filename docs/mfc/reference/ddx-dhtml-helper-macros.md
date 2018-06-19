@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372072"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Makra DDX_DHtml pomocné rutiny
 Makra pomocná DDX_DHtml umožní snadný přístup k běžně používané vlastností ovládacích prvků na stránce HTML.  

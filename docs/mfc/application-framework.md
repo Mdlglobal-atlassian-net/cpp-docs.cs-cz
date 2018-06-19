@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341668"
 ---
 # <a name="application-framework"></a>Aplikační framework
 Základní knihovna Microsoft Foundation Class (MFC) představuje zapouzdření velkou část rozhraní API systému Windows v podobě C++. Knihovna tříd představují windows, dialogová okna, kontexty zařízení běžné GDI objekty například štětce a pera, ovládací prvky a další standardní položky systému Windows. Tyto třídy poskytují pohodlnou C++ členské funkce rozhraní struktury v systému Windows, který se zapouzdřit. Další informace o použití těchto tříd naleznete v tématu [okno objekt témata](../mfc/window-objects.md).  

@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376194"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager – třída
 Udržuje kolekci [CUserTool třída](../../mfc/reference/cusertool-class.md) objekty v aplikaci. Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. `CUserToolsManager` Objektu umožňuje uživateli nebo vývojáři přidat nové uživatele nástroje k aplikaci. Podporuje provádění příkazů související nástroje pro uživatele, a také ukládá informace o nástrojích uživatele do registru systému Windows.  

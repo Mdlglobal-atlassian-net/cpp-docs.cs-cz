@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376890"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore – třída
 Zabalí funkcí rozhraní API systému Windows, poskytnutím objektově orientované rozhraní, které používáte pro přístup k registru.  

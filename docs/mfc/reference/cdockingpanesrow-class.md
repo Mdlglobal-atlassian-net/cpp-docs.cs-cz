@@ -105,6 +105,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370000"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow – třída
 Spravuje seznam podokna, které se nacházejí ve stejném vodorovné nebo svislé řádku (sloupec) lokality ukotvení.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693520"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Concurrency Runtime jazyka C++ vám pomůže zápisu robustní, škálovatelnou a reaguje paralelní aplikace. Vyvolá úrovni abstrakce tak, že nemáte ke správě infrastruktury podrobnosti, které se vztahují k souběžnosti. Můžete ji použít i k určení plánování zásady, které splňují kvality služby požadavky aplikací. Pomocí těchto prostředků usnadňují začátek práce s komponentou Concurrency Runtime.  

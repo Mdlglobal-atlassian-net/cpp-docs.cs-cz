@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351963"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Sloučení nabídky
 Tento článek podrobně popisuje kroky potřebné pro OLE – aplikace dokumentů pro úpravy s náhledem zpracování a aktivace na místě správně. Aktivace na místě představuje výzvu pro kontejner a server (součást) aplikace. Uživatel zůstane ve stejném okně s rámečkem (v rámci kontejneru dokumentu), ale je ve skutečnosti spuštěna jiná aplikace (server). To vyžaduje spolupráce mezi prostředky kontejneru a serverové aplikace.  

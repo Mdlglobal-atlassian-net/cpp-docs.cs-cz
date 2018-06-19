@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372953"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl – třída
 Na základě implementace rozšířených popisek [CToolTipCtrl – třída](../../mfc/reference/ctooltipctrl-class.md). Na základě popisek `CMFCToolTipCtrl` třída může zobrazit ikony, popisek a popis. Pomocí přechodu výplně, vlastní text a barvy ohraničení, tučně, zaoblenými hranami nebo bublinách styl můžete přizpůsobit její vzhled.  

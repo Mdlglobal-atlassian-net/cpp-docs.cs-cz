@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352155"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Více typů dokumentů, zobrazení a oken s rámečkem
 Standardní vztah mezi dokumentu, jeho zobrazení a jeho oken s rámečkem je popsán v [Document/View – vytvoření](../mfc/document-view-creation.md). Mnoho aplikací podporují jeden dokumentu typu (ale může být více otevřené dokumenty daného typu) s jedním zobrazením na dokument a pouze jeden rámec okna na dokumentu. Ale některé aplikace je nutné změnit nejméně jeden z těchto výchozí hodnoty.  

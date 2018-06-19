@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692662"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Osvědčené postupy v knihovně asynchronních agentů
 Tento dokument popisuje, jak provádět efektivní použití asynchronní knihovna agentů. Knihovna agentů zvýší úroveň služby založené na objektu actor programovací model a zprávy v procesu předávání pro hrubý toku dat a paralelní zpracování úlohy.  

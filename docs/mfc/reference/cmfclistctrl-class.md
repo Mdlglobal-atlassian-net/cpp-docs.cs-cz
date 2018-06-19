@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369619"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl – třída
 `CMFCListCtrl` Třídy rozšiřuje funkce [CListCtrl – třída](../../mfc/reference/clistctrl-class.md) třída díky podpoře funkce ovládacího prvku rozšířené hlavičky [CMFCHeaderCtrl třída](../../mfc/reference/cmfcheaderctrl-class.md).  

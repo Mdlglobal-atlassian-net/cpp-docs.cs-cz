@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353495"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC – ovládací prvky ActiveX: Serializace
 Tento článek popisuje, jak k serializaci ovládacího prvku ActiveX. Serializace je proces čtení nebo zápisu do trvalého úložiště média, jako je soubor na disku. Knihovna Microsoft Foundation Class (MFC) obsahuje integrovanou podporu pro serializaci ve třídě `CObject`. `COleControl` rozšiřuje tato podpora do ovládacích prvků ActiveX prostřednictvím mechanismus vlastnost exchange.  

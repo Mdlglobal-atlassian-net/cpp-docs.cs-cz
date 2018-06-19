@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375350"
 ---
 # <a name="data-types-mfc"></a>Datové typy (MFC)
 Toto téma uvádí typy dat nejčastěji používaná v knihovny Microsoft Foundation Class. Většina datových typů jsou stejné jako v platformě Software Development Kit (SDK), zatímco jiné jsou jedinečné pro MFC.  

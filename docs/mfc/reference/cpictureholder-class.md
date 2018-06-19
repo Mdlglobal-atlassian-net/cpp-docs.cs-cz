@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375438"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder – třída
 Implementuje vlastnosti obrázku, která umožňuje uživatelům zobrazit obrázek v vlastního ovládacího prvku.  

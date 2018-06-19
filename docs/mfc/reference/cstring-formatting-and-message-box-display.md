@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375037"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formátování dat CString a zobrazení oken zpráv
 Počet funkcí jsou k dispozici můžete naformátovat a analyzovat `CString` objekty. Tyto funkce lze použít, když máte k manipulaci s `CString` objekty, ale jsou užitečné zejména pro formátování řetězce, které se zobrazí v textu okno se zprávou.  

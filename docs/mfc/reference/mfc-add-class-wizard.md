@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373408"
 ---
 # <a name="mfc-add-class-wizard"></a>Průvodce přidáním třídy MFC
 Pomocí tohoto průvodce kód přidejte třídu do existujícího projektu knihovny MFC nebo přidejte třídu do projektu knihovny ATL, který podporuje MFC. MFC – třídy můžete také přidat do Win32 projektů, které mají Podpora MFC. Funkce, které jste zadali při vytváření projektu určete možnosti k dispozici v tomto dialogovém.  

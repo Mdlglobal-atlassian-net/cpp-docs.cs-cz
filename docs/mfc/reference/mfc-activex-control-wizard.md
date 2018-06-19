@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375060"
 ---
 # <a name="mfc-activex-control-wizard"></a>Průvodce ovládacím prvkem ActiveX v prostředí MFC
 Ovládací prvek ActiveX je určitý typ [automatizační server](../../mfc/automation-servers.md); je znovu použitelné komponentní. Hostování ovládacího prvku ActiveX aplikace je [klienta automatizace](../../mfc/automation-clients.md) tohoto ovládacího prvku. Pokud je vaším cílem je vytvořit znovu použitelné komponentní, pomocí tohoto průvodce k vytvoření vlastního ovládacího prvku. V tématu [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) Další informace.  

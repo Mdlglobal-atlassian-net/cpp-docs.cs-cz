@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358641"
 ---
 # <a name="control-classes"></a>Třídy ovládacích prvků
 Třídy ovládacích prvků zapouzdřit širokou škálu od statický text ovládací prvky pro ovládací prvky stromů standardní ovládací prvky systému Windows. Kromě toho MFC nabízí některé nové ovládací prvky, včetně tlačítka s pruhy rastrové obrázky a řízení.  

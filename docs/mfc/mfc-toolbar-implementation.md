@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360963"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementace panelu nástrojů v prostředí MFC
 Panel nástrojů je [ovládacích pruhů](../mfc/control-bars.md) obsahující obrázky rastrový obrázek ovládacích prvků. Tyto Image můžete chovat jako tlačítek, zaškrtněte políčka nebo přepínače. Poskytuje třídy MFC [ctoolbar –](../mfc/reference/ctoolbar-class.md) ke správě panely nástrojů.  

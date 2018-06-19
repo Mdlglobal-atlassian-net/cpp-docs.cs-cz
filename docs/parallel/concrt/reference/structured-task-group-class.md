@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694141"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group – třída
 `structured_task_group` Třída reprezentuje kolekci vysoce strukturovaných paralelní práce. Jednotlivé paralelní úlohy pro můžete fronty `structured_task_group` pomocí `task_handle` objekty a počkat na jejich dokončení nebo zrušte skupiny úloh před dokončením provádění, který bude všech úloh, které nebyly zahájení zpracování přerušeno.  

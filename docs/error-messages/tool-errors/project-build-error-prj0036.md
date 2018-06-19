@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317346"
 ---
 # <a name="project-build-error-prj0036"></a>Chyba sestavení projektu PRJ0036
 Vlastnost 'Další soubory, pro nástroj pro nasazení webu obsahuje neplatnou položku.  

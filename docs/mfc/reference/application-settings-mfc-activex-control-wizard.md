@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351599"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Nastavení aplikace, průvodce ovládacím prvkem ActiveX v prostředí MFC
 Na této stránce Průvodce ovládacího prvku ActiveX knihovny MFC návrh a přidat základní funkce do nového projektu MFC ActiveX. Toto nastavení se týká vlastní aplikace a nikoli na konkrétní funkce nebo elementu ovládacího prvku.  

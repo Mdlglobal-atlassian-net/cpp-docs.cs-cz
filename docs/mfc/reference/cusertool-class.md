@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374750"
 ---
 # <a name="cusertool-class"></a>CUserTool – třída
 Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. **Nástroje** kartě **přizpůsobit** dialogové okno ( [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatele nástroje a zadejte název, argumenty, a Počáteční adresář pro každého uživatele nástroje.  

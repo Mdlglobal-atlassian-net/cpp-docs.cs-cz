@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351427"
 ---
 # <a name="mfc-application-architecture-classes"></a>Třídy architektury aplikace MFC
 Třídy v této kategorii přispívat k architektuře framework aplikace. Si poskytují funkce, které jsou společné pro většinu aplikací. Vyplňte rozhraní přidat další funkce specifické pro aplikaci. Obvykle je to nové třídy odvozené od třídy architektury a následným přidáním nové členy nebo přepsání existující členské funkce.  

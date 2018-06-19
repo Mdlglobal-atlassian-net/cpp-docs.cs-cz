@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686536"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Určení pevného počtu vláken
 Některé programy spoléhají na pevnou, prespecified počet vláken správně spustit.  Protože výchozí nastavení pro dynamické přizpůsobení počet vláken je definované implementací, takové programy můžete vypnout funkce dynamické vláken a nastavte počet vláken explicitně zajistit přenositelnost. Následující příklad ukazuje, jak to provést pomocí `omp_set_dynamic` ([části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39), a `omp_set_num_threads` ([bod 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stránce 36):  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356183"
 ---
 # <a name="file-io-classes"></a>Třídy I/O souborů
 Tyto třídy poskytuje rozhraní pro tradiční disku soubory, soubory v paměti, aktivní datové proudy a rozhraní Windows sockets. Všechny třídy odvozené od `CFile` lze použít s `CArchive` objekt pro provedení serializace.  

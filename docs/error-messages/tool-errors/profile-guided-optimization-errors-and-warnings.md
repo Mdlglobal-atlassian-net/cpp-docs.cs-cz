@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317317"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Chyby a upozornění optimalizace na základě profilu
 Tato část poskytuje přehled chyb generovaných sestavovacími nástroji. Pro pomoc s konkrétní chybová zpráva, buď klikněte na číslo chyby v okně výstupu a stisknete klávesu F1, zadejte číslo chyby v **vyhledejte** pole v indexu, nebo kliknutím na příslušný odkaz:  

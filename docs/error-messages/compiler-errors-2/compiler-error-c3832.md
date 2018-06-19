@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266552"
 ---
 # <a name="compiler-error-c3832"></a>C3832 chyby kompilátoru
 'knihovny typů': knihovny typů vypadá jako kdyby byl vytvořen pro ukazatele 32-bit; Změňte kvalifikátor 'ptrsize.  

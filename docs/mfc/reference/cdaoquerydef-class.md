@@ -81,6 +81,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375791"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef – třída
 Představuje definici dotazu, nebo "querydef", obvykle 1, které jsou uloženy v databázi.  

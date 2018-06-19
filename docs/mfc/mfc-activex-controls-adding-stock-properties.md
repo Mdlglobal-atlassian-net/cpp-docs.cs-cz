@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357556"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC – ovládací prvky ActiveX: Přidání uložených vlastností
 Uložené vlastnosti liší od vlastní vlastnosti v tom, že už jsou implementované v třídě `COleControl`. `COleControl` obsahuje předdefinované členské funkce, které podporují společných vlastností pro ovládací prvek. Některé běžné vlastnosti zahrnují ovládacího prvku popisek a barvy popředí a na pozadí. Informace o dalších vlastností uložených v tématu [Stock vlastnosti nepodporuje Průvodce přidáním vlastnosti](#_core_stock_properties_supported_by_classwizard) dále v tomto článku. Odesílání položek mapy uložených vlastností vždy předchází **DISP_STOCKPROP**.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324899"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX – kontejnery ovládacích prvků: Použití ovládacích prvků v jiném kontejneru než dialogovém okně
 V některých aplikace, jako je například SDI a MDI aplikace můžete pro vložení ovládacího prvku v okně aplikace. **Vytvořit** funkce člena třídy obálky vložit pomocí Visual C++, můžete dynamicky, vytvořte instanci ovládacího prvku bez nutnosti dialogové okno.  

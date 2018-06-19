@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380930"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Uvolnění požadavků na databázové transakce
 Tato technická Poznámka, která popsané požadavků transakce databázové třídy MFC rozhraní ODBC, je nyní zastaralá. Před MFC 4.2 databázové třídy vyžaduje, že kurzory se zachová, i na sady záznamů po **CommitTrans** nebo **vrácení zpět** operaci. Pokud ovladač ODBC a databázového systému nepodporují tato úroveň písmen a zachovávání kurzoru, pak databázové třídy nepovolili transakce.  

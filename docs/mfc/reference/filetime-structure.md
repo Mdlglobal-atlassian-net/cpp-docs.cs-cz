@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375879"
 ---
 # <a name="filetime-structure"></a>FILETIME – struktura
 `FILETIME` Struktura je 64 bitů hodnotu představující počet 100nanosekundových intervalů od 1. ledna 1601.  

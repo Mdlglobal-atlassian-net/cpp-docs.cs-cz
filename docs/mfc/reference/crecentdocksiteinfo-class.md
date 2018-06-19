@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374432"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo – třída
 `CRecentDockSiteInfo` Třída je pomocná třída, která ukládá nejnovější informace o stavu pro [CPane třída](../../mfc/reference/cpane-class.md).  

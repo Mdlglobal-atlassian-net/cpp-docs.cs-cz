@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269051"
 ---
 # <a name="compiler-error-c3798"></a>C3798 chyby kompilátoru
 'specifikátor': deklarace vlastnosti nemůže mít specifikátor override (musí být umístěny na vlastnost metody get/set místo)  

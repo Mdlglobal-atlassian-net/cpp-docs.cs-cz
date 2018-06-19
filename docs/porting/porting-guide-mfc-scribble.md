@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845905"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
 Toto téma je první několik témat, které vám představí postup upgradu pro projekty Visual C++, které byly vytvořeny starší verze sady Visual Studio pro Visual Studio 2017. Tato část představuje příklad, počínaje velmi jednoduché projektu a přesunutí chcete trochu složitější proces upgradu. V tomto tématu jsme fungovat prostřednictvím procesu upgradu pro konkrétní projekt, Klikyháky MFC. Je vhodné jako základní informace o procesu upgradu pro projekty C++.  

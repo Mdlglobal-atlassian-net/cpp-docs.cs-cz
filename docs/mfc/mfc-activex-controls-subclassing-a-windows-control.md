@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355434"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows
 Tento článek popisuje proces pro vytvoření podtřídy ovládacího prvku Windows běžné k vytvoření ovládacího prvku ActiveX. Vytvoření podtřídy existující Windows řízení je rychlý způsob, jak vyvíjet ovládacího prvku ActiveX. Nový ovládací prvek bude mít schopnosti rozčleněné ovládací prvek Windows, jako je například vykreslování a reagovat na kliknutí myší. Ukázka ovládací prvky MFC ActiveX [tlačítko](../visual-cpp-samples.md) je příklad vytvoření podtřídy ovládacího prvku systému Windows.  

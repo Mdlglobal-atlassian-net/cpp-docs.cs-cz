@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685798"
 ---
 # <a name="include-files-for-multithreading"></a>Zahrnuté soubory pro multithreading
 Standardní zahrnout soubory deklarovat funkce běhové knihovny jazyka C, jak jsou implementované v knihovnách. Pokud použijete [úplná optimalizace](../build/reference/ox-full-optimization.md) (/ Ox) nebo [fastcall zásady volání](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr) možnost kompilátor předpokládá, že všechny funkce by měla být volána pomocí konvence volání registru. Funkce běhové knihovny byly zkompilovány pomocí konvence volání jazyka C a deklarace v standardní zahrnout soubory oznámení kompilátoru generovat správné externí odkazy na tyto funkce.  

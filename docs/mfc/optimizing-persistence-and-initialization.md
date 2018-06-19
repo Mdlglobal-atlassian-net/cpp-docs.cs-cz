@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355657"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimalizace trvalosti a inicializace
 Ve výchozím nastavení, trvalosti a inicializace v ovládacím prvku jsou zpracovávány `DoPropExchange` – členská funkce. V ovládacím prvku typické tuto funkci obsahuje volání do několika **PX_** funkce (`PX_Color`, `PX_Font`a tak dále), jeden pro každou vlastnost.  

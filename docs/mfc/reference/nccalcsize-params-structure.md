@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369720"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS – struktura
 `NCCALCSIZE_PARAMS` Struktura obsahuje informace, které aplikace můžete použít při zpracování `WM_NCCALCSIZE` zpráva k výpočtu velikosti, pozice a platný obsah klientské oblasti časového období.  

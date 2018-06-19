@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302682"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>C4471 kompilátoru upozornění (úroveň 4)
 '*výčtu*': deklaraci předat dál bez ohledu na obor výčtu musí mít základní typ (int předpokládá, že)  

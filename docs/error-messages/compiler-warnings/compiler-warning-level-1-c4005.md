@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275373"
 ---
 # <a name="compiler-warning-level-1-c4005"></a>C4005 kompilátoru upozornění (úroveň 1)
 "identifikátor": předefinování – makro  

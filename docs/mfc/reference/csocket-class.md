@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375600"
 ---
 # <a name="csocket-class"></a>CSocket – třída
 Odvozená z `CAsyncSocket`, dědí jeho zapouzdření rozhraní Windows Sockets API a představuje vyšší úrovni abstrakce, než `CAsyncSocket` objektu.  

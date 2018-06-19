@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348904"
 ---
 # <a name="cclientdc-class"></a>CClientDC – třída
 Má na starosti volání funkcí Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) během vytváření a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) během odstraňování.  

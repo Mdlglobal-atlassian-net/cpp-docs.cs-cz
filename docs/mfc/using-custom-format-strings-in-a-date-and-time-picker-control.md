@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381999"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Použití řetězců vlastního formátu v ovládacím prvku pro výběr data a času
 Ve výchozím nastavení ovládací prvky pro výběr data a času poskytují že tři typy (každý formát odpovídající jedinečný styl) formátu pro zobrazení aktuálního data a času:  

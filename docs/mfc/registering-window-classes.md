@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379739"
 ---
 # <a name="registering-window-classes"></a>Registrace tříd oken
 Okno "třídy" v tradiční programování pro systém Windows definovat vlastnosti "třída" (ne C++ třídu) ze kterého můžete vytvořit libovolný počet systému windows. Tento typ třídy je šablony nebo model pro vytváření systému windows.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371859"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Nastavení ovládacího prvku, Průvodce ovládacím prvkem ActiveX v prostředí MFC
 Na této stránce průvodce můžete určit způsob řízení chovat. Můžete například základní ovládacího prvku na standardní typy ovládacích prvků Windows, optimalizaci chování a vzhled nebo znamenat, že ovládací prvek může fungovat jako kontejner pro další ovládací prvky.  

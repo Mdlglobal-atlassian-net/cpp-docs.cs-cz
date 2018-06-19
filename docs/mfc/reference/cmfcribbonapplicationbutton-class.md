@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369161"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton – třída
 Implementuje speciální tlačítko nachází v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevření nabídky, která obvykle obsahuje běžné **soubor** příkazy jako **otevřete**, **Uložit**, a **ukončení**.  

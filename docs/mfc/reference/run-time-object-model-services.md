@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378292"
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 Třídy [CObject](../../mfc/reference/cobject-class.md) a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) zapouzdření několik služby objektu, včetně přístupu k informacím run-time třída, serializace a vytváření dynamických objektů. Všechny třídy odvozené od `CObject` dědí tuto funkci.  

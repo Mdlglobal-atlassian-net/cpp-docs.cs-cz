@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356029"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar – třída
 Základní třída pro třídy ovládacích pruhů [cstatusbar –](../../mfc/reference/cstatusbar-class.md), [ctoolbar –](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), a [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  

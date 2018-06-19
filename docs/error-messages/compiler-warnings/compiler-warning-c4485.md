@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270435"
 ---
 # <a name="compiler-warning-c4485"></a>C4485 upozornění kompilátoru
 'override_function': odpovídá metody třídy base ref 'base_class_function', ale není označen jako 'nové' nebo 'přepsání'; 'nové (a "virtuální") se předpokládá, že  

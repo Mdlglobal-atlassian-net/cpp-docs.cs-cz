@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351950"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Přidání třídy z průvodce knihovnou typů
 Pomocí tohoto průvodce můžete přidat třídy knihovny MFC z knihovny k dispozici typu. Průvodce vytvoří třídu pro každé rozhraní, které přidáte z knihovny vybraného typu.  

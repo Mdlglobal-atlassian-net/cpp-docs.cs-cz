@@ -81,6 +81,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375830"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar – třída
 A `CMFCCaptionBar` objekt je ovládací prvek panel, který může zobrazit tři prvky: tlačítko, štítek text a rastrový obrázek. Současně se může zobrazit pouze jeden element každého typu. Každý prvek levé nebo pravé hrany ovládací prvek nebo k centru můžete zarovnat. Styl ploché nebo 3D může platit taky pro horní a dolní ohraničení panelu titulek.  

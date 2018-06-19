@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354436"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Postupy: Příprava typově bezpečné kolekce
 Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní datové typy. Témata zahrnují:  

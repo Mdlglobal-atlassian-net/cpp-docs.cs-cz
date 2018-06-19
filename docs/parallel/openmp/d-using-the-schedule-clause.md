@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694937"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Pomocí klauzule plán
 Paralelní oblast má alespoň jeden bariéry při ukončení a může mít další překážky v něm. V každé bariéry ostatní členové týmu musí čekat poslední vlákno k doručení. Chcete-li minimalizovat této čekací doby, by měly být distribuovány sdílené pracovní tak, aby přicházejí všechna vlákna na bariéry v přibližně ve stejnou dobu. Pokud některé této sdílené je součástí pracovní **pro** vytvoří, `schedule` klauzuli lze použít pro tento účel.  

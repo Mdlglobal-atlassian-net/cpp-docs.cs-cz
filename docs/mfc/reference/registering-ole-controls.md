@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378054"
 ---
 # <a name="registering-ole-controls"></a>Registrace ovládacích prvků OLE
 Ovládací prvky OLE, jako u jiných objektů OLE serveru, byla přístupná pomocí jiné aplikace využívající technologii OLE. Toho se dosáhne registrace knihovny typů a třídy ovládacího prvku.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373795"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funkce uživatelského rozhraní, Průvodce aplikací MFC
 Toto téma vysvětluje možnosti, které můžete použít k určení vzhledu vaší aplikace. Funkce uživatelského rozhraní k dispozici pro váš projekt závisí na typu aplikace, které jste zadali v [typu aplikace, Průvodce aplikací knihovny MFC](../../mfc/reference/application-type-mfc-application-wizard.md) stránky Průvodce aplikací MFC. Například pokud vytvoříte aplikaci rozhraní jedním dokumentem, nelze přidat styly podřízeného rámce.  

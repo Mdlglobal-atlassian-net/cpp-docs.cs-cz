@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688112"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funkce běhové knihovny
 Tato část popisuje funkce běhové knihovny jazyka OpenMP C a C++. Záhlaví  **\<omp.h >** deklaruje dva typy, několik funkcí, které slouží k řízení a dotazování paralelní provádění prostředí a uzamčení funkce, které slouží k synchronizaci přístup k datům.  

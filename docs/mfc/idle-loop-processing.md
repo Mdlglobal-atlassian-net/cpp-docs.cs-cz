@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354898"
 ---
 # <a name="idle-loop-processing"></a>Zpracování smyčky nečinnosti
 Mnoho aplikací provádět zdlouhavé zpracování "v pozadí." Faktory ovlivňující výkon někdy určují používání více vláken pro takové práce. Vlákna zahrnují režijní náklady na vývoj navíc, proto se doporučuje pro jednoduché úlohy, jako je pracovní doby nečinnosti, která MFC v [OnIdle](../mfc/reference/cwinthread-class.md#onidle) funkce. Tento článek se zaměřuje na zpracování při nečinnosti. Další informace o více vláken, viz [Multithreading témata](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

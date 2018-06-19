@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299783"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Chyba linkerů LNK1332
 zjištěna\<počet > typy prostředí Windows Runtime v jeden modul naimportována a definovaný v jiném modulu  

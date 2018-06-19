@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373074"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 `CNetAddressCtrl` Třída reprezentuje ovládací prvek adresy sítě, který můžete použít k vstup a ověření formát IPv4 a IPv6, adresy s názvem DNS.  

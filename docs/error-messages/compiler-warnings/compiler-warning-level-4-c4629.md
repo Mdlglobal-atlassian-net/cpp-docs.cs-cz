@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315461"
 ---
 # <a name="compiler-warning-level-4-c4629"></a>C4629 kompilátoru upozornění (úroveň 4)
 použít spřežka posloupnost znaků spřežka interpretovat jako token "char" (Vložit mezery mezi dvěma znaky. Pokud se jedná, není to v pořádku)  

@@ -71,6 +71,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376568"
 ---
 # <a name="cfilefind-class"></a>CFileFind – třída
 Provede vyhledávání místního souboru a je základní třídou pro [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) a [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), které provádí hledání souborů Internetu.  

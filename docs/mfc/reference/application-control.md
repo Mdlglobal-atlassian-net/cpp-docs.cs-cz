@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355909"
 ---
 # <a name="application-control"></a>Řízení aplikace
 OLE vyžaduje významné kontrolu nad aplikací a jejich objekty. OLE systémové knihovny DLL musí být možné spustit a verze aplikace automaticky, koordinaci jejich produkční a úpravy objektů a tak dále. Funkce v tomto tématu splňovat tyto požadavky. Kromě volané systémem OLE knihovny DLL, musí tyto funkce někdy nazývá také aplikace. 

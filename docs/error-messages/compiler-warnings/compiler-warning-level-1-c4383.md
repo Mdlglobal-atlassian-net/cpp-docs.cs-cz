@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286081"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>C4383 kompilátoru upozornění (úroveň 1)
 'instance_dereference_operator': význam vyhodnocení popisovač lze změnit, pokud existuje operátor uživatelem definované 'operátor'; zápis operátor jako statické funkce jako explicitní o operand  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373925"
 ---
 # <a name="event-sink-maps"></a>Mapy jímek událostí
 V případě, že vloženému ovládacímu prvku OLE aktivuje událost, obdrží kontejneru ovládacího prvku událost pomocí mechanismus, nazývá "události podřízený mapa," poskytl MFC. Mapy jímek událostí označí funkce obslužných rutin pro každou konkrétní události, stejně jako parametry těchto událostí. Další informace o mapy jímek událostí najdete v článku [– kontejnery ovládacích prvků ActiveX](../../mfc/activex-control-containers.md).  

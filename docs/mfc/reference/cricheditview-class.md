@@ -115,6 +115,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378953"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
 S [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) a [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  

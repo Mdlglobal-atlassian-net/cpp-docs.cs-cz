@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374721"
 ---
 # <a name="ole-initialization"></a>Inicializace OLE
 Aplikaci mohli používat OLE systémových služeb, musí inicializovat OLE systémové knihovny DLL a ověřte, zda jsou knihovny DLL správnou verzi. **AfxOLEInit –** funkce inicializuje OLE systémové knihovny DLL.  

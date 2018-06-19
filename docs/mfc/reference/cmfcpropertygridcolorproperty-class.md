@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367991"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty – třída
 `CMFCPropertyGridColorProperty` Třída podporuje položka ovládací prvek seznamu vlastnosti, které se otevře dialogové okno Výběr barev.  

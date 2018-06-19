@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846152"
 ---
 # <a name="define-directive-cc"></a>#define – direktiva (C++)
 `#define` Vytvoří *makro*, což je identifikátor nebo identifikátor parametrizované přidružení k řetězec tokenu. Po definování makro kompilátor můžete nahradit řetězec tokenu pro každý výskyt identifikátor ve zdrojovém souboru.  

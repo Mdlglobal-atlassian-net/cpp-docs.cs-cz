@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369320"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl – třída
 `CMFCEditBrowseCtrl` Třída podporuje řízení procházet úpravy, které je upravitelné textové pole, které volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládacího prvku provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeče souboru nebo složky prohlížeče.  
