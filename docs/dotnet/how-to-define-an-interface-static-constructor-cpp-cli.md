@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127452"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>Postupy: Definice a používání statického konstruktoru (C++/CLI)
 Statický konstruktor, který můžete použít k chybě při inicializaci členy statických dat může mít rozhraní.  Statický konstruktor bude volána alespoň jednou a bude volána před prvním členem statické rozhraní přistupuje.  

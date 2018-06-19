@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089711"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Přímé volání funkcí rozhraní API ODBC
 Databázové třídy poskytují jednodušší rozhraní k [zdroj dat](../../data/odbc/data-source-odbc.md) než rozhraní ODBC. Třídy v důsledku toho není zapouzdření rozhraní API ODBC. Pro všechny funkce, která spadá mimo schopnosti tříd musí volat funkce rozhraní API ODBC přímo. Například musí volat funkce katalogu rozhraní ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**a jiné) přímo.  

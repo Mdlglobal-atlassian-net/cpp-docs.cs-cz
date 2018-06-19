@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103447"
 ---
 # <a name="record-mfc-data-access"></a>Záznam (Data MFC Access)
 Záznam je kolekce dat o jedné entity, jako je například účet nebo zákazníka, uložené v tabulce (řádek tabulky). Záznam se skládá ze skupiny souvislý sloupců (někdy nazývané polí), které obsahují data různých typů. Sady záznamů vybrané ze zdroje dat – často říká sady výsledků v databázi podmínky – se nazývá sada záznamů v prostředí MFC. Další informace najdete v tématu [záznamů (ODBC)](../data/odbc/recordset-odbc.md).  

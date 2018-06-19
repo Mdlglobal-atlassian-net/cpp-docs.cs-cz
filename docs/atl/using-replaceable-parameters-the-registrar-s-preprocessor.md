@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362281"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Pomocí nahraditelné parametry (registrátora&#39;s Preprocessor)
 Nahraditelné parametry Povolit klientům doménového registrátora zadejte data pro spuštění. K tomuto účelu udržuje registrátora nahrazení mapy, do kterého přejde hodnoty přidružené k nahraditelné parametry ve vašem skriptu. Registrátora umožňuje tyto položky v době běhu.  

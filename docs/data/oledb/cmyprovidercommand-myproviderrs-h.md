@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098144"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand` Třída je implementace pro objekt příkazu zprostředkovatele. Poskytuje implementaci pro `IAccessor`, `ICommandText`, a **ICommandProperties** rozhraní. `IAccessor` Rozhraní je stejný jako ten, který v dané sadě řádků. Objekt příkazu používá přistupující objekt k určení vazby parametrů. Objekt sady řádků je používá k určení vazby pro výstupní sloupce. `ICommandText` Rozhraní je užitečný způsob, jak určit textový příkaz. Tento příklad používá `ICommandText` rozhraní později, když přidá vlastní kód; Potlačí také `ICommand::Execute` metoda. **ICommandProperties** rozhraní zpracovává všechny vlastnosti pro objekty příkazu a sady řádků.  

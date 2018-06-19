@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369562"
 ---
 # <a name="bscmake-command-file-response-file"></a>Soubor příkazů BSCMAKE (soubor odezvy)
 Můžete zadat část nebo všechny z příkazového řádku vstup v soubor příkazů. Zadejte soubor příkazů pomocí následující syntaxe:  

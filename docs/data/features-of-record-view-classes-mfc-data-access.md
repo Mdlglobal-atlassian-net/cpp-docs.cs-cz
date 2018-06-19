@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089569"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Funkce tříd zobrazení záznamu (Data MFC Access)
 Můžete provést pomocí formuláře přístup k datům programování pomocí třídy [CFormView](../mfc/reference/cformview-class.md), ale [CRecordView](../mfc/reference/crecordview-class.md) je obecně lepší třída k odvozování z. Kromě jeho `CFormView` funkce `CRecordView`:  

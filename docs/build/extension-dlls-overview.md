@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367817"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC – rozšiřující knihovny DLL: Přehled
 MFC DLL je rozšíření knihovny DLL, která implementuje použitelné třídy odvozené z existujících tříd Microsoft Foundation Class Library. MFC – knihovny DLL rozšíření jsou vytvořeny pomocí knihovny DLL verze knihovny MFC (také označovaný jako sdílený verze knihovny MFC). Pouze spustitelné soubory knihovny MFC (aplikace nebo běžné knihovny MFC DLL), jsou integrované s sdílená verze knihovny MFC můžete použít knihovnu DLL. S příponou MFC DLL lze odvodit nové vlastní třídy z rozhraní MFC a pak nabízet toto rozšířené verze knihovny MFC k aplikacím, které volání knihovny DLL.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110437"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>Explicitní přepsání člena rozhraní
 Syntaxe deklarace explicitní přepsání člena rozhraní v rámci třídy změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  

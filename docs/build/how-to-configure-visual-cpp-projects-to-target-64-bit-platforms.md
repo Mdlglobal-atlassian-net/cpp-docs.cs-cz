@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369702"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace projektů Visual C++ pro 64bitové, x64 platformy
 

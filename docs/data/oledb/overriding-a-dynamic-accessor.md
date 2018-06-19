@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107854"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Přepsání dynamického přístupového objektu
 Při použití dynamického přístupového objektu jako `CDynamicAccessor`, příkaz **otevřete** metoda vytvoří přistupující objekt automaticky, založeného na informace o sloupci otevřené sady řádků. Můžete přepsat dynamického přístupového objektu k řízení, přesně jak je vázána sloupce.  

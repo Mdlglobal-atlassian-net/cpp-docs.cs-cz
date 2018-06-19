@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128651"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Postupy: Iterace v uživatelem definované kolekci s výrazem for each
 Pro třídu jako spravované kolekci musí být veřejné GetEnumerator funkci, která vrací popisovač třídu enumerátor nebo rozhraní.  Třídu enumerátor musí obsahovat deklaraci pro nestatické MoveNext funkce a aktuální vlastností.  

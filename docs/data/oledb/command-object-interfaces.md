@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096116"
 ---
 # <a name="command-object-interfaces"></a>Rozhraní příkazového objektu
 Objekt příkazu používá `IAccessor` rozhraní k zadání parametru vazby. Volání příjemce `IAccessor::CreateAccessor`, předání pole `DBBINDING` struktury. `DBBINDING` obsahuje informace o vazeb sloupců (například typ a délku). Zprostředkovatel obdrží struktury a určuje, jak by se měly převést data a zda jsou nutné převody.  

@@ -42,6 +42,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450634"
 ---
 # <a name="gets-getws"></a>gets, _getws
 Získá řádek z `stdin` datového proudu. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [gets_s –, _getws_s –](../c-runtime-library/reference/gets-s-getws-s.md).  

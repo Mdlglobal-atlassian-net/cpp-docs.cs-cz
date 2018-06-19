@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097689"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
 V následujícím příkladu se předpokládá, že přidáváte podporu příjemce technologie OLE DB do existujícího projektu knihovny ATL. Pokud chcete přidat do aplikace MFC podporu příjemce technologie OLE DB, byste měli spustit Průvodce aplikací MFC, který vytvoří nezbytné všechny podporu a vyvolá MFC rutiny, které jsou nezbytné ke spuštění aplikace.  

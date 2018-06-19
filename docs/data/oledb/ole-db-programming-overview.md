@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106190"
 ---
 # <a name="ole-db-programming-overview"></a>Přehled programování v architektuře OLE DB
 OLE DB je databáze založená na modelu COM, vysoce výkonné technologie. Poskytuje společné způsob, jak přistupovat k datům bez ohledu na formulář, ve kterém je uložený. V typické obchodní situaci je uložený obrovské množství informací mimo firemní databáze. Tyto informace naleznete v systémech souborů (například FAT nebo systému souborů NTFS), sekvenční indexované soubory, osobní databáze (například přístup), tabulky (například aplikace Excel), aplikace plánování projektu (například projekt) a e-mailu (jako je například Outlook). OLE DB umožňuje přístup k libovolného typu úložiště dat stejným způsobem, dokud úložiště dat obsahuje zprostředkovatele OLE DB.

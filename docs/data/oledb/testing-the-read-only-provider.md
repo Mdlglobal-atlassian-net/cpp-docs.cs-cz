@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112677"
 ---
 # <a name="testing-the-read-only-provider"></a>Testování zprostředkovatele pouze pro čtení
 Chcete-li otestovat poskytovatele, musíte příjemce. Je užitečné, pokud příjemce může shodovat s poskytovatelem. Šablony příjemce technologie OLE DB jsou dynamické obálku kolem OLE DB a shodovat s objekty COM zprostředkovatele. Vzhledem k tomu, že je zdroj dodáván s šablonami příjemců, je snadné ladění zprostředkovatele s nimi. Šablony příjemce jsou také velmi malé a rychlý způsob, jak vyvíjet aplikace příjemce.  

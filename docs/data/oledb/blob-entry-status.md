@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095180"
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 Použít s `BEGIN_COLUMN_MAP` nebo `BEGIN_ACCESSOR_MAP` pro vazbu binární rozsáhlý objekt ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md)kromě toho, že tento makro také získá stav sloupci objektů BLOB.  

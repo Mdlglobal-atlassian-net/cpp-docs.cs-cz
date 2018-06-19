@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098352"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Vytvoření projektu pro zprostředkovatele
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Vytvoření projektu, ve kterém se bude nacházet zprostředkovatel OLE DB  

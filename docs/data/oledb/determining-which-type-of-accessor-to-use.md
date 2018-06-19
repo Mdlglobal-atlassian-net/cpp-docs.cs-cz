@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104006"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Určení použitého typu přístupového objektu
 Můžete určit typy dat pro sadu řádků v době kompilace nebo za běhu.  

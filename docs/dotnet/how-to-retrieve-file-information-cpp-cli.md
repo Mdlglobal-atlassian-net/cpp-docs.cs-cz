@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127848"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>Postupy: Načtení informací o souboru (C++/CLI)
 Následující příklad kódu ukazuje <xref:System.IO.FileInfo> třídy. Až budete mít název souboru, tuto třídu můžete použít k načtení informací o souboru, jako je například velikost souboru, adresáře, úplný název a datum a čas vytvoření a poslední změny.  

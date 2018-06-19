@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371096"
 ---
 # <a name="exp-files-as-linker-input"></a>Soubory .Exp jako vstup linkeru
 Export (.exp) soubory obsahují informace o exportovaných funkcí a datové položky. Když LIB vytvoří knihovnu importu, také vytvoří soubor .exp. Můžete použít soubor .exp při propojení program, který exportuje do i importuje z jiné aplikace, buď přímo nebo nepřímo. Pokud jste se souborem .exp, odkaz nevytváří knihovnu importu, protože předpokládá, že LIB již vytvořili. Podrobnosti o soubory .exp a knihoven importovat najdete v tématu [práce knihoven importovat a exportovat soubory](../../build/reference/working-with-import-libraries-and-export-files.md).  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093893"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Použití databázových tříd bez objektů Document a View
 V některých případech nemusí chtít použít rozhraní framework document/view – architektura v databázových aplikacích. Toto téma vysvětluje:  

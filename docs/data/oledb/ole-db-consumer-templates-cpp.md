@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112105"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
 Šablony příjemce technologie OLE DB podporují specifikaci verzi 2.6 OLE DB. (Šablony příjemce technologie OLE DB jsou testovány proti 2.6 technologie OLE DB, ale nepodporují každé rozhraní ve specifikaci.) Šablony příjemce minimalizovat kód, který musí zapsat implementace příjemce technologie OLE DB. Šablony poskytují:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366793"
 ---
 # <a name="callercallee-saved-registers"></a>Volající/volaný – uložené registry
 Poškození registrů RAX, RCX, RDX, R8, R9, R10, R11 jsou považovány za volatile a je třeba zvážit při volání funkce (pokud bezpečnost dokázat analýza například optimalizace celého programu).  

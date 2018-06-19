@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133646"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) směrování příkazů a zpráv příkaz aktualizace uživatelského rozhraní do uživatelského ovládacího prvku tak, aby ji zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů).  

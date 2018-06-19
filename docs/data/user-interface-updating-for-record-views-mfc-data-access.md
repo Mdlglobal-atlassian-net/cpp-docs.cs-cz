@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105813"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Aktualizace uživatelského rozhraní pro zobrazení záznamů (Data MFC Access)
 `CRecordView` poskytuje výchozí obslužné rutiny aktualizace uživatelského rozhraní pro navigační příkazy. Tyto rutiny automatizují povolení a zakázání objektů uživatelského rozhraní – položek nabídky a tlačítka panelu nástrojů. Průvodce aplikací poskytuje standardní nabídky a pokud se rozhodnete **lze ukotvit nástrojů** možnost sadu tlačítka panelu nástrojů pro příkazy. Pokud vytvoříte pomocí tříd zobrazení záznamu `CRecordView`, můžete chtít přidat podobné objekty uživatelského rozhraní do vaší aplikace.  

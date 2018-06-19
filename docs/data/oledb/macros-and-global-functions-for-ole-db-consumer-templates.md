@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114312"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra a globální funkce pro šablony příjemců OLE DB
 Šablony příjemce technologie OLE DB patří následující makra a globální funkce:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107484"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Sdružování prostředků v aplikaci OLE DB
 Využít sdružování v aplikaci, je nutné nejprve získat zdroj dat prostřednictvím služby rozhraní OLE DB jsou vyvolány **IDataInitialize** nebo **IDBPromptInitialize**. Pokud používáte přímo `CoCreateInstance` k vyvolání zprostředkovatele podle CLSID zprostředkovatele, jsou vyvolány žádné služby rozhraní OLE DB.  

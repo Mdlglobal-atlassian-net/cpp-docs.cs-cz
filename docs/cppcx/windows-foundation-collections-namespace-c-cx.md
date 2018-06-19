@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090819"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Namespace Windows::Foundation::Collections (C + +/ CX)
 C + +/ CX doplňují Windows::Foundation::Collections oboru názvů s funkcemi, které zjednodušují použití třídy vektoru, VectorView, mapy a MapView kolekce.  

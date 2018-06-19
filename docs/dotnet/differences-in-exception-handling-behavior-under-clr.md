@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111829"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Rozdíly v chování zpracování výjimek v režimu kompilace /CLR
 [Základní koncepce při použití spravovaných výjimek](../dotnet/basic-concepts-in-using-managed-exceptions.md) popisuje zpracování výjimek v spravovaných aplikací. V tomto tématu se rozdíl oproti standardní chování zpracování výjimek a určitá omezení jsou podrobněji. Další informace najdete v tématu [_set_se_translator – funkce](../c-runtime-library/reference/set-se-translator.md).  

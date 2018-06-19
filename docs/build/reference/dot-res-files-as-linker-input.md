@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370664"
 ---
 # <a name="res-files-as-linker-input"></a>Soubory .Res jako vstup linkeru
 Při propojování program, můžete zadat soubor .res. Soubor .res je vytvořen kompilátor prostředků (RC). Soubory .res odkaz automaticky převede na COFF. Nástroj CVTRES.exe musí být ve stejném adresáři jako LINK.exe nebo v adresáři zadaném v proměnné prostředí PATH.  

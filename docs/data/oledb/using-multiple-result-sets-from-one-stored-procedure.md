@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106307"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Použití více sad výsledků dotazu z jedné uložené procedury
 Většina uložených procedur vracejí víc výsledných sad. Uložená procedura obvykle zahrnuje jednu nebo více dotazů select. Příjemce musí obsahovat zpracování všech sad výsledků dotazu.  

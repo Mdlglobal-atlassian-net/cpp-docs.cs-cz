@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091781"
 ---
 # <a name="crowsetmovefirst"></a>CRowset::MoveFirst
 Posune kurzor na počáteční pozici a načte počáteční řádek.  

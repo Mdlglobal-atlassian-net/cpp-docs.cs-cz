@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091677"
 ---
 # <a name="platformbox-class"></a>Platform::Box – třída
 Typ hodnoty jako například umožňuje `Windows::Foundation::DateTime` nebo skalárního typu, jako `int` k uložení do `Platform::Object` typu. Obvykle není nutné používat `Box` explicitně, protože zabalení implicitně dochází, když přetypovat na typ hodnoty `Object^`.  

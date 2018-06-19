@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104695"
 ---
 # <a name="schema--mfc-data-access"></a>Schéma (Data MFC Access)
 Schéma databáze popisuje aktuální struktura tabulky a zobrazení databáze v databázi. Obecně platí vygenerované průvodcem kód předpokládá, že nedojde ke změně schématu pro tabulku nebo tabulky přístup na sadu záznamů, ale databázové třídy můžete řešit některé změny schématu, jako je přidání, změna nebo odstranění nevázaných sloupců. Pokud se změní tabulky, je nutné ručně aktualizovat sadu záznamů pro tabulku a potom znovu zkompiluje vaší aplikace.  

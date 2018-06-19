@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097520"
 ---
 # <a name="columnname"></a>COLUMN_NAME
 Představuje vazbu na sadě řádků konkrétní sloupec v dané sadě řádků. Podobně jako [COLUMN_ENTRY](../../data/oledb/column-entry.md)kromě toho, že tento makro přebírá název sloupce místo číslo sloupce.  

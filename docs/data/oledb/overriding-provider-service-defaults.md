@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110077"
 ---
 # <a name="overriding-provider-service-defaults"></a>Přepsání výchozích hodnot služby zprostředkovatele
 Hodnota registru zprostředkovatele pro **OLEDB_SERVICES** se vrátí jako výchozí hodnota [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) inicializace vlastnost v objektu zdroje dat.  

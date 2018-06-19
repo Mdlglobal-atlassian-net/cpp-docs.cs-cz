@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110165"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Načtení řetězců do zprostředkovatele OLE DB
 `RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Zprostředkovatel obdrží název souboru a uloží jej v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. Jinak, otevře se soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců čtení, `Execute` vytvoří instanci záznamu uživatele (`CAgentMan`) a umístí ji do pole.  

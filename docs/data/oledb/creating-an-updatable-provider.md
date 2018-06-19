@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098638"
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 Visual C++ podporuje aktualizovatelní zprostředkovatelé nebo poskytovatelů, které můžete aktualizovat (zapisovat na) úložišti. Toto téma popisuje postup vytvoření aktualizovatelní zprostředkovatelé pomocí šablony technologie OLE DB.  

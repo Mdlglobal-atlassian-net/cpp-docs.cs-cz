@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131095"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Postupy: Analýza řetězců využívajících regulární výrazy (C++/CLI)
 Následující příklad kódu ukazuje analýzu jednoduchého řetězce pomocí <xref:System.Text.RegularExpressions.Regex> třídy v <xref:System.Text.RegularExpressions?displayProperty=fullName> oboru názvů. Řetězec obsahující více typů oddělovačů slov je vytvořený. Řetězec je pak analyzován pomocí <xref:System.Text.RegularExpressions.Regex> třídy ve spojení s <xref:System.Text.RegularExpressions.Match> třídy. Jednotlivých slov ve větě se potom zobrazí samostatně.  

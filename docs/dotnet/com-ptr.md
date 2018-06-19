@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104521"
 ---
 # <a name="comptr"></a>com::ptr
 Obálka pro objekt COM, který lze použít jako člena třídy CLR. Obálku automatizuje správu životního cyklu objektu COM, při jeho destruktoru uvolnění vlastní odkazuje na objekt. Podobá se [CComPtr třída](../atl/reference/ccomptr-class.md).  

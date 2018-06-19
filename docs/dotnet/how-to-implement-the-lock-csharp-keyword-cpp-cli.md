@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127913"
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>Postupy: Implementace klíčového slova lock jazyka C# (C++/CLI)
 Toto téma ukazuje, jak implementovat jazyka C# `lock` – klíčové slovo v jazyce Visual C++. 

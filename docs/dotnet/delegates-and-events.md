@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108323"
 ---
 # <a name="delegates-and-events"></a>Delegáti a události
 Způsob deklarace Delegáti a události změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  

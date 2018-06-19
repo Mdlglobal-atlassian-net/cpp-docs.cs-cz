@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136480"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI
 Následující postup popisuje vytvoření uživatelského ovládacího prvku rozhraní .NET Framework, vytváření uživatelského ovládacího prvku v knihovnu tříd ovládacího prvku (konkrétně knihovny ovládacích prvků Windows projekt) a pak kompilace projektu do sestavení. Ovládací prvek může být používán pak z aplikace MFC, která používá třídy odvozené od třídy [CView – třída](../mfc/reference/cview-class.md) a [CWinFormsView třída](../mfc/reference/cwinformsview-class.md).  

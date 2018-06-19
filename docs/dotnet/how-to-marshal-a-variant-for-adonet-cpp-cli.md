@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134429"
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Postupy: Zařazování VARIANTpro technologii ADO.NET (C++/CLI)
 Ukazuje, jak přidat nativní `VARIANT` k databázi a jak přeuspořádat <xref:System.Object?displayProperty=fullName> z databáze na nativní `VARIANT`.  

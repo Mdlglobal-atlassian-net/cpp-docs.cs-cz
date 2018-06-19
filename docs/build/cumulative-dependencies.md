@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366972"
 ---
 # <a name="cumulative-dependencies"></a>Kumulativní závislosti
 Závislosti jsou kumulativní v bloku popis, pokud se opakuje cíl.  

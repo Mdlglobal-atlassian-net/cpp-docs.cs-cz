@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136770"
 ---
 # <a name="multisetgenericreverseiterator-stlclr"></a>multiset::generic_reverse_iterator (STL/CLR)
 Typ zpětné iterator pro použití s generické rozhraní pro kontejner.  

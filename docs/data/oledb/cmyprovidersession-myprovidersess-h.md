@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096532"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H obsahuje prohlášení a implementací objektu session OLE DB. Objekt zdroje dat vytvoří objekt relace a představuje konverzaci mezi příjemcem a zprostředkovatelem. Několik souběžných relací může být otevřené pro jeden zdroj dat. V seznamu dědičnosti `CMyProviderSession` následuje:  

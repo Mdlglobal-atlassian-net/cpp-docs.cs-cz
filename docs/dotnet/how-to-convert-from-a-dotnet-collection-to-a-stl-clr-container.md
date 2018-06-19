@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132798"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Postupy: Převod typu .NET Collection na kontejner STL/CLR
 Toto téma ukazuje, jak převést kolekcí .NET na jejich ekvivalentní STL/CLR – kontejnery. Jako příklad ukážeme, jak převést .NET <xref:System.Collections.Generic.List%601> k STL/CLR [vektoru](../dotnet/vector-stl-clr.md) a jak převést rozhraní .NET <xref:System.Collections.Generic.Dictionary%602> k STL/CLR [mapy](../dotnet/map-stl-clr.md), ale postup je podobný pro všechny kolekce a kontejnery .  

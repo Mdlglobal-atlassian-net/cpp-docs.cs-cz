@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104640"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>Použití zobrazení záznamů (Data MFC Access)
 Toto téma vysvětluje, jak může často přizpůsobit výchozí kód pro zobrazení záznamů, které pro vás zapisuje průvodce. Obvykle je vhodné omezit výběr záznamu [filtru](../data/odbc/recordset-filtering-records-odbc.md) nebo [parametry](../data/odbc/recordset-parameterizing-a-recordset-odbc.md), případně [řazení](../data/odbc/recordset-sorting-records-odbc.md) záznamy, přizpůsobení příkazu SQL.  

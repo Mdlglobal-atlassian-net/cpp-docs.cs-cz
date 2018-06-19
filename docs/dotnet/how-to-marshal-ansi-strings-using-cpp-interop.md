@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129392"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++
 Toto téma ukazuje, jak mohou být řetězců v kódu ANSI předaným pomocí zprostředkovatele komunikace C++, ale rozhraní .NET Framework <xref:System.String> představuje řetězce ve formátu Unicode, takže převod na ANSI čeká na další krok. Spolupráce s jinými typy řetězců, najdete v následujících tématech:  

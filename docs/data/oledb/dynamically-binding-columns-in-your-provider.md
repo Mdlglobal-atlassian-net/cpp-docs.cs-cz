@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101689"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamické vazby sloupců ve zprostředkovateli
 Zkontrolujte, zda že je skutečně potřebujete dynamická vazba sloupců. To může být nutné, protože:  

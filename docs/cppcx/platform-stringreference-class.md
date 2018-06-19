@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097507"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference – třída
 Typ optimalizace, které můžete použít k předávání dat řetězec z `Platform::String^` vstupní parametry pro jiné metody s minimální operace kopírování.  

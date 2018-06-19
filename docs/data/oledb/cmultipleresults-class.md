@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096217"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults – třída
 Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte `CMultipleResults` pro `CCommand` šablony argument *TMultiple*.  

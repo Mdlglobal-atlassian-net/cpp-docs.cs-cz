@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112378"
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 Operace velmi základní databáze je aktualizovat nebo zapisovat data do úložiště dat. V OLE DB, je jednoduchý mechanismus aktualizace: aplikace příjemce nastaví hodnoty členů vázaných dat a pak zapíše tyto hodnoty do sady řádků; Příjemce potom požadavků, že aktualizovat zprostředkovatele úložiště dat.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112040"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Volání nativních funkcí ze spravovaného kódu
 Modul common language runtime poskytuje služby volání nespravovaného nebo PInvoke, což umožňuje spravovat kód volat funkce jazyka C v nativní propojené dynamické knihovny (DLL). Stejné zařazování dat se používá jako Interoperabilita modelů COM s modulem runtime a pro "Prostě to funguje" nebo IJW, mechanismus.  

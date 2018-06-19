@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129096"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Vzájemná funkční spolupráce s jinými jazyky rozhraní .NET (C++/CLI)
 Témata v této části ukazují, jak vytvořit sestavení v jazyce Visual C++, které přijímají nebo poskytovat funkce pro sestavení, které jsou napsané v C# nebo Visual Basic.  

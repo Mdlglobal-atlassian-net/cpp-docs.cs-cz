@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368496"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generování manifestu v příkazovém řádku
 Při sestavování aplikací C/C++ z příkazového řádku pomocí nmake nebo podobné nástrojů, manifest se generuje po linkeru má zpracovat všechny soubory objektů a vytvořené konečné binárního souboru. Linkeru shromažďuje informace o sestavení, které jsou uložené v souborech objektu a kombinuje tyto informace do konečné souboru manifestu. Ve výchozím nastavení vygeneruje linkeru do souboru s názvem < binary_name >. \<rozšíření > Manifest k popisu konečné binárního souboru. Linkeru nevloží soubor manifestu uvnitř binárního souboru a můžete pouze generování manifestu jako externí soubor. Existuje několik způsobů pro vložení manifestu do konečné binárního souboru, například pomocí [Nástroj Manifest (mt.exe)](http://msdn.microsoft.com/library/aa375649) nebo kompilování manifest do souboru prostředků. Je důležité mějte na paměti, které specifická pravidla k při vložení manifestu do konečné binárního souboru k povolení funkcí, jako jsou přírůstkové propojování dodržovat podepisování, upravit a pokračovat. Tyto a další možnosti jsou popsané v [postupy: vložení manifestu uvnitř C/C++ aplikace](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) při sestavování na příkazovém řádku.  

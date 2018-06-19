@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129031"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>Postupy: Otáčení obrázků s použitím rozhraní .NET Framework
 Následující příklad kódu ukazuje použití <xref:System.Drawing.Image?displayProperty=fullName> třída načíst obrázek z disku, rotaci o 90 stupňů a uložte ho jako nový soubor .jpg.  

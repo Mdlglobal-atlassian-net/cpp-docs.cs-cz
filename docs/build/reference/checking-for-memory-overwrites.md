@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369848"
 ---
 # <a name="checking-for-memory-overwrites"></a>Kontrola přepisů paměti
 Pokud dojde k narušení přístupu pro volání na funkci pro zpracování haldy, je možné, že váš program má poškozena halda. Běžné příznakem tato situace by byl:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101299"
 ---
 # <a name="defining-stored-procedures"></a>Definování uložených procedur
 Před voláním uložené procedury, je nutné nejprve definovat, pomocí [DEFINE_COMMAND](../../data/oledb/define-command.md) makro. Když definujete příkaz, parametry s otazníkem (?) označují jako parametr značky:  

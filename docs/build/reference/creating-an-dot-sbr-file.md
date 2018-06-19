@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371080"
 ---
 # <a name="creating-an-sbr-file"></a>Vytvoření souboru .Sbr
 Vstupní soubory pro BSCMAKE jsou soubory .sbr. Kompilátor vytvoří soubor .sbr pro každý objekt soubor (.obj) kompilaci. Při vytvoření nebo aktualizaci vaší soubor s informacemi o procházení, všechny soubory .sbr pro svůj projekt musí být k dispozici na disku.  

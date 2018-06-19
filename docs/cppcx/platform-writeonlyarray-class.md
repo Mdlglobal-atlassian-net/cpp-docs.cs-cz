@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091484"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray – třída
 Představuje jednorozměrné pole, které slouží jako vstupní parametr tehdy, když volání pro metodu k vyplnění pole.  

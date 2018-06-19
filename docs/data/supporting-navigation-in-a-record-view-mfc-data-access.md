@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102381"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Podpora navigace v zobrazení záznamu (Data MFC Access)
 Toto téma vysvětluje, jak pro podporu přesun mezi záznamy v vaše [CRecordView](../mfc/reference/crecordview-class.md) třídy, včetně informací o:  

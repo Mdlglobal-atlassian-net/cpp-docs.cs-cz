@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365517"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread – třída
 Tato třída vytvoří pracovní vlákno nebo používá existující, čeká na jeden nebo více objektů obslužných rutin jádra a provede funkci zadaného klienta, když se jeden z obslužné rutiny pro zpracování signalizace.  

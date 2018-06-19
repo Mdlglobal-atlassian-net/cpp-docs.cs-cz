@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880767"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Postupy: Aktivace a používání komponent prostředí Windows Runtime s použitím knihovny WRL
 Tento dokument ukazuje, jak používat Windows Runtime C++ šablony knihovny (WRL) k inicializaci prostředí Windows Runtime a jak aktivace a používání komponent prostředí Windows Runtime.  

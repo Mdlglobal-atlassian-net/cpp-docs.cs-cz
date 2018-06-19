@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100041"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl – třída
 Představuje implementaci objektu [IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx) rozhraní.  

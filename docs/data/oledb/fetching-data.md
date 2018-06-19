@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101198"
 ---
 # <a name="fetching-data"></a>Načítání dat
 Po otevření zdroj dat, relace a objektu sady řádků, můžete načíst data. V závislosti na typu přistupujícího objektu, který používáte může být potřeba navázat sloupce.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114731"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Získávání metadat pomocí sad řádků schématu
 V některých případech budete muset získat informace o zprostředkovateli, řádků, tabulky, sloupce nebo Další informace o databázi bez otevření sady řádků. Data o struktuře databáze se nazývá metadata a můžete si ho načíst několik různých metod. Jednou z možností je použití sad řádků schématu.  

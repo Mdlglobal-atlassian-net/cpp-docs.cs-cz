@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134336"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Postupy: Používání vlastností v jazyce C++/CLI
 Tento článek ukazuje, jak pomocí vlastností v jazyce C + +/ CLI.  

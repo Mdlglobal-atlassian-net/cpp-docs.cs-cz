@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458859"
 ---
 # <a name="filename-macros"></a>Makra názvů souborů
 Makra názvů souborů jsou předdefinovány jako názvy souborů zadaný v závislost (specifikace není úplný název souboru na disku). Tyto makra nemusíte být uzavřená v závorkách při vyvolání; jak je znázorněno, zadejte pouze $.  

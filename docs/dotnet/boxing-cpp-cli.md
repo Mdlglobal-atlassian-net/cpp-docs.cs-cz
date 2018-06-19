@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105888"
 ---
 # <a name="boxing-ccli"></a>Zabalení (C++/CLI)
 Zabalení je proces převodu typu hodnoty na typ `object` nebo k libovolnému typu rozhraní, které je implementované typ hodnoty. Pokud modul CLR (CLR) oknech typ hodnoty, se zabalí hodnotu v `System.Object` a uloží je na spravované haldě. Rozbalení extrahuje typ hodnoty z objektu. Zabalení je implicitní; Rozbalení je explicitní.  

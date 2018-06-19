@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088339"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray rozhraní
 `IBoxArray` obálku pro pole typů hodnot, které jsou předán přes rozhraní binární aplikace (ABI) nebo uložený v kolekcích `Platform::Object^` elementů, jako jsou ty, v ovládacích prvcích XAML.  

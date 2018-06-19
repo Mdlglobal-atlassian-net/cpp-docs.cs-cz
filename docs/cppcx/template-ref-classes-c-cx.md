@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088047"
 ---
 # <a name="template-ref-classes-ccx"></a>Třídy šablon ref (C + +/ CX)
 Šablonami C++ nejsou vydané ve službě metadata a proto nemůže mít veřejných nebo chráněného usnadnění v programu. Standardní C++ šablony můžete použít samozřejmě interně v programu. Kromě toho můžete definovat třídu privátní ref jako šablona a třídu ref explicitně specializované šablony můžou deklarovat jako soukromý člen v třídě veřejné ref.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097104"
 ---
 # <a name="creating-an-ole-db-provider"></a>Vytvoření zprostředkovatele OLE DB
 Doporučený způsob vytvoření zprostředkovatele OLE DB je použít Průvodce pro vytvoření projektu knihovny ATL COM a zprostředkovatele a potom upravte soubory pomocí šablony technologie OLE DB. Jako nastavení vlastního zprostředkovatele, můžete Zakomentovat nežádoucí vlastnosti a přidat volitelné rozhraní.  

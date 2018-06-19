@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107815"
 ---
 # <a name="transactions--mfc-data-access"></a>Transakce (Data MFC Access)
 Koncept transakce byla vyvinuta pro zpracování případů, kdy výsledný stav databáze závisí na celkový úspěch řady operací. Tato situace může přijít vzhledem k tomu, že po sobě jdoucí operace může upravit výsledky předchozí operace. V takových případech jedna operace selže, výsledný stav by neurčitou.  

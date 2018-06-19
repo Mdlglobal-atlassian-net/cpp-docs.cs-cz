@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105202"
 ---
 # <a name="retrieving-a-blob"></a>Načtení objektu BLOB
 Můžete načíst binární rozsáhlý objekt (binární rozsáhlý OBJEKT) různými způsoby. Můžete použít **DBTYPE_BYTES** k načtení objektu BLOB jako sekvenci bajtů, nebo použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) v *referenční příručka programátora technologie OLE DB*.  

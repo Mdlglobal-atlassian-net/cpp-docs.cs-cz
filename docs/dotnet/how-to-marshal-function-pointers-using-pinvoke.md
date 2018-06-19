@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132174"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Postupy: Zařazení ukazatelů na funkce pomocí služby PInvoke
 Toto téma vysvětluje, jak spravované delegáti jde použít místo ukazatelů na funkce při vzájemné spolupráci se službou nespravovaných funkcí pomocí funkcí rozhraní .NET Framework P/Invoke. Programátory v jazyce Visual C++ jsou ale místo toho používají funkce interoperability C++ (Pokud je to možné), protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být zdlouhavé pro implementaci. Pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností. Jinak najdete v následujících tématech:  

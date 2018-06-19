@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111182"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Sdružování prostředků OLE DB a služby
 Pro práci s sdružování OLE DB nebo s jakoukoli službu, technologie OLE DB, musí podporovat poskytovatel agregace všech objektů. Jde o požadavek OLE DB 1.5 nebo novější zprostředkovatele. Je důležité pro využívání služby. Zprostředkovatelé, kteří nepodporují agregace nelze ve fondu a jsou k dispozici žádné další služby.  

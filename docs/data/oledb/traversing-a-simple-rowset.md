@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102948"
 ---
 # <a name="traversing-a-simple-rowset"></a>Procházení jednoduché sady řádků
 Následující příklad ukazuje databáze rychlý a snadný přístup, který nezahrnuje příkazy. Následující kód příjemce v projektu knihovny ATL načte záznamy z tabulky nazvané *umělci* v aplikaci Microsoft Access databáze pomocí zprostředkovatele Microsoft OLE DB pro ODBC. Kód vytvoří [CTable](../../data/oledb/ctable-class.md) objekt tabulky s přistupujícím objektem založené na třídě uživatelského záznamu `CArtists`. Otevře připojení, otevře se relace na připojení a otevře v tabulce v relaci.  
