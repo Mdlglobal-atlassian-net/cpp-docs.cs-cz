@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362336"
 ---
 # <a name="security-classes"></a>Třídy zabezpečení
 Tyto třídy jsou obálek pro běžné Win32 zabezpečení třídy a objekty.  

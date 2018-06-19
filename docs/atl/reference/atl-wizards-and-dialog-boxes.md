@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356670"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL průvodců a dialogových oken
 Průvodci Active Template Library (ATL) generovat často používaný kód pro různé typy objektů COM. Můžete spustit Průvodce otevřením místní nabídku pro projekt v **Průzkumníku řešení** a výběr **přidat**, **třída**.  

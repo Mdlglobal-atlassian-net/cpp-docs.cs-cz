@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358625"
 ---
 # <a name="atl-encoding-reference"></a>ATL – referenční dokumentace ke kódování
 Kódování v řadu běžných Internetové standardy, jako je uuencode šestnáctkové a UTF8 podporuje kód v atlenc.h nalezen.  

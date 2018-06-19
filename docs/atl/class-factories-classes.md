@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355342"
 ---
 # <a name="class-factories-classes"></a>Třída objekty pro vytváření tříd
 Následující třídy implementovat nebo podporu objekt třídy:  

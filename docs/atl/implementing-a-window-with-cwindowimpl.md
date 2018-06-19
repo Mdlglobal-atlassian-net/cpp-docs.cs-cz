@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356544"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementace okno s CWindowImpl
 Pokud chcete implementovat okno, odvození třídy z `CWindowImpl`. Odvozené třídy deklarujte mapy zpráv a funkce obslužných rutin zpráv. Teď můžete použít třídu třemi různými způsoby:  

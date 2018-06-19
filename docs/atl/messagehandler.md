@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356364"
 ---
 # <a name="messagehandler"></a>MessageHandler
 **MessageHandler** je název funkce identifikovaný druhý parametr `MESSAGE_HANDLER` makro mapy zpráv.  

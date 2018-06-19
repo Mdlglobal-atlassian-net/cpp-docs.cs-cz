@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089814"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Použití databázových formulářů (zobrazení záznamů) s rozhraním ODBC
 Některé aplikace, jako jsou vstupní data nebo data zobrazení, vyžadují formuláře, zobrazení s ovládacími prvky stylu dialogového okna.  

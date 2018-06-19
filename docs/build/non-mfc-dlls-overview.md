@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368639"
 ---
 # <a name="non-mfc-dlls-overview"></a>Knihovny DLL mimo MFC – přehled
 MFC DLL není knihovnu DLL, kterou nepoužívá MFC interně a může být volána exportovaných funkcí v knihovně DLL knihovny MFC nebo mimo MFC spustitelné soubory. Funkce jsou obvykle exportovány z non - MFC DLL pomocí standardní rozhraní jazyka.  

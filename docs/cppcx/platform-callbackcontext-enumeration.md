@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086942"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext – výčet
 Určuje přístup z více vláken kontext, ve kterém se provádí funkce zpětného volání (obslužné rutiny události).  

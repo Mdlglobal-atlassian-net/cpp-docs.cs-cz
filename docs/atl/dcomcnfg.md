@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357242"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG** je nástroj Windows NT 4.0, který umožňuje nakonfigurovat různá nastavení pro konkrétní DCOM v registru. **DCOMCNFG** okno má tři stránky: výchozí zabezpečení, výchozí vlastnosti a aplikace. V systému Windows 2000 na čtvrté stránce Výchozí protokoly nachází.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355236"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Změna výchozí objekt pro vytváření tříd a agregace modelu
 ATL používá [CComCoClass](../atl/reference/ccomcoclass-class.md) definovat výchozí třídu objektu pro vytváření a agregaci modelu pro objekt. `CComCoClass` Určuje následující dvě makra:  

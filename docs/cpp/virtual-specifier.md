@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421257"
 ---
 # <a name="virtual-specifier"></a>virtual – specifikátor
 [Virtuální](../cpp/virtual-cpp.md) – klíčové slovo lze použít pouze na třídu nestatické členské funkce. To znamená, že vazba volání funkce je odložena až do spuštění. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).  

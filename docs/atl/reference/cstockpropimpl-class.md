@@ -79,6 +79,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366572"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl – třída
 Tato třída poskytuje metody pro podporu uložených vlastností hodnoty.  

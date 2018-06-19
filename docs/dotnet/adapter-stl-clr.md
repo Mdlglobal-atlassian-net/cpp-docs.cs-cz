@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104514"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR záhlaví `<cliext/adapter>` určuje dvě šablony třídy (`collection_adapter` a `range_adapter`) a funkce šablony `make_collection`.  

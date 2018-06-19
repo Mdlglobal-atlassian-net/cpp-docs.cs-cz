@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413957"
 ---
 # <a name="hardware-exceptions"></a>Výjimky hardwaru
 Většina standardních výjimek rozpoznávaných operačním systémem jsou výjimky definované hardwarem. Systém Windows rozpoznává několik softwarových výjimek nízké úrovně, ty však bývají operačním systémem zpracovány nejvhodněji.  

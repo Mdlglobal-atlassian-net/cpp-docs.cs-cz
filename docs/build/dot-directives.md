@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367661"
 ---
 # <a name="dot-directives"></a>Direktivy s tečkou
 Zadejte direktivy s tečkou mimo blok popis na začátku řádku. Direktivy s tečkou začínat tečkou (. ) a jsou následovaným dvojtečkou (:). Jsou povoleny mezery a karty. Direktivy názvy tečkou se rozlišují malá a velká písmena.  

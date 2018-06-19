@@ -60,6 +60,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32400870"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -104,7 +105,7 @@ Počet znaků, vytisknout.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce formátování a tisk řady znaků a hodnot přímo do konzoly, pomocí **_putch –** – funkce (**_putwch –** pro **_cwprintf –**) výstup znaků . Každý argument v *argument_list* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. *Formátu* používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Na rozdíl od **fprintf**, **printf**, a **sprintf** funguje, ani **_cprintf –** ani **_cwprintf –**překládá posun řádku znaků do kombinace znaků CR vrátit LF (CR-LF) při výstupu.
+Tyto funkce formátování a tisk řady znaků a hodnot přímo do konzoly, pomocí **_putch –** – funkce (**_putwch –** pro **_cwprintf –**) výstup znaků . Každý argument v *argument_list* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. *Formátu* používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Na rozdíl od **fprintf**, **printf**, a **sprintf** funguje, ani **_cprintf –** ani **_cwprintf –** překládá posun řádku znaků do kombinace znaků CR vrátit LF (CR-LF) při výstupu.
 
 Zásadní rozdíl je, že **_cwprintf –** zobrazí znaky znakové sady Unicode, když se používá v systému Windows. Na rozdíl od **_cprintf –**, **_cwprintf –** používá aktuální nastavení národního prostředí konzoly.
 

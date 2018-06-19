@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419125"
 ---
 # <a name="lexical-conventions"></a>Lexikální pravidla
 Tato část představuje základní prvky programu C++. Tyto prvky nazývané „lexikální prvky“ nebo „tokeny“ použijete k sestavení příkazů, definic, deklarací a podobných funkcí, které se používají k vytvoření kompletních programů. V této části jsou popsány následující lexikální prvky:

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421312"
 ---
 # <a name="variantt-operators"></a>Operátory jazyka _variant_t
 Informace o **_variant_t** operátory, najdete v části [_variant_t – třída](../cpp/variant-t-class.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357679"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identifikace prvky jazyka DHTML řízení projektu
 Většinu kódu ovládací prvek DHTML je přesně jako je například vytvořit pro libovolný ovládací prvek ATL. Pro základní znalosti o obecném kódu, postupujte [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md), a čtení v částech [vytváření projektu knihovny ATL](../atl/reference/creating-an-atl-project.md) a [základy objektů COM ATL](../atl/fundamentals-of-atl-com-objects.md).  

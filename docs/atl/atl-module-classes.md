@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356602"
 ---
 # <a name="atl-module-classes"></a>ATL – třídy modulů
 Toto téma popisuje modul třídy, které byly nové v ATL 7.0.  

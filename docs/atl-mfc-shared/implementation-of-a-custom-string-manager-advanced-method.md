@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357812"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementace nástroje vlastní řetězec Manager (rozšířené metoda)
 V situacích, specializované můžete implementovat vlastní řetězec správce, který mění více než jen haldě, které se používá k přidělení paměti. V takovém případě je nutné ručně implementovat [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) rozhraní jako správce svého vlastní řetězec.  

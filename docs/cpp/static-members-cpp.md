@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421068"
 ---
 # <a name="static-members-c"></a>Statické členy (C++)
 Třídy může obsahovat statický člen dat a členské funkce. Když je datový člen deklarován jako **statické**, pouze jedna kopie dat bude zachována pro všechny objekty třídy.

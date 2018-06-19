@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089556"
 ---
 # <a name="properties-ccx"></a>Vlastnosti (C + +/ CX)
 Typy prostředí Windows Runtime vystavit veřejná data jako vlastnosti. Kód klienta přistupuje k vlastnosti jako veřejné datamember. Vlastnost interně je implementovaný jako blok, který obsahuje metodu přistupující objekt get, metodu přistupující objekt set nebo obojí. Pomocí metody přístupových objektů lze provádět další akce před nebo po můžete načíst hodnotu, například může provést událost nebo provádí kontroly platnosti.  

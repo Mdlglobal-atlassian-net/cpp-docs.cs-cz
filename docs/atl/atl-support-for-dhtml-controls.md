@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355519"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL – podpora pro ovládací prvky DHTML
 Pomocí knihovny ATL, můžete vytvořit ovládacího prvku funkci Dynamic HTML (DHTML). Ovládací prvek ATL DHTML:  

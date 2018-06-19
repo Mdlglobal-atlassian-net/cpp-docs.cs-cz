@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356492"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Úprava ovládací prvek DHTML knihovny ATL
 Průvodce ovládacím prvkem ATL poskytuje počáteční kód tak můžete sestavit a spustit řízení, a abyste viděli, jak jsou metody napsané v souborech projektu a jak DHTML volá kód C++ ovládacího prvku pomocí metody odesílání. Můžete přidat libovolné metody odesílání rozhraní. Potom můžete volat metody v prostředku HTML.  

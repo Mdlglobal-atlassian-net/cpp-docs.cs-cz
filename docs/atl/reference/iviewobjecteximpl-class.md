@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365908"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl – třída
 Tato třída implementuje **IUnknown** a poskytuje výchozí implementaci [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), a [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)rozhraní.  

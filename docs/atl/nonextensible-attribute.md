@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355630"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible – atribut
 Pokud nebude v době běhu rozšířit duální rozhraní (to znamená, nebudou zajišťovat metody nebo vlastnosti prostřednictvím **volání metody IDispatch::Invoke** nejsou k dispozici prostřednictvím tabulce vtable), byste měli použít **nonextensible –** atribut vaše definice rozhraní. Tento atribut obsahuje informace, které jazyky klienta (například Visual Basic), které slouží k povolení ověření úplného kódu v době kompilace. Pokud je tento atribut není zadaný, mohou zůstat chyby skryté v klientském kódu až při spuštění.  

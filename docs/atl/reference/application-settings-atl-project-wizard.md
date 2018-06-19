@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357402"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Nastavení aplikace, Průvodce projektem knihovny ATL
 Použití **nastavení aplikace** stránce Průvodce projektu knihovny ATL návrhu a přidávat do nového projektu knihovny ATL základní funkce.  

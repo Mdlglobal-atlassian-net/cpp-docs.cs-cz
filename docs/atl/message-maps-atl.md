@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357255"
 ---
 # <a name="message-maps-atl"></a>Mapy zpráv (ATL)
 Mapy zpráv přidruží obslužnou rutinu konkrétní zprávu, příkaz nebo oznámení. Pomocí knihovny ATL pro [makra map zpráv](../atl/reference/message-map-macros-atl.md), můžete zadat mapy zpráv pro okno. Procedury oken v `CWindowImpl`, `CDialogImpl`, a `CContainedWindowT` přímé časového období zprávy a pokuste se jeho mapy zpráv.  

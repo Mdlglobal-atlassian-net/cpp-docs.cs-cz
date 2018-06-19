@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105176"
 ---
 # <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
 Vytvoří objekt sady řádků. Není volána přímo uživatelem. V tématu [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx) v *referenční příručka programátora prostředí OLE DB.*  

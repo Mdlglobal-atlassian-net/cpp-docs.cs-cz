@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418036"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 Specifikátor typu `decltype` vrací typ zadaného výrazu. `decltype` Zadejte specifikátor, společně s [auto – klíčové slovo](../cpp/auto-cpp.md), je užitečné především pro vývojáře, kteří vytvářejí knihovny šablon. Použití `auto` a `decltype` deklarovat funkce šablony jejichž návratový typ závisí na typy argumentů šablony. Nebo lze klíčová slova `auto` a `decltype` použít k deklarování šablony funkce, která zaobaluje volání další funkce, a potom vrátí návratový typ volané funkce.  

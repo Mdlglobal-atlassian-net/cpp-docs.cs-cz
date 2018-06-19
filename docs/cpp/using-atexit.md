@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420964"
 ---
 # <a name="using-atexit"></a>Používání výrazu atexit
 Pomocí [atexit](../c-runtime-library/reference/atexit.md) funkce, můžete zadat ukončení zpracování funkce, která spustí před ukončení programu. Před spuštěním funkce zpracování výstupu nejsou zničeny žádné globální statické objekty inicializované před voláním funkce `atexit`.  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363748"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule – třída
 Od verze ATL 7.0 `CComAutoThreadModule` je zastaralá: najdete v části [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.  

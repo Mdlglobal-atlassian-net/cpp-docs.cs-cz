@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359659"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID – třída
 Tato třída argument adaptér umožňuje buď názvy prostředků ( `LPCTSTR`s) nebo ID prostředku ( **Celé_číslo**s) mají být předány funkce bez nutnosti volající převést na řetězec pomocí ID **MAKEINTRESOURCE** makro.  

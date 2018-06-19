@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358909"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Změna kódu kreslení (ATL – tutoriál, část 4)
 Ve výchozím nastavení, zobrazí kód vykreslování ovládacího prvku čtverce a text **PolyCtl**. V tomto kroku se změní kód zobrazit něco zajímavějšího. Se podílejí následující úlohy:  

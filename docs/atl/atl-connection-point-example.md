@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355178"
 ---
 # <a name="atl-connection-point-example"></a>Příklad bodu připojení knihovny ATL
 Tento příklad ukazuje objekt, který podporuje [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) jako odchozí rozhraní:  

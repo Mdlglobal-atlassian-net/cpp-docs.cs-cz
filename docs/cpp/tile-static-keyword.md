@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422160"
 ---
 # <a name="tilestatic-keyword"></a>tile_static – klíčové slovo
 Klíčové slovo `tile_static` se používá k deklaraci proměnné, ke které lze přistupovat všemi vlákny v rozložení vláken. Životnost proměnné začíná, jakmile vykonávání dosáhne bodu deklarace, a končí při návratu funkce jádra. Další informace o používání bloků, najdete v části [pomocí dlaždice](../parallel/amp/using-tiles.md).  

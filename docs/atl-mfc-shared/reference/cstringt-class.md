@@ -95,6 +95,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366624"
 ---
 # <a name="cstringt-class"></a>CStringT – třída
 Tato třída reprezentuje `CStringT` objektu.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368854"
 ---
 # <a name="importing-using-def-files"></a>Import pomocí souborů DEF
 Pokud chcete použít **deklarace __declspec(dllimport)** společně s .def souboru, měli byste změnit soubor .def pomocí dat místo KONSTANTA sníží pravděpodobnost, že nesprávné kódování může dojít k potížím:  

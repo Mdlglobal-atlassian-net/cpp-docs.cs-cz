@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417200"
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na *The poznámkou ruční C++ odkaz* Margaret Ellis a Bjarnem Stroustrupem a ANSI/ISO C++ mezinárodní standardní (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.  

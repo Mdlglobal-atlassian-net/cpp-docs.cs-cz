@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098404"
 ---
 # <a name="crowsetgetoriginaldata"></a>CRowset::GetOriginalData
 Volání **IRowsetUpdate::GetOriginalData** k načtení požadovaných dat naposledy načtených z nebo přeneseno do zdroje dat.  

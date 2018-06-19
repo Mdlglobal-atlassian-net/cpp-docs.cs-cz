@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367469"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Konstrukce dynamické oblasti zásobníku parametrů
 Pokud se ukazatel na rámec používá, existuje možnost vytvořit dynamicky oblasti zásobníku parametrů. Není to aktuálně v [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilátoru.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355397"
 ---
 # <a name="date-and-time-systemtime-support"></a>Datum a čas: SYSTEMTIME – podpora
 [CTime](../atl-mfc-shared/reference/ctime-class.md) třída obsahuje konstruktory, které přijímají systému a soubor časy z Win32. Pokud používáte `CTime` objekty pro tyto účely, musíte změnit své inicializace podle toho, jak je popsáno v tomto článku.  

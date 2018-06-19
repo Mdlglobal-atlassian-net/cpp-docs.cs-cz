@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356589"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Přidání body připojení k objektu
 [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md) ukazuje postup vytvoření ovládacího prvku s podporou pro spojovací body, přidat události a implementovat spojovacího bodu. ATL implementuje spojovací body se [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) třídy.  

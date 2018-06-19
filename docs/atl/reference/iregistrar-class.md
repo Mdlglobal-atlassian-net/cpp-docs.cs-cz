@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363744"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar rozhraní
 Toto rozhraní je definována v atliface.h a používá se interně pomocí CAtlModule členské funkce, jako [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   

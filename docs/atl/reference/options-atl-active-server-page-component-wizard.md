@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364539"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Možnosti Průvodce komponentou stránky ASP knihovny ATL
 Na této stránce Průvodce komponentou ATL Active Server stránky můžete navrhnout poskytují zvýšenou efektivitu a podpory chyb pro objekt.  

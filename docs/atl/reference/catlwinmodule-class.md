@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358049"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule – třída
 Tato třída poskytuje podporu pro knihovny ATL oddílová součásti.  

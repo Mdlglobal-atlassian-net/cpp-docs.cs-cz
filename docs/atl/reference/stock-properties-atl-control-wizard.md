@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358896"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Uložené vlastnosti, Průvodce ovládacím prvkem knihovny ATL
 Tato stránka průvodce identifikuje uložené vlastnosti podporované pro ovládací prvek. Ve výchozím nastavení nejsou označeny žádné vlastnosti.  

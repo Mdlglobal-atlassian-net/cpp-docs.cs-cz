@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087663"
 ---
 # <a name="defaulttypenameequals-method"></a>Výchozí:: (type_name):: Equals – metoda
 Určuje, zda se zadaný objekt rovná aktuálnímu objektu.  

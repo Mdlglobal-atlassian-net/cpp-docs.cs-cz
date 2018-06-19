@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367482"
 ---
 # <a name="filename-parts-syntax"></a>Syntaxe částí názvu souboru
 Syntaxe částí názvu souboru v příkazech představuje součástí první závislé název souboru (který může být předpokládané závislé). Název souboru součásti jsou jednotky v souboru, cesta, základní název a příponu jako zadaný, není, protože existuje na disku. Použití **%s** představují úplný název souboru. Použití **%&#124;**[*částí*]**F** (svislá čára znak následuje symbol procenta) představují částí názvu souboru, kde *částí*může být nula nebo více z následujících písmen v libovolném pořadí.  

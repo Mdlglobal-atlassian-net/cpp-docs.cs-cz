@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091878"
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
 Poskytuje společné chování pro ref třídy a struktury ref v prostředí Windows Runtime aplikace. Všechny ref třídy a instance ref struktura jsou implicitně převést na Platform::Object ^ a jeho virtuální metody ToString můžete přepsat.  

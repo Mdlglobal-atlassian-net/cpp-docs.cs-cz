@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420834"
 ---
 # <a name="startup-and-termination-c"></a>Spuštění a ukončení (C++)
 Spuštění a ukončení programu jsou zjednodušena pomocí dvě funkce: [hlavní](../cpp/main-program-startup.md) a [ukončete](../cpp/program-termination.md). Může dojít ke spuštění jiného spouštěcího a ukončovacího kódu.  

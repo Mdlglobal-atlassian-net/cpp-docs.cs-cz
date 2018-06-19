@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363428"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl – třída
 Tato třída implementuje **IUnknown** a umožňuje objekt uložení jeho vlastnosti do kontejneru objektů zadané klienta.  

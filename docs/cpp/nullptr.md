@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419640"
 ---
 # <a name="nullptr"></a>nullptr
 Určuje konstantu nulového ukazatele typu `std::nullptr_t`, který lze převést na libovolný nezpracovaný typ ukazatele.  I když je možné použít klíčové slovo `nullptr` bez záhlaví, používá-li kód typ `std::nullptr_t`, je nutné jej definovat včetně záhlaví `<cstddef>`.  

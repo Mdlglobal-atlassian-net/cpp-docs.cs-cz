@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415142"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů weak_ptr
 V některých případech musí objekt uložení přístup k základní objekt `shared_ptr` aniž by to způsobilo počet odkazů na se zvýší. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instance.  

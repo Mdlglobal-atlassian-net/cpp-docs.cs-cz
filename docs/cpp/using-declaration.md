@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424467"
 ---
 # <a name="using-declaration"></a>using – deklarace
 Pomocí deklarace představuje název do deklarativní oblast, ve kterém pomocí deklarace se zobrazí.  

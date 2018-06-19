@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368987"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (minimální architektura procesoru)
 Architektura možnosti zadejte architekturu pro generování kódu. Vyberte základní hardwarovou architekturou, které pracujete s najdete v části / arch možnosti pro tuto cílovou platformu.  

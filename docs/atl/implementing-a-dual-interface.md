@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356729"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementace duální rozhraní
 Můžete implementovat duální rozhraní pomocí [IDispatchImpl](../atl/reference/idispatchimpl-class.md) třídy, která poskytuje výchozí implementaci třídy `IDispatch` metody duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  

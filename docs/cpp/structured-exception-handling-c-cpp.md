@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424267"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 Přestože systém Windows a Visual C++ podporují strukturovaného zpracování (SEH) výjimek, doporučujeme použít zpracování výjimek C++ standardu ISO, protože umožňuje kód víc přenosného a flexibilní. Nicméně v existující kód nebo pro určité typy programů, můžete stále nejspíš muset použít SEH.  

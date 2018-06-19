@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357841"
 ---
 # <a name="using-a-template-library"></a>Použití knihovny šablony
 Šablona je něco jako makra. Stejně jako u makra, vyvolání šablonu způsobuje, že rozbalte (s odpovídající parametr nahrazení) kód, který jste napsali. Nicméně šablony širší než to umožňuje vytvoření nové třídy na základě typů, které můžete předat jako parametry. Tyto nové třídy implementaci zajišťující bezpečnost typů způsoby provedení operace vyjádřené v kódu šablony.  

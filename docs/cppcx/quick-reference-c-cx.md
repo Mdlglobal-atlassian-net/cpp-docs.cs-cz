@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092555"
 ---
 # <a name="quick-reference-ccx"></a>Stručná referenční dokumentace (C + +/ CX)
 Prostředí Windows Runtime podporuje aplikace pro univerzální platformu Windows (UWP), které provést pouze v prostředí trustworthy operačního systému, použijte oprávnění funkce, datové typy a zařízení a jsou distribuovány prostřednictvím Microsoft Store. C + +/ CX zjednodušit psaní aplikací pro prostředí Windows Runtime. Tento článek je rychlý přehled; Podrobnější dokumentaci najdete v tématu [systém typů](../cppcx/type-system-c-cx.md) a [rozšíření komponent pro platformy běhového prostředí](http://go.microsoft.com/fwlink/p/?linkid=228720).  

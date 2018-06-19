@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355191"
 ---
 # <a name="debugging-tips"></a>Ladění tipy
 Následující témata popisují některé užitečné kroky pro ladění služby:  

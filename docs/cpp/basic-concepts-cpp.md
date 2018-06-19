@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409573"
 ---
 # <a name="basic-concepts--c"></a>Základní koncepty (C++)
 Tato část vysvětluje koncepty, které jsou důležité k porozumění C++. Programátory v jazyce C bude obeznámeni s mnoha tyto koncepty, ale existují některé jemně lišit, které můžou způsobit neočekávané program výsledky. V následujících tématech jsou zahrnuty:  

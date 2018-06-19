@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364905"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl – třída
 Tato třída implementuje **IUnknown** a umožňuje klientům přístup k informacím na stránkách vlastností objektu.  

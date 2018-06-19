@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366949"
 ---
 # <a name="chained-unwind-info-structures"></a>Zřetězené struktury unwind info
 Pokud je nastavený příznak UNW_FLAG_CHAININFO, pak je struktura unwind info je sekundární a pole sdílené výjimka – obslužná rutina/adresy zřetězené informace obsahuje primární unwind informace. Následující kód načítá primární unwind informace za předpokladu, že `unwindInfo` je nastaven příznak strukturu, která má UNW_FLAG_CHAININFO.  

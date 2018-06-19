@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357320"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Doporučení pro výběr mezi použitím knihovny ATL a MFC
 Při vývoji součásti a aplikace, můžete si vybrat mezi dva přístupy – ATL a MFC (knihovny Microsoft Foundation Class).  

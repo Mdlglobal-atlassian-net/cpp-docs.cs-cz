@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360638"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Podpora MFC v projekty knihovny ATL
 Pokud vyberete **Podpora MFC** v Průvodci projektu knihovny ATL deklaruje projekt aplikace jako objekt aplikace knihovny MFC (třída). Projekt inicializuje knihovny MFC a vytvoří instanci třídy (třídy *ProjName*) je odvozena z [CWinApp](../../mfc/reference/cwinapp-class.md).  

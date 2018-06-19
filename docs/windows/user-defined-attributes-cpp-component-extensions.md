@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891763"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Uživatelsky definované atributy (rozšíření komponent C++)
 Vlastní atributy umožňují rozšířit metadata rozhraní, třídu nebo strukturu, metoda, parametr nebo – výčet.  

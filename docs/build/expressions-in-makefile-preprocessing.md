@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367265"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Výrazy v předběžném zpracování souboru pravidel
 **! Pokud** nebo **! Pokud jiný** `constantexpression` se skládá z příkazy, řetězcové konstanty nebo celočíselné konstanty (v notaci desítkový nebo jazyka C). Závorky lze použijte k skupinových výrazech. Výrazy použít stylu jazyka C dlouho číslo se znaménkem aritmetické; čísla jsou v podobě 32-bit doplňkem v rozsahu - 2147483648 do 2147483647.  

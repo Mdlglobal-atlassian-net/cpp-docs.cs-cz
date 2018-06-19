@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368223"
 ---
 # <a name="makefile-preprocessing"></a>Předběžné zpracování souboru pravidel
 Relace NMAKE můžete řídit pomocí předběžného zpracování direktivy a výrazy. Předběžné zpracování pokyny mohou být umístěny souboru pravidel nebo Tools.ini. Pomocí direktiv, můžete podmíněně zpracovat vašeho souboru pravidel, zobrazovat chybové zprávy, zahrnout další soubory pravidel, nedefinované makra a zapnout nebo vypnout určité možnosti.  

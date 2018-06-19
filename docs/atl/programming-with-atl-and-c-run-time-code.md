@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355872"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programování s použitím knihovny ATL a běhového kódu jazyka C
 Tato část popisuje výhody použití knihoven C Run-Time (CRT) s statické nebo dynamické propojení.  

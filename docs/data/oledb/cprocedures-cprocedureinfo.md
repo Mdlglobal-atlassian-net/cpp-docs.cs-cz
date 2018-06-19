@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096129"
 ---
 # <a name="cprocedures-cprocedureinfo"></a>CProcedures, CProcedureInfo
 Call – třída definice typedef **CProcedures** k implementaci jeho – třída parametru **CProcedureInfo**.  

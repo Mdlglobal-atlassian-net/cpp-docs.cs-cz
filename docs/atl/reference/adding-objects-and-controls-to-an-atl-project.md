@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357770"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Přidání objektů a ovládacích prvků do projektu knihovny ATL
 Některého z průvodců kódu ATL můžete přidat do vašich projektů na základě knihovny ATL nebo MFC objekt nebo ovládacího prvku. Pro každý objekt COM nebo ovládací prvek přidáte, Průvodce generuje sada a souborů .h, jakož i soubor .rgs pro podporu založených na skriptech registru. Následující kód průvodce ATL jsou k dispozici v sadě Visual Studio:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361698"
 ---
 # <a name="using-cstring"></a>Pomocí CString
 Témata v této části popisují, jak programovat s `CString`. Pro referenční dokumentaci o `CString` třídy, najdete v dokumentaci k [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359504"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation – třída
 Tato třída se vrátí [CAccessToken](../../atl/reference/caccesstoken-class.md) objekty do nonimpersonating stavu, když probíhá mimo rozsah.  

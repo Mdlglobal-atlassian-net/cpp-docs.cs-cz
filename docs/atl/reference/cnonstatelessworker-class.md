@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359604"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker – třída
 Přijímá požadavky od fondu vláken a předává je na objekt pracovního procesu, který je vytvořen a zničen v každé žádosti.  

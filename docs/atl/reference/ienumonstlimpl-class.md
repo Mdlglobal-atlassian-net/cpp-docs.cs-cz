@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365253"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl – třída
 Tato třída definuje enumerátor rozhraní na základě kolekce standardní knihovna C++.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424773"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Převody a bezpečnost typů (moderní verze jazyka C++)
 Tento dokument popisuje běžné problémy při převodu typů a také způsob, jak jim zabránit v kódu jazyka C++.  

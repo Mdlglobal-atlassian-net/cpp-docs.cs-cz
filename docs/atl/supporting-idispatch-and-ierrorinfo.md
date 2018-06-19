@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360946"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Podpora IDispatch a IErrorInfo
 Můžete použít třídu šablony [IDispatchImpl](../atl/reference/idispatchimpl-class.md) zajistit výchozí implementaci třídy `IDispatch Interface` část žádné duální rozhraní v objektu.  

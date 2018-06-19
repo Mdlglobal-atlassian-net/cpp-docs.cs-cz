@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356775"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL – kolekce a výčty
 A `collection` je objekt modelu COM, který poskytuje rozhraní, které umožňuje přístup do skupiny datové položky (nezpracovaná data nebo jiných objektů). Rozhraní, které dodržuje standardy pro poskytování přístupu pro skupinu objektů, které se označuje jako *rozhraní kolekce*.  

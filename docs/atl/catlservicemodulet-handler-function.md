@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354991"
 ---
 # <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler – funkce
 `CAtlServiceModuleT::Handler` je rutina, která volá správce řízení služeb (SCM) pro načtení stav služby a pojmenujte ho různé pokyny (například zastavení nebo pozastavení). SCM předá kód operace na `Handler` označující, co má provést službu. Výchozí generovaný ATL služba zpracovává jenom pokyn zastavit. Pokud správce SCM úspěšně projde zastavení pokyn, službu informuje správce SCM, program se chystá ukončit. Pak zavolá službu `PostThreadMessage` ukončete zprávu na sebe sama. To ukončí smyčce zpráv a služby se nakonec zavřete.  

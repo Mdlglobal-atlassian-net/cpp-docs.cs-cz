@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367937"
 ---
 # <a name="image-format"></a>Formát obrázku
 Spustitelné bitové kopie není ve formátu PE32 +. Spustitelné bitové kopie (knihovny DLL a souborů exe) jsou omezeny na maximální velikost 2 gigabajty, takže relativní adresování s 32bitovým posunem můžete používat k adresování statických dat bitové kopie. Tato data zahrnují tabulku importních adres, řetězcové konstanty, statické globální data a tak dále.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363256"
 ---
 # <a name="aggregates-and-unions"></a>Agregace a sjednocení
 Jiné typy, jako je například pole, struktur a sjednocení, mít přísnější požadavky na zarovnání, které zajišťují konzistentní agregace a sjednocení uložení a načtení dat. Zde jsou uvedeny definice pro pole, struktury a sjednocení:  

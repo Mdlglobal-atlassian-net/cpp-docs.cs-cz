@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361886"
 ---
 # <a name="registry-scripting-examples"></a>Příklady skriptování registru
 Skriptovací příklady v tomto tématu ukazují, jak přidat klíč registru systému, zaregistrujte server COM registrátora a zadejte více stromy analýzy.  

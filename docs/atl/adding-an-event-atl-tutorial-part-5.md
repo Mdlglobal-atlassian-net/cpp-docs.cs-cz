@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361262"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Přidání události (ATL – tutoriál, část 5)
 V tomto kroku přidáte `ClickIn` a `ClickOut` události do vašeho ATL ovládacího prvku. Bude platit `ClickIn` událost, pokud uživatel klikne v mnohoúhelníku a ještě efektivněji `ClickOut` Pokud uživatel klikne na mimo. Úlohy postup přidání události jsou následující:  

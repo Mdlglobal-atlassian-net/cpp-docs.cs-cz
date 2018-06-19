@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367895"
 ---
 # <a name="inferred-dependents"></a>Odvozené závislé objekty
 Odvozené závislé je odvozený od odvozené pravidlo a je vyhodnocena před explicitní závislosti. Pokud odvozené závislé zastaralé s ohledem na cíli, NMAKE vyvolá příkazy bloku pro závislost. Pokud odvozené závislé neexistuje nebo je zastaralé s ohledem na svůj vlastní závislosti, aktualizuje NMAKE nejprve odvozené závislé položky. Další informace o odvozené závislé objekty najdete v tématu [odvozená pravidla](../build/inference-rules.md).  

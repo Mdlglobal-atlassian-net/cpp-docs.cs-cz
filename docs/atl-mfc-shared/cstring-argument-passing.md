@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356827"
 ---
 # <a name="cstring-argument-passing"></a>Předávání argumentů CString
 Tento článek vysvětluje, jak předat [CString](../atl-mfc-shared/reference/cstringt-class.md) objektů funkcí a jak vracet `CString` objekty z funkce.  

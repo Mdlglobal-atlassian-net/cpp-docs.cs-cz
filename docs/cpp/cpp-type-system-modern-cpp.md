@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418507"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 Koncept *typu* je velmi důležité v jazyce C++. Všechny proměnné, argumenty funkcí a návratové hodnoty funkcí musí mít typ, aby bylo možné je zkompilovat. Každému výrazu (včetně hodnot literálů) navíc kompilátor před vyhodnocením implicitně přidělí typ. Některé příklady typů `int` k uložení celočíselné hodnoty, `double` pro uložení hodnot s plovoucí desetinnou čárkou (také označované jako *skalární* datových typů), nebo třída standardní knihovna [std::basic_string](../standard-library/basic-string-class.md) k ukládání textu. Můžete vytvořit vlastní typ definováním `class` nebo `struct`. Typ určuje velikost paměti, kterou chcete přidělit proměnné (nebo výsledku výrazu), druhy hodnot, které mohou být v dané proměnné uloženy, způsob interpretace těchto hodnot (jako vzorců bitů) a operace, které lze s proměnnou provést. Tento článek obsahuje přehled hlavních funkcí systému typů v jazyce C++.  

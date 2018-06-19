@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086496"
 ---
 # <a name="boxing-ccx"></a>Zabalení (C + +/ CX)
 *Zabalení* je typ proměnné hodnotu zabalení, jako [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)– nebo základní skalárního typu jako `int`– v třídě ref, když je proměnná předána metodu, která přebírá [ Platform::Object ^](../cppcx/platform-object-class.md) jako typ vstupu.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357490"
 ---
 # <a name="implementing-property-pages"></a>Implementace stránky vlastností
 Stránky vlastností jsou, které implementují objekty COM `IPropertyPage` nebo **IPropertyPage2** rozhraní. ATL poskytuje podporu pro implementaci stránky vlastností prostřednictvím [ATL vlastnost stránky průvodce](../atl/reference/atl-property-page-wizard.md) v [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md).  

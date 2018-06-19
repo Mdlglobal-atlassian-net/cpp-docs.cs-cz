@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356576"
 ---
 # <a name="cstring-semantics"></a>CString sémantiku
 I když [CString](../atl-mfc-shared/reference/cstringt-class.md) jsou dynamické objekty, které můžou růst, budou fungovat stejně jako jednoduchý třídy a vestavěné primitivní typy. Každý `CString` objekt představuje jedinečnou hodnotu. `CString` objekty by měl představit jako skutečný řetězce, nikoli jako ukazatele na řetězce.  

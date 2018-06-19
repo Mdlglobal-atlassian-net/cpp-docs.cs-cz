@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363820"
 ---
 # <a name="atl-utilities-reference"></a>Referenční dokumentace k nástrojům ATL
 ATL obsahuje kód pro manipulaci s cesty a adresy URL ve formě [CPathT](../atl/reference/cpatht-class.md) a [CUrl](../atl/reference/curl-class.md). Fondu vláken, [CThreadPool](../atl/reference/cthreadpool-class.md), můžete použít ve svých aplikacích. Tento kód lze nalézt v atlpath.h a atlutil.h.  

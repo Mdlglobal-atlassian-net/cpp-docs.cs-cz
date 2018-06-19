@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360159"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>Když je potřeba volat AtlAxWinTerm?
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) zrušení registrace **"AtlAxWin80"** třídy oken. Tato funkce by měly volat (pokud už je potřeba vytvořit hostitele windows), po všechny existující hostitele windows zničena. Pokud nemáte volání této funkce, třída okno bude zrušena automaticky při ukončení procesu.  

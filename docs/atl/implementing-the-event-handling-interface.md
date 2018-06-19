@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356305"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementace rozhraní zpracování událostí
 ATL vám pomůže s všechny tři prvky, které jsou požadované pro zpracování událostí: implementace událostí rozhraní radí zdroj události a unadvising zdroj události. Přesné kroky, které budete muset provést závisí na typu rozhraní událostí a požadavky na výkon vaší aplikace.  

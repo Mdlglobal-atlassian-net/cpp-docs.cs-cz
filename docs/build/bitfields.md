@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360777"
 ---
 # <a name="bitfields"></a>Bitová pole
 Struktura bitových polí jsou omezené na 64 bitů a může být typu int, int bez znaménka, int64 nebo unsigned int64 podepsané. Bitová pole, které překračují hranice typu přeskočí bits zarovnáním k dalším typem přidružení. Bitová pole celé číslo, například nemusí křížová 32bitovou hranici.  

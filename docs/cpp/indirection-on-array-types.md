@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418836"
 ---
 # <a name="indirection-on-array-types"></a>Deference na typech pole
 Použití deferenční operátor (**\***) na *n*– typ dimenzí pole vypočítá *n*jednorozměrné pole.-1. Pokud *n* je 1, scalar (nebo element pole), je vhodné.  

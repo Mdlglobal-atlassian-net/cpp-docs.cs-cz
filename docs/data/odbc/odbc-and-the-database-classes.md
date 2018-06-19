@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088464"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC a databázové třídy
 Databázové třídy MFC rozhraní ODBC pro zapouzdření volání funkcí rozhraní API ODBC by za normálních okolností provedete sami v člen funkce [CDatabase](../../mfc/reference/cdatabase-class.md) a [CRecordset](../../mfc/reference/crecordset-class.md) třídy. Například komplexní pořadí volání rozhraní ODBC, vazba vrácené záznamy na umístění úložiště, zpracování chybové stavy a další operace jsou pro vás spravuje služba databázové třídy. V důsledku toho použijte výrazně jednodušší třídy rozhraní k manipulaci s záznamy prostřednictvím objekt sady záznamů.  

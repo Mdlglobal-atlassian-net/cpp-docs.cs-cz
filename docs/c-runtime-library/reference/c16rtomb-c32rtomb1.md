@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32394537"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb c32rtomb
 
@@ -75,7 +76,7 @@ Ukazatel na **mbstate_t** objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet bajtů, které jsou uložené v objektu pole *mbchar*, včetně jakýchkoli pořadí shift. Pokud *wchar* není platný znak široké, hodnota (**size_t –**)(-1) se vrátí, **errno** je nastaven na **eilseq –**a hodnota *stavu* není zadáno.
+Počet bajtů, které jsou uložené v objektu pole *mbchar*, včetně jakýchkoli pořadí shift. Pokud *wchar* není platný znak široké, hodnota (**size_t –**)(-1) se vrátí, **errno** je nastaven na **eilseq –** a hodnota *stavu* není zadáno.
 
 ## <a name="remarks"></a>Poznámky
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355122"
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run – funkce
 **Spustit** obsahuje volání `PreMessageLoop`, `RunMessageLoop`, a `PostMessageLoop`. Po volání, `PreMessageLoop` nejprve ukládá ID služby vlákna. Služba bude používat toto ID zavřete samotné odesláním **WM_QUIT** zprávu pomocí funkce rozhraní Win32 API [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  

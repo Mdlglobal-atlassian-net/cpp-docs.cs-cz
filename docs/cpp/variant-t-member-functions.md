@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420847"
 ---
 # <a name="variantt-member-functions"></a>_variant_t – členské funkce
 Informace o `_variant_t` členské funkce, najdete v části [_variant_t – třída](../cpp/variant-t-class.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356742"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Přidání nového rozhraní v projektu knihovny ATL
 Když přidáte do objektu nebo ovládacího prvku rozhraní, můžete vytvořit prázdná funkce pro každou metodu v tomto rozhraní. V objektu nebo ovládací prvek můžete přidat pouze rozhraní, které jsou v existující knihovně typu. Navíc musí implementovat třídu, ve kterém můžete přidat rozhraní [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) makro nebo, pokud je projekt s atributy, musí mít `coclass` atribut.  

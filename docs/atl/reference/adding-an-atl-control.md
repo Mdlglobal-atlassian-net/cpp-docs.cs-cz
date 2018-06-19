@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356932"
 ---
 # <a name="adding-an-atl-control"></a>Přidání ovládacího prvku knihovny ATL
 Pomocí tohoto průvodce můžete přidat objekt uživatelského rozhraní pro projekt, který podporuje rozhraní pro všechny potenciální kontejnery. Pro podporu těchto rozhraní, projekt musí být vytvořen jako aplikace knihovny ATL nebo jako aplikace knihovny MFC, který obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  

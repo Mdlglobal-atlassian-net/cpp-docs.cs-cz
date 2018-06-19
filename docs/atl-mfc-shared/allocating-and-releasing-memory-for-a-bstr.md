@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358322"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Přidělování a uvolňování paměti pro BSTR
 Při vytváření `BSTR`s a předat je mezi objekty modelu COM, musí postará v považuje paměti používají, aby se zabránilo nevracení paměti. Když `BSTR` zůstane v rámci rozhraní, je nutné uvolnit jeho paměť až skončíte s ním. Ale když `BSTR` předává mimo rozhraní, přebírá objekt přijímající odpovědnost za jeho správa paměti.  

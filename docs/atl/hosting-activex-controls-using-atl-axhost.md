@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356250"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hostování ovládacích prvků ActiveX pomocí AXHost knihovny ATL
 Ukázka v tomto tématu ukazuje postup vytvoření AXHost a jak pro hostování ovládacího prvku ActiveX pomocí různých funkcí ATL. Také ukazuje, jak pro přístup k řízení a jímka událostí (použití [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) z ovládacího prvku, který je hostován. Ukázka hostitelem ovládacího prvku kalendář v hlavním okně nebo podřízeného okna.  

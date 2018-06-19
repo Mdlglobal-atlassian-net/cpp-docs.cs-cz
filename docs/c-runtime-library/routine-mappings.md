@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415491"
 ---
 # <a name="routine-mappings"></a>Mapování rutiny
 Mapování obecného textu rutiny jsou definovány v Tchar –. H. `_tccpy` a `_tclen` mapovat na funkce v modelu MBCS; jsou namapované na makra nebo vložené funkce v modelech SBCS a Unicode pro úplnost. Informace o rutina obecného textu, naleznete v tématu nápovědy o odpovídající `SBCS`-, `_MBCS`-, nebo `_UNICODE`-související rutiny.  

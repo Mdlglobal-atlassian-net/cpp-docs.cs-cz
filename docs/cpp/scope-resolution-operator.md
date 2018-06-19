@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420937"
 ---
 # <a name="scope-resolution-operator-"></a>Operátor řešení rozsahu: ::
 Operátor řešení rozsahu `::` se používá k identifikaci a odstranit nejednoznačnost identifikátory používané v různých oborech. Další informace o rozsahu najdete v tématu [oboru](../cpp/scope-visual-cpp.md).  

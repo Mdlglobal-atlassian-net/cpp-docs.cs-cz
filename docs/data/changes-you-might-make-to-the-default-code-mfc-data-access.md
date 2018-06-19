@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088362"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>Změny, které můžete provést ve výchozím kódu (Data MFC Access)
 [Průvodce aplikací knihovny MFC](../mfc/reference/database-support-mfc-application-wizard.md) zapíše třídy sady záznamů pro vás, která vybere všechny záznamy v jediné tabulce. Často můžete upravit toto chování v jedné nebo více z následujících způsobů:  

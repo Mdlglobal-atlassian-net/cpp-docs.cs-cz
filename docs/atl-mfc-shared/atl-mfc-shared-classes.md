@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357197"
 ---
 # <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC
 Tyto třídy nástroje můžete použít v žádné nativní projektu C++ bez nutnosti jakékoli MFC DLL.  

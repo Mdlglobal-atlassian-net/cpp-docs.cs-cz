@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362417"
 ---
 # <a name="cw2wex-class"></a>CW2WEX – třída
 Tato třída se používá ve makra převodů řetězec `CW2TEX` a `CT2WEX`a typedef `CW2W`.  

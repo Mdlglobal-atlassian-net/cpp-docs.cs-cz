@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421793"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 Klíčové slovo `virtual` deklaruje virtuální funkci nebo virtuální základní třídu.  

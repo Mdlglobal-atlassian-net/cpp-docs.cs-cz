@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355788"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Přidání komponentu ATL COM + 1.0
 Tento průvodce přidá objekt do projektu, který podporuje služby COM + 1.0, včetně transakcí.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088151"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr – hodnotová třída
 Představuje podepsaný ukazatel nebo popisovač a jehož velikost se liší podle platformy (32bitová nebo 64bitová verze).  

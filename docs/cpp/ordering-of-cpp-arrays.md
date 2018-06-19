@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419963"
 ---
 # <a name="ordering-of-c-arrays"></a>Pořadí polí jazyka C++
 Pole jazyka C++ jsou uložena podle pořadí hlavního řádku. Pořadím hlavního řádku se rozumí, že se nejrychlejší dolní index liší od posledního.  

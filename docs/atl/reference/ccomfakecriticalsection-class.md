@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358612"
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection – třída
 Tato třída poskytuje stejné metody jako [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , ale neposkytuje kritická sekce.  

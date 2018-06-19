@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358524"
 ---
 # <a name="atl-copy-policy-classes"></a>Třídy ATL kopie zásad
 Kopírování zásad třídy jsou [nástroj třídy](../atl/utility-classes.md) použitý k inicializaci, kopírování a odstranit data. Kopírování zásad třídy umožňují definovat sémantiku kopie pro jakýkoli typ dat a k definování převody mezi různými datovými typy.  

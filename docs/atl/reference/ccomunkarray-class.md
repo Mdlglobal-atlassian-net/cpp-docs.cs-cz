@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364415"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray – třída
 Tato třída ukládá **IUnknown** ukazatele a je určen k použití jako parametr, který se [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) třídy šablony.  

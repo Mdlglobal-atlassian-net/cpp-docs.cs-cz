@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358202"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>Modelu COM + 1.0, Průvodce součástmi ATL COM + 1.0
 Na této stránce Průvodce komponentou ATL COM + 1.0 určit typ rozhraní a další rozhraní, které mají být podporovány.  

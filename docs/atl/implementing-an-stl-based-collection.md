@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359672"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementace kolekci na základě knihovny C++ Standard
 Poskytuje ATL `ICollectionOnSTLImpl` rozhraní, které vám umožňují rychle implementovat rozhraní pro kolekce na základě standardní knihovna C++ na vašich objektů. Abyste pochopili, jak tato třída funguje, bude fungovat přes jednoduchý (dole) příklad, který používá tuto třídu pro implementaci kolekce jen pro čtení zaměřené na klienty automatizace.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090793"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase – třída
 Všechny přístupové objekty v šablonách technologie OLE DB odvozovat z této třídy. `CAccessorBase` umožňuje jedné sady řádků ke správě více přístupových objektů. Poskytuje také vazby pro parametry a výstupní sloupce.  

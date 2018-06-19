@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369225"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE – kódy ukončení
 BSCMAKE vrátí ukončovací kód (také nazývané návratový kód nebo kód chyby) do operačního systému nebo volací program.  

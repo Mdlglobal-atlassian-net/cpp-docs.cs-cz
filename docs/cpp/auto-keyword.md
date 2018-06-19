@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409996"
 ---
 # <a name="auto-keyword"></a>auto – klíčové slovo
 Klíčové slovo `auto` je specifikátorem deklarace. Avšak standard jazyka C++ definuje původní a revidovaný význam tohoto klíčového slova. Před Visual C++ 2010 `auto` – klíčové slovo deklaruje proměnnou v *automatické* třídy úložiště; to znamená, proměnné, která má místní životnost. Od verze Visual C++ 2010 `auto` – klíčové slovo deklaruje proměnnou, jejichž typ je odvozen z inicializace výrazu v jeho deklaraci. [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) – možnost kompilátoru ovládací prvky význam `auto` – klíčové slovo.  

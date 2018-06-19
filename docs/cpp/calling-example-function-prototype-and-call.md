@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409368"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Příklad volání: prototyp a volání funkce
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  

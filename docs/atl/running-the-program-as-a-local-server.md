@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360440"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Spuštění programu jako místní Server
 Pokud spuštění programu jako služba nepohodlná, můžete dočasně změnit registr tak, aby spuštění programu jako normální místní server. Jednoduše přejmenovat `LocalService` hodnotu v rámci vaší AppID, který `_LocalService` a ujistěte se, `LocalServer32` klíč v rámci vaší CLSID nastavena správně. (Všimněte si, že vaše aplikace by měla spustit v jiném počítači pomocí DCOMCNFG přejmenuje vaše `LocalServer32` klíče na `_LocalServer32`.) S vaším programem jako místní server využívá několik dalších sekund při spuštění, protože volání **StartServiceCtrlDispatcher** v `CAtlServiceModuleT::Start` trvá několik sekund, než se nezdaří.  

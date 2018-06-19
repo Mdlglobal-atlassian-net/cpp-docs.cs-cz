@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410928"
 ---
 # <a name="text-and-binary-streams"></a>Textové a binární proudy
 Datový proud s text se skládá z jednoho nebo více řádků textu, které je možné zapsat do zobrazení se text orientované tak, aby mohly být čteny. Při čtení z datového proudu textu, program přečte `NL` (každý na jednom řádku) na konci každého řádku. Při zápisu do proudu textu, zapíše program `NL` signál konec řádku. Tak, aby odpovídaly odlišné konvence mezi cílové prostředí pro představující text v souborech, můžete změnit funkce knihovny počet a reprezentace znaků přenesené mezi program a text datového proudu.  

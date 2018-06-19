@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362505"
 ---
 # <a name="cwintraits-class"></a>CWinTraits – třída
 Tato třída poskytuje metody pro standardizaci styly použité při vytváření objektu okno.  
@@ -71,7 +72,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
  Určená pro standardní rámce okna. Zahrnují standardní styly využívané: **ws_overlappedwindow –**, **ws_clipchildren –**, a **ws_clipsiblings –**. Rozšířené styly využívané patří: **ws_ex_appwindow –** a **ws_ex_windowedge –**.  
   
  `CMDIChildWinTraits`  
- Určená pro standardní podřízeného okna MDI. Zahrnují standardní styly využívané: **ws_overlappedwindow –**, **ws_child –**, **ws_visible –**, **ws_clipchildren –**a **Ws_clipsiblings –**. Rozšířené styly využívané patří: **ws_ex_mdichild –**.  
+ Určená pro standardní podřízeného okna MDI. Zahrnují standardní styly využívané: **ws_overlappedwindow –**, **ws_child –**, **ws_visible –**, **ws_clipchildren –** a **Ws_clipsiblings –**. Rozšířené styly využívané patří: **ws_ex_mdichild –**.  
   
  Pokud chcete zajistit, že určité styly nastavené pro všechny instance třídy okno při současném povolení dalších styly nastavení na základě jednotlivých instancí použít [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) místo.  
   

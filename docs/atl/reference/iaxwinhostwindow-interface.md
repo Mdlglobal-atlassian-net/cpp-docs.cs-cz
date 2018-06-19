@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365123"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow rozhraní
 Toto rozhraní poskytuje metody pro manipulaci s ovládacího prvku a jeho objekt hostitele.  

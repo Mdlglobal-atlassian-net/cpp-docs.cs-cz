@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092441"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>REF třídy a struktury (C + +/ CX)
 C + +/ CX podporuje uživatelem definované *ref třídy* a *ref struktury*a uživatelem definovanými *hodnota třídy* a *hodnota struktury*. Tyto datové struktury jsou primární kontejnery, které C + +/ CX podporuje systém typů prostředí Windows Runtime. K metadatům podle určité konkrétní pravidla jsou vygenerované jejich obsah, a díky tomu mohou být předán mezi součástmi prostředí Windows Runtime a univerzální platformu Windows aplikace, které jsou zapsány v C++ nebo jiných jazyků.  

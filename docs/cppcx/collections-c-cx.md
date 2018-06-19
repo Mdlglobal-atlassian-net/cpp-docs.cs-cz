@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094254"
 ---
 # <a name="collections-ccx"></a>Kolekce (C + +/ CX)
 V jazyce C + +/ CX programu, můžete provést volné použijte standardní šablona knihovny (STL) kontejnery nebo jakýkoli jiný typ uživatelem definované kolekci. Ale pokud předáte kolekce a zpět přes rozhraní binární aplikace Windows Runtime (ABI) – například do ovládacího prvku XAML nebo klienta JavaScript – je nutné použít prostředí Windows Runtime typy kolekcí.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420201"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Omezení obslužných rutin výjimek
 Hlavním omezením použití obslužných rutin výjimek v kódu je nemožnost použít příkaz `goto` k přechodu do bloku příkazů `__try`. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. Z bloku příkazů `__try` lze přejít jinam a zanořovat obslužné rutiny výjimek dle libosti.  

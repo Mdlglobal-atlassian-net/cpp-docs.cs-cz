@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089389"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Pole a WriteOnlyArray (C + +/ CX)
 Můžete volně používat regulární pole stylu jazyka C nebo [std::array](../standard-library/array-class-stl.md) v jazyce C + +/ CX program (i když [std::vector](../standard-library/vector-class.md) je často lepší volbou), ale v jakéhokoli rozhraní API, která je publikovaná v metadatech, je nutné převést pole ve stylu jazyka C nebo vector k [Platform::Array](../cppcx/platform-array-class.md) nebo [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu v závislosti na tom, jak je používán. [Platform::Array](../cppcx/platform-array-class.md) typ není jako efektivní ani výkonné jako [std::vector](../standard-library/vector-class.md), takže v rámci obecných pokynů byste neměli jeho použití v interní kód, který provádí velké množství operací na pole elementy.  

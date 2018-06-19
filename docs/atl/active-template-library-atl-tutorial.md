@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354865"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutoriál knihovny ATL (Active Template Library)
 ATL slouží ke zjednodušení procesu vytváření efektivních, flexibilní a lightweight ovládacích prvků. Tento kurz vás provede vytvoření ovládacího prvku ActiveX demonstraci mnoho základy ATL a COM.  

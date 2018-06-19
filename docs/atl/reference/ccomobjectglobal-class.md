@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362440"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal – třída
 Tato třída spravuje počet odkazů na modul obsahující vaše `Base` objektu.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366858"
 ---
 # <a name="calling-convention"></a>Konvence volání
 Tato část popisuje proces, který umožňuje jednu funkci (volající) jinou funkci (volaný).  

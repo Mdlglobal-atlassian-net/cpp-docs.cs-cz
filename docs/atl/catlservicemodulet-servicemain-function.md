@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355571"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain – funkce
 Volá správce řízení služeb (SCM) `ServiceMain` při otevření aplikace služby ovládacích panelů, vyberte službu a klikněte na **spustit**.  

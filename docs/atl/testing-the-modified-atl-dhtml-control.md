@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360342"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Testování ovládacího prvku upravené ATL jazyka DHTML
 Vyzkoušejte nový ovládací prvek a zkontrolujte, jak funguje teď.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355490"
 ---
 # <a name="mmc-snap-in-classes"></a>Modul Snap-In konzoly MMC – třídy
 Následující třídy poskytují podporu pro vývoj Microsoft Management Console (MMC) snap-in součásti:  

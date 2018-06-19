@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360185"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Nastavení statické odkaz na kód registrátora (pouze C++)
 C++ klientů může vytvořit statický odkaz kódu vašeho registrátora. Statické propojení vašeho registrátora analyzátor přidá přibližně 5K sestavení pro vydání.  

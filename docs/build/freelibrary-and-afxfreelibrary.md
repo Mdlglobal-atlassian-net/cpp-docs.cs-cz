@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367508"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary a AfxFreeLibrary
 Procesy, které explicitně propojit volání knihovny DLL [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) fungovat, když už není potřeba modul knihovny DLL. Tato funkce sníží počet odkazů modul a, pokud počet odkazů rovná nule, zruší jeho mapování z adresního prostoru procesu.  

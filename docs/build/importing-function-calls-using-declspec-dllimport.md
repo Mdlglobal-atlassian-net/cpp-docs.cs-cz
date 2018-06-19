@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368532"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Import volání funkcí pomocí deklarace __declspec(dllimport)
 Následující příklad kódu ukazuje, jak používat **_declspec(dllimport)** Import volání funkcí z knihovny DLL do aplikace. Předpokládáme, že `func1` je funkce, která se nachází v knihovně DLL oddělené od souboru .exe, který obsahuje **hlavní** funkce.  

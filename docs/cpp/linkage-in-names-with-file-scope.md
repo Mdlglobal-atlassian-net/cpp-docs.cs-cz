@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419778"
 ---
 # <a name="linkage-in-names-with-file-scope"></a>Propojení v názvech s rozsahem souboru
 Pro názvy s oborem souboru (kromě názvů `typedef` a výčtů) platí následující pravidla propojení:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358766"
 ---
 # <a name="options-atl-property-page-wizard"></a>Možnosti Průvodce stránky vlastností knihovny ATL
 Na této stránce průvodce můžete definovat vláken modelu a agregaci úroveň stránka vlastností, kterou vytváříte.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362365"
 ---
 # <a name="understanding-window-traits"></a>Principy vlastnosti – okno
 Třídy vlastností okna zadejte jednoduše standardizace styly využívané pro vytvoření objektu knihovny ATL okno. Okno Vlastnosti, bude přijato jako parametry šablony podle [CWindowImpl](../atl/reference/cwindowimpl-class.md) a dalších tříd oken ATL jako poskytnout výchozí styly oken na úrovni třídy.  

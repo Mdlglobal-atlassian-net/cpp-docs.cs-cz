@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368327"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Postupy: Přidání vlastního nástroje sestavení do projektů MSBuild
 Vlastní sestavovací nástroje je nástroj definovaný uživatelem, příkazového řádku, který je přidružen konkrétní soubor.  

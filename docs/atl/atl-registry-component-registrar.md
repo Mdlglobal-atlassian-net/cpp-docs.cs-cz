@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354897"
 ---
 # <a name="atl-registry-component-registrar"></a>Komponenta knihovny ATL pro přístup k registru (Registrar)
 Registrátor ATL poskytuje optimalizovanou přístup k registru systému prostřednictvím rozhraní, které je vlastní. Registrátora je podprocesy a umožňuje statické propojení kód pro klienty C++.  

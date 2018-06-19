@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418195"
 ---
 # <a name="scanf-width-specification"></a>Specifikace šířky scanf
 Tyto informace platí pro interpretaci řetězce formátu v `scanf` řadu funkcí, včetně zabezpečené verze, jako například `scanf_s`. Tyto funkce normálně předpokládají, že vstupní datový proud je rozdělené do pořadí tokenů. Tokeny jsou oddělené prázdné znaky (mezera, tabulátor nebo nový řádek), nebo v případě číselné typy přirozené konec číselný datový typ podle prvního znaku, který nelze převést na číselné text. Specifikace šířky lze však způsobit analýza vstupu k zastavení před přirozené koncem token.  

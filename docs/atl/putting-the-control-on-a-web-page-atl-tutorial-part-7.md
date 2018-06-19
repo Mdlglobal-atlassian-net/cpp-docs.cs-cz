@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362581"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7)
 Vlastní ovládací prvek je nyní dokončena. Vlastní ovládací prvek fungovat v situaci, skutečné najdete ji umístěte na webové stránce. Soubor HTML, který obsahuje ovládací prvek byl vytvořen při definování vlastního ovládacího prvku. Otevřete soubor PolyCtl.htm z **Průzkumníku**, a zobrazí se vaše ovládacího prvku na webové stránce.  

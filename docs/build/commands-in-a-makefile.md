@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366871"
 ---
 # <a name="commands-in-a-makefile"></a>Příkazy v souboru pravidel
 Popis bloku nebo odvození pravidlo určuje blok příkazů ke spouštění, pokud závislost je zastaralý. NMAKE každý příkaz zobrazí před spuštěním, pokud /S, **. TICHOU**, **! Cmdswitches –**, nebo se používá @. NMAKE hledá odpovídající odvozené pravidlo, pokud blok popis nenásleduje blok příkazů.  

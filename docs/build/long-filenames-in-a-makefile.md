@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367625"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Dlouhé názvy souborů v souboru pravidel
 Uzavřete dlouhé názvy souborů v uvozovkách, následujícím způsobem:  

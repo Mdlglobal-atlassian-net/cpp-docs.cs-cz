@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359029"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot – třída
 Tato definice typu z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) je převést na šablonu na výchozí model serveru vláken.  

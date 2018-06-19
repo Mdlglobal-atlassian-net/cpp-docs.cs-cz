@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368509"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Import dat pomocí deklarace __declspec(dllimport)
 V případě dat, pomocí **deklarace __declspec(dllimport)** je užitečný položka, která odebere úroveň dereference. Pokud importujete data z knihovny DLL, máte stále projít tabulku importních adres. Před **deklarace __declspec(dllimport)**, vynutila si museli pamatovat, abyste provedli vyšší úroveň dereference při přístupu k datům exportovat z knihovny DLL:  

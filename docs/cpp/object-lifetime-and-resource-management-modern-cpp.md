@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423493"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
 Na rozdíl od spravované jazyky nemá C++ uvolňování (GC), který automaticky uvolní prostředky, ne delší použité paměti při spuštění programu. V jazyce C++ Správa prostředků přímo souvisí s doba života objektu. Tento dokument popisuje faktory, které ovlivňují doba života objektu v jazyce C++ a postup k její správě.  

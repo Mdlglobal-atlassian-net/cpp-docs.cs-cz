@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424046"
 ---
 # <a name="lambda-expressions-in-c"></a>Výrazy lambda v jazyce C++
 C ++ 11 a novější výrazu lambda – často říká *lambda*– je pohodlný způsob definice objekt anonymní funkce ( *uzavření*) přímo v umístění, kde je volána nebo předat jako argument funkce. Lambdas se obvykle používá k zapouzdření pár řádků kódu, které se budou předávat algoritmy nebo asynchronní metody. Tento článek definuje výrazy lambda, porovnává je s jinými programovacími technikami, popisuje jejich výhody a představuje základní příklad.  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366140"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl – třída
 Tato třída poskytuje metody pro implementaci objekt modul snap-in Vlastnosti stránky.  

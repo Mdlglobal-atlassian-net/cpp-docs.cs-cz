@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424864"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ vás vítá zpět (moderní verze jazyka C++)
 C++ je jednou z nejčastěji používané programovací jazyky na světě. Rychlé a efektivní nejsou správně vytvořená C++ programy. Jazyk je flexibilnější než ostatní jazyky, protože slouží k vytvoření širokou škálu aplikace – z fun a zajímavé hry, vědecké softwaru vysoce výkonné, ovladače zařízení, vložené programy a klientských aplikací systému Windows. Víc než 20 let C++ jsou využívány k řešení problémů, jako jsou tyto a mnohé další. Co možná nevíte, je, že se zvyšující číslo programátory v jazyce C++ mít přeloženy až dowdy programování stylu jazyka C včerejšek a místo toho donned moderní verze jazyka C++.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360110"
 ---
 # <a name="active-technology-and-dlls"></a>Technologie Active a knihovny DLL
 Technologie Active umožňuje serverům objektu k implementaci zcela uvnitř knihovny DLL. Tento typ serveru se říká server v procesu. MFC nepodporuje zcela v procesu servery pro úpravy s náhledem, všechny funkce především, protože technologie Active neposkytuje způsob, jak se server připojí do kontejneru hlavní zpráva smyčky. MFC vyžaduje přístup ke smyčce zpráv aplikace typu kontejner pro zpracování klávesy akcelerátoru a zpracování doby nečinnosti.  

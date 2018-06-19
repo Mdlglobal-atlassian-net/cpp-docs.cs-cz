@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361472"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock – třída
 Tato třída implementuje **IUnknown** neagregovaná objektu, ale nemá není přírůstek zámek modulu počet v konstruktoru.  

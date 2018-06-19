@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361863"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testování ovládací prvek DHTML knihovny ATL
 Po vytvoření projektu můžete sestavit a testování ukázkové ovládacího prvku. Předtím, než to uděláte, použijte zobrazení tříd a Průzkumník řešení zkontrolujte projekt. Elementy projektu jsou popsány podrobněji na [identifikace prvky jazyka DHTML řízení projektu](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366910"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Konflikty s kompilátorem x86
 Datové typy, které jsou větší než 4 bajtů nejsou zarovnány automaticky v zásobníku při použití x86 kompilátoru ke kompilaci aplikace. Protože architektura x86 kompilátoru je zarovnaný zásobníku 4bajtové, nic větší než 4 bajtů, například 64bitové celé číslo, nemůže být automaticky zarovnáno na adresu 8 bajtů.  

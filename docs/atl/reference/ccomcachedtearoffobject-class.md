@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362879"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject – třída
 Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pro rozhraní úplné vypnutí.  

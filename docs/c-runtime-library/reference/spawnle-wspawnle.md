@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413470"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle, _wspawnle
 
@@ -109,7 +110,7 @@ Další informace o těchto a dalších návratové kódy najdete v tématu [_do
 
 Každá z těchto funkcí se vytvoří a spustí nový proces předávání každý argument příkazového řádku jako samostatného parametru a také řadu ukazatele předávání do nastavení prostředí.
 
-Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *arg0* je prázdný řetězec nebo nulového ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –**a vrátí hodnotu -1. Žádný nový proces je vytvořený.
+Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *arg0* je prázdný řetězec nebo nulového ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1. Žádný nový proces je vytvořený.
 
 ## <a name="requirements"></a>Požadavky
 

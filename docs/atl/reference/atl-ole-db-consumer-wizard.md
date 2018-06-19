@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364947"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemce ATL OLE DB
 Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby dat potřebné pro přístup k zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB.  

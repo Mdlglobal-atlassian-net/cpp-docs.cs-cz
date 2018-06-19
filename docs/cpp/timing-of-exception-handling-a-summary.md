@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422173"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimky: souhrn
 Obslužná rutina ukončení se provede bez ohledu na to, jak je blok příkazu `__try` ukončen. Příčina zahrnuje opuštění bloku příkazu `__try`, příkaz `longjmp`, který provede opuštění bloku a odvíjení zásobníku z důvodu zpracování výjimek.  

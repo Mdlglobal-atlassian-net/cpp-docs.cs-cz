@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354878"
 ---
 # <a name="using-cstringt"></a>Pomocí CStringT
 Témata v této části popisují programování pomocí třídy šablony [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  

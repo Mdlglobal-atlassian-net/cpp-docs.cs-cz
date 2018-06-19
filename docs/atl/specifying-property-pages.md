@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358922"
 ---
 # <a name="specifying-property-pages"></a>Určení stránky vlastností
 Když vytvoříte ovládací prvek ActiveX, často můžete přidružit stránky vlastností, které umožňuje nastavit vlastnosti vlastního ovládacího prvku. Řídí použití kontejnery **ISpecifyPropertyPages** rozhraní a zjistěte, které stránky vlastností lze použít k nastavení vlastností ovládacího prvku. Musíte pro toto rozhraní implementovat ovládacího prvku.  

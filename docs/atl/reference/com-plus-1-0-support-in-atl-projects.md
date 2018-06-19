@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359354"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Modelu COM + 1.0 podporovat v projekty knihovny ATL
 Můžete použít [ATL – Průvodce projektem](../../atl/reference/creating-an-atl-project.md) k vytvoření projektu s základní podpora pro komponenty modelu COM + 1.0.  

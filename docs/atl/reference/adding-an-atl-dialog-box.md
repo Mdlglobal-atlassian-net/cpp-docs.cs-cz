@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361522"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Přidání dialogové okno knihovny ATL
 Pokud chcete přidat dialogového okna knihovny ATL do projektu, musí být projektu projektu knihovny ATL nebo projektu knihovny MFC, která zahrnuje podporu ATL. Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  

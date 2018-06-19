@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413905"
 ---
 # <a name="c-exception-handling"></a>Zpracovávání výjimek v jazyce C++
 Jazyk C++ obsahuje integrovanou podporu pro vyvolávání a zachycování výjimek. Při programování v jazyce C++ byste téměř vždy měli používat integrovanou podporu výjimek jazyka C++ popsanou v tomto oddíle.  

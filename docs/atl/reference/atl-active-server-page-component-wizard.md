@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359127"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Průvodce komponentou stránky ASP knihovny ATL
 Tento průvodce vloží do projektu komponentu stránky ASP (Active Server). Microsoft Internetové informační služby (IIS) používá jako součást jeho architektura vývoj rozšířené webové stránky ASP součásti.  

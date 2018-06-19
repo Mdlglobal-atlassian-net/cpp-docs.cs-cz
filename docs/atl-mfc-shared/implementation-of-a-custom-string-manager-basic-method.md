@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355722"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementace nástroje vlastní řetězec Manager (základní metoda)
 Nejjednodušší způsob, jak přizpůsobit schéma přidělení paměti pro data řetězce se má používat zadaný ATL **CAtlStringMgr** třídy, ale poskytnutí vlastní paměti rutiny přidělení. V konstruktoru pro **CAtlStringMgr** přijímá jeden parametr: ukazatel na `IAtlMemMgr` objektu. `IAtlMemMgr` je abstraktní základní třída, která poskytuje obecné rozhraní haldě. Pomocí `IAtlMemMgr` rozhraní, **CAtlStringMgr** přiděluje, přidělí a uvolní paměť použitá k ukládání dat řetězců. Můžete buď implementace `IAtlMemMgr` rozhraní sami, nebo použijte jednu z pěti tříd manager zadaný ATL paměti. Zadaný ATL paměti správci jednoduše zabalit stávajících zařízení přidělení paměti:  

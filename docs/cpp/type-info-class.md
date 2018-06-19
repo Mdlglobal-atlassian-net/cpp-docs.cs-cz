@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422433"
 ---
 # <a name="typeinfo-class"></a>type_info – třída
 **Type_info** třída popisuje informace o typu generované v rámci programu kompilátoru. Objekty této třídy účinně ukládají ukazatel na název typu. **Type_info** třída také ukládá hodnotu kódovaného vhodný pro porovnání rovnosti dvou typů nebo pořadí řazení. Pravidla kódování a pořadí řazení typů nejsou specifikována a mezi programy se mohou lišit.  

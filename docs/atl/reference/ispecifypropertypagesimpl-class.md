@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362229"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl – třída
 Tato třída implementuje **IUnknown** a poskytuje výchozí implementaci třídy [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) rozhraní.  

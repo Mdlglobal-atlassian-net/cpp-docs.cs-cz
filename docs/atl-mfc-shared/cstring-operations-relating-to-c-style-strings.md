@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361811"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString operace vztahující se k řetězce stylu jazyka C
 A [CString](../atl-mfc-shared/using-cstring.md) objektu obsahuje znak řetězec data. `CString` dědí sadu [metody a operátory](../atl-mfc-shared/reference/cstringt-class.md) , jsou definovány v šabloně třídy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) pracovat s řetězcovými daty. (`CString` je `typedef` který se specializuje `CStringT` pro práci s druh textová data, `CString` podporuje.)  

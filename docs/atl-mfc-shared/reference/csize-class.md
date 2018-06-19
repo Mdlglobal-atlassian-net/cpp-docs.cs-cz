@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362953"
 ---
 # <a name="csize-class"></a>CSize – třída
 Podobně jako Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která implementuje relativní souřadnice nebo pozice.  

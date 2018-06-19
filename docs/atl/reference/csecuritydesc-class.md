@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366166"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc – třída
 Tato třída je obálka pro **SECURITY_DESCRIPTOR** struktura.  

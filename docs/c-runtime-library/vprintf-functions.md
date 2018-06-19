@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418377"
 ---
 # <a name="vprintf-functions"></a>vprintf – funkce
 Každý z `vprintf` funkce má ukazatel na seznam argumentů, pak naformátuje a zapíše daná data na určitý cíl. Ověření parametru provést, jestli funkce trvat široké nebo znakovou řetězce, cíl výstupu a podpora pro určení pořadí, ve kterém se používají parametry v řetězec formátu funkce se liší.  

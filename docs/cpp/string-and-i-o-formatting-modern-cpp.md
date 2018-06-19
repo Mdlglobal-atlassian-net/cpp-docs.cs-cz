@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422381"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formátování řetězců a I/O (moderní verze jazyka C++)
 C++ [iostreams](../standard-library/iostream.md) podporují formátovaný řetězec vstupně-výstupní operace. Například následující kód ukazuje, jak nastavit cout k formátování celé výstup v šestnáctkové soustavě, nejprve ukládání mimo aktuální stav a znovu nastavení později, protože po formátování stavu je předán cout, zůstane tímto způsobem, dokud nezměníte, ne jenom pro jeden řádek kódu.  

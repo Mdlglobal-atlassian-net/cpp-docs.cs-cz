@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363526"
 ---
 # <a name="atl-control-wizard"></a>Průvodce ovládacím prvkem knihovny ATL
 Vloží do projektu knihovny ATL (nebo projektu knihovny MFC s podpory knihovny ATL) ovládacího prvku knihovny ATL. Tento průvodce vám pomůže vložit tři typy ovládacích prvků:  

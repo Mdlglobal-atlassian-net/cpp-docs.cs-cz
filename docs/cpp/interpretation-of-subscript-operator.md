@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420470"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretace operátoru dolního indexu
 Jako další operátory operátor dolního indexu (**[]**) může být změněna uživatelem. Výchozí chování operátoru indexu, pokud není přetížen, je kombinování názvu pole a indexu pomocí následující metody:  

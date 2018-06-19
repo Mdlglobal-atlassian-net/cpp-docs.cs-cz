@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420579"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Omezení obslužných rutin ukončení
 Nelze použít `goto` příkaz Přejít do `__try` příkaz bloku nebo `__finally` příkaz bloku. Místo toho je nutné vstoupit do tohoto bloku příkazů prostřednictvím normálního toku řízení. (Můžete, ale přejít z `__try` příkaz bloku.) Navíc nelze vnořit obslužná rutina výjimky nebo obslužné rutiny ukončení uvnitř `__finally` bloku.  

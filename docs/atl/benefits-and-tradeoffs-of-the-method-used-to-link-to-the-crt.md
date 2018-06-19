@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355384"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Výhody a kompromisy metodu použitou k propojení CRT
 Projekt můžete propojit s CRT dynamicky nebo staticky. Následující tabulka popisuje výhody a kompromisy účastnící se výběr jakou metodu použít.  

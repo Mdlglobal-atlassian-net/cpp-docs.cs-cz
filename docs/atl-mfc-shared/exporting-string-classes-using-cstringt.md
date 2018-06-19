@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356393"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Export tříd řetězec pomocí CStringT
 V minulosti jste vývojáři MFC odvozené z `CString` se specializují vlastní řetězec třídy. V sadě Microsoft Visual C++ .NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md) třída byla nahrazena šablony třídy s názvem [CStringT](../atl-mfc-shared/reference/cstringt-class.md). To poskytuje několik výhod:  

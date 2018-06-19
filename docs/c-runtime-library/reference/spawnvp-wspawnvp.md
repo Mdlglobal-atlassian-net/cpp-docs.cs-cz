@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411910"
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -97,7 +98,7 @@ Další informace o těchto a dalších návratové kódy, najdete v části [er
 
 Každá z těchto funkcí vytvoří nový proces a provede ji a předá argumenty příkazového řádku a používá řadu ukazatele **cesta** proměnnou prostředí najít soubor provést.
 
-Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *argv –* je ukazatel s hodnotou null, nebo pokud *argv –* odkazuje na ukazatele null, nebo *argv –*[0] je řetězec prázdný, neplatný Obslužná rutina parametru je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –**a vrátí hodnotu -1. Žádný nový proces je vytvořený.
+Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *argv –* je ukazatel s hodnotou null, nebo pokud *argv –* odkazuje na ukazatele null, nebo *argv –*[0] je řetězec prázdný, neplatný Obslužná rutina parametru je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1. Žádný nový proces je vytvořený.
 
 ## <a name="requirements"></a>Požadavky
 

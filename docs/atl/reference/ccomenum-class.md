@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362860"
 ---
 # <a name="ccomenum-class"></a>CComEnum – třída
 Tato třída definuje objekt enumerator COM na základě pole.  

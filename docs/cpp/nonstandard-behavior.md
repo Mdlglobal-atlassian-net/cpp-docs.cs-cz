@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420292"
 ---
 # <a name="nonstandard-behavior"></a>Nestandardní chování
 V následujících oddílech jsou uvedeny některé z míst, kde implementace Visual C++ jazyka C++ nesplňuje standard C++. Čísla oddílů, která jsou uvedena níže, odkazují na čísla oddílů ve standardu C++ (ISO/IEC 14882:2011(E)).  

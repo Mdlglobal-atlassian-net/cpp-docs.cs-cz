@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355503"
 ---
 # <a name="cstring-exception-cleanup"></a>CString výjimka čištění
 V předchozích verzích MFC, je důležité, vyčistit [CString](../atl-mfc-shared/reference/cstringt-class.md) objekty po použití. MFC verze 3.0 a novějších explicitní čištění už není nezbytné.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093543"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Přidání rozhraní ke zprostředkovateli
 Určuje, které objekty, které chcete přidat rozhraní (obvykle datové zdroje, řádků, příkaz nebo relace objekty vytvořené průvodcem zprostředkovatele OLE DB). Je možné, že objekt je nutné přidat rozhraní je ten, který váš poskytovatel v současné době nepodporuje. V takovém případě spusťte ATL OLE DB Provider průvodce k vytvoření objektu. Klikněte pravým tlačítkem na projekt v zobrazení tříd, klikněte na tlačítko **přidat třídu** z **přidat** nabídce a pak klikněte na tlačítko **ATL zprostředkovatele technologie OLE DB**. Můžete chtít vložit kód rozhraní v samostatném adresáři a poté zkopírujte soubory do projektu zprostředkovatele.  

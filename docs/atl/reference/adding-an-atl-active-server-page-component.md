@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356463"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Přidání komponenty stránka Active Server knihovny ATL
 Pokud chcete přidat objekt Active Template Library (ATL) do projektu, projektu musí být vytvořen jako aplikace ATL COM nebo jako aplikace knihovny MFC, který obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL, můžete vybrat **přidání podpory knihovny ATL do MFC** z [dialogové okno Přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, nebo můžete [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  

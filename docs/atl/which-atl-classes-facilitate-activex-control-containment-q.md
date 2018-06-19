@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361946"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Které třídy ATL usnadnění uzavření ovládacího prvku ActiveX?
 Hostování ovládacího prvku kódu ATL na nevyžaduje, můžete použít všechny třídy ATL; můžete jednoduše vytvořit **"AtlAxWin80"** okno a použití rozhraní API hostování ovládacího prvku v případě potřeby (Další informace najdete v tématu **co je rozhraní API ovládacího prvku ATL – hostování**. Ale následující třídy usnadňují funkce omezení použití.  

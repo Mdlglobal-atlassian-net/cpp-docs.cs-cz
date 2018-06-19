@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422394"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operátor posunu vlevo a vpravo (&gt; &gt; a &lt; &lt;)
 Operátory bitového posunutí jsou operátor posunutí doprava (>>), který přesune bity *shift výraz* operátor posunutí doleva a doprava (<<), který přesune bity *shift výraz* doleva. <sup>1</sup>  

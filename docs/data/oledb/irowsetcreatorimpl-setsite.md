@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101380"
 ---
 # <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
 Nastaví lokality, která obsahuje objekt sady řádků. Další informace najdete v tématu [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  

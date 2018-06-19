@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355836"
 ---
 # <a name="iunknown"></a>IUnknown
 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) je základní rozhraní každého rozhraní modelu COM.  Toto rozhraní definuje tři metody: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), a [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317). [QueryInterface –](http://msdn.microsoft.com/library/windows/desktop/ms682521) umožňuje uživateli rozhraní požádejte objekt ukazatel na jiné jeho rozhraní. [Addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379) a [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317) implementovat na rozhraní při počítání referencí.  

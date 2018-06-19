@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366325"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch rozhraní
 Toto rozhraní poskytuje metody pro zadání vlastnosti hostované řízení nebo kontejneru.  

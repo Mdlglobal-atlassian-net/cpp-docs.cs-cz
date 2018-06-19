@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419926"
 ---
 # <a name="objects-own-resources-raii"></a>Prostředky ve vlastnictví objektů (RAII)
 Ujistěte se, které objekty vlastní prostředky. Tento princip je známý také jako "získávání prostředků je inicializace" nebo "RAII."  

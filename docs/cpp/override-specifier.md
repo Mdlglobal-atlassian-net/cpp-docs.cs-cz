@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420178"
 ---
 # <a name="override-specifier"></a>override – specifikátor
 Můžete použít `override` – klíčové slovo k určení členské funkce, které přepsat virtuální funkce v základní třídě.  

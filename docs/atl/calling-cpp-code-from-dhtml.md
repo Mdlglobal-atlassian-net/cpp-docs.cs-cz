@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355458"
 ---
 # <a name="calling-c-code-from-dhtml"></a>Volání kódu C++ z jazyka DHTML
 Ovládací prvek DHTML může být hostovaný v kontejneru, například – kontejner testů nebo Internet Explorer. V tématu [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup – kontejner testů.  

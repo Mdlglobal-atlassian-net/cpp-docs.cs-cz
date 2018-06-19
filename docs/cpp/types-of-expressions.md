@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422420"
 ---
 # <a name="types-of-expressions"></a>Typy výrazů
 Výrazy C++ jsou rozdělené do několika kategorií:  

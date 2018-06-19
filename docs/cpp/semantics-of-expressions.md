@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424122"
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
 Výrazy jsou vyhodnocovány podle priority a seskupení jejich operátorů. ([Operátorů a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md) v [lexikální pravidla](../cpp/lexical-conventions.md), znázorňuje vztahy C++ operátory kladou na výrazy.)  

@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410717"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -100,7 +101,7 @@ Vrácená hodnota z synchronního **_spawnl –** nebo **_wspawnl –** (**_p_wa
 
 Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *arg0* je prázdný řetězec nebo nulového ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –**a vrátí hodnotu -1. Žádný nový proces je vytvořený.
+Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *arg0* je prázdný řetězec nebo nulového ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1. Žádný nový proces je vytvořený.
 
 ## <a name="remarks"></a>Poznámky
 

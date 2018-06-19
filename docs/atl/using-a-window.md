@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358391"
 ---
 # <a name="using-a-window"></a>Pomocí okna
 Třída [CWindow](../atl/reference/cwindow-class.md) umožňuje použít okno. Po připojení a údržbu za účelem `CWindow` objektu, pak můžete volat `CWindow` metody pro manipulaci s okna. `CWindow` obsahuje také `HWND` operátor převést `CWindow` do objektu `HWND`. Proto můžete předat `CWindow` objekt všechny funkce, která vyžaduje popisovač pro okno. Je možné snadno kombinovat `CWindow` volání metod a volání funkce Win32, aniž by jakékoli dočasné objekty.  

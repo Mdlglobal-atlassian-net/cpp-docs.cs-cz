@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365936"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager – třída
 Třída CAtlTransactionManager poskytuje obálku pro funkce správce KTM (Kernel Transaction).  

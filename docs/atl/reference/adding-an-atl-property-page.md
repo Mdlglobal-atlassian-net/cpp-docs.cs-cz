@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357066"
 ---
 # <a name="adding-an-atl-property-page"></a>Přidání stránky vlastnosti knihovny ATL
 Pokud chcete přidat stránku vlastností Active Template Library (ATL) do projektu, projektu musí být vytvořen jako aplikace knihovny ATL nebo MFC aplikaci, která obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  

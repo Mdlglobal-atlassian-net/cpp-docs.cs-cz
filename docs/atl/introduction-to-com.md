@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356172"
 ---
 # <a name="introduction-to-com"></a>Úvod do modelu COM
 COM je základní "model objektu" na které ovládací prvky ActiveX a OLE jsou vytvořeny. Model COM umožňuje objekt vystavit jeho funkce pro ostatní součásti a hostování aplikací. Definuje, jak objekt zpřístupní samotné i jak tato ohrožení funguje napříč procesy a napříč sítí. COM také definuje objektu životního cyklu.  
