@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334883"
 ---
 # <a name="active-documents-on-the-internet"></a>Aktivní dokumenty na Internetu
 Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktivní dokumenty může být vícestránkové a jsou zobrazeny v celého klienta. Proveďte vyjednávání tradiční nabídky a můžete upravit na místě a také v otevřeném okně v serverové aplikace. Místo zobrazení jako malé šrafované ohraničení obdélníku, jsou aktivní dokumenty úplné rámce a aktivní vždy na místě.  

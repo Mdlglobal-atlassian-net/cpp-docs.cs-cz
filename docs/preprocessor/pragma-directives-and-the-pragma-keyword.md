@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846230"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direktivy Pragma a klíčové slovo __Pragma
 Direktivy pragma zadejte počítače nebo operačního – funkce specifické pro kompilátoru. `__pragma` – Klíčové slovo, která je specifická pro kompilátor Microsoft, vám umožňuje kód direktivy pragma v definicích maker.  

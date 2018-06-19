@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346191"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Výjimky: Generování výjimek ve vašich vlastních funkcích
 Je možné použít zlepší zpracování výjimek MFC výhradně k zachycení výjimky vyvolané funkcí v MFC nebo jiné knihovny. Kromě zachytávání výjimek vyvolaných kódem knihovny, můžete vyvolat výjimky z vlastního kódu, pokud píšete funkce, které se můžete setkat výjimečných podmínek.  

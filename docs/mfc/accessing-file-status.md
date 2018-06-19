@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334292"
 ---
 # <a name="accessing-file-status"></a>Přístup ke stavu souboru
 `CFile` také podporuje získání stavu souboru, včetně toho, jestli soubor existuje, vytváření a úpravy data a časy, logické velikosti a cestu.  

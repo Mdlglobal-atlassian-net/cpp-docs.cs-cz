@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345041"
 ---
 # <a name="handling-the-apply-button"></a>Ošetření tlačítka Použít
 Seznam vlastností mají funkci, která standardní dialogová okna nepodporují: umožňují uživatelům použít změny byly provedeny před jeho zavřením seznamu vlastností. To se provádí pomocí tlačítka použít. Tento článek popisuje metody, které můžete použít tuto funkci implementovat správně.  

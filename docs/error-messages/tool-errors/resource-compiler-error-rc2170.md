@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321636"
 ---
 # <a name="resource-compiler-error-rc2170"></a>Chyba kompilátoru prostředků RC2170
 Název souboru soubor rastrového obrázku není ve formátu 3,00  

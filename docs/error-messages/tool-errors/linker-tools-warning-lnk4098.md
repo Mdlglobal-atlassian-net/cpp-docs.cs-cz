@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301704"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Upozornění linkerů LNK4098
 DEFAULTLIB 'knihovny, je v konfliktu s použití jiných knihovny; použít /NODEFAULTLIB:library  

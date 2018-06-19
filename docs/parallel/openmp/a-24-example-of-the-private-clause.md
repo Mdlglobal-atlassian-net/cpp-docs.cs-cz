@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691385"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24   Příklady použití klauzule private
 `private` – Klauzule ([části 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stránce 25) paralelní oblasti je platná pouze pro lexikální rozsah oblast, nikoli dynamické rozsah oblasti.  Proto v příkladu, který následuje, všechny používá proměnnou *a* v rámci `for` smyčky v rutině *f* odkazuje privátní kopie *a*, při použití v rutiny *g* odkazuje na globální *a*.  

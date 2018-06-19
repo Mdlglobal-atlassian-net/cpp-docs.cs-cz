@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842765"
 ---
 # <a name="phases-of-translation"></a>Fáze posunutí
 Programy jazyků C a C++ se skládají z jednoho nebo více zdrojových souborů, z nichž každý obsahuje část textu programu. Zdrojový soubor spolu s jeho vloženými soubory (soubory, které jsou zahrnuty pomocí direktivy preprocesoru `#include`), s výjimkou částí kódu odebraných pomocí direktiv podmíněné kompilace, jako je `#if`, se nazývá „jednotka překladu“.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338585"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologie Active na Internetu
 Technologie Active je otevřená platforma, která umožňuje vývojářům vytvářet zajímavé, dynamické obsah a aplikace pro globální Internetu, nebo pro interní síti společnosti, označuje jako intranetu. Hlavní technologie od společnosti Microsoft pro programování Internet, jsou popsané níže.  

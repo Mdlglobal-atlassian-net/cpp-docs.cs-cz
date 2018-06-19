@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344777"
 ---
 # <a name="drawing-and-printing-classes"></a>Třídy pro vykreslování a tisk
 V systému Windows všechny grafického výstupu vykreslením na virtuální prostor pro kreslení názvem kontextu zařízení (DC). MFC poskytuje třídy pro zapouzdření různých typů řadičů domény, stejně jako encapsulations kreslení nástroje systému Windows, například rastrové obrázky, štětce, palety a pera.  

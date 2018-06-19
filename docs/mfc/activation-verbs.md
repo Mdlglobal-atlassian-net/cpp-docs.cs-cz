@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331071"
 ---
 # <a name="activation-verbs"></a>Aktivace: Příkazy
 Tento článek vysvětluje play příkazy primární a sekundární roli v prostředí OLE [aktivace](../mfc/activation-cpp.md).  

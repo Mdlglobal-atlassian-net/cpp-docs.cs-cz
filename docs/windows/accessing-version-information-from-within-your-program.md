@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856268"
 ---
 # <a name="accessing-version-information-from-within-your-program"></a>Přístup k informacím o verzi z programu
 ### <a name="to-access-version-information-from-within-your-program"></a>Pro přístup k informace o verzi z programu  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294141"
 ---
 # <a name="compiler-warning-level-4-c4263"></a>C4263 kompilátoru upozornění (úroveň 4)
 'function': členská funkce nepřepisuje všechny základní třídy člena virtuální funkce  

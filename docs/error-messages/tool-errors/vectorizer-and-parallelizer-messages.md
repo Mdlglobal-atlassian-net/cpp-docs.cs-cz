@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336596"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Zprávy nástrojů pro vektorizaci a paralelní zpracování
 Můžete použít možnosti kompilátoru jazyka Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) a [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) nastavit [Automatická paralelizace a Automatická vektorizace](../../parallel/auto-parallelization-and-auto-vectorization.md) pro výstup důvod kódy a informační zprávy o jeho aktivity. Tento článek vysvětluje kódy příčiny a zprávy.  

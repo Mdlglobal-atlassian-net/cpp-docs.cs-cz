@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298379"
 ---
 # <a name="compiler-warning-level-3-c4316"></a>C4316 kompilátoru upozornění (úroveň 3)
 Pro tento typ nemusí být zarovnána objekt přidělené v haldě.  

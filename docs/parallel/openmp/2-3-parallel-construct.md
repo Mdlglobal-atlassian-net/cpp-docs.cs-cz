@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692743"
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel – konstrukce
 Následující direktiva definuje paralelní oblasti, která je oblasti program, který se má provádět více podprocesů paralelně. Toto je základní koncept, která se spouští paralelní provádění.  

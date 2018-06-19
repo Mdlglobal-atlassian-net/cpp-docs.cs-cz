@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860330"
 ---
 # <a name="attribute-contexts"></a>Kontexty atributů
 Atributy C++ lze popsat pomocí čtyři základní pole: je možné použít pro cíl (**platí pro**), pokud jsou opakovatelných, nebo ne (**Repeatable**), vyžaduje přítomnost další atributy ( **Atributy požadované**) a nekompatibilitu s další atributy (**neplatné atributy**). Tato pole jsou uvedeny v doprovodné tabulce v tématu referenční každý atribut. Každá z těchto polí je popsána níže.  

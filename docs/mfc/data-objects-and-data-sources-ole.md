@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342976"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Datové objekty a zdroje dat (OLE)
 Při provádění přenosu dat, buď pomocí schránky nebo přetažení a drop, data má zdroj a cíl. Jednu aplikaci poskytuje data pro kopírování a přijímá ho jiná aplikace pro vložení. Každé straně přenos je potřeba provádět různé operace na stejná data pro přenos proběhla úspěšně. Knihovna Microsoft Foundation Class (MFC) obsahuje dvě třídy, které představují každé straně tento přenos:  

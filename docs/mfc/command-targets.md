@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341294"
 ---
 # <a name="command-targets"></a>Cíle příkazů
 Obrázek [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.md) ukazuje připojení mezi objekt uživatelského rozhraní, například položku nabídky a obslužné rutiny, která volá framework k provedení příkazu výsledné při kliknutí na objekt.  
