@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349906"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace
 Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných operací na data, jako je například vkládání a odstraňování dat, vytváření výčtu formáty, které je v datech, a další. Tento článek popisuje techniky, které jsou potřebné k dokončení většiny běžných operací. Témata zahrnují:  

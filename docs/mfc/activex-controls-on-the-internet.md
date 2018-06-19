@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352305"
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládacího prvku. Ovládací prvky jsou primární architektury pro vývoj programovatelný softwarové komponenty, které lze použít v různých různé kontejnery, včetně podporující rozhraní COM webových prohlížečů na Internetu. Libovolný ovládací prvek ActiveX může být ovládací prvek Internet a můžete přidat jeho funkce pro aktivní dokument nebo být součástí webové stránky. Ovládací prvky na webové stránce mohou komunikovat navzájem pomocí skriptování.  

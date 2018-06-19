@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351686"
 ---
 # <a name="dialog-box-classes"></a>Třídy dialogových oken
 Třída `CDialog` a jejich odvozené třídy zapouzdření dialogového funkce. Vzhledem k tomu, že je zvláštní druh okna, dialogové okno `CDialog` je odvozený od `CWnd`. Vaše dialogové okno odvozovat z `CDialog` nebo některý z společné třídy dialogových oken pro standardní dialogová okna, jako je otevření nebo uložení souboru, tisk, výběr písma a barev, inicializaci operaci vyhledávání a nahrazování nebo provádění různých související s rozhraním OLE operace.  

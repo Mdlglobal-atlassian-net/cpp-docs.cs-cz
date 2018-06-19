@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348986"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Seznamy vlastností a stránky vlastností (MFC)
 Knihovny MFC [dialogové okno](../mfc/dialog-boxes.md) na podívejte "kartě dialogové okno" může trvat začleněním vlastností a stránky vlastností. V prostředí MFC názvem "seznam vlastností", tento druh dialogové okno, podobně jako mnoho dialogová okna v aplikaci Microsoft Word, Excel a Visual C++, pravděpodobně obsahuje zásobník záložkách listy, podobně jako zásobníku složek souborů z přední zálohovat nebo skupiny systému windows, kaskádě pohledu. Ovládací prvky na kartě front jsou viditelné; pouze s popiskem karta je zobrazena na zadní karty. Seznam vlastností jsou obzvláště užitečná pro správu velkého počtu vlastnosti nebo nastavení, které spadají poměrně přehledně do několika skupin. Obvykle jeden seznam vlastností, můžete zjednodušit uživatelské rozhraní nahrazením několik samostatných dialogových oken.  

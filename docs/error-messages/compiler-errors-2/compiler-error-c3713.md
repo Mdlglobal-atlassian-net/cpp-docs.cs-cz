@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263869"
 ---
 # <a name="compiler-error-c3713"></a>C3713 chyby kompilátoru
 "metody": metodu obslužné rutiny události musí mít stejné parametry funkce jako zdroj 'metodu.  

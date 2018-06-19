@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694547"
 ---
 # <a name="thread-local-storage-tls"></a>Úložiště Thread Local (TLS)
 Místní úložiště vláken (TLS) je metoda, pomocí kterého můžete přidělit každé vlákno daného procesu umístění pro uložení dat specifické pro vlákno. Dynamicky vázaná (runtime) specifické pro vlákno data jsou podporována prostřednictvím rozhraní API TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), a [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Další informace o tom, jak implementují lokální úložiště vláken v systému Windows najdete v tématu [lokální úložiště vláken (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 a kompilátor Visual C++ nyní podporují staticky vázané (čas načítání) dat pro vlákno kromě existující implementace rozhraní API.  

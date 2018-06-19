@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351807"
 ---
 # <a name="providing-windowless-activation"></a>Zajišťování aktivace bez oken
 Okno vytváření kódu (to znamená, vše, co se stane, když zavoláte **CreateWindow**) může být provést. Ovládací prvek, který udržuje obrazovce okno má ke správě zprávy pro okno. Bez oken ovládací prvky jsou proto rychlejší než ovládací prvky se systémem windows.  

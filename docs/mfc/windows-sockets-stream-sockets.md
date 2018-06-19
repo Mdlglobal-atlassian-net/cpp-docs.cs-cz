@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386103"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Sokety datového proudu
 Tento článek popisuje sokety datového proudu, jeden ze dvou typů soketu Windows, která je k dispozici. (Další typ je [datagram soketu](../mfc/windows-sockets-datagram-sockets.md).)  

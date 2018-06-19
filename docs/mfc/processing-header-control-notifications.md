@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348888"
 ---
 # <a name="processing-header-control-notifications"></a>Zpracování oznámení ovládacího prvku záhlaví
 Ve třídě zobrazení nebo dialogové okno Vlastnosti okno použít k vytvoření [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkce obslužná rutina s příkazem přepínač pro všechny prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) zpráv s oznámením chcete zpracování (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)). Oznámení se odesílají do nadřazeného okna, když uživatel klikne na tlačítko nebo poklikáním položky záhlaví, drags a dělicí mezi položkami a tak dále.  

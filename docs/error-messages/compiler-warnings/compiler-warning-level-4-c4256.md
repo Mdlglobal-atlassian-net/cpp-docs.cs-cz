@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297219"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>C4256 kompilátoru upozornění (úroveň 4)
 'function': konstruktor pro třídu s virtuální základů má...; volání nemusí být kompatibilní se starší verzí aplikace Visual C++  

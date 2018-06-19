@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351112"
 ---
 # <a name="property-sheets-mfc"></a>Seznamy vlastností (MFC)
 Tato řada článků vysvětluje, jak implementovat podporu pro seznam vlastností v aplikacích MFC. Seznam vlastností, také známé jako karta dialogového okna, poskytuje způsob, jak spravovat velké počty ovládacích prvků v dialogovém okně. Obsahuje seznam vlastností stránky vlastností, každý podle prostředku šablony samostatné dialogové okno. Můžete rozdělit vašem dialogovém ovládacích prvků do logických skupin a umístí každou skupinu vlastní stránky vlastností.  

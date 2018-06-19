@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368092"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo – třída
 `CMDITabInfo` Třída se používá k předat parametry do [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metoda. – Skupiny se záložkami sadu členů této třídy pro řízení chování MDI.  

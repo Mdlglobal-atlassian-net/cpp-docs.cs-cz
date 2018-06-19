@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373286"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Vytvoření ovládacího prvku ActiveX knihovny MFC
 Programy ovládacího prvku ActiveX jsou modulární programy, které jsou navržené tak, aby určitý typ funkce předáte nadřazená aplikace. Například můžete vytvořit ovládací prvek tlačítko pro použití v dialogovém okně nebo nástrojů pro použití na webové stránce.  

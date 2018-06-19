@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372479"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC
 Kontejneru ovládacího prvku ActiveX je nadřazený program, který poskytuje prostředí pro spuštění ovládacího prvku ActiveX (dříve OLE). Můžete vytvořit aplikace může obsahovat s nebo bez MFC ovládací prvky ActiveX, ale je mnohem jednodušší dělat s MFC.  

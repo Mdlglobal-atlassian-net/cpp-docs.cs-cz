@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370152"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Vytvoření aplikace knihovny MFC ve stylu Průzkumníka souborů
 Mnoho aplikací systému Windows pomocí uživatelského rozhraní (UI) pro Průzkumníka souborů. Když spustíte Průzkumníka souborů, například zobrazí aplikace s svislé rozdělovače panelu dělení klientské oblasti. Na levé straně klientské oblasti poskytuje navigaci a procházení funkcí a na pravé straně klientské oblasti zobrazuje podrobnosti týkající se výběru v levém podokně. Když uživatel klikne na položku v levém podokně, aplikace znovu naplní v pravém podokně. V aplikaci MDI, můžete použít příkazy na **zobrazení** chcete změnit úroveň podrobností zobrazí v pravém podokně, v nabídce. (V aplikaci SDI nebo více dokumentů nejvyšší úrovně, můžete změnit podrobnosti, pomocí tlačítka panelu nástrojů.)  

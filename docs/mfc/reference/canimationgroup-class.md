@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355630"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup – třída
 Implementuje animace skupiny, která spojuje animace storyboard, animace objektů a přechody k definování animace.  

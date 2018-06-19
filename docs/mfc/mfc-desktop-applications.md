@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350232"
 ---
 # <a name="mfc-desktop-applications"></a>Běžné aplikace knihovny MFC
 Knihovna Microsoft Foundation Class (MFC) poskytuje objektově orientované obálku přes většinu Win32 a COM rozhraní API. Lze vytvořit velmi jednoduché aplikací klasické pracovní plochy, ale je velmi užitečné při budete muset vyvíjet složitější uživatelské rozhraní s více ovládacích prvků. MFC můžete použít k vytvoření aplikací s stylu Office uživatelská rozhraní.  

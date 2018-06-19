@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685782"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Postupy: Určení specifických zásad plánovače
 Zásady plánovače umožňuje řídit strategie používající Plánovač při správě úloh. Toto téma ukazuje, jak pomocí zásad plánovače můžete zvýšit prioritu vlákno úlohu, která se zobrazí indikátor průběhu ke konzole.  

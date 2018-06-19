@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349529"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Metody vytváření popisů tlačítek
 Knihovna MFC poskytuje tři třídy k vytváření a správě nástroj ovládací prvek tlačítka: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) a [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Nástroj tip členské funkce ve tyto třídy zabalit běžné ovládacího prvku Windows rozhraní API. Třída `CToolBarCtrl` a třída `CToolTipCtrl` jsou odvozeny od třídy `CWnd`.  

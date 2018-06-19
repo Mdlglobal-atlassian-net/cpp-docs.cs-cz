@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371097"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, styly, zpětná volání a mapy zpráv
 Tato část popisuje struktury, styly a používat knihovny Microsoft Foundation Class funkce zpětného volání a mapy zpráv knihovny MFC.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695526"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map – třída
 `concurrent_unordered_map` Třída je bezpečné souběžnosti kontejner, který určuje posloupnost různých délka elementy typu `std::pair<const K, _Element_type>`. Pořadí je reprezentována způsobem, který umožňuje bezpečné souběžnosti připojit, iterator traversal operace, iterator přístup a přístup k elementu.  

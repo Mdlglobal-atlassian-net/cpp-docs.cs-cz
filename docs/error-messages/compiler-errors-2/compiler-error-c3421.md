@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255289"
 ---
 # <a name="compiler-error-c3421"></a>C3421 chyby kompilátoru
 'type': finalizační metodu nelze volat pro tuto třídu, jako je buď nedostupné nebo neexistuje  

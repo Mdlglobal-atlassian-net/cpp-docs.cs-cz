@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688408"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Postupy: Vytvoření úlohy, která je dokončena po prodlevě
 Tento příklad ukazuje způsob použití [concurrency::task](../../parallel/concrt/reference/task-class.md), [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency::timer](../../parallel/concrt/reference/timer-class.md), a [concurrency::call](../../parallel/concrt/reference/call-class.md) třídy k vytvoření úlohy, která je dokončena po prodlevě. Tuto metodu můžete použít k vytvoření smyčky, které příležitostně dotazování na data, zavést vypršení časových limitů, zpoždění zpracování vstupu uživatele po předem určenou dobu a tak dále.  

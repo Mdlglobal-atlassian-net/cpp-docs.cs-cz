@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688255"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Multithreading: Kdy použít synchronizační třídy
 Vícevláknové třídy dodávané s knihovnou MFC rozdělit do dvou kategorií: synchronizačními objekty ([CSyncObject](../mfc/reference/csyncobject-class.md), [prohlížení](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), a [CEvent](../mfc/reference/cevent-class.md)) a synchronizace přístup k objektům ([CMultiLock](../mfc/reference/cmultilock-class.md) a [CSingleLock](../mfc/reference/csinglelock-class.md)).  

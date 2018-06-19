@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350030"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC – ovládací prvky ActiveX: Přidání vlastních metod
 Vlastní metody se liší od uložených metod v tom, že již nejsou implementované pomocí `COleControl`. Je třeba zadat implementace pro jednotlivé vlastní metody, které přidáte do vašeho ovládacího prvku.  

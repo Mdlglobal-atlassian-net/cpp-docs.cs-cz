@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369307"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Názvy ovládacích prvků, Průvodce ovládacím prvkem ActiveX v prostředí MFC
 Zadejte názvy pro ovládací prvek třídy a třídy stránky vlastností, názvy typů a zadejte identifikátory pro vlastní ovládací prvek. S výjimkou produktů **krátký název**, ostatní pole můžete upravovat nezávisle. Pokud změníte text pro **krátký název**, změny se projeví v názvech všechna pole na této stránce. Toto chování je navržená tak, aby bylo možné všechny názvy snadno identifikovat jako vývoje ovládacího prvku.  

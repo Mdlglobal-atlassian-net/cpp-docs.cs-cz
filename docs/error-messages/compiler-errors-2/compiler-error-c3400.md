@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258342"
 ---
 # <a name="compiler-error-c3400"></a>C3400 chyby kompilátoru
 Cyklická závislost omezení zahrnující 'constraint_1' a 'constraint_2.  

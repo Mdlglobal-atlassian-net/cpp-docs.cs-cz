@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273420"
 ---
 # <a name="compiler-error-c3893"></a>C3893 chyby kompilátoru
 'příkaz var': l-value použití initonly – datový člen je povoleno pouze v konstruktoru instance třídy 'type_name.  

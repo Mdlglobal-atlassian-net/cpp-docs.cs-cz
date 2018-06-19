@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357225"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 `AFX_GLOBAL_DATA` Struktura obsahuje pole a metody, které se používají ke správě rozhraní nebo přizpůsobit vzhled a chování vaší aplikace.  

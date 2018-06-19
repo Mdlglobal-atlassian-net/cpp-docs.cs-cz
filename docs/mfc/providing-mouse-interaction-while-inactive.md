@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349672"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Zajištění interakce s myší v neaktivním stavu
 Pokud vlastní ovládací prvek není aktivovat hned, stále můžete ji zpracovat `WM_SETCURSOR` a `WM_MOUSEMOVE` zprávy, i když ovládací prvek nemá žádné okno. To lze provést povolením `COleControl`na implementaci `IPointerInactive` rozhraní, které se ve výchozím nastavení vypnutá. (Viz *ActiveX SDK* popis tohoto rozhraní.) Chcete-li ji povolit, zahrňte `pointerInactive` příznak v sadě příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

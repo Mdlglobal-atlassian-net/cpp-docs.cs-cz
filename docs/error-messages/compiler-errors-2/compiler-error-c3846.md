@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268023"
 ---
 # <a name="compiler-error-c3846"></a>C3846 chyby kompilátoru
 'symbol': nelze importovat symbol 'assembly2': jako 'symbol' již byla naimportována ze sestavení 'assembly1'  

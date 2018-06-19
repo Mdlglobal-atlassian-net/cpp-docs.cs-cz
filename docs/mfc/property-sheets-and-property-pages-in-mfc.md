@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348603"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Seznamy vlastností a stránky vlastností v prostředí MFC
 Seznam vlastností, také známé jako karta dialogového okna, je dialogové okno, které obsahuje stránky vlastností. Každé stránce vlastnosti je založena na prostředku šablony dialogové okno a obsahuje ovládací prvky. Na stránce je uzavřen s karty v horní části. Na kartě názvy stránky a určuje jeho účel. Uživatelé kliknou na kartě v seznamu vlastností vyberte sadu ovládacích prvků.  

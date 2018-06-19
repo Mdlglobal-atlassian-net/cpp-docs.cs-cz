@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691489"
 ---
 # <a name="itarget-class"></a>ITarget – třída
 `ITarget` Třída je rozhraní pro všechny cílové bloky. Cíl bloky využívat zprávy jim podle nabízejí `ISource` bloky.  

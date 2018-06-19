@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302094"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Chyba linkerů LNK2039
 Import ref třída\<typu >, která je definovaná v another.obj, je nutné buď importované nebo definované, ale ne pomocí obou  

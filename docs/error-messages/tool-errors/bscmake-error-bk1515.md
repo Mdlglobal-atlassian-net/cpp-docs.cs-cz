@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295087"
 ---
 # <a name="bscmake-error-bk1515"></a>Chyba nástroje BSCMAKE BK1515
 bscfile: nekompatibilní verze: přírůstkově se nedá aktualizovat  

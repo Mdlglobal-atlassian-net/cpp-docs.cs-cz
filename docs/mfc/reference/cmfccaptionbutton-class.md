@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368774"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton – třída
 `CMFCCaptionButton` Třída implementuje tlačítko, které se zobrazí na panelu popisek pro ukotvené podokno nebo zkrácená rámce okna. Obvykle rozhraní popisek tlačítka automaticky vytvoří.  

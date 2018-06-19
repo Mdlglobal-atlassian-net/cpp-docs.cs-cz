@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297430"
 ---
 # <a name="compiler-warning-level-4-c4625"></a>C4625 kompilátoru upozornění (úroveň 4)
 odvozené třídy': kopírovacího konstruktoru byl implicitně definován jako odstranit, protože základní třída kopírovacího konstruktoru je nedostupný, nebo odstraněné  

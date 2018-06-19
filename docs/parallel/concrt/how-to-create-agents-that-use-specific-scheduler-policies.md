@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685733"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Postupy: Vytváření agentů využívajících specifické zásady plánovače
 Agenta je komponentu aplikace, která asynchronně spolupracuje s ostatními součástmi vyřešit větší výpočetní úlohy. Agenta obvykle má nastavené životní cyklus a Udržovat stav.  

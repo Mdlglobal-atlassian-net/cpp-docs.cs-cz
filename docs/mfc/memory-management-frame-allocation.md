@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349308"
 ---
 # <a name="memory-management-frame-allocation"></a>Správa paměti: Přidělení rámců
 Přidělení rámec trvá jeho název z "rámce zásobníku", který je nastaven vždy, když je volána funkce. Rámec zásobníku je oblast paměti, která dočasně obsahuje argumenty funkce a také všechny proměnné, které jsou definovány místní funkce. Proměnné rámce se často nazývají "automatické" proměnné, protože kompilátor automaticky přiděluje místo pro ně.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349426"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretace vstupu uživatele prostřednictvím zobrazení
 Jiné členské funkce zobrazení zpracovat a interpretovat všechny vstup uživatele. Obvykle nadefinujete obslužné rutiny zpráv členské funkce ve třídě zobrazení zpracování:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382012"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: vícevláknové aplikace MFC 2.1
 Tato technická Poznámka původně popsané omezení programy s více vlákny s MFC 2.1, původně součástí Visual C++ 1.0 pro systém Windows NT. MFC 3.0 podporuje více vláken přímo a je popsáno. Zobrazit tento odkaz Další informace.  

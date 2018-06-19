@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370842"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup – třída
 `CMFCTasksPaneTaskGroup` Třída je pomocná třída používané [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. Objekty typu `CMFCTasksPaneTaskGroup` představují *skupina úkolů*. Skupiny úloh je seznam položek, které zobrazuje rozhraní samostatné pole, která obsahuje tlačítko Sbalit. Pole může mít volitelné popisek (název skupiny). Pokud skupina sbalena, seznam úloh není viditelná.  

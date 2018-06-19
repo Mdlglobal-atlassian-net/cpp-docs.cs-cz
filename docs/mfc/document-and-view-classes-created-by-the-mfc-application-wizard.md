@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349919"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Třídy dokumentů a zobrazení vytvořené průvodcem aplikací MFC
 Průvodce aplikací MFC vám dává začít na váš vývojový program vytvořením třídy kosterního dokumentů a zobrazení pro vás. Pak můžete [mapování příkazů a zpráv na tyto třídy](../mfc/reference/mapping-messages-to-functions.md) a zápis jejich členské funkce pomocí editoru Visual C++ zdrojového kódu.  

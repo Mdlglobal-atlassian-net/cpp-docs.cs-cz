@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348632"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody vytváření panelů nástrojů
 Poskytuje dvě třídy vytvoření panelů nástrojů MFC: [ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). `CToolBar` obsahuje všechny funkce běžné ovládacího prvku panel nástrojů, a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury pro vás; ale vaše Výsledný spustitelný soubor obvykle bude větší než vytvořené pomocí `CToolBarCtrl`.  

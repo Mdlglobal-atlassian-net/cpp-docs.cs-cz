@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695886"
 ---
 # <a name="2-directives"></a>2. Direktivy
 Direktivy jsou založené na **#pragma** direktivy definované ve standardech C a C++.  Kompilátory, které podporují OpenMP C a C++ API bude obsahovat možnost příkazového řádku, která aktivuje a umožňuje výklad všechny direktivy kompilátoru OpenMP.

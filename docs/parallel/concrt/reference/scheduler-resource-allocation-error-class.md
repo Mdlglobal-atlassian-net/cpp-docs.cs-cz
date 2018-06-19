@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686682"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error – třída
 Tato třída popisuje výjimce z důvodu selhání získat prostředek kritické v Concurrency Runtime.  

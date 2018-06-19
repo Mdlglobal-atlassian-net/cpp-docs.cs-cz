@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860343"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy – výčet
 Určuje, jak je asynchronní operace pokus o přechod do stavu terminálu z byla dokončena nebo chyba by měl chovat s ohledem na klient požádal zrušené stavu.  

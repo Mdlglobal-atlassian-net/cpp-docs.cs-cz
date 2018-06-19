@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349171"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Zpracování oznamovacích zpráv v ovládacích prvcích pro výběr data a času
 Jak uživatelé pracují s datum a čas ovládací prvek pro výběr, ovládacího prvku (`CDateTimeCtrl`) odešle zprávy s oznámením do nadřazeného okna, obvykle objekt zobrazení nebo dialogové okno. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Například když uživatel otevře nástroje pro výběr data a času zobrazit vložené ovládací prvek měsíční kalendář, **dtn_dropdown –** odeslání oznámení.  

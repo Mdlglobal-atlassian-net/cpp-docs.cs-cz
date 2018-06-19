@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349710"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Příjem oznámení z běžných ovládacích prvků
 Běžné ovládací prvky jsou podřízená okna, které odesílají zprávy s oznámením do nadřazeného okna, když dojde k události, jako je vstup od uživatele, v ovládacím prvku.  

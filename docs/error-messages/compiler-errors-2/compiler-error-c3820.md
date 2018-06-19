@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272071"
 ---
 # <a name="compiler-error-c3820"></a>C3820 chyby kompilátoru
 "název": Inicializátory se musí spravovat.  

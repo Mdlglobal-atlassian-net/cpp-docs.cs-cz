@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371157"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Přetypování objektů tříd MFC
 Typ přetypování makra poskytují způsob, jak převést danou ukazatel na ukazatele, který odkazuje na objekt určité třídy, s nebo bez kontroly, zda je právní přetypování.  

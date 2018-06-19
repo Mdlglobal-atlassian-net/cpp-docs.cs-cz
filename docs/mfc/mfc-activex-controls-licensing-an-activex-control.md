@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353923"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX
 Licencování podpory, volitelná funkce ovládacích prvků ActiveX, můžete určit, kdo může použít nebo distribuovat ovládacího prvku. (Další informace o licenčních podmínkách, najdete v části licencování problémy v [upgradování existujícího ovládacího prvku ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  

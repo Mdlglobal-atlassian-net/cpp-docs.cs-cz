@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352786"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ukotvitelné a plovoucí panely nástrojů
 Knihovny Microsoft Foundation Class podporuje lze ukotvit panely nástrojů. Lze ukotvit panelu nástrojů můžete připojit nebo ukotven na žádné straně nadřazené okno, nebo může být odpojený od, nebo obtékané v samostatném okně zkrácená rámce. Tento článek vysvětluje, jak používat lze ukotvit panely nástrojů ve svých aplikacích.  

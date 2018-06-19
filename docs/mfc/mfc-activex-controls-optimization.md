@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355308"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC – ovládací prvky ActiveX: Optimalizace
 Tento článek vysvětluje techniky, které můžete použít k optimalizaci vaše ovládací prvky ActiveX pro dosažení vyššího výkonu.  

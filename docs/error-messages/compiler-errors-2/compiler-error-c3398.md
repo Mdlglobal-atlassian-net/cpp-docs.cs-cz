@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255827"
 ---
 # <a name="compiler-error-c3398"></a>C3398 chyby kompilátoru
 'operátor': nelze převést na 'function_pointer' 'function_signature'. Zdroj výraz musí být symbol – funkce  

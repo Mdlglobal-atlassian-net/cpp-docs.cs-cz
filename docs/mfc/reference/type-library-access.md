@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373208"
 ---
 # <a name="type-library-access"></a>Přístup ke knihovně typů
 Knihovny typů vystavit rozhraní OLE ovládacího prvku pro jiné aplikace využívající technologii OLE. Pokud jeden nebo více rozhraní mají být exponovány, musí mít každý ovládací prvek OLE knihovny typů.  

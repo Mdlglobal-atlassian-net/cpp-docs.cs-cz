@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350052"
 ---
 # <a name="documentview-architecture"></a>Architektonický model dokument/zobrazení
 Ve výchozím nastavení vytvoří Průvodce aplikací MFC kostru aplikace s dokumentové třídy a třídy zobrazení. MFC odděluje Správa dat do těchto dvou tříd. Dokument ukládá data a spravuje tisk data a koordinuje aktualizace dat více zobrazení. Zobrazení zobrazí data a spravuje interakci s uživatelem s ním, včetně výběru a úpravy.  

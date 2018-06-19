@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371329"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask – třída
 `CMFCTasksPaneTask` Třída je pomocná třída, která představuje úlohy pro ovládací prvek podokna úloh ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klikne na úlohy a ikonu, která se zobrazí vlevo od název úlohy.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372000"
 ---
 # <a name="mfc-application-wizard"></a>MFC – průvodce aplikací
 Průvodce aplikací MFC generuje aplikaci, když kompilovat, implementuje základní funkce spustitelný soubor (.exe) aplikace systému Windows. Výchozí aplikace knihovny MFC zahrnuje C++ zdrojové (sada) soubory, soubory prostředků (RC), soubory hlavičky () a soubor projektu (VCXPROJ). Kód, který je generovaný v těchto souborech starter vychází MFC.  

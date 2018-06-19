@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694560"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Osvědčené postupy v knihovně PPL (Parallel Patterns Library)
 Tento dokument popisuje, jak nejlépe efektivní využití paralelní vzory knihovny (PPL). Knihovně PPL poskytuje pro obecné účely kontejnerů, objektů a algoritmy pro provádění podrobného paralelismu.  

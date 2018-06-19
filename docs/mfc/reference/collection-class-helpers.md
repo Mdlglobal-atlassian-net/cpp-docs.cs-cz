@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374835"
 ---
 # <a name="collection-class-helpers"></a>Pomocné rutiny třídy kolekce
 Třídy kolekce `CMap`, `CList`, a `CArray` použít šablonované globální pomocných funkcí pro tyto účely jako porovnávání, kopírování a serializace prvků. Jako součást vaší implementace třídy na základě `CMap`, `CList`, a `CArray`, je nutné přepsat tyto funkce v případě potřeby s verzemi přizpůsobit typ dat uložených na mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že **constructelements –** a **destructelements –** jsou zastaralé.  

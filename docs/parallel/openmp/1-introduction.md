@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685837"
 ---
 # <a name="1-introduction"></a>1. Úvod
 Tento dokument určuje kolekci proměnných prostředí, které lze použít k určení stupně paralelního zpracování sdílené paměti v programy C a C++, direktivy kompilátoru a funkce knihovny. Funkce popsané v tomto dokumentu se souhrnně označuje jako *OpenMP C/C++ rozhraní API (Application Program)*. Cílem této specifikaci je zajistit model pro paralelní programování, který umožňuje programu, který má být přenosná v architekturách sdílené paměti od různých výrobců. Rozhraní API jazyka C/C++ OpenMP bude podporovat kompilátory od více dodavatelů. Další informace o OpenMP, včetně *OpenMP Fortran aplikační programovací rozhraní*, naleznete na následujícím webu:  

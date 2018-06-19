@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350351"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI – skupiny se záložkami
 Více funkce skupiny v záložkách rozhraní (MDI) dokumentu umožňuje více aplikací rozhraní (MDI) dokumentu pro zobrazení jeden nebo více záložkách windows (nebo skupiny systému windows s kartami, označuje jako *– skupiny se záložkami*) v oblasti MDI klienta. Okna s kartami lze zarovnávat vodorovně nebo svisle. Pokud aplikace je hostitelem více než jedné skupině záložkách MDI, skupiny jsou odděleny příčky.  

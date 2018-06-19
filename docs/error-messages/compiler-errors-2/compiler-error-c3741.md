@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266221"
 ---
 # <a name="compiler-error-c3741"></a>C3741 chyby kompilátoru
 'class': musí být coclass při parametr 'layout_dependent' event_receiver – = true  

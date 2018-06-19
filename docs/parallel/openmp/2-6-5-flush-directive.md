@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692334"
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush – direktiva
 **Vyprázdnění** – direktiva, ať už explicitní nebo implicitní, určuje bod sekvence "mezi vlákny", kdy je potřeba zajistit, aby měly všechny vlákna v týmu konzistentní zobrazení určité objekty (uvedené níže) v implementaci paměť. To znamená, že předchozí vyhodnocení výrazů, které odkazují na tyto objekty dokončení a následné hodnocení není zahájeno. Například kompilátory musí obnovení hodnot objektů z registrů v paměti a hardwaru pravděpodobně muset vyprázdnění zápis vyrovnávací paměti do paměti a znovu načíst hodnoty objekty z paměti.  

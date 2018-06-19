@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348847"
 ---
 # <a name="internet-security-c"></a>Internetové zabezpečení (C++)
 Zabezpečení kódu je závažný problém pro vývojáře a pro uživatele internetových aplikací. Jsou rizika: škodlivý kód, kód, který byl porušen a kód z neznámé lokality nebo autoři.  

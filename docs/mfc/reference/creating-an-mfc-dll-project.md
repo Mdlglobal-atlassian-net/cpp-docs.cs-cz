@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374052"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Vytvoření projektu knihovny MFC DLL
 Knihovna MFC DLL je binární soubor, který funguje jako sdílenou knihovnu funkcí, které je možné využívat současně více aplikacemi. Nejjednodušší způsob, jak vytvořit projektu MFC DLL je použití Průvodce MFC DLL.  

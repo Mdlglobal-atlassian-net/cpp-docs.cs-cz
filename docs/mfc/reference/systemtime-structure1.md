@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372389"
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME – Struktura1
 `SYSTEMTIME` Struktura představuje datum a čas pomocí jednotlivé členy pro měsíc, den, roku, den v týdnu, hodinu, minutu, sekundu a milisekundu.  

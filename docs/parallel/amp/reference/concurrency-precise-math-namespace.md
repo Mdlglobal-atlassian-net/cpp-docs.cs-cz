@@ -148,6 +148,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695376"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math – obor názvů
 Funkce `precise_math` obor názvů jsou C99 kompatibilní. Obě jednotné přesnost a dvojitá přesnost verzích jednotlivé funkce, které jsou zahrnuty. Například `acos` je verze dvojitou přesností a `acosf` je verze jednoduchou přesností. Tyto funkce, včetně funkce jednoduchou přesností vyžadují rozšířené podpory dvojitou přesností na akcelerátor. Můžete použít [Accelerator::supports_double_precision –](accelerator-class.md#supports_double_precision) k určení, pokud tyto funkce můžete spustit na konkrétní akcelerátoru. 

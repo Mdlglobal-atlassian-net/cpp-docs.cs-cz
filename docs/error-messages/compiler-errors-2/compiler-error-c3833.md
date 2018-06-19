@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268647"
 ---
 # <a name="compiler-error-c3833"></a>C3833 chyby kompilátoru
 'type': Neplatný typ cíle pro pointer_type  

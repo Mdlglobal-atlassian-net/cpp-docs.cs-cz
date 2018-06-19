@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385239"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
 Tato poznámka se popisuje, jak můžete použít MFCxx.DLL a MFCxxD.DLL (kde x je číslo verze knihovny MFC) sdílet dynamické knihovny s aplikací MFC a MFC – rozšiřující knihovny DLL. Další informace o pravidelných MFC – knihovny DLL najdete v tématu [pomocí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  

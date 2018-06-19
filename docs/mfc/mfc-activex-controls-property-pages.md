@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351742"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC – ovládací prvky ActiveX: Stránky vlastností
 Stránky vlastností umožnit uživateli ovládacího prvku ActiveX k zobrazení a změna vlastností ovládacího prvku ActiveX. Tyto vlastnosti jsou dostupné přes vyvolání řízení dialogové okno Vlastnosti, která obsahuje jeden nebo více stránek vlastností, které poskytují vlastní grafické rozhraní pro zobrazení a úprava vlastností ovládacího prvku.  

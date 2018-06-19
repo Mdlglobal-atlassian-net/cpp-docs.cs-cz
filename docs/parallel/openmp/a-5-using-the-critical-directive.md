@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686253"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Použití direktivy critical
 Následující příklad obsahuje několik `critical` direktivy ([části 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) na stránce 18). Tento příklad znázorňuje model služby Řízení front, ve kterém je úloha vyjmutou a na kterých. Chcete-li chránit proti více vláken vyřazení pro stejnou úlohu, musí být dequeuing operaci v `critical` části. Vzhledem k tomu, že dvě fronty v tomto příkladu jsou nezávislé, jsou chráněné `critical` direktivy s různými názvy *xaxis* a *yaxis*.  

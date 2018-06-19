@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372241"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Podpora databáze, Průvodce aplikací knihovny MFC
 Tato stránka obsahuje možnosti, které vám umožní určit úroveň databáze podporu pro svůj projekt (plus zdroj dat, v případě potřeby).  

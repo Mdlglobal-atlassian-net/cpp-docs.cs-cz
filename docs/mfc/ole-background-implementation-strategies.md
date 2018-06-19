@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350494"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE – pozadí: Strategie implementace
 V závislosti na vaší aplikace jsou čtyři možné implementace strategie pro přidání podpory OLE:  

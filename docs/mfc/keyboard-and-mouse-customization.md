@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351660"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Přizpůsobení klávesnice a myši
 MFC umožňuje uživateli vaší aplikace k přizpůsobení jak zpracovává klávesnici a myš vstup. Uživatel může přizpůsobit vstup z klávesnice přiřazením klávesové zkratky příkazy. Uživatele můžete také upravit vstup myši vyberte příkaz, který se má provést při poklepání uvnitř windows konkrétní aplikace. Toto téma vysvětluje, jak přizpůsobit vstup pro vaši aplikaci.  

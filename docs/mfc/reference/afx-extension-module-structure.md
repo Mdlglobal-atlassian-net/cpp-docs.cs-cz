@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349253"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE – struktura
 `AFX_EXTENSION_MODULE` Je během inicializace MFC – rozšiřující knihovny DLL používané pro udržení stav rozšíření MFC DLL – modul.  

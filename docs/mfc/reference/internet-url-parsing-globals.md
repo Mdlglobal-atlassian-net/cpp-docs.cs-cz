@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374795"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internetové adresy URL globální funkce pro analýzu a pomocníky
 Když klient odešle dotaz na server Internet, můžete jednu adresu URL, globální funkce pro analýzu extrahovat informace o klientovi. Podpůrné funkce nabízí jiné funkce Internetu.

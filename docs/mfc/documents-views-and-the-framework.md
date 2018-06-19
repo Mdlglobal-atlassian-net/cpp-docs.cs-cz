@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349516"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, zobrazení a framework
 Jádrem rozhraní MFC framework jsou koncepty dokumentů a zobrazení. Dokument je datový objekt, pomocí kterého uživatel pracuje v relaci úpravy. Je vytvořený `New` nebo **otevřete** příkaz na **souboru** nabídky a je obvykle uložen v souboru. (Standardní MFC dokumenty, odvozené od třídy **CDocument**, se liší od aktivní dokumenty a složené dokumenty OLE.) Zobrazení je objekt okno, pomocí kterého uživatel pracuje s dokumentem.  
