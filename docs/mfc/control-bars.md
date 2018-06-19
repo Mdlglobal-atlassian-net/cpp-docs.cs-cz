@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347896"
 ---
 # <a name="control-bars"></a>Ovládací pruhy
 "Ovládacích pruhů" je obecné název panely nástrojů, stavové řádky a řádky dialogové okno. MFC – třídy `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, a **CReBar** odvozena od třídy [ccontrolbar –](../mfc/reference/ccontrolbar-class.md), který implementuje své běžné funkce.  

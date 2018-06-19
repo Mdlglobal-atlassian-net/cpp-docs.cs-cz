@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347692"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Správa údajů o stavu modulů knihovny MFC
 Tento článek popisuje data o stavu modulů knihovny MFC a jak se tento stav bude aktualizován, jakmile tok provádění (kód cesta provede aplikace při provádění) zadá a zanechá modul. Stavy modulů s přepínání `AFX_MANAGE_STATE` a `METHOD_PROLOGUE` makra je také popsáno.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347708"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Přepisovatelné členské funkce CWinApp
 [CWinApp](../mfc/reference/cwinapp-class.md) poskytuje několik klíče přepisovatelné členské funkce (`CWinApp` nahradí tyto členy z třídy [CWinThread](../mfc/reference/cwinthread-class.md), ze kterého `CWinApp` odvozuje):  

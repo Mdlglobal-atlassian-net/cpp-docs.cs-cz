@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849883"
 ---
 # <a name="preprocessor-directives"></a>Preprocesor – direktivy
 Preprocesor – direktivy, jako například `#define` a **#ifdef**, jsou obvykle používány k vytvoření zdrojové programy snadno změnit a snadno zkompilovat v jiném pracovním prostředí. Direktivy ve zdrojovém souboru řekněte preprocesor provedení určitých akcí. Preprocesor můžete například nahradit tokeny v textu, vložte obsah dalších souborů do zdrojového souboru nebo potlačit kompilace část souboru, odebráním části textu. Preprocesoru řádky jsou rozpoznána a provádějí před makro rozšíření. Proto pokud makra rozšíří na objekt, který vypadá jako preprocesoru příkaz, tento příkaz nebyl rozpoznán balíčkem preprocesor.  

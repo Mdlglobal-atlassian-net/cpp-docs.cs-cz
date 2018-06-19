@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299991"
 ---
 # <a name="c-runtime-error-r6033"></a>R6033 jazyka Chyba za běhu C
 Pokus o použití MSIL kód z tohoto sestavení během inicializace nativního kódu. To znamená chyb v aplikaci. S největší pravděpodobností je výsledkem volání metody MSIL zkompilovaný (/ clr) funkce z konstruktoru nativní nebo zpracování funkce DllMain.  

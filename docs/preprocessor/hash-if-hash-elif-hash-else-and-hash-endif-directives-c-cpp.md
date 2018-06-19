@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846646"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direktivy #if, #elif, #else a #endif (C/C++)
 `#if` Direktivy s `#elif`, `#else`, a `#endif` direktivy, ovládací prvky kompilaci části zdrojového souboru. Pokud píšete výraz (po `#if`) má nenulovou hodnotu, skupině řádek hned za `#if` – direktiva se uchovávají v jednotce překlad.  

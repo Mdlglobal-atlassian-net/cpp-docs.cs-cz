@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849493"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Řídí vložené rozšíření přímých nebo vzájemně rekurzivních volání funkce.  

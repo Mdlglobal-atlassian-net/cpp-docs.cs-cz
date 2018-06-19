@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380205"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Načítání dat z objektu dialogového okna
 Rozhraní framework poskytuje snadný způsob k chybě při inicializaci hodnoty ovládacích prvků v dialogovém okně a k načtení hodnoty z ovládacích prvků. Více pracné ruční přístup je pro volání funkce, jako `SetDlgItemText` a `GetDlgItemText` členské funkce třídy `CWnd`, která se vztahují na ovládací prvek windows. S tyto funkce, můžete každý řízení přístupu jednotlivě, abyste nastavit nebo získat svou hodnotu, jako například volání funkcí `SetWindowText` a `GetWindowText`. Rozhraní framework přístup automatizuje inicializace a načítání.  

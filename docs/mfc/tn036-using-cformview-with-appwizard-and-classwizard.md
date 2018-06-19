@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379871"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Použití třídy CFormView s objekty AppWizard a ClassWizard
 Tato technická Poznámka popisuje postup úpravy objekty AppWizard generované aplikace, aby se použít `CFormView` místo výchozího `CView` jako jeho třída hlavního zobrazení. Tato možnost je podporována přímo s touto verzí aplikace Visual C++.  

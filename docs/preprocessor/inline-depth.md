@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849870"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Určuje hloubku vloženého heuristického hledání tak, že nebude vložena žádná funkce, nachází-li se v hloubce (v grafu volání) větší než `n`.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347188"
 ---
 # <a name="memory-management-examples"></a>Správa paměti: Příklady
 Tento článek popisuje, jak MFC provádí rámce přidělení a přidělení haldy pro každou z typických tři druhy přidělení paměti:  
