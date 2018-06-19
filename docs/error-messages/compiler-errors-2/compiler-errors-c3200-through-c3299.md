@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283816"
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 chyby kompilátoru prostřednictvím C3299
 
@@ -153,7 +154,7 @@ ms.lasthandoff: 05/04/2018
 |[Chyba kompilátoru C3290](compiler-error-c3290.md)|'*typ*': trivial vlastnost nemůže mít typ odkazu|
 |[Chyba kompilátoru C3291](compiler-error-c3291.md)|"default": nemůže být název trivial vlastnosti|
 |[Chyba kompilátoru C3292](compiler-error-c3292.md)|nelze znovu otevřít obor názvů rozhraní příkazového řádku|
-|[Chyba kompilátoru C3293](compiler-error-c3293.md)|'*identifikátor*":"default"používat pro přístup k výchozí vlastnost (indexer) pro třídu*– třída*.|
+|[Chyba kompilátoru C3293](compiler-error-c3293.md)|'*identifikátor*":"default"používat pro přístup k výchozí vlastnost (indexer) pro třídu *– třída*.|
 |C3294 chyby kompilátoru|Zastaralé.|
 |[Chyba kompilátoru C3295](compiler-error-c3295.md)|' #pragma *specifikátor*se dá použít jenom na globální nebo oboru názvů|
 |[Chyba kompilátoru C3296](compiler-error-c3296.md)|'*identifikátor*': vlastnost s tímto názvem již existuje.|

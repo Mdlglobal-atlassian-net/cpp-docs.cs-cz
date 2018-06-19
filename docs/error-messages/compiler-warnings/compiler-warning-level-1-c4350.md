@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286926"
 ---
 # <a name="compiler-warning-level-1-c4350"></a>C4350 kompilátoru upozornění (úroveň 1)
 změna chování: byl zavolán člen 'member1' místo členu 'member2'  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343360"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Asynchronní monikery na Internetu
 Internetu vyžaduje nové přístupy k návrhu aplikace z důvodu jeho přístup k pomalé síti. Aplikace by měla provést přístup k síti asynchronně, aby se zabránilo zablokování uživatelského rozhraní. Třída knihovny MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) poskytuje asynchronní podpora pro stahování souborů.  

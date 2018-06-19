@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383547"
 ---
 # <a name="using-cstatusbarctrl"></a>Používání atributu CStatusBarCtrl
 Můžete použít ovládací prvek panelu Stav ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) k vytvoření ovládacího prvku okno, které odráží různé druhy stavové informace o aplikaci. Stav okna je možné rozdělit do součástí, které zobrazují více než jeden typ informací.  

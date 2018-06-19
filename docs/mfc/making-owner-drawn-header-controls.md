@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345241"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tvorba ovládacích prvků záhlaví vykreslovaných vlastníkem
 Můžete definovat jednotlivé položky ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako položky vykreslované uživatelem. Další informace najdete v tématu [ovládací prvky hlavičky Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) ve Windows SDK.  

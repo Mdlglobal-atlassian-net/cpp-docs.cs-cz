@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689581"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Ukončení vláken
 Dvě běžné situace způsobí ukončení vlákna: řídící funkce nebo vlákno není povolené k zahájení dokončení. Pokud textový editor používá vlákno pro tisk na pozadí, řídící funkce by ukončit normálně, pokud tisk úspěšně dokončen. Pokud chce uživatel zrušit tisk, ale tisk vlákně na pozadí musí byla předčasně ukončena. Toto téma vysvětluje, jak implementovat každé situaci a jak získat kód ukončení vlákna po ukončí.  

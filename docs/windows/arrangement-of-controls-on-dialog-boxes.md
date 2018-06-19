@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858484"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Uspořádání ovládacích prvků v dialogových oknech
 Editor dialogových oken poskytuje nástroje rozložení, které Zarovnat a automaticky velikost ovládací prvky. Pro většinu úloh můžete použít [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Všechny příkazy panelu nástrojů editoru dialogového okna jsou také k dispozici v nabídce Formát a většina má [klávesové zkratky](../windows/accelerator-keys-for-the-dialog-editor.md).  

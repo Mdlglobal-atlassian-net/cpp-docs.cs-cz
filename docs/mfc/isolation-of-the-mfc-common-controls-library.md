@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346812"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Izolace knihovny běžných ovládacích prvků MFC
 Běžné ovládací prvky knihovny je nyní izolovaná v rámci MFC, což jiné moduly (například uživatel knihovny DLL) do zadáním verze v jejich manifesty používají různé verze knihovny běžných ovládacích prvků.  

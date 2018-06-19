@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347162"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Přetahování obrázků ze seznamu obrázků
 [CImageList](../mfc/reference/cimagelist-class.md) obsahuje funkce pro přetažení myší bitovou kopii na obrazovce. Přetahování funkce, bitovou kopii plynule, přesuňte barevně a bez jakékoli blikající kurzor. Můžete přetáhnout maskované a nemaskované bitové kopie.  

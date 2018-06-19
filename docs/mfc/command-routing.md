@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346279"
 ---
 # <a name="command-routing"></a>Směrování příkazů
 Vaše odpovědnosti při práci s příkazy je omezený na vytváření map zpráv spojení mezi příkazy a jejich funkce obslužné rutiny, pro kterou použijte okno Vlastnosti úlohy. Také musíte napsat většina obslužné rutiny příkazů.  

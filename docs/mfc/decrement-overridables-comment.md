@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345385"
 ---
 # <a name="-overridables-comment"></a>// Komentář k přepisovatelným
 `// Overridables` Obsahuje deklarace tříd MFC virtuální funkce, které můžete přepsat v odvozené třídě, když potřebujete změnit chování základní třídy. Že jsou obvykle s názvem počínaje "Na", ačkoli to není nezbytně nutné. Funkce tady jsou navrženy pro přepsat a často implementovat nebo zadejte nějaká "zpětného volání" nebo "připojit". Obvykle jsou chráněny tito členové.  

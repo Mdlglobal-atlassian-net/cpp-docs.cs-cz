@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344958"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Správa dat s použitím datových proměnných dokumentu
 Data vašeho dokumentu implementujte jako členské proměnné dokumentové třídy. Například Scribble program deklaruje člena typu `CObList` – odkazovaného seznamu, která ukládá ukazatele na `CObject` objekty. Tento seznam slouží k uložení pole bodů, které tvoří od ruky kreslení čáry.  

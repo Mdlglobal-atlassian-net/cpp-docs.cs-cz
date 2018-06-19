@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346162"
 ---
 # <a name="drawing-in-a-view"></a>Kreslení v zobrazení
 Téměř všechny kreslení v aplikaci dojde v zobrazení `OnDraw` členská funkce, které je nutné přepsat ve třídě zobrazení. (Výjimkou je myši kreslení, popsané v [interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md).) Vaše `OnDraw` přepsání:  

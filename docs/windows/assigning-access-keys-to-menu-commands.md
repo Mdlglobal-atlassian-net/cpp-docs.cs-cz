@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857896"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>Přiřazení přístupových kláves příkazům nabídky
 Přístupový klíč (symbol, který umožňuje uživateli vybrat v nabídce pomocí klávesnice) můžete přiřadit nabídek a příkazů nabídky.  

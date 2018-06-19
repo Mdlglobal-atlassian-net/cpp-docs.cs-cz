@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347357"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementace pracovních oblastí v ovládacích prvcích seznam
 Ve výchozím nastavení uspořádá ovládací prvek seznamu všechny položky způsobem standardní mřížky. Ale je podporované jinou metodu, pracovních oblastí, které jsou uspořádány položky seznamu obdélníková skupiny. Obrázek ovládacího prvku seznam, který implementuje pracovní oblasti najdete pomocí zobrazení seznamu ovládacích prvků ve Windows SDK.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347065"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Přidání podpory knihovny ATL do projektu knihovny MFC
 Pokud jste již vytvořili aplikace založené na MFC, potom můžete přidat podporu pro aktivní knihovny šablony (ATL) snadno tak, že spustíte přidání podpory knihovny ATL do projektu MFC – průvodce.  

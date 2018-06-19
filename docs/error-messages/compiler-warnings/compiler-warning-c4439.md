@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286952"
 ---
 # <a name="compiler-warning-c4439"></a>C4439 upozornění kompilátoru
 'function': definice funkce spravovaného typu v podpisu musí mít __clrcall konvenci volání  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342304"
 ---
 # <a name="creating-a-rebar-control"></a>Vytvoření ovládacího prvku matrice
 [Crebarctrl –](../mfc/reference/crebarctrl-class.md) objekty by měl být vytvořen, než je viditelná pro nadřazený objekt. Tím se minimalizují možnosti vykreslování problémů.  

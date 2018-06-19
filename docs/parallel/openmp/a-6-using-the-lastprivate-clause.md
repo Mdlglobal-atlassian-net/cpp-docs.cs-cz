@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690540"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6   Použití klauzule lastprivate
 Někdy správné provedení závisí na základě hodnoty, který proměnné přiřazuje poslední iteraci smyčky. Takové programy musí seznam všech těchto proměnných jako argumenty pro `lastprivate` – klauzule ([části 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) na stránce 27) tak, aby hodnoty proměnných jsou stejné jako při postupně smyčky.  

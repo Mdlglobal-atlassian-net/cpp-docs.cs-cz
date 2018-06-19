@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348046"
 ---
 # <a name="initializing-documents-and-views"></a>Inicializace dokumentů a zobrazení
 Dokumenty jsou vytvořené v dvěma různými způsoby, takže dokumentové třídy musí podporovat obou směrech. První uživatel může vytvořit nového prázdného dokumentu se příkaz Nový soubor. V takovém případě inicializace dokumentu v přepsání systému [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) funkce člena třídy [CDocument](../mfc/reference/cdocument-class.md). Druhý uživatel může použít příkaz Otevřít v nabídce soubor vytvořit nový dokument, jejichž obsah se číst ze souboru. V takovém případě inicializace dokumentu v přepsání systému [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) funkce člena třídy **CDocument**. Pokud oba inicializacích jsou stejné, můžete volat běžné členské funkce z obou přepsání nebo `OnOpenDocument` můžete volat `OnNewDocument` k inicializaci čistou dokumentu a poté otevřete operaci dokončit.  

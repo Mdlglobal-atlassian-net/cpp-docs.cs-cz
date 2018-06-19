@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343609"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Jakým způsobem volá framework obslužnou rutinu
 V následujících tématech nejprve zkontrolujte, jak rozhraní směruje příkazy, a poté zkontrolujte, jak se odesílají další zprávy a oznámení ovládacích prvků do systému windows:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347770"
 ---
 # <a name="mfc-com"></a>MFC COM
 Podmnožinu MFC slouží k podpory modelu COM, zatímco většina Active šablony Library (ATL) slouží pro programování COM. Témata v této části popisuje podporu pro knihovny MFC pro COM.  

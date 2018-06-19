@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343879"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Jak se nepříkazové zprávy dostanou k svým obslužným rutinám
 Na rozdíl od příkazů standardní zprávy Windows získat není směrován přes strukturu cíle, ale jsou obvykle zpracovávány okno, ke kterému Windows odešle zprávu. Okno může být okno rámce, podřízená okna MDI, standardního ovládacího prvku, dialogové okno, zobrazení nebo jiný druh podřízeného okna.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343921"
 ---
 # <a name="destroying-the-dialog-box"></a>Zničení dialogových oken
 Modální dialogová okna jsou obvykle vytvoří na rámec zásobníku a zničen při ukončení funkce, které byly vytvořeny. Destruktoru objektu dialogového okna je volána, když objekt ocitne mimo rozsah.  

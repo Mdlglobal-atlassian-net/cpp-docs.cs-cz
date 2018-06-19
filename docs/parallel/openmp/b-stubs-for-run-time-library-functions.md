@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687579"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Zástupných procedur pro funkce běhové knihovny
 Tato část obsahuje zástupných procedur pro funkce běhové knihovny definované v OpenMP C a C++ rozhraní API. Povolit přenositelnost na platformách, které nepodporují OpenMP C a C++ API jsou uvedeny zástupných procedur. Na těchto platformách OpenMP programy musí být propojena s knihovnou obsahující tyto funkce se zakázaným inzerováním. Funkce se zakázaným inzerováním předpokládá, že jsou ignorovány direktivy OpenMP programu. Jako takový emulovat sémantiku sériového portu.  

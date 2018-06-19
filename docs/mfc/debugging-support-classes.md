@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342602"
 ---
 # <a name="debugging-support-classes"></a>Ladění podpůrných tříd
 Knihovna MFC poskytuje následující třídy pro ladění problémů s přidělováním dynamické paměti.  

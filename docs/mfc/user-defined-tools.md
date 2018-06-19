@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384345"
 ---
 # <a name="user-defined-tools"></a>Uživatelem definované nástroje
 MFC podporuje uživatelem definované nástroje. Uživatelem definované nástroje je speciální příkaz, který spustí program externí, zadaného uživatelem. Přizpůsobení procesu můžete použít ke správě uživatelem definované nástroje. Ale nemůže používat tento proces, pokud vaše aplikace objekt není odvozen od [CWinAppEx Class](../mfc/reference/cwinappex-class.md). Další informace o přizpůsobení najdete v tématu [přizpůsobení pro prostředí MFC](../mfc/customization-for-mfc.md).  

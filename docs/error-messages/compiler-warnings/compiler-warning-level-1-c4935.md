@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290514"
 ---
 # <a name="compiler-warning-level-1-c4935"></a>C4935 kompilátoru upozornění (úroveň 1)
 specifikátor přístupu sestavení změnil z 'přístup.  

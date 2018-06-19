@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294892"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4223"></a>Upozornění kompilátoru (úrovně 1 a 4) C4223
 nestandardní rozšíření používané: bez lvalue pole převést na ukazatele  

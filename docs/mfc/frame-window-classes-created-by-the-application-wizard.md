@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345039"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Třídy oken s rámečkem vytvořené průvodcem aplikací
 Při použití [– Průvodce aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md) k vytvoření kostru aplikace, kromě aplikací, dokumentů a zobrazení třídy, vytvoří průvodce třídu odvozenou oken s rámečkem hlavního rámce okna aplikace. Třídy se nazývá `CMainFrame` ve výchozím nastavení a soubory, které ji obsahují jsou pojmenované MAINFRM. H a MAINFRM. CPP.  

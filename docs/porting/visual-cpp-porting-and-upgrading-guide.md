@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846594"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 Toto téma obsahuje Průvodce pro upgrade Visual C++ – kód. To zahrnuje získání kód, který zkompilování a spuštění správně na novější verzi nástroje, jakož i využívat výhod nového jazyka a funkcích nástroje Visual Studio. Toto téma obsahuje také informace o migraci starší verze aplikací na více moderní platformy.  

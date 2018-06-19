@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689256"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken
 Překryvný odběr může zvýšit celkový efektivitu některé aplikace, které obsahují úlohy, které mají vysokou úrovní latence. Toto téma ukazuje, jak nadbytečného kompenzace latence, která je způsobena čtení dat z připojení k síti.  

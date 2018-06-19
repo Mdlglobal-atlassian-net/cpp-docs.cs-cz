@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277196"
 ---
 # <a name="compiler-warning-level-1-c4272"></a>Upozornění (úroveň 1) C4272 kompilátoru
 'function': deklarace __declspec(dllimport); je označen. musíte zadat nativní konvence volání, při importu funkce.  

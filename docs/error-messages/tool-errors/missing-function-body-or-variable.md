@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316722"
 ---
 # <a name="missing-function-body-or-variable"></a>Chybějící tělo funkce nebo proměnná
 S právě funkce prototyp kompilátor můžete pokračovat bez chyby, ale linkeru nemůže vyřešit volání na adresu, protože není žádný kód funkce nebo proměnná místa vyhrazeného. Tato chyba se se nezobrazí, dokud vytvoříte volání funkce, která musíte vyřešit linkeru.  

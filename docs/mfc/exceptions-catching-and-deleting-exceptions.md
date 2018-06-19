@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345183"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Výjimky: Zachytávání a mazání
 Následující pokyny a příklady ukazují, jak zachytit a odstranit výjimky. Další informace o **zkuste**, **catch**, a `throw` klíčová slova, najdete v části [zpracování výjimek C++](../cpp/cpp-exception-handling.md).  

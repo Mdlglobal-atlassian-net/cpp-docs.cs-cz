@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341186"
 ---
 # <a name="containers-user-interface-issues"></a>Kontejnery: Problémy uživatelského rozhraní
 Řadu funkcí, je nutné přidat k uživatelské rozhraní aplikace kontejnerů pro adekvátní správu propojené a vložené položky. Tyto funkce zahrnují změny na strukturu nabídky a k událostem, které aplikace zpracovává. Podrobné informace o nich najdete v následujících článcích:  

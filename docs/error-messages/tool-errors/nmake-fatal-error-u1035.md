@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322793"
 ---
 # <a name="nmake-fatal-error-u1035"></a>Závažná chyba nástroje NMAKE U1035
 Chyba syntaxe: očekáváno ':' nebo '=' oddělovač  

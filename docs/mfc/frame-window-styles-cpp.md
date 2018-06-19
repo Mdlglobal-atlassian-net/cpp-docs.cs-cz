@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343754"
 ---
 # <a name="frame-window-styles-c"></a>Styly oken s rámečkem (C++)
 Rámce windows získáte pomocí rozhraní jsou vhodné pro většinu programy, ale můžete získat větší flexibilita pomocí pokročilé funkce [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) a globální funkce MFC [afxregisterwndclass – ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` člen funkcí `CWnd`.  

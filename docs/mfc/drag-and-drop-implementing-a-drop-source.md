@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345609"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Přetažení: Implementace zdroje přemístění
 Tento článek vysvětluje, jak získat aplikace k poskytování dat na operaci přetažení myší.  

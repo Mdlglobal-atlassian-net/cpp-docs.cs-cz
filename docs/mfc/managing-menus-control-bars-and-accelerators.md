@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345739"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Správa nabídek, ovládacích pruhů a akcelerátorů
 Okně s rámečkem spravuje aktualizace objektů uživatelského rozhraní, včetně nabídky, tlačítek panelu nástrojů, stavového řádku a akcelerátorů. Spravuje taky sdílení panelu nabídek v aplikace MDI.  

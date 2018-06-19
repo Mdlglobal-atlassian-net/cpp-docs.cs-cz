@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344906"
 ---
 # <a name="internet-related-mfc-classes"></a>Třídy MFC související s Internetem
 Informace o třídy související s Internetem a funkce najdete v tématu:  

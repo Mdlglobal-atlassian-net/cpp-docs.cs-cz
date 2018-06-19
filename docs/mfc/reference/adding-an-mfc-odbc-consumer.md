@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346855"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Přidání příjemce rozhraní ODBC knihovny MFC
 Příjemce knihovny MFC rozhraní ODBC se skládá vazeb ODBC sada záznamů třídy a data potřebná pro přístup k datovému zdroji.  

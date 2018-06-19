@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860278"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>Změna vlastnosti titulku vícenásobných řetězců
 Následující postup ukazuje, jak chcete-li změnit vlastnosti titulku vícenásobných řetězců.  

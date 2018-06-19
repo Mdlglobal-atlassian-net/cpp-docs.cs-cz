@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691538"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Knihovna PPL (Parallel Patterns Library)
 Paralelní vzory knihovny (PPL) poskytuje imperativní programovací model, který zvýší úroveň škálovatelnost a snadné použití pro vývoj souběžných aplikací. Knihovně PPL staví na plánování a prostředků součásti správy Concurrency Runtime. Vyvolá úroveň abstrakce mezi kódu aplikace a podkladový vláken mechanismus tím, že poskytuje obecné, bezpečnost typů algoritmů a kontejnerů, které fungují na data paralelně. Knihovně PPL také umožňuje vyvíjet aplikace, které škálování tím, že poskytuje alternativy do sdíleného stavu.  

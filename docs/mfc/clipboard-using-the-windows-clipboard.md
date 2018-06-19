@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342105"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Schránka: Použití schránky systému Windows
 Toto téma popisuje, jak používat standardní API schránky systému Windows v rámci aplikace knihovny MFC.  

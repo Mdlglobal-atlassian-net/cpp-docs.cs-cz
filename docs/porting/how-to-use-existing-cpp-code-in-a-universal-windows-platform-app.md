@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847969"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Návody: Použití existujícího kódu C++ v aplikaci pro univerzální platformu pro Windows
 Nejjednodušší způsob, jak získat vaše desktopovému programu spuštěným v prostředí UWP je možná použití technologie most plochy. Patří mezi ně aplikace převaděč plochy, která bude balíček aplikace pro UPW aplikaci bez kódu na změny. Další informace najdete v tématu [přineste vaší aplikace na ploše do univerzální platformu Windows (UWP) s most plochy](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).

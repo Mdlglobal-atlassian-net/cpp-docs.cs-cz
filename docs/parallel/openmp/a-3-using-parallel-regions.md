@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689893"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Použití paralelních oblastí
 `parallel` – Direktiva ([části 2.3](../../parallel/openmp/2-3-parallel-construct.md) na stránce 8) mohou být používány hrubým intervalem paralelní programy. V následujícím příkladu jednotlivými vlákny v oblasti paralelní rozhodne, jaká část globální pole `x` práci, na základě počtu vláken:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340881"
 ---
 # <a name="an-example-of-the-comments"></a>Příklad komentářů
 Následující částečný seznam třída `CChildFrame` používá většina standardní komentáře, které využívá MFC při jeho tříd pokus dělit členy třídy způsobů, jak se používají:  

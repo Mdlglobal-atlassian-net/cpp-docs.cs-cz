@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342827"
 ---
 # <a name="containers-implementing-a-container"></a>Kontejnery: Implementace kontejneru
 Tento článek shrnuje postup pro implementace kontejneru a bodů na další články, které poskytují podrobnější vysvětlení o implementaci kontejnery. Jsou také uvedeny některé volitelné funkce OLE, které chcete implementovat a články popisující tyto funkce.  

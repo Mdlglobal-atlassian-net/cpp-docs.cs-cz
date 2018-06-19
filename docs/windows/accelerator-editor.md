@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856414"
 ---
 # <a name="accelerator-editor"></a>Editor akcelerátorů
 Tabulky akcelerátorů je prostředek systému Windows, který obsahuje seznam klávesy akcelerátoru (také označované jako klávesové zkratky) a identifikátory příkazů, které jsou spojeny s nimi. Program může mít více než jedné tabulky akcelerátorů.  

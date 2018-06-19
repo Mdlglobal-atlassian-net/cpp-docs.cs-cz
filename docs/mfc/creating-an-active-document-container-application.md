@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341346"
 ---
 # <a name="creating-an-active-document-container-application"></a>Vytvoření aplikace kontejnerů pro aktivní dokument
 Většina doporučený a nejjednodušší způsob, jak vytvořit aplikace kontejnerů pro aktivní dokument je vytvoření kontejneru aplikace MFC EXE pomocí Průvodce aplikací knihovny MFC a pak upravit aplikaci, aby podporovala obsahování pro aktivní dokument.  

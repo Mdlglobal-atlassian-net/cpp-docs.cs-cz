@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341245"
 ---
 # <a name="commonly-added-member-functions"></a>Běžně přidávané členské funkce
 Pokud vaše dialogové okno obsahuje tlačítka zámků než OK nebo Storno, budete muset zápis obslužné rutiny zpráv členské funkce ve vlastní třídy dialogového okna reagovat na oznámení ovládacího prvku zprávy, které generují. Příklad, naleznete v části [Klikyháky](../visual-cpp-samples.md) ukázka programu. Můžete také zpracovat zprávy oznámení ovládacího prvku z jiných ovládacích prvků ve vašem dialogovém okně.  

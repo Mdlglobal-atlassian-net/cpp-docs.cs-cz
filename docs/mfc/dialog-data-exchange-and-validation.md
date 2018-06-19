@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343772"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Výměna a ověřování dat dialogových oken
 Výměna dat dialogových oken (DDX) se o snadný způsob inicializovat ovládací prvky ve vašem dialogovém a shromažďují data vstup uživatelem. Ověřování dat dialogového okna (DDV) je snadný způsob, jak ověřit zadávání dat v dialogovém okně. Pokud chcete využít výhod DDX a DDV v dialogových oknech, použijte [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvořit datové členy a nastavte jejich datové typy a určit pravidla ověřování.  

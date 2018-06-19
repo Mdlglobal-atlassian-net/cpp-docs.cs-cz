@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341707"
 ---
 # <a name="declaring-message-handler-functions"></a>Deklarace funkcí obslužných rutin zpráv
 Určitá pravidla a pravidla týkající se řídí názvy funkcí obslužné rutiny zpráv. To závisí na kategorie zpráv, jak je popsáno v následujících tématech:  

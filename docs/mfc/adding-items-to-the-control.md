@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341362"
 ---
 # <a name="adding-items-to-the-control"></a>Přidávání položek do ovládacího prvku
 K přidávání položek do ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), volání jednoho z několika verzích [metody InsertItem](../mfc/reference/clistctrl-class.md#insertitem) – členská funkce, v závislosti na tom, jaké informace, které máte. Přebírá jednu verzi [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura, která je připravit. Protože `LV_ITEM` struktura obsahuje mnoho členů, máte větší kontrolu nad atributy ovládacího prvku položky seznamu.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301132"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Upozornění linkerů LNK4219
 Oprava název oprava přetečení. Cíl "název cílové symbol" je mimo rozsah, vkládání převodu  

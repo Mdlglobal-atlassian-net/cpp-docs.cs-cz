@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345088"
 ---
 # <a name="internet-and-networking-classes"></a>Internetové a síťové třídy
 Tyto třídy umožňují vyměňovat informace s jiným počítačem pomocí soketu Windows nebo Win32 Internet (WinInet). Existují také sadu tříd pro manipulaci s Windows Sockets.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347149"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Objednávání položek v ovládacím prvku záhlaví
 Jakmile jste [přidání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md), můžete upravit nebo získat informace o jejich pořadí s následující funkce:  

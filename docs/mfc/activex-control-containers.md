@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338972"
 ---
 # <a name="activex-control-containers"></a>ActiveX – kontejnery ovládacích prvků
 Kontejneru ovládacího prvku ActiveX je kontejner, který plně podporuje ovládací prvky ActiveX a můžete začlenit do svých vlastních windows dialogová okna. Ovládacího prvku ActiveX je element opakovaně použitelné software, který můžete použít v mnoha projekty vývoje. Ovládací prvky umožňují uživatelům vaší aplikace přístup k databázím, monitorovat data a různé možnosti v rámci vaší aplikace. Další informace o ovládací prvky ActiveX, najdete v článku [ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345677"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Správa paměti: Paměťové bloky umožňující změnu velikosti
 **Nové** a **odstranit** operátory, které jsou popsané v článku [Správa paměti: Příklady](../mfc/memory-management-examples.md), jsou vhodné pro přidělování a rušení přidělení bloků paměti pevné velikosti a objekty. Aplikace v některých případech může být nutné bloky paměti umožňující změnu velikosti. Musí používat standardní funkce běhové knihovny jazyka C [malloc –](../c-runtime-library/reference/malloc.md), [realloc –](../c-runtime-library/reference/realloc.md), a [volné](../c-runtime-library/reference/free.md) ke správě bloky paměti umožňující změnu velikosti v haldě.  

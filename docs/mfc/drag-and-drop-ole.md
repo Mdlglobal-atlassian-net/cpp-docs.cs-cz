@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344330"
 ---
 # <a name="drag-and-drop-ole"></a>Přetažení (OLE)
 Funkce přetažení myší OLE je primárně zástupce pro kopírování a vkládání dat. Použijete-li do schránky Kopírovat nebo vložit data, jsou vyžaduje několik kroků. Vyberte data, klikněte na **Vyjmout** nebo **kopie** z **upravit** nabídky, přejděte do cílového souboru, okno nebo aplikace, umístěte kurzor do požadovaného umístění a klikněte na **Vložení** z **upravit** nabídky.  

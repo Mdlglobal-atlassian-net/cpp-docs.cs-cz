@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687657"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Postupy: Správa instance plánovače
 Instance plánovače umožňují přidružit konkrétní zásady plánování různé druhy zátěží. Toto téma obsahuje dva základní příklady, které ukazují, jak vytvořit a spravovat instance plánovače.  

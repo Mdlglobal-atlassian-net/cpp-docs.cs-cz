@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346266"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapování zpráv systému Windows na třídu
 Pokud potřebujete vašem dialogovém okně pro zpracování zpráv systému Windows, přepište funkce příslušnou obslužnou rutinu. Uděláte to tak, použijte okno Vlastnosti k [mapy zpráv](../mfc/reference/mapping-messages-to-functions.md) pro třídu dialog. Tím se zapíše položku mapy zpráv pro každou zprávu a přidá členské funkce obslužné rutiny zpráv pro třídu. Psaní kódu v obslužné rutiny zpráv používáte editor Visual C++ zdrojového kódu.  

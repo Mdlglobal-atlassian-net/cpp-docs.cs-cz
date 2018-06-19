@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342963"
 ---
 # <a name="derived-message-maps"></a>Mapy odvozených zpráv
 Během zpracování, kontrola zprávu třídy a vlastní zprávy mapy není konec scénář map zpráv. Co se stane, když třída `CMyView` (odvozený z `CView`) nemá odpovídající záznam zprávy  

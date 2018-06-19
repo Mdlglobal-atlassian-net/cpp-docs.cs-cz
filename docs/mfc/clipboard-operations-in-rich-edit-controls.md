@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341281"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operace se schránkou v ovládacích prvcích pro úpravy s formátováním
 Aplikace můžete vložit obsah schránky do ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pomocí konkrétní formátu schránky nebo nejlépe dostupné volné paměti. Můžete také určit, jestli je schopná vkládání formát schránky ovládacího prvku RichEdit.  

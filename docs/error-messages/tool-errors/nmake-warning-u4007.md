@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320584"
 ---
 # <a name="nmake-warning-u4007"></a>Upozornění nástroje NMAKE U4007
 Název souboru 'název souboru, příliš dlouhá. zkracování 8.3  

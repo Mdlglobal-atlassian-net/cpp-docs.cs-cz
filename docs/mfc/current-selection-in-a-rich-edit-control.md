@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345007"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Aktuální výběr v ovládacích prvcích pro úpravy s formátováním
 Uživatele můžete vybrat text v ovládacím prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pomocí myši nebo klávesnice. Aktuální výběr je rozsah vybrané znaky nebo jsou vybrané pozice kurzoru, pokud se žádné znaky. Aplikaci můžete získat informace o aktuálním výběrem, nastavit aktuální výběr, určit, kdy aktuální výběr změny a zobrazit nebo skrýt výběr zvýrazněte.  

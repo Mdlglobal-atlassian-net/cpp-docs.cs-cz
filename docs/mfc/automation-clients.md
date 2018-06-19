@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342488"
 ---
 # <a name="automation-clients"></a>Klienti automatizace
 Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo je vystavit objekty, budou se dá upravit. Klientem automatizace je aplikace, která můžete upravit zveřejněné objekty, které patří do jiné aplikace. Automatizační server se nazývá aplikaci, která poskytuje objekty. Klient umožňuje pracovat s objekty aplikací serveru díky přístupu k těmto objektům vlastnosti a funkce.  

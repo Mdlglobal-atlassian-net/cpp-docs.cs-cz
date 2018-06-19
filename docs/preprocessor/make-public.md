@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849584"
 ---
 # <a name="makepublic"></a>make_public
 Označuje, že nativní typ by měl mít veřejný přístup k sestavení.  

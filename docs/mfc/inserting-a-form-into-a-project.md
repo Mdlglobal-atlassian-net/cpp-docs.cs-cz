@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344130"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Vložení formuláře do projektu
 Formuláře poskytují pohodlný kontejner pro ovládací prvky. Formulář na základě MFC lze snadno vložit do aplikace podporuje aplikace knihovny MFC.  

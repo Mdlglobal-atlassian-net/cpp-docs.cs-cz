@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347328"
 ---
 # <a name="property-sheets-as-wizards"></a>Seznamy vlastností jako průvodci
 Klíčové vlastnosti vlastností Průvodce je, že navigace je k dispozici další nebo dokončit zpět a zrušit tlačítka místo karty. Je třeba volat [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) před voláním [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) na objektu List vlastnosti využít této funkce.  

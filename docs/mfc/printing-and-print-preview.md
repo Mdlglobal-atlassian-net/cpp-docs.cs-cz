@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346253"
 ---
 # <a name="printing-and-print-preview"></a>Tisk a náhled tisku
 MFC podporuje tisku a přehled tisku pro váš program dokumenty pomocí třídy [CView](../mfc/reference/cview-class.md). Pro základní tisku a tiskového náhledu, jednoduše přepíší třídy zobrazení [OnDraw –](../mfc/reference/cview-class.md#ondraw) členská funkce, které je nutné provést přesto. Tuto funkci můžete zakreslit zobrazení na obrazovce, kontextu zařízení tiskárny skutečné tiskárny, nebo do kontextu zařízení, která simuluje tiskárny na obrazovce.  

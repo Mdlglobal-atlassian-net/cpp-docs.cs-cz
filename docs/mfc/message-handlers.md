@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347627"
 ---
 # <a name="message-handlers"></a>Obslužné rutiny zpráv
 V prostředí MFC vyhrazená *obslužná rutina* funkce zpracuje každou samostatnou zprávu. Funkce obslužné rutiny zpráv jsou funkce člena třídy. Tato dokumentace používá podmínky *obslužné rutiny zpráv – členská funkce*, *funkce obslužné rutiny zpráv*, *obslužné rutiny zpráv*, a *obslužná rutina*zcela zaměnitelným významem. Některé druhy obslužné rutiny zpráv se také označují jako "obslužné rutiny příkazů."  

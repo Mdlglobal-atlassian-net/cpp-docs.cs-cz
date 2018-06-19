@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382512"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Nadřízené a podřízené položky ovládacího prvku strom
 Všechny položky v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) může mít seznam podřízených položek, které se nazývají podřízené položky, které s ním spojená. Položku, která obsahuje jednu nebo více podřízených položek se nazývá nadřazené položky. Podřízené položky se zobrazí pod její nadřazené položky a odsazeno se indikovat, že podřízená nadřazené. Položku, která nemá nadřazený je na nejvyšší úrovni hierarchie a je volána kořenovou položku.  

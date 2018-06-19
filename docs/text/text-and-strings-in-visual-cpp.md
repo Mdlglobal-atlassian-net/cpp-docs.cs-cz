@@ -39,6 +39,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856030"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 Vývoj aplikací pro mezinárodní trhy důležitým aspektem je odpovídající reprezentace místní znakové sady. Znaková sada ASCII definuje znaky v rozsahu od 0x00 do 0x7F. Existují jiné znakové sady, především Evropské, které definovat znaky v rozsahu od 0x00 do 0x7F stejně jako na znakové sadě ASCII a také rozšířenou znakovou sadu z 0x80 do 0xFF. Proto je dostačující k reprezentaci znaková sada ASCII, jakož i znakové sady mnoha evropských jazyků 8bitové, jedním znaková sada (SBCS). Ale některé neevropské znakových sad, jako je například japonské Kanji, zahrnují mnoho více znaků, než schéma kódování jednobajtové představují a proto vyžaduje, že vícebajtové znakové sady (MBCS) kódování.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343522"
 ---
 # <a name="documentview-creation"></a>Vytváření dokumentů/zobrazení
 Rozhraní framework poskytuje implementace `New` a **otevřete** příkazy (mimo jiné) **souboru** nabídky. Vytvoření nového dokumentu a jeho přidružené zobrazení a oken s rámečkem je spolupráci úsilí mezi objekt aplikace, šablony dokumentu, nově vytvořený dokumentu a nově vytvořený rámce okna. Následující tabulka shrnuje, které objekty vytvořit co.  

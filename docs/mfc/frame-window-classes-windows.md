@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345062"
 ---
 # <a name="frame-window-classes-windows"></a>Třídy oken s rámečkem (Windows)
 Okna s rámečkem jsou windows, které rámce aplikace nebo součást aplikace. Okna s rámečkem obvykle obsahovat jiné windows, jako je například zobrazení, panely nástrojů a stavové řádky. U `CMDIFrameWnd`, mohou obsahovat `CMDIChildWnd` objekty nepřímo.  

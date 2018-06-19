@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341323"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Uklízení dokumentů a zobrazení
 Při zavírání dokumentu nejprve volá rámec jeho [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) – členská funkce. Pokud jste přidělili libovolná paměť v haldě v průběhu operace dokumentu `DeleteContents` je nejlepší místo k navrácení ho.  

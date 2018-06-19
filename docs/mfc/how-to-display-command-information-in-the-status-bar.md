@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346042"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Postupy: Zobrazení informací o příkazu ve stavovém řádku
 Když spustíte Průvodce aplikace vytvořit kostru aplikace, může podporovat panelu nástrojů a stavového řádku. Právě jednou z možností v Průvodci aplikace podporuje obě. Když se nachází stavového řádku, aplikace automaticky poskytuje užitečné zpětnou vazbu přesunutí ukazatele myši položky v nabídkách. Aplikace automaticky zobrazí výzva řetězec ve stavovém řádku, když je označený položky nabídky. Například při přesunutí ukazatele myši **Vyjmout** příkaz na **upravit** nabídce Stavový řádek může zobrazit "Vyjme výběr a umístí jej do schránky" v oblasti zpráv stavového řádku. Na řádku pomáhá pochopit účel položky nabídky uživatele. Tento postup funguje i když uživatel klikne tlačítko panelu nástrojů.  

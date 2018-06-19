@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341797"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automatizační servery: Problematika životnosti objektů
 Pokud klienta automatizace vytvoří nebo aktivuje OLE položku, odešle server klienta ukazatel na tento objekt. Klient pro zakládá odkaz na objekt prostřednictvím volání funkce OLE [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Tento odkaz je v platnosti do volání klienta [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Klientské aplikace napsané pomocí knihovny serveru Microsoft Foundation Class OLE – třídy nemusí provádět tyto volání; rozhraní nemá tak.) Systém OLE a samotný server může vytvořit odkazy na objekt. Server by neměla nezničí objekt tak dlouho, dokud externí odkazy do objektu zůstávají v platnosti.  

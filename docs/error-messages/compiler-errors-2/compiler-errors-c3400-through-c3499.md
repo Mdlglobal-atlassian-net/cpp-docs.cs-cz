@@ -113,6 +113,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285805"
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>C3400 chyby kompilátoru prostřednictvím C3499
 
@@ -168,7 +169,7 @@ ms.lasthandoff: 05/04/2018
 |C3441 chyby kompilátoru|'*deklarace*': '*– klíčové slovo*' nelze použít po definování třídy|
 |C3442 chyby kompilátoru|Inicializace více členů sjednocení: '*člen1*'a'*člen2*.|
 |C3443 chyby kompilátoru|Výchozí člen inicializátoru pro '*třída*' je rekurzivní|
-|C3444 chyby kompilátoru|Prázdný agregační třída*– třída*'musí být inicializován s'{}.|
+|C3444 chyby kompilátoru|Prázdný agregační třída *– třída*'musí být inicializován s'{}.|
 |[C3445 chyby kompilátoru](compiler-error-c3445.md)|kopie – seznam inicializace '*typ*' nelze použít explicitní konstruktor|
 |[Chyba kompilátoru C3446](compiler-error-c3446.md)|'*třída*': inicializátoru výchozí člen není povolen pro člena – hodnotová třída|
 |C3447 chyby kompilátoru|Zastaralé.|

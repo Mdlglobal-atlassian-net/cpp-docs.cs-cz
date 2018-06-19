@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346373"
 ---
 # <a name="handling-tool-tip-notifications"></a>Zpracování oznámení popisů tlačítek
 Pokud zadáte `TBSTYLE_TOOLTIPS` styl panelu nástrojů vytváří a spravuje prvkem popis tlačítka. Popis tlačítka je malé místní okno, které obsahuje na řádku textu s popisem tlačítka panelu nástrojů. Popis tlačítka je skrytý, zobrazování, pouze když uživatel uloží kurzor na tlačítka panelu nástrojů a ponechá ji existuje pro přibližně polovinu druhý. Popis tlačítka se zobrazí téměř kurzor.  

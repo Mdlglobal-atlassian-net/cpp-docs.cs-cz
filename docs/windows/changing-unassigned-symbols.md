@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855380"
 ---
 # <a name="changing-unassigned-symbols"></a>Změna nepřiřazených symbolů
 V [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete upravit nebo odstranit existující symboly, které dosud nebyly přiřazeny do prostředku nebo objekt.  

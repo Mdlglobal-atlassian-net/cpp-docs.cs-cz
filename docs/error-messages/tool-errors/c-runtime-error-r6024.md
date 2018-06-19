@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302708"
 ---
 # <a name="c-runtime-error-r6024"></a>R6024 Chyba za běhu C
 není dostatek místa pro tabulku _onexit – / atexit  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347230"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Obslužné rutiny pro příkazy a oznámení ovládacích prvků
 Neexistují žádné výchozí obslužné rutiny pro příkazy nebo zprávy oznámení ovládacího prvku. Proto jsou svázané pouze podle konvence v pojmenování vaší obslužné rutiny pro tyto kategorie zpráv. Při oznámení příkaz nebo ovládací prvek mapování na obslužnou rutinu, nabízí windows vlastnosti název založený na kód příkaz ID nebo oznámení ovládacího prvku. Můžete přijmout navrhovaný název, změnit nebo jej nahradit.  

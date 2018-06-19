@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850180"
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
 Předběžné zpracování rozšíří makra v všechny řádky, které nejsou preprocesor – direktivy (řádky, které nemají **#** jako první znak prázdných znaků) a v části některé direktivy, které nejsou v rámci přeskočeny Podmíněná kompilace. Direktivy „podmíněné kompilace“ umožňují potlačit kompilace částí zdrojového souboru testováním konstantního výrazu nebo identifikátoru k určení, které textové bloky jsou předány kompilátoru a které textové bloky jsou odstraněny ze zdrojového souboru během předběžného zpracování.  

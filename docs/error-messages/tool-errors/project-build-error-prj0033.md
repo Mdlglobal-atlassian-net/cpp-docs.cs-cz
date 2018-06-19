@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317057"
 ---
 # <a name="project-build-error-prj0033"></a>Chyba sestavení projektu PRJ0033
 Vlastnost 'Další závislosti, pro vlastní sestavovací krok pro 'file' obsažené 'Makro souboru, který vyhodnocuje se na 'macro_expansion'.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344279"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipulace s nabídkami během práce programu
 Použití třídy `CMenu` manipulace s nabídkami a položky nabídky za chodu. `CMenu` zapouzdří Windows `HMENU` zpracování a poskytuje členské funkce pro práci s nabídkami.  

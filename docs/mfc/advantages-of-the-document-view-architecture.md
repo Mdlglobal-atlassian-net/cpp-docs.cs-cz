@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340845"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Výhody architektury dokument/zobrazení
 Klíče výhodou používání architektuře dokument/zobrazení MFC je architektura zvlášť a podporuje více zobrazení do jednoho dokumentu. (Pokud nepotřebujete více zobrazení a malé nároky na dokument/zobrazení je příliš ve vaší aplikaci, se můžete vyhnout architekturu. [Alternativy k architektuře dokument/zobrazení](../mfc/alternatives-to-the-document-view-architecture.md).)  

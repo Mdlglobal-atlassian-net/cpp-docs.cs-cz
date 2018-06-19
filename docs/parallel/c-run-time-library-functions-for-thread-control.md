@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685759"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkce běhové knihovny jazyka C pro řízení vláken
 Všechny programy Win32 mít alespoň jedno vlákno. Jakékoli vlákno můžete vytvořit další vlákna. Vlákno můžete rychle dokončit svou práci a pak ukončete, nebo může zůstat aktivní po dobu trvání programu.  

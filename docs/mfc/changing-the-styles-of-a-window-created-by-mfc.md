@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345726"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Změna stylů okna vytvořeného rozhraním MFC
 V jeho verzi `WinMain` funkce MFC registruje několik tříd standardní okno za vás. Vzhledem k tomu, že nemáte normálně upravit na MFC `WinMain`, že funkce vám dává žádnou možnost, chcete-li změnit výchozí styly oken MFC. Tento článek vysvětluje, jak můžete změnit styly této preregistered okno třídy v existující aplikaci.  

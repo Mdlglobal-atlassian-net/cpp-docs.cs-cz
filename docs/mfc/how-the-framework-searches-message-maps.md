@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345778"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Jak framework prohledává mapy zpráv
 Framework prohledává mapy zpráv tabulky pro shoduje s příchozí zprávy. Jakmile napíšete položku mapy zpráv pro každou zprávu, že má třída pro zpracování a zápis odpovídající obslužné rutiny, volá rámec váš obslužné rutiny automaticky. Následující témata vysvětlují, vyhledávání map zpráv.  

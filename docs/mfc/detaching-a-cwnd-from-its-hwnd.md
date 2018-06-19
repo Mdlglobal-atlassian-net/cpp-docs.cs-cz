@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342676"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Odpojení třídy CWnd od jejího prvku HWND
 Pokud budete potřebovat k obcházení objekt -`HWND` vztahu MFC poskytuje další `CWnd` – členská funkce [odpojení](../mfc/reference/cwnd-class.md#detach), který objekt okno C++ odpojí od časového období systému Windows. To brání destruktoru zničení období systému Windows, když objekt zničena.  

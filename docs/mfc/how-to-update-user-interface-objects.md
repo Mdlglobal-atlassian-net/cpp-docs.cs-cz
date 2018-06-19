@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346204"
 ---
 # <a name="how-to-update-user-interface-objects"></a>Postupy: aktualizace objektů uživatelského rozhraní
 Položky nabídky a tlačítka panelu nástrojů obvykle mají více než jeden stav. Položky nabídky například je šedý (neaktivní), pokud není k dispozici v rámci přítomen. Položky nabídky může být také zaškrtnuté nebo nezaškrtnuté. Tlačítka panelu nástrojů může být zakázán i pokud není k dispozici nebo je možné zkontrolovat.  

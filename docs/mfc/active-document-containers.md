@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339017"
 ---
 # <a name="active-document-containers"></a>Kontejnery pro aktivní dokument
 Kontejner pro aktivní dokument, jako je například Microsoft Office Binder nebo Internet Exploreru umožňuje pracovat s jinou aplikaci typů v rámci jedné (namísto nutnosti vytvořit a použít více snímků aplikace pro každou několik dokumentů Typ dokumentu).  

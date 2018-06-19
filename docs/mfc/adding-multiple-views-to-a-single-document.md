@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344146"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Přidání více zobrazení do jednoho dokumentu
 V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Microsoft Foundation Class (MFC) každý typ dokumentu je přidružený k typu jednoho zobrazení. V některých případech je třeba mít možnost přepnout aktuální zobrazení objektu na dokument s nové zobrazení.  

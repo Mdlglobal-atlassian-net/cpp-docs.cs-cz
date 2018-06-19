@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343538"
 ---
 # <a name="document-template-classes"></a>Třídy šablony dokumentu
 Objekty šablony dokumentu koordinaci vytvoření dokumentu, zobrazení a rámečku okno objekty, když nový dokument nebo není vytvořená zobrazení.  

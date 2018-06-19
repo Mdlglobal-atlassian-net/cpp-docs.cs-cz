@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344360"
 ---
 # <a name="general-class-design-philosophy"></a>Obecná filosofie návrhu tříd
 Microsoft Windows byla navržená tak dlouho, než se aktivovala oblíbených jazyka C++. Vzhledem k tisícům aplikací používá rozhraní (API) Windows jazyka C, že rozhraní se zachová v dohledné budoucnosti. Každé rozhraní C++ Windows musí být proto postavená na procedurální rozhraní API jazyka C. To zaručuje, že aplikace C++ nebudou existovat společně s aplikacemi C.  

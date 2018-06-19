@@ -115,6 +115,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284115"
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 chyby kompilátoru prostřednictvím C3399
 
@@ -161,7 +162,7 @@ ms.lasthandoff: 05/04/2018
 |C3332 chyby kompilátoru|'*vlastnost*': gramatika nekonzistentní, vlastnost '*vlastnost*' je nutné i má výchozí|
 |[Chyba kompilátoru C3333](compiler-error-c3333.md)|'*knihovny*': nelze #import poškozený typ knihovny|
 |[Chyba kompilátoru C3334](compiler-error-c3334.md)|Nelze zadat #import poškozený knihovny|
-|C3335 chyby kompilátoru|'*identifikátor*': může existovat maximálně jedno výchozí rozhraní pro coclass*– třída*.|
+|C3335 chyby kompilátoru|'*identifikátor*': může existovat maximálně jedno výchozí rozhraní pro coclass *– třída*.|
 |C3336 chyby kompilátoru|Tuto operaci musí provést v oboru – třída|
 |C3337 chyby kompilátoru|'*identifikátor*': defaultvtable – musí být zdroje událostí pro coclass*třída*.|
 |C3338 chyby kompilátoru|'*identifikátor*': může existovat maximálně jedno výchozí rozhraní, která je také zdroje událostí pro coclass*třída*.|

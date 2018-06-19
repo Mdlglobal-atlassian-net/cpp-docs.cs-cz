@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695415"
 ---
 # <a name="a-examples"></a>A. Příklady
 Následují příklady konstrukce definované v tomto dokumentu. Upozorňujeme, že je příkaz následující direktivu složené pouze v případě potřeby a bez složené příkaz odsazeno s ohledem na direktivu předcházející ho.

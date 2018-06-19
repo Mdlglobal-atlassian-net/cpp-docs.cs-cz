@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341972"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Příklady ovládacích prvků pro výběr data a času
 [CMNCTRL1](../visual-cpp-samples.md) příklad ukazuje různé atributy `CDateTimeCtrl` třídy. Samostatné stránce obsahuje ovládací prvek pro výběr data a času, který uživatel můžete upravit změnou různé atributy a testování základní funkce řízení.  

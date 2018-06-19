@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346910"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Zpracování zpráv s oznámením v ovládacím prvku měsíční kalendář
 Jak uživatelé pracují s ovládacím prvku měsíční kalendář (Výběr data a/nebo zobrazení na jiný měsíc), ovládacího prvku (`CMonthCalCtrl`) odešle zprávy s oznámením do nadřazeného okna, obvykle objekt zobrazení nebo dialogové okno. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Například pokud uživatel vybere na nový měsíc, chcete-li zobrazit, je možné zadat sadu kalendářních dat, které by měl být zdůrazňují.  

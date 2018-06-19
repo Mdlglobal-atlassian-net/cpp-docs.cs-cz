@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857347"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode a MBCS
 Knihovna Microsoft Foundation třídy (MFC), běhové knihovny jazyka C pro Visual C++ a vývojové prostředí Visual C++ jsou povolené pomůže mezinárodní programování. Poskytují:  

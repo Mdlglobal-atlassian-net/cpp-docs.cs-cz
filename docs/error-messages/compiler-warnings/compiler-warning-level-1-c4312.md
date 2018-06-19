@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279672"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>C4312 kompilátoru upozornění (úroveň 1)
 'operation': převod z 'type1' na 'type2' větší velikosti  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341456"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Přidělování a rušení přidělení paměti okna
 Nepoužívejte C++ **odstranit** operátor ke zničení oken s rámečkem nebo zobrazení. Místo toho zavolejte `CWnd` – členská funkce `DestroyWindow`. Okna s rámečkem, proto by měla být přidělená v haldě pomocí operátoru **nové**. Buďte opatrní při přidělování okna s rámečkem na rámec zásobníku nebo globálně. Další windows by měla být přidělená na rámec zásobníku, kdykoli je to možné.  

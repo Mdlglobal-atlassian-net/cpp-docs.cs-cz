@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346097"
 ---
 # <a name="header-control-and-list-control"></a>Ovládací prvky záhlaví a seznam
 Ve většině případů budete používat ovládací prvek záhlaví, který je součástí [CListCtrl](../mfc/reference/clistctrl-class.md) nebo [CListView](../mfc/reference/clistview-class.md) objektu. Existují však případech, kdy je žádoucí, jako je například manipulace s daty, uspořádané do sloupců nebo řádků, objekt ovládacího prvku záhlaví samostatné [CView](../mfc/reference/cview-class.md)-odvozené objektu. V takových případech musíte větší kontrolu nad vzhledem a výchozí chování ovládacího prvku záhlaví embedded.  

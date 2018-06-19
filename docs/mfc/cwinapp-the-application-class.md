@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343002"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp – třída aplikace
 Třída hlavní aplikace v prostředí MFC zapouzdří inicializace, spuštění a ukončení aplikace pro operační systém Windows. Aplikace založená na rozhraní musí mít jeden a pouze jeden objekt třídy odvozené z [CWinApp](../mfc/reference/cwinapp-class.md). Tento objekt je vytvořený, před vytvořením systému windows.  

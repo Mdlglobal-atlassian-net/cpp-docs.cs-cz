@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290462"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>C4951 kompilátoru upozornění (úroveň 1)
 Po profil, který data nebyla shromážděna, data profilu funkce nepoužívá upraven 'function'.  

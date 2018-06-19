@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345752"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Nabídka Soubor v databázových aplikacích MFC
 Pokud jste vytvoření databázové aplikace MFC a nepoužívejte serializace, jak by měla můžete interpretovat otevřené, zavřete, uložit a uložit jako příkazů v nabídce soubor při neexistují žádné pokyny styl pro tuto otázku, zde je několik návrhů:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342426"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Vytváření modálních dialogových oken
 Modální dialogové okno vytvořit, volání buď dvě veřejné konstruktory deklarované v [CDialog](../mfc/reference/cdialog-class.md). Pak zavolejte objektu dialogového okna [DoModal](../mfc/reference/cdialog-class.md#domodal) – členská funkce lze zobrazit dialogové okno a spravovat interakci s ním, dokud uživatel vybere OK nebo zrušit. Tato správu `DoModal` je díky modální dialogové okno. Pro modálních dialogových oken `DoModal` načte prostředku dialogového okna.  

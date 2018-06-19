@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344253"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací
 Win32 – internetová rozšíření nebo WinInet, poskytují přístup k běžné Internetové protokoly, včetně gopher, FTP a HTTP. Pomocí WinInet, můžete napsat internetové klientské aplikace na vyšší úrovni programování, aniž byste museli řešit rozhraní WinSock, protokolu TCP/IP nebo podrobnosti o konkrétní internetových protokolech. WinInet poskytuje konzistentní sadu funkcí pro všechny tři protokoly s známé rozhraní Win32 API. Tato konzistence minimalizuje změn kódu, které budete muset udělat, pokud se změní základního protokolu (například z FTP HTTP).  

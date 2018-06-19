@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291723"
 ---
 # <a name="compiler-warning-level-2-c4007"></a>C4007 kompilátoru upozornění (úroveň 2)
 'function': musí být 'atributu.  

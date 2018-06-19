@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344945"
 ---
 # <a name="file-and-database-classes"></a>Souborové a databázové třídy
 Tyto třídy můžete ukládat informace do databáze nebo soubor na disku. Existují tři sady databázové třídy – OLE DB, rozhraní ODBC a DAO – které poskytují podobné funkce. Skupině OLE DB služby je implementovaná pomocí technologie OLE DB a funguje s šablonami příjemců OLE DB, skupině DAO je implementovaná pomocí datový objekt přístup a skupině ODBC je implementovaná pomocí otevřít připojení k databázi. Existují také sadu tříd pro manipulaci s standardní soubory, aktivní datové proudy a datových proudů HTML.  

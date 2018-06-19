@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343308"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Neomezené ovládací prvky pro úpravy s formátováním
 Aplikace můžete změnit velikost ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) podle potřeby tak, aby se vždy stejnou velikost jako jeho obsah. Ovládacího prvku RichEdit podporuje tato takzvané "neomezené" funkce odesláním jeho nadřazeného okna [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) oznámení pokaždé, když se změní velikost jeho obsahu.  

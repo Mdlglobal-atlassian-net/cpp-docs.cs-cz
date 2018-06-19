@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341691"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Vytvoření objektu CToolBarCtrl
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objekty obsahují několik interních datových strukturách – seznam bitmap tlačítko bitové kopie, seznam řetězců, popisku tlačítka a seznam `TBBUTTON` struktury – které přidružit bitovou kopii nebo řetězec s pozice, styl a stavu, a ID příkazu tlačítka. Jednotlivých prvků tyto datové struktury odkazuje na index počítaný od nuly. Abyste mohli používat `CToolBarCtrl` objektu, musíte nastavit tyto datové struktury. Seznam datové struktury najdete v tématu [ovládací prvky panelu nástrojů](controls-mfc.md) ve Windows SDK. Seznam řetězců, můžete použít pouze pro tlačítko popisky; řetězce nelze načíst z panelu nástrojů.  

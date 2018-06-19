@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688281"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections – konstrukce
 **Části** – direktiva identifikuje noniterative konstrukci sdílení práce, která určuje sadu konstrukce, které se rozdělí mezi vláken v týmu. Každá část je jednou spustit vlákno v týmu. Syntaxe **části** – Direktiva vypadá takto:  

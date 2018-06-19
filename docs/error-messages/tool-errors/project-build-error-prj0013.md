@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318773"
 ---
 # <a name="project-build-error-prj0013"></a>Chyba sestavení projektu PRJ0013
 Systémový prostředek může být kriticky nízké. Nelze vytvořit kanál nutná ke spuštění sestavení.  

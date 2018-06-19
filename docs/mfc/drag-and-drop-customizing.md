@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344240"
 ---
 # <a name="drag-and-drop-customizing"></a>Přetažení: Přizpůsobení
 Výchozí implementace funkce přetažení myší je dostatečné pro většinu aplikací. Některé aplikace však může vyžadovat, aby toto standardní chování změnit. Tento článek vysvětluje kroky potřebné k změnit toto výchozí nastavení. Kromě toho můžete použít tento postup k vytvoření aplikace, které nepodporují složené dokumenty jako rozevírací zdroje.  

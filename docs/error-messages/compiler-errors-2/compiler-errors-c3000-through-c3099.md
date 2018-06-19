@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284716"
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>C3000 chyby kompilátoru prostřednictvím C3099
 
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/04/2018
 |[Chyba kompilátoru C3039](compiler-error-c3039.md)|'*identifikátor*': index proměnné v OpenMP pro příkaz nemůže být redukční proměnnou|
 |[Chyba kompilátoru C3040](compiler-error-c3040.md)|'*identifikátor*': typ proměnné v klauzuli 'snížení' není kompatibilní s snížení operátor '*operátor*.|
 |[Chyba kompilátoru C3041](compiler-error-c3041.md)|'*identifikátor*': proměnné v klauzuli 'copyprivate' musí být privátní v uzavření do kontextu|
-|[Chyba kompilátoru C3042](compiler-error-c3042.md)|klauzule 'copyprivate' a 'nowait' nelze v OpenMP objeví spolu se*– direktiva*' – direktiva|
+|[Chyba kompilátoru C3042](compiler-error-c3042.md)|klauzule 'copyprivate' a 'nowait' nelze v OpenMP objeví spolu se *– direktiva*' – direktiva|
 |[Chyba kompilátoru C3043](compiler-error-c3043.md)|OpenMP – direktiva 'kritické' nelze vnořit v direktivě, kritické"se stejným názvem|
 |[Chyba kompilátoru C3044](compiler-error-c3044.md)|'sekce': povoleny pouze přímo vnořené v části "části" OpenMP – direktiva|
 |[Chyba kompilátoru C3045](compiler-error-c3045.md)|Očekávaný složený příkaz následující direktiva OpenMP oddíly. Chybí ' {'|

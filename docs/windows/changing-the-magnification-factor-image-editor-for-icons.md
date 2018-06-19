@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856996"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Změna faktoru zvětšení (editor obrázků pro ikony)
 Editor obrázků ve výchozím nastavení, zobrazí zobrazení v levém podokně na skutečná velikost a v pravém podokně v 6krát skutečná velikost zobrazení. Faktoru zvětšení (vidět ve stavovém řádku v dolní části pracovního prostoru) je poměr mezi skutečná velikost bitové kopie a velikost. Výchozí faktor je 6 a rozsah je od 1 do 10.  

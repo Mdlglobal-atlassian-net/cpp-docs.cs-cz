@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339226"
 ---
 # <a name="create-a-new-linux-project"></a>Vytvoření nového projektu Linux
 Pokud kódování pro Linux, máte možnost automatického vytvoření projektu sady Visual Studio nebo CMake projektu. Toto téma popisuje postup vytvoření projektu sady Visual Studio. Informace o CMake projekty najdete v tématu [konfigurace projektu CMake Linux ](cmake-linux-project.md).

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348088"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Šablony dokumentů a proces tvorby v modelu dokument/zobrazení
 Ke správě komplexní proces vytváření dokumentů s jejich přidružené zobrazení a oken s rámečkem, rozhraní používá dvě třídy šablony dokumentu: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) pro aplikace SDI a [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) pro aplikace MDI. A `CSingleDocTemplate` můžete vytvořit a uložit jeden dokument jednoho typu najednou. A `CMultiDocTemplate` udržuje seznam mnoho otevřené dokumenty jednoho typu.  

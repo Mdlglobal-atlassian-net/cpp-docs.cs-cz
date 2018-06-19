@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848775"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 Tato přenosem Případová studie slouží k získáte představu o jaké typické přenosem projekt je stejně jako typy problémů, může dojít k a některé obecné tipy a triky pro adresování přenosem problémy. Smyslem není jako spolehlivý Průvodce přenosem, protože možností portování projektu velmi mnohem závisí na specifika kódu.  

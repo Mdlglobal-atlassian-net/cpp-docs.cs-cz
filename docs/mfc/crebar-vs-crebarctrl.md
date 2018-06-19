@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344971"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
 Poskytuje dvě třídy Vytvoření tyčová ocel MFC: [CReBar](../mfc/reference/crebar-class.md) a [crebarctrl –](../mfc/reference/crebarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). **CReBar** poskytuje všechny funkce běžné prvku matrice a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury za vás.  

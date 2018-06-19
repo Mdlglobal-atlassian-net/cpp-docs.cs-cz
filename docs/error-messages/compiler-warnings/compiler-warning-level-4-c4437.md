@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298324"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>C4437 kompilátoru upozornění (úroveň 4)
 dynamic_cast z virtuální základní "třída1" na "třída2" může selhat v některých kontextech kompilace s /vd2 nebo definovat "třída2" s #pragma vtordisp(2) v platnosti  

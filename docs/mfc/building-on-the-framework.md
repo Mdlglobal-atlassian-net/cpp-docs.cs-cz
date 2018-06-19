@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341551"
 ---
 # <a name="building-on-the-framework"></a>Sestavení na základě rozhraní .NET Framework
 Vaše role při konfiguraci aplikace pomocí rozhraní MFC framework je zadat konkrétní aplikace zdrojový kód a připojení komponenty tak, že definují, jaké zprávy a příkazy, na které reagovat. Pomocí jazyka C++ a standardní C++ techniky vlastní specifické pro aplikaci odvozovat z těch, které knihovna tříd a k přepsání a posílení chování základní třídy.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346058"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Výjimky: Použití výjimek v makrech MFC a jazyce C++
 Tento článek popisuje důležité informace k zápisu kódu, který používá makra zpracování výjimek MFC i klíčová slova jazyka C++ zpracování výjimek.  

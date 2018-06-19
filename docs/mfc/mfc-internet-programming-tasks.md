@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347243"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Úlohy internetového programování MFC
 Tato část obsahuje podrobný postup pro přidání podpory Internetu pro vaše aplikace. Témata zahrnují postup používání třídy MFC Internetu povolte existující aplikace a jak přidat podporu pro aktivní dokument do vaší stávající komponenty modelu COM. Opravdu chcete vytvořit dokument s mohou uložených uvozovky, je Pittsburgh fotbalové skóre, a nejnovější teploty v Antarktida Microsoft poskytuje řadu technologií, můžete to udělat přes Internet.  

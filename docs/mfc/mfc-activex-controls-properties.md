@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347104"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC – ovládací prvky ActiveX: Vlastnosti
 Ovládací prvek ActiveX aktivuje události ke komunikaci s jeho kontejneru ovládacího prvku. Kontejner, používá ke komunikaci s ovládacím prvkem, metod a vlastností. Metody a vlastnosti jsou podobné se používají a účel, v uvedeném pořadí, členské funkce a proměnné členů třídy C++. Datové členy ovládacího prvku ActiveX, které jsou umístěny do kontejneru, jsou vlastnosti. Vlastnosti poskytují rozhraní pro aplikace, které obsahují ovládací prvky ActiveX, například klienti automatizace a ActiveX – kontejnery ovládacích prvků.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849766"
 ---
 # <a name="checkstack"></a>check_stack
 Dá pokyn kompilátoru, chcete-li vypnout sondy zásobníku, pokud **vypnout** (nebo **-**) není zadaný, nebo zapnout sondy zásobníku, pokud **na** (nebo **+**) je zadán.  

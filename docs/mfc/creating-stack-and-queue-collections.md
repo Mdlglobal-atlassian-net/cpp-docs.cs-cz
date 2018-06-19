@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345710"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Vytváření kolekcí zásobníků a front
 Tento článek vysvětluje, jak vytvořit další datové struktury, jako například [zásobníky](#_core_stacks) a [fronty](#_core_queues), z rozhraní MFC seznam tříd. Příklady použití třídy odvozené od třídy `CList`, ale můžete použít `CList` přímo Pokud potřebujete přidat další funkce.  

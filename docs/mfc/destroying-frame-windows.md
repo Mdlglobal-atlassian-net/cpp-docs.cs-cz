@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343473"
 ---
 # <a name="destroying-frame-windows"></a>Zničení oken s rámečkem
 Rozhraní MFC framework spravovat odstraňování oken, jakož i vytváření pro tyto windows přidružené framework dokumentů a zobrazení. Pokud vytvoříte další windows, jste zodpovědní za jejich likvidace.  
