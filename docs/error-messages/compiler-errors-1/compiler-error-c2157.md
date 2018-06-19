@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168539"
 ---
 # <a name="compiler-error-c2157"></a>C2157 chyby kompilátoru
 'function': musí být deklarován před použitím v seznamu – Direktiva pragma  

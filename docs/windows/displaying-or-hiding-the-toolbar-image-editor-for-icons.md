@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872985"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Zobrazení nebo skrytí panelu nástrojů (editor obrázků pro ikony)
 Vzhledem k tomu, že řadu nástrojů pro kreslení jsou k dispozici na [klávesnice](../windows/accelerator-keys-image-editor-for-icons.md), někdy je užitečné ke skrytí panelu nástrojů editoru obrázků.  

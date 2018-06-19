@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880147"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Postupy: Zahrnutí prostředků v čase kompilace
 Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všechny prostředky v souboru skriptu (.rc) jeden prostředek. Však přidáním prostředků v dalších souborů do aktuálního projektu v době kompilace tak, že je v uvedete **kompilaci direktivy** pole [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md).  

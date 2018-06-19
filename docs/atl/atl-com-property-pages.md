@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357529"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM – stránky vlastností
 COM – stránky vlastností nabízí uživatelské rozhraní pro nastavení vlastností (nebo volání metody) jeden nebo více objektů COM. Stránky vlastností jsou používány v ovládacích prvcích ActiveX pro zajištění bohaté uživatelské rozhraní, které umožňují vlastností ovládacího prvku na nastavit v době návrhu.  

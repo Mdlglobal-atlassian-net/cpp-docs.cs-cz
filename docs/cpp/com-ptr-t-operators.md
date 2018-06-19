@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408468"
 ---
 # <a name="comptrt-operators"></a>Operátory jazyka _com_ptr_t
 Informace o `_com_ptr_t` operátory, najdete v části [_com_ptr_t – třída](../cpp/com-ptr-t-class.md).  

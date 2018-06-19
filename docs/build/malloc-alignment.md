@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368662"
 ---
 # <a name="malloc-alignment"></a>malloc – zarovnání
 [malloc –](../c-runtime-library/reference/malloc.md) záruku, že se k vrácení paměti, která vhodným způsobem je zarovnán pro ukládání libovolný objekt, který má základní zarovnání a který může přizpůsobit množství paměti, který je přidělen. A *základní zarovnání* je zarovnání, která je menší než nebo rovna největší zarovnání, která je podporována implementací bez specifikace zarovnání. (V jazyce Visual C++, to je vyžadované pro zarovnání `double`, nebo 8 bajtů. V kódu, která je cílena 64bitové platformy je 16 bajtů.) Například by být zarovnána přidělení čtyř bajtů na hranici, která podporuje všechny čtyři bajtů nebo menší objekt.  

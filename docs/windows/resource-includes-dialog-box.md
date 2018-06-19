@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879669"
 ---
 # <a name="resource-includes-dialog-box"></a>Dialogové okno Prostředek zahrnuje
 Můžete použít **prostředek zahrnuje** dialogové okno Upravit v prostředí normální funkční uspořádání ukládání všechny prostředky v souboru projektu .rc a všechny [symboly](../windows/symbols-resource-identifiers.md) v Resource.h.  

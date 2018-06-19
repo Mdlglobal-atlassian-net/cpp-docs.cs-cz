@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369003"
 ---
 # <a name="building-a-bsc-file"></a>Sestavení souboru BSC
 BscMake – můžete vytvořit nový soubor procházet informace ze souborů nově vytvořený .sbr. Také ho můžete zachovat existující soubor .bsc pomocí .sbr souborů pro soubory objektů, které se změnily od poslední sestavení.  

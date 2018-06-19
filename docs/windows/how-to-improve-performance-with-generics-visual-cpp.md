@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877563"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Postupy: Zlepšení výkonu pomocí obecných typů (Visual C++)
 S obecnými typy můžete vytvořit opakovaně použitelný kód na základě typu parametru. Skutečný typ parametr typu je odložení, dokud není zavolána kódem na straně klienta. Další informace o obecných typů najdete v tématu [obecné typy](../windows/generics-cpp-component-extensions.md).  

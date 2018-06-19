@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359992"
 ---
 # <a name="what-is-atlaxwin100"></a>Co je AtlAxWin100?
 `AtlAxWin100` je název třídy oken, který pomáhá zajistit na ATL – hostování ovládacího prvku funkce. Při vytváření instance této třídy procedury okna automaticky používat rozhraní API hostování ovládacího prvku a vytvořit objekt hostitele přidružený okno zatížení s ovládacím prvkem, který určíte v záhlaví okna.  

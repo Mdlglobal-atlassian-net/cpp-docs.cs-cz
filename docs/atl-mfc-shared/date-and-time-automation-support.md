@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357591"
 ---
 # <a name="date-and-time-automation-support"></a>Datum a čas: Podpora automatizace
 Tento článek popisuje, jak využívat výhod služeb knihovny třídy související se správou datum a čas. Popisuje postupy patří:  

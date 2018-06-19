@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873560"
 ---
 # <a name="finding-binary-data"></a>Hledání binárních dat
 Můžete hledat řetězce ASCII nebo hexadecimální bajty. Například pokud chcete najít "text Hello", můžete hledat buď text "Hello" nebo pro "48 65 6C 6 C 6 f" (hexadecimální ekvivalentní).  

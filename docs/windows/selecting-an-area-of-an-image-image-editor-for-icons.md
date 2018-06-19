@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890102"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Výběr oblasti obrázku (editor obrázků pro ikony)
 Nástroje pro výběr můžete definovat oblast bitovou kopii, kterou chcete vyjmout, kopírovat, vymazat, změnit velikost, Invertovat nebo přesunout. Pomocí **obdélníku výběru** nástroj můžete definovat a vyberte obdélníkovou oblast bitové kopie. S **nestandardní výběr** nástroj může kreslení od ruky outline oblasti, kterou chcete vybrat pro vyjmutí, kopírování, nebo jiné operace.  

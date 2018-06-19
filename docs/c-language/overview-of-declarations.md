@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392624"
 ---
 # <a name="overview-of-declarations"></a>Přehled deklarací
 "Prohlášení" Určuje interpretace a atributy sadu identifikátory. Deklaraci, která taky Určuje, že úložiště, které budou rezervovány pro objekt nebo funkce s názvem identifikátorem se nazývá "definition". C deklarace proměnné, funkce a typy mají tuto syntaxi:  

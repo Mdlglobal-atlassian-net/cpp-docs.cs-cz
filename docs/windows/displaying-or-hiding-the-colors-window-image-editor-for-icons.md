@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872039"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Zobrazení nebo skrytí okna Barvy (editor obrázků pro ikony)
 ### <a name="to-display-colors-window"></a>Chcete-li zobrazit barvy – okno  

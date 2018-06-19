@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359546"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Příklad nástroje vlastní řetězec Manager
 Příkladem manažera vlastní řetězec, který používá třída implementuje knihovny serveru ATL [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), volané **CFixedStringMgr**. `CFixedStringT` je odvozený od [CStringT](../atl-mfc-shared/reference/cstringt-class.md) a implementuje řetězec, který přiděluje jeho textová data v rámci `CFixedStringT` samotný objekt tak dlouho, dokud řetězce je menší než délka určeného **t_nChars** parametr šablony `CFixedStringT`. S tímto přístupem řetězec nemusí halda vůbec, není-li délka řetězce zvětšování překračuje velikost vyrovnávací paměti pevné. Protože `CFixedStringT` nemá vždy používání haldy přidělit jeho data řetězec nelze použít **CAtlStringMgr** jako jeho řetězec správce. Používá vlastní řetězec manager (**CFixedStringMgr**), implementující [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) rozhraní. Toto rozhraní je popsána v [implementace nástroje vlastní řetězec Manager (rozšířené metoda)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372240"
 ---
 # <a name="modules-button"></a>Moduly – tlačítko
 Klikněte na tlačítko **moduly** tlačítko zprovoznit **další moduly pro vyhledávání chyb** dialogové okno. Zadejte název požadované EXE nebo DLL do textového pole a klikněte na **přidat** zahrnout moduly hledání chybová zpráva. Odebere modul ze seznamu zvýraznění ho a klikněte na **odebrat** tlačítko.  

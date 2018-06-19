@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871494"
 ---
 # <a name="creating-pop-up-menus"></a>Vytváření místních nabídek
 [Místní nabídky](../mfc/menus-mfc.md) zobrazení často používané příkazy. Může se jednat kontextově závislá na umístění ukazatele. Pomocí místní nabídky v aplikaci vyžaduje vytváření nabídky sám a následným připojením ke kódu aplikace.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358111"
 ---
 # <a name="active-template-library-atl-concepts"></a>Koncepty knihovny ATL (Active Template Library)
 Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které vám umožní vytvořit malé, rychlé objekty modelu COM (Component Object). Má speciální podporu klíče COM funkcí, včetně uložených implementace, duální rozhraní, standardní rozhraní pro výčty COM, spojovací body, úplné vypnutí rozhraní a ovládací prvky ActiveX.  

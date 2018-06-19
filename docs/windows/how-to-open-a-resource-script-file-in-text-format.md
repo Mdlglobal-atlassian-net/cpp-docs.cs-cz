@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880047"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Postupy: Otevření souboru skriptu prostředků v textovém formátu
 Může nastat situace, kdy budete chtít zobrazit obsah souboru skriptu (.rc) vašeho projektu prostředků bez otevření prostředku, například dialogové okno, v editoru jeho konkrétní prostředků. Můžete například hledat řetězec napříč všechna dialogová okna v souboru prostředků bez nutnosti otevírání každé z nich samostatně.  

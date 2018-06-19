@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174147"
 ---
 # <a name="user-defined-operators-ccli"></a>Uživatelem definované operátory (C++/CLI)
 Uživatelem definované operátory pro spravované typy jsou povoleny jako statické členy nebo členy instancí nebo v globálním oboru. Jenom statické operátory jsou však přístupné prostřednictvím metadata klientů, které jsou zapsány v jiném jazyce než v jazyce Visual C++.  

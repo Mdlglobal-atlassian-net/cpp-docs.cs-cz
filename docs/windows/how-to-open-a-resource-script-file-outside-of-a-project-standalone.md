@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879162"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)
 Prostředky můžete zobrazit v souboru .rc bez nutnosti otevřít projekt. Soubor se otevře v okně dokumentu a otevírání v [zobrazení prostředků](../windows/resource-view-window.md) okno (stejně jako když je soubor otevřete v projektu).  

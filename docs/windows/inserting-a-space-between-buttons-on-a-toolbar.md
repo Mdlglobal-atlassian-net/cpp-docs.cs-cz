@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879832"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Vložení mezery mezi tlačítka na panelu nástrojů
 Obecně platí k vložení mezery mezi tlačítka, jednoduše přetáhněte je od sebe navzájem na panelu nástrojů. Chcete-li odebrat místa, přetáhněte je směrem k sobě navzájem.  

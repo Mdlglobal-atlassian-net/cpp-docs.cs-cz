@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879279"
 ---
 # <a name="image-editor-for-icons"></a>Editor obrázků pro ikony
 Editor obrázků má rozsáhlou sadu nástrojů pro vytváření a úpravu obrázků a také funkce, které vám pomohou vytvořit rastry pro panel nástrojů. Kromě rastrové obrázky, ikony a kurzory, můžete upravit bitové kopie ve formátu GIF nebo JPEG pomocí příkazů na **Image** nabídky a nástroje na **Editor obrázků** panelu nástrojů.  

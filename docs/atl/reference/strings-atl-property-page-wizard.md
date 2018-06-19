@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361763"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Řetězce, Průvodce stránky vlastností knihovny ATL
 Poskytuje text související s jeho stránku vlastností.  

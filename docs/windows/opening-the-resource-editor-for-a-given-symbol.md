@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875094"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Otevření editoru prostředků pro daný symbol
 Při prohlížení symboly v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete další informace o použití určitého symbolu. **Zobrazení použití** tlačítko poskytuje rychlý způsob, jak získat tyto informace.  

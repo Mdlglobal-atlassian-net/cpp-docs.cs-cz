@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371444"
 ---
 # <a name="look-up-button"></a>Hledat – tlačítko
 Klikněte na tlačítko **Hledat** načíst chybovou zprávu, která odpovídá zadané hodnotě modul nebo systému. Hodnoty lze zadat v podobě hexadecimální nebo desetinné číslo (včetně záporné desetinných míst). Moduly, které jsou uvedené v **další moduly pro vyhledávání chyb** prohledají se také dialogové okno.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873144"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Vytvoření vlastního štětce (editor obrázků pro ikony)
 Vlastní štětce je obdélníková část imagí, která se vyzvedávat a použít jako jeden z předdefinovaných štětce editor obrázků. Všechny operace, které můžete provádět na výběr, můžete u vlastního štětce.  

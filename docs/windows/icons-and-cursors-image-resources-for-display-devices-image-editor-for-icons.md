@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881907"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ikony a kurzory: prostředky obrázků pro zařízení s displejem (editor obrázků pro ikony)
 Ikony a kurzory jsou grafických prostředků, které mohou obsahovat více bitových kopií v různých velikostech a barevná schémata pro různé typy zobrazení zařízení. Kromě toho má kurzoru "aktivního bodu," umístění, které Windows používá ke sledování jeho umístění. Ikony a kurzory vytvářejí a upravit pomocí editoru bitové kopie, jako jsou rastrové obrázky a další bitové kopie.  

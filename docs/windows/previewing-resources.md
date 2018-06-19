@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878668"
 ---
 # <a name="previewing-resources"></a>Náhled prostředků
 Zobrazení náhledu vaše prostředky můžete zobrazit grafické prostředků bez jejich otevření. Zobrazení náhledu je také užitečné pro spustitelné soubory, poté, co jste je kompilovat, protože identifikátory prostředků změnit na čísla. Vzhledem k tomu, že tyto číselné identifikátory často neposkytují dostatek informací, zobrazení náhledu prostředky vám pomůže rychle identifikovat.  

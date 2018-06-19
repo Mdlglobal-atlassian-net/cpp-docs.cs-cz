@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877833"
 ---
 # <a name="purpose-of-attributes"></a>Účel atributů
 Atributy rozšířit C++ v směrech aktuálně není možné, aniž by vás strukturu classic jazyka. Atributy povolit zprostředkovatele (samostatný DLL) k rozšíření funkčnosti jazyk dynamicky. Primární cílem atributů je zjednodušení vytváření komponenty modelu COM, kromě zvýšit úroveň produktivity vývojáře součásti. Atributy lze použít k téměř všechny C++ konstrukce, jako jsou třídy, datové členy nebo členské funkce. Toto je zvýraznění výhod této nové technologie:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172441"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, který má přístup poslední, v jakém byly vytvořeny. Můžete použít adaptér kontejneru `stack` ke správě kontejner základní jako zásobník nabízená dolů.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881114"
 ---
 # <a name="id-property"></a>ID – vlastnost
 Vlastnost ID odkazuje na každé položky tabulky akcelerátorů v programovém kódu. Toto je hodnota příkazu, který program obdrží po stisknutí klávesy akcelerátoru nebo kombinaci kláves. Chcete-li akcelerátor stejná jako položku nabídky, ujistěte se, jejich ID stejné (tak dlouho, dokud ID tabulky akcelerátorů je stejný jako Identifikátor pro prostředek nabídky).  

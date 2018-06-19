@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170827"
 ---
 # <a name="compiler-error-c2201"></a>C2201 chyby kompilátoru
 "identifikátor": Chcete-li být exportovat nebo importovat musí mít externí propojení  

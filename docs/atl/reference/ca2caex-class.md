@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357799"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX – třída
 Tato třída se používá ve makra převodů řetězec `CA2CTEX` a `CT2CAEX`a typedef **CA2CA**.  

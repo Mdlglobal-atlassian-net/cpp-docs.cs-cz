@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878860"
 ---
 # <a name="menu-command-properties"></a>Vlastnosti příkazu nabídky
 Níže uvedené informace jsou uspořádána podle vlastnosti nabídky, které se zobrazují v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) když vyberete příkaz nabídky. Tyto podmínky jsou uvedeny abecedně Přestože okno vlastností můžete také zobrazit tyto vlastnosti podle kategorie.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880241"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Vlastní ovládací prvky v editoru dialogových oken
 Editor dialogových oken umožňuje použít existující "vlastní" nebo "user" ovládacích prvků v poli šablony dialogového okna.  

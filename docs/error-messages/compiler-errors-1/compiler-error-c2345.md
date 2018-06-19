@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196124"
 ---
 # <a name="compiler-error-c2345"></a>C2345 chyby kompilátoru
 align(Value): zarovnání neplatnou hodnotu  

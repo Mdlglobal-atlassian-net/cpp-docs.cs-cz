@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879435"
 ---
 # <a name="menu-editor"></a>Editor nabídek
 Nabídky umožňují uspořádat příkazy způsobem logické a snadno najít. Pomocí editoru nabídky můžete vytvořit a upravit nabídky tak, že práce řádku nabídek, úzce podobná v aplikaci bylo dokončeno.  

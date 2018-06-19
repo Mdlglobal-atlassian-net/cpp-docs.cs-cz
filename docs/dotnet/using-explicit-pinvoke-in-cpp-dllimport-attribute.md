@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169501"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)
 Rozhraní .NET Framework poskytuje funkce explicitního nespravovaného kódu (PInvoke) s `Dllimport` atribut povolit spravovaným aplikacím volat nespravované funkce zabalené uvnitř knihovny DLL. Explicitní PInvoke je vyžadováno v situacích, kdy nespravovaná rozhraní API spojených jako knihovny DLL a zdrojový kód není k dispozici. Volání Win32 funkcí, například vyžaduje PInvoke. Jinak použijte implicitní P {Invoke; viz [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) Další informace.  

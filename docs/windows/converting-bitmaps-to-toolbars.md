@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872624"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Převádění bitmap na panely nástrojů
 Převádění rastrový obrázek můžete vytvořit nový panel nástrojů. Na obrázku z bitmapy převede na pro obrázky tlačítka panelu nástrojů. Obvykle bitmapy obsahuje několik tlačítko bitových kopií na jednom rastrového obrázku, jednu bitovou kopií pro každé tlačítko. Bitové kopie může mít libovolnou velikost; Výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost tlačítko obrázků v [dialogové okno Nový prostředek panelu nástrojů](../windows/new-toolbar-resource-dialog-box.md) Pokud vyberete Editor panelu nástrojů z **Image** nabídky v editoru obrázků.  

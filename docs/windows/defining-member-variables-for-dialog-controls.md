@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873833"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>Definování členských proměnných pro ovládací prvky dialogového okna
 K definování proměnné člena pro libovolný ovládací prvek pole dialogové okno s výjimkou tlačítek, můžete použít následující metodu.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371912"
 ---
 # <a name="cl-invokes-the-linker"></a>CL vyvolává linker
 CL vyvolává linker automaticky po kompilování, pokud se používá možnost /c. CL předá linkeru názvů .obj soubory vytvořené během kompilace a názvy všechny další soubory zadané na příkazovém řádku. Linkeru používá možnosti uvedené v proměnném prostředí odkaz. Možnost/Link můžete použít k určení možnosti linkeru na příkazovém řádku CL. Možnosti, které následují možnosti/Link přepíšou nastavení v proměnné prostředí odkaz. Možnosti v následující tabulce potlačit propojení.  

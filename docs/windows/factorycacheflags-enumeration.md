@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874327"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags – výčet
 Určuje, zda jsou v mezipaměti objektů factory.  

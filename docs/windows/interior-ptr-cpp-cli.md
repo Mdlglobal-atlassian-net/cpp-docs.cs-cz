@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879104"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *Vnitřní ukazatel* deklaruje ukazatel na uvnitř odkazového typu, ale ne samotný objekt. Vnitřní ukazatel můžete bodu odkaz popisovač, typ hodnoty, zabalený typ popisovače, členem spravovaný typ, nebo element spravované pole.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878902"
 ---
 # <a name="generics-and-templates-visual-c"></a>Obecné typy a šablony (Visual C++)
 Obecné typy a šablony jsou obě jazykové funkce, které poskytují podporu pro parametrizované typy. Však se liší a mít jiný používá. Toto téma obsahuje přehled mnoho rozdíly.  

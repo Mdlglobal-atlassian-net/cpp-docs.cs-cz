@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877407"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Výběr barvy z obrázku, která se použije jinde (editor obrázků pro ikony)
 **Vybrat barvu**, nebo barva vyzvednutí, nástroj umožňuje libovolnou barvu na bitovou kopii aktuální barvu popředí nebo pozadí barvy, v závislosti na tom, jestli stiskněte levé nebo pravé tlačítko myši. Chcete-li zrušit **vybrat barvu** nástroj, vyberte jiný nástroj.  

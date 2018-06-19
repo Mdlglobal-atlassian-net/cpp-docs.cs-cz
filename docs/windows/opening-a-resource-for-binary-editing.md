@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878483"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Otevření prostředku pro binární úpravy
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Chcete-li spustit Windows desktop prostředku pro binární úpravy  

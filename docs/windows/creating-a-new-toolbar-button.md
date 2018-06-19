@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873024"
 ---
 # <a name="creating-a-new-toolbar-button"></a>Vytvoření nového tlačítka panelu nástrojů
 ### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368574"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Import a export vložených funkcí
 Importované funkce může být definován jako vložené. Efekt je přibližně stejná jako definice vloženě standardní funkce; volání funkce jsou rozšířit do vloženého kódu, podobně jako makra. To je užitečné především jako způsob podpory C++ třídy v knihovně DLL může přímo tady některé své členské funkce pro efektivitu.  

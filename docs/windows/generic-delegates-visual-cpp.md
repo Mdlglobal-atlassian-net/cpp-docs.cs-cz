@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875595"
 ---
 # <a name="generic-delegates-visual-c"></a>Obecní delegáti (Visual C++)
 Parametry obecného typu můžete použít s delegáti. Další informace o delegáti najdete v tématu [delegáta (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).  

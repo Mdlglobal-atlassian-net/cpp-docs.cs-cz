@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882086"
 ---
 # <a name="disabling-guides"></a>Zákaz vodítek
 Speciální klávesy můžete použít ve spojení s myší zakázat přichycení účinek příručky. Pomocí klávesy ALT zakáže přichycení důsledky tohoto průvodce vybrali. Přesunutí průvodce pomocí klávesy SHIFT zabrání zaseknutá ovládací prvky přesunutím podle vodítka.  

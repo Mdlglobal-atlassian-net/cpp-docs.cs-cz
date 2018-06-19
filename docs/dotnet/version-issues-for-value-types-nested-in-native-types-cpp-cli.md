@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168838"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problémy s verzí u typů hodnot vnořených v nativních typech (C++/CLI)
 Vezměte v úvahu komponentu sestavení podepsané (silný název) používá k vytvoření klientského sestavení. Součást obsahuje typ hodnoty, který se používá v klientovi jako typ člena skupiny nativní union, třídu nebo pole. Pokud budoucí verze komponenty změní velikost nebo rozložení typ hodnoty, klient musí zopakovat.  

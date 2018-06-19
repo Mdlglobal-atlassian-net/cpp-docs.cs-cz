@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878171"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Dialogové okno Načíst barvy palety (editor obrázků pro ikony)
 Tento dialog načíst palety barev speciální pro použití v projektu. Další informace najdete v tématu [ukládání a načítání různých palety barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  

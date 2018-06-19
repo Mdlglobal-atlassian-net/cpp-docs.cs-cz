@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883339"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Omezení obecných parametrů typů (C++/CLI)
 Obecný typ nebo metoda deklarace kvalifikovat parametr typu s omezeními. Omezení je požadavek, který musí splňovat typy používané jako argumenty typu. Například omezení může být, že argument typu musí implementovat určité rozhraní nebo konkrétní třídy dědí.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874730"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Vytvoření ikony nebo jiného obrázku (editor obrázků pro ikony)
 Můžete vytvořit novou bitovou kopii (rastrového obrázku, ikona, kurzor nebo panelu nástrojů) a pak pomocí editoru obrázků přizpůsobit její vzhled. Můžete také vytvořit nové bitmapy vzorované po [šablony](../windows/how-to-use-resource-templates.md).  

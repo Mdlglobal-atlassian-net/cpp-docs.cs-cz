@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357010"
 ---
 # <a name="implementing-a-window"></a>Implementace okno
 Třída [CWindowImpl](../atl/reference/cwindowimpl-class.md) umožňuje implementovat okno a zpracování jeho zprávy. Zpráva blokováním v ATL je založena na mapy zpráv. Tato část vysvětluje:  

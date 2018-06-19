@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881166"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operátor popisovače objektu (^) (rozšíření komponent C++)
 *Zpracování deklarátor* (`^`, vyslovováno "hat"), upraví typ [specifikátor](../cpp/overview-of-declarators.md) znamená, že objekt deklarované měla by být automaticky odstraněna, když systém zjistí, že objekt již nebudou dostupné.  

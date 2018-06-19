@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880254"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Dialogové okno Výběr vlastních barev (editor obrázků pro ikony)
 Toto dialogové okno umožňuje přizpůsobit barvy, který použijete pro bitové kopie. Další informace najdete v tématu [přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  

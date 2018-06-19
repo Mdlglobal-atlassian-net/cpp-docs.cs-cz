@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873586"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Postupy: Připnutí ukazatelů a polí
 Připnutí dílčí objekt definovaný v spravovaného objektu má za následek Připnutí celý objekt.  Například pokud je připnutý libovolný element pole, pak celé pole je také připojena. Neexistují žádné rozšíření pro jazyk pro deklarování definovaného pole. Chcete-li připnout pole, deklarujte Připnutí ukazatel na jeho typ elementu a kód pin, jeden z jejích elementů.  

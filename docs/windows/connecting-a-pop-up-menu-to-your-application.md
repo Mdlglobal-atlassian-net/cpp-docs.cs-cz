@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879526"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Připojení místní nabídky k aplikaci
 ### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Pro připojení místní nabídky do vaší aplikace  

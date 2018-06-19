@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873508"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Vytvoření a nastavení vodítek a okrajů
 Zda jsou přesouvání ovládacích prvků, přidání ovládacích prvků a změna uspořádání aktuální rozložení, může pomoci příručky je Zarovnat ovládací prvky přesně v rámci dialogového okna. Se zobrazují jako modré čáry s koncovými body v dialogu zobrazí v editoru a odpovídající šipky v pravítek (v horní části a na levé straně editoru dialogových oken).  

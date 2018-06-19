@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876755"
 ---
 # <a name="importlib"></a>importlib
 Díky typy, které již byly kompilovány do jiného typu knihovny k dispozici pro knihovny typů vytváří.  

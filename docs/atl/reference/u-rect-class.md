@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360884"
 ---
 # <a name="urect-class"></a>_U_RECT – třída
 Tato třída argument adaptér umožňuje buď `RECT` ukazatele nebo odkazy, které mají být předány funkci, která je implementovaná z hlediska ukazatele.  

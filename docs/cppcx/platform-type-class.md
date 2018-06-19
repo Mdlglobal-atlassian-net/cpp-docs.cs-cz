@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255535"
 ---
 # <a name="platformtype-class"></a>Platform::type – třída
 Obsahuje informace o běhu o typu – konkrétně řetězec název a typ objektu typecode. Získá voláním [Object::gettype –](../cppcx/platform-object-class.md#gettype) libovolného objektu nebo nebo pomocí [typeid](../windows/typeid-cpp-component-extensions.md) operátor na třídě nebo struktuře název.  

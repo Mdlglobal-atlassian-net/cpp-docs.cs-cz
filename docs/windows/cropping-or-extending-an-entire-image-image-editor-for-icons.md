@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871611"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Oříznutí nebo rozšíření celého obrázku (editor obrázků pro ikony)
 Následující postup ukazuje, jak oříznutí nebo rozšíření celého obrázku.  

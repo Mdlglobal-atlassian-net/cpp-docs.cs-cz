@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873573"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Dialogové okno Nastavení mřížky (editor obrázků pro ikony)
 Umožňuje zadat nastavení mřížky pro bitové kopie a zobrazí čáry mřížky přes upravená bitové kopie. Řádky jsou užitečné pro úpravy bitovou kopii, ale nejsou uloženy v rámci bitové kopie sám sebe.  

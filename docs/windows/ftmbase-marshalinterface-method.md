@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874613"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface – metoda
 Zapíše do datového proudu data potřebná pro inicializaci objektu proxy v některé procesu klienta.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877914"
 ---
 # <a name="local-c"></a>local (C++)
 Při použití v hlavičce rozhraní, můžete použít MIDL kompilátoru jako generátor záhlaví. Při použití v jednotlivé funkce, označí místní postupu, pro které jsou generovány žádné zástupných procedur.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255463"
 ---
 # <a name="atlmodule70-structure"></a>Struktura _ATL_MODULE70
 Obsahuje data využívaná každých ATL modulu.  

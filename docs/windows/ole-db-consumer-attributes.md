@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876017"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vloží kód, na základě [šablony příjemce technologie OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní OLE DB spotřebitele, který provádí úlohy, jako je například otevírání tabulky, provádění příkazů a přístup k datům.  
