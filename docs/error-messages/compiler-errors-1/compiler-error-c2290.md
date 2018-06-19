@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169917"
 ---
 # <a name="compiler-error-c2290"></a>C2290 chyby kompilátoru
 Syntaxe asm C++ ignorovány. Použijte __asm.  

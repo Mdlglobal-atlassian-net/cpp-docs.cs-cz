@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292682"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>C4334 kompilátoru upozornění (úroveň 3)
 'operátor': výsledek 32-bit shift implicitně převést na 64 bitů (byla určena shift 64-bit?)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371631"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapování zpráv na funkce
 Okno vlastností umožňuje vytvořit vazbu obslužné rutiny zpráv (členské funkce tříd MFC uživatelského rozhraní) zprávy generované zdrojů vaší aplikace. Používají [mapy zpráv knihovny MFC](../../mfc/messages-and-commands-in-the-framework.md) pro vytvoření vazby.  

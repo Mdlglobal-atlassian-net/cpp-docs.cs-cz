@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380861"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servery: Implementace oken s rámečkem na místě
 Tento článek vysvětluje, co musíte udělat implementovat okna s rámečkem na místě v aplikaci visual úpravy serveru, pokud použijete Průvodce aplikace k vytvoření aplikace serveru. Místo podle pokynů uvedených v tomto článku, můžete použít existující třídy oken s rámečkem na místě z aplikace generované v Průvodci aplikace nebo ukázku součástí Visual C++.  

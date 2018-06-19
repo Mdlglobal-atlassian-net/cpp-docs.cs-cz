@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383159"
 ---
 # <a name="working-with-a-tab-control"></a>Práce s ovládacím prvkem karta
 Nejjednodušší způsob, jak pomocí ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) je jeho přidáním do prostředku šablony dialogové okno s editoru dialogových oken. Můžete taky ovládacího prvku karta samostatně. MFC volání **InitCommonControls** za vás. Klíčovými úlohami jsou následující:  

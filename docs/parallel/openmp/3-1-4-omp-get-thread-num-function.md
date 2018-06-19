@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686068"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num – funkce
 `omp_get_thread_num` Funkce vrátí vlákno počet, v rámci jeho team vláken provádění funkce. Číslo leží vlákno mezi 0 a **omp_get_num_threads()**-1 (včetně). Hlavní vlákno týmu se vlákna 0.  

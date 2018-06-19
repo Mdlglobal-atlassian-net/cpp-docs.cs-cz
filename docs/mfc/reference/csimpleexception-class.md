@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369922"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException – třída
 Tato třída je základní třídu pro kritické prostředků MFC – výjimky.  

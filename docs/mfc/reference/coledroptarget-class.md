@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373130"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget – třída
 Poskytuje mechanismus komunikace mezi okno a knihoven OLE.  

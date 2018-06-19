@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355477"
 ---
 # <a name="strings-atlmfc"></a>Řetězce (ATL a MFC)
 Téměř všechny programy pracovat s řetězcovými daty. Visual C++ poskytuje několik způsobů, jak spravovat data tento řetězec.  

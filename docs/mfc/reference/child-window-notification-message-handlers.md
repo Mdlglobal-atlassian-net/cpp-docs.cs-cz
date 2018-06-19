@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367169"
 ---
 # <a name="child-window-notification-message-handlers"></a>Obslužné rutiny oznamovacích zpráv v podřízených oknech
 Existují pěti kategorií zprávy v podřízených oknech oznámení:  

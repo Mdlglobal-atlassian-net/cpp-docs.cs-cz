@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103561"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Použití existující sady záznamů ADO
 Chcete-li kombinovat šablony příjemce technologie OLE DB a objektů Active Data (ADO), použijte ADO k otevření sady záznamů (odpovídající sadě řádků v šablony příjemce technologie OLE DB). Pokud máte sadu záznamů, proveďte postup pro připojení k objektu sady řádků OLE DB:  

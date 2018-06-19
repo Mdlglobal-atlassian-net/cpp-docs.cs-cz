@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372444"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Vytváření aplikací MFC založených na formulářích
 Formulář je dialogové okno s ovládacími prvky, které může uživatel získávat přístup a které by mohly mít měnit data. Můžete vyvíjet aplikace, ve kterém si uživatel vybere ze několika formulářů. Běžně, formulářové aplikace umožňuje uživateli přístup k formulářům kliknutím **nový** z **souboru** nabídky. Dialogové okno aplikace, které uživateli neposkytují přístup k **nový** možnost **souboru** nabídky, je také považují za aplikace založené na formulářích.  

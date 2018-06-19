@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369899"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicializace a ukončování databázového stroje v rozhraní DAO
 Při použití knihovny MFC rozhraní DAO objekty, musí být nejprve databázový stroj DAO inicializovat a pak ukončen před aplikace nebo knihovna DLL se ukončí. Dvě funkce `AfxDaoInit` a `AfxDaoTerm`, provedení těchto úloh.  

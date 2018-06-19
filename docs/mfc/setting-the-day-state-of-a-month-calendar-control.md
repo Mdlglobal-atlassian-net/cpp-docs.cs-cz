@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380796"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Nastavení stavu dne v ovládacím prvku měsíční kalendář
 Jeden z atributů prvku měsíční kalendář je možnost ukládat informace, označuje jako stavu dne v ovládacím prvku pro každý den v měsíci. Tyto informace slouží k zdůraznil určitá data pro aktuálně zobrazený měsíc.  

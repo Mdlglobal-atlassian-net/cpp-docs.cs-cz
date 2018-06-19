@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382447"
 ---
 # <a name="using-cheaderctrl"></a>Používání atributu CHeaderCtrl
 Použití ovládacího prvku záhlaví, reprezentována – třída [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), zobrazit záhlaví sloupců pro sloupcový seznamu. Například ovládacím prvkem záhlaví by být užitečné pro implementaci ovládací prvky sloupce v tabulce.  

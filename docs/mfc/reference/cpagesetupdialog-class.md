@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374646"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog – třída
 Zapouzdří služeb poskytovaných běžných nastavení stránky OLE dialogové okno s dodatečnou podporou pro nastavení a úprava tisku okraje.  

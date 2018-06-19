@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376985"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 Když je program spuštěn, může dojít, počet nestandardní podmínky a chyby nazývají "výjimky". Ty mohou obsahovat vyčerpání paměti, chyb přidělení prostředků a nepodařilo se najít soubory.  

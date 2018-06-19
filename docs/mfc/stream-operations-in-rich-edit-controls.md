@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379922"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operace s datovými proudy v ovládacích prvcích pro úpravy s formátováním
 Datové proudy můžete použít k přenosu dat do nebo z ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Datový proud je definované [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) strukturu, která určuje vyrovnávací paměť a funkce zpětné volání definované aplikací.  

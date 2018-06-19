@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358479"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 Když píšete aplikaci, můžete vytvořit jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-odvozené objektu. V některých případech můžete chtít získat informace o tomto objektu z mimo `CWinApp`-odvozené objektu. Nebo může potřebovat přístup k ostatním objektům globální "Manager".

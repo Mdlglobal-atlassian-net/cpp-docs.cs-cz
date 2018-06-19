@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383442"
 ---
 # <a name="slider-control-member-functions"></a>Členské funkce ovládacího prvku jezdec
 Aplikace může volat jezdec členské funkce ovládacího prvku k načtení informací o ovládacího prvku jezdec ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) a chcete-li změnit jeho vlastnosti.  

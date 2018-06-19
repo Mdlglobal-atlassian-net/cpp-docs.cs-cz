@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355429"
 ---
 # <a name="atl-window-classes"></a>ATL – třídy oken
 ATL zahrnuje několik tříd, které vám umožní použít a implementovat systému windows. Tyto třídy, stejně jako ostatní třídy ATL poskytují efektivní implementace, která nepředstavuje režijní náklady na kód.  

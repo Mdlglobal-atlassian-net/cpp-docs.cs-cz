@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235777"
 ---
 # <a name="compiler-error-c2665"></a>C2665 chyby kompilátoru
 'function': Parametr číslo2 žádné přetížení Číslo1 můžete převést z typu "typ"  

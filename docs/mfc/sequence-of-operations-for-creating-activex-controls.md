@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380367"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Posloupnost operací při vytváření ovládacích prvků ActiveX
 V následující tabulce jsou vaše role a role rozhraní framework v vytváření ovládacích prvků ActiveX (dříve označované jako ovládací prvky OLE).  

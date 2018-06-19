@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335500"
 ---
 # <a name="active-documents"></a>Aktivní dokumenty
 Aktivní dokumenty rozšířit složeného dokumentu technologie OLE. Tato rozšíření jsou uvedeny v podobě další rozhraní, které spravují zobrazení, tak, aby fungovala v rámci kontejnerů a ještě zachovat kontrolu nad jejich zobrazení a tisk funkce objekty. Tento proces umožní zobrazování dokumentů v cizí snímků (například Microsoft modul vazby sady Office nebo aplikace Microsoft Internet Explorer) i v nativní rámce (třeba portů zobrazení produkt vlastní).  

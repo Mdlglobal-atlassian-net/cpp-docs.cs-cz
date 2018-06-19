@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290667"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>C4396 kompilátoru upozornění (úroveň 2)
 "název": specifikátor vložené nelze použít, když deklaraci friend odkazuje specializace šablony funkcí  

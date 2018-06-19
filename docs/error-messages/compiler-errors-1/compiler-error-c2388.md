@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198661"
 ---
 # <a name="compiler-error-c2388"></a>C2388 chyby kompilátoru
 'symbol': symbol nelze deklarovat s obou __declspec(appdomain) a \__declspec(process)  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374533"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection – třída
 Spravuje připojení k serveru FTP na Internet server a umožňuje přímé manipulaci adresářů a souborů na tomto serveru.  

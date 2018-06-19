@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368306"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Podpora složených dokumentů, Průvodce aplikací MFC
 Na této stránce Průvodce aplikací MFC indikovat, na jakou úroveň aplikace nabízí podporu složeného a aktivní dokument. Aplikace musí podporovat document/view – architektura pro podporu složené dokumenty a šablony dokumentů.  

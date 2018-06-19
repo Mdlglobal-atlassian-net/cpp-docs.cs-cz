@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376275"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Průvodci a dialogová okna knihovny MFC
 Průvodci Microsoft Foundation Class (MFC) generovat často používaný kód pro různé druhy komponent a objektů. Můžete spustit Průvodce otevřením místní nabídku pro projekt v **Průzkumníku řešení** a výběr **přidat**, **třída**.  

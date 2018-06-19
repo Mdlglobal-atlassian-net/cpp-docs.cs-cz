@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370718"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout – třída
 Určuje, jak jsou ovládací prvky v okně přesunout a po změně velikosti jako uživatel změní velikost okna.  

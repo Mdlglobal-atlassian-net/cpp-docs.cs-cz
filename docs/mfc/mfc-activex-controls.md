@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361332"
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
 Ovládací prvek ActiveX je opakovaně použitelné softwaru komponenta založená na modelu COM (Component Object), který podporuje širokou škálu funkcí technologie OLE a můžete přizpůsobit podle potřeb mnoho softwaru. Ovládací prvky ActiveX jsou navrženy pro použití v běžných kontejnerech ovládacího prvku ActiveX a v Internetu na webových stránkách. Můžete vytvořit ovládací prvky ActiveX, buď pomocí knihovny MFC, popsané v tomto poli, nebo pomocí [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  

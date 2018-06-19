@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356551"
 ---
 # <a name="providing-flicker-free-activation"></a>Zajištění aktivace bez blikání
 Pokud vlastní ovládací prvek nevykresluje samotné stejně jako ve stavu neaktivní a aktivní (a nepoužívá aktivace bez oken), můžete eliminovat kreslení operace a doprovodné visual blikání, které obvykle dojít při provádění přechod mezi neaktivní a aktivní stavy. Chcete-li to provést, zahrňte **noFlickerActivate** příznak v sadě příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Příklad:  

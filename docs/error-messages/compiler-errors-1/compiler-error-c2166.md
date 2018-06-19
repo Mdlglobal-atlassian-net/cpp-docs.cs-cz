@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167187"
 ---
 # <a name="compiler-error-c2166"></a>C2166 chyby kompilátoru
 l – hodnota určuje const objektu  

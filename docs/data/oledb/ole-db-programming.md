@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107175"
 ---
 # <a name="ole-db-programming"></a>OLE DB – programování
 Microsoft OLE DB je starší verze technologie; pro nové aplikace je požadovaná data přístup k rozhraní API pro odkazované servery SQL. Všechny ostatní nové aplikace by měly použití rozhraní ODBC. Aktuální zprostředkovatel OLE DB pro SQL Server je SQLNCLI11. KNIHOVNY DLL. Zprostředkovatel je stále přesouvání v SQL serveru 2016. Tato dokumentace je určena pro vývojáře, kteří jsou zachování existující aplikace, které už používají OLE DB.

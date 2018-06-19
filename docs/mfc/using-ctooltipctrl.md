@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385623"
 ---
 # <a name="using-ctooltipctrl"></a>Používání atributu CToolTipCtrl
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) třída zapouzdří funkce ovládacího prvku popisek nástroj malé místní okno, které zobrazuje jeden řádek textu popisující účel nástroj v aplikaci. Popis tlačítka je skrytý na většinu času, zobrazování, pouze když uživatel uloží kurzor na nástroj a ponechá ji existuje pro přibližně polovinu druhý. Popis tlačítka se zobrazí u kurzor a zmizí, když uživatel klikne na tlačítko myši nebo přesune kurzor z nástroje.  

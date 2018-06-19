@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295243"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>C4336 kompilátoru upozornění (úroveň 4)
 Importujte knihovny type_lib1 referencí typ před importem 'type_lib2.  

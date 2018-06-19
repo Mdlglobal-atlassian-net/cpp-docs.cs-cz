@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370770"
 ---
 # <a name="database-macros-and-globals"></a>Databázová makra a globální prvky
 Makra a globální prvky, které jsou níže uvedené platí pro aplikace založené na rozhraní ODBC databáze. Používají nejsou s aplikace založené na rozhraní DAO.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129694"
 ---
 # <a name="lock-class"></a>lock – třída
 Tato třída automatizuje trvá zámku pro synchronizaci přístup k objektu z více vláken.  Když se získá zámek a když způsobem zničena verzích zámek.  

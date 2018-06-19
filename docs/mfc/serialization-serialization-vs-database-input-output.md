@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379574"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serializace: Serializace vs. Databáze vstupu a výstupu
 Tento článek vysvětluje, kdy použít objekty dokumentu a serializace pro souborových vstupně výstupní (I/O) a jinými technikami, vstupně-výstupní operace jsou vhodné, protože aplikace čte a zapisuje data na základě jednotlivé transakce, jako v databázových aplikacích. Pokud nepoužijete serializace, můžete také nebude potřebovat soubor otevřít, uložit a uložit jako příkazy. Obsahuje následující témata:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383958"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 – internetová rozšíření (WinInet)
 Internetových klientských aplikací je program, který přistupuje k informace ze zdroje dat síti (server), pomocí Internetové protokoly, jako je například gopher, FTP nebo HTTP. Internetových klientských aplikací může přístup k serveru, například načíst data, jako jsou počasí mapy, uložených ceny nebo novinách titulky. Klienta přes Internet můžete přístup k serveru přes síť externí (Internet) nebo k interní síti (někdy nazývané intranet).  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368856"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup – třída
 `CMFCRibbonButtonsGroup` Třída umožňuje uspořádat sadu tlačítek pásu karet do skupiny. Všechny tlačítka ve skupině jsou přímo vedle sebe vodorovně a vložen do ohraničení.  

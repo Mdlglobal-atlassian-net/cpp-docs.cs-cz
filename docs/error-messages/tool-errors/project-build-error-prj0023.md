@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321883"
 ---
 # <a name="project-build-error-prj0023"></a>Chyba sestavení projektu PRJ0023
 Nástroj 'nástroj' Neznámá vlastnost obsahuje neplatný název souboru 'file'.  

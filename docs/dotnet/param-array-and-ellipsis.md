@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158518"
 ---
 # <a name="param-array-and-ellipsis"></a>Pole parametrů a tlačítko se třemi tečkami
 Prioritu pole parametrů pro rozlišování volání přetížené funkce změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  

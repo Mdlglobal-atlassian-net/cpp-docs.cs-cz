@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377318"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 Knihovny Microsoft Foundation Class poskytuje mnoho diagnostiky službách, díky kterým ladění programy jednodušší. Tyto diagnostické služby zahrnují makra a globální funkce, které vám umožní sledovat paměti pro vaše programy přidělení, dump obsah objektů za běhu a Tisk zprávy ladění za běhu. Makra a globální funkce pro diagnostické služby jsou seskupené do následujících kategorií:  

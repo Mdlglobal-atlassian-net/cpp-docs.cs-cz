@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372835"
 ---
 # <a name="connection-maps"></a>Mapy připojení
 Ovládací prvky OLE dokážou vystavit rozhraní k ostatním aplikacím. Tato rozhraní pouze povolit přístup z kontejneru do ovládacího prvku. Pokud ovládací prvek OLE požaduje přístup k externí rozhraní jiných objektů OLE, je nutné vytvořit bod připojení. Tento spojovací bod umožňuje odchozí přístup k externí expediční mapy, jako je například mapy událostí nebo funkce oznámení ovládacího prvku.  

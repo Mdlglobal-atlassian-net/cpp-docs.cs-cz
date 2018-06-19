@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371342"
 ---
 # <a name="structures-used-by-mfc"></a>Struktury využívané prostředím MFC
 Následující tabulka uvádí struktury, které se nazývají z různých členské funkce. Další informace o využití jednotlivých struktura viz třídy a členské funkce uvedené v seznamu v části Viz také pro každou strukturu.  

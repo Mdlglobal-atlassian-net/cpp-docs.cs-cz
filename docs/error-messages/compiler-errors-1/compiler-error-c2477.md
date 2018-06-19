@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198024"
 ---
 # <a name="compiler-error-c2477"></a>C2477 chyby kompilátoru
 "člen": člen statických dat nelze inicializovat prostřednictvím odvozené třídy  

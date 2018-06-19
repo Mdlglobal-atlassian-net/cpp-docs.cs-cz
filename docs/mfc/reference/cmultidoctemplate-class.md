@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371579"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate – třída
 Definuje šablonu dokumentu, který implementuje rozhraní více dokumentů (MDI).  

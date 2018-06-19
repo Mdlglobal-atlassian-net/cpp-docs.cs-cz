@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385814"
 ---
 # <a name="using-csliderctrl"></a>Používání atributu CSliderCtrl
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) třída reprezentuje ovládací prvek typu jezdec, kterému se taky říká TrackBar –. "Ovládací prvek typu jezdec" je okno, které obsahuje posuvníku a volitelné osové značky. Pokud se uživatel přesune posuvníku pomocí myši nebo klávesy se šipkami, v ovládacím prvku posuvník odešle zprávy s oznámením označíte změnu.  

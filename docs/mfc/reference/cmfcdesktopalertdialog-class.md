@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368167"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog – třída
 `CMFCDesktopAlertDialog` Třída se používá spolu s [CMFCDesktopAlertWnd třída](../../mfc/reference/cmfcdesktopalertwnd-class.md) zobrazíte dialogové okno Vlastní v automaticky otevíraném okně.  

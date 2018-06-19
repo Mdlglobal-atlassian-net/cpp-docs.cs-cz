@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375921"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd – třída
 `CMultiPaneFrameWnd` Rozšiřuje třídu [CPaneFrameWnd třída](../../mfc/reference/cpaneframewnd-class.md). Může podporovat více podoken. Místo jedné embedded popisovač pro ovládacích pruhů `CMultiPaneFrameWnd` obsahuje [CPaneContainerManager třída](../../mfc/reference/cpanecontainermanager-class.md) objekt, který umožňuje uživatelům ukotvení jeden `CMultiPaneFrameWnd` do druhého a dynamicky vytvořit více plovoucí, – záložkami Windows.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382776"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Použití seznamů obrázků s ovládacími prvky záhlaví
 Položky hlavičky mít možnost zobrazit obrázek v rámci položky záhlaví. Tuto bitovou kopii, uložené v seznamu přidruženou bitovou kopii, je velikosti 16 x 16 pixelů a má stejné vlastnosti jako ikona obrázků použitých v ovládacím prvku zobrazení seznamu. Aby bylo možné úspěšně implementovat toto chování, musíte nejprve vytvořit a Inicializace seznamu obrázků, přidružit seznamu pomocí ovládacího prvku záhlaví a potom upravte atributy položky záhlaví, který se zobrazí bitovou kopii.  

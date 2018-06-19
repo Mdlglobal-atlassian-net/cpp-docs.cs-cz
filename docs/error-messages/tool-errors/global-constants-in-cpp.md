@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297333"
 ---
 # <a name="global-constants-in-c"></a>Globální konstanty v jazyku C++
 Globální konstanty C++ mít statické propojení. Liší se od C. Pokud se pokusíte použít globální konfiguraci konstant v jazyce C++ ve více souborech získáte nerozpoznané externí chyby. Kompilátor optimalizuje globální konstanty out nezbývá vyhrazeno pro proměnnou místo.  

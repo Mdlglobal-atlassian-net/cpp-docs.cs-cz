@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098599"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody generované v průvodci příjemcem
 Průvodce příjemcem knihovny ATL technologie OLE DB a Průvodce aplikací MFC generovat určité funkce, kterých byste měli vědět. Všimněte si, že některé metody jsou implementované jinak v s atributy projekty, takže se několik aspektů; každý případ je popsané níže. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  

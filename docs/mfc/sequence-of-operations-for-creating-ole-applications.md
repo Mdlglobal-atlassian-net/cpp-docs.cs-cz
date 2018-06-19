@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381206"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Posloupnost operací při vytváření aplikací OLE
 Následující tabulka uvádí vaše role a role rozhraní framework při vytváření OLE propojování a vkládání aplikace. Tyto představují možnosti k dispozici pro místo posloupnost kroků provést.  

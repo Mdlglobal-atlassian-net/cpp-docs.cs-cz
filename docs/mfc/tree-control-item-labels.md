@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381508"
 ---
 # <a name="tree-control-item-labels"></a>Popisky položek ovládacího prvku strom
 Text popisku pro položku obvykle zadat, pokud položku přidáte do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` – Členská funkce můžete předat [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktura, která definuje vlastnosti položky, včetně řetězec obsahující text popisku. `InsertItem` má několik přetížení, která může být volána s různé kombinace parametrů.  

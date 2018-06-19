@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198492"
 ---
 # <a name="fatal-error-c1010"></a>Závažná chyba C1010
 Neočekávaný konec souboru při hledání předkompilovaných hlaviček. Nezapomněli jste přidat ' #include se ke zdroji?  

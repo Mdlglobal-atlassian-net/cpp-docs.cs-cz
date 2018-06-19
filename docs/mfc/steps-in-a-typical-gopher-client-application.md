@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381108"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>Postup v typické aplikaci klienta Gopher
 Následující tabulka uvádí kroky, že které může provádět v aplikaci klienta gopher typické.  

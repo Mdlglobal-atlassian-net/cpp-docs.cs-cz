@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369359"
 ---
 # <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo – třída
 Obsahuje ID obrázků panelu nástrojů v různé stavy prostředků. `CMFCToolBarInfo` je pomocná třída, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda.  

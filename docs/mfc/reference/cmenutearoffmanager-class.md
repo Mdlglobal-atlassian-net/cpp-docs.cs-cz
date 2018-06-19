@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367666"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager – třída
 Spravuje úplné vypnutí nabídky. Úplné vypnutí nabídky je nabídky v řádku nabídek. Uživatele můžete odebrat z nabídky úplné vypnutí v nabídce panelu způsobuje v nabídce úplné vypnutí float.  

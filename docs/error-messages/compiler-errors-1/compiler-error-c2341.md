@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197374"
 ---
 # <a name="compiler-error-c2341"></a>C2341 chyby kompilátoru
 'název sekce': segment musí být definován pomocí #pragma data_seg, code_seg nebo předchozí část použít  

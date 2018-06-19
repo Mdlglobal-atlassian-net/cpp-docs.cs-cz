@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139758"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Postupy: Převod typu System::String na wchar_t* nebo char*
 Můžete použít `PtrToStringChars` v Vcclr.h převést <xref:System.String> na nativní `wchar_t *` nebo `char *`.  Protože řetězce CLR jsou interně Unicode vždy vrátí široké ukazatel řetězce Unicode. Pak můžete převést z celé jak je znázorněno v následujícím příkladu.  

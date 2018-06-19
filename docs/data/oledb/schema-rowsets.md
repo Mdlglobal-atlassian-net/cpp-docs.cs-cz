@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104279"
 ---
 # <a name="schema-rowsets"></a>Sady řádků schématu
 Schéma (nebo metadata) je žádné informace o struktuře do databáze nebo organizace, například informace o poskytovatele, řádků, tabulky, sloupce nebo jiné informace mimo skutečný obsah databáze. OLE DB umožňuje získat takové informace bez otevření sady řádků pomocí sad řádků schématu.  

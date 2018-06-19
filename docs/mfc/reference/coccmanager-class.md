@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376109"
 ---
 # <a name="coccmanager-class"></a>COccManager – třída
 Spravuje různých lokalit vlastního ovládacího prvku; implementované `COleControlContainer` a `COleControlSite` objekty.  

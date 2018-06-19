@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371647"
 ---
 # <a name="standard-command-and-window-ids"></a>Standardní identifikátory příkazů a oken
 Knihovny Microsoft Foundation Class definuje počet standardních příkazů a oken ID Afxres.h. Tyto identifikátory se nejčastěji používají v rámci editory prostředků a v okně Vlastnosti pro mapování zpráv na funkce obslužné rutiny. Všechny standardní příkazy **ID_** předponu. Například pokud použijete editor nabídek, obvykle vytvoření vazby soubor otevřete položku nabídky u standardního `ID_FILE_OPEN` příkaz ID.  

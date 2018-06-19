@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372531"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton – třída
 Typ tlačítka panelu nástrojů, který se chová jako regulární tlačítko po klepnutí. Ale, otevře se panel nástrojů rozevíracího seznamu ( [CMFCDropDownToolBar třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) Pokud uživatel stiskem tlačítka a obsahuje tlačítka panelu nástrojů.  

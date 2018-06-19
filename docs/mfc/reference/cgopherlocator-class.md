@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366919"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator – třída
 Získá gopher "Lokátor" ze serveru gopher, určuje typ lokátoru a zpřístupní Lokátor [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  

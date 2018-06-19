@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383971"
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 Tento článek popisuje základní implementace MFC, která umožňuje přidat výchozí panel nástrojů k vaší aplikaci výběrem možnosti v Průvodci aplikací. Obsahuje následující témata:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371709"
 ---
 # <a name="message-maps-mfc"></a>Mapy zpráv (MFC)
 Tato část obsahuje seznam všech [makra mapování zpráv](../../mfc/reference/message-map-macros-mfc.md) a všechny [CWnd](../../mfc/reference/cwnd-class.md) map zpráv položky spolu s odpovídající členské funkce prototypy:  

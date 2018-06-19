@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366158"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo – struktura
 `CDaoRelationFieldInfo` Struktura obsahuje informace o pole v vztah definovaný pro přístup k objektům dat (DAO).  

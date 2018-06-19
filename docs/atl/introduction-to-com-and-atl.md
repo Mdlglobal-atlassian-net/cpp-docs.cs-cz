@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355410"
 ---
 # <a name="introduction-to-com-and-atl"></a>Úvod do modelu COM a knihovny ATL
 Tato část obsahuje stručný úvod do modelu COM a ATL.  

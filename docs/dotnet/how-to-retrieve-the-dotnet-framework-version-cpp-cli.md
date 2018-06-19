@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128768"
 ---
 # <a name="how-to-retrieve-the-net-framework-version-ccli"></a>Postupy: Načtení verze rozhraní .NET Framework (C++/CLI)
 Následující příklad kódu ukazuje, jak určit verzi aktuálně nainstalované rozhraní .NET Framework s <xref:System.Environment.Version%2A> vlastnost, která je ukazatelem na <xref:System.Version> objekt, který obsahuje informace o verzi.  

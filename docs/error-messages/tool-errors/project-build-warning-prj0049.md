@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319807"
 ---
 # <a name="project-build-warning-prj0049"></a>Upozornění sestavení projektu PRJ0049
 Odkazovaná cíl '\<odkaz > se vyžaduje rozhraní .NET Framework \<MinFrameworkVersion > a nebude možné spustit na cílový framework projektu na  

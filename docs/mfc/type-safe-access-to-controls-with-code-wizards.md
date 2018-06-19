@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385190"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Typově bezpečný přístup k ovládacím prvkům s průvodci kódem
 Pokud jste obeznámeni s funkcemi DDX, můžete použít vlastnost ovládacího prvku v [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvořit typově bezpečný přístup. Tento přístup je jednodušší než vytváření ovládacím prvkům bez průvodců kódem.  

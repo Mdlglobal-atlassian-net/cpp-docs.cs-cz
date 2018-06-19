@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382216"
 ---
 # <a name="using-ctreectrl"></a>Používání atributu CTreeCtrl
 Ovládacím prvkem strom, reprezentována třída [CTreeCtrl](../mfc/reference/ctreectrl-class.md), je okno, které zobrazí hierarchické seznam položek, například záhlaví v dokumentu, položky v indexu, nebo soubory a adresáře na disku. Každá položka se skládá z štítek a volitelné rastrové bitovou kopii, a každá položka může mít seznam podřízených položek s ním spojená. Uživatel kliknutím na položku, můžete rozbalit nebo sbalit přidružené seznam podřízených položek. Stromu adresářů klikněte v levém podokně v Průzkumníku souborů je příkladem ovládacím prvkem strom.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374147"
 ---
 # <a name="logpen-structure"></a>LOGPEN – struktura
 `LOGPEN` Struktura definuje styl, šířku a barvy pera, objektu použitý k vykreslení čar a ohraničení. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) využívá `LOGPEN` struktura.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383250"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Použití rozevíracích tlačítek v ovládacím prvku panel nástrojů
 Kromě standardní tlačítek panelu nástrojů můžete taky nechat rozevíracích tlačítek. Rozevírací tlačítko je obvykle indikován přítomnosti připojené dolů šipka.  

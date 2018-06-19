@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169540"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Hodnotové typy a jejich chování (C++/CLI)
 Typy hodnot změnily různými způsoby ze spravovaných rozšíření jazyka C++ na Visual C++. V této části se podíváme na typ výčtu CLR a hodnota typu třídy, společně s pohled na zabalení a přístup k zabalené instanci na haldě CLR, podívejte se na vnitřních a přídavných ukazatelů. V této oblasti byly rozsáhlé jazykové změny.  

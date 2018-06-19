@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381579"
 ---
 # <a name="using-cdatetimectrl"></a>Používání atributu CDateTimeCtrl
 Prvku pro výběr data a času ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) používá intuitivní a rozpoznatelném způsob zadáním nebo vyberte určité datum. Hlavní rozhraní ovládacího prvku je funkce podobná pole se seznamem. Ale pokud uživatel rozšíří ovládacího prvku, zobrazí se ovládací prvek měsíční kalendář (ve výchozím nastavení), které uživateli umožňují zadat konkrétní datum. Při výběru datum ovládací prvek měsíční kalendář automaticky zmizí.  

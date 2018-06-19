@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381475"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060: Nové běžné ovládací prvky Windows
 Technické 60 poznámka popisující nové běžné ovládací prvky systému Windows a jejich, použití bylo integrováno do [ovládací prvky](../mfc/controls-mfc.md).  

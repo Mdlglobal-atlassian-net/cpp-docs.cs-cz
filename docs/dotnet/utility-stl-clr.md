@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169696"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Zahrnout hlavičku STL/CLR `<cliext/utility>` definovat šablony třídy `pair` a několik podpůrné funkce šablony.  

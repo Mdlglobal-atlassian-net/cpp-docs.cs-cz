@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373192"
 ---
 # <a name="toolbar-control-styles"></a>ToolBar – styly ovládacích prvků
 [Třída CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) má sadu styl příznaky, které určují vzhled a chování tlačítka. Můžete nastavit kombinaci tyto příznaky voláním [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Toto téma obsahuje seznam hodnot příznaku styl a jejich významů.  

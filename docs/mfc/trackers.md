@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381534"
 ---
 # <a name="trackers"></a>Snímače
 [Crecttracker –](../mfc/reference/crecttracker-class.md) třída poskytuje uživatelské rozhraní mezi obdélníkovou položek v aplikaci a uživatelů tím, že poskytuje celou řadu styly zobrazení. Tyto styly obsahují plný, šrafované nebo přerušovaný ohraničení; šrafované vzor, který obsahuje položky; a změňte velikost obslužných rutin, které může být umístěn na vnější nebo součástí ohraničení. Snímače se často používají ve spojení s OLE – položky, tedy odvozené objekty z `COleClientItem`. Sledovací modul obdélníků poskytnout vizuální upozornění na aktuální stav položky.  

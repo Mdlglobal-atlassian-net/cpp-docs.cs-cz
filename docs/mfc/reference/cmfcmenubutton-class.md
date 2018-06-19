@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375386"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton – třída
 Tlačítko, které se zobrazí místní nabídka a sestavy v nabídce výběry uživatele.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270366"
 ---
 # <a name="compiler-warning-level-1-c4168"></a>C4168 kompilátoru upozornění (úroveň 1)
 omezení kompilátoru: mimo ladicí program typy, odstraňte program databáze, databáze a znovu sestavit  

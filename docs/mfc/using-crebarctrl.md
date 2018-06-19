@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383306"
 ---
 # <a name="using-crebarctrl"></a>Používání atributu CReBarCtrl
 Ovládacím prvkem matrice funguje jako kontejner pro podřízená okna. Tyto podřízená okna, často další ovládací prvky, jsou přiřazeny k pásmo ovládacího prvku matrice. Ovládacím prvkem matrice může obsahovat jeden nebo více pruhy s každé pásmo s libovolnou kombinaci řádku úchytu, rastrový obrázek, text popisku a podřízeného okna. Pruhy však nemůže obsahovat více než jeden podřízeného okna.  

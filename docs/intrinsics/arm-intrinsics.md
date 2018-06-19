@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338179"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
 Visual C++ compiler vytváří následující vnitřní funkce dostupné na architekturu ARM. Další informace o ARM naleznete v tématu [příručky pro referenční architekturu ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.  

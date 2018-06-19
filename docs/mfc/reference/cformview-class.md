@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366577"
 ---
 # <a name="cformview-class"></a>Třídy CFormView – třída
 Základní třída používaná pro zobrazení formuláře.  

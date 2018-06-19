@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379200"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Odpověď na dynamickou výměnu dat (DDE)
 Okně s rámečkem může reagovat na požadavky exchange (DDE) Dynamická data otevřít soubory ze souboru správce (Pokud přípona souboru je zaregistrován nebo přidružené k aplikaci). V tématu [prostředí Shell registrace](../mfc/special-cwinapp-services.md).  

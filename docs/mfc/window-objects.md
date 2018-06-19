@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385268"
 ---
 # <a name="window-objects"></a>Objekty oken
 Poskytuje třídy MFC [CWnd](../mfc/reference/cwnd-class.md) k zapouzdření `HWND` popisovač okna. `CWnd` C++ okno objektů, liší od `HWND` Windows, která představuje okno, ale který jej obsahuje. Použít `CWnd` odvození vlastní podřízeného okna třídy, nebo použijte jednu z mnoha tříd MFC odvozené od `CWnd`. Třída `CWnd` je základní třída pro všechny windows, včetně okna s rámečkem, dialogová okna, podřízená okna, ovládací prvky a ovládací pruhy například panely nástrojů. Dobrou znalost jazyka [vztah mezi objektem okna v C++ a popisovačem HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) je zásadní pro efektivní programování s knihovnou MFC.  

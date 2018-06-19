@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170645"
 ---
 # <a name="user-defined-conversions-ccli"></a>Uživatelem definované převody (C++/CLI)
 Tato část popisuje uživatelem definované převody (UDC), pokud jeden z typů v převodu odkaz nebo instance hodnota typu nebo typ odkazu.  

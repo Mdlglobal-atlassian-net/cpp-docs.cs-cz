@@ -109,6 +109,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377568"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx – třída
 `COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje MFC. Musí být třídy oken s rámečkem na místě pro vaši aplikaci z `COleIPFrameWndEx` tříd, namísto odvozování z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)třídy. 

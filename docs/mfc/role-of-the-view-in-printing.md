@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379252"
 ---
 # <a name="role-of-the-view-in-printing"></a>Role zobrazení v tisku
 Zobrazení také hraje dvě důležité role v tisku jeho přidružené dokumentu.  

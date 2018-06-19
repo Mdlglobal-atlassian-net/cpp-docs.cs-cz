@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371540"
 ---
 # <a name="ceditview-class"></a>CEditView – třída
 Typ třídy zobrazení, který poskytuje funkci Windows ovládacích prvků pro úpravy a lze použít k implementaci funkce jednoduchého textového editoru.  

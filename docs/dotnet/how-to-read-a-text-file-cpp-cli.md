@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130195"
 ---
 # <a name="how-to-read-a-text-file-ccli"></a>Postupy: Čtení z textového souboru (C++/CLI)
 Následující příklad kódu ukazuje, jak otevřít a přečíst si text jeden řádek souboru současně, pomocí <xref:System.IO.StreamReader> třídu, která je definována v <xref:System.IO?displayProperty=fullName> oboru názvů. Instance této třídy se používá k otevření textového souboru a potom <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda se používá k načtení každý řádek.  

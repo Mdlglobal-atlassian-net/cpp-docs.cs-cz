@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383851"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Registrace tříd oken
 Tato poznámka popisuje MFC rutiny, které registrují speciální [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es vyžaduje Microsoft Windows. Konkrétní `WNDCLASS` atributy používané MFC a Windows jsou popsané.  

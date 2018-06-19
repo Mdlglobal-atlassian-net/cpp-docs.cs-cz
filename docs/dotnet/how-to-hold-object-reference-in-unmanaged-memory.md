@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128729"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Postupy: Uchování odkazu na objekt v nespravované paměti
 Můžete použít gcroot.h, který zabalí <xref:System.Runtime.InteropServices.GCHandle>, aby udržení odkazem na objekt CLR v nespravované paměti. Alternativně můžete použít `GCHandle` přímo.  

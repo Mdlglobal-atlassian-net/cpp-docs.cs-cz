@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369515"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO – struktura
 `MINMAXINFO` Struktura obsahuje informace o maximalizovaném okně velikost okna a pozice a jeho sledování minimální a maximální velikost.  

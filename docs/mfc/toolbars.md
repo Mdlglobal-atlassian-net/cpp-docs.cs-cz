@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381345"
 ---
 # <a name="toolbars"></a>Panely nástrojů
 Panel nástrojů řadu článků popisuje panely nástrojů rozhraní MFC a jak vytvořit a použít ji.  

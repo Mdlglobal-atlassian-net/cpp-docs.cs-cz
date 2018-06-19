@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101468"
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 Určuje příkaz, který se použije k vytvoření dané sadě řádků při použití [CCommand](../../data/oledb/ccommand-class.md) třídy. Je možné zadat pouze typy řetězec odpovídající typu zadané aplikace (ANSI nebo Unicode).  

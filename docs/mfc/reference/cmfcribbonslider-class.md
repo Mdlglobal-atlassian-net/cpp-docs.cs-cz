@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372694"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider – třída
 `CMFCRibbonSlider` Třída implementuje ovládací prvek typu jezdec, který můžete přidat na pásu karet řádek nebo pásu karet stavový řádek. V ovládacím prvku posuvník pásu karet se podobá posuvníků zvětšení, které se zobrazují v aplikacích Office 2007.  

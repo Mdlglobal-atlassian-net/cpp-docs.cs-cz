@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168929"
 ---
 # <a name="compiler-error-c2154"></a>C2154 chyby kompilátoru
 'type': jako argument pro kompilátoru vnitřního typu znak '__underlying_type' je povolen pouze typ – výčet  

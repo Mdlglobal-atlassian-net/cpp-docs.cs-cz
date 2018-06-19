@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370611"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarace proměnné založené na nové třídě ovládacího prvku
 Po vytvoření třídy knihovny MFC ovládací prvek, je možné deklarovat proměnné založené na něm. Zajistit kontextu pro nové proměnné musí otevřete editor dialogových oken a dialogových oken, ve které chcete použít vlastní opakovaně použitelné ovládací prvek upravit. Dialogové okno navíc musíte už mít třídu s ním spojená. Informace o použití editoru dialogových oken najdete v tématu [editoru dialogového okna](../../windows/dialog-editor.md).  

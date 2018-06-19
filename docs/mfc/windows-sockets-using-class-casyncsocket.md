@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385177"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets – použití třídy CAsyncSocket
 Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Upozorňujeme, že tato třída zapouzdří rozhraní API systému Windows Sockets na velmi nízké úrovni. `CAsyncSocket` je pro používané programátory, kteří síťové komunikace podrobně znát, ale chcete pohodlí zpětných volání pro oznámení o události sítě. Podle této předpokladů, tento článek obsahuje pouze základní instrukcí. Měli byste pravděpodobně zvážit použití `CAsyncSocket` Pokud má Windows Sockets snadnou práci s několika síťových protokolů v aplikaci MFC, ale nechcete vzdát flexibilitu. Může také cítíte, že můžete získat lepší efektivitu programování další komunikace přímo sami, než jste může pomocí obecnější alternativní modelu třídy `CSocket`.  

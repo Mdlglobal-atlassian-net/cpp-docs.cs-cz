@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385869"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Ovládací prvky karet a seznamy vlastností
 Seznam vlastností jsou dialogová okna více stránek nebo "karta dialogy", které můžou zobrazit až 24 prostředky dialogu šablony pro uživatele. Příklady vlastností najdete v části dialogové okno Vlastnosti zobrazení Windows nebo následující ukázkovou aplikaci MFC:  

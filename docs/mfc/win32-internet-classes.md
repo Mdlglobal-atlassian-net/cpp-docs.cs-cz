@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383221"
 ---
 # <a name="win32-internet-classes"></a>Win32 – internetové třídy
 MFC zabalí Internetu Win32 (WinInet) a technologii ActiveX usnadnění programování Internetu.  

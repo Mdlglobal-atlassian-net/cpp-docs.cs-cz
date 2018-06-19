@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385801"
 ---
 # <a name="sdi-and-mdi"></a>Rozhraní SDI a knihovna MDI
 MFC usnadňuje práci s jedním dokumentu (SDI rozhraní) a rozhraní více dokumentů (MDI) aplikace.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171946"
 ---
 # <a name="compiler-error-c2174"></a>C2174 chyby kompilátoru
 'function': skutečný parametr obsahuje typ void: Parametr Číslo1, číslo2 seznamu parametr  

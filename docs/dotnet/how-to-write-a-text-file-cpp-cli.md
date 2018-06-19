@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131238"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Postupy: Zápis do textového souboru (C++/CLI)
 Následující příklad kódu ukazuje, jak vytvořte textový soubor a zápis textu do ní pomocí <xref:System.IO.StreamWriter> třída, která je definována v <xref:System.IO> oboru názvů. <xref:System.IO.StreamWriter> Konstruktor přebírá název souboru, který se má vytvořit. Pokud soubor existuje, je přepsán (Pokud je nastavena hodnota True předat jako druhý <xref:System.IO.StringWriter> argument konstruktoru).  
