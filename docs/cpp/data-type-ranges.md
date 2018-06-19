@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418390"
 ---
 # <a name="data-type-ranges"></a>Rozsahy datového typu
 Kompilátory jazyka Visual C++ 32bitové a 64bitové verze rozpoznat typy v tabulce dál v tomto článku.  

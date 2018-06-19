@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408566"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t – členské funkce
 Informace o `_com_ptr_t` členské funkce, najdete v části [_com_ptr_t – třída](../cpp/com-ptr-t-class.md).  

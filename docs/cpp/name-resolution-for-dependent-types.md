@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419908"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozlišení názvů u závislých typů
 Použití **typename** pro kvalifikované názvy v definicích šablonu pro oznámení kompilátoru, identifikuje zadaný kvalifikovaný název typu. Další informace najdete v tématu [typename](../cpp/typename.md).  

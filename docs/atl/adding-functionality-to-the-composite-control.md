@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354179"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Přidání funkcí do složeného ovládacího prvku
 Po vložení všech příslušných ovládacích prvků do složeného ovládacího prvku vyžaduje další krok, přidání nové funkce. Tato nová funkce obvykle spadá do dvou kategorií:  

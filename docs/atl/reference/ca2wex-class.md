@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358743"
 ---
 # <a name="ca2wex-class"></a>CA2WEX – třída
 Tato třída se používá ve makra převodů řetězec `CA2TEX`, `CA2CTEX`, `CT2WEX`, a `CT2CWEX`a typedef **CA2W**.  

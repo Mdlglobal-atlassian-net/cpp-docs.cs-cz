@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409316"
 ---
 # <a name="unix"></a>UNIX
 Pokud máte v plánu k portu programy pro UNIX, postupujte podle těchto pokynů:  

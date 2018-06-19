@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356971"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Třídy sdílí MFC a knihovny ATL
 Následující tabulka uvádí třídy sdílena mezi MFC a ATL.  

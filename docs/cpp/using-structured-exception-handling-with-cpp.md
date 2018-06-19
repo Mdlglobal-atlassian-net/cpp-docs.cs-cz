@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421940"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Používání strukturovaného zpracování výjimek s jazykem C++
 Strukturované zpracování výjimek popsaných v těchto článcích funguje s C a C++ zdrojové soubory. Však není speciálně pro jazyk C++ a nedoporučuje se používat. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Navíc je flexibilnější, zpracování mechanismus výjimek C++, v tom, že ho můžete zpracování výjimek libovolného typu.  

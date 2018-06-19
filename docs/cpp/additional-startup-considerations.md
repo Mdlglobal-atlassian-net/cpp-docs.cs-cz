@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409719"
 ---
 # <a name="additional-startup-considerations"></a>Další důležité informace o spuštění
 V jazyce C++ může tvorba a rušení objektů zahrnovat spouštění uživatelského kódu. Proto je důležité si uvědomit, které inicializacích dojít před vstupem do **hlavní** a které destruktory jsou vyvolány po ukončení z **hlavní**. (Podrobné informace o vytváření a odstraňování objektů najdete v tématu [konstruktory](../cpp/constructors-cpp.md) a [destruktory](../cpp/destructors-cpp.md).)  

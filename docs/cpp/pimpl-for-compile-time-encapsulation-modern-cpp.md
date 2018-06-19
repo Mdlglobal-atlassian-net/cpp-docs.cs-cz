@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420152"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++)
 *Pimpl stylu* jde o techniku moderní C++ skrýt implementace, chcete-li minimalizovat párování a k oddělení rozhraní. Pimpl je zkratka pro "ukazatel na implementaci." Může už se seznamte s koncept, ale víte, že jiné názvy jako Cheshiru Cat nebo brány Firewall kompilátoru stylu.  

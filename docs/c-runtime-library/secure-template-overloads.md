@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412462"
 ---
 # <a name="secure-template-overloads"></a>Přetížení zabezpečení šablony
 Microsoft má zastaralé mnoho C Runtime (CRT) – funkce knihovny považuje verze zdokonaleným zabezpečením. Například `strcpy_s` je bezpečnější náhradou `strcpy`. Zastaralé funkce jsou běžné zdroje chyb zabezpečení, protože nebrání operace, které můžete přepsat paměti. Ve výchozím nastavení vyvolá kompilátor vyřazení upozornění, když použijete jednu z těchto funkcí. CRT poskytuje C++ šabloně přetížení pro tyto funkce, které umožňují snadný přechod bezpečnější variant.  

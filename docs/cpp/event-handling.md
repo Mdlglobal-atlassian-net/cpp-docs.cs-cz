@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414617"
 ---
 # <a name="event-handling"></a>Zpracování událostí
 Zpracování událostí je primárně podporována pro třídy COM (C++ třídy, které implementují objekty modelu COM, obvykle pomocí třídy ATL nebo [třída typu coclass](../windows/coclass.md) atributu).  Další informace najdete v tématu [zpracování událostí v modelu COM](../cpp/event-handling-in-com.md).  

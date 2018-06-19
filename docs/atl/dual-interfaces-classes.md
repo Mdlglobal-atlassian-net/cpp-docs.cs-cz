@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354319"
 ---
 # <a name="dual-interfaces-classes"></a>Duální rozhraní třídy
 Následující třídy poskytuje podporu pro duální rozhraní:  

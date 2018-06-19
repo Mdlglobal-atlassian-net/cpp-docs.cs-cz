@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424599"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 C++ podporuje různé typy řetězce a znak a poskytuje způsoby, jak express literálových hodnot každé z těchto typů. Ve zdrojovém kódu express obsah vaší znak a řetězec literály pomocí znakovou sadu. Univerzální názvy znaků a řídicí znaky umožňují express libovolného řetězce základní zdrojové znakové sadě. Nezpracovaná řetězcový literál umožňuje vyhnout řídicí znaky a slouží k express všechny typy textových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět navíc konstrukce nebo převod kroky.  

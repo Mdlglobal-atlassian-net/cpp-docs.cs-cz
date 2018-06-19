@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420081"
 ---
 # <a name="punctuators-c"></a>Interpunkční znaky (C++)
 Interpunkční znaky v jazyce C++ mají pro kompilátor syntaktický a sémantický význam, ale samy o sobě neurčují operaci vracející hodnotu. Některé interpunkční znaky, ať již samotné nebo v kombinacích, mohou být také operátory jazyka C++ nebo významné pro preprocesor.  

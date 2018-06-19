@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355643"
 ---
 # <a name="enumerators-and-collections-classes"></a>Třídy kolekce a výčty
 Následující třídy poskytují podporu pro COM kolekce a výčty:  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356380"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Propojení s CRT ve vašem projektu knihovny ATL
 [Běhové knihovny jazyka C](../c-runtime-library/crt-library-features.md) (CRT) poskytují mnoho užitečné funkce, které můžou programování mnohem snazší během vývoje ATL. Všechny projekty knihovny ATL propojit knihovny CRT. Uvidíte výhody a nevýhody propojení metoda v [výhody a poměry metoda použitá pro odkaz na CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  

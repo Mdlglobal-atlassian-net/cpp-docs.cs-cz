@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402709"
 ---
 # <a name="exit-exit-exit"></a>ukončení, _exit –, _exit –
 
@@ -73,7 +74,7 @@ void _exit(
 
 ## <a name="remarks"></a>Poznámky
 
-**Ukončete**, **_exit –** a **_exit –** funkce ukončit proces volání. **Ukončete** funkce volá destruktory pro místní objekty, pak zavolá – v pořadí last-in-first-out (LIFO) – funkce, které jsou registrovány **atexit** a **_onexit –**a pak vyprázdnění všech vyrovnávací paměti souboru předtím, než ho ukončí proces. **_Exit –** a **_exit –** funkce ukončit proces bez zničení objektů místní nebo zpracování **atexit** nebo **_onexit –**funkce a bez vyprázdnění vyrovnávací paměti datového proudu.
+**Ukončete**, **_exit –** a **_exit –** funkce ukončit proces volání. **Ukončete** funkce volá destruktory pro místní objekty, pak zavolá – v pořadí last-in-first-out (LIFO) – funkce, které jsou registrovány **atexit** a **_onexit –** a pak vyprázdnění všech vyrovnávací paměti souboru předtím, než ho ukončí proces. **_Exit –** a **_exit –** funkce ukončit proces bez zničení objektů místní nebo zpracování **atexit** nebo **_onexit –** funkce a bez vyprázdnění vyrovnávací paměti datového proudu.
 
 I když **ukončete**, **_exit –** a **_exit –** volání nevrátí hodnotu, hodnotu v *stav* je k dispozici pro hostitelské prostředí nebo čeká se na volání procesu, pokud takové existuje, po ukončení procesu. Obvykle se nastaví volajícího *stav* hodnotu na 0, budou znamenat normální ukončovací nebo na jinou hodnotu indikující chybu. *Stav* hodnota je k dispozici pro operační systém dávkovém příkazu **ERRORLEVEL** a je reprezentované pomocí jedné z dvě konstanty: **exit_success –**, která reprezentuje hodnotu 0 nebo **exit_failure –**, která představuje hodnotu 1.
 

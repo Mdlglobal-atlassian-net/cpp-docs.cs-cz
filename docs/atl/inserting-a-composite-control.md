@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358687"
 ---
 # <a name="inserting-a-composite-control"></a>Vkládání složeného ovládacího prvku
 **Přidat třídu** dialogové okno umožňuje vložit objekt knihovny ATL do projektu. Přístup k toto dialogové okno kliknutím pravým tlačítkem myši na název projektu v Průzkumníku řešení, přejdete na příkaz **přidat**a pak levým na **přidat třídu**.  

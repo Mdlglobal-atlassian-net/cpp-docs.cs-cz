@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353702"
 ---
 # <a name="can-i-reuse-a-host-window"></a>Můžete opakovaně použít okno hostitele?
 Není doporučeno hostitele windows znovu použít. K zajištění odolnosti kódu, by měl tie životnost okna hostitele k životnost jeden ovládací prvek.  

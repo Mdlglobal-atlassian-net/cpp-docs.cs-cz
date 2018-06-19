@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421270"
 ---
 # <a name="selection-statements-c"></a>Příkazy výběru (C++)
 Příkazy výběru C++, [Pokud](../cpp/if-else-statement-cpp.md) a [přepínač](../cpp/switch-statement-cpp.md), poskytovat prostředky k podmíněnému spuštění sekcí kódu.  

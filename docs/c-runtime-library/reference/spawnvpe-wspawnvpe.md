@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413554"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -103,7 +104,7 @@ V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-r
 
 Každá z těchto funkcí se vytvoří a spustí nový proces, předávání pole ukazatele argumenty příkazového řádku a pole ukazatele na nastavení prostředí. Použijte tyto funkce **cesta** proměnnou prostředí najít soubor provést.
 
-Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *argv –* je ukazatel s hodnotou null, nebo pokud *argv –* odkazuje na ukazatele null, nebo *argv –*[0] je řetězec prázdný, neplatný Obslužná rutina parametru je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –**a vrátí hodnotu -1. Žádný nový proces je vytvořený.
+Tyto funkce ověřit jejich parametrů. Pokud má jedna *cmdname* nebo *argv –* je ukazatel s hodnotou null, nebo pokud *argv –* odkazuje na ukazatele null, nebo *argv –*[0] je řetězec prázdný, neplatný Obslužná rutina parametru je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1. Žádný nový proces je vytvořený.
 
 ## <a name="requirements"></a>Požadavky
 

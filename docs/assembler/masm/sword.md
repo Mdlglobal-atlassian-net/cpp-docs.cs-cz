@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057387"
 ---
 # <a name="sword"></a>SWORD
 Přiděluje a volitelně inicializuje podepsaný slova (2 bajtů) úložiště pro každou `initializer`. Můžete také použít jako specifikátor typu kdekoli je právní typu.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359779"
 ---
 # <a name="atl-property-page-wizard"></a>Stránka průvodce vlastností knihovny ATL
 Tento průvodce [přidá stránky vlastností do projektu knihovny ATL](../../atl/reference/adding-an-atl-property-page.md) nebo do projektu MFC s podpory knihovny ATL. Stránku vlastností knihovny ATL poskytuje uživatelské rozhraní pro nastavení vlastností (nebo volání metody) jeden nebo více objektů COM.  

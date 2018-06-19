@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32403918"
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -129,7 +130,7 @@ Pokud *počet* je speciální hodnota [_truncate –](../../c-runtime-library/tr
 
 Pokud **mbstowcs_s –** úspěšně převede zdrojový řetězec, uloží je velikost v široké znaky převedený řetězec, včetně null ukončení do  *&#42;pReturnValue* (zadat *pReturnValue* není **NULL**). K tomu dojde i v případě *wcstr* argument je **NULL** a poskytuje způsob, jak určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *wcstr* je **NULL**, *počet* je ignorován a *sizeInWords* musí být 0.
 
-Pokud **mbstowcs_s –** zaznamená neplatný vícebajtových znaků, uloží je 0  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **errno** k  **Eilseq –**a vrátí **eilseq –**.
+Pokud **mbstowcs_s –** zaznamená neplatný vícebajtových znaků, uloží je 0  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **errno** k  **Eilseq –** a vrátí **eilseq –**.
 
 Pokud daná pořadí na kterou odkazuje *mbstr* a *wcstr* překrývají, chování **mbstowcs_s –** není definován.
 

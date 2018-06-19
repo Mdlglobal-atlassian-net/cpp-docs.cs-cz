@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423673"
 ---
 # <a name="namespaces-c"></a>Obory názvů (C++)
 Obor názvů je deklarativní oblasti, která poskytuje obor na identifikátory (názvy typů, funkce, proměnné atd) uvnitř ho. Obory názvů se používají k uspořádání kódu do logických skupin a aby se zabránilo kolize názvů, které můžou nastat, zejména v případě, že vaše základu kódu obsahuje více knihoven. Všechny identifikátory v oboru názvů jsou viditelné na sebe navzájem bez kvalifikace. Identifikátory mimo obor názvů přístup pomocí plně kvalifikovaný název pro každý identifikátor, například členové `std::vector<std::string> vec;`, nebo pomocí [pomocí deklarace](../cpp/using-declaration.md) pro jediný identifikátor (`using std::string`), nebo [using – direktiva](../cpp/namespaces-cpp.md#using_directives) pro všechny identifikátory v oboru názvů (`using namespace std;`). Kód v hlavičkových souborů měli vždycky používat obor názvů plně kvalifikovaný název.  

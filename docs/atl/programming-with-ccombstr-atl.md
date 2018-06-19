@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357854"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programování pomocí třídy CComBSTR (ATL)
 Třídy ATL [CComBSTR](../atl/reference/ccombstr-class.md) poskytuje obálku kolem `BSTR` datového typu. Při `CComBSTR` je užitečným nástrojem, existuje několik situací, které vyžadují upozornění.  

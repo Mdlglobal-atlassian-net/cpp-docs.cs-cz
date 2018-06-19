@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412134"
 ---
 # <a name="compiler-limits"></a>Omezení kompilátoru
 Standard jazyka C++ doporučuje limity pro různé jazykové konstrukce. Následuje seznam případů, kdy Visual C++ compiler neimplementuje doporučené omezení. První číslo je limit, který je vytvořen v ISO C++ 11 standardní (INCITS nebo ISO/IEC 14882-2011 [2012] přílohy B) a druhé číslo, které je implementováno modulem Visual C++ omezení:  

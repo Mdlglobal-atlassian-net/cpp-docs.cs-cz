@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409849"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Bitový exkluzivní operátor OR: ^
 ## <a name="syntax"></a>Syntaxe  

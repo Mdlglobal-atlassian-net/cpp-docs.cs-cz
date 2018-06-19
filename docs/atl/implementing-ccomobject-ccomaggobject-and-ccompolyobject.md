@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356338"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementace CComObject CComAggObject a CComPolyObject
 Třídy šablon [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), a [CComPolyObject](../atl/reference/ccompolyobject-class.md) jsou vždy maximální odvozené funkcí v řetězu dědičnosti. Je zodpovídají za zpracovávaly všechny metody v **IUnknown**: `QueryInterface`, `AddRef`, a **verze**. Kromě toho `CComAggObject` a `CComPolyObject` (při použití pro agregované objekty) zadejte počítání speciální odkazů a `QueryInterface` sémantiku požadované pro vnitřní neznámý.  

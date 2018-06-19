@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353947"
 ---
 # <a name="file-handling-classes"></a>Třídy práce se soubory
 Tyto třídy poskytují metody pro zpracování souborů, dočasné soubory a soubory mapované paměti.  

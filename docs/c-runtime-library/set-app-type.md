@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410178"
 ---
 # <a name="setapptype"></a>_set_app_type
 Vnitřní funkce, která používá při spuštění CRT říct, zda je aplikace konzolovou aplikaci nebo aplikaci pomocí grafického uživatelského rozhraní.  

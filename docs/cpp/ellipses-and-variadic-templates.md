@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416655"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Tři tečky a variadické šablony
 Tento článek ukazuje, jak používat se třemi tečkami (`...`) s C++ variadické šablony. Se třemi tečkami zaznamenala mnoho používá jazyka C a C++. Seznamy argumentů proměnných pro funkce patří. `printf()` Funkce z běhové knihovny jazyka C je jedním z dobře známé příklady.  

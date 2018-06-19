@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358258"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Provedení noncreatable – objekt knihovny ATL
 Atributy založené na knihovně ATL COM objektu můžete změnit tak, aby klient nemůže přímo vytvářet objekt. V takovém případě objekt by být vráceny prostřednictvím volání metody na jiném objektu a nikoli přímo vytvořeny.  

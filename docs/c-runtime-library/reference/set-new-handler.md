@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409807"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -58,7 +59,7 @@ Ukazatel na zpracování funkce paměti zadané aplikace. Argument 0 způsobí, 
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na předchozí výjimku zpracování funkce registrovaných **_set_new_handler –**tak, aby předchozí funkce může být obnovena novější. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu lze použít k obnovení výchozího chování; Tato hodnota může být **NULL**.
+Vrací ukazatel na předchozí výjimku zpracování funkce registrovaných **_set_new_handler –** tak, aby předchozí funkce může být obnovena novější. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu lze použít k obnovení výchozího chování; Tato hodnota může být **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 

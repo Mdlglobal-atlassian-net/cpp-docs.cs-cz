@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359140"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits – třída
 Tato třída poskytuje metody výchozí a funkce pro třídu kolekce tvořený primitivní datové typy.  

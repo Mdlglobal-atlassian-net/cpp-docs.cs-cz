@@ -69,6 +69,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057796"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referenční dokumentace pro použití nástroje ML a ML64 v příkazovém řádku
 Sestaví a odkazuje jeden nebo více zdrojových souborů jazyka sestavení. Možnosti příkazového řádku jsou velká a malá písmena.  

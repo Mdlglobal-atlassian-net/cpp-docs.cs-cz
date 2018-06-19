@@ -113,6 +113,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405533"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa – _itoa –, ltoa –, _ltoa –, ultoa –, _ultoa –, _i64toa –, _ui64toa –, _itow –, _ltow –, _ultow –, _i64tow –, _ui64tow –
 
@@ -191,7 +192,7 @@ Každá z těchto funkcí vrátí ukazatel na *vyrovnávací paměti*. Neexistuj
 
 ## <a name="remarks"></a>Poznámky
 
-**_Itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –** funkce převést číslice v dané *hodnotu* argument na řetězec znaků ukončený hodnotou null a úložiště výsledek (až 33 znaků pro **_itoa –**, **_ltoa –**, a  **_ultoa –**a 65 pro **_i64toa –** a **_ui64toa –**) v *vyrovnávací paměti*. Pokud *základ –* rovná 10 a *hodnotu* je záporná, je první znak uložené řetězce znaménka minus (**-**). **_Itow –**, **_ltow –**, **_ultow –**, **_i64tow –**, a **_ui64tow –** funkce jsou široká charakterová verze **_itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –**, v uvedeném pořadí.
+**_Itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –** funkce převést číslice v dané *hodnotu* argument na řetězec znaků ukončený hodnotou null a úložiště výsledek (až 33 znaků pro **_itoa –**, **_ltoa –**, a  **_ultoa –** a 65 pro **_i64toa –** a **_ui64toa –**) v *vyrovnávací paměti*. Pokud *základ –* rovná 10 a *hodnotu* je záporná, je první znak uložené řetězce znaménka minus (**-**). **_Itow –**, **_ltow –**, **_ultow –**, **_i64tow –**, a **_ui64tow –** funkce jsou široká charakterová verze **_itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –**, v uvedeném pořadí.
 
 > [!IMPORTANT]
 > Tyto funkce můžete napsat za koncem vyrovnávací paměť, která je příliš malá. Pokud chcete zabránit přetečení vyrovnávací paměti, ujistěte se, že *vyrovnávací paměti* je dostatečně velký pro uložení převedený číslic plus koncové znak hodnoty null a znak znaménka. Zneužití tyto funkce může způsobit problémy se zabezpečením závažné ve vašem kódu.

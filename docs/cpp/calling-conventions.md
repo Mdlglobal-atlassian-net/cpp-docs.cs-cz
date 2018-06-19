@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410889"
 ---
 # <a name="calling-conventions"></a>Konvence volání
 Kompilátor Visual C/C++ poskytuje několik různých konvencí volání vnitřních a vnějších funkcí. Pochopení těchto různých přístupů může pomoci ladit program a propojit kód s rutinami jazyka symbolických adres.  

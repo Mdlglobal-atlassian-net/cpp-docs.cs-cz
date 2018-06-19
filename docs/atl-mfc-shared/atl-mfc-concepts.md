@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354538"
 ---
 # <a name="atlmfc-concepts"></a>Koncepty knihovny ATL a MFC
 Tato část obsahuje témata koncepční a založený na úlohách, které vám pomůže programu pomocí třídy sdílena mezi Active Template Library (ATL) a knihovna Microsoft Foundation Class (MFC).  

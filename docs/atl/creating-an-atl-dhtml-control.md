@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354166"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Vytvoření ovládacího prvku ATL jazyka DHTML
 Průvodce ovládacím prvkem ATL automatizuje proces vytváření ovládací prvek DHTML. Generuje soubory nezbytné prostředků, včetně soubor HTML obsahující ukázkový kód.  

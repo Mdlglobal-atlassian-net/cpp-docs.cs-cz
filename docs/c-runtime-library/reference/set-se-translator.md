@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411517"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
@@ -58,7 +59,7 @@ Ukazatel na a C strukturovaná funkce překladač výjimka, která můžete zaps
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na funkci předchozí překladač registrovaných **_set_se_translator –**tak, aby předchozí funkce může být obnovena novější. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu lze použít k obnovení výchozího chování; Tato hodnota může být **nullptr**.
+Vrátí ukazatel na funkci předchozí překladač registrovaných **_set_se_translator –** tak, aby předchozí funkce může být obnovena novější. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu lze použít k obnovení výchozího chování; Tato hodnota může být **nullptr**.
 
 ## <a name="remarks"></a>Poznámky
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360146"
 ---
 # <a name="building-cc-isolated-applications"></a>Sestavení izolovaných aplikací C/C++
 Izolované aplikace závisí pouze na souběžně sdílená sestavení a sváže jeho závislé součásti pomocí manifestu. Není nutné pro vaši aplikaci plně izolaci, aby bylo možné správně fungovat v systému Windows. ale investicemi do vytváření aplikace plně izolované, může ušetřit čas Pokud potřebujete služeb vaší aplikace v budoucnu. Další informace o výhodách vytváření plně izolované aplikace najdete v tématu [izolované aplikace](http://msdn.microsoft.com/library/aa375190).  

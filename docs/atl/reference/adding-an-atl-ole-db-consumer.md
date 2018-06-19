@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356351"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Přidání příjemce OLE DB knihovny ATL
 Tento průvodce slouží k přidání příjemce technologie OLE DB knihovny ATL do projektu. Příjemce technologie ATL OLE DB se skládá vazeb OLE DB přístupového objektu třídy a data potřebná pro přístup k datovému zdroji. Projekt musí být vytvořen jako aplikace ATL COM nebo MFC nebo Win32 aplikaci, která obsahuje podpory knihovny ATL (který automaticky přidá průvodce příjemcem knihovny ATL technologie OLE DB).  

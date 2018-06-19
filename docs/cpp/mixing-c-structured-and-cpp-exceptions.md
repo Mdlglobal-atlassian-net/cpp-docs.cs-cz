@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420103"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Kombinace výjimek v jazycích C (strukturované) a C++
 Je-li zapotřebí vytvořit lépe přenositelný kód, není v programu jazyka C++ doporučeno používat zpracování strukturovaných výjimek. Ale v některých případech můžete zkompilovat s **/EHa** a kombinovat strukturovaných výjimky a zdrojového kódu C++ a je třeba některá zařízení pro zpracování oba druhy výjimek. Obslužná rutina strukturovaného výjimek obsahuje žádná koncepce objekty nebo typy výjimky, a proto ho nemůže zpracovat výjimky vyvolané C++ – kód; ale C++ **catch** obslužné rutiny můžete zpracování strukturovaných výjimek. Jako takový, zpracování syntaxe výjimek C++ (**zkuste**, `throw`, **catch**) není přijat kompilátor jazyka C, ale strukturovaného zpracování syntaxe výjimek (`__try`, `__except`, `__finally`) podporuje C++ compiler.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423867"
 ---
 # <a name="summary-of-scope-rules"></a>Souhrn pravidel rozsahu
 Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je určeno přetížení). Pokud název označuje funkce, musí být jednoznačné s ohledem na počet a typ parametry funkce. Pokud název zůstane jednoznačným, [přístup ke členu](../cpp/member-access-control-cpp.md) pravidla.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411751"
 ---
 # <a name="comments-c"></a>Komentáře (C++)
 Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Komentáře v testování můžete nastavit určité řádků kódu neaktivní; ale `#if` / `#endif` preprocesor – direktivy fungují lépe pro tento protože můžete obklopit kód, který obsahuje komentáře, ale nelze je vnořovat komentáře.  

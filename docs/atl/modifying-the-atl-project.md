@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355030"
 ---
 # <a name="modifying-the-atl-project"></a>Úprava projektu knihovny ATL
 V tomto okamžiku projektu složeného ovládacího prvku implementuje nezbytných objektů pro vaše složeného ovládacího prvku. Dalším krokem je přidání všech ovládacích prvků, že bude obsahovat a zpracovat všechny potřebné události složeného ovládacího prvku.  

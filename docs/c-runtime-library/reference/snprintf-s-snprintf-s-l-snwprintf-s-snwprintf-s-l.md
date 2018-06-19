@@ -61,6 +61,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416436"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -139,7 +140,7 @@ Národní prostředí, které se má použít
 
 **_snprintf_s –** vrátí počet znaků, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující znak hodnoty null. **_snwprintf_s –** vrátí počet široké znaky, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující široká znaková hodnotu null.
 
-Pokud překročí úložiště potřebné pro uložení dat a ukončující null *sizeOfBuffer*, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud pokračuje v provádění po obslužná rutina neplatný parametr, nastavte tyto funkce *vyrovnávací paměti* na prázdný řetězec, nastavte **errno** k **erange –**a vrátí hodnotu -1.
+Pokud překročí úložiště potřebné pro uložení dat a ukončující null *sizeOfBuffer*, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud pokračuje v provádění po obslužná rutina neplatný parametr, nastavte tyto funkce *vyrovnávací paměti* na prázdný řetězec, nastavte **errno** k **erange –** a vrátí hodnotu -1.
 
 Pokud *vyrovnávací paměti* nebo *formátu* je **NULL** ukazatele, nebo pokud *počet* je menší než nebo rovna nule, je volána obslužná rutina neplatný parametr. Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
 

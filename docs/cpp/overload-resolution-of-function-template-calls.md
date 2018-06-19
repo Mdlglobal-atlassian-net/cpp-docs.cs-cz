@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420025"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Rozlišení přetížení volání šablony funkce
 Šablonu funkce můžete přetížení funkcí objektu bez šablony se stejným názvem. V tomto scénáři se volání funkce vyřeší první pomocí odvození argumentu šablony pro vytvoření instance šablony funkce s jedinečný specializace. Pokud se nezdaří odvození argumentu šablony, jiné přetížení funkce jsou považovány za vyřešit volání. Tyto další přetížení, také známé jako sada candidate zahrnují objektu bez šablony funkce a další funkce vytvořenou instanci šablony. Pokud odvození argumentu šablony úspěšné, generované funkce se porovná s jinými funkcemi určit nejlepší shodu, následující pravidla pro rozlišení přetížení. Další informace najdete v tématu [přetížení funkcí](function-overloading.md).  
