@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093116"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Dělení na vlákna a zařazování (C + +/ CX)
 V valná většina případů instance tříd prostředí Windows Runtime, jako je standardními objekty C++ je přístupná z libovolného vlákna. Tyto třídy jsou označovány jako "agile". Ale malý počet prostředí Windows Runtime třídy, dodávané se systémem Windows jsou bez agilní a musí být využívány více jako objektů COM než standardními objekty C++. Nemusíte být COM expert používat-agilní třídy, ale nutné vzít v úvahu třídy modelu vláken a její chování zařazování. Tento článek obsahuje základní informace a pokyny pro tyto výjimečných scénářů, ve kterých budete muset používat instanci-agilní třídy.  

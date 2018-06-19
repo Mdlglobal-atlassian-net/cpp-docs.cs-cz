@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090643"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Naplnění seznamu z druhé sady záznamů (Data MFC Access)
 Ve výchozím nastavení je přidružen jeden záznamů objekt, jehož pole jsou namapované na ovládací prvky zobrazení záznamu zobrazení záznamů. V některých případech můžete chtít put pole se seznamem nebo pole se seznamem řízení v zobrazení záznamu a vyplňte v něm hodnotami z druhého objekt sady záznamů. Uživatel může použít pole se seznamem a vyberte novou kategorii informace zobrazené v zobrazení záznamů. Toto téma vysvětluje, jak a kdy k tomu.  

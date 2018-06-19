@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089363"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Zobrazení dat ve formuláři a manipulace s nimi
 Mnoho aplikací přístup k datům vyberte data a zobrazit ji v pole ve formuláři. Třída databáze [CRecordView](../../mfc/reference/crecordview-class.md) vám dává [CFormView](../../mfc/reference/cformview-class.md) objekt připojení přímo na objekt sady záznamů. Zobrazení záznamu používá [výměna dialogových dat (DDX)](../../mfc/dialog-data-exchange-and-validation.md) přesunutí hodnoty polí na aktuální záznam ze sady záznamů ovládacích prvků na formuláři a přesouvá aktualizované informace zpět do sady záznamů. Sady záznamů se pak používá výměna pole záznamu (RFX) pro přesun dat mezi její pole datových členů a odpovídající sloupce v tabulce na datovém zdroji.  

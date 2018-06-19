@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367157"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Podpora plovoucí desetinné čárky ve starším kódu (Visual C++)
 MMX a zaregistruje se s plovoucí desetinnou čárkou zásobníku (MM0-MM7/ST0-ST7) se zachovají v souvislosti přepínače.  Neexistuje žádné explicitní konvence volání pro tyto registry.  Použití těchto registrů výhradně zakázané kódu v režimu jádra.  

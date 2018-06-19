@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087813"
 ---
 # <a name="access-to-odbc-and-sql"></a>Přístup k rozhraní ODBC a jazyku SQL
 Knihovny Microsoft Foundation Class zapouzdří mnoha volání rozhraní API systému Windows a umožňuje stále přímo volat jakékoli funkce rozhraní API systému Windows. Databázové třídy poskytují flexibilitu stejné s ohledem na rozhraní API ODBC. Když vás od velkou část složitosti ODBC třídy databáze chrání, bude možné volat rozhraní API ODBC funkce přímo z libovolného místa v programu.  

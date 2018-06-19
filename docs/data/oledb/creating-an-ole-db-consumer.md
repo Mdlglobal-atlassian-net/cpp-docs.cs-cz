@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096688"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Vytvoření příjemce technologie OLE DB
 Příjemce technologie OLE DB šablony můžete vytvořit s nebo bez průvodce příjemce knihovny ATL technologie OLE DB, když pomocí Průvodce patří mezi doporučené metody. Příjemce může pracovat v libovolné aplikace, která podporuje knihovnu ATL.  

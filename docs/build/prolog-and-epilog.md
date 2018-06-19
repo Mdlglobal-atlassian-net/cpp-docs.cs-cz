@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372006"
 ---
 # <a name="prolog-and-epilog"></a>Prolog a epilog
 Každá funkce, která přiděluje místo v zásobníku, volá jiné funkce, ukládá stálé registry nebo používá zpracování výjimek, musí mít prologu, jejichž adresa limity jsou popsány v unwind data přidružená k položce příslušné funkce tabulky (viz [(X64) zpracování výjimek](../build/exception-handling-x64.md)). Prologu uloží argument registrů v jejich domovské adresy v případě potřeby přesune stálé registry v zásobníku, přidělí pevnou část zásobníku pro místní a dočasné proměnné a volitelně vytváří ukazatel na rámec. Přidružená unwind data musí popisovat akce prologu a poskytne informace potřebné k účinek kód prologu vrátit zpět.  

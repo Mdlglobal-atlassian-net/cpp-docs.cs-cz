@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098677"
 ---
 # <a name="commands-and-tables"></a>Příkazy a tabulky
 Příkazy a tabulky umožňují přístup sady řádků; To znamená otevřete sady řádků, spuštěním příkazů a navázat sloupce. [CCommand](../../data/oledb/ccommand-class.md) a [CTable](../../data/oledb/ctable-class.md) třídy vytváření instancí objektů příkazu a tabulky, v uvedeném pořadí. Tyto třídy jsou odvozeny od [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) jak je znázorněno na následujícím obrázku.  

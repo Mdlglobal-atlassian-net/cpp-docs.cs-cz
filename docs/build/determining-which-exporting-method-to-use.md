@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368756"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Výběr použité metody exportu
 Můžete exportovat funkce v některém ze dvou způsobů – soubor .def nebo `__declspec(dllexport)` – klíčové slovo. Chcete-li vám pomohou rozhodnout, který způsob je lepší pro vaši knihovnu DLL, zvažte tyto otázky:  

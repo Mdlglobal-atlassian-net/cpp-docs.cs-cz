@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373033"
 ---
 # <a name="nmake-options"></a>NMAKE – možnosti
 NMAKE – možnosti jsou popsané v následující tabulce. Možnosti předchází lomítko (/) nebo pomlčkou (-) a nejsou velká a malá písmena. Použití [! Cmdswitches –](../build/makefile-preprocessing-directives.md) možnost nastavení v souboru pravidel nebo v Tools.ini změnit.  

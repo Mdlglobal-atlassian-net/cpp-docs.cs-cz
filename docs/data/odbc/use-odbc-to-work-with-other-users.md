@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093517"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>Použití rozhraní ODBC pro práci s jinými uživateli
 Použití rozhraní ODBC v prostředích, kde více uživatelů pracuje s databází rozhraní ODBC.  

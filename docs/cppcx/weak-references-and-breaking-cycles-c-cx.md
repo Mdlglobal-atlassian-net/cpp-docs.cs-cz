@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089075"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Slabé odkazy a ukončování cykly (C + +/ CX)
 V žádné systém typů, který je založen na počítání odkazů, mohl vytvořit odkazy na typy *cykly*– to znamená, jeden objekt odkazuje na druhý objekt, druhý objekt odkazuje na objekt třetí, a tak dále dokud některé konečný objekt odkazuje zpět první objekt. V cyklu nelze odstranit objekty správně při počet odkazů jeden objekt klesne na nulu. Které vám pomůžou vyřešit tento problém, C + +/ CX poskytuje [Platform::WeakReference třída](../cppcx/platform-weakreference-class.md) třídy. A `WeakReference` objektu podporuje [vyřešit](../cppcx/platform-weakreference-class.md#resolve) metoda, která vrátí hodnotu null, pokud objekt již existuje, nebo vyvolá [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Pokud objekt zachování připojení, ale není typu `T`.  

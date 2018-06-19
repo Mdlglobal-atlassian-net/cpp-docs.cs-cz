@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087378"
 ---
 # <a name="enums-ccx"></a>Výčty (C + +/ CX)
 C + +/ CX podporuje `public enum class` – klíčové slovo, což je analagous pro standardní C++ `scoped  enum`. Při použití enumerátor, který je deklarovaný s použitím `public enum class` – klíčové slovo, musíte použít identifikátor výčtu k určení rozsahu každou hodnotu výčtu.  

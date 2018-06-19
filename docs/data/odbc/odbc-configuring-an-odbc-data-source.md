@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089149"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Konfigurace zdroje dat ODBC
 Použít [zdroj dat](../../data/odbc/data-source-odbc.md) s aplikací mít vyvinuté, musíte použít Správce rozhraní ODBC jeho konfiguraci. Správce rozhraní ODBC uchovává informace o dostupných zdrojů dat a jejich informace o připojení v registru systému Windows. Správce rozhraní ODBC použijte k přidání, úpravě a odstranit zdroje dat v **zdroje dat** dialogové okno a k přidání a odstranění ovladačů ODBC.  

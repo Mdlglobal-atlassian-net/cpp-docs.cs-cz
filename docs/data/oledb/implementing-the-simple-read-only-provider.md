@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100613"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementace jednoduchého zprostředkovatele pouze pro čtení
 Rozšířené příklad v tomto tématu ukazuje, jak upravit soubory vytvořené v průvodci k vytvoření jednoduchého zprostředkovatele pouze pro čtení, který čte sadu dva řetězce z textového souboru. K vytvoření tohoto zprostředkovatele ze souborů průvodce, přidáte kód pro dokončení těchto úloh:  

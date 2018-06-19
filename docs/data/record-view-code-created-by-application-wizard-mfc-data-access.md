@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107100"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Kód zobrazení záznamu vytvořený pomocí Průvodce aplikací (Data MFC Access)
 [Průvodce aplikací knihovny MFC](../mfc/reference/database-support-mfc-application-wizard.md) zobrazení přepsání `OnInitialUpdate` a `OnGetRecordset` členské funkce. Poté, co rozhraní framework vytvoří oken s rámečkem, dokumentů a zobrazení, volá `OnInitialUpdate` k inicializaci zobrazení. `OnInitialUpdate` získá ukazatel na sadu záznamů z dokumentu. Základní třídy [CView::OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funkce otevře sadu záznamů. Následující kód ukazuje tohoto postupu `CRecordView`:  

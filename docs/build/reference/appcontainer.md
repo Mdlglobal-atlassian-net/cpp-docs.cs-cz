@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368431"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 Označí spustitelné soubory, které musí být spuštěný v kontejnerem aplikace, například Microsoft Store nebo Windows univerzální aplikace.  

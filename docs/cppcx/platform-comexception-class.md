@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090521"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException – třída
 Reprezentuje chyby COM, ke kterým došlo během provádění aplikací. COMException je základní třída pro sadu předdefinovaných, standard výjimky.  

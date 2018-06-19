@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370459"
 ---
 # <a name="cl-filename-syntax"></a>Syntaxe názvu souboru CL
 CL přijímá soubory s názvy, které následují zásady vytváření názvů systému souborů FAT, HPFS nebo systému souborů NTFS. Libovolný název souboru může obsahovat úplné nebo částečné cesty. Úplná cesta zahrnuje název jednotky a jeden nebo více názvů adresářů. CL přijímá názvy souborů oddělené buď zpětná lomítka (\\) nebo předávat lomítka (/). Názvy souborů, které obsahují mezery, musí být uzavřena do dvojitých uvozovek. Část cesty vynechá název jednotky, které CL předpokládá, že se aktuální jednotku. Pokud nezadáte cestu, CL předpokládá, že soubor je v aktuálním adresáři.  

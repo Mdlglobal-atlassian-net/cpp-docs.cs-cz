@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090283"
 ---
 # <a name="data-access-programming-mfcatl"></a>Přístup k datům programování (MFC/ATL)
 V průběhu let Visual C++ poskytl několik způsobů, jak pracovat s databází. V 2011 Microsoft oznámila, že ho je zarovnání na ODBC jako upřednostňovaný technologie pro přístup k systému SQL Server produkty z nativního kódu. Rozhraní ODBC je standardní a použití získat maximální přenositelnost kódu přes více platforem a zdroje dat. Většina produktů databáze SQL a mnoho NoSQL produkty podporují ODBC. Můžete použít rozhraní ODBC přímo ve volání nízké úrovně rozhraní API ODBC, nebo můžete použít obálkové třídy knihovny MFC rozhraní ODBC nebo obálky knihovny C++ třetích stran. 

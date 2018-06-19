@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090710"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Hodnota třídy a struktury (C + +/ CX)
 A *hodnotu struktura* nebo *třídy hodnoty* je Windows Runtime kompatibilní POD ("prostý původní struktura dat"). To má pevnou velikost a se skládá z pole pouze; na rozdíl od ref třídu má žádné vlastnosti.  

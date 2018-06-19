@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090865"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>CRT – funkce není podporována v aplikacích pro univerzální platformu Windows
 Mnoho funkcí jazyka C runtime (CRT) nejsou k dispozici, při sestavování aplikací pro univerzální platformu Windows (UWP). V některých případech jsou k dispozici alternativní řešení – – například můžete použít rozhraní API Win32 nebo prostředí Windows Runtime. Ale v ostatních případech funkcí CRT zakázali protože funkce, které odpovídají jejich nebo podporující rozhraní API neplatí pro aplikace UWP. Vyhledejte alternativní metoda, která je podporována pro prostředí Windows Runtime, najdete v tématu [alternativy k rozhraní API systému Windows v aplikacích pro UPW](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  

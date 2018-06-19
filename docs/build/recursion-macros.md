@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368958"
 ---
 # <a name="recursion-macros"></a>Rekurzivní makra
 Rekurzivní makra využít k volání NMAKE rekurzivně. Rekurzivní relace dědit informace o Tools.ini a makra příkazového řádku a proměnnou prostředí. Nedědí definované makefile odvozená pravidla nebo **. PŘÍPONY** a **. DRAHOCENNÝ** specifikace. Předávání makra NMAKE relaci rekurzivní, nastavit proměnnou prostředí s NASTAVENÝM před voláním rekurzivní, definujte makro v příkazu pro rekurzivní volání nebo definování makra v Tools.ini.  

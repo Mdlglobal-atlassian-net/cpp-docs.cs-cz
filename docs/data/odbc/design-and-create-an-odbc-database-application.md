@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088596"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>Návrh a vytvoření databázové aplikace ODBC
 Tato témata vám pomohou navrhnout a nastavit databázové aplikace ODBC.  

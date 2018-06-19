@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366933"
 ---
 # <a name="dependents"></a>Závislosti
 V řádku závislostí, zadejte nula nebo více závislé objekty po dvojtečkou (:) nebo dvojité dvojtečkou (:), pomocí libovolný platný název souboru nebo [pseudotarget](../build/pseudotargets.md). Oddělte více položky závislé na jeden nebo více mezerami nebo karty. DEPENDENTS se nerozlišují malá a velká písmena. S názvy souborů je povoleno cesty.  

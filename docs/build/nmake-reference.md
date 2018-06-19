@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372676"
 ---
 # <a name="nmake-reference"></a>NMAKE – odkaz
 Nástroj Údržba programu Microsoft (NMAKE. Soubor EXE) je nástroj příkazového řádku součástí [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] který sestavení projektů založených na příkazy, které jsou obsaženy v souboru popis.  

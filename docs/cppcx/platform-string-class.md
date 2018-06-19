@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094823"
 ---
 # <a name="platformstring-class"></a>Platform::String – třída
 Představuje kolekci sekvenční znaky Unicode, která se používá k reprezentování text. Další informace a příklady naleznete v tématu [řetězce](../cppcx/strings-c-cx.md).  

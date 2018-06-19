@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089049"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Databázové třídy ATL (šablony OLE DB)
 Společnost Microsoft poskytuje několik implementace technologie OLE DB, sadu rozhraní modelu COM, které poskytuje jednotný přístup k datům v různých informačních zdrojů a formáty.  OLE DB je oficiálně zastaralé; Tato dokumentace je pro vývojáře, kteří jsou zachování starší verze kódu. Nové aplikace měla použít rozhraní ODBC pro připojení ke zdrojům dat SQL.

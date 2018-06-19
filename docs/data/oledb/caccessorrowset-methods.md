@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092008"
 ---
 # <a name="caccessorrowset-methods"></a>Metody jazyka CAccessorRowset
 Informace o metodách v `CAccessorRowset`, najdete v části [CAccessorRowset – členové](../../data/oledb/caccessorrowset-members.md).

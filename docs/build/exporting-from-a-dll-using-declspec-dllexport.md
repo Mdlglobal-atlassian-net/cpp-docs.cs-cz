@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368545"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Export z knihovny DLL pomocí deklarace __declspec(dllexport)
 Microsoft zavedená **__export** v kompilátoru 16bitové verzi Visual C++ pro povolení kompilátoru automaticky generovat názvy exportu a umístit je soubor LIB. Tento soubor .lib pak lze stejně jako statické .lib propojit s knihovny DLL.  

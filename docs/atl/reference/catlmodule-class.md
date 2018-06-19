@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365279"
 ---
 # <a name="catlmodule-class"></a>CAtlModule – třída
 Tato třída poskytuje metody používané v několika ATL – třídy modulů.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089111"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference – třída
 `ArrayReference` je typ optimalizace, které může nahradit pro [Platform::Array ^](../cppcx/platform-array-class.md) ve vstupní parametry, když vyplníte pole stylu jazyka C s vloženými daty.  

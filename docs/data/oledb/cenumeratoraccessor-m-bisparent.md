@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095083"
 ---
 # <a name="cenumeratoraccessormbisparent"></a>CEnumeratorAccessor::m_bIsParent
 Proměnná určující, zda je enumerátor nadřazené enumerátor, pokud je řádek enumerátor.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092943"
 ---
 # <a name="working-with-documents-and-views"></a>Práce s dokumenty a zobrazeními
 Knihovna Microsoft Foundation třídy (MFC) závisí na architektuře document/view – pro mnoho funkcí. Obvykle se dokument uloží vaše data a zobrazení zobrazí v okně s rámečkem v oblasti klienta a spravuje interakci s uživatelem s daty. Zobrazení komunikuje s dokumentu, který má získat a aktualizovat data. Databázové třídy můžete použít s framework, nebo bez něj.  

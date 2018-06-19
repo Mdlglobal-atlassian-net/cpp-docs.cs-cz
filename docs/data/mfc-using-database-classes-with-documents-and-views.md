@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091865"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Použití databázových tříd s dokumenty a zobrazeními
 Databázové třídy MFC můžete použít s nebo bez architektuře dokument/zobrazení. Toto téma klade důraz práce s dokumenty a zobrazení. Vysvětluje:  

@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366468"
 ---
 # <a name="ccommodule-class"></a>CComModule – třída
 Od verze ATL 7.0 `CComModule` je zastaralý: najdete v části [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.  

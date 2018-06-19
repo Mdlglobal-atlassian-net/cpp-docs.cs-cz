@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094492"
 ---
 # <a name="accessors-and-rowsets"></a>Přístupové objekty a sady řádků
 Nastavit a načíst data, používat šablony technologie OLE DB přistupující objekt a sadu řádků, prostřednictvím [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) třídy. Tato třída může zpracovávat několik přístupových objektů různých typů.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092428"
 ---
 # <a name="platformagile-class"></a>Platform::Agile – třída
 Představuje objekt, který má MashalingBehavior = Standard jako agile objekt, který výrazně snižuje se možnost runtime dělení na vlákna výjimky. `Agile<T>` Umožňuje-agilní objekt, který má volání nebo volání z stejné nebo jiné vlákno. Další informace najdete v tématu [dělení na vlákna a zařazování](../cppcx/threading-and-marshaling-c-cx.md).  

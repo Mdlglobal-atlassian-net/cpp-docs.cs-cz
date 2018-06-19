@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364112"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl – třída
 Tato třída implementuje **IUnknown** a poskytuje výchozí implementaci třídy [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) rozhraní.  

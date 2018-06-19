@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367356"
 ---
 # <a name="command-macros-and-options-macros"></a>Příkazová makra a makra možností
 Makra příkazů jsou předdefinovány pro produkty společnosti Microsoft. Makra možností představují možnosti pro tyto produkty a nejsou definovaná ve výchozím nastavení. Jak se používají v předdefinované odvozená pravidla a mohou být používány bloky popisů nebo uživatelem definované odvozená pravidla. Makra příkazů může být předefinována představují část nebo všechny z příkazového řádku, včetně možnosti. Makra možností vygenerovat řetězec null, pokud není definovaná doleva.  

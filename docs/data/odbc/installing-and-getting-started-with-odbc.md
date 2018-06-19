@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088060"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalace a úvod do rozhraní ODBC
 V následujících tématech můžete nainstalovat součásti, které je potřeba začít pracovat s připojením ODBC (Open Database).  

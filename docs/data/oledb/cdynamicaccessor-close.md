@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089308"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 Odpojuje všechny sloupce, uvolňuje přidělenou paměť a uvolní [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) ukazatel rozhraní ve třídě.  

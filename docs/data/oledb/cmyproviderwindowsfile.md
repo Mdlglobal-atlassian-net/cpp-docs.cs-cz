@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097923"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 Průvodce vytvoří třídu obsahující jeden řádek dat; v takovém případě se nazývá `CMyProviderWindowsFile`. Následující kód pro `CMyProviderWindowsFile` je generován průvodcem a uvádí všechny soubory v adresáři pomocí **WIN32_FIND_DATA** struktura. `CMyProviderWindowsFile` dědí z **WIN32_FIND_DATA** strukturu:  

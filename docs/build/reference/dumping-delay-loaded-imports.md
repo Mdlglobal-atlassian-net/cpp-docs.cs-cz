@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372864"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Výpis importu se zpožděným načtením
 Importy s odloženým načtením můžete vypsat pomocí [/Imports dumpbin](../../build/reference/imports-dumpbin.md) a zobrazí se mírně liší informace než importuje standard. Tyto jsou rozdělen na vlastní část/Imports vypsání a jsou explicitně označeny jako importy s odloženým načtením. Pokud je uvolnit informace obsažené v bitové kopii, která poznamenat. Pokud je přítomen vazby informací, je třeba časového razítka cílový DLL poznamenat spolu s vázané adresy import.  

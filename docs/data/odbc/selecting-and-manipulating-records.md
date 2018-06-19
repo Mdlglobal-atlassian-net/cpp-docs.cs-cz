@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090075"
 ---
 # <a name="selecting-and-manipulating-records"></a>Výběr záznamů a manipulace s nimi
 Za normálních okolností když vyberete záznamy ze zdroje dat pomocí SQL **vyberte** příkaz získat sadu výsledků, což je sada záznamů z tabulky nebo dotazu. S třídami databází použít objekt sady záznamů a vyberte přístup sadu výsledků dotazu. Toto je objekt třídy specifické pro aplikaci, která je odvozena od třídy [CRecordset](../../mfc/reference/crecordset-class.md). Když definujete třídy sady záznamů, je třeba zadat zdroj dat pro její přidružení, tabulku, kterou chcete použít a sloupců tabulky. Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) vytvoří připojení ke zdroji dat konkrétní třídu. Průvodci zápis [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkce člena třídy `CRecordset` vrátit název tabulky. Další informace o vytvoření sady záznamů tříd pomocí průvodců najdete v tématu [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md) a [přidání příjemce rozhraní ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  

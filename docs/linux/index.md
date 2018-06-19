@@ -3,13 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "Vývoj Linux s dokumentaci jazyka C++"
-description: "Vytváření a ladění aplikací spuštěných v systému Linux."
+title: Vývoj Linux s dokumentaci jazyka C++
+description: Vytváření a ladění aplikací spuštěných v systému Linux.
 ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794177"
 ---
 # <a name="linux-development-with-c-documentation"></a>Vývoj Linux s dokumentaci jazyka C++
 

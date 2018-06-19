@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090546"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatele na datové vyrovnávací paměti (C + +/ CX)
 V prostředí Windows Runtime [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) rozhraní zajišťuje jazykově neutrální, na základě datového proudu pro přístup k datové vyrovnávací paměti. V jazyce C++ můžete získat nezpracovaná ukazatel základního bajtového pole pomocí rozhraní Windows Runtime knihovny IBufferByteAccess, která je definována v robuffer.h. Pomocí tohoto přístupu můžete upravit bajtové pole na místě bez provedení všechny nepotřebné kopie data.  

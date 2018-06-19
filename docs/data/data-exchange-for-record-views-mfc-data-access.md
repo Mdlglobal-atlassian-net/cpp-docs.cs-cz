@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089412"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Výměna dat pro zobrazení záznamů (Data MFC Access)
 Při použití [přidat třídu](../mfc/reference/adding-an-mfc-odbc-consumer.md) mapovat ovládacích prvků v zobrazení záznamu prostředku šablony dialogového okna polí sady záznamů, rozhraní spravuje výměny dat v obou směrech – od sady záznamů s ovládacími prvky a z ovládacích prvků do sady záznamů. Pomocí mechanizmu DDX znamená, že není nutné napsat kód pro přenos dat a zpět, sami.  

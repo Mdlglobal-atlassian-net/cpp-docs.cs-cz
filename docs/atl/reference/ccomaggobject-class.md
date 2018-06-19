@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364216"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject – třída
 Tato třída implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) rozhraní pro agregovaný objekt. Podle definice je agregovaný objekt obsažený v rámci vnějšího objekt. `CComAggObject` Třídy je podobná [CComObject třída](../../atl/reference/ccomobject-class.md)kromě toho, že zpřístupňuje rozhraní, které je přímo přístupný externím klientům.  

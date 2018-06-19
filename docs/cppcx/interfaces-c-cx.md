@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090642"
 ---
 # <a name="interfaces-ccx"></a>Rozhraní (C + +/ CX)
 I když třídu ref může dědit vlastnosti z maximálně jednu konkrétní základní třídu, můžete implementovat libovolný počet třídy rozhraní. Třída rozhraní (nebo struktura rozhraní) sám sebe může dědit (nebo vyžadovat) více rozhraní třídy, může přetížit jeho členských funkcí a může mít parametry typu.  

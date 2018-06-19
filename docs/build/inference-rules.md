@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368418"
 ---
 # <a name="inference-rules"></a>Odvozená pravidla
 Odvozená pravidla zadat příkazy aktualizaci cíle a odvození závislé objekty pro cíle. Rozšíření v pravidle odvození shodovat s jedním cílem a závislé, které mají stejné základní název. Odvozená pravidla jsou definované uživatelem nebo předdefinované; můžete jej předefinovat předdefinovaná pravidla.  

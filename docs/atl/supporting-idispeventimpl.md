@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362216"
 ---
 # <a name="supporting-idispeventimpl"></a>Podpora IDispEventImpl
 Šablony třídy [IDispEventImpl](../atl/reference/idispeventimpl-class.md) slouží k zajištění podpory pro připojení bodu jímky ve třídě ATL. Jímka bodu připojení umožňuje třídě zpracování událostí aktivována z externích objektů COM. Tyto jímky bodu připojení jsou mapovány s mapou podřízený události poskytované třídě.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089256"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType rozhraní
 `Platform::IValueType` je rozhraní infrastruktury, které je implementované hodnota třídy a struktury hodnotu. Není určená pro explicitně do vašeho kódu.  

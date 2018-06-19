@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368691"
 ---
 # <a name="masm-macros"></a>MASM – makra
 Aby bylo možné zjednodušit použití [Pseudooperace nezpracovaná](../build/raw-pseudo-operations.md), existuje sada maker, definovaných v ksamd64.inc, která slouží k vytvoření prologů a epilogů typických procedur.  

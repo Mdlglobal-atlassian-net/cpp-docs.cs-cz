@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087839"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Spolupráce s jinými jazyky (C + +/ CX)
 Tuto část dokumentace popisuje, jak používat C + +/ CX k vytváření prostředí Windows Runtime součásti, které mohou být spotřebovávána jiných programovacích jazyků a knihovny. Můžete také vytvářet součásti, které nejde je využívat ve všech jazycích. Tato část popisuje různé aspekty potřeba zvážit při C + +/ CX aplikace spolupracuje s součásti, které jsou zapsány pomocí jazyka JavaScript, jazyk rozhraní .NET Framework spravované nebo knihovna šablon C++ Runtime systému Windows.  

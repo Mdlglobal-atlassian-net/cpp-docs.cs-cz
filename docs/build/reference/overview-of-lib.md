@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379195"
 ---
 # <a name="overview-of-lib"></a>Přehled LIB
 LIB vytvoří standardní knihovny, importovat knihovny a exportovat soubory, které můžete použít se [odkaz](../../build/reference/linker-options.md) při sestavování programu. LIB se spouští z příkazového řádku.  

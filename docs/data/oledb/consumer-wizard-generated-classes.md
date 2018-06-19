@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091982"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Třídy generované v průvodci příjemcem
 Pokud použijete průvodce příjemcem knihovny ATL technologie OLE DB pro vygenerování příjemce, máte možnost použití šablony technologie OLE DB nebo OLE DB atributů. V obou případech vygeneruje průvodce příkaz třídy a třídy uživatelského záznamu. Příkaz třída obsahuje kód pro otevření zdroje dat a sady řádků, které zadáte v průvodci. Třída záznamu uživatele obsahuje mapu sloupce pro tabulku databáze, kterou jste vybrali. Generovaný kód se ale liší v každém případě:  

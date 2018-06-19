@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095291"
 ---
 # <a name="cbulkrowsetaddrefrows"></a>CBulkRowset::AddRefRows
 Volání [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně načítají v hromadné sadě řádků.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092385"
 ---
 # <a name="delegates-ccx"></a>Delegáti (C + +/ CX)
 `delegate` – Klíčové slovo se používá k deklaraci typu odkaz, který je ekvivalentní prostředí Windows Runtime objektu funkce v standardní C++. Deklarace delegáta podobné funkce podpisu; Určí návratový typ a typy parametrů, které musí mít jeho zabalené funkce. Toto je uživatelem definované delegáta deklarace:  

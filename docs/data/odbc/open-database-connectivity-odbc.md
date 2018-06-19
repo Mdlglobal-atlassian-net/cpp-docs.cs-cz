@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090445"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 Knihovna Microsoft Foundation třídy (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database). Od verze Visual Studio 2015 a ODBC systému SQL Server 2012 je upřednostňovaný způsob, jak připojit ke zdrojům dat SQL.

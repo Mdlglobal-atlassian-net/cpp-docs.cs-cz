@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090585"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC – třídy a vlákna
 Počínaje MFC 4.2, je podpora více vláken pro třídy MFC rozhraní ODBC. Upozorňujeme však, že MFC pro třídy DAO nenabízí podpora více vláken.  

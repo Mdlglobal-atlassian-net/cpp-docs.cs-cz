@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101845"
 ---
 # <a name="irowsetnotifycpfireonrowchange"></a>IRowsetNotifyCP::Fire_OnRowChange
 Vysílá [onrowchange –](https://msdn.microsoft.com/en-us/library/ms722694.aspx) událost pro všechny moduly pro naslouchání ve spojovacím bodě **IID_IRowsetNotify** oznámení příjemci změny, které mají vliv na řádky.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086792"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Místo začne typy a členy (C + +/ CX)
 V jazyce C + +/ CX, vyřazení prostředí Windows Runtime typů a členů pro producenti a spotřebitelé pomocí [zastaralé](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atribut podporovaný. Jestliže jste využívají rozhraní API, do které byl použit tento atribut, můžete získat kompilaci zprávu upozornění, která označuje, že rozhraní API je zastaralá a také doporučuje rozhraní API alternativní používat. Ve vlastní veřejné typy a metody můžete použít tento atribut a zadejte vlastní zprávu.  

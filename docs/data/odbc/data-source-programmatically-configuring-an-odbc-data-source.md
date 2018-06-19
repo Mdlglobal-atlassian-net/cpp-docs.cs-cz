@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091969"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programové nakonfigurování zdroje dat ODBC
 Toto téma vysvětluje, jak můžete nakonfigurovat připojení ODBC (Open Database) názvy zdrojů dat prostřednictvím kódu programu. To vám dává možnost pro přístup k datům bez vynucení uživateli explicitně zadat názvy zdrojů dat pomocí Správce rozhraní ODBC nebo jiné programy.  

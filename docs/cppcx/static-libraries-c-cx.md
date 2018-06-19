@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090100"
 ---
 # <a name="static-libraries-ccx"></a>Statické knihovny (C + +/ CX)
 Statické knihovny, který se používá v aplikaci pro univerzální platformu Windows (UWP) může obsahovat kód ISO standard C++, včetně typů STL a také volání rozhraní API Win32, které nejsou vyloučené z prostředí Windows Runtime aplikační platforma. Statické knihovny využívá komponenty prostředí Windows Runtime a může vytvořit komponenty prostředí Windows Runtime s určitými omezeními.  
