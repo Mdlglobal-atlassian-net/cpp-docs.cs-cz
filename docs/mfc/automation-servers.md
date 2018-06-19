@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343941"
 ---
 # <a name="automation-servers"></a>Automatizační servery
 Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo je vystavit objekty, budou se dá upravit. Automatizační server je aplikace, která zveřejňuje programovatelný objekty (označovaný jako objekty automatizace) k ostatním aplikacím (nazývá [klienti automatizace](../mfc/automation-clients.md)). Automatizační servery se někdy označuje jako komponenty pro automatizaci.  

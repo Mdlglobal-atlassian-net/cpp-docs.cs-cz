@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350426"
 ---
 # <a name="ole-server-classes"></a>OLE – třídy serveru
 Tyto třídy jsou používány serverových aplikací. Dokumenty na serveru jsou odvozeny od `COleServerDoc` spíše než z **CDocument**. Všimněte si, že protože `COleServerDoc` je odvozený od `COleLinkingDoc`, dokumenty na serveru může být také kontejnery, které podporují propojení.  

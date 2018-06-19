@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347026"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg – obslužná rutina
 K dosažení směrování příkazů, každý příkaz cíl volá `OnCmdMsg` – členská funkce další příkaz cíle v pořadí. Příkaz cílem použití `OnCmdMsg` a určit, zda jejich zpracování příkazu směrovat na jiný cíl příkazu, pokud jejich nelze ho zpracovat.  

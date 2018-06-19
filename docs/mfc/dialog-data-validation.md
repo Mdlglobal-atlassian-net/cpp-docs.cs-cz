@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344877"
 ---
 # <a name="dialog-data-validation"></a>Ověřování dat dialogového okna
 Můžete zadat ověření kromě výměny dat voláním funkce DDV, jak je znázorněno v příkladu v [výměna dialogových dat](../mfc/dialog-data-exchange.md). `DDV_MaxChars` Volání v příkladu ověří, že řetězec zadaný v ovládacím prvku textového pole není delší než 20 znaků. Funkce DDV obvykle upozorní uživatele s okno se zprávou, pokud ověření selže a vloží zaměřuje na problematický ovládací prvek, uživatel může znovu zadat data. DDV funkce pro daný ovládací prvek musí být volána hned po funkce DDX pro stejný ovládací prvek.  

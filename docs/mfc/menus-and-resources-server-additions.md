@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351348"
 ---
 # <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy (součást). Serverová aplikace požaduje mnoho doplňky strukturu nabídky a jiné prostředky, protože může být spuštěno v jednom ze tří režimů: stát samostatného embedded, nebo na místě. Jak je popsáno v [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) článek, jsou maximálně čtyři sady nabídky. Všechny čtyři se používají pro aplikace MDI úplný server při pouze tři se používají pro miniserver. V Průvodce vytvořením aplikace vytvoří rozložení nabídky potřebné pro typ serveru, který má být. Některé přizpůsobení může být nutné.  

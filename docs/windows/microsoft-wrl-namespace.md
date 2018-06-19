@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881647"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL – obor názvů
 Definuje základní typy, které tvoří knihovna šablon C++ Runtime systému Windows.  

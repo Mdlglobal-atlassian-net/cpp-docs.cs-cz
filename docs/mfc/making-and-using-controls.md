@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347004"
 ---
 # <a name="making-and-using-controls"></a>Příprava a použití ovládacích prvků
 Zkontrolujte většina ovládacích prvků pro dialogová okna v jazyku Visual C++ [editoru dialogového okna](../windows/dialog-editor.md). Ale můžete také vytvořit ovládací prvky v libovolném dialogové okno nebo okno.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882573"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Karta editoru dialogového okna, panel nástrojů
 Karta Editor dialogového okna se zobrazí v [okno sady nástrojů](/visualstudio/ide/reference/toolbox) když pracujete v editoru dialogového okna. Přidání ovládacích prvků do vašeho nové dialogové okno, přetáhněte ovládací prvky z panelu nástrojů na vytváření dialogových oken (Další informace najdete v tématu [přidání ovládacího prvku do dialogového okna](adding-a-control-to-a-dialog-box.md)). Potom můžete pohyb ovládací prvky nebo změnit jejich velikost a tvar.  

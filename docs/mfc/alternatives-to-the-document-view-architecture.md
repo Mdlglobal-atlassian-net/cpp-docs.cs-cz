@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344201"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativy k architektuře dokument/zobrazení
 Document/view – Architektura aplikace MFC normálně používat ke správě informací, formáty souborů a vizuální znázornění dat uživatelům. Pro většinu aplikací klasické pracovní plochy architektuře dokument/zobrazení je vhodné a efektivní aplikace architekturu. Tato architektura odděluje data ze zobrazení a ve většině případů, zjednodušuje vaší aplikace a snižuje redundantní kódu.  

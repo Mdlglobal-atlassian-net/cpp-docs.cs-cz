@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345101"
 ---
 # <a name="ole-db-classes"></a>Třídy OLE DB
 Podpora OLE DB v MFC se skládá právě třídy [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Zobrazuje záznamy databáze v ovládacích prvcích prostřednictvím připojení přímo k zobrazení formuláře [CRowset](../data/oledb/crowset-class.md) objektu. Další informace o šablony příjemce technologie OLE DB najdete v tématu [seznamu z OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md).  

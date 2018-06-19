@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347731"
 ---
 # <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 Microsoft Foundation třídy (MFC), poskytují obálku objektově orientované C++ přes Win32 pro rychlý vývoj nativních aplikací klasické pracovní plochy. Aktivní šablony Library (ATL) je obálky knihovny, která usnadňuje vývoj COM a se velmi často používá pro vytváření ovládacích prvků ActiveX.  

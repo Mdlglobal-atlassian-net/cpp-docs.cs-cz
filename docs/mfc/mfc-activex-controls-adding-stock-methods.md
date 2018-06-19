@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349261"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC – ovládací prvky ActiveX: Přidání uložených metod
 Uložené metody se liší od vlastní metoda v tom, že už je implementováno třídou [COleControl](../mfc/reference/colecontrol-class.md). Například `COleControl` obsahuje člen předdefinované funkci, která podporuje metodu aktualizace pro ovládací prvek. Položka mapy odeslání pro tuto metodu uložených je **DISP_STOCKFUNC_REFRESH**.  

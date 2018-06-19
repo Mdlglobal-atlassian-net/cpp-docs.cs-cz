@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343347"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
 Toto téma popisuje minimální práce nezbytné k implementaci pro kopírování a vkládání ze schránky v aplikaci OLE. Doporučujeme, abyste si přečetli [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) témata než budete pokračovat.  

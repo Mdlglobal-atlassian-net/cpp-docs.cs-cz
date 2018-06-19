@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342628"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>Výjimky: Výjimky v konstruktorech
 Při vyvolání k výjimce v konstruktoru, vyčistit ať objekty a přidělení paměti provedené před vyvolání výjimky, jak je popsáno v [výjimkami: vyvolání výjimky z funkce vaše vlastní](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  

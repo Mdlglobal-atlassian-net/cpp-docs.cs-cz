@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881150"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Postupy: Zpracování událostí s použitím knihovny WRL
 Tento dokument ukazuje, jak používat k přihlášení k odběru a zpracování událostí objektu prostředí Windows Runtime Windows Runtime C++ šablony knihovny (WRL).  

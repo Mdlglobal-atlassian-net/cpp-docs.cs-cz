@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347400"
 ---
 # <a name="manipulating-the-progress-control"></a>Manipulace s ovládacím prvkem průběh
 Existují tři způsoby, jak změnit aktuální pozici ovládací prvek průběh ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  

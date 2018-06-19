@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349643"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Postupy: Přizpůsobení panelu nástrojů Rychlý přístup
 Rychlý přístup k panelu nástrojů (QAT) je přizpůsobitelné nástrojů, který obsahuje sadu příkazů, které jsou buď zobrazí vedle tlačítka aplikace nebo na kartách kategorie. Následující obrázek znázorňuje typické nástrojů Rychlý přístup.  

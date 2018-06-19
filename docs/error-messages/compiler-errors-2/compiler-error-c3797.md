@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274141"
 ---
 # <a name="compiler-error-c3797"></a>C3797 chyby kompilátoru
 'přepsání': deklaraci události nemůže mít specifikátor override (musí být umístěny na metody přidat, odebrat nebo vyvolat události místo)  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345914"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek
 Jako součást [povolení tipů nástrojů](../mfc/enabling-tool-tips.md), zpracováváte **TTN_NEEDTEXT** zpráva přidáním následující položku do nadřazené okno mapy zpráv:  

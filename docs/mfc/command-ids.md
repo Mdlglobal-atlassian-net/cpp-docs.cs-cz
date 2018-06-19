@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341469"
 ---
 # <a name="command-ids"></a>Identifikátory příkazů
 Příkaz je podrobně popsán pomocí jejího ID příkaz samostatně (v kódování **wm_command –** zprávy). Toto ID je přiřazený k objektu uživatelského rozhraní, která generuje příkaz. Obvykle jsou pojmenované ID pro funkce, které jsou přiřazeny k objektu uživatelského rozhraní.  

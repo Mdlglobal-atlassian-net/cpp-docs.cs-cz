@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340161"
 ---
 # <a name="active-document-servers"></a>Servery pro aktivní dokumenty
 Aktivní dokument servery, jako je například Word, Excel nebo PowerPoint dokumentům hostitele jinými typy aplikací označují jako aktivní dokumenty. Na rozdíl od OLE vložené objekty (které se zobrazí v rámci dané stránky jiného dokumentu), aktivní dokumenty zadejte úplné rozhraní a dokončení nativní funkce serverové aplikace, která je vytvořila. Uživatelé mohou vytvářet dokumenty pomocí potenciál jejich oblíbených aplikací (pokud jsou aktivní dokument povolené) ještě lze považovat za výsledné projektu jedné entity.  

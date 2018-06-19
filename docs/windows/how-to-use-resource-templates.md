@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882729"
 ---
 # <a name="how-to-use-resource-templates"></a>Postupy: Použití šablon prostředků
 Prostředek šablony je vlastní prostředek, který jste uložili jako soubor .rct. Šablony prostředků může potom sloužit jako výchozí bod pro vytvoření další prostředky. Šablony prostředků ušetřit čas při vývoji další prostředky nebo skupiny zdroje, které mají funkce, jako je standardní ovládací prvky a další opakovaných elementy. Například můžete chtít zahrnout tlačítko Nápověda a ikona logo společnosti několik dialogových oken. Uděláte to tak rychle, vytvořte novou šablonu pole dialogové okno a upravit pomocí logo a na tlačítko Nápověda.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345983"
 ---
 # <a name="mapping-messages"></a>Mapování zpráv
 Každá třída framework, který může přijímat zprávy nebo příkazy, má svou vlastní "mapy zpráv." Rozhraní používá mapy zpráv pro připojení zprávy a příkazy k jejich funkcím obslužných rutin. Všechny třídy odvozené od třídy `CCmdTarget` může mít mapy zpráv. Další články vysvětlují mapy zpráv podrobně a popisují, jak je používat.  

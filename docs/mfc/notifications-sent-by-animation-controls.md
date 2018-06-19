@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345237"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Oznámení zaslaná z ovládacích prvků animace
 Ovládacího prvku animace ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) odešle dva různé typy zpráv s oznámením. Oznámení se odesílají v podobě [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zprávy.  

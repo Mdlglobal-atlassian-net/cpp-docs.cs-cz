@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343691"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Přizpůsobení vzhledu ovládacího prvku panel nástrojů
 Třída `CToolBarCtrl` poskytuje mnoho stylů, které ovlivňují vzhled (a v některých případech chování) objektu panelu nástrojů. Změnit objekt nástrojů nastavením `dwCtrlStyle` parametr `CToolBarCtrl::Create` (nebo `CToolBar::CreateEx`) – členská funkce, při prvním vytváření ovládací prvek panelu nástrojů.  

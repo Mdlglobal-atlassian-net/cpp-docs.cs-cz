@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344416"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Postupy: Přidání ovládacích prvků pásu karet a obslužných rutin událostí
 Prvky, jako jsou tlačítka a pole se seznamem, které přidáte do panelů jsou ovládacích prvků pásu karet. Panely jsou oblasti panelu pásu karet, které zobrazují skupinu související ovládací prvky.  

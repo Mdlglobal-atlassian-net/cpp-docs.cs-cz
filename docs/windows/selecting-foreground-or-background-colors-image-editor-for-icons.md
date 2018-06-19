@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888643"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Výběr barev popředí nebo pozadí (editor obrázků pro ikony)
 S výjimkou **mazání**, nástroje na **Editor obrázků** nástrojů kreslení s aktuální barvu popředí nebo pozadí po stisknutí tlačítka myši doleva nebo doprava, v uvedeném pořadí.  

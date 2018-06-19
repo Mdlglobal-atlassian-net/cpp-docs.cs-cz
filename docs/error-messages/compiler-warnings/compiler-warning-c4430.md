@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272110"
 ---
 # <a name="compiler-warning-c4430"></a>C4430 upozornění kompilátoru
 chybějící specifikátor typu: předpokládá se int Poznámka: C++ nepodporuje výchozí int  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346672"
 ---
 # <a name="dialog-boxes"></a>Dialogová okna
 Aplikace pro Windows se často komunikují s uživateli pomocí dialogových oken. Třída [CDialog](../mfc/reference/cdialog-class.md) poskytuje rozhraní pro správu dialogová okna, dialogové okno editor Visual C++ usnadňuje návrh dialogových oken a vytvoření jejich prostředky šablony dialogového okna a průvodců kódem zjednodušit proces inicializace a ověřování ovládacích prvků v dialogovém okně a shromažďování hodnot zadaných uživatelem.  

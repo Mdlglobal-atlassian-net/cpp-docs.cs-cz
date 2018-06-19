@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345817"
 ---
 # <a name="exchanging-data"></a>Výměna dat
 Stejně jako u většiny dialogových oken, výměnu dat mezi vlastností a aplikace je jedním z nejdůležitějších funkce seznamu vlastností. Tento článek popisuje, jak k provedení této úlohy.  

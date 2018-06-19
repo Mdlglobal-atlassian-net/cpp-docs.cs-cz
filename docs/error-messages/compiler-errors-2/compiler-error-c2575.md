@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229797"
 ---
 # <a name="compiler-error-c2575"></a>C2575 chyby kompilátoru
 "identifikátor": pouze členských funkcí a databáze, které mohou být virtuální  

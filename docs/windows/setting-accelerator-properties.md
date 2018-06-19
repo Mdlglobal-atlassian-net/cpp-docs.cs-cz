@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888842"
 ---
 # <a name="setting-accelerator-properties"></a>Nastavení vlastností akcelerátoru
 Vlastnosti akcelerátoru můžete nastavit v [vlastnosti – okno](/visualstudio/ide/reference/properties-window) kdykoli. Editor akcelerátorů můžete také použít k úpravě vlastností akcelerátoru v tabulce akcelerátorů. Změny provedené pomocí okna vlastnosti nebo editor akcelerátorů mít stejný výsledek: úpravy se okamžitě projeví v tabulce akcelerátorů.  

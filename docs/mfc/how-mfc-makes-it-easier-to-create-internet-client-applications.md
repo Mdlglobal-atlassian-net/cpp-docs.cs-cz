@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346110"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací
 Třídy Microsoft Foundation zapouzdřují funkce Win32 internetová rozšíření (WinInet) způsobem, který poskytuje pro programátory v jazyce MFC Známé kontext. Knihovna MFC poskytuje tři třídy souborů Internetu ([CInternetFile](../mfc/reference/cinternetfile-class.md), [CHttpFile](../mfc/reference/chttpfile-class.md), a [CGopherFile](../mfc/reference/cgopherfile-class.md)) odvozené z [CStdioFile](../mfc/reference/cstdiofile-class.md) – třída . Ne jenom tyto třídy, Nedělejte načítání a manipulace s daty Internetu pro programátory, kteří použili `CStdioFile` pro místní soubory, ale tyto třídy můžete řešit místní soubory a soubory Internet konzistentní, transparentním způsobem.  

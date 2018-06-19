@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882924"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Zobrazení nebo skrytí mřížky pixelů (editor obrázků pro ikony)
 Pro všechny podoken Editor obrázků s faktoru zvětšení 4 nebo vyšší můžete zobrazit mřížky, které vymezuje jednotlivých pixelů v bitové kopii.  

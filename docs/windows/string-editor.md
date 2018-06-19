@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891373"
 ---
 # <a name="string-editor"></a>Editor řetězce
 Tabulky řetězců je prostředek systému Windows, který obsahuje seznam ID, hodnoty a titulky pro všechny řetězce vaší aplikace. Například výzvy stavového řádku jsou umístěny v tabulce řetězců.  

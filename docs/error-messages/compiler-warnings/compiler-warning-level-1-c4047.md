@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274180"
 ---
 # <a name="compiler-warning-level-1-c4047"></a>C4047 kompilátoru upozornění (úroveň 1)
 'operátor': "identifier1" se liší v úrovních dereference z 'identifier2.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347276"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE – pozadí: Propojování a vkládání
 Pomocí příkazu vložení v aplikaci kontejneru vytvořením Vložená součást nebo vložené položky. Zdroj dat pro vložené položky jsou uloženy jako součást OLE dokumentu, který jej obsahuje. Tímto způsobem souboru dokumentu pro dokument aplikace word procesoru může obsahovat text a také může obsahovat rastrové obrázky, grafy, vzorce nebo jiný typ data.  

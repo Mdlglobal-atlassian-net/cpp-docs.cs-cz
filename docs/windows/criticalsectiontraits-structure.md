@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870548"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits – struktura
 Se specializuje objekt CriticalSection pro podporu neplatný kritická sekce nebo funkce, která se verze kritická sekce.  

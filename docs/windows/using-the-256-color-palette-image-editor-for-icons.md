@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890902"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Používání palety s 256 barvami (editor obrázků pro ikony)
 Kreslení pomocí výběr z palety s 256 barvami, je nutné vybrat barvy z palety barev v [barvy – okno](../windows/colors-window-image-editor-for-icons.md).  

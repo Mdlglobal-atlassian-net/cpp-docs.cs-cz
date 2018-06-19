@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343551"
 ---
 # <a name="handling-commands-in-the-document"></a>Zpracování příkazů v dokumentu
 Třídě dokument může také zpracovat určité příkazy vygenerované položky nabídky, tlačítek panelu nástrojů nebo klávesy akcelerátoru. Ve výchozím nastavení **CDocument** zpracovává uložení a uložit jako příkazy v nabídce soubor pomocí serializace. Další příkazy, které mají vliv data může být zpracována členské funkce dokumentu. Například v programu Scribble třídy `CScribDoc` poskytuje obslužnou rutinu pro úpravy Vymazat vše příkaz, který odstraní všechna data, které jsou aktuálně uloženy v dokumentu. Dokumenty může mít mapy zpráv, ale na rozdíl od zobrazení, nemůže zpracovat dokumenty standardní zprávy Windows – pouze **wm_command –** zprávy, nebo "příkazy."  

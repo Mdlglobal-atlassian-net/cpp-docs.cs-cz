@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342268"
 ---
 # <a name="-operations-comment"></a>// Komentář k operacím
 `// Operations` Část deklarace tříd MFC obsahuje členské funkce, které lze volat na objekt, chcete-li provádět následující akce nebo provádět akce (provádění operací). Tyto funkce jsou obvykle jinou hodnotu než**const** protože mají obvykle vedlejší účinky. Mohou být virtuální nebo nevirtuální podle potřeb třídy. Tito členové jsou obvykle veřejné.  

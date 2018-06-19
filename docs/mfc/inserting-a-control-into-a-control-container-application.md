@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346334"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX – kontejnery ovládacích prvků: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku
 Než se dostanete z aplikací kontejneru ovládacího prvku ActiveX k ovládacího prvku ActiveX, musíte přidat ovládací prvek ActiveX do kontejneru aplikace pomocí [vložit ovládací prvek ActiveX](../windows/insert-activex-control-dialog-box.md) dialogové okno.  

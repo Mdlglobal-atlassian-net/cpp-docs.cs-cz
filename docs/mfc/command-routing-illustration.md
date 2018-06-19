@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341133"
 ---
 # <a name="command-routing-illustration"></a>Znázornění směrování příkazů
 Pro ilustraci, zvažte zprávou příkazu z vymazat všechny položky nabídky v nabídce aplikace MDI upravit. Předpokládejme, že se stane, obslužné rutiny pro tento příkaz jako funkce člena třídy dokumentu aplikace. Zde je, jak tento příkaz dosáhne její obslužnou rutinu po výběru položky nabídky:  

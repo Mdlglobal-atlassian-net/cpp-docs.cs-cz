@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341894"
 ---
 # <a name="creating-windows"></a>Vytváření oken
 Rozhraní framework automaticky vytvoří většinu systému windows, které potřebujete v rámci programu. [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md) ukazuje, jak rozhraní framework vytvoří okna s rámečkem spojené s dokumenty a zobrazeními. Ale pro zvláštní účely, můžete vytvořit vlastní windows – včetně vlastní podřízená okna okna s rámečkem nebo zobrazení – kromě poskytl rozhraní systému windows.  

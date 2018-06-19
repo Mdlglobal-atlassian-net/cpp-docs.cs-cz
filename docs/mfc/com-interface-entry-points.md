@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341408"
 ---
 # <a name="com-interface-entry-points"></a>COM – vstupní body rozhraní
 Členské funkce rozhraní modelu COM, použijte [method_prologue –](com-interface-entry-points.md#method_prologue) makro zachování správné globální stav při volání metody exportovaný rozhraní.  

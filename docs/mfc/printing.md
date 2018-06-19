@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348224"
 ---
 # <a name="printing"></a>Tisk
 Microsoft Windows implementuje zobrazení nezávislé na zařízení. V prostředí MFC, to znamená, že stejné kreslení volání v `OnDraw` funkce člena třídy zobrazení jsou zodpovědní za kreslení na zobrazení a na jiných zařízení, jako jsou tiskárny. Náhledu tisku cílové zařízení je simulované tiskový výstup do zobrazení.  

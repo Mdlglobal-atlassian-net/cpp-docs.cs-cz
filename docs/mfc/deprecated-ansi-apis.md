@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342056"
 ---
 # <a name="deprecated-ansi-apis"></a>Zastaralá rozhraní API standardu ANSI
 Knihovna Microsoft Foundation Class (MFC) migruje směrem k třídy a metody, které jsou založeny na ve znakové sadě Unicode. V důsledku toho ANSI verzích několik metod MFC jsou zastaralé. V aplikacích budoucí pomocí kódování Unicode verze těchto metod.  

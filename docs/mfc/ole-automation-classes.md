@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342875"
 ---
 # <a name="ole-automation-classes"></a>OLE – třídy automatizace
 Tyto třídy podporovat klienty automatizace (aplikace, které řídí jiné aplikace). Automatizační servery (aplikace, které se dá nastavit podle dalších aplikací) jsou podporovány prostřednictvím [mapy odesílání](../mfc/reference/dispatch-maps.md).  

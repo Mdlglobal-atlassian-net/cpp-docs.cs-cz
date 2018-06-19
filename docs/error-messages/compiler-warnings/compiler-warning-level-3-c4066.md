@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289981"
 ---
 # <a name="compiler-warning-level-3-c4066"></a>C4066 kompilátoru upozornění (úroveň 3)
 znaky následující po první široká charakterová konstanta ignorovat  

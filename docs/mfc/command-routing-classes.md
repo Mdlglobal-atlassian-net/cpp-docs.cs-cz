@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341959"
 ---
 # <a name="command-routing-classes"></a>Třídy směrování příkazů
 Jako uživatel pracuje s aplikací tak, že zvolíte nabídek nebo ovládací prvek panelu tlačítka myši, aplikace odesílá zprávy z objektu ovlivněných uživatelského rozhraní příslušný příkaz cílový objekt. Příkaz cílové třídy odvozené od `CCmdTarget` zahrnují [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), a z nich odvozené třídy. Rozhraní framework podporuje automatické příkaz směrování, aby příkazy mohou být zpracováno nejvhodnější objektem v aplikaci aktuálně aktivní.  

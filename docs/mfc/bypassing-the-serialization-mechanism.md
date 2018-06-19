@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343642"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Obcházení mechanismu serializace
 Protože jste viděli, rozhraní framework poskytuje výchozí způsob, jak číst a zapisovat data do a ze souborů. Serializace prostřednictvím objektu archivu nejlépe vyhovuje požadavkům na kvalitních mnoho aplikací. Takové aplikace načte soubor zcela do paměti, umožňuje uživateli aktualizovat soubor a zapíše aktualizovanou verzi na disk znovu.  

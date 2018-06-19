@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236858"
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>C2200 chyby kompilátoru prostřednictvím C2299
 
@@ -126,7 +127,7 @@ ms.lasthandoff: 05/04/2018
 |[Chyba kompilátoru C2245](compiler-error-c2245.md)|neexistující – členská funkce '*funkce*' stanoveno, přítele (podpis funkce člen neodpovídá žádné přetížení)|
 |[Chyba kompilátoru C2246](compiler-error-c2246.md)|'*identifikátor*': Neplatný statických dat člena v místně definované – třída|
 |[Chyba kompilátoru C2247](compiler-error-c2247.md)|'*identifikátor*' není k dispozici protože '*class1*'používá'*specifikátor*' to dědí'*class2*'|
-|[Chyba kompilátoru C2248](compiler-error-c2248.md)|'*identifikátor*': Nelze získat přístup k *usnadnění* *člen* deklarovaná ve třídě*– třída*.|
+|[Chyba kompilátoru C2248](compiler-error-c2248.md)|'*identifikátor*': Nelze získat přístup k *usnadnění* *člen* deklarovaná ve třídě *– třída*.|
 |[Chyba kompilátoru C2249](compiler-error-c2249.md)|'*identifikátor*': žádné a přístupnou cestu k *usnadnění* *člen* deklarované v virtuální základní '*– třída*.|
 |[Chyba kompilátoru C2250](compiler-error-c2250.md)|'*identifikátor*': nejednoznačný dědičnosti třídy *– třída*::*člen*.|
 |[Chyba kompilátoru C2251](compiler-error-c2251.md)|obor názvů '*obor názvů*'nemá člena'*identifikátor*'-měli jste na mysli '*člen*'?|

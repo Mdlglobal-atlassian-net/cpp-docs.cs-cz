@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346435"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipulace s ovládacím prvkem popis tlačítka
 Třída `CToolTipCtrl` poskytuje funkce, které řídí různé atributy skupinu člena `CToolTipCtrl` objekt a tip okno nástroje.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344893"
 ---
 # <a name="exception-classes"></a>Třídy výjimek
 Knihovna tříd poskytuje mechanismus zpracování výjimek na základě třídy `CException`. Rozhraní používá výjimky v jeho kód; můžete je také použít v vaše. Další informace najdete v článku [výjimky](../mfc/exception-handling-in-mfc.md). Odvozujete vlastní typy výjimek z `CException`.  
