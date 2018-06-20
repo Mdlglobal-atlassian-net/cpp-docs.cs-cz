@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: cb7c6a3c3384debb33a9192dc2e887725088bc3f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762095"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238588"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153), [15,5](#improvements_155), [15,6 operací](#improvements_156), a [15.7](#improvements_157)
 
@@ -493,12 +493,12 @@ jinak provést statické přetypování převést objekt před jeho odesláním:
     printf("%i\n", static_cast<int>(s))
 ```
 
-Pro řetězce vytvořené a spravují pomocí CStringW poskytnutého `operator LPCWSTR()` se má použít pro objekt CStringW na očekávaný řetězec formátu C ukazatele přetypování.
+Pro řetězce vytvořené a spravují pomocí CString poskytnutého `operator LPCTSTR()` se má použít pro objekt CString na očekávaný řetězec formátu C ukazatele přetypování.
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>Kvalifikátory odchylka nákladů ve vytváření – třída

@@ -1,7 +1,7 @@
 ---
 title: Přidání ovládacího prvku (ATL – tutoriál, část 2) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358573"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238705"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Přidání ovládacího prvku (ATL – tutoriál, část 2)
 V tomto kroku bude přidání ovládacího prvku do projektu, sestavte jej a otestovat ji na webové stránce.  
@@ -26,7 +26,7 @@ V tomto kroku bude přidání ovládacího prvku do projektu, sestavte jej a ote
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>Chcete-li přidat objekt do projektu knihovny ATL  
   
-1.  V zobrazení tříd klikněte pravým tlačítkem na projekt mnohoúhelníku.  
+1.  V **Průzkumníku**, klikněte pravým tlačítkem na projekt mnohoúhelníku.  
   
 2.  Přejděte na příkaz **přidat** na místní nabídky a klikněte na **nová položka** v podnabídce.  
   

@@ -1,7 +1,7 @@
 ---
 title: Pomocí CString | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361698"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238718"
 ---
 # <a name="using-cstring"></a>Pomocí CString
 Témata v této části popisují, jak programovat s `CString`. Pro referenční dokumentaci o `CString` třídy, najdete v dokumentaci k [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -32,7 +32,7 @@ Témata v této části popisují, jak programovat s `CString`. Pro referenční
   
  A `CStringW` objekt obsahuje `wchar_t` zadejte a podporuje řetězců v kódu Unicode. A `CStringA` objekt obsahuje `char` typu a řetězce podporuje jednobajtové a vícebajtové (znakové sady MBCS). A `CString` objekt podporuje buď `char` typu nebo `wchar_t` typu, v závislosti na tom, jestli `MBCS` symbol nebo `UNICODE` symbol je definována v době kompilace.  
   
- A `CString` objekt uchová textová data `CStringData` objektu. `CString` přijímá `null`-ukončenou stylu jazyka C řetězce, ale není zachována `null` znak v datech uložených znak. Místo toho `CString` sleduje řetězec délky. `CString` poskytnout zakončením hodnotu null, když exportuje řetězec stylu jazyka C. Můžete vložit `null` v `CString`, ale jeho může vést k neočekávaným výsledkům.  
+ A `CString` objekt uchová textová data `CStringData` objektu. `CString` přijímá `null`-ukončena stylu jazyka C řetězce. `CString` Délka řetězce pro vyšší výkon, ale zachová také sleduje `null` znak v datech uložených znak pro podporu převod na LPCWSTR. `CString` Exportuje řetězec stylu jazyka C zahrnuje ukončení hodnotu null. Můžete vložit `null` v jiných umístěních v `CString`, ale ho může vést k neočekávaným výsledkům.  
   
  Následující sadu řetězec třídy lze použít bez propojení knihovny MFC, s nebo bez CRT – podpora: `CAtlString`, `CAtlStringA`, a `CAtlStringW`.  
   
