@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705602"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271393"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 až 2015
 
@@ -1585,7 +1585,7 @@ Tato vylepšená podpora pro standardy ISO C/C++ může vyžadovat změny existu
 
 - Přidá středník pro typy tříd.
 - Dokončení závorkách pro literály Nezpracovaný řetězec.
-- Dokončení Víceřádkový komentáře (/ * * /)
+- Dokončení Víceřádkový komentáře (nebo\* \*nebo)
 
 **Najít všechny odkazy** nyní automaticky vyřeší a filtry odkazy na pozadí, jakmile se zobrazí seznam textovou odpovídá.
 

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372616"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271344"
 ---
 # <a name="chttpfile-class"></a>CHttpFile – třída
 Poskytuje funkce pro žádosti a číst soubory na serveru HTTP.  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Změní sémantiku na záhlaví nového. Může být jedna z následujících akcí:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Sloučí hlavičky se stejným názvem, pomocí příznaku přidat hlavičku první pro následné hlavička najít. Například "přijmout: text / *" následované "přijmout: zvuk nebo\*" výsledkem je tvorba jeden hlavičky "přijmout: text /\*, zvuk nebo\*". Je volající aplikace k zajištění získá na ucelenosti schéma s ohledem na data, která přijímá požadavky odeslané s záhlaví sloučené nebo samostatné.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Sloučí hlavičky se stejným názvem, pomocí příznaku přidat hlavičku první pro následné hlavička najít. Například "přijmout: text /\*" následované "přijmout: zvuk nebo\*" výsledkem je tvorba jeden hlavičky "přijmout: text /\*, zvuk nebo\*". Je volající aplikace k zajištění získá na ucelenosti schéma s ohledem na data, která přijímá požadavky odeslané s záhlaví sloučené nebo samostatné.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Provede odebrat a přidejte do nahradit aktuální záhlaví. Název hlavičky se použije k odebrat aktuální záhlaví a úplná hodnota se použije pro přidání nové záhlaví. Pokud je hodnota hlavičky prázdný a se nachází záhlaví, bude odebrán. Pokud není prázdná, je hodnota hlavičky nahrazena.  
   

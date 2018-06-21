@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5af6a8644514b18af3397fb22d54d42f649eed09
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377093"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271315"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 OLE – automatizace poskytuje způsobů, jak volat metody a pro přístup k vlastnostem napříč aplikacemi. Tento mechanismus poskytl knihovny Microsoft Foundation Class pro odeslání tyto požadavky je "mapy odesílání," což znamená, že názvy interních a externích objekt funkce a vlastnosti, jakož i datové typy vlastností sami nebo argumenty funkce.  
@@ -163,20 +163,20 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**Const VARIANT\***  nebo **VARIANT &**|  
+|**VTS_VARIANT**|**Const VARIANT\\ \***  nebo **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**krátký\***|  
-|**VTS_PI4**|**dlouhá\***|  
-|**VTS_PR4**|**Plovoucí desetinná čárka\***|  
-|**VTS_PR8**|**Double\***|  
-|**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**DATUM\***|  
-|**VTS_PBSTR**|**BSTR\***|  
-|**VTS_PDISPATCH**|**LPDISPATCH\***|  
-|**VTS_PSCODE**|**KÓD SCODE\***|  
-|**VTS_PBOOL**|**BOOL\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
-|**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
+|**VTS_PI2**|**krátký\\\***|  
+|**VTS_PI4**|**dlouhá\\\***|  
+|**VTS_PR4**|**Plovoucí desetinná čárka\\\***|  
+|**VTS_PR8**|**Double\\\***|  
+|**VTS_PCY**|**CY\\\***|  
+|**VTS_PDATE**|**DATUM\\\***|  
+|**VTS_PBSTR**|**BSTR\\\***|  
+|**VTS_PDISPATCH**|**LPDISPATCH\\\***|  
+|**VTS_PSCODE**|**KÓD SCODE\\\***|  
+|**VTS_PBOOL**|**BOOL\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
+|**VTS_PUNKNOWN**|**LPUNKNOWN\\\***|  
 |**VTS_NONE**|Žádné parametry|  
 
 ### <a name="requirements"></a>Požadavky  
