@@ -47,7 +47,7 @@ Pokud správně naformátován výstupu vlastního kroku sestavení nebo událos
   
  Kde:  
   
--   {*a* & #124; *b*} je volbou buď *a* nebo *b*.  
+-   {*a* &#124; *b*} je volbou buď *a* nebo *b*.  
   
 -   [`ccc`] je volitelný řetězec nebo parametr.  
   
