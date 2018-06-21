@@ -53,7 +53,7 @@ Kompilátor generuje řetězec ID pro každý konstrukce ve vašem kódu, který
   
     -   ELEMENT_TYPE_PTR je reprezentován jako ' *' následující změny typu.  
   
-    -   Typu ELEMENT_TYPE_BYREF je reprezentován jako ' @' následující změny typu.  
+    -   Typu ELEMENT_TYPE_BYREF je reprezentován jako ' \@' následující změny typu.  
   
     -   ELEMENT_TYPE_PINNED je reprezentován jako ' ^' následující změny typu. Visual C++ compiler nikdy vygeneruje.  
   
