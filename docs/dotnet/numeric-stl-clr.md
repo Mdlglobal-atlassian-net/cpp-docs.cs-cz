@@ -7,24 +7,32 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - <cliext/numeric>
+- cliext::accumulate
+- cliext::adjacent_difference
+- cliext::inner_product
+- cliext::partial_sum
 dev_langs:
 - C++
 helpviewer_keywords:
 - numeric functions [STL/CLR]
 - <cliext/numeric> header [STL/CLR]
 - <numeric> header [STL/CLR]
+- accumulate function [STL/CLR]
+- adjacent_difference function [STL/CLR]
+- inner_product function [STL/CLR]
+- partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8d02423b2f8a2573fb4a90fd6f348a8e012dc91b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33139523"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305511"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 Definuje kontejneru šablony funkce, které provádět algoritmy poskytuje pro číselné zpracování.  
@@ -34,20 +42,86 @@ Definuje kontejneru šablony funkce, které provádět algoritmy poskytuje pro �
 ```  
 #include <cliext/numeric>  
 ```  
-  
-## <a name="functions"></a>Funkce  
-  
-|Funkce|Popis|  
-|--------------|-----------------|  
-|[accumulate (STL/CLR)](../dotnet/accumulate-stl-clr.md)|Vypočítá součet všech elementů v zadaném rozsahu včetně některé počáteční hodnoty tak, že vypočítá následných částečné součtů nebo vypočítá výsledek podobně získané z pomocí zadané operace binární než součet následných částečné výsledky.|  
-|[adjacent_difference (STL/CLR)](../dotnet/adjacent-difference-stl-clr.md)|Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.|  
-|[inner_product (STL/CLR)](../dotnet/inner-product-stl-clr.md)|Vypočítá součet element-wise součin dvou rozsahy a přidává ji k zadaná počáteční hodnota nebo vypočítá výsledek obecný postup kde binárních operací sum a produktu jsou nahrazovány jiné zadaný binární operace.|  
-|[partial_sum (STL/CLR)](../dotnet/partial-sum-stl-clr.md)|Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím `i`element TD a ukládá výsledek každé součet v `i`element TD cílového rozsahu nebo vypočítá výsledek obecný postup kde operaci součet je nahrazena jinou zadaný binární operace.|  
-  
+
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<cliext – nebo číselný >  
   
  **Namespace:** cliext –  
   
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="declarations"></a>Deklarace  
+  
+|Funkce|Popis|  
+|--------------|-----------------|  
+|[accumulate (STL/CLR)](#accumulate)|Vypočítá součet všech elementů v zadaném rozsahu včetně některé počáteční hodnoty tak, že vypočítá následných částečné součtů nebo vypočítá výsledek podobně získané z pomocí zadané operace binární než součet následných částečné výsledky.|  
+|[adjacent_difference (STL/CLR)](#adjacent_difference)|Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.|  
+|[inner_product (STL/CLR)](#inner_product)|Vypočítá součet element-wise součin dvou rozsahy a přidává ji k zadaná počáteční hodnota nebo vypočítá výsledek obecný postup kde binárních operací sum a produktu jsou nahrazovány jiné zadaný binární operace.|  
+|[partial_sum (STL/CLR)](#partial_sum)|Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím `i`element TD a ukládá výsledek každé součet v `i`element TD cílového rozsahu nebo vypočítá výsledek obecný postup kde operaci součet je nahrazena jinou zadaný binární operace.|  
+ 
+## <a name="functions"></a>Funkce
+
+## <a name="accumulate"></a> accumulate (STL/CLR)
+Vypočítá součet všech elementů v zadaném rozsahu včetně některé počáteční hodnoty tak, že vypočítá následných částečné součtů nebo vypočítá výsledek podobně získané z pomocí zadané operace binární než součet následných částečné výsledky.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```  
+template<class _InIt, class _Ty> inline  
+    _Ty accumulate(_InIt _First, _InIt _Last, _Ty _Val);  
+template<class _InIt, class _Ty, class _Fn2> inline  
+    _Ty accumulate(_InIt _First, _InIt _Last, _Ty _Val, _Fn2 _Func);  
+```  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato funkce se chová stejně jako číselné funkce standardní knihovny C++ `accumulate`. Další informace najdete v tématu [accumulate](../standard-library/numeric-functions.md#accumulate).  
+
+## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
+Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```  
+template<class _InIt, class _OutIt> inline  
+    _OutIt adjacent_difference(_InIt _First, _InIt _Last,  
+        _OutIt _Dest);  
+template<class _InIt, class _OutIt, class _Fn2> inline  
+    _OutIt adjacent_difference(_InIt _First, _InIt _Last,  
+        _OutIt _Dest, _Fn2 _Func);  
+```  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato funkce se chová stejně jako číselné funkce standardní knihovny C++ `adjacent_difference`. Další informace najdete v tématu [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).  
+
+## <a name="inner_product"></a> inner_product – (STL/CLR)
+Vypočítá součet element-wise součin dvou rozsahy a přidává ji k zadaná počáteční hodnota nebo vypočítá výsledek obecný postup kde binárních operací sum a produktu jsou nahrazovány jiné zadaný binární operace.  
+  
+###<a name="syntax"></a>Syntaxe  
+  
+```  
+template<class _InIt1, class _InIt2, class _Ty> inline  
+    _Ty inner_product(_InIt1 _First1, _InIt1 _Last1, _InIt2 _First2,  
+        _Ty _Val);  
+template<class _InIt1, class _InIt2, class _Ty, class _Fn21,  
+       class _Fn22> inline  
+    _Ty inner_product(_InIt1 _First1, _InIt1 _Last1, _InIt2 _First2,  
+        _Ty _Val, _Fn21 _Func1, _Fn22 _Func2);  
+```  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato funkce se chová stejně jako číselné funkce standardní knihovny C++ `inner_product`. Další informace najdete v tématu [inner_product –](../standard-library/numeric-functions.md#inner_product).
+
+## <a name="partial_sum"></a> partial_sum (STL/CLR)
+Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím `i`element TD a ukládá výsledek každé součet v `i`element TD cílového rozsahu nebo vypočítá výsledek obecný postup kde operaci součet je nahrazena jinou zadaný binární operace.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```  
+template<class _InIt, class _OutIt> inline  
+    _OutIt partial_sum(_InIt _First, _InIt _Last, _OutIt _Dest);  
+template<class _InIt, class _OutIt, class _Fn2> inline  
+    _OutIt partial_sum(_InIt _First, _InIt _Last,  
+        _OutIt _Dest, _Fn2 _Func);  
+```  
+  
+### <a name="remarks"></a>Poznámky  
+ Tato funkce se chová stejně jako číselné funkce standardní knihovny C++ `partial_sum`. Další informace najdete v tématu [partial_sum](../standard-library/numeric-functions.md#partial_sum).  
+    
