@@ -1,7 +1,7 @@
 ---
 title: Styly využívané prostředím MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 9af450071546691778dc607746870084a7b1f346
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271367"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322417"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC  
   
@@ -321,7 +321,7 @@ Upravit styly týkají [CEdit třída](../../mfc/reference/cedit-class.md) objek
 |`ES_NOHIDESEL`|Za normálních okolností ovládací prvek upravit skryje výběr při řízení ztratí zaměření pro vstup a Invertuje výběr zaměření pro vstup přijetí ovládacího prvku. Určení `ES_NOHIDESEL` odstraní tato výchozí akce.|  
 |`ES_NUMBER`|Umožňuje pouze číslice, které je třeba zadat do ovládacího prvku pro úpravy.|  
 |`ES_OEMCONVERT`|V textovém poli v zadaném textu je převést z znakovou sadu ANSI na znakovou sadu pro výrobce OEM a pak znovu ANSI. To zajistí správnou znak převod při volání `AnsiToOem` funkce systému Windows převést řetězec ANSI v ovládacím prvku upravit OEM znaků. Tento styl je nejvhodnější pro ovládací prvky obsahující názvy souborů.|  
-|`ES_PASSWORD`|Zobrazí všechny znaky jako znak hvězdičky (**\\\***) jako jsou zadané v textové pole. Aplikace můžete použít `SetPasswordChar` – členská funkce změnit znak, který se zobrazí.|  
+|`ES_PASSWORD`|Zobrazí všechny znaky jako znak hvězdičky (__\*__) jako jsou zadané v textové pole. Aplikace můžete použít `SetPasswordChar` – členská funkce změnit znak, který se zobrazí.|  
 |`ES_READONLY`|Zabrání uživatelům zadání nebo úpravě textu v textovém poli.|  
 |`ES_RIGHT`|Zarovnává vpravo text v ovládacím prvku jednořádkové nebo víceřádkové upravit.|  
 |`ES_UPPERCASE`|Převede všechny znaky na velká písmena, jako jsou zadané v textové pole.|  

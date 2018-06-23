@@ -1,7 +1,7 @@
 ---
 title: Vytvoření kódu C/C++ v příkazovém řádku | Microsoft Docs
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379273"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322313"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Vytvoření kódu C/C++ v příkazovém řádku
 
@@ -51,7 +51,7 @@ Zástupce příkazového řádku jsou nainstalovány ve složce specifické pro 
 
 Skutečné počáteční složky a místní názvy nabídek lišit v závislosti na verzi Visual Studia, instalaci a instalaci přezdívka, pokud jste nastavili jednu. Pro příklad, pokud máte Visual Studio 2017 nainstalován a vy jste danou ho instalace Přezdívka z *Preview*, má název zástupce příkazového řádku vývojáře **příkazový řádek vývojáře pro VS 2017 (Preview)**, ve složce s názvem **Visual Studio 2017**.
 
-Pokud jste nainstalovali [nástroje sestavení pro Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) (který také obsahuje sady nástrojů kompilátoru Visual Studio 2015 Update 3), jenom na konkrétní architektury nativní nebo mezi nástroje příkazového řádku vývojáře možnosti jsou nainstalovány. a ne obecný **příkazový řádek vývojáře** zástupce.
+Pokud jste nainstalovali [nástroje sestavení pro Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (který také obsahuje sady nástrojů kompilátoru Visual Studio 2015 Update 3), jenom na konkrétní architektury nativní nebo mezi nástroje příkazového řádku vývojáře možnosti jsou nainstalovány. a ne obecný **příkazový řádek vývojáře** zástupce.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Chcete-li otevřít okno příkazového řádku vývojáře
@@ -197,6 +197,6 @@ Obsahuje odkazy na články, které popisují možnosti linkeru a LINK.exe.
 [Nástroje sestavení C/C++](../build/reference/c-cpp-build-tools.md)<br/>
 Poskytuje nástroje, které jsou zahrnuté v sadě Visual Studio pro vytváření odkazy pro C/C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)

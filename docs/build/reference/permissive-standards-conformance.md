@@ -1,6 +1,6 @@
 ---
 title: -projektovou - (standardy shoda) | Microsoft Docs
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379312"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322261"
 ---
 # <a name="permissive--standards-conformance"></a>/ projektovou-(standardy shoda)
 
@@ -50,7 +50,7 @@ Rozšíření pro konkrétní prostředí a jazyk oblastí, které standardní o
 
 **/ Projektovou-** možnost používá podporu shoda v aktuální verzi kompilátoru k určení, které jazykové konstrukty jsou nonkonformní. Možnost nezjišťuje, pokud kód vyhovuje na konkrétní verzi standardní C++. Pokud chcete povolit všechny implementovaná kompilátoru podporu pro nejnovější koncept standard, použijte [/std:latest](../../build/reference/std-specify-language-standard-version.md) možnost. Chcete-li omezit podpora kompilátoru současné době implementovanou standardu C ++ 17, použijte [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) možnost. Chcete-li omezit podpora kompilátoru tak, aby lépe odpovídaly C ++ 14 standard, použijte [/std: c ++ 14](../../build/reference/std-specify-language-standard-version.md) možnost, která je výchozí.
 
-Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 standardy odpovídající kód podporuje – kompilátor Visual C++ v aplikaci Visual Studio 2017. **/ Projektovou-** možnost nemusí rozpoznat problémy s ohledně některých aspektů vyhledávání dvoufázového názvu, vazby bez const odkaz na dočasný, považuje kopie init jako přímý init, která umožňují více uživatelem definované převody v Inicializace nebo alternativní tokeny pro logické operátory a další oblasti nepodporované shoda. Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 standardy odpovídající kód podporuje – kompilátor Visual C++ v aplikaci Visual Studio 2017. V závislosti na verzi sady Visual Studio **/ projektovou-** možnost nemusí rozpoznat problémy s ohledně některých aspektů vyhledávání dvoufázového názvu, vazby bez const odkaz na dočasný, považuje kopie init jako přímý init, která umožňují více uživatelem definované převody v inicializace nebo alternativní tokeny pro logické operátory a další oblasti nepodporované shoda. Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md). Chcete-li získat nejvíce z **/ projektovou-**, aktualizovat na nejnovější verzi sady Visual Studio.
 
 ### <a name="how-to-fix-your-code"></a>Jak opravit kódu
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 Může se také zobrazit chyby v šabloně metaprogramování, kde typy výsledků podmíněný operátor může změnit v části **/Zc:ternary** a **/ projektovou-**. Jedním ze způsobů, chcete-li vyřešit tento problém je použití [std::remove_reference](../../standard-library/remove-reference-class.md) na výsledný typ.
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>Dvoufázové název vyhledávání (částečné)
+#### <a name="two-phase-name-look-up"></a>Vyhledávání dvoufázového název
 
-Když **/ projektovou-** je možnost nastavena v Visual Studio 2017 verze 15.3, kompilátor analyzuje funkce a – třída definice šablony identifikace závislé a nezávislých názvů používaných v šablonách podle potřeby pro dvoufázového název hledání. V této verzi se provádí pouze název detekci závislosti. Konkrétně nezávislých názvy, které nejsou deklarované v rámci definice šablony způsobit diagnostické zprávy podle potřeby standardy ISO C++. Ale vazby nezávislých názvů, které vyžadují, že argument závislé vyhledávání v kontextu definice není nastavená.
+Když **/ projektovou-** je možnost nastavena, kompilátor analyzuje funkce a – třída definice šablony identifikace závislé a nezávislých názvů používaných v šablonách podle potřeby pro hledání dvoufázového název. Ve Visual Studio 2017 verze 15.3 provedení analýzy závislostí název. Konkrétně nezávislých názvy, které nejsou deklarované v rámci definice šablony způsobit diagnostické zprávy podle potřeby standardy ISO C++. V aplikaci Visual Studio 2017 verze 15.7 se taky dělá vazby nezávislých názvy, které vyžadují argument závislé vyhledávání v kontextu definice.
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+Pokud chcete starší verze chování pro dvoufázového vyhledávání, ale jinak má **/ projektovou-** chování, přidejte **/Zc:twoPhase-** možnost.
+
 ### <a name="windows-header-issues"></a>Problémy hlavičky Windows
 
 **/ Projektovou-** možnost je příliš přísné pro verze sady Windows než Windows patří Creators aktualizace SDK (10.0.16299.0) nebo verze ovladače Kit WDK (Windows). 1709. Doporučujeme, abyste je aktualizovat na nejnovější verze sady Windows, aby bylo možné používat **/ projektovou-** ve vašem kódu ovladačů systému Windows nebo zařízení.
 
-Některé soubory hlaviček v systému Windows patří Creators aktualizace SDK (10.0.16299.0) nebo ovladač Kit WDK (Windows). 1709, stále mít problémy, které je kompatibilní s použitím **/ projektovou-**. Chcete-li tyto problémy vyřešit, doporučujeme, můžete omezit použití těchto hlaviček pouze tyto soubory zdrojového kódu, které je vyžadují a odeberte **/ projektovou-** možnost při kompilaci tyto soubory konkrétní zdrojového kódu. Následující problémy jsou specifické pro Windows patří Creators aktualizace SDK (10.0.16299.0):
+Některé soubory hlaviček v dubnu Windows SDK aktualizace 2018 (10.0.17134.0), Windows patří Creators aktualizace SDK (10.0.16299.0) nebo ovladač Kit WDK (Windows). 1709, stále mít problémy, které je kompatibilní s použitím **/permissive-**. Chcete-li tyto problémy vyřešit, doporučujeme, můžete omezit použití těchto hlaviček pouze tyto soubory zdrojového kódu, které je vyžadují a odeberte **/ projektovou-** možnost při kompilaci tyto soubory konkrétní zdrojového kódu.
 
-#### <a name="issue-in-umqueryh"></a>Problém um\Query.h
+Tyto knihovny WRL WinRT hlavičky vydané v systému Windows. dubna 2018 aktualizace SDK (10.0.17134.0) nejsou čisté s **/ projektovou-**. Chcete-li tyto problémy vyřešit, buď nepoužívejte **/ projektovou-**, nebo použijte **/ projektovou-** s **/Zc:twoPhase-** při práci s tyto hlavičky:
 
-Při použití **/ projektovou-** přepínače kompilátoru `tagRESTRICTION` struktura nekompiluje z důvodu case(RTOr) člen 'nebo'.
+- Problémy v winrt/wrl/async.h
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují Query.h bez **/ projektovou-** možnost.
+- Problém winrt/wrl/implements.h
 
-#### <a name="issue-in-umcellularapioemh"></a>Problém um\cellularapi_oem.h
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-Při použití **/ projektovou-** přepínače kompilátoru, předat dál deklaraci `enum UICCDATASTOREACCESSMODE` způsobí, že upozornění:
+Tyto uživatele režimu hlavičky vydané v systému Windows. dubna 2018 aktualizace SDK (10.0.17134.0) nejsou čisté s **/ projektovou-**. Chcete-li tyto problémy vyřešit, nepoužívejte **/ projektovou-** při práci s tyto hlavičky:
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Problémy v um/Tune.h
 
-Předat dál deklaraci bez ohledu na obor výčtu je rozšíření Microsoft. Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují cellularapi_oem.h bez **/ projektovou-** možnost, nebo použijte [/wd](../../build/reference/compiler-option-warning-level.md) možnost ticho upozornění C4471.
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>Problém um\omscript.h
+- Problém um/spddkhlp.h
 
-V C ++ 03, převod z řetězcového literálu na BSTR (což je typedef k ' wchar_t *') je zastaralý, ale povoleny. V C ++ 11 převod již není povoleno.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Problémy v um/refptrco.h
 
-Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují omscript.h bez **/ projektovou-** možnost, nebo použijte **/Zc:strictStrings-** místo.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+Tyto problémy jsou specifické pro uživatele režimu hlavičky v sadě Windows patří Creators aktualizace SDK (10.0.16299.0):
+
+- Problém um/Query.h
+
+   Při použití **/ projektovou-** přepínače kompilátoru `tagRESTRICTION` struktura nekompiluje z důvodu case(RTOr) člen 'nebo'.
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují Query.h bez **/ projektovou-** možnost.
+
+- Problém um/cellularapi_oem.h
+
+   Při použití **/ projektovou-** přepínače kompilátoru, předat dál deklaraci `enum UICCDATASTOREACCESSMODE` způsobí, že upozornění:
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   Předat dál deklaraci bez ohledu na obor výčtu je rozšíření Microsoft. Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují cellularapi_oem.h bez **/ projektovou-** možnost, nebo použijte [/wd](../../build/reference/compiler-option-warning-level.md) možnost ticho upozornění C4471.
+
+- Problém um/omscript.h
+
+   V C ++ 03, převod z řetězcového literálu na BSTR (což je typedef k ' wchar_t *') je zastaralý, ale povoleny. V C ++ 11 převod již není povoleno.
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   Chcete-li vyřešit tento problém, zkompilovat soubory, které zahrnují omscript.h bez **/ projektovou-** možnost, nebo použijte **/Zc:strictStrings-** místo.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
@@ -407,7 +453,7 @@ Ve verzi Visual Studio 2017 15,5 a novější verze použijte tento postup:
 
 1. Otevřete váš projekt **stránky vlastností** dialogové okno.
 
-1. V části **vlastnosti konfigurace**, rozbalte **C/C++** složky a vyberte **jazyk** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **jazyk** stránku vlastností.
 
 1. Změna **shoda režimu** hodnotu vlastnosti na **Ano (/ projektovou-)**. Zvolte **OK** nebo **použít** uložte provedené změny.
 
@@ -423,7 +469,7 @@ Ve verzi před Visual Studio 2017 verze 15,5 použijte tento postup:
 
 - V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)   
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)
+- [Možnosti kompilátoru](../../build/reference/compiler-options.md)
+- [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

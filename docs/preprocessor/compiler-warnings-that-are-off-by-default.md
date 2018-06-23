@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705563"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322391"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnuté
 
@@ -89,7 +89,7 @@ Ve výchozím nastavení v sadě Visual Studio 2015 a novějších verzích jsou
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (úroveň 1)|'*operator1*': operátor před čárkou nemá žádný vliv; nebyla hodláte '*operator2*'?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (úroveň 1)|výraz nemá žádný vliv; očekávaný výraz s vedlejším účinkem|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (úroveň 3)|'__assume' obsahuje vliv '*vliv*.|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (úroveň 4)|Informační: catch(...) sémantiku změněné od Visual C++ 7.1; strukturované výjimky (SEH) jsou již zachyceny|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (úroveň 4)|informační: catch(...) sémantiku změněné od Visual C++ 7.1; strukturované výjimky (SEH) jsou již zachyceny|
 |C4574 (úroveň 4)|'*identifikátor*'je definován jako ' 0': měli jste na mysli používat ' #if *identifikátor*'?|
 |C4577 (úroveň 1)|použít s žádná výjimka zpracování zadaný; režim noexcept ukončení na výjimka není zaručena. Zadejte /EHsc|
 |C4582 (úroveň 4)|'*typ*': konstruktor není volán implicitně|
@@ -153,12 +153,14 @@ Ve výchozím nastavení v sadě Visual Studio 2015 a novějších verzích jsou
 |[C5038](../error-messages/compiler-warnings/c5038.md) (úroveň 4)|– datový člen '*člen1*'bude inicializován po – datový člen'*člen2*' <sup>15.3</sup>|
 |C5039 (úroveň 4)|'*funkce*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný funkci extern C v části - EHc. Nedefinované chování může dojít, pokud je tato funkce vyvolá výjimku. <sup>15,5</sup>|
 |C5042 (úroveň 3)|'*funkce*': deklarace funkcí v oboru bloku nemůže být zadaný, vložené' ve standardní C++; odebrat, vložené' specifikátor <sup>15,5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilátoru budou vkládat spektrum zmírnění dopadů pro zatížení paměti, pokud je zadán přepínač /Qspectre <sup>15.7</sup>|
 
-<sup>14.1</sup> toto upozornění je k dispozici od ve Visual Studiu 2015 Update 1.<br>
-<sup>14.3</sup> toto upozornění je k dispozici od Visual Studio 2015 Update 3.<br>
-<sup>15.3</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15.3.<br>
-<sup>15,5</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15,5.<br>
-<sup>Oprávnění</sup> toto upozornění je vypnutý, pokud [/ projektovou-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru nastavena.
+<sup>14.1</sup> toto upozornění je k dispozici od ve Visual Studiu 2015 Update 1.  
+<sup>14.3</sup> toto upozornění je k dispozici od Visual Studio 2015 Update 3.  
+<sup>15.3</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15.3.  
+<sup>15,5</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15,5.  
+<sup>15.7</sup> toto upozornění je k dispozici od Visual Studio 2017 verze 15.7.  
+<sup>Oprávnění</sup> toto upozornění je vypnutý, pokud [/ projektovou-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru nastavena.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Upozornění vypnutí ve výchozím nastavení v dřívějších verzích
 

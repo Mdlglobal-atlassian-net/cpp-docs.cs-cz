@@ -1,6 +1,6 @@
 ---
 title: Postup nahlásit problém s sady nástrojů Visual C++ | Microsoft Docs
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec9e92e05bdf3c1e12a8c7cb2ee060175fa6bf7
-ms.sourcegitcommit: 99a61ad26868f814589bf122dc4ab99c83ea2d0a
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297518"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322365"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak vytvářet sestavu o problém s Visual C++ nástrojů nebo dokumentace
 
@@ -82,7 +82,7 @@ Nejlepší místo k najít tyto informace se v protokolu sestavení ihned po se 
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Tak, aby odesílaly obsah příkazového řádku
 
-1. Vyhledejte **CL.command.1.tlog** souborů a otevřete ji. Ve výchozím nastavení, tento soubor je umístěný ve složce Dokumenty v \\Visual Studio *verze*\\projekty\\*název řešení SolutionName* \\ *ProjectName*\\*konfigurace*\\*ProjectName*.tlog\\CL.command.1.tlog, nebo ve složce uživatele v části \\Zdroj\\úložiště\\*název řešení SolutionName*\\*ProjectName*\\*konfigurace* \\ *ProjectName*.tlog\\CL.command.1.tlog. Pokud používáte jiné systém sestavení, nebo pokud jste změnili výchozí umístění pro svůj projekt může být v jiném umístění.
+1. Vyhledejte **CL.command.1.tlog** souborů a otevřete ji. By default, this file is located in your Documents folder in \\Visual Studio *version*\\Projects\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog\\CL.command.1.tlog, or in your User folder under \\Source\\Repos\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog\\CL.command.1.tlog. Pokud používáte jiné systém sestavení, nebo pokud jste změnili výchozí umístění pro svůj projekt může být v jiném umístění.
 
    Uvnitř tohoto souboru najdete v ní názvy soubory zdrojového kódu, za nímž následuje argumenty příkazového řádku používá ke kompilaci je každý na samostatné řádky.
 
@@ -358,7 +358,7 @@ Vytvořte vaše zkopírujte jako minimální IDE projekt, pak balíček komprima
 Existuje několik dobrý způsoby, jak získat sestavy do us. Můžete použít předdefinované sady Visual Studio [nahlásit problém nástroj](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), nebo [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/) stránky. Získáte také přímo na stránkách k jednotlivým komunity vývojářů výběrem **názor produkt** tlačítko v dolní části této stránky. Výběr závisí na, zda chcete pomocí nástrojů integrovaných v prostředí IDE pro snímání obrazovky a uspořádání sestavy pro příspěvků na stránkách komunity vývojářů, nebo pokud chcete používat přímo na webu.
 
 > [!NOTE]
-> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Společnost Microsoft se zavazuje dodržování všechny data o ochraně osobních údajů zákony a nařízení. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [prohlášení o ochraně osobních údajů Microsoft](https://www.visualstudio.com/dn948229).
+> Bez ohledu na to, jak odeslat sestavy společnost Microsoft respektuje vaše soukromí. Společnost Microsoft se zavazuje dodržování všechny data o ochraně osobních údajů zákony a nařízení. Informace o tom, jak jsme považovat data, která můžete nám poslat najdete v tématu [prohlášení o ochraně osobních údajů Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Pomocí sestavy nástroj problém
 
@@ -391,7 +391,7 @@ Pokud máte obavy o odhalil svoji identitu, [vytvořit nový účet Microsoft](h
 
 1. V sestavě, které jste vytvořili, zvolte **, přidejte komentář** k vytvoření vaší privátní popis problému.
 
-1. v editoru odpovědět, použijte níže ovládací prvek rozevírací seznam **odeslání** a **zrušit** tlačítka k určení cílové skupiny v odpovědi. Tyto privátní odpovědi a všechny bitové kopie, odkazů nebo kód, který je v nich zahrnuta, můžete zobrazit pouze uživatelé, které zadáte. Zvolte **Viewable moderátorů a původní plakáty** omezit viditelnost zaměstnancům společnosti Microsoft a sami.
+1. V editoru odpovědět, použijte níže ovládací prvek rozevírací seznam **odeslání** a **zrušit** tlačítka k určení cílové skupiny v odpovědi. Tyto privátní odpovědi a všechny bitové kopie, odkazů nebo kód, který je v nich zahrnuta, můžete zobrazit pouze uživatelé, které zadáte. Zvolte **Viewable moderátorů a původní plakáty** omezit viditelnost zaměstnancům společnosti Microsoft a sami.
 
 1. Přidejte popis a žádné jiné informace, Image a potřebné pro vaše zkopírujte přiložených souborů. Vyberte **odeslání** tlačítko soukromě odesílat výše uvedené informace.
 
