@@ -558,3 +558,4 @@
 ## [Upozornění kompilátoru (úroveň 1) C4997](compiler-warning-level-1-c4997.md)
 ## [Upozornění kompilátoru (úroveň 1) C4999](compiler-warning-level-1-c4999.md)
 ## [Upozornění kompilátoru C5038](c5038.md)
+## [Upozornění kompilátoru C5045](c5045.md)
