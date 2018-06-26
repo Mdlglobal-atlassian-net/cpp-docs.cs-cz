@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344497"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932244"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Odvozování ovládacích prvků ze standardního ovládacího prvku
 Stejně jako u některé [CWnd](../mfc/reference/cwnd-class.md)-odvozené třídy, můžete upravit chování ovládacího prvku odvozením novou třídu z existující třídy ovládacího prvku.  
   
 ### <a name="to-create-a-derived-control-class"></a>Pro vytvoření třídy odvozené ovládací prvek  
   
-1.  Třídě odvozena z existující třídy řízení a volitelně přepsat **vytvořit** člen fungovat, takže poskytuje potřebné argumenty, které mají základní třídy **vytvořit** funkce.  
+1.  Třídě odvozena z existující třídy řízení a volitelně přepsat `Create` člen fungovat, takže poskytuje potřebné argumenty, které mají základní třídy `Create` funkce.  
   
 2.  Zadejte popisovač zpráv členských funkcí a položek mapy zpráv chcete upravit chování ovládacího prvku v reakci na konkrétní zpráv systému Windows. V tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md).  
   

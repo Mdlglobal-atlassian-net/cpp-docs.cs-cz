@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346435"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929825"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipulace s ovládacím prvkem popis tlačítka
 Třída `CToolTipCtrl` poskytuje funkce, které řídí různé atributy skupinu člena `CToolTipCtrl` objekt a tip okno nástroje.  
@@ -37,7 +37,7 @@ Třída `CToolTipCtrl` poskytuje funkce, které řídí různé atributy skupinu
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) a [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) načítá a nastaví barvu textu nástroje tip okno.  
   
- Aby ovládacím prvkem popis tlačítka upozornit důležité zprávy, jako například **WM_LBUTTONXXX** zprávy, musí předávání zpráv do vašeho prvkem popis tlačítka. Nejlepší metody pro tento předávání se provést volání [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)v `PreTranslateMessage` funkce okna vlastníka. Následující příklad ilustruje jeden možný způsob (za předpokladu, že ovládacím prvkem popis tlačítka se nazývá `m_ToolTip`):  
+ Aby ovládacím prvkem popis tlačítka upozornit důležité zprávy, jako je například WM_LBUTTONXXX zprávy musí předávání zpráv do vašeho prvkem popis tlačítka. Nejlepší metody pro tento předávání se provést volání [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)v `PreTranslateMessage` funkce okna vlastníka. Následující příklad ilustruje jeden možný způsob (za předpokladu, že ovládacím prvkem popis tlačítka se nazývá `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

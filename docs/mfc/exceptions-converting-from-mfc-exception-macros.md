@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350750"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931115"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Výjimky: Převádění z maker výjimek prostředí MFC
 To je rozšířená.  
   
- Tento článek vysvětluje, jak převést existující kód zapisovaný s makry Microsoft Foundation Class – **zkuste**, **CATCH**, **THROW**a tak dále – použít zpracování výjimek jazyka C++ klíčová slova **zkuste**, **catch**, a `throw`. Témata zahrnují:  
+ Tento článek vysvětluje, jak převést existující kód zapisovaný s makry Microsoft Foundation Class – **zkuste**, **CATCH**, **THROW**a tak dále – použít zpracování výjimek jazyka C++ klíčová slova **zkuste**, **catch**, a **throw**. Témata zahrnují:  
   
 -   [Převod výhody](#_core_advantages_of_converting)  
   
@@ -47,7 +47,7 @@ To je rozšířená.
   
 -   Kód, který používá klíčová slova jazyka zpracování výjimek C++ zkompiluje do mírně nižší. Soubor EXE nebo. KNIHOVNY DLL.  
   
--   Klíčová slova jazyka C++ zpracování výjimek jsou rozmanitější: můžete jejich zpracování výjimek datového typu, které lze kopírovat (`int`, **float**, `char`a tak dále), zatímco makra zpracování výjimek pouze třídy `CException` a třídy odvozené z něj.  
+-   Klíčová slova jazyka C++ zpracování výjimek jsou rozmanitější: můžete jejich zpracování výjimek datového typu, které lze kopírovat (**int**, **float**, **char**a tak dále), zatímco makra zpracování výjimek pouze třídy `CException` a třídy odvozené z něj.  
   
  Hlavní rozdíl mezi makra a klíčová slova je, že kód za použití makra "automatické" odstraní Zachycenou výjimku při výjimka mimo rozsah. Kódu pomocí klíčová slova neexistuje, takže musí explicitně odstranit Zachycenou výjimku. Další informace najdete v článku [výjimkami: zachycení a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
@@ -69,19 +69,19 @@ To je rozšířená.
   
 2.  Vymezení bloků catch:  
   
-     S makry **CATCH** – makro (s argumenty) začne první blok catch; `AND_CATCH` makro začne bloky catch následné a `END_CATCH` makro ukončí pořadí bloků catch.  
+     S makry **CATCH** – makro (s argumenty) začne první blok catch; **and_catch –** makro začne bloky catch následné a **end_catch –** – makro Ukončí pořadí bloků catch.  
   
-     S klíčovými slovy **catch** začne každého bloku catch – klíčové slovo (s jeho deklaraci výjimka). Neexistuje žádné protějškem `END_CATCH` makro; blokovat elementů end s jeho pravé složené závorce catch.  
+     S klíčovými slovy **catch** začne každého bloku catch – klíčové slovo (s jeho deklaraci výjimka). Neexistuje žádné protějškem **end_catch –** makro; blokovat elementů end s jeho pravé složené závorce catch.  
   
 3.  Throw výraz:  
   
-     Použití makra `THROW_LAST` znovu vyvolat aktuální výjimku. `throw` – Klíčové slovo s žádný argument má stejný účinek.  
+     Použití makra **throw_last –** znovu vyvolat aktuální výjimku. **Throw** – klíčové slovo s žádný argument má stejný účinek.  
   
 ##  <a name="_core_doing_the_conversion"></a> Provádění převod  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Chcete-li převést kódu pomocí makra používat klíčová slova, C++ zpracování výjimek  
   
-1.  Vyhledejte všechny výskyty makry MFC **zkuste**, **CATCH**, `AND_CATCH`, `END_CATCH`, **THROW**, a `THROW_LAST`.  
+1.  Vyhledejte všechny výskyty makry MFC **zkuste**, **CATCH**, **and_catch –**, **end_catch –**, **THROW**, a **throw_last –**.  
   
 2.  Nahraďte nebo odstranit všechny výskyty následující makra:  
   
@@ -89,13 +89,13 @@ To je rozšířená.
   
      **CATCH –** (nahraďte ho **catch**)  
   
-     `AND_CATCH` (Nahraďte ho **catch**)  
+     **And_catch –** (nahraďte ho **catch**)  
   
-     `END_CATCH` (Odstranit)  
+     **End_catch –** (odstranit)  
   
-     **THROW** (nahraďte ho `throw`)  
+     **THROW** (nahraďte ho **throw**)  
   
-     `THROW_LAST` (Nahraďte ho `throw`)  
+     **Throw_last –** (nahraďte ho **throw**)  
   
 3.  Argumenty – makro upravte tak, aby tvoří platný výjimka deklarace.  
   

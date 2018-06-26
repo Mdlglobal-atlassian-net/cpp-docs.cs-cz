@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3ade658046ad789a92bce044d12e5a6e76f7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349426"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931987"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretace vstupu uživatele prostřednictvím zobrazení
 Jiné členské funkce zobrazení zpracovat a interpretovat všechny vstup uživatele. Obvykle nadefinujete obslužné rutiny zpráv členské funkce ve třídě zobrazení zpracování:  
@@ -44,7 +44,7 @@ Jiné členské funkce zobrazení zpracovat a interpretovat všechny vstup uživ
   
  [Zpracování a mapování témata zpráv](../mfc/message-handling-and-mapping.md) vysvětluje, jak přiřadit položek nabídky a jiné objekty uživatelského rozhraní pro příkazy a jak vytvořit vazbu mezi příkazy k funkcím obslužných rutin. [Zpracování a mapování témata zpráv](../mfc/message-handling-and-mapping.md) také vysvětluje, jak MFC směrování příkazů a odešle standardní zprávy Windows pro objekty, které obsahují obslužné rutiny pro ně.  
   
- Například aplikace může být nutné implementovat přímé myši kreslení v zobrazení. Vzorovou Scribble ukazuje způsob zpracování `WM_LBUTTONDOWN`, `WM_MOUSEMOVE`, a `WM_LBUTTONUP` zprávy a pokuste se spustit, v uvedeném pořadí a k kreslení úsek čáry. Na druhé straně může někdy musíte interpretovat kliknutí myši v zobrazení jako výběr. Vaše zobrazení `OnLButtonDown` obslužné rutiny funkce by určit, zda byl uživatel kreslení nebo výběr. Pokud vyberete, obslužná rutina by určit, zda byl kliknutím na možnost v rámci hranice některé objektu v zobrazení a pokud ano, změnit zobrazení zobrazíte objekt jako vybrané.  
+ Například aplikace může být nutné implementovat přímé myši kreslení v zobrazení. Vzorovou Scribble ukazuje způsob zpracování zprávy WM_LBUTTONDOWN, WM_MOUSEMOVE a WM_LBUTTONUP v uvedeném pořadí chcete začít, pokračovat a ukončení kreslení úsek čáry. Na druhé straně může někdy musíte interpretovat kliknutí myši v zobrazení jako výběr. Vaše zobrazení `OnLButtonDown` obslužné rutiny funkce by určit, zda byl uživatel kreslení nebo výběr. Pokud vyberete, obslužná rutina by určit, zda byl kliknutím na možnost v rámci hranice některé objektu v zobrazení a pokud ano, změnit zobrazení zobrazíte objekt jako vybrané.  
   
  Zobrazení může také zpracovat určité nabídky příkazy jako ty, v nabídce Upravit vyjmout, kopírovat, vložit nebo odstranit vybraná data použití schránky. Tato obslužná rutina by volat, některé člena schránky související funkce třídy `CWnd` k přenosu vybraných dat položky do nebo ze schránky.  
   

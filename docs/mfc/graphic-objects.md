@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349779"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930843"
 ---
 # <a name="graphic-objects"></a>Grafické objekty
 Systém Windows nabízí celou řadu kreslení nástroje dostupné v kontextech zařízení. Poskytuje pera kreslení čar, štětce výplně vnitřek a písem pro kreslení textu. Knihovna MFC poskytuje třídy grafických objektů ekvivalentní nástrojů pro kreslení v systému Windows. Následující tabulka uvádí dostupných tříd a ekvivalentní grafika Windows typy popisovač rozhraní GDI zařízení.  
@@ -82,7 +82,7 @@ Systém Windows nabízí celou řadu kreslení nástroje dostupné v kontextech 
   
  Každá třída grafických objektů v knihovně tříd má konstruktor, který vám umožní vytvořit grafické objekty této třídy, které je třeba pak inicializovat pomocí funkce vhodné vytvořit, jako `CreatePen`.  
   
- Každá třída grafických objektů v knihovně tříd má operátor přetypování, který bude převeden objekt MFC tak, aby přidružené popisovačů systému Windows. Výsledný popisovač je platný, dokud přidružený objekt umožňuje odpojit ho. Pomocí objektu **odpojení** – členská funkce odpojit popisovač.  
+ Každá třída grafických objektů v knihovně tříd má operátor přetypování, který bude převeden objekt MFC tak, aby přidružené popisovačů systému Windows. Výsledný popisovač je platný, dokud přidružený objekt umožňuje odpojit ho. Pomocí objektu `Detach` – členská funkce odpojit popisovač.  
   
  Následující kód přetypování `CPen` objekt, který chcete popisovačů systému Windows:  
   

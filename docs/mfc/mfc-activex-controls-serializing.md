@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353495"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930058"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC – ovládací prvky ActiveX: Serializace
 Tento článek popisuje, jak k serializaci ovládacího prvku ActiveX. Serializace je proces čtení nebo zápisu do trvalého úložiště média, jako je soubor na disku. Knihovna Microsoft Foundation Class (MFC) obsahuje integrovanou podporu pro serializaci ve třídě `CObject`. `COleControl` rozšiřuje tato podpora do ovládacích prvků ActiveX prostřednictvím mechanismus vlastnost exchange.  
@@ -77,7 +77,7 @@ Tento článek popisuje, jak k serializaci ovládacího prvku ActiveX. Serializa
  Další informace o těchto funkcích vlastnost exchange najdete v tématu [trvalost z ovládacích prvků technologie OLE](../mfc/reference/persistence-of-ole-controls.md) v *odkaz knihovny MFC*.  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Přizpůsobení výchozího chování dopropexchange –  
- Výchozí implementaci **DoPropertyExchange** (jak je znázorněno v předchozích tématu) zavolá základní třída `COleControl`. To serializuje sada vlastností, které automaticky nepodporuje `COleControl`, který používá další úložný prostor než serializaci vlastní vlastnosti ovládacího prvku. Odebrání toto volání umožňuje objektu k serializaci pouze vlastnosti, které považujete za důležité. Všechny stavy uložených vlastností ovládacího prvku implementovala nebude serializovat, když uložení nebo načtení objekt ovládacího prvku, pokud je explicitně přidat **PX_** volání pro ně.  
+ Výchozí implementaci `DoPropertyExchange` (jak je znázorněno v předchozích tématu) zavolá základní třída `COleControl`. To serializuje sada vlastností, které automaticky nepodporuje `COleControl`, který používá další úložný prostor než serializaci vlastní vlastnosti ovládacího prvku. Odebrání toto volání umožňuje objektu k serializaci pouze vlastnosti, které považujete za důležité. Všechny stavy uložených vlastností ovládacího prvku implementovala nebude serializovat, když uložení nebo načtení objekt ovládacího prvku, pokud je explicitně přidat **PX_** volání pro ně.  
   
 ##  <a name="_core_implementing_version_support"></a> Implementace podpora verzí  
  Podpora verzí umožňuje revidovaný ovládacího prvku ActiveX k přidání nových vlastností trvalé a přitom zachovat ke zjišťování a načíst trvalý stav vytvořena ve starší verzi ovládacího prvku. Chcete-li zpřístupnit verzi ovládacího prvku v rámci trvalé data, volání [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) v ovládacím prvku `DoPropExchange` funkce. Toto volání se automaticky vložený, pokud ovládací prvek ActiveX byla vytvořena pomocí Průvodce ovládacím prvkem ActiveX. Může být odebrán, pokud není nutné podpora verzí. Náklady na ovládací prvek velikost je však velmi malé (4 bajtů) pro flexibilnější, která poskytuje podporu verzí.  
@@ -87,7 +87,7 @@ Tento článek popisuje, jak k serializaci ovládacího prvku ActiveX. Serializa
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Můžete použít libovolnou `DWORD` jako číslo verze. Použijte projekty generované Průvodce ovládacím prvkem ActiveX **_wVerMinor** a **_wVerMajor** jako výchozí. Jsou to globální konstanty definované v souboru implementace třídy ovládacího prvku ActiveX projektu. V rámci zbytek vaší `DoPropExchange` funkce, můžete volat [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) kdykoli načíst verzi jsou uložení nebo načítání.  
+ Můžete použít libovolnou **DWORD** jako číslo verze. Použijte projekty generované Průvodce ovládacím prvkem ActiveX `_wVerMinor` a `_wVerMajor` jako výchozí. Jsou to globální konstanty definované v souboru implementace třídy ovládacího prvku ActiveX projektu. V rámci zbytek vaší `DoPropExchange` funkce, můžete volat [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) kdykoli načíst verzi jsou uložení nebo načítání.  
   
  V následujícím příkladu má verze 1 Tento ovládací prvek ukázka pouze vlastnost "ReleaseDate". Verze 2 přidá vlastnost "OriginalDate". Pokud se načíst trvalý stav z předchozí verzi aplikace je odeslán pokyn ovládacího prvku, inicializuje členské proměnné nové vlastnosti na výchozí hodnotu.  
   

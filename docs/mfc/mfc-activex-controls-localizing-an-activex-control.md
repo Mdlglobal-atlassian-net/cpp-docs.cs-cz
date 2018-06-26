@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355692"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929605"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Lokalizace ovládacího prvku ActiveX
 Tento článek popisuje postupy pro lokalizace rozhraní ovládacího prvku ActiveX.  
@@ -41,7 +41,7 @@ Tento článek popisuje postupy pro lokalizace rozhraní ovládacího prvku Acti
     > [!NOTE]
     >  Tato funkce nebude pracovat správně v některých případech, pokud budoucí instance mají různá národní prostředí.  
   
--   Použití **OnAmbientChanged** funkce oznámení se dynamicky načíst správné prostředky pro národní prostředí kontejneru.  
+-   Použití `OnAmbientChanged` funkce oznámení se dynamicky načíst správné prostředky pro národní prostředí kontejneru.  
   
     > [!NOTE]
     >  To bude fungovat pro ovládací prvek, ale běhové knihovny DLL nebude aktualizovat dynamicky vlastní prostředky při změně vlastnosti vedlejším identifikátor národního prostředí. Kromě toho běhové knihovny DLL pro ovládací prvky ActiveX pomocí národní prostředí vlákna rozhodnout národní prostředí pro její prostředky.  
@@ -98,7 +98,7 @@ Tento článek popisuje postupy pro lokalizace rozhraní ovládacího prvku Acti
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- Ukázka kódu výše umístěte do členské funkce ovládacího prvku, například přepsání [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Kromě toho `m_hResDLL` by měla být členské proměnné třídy ovládacího prvku.  
+ Ukázka kódu výše umístěte do členské funkce ovládacího prvku, například přepsání [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Kromě toho *m_hResDLL* by měla být členské proměnné třídy ovládacího prvku.  
   
  Podobně jako logiky můžete použít pro lokalizace stránka vlastností ovládacího prvku. O lokalizaci stránku vlastností, přidejte podobná následující ukázka kódu do souboru implementace stránka vlastností (v přepsání [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

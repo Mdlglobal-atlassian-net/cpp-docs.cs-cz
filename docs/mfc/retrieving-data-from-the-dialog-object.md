@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380205"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929592"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Načítání dat z objektu dialogového okna
 Rozhraní framework poskytuje snadný způsob k chybě při inicializaci hodnoty ovládacích prvků v dialogovém okně a k načtení hodnoty z ovládacích prvků. Více pracné ruční přístup je pro volání funkce, jako `SetDlgItemText` a `GetDlgItemText` členské funkce třídy `CWnd`, která se vztahují na ovládací prvek windows. S tyto funkce, můžete každý řízení přístupu jednotlivě, abyste nastavit nebo získat svou hodnotu, jako například volání funkcí `SetWindowText` a `GetWindowText`. Rozhraní framework přístup automatizuje inicializace a načítání.  
@@ -47,7 +47,7 @@ Rozhraní framework poskytuje snadný způsob k chybě při inicializaci hodnoty
   
  DDX a DDV jsou vysvětleny v další části [výměna dialogových dat a ověření](../mfc/dialog-data-exchange-and-validation.md).  
   
- Pro modální dialogové okno, můžete načíst žádná data uživatele zadané při `DoModal` vrátí **IDOK** , ale před dialogu objekt zničena. Pro nemodální dialogové okno, můžete data načíst z objektu dialogového okna kdykoli voláním `UpdateData` s argumentem **TRUE** a poté přístup k dialogu třídy členské proměnné. Toto téma je podrobněji popsána v [výměna dialogových dat a ověření](../mfc/dialog-data-exchange-and-validation.md).  
+ Pro modální dialogové okno, můžete načíst žádná data uživatele zadané při `DoModal` vrátí IDOK, ale před dialogu objekt zničena. Pro nemodální dialogové okno, můžete data načíst z objektu dialogového okna kdykoli voláním `UpdateData` s argumentem **TRUE** a poté přístup k dialogu třídy členské proměnné. Toto téma je podrobněji popsána v [výměna dialogových dat a ověření](../mfc/dialog-data-exchange-and-validation.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)

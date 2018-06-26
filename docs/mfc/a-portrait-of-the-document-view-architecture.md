@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329813"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928941"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portrét architektury dokument/zobrazení
 V typické aplikaci MFC jsou spárován dokumentů a zobrazení. Data jsou uložena v dokumentu, ale zobrazení obsahuje privilegovaný přístup k datům. Oddělení dokumentu ze zobrazení odděluje úložiště a údržby dat od jeho zobrazení.  
@@ -37,7 +37,7 @@ V typické aplikaci MFC jsou spárován dokumentů a zobrazení. Data jsou ulož
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Získání přístupu k dokumentu Data ze zobrazení  
  Zobrazení přistupuje k jeho dokumentu dat buď pomocí [GetDocument](../mfc/reference/cview-class.md#getdocument) funkce, která vrací ukazatel k dokumentu nebo tím, že zobrazení třídy jazyka C++ `friend` třídy dokumentu. Zobrazení získat data, když je připraven k vykreslení nebo jinak manipulaci s použije jeho přístup k datům.  
   
- Například ze zobrazení [OnDraw –](../mfc/reference/cview-class.md#ondraw) – členská funkce zobrazení používá **GetDocument** k získání ukazatele dokumentu. Potom použije tento ukazatel pro přístup `CString` – datový člen v dokumentu. Zobrazení předá řetězec, který má `TextOut` funkce. Kód v tomto příkladu najdete v sekci [kreslení v zobrazení](../mfc/drawing-in-a-view.md).  
+ Například ze zobrazení [OnDraw –](../mfc/reference/cview-class.md#ondraw) – členská funkce zobrazení používá `GetDocument` k získání ukazatele dokumentu. Potom použije tento ukazatel pro přístup `CString` – datový člen v dokumentu. Zobrazení předá řetězec, který má `TextOut` funkce. Kód v tomto příkladu najdete v sekci [kreslení v zobrazení](../mfc/drawing-in-a-view.md).  
   
 ## <a name="user-input-to-the-view"></a>Uživatelský vstup do zobrazení  
  Zobrazení může také interpretovat kliknutí myši v rámci samotné jako výběr nebo úprava dat. Podobně se může vyhodnotit stisknutí kláves jako vstupní data nebo úpravy. Předpokládejme, že uživatel zadá řetězec v zobrazení, která spravuje text. Zobrazení získá ukazatel k dokumentu a používá ukazatele k předání nová data v dokumentu, který ukládá v některé datové struktury.  

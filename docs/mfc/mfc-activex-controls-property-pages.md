@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351742"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930430"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC – ovládací prvky ActiveX: Stránky vlastností
 Stránky vlastností umožnit uživateli ovládacího prvku ActiveX k zobrazení a změna vlastností ovládacího prvku ActiveX. Tyto vlastnosti jsou dostupné přes vyvolání řízení dialogové okno Vlastnosti, která obsahuje jeden nebo více stránek vlastností, které poskytují vlastní grafické rozhraní pro zobrazení a úprava vlastností ovládacího prvku.  
@@ -80,13 +80,13 @@ Dialogové okno Vlastnosti
   
 2.  Dvakrát klikněte **dialogové okno** directory ikonu.  
   
-3.  Otevřete **IDD_PROPPAGE_SAMPLE** dialogové okno.  
+3.  Otevřete dialogové okno IDD_PROPPAGE_SAMPLE.  
   
      Průvodce ovládacím prvkem ActiveX přidá na konec dialogu ID, v takovém případě Ukázkový název projektu.  
   
 4.  Přetáhnout myší vybraný ovládací prvek z panelu nástrojů na oblast dialogového okna.  
   
-5.  V tomto příkladu textový popisek ovládacího prvku "Caption:" a prvek upravit s **IDC_CAPTION** postačí identifikátor.  
+5.  V tomto příkladu textový popisek ovládacího prvku "Caption:" a postačí prvek upravit s identifikátorem IDC_CAPTION.  
   
 6.  Klikněte na tlačítko **Uložit** na panelu nástrojů a uložit provedené změny.  
   
@@ -99,9 +99,9 @@ Dialogové okno Vlastnosti
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Tato funkce přidruží stránka vlastností `m_caption` členské proměnné s popiskem, pomocí `DDP_TEXT` funkce.  
+ Tato funkce přidruží stránka vlastností *m_caption* členské proměnné s popiskem, pomocí `DDP_TEXT` funkce.  
   
- Až budete mít vložit ovládací prvek vlastnost stránku, budete muset vytvořit propojení mezi ovládací prvek vlastnost stránku `IDC_CAPTION`, a vlastnost skutečný ovládací prvek popisek, pomocí **ddp_text –** fungovat, jak je popsáno výše.  
+ Až budete mít vložit ovládací prvek vlastnost stránku, budete muset vytvořit propojení mezi ovládací prvek stránku vlastností, IDC_CAPTION a vlastnost skutečné řízení titulek, pomocí `DDP_Text` fungovat, jak je popsáno výše.  
   
  [Stránky vlastností](../mfc/reference/property-pages-mfc.md) jsou k dispozici pro jiné typy ovládacích prvků dialogové okno, jako je například zaškrtávací políčka, přepínače a seznamy. Následující tabulka obsahuje celou sadu vlastností stránky **ddp_ –** funkce a jejich účely:  
   
@@ -117,7 +117,7 @@ Dialogové okno Vlastnosti
 |`DDP_LBString`|Vybraný řetězec v seznamu s vlastností ovládacího prvku. Vybraný řetězec můžete začít s stejná písmena jako hodnotu vlastnosti, ale nemusí odpovídat plně.|  
 |`DDP_LBStringExact`|Vybraný řetězec v seznamu s vlastností ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|  
 |`DDP_Radio`|Přepínače s vlastností ovládacího prvku.|  
-|**Ddp_text –**|Text s vlastností ovládacího prvku.|  
+|`DDP_Text`|Text s vlastností ovládacího prvku.|  
   
 ## <a name="see-also"></a>Viz také  
  [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   

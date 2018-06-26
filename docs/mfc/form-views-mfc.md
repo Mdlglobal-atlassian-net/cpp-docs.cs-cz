@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a717ca80d84b884014a2567228829ffd87c5178
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349041"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930297"
 ---
 # <a name="form-views-mfc"></a>Zobrazení formulářů (MFC)
-Forms můžete přidat do žádné aplikace Visual C++, který podporuje knihovny MFC, včetně [aplikace založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) (jedna třída jejichž zobrazení je odvozený od `CFormView`). Pokud nebyl vytvořen původně aplikace podporují formuláře, Visual C++ přidá tato podpora pro vás, když vložíte nového formuláře. V aplikaci SDI a MDI, který implementuje výchozí [document/view – architektura](../mfc/document-view-architecture.md), když uživatel vybere `New` příkaz (ve výchozím nastavení, na **souboru** nabídky), Visual C++ vyzývá uživatele k Vyberte z dostupných formulářů.  
+Forms můžete přidat do žádné aplikace Visual C++, který podporuje knihovny MFC, včetně [aplikace založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) (jedna třída jejichž zobrazení je odvozený od `CFormView`). Pokud nebyl vytvořen původně aplikace podporují formuláře, Visual C++ přidá tato podpora pro vás, když vložíte nového formuláře. V aplikaci SDI a MDI, který implementuje výchozí [document/view – architektura](../mfc/document-view-architecture.md), když uživatel vybere **nový** příkaz (ve výchozím nastavení, na **souboru** nabídky), Visual C++ vyzývá uživatele k vyberte z dostupných formuláře.  
   
- Pomocí aplikace SDI, když uživatel vybere `New` aktuální instanci formuláře pokračuje v činnosti, ale vytvořit novou instanci aplikace s vybraný formulář, pokud není nalezen jeden příkaz. V aplikaci MDI nadále spouštět, když uživatel vybere aktuální instance formuláře `New` příkaz.  
+ Pomocí aplikace SDI, když uživatel vybere **nový** aktuální instanci formuláře pokračuje v činnosti, ale vytvořit novou instanci aplikace s vybraný formulář, pokud není nalezen jeden příkaz. V aplikaci MDI nadále spouštět, když uživatel vybere aktuální instanci formuláře **nový** příkaz.  
   
 > [!NOTE]
 >  Formuláře můžete vložit do aplikace založené na dialogové okno (jeden jejichž třídy dialogového okna je založený na `CDialog` a jeden v žádné zobrazení, které se implementuje třídu). Ale bez architektuře dokument/zobrazení Visual C++ neimplementuje automaticky **soubor**&#124;**nový** funkce. Je nutné vytvořit způsob, jak uživateli zobrazit další způsoby, například implementací dialogové okno s použitím různých stránek vlastností.  
@@ -43,7 +43,7 @@ Forms můžete přidat do žádné aplikace Visual C++, který podporuje knihovn
   
      **Ws_child –**= On  
   
-     `WS_BORDER`= Vypnuto  
+     **Ws_border –**= vypnuto  
   
      **Ws_visible –**= vypnuto  
   
@@ -51,17 +51,17 @@ Forms můžete přidat do žádné aplikace Visual C++, který podporuje knihovn
   
  Pro aplikace založené na architektuře dokument/zobrazení **nového formuláře** příkazu (v zobrazení tříd klikněte pravým tlačítkem) také:  
   
--   Vytvoří **CDocument**– na základě – třída  
+-   Vytvoří `CDocument`– na základě – třída  
   
-     Místo nutnosti vytvořit novou třídu, můžete použít všechny existující **CDocument**– na základě třídy ve vašem projektu.  
+     Místo nutnosti vytvořit novou třídu, můžete použít všechny existující `CDocument`– na základě třídy ve vašem projektu.  
   
--   Generuje šablony dokumentu (odvozený z **CDocument**) s řetězcem, nabídky a ikony prostředky.  
+-   Generuje šablony dokumentu (odvozený z `CDocument`) s řetězcem, nabídky a ikony prostředky.  
   
      Můžete také vytvořit novou třídu, na které chcete vytvořit šablonu.  
   
--   Přidá volání **AddDocumentTemplate** ve vaší aplikaci `InitInstance` kódu.  
+-   Přidá volání `AddDocumentTemplate` ve vaší aplikaci `InitInstance` kódu.  
   
-     Visual C++ přidá tento kód pro každý nový formulář vytvoříte, který přidá do seznamu dostupných formulářů formuláře, když uživatel vybere `New` příkaz. Tento kód obsahuje ID přidružených prostředků formuláře a názvy přidružené dokumentu, zobrazení a rámečku třídy, které společně tvoří nový objekt formuláře.  
+     Visual C++ přidá tento kód pro každý nový formulář vytvoříte, který přidá do seznamu dostupných formulářů formuláře, když uživatel vybere **nový** příkaz. Tento kód obsahuje ID přidružených prostředků formuláře a názvy přidružené dokumentu, zobrazení a rámečku třídy, které společně tvoří nový objekt formuláře.  
   
      Šablony dokumentů sloužit jako připojení mezi dokumentů, oken s rámečkem a zobrazení. Pro jednotlivý dokument můžete vytvořit mnoho šablony.  
   

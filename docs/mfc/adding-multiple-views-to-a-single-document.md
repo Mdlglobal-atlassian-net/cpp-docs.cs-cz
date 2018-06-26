@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344146"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928698"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Přidání více zobrazení do jednoho dokumentu
 V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Microsoft Foundation Class (MFC) každý typ dokumentu je přidružený k typu jednoho zobrazení. V některých případech je třeba mít možnost přepnout aktuální zobrazení objektu na dokument s nové zobrazení.  
@@ -46,14 +46,14 @@ V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Mic
   
  Zbývající část tohoto tématu se předpokládá následující:  
   
--   Název `CWinApp`-odvozené objekt `CMyWinApp`, a `CMyWinApp` definována a je definována v MYWINAPP. H a MYWINAPP. CPP.  
+-   Název `CWinApp`-odvozené objekt `CMyWinApp`, a `CMyWinApp` definována a je definována v *MYWINAPP. H* a *MYWINAPP. CPP*.  
   
--   `CNewView` je název nové `CView`-odvozené objekt, a `CNewView` definována a je definována v NEWVIEW. H a NEWVIEW. CPP.  
+-   `CNewView` je název nové `CView`-odvozené objekt, a `CNewView` definována a je definována v *NEWVIEW. H* a *NEWVIEW. CPP*.  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> Upravit existující třída aplikace  
  Pro aplikaci pro přepínání mezi zobrazeními budete muset upravit třídy aplikace přidáním členské proměnné pro uložení zobrazení a způsob, jak je přepnout.  
   
- Přidejte následující kód k prohlášení o `CMyWinApp` v MYWINAPP. V:  
+ Přidejte následující kód k prohlášení o `CMyWinApp` v *MYWINAPP. H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
@@ -61,7 +61,7 @@ V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Mic
   
  Poslední změny třída aplikace vyžaduje, včetně nový soubor hlaviček, který definuje zpráv systému Windows (**WM_INITIALUPDATE**), který se používá v přepínání funkce.  
   
- V části zahrnout MYWINAPP vložte následující řádek. CPP:  
+ Vložte následující řádek v části zahrnout *MYWINAPP. CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
@@ -72,7 +72,7 @@ V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Mic
   
  Po přidání třídu do projektu, budete muset změnit usnadnění některé členy třídy zobrazení.  
   
- Upravte NEWVIEW. H změnou specifikátor přístup z `protected` k **veřejné** pro konstruktor a destruktor. To umožňuje třídě vytvořen a zničen dynamicky a upravit vzhled zobrazení, aby byl viditelný.  
+ Upravit *NEWVIEW. H* změnou specifikátor přístup z **chráněné** k **veřejné** pro konstruktor a destruktor. To umožňuje třídě vytvořen a zničen dynamicky a upravit vzhled zobrazení, aby byl viditelný.  
   
  Uložte změny a pokračovat k dalšímu kroku.  
   
@@ -90,7 +90,7 @@ V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Mic
 ##  <a name="vcconswitchingfunctiona4"></a> Implementace přepínání funkce  
  V předchozím kroku jste přidali kód, který je vytvořen a inicializován nový objekt zobrazení. Poslední hlavní část je implementovat metodu přepínání `SwitchView`.  
   
- Na konci souboru implementace pro vaši aplikaci třídy (MYWINAPP. CPP), přidejte následující definici metody:  
+ Na konci souboru implementace pro třídy vaší aplikace (*MYWINAPP. CPP*), přidejte následující definici metody:  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

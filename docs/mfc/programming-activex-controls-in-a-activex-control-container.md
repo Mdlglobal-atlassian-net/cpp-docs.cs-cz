@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355038"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929952"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX
 Tento článek popisuje proces pro přístup k zveřejněné [metody](../mfc/mfc-activex-controls-methods.md) a [vlastnosti](../mfc/mfc-activex-controls-properties.md) embedded ovládacích prvků ActiveX. V podstatě postupujte podle těchto kroků:  
@@ -76,7 +76,7 @@ Tento článek popisuje proces pro přístup k zveřejněné [metody](../mfc/mfc
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Členské proměnné změny v projektu  
  Jakmile ovládacího prvku ActiveX je přidán do projektu a vložených v dialogovém okně pole kontejneru, byla přístupná pomocí dalších částí projektu. Nejjednodušší způsob, jak řízení přístupu je [vytvořit členské proměnné](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) dialogu třídy `CContainerDlg` (krok 2), který je stejného typu jako obálkovou třídu přidaných do projektu Visual C++. Členské proměnné pak můžete kdykoli získat přístup k vloženému ovládacímu prvku.  
   
- Když **přidání členské proměnné** přidá dialogové okno `m_circctl` člen proměnné do projektu, přidá také následující řádky do soubor hlaviček (. H) z `CContainerDlg` třídy:  
+ Když **přidání členské proměnné** přidá dialogové okno *m_circctl* člen proměnné do projektu, přidá také následující řádky do soubor hlaviček (. H) z `CContainerDlg` třídy:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ Tento článek popisuje proces pro přístup k zveřejněné [metody](../mfc/mfc
   
  Je běžné Úprava vlastností ovládacího prvku se v `OnInitDialog` členské funkce hlavním dialogu třídy. Tato funkce je volána těsně před se zobrazí dialogové okno a slouží k inicializaci její obsah, včetně jeho ovládací prvky.  
   
- Následující příklad kódu používá `m_circctl` členské proměnné můžete změnit vlastnosti titulku a CircleShape embedded str ovládacího prvku:  
+ Následující příklad kódu používá *m_circctl* členské proměnné můžete změnit vlastnosti titulku a CircleShape embedded str ovládacího prvku:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361332"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930094"
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
 Ovládací prvek ActiveX je opakovaně použitelné softwaru komponenta založená na modelu COM (Component Object), který podporuje širokou škálu funkcí technologie OLE a můžete přizpůsobit podle potřeb mnoho softwaru. Ovládací prvky ActiveX jsou navrženy pro použití v běžných kontejnerech ovládacího prvku ActiveX a v Internetu na webových stránkách. Můžete vytvořit ovládací prvky ActiveX, buď pomocí knihovny MFC, popsané v tomto poli, nebo pomocí [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
@@ -77,7 +77,7 @@ Komunikace mezi kontejnerem ovládacího prvku ActiveX a prvkem samotným
   
  Předchozí obrázek znázorňuje také způsob, jakým ovládací prvek zpracovává jiná rozhraní OLE (kromě automatizace a událostí).  
   
- Veškerou komunikaci ovládacího prvku s kontejnerem zajišťuje třída `COleControl`. Pro zpracování některých požadavků kontejner, **COleControl** bude volat členské funkce, které jsou implementované ve třídě ovládacího prvku. Tímto způsobem jsou zpracovány všechny metody a některé vlastnosti. Třída ovládacího prvku může také započít komunikaci s kontejnerem zavoláním členských funkcí třídy `COleControl`. Tímto způsobem jsou vyvolávány události.  
+ Veškerou komunikaci ovládacího prvku s kontejnerem zajišťuje třída `COleControl`. Pro zpracování některých požadavků kontejner, `COleControl` bude volat členské funkce, které jsou implementované ve třídě ovládacího prvku. Tímto způsobem jsou zpracovány všechny metody a některé vlastnosti. Třída ovládacího prvku může také započít komunikaci s kontejnerem zavoláním členských funkcí třídy `COleControl`. Tímto způsobem jsou vyvolávány události.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Aktivní i neaktivní stavy ovládacího prvku ActiveX  
  Ovládací prvek má dva základní stavy: aktivní a neaktivní. Dříve bylo zvykem, že tyto stavy byly rozlišeny skutečností, zda ovládací prvek má okno. Aktivní ovládací prvek okno měl, neaktivní nikoli. Se zavedením aktivace bez oken není již toto rozlišení univerzální, ale pro mnoho ovládacích prvků je stále platné.  

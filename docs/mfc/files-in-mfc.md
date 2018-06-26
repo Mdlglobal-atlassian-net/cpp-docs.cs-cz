@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347078"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930500"
 ---
 # <a name="files-in-mfc"></a>Soubory v prostředí MFC
 Třídy v Microsoft Foundation Class Library (MFC), [cfile –](../mfc/reference/cfile-class.md) zpracovává normální souborových vstupně-výstupních operací. Tato řada článků vysvětluje, jak otevřít a zavřete soubory a také pro čtení a zápisu dat do těchto souborů. Popisuje také operací se soubory stavu. Popis toho, jak používat funkce na základě objektů serializace MFC jako alternativní způsob čtení a zápis dat v souborech, najdete v článku [serializace](../mfc/serialization-in-mfc.md).  
   
 > [!NOTE]
->  Při použití MFC **CDocument** objekty, systém provádí většinu práce serializace pro vás. Konkrétně rozhraní framework vytvoří a použije `CFile` objektu. Budete muset psát kód ve vaší přepsání `Serialize` funkce člena třídy **CDocument**.  
+>  Při použití MFC `CDocument` objekty, systém provádí většinu práce serializace pro vás. Konkrétně rozhraní framework vytvoří a použije `CFile` objektu. Budete muset psát kód ve vaší přepsání `Serialize` funkce člena třídy `CDocument`.  
   
  `CFile` Třída poskytuje rozhraní pro operace se pro obecné účely binární soubory. `CStdioFile` a `CMemFile` třídy odvozené od `CFile` a `CSharedFile` třída odvozená z `CMemFile` zadat více specializované souborové služby.  
   

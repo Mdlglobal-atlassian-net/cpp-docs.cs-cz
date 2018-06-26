@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347175"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932001"
 ---
 # <a name="message-sending-and-receiving"></a>Odesílání a příjem zpráv
 Vezměte v úvahu odesílání část procesu a odpovědí rozhraní.  
   
  Většina výsledek zprávy z interakce uživatele s programu. Příkazy jsou generovány kliknutí myší v nabídce položky nebo tlačítka panelu nástrojů nebo stisknutí kláves akcelerátoru. Uživatel generuje také zpráv systému Windows, například přesun nebo změnou velikosti okna. Další zprávy Windows se odesílají při výskytu události, jako je například spuštění programu nebo ukončení, jak windows získat nebo ztratit fokus a tak dále. Oznámení ovládacího prvku zprávy generované kliknutí myši nebo jiné uživatelské interakce s ovládacím prvkem, jako je tlačítko nebo pole se seznamem ovládacího prvku v dialogovém okně.  
   
- **Spustit** funkce člena třídy `CWinApp` načítá zprávy a odešle je do příslušné okna. Většina příkazů zpráv se odesílají do hlavního rámce okna aplikace. `WindowProc` Předdefinovaná v nástroji získá knihovny tříd zprávy a směruje je jinak, v závislosti na kategorii přijatá zpráva.  
+ `Run` Funkce člena třídy `CWinApp` načítá zprávy a odešle je do příslušné okna. Většina příkazů zpráv se odesílají do hlavního rámce okna aplikace. `WindowProc` Předdefinovaná v nástroji získá knihovny tříd zprávy a směruje je jinak, v závislosti na kategorii přijatá zpráva.  
   
  Teď se podíváme přijímající součást procesu.  
   

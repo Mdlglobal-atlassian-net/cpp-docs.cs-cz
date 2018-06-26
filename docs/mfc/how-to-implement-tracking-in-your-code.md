@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21369dd8d241bd00da2a0a8005c977094c3abf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349733"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932091"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Postupy: Implementace sledování v kódu
 Ke sledování OLE položku, je nutné zajistit určité události související s položkou, například kliknutí na položku nebo aktualizace zobrazení dokumentu. Ve všech případech je dostačující deklarovat dočasného [crecttracker –](../mfc/reference/crecttracker-class.md) objektu a pracovat s položka prostřednictvím tohoto objektu.  
@@ -36,7 +36,7 @@ Ke sledování OLE položku, je nutné zajistit určité události související
 |Šrafované ohraničení|Položka je aktuálně místní active|  
 |Šrafování vzor překryvy položky|Položky na serveru je otevřený|  
   
- Může zpracovávat tento inicializace snadno pomocí procedury, která kontroluje stav položky OLE a nastaví příslušná stylů. **SetupTracker** funkce najít v ukázce OCLIENT ukazuje inicializace sledovací modul. Parametry pro tuto funkci jsou adresu ke sledovacímu modulu *pTracker*; ukazatel na položku klienta, která souvisí s sledovací modul, `pItem`; a ukazatel na obdélníku, *pTrueRect*. Úplnější příklad této funkce, najdete v části ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md).  
+ Může zpracovávat tento inicializace snadno pomocí procedury, která kontroluje stav položky OLE a nastaví příslušná stylů. `SetupTracker` Funkce najít v ukázce OCLIENT ukazuje inicializace sledovací modul. Parametry pro tuto funkci jsou adresu ke sledovacímu modulu *pTracker*; ukazatel na položku klienta, která souvisí s sledovací modul, *pItem*; a ukazatel na obdélníku, *pTrueRect* . Úplnější příklad této funkce, najdete v části ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md).  
   
  **SetupTracker** příklad kódu představuje jedinou funkci; řádky funkce jsou spolu s diskuzi o funkce funkce:  
   
@@ -54,9 +54,9 @@ Ke sledování OLE položku, je nutné zajistit určité události související
   
  [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]  
   
- Tuto funkci můžete volat potom vždy, když má ke sledovacímu modulu, který se má zobrazit. Například volání této funkce z `OnDraw` funkce zobrazení třídy. Tím se aktualizuje ke sledovacímu modulu vzhled vždy, když je překreslen zobrazení. Úplný příklad, najdete v článku **CMainView::OnDraw** funkce vzorku MFC OLE [OCLIENT](../visual-cpp-samples.md).  
+ Tuto funkci můžete volat potom vždy, když má ke sledovacímu modulu, který se má zobrazit. Například volání této funkce z `OnDraw` funkce zobrazení třídy. Tím se aktualizuje ke sledovacímu modulu vzhled vždy, když je překreslen zobrazení. Úplný příklad, najdete v článku `CMainView::OnDraw` funkce vzorku MFC OLE [OCLIENT](../visual-cpp-samples.md).  
   
- Ve vaší aplikaci dojde k události, které vyžadují sledovací modul kódu, třeba změny velikosti, přesunutí nebo přístupů zjišťování. Tyto akce obvykle naznačují, že se pokus o přišla převzetí nebo přesunout položku. V těchto případech je nutné se rozhodnout, co byl převzat: Popisovač změny velikosti nebo část ohraničení mezi změnit velikost obslužné rutiny. `OnLButtonDown` Obslužné rutiny zpráv je vhodná k testování polohu myši ve vztahu k položce. Ujistěte se, volání `CRectTracker::HitTest`. Pokud se test vrátí něco kromě **CRectTracker::hitOutside**, položka je se změnila velikost nebo přesunout. Proto byste měli volání `Track` – členská funkce. Najdete v článku **CMainView::OnLButtonDown** funkce umístěný v ukázce MFC OLE [OCLIENT](../visual-cpp-samples.md) kompletní příklad.  
+ Ve vaší aplikaci dojde k události, které vyžadují sledovací modul kódu, třeba změny velikosti, přesunutí nebo přístupů zjišťování. Tyto akce obvykle naznačují, že se pokus o přišla převzetí nebo přesunout položku. V těchto případech je nutné se rozhodnout, co byl převzat: Popisovač změny velikosti nebo část ohraničení mezi změnit velikost obslužné rutiny. `OnLButtonDown` Obslužné rutiny zpráv je vhodná k testování polohu myši ve vztahu k položce. Ujistěte se, volání `CRectTracker::HitTest`. Pokud se test vrátí něco kromě `CRectTracker::hitOutside`, položka je se změnila velikost nebo přesunout. Proto byste měli volání `Track` – členská funkce. Najdete v článku `CMainView::OnLButtonDown` funkce umístěný v ukázce MFC OLE [OCLIENT](../visual-cpp-samples.md) kompletní příklad.  
   
  `CRectTracker` Třída poskytuje několik různých kurzoru tvarů slouží k určení, zda přesunu, změnit velikost nebo přetáhněte operace probíhá. Ke zpracování této události, zkontrolujte, zda je vybrána položka aktuálně pod myší. Pokud je, ujistěte se, volání `CRectTracker::SetCursor`, nebo volejte výchozí obslužnou rutinu. Následující příklad je z ukázkové MFC OLE [OCLIENT](../visual-cpp-samples.md):  
   

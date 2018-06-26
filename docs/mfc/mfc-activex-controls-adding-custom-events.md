@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e6e5eeab0be13eb64052eb9e90a570dcc5124d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352527"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929049"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidání vlastních událostí
-Vlastní události lišit od uložených událostí v tom, že nejsou automaticky aktivována třídou `COleControl`. Vlastní události rozpozná určité akce, dáno vývojář ovládacího prvku, jako událost. Položky mapy událostí pro vlastní události jsou reprezentované pomocí `EVENT_CUSTOM` makro. V následující části implementuje vlastní události pro projekt ovládací prvek ActiveX, který byl vytvořen pomocí Průvodce ovládacím prvkem ActiveX.  
+Vlastní události lišit od uložených událostí v tom, že nejsou automaticky aktivována třídou `COleControl`. Vlastní události rozpozná určité akce, dáno vývojář ovládacího prvku, jako událost. Event_custom – makro představují položky mapy událostí pro vlastní události. V následující části implementuje vlastní události pro projekt ovládací prvek ActiveX, který byl vytvořen pomocí Průvodce ovládacím prvkem ActiveX.  
   
 ##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Přidání vlastních událostí pomocí Průvodce přidáním události  
  Následující postup přidá konkrétní vlastní události, clickin –. Tento postup slouží k přidání dalších vlastních událostí. Nahraďte název vlastní události a jeho parametry pro název události clickin – a parametry.  
@@ -48,13 +48,13 @@ Vlastní události lišit od uložených událostí v tom, že nejsou automatick
   
      Otevře se Průvodce přidáním události.  
   
-4.  V **název události** pole, nejprve vyberte všechny existující událost a pak klikněte na **vlastní** přepínač tlačítko, a pak zadejte `ClickIn`.  
+4.  V **název události** pole, nejprve vyberte všechny existující událost a pak klikněte na **vlastní** přepínač tlačítko, a pak zadejte *clickin –*.  
   
 5.  V **interní název** zadejte název funkce pálení události. V tomto příkladu použijte výchozí hodnotu poskytované Průvodce přidání události (`FireClickIn`).  
   
-6.  Přidat parametr s názvem `xCoord` (typ `OLE_XPOS_PIXELS`) pomocí **název parametru** a **typ parametru** ovládací prvky.  
+6.  Přidat parametr s názvem *xCoord* (typ *OLE_XPOS_PIXELS*) pomocí **název parametru** a **typ parametru** ovládací prvky.  
   
-7.  Přidat druhý parametr, s názvem `yCoord` (typ `OLE_YPOS_PIXELS`).  
+7.  Přidat druhý parametr, s názvem *yCoord* (typ *OLE_YPOS_PIXELS*).  
   
 8.  Klikněte na tlačítko **Dokončit** k vytvoření události.  
   
@@ -80,7 +80,7 @@ Vlastní události lišit od uložených událostí v tom, že nejsou automatick
  Tento řádek přiřadí clickin – událost na konkrétní číslo ID prováděné z pozice události v seznamu událostí Průvodce přidáním události. Položky v seznamu těchto událostí umožňuje kontejner odhadnout události. Například je může poskytnout kód obslužné rutiny, které budou spuštěny při událost je aktivována.  
   
 ##  <a name="_core_calling_fireclickin"></a> Fireclickin – volání  
- Teď, když jste přidali vlastní události clickin – pomocí Průvodce přidáním události, musíte rozhodnout, když se tato událost má být aktivována. To provedete pomocí volání `FireClickIn` případech příslušnou akci. V tomto výkladu používá ovládacího prvku `InCircle` funkce uvnitř `WM_LBUTTONDOWN` popisovač zpráv se má provést clickin – událost, když uživatel klikne v kruhových nebo eliptické oblast. Následující postup přidá `WM_LBUTTONDOWN` obslužné rutiny.  
+ Teď, když jste přidali vlastní události clickin – pomocí Průvodce přidáním události, musíte rozhodnout, když se tato událost má být aktivována. To provedete pomocí volání `FireClickIn` případech příslušnou akci. V tomto výkladu používá ovládacího prvku `InCircle` funkce uvnitř obslužné rutiny zpráv WM_LBUTTONDOWN má provést clickin – událost, když uživatel klikne v kruhových nebo eliptické oblast. Následující postup přidá obslužná rutina WM_LBUTTONDOWN.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Přidání obslužné rutiny zpráv pomocí Průvodce přidáním události  
   
@@ -92,13 +92,13 @@ Vlastní události lišit od uložených událostí v tom, že nejsou automatick
   
      V okně Vlastnosti se zobrazí seznam zpráv, které mohou být zpracovány ovládací prvek ActiveX. Jakékoli zprávy zobrazeny tučně již má přiřazen funkci obslužné rutiny.  
   
-4.  V okně Vlastnosti vyberte zprávu, kterou chcete zpracovat. V tomto příkladu vyberte `WM_LBUTTONDOWN`.  
+4.  V okně Vlastnosti vyberte zprávu, kterou chcete zpracovat. V tomto příkladu vyberte WM_LBUTTONDOWN.  
   
 5.  Z rozevíracího seznamu na pravé straně, vyberte  **\<Přidat > onlbuttondown –**.  
   
 6.  Dvakrát klikněte na nové funkce v zobrazení tříd pro přechod na kód obslužné rutiny zpráv k implementaci obslužné rutiny (. Soubor CPP) ovládacího prvku ActiveX.  
   
- Následující kód Ukázka volání **incircle –** funkce pokaždé, když v okně řízení kliknutí na něj. Tato ukázka najdete v `WM_LBUTTONDOWN` obslužné rutiny funkce `OnLButtonDown`v [str ukázka](../visual-cpp-samples.md) abstraktní.  
+ Následující kód Ukázka volání `InCircle` funkce pokaždé, když v okně řízení kliknutí na něj. Tato ukázka lze nalézt v obslužné rutiny WM_LBUTTONDOWN `OnLButtonDown`v [str ukázka](../visual-cpp-samples.md) abstraktní.  
   
  [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   

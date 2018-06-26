@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381167"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930687"
 ---
 # <a name="registration"></a>Registrace
 Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů můžete vybrat ze seznamu. OLE získá tento seznam z registrační databáze systému, který obsahuje informace, které poskytuje všechny serverové aplikace. Když server registruje, položky, které se uloží do databáze systému registrace (registr) popisují každý typ objektu, který poskytne, soubor rozšíření a cestu sama na sebe, mimo jiné informace o.  
@@ -59,7 +59,7 @@ Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů m
   
  Během spouštění vaše serverová aplikace, je nutné zajistit, aby mohl vykonávat instance registrace. Registrace instance informuje OLE systémové knihovny DLL, že server je aktivní a připravené k přijímání požadavků z kontejnerů. Nepřidává žádné další položku k databázi registrace. Proveďte registraci instance serveru při volání `ConnectTemplate` – členská funkce definované `COleTemplateServer`. To připojí `CDocTemplate` do objektu `COleTemplateServer` objektu.  
   
- `ConnectTemplate` Funkce přijímá tři parametry: serveru **CLSID**, ukazatel `CDocTemplate` objekt a příznak označující, zda server podporuje víc instancí. Miniserver musí být schopné podporovat více instancí, to znamená, musí být možné více instancí serveru můžou běžet současně, jednu pro každý kontejner. V důsledku toho předat **TRUE** pro tento příznak při spuštění miniserver.  
+ `ConnectTemplate` Funkce přijímá tři parametry: serveru *CLSID*, ukazatel `CDocTemplate` objekt a příznak označující, zda server podporuje víc instancí. Miniserver musí být schopné podporovat více instancí, to znamená, musí být možné více instancí serveru můžou běžet současně, jednu pro každý kontejner. V důsledku toho předat **TRUE** pro tento příznak při spuštění miniserver.  
   
  Pokud píšete miniserver, podle definice ho bude vždy spustit kontejner. Stále měli analyzovat příkazového řádku zkontrolujte možnost "/ vnoření". Absence této možnosti na příkazovém řádku znamená, že má uživatel pokusu o spuštění miniserver jako samostatné aplikace. Pokud k tomu dojde, registrace serveru u systémové databáze registrace a pak zobrazit okno se zprávou informující uživatele ke spuštění miniserver z kontejneru aplikace.  
   

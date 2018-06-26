@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354914"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930645"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX
 Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládacího prvku ActiveX. Témata zahrnují:  
@@ -71,11 +71,11 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
      Tyto změny budou provedeny několik funkcí, které jsou zodpovědní za vykreslování ovládacího prvku ActiveX.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Přidání do projektu ovládací prvek  
- Chcete-li přidat ID stránky vlastností pro standardní stránku vlastností obrázku, vložte následující řádek po `BEGIN_PROPPAGEIDS` makro v řídicím souboru implementace (. CPP):  
+ Přidat ID stránky vlastností pro standardní stránku vlastností obrázku, vložte následující řádek po begin_proppageids – makro v řídicím souboru implementace (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Musíte také zvýšit počet parametru vaší `BEGIN_PROPPAGEIDS` makro o jednu. To ukazuje následující řádek:  
+ Musíte také zvýšit počet parametru begin_proppageids – makro o jednu. To ukazuje následující řádek:  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Není nutné pojmenovat datový člen `m_pic`; postačí libovolný název.  
+ Není nutné pojmenovat datový člen *m_pic*; postačí libovolný název.  
   
  V dalším kroku přidejte vlastní vlastnost, která podporuje typ obrázku:  
   
@@ -123,7 +123,7 @@ Tento článek popisuje běžné typ obrázku a jak implementovat vaše ovládac
 >  Názvy třídy a funkce řízení může lišit od příkladu nahoře.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> Úpravy řízení projektu  
- Po provedení potřebné dodatky do projektu ovládací prvek, budete muset upravit několik funkcí, které ovlivňují vykreslování ovládacího prvku ActiveX. Tyto funkce `OnResetState`, `OnDraw`, a funkce Get/Set vlastní vlastnosti obrázku, jsou umístěné v řídicím souboru implementace. (Všimněte si, že v tomto příkladu třída ovládacích prvků se nazývá `CSampleCtrl`, `CPictureHolder` – datový člen nazývá `m_pic`, a název vlastnosti vlastní obrázek je `ControlPicture`.)  
+ Po provedení potřebné dodatky do projektu ovládací prvek, budete muset upravit několik funkcí, které ovlivňují vykreslování ovládacího prvku ActiveX. Tyto funkce `OnResetState`, `OnDraw`, a funkce Get/Set vlastní vlastnosti obrázku, jsou umístěné v řídicím souboru implementace. (Všimněte si, že v tomto příkladu třída ovládacích prvků se nazývá `CSampleCtrl`, `CPictureHolder` – datový člen nazývá *m_pic*, a název vlastnosti vlastní obrázek je `ControlPicture`.)  
   
  V ovládacím prvku `OnResetState` fungovat, přidejte následující řádek volitelné po volání `COleControl::OnResetState`:  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339017"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932156"
 ---
 # <a name="active-document-containers"></a>Kontejnery pro aktivní dokument
 Kontejner pro aktivní dokument, jako je například Microsoft Office Binder nebo Internet Exploreru umožňuje pracovat s jinou aplikaci typů v rámci jedné (namísto nutnosti vytvořit a použít více snímků aplikace pro každou několik dokumentů Typ dokumentu).  
@@ -50,15 +50,15 @@ Kontejner pro aktivní dokument, jako je například Microsoft Office Binder neb
   
  Kontejner pro aktivní dokument, který se integruje aktivní dokumenty musí:  
   
--   Být umožňuje zpracovávat úložiště objektů prostřednictvím **IPersistStorage** rozhraní, to znamená, je nutné zadat `IStorage` instance pro každý aktivní dokument.  
+-   Být umožňuje zpracovávat úložiště objektů prostřednictvím `IPersistStorage` rozhraní, to znamená, je nutné zadat `IStorage` instance pro každý aktivní dokument.  
   
--   Podporují základní funkce vnoření OLE – dokumenty, očekávání objekty "server", (jeden na každý dokument nebo vložení) implementující **IOleClientSite** a **IAdviseSink**.  
+-   Podporují základní funkce vnoření OLE – dokumenty, očekávání "server" objekty (jeden do každého dokumentu nebo vložení) implementující `IOleClientSite` a `IAdviseSink`.  
   
--   Podpora aktivace na místě vložené objekty nebo aktivní dokumenty. Musíte implementovat objekty lokality kontejneru `IOleInPlaceSite` a musíte zadat objekt rámečku kontejneru **IOleInPlaceFrame**.  
+-   Podpora aktivace na místě vložené objekty nebo aktivní dokumenty. Musíte implementovat objekty lokality kontejneru `IOleInPlaceSite` a objekt rámečku kontejneru musíte zadat `IOleInPlaceFrame`.  
   
 -   Podpora aktivní dokumenty rozšíření implementací `IOleDocumentSite` zajistit mechanismus pro kontejner, aby komunikoval s dokumentu. Volitelně můžete kontejneru implementovat rozhraní aktivní dokument `IOleCommandTarget` a `IContinueCallback` na vyzvednutí jednoduché příkazy jako tisku nebo uložení.  
   
- Volitelně můžete implementovat objekt rámečku, objekty zobrazení a objekt kontejneru **IOleCommandTarget** pro podporu od odeslání určité příkazy, jak je popsáno v [cíle příkazů](../mfc/message-handling-and-command-targets.md). Zobrazení a kontejneru objektů můžete volitelně také můžete implementovat `IPrint` a `IContinueCallback`, pro podporu tisk prostřednictvím kódu programu, jak je popsáno v [programový tisk](../mfc/programmatic-printing.md).  
+ Volitelně můžete implementovat objekt rámečku, objekty zobrazení a objekt kontejneru `IOleCommandTarget` pro podporu od odeslání určité příkazy, jak je popsáno v [cíle příkazů](../mfc/message-handling-and-command-targets.md). Zobrazení a kontejneru objektů můžete volitelně také můžete implementovat `IPrint` a `IContinueCallback`, pro podporu tisk prostřednictvím kódu programu, jak je popsáno v [programový tisk](../mfc/programmatic-printing.md).  
   
  Následující obrázek znázorňuje koncepční vztahy mezi kontejner a jeho komponenty (na levé straně) a aktivní dokument a jeho zobrazení (vpravo). Aktivní dokument spravuje úložiště a data a zobrazení zobrazí nebo volitelně vytiskne tato data. Rozhraní tučným písmem jsou požadované pro aktivní dokument účast; tučné písmo a kurzíva jsou volitelné. Všechny ostatní rozhraní jsou povinné.  
   
@@ -85,7 +85,7 @@ Kontejner pro aktivní dokument, jako je například Microsoft Office Binder neb
  Kontejner, který podporuje více zobrazení musí být schopen vytvořit více zobrazení objekty lokality v rámci lokality dokumentu. To poskytuje jednotlivých zobrazení samostatné aktivace a deaktivace služby podle prostřednictvím `IOleInPlaceSite`.  
   
 ##  <a name="frame_object"></a> Objekt rámce  
- Objekt rámečku kontejneru je ve většině případů stejné rámce, který slouží k aktivaci na místě v dokumentech OLE, který je, ten, který zpracuje vyjednávání nabídek a panelů nástrojů. Objekt zobrazení má přístup k tomuto objektu rámce prostřednictvím **IOleInPlaceSite::GetWindowContext**, která také poskytuje přístup k objektu kontejneru reprezentující dokument kontejneru (který může zpracovat vyjednávání úrovni podokně panelu nástrojů a výčty obsažených objektů).  
+ Objekt rámečku kontejneru je ve většině případů stejné rámce, který slouží k aktivaci na místě v dokumentech OLE, který je, ten, který zpracuje vyjednávání nabídek a panelů nástrojů. Objekt zobrazení má přístup k tomuto objektu rámce prostřednictvím `IOleInPlaceSite::GetWindowContext`, která také poskytuje přístup k objektu kontejneru reprezentující dokument kontejneru (který může zpracovat vyjednávání úrovni podokna nástrojů a výčty obsažených objektů).  
   
  Kontejner můžete posílení rámečku přidáním `IOleCommandTarget`. To umožní přijímat příkazy, které pocházejí v uživatelském rozhraní aktivní dokument stejným způsobem, že toto rozhraní můžete povolit kontejner odeslat stejné příkazy (například **nový soubor**, **otevřete**,  **Uložit jako**, **tiskových**; **Upravit kopie**, **vložení**, **vrátit zpět**a jiné) pro aktivní dokument. Další informace najdete v tématu [cíle příkazů](../mfc/message-handling-and-command-targets.md).  
   

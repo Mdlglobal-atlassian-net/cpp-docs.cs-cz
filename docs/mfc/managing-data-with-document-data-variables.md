@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8048a38c2ec09828c462d5b671cc0c89aec30805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ca7c673f47510282e129eab2538008400eb2fb9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344958"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929429"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Správa dat s použitím datových proměnných dokumentu
 Data vašeho dokumentu implementujte jako členské proměnné dokumentové třídy. Například Scribble program deklaruje člena typu `CObList` – odkazovaného seznamu, která ukládá ukazatele na `CObject` objekty. Tento seznam slouží k uložení pole bodů, které tvoří od ruky kreslení čáry.  
@@ -35,7 +35,7 @@ Data vašeho dokumentu implementujte jako členské proměnné dokumentové tř�
   
  Když definujete data člena vašeho dokumentu, obvykle přidáte členské funkce k třídě dokumentu nastavit a získat data položky a provést další užitečné operace na ně.  
   
- Zobrazení přistupovat k objektu dokumentu pomocí zobrazení ukazatele v dokumentu, nainstalovaná v zobrazení v okamžiku vytvoření. Ukazatel this v členské funkce zobrazení můžete získat pomocí volání `CView` – členská funkce **GetDocument**. Ujistěte se, že přetypovat tento ukazatel na vlastní typ dokumentu. Potom můžete přistupovat dokumentu veřejné členy prostřednictvím ukazatele.  
+ Zobrazení přistupovat k objektu dokumentu pomocí zobrazení ukazatele v dokumentu, nainstalovaná v zobrazení v okamžiku vytvoření. Ukazatel this v členské funkce zobrazení můžete získat pomocí volání `CView` – členská funkce `GetDocument`. Ujistěte se, že přetypovat tento ukazatel na vlastní typ dokumentu. Potom můžete přistupovat dokumentu veřejné členy prostřednictvím ukazatele.  
   
  Pokud přenos dat často vyžaduje přímý přístup, nebo chcete použít neveřejní členové třídy dokumentů, můžete vytvořit zobrazení třídy friend (v C++ podmínky) třídy dokumentu.  
   

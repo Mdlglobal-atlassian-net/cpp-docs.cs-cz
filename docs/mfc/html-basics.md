@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347214"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929087"
 ---
 # <a name="html-basics"></a>HTML – základy
 Většina prohlížečů mají možnost kontroly zdrojový kód HTML stránky, které budete procházet. Při zobrazení zdroje, zobrazí se počet značek HTML (jazyk) uzavřeny v lomené závorky (<>), spolu s textem.  
@@ -30,7 +30,7 @@ Většina prohlížečů mají možnost kontroly zdrojový kód HTML stránky, k
   
 1.  Otevřete Poznámkový blok nebo v editoru prostý text.  
   
-2.  Z **soubor** nabídce zvolte `New`.  
+2.  Z **soubor** nabídce zvolte **nový**.  
   
 3.  Zadejte následující řádky:  
   
@@ -44,7 +44,7 @@ Většina prohlížečů mají možnost kontroly zdrojový kód HTML stránky, k
   
 4.  Z **soubor** nabídce zvolte **Uložit**a uložte soubor jako c:\webpages\First.htm. Nechte soubor otevřený v editoru.  
   
-5.  Přepněte do prohlížeče a z **soubor** nabídce zvolte **otevřete**, nebo typ `file://C:/webpages/first.htm` do textového pole adresy URL v prohlížeči. Měli byste vidět prázdná stránka s titulek okno "Hlavní značky HTML."  
+5.  Přepněte do prohlížeče a z **soubor** nabídce zvolte **otevřete**, nebo typ *file://C:/webpages/first.htm* do textového pole adresy URL v prohlížeči. Měli byste vidět prázdná stránka s titulek okno "Hlavní značky HTML."  
   
      Všimněte si značky jsou spárovat a jsou zahrnuty v lomených závorkách. Značky nejsou malá a velká písmena, ale malá a velká písmena se často používá k zajištění značky zvýraznění.  
   

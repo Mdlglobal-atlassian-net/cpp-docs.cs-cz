@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345791"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928019"
 ---
 # <a name="document-template-creation"></a>Vytváření šablon dokumentů
-Při vytváření nového dokumentu v reakci na `New` nebo **otevřete** příkaz **souboru** nabídce Šablona dokumentu také vytvoří nové okně s rámečkem prostřednictvím pro zobrazení dokumentu.  
+Při vytváření nového dokumentu v reakci na **nový** nebo **otevřete** příkaz **souboru** nabídce Šablona dokumentu také vytvoří nové okno rámečku, pomocí kterého je možné zobrazit dokument.  
   
  Konstruktor šablony dokumentu určuje, jaké typy dokumentů, oken a zobrazení, bude možné vytvořit šablonu. To je dáno argumenty, které můžete předat do konstruktoru šablony dokumentu. Následující kód ukazuje vytvoření [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) pro ukázkovou aplikaci:  
   

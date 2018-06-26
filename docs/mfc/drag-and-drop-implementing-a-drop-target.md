@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344266"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928915"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Přetažení: Implementace cíle přetažení
 Tento článek popisuje jak provádět cíle přetažení vaší aplikace. Implementace cíle přetažení trvá mírně další práci než implementace zdroje přetažení, ale je stále poměrně jednoduché. Tyto postupy se rovněž vztahují na aplikacích jiných než OLE.  
@@ -30,11 +30,11 @@ Tento článek popisuje jak provádět cíle přetažení vaší aplikace. Imple
   
 1.  Přidání členské proměnné do jednotlivých zobrazení v aplikaci, která mají být cíle přetažení. Tato proměnná člena musí být typu `COleDropTarget` nebo z něj odvozenou třídu.  
   
-2.  Ze třídy zobrazení funkce, která zpracovává `WM_CREATE` zprávy (obvykle `OnCreate`), volání nové členské proměnné `Register` – členská funkce. `Revoke` bude volána automaticky za vás při zobrazení zničena.  
+2.  Ze třídy zobrazení funkce, která zpracovává **WM_CREATE** zprávy (obvykle `OnCreate`), volání nové členské proměnné `Register` – členská funkce. `Revoke` bude volána automaticky za vás při zobrazení zničena.  
   
 3.  Přepište následující funkce. Pokud chcete stejné chování v celé vaší aplikaci, přepište tyto funkce ve třídě zobrazení. Pokud chcete změnit chování v izolované případech nebo chcete povolit vyřazení na jinou hodnotu než`CView` přepsat tyto funkce v systému windows, vaše `COleDropTarget`-odvozené třídy.  
   
-    |přepsání|Chcete-li povolit|  
+    |Přepsání|Chcete-li povolit|  
     |--------------|--------------|  
     |`OnDragEnter`|Vyřaďte operací v okně. Voláno, pokud nejprve do okna pole kurzor.|  
     |`OnDragLeave`|Zvláštní chování při operaci přetažení opustí vybrané okno.|  

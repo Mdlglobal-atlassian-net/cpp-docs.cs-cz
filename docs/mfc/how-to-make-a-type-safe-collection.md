@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354436"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930030"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Postupy: Příprava typově bezpečné kolekce
 Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní datové typy. Témata zahrnují:  
@@ -52,7 +52,7 @@ Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní
   
 3.  V případě potřeby implementace [podpůrné funkce](../mfc/reference/collection-class-helpers.md) a [serializeelements –](../mfc/reference/collection-class-helpers.md#serializeelements). Informace o implementaci těchto funkcí najdete v tématu [implementace pomocných funkcí](#_core_implementing_helper_functions).  
   
- Tento příklad ukazuje deklaraci seznam celých čísel. První parametr v kroku 1 je typ dat uložených jako prvky v seznamu. Druhý parametr určuje, jak se data předaný a vrácená z členské funkce kolekce třídy, jako například **přidat** a `GetAt`.  
+ Tento příklad ukazuje deklaraci seznam celých čísel. První parametr v kroku 1 je typ dat uložených jako prvky v seznamu. Druhý parametr určuje, jak se data předaný a vrácená z členské funkce kolekce třídy, jako například `Add` a `GetAt`.  
   
 ##  <a name="_core_implementing_helper_functions"></a> Implementace pomocných funkcí  
  Třídy kolekcí založených na šabloně `CArray`, `CList`, a `CMap` použít pět globální pomocných funkcí, které můžete přizpůsobit podle potřeby pro třídy odvozené kolekce. Informace o těchto pomocných funkcí najdete v tématu [pomocné rutiny třídy kolekce](../mfc/reference/collection-class-helpers.md) v *odkaz knihovny MFC*. Implementace funkce serializace je potřebný u většiny použití třídy kolekcí založených na šablonu.  
@@ -66,10 +66,10 @@ Tento článek vysvětluje, jak chcete-li kolekce bezpečného typu pro vlastní
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- Vložení přetížené operátory `CArchive` volání `CObject::Serialize` (nebo přepsání této funkce) pro každou **CPerson** objektu.  
+ Vložení přetížené operátory `CArchive` volání `CObject::Serialize` (nebo přepsání této funkce) pro každý `CPerson` objektu.  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> Pomocí objektu bez šablony třídy kolekce  
- MFC podporuje také kolekce tříd zavedených se MFC verze 1.0. Tyto třídy nejsou založené na šablonách. Lze tak, aby obsahovala data z podporovaných typů `CObject*`, **Celé_číslo**, `DWORD`, a `CString`. Můžete použít tyto předdefinované kolekce (například `CObList`) pro uložení kolekce všech objektů, které jsou odvozené z `CObject`. MFC poskytuje také jiné předdefinované kolekce pro primitivní typy, jako **Celé_číslo** a void ukazatele (`void`*). Obecně platí ale je často užitečné k definování vlastní kolekce bezpečného typu pro uložení objektů konkrétnější třída a odvozené. Všimněte si, že není to s třídy kolekcí založených na šablonách je další práci než použití třídy na základě šablon.  
+ MFC podporuje také kolekce tříd zavedených se MFC verze 1.0. Tyto třídy nejsou založené na šablonách. Lze tak, aby obsahovala data z podporovaných typů `CObject*`, `UINT`, `DWORD`, a `CString`. Můžete použít tyto předdefinované kolekce (například `CObList`) pro uložení kolekce všech objektů, které jsou odvozené z `CObject`. MFC poskytuje také jiné předdefinované kolekce pro primitivní typy, jako `UINT` a void ukazatele (`void`*). Obecně platí ale je často užitečné k definování vlastní kolekce bezpečného typu pro uložení objektů konkrétnější třída a odvozené. Všimněte si, že není to s třídy kolekcí založených na šablonách je další práci než použití třídy na základě šablon.  
   
  Existují dva způsoby vytvoření kolekce bezpečného typu objektu bez šablony kolekcím:  
   

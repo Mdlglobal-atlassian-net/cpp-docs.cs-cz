@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349848"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929504"
 ---
 # <a name="rebar-controls-and-bands"></a>Matrice – ovládací prvky a pruhy
 Hlavním účelem ovládacím prvkem matrice je tak, aby fungoval jako kontejner pro podřízená okna, běžné ovládací prvky dialogového okna, nabídek, panely nástrojů a tak dále. Toto omezení je podporován koncepci "vzdálené". Každé vzdálené matrice může obsahovat libovolnou kombinaci úchytu panelu, rastrový obrázek, text popisku a podřízeného okna.  
@@ -43,7 +43,7 @@ Hlavním účelem ovládacím prvkem matrice je tak, aby fungoval jako kontejner
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) a [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) přidávat a odebírat pruhy matrice. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) a [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) ovlivnit aktuální velikost konkrétní matrice vzdálené. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) změny index konkrétní matrice vzdálené. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) zobrazí nebo skryje matrice vzdálené od uživatele.  
   
- Následující příklad ukazuje, přidání panelu nástrojů (`m_wndToolBar`) do existujícího ovládacího prvku matrice (`m_wndReBar`). Vzdálené správy je popsán inicializace `rbi` strukturu a pak volání `InsertBand` – členská funkce:  
+ Následující příklad ukazuje, přidání panelu nástrojů (*m_wndToolBar*) do existujícího ovládacího prvku matrice (*m_wndReBar*). Vzdálené správy je popsán inicializace `rbi` strukturu a pak volání `InsertBand` – členská funkce:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

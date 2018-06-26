@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347692"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930513"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Správa údajů o stavu modulů knihovny MFC
-Tento článek popisuje data o stavu modulů knihovny MFC a jak se tento stav bude aktualizován, jakmile tok provádění (kód cesta provede aplikace při provádění) zadá a zanechá modul. Stavy modulů s přepínání `AFX_MANAGE_STATE` a `METHOD_PROLOGUE` makra je také popsáno.  
+Tento článek popisuje data o stavu modulů knihovny MFC a jak se tento stav bude aktualizován, jakmile tok provádění (kód cesta provede aplikace při provádění) zadá a zanechá modul. Stavy modulů s AFX_MANAGE_STATE a method_prologue – makra přepínání také popsané.  
   
 > [!NOTE]
 >  Termín "modul" zde odkazuje spustitelný program, nebo knihovna DLL (nebo sadu knihoven DLL), pracovat nezávisle na zbytek aplikace, ale používá sdílené kopie knihovny MFC DLL. Ovládací prvek ActiveX je typický příklad modulu.  

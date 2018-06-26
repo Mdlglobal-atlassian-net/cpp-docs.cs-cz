@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ad3e99399e4d5db45606accfd58512f3950f26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb7362e7b9ccb15d338c09da337a6af5077a9789
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355269"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929871"
 ---
 # <a name="multipage-documents"></a>Vícestránkové dokumenty
 Tento článek popisuje protokol tisku Windows a vysvětluje, jak tisk dokumentů, které obsahují více než jednu stránku. Článek obsahuje následující témata:  
@@ -99,7 +99,7 @@ Tisk smyčky
   
  `DoPreparePrinting` potom zobrazí dialogové okno tisku. Až se obnoví, `CPrintInfo` struktura obsahuje hodnoty zadané uživatelem. Pokud uživatel chce tisku vybraný rozsah stránek, potvrdí můžete zadat počáteční a koncovou čísla stránek v dialogovém okně tisku. Rozhraní framework načte tyto hodnoty pomocí `GetFromPage` a `GetToPage` funkce [cprintinfo –](../mfc/reference/cprintinfo-structure.md). Pokud uživatel není zadat rozsahu stránek, volá framework `GetMinPage` a `GetMaxPage` a používá hodnot vrácených tisknout celý dokument.  
   
- Pro každou stránku dokumentu pro tisk volá framework dva členské funkce ve třídě zobrazení [onpreparedc –](../mfc/reference/cview-class.md#onpreparedc) a [při tisku](../mfc/reference/cview-class.md#onprint)a předá jednotlivé funkce dva parametry: ukazatel na [ CDC](../mfc/reference/cdc-class.md) objekt a odkazy `CPrintInfo` struktura. Pokaždé, když volání framework `OnPrepareDC` a `OnPrint`, předává jinou hodnotu v `m_nCurPage` členem `CPrintInfo` struktura. Tímto způsobem rozhraní informuje zobrazení stránky, která by měla být vytisknout.  
+ Pro každou stránku dokumentu pro tisk volá framework dva členské funkce ve třídě zobrazení [onpreparedc –](../mfc/reference/cview-class.md#onpreparedc) a [při tisku](../mfc/reference/cview-class.md#onprint)a předá jednotlivé funkce dva parametry: ukazatel na [ CDC](../mfc/reference/cdc-class.md) objekt a odkazy `CPrintInfo` struktura. Pokaždé, když volání framework `OnPrepareDC` a `OnPrint`, předává jinou hodnotu v *m_nCurPage* členem `CPrintInfo` struktura. Tímto způsobem rozhraní informuje zobrazení stránky, která by měla být vytisknout.  
   
  [Onpreparedc –](../mfc/reference/cview-class.md#onpreparedc) – členská funkce se také používá pro zobrazení na obrazovce. Umožňuje úpravy kontextu zařízení před vykreslením probíhá. `OnPrepareDC` funguje podobně jako role v tisku, ale existuje několik rozdílů: nejdřív `CDC` objekt představuje kontextu zařízení tiskárny místo kontextu obrazovky zařízení a druhé, `CPrintInfo` jako druhý parametr je předán objekt. (Tento parametr je **NULL** při `OnPrepareDC` je volána pro zobrazení na obrazovce.) Přepsání `OnPrepareDC` provádět úpravy kontextu zařízení, podle které se tisknout. Můžete například přesunout bod zobrazení a zajistit, že odpovídající část dokumentu načte vytištěn oblast ořezu.  
   
@@ -110,16 +110,16 @@ Tisk smyčky
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Tiskárny stránky vs. Stránky dokumentu  
  Když odkazujete na stránce čísla, je někdy nutné rozlišit tiskárny koncept stránky a koncept dokumentu stránky. Z hlediska tiskárny stránka má jeden list papíru. Jeden list papíru však není nutně rovnat jednu stránku dokumentu. Například při tisku bulletinů, kde mají listy nástroje přeložena, může obsahovat jeden list papíru první a poslední stránky do dokumentu vedle sebe. Podobně při tisku tabulkou, dokument není obsahovat stránky vůbec. Místo toho listů dokumentu může obsahovat řádky 1 až 20, sloupce 6 až 10.  
   
- Všechny stránky v čísla [cprintinfo –](../mfc/reference/cprintinfo-structure.md) struktura odkazují na stránky tiskárny. Volání framework `OnPrepareDC` a `OnPrint` jednou pro každý z nich dokumentu, který bude předávat tiskárny. Při přepsání [OnPreparePrinting –](../mfc/reference/cview-class.md#onprepareprinting) funkce zadat délku dokumentu, je nutné použít stránky tiskáren. Pokud je souvislosti (tedy jedné stránky tiskárny se rovná jednu stránku dokumentu), pak je to snadné. Pokud na druhé straně dokumentu stránky a stránky tiskáren neodpovídají přímo, musí překládat mezi nimi. Představte si třeba tisk tabulkou. Při přepsání `OnPreparePrinting`, je nutné vypočítat, kolik listů, na které bude potřeba tiskových celou tabulku a potom tuto hodnotu použít při volání metody `SetMaxPage` členské funkce `CPrintInfo`. Podobně při přepisování `OnPrepareDC`, musí překládat `m_nCurPage` do rozsah řádků a sloupců, které se zobrazí na tuto konkrétní listu a odpovídajícím způsobem upravit bod zobrazení.  
+ Všechny stránky v čísla [cprintinfo –](../mfc/reference/cprintinfo-structure.md) struktura odkazují na stránky tiskárny. Volání framework `OnPrepareDC` a `OnPrint` jednou pro každý z nich dokumentu, který bude předávat tiskárny. Při přepsání [OnPreparePrinting –](../mfc/reference/cview-class.md#onprepareprinting) funkce zadat délku dokumentu, je nutné použít stránky tiskáren. Pokud je souvislosti (tedy jedné stránky tiskárny se rovná jednu stránku dokumentu), pak je to snadné. Pokud na druhé straně dokumentu stránky a stránky tiskáren neodpovídají přímo, musí překládat mezi nimi. Představte si třeba tisk tabulkou. Při přepsání `OnPreparePrinting`, je nutné vypočítat, kolik listů, na které bude potřeba tiskových celou tabulku a potom tuto hodnotu použít při volání metody `SetMaxPage` členské funkce `CPrintInfo`. Podobně při přepisování `OnPrepareDC`, musí překládat *m_nCurPage* do rozsah řádků a sloupců, které se zobrazí na tuto konkrétní listu a odpovídajícím způsobem upravit bod zobrazení.  
   
 ##  <a name="_core_print.2d.time_pagination"></a> Tisk čas stránkování  
  V některých situacích třídě zobrazení nemusí předem vědět, jak dlouho je dokument, dokud ve skutečnosti vytištění. Například předpokládejme, že vaše aplikace není WYSIWYG, takže délka dokumentu na obrazovce neodpovídá jeho délka při tisku.  
   
  To způsobí, že problém při přepsání [OnPreparePrinting –](../mfc/reference/cview-class.md#onprepareprinting) pro zobrazení třídy: nemůžete předat hodnotu na `SetMaxPage` funkce [cprintinfo –](../mfc/reference/cprintinfo-structure.md) struktury, protože nevíte, délku dokument. Pokud uživatel není zadat číslo stránky kdykoli zastavit pomocí dialogového okna Tisk, rozhraní neví, kdy zastavit tiskové smyčky. Jediný způsob, jak určit, kdy zastavit tiskové smyčky je vytiskněte dokument a zobrazit při jeho ukončení. Zobrazení třídy musí zkontrolovat tohoto dokumentu je tisku, a potom informovat rozhraní, když je dosaženo konce.  
   
- Rozhraní využívá třídy zobrazení [onpreparedc –](../mfc/reference/cview-class.md#onpreparedc) funkce mu sdělit, kdy bude ukončeno. Po každé volání `OnPrepareDC`, rozhraní kontroluje členem `CPrintInfo` strukturu s názvem `m_bContinuePrinting`. Výchozí hodnota je **hodnotu TRUE.** Tak dlouho, dokud zůstává tak, pokračuje v rozhraní framework tiskové smyčky. Pokud je nastaven na hodnotu **FALSE**, zastaví framework. Chcete-li provést čas tisku stránkování, přepište `OnPrepareDC` ke kontrole, jestli na konec dokumentu má bylo dosaženo a nastavte `m_bContinuePrinting` k **FALSE** po.  
+ Rozhraní využívá třídy zobrazení [onpreparedc –](../mfc/reference/cview-class.md#onpreparedc) funkce mu sdělit, kdy bude ukončeno. Po každé volání `OnPrepareDC`, rozhraní kontroluje členem `CPrintInfo` strukturu s názvem *m_bContinuePrinting*. Výchozí hodnota je **hodnotu TRUE.** Tak dlouho, dokud zůstává tak, pokračuje v rozhraní framework tiskové smyčky. Pokud je nastaven na hodnotu **FALSE**, zastaví framework. Chcete-li provést čas tisku stránkování, přepište `OnPrepareDC` ke kontrole, jestli na konec dokumentu má bylo dosaženo a nastavte *m_bContinuePrinting* k **FALSE** po.  
   
- Výchozí implementaci `OnPrepareDC` nastaví `m_bContinuePrinting` k **FALSE** Pokud aktuální stránky je větší než 1. To znamená, že pokud nebyla zadána délka dokumentu, rozhraní předpokládá, že dokument je jednu stránku dlouho. Důsledkem tohoto je, že musí být opatrní při volání základní třída verzi `OnPrepareDC`. Nepředpokládejte, který `m_bContinuePrinting` bude **TRUE** po volání metody verze základní třídy.  
+ Výchozí implementaci `OnPrepareDC` nastaví *m_bContinuePrinting* k **FALSE** Pokud aktuální stránky je větší než 1. To znamená, že pokud nebyla zadána délka dokumentu, rozhraní předpokládá, že dokument je jednu stránku dlouho. Důsledkem tohoto je, že musí být opatrní při volání základní třída verzi `OnPrepareDC`. Nepředpokládejte, který *m_bContinuePrinting* bude **TRUE** po volání metody verze základní třídy.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   

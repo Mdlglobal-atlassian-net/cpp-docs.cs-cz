@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353270"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929728"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
 Jedno z výkonnější použití ovládacích prvků ActiveX je datovou vazbu, která umožňuje vlastnost ovládacího prvku, který má být svázána s konkrétní pole v databázi. Když uživatel upravuje data v této vázané vlastnosti, upozorní ovládacího prvku databáze a požadavky aktualizovat pole záznamu. Databáze poté oznámí kontrolu nad úspěch nebo selhání žádosti.  
@@ -51,7 +51,7 @@ Koncepční Diagram ovládacího prvku typu vázané na Data
  Je možné vytvořit uložených vlastností vázané na data, i když je pravděpodobnější, že budete chtít [vazbu get/set – metoda](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Uložené vlastnosti mají **vazbu** a **requestedit –** atributy ve výchozím nastavení.  
+>  Uložené vlastnosti mají `bindable` a `requestedit` atributy ve výchozím nastavení.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Chcete-li přidat vazbu uložených vlastností pomocí Průvodce přidáním vlastnosti  
   

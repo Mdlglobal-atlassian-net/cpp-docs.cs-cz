@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ebc05a83eb22d494a75ed474e315112522af3fc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345206"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932065"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Vykreslování obrázků ze seznamu obrázků
 Kreslení bitovou kopii, použijte [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) – členská funkce. Určete ukazatel na objekt kontextu zařízení, index bitové kopie k vykreslení, umístění v kontextu zařízení, kdy k vykreslení bitovou kopii a sadu jsou označeny styl vykreslování.  
   
- Pokud zadáte `ILD_TRANSPARENT` styl, **kreslení** používá ve dvou krocích k vykreslení maskované bitové kopie. Nejprve provádí logickou- a operace na službu bits bitové kopie a bits masky. Pak provede operaci logické XOR na výsledky první operace a na pozadí bits kontextu cílové zařízení. Tento proces vytvoří průhledné oblasti v výsledný obraz; To znamená každý bit bílé v masce způsobí, že odpovídající bit výsledný obrázek, který má být průhledná.  
+ Pokud zadáte **ILD_TRANSPARENT** styl `Draw` používá ve dvou krocích k vykreslení maskované bitové kopie. Nejprve provádí logickou- a operace na službu bits bitové kopie a bits masky. Pak provede operaci logické XOR na výsledky první operace a na pozadí bits kontextu cílové zařízení. Tento proces vytvoří průhledné oblasti v výsledný obraz; To znamená každý bit bílé v masce způsobí, že odpovídající bit výsledný obrázek, který má být průhledná.  
   
- Před kreslení maskované bitové kopie na plnou barvou pozadí, měli byste použít [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) – členská funkce nastavit barvu pozadí seznamu obrázků na barvu stejný jako cíl. Nastavení barvu eliminuje potřebu vytvářet průhledné oblasti v bitové kopii a umožňuje **kreslení** jednoduše zkopírovat bitovou kopii do kontextu cílového zařízení, což vede k významnému zvýšení výkonu. Kreslení bitovou kopii, zadejte `ILD_NORMAL` stylu při volání **kreslení**.  
+ Před kreslení maskované bitové kopie na plnou barvou pozadí, měli byste použít [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) – členská funkce nastavit barvu pozadí seznamu obrázků na barvu stejný jako cíl. Nastavení barvu eliminuje potřebu vytvářet průhledné oblasti v bitové kopii a umožňuje `Draw` jednoduše zkopírovat bitovou kopii do kontextu cílového zařízení, což vede k významnému zvýšení výkonu. Kreslení bitovou kopii, zadejte **ILD_NORMAL** stylu při volání `Draw`.  
   
- Můžete nastavit barvu pozadí seznamu maskované obrázků ([CImageList](../mfc/reference/cimagelist-class.md)) kdykoli, takže to nevykresluje správně na všechny pevné pozadí. Nastavení barvy pozadí `CLR_NONE` způsobí, že bitové kopie, které se mají vykreslovat transparentně ve výchozím nastavení. Chcete-li načíst barvu pozadí seznamu obrázků, použijte [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) – členská funkce.  
+ Můžete nastavit barvu pozadí seznamu maskované obrázků ([CImageList](../mfc/reference/cimagelist-class.md)) kdykoli, takže to nevykresluje správně na všechny pevné pozadí. Nastavení barvy pozadí **CLR_NONE** způsobí, že bitové kopie, které se mají vykreslovat transparentně ve výchozím nastavení. Chcete-li načíst barvu pozadí seznamu obrázků, použijte [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) – členská funkce.  
   
- `ILD_BLEND25` a `ILD_BLEND50` styly tónování bitové kopie s barva zvýraznění systému. Tyto styly jsou užitečné, pokud použijete maskované image představují objekt, který může uživatel vybrat. Například můžete použít `ILD_BLEND50` styl kreslení bitovou kopii, když ho uživatel vybere.  
+ **ILD_BLEND25** a **ILD_BLEND50** styly tónování bitové kopie s barva zvýraznění systému. Tyto styly jsou užitečné, pokud použijete maskované image představují objekt, který může uživatel vybrat. Například můžete použít **ILD_BLEND50** styl kreslení bitovou kopii, když ho uživatel vybere.  
   
- Bitovou kopii nonmasked se zkopíruje na cílovém zařízení kontext pomocí **SRCCOPY** rastrové operace. Barvy v bitové kopii se zobrazí stejný bez ohledu na barvu pozadí kontextu zařízení. Kreslení styly definované v **kreslení** také mít žádný vliv na vzhled nonmasked bitové kopie.  
+ Bitovou kopii nonmasked se zkopíruje na cílovém zařízení kontext pomocí `SRCCOPY` rastrové operace. Barvy v bitové kopii se zobrazí stejný bez ohledu na barvu pozadí kontextu zařízení. Kreslení styly definované v `Draw` také mít žádný vliv na vzhled nonmasked bitové kopie.  
   
  Kromě členská funkce kreslení jinou funkci [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozšiřuje možnosti vykreslování obrázku. `DrawIndirect` přijímá jako parametr, [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury. Tato struktura slouží k přizpůsobení vykreslování aktuální image, včetně použití kódů rastrové operace (ROP). Další informace o kódy ROP najdete v tématu [rastrové operace kódy](http://msdn.microsoft.com/library/windows/desktop/dd162892) a [bitmap jako štětce](http://msdn.microsoft.com/library/windows/desktop/dd183378) ve Windows SDK.  
   

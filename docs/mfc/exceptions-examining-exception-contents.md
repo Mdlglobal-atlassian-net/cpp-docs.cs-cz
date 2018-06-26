@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343253"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932231"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Výjimky: Zkoumání obsahu výjimek
 I když **catch** bloku argument může být téměř jakoukoli datového typu, funkce MFC throw výjimky typy odvozené od třídy `CException`. K zachycení výjimek vyvolané funkce MFC, potom napíšete **catch** bloku, jehož argumentem je ukazatel na `CException` objekt (nebo objekt odvozené od `CException`, například `CMemoryException`). V závislosti na přesné typ výjimky můžete zkontrolovat data členů objekt výjimky a shromažďovat informace o konkrétní příčina výjimky.  
   
- Například `CFileException` typ má `m_cause` datového člena, který obsahuje výčtový typ určující příčinou výjimky souboru. Některé příklady možné vrátit hodnoty jsou **CFileException::fileNotFound** a **CFileException::readOnly**.  
+ Například `CFileException` typ má `m_cause` datového člena, který obsahuje výčtový typ určující příčinou výjimky souboru. Některé příklady možné vrátit hodnoty jsou `CFileException::fileNotFound` a `CFileException::readOnly`.  
   
  Následující příklad ukazuje, jak zkontrolovat obsah `CFileException`. Jiné typy výjimka může být prověřen podobně.  
   

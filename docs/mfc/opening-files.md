@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352760"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931564"
 ---
 # <a name="opening-files"></a>Otevírání souborů
 V prostředí MFC je nejběžnější způsob, jak otevřít soubor dvoustupňový proces.  
@@ -55,7 +55,7 @@ V prostředí MFC je nejběžnější způsob, jak otevřít soubor dvoustupňov
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  Tento příklad vytvoří a otevře soubor. Pokud dochází k problémům, `Open` volání můžete vrátit `CFileException` objekt v jeho poslední parametr, jak je vidět tady. `TRACE` Makro vytiskne název souboru a kód označující důvod selhání. Můžete volat `AfxThrowFileException` fungovat, pokud požadujete podrobnější zasílání zpráv o chybách.  
+>  Tento příklad vytvoří a otevře soubor. Pokud dochází k problémům, `Open` volání můžete vrátit `CFileException` objekt v jeho poslední parametr, jak je vidět tady. Makro trasování vytiskne název souboru a kód označující důvod selhání. Můžete volat `AfxThrowFileException` fungovat, pokud požadujete podrobnější zasílání zpráv o chybách.  
   
 ## <a name="see-also"></a>Viz také  
  [Cfile – třída](../mfc/reference/cfile-class.md)   

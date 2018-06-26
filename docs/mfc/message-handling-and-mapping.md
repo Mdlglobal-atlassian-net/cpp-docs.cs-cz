@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348525"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931031"
 ---
 # <a name="message-handling-and-mapping"></a>Zpracování a mapování zpráv
 Rodina Tento článek popisuje zpracování zprávy a příkazy pomocí rozhraní MFC framework a jak se připojit je k jejich funkcím obslužných rutin.  
   
  Tradiční aplikace pro Windows jsou zpracovávány zpráv systému Windows v velké Switch v postupu okno. Místo toho používá MFC [zprávy mapy](../mfc/message-categories.md) mapovat přímé zprávy členské funkce distinct třídy. Mapy zpráv jsou efektivnější než virtuální funkce pro tento účel, které umožňují zprávy zpracovávat objekt nejvhodnější C++ – aplikace, dokumentu, zobrazení a tak dále. Můžete namapovat do jedné zprávy nebo rozsah zpráv, identifikátory příkazů nebo řízení ID.  
   
- **Wm_command –** zprávy – obvykle generují nabídky, tlačítek panelu nástrojů nebo akcelerátorů – také používat mechanismus map zpráv. MFC definuje standard [směrování](../mfc/command-routing.md) příkaz zpráv mezi aplikace, s rámečkem oken, zobrazení a aktivní dokumenty v programu. Můžete přepsat toto směrování, pokud je potřeba.  
+ Wm_command – zprávy – obvykle generují nabídky, tlačítek panelu nástrojů nebo akcelerátorů – také používat mechanismus map zpráv. MFC definuje standard [směrování](../mfc/command-routing.md) příkaz zpráv mezi aplikace, s rámečkem oken, zobrazení a aktivní dokumenty v programu. Můžete přepsat toto směrování, pokud je potřeba.  
   
  Mapy zpráv také zadat způsob aktualizace objektů uživatelského rozhraní (například nabídky a tlačítka panelu nástrojů), povolení nebo zakázání je podle aktuálního kontextu.  
   

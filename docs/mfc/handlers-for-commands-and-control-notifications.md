@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347230"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929128"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Obslužné rutiny pro příkazy a oznámení ovládacích prvků
 Neexistují žádné výchozí obslužné rutiny pro příkazy nebo zprávy oznámení ovládacího prvku. Proto jsou svázané pouze podle konvence v pojmenování vaší obslužné rutiny pro tyto kategorie zpráv. Při oznámení příkaz nebo ovládací prvek mapování na obslužnou rutinu, nabízí windows vlastnosti název založený na kód příkaz ID nebo oznámení ovládacího prvku. Můžete přijmout navrhovaný název, změnit nebo jej nahradit.  
@@ -40,7 +40,7 @@ Neexistují žádné výchozí obslužné rutiny pro příkazy nebo zprávy ozn�
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- Tento příkaz může přiřadit ID `IDC_MY_BUTTON` vzhledem k tomu, že je ekvivalentní objekt uživatelského rozhraní specifické pro aplikaci.  
+ Tento příkaz může přiřadit ID **IDC_MY_BUTTON** vzhledem k tomu, že je ekvivalentní objekt uživatelského rozhraní specifické pro aplikaci.  
   
  Obě kategorie zpráv nepřebírají žádné argumenty a vrátit žádná hodnota.  
   

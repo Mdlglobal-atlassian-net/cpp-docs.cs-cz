@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347945"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931873"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datové objekty a zdroje dat: Vytváření a likvidace
 Jak je popsáno v článku [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md), datové objekty a zdroje dat představuje obou stranách datových přenosů. Tento článek vysvětluje, kdy se má vytvořit a odstraňte tyto objekty a zdroje k provedení vaší přenosů dat správně, včetně:  
@@ -72,14 +72,14 @@ Jak je popsáno v článku [datové objekty a zdroje dat (OLE)](../mfc/data-obje
   
 5.  Volání aplikace `SetClipboard` – členská funkce (nebo `DoDragDrop` – členská funkce, pokud se jedná o operaci přetažení myší) patřící do objekt vytvořený v kroku 3.  
   
-6.  Pokud je to **Vyjmout** operaci nebo `DoDragDrop` vrátí `DROPEFFECT_MOVE`, data vybrali v kroku 1 se odstraní z dokumentu.  
+6.  Pokud je to **Vyjmout** operaci nebo `DoDragDrop` vrátí **DROPEFFECT_MOVE**, data vybrali v kroku 1 se odstraní z dokumentu.  
   
  Tento scénář je implementováno modulem ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Podívejte se na zdroj pro každou aplikaci `CView`-odvozené třídy pro všechny ale na `GetClipboardData` a `OnGetClipboardData` funkce. Tyto dvě funkce jsou buď `COleClientItem` nebo `COleServerItem`– implementace třídy odvozené. Tyto programy ukázka zadejte dobrým příkladem toho, jak implementovat tyto koncepty.  
   
  Jeden další situace, ve kterém můžete chtít vytvořit `COleDataSource` objekt vyskytuje, chcete-li změnit výchozí chování operací přetažení myší. Další informace najdete v tématu [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md) článku.  
   
 ##  <a name="_core_destroying_data_sources"></a> Zničení zdroje dat  
- Zdroje dat musí být zničený aktuálně zodpovědná za je aplikací. V situacích, kde ruční zdroje dat OLE, jako například volání [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), je třeba volat **pDataSrc -> internalrelease –**. Příklad:  
+ Zdroje dat musí být zničený aktuálně zodpovědná za je aplikací. V situacích, kde ruční zdroje dat OLE, jako například volání [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), je třeba volat `pDataSrc->InternalRelease`. Příklad:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

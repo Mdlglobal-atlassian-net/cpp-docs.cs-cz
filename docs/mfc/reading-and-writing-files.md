@@ -22,25 +22,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102f5f5de591f8a4475232ad8f0f5383c276e5d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e30ee5b326833b45365c422238ecfcd4f82c556d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347932"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930908"
 ---
 # <a name="reading-and-writing-files"></a>Čtení ze souborů a zápis do nich
 Pokud jste použili funkcí zpracování souboru běhové knihovny jazyka C, se zobrazí známé MFC operace čtení a zápisu. Tento článek popisuje přímo z čtení a zápis přímo na `CFile` objektu. Vám může také do vyrovnávací paměti vstupně-výstupní soubor s [CArchive](../mfc/reference/carchive-class.md) třídy.  
   
 #### <a name="to-read-from-and-write-to-the-file"></a>Číst a zapisovat do souboru  
   
-1.  Použití **čtení** a **zápisu** členské funkce Číst a zapisovat data v souboru.  
+1.  Použití `Read` a `Write` členské funkce Číst a zapisovat data v souboru.  
   
      -nebo-  
   
 2.  `Seek` – Členská funkce je také k dispozici pro přesun na konkrétní posun v souboru.  
   
- **Čtení** trvá ukazatel vyrovnávací paměť a počet bajtů ke čtení a vrátí skutečný počet bajtů, které byly čtení. Pokud požadovaný počet bajtů nelze načíst, protože koncové souboru (EOF) je dosaženo, je vrácen skutečný počet přečtených bajtů. Pokud dojde k chybě čtení, je vyvolána výjimka. **Zápis** je podobná **čtení**, ale počet zapsaných bajtů nevrátí. Pokud dojde k chybě zápisu, včetně není zápis všech bajtů zadána, je vyvolána výjimka. Pokud máte platný `CFile` objektu, můžou číst z něj nebo do něj zapisovat, jak je znázorněno v následujícím příkladu:  
+ `Read` trvá ukazatel vyrovnávací paměť a počet bajtů ke čtení a vrátí skutečný počet bajtů, které byly čtení. Pokud požadovaný počet bajtů nelze načíst, protože koncové souboru (EOF) je dosaženo, je vrácen skutečný počet přečtených bajtů. Pokud dojde k chybě čtení, je vyvolána výjimka. `Write` je podobná `Read`, ale počet zapsaných bajtů nevrátí. Pokud dojde k chybě zápisu, včetně není zápis všech bajtů zadána, je vyvolána výjimka. Pokud máte platný `CFile` objektu, můžou číst z něj nebo do něj zapisovat, jak je znázorněno v následujícím příkladu:  
   
  [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]  
   

@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353692"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930014"
 ---
 # <a name="handling-customization-notifications"></a>Zpracování oznámení o přizpůsobení
 Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce přizpůsobení, včetně definovaná systémem přizpůsobení dialogové okno, umožnit uživatelům vložit, odstranit nebo změna uspořádání tlačítek panelu nástrojů. Aplikace určuje, zda jsou k dispozici funkce přizpůsobení a ovládací prvky v rozsahu, ke kterému se uživatel může přizpůsobit panelu nástrojů.  
   
- Můžete provádět tyto možnosti přizpůsobení dostupné uživatele tím, že panelu nástrojů `CCS_ADJUSTABLE` stylu. Přizpůsobení funkcí povolí uživateli tlačítko přetáhněte na jiné místo nebo přetažením z panelu nástrojů tlačítko Odebrat. Kromě toho může uživatel poklikejte na panelu nástrojů **přizpůsobení panelu nástrojů** dialogové okno, které umožňuje uživatelům přidání, odstranění a změna uspořádání tlačítek panelu nástrojů. Aplikace můžete zobrazit dialogové okno pomocí [přizpůsobit](../mfc/reference/ctoolbarctrl-class.md#customize) – členská funkce.  
+ Můžete provádět tyto možnosti přizpůsobení dostupné uživatele tím, že panelu nástrojů **CCS_ADJUSTABLE** stylu. Přizpůsobení funkcí povolí uživateli tlačítko přetáhněte na jiné místo nebo přetažením z panelu nástrojů tlačítko Odebrat. Kromě toho může uživatel poklikejte na panelu nástrojů **přizpůsobení panelu nástrojů** dialogové okno, které umožňuje uživatelům přidání, odstranění a změna uspořádání tlačítek panelu nástrojů. Aplikace můžete zobrazit dialogové okno pomocí [přizpůsobit](../mfc/reference/ctoolbarctrl-class.md#customize) – členská funkce.  
   
  Ovládací prvek panelu nástrojů odešle zprávy s oznámením do nadřazeného okna na každý krok v procesu přizpůsobení. Pokud uživatel obsahuje klávesu SHIFT a zahájí přetahování tlačítka, panelu nástrojů automaticky zpracuje operaci přetažení. Odešle panelu nástrojů **tbn_querydelete –** oznámení do nadřazeného okna k určení, zda může být odstraněny tlačítko. Operaci přetažení končí nadřazeného okna vrátí-li **FALSE**. Panel nástrojů, jinak hodnota zaznamená vstup z myši a čeká na uvolnění tlačítka myši uživateli.  
   
@@ -165,7 +165,7 @@ Běžné prvku panel nástrojů systému Windows obsahuje integrované funkce p�
  Index tlačítko přidružená oznámení.  
   
  **tbButton**  
- `TBBUTTON` Struktura, která obsahuje informace o tlačítka panelu nástrojů, které jsou přidružené k oznámení.  
+ **TBBUTTON** struktura, která obsahuje informace o tlačítka panelu nástrojů přidružená oznámení.  
   
  **cchText**  
  Počet znaků v textu tlačítka.  

@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343850"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928622"
 ---
 # <a name="exported-dll-function-entry-points"></a>Vstupní body exportované funkce DLL
 U exportovaných funkcí knihovny DLL, použijte [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) makro udržovat správné globální stav přepnutím z modulu DLL knihovny DLL je volající aplikace.  
   
  Při volání, nastaví tento makro `pModuleState`, ukazatel na `AFX_MODULE_STATE` struktura obsahující globální data modulu, jako stav efektivní modulu pro zbývající rozsah funkce. Při výstupu oboru obsahující makro, se automaticky obnoví předchozí stav efektivní modulu.  
   
- Tento přechod se dosahuje vytváření instance **afx_module_state –** – třída v zásobníku. V jeho konstruktoru Tato třída získá ukazatel na aktuální stav modulu a ukládá je v členské proměnné a nastaví `pModuleState` jako nový stav efektivní modulu. Tato třída v jeho – destruktor obnoví ukazatele uložen v jeho členské proměnné stavu efektivní modulu.  
+ Tento přechod se dosahuje vytváření instance `AFX_MODULE_STATE` – třída v zásobníku. V jeho konstruktoru Tato třída získá ukazatel na aktuální stav modulu a ukládá je v členské proměnné a nastaví `pModuleState` jako nový stav efektivní modulu. Tato třída v jeho – destruktor obnoví ukazatele uložen v jeho členské proměnné stavu efektivní modulu.  
   
  Pokud máte exportované funkce, například ten, který spustí dialogové okno v knihovně DLL, budete muset přidejte následující kód do začátku funkce:  
   

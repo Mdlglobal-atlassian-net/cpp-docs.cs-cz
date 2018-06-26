@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347919"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932169"
 ---
 # <a name="containers-advanced-features"></a>Kontejnery: Pokročilé funkce
 Tento článek popisuje kroky potřebné k začlenit volitelné pokročilých funkcí do existující aplikace typu kontejner. Tyto funkce jsou:  
@@ -70,13 +70,13 @@ Tento článek popisuje kroky potřebné k začlenit volitelné pokročilých fu
   
     -   Připojit vaše `COleTemplateServer` objekt, který má vaše šablony dokumentu voláním objektu `ConnectTemplate` – členská funkce.  
   
-    -   Volání **COleTemplateServer::RegisterAll** – členská funkce k registraci všechny objekty třídy OLE systému.  
+    -   Volání `COleTemplateServer::RegisterAll` – členská funkce k registraci všechny objekty třídy OLE systému.  
   
-    -   Volání `COleTemplateServer::UpdateRegistry`. Parametr pouze pro `UpdateRegistry` by měla být `OAT_CONTAINER` Pokud aplikace není spuštěn s přepínačem "/ Embedded". Tato aplikace zaregistruje jako kontejner, který může podporovat odkazy na vložené objekty.  
+    -   Volání `COleTemplateServer::UpdateRegistry`. Parametr pouze pro `UpdateRegistry` by měla být *oat_container –* Pokud aplikace není spuštěn s přepínačem "/ Embedded". Tato aplikace zaregistruje jako kontejner, který může podporovat odkazy na vložené objekty.  
   
          Pokud je aplikace spuštěna s přepínačem "/ Embedded", by neměla zobrazit jeho hlavní okno podobné serverová aplikace.  
   
- Ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tuto funkci. Příklad, jak to provést, najdete v článku `InitInstance` funkce v OCLIENT. Soubor CPP této ukázkové aplikaci.  
+ Ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tuto funkci. Příklad, jak to provést, najdete v článku `InitInstance` v fungovat *OCLIENT. CPP* souboru v této ukázkové aplikaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Kontejnery](../mfc/containers.md)   

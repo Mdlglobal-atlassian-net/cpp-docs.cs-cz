@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e09f8bc0b61e22435ee348968f117940b57132e3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342891"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930872"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Přizpůsobení položky záhlaví&#39;s vzhledu
 Nastavením *dwStyle* parametr při prvním vytvoření ovládacího prvku záhlaví ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), můžete definovat vzhled a chování záhlaví položky nebo hlavičky ovládací prvek.  
   
  Tady je vzorkování styly, které můžete nastavit a jejich účel:  
   
--   Chcete-li položku záhlaví vypadat pushbutton, použijte `HDS_BUTTONS` stylu.  
+-   Chcete-li položku záhlaví vypadat pushbutton, použijte **HDS_BUTTONS** stylu.  
   
      Tento styl použijte, pokud chcete provádět akce v reakci na kliknutí myší na položky záhlaví, jako je například řazení dat podle konkrétního sloupce, jak se provádí v aplikaci Microsoft Outlook.  
   
--   Položky hlavičky "aktivní sledování" vzhled při předá myší nad nimi, použijte `HDS_HOTTRACK` stylu.  
+-   Položky hlavičky "aktivní sledování" vzhled při předá myší nad nimi, použijte **HDS_HOTTRACK** stylu.  
   
      Aktivní sledování zobrazí 3D outline jako ukazatel prochází přes položku v opačném případě ploché panelu.  
   
--   K označení, že by být skrytý ovládacím prvku záhlaví, použijte `HDS_HIDDEN` stylu.  
+-   K označení, že by být skrytý ovládacím prvku záhlaví, použijte **HDS_HIDDEN** stylu.  
   
-     `HDS_HIDDEN` Styl označuje, že ovládacím prvku záhlaví je určena pro použití jako kontejner dat a není ovládacího prvku visual. Tento styl není automaticky skrýt ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v **cy** členem `WINDOWPOS` struktura bude nula indikující, že ovládacího prvku by neměly být viditelné pro uživatele.  
+     **HDS_HIDDEN** styl označuje, že ovládacím prvku záhlaví je určena pro použití jako kontejner dat a není ovládacího prvku visual. Tento styl není automaticky skrýt ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v *cy* členem `WINDOWPOS` struktura bude nula indikující, že ovládacího prvku by neměly být viditelné pro uživatele.  
   
  Další informace o těchto vlastnostech najdete v tématu [položky](http://msdn.microsoft.com/library/windows/desktop/bb775238) ve Windows SDK. Informace o přidávání položek do ovládacího prvku záhlaví najdete v tématu [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).  
   

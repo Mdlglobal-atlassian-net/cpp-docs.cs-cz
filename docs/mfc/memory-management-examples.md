@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347188"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929304"
 ---
 # <a name="memory-management-examples"></a>Správa paměti: Příklady
 Tento článek popisuje, jak MFC provádí rámce přidělení a přidělení haldy pro každou z typických tři druhy přidělení paměti:  
@@ -99,7 +99,7 @@ Tento článek popisuje, jak MFC provádí rámce přidělení a přidělení ha
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Pokud argument pro `CPerson` konstruktor je ukazatel na `char`, je příkaz pro přidělení rámce:  
+     Pokud argument pro `CPerson` konstruktor je ukazatel na **char**, je příkaz pro přidělení rámce:  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4756da7459f3e584dd02b882f5c790412c095561
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343347"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929465"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
 Toto téma popisuje minimální práce nezbytné k implementaci pro kopírování a vkládání ze schránky v aplikaci OLE. Doporučujeme, abyste si přečetli [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) témata než budete pokračovat.  
@@ -41,16 +41,16 @@ Toto téma popisuje minimální práce nezbytné k implementaci pro kopírován�
   
 3.  Pokud se uživatel rozhodl operace vyjmutí místo operace kopírování, odstranění vybraných dat z vaší aplikace.  
   
- Příkladem tohoto pořadí najdete v sekci **OnEditCut** a **OnEditCopy** funkcí v MFC OLE ukázkové programy [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Všimněte si, že tyto ukázky zachovat ukazatel aktuálně vybraná data, takže krok 1 je již dokončena.  
+ Příkladem tohoto pořadí najdete v sekci `OnEditCut` a `OnEditCopy` funkcí v MFC OLE ukázkové programy [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Všimněte si, že tyto ukázky zachovat ukazatel aktuálně vybraná data, takže krok 1 je již dokončena.  
   
 ##  <a name="_core_pasting_data"></a> Vkládání dat  
  Vkládání dat je složitější než kopírování, protože je třeba vybrat formát pro použití v vložení dat do vaší aplikace.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Chcete-li vložit data ze schránky  
   
-1.  Ve třídě zobrazení implementovat **OnEditPaste** pro zpracování uživatelé v nabídce Upravit zvolíte možnost vložení.  
+1.  Ve třídě zobrazení implementovat `OnEditPaste` pro zpracování uživatelé v nabídce Upravit zvolíte možnost vložení.  
   
-2.  V **OnEditPaste** fungovat, vytvořte `COleDataObject` objekt a volání jeho `AttachClipboard` členskou funkci pro tento objekt propojit data do schránky.  
+2.  V `OnEditPaste` fungovat, vytvořte `COleDataObject` objekt a volání jeho `AttachClipboard` členskou funkci pro tento objekt propojit data do schránky.  
   
 3.  Volání `COleDataObject::IsDataAvailable` ke kontrole, jestli konkrétní formát je k dispozici.  
   
@@ -58,10 +58,10 @@ Toto téma popisuje minimální práce nezbytné k implementaci pro kopírován�
   
 4.  Proveďte vložení formátu.  
   
- Příklad toho, jak to funguje, najdete v části implementace **OnEditPaste** členské funkce v zobrazení tříd definovaných v aplikacích MFC OLE ukázka [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).  
+ Příklad toho, jak to funguje, najdete v části implementace `OnEditPaste` členské funkce v zobrazení tříd definovaných v aplikacích MFC OLE ukázka [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  Hlavní výhodou oddělení operaci vložení do vlastní funkce je, že má stejný kód vložte lze použít při přetažení dat v aplikaci během operace přetažení myší. Jako OCLIENT a HIERSVR vaše `OnDrop` funkce můžete také zavolat **DoPasteItem**, opětovné použití kódu zapsat implementace operace vkládání.  
+>  Hlavní výhodou oddělení operaci vložení do vlastní funkce je, že má stejný kód vložte lze použít při přetažení dat v aplikaci během operace přetažení myší. Jako OCLIENT a HIERSVR vaše `OnDrop` funkce můžete také zavolat `DoPasteItem`, opětovné použití kódu zapsat implementace operace vkládání.  
   
  Pro zpracování Vložit jinak možnost v nabídce Upravit, naleznete v tématu [dialogová okna v prostředí OLE](../mfc/dialog-boxes-in-ole.md).  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333827"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930658"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX – kontejnery ovládacích prvků: Ošetření událostí v ovládacím prvku ActiveX
 Tento článek popisuje pomocí okna vlastnosti instalace obslužných rutin událostí pro ovládací prvky ActiveX v kontejneru ovládacího prvku ActiveX. Obslužné rutiny událostí se používají k přijímání oznámení (z ovládacího prvku) určité události a provedení několika akcí v odpovědi. Toto oznámení se nazývá "ohlásí" události.  
@@ -46,7 +46,7 @@ Tento článek popisuje pomocí okna vlastnosti instalace obslužných rutin ud�
   
  Jako okno Vlastnosti použít pro přidání události, událost mapování položka (`ON_EVENT`) je přidána mapy jímek událostí a obslužné rutiny události se přidá funkce pro implementaci kontejneru (. Soubor CPP).  
   
- Následující příklad deklaruje obslužnou rutinu události volat `OnClickInCircCtrl`, pro ovládací prvek str **clickin –** událostí:  
+ Následující příklad deklaruje obslužnou rutinu události volat `OnClickInCircCtrl`, pro ovládací prvek str `ClickIn` událostí:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334844"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931935"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Přístup ke všem členům kolekce
 Třídy MFC pole kolekce – i na základě šablon a není – používat pro přístup k jejich elementů indexy. Třídy MFC seznamu a mapy kolekce – i na základě šablon a není – použít jako ukazatel typu **pozice** k popisu dané pozici v rámci kolekce. Pro přístup k jedné nebo více členové těchto kolekcí, budete nejprve inicializovat označení pozice opakovaně předat tuto pozici do kolekce a požádejte ho vrátit na další prvek. Kolekce není zodpovědná za údržbu informace o průběhu iterace stavu. Tyto informace se ukládají v označení pozice. Ale s ohledem na konkrétní pozici, kolekce je odpovědná za vrácení na další prvek.  
@@ -51,7 +51,7 @@ Třídy MFC pole kolekce – i na základě šablon a není – používat pro p
   
      Tento příklad používá pole typu ukazatele, které obsahuje odkazy na `CPerson` objekty. Toto pole je odvozená od třídy `CObArray`, jeden objektu bez šablony předdefinované třídy. `GetAt` vrátí ukazatel na `CPerson` objektu. Pro typové ukazatel kolekce třídy – pole nebo seznamy – první parametr určuje základní třídy; druhý parametr určuje typ úložiště.  
   
-     `CTypedPtrArray` Třídy také přetížení **[]** operátor tak, aby můžete použít obvyklé syntaxe pole-dolní index přístup prvky pole. Alternativu k příkazu v textu `for` smyčka výše je  
+     `CTypedPtrArray` Třídy také přetížení **[]** operátor tak, aby můžete použít obvyklé syntaxe pole-dolní index přístup prvky pole. Alternativu k příkazu v textu **pro** smyčka výše je  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

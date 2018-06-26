@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352786"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931886"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ukotvitelné a plovoucí panely nástrojů
 Knihovny Microsoft Foundation Class podporuje lze ukotvit panely nástrojů. Lze ukotvit panelu nástrojů můžete připojit nebo ukotven na žádné straně nadřazené okno, nebo může být odpojený od, nebo obtékané v samostatném okně zkrácená rámce. Tento článek vysvětluje, jak používat lze ukotvit panely nástrojů ve svých aplikacích.  
@@ -62,7 +62,7 @@ Knihovny Microsoft Foundation Class podporuje lze ukotvit panely nástrojů. Lze
  Viz ukázka MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) příklady.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Povolení ukotvení v okně s rámečkem  
- Pokud chcete ukotvit panely nástrojů k okně s rámečkem, musí být oken s rámečkem (nebo cílové) povolený a umožňuje ukotvení. To se provádí pomocí [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) funkce, která přebírá jeden `DWORD` parametr, který je sada styl bits, která určuje, které straně okna rámce přijímá ukotvení. Pokud panelu nástrojů je možné ukotvena a více stran, které by mohly být ukotvena se Postranní uvedené v parametru předaný `EnableDocking` se používají v následujícím pořadí: nahoře, dole, vlevo, vpravo. Pokud chcete mít možnost ukotvení ovládacího prvku panely odkudkoli, předat `CBRS_ALIGN_ANY` k `EnableDocking`.  
+ Pokud chcete ukotvit panely nástrojů k okně s rámečkem, musí být oken s rámečkem (nebo cílové) povolený a umožňuje ukotvení. To se provádí pomocí [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) funkce, která přebírá jeden *DWORD* parametr, který je sada styl bits, která určuje, které straně okna rámce přijímá ukotvení. Pokud panelu nástrojů je možné ukotvena a více stran, které by mohly být ukotvena se Postranní uvedené v parametru předaný `EnableDocking` se používají v následujícím pořadí: nahoře, dole, vlevo, vpravo. Pokud chcete mít možnost ukotvení ovládacího prvku panely odkudkoli, předat **cbrs_align_any –** k `EnableDocking`.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> Povolení ukotvení pro panel nástrojů  
  Jakmile dokončíte přípravu cíl pro ukotvení, je nutné připravit panelu nástrojů (nebo zdroj) podobným způsobem. Volání [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) pro každý chcete ukotvení panelu nástrojů zadání cílové strany, na který by měl ukotvení panelu nástrojů. Pokud žádná z konce zadané ve volání `CControlBar::EnableDocking` postranní povolené pro ukotvení v rámci okna se shodují, nelze ukotvení panelu nástrojů – bude float. Jakmile byl obtékané, zůstane plovoucí panel nástrojů nelze ukotvit do okna s rámečkem.  

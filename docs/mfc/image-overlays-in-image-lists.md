@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a55a6e015a2f8c1613a85717c030737712c4da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 93d37b49a949ab29e0ae888d9c961da086ee4ca4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345404"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928593"
 ---
 # <a name="image-overlays-in-image-lists"></a>Překryvy obrázků v seznamech obrázků
 Každý seznamu obrázků ([CImageList](../mfc/reference/cimagelist-class.md)) obsahuje seznam bitové kopie na použití jako překrytí masky. "Překrytí maska" je obrázek, který vykresluje transparentně přes jiné image. Žádný obrázek slouží jako masku překrytí. Můžete zadat až čtyři masek překrytí na seznamu obrázků.  
   
  Přidejte index bitové kopie do seznamu překrytí masky pomocí [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) – členská funkce, index bitové kopie a index masku překrytí. Upozorňujeme, že indexy masek překrytí jsou základem jedna místo od nuly.  
   
- Zakreslit masku překrytí nad bitovou kopii pomocí jediné volání **kreslení**. Parametry patří index bitové kopie k vykreslení a index masku překrytí. Je nutné použít [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makro k určení index maska překrytí. Můžete také určit bitovou kopii překrytí při volání metody [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) – členská funkce.  
+ Zakreslit masku překrytí nad bitovou kopii pomocí jediné volání `Draw`. Parametry patří index bitové kopie k vykreslení a index masku překrytí. Je nutné použít [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makro k určení index maska překrytí. Můžete také určit bitovou kopii překrytí při volání metody [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) – členská funkce.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CImageList](../mfc/using-cimagelist.md)   

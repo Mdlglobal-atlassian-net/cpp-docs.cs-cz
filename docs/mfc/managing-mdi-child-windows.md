@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344932"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929478"
 ---
 # <a name="managing-mdi-child-windows"></a>Správa podřízených oken MDI
-Oken MDI hlavního rámce, (jeden na aplikaci) obsahovat speciální podřízeného okna volat **MDICLIENT** okno. **MDICLIENT** okno spravuje klientské oblasti hlavního okna rámce a sama má podřízená okna: okna dokumentu odvozen od `CMDIChildWnd`. Protože windows dokumentu okna s rámečkem sami (podřízených oken MDI), budou také obsahovat vlastní podřízené objekty. Ve všech těchto případech nadřazeného okna spravuje jeho podřízených systému windows a předá některé příkazy k nim.  
+Okna s rámečkem hlavní MDI, (jeden na aplikaci) obsahovat speciální podřízeného okna názvem okno MDICLIENT. Okno MDICLIENT spravuje klientské oblasti hlavního okna rámce a sama má podřízená okna: okna dokumentu odvozen od `CMDIChildWnd`. Protože windows dokumentu okna s rámečkem sami (podřízených oken MDI), budou také obsahovat vlastní podřízené objekty. Ve všech těchto případech nadřazeného okna spravuje jeho podřízených systému windows a předá některé příkazy k nim.  
   
- V rámci okna aplikace MDI spravuje okně s rámečkem **MDICLIENT** okně přemístění ve spojení s ovládací pruhy. **MDICLIENT** okně zase spravuje všechny MDI podřízená rámce okna. Následující obrázek znázorňuje vztah mezi rámce okna MDI, jeho **MDICLIENT** okna a jeho podřízená dokumentu rámce okna.  
+ Okně s rámečkem v rámci okna aplikace MDI spravuje okno MDICLIENT přemístění ve spojení s ovládací pruhy. Okno MDICLIENT zase spravuje všechny MDI podřízená rámce okna. Následující obrázek znázorňuje vztah mezi rámce okna MDI, její okno MDICLIENT a okna s rámečkem dokumentu jeho podřízené.  
   
  ![Podřízená okna v rámci okna aplikace MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
 Okna s rámečkem MDI a podřízené položky  

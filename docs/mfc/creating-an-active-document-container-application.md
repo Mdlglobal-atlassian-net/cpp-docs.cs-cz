@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341346"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929442"
 ---
 # <a name="creating-an-active-document-container-application"></a>Vytvoření aplikace kontejnerů pro aktivní dokument
 Většina doporučený a nejjednodušší způsob, jak vytvořit aplikace kontejnerů pro aktivní dokument je vytvoření kontejneru aplikace MFC EXE pomocí Průvodce aplikací knihovny MFC a pak upravit aplikaci, aby podporovala obsahování pro aktivní dokument.  
@@ -36,7 +36,7 @@ Většina doporučený a nejjednodušší způsob, jak vytvořit aplikace kontej
   
 3.  Vyberte **aplikace knihovny MFC** v pravém podokně.  
   
-4.  Název projektu `MyProj`, klikněte na tlačítko **OK**.  
+4.  Název projektu *MyProj*, klikněte na tlačítko **OK**.  
   
 5.  Vyberte **složené podporu dokumentu** stránky.  
   
@@ -48,9 +48,9 @@ Většina doporučený a nejjednodušší způsob, jak vytvořit aplikace kontej
   
 9. Po dokončení Průvodce aplikací MFC generování aplikace, otevřete následující soubory pomocí Průzkumníku řešení:  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. V MyProjview.cpp proveďte následující změny:  
+10. V *MyProjview.cpp*, proveďte následující změny:  
   
     -   V `CMyProjView::OnPreparePrinting`, obsah funkce nahraďte následujícím kódem:  
   

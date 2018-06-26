@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348221"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931720"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem
 Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejším vlastnostem svého kontejneru ovládacího prvku.  
@@ -44,7 +44,7 @@ Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejš
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Volající musí volat **verze ()** na vrácený písmo.  
+    >  Volající musí volat `Release( )` na vrácený písmo.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejš
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- Pokud se změní hodnota vedlejším vlastnosti (prostřednictvím některé akce kontejneru), **OnAmbientPropertyChanged** členské funkce ovládacího prvku. Člen funkci pro zpracování toto oznámení přepište. Parametr pro **OnAmbientPropertyChanged** je odesílání ID ovlivněných vedlejší vlastnost. Může být hodnota parametru toto ID odesílání **DISPID_UNKNOWN**, což naznačuje, že jeden nebo více vedlejším vlastnostem došlo ke změně, ale není k dispozici informace o tom, které situace měla vliv na vlastnosti.  
+ Pokud se změní hodnota vedlejším vlastnosti (prostřednictvím některé akce kontejneru), `OnAmbientPropertyChanged` členské funkce ovládacího prvku. Člen funkci pro zpracování toto oznámení přepište. Parametr pro `OnAmbientPropertyChanged` je odesílání ID ovlivněných vedlejší vlastnost. Hodnota toto ID odesílání může být DISPID_UNKNOWN, což znamená, že jeden nebo více vedlejším vlastnostem se změnila, ale není k dispozici informace o tom, které situace měla vliv na vlastnosti.  
   
 ## <a name="see-also"></a>Viz také  
  [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)

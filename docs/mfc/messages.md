@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd49410f9982788e9403f0cb83ca8656473417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344101"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928338"
 ---
 # <a name="messages"></a>Zprávy
-Ve smyčce zpráv **spustit** funkce člena třídy `CWinApp` načte zprávy vytvářené různých událostí zařazených do fronty. Například po kliknutí myší, systém Windows odešle několik zprávy týkající se myš, například `WM_LBUTTONDOWN` při stisknutí levým tlačítkem myši a `WM_LBUTTONUP` uvolnění levé tlačítko. Implementace rozhraní framework zpráva smyčky aplikace odešle zprávy do příslušné okna.  
+Ve smyčce zpráv `Run` funkce člena třídy `CWinApp` načte zprávy vytvářené různých událostí zařazených do fronty. Například když uživatel klikne myš, systém Windows odešle několik zprávy týkající se myš, například WM_LBUTTONDOWN při stisknutí levým tlačítkem myši a WM_LBUTTONUP po vydání levé tlačítko. Implementace rozhraní framework zpráva smyčky aplikace odešle zprávy do příslušné okna.  
   
  Důležité kategorie zpráv jsou popsány v [kategorie zpráv](../mfc/message-categories.md).  
   

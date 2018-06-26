@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349261"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929796"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC – ovládací prvky ActiveX: Přidání uložených metod
-Uložené metody se liší od vlastní metoda v tom, že už je implementováno třídou [COleControl](../mfc/reference/colecontrol-class.md). Například `COleControl` obsahuje člen předdefinované funkci, která podporuje metodu aktualizace pro ovládací prvek. Položka mapy odeslání pro tuto metodu uložených je **DISP_STOCKFUNC_REFRESH**.  
+Uložené metody se liší od vlastní metoda v tom, že už je implementováno třídou [COleControl](../mfc/reference/colecontrol-class.md). Například `COleControl` obsahuje člen předdefinované funkci, která podporuje metodu aktualizace pro ovládací prvek. Položka mapy odeslání pro tuto metodu uložených je DISP_STOCKFUNC_REFRESH.  
   
  `COleControl` podporuje dvě metody uložených: DoClick – a aktualizace. Aktualizace je volána uživatelem ovládacího prvku okamžitě aktualizovat vzhled ovládacího prvku; DoClick – vyvolání má provést, klikněte na tlačítko ovládacího prvku událost.  
   
 |Metoda|Položku mapy odesílání|Komentář|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Aktivuje událost klikněte na tlačítko.|  
-|**Aktualizace**|**(DISP_STOCKPROP_REFRESH)**|Okamžitě aktualizuje vzhledu ovládacího prvku.|  
+|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Okamžitě aktualizuje vzhledu ovládacího prvku.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Přidání uložených metoda pomocí Průvodce přidáním metody  
  Přidání uložené metody je jednoduchá pomocí [Průvodce přidáním metody](../ide/add-method-wizard.md). Následující postup předvádí, přidání do ovládacího prvku vytvořené pomocí Průvodce ovládacím prvkem ActiveX knihovny MFC metoda obnovení.  

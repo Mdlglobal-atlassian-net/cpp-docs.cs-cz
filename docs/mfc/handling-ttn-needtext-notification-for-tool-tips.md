@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345914"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931961"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek
 Jako součást [povolení tipů nástrojů](../mfc/enabling-tool-tips.md), zpracováváte **TTN_NEEDTEXT** zpráva přidáním následující položku do nadřazené okno mapy zpráv:  
@@ -48,7 +48,7 @@ Jako součást [povolení tipů nástrojů](../mfc/enabling-tool-tips.md), zprac
  Ukazatel [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) struktury. Tato struktura je také popsáno v další [ToolTipText – struktura](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Ukazatel na kód výsledku můžete nastavit před vrácením. **TTN_NEEDTEXT** můžete ignorovat obslužné rutiny `pResult` parametr.  
+ Ukazatel na kód výsledku můžete nastavit před vrácením. **TTN_NEEDTEXT** můžete ignorovat obslužné rutiny *pResult* parametr.  
   
  Jako příklad obslužnou rutinu oznámení zobrazení formuláře:  
   

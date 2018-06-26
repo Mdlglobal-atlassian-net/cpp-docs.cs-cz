@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351807"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931948"
 ---
 # <a name="providing-windowless-activation"></a>Zajišťování aktivace bez oken
-Okno vytváření kódu (to znamená, vše, co se stane, když zavoláte **CreateWindow**) může být provést. Ovládací prvek, který udržuje obrazovce okno má ke správě zprávy pro okno. Bez oken ovládací prvky jsou proto rychlejší než ovládací prvky se systémem windows.  
+Okno vytváření kódu (to znamená, vše, co se stane, když zavoláte `CreateWindow`) může být provést. Ovládací prvek, který udržuje obrazovce okno má ke správě zprávy pro okno. Bez oken ovládací prvky jsou proto rychlejší než ovládací prvky se systémem windows.  
   
  Další výhodou bez oken ovládací prvky je, že, na rozdíl od oddílové ovládacích prvků, bez oken ovládací prvky podporují transparentní Malování a oblasti nepravoúhlý obrazovky. Běžným příkladem ovládacího prvku transparentní je ovládacího prvku typu textový s průhledným pozadím. Ovládací prvky vybarví text, ale ne na pozadí, aby vše, co je pod text zobrazuje prostřednictvím. Novější formulářů často Ujistěte se, použijte nepravoúhlý ovládacích prvků, jako je například šipky a zaokrouhlit tlačítka.  
   
@@ -41,7 +41,7 @@ Okno vytváření kódu (to znamená, vše, co se stane, když zavoláte **Creat
   
  Kód, který patří tento příznak vytváří automaticky, pokud jste vybrali **aktivace bez oken** možnost [nastavení řízení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky Průvodce ovládacím prvkem ActiveX knihovny MFC.  
   
- Pokud je povolená aktivace bez oken, kontejneru budou delegovat to vstupní zprávy k ovládacímu prvku `IOleInPlaceObjectWindowless` rozhraní. `COleControl`je implementace tohoto rozhraní odešle zprávu zprávy prostřednictvím ovládacího prvku mapy zpráv, po úpravě myši koordinuje správně. Přidáním odpovídající položky do mapy zpráv může zpracovat zprávy jako obyčejnou okno zprávy. Ve vaší obslužné rutiny pro tyto zprávy, vyhněte se použití `m_hWnd` členské proměnné (nebo – členská funkce, která jej používá) bez první kontrola její hodnota není **NULL**.  
+ Pokud je povolená aktivace bez oken, kontejneru budou delegovat to vstupní zprávy k ovládacímu prvku `IOleInPlaceObjectWindowless` rozhraní. `COleControl`je implementace tohoto rozhraní odešle zprávu zprávy prostřednictvím ovládacího prvku mapy zpráv, po úpravě myši koordinuje správně. Přidáním odpovídající položky do mapy zpráv může zpracovat zprávy jako obyčejnou okno zprávy. Ve vaší obslužné rutiny pro tyto zprávy, vyhněte se použití *m_hWnd* členské proměnné (nebo – členská funkce, která jej používá) bez první kontrola její hodnota není **NULL**.  
   
  `COleControl` Poskytuje členské funkce, které vyvolají zachycení myši, fokus klávesnice, posouvání a další okno služby z kontejneru podle potřeby, včetně:  
   

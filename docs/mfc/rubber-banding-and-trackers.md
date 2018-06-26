@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379239"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931733"
 ---
 # <a name="rubber-banding-and-trackers"></a>Pružné čáry a snímače
 Další funkcí, které jsou součástí snímačů je výběr "pružné vzdálené správy", který umožňuje uživateli vybrat více položek OLE přetažením obdélníku velikosti kolem položky, které chcete vybrat. Když uživatel uvolní levé tlačítko myši, jsou vybrané položky v rámci oblasti vybraný uživatelem a práce s uživatelem. Uživatel může například přetáhněte výběr do jiné aplikace kontejneru.  
   
- Implementace tato funkce vyžaduje některé další kód ve vaší aplikaci `WM_LBUTTONDOWN` funkce obslužné rutiny.  
+ Implementace tato funkce vyžaduje některé další kód ve funkci obslužná rutina WM_LBUTTONDOWN vaší aplikace.  
   
  Následující ukázka kódu implementuje pružné vzdálené výběr a další funkce.  
   

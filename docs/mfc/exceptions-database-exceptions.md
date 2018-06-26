@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354298"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930235"
 ---
 # <a name="exceptions-database-exceptions"></a>Výjimky: Výjimky databáze
 Tento článek vysvětluje způsob zpracování výjimek databáze. Většina materiálu v tomto článku platí jak pro práci s třídy MFC pro připojení ODBC (Open Database) nebo třídy MFC pro objekty DAO (Data Access). Materiály, které jsou specifické pro jednu nebo jiný model je explicitně označen. Témata zahrnují:  
@@ -54,7 +54,7 @@ Tento článek vysvětluje způsob zpracování výjimek databáze. Většina ma
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) obsahuje rozšířené chybový kód z tříd MFC rozhraní DAO. Tyto kódy chyb, které mají názvy ve formátu **AFX_DAO_ERROR_XXX**, jsou popsané v části datového člena v `CDaoException`.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) obsahuje OLE `SCODE` z rozhraní DAO, pokud je k dispozici. Málokdy budete potřebovat pro práci s tímto kódem chyby, ale. Další informace jsou obvykle dostupné v dalších dvou datových členů. Viz datový člen Další informace o `SCODE` hodnoty.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) obsahuje OLE **kód SCODE** z rozhraní DAO, pokud je k dispozici. Málokdy budete potřebovat pro práci s tímto kódem chyby, ale. Další informace jsou obvykle dostupné v dalších dvou datových členů. Viz datový člen Další informace o **kód SCODE** hodnoty.  
   
  Další informace o rozhraní DAO chyby, typ objektu chyby rozhraní DAO a kolekce DAO chyb jsou k dispozici v rámci třídy [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
@@ -62,7 +62,7 @@ Tento článek vysvětluje způsob zpracování výjimek databáze. Většina ma
  V následujícím příkladu se pokusí vytvořit [CRecordset](../mfc/reference/crecordset-class.md)-odvozené objektu v haldě s **nové** operátor a potom otevřete sadu záznamů (pro zdroje dat ODBC). Podobně jako příklad pro třídy DAO najdete v tématu "DAO výjimky" následující příklad.  
   
 ### <a name="odbc-exception-example"></a>Příklad výjimky rozhraní ODBC  
- [Otevřete](../mfc/reference/crecordset-class.md#open) – členská funkce může vyvolat výjimku (typu [CDBException](../mfc/reference/cdbexception-class.md) pro třídy rozhraní ODBC), takže tento kód závorky **otevřete** volání s **akci**  bloku. Následujících **catch** blok zachytí `CDBException`. Může zkontrolujte objekt výjimky, samostatně, názvem `e`, ale v takovém případě stačí vědět, že pro vytvoření sady záznamů se nezdařilo. **Catch** bloku zobrazí okno se zprávou a vyčistí odstraněním objekt sady záznamů.  
+ [Otevřete](../mfc/reference/crecordset-class.md#open) – členská funkce může vyvolat výjimku (typu [CDBException](../mfc/reference/cdbexception-class.md) pro třídy rozhraní ODBC), takže tento kód závorky `Open` volání s **zkuste** bloku. Následujících **catch** blok zachytí `CDBException`. Může zkontrolujte objekt výjimky, samostatně, názvem `e`, ale v takovém případě stačí vědět, že pro vytvoření sady záznamů se nezdařilo. **Catch** bloku zobrazí okno se zprávou a vyčistí odstraněním objekt sady záznamů.  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

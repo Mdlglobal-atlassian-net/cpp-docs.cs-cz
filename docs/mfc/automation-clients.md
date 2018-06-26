@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342488"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929036"
 ---
 # <a name="automation-clients"></a>Klienti automatizace
 Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo je vystavit objekty, budou se dá upravit. Klientem automatizace je aplikace, která můžete upravit zveřejněné objekty, které patří do jiné aplikace. Automatizační server se nazývá aplikaci, která poskytuje objekty. Klient umožňuje pracovat s objekty aplikací serveru díky přístupu k těmto objektům vlastnosti a funkce.  
@@ -38,7 +38,7 @@ Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementov
   
  Statické vázané klienti používat třídu proxy, který je staticky propojené s klientskou aplikaci. Tato třída poskytuje zapouzdření C++ bezpečnost typů vlastností a operace serverová aplikace.  
   
- Třída `COleDispatchDriver` poskytuje hlavní podporu automatizace na straně klienta. Pomocí `Add New Item` dialogové okno, vytváření třídy odvozené od `COleDispatchDriver`.  
+ Třída `COleDispatchDriver` poskytuje hlavní podporu automatizace na straně klienta. Pomocí **přidat novou položku** dialogové okno, vytváření třídy odvozené od `COleDispatchDriver`.  
   
  Potom zadejte soubor knihovny typů popisující vlastnosti a funkce serveru aplikační objekt. Dialogové okno Přidat položku čte tento soubor a vytvoří `COleDispatchDriver`-odvozené třídy s členské funkce, které aplikace můžete volat k způsobem typově bezpečný přístup k objektům serverová aplikace v jazyce C++. Další funkce zděděno z `COleDispatchDriver` zjednodušuje proces volání správné automatizační server.  
   

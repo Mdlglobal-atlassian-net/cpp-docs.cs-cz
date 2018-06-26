@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347127"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932192"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností
 Tento článek popisuje dostupné pro ovládací prvky ActiveX a jejich použití stránek uložených vlastností.  
@@ -41,13 +41,13 @@ Tento článek popisuje dostupné pro ovládací prvky ActiveX a jejich použit�
   
 -   [MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC poskytuje tři stránky uložených vlastností pro použití s ovládacími prvky ActiveX: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, a **CLSID_CPicturePropPage**. Tyto stránek zobrazit uživatelské rozhraní pro uložené barvy, písma a vlastnosti obrázku, v uvedeném pořadí.  
+ MFC poskytuje tři stránky uložených vlastností pro použití s ovládacími prvky ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, a `CLSID_CPicturePropPage`. Tyto stránek zobrazit uživatelské rozhraní pro uložené barvy, písma a vlastnosti obrázku, v uvedeném pořadí.  
   
  Do ovládacího prvku zahrnout tyto stránek vlastností, přidejte jejich ID na kód, který inicializuje ovládacího prvku pole stránky vlastnost ID. V následujícím příkladu, tento kód nachází v souboru implementaci ovládacího prvku (. CPP), inicializuje pole tak, aby obsahovala všechny tři stránky uložených vlastností a stránky vlastností výchozí (s názvem `CMyPropPage` v tomto příkladu):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- Všimněte si, že počet vlastností v stránky `BEGIN_PROPPAGEIDS` makro, je 4. To představuje číslo stránky vlastností nepodporuje ovládací prvek ActiveX.  
+ Všimněte si, že je počet stránek vlastností v begin_proppageids – makro 4. To představuje číslo stránky vlastností nepodporuje ovládací prvek ActiveX.  
   
  Poté, co byly provedeny změny, znovu sestavte projekt. Stránky vlastností pro písma, obrázku a vlastností barev teď má vlastní ovládací prvek.  
   

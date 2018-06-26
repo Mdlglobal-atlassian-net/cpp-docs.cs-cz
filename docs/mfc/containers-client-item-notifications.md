@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344621"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928221"
 ---
 # <a name="containers-client-item-notifications"></a>Kontejnery: Oznámení klientských položek
 Tento článek popisuje přepisovatelné funkce, které volá rozhraní MFC framework, pokud server aplikace upravovat položky v dokumentu klientské aplikace.  
@@ -30,13 +30,13 @@ Tento článek popisuje přepisovatelné funkce, které volá rozhraní MFC fram
   
  Rozhraní framework upozorní aplikace kontejneru změn prostřednictvím volání `COleClientItem::OnChange`, jejíž implementace je vyžadován přepisovatelné funkce. Tato funkce chráněné přijímá dva argumenty. Určuje první z důvodu, že server změněn položky:  
   
-|oznámení|Význam|  
+|Oznámení|Význam|  
 |------------------|-------------|  
-|`OLE_CHANGED`|Došlo ke změně vzhledu položky OLE.|  
-|`OLE_SAVED`|Položka OLE se uložila.|  
-|`OLE_CLOSED`|Položka OLE bylo ukončeno.|  
+|**OLE_CHANGED**|Došlo ke změně vzhledu položky OLE.|  
+|**OLE_SAVED**|Položka OLE se uložila.|  
+|**OLE_CLOSED**|Položka OLE bylo ukončeno.|  
 |**OLE_RENAMED**|Server dokument obsahující položky OLE byl přejmenován.|  
-|`OLE_CHANGED_STATE`|Tato položka OLE změněna z jednoho stavu do jiného.|  
+|**OLE_CHANGED_STATE**|Tato položka OLE změněna z jednoho stavu do jiného.|  
 |**OLE_CHANGED_ASPECT**|Aspekt kreslení OLE položka byla změněna rozhraní.|  
   
  Tyto hodnoty jsou od **OLE_NOTIFICATION** výčtu, která je definována v AFXOLE. H.  
@@ -45,9 +45,9 @@ Tento článek popisuje přepisovatelné funkce, které volá rozhraní MFC fram
   
 |Po prvním argumentem|Druhý argument|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` Nebo `OLE_CLOSED`|Se nepoužívá.|  
-|`OLE_CHANGED`|Určuje aspekt OLE položky, které se změnily.|  
-|`OLE_CHANGED_STATE`|Popisuje stav, který vkládáte (`emptyState`, **loadedState**, `openState`, `activeState`, nebo `activeUIState`).|  
+|**OLE_SAVED** nebo **OLE_CLOSED**|Se nepoužívá.|  
+|**OLE_CHANGED**|Určuje aspekt OLE položky, které se změnily.|  
+|**OLE_CHANGED_STATE**|Popisuje stav, který vkládáte (*emptyState*, *loadedState*, *openState*, *activeState*, nebo  *activeUIState*).|  
   
  Další informace o stavy klientských položek můžete předpokládat, najdete v tématu [kontejnery: stavy klientských položek](../mfc/containers-client-item-states.md).  
   

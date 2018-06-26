@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358061"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931762"
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
@@ -89,7 +89,7 @@ Verze knihovny MFC ANSI/MBCS podporovat obě sady znakovou například ASCII a v
 
 Pokud chcete nastavit konfiguraci projektu používat jednobajtové, vícebajtové nebo široká charakterová podporu řetězce a znak Unicode v prostředí IDE, použijte **vlastnosti projektu** dialogové okno. V **vlastnosti konfigurace** > **Obecné** nastavte **znaková sada** vlastnost **není nastavena** používat znakovou sadu. Nastavte vlastnost na **použít vícebajtové znakové sady** vícebajtové znakové sady, nebo **používat kódování Unicode znaková sada** používat jako UTF-16 kódování Unicode.
 
-Projekty knihovny MFC použít symbol preprocesoru  **\_UNICODE** udávajících Podpora kódování Unicode široká charakterová UTF-16, a  **\_MBCS** udávajících Podpora znakové sady MBCS. Tyto možnosti se vzájemně vylučují v projektu.
+Projekty knihovny MFC použít symbol preprocesoru \_UNICODE udávajících Podpora kódování Unicode široká charakterová UTF-16, a \_Podpora MBCS udávajících MBCS. Tyto možnosti se vzájemně vylučují v projektu.
 
 ## <a name="mfc-static-library-naming-conventions"></a>Zásady vytváření názvů statické knihovny MFC
 
@@ -149,6 +149,6 @@ Buď statickou nebo sdílené dynamické knihovny MFC slouží k vytvoření kni
 
 Při vytváření projektu knihovny DLL pomocí propojení statických knihoven MFC, knihovny DLL se dá nasadit bez sdílené knihovny MFC – knihovny DLL. Když projektu knihovny DLL odkazů do knihoven importovat MFC*verze*. LIB nebo MFC*verze*U.LIB, je nutné nasadit shody MFC sdílené knihovny MFC DLL*verze*. Knihovny DLL nebo MFC*verze*U.DLL společně s knihovnou DLL. Další informace najdete v tématu [knihovny DLL](../build/dlls-in-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)  

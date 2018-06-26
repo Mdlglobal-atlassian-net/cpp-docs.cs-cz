@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341408"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929884"
 ---
 # <a name="com-interface-entry-points"></a>COM – vstupní body rozhraní
 Členské funkce rozhraní modelu COM, použijte [method_prologue –](com-interface-entry-points.md#method_prologue) makro zachování správné globální stav při volání metody exportovaný rozhraní.  
@@ -33,7 +33,7 @@ ms.locfileid: "33341408"
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- Další informace najdete v tématu [Technická poznámka 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) na MFC/OLE **IUnknown** implementace.  
+ Další informace najdete v tématu [Technická poznámka 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) na MFC/OLE `IUnknown` implementace.  
   
  `METHOD_PROLOGUE` Makro je definován jako:  
   

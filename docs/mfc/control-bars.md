@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347896"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931788"
 ---
 # <a name="control-bars"></a>Ovládací pruhy
-"Ovládacích pruhů" je obecné název panely nástrojů, stavové řádky a řádky dialogové okno. MFC – třídy `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, a **CReBar** odvozena od třídy [ccontrolbar –](../mfc/reference/ccontrolbar-class.md), který implementuje své běžné funkce.  
+"Ovládacích pruhů" je obecné název panely nástrojů, stavové řádky a řádky dialogové okno. MFC – třídy `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, a `CReBar` odvozena od třídy [ccontrolbar –](../mfc/reference/ccontrolbar-class.md), který implementuje své běžné funkce.  
   
  Ovládací pruhy jsou windows, které zobrazují řádky ovládacích prvků, které uživatelé můžete vybrat možnosti, spuštěním příkazů nebo získat informace o programu. Typy ovládacích panelů zahrnují panely nástrojů, dialogové pruhy a stavové řádky.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347896"
 -   Ve třídě tyčová ocel [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  Od verze knihovny MFC verze 4.0 panely nástrojů, stavové řádky a popisy jsou implementovány pomocí funkce systému v souboru comctl32.dll místo předchozí implementace, které jsou specifické pro MFC. V prostředí MFC verze 6.0 **CReBar**, který také zahrnuje funkce comctl32.dll, byl přidán.  
+>  Od verze rozhraní MFC 4.0, panely nástrojů, stavové řádky a nástroj tipy jsou implementované pomocí funkce systému v aplikaci *comctl32.dll* místo předchozí implementace, které jsou specifické pro MFC. V prostředí MFC verze 6.0 `CReBar`, který také zahrnuje funkce comctl32.dll, byl přidán.  
   
  Postupujte podle stručný přehled typů ovládacích pruhů. Další informace najdete v tématu odkazy níže.  
   

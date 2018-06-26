@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80dc3d02a7530ee54c9ff26cd0a03465bd77cdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acbbd4ec8e075abbcbbeeaf199cae0d3a8d3c41a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345041"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930449"
 ---
 # <a name="handling-the-apply-button"></a>Ošetření tlačítka Použít
 Seznam vlastností mají funkci, která standardní dialogová okna nepodporují: umožňují uživatelům použít změny byly provedeny před jeho zavřením seznamu vlastností. To se provádí pomocí tlačítka použít. Tento článek popisuje metody, které můžete použít tuto funkci implementovat správně.  
@@ -33,11 +33,11 @@ Seznam vlastností mají funkci, která standardní dialogová okna nepodporují
   
  Pokud nechcete, aby uživatel nabízet funkci použít, není nutné použít tlačítko Odebrat. Můžete nechat zakázané, protože bude běžné mezi aplikacemi, které používají standardní vlastnost list podpory k dispozici v budoucích verzích systému Windows.  
   
- Pokud chcete ohlásit jako upravené stránky a povolit na tlačítko použít, volání **CPropertyPage::SetModified (TRUE)**. Pokud existuje stránky sestavy upravována, zůstane zapnutá, bez ohledu na to, jestli aktuálně aktivní stránka byla změněna na tlačítko použít.  
+ Pokud chcete ohlásit jako upravené stránky a povolit na tlačítko použít, volání `CPropertyPage::SetModified( TRUE )`. Pokud existuje stránky sestavy upravována, zůstane zapnutá, bez ohledu na to, jestli aktuálně aktivní stránka byla změněna na tlačítko použít.  
   
  By měly volat [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified) vždy, když uživatel změní nastavení na stránce. K implementaci obslužné rutiny oznamovacích změn pro každý ovládací prvky na stránce vlastností, jako je možné rozpoznat, kdy se uživatel změní nastavení na stránce **EN_CHANGE** nebo **BN_CLICKED**.  
   
- Pokud chcete implementovat účinku na tlačítko použít, seznamu vlastností řekněte jeho vlastníka nebo jiné externí objekt v aplikaci, aby mohl použít aktuální nastavení na stránkách vlastností. Seznam vlastností ve stejnou dobu, měli zakázat tlačítka použít voláním **CPropertyPage::SetModified (FALSE)** pro všechny stránky, které použije jejich změny externího objektu.  
+ Pokud chcete implementovat účinku na tlačítko použít, seznamu vlastností řekněte jeho vlastníka nebo jiné externí objekt v aplikaci, aby mohl použít aktuální nastavení na stránkách vlastností. Seznam vlastností ve stejnou dobu, měli zakázat tlačítka použít voláním `CPropertyPage::SetModified( FALSE )` pro všechny stránky, které použije jejich změny externího objektu.  
   
  Příklad tohoto procesu naleznete v části Obecné MFC ukázka [PROPDLG](../visual-cpp-samples.md).  
   

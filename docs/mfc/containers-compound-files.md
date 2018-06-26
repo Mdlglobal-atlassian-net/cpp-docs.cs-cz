@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348342"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930222"
 ---
 # <a name="containers-compound-files"></a>Kontejnery: Složené soubory
 Tento článek vysvětluje součásti a provádění složené soubory a výhody a nevýhody použití složené soubory ve svých aplikacích OLE.  
@@ -46,7 +46,7 @@ Tento článek vysvětluje součásti a provádění složené soubory a výhody
   
 -   Úložiště objekty, jako jsou adresáře, může obsahovat jiné objekty úložiště a datového proudu.  
   
--   **LockBytes** objekty představují rozhraní mezi objekty úložiště a fyzický hardware. Určují, jak se zapisují aktuální počet bajtů na jakémkoli zařízení úložiště **LockBytes** přístup k objektu, například pevný disk nebo oblast globální paměti. Další informace o **LockBytes** objekty a `ILockBytes` rozhraní najdete v tématu *OLE referenční informace pro programátory*.  
+-   `LockBytes` objekty představují rozhraní mezi objekty úložiště a fyzický hardware. Určují, jak se zapisují aktuální počet bajtů na jakémkoli zařízení úložiště `LockBytes` přístup k objektu, například pevný disk nebo oblast globální paměti. Další informace o `LockBytes` objekty a `ILockBytes` rozhraní najdete v tématu *OLE referenční informace pro programátory*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Výhody a nevýhody složené soubory  
  Složené soubory poskytnout starší metody úložiště file výhody není k dispozici. Mezi ně patří:  

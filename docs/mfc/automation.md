@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345882"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930599"
 ---
 # <a name="automation"></a>Automatizace
 Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo ke zveřejnění objekty, budou se dá upravit.  
@@ -57,7 +57,7 @@ Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplik
  Mnoho obchodních aplikací, jako je například aplikace Microsoft Excel a Microsoft Visual C++, umožňují automatizovat většinu jejich funkce. Například v jazyce Visual C++, může zapisovat makra jazyk VBScript k automatizaci sestavení, aspektů kód úprav a ladění úloh.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> Předávání parametrů v automatizace  
- Jeden potíže při vytváření automatizace metody pomáhá zajistit uniform "bezpečnou" mechanismus k předávání dat mezi automatizační servery a klienty. Automatizace používá **VARIANT** typ k předávání dat. **VARIANT** je typ s příznakem union. Obsahuje člena dat pro hodnotu (jedná se anonymní sjednocení C++) a data člena označující typ informací uložených v sjednocení. **VARIANT** typu podporuje několik standardní datových typů: 2 a 4 bajtů celá čísla, čísla s plovoucí desetinnou čárkou 4 a 8 bajtů, řetězce a logické hodnoty. Kromě toho podporuje `HRESULT` (OLE kódy chyb), **MĚNA** (s pevnou desetinnou čárkou číselný typ.), a **datum** (absolutní datum a čas), typy a také odkazy na **IUnknown**  a `IDispatch` rozhraní.  
+ Jeden potíže při vytváření automatizace metody pomáhá zajistit uniform "bezpečnou" mechanismus k předávání dat mezi automatizační servery a klienty. Automatizace používá **VARIANT** typ k předávání dat. **VARIANT** je typ s příznakem union. Obsahuje člena dat pro hodnotu (jedná se anonymní sjednocení C++) a data člena označující typ informací uložených v sjednocení. **VARIANT** typu podporuje několik standardní datových typů: 2 a 4 bajtů celá čísla, čísla s plovoucí desetinnou čárkou 4 a 8 bajtů, řetězce a logické hodnoty. Kromě toho podporuje **HRESULT** (OLE kódy chyb), **MĚNA** (s pevnou desetinnou čárkou číselný typ.), a **datum** (absolutní datum a čas), typy a také odkazy na `IUnknown` a `IDispatch` rozhraní.  
   
  **VARIANT** typ je zapouzdřené v [COleVariant](../mfc/reference/colevariant-class.md) třídy. V podporu **MĚNA** a **datum** třídy jsou zapouzdřené v [COleCurrency](../mfc/reference/colecurrency-class.md) a [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) třídy.  
   

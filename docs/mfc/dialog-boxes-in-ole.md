@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347838"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929660"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogová okna v prostředí OLE
 Když uživatel spustí aplikaci OLE povolena, jsou časy, když aplikace potřebuje informace od uživatele, aby bylo možné provést operaci. Třídy MFC OLE poskytují několik dialogových oken získat požadované informace. Toto téma obsahuje seznam úloh zpracovávaných dialogových oken OLE a třídy, které jsou potřebné k zobrazování těchto dialogových oken. Informace o dialogových oknech OLE a struktury používané k přizpůsobení jejich chování najdete v tématu [odkaz knihovny MFC](../mfc/mfc-desktop-applications.md).  
@@ -46,7 +46,7 @@ Když uživatel spustí aplikaci OLE povolena, jsou časy, když aplikace potře
  Dialogové okno Upravit propojení umožňuje uživatelům změnit informace o zdroji propojeného objektu. Dialogové okno Aktualizovat odkazy ověřuje zdroje všechny propojené položky v dialogovém okně aktuální a v případě potřeby zobrazí dialogové okno Upravit propojení. Když uživatel vybere odkazy z nabídky Úpravy, zobrazte dialogové okno Upravit propojení. Při prvním otevření složené dokumentu je obvykle zobrazí dialogové okno Aktualizovat odkazy. Použijte buď [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) nebo [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) třídy, v závislosti na tom, které dialogové okno, které chcete zobrazit.  
   
  *Server je zaneprázdněn nebo Server neodpovídá*  
- Když se uživatel pokusí o aktivaci položku a server je v současnosti nemůže žádost zpracovat, obvykle, protože je server používá jiný uživatel nebo úloha, zobrazí se dialogové okno Server zaneprázdněn. Pokud server nereaguje na požadavek na aktivaci vůbec, zobrazí se dialogové okno Server neodpovídá. Tyto dialogy zobrazují prostřednictvím `COleMessageFilter`, podle implementace rozhraní OLE **IMessageFilter**, a uživatele můžete rozhodnout, zda k pokusu o žádost o aktivaci opakujte. Použití [COleBusyDialog](../mfc/reference/colebusydialog-class.md) třída k zobrazení tohoto dialogového okna.  
+ Když se uživatel pokusí o aktivaci položku a server je v současnosti nemůže žádost zpracovat, obvykle, protože je server používá jiný uživatel nebo úloha, zobrazí se dialogové okno Server zaneprázdněn. Pokud server nereaguje na požadavek na aktivaci vůbec, zobrazí se dialogové okno Server neodpovídá. Tyto dialogy zobrazují prostřednictvím `COleMessageFilter`, podle implementace rozhraní OLE `IMessageFilter`, a uživatele můžete rozhodnout, zda k pokusu o žádost o aktivaci opakujte. Použití [COleBusyDialog](../mfc/reference/colebusydialog-class.md) třída k zobrazení tohoto dialogového okna.  
   
 ## <a name="see-also"></a>Viz také  
  [Dialogová okna](../mfc/dialog-boxes.md)   

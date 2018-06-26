@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349308"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931057"
 ---
 # <a name="memory-management-frame-allocation"></a>Správa paměti: Přidělení rámců
 Přidělení rámec trvá jeho název z "rámce zásobníku", který je nastaven vždy, když je volána funkce. Rámec zásobníku je oblast paměti, která dočasně obsahuje argumenty funkce a také všechny proměnné, které jsou definovány místní funkce. Proměnné rámce se často nazývají "automatické" proměnné, protože kompilátor automaticky přiděluje místo pro ně.  
@@ -42,7 +42,7 @@ Přidělení rámec trvá jeho název z "rámce zásobníku", který je nastaven
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Pro místní funkce proměnné tento přechod oboru se stane, když funkce ukončí, ale rozsahu proměnné rámce může být menší než funkci, pokud se používají vnořené složené závorky. Toto automatické odstranění proměnné rámce je velmi důležité. V případě jednoduchého primitivní typy (například `int` nebo **bajtů**), pole nebo datové struktury, automatické odstranění jednoduše získá množství paměti používané proměnnou. Vzhledem k tomu, že proměnná byla mimo rozsah, nelze přesto přistupovat. V případě objekty C++ ale proces automatické odstranění je trochu složitější.  
+ Pro místní funkce proměnné tento přechod oboru se stane, když funkce ukončí, ale rozsahu proměnné rámce může být menší než funkci, pokud se používají vnořené složené závorky. Toto automatické odstranění proměnné rámce je velmi důležité. V případě jednoduchého primitivní typy (například **int** nebo **bajtů**), pole nebo datové struktury, automatické odstranění jednoduše získá množství paměti používané proměnnou. Vzhledem k tomu, že proměnná byla mimo rozsah, nelze přesto přistupovat. V případě objekty C++ ale proces automatické odstranění je trochu složitější.  
   
  Pokud objekt je definován jako proměnnou a rámečku, jeho konstruktor se automaticky vyvolá v okamžiku, kdy došlo k definici. Když se objekt dostane mimo rozsah, jeho destruktor se automaticky vyvolá předtím, než je uvolnit paměť pro objekt. Toto automatické vytváření a odstraňování může být velmi užitečný, ale musíte být vědomi automatické volání, především při destruktoru.  
   

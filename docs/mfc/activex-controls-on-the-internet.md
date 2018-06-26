@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352305"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931974"
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládacího prvku. Ovládací prvky jsou primární architektury pro vývoj programovatelný softwarové komponenty, které lze použít v různých různé kontejnery, včetně podporující rozhraní COM webových prohlížečů na Internetu. Libovolný ovládací prvek ActiveX může být ovládací prvek Internet a můžete přidat jeho funkce pro aktivní dokument nebo být součástí webové stránky. Ovládací prvky na webové stránce mohou komunikovat navzájem pomocí skriptování.  
@@ -39,7 +39,7 @@ ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládac�
   
  **Chcete-li být ovládací prvek ActiveX, musíte ovládacího prvku:**  
   
--   Podpora **IUnknown** rozhraní.  
+-   Podpora `IUnknown` rozhraní.  
   
 -   Být objekt modelu COM.  
   
@@ -85,7 +85,7 @@ ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládac�
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Vytvoření projektu pomocí Průvodce ovládacím prvkem ActiveX knihovny MFC  
   
-1.  Klikněte na tlačítko `New` na **souboru** nabídky.  
+1.  Klikněte na tlačítko **nový** na **souboru** nabídky.  
   
 2.  Vyberte **Průvodce ovládacím prvkem ActiveX knihovny MFC** z Visual C++ projekty a název projektu.  
   
@@ -129,7 +129,7 @@ ActiveX – ovládací prvky jsou aktualizovanou verzi specifikace OLE ovládac�
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implementace **Get/Set** metody. Pro **získat**, vrátí řetězec. Pro `Set`, načtení vlastností a volání `SetModifiedFlag`.  
+5.  Implementace `Get/Set` metody. Pro `Get`, vrátí řetězec. Pro `Set`, načtení vlastností a volání `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   
