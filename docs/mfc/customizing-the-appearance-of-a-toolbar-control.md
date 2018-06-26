@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343691"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932114"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Přizpůsobení vzhledu ovládacího prvku panel nástrojů
 Třída `CToolBarCtrl` poskytuje mnoho stylů, které ovlivňují vzhled (a v některých případech chování) objektu panelu nástrojů. Změnit objekt nástrojů nastavením `dwCtrlStyle` parametr `CToolBarCtrl::Create` (nebo `CToolBar::CreateEx`) – členská funkce, při prvním vytváření ovládací prvek panelu nástrojů.  
@@ -47,17 +47,17 @@ Třída `CToolBarCtrl` poskytuje mnoho stylů, které ovlivňují vzhled (a v n�
 -   **TBSTYLE_ALTDRAG** umožňuje uživatelům změnit umístění tlačítka panelu nástrojů přetažením podržíte klávesu ALT. Pokud není zadán tento styl, musí uživatel podržte stisknutou klávesu SHIFT při přetahování tlačítko.  
   
     > [!NOTE]
-    >  `CCS_ADJUSTABLE` Pro povolení tlačítka panelu nástrojů přetáhnout je nutné zadat stylu.  
+    >  **CCS_ADJUSTABLE** pro povolení tlačítka panelu nástrojů přetáhnout je nutné zadat stylu.  
   
 -   **TBSTYLE_REGISTERDROP** generuje **TBN_GETOBJECT** oznámení zprávy o vyřadit cílové objekty, když ukazatel myši prochází přes tlačítka panelu nástrojů.  
   
  Zbývající styly ovlivní visual a nevizuální aspektů objekt nástrojů:  
   
--   `TBSTYLE_WRAPABLE` Vytvoří panel nástrojů, který může mít více řádků tlačítek. Tlačítka panelu nástrojů může "obtékat" na další řádek při panelu nástrojů příliš úzké zahrnout všechny tlačítka na stejném řádku. Zabalení proběhne oddělení a nongroup hranice.  
+-   **TBSTYLE_WRAPABLE** vytvoří panel nástrojů, který může mít více řádků tlačítek. Tlačítka panelu nástrojů může "obtékat" na další řádek při panelu nástrojů příliš úzké zahrnout všechny tlačítka na stejném řádku. Zabalení proběhne oddělení a nongroup hranice.  
   
--   **TBSTYLE_CUSTOMERASE** generuje **NM_CUSTOMDRAW** zprávy oznámení, pokud ho zpracuje `WM_ERASEBKGND` zprávy.  
+-   **TBSTYLE_CUSTOMERASE** generuje **NM_CUSTOMDRAW** zprávy oznámení, pokud ho zpracuje **WM_ERASEBKGND** zprávy.  
   
--   `TBSTYLE_TOOLTIPS` Vytvoří prvkem popis tlačítka, které aplikace můžete použít k zobrazení popisný text pro tlačítka na panelu nástrojů.  
+-   **TBSTYLE_TOOLTIPS** vytvoří prvkem popis tlačítka, které aplikace můžete použít k zobrazení popisný text pro tlačítka na panelu nástrojů.  
   
  Úplný seznam všech nástrojů styly a styly rozšířené, najdete v části [Toolbar – ovládací prvek a styly tlačítek](http://msdn.microsoft.com/library/windows/desktop/bb760439) a [rozšířené styly nástrojů](http://msdn.microsoft.com/library/windows/desktop/bb760430) ve Windows SDK.  
   

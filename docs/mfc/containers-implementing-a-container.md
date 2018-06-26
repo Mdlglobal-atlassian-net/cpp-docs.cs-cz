@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342827"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930072"
 ---
 # <a name="containers-implementing-a-container"></a>Kontejnery: Implementace kontejneru
 Tento článek shrnuje postup pro implementace kontejneru a bodů na další články, které poskytují podrobnější vysvětlení o implementaci kontejnery. Jsou také uvedeny některé volitelné funkce OLE, které chcete implementovat a články popisující tyto funkce.  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>Příprava vlastní třídy odvozené CWinApp  
   
-1.  Inicializace knihovny OLE voláním **AfxOLEInit –** v `InitInstance` – členská funkce.  
+1.  Inicializace knihovny OLE voláním `AfxOleInit` v `InitInstance` – členská funkce.  
   
 2.  Volání `CDocTemplate::SetContainerInfo` v `InitInstance` k přiřazení nabídky a akcelerátoru prostředky používá při vložené položky aktivovat na místě. Další informace v tomto tématu najdete v tématu [aktivace](../mfc/activation-cpp.md).  
   
@@ -39,7 +39,7 @@ Tento článek shrnuje postup pro implementace kontejneru a bodů na další čl
   
 2.  Přepsání `IsSelected` ke kontrole, jestli aktuálně vybranou položku do ní předán.  
   
-3.  Implementace **OnInsertObject** popisovač zpráv se má zobrazit **vložit objekt** dialogové okno.  
+3.  Implementace `OnInsertObject` popisovač zpráv se má zobrazit **vložit objekt** dialogové okno.  
   
 4.  Implementace `OnSetFocus` zpráva obslužná rutina přenos fokus ze zobrazení do místní službě active OLE vložených položek.  
   
@@ -51,9 +51,9 @@ Tento článek shrnuje postup pro implementace kontejneru a bodů na další čl
   
 1.  Odvození třídy z [COleClientItem](../mfc/reference/coleclientitem-class.md). Objekty této třídy představují položky, které součástí nebo k vaší OLE dokumentu.  
   
-2.  Přepsání **při změně**, `OnChangeItemPosition`, a `OnGetItemPosition`. Tyto funkce zpracovávat změny velikosti, umístění a úprava vložené a propojené položky.  
+2.  Přepsání `OnChange`, `OnChangeItemPosition`, a `OnGetItemPosition`. Tyto funkce zpracovávat změny velikosti, umístění a úprava vložené a propojené položky.  
   
- Průvodce aplikace odvodí třídy pro vás, ale budete pravděpodobně muset přepsat **při změně** a dalších funkcí uvedený s ním v kroku 2 v předchozím postupu. Kostru implementace nutné přizpůsobit pro většinu aplikací, protože tyto funkce jsou implementované jinak z jedné aplikace na další. Příklady tohoto najdete v tématu ukázky MFC [DRAWCLI](../visual-cpp-samples.md) a [KONTEJNERU](../visual-cpp-samples.md).  
+ Průvodce aplikace odvodí třídy pro vás, ale budete pravděpodobně muset přepsat `OnChange` a dalších funkcí uvedený s ním v kroku 2 v předchozím postupu. Kostru implementace nutné přizpůsobit pro většinu aplikací, protože tyto funkce jsou implementované jinak z jedné aplikace na další. Příklady tohoto najdete v tématu ukázky MFC [DRAWCLI](../visual-cpp-samples.md) a [KONTEJNERU](../visual-cpp-samples.md).  
   
  Počet položek, které je nutné přidat do kontejneru aplikace nabídky struktury pro podporu OLE. Další informace naleznete v tématu [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).  
   

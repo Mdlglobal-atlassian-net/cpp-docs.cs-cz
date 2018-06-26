@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360963"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929223"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementace panelu nástrojů v prostředí MFC
 Panel nástrojů je [ovládacích pruhů](../mfc/control-bars.md) obsahující obrázky rastrový obrázek ovládacích prvků. Tyto Image můžete chovat jako tlačítek, zaškrtněte políčka nebo přepínače. Poskytuje třídy MFC [ctoolbar –](../mfc/reference/ctoolbar-class.md) ke správě panely nástrojů.  
@@ -44,7 +44,7 @@ Panel nástrojů je [ovládacích pruhů](../mfc/control-bars.md) obsahující o
 > [!NOTE]
 >  Od verze knihovny MFC verze 4.0 panely nástrojů a tipů nástrojů se implementují pomocí systému Windows 95 a novější funkce místo předchozí implementace, které jsou specifické pro MFC.  
   
- Z důvodu zpětné kompatibility MFC uchovává starší implementace panelu nástrojů v třídě **COldToolBar**. Popisují dokumentaci pro starší verze knihovny MFC **COldToolBar** pod `CToolBar`.  
+ Z důvodu zpětné kompatibility MFC uchovává starší implementace panelu nástrojů v třídě `COldToolBar`. Popisují dokumentaci pro starší verze knihovny MFC `COldToolBar` pod `CToolBar`.  
   
  Vytvoření první panelu nástrojů v programu výběrem možnosti panelu nástrojů v Průvodci aplikací. Můžete také vytvořit další panely nástrojů.  
   

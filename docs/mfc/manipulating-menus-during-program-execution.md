@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69302202059914217e066eb0389bb14e7c5190c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344279"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929757"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipulace s nabídkami během práce programu
-Použití třídy `CMenu` manipulace s nabídkami a položky nabídky za chodu. `CMenu` zapouzdří Windows `HMENU` zpracování a poskytuje členské funkce pro práci s nabídkami.  
+Použití třídy `CMenu` manipulace s nabídkami a položky nabídky za chodu. `CMenu` zapouzdří popisovač Windows HMENU a poskytuje členské funkce pro práci s nabídkami.  
   
  Naleznete v přehledu třídy [cmenu –](../mfc/reference/cmenu-class.md) podrobnosti.  
   

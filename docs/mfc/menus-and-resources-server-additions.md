@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351348"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930199"
 ---
 # <a name="menus-and-resources-server-additions"></a>Nabídky a prostředky: Serverové doplňky
 Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy (součást). Serverová aplikace požaduje mnoho doplňky strukturu nabídky a jiné prostředky, protože může být spuštěno v jednom ze tří režimů: stát samostatného embedded, nebo na místě. Jak je popsáno v [nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md) článek, jsou maximálně čtyři sady nabídky. Všechny čtyři se používají pro aplikace MDI úplný server při pouze tři se používají pro miniserver. V Průvodce vytvořením aplikace vytvoří rozložení nabídky potřebné pro typ serveru, který má být. Některé přizpůsobení může být nutné.  
@@ -63,14 +63,14 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
  Druhá tabulka je téměř přesnou kopii tabulky akcelerátorů tohoto zobrazení. Případné rozdíly paralelní změny provedené ve plně otevřít nabídku uvedený v [přidání serveru do nabídky](#_core_server_menu_additions).  
   
- Příklad těchto změn tabulky akcelerátorů porovnat **IDR_HIERSVRTYPE_SRVR_IP** a **IDR_HIERSVRTYPE_SRVR_EMB** akcelerátoru tabulky s **IDR_MAINFRAME** v HIERSVR. RC soubor zahrnutý v ukázce MFC OLE [HIERSVR](../visual-cpp-samples.md). Souborová služba a okno akcelerátorů chybí z tabulky na místě a přesné kopie jsou v vložené tabulky.  
+ Příklad těchto změn tabulky akcelerátorů porovnejte tabulky akcelerátoru IDR_HIERSVRTYPE_SRVR_IP a IDR_HIERSVRTYPE_SRVR_EMB s IDR_MAINFRAME v HIERSVR. RC soubor zahrnutý v ukázce MFC OLE [HIERSVR](../visual-cpp-samples.md). Souborová služba a okno akcelerátorů chybí z tabulky na místě a přesné kopie jsou v vložené tabulky.  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Přidání tabulky řetězec pro serverové aplikace  
  Přidání pouze jeden řetězec tabulky je nutné v serveru aplikace – řetězec tak, aby označily, že inicializace OLE se nezdařila. Jako příklad uvádíme tabulky řetězců položku, která generuje Průvodce aplikací:  
   
 |ID|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED –**|Nepodařilo se inicializovat OLE. Ujistěte se, že jsou knihoven OLE správná verze.|  
+|IDP_OLE_INIT_FAILED –|Nepodařilo se inicializovat OLE. Ujistěte se, že jsou knihoven OLE správná verze.|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> Přidání miniserver  
  Přidání stejné platí pro miniservers jako uvedených výše pro úplné servery. Protože miniserver nelze spustit v samostatném režimu, je mnohem menší jeho hlavní nabídky. V hlavní nabídce vytvořené průvodcem aplikací má pouze nabídku souborů, obsahující pouze položky ukončení a o. Vložené a místní nabídky a akcelerátorů pro miniservers jsou stejné jako v případě úplné servery.  

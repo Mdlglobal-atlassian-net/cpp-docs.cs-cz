@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351719"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930820"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Obslužné rutiny pro oblasti map zpráv
 Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy funkci obslužné rutiny (namísto mapování jednu zprávu na jenom jednu funkci).  
@@ -96,7 +96,7 @@ Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy 
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Funkce obslužných rutin pro jeden příkazy obvykle trvat žádné parametry. S výjimkou funkcí obslužné rutiny aktualizace, funkce obslužné rutiny pro oblasti map zpráv vyžadují další parametr `nID`, typu **Celé_číslo**. Tento parametr je první parametr. Speciálním parametrem přizpůsobí ID navíc příkazu, který je potřeba k určení příkazu, na který se uživatel rozhodl ve skutečnosti.  
+ Funkce obslužných rutin pro jeden příkazy obvykle trvat žádné parametry. S výjimkou funkcí obslužné rutiny aktualizace, funkce obslužné rutiny pro oblasti map zpráv vyžadují další parametr *nID*, typu **Celé_číslo**. Tento parametr je první parametr. Speciálním parametrem přizpůsobí ID navíc příkazu, který je potřeba k určení příkazu, na který se uživatel rozhodl ve skutečnosti.  
   
  Další informace o požadavcích na parametr pro aktualizaci funkce obslužných rutin najdete v tématu [příklad pro určitý rozsah příkaz ID](#_core_example_for_a_range_of_command_ids).  
   
@@ -109,7 +109,7 @@ Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy 
   
 -   Dva identifikátory příkazů e-mailů, počáteční a koncové souvislý rozsah.  
   
-     Tady jsou `ID_VIEW_ZOOM25` a `ID_VIEW_ZOOM300`.  
+     Tady jsou **ID_VIEW_ZOOM25** a **ID_VIEW_ZOOM300**.  
   
 -   Název obslužné rutiny pro příkazy.  
   
@@ -119,9 +119,9 @@ Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy 
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- V případě funkce obslužné rutiny aktualizace je podobné a mohly být více široce užitečné. Je celkem běžné zápis `ON_UPDATE_COMMAND_UI` obslužné rutiny pro řadu příkazů a najít sami zápisu nebo ke kopírování, stejný kód opakovaně. Řešení je mapovat rozsah ID na jednu aktualizaci, obslužné rutiny funkce pomocí příkazu `ON_UPDATE_COMMAND_UI_RANGE` makro. Identifikátory příkazů musí tvořit souvislý rozsah. Příklad, naleznete v části **OnUpdateZoom** obslužné rutiny a jeho `ON_UPDATE_COMMAND_UI_RANGE` položku mapování zpráv v ukázkové HIERSVR třídy zobrazení.  
+ V případě funkce obslužné rutiny aktualizace je podobné a mohly být více široce užitečné. Je celkem běžné zápis `ON_UPDATE_COMMAND_UI` obslužné rutiny pro řadu příkazů a najít sami zápisu nebo ke kopírování, stejný kód opakovaně. Řešení je mapovat rozsah ID na jednu aktualizaci, obslužné rutiny funkce pomocí příkazu `ON_UPDATE_COMMAND_UI_RANGE` makro. Identifikátory příkazů musí tvořit souvislý rozsah. Příklad, naleznete v části `OnUpdateZoom` obslužné rutiny a jeho `ON_UPDATE_COMMAND_UI_RANGE` položku mapování zpráv v ukázkové HIERSVR třídy zobrazení.  
   
- Aktualizovat funkce obslužných rutin pro jeden příkazy obvykle trvat jeden parametr `pCmdUI`, typu **CCmdUI\***. Na rozdíl od funkce obslužných rutin, obslužné rutiny funkce aktualizace pro oblasti map zpráv nevyžadují další parametr `nID`, typu **Celé_číslo**. ID příkazu, který je nutný k určení, který příkaz se uživatel rozhodl ve skutečnosti, je nalezena v `CCmdUI` objektu.  
+ Aktualizovat funkce obslužných rutin pro jeden příkazy obvykle trvat jeden parametr *pCmdUI*, typu `CCmdUI*`. Na rozdíl od funkce obslužných rutin, obslužné rutiny funkce aktualizace pro oblasti map zpráv nevyžadují další parametr *nID*, typu **Celé_číslo**. ID příkazu, který je nutný k určení, který příkaz se uživatel rozhodl ve skutečnosti, je nalezena v `CCmdUI` objektu.  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> Příklad pro ID rozsahu ovládací prvek  
  Jiné zajímavé případ je mapování zpráv oznámení ovládacího prvku pro řadu ID ovládacích prvků k jedné obslužné rutině. Předpokládejme, že uživatel klepnutím na libovolné 10 tlačítek. Pro mapování všechny 10 tlačítka k jedné obslužné rutině, zadání map zpráv bude vypadat takto:  
@@ -136,7 +136,7 @@ Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy 
   
 -   Hodnoty ID řízení přidružené souvislý rozsah ovládacích prvků.  
   
-     Tady jsou `IDC_BUTTON1` a `IDC_BUTTON10`.  
+     Tady jsou **IDC_BUTTON1** a **IDC_BUTTON10**.  
   
 -   Název obslužné rutiny zpráv.  
   

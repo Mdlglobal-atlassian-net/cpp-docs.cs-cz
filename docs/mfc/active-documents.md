@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2d25646c929519c00348dabaae754f149e61ad1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335500"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931099"
 ---
 # <a name="active-documents"></a>Aktivní dokumenty
 Aktivní dokumenty rozšířit složeného dokumentu technologie OLE. Tato rozšíření jsou uvedeny v podobě další rozhraní, které spravují zobrazení, tak, aby fungovala v rámci kontejnerů a ještě zachovat kontrolu nad jejich zobrazení a tisk funkce objekty. Tento proces umožní zobrazování dokumentů v cizí snímků (například Microsoft modul vazby sady Office nebo aplikace Microsoft Internet Explorer) i v nativní rámce (třeba portů zobrazení produkt vlastní).  
   
  Tato část popisuje funkční [požadavky pro aktivní dokumenty](#requirements_for_active_documents). Aktivní dokument vlastní sadu dat a má přístup k úložišti, kde můžete data uložit a načíst. Je-li vytvořit a spravovat jeden nebo více zobrazení na jeho data. Vedle podpory obvyklé vložení a aktivace na místě rozhraní OLE – dokumenty, aktivní dokument komunikuje schopnost vytvářet zobrazení prostřednictvím `IOleDocument`. Prostřednictvím tohoto rozhraní můžete pokládat kontejner vytvořit (a případně vytvořit výčet) zobrazení, která můžete zobrazit aktivní dokument. Prostřednictvím tohoto rozhraní aktivní dokument zadat také různé informace o sobě, například zda podporuje více zobrazení nebo komplexní obdélníky.  
   
- Tady je **IOleDocument** rozhraní. Všimněte si, že **IEnumOleDocumentViews** rozhraní je standardní enumerátor OLE pro **IOleDocumentView \***  typy.  
+ Tady je `IOleDocument` rozhraní. Všimněte si, že `IEnumOleDocumentViews` rozhraní je standardní enumerátor OLE pro `IOleDocumentView*` typy.  
   
 ```  
 interface IOleDocument : IUnknown  
@@ -61,16 +61,16 @@ interface IOleDocument : IUnknown
   
 -   Podporují základní funkce vnoření OLE dokumentů, včetně **vytvořit ze souboru**. To vyžaduje rozhraní `IPersistFile`, `IOleObject`, a `IDataObject`.  
   
--   Podpora jedno nebo více zobrazení, z nichž každý je schopen aktivace na místě. To znamená, zobrazení musí podporovat rozhraní `IOleDocumentView` i rozhraní `IOleInPlaceObject` a `IOleInPlaceActiveObject` (pomocí kontejneru **IOleInPlaceSite** a **IOleInPlaceFrame** rozhraní).  
+-   Podpora jedno nebo více zobrazení, z nichž každý je schopen aktivace na místě. To znamená, zobrazení musí podporovat rozhraní `IOleDocumentView` i rozhraní `IOleInPlaceObject` a `IOleInPlaceActiveObject` (pomocí kontejneru `IOleInPlaceSite` a `IOleInPlaceFrame` rozhraní).  
   
 -   Podpora rozhraní standardní aktivní dokument `IOleDocument`, `IOleCommandTarget`, a `IPrint`.  
   
  Znalost, kdy a jak používat rozhraní straně kontejneru je zahrnuta v těchto požadavků.  
   
 ##  <a name="requirements_for_view_objects"></a> Požadavky pro objekty zobrazení  
- Aktivní dokument můžete vytvořit jeden nebo více zobrazení jeho data. Tato zobrazení jsou funkčně, jako porty na konkrétní metodu pro zobrazení data. Pokud aktivní dokument podporuje pouze jedno zobrazení, aktivní dokument a že jednoho zobrazení můžete implementovat pomocí jedné třídy. **IOleDocument::CreateView** vrátí stejný objekt `IOleDocumentView` ukazatel rozhraní.  
+ Aktivní dokument můžete vytvořit jeden nebo více zobrazení jeho data. Tato zobrazení jsou funkčně, jako porty na konkrétní metodu pro zobrazení data. Pokud aktivní dokument podporuje pouze jedno zobrazení, aktivní dokument a že jednoho zobrazení můžete implementovat pomocí jedné třídy. `IOleDocument::CreateView` vrátí stejný objekt `IOleDocumentView` ukazatel rozhraní.  
   
- A nelze je v rámci kontejner, musí podporovat komponentu zobrazení **IOleInPlaceObject** a **IOleInPlaceActiveObject** kromě `IOleDocumentView`:  
+ A nelze je v rámci kontejner, musí podporovat komponentu zobrazení `IOleInPlaceObject` a `IOleInPlaceActiveObject` kromě `IOleDocumentView`:  
   
 ```  
 interface IOleDocumentView : IUnknown  
@@ -97,11 +97,11 @@ interface IOleDocumentView : IUnknown
     }  
 ```  
   
- Každé zobrazení má přidružené zobrazení lokality, který zapouzdřuje rámečku zobrazení a zobrazení port (HWND a obdélníkovou oblast v okně). Web zpřístupňuje tuto funkci, ale standardní **IOleInPlaceSite** rozhraní. Všimněte si, že je možné, že více než jeden port zobrazení na jednom HWND.  
+ Každé zobrazení má přidružené zobrazení lokality, který zapouzdřuje rámečku zobrazení a zobrazení port (HWND a obdélníkovou oblast v okně). Web zpřístupňuje tuto funkci, ale standardní `IOleInPlaceSite` rozhraní. Všimněte si, že je možné, že více než jeden port zobrazení na jednom HWND.  
   
- Každý typ zobrazení má obvykle znázornění různých tištěné. Proto zobrazení a odpovídající lokality zobrazení musí implementovat rozhraní tisk Pokud `IPrint` a `IContinueCallback`, v uvedeném pořadí. Zobrazení rámečku musí si vyjednat s poskytovateli zobrazení prostřednictvím **IPrint –** při tisku začne, tak, aby správně vytištěn záhlaví, zápatí, okraje a související prvky. Zprostředkovatel zobrazení upozorní rámečku události související s tiskem prostřednictvím `IContinueCallback`. Další informace o použití těchto rozhraní najdete v tématu [programový tisk](../mfc/programmatic-printing.md).  
+ Každý typ zobrazení má obvykle znázornění různých tištěné. Proto zobrazení a odpovídající lokality zobrazení musí implementovat rozhraní tisk Pokud `IPrint` a `IContinueCallback`, v uvedeném pořadí. Zobrazení rámečku musí si vyjednat s poskytovateli zobrazení prostřednictvím `IPrint` při tisku začne, tak, aby správně vytištěn záhlaví, zápatí, okraje a související prvky. Zprostředkovatel zobrazení upozorní rámečku události související s tiskem prostřednictvím `IContinueCallback`. Další informace o použití těchto rozhraní najdete v tématu [programový tisk](../mfc/programmatic-printing.md).  
   
- Všimněte si, že pokud aktivní dokument podporuje pouze jedno zobrazení, pak aktivní dokument a že jednoho zobrazení lze implementovat pomocí jedné konkrétní třídy. **IOleDocument::CreateView** jednoduše vrátí stejný objekt `IOleDocumentView` ukazatel rozhraní. Stručně řečeno není nutné, který existovat dvě instance samostatný objekt Pokud je nutné použít pouze jedno zobrazení.  
+ Všimněte si, že pokud aktivní dokument podporuje pouze jedno zobrazení, pak aktivní dokument a že jednoho zobrazení lze implementovat pomocí jedné konkrétní třídy. `IOleDocument::CreateView` jednoduše vrátí stejný objekt `IOleDocumentView` ukazatel rozhraní. Stručně řečeno není nutné, který existovat dvě instance samostatný objekt Pokud je nutné použít pouze jedno zobrazení.  
   
  Objekt zobrazení může být také cíl příkazu. Implementací `IOleCommandTarget` zobrazení může přijímat příkazy, které pocházejí z kontejneru uživatelské rozhraní (například **nový**, **otevřete**, **uložit jako**,  **Tisk** na **soubor** nabídky; a **kopie**, **vložení**, **vrátit zpět** na **upravit** nabídky). Další informace najdete v tématu [zpracování zpráv a cíle příkazů](../mfc/message-handling-and-command-targets.md).  
   

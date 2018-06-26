@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350650"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930542"
 ---
 # <a name="menus-and-resources-container-additions"></a>Nabídky a prostředky: Kontejnerové doplňky
 Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy kontejneru.  
@@ -67,27 +67,27 @@ Tento článek vysvětluje změny, které je třeba provést v nabídkách a dal
   
 |ID|Key|Typ|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE –|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE –|**VIRTKEY**|  
   
- Druhý změnou je vytvořit novou tabulku akcelerátoru, která odpovídá nový prostředek nabídky, které jsou vytvořené pro aktivace na místě. Tato tabulka obsahuje záznamy pro nabídky soubor a okno kromě **vk_escape –** výše uvedené položky. V následujícím příkladu je vytvořen aktivace na místě v ukázce MFC tabulka akcelerátoru [KONTEJNERU](../visual-cpp-samples.md):  
+ Druhý změnou je vytvořit novou tabulku akcelerátoru, která odpovídá nový prostředek nabídky, které jsou vytvořené pro aktivace na místě. Tato tabulka obsahuje záznamy pro nabídky soubor a okno kromě výše uvedených vk_escape – zadání. V následujícím příkladu je vytvořen aktivace na místě v ukázce MFC tabulka akcelerátoru [KONTEJNERU](../visual-cpp-samples.md):  
   
 |ID|Key|Typ|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|CTRL + N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|CTRL+O|**VIRTKEY**|  
-|**ID_FILE_SAVE –**|CTRL+S|**VIRTKEY**|  
-|**ID_FILE_PRINT –**|CTRL + P|**VIRTKEY**|  
-|**ID_NEXT_PANE –**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE –**|SHIFT + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE –|**VIRTKEY**|  
+|ID_FILE_NEW –|CTRL + N|**VIRTKEY**|  
+|ID_FILE_OPEN –|CTRL+O|**VIRTKEY**|  
+|ID_FILE_SAVE –|CTRL+S|**VIRTKEY**|  
+|ID_FILE_PRINT –|CTRL + P|**VIRTKEY**|  
+|ID_NEXT_PANE –|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE –|SHIFT + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE –|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Přidání tabulky řetězec pro aplikace typu kontejner  
  Většinu změn do tabulek řetězců pro aplikace typu kontejner odpovídají položky další nabídky uvedený v [přidání do nabídky kontejneru](#_core_container_menu_additions). Si poskytují text zobrazený ve stavovém řádku při každé položky nabídky se zobrazí. Jako příklad uvádíme položky tabulky řetězců, které generuje Průvodce aplikace:  
   
 |ID|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED –**|Nepodařilo se inicializovat OLE. Ujistěte se, že jsou knihoven OLE správná verze.|  
-|**IDP_FAILED_TO_CREATE –**|Vytvoření objektu se nezdařilo. Ujistěte se, že objekt je zadána v registru systému.|  
+|IDP_OLE_INIT_FAILED –|Nepodařilo se inicializovat OLE. Ujistěte se, že jsou knihoven OLE správná verze.|  
+|IDP_FAILED_TO_CREATE –|Vytvoření objektu se nezdařilo. Ujistěte se, že objekt je zadána v registru systému.|  
   
 ## <a name="see-also"></a>Viz také  
  [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)   

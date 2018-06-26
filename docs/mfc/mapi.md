@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347530"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930671"
 ---
 # <a name="mapi"></a>MAPI
-Tento článek popisuje Microsoft Zasílání zpráv rozhraní MAPI (Application Programming) pro vývojáře aplikací zpráv klienta. MFC poskytuje podporu pro podmnožinu rozhraní MAPI v třídě **CDocument** , ale není zapouzdření celý rozhraní API. Další informace najdete v tématu [Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md).  
+Tento článek popisuje Microsoft Zasílání zpráv rozhraní MAPI (Application Programming) pro vývojáře aplikací zpráv klienta. MFC poskytuje podporu pro podmnožinu rozhraní MAPI v třídě `CDocument` , ale není zapouzdření celý rozhraní API. Další informace najdete v tématu [Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md).  
   
  MAPI je sada funkcí, které poštovní a e-mailu podporou aplikace použít k vytvoření, manipulaci, přenos a ukládání e-mailových zpráv. To poskytuje vývojářům aplikací definovat účel a obsah e-mailových zpráv nástroje a poskytuje flexibilitu v jejich správu uložené e-mailových zpráv. MAPI taky poskytuje jednotné rozhraní, které vývojáři aplikace můžete použít k vytvoření, poštovní a e-mailu aplikací nezávislé systému pro zasílání zpráv.  
   

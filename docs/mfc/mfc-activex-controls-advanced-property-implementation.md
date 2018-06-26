@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351836"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928361"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC – ovládací prvky ActiveX: Implementace rozšířených vlastností
 Tento článek popisuje témata týkající se implementace rozšířené vlastnosti v ovládacím prvku ActiveX:  
@@ -66,9 +66,9 @@ Tento článek popisuje témata týkající se implementace rozšířené vlastn
  Tato ukázka kódu volá `SetNotSupported` Pokud `m_bReadOnlyMode` – datový člen je **TRUE**. Pokud **FALSE**, pak je vlastnost nastavena na novou hodnotu.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Vrácení chybových kódů z vlastnosti  
- K označení, že došlo k chybě při pokusu o získání nebo nastavení vlastnosti, použijte `COleControl::ThrowError` funkce, který přebírá `SCODE` (kód stavu) jako parametr. Můžete použít i předdefinovanou `SCODE` nebo definovat vlastní. Seznam předdefinovaných `SCODE`s a pokyny k definování vlastní `SCODE`s, najdete v části [zpracování chyb v vaše ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX článek: Advanced témata.  
+ K označení, že došlo k chybě při pokusu o získání nebo nastavení vlastnosti, použijte `COleControl::ThrowError` funkce, která přebírá kód SCODE (kód stavu) jako parametr. Můžete použít předdefinované kód SCODE nebo definovat vlastní. Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs, naleznete v části [zpracování chyb v vaše ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX článek: Advanced témata.  
   
- Podpůrné funkce pro nejběžnější předdefinované neexistují `SCODE`s, jako například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), a [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Podpůrné funkce neexistuje, nejběžnější předdefinované SCODEs, jako například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), a [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` měl by být použit pouze jako způsob vrátila chybu z v rámci Get vlastnost nebo sadu funkci nebo metodu automatizace. Toto jsou jediné pokusů, které obslužná rutina příslušné výjimky bude k dispozici v zásobníku.  

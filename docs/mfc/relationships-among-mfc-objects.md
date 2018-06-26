@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379516"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931649"
 ---
 # <a name="relationships-among-mfc-objects"></a>Vztahy mezi objekty MFC
 Pomoc při procesu vytváření dokumentů/zobrazení chápat perspektivy, zvažte spuštěným programem: dokument, okně s rámečkem obsahoval zobrazení a zobrazení přidružený k dokumentu.  
@@ -53,7 +53,7 @@ Pomoc při procesu vytváření dokumentů/zobrazení chápat perspektivy, zvaž
  Obvykle okně s rámečkem má jedno zobrazení, ale v některých případech jako rozdělovače oken okně rámce obsahuje více zobrazení. Okně s rámečkem udržuje ukazatel na aktuálně aktivní zobrazení; ukazatel se aktualizuje, když se aktivuje jiného zobrazení.  
   
 > [!NOTE]
->  Ukazatel na rámec hlavního okna je uložen v [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) členské proměnné objektu aplikace. Volání `OnFileNew` v přepsání z `InitInstance` členské funkce `CWinApp` nastaví `m_pMainWnd` za vás. Pokud není volána `OnFileNew`, je nutné nastavit hodnotu proměnné `InitInstance` sami. (Aplikace SDI COM součástí (server) se nemusí nastavte proměnnou, pokud je /Embedding na příkazovém řádku.) Všimněte si, že `m_pMainWnd` je nyní členem třídy `CWinThread` místo `CWinApp`.  
+>  Ukazatel na rámec hlavního okna je uložen v [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) členské proměnné objektu aplikace. Volání `OnFileNew` v přepsání z `InitInstance` členské funkce `CWinApp` nastaví *m_pMainWnd* za vás. Pokud není volána `OnFileNew`, je nutné nastavit hodnotu proměnné `InitInstance` sami. (Aplikace SDI COM součástí (server) se nemusí nastavte proměnnou, pokud je /Embedding na příkazovém řádku.) Všimněte si, že *m_pMainWnd* je nyní členem třídy `CWinThread` místo `CWinApp`.  
   
 ## <a name="see-also"></a>Viz také  
  [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)   

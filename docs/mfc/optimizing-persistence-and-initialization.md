@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355657"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930310"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimalizace trvalosti a inicializace
 Ve výchozím nastavení, trvalosti a inicializace v ovládacím prvku jsou zpracovávány `DoPropExchange` – členská funkce. V ovládacím prvku typické tuto funkci obsahuje volání do několika **PX_** funkce (`PX_Color`, `PX_Font`a tak dále), jeden pro každou vlastnost.  
@@ -45,7 +45,7 @@ Ve výchozím nastavení, trvalosti a inicializace v ovládacím prvku jsou zpra
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Upozorňujeme, že v případě zatížení dočasné proměnná se používá, a pak je jeho hodnota přiřazen, nikoli přetypování `m_boolProp` k **BAJTŮ** odkaz. Přetypování technika by způsobilo pouze jeden bajt `m_boolProp` upravována, ponechat zbývající bajty Neinicializovaný.  
+ Upozorňujeme, že v případě zatížení dočasné proměnná se používá, a pak je jeho hodnota přiřazen, nikoli přetypování *m_boolProp* k **BAJTŮ** odkaz. Přetypování technika by způsobilo pouze jeden bajt *m_boolProp* upravována, ponechat zbývající bajty Neinicializovaný.  
   
  Pro stejný ovládací prvek, můžete optimalizovat ovládacího prvku inicializace přepsání [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) následujícím způsobem:  
   

@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345609"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928977"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Přetažení: Implementace zdroje přemístění
 Tento článek vysvětluje, jak získat aplikace k poskytování dat na operaci přetažení myší.  
   
- Základní implementace zdroje přetažení je poměrně jednoduché. Prvním krokem je určit, jaké události se zahájit operaci přetažení. Doporučené pokyny pro uživatelské rozhraní definovat začátku operaci přetažení výběru dat a `WM_LBUTTONDOWN` událostí, ke kterým dochází v bodě uvnitř vybraná data. Ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md) postupujte podle následujících pokynů.  
+ Základní implementace zdroje přetažení je poměrně jednoduché. Prvním krokem je určit, jaké události se zahájit operaci přetažení. Doporučené pokyny pro uživatelské rozhraní definovat začátku operaci přetažení výběru dat a **WM_LBUTTONDOWN** událostí, ke kterým dochází v bodě uvnitř vybraná data. Ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md) postupujte podle následujících pokynů.  
   
  Pokud vaše aplikace je kontejner a je vybraná data propojený nebo vložený objekt typu `COleClientItem`, volání jeho `DoDragDrop` – členská funkce. Jinak, vytvořit `COleDataSource` objektu, inicializujte ho s výběrem a volání objekt zdroje dat `DoDragDrop` – členská funkce. Pokud vaše aplikace je server, použijte `COleServerItem::DoDragDrop`. Informace o přizpůsobení standardní chování přetahování myší, najdete v článku [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md).  
   
- Pokud `DoDragDrop` vrátí `DROPEFFECT_MOVE`, okamžitě odstranit zdroj dat z zdrojový dokument. Žádnou návratovou hodnotu z `DoDragDrop` nemá žádný vliv na zdroje přetažení.  
+ Pokud `DoDragDrop` vrátí **DROPEFFECT_MOVE**, okamžitě odstranit zdroj dat z zdrojový dokument. Žádnou návratovou hodnotu z `DoDragDrop` nemá žádný vliv na zdroje přetažení.  
   
  Další informace naleznete v tématu:  
   

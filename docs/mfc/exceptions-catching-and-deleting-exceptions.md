@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345183"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928766"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Výjimky: Zachytávání a mazání
-Následující pokyny a příklady ukazují, jak zachytit a odstranit výjimky. Další informace o **zkuste**, **catch**, a `throw` klíčová slova, najdete v části [zpracování výjimek C++](../cpp/cpp-exception-handling.md).  
+Následující pokyny a příklady ukazují, jak zachytit a odstranit výjimky. Další informace o **zkuste**, **catch**, a **throw** klíčová slova, najdete v části [zpracování výjimek C++](../cpp/cpp-exception-handling.md).  
   
  Vaše obslužné rutiny výjimek musí objekty výjimek, které se budou zpracovávat, odstranit, protože se nezdařilo odstranit výjimka způsobuje nevracení paměti vždy, když tento kód zachytí výjimku.  
   
@@ -42,7 +42,7 @@ Následující pokyny a příklady ukazují, jak zachytit a odstranit výjimky. 
 -   Provádění vrátí uvnitř **catch** bloku.  
   
 > [!NOTE]
->  Při odstraňování `CException`, použijte **odstranit** – členská funkce odstranit výjimku. Nepoužívejte **odstranit** – klíčové slovo, protože může selhat, pokud výjimka není v haldě.  
+>  Při odstraňování `CException`, použijte `Delete` – členská funkce odstranit výjimku. Nepoužívejte **odstranit** – klíčové slovo, protože může selhat, pokud výjimka není v haldě.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Catch – a odstraňovat výjimky  
   

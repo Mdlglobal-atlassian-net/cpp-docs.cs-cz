@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344201"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930284"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativy k architektuře dokument/zobrazení
 Document/view – Architektura aplikace MFC normálně používat ke správě informací, formáty souborů a vizuální znázornění dat uživatelům. Pro většinu aplikací klasické pracovní plochy architektuře dokument/zobrazení je vhodné a efektivní aplikace architekturu. Tato architektura odděluje data ze zobrazení a ve většině případů, zjednodušuje vaší aplikace a snižuje redundantní kódu.  
@@ -41,11 +41,11 @@ Document/view – Architektura aplikace MFC normálně používat ke správě in
   
  Průvodci Visual C++, stejně jako zdroj a dialogové okno editory, pracovat s generovaný aplikací, stejně jako všechny ostatní aplikace generované v průvodci. Aplikace může podporovat panely nástrojů, posuvníky a stavového řádku a má **o** pole. Aplikace se neregistruje žádné šablony dokumentů a nebude obsahovat dokumentové třídy.  
   
- Všimněte si, že generovaný aplikace obsahuje třídu, zobrazení, **CChildView**, odvozené z `CWnd`. MFC vytvoří a umisťuje jednu instanci třídy zobrazení v rámci okna s rámečkem vytvořené aplikace. MFC stále vynucuje pomocí okna zobrazení, protože ho zjednodušuje umístění a správu obsahu aplikace. Můžete přidat Malování kódu `OnPaint` členem této třídy. Váš kód měli přidat posuvníky do zobrazení, nikoli do rámečku.  
+ Všimněte si, že generovaný aplikace obsahuje třídu, zobrazení, `CChildView`, odvozené z `CWnd`. MFC vytvoří a umisťuje jednu instanci třídy zobrazení v rámci okna s rámečkem vytvořené aplikace. MFC stále vynucuje pomocí okna zobrazení, protože ho zjednodušuje umístění a správu obsahu aplikace. Můžete přidat Malování kódu `OnPaint` členem této třídy. Váš kód měli přidat posuvníky do zobrazení, nikoli do rámečku.  
   
  Vzhledem k architektuře dokument/zobrazení poskytované MFC je zodpovědná za implementaci řadu základní funkce aplikace, jeho absenci ve vašem projektu znamená, že jste zodpovědní za implementaci důležité funkce aplikace:  
   
--   V souladu s pomocí Průvodce aplikací MFC, v nabídce pro vaše aplikace obsahuje pouze `New` a `Exit` příkazy **souboru** nabídky. ( `New` Příkaz je podporován pouze pro aplikace MDI, ne SDI aplikace bez Document/View – podpora.) Vygenerovaný nabídky prostředků nebudou podporovat jenom seznam naposledy použitých (naposledy použili).  
+-   Podle pomocí Průvodce aplikací MFC, v nabídce pro vaše aplikace obsahuje pouze **nový** a **ukončení** příkazy **souboru** nabídky. ( **Nový** příkaz je podporován pouze pro aplikace MDI, ne SDI aplikace bez Document/View – podpora.) Vygenerovaný nabídky prostředků nebudou podporovat jenom seznam naposledy použitých (naposledy použili).  
   
 -   Musíte přidat funkce obslužných rutin a implementace pro všechny příkazy, které bude aplikace podporovat, včetně **otevřete** a **Uložit** na **souboru** nabídky. MFC kódu, který podporuje tyto funkce poskytuje normálně, ale, že podpora je úzce vázán k architektuře dokument/zobrazení.  
   
@@ -53,9 +53,9 @@ Document/view – Architektura aplikace MFC normálně používat ke správě in
   
  Důrazně doporučujeme použít Průvodce aplikací MFC k vytvoření aplikace bez architektuře dokument/zobrazení, protože průvodce zaručuje správné architektury MFC. Pokud se musí vyhnout, pomocí průvodce, tady jsou však několik přístupy k obcházení architektuře dokument/zobrazení ve vašem kódu:  
   
--   Zpracování dokumentu jako nepoužívané appendage a implementovat vaše data správy kód ve třídě zobrazení jako navrhované výše. Režijní náklady pro dokument je relativně nízký. Jediný [CDocument](../mfc/reference/cdocument-class.md) objekt způsobuje malé množství režijní náklady na samostatně, plus malé nároky na **CDocument**na základní třídy, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) a [ CObject](../mfc/reference/cobject-class.md). Obě tyto třídy jsou malé.  
+-   Zpracování dokumentu jako nepoužívané appendage a implementovat vaše data správy kód ve třídě zobrazení jako navrhované výše. Režijní náklady pro dokument je relativně nízký. Jediný [CDocument](../mfc/reference/cdocument-class.md) objekt způsobuje malé množství režijní náklady na samostatně, plus malé nároky na `CDocument`na základní třídy, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) a [CObject](../mfc/reference/cobject-class.md). Obě tyto třídy jsou malé.  
   
-     Deklarované v **CDocument**:  
+     Deklarované v `CDocument`:  
   
     -   Dva `CString` objekty.  
   

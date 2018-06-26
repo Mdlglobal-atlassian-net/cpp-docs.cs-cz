@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350778"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931606"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností
 Ovládací prvek ActiveX v některých případech bude mít více vlastností než to bude přiměřeně vejde na jednu stránku vlastností. V takovém případě můžete přidat stránky vlastností do ovládacího prvku ActiveX k zobrazení těchto vlastností.  
@@ -48,7 +48,7 @@ Ovládací prvek ActiveX v některých případech bude mít více vlastností n
   
 3.  Rozbalte **dialogové okno** uzel a vyberte možnost **IDD_OLE_PROPPAGE_SMALL**.  
   
-4.  Klikněte na tlačítko `New` pro daný prostředek přidejte do projektu.  
+4.  Klikněte na tlačítko **nový** pro daný prostředek přidejte do projektu.  
   
 5.  Vyberte novou šablonu, vlastnost stránku aktualizujte okno vlastností.  
   
@@ -82,7 +82,7 @@ Ovládací prvek ActiveX v některých případech bude mít více vlastností n
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- Všimněte si, že musíte zvýšit druhý parametr `BEGIN_PROPPAGEIDS` makro (počet stránek vlastností) z 1 na 2.  
+ Všimněte si, že musíte zvýšit druhý parametr begin_proppageids – makro (počet stránek vlastností) z 1 na 2.  
   
  Musíte také upravit řídicí soubor implementace (. Záhlaví souboru CPP) (. H) soubor nové třídy stránky vlastností.  
   
@@ -110,7 +110,7 @@ Ovládací prvek ActiveX v některých případech bude mít více vlastností n
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  Upravit konstruktoru `CAddtlPropPage` tak, aby **IDS_SAMPLE_ADDPPG_CAPTION** je předán `COlePropertyPage` konstruktoru, následujícím způsobem:  
+7.  Upravit konstruktoru `CAddtlPropPage` tak, aby předaný IDS_SAMPLE_ADDPPG_CAPTION `COlePropertyPage` konstruktoru, následujícím způsobem:  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

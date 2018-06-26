@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfa84326286b03f3ed0154138ed7f847440df284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347149"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928567"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Objednávání položek v ovládacím prvku záhlaví
 Jakmile jste [přidání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md), můžete upravit nebo získat informace o jejich pořadí s následující funkce:  
@@ -40,7 +40,7 @@ Jakmile jste [přidání položek do ovládacího prvku záhlaví](../mfc/adding
   
      Načte hodnotu indexu pro konkrétní hlavičky položku.  
   
- Kromě předchozích členské funkce `HDS_DRAGDROP` styl umožňuje uživateli přetažení položek záhlaví v ovládacím prvku záhlaví. Další informace najdete v tématu [zajištění podpory přetažení a přetažení u položek záhlaví](../mfc/providing-drag-and-drop-support-for-header-items.md).  
+ Kromě předchozích členské funkce hds_dragdrop – styl umožňuje uživateli přetažení položek záhlaví v ovládacím prvku záhlaví. Další informace najdete v tématu [zajištění podpory přetažení a přetažení u položek záhlaví](../mfc/providing-drag-and-drop-support-for-header-items.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)

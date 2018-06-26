@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342157"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930973"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista
 Knihovna Microsoft Foundation Class (MFC) podporuje běžné ovládací prvky Windows verze 6.1. Běžné ovládací prvky jsou součástí [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] a je součástí knihovny [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Knihovna poskytuje nové metody, které zlepšují existující třídy a nové třídy a metody, které podporují [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] běžné ovládací prvky. Když vytvoříte aplikaci, postupujte podle požadavků na kompilace a migrace, které jsou popsány v následujících částech.  
@@ -44,7 +44,7 @@ Knihovna Microsoft Foundation Class (MFC) podporuje běžné ovládací prvky Wi
  ANSI verzi několik metod MFC jsou zastaralé od verze běžné ovládací prvky Windows verze 6.1. Další informace najdete v tématu [zastaralá rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md).  
   
 ## <a name="migration-requirements"></a>Požadavky na migraci  
- Pokud používáte Visual Studio IDE k vytvoření nové aplikace MFC, která používá běžné ovládací prvky Windows verze 6.1, rozhraní IDE automaticky deklaruje odpovídající manifestu. Ale pokud migrujete existující aplikaci MFC ze starší verze sady Visual Studio a chcete používat nové běžné ovládací prvky, rozhraní IDE neposkytuje automaticky manifestu informace k upgradu vaší aplikace. Místo toho je nutné ručně vložit následující zdrojový kód v souboru stdafx.h:  
+ Pokud používáte Visual Studio IDE k vytvoření nové aplikace MFC, která používá běžné ovládací prvky Windows verze 6.1, rozhraní IDE automaticky deklaruje odpovídající manifestu. Ale pokud migrujete existující aplikaci MFC ze starší verze sady Visual Studio a chcete používat nové běžné ovládací prvky, rozhraní IDE neposkytuje automaticky manifestu informace k upgradu vaší aplikace. Místo toho je nutné ručně vložit následující zdrojový kód ve vaší **stdafx.h** souboru:  
   
 ```  
 #ifdef UNICODE  

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358804"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928879"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC – ovládací prvky ActiveX: Distribuce ovládacích prvků ActiveX
 Tento článek popisuje několik problémy související s Redistribuce ovládacích prvků ActiveX:  
@@ -60,7 +60,7 @@ Tento článek popisuje několik problémy související s Redistribuce ovládac
  Instalační program, který zadáte s ovládacími prvky ActiveX by měl vytvořit podadresář speciální v adresáři systému Windows a nainstalujte ovládací prvky. OCX soubory v ní.  
   
 > [!NOTE]
->  Použití Windows **GetWindowsDirectory** rozhraní API v instalačním programu se získat název adresáře systému Windows. Můžete k odvozování z názvu společnosti nebo produktu, název podadresáře.  
+>  Použití Windows `GetWindowsDirectory` rozhraní API v instalačním programu se získat název adresáře systému Windows. Můžete k odvozování z názvu společnosti nebo produktu, název podadresáře.  
   
  Instalační program musíte nainstalovat potřebné distribuovatelné soubory DLL v adresáři systému Windows. Pokud některá z knihoven DLL již uloženy v počítači uživatele, instalační program by měl porovnat jejich verze s verzemi, které instalujete. Přeinstalujte soubor pouze v případě jeho číslo verze je vyšší než soubor již nainstalován.  
   
@@ -71,14 +71,14 @@ Tento článek popisuje několik problémy související s Redistribuce ovládac
   
  Pokud dáváte přednost, můžete napsat vaše instalační program k registraci ovládacího prvku přímo místo.  
   
- Použití **LoadLibrary** rozhraní API systému Windows se načíst knihovnu DLL ovládacího prvku. Pak pomocí **GetProcAddress** získat adresu funkce "DllRegisterServer". Nakonec zavolejte `DllRegisterServer` funkce. Následující příklad kódu ukazuje jeden možný způsob, kde `hLib` uloží popisovač řízení knihovny, a `lpDllEntryPoint` ukládá adresu funkce "DllRegisterServer".  
+ Použití `LoadLibrary` rozhraní API systému Windows se načíst knihovnu DLL ovládacího prvku. Pak pomocí `GetProcAddress` získat adresu funkce "DllRegisterServer". Nakonec zavolejte `DllRegisterServer` funkce. Následující příklad kódu ukazuje jeden možný způsob, kde `hLib` uloží popisovač řízení knihovny, a `lpDllEntryPoint` ukládá adresu funkce "DllRegisterServer".  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  Výhodou registrace ovládacího prvku přímo je, není nutné k vyvolání a načtení samostatný proces (konkrétně, REGSVR32), čímž se zkrátí doba instalace. Kromě toho protože registrace je interní proces, instalační program může zpracovávat chyby a může nepředpokládaného situacích lepší, než externího procesu.  
   
 > [!NOTE]
->  Dříve, než instalační program nainstaluje ovládací prvek ActiveX, by měly volat **provedení**. Po dokončení instalačního programu volání **OleUnitialize**. Tím se zajistí OLE systémové knihovny DLL ve správném stavu pro registraci ovládacího prvku ActiveX.  
+>  Dříve, než instalační program nainstaluje ovládací prvek ActiveX, by měly volat `OleInitialize`. Po dokončení instalačního programu volání `OleUnitialize`. Tím se zajistí OLE systémové knihovny DLL ve správném stavu pro registraci ovládacího prvku ActiveX.  
   
  Byste měli zaregistrovat MFCx0.DLL.  
   

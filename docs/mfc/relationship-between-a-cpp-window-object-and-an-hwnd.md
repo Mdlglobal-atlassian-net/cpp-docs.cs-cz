@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51daa375c3c920443316b6e10b6415ee018fdb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3864de8b3133fd2284b3ce57b75b30d8f41c26a7
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385775"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928525"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Vztah mezi objektem okna v jazyku C++ a popisovačem HWND
-Okno *objekt* je objekt C++ `CWnd` – třída (nebo v odvozené třídě) přímo vytvářející vašeho programu. Se dodává a přejde na základě vašeho programu konstruktor a destruktor výzvy. Windows *okno*, na druhé straně je neprůhledného popisovače vnitřní datovou strukturu Windows, který odpovídá okno a spotřebovává prostředky systému, pokud jsou k dispozici. Okno systému Windows je identifikována "popisovač okna" (`HWND`) a je vytvořen po `CWnd` objekt se vytvoří voláním **vytvořit** funkce člena třídy `CWnd`. Okno může být zničený, volání programu nebo akce uživatele. Popisovač okna je uložený v objektu okna `m_hWnd` členské proměnné. Následující obrázek znázorňuje vztah mezi objektem okna C++ a období systému Windows. Vytváření windows je popsáno v [vytváření Windows](../mfc/creating-windows.md). Zničení oken popsané v [zničení objektů oken](../mfc/destroying-window-objects.md).  
+Okno *objekt* je objekt C++ `CWnd` – třída (nebo v odvozené třídě) přímo vytvářející vašeho programu. Se dodává a přejde na základě vašeho programu konstruktor a destruktor výzvy. Windows *okno*, na druhé straně je neprůhledného popisovače vnitřní datovou strukturu Windows, který odpovídá okno a spotřebovává prostředky systému, pokud jsou k dispozici. Okno systému Windows je identifikována "popisovač okna" (`HWND`) a je vytvořen po `CWnd` objekt se vytvoří voláním `Create` funkce člena třídy `CWnd`. Okno může být zničený, volání programu nebo akce uživatele. Popisovač okna je uložený v objektu okna *m_hWnd* členské proměnné. Následující obrázek znázorňuje vztah mezi objektem okna C++ a období systému Windows. Vytváření windows je popsáno v [vytváření Windows](../mfc/creating-windows.md). Zničení oken popsané v [zničení objektů oken](../mfc/destroying-window-objects.md).  
   
  ![CWnd objektu okna a výsledný okna](../mfc/media/vc37fj1.gif "vc37fj1")  
 Okno objekt a Windows – okno  

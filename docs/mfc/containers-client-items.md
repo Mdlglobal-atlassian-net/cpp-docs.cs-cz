@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344214"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929340"
 ---
 # <a name="containers-client-items"></a>Kontejnery: Klientské položky
 Tento článek vysvětluje, co jsou klientské položky a z co třídy aplikace by měl být odvozen jeho klientské položky.  
   
  Klientské položky jsou datové položky, které patří do jiných aplikací, které jsou součástí nebo odkazuje dokumentu aplikace OLE kontejneru. Klientské položky, jejichž data jsou obsažena v tomto dokumentu jsou vloženy; ty, jejichž data jsou uložena v jiném umístění kontejneru dokument odkazuje jsou propojeny.  
   
- Třída dokumentu v aplikaci OLE je odvozená od třídy [COleDocument](../mfc/reference/coledocument-class.md) spíše než z **CDocument**. `COleDocument` Třída dědí z **CDocument** všechny funkce, které jsou nezbytné pro používání document/view – architektura, na které MFC aplikace využívají. `COleDocument` také definuje rozhraní, které zpracovává dokumentu jako kolekce `CDocItem` objekty. Několik `COleDocument` členské funkce jsou k dispozici pro přidávání, získávání a odstraňování elementů této kolekce.  
+ Třída dokumentu v aplikaci OLE je odvozená od třídy [COleDocument](../mfc/reference/coledocument-class.md) spíše než z `CDocument`. `COleDocument` Třída dědí z `CDocument` všechny funkce, které jsou nezbytné pro používání document/view – architektura, na které MFC aplikace využívají. `COleDocument` také definuje rozhraní, které zpracovává dokumentu jako kolekce `CDocItem` objekty. Několik `COleDocument` členské funkce jsou k dispozici pro přidávání, získávání a odstraňování elementů této kolekce.  
   
  Každá aplikace kontejneru by měl být odvozen z alespoň jednu třídu `COleClientItem`. Objekty této třídy představují položek, vložené nebo propojené v dokumentu OLE. Tyto objekty existují po celou dobu životnosti dokument obsahující, pokud jsou odstraněny z dokumentu.  
   

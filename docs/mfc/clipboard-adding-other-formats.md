@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342144"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932015"
 ---
 # <a name="clipboard-adding-other-formats"></a>Schránka: Přidání dalších formátů
-Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vložit Data](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementace potřebných k podpoře kopírování a vkládání ze schránky. Pokud je to všechny implementujete, jsou pouze formáty umístit do schránky `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně `CF_LINKSOURCE`. Většina aplikací potřebovat více formátů do schránky. než tyto tři.  
+Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vložit Data](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementace potřebných k podpoře kopírování a vkládání ze schránky. Pokud je to všechny implementujete, jsou pouze formáty umístit do schránky **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně **CF_LINKSOURCE**. Většina aplikací potřebovat více formátů do schránky. než tyto tři.  
   
 ##  <a name="_core_registering_custom_formats"></a> Registrace vlastních formátů  
  Pokud chcete vytvořit vlastní formáty, postupujte stejným způsobem, který byste použili při registraci všechny vlastní formát schránky: předat název formát, který se **RegisterClipboardFormat** funkce a použít hodnoty jako ID formátu.  

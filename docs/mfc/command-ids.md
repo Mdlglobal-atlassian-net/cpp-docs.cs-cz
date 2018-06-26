@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dc27e39f6e2753b7b468e39c283d58c3e585d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1e03f10199c1b582a1a8603a6ea6c93e1d55473
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341469"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931229"
 ---
 # <a name="command-ids"></a>Identifikátory příkazů
 Příkaz je podrobně popsán pomocí jejího ID příkaz samostatně (v kódování **wm_command –** zprávy). Toto ID je přiřazený k objektu uživatelského rozhraní, která generuje příkaz. Obvykle jsou pojmenované ID pro funkce, které jsou přiřazeny k objektu uživatelského rozhraní.  
   
- Například vymazat všechny položky v nabídce Upravit může být přiřazen ID jako **id_edit_clear_all –**. Knihovny tříd predefines některé identifikátory, zejména pro příkazy, že rozhraní zpracovává samostatně, jako například **id_edit_clear_all –** nebo `ID_FILE_OPEN`. Vytvoříte další identifikátory příkazů sami.  
+ Například vymazat všechny položky v nabídce Upravit může být přiřazen ID jako **id_edit_clear_all –**. Knihovny tříd predefines některé identifikátory, zejména pro příkazy, že rozhraní zpracovává samostatně, jako například **id_edit_clear_all –** nebo **id_file_open –**. Vytvoříte další identifikátory příkazů sami.  
   
- Když vytvoříte vlastní nabídky v jazyce Visual C++ editor nabídek, je vhodné postupovat podle knihovny tříd je zásady vytváření názvů vidíte `ID_FILE_OPEN`. [Standardní příkazy](../mfc/standard-commands.md) vysvětluje standardní příkazy, které jsou definované v knihovně tříd.  
+ Když vytvoříte vlastní nabídky v jazyce Visual C++ editor nabídek, je vhodné postupovat podle knihovny tříd je zásady vytváření názvů vidíte **id_file_open –**. [Standardní příkazy](../mfc/standard-commands.md) vysvětluje standardní příkazy, které jsou definované v knihovně tříd.  
   
 ## <a name="see-also"></a>Viz také  
  [Identifikátory objektů uživatelského rozhraní a příkazů](../mfc/user-interface-objects-and-command-ids.md)

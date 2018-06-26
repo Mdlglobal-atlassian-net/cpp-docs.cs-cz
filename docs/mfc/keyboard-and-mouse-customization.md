@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351660"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931577"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Přizpůsobení klávesnice a myši
 MFC umožňuje uživateli vaší aplikace k přizpůsobení jak zpracovává klávesnici a myš vstup. Uživatel může přizpůsobit vstup z klávesnice přiřazením klávesové zkratky příkazy. Uživatele můžete také upravit vstup myši vyberte příkaz, který se má provést při poklepání uvnitř windows konkrétní aplikace. Toto téma vysvětluje, jak přizpůsobit vstup pro vaši aplikaci.  
@@ -61,7 +61,7 @@ Karta přizpůsobení myši
   
  Po aplikaci inicializuje správce myš, přidá rozhraní **myši** kartu k **přizpůsobit** dialogové okno. Pokud je nemůžete přidat žádné zobrazení, na kartě způsobí, že k neošetřené výjimce. Po vytvoření seznamu zobrazení, **myši** karta je k dispozici pro uživatele.  
   
- Když přidáte nové zobrazení pro správce myš, můžete jí jedinečný identifikátor. Pokud chcete pro podporu myši přizpůsobení okna, je nutné zpracovat `WM_LBUTTONDBLCLICK` zprávu a volání [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkce. Při volání této funkce je jeden z parametrů ID pro toto okno. Je zodpovědností programátorů ke sledování čísla ID a objekty s nimi spojených.  
+ Když přidáte nové zobrazení pro správce myš, můžete jí jedinečný identifikátor. Pokud chcete pro podporu myši přizpůsobení okna, je nutné zpracovat WM_LBUTTONDBLCLICK zprávu a volání [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkce. Při volání této funkce je jeden z parametrů ID pro toto okno. Je zodpovědností programátorů ke sledování čísla ID a objekty s nimi spojených.  
   
 ## <a name="security-concerns"></a>Aspekty zabezpečení  
  Jak je popsáno v [uživatelem definované nástroje](../mfc/user-defined-tools.md), uživatele můžete přidružit uživatelem definované nástroje ID události poklikejte na soubor. Při poklepání zobrazení aplikace vyhledá uživatele nástroj, který odpovídá přidružené ID. Pokud aplikace najde odpovídající nástroj, provede nástroj. Pokud aplikace nemůže najít odpovídající nástroj, odešle wm_command – zprávy s ID zobrazení, který byl dvakrát kliknete.  

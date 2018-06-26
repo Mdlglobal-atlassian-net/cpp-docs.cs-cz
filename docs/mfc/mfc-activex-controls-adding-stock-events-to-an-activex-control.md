@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359335"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930784"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX
-Uložených událostí se liší od vlastních událostí v tom, že jsou automaticky aktivována třída [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` obsahuje předdefinované členské funkce, které budou spuštěny událostí vyplývající z běžné akce. Některé běžné akce implementované `COleControl` zahrnují single - a double - clicks na ovládací prvek, události klávesnice a změny ve stavu tlačítka myši. Záznamy událostí mapy pro uložených událostí jsou vždy uvedeny **event_stock –** předponu.  
+Uložených událostí se liší od vlastních událostí v tom, že jsou automaticky aktivována třída [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` obsahuje předdefinované členské funkce, které budou spuštěny událostí vyplývající z běžné akce. Některé běžné akce implementované `COleControl` zahrnují single - a double - clicks na ovládací prvek, události klávesnice a změny ve stavu tlačítka myši. Událost mapovat položky pro, který události jsou vždy uvedeny event_stock – předpona.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> Stock události nepodporuje Průvodce přidáním události  
  `COleControl` Třída poskytuje deset uložených událostí uvedené v následující tabulce. Můžete zadat událostí, které chcete v pomocí ovládacího prvku [Průvodce přidáním události](../ide/add-event-wizard.md).  
@@ -76,7 +76,7 @@ Uložených událostí se liší od vlastních událostí v tom, že jsou automa
 |KeyPress –|**firekeypress – void (krátký\***`pnChar`**)** |Aktivováno při `WM_CHAR` je přijatá zpráva.<br /><br /> Položku mapování události: **(event_stock_keypress –)**|  
 |KeyUp|**firekeyup – void (krátký** `nChar` **, krátké**`nShiftState`**)** |Aktivováno při `WM_SYSKEYUP` nebo `WM_KEYUP` je přijatá zpráva.<br /><br /> Položku mapování události: **(event_stock_keyup –)**|  
 |MouseDown –|**firemousedown – void (krátký** `nButton` **, krátké** `nShiftState` **, float***x* **, float** *y***)** |Aktivováno případných **BUTTONDOWN** přijetí (doleva, střední nebo doprava). Myš zachycenou bezprostředně před Tato událost je aktivována.<br /><br /> Položku mapování události: **(event_stock_mousedown –)**|  
-|MouseMove –|**firemousemove – void (krátký** `nButton` **, krátké** `nShiftState` **, float***x* **, float** *y***)** |Aktivováno při `WM_MOUSEMOVE` je přijatá zpráva.<br /><br /> Položku mapování události: **(event_stock_mousemove –)**|  
+|MouseMove –|**firemousemove – void (krátký** `nButton` **, krátké** `nShiftState` **, float***x* **, float** *y***)** |Aktivováno při příjmu zprávy WM_MOUSEMOVE.<br /><br /> Položku mapování události: **(event_stock_mousemove –)**|  
 |MouseUp|**firemouseup – void (krátký** `nButton` **, krátké** `nShiftState` **, float***x* **, float** *y***)** |Aktivováno případných **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši vydání předtím, než tato událost je aktivována.<br /><br /> Položku mapování události: **(event_stock_mouseup –)**|  
 |ReadyStateChange –|**void (FireReadyStateChange)**|Aktivována, jestliže řízení přechody do dalšího připravené stavu z důvodu přijatá data.<br /><br /> Položku mapování události: **(event_stock_readystatechange –)**|  
   
@@ -102,7 +102,7 @@ Uložených událostí se liší od vlastních událostí v tom, že jsou automa
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- Přidání tohoto kódu aktivuje KeyPress – událost při `WM_CHAR` přijata zpráva a řízení je aktivní. KeyPress – událost může být aktivována v jinou dobu voláním její funkce pálení (například `FireKeyPress`) z kódu ovládacího prvku.  
+ Přidání tohoto kódu aktivuje KeyPress – událost při příjmu zprávy WM_CHAR a řízení je aktivní. KeyPress – událost může být aktivována v jinou dobu voláním její funkce pálení (například `FireKeyPress`) z kódu ovládacího prvku.  
   
  Průvodce přidáním události přidá do ovládacího prvku následující řádek kódu. IDL soubor:  
   

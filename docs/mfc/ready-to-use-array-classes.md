@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a5f94964b9e28b851c34ac456f3cfe630c255c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347961"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932042"
 ---
 # <a name="ready-to-use-array-classes"></a>Hotové třídy polí připravené k použití
 Následující třídy jsou třídy polí připravené k použití.  
@@ -32,13 +32,13 @@ Následující třídy jsou třídy polí připravené k použití.
  Ukládá elementy typu **BAJTŮ** v matici.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- Ukládá elementy typu `DWORD` v matici.  
+ Ukládá elementy typu **DWORD** v matici.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
  Ukazatelé na objekty třídy ukládá `CObject` nebo pro objekty třídy odvozené od třídy `CObject` v matici.  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- Ukládá ukazatele na `void` (Obecné ukazatele) v matici.  
+ Ukládá ukazatele na **void** (Obecné ukazatele) v matici.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
  Ukládá elementy typu **Celé_číslo** v matici.  

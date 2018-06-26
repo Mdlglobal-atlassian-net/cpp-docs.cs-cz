@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b78e74b4b8d974fceaf5f854c9890cd7cdd1a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344162"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929579"
 ---
 # <a name="-constructors-comment"></a>// Komentář ke konstruktorům
-`// Constructors` Části deklarace tříd MFC deklaruje konstruktory (v tom smyslu, C++) a také všechny funkce inicializace vyžadované skutečně použití objektu. Například `CWnd::Create` je v části konstruktory, protože před použitím `CWnd` objektu, se musí "plně zkonstruovat" tak, že první volání konstruktoru C++ a pak volání **vytvořit** funkce. Tito členové jsou obvykle veřejné.  
+`// Constructors` Části deklarace tříd MFC deklaruje konstruktory (v tom smyslu, C++) a také všechny funkce inicializace vyžadované skutečně použití objektu. Například `CWnd::Create` je v části konstruktory, protože před použitím `CWnd` objektu, se musí "plně zkonstruovat" tak, že první volání konstruktoru C++ a pak volání `Create` funkce. Tito členové jsou obvykle veřejné.  
   
  Například třídy `CStdioFile` má tři konstruktory, z nichž jeden je uveden v seznamu pod [příklad komentářů](../mfc/an-example-of-the-comments.md).  
   

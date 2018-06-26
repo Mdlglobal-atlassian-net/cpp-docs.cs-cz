@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352422"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931912"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC – ovládací prvky ActiveX: Přidání přizpůsobených vlastností
 Vlastní vlastnosti se liší od uložených vlastností, že vlastní vlastnosti nejsou už implementované `COleControl` třídy. Vlastní vlastnost se používá ke zveřejnění stavu nebo vzhledu ovládacího prvku ActiveX pro programátory, pomocí ovládacího prvku.  
@@ -47,7 +47,7 @@ Vlastní vlastnosti se liší od uložených vlastností, že vlastní vlastnost
   
 -   Parametrizované implementace  
   
-     Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (někdy nazývané vlastnost pole) slouží pro přístup k sadu hodnot prostřednictvím jedné vlastnosti ovládacího prvku. Makro položka mapy odeslání pro tuto implementaci je `DISP_PROPERTY_PARAM`. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v článku – ovládací prvky ActiveX: Advanced témata.  
+     Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (někdy nazývané vlastnost pole) slouží pro přístup k sadu hodnot prostřednictvím jedné vlastnosti ovládacího prvku. Makro položka mapy odeslání pro tuto implementaci je disp_property_param –. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v článku – ovládací prvky ActiveX: Advanced témata.  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Pomocí Průvodce přidáním vlastnosti přidat vlastní vlastnosti  
  Následující postup předvádí, přidání vlastní vlastnosti, CircleOffset, který používá implementace metody Get/Set. Vlastní vlastnost CircleOffset umožňuje uživatelům ovládacího prvku posun kruhu z centra ohraničující obdélník ovládacího prvku. Je velmi podobný postup pro přidání vlastních vlastností s implementace než metody Get/Set.  
@@ -66,7 +66,7 @@ Vlastní vlastnosti se liší od uložených vlastností, že vlastní vlastnost
   
      Tím se otevře [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md).  
   
-5.  V **název vlastnosti** zadejte `CircleOffset`.  
+5.  V **název vlastnosti** zadejte *CircleOffset*.  
   
 6.  Pro **typem implementace**, klikněte na tlačítko **metody Get/Set**.  
   

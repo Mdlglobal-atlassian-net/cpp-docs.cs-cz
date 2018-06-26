@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350009"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931015"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Výjimky: Změny maker pro výjimky ve verzi 3.0
 To je rozšířená.  
@@ -46,13 +46,13 @@ To je rozšířená.
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- je vyvolána jako **CException\***, i když je sestavený jako **CCustomException**. **CATCH** makra v MFC – verze 2.5 a starší použije `CObject::IsKindOf` k testování typ za běhu. Protože výraz  
+ je vyvolána jako `CException*`, i když je sestavený jako `CCustomException`. **CATCH** makra v MFC – verze 2.5 a starší použije `CObject::IsKindOf` k testování typ za běhu. Protože výraz  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  je nastavena hodnota true, první blok catch zachytí výjimky. Ve verzi 3.0, který používá výjimky jazyka C++ implementovat řadu makra zpracování výjimek, odpovídá vyvolané druhý blok catch `CException`.  
   
- Kód takto neobvyklé. Obvykle se zobrazuje při výjimce objekt předaný jinou funkci, která přijímá obecný **CException\***, provádí zpracování "předběžné throw" a nakonec vyvolá výjimku.  
+ Kód takto neobvyklé. Obvykle se zobrazuje při výjimce objekt předaný jinou funkci, která přijímá obecný `CException*`, provádí zpracování "předběžné throw" a nakonec vyvolá výjimku.  
   
  Chcete-li tento problém obejít, přesuňte výraz throw z funkce volání kódu a způsobí výjimku skutečný typ známé kompilátoru v době, kdy se vygeneruje výjimka.  
   
@@ -63,7 +63,7 @@ To je rozšířená.
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- Pomocí **THROW** ve catch bloku způsobí, že má ukazatel `e` odstranit, aby lokality vnější catch obdrží neplatný ukazatel. Použití `THROW_LAST` znovu vyvolat `e`.  
+ Pomocí **THROW** ve catch bloku způsobí, že má ukazatel `e` odstranit, aby lokality vnější catch obdrží neplatný ukazatel. Použití **throw_last –** znovu vyvolat `e`.  
   
  Další informace najdete v tématu [výjimkami: zachycení a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

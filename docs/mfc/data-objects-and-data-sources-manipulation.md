@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349906"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929858"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace
 Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných operací na data, jako je například vkládání a odstraňování dat, vytváření výčtu formáty, které je v datech, a další. Tento článek popisuje techniky, které jsou potřebné k dokončení většiny běžných operací. Témata zahrnují:  
@@ -73,7 +73,7 @@ Po vytvoření objektu dat nebo zdroj dat, můžete provést několik běžných
   
     -   Volání datový objekt `BeginEnumFormats` – členská funkce začne formáty, které jsou k dispozici do schránky. Potom zavolejte `GetNextFormat` dokud schránky vrátí podporuje formátu aplikace nebo neexistují žádné další formáty.  
   
- Pokud používáte `ON_UPDATE_COMMAND_UI`, teď můžete povolit vložení a případně i Vložit jinak položky v nabídce Upravit. Chcete-li to provést, volejte buď `CMenu::EnableMenuItem` nebo `CCmdUI::Enable`. Další informace o jaké kontejneru by měla aplikace provést pomocí položky nabídky a když, najdete v části [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).  
+ Pokud používáte **on_update_command_ui –**, teď můžete povolit vložení a případně i Vložit jinak položky v nabídce Upravit. Chcete-li to provést, volejte buď `CMenu::EnableMenuItem` nebo `CCmdUI::Enable`. Další informace o jaké kontejneru by měla aplikace provést pomocí položky nabídky a když, najdete v části [nabídky a prostředky: kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md).  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Načítání dat z dat objektu  
  Jakmile jste se rozhodli formát dat, zbývá k načtení dat z datového objektu. K tomuto účelu se uživatel rozhodne kam umístit data a aplikace volá odpovídající funkce. Data budou k dispozici v jednom z následujících médií:  

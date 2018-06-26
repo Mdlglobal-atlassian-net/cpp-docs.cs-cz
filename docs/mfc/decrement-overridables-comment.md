@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345385"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928724"
 ---
 # <a name="-overridables-comment"></a>// Komentář k přepisovatelným
 `// Overridables` Obsahuje deklarace tříd MFC virtuální funkce, které můžete přepsat v odvozené třídě, když potřebujete změnit chování základní třídy. Že jsou obvykle s názvem počínaje "Na", ačkoli to není nezbytně nutné. Funkce tady jsou navrženy pro přepsat a často implementovat nebo zadejte nějaká "zpětného volání" nebo "připojit". Obvykle jsou chráněny tito členové.  
@@ -31,7 +31,7 @@ ms.locfileid: "33345385"
   
  `virtual void OnDraw( ) = 0;`  
   
- V ukázce výpis z třídy `CStdioFile`v [příklad komentářů](../mfc/an-example-of-the-comments.md), seznam obsahuje žádnou část k přepisovatelným. Třída **CDocument**, na druhé straně zobrazí přibližně 10 přepisovatelné členské funkce.  
+ V ukázce výpis z třídy `CStdioFile`v [příklad komentářů](../mfc/an-example-of-the-comments.md), seznam obsahuje žádnou část k přepisovatelným. Třída `CDocument`, na druhé straně zobrazí přibližně 10 přepisovatelné členské funkce.  
   
  V některých tříd, může se také zobrazit komentář `// Advanced Overridables`. Toto jsou funkce, které pouze pokročilé programátory pokuste se přepsat. Musíte pravděpodobně nikdy nepřepíšete.  
   

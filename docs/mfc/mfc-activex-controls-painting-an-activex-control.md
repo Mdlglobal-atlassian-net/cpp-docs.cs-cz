@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354086"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929809"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX
 Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak můžete změnit kód Malování optimalizovat proces. (Viz [optimalizace vykreslování ovládacího prvku](../mfc/optimizing-control-drawing.md) pro techniky o tom, jak optimalizovat kreslení pomocí nemá ovládací prvky jednotlivě obnovit dříve vybrané objekty GDI. Po vykreslení všechny ovládací prvky kontejneru automaticky obnovit původní objekty.)  
@@ -38,7 +38,7 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> Proces vykreslování ovládacího prvku ActiveX  
  Pokud ovládací prvky ActiveX se zpočátku zobrazují nebo jsou překreslen, se řídí podobně jako ostatní aplikace vyvinuté pomocí jednoho zásadní rozdíl MFC, proces vykreslování: ovládací prvky ActiveX může být aktivní nebo neaktivní stavu.  
   
- Aktivní ovládací prvek je reprezentována v kontejneru ovládacího prvku ActiveX ve podřízeného okna. Jako další windows je zodpovědná za samotný vykreslování při `WM_PAINT` je přijatá zpráva. Základní třída ovládacího prvku, [COleControl](../mfc/reference/colecontrol-class.md), zpracovává tuto zprávu v jeho `OnPaint` funkce. Tato výchozí implementace volá `OnDraw` funkce ovládacího prvku.  
+ Aktivní ovládací prvek je reprezentována v kontejneru ovládacího prvku ActiveX ve podřízeného okna. Jako další windows je zodpovědná za samotný vykreslování při příjmu zprávy WM_PAINT. Základní třída ovládacího prvku, [COleControl](../mfc/reference/colecontrol-class.md), zpracovává tuto zprávu v jeho `OnPaint` funkce. Tato výchozí implementace volá `OnDraw` funkce ovládacího prvku.  
   
  Jinak vykreslení ovládacího prvku neaktivní. Pokud je ovládací prvek neaktivní, je její okno neviditelná nebo neexistuje, proto ho nemůže přijmout zprávu Malování. Místo toho přímo volá kontejneru ovládacího prvku `OnDraw` funkce ovládacího prvku. Tím se liší od aktivní prvek Malování procesu v tom, že `OnPaint` volána členské funkce.  
   
@@ -63,12 +63,12 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
   
  Výchozí implementace vykreslování ovládacího prvku ActiveX vybarví oblasti celý ovládací prvek. Toto je dostačující pro jednoduché ovládací prvky, ale v mnoha případech překreslení ovládacího prvku by rychleji, pokud jenom překreslen části potřebné aktualizace, ale místo celý ovládací prvek.  
   
- `OnDraw` Funkce způsobem snadno optimalizace předáním `rcInvalid`, obdélníkovou oblast ovládací prvek, který potřebuje překreslování. Pomocí této oblasti, obvykle menší než oblasti celý ovládací prvek pro urychlení proces vykreslování.  
+ `OnDraw` Funkce způsobem snadno optimalizace předáním *rcInvalid*, obdélníkovou oblast ovládací prvek, který potřebuje překreslování. Pomocí této oblasti, obvykle menší než oblasti celý ovládací prvek pro urychlení proces vykreslování.  
   
 ##  <a name="_core_painting_your_control_using_metafiles"></a> Vykreslování ovládacího prvku pomocí metasoubory  
- Ve většině případů `pdc` parametru `OnDraw` funkce odkazuje na obrazovce kontextu zařízení (DC). Při tisku bitových kopií ovládací prvek nebo během relace náhledu tisku, je řadič domény pro vykreslování však speciální typu s názvem "metasoubory řadiče domény". Na rozdíl od obrazovky řadiče domény, která okamžitě zpracovává požadavky do něj odeslané, metafile řadič domény ukládá žádosti o přehrání později. Některé aplikace typu kontejner se také rozhodnout k vykreslení ovládacího prvku obrázek s použitím metafile řadiče domény v režimu návrhu.  
+ Ve většině případů *primárního řadiče domény* parametru `OnDraw` funkce odkazuje na obrazovce kontextu zařízení (DC). Při tisku bitových kopií ovládací prvek nebo během relace náhledu tisku, je řadič domény pro vykreslování však speciální typu s názvem "metasoubory řadiče domény". Na rozdíl od obrazovky řadiče domény, která okamžitě zpracovává požadavky do něj odeslané, metafile řadič domény ukládá žádosti o přehrání později. Některé aplikace typu kontejner se také rozhodnout k vykreslení ovládacího prvku obrázek s použitím metafile řadiče domény v režimu návrhu.  
   
- Metafile kreslení požadavků můžete provést pomocí kontejneru, přistoupit přes dvě funkce rozhraní: **IViewObject::Draw** (Tato funkce také lze volat pro jiný metafile kreslení) a **IDataObject::GetData**. Když metasoubory řadiče domény se předá jako jeden z parametrů, rozhraní MFC framework zavolá [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Funkci ve třídě ovládacího prvku udělat žádné speciální zpracování přepište, protože člen virtuální funkce. Výchozí chování volání `COleControl::OnDraw`.  
+ Metafile kreslení požadavků můžete provést pomocí kontejneru, přistoupit přes dvě funkce rozhraní: `IViewObject::Draw` (Tato funkce také lze volat pro jiný metafile kreslení) a `IDataObject::GetData`. Když metasoubory řadiče domény se předá jako jeden z parametrů, rozhraní MFC framework zavolá [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Funkci ve třídě ovládacího prvku udělat žádné speciální zpracování přepište, protože člen virtuální funkce. Výchozí chování volání `COleControl::OnDraw`.  
   
  Pokud chcete mít jistotu, že lze rozlišovat ovládacího prvku v kontextech zařízení obrazovky a metafile, musíte použít pouze členské funkce, které jsou podporovány v obrazovky a metasoubory řadiče domény. Upozorňujeme, že souřadnicový systém nemusí měřená v pixelech.  
   
@@ -76,11 +76,11 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
   
 |Oblouk|BibBlt|Tětivy|  
 |---------|------------|-----------|  
-|**třemi tečkami**|**Řídicí**|`ExcludeClipRect`|  
+|`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**mnohoúhelníku**|`Polyline`|  
+|`Pie`|`Polygon`|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  
@@ -95,7 +95,7 @@ Tento článek popisuje proces vykreslování ovládacího prvku ActiveX a jak m
   
  Funkce, které nejsou zaznamenaná v metasoubory jsou: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)a [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Protože metafile řadič domény není ve skutečnosti související se zařízením, nemůžete použít SetDIBits, GetDIBits a CreateDIBitmap s metafile řadiče domény. SetDIBitsToDevice a StretchDIBits s metafile řadič domény můžete použít jako cíl. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), a [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) nejsou smysluplný s metafile řadiče domény.  
   
- Jiné vzít v úvahu při použití metafile řadič domény je, že souřadnicový systém nemusí měřená v pixelech. Z tohoto důvodu všechny kreslení kódu, upraví se vešla do obdélníku předáno `OnDraw` v `rcBounds` parametr. Tím zabráníte náhodnému Malování mimo ovládací prvek, protože `rcBounds` představuje velikost okna ovládacího prvku.  
+ Jiné vzít v úvahu při použití metafile řadič domény je, že souřadnicový systém nemusí měřená v pixelech. Z tohoto důvodu všechny kreslení kódu, upraví se vešla do obdélníku předáno `OnDraw` v *rcBounds* parametr. Tím zabráníte náhodnému Malování mimo ovládací prvek, protože *rcBounds* představuje velikost okna ovládacího prvku.  
   
  Poté, co jste implementovali metafile vykreslování ovládacího prvku, použijte k testování metafile Test kontejneru. V tématu [testování vlastností a událostí pomocí Test kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup kontejner testů.  
   

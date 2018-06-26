@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354015"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930001"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC – ovládací prvky ActiveX: Pokročilá témata
 Tento článek se zabývá Pokročilá témata související s vývojem – ovládací prvky ActiveX. Mezi ně patří:  
@@ -79,9 +79,9 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
 8.  V **získat funkce** a **nastavit funkce** polí zadejte jedinečné názvy pro získání a nastavení funkce nebo přijměte výchozí názvy.  
   
-9. Přidat parametr s názvem `row` (typ `short`) pomocí **název parametru** a **typ parametru** ovládací prvky.  
+9. Přidat parametr s názvem *řádek* (typ *krátké*) pomocí **název parametru** a **typ parametru** ovládací prvky.  
   
-10. Přidat druhý parametr s názvem `column` (typ `short`).  
+10. Přidat druhý parametr s názvem *sloupec* (typ *krátké*).  
   
 11. Klikněte na tlačítko **Dokončit**.  
   
@@ -111,48 +111,48 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
 |Chyba|Popis|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|Neplatné volání funkce|  
-|**CTL_E_OVERFLOW**|Přetečení|  
-|**CTL_E_OUTOFMEMORY**|Nedostatek paměti|  
-|**CTL_E_DIVISIONBYZERO**|Dělení nulou|  
-|**CTL_E_OUTOFSTRINGSPACE**|Nedostatek místa na řetězec|  
-|**CTL_E_OUTOFSTACKSPACE**|Nedostatek místa v zásobníku|  
-|**CTL_E_BADFILENAMEORNUMBER**|Chybný název souboru nebo číslo|  
-|**CTL_E_FILENOTFOUND**|Soubor nebyl nalezen.|  
-|**CTL_E_BADFILEMODE**|Chybný režim souboru|  
-|**CTL_E_FILEALREADYOPEN**|Soubor již je otevřen.|  
-|**CTL_E_DEVICEIOERROR**|Vstupně-výstupní chyba zařízení|  
-|**CTL_E_FILEALREADYEXISTS**|Soubor již existuje.|  
-|**CTL_E_BADRECORDLENGTH**|Chybná délka záznamu|  
-|**CTL_E_DISKFULL**|Disk je plný|  
-|**CTL_E_BADRECORDNUMBER**|Počet chybných záznamů|  
-|**CTL_E_BADFILENAME**|Chybný název souboru|  
-|**CTL_E_TOOMANYFILES**|Příliš mnoho souborů|  
-|**CTL_E_DEVICEUNAVAILABLE**|Zařízení není k dispozici|  
-|**CTL_E_PERMISSIONDENIED**|Oprávnění byla odepřena.|  
-|**CTL_E_DISKNOTREADY**|Disk není připraven|  
-|**CTL_E_PATHFILEACCESSERROR**|Chyba přístupu k cestě nebo k souboru|  
-|**CTL_E_PATHNOTFOUND**|Cesta nebyla nalezena.|  
-|**CTL_E_INVALIDPATTERNSTRING**|Neplatný vzor řetězce|  
-|**CTL_E_INVALIDUSEOFNULL**|Neplatné použití hodnoty NULL|  
-|**CTL_E_INVALIDFILEFORMAT**|Neplatný formát souboru|  
-|**CTL_E_INVALIDPROPERTYVALUE**|Neplatná hodnota vlastnosti|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Neplatný index pole vlastností|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Nastavit není podporována v době běhu|  
-|**CTL_E_SETNOTSUPPORTED**|Nastavte nepodporuje (vlastnost jen pro čtení)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|Je vyžadován index pole vlastností.|  
-|**CTL_E_SETNOTPERMITTED**|Nastavení není povoleno.|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Metoda Get není podporována v době běhu|  
-|**CTL_E_GETNOTSUPPORTED**|Získat nepodporuje (jen pro zápis vlastnost)|  
-|**CTL_E_PROPERTYNOTFOUND**|Vlastnost nebyla nalezena.|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|Neplatný formát schránky|  
-|**CTL_E_INVALIDPICTURE**|Neplatný obrázek|  
-|**CTL_E_PRINTERERROR**|Chyba tiskárny|  
-|**CTL_E_CANTSAVEFILETOTEMP**|Soubor nelze uložit do dočasného|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|Hledaný text nebyl nalezen|  
-|**CTL_E_REPLACEMENTSTOOLONG**|Náhrady příliš dlouhý|  
+|CTL_E_ILLEGALFUNCTIONCALL|Neplatné volání funkce|  
+|CTL_E_OVERFLOW|Přetečení|  
+|CTL_E_OUTOFMEMORY|Nedostatek paměti|  
+|CTL_E_DIVISIONBYZERO|Dělení nulou|  
+|CTL_E_OUTOFSTRINGSPACE|Nedostatek místa na řetězec|  
+|CTL_E_OUTOFSTACKSPACE|Nedostatek místa v zásobníku|  
+|CTL_E_BADFILENAMEORNUMBER|Chybný název souboru nebo číslo|  
+|CTL_E_FILENOTFOUND|Soubor nebyl nalezen.|  
+|CTL_E_BADFILEMODE|Chybný režim souboru|  
+|CTL_E_FILEALREADYOPEN|Soubor již je otevřen.|  
+|CTL_E_DEVICEIOERROR|Vstupně-výstupní chyba zařízení|  
+|CTL_E_FILEALREADYEXISTS|Soubor již existuje.|  
+|CTL_E_BADRECORDLENGTH|Chybná délka záznamu|  
+|CTL_E_DISKFULL|Disk je plný|  
+|CTL_E_BADRECORDNUMBER|Počet chybných záznamů|  
+|CTL_E_BADFILENAME|Chybný název souboru|  
+|CTL_E_TOOMANYFILES|Příliš mnoho souborů|  
+|CTL_E_DEVICEUNAVAILABLE|Zařízení není k dispozici|  
+|CTL_E_PERMISSIONDENIED|Oprávnění byla odepřena.|  
+|CTL_E_DISKNOTREADY|Disk není připraven|  
+|CTL_E_PATHFILEACCESSERROR|Chyba přístupu k cestě nebo k souboru|  
+|CTL_E_PATHNOTFOUND|Cesta nebyla nalezena.|  
+|CTL_E_INVALIDPATTERNSTRING|Neplatný vzor řetězce|  
+|CTL_E_INVALIDUSEOFNULL|Neplatné použití hodnoty NULL|  
+|CTL_E_INVALIDFILEFORMAT|Neplatný formát souboru|  
+|CTL_E_INVALIDPROPERTYVALUE|Neplatná hodnota vlastnosti|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|Neplatný index pole vlastností|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Nastavit není podporována v době běhu|  
+|CTL_E_SETNOTSUPPORTED|Nastavte nepodporuje (vlastnost jen pro čtení)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|Je vyžadován index pole vlastností.|  
+|CTL_E_SETNOTPERMITTED|Nastavení není povoleno.|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Metoda Get není podporována v době běhu|  
+|CTL_E_GETNOTSUPPORTED|Získat nepodporuje (jen pro zápis vlastnost)|  
+|CTL_E_PROPERTYNOTFOUND|Vlastnost nebyla nalezena.|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|Neplatný formát schránky|  
+|CTL_E_INVALIDPICTURE|Neplatný obrázek|  
+|CTL_E_PRINTERERROR|Chyba tiskárny|  
+|CTL_E_CANTSAVEFILETOTEMP|Soubor nelze uložit do dočasného|  
+|CTL_E_SEARCHTEXTNOTFOUND|Hledaný text nebyl nalezen|  
+|CTL_E_REPLACEMENTSTOOLONG|Náhrady příliš dlouhý|  
   
- V případě potřeby použít **CUSTOM_CTL_SCODE** makro zadat kód vlastní chyby pro podmínku, která není jedním z standardní kódy. Parametr pro tuto makro musí být celé číslo mezi 1 000 a 32767 (včetně). Příklad:  
+ V případě potřeby použijte k definování kód vlastní chyby pro podmínku, která není jedním z standardní kódy CUSTOM_CTL_SCODE makro. Parametr pro tuto makro musí být celé číslo mezi 1 000 a 32767 (včetně). Příklad:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -176,7 +176,7 @@ Tento článek se zabývá Pokročilá témata související s vývojem – ovl�
   
      -nebo-  
   
--   Deklarujte místní proměnné a podtřídami jako položka dialogové okno. Vložení kódu, která se podobá následující (`CMyCtrl` je obálkovou třídu `IDC_MYCTRL1` je ID ovládacího prvku):  
+-   Deklarujte místní proměnné a podtřídami jako položka dialogové okno. Vložení kódu, která se podobá následující (`CMyCtrl` je obálkovou třídu IDC_MYCTRL1 je ID ovládacího prvku):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

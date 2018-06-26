@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b20d649bc89d9d66103f258ebdfdac767f431b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350030"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930045"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC – ovládací prvky ActiveX: Přidání vlastních metod
 Vlastní metody se liší od uložených metod v tom, že již nejsou implementované pomocí `COleControl`. Je třeba zadat implementace pro jednotlivé vlastní metody, které přidáte do vašeho ovládacího prvku.  
   
- Uživatelé ovládacího prvku ActiveX můžete kdykoli provádět akce specifické pro ovládací prvek volání vlastní metody. Položka mapy odesílání pro vlastní metody je ve formátu `DISP_FUNCTION`.  
+ Uživatelé ovládacího prvku ActiveX můžete kdykoli provádět akce specifické pro ovládací prvek volání vlastní metody. Položka mapy odesílání pro vlastní metody je ve formátu disp_function –.  
   
 ##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Přidání vlastní metody pomocí Průvodce přidáním metody  
  Následující postup předvádí, přidávání ptincircle – vlastní metoda do ovládacího prvku ActiveX kostru kódu. Ptincircle – Určuje, zda souřadnice předán do ovládacího prvku uvnitř nebo vně kruhu. Stejný postup lze také přidat další vlastní metody. Nahraďte název vlastní metody a jeho parametry pro název metody ptincircle – a parametry.  
@@ -45,15 +45,15 @@ Vlastní metody se liší od uložených metod v tom, že již nejsou implemento
   
      Otevře se Průvodce přidáním metody.  
   
-5.  V **název metody** zadejte `PtInCircle`.  
+5.  V **název metody** zadejte *ptincircle –*.  
   
-6.  V **interní název** pole, zadejte název metody – vnitřní funkce nebo použijte výchozí hodnotu (v tomto případě `PtInCircle`).  
+6.  V **interní název** pole, zadejte název metody – vnitřní funkce nebo použijte výchozí hodnotu (v tomto případě *ptincircle –*).  
   
 7.  V **návratového typu** pole, klikněte na tlačítko **VARIANT_BOOL** pro návratový typ metody.  
   
-8.  Pomocí **typ parametru** a **název parametru** ovládacích prvků, přidejte parametr s názvem `xCoord` (typ **OLE_XPOS_PIXELS**).  
+8.  Pomocí **typ parametru** a **název parametru** ovládacích prvků, přidejte parametr s názvem *xCoord* (typ *OLE_XPOS_PIXELS*).  
   
-9. Pomocí **typ parametru** a **název parametru** ovládacích prvků, přidejte parametr s názvem `yCoord` (typ **OLE_YPOS_PIXELS**).  
+9. Pomocí **typ parametru** a **název parametru** ovládacích prvků, přidejte parametr s názvem *yCoord* (typ *OLE_YPOS_PIXELS*).  
   
 10. Klikněte na tlačítko **Dokončit**.  
   
@@ -62,19 +62,19 @@ Vlastní metody se liší od uložených metod v tom, že již nejsou implemento
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- Tento kód deklaruje obslužnou rutinu odesílání metoda volána `PtInCircle`. Tuto funkci jde volat pomocí externí název ptincircle – ovládací prvek uživatel.  
+ Tento kód deklaruje obslužnou rutinu odesílání metoda volána `PtInCircle`. Tato funkce může být volána uživatelem ovládacího prvku pomocí externí název `PtInCircle`.  
   
  Následující řádek je přidán do ovládacího prvku. IDL soubor:  
   
  [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- Tento řádek přiřadí ptincircle – metoda specifické číslo ID, metoda pozici v seznamu metod a vlastností, Průvodce přidáním metody. Protože došlo k přidání vlastní metody Průvodce přidáním metody, položka pro něj byl automaticky přidat do projektu. IDL soubor.  
+ Přiřadí tento řádek `PtInCircle` metoda specifické číslo ID, metoda pozice v seznamu metod a vlastností, Průvodce přidáním metody. Protože došlo k přidání vlastní metody Průvodce přidáním metody, položka pro něj byl automaticky přidat do projektu. IDL soubor.  
   
  Kromě toho na následujícím řádku umístěný v implementaci (. Expediční mapy ovládacího prvku se přidá soubor CPP) třídy ovládacího prvku:  
   
  [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- `DISP_FUNCTION` Makro mapuje metodu ptincircle – funkce obslužná rutina ovládacího prvku, `PtInCircle`, deklaruje návratový typ, který má být **VARIANT_BOOL**a deklaruje dva parametry typu **vts_xpos_pixels –** a **VTS_YPOSPIXELS** mají být předány `PtInCircle`.  
+ Disp_function – makro mapuje metodu `PtInCircle` funkce obslužná rutina ovládacího prvku, `PtInCircle`, deklaruje návratový typ, který má být **VARIANT_BOOL**a deklaruje dva parametry typu **vts_xpos_pixels –** a **VTS_YPOSPIXELS** mají být předány `PtInCircle`.  
   
  Nakonec Průvodce přidáním metody přidá funkce se zakázaným inzerováním `CSampleCtrl::PtInCircle` k dolnímu okraji implementaci ovládacího prvku (. Soubor CPP). Pro `PtInCircle` fungují jako už jsme si říkali, je nejprve nutné upravit takto:  
   

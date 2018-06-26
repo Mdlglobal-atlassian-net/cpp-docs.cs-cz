@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346614"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928538"
 ---
 # <a name="document-classes"></a>Třídy dokumentů
 Objekty třídy dokumentu, vytvořené objekty šablony dokumentu, spravovat data aplikace. Pro vaše dokumenty budou odvození třídy z jedné z těchto tříd.  
@@ -29,7 +29,7 @@ Objekty třídy dokumentu, vytvořené objekty šablony dokumentu, spravovat dat
  Objekty třídy dokumentu pracovat s objekty zobrazení. Objekty zobrazení představují klientské oblasti časového období, zobrazí data dokumentu a povolit uživatelům interakci s ním. Dokumenty a zobrazení jsou vytvořené pomocí objektu šablony dokumentu.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- Základní třída pro dokumenty specifické pro aplikaci. Odvození dokumentové třídy nebo třídy z **CDocument**.  
+ Základní třída pro dokumenty specifické pro aplikaci. Odvození dokumentové třídy nebo třídy z `CDocument`.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  Použít pro implementaci složeného dokumentu, jakož i podpora základní kontejnerů. Slouží jako kontejner pro třídy odvozené od [CDocItem](../mfc/reference/cdocitem-class.md). Tato třída slouží jako základní třída pro kontejner dokumenty a je základní třídou pro `COleServerDoc`.  

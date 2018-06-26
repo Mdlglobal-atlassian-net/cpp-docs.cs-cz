@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349464"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929353"
 ---
 # <a name="message-handling-and-command-targets"></a>Zpracování zpráv a cíle příkazů
 Rozhraní příkazového odesílání `IOleCommandTarget` definuje jednoduchý a rozšiřitelné mechanismus pro dotazování a spustit příkazy. Tento mechanismus je jednodušší než Automation `IDispatch` protože závisí na standardní sadu příkazů; zcela příkazy zřídka mají argumenty, a je zahrnuta žádné informace o typu (bezpečnost typů dojde ke snížení pro argumenty příkazu také).  
@@ -33,7 +33,7 @@ Rozhraní příkazového odesílání `IOleCommandTarget` definuje jednoduchý a
   
  `IOleCommandTarget` zpracovává následující scénáře:  
   
--   Po aktivaci, pouze se obvykle zobrazují objektu panely nástrojů a panelů nástrojů objektu může mít tlačítka pro některé příkazy kontejneru jako objekt **tiskových**, **Náhled**,  **Uložit**, `New`, **zvětšení**a další. (Místní aktivace, které doporučujeme standardů, která objekty odebrat takové tlačítka od jejich panely nástrojů nebo v nejméně je zakázat. Tento návrh umožňuje tyto příkazy třeba povolit a ještě směruje na obslužnou rutinu správné). V současné době neexistuje žádný mechanismus pro objekt, který chcete odeslat tyto příkazy ke kontejneru.  
+-   Po aktivaci, pouze se obvykle zobrazují objektu panely nástrojů a panelů nástrojů objektu může mít tlačítka pro některé příkazy kontejneru jako objekt **tiskových**, **Náhled**,  **Uložit**, **nový**, **zvětšení**a další. (Místní aktivace, které doporučujeme standardů, která objekty odebrat takové tlačítka od jejich panely nástrojů nebo v nejméně je zakázat. Tento návrh umožňuje tyto příkazy třeba povolit a ještě směruje na obslužnou rutinu správné). V současné době neexistuje žádný mechanismus pro objekt, který chcete odeslat tyto příkazy ke kontejneru.  
   
 -   Pokud aktivní dokument je vložen kontejnerem aktivní dokument (jako je například modul vazby sady Office), kontejner muset odesílat příkazy takové **tiskových**, **vzhled stránky**, **vlastnosti**a další osoby mohly obsažené aktivní dokument.  
   
@@ -56,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- `QueryStatus` Metoda zde testuje, jestli konkrétní sadu příkazů, sada se označeny **GUID**, je podporována. Toto volání vyplní celé pole **OLECMD** hodnoty (struktury) s podporovanou seznam příkazů, jakož i vrací text popisující název příkazu nebo stavové informace. Pokud má volající chce vyvolat příkaz, příkaz můžete předat (a sada **GUID**) k **Exec** společně s možností a argumenty, získávání zpět návratovou hodnotu.  
+ `QueryStatus` Metoda zde testuje, jestli konkrétní sadu příkazů, sada se označeny **GUID**, je podporována. Toto volání vyplní celé pole **OLECMD** hodnoty (struktury) s podporovanou seznam příkazů, jakož i vrací text popisující název příkazu nebo stavové informace. Pokud má volající chce vyvolat příkaz, příkaz můžete předat (a sada **GUID**) k `Exec` společně s možností a argumenty, získávání zpět návratovou hodnotu.  
   
 ## <a name="see-also"></a>Viz také  
  [Kontejnery pro aktivní dokument](../mfc/active-document-containers.md)

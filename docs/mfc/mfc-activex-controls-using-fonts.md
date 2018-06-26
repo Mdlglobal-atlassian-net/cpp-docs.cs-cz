@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f5d1475412de736970d0ae36a39540121bfbc01
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355136"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930712"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli řízení Změna vzhledu textu změnou vlastnosti písma. Vlastnosti písma jsou implementovány jako objekty písma a může mít jednu ze dvou typů: uložených nebo vlastní. Uložené vlastnosti písma jsou vlastnosti preimplemented písma, které můžete přidat pomocí Průvodce přidáním vlastnosti. Vlastní vlastnosti písma nejsou preimplemented a vývojář ovládacího prvku určuje tato vlastnost chování a využití.  
@@ -137,11 +137,11 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
 8.  Klikněte na tlačítko **Dokončit**.  
   
- Průvodce přidáním vlastnosti vytvoří kódu k přidání `HeadingFont` vlastní vlastnost `CSampleCtrl` třídy a UKÁZKY. IDL soubor. Protože `HeadingFont` je vlastnost typu Get/Set upraví Průvodce přidáním vlastnosti `CSampleCtrl` třídy odesílání mapu, která bude zahrnovat `DISP_PROPERTY_EX_ID` [disp_property_ex –](../mfc/reference/dispatch-maps.md#disp_property_ex) makro položky:  
+ Průvodce přidáním vlastnosti vytvoří kódu k přidání `HeadingFont` vlastní vlastnost `CSampleCtrl` třídy a UKÁZKY. IDL soubor. Protože `HeadingFont` je vlastnost typu Get/Set upraví Průvodce přidáním vlastnosti `CSampleCtrl` mapy odeslání třídy a zahrnout DISP_PROPERTY_EX_ID[disp_property_ex –](../mfc/reference/dispatch-maps.md#disp_property_ex) makro položky:  
   
  [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- `DISP_PROPERTY_EX` Makro přidruží `HeadingFont` název vlastnosti k jeho odpovídajícím zprostředkovatelům `CSampleCtrl` třída získání a nastavení metody, `GetHeadingFont` a `SetHeadingFont`. Rovněž je zadán typ hodnoty vlastnosti; v takovém případě **VT_FONT**.  
+ Disp_property_ex – makro přidruží `HeadingFont` název vlastnosti k jeho odpovídajícím zprostředkovatelům `CSampleCtrl` třída získání a nastavení metody, `GetHeadingFont` a `SetHeadingFont`. Rovněž je zadán typ hodnoty vlastnosti; v tomto případě VT_FONT.  
   
  Průvodce přidáním vlastnosti také přidá deklaraci v souboru ovládacího prvku záhlaví (. H) pro `GetHeadingFont` a `SetHeadingFont` funkce a přidá jejich funkce šablon v řídicím souboru implementace (. CPP):  
   
@@ -160,11 +160,11 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
  V řídicím souboru implementace (. CPP), postupujte takto:  
   
--   Inicializace `m_fontHeading` v konstruktoru ovládacího prvku.  
+-   Inicializace *m_fontHeading* v konstruktoru ovládacího prvku.  
   
      [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   Deklarovat statickou **FONTDESC** struktura obsahující výchozí atributy písma.  
+-   Definice statických FONTDESC struktury obsahující výchozí atributy písma.  
   
      [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
@@ -192,27 +192,27 @@ Pokud vaše ovládací prvek ActiveX zobrazí text, můžete povolit uživateli 
   
      [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- Po implementovala vlastní vlastnost písma standardní vlastnost stránka písmo by měla být implementována, umožnit uživatelům ovládací prvek, chcete-li změnit písmo aktuální ovládacího prvku. Chcete-li přidat ID stránky vlastností pro standardní vlastnost stránka písmo, vložte následující řádek po `BEGIN_PROPPAGEIDS` makro:  
+ Po implementovala vlastní vlastnost písma standardní vlastnost stránka písmo by měla být implementována, umožnit uživatelům ovládací prvek, chcete-li změnit písmo aktuální ovládacího prvku. Přidat ID stránky vlastností pro standardní vlastnost stránka písmo, vložte následující řádek po begin_proppageids – makro:  
   
  [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- Musíte také zvýšit počet parametru vaší `BEGIN_PROPPAGEIDS` makro o jednu. To ukazuje následující řádek:  
+ Musíte také zvýšit počet parametru begin_proppageids – makro o jednu. To ukazuje následující řádek:  
   
  [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
  Poté, co byly provedeny změny, znovu sestavte celý projekt, který má obsahovat další funkce.  
   
 ###  <a name="_core_processing_font_notifications"></a> Zpracování oznámení písma  
- Ve většině případů je potřeba vědět, kdy byly upraveny vlastnosti objektu písma ovládacího prvku. Každý objekt písma je schopný poskytnout oznámení při změně voláním funkce člena **IFontNotification** rozhraní implementované `COleControl`.  
+ Ve většině případů je potřeba vědět, kdy byly upraveny vlastnosti objektu písma ovládacího prvku. Každý objekt písma je schopný poskytnout oznámení při změně voláním funkce člena `IFontNotification` rozhraní implementované `COleControl`.  
   
- Pokud ovládací prvek používá uložených vlastností písma, jsou zpracovávány jeho oznámení `OnFontChanged` členské funkce `COleControl`. Když přidáte vlastní písma vlastnosti, si můžete je použít stejnou implementaci. V příkladu v předchozí části se toho dosáhlo tím předávání &**m_xFontNotification** při inicializaci **m_fontHeading** členské proměnné.  
+ Pokud ovládací prvek používá uložených vlastností písma, jsou zpracovávány jeho oznámení `OnFontChanged` členské funkce `COleControl`. Když přidáte vlastní písma vlastnosti, si můžete je použít stejnou implementaci. V příkladu v předchozí části se toho dosáhlo tím předávání &*m_xFontNotification* při inicializaci *m_fontHeading* členské proměnné.  
   
  ![Implementace více rozhraní objektů písma](../mfc/media/vc373q1.gif "vc373q1")  
 Implementace více rozhraní objektů písma  
   
- Plné čáry na výše uvedeném obrázku zobrazit, že oba objekty písma používají stejné implementace **IFontNotification**. Pokud jste chtěli rozlišení, které písmo změnit to může způsobit problémy.  
+ Plné čáry na výše uvedeném obrázku zobrazit, že oba objekty písma používají stejné implementace `IFontNotification`. Pokud jste chtěli rozlišení, které písmo změnit to může způsobit problémy.  
   
- Jeden způsob k rozlišení mezi ovládacího prvku písma objekt oznámení je vytvoření samostatné provádění **IFontNotification** rozhraní pro každý objekt písma v ovládacím prvku. Tento postup umožňuje optimalizovat kreslení kód aktualizací pouze řetězec, nebo řetězce, které ho používají naposledy upravené. Následující části ukazují kroky nezbytné k implementaci rozhraní samostatné oznámení pro druhou vlastností písma. Druhou vlastností písma předpokládá se, že `HeadingFont` vlastnost, která byla přidána v předchozí části.  
+ Jeden způsob k rozlišení mezi ovládacího prvku písma objekt oznámení je vytvoření samostatné provádění `IFontNotification` rozhraní pro každý objekt písma v ovládacím prvku. Tento postup umožňuje optimalizovat kreslení kód aktualizací pouze řetězec, nebo řetězce, které ho používají naposledy upravené. Následující části ukazují kroky nezbytné k implementaci rozhraní samostatné oznámení pro druhou vlastností písma. Druhou vlastností písma předpokládá se, že `HeadingFont` vlastnost, která byla přidána v předchozí části.  
   
 ###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementace nové rozhraní oznámení písma  
  K rozlišení mezi oznámení o dvě nebo více písem, je nutné implementovat nové rozhraní oznámení pro každou písmo použité v ovládacím prvku. Následující části popisují, jak implementovat nové rozhraní oznámení písma změnou ovládacího prvku záhlaví a implementace soubory.  
@@ -225,11 +225,11 @@ Implementace více rozhraní objektů písma
  Tím se vytvoří implementace `IPropertyNotifySink` rozhraní s názvem `HeadingFontNotify`. Toto nové rozhraní obsahuje metodu s názvem `OnChanged`.  
   
 ### <a name="additions-to-the-implementation-file"></a>Přidání do souboru implementace  
- Kód, který inicializuje písmo nadpisu (v konstruktoru ovládací prvek), změňte `&m_xFontNotification` k `&m_xHeadingFontNotify`. Přidejte následující kód:  
+ Kód, který inicializuje písmo nadpisu (v konstruktoru ovládací prvek), změňte &*m_xFontNotification* k &*m_xHeadingFontNotify*. Přidejte následující kód:  
   
  [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- `AddRef` a `Release` metody v `IPropertyNotifySink` rozhraní udržování přehledu o počet odkazů pro objekt ovládacího prvku ActiveX. Pokud ovládací prvek získá přístup k rozhraní ukazatele, ovládací prvek volá `AddRef` se zvýší počet odkazů. Po dokončení ovládacího prvku s ukazatele volá `Release`, mnohem stejným způsobem **GlobalFree** může být například k bezplatným blok globální paměť. Pokud počet odkazů pro toto rozhraní přejde na hodnotu nula, může být uvolněno implementaci rozhraní. V tomto příkladu `QueryInterface` funkce vrátí ukazatel na `IPropertyNotifySink` rozhraní pro daný objekt. Tato funkce umožňuje ovládacího prvku ActiveX k dotazování objekt pro určení, co ji rozhraní podporuje.  
+ `AddRef` a `Release` metody v `IPropertyNotifySink` rozhraní udržování přehledu o počet odkazů pro objekt ovládacího prvku ActiveX. Pokud ovládací prvek získá přístup k rozhraní ukazatele, ovládací prvek volá `AddRef` se zvýší počet odkazů. Po dokončení ovládacího prvku s ukazatele volá `Release`, mnohem stejným způsobem `GlobalFree` může být například k bezplatným blok globální paměť. Pokud počet odkazů pro toto rozhraní přejde na hodnotu nula, může být uvolněno implementaci rozhraní. V tomto příkladu `QueryInterface` funkce vrátí ukazatel na `IPropertyNotifySink` rozhraní pro daný objekt. Tato funkce umožňuje ovládacího prvku ActiveX k dotazování objekt pro určení, co ji rozhraní podporuje.  
   
  Až tyto změny byly provedeny do projektu, projekt znovu sestavte a použít k testování rozhraní Test kontejneru. V tématu [testování vlastností a událostí pomocí Test kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup kontejner testů.  
   

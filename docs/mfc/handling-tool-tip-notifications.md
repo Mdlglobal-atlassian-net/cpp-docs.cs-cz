@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346373"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931811"
 ---
 # <a name="handling-tool-tip-notifications"></a>Zpracování oznámení popisů tlačítek
-Pokud zadáte `TBSTYLE_TOOLTIPS` styl panelu nástrojů vytváří a spravuje prvkem popis tlačítka. Popis tlačítka je malé místní okno, které obsahuje na řádku textu s popisem tlačítka panelu nástrojů. Popis tlačítka je skrytý, zobrazování, pouze když uživatel uloží kurzor na tlačítka panelu nástrojů a ponechá ji existuje pro přibližně polovinu druhý. Popis tlačítka se zobrazí téměř kurzor.  
+Pokud zadáte **TBSTYLE_TOOLTIPS** styl panelu nástrojů vytváří a spravuje prvkem popis tlačítka. Popis tlačítka je malé místní okno, které obsahuje na řádku textu s popisem tlačítka panelu nástrojů. Popis tlačítka je skrytý, zobrazování, pouze když uživatel uloží kurzor na tlačítka panelu nástrojů a ponechá ji existuje pro přibližně polovinu druhý. Popis tlačítka se zobrazí téměř kurzor.  
   
  Před zobrazením Popis tlačítka, **TTN_NEEDTEXT** oznámení je odeslána zpráva do okna vlastník panelu nástrojů načíst popisný text pro tlačítko. Pokud je okno vlastník panelu nástrojů `CFrameWnd` okno, nástroj tipy zobrazují bez žádné další úsilí, protože `CFrameWnd` má výchozí obslužnou rutinu pro **TTN_NEEDTEXT** oznámení. Pokud okno vlastník panelu nástrojů není odvozen od `CFrameWnd`, například dialogové okno pole nebo formátu zobrazení, musíte přidat položku do nadřazené okno mapy zpráv a poskytnout obslužná rutina oznámení v mapy zpráv. Položka k nadřazené okno mapy zpráv vypadá takto:  
   
@@ -39,7 +39,7 @@ Pokud zadáte `TBSTYLE_TOOLTIPS` styl panelu nástrojů vytváří a spravuje pr
   
  Kromě **TTN_NEEDTEXT** oznámení, prvkem popis tlačítka může odesílat následující oznámení do ovládacího prvku panel nástrojů:  
   
-|oznámení|Význam|  
+|Oznámení|Význam|  
 |------------------|-------------|  
 |**TTN_NEEDTEXTA**|Prvkem popis tlačítka vyžaduje text ASCII (pouze systém Windows 95)|  
 |**TTN_NEEDTEXTW**|Text v kódu UNICODE (pouze systém Windows NT) vyžaduje prvkem popis tlačítka|  

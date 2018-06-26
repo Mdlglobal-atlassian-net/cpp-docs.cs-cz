@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342170"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929715"
 ---
 # <a name="containers-client-item-states"></a>Kontejnery: Stavy klientských položek
 Tento článek vysvětluje různé stavy, které klientské položky projdou v celé jeho životnosti.  
   
- Klientské položky projdou několik stavy, jako je vytvořen, aktivovat, upravit a uložit. Každý čas položky změny stavu, volání framework [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) s `OLE_CHANGED_STATE` oznámení. Druhý parametr je hodnota z **COleClientItem::ItemState** výčtu. Může být jeden z následujících akcí:  
+ Klientské položky projdou několik stavy, jako je vytvořen, aktivovat, upravit a uložit. Každý čas položky změny stavu, volání framework [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) s **OLE_CHANGED_STATE** oznámení. Druhý parametr je hodnota z `COleClientItem::ItemState` výčtu. Může být jeden z následujících akcí:  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  V prázdné stavu, klient položka ještě není úplně položku. Pro něj byl přidělen paměti, ale ještě nebyla inicializovaná daty položky OLE. Toto je stav položku klienta je v vytvořenou pomocí volání **nové** , ale ještě neprošel druhý krok vytvoření typické dvoustupňové.  
   
- V druhém kroku, provádět prostřednictvím volání `COleClientItem::CreateFromFile` nebo jiný **CreateFrom *** xxxx* funkce, položka je zcela vytvořen. Byla přidružena data OLE (ze souboru nebo z jiného zdroje, jako např. schránku) `COleClientItem`-odvozené objektu. Položka se nyní v načíst stav.  
+ V druhém kroku, provádět prostřednictvím volání `COleClientItem::CreateFromFile` nebo jiný `CreateFrom` *xxxx* funkce, položka je zcela vytvořen. Byla přidružena data OLE (ze souboru nebo z jiného zdroje, jako např. schránku) `COleClientItem`-odvozené objektu. Položka se nyní v načíst stav.  
   
  Pokud položku má byl otevřen v okně serveru spíše než v místě v kontejneru dokument otevřít, je ve stavu otevřít (nebo plně otevřít). V tomto stavu je cross šrafování obvykle vykresluje přes reprezentaci položky v okně kontejneru indikující, že je položka jinde aktivní.  
   

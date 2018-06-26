@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357556"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930127"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC – ovládací prvky ActiveX: Přidání uložených vlastností
-Uložené vlastnosti liší od vlastní vlastnosti v tom, že už jsou implementované v třídě `COleControl`. `COleControl` obsahuje předdefinované členské funkce, které podporují společných vlastností pro ovládací prvek. Některé běžné vlastnosti zahrnují ovládacího prvku popisek a barvy popředí a na pozadí. Informace o dalších vlastností uložených v tématu [Stock vlastnosti nepodporuje Průvodce přidáním vlastnosti](#_core_stock_properties_supported_by_classwizard) dále v tomto článku. Odesílání položek mapy uložených vlastností vždy předchází **DISP_STOCKPROP**.  
+Uložené vlastnosti liší od vlastní vlastnosti v tom, že už jsou implementované v třídě `COleControl`. `COleControl` obsahuje předdefinované členské funkce, které podporují společných vlastností pro ovládací prvek. Některé běžné vlastnosti zahrnují ovládacího prvku popisek a barvy popředí a na pozadí. Informace o dalších vlastností uložených v tématu [Stock vlastnosti nepodporuje Průvodce přidáním vlastnosti](#_core_stock_properties_supported_by_classwizard) dále v tomto článku. Odesílání položek mapování pro, který vlastnosti vždy předchází DISP_STOCKPROP.  
   
  Tento článek popisuje postup přidání uložených vlastností (v tomto případě titulek) do ovládacího prvku ActiveX pomocí Průvodce přidáním vlastnosti a vysvětluje výsledné změny kódu. Témata zahrnují:  
   
@@ -81,16 +81,16 @@ Uložené vlastnosti liší od vlastní vlastnosti v tom, že už jsou implement
   
 |Vlastnost|Položku mapy odesílání|Jak získat přístup k hodnota|  
 |--------------|------------------------|-------------------------|  
-|**Vzhled**|**(DISP_STOCKPROP_APPEARANCE)**|Hodnota, které jsou dostupné jako **m_sAppearance**.|  
-|`BackColor`|**(DISP_STOCKPROP_BACKCOLOR)**|Hodnota přístupný pro volání `GetBackColor`.|  
-|`BorderStyle`|**(DISP_STOCKPROP_BORDERSTYLE)**|Hodnota, které jsou dostupné jako **m_sBorderStyle**.|  
-|**Popisek**|**(DISP_STOCKPROP_CAPTION)**|Hodnota přístupný pro volání `InternalGetText`.|  
-|**povoleno**|**(DISP_STOCKPROP_ENABLED)**|Hodnota, které jsou dostupné jako **m_bEnabled**.|  
-|**Písma**|**(DISP_STOCKPROP_FONT)**|Najdete v článku [MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md) pro použití.|  
-|`ForeColor`|**(DISP_STOCKPROP_FORECOLOR)**|Hodnota přístupný pro volání `GetForeColor`.|  
-|**hWnd**|**(DISP_STOCKPROP_HWND)**|Hodnota, které jsou dostupné jako `m_hWnd`.|  
-|**Text**|**(DISP_STOCKPROP_TEXT)**|Hodnota přístupný pro volání `InternalGetText`. Tato vlastnost je stejný jako **popisek**, s výjimkou názvu vlastnosti.|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Hodnota, které jsou dostupné jako m_lReadyState nebo `GetReadyState`|  
+|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Hodnota, které jsou dostupné jako `m_sAppearance`.|  
+|`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Hodnota přístupný pro volání `GetBackColor`.|  
+|`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Hodnota, které jsou dostupné jako `m_sBorderStyle`.|  
+|`Caption`|(DISP_STOCKPROP_CAPTION)|Hodnota přístupný pro volání `InternalGetText`.|  
+|`Enabled`|(DISP_STOCKPROP_ENABLED)|Hodnota, které jsou dostupné jako `m_bEnabled`.|  
+|`Font`|(DISP_STOCKPROP_FONT)|Najdete v článku [MFC – ovládací prvky ActiveX: použití písem](../mfc/mfc-activex-controls-using-fonts.md) pro použití.|  
+|`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Hodnota přístupný pro volání `GetForeColor`.|  
+|`hWnd`|(DISP_STOCKPROP_HWND)|Hodnota, které jsou dostupné jako `m_hWnd`.|  
+|`Text`|(DISP_STOCKPROP_TEXT)|Hodnota přístupný pro volání `InternalGetText`. Tato vlastnost je stejný jako `Caption`, s výjimkou názvu vlastnosti.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Hodnota, které jsou dostupné jako `m_lReadyState` nebo `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Uložené vlastnosti a oznámení  
  Většina uložených vlastností mít funkce oznámení, které je možné přepsat. Například, vždy, když `BackColor` vlastnost je změnit, `OnBackColorChanged` je volána funkce (členské funkce ovládacího prvku třídy). Výchozí implementace (v `COleControl`) volání `InvalidateControl`. Tato funkce přepsání, pokud chcete provést další akce v odpovědi na tuto situaci.  

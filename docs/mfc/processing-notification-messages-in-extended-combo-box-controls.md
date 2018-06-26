@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1e71502f818321dc8893f89f21993c25b032602
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 576735841748d0b99053d038f8d5f674d5692f00
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346773"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930186"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Zpracování zpráv s oznámením v ovládacích prvcích rozšířeného pole se seznamem
-Jak uživatelé pracují s pole rozšířeného pole se seznamem ovládacího prvku (`CComboBoxEx`) odešle zprávy s oznámením do nadřazeného okna, obvykle objekt zobrazení nebo dialogové okno. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Například pokud uživatel aktivuje rozevíracím seznamu nebo kliknutí v ovládacím prvku textového pole, **CBEN_BEGINEDIT** odeslání oznámení.  
+Jak uživatelé pracují s pole rozšířeného pole se seznamem ovládacího prvku (`CComboBoxEx`) odešle zprávy s oznámením do nadřazeného okna, obvykle objekt zobrazení nebo dialogové okno. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Například pokud uživatel aktivuje rozevíracím seznamu nebo klikne do ovládacího prvku textového pole, CBEN_BEGINEDIT odešle se oznámení.  
   
  Okno Vlastnosti použijte pro přidání obslužné rutiny oznamovacích do nadřazené třídy pro ty zprávy, které chcete implementovat.  
   
  Následující seznam popisuje různé oznámení zaslaná z ovládacího prvku rozšířené pole se seznamem pole.  
   
--   **CBEN_BEGINEDIT** odeslat v případě, že uživatel aktivuje rozevíracím seznamu nebo kliknutí v ovládacím prvku textového pole.  
+-   CBEN_BEGINEDIT odeslat v případě, že uživatel aktivuje rozevíracím seznamu nebo klikne v ovládacím prvku textového pole.  
   
--   **CBEN_DELETEITEM** odeslat v případě, že položka byla odstraněna.  
+-   CBEN_DELETEITEM posílají, když položka byla odstraněna.  
   
--   **CBEN_DRAGBEGIN** odeslány v případě, že uživatel zahájí přetahování bitové kopie položku zobrazenou v části ovládací prvek pro úpravy.  
+-   CBEN_DRAGBEGIN posílají, když uživatel zahájí přetahování bitové kopie položku zobrazenou v části ovládací prvek pro úpravy.  
   
--   **CBEN_ENDEDIT** odeslat v případě, že uživatel uzavřelo operace v rámci pole pro úpravy nebo má vybrané položky z ovládacího prvku rozevíracího seznamu.  
+-   CBEN_ENDEDIT posílají, když uživatel uzavřelo operace v rámci pole pro úpravy nebo má vybrané položky z ovládacího prvku rozevíracího seznamu.  
   
--   **CBEN_GETDISPINFO** posílá načtení zobrazení informací o položka zpětného volání.  
+-   CBEN_GETDISPINFO posílá načtení zobrazení informací o položka zpětného volání.  
   
--   **CBEN_INSERTITEM** odeslat v případě, že byla vložena nové položky v ovládacím prvku.  
+-   CBEN_INSERTITEM posílají, když byla vložena nové položky v ovládacím prvku.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CComboBoxEx](../mfc/using-ccomboboxex.md)   

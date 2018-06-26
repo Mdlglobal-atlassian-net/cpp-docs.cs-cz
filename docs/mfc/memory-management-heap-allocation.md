@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99df4a50f021e0981354a5d316606729bb824d94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352409"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928606"
 ---
 # <a name="memory-management-heap-allocation"></a>Správa paměti: Přidělení haldy
-Halda je vyhrazená pro potřeby přidělení paměti programu. Je oblast kromě kód programu a zásobníku. Typické programy C použít funkce `malloc` a **volné** a přidělit paměť haldy navrácení. Ladicí verze knihovny MFC poskytuje upravené verze předdefinované operátory jazyka C++ **nové** a **odstranit** a přidělit navrácení objekty v halda paměti.  
+Halda je vyhrazená pro potřeby přidělení paměti programu. Je oblast kromě kód programu a zásobníku. Typické programy C použít funkce **malloc –** a **volné** a přidělit paměť haldy navrácení. Ladicí verze knihovny MFC poskytuje upravené verze předdefinované operátory jazyka C++ **nové** a **odstranit** a přidělit navrácení objekty v halda paměti.  
   
- Při použití **nové** a **odstranit** místo `malloc` a **volné**, budete moci využít ladění vylepšení správy paměti knihovny tříd , což může být užitečné při zjišťování nevracení paměti. Při vytváření váš program s prodejní verze knihovny MFC, standardní verze **nové** a **odstranit** operátory poskytovat účinný způsob alokace a zrušit přidělení paměti (prodejní verze knihovny MFC neposkytuje upravené verze těchto operátorů).  
+ Při použití **nové** a **odstranit** místo **malloc –** a **volné**, budete moci využít výhod knihovny tříd Správa paměti ladění vylepšení, které mohou být užitečné při zjišťování nevracení paměti. Při vytváření váš program s prodejní verze knihovny MFC, standardní verze **nové** a **odstranit** operátory poskytovat účinný způsob alokace a zrušit přidělení paměti (prodejní verze knihovny MFC neposkytuje upravené verze těchto operátorů).  
   
  Všimněte si, že je celková velikost objekty přidělené v haldě omezena pouze dostupné virtuální paměti systému.  
   

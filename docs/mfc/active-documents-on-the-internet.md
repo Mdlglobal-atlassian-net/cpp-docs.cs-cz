@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334883"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930885"
 ---
 # <a name="active-documents-on-the-internet"></a>Aktivní dokumenty na Internetu
 Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktivní dokumenty může být vícestránkové a jsou zobrazeny v celého klienta. Proveďte vyjednávání tradiční nabídky a můžete upravit na místě a také v otevřeném okně v serverové aplikace. Místo zobrazení jako malé šrafované ohraničení obdélníku, jsou aktivní dokumenty úplné rámce a aktivní vždy na místě.  
@@ -55,7 +55,7 @@ Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktiv
 |-------------------------|---------------------------------|  
 |Používá složené soubory jako mechanismus jeho úložiště.|`IPersistStorage`.|  
 |Podporuje základní funkce vnoření aktivní dokumenty, včetně vytvoření ze souboru.|`IPersistFile`, `IOleObject`, a `IDataObject`.|  
-|Podporuje aktivace na místě.|`IOleInPlaceObject` a `IOleInPlaceActiveObject` (pomocí kontejneru `IOleInPlaceSite` a **IOleInPlaceFrame** rozhraní).|  
+|Podporuje aktivace na místě.|`IOleInPlaceObject` a `IOleInPlaceActiveObject` (pomocí kontejneru `IOleInPlaceSite` a `IOleInPlaceFrame` rozhraní).|  
 |Podporuje aktivní dokument rozšíření, které zahrnují tyto nové rozhraní. Některé rozhraní jsou volitelné.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, a `IPrint`.|  
   
  MFC poskytuje podporu pro rozšíření stávající podpora embedded serveru pro aktivní dokumenty.  
@@ -68,7 +68,7 @@ Aktivní dokumenty zadejte rozšíření pro tradiční vložené objekty. Aktiv
   
 |Typ třídy|Dříve odvozené od|Změna k odvozování z|  
 |----------------|---------------------------|---------------------------|  
-|Rámečkem na místě|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Rámečkem na místě|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Položka|`COleServerItem`|`CDocObjectServerItem`|  
   
  Budete také změnit, jak informace byly uloženy v registru a provést několik dalších změn. Pokud vaše aplikace právě obsahuje žádná podpora pro komponenty modelu COM, můžete přidat podporu serveru spuštěním Průvodce aplikace a integrace kódu pro konkrétní součást COM s vaší stávající aplikaci.  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9379fef6a1d676d6a3bc757ee51d5d27acd5f6f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345023"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930173"
 ---
 # <a name="initinstance-member-function"></a>InitInstance – členská funkce
 Operační systém Windows umožňuje spuštění více kopií, nebo "instance" stejné aplikace. `WinMain` volání [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) pokaždé, když se spustí novou instanci třídy aplikace.  
@@ -44,7 +44,7 @@ Operační systém Windows umožňuje spuštění více kopií, nebo "instance" 
  Můžete přidat vlastní kód inicializace nebo změnit kód napsaný v průvodci.  
   
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Když zavoláte [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vaší `InitInstance` přepsat, zadejte `COINIT_APARTMENTTHREADED` (místo `COINIT_MULTITHREADED`). Další informace najdete v tématu PRB: MFC aplikace přestane reagovat při inicializaci aplikace jako a více vláken typu Apartment (828643) v [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Když zavoláte [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vaší `InitInstance` přepsat, zadejte COINIT_APARTMENTTHREADED (nikoli COINIT_MULTITHREADED). Další informace najdete v tématu PRB: MFC aplikace přestane reagovat při inicializaci aplikace jako a více vláken typu Apartment (828643) v [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ## <a name="see-also"></a>Viz také  
  [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

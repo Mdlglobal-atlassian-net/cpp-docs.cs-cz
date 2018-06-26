@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347091"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929631"
 ---
 # <a name="menus-and-resources-ole"></a>Nabídky a prostředky (OLE)
 Tato skupina článků popisuje použití nabídky a prostředky v aplikacích MFC OLE dokumentu.  
@@ -54,10 +54,10 @@ Tato skupina článků popisuje použití nabídky a prostředky v aplikacích M
   
 |Název prostředku|Použití|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|Používat v aplikaci MDI, pokud žádný soubor je otevřený, nebo v aplikaci SDI bez ohledu na to otevřených souborů. Toto je standardní nabídky použité v aplikacích jiných než OLE.|  
-|**IDR_\<Projekt > typ**|V aplikaci MDI použít, pokud existují otevřené soubory. Použít, když aplikace běží samostatné. Toto je standardní nabídky použité v aplikacích jiných než OLE.|  
-|**IDR_\<Projekt > TYPE_SRVR_IP**|Používaný server nebo kontejneru při objekt je otevřený v místě.|  
-|**IDR_\<Projekt > TYPE_SRVR_EMB**|Aplikace serveru používá objekt se při otevření bez použití aktivace na místě.|  
+|IDR_MAINFRAME|Používat v aplikaci MDI, pokud žádný soubor je otevřený, nebo v aplikaci SDI bez ohledu na to otevřených souborů. Toto je standardní nabídky použité v aplikacích jiných než OLE.|  
+|IDR_\<Projekt > typ|V aplikaci MDI použít, pokud existují otevřené soubory. Použít, když aplikace běží samostatné. Toto je standardní nabídky použité v aplikacích jiných než OLE.|  
+|IDR_\<Projekt > TYPE_SRVR_IP|Používaný server nebo kontejneru při objekt je otevřený v místě.|  
+|IDR_\<Projekt > TYPE_SRVR_EMB|Aplikace serveru používá objekt se při otevření bez použití aktivace na místě.|  
   
  Každý z těchto názvy prostředků představuje nabídky a obvykle tabulky akcelerátorů. Podobně jako schéma je třeba použít v aplikacích MFC, které nejsou vytvořené pomocí Průvodce aplikací.  
   

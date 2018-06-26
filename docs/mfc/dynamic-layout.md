@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350846"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930349"
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
 MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velikost můžete vytvořit a můžete řídit způsob, jakým upraví rozložení pro změnu velikosti. Tlačítka v dolní části dialogového okna můžete například připojit k dolnímu okraji tak, aby zůstaly vždy v dolní části. Můžete také nastavit určité ovládací prvky, jako je například textová pole, rozevírací seznamy a editboxes rozbalte jako uživatel rozšíří dialogové okno.  
@@ -31,7 +31,7 @@ MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velik
   
  ![Dialogové okno po změnu velikosti. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- Dynamické rozložení můžete řídit zadáním podrobnosti pro každý ovládací prvek v editoru prostředků v prostředí IDE, nebo to můžete provést sestavují programově pomocí přístupu k objektu CMFCDynamicLayout pro konkrétní ovládací prvek a nastavení vlastností.  
+ Dynamické rozložení můžete řídit zadáním podrobnosti pro každý ovládací prvek v editoru prostředků v prostředí IDE, nebo to můžete provést sestavují programově pomocí přístupu k `CMFCDynamicLayout` objektu pro konkrétní ovládací prvek a nastavení vlastností.  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Dynamické rozložení vlastnosti nastavení v editoru prostředků  
  Dynamické rozložení chování pro dialogové okno můžete nastavit bez nutnosti psaní jakéhokoli kódu pomocí editoru prostředků.  
@@ -61,7 +61,7 @@ MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velik
   
 1.  Najít nebo vytvořit místo v kódu implementace třídy dialogového okna, ve které chcete zadat dynamické rozložení pro dialogové okno. Například můžete chtít například přidání metody `AdjustLayout` v dialogovém okně a volání z umístí kde je potřeba změnit rozložení. Může nejprve zavolat to z konstruktoru, nebo po provedení změn do dialogového okna.  
   
-2.  Pro dialogové okno, volání [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metoda třídy CWnd. GetDynamicLayout vrátí ukazatel na objekt CMFCDynamicLayout.  
+2.  Pro dialogové okno, volání [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metoda `CWnd` třídy. `GetDynamicLayout` vrátí ukazatel na `CMFCDynamicLayout` objektu.  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velik
   
 9. Při příštím uživatel změní velikost dialogového okna, [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) metoda je volána, která ve skutečnosti aplikuje nastavení.  
   
-10. Pokud chcete zakázat dynamické rozložení, zavolejte [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) s `FALSE` jako u `bEnabled` parametr.  
+10. Pokud chcete zakázat dynamické rozložení, zavolejte [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) s **FALSE** jako u *bEnabled* parametr.  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ MFC ve Visual Studiu 2015 dialogová okna, které uživatel může změnit velik
 
  ```  
   
-     S názvem prostředku, musí odkazovat dialog, který obsahuje informace o rozvržení ve formě AFX_DIALOG_LAYOUT položku v souboru prostředků, jako v následujícím příkladu:  
+     S názvem prostředku, musí odkazovat dialog, který obsahuje informace o rozvržení ve formě **AFX_DIALOG_LAYOUT** položku v souboru prostředků, jako v následujícím příkladu:  
   
  ''' * / / / * / / * / NEBO AFX_DIALOG_LAYOUT * / /  
  
