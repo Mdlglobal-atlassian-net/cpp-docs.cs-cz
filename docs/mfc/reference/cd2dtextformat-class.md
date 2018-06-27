@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352887"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955466"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat – třída
 Obálka pro IDWriteTextFormat.  
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  CString objekt, který obsahuje název rodiny písem.  
   
- `fontSize`  
+ *velikost písma*  
  Logická velikost písma v jednotkách vyhrazené IP adresy ("nezávislé na zařízení pixelů"). DIPequals 1/96 palce.  
   
- `fontWeight`  
+ *Tloušťka písma*  
  Hodnota, která určuje váha písmo pro text objektu.  
   
- `fontStyle`  
+ *fontStyle*  
  Hodnota, která určuje písmo pro text objektu.  
   
- `fontStretch`  
+ *fontStretch*  
  Hodnota, která určuje stretch písmo pro text objektu.  
   
- `strFontLocale`  
+ *strFontLocale*  
  CString objekt, který obsahuje název národního prostředí.  
   
- `pFontCollection`  
+ *pFontCollection*  
  Ukazatel na objekt kolekce písma. Pokud je hodnota NULL, označuje kolekce písem systému.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

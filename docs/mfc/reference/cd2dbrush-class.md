@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324e6411673a509bdf75954634ff9c6dffc5ce1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354423"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952051"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush – třída
 Obálka pro ID2D1Brush.  
@@ -117,7 +117,7 @@ void Attach(ID2D1Brush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
@@ -131,13 +131,13 @@ CD2DBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ukazatel na krytí a transformace štětce.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DBrush::Destroy  
@@ -185,7 +185,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `transform`  
+ *transformace*  
  Pokud tento příkaz vrátí, obsahuje aktuální transformace vykreslení cíle. Tento parametr se předává Neinicializovaný  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
@@ -230,7 +230,7 @@ void SetOpacity(FLOAT opacity);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `opacity`  
+ *Neprůhlednost.*  
  Hodnota mezi 0 a 1, která určuje krytí stopy. Tato hodnota je konstantní násobitel, který škáluje lineárně alfa sestavil stopy všechny pixelů. Předtím, než se násobí společně, jsou hodnoty krytí těsně v rozsahu od 0 do 1  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
@@ -241,7 +241,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `transform`  
+ *transformace*  
  Transformace použít k vykreslení cíli  
   
 ## <a name="see-also"></a>Viz také  

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355948"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957296"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable – třída
 Představuje proměnnou animace.  
@@ -141,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTransition`  
+ *pTransition*  
  Ukazatel na přechod k přidání.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -158,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pController`  
+ *pController*  
  Ukazatel na rodičovský ovladač animace.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel do scénáře.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Hodnota TRUE, pokud tato metoda by měla přidat přechody, které jsou závislé na klíčových snímků.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -178,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Určuje výchozí hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -192,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutodestroy`  
+ *bAutodestroy*  
  Určuje, zda tato metoda by měla odstranit objekty přechodu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -206,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pManager`  
+ *pManager*  
  Ukazatel na manager animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -225,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
-`pLibrary`  
+*pLibrary*  
  Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -244,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pController`  
+ *pController*  
  Ukazatel na rodičovský ovladač.  
   
- `bEnable`  
+ *bEnable*  
  TRUE – povolit událostí, FALSE, zakažte událostí.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -263,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pController`  
+ *pController*  
  Ukazatel na rodičovský ovladač.  
   
- `bEnable`  
+ *bEnable*  
  TRUE – povolit událostí, FALSE, zakažte událostí.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -307,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblValue`  
+ *dblValue*  
  Aktuální hodnota proměnné animace.  
   
- `nValue`  
+ *nHodnota*  
  Aktuální hodnota proměnné animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -378,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Určuje nová výchozí hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -392,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentObject`  
+ *pParentObject*  
  Ukazatel na animace objekt, který obsahuje tuto proměnnou.  
   
 ### <a name="remarks"></a>Poznámky  

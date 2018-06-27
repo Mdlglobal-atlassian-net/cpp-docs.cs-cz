@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382970"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951505"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003Mapování obslužných rutin Windows na objekty
 Tato poznámka se popisuje MFC rutiny, které podporují mapování Windows objekt popisovače C++ objektů.  
@@ -56,15 +56,15 @@ Tato poznámka se popisuje MFC rutiny, které podporují mapování Windows obje
   
 -   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Zadaný popisovač na některý z těchto objektů, můžete najít MFC objekt, který zabalí popisovač voláním statickou metodu `FromHandle`. Například uděleno popisovačem HWND názvem `hWnd`, vrátí ukazatel na následující řádek `CWnd` který zabalí `hWnd`:  
+ Zadaný popisovač na některý z těchto objektů, můžete najít MFC objekt, který zabalí popisovač voláním statickou metodu `FromHandle`. Například uděleno popisovačem HWND názvem *hWnd*, vrátí ukazatel na následující řádek `CWnd` který zabalí *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Pokud `hWnd` nemá objekt konkrétní obálku dočasného `CWnd` se vytvoří při zabalení `hWnd`. Díky tomu je možné získat platný objekt C++ od všech popisovač.  
+ Pokud *hWnd* nemá objekt konkrétní obálku dočasného `CWnd` se vytvoří při zabalení *hWnd*. Díky tomu je možné získat platný objekt C++ od všech popisovač.  
   
- Až budete mít objekt obálky, můžete načíst jeho popisovač z veřejné členské proměnné obálkové třídy. U `CWnd`, `m_hWnd` obsahuje HWND pro tento objekt.  
+ Až budete mít objekt obálky, můžete načíst jeho popisovač z veřejné členské proměnné obálkové třídy. U `CWnd`, *m_hWnd* obsahuje HWND pro tento objekt.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>Zpracovává se připojuje k objektům MFC  
  Vzhledem k nově vytvořený popisovač obálku objektu a popisovač na objekt Windows, můžete přidružit dva voláním `Attach` fungovat jako v následujícím příkladu:  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Díky tomu položku v trvalé mapy přidružení `myWnd` a `hWnd`. Volání metody `CWnd::FromHandle(hWnd)` nyní vrátí ukazatel na `myWnd`. Když `myWnd` je odstranit, destruktoru automaticky zničí `hWnd` voláním Windows [destroywindow –](http://msdn.microsoft.com/library/windows/desktop/ms632682) funkce. Pokud to není žádoucí, `hWnd` musí být odpojit od `myWnd` před `myWnd` zničena (obvykle při opuštění oboru, kdy `myWnd` byl definován). `Detach` Metoda tomu.  
+ Díky tomu položku v trvalé mapy přidružení *myWnd* a *hWnd*. Volání metody `CWnd::FromHandle(hWnd)` nyní vrátí ukazatel na *myWnd*. Když *myWnd* je odstranit, destruktoru automaticky zničí *hWnd* voláním Windows [destroywindow –](http://msdn.microsoft.com/library/windows/desktop/ms632682) funkce. Pokud to není žádoucí, *hWnd* musí být odpojit od *myWnd* před *myWnd* zničena (obvykle při opuštění oboru, kdy *myWnd*byl definován). `Detach` Metoda tomu.  
   
 ```  
 myWnd.Detach();

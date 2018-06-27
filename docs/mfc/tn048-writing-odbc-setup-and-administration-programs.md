@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7d89b6c6e05a5baf973abace2c64de3b52754f5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384261"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954553"
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC
 > [!NOTE]
@@ -41,9 +41,9 @@ ms.locfileid: "33384261"
   
 -   Alternativně můžete napsat vlastní instalační program, který bude instalaci správce ovladačů a ovladače.  
   
- Instalační program rozhraní API ODBC slouží k zápisu specifické pro aplikaci instalační programy. Funkce v instalačním programu rozhraní API jsou implementované pomocí Instalační služby rozhraní ODBC knihovny DLL – ODBCINST. Knihovny DLL na 16bitový systém Windows a ODBCCP32. Knihovny DLL na Win32. Aplikace může volat **Funkce SQLInstallODBC** v instalačním programu DLL, která bude instalaci správce ovladačů ODBC, ovladače ODBC a všechny požadované překladatelé. Zaznamenává pak nainstalované ovladače a překladatelé v ODBCINST. Soubor INI (nebo registru, NT). **Funkce SQLInstallODBC** vyžaduje úplnou cestu k rozhraní ODBC. Soubor INF, který obsahuje seznam instalaci ovladačů a popisuje soubory, které tvoří každý ovladač. Obsahuje taky podobné informace o správce ovladačů a překladatelé. ODBC. Souborů INF jsou obvykle poskytuje vývojářům ovladačů.  
+ Instalační program rozhraní API ODBC slouží k zápisu specifické pro aplikaci instalační programy. Funkce v instalačním programu rozhraní API jsou implementované pomocí Instalační služby rozhraní ODBC knihovny DLL – ODBCINST. Knihovny DLL na 16bitový systém Windows a ODBCCP32. Knihovny DLL na Win32. Aplikace může volat `SQLInstallODBC` v instalačním programu DLL, která bude instalaci správce ovladačů ODBC, ovladače ODBC a všechny požadované překladatelé. Zaznamenává pak nainstalované ovladače a překladatelé v ODBCINST. Soubor INI (nebo registru, NT). `SQLInstallODBC` vyžaduje úplnou cestu k rozhraní ODBC. Soubor INF, který obsahuje seznam instalaci ovladačů a popisuje soubory, které tvoří každý ovladač. Obsahuje taky podobné informace o správce ovladačů a překladatelé. ODBC. Souborů INF jsou obvykle poskytuje vývojářům ovladačů.  
   
- Program můžete také nainstalovat jednotlivých součástí rozhraní ODBC. Při instalaci správce ovladačů první program zavolá **SQLInstallDriverManager** v instalačním programu knihovnu DLL k získání cílový adresář pro správce ovladačů. Obvykle je to adresář, ve kterém jsou umístěny knihovny DLL systému Windows. Program pak používá informace v části [správce ovladačů ODBC] ODBC. Soubor INF pro kopírování správce ovladačů a související soubory z instalační disk do tohoto adresáře. Pro instalaci jednotlivých ovladačů, nejprve program zavolá **Funkce SQLInstallDriver** v instalačním programu DLL pro přidání do ODBCINST specifikace ovladačů. Soubor INI (nebo registru, NT). **Funkce SQLInstallDriver** vrátí ovladače cílový adresář – obvykle adresář, ve kterém jsou umístěny knihovny DLL systému Windows. Program pak používá informace v části ovladače ODBC. Soubor INF zkopírujte ovladač DLL a související soubory z instalační disk do tohoto adresáře.  
+ Program můžete také nainstalovat jednotlivých součástí rozhraní ODBC. Při instalaci správce ovladačů první program zavolá `SQLInstallDriverManager` v instalačním programu knihovnu DLL k získání cílový adresář pro správce ovladačů. Obvykle je to adresář, ve kterém jsou umístěny knihovny DLL systému Windows. Program pak používá informace v části [správce ovladačů ODBC] ODBC. Soubor INF pro kopírování správce ovladačů a související soubory z instalační disk do tohoto adresáře. Pro instalaci jednotlivých ovladačů, nejprve program zavolá `SQLInstallDriver` v instalačním programu DLL pro přidání do ODBCINST specifikace ovladačů. Soubor INI (nebo registru, NT). `SQLInstallDriver` Vrátí ovladače cílový adresář – obvykle adresář, ve kterém jsou umístěny knihovny DLL systému Windows. Program pak používá informace v části ovladače ODBC. Soubor INF zkopírujte ovladač DLL a související soubory z instalační disk do tohoto adresáře.  
   
  Další informace o rozhraní ODBC. INF, ODBCINST. INI a pomocí Instalační služby rozhraní API, najdete v části sada SDK rozhraní ODBC *referenční informace pro programátory,* kapitoly 19, instalace softwaru ODBC.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33384261"
   
  Program, který konfiguruje zdroje dat, volá funkce DLL Instalační služby. Instalační program DLL volá instalace knihovny DLL pro konfiguraci zdroje dat. Jeden nastavení knihovny DLL pro každý ovladač; To může být ovladač samotné knihovny DLL nebo samostatné knihovny DLL. Instalační program DLL vyzve uživatele k informace, které ovladač potřebuje pro připojení ke zdroji dat a výchozí překladač, pokud podporován. Pak zavolá instalační program, zaznamenejte tyto informace v ODBC knihovny DLL a rozhraní API systému Windows. Soubor INI (nebo registru).  
   
- Pokud chcete zobrazit dialogové okno, pomocí kterého můžete přidat, upravit a odstranit zdroje dat uživatele, program zavolá **SQLManageDataSources** v instalačním programu knihovnu DLL. Tato funkce je voláno, když instalační program knihovny DLL je volána z ovládacích panelů. Chcete-li přidat, upravit nebo odstranit zdroj dat, **SQLManageDataSources** volání **ConfigDSN** v nastavení knihovny DLL pro ovladače, které jsou přidružené k danému zdroji dat. Přímo přidat, upravit nebo odstranit data zdroje, program zavolá **SQLConfigDataSource** v instalačním programu knihovnu DLL. Program předá název zdroje dat a možnost, která určuje akci, kterou trvat. **SQLConfigDataSource** volání **ConfigDSN** v instalačním programu DLL a předává je argumenty z **SQLConfigDataSource**.  
+ Pokud chcete zobrazit dialogové okno, pomocí kterého můžete přidat, upravit a odstranit zdroje dat uživatele, program zavolá `SQLManageDataSources` v instalačním programu knihovnu DLL. Tato funkce je voláno, když instalační program knihovny DLL je volána z ovládacích panelů. Chcete-li přidat, upravit nebo odstranit zdroj dat, `SQLManageDataSources` volání `ConfigDSN` v nastavení knihovny DLL pro ovladače, které jsou přidružené k danému zdroji dat. Přímo přidat, upravit nebo odstranit data zdroje, program zavolá `SQLConfigDataSource` v instalačním programu knihovnu DLL. Program předá název zdroje dat a možnost, která určuje akci, kterou trvat. `SQLConfigDataSource` volání `ConfigDSN` v instalačním programu DLL a předává je argumenty z `SQLConfigDataSource`.  
   
  Další informace najdete v tématu ODBC SDK *referenční informace pro programátory,* kapitoly 23, instalační program referenční dokumentace funkcí knihovny DLL a kapitoly 24, odkaz na funkci knihovny DLL Instalační služby.  
   

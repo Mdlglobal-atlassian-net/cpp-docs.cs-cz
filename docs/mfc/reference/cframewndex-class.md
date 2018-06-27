@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e806d622e79fe57039b85dc77860b07b956ece1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71ec3bae44bd9365891c3a87fd33dfd3e1db2700
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377820"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957413"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx – třída
 Implementuje jeden dokument (SDI rozhraní) překryté nebo oken s rámečkem místní funkci systému Windows a poskytuje členy pro správu okna. Ji rozšiřuje [CFrameWnd](../../mfc/reference/cframewnd-class.md) třídy.  
@@ -337,10 +337,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ovládací prvek panelu řádku k registraci.  
   
- [v] `bTail`  
+ [v] *bTail*  
  `TRUE` Pokud chcete přidat panelu řádku ovládací prvek na konec seznamu; `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -354,7 +354,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hdwp`  
+ *hdwp*  
  Popisovač pro strukturu, která obsahuje pozice více oken. .  
   
 ### <a name="remarks"></a>Poznámky  
@@ -368,7 +368,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenuAlt`  
+ [v] *hMenuAlt*  
  Zpracování do alternativní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -384,17 +384,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na panelu řízení ukotvit.  
   
- [v] `nDockBarID`  
+ [v] *nDockBarID*  
  ID na straně okna rámce chcete ukotvit k.  
   
- [v] `lpRect`  
+ [v] *lprect –*  
  Ukazatel na konstantní Rect – struktura, která určuje pozici obrazovky a velikost okna.  
   
 ### <a name="remarks"></a>Poznámky  
- `nDockBarID` Parametr může mít jeden z následujících hodnot:  
+ *NDockBarID* parametr může mít jeden z následujících hodnot:  
   
 -   AFX_IDW_DOCKBAR_TOP  
   
@@ -414,17 +414,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokně objekt, který chcete ukotvit.  
   
- [v] `pLeftOf`  
- Ukazatel do podokna na levé straně, které chcete ukotvit podokně určeného `pBar`.  
+ [v] *pLeftOf*  
+ Ukazatel do podokna na levé straně, které chcete ukotvit podokně určeného *pBar*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud `pBar` ukotven úspěšně. `FALSE` jinak.  
+ `TRUE` Pokud *pBar* ukotven úspěšně. `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přebírá panelu nástrojů určeného `pBar` parametr a přepraviště ho na levé straně panelu nástrojů určeného `pLeftOf` parametr.  
+ Tato metoda přebírá panelu nástrojů určeného *pBar* parametr a přepraviště ho na levé straně panelu nástrojů určeného *pLeftOf* parametr.  
   
 ##  <a name="enableautohidepanes"></a>  CFrameWndEx::EnableAutoHidePanes  
  Umožňuje automaticky skrýt režim pro podokně při ukotven k zadané straně hlavního okna rámce.  
@@ -434,14 +434,14 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
  Určuje straně okna hlavního rámce, do které chcete ukotvit podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud panelu podokně úspěšně ukotven na straně rámce okna, která je zadána `dwDockStyle`, `FALSE` jinak.  
+ `TRUE` Pokud panelu podokně úspěšně ukotven na straně rámce okna, která je zadána *dwDockStyle*, `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- `dwDockStyle` Může mít jednu z následujících hodnot:  
+ *dwDockStyle* může mít jeden z následujících hodnot:  
   
 -   CBRS_ALIGN_TOP: umožňuje panelu řízení ukotvit do horní části klientské oblasti okně s rámečkem.  
   
@@ -459,14 +459,14 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
  Určuje na straně, kde panelu podokně ukotvené hlavního rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud panelu podokně můžete úspěšně ukotvení v zadané straně. `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- `dwDockStyle` Parametr může mít jeden z následujících hodnot:  
+ *DwDockStyle* parametr může mít jeden z následujících hodnot:  
   
 -   CBRS_ALIGN_TOP  
   
@@ -484,7 +484,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnableMenu`  
+ [v] *bEnableMenu*  
  `TRUE` Zobrazit hlavní nabídky v režimu celé obrazovky, `FALSE` jinak.  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
@@ -495,7 +495,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiFullScreenCmd`  
+ [v] *uiFullScreenCmd*  
  ID příkazu, který povolí nebo zakáže režim celé obrazovky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -513,7 +513,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Chcete-li povolit načítání ukotvení stavu `FALSE` zakázat načítání ukotvení stavu.  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
@@ -530,22 +530,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Chcete-li povolit automatické zpracování ovládacího panelu Místní nabídky; `FALSE` zakázat automatické zpracování ovládacího panelu Místní nabídky.  
   
- [v] `uiCustomizeCmd`  
+ [v] *uiCustomizeCmd*  
  ID příkazu **přizpůsobit** položku nabídky.  
   
- [v] `strCustomizeLabel`  
+ [v] *strCustomizeLabel*  
  Popisek, který se zobrazí u **přizpůsobit** položky nabídky  
   
- [v] `uiViewToolbarsMenuEntryID`  
+ [v] *uiViewToolbarsMenuEntryID*  
  ID položku nabídky panelu nástrojů, které se otevře místní nabídky v ovládacím panelu.  
   
- [v] `bContextMenuShowsToolbarsOnly`  
+ [v] *bContextMenuShowsToolbarsOnly*  
  Pokud `TRUE`, ovládacího panelu místní nabídce zobrazí seznam pouze panely nástrojů. Pokud `FALSE`, v nabídce zobrazí seznam panely nástrojů a ukotvení řádky.  
   
- [v] `bViewMenuShowsToolbarsOnly`  
+ [v] *bViewMenuShowsToolbarsOnly*  
  Pokud `TRUE`, v nabídce ovládací prvek panelu zobrazí seznam pouze panely nástrojů. Pokud `FALSE`, v nabídce zobrazí seznam panely nástrojů a ukotvení řádky.  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
@@ -599,7 +599,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -637,10 +637,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítka panelu nástrojů.  
   
- [v] `strTTText`  
+ [v] *strTTText*  
  Text popisku, který má být zobrazen pro tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -660,14 +660,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pControlBar`  
+ *pControlBar*  
  Ukazatel na ovládací prvek panelu vloženy do seznamu ovládací pruhy a registraci pomocí ukotvení správce.  
   
- `pTarget`  
+ *pTarget*  
  Ukazatel na ovládací prvek panelu před nebo po kterém se má vložit v podokně.  
   
- `bAfter`  
- `TRUE` Pokud chcete vložit `pControlBar` po `pTarget`, `FALSE` jinak.  
+ *bAfter*  
+ `TRUE` Pokud chcete vložit *pControlBar* po *pTarget*, `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud byl úspěšně vložit, zaregistrovaný, ovládacích pruhů `FALSE` jinak.  
@@ -709,20 +709,20 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Pozice bodu.  
   
- [out] `dwBarAlignment`  
+ [out] *dwBarAlignment*  
  Kde je zarovnán bodem. Najdete v tabulce v části poznámky pro možné hodnoty.  
   
- [out] `bOuterEdge`  
+ [out] *bOuterEdge*  
  `TRUE` Pokud se bod nachází blízko ohraničení rámečku; `FALSE` Pokud se bod nachází v oblasti klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud se bod nachází v zóně zarovnání; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- V následující tabulce jsou uvedeny možné hodnoty `dwBarAlignment` parametr.  
+ V následující tabulce jsou uvedeny možné hodnoty *dwBarAlignment* parametr.  
   
  `CBRS_ALIGN_TOP`  
  Zarovnán na začátek.  
@@ -760,16 +760,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIDResource`  
+ [v] *nIDResource*  
  ID prostředku, který slouží k načtení všech zdrojů rámce.  
   
- [v] `dwDefaultStyle`  
+ [v] *dwDefaultStyle*  
  Výchozí styl oken rámce.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel do nadřazeného okna rámečku.  
   
- [v] `pContext`  
+ [v] *pContext*  
  Ukazatel na [CCreateContext struktura](../../mfc/reference/ccreatecontext-structure.md) třídu, která používá rozhraní během vytváření aplikace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -787,25 +787,25 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nBorderCmd`  
+ [v] *nBorderCmd*  
  Příkaz vyjednávání ohraničení. Možné hodnoty v části poznámky.  
   
- [ve out] `lpRectBorder`  
+ [ve out] *lpRectBorder*  
  Dimenze ohraničení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud se musí přepočítat rozložení; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- V následující tabulce jsou uvedeny možné hodnoty `nBorderCmd` parametr.  
+ V následující tabulce jsou uvedeny možné hodnoty *nBorderCmd* parametr.  
   
- `borderGet`  
+ *borderGet*  
  Získáte volné místo klienta OLE.  
   
- `borderRequest`  
+ *borderRequest*  
  Žádost místa klienta OLE.  
   
- `borderSet`  
+ *borderSet*  
  Nastavení klienta místo OLE.  
   
 ##  <a name="onactivate"></a>  CFrameWndEx::OnActivate  
@@ -819,17 +819,17 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nState`  
+ [v] *nInformace*  
  Jestli rámečku je aktivní nebo neaktivní. Najdete v tabulce v části poznámky pro možné hodnoty.  
   
- [v] `pWndOther`  
+ [v] *pWndOther*  
  Ukazatel na další okno, který je přepínání vstup uživatele s aktuální.  
   
- [v] `bMinimized`  
+ [v] *bMinimized*  
  Minimalizované stav rámečku. `TRUE` Pokud je minimalizován rámečku; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- V následující tabulce jsou uvedeny možné hodnoty `nState` parametr.  
+ V následující tabulce jsou uvedeny možné hodnoty *nInformace* parametr.  
   
  `WA_ACTIVE`  
  Rámečku je vybrána jako jiné metody než kliknutí myší.  
@@ -850,10 +850,10 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bActive`  
+ [v] *bActive*  
  `TRUE` Pokud je vybrána aplikace; `FALSE` Pokud není vybrané aplikace.  
   
- [v] `dwThreadID`  
+ [v] *dwThreadID*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -868,10 +868,10 @@ afx_msg LRESULT OnChangeVisualManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wParam`  
+ [v] *wParam*  
  Tento parametr není používán.  
   
- [v] `lParam`  
+ [v] *lParam*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -897,7 +897,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je možné uzavřít ukotvení panelu. `FALSE` v opačném případě  
+ `TRUE` Pokud je možné uzavřít ukotvení panelu. `FALSE` V opačném případě  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace neprovede žádnou akci. Potlačí tuto metodu, pokud chcete zpracovávat skrytí ukotvení panelu.  
@@ -923,7 +923,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMenuPopup`  
+ *pMenuPopup*  
  Ukazatel na místní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -941,16 +941,16 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID příkazu.  
   
- [v] `nCode`  
+ [v] *nCode*  
  Příkaz kategorie zpráv.  
   
- [ve out] `pExtra`  
+ [ve out] *pExtra*  
  Ukazatel na objekt příkazu.  
   
- [ve out] `pHandlerInfo`  
+ [ve out] *pHandlerInfo*  
  Ukazatel na strukturu obslužná rutina příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -975,7 +975,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpCreateStruct`  
+ [v] *lpCreateStruct*  
  Ukazatel [createstruct – struktura](../../mfc/reference/createstruct-structure.md) pro nové rámečku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1004,13 +1004,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pMenuButton`  
+ [v] *pMenuButton*  
  Ukazatel na tlačítka s nabídkou vykreslované jejichž bitové kopie.  
   
- [v] `rectImage`  
+ [v] *rectImage*  
  Ukazatel na `Rect` struktura, která určuje pozici obrazovky a velikost bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1030,13 +1030,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pMenu`  
+ [v] *pMenu*  
  Ukazatel na položku nabídky.  
   
- [v] `rectLogo`  
+ [v] *rectLogo*  
  Odkaz na konstantu `CRect` struktura, která určuje obrazovky umístění a velikost loga nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1052,10 +1052,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wp`  
+ [v] *webové části*  
  Tento parametr není používán.  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1073,10 +1073,10 @@ LRESULT OnExitSizeMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wp`  
+ [v] *webové části*  
  Tento parametr není používán.  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1092,7 +1092,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpMMI`  
+ [v] *lpMMI*  
  Ukazatel na [minmaxinfo –](http://msdn.microsoft.com/library/windows/desktop/ms632605) struktura.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1107,10 +1107,10 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wParam`  
+ [v] *wParam*  
  Tento parametr není používán.  
   
- [v] `lParam`  
+ [v] *lParam*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1128,10 +1128,10 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFlags`  
- Určuje, zda uživatel stisknutí modifikační klávesy. Možné hodnoty najdete v tématu parametr `wParam` v [WM_LBUTTONDOWN oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ [v] *nFlags*  
+ Určuje, zda uživatel stisknutí modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONDOWN oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
   
- [v] `point`  
+ [v] *bodu*  
  Určuje x a y souřadnic ukazatele, relativně k levém horním rohu okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1146,10 +1146,10 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFlags`  
- Určuje, zda uživatel stisknutí modifikační klávesy. Možné hodnoty najdete v tématu parametr `wParam` v [WM_LBUTTONUP oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ [v] *nFlags*  
+ Určuje, zda uživatel stisknutí modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_LBUTTONUP oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
   
- [v] `point`  
+ [v] *bodu*  
  Určuje x a y souřadnic ukazatele, relativně k levém horním rohu okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1164,14 +1164,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítko panelu nástrojů.  
   
- [out] `pTI`  
+ [out] *pTI*  
  Ukazatel na strukturu nástroj informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud aplikace doplní `pTI` parametr. `FALSE` jinak.  
+ `TRUE` Pokud aplikace doplní *pTI* parametr. `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu, pokud chcete zadat popis informace o konkrétní položku.  
@@ -1187,13 +1187,13 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nChar`  
+ [v] *nChar*  
  Kód znaku stisknuté klávesy.  
   
- [v] `nFlags`  
+ [v] *nFlags*  
  Obsahuje `MF_POPUP` příznak, pokud se zobrazí nabídka podnabídky; obsahuje `MF_SYSMENU` příznak, pokud se zobrazí nabídka nabídky ovládací prvek.  
   
- [v] `pMenu`  
+ [v] *pMenu*  
  Ukazatel na nabídku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1220,10 +1220,10 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFlags`  
- Určuje, zda uživatel stisknutí modifikační klávesy. Možné hodnoty najdete v tématu parametr `wParam` v [WM_MOUSEMOVE oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ [v] *nFlags*  
+ Určuje, zda uživatel stisknutí modifikační klávesy. Možné hodnoty najdete v tématu parametr *wParam* v [WM_MOUSEMOVE oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
   
- [v] `point`  
+ [v] *bodu*  
  Určuje x a y souřadnic ukazatele relativně k levém horním rohu okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1236,7 +1236,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pFrame`  
+ [v] *pFrame*  
  Ukazatel [CPaneFrameWnd třída](../../mfc/reference/cpaneframewnd-class.md) podokně okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1252,7 +1252,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bActive`  
+ [v] *bActive*  
  `TRUE` Kreslení rámečku active; `FALSE` k vykreslení rámečku neaktivní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1270,10 +1270,10 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bCalcValidRects`  
+ [v] *bCalcValidRects*  
  `TRUE` Když aplikace musíte zadat platný klientské oblasti; v opačném `FALSE`.  
   
- [v] `lpncsp`  
+ [v] *lpncsp*  
  Ukazatel na `NCCALCSIZE_PARAMS` struktura, která obsahuje změny, dimenze rámce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1286,7 +1286,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Umístění ukazatele v souřadnice obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1304,10 +1304,10 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nHitTest`  
+ [v] *nHitTest*  
  Ukazatel dosáhl Výčtová hodnota. Seznam možných hodnot naleznete v části [WM_NCHITTEST oznámení](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
   
- [v] `point`  
+ [v] *bodu*  
  Umístění ukazatele v souřadnice obrazovky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1329,7 +1329,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku podokno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1347,10 +1347,10 @@ afx_msg LRESULT OnPostPreviewFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wParam`  
+ [v] *wParam*  
  Tento parametr není používán.  
   
- [v] `lParam`  
+ [v] *lParam*  
  `TRUE` Pokud rámečku je v režimu náhledu tisku `FALSE` Pokud je vypnut režim náhledu tisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1368,10 +1368,10 @@ afx_msg LRESULT OnPowerBroadcast(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wp`  
+ [v] *webové části*  
  Událost řízení spotřeby. Seznam možných hodnot naleznete v části [WM_POWERBROADCAST zpráva](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1391,13 +1391,13 @@ BOOL OnSetMenu(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wp`  
+ [v] *webové části*  
  Popisovač nové nabídky rámce okna.  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Popisovač nabídce nové okno.  
   
- [v] `hmenu`  
+ [v] *hmenu*  
  Popisovač nové nabídky rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1417,10 +1417,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bPreview`  
+ [v] *bPreview*  
  `TRUE` Chcete-li povolit náhledu tisku; `FALSE` zakázat náhledu tisku.  
   
- [v] `pState`  
+ [v] *pState*  
  Ukazatel na `CPrintPreviewState` rámce struktura stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1435,10 +1435,10 @@ afx_msg LRESULT OnSetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wParam`  
+ [v] *wParam*  
  Tento parametr není používán.  
   
- [v] `lParam`  
+ [v] *lParam*  
  Ukazatel na hodnotu text pro okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1456,10 +1456,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuPane`  
+ [v] *pMenuPane*  
  Ukazatel na rychlé přizpůsobení podokna.  
   
- [v] `uiToolbarID`  
+ [v] *uiToolbarID*  
  ID ovládacího prvku pro přizpůsobení panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1476,16 +1476,16 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  `TRUE` Pokud aplikace zobrazuje podokna; `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato metoda vždy návratový `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace ukazuje podokna Pokud `bShow` je `TRUE` a podoken jsou skryté. nebo když `bShow` je `FALSE` a jsou viditelné podokna.  
+ Výchozí implementace ukazuje podokna Pokud *bShow* je `TRUE` a podoken jsou skryté. nebo když *bShow* je `FALSE` a jsou viditelné podokna.  
   
- Výchozí implementace skryje podoken, pokud `bShow` je `TRUE` a jsou viditelné podokna nebo když `bShow` je `FALSE` a podoken jsou skryté.  
+ Výchozí implementace skryje podoken, pokud *bShow* je `TRUE` a jsou viditelné podokna nebo když *bShow* je `FALSE` a podoken jsou skryté.  
   
  Potlačí tuto metodu v odvozené třídě provést vlastní kód, pokud rozhraní zobrazí nebo skryje podokna.  
   
@@ -1497,7 +1497,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenu`  
+ [v] *pMenu*  
  Ukazatel na místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1517,13 +1517,13 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nType`  
- Typ Změna velikosti. Možné hodnoty najdete v tématu parametr `wParam` v [WM_SIZE oznámení](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ [v] *Noznámení*  
+ Typ Změna velikosti. Možné hodnoty najdete v tématu parametr *wParam* v [WM_SIZE oznámení](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
   
- [v] `cx`  
+ [v] *cx*  
  Nové Šířka rámečku v pixelech.  
   
- [v] `cy`  
+ [v] *cy*  
  Nové výška rámečku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1538,10 +1538,10 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `fwSide`  
- Okraj rámce, který je přesunout. V tématu parametr `wParam` v [WM_SIZING oznámení](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ [v] *fwSide*  
+ Okraj rámce, který je přesunout. V tématu parametr *wParam* v [WM_SIZING oznámení](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
   
- [ve out] `pRect`  
+ [ve out] *pRect*  
  Ukazatel na [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect –](../../mfc/reference/rect-structure1.md) struktura, která obsahuje souřadnice rámečku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1565,10 +1565,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuPopup`  
+ [v] *pMenuPopup*  
  Ukazatel na místní nabídky.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na panel úplné vypnutí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1589,10 +1589,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wp`  
+ [v] *webové části*  
  Tento parametr není používán.  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1610,10 +1610,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wp`  
+ [v] *webové části*  
  Tento parametr není používán.  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Ukazatel na hodnotu text pro záhlaví panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1634,7 +1634,7 @@ afx_msg LRESULT OnToolbarDelete(
  [v]  
  Tento parametr není používán.  
   
- [v] `lp`  
+ [v] *lineárního programování úloh*  
  Ukazatel na panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1650,7 +1650,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenuAlt`  
+ [v] *hMenuAlt*  
  Zpracování do alternativní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1663,7 +1663,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAddToTitle`  
+ [v] *bAddToTitle*  
  `TRUE` Chcete-li přidat název aktivní dokument na záhlaví okna pro rámce; v opačném případě `FALSE.`  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1676,7 +1676,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCmdUI`  
+ [v] *pCmdUI*  
  Ukazatel na objekt podokně uživatelské rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1689,7 +1689,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpwndpos`  
+ [v] *lpwndpos*  
  Ukazatel na [windowpos –](../../mfc/reference/windowpos-structure1.md) struktura, která obsahuje novou velikost a umístění.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1712,28 +1712,28 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Souřadnice obrazovky bodu ke kontrole.  
   
- [v] `nSensitivity`  
+ [v] *nSensitivity*  
  Při hledání bodu rozbalte ohraničující obdélník jednotlivých ovládacích pruhů toto množství.  
   
- [v] `bExactBar`  
- `TRUE` Ignorovat `nSensitivity` parametr, jinak hodnota `FALSE`.  
+ [v] *bExactBar*  
+ `TRUE` Ignorovat *nSensitivity* parametr, jinak hodnota `FALSE`.  
   
- [v] `pRTCBarType`  
+ [v] *pRTCBarType*  
  Není-li `NULL`, tato metoda vyhledá ovládací pruhy zadaného typu.  
   
- [out] `dwAlignment`  
+ [out] *dwAlignment*  
  V případě úspěchu se tento parametr obsahuje na straně panelu Ovládací prvek, který je nejblíže k Zadaný bod. Tento parametr, jinak hodnota není inicializován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na ovládací prvek panel, který obsahuje `point`; `NULL` Pokud se nenajde žádný ovládací prvek neexistuje.  
+ Ukazatel na ovládací prvek panel, který obsahuje *bodu*; `NULL` Pokud se nenajde žádný ovládací prvek neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vyhledá všechny ovládací pruhy v aplikaci pro `point`.  
+ Tato metoda vyhledá všechny ovládací pruhy v aplikaci pro *bodu*.  
   
- Použití `nSensitivity` zvětšete velikost oblasti hledání. Použití `pRTCBarType` omezit typy ovládací pruhy, které tato metoda vyhledá.  
+ Použití *nSensitivity* zvětšete velikost oblasti hledání. Použití *pRTCBarType* omezit typy ovládací pruhy, které tato metoda vyhledá.  
   
 ##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage  
  Předtím, než je odesláno, který zpracovává zprávy konkrétní okno.  
@@ -1743,7 +1743,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMsg`  
+ [v] *pMsg*  
  Ukazatel [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1759,7 +1759,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bNotify`  
+ [v] *bNotify*  
  Určuje, jestli oznámit položce OLE klienta o změně rozložení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1778,19 +1778,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na panelu řádku řízení k odebrání.  
   
- [v] `bDestroy`  
+ [v] *bDestroy*  
  `TRUE` Chcete-li odstranit ovládacích pruhů po odebrání; `FALSE` jinak.  
   
- [v] `bAdjustLayout`  
+ [v] *bAdjustLayout*  
  `TRUE` Chcete-li upravit ukotvení rozložení; `FALSE` jinak.  
   
- [v] `bAutoHide`  
+ [v] *bAutoHide*  
  `TRUE` Pokud je ovládací prvek panel v režimu automaticky skrýt; `FALSE` jinak.  
   
- [v] `pBarReplacement`  
+ [v] *pBarReplacement*  
  Ukazatel na podokně, který nahrazuje podokně odebrané.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1806,7 +1806,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `state`  
+ *Stav*  
  Ukotvení stavu. Tento parametr je ignorován.  
   
 ##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame  
@@ -1817,7 +1817,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na rámec okna náhledu tisku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1833,17 +1833,17 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `menu`  
+ [v] *nabídky*  
  A `CMenu` objekt, který chcete upravit.  
   
- [v] `uiViewUserToolbarCmdFirst`  
+ [v] *uiViewUserToolbarCmdFirst*  
  První příkaz definovaný uživatelem.  
   
- [v] `uiViewUserToolbarCmdLast`  
+ [v] *uiViewUserToolbarCmdLast*  
  Poslední příkaz definovaný uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework uloží příkazy uživatelem definované v seznamu. Použití `uiViewUserToolbarCmdFirst` a `uiViewUserToolbarCmdList` k určení indexy příkazy k vložení.  
+ Rozhraní framework uloží příkazy uživatelem definované v seznamu. Použití *uiViewUserToolbarCmdFirst* a *uiViewUserToolbarCmdList* k určení indexy příkazy k vložení.  
   
 ##  <a name="showfullscreen"></a>  CFrameWndEx::ShowFullScreen  
  Přepne hlavního rámce mezi celoobrazovkový režim a režim regulární.  
@@ -1864,16 +1864,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na panelu řízení umožňuje zobrazit nebo skrýt.  
   
- [v] `bShow`  
+ [v] *bShow*  
  Pokud `TRUE`, aplikace zobrazí panel ovládacího prvku. Aplikace, jinak hodnota skryje panel ovládacího prvku.  
   
- [v] `bDelay`  
+ [v] *bDelay*  
  Pokud `TRUE`, dokud volání framework zpoždění úpravou ukotvení rozložení [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Ukotvení rozložení, jinak hodnota přepočítejte okamžitě.  
   
- [v] `bActivate`  
+ [v] *bActivate*  
  Pokud `TRUE`, aktivujte panel ovládacího prvku. Jinak zobrazte panel ovládacího prvku v neaktivním stavu.  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
@@ -1895,10 +1895,10 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwData`  
- Data, která závisí na `nCmd` parametr. Seznam možných hodnot naleznete v části [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ *dwData*  
+ Data, která závisí na *nCmd* parametr. Seznam možných hodnot naleznete v části [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
- `nCmd`  
+ *nCmd*  
  Příkaz help. Seznam možných hodnot naleznete v části [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
 ### <a name="remarks"></a>Poznámky  

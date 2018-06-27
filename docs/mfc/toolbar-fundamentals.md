@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383971"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951634"
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 Tento článek popisuje základní implementace MFC, která umožňuje přidat výchozí panel nástrojů k vaší aplikaci výběrem možnosti v Průvodci aplikací. Obsahuje následující témata:  
@@ -56,11 +56,11 @@ Tento článek popisuje základní implementace MFC, která umožňuje přidat v
 -   Spravuje panelu nástrojů, včetně jeho schopnost ukotvení nebo float.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> Panelu nástrojů v kódu  
- Panel nástrojů je [ctoolbar –](../mfc/reference/ctoolbar-class.md) objekt deklarován jako datový člen vaší aplikace **CMainFrame** třídy. Jinými slovy je objekt nástrojů vložený objekt hlavního rámce okna. To znamená, že MFC vytvoří panelu nástrojů při vytvoří okně s rámečkem a zničí panelu nástrojů, když ho zničí rámce okna. Následující prohlášení třídu pro více aplikací rozhraní (MDI) dokumentu ukazuje datových členů pro embedded panelu nástrojů a embedded stavový řádek. Také ukazuje přepis metody `OnCreate` – členská funkce.  
+ Panel nástrojů je [ctoolbar –](../mfc/reference/ctoolbar-class.md) objekt deklarován jako datový člen vaší aplikace `CMainFrame` třídy. Jinými slovy je objekt nástrojů vložený objekt hlavního rámce okna. To znamená, že MFC vytvoří panelu nástrojů při vytvoří okně s rámečkem a zničí panelu nástrojů, když ho zničí rámce okna. Následující prohlášení třídu pro více aplikací rozhraní (MDI) dokumentu ukazuje datových členů pro embedded panelu nástrojů a embedded stavový řádek. Také ukazuje přepis metody `OnCreate` – členská funkce.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Dojde k vytvoření panelu nástrojů v **CMainFrame::OnCreate**. MFC volání [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po vytvoření okna pro rámečku, ale předtím, než se zobrazí. Výchozí hodnota `OnCreate` , vygeneruje průvodce aplikací nemá následující úlohy nástrojů:  
+ Dojde k vytvoření panelu nástrojů v `CMainFrame::OnCreate`. MFC volání [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po vytvoření okna pro rámečku, ale předtím, než se zobrazí. Výchozí hodnota `OnCreate` , vygeneruje průvodce aplikací nemá následující úlohy nástrojů:  
   
 1.  Volání `CToolBar` objektu [vytvořit](../mfc/reference/ctoolbar-class.md#create) – členská funkce pro vytvoření základní [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu.  
   
@@ -69,7 +69,7 @@ Tento článek popisuje základní implementace MFC, která umožňuje přidat v
 3.  Volání funkce povolit ukotvení, číslo s plovoucí čárkou a popisy. Podrobnosti o těchto volání, najdete v článku [stabilní umístění a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  Ukázka MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) zahrnuje ilustrace staré a nové panely nástrojů rozhraní MFC. Panely nástrojů, které používají **COldToolbar** vyžadují volání v kroku 2 `LoadBitmap` (místo `LoadToolBar`) a `SetButtons`. Nových panelů nástrojů vyžadují volání `LoadToolBar`.  
+>  Ukázka MFC Obecné [DOCKTOOL](../visual-cpp-samples.md) zahrnuje ilustrace staré a nové panely nástrojů rozhraní MFC. Panely nástrojů, které používají `COldToolbar` vyžadují volání v kroku 2 `LoadBitmap` (místo `LoadToolBar`) a `SetButtons`. Nových panelů nástrojů vyžadují volání `LoadToolBar`.  
   
  Ukotvení, číslo s plovoucí čárkou a nástroj tipy volání jsou volitelné. Můžete odebrat tyto řádky z `OnCreate` Pokud dáváte přednost. Výsledkem je zbývající pevné, nelze float nebo redock a nelze zobrazit popisy tlačítek panelu nástrojů.  
   

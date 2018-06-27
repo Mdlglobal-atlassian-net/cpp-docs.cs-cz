@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfbe14743ffff91a4a1749f0394a6deb8f0547a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83ae0a746e31c211517563a018e5b7da18e3350a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367435"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955593"
 ---
 # <a name="cdockstate-class"></a>CDockState – třída
 Serializovaný seznam `CObject` třídu, která načte, zrušeno jeho zavedení nebo vymaže stavu jednoho nebo více ukotvení ovládacího prvku panely v trvalé paměti (soubor).  
@@ -107,7 +107,7 @@ void LoadState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProfileName`  
+ *lpszProfileName*  
  Bodů na hodnotu null teminated řetězec, který určuje název oddílu v inicializační soubor nebo klíč v registru systému Windows se uloží informace o stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -128,7 +128,7 @@ void SaveState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProfileName`  
+ *lpszProfileName*  
  Bodů na hodnotu null teminated řetězec, který určuje název oddílu v inicializační soubor nebo klíč v registru systému Windows se uloží informace o stavu.  
   
 ### <a name="remarks"></a>Poznámky  

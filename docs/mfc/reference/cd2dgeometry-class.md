@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357071"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955099"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry – třída
 Obálka pro ID2D1Geometry.  
@@ -141,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -154,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -173,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `inputGeometry`  
+ *inputGeometry*  
  Geometrie kombinovat s touto instancí.  
   
- `combineMode`  
+ *combineMode*  
  Typ operaci combine k provedení.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Transformace, které chcete použít pro inputGeometry před kombinování.  
   
- `geometrySink`  
+ *geometrySink*  
  Výsledek operaci combine.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních sblížení geometrie. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -202,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `inputGeometry`  
+ *inputGeometry*  
  Geometrie k testování.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Transformace, které chcete použít pro inputGeometry.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních sblížení geometrie. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -225,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro tento geometrické obrazce před computing jeho oblasti.  
   
- `area`  
+ *oblasti*  
  Po návratu tato metoda obsahuje ukazatel na oblasti transformovaných, plochou verzi této geometrie. Musíte přidělit úložiště pro tento parametr.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -248,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro geometrie před výpočet jeho délka.  
   
- `length`  
+ *Délka*  
  Po návratu tato metoda obsahuje ukazatel na délku geometrického útvaru. Pro uzavřené geometrie délka obsahuje segment implicitní ukončovací. Musíte přidělit úložiště pro tento parametr.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -273,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `length`  
+ *Délka*  
  Vzdálenost podél geometrie bodu a tangens najít. Pokud tato vzdálenost menší pak 0, tato metoda vypočítá prvního bodu v geometrie. Pokud tato vzdálenost je větší než délka geometrie, tato metoda vypočítá posledního bodu v geometrie.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro geometrie před výpočtem Zadaný bod a tangens.  
   
- `point`  
+ *Bod*  
  Umístění v zadané vzdálenosti podél geometrie. Pokud geometrie je prázdný, obsahuje tento bod NaN jako jeho x a y hodnoty.  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  Po návratu tato metoda obsahuje ukazatel na tečný vektoru v zadané vzdálenosti podél geometrie. Pokud geometrie je prázdný, obsahuje tento vektoru NaN jako jeho x a y hodnoty. Musíte přidělit úložiště pro tento parametr.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -320,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Bod*  
  Bod, který chcete otestovat.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro geometrie před testování pro členství ve skupině.  
   
- `contains`  
+ *Obsahuje*  
  Po návratu tato metoda obsahuje hodnotu bool, který má hodnotu TRUE, pokud oblasti sestavil geometrie obsahuje čárky. jinak hodnota FALSE. Musíte přidělit úložiště pro tento parametr.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Číselná přesnost, pomocí kterého přesné geometrickou cesty a cesty průnik se počítá. Chybějící výplně menší než tolerance body jsou považovány za stále uvnitř. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -354,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *hranice*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -372,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strokeWidth`  
+ *strokeWidth*  
  Hodnota, o který rozšíří geometrie podle vytažení jeho outline.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu, která rozšiřuje geometrie.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformace použít geometrie po transformaci geometrie a po geometrie byla vytažený.  
   
- `bounds`  
+ *hranice*  
  Po návratu tato metoda obsahuje rozsah rozšířené geometrického útvaru. Musíte přidělit úložiště pro tento parametr.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních sblížení geometrie. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -428,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro obrys geometrie.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, ke kterému se připojí transformovaných obrys geometrie.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -452,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `simplificationOption`  
+ *simplificationOption*  
  Hodnota, která určuje, zda zjednodušené geometrie by měl obsahovat křivek.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro zjednodušené geometrie.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, ke kterému se připojí zjednodušené geometrie.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -481,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Bod*  
  Bod, který chcete otestovat členství ve skupině.  
   
- `strokeWidth`  
+ *strokeWidth*  
  Tloušťka tahu použít.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu použít.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro vytažené geometrie.  
   
- `contains`  
+ *Obsahuje*  
  Po návratu tato metoda obsahuje logickou hodnotu nastavit na hodnotu TRUE, pokud geometrie tahu obsahuje zadaný bod; jinak hodnota FALSE. Musíte přidělit úložiště pro tento parametr.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Číselná přesnost, pomocí kterého přesné geometrickou cesty a cesty průnik se počítá. Chybějící tahu menší než tolerance body jsou považovány za stále uvnitř. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -513,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Transformace, které chcete použít pro tento geometry, nebo hodnota NULL.  
   
- `tessellationSink`  
+ *tessellationSink*  
  ID2D1TessellationSink, ke kterému teselace sestavy se připojí.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -538,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strokeWidth`  
+ *strokeWidth*  
  Hodnota, o který rozšíří geometrie.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu aplikovat na geometry, nebo hodnotu NULL.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformace se použije k geometrie po rozšíření ho.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, ke kterému se připojí rozšířené geometrie.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
   
 ### <a name="return-value"></a>Návratová hodnota  

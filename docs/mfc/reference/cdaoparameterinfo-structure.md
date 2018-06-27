@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366236"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951595"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo – struktura
 `CDaoParameterInfo` Struktura obsahuje informace o parametru objekt definovaný pro přístup k objektům dat (DAO).  
@@ -39,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Objekt parametr jedinečné názvy. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
   
- `m_nType`  
- Hodnota, která označuje typ dat parametru objektu. Seznam možných hodnot najdete v tématu `m_nType` členem [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Další informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
+ *m_nType*  
+ Hodnota, která označuje typ dat parametru objektu. Seznam možných hodnot najdete v tématu *m_nType* členem [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Další informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
   
  *m_varValue*  
  Hodnota parametru, uložené v [COleVariant](../../mfc/reference/colevariant-class.md) objektu.  

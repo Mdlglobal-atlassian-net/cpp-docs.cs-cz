@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c7090940699894e6b868c246d90a9c85a8b2795
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378901"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956034"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset – třída
 Představuje sadu záznamy ze zdroje dat vybraná.  
@@ -215,7 +215,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::Close](#close)|Zavře sady záznamů.|  
 |[CDaoRecordset::Delete](#delete)|Odstraní záznam na aktuální záznam ze sady záznamů. Po odstranění se musí explicitně přejít k jinému záznamu.|  
 |[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Volá se pro výměnu dat (v obou směrech) mezi pole datových členů sady záznamů a odpovídající záznam na datovém zdroji. Implementuje rozhraní DAO záznam pole exchange (DFX).|  
-|[CDaoRecordset::Edit](#edit)|Připraví změny záznam na aktuální záznam. Volání **aktualizace** dokončete úpravu.|  
+|[CDaoRecordset::Edit](#edit)|Připraví změny záznam na aktuální záznam. Volání `Update` dokončete úpravu.|  
 |[CDaoRecordset::FillCache](#fillcache)|Všechny výplněmi nebo součástí místní mezipaměti pro objekt sady záznamů, která obsahuje data ze zdroje dat ODBC.|  
 |[CDaoRecordset::Find](#find)|Vyhledá první, další předchozí nebo poslední umístění konkrétní řetězec v dynamické sady záznamů, splňující zadaná kritéria a díky které záznam na aktuální záznam.|  
 |[CDaoRecordset::FindFirst](#findfirst)|Vyhledá první záznam v dynamické sady nebo sadu záznamů typu snímek splňující zadaná kritéria a díky které záznam na aktuální záznam.|  
@@ -275,7 +275,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::SetParamValue](#setparamvalue)|Nastaví aktuální hodnotu zadaný parametr uložené v základní objekt DAOParameter|  
 |[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Nastaví aktuální hodnotu zadaného parametru na hodnotu Null (nutnosti žádná hodnota).|  
 |[CDaoRecordset::SetPercentPosition](#setpercentposition)|Nastavuje pozici na aktuální záznam do umístění odpovídající procento celkový počet záznamů v sadě záznamů.|  
-|[CDaoRecordset::Update](#update)|Dokončení `AddNew` nebo **upravit** operaci uložením nových nebo upravených dat na datovém zdroji.|  
+|[CDaoRecordset::Update](#update)|Dokončení `AddNew` nebo `Edit` operace uložením nových nebo upravených dat na datovém zdroji.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -319,9 +319,9 @@ class CDaoRecordset : public CObject
 > [!NOTE]
 >  Databázové třídy DAO se liší od třídami databází MFC založené na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mít předponu "CDao". Můžete i nadále přístup ke zdrojům dat ODBC s třídy DAO; třídy DAO obecně nabízí vynikající funkcí, protože jsou specifické pro databázový stroj Microsoft Jet.  
   
- Můžete buď používat `CDaoRecordset` přímo nebo odvození třídy z `CDaoRecordset`. Pokud chcete používat třídu sady záznamů v obou případech, otevřete databázi a vytvořte objekt sady záznamů, předávání konstruktoru ukazatel na vaše `CDaoDatabase` objektu. Můžete také vytvořit `CDaoRecordset` objektu a nechat MFC vytvoření dočasného `CDaoDatabase` objektu za vás. Potom zavolejte sady záznamů [otevřete](#open) – členská funkce, určující, zda je objekt na sadu záznamů typu tabulky, sadě záznamů nebo sadu záznamů typu snímek. Volání metody **otevřete** vybere data z databáze a načte na první záznam.  
+ Můžete buď používat `CDaoRecordset` přímo nebo odvození třídy z `CDaoRecordset`. Pokud chcete používat třídu sady záznamů v obou případech, otevřete databázi a vytvořte objekt sady záznamů, předávání konstruktoru ukazatel na vaše `CDaoDatabase` objektu. Můžete také vytvořit `CDaoRecordset` objektu a nechat MFC vytvoření dočasného `CDaoDatabase` objektu za vás. Potom zavolejte sady záznamů [otevřete](#open) – členská funkce, určující, zda je objekt na sadu záznamů typu tabulky, sadě záznamů nebo sadu záznamů typu snímek. Volání metody `Open` vybere data z databáze a načte na první záznam.  
   
- Pomocí objektu členských funkcí a data členy procházet záznamů a pracovat s nimi. K dispozici operace závisí na tom, jestli je objekt sadu záznamů typu tabulky, sadě záznamů nebo sadu záznamů typu snímek a zda je možné aktualizovat nebo jen pro čtení – to závisí na možnosti databáze nebo připojení ODBC (Open Database) zdroj dat. K aktualizaci záznamů, které může mít změnily nebo přibyly od **otevřete** volání, volání objektu [Requery –](#requery) – členská funkce. Volání objektu **Zavřít** členské funkce a odstraňte objekt po dokončení s ním.  
+ Pomocí objektu členských funkcí a data členy procházet záznamů a pracovat s nimi. K dispozici operace závisí na tom, jestli je objekt sadu záznamů typu tabulky, sadě záznamů nebo sadu záznamů typu snímek a zda je možné aktualizovat nebo jen pro čtení – to závisí na možnosti databáze nebo připojení ODBC (Open Database) zdroj dat. K aktualizaci záznamů, které může mít změnily nebo přibyly od `Open` volání, volání objektu [Requery –](#requery) – členská funkce. Volání objektu `Close` členské funkce a odstraňte objekt po dokončení s ním.  
   
  `CDaoRecordset` používá rozhraní DAO výměna pole záznamu (DFX) k čtení a aktualizaci polí záznamů prostřednictvím bezpečnost typů C++ členy vaší `CDaoRecordset` nebo `CDaoRecordset`-odvozené třídy. Můžete taky implementovat dynamické vazby sloupců v databázi bez použití DFX mechanismus pomocí [GetFieldValue](#getfieldvalue) a [SetFieldValue](#setfieldvalue).  
   
@@ -343,10 +343,10 @@ virtual void AddNew();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pole záznamu jsou původně hodnotu Null. (V terminologii databáze Null znamená "nutnosti žádná hodnota" a není stejný jako **NULL** v jazyce C++.) Pokud chcete provést operaci, musí volat [aktualizace](#update) – členská funkce. **Aktualizace** uloží změny do zdroje dat.  
+ Pole záznamu jsou původně hodnotu Null. (V terminologii databáze Null znamená "nutnosti žádná hodnota" a není stejný jako **NULL** v jazyce C++.) Pokud chcete provést operaci, musí volat [aktualizace](#update) – členská funkce. `Update` Uloží změny do zdroje dat.  
   
 > [!CAUTION]
->  Pokud upravíte záznam a posuňte se k jinému záznamu bez volání **aktualizace**, změny budou ztraceny bez upozornění.  
+>  Pokud úpravy záznamů a posuňte se k jinému záznamu bez volání `Update`, změny budou ztraceny bez upozornění.  
   
  Pokud přidáte záznam pro dynamické sady záznamů voláním [AddNew](#addnew), záznamu je viditelná v sadě záznamů a zahrnuty v podkladové tabulce, kde bude viditelná pro žádného nové `CDaoRecordset` objekty.  
   
@@ -369,7 +369,7 @@ virtual void AddNew();
  Pokud není používán mechanismus dvojité ukládání do vyrovnávací paměti, změna pole nenastaví automaticky pole jako neaktualizovaní. V takovém případě bude nutné explicitně nastavit pole nekonzistence. Příznak obsažené v [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) ovládací prvky tato kontrola automatické pole.  
   
 > [!NOTE]
->  Pokud jsou záznamy dvojitou vyrovnávací pamětí (to znamená, automatické pole Kontrola povolena), volání `CancelUpdate` obnoví členské proměnné na hodnoty měly před `AddNew` nebo **upravit** byla volána.  
+>  Pokud jsou záznamy dvojitou vyrovnávací pamětí (to znamená, automatické pole Kontrola povolena), volání `CancelUpdate` obnoví členské proměnné na hodnoty měly před `AddNew` nebo `Edit` byla volána.  
   
  Související informace najdete v tématech "AddNew – metoda", "CancelUpdate metodu", "Změněno vlastnost" a "EditMode vlastnost" v nápovědě rozhraní DAO.  
   
@@ -409,29 +409,29 @@ virtual void CancelUpdate();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Například pokud aplikace zavolá **upravit** nebo `AddNew` – členská funkce a nebyla volána [aktualizace](#update), `CancelUpdate` zruší veškeré změny provedené po **upravit**nebo `AddNew` byla volána.  
+ Například pokud aplikace zavolá `Edit` nebo `AddNew` – členská funkce a nebyla volána [aktualizace](#update), `CancelUpdate` zruší veškeré změny provedené po `Edit` nebo `AddNew` byla volána.  
   
 > [!NOTE]
->  Pokud jsou záznamy dvojitou vyrovnávací pamětí (to znamená, automatické pole Kontrola povolena), volání `CancelUpdate` obnoví členské proměnné na hodnoty měly před `AddNew` nebo **upravit** byla volána.  
+>  Pokud jsou záznamy dvojitou vyrovnávací pamětí (to znamená, automatické pole Kontrola povolena), volání `CancelUpdate` obnoví členské proměnné na hodnoty měly před `AddNew` nebo `Edit` byla volána.  
   
- Pokud není žádná **upravit** nebo `AddNew` operace čeká na vyřízení, `CancelUpdate` způsobí, že MFC vyvolá výjimku. Volání [GetEditMode](#geteditmode) – členská funkce k určení, pokud existuje čekající operace, které se dají zrušit.  
+ Pokud není žádná `Edit` nebo `AddNew` operace čeká na vyřízení, `CancelUpdate` způsobí, že MFC vyvolá výjimku. Volání [GetEditMode](#geteditmode) – členská funkce k určení, pokud existuje čekající operace, které se dají zrušit.  
   
  Související informace naleznete v tématu "CancelUpdate způsob" v nápovědě rozhraní DAO.  
   
 ##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
- Volání této funkce člen k určení, zda sada záznamů umožňuje restartování jeho dotaz (Chcete-li obnovit svoje záznamy o) voláním **Requery –** – členská funkce.  
+ Volání této funkce člen k určení, zda sada záznamů umožňuje restartování jeho dotaz (Chcete-li obnovit svoje záznamy o) voláním `Requery` – členská funkce.  
   
 ```  
 BOOL CanRestart();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty **Requery** lze volat pro sady záznamů dotaz spustit znovu, jinak hodnota 0.  
+ Pokud nenulové hodnoty `Requery` lze volat pro sady záznamů dotaz spustit znovu, jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Sady záznamů typu tabulky nepodporují **Requery –**.  
+ Sady záznamů typu tabulky nepodporují `Requery`.  
   
- Pokud **Requery –** je nepodporuje volání [Zavřít](#close) pak [otevřete](#open) aktualizovat data. Můžete volat **Requery** aktualizovat objekt sady záznamů zdrojové parametr dotazu po došlo ke změně hodnoty parametru.  
+ Pokud `Requery` je nepodporuje volání [Zavřít](#close) pak [otevřete](#open) aktualizovat data. Můžete volat `Requery` aktualizovat objekt sady záznamů zdrojové parametr dotazu po došlo ke změně hodnoty parametru.  
   
  Související informace naleznete v tématu "Nabízet možnost restartování vlastnost" v nápovědě rozhraní DAO.  
   
@@ -474,7 +474,7 @@ BOOL CanUpdate() const;
  Nenulové hodnoty, pokud lze aktualizovat sadu záznamů (přidat, aktualizovat a odstranit záznamy), jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Sady záznamů může být jen pro čtení, pokud příslušný zdroj dat je jen pro čtení, nebo pokud jste zadali **dbReadOnly** pro `nOptions` když jste volali metodu [otevřete](#open) sady záznamů.  
+ Sady záznamů může být jen pro čtení, pokud příslušný zdroj dat je jen pro čtení, nebo pokud jste zadali **dbReadOnly** pro *nOptions* když jste volali metodu [otevřete](#open) sady záznamů.  
   
  Související informace najdete v tématech "AddNew – metoda", "Upravit způsob", "Odstranit metodu", "Metoda aktualizace" a "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
@@ -486,8 +486,8 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDatabase`  
- Obsahuje odkazy [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objekt nebo hodnota **NULL**. Není-li **NULL** a `CDaoDatabase` objektu **otevřete** – členská funkce nebyla zavolána pro připojení ke zdroji dat, sada záznamů pokusí otevřít pro vás během vlastní [otevřete ](#open) volání. Pokud předáte **NULL**, `CDaoDatabase` je objekt vytvořený a připojením pomocí informace o zdroji dat jste zadali, pokud je odvozená třídu sady záznamů z `CDaoRecordset`.  
+ *pDatabase*  
+ Obsahuje odkazy [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objekt nebo hodnota **NULL**. Není-li **NULL** a `CDaoDatabase` objektu `Open` – členská funkce nebyla zavolána pro připojení ke zdroji dat, sada záznamů pokusí otevřít pro vás během vlastní [otevřete](#open) volání. Pokud předáte **NULL**, `CDaoDatabase` je objekt vytvořený a připojením pomocí informace o zdroji dat jste zadali, pokud je odvozená třídu sady záznamů z `CDaoRecordset`.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete buď používat `CDaoRecordset` přímo nebo odvodit třídu specifické pro aplikaci z `CDaoRecordset`. ClassWizard můžete použít k odvození třídy sady záznamů.  
@@ -505,11 +505,11 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Protože **Zavřít** nezničí `CDaoRecordset` objekt, můžete opakovaně použít objekt voláním **otevřete** na stejném zdroji dat nebo jinému zdroji dat.  
+ Protože **Zavřít** nezničí `CDaoRecordset` objekt, můžete opakovaně použít objekt voláním `Open` na stejném zdroji dat nebo jinému zdroji dat.  
   
- Všechna nevyřízená [AddNew](#addnew) nebo [upravit](#edit) došlo ke zrušení příkazů a všechny čekající transakce jsou vráceny zpět. Pokud chcete zachovat čekající na vyřízení dodatky nebo úpravy, zavolejte [aktualizace](#update) před voláním **Zavřít** pro každou sadu záznamů.  
+ Všechna nevyřízená [AddNew](#addnew) nebo [upravit](#edit) došlo ke zrušení příkazů a všechny čekající transakce jsou vráceny zpět. Pokud chcete zachovat čekající na vyřízení dodatky nebo úpravy, zavolejte [aktualizace](#update) před voláním `Close` pro každou sadu záznamů.  
   
- Můžete volat **otevřete** znovu po volání **Zavřít**. Díky tomu můžete znovu použít objekt sady záznamů. Lepší alternativou je volat [Requery –](#requery), pokud je to možné.  
+ Můžete volat `Open` znovu po volání `Close`. Díky tomu můžete znovu použít objekt sady záznamů. Lepší alternativou je volat [Requery –](#requery), pokud je to možné.  
   
  Související informace naleznete v tématu "Zavřít způsob" v nápovědě rozhraní DAO.  
   
@@ -521,16 +521,16 @@ virtual void Delete();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po úspěšné odstranění sady záznamů pole datových členů nastaveny na hodnotu Null a musí explicitně volání jednoho z členské funkce navigační sady záznamů ( [přesunout](#move), [Seek](#seek), [ SetBookmark –](#setbookmark)a tak dále) opustit odstraněného záznamu. Při odstraňování záznamů z sady záznamů, musí existovat aktuální záznam v sadě záznamů před voláním **odstranit**, jinak hodnota MFC vyvolá výjimku.  
+ Po úspěšné odstranění sady záznamů pole datových členů nastaveny na hodnotu Null a musí explicitně volání jednoho z členské funkce navigační sady záznamů ( [přesunout](#move), [Seek](#seek), [ SetBookmark –](#setbookmark)a tak dále) opustit odstraněného záznamu. Při odstraňování záznamů z sady záznamů, musí existovat aktuální záznam v sadě záznamů před voláním `Delete`, jinak hodnota MFC vyvolá výjimku.  
   
- **Odstranit** odstraní záznam na aktuální záznam a je nepřístupný. I když se nedají upravit ani používat odstraněného záznamu, se dá pořád aktuální. Po přechodu na jiný záznam, ale nemůžete odstraněného záznamu aktuální znovu.  
+ `Delete` Odebere záznam na aktuální záznam a je nepřístupný. I když se nedají upravit ani používat odstraněného záznamu, se dá pořád aktuální. Po přechodu na jiný záznam, ale nemůžete odstraněného záznamu aktuální znovu.  
   
 > [!CAUTION]
->  Musí být aktualizovat sadu záznamů a musí být platný záznam v sadě záznamů při volání **odstranit**. Například, pokud jste odstranit záznam, ale není přejděte na nový záznam před voláním **odstranit** znovu **odstranit** vyvolá [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+>  Musí být aktualizovat sadu záznamů a musí být platný záznam v sadě záznamů při volání `Delete`. Například, pokud jste odstranit záznam, ale není přejděte na nový záznam před voláním `Delete` znovu `Delete` vyvolá [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
  Záznam můžete obnovit, pokud používáte transakce a zavoláte [CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) – členská funkce. Pokud základní tabulka je primární v cascade odstranit relaci, odstraňování záznam na aktuální záznam může také odstranit jeden nebo více záznamů v cizí tabulce. Další informace najdete v tématu v definici "kaskádové odstranění" v nápovědě rozhraní DAO.  
   
- Na rozdíl od `AddNew` a **upravit**, volání **odstranit** nenásleduje volání **aktualizace**.  
+ Na rozdíl od `AddNew` a `Edit`, volání `Delete` nenásleduje volání `Update`.  
   
  Související informace najdete v tématech "AddNew – metoda", "Upravit způsob", "Odstranit metodu", "Metoda aktualizace" a "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
@@ -542,7 +542,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFX`  
+ *soubor pFX*  
  Obsahuje odkazy `CDaoFieldExchange` objektu. Rozhraní bude již nastavili tento objekt určit kontext pro operaci exchange pole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -562,10 +562,10 @@ virtual void Edit();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Jakmile zavoláte **upravit** – členská funkce, změny provedené na aktuální záznam pole se zkopírují do vyrovnávací paměti kopírování. Když provedete požadované změny k záznamu, volání **aktualizace** uložte provedené změny. **Upravit** uloží hodnoty datových členů sady záznamů. Když zavoláte **upravit**, provést změny, potom volat **upravit** znovu, obnoví hodnoty záznamu se nacházely před první **upravit** volání.  
+ Jakmile zavoláte `Edit` – členská funkce, změny provedené na aktuální záznam pole se zkopírují do vyrovnávací paměti kopírování. Když provedete požadované změny k záznamu, volání `Update` uložte provedené změny. `Edit` uloží hodnoty datových členů sady záznamů. Když zavoláte `Edit`, provést změny, potom volat `Edit` znovu, obnoví hodnoty záznamu se nacházely před první `Edit` volání.  
   
 > [!CAUTION]
->  Pokud záznam upravit a poté proveďte všechny operace přesune na jiný záznam bez první volání **aktualizace**, změny budou ztraceny bez upozornění. Kromě toho pokud zavřete databáze nadřazeného nebo sady záznamů, budou zahozeny upravený záznam bez upozornění.  
+>  Pokud záznam upravit a poté proveďte všechny operace přesune na jiný záznam bez první volání `Update`, změny budou ztraceny bez upozornění. Kromě toho pokud zavřete databáze nadřazeného nebo sady záznamů, budou zahozeny upravený záznam bez upozornění.  
   
  V některých případech můžete chtít aktualizovat sloupec tím, že s hodnotou Null (obsahující žádná data). Chcete-li to provést, volejte `SetFieldNull` s parametrem **TRUE** označit pole hodnotu Null; to také způsobí, že sloupec aktualizovat. Pokud chcete, aby pole, které chcete být napsané ke zdroji dat i v případě, že její hodnota nezměnilo, volejte `SetFieldDirty` s parametrem **TRUE**. Tento postup funguje i v případě, že pole měl hodnotu Null.  
   
@@ -573,12 +573,12 @@ virtual void Edit();
   
  Pokud není používán mechanismus dvojité ukládání do vyrovnávací paměti, změna pole nenastaví automaticky pole jako neaktualizovaní. V takovém případě bude nutné explicitně nastavit pole nekonzistence. Příznak obsažené v [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) ovládací prvky tato kontrola automatické pole.  
   
- Když objekt sady záznamů pessimistically uzamčené v prostředí s více uživateli, zůstane uzamčen od okamžiku záznamu **upravit** se používá, dokud nebude aktualizaci. Pokud sada záznamů je ideálním případě uzamčené, záznamu je uzamčena a porovnání s předem upravený záznam těsně před je aktualizována v databázi. Pokud záznam došlo ke změně vzhledem k tomu, že jste volali metodu **upravit**, **aktualizace** operace selže a MFC vyvolá výjimku. Můžete změnit režim uzamčení s `SetLockingMode`.  
+ Když objekt sady záznamů pessimistically uzamčené v prostředí s více uživateli, zůstane uzamčen od okamžiku záznamu `Edit` se používá, dokud nebude aktualizaci. Pokud sada záznamů je ideálním případě uzamčené, záznamu je uzamčena a porovnání s předem upravený záznam těsně před je aktualizována v databázi. Pokud záznam došlo ke změně vzhledem k tomu, že jste volali metodu `Edit`, `Update` operace selže a MFC vyvolá výjimku. Můžete změnit režim uzamčení s `SetLockingMode`.  
   
 > [!NOTE]
 >  Optimistické zamykání se vždy na externí databáze formáty, například rozhraní ODBC a instalovat ISAM používá.  
   
- Záznam na aktuální záznam zůstane aktuální po zavolání metody **upravit**. K volání **upravit**, musí být aktuální záznam. Pokud není žádný aktuální záznam nebo sadu záznamů neodkazuje na Otevřít tabulku type nebo dynamické sady objekt sady záznamů, dojde k výjimce. Volání metody **upravit** způsobí, že `CDaoException` vyvolání za následujících podmínek:  
+ Záznam na aktuální záznam zůstane aktuální po zavolání metody `Edit`. K volání `Edit`, musí být aktuální záznam. Pokud není žádný aktuální záznam nebo sadu záznamů neodkazuje na Otevřít tabulku type nebo dynamické sady objekt sady záznamů, dojde k výjimce. Volání metody `Edit` způsobí, že `CDaoException` vyvolání za následujících podmínek:  
   
 -   Neexistuje aktuální záznam.  
   
@@ -590,7 +590,7 @@ virtual void Edit();
   
 -   Stránka, která obsahuje vaše záznam uzamknul jiný uživatel.  
   
- Pokud zdroj dat podporuje transakce, můžete provést **upravit** volání součástí transakce. Všimněte si, že by měly volat `CDaoWorkspace::BeginTrans` před voláním **upravit** a po otevření sady záznamů. Všimněte si, že volání `CDaoWorkspace::CommitTrans` nenahrazuje pro volání **aktualizace** k dokončení **upravit** operaci. Další informace o transakcích, najdete v části třídy `CDaoWorkspace`.  
+ Pokud zdroj dat podporuje transakce, můžete provést `Edit` volání součástí transakce. Všimněte si, že by měly volat `CDaoWorkspace::BeginTrans` před voláním `Edit` a po otevření sady záznamů. Všimněte si, že volání `CDaoWorkspace::CommitTrans` nenahrazuje pro volání `Update` k dokončení `Edit` operaci. Další informace o transakcích, najdete v části třídy `CDaoWorkspace`.  
   
  Související informace najdete v tématech "AddNew – metoda", "Upravit způsob", "Odstranit metodu", "Metoda aktualizace" a "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
@@ -604,10 +604,10 @@ void FillCache(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSize`  
+ *pSize*  
  Určuje počet řádků k vyplnění v mezipaměti. Pokud tento parametr vynecháte, hodnota je určen podle nastavení vlastnosti velikost paměti podkladového objektu DAO.  
   
- `pBookmark`  
+ *pBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) zadání záložky. Mezipaměť je vyplněno od záznam označený tuto záložku. Pokud tento parametr vynecháte, mezipaměti vyplněno od záznam označený vlastnost CacheStart základní objekt DAO.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -615,11 +615,11 @@ void FillCache(
   
  Místo čekání mezipaměti, aby byla vyplněna se záznamy podle jejich načtení, můžete explicitně vyplnit mezipaměti kdykoli voláním `FillCache` – členská funkce. To je rychlejší způsob k vyplnění mezipaměti, protože `FillCache` načte několik záznamů najednou namísto postupně. Například když se zobrazí každý screenful záznamů, můžete mít volání aplikace `FillCache` načíst další screenful záznamů.  
   
- Všechny databáze ODBC přístup s objekty sady záznamů může mít místní mezipaměti. Chcete-li vytvořit mezipaměť, otevřete objekt sady záznamů z vzdálený zdroj dat a pak zavolají `SetCacheSize` a `SetCacheStart` členské funkce sady záznamů. Pokud `lSize` a *lBookmark* vytvoření rozsah, který je mimo rozsah určený částečně nebo zcela `SetCacheSize` a `SetCacheStart`, část sada záznamů mimo tento rozsah je ignorován a není načtena do mezipaměti. Pokud `FillCache` požadavky více záznamů, než zůstat v vzdálený zdroj dat, jsou vyvolány jenom zbývající záznamy a nedojde k výjimce.  
+ Všechny databáze ODBC přístup s objekty sady záznamů může mít místní mezipaměti. Chcete-li vytvořit mezipaměť, otevřete objekt sady záznamů z vzdálený zdroj dat a pak zavolají `SetCacheSize` a `SetCacheStart` členské funkce sady záznamů. Pokud *lSize* a *lBookmark* vytvoření rozsah, který je mimo rozsah určený částečně nebo zcela `SetCacheSize` a `SetCacheStart`, část sada záznamů mimo tento rozsah je ignorován a není načíst do mezipaměti. Pokud `FillCache` požadavky více záznamů, než zůstat v vzdálený zdroj dat, jsou vyvolány jenom zbývající záznamy a nedojde k výjimce.  
   
  Zaznamenává načítat z mezipaměti nereflektuje změny provedené současně ke zdrojovým datům jiných uživatelů.  
   
- `FillCache` načte pouze záznamy ještě není v mezipaměti. Chcete-li vynutit aktualizaci všech dat uložených v mezipaměti, volejte `SetCacheSize` – členská funkce s `lSize` parametr rovná 0, volání `SetCacheSize` znovu s `lSize` parametr rovná velikosti mezipaměti jste původně požádal a pak zavolají `FillCache`.  
+ `FillCache` načte pouze záznamy ještě není v mezipaměti. Chcete-li vynutit aktualizaci všech dat uložených v mezipaměti, volejte `SetCacheSize` – členská funkce s *lSize* parametr rovná 0, volání `SetCacheSize` znovu s *lSize* parametr rovná velikosti mezipaměti původně požádal a pak zavolají `FillCache`.  
   
  Související informace naleznete v tématu "FillCache způsob" v nápovědě rozhraní DAO.  
   
@@ -644,7 +644,7 @@ virtual BOOL Find(
   
 - **AFX_DAO_LAST** najít poslední umístění odpovídající řetězec.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Řetězcového výrazu (jako **kde** klauzule v příkazu SQL bez slova **kde**) používaná k nalezení záznamu. Příklad:  
   
  [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
@@ -653,12 +653,12 @@ virtual BOOL Find(
  Nenulové hodnoty, pokud najde odpovídající záznamy, jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete najít na první, další, předchozí nebo poslední instance řetězce. **Najít** je virtuální funkce, takže můžete přepsat a přidat vlastní implementaci. `FindFirst`, `FindLast`, `FindNext`, A `FindPrev` členské funkce volání **najít** – členská funkce, abyste mohli používat **najít** můžete řídit chování všech operací najít .  
+ Můžete najít na první, další, předchozí nebo poslední instance řetězce. `Find` je virtuální funkce, takže můžete přepsat a přidat vlastní implementaci. `FindFirst`, `FindLast`, `FindNext`, A `FindPrev` členské funkce volání `Find` – členská funkce, abyste mohli používat `Find` můžete řídit chování všech operací najít.  
   
  Chcete-li vyhledat záznam v sadě záznamů typu tabulky, volejte [Seek](#seek) – členská funkce.  
   
 > [!TIP]
->  Menší sadu záznamů, budete mít, účinnější **najít** bude. Obecně a hlavně s dat ODBC je lepší vytvořit nový dotaz, který načte právě požadované záznamy.  
+>  Menší sadu záznamů, budete mít, účinnější `Find` bude. Obecně a hlavně s dat ODBC je lepší vytvořit nový dotaz, který načte právě požadované záznamy.  
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
@@ -670,7 +670,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFilter`  
+ *lpszFilter*  
  Řetězcového výrazu (jako **kde** klauzule v příkazu SQL bez slova **kde**) používaná k nalezení záznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -684,31 +684,31 @@ BOOL FindFirst(LPCTSTR lpszFilter);
  Pokud záznam odpovídající kritériím není nachází, je aktuální záznam ukazatele neurčená, a `FindFirst` vrátí hodnotu 0. Pokud sada záznamů obsahuje více než jeden záznam, který splňuje kritéria, `FindFirst` vyhledá první výskyt `FindNext` vyhledá nejbližším výskytu a tak dále.  
   
 > [!CAUTION]
->  Pokud chcete upravit záznam na aktuální záznam, je nutné uložit změny voláním **aktualizace** – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
+>  Pokud chcete upravit záznam na aktuální záznam, je nutné uložit změny voláním `Update` – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
   
- **Najít** členské funkce vyhledávání z umístění a ve směru uvedené v následující tabulce:  
+ `Find` Členské funkce vyhledávání z umístění a ve směru uvedené v následující tabulce:  
   
 |Najít operací|Začátek|Směr vyhledávání|  
 |---------------------|-----------|----------------------|  
 |`FindFirst`|Začátek sady záznamů|Konec sady záznamů|  
 |`FindLast`|Konec sady záznamů|Začátek sady záznamů|  
 |`FindNext`|Aktuální záznam.|Konec sady záznamů|  
-|**FindPrevious**|Aktuální záznam.|Začátek sady záznamů|  
+|`FindPrevious`|Aktuální záznam.|Začátek sady záznamů|  
   
 > [!NOTE]
 >  Při volání `FindLast`, databázový stroj Microsoft Jet plně naplní sady záznamů před zahájením vyhledávání, pokud to ještě neudělali. První hledání může trvat déle než následné hledání.  
   
- Pomocí některé z operací najít není stejný jako volání **MoveFirst** nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
+ Pomocí některé z operací najít není stejný jako volání `MoveFirst` nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
   
  Mějte paměti následující při použití operací hledání:  
   
--   Pokud **najít** vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
+-   Pokud `Find` vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
   
 -   Operace hledání nelze použít s posouvání dopředná sada záznamů typu snímek.  
   
 -   Používejte formát data USA (měsíc den roku) při vyhledávání pro pole obsahující kalendářní data, i v případě, že nepoužíváte verzi USA databázového stroje Microsoft Jet; v opačném odpovídající záznamy asi se nenašla.  
   
--   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo **CDaoQuerydef** objekty, které načíst konkrétní indexované záznamy.  
+-   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo `CDaoQuerydef` objekty, které načíst konkrétních indexované záznamů.  
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
@@ -720,7 +720,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFilter`  
+ *lpszFilter*  
  Řetězcového výrazu (jako **kde** klauzule v příkazu SQL bez slova **kde**) používaná k nalezení záznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -734,19 +734,19 @@ BOOL FindLast(LPCTSTR lpszFilter);
  Pokud záznam odpovídající kritériím není nachází, je aktuální záznam ukazatele neurčená, a `FindLast` vrátí hodnotu 0. Pokud sada záznamů obsahuje více než jeden záznam, který splňuje kritéria, `FindFirst` vyhledá první výskyt `FindNext` vyhledá další výskyt po první výskyt a tak dále.  
   
 > [!CAUTION]
->  Pokud chcete upravit záznam na aktuální záznam, ujistěte se, uložit změny voláním **aktualizace** – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
+>  Pokud chcete upravit záznam na aktuální záznam, ujistěte se, uložit změny voláním `Update` – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
   
- Pomocí některé z operací najít není stejný jako volání **MoveFirst** nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
+ Pomocí některé z operací najít není stejný jako volání `MoveFirst` nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
   
  Mějte paměti následující při použití operací hledání:  
   
--   Pokud **najít** vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
+-   Pokud `Find` vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
   
 -   Operace hledání nelze použít s posouvání dopředná sada záznamů typu snímek.  
   
 -   Používejte formát data USA (měsíc den roku) při vyhledávání pro pole obsahující kalendářní data, i v případě, že nepoužíváte verzi USA databázového stroje Microsoft Jet; v opačném odpovídající záznamy asi se nenašla.  
   
--   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo **CDaoQuerydef** objekty, které načíst konkrétní indexované záznamy.  
+-   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo `CDaoQuerydef` objekty, které načíst konkrétních indexované záznamů.  
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
@@ -758,7 +758,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFilter`  
+ *lpszFilter*  
  Řetězcového výrazu (jako **kde** klauzule v příkazu SQL bez slova **kde**) používaná k nalezení záznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -772,19 +772,19 @@ BOOL FindNext(LPCTSTR lpszFilter);
  Pokud záznam odpovídající kritériím není nachází, je aktuální záznam ukazatele neurčená, a `FindNext` vrátí hodnotu 0. Pokud sada záznamů obsahuje více než jeden záznam, který splňuje kritéria, `FindFirst` vyhledá první výskyt `FindNext` vyhledá nejbližším výskytu a tak dále.  
   
 > [!CAUTION]
->  Pokud chcete upravit záznam na aktuální záznam, ujistěte se, uložit změny voláním **aktualizace** – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
+>  Pokud chcete upravit záznam na aktuální záznam, ujistěte se, uložit změny voláním `Update` – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
   
- Pomocí některé z operací najít není stejný jako volání **MoveFirst** nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
+ Pomocí některé z operací najít není stejný jako volání `MoveFirst` nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
   
  Mějte paměti následující při použití operací hledání:  
   
--   Pokud **najít** vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
+-   Pokud `Find` vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
   
 -   Operace hledání nelze použít s posouvání dopředná sada záznamů typu snímek.  
   
 -   Používejte formát data USA (měsíc den roku) při vyhledávání pro pole obsahující kalendářní data, i v případě, že nepoužíváte verzi USA databázového stroje Microsoft Jet; v opačném odpovídající záznamy asi se nenašla.  
   
--   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo **CDaoQuerydef** objekty, které načíst konkrétní indexované záznamy.  
+-   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo `CDaoQuerydef` objekty, které načíst konkrétních indexované záznamů.  
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
@@ -796,7 +796,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFilter`  
+ *lpszFilter*  
  Řetězcového výrazu (jako **kde** klauzule v příkazu SQL bez slova **kde**) používaná k nalezení záznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -810,19 +810,19 @@ BOOL FindPrev(LPCTSTR lpszFilter);
  Pokud záznam odpovídající kritériím není nachází, je aktuální záznam ukazatele neurčená, a `FindPrev` vrátí hodnotu 0. Pokud sada záznamů obsahuje více než jeden záznam, který splňuje kritéria, `FindFirst` vyhledá první výskyt `FindNext` vyhledá nejbližším výskytu a tak dále.  
   
 > [!CAUTION]
->  Pokud chcete upravit záznam na aktuální záznam, ujistěte se, uložit změny voláním **aktualizace** – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
+>  Pokud chcete upravit záznam na aktuální záznam, ujistěte se, uložit změny voláním `Update` – členská funkce předtím, než přejdete k jinému záznamu. Pokud přesunete na jiný záznam bez aktualizace, vaše změny budou ztraceny bez upozornění.  
   
- Pomocí některé z operací najít není stejný jako volání **MoveFirst** nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
+ Pomocí některé z operací najít není stejný jako volání `MoveFirst` nebo `MoveNext`, ale které jednoduše vytvoří na první nebo další záznam aktuální bez zadání podmínku. Můžete provést operaci hledání v operaci přesunutí.  
   
  Mějte paměti následující při použití operací hledání:  
   
--   Pokud **najít** vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
+-   Pokud `Find` vrátí nenulový, není definován na aktuální záznam. V takovém případě musíte umístit ukazatel aktuálního záznamu zpět na platný záznam.  
   
 -   Operace hledání nelze použít s posouvání dopředná sada záznamů typu snímek.  
   
 -   Používejte formát data USA (měsíc den roku) při vyhledávání pro pole obsahující kalendářní data, i v případě, že nepoužíváte verzi USA databázového stroje Microsoft Jet; v opačném odpovídající záznamy asi se nenašla.  
   
--   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo **CDaoQuerydef** objekty, které načíst konkrétní indexované záznamy.  
+-   Při práci s databázemi ODBC a dynamické velké sady, může se stát, že pomocí operací hledání je pomalý, zejména při práci s velké sady záznamů. Výkon lze zvýšit pomocí dotazů SQL s přizpůsobit **ORDERBY** nebo **kde** klauzule, parametrických dotazů nebo `CDaoQuerydef` objekty, které načíst konkrétních indexované záznamů.  
   
  Související informace naleznete v tématu "FindFirst FindLast, FindNext FindPrevious metod" v nápovědě rozhraní DAO.  
   
@@ -1000,7 +1000,7 @@ short GetEditMode();
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |**dbEditNone**|Probíhá operace bez úprav.|  
-|**dbEditInProgress**|**Upravit** byla volána.|  
+|**dbEditInProgress**|`Edit` byla volána.|  
 |**dbEditAdd**|`AddNew` byla volána.|  
   
  Související informace naleznete v tématu "EditMode vlastnost" v nápovědě rozhraní DAO.  
@@ -1035,13 +1035,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule předdefinované pole v kolekci polí sady záznamů, pro vyhledávání podle indexu.  
   
- `fieldinfo`  
+ *FieldInfo*  
  Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Možnosti, které určují, které informace o sadě záznamů k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit. Pro nejlepší výkon získat pouze úroveň informací, které budete potřebovat:  
   
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikost, atributy  
@@ -1050,13 +1050,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` Informace o primární a sekundární plus: Text pro ověření výchozí hodnotu ověřovacího pravidla  
   
- `lpszName`  
+ *lpszName*  
  Název pole.  
   
 ### <a name="remarks"></a>Poznámky  
  Jedna verze funkce umožňuje vyhledat pole podle indexu. Na další verzi umožňuje vyhledat pole podle názvu.  
   
- Popis vrácené informace naleznete v tématu [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popisu `dwInfoOptions`. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
+ Popis vrácené informace naleznete v tématu [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
@@ -1078,13 +1078,13 @@ virtual COleVariant GetFieldValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězec, který obsahuje název pole.  
   
- `varValue`  
+ *varValue*  
  Odkaz na `COleVariant` objekt, který se uloží hodnotu pole.  
   
- `nIndex`  
+ *nIndex*  
  Index počítaný od nuly pole v kolekci polí sady záznamů, pro vyhledávání podle indexu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1134,13 +1134,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule v kolekci indexy tabulky, pro vyhledávání číselné umístěním.  
   
- `indexinfo`  
+ *indexinfo*  
  Odkaz na [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Možnosti, které určují, které informace o index pro načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit. Pro nejlepší výkon získat pouze úroveň informací, které budete potřebovat:  
   
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, informace o pole, pole  
@@ -1149,13 +1149,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` Informace o primární a sekundární plus: jednoznačného počtu  
   
- `lpszName`  
+ *lpszName*  
  Ukazatel na název indexu objekt, pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
  Jedna verze funkce umožňuje vyhledat index podle svého umístění v kolekci. Na další verzi umožňuje vyhledat index podle názvu.  
   
- Popis vrácené informace naleznete v tématu [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popisu `dwInfoOptions`. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
+ Popis vrácené informace naleznete v tématu [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
@@ -1189,7 +1189,7 @@ BOOL GetLockingMode();
 ### <a name="remarks"></a>Poznámky  
  Kdy pesimistické zamykání je v platnosti, stránku dat obsahující záznam upravujete uzamčeno, jakmile zavoláte [upravit](#edit) – členská funkce. Stránka je odemčený při volání [aktualizace](#update) nebo [Zavřít](#close) – členská funkce nebo všechny operace přesunutí nebo najít.  
   
- Když optimistické zamykání je v platnosti stránku dat obsahující záznam uzamčeno pouze tehdy, když probíhá aktualizace záznamu **aktualizace** – členská funkce.  
+ Když optimistické zamykání je v platnosti stránku dat obsahující záznam uzamčeno pouze tehdy, když probíhá aktualizace záznamu `Update` – členská funkce.  
   
  Při práci s zdroje dat ODBC, je vždy optimistické zamykání režimu.  
   
@@ -1219,10 +1219,10 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Pozice číselné parametru základní objekt DAOParameter.  
   
- `lpszName`  
+ *lpszName*  
  Název parametru, jehož hodnotu chcete.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1271,7 +1271,7 @@ long GetRecordCount();
   
  Hodnota `GetRecordCount` z typ tabulky záznamů odráží přibližný počet záznamů v tabulce a má vliv okamžitě, jako jsou tabulky záznamů přidat a odstranit.  
   
- Sady záznamů se žádné záznamy, vrátí hodnotu 0. Při práci s připojené tabulek nebo databází ODBC `GetRecordCount` vždy vrátí hodnotu - 1. Volání **Requery –** – členská funkce v sadě záznamů obnoví hodnotu `GetRecordCount` stejně, jako kdyby byly znovu spustit dotaz.  
+ Sady záznamů se žádné záznamy, vrátí hodnotu 0. Při práci s připojené tabulek nebo databází ODBC `GetRecordCount` vždy vrátí hodnotu - 1. Volání `Requery` – členská funkce v sadě záznamů obnoví hodnotu `GetRecordCount` stejně, jako kdyby byly znovu spustit dotaz.  
   
  Související informace naleznete v tématu "%d{RecordCount/ vlastnost" v nápovědě rozhraní DAO.  
   
@@ -1288,10 +1288,10 @@ CString GetSQL() const;
 ### <a name="remarks"></a>Poznámky  
  Obvykle to bude SQL **vyberte** příkaz.  
   
- Řetězec vrácený `GetSQL` se obvykle liší od libovolný řetězec, bylo předáno do sady záznamů v `lpszSQL` parametru [otevřete](#open) – členská funkce. Důvodem je, že vytváří sadu záznamů úplný příkaz SQL na předán na základě **otevřete**zadaným ClassWizard a co možná jste zadali v [m_strFilter](#m_strfilter) a [m_strSort](#m_strsort) datových členů.  
+ Řetězec vrácený `GetSQL` se obvykle liší od libovolný řetězec, bylo předáno do sady záznamů v *lpszSQL* parametru [otevřete](#open) – členská funkce. Důvodem je, že vytváří sadu záznamů úplný příkaz SQL na předán na základě `Open`zadaným ClassWizard a co možná jste zadali v [m_strFilter](#m_strfilter) a [m_strSort](#m_strsort) datových členů.  
   
 > [!NOTE]
->  Volání této funkce člen pouze po volání **otevřete**.  
+>  Volání této funkce člen pouze po volání `Open`.  
   
  Související informace naleznete v tématu "Vlastnost SQL" v nápovědě rozhraní DAO.  
   
@@ -1355,19 +1355,19 @@ BOOL IsBOF() const;
  Nenulové hodnoty, pokud sada záznamů obsahuje žádné záznamy nebo pokud jste přešli zpátky před první záznam; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete také volat `IsBOF` spolu s `IsEOF` k určení, zda sada záznamů obsahuje záznamy nebo je prázdný. Okamžitě po zavolání metody **otevřete**, pokud sada záznamů obsahuje žádné záznamy `IsBOF` vrátí nenulovou hodnotu. Když otevřete záznamů, která obsahuje alespoň jeden záznam, je na první záznam na aktuální záznam a `IsBOF` vrátí hodnotu 0.  
+ Můžete také volat `IsBOF` spolu s `IsEOF` k určení, zda sada záznamů obsahuje záznamy nebo je prázdný. Okamžitě po zavolání metody `Open`, pokud sada záznamů obsahuje žádné záznamy `IsBOF` vrátí nenulovou hodnotu. Když otevřete záznamů, která obsahuje alespoň jeden záznam, je na první záznam na aktuální záznam a `IsBOF` vrátí hodnotu 0.  
   
  Pokud na první záznam na aktuální záznam a volání `MovePrev`, `IsBOF` následně vrátí nenulové hodnoty. Pokud `IsBOF` vrátí nenulovou a volání `MovePrev`, je vyvolána výjimka. Pokud `IsBOF` vrátí nenulové hodnoty, není definován na aktuální záznam a jakoukoliv akci, která vyžaduje aktuální záznam způsobí výjimku.  
   
  Účinek konkrétní metody na `IsBOF` a `IsEOF` nastavení:  
   
--   Volání metody **otevřete** interně provede na první záznam v sadě záznamů na aktuální záznam voláním **MoveFirst**. Proto volání **otevřete** na prázdnou sadu záznamů příčiny `IsBOF` a `IsEOF` vrátit nenulové hodnoty. (Viz následující tabulka pro chování nezdařené **MoveFirst** nebo `MoveLast` volání.)  
+-   Volání metody `Open*` interně provede na první záznam v sadě záznamů na aktuální záznam voláním `MoveFirst`. Proto volání `Open` na prázdnou sadu záznamů příčiny `IsBOF` a `IsEOF` vrátit nenulové hodnoty. (Viz následující tabulka pro chování nezdařené `MoveFirst` nebo `MoveLast` volání.)  
   
 -   Všechny operace přesunutí, které úspěšně najít záznam způsobit, že oba `IsBOF` a `IsEOF` vrátit 0.  
   
--   `AddNew` Následuje volání **aktualizace** způsobí, že volání, které úspěšně vloží nový záznam `IsBOF` vrátit 0, ale jenom v případě `IsEOF` je již nenulové hodnoty. Stav `IsEOF` vždy zůstanou nezměněna. Jak jsou definovány pro databázový stroj Microsoft Jet, je aktuální záznam ukazatel prázdnou sadu záznamů na konci souboru, takže všechny nový záznam vkládají záznam na aktuální záznam.  
+-   `AddNew` Následuje volání `Update` způsobí, že volání, které úspěšně vloží nový záznam `IsBOF` vrátit 0, ale jenom v případě `IsEOF` je již nenulové hodnoty. Stav `IsEOF` vždy zůstanou nezměněna. Jak jsou definovány pro databázový stroj Microsoft Jet, je aktuální záznam ukazatel prázdnou sadu záznamů na konci souboru, takže všechny nový záznam vkládají záznam na aktuální záznam.  
   
--   Všechny **odstranit** volání, i když ho odebere jenom zbývající záznam ze sady záznamů, nedojde ke změně hodnotu `IsBOF` nebo `IsEOF`.  
+-   Všechny `Delete` volání, i když ho odebere jenom zbývající záznam ze sady záznamů, nedojde ke změně hodnotu `IsBOF` nebo `IsEOF`.  
   
  Tato tabulka ukazuje, které jsou povoleny přesunutí nabízela jinou kombinaci `IsBOF` /  `IsEOF`.  
   
@@ -1384,10 +1384,10 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst –**, `MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
-|**Přesunout** 0|Žádná změna|Žádná změna|  
-|`MovePrev`, **Přesunout** < 0|Nenulové hodnoty|Žádná změna|  
-|`MoveNext`, **Přesunout** > 0|Žádná změna|Nenulové hodnoty|  
+|`MoveFirst`, `MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
+|`Move` 0|Žádná změna|Žádná změna|  
+|`MovePrev`, `Move` < 0|Nenulové hodnoty|Žádná změna|  
+|`MoveNext`, `Move` > 0|Žádná změna|Nenulové hodnoty|  
   
  Související informace naleznete v tématu "BOF, vlastnosti EOF" v nápovědě rozhraní DAO.  
   
@@ -1422,19 +1422,19 @@ BOOL IsEOF() const;
  Nenulové hodnoty, pokud sada záznamů obsahuje žádné záznamy nebo pokud jste přešli nad rámec poslední záznam; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete také volat `IsEOF` k určení, zda sada záznamů obsahuje záznamy nebo je prázdný. Okamžitě po zavolání metody **otevřete**, pokud sada záznamů obsahuje žádné záznamy `IsEOF` vrátí nenulovou hodnotu. Když otevřete záznamů, která obsahuje alespoň jeden záznam, je na první záznam na aktuální záznam a `IsEOF` vrátí hodnotu 0.  
+ Můžete také volat `IsEOF` k určení, zda sada záznamů obsahuje záznamy nebo je prázdný. Okamžitě po zavolání metody `Open`, pokud sada záznamů obsahuje žádné záznamy `IsEOF` vrátí nenulovou hodnotu. Když otevřete záznamů, která obsahuje alespoň jeden záznam, je na první záznam na aktuální záznam a `IsEOF` vrátí hodnotu 0.  
   
  Pokud je poslední záznam na aktuální záznam při volání `MoveNext`, `IsEOF` následně vrátí nenulové hodnoty. Pokud `IsEOF` vrátí nenulovou a volání `MoveNext`, je vyvolána výjimka. Pokud `IsEOF` vrátí nenulové hodnoty, není definován na aktuální záznam a jakoukoliv akci, která vyžaduje aktuální záznam způsobí výjimku.  
   
  Účinek konkrétní metody na `IsBOF` a `IsEOF` nastavení:  
   
--   Volání metody **otevřete** interně provede na první záznam v sadě záznamů na aktuální záznam voláním **MoveFirst**. Proto volání **otevřete** na prázdnou sadu záznamů příčiny `IsBOF` a `IsEOF` vrátit nenulové hodnoty. (Viz následující tabulka pro chování nezdařené **MoveFirst** volání.)  
+-   Volání metody `Open` interně provede na první záznam v sadě záznamů na aktuální záznam voláním `MoveFirst`. Proto volání `Open` na prázdnou sadu záznamů příčiny `IsBOF` a `IsEOF` vrátit nenulové hodnoty. (Viz následující tabulka pro chování nezdařené `MoveFirst` volání.)  
   
 -   Všechny operace přesunutí, které úspěšně najít záznam způsobit, že oba `IsBOF` a `IsEOF` vrátit 0.  
   
--   `AddNew` Následuje volání **aktualizace** způsobí, že volání, které úspěšně vloží nový záznam `IsBOF` vrátit 0, ale jenom v případě `IsEOF` je již nenulové hodnoty. Stav `IsEOF` vždy zůstanou nezměněna. Jak jsou definovány pro databázový stroj Microsoft Jet, je aktuální záznam ukazatel prázdnou sadu záznamů na konci souboru, takže všechny nový záznam vkládají záznam na aktuální záznam.  
+-   `AddNew` Následuje volání `Update` způsobí, že volání, které úspěšně vloží nový záznam `IsBOF` vrátit 0, ale jenom v případě `IsEOF` je již nenulové hodnoty. Stav `IsEOF` vždy zůstanou nezměněna. Jak jsou definovány pro databázový stroj Microsoft Jet, je aktuální záznam ukazatel prázdnou sadu záznamů na konci souboru, takže všechny nový záznam vkládají záznam na aktuální záznam.  
   
--   Všechny **odstranit** volání, i když ho odebere jenom zbývající záznam ze sady záznamů, nedojde ke změně hodnotu `IsBOF` nebo `IsEOF`.  
+-   Všechny `Delete` volání, i když ho odebere jenom zbývající záznam ze sady záznamů, nedojde ke změně hodnotu `IsBOF` nebo `IsEOF`.  
   
  Tato tabulka ukazuje, které jsou povoleny přesunutí nabízela jinou kombinaci `IsBOF` /  `IsEOF`.  
   
@@ -1451,10 +1451,10 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst –**, `MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
-|**Přesunout** 0|Žádná změna|Žádná změna|  
-|`MovePrev`, **Přesunout** < 0|Nenulové hodnoty|Žádná změna|  
-|`MoveNext`, **Přesunout** > 0|Žádná změna|Nenulové hodnoty|  
+|`MoveFirst`, `MoveLast`|Nenulové hodnoty|Nenulové hodnoty|  
+|`Move` 0|Žádná změna|Žádná změna|  
+|`MovePrev`, `Move` < 0|Nenulové hodnoty|Žádná změna|  
+|`MoveNext`, `Move` > 0|Žádná změna|Nenulové hodnoty|  
   
  Související informace naleznete v tématu "BOF, vlastnosti EOF" v nápovědě rozhraní DAO.  
   
@@ -1466,14 +1466,14 @@ BOOL IsFieldDirty(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
+ *PV*  
  Ukazatel na pole datového člena, jejichž stav chcete zkontrolovat, nebo **NULL** k určení, pokud žádná pole jsou chybná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud zadané pole datového člena je označena jako chybná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Data v všechny změny pole datových členů budou přeneseny na záznam ve zdroji dat při aktualizaci na aktuální záznam voláním **aktualizace** členské funkce `CDaoRecordset` (následující volání **upravit**nebo `AddNew`). Replikace, můžete provést další kroky, jako například unflagging pole datového člena k označení sloupce, takže ho nebude možné zapsat do zdroje dat.  
+ Data v všechny změny pole datových členů budou přeneseny na záznam ve zdroji dat při aktualizaci na aktuální záznam voláním `Update` členské funkce `CDaoRecordset` (následující volání `Edit` nebo `AddNew`). Replikace, můžete provést další kroky, jako například unflagging pole datového člena k označení sloupce, takže ho nebude možné zapsat do zdroje dat.  
   
  `IsFieldDirty` se implementuje pomocí `DoFieldExchange`.  
   
@@ -1485,7 +1485,7 @@ BOOL IsFieldNull(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
+ *PV*  
  Ukazatel na pole datového člena, jejichž stav chcete zkontrolovat, nebo **NULL** k určení, pokud je některý z pole hodnotu Null.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1510,14 +1510,14 @@ BOOL IsFieldNullable(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
+ *PV*  
  Ukazatel na pole datového člena, jejichž stav chcete zkontrolovat, nebo **NULL** k určení, pokud je některý z pole hodnotu Null.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud zadané pole datového člena lze hodnotu Null; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pole, která nemůže mít hodnotu Null, musí mít hodnotu. Pokud se pokusíte toto pole nastavíte na hodnotu Null při přidávání nebo aktualizaci záznamu, zdroj dat odmítne přidání nebo aktualizace, a **aktualizace** vyvolá výjimku. Výjimka nastává při volání **aktualizace**, není při volání `SetFieldNull`.  
+ Pole, která nemůže mít hodnotu Null, musí mít hodnotu. Pokud se pokusíte toto pole nastavíte na hodnotu Null při přidávání nebo aktualizaci záznamu, zdroj dat odmítne přidání nebo aktualizace, a `Update` vyvolá výjimku. Výjimka nastává při volání `Update`, není při volání `SetFieldNull`.  
   
 ##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  Volání této funkce člen k určení, pokud sada záznamů je otevřený.  
@@ -1527,7 +1527,7 @@ BOOL IsOpen() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě objekt sady záznamů **otevřete** nebo **Requery –** – členská funkce dříve byla volána a sady záznamů nebyla uzavřena; jinak hodnota 0.  
+ Pokud nenulové hodnoty objekt sady záznamů `Open` nebo `Requery` – členská funkce dříve byla volána a sady záznamů nebyla uzavřena; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1537,7 +1537,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Poznámky  
  Použije se výchozí hodnota příznak **TRUE**. Nastavení v této – datový člen řídí celý mechanismus dvojité ukládání do vyrovnávací paměti. Pokud nastavíte příznak na **TRUE**, můžete vypnout ukládání do mezipaměti na základě pole pole pomocí mechanismu DFX. Pokud nastavíte příznak na **FALSE**, musí volat `SetFieldDirty` a `SetFieldNull` sami.  
   
- Tento člen data před voláním **otevřete**. Tento mechanismus je určen pro snadné použití. Výkon může být pomalejší kvůli ukládání polí, jakmile jsou změny.  
+ Tento člen data před voláním `Open`. Tento mechanismus je určen pro snadné použití. Výkon může být pomalejší kvůli ukládání polí, jakmile jsou změny.  
   
 ##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  Obsahuje počet pole datových členů ve třídě sady záznamů a počet sloupců vybraných funkcí sady záznamů z datového zdroje.  
@@ -1556,7 +1556,7 @@ BOOL IsOpen() const;
  Obsahuje počet parametry datových členů v třídě sady záznamů – počet parametrů předaných s dotaz sady záznamů.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud vaše sada záznamů třída má všechny parametry datových členů, musí inicializovat v konstruktoru pro třídu `m_nParams` s správné číslo. Hodnota `m_nParams` výchozí hodnota je 0. Pokud přidáte parametry datových členů – které je potřeba udělat ručně – musí také ručně přidat inicializaci v konstruktoru třídy tak, aby odrážela počet parametrů (která musí být alespoň tak velké, jaká počet '' zástupné symboly v vaší **m_strFilter**  nebo `m_strSort` řetězec).  
+ Pokud vaše sada záznamů třída má všechny parametry datových členů, musí inicializovat v konstruktoru pro třídu *m_nParams* s správné číslo. Hodnota *m_nParams* výchozí hodnota je 0. Pokud přidáte parametry datových členů – které je potřeba udělat ručně – musí také ručně přidat inicializaci v konstruktoru třídy tak, aby odrážela počet parametrů (která musí být alespoň tak velké, jaká počet '' zástupné symboly v vaší *m_strFilter*  nebo *m_strSort* řetězec).  
   
  Rozhraní používá toto číslo, když ho parameterizes dotaz sady záznamů.  
   
@@ -1577,7 +1577,7 @@ BOOL IsOpen() const;
  Obsahuje odkazy `CDaoDatabase` objekt, pomocí kterého je sada záznamů připojený ke zdroji dat.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato proměnná je nastavená dvěma způsoby. Obvykle můžete předat ukazatel již otevřete `CDaoDatabase` objektu při sestavení objektu záznamů. Pokud předáte **NULL** místo toho **CDaoRecordset** vytvoří `CDaoDatabase` objekt pro vás a otevře ji. V obou případech `CDaoRecordset` ukládá ukazatele v této proměnné.  
+ Tato proměnná je nastavená dvěma způsoby. Obvykle můžete předat ukazatel již otevřete `CDaoDatabase` objektu při sestavení objektu záznamů. Pokud předáte **NULL** místo toho `CDaoRecordset` vytvoří `CDaoDatabase` objekt pro vás a otevře ji. V obou případech `CDaoRecordset` ukládá ukazatele v této proměnné.  
   
  Obvykle nebudete muset přímo pomocí ukazatele uložené v **m_pDatabase**. Pokud píšete vlastní rozšíření `CDaoRecordset`, ale budete muset použít ukazatele. Například může být nutné ukazatele Pokud jste throw vlastní `CDaoException`(s).  
   
@@ -1601,36 +1601,36 @@ BOOL IsOpen() const;
   
  Nelze řadit objekty sady záznamů typu tabulky. Chcete-li určit pořadí řazení sady záznamů typu tabulky, volejte [SetCurrentIndex](#setcurrentindex).  
   
- Použití `m_strSort` nemá žádný vliv, při otevírání sada záznamů pomocí `CDaoQueryDef` ukazatel.  
+ Použití *m_strSort* nemá žádný vliv, při otevírání sada záznamů pomocí `CDaoQueryDef` ukazatel.  
   
  Související informace naleznete v tématu "Vlastnosti řazení" v nápovědě rozhraní DAO.  
   
 ##  <a name="move"></a>  CDaoRecordset::Move  
- Volání této funkce člen na pozici sady záznamů `lRows` záznamy na aktuální záznam.  
+ Volání této funkce člen na pozici sady záznamů *lRows* záznamy na aktuální záznam.  
   
 ```  
 virtual void Move(long lRows);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lRows`  
+ *lRows*  
  Počet záznamů k přesunutí nebo předchozí. Kladné hodnoty. přesuňte směrem vpřed, na konci sady záznamů. Záporné hodnoty přesunout zpátky, zpět na začátek.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete přesunout nebo předchozí. `Move( 1 )` je ekvivalentní `MoveNext`, a `Move( -1 )` je ekvivalentní `MovePrev`.  
   
 > [!CAUTION]
->  Žádné z volání **přesunout** funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody **otevřete** nebo **Requery –**, volání buď `IsBOF` nebo `IsEOF`.  
+>  Žádné z volání `Move` funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody `Open` nebo `Requery`, volání buď `IsBOF` nebo `IsEOF`.  
   
 > [!NOTE]
->  Pokud jste přešli po začátku nebo konci sadu záznamů ( `IsBOF` nebo `IsEOF` vrátí nenulovou hodnotu), volání **přesunout** vyvolá `CDaoException`.  
+>  Pokud jste přešli po začátku nebo konci sadu záznamů ( `IsBOF` nebo `IsEOF` vrátí nenulovou hodnotu), volání `Move` vyvolá `CDaoException`.  
   
 > [!NOTE]
->  Pokud žádné z volání **přesunout** funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
+>  Pokud žádné z volání `Move` funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
   
- Při volání **přesunout** dopředné posouvání snímku `lRows` parametr musí být kladné celé číslo a záložky nejsou povoleny, a přesunout předávat jenom.  
+ Při volání `Move` dopředné posouvání snímku `lRows` parametr musí být kladné celé číslo a záložky nejsou povoleny, a přesunout předávat jenom.  
   
- Chcete-li první, poslední, další nebo předchozí záznam v sadě záznamů aktuálním záznamu, volání **MoveFirst**, `MoveLast`, `MoveNext`, nebo `MovePrev` – členská funkce.  
+ Chcete-li první, poslední, další nebo předchozí záznam v sadě záznamů aktuálním záznamu, volání `MoveFirst`, `MoveLast`, `MoveNext`, nebo `MovePrev` – členská funkce.  
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
@@ -1642,23 +1642,23 @@ void MoveFirst();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Není nutné volat **MoveFirst** okamžitě po otevření sady záznamů. V ten moment se první záznam (pokud existuje) je automaticky záznam na aktuální záznam.  
+ Není nutné volat `MoveFirst` okamžitě po otevření sady záznamů. V ten moment se první záznam (pokud existuje) je automaticky záznam na aktuální záznam.  
   
 > [!CAUTION]
->  Žádné z volání **přesunout** funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody **otevřete** nebo **Requery –**, volání buď `IsBOF` nebo `IsEOF`.  
+>  Žádné z volání `Move` funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody `Open` nebo `Requery`, volání buď `IsBOF` nebo `IsEOF`.  
   
 > [!NOTE]
->  Pokud žádné z volání **přesunout** funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
+>  Pokud žádné z volání `Move` funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
   
- Použití **přesunout** funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
+ Použití `Move` funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
   
  Pokud sadu záznamů odkazuje na sadu záznamů typu tabulky, následuje pohyb aktuální index v tabulce. Aktuální index lze nastavit pomocí vlastnost Index základní objekt DAO. Pokud aktuální index není nastavena, pořadí vrácených záznamů není definován.  
   
  Když zavoláte `MoveLast` na objekt sady záznamů na základě dotazu SQL nebo querydef, dotaz musí k dokončení a je plně vyplní objekt sady záznamů.  
   
- Nelze volat **MoveFirst** nebo `MovePrev` – členská funkce s dopředné posouvání snímku.  
+ Nelze volat `MoveFirst` nebo `MovePrev` – členská funkce s dopředné posouvání snímku.  
   
- Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte **přesunout**.  
+ Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte `Move`.  
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
@@ -1672,18 +1672,18 @@ void MoveLast();
 ### <a name="remarks"></a>Poznámky  
   
 > [!CAUTION]
->  Žádné z volání **přesunout** funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody **otevřete** nebo **Requery –**, volání buď `IsBOF` nebo `IsEOF`.  
+>  Žádné z volání `Move` funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody `Open` nebo `Requery`, volání buď `IsBOF` nebo `IsEOF`.  
   
 > [!NOTE]
->  Pokud žádné z volání **přesunout** funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
+>  Pokud žádné z volání `Move` funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
   
- Použití **přesunout** funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
+ Použití `Move` funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
   
  Pokud sadu záznamů odkazuje na sadu záznamů typu tabulky, následuje pohyb aktuální index v tabulce. Aktuální index lze nastavit pomocí vlastnost Index základní objekt DAO. Pokud aktuální index není nastavena, pořadí vrácených záznamů není definován.  
   
  Když zavoláte `MoveLast` na objekt sady záznamů na základě dotazu SQL nebo querydef, dotaz musí k dokončení a je plně vyplní objekt sady záznamů.  
   
- Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte **přesunout**.  
+ Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte `Move`.  
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
@@ -1698,16 +1698,16 @@ void MoveNext();
  Doporučuje se, že zavoláte `IsBOF` před dalším pokusem o přesun do předchozího záznamu. Volání `MovePrev` vyvolá výjimku `CDaoException` Pokud `IsBOF` vrátí nenulové hodnoty, která znamená, že jste již přešli před první záznam nebo, nebyly vybrány žádné záznamy pomocí sady záznamů.  
   
 > [!CAUTION]
->  Žádné z volání **přesunout** funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody **otevřete** nebo **Requery –**, volání buď `IsBOF` nebo `IsEOF`.  
+>  Žádné z volání `Move` funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody `Open` nebo `Requery`, volání buď `IsBOF` nebo `IsEOF`.  
   
 > [!NOTE]
->  Pokud žádné z volání **přesunout** funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
+>  Pokud žádné z volání `Move` funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
   
- Použití **přesunout** funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
+ Použití `Move` funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
   
  Pokud sadu záznamů odkazuje na sadu záznamů typu tabulky, následuje pohyb aktuální index v tabulce. Aktuální index lze nastavit pomocí vlastnost Index základní objekt DAO. Pokud aktuální index není nastavena, pořadí vrácených záznamů není definován.  
   
- Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte **přesunout**.  
+ Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte `Move`.  
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
@@ -1722,18 +1722,18 @@ void MovePrev();
  Doporučuje se, že zavoláte `IsBOF` před dalším pokusem o přesun do předchozího záznamu. Volání `MovePrev` vyvolá výjimku `CDaoException` Pokud `IsBOF` vrátí nenulové hodnoty, která znamená, že jste již přešli před první záznam nebo, nebyly vybrány žádné záznamy pomocí sady záznamů.  
   
 > [!CAUTION]
->  Žádné z volání **přesunout** funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody **otevřete** nebo **Requery –**, volání buď `IsBOF` nebo `IsEOF`.  
+>  Žádné z volání `Move` funkce vyvolá výjimku, pokud má sada záznamů žádné záznamy. Obecně platí, jak volat `IsBOF` a `IsEOF` předtím, než operace přesunutí k určení, zda má sada záznamů žádné záznamy. Po zavolání metody `Open` nebo `Requery`, volání buď `IsBOF` nebo `IsEOF`.  
   
 > [!NOTE]
->  Pokud žádné z volání **přesunout** funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
+>  Pokud žádné z volání `Move` funkce při záznam na aktuální záznam se aktualizovat nebo přidání, aktualizace se ztratí bez upozornění.  
   
- Použití **přesunout** funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
+ Použití `Move` funkce pro přesun mezi záznamy bez použití podmínku. Pomocí operací hledání vyhledejte záznamy v dynamické sady nebo objekt sady záznamů typu snímek, která splňují určité podmínky. Chcete-li vyhledat záznam v objektu sada záznamů typu tabulky, volejte `Seek`.  
   
  Pokud sadu záznamů odkazuje na sadu záznamů typu tabulky, následuje pohyb aktuální index v tabulce. Aktuální index lze nastavit pomocí vlastnost Index základní objekt DAO. Pokud aktuální index není nastavena, pořadí vrácených záznamů není definován.  
   
- Nelze volat **MoveFirst** nebo `MovePrev` – členská funkce s dopředné posouvání snímku.  
+ Nelze volat `MoveFirst` nebo `MovePrev` – členská funkce s dopředné posouvání snímku.  
   
- Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte **přesunout**.  
+ Chcete-li přesunout umístění aktuální záznam v objektu sady záznamů konkrétní počet záznamů vpřed nebo zpětné, volejte `Move`.  
   
  Související informace najdete v tématech "Metoda přesunout" a "MoveFirst MoveLast, MoveNext MovePrevious metod" v nápovědě rozhraní DAO.  
   
@@ -1760,7 +1760,7 @@ virtual void Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOpenType`  
+ *nOpenType*  
  Jedna z následujících hodnot:  
   
 - **dbOpenDynaset** dynamické sady záznamů s obousměrný posouvání. Toto nastavení je výchozí.  
@@ -1769,7 +1769,7 @@ virtual void Open(
   
 - **dbOpenSnapshot** sadu záznamů typu snímek s obousměrný posouvání.  
   
- `lpszSQL`  
+ *lpszSQL*  
  Ukazatel řetězce obsahující jedno z následujících:  
   
 -   A **NULL** ukazatel.  
@@ -1780,7 +1780,7 @@ virtual void Open(
   
 -   Předávací dotaz.  
   
- `nOptions`  
+ *nOptions*  
  Jeden nebo více z níže uvedených možností: Výchozí hodnota je 0. Možné hodnoty jsou následující:  
   
 - **dbAppendOnly** pouze můžete přidat nové záznamy (pouze sada dynamické sady záznamů). Tato možnost oznámena znamená, že může pouze přidávat záznamy. Databázové třídy MFC rozhraní ODBC mít připojovacím možnost, která umožňuje záznamů, které mají být načteny a připojí.  
@@ -1800,7 +1800,7 @@ virtual void Open(
 - **dbConsistent** pouze konzistentní aktualizace jsou povolené (pouze sada dynamické sady záznamů).  
   
 > [!NOTE]
->  Konstanty **dbConsistent** a **dbInconsistent** se vzájemně vylučují. Můžete použít jeden nebo druhý, ale ne obojí v dané instanci systému **otevřete**.  
+>  Konstanty **dbConsistent** a **dbInconsistent** se vzájemně vylučují. Můžete použít jeden nebo druhý, ale ne obojí v dané instanci systému `Open`.  
   
  *pTableDef*  
  Ukazatel [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objektu. Tato verze je platná pouze pro sady záznamů typu tabulky. Při použití této možnosti `CDaoDatabase` použitý k vytvoření ukazatele `CDaoRecordset` nepoužívá; místo toho se používá databázi, ve kterém se nachází tabledef.  
@@ -1809,30 +1809,30 @@ virtual void Open(
  Ukazatel [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objektu. Tato verze je platná pouze pro dynamické sady a sady záznamů typu snímek. Při použití této možnosti `CDaoDatabase` použitý k vytvoření ukazatele `CDaoRecordset` nepoužívá; místo toho se používá databázi, ve kterém se nachází querydef.  
   
 ### <a name="remarks"></a>Poznámky  
- Před voláním **otevřete**, je nutné vytvořit objekt sady záznamů. Chcete-li to provést několika způsoby:  
+ Před voláním `Open`, je nutné vytvořit objekt sady záznamů. Chcete-li to provést několika způsoby:  
   
 -   Když vytvoříte objekt sady záznamů, můžete předat ukazatel `CDaoDatabase` objekt, který je již otevřeno.  
   
 -   Když vytvoříte objekt sady záznamů, můžete předat ukazatel `CDaoDatabase` objekt, který není otevřený. Otevře sadu záznamů `CDaoDatabase` objektu, ale nebude zavřete ho po zavření objektu sady záznamů.  
   
--   Pokud vytvoříte objekt sady záznamů, předat **NULL** ukazatel. Volání objektu sady záznamů `GetDefaultDBName` získat název aplikace Microsoft Access. Otevření souboru MDB. Potom otevře sadu záznamů `CDaoDatabase` objekt a udržuje ho otevřete tak dlouho, dokud sada záznamů je otevřený. Při volání **Zavřít** v sadě záznamů, `CDaoDatabase` také objekt je zavřený.  
+-   Pokud vytvoříte objekt sady záznamů, předat **NULL** ukazatel. Volání objektu sady záznamů `GetDefaultDBName` získat název aplikace Microsoft Access. Otevření souboru MDB. Potom otevře sadu záznamů `CDaoDatabase` objekt a udržuje ho otevřete tak dlouho, dokud sada záznamů je otevřený. Při volání `Close` v sadě záznamů, `CDaoDatabase` také objekt je zavřený.  
   
     > [!NOTE]
     >  Když se otevře sadu záznamů `CDaoDatabase` objektu, otevře se zdroji dat s níže přístup.  
   
- Pro verzi **otevřete** používající `lpszSQL` parametr, jakmile je sada záznamů otevřete můžete načíst záznamy v několika způsoby. První možností je tak, aby měl DFX – funkce vašem `DoFieldExchange`. Druhou možností je použití dynamické vazby voláním `GetFieldValue` – členská funkce. Tyto možnosti se dají implementovat samostatně nebo v kombinaci. Pokud jsou zkombinovány, je nutné předat v příkazu SQL sami na volání **otevřete**.  
+ Pro verzi `Open` používající *lpszSQL* parametr, jakmile je sada záznamů otevřete můžete načíst záznamy v několika způsoby. První možností je tak, aby měl DFX – funkce vašem `DoFieldExchange`. Druhou možností je použití dynamické vazby voláním `GetFieldValue` – členská funkce. Tyto možnosti se dají implementovat samostatně nebo v kombinaci. Pokud jsou zkombinovány, je nutné předat v příkazu SQL sami na volání `Open`.  
   
- Při použití druhé verze **otevřete** kde předáte v `CDaoTableDef` objektu, výsledná sloupce, které bude k dispozici pro vázání prostřednictvím `DoFieldExchange` a DFX mechanismus, anebo vazby dynamicky prostřednictvím `GetFieldValue`.  
-  
-> [!NOTE]
->  Může volat pouze **otevřete** pomocí `CDaoTableDef` objekt pro sady záznamů typu tabulky.  
-  
- Při použití třetí verzi **otevřete** kde předáte v `CDaoQueryDef` objektu, že dotaz bude proveden a výsledný sloupce, které bude k dispozici pro vázání prostřednictvím `DoFieldExchange` a DFX mechanismus, nebo dynamicky vazby prostřednictvím `GetFieldValue`.  
+ Při použití druhé verze `Open` kde předáte v `CDaoTableDef` objektu, výsledná sloupce, které bude k dispozici pro vázání prostřednictvím `DoFieldExchange` a DFX mechanismus, anebo vazby dynamicky prostřednictvím `GetFieldValue`.  
   
 > [!NOTE]
->  Může volat pouze **otevřete** pomocí `CDaoQueryDef` objekt pro dynamické sady a sady záznamů typu snímek.  
+>  Může volat pouze `Open` pomocí `CDaoTableDef` objekt pro sady záznamů typu tabulky.  
   
- Pro první verze součásti **otevřete** používající `lpszSQL` parametr záznamy jsou vybrané na základě kritérií, které jsou uvedené v následující tabulce.  
+ Při použití třetí verzi `Open` kde můžete předat `CDaoQueryDef` objektu, že dotaz bude proveden a výsledný sloupce, které bude k dispozici pro vázání prostřednictvím `DoFieldExchange` a DFX mechanismus, anebo vazby dynamicky prostřednictvím `GetFieldValue`.  
+  
+> [!NOTE]
+>  Může volat pouze `Open` pomocí `CDaoQueryDef` objekt pro dynamické sady a sady záznamů typu snímek.  
+  
+ Pro první verze součásti `Open` používající `lpszSQL` parametr záznamy jsou vybrané na základě kritérií, které jsou uvedené v následující tabulce.  
   
 |Hodnota `lpszSQL` parametr|Zvolené záznamy jsou určeny|Příklad|  
 |--------------------------------------|----------------------------------------|-------------|  
@@ -1840,17 +1840,17 @@ virtual void Open(
 |Čárkami oddělený seznam tabledefs – jeden nebo více nebo querydef názvy.|Všechny sloupce znázorněná `DoFieldExchange`.|`"Customer"`|  
 |**Vyberte** seznamu sloupců **FROM** seznam tabulek|Zadané sloupce ze zadaného tabledef(s) nebo querydef(s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
- Součástí postupu je předat **NULL** k **otevřete**; v takovém případě **otevřete** volání `GetDefaultSQL`, přepisovatelné členské funkce, která ClassWizard generuje při vytváření `CDaoRecordset`– odvozené třídy. Tuto hodnotu poskytuje tabledef(s) nebo querydef názvy, které zadáte v ClassWizard. Místo toho lze zadat jiné informace v parametru `lpszSQL`.  
+ Součástí postupu je předat **NULL** k `Open`; v takovém případě `Open` volání `GetDefaultSQL`, přepisovatelné členské funkce, která ClassWizard generuje při vytváření `CDaoRecordset`-odvozené třídy. Tuto hodnotu poskytuje tabledef(s) nebo querydef názvy, které zadáte v ClassWizard. Místo toho můžete zadat další informace v *lpszSQL* parametr.  
   
- Ať předáte **otevřete** vytvoří konečnou řetězec SQL pro dotaz (řetězec může mít SQL **kde** a **ORDERBY** klauzule připojenou k `lpszSQL` je řetězec Předaný) a potom provede daný dotaz. Můžete zkontrolovat vytvořený řetězec voláním `GetSQL` po volání **otevřete**.  
+ Ať předáte `Open` vytvoří konečnou řetězec SQL pro dotaz (řetězec může mít SQL **kde** a **ORDERBY** klauzule připojenou k *lpszSQL* řetězec je předán) a potom provede daný dotaz. Můžete zkontrolovat vytvořený řetězec voláním `GetSQL` po volání `Open`.  
   
  Datové členy polí třídy sady záznamů jsou svázány se sloupci zvolených dat. Jsou-li vráceny jakékoli záznamy, první záznam se stává aktuálním záznamem.  
   
- Pokud chcete nastavit možnosti sady záznamů, jako je například filtrování nebo řazení, nastavte `m_strSort` nebo **m_strFilter** po sestavení objektu záznamů, ale před voláním **otevřete**. Pokud chcete aktualizovat záznamy v sadě záznamů po sada záznamů je už otevřený, volejte **Requery –**.  
+ Pokud chcete nastavit možnosti sady záznamů, jako je například filtrování nebo řazení, nastavte **m_strSort** nebo **m_strFilter** po sestavení objektu záznamů, ale před voláním `Open`. Pokud chcete aktualizovat záznamy v sadě záznamů po sada záznamů je už otevřený, volejte `Requery`.  
   
- Když zavoláte **otevřete** na dynamické sady nebo sadu záznamů typu snímek, nebo pokud zdroj dat odkazuje na příkazu SQL nebo tabledef, představující připojené tabulky, nemůžete použít **dbOpenTable** pro typ argument; Pokud tak učiníte, MFC vyvolá výjimku. Chcete-li zjistit, zda objekt tabledef představuje připojené tabulky, vytvořte [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objekt a volání jeho [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) – členská funkce.  
+ Když zavoláte `Open` na dynamické sady nebo sadu záznamů typu snímek, nebo pokud zdroj dat odkazuje na příkazu SQL nebo tabledef, představující připojené tabulky, nemůžete použít **dbOpenTable** pro argument typu; v takovém případě MFC vyvolá výjimku. Chcete-li zjistit, zda objekt tabledef představuje připojené tabulky, vytvořte [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objekt a volání jeho [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) – členská funkce.  
   
- Použití **dbSeeChanges** příznak, pokud chcete změny provedené jiným uživatelem nebo v jiném programu na počítači při úpravě nebo odstranění stejný záznam pro depeše. Například, pokud dva uživatelé začít upravovat na stejné záznam, první uživatel k volání **aktualizace** – členská funkce úspěšné. Když **aktualizace** volá druhého uživatele, `CDaoException` je vyvolána výjimka. Podobně pokud se druhý uživatel se pokusí zavolat **odstranit** odstranit záznam ale již byla změněna první uživatel, `CDaoException` dojde.  
+ Použití **dbSeeChanges** příznak, pokud chcete změny provedené jiným uživatelem nebo v jiném programu na počítači při úpravě nebo odstranění stejný záznam pro depeše. Například, pokud dva uživatelé začít upravovat na stejné záznam, první uživatel k volání `Update` – členská funkce úspěšné. Když `Update` volá druhého uživatele, `CDaoException` je vyvolána výjimka. Podobně pokud se druhý uživatel se pokusí zavolat `Delete` odstranit záznam ale již byla změněna první uživatel, `CDaoException` dojde.  
   
  Obvykle když uživatel získá to `CDaoException` při aktualizaci, váš kód by měl aktualizovat obsah pole a načíst nově upravené hodnoty. V případě výjimka Probíhá odstraňování kódu zobrazit nové údaje záznamů uživateli a zprávu s upozorněním, že data se nedávno změnila. Kód v tomto okamžiku můžete požádat o potvrzení, že stále chce uživatel odstranit záznam.  
   
@@ -1869,21 +1869,21 @@ virtual void Requery();
 ### <a name="remarks"></a>Poznámky  
  Jsou-li vráceny jakékoli záznamy, první záznam se stává aktuálním záznamem.  
   
- V pořadí sady záznamů tak, aby odrážela přidání a odstranění, které vy nebo jiní uživatelé využívají ke zdroji dat, musíte znovu vytvořit sadu záznamů voláním **Requery –**. Pokud je dynamická sada záznamů, automaticky zobrazuje aktualizace, které vy nebo jiní uživatelé provést na existující záznamy (ale ne dodatky). Pokud je sada záznamů snímku, musí volat **Requery** tak, aby odrážela úpravy ostatní uživatelé a také přidání a odstranění.  
+ V pořadí sady záznamů tak, aby odrážela přidání a odstranění, které vy nebo jiní uživatelé využívají ke zdroji dat, musíte znovu vytvořit sadu záznamů voláním `Requery`. Pokud je dynamická sada záznamů, automaticky zobrazuje aktualizace, které vy nebo jiní uživatelé provést na existující záznamy (ale ne dodatky). Pokud je sada záznamů snímku, musí volat `Requery` tak, aby odrážela úpravy ostatní uživatelé a také přidání a odstranění.  
   
- Dynamická sada nebo snímek, volání **Requery** kdykoli chcete znovu vytvořit sadu záznamů pomocí hodnoty parametrů. Nastavte nový filtr nebo řazení nastavením [m_strFilter](#m_strfilter) a [m_strSort](#m_strsort) před voláním **Requery –**. Nastavit nové parametry přiřazením nové hodnoty pro parametry datových členů před voláním **Requery –**.  
+ Dynamická sada nebo snímek, volání `Requery` kdykoli chcete znovu vytvořit sadu záznamů pomocí hodnoty parametrů. Nastavte nový filtr nebo řazení nastavením [m_strFilter](#m_strfilter) a [m_strSort](#m_strsort) před voláním `Requery`. Nastavit nové parametry přiřazením nové hodnoty pro parametry datových členů před voláním `Requery`.  
   
- Pokud se nezdaří pokus o znovu vytvoření sady záznamů, sada záznamů je zavřený. Před voláním **Requery –**, můžete určit, zda může být sada záznamů fokusu voláním [CanRestart](#canrestart) – členská funkce. `CanRestart` není zaručeno, který **Requery** bude úspěšné.  
+ Pokud se nezdaří pokus o znovu vytvoření sady záznamů, sada záznamů je zavřený. Před voláním `Requery`, můžete určit, zda může být sada záznamů fokusu voláním [CanRestart](#canrestart) – členská funkce. `CanRestart` není zaručeno, který `Requery` bude úspěšné.  
   
 > [!CAUTION]
->  Volání **Requery –** až poté, co můžete volat **otevřete**.  
+>  Volání `Requery` až poté, co můžete volat `Open`.  
   
 > [!NOTE]
 >  Volání metody [Requery](#requery) změny DAO záložky.  
   
- Nelze volat **Requery –** na dynamické sady nebo sadu záznamů typu snímek Pokud volání `CanRestart` vrátí hodnotu 0, ani můžete můžete ji použít v sadě záznamů typu tabulky.  
+ Nelze volat `Requery` na dynamické sady nebo sadu záznamů typu snímek Pokud volání `CanRestart` vrátí hodnotu 0, ani můžete můžete ji použít v sadě záznamů typu tabulky.  
   
- Pokud oba `IsBOF` a `IsEOF` vrátí nenulovou po zavolání metody **Requery –**, dotaz nevrátil žádné záznamů a záznamů bude obsahovat žádná data.  
+ Pokud oba `IsBOF` a `IsEOF` vrátí nenulovou po zavolání metody `Requery`, dotaz nevrátil žádné záznamů a záznamů bude obsahovat žádná data.  
   
  Související informace naleznete v tématu "Requery – metoda" v nápovědě rozhraní DAO.  
   
@@ -1905,10 +1905,10 @@ BOOL Seek(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszComparison`  
+ *lpszComparison*  
  Jeden z výrazů následující řetězec: "<","\<=", "=", "> =", nebo ">".  
   
- `pKey1`  
+ *pKey1*  
  Ukazatel [COleVariant](../../mfc/reference/colevariant-class.md) jejíž hodnota odpovídá na první pole v indexu. Požadováno.  
   
  *pKey2*  
@@ -1934,11 +1934,11 @@ BOOL Seek(
   
  `Seek` Umožňuje vysoce výkonné indexu vyhledávání na sady záznamů typu tabulky. Je nutné nastavit aktuální index voláním `SetCurrentIndex` před voláním `Seek`. Pokud index identifikuje nejedinečný klíčové pole nebo polí `Seek` vyhledá na první záznam, který splňuje kritéria. Pokud nezadáte žádnou index, je vyvolána výjimka.  
   
- Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekty musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
+ Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekty musí být explicitně deklarován ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
- Při volání `Seek`, předáte jednu nebo více hodnot klíče a operátor porovnání ("<","\<=", "=", "> =", nebo ">"). `Seek` Vyhledá prostřednictvím zadaná pole klíče a vyhledá na první záznam, který splňuje kritériím `lpszComparison` a `pKey1`. Jednou najde, `Seek` vrátí nenulovou hodnotu a díky záznamů aktuální. Pokud `Seek` nepodaří najít shodu, `Seek` vrátí nula, a na aktuální záznam není definován. Pokud používáte rozhraní DAO přímo, je nutné zkontrolovat explicitně NoMatch vlastnost.  
+ Při volání `Seek`, předáte jednu nebo více hodnot klíče a operátor porovnání ("<","\<=", "=", "> =", nebo ">"). `Seek` Vyhledá prostřednictvím zadaná pole klíče a vyhledá na první záznam, který splňuje kritériím *lpszComparison* a *pKey1*. Jednou najde, `Seek` vrátí nenulovou hodnotu a díky záznamů aktuální. Pokud `Seek` nepodaří najít shodu, `Seek` vrátí nula, a na aktuální záznam není definován. Pokud používáte rozhraní DAO přímo, je nutné zkontrolovat explicitně NoMatch vlastnost.  
   
- Pokud `lpszComparison` je "=", "> =", nebo ">", `Seek` spustí na začátku index. Pokud `lpszComparison` je "<" nebo "< =", `Seek` spustí na konci index a hledá zpětně, pokud existují duplicitní index položky na konci. V takovém případě `Seek` začíná na libovolného položku mezi duplicitní index položky na konci index.  
+ Pokud `lpszComparison` je "=", "> =", nebo ">", `Seek` spustí na začátku index. Pokud *lpszComparison* je "<" nebo "< =", `Seek` spustí na konci index a hledá zpětně, pokud existují duplicitní index položky na konci. V takovém případě `Seek` začíná na libovolného položku mezi duplicitní index položky na konci index.  
   
  Existuje nemusí být aktuální záznam, když používáte `Seek`.  
   
@@ -1982,7 +1982,7 @@ void SetBookmark(COleVariant varBookmark);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `varBookmark`  
+ *varBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) objekt obsahující hodnotu záložku pro konkrétní záznam.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1991,7 +1991,7 @@ void SetBookmark(COleVariant varBookmark);
 > [!NOTE]
 >  Volání metody [Requery](#requery) změny DAO záložky.  
   
- Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
+ Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  Související informace najdete v tématech "Záložku vlastnost" a Bookmarkable vlastnost"v nápovědě rozhraní DAO.  
   
@@ -2003,13 +2003,13 @@ void SetCacheSize(long lSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lSize`  
+ *lSize*  
  Určuje počet záznamů. Typické hodnota je 100. Hodnota 0 vypne ukládání do mezipaměti. Nastavení musí být mezi 5 a 1200 záznamů. Mezipaměti může použít značné množství paměti.  
   
 ### <a name="remarks"></a>Poznámky  
  Mezipaměť je místo v místní paměti, která obsahuje data naposledy načtená ze serveru, v případě, že data požádat znovu, když aplikace běží. Ukládání dat zlepšuje výkon aplikace, která načte data ze vzdáleného serveru prostřednictvím objektů sady záznamů dynamické sady. Pokud se požaduje data, databázový stroj Microsoft Jet nejprve hledá v mezipaměti pro požadovaná data místo načítání ze serveru, který trvá déle. Data, která nepochází z zdroje dat ODBC není uložen v mezipaměti.  
   
- Všechny zdroje dat ODBC, jako je například připojené tabulky, může mít místní mezipaměti. Chcete-li vytvořit mezipaměť, otevřete objekt sady záznamů ve zdroji dat vzdáleného volání `SetCacheSize` a `SetCacheStart` členských funkcí a pak volání `FillCache` – členská funkce nebo krok prostřednictvím záznamy pomocí jedné z operace Move. `lSize` Parametr `SetCacheSize` – členská funkce může být založen na počet záznamů, vaše aplikace může spolupracovat s najednou. Například pokud používáte sadu záznamů jako zdroj dat, který se má zobrazit na obrazovce, můžete předat `SetCacheSize` `lSize` parametr jako 20 zobrazíte 20 záznamů najednou.  
+ Všechny zdroje dat ODBC, jako je například připojené tabulky, může mít místní mezipaměti. Chcete-li vytvořit mezipaměť, otevřete objekt sady záznamů ve zdroji dat vzdáleného volání `SetCacheSize` a `SetCacheStart` členských funkcí a pak volání `FillCache` – členská funkce nebo krok prostřednictvím záznamy pomocí jedné z operace Move. *LSize* parametr `SetCacheSize` – členská funkce může být založen na počet záznamů, vaše aplikace může spolupracovat s najednou. Například pokud používáte sadu záznamů jako zdroj dat, který se má zobrazit na obrazovce, můžete předat `SetCacheSize` *lSize* parametr jako 20 zobrazíte 20 záznamů najednou.  
   
  Související informace naleznete v tématu "Velikost paměti, vlastnosti CacheStart" v nápovědě rozhraní DAO.  
   
@@ -2021,19 +2021,19 @@ void SetCacheStart(COleVariant varBookmark);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `varBookmark`  
+ *varBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) určující záložku na první záznam v sadě záznamů do mezipaměti.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete použít hodnotu záložku žádné záznamu `varBookmark` parametr `SetCacheStart` – členská funkce. Ujistěte se, záznam, který chcete spustit mezipaměti s aktuální záznam, vytvořit záložku pro tento záznam pomocí [SetBookmark –](#setbookmark)a předejte jako parametr pro hodnotu záložku `SetCacheStart` – členská funkce.  
+ Můžete použít hodnotu záložku žádné záznamu *varBookmark* parametr `SetCacheStart` – členská funkce. Ujistěte se, záznam, který chcete spustit mezipaměti s aktuální záznam, vytvořit záložku pro tento záznam pomocí [SetBookmark –](#setbookmark)a předejte jako parametr pro hodnotu záložku `SetCacheStart` – členská funkce.  
   
  Databázový stroj Microsoft Jet požadavky záznamů v mezipaměti rozsahu z mezipaměti a požaduje záznamy mimo rozsah mezipaměti ze serveru.  
   
  Záznamy načteny z mezipaměti nereflektuje změny provedené současně ke zdrojovým datům jiných uživatelů.  
   
- Chcete-li vynutit aktualizaci všech dat uložených v mezipaměti, předat `lSize` parametr `SetCacheSize` jako 0, volání `SetCacheSize` znovu s velikostí mezipaměti jste původně požádal a pak zavolají `FillCache` – členská funkce.  
+ Chcete-li vynutit aktualizaci všech dat uložených v mezipaměti, předat *lSize* parametr `SetCacheSize` jako 0, volání `SetCacheSize` znovu s velikostí mezipaměti jste původně požádal a pak zavolají `FillCache` – členská funkce.  
   
- Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
+ Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  Související informace naleznete v tématu velikost paměti, vlastnosti CacheStart"v nápovědě rozhraní DAO.  
   
@@ -2045,7 +2045,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszIndex`  
+ *lpszIndex*  
  Ukazatel obsahující název indexu, který má být nastavena.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2067,10 +2067,10 @@ void SetFieldDirty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
+ *PV*  
  Obsahuje pole datového člena v sadě záznamů adresu nebo **NULL**. Pokud **NULL**, jsou označeny všechna pole datových členů v sadě záznamů. (C++ **NULL** není stejná jako hodnota Null v terminologii databáze, což znamená "žádná hodnota s".)  
   
- `bDirty`  
+ *bDirty*  
  **Hodnota TRUE,** Pokud pole datového člena je označen jako "nesprávné" (změněné). V opačném případě **FALSE** Pokud pole datového člena je označen jako "čisté" (beze změny).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2107,10 +2107,10 @@ void SetFieldNull(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
+ *PV*  
  Obsahuje pole datového člena v sadě záznamů adresu nebo **NULL**. Pokud **NULL**, jsou označeny všechna pole datových členů v sadě záznamů. (C++ **NULL** není stejná jako hodnota Null v terminologii databáze, což znamená "žádná hodnota s".)  
   
- `bNull`  
+ *bNull*  
  Nenulové hodnoty, pokud je pole data člen bude označen jako s žádnou hodnotu (Null). Jinak hodnota 0, pokud datový člen pole bude označen jako nesmí být nulová.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2118,7 +2118,7 @@ void SetFieldNull(
   
  Když přidáte nový záznam do sady záznamů, jsou všechny datové členy původně nastavená na hodnotu Null a označené jako "nesprávné" (změněné). Pokud načítáte záznam ze zdroje dat, její sloupce buď již mít hodnoty, nebo hodnotu Null. Pokud není vhodné vytvořit pole hodnotu Null, [CDaoException](../../mfc/reference/cdaoexception-class.md) je vyvolána výjimka.  
   
- Pokud používáte mechanismus dvojité ukládání do vyrovnávací paměti, například pokud chcete konkrétně určíte pole na aktuální záznam, který nemá hodnotu volání `SetFieldNull` s `bNull` nastavena na **TRUE** na příznak jako hodnotu Null. Pokud byl dříve označená pole hodnotu Null a teď chcete u ní hodnotu, jednoduše nastavte ho na novou hodnotu. Nemáte odeberte příznak Null s `SetFieldNull`. Chcete-li zjistit, zda pole může mít hodnotu Null, volejte [IsFieldNullable](#isfieldnullable).  
+ Pokud používáte mechanismus dvojité ukládání do vyrovnávací paměti, například pokud chcete konkrétně určíte pole na aktuální záznam, který nemá hodnotu volání `SetFieldNull` s *bNull* nastavena na **TRUE** na příznak jej jako hodnotu Null. Pokud byl dříve označená pole hodnotu Null a teď chcete u ní hodnotu, jednoduše nastavte ho na novou hodnotu. Nemáte odeberte příznak Null s `SetFieldNull`. Chcete-li zjistit, zda pole může mít hodnotu Null, volejte [IsFieldNullable](#isfieldnullable).  
   
  Pokud nepoužíváte mechanismus dvojité ukládání do vyrovnávací paměti, změna pole nenastaví automaticky pole jako nekonzistentní a nesmí být nulová. Konkrétně je nutné nastavit pole nekonzistence a nesmí být nulová. Příznak obsažené v [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) ovládací prvky tato kontrola automatické pole.  
   
@@ -2158,22 +2158,22 @@ void SetFieldValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězec, který obsahuje název pole.  
   
- `varValue`  
+ *varValue*  
  Odkaz na [COleVariant](../../mfc/reference/colevariant-class.md) objekt, který obsahuje hodnotu v polích.  
   
- `nIndex`  
+ *nIndex*  
  Celé číslo, které představuje pořadové číslo pozice pole v kolekci polí sady záznamů (počítáno od nuly).  
   
- `lpszValue`  
+ *lpszValue*  
  Ukazatel na řetězec obsahující hodnotu v polích.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `SetFieldValue` a [GetFieldValue](#getfieldvalue) dynamicky svázat pole v době běhu spíše než staticky vazba sloupce pomocí [DoFieldExchange](#dofieldexchange) mechanismus.  
   
- Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, je nutné použít forma `SetFieldValue` , neobsahuje `COleVariant` parametr nebo `COleVariant` objekt musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
+ Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, je nutné použít forma `SetFieldValue` , neobsahuje `COleVariant` parametr nebo `COleVariant` objekt musí být explicitně deklarován ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  Související informace najdete v tématech "Objekt pole" a "Hodnota vlastnosti" v nápovědě rozhraní DAO.  
   
@@ -2186,10 +2186,10 @@ void SetFieldValueNull(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index pole v sadě záznamů, pro vyhledávání indexem.  
   
- `lpszName`  
+ *lpszName*  
  Název pole v sadě záznamů pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2209,13 +2209,13 @@ void SetLockingMode(BOOL bPessimistic);
  Příznak, který určuje typ uzamčení.  
   
 ### <a name="remarks"></a>Poznámky  
- Kdy pesimistické zamykání je v platnosti, stránka 2 kB, která obsahuje záznam upravujete uzamčeno, jakmile zavoláte **upravit** – členská funkce. Stránka je odemčený při volání **aktualizace** nebo **Zavřít** – členská funkce nebo všechny operace přesunutí nebo najít.  
+ Kdy pesimistické zamykání je v platnosti, stránka 2 kB, která obsahuje záznam upravujete uzamčeno, jakmile zavoláte `Edit` – členská funkce. Stránka je odemčený při volání `Update` nebo `Close` – členská funkce nebo všechny operace přesunutí nebo najít.  
   
- Když optimistické zamykání je v platnosti, stránka 2 kB, která obsahuje záznam uzamčeno pouze tehdy, když probíhá aktualizace záznamu **aktualizace** – členská funkce.  
+ Když optimistické zamykání je v platnosti, stránka 2 kB, která obsahuje záznam uzamčeno pouze tehdy, když probíhá aktualizace záznamu `Update` – členská funkce.  
   
- Pokud je uzamčené na stránce, můžete žádný uživatel upravit záznamy na stejné stránce. Když zavoláte `SetLockingMode` a předat nenulovou hodnotu a jiný uživatel již má stránce uzamčen, je vyvolána výjimka při volání **upravit**. Ostatní uživatelé mohou číst data z uzamčených stránek.  
+ Pokud je uzamčené na stránce, můžete žádný uživatel upravit záznamy na stejné stránce. Když zavoláte `SetLockingMode` a předat nenulovou hodnotu a jiný uživatel již má stránce uzamčen, je vyvolána výjimka při volání `Edit`. Ostatní uživatelé mohou číst data z uzamčených stránek.  
   
- Když zavoláte `SetLockingMode` s hodnotou nula a novější volání **aktualizace** při stránky je uzamčen jiným uživatelem, dojde k výjimce. Chcete-li zobrazit změny k záznamu jiným uživatelem (a ztratit změny), zavolejte `SetBookmark` – členská funkce s hodnotou záložku na aktuální záznam.  
+ Když zavoláte `SetLockingMode` s hodnotou nula a novější volání `Update` při stránky je uzamčen jiným uživatelem, dojde k výjimce. Chcete-li zobrazit změny k záznamu jiným uživatelem (a ztratit změny), zavolejte `SetBookmark` – členská funkce s hodnotou záložku na aktuální záznam.  
   
  Při práci s zdroje dat ODBC, je vždy optimistické zamykání režimu.  
   
@@ -2234,19 +2234,19 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Číselné pozice parametr v kolekci parametrů querydef.  
   
- `var`  
+ *var*  
  Hodnota k nastavení; v části poznámky.  
   
- `lpszName`  
+ *lpszName*  
  Název parametru, jehož hodnota, kterou chcete nastavit.  
   
 ### <a name="remarks"></a>Poznámky  
  Parametr musí již byly vytvořeny jako součást řetězec SQL sady záznamů. Parametr můžete přistupovat pomocí názvu nebo pomocí pozici indexu v kolekci.  
   
- Zadejte hodnotu pro nastavení jako `COleVariant` objektu. Informace o nastavení požadovanou hodnotu a pak zadejte vaše `COleVariant` objektů najdete v tématu třídy [COleVariant](../../mfc/reference/colevariant-class.md). Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. To můžete provést pomocí [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formu – konstruktor s `vtSrc` nastavena na `VT_BSTRT` (ANSI) nebo pomocí **COleVariant** funkce [SetString –](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** s `vtSrc` nastavena na `VT_BSTRT`.  
+ Zadejte hodnotu pro nastavení jako `COleVariant` objektu. Informace o nastavení požadovanou hodnotu a pak zadejte vaše `COleVariant` objektů najdete v tématu třídy [COleVariant](../../mfc/reference/colevariant-class.md). Všimněte si, že pokud nejsou vytvoření sady záznamů znakové sady UNICODE, `COleVariant` objekt musí být explicitně deklarován ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
 ##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  Volání této funkce člen nastavit parametr na hodnotu Null.  
@@ -2257,10 +2257,10 @@ void SetParamValueNull(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index pole v sadě záznamů, pro vyhledávání indexem.  
   
- `lpszName`  
+ *lpszName*  
  Název pole v sadě záznamů pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2288,23 +2288,23 @@ void SetPercentPosition(float fPosition);
  Související informace naleznete v tématu "PercentPosition vlastnost" v nápovědě rozhraní DAO.  
   
 ##  <a name="update"></a>  CDaoRecordset::Update  
- Volání této funkce člen po volání `AddNew` nebo **upravit** – členská funkce.  
+ Volání této funkce člen po volání `AddNew` nebo `Edit` – členská funkce.  
   
 ```  
 virtual void Update();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Toto volání je nutné pro dokončení `AddNew` nebo **upravit** operaci.  
+ Toto volání je nutné pro dokončení `AddNew` nebo `Edit` operaci.  
   
- Obě `AddNew` a **upravit** příprava ve kterém je umístěn přidané nebo upravených dat vyrovnávací paměti pro ukládání ke zdroji dat. **Aktualizace** uloží data. Jsou aktualizovány pouze pole označené nebo detekované jako změnit.  
+ Obě `AddNew` a `Edit` příprava ve kterém je umístěn přidané nebo upravených dat vyrovnávací paměti pro ukládání ke zdroji dat. `Update` uloží data. Jsou aktualizovány pouze pole označené nebo detekované jako změnit.  
   
- Pokud zdroj dat podporuje transakce, můžete provést **aktualizace** volání (a odpovídající `AddNew` nebo **upravit** volání) součástí transakce.  
+ Pokud zdroj dat podporuje transakce, můžete provést `Update` volání (a odpovídající `AddNew` nebo `Edit` volání) součástí transakce.  
   
 > [!CAUTION]
->  Když zavoláte **aktualizace** bez předchozího volání `AddNew` nebo **upravit**, **aktualizace** vyvolá `CDaoException`. Když zavoláte `AddNew` nebo **upravit**, musí volat **aktualizace** před voláním [MoveNext](#movenext) nebo zavřete připojení ke zdroji dat nebo sady záznamů. Jinak vaše změny budou ztraceny bez oznámení.  
+>  Když zavoláte `Update` bez předchozího volání `AddNew` nebo `Edit`, `Update` vyvolá `CDaoException`. Když zavoláte `AddNew` nebo `Edit`, musí volat `Update` před voláním [MoveNext](#movenext) nebo zavřete připojení ke zdroji dat nebo sady záznamů. Jinak vaše změny budou ztraceny bez oznámení.  
   
- Když objekt sady záznamů pessimistically uzamčené v prostředí s více uživateli, zůstane uzamčen od okamžiku záznamu **upravit** se používá, dokud nebude aktualizaci. Pokud sada záznamů je ideálním případě uzamčené, záznamu je uzamčena a porovnání s předem upravený záznam těsně před je aktualizována v databázi. Pokud záznam došlo ke změně vzhledem k tomu, že jste volali metodu **upravit**, **aktualizace** operace selže a MFC vyvolá výjimku. Můžete změnit režim uzamčení s `SetLockingMode`.  
+ Když objekt sady záznamů pessimistically uzamčené v prostředí s více uživateli, zůstane uzamčen od okamžiku záznamu `Edit` se používá, dokud nebude aktualizaci. Pokud sada záznamů je ideálním případě uzamčené, záznamu je uzamčena a porovnání s předem upravený záznam těsně před je aktualizována v databázi. Pokud záznam došlo ke změně vzhledem k tomu, že jste volali metodu `Edit`, `Update` operace selže a MFC vyvolá výjimku. Můžete změnit režim uzamčení s `SetLockingMode`.  
   
 > [!NOTE]
 >  Optimistické zamykání se vždy na externí databáze formáty, například rozhraní ODBC a instalovat ISAM používá.  

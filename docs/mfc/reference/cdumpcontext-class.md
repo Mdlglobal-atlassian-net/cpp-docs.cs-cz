@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367390"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955440"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext – třída
 Výstup diagnostiky podporuje orientované datového proudu ve formě čitelný text.  
@@ -79,7 +79,7 @@ class CDumpContext
   
  `CDumpContext` Třída má přetížené vložení ( **<<**) operátor pro `CObject` ukazatele, které vypíše data objektu. Pokud potřebujete vlastní výpis formát pro objekt odvozené, mají přednost před [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Většina tříd Microsoft Foundation implementovat překryté `Dump` – členská funkce.  
   
- Třídy, které nejsou odvozeny od `CObject`, jako například `CString`, `CTime`, a `CTimeSpan`, mají své vlastní přetížené `CDumpContext` operátorů insertion jako struktury proveďte často používá jako **CFileStatus**, `CPoint`, a `CRect`.  
+ Třídy, které nejsou odvozeny od `CObject`, jako například `CString`, `CTime`, a `CTimeSpan`, mají své vlastní přetížené `CDumpContext` operátorů insertion jako struktury proveďte často používá jako `CFileStatus`, `CPoint`, a `CRect`.  
   
  Pokud použijete [implement_dynamic –](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) nebo [implement_serial –](../../mfc/reference/run-time-object-model-services.md#implement_serial) makro k implementaci třídy, pak `CObject::Dump` vypíše název vaší `CObject`-odvozené třídy. Jinak bude tisk `CObject`.  
   
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFile`  
+ *pFile*  
  Ukazatel `CFile` objekt, který je cílem výpis.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -180,10 +180,10 @@ void HexDump(
  *pby*  
  Ukazatel na vyrovnávací paměť obsahující bajty k dump.  
   
- `nBytes`  
+ *nBytes*  
  Počet bajtů, které mají dump.  
   
- `nWidth`  
+ *nWindth*  
  Maximální počet bajtů zálohované na každý řádek (není šířku čáry výstup).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -223,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  A `CDumpContext` odkaz. Pomocí návratové hodnoty, můžete napsat více vložení na jeden řádek zdrojového kódu.  
   
 ### <a name="remarks"></a>Poznámky  
- Operátor vložení je přetížena pro `CObject` ukazatele stejně jako u nejvíce primitivní typy. Ukazatel na znak výsledkem výpis obsahu řetězce; ukazatel na `void` výsledkem hexadecimální výpis pouze adresy. A **LONGLONG** výsledkem výpis 64-bit znaménkem; A **ULONGLONG** výsledkem výpis celé číslo bez znaménka 64-bit.  
+ Operátor vložení je přetížena pro `CObject` ukazatele stejně jako u nejvíce primitivní typy. Ukazatel na znak výsledkem výpis obsahu řetězce; ukazatel na **void** výsledkem hexadecimální výpis pouze adresy. A **LONGLONG** výsledkem výpis 64-bit znaménkem; A **ULONGLONG** výsledkem výpis celé číslo bez znaménka 64-bit.  
   
  Pokud použijete `IMPLEMENT_DYNAMIC` nebo `IMPLEMENT_SERIAL` makro k implementaci třídě, pak se operátor vložení prostřednictvím `CObject::Dump`, vytiskne název vaší `CObject`-odvozené třídy. Jinak bude tisk `CObject`. Pokud přepíšete `Dump` funkce třídu, pak může poskytnout smysluplnější výstup obsah objektu namísto šestnáctkové výpis.  
   

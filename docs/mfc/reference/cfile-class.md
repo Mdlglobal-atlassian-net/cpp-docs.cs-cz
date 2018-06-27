@@ -1,7 +1,7 @@
 ---
 title: Cfile – třída | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957557"
 ---
 # <a name="cfile-class"></a>Cfile – třída
 Základní třída pro třídy Microsoft Foundation Class souborů.  
@@ -169,9 +170,9 @@ virtual void Abort();
 ### <a name="remarks"></a>Poznámky  
  Pokud jste ještě zavřeli soubor před zničení objektu, destruktoru se automaticky zavře.  
   
- Při zpracování výjimek, `CFile::Abort` se liší od `CFile::Close` důležité dvěma způsoby. Nejdřív **Abort** funkce nebude vyvolat výjimku o selhání, protože selhání ignorují podle **Abort**. Druhý, **Abort** nikoli **ASSERT** Pokud je soubor nebyl otevřen nebo dříve bylo ukončeno.  
+ Při zpracování výjimek, `CFile::Abort` se liší od `CFile::Close` důležité dvěma způsoby. Nejdřív `Abort` funkce nebude vyvolat výjimku o selhání, protože selhání ignorují podle `Abort`. Druhý, `Abort` nikoli **ASSERT** Pokud je soubor nebyl otevřen nebo dříve bylo ukončeno.  
   
- Pokud jste použili **nové** přidělit `CFile` objektu v haldě, pak je nutné odstranit po zavření souboru. **Abort –** nastaví `m_hFile` k `CFile::hFileNull`.  
+ Pokud jste použili **nové** přidělit `CFile` objektu v haldě, pak je nutné odstranit po zavření souboru. `Abort` Nastaví `m_hFile` k `CFile::hFileNull`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
+ *hfile –*  
  Popisovač souboru pro připojení k `CFile` objektu.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Úplná nebo relativní cestu k souboru pro připojení k `CFile` objektu.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Bitová kombinace (nebo) možnosti přístupu k souboru pro zadaný soubor. Dostupné možnosti v části poznámky.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="remarks"></a>Poznámky  
- Následujících pět tabulkách jsou uvedeny dostupné možnosti `nOpenFlags` parametr.  
+ Následujících pět tabulkách jsou uvedeny dostupné možnosti *nOpenFlags* parametr.  
   
  Zvolte pouze jeden z následujících možností režimu přístup k souboru. Výchozí režim přístupu k souboru je `CFile::modeRead`, která je jen pro čtení.  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|Vytvoří nový soubor, pokud neexistuje žádný soubor.; Pokud soubor již existuje, [CFileException](../../mfc/reference/cfileexception-class.md) je vyvolána.|  
+|`CFile::modeCreate`|Vytvoří nový soubor, pokud neexistuje žádný soubor. Pokud soubor již existuje, je přepsat a zpočátku nastavena na nulové délky.|  
 |`CFile::modeNoTruncate`|Vytvoří nový soubor, pokud neexistuje žádný soubor; jinak, pokud soubor již existuje, je připojen k `CFile` objektu.|  
   
  Vyberte následující soubor, ukládání do mezipaměti možnosti, jak je popsáno. Ve výchozím nastavení používá systém obecné účely ukládání do mezipaměti schématu, která není k dispozici možnost.  
@@ -282,7 +283,7 @@ virtual void Close();
 ### <a name="remarks"></a>Poznámky  
  Pokud jste ještě zavřeli soubor před zničení objektu, destruktoru se automaticky zavře.  
   
- Pokud jste použili **nové** přidělit `CFile` objektu v haldě, pak je nutné odstranit po zavření souboru. **Zavřít** nastaví `m_hFile` k `CFile::hFileNull`.  
+ Pokud jste použili **nové** přidělit `CFile` objektu v haldě, pak je nutné odstranit po zavření souboru. `Close` Nastaví `m_hFile` k `CFile::hFileNull`.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CFile::CFile](#cfile).  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rStatus`  
+ *rStatus*  
  Odkaz na uživatelem zadané **CFileStatus** struktura, která bude přijímat informace o stavu. **CFileStatus** struktura má následující pole:  
   
 - **CTime – m_ctime** datum a čas vytvoření souboru.  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **Char – m_szFullName [_max_path –]** absolutní název souboru ve znakové sadě Windows.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec v systému Windows znak nastavení tedy cesty požadovaný soubor. Cesta může být relativní nebo absolutní, nebo může obsahovat název cesty sítě.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwPos`  
+ *dwPos*  
  Posun bajtů spuštění rozsah bajtů k uzamčení.  
   
- `dwCount`  
+ *dwCount*  
  Počet bajtů v rozsahu k uzamčení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="open"></a>  CFile::Open  
- Přetíženo. **Otevřete** je určen k použití s výchozím `CFile` konstruktor.  
+ Přetíženo. `Open` je určený k použití s výchozím `CFile` konstruktor.  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec, který je cesta k souboru požadovaného. Cesta může být relativní, absolutní nebo název sítě (UNC).  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  A **Celé_číslo** režimu sdílení a přístup k souboru, který definuje. Určuje akci, která se má provést při otevření souboru. Možnosti můžete kombinovat pomocí bitové operace OR ( **&#124;** ) operátor. Jeden přístupová oprávnění a možnost jednu sdílenou složku jsou povinné; **modeCreate** a **modeNoInherit** režimy jsou volitelné. Najdete v článku [cfile –](#cfile) konstruktor seznam možností režimu.  
   
- `pError`  
+ *pError*  
  Ukazatel na existující objekt výjimky souborů, který se zobrazí stav neúspěšnou operaci.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud open byla úspěšná. jinak 0. `pError` Parametr má smysl pouze v případě, že se vrátí 0.  
+ Nenulové hodnoty, pokud open byla úspěšná. jinak 0. *PError* parametr má smysl pouze v případě, že se vrátí 0.  
   
 ### <a name="remarks"></a>Poznámky  
  Dvě funkce představují "bezpečnou" metodu pro otevření souboru, kde selhání je normální, očekávané podmínku.  
   
- Když `CFile` konstruktor vyvolá výjimku v chybový stav, **otevřete** vrátí **FALSE** pro chybové podmínky. **Otevřete** můžete stále inicializovat [CFileException](../../mfc/reference/cfileexception-class.md) objekt, který má v chybě, ale popisují. Pokud nezadáte `pError` parametr, nebo Pokud předáte **NULL** pro `pError`, **otevřete** vrátí **FALSE** a nevyvolá výjimku `CFileException`. Pokud předáte ukazatel na stávající `CFileException`, a **otevřete** komunikaci se chyba, funkce bude vyplňte informace, které popisují chybu. V ani případu bude **otevřete** výjimku.  
+ Když `CFile` konstruktor v chybový stav, vyvolá výjimku `Open` vrátí **FALSE** pro chybové podmínky. `Open` můžete stále inicializaci [CFileException](../../mfc/reference/cfileexception-class.md) objekt, který má v chybě, ale popisují. Pokud nezadáte *pError* parametr, nebo Pokud předáte **NULL** pro *pError*, `Open` vrátí **FALSE** a nevyvolá výjimku `CFileException`. Pokud předáte ukazatel na stávající `CFileException`, a `Open` komunikaci se chyba, funkce bude vyplňte informace, které popisují chybu. V ani případu bude `Open` výjimku.  
   
- Následující tabulka popisuje možné výsledky **otevřete**.  
+ Následující tabulka popisuje možné výsledky `Open`.  
   
 |`pError`|Došlo k chybě|Návratová hodnota|CFileException obsahu|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -583,14 +584,14 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Ukazatel do vyrovnávací paměti zadanou uživatelem, který je pro příjem dat ze souboru přečíst.  
   
- `nCount`  
+ *nCount*  
  Maximální počet bajtů ke čtení ze souboru. Pro režim textové soubory znaků CR vrátit-konce řádku páry se počítají jako jeden znaků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet bajtů přenesených do vyrovnávací paměti. Všimněte si, že se pro všechny `CFile` třídy, může být návratovou hodnotu menší než `nCount` Pokud bylo dosaženo konce souboru.  
+ Počet bajtů přenesených do vyrovnávací paměti. Všimněte si, že se pro všechny `CFile` třídy, může být návratovou hodnotu menší než *nCount* Pokud bylo dosaženo konce souboru.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec, který je cesta k souboru požadovaného. Cesta může být relativní nebo absolutní a může obsahovat název sítě.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="remarks"></a>Poznámky  
@@ -632,13 +633,13 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszOldName`  
+ *lpszOldName*  
  Staré cestě.  
   
- `lpszNewName`  
+ *lpszNewName*  
  Novou cestu.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="remarks"></a>Poznámky  
@@ -657,17 +658,17 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lOff`  
+ *lOff*  
  Počet bajtů, které mají přesunout ukazatele souboru. Kladné hodnoty přesunout ukazatel souboru na konci souboru. záporné hodnoty přesunout na začátek souboru ukazatele souboru.  
   
- `nFrom`  
+ *nFrom*  
  Pozice k vyhledání z. Možné hodnoty v části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pozice souboru ukazatele, pokud metoda byla úspěšná. jinak, není definován návratovou hodnotu a odkazy `CFileException` je vyvolána výjimka.  
   
 ### <a name="remarks"></a>Poznámky  
- Následující tabulka uvádí možné hodnoty pro `nFrom` parametr.  
+ Následující tabulka uvádí možné hodnoty pro *nFrom* parametr.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszNewName`  
+ *lpszNewName*  
  Ukazatel na řetězec určující novou cestu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwNewLen`  
+ *dwNewLen*  
  Požadovaná délka souboru v bajtech. Tato hodnota může být větší nebo menší než aktuální délka souboru. Soubor se rozšířené nebo zkrácen podle potřeby.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec, který je cesta k souboru požadovaného. Cesta může být relativní nebo absolutní a může obsahovat název sítě.  
   
  *Stav*  
  Vyrovnávací paměť, která obsahuje nové informace o stavu. Volání **GetStatus** členské funkce k prefill **CFileStatus** struktury pomocí aktuálních hodnot, a potom provést změny podle potřeby. Pokud je hodnota 0, není aktualizován odpovídající položka stavu. Najdete v článku [GetStatus](#getstatus) – členská funkce Popis **CFileStatus** struktura.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="remarks"></a>Poznámky  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwPos`  
+ *dwPos*  
  Posun bajtů spuštění rozsah bajtů k odemčení.  
   
- `dwCount`  
+ *dwCount*  
  Počet bajtů v rozsahu odemknout.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -814,10 +815,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Ukazatel do vyrovnávací paměti zadanou uživatelem, který obsahuje data, která má být zapsán do souboru.  
   
- `nCount`  
+ *nCount*  
  Počet bajtů, které se mají přenést z vyrovnávací paměti. Pro režim textové soubory znaků CR vrátit-konce řádku páry se počítají jako jeden znaků.  
   
 ### <a name="remarks"></a>Poznámky  

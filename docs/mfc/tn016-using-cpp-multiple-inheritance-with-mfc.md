@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384085"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954855"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Použití vícenásobné dědičnosti jazyka C++ v prostředí MFC
 Tato poznámka popisuje, jak pomocí třídy Microsoft Foundation vícenásobná dědičnost (MI). Použití MI se nevyžaduje MFC. MI ještě není používáno ve všech tříd MFC a není nutné zapsat knihovny tříd.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- V takovém případě `CObject` je součástí dvakrát. To znamená, že budete potřebovat způsob k rozlišení všechny odkazy na `CObject` metody nebo operátory. `operator new` a [delete – operátor](../mfc/reference/cobject-class.md#operator_delete) jsou dva operátory, které musí jednoznačně rozlišit. Například následující kód způsobí chybu v době kompilace:  
+ V takovém případě `CObject` je součástí dvakrát. To znamená, že budete potřebovat způsob k rozlišení všechny odkazy na `CObject` metody nebo operátory. **New – operátor** a [delete – operátor](../mfc/reference/cobject-class.md#operator_delete) jsou dva operátory, které musí jednoznačně rozlišit. Například následující kód způsobí chybu v době kompilace:  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Reimplementing metody CObject  
- Když vytvoříte novou třídu, která má dva nebo více `CObject` odvozené třídy base měli přeimplementovat `CObject` metody, které chcete ostatním používat. Operátory `new` a `delete` jsou povinné a [Dump](../mfc/reference/cobject-class.md#dump) se doporučuje. Následující příklad reimplements `new` a `delete` operátory a `Dump` metoda:  
+ Když vytvoříte novou třídu, která má dva nebo více `CObject` odvozené třídy base měli přeimplementovat `CObject` metody, které chcete ostatním používat. Operátory **nové** a **odstranit** jsou povinné a [Dump](../mfc/reference/cobject-class.md#dump) se doporučuje. Následující příklad reimplements **nové** a **odstranit** operátory a `Dump` metoda:  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  Zdát, že prakticky dědění `CObject` by vyřešen nejednoznačnosti funkce, ale které se nevztahuje na případ. Vzhledem k tomu, že neexistují žádná data člena v `CObject`, není nutné virtuální dědičnost, aby se zabránilo více kopií dat člena třídy base. V prvním příkladu, která byla dříve, zobrazí `Dump` virtuální metoda je stále nejednoznačné, protože je implementována jinak v `CFrameWnd` a `CObList`. Nejlepší způsob, jak odebrat nejednoznačnosti je postupujte podle doporučení uvedená v předchozí části.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf a zadáte běhu  
- Zadáním mechanismus běhu nepodporuje MFC v `CObject` používá makra `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` a `IMPLEMENT_SERIAL`. Tyto makra můžete provést kontrolu typu běhu k zajištění bezpečného downcasts.  
+ Zadáním mechanismus běhu nepodporuje MFC v `CObject` používá DECLARE_DYNAMIC, implement_dynamic –, DECLARE_DYNCREATE –, IMPLEMENT_DYNCREATE, declare_serial – a implement_serial – makra. Tyto makra můžete provést kontrolu typu běhu k zajištění bezpečného downcasts.  
   
- Tyto makra podporují pouze jediná základní třída a bude fungovat v omezené míře pro násobkem zděděné třídy. Základní třída zadáte v `IMPLEMENT_DYNAMIC` nebo `IMPLEMENT_SERIAL` by měla být základní třídy první (nebo nejvíce vlevo). Toto umístění vám umožní kontrola pro základní třídu nejvíce vlevo pouze typu. Systém typů běhu vědět nic o další základní třídy. V následujícím příkladu, systémy běhu provede kontrolu proti typu `CFrameWnd`, ale nic vědět o `CObList`.  
+ Tyto makra podporují pouze jediná základní třída a bude fungovat v omezené míře pro násobkem zděděné třídy. Základní třídy, které zadáte v implement_dynamic – nebo implement_serial – musí být základní třídy první (nebo nejvíce vlevo). Toto umístění vám umožní kontrola pro základní třídu nejvíce vlevo pouze typu. Systém typů běhu vědět nic o další základní třídy. V následujícím příkladu, systémy běhu provede kontrolu proti typu `CFrameWnd`, ale nic vědět o `CObList`.  
   
 ```  
 class CListWnd : public CFrameWnd,

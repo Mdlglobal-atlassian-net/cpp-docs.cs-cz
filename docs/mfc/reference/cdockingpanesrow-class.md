@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43372dd34088b8adda3f5fc8a9f5573695f0c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370000"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955264"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow – třída
 Spravuje seznam podokna, které se nacházejí ve stejném vodorovné nebo svislé řádku (sloupec) lokality ukotvení.  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
- [v] `dockMethod`  
- [v] `lpRect`  
- [v] `bAddLast`  
+ [v] *pControlBar*  
+ [v] *dockMethod*  
+ [v] *lprect –*  
+ [v] *bAddLast*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -218,8 +218,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
- [v] `dockMethod`  
+ [v] *pControlBar*  
+ [v] *dockMethod*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -233,10 +233,10 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nMargin`  
+ [v] *nMargin*  
  Určuje posun v pixelech podokně první z levého horního rohu řádku.  
   
- [v] `nSpacing`  
+ [v] *nSpacing*  
  Určuje mezery, v pixelech, mezi podokna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bStretch`  
- [v] `bHorz`  
+ [v] *bStretch*  
+ [v] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -270,9 +270,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParentDockBar`  
- [v] `nOffset`  
- [v] `nHeight`  
+ [v] *pParentDockBar*  
+ [v] *nOffset*  
+ [v] *nHeight*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bMoveBackToVirtualRect`  
- [v] `pBarToExclude`  
+ [v] *bMoveBackToVirtualRect*  
+ [v] *pBarToExclude*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -328,7 +328,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bUseVirtualRect`  
+ [v] *bUseVirtualRect*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -342,7 +342,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -354,7 +354,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
- [v] `lst`  
+ [v] *pBar*  
+ [v] *obrázků*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -414,7 +414,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSkipHiddenBars`  
+ [v] *bSkipHiddenBars*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -494,7 +494,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -506,7 +506,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -564,7 +564,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nOffset`  
+ [v] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
- [v] `ptOffset`  
- [v] `bSwapControlBars`  
- [v] `hdwp`  
- [v] `rectTarget`  
- [v] `nOffset`  
- [v] `bForward`  
- [v] `nAbsolutOffset`  
+ [v] *pControlBar*  
+ [v] *ptOffset*  
+ [v] *bSwapControlBars*  
+ [v] *hdwp*  
+ [v] *rectTarget*  
+ [v] *nOffset*  
+ [v] *bForward*  
+ [v] *nAbsolutOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -618,7 +618,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -639,7 +639,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBarOld`  
- [v] `pBarNew`  
+ [v] *pBarOld*  
+ [v] *pBarNew*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rectNewParentBarArea`  
- [v] `nSide`  
- [v] `bExpand`  
- [v] `nOffset`  
+ [v] *rectNewParentBarArea*  
+ [v] *nSide*  
+ [v] *bExpand*  
+ [v] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -687,7 +687,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nOffset`  
+ [v] *nOffset*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -701,7 +701,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `int`  
+ [v] *int*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -715,7 +715,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nExtraSpace`  
- [v] `rowExtraAlign`  
+ [v] *nExtraSpace*  
+ [v] *rowExtraAlign*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
- [v] `bDelay`  
+ [v] *bShow*  
+ [v] *bDelay*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -760,9 +760,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
- [v] `bShow`  
- [v] `bDelay`  
+ [v] *pControlBar*  
+ [v] *bShow*  
+ [v] *bDelay*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -776,7 +776,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bDelay`  
+ [v] *bDelay*  
   
 ### <a name="remarks"></a>Poznámky  
   

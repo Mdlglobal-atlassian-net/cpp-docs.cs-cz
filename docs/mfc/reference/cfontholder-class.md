@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6e85500f87c1ea88c46418d1f6b698a2d10976
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367513"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954114"
 ---
 # <a name="cfontholder-class"></a>CFontHolder – třída
 Implementuje uložených vlastností písma a zapouzdřuje funkce Windows objektu písma a `IFont` rozhraní.  
@@ -112,7 +112,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strValue`  
+ *strValue*  
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který má obsahovat řetězec zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -126,7 +126,7 @@ LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CFontHolder` objektu **IFontDisp** rozhraní. Všimněte si, že funkce, která volá `GetFontDispatch` musí volat `IUnknown::Release` na tento ukazatel rozhraní po jeho dokončení.  
+ Ukazatel `CFontHolder` objektu `IFontDisp` rozhraní. Všimněte si, že funkce, která volá `GetFontDispatch` musí volat `IUnknown::Release` na tento ukazatel rozhraní po jeho dokončení.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání `InitializeFont` před voláním `GetFontDispatch`.  
@@ -144,19 +144,19 @@ HFONT GetFontHandle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cyLogical`  
+ *cyLogical*  
  Výška v logických jednotek, obdélníku, ve kterém se nevykreslí ovládacího prvku.  
   
- `cyHimetric`  
+ *cyHimetric*  
  Výška v `MM_HIMETRIC` jednotky ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro objekt písma; v opačném případě **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
- Poměr `cyLogical` a `cyHimetric` se používá k výpočtu velikost správné zobrazení v logické jednotky pro velikost písma v bodech vyjádřené v `MM_HIMETRIC` jednotky:  
+ Poměr *cyLogical* a *cyHimetric* se používá k výpočtu velikost správné zobrazení v logické jednotky pro velikost písma v bodech vyjádřené v `MM_HIMETRIC` jednotky:  
   
- Zobrazí velikost = ( `cyLogical`  /  `cyHimetric`) X velikost písma  
+ Zobrazí velikost = ( *cyLogical* / *cyHimetric*) X velikost písma  
   
  Verze bez parametrů vrátí popisovač písmo pro obrazovky správnou velikost.  
   
@@ -170,16 +170,16 @@ void InitializeFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFontDesc`  
+ *pFontDesc*  
  Ukazatel na strukturu popis písma ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), který určuje vlastnosti písma.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Ukazatel na kontejneru vedlejším Font – vlastnost.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `pFontDispAmbient` není **NULL**, `CFontHolder` klon je připojen objekt `IFont` rozhraní používá kontejneru vedlejším Font – vlastnost.  
+ Pokud *pFontDispAmbient* není **NULL**, `CFontHolder` klon je připojen objekt `IFont` rozhraní používá kontejneru vedlejším Font – vlastnost.  
   
- Pokud `pFontDispAmbient` je **NULL**, buď z popis písma, na kterou odkazuje je vytvořen nový objekt písma `pFontDesc` nebo, pokud `pFontDesc` je **NULL**, z výchozí popis.  
+ Pokud *pFontDispAmbient* je **NULL**, buď z popis písma, na kterou odkazuje je vytvořen nový objekt písma *pFontDesc* nebo, pokud *pFontDesc*je **NULL**, z výchozí popis.  
   
  Po vytváření volání této funkce `CFontHolder` objektu.  
   
@@ -198,7 +198,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lptm`  
+ *lptm*  
  Ukazatel [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktura, která bude přijímat informace.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
@@ -219,20 +219,20 @@ CFont* Select(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Kontext zařízení, do kterého je vybrána písmo.  
   
- `cyLogical`  
+ *cyLogical*  
  Výška v logických jednotek, obdélníku, ve kterém se nevykreslí ovládacího prvku.  
   
- `cyHimetric`  
+ *cyHimetric*  
  Výška v `MM_HIMETRIC` jednotky ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na písma, který se nahrazuje.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [GetFontHandle](#getfonthandle) diskuzi o `cyLogical` a `cyHimetric` parametry.  
+ V tématu [GetFontHandle](#getfonthandle) diskuzi o *cyLogical* a *cyHimetric* parametry.  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
  Uvolní všechny existující písma a připojí `CFontHolder` do objektu `IFont` rozhraní.  

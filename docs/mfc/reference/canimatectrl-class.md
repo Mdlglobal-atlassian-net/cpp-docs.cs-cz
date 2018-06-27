@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356393"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952323"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl – třída
 Poskytuje funkce Windows běžné ovládacího prvku animace.  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci windows podrobněji popsané v části poznámky níže a styly ovládacího prvku animace styly [styly ovládacího prvku animace](http://msdn.microsoft.com/library/windows/desktop/bb761886) ve Windows SDK.  
   
- `rect`  
+ *Rect –*  
  Určuje umístění a velikost ovládacího prvku animace. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
   
- `pParentWnd`  
- Určuje ovládacího prvku animace nadřazené okno, obvykle `CDialog`. Nesmí být **hodnotu NULL.**  
+ *pParentWnd*  
+ Určuje ovládacího prvku animace nadřazené okno, obvykle `CDialog`. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CAnimateCtrl` ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří ovládacího prvku animace a připojí jej k `CAnimateCtrl` objektu.  
+ Můžete vytvořit `CAnimateCtrl` ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří ovládacího prvku animace a připojí jej k `CAnimateCtrl` objektu.  
   
  Použít následující [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) do ovládacího prvku animace.  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **Ws_disabled –** zřídka  
   
- Pokud chcete styly rozšířené windows pomocí vlastního ovládacího prvku animace, zavolejte [CreateEx](#createex) místo **vytvořit**.  
+ Pokud chcete styly rozšířené windows pomocí vlastního ovládacího prvku animace, zavolejte [CreateEx](#createex) místo `Create`.  
   
  Kromě styly oken, uvedených výše můžete použít jeden nebo více stylů ovládacího prvku animace do ovládacího prvku animace. Sada Windows SDK pro další informace najdete na [styly ovládacího prvku animace](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci okna a styly ovládacího prvku animace popsaných v [styly ovládacího prvku animace](http://msdn.microsoft.com/library/windows/desktop/bb761886) ve Windows SDK.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  A `CString` objekt nebo ukazatel na řetězec ukončené hodnotou null, který obsahuje buď název souboru AVI nebo název prostředek souborů AVI. Pokud tento parametr je **NULL**, systém zavře klip souborů AVI, který byl dříve otevřen pro ovládacího prvku animace, pokud existuje.  
   
- `nID`  
+ *nID*  
  Identifikátor prostředku souborů AVI. Pokud tento parametr je **NULL**, systém zavře klip souborů AVI, který byl dříve otevřen pro ovládacího prvku animace, pokud existuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFrom`  
+ *nFrom*  
  Index rámečku, kde začíná přehrávání nule. Hodnota musí být menší než 65536. Hodnota 0 znamená začínat první snímek klip souborů AVI.  
   
- `nTo`  
+ *nChcete-li*  
  Index rámečku nule kde přehrávání elementy end. Hodnota musí být menší než 65536. Hodnota - 1 znamená končit klip souborů AVI s poslední snímek.  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTo`  
+ *nChcete-li*  
  Rámeček pro zobrazení index počítáno od nuly. Hodnota musí být menší než 65536. Hodnota 0 znamená zobrazení v klip souborů AVI první snímek. Hodnota -1 znamená zobrazení v klip souborů AVI poslední snímek.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354279"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954743"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap – třída
 Obálka pro ID2D1Bitmap.  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `uiResID`  
+ *uiResID*  
  Číslo ID prostředku prostředku.  
   
- `lpszType`  
+ *lpszType*  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje typ prostředku.  
   
- `sizeDest`  
+ *sizeDest*  
  Velikost cílového bitmapy.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
- `lpszPath`  
+ *lpszPath*  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje název souboru.  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  Popisovač bitové mapy.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Rastrový obrázek pro kopírování z  
   
- `destPoint`  
+ *destPoint*  
  V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován  
   
- `srcRect`  
+ *srcRect*  
  Oblasti rastrový obrázek ke zkopírování  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `srcData`  
+ *srcData*  
  Data ke zkopírování  
   
- `pitch`  
+ *Výška*  
  Stride nebo výška, uložené v srcData bitmapy zdroje. Stride je počet bajtů řádkového rozkladu (jeden řádek pixelů v paměti). Stride můžete vypočítaný z tohoto vzorce: šířka v pixelech * bajtů za pixelů + paměti odsazení  
   
- `destRect`  
+ *destRect*  
  V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Vykreslení cíl, který obsahuje oblast pro kopírování  
   
- `destPoint`  
+ *destPoint*  
  V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován  
   
- `srcRect`  
+ *srcRect*  
  Oblasti RenderTarget ke kopírování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ukazatel na cíl vykreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f74f20b1dcb20c1449d21e91181f8bfb17075b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
+ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912963"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963320"
 ---
 # <a name="fenvaccess"></a>fenv_access
 
-Zakáže (**na**) nebo umožňuje (**vypnout*) optimalizace, které by se mohly změnit s plovoucí desetinnou čárkou prostředí příznak testy a změny v režimu.
+Zakáže (**na**) nebo umožňuje (**vypnout**) optimalizace, které by se mohly změnit s plovoucí desetinnou čárkou prostředí příznak testy a změny v režimu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -112,6 +112,6 @@ int main() {
 out=1.000000000000000e-002
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
