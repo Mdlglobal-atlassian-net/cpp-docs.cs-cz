@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358255"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955645"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler – třída
 Implementuje zpětné volání, která je volána rozhraním API animace, když se změní stav správce animace.  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Ukazatel na animace řadiči, který bude přijímat události.  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  Výstup. Pokud metoda uspěje ji obsahuje ukazatel na objekt COM, který bude zpracovávat aktualizací stavu pro správce animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newStatus`  
+ *newStatus*  
  Nový stav.  
   
- `previousStatus`  
+ *previousStatus*  
  Předchozí stav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Ukazatel na animace řadiči, který bude přijímat události.  
   
 ## <a name="see-also"></a>Viz také  

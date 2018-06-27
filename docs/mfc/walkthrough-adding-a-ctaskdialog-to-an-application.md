@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384908"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951621"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Návod: Přidání objektu CTaskDialog do aplikace
 Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-class.md) a ukazuje, jak přidat do vaší aplikace.  
@@ -44,7 +44,7 @@ Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-cla
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Chcete nahradit objektu CTaskDialog systému Windows se zprávou  
   
-1.  Vytvořte nový projekt aplikace knihovny MFC s výchozím nastavením. Volání `MyProject`.  
+1.  Vytvořte nový projekt aplikace knihovny MFC s výchozím nastavením. Volání *MyProject*.  
   
 2.  Použití **Průzkumníku řešení** k otevření souboru MyProject.cpp.  
   
@@ -74,7 +74,7 @@ Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-cla
  }  
  ```  
   
-6.  Vložte následující kód do závorek po `if` příkaz z kroku 5. Tento kód vytvoří `CTaskDialog`.  
+6.  Vložte následující kód do závorek po **Pokud** příkaz z kroku 5. Tento kód vytvoří `CTaskDialog`.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-cla
   
 2.  Rozbalte **zobrazení prostředků** dokud můžete vybrat **tabulky řetězců** složky. Rozbalte ho a dvakrát klikněte na **tabulky řetězců** položku.  
   
-3.  Přejděte k dolnímu okraji řetězec tabulku a přidat novou položku. Změnit ID na `TEMP_LINE1`. Nastavte popisek na **1 příkazového řádku**.  
+3.  Přejděte k dolnímu okraji řetězec tabulku a přidat novou položku. Změnit ID na *TEMP_LINE1*. Nastavte popisek na *1 příkazového řádku*.  
   
-4.  Přidejte další novou položku. Změnit ID na `TEMP_LINE2`. Nastavte popisek na **příkazového řádku 2**.  
+4.  Přidejte další novou položku. Změnit ID na *TEMP_LINE2*. Nastavte popisek na *příkazového řádku 2*.  
   
 5.  Přejděte zpět do MyProject.cpp.  
   
@@ -192,7 +192,7 @@ Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-cla
   
 2.  Přejděte na pravou hranatou závorku pro `if (CTaskDialog::IsSupported())` příkaz.  
   
-3.  Vložte následující kód bezprostředně před uzavírací závorku `if` – příkaz (před `else` bloku):  
+3.  Vložte následující kód bezprostředně před uzavírací závorku **Pokud** – příkaz (před **else** bloku):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

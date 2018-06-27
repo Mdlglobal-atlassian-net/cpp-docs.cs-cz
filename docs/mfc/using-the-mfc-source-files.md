@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73177d8b73d5f4be6d886b0bda84f1e1241488cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69079e6f74743a82aa9e9b9b1c13703e480c904c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384332"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951539"
 ---
 # <a name="using-the-mfc-source-files"></a>Použití zdrojových souborů MFC
 Knihovna Microsoft Foundation Class (MFC) poskytuje úplný zdrojový kód. Soubory hlaviček (.h) jsou v adresáři \atlmfc\include; implementace soubory (sada), jsou v adresáři \atlmfc\src\mfc.  
   
  Této rodině článků popisuje konvence, které MFC používá pro různé součásti každá třída, co znamená tyto komentáře a co byste měli očekávat najít v každé části komentáře k. Průvodci Visual C++ použít podobné konvence pro třídy, které pro vás vytvořil, a je pravděpodobně užitečné tyto konvence pro vlastní kód.  
   
- Je možné, že znáte **veřejné**, `protected`, a `private` klíčová slova jazyka C++. Při prohlížení soubory hlaviček MFC, zjistíte, že každá třída může mít několik každý z těchto. Například může být veřejné členské proměnné a funkce v rámci více než jednoho **veřejné** – klíčové slovo. To je proto MFC odděluje členské proměnné a funkce na základě jejich používání není typ přístupu povolena. MFC používá `private` pouze; považuje za i položky podrobnosti implementace jsou obecně chráněné a tolikrát, kolikrát se veřejné. I když se nedoporučuje. přístup k podrobnosti implementace, MFC ponechá rozhodnutí pro vás.  
+ Je možné, že znáte **veřejné**, **chráněné**, a **privátní** klíčová slova jazyka C++. Při prohlížení soubory hlaviček MFC, zjistíte, že každá třída může mít několik každý z těchto. Například může být veřejné členské proměnné a funkce v rámci více než jednoho **veřejné** – klíčové slovo. To je proto MFC odděluje členské proměnné a funkce na základě jejich používání není typ přístupu povolena. MFC používá **privátní** pouze; považuje za i položky podrobnosti implementace jsou obecně chráněné a tolikrát, kolikrát se veřejné. I když se nedoporučuje. přístup k podrobnosti implementace, MFC ponechá rozhodnutí pro vás.  
   
  Ve zdrojových souborech MFC a soubory, které vytvoří Průvodce aplikací MFC zjistíte komentáře takovéto v deklaracích třídy (obvykle v tomto pořadí):  
   

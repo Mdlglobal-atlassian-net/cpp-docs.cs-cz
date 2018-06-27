@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9020eb0165a0f06e430caa6a0e1641ea1afb3d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cf3f78624761b364bf192876cb8368c73507e86
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358339"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951572"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush – třída
 Obálka pro ID2D1SolidColorBrush.  
@@ -113,7 +113,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
@@ -136,19 +136,19 @@ CD2DSolidColorBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `color`  
+ *Barva*  
  Červené, zelené, modré a alfa hodnoty stopy barvy.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ukazatel na krytí a transformace štětce.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
- `nAlpha`  
+ *nAlpha*  
  Neprůhlednost stopy barvy.  
   
 ##  <a name="create"></a>  CD2DSolidColorBrush::Create  
@@ -159,7 +159,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ukazatel na cíl vykreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -234,7 +234,7 @@ void SetColor(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Barva tento plnobarevné štětce  
   
 ## <a name="see-also"></a>Viz také  

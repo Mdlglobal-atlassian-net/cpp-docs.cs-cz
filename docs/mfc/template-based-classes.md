@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d44a66f328465f2c59fb361f9bb6b2a76efa82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 035a50e039b352775cf0f109310f4dac448cb0a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385467"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954644"
 ---
 # <a name="template-based-classes"></a>Třídy založené na šablonách
 Tento článek vysvětluje typově bezpečné kolekce na základě šablon tříd v prostředí MFC verze 3.0 a novějších. Vytvoření kolekce bezpečného typu pomocí těchto šablon je pohodlnější a pomáhá poskytovat efektivnější než při použití třídy kolekce není založené na šablonách bezpečnost typů.  
@@ -62,26 +62,26 @@ Tento článek vysvětluje typově bezpečné kolekce na základě šablon tří
 ###  <a name="_core_simple_array_and_list_usage"></a> Jednoduchých polí a seznamu využití  
  Jednoduchých polí a seznamu třídy [carray –](../mfc/reference/carray-class.md) a [CList](../mfc/reference/clist-class.md), trvat dva parametry: *typ* a `ARG_TYPE`. Tyto třídy můžete ukládat všechny datového typu, který určíte v *typ* parametr:  
   
--   Základní C++ datové typy, jako například `int`, `char`, a **float**  
+-   Základní C++ datové typy, jako například **int**, **char**, a **float**  
   
 -   Třídy a struktury C++  
   
 -   Jiné typy, které definujete  
   
- Pro usnadnění práce a efektivitu, můžete použít `ARG_TYPE` parametr k určení typu argumenty funkce. Obvykle můžete zadat `ARG_TYPE` jako odkaz na typ s názvem v *typ* parametr. Příklad:  
+ Pro usnadnění práce a efektivitu, můžete použít *ARG_TYPE* parametr k určení typu argumenty funkce. Obvykle můžete zadat *ARG_TYPE* jako odkaz na typ s názvem v *typ* parametr. Příklad:  
   
  [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]  
   
- V prvním příkladu deklaruje kolekci pole `myArray`, který obsahuje `int`s. V druhém příkladu deklaruje kolekci seznamu `myList`, který ukládá `CPerson` objekty. Některé členské funkce tříd kolekce trvat argumenty, jejichž typ je zadána `ARG_TYPE` parametr šablony. Například **přidat** funkce člena třídy `CArray` trvá `ARG_TYPE` argument:  
+ V prvním příkladu deklaruje kolekci pole `myArray`, který obsahuje **int**s. V druhém příkladu deklaruje kolekci seznamu `myList`, který ukládá `CPerson` objekty. Některé členské funkce tříd kolekce trvat argumenty, jejichž typ je zadána *ARG_TYPE* parametr šablony. Například `Add` funkce člena třídy `CArray` trvá *ARG_TYPE* argument:  
   
  [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]  
   
 ###  <a name="_core_simple_map_usage"></a> Použití jednoduché mapy  
- Třída jednoduchých mapy [CMap](../mfc/reference/cmap-class.md), používá čtyři parametry: *klíč*, `ARG_KEY`, *hodnotu*, a `ARG_VALUE`. Stejně jako pole a seznamu třídy můžete uložit třídy map jakéhokoli datového typu. Na rozdíl od poli a seznamy, které je index a řazení dat uložených mapy přidružit klíče a hodnoty: přístup hodnotou uloženou v mapu zadáním přidružené klíče hodnotu. *Klíč* parametr určuje datový typ klíče používané pro přístup k datům uloženým v mapě. Pokud typ *klíč* je struktura nebo třídy, `ARG_KEY` parametr je obvykle odkaz na typ určený v *klíč*. *Hodnotu* parametr určuje typ položky uložené v mapě. Pokud typ `ARG_VALUE` je struktura nebo třídy, `ARG_VALUE` parametr je obvykle odkaz na typ určený v *hodnotu*. Příklad:  
+ Třída jednoduchých mapy [CMap](../mfc/reference/cmap-class.md), používá čtyři parametry: *klíč*, *ARG_KEY*, *hodnotu*, a *ARG_VALUE*. Stejně jako pole a seznamu třídy můžete uložit třídy map jakéhokoli datového typu. Na rozdíl od poli a seznamy, které je index a řazení dat uložených mapy přidružit klíče a hodnoty: přístup hodnotou uloženou v mapu zadáním přidružené klíče hodnotu. *Klíč* parametr určuje datový typ klíče používané pro přístup k datům uloženým v mapě. Pokud typ *klíč* je struktura nebo třídy, *ARG_KEY* parametr je obvykle odkaz na typ určený v *klíč*. *Hodnotu* parametr určuje typ položky uložené v mapě. Pokud typ *ARG_VALUE* je struktura nebo třídy, *ARG_VALUE* parametr je obvykle odkaz na typ určený v *hodnotu*. Příklad:  
   
  [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]  
   
- První příklad úložiště `MY_STRUCT` hodnoty, je pomocí přistupuje `int` klíče a vrátí přístup `MY_STRUCT` položky odkazem. Druhý příklad úložiště `CPerson` hodnoty, je pomocí přistupuje `CString` klíčů a vrátí odkazy na používaná položky. V tomto příkladu může představovat jednoduchý adresář, ve kterém můžete vyhledat osob podle příjmení.  
+ První příklad úložiště `MY_STRUCT` hodnoty, je pomocí přistupuje **int** klíče a vrátí přístup `MY_STRUCT` položky odkazem. Druhý příklad úložiště `CPerson` hodnoty, je pomocí přistupuje `CString` klíčů a vrátí odkazy na používaná položky. V tomto příkladu může představovat jednoduchý adresář, ve kterém můžete vyhledat osob podle příjmení.  
   
  Protože *klíč* parametr je typu `CString` a *key_type –* parametr je typu `LPCSTR`, klíče jsou uložené v mapě jako položky typu `CString` ale se odkazuje v Funkce, jako `SetAt` prostřednictvím ukazatele typu `LPCSTR`. Příklad:  
   
@@ -91,7 +91,7 @@ Tento článek vysvětluje typově bezpečné kolekce na základě šablon tří
  Použití šablon ukazatel s typem kolekce, musíte vědět, jaké druhy dat můžete ukládat do těchto kolekcí a jaké parametry pro použití v deklaracích kolekce.  
   
 ###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Ukazatel s typem pole a používání seznamu  
- Ukazatel s typem pole a třídy seznamu [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) a [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), trvat dva parametry: `BASE_CLASS` a *typu*. Tyto třídy můžete ukládat všechny datového typu, který určíte v *typ* parametr. Jsou odvozené z jednoho typu tříd kolekce objektu bez šablony, které jsou uloženy ukazatele; Zadejte této základní třídy v `BASE_CLASS`. Pro pole, použijte buď `CObArray` nebo `CPtrArray`. Pro seznamy, použijte buď `CObList` nebo `CPtrList`.  
+ Ukazatel s typem pole a třídy seznamu [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) a [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), trvat dva parametry: *BASE_CLASS* a *typu*. Tyto třídy můžete ukládat všechny datového typu, který určíte v *typ* parametr. Jsou odvozené z jednoho typu tříd kolekce objektu bez šablony, které jsou uloženy ukazatele; Zadejte této základní třídy v *BASE_CLASS*. Pro pole, použijte buď `CObArray` nebo `CPtrArray`. Pro seznamy, použijte buď `CObList` nebo `CPtrList`.  
   
  Ve skutečnosti, že po deklarování kolekce na základě `CObList`, nová třída nejen dědí členy základní třídy, ale také deklaruje číslo člena bezpečnost typů další funkce a operátory, které pomáhají zajistit bezpečnost typů zapouzdřením volání na členy základní třídy. Tyto encapsulations spravovat všechny nezbytné typ převodu. Příklad:  
   
@@ -102,16 +102,16 @@ Tento článek vysvětluje typově bezpečné kolekce na základě šablon tří
  V druhém příkladu deklaruje seznam ukazatel s typem `myList`, odvozené z `CPtrList`. V seznamu ukládá a vrátí ukazatele na `MY_STRUCT` objekty. Na základě třídy `CPtrList` slouží k ukládání ukazatelé na objekty není odvozen od `CObject`. `CTypedPtrList` obsahuje počet bezpečnost typů členské funkce: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, a `GetAt`.  
   
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> Použití Map typované ukazatele  
- Třídy map ukazatel s typem [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), přijímá tři parametry: `BASE_CLASS`, *klíč*, a *hodnotu*. `BASE_CLASS` Parametr určuje třídu, ze které jsou odvozeny nová třída: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`a tak dále. *KLÍČ* je podobná *klíč* v `CMap`: Určuje typ klíč používaný k vyhledávání. *Hodnota* je podobná *hodnotu* v `CMap`: Určuje typ objektu, které jsou uložené v mapě. Příklad:  
+ Třídy map ukazatel s typem [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), přijímá tři parametry: *BASE_CLASS*, *klíč*, a *hodnotu*. *BASE_CLASS* parametr určuje třídu, ze které jsou odvozeny nová třída: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`a tak dále. *KLÍČ* je podobná *klíč* v `CMap`: Určuje typ klíč používaný k vyhledávání. *Hodnota* je podobná *hodnotu* v `CMap`: Určuje typ objektu, které jsou uložené v mapě. Příklad:  
   
  [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]  
   
- V prvním příkladu je do mapy na základě **CMapPtrToPt**r – používá `CString` klíče, které jsou namapované na ukazatele na `MY_STRUCT`. Můžete vyhledat uložené ukazatel voláním bezpečnost typů `Lookup` – členská funkce. Můžete použít **[]** operátor k vyhledání uložené ukazatel a přidejte ji, pokud není nalezen. A můžete iterovat mapy pomocí bezpečnost typů `GetNextAssoc` funkce. Můžete také volat jiné členské funkce třídy `CMapPtrToPtr`.  
+ V prvním příkladu je do mapy na základě `CMapPtrToPtr` – používá `CString` klíče, které jsou namapované na ukazatele na `MY_STRUCT`. Můžete vyhledat uložené ukazatel voláním bezpečnost typů `Lookup` – členská funkce. Můžete použít **[]** operátor k vyhledání uložené ukazatel a přidejte ji, pokud není nalezen. A můžete iterovat mapy pomocí bezpečnost typů `GetNextAssoc` funkce. Můžete také volat jiné členské funkce třídy `CMapPtrToPtr`.  
   
- V druhém příkladu je do mapy na základě **CMapStringToO**b – používá řetězcových klíčů, které jsou namapované na uložené ukazatele na `CMyObject` objekty. Můžete použít stejné členy bezpečnost typů popsané v předchozím odstavci, nebo můžete volat členy třídy `CMapStringToOb`.  
+ V druhém příkladu je do mapy na základě `CMapStringToOb` – používá řetězcových klíčů, které jsou namapované na uložené ukazatele na `CMyObject` objekty. Můžete použít stejné členy bezpečnost typů popsané v předchozím odstavci, nebo můžete volat členy třídy `CMapStringToOb`.  
   
 > [!NOTE]
->  Pokud zadáte **– třída** nebo `struct` zadejte *hodnotu* parametr, nikoli ukazatel nebo odkaz na typ, třídu nebo strukturu musí mít konstruktor kopírování.  
+>  Pokud zadáte **– třída** nebo **struktura** zadejte *hodnotu* parametr, nikoli ukazatel nebo odkaz na typ, třídu nebo strukturu musí mít konstruktor kopírování.  
   
  Další informace najdete v tématu [jak typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md).  
   

@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226b69c9521016a2d5abbbdb7225cbbec972db3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df916cddacd5a435ef5cb130f9f6f5b6a25d2d4c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383029"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952720"
 ---
 # <a name="working-with-a-header-control"></a>Práce s ovládacím prvkem záhlaví
-Snadný způsob, jak pomocí ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) se používá současně se ovládací prvek seznamu, zjistit [pomocí CListCtrl](../mfc/using-clistctrl.md) dál v této rodině tématu. Můžete taky ovládacím prvkem záhlaví samostatně. MFC volání **InitCommonControls** za vás. Klíčovými úlohami jsou následující:  
+Snadný způsob, jak pomocí ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) se používá současně se ovládací prvek seznamu, zjistit [pomocí CListCtrl](../mfc/using-clistctrl.md) dál v této rodině tématu. Můžete taky ovládacím prvkem záhlaví samostatně. MFC volání `InitCommonControls` za vás. Klíčovými úlohami jsou následující:  
   
 -   [Vytvoření ovládacího prvku záhlaví](../mfc/creating-the-header-control.md)  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381742"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950703"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Použití seznamu obrázků s ovládacím prvkem matrice
 Každé vzdálené matrice může obsahovat mimo jiné, bitovou kopii ze seznamu přidruženou bitovou kopii. Následující postup popisuje nezbytné kroky pro zobrazení ve svazku matrice bitovou kopii.  
@@ -31,9 +31,9 @@ Každé vzdálené matrice může obsahovat mimo jiné, bitovou kopii ze seznamu
   
 2.  Změnit **REBARBANDINFO** struktura přiřadit matrice vzdálené bitovou kopii:  
   
-    -   Nastavte **fMask** člena **RBBIM_IMAGE**, zahrnout další příznaky podle potřeby pomocí bitový operátor OR.  
+    -   Nastavte *fMask* člena `RBBIM_IMAGE`, zahrnout další příznaky podle potřeby pomocí bitový operátor OR.  
   
-    -   Nastavte `iImage` člena do seznamu index bitové kopie bitové kopie, který se má zobrazit.  
+    -   Nastavte *iImage* člena do seznamu index bitové kopie bitové kopie, který se má zobrazit.  
   
 3.  Inicializuje všechny zbývající členy data, jako je například velikost, text a popisovač okna obsažené podřízené nezbytné informace.  
   

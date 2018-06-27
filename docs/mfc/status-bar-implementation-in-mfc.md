@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381085"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950445"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementace stavového řádku v prostředí MFC
 A [cstatusbar –](../mfc/reference/cstatusbar-class.md) objekt je ovládací prvek panel s řádek podokna výstup textu. Podokna výstup běžně se používají jako řádky zprávy a jako indikátory stavu. Mezi příklady patří řádky zprávu nápovědy nabídky, které stručně popisují příkaz vybrané nabídky a indikátory, které se zobrazí stav SCROLL LOCK NUMLOCK a jiných klíčů.  
   
- Od verze knihovny MFC verze 4.0, stavové řádky jsou implementované pomocí třídy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), který zapouzdří stav panelu běžného ovládacího prvku. Z důvodu zpětné kompatibility MFC uchovává starší implementace řádku stav v třídě **COldStatusBar**. Dokumentace pro starší verze knihovny MFC popisuje **COldStatusBar** pod `CStatusBar`.  
+ Od verze knihovny MFC verze 4.0, stavové řádky jsou implementované pomocí třídy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), který zapouzdří stav panelu běžného ovládacího prvku. Z důvodu zpětné kompatibility MFC uchovává starší implementace řádku stav v třídě `COldStatusBar`. Dokumentace pro starší verze knihovny MFC popisuje `COldStatusBar` pod `CStatusBar`.  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), členské funkce nové MFC 4.0, můžete využít podporu Windows běžné ovládacího prvku pro stavovém řádku přizpůsobení a další funkce. `CStatusBar` Členské funkce získáte většinu funkcí běžných ovládacích prvků Windows; ale při volání `GetStatusBarCtrl`, můžete udělit stavové řádky i více společných vlastností stavového řádku. Při volání `GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objektu. Tento odkaz můžete použít k manipulaci s ovládacího prvku panel stav.  
   

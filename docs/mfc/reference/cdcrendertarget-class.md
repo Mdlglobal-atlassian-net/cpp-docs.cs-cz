@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366470"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953698"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget – třída
 Obálka pro ID2D1DCRenderTarget.  
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTarget`  
+ *pTarget*  
  Existující vykreslení cílové rozhraní. Nemůže mít hodnotu NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *řadič domény*  
  Kontext zařízení, do které cíl vykreslení vysílá příkazy kreslení  
   
- `rect`  
+ *Rect –*  
  Dimenze popisovač kontextu zařízení (HDC), ke kterému je vázán cíl vykreslení  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `props`  
+ *props*  
  Režim vykreslování, Pixelový formát, možnosti vzdálenou komunikaci, DPI informace a minimální podporu rozhraní DirectX požadované pro vykreslování hardwaru.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358352"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952177"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton – třída
 Vytvoří uzavření tlačítkem ovládací prvky označený verzí rastrových obrázků místo textu.  
@@ -65,7 +65,7 @@ class CBitmapButton : public CButton
   
  Různé aplikace potřebují různé kombinace rastrové obrázky:  
   
-|Nahoru|Dolů|Zaměřuje|zakázáno|Aplikace|  
+|Nahoru|Dolů|Zaměřuje|Zakázané|Aplikace|  
 |--------|----------|-------------|--------------|-----------------|  
 |×||||Rastrový obrázek|  
 |×|×|||Tlačítko bez **ws_tabstop –** styl|  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  V `CDialog` objektu [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) rutiny, volání `CBitmapButton` objektu [AutoLoad](#autoload) fungovat, používání jako parametrů ID ovládacího prvku tlačítka a `CDialog` objektu **to** ukazatel.  
   
- Pokud budete chtít zpracování zpráv s oznámením Windows, jako například **BN_CLICKED**, odeslané pomocí ovládacího prvku tlačítko rastrového obrázku a jeho nadřazeným (obvykle třída odvozená z **CDialog)**, přidejte do `CDialog`-odvozené objekt map zpráv položku a obslužné rutiny zpráv členské funkce pro každou zprávu. Oznámení zaslaná z `CBitmapButton` objekt jsou stejné jako poslal [CButton](../../mfc/reference/cbutton-class.md) objektu.  
+ Pokud chcete pro zpracování zpráv s oznámením Windows, jako je například BN_CLICKED, zasílá ovládacího prvku tlačítko rastrového obrázku tak, aby jeho nadřazený objekt (obvykle třída odvozená z `CDialog`), přidejte do `CDialog`-odvozené objekt členem položku a obslužné rutiny zpráv map zpráv funkce pro každou zprávu. Oznámení zaslaná z `CBitmapButton` objekt jsou stejné jako poslal [CButton](../../mfc/reference/cbutton-class.md) objektu.  
   
  Třída [ctoolbar –](../../mfc/reference/ctoolbar-class.md) přistupují k rastrového obrázku tlačítka.  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID tlačítka ovládacího prvku.  
   
- `pParent`  
+ *pParent*  
  Ukazatel na objekt, který vlastní tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  

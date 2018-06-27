@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74dc76f0e638cb335c8ee762908aed36a41230eb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358288"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952346"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx – třída
 Rozšiřuje ovládacího prvku pole se seznamem se tím, že poskytuje podporu pro seznamy obrázků.  
@@ -146,16 +146,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje kombinaci pole se seznamem styly u pole se seznamem. V tématu **poznámky** níže Další informace o stylů.  
   
- `rect`  
+ *Rect –*  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, což je pozice a velikosti pole se seznamem.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazeného okna pole se seznamem (obvykle `CDialog`). Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku pole se seznamem  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -168,7 +168,7 @@ virtual BOOL Create(
   
 2.  Volání této funkce člen, který vytvoří rozšířené pole se seznamem Windows a připojí jej k `CComboBoxEx` objektu.  
   
- Při volání **vytvořit**, MFC inicializuje běžné ovládací prvky.  
+ Při volání `Create`, MFC inicializuje běžné ovládací prvky.  
   
  Když vytvoříte pole se seznamem, můžete určit některé nebo všechny následující pole se seznamem styly:  
   
@@ -184,7 +184,7 @@ virtual BOOL Create(
   
  Všechny ostatní styly se předá, když vytvoříte okna se ignorují. **ComboBoxEx** ovládací prvek také podporuje rozšířené styly, které poskytují další funkce. Tyto styly jsou popsané v [ComboBoxEx řízení rozšířené styly](http://msdn.microsoft.com/library/windows/desktop/bb775742), v sadě Windows SDK. Nastavit tyto styly voláním [SetExtendedStyle](#setextendedstyle).  
   
- Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo **vytvořit**.  
+ Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo `Create`.  
   
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  Volání této funkce vytvoření ovládacího prvku rozšířené pole se seznamem (podřízeného okna) a její přidružení `CComboBoxEx` objektu.  
@@ -199,28 +199,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl ovládacího prvku pole se seznamem. V tématu [vytvořit](#create) seznam stylů.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `CreateEx` místo **vytvořit** použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
+ Použití `CreateEx` místo `Create` použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
- `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného `dwExStyle`. Musíte nastavit rozšířené styly konkrétní k pomocí ovládacího prvku rozšířené pole se seznamem pole [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **CBES_EX_CASESENSITIVE**. Další informace najdete v tématu styly popsané v tématu [– styly ovládacího prvku rozšířené ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) ve Windows SDK.  
+ `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného *dwExStyle*. Musíte nastavit rozšířené styly konkrétní k pomocí ovládacího prvku rozšířené pole se seznamem pole [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **CBES_EX_CASESENSITIVE**. Další informace najdete v tématu styly popsané v tématu [– styly ovládacího prvku rozšířené ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) ve Windows SDK.  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Odebere položku z **ComboBoxEx** ovládacího prvku.  
@@ -230,11 +230,11 @@ int DeleteItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
+ *iIndex*  
  Index položky k odebrání nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet položek v ovládacím prvku zbývající. Pokud `iIndex` je neplatná, funkce vrátí hodnotu **CB_ERR**.  
+ Počet položek v ovládacím prvku zbývající. Pokud *iIndex* je neplatná, funkce vrátí hodnotu **CB_ERR**.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje funkce zprávy [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), jak je popsáno v sadě Windows SDK. Při volání DeleteItem, [wm_notify –](http://msdn.microsoft.com/library/windows/desktop/bb775583) zpráv s **CBEN_DELETEITEM** odešle upozornění do nadřazeného okna.  
@@ -303,7 +303,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCBItem`  
+ *pCBItem*  
  Ukazatel [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktura, která bude přijímat informace o položce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -333,7 +333,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCBItem`  
+ *pCBItem*  
  Ukazatel [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktura, která bude přijímat informace o položce. Tato struktura obsahuje hodnoty příznak zpětného volání pro položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -352,10 +352,10 @@ DWORD SetExtendedStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExMask`  
- A `DWORD` hodnotu, která určuje, jaké styly v `dwExStyles` mají mít vliv. Rozšířené styly pouze v `dwExMask` se změní. Všechny ostatní styly se zachová, jako je. Pokud má parametr hodnotu nula, pak všechny styly v `dwExStyles` bude mít vliv.  
+ *dwExMask*  
+ A `DWORD` hodnotu, která určuje, jaké styly v *dwExStyles* mají mít vliv. Rozšířené styly pouze v *dwExMask* se změní. Všechny ostatní styly se zachová, jako je. Pokud má parametr hodnotu nula, pak všechny styly v *dwExStyles* bude mít vliv.  
   
- `dwExStyles`  
+ *dwExStyles*  
  A `DWORD` hodnotu, která obsahuje pole se seznamem řízení rozšířené styly pro ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -374,7 +374,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Ukazatel `CImageList` objekt obsahující obrázky, které chcete používat s `CComboBoxEx` ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -393,7 +393,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCBItem`  
+ *pCBItem*  
  Ukazatel [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktura, která bude přijímat informace o položce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -410,7 +410,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszSubAppName`  
+ *pszSubAppName*  
  Ukazatel na řetězec znaků Unicode, který obsahuje vizuální styl rozšířeného pole se seznamem pole nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  

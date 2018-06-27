@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355796"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955086"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator – třída
 Implementuje základní interpolator.  
@@ -116,10 +116,10 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Doba trvání přechodu.  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>Poznámky  
  Použijte CCustomInterpolator::Init k chybě při inicializaci doba trvání a konečná hodnota později v kódu.  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Výstup. Aspekty interpolator, které jsou závislé na počáteční hodnota předaný SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Výstup. Aspekty interpolator, které závisí na rychlosti počáteční předaný SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Výstup. Aspekty interpolator, které jsou závislé na dobu trvání předaný SetDuration.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Výstup. Doba trvání přechodu, v sekundách.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `value`  
+ *value*  
  Výstup. Konečná hodnota proměnné na konci přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -185,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Doba trvání přechodu.  
   
- `finalValue`  
+ *finalValue*  
  Konečná hodnota proměnné na konci přechodu.  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `value`  
+ *value*  
  Výstup. Interpolované hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `velocity`  
+ *rychlosti postupu*  
  Výstup. Rychlosti proměnnou na posunu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -273,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Doba trvání přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initialValue`  
+ *Počáteční hodnota*  
  Hodnota proměnné na začátku přechodu.  
   
- `initialVelocity`  
+ *initialVelocity*  
  Rychlosti proměnnou na začátku přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

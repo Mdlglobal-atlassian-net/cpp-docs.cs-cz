@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b1e83977c1d75070e8878dfdcc53c7afca7a86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bea2f2f51ed3b012ee9b5afe2572b2a6be9e0d57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384397"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955479"
 ---
 # <a name="using-cspinbuttonctrl"></a>Používání atributu CSpinButtonCtrl
 *Číselníku* ovládací prvek (také označované jako *obousměrný číselník* ovládací prvek) poskytuje dvojice šipek, které uživatel klepnutím na tlačítko můžete upravit hodnotu. Tato hodnota se označuje jako *aktuální pozici*. Pozice zůstane v rozsahu číselníku. Když uživatel klikne na šipku nahoru, pozice blíží maximální; a když uživatel klikne na šipku dolů, pozice blíží minimální.  
@@ -36,7 +36,7 @@ ms.locfileid: "33384397"
   
  Obvykle se zobrazí aktuální pozici v ovládacím prvku doprovodné. Ovládací prvek doprovodné se označuje jako *kamarád okno*. Obrázek ovládacího prvku typu číselník, najdete v části [o – ovládací prvky typu číselník](http://msdn.microsoft.com/library/windows/desktop/bb759889) ve Windows SDK.  
   
- Pro vytvoření ovládacího prvku typu číselník a okno kamarád ovládací prvek úprav v sadě Visual Studio, nejdřív přetáhněte ovládací prvek upravit nebo dialogovém okně a poté přetáhněte ovládací prvek typu číselník. Vyberte ovládací prvek typu číselník a nastavit jeho **automaticky kamarád** a **nastavit celé číslo kamarád** vlastnosti, které chcete **True**. Také nastavit **zarovnání** vlastnost; **Zarovnat vpravo** je nejčastější. S těmito nastaveními textové pole je nastaven jako okno kamarád protože přímo předchází ovládacího prvku úprav v pořadí. Tento ovládací prvek upravit zobrazí celá čísla a ovládací prvek typu číselník vložené na pravé straně ovládacích prvků pro úpravy. Volitelně můžete nastavit platný rozsah ovládací prvek typu číselník pomocí [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) metoda. Žádné obslužné rutiny událostí jsou vyžadované pro komunikaci mezi kamarád okno a ovládací prvek typu číselník, protože si vyměňují data přímo. Pokud používáte ovládací prvek typu číselník pro některé jinému účelu, například na stránku prostřednictvím pořadí systému windows nebo dialogových oken, přidejte obslužnou rutinu pro `UDN_DELTAPOS` zpráva a provedení vlastní akce došlo.  
+ Pro vytvoření ovládacího prvku typu číselník a okno kamarád ovládací prvek úprav v sadě Visual Studio, nejdřív přetáhněte ovládací prvek upravit nebo dialogovém okně a poté přetáhněte ovládací prvek typu číselník. Vyberte ovládací prvek typu číselník a nastavit jeho **automaticky kamarád** a **nastavit celé číslo kamarád** vlastnosti, které chcete **True**. Také nastavit **zarovnání** vlastnost; **Zarovnat vpravo** je nejčastější. S těmito nastaveními textové pole je nastaven jako okno kamarád protože přímo předchází ovládacího prvku úprav v pořadí. Tento ovládací prvek upravit zobrazí celá čísla a ovládací prvek typu číselník vložené na pravé straně ovládacích prvků pro úpravy. Volitelně můžete nastavit platný rozsah ovládací prvek typu číselník pomocí [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) metoda. Žádné obslužné rutiny událostí jsou vyžadované pro komunikaci mezi kamarád okno a ovládací prvek typu číselník, protože si vyměňují data přímo. Pokud použijte ovládací prvek typu číselník pro některé jinému účelu, například na stránku prostřednictvím pořadí systému windows nebo dialogových oken, přidat obslužnou rutinu pro zprávu UDN_DELTAPOS a provedení vlastní akce došlo.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   

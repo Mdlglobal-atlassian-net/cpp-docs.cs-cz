@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383016"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953822"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Použití třídy CStatusBarCtrl k vytvoření objektu CStatusBarCtrl
 Tady je příklad typické použití [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -37,7 +37,7 @@ Tady je příklad typické použití [CStatusBarCtrl](../mfc/reference/cstatusba
   
 4.  Volání [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) nastavit počet částí ve stavovém řádku řízení a souřadnice pravého okraje jednotlivých součástí.  
   
-5.  Volání [SetText –](../mfc/reference/cstatusbarctrl-class.md#settext) nastavit text v dané součástí ovládacích prvků panelu stavu. Zpráva by způsobila neplatnost část ovládací prvek, který změnil způsobuje zobrazit nového textu přijetí ovládacího prvku další `WM_PAINT` zprávy.  
+5.  Volání [SetText –](../mfc/reference/cstatusbarctrl-class.md#settext) nastavit text v dané součástí ovládacích prvků panelu stavu. Zpráva by způsobila neplatnost část ovládací prvek, který změnil způsobuje ovládacího prvku vedle obdrží zprávu WM_PAINT zobrazit nového textu.  
   
  V některých případech stavový řádek stačí k zobrazení na řádku textu. V takovém případě se dovolat do [setsimple –](../mfc/reference/cstatusbarctrl-class.md#setsimple). Tento ovládací prvek panelu Stav umístí do "jednoduchý" režimu, který zobrazuje jeden řádek textu.  
   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354145"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951740"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor – třída
 Implementuje funkce barvu, která může být animovaný jejichž červené, zelené a modré součásti.  
@@ -121,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRTransition`  
+ *pRTransition*  
  Přechodu červenou součásti.  
   
- `pGTransition`  
+ *pGTransition*  
  Přechod pro zelenou součást.  
   
- `pBTransition`  
+ *pBTransition*  
  Přechod pro Blue součást.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -147,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Určuje výchozí barvu.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `nObjectID`  
+ *nObjectID*  
  Určuje ID objektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Určuje uživatelská data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -170,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *obrázků*  
  Když funkce vrátí hodnotu, obsahuje odkazy na tři objekty CAnimationVariable představující červené, zelené a modré součásti.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -233,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Výstup. Po návratu tato metoda obsahuje aktuální hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -279,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Určuje nová hodnota barvy animace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -293,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Určuje nové výchozí hodnoty pro součásti červené, zelené a modré.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f5a21bd5fa20a40123ce442959125ea62c60d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fe5a55afda9e77db6e8baddd68c09f4250071bb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381121"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951198"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Postup v typické aplikaci klienta FTP
 Vytvoří typické aplikaci klienta FTP [CInternetSession](../mfc/reference/cinternetsession-class.md) a [CFtpConnection](../mfc/reference/cftpconnection-class.md) objektu. Všimněte si, že těchto tříd WinInet knihovny MFC ve skutečnosti nebudete řídit typ nastavení proxy serveru; Služba IIS neodpovídá.  
@@ -45,7 +45,7 @@ Vytvoří typické aplikaci klienta FTP [CInternetSession](../mfc/reference/cint
 |Změnit na nový adresář serveru FTP na serveru.|Použití [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Změní na adresář, který jste aktuálně připojeni k na serveru.|  
 |Najít první soubor v adresáři serveru FTP.|Použití [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Vyhledá první soubor. Vrátí hodnotu FALSE, pokud nejsou nalezeny žádné soubory.|  
 |Najít další soubor v adresáři serveru FTP.|Použití [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Vyhledá další soubor. Vrátí hodnotu FALSE, pokud soubor nebyl nalezen.|  
-|Otevřete soubor nalezena **FindFile** nebo `FindNextFile` pro čtení nebo zápis.|Použití [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), pomocí názvu souboru vrácený [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) nebo [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Otevře se soubor na serveru pro čtení nebo zápis. Vrátí [CInternetFile](../mfc/reference/cinternetfile-class.md) objektu.|  
+|Otevřete soubor nalezena `FindFile` nebo `FindNextFile` pro čtení nebo zápis.|Použití [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), pomocí názvu souboru vrácený [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) nebo [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Otevře se soubor na serveru pro čtení nebo zápis. Vrátí [CInternetFile](../mfc/reference/cinternetfile-class.md) objektu.|  
 |Čtení z a zapisovat do souboru.|Použití [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read) nebo [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|Čtení nebo zápisu zadaný počet bajtů, pomocí vyrovnávací paměti, které zadáte.|  
 |Zpracování výjimek.|Použití [CInternetException](../mfc/reference/cinternetexception-class.md) třídy.|Zpracovává všechny běžné typy výjimek Internetu.|  
 |Ukončení relace FTP.|Odstranění [CInternetSession](../mfc/reference/cinternetsession-class.md) objektu.|Automaticky vyčistí otevřených popisovačů souborů a připojení.|  

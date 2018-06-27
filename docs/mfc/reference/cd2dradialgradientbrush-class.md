@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354349"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952271"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush – třída
 Obálka pro ID2D1RadialGradientBrush.  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `gradientStops`  
+ *gradientStops*  
  Ukazatel na pole D2D1_GRADIENT_STOP struktury.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Hodnota větší než nebo rovna 1, která určuje počet Přechodové zarážky v poli gradientStops.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  Center, přechodu počátek posunu a x radius a y-radius štětce je přechodu.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Místo, na které barevně se provádí interpolace mezi Přechodové zarážky.  
   
- `extendMode`  
+ *extendMode*  
  Chování přechodu mimo normalizovaný rozsah [0, 1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ukazatel na krytí a transformace štětce.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ukazatel na cíl vykreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Bod*  
  Center přechodu elipsy v souřadnicového prostoru štětce  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  Posun přechodu původu z centra přechodu třemi tečkami  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `radiusX`  
+ *radiusX*  
  X-radius se třemi tečkami přechodu. Tato hodnota je v prostoru souřadnic štětce  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `radiusY`  
+ *radiusY*  
  Y-radius se třemi tečkami přechodu. Tato hodnota je v prostoru souřadnic štětce  
   
 ## <a name="see-also"></a>Viz také  

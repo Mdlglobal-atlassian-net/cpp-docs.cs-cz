@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 696b0d63a7b81b550e99981f199132713fe8a6ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0d67012afe34cf3fe2c4633f2d838d1f3bfb49
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377037"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952528"
 ---
 # <a name="cdocument-class"></a>CDocument – třída
 Poskytuje základní funkce pro třídy dokumentů definovaný uživatelem.  
@@ -228,7 +228,7 @@ class CDocument : public CCmdTarget
 ## <a name="remarks"></a>Poznámky  
  Dokument představuje jednotku data, která uživatel obvykle otevře pomocí příkazu soubor otevřít a uloží pomocí příkazu Uložit soubor.  
   
- **CDocument** podporuje standardní operace, například vytváření dokumentu načte a ho uložit. Rozhraní framework zpracovává dokumenty pomocí rozhraní definované **CDocument**.  
+ `CDocument` podporuje standardní operace, například vytváření dokumentu načte a ho uložit. Rozhraní framework zpracovává dokumenty pomocí rozhraní definované `CDocument`.  
   
  Aplikace může podporovat více než jeden typ dokumentu. například aplikace může podporovat tabulek a text dokumenty. Každý typ dokument má k šabloně přidružená dokumentu; Šablona dokumentu určuje, jaké prostředky (například nabídky, ikony nebo akcelerátoru tabulky) se používají pro tento typ dokumentu. Každý dokument obsahuje ukazatel přidružené `CDocTemplate` objektu.  
   
@@ -236,11 +236,11 @@ class CDocument : public CCmdTarget
   
  Dokumenty jsou součástí rozhraní framework standardní směrování příkazů a v důsledku toho přijímat příkazy z komponenty standardní uživatelské rozhraní (například soubor uložit položky nabídky). Dokument přijímá příkazy, které jsou předávány active zobrazení. Pokud dokument nemůže pracovat s daného příkazu, předává příkaz šablony dokumentu, která je spravuje.  
   
- Při změně dokumentu dat, každý z jeho zobrazení musí tyto změny projeví. **CDocument** poskytuje [UpdateAllViews](#updateallviews) – členská funkce pro vás upozornit zobrazení tyto změny, takže zobrazení můžete překreslit sami podle potřeby. Rozhraní framework také vyzývá uživatele k před jeho zavřením uložit upravený soubor.  
+ Při změně dokumentu dat, každý z jeho zobrazení musí tyto změny projeví. `CDocument` poskytuje [UpdateAllViews](#updateallviews) – členská funkce pro vás upozornit zobrazení tyto změny, takže zobrazení můžete překreslit sami podle potřeby. Rozhraní framework také vyzývá uživatele k před jeho zavřením uložit upravený soubor.  
   
  Chcete-li implementovat dokumenty v typické aplikaci, musíte udělat následující:  
   
--   Odvození třídy z **CDocument** pro každý typ dokumentu.  
+-   Odvození třídy z `CDocument` pro každý typ dokumentu.  
   
 -   Přidání členské proměnné k ukládání dat pro každý dokument.  
   
@@ -248,9 +248,9 @@ class CDocument : public CCmdTarget
   
 -   Přepsání [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) členské funkce ve třídě dokumentů k zápisu a čtení dokumentu dat do a z disku.  
   
- **CDocument** podporuje odesílání vašeho dokumentu prostřednictvím e-mailu, pokud je k dispozici podporu pošty (MAPI). Najdete v článcích [MAPI](../../mfc/mapi.md) a [Podpora MAPI v MFC](../../mfc/mapi-support-in-mfc.md).  
+ `CDocument` podporuje odesílání vašeho dokumentu prostřednictvím e-mailu, pokud je k dispozici podporu pošty (MAPI). Najdete v článcích [MAPI](../../mfc/mapi.md) a [Podpora MAPI v MFC](../../mfc/mapi-support-in-mfc.md).  
   
- Další informace o **CDocument**, najdete v části [serializace](../../mfc/serialization-in-mfc.md), [Document/View – architektura témata](../../mfc/document-view-architecture.md), a [Document/View – vytvoření](../../mfc/document-view-creation.md).  
+ Další informace o `CDocument`, najdete v části [serializace](../../mfc/serialization-in-mfc.md), [Document/View – architektura témata](../../mfc/document-view-architecture.md), a [Document/View – vytvoření](../../mfc/document-view-creation.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -270,7 +270,7 @@ void AddView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pView`  
+ *pView*  
  Body do zobrazení, který chcete přidat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -298,7 +298,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFrame`  
+ *pFrame*  
  Body do rámce okna zobrazení připojené k dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -359,10 +359,10 @@ virtual POSITION FindChunk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `guid`  
+ *Identifikátor GUID*  
  Určuje identifikátor GUID bloku k vyhledání.  
   
- `pid`  
+ *PID*  
  Určuje PID od bloku k vyhledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -406,13 +406,13 @@ virtual CFile* GetFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec, který je cesta k souboru požadovaného. Cesta může být relativní nebo absolutní.  
   
- `pError`  
+ *pError*  
  Ukazatele na existující objekt výjimky souborů, který označuje stav dokončení operace.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Režim sdílení a přístup. Určuje akci, která se má provést při otevření souboru. Zkombinováním možnosti uvedené v konstruktoru cfile – [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) pomocí bitová hodnota OR (&#124;) operátor. Jeden přístupová oprávnění a možnost jednu sdílenou složku jsou povinné; **modeCreate** a **modeNoInherit** režimy jsou volitelné.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -439,14 +439,14 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
+ *rPosition*  
  Odkaz na **pozice** hodnoty vrácené z předchozího volání `GetNextView` nebo [GetFirstViewPosition](#getfirstviewposition) členské funkce. Tato hodnota nesmí být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na zobrazení identifikovaný `rPosition`.  
+ Ukazatel na zobrazení identifikovaný *rPosition*.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce vrátí zobrazení identifikovaný `rPosition` a nastaví `rPosition` k **pozice** hodnota další zobrazení v seznamu. Pokud načtené zobrazení je poslední v seznamu, pak `rPosition` je nastaven na **NULL**.  
+ Funkce vrátí zobrazení identifikovaný *rPosition* a nastaví *rPosition* k **pozice** hodnota další zobrazení v seznamu. Pokud načtené zobrazení je poslední v seznamu, pak *rPosition* je nastaven na **NULL**.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
@@ -472,13 +472,13 @@ virtual BOOL GetThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Určuje šířku a výšku bitmapy.  
   
- `phbmp`  
+ *phbmp*  
  Obsahuje popisovač pro bitové mapy, když se funkce vrátí úspěšně.  
   
- `pdwAlpha`  
+ *pdwAlpha*  
  Obsahuje hodnotu DWORD určující hodnotu alfa kanálu, když se funkce vrátí úspěšně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -539,10 +539,10 @@ virtual HRESULT LoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStream`  
+ *pStream*  
  Ukazatel na datový proud. Tento datový proud poskytuje prostředí.  
   
- `dwGrfMode`  
+ *dwGrfMode*  
  Režim přístupu do datového proudu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -659,13 +659,13 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `deEvent`  
+ [v] *deEvent*  
  Výčtové datový typ, který popisuje typ události.  
   
 ### <a name="remarks"></a>Poznámky  
  Události dokument může ovlivnit více tříd. Tato metoda je zodpovědná za zpracování událostí dokumentu, které ovlivňují třídy jiné než [CDocument – třída](../../mfc/reference/cdocument-class.md). V současné době je jediná třída, která musí reakce na události dokumentu [CDataRecoveryHandler třída](../../mfc/reference/cdatarecoveryhandler-class.md). `CDocument` Třída má jiné přepisovatelné metody zodpovídá za zpracování účinek na `CDocument`.  
   
- Následující tabulka uvádí možné hodnoty pro `deEvent` a události, které odpovídají.  
+ Následující tabulka uvádí možné hodnoty pro *deEvent* a události, které odpovídají.  
   
 |Hodnota|Odpovídající událost|  
 |-----------|-------------------------|  
@@ -684,10 +684,10 @@ virtual void OnDrawThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *řadič domény*  
  Odkaz na kontextu zařízení.  
   
- `lprcBounds`  
+ *lprcBounds*  
  Určuje ohraničující obdélník oblasti, kde mají být vykresleny miniaturu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -716,10 +716,10 @@ virtual HRESULT OnLoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStream`  
+ *pStream*  
  Ukazatel na příchozího datového proudu.  
   
- `grfMode`  
+ *grfMode*  
  Režim přístupu do datového proudu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -761,7 +761,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Body k cestě otevření dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -791,7 +791,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `phwnd`  
+ *phwnd*  
  [out] Po návratu tato metoda obsahuje ukazatel HWND vrácená z volání `GetFocus` funkce z vlákna popředí obslužná rutina preview.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -807,7 +807,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pmsg`  
+ *pmsg*  
  [v] Ukazatel na zpráv oken.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -859,7 +859,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Odkazuje na plně kvalifikovanou cestu, která má být uložen soubor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -885,7 +885,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
+ *pCmdUI*  
  Ukazatel [CCmdUI](../../mfc/reference/ccmdui-class.md) objekt přidružený k **ID_FILE_SEND_MAIL** příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -901,13 +901,13 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFrame`  
- Ukazatel [CFrameWnd](../../mfc/reference/cframewnd-class.md) kterém jsou uložena přidruženého **CDocument** objektu.  
+ *pFrame*  
+ Ukazatel [CFrameWnd](../../mfc/reference/cframewnd-class.md) kterém jsou uložena přidruženého `CDocument` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Může být přepsána zadejte vlastní čištění, ale nezapomeňte volat základní třídy.  
   
- Výchozí `PreCloseFrame` se nic nestane. **CDocument**. **CDocument**-odvozených třídách [COleDocument](../../mfc/reference/coledocument-class.md) a [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) tato funkce je člen.  
+ Výchozí `PreCloseFrame` se nic nestane. `CDocument`. `CDocument`-Odvozených třídách [COleDocument](../../mfc/reference/coledocument-class.md) a [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) tato funkce je člen.  
   
 ##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  Přečte další hodnotu bloku.  
@@ -917,8 +917,8 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppValue`  
- [out] Po návratu funkce `ppValue` obsahuje hodnotu, která byla načtena.  
+ *ppValue*  
+ [out] Když funkce vrátí hodnotu, *ppValue* obsahuje hodnotu, která byla načtena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -935,16 +935,16 @@ virtual void ReleaseFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFile`  
+ *pFile*  
  Ukazatel na objekt cfile – k uvolnění.  
   
- `bAbort`  
+ *bAbort*  
  Určuje, zda soubor k uvolnění pomocí `CFile::Close` nebo `CFile::Abort`. **FALSE** Pokud je soubor k uvolnění pomocí [CFile::Close](../../mfc/reference/cfile-class.md#close); **TRUE** Pokud je soubor k uvolnění pomocí [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bAbort` je **TRUE**, `ReleaseFile` volání `CFile::Abort`, a soubor vydání. `CFile::Abort` nebude vyvolat výjimku.  
+ Pokud *bAbort* je **TRUE**, `ReleaseFile` volání `CFile::Abort`, a soubor vydání. `CFile::Abort` nebude vyvolat výjimku.  
   
- Pokud `bAbort` je **FALSE**, `ReleaseFile` volání `CFile::Close` a vydání soubor.  
+ Pokud *bAbort* je **FALSE**, `ReleaseFile` volání `CFile::Close` a vydání soubor.  
   
  Člen funkci tak, aby vyžadovala akce uživatelem před vydání soubor přepište.  
   
@@ -958,10 +958,10 @@ virtual void RemoveChunk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `Guid`  
+ *Identifikátor GUID*  
  Určuje identifikátor GUID bloku dat mají být odebrány.  
   
- `Pid`  
+ *PID*  
  Určuje ID bloku dat mají být odebrány.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -974,7 +974,7 @@ void RemoveView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pView`  
+ *pView*  
  Body do zobrazení, který je právě odebírán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -996,7 +996,7 @@ virtual void ReportSaveLoadException(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Odkazuje na název dokumentu, který byl právě uloženy ani načíst.  
   
  *e*  
@@ -1005,11 +1005,11 @@ virtual void ReportSaveLoadException(
  *bSaving*  
  Příznak, který udává, jaké operace se v průběhu; nenulové hodnoty, pokud se dokument uložit, 0 Pokud při načítání dokumentu.  
   
- `nIDPDefault`  
+ *nIDPDefault*  
  Identifikátor chybové zprávy, který se má zobrazit, pokud funkce není zadat konkrétnější.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace prozkoumá objekt výjimky a hledá chybovou zprávu, která speciálně popisuje příčinu. Pokud není nalezena konkrétní zprávou, nebo pokud *e* je **NULL**, obecné zprávě určené `nIDPDefault` parametr se používá. Funkce pak zobrazí okno se zprávou obsahující chybovou zprávu. Tato funkce přepsání, pokud byste chtěli poskytnout další, přizpůsobené selhání zprávy. Toto je rozšířené přepisovatelné.  
+ Výchozí implementace prozkoumá objekt výjimky a hledá chybovou zprávu, která speciálně popisuje příčinu. Pokud není nalezena konkrétní zprávou, nebo pokud *e* je **NULL**, obecné zprávě určené *nIDPDefault* parametr se používá. Funkce pak zobrazí okno se zprávou obsahující chybovou zprávu. Tato funkce přepsání, pokud byste chtěli poskytnout další, přizpůsobené selhání zprávy. Toto je rozšířené přepisovatelné.  
   
 ##  <a name="savemodified"></a>  CDocument::SaveModified  
  Voláno rámcem před změněný dokument bude uzavřen.  
@@ -1032,7 +1032,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pValue`  
+ *pValue*  
  Určuje hodnotu bloku pro nastavení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1048,11 +1048,11 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bModified`  
+ *bModified*  
  Příznak označující, zda dokument byl změněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Při volání této funkce konzistentně, zajistěte, aby rozhraní vyzývá uživatele k před zavřením dokument uložit změny. Obvykle měli použít výchozí hodnotu **TRUE** pro `bModified` parametr. Označit dokumentu jako vyčistit (beze změny), volání této funkce s hodnotou **FALSE**.  
+ Při volání této funkce konzistentně, zajistěte, aby rozhraní vyzývá uživatele k před zavřením dokument uložit změny. Obvykle měli použít výchozí hodnotu **TRUE** pro *bModified* parametr. Označit dokumentu jako vyčistit (beze změny), volání této funkce s hodnotou **FALSE**.  
   
 ##  <a name="setpathname"></a>  CDocument::SetPathName  
  Voláním této funkce zadejte plně kvalifikovanou cestu souboru disku dokumentu.  
@@ -1064,14 +1064,14 @@ virtual void SetPathName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Odkazuje na řetězec, který má být použit jako cestu pro dokument.  
   
- `bAddToMRU`  
+ *bAddToMRU*  
  Určuje, zda je název souboru do nejvíc nabízet (naposledy použitých). Pokud **nastavena hodnota TRUE,** přidat název souboru; Pokud **FALSE**, tam není přidaný.  
   
 ### <a name="remarks"></a>Poznámky  
- V závislosti na hodnotě `bAddToMRU` cesta je přidat, nebo není přidat do seznamu naposledy použitých aplikací. Všimněte si, že některé dokumenty nejsou přidružené soubor na disku. Volání této funkce pouze v případě, že přepíšete výchozí implementace pro otevření a uložení souborů používaných rozhraní.  
+ V závislosti na hodnotě *bAddToMRU* cesta je přidat, nebo není přidat do seznamu naposledy použitých aplikací. Všimněte si, že některé dokumenty nejsou přidružené soubor na disku. Volání této funkce pouze v případě, že přepíšete výchozí implementace pro otevření a uložení souborů používaných rozhraní.  
   
 ##  <a name="settitle"></a>  CDocument::SetTitle  
  Volání této funkce můžete zadat název dokumentu (řetězec zobrazen v záhlaví okna rámečkem).  
@@ -1081,7 +1081,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTitle`  
+ *lpszTitle*  
  Odkazuje na řetězec, který má být použit jako název dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1098,19 +1098,19 @@ void UpdateAllViews(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSender`  
+ *pSender*  
  Odkazuje na úpravy dokumentu, zobrazení nebo **NULL** Pokud jsou všechny zobrazení aktualizovat.  
   
- `lHint`  
+ *lHint*  
  Obsahuje informace o této úpravy.  
   
- `pHint`  
+ *pHint*  
  Odkazuje na objekt ukládání informací o úpravy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce by měly volat, jakmile zavoláte [SetModifiedFlag](#setmodifiedflag) – členská funkce. Tato funkce informuje jednotlivých zobrazení připojené k dokumentu, s výjimkou zobrazení určeného `pSender`, která byla změněna dokumentu. Obvykle volání této funkce z vaší třídy zobrazení po změně uživatele prostřednictvím zobrazení dokumentu.  
+ Tato funkce by měly volat, jakmile zavoláte [SetModifiedFlag](#setmodifiedflag) – členská funkce. Tato funkce informuje jednotlivých zobrazení připojené k dokumentu, s výjimkou zobrazení určeného *pSender*, která byla změněna dokumentu. Obvykle volání této funkce z vaší třídy zobrazení po změně uživatele prostřednictvím zobrazení dokumentu.  
   
- Tato funkce volá [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) – členská funkce pro každou z dokumentu zobrazení kromě odesílání zobrazit předávání `pHint` a `lHint`. Použijte tyto parametry k předání informací k zobrazení o změny provedené v dokumentu. Můžete kódovat pomocí informace `lHint` nebo můžete definovat [CObject](../../mfc/reference/cobject-class.md)-odvozené třídy k ukládání informací o změny a předat objekt této třídy pomocí `pHint`. Přepsání `CView::OnUpdate` členské funkce ve vaší [CView](../../mfc/reference/cview-class.md)-odvozené třídy za účelem optimalizace aktualizace na základě informací předán zobrazení zobrazení.  
+ Tato funkce volá [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) – členská funkce pro každou z dokumentu zobrazení kromě odesílání zobrazit předávání *pHint* a *lHint*. Použijte tyto parametry k předání informací k zobrazení o změny provedené v dokumentu. Můžete kódovat pomocí informace *lHint* nebo můžete definovat [CObject](../../mfc/reference/cobject-class.md)-odvozené třídy k ukládání informací o změny a předat objekt této třídy pomocí *pHint*. Přepsání `CView::OnUpdate` členské funkce ve vaší [CView](../../mfc/reference/cview-class.md)-odvozené třídy za účelem optimalizace aktualizace na základě informací předán zobrazení zobrazení.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  

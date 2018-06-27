@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352096"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953269"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler – třída
 Implementuje zpětné volání, která je volána rozhraním API animace, když dojde k událostem časování.  
@@ -77,10 +77,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Ukazatel na animace řadiči, který bude přijímat události.  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
@@ -113,7 +113,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fps`  
+ *snímků za sekundu*  
   
 ### <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud metoda úspěšně. jinak E_FAIL.  
@@ -126,7 +126,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Ukazatel na animace řadiči, který bude přijímat události.  
   
 ## <a name="see-also"></a>Viz také  

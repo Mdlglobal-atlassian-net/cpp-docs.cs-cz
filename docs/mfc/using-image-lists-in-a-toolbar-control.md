@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382847"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951904"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Použití seznamů obrázků v ovládacím prvku panel nástrojů
 Ve výchozím nastavení jsou obrázky používané tlačítek v ovládacím prvku panel nástrojů uloženy jako jeden rastrového obrázku. Však také můžete uložit tlačítko bitové kopie v sadě seznamů obrázků. Objekt ovládacího prvku panel nástrojů můžete použít až tři seznamy samostatnou bitovou kopii:  
@@ -30,7 +30,7 @@ Ve výchozím nastavení jsou obrázky používané tlačítek v ovládacím prv
   
 -   Zakázat Image obsahuje seznam bitové kopie pro tlačítka panelu nástrojů, které jsou aktuálně zakázány.  
   
--   Zvýrazněná Image obsahuje seznam bitové kopie pro tlačítka panelu nástrojů, které jsou aktuálně vyznačené. Tento image se použije jenom v případě, že používá panelu nástrojů **TBSTYLE_FLAT** stylu.  
+-   Zvýrazněná Image obsahuje seznam bitové kopie pro tlačítka panelu nástrojů, které jsou aktuálně vyznačené. Tento seznam bitové kopie se používá jenom v případě, že styl TBSTYLE_FLAT používá panelu nástrojů.  
   
  Pokud je s přidružíte používají tyto seznamy obrázků ovládací prvek panelu nástrojů `CToolBarCtrl` objektu. Toto přidružení se provádí tak, že volání [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), a [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

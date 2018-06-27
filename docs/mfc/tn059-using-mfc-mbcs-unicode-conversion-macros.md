@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384287"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953500"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Použití převodních maker MBCS/Unicode prostředí MFC
 > [!NOTE]
@@ -86,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  Existují další volání, kde převod je nezbytné, ale pomocí makra je jednoduchý a efektivní.  
   
- Implementace každé makro používá funkci _alloca() přidělit paměť v zásobníku místo haldě. Přidělování paměti ze zásobníku je mnohem rychlejší než přidělování v haldě paměti a velikost paměti je automaticky uvolněno při funkce je byl ukončen. Kromě toho makra Vyhněte se volání **MultiByteToWideChar** (nebo **WideCharToMultiByte**) více než jednou. K tomu je potřeba přidělování chvíli více paměti, než je nezbytné. Víme, že MBC převede do maximálně jeden **WCHAR** a že pro každou **WCHAR** jsme bude mít maximálně dva bajty MBC. Přidělování trochu více než nezbytné, ale vždy dostatečně ke zpracování převodu druhé volání druhé volání funkce Převod je předejít. Volání pomocné funkce **AfxA2Whelper** snižuje počet argument nabízených oznámení, které je třeba provést, aby bylo možné provést převod (výsledkem kódu menší, než pokud ji volat **MultiByteToWideChar**přímo).  
+ Implementace každé makro používá funkci _alloca() přidělit paměť v zásobníku místo haldě. Přidělování paměti ze zásobníku je mnohem rychlejší než přidělování v haldě paměti a velikost paměti je automaticky uvolněno při funkce je byl ukončen. Kromě toho makra Vyhněte se volání `MultiByteToWideChar` (nebo `WideCharToMultiByte`) více než jednou. K tomu je potřeba přidělování chvíli více paměti, než je nezbytné. Víme, že MBC převede do maximálně jeden **WCHAR** a že pro každou **WCHAR** jsme bude mít maximálně dva bajty MBC. Přidělování trochu více než nezbytné, ale vždy dostatečně ke zpracování převodu druhé volání druhé volání funkce Převod je předejít. Volání pomocné funkce `AfxA2Whelper` snižuje počet argument nabízených oznámení, které je třeba provést, aby bylo možné provést převod (výsledkem kódu menší, než pokud ji volat `MultiByteToWideChar` přímo).  
   
- Aby k makra tak, aby měl místa k uložení dočasné délka, je nutné deklarovat, místní proměnné s názvem _převést, který to v každé funkci, používá makra převodů. K tomu je potřeba vyvolání **USES_CONVERSION** makro, jak je vidět v příkladu výše.  
+ Aby k makra tak, aby měl místa k uložení dočasné délka, je nutné deklarovat, místní proměnné s názvem _převést, který to v každé funkci, používá makra převodů. K tomu je potřeba vyvolání makro USES_CONVERSION, jak je vidět v příkladu výše.  
   
  Existují obecné Převod makra a makra konkrétní OLE. Tyto dvě různé makro sady jsou popsané dále. Všechny makra umístěny v AFXPRIV. H.  
   
@@ -105,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  Kromě to převody text, jsou k dispozici také makra a podpůrné funkce pro převod `TEXTMETRIC`, `DEVMODE`, `BSTR`a OLE přidělené řetězce. Tyto makra jsou nad rámec této diskuse – odkazovat na AFXPRIV. H Další informace o těchto makra.  
   
 ## <a name="ole-conversion-macros"></a>Makra převodů OLE  
- Makra převodů OLE určené pro zpracování funkce, které očekávají **OLESTR** znaků. Pokud si projdete OLE hlavičky, uvidíte mnoho odkazů na **LPCOLESTR** a **OLECHAR**. Tyto typy se používají k odkazování na typ použitá v rozhraní OLE způsobem, který není specifické pro platformu. **OLECHAR** mapuje `char` Win16 a Macintosh platformy a **WCHAR** v Win32.  
+ Makra převodů OLE určené pro zpracování funkce, které očekávají **OLESTR** znaků. Pokud si projdete OLE hlavičky, uvidíte mnoho odkazů na **LPCOLESTR** a **OLECHAR**. Tyto typy se používají k odkazování na typ použitá v rozhraní OLE způsobem, který není specifické pro platformu. **OLECHAR** mapuje **char** Win16 a Macintosh platformy a **WCHAR** v Win32.  
   
  Chcete-li zachovat počet **#ifdef** direktivy v prostředí MFC kód na minimum máme podobné makro pro každý převod, kde se podílejí OLE řetězce. Nejčastěji se používají následující makra:  
   
@@ -116,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- Znovu, jsou podobné makra pro to `TEXTMETRIC`, `DEVMODE`, `BSTR`a OLE přidělené řetězce. Naleznete AFXPRIV. H Další informace.  
+ Znovu jsou podobné makra pro provádění TEXTMETRIC, DEVMODE, BSTR a OLE přidělené řetězce. Naleznete AFXPRIV. H Další informace.  
   
 ## <a name="other-considerations"></a>Ostatní úvahy  
  Nepoužívejte makra v úzkou smyčku. Například nechcete zápisu následující typy kódu:  

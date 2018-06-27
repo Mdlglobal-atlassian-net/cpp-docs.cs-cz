@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e061802cbcd8926a146e5765cc9ecfd9bf917295
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea99cfb77f295530f65b3d3b07888b0735fc0b6a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348150"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950500"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO – struktura
 `BITMAPINFO` Struktura definuje dimenzí a barevné informace pro Windows device independent bitmap (DIB).  
@@ -36,10 +36,10 @@ typedef struct tagBITMAPINFO {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `bmiHeader`  
+ *bmiHeader*  
  Určuje [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struktura, která obsahuje informace o dimenzí a barvu formát device independent bitmap.  
   
- `bmiColors`  
+ *bmiColors*  
  Určuje pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) nebo `DWORD` datové typy, které definují barvy v souboru bitové mapy.  
   
 ## <a name="remarks"></a>Poznámky  

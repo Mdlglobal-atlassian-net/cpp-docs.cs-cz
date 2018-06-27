@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355886"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954101"
 ---
 # <a name="cbrush-class"></a>CBrush – třída
 Zapouzdří štětce Windows zařízení grafické rozhraní (GDI).  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Určuje barvu popředí stopy jako barva RGB. Pokud je zasílána štětec, tento parametr určuje barvu šrafování.  
   
- `nIndex`  
+ *nIndex*  
  Určuje styl šrafování štětce. Může být některého z následujících hodnot:  
   
 - `HS_BDIAGONAL` Šrafování dolů (zleva doprava) na 45 stupňů  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Vertikální šrafování  
   
- `pBitmap`  
+ *pBitmap*  
  Odkazuje na `CBitmap` objekt, který určuje, ke kterému stopy vybarví rastrový obrázek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Konstruktor s jedním [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr vytvoří plného štětce určenou barvou. Určuje hodnotu RGB barva a konstruovat s `RGB` makro v systému WINDOWS. H.  
   
- Konstruktor s dva parametry vytvoří štětce šrafování. `nIndex` Parametrem index šrafované vzor. `crColor` Parametr určuje barvu.  
+ Konstruktor s dva parametry vytvoří štětce šrafování. *NIndex* parametrem index šrafované vzor. *CrColor* parametr určuje barvu.  
   
  Konstruktor s `CBitmap` parametr vytvoří vzorkem štětce. Tento parametr identifikuje rastrový obrázek. Bitmapy se předpokládá, že byly vytvořeny pomocí [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), nebo [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Minimální velikost rastrového obrázku pro použití v vzorek výplně je 8 × 8 pixelů.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  Dvě verze lišit ve způsobu zpracování DIB:  
   
--   V první verzi, chcete-li získat popisovač DIB zavolejte Windows **GlobalAlloc** funkce přidělit globální paměť blok a pak zadejte velikost paměti s sbalené DIB.  
+-   V první verzi, chcete-li získat popisovač DIB zavolejte Windows `GlobalAlloc` funkce přidělit globální paměť blok a pak zadejte velikost paměti s sbalené DIB.  
   
--   V druhé verzi, není nutné volat **GlobalAlloc** přidělit paměť pro sbalený DIB.  
+-   V druhé verzi, není nutné volat `GlobalAlloc` přidělit paměť pro sbalený DIB.  
   
  Zabalená DIB se skládá z `BITMAPINFO` datová struktura bezprostředně následované pole bajtů, která definuje pixelů bitmapy. Rastrové obrázky použít jako výplň vzory by měl být 8 × 8 pixelů. Pokud bitmapy je větší, vytvoří Windows vzorek výplně pomocí pouze bits odpovídající prvních 8 řádků a sloupců 8 pixelů v levém horním rohu bitmapy.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Informace o používání následující funkce Windows najdete v tématu Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (Tato funkce slouží pouze k zajištění kompatibility s aplikacemi, které jsou napsané pro verzích Windows starších než 3.0; použít **CreateDIBPatternBrushPt** funkce.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (Tato funkce slouží pouze k zajištění kompatibility s aplikacemi, které jsou napsané pro verzích Windows starších než 3.0; použít `CreateDIBPatternBrushPt` funkce.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (Tato funkce slouží pro aplikace založené na Win32.)  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Určuje styl šrafování štětce. Může být některého z následujících hodnot:  
   
 - `HS_BDIAGONAL` Šrafování dolů (zleva doprava) na 45 stupňů  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Vertikální šrafování  
   
- `crColor`  
+ *crColor*  
  Určuje barvu popředí stopy jako barva RGB (barvu šrafování). V tématu [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ve Windows SDK pro další informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Identifikuje rastrový obrázek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Štětec lze následně vybrat pro jakýkoli kontext zařízení, která podporuje rastrové operace. Rastrový obrázek identifikovaný `pBitmap` se obvykle inicializují pomocí [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), nebo [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) funkce.  
+ Štětec lze následně vybrat pro jakýkoli kontext zařízení, která podporuje rastrové operace. Rastrový obrázek identifikovaný *pBitmap* se obvykle inicializují pomocí [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: Loadbitmap –](../../mfc/reference/cbitmap-class.md#loadbitmap), nebo [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) funkce.  
   
  Rastrové obrázky použít jako výplň vzory by měl být 8 × 8 pixelů. Bitmapy je větší, v systému Windows se použije pouze na bits odpovídající prvních 8 řádků a sloupců pixelů v levém horním rohu bitmapy.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktura, která určuje barvu štětce. Určuje hodnotu RGB barva a konstruovat s `RGB` makro v systému WINDOWS. H.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktura, která určuje barvu štětce. Barva Určuje hodnotu RGB a konstruovat s makro RGB v systému WINDOWS. H.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Určuje barvu index. Tato hodnota odpovídá barvu použitou k vyplnění jeden z elementů 21 okno. V tématu [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) ve Windows SDK pro seznam hodnot.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hBrush`  
+ *hBrush*  
  `HANDLE` k štětce GDI systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLogBrush`  
+ *pLogBrush*  
  Odkazuje na [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktura, která obsahuje informace o stopy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud funkci úspěšné, a `pLogBrush` platný ukazatel vrácená hodnota je počet bajtů, které jsou uložené do vyrovnávací paměti.  
+ Pokud funkci úspěšné, a *pLogBrush* platný ukazatel vrácená hodnota je počet bajtů, které jsou uložené do vyrovnávací paměti.  
   
- Pokud funkci úspěšné, a `pLogBrush` je **NULL**, vrácená hodnota je počet bajtů požadovaných k uložení informace funkce by ukládání do vyrovnávací paměti.  
+ Pokud funkci úspěšné, a *pLogBrush* je **NULL**, vrácená hodnota je počet bajtů požadovaných k uložení informace funkce by ukládání do vyrovnávací paměti.  
   
  Pokud se funkce nezdaří, je vrácenou hodnotu 0.  
   

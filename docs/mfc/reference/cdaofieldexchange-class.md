@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9e65b4880c80f8a4b0d9a192f316b16a92a3e69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368726"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953906"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange – třída
 Podporuje rutiny výměna pole záznamu exchange (DFX) používá databázové třídy DAO.  
@@ -67,7 +67,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  Výměna pole záznamu rozhraní DAO (DFX) je velmi podobný výměna pole záznamu (RFX) v databázové třídy MFC založených na rozhraní ODBC ( `CDatabase`, `CRecordset`). Pokud budete rozumět tomu RFX, zjistíte, je snadno použitelný DFX.  
   
- A `CDaoFieldExchange` objekt poskytuje kontextové informace potřebné pro rozhraní DAO záznam pole exchange proběhla. `CDaoFieldExchange` objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. DFX operací na členy třídy sady záznamů dat typy definované `enum` **typ pole** v `CDaoFieldExchange`. Možné **typ pole** hodnoty jsou:  
+ A `CDaoFieldExchange` objekt poskytuje kontextové informace potřebné pro rozhraní DAO záznam pole exchange proběhla. `CDaoFieldExchange` objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. DFX operací na členy třídy sady záznamů dat typy definované **výčtu** **typ pole** v `CDaoFieldExchange`. Možné **typ pole** hodnoty jsou:  
   
 - **CDaoFieldExchange::outputColumn** pro pole datových členů.  
   
@@ -118,7 +118,7 @@ BOOL IsValidOperation();
 |**StoreField**|Uloží do mezipaměti na aktuální záznam.|  
 |**LoadField**|Obnoví data uložená v mezipaměti členským proměnným v sadě záznamů.|  
 |**FreeCache**|Uvolní mezipaměti ke kontrole "nekonzistence" pole v sadě záznamů.|  
-|`SetFieldNull`|Nastaví stav tohoto pole na hodnotu Null a hodnota, která má **PSEUDONULL**.|  
+|**SetFieldNull**|Nastaví stav tohoto pole na hodnotu Null a hodnota, která má **PSEUDONULL**.|  
 |**MarkForAddNew**|Označí pole "nekonzistence", pokud není **PSEUDONULL**.|  
 |**MarkForEdit**|Označí pole "nekonzistence" Pokud se neshodují mezipaměti.|  
 |**SetDirtyField**|Nastaví pole hodnoty, které jsou označené jako "chybná."|  
@@ -138,7 +138,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFieldType`  
+ *nFieldType*  
  Hodnota **výčtu typ pole**, deklarované v `CDaoFieldExchange`, může být buď z následujících akcí:  
   
 - **CDaoFieldExchange::outputColumn**  
@@ -146,9 +146,9 @@ void SetFieldType(UINT nFieldType);
 - **CDaoFieldExchange::param**  
   
 ### <a name="remarks"></a>Poznámky  
- Za normálních okolností ClassWizard zapíše toto volání za vás. Pokud napíšete vlastní funkce a použili průvodce k vytvoření vašeho `DoFieldExchange` fungovat, přidejte volání vlastní funkce mimo pole mapy. Pokud použijete průvodce, nebudete se mapování polí. Volání předchází volání funkcí DFX, jeden pro každé pole datového člena třídy a typ pole jako **CDaoFieldExchange::outputColumn**.  
+ Za normálních okolností ClassWizard zapíše toto volání za vás. Pokud napíšete vlastní funkce a použili průvodce k vytvoření vašeho `DoFieldExchange` fungovat, přidejte volání vlastní funkce mimo pole mapy. Pokud použijete průvodce, nebudete se mapování polí. Volání předchází volání funkcí DFX, jeden pro každé pole datového člena třídy a typ pole jako `CDaoFieldExchange::outputColumn`.  
   
- Pokud jste Parametrizace vaší třídy sady záznamů, můžete přidat DFX volání pro všechny parametry datových členů (mimo mapování polí) a předcházet těchto volání pomocí volání `SetFieldType`. Předejte hodnotu **CDaoFieldExchange::param**. (Místo toho můžete použít [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) a nastavení jeho hodnoty parametru.)  
+ Pokud jste Parametrizace vaší třídy sady záznamů, můžete přidat DFX volání pro všechny parametry datových členů (mimo mapování polí) a předcházet těchto volání pomocí volání `SetFieldType`. Předejte hodnotu `CDaoFieldExchange::param`. (Místo toho můžete použít [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) a nastavení jeho hodnoty parametru.)  
   
  Obecně platí, každou skupinu volání funkce DFX přidružené pole datových členů nebo parametry datových členů musí předcházet volání `SetFieldType`. `nFieldType` Parametr jednotlivých `SetFieldType` volání jsou uvedeny typy datových členů reprezentována DFX volání funkce, které následují `SetFieldType` volání.  
   

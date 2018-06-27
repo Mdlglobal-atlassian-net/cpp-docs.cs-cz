@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369080"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951816"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 Představuje je odlišný datový typ pro třídy MFC rozhraní ODBC.  
@@ -85,7 +85,7 @@ class CDBVariant
 |Název|Popis|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Obsahuje hodnotu typu **BOOL**.|  
-|[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu `unsigned char`.|  
+|[CDBVariant::m_chVal](#m_chval)|Obsahuje hodnotu typu **nepodepsané char**.|  
 |[CDBVariant::m_dblVal](#m_dblval)|Obsahuje hodnotu typu **dvojité**.|  
 |[CDBVariant::m_fltVal](#m_fltval)|Obsahuje hodnotu typu **float**.|  
 |[CDBVariant::m_iVal](#m_ival)|Obsahuje hodnotu typu **krátké**.|  
@@ -99,7 +99,7 @@ class CDBVariant
 ## <a name="remarks"></a>Poznámky  
  `CDBVariant` nemá základní třídu.  
   
- `CDBVariant` je podobná [COleVariant](../../mfc/reference/colevariant-class.md), nicméně `CDBVariant` nepoužívá OLE. `CDBVariant` Umožňuje ukládání hodnotu bez obav, hodnota datového typu. `CDBVariant` sleduje datový typ aktuální hodnota, která je uložena v spojení.  
+ `CDBVariant` je podobná [COleVariant](../../mfc/reference/colevariant-class.md), nicméně `CDBVariant` nepoužívá OLE. `CDBVariant` umožňuje ukládání hodnotu bez obav, hodnota datového typu. `CDBVariant` sleduje datový typ aktuální hodnota, která je uložena v spojení.  
   
  Třída [CRecordset](../../mfc/reference/crecordset-class.md) využívá `CDBVariant` objekty v tři členské funkce: `GetFieldValue`, `GetBookmark`, a `SetBookmark`. Například `GetFieldValue` umožňuje dynamicky načíst data ve sloupci. Vzhledem k tomu, že v době běhu, nemusí být známé datový typ sloupce `GetFieldValue` používá `CDBVariant` objekt pro uložení dat sloupce.  
   
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud hodnota [m_dwType](#m_dwtype) – datový člen je **DBVT_DATE**, **DBVT_STRING**, nebo **DBVT_BINARY**, **vymazat**uvolní paměť spojených se členem union ukazatele. **Zrušte** nastaví `m_dwType` k **DBVT_NULL**.  
+ Pokud hodnota [m_dwType](#m_dwtype) – datový člen je **DBVT_DATE**, **DBVT_STRING**, nebo **DBVT_BINARY**, `Clear` uvolní paměť spojených se členem union ukazatele. `Clear` Nastaví `m_dwType` k **DBVT_NULL**.  
   
- `CDBVariant` Volání destruktoru **zrušte**.  
+ `CDBVariant` Volání destruktoru `Clear`.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Ukládá hodnotu typu **BOOL**.  

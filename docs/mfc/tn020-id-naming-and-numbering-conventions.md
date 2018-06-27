@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384108"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951364"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Konvence pojmenování a číslování pro identifikátory
 Tato poznámka popisuje ID pojmenování a číslování konvence, které používá MFC 2.0 pro prostředky, příkazy, řetězce, ovládací prvky a podřízená okna.  
@@ -68,7 +68,7 @@ Tato poznámka popisuje ID pojmenování a číslování konvence, které použ�
 |IDM_|Pro položky nabídky, které nepoužívají architektury MFC příkaz.|  
 |ID_|Příkazy nabídky, použijte příkaz architektury MFC.|  
   
- Příkazy, které následují příkaz architektury MFC musí mít `ON_COMMAND` příkaz obslužné rutiny a může mít `ON_UPDATE_COMMAND_UI` obslužné rutiny. Pokud tyto obslužné rutiny příkazů postupovat podle příkaz architektury MFC, budou fungovat správně jestli jsou vázány na příkazu nabídky, tlačítka panelu nástrojů nebo tlačítko panel dialogového okna. Nabídky výzva řetězec, který se zobrazí na panelu zpráv programu se také používá stejnou předponu "ID_". Konvence příkaz MFC by mělo vycházet většinu položek nabídky v aplikaci. Všechny standardní identifikátory příkazů (například `ID_FILE_NEW`) postupujte podle touto konvencí.  
+ Příkazy, které následují příkaz architektury MFC musí mít on_command – obslužná rutina a může mít obslužnou rutinu on_update_command_ui –. Pokud tyto obslužné rutiny příkazů postupovat podle příkaz architektury MFC, budou fungovat správně jestli jsou vázány na příkazu nabídky, tlačítka panelu nástrojů nebo tlačítko panel dialogového okna. Nabídky výzva řetězec, který se zobrazí na panelu zpráv programu se také používá stejnou předponu "ID_". Konvence příkaz MFC by mělo vycházet většinu položek nabídky v aplikaci. Všechny identifikátory standardních příkazů (například id_file_new –) postupujte podle touto konvencí.  
   
  "IDP_" MFC také používá jako specializovaná forma řetězce (místo "IDS_"). Řetězce s předponou "IDP_" jsou výzvy, který je řetězce použité v oknech zprávy. Řetězce "IDP_" může obsahovat "%1" a "%2" zástupnými symboly řetězců určen program. Řetězce "IDP_" obvykle mají témata nápovědy související s nimi a řetězce "IDS_" nepodporují. Jsou vždy lokalizované řetězce "IDP_" a nemusí být lokalizované řetězce "IDS_".  
   
