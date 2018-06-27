@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367500"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950882"
 ---
 # <a name="cevent-class"></a>CEvent – třída
 Představuje událost, která je na synchronizační objekt, který umožňuje jedno vlákno oznámit jiné, který došlo k události.  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` objekty mají dva typy: ruční a automatická.  
   
- Automatické `CEvent` objekt automaticky obnoví stav signalizace (není k dispozici), po vydání alespoň jedno vlákno. Ve výchozím nastavení `CEvent` objekt je automatické, pokud předáte `TRUE` pro `bManualReset` parametru během vytváření.  
+ Automatické `CEvent` objekt automaticky obnoví stav signalizace (není k dispozici), po vydání alespoň jedno vlákno. Ve výchozím nastavení `CEvent` objekt je automatické, pokud předáte `TRUE` pro *bManualReset* parametru během vytváření.  
   
  Ruční `CEvent` objekt zůstane ve stavu, která nastavuje [SetEvent](#setevent) nebo [ResetEvent](#resetevent) dokud další funkce je volána. Chcete-li vytvořit ruční `CEvent` objektu, předejte `TRUE` pro `bManualReset` parametru během vytváření.  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bInitiallyOwn`  
- Pokud **TRUE**, vlákno pro **CMultilock** nebo `CSingleLock` objektu je povoleno. Jinak musí počkat všechna vlákna, kteří požadují přístup k prostředku.  
+ *bInitiallyOwn*  
+ Pokud **TRUE**, vlákno pro `CMultilock` nebo `CSingleLock` objektu je povoleno. Jinak musí počkat všechna vlákna, kteří požadují přístup k prostředku.  
   
  *bManualReset*  
  Pokud **TRUE**, určuje, že objekt události je ruční událost, jinak události objektu je automatické událost.  
   
- `lpszName`  
+ *lpszName*  
  Název `CEvent` objektu. Je nutné zadat Pokud objektu se použije přes hranice procesu. Pokud název odpovídá existující událost, konstruktoru vytvoří novou `CEvent` objekt, který odkazuje na události s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není událost, konstrukce se nezdaří. Pokud **NULL**, název bude mít hodnotu null.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atributy zabezpečení pro objekt události. Úplný popis tuto strukturu, najdete v části [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) ve Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  

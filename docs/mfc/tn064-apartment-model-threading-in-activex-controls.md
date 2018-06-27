@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383185"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950432"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Model apartment práce s vlákny v ovládacích prvcích ActiveX
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383185"
  Povolení dělení modelu objektu apartment je snadné pro většinu ovládací prvky, zejména v případě, že mají žádné nebo téměř žádné sdílená data.  
   
 ## <a name="protecting-shared-data"></a>Ochrana sdílená Data  
- Pokud vaše řízení používá sdílená data, například statické členské proměnné, přístup k že data by měly být chráněné s kritická sekce zabránit úprava dat ve stejnou dobu více než jedno vlákno. Pro nastavení důležitý oddíl pro tento účel, deklarovat proměnnou statický člen třídy `CCriticalSection` ve třídě ovládacího prvku. Použití `Lock` a **odemčení** členské funkce této kritické části objektu bez ohledu na váš kód přistupuje k sdíleným datům.  
+ Pokud vaše řízení používá sdílená data, například statické členské proměnné, přístup k že data by měly být chráněné s kritická sekce zabránit úprava dat ve stejnou dobu více než jedno vlákno. Pro nastavení důležitý oddíl pro tento účel, deklarovat proměnnou statický člen třídy `CCriticalSection` ve třídě ovládacího prvku. Použití `Lock` a `Unlock` členské funkce této kritické části objektu bez ohledu na váš kód přistupuje k sdíleným datům.  
   
  Zvažte například řízení třídu, která je potřeba udržovat řetězec, který je sdílen všechny instance. Tento řetězec můžete udržovat statický člen proměnné a chráněn kritická sekce. Deklarace třídy ovládacího prvku by obsahovat následující:  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>Registrace ovládacího prvku typu Apartment modelu s deklaracemi  
- Ovládací prvky, které podporují dělení modelu objektu apartment by měl být uveden tato funkce v registru přidáním pojmenované hodnotě "ThreadingModel" s hodnotou "Apartment" v jejich třída ID položky registru *id třídy* \\ **InprocServer32** klíč. Aby tento klíč automaticky zaregistrovat pro vaše ovládací prvek, předat `afxRegApartmentThreading` příznak ve šestého parametru `AfxOleRegisterControlClass`:  
+ Ovládací prvky, které podporují dělení modelu objektu apartment by měl být uveden tato funkce v registru přidáním pojmenované hodnotě "ThreadingModel" s hodnotou "Apartment" v jejich třída ID položky registru *id třídy* \\ **InprocServer32** klíč. Aby tento klíč automaticky zaregistrovat pro vaše ovládací prvek, předat *afxregapartmentthreading –* příznak ve šestého parametru `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  Pokud váš projekt správy vygenerovalo ControlWizard v jazyce Visual C++ verze 4.1 nebo novější, tento příznak už bude přítomná v kódu. Žádné změny jsou nezbytné pro registraci model vláken.  
   
- Pokud projekt byla vytvořena ve starší verzi ControlWizard, váš stávající kód bude mít logickou hodnotu jako šestého parametru. Pokud parametr existující hodnotu PRAVDA, změňte jej na `afxRegInsertable | afxRegApartmentThreading`. Pokud parametr existující hodnotu FALSE, změňte jej na `afxRegApartmentThreading`.  
+ Pokud projekt byla vytvořena ve starší verzi ControlWizard, váš stávající kód bude mít logickou hodnotu jako šestého parametru. Pokud parametr existující hodnotu PRAVDA, změňte jej na *afxreginsertable – | afxregapartmentthreading –*. Pokud parametr existující hodnotu FALSE, změňte jej na *afxregapartmentthreading –*.  
   
- Pokud vaše řízení nedodrží pravidla pro dělení modelu objektu apartment, nesmí předat `afxRegApartmentThreading` v tomto parametru.  
+ Pokud vaše řízení nedodrží pravidla pro dělení modelu objektu apartment, nesmí předat *afxregapartmentthreading –* v tomto parametru.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

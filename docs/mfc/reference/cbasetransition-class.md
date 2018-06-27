@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356377"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953567"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition – třída
 Představuje základní přechod.  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénáře, který se použije animaci související proměnné.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénáře, který se použije animaci související proměnné.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Ukazatel na přechod knihovny, která vytvoří standardní přechody. Pro vlastní přechody, může být NULL.  
   
- `pFactory`  
+ *pFactory*  
  Ukazatel na přechod factory, který vytvoří vlastní přechody. Pro standardní přechody, může být NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Ukazatel na přechod knihovny, která vytvoří standardní přechody. Pro vlastní přechody, může být NULL.  
   
- `pFactory`  
+ *pFactory*  
  Ukazatel na přechod factory, který vytvoří vlastní přechody. Pro standardní přechody, může být NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStart`  
+ *pStart*  
  Klíčový snímek, který určuje začátek přechodu.  
   
- `pEnd`  
+ *Čekání*  
  Klíčový snímek, který určuje konec přechodu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pVariable`  
+ *pVariable*  
  Ukazatel na proměnnou související animace.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382034"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953142"
 ---
 # <a name="tree-control-styles"></a>Styly ovládacího prvku strom
-Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styly řídí aspektů vzhled ovládacího prvku strom. Při vytváření ovládacího prvku strom nastavte počáteční stylů. Můžete načíst a změnit po vytvoření ovládacího prvku strom pomocí stylů [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) a [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funkce systému Windows, zadání **GWL_STYLE** pro `nIndex` parametr. Úplný seznam styly, najdete v části [styly okno zobrazení ovládacího prvku strom](http://msdn.microsoft.com/library/windows/desktop/bb760013) ve Windows SDK.  
+Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) styly řídí aspektů vzhled ovládacího prvku strom. Při vytváření ovládacího prvku strom nastavte počáteční stylů. Můžete načíst a změnit po vytvoření ovládacího prvku strom pomocí stylů [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) a [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funkce systému Windows, zadání **GWL_STYLE** pro *nIndex* parametr. Úplný seznam styly, najdete v části [styly okno zobrazení ovládacího prvku strom](http://msdn.microsoft.com/library/windows/desktop/bb760013) ve Windows SDK.  
   
  **TVS_HASLINES** styl vylepšuje grafické reprezentace ovládacího prvku stromu hierarchie a kreslení čar, které odkazují na jejich odpovídající nadřazené položky podřízené položky. Tento styl neobsahuje odkazy na položky v kořenovém adresáři hierarchie. To pokud chcete udělat, je nutné sloučit **TVS_HASLINES** a **TVS_LINESATROOT** stylů.  
   

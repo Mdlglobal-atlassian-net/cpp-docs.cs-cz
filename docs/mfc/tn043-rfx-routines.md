@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc6556cabaa8f1f04a2a53771b495233620e1a14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384449"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954406"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutiny RFX
 > [!NOTE]
@@ -63,7 +63,7 @@ RFX_Custom(pFX, "Col2",
   
  Najdete v části "afxdb.h' seznam všech záznamů pole exchange rutiny dodávané s knihovnou MFC.  
   
- Sada záznamů pole volání představují způsob registrace umístění v paměti (obvykle datové členy) k uložení dat pole pro **CMySet** třídy.  
+ Sada záznamů pole volání představují způsob registrace umístění v paměti (obvykle datové členy) k uložení dat pole pro `CMySet` třídy.  
   
 ## <a name="notes"></a>Poznámky  
  Funkce sady záznamů pole jsou navrženy pro práci jenom s `CRecordset` třídy. Nejsou obecně použitelná pro jiné třídy MFC.  
@@ -77,23 +77,23 @@ RFX_Custom(pFX, "Col2",
 ## <a name="how-does-it-work"></a>Jak to funguje  
  Není nutné pochopit následující, abyste mohli používat – record field exchange. Pochopení, jak to funguje na pozadí vám pomůže však napsat vlastní postup exchange.  
   
- `DoFieldExchange` – Členská funkce je podobné jako `Serialize` – členská funkce – je zodpovědná za získání nebo nastavení data do nebo z formuláře externí (v této případu sloupců z výsledek dotazu rozhraní ODBC) z/do data členů v třídě. `pFX` Parametr je kontext provádění výměny dat a je podobná `CArchive` parametru `CObject::Serialize`. `pFX` ( `CFieldExchange` Objektu) má ukazatel operace, které je podobné, ale generalizace z `CArchive` příznak směru. Funkce RFX může mít pro podporu následující operace:  
+ `DoFieldExchange` – Členská funkce je podobné jako `Serialize` – členská funkce – je zodpovědná za získání nebo nastavení data do nebo z formuláře externí (v této případu sloupců z výsledek dotazu rozhraní ODBC) z/do data členů v třídě. *PFX* parametr je kontext provádění výměny dat a je podobná *CArchive* parametru `CObject::Serialize`. *PFX* ( `CFieldExchange` objektu) má ukazatel operace, které je podobné, ale generalizace z *CArchive* příznak směru. Funkce RFX může mít pro podporu následující operace:  
   
-- **BindParam** – uveďte, kde by měl ODBC načtení dat parametru  
+- `BindParam` – Označuje, kde by měl ODBC načtení dat parametru  
   
-- **BindFieldToColumn** – označit kde ODBC musí načíst nebo uložení outputColumn dat  
+- `BindFieldToColumn` – Označuje kde ODBC musí načíst nebo uložení outputColumn dat  
   
-- **Oprava** – nastavte **CString/CByteArray** délky, nastavte hodnotu NULL stav bit  
+- `Fixup` – Nastavte `CString/CByteArray` délky, nastavte hodnotu NULL stav bit  
   
-- **MarkForAddNew** – označit nesprávné, pokud je hodnota změněna od AddNew volání  
+- `MarkForAddNew` – Nesprávné označit Pokud je hodnota změněna od AddNew volání  
   
-- **MarkForUpdate** – označit nesprávné, pokud hodnota změněna od upravit volání  
+- `MarkForUpdate` – Nesprávné označit Pokud hodnota změněna od upravit volání  
   
-- **Název** – připojit názvy polí pro pole označila jako neaktualizované  
+- `Name` – Připojit názvy polí pro pole označila jako neaktualizované  
   
-- **Názevhodnota** – připojení "\<název sloupce > =" pro pole označila jako neaktualizované  
+- `NameValue` – Připojit "\<název sloupce > =" pro pole označila jako neaktualizované  
   
-- **Hodnota** – připojení "" následované oddělovače, jako například ',' nebo '.  
+- `Value` – Připojit "" následované oddělovače, jako například ',' nebo '.  
   
 - `SetFieldDirty` – Nastavte stav bit změny (tj. změněné) pole  
   
@@ -105,13 +105,13 @@ RFX_Custom(pFX, "Col2",
   
 - `IsFieldNullable` – Vrací hodnotu TRUE, pokud pole může obsahovat hodnoty NULL  
   
-- **StoreField** – archivu hodnota pole  
+- `StoreField` – Hodnota pole archivu  
   
-- **LoadField** – opětovného načtení archivovat hodnota pole  
+- `LoadField` – Znovu načíst archivovat hodnota pole  
   
-- **GetFieldInfoValue** – vrátí obecné informace na pole  
+- `GetFieldInfoValue` – Vrátí obecné informace na pole  
   
-- **GetFieldInfoOrdinal** – vrátí obecné informace na pole  
+- `GetFieldInfoOrdinal` – Vrátí obecné informace na pole  
   
 ## <a name="user-extensions"></a>Tato rozšíření  
  Existuje několik způsobů, jak rozšířit výchozí mechanismus RFX. Můžeš  
@@ -149,13 +149,13 @@ RFX_Custom(pFX, "Col2",
 ## <a name="writing-a-custom-rfx"></a>Psaní vlastních RFX  
  Zápis funkce RFX vlastní, je doporučeno zkopírovat existující funkce RFX a upravit ho na vlastní účely. Výběr správné RFX kopírování můžete nastavit, vaše úlohy mnohem jednodušší. Některé funkce RFX mít některé jedinečné vlastnosti, které byste měli vzít v úvahu při rozhodování, kam chcete zkopírovat.  
   
- **Rfx_long – a rfx_int –**:  
+ `RFX_Long` a `RFX_Int`:  
  Jedná se o nejjednodušší funkce RFX. Hodnota dat není nutné žádné speciální interpretace a velikost dat vyřešen.  
   
- **Rfx_single – a rfx_double –**:  
+ `RFX_Single` a `RFX_Double`:  
  Jako rfx_long – a rfx_int – výše, tyto funkce jsou jednoduché a ujistěte se, můžete použít výchozí implementace hojně. Jsou uložené ve dbflt.cpp místo dbrfx.cpp, ale chcete-li povolit načítání modulu runtime plovoucí bodu knihovny jenom v případě, že jsou explicitně odkaz.  
   
- **RFX_Text – a RFX_Binary –**:  
+ `RFX_Text` a `RFX_Binary`:  
  Tyto dvě funkce předem přidělit statické vyrovnávací paměti pro uložení řetězců nebo binární informace a musíte zaregistrovat tyto vyrovnávací paměti s ODBC SQLBindCol místo registrace & hodnota. Z tohoto důvodu se tyto dvě funkce máte spoustu zvláštní případ kódu.  
   
  `RFX_Date`:  
@@ -164,9 +164,9 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`:  
  Toto je pouze knihovny tříd RFX funkce, která nepoužívá pro příjem a odesílání dat vazba sloupce. Tato funkce ignoruje operaci BindFieldToColumn a místo toho v průběhu operace oprava přiděluje úložiště pro uložení příchozích dat SQL_LONGVARCHAR nebo SQL_LONGVARBINARY pak provede volání SQLGetData k načtení hodnoty do úložiště přidělené. Když se připravuje na odeslání, že hodnoty dat zpět do zdroje dat (například Názevhodnota a hodnotu operations), tato funkce využívá DATA_AT_EXEC fungování rozhraní ODBC je. V tématu [Technická poznámka 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) Další informace o práci s SQL_LONGVARBINARY a SQL_LONGVARCHARs.  
   
- Při zápisu vlastní **RFX_** funkce, často bude moci používat **CFieldExchange::Default** implementovat danou operaci. Podívejte se na provádění výchozí pro operace. Pokud se provede operaci by zápis do vaší **RFX_** funkce můžete delegovat na **CFieldExchange::Default.** Vidíte příklady volání **CFieldExchange::Default** v dbrfx.cpp  
+ Při zápisu vlastní **RFX_** funkce, často bude moci používat `CFieldExchange::Default` implementovat danou operaci. Podívejte se na provádění výchozí pro operace. Pokud se provede operaci by zápis do vaší **RFX_** funkce můžete delegovat na `CFieldExchange::Default`. Vidíte příklady volání `CFieldExchange::Default` v dbrfx.cpp  
   
- Je důležité k volání `IsFieldType` na začátku funkce RFX a vraťte se okamžitě, pokud vrátí hodnotu FALSE. Tento mechanismus udržuje parametr operací z provádí na **outputColumns**a naopak (jako je volání **BindParam** na **outputColumn**). Kromě toho `IsFieldType` automaticky uchovává informace o počtu **outputColumns** (`m_nFields`) a parametry (`m_nParams`).  
+ Je důležité k volání `IsFieldType` na začátku funkce RFX a vraťte se okamžitě, pokud vrátí hodnotu FALSE. Tento mechanismus udržuje parametr operací z provádí na *outputColumns*a naopak (jako je volání `BindParam` na *outputColumn*). Kromě toho `IsFieldType` automaticky uchovává informace o počtu *outputColumns* (*m_nFields*) a parametry (*m_nParams*).  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e7d3b093da8127887878b2ac5f2af652f549c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3af520de7e92a887f9a49fea7262d7f51b74082
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375791"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954631"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef – třída
 Představuje definici dotazu, nebo "querydef", obvykle 1, které jsou uloženy v databázi.  
@@ -98,7 +98,7 @@ class CDaoQueryDef : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Vytvoří **CDaoQueryDef** objektu. Další volání **otevřete** nebo **vytvořit**, v závislosti na vašich potřebách.|  
+|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Vytvoří `CDaoQueryDef` objektu. Další volání `Open` nebo `Create`, v závislosti na vašich potřebách.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -107,7 +107,7 @@ class CDaoQueryDef : public CObject
 |[CDaoQueryDef::Append](#append)|Připojí querydef databáze querydefs – kolekce jako uložený dotaz.|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|Vrátí nenulové hodnoty, pokud dotaz můžete aktualizovat databázi.|  
 |[CDaoQueryDef::Close](#close)|Zavře querydef objekt. Zrušte objekt C++ po dokončení s ním.|  
-|[CDaoQueryDef::Create](#create)|Vytvoří základní querydef objekt DAO. Použít querydef jako dočasné dotazu nebo volání **připojení** ji uložit v databázi.|  
+|[CDaoQueryDef::Create](#create)|Vytvoří základní querydef objekt DAO. Použít querydef jako dočasné dotazu nebo volání `Append` ji uložit v databázi.|  
 |[CDaoQueryDef::Execute](#execute)|Provede dotaz objektu querydef definované.|  
 |[CDaoQueryDef::GetConnect](#getconnect)|Vrátí přidružený querydef připojovací řetězec. Připojovací řetězec Určuje zdroj dat. (Pro SQL průchozí dotazuje pouze; v opačném případě prázdný řetězec.)|  
 |[CDaoQueryDef::GetDateCreated](#getdatecreated)|Vrátí datum vytvoření uloženého dotazu.|  
@@ -154,9 +154,9 @@ class CDaoQueryDef : public CObject
   
     -   Pokud chcete použít stávající uložený dotaz, volání objektu querydef [otevřete](#open) – členská funkce, zadávání názvu uloženého dotazu.  
   
-    -   Pokud chcete vytvořit nový uložený dotaz, volání objektu querydef [vytvořit](#create) – členská funkce, poskytuje název dotazu. Potom zavolejte [připojení](#append) Uložte dotaz jejich přidáním do databáze querydefs – kolekce. **Vytvořit** umístí querydef do otevřeném stavu, takže po volání **vytvořit** Nevolejte **otevřete**.  
+    -   Pokud chcete vytvořit nový uložený dotaz, volání objektu querydef [vytvořit](#create) – členská funkce, poskytuje název dotazu. Potom zavolejte [připojení](#append) Uložte dotaz jejich přidáním do databáze querydefs – kolekce. `Create` Vloží querydef do otevřeném stavu, takže po volání `Create` Nevolejte `Open`.  
   
-    -   Chcete-li vytvořit dočasný querydef, volejte **vytvořit**. Zadat prázdný řetězec pro název dotazu. Nevolejte **připojení**.  
+    -   Chcete-li vytvořit dočasný querydef, volejte `Create`. Zadat prázdný řetězec pro název dotazu. Nevolejte `Append`.  
   
  Po dokončení pomocí objektu querydef volat jeho [Zavřít](#close) členské funkce; pak odstraňte objekt querydef.  
   
@@ -168,14 +168,14 @@ class CDaoQueryDef : public CObject
   
 -   Chcete-li vytvořit `CDaoRecordset` objektu  
   
--   Volání objektu **Execute** – členská funkce se přímo spustit dotaz akce nebo předávací dotaz SQL  
+-   Volání objektu `Execute` – členská funkce se přímo spustit dotaz akce nebo předávací dotaz SQL  
   
- Můžete použít objekt querydef pro jakýkoli typ dotazu, včetně vyberte akci, sestavě křížových tabulek, odstranění, aktualizace, připojit, vytvořit tabulku, definice dat, SQL průchozí, union a hromadně dotazy. Typ dotazu je určen podle obsahu příkazu SQL, který zadáte. Informace o typech dotazů najdete v tématu **Execute** a [GetType](#gettype) členské funkce. Sady záznamů se běžně používají pro vrácení řádek dotazy, obvykle ty pomocí **vyberte... Z** klíčová slova. **Spuštění** se nejčastěji používá pro hromadné operace. Další informace najdete v tématu [Execute](#execute) a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
+ Můžete použít objekt querydef pro jakýkoli typ dotazu, včetně vyberte akci, sestavě křížových tabulek, odstranění, aktualizace, připojit, vytvořit tabulku, definice dat, SQL průchozí, union a hromadně dotazy. Typ dotazu je určen podle obsahu příkazu SQL, který zadáte. Informace o typech dotazů najdete v tématu `Execute` a [GetType](#gettype) členské funkce. Sady záznamů se běžně používají pro vrácení řádek dotazy, obvykle ty pomocí **vyberte... Z** klíčová slova. `Execute` se nejčastěji používá pro hromadné operace. Další informace najdete v tématu [Execute](#execute) a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
 ## <a name="querydefs-and-recordsets"></a>Querydefs – a sady záznamů  
  Použití objektu querydef k vytvoření `CDaoRecordset` objektu, obvykle vytvořit nebo otevřít querydef, jak je popsáno výše. Pak vytvořte objekt sady záznamů, předání ukazatel objektu querydef při volání [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open). Querydef, kterou předáte musí být v otevřeném stavu. Další informace najdete v tématu třídy [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- Querydef nelze použít k vytvoření sady záznamů (nejčastěji používá pro querydef), pokud je v otevřeném stavu. Převést querydef do otevřeném stavu voláním buď **otevřete** nebo **vytvořit**.  
+ Querydef nelze použít k vytvoření sady záznamů (nejčastěji používá pro querydef), pokud je v otevřeném stavu. Převést querydef do otevřeném stavu voláním buď `Open` nebo `Create`.  
   
 ## <a name="external-databases"></a>Externí databáze  
  QueryDef objekty jsou upřednostňovaný způsob, jak používat nativní SQL dialekt motoru externí databáze. Můžete například vytvořit dotaz Transact SQL (jak je použita v systému Microsoft SQL Server) a uložte ji do querydef objektu. Když budete muset použít příkazu jazyka SQL není založen na databázový stroj Microsoft Jet, musíte zadat připojovací řetězec, který ukazuje na externí zdroj dat. Dotazy s platný připojovací řetězce vynechat databázový stroj a předat dotaz přímo do externího databázový server pro zpracování.  
@@ -201,7 +201,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- **Připojit** uloží querydef v databázi připojením objekt do databáze querydefs – kolekce. Můžete použít querydef jako dočasný objekt bez připojování ji, ale pokud se má zachovat, musí volat **připojení**.  
+ `Append` uloží querydef v databázi připojením objekt do databáze querydefs – kolekce. Můžete použít querydef jako dočasný objekt bez připojování ji, ale pokud se má zachovat, musí volat `Append`.  
   
  Pokud se pokusíte připojit objektu dočasné querydef, MFC vyvolá výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
@@ -225,14 +225,14 @@ BOOL CanUpdate();
      To závisí na tom, jestli jste implementovali funkce zabezpečení. MFC neposkytuje podporu pro zabezpečení; je nutné implementovat ho sami pomocí volání rozhraní DAO přímo nebo pomocí aplikace Microsoft Access. Naleznete v tématu "Oprávnění vlastnost" v nápovědě rozhraní DAO.  
   
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef  
- Vytvoří **CDaoQueryDef** objektu.  
+ Vytvoří `CDaoQueryDef` objektu.  
   
 ```  
 CDaoQueryDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDatabase`  
+ *pDatabase*  
  Ukazatel na otevřenou [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -242,7 +242,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
 -   Pokud objekt představuje nový querydef uložit, volání objektu [vytvořit](#create) – členská funkce. Tento postup přidá objekt do databáze querydefs – kolekce. Potom zavolejte `CDaoQueryDef` členské funkce nastavit atributy objektu. Nakonec volání [připojení](#append).  
   
--   Pokud objekt představuje dočasné querydef (nesmí být uloženy v databázi), volání **vytvořit**, předávání prázdný řetězec pro název dotazu. Po volání **vytvořit**, inicializovat querydef přímo nastavením jeho atributy. Nevolejte **připojení**.  
+-   Pokud objekt představuje dočasné querydef (nesmí být uloženy v databázi), volání `Create`, předávání prázdný řetězec pro název dotazu. Po volání `Create`, inicializovat querydef přímo nastavením jeho atributy. Nevolejte `Append`.  
   
  Pokud chcete nastavit atributy querydef, můžete použít [SetName](#setname), [SetSQL](#setsql), [SetConnect](#setconnect), [SetODBCTimeout](#setodbctimeout)a [SetReturnsRecords](#setreturnsrecords) členské funkce.  
   
@@ -268,16 +268,16 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Jedinečný název dotazu, které jsou uloženy v databázi. Podrobnosti o řetězce naleznete v tématu "CreateQueryDef způsob" v nápovědě rozhraní DAO. Pokud přijměte výchozí hodnotu, prázdný řetězec, vytvoří se dočasné querydef. Takový dotaz není uložen v querydefs – kolekce.  
   
- `lpszSQL`  
+ *lpszSQL*  
  Řetězec SQL, který definuje dotaz. Pokud přijmete výchozí hodnotu **NULL**, musí volat později [SetSQL](#setsql) nastavit řetězec. Do té doby se dotaz není definován. Ale můžete nedefinované dotaz otevřít sadu záznamů; Podrobnosti najdete v části poznámky. Příkaz jazyka SQL musí být definován, než querydef můžete připojit k querydefs – kolekce.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud předáte název v `lpszName`, potom můžete volat [připojení](#append) uložení querydef do databáze querydefs – kolekce. Objekt, jinak je dočasný querydef a neukládají. V obou případech querydef je v otevřeném stavu, a můžete použít buď ji k vytvoření [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu nebo volejte querydef [Execute](#execute) – členská funkce.  
+ Pokud předáte název v *lpszName*, potom můžete volat [připojení](#append) uložení querydef do databáze querydefs – kolekce. Objekt, jinak je dočasný querydef a neukládají. V obou případech querydef je v otevřeném stavu, a můžete použít buď ji k vytvoření [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu nebo volejte querydef [Execute](#execute) – členská funkce.  
   
- Pokud nezadáte příkazu SQL v `lpszSQL`, nelze spustit dotaz s **Execute** ale můžete ji použít k vytvoření sady záznamů. V takovém případě MFC používá příkaz SQL výchozí sady záznamů.  
+ Pokud nezadáte příkazu SQL v *lpszSQL*, nelze spustit dotaz s `Execute` ale můžete ji použít k vytvoření sady záznamů. V takovém případě MFC používá příkaz SQL výchozí sady záznamů.  
   
 ##  <a name="execute"></a>  CDaoQueryDef::Execute  
  Volání této funkce člen ke spuštění dotazu objektu querydef definované.  
@@ -287,7 +287,7 @@ virtual void Execute(int nOptions = dbFailOnError);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOptions`  
+ *nOptions*  
  Celé číslo, které určuje charakteristiky dotazu. Související informace naleznete v tématu "Spustit metodu" v nápovědě rozhraní DAO. Můžete použít operátor bitové operace OR ( **&#124;**) kombinovat následující konstanty pro tento argument:  
   
 - **dbDenyWrite** odepřít oprávnění k zápisu do jiných uživatelů.  
@@ -312,16 +312,16 @@ virtual void Execute(int nOptions = dbFailOnError);
   
 -   Předávací dotazy SQL  
   
- **Spuštění** nefunguje pro dotazy, které vracejí záznamy, jako je například vyberte dotazy. **Spuštění** obvykle se používá pro hromadné operace dotazů, jako například **aktualizace**, **vložit**, nebo **SELECT INTO**, nebo pro data definice jazyka DDL operace.  
+ `Execute` nefunguje pro dotazy, které vracejí záznamy, jako je například vyberte dotazy. `Execute` Obvykle se používá pro hromadné operace dotazů, jako například **aktualizace**, **vložit**, nebo **SELECT INTO**, nebo pro data definice jazyka DDL operace.  
   
 > [!TIP]
 >  Upřednostňovaný způsob práce s zdroje dat ODBC se připojit k Microsoft Jet tabulky (. Databáze MDB). Další informace naleznete v tématu "Přístup k externí databáze s DAO" v nápovědě rozhraní DAO.  
   
- Volání [GetRecordsAffected](#getrecordsaffected) členské funkce objektu querydef můžete určit počet záznamů ovlivněný pomocí nejnovější **Execute** volání. Například `GetRecordsAffected` vrací informace o počet záznamů odstraněny, aktualizaci nebo vložení při provádění dotazu. Vrátí počet nebude projeví změny v související tabulky při cascade aktualizací nebo odstraní jsou platné.  
+ Volání [GetRecordsAffected](#getrecordsaffected) členské funkce objektu querydef můžete určit počet záznamů ovlivněný pomocí nejnovější `Execute` volání. Například `GetRecordsAffected` vrací informace o počet záznamů odstraněny, aktualizaci nebo vložení při provádění dotazu. Vrátí počet nebude projeví změny v související tabulky při cascade aktualizací nebo odstraní jsou platné.  
   
  Pokud současně obsahovat **dbInconsistent** a **dbConsistent** nebo pokud zahrnete ani jeden z nich, výsledkem je výchozí, **dbInconsistent**.  
   
- **Spuštění** nevrací sadě záznamů. Pomocí **Execute** v dotazu, který vybere záznamy způsobí, že má být vyvolána výjimka typu MFC [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ `Execute` nevrací sadě záznamů. Pomocí `Execute` v dotazu, který vybere záznamy způsobí, že má být vyvolána výjimka typu MFC [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
 ##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect  
  Volání této funkce člen získat připojovací řetězec související se zdrojem dat querydef.  
@@ -397,13 +397,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule požadované pole v kolekci polí querydef, pro vyhledávání podle indexu.  
   
- `fieldinfo`  
+ *FieldInfo*  
  Odkaz na `CDaoFieldInfo` objekt, který vrátí požadované informace.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Možnosti, které určují, které informace o pole, které chcete načíst. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit:  
   
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikost, atributy  
@@ -412,11 +412,11 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` Primární a sekundární informace plus: výchozí hodnotu Text pro ověření, ověřovacího pravidla  
   
- `lpszName`  
+ *lpszName*  
  Řetězec obsahující název požadované pole pro vyhledávání podle názvu. Můžete použít [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Popis vrácené v informace `fieldinfo`, najdete v článku [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Tato struktura má členy, které odpovídají popisné informace v části `dwInfoOptions` výše. Jestliže požádáte o jednu úroveň informací, můžete získat žádné předchozí úrovně také informace.  
+ Popis vrácené v informace *fieldinfo*, najdete v článku [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Tato struktura má členy, které odpovídají popisné informace v části *dwInfoOptions* výše. Jestliže požádáte o jednu úroveň informací, můžete získat žádné předchozí úrovně také informace.  
   
 ##  <a name="getname"></a>  CDaoQueryDef::GetName  
  Volání této funkce člen načíst název dotazu reprezentována querydef.  
@@ -479,22 +479,22 @@ void GetParameterInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule požadovaného parametru v kolekci parametrů querydef, pro vyhledávání podle indexu.  
   
- `paraminfo`  
+ *paraminfo*  
  Odkaz na [cdaoparameterinfo –](../../mfc/reference/cdaoparameterinfo-structure.md) objekt, který vrátí požadované informace.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Možnosti, které určují, které informace o parametru pro načtení. K dispozici možnost je zde uvedena spolu s co ho způsobuje, že funkce vrátit:  
   
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ  
   
- `lpszName`  
+ *lpszName*  
  Řetězec, který obsahuje název požadovaného parametru, pro vyhledávání podle názvu. Můžete použít [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Popis vrácené v informace `paraminfo`, najdete v článku [cdaoparameterinfo –](../../mfc/reference/cdaoparameterinfo-structure.md) struktura. Tato struktura má členy, které odpovídají popisné informace v části `dwInfoOptions` výše.  
+ Popis vrácené v informace *paraminfo*, najdete v článku [cdaoparameterinfo –](../../mfc/reference/cdaoparameterinfo-structure.md) struktura. Tato struktura má členy, které odpovídají popisné informace v části *dwInfoOptions* výše.  
   
  Související informace naleznete v tématu "parametry deklarace (SQL)" v nápovědě rozhraní DAO.  
   
@@ -507,10 +507,10 @@ virtual COleVariant GetParamValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Název parametru, jehož hodnotu chcete pro vyhledávání podle názvu.  
   
- `nIndex`  
+ *nIndex*  
  Index založený na nule parametru v kolekci parametrů querydef, pro vyhledávání podle indexu. Můžete získat tuto hodnotu pomocí volání [GetParameterCount](#getparametercount) a [getparameterinfo –](#getparameterinfo).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -639,7 +639,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Řetězec, který obsahuje název uloženého querydef otevřete. Můžete použít [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -653,7 +653,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszConnect`  
+ *lpszConnect*  
  Řetězec, který obsahuje připojovací řetězec pro přidruženého [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -674,7 +674,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Řetězec, který obsahuje nový název pro nontemporary dotazu v přidruženém [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -711,13 +711,13 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Název parametru, jehož hodnota, kterou chcete nastavit.  
   
- `varValue`  
+ *varValue*  
  Hodnota k nastavení; v části poznámky.  
   
- `nIndex`  
+ *nIndex*  
  Pořadové číslo pozice parametr v kolekci Parameters querydef. Můžete získat tuto hodnotu pomocí volání [GetParameterCount](#getparametercount) a [getparameterinfo –](#getparameterinfo).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -747,7 +747,7 @@ void SetSQL(LPCTSTR lpszSQL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSQL`  
+ *lpszSQL*  
  Řetězec obsahující úplný příkazu jazyka SQL, vhodné pro spuštění. Syntaxe tento řetězec závisí na databázového systému, vaše cíle dotazu. Informace o syntaxi použít v databázovém stroji Microsoft Jet naleznete v tématu "Vytváření příkazů v kódu SQL" v nápovědě rozhraní DAO.  
   
 ### <a name="remarks"></a>Poznámky  

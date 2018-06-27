@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa099e050bd460756ff9e2584d37f9e628293f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f76fbe9f85d978a5c2865b48720588b620508a07
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380543"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951049"
 ---
 # <a name="slider-control-styles"></a>Posuvník – styly ovládacího prvku
 Ovládací prvky posuvníku ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) může mít svislé nebo vodorovné orientaci. Mají osové značky na obou stranách obě strany, nebo ani jeden z nich. Můžete také používají k určení rozsahu po sobě jdoucích hodnot. Tyto vlastnosti jsou řízena pomocí posuvník – styly ovládacích prvků, které určíte při vytváření ovládacího prvku posuvník.  
   
- `TBS_HORZ` a `TBS_VERT` styly určit orientaci posuvníku. Pokud nezadáte orientace, je v ovládacím prvku posuvník orientované vodorovně.  
+ Styly TBS_HORZ a TBS_VERT určit orientaci posuvníku. Pokud nezadáte orientace, je v ovládacím prvku posuvník orientované vodorovně.  
   
- `TBS_AUTOTICKS` Styl vytvoří ovládací prvek typu jezdec, který má značky pro každý přírůstek v jeho rozsah hodnot. Tyto značky se přidávají automaticky při volání [SetRange](../mfc/reference/csliderctrl-class.md#setrange) – členská funkce. Pokud nezadáte `TBS_AUTOTICKS`, můžete používat členské funkce, jako třeba [SetTic](../mfc/reference/csliderctrl-class.md#settic) a [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), určit polohy značek. Pokud chcete vytvořit ovládací prvek typu jezdec, který nezobrazuje osové značky, můžete použít `TBS_NOTICKS` stylu.  
+ Styl TBS_AUTOTICKS vytvoří ovládací prvek typu jezdec, který má značky pro každý přírůstek v jeho rozsah hodnot. Tyto značky se přidávají automaticky při volání [SetRange](../mfc/reference/csliderctrl-class.md#setrange) – členská funkce. Pokud nezadáte TBS_AUTOTICKS, můžete použít členské funkce, jako například [SetTic](../mfc/reference/csliderctrl-class.md#settic) a [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), určit polohy značek. Pokud chcete vytvořit ovládací prvek typu jezdec, který nezobrazuje osové značky, můžete použít styl TBS_NOTICKS.  
   
- Osové značky můžete zobrazit na jednoho nebo obou stranách ovládacího prvku posuvník. Pro ovládací prvky posuvníku vodorovné, můžete zadat `TBS_BOTTOM` nebo `TBS_TOP` stylu. Pro ovládací prvky posuvníku svislé, můžete zadat `TBS_RIGHT` nebo `TBS_LEFT` stylu. (`TBS_BOTTOM` a `TBS_RIGHT` jsou výchozí nastavení.) Osové značky na obou stranách ovládacího prvku posuvník v jakékoli orientaci, zadejte `TBS_BOTH` stylu.  
+ Osové značky můžete zobrazit na jednoho nebo obou stranách ovládacího prvku posuvník. Pro ovládací prvky posuvníku vodorovné můžete určit styl TBS_BOTTOM nebo TBS_TOP. Pro ovládací prvky posuvníku svislé můžete určit styl TBS_RIGHT nebo TBS_LEFT. (TBS_BOTTOM a TBS_RIGHT jsou výchozí nastavení). Osové značky na obou stranách ovládacího prvku posuvník v jakékoli orientaci zadejte styl TBS_BOTH.  
   
- Ovládací prvek typu jezdec můžete zobrazit výběr rozsahu pouze v případě, že zadáte `TBS_ENABLESELRANGE` stylu při jeho vytvoření. Pokud ovládací prvek typu jezdec tento styl, značek na počáteční a koncová pozice výběru rozsahu zobrazují jako trojúhelníčky (namísto svislé pomlčky) a výběr rozsahu je zvýrazněn. Výběr rozsahy například může být užitečné při plánování jednoduchou aplikaci. Uživatel může vybrat rozsah osové značky odpovídající hodin za den k identifikaci čas naplánované schůzky.  
+ Ovládací prvek typu jezdec můžete zobrazit výběr rozsahu pouze v případě, že zadáte styl TBS_ENABLESELRANGE při jeho vytvoření. Pokud ovládací prvek typu jezdec tento styl, značek na počáteční a koncová pozice výběru rozsahu zobrazují jako trojúhelníčky (namísto svislé pomlčky) a výběr rozsahu je zvýrazněn. Výběr rozsahy například může být užitečné při plánování jednoduchou aplikaci. Uživatel může vybrat rozsah osové značky odpovídající hodin za den k identifikaci čas naplánované schůzky.  
   
- Ve výchozím nastavení závisí na délce posuvník ovládacího prvku posuvník změny výběru rozsahu. Pokud má ovládací prvek jezdec **TBS_FIXEDLENGTH** styl, délka jezdec zůstává stejná, i když se změní výběr rozsahu. Ovládací prvek typu jezdec, který má **TBS_NOTHUMB** styl nezahrnuje jezdce.  
+ Ve výchozím nastavení závisí na délce posuvník ovládacího prvku posuvník změny výběru rozsahu. Pokud v ovládacím prvku posuvník styl TBS_FIXEDLENGTH, délka jezdec zůstává stejná, i když se změní výběr rozsahu. Ovládací prvek typu jezdec, který má styl TBS_NOTHUMB nezahrnuje jezdce.  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CSliderCtrl](../mfc/using-csliderctrl.md)   

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353163"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955518"
 ---
 # <a name="cctrlview-class"></a>CCtrlView – třída
 Přizpůsobení zobrazení dokumentu architekturu pro běžné ovládací prvky, které podporuje verze Windows 98 a systému Windows NT 3.51 a novější.  
@@ -91,10 +91,10 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClass`  
+ *lpszClass*  
  Název třídy Windows třídy zobrazení  
   
- `dwStyle`  
+ *dwStyle*  
  Styl zobrazení třídy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na zařízení kontext, ve kterém dojde k kreslení.  
   
 ### <a name="remarks"></a>Poznámky  
- `OnDraw` pro zobrazení na obrazovce, předávání určeného kontextu zařízení obrazovky obvykle nazývá `pDC`.  
+ `OnDraw` obvykle nazývá pro zobrazení na obrazovce, předávání určeného kontextu zařízení obrazovky *primárního řadiče domény*.  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Volá se před vytvořením okna Windows připojených k tomuto `CWnd` objektu.  

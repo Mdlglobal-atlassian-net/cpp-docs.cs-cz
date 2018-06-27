@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c033d33dd6b1e6c0ccd5bbdb4b6af6939521f592
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384131"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956171"
 ---
 # <a name="when-update-handlers-are-called"></a>Kdy jsou volány obslužné rutiny aktualizace
-Předpokládejme, že uživatel klikne na tlačítko myši v nabídce Soubor, který generuje `WM_INITMENUPOPUP` zprávy. V rámci aktualizace Frameworku souhrnně aktualizuje všechny položky v nabídce soubor před rozbalení nabídky, takže uživatel uvidí.  
+Předpokládejme, že uživatel klikne na tlačítko myši v nabídce Soubor, který generuje WM_INITMENUPOPUP zprávu. V rámci aktualizace Frameworku souhrnně aktualizuje všechny položky v nabídce soubor před rozbalení nabídky, takže uživatel uvidí.  
   
  K tomuto účelu trasy framework aktualizovat příkazy pro všechny položky nabídky v rozbalovací nabídce podél standardního směrování příkazů. Cíle příkazů na směrování je moci aktualizovat všechny položky nabídky porovnáním příkaz aktualizace se záznamem příslušné mapy zpráv (ve formátu `ON_UPDATE_COMMAND_UI`) a volání funkce "Obslužná rutina aktualizace". Proto nabídky se šesti položky nabídky, šesti příkazy aktualizace jsou odeslána. Pokud obslužnou rutinu aktualizace existuje pro ID příkazu, který položky nabídky, se nazývá provedete aktualizaci. Pokud ne, zkontroluje existenci obslužná rutina pro tento příkaz ID rozhraní a povolí nebo zakáže položku nabídky podle potřeby.  
   
@@ -42,7 +42,7 @@ Předpokládejme, že uživatel klikne na tlačítko myši v nabídce Soubor, kt
   
  Je možné zakázat výchozí zakázání objektů uživatelského rozhraní. Další informace najdete v tématu [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) člena třídy `CFrameWnd` v *odkaz knihovny MFC*.  
   
- Inicializace nabídky je automatické v rozhraní framework, ke kterým dochází, když obdrží aplikace `WM_INITMENUPOPUP` zprávy. Během nečinné smyčky framework prohledává příkaz směrování pro obslužné rutiny aktualizace tlačítko mnohem stejným způsobem jako v případě nabídky.  
+ Inicializace nabídky je automaticky v rámci, ke kterým dochází, když aplikace přijme zprávu o WM_INITMENUPOPUP. Během nečinné smyčky framework prohledává příkaz směrování pro obslužné rutiny aktualizace tlačítko mnohem stejným způsobem jako v případě nabídky.  
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: Aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)

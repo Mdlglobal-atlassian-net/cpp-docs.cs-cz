@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382928"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955869"
 ---
 # <a name="special-cwinapp-services"></a>Speciální služby CWinApp
 Kromě toho spuštěn zpráva smyčky a budete moci inicializace aplikace a vyčištění po, [CWinApp](../mfc/reference/cwinapp-class.md) poskytuje několik dalších služeb.  
@@ -61,7 +61,7 @@ Kromě toho spuštěn zpráva smyčky a budete moci inicializace aplikace a vyč
   
  Pokud budete chtít inicializace GDI + pro vaši aplikaci (voláním [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) ve vaší [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkce), budete muset potlačit GDI + vlákně na pozadí.  
   
- To provedete nastavením **SuppressBackgroundThread** členem [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) struktury k **TRUE**. Při potlačení GDI + pozadí přístup z více vláken, **NotificationHook** a **NotificationUnhook** volání je třeba provést jenom předchozí vstupující do a vystupující smyčku zpráva aplikace. Další informace o těchto volání najdete v tématu [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Proto místo pro volání **GdiplusStartup** a funkce háku oznámení by v přepsání virtuální funkce [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak je uvedeno níže:  
+ To provedete nastavením `SuppressBackgroundThread` členem [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) struktury k **TRUE**. Při potlačení GDI + pozadí přístup z více vláken, `NotificationHook` a `NotificationUnhook` volání je třeba provést jenom předchozí vstupující do a vystupující smyčku zpráva aplikace. Další informace o těchto volání najdete v tématu [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Proto místo pro volání `GdiplusStartup` a funkce háku oznámení by v přepsání virtuální funkce [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak je uvedeno níže:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

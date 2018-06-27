@@ -69,12 +69,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3790e2b4aa5987fbcf66d1913e25de5dfd97ea2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385522"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957208"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementace standardních příkazů
 > [!NOTE]
@@ -90,16 +90,16 @@ ms.locfileid: "33385522"
 ## <a name="contents-of-this-technical-note"></a>Obsah této technické poznámky  
  Každý ID příkazu je podrobněji popsaná dvě části:  
   
--   Název: symbolického názvu ID příkazu (například **id_file_save –**) a potom podle účelu příkazu (například "uloží aktuální dokument") oddělené dvojtečkou.  
+-   Název: symbolický název ID příkazu (například id_file_save –), za nímž následuje účel příkazu (například "uloží aktuální dokument") oddělené dvojtečkou.  
   
 -   Jeden nebo více odstavců popisující, které třídy implementaci příkazu a jaké jsou výchozí implementace  
   
  Většina výchozí implementace příkazu jsou prewired v rozhraní framework mapy zpráv základní třídy. Existují některé příkaz implementace, které vyžadují explicitní kabeláž v odvozené třídě. Tyto možnosti jsou popsány v části "Note". Pokud jste vybrali správné možnosti v objekty AppWizard, se připojí tyto výchozí obslužné rutiny pro vás v generované kostru aplikace.  
   
 ## <a name="naming-convention"></a>Konvence vytváření názvů  
- Standardní příkazy podle jednoduché zásady vytváření názvů, který doporučujeme vám, že používáte-li to možné. Většina standardní příkazy jsou umístěné standardní místech v řádku nabídek aplikace. Symbolický název příkazu začíná "ID_", za nímž následuje název standardní místní nabídky, za nímž následuje název položky nabídky. Symbolický název je velkými písmeny s podtržítka-rozložení slov. Pro příkazy, které nemají názvy položek standardní nabídky, je název logického příkazu definována počínaje "ID_" (například **id_next_pane –**).  
+ Standardní příkazy podle jednoduché zásady vytváření názvů, který doporučujeme vám, že používáte-li to možné. Většina standardní příkazy jsou umístěné standardní místech v řádku nabídek aplikace. Symbolický název příkazu začíná "ID_", za nímž následuje název standardní místní nabídky, za nímž následuje název položky nabídky. Symbolický název je velkými písmeny s podtržítka-rozložení slov. Pro příkazy, které nemají názvy položek standardní nabídky je název logického příkazu definována počínaje "ID_" (například id_next_pane –).  
   
- Používáme předponu "ID_" udávajících příkazy, které mají být vázána na položky nabídky, tlačítek panelu nástrojů nebo jiné objekty uživatelského rozhraní příkazu. Zpracování příkazů "ID_" obslužné rutiny příkazů by měl používat `ON_COMMAND` a `ON_UPDATE_COMMAND_UI` mechanismy MFC příkaz architektura.  
+ Používáme předponu "ID_" udávajících příkazy, které mají být vázána na položky nabídky, tlačítek panelu nástrojů nebo jiné objekty uživatelského rozhraní příkazu. Zpracování příkazů "ID_" obslužné rutiny příkazů by měl použijte on_command – a on_update_command_ui – mechanismy pro příkaz architektury MFC.  
   
  Doporučujeme, aby že pro položky nabídky, které není použijte příkaz architektura a kódu pro konkrétní nabídky povolení a zakázání je třeba používáte standardní předponou "IDM_". Počet určité příkazy nabídky samozřejmě by měl být malé vzhledem k tomu následující příkaz architektury MFC pouze díky výkonnější obslužné rutiny příkazů (vzhledem k tomu, že bude fungovat s panely nástrojů), ale umožňuje opakovaně použitelný kód obslužná rutina příkazu.  
   
@@ -120,47 +120,47 @@ ms.locfileid: "33385522"
   
      `CWinApp::OnFileNew` implementuje tento příkaz odlišně v závislosti na počtu šablony dokumentů v aplikaci. Pokud existuje pouze jeden `CDocTemplate`, `CWinApp::OnFileNew` vytvoří nový dokument typu, jakož i správnou třídu rámec a zobrazení.  
   
-     Pokud je více než jedna `CDocTemplate`, `CWinApp::OnFileNew` vyzve uživatele, se dialogové okno (**AFX_IDD_NEWTYPEDLG**) aby vyberte typů dokumentů, které se mají použít. Vybraný `CDocTemplate` se používá k vytvoření dokumentu.  
+     Pokud je více než jedna `CDocTemplate`, `CWinApp::OnFileNew` vyzve uživatele, se dialogové okno (AFX_IDD_NEWTYPEDLG) aby select, který typ použít dokumentu. Vybraný `CDocTemplate` se používá k vytvoření dokumentu.  
   
-     Jeden běžné přizpůsobení `ID_FILE_NEW` je poskytovat jiné a další grafické výběr typů dokumentů. V takovém případě můžete implementovat vlastní **CMyApp::OnFileNew** a umístěte ji na mapě zpráva místo `CWinApp::OnFileNew`. Není nutné volat implementaci základní třídy.  
+     Jednou z běžných přizpůsobení id_file_new – je poskytnout jiné a další grafické výběr typů dokumentů. V takovém případě můžete implementovat vlastní `CMyApp::OnFileNew` a umístěte ji na mapě zpráva místo `CWinApp::OnFileNew`. Není nutné volat implementaci základní třídy.  
   
-     Další běžné přizpůsobení `ID_FILE_NEW` je poskytnout samostatný příkaz pro vytvoření dokumentu každého typu. V takovém případě byste měli definovat nový příkaz ID, například ID_FILE_NEW_CHART a ID_FILE_NEW_SHEET.  
+     Další běžné přizpůsobení id_file_new – je poskytnout samostatný příkaz pro vytvoření dokumentu každého typu. V takovém případě byste měli definovat nový příkaz ID, například ID_FILE_NEW_CHART a ID_FILE_NEW_SHEET.  
   
 -   Id_file_open – otevře existující dokument.  
   
     > [!NOTE]
     >  Musíte se připojit k vaší `CWinApp`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     `CWinApp::OnFileOpen` je velmi jednoduchá implementace volání **CWinApp::DoPromptFileName** následuje `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k otevření souboru. `CWinApp` Implementace rutiny **DoPromptFileName** přináší standardní FileOpen – dialogové okno a doplní s příponami souborů získali z aktuální šablony dokumentů.  
+     `CWinApp::OnFileOpen` je velmi jednoduchá implementace volání `CWinApp::DoPromptFileName` následuje `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k otevření souboru. `CWinApp` Implementace rutiny `DoPromptFileName` přináší standardní FileOpen – dialogové okno a doplní s příponami souborů získali z aktuální šablony dokumentů.  
   
-     Jeden běžné přizpůsobení `ID_FILE_OPEN` je FileOpen – dialogové okno Upravit a přidat další filtry souborů. Doporučeným způsobem, jak přizpůsobit toto je výchozí implementace nahraďte vlastní FileOpen – dialogové okno a volání `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k dokumentu. Není nutné volat základní třídy.  
+     Jeden běžné přizpůsobení id_file_open – je FileOpen – dialogové okno Upravit a přidat další filtry souborů. Doporučeným způsobem, jak přizpůsobit toto je výchozí implementace nahraďte vlastní FileOpen – dialogové okno a volání `CWinApp::OpenDocumentFile` s názvem souboru nebo cesta k dokumentu. Není nutné volat základní třídy.  
   
 -   Id_file_close – zavře otevřený dokument.  
   
-     **CDocument::OnFileClose** volání `CDocument::SaveModified` pro vyzvání uživatele k uložení dokumentu, pokud byla změněna a pak zavolá `OnCloseDocument`. Všechny ukončovací logiku, včetně zničení dokumentu, se provádí v `OnCloseDocument` rutiny.  
+     `CDocument::OnFileClose` volání `CDocument::SaveModified` pro vyzvání uživatele k uložení dokumentu, pokud byla změněna a pak zavolá `OnCloseDocument`. Všechny ukončovací logiku, včetně zničení dokumentu, se provádí v `OnCloseDocument` rutiny.  
   
     > [!NOTE]
-    >  **Id_file_close –** funguje jinak z `WM_CLOSE` zpráva nebo **SC_CLOSE** příkaz systému odeslána do okna s rámečkem dokumenty. Zavřením okna bude dokument zavřít, pouze v případě poslední rámce okna s dokumentu. Zavírání dokumentů s **id_file_close –** nebude pouze zavřete dokument, ale bude zavřít všechna okna s rámečkem zobrazující dokumentu.  
+    >  Id_file_close – jednání jinak než funkce WM_CLOSE bude zpráva nebo příkaz SC_CLOSE systému odeslána do okna s rámečkem dokumenty. Zavřením okna bude dokument zavřít, pouze v případě poslední rámce okna s dokumentu. Zavírání dokumentů s id_file_close – nebude pouze zavřete dokument, ale bude zavřít všechna okna s rámečkem zobrazující dokumentu.  
   
 -   Id_file_save – uloží aktuální dokument.  
   
-     Implementace používá pomocnou rutinou **CDocument::DoSave** sloužící pro obě **OnFileSave** a **OnFileSaveAs**. Pokud uložíte dokument, který ještě nebyl uložen před (to znamená, nemá název cesty, jako v případě funkci FileNew) nebo z jen pro čtení dokumentu, který byl načten **OnFileSave** logiku bude fungovat stejně jako **id_file_save_as –** příkazů a požádat uživatele o zadejte nový název souboru. Vlastní proces otevření souboru a díky ukládání se provádí prostřednictvím virtuální funkce `OnSaveDocument`.  
+     Implementace používá pomocnou rutinou `CDocument::DoSave` sloužící pro obě `OnFileSave` a `OnFileSaveAs`. Pokud uložíte dokument, který ještě nebyl uložen před (to znamená, nemá název cesty, jako v případě funkci FileNew) nebo z jen pro čtení dokumentu, který byl načten `OnFileSave` logiku bude fungovat stejně, jako id_file_save_as – příkaz a požádat uživatele o zadejte nový název souboru . Vlastní proces otevření souboru a díky ukládání se provádí prostřednictvím virtuální funkce `OnSaveDocument`.  
   
-     Existují dvě běžné příčiny, chcete-li přizpůsobit **id_file_save –**. Pro dokumenty, které neukládejte, stačí odstranit **id_file_save –** položek nabídky a tlačítka panelu nástrojů z uživatelského rozhraní. Také se ujistěte, nikdy nesprávné dokumentu (to znamená, nikdy volat `CDocument::SetModifiedFlag`) a rozhraní nikdy způsobí uložit dokument. Pro dokumenty, které musí být zhruba uložit do jiného než soubor na disku definujte nový příkaz pro tuto operaci.  
+     Chcete-li přizpůsobit id_file_save – dvě běžné příčiny. Pro dokumenty, které neukládejte jednoduše odebrání položek nabídky id_file_save – a tlačítka panelu nástrojů uživatelského rozhraní. Také se ujistěte, nikdy nesprávné dokumentu (to znamená, nikdy volat `CDocument::SetModifiedFlag`) a rozhraní nikdy způsobí uložit dokument. Pro dokumenty, které musí být zhruba uložit do jiného než soubor na disku definujte nový příkaz pro tuto operaci.  
   
-     U `COleServerDoc`, **id_file_save –** se používá pro uložení souboru (pro běžné dokumenty) i aktualizaci souboru (pro embedded dokumentů).  
+     U `COleServerDoc`, id_file_save – se používá pro uložení souboru (pro běžné dokumenty) i aktualizaci souboru (pro embedded dokumentů).  
   
-     Pokud dokument data se ukládají v jednotlivých disků soubory, ale nechcete použít výchozí **CDocument** serializovat implementace, by měly přepsat `CDocument::OnSaveDocument` místo **OnFileSave**.  
+     Pokud dokument data se ukládají v jednotlivých disků soubory, ale nechcete použít výchozí `CDocument` serializovat implementace, by měly přepsat `CDocument::OnSaveDocument` místo `OnFileSave`.  
   
 -   Id_file_save_as – uloží aktuální dokument pod jiným názvem souboru.  
   
-     **CDocument::OnFileSaveAs** implementace používá stejný **CDocument::DoSave** pomocnou rutinou jako **OnFileSave**. **OnFileSaveAs** příkaz se zpracovává stejně jako **id_file_save –** kdyby měl žádný název souboru před uložení dokumentů. **COleServerDoc::OnFileSaveAs** implementuje logiku uložit soubor dat normální dokumentu nebo uložte dokument serveru představující objekt OLE vložených v nějaké jiné aplikaci jako samostatný soubor.  
+     `CDocument::OnFileSaveAs` Implementace používá stejný `CDocument::DoSave` pomocnou rutinou jako `OnFileSave`. `OnFileSaveAs` Příkaz se zpracovává stejně jako id_file_save – pokud měli žádný název souboru před uložení dokumentů. `COleServerDoc::OnFileSaveAs` implementuje logiku uložit normální dokumentu datový soubor nebo uložte dokument serveru představující objekt OLE vložených v nějaké jiné aplikaci jako samostatný soubor.  
   
-     Pokud upravíte logiku **id_file_save –**, budete pravděpodobně chtít přizpůsobit **id_file_save_as –** v podobně nebo se operace "Uložit jako" nemusí vztahovat k dokumentu. Položky nabídky můžete odebrat z nabídky panelu, pokud není nutné.  
+     Pokud upravíte logiku id_file_save –, budete pravděpodobně chtít přizpůsobit id_file_save_as – podobným způsobem nebo operaci "Uložit jako" nemusí vztahovat k dokumentu. Položky nabídky můžete odebrat z nabídky panelu, pokud není nutné.  
   
 -   Id_file_save_copy_as – ukládá kopie aktuální dokument pod novým názvem.  
   
-     **COleServerDoc::OnFileSaveCopyAs** implementace je velmi podobné **CDocument::OnFileSaveAs**kromě toho, že objekt dokument není "připojené" k základní souboru po uložení. To znamená pokud v paměti "změny dokumentu" před uložení, ji je stále "upravit". Kromě toho tento příkaz nemá žádný vliv na cestu nebo název uložené v dokumentu.  
+     `COleServerDoc::OnFileSaveCopyAs` Implementace je velmi podobné `CDocument::OnFileSaveAs`kromě toho, že objekt dokument není "připojené" k základní souboru po uložení. To znamená pokud v paměti "změny dokumentu" před uložení, ji je stále "upravit". Kromě toho tento příkaz nemá žádný vliv na cestu nebo název uložené v dokumentu.  
   
 -   Id_file_update – upozorní kontejner pro uložení vložený dokument.  
   
@@ -179,9 +179,9 @@ ms.locfileid: "33385522"
   
      Tento příkaz vyvolá standardní instalaci tiskových dialog, který umožňuje uživateli upravit tiskárny a tisku nastavení pro alespoň tento dokument nebo maximálně všechny dokumenty v této aplikaci. Chcete-li změnit výchozí nastavení tiskárny pro celý systém musí používat ovládací panely.  
   
-     `CWinApp::OnFilePrintSetup` je velmi jednoduchá implementace vytváření `CPrintDialog` objekt a volání **CWinApp::DoPrintDialog** implementace funkce. Nastaví tato výchozí nastavení tiskárny aplikace.  
+     `CWinApp::OnFilePrintSetup` je velmi jednoduchá implementace vytváření `CPrintDialog` objekt a volání `CWinApp::DoPrintDialog` implementace funkce. Nastaví tato výchozí nastavení tiskárny aplikace.  
   
-     Běžné potřebu přizpůsobení tento příkaz je umožnit pro každý dokument nastavení tiskárny, které by měly být uložené s dokumentem, když se uloží. Uděláte to tak měli byste přidat obslužnou rutinu map zpráv ve vaší **CDocument** třídu, která vytvoří `CPrintDialog` objektu, inicializuje s atributy odpovídající tiskárny (obvykle **hDevMode** a **hDevNames je**), volání **CPrintDialog::DoModal,** a uložte nastavení změněné tiskárny. Pro implementaci robustní, by měla vypadat v provádění **CWinApp::DoPrintDialog** pro zjišťování chyb a **CWinApp::UpdatePrinterSelection** pro práci s rozumný výchozí hodnoty a sledování změn systémové tiskárny.  
+     Běžné potřebu přizpůsobení tento příkaz je umožnit pro každý dokument nastavení tiskárny, které by měly být uložené s dokumentem, když se uloží. Uděláte to tak měli byste přidat obslužnou rutinu map zpráv ve vaší `CDocument` třídu, která vytvoří `CPrintDialog` objektu, inicializuje s atributy odpovídající tiskárny (obvykle *hDevMode* a *hDevNames je*), volání `CPrintDialog::DoModal`a uložte nastavení změněné tiskárny. Pro implementaci robustní, by měla vypadat v provádění `CWinApp::DoPrintDialog` pro zjišťování chyb a `CWinApp::UpdatePrinterSelection` pro plánování práce s rozumný výchozí hodnoty a sledování změn systémové tiskárny.  
   
 -   Id_file_print – standardní tisk aktuálního dokumentu  
   
@@ -190,26 +190,26 @@ ms.locfileid: "33385522"
   
      Tento příkaz vytiskne aktuálním dokumentu nebo více správně spustí tisk procesu, který zahrnuje vyvolání dialogovém okně Standardní tisku a spouštění modul tisku.  
   
-     **CView::OnFilePrint** implementuje tento příkaz a hlavní tiskové smyčky. Volá virtuální `CView::OnPreparePrinting` výzvu uživateli s dialogovém okně tisku. Potom ho připraví výstup řadič domény, který se do tiskárny, otevře dialogové okno tisku průběhu (**AFX_IDD_PRINTDLG**) a odešle `StartDoc` řídicí na tiskárnu. **CView::OnFilePrint** také obsahuje hlavní stránkové tiskové smyčky. Pro jednotlivé stránky, volá virtuální `CView::OnPrepareDC` následuje `StartPage` řídicí a volání virtuální `CView::OnPrint` pro tuto stránku. Až budete hotoví, virtuální `CView::OnEndPrinting` je volána, a Tisk dialogové okno průběhu je uzavřený.  
+     `CView::OnFilePrint` implementuje tento příkaz a hlavní tiskové smyčky. Volá virtuální `CView::OnPreparePrinting` výzvu uživateli s dialogovém okně tisku. Potom připraví výstup řadič domény, který se do tiskárny, otevře dialogové okno tisku průběhu (AFX_IDD_PRINTDLG) a odešle `StartDoc` řídicí na tiskárnu. `CView::OnFilePrint` také obsahuje hlavní stránkové tiskové smyčky. Pro jednotlivé stránky, volá virtuální `CView::OnPrepareDC` následuje `StartPage` řídicí a volání virtuální `CView::OnPrint` pro tuto stránku. Až budete hotoví, virtuální `CView::OnEndPrinting` je volána, a Tisk dialogové okno průběhu je uzavřený.  
   
-     Architektura pro tisk MFC slouží k připojení mnoha různými způsoby pro tisku a přehled tisku. Za normálních okolností najdete různé `CView` přepisovatelné funkce pro všechny stránkové tiskové úlohy. Pouze v případě aplikace, která používá tiskárny pro jiné stránky orientovaných na výstupu by měl zjistit potřeba nahradit **id_file_print –** implementace.  
+     Architektura pro tisk MFC slouží k připojení mnoha různými způsoby pro tisku a přehled tisku. Za normálních okolností najdete různé `CView` přepisovatelné funkce pro všechny stránkové tiskové úlohy. Pouze v případě aplikace, která používá tiskárny pro jiné stránky orientované výstup by pro vás potřeba nahradit id_file_print – implementace.  
   
 -   Id_file_print_preview – zadejte režim náhledu pro aktuální dokument.  
   
     > [!NOTE]
     >  Musíte se připojit k vaší `CView`-odvozené třídy a mapy zpráv pro povolení této funkce.  
   
-     **CView::OnFilePrintPreview** spustí režimu náhledu tisku voláním zdokumentovaných pomocné funkce **CView::DoPrintPreview**. **CView::DoPrintPreview** je modul hlavní smyčky náhledu tisku, stejně jako **OnFilePrint** je hlavní modul pro tisk smyčky.  
+     `CView::OnFilePrintPreview` Spustí režimu náhledu tisku voláním zdokumentovaných pomocné funkce `CView::DoPrintPreview`. `CView::DoPrintPreview` je modul hlavní smyčky náhledu tisku, stejně jako `OnFilePrint` je hlavní modul pro tisk smyčky.  
   
-     Operaci náhledu tisku lze přizpůsobit mnoha různými způsoby pomocí jiné parametry k předání **DoPrintPreview**. Naleznete [Technická poznámka 30](../mfc/tn030-customizing-printing-and-print-preview.md), která popisuje některé podrobnosti náhledu tisku a jak přizpůsobit.  
+     Operaci náhledu tisku lze přizpůsobit mnoha různými způsoby pomocí jiné parametry k předání `DoPrintPreview`. Naleznete [Technická poznámka 30](../mfc/tn030-customizing-printing-and-print-preview.md), která popisuje některé podrobnosti náhledu tisku a jak přizpůsobit.  
   
--   **ID_FILE_MRU_FILE1**... **FILE16** rozsah ID příkazu pro naposledy použitých souborů `list`.  
+-   ID_FILE_MRU_FILE1... FILE16 Rozsah ID příkazu pro naposledy použitých souborů **seznamu**.  
   
-     **CWinApp::OnUpdateRecentFileMenu** je příkaz uživatelského rozhraní obslužnou rutinu aktualizace, je jedním z dalších pokročilých použití `ON_UPDATE_COMMAND_UI` mechanismus. V nabídce prostředku, je nutné definovat pouze jednu položku s ID **ID_FILE_MRU_FILE1**. Daná položka nabídky původně vypnutý.  
+     `CWinApp::OnUpdateRecentFileMenu` je příkaz uživatelského rozhraní obslužnou rutinu aktualizace, je jedním z dalších pokročilých využití on_update_command_ui – mechanismu. V nabídce prostředku třeba s ID ID_FILE_MRU_FILE1 definovat pouze jednu položku. Daná položka nabídky původně vypnutý.  
   
      Seznam roste, další nabídky, které položky budou přidány do seznamu položek jako naposledy použitých. Standardní `CWinApp` výchozí implementace standardní limitu čtyři naposledy použitých souborů. Můžete změnit výchozí voláním `CWinApp::LoadStdProfileSettings` s hodnotou větší nebo menší. Seznam naposledy použitých je uložen do aplikace. Soubor INI. V seznamu je načten do vaší aplikace `InitInstance` funkce při volání `LoadStdProfileSettings`a je uložen při ukončení aplikace. Obslužná rutina naposledy použitých aktualizace příkaz uživatelského rozhraní se převést i absolutní cesty relativní cesty pro zobrazení v nabídce Soubor.  
   
-     **CWinApp::OnOpenRecentFile** je `ON_COMMAND` obslužná rutina, která provede příkaz skutečný. Jednoduše získá název souboru ze seznamu naposledy použitých a volání `CWinApp::OpenDocumentFile`, na které se všechny práci při otevření souboru a aktualizuje seznam naposledy použitých.  
+     `CWinApp::OnOpenRecentFile` on_command – obslužná rutina, která provede příkaz skutečné je. Jednoduše získá název souboru ze seznamu naposledy použitých a volání `CWinApp::OpenDocumentFile`, na které se všechny práci při otevření souboru a aktualizuje seznam naposledy použitých.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "33385522"
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView` poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace **OnEditFindReplace** můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu pro výzvy pro uživatele.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace `OnEditFindReplace` můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu pro výzvy pro uživatele.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "33385522"
   
      `CEditView` poskytuje implementaci pro tento příkaz, který zkopíruje aktuální data ze schránky, nahraďte vybraný text použití `CEdit::Paste`. Příkaz vypnutá, pokud neexistuje žádné **CF_TEXT** do schránky.  
   
-     **COleClientDoc** právě poskytuje obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz. Pokud schránka neobsahuje li položky OLE nebo objekt, bude příkaz zakázána. Jste zodpovědní za zápis obslužné rutiny pro příkaz skutečné provedete skutečné vkládání. Pokud aplikaci OLE můžete také vložit dalších formátů, měli byste jim poskytnout vlastní aktualizace uživatelského rozhraní obslužná rutina příkazu v zobrazení nebo dokumentu (tedy někde před **COleClientDoc** v cílové směrování příkazů).  
+     `COleClientDoc` právě poskytuje obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz. Pokud schránka neobsahuje li položky OLE nebo objekt, bude příkaz zakázána. Jste zodpovědní za zápis obslužné rutiny pro příkaz skutečné provedete skutečné vkládání. Pokud aplikaci OLE můžete také vložit dalších formátů, měli byste jim poskytnout vlastní aktualizace uživatelského rozhraní obslužná rutina příkazu v zobrazení nebo dokumentu (tedy někde před `COleClientDoc` v cílové směrování příkazů).  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "33385522"
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro každou `CView`-odvozené třídy.  
   
-     `CEditView` poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace **OnEditFindReplace** můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu, který zobrazí výzvu.  
+     `CEditView` poskytuje implementaci pro tento příkaz, který volá pomocné funkce implementace `OnEditFindReplace` můžete použít a uložit do proměnné privátní implementace předchozí nastavení vyhledání a nahrazení. `CFindReplaceDialog` Třída se používá ke správě dialogového okna bez režimu, který zobrazí výzvu.  
   
      Pokud zvolíte možnost implementovat tento příkaz, doporučujeme že použít toto ID příkazu.  
   
@@ -319,15 +319,15 @@ ms.locfileid: "33385522"
   
 -   Id_window_new – Otevře další okno v aktivním dokumentu.  
   
-     **CMDIFrameWnd::OnWindowNew** implementuje Tato výkonná funkce pomocí šablony dokumentu aktuálního dokumentu vytvořit jiný rámec obsahující jiného zobrazení aktuálního dokumentu.  
+     `CMDIFrameWnd::OnWindowNew` Tato výkonná funkce implementuje pomocí šablony dokumentu aktuálního dokumentu vytvořit jiný rámec obsahující jiného zobrazení aktuálního dokumentu.  
   
      Jako většina více dokumentů (MDI) rozhraní příkazy nabídky okna příkaz vypnutá, pokud neexistuje žádné aktivní podřízeného okna MDI.  
   
-     Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje. Pokud chcete zadat příkaz, který vytvoří další zobrazení nebo okna s rámečkem, pravděpodobně bude lepší inventing vlastní příkaz. Může klonovat kód z **CMDIFrameWnd::OnWindowNew** a upravit tak, aby určité rámec a zobrazení třídy libovolně.  
+     Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje. Pokud chcete zadat příkaz, který vytvoří další zobrazení nebo okna s rámečkem, pravděpodobně bude lepší inventing vlastní příkaz. Může klonovat kód z `CMDIFrameWnd::OnWindowNew` a upravit tak, aby určité rámec a zobrazení třídy libovolně.  
   
 -   Id_window_arrange – Uspořádá ikony v dolní části okna MDI  
   
-     `CMDIFrameWnd` implementuje tento standardní příkaz MDI v implementaci pomocné funkci **OnMDIWindowCmd**. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
+     `CMDIFrameWnd` implementuje tento standardní příkaz MDI v implementaci pomocné funkci `OnMDIWindowCmd`. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
   
      Jako většina příkazy nabídky okna MDI příkaz vypnutá, pokud neexistuje žádné aktivní podřízeného okna MDI.  
   
@@ -335,7 +335,7 @@ ms.locfileid: "33385522"
   
 -   Id_window_cascade – Cascades windows, aby se překrývala.  
   
-     `CMDIFrameWnd` implementuje tento standardní příkaz MDI v implementaci pomocné funkci **OnMDIWindowCmd**. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
+     `CMDIFrameWnd` implementuje tento standardní příkaz MDI v implementaci pomocné funkci `OnMDIWindowCmd`. Tato pomocná mapuje identifikátory příkazů na zprávy oken MDI a proto můžete sdílet velké množství kódu.  
   
      Jako většina příkazy nabídky okna MDI příkaz vypnutá, pokud neexistuje žádné aktivní podřízeného okna MDI.  
   
@@ -343,15 +343,15 @@ ms.locfileid: "33385522"
   
 -   Id_window_tile_horz – dlaždice windows vodorovně.  
   
-     Tento příkaz je implementována ve `CMDIFrameWnd` stejně jako **id_window_cascade –**, s výjimkou různé zprávy oken MDI se používá pro operaci.  
+     Tento příkaz je implementovaná v `CMDIFrameWnd` stejně jako id_window_cascade –, s výjimkou různé zprávy oken MDI se používá pro operaci.  
   
-     Měli byste vybrat výchozí orientaci dlaždice pro vaši aplikaci. To provedete tak, že změníte Identifikátor pro položku nabídky "Dlaždici" okno buď **id_window_tile_horz –** nebo **id_window_tile_vert –**.  
+     Měli byste vybrat výchozí orientaci dlaždice pro vaši aplikaci. To provedete tak, že změníte Identifikátor pro položku nabídky "Dlaždici" okno id_window_tile_horz – nebo id_window_tile_vert –.  
   
 -   Id_window_tile_vert – dlaždice windows svisle.  
   
-     Tento příkaz je implementována ve `CMDIFrameWnd` stejně jako **id_window_cascade –**, s výjimkou různé zprávy oken MDI se používá pro operaci.  
+     Tento příkaz je implementovaná v `CMDIFrameWnd` stejně jako id_window_cascade –, s výjimkou různé zprávy oken MDI se používá pro operaci.  
   
-     Měli byste vybrat výchozí orientaci dlaždice pro vaši aplikaci. To provedete tak, že změníte Identifikátor pro položku nabídky "Dlaždici" okno buď **id_window_tile_horz –** nebo **id_window_tile_vert –**.  
+     Měli byste vybrat výchozí orientaci dlaždice pro vaši aplikaci. To provedete tak, že změníte Identifikátor pro položku nabídky "Dlaždici" okno id_window_tile_horz – nebo id_window_tile_vert –.  
   
 -   Id_window_split – klávesnice rozhraní rozdělovače.  
   
@@ -369,7 +369,7 @@ ms.locfileid: "33385522"
   
 -   Id_app_exit – ukončit aplikaci.  
   
-     **CWinApp::OnAppExit** zpracovává tento příkaz odesláním `WM_CLOSE` zprávu, která se hlavní okno aplikace. Standardní vypínání aplikace (výzvy k potvrzení změny souborů a tak dále) jsou zpracována `CFrameWnd` implementace.  
+     `CWinApp::OnAppExit` Tento příkaz zpracovává odesláním zprávy funkce WM_CLOSE bude hlavní okno aplikace. Standardní vypínání aplikace (výzvy k potvrzení změny souborů a tak dále) jsou zpracována `CFrameWnd` implementace.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje. Přepsání `CWinApp::SaveAllModified` nebo `CFrameWnd` zavření logiku se doporučuje.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "33385522"
   
 -   Id_next_pane – přejde na další podokno  
   
-     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace **CSplitterWnd::OnNextPaneCmd**. Tím se posunou aktivní zobrazení do dalšího podokna v rozdělovače.  
+     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace `CSplitterWnd::OnNextPaneCmd`. Tím se posunou aktivní zobrazení do dalšího podokna v rozdělovače.  
   
      Tento příkaz je zakázán, pokud toto zobrazení není rozdělovač nebo je k dispozici žádné další podokno přejít na.  
   
@@ -430,7 +430,7 @@ ms.locfileid: "33385522"
   
 -   Id_prev_pane – přejde na předchozí podokno  
   
-     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace **CSplitterWnd::OnNextPaneCmd**. Tím se posunou aktivní zobrazení v rozdělovače do předchozího podokna.  
+     `CView` Tento příkaz pro zpracovává `CSplitterWnd` implementace. Pokud zobrazení je součástí rozděleném okně, bude tento příkaz delegovat na funkci implementace `CSplitterWnd::OnNextPaneCmd`. Tím se posunou aktivní zobrazení v rozdělovače do předchozího podokna.  
   
      Tento příkaz je zakázán, pokud toto zobrazení není rozdělovač nebo je k dispozici žádné předchozí podokno přejít na.  
   
@@ -440,7 +440,7 @@ ms.locfileid: "33385522"
   
      Aktuálně neexistuje žádná standardní implementace pro tento příkaz. Je nutné implementovat pro vaši `CView`-odvozené třídy vložit novou položku OLE nebo objekt v aktuálním výběru.  
   
-     Všechny klientské aplikace OLE by měla implementovat tento příkaz. Objekty AppWizard, s parametrem OLE vytvoří "kostra" provádění **OnInsertObject** ve třídě zobrazení, která bude mít k dokončení.  
+     Všechny klientské aplikace OLE by měla implementovat tento příkaz. Objekty AppWizard, s parametrem OLE vytvoří "kostra" provádění `OnInsertObject` ve třídě zobrazení, která bude mít k dokončení.  
   
      Viz ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md) příklad pro úplnou implementaci tohoto příkazu.  
   
@@ -452,42 +452,42 @@ ms.locfileid: "33385522"
   
 -   ID_OLE_VERB_FIRST –... Poslední rozsah ID pro příkazy OLE  
   
-     `COleDocument` používá tento rozsah ID příkazu pro příkazy nepodporuje aktuálně vybrané položky nebo objekt OLE. Toto musí být rozsahu vzhledem k tomu, že daný typ položky nebo objektu OLE může podporovat nula nebo více vlastních příkazů. V nabídce aplikace, musí mít jednu položku nabídky s ID **id_ole_verb_first –**. Při spuštění programu v nabídce bude aktualizována popis příkaz příslušné nabídky (nebo místní nabídky s mnoha příkazů). Správu nabídce OLE se zpracovává souborem `AfxOleSetEditMenu`, done v obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz.  
+     `COleDocument` používá tento rozsah ID příkazu pro příkazy nepodporuje aktuálně vybrané položky nebo objekt OLE. Toto musí být rozsahu vzhledem k tomu, že daný typ položky nebo objektu OLE může podporovat nula nebo více vlastních příkazů. V nabídce aplikace měli byste mít jednu položku nabídky s ID id_ole_verb_first –. Při spuštění programu v nabídce bude aktualizována popis příkaz příslušné nabídky (nebo místní nabídky s mnoha příkazů). Správu nabídce OLE se zpracovává souborem `AfxOleSetEditMenu`, done v obslužná rutina příkazu uživatelského rozhraní aktualizace pro tento příkaz.  
   
-     Neexistují žádné explicitní příkaz obslužné rutiny pro zpracování každé ID příkazu, který v tomto rozsahu. **COleDocument::OnCmdMsg** přepsána depeše všechny identifikátory příkazů v tomto rozsahu, je převádět na nule příkaz čísla a server pro tento příkaz spusťte (pomocí `COleClientItem::DoVerb`).  
+     Neexistují žádné explicitní příkaz obslužné rutiny pro zpracování každé ID příkazu, který v tomto rozsahu. `COleDocument::OnCmdMsg` přepsána depeše všechny identifikátory příkazů v tomto rozsahu, je převádět na nule příkaz čísla a server pro tento příkaz spusťte (pomocí `COleClientItem::DoVerb`).  
   
      Přizpůsobení nebo jiných použijte tento příkaz rozsah ID se nedoporučuje.  
   
 -   Id_view_toolbar – přepíná panelu nástrojů zapnout a vypnout  
   
-     `CFrameWnd` zpracuje tento příkaz a aktualizace obslužná rutina uživatelského rozhraní pro přepnutí viditelné stavu panelu nástrojů. Panelu nástrojů musí být podřízeného okna rámce s ID podřízené okno `AFX_IDW_TOOLBAR`. Obslužná rutina ve skutečnosti přepíná viditelnost panelu nástrojů okna. `CFrameWnd::RecalcLayout` slouží k ho překreslit okno rámečku panelu nástrojů v jeho nového stavu. Aktualizace obslužná rutina uživatelského rozhraní kontroluje položky nabídky, pokud je zobrazen panel nástrojů.  
+     `CFrameWnd` zpracuje tento příkaz a aktualizace obslužná rutina uživatelského rozhraní pro přepnutí viditelné stavu panelu nástrojů. Podřízeného okna rámce s podřízeného okna ID AFX_IDW_TOOLBAR musí být panelu nástrojů. Obslužná rutina ve skutečnosti přepíná viditelnost panelu nástrojů okna. `CFrameWnd::RecalcLayout` slouží k ho překreslit okno rámečku panelu nástrojů v jeho nového stavu. Aktualizace obslužná rutina uživatelského rozhraní kontroluje položky nabídky, pokud je zobrazen panel nástrojů.  
   
      Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje. Pokud chcete přidat další panely nástrojů, budete chtít klonovat a úpravám obslužná rutina příkazu a aktualizace obslužná rutina uživatelského rozhraní pro tento příkaz.  
   
 -   Id_view_status_bar – přepíná na stavovém řádku zapnout a vypnout  
   
-     Tento příkaz je implementována ve `CFrameWnd` stejně jako **id_view_toolbar –**, s výjimkou a jiné podřízené okno ID (**AFX_IDW_STATUS_BAR**) se používá.  
+     Tento příkaz je implementovaná v `CFrameWnd` stejně jako id_view_toolbar –, s výjimkou ID (AFX_IDW_STATUS_BAR) se používá jinou podřízeného okna.  
   
 ## <a name="update-only-command-handlers"></a>Obslužné rutiny aktualizace příkazů  
- Několik identifikátory standardních příkazů slouží jako indikátory ve stavovém řádku. Tyto použijte stejný příkaz aktualizace uživatelského rozhraní mechanismu pro zpracování pro zobrazení jejich aktuální stav visual během doby nečinnosti aplikace. Vzhledem k tomu, že je není možné vybrat uživatelem (nelze tedy push panelu podokno stavu), pak nemá smysl mít `ON_COMMAND` obslužné rutiny pro tyto identifikátory příkazů.  
+ Několik identifikátory standardních příkazů slouží jako indikátory ve stavovém řádku. Tyto použijte stejný příkaz aktualizace uživatelského rozhraní mechanismu pro zpracování pro zobrazení jejich aktuální stav visual během doby nečinnosti aplikace. Vzhledem k tomu, že je není možné vybrat uživatelem (nelze tedy push panelu podokno stavu), pak nemá smysl mít obslužnou rutinu on_command – pro tyto identifikátory příkazů.  
   
--   **Id_indicator_caps –** : Indikátor uzamčení Zakončení.  
+-   Id_indicator_caps –: CAP zámku indikátoru.  
   
--   **Id_indicator_num –** : NUM zámku indikátoru.  
+-   Id_indicator_num –: NUM zámku indikátoru.  
   
--   **Id_indicator_scrl –** : SCRL zámku indikátoru.  
+-   Id_indicator_scrl –: SCRL zámku indikátoru.  
   
--   **Id_indicator_kana –** : znaky abeced KANA zámku ukazatele (platí pouze pro japonské systémy).  
+-   Id_indicator_kana –: Znaky abeced KANA uzamčení ukazatele (platí pouze pro japonské systémy).  
   
- Všechny tyto tři jsou implementované v **CFrameWnd::OnUpdateKeyIndicator**, implementace pomocné rutiny, která používá ID příkazu k mapování na příslušný virtuální klíč. Běžná implementace povolí nebo zakáže (podokna stav Zakázáno = žádný text) `CCmdUI` objekt v závislosti na tom, zda je příslušný virtuální klíč aktuálně uzamčena.  
+ Všechny tyto tři jsou implementované v `CFrameWnd::OnUpdateKeyIndicator`, implementace pomocné rutiny, která používá ID příkazu k mapování na příslušný virtuální klíč. Běžná implementace povolí nebo zakáže (podokna stav Zakázáno = žádný text) `CCmdUI` objekt v závislosti na tom, zda je příslušný virtuální klíč aktuálně uzamčena.  
   
  Přizpůsobení Tato obslužná rutina příkazu se nedoporučuje.  
   
--   **Id_indicator_ext –: EXT**zakončeno vyberte indikátoru.  
+-   Id_indicator_ext –: Rozšířené vyberte indikátoru.  
   
--   **Id_indicator_ovr –: OV**e**R**vytvořit indikátoru.  
+-   Id_indicator_ovr –: Přepisování indikátoru.  
   
--   **Id_indicator_rec –: REC**ording indikátoru.  
+-   Id_indicator_rec –: Záznam indikátoru.  
   
  Aktuálně neexistuje žádná standardní implementace pro tyto ukazatele.  
   

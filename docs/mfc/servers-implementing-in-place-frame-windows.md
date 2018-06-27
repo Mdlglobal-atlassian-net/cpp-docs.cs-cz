@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380861"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956425"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servery: Implementace oken s rámečkem na místě
 Tento článek vysvětluje, co musíte udělat implementovat okna s rámečkem na místě v aplikaci visual úpravy serveru, pokud použijete Průvodce aplikace k vytvoření aplikace serveru. Místo podle pokynů uvedených v tomto článku, můžete použít existující třídy oken s rámečkem na místě z aplikace generované v Průvodci aplikace nebo ukázku součástí Visual C++.  
@@ -32,13 +32,13 @@ Tento článek vysvětluje, co musíte udělat implementovat okna s rámečkem n
   
 1.  Odvození třídu oken s rámečkem na místě z `COleIPFrameWnd`.  
   
-    -   Použití `DECLARE_DYNCREATE` makro v záhlaví souboru třídy.  
+    -   DECLARE_DYNCREATE – makro Použíjte v záhlaví souboru třídy.  
   
-    -   Použití `IMPLEMENT_DYNCREATE` makro v souboru třída implementace (sada). To umožňuje objekty z této třídy lze vytvořit pomocí rozhraní.  
+    -   IMPLEMENT_DYNCREATE – makro Použíjte v souboru třída implementace (sada). To umožňuje objekty z této třídy lze vytvořit pomocí rozhraní.  
   
 2.  Deklarace `COleResizeBar` člena třídy oken s rámečkem. To je nutné, pokud chcete, aby podporovalo změnu velikosti na místě v serverových aplikacích.  
   
-     Deklarovat `OnCreate` obslužné rutiny zpráv (pomocí **vlastnosti** okno) a volání **vytvořit** pro vaše `COleResizeBar` člen, pokud jste ji definovali.  
+     Deklarovat `OnCreate` obslužné rutiny zpráv (pomocí **vlastnosti** okno) a volání `Create` pro vaše `COleResizeBar` člen, pokud jste ji definovali.  
   
 3.  Pokud máte panel nástrojů, deklarovat `CToolBar` člena třídy oken s rámečkem.  
   

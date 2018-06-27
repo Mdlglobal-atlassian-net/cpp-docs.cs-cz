@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c4f581acb0af27f44c88d59597e52b057991ee4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385213"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954276"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak pracují sokety s archivy
 Tento článek vysvětluje, jak [CSocket](../mfc/reference/csocket-class.md) objekt, [CSocketFile](../mfc/reference/csocketfile-class.md) objekt a [CArchive](../mfc/reference/carchive-class.md) objekt se zkombinují zjednodušit odesílat a přijímat data prostřednictvím systému Windows Časový limit soketu.  
   
- Článek [Windows Sockets: příklad z Sockets pomocí archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md) uvede **PacketSerialize** funkce. Objekt archivu v **PacketSerialize** příklad funguje podobně jako archiv objekt předaný knihovny MFC [serializace](../mfc/reference/cobject-class.md#serialize) funkce. Základní rozdíl je, zda sokety, archivu připojený není pro standardní [cfile –](../mfc/reference/cfile-class.md) objekt (obvykle přidružený soubor na disku) ale položky `CSocketFile` objektu. Místo připojení do souboru na disku `CSocketFile` objekt připojí k `CSocket` objektu.  
+ Článek [Windows Sockets: příklad z Sockets pomocí archivy](../mfc/windows-sockets-example-of-sockets-using-archives.md) uvede `PacketSerialize` funkce. Objekt archivu v `PacketSerialize` příklad funguje podobně jako archiv objekt předaný knihovny MFC [serializace](../mfc/reference/cobject-class.md#serialize) funkce. Základní rozdíl je, zda sokety, archivu připojený není pro standardní [cfile –](../mfc/reference/cfile-class.md) objekt (obvykle přidružený soubor na disku) ale položky `CSocketFile` objektu. Místo připojení do souboru na disku `CSocketFile` objekt připojí k `CSocket` objektu.  
   
  A `CArchive` objekt spravuje vyrovnávací paměti. Při ukládání (odesílajícím) archivu vyrovnávací paměť je plná, přiřazený `CFile` objekt zapíše se do vyrovnávací paměti obsah. Probíhá vyprazdňování vyrovnávací paměti archivu připojit k soketu je ekvivalentní volání odesílání zprávy. Po zaplnění vyrovnávací paměti načtení (příjem) archivu `CFile` objekt čtení přestane, dokud vyrovnávací paměť je opět k dispozici.  
   
@@ -51,7 +51,7 @@ CArchive, CSocketFile a CSocket
  Pokud `CSocket` nebyla implementována jako objekt dvou stavů, je možné přijímat další oznámení pro stejný druh události při byly zpracování předchozí oznámení. Například může získat `OnReceive` během zpracování oznámení `OnReceive`. Ve výše uvedené fragmentu kódu extrahování `str` z archivu může vést k rekurzi. Přepnutím stavy, `CSocket` brání rekurze tím, že další oznámení. Obecným pravidlem je žádná oznámení v rámci oznámení.  
   
 > [!NOTE]
->  A `CSocketFile` lze také použít jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru `bArchiveCompatible` parametr **TRUE**. To určuje, že objekt souboru je pro použití s archivu. Chcete-li použít objekt souboru bez archiv, předat **FALSE** v `bArchiveCompatible` parametr.  
+>  A `CSocketFile` lze také použít jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru *bArchiveCompatible* parametr **TRUE**. To určuje, že objekt souboru je pro použití s archivu. Chcete-li použít objekt souboru bez archiv, předat **FALSE** v *bArchiveCompatible* parametr.  
   
  V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a snižuje nebezpečí "vzájemné zablokování." Dojde k zablokování, když přijímající a odesílající sokety jsou čekání na sobě navzájem nebo čeká na běžné prostředek. Tato situace může nastat, pokud `CArchive` objekt pracoval s `CSocketFile` způsob, jak v případě `CFile` objektu. S `CFile`, archivu můžete předpokládat, že pokud obdrží menší počet bajtů, než je požadováno, na konci souboru byl dosažen. S `CSocketFile`, ale data jsou zprávy založené; vyrovnávací paměti může obsahovat více zpráv, tak přijímá menší než počet bajtů neznamená konec souboru. Aplikace v tomto případě neblokuje což se může stát s `CFile`, a můžete pokračovat, dokud vyrovnávací paměť je prázdná čtení zpráv z vyrovnávací paměti. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fungovat v `CArchive` je užitečná pro sledování stavu do archivu vyrovnávací paměti v tomto případě.  
   

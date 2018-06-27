@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384947"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955719"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Směrování příkazů a zpráv
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384947"
  Naleznete Visual C++ pro obecné informace o architektury tu popsané, zejména rozdíl mezi zprávy, oznámení ovládacího prvku a příkazy Windows. Tato poznámka se předpokládá velmi obeznámeni s problémy popsané v dokumentaci tištěných a pouze adresy velmi Pokročilá témata.  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Směrování příkazů a odesílání MFC 1.0 funkce zpracovaní s knihovnou MFC 2.0 architektura  
- Systém Windows má **wm_command –** zprávu, která je přetížena zajistit oznámení příkazy nabídky, klávesy akcelerátoru a oznámení o dialogovém okně ovládacího prvku.  
+ Systém Windows má wm_command – zprávu, která je přetížena zajistit oznámení příkazy nabídky, klávesy akcelerátoru a oznámení o dialogovém okně ovládacího prvku.  
   
- MFC 1.0 součástí na který trochu tím, že se obslužná rutina příkazu (například "OnFileNew") **CWnd** odvozené třídy k zavolána v reakci na konkrétní **wm_command –**. Rozděleno společně s strukturu dat s názvem mapy zpráv a výsledkem mechanismus velmi efektivní pro místo příkazu.  
+ MFC 1.0 součástí na který trochu tím, že se obslužná rutina příkazu (například "OnFileNew") `CWnd` odvozené třídy k zavolána v reakci na konkrétní wm_command –. Rozděleno společně s strukturu dat s názvem mapy zpráv a výsledkem mechanismus velmi efektivní pro místo příkazu.  
   
- MFC 1.0 k dispozici také další funkce pro oddělení oznámení ovládacího prvku z příkazu zprávy. Příkazy jsou reprezentované pomocí ID 16bitové, někdy označovanou jako ID příkazu. Příkazy obvykle začínají **CFrameWnd** (to znamená, nabídky vyberte možnost nebo akcelerátor přeložený) a získat směrována na celou řadu dalších windows.  
+ MFC 1.0 k dispozici také další funkce pro oddělení oznámení ovládacího prvku z příkazu zprávy. Příkazy jsou reprezentované pomocí ID 16bitové, někdy označovanou jako ID příkazu. Příkazy obvykle začínají `CFrameWnd` (to znamená, nabídky vyberte možnost nebo akcelerátor přeložený) a získat směrována na celou řadu dalších windows.  
   
  MFC 1.0 používá směrování příkazů v omezené smysl pro implementaci rozhraní více dokumentů (MDI). (Rámce okna MDI delegovat příkazy k jeho aktivní okno podřízeného MDI).  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384947"
   
 -   TŘEBA v pole ID použít k vytvoření panelu nástrojů.  
   
--   V **on_command –** makro.  
+-   V on_command – makro.  
   
--   TŘEBA v **on_update_command_ui –** makro.  
+-   MOŽNÁ v on_update_command_ui – makro.  
   
  V současné době pouze implementace v MFC, která vyžaduje ID příkazů být > = 0x8000 je implementace GOSUB dialogová okna nebo příkazy.  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384947"
   
  Normální tlačítko můžete umístit v normálním modální dialogové okno s IDC tlačítka nastavené ID příslušný příkaz. Když uživatel vybere tlačítko, vlastník dialogového okna (obvykle hlavního okna rámce) načte příkaz, stejně jako ostatní příkaz. Tomu se říká GOSUB příkaz, protože obvykle se používá k zprovoznit další dialog (GOSUB první dialogového okna).  
   
- Můžete také zavolat funkci **CWnd::UpdateDialogControls** na vaše dialogové okno možností a předejte ji adresu hlavního rámce okna. Tato funkce bude povolit nebo zakázat podle toho, jestli se mají obslužné rutiny příkazů v rámci vaší ovládací prvky dialogového okna. Tato funkce je volána automaticky za vás pro ovládací pruhy v nečinné smyčky vaší aplikace, ale je třeba volat přímo pro normální dialogová okna, které chcete tuto funkci.  
+ Můžete také zavolat funkci `CWnd::UpdateDialogControls` na vaše dialogové okno možností a předejte ji adresu hlavního rámce okna. Tato funkce bude povolit nebo zakázat podle toho, jestli se mají obslužné rutiny příkazů v rámci vaší ovládací prvky dialogového okna. Tato funkce je volána automaticky za vás pro ovládací pruhy v nečinné smyčky vaší aplikace, ale je třeba volat přímo pro normální dialogová okna, které chcete tuto funkci.  
   
 ## <a name="when-onupdatecommandui-is-called"></a>Když je volána on_update_command_ui –  
- Uchování stavu povoleno zaškrtnutí položky nabídky všechny programu vždy může být náročné problém. Běžný postup je k povolení nebo zkontrolujte položky nabídky jenom v případě, že uživatel vybere automaticky otevřeném OKNĚ. Implementace MFC 2.0 **CFrameWnd** obslužné rutiny **WM_INITMENUPOPUP** zpráv a směrování architektura příkaz používá k určení stavy nabídky prostřednictvím **ON_UPDATE_COMMAND_ Uživatelské rozhraní** obslužné rutiny.  
+ Uchování stavu povoleno zaškrtnutí položky nabídky všechny programu vždy může být náročné problém. Běžný postup je k povolení nebo zkontrolujte položky nabídky jenom v případě, že uživatel vybere automaticky otevřeném OKNĚ. Implementace MFC 2.0 `CFrameWnd` zpracovává zprávy WM_INITMENUPOPUP a používá směrování architektura příkaz k určení stavy nabídky prostřednictvím on_update_command_ui – obslužné rutiny.  
   
- **CFrameWnd** také obstará **WM_ENTERIDLE** zpráva k popisu aktuální nabídce položky vybrané na stavovém řádku (také označované jako řádek zprávy).  
+ `CFrameWnd` také obstará WM_ENTERIDLE zpráva k popisu aktuální nabídce položky vybrané na stavovém řádku (také označované jako řádek zprávy).  
   
- Struktura nabídky aplikace, upravovat pomocí Visual C++, se používá k reprezentování potenciální příkazy, které jsou k dispozici na **WM_INITMENUPOPUP** čas. **On_update_command_ui –** obslužné rutiny můžete upravit text nabídky nebo stav, nebo pro pokročilé používá (například seznam naposledy použitých souborů nebo v místní nabídce příkazy OLE), ve skutečnosti změnit strukturu nabídky před vykreslením v nabídce.  
+ Struktura nabídky aplikace, upravovat pomocí Visual C++, se používá k reprezentování potenciální příkazy, které jsou k dispozici v době WM_INITMENUPOPUP. On_update_command_ui – obslužné rutiny můžete upravit text nabídky nebo stav, nebo pro pokročilé používá (například seznam naposledy použitých souborů nebo v místní nabídce příkazy OLE), ve skutečnosti změna nabídky struktury před vykreslením v nabídce.  
   
- Stejné řazení z **on_update_command_ui –** pro panely nástrojů (a další ovládací pruhy) se provádí zpracování vstupu aplikace v jeho nečinné smyčky. Najdete v článku *knihovny tříd* a [Technická poznámka 31](../mfc/tn031-control-bars.md) Další informace o ovládací pruhy.  
+ Panely nástrojů (a další ovládací pruhy) se provádí stejný řazení on_update_command_ui – zpracování vstupu aplikace v jeho nečinné smyčky. Najdete v článku *knihovny tříd* a [Technická poznámka 31](../mfc/tn031-control-bars.md) Další informace o ovládací pruhy.  
   
 ## <a name="nested-pop-up-menus"></a>Vnořené místní nabídky  
- Pokud používáte struktury vnořené nabídky, si všimnete, který **on_update_command_ui –** ve dvou různých případech je volána obslužná rutina pro první položku v místní nabídce.  
+ Pokud používáte struktury vnořené nabídky, si všimnete, že ve dvou různých případech se nazývá on_update_command_ui – obslužná rutina pro první položku v místní nabídce.  
   
- Nejprve je volána pro místní nabídky, sám sebe. To je nezbytné, protože místní nabídky nemají ID a používáme ID první položku z místní nabídky k odkazování na celý místní nabídky. V takovém případě **m_pSubMenu** členské proměnné **CCmdUI** objekt bude obsahovat hodnotu NULL a bude odkazovat na místní nabídky.  
+ Nejprve je volána pro místní nabídky, sám sebe. To je nezbytné, protože místní nabídky nemají ID a používáme ID první položku z místní nabídky k odkazování na celý místní nabídky. V takovém případě *m_pSubMenu* členské proměnné `CCmdUI` objekt bude obsahovat hodnotu NULL a bude odkazovat na místní nabídky.  
   
- Druhý je vyvolána před položek nabídky v rozbalovací nabídce mají vykreslovat. V takovém případě Identifikátor odkazuje jenom na první položku a **m_pSubMenu** členské proměnné **CCmdUI** objektu bude mít hodnotu NULL.  
+ Druhý je vyvolána před položek nabídky v rozbalovací nabídce mají vykreslovat. V takovém případě Identifikátor odkazuje jenom na první položku a *m_pSubMenu* členské proměnné `CCmdUI` objektu bude mít hodnotu NULL.  
   
  To umožňuje povolit místní nabídky, které se liší od jeho položky nabídky, ale vyžaduje, že můžete napsat kód vědět nabídky. Například v nabídce vnořené s následující strukturou:  
   

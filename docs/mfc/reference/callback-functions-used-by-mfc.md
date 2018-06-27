@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350882"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956831"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkce zpětného volání používané v prostředí MFC
 Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. Tyto funkce zpětného volání, které se předávají do [metodu CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [metodu CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), a [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Všimněte si, že všechny funkce zpětného volání musí zachycují výjimky MFC před vrácením Windows, protože nemůže být vyvolány výjimky napříč hranicemi zpětného volání. Další informace o výjimkách, najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).  
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  Odkazuje na [logpen –](../../mfc/reference/logpen-structure.md) nebo [logbrush –](../../mfc/reference/logbrush-structure.md) datová struktura, která obsahuje informace o logické atributy objektu.  
   
- `lpData`  
+ *lpData*  
  Předaný body k datům zadané aplikace `EnumObjects` funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí funkce zpětného volání `int`. Tato vrátit hodnotu definovaný uživatelem. Pokud funkce zpětného volání, vrátí hodnotu 0, `EnumObjects` zastaví výčtu již v rané fázi.  
+ Vrátí funkce zpětného volání **int**. Tato vrátit hodnotu definovaný uživatelem. Pokud funkce zpětného volání, vrátí hodnotu 0, `EnumObjects` zastaví výčtu již v rané fázi.  
   
 ### <a name="remarks"></a>Poznámky  
  Musí být exportován skutečný název.  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
- Identifikuje kontextu zařízení paměti bitmapa alespoň šířky a výšky určeného `nWidth` a `nHeight` k `GrayString`.  
+ *hDC*  
+ Identifikuje kontextu zařízení paměti bitmapa alespoň šířky a výšky určeného *nWindth* a *nHeight* k `GrayString`.  
   
- `lpData`  
+ *lpData*  
  Odkazuje na řetězec znaků, který chcete kreslit.  
   
- `nCount`  
+ *nCount*  
  Určuje počet znaků, který má výstup.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  Identifikuje kontextu zařízení.  
   
- `code`  
- Určuje, zda došlo k chybě. Pokud nedošlo k žádné chybě je 0. Je **SP_OUTOFDISK** Pokud správce tisku právě nedostatek místa na disku a více místa na disku, bude k dispozici, pokud aplikace čeká. Pokud `code` je **SP_OUTOFDISK**, aplikace nemá na zrušení tiskové úlohy. Pokud ne, musíte yield správce tisku voláním **PeekMessage** nebo **GetMessage** funkce systému Windows.  
+ *Kód*  
+ Určuje, zda došlo k chybě. Pokud nedošlo k žádné chybě je 0. Je **SP_OUTOFDISK** Pokud správce tisku právě nedostatek místa na disku a více místa na disku, bude k dispozici, pokud aplikace čeká. Pokud *kód* je **SP_OUTOFDISK**, aplikace nemá na zrušení tiskové úlohy. Pokud ne, musíte yield správce tisku voláním `PeekMessage` nebo `GetMessage` funkce systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrácená hodnota funkce obslužné rutiny přerušení je nenulové hodnoty, pokud se tisková úloha má pokračovat a 0 Pokud je zrušená.  

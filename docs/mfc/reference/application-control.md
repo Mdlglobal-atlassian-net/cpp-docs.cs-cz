@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355909"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954037"
 ---
 # <a name="application-control"></a>Řízení aplikace
 OLE vyžaduje významné kontrolu nad aplikací a jejich objekty. OLE systémové knihovny DLL musí být možné spustit a verze aplikace automaticky, koordinaci jejich produkční a úpravy objektů a tak dále. Funkce v tomto tématu splňovat tyto požadavky. Kromě volané systémem OLE knihovny DLL, musí tyto funkce někdy nazývá také aplikace. 
@@ -53,7 +53,7 @@ BOOL AFXAPI AfxOleCanExitApp();
  Nenulové hodnoty, pokud aplikace můžete ukončit; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace by neměl skončí, pokud existují nevyřízené odkazy na jeho objektů. Globální funkce `AfxOleLockApp` a `AfxOleUnlockApp` zvýší a sníží, čítač odkazy na objekty aplikace. Aplikace by neměl ukončit, pokud je toto počítadlo nenulové hodnoty. Pokud je čítač nenulové, hlavní okno aplikace je skrytý (ne zničení), když uživatel vybere ze systému nabídky nebo ukončení v nabídce Soubor zavřete. Tato funkce volá framework **CFrameWnd::OnClose**.  
+ Aplikace by neměl skončí, pokud existují nevyřízené odkazy na jeho objektů. Globální funkce `AfxOleLockApp` a `AfxOleUnlockApp` zvýší a sníží, čítač odkazy na objekty aplikace. Aplikace by neměl ukončit, pokud je toto počítadlo nenulové hodnoty. Pokud je čítač nenulové, hlavní okno aplikace je skrytý (ne zničení), když uživatel vybere ze systému nabídky nebo ukončení v nabídce Soubor zavřete. Tato funkce volá framework `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -147,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>Poznámky  
  V tématu `AfxOleLockApp` Další informace.  
   
- Pokud počet aktivních objektů hodnota nula, **AfxOleOnReleaseAllObjects** je volána.  
+ Pokud počet aktivních objektů hodnota nula, `AfxOleOnReleaseAllObjects` je volána.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [afxolelockapp –](#afxolelockapp).  
@@ -164,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *CLSID*  
  ID jedinečný třídy ovládacího prvku.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Jedinečný Identifikátor programu ovládacího prvku.  
    
 ### <a name="return-value"></a>Návratová hodnota  
@@ -207,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *CLSID*  
  Odkaz na ID serveru OLE třídy.  
   
- `lpszClassName`  
+ *lpszClassName*  
  Ukazatel na řetězec obsahující název třídy objektů serveru.  
   
  *lpszShortTypeName*  
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  Ukazatel na řetězec obsahující dlouhý název serveru typ objektu, například "Microsoft Excel 5.0 grafu."  
   
- `nAppType`  
+ *nAppType*  
  Hodnotu převzaty z **OLE_APPTYPE** výčtu zadání typu aplikace OLE. Možné hodnoty jsou následující:  
   
 - `OAT_INPLACE_SERVER` Server má celého serveru uživatelského rozhraní.  
@@ -230,19 +230,19 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`-podporující objektu.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Pole ukazatele na řetězce představující klíče a hodnoty, které mají být přidány do registru systému OLE, pokud se nenajdou žádné existující hodnoty pro klíče.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Pole ukazatele na řetězce představující klíče a hodnoty, které mají být přidány do systémového registru OLE, pokud obsahuje existující hodnoty pro danou klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je třída serveru úspěšně registrován; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Většina aplikací můžete použít **COleTemplateServer::Register** k registraci typů dokumentů aplikace. Pokud formát systémového registru vaší aplikace nevejde typický vzor, můžete použít `AfxOleRegisterServerClass` větší kontrolu.  
+ Většina aplikací můžete použít `COleTemplateServer::Register` k registraci typů dokumentů aplikace. Pokud formát systémového registru vaší aplikace nevejde typický vzor, můžete použít `AfxOleRegisterServerClass` větší kontrolu.  
   
- Registr obsahuje sadu klíčů a hodnot. `rglpszRegister` a `rglpszOverwrite` argumenty pole ukazatele na řetězce, každý se skládá z klíče a jeho hodnota oddělená **NULL** znak ( `'\0'`). Každý z těchto řetězců může mít nahraditelné parametry, jejichž místech jsou označené nástrojem sekvence znaků `%1` prostřednictvím `%5`.  
+ Registr obsahuje sadu klíčů a hodnot. *RglpszRegister* a *rglpszOverwrite* argumenty pole ukazatele na řetězce, každý se skládá z klíče a jeho hodnota oddělená **NULL** znak ( `'\0'`). Každý z těchto řetězců může mít nahraditelné parametry, jejichž místech jsou označené nástrojem sekvence znaků *%1* prostřednictvím *%5*.  
   
  Symboly jsou vyplněna takto:  
   
@@ -271,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pClient`  
+ *pClient*  
  Ukazatel na položce OLE klienta.  
   
- `pMenu`  
+ *pMenu*  
  Ukazatel na nabídky objekt, který chcete aktualizovat.  
   
  *iMenuItem*  
  Index položky nabídky aktualizovat.  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  ID příkazu, která odpovídá primární požadavek.  
   
  *nIDVerbMax*  
@@ -290,7 +290,7 @@ void AFXAPI AfxOleSetEditMenu(
  ID pro položku nabídky převést.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud server rozpoznal primární požadavek, se změní na položku nabídky "operaci *typename* objektu" a `nIDVerbMin` je odeslání příkazu, když uživatel vybere příkaz. Pokud server rozpoznal několik příkazů, pak se změní na položku nabídky " *typename* objektu" a podnabídky výpis všechny operace se zobrazí, když uživatel vybere příkaz. Když uživatel vybere operaci v podnabídce `nIDVerbMin` se odesílají, pokud je zvoleno první sloveso, `nIDVerbMin` + 1 je odeslán, pokud druhý příkaz je zvolená a tak dále. Výchozí hodnota `COleDocument` implementace automaticky zpracovává tuto funkci.  
+ Pokud server rozpoznal primární požadavek, se změní na položku nabídky "operaci *typename* objektu" a *nIDVerbMin* je odeslání příkazu, když uživatel vybere příkaz. Pokud server rozpoznal několik příkazů, pak se změní na položku nabídky " *typename* objektu" a podnabídky výpis všechny operace se zobrazí, když uživatel vybere příkaz. Když uživatel vybere operaci v podnabídce *nIDVerbMin* se odesílají, pokud je zvoleno první sloveso, *nIDVerbMin* + 1 je odeslán, pokud druhý příkaz je zvolená a tak dále. Výchozí hodnota `COleDocument` implementace automaticky zpracovává tuto funkci.  
   
  Následující příkaz, musíte mít ve skriptu prostředků aplikace vašeho klienta (. Soubor RC):  
   
@@ -311,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *CLSID*  
  ID jedinečný třídy ovládacího prvku.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Jedinečný Identifikátor programu ovládacího prvku.  
    
 ### <a name="return-value"></a>Návratová hodnota  

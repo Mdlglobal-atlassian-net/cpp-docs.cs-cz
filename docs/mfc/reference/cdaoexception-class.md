@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369213"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952395"
 ---
 # <a name="cdaoexception-class"></a>CDaoException – třída
 Představuje podmínku vzniklých třídami databází MFC podle dat přístup k objektům (DAO).  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na informacích o chybě v kolekce chyb databázového stroje, pro vyhledávání podle indexu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |Cdaoerrorinfo – člen|Informace o|Význam|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|Kód chyby|Kód chyby rozhraní DAO|  
+|`m_lErrorCode`|Kód chyby|Kód chyby rozhraní DAO|  
 |`m_strSource`|Zdroj|Název objektu nebo aplikace, který původně vytvořil chybu|  
 |`m_strDescription`|Popis|Popisný řetězec spojené s chybou|  
 |`m_strHelpFile`|Soubor nápovědy|Cesta k souboru nápovědy pro Windows, ve kterém může uživatel získat informace o problému|  
-|**m_lHelpContext**|Kontextové nápovědy|ID kontextu pro téma v souboru nápovědy rozhraní DAO|  
+|`m_lHelpContext`|Kontextové nápovědy|ID kontextu pro téma v souboru nápovědy rozhraní DAO|  
   
  Úplné informace o informace obsažené v `CDaoErrorInfo` objektu, najdete v článku [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktura.  
   

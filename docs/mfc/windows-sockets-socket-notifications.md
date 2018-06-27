@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6fd065d13d3c61b88cc24144cfc64368020d16
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385577"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953968"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkce jsou funkce zpětného volání, které volá framework oznámit vaše objekt soketu se o důležitých událostech. Funkce oznámení jsou:  
@@ -43,14 +43,14 @@ Tento článek popisuje funkce oznámení v tříd soketů. Tyto členské funkc
   
  Tyto funkce jsou funkce přepisovatelné zpětného volání. `CAsyncSocket` a `CSocket` převést zprávy pro oznámení, ale musí implementovat, jak oznámení funkce reakce, pokud chcete používat. Funkce oznámení se označují jako v době, kdy je vaše soketu upozornění na událost, které vás zajímají, jako je například přítomnosti dat čtení.  
   
- MFC volá funkce oznámení k umožňují přizpůsobit chování vaší soketu v době, kdy je upozornění. Například může volat **Receive** z vaší `OnReceive` funkce oznámení, tedy na vrácení oznámení data ke čtení, zavoláte **Receive** k jeho čtení. Tento přístup není nutné, ale je platný scénář. Jako alternativu, můžete použít funkce oznámení sledovat průběh, vytisknout **trasování** zprávy a tak dále.  
+ MFC volá funkce oznámení k umožňují přizpůsobit chování vaší soketu v době, kdy je upozornění. Například může volat `Receive` z vaší `OnReceive` funkce oznámení, tedy na vrácení oznámení data ke čtení, zavoláte `Receive` k jeho čtení. Tento přístup není nutné, ale je platný scénář. Jako alternativu, můžete použít funkce oznámení sledovat průběh, vytisknout **trasování** zprávy a tak dále.  
   
  Přepisování funkcí oznámení v třídě odvozené soketu a poskytnutím implementace můžete využít výhod těchto oznámení.  
   
- Během operace jako je příjem a odesílání dat `CSocket` objektu se změní na synchronní. V průběhu synchronního stavu jsou žádné oznámení určené výhradně pro jiné sockets do fronty při aktuální soketu čeká na oznámení, která požaduje. (Například během **Receive** volání, která chce soket oznámení ke čtení.) Jakmile soket skončí její synchronní operace a stane asynchronní znovu, můžete začít jiných sockets příjem oznámení ve frontě.  
+ Během operace jako je příjem a odesílání dat `CSocket` objektu se změní na synchronní. V průběhu synchronního stavu jsou žádné oznámení určené výhradně pro jiné sockets do fronty při aktuální soketu čeká na oznámení, která požaduje. (Například během `Receive` volání, která chce soket oznámení ke čtení.) Jakmile soket skončí její synchronní operace a stane asynchronní znovu, můžete začít jiných sockets příjem oznámení ve frontě.  
   
 > [!NOTE]
->  V `CSocket`, `OnConnect` volána funkce oznámení. Pro připojení, volejte **Connect**, který se vrátí po dokončení připojení (úspěšně nebo chyba). Zpracování oznámení připojení je podrobností implementace MFC.  
+>  V `CSocket`, `OnConnect` volána funkce oznámení. Pro připojení, volejte `Connect`, který se vrátí po dokončení připojení (úspěšně nebo chyba). Zpracování oznámení připojení je podrobností implementace MFC.  
   
  Podrobnosti o každé funkci oznámení najdete v tématu funkce pod třídou `CAsyncSocket` v *odkaz knihovny MFC*. Zdrojový kód a informace o MFC ukázky najdete v tématu [MFC ukázky](../visual-cpp-samples.md).  
   

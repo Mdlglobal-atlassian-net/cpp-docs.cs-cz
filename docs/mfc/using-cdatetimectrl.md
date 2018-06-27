@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381579"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953022"
 ---
 # <a name="using-cdatetimectrl"></a>Používání atributu CDateTimeCtrl
 Prvku pro výběr data a času ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) používá intuitivní a rozpoznatelném způsob zadáním nebo vyberte určité datum. Hlavní rozhraní ovládacího prvku je funkce podobná pole se seznamem. Ale pokud uživatel rozšíří ovládacího prvku, zobrazí se ovládací prvek měsíční kalendář (ve výchozím nastavení), které uživateli umožňují zadat konkrétní datum. Při výběru datum ovládací prvek měsíční kalendář automaticky zmizí.  
   
 > [!NOTE]
->  Použití **CDateTimePicker** a `CMonthCalCtrl` třídy ve vašem projektu, musí obsahovat AFXDTCTL. H, obvykle v STDAFX vašeho projektu. Soubor H.  
+>  Použití `CDateTimePicker` a `CMonthCalCtrl` třídy ve vašem projektu, musí obsahovat AFXDTCTL. H, obvykle v STDAFX vašeho projektu. Soubor H.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   

@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a0255bae48ad61f140bdc8aa8a6091cf10bc77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b297f8ea4cb4b6e6a0866a717f9107281cce37
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376003"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957426"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager – třída
 `CDrawingManager` Třída implementuje složité algoritmy kreslení.  
@@ -139,7 +139,7 @@ CDrawingManager(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dc`  
+ [v] *řadiče domény*  
  Odkaz na kontextu zařízení. `CDrawingManager` Používá tento kontext pro vykreslování.  
   
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
@@ -160,10 +160,10 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `size`|A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který určuje velikost bitové mapy.|  
-|[out] `pBits`|Ukazatel na ukazatel data, která přijímá umístění DIB bit hodnoty.|  
-|`bitmap`|Popisovač pro původní bitové mapy|  
-|`clrTransparent`|Hodnotu RGB zadání průhledná barva původní bitmapy.|  
+|[v] *velikost*|A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který určuje velikost bitové mapy.|  
+|[out] *pBits*|Ukazatel na ukazatel data, která přijímá umístění DIB bit hodnoty.|  
+|*Rastrový obrázek*|Popisovač pro původní bitové mapy|  
+|*clrTransparent*|Hodnotu RGB zadání průhledná barva původní bitmapy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro nově vytvořený obrázek ve formátu DIB, pokud tato metoda je úspěšná. v opačném případě `NULL`.  
@@ -183,16 +183,16 @@ void DrawAlpha(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDstDC`  
+ [v] *pDstDC*  
  Ukazatel na kontext zařízení pro cíl.  
   
- [v] `rectDst`  
+ [v] *rectDst*  
  Cílový rámeček.  
   
- [v] `pSrcDC`  
+ [v] *pSrcDC*  
  Ukazatel na kontext zařízení pro zdroj.  
   
- [v] `rectSrc`  
+ [v] *rectSrc*  
  Rámeček zdroje.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -209,13 +209,13 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník pro se třemi tečkami.  
   
- [v] `clrFill`  
+ [v] *clrFill*  
  Barva, kterou tato metoda používá k vyplnění se třemi tečkami.  
   
- [v] `clrLine`  
+ [v] *clrLine*  
  Barva tato metoda používá jako ohraničení se třemi tečkami.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -236,32 +236,32 @@ BOOL DrawGradientRing(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md) parametr, který určuje hranicí pro přechodu prstenec.  
   
- [v] `colorStart`  
+ [v] *colorStart*  
  První barva přechodu.  
   
- [v] `colorFinish`  
+ [v] *colorFinish*  
  Poslední barva přechodu.  
   
- [v] `colorBorder`  
+ [v] *colorBorder*  
  Barva ohraničení.  
   
- [v] `nAngle`  
+ [v] *nAngle*  
  Parametr, který určuje počáteční úhel přechodu kreslení. Tato hodnota by měla být v rozmezí od 0 do 360.  
   
- [v] `nWidth`  
+ [v] *nWindth*  
  Šířka ohraničení pro kruh.  
   
- [v] `clrFace`  
+ [v] *clrFace*  
  Barva vnitřního prstence.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Rámeček definované `rect` musí být alespoň 5 pixelů široké a 5 pixelů.  
+ Rámeček definované *Rect –* musí být alespoň 5 pixelů široké a 5 pixelů.  
   
 ##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine CDrawingManager::DrawLineA  
  Nakreslí čáru.  
@@ -287,14 +287,14 @@ void DrawLineA(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `x1`|Souřadnice x, kde začíná na řádku.|  
-|[v] `y1`|Souřadnice y, kde začíná na řádku.|  
-|[v] `x2`|Souřadnice x, které končí na řádku.|  
-|[v] `y2`|Souřadnice y, které končí na řádku.|  
-|[v] `clrLine`|Barva čáry.|  
+|[v] *x1*|Souřadnice x, kde začíná na řádku.|  
+|[v] *y1*|Souřadnice y, kde začíná na řádku.|  
+|[v] *x2*|Souřadnice x, které končí na řádku.|  
+|[v] *y2*|Souřadnice y, které končí na řádku.|  
+|[v] *clrLine*|Barva čáry.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda selže, pokud `clrLine` rovná -1.  
+ Tato metoda selže, pokud *clrLine* rovná -1.  
   
 ##  <a name="drawrect"></a>  CDrawingManager::DrawRect  
  Kreslení obdélníku s zadaný barvy výplně a ohraničení.  
@@ -307,13 +307,13 @@ void DrawRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Hranice pro rámeček.  
   
- [v] `clrFill`  
+ [v] *clrFill*  
  Barva, kterou tato metoda používá k vyplnění rámeček.  
   
- [v] `clrLine`  
+ [v] *clrLine*  
  Barva tato metoda se používá pro ohraničení rámečku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -335,39 +335,39 @@ BOOL DrawShadow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníkovou oblast v aplikaci. Kreslení manager bude zakreslit stín pod této oblasti.  
   
- [v] `nDepth`  
+ [v] *nDepth*  
  Šířka a výška stínové kopie.  
   
- [v] `iMinBrightness`  
+ [v] *iMinBrightness*  
  Minimální také průraznost stínu.  
   
- [v] `iMaxBrightness`  
+ [v] *iMaxBrightness*  
  Maximální také průraznost stínu.  
   
- [v] `pBmpSaveBottom`  
+ [v] *pBmpSaveBottom*  
  Ukazatel rastrového obrázku, který obsahuje bitovou kopii pro dolní část stínové kopie.  
   
- [v] `pBmpSaveRight`  
+ [v] *pBmpSaveRight*  
  Ukazatel rastrového obrázku, který obsahuje bitovou kopii pro stínu, který je vykreslen na pravé straně rámečku.  
   
- [v] `clrBase`  
+ [v] *clrBase*  
  Barvu stínu.  
   
- [v] `bRightShadow`  
- Parametr typu Boolean, která určuje, jak se bude stín vykreslen. Pokud `bRightShadow` je `TRUE`, `DrawShadow` nevykresluje stín na pravé straně rámečku.  
+ [v] *bRightShadow*  
+ Parametr typu Boolean, která určuje, jak se bude stín vykreslen. Pokud *bRightShadow* je `TRUE`, `DrawShadow` nevykresluje stín na pravé straně rámečku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí parametrů můžete zadat dvě platný bitmap pro dolní a pravé stínů `pBmpSaveBottom` a `pBmpSaveRight`. Pokud tyto [CBitmap](../../mfc/reference/cbitmap-class.md) objekty mají objekt připojené GDI `DrawShadow` použije tyto bitmap jako stínů. Pokud `CBitmap` parametry nemají objekt připojené GDI `DrawShadow` nevykresluje stín a připojí rastrových obrázků na parametry. V budoucích volání `DrawShadow`, můžete zadat tyto bitmap pro urychlení proces vykreslování. Další informace o `CBitmap` třídy a objektů GDI, najdete v části [grafické objekty](../../mfc/graphic-objects.md).  
+ Pomocí parametrů můžete zadat dvě platný bitmap pro dolní a pravé stínů *pBmpSaveBottom* a *pBmpSaveRight*. Pokud tyto [CBitmap](../../mfc/reference/cbitmap-class.md) objekty mají objekt připojené GDI `DrawShadow` použije tyto bitmap jako stínů. Pokud `CBitmap` parametry nemají objekt připojené GDI `DrawShadow` nevykresluje stín a připojí rastrových obrázků na parametry. V budoucích volání `DrawShadow`, můžete zadat tyto bitmap pro urychlení proces vykreslování. Další informace o `CBitmap` třídy a objektů GDI, najdete v části [grafické objekty](../../mfc/graphic-objects.md).  
   
  Pokud některá z těchto parametrů `NULL`, `DrawShadow` bude automaticky kreslení stínové kopie.  
   
- Pokud nastavíte `bRightShadow` k `FALSE`, stín vykreslovat pod a nalevo od obdélníkovou oblast.  
+ Pokud nastavíte *bRightShadow* k `FALSE`, stín vykreslovat pod a nalevo od obdélníkovou oblast.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `DrawShadow` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [Prop list Demo-ukázka](../../visual-cpp-samples.md).  
@@ -389,31 +389,31 @@ void Fill4ColorsGradient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Rámeček k vyplnění.  
   
- [v] `colorStart1`  
+ [v] *colorStart1*  
  Počáteční barvu pro první přechod barev.  
   
- [v] `colorFinish1`  
+ [v] *colorFinish1*  
  Poslední barvu pro první přechod barev.  
   
- [v] `colorStart2`  
+ [v] *colorStart2*  
  Počáteční barvu pro druhý přechod barev.  
   
- [v] `colorFinish2`  
+ [v] *colorFinish2*  
  Poslední barvu pro druhý přechod barev.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Parametr typu Boolean, která určuje, zda `Fill4ColorsGradient` barvy přechodu vodorovně nebo svisle. `TRUE` Určuje vodorovný přechod.  
   
- [v] `nPercentage`  
+ [v] *nPercentage*  
  Celé číslo od 0 – 100. Tato hodnota informuje o procentu rámeček vyplníte první přechod barev.  
   
 ### <a name="remarks"></a>Poznámky  
- Když obdélníku, naplní se dvěma barevné přechody, jsou umístěné výše navzájem nebo další mezi sebou, v závislosti na hodnotě `bHorz`. Každý přechod barev se počítá samostatně pomocí metody [CDrawingManager::FillGradient](#fillgradient).  
+ Když obdélníku, naplní se dvěma barevné přechody, jsou umístěné výše navzájem nebo další mezi sebou, v závislosti na hodnotě *bHorz*. Každý přechod barev se počítá samostatně pomocí metody [CDrawingManager::FillGradient](#fillgradient).  
   
- Tato metoda generuje chybu assertion Pokud `nPercentage` je menší než 0 nebo více než 100.  
+ Tato metoda generuje chybu assertion Pokud *nPercentage* je menší než 0 nebo více než 100.  
   
 ##  <a name="fillgradient"></a>  CDrawingManager::FillGradient  
  Zadaná barva přechodu vyplní obdélníkovou oblast.  
@@ -429,23 +429,23 @@ void FillGradient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníkovou oblast k vyplnění.  
   
- [v] `colorStart`  
+ [v] *colorStart*  
  První barva přechodu.  
   
- [v] `colorFinish`  
+ [v] *colorFinish*  
  Poslední barva přechodu.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Logický parametr, který určuje, zda `FillGradient` vykreslován vodorovně nebo svisle přechodu.  
   
- [v] `nStartFlatPercentage`  
- Procento obdélníku, který `FillGradient` vyplní `colorStart` před spuštěním přechodu.  
+ [v] *nStartFlatPercentage*  
+ Procento obdélníku, který `FillGradient` vyplní *colorStart* před spuštěním přechodu.  
   
- [v] `nEndFlatPercentage`  
- Procento obdélníku, která `FillGradient` vyplní `colorFinish` po jejím dokončení přechodu.  
+ [v] *nEndFlatPercentage*  
+ Procento obdélníku, která `FillGradient` vyplní *colorFinish* po jejím dokončení přechodu.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `FillGradient` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [MS Office 2007 Demo-ukázka](../../visual-cpp-samples.md).  
@@ -464,20 +464,20 @@ void FillGradient2 (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníkovou oblast k vyplnění.  
   
- [v] `colorStart`  
+ [v] *colorStart*  
  První barva barevného přechodu.  
   
- [v] `colorFinish`  
+ [v] *colorFinish*  
  Poslední barva barevného přechodu.  
   
- [v] `nAngle`  
+ [v] *nAngle*  
  Celé číslo od 0 do 360. Tento parametr určuje směr přechod barev.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `nAngle` k určení směru přechodu barvy. Když zadáte směr přechod barev, také určit, kde začíná přechod barev. Hodnota 0 pro `nAngle` informuje začne má barevný přechod z horní části rámeček. Jako `nAngle` zvyšuje, výchozí umístění pro přechodu posouvá směrem k proti směru hodinových ručiček o úhel podle.  
+ Použití *nAngle* k určení směru přechodu barvy. Když zadáte směr přechod barev, také určit, kde začíná přechod barev. Hodnota 0 pro *nAngle* informuje začne má barevný přechod z horní části rámeček. Jako *nAngle* zvyšuje, výchozí umístění pro přechodu posouvá směrem k proti směru hodinových ručiček o úhel podle.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `FillGradient2` metodu `CDrawingManager` třídy. Tento fragment kódu je součástí [nové ovládací prvky ukázka](../../visual-cpp-samples.md).  
@@ -496,25 +496,25 @@ BOOL GrayRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníkovou oblast k vyplnění.  
   
- [v] `nPercentage`  
+ [v] *nPercentage*  
  Procento šedé, které chcete v obdélníku.  
   
- [v] `clrTransparent`  
+ [v] *clrTransparent*  
  Průhledná barva.  
   
- [v] `clrDisabled`  
- Barvu, která tato metoda používá pro deaktivace sytost Pokud `nPercentage` je nastaven na hodnotu -1.  
+ [v] *clrDisabled*  
+ Barvu, která tato metoda používá pro deaktivace sytost Pokud *nPercentage* je nastaven na hodnotu -1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pro parametr `nPercentage`, nižší hodnota znamená tmavší barva.  
+ Pro parametr *nPercentage*, nižší hodnota znamená tmavší barva.  
   
- Maximální hodnota `nPercentage` je 200. Hodnota, která je větší než 200 nezmění vzhled rámečku. Pokud je hodnota -1, tato metoda používá `clrDisabled` omezit sytost rámeček.  
+ Maximální hodnota *nPercentage* je 200. Hodnota, která je větší než 200 nezmění vzhled rámečku. Pokud je hodnota -1, tato metoda používá *clrDisabled* omezit sytost rámeček.  
   
 ##  <a name="highlightrect"></a>  CDrawingManager::HighlightRect  
  Označuje obdélníkovou oblast.  
@@ -529,28 +529,28 @@ BOOL HighlightRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníkovou oblast, abyste měli na očích.  
   
- [v] `nPercentage`  
+ [v] *nPercentage*  
  Procento, která určuje, jak transparentní by měla být zvýraznění.  
   
- [v] `clrTransparent`  
+ [v] *clrTransparent*  
  Průhledná barva.  
   
- [v] `nTolerance`  
+ [v] *nTolerance*  
  Celé číslo mezi 0 a 255, která určuje barvu tolerance.  
   
- [v] `clrBlend`  
+ [v] *clrBlend*  
  Základní barva prolnutí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud je metoda úspěšná. v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `nPercentage` je od 0 do 99, `HighlightRect` používá alfa míchání algoritmus. Další informace o alfa míchání najdete v tématu [alfa míchání čar a výplní](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Pokud `nPercentage` -1, je tato metoda používá výchozí úroveň zvýraznění. Pokud `nPercentage` je 100, tato metoda neprovede žádnou akci a vrátí `TRUE`.  
+ Pokud *nPercentage* je od 0 do 99, `HighlightRect` používá alfa míchání algoritmus. Další informace o alfa míchání najdete v tématu [alfa míchání čar a výplní](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills). Pokud *nPercentage* -1, je tato metoda používá výchozí úroveň zvýraznění. Pokud *nPercentage* je 100, tato metoda neprovede žádnou akci a vrátí `TRUE`.  
   
- Metoda používá parametr `nTolerance` k určení, zda se mají zvýrazňovat obdélníkovou oblast. Abyste měli na očích rámeček rozdíl mezi barvu pozadí vaší aplikace a `clrTransparent` musí být menší než `nTolerance` v jednotlivých komponentách barvy (červená, zelená a modrá).  
+ Metoda používá parametr *nTolerance* k určení, zda se mají zvýrazňovat obdélníkovou oblast. Abyste měli na očích rámeček rozdíl mezi barvu pozadí vaší aplikace a *clrTransparent* musí být menší než *nTolerance* v jednotlivých komponentách barvy (červená, zelená a modrá).  
   
 ##  <a name="hlstorgb_one"></a>  CDrawingManager::HLStoRGB_ONE  
  Převede barvu, která z reprezentace HLS znázornění RGB.  
@@ -563,13 +563,13 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `H`  
+ [v] *H*  
  Číslo mezi 0 a 1, který představuje odstín barvy.  
   
- [v] `L`  
+ [v] *L*  
  Číslo mezi 0 a 1, která určuje Světelnost barvy.  
   
- [v] `S`  
+ [v] *S*  
  Číslo mezi 0 a 1 určující sytost barvy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -578,7 +578,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ### <a name="remarks"></a>Poznámky  
  Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Tato metoda a `CDrawingManager::HLStoRGB_TWO` metoda provádět stejné operace, ale vyžadují různé hodnoty pro `H` parametr. Tato metoda `H` je procento kruhu. V `CDrawingManager::HLStoRGB_TWO` metody `H` je stupeň hodnotu od 0 do 360, které obě představují red. Například s `HLStoRGB_ONE`, hodnotu 0,25 pro `H` je ekvivalentní hodnotě 90 s `HLStoRGB_TWO`.  
+ Tato metoda a `CDrawingManager::HLStoRGB_TWO` metoda provádět stejné operace, ale vyžadují různé hodnoty pro *H* parametr. Tato metoda *H* je procento kruhu. V `CDrawingManager::HLStoRGB_TWO` metody *H* je stupeň hodnotu od 0 do 360, které obě představují red. Například s `HLStoRGB_ONE`, hodnotu 0,25 pro *H* je ekvivalentní hodnotě 90 s `HLStoRGB_TWO`.  
   
 ##  <a name="hlstorgb_two"></a>  CDrawingManager::HLStoRGB_TWO  
  Převede barvu, která z reprezentace HLS znázornění RGB.  
@@ -591,13 +591,13 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `H`  
+ [v] *H*  
  Číslo od 0 do 360, které představuje odstín barvy.  
   
- [v] `L`  
+ [v] *L*  
  Číslo mezi 0 a 1, která určuje Světelnost barvy.  
   
- [v] `S`  
+ [v] *S*  
  Číslo mezi 0 a 1 určující sytost barvy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -606,7 +606,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ### <a name="remarks"></a>Poznámky  
  Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Tato metoda a [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metoda provádět stejné operace, ale vyžadují různé hodnoty pro `H` parametr. Tato metoda `H` je stupeň hodnotu od 0 do 360, které obě představují red. V [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metody `H` je procento kruhu. Například s `HLStoRGB_ONE`, hodnotu 0,25 pro `H` je ekvivalentní hodnotě 90 s `HLStoRGB_TWO`.  
+ Tato metoda a [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metoda provádět stejné operace, ale vyžadují různé hodnoty pro *H* parametr. Tato metoda *H* je stupeň hodnotu od 0 do 360, které obě představují red. V [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metody *H* je procento kruhu. Například s `HLStoRGB_ONE`, hodnotu 0,25 pro *H* je ekvivalentní hodnotě 90 s `HLStoRGB_TWO`.  
   
 ##  <a name="hsvtorgb"></a>  CDrawingManager::HSVtoRGB  
  Převede barvu, která z reprezentace HSV znázornění RGB.  
@@ -623,9 +623,9 @@ static COLORREF __stdcall HSVtoRGB(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `H`|Číslo od 0 do 360, která určuje odstín barvy.|  
-|[v] `S`|Číslo mezi 0 a 1 určující sytost barvy.|  
-|[v] `V`|Číslo mezi 0 a 1, který určuje hodnotu barvy.|  
+|[v] *H*|Číslo od 0 do 360, která určuje odstín barvy.|  
+|[v] *S*|Číslo mezi 0 a 1 určující sytost barvy.|  
+|[v] *V*|Číslo mezi 0 a 1, který určuje hodnotu barvy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Reprezentace RGB barvu HSV zadat.  
@@ -650,22 +650,22 @@ static BYTE __stdcall HueToRGB(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `m1`  
+ [v] *m1*  
  V části poznámky.  
   
- [v] `m2`  
+ [v] *m2*  
  V části poznámky.  
   
- [v] `h`  
+ [v] *h*  
  V části poznámky.  
   
- [v] `rm1`  
+ [v] *rm1*  
  V části poznámky.  
   
- [v] `rm2`  
+ [v] *rm2*  
  V části poznámky.  
   
- [v] `rh`  
+ [v] *rh*  
  V části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -692,14 +692,14 @@ void MirrorRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník oblasti k převrácení.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Parametr typu Boolean, která určuje, zda rámeček převrátí vodorovně nebo svisle.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu můžete překlopit všechny plochy kontextu zařízení ve vlastnictví `CDrawingManager` třídy. Pokud `bHorz` je nastaven na `TRUE`, tato metoda vodorovně převrátí oblasti. Jinak se Překlopí oblasti svisle.  
+ Tuto metodu můžete překlopit všechny plochy kontextu zařízení ve vlastnictví `CDrawingManager` třídy. Pokud *bHorz* je nastaven na `TRUE`, tato metoda vodorovně převrátí oblasti. Jinak se Překlopí oblasti svisle.  
   
 ##  <a name="pixelalpha"></a>  CDrawingManager::PixelAlpha  
  Vypočítá konečné barvu poloprůhledných pixelů.  
@@ -722,22 +722,22 @@ static COLORREF __stdcall PixelAlpha(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `srcPixel`  
+ [v] *srcPixel*  
  Počáteční barvu pixelech.  
   
- [v] `percent`  
+ [v] *procent*  
  Číslo mezi 0 a 100, který představuje procento průhlednosti. Hodnota 100 označuje, že počáteční barvu je zcela transparentní.  
   
- [v] `percentR`  
+ [v] *percentR*  
  Číslo mezi 0 a 100, který představuje procento průhlednost pro komponentu red.  
   
- [v] `percentG`  
+ [v] *percentG*  
  Číslo mezi 0 a 100, který představuje procento průhlednost pro komponentu zelená.  
   
- [v] `percentB`  
+ [v] *percentB*  
  Číslo mezi 0 a 100, který představuje procento průhlednost pro komponentu blue.  
   
- [v] `dstPixel`  
+ [v] *dstPixel*  
  Základní barva pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -746,7 +746,7 @@ static COLORREF __stdcall PixelAlpha(
 ### <a name="remarks"></a>Poznámky  
  Toto je pomocná třída pro zvýrazňování poloprůhledných rastrové obrázky a není určená k volání přímo z programátorů.  
   
- Pokud používáte verzi metody, která má `dstPixel`, konečnou barvu je kombinací `dstPixel` a `srcPixel`. `srcPixel` Barva je částečně průhledná barva nad základní barva `dstPixel`.  
+ Pokud používáte verzi metody, která má *dstPixel*, konečnou barvu je kombinací *dstPixel* a *srcPixel*. *SrcPixel* barva je částečně průhledná barva nad základní barva *dstPixel*.  
   
 ##  <a name="prepareshadowmask"></a>  CDrawingManager::PrepareShadowMask  
  Vytvoří rastrového obrázku, který lze použít jako stínu.  
@@ -760,23 +760,23 @@ static HBITMAP __stdcall PrepareShadowMask (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nDepth`  
+ [v] *nDepth*  
  Šířka a výška stínové kopie.  
   
- [v] `clrBase`  
+ [v] *clrBase*  
  Barvu stínu.  
   
- [v] `iMinBrightness`  
+ [v] *iMinBrightness*  
  Minimální také průraznost stínu.  
   
- [v] `iMaxBrightness`  
+ [v] *iMaxBrightness*  
  Maximální také průraznost stínu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro vytvoření rastrového obrázku, pokud tato metoda je úspěšné; v opačném případě `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `nDepth` je nastaven na 0, tato metoda ukončí a vrátí `NULL`. Pokud `nDepth` je menší než 3, šířku a výšku stínu jsou nastaveny na 3 pixelů.  
+ Pokud *nDepth* je nastaven na 0, tato metoda ukončí a vrátí `NULL`. Pokud *nDepth* je menší než 3, šířku a výšku stínu jsou nastaveny na 3 pixelů.  
   
 ##  <a name="rgbtohsl"></a>  CDrawingManager::RGBtoHSL  
  Převede barvu, která z reprezentace (RGB) červené, zelené a modré hue, sytost a reprezentace světlost (HSL –).  
@@ -794,15 +794,15 @@ static void __stdcall RGBtoHSL(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `rgb`|Barva RGB hodnoty.|  
-|[out] `H`|Ukazatel na dvojitou, kde Metoda ukládá odstín barvy.|  
-|[out] `S`|Ukazatel na dvojitou, kde Metoda ukládá sytost barvy.|  
-|[out] `L`|Ukazatel na dvojitou, kde Metoda ukládá světlost barvy.|  
+|[v] *rgb*|Barva RGB hodnoty.|  
+|[out] *H*|Ukazatel na dvojitou, kde Metoda ukládá odstín barvy.|  
+|[out] *S*|Ukazatel na dvojitou, kde Metoda ukládá sytost barvy.|  
+|[out] *L*|Ukazatel na dvojitou, kde Metoda ukládá světlost barvy.|  
   
 ### <a name="remarks"></a>Poznámky  
  Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Vrácená hodnota pro `H` je reprezentována jako desetinné číslo mezi 0 a 1, kde 0 a 1 představují red. Vrácené hodnoty `S` a `L` jsou čísla od 0 do 1.  
+ Vrácená hodnota pro *H* je reprezentována jako desetinné číslo mezi 0 a 1, kde 0 a 1 představují red. Vrácené hodnoty *S* a *L* jsou čísla od 0 do 1.  
   
 ##  <a name="rgbtohsv"></a>  CDrawingManager::RGBtoHSV  
  Převede barvu, která z reprezentace RGB na znázornění HSV.  
@@ -816,22 +816,22 @@ static void __stdcall RGBtoHSV(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rgb`  
+ [v] *rgb*  
  Barva převod reprezentace RGB.  
   
- [out] `H`  
+ [out] *H*  
  Ukazatel na dvojitou, kde tato metoda ukládá výsledné odstín barvy.  
   
- [out] `S`  
+ [out] *S*  
  Ukazatel na dvojitou, kde tato metoda ukládá výsledné sytost barvy.  
   
- [out] `V`  
+ [out] *V*  
  Ukazatel na dvojitou, kde tato metoda ukládá výslednou hodnotu pro tuto barvu.  
   
 ### <a name="remarks"></a>Poznámky  
  Barvu, která může být reprezentován jako HSV (hue, sytost a hodnota), HSL (hue, sytost a světlost) nebo RGB (červená, zelená a modrá). Další informace o různých reprezentace barva najdete v tématu [barva](http://go.microsoft.com/fwlink/p/?linkid=119126).  
   
- Vrácená hodnota pro `H` je číslo v rozsahu od 0 do 360, kde 0 až 360 znamenat red. Vrácení hodnoty pro `S` a `V` jsou čísla od 0 do 1.  
+ Vrácená hodnota pro *H* je číslo v rozsahu od 0 do 360, kde 0 až 360 znamenat red. Vrácení hodnoty pro *S* a *V* jsou čísla od 0 do 1.  
   
 ##  <a name="setalphapixel"></a>  CDrawingManager::SetAlphaPixel  
  Barvy transparentní pixelů v rastrový obrázek.  
@@ -849,34 +849,34 @@ static void __stdcall SetAlphaPixel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBits`  
+ [v] *pBits*  
  Ukazatel na bitových hodnot pro bitovou mapu.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníkovou oblast v aplikaci. Kreslení manager nevykresluje stínové pod a napravo od této oblasti.  
   
- [v] `x`  
+ [v] *x*  
  Vodorovné souřadnice pixelů na barvu.  
   
- [v] `y`  
+ [v] *y*  
  Svislé souřadnice pixelů na barvu.  
   
- [v] `percent`  
+ [v] *procent*  
  Procento průhlednost.  
   
- [v] `iShadowSize`  
+ [v] *iShadowSize*  
  Šířka a výška stínové kopie.  
   
- [v] `clrBase`  
+ [v] *clrBase*  
  Barvu stínu.  
   
- [v] `bIsRight`  
+ [v] *bIsRight*  
  Parametr typu Boolean, která určuje, které pixelů na barvu. Další informace naleznete v části Poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda je pomocná metoda, která je používána [CDrawingManager::DrawShadow](#drawshadow) metoda. Doporučujeme, pokud chcete k vykreslení stín, volání `CDrawingManager::DrawShadow` místo.  
   
- Pokud `bIsRight` je nastaven na `TRUE`, se měří pixelů na barvu `x` pixelů z pravé hrany `rect`. Pokud je `FALSE`, se měří pixelů na barvu `x` pixelů od levého okraje `rect`.  
+ Pokud *bIsRight* je nastaven na `TRUE`, se měří pixelů na barvu *x* pixelů z pravé hrany *Rect –*. Pokud je `FALSE`, se měří pixelů na barvu *x* pixelů od levého okraje *Rect –*.  
   
 ##  <a name="setpixel"></a>  CDrawingManager::SetPixel  
  Zadaná barva změny jedinému pixelu rastrový obrázek.  
@@ -896,12 +896,12 @@ static void __stdcall SetPixel(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pBits`|Ukazatel na bitových hodnot bitmapy.|  
-|[v] `cx`|Celková šířka rastrového obrázku.|  
-|[v] `cy`|Celková výška bitové mapy.|  
-|[v] `x`|Souřadnici x pixelů v souboru bitové mapy, chcete-li změnit.|  
-|[v] `y`|Souřadnice y pixelů v souboru bitové mapy, chcete-li změnit.|  
-|[v] `color`|Nové barva pixelů identifikovaný zadaný souřadnice.|  
+|[v] *pBits*|Ukazatel na bitových hodnot bitmapy.|  
+|[v] *cx*|Celková šířka rastrového obrázku.|  
+|[v] *cy*|Celková výška bitové mapy.|  
+|[v] *x*|Souřadnici x pixelů v souboru bitové mapy, chcete-li změnit.|  
+|[v] *y*|Souřadnice y pixelů v souboru bitové mapy, chcete-li změnit.|  
+|[v] *barev*|Nové barva pixelů identifikovaný zadaný souřadnice.|  
   
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
  Kombinuje dvě barvy na základě vyvážené poměru.  
@@ -920,19 +920,19 @@ static COLORREF __stdcall SmartMixColors(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `color1`|První barvu, která kombinovat.|  
-|[v] `color2`|Druhý barvu, která kombinovat.|  
-|[v] `dblLumRatio`|Poměr pro světelnost nové barvy. `SmartMixColors` Vynásobí svítivost smíšený barvy tento poměr před určení konečné barvy.|  
-|[v] `k1`|Vážený poměr pro první barvy.|  
-|[v] `k2`|Vážený poměr druhý barvy.|  
+|[v] *barvou1*|První barvu, která kombinovat.|  
+|[v] *barva2*|Druhý barvu, která kombinovat.|  
+|[v] *dblLumRatio*|Poměr pro světelnost nové barvy. `SmartMixColors` Vynásobí svítivost smíšený barvy tento poměr před určení konečné barvy.|  
+|[v] *k1*|Vážený poměr pro první barvy.|  
+|[v] *k2*|Vážený poměr druhý barvy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Barvu, která představuje vyvážené směs zadaný barvy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda selže s chybou, pokud má jedna `k1` nebo `k2` je menší než nula. Pokud jsou oba tyto parametry nastavit na hodnotu 0, vrátí metoda `RGB(0, 0, 0)`.  
+ Tato metoda selže s chybou, pokud má jedna *k1* nebo *k2* je menší než nula. Pokud jsou oba tyto parametry nastavit na hodnotu 0, vrátí metoda `RGB(0, 0, 0)`.  
   
- Vážený poměr se počítá pomocí tohoto vzorce: (barvou1 * k1 + barva2 \* k2) /(k1 + k2). Po vyvážené poměr je určený, vypočítá metodu světelnost smíšený barvy. Poté pracuje světelnost podle `dblLumRatio`. Pokud je hodnota větší než 1.0, metoda nastaví světelnost smíšený barvy na novou hodnotu. Světelnost, jinak hodnota nastavena na 1.0.  
+ Vážený poměr se počítá pomocí tohoto vzorce: (barvou1 * k1 + barva2 \* k2) /(k1 + k2). Po vyvážené poměr je určený, vypočítá metodu světelnost smíšený barvy. Poté pracuje světelnost podle *dblLumRatio*. Pokud je hodnota větší než 1.0, metoda nastaví světelnost smíšený barvy na novou hodnotu. Světelnost, jinak hodnota nastavena na 1.0.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Otočí zdroj obsahu řadiče domény v dané obdélníku o 90 stupňů.  
@@ -945,13 +945,13 @@ void DrawRotated(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rectDest`  
+ *rectDest*  
  Cílový obdélník.  
   
- `dcSrc`  
+ *dcSrc*  
  Kontext zařízení zdroje.  
   
- `bClockWise`  
+ *bClockWise*  
  `TRUE` Určuje otočení + 90 stupňů; `FALSE` označuje otáčení-90 stupňů.  
   
 ### <a name="remarks"></a>Poznámky  

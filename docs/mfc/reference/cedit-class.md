@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 98410fb8b62eb160e21803b60a14ce731ffc8c23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463076"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957452"
 ---
 # <a name="cedit-class"></a>CEdit – třída
 Poskytuje funkce ovládacích prvků pro úpravy Windows.  
@@ -181,7 +181,7 @@ class CEdit : public CWnd
   
  Ovládací prvek upravit můžete vytvořit buď z šablony dialogového okna, nebo přímo v kódu. V obou případech nejprve volat konstruktor `CEdit` vytvořit `CEdit` objekt a potom volání [vytvořit](#create) – členská funkce vytvořit Windows ovládacích prvků pro úpravy a připojte ji k `CEdit` objektu.  
   
- Konstrukce může být jednoduchý proces v třídy odvozené od `CEdit`. Zápis konstruktoru odvozené třídy a volání **vytvořit** z v konstruktoru.  
+ Konstrukce může být jednoduchý proces v třídy odvozené od `CEdit`. Zápis konstruktoru odvozené třídy a volání `Create` z v konstruktoru.  
   
  `CEdit` dědí důležité funkce z `CWnd`. Nastavit a načíst text ze `CEdit` objektu, použijte `CWnd` členské funkce [SetWindowText](cwnd-class.md#setwindowtext) a [getwindowtext –](cwnd-class.md#getwindowtext), které sada nebo get celý obsah upravíte řídit, i když ho je Víceřádkový ovládacího prvku. Řádky textu v ovládacím prvku Víceřádkový jsou odděleny sekvence znaků '\r\n'. Navíc pokud ovládací prvek upravit je Víceřádkový, získání a nastavení součástí ovládacího prvku textu voláním `CEdit` členské funkce [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel)a [ ReplaceSel](#replacesel).  
   
@@ -249,7 +249,7 @@ BOOL CanUndo() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud poslední operace upravování můžete odvolat voláním **vrátit zpět** – členská funkce; 0, pokud ho nelze vrátit zpět.  
+ Nenulové hodnoty, pokud poslední operace upravování můžete odvolat voláním `Undo` – členská funkce; 0, pokud ho nelze vrátit zpět.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) ve Windows SDK.  
@@ -278,7 +278,7 @@ int CharFromPos(CPoint pt) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Souřadnice bodu v oblasti klienta tohoto `CEdit` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -302,7 +302,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odstranění provádí **zrušte** můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
+ Odstranění provádí `Clear` můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
   
  Chcete-li odstranit aktuální výběr a umístit odstraněné obsah do schránky, zavolejte [Vyjmout](#cut) – členská funkce.  
   
@@ -336,25 +336,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládací prvek upravit. Použít libovolnou kombinaci [styly pro úpravy](styles-used-by-mfc.md#edit-styles) do ovládacího prvku.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění textové pole. Může být `CRect` objekt nebo `RECT` struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje textové pole nadřazeného okna (obvykle `CDialog`). Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládací prvek upravit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěšného; inicializace jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CEdit` objektu ve dvou krocích. Nejprve volání `CEdit` konstruktor a pak volání **vytvořit**, který vytvoří ovládacího prvku úprav Windows a připojí jej k `CEdit` objektu.  
+ Můžete vytvořit `CEdit` objektu ve dvou krocích. Nejprve volání `CEdit` konstruktor a pak volání `Create`, který vytvoří ovládacího prvku úprav Windows a připojí jej k `CEdit` objektu.  
   
- Když **vytvořit** provede, odešle Windows [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), a [WM_ GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) zprávy pro ovládací prvek upravit.  
+ Když `Create` provede, odešle Windows [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), a [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) zprávy pro ovládací prvek upravit.  
   
  Tyto zprávy jsou zpracovávány ve výchozím nastavení [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), a [ongetminmaxinfo –](cwnd-class.md#ongetminmaxinfo) členské funkce v `CWnd` základní třídy. Rozšíření zpracování zpráv výchozí, odvození třídy z `CEdit`, přidejte mapy zpráv do nové třídy a přepsat výše členské funkce obslužné rutiny zpráv. Přepsání `OnCreate`, například k provedení potřebných inicializace pro novou třídu.  
   
@@ -381,7 +381,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odstranění provádí **Vyjmout** můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
+ Odstranění provádí `Cut` můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
   
  Chcete-li odstranit aktuální výběr bez umístění odstraněný text do schránky, zavolejte [zrušte](#clear) – členská funkce.  
   
@@ -445,10 +445,10 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `lpszText`  
+ [out] *lpszText*  
  Ukazatel na řetězec, který obsahuje cue text.  
   
- [v] `cchText`  
+ [v] *cchText*  
  Počet znaků, které můžou přijímat. Tato hodnota zahrnuje ukončení `NULL` znak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] `pichStart`|Index prvního znaku v rozsahu text, který je označený nule.|  
-|[out] `pichEnd`|Poslední znak v rozsahu text, který je označený index počítaný od nuly.|  
+|[out] *pichStart*|Index prvního znaku v rozsahu text, který je označený nule.|  
+|[out] *pichEnd*|Poslední znak v rozsahu text, který je označený index počítaný od nuly.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -544,7 +544,7 @@ UINT GetLimitText() const;
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
- Volání této funkce pro načtení na řádku textu z ovládacího prvku úprav a umístí jej do `lpszBuffer`.  
+ Volání této funkce pro načtení na řádku textu z ovládacího prvku úprav a umístí jej do *lpszBuffer*.  
   
 ```  
 int GetLine(
@@ -558,17 +558,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Určuje číslo řádku k načtení z více řádků ovládacích prvků pro úpravy. Čísla řádků jsou od nuly; Hodnota 0 určuje první řádek. Tento parametr je ignorován v jednořádkové textové pole.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Body do vyrovnávací paměti, která obdrží kopii řádku. První slovo vyrovnávací paměti, musíte zadat maximální počet znaků, které je možné zkopírovat do vyrovnávací paměti.  
   
- `nMaxLength`  
- Určuje maximální počet bajtů, které je možné zkopírovat do vyrovnávací paměti. `GetLine` Tato hodnota umístí první slovo `lpszBuffer` před uskutečněním hovoru do systému Windows.  
+ *nMaxLength*  
+ Určuje maximální počet bajtů, které je možné zkopírovat do vyrovnávací paměti. `GetLine` Tato hodnota umístí první slovo *lpszBuffer* před uskutečněním hovoru do systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet bajtů ve skutečnosti zkopírovat. Vrácená hodnota je 0, pokud číslo řádku určuje `nIndex` je větší než počet řádků v ovládacím prvku upravit.  
+ Počet bajtů ve skutečnosti zkopírovat. Vrácená hodnota je 0, pokud číslo řádku určuje *nIndex* je větší než počet řádků v ovládacím prvku upravit.  
   
 ### <a name="remarks"></a>Poznámky  
  Zkopírovaného řádku neobsahuje znak ukončení hodnotu null.  
@@ -661,7 +661,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura, která přijímá formátování rámeček.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -686,10 +686,10 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartChar`  
+ *nStartChar*  
  Odkaz na celé číslo, které obdrží pozice prvního znaku v aktuálním výběru.  
   
- `nEndChar`  
+ *nEndChar*  
  Odkaz na celé číslo, které obdrží pozice prvního znaku nevybrané za koncem aktuální výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -722,7 +722,7 @@ void LimitText(int nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChars`  
+ *nChars*  
  Určuje text, který může uživatel zadat délku (v bajtech). Pokud má parametr hodnotu 0, délka textu je nastavena na **uint_max –** bajtů. Toto je výchozí chování.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -744,11 +744,11 @@ int LineFromChar(int nIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Obsahuje hodnotu index o základu 0 pro požadovaný znak v textu ovládacích prvků pro úpravy, nebo obsahuje hodnotu -1. Pokud `nIndex` je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
+ *nIndex*  
+ Obsahuje hodnotu index o základu 0 pro požadovaný znak v textu ovládacích prvků pro úpravy, nebo obsahuje hodnotu -1. Pokud *nIndex* je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet řádků od nuly řádek obsahující znakový index určeného `nIndex`. Pokud `nIndex` je -1, vrátí se číslo řádku, který obsahuje první znak výběru. Pokud není nic vybráno, bude vrácena aktuální číslo řádku.  
+ Počet řádků od nuly řádek obsahující znakový index určeného *nIndex*. Pokud *nIndex* je -1, vrátí se číslo řádku, který obsahuje první znak výběru. Pokud není nic vybráno, bude vrácena aktuální číslo řádku.  
   
 ### <a name="remarks"></a>Poznámky  
  Znakový index je počet znaků od začátku ovládacích prvků pro úpravy.  
@@ -768,11 +768,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLine`  
- Obsahuje hodnotu indexu pro požadovaný řádek v textu ovládacích prvků pro úpravy nebo -1. Pokud `nLine` je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
+ *Online*  
+ Obsahuje hodnotu indexu pro požadovaný řádek v textu ovládacích prvků pro úpravy nebo -1. Pokud *využívat* je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Znakový index řádku zadaný v `nLine` nebo -1, pokud zadané číslo řádku je větší než počet řádků v ovládacím prvku upravit.  
+ Znakový index řádku zadaný v *využívat* nebo -1, pokud zadané číslo řádku je větší než počet řádků v ovládacím prvku upravit.  
   
 ### <a name="remarks"></a>Poznámky  
  Znakový index je počet znaků od začátku ovládacích prvků pro úpravy, který má zadaný řádek.  
@@ -792,17 +792,17 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLine`  
+ *Online*  
  Index založený na nule znaku v řádku, jehož délka má být načtena. Výchozí hodnota je -1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrácená hodnota pro ovládacích prvcích pro úpravy jeden řádek, je délka, v `TCHAR`s textu v textovém poli.  
   
- Návratovou hodnotu pro ovládacích prvcích pro úpravy Víceřádkový, je délka, v `TCHAR`s řádku určeného `nLine` parametr. Pro [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] text, délka je počet bajtů v řádku; pro text v kódu Unicode, délka je počet znaků v řádku. Délka neobsahuje znak návratu na konec řádku.  
+ Návratovou hodnotu pro ovládacích prvcích pro úpravy Víceřádkový, je délka, v `TCHAR`s řádku určeného *využívat* parametr. Pro [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] text, délka je počet bajtů v řádku; pro text v kódu Unicode, délka je počet znaků v řádku. Délka neobsahuje znak návratu na konec řádku.  
   
- Pokud `nLine` parametr je větší než počet znaků v ovládacím prvku, návratovou hodnotu nula.  
+ Pokud *využívat* parametr je větší než počet znaků v ovládacím prvku, návratovou hodnotu nula.  
   
- Pokud `nLine` parametr -1, návratová hodnota je počet nezaškrtnuté znaků řádky, které obsahují vybrané znaky. Například pokud výběr rozšiřuje z čtvrtý znak jeden řádek prostřednictvím osmého znaků z konce na další řádek, návratová hodnota je 10. To znamená tři znaky na první řádek a 7 na další.  
+ Pokud *využívat* parametr -1, návratová hodnota je počet nezaškrtnuté znaků řádky, které obsahují vybrané znaky. Například pokud výběr rozšiřuje z čtvrtý znak jeden řádek prostřednictvím osmého znaků z konce na další řádek, návratová hodnota je 10. To znamená tři znaky na první řádek a 7 na další.  
   
  Další informace o `TCHAR` zadejte najdete `TCHAR` řádek v tabulce v [Windows datové typy](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
@@ -822,16 +822,16 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLines`  
+ *nLines*  
  Určuje počet řádků posunu svisle.  
   
- `nChars`  
+ *nChars*  
  Určuje počet pozic znak, který má vodorovný posun. Tato hodnota je ignorována, pokud má ovládací prvek upravit buď **es_right –** nebo **es_center –** stylu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen zpracovává jenom ovládacích prvcích pro úpravy více řádků.  
   
- Ovládací prvek upravit neposouvá svisle za poslední řádek textu v textovém poli. Pokud aktuální řádek plus počet řádků určeného `nLines` větší než celkový počet řádků v ovládacím prvku úprav, hodnota se nastaví tak, aby poslední řádek ovládacích prvků pro úpravy je přechod na horní části okna textové pole.  
+ Ovládací prvek upravit neposouvá svisle za poslední řádek textu v textovém poli. Pokud aktuální řádek plus počet řádků určeného *nLines* větší než celkový počet řádků v ovládacím prvku úprav, hodnota se nastaví tak, aby poslední řádek ovládacích prvků pro úpravy je přechod na horní části okna textové pole.  
   
  `LineScroll` slouží k vodorovnému posouvání za jeho poslední znak kterýkoli řádek.  
   
@@ -863,14 +863,14 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChar`  
+ *NChar*  
  Index založený na nule z určeného znaku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Souřadnice levého horního rohu určeného znaku `nChar`.  
+ Souřadnice levého horního rohu určeného znaku *nChar*.  
   
 ### <a name="remarks"></a>Poznámky  
- Znak, který je zadán tím, že její hodnota index o základu 0. Pokud `nChar` je větší než index poslední znak v tomto `CEdit` objektu návratovou hodnotu určuje souřadnice znak na pozici právě za jeho poslední znak v tomto `CEdit` objektu.  
+ Znak, který je zadán tím, že její hodnota index o základu 0. Pokud *nChar* je větší než index poslední znak v tomto `CEdit` objektu návratovou hodnotu určuje souřadnice znak na pozici právě za jeho poslední znak v tomto `CEdit` objektu.  
   
 > [!NOTE]
 >  Tento člen funkce je k dispozici od verze systému Windows 95 a Windows NT 4.0.  
@@ -881,17 +881,17 @@ CPoint PosFromChar(UINT nChar) const;
   Podívejte se na příklad pro [CEdit::LineFromChar](#linefromchar).  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
- Volání této funkce nahradit aktuální výběr v ovládacím prvku upravit textem určeným parametrem `lpszNewText`.  
+ Volání této funkce nahradit aktuální výběr v ovládacím prvku upravit textem určeným parametrem *lpszNewText*.  
   
 ```  
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszNewText`  
+ *lpszNewText*  
  Body obsahující text, kterým do řetězce ukončené hodnotou null.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Chcete-li určit, že tato funkce může být vrátit zpět, nastavte hodnotu tohoto parametru k **TRUE** . Výchozí hodnota je **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -917,10 +917,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Ukazatel na řetězec, který obsahuje cue k zobrazení v ovládacím prvku upravit.  
   
- [v] `fDrawWhenFocused`  
+ [v] *fDrawWhenFocused*  
  Pokud `false`, Banner informující o cue není vykreslován, když uživatel klikne v ovládacím prvku upravit a bude vybrán ovládacího prvku.  
   
  Pokud `true`, Banner informující o cue vykreslením i v případě, že má právě fokus, ovládacího prvku. Hlavička cue zmizí, když uživatel spustí na typ v ovládacím prvku.  
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `ichStart`|Index prvního znaku v rozsahu textu, abyste měli na očích nule.|  
-|[v] `ichEnd`|Index počítaný od nuly poslední znak v rozsahu textu, abyste měli na očích.|  
+|[v] *ichStart*|Index prvního znaku v rozsahu textu, abyste měli na očích nule.|  
+|[v] *ichEnd*|Index počítaný od nuly poslední znak v rozsahu textu, abyste měli na očích.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) zprávy, která je popsána v sadě Windows SDK.  
@@ -995,7 +995,7 @@ void SetLimitText(UINT nMax);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMax`  
+ *nMax*  
  Nový text limit, ve znacích.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1044,7 +1044,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bModified`  
+ *bModified*  
  Hodnota **TRUE** byla změněna text a hodnota **FALSE** označuje je beze změny. Ve výchozím nastavení je upravený nastavený příznak.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1088,7 +1088,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bReadOnly`  
+ *bReadOnly*  
  Určuje, zda chcete nastavit nebo odebrat jen pro čtení stavu ovládacích prvků pro úpravy. Hodnota **TRUE** nastaví stav jen pro čtení; hodnota **FALSE** nastaví stav pro čtení a zápis.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1110,7 +1110,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura nebo `CRect` objekt, který určuje nové dimenze formátování rámečku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1135,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura nebo `CRect` objekt, který určuje nové dimenze rámečku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1176,10 +1176,10 @@ void SetSel(
  *bNoScroll*  
  Určuje, zda by měl být vsuvka přešli do zobrazení. Pokud **FALSE**, pomocí kurzoru přesunut do zobrazení oblasti. Pokud **TRUE**, pomocí kurzoru není přesunut do zobrazení oblasti.  
   
- `nStartChar`  
- Určuje počáteční pozici. Pokud `nStartChar` je 0 a `nEndChar` je -1, všechny je vybraný text v textovém poli. Pokud `nStartChar` je -1, všechny aktuální výběr je odebrat.  
+ *nStartChar*  
+ Určuje počáteční pozici. Pokud *nStartChar* je 0 a *nEndChar* je -1, všechny je vybraný text v textovém poli. Pokud *nStartChar* je -1, všechny aktuální výběr je odebrat.  
   
- `nEndChar`  
+ *nEndChar*  
  Určuje koncovou pozici.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1202,13 +1202,13 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cxEachStop`  
- Určuje, že jsou zarážek nastavený na každý `cxEachStop` jednotky dialogu.  
+ *cxEachStop*  
+ Určuje, že jsou zarážek nastavený na každý *cxEachStop* jednotky dialogu.  
   
- `nTabStops`  
- Určuje počet zarážek obsažené v `rgTabStops`. Toto číslo musí být větší než 1.  
+ *nTabStops*  
+ Určuje počet zarážek obsažené v *rgTabStops*. Toto číslo musí být větší než 1.  
   
- `rgTabStops`  
+ *rgTabStops*  
  Odkazuje na pole nepodepsané celých čísel zadání kartě zastaví v jednotky dialogu. Jednotky dialogu je vzdálenost vodorovně nebo svisle. Jednu jednotku vodorovné dialogové okno je rovna jedné čtvrtý aktuální základní šířka jednotky dialogu a osmina aktuální základní výška jednotky dialogu rovná 1 jednotka svislé dialogové okno. Základní jednotky dialogu se vypočítávají podle výšky a šířky aktuálním písmem systému. **GetDialogBaseUnits** funkce systému Windows vrátí dialogu aktuální základní jednotky v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1217,7 +1217,7 @@ BOOL SetTabStops(
 ### <a name="remarks"></a>Poznámky  
  Po zkopírování textu do ovládacího prvku úprav více řádků způsobí, že místa pro vygenerování až na další zarážku libovolný znak karta v textu.  
   
- K nastavení zarážek tabulátoru na výchozí velikost 32 jednotky dialogu, volání bez parametrů verze této funkce člen. Chcete-li nastavení zarážek velikost než 32, volejte verzi s `cxEachStop` parametr. Nastavení zarážek na pole velikosti, použijte verzi s dva parametry.  
+ K nastavení zarážek tabulátoru na výchozí velikost 32 jednotky dialogu, volání bez parametrů verze této funkce člen. Chcete-li nastavení zarážek velikost než 32, volejte verzi s *cxEachStop* parametr. Nastavení zarážek na pole velikosti, použijte verzi s dva parametry.  
   
  Tato funkce člen pouze zpracovává ovládacích prvcích pro úpravy více řádků.  
   
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pEditBalloonTip`|Ukazatel na [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktura, která popisuje balloon špičky.|  
-|[v] `lpszTitle`|Ukazatel na řetězec znaků Unicode, který obsahuje název balloon špičky.|  
-|[v] `lpszText`|Ukazatel na řetězec obsahující text tip bubliny.|  
-|[v] `ttiIcon`|`INT` Určující typ tip bublinách přidružit ikonu. Výchozí hodnota je `TTI_NONE`. Další informace najdete v tématu `ttiIcon` členem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
+|[v] *pEditBalloonTip*|Ukazatel na [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktura, která popisuje balloon špičky.|  
+|[v] *lpszTitle*|Ukazatel na řetězec znaků Unicode, který obsahuje název balloon špičky.|  
+|[v] *lpszText*|Ukazatel na řetězec obsahující text tip bubliny.|  
+|[v] *ttiIcon*|**INT** určující typ tip bublinách přidružit ikonu. Výchozí hodnota je `TTI_NONE`. Další informace najdete v tématu `ttiIcon` členem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -1277,7 +1277,7 @@ BOOL Undo();
  Pro ovládací prvek upravit jeden řádek je vždy návratovou hodnotu nenulové hodnoty. Pro ovládací prvek upravit více řádků, je vrácenou hodnotu nenulové hodnoty, pokud operace vrácení zpět je úspěšné, nebo 0, pokud dojde k selhání operace vrácení zpět.  
   
 ### <a name="remarks"></a>Poznámky  
- Operace vrácení zpět může být také vrátit zpět. Například můžete obnovit odstraněné textu s prvním volání **vrátit zpět**. Také neprobíhá žádná použité operace upravit, můžete odebrat text znovu s druhé volání **vrátit zpět**.  
+ Operace vrácení zpět může být také vrátit zpět. Například můžete obnovit odstraněné textu s prvním volání `Undo`. Také neprobíhá žádná použité operace upravit, můžete odebrat text znovu s druhé volání `Undo`.  
   
  Další informace najdete v tématu [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) ve Windows SDK.  
   

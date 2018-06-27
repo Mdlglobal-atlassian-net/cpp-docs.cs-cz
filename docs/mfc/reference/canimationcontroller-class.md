@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356921"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955112"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController – třída
 Implementuje animace řadiči, který poskytuje centrální rozhraní pro vytváření a správa animace.  
@@ -227,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObject`  
+ *pObject*  
  Ukazatel na objekt animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -246,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Ukazatel na klíčový snímek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -268,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  Určuje, zda chcete spustit hned animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -296,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `pGroup`  
+ *pGroup*  
  Ukazatel na skupiny animace vyčistit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -321,16 +321,16 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny, pro kterou je vytvořen klíčový snímek.  
   
- `pTransition`  
+ *pTransition*  
  Ukazatel na přechod. Klíčový snímek se vloží do scénáře po tento přechod.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Ukazatel na základní klíčový snímek pro tento klíčový snímek.  
   
- `offset`  
+ *Posun*  
  Posun v sekundách mezi základní jednotlivými určeného pKeyframe.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -347,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, zda nastavení nebo uvolnění obslužnou rutinu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -366,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, zda nastavení nebo uvolnění obslužných rutin.  
   
- `idleBehavior`  
+ *idleBehavior*  
  Určuje chování při nečinnosti pro obslužnou rutinu aktualizace časovače.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -386,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwHandlerType`  
+ *dwHandlerType*  
  Kombinace UI_ANIMATION_PHT_ příznaky (viz poznámky), která určuje, jaké obslužné rutiny nastavení nebo uvolnění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -405,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `bEnable`  
+ *bEnable*  
  Určuje, zda nastavení nebo uvolnění obslužnou rutinu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -426,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénář.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -449,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pVariable`  
+ *pVariable*  
  Ukazatel na proměnnou animace.  
   
- `ppObject`  
+ *ppObject*  
  Výstup. Obsahuje ukazatel na objekt animace nebo hodnotu NULL.  
   
- `ppGroup`  
+ *ppGroup*  
  Výstup. Obsahuje ukazatel na animace skupiny, která obsahuje objekt animace, nebo hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -619,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Ukazatel na animace skupiny, které bylo naplánováno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -638,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Ukazatel na skupinu animace, která obsahuje objekt animace, jehož hodnota změnila.  
   
- `pObject`  
+ *pObject*  
  Ukazatel na animace objekt, který obsahuje proměnnou animace, jehož hodnota změněna.  
   
- `variable`  
+ *Proměnná*  
  Ukazatel na proměnnou animace.  
   
- `newValue`  
+ *newValue*  
  Udává novou hodnotu.  
   
- `prevValue`  
+ *prevValue*  
  Určuje předchozí hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -666,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newStatus`  
+ *newStatus*  
  Nový stav manager animace.  
   
- `previousStatus`  
+ *previousStatus*  
  Předchozí stav manager animace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -703,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fps`  
+ *snímků za sekundu*  
  Aktuální rychlost rámce v snímků za sekundu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -722,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Ukazatel na skupinu animace, která obsahuje objekt animace, jehož hodnota změnila.  
   
- `pObject`  
+ *pObject*  
  Ukazatel na animace objekt, který obsahuje proměnnou animace, jehož hodnota změněna.  
   
- `variable`  
+ *Proměnná*  
  Ukazatel na proměnnou animace.  
   
- `newValue`  
+ *newValue*  
  Udává novou hodnotu.  
   
- `prevValue`  
+ *prevValue*  
  Určuje předchozí hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -748,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Ukazatel na skupinu animace jejichž animace se chystá spuštění.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -765,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Skupinu, která je vlastníkem aktuálně naplánované scénáře.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Skupinu, která je vlastníkem nové scénáře, který je v konfliktu s naplánované storyboard vlastníkem pGroupScheduled plánování.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potenciální vliv na pGroupNew Pokud pGroupScheduled má vyšší prioritu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -791,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Skupinu, která je vlastníkem aktuálně naplánované scénáře.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Skupinu, která je vlastníkem nové scénáře, který je v konfliktu s naplánované storyboard vlastníkem pGroupScheduled plánování.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potenciální vliv na pGroupNew Pokud pGroupScheduled má vyšší prioritu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -817,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Skupinu, která je vlastníkem aktuálně naplánované scénáře.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Skupinu, která je vlastníkem nové scénáře, který je v konfliktu s naplánované storyboard vlastníkem pGroupScheduled plánování.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potenciální vliv na pGroupNew Pokud pGroupScheduled má vyšší prioritu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -843,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Skupinu, která je vlastníkem aktuálně naplánované scénáře.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Skupinu, která je vlastníkem nové scénáře, který je v konfliktu s naplánované storyboard vlastníkem pGroupScheduled plánování.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potenciální vliv na pGroupNew Pokud pGroupScheduled má vyšší prioritu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -869,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Ukazatel na skupinu animace vlastnící scénáři, jejichž stav se změnil.  
   
- `newStatus`  
+ *newStatus*  
  Určuje nový stav.  
   
- `previousStatus`  
+ *previousStatus*  
  Určuje předchozího stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -889,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Ukazatel na skupinu, která je vlastníkem scénáři.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -913,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID animace skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -929,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObject`  
+ *pObject*  
  Ukazatel na objekt animace.  
   
- `bNoDelete`  
+ *bNoDelete*  
  Pokud tento parametr je TRUE objekt nebudou odstraněna po odebrání.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -946,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -962,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny při plánování animace.  
   
- `time`  
+ *čas*  
  Určuje čas při plánování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -982,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Ukazatel na okno objekt, který chcete nastavit.  
   
 ### <a name="remarks"></a>Poznámky  

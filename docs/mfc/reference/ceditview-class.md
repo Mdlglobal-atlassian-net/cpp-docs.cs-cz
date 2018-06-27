@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371540"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953398"
 ---
 # <a name="ceditview-class"></a>CEditView – třída
 Typ třídy zobrazení, který poskytuje funkci Windows ovládacích prvků pro úpravy a lze použít k implementaci funkce jednoduchého textového editoru.  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|Výchozí styl pro objekty typu **CEditView.**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|Výchozí styl pro objekty typu `CEditView`.|  
   
 ## <a name="remarks"></a>Poznámky  
  `CEditView` Třída poskytuje následující další funkce:  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Poté, co vytvořen objekt, je třeba zavolat [CWnd::Create](../../mfc/reference/cwnd-class.md#create) funkce před použitím ovládací prvek upravit. Pokud odvodíte třídu od `CEditView` a přidejte ji do šablony pomocí `CWinApp::AddDocTemplate`, jak tento konstruktor volá framework a **vytvořit** funkce.  
+ Poté, co vytvořen objekt, je třeba zavolat [CWnd::Create](../../mfc/reference/cwnd-class.md#create) funkce před použitím ovládací prvek upravit. Pokud odvodíte třídu od `CEditView` a přidejte ji do šablony pomocí `CWinApp::AddDocTemplate`, jak tento konstruktor volá framework a `Create` funkce.  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  Obsahuje výchozí styl `CEditView` objektu.  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Předat tuto statický člen jako `dwStyle` parametr **vytvořit** funkce získat výchozí styl pro `CEditView` objektu.  
+ Předat tuto statický člen jako `dwStyle` parametr `Create` funkce získat výchozí styl pro `CEditView` objektu.  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  Volání `FindText` funkce hledání `CEditView` objektu textovou vyrovnávací paměť.  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, která se má najít.  
   
- `bNext`  
+ *bNext*  
  Určuje směr, hledání. Pokud **TRUE**, směr vyhledávání je na konci vyrovnávací paměti. Pokud **FALSE**, směr vyhledávání je k začátku vyrovnávací paměti.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda při hledání velká a malá písmena. Pokud **TRUE**, hledání je malá a velká písmena. Pokud **FALSE**, hledání nerozlišuje velká a malá písmena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je nalezen hledaný text; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce vyhledá text ve vyrovnávací paměti pro textem určeným parametrem `lpszFind`začínající aktuální výběr ve směru určeného `bNext`a s rozlišování určeného `bCase`. Pokud je nalezen text, nastaví výběr na nalezen text a vrátí nenulovou hodnotu. Pokud text není nalezen, funkce vrátí hodnotu 0.  
+ Tato funkce vyhledá text ve vyrovnávací paměti pro textem určeným parametrem *lpszFind*začínající aktuální výběr ve směru určeného *bNext*a pomocí určeného maláavelkápísmena*bCase*. Pokud je nalezen text, nastaví výběr na nalezen text a vrátí nenulovou hodnotu. Pokud text není nalezen, funkce vrátí hodnotu 0.  
   
  Normálně není potřeba volat `FindText` Pokud přepíšete fungovat `OnFindNext`, který volá `FindText`.  
   
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strResult`  
+ *strResult*  
  Odkaz na `CString` objekt, který se zobrazí vybraný text.  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  Ukazatel na ovládací prvek upravit vyrovnávací paměti.  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- Vyhledá text ve vyrovnávací paměti pro textem určeným parametrem `lpszFind`, ve směru určeného `bNext`, s rozlišování určeného `bCase`.  
+ Vyhledá text ve vyrovnávací paměti pro textem určeným parametrem *lpszFind*, ve směru určeného *bNext*, s rozlišování určeného *bCase*.  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, která se má najít.  
   
- `bNext`  
+ *bNext*  
  Určuje směr, hledání. Pokud **TRUE**, směr vyhledávání je na konci vyrovnávací paměti. Pokud **FALSE**, směr vyhledávání je k začátku vyrovnávací paměti.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda při hledání velká a malá písmena. Pokud **TRUE**, hledání je malá a velká písmena. Pokud **FALSE**, hledání nerozlišuje velká a malá písmena.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, která se má najít.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Text nahradit hledaný text.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda hledání velká a malá písmena. Pokud **TRUE**, hledání je malá a velká písmena. Pokud **FALSE**, hledání nerozlišuje velká a malá písmena.  
   
 ### <a name="remarks"></a>Poznámky  
- `OnReplaceAll` Vyhledá text ve vyrovnávací paměti pro textem určeným parametrem `lpszFind`, s rozlišování určeného `bCase`. Hledání se spustí na začátku aktuální výběr. Pokaždé, když je nalezen text vyhledávání, tato funkce nahrazuje že výskyt textu s textem určeným parametrem `lpszReplace`. Hledání se provádí prostřednictvím volání [řetězec FindText](#findtext). Výchozí implementace [OnTextNotFound](#ontextnotfound) je volána, pokud není nalezen text.  
+ `OnReplaceAll` Vyhledá text ve vyrovnávací paměti pro textem určeným parametrem *lpszFind*, s rozlišování určeného *bCase*. Hledání se spustí na začátku aktuální výběr. Pokaždé, když je nalezen text vyhledávání, tato funkce nahrazuje že výskyt textu s textem určeným parametrem *lpszReplace*. Hledání se provádí prostřednictvím volání [řetězec FindText](#findtext). Výchozí implementace [OnTextNotFound](#ontextnotfound) je volána, pokud není nalezen text.  
   
- Pokud aktuální výběr neodpovídá `lpszFind`, výběr se aktualizuje na první výskyt textem určeným parametrem `lpszFind` a nahrazení nebude provedeno. To umožňuje uživateli potvrďte, že je co chce udělat, když výběr neodpovídá text, který má být nahrazen.  
+ Pokud aktuální výběr neodpovídá *lpszFind*, výběr se aktualizuje na první výskyt textem určeným parametrem *lpszFind* a nahrazení nebude provedeno. To umožňuje uživateli potvrďte, že je co chce udělat, když výběr neodpovídá text, který má být nahrazen.  
   
  Přepsání `OnReplaceAll` změnit způsob `CEditView`-odvozené objektu nahradí text.  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, která se má najít.  
   
- `bNext`  
+ *bNext*  
  Určuje směr, hledání. Pokud **TRUE**, směr vyhledávání je na konci vyrovnávací paměti. Pokud **FALSE**, směr vyhledávání je k začátku vyrovnávací paměti.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda při hledání velká a malá písmena. Pokud **TRUE**, hledání je malá a velká písmena. Pokud **FALSE**, hledání nerozlišuje velká a malá písmena.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Text, který nahradí nalezen text.  
   
 ### <a name="remarks"></a>Poznámky  
- Po nahrazení výběr, tato funkce vyhledá text ve vyrovnávací paměti pro další výskyt textem určeným parametrem `lpszFind`, ve směru určeného `bNext`, s rozlišování určeného `bCase`. Hledání se provádí prostřednictvím volání [řetězec FindText](#findtext). Pokud text není nalezen, [OnTextNotFound](#ontextnotfound) je volána.  
+ Po nahrazení výběr, tato funkce vyhledá text ve vyrovnávací paměti pro další výskyt textem určeným parametrem *lpszFind*, ve směru určeného *bNext*, se malá a velká písmena specifikace *bCase*. Hledání se provádí prostřednictvím volání [řetězec FindText](#findtext). Pokud text není nalezen, [OnTextNotFound](#ontextnotfound) je volána.  
   
  Přepsání `OnReplaceSel` změnit způsob `CEditView`-odvozené objektu nahradí vybraný text.  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, která se má najít.  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení tiskárny.  
   
  *rectLayout*  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) zadání obdélníku, ve kterém má být vykreslen text.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Index v rámci vyrovnávací paměť první znak, který má být vykreslen.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Index v rámci vyrovnávací paměť znaku následující poslední znak, který má být vykreslen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  Odkaz na `CArchive` objekt, který ukládá serializovaných text.  
   
 ### <a name="remarks"></a>Poznámky  
  `SerializeRaw` se liší od `CEditView`na interní implementace `Serialize` v, že ho čte a zapisuje pouze text, bez předchozích dat popis objektu.  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- Volání `SetPrinterFont` nastavení tiskárny písma pro písmo určeného `pFont`.  
+ Volání `SetPrinterFont` nastavení tiskárny písma pro písmo určeného *pFont*.  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFont`  
+ *pFont*  
  Ukazatel na objekt typu `CFont`. Pokud **NULL**, písmo použité pro tisk je založena na zobrazení písma.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTabStops`  
+ *nTabStops*  
  Šířka každou zarážku v jednotky dialogu.  
   
 ### <a name="remarks"></a>Poznámky  

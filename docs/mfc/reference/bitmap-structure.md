@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351634"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950300"
 ---
 # <a name="bitmap-structure"></a>BITMAP – struktura
 **Rastrový OBRÁZEK** struktura definuje výška, šířka, formát barvy a bitových hodnot logické rastrový obrázek **.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Určuje výšku rastrového obrázku v rastrových řádcích. Výška musí být větší než 0.  
   
  *bmWidthBytes*  
- Určuje počet bajtů v každém rastrovém řádku. Tato hodnota musí být sudým číslem, protože rozhraní GDI (Graphics Device Interface) předpokládá, že bitové hodnoty rastrového obrázku tvoří pole celočíselných (2bajtových) hodnot. Jinými slovy **bmWidthBytes** \* 8 musí být další násobkem 16 větší než nebo rovna hodnotě získali, když **bmWidth** člen se násobí hodnotou **bmBitsPixel**  člen.  
+ Určuje počet bajtů v každém rastrovém řádku. Tato hodnota musí být sudým číslem, protože rozhraní GDI (Graphics Device Interface) předpokládá, že bitové hodnoty rastrového obrázku tvoří pole celočíselných (2bajtových) hodnot. Jinými slovy *bmWidthBytes* \* 8 musí být další násobkem 16 větší než nebo rovna hodnotě získali, když *bmWidth* člen se násobí hodnotou *bmBitsPixel*  člen.  
   
  *bmPlanes*  
  Určuje počet barevných rovin rastrového obrázku.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Určuje, kolik sousedních bitů barev každé roviny je zapotřebí k definování pixelu.  
   
  *bmBits*  
- Ukazuje na umístění bitových hodnot rastrového obrázku. **BmBits** člena musí být dlouhé ukazatel na pole 1bajtový hodnot.  
+ Ukazuje na umístění bitových hodnot rastrového obrázku. *BmBits* člena musí být dlouhé ukazatel na pole 1bajtový hodnot.  
   
 ## <a name="remarks"></a>Poznámky  
  Aktuálně používané formáty rastrových obrázků jsou monochromatický a barevný. Monochromatický rastrový obrázek používá 1bitový formát s jednou rovinou. Každý průchod je násobkem 16 bitů.  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355601"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952541"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject – třída
 Základní třída pro všechny objekty animace.  
@@ -149,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénář.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Tato metoda s FALSE přidá jenom přechody, které jsou nezávislé na klíčových snímků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -175,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `nObjectID`  
+ *nObjectID*  
  Určuje ID objektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Uživatelem definované datové, kterému může být přidružené k objektu animace a načíst později za běhu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -195,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutodestroy`  
+ *bAutodestroy*  
  Určuje, jestli zničit přechod objekty automaticky, nebo je odeberte ze seznamu související.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -209,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pVariable`  
+ *pVariable*  
  Ukazatel na proměnnou animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -251,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pController`  
+ *pController*  
  Ukazatel na rodičovský ovladač.  
   
- `bEnable`  
+ *bEnable*  
  Určuje, jestli chcete povolit nebo zakázat událostí celočíselnou hodnotu změnit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -270,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pController`  
+ *pController*  
  Ukazatel na rodičovský ovladač.  
   
- `bEnable`  
+ *bEnable*  
  Určuje, jestli chcete povolit nebo zakázat událostí hodnotu změnit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -289,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *obrázků*  
  Seznam, který musí být vyplněn animace proměnné obsažená v objektu animace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -390,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bValue`  
+ *bValue*  
  Určuje automatického destroy příznak.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -406,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nObjectID`  
+ *nObjectID*  
  Určuje ID nového objektu.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID nové skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -433,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwUserData`  
+ *dwUserData*  
  Určuje vlastní data.  
   
 ### <a name="remarks"></a>Poznámky  

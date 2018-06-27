@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383329"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953282"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Pomocí CArchive &lt; &lt; a &gt; &gt; operátory
 `CArchive` poskytuje <\< a >> operátory pro zápis a čtení jednoduché datové typy a také `CObject`s do a ze souboru.  
@@ -40,13 +40,13 @@ ms.locfileid: "33383329"
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- Obvykle, uložení a načtení dat do a ze souboru prostřednictvím archivu v `Serialize` funkce `CObject`-odvozené třídy, které je nutné mít deklarovat s **DECLARE_SERIALIZE** makro. Odkaz na `CArchive` objekt předaný vaší `Serialize` funkce. Volání `IsLoading` funkce `CArchive` objekt, který chcete určit, zda `Serialize` funkce byla volána k načtení dat ze souboru nebo ukládání dat do souboru.  
+ Obvykle, uložení a načtení dat do a ze souboru prostřednictvím archivu v `Serialize` funkce `CObject`– odvozené třídy, které je nutné mít deklarovat s DECLARE_SERIALIZE makro. Odkaz na `CArchive` objekt předaný vaší `Serialize` funkce. Volání `IsLoading` funkce `CArchive` objekt, který chcete určit, zda `Serialize` funkce byla volána k načtení dat ze souboru nebo ukládání dat do souboru.  
   
  `Serialize` Funkce serializable `CObject`-odvozené třídy obvykle má tento formát:  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- Výše uvedené šablony kód je přesně stejný jako ten, který je pro vytvoří objekty AppWizard `Serialize` funkce dokumentu (třídy odvozené od **CDocument)**. Tato šablona kódu umožňuje psát kód, který je snazší zkontrolovat, protože kód ukládání a načítání kódu by měla být vždy paralelní, jako v následujícím příkladu:  
+ Výše uvedené šablony kód je přesně stejný jako ten, který je pro vytvoří objekty AppWizard `Serialize` funkce dokumentu (třídy odvozené od `CDocument`). Tato šablona kódu umožňuje psát kód, který je snazší zkontrolovat, protože kód ukládání a načítání kódu by měla být vždy paralelní, jako v následujícím příkladu:  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -54,10 +54,10 @@ ms.locfileid: "33383329"
   
 ||||  
 |-|-|-|  
-|`CObject*`|**VELIKOST a CSize**|**float**|  
+|`CObject*`|**VELIKOST** a `CSize`|**float**|  
 |**WORD**|`CString`|**BOD** a `CPoint`|  
-|`DWORD`|**BAJTŮ**|`RECT` A `CRect`|  
-|**Double**|**DLOUHÁ**|`CTime` A `CTimeSpan`|  
+|`DWORD`|**BAJTŮ**|`RECT` a `CRect`|  
+|**Double**|**DLOUHÁ**|`CTime` a `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
 |`COleDateTime`|`COleDateTimeSpan`||  
   

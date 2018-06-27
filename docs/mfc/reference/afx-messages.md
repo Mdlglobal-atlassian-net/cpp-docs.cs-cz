@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355409"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954657"
 ---
 # <a name="afx-messages"></a>AFX – zprávy
 Tyto zprávy se používají v prostředí MFC.  
@@ -89,7 +89,7 @@ Tyto zprávy se používají v prostředí MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Zpráva|Popis|[v] `wParam`|`lParam` (Všechny parametry jsou [v], pokud není uvedeno jinak.)|Návratová hodnota|  
+|Zpráva|Popis|[v] *wParam*|*lParam* (všechny parametry jsou [v], pokud není uvedeno jinak.)|Návratová hodnota|  
 |AFX_WM_ACCGETOBJECT|Nepoužívá se.|Nepoužívá se.|Nelze použít.|Nelze použít.|  
 |AFX_WM_ACCGETSTATE|Použít pro usnadnění přístupu. Odeslat tuto zprávu `CMFCPopupMenu` nebo `CMFCRibbonPanelMenu` při načítání stavu aktuálního elementu.|Index elementu, který může být tlačítko nabídky nebo oddělovač.|Nepoužívá se.|Stav elementu. Je -1, pokud index není platný, 0, pokud tlačítko nabídky nemá žádné speciální atributy. V opačném případě je kombinací následující příznaky:<br /><br /> TBBS_DISABLED – položka je zakázána.<br /><br /> TBBS_CHECKED – položka je zaškrtnuté.<br /><br /> TBBS_BUTTON – položka je standardní pushbutton<br /><br /> TBBS_PRESSED – stisknutí tlačítka<br /><br /> TBBS_INDETERMINATE – nedefinované stavu<br /><br /> TBBS_SEPARATOR - místo tlačítka s nabídkou tento element formuláře a oddělení od jiných položek nabídky|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Rozhraní framework odešle zpráva do ovládacího prvku panel s možností změny velikosti ovládacího prvku. Tuto zprávu pro příjem oznámení z `CMFCTabCtrl` objekty, když uživatel změní aktivní karty.|Index na kartě.|Nepoužívá se.|Nenulové hodnoty.|  
@@ -103,9 +103,9 @@ Tyto zprávy se používají v prostředí MFC.
 |AFX_WM_DELETETOOLBAR|Odeslat do hlavního rámce okna, pokud je uživatel Chystáte se odstranit panelu nástrojů v režimu vlastní nastavení.<br /><br /> Zpracování této zprávy provést další akce, když uživatel odstraní panelu nástrojů v režimu vlastní nastavení. Měli byste také zavolat výchozí obslužnou rutinu (`OnToolbarDelete`), která odstraňuje panelu nástrojů. Výchozí obslužná rutina vrátí hodnotu, která určuje, zda je možné odstranit panelu nástrojů.|Nepoužívá se.|Ukazatel na `CMFCToolBar` objekt, který má být odstraněna.|Nenulové hodnoty, pokud nelze odstranit, panelu nástrojů; jinak 0.|  
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` Tato zpráva se odešle do hlavního rámce okno Načíst barvy dokumentu.|Nepoužívá se.|[ve out] Ukazatel na `CList<COLORREF, COLORREF>` objektu.|Nula.|  
 |AFX_WM_GETDRAGBOUNDS|Pouze pro interní použití.|Nelze použít.|Nelze použít.|Nelze použít.|  
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Posílají do okna hlavního rámce, když uživatel zvýrazňuje pás karet položky seznamu.|Index zvýrazněné položky|ukazatele na `CMFCBaseRibbonElement`|Nepoužívá se.|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Posílají do okna hlavního rámce, když uživatel zvýrazňuje pás karet položky seznamu.|Index zvýrazněné položky|Ukazatele na `CMFCBaseRibbonElement`|Nepoužívá se.|  
 |AFX_WM_ON_AFTER_SHELL_COMMAND|Odeslány do nadřazené položky `CMFCShellListCtrl` nebo `CMFCShellTreeCtrl` prvky, když uživatel dokončí spouštění příkazů prostředí.|ID příkazu, který uživatel provést|Nepoužívá se.|Pokud aplikace zpracovává tuto zprávu, měla by vrátit nula.|  
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Rozhraní framework odešle tato zpráva do nadřazené na pásu karet předtím, než se zobrazí v místní nabídce. Můžete tuto zprávu a kdykoli upravit místní nabídky.|Nepoužívá se.|ukazatele na `CMFCBaseRibbonElement`|Nepoužívá se.|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Rozhraní framework odešle tato zpráva do nadřazené na pásu karet předtím, než se zobrazí v místní nabídce. Můžete tuto zprávu a kdykoli upravit místní nabídky.|Nepoužívá se.|Ukazatele na `CMFCBaseRibbonElement`|Nepoužívá se.|  
 |AFX_WM_ON_CANCELTABMOVE|Pouze pro interní použití.|Nelze použít.|Nelze použít.||  
 |AFX_WM_ON_CHANGE_RIBBON_CATEGORY|Rozhraní framework tuto zprávu odešle do hlavního rámce, když uživatel změní aktivní kategorie řízení pásu karet.|Nepoužívá se.|Ukazatel `CMFCRibbonBar` jejichž kategorie se změnila.|Nepoužívá se.|  
 |AFX_WM_ON_CLOSEPOPUPWINDOW|Rozhraní framework odešle této zprávy s upozorněním vlastník `CMFCDesktopAlertWnd` , že je okno bude uzavřen.|Nepoužívá se.|Ukazatel na `CMFCDesktopAlertWnd` objektu.|Nepoužívá se.|  
@@ -131,7 +131,7 @@ Tyto zprávy se používají v prostředí MFC.
 |AFX_WM_UPDATETOOLTIPS|Odesílané vlastníkům všech popisek k označení, že jejich popiskách znovu vytvořit.|Typ ovládacího prvku, který by měl zpracovat tuto zprávu. Najdete v tabulce dál v tomto tématu pro seznamu možných hodnot.|Nepoužívá se.|Nepoužívá se.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` Odešle tuto zprávu do nadřazeného rámce, když uživatel klikne **pomoci** tlačítko nebo přejde do režimu nápovědy kliknutím **pomoci** popisek tlačítka nebo klávesy F1.|Nepoužívá se.|Ukazatel na instanci `CMFCWindowsManagerDialog`.|Nepoužívá se.|  
   
- V následující tabulce jsou uvedeny hodnoty pro dolní slovo `lParam` parametru metody AFX_WM_HSCROLL:  
+ V následující tabulce jsou uvedeny hodnoty pro dolní slovo *lParam* parametru metody AFX_WM_HSCROLL:  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ Tyto zprávy se používají v prostředí MFC.
 |SB_THUMBTRACK|Uživatel je přetahování jezdce. AFX_WM_ON_HSCROLL odeslání zprávy jsou opakovaně s touto hodnotou dokud uživatel uvolní tlačítko myši. Word horní označuje pozici, na kterou byla přetáhnout posouvací políčko.|  
   
 > [!NOTE]
->  Word horní z `lParam` parametr určuje aktuální pozici posouvací políčko, pokud je slovo nejnižší SB_THUMBPOSITION nebo SB_THUMBTRACK; jinak se nepoužije slovo.  
+>  Word horní z *lParam* parametr určuje aktuální pozici posouvací políčko, pokud je slovo nejnižší SB_THUMBPOSITION nebo SB_THUMBTRACK; jinak se nepoužije slovo.  
   
- V následující tabulce jsou uvedeny hodnoty příznak `lParam` parametr AFX_WM_UPDATETOOLTIPS zprávy:  
+ V následující tabulce jsou uvedeny hodnoty příznak *lParam* parametr AFX_WM_UPDATETOOLTIPS zprávy:  
   
 |||  
 |-|-|  

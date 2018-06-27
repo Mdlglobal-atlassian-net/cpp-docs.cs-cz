@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35a3fb35115e1fd86a2ccf168e048a697a17dc01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0be95b0092db315dd3af7086770411b93eb2ae23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378502"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955209"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd – třída
 Poskytuje funkci Windows jednotlivý dokument (SDI rozhraní) překryté nebo oken s rámečkem automaticky otevírané okno, společně s členů pro správu okna.  
@@ -152,7 +152,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::EnableDocking](#enabledocking)|Umožňuje ovládacích pruhů chcete ukotvit.|  
 |[CFrameWnd::EndModalState](#endmodalstate)|Ukončí modální stavu rámce okna. Umožňuje všechna okna zakázal `BeginModalState`.|  
 |[CFrameWnd::FloatControlBar](#floatcontrolbar)|Obtéká ovládacích pruhů.|  
-|[CFrameWnd::GetActiveDocument](#getactivedocument)|Vrátí aktivní **CDocument** objektu.|  
+|[CFrameWnd::GetActiveDocument](#getactivedocument)|Vrátí aktivní `CDocument` objektu.|  
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|Vrátí aktivní `CFrameWnd` objektu.|  
 |[CFrameWnd::GetActiveView](#getactiveview)|Vrátí aktivní `CView` objektu.|  
 |[CFrameWnd::GetControlBar](#getcontrolbar)|Načte ovládacích pruhů.|  
@@ -215,11 +215,11 @@ class CFrameWnd : public CWnd
   
 -   Nepřímo vytvořte pomocí šablony dokumentu.  
   
- Před voláním buď **vytvořit** nebo `LoadFrame`, je nutné vytvořit objekt oken s rámečkem v haldě pomocí C++ **nové** operátor. Před voláním **vytvořit**, budete taky moct registrovat třídu okno s [afxregisterwndclass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámečku.  
+ Před voláním buď `Create` nebo `LoadFrame`, je nutné vytvořit objekt oken s rámečkem v haldě pomocí C++ **nové** operátor. Před voláním `Create`, budete taky moct registrovat třídu okno s [afxregisterwndclass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámečku.  
   
- Použití **vytvořit** – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
+ Použití `Create` – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
   
- `LoadFrame` vyžaduje argumenty méně než **vytvořit**a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Chcete-li být přístupné `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
+ `LoadFrame` vyžaduje argumenty méně než `Create`a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Chcete-li být přístupné `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
   
  Když `CFrameWnd` objekt obsahuje zobrazení a dokumenty, jsou nepřímo vytvořené pomocí rozhraní místo přímo z programátorů. `CDocTemplate` Objekt orchestruje vytvoření rámečku, vytvoření obsahující zobrazení a připojení k zobrazení odpovídající dokumentu. Parametry `CDocTemplate` zadejte konstruktor `CRuntimeClass` tří tříd podílejí (dokumentu, rámečkem a zobrazení). A `CRuntimeClass` objekt používají rozhraní dynamicky vytvořit nové rámce při zadané uživatelem (například pomocí souboru nový příkaz nebo více okno Nový příkaz dokumentu rozhraní (MDI)).  
   
@@ -271,7 +271,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCmdShow`  
+ *nCmdShow*  
  Určuje parametr předat [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow). Ve výchozím nastavení je rámečku vidět a správně obnovit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -279,7 +279,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
   
  Výchozí implementace aktivuje rámečku, zobrazí se na začátek pořadí a, v případě potřeby provede stejný postup pro aplikace hlavního rámce okna.  
   
- Chcete-li změnit způsob aktivace rámeček funkci člena přepište. Například můžete vynutit podřízených oken MDI chcete maximalizovat. Přidejte příslušné funkce a pak volat základní třída verzi s explicitního `nCmdShow`.  
+ Chcete-li změnit způsob aktivace rámeček funkci člena přepište. Například můžete vynutit podřízených oken MDI chcete maximalizovat. Přidejte příslušné funkce a pak volat základní třída verzi s explicitního *nCmdShow*.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
@@ -317,37 +317,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Bodů na řetězec znaků ukončené hodnotou null, který názvy třídy Windows. Název třídy může být jakýkoli název zaregistrována `AfxRegisterWndClass` globální funkce nebo **RegisterClass** funkce systému Windows. Pokud **NULL**, používá předdefinovanou výchozí `CFrameWnd` atributy.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který představuje název okna. Používá jako text záhlaví.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje okno [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributy. Zahrnout **fws_addtotitle –** styl, pokud chcete, aby na záhlaví automaticky zobrazovaný název dokumentu v okně.  
   
- `rect`  
- Určuje velikost a umístění okna. `rectDefault` Systému Windows zadejte velikost a umístění nového okna umožní hodnotu.  
+ *Rect –*  
+ Určuje velikost a umístění okna. *RectDefault* systému Windows zadejte velikost a umístění nového okna umožní hodnotu.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje nadřazeného okna rámce okna. Tento parametr by měl být **NULL** pro okna s rámečkem nejvyšší úrovně.  
   
  *lpszMenuName*  
  Určuje název prostředku nabídky pro použití s okna. Použití **MAKEINTRESOURCE** Pokud v nabídce má celé číslo ID místo řetězec. Tento parametr může být **NULL**.  
   
- `dwExStyle`  
+ *dwExStyle*  
  Určuje okno Rozšířené [styl](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) atributy.  
   
- `pContext`  
+ *pContext*  
  Určuje ukazatel [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury. Tento parametr může být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěšného; inicializace jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvořit `CFrameWnd` objektu ve dvou krocích. Nejprve vyvolat konstruktor, který vytvoří `CFrameWnd` objektu a pak zavolají **vytvořit**, který vytvoří rámce okna Windows a připojí jej k `CFrameWnd` objektu. **Vytvoření** inicializuje okna na název třídy a název časového období a zaregistruje výchozí hodnoty pro svou styl, nadřazené a přidružené nabídky.  
+ Vytvořit `CFrameWnd` objektu ve dvou krocích. Nejprve vyvolat konstruktor, který vytvoří `CFrameWnd` objektu a pak zavolají `Create`, který vytvoří rámce okna Windows a připojí jej k `CFrameWnd` objektu. `Create` Inicializuje název třídy okna a název časového období a zaregistruje výchozí hodnoty pro svou styl, nadřazené a přidružené nabídky.  
   
- Použití `LoadFrame` místo **vytvořit** načíst okně s rámečkem z prostředku místo zadání její argumenty.  
+ Použití `LoadFrame` místo `Create` načíst okně s rámečkem z prostředku místo zadání její argumenty.  
   
 ##  <a name="createview"></a>  CFrameWnd::CreateView  
  Volání `CreateView` vytvoření zobrazení v rámci.  
@@ -359,10 +359,10 @@ CWnd* CreateView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pContext`  
+ *pContext*  
  Určuje typ zobrazení a dokumentu.  
   
- `nID`  
+ *nID*  
  Číslo ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -382,15 +382,15 @@ void DockControlBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Odkazuje na panelu řízení ukotvit.  
   
- `nDockBarID`  
+ *nDockBarID*  
  Určuje, které strany rámce okna vzít v úvahu pro ukotvení. Může být 0, nebo jednu nebo více následujících akcí:  
   
 - `AFX_IDW_DOCKBAR_TOP` Ukotvení do horní části okna rámce.  
   
-- **AFX_IDW_DOCKBAR_BOTTOM** ukotvení na dolní straně rámce okna.  
+- `AFX_IDW_DOCKBAR_BOTTOM` Ukotvení na dolní straně rámce okna.  
   
 - `AFX_IDW_DOCKBAR_LEFT` Ukotvení na levé straně okna rámce.  
   
@@ -398,11 +398,11 @@ void DockControlBar(
   
  Pokud je 0, ovládacích pruhů lze ukotvit na žádné straně povolené pro ukotvení v rámci okna cílové.  
   
- `lpRect`  
+ *lprect –*  
  Určuje, v souřadnice obrazovky, kde budou v oblasti nonclient rámce okna cílové ukotveny ovládacích pruhů.  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládací prvek panel bude ukotven na jednu z postranní rámce okna zadaný ve volání do obou [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) a [CFrameWnd::EnableDocking](#enabledocking). Na straně vybrali je dáno `nDockBarID`.  
+ Ovládací prvek panel bude ukotven na jednu z postranní rámce okna zadaný ve volání do obou [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) a [CFrameWnd::EnableDocking](#enabledocking). Zvolený straně je dáno *nDockBarID*.  
   
 ##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking  
  Volejte tuto funkci povolit lze ukotvit ovládací pruhy v okně s rámečkem.  
@@ -412,7 +412,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDockStyle`  
+ *dwDockStyle*  
  Určuje, které strany rámce okna může sloužit jako lokality pro ovládací pruhy ukotvení. Může být jeden nebo více následujících akcí:  
   
 - `CBRS_ALIGN_TOP` Umožňuje ukotvení v horní části oblasti klienta.  
@@ -452,13 +452,13 @@ void FloatControlBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Odkazuje na panelu řízení obtékání.  
   
- `point`  
+ *Bod*  
  Umístění, v souřadnice obrazovky, kde budou umístěné levém horním rohu na ovládací prvek panelu.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje, jestli chcete-li zarovnat panelu ovládacího prvku v jeho nové oken s rámečkem vodorovně nebo svisle. Může být některého z následujících akcí:  
   
 - `CBRS_ALIGN_TOP` Orientuje ovládacích pruhů svisle.  
@@ -510,7 +510,7 @@ CView* GetActiveView() const;
  Ukazatel na aktuální [CView](../../mfc/reference/cview-class.md). Pokud není žádná aktuální zobrazení, vrátí **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce vrátí hodnotu **NULL** při volání pro hlavního rámce okna MDI ( `CMDIFrameWnd`). V aplikaci MDI hlavního rámce okna MDI nemá zobrazení s ním spojená. Místo toho každé jednotlivé podřízeného okna ( `CMDIChildWnd`) obsahuje jeden nebo více přidružené zobrazení. Aktivní zobrazení v aplikaci MDI je možné získat nejprve hledání active podřízeného okna MDI a vyhledáním aktivní zobrazení pro toto okno podřízené. Aktivní podřízeného okna MDI naleznete voláním funkce `MDIGetActive` nebo **getactiveframe –** jak je ukázáno v následujícím:  
+ Funkce vrátí hodnotu **NULL** při volání pro hlavního rámce okna MDI ( `CMDIFrameWnd`). V aplikaci MDI hlavního rámce okna MDI nemá zobrazení s ním spojená. Místo toho každé jednotlivé podřízeného okna ( `CMDIChildWnd`) obsahuje jeden nebo více přidružené zobrazení. Aktivní zobrazení v aplikaci MDI je možné získat nejprve hledání active podřízeného okna MDI a vyhledáním aktivní zobrazení pro toto okno podřízené. Aktivní podřízeného okna MDI naleznete voláním funkce `MDIGetActive` nebo `GetActiveFrame` jak je ukázáno v následujícím:  
   
  [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
@@ -522,14 +522,14 @@ CControlBar* GetControlBar(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Číslo ID ovládacích pruhů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na ovládací prvek panel, který je přidružen ID.  
   
 ### <a name="remarks"></a>Poznámky  
- `nID` Parametr odkazuje na jedinečný identifikátor předaný **vytvořit** metoda ovládacích pruhů. Další informace o ovládací pruhy, naleznete v tématu s názvem [ovládací pruhy](../../mfc/control-bars.md).  
+ *NID* parametr odkazuje na jedinečný identifikátor předaný `Create` metoda ovládacích pruhů. Další informace o ovládací pruhy, naleznete v tématu s názvem [ovládací pruhy](../../mfc/control-bars.md).  
   
  `GetControlBar` vrátí ovládací prvek panelu, i pokud je číslo s plovoucí čárkou a proto není aktuálně podřízeného okna rámečku.  
   
@@ -541,7 +541,7 @@ void GetDockState(CDockState& state) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `state`  
+ *Stav*  
  Obsahuje aktuální stav rámce okna Ovládací pruhy po návratu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -603,14 +603,14 @@ virtual void GetMessageString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID prostředku požadované zprávy.  
   
- `rMessage`  
+ *rMessage*  
  `CString` objekt, do níž umístíte zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace jednoduše načte řetězec určený `nID` ze zdrojového souboru. Tato funkce je volána rámcem, pokud řetězec zprávy ve stavovém řádku je nutné aktualizovat.  
+ Výchozí implementace jednoduše načte řetězec určený *nID* ze zdrojového souboru. Tato funkce je volána rámcem, pokud řetězec zprávy ve stavovém řádku je nutné aktualizovat.  
   
 ##  <a name="gettitle"></a>  CFrameWnd::GetTitle  
  Načte název objektu okna.  
@@ -632,16 +632,16 @@ void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Body v dokumentu, ke kterému je přidružené rámce okna. Může být **NULL**.  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  Pokud **TRUE**, označuje, že by měl rámečku se zobrazí a aktivní. Pokud **FALSE**, žádné potomky jsou dostupná.  
   
 ### <a name="remarks"></a>Poznámky  
  To způsobí, že všechna zobrazení v okně rámce pro příjem jejich `OnInitialUpdate` volání.  
   
- Navíc pokud nebyl k dispozici dříve aktivní zobrazení, primární zobrazení okna rámce přišla aktivní. Primární zobrazení je zobrazení s ID podřízeného z **AFX_IDW_PANE_FIRST**. Nakonec se provádí okně s rámečkem viditelné pokud `bMakeVisible` nenulový. Pokud `bMakeVisible` je 0, aktuální fokus a stav viditelnosti rámce okna zůstane beze změny. Není nutné volat tuto funkci při pomocí implementace rozhraní framework nový soubor a soubor otevřít.  
+ Navíc pokud nebyl k dispozici dříve aktivní zobrazení, primární zobrazení okna rámce přišla aktivní. Primární zobrazení je zobrazení s ID podřízeného z **AFX_IDW_PANE_FIRST**. Nakonec se provádí okně s rámečkem viditelné pokud *bMakeVisible* nenulový. Pokud *bMakeVisible* je 0, aktuální fokus a stav viditelnosti rámce okna zůstane beze změny. Není nutné volat tuto funkci při pomocí implementace rozhraní framework nový soubor a soubor otevřít.  
   
 ##  <a name="inmodalstate"></a>  CFrameWnd::InModalState  
  Volání této funkce člen k zkontrolujte, jestli je modální nebo nemodálním okně s rámečkem.  
@@ -671,7 +671,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszResourceName`  
+ *lpszResourceName*  
  Určuje název prostředku akcelerátoru. Použití **MAKEINTRESOURCE** Pokud se identifikuje prostředek s ID celé číslo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -692,7 +692,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProfileName`  
+ *lpszProfileName*  
  Název oddílu v souboru inicializace (INI) nebo klíč v registru systému Windows se uloží informace o stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -712,26 +712,26 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
+ *nIDResource*  
  ID sdílené prostředky, které jsou přidružené k rámce okna.  
   
  *dwDefaultStyle*  
  Rámečku [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles). Zahrnout **fws_addtotitle –** styl, pokud chcete, aby na záhlaví automaticky zobrazovaný název dokumentu v okně.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na hodnotu parent rámečku.  
   
- `pContext`  
+ *pContext*  
  Ukazatel [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury. Tento parametr může být **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvořit `CFrameWnd` objektu ve dvou krocích. Nejprve vyvolat konstruktor, který vytvoří `CFrameWnd` objektu a pak zavolají `LoadFrame`, který načte oken s rámečkem Windows a přidružené prostředky a připojí okně s rámečkem na `CFrameWnd` objektu. `nIDResource` Parametr určuje, v nabídce, tabulky akcelerátorů, ikonu a řetězec prostředku záhlaví okna rámce.  
+ Vytvořit `CFrameWnd` objektu ve dvou krocích. Nejprve vyvolat konstruktor, který vytvoří `CFrameWnd` objektu a pak zavolají `LoadFrame`, který načte oken s rámečkem Windows a přidružené prostředky a připojí okně s rámečkem na `CFrameWnd` objektu. *NIDResource* parametr určuje, v nabídce, tabulky akcelerátorů, ikonu a řetězec prostředku záhlaví okna rámce.  
   
- Použití **vytvořit** – členská funkce místo `LoadFrame` Pokud chcete zadat všechny parametry vytvoření rámce okna.  
+ Použití `Create` – členská funkce místo `LoadFrame` Pokud chcete zadat všechny parametry vytvoření rámce okna.  
   
  Volání framework `LoadFrame` při vytvoří okně s rámečkem pomocí objektu šablony dokumentu.  
   
- Rozhraní používá `pContext` argument určete objekty, které k připojení do okna rámce, včetně všech obsažené objekty zobrazení. Můžete nastavit `pContext` argument **NULL** při volání `LoadFrame`.  
+ Rozhraní používá *pContext* argument určete objekty, které k připojení do okna rámce, včetně všech obsažené objekty zobrazení. Můžete nastavit *pContext* argument **NULL** při volání `LoadFrame`.  
   
 ##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable  
  Když je tento člen dat povolené (což je výchozí nastavení), nabídky položek, které nemají `ON_UPDATE_COMMAND_UI` nebo `ON_COMMAND` obslužné rutiny se automaticky zakáže při vrátí uživatele nabídku.  
@@ -772,7 +772,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - **borderSet** = 3  
   
- `lpRectBorder`  
+ *lpRectBorder*  
  Ukazatel na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje souřadnice ohraničení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -789,7 +789,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID ovládacího panelu se zobrazí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -821,10 +821,10 @@ virtual BOOL OnCreateClient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpcs`  
+ *lpcs*  
  Ukazatel na Windows [createstruct –](../../mfc/reference/createstruct-structure.md) struktura.  
   
- `pContext`  
+ *pContext*  
  Ukazatel [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -833,7 +833,7 @@ virtual BOOL OnCreateClient(
 ### <a name="remarks"></a>Poznámky  
  Nikdy volání této funkce.  
   
- Výchozí implementace této funkce vytvoří `CView` objekt z informací uvedených v `pContext`, pokud je to možné.  
+ Výchozí implementace této funkce vytvoří `CView` objekt z informací uvedených v *pContext*, pokud je to možné.  
   
  Přepsání této funkci můžete přepsat hodnoty předané `CCreateContext` objektu nebo chcete-li změnit jsou způsob ovládacích prvků v hlavní klientské oblasti okně s rámečkem vytvořené. `CCreateContext` Členy můžete přepsat jsou popsané v [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) třídy.  
   
@@ -863,7 +863,7 @@ virtual void OnSetPreviewMode(
  *bPreview*  
  Určuje, zda se má umístit aplikace v režimu náhledu. Nastavte na **TRUE** umístit v náhledu tisku **FALSE** režim náhledu zrušit.  
   
- `pState`  
+ *pState*  
  Ukazatel **CPrintPreviewState** struktury.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -889,8 +889,8 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Ukazatel [CCmdUI](../../mfc/reference/ccmdui-class.md) objekt reprezentující v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace [povolit](../../mfc/reference/ccmdui-class.md#enable) členské funkce `CCmdUI` objektu prostřednictvím `pCmdUI` aktualizace uživatelského rozhraní.  
+ *pCmdUI*  
+ Ukazatel [CCmdUI](../../mfc/reference/ccmdui-class.md) objekt reprezentující v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace [povolit](../../mfc/reference/ccmdui-class.md#enable) členské funkce `CCmdUI` objektu prostřednictvím *pCmdUI* aktualizace uživatelského rozhraní.  
   
 ##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout  
  Voláno rámcem, když jsou standardní ovládací pruhy zapnout nebo vypnout, nebo při změně velikosti rámce okna.  
@@ -900,7 +900,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNotify`  
+ *bNotify*  
  Určuje, zda aktivní položky na místě rámce okna obdrží upozornění na změnu rozložení. Pokud **TRUE**, položka je oznámený; jinak hodnota **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -923,7 +923,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProfileName`  
+ *lpszProfileName*  
  Název oddílu v inicializační soubor nebo klíč v registru systému Windows se uloží informace o stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -937,7 +937,7 @@ void SetActivePreviewView(CView* pViewNew);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pViewNew`  
+ *pViewNew*  
  Ukazatel na zobrazení chcete aktivovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -955,7 +955,7 @@ void SetActiveView(
  *pViewNew*  
  Určuje ukazatel na [CView](../../mfc/reference/cview-class.md) objekt, nebo **NULL** pro aktivní zobrazení.  
   
- `bNotify`  
+ *bNotify*  
  Určuje, zda mají být informování aktivace je zobrazení. Pokud **TRUE**, `OnActivateView` je volána pro nové zobrazení, jinak, pokud **FALSE**, není.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -969,7 +969,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `state`  
+ *Stav*  
  Uložený stav se vztahují na ovládací pruhy rámce okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `nState`|Určuje, jestli chcete zobrazit nebo skrýt v nabídce. `nState` Parametr může mít následující hodnoty:<br /><br /> -AFX_MBS_VISIBLE (0x01) - zobrazí v nabídce, pokud je skrytý, ale nemá žádný vliv, pokud je zobrazen.<br />-AFX_MBS_HIDDEN (0x02) - skryje v nabídce, pokud se zobrazí, ale nemá žádný vliv, pokud je skrytý.|  
+|[v] *nInformace*|Určuje, jestli chcete zobrazit nebo skrýt v nabídce. *NInformace* parametr může mít následující hodnoty:<br /><br /> -AFX_MBS_VISIBLE (0x01) - zobrazí v nabídce, pokud je skrytý, ale nemá žádný vliv, pokud je zobrazen.<br />-AFX_MBS_HIDDEN (0x02) - skryje v nabídce, pokud se zobrazí, ale nemá žádný vliv, pokud je skrytý.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud se tato metoda úspěšně změní stav nabídky; v opačném `false`.  
@@ -1005,10 +1005,10 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `nStyle`|Určuje, jestli v nabídce je ve výchozím nastavení skryté, nebo je viditelná a je aktivní. `nStyle` Parametr může mít následující hodnoty:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     V nabídce se zobrazí po celou dobu a ve výchozím nastavení nemá fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     Ve výchozím nastavení je skryté v nabídce. Pokud je skryté v nabídce, stiskněte klávesu ALT pro zobrazení nabídky a pojmenujte ho fokus. Pokud se zobrazí v nabídce, stisknutím klávesy ALT nebo ESC skrytí nabídky.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitovou kombinaci (nebo)) – ve výchozím nastavení je skryté v nabídce. Pokud je skryté v nabídce, stiskněte klávesu F10 pro zobrazení nabídky a pojmenujte ho fokus. Pokud se zobrazí v nabídce, stisknutím klávesy F10 Přepnout vstup zapnout nebo vypnout v nabídce. V nabídce se nezobrazí, dokud stisknutím klávesy ALT nebo ESC ho chcete skrýt.|  
+|[v] *nStyle*|Určuje, jestli v nabídce je ve výchozím nastavení skryté, nebo je viditelná a je aktivní. *NStyle* parametr může mít následující hodnoty:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     V nabídce se zobrazí po celou dobu a ve výchozím nastavení nemá fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     Ve výchozím nastavení je skryté v nabídce. Pokud je skryté v nabídce, stiskněte klávesu ALT pro zobrazení nabídky a pojmenujte ho fokus. Pokud se zobrazí v nabídce, stisknutím klávesy ALT nebo ESC skrytí nabídky.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitovou kombinaci (nebo)) – ve výchozím nastavení je skryté v nabídce. Pokud je skryté v nabídce, stiskněte klávesu F10 pro zobrazení nabídky a pojmenujte ho fokus. Pokud se zobrazí v nabídce, stisknutím klávesy F10 Přepnout vstup zapnout nebo vypnout v nabídce. V nabídce se nezobrazí, dokud stisknutím klávesy ALT nebo ESC ho chcete skrýt.|  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud hodnota `nStyle` parametr není platný, tato metoda vyhodnotí v režimu ladění a vyvolá [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) v režimu vydání. V případě jiných chyby za běhu, tato metoda vyhodnotí v režimu ladění a vyvolá výjimku odvozené z [CException](../../mfc/reference/cexception-class.md) třídy.  
+ Pokud hodnota *nStyle* parametr není platný, tato metoda vyhodnotí v režimu ladění a vyvolá [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) v režimu vydání. V případě jiných chyby za běhu, tato metoda vyhodnotí v režimu ladění a vyvolá výjimku odvozené z [CException](../../mfc/reference/cexception-class.md) třídy.  
   
  Tato metoda má vliv na stav nabídky v aplikacích, které jsou napsané pro [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] a novější.  
   
@@ -1021,10 +1021,10 @@ void SetMessageText(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Odkazuje na řetězec, který má být umístěn na stavovém řádku.  
   
- `nID`  
+ *nID*  
  Řetězec ID prostředku řetězce, který má být umístěn do stavového řádku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1038,7 +1038,7 @@ void SetProgressBarPosition(int nProgressPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nProgressPos`  
+ *nProgressPos*  
  Určuje pozici nastavit. Musí být v rozsahu, která nastavuje `SetProgressBarRange`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1053,10 +1053,10 @@ void SetProgressBarRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRangeMin`  
+ *nRangeMin*  
  Minimální hodnota.  
   
- `nRangeMax`  
+ *nRangeMax*  
  Maximální hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1069,7 +1069,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `tbpFlags`  
+ *tbpFlags*  
  Příznaky, které řídí aktuální stav tlačítko průběh. Zadejte jenom jednu z těchto příznaků vzhledem k tomu, že všechny stavy se vzájemně vylučují: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1089,14 +1089,14 @@ BOOL SetTaskbarOverlayIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
- Určuje ID prostředku ikonu chcete použít jako překrytí. Popis pro `hIcon` podrobnosti.  
+ *nIDResource*  
+ Určuje ID prostředku ikonu chcete použít jako překrytí. Popis pro *hIcon* podrobnosti.  
   
- `lpcszDescr`  
+ *lpcszDescr*  
  Ukazatel na řetězec, který obsahuje verzi informacím vyjádřeným pomocí překrytí za účelem usnadnění přístupu alternativní text.  
   
- `hIcon`  
- Popisovač ikonu chcete použít jako překrytí. To by měl být malé ikony, měření velikosti 16 x 16 pixelů při 96 bodů na palec (dpi). Pokud ikonu překrytí byl již použit pro tlačítko panelu, že existující překrytí nahrazuje. Tato hodnota může být `NULL`. Jak `NULL` zpracována hodnota závisí na tom, jestli představuje tlačítko panelu v jednom okně nebo skupiny systému windows. Zodpovídá volající aplikace k bezplatným `hIcon` Pokud se už nepotřebuje.  
+ *hIcon*  
+ Popisovač ikonu chcete použít jako překrytí. To by měl být malé ikony, měření velikosti 16 x 16 pixelů při 96 bodů na palec (dpi). Pokud ikonu překrytí byl již použit pro tlačítko panelu, že existující překrytí nahrazuje. Tato hodnota může být `NULL`. Jak `NULL` zpracována hodnota závisí na tom, jestli představuje tlačítko panelu v jednom okně nebo skupiny systému windows. Zodpovídá volající aplikace k bezplatným *hIcon* Pokud se už nepotřebuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` v případě úspěšného; `FALSE` verze operačního systému je menší než Windows 7 nebo pokud dojde k chybě při nastavení na ikonu.  
@@ -1111,7 +1111,7 @@ void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTitle`  
+ *lpszTitle*  
  Ukazatel na řetězec znaků obsahující název objektu okna.  
   
 ##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar  
@@ -1125,10 +1125,10 @@ void ShowControlBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Ukazatel na panelu řízení zobrazen nebo skryt.  
   
- `bShow`  
+ *bShow*  
  Pokud **TRUE**, určuje, že na ovládací prvek panelu je zobrazený. Pokud **FALSE**, určuje, že je ovládací prvek panelu jako skryté.  
   
  *bDelay*  
@@ -1142,7 +1142,7 @@ void ShowOwnedWindows(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bShow`  
+ *bShow*  
  Určuje, zda vlastní windows mají být zobrazen nebo skryt.  
   
 ## <a name="see-also"></a>Viz také  

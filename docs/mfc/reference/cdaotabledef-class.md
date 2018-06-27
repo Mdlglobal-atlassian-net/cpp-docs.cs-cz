@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbc191baf452a4e695eee2eed00a8f679285dee1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378305"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952476"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef – třída
 Představuje definici uložené na základní tabulku nebo připojené tabulky.  
@@ -104,7 +104,7 @@ class CDaoTableDef : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Vytvoří **CDaoTableDef** objektu.|  
+|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Vytvoří `CDaoTableDef` objektu.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -161,7 +161,7 @@ class CDaoTableDef : public CObject
   
 -   Získání nebo nastavení ověření podmínky pomocí `GetValidationRule` a `SetValidationRule`a `GetValidationText` a `SetValidationText` členské funkce.  
   
--   Použití **otevřete** členskou funkci pro vytvoření tabulky-, dynamická sada nebo typu snímek `CDaoRecordset` objektu.  
+-   Použití `Open` členskou funkci pro vytvoření tabulky-, dynamická sada nebo typu snímek `CDaoRecordset` objektu.  
   
     > [!NOTE]
     >  Databázové třídy DAO se liší od třídami databází MFC založené na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mít předponu "CDao". Můžete i nadále přístup ke zdrojům dat ODBC s třídy DAO; třídy DAO obecně nabízí vynikající funkcí, protože jsou specifické pro databázový stroj Microsoft Jet.  
@@ -176,7 +176,7 @@ class CDaoTableDef : public CObject
   
     -   Chcete-li vytvořit novou tabulku, volejte objekt tabledef [vytvořit](#create) – členská funkce, zadávání názvu tabulky. Volání [CreateField](#createfield) a [CreateIndex](#createindex) do tabulky přidat pole a indexy.  
   
-    -   Volání [připojení](#append) k uložení tabulky jejich přidáním do databáze tabledefs – kolekce. **Vytvořit** umístí tabledef do otevřeném stavu, takže po volání **vytvořit** Nevolejte **otevřete**.  
+    -   Volání [připojení](#append) k uložení tabulky jejich přidáním do databáze tabledefs – kolekce. `Create` Vloží tabledef do otevřeném stavu, takže po volání `Create` Nevolejte `Open`.  
   
         > [!TIP]
         >  Nejjednodušší způsob, jak vytvořit uložené tabulky je jejich vytvoření a uložit je do databáze pomocí aplikace Microsoft Access. Pak můžete otevřít a použít je v kódu MFC.  
@@ -203,7 +203,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce připojí objekt do databáze tabledefs – kolekce. Při definování není připojením ho můžete použít tabledef jako dočasný objekt, ale pokud chcete ukládat a používat ji, musí volat **připojení**.  
+ Funkce připojí objekt do databáze tabledefs – kolekce. Při definování není připojením ho můžete použít tabledef jako dočasný objekt, ale pokud chcete ukládat a používat ji, musí volat `Append`.  
   
 > [!NOTE]
 >  Pokud se pokusíte připojit nepojmenované tabledef (obsahující hodnotu null nebo prázdný řetězec), MFC vyvolá výjimku.  
@@ -233,7 +233,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDatabase`  
+ *pDatabase*  
  Ukazatel [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -247,9 +247,9 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Obvykle po volání **Zavřít**, pokud byl přidělen s se odstranit objekt tabledef **nové**.  
+ Obvykle po volání `Close`, pokud byl přidělen s se odstranit objekt tabledef **nové**.  
   
- Můžete volat [otevřete](#open) znovu po volání **Zavřít**. Díky tomu můžete znovu použít objekt tabledef.  
+ Můžete volat [otevřete](#open) znovu po volání `Close`. Díky tomu můžete znovu použít objekt tabledef.  
   
  Související informace naleznete v tématu "Zavřít způsob" v nápovědě rozhraní DAO.  
   
@@ -265,10 +265,10 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězec, který obsahuje název tabulky.  
   
- `lAttributes`  
+ *lAttributes*  
  Hodnota odpovídající vlastností objektu rozhraní tabledef tabulky. Bitový operátor OR můžete použít některý z následujících konstant kombinovat:  
   
 |Konstanta|Popis|  
@@ -281,11 +281,11 @@ virtual void Create(
  *lpszSrcTable*  
  Ukazatel na řetězec obsahující název zdrojové tabulky. Ve výchozím nastavení je tato hodnota inicializován jako **NULL**.  
   
- `lpszConnect`  
+ *lpszConnect*  
  Ukazatel na řetězec obsahující výchozí připojovací řetězec. Ve výchozím nastavení je tato hodnota inicializován jako **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
- Jakmile s názvem tabledef pak můžete volat [připojení](#append) uložení tabledef do databáze tabledefs – kolekce. Po volání **připojení**, je tabledef v otevřeném stavu a slouží k vytvoření [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu.  
+ Jakmile s názvem tabledef pak můžete volat [připojení](#append) uložení tabledef do databáze tabledefs – kolekce. Po volání `Append`, je tabledef v otevřeném stavu a slouží k vytvoření [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu.  
   
  Související informace naleznete v tématu "CreateTableDef způsob" v nápovědě rozhraní DAO.  
   
@@ -303,10 +303,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na výraz řetězec určující název tohoto pole.  
   
- `nType`  
+ *Noznámení*  
  Hodnota označující datový typ pole. Toto nastavení může být jedna z těchto hodnot:  
   
 |Typ|Velikost (bajty)|Popis|  
@@ -323,10 +323,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbLongBinary**|0|Dlouhá binární (OLE Object), [CLongBinary](../../mfc/reference/clongbinary-class.md) nebo [CByteArray](../../mfc/reference/cbytearray-class.md)|  
 |**dbMemo**|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
   
- `lSize`  
- Hodnota, která určuje maximální velikost v bajtech pole obsahující text, nebo pevnou velikost pole, které obsahuje textové nebo číselné hodnoty. `lSize` Parametr je ignorován u všech textových polí.  
+ *lSize*  
+ Hodnota, která určuje maximální velikost v bajtech pole obsahující text, nebo pevnou velikost pole, které obsahuje textové nebo číselné hodnoty. *LSize* parametr je ignorován u všech textových polí.  
   
- `lAttributes`  
+ *lAttributes*  
  Hodnota vlastnosti pole a které odpovídající lze spojovat pomocí bitové operace OR.  
   
 |Konstanta|Popis|  
@@ -337,17 +337,17 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbUpdatableField**|Hodnota pole lze změnit.|  
 |**dbDescending**|Toto pole je seřazené v sestupném (Z - A, nebo 100-0) pořadí (platí pouze pro objekt pole v kolekci polí objektu indexu). Pokud vynecháte tento konstanta, pole je seřadit ve vzestupném (A - Z nebo 0 - 100) pořadí (výchozí).|  
   
- `fieldinfo`  
+ *FieldInfo*  
  Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura.  
   
 ### <a name="remarks"></a>Poznámky  
- A **DAOField** (OLE) objekt se vytvoří a připojí ke kolekci polí **DAOTableDef** objektu (OLE). Kromě toho pro zkoumání vlastnosti objektu jeho použití, můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr k vytvoření nové pole v tabledef. První verze součásti `CreateField` je jednodušší použít, ale pokud chcete jemnějšího ovládání, můžete použít druhá verze `CreateField`, které trvá `CDaoFieldInfo` parametr.  
+ A **DAOField** (OLE) objekt se vytvoří a připojí ke kolekci polí `DAOTableDef` objektu (OLE). Kromě toho pro zkoumání vlastnosti objektu jeho použití, můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr k vytvoření nové pole v tabledef. První verze součásti `CreateField` je jednodušší použít, ale pokud chcete jemnějšího ovládání, můžete použít druhá verze `CreateField`, které trvá `CDaoFieldInfo` parametr.  
   
  Pokud používáte verzi `CreateField` , která má `CDaoFieldInfo` parametr, musíte pečlivě nastavit všechny následující členy `CDaoFieldInfo` strukturu:  
   
 - **m_strName**  
   
-- `m_nType`  
+- **m_nType**  
   
 - **m_lSize**  
   
@@ -367,7 +367,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `indexinfo`  
+ *indexinfo*  
  Odkaz na [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -379,9 +379,9 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName** je nutné zadat název.  
   
-- `m_pFieldInfos` Musí odkazovat na pole `CDaoIndexFieldInfo` struktury.  
+- **m_pFieldInfos** musí odkazovat na pole `CDaoIndexFieldInfo` struktury.  
   
-- `m_nFields` Musíte zadat počet polí v poli `CDaoFieldInfo` struktury.  
+- **m_nFields** musíte zadat počet polí v poli `CDaoFieldInfo` struktury.  
   
  Zbývající členy je ignorováno Pokud možnost **FALSE**. Kromě toho **m_lDistinctCount** člen se ignoruje při vytváření indexu.  
   
@@ -394,10 +394,10 @@ void DeleteField(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězcového výrazu, který je název existujícího pole.  
   
- `nIndex`  
+ *nIndex*  
  Index v poli v tabulce počítaný od nuly kolekce polí, pro vyhledávání podle indexu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -414,10 +414,10 @@ void DeleteIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězcového výrazu, který je název existujícího indexu.  
   
- `nIndex`  
+ *nIndex*  
  Index pole objektu indexu v databáze nule tabledefs – kolekce, pro vyhledávání podle indexu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -491,14 +491,14 @@ COleDateTime GetDateCreated();
  Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
   
 ##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
- Volání této funkce určete datum a čas základní tabulky **CDaoTableDef** objekt poslední aktualizace.  
+ Volání této funkce určete datum a čas základní tabulky `CDaoTableDef` objekt poslední aktualizace.  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnotu, která obsahuje datum a čas základní tabulky **CDaoTableDef** objekt poslední aktualizace.  
+ Hodnotu, která obsahuje datum a čas základní tabulky `CDaoTableDef` objekt poslední aktualizace.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastavení data a času jsou odvozené z počítače, na kterém byl vytvořen nebo naposledy aktualizován na základní tabulku. V prostředí s více uživateli uživatelé získávají tato nastavení přímo ze souborového serveru, aby se zabránilo nesrovnalostí; To znamená, musí všichni klienti použít zdroj času "standard", případně z jednoho serveru.  
@@ -537,13 +537,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index objektu pole ve v tabulce počítaný od nuly kolekce polí, pro vyhledávání podle indexu.  
   
- `fieldinfo`  
+ *FieldInfo*  
  Odkaz na [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Možnosti, které určují, které informace o pole, které chcete načíst. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit:  
   
 - `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ, velikost, atributy. Tuto možnost použijte pro nejrychlejší výkonu.  
@@ -552,13 +552,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` Informace o primární a sekundární plus: ověřovací pravidlo, Text pro ověření, výchozí hodnota  
   
- `lpszName`  
+ *lpszName*  
  Ukazatel na název objektu pole pro vyhledávání podle názvu. Název je řetězec s až 64 znaků, který jedinečně názvy pole.  
   
 ### <a name="remarks"></a>Poznámky  
  Jedna verze funkce umožňuje vyhledat pole podle indexu. Na další verzi umožňuje vyhledat pole podle názvu.  
   
- Popis vrácené informace naleznete v tématu [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popisu `dwInfoOptions`. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
+ Popis vrácené informace naleznete v tématu [cdaofieldinfo –](../../mfc/reference/cdaofieldinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
@@ -594,13 +594,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Číselný index objektu indexu ve v tabulce počítaný od nuly kolekce indexů, pro vyhledávání podle svého umístění v kolekci.  
   
- `indexinfo`  
+ *indexinfo*  
  Odkaz na [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Možnosti, které určují, které informace o index pro načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit:  
   
 - `AFX_DAO_PRIMARY_INFO` Pole Název pole informace. Tuto možnost použijte pro nejrychlejší výkonu.  
@@ -609,13 +609,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` Informace o primární a sekundární plus: jednoznačného počtu  
   
- `lpszName`  
+ *lpszName*  
  Ukazatel na název indexu objekt, pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
  Jedna verze funkce umožňuje vyhledat index podle svého umístění v kolekci. Na další verzi umožňuje vyhledat index podle názvu.  
   
- Popis vrácené informace naleznete v tématu [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popisu `dwInfoOptions`. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
+ Popis vrácené informace naleznete v tématu [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
   
  Související informace naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
   
@@ -672,7 +672,7 @@ CString GetValidationRule();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A **CString** objekt, který ověří data v poli, protože je změnit nebo přidat do tabulky.  
+ A `CString` objekt, který ověří data v poli, protože je změnit nebo přidat do tabulky.  
   
 ### <a name="remarks"></a>Poznámky  
  Pravidla ověřování se používají ve spojení s operace aktualizace. Pokud tabledef obsahuje ověřovací pravidlo, aktualizace pro tento objekt tabledef musí vyhovovat kritériím předem určený předtím, než se data změní. Pokud tato změna neodpovídá kritéria, výjimku, která obsahuje hodnotu [GetValidationText](#getvalidationtext) je vyvolána výjimka. Pro `CDaoTableDef` objektu, to `CString` připojené tabulky a čtení/zápisu pro základní tabulka jen pro čtení.  
@@ -725,7 +725,7 @@ virtual void Open(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězec, který určuje název tabulky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -752,7 +752,7 @@ void SetAttributes(long lAttributes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lAttributes`  
+ *lAttributes*  
  Vlastností tabulky reprezentována `CDaoTableDef` objektu a může být součet těchto konstant:  
   
 |Konstanta|Popis|  
@@ -779,7 +779,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszConnect`  
+ *lpszConnect*  
  Ukazatel na řetězec výraz, který určuje další parametry k předání do rozhraní ODBC nebo instalovat ovladače databází.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -816,7 +816,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Pokud heslo je vyžadována, ale není zadaný, ovladač ODBC zobrazí čas při prvním přihlášení dialogové okno přístupu tabulky a znovu Pokud připojení je zavřít a znovu otevřít.  
   
- Můžete nastavit připojovací řetězec pro `CDaoTableDef` tím, že poskytuje zdroj argument pro objekt **vytvořit** – členská funkce. Můžete zkontrolovat nastavení k určení typu, cesta, ID uživatele, heslo nebo zdroje dat ODBC databáze. Další informace naleznete v dokumentaci pro určitý ovladač.  
+ Můžete nastavit připojovací řetězec pro `CDaoTableDef` tím, že poskytuje zdroj argument pro objekt `Create` – členská funkce. Můžete zkontrolovat nastavení k určení typu, cesta, ID uživatele, heslo nebo zdroje dat ODBC databáze. Další informace naleznete v dokumentaci pro určitý ovladač.  
   
  Související informace naleznete v tématu "Připojit vlastnost" v nápovědě rozhraní DAO.  
   
@@ -828,7 +828,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ukazatel na řetězec výraz, který určuje název tabulky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -868,7 +868,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  Ověření je podporováno pouze u databází, které používají databázový stroj Microsoft Jet. Výraz nelze odkazovat na uživatelem definované funkce domény agregační funkce, agregačních funkcí SQL nebo dotazy. Ověřovací pravidlo pro `CDaoTableDef` objektu se může vztahovat k více polí v objektu.  
   
- Například pro pole s názvem `hire_date` a `termination_date`, může být ověřovací pravidlo:  
+ Například pro pole s názvem *hire_date* a *termination_date*, může být ověřovací pravidlo:  
   
  [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
   

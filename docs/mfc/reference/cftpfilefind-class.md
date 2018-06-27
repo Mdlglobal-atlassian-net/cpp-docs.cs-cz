@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370517"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956275"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind – třída
 Usnadňuje hledání souborů Internetu serverů FTP.  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pConnection`  
+ *pConnection*  
  Ukazatel na `CFtpConnection` objektu. Připojení k serveru FTP můžete získat voláním [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  Identifikátor kontext pro `CFtpFileFind` objektu. V tématu **poznámky** Další informace o tomto parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí hodnota pro `dwContext` odesílají MFC k `CFtpFileFind` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CFtpFileFind` objektu. Můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Výchozí hodnota pro *dwContext* odesílají MFC k `CFtpFileFind` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CFtpFileFind` objektu. Můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad v přehledu třídy dříve v tomto tématu.  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrName`  
+ *pstrName*  
  Ukazatel na řetězec, který obsahuje název souboru, který se najít. Pokud **NULL**, provede volání hledání pomocí zástupných znaků (*).  
   
- `dwFlags`  
+ *dwFlags*  
  Příznaky popisující, jak zpracovat tuto relaci. Tyto příznaky mohou být kombinovány s bitový operátor OR (&#124;) a jsou následující:  
   
 -   INTERNET_FLAG_RELOAD získat data z drátového připojení i v případě, že je v místní mezipaměti. Toto je výchozí příznak.  

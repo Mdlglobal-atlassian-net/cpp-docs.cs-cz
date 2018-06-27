@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352220"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957114"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler – třída
 Implementuje zpětné volání, která je volána rozhraním API animace, když se změní stav storyboard nebo se aktualizuje scénáře.  
@@ -89,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Ukazatel na animace řadiči, který bude přijímat události.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
@@ -108,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `storyboard`  
+ *scénáře*  
  Ukazatel na scénáře, jejichž stav se změnil.  
   
- `newStatus`  
+ *newStatus*  
  Určuje stav nové scénáře.  
   
- `previousStatus`  
+ *previousStatus*  
  Určuje předchozí stav scénáře.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -128,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `storyboard`  
+ *scénáře*  
  Ukazatel na scénáře, který byl aktualizován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -142,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Ukazatel na animace řadiči, který bude přijímat události.  
   
 ## <a name="see-also"></a>Viz také  

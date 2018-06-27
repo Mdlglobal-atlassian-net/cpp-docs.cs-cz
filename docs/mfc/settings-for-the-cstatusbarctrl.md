@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380159"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955453"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Nastavení pro třídu CStatusBarCtrl
-Výchozí umístění [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno Stav je podél dolního okraje nadřazeného okna, ale můžete zadat `CCS_TOP` styl, který se následně zobrazí v horní části okna nadřazené klientské oblasti.  
+Výchozí umístění [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno Stav je podél dolního okraje nadřazeného okna, ale můžete určit styl CCS_TOP jej zobrazí v horní části okna nadřazené klientské oblasti.  
   
- Můžete zadat **SBARS_SIZEGRIP** styl zahrnout úchyt na pravém konci `CStatusBarCtrl` okno stav. Úchyt je podobná velikosti ohraničení; je obdélníkovou oblast, která může uživatel klikněte a přetáhněte ke změně velikosti nadřazeného okna.  
+ Můžete určit styl SBARS_SIZEGRIP zahrnout úchyt na pravém konci `CStatusBarCtrl` okno stav. Úchyt je podobná velikosti ohraničení; je obdélníkovou oblast, která může uživatel klikněte a přetáhněte ke změně velikosti nadřazeného okna.  
   
 > [!NOTE]
->  Pokud kombinujete `CCS_TOP` a **SBARS_SIZEGRIP** styly, výsledná úchyt pro změnu velikosti nebude funkční, i když systém nevykresluje se v okně Stav.  
+>  Pokud kombinujete styly CCS_TOP a SBARS_SIZEGRIP, výsledná úchyt není funkční, i když systém nevykresluje se v okně Stav.  
   
  Okno postup pro okno Stav automaticky nastaví počáteční velikost a umístění okna ovládacího prvku. Šířka je stejný jako u nadřazeného okna klientské oblasti. Výška je založena na metriky písma, které je aktuálně vybrané do kontextu okna Stav zařízení a na šířku ohraničení okna.  
   
- Postup okno automaticky upraví velikost okna stavu, vždy, když obdrží `WM_SIZE` zprávy. Obvykle, když velikost nadřazené okno změní, odešle nadřazená `WM_SIZE` zprávu, která se stavové okno.  
+ Postup okno automaticky upraví velikost okna stavu, vždy, když obdrží zprávu WM_SIZE. Obvykle když se změní velikost nadřazené okno, nadřazený odešle zprávu WM_SIZE do okna stav.  
   
  Můžete nastavit minimální výšku oblasti výkresu stavové okno voláním [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), určení minimální výška v pixelech. Oblasti výkresu nezahrnuje okna ohraničení.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366259"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951289"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo – struktura
 `CDaoRelationInfo` Struktura obsahuje informace o vztah mezi dvěma tabulkami v pole definované [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Jedinečné názvy objekt relace. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  Názvy cizí tabulky v vztah. Cizí tabulka je tabulka použitá tak, aby obsahovala cizí klíče. Obecně platí používáte cizí tabulce k navázání nebo vynutit referenční integrity. Cizí tabulka je obvykle na straně n vztah jeden mnoho. Příklady cizí tabulky jsou tabulky, které obsahují kódy pro American stavy nebo Kanadští provincie nebo objednávek zákazníků.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Obsahuje informace o typ vztahu. Hodnota této vlastnosti může být jedno z následujících:  
   
 - **dbRelationUnique** je relace 1: 1.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** budou přeneseny odstranění.  
   
- `m_pFieldInfos`  
- Ukazatel na pole [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Toto pole obsahuje jeden objekt pro každé pole v vztah. `m_nFields` – Datový člen poskytuje počet prvků pole.  
+ *m_pFieldInfos*  
+ Ukazatel na pole [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Toto pole obsahuje jeden objekt pro každé pole v vztah. *M_nFields* – datový člen poskytuje počet prvků pole.  
   
- `m_nFields`  
- Počet `CDaoRelationFieldInfo` objekty v `m_pFieldInfos` – datový člen.  
+ *m_nFields*  
+ Počet `CDaoRelationFieldInfo` objekty v *m_pFieldInfos* – datový člen.  
   
 ## <a name="remarks"></a>Poznámky  
  Odkazy na primární a sekundární výše označuje, jak je vrácené informace [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) členské funkce ve třídě `CDaoDatabase`.  

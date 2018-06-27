@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357225"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956304"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 `AFX_GLOBAL_DATA` Struktura obsahuje pole a metody, které se používají ke správě rozhraní nebo přizpůsobit vzhled a chování vaší aplikace.  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- `angle`  
+ *úhel*  
  Po směru hodinových ručiček kolem úhel ve stupních.  
   
- `center`  
+ *Center*  
  Bod o tom, které otočení.  
   
- `matrix`  
+ *matice*  
  Po návratu tato metoda obsahuje nové otočení transformace. Musíte přidělit úložiště pro tento parametr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na okno ovládacího prvku.  
   
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `lpRect`  
+ [v] *lprect –*  
  Ukazatel na obdélníku bounds oblasti k vykreslení. Výchozí hodnota je `NULL`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `hTheme`  
+ [v] *hTheme*  
  Zpracování dat motiv časového období, nebo `NULL`. Rozhraní používá vykreslování textu, pokud není tento parametr zadaný motiv `NULL` a motivy jsou podporovány. Rozhraní, jinak hodnota nepoužívá motiv vykreslování textu.  
   
  Použití [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) metodu pro vytvoření `HTHEME`.  
   
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `iPartId`  
+ [v] *iPartId*  
  Ovládací prvek část, která má vzhled požadovaná textu. Další informace najdete v tématu sloupec v tabulce v části [částí a stavy](http://msdn.microsoft.com/library/windows/desktop/bb773210). Pokud tato hodnota je 0, text se vykresluje v výchozí písmo nebo písmo vybrané do kontextu zařízení.  
   
- [v] `iStateId`  
+ [v] *iStateId*  
  Řízení stavu, který má vzhled požadovaná textu. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [v] `strText`  
+ [v] *strText*  
  Text k vykreslení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Hranice oblasti, ve kterém se nevykreslí zadaný text.  
   
- [v] `dwFlags`  
+ [v] *dwFlags*  
  Bitová kombinace (nebo) příznaky, které určují, jakým způsobem se vykresluje zadaný text.  
   
- Pokud `hTheme` parametr `NULL` nebo pokud nejsou podporovány a povoleno, motivy `nFormat` parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda popisuje platný příznaky. Pokud motivy jsou podporovány, `dwFlags` parametr [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda popisuje platný příznaků.  
+ Pokud *hTheme* parametr je `NULL` nebo pokud nejsou podporovány a povoleno, motivy *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) popisuje platném – metoda Příznaky. Pokud motivy jsou podporovány, *dwFlags* parametr [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda popisuje platný příznaků.  
   
- [v] `nGlowSize`  
+ [v] *nGlowSize*  
  Velikost efekt záře, který je vykreslen na pozadí před kreslení zadaný text. Výchozí hodnota je 0.  
   
- [v] `clrText`  
+ [v] *clrText*  
  Barva, ve kterém se nevykreslí zadaný text. Výchozí hodnota je výchozí barvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud motiv slouží k vykreslení zadaný text; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Motiv definuje vizuální styl aplikace. Kreslení textu, pokud se nepoužívá motiv `hTheme` parametr je `NULL`, nebo, pokud [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda není podporována, nebo, pokud [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540) složení (správce) je zakázaná. .  
+ Motiv definuje vizuální styl aplikace. Vykreslování textu, pokud se nepoužívá motiv *hTheme* parametr je `NULL`, nebo pokud [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda není podporována, nebo pokud [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540) ( Složení Správce oken plochy) je zakázaná.  
   
 ### <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Povolit usnadnění přístupu; `FALSE` zakázat usnadnění přístupu. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `strBuffer`  
+ [v] *strBuffer*  
  Vyrovnávací paměť textu.  
   
- [v] `lpszTag`  
+ [v] *lpszTag*  
  Název z dvojice otvírání a zavírání značky XML.  
   
- [out] `strTag`  
- Po návratu tato metoda `strTag` parametr obsahuje text, který je mezi počáteční a koncovou XML značky, které byly pojmenovány podle `lpszTag` parametr. Všechny prázdné začátku nebo na konci je oříznut od výsledku.  
+ [out] *strTag*  
+ Po návratu tato metoda *strTag* parametr obsahuje text, který je mezi počáteční a koncovou XML značky, které byly pojmenovány podle *lpszTag* parametr. Všechny prázdné začátku nebo na konci je oříznut od výsledku.  
   
- [v] `bIsCharsList`  
- `TRUE` Chcete-li převést symboly pro řídicí znaky v `strTag` parametr do skutečné řídicí znaky; `FALSE` nechcete provádět převod. Výchozí hodnota je `FALSE`. Další informace najdete v části poznámky.  
+ [v] *bIsCharsList*  
+ `TRUE` Chcete-li převést symboly pro řídicí znaky v *strTag* parametr do skutečné řídicí znaky; `FALSE` nechcete provádět převod. Výchozí hodnota je `FALSE`. Další informace najdete v části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Dvojici – značka XML se skládá z s názvem otvírání a zavírání značky, které označují počáteční a koncová spustit textu v zadané vyrovnávací paměti. `strBuffer` Parametr určuje vyrovnávací paměť a `lpszTag` parametr určuje název značky XML.  
+ Dvojici – značka XML se skládá z s názvem otvírání a zavírání značky, které označují počáteční a koncová spustit textu v zadané vyrovnávací paměti. *StrBuffer* parametr určuje vyrovnávací paměť a *lpszTag* parametr určuje název značky XML.  
   
- Použijte symboly v následující tabulce ke kódování sadu řídicí znaky v zadané vyrovnávací paměti. Zadejte `TRUE` pro `bIsCharsList` parametr převést symboly v `strTag` parametr do skutečné řídicí znaky. V následující tabulce používá [_T()](../../c-runtime-library/data-type-mappings.md) makro a zadejte symbol řídicí řetězce znaků.  
+ Použijte symboly v následující tabulce ke kódování sadu řídicí znaky v zadané vyrovnávací paměti. Zadejte `TRUE` pro *bIsCharsList* parametr převést symboly v *strTag* parametr do skutečné řídicí znaky. V následující tabulce používá [_T()](../../c-runtime-library/data-type-mappings.md) makro a zadejte symbol řídicí řetězce znaků.  
   
 |Symbol|Řídicí znak|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `nColor`  
- Hodnota, která určuje element uživatelského rozhraní, jehož barvu je načíst. Seznam platných hodnot najdete v tématu `nIndex` parametr [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) metoda.  
+ [v] *nColor*  
+ Hodnota, která určuje element uživatelského rozhraní, jehož barvu je načíst. Seznam platných hodnot najdete v tématu *nIndex* parametr [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) metoda.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota Barva RGB element zadaného uživatelského rozhraní. Další informace najdete v části poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `nColor` parametr je mimo rozsah, návratovou hodnotu nula. Protože nula je také platnou hodnotu RGB, nelze použít tuto metodu k určení, zda systém barvu, která je podporován v aktuálním operačním systému. Místo toho použijte [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) metoda, která vrátí `NULL` Pokud barva není podporován.  
+ Pokud *nColor* parametr je mimo rozsah, návratovou hodnotu nula. Protože nula je také platnou hodnotu RGB, nelze použít tuto metodu k určení, zda systém barvu, která je podporován v aktuálním operačním systému. Místo toho použijte [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) metoda, která vrátí `NULL` Pokud barva není podporován.  
   
 ### <a name="see-also"></a>Viz také  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [ve out] `info`  
+ [ve out] *informace*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) struktura, která obsahuje škálovatelné metriky, které jsou přidružené k oblasti nonclient nonminimized okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `bHorz`  
+ [v] *bHorz*  
  `TRUE` načtení výšku znaků při spuštění textové vodorovně; `FALSE` načíst výšku znaků při spuštění textu ve svislém směru. Výchozí hodnota je `TRUE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  Model vláken D2D tovární nastavení a prostředky vytvoří.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Hodnotu, která určuje, zda se objekt factory zápisu sdílené nebo izolované  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `lpszClassNamePrefix`  
+ [v] *lpszClassNamePrefix*  
  Název třídy okno k registraci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná; v opačném [výjimka zdrojů](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácená hodnota je seznam oddělený dvojtečkou `lpszClassNamePrefix` řetězec parametrů a hexadecimální textové reprezentace obslužné rutiny pro zpracování aktuální instance aplikace; kurzor aplikace, která je šipka kurzoru, jejichž identifikátor je IDC_ARROW; a štětec pozadí plochy. Další informace o registrace tříd oken MFC najdete v tématu [afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
+ Vrácená hodnota je seznam oddělený dvojtečkou *lpszClassNamePrefix* řetězec parametrů a hexadecimální textové reprezentace obslužné rutiny pro zpracování aktuální instanci aplikace; kurzor aplikace, která je na šipku kurzor, jehož identifikátor je IDC_ARROW; a štětec pozadí plochy. Další informace o registrace tříd oken MFC najdete v tématu [afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Viz také    
  [Afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `hwnd`  
+ [v] *hwnd*  
  Zpracování do okna vrstev.  
   
- [v] `crKey`  
+ [v] *crKey*  
  Průhledná barva klíče, který [Správce oken plochy](http://msdn.microsoft.com/library/windows/desktop/aa969540) používá k vytváření okna vrstev.  
   
- [v] `bAlpha`  
+ [v] *bAlpha*  
  Alfa hodnotu, která se používá k popisu krytí okno vrstev.  
   
- [v] `dwFlags`  
- Bitová kombinace (nebo) příznaky, které určují, které parametry metody používat. Zadejte LWA_COLORKEY používat `crKey` parametr jako průhledná barva. Zadejte LWA_ALPHA používat `bAlpha` parametr k určení krytí okno vrstev.  
+ [v] *dwFlags*  
+ Bitová kombinace (nebo) příznaky, které určují, které parametry metody používat. Zadejte LWA_COLORKEY používat *crKey* parametr jako průhledná barva. Zadejte LWA_ALPHA používat *bAlpha* parametr k určení krytí okno vrstev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud tato metoda bude úspěšná; v opačném `FALSE`.   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [v] `lpLogFont`  
+ [v] *lpLogFont*  
  Ukazatel na strukturu, která obsahuje atributy písma.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  `TRUE` Chcete-li zadat, že text spuštěna vodorovně; `FALSE` chcete zadat text spuštěna svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- `pszPath`  
+ *pszPath*  
  [v] Ukazatel na zobrazovaný název.  
   
- `pbc`  
+ *pbc*  
  Ukazatel na kontext vazby, které řídí operaci analýzy.  
   
- `riid`  
+ *riid*  
  Odkaz na rozhraní ID.  
   
- `ppv`  
- [out] Když tato funkce vrátí, obsahuje ukazatel rozhraní požadovaný v `riid`. Obvykle je `IShellItem` nebo `IShellItem2`.  
+ *ppv*  
+ [out] Když tato funkce vrátí, obsahuje ukazatel rozhraní požadovaný v *riid*. Obvykle je `IShellItem` nebo `IShellItem2`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí S_OK v případě úspěšného; Chyba hodnotu, jinak hodnota.  

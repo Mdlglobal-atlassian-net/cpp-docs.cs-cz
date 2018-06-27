@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306005"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954868"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Návod: Přidání objektu D2D do projektu MFC
 
@@ -48,7 +48,7 @@ Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **v�
 
 1. Na **soubor** nabídky, přejděte na příkaz **nový** a potom zvolte **projektu**.
 
-2. V **nový projekt** dialogové okno, v levém podokně v části **nainstalovaných šablonách**, rozbalte položku **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte `MFCD2DWalkthrough`. Zvolte **OK**.
+2. V **nový projekt** dialogové okno, v levém podokně v části **nainstalovaných šablonách**, rozbalte položku **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
 
 3. V **Průvodce aplikací knihovny MFC**, zvolte **Dokončit** bez jakýchkoli změn nastavení.
 
@@ -132,7 +132,7 @@ Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **v�
 
 3. Na **zprávy** , zvolte **přidat vlastní zprávu**.
 
-4. V **přidat vlastní zprávu** dialogovém **vlastní zpráv systému Windows** zadejte `AFX_WM_DRAW2D`. V **název obslužné rutiny zpráv** zadejte `OnDraw2D`. Vyberte **zaregistrován zpráva** možnost a potom zvolte **OK**. Tato akce přidá obslužné rutiny zpráv pro `AFX_WM_DRAW2D` zprávy do `CMFCD2DWalkthroughView` třídy.
+4. V **přidat vlastní zprávu** dialogovém **vlastní zpráv systému Windows** zadejte *AFX_WM_DRAW2D*. V **název obslužné rutiny zpráv** zadejte *OnDraw2D*. Vyberte **zaregistrován zpráva** možnost a potom zvolte **OK**. Tato akce přidá obslužné rutiny zpráv pro zprávy AFX_WM_DRAW2D `CMFCD2DWalkthroughView` třídy.
 
 5. V **stávající obslužné rutiny** vyberte `OnDraw2D`. Zvolte **upravit kód** zobrazíte `CMFCD2DWalkthroughView::OnDraw2D` metoda. Pomocí tohoto kódu pro `CMFCD2DWalkthroughView::OnDrawD2D` metoda:
 

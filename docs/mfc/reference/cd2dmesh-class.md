@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce3ad5cfa7df335b5633dffbdd221bf59f01bb29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc5db59c16c10026bf411d640c864cf0107691cb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357423"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952232"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh – třída
 Obálka pro ID2D1Mesh.  
@@ -108,7 +108,7 @@ void Attach(ID2D1Mesh* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh  
@@ -121,10 +121,10 @@ CD2DMesh(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DMesh::Create  
@@ -135,7 +135,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ukazatel na cíl vykreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  

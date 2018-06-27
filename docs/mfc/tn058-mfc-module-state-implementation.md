@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9702e57cb893c4018662a9bd1713342ba199d06d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385749"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952837"
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: Implementace stavu modulu MFC
 > [!NOTE]
@@ -47,21 +47,21 @@ ms.locfileid: "33385749"
 ## <a name="module-state-switching"></a>Přepnutí stavu modulu  
  Každé vlákno obsahuje ukazatel na stav modulu "aktuální" nebo "aktivní" (logicky ukazatele je součástí místní stavu MFC na vlákno). Tento ukazatel je změnit, pokud podproces provádění předá hranice modulu, například aplikace, volání do prvek OLE nebo knihovny DLL nebo řízení OLE volání zpět do aplikace.  
   
- Aktuální stav modulu je přepnuta voláním **AfxSetModuleState**. Ve většině případů se nikdy práce přímo s rozhraní API. MFC, v řadě případů, zavolá ho pro vás (v WinMain OLE vstupní body, **AfxWndProc**atd.). To se provádí v všechny součásti, které můžete psát pomocí staticky propojení v speciální **WndProc**a speciální `WinMain` (nebo `DllMain`), zná, které modul stavu by měl být aktuální. Zobrazí se tento kód prohlížením DLLMODUL. CPP nebo APPMODUL. CPP v adresáři MFC\SRC.  
+ Aktuální stav modulu je přepnuta voláním `AfxSetModuleState`. Ve většině případů se nikdy práce přímo s rozhraní API. MFC, v řadě případů, zavolá ho pro vás (v WinMain OLE vstupní body, `AfxWndProc`atd.). To se provádí v všechny součásti, které můžete psát pomocí staticky propojení v speciální `WndProc`a speciální `WinMain` (nebo `DllMain`), zná, které modul stavu by měl být aktuální. Zobrazí se tento kód prohlížením DLLMODUL. CPP nebo APPMODUL. CPP v adresáři MFC\SRC.  
   
- Navíc není obvyklé, že chcete nastavit stav modulu a potom není nastavte ji zpět. Ve většině případů chcete "push" vlastní modul stav jako aktuální a potom po dokončení "pop" původní kontextu zpět. K tomu je potřeba makro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) a speciální třída **AFX_MAINTAIN_STATE**.  
+ Navíc není obvyklé, že chcete nastavit stav modulu a potom není nastavte ji zpět. Ve většině případů chcete "push" vlastní modul stav jako aktuální a potom po dokončení "pop" původní kontextu zpět. K tomu je potřeba makro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) a speciální třída `AFX_MAINTAIN_STATE`.  
   
  `CCmdTarget` má zvláštní funkce pro podporu přepnutí stavu modulu. Konkrétně `CCmdTarget` kořenová třída se používá pro OLE – automatizace a OLE COM – vstupní body. Jako další vstupní bod vystavený v systému, musí tyto vstupní body nastavit stav správný modul. Jak se dané `CCmdTarget` vědět, co stavu "Opravit" modulu by měla být odpověď je "pamatuje" co "aktuální" stav modulu je, když je vytvořený tak, že můžete nastavit aktuální stav modulu, na který "zapamatovaných" názvem hodnotu, pokud je novější. V důsledku toho modul stavu, který daný `CCmdTarget` objekt je přidružený s je stav modulu, který byl aktuální při byl zkonstruován objektu. Trvat jednoduchý příklad načítání serveru INPROC, vytvoření objektu a volání její metody.  
   
-1.  Načtení knihovny DLL technologie OLE pomocí **LoadLibrary**.  
+1.  Načtení knihovny DLL technologie OLE pomocí `LoadLibrary`.  
   
-2. **RawDllMain** jako první. Nastaví stav modulu stavu známé statické modulu pro knihovnu DLL. Z tohoto důvodu **RawDllMain** je staticky propojené na knihovnu DLL.  
+2. `RawDllMain` jako první. Nastaví stav modulu stavu známé statické modulu pro knihovnu DLL. Z tohoto důvodu `RawDllMain` je staticky propojené na knihovnu DLL.  
   
 3.  Konstruktor pro objekt pro vytváření třídy přidružené k naší objektu je volána. `COleObjectFactory` je odvozený od `CCmdTarget` a v důsledku toho pamatuje, ve které modulu stavu, kdy byl vytvořen. To je důležité – při vytváření třídy se zobrazí výzva k vytváření objektů, teď zná co modul stavu, aby aktuální.  
   
 4. `DllGetClassObject` je volána k získání objektu pro vytváření tříd. MFC vyhledá seznam objekt pro vytváření tříd přidružený tento modul a vrátí ji.  
   
-5. **COleObjectFactory::XClassFactory2::CreateInstance** je volána. Před vytvořením objektu a vrátit, tato funkce nastaví stav modulu stavu modulu, které byly aktuální v kroku 3 (ten, který byl aktuální, kdy `COleObjectFactory` byla vytvořena instance). To se provádí uvnitř [method_prologue –](com-interface-entry-points.md).  
+5. `COleObjectFactory::XClassFactory2::CreateInstance` je volána. Před vytvořením objektu a vrátit, tato funkce nastaví stav modulu stavu modulu, které byly aktuální v kroku 3 (ten, který byl aktuální, kdy `COleObjectFactory` byla vytvořena instance). To se provádí uvnitř [method_prologue –](com-interface-entry-points.md).  
   
 6.  Při vytvoření objektu příliš je `CCmdTarget` odvozené a stejným způsobem `COleObjectFactory` zapamatovaných, které stav modulu byl aktivní, takže nemá tento nový objekt. Teď objekt ví, které modul stavu přepnout do vždy, když je volána.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33385749"
   
  Jak vidíte, stav modulu z objektu rozšíří do objektu při jejich vytvoření. Je důležité mít stav modulu správně nastavené. Pokud není nastaven, může objektu knihovny DLL nebo COM s aplikace knihovny MFC, který volá, nebo může nelze najít vlastní prostředky nebo může selhat v jiné způsoby miserable špatně komunikovat.  
   
- Všimněte si, že určité druhy knihoven DLL, konkrétně "MFC – rozšiřující" DLL není přepnutí stavu modulu v jejich **RawDllMain** (ve skutečnosti, obvykle i nemají **RawDllMain**). Je to proto, že jsou určeny k chování "jako v případě" byly ve skutečnosti součástí aplikace, která používá je. Jsou velmi mnohem součástí aplikace, která je spuštěna a je svůj záměr upravit globální stav dané aplikace.  
+ Všimněte si, že určité druhy knihoven DLL, konkrétně "MFC – rozšiřující" DLL není přepnutí stavu modulu v jejich `RawDllMain` (ve skutečnosti, obvykle i nemají `RawDllMain`). Je to proto, že jsou určeny k chování "jako v případě" byly ve skutečnosti součástí aplikace, která používá je. Jsou velmi mnohem součástí aplikace, která je spuštěna a je svůj záměr upravit globální stav dané aplikace.  
   
  Ovládací prvky OLE a další knihovny DLL se příliš neliší. Není chcete změnit stav volání aplikace; aplikace, která je volá nemusí být i aplikace knihovny MFC a proto je možné změnit bez stavu. To je důvod, aby byla vyvinuta přepnutí stavu modulu.  
   
@@ -81,9 +81,9 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  To umožňuje přepnout aktuální stav modulu se stavem vrácená z [afxgetstaticmodulestate –](reference/extension-dll-macros.md#afxgetstaticmodulestate) až do konce aktuálního oboru.  
   
- Problémy s prostředky v knihovnách DLL dojde, pokud `AFX_MODULE_STATE` makro nepoužívá. Ve výchozím nastavení používá MFC popisovač prostředku hlavní aplikace pro načtení šablony prostředků. Tato šablona je ve skutečnosti uložený v knihovně DLL. Hlavní příčinou je, že informace o stavu modulu MFC nebyl byla přepnuta pomocí `AFX_MODULE_STATE` makro. Popisovač prostředku je obnovena ze stavu modulu MFC společnosti. Není přepnutí stavu modulu způsobí, že popisovač nesprávný prostředku, který se má použít.  
+ Afx_module_state – makro nepoužívá bude dojít k problémům s prostředky v knihovnách DLL. Ve výchozím nastavení používá MFC popisovač prostředku hlavní aplikace pro načtení šablony prostředků. Tato šablona je ve skutečnosti uložený v knihovně DLL. Hlavní příčinou je, že informace o stavu modulu MFC nebyl byla přepnuta podle afx_module_state – makro. Popisovač prostředku je obnovena ze stavu modulu MFC společnosti. Není přepnutí stavu modulu způsobí, že popisovač nesprávný prostředku, který se má použít.  
   
- `AFX_MODULE_STATE` nemusí být uvést do každé funkce v knihovně DLL. Například `InitInstance` je možné volat v MFC kód aplikace bez `AFX_MODULE_STATE` protože MFC automaticky posune stav modulu před `InitInstance` a pak přepínače zpátky po `InitInstance` vrátí. Totéž platí pro všechny mapování obslužné rutiny zpráv. Regulární knihovny DLL MFC ve skutečnosti mít speciální hlavní okno procedury, která automaticky přepne stav modulu před směrování jakékoli zprávy.  
+ Afx_module_state – nemusí být uvést do každé funkce v knihovně DLL. Například `InitInstance` lze MFC kód aplikace bez afx_module_state – volat, protože MFC automaticky posune stav modulu před `InitInstance` a pak přepínače zpátky po `InitInstance` vrátí. Totéž platí pro všechny mapování obslužné rutiny zpráv. Regulární knihovny DLL MFC ve skutečnosti mít speciální hlavní okno procedury, která automaticky přepne stav modulu před směrování jakékoli zprávy.  
   
 ## <a name="process-local-data"></a>Proces místní Data  
  Místní data procesu by neměla mít takové velký dopad kdyby byl pro problém s Win32s DLL modelu. V Win32s všechny knihovny DLL sdílet svá globální data, i když načíst více aplikacemi. Toto je příliš neliší od "Skutečná" Win32 DLL datový model, kde každou knihovnu DLL, získá samostatnou kopii jeho datového prostoru v jednotlivých procesů, který připojí na knihovnu DLL. Přidat do složitosti, data přidělené v haldě v knihovně DLL Win32s je ve skutečnosti proces specifický (alespoň pokud vlastnictví přejde). Vezměte v úvahu následující data a kódu:  
@@ -139,7 +139,7 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
   
  MFC implementuje to ve dvou krocích. První je vrstva nad Win32 **Tls\***  rozhraní API (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**atd) který použijte pouze dva indexy TLS podle procesu, bez ohledu na to, kolik knihovny DLL, které máte. Druhý, `CProcessLocal` šablony je zadán pro přístup k těmto datům. Přepíše operátor ->, který je co umožňuje intuitivní syntaxe zobrazeny výše. Všechny objekty, které nejsou zabalené službou `CProcessLocal` musí být odvozen od `CNoTrackObject`. `CNoTrackObject` poskytuje allocator nižší úrovně (**LocalAlloc**/**LocalFree**) a virtuální destruktor tak, aby MFC můžete automaticky destroy místní objekty procesu, při ukončení procesu. Tyto objekty může mít vlastní destruktor, pokud je potřeba další čištění. Výše uvedeném příkladu nevyžaduje, 1, protože výchozí destruktor zrušení vložený vygeneruje kompilátor `CString` objektu.  
   
- Existují další zajímavé výhody tohoto přístupu. Ne jenom jsou všechny `CProcessLocal` objekty zničen automaticky, že nejsou sestavený, dokud není potřeba. `CProcessLocal::operator->` vytvoří instanci přidruženého objektu při prvním volání a dřív. V příkladu nahoře, která znamená, že '`strGlobal`' řetězec nebude zkonstruovat až poprvé **SetGlobalString** nebo **GetGlobalString** je volána. V některých případech to může pomoct snížit čas spuštění knihovny DLL.  
+ Existují další zajímavé výhody tohoto přístupu. Ne jenom jsou všechny `CProcessLocal` objekty zničen automaticky, že nejsou sestavený, dokud není potřeba. `CProcessLocal::operator->` vytvoří instanci přidruženého objektu při prvním volání a dřív. V příkladu nahoře, která znamená, že '`strGlobal`' řetězec nebude zkonstruovat až poprvé `SetGlobalString` nebo `GetGlobalString` je volána. V některých případech to může pomoct snížit čas spuštění knihovny DLL.  
   
 ## <a name="thread-local-data"></a>Místní Data přístup z více vláken  
  Podobně jako při zpracování místní data, přístup z více vláken místní data se používají při data musí být místní pro dané vlákno. To znamená potřebujete samostatnou instanci data pro každý podproces, který přistupuje k těmto datům. Kolikrát slouží místo mechanismy rozsáhlé synchronizace. Pokud data nemusí být sdílen více vláken, může být mechanismů nákladné a zbytečné. Předpokládejme, že jsme měli `CString` objektu (podobně jako ukázka výše). Jsme může být přístup z více vláken místní podle její zabalení `CThreadLocal` šablony:  

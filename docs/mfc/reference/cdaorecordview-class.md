@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368947"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952300"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -104,10 +104,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony dialogové okno.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje počet ID prostředku šablony dialogové okno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -116,10 +116,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  Odvozené třídy musí zadat svůj vlastní konstruktor. V konstruktoru odvozené třídy, volat konstruktor `CDaoRecordView::CDaoRecordView` s názvem prostředků nebo ID jako argument.  
   
- **CDaoRecordView::OnInitialUpdate** volání `CWnd::UpdateData`, který volá `CWnd::DoDataExchange`. Počáteční volání `DoDataExchange` připojí `CDaoRecordView` (nepřímo) na ovládací prvky `CDaoRecordset` pole datových členů vytvořené ClassWizard. Tyto datové členy nelze použít až po zavolání metody základní třídy **CFormView::OnInitialUpdate** – členská funkce.  
+ `CDaoRecordView::OnInitialUpdate` volání `CWnd::UpdateData`, který volá `CWnd::DoDataExchange`. Počáteční volání `DoDataExchange` připojí `CDaoRecordView` (nepřímo) na ovládací prvky `CDaoRecordset` pole datových členů vytvořené ClassWizard. Tyto datové členy nelze použít až po zavolání metody základní třídy `CFormView::OnInitialUpdate` – členská funkce.  
   
 > [!NOTE]
->  Pokud používáte ClassWizard, Průvodce definuje `enum` hodnotu `CDaoRecordView::IDD` v deklaraci třídy a používá ho inicializace členů seznamu konstruktoru.  
+>  Pokud používáte ClassWizard, Průvodce definuje **výčtu** hodnotu `CDaoRecordView::IDD` v deklaraci třídy a používá ho inicializace členů seznamu konstruktoru.  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -165,7 +165,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
  Ukazatel na `CDaoRecordset`-odvozené objektu, pokud objekt byl úspěšně vytvořený; jinak hodnota **NULL** ukazatel.  
   
 ### <a name="remarks"></a>Poznámky  
- Člen funkci Vytvořit nebo získat objekt sady záznamů a vrátíte se k němu ukazatel musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací uložené v zobrazení záznamů, pokud existuje sada záznamů ukazatele. Pokud ne, vytvoří objekt sady záznamů typu zadán s ClassWizard a volání jeho **otevřete** člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí ukazatel na objekt.  
+ Člen funkci Vytvořit nebo získat objekt sady záznamů a vrátíte se k němu ukazatel musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací uložené v zobrazení záznamů, pokud existuje sada záznamů ukazatele. Pokud ne, vytvoří objekt sady záznamů typu zadán s ClassWizard a volání jeho `Open` člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí ukazatel na objekt.  
   
  Další informace a příklady naleznete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Jedna z následujících hodnot ID standardních příkazů:  
   
 - `ID_RECORD_FIRST` Přesunout na první záznam v sadě záznamů.  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů stále zobrazuje poslední záznam. Pokud přesunete zpátky po první záznam, zobrazení záznamů stále zobrazuje na první záznam.  
   
 > [!CAUTION]
->  Volání metody `OnMove` vyvolá výjimku, pokud má sada záznamů žádné záznamy. Volání funkce obslužné rutiny aktualizace odpovídající uživatelské rozhraní – **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, nebo  **OnUpdateRecordPrev** – před odpovídající operace přesunutí, aby určit, zda má sadu záznamů žádné záznamy.  
+>  Volání metody `OnMove` vyvolá výjimku, pokud má sada záznamů žádné záznamy. Volání funkce obslužné rutiny aktualizace odpovídající uživatelské rozhraní – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, nebo `OnUpdateRecordPrev` – před odpovídající operace přesunutí, aby určit, zda má sadu záznamů žádné záznamy.  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy CFormView – třída](../../mfc/reference/cformview-class.md)   

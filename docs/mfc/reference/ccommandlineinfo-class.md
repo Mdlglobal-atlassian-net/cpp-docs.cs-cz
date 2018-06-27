@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357012"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952382"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo – třída
 Pomůcek při analýze příkazového řádku při spuštění aplikace.  
@@ -89,15 +89,15 @@ class CCommandLineInfo : public CObject
   
 |Argument příkazového řádku|Příkaz proveden|  
 |----------------------------|----------------------|  
-|*Aplikace*|Nový soubor.|  
+|*aplikace*|Nový soubor.|  
 |*aplikace* filename|Otevření souboru.|  
 |*aplikace* `/p` filename|Tisk souboru na výchozí tiskárnu.|  
 |*aplikace* `/pt` filename port ovladačů tiskárny|Tisk souboru do zadané tiskárny.|  
-|*Aplikace* `/dde`|Spuštění a operátoru await DDE příkaz.|  
-|*Aplikace* `/Automation`|Spuštění jako serveru automatizace OLE.|  
-|*Aplikace* `/Embedding`|Spuštění k úpravě vložené položky OLE.|  
-|*Aplikace* `/Register`<br /><br /> *Aplikace* `/Regserver`|Informuje o aplikace k provádění úloh registrace.|  
-|*Aplikace* `/Unregister`<br /><br /> *Aplikace* `/Unregserver`|Informuje o aplikace k provádění úloh zrušení registrace.|  
+|*aplikace* `/dde`|Spuštění a operátoru await DDE příkaz.|  
+|*aplikace* `/Automation`|Spuštění jako serveru automatizace OLE.|  
+|*aplikace* `/Embedding`|Spuštění k úpravě vložené položky OLE.|  
+|*aplikace* `/Register`<br /><br /> *aplikace* `/Regserver`|Informuje o aplikace k provádění úloh registrace.|  
+|*aplikace* `/Unregister`<br /><br /> *aplikace* `/Unregserver`|Informuje o aplikace k provádění úloh zrušení registrace.|  
   
  Odvození nové třídy z `CCommandLineInfo` pro zpracování ostatní příznaky a hodnoty parametrů. Přepsání [ParseParam](#parseparam) zpracovat nové příznaků.  
   
@@ -270,31 +270,31 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszParam`  
+ *pszParam*  
  Parametr nebo příznak.  
   
  *bFlag*  
- Určuje, zda `pszParam` parametr nebo příznak.  
+ Určuje, zda *pszParam* je parametr nebo příznak.  
   
- `bLast`  
+ *vysokých*  
  Určuje, zda toto je poslední parametr nebo příznak na příkazovém řádku.  
   
 ### <a name="remarks"></a>Poznámky  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) volání `ParseParam` jednou pro každý parametr nebo příznak na příkazovém řádku předání argumentu `pszParam`. Pokud je první znak parametru ' **-**'nebo' **/**", pak se odebere a *bFlag* je nastaven na `TRUE`. Při analýze konečný parametr `bLast` je nastaven na `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) volání `ParseParam` jednou pro každý parametr nebo příznak na příkazovém řádku předání argumentu *pszParam*. Pokud je první znak parametru ' **-**'nebo' **/**", pak se odebere a *bFlag* je nastaven na `TRUE`. Při analýze konečný parametr *vysokých* je nastaven na `TRUE`.  
   
  Výchozí implementace této funkce rozpozná následující příznaky: `/p`, `/pt`, `/dde`, `/Automation`, a `/Embedding`, jak je znázorněno v následující tabulce:  
   
 |Argument příkazového řádku|Příkaz proveden|  
 |----------------------------|----------------------|  
-|*Aplikace*|Nový soubor.|  
+|*aplikace*|Nový soubor.|  
 |*aplikace* filename|Otevření souboru.|  
 |*aplikace* `/p` filename|Tisk souboru na výchozí tiskárnu.|  
 |*aplikace* `/pt` filename port ovladačů tiskárny|Tisk souboru do zadané tiskárny.|  
-|*Aplikace* `/dde`|Spuštění a operátoru await DDE příkaz.|  
-|*Aplikace* `/Automation`|Spuštění jako serveru automatizace OLE.|  
-|*Aplikace* `/Embedding`|Spuštění k úpravě vložené položky OLE.|  
-|*Aplikace* `/Register`<br /><br /> *Aplikace* `/Regserver`|Informuje o aplikace k provádění úloh registrace.|  
-|*Aplikace* `/Unregister`<br /><br /> *Aplikace* `/Unregserver`|Informuje o aplikace k provádění úloh zrušení registrace.|  
+|*aplikace* `/dde`|Spuštění a operátoru await DDE příkaz.|  
+|*aplikace* `/Automation`|Spuštění jako serveru automatizace OLE.|  
+|*aplikace* `/Embedding`|Spuštění k úpravě vložené položky OLE.|  
+|*aplikace* `/Register`<br /><br /> *aplikace* `/Regserver`|Informuje o aplikace k provádění úloh registrace.|  
+|*aplikace* `/Unregister`<br /><br /> *aplikace* `/Unregserver`|Informuje o aplikace k provádění úloh zrušení registrace.|  
   
  Tyto informace jsou uloženy v [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), a [m_nShellCommand](#m_nshellcommand). Příznaky jsou označeny buď předat dál lomítko, **/**"nebo pomlčku" **-**'.  
   

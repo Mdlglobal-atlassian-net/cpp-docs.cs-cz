@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367403"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956457"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer – třída
 Implementuje rozhraní OLE další potřebné ke změně normální `COleDocument` serveru do celého serveru DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, a `IPrint`.  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `ActivateDocObject` volání `IOleDocumentSite`na **ActivateMe** metoda, ale nezobrazuje zobrazení, protože se čeká na konkrétní pokyny o tom, jak nastavit a zobrazit, zadaný ve volání [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` volání `IOleDocumentSite`na `ActivateMe` metoda, ale nezobrazuje zobrazení, protože se čeká na konkrétní pokyny o tom, jak nastavit a zobrazit, zadaný ve volání [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Společně `ActivateDocObject` a `OnActivateView` aktivovat a zobrazit DocObject. Aktivace DocObject se liší od jiných druhů OLE – aktivace na místě. Aktivace DocObject obchází zobrazení ohraničení šrafování na místě a vylepšení objektu (například úchyty), ignoruje objektu rozsah funkcí a nevykresluje posuvníky v rámci obdélník zobrazení a kreslení je mimo obdélníku (jako normální aktivace na místě).  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Ukazatel na dokument lokality klienta, který je klient operačních systémů DocObject serveru.  
   
- `pDocSite`  
+ *pDocSite*  
  Ukazatel `IOleDocumentSite` rozhraní implementované kontejneru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  A `CArchive` objekt, ze kterého k serializaci stav zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  A `CArchive` do stavu zobrazení je serializováno objektu.  
   
 ### <a name="remarks"></a>Poznámky  

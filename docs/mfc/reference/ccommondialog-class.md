@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351186"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950632"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog – třída
 Základní třída pro třídy, které zapouzdřují funkce společná dialogová okna Windows.  
@@ -83,7 +83,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  

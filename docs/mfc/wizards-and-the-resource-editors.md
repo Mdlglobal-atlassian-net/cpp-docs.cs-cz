@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383832"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951137"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Průvodci a editory prostředků
 Visual C++ obsahuje několik průvodců pro použití v MFC – programování, společně s mnoha editory integrované prostředků. Pro programování, ovládací prvky ActiveX [Průvodce ovládacím prvkem ActiveX](../mfc/reference/mfc-activex-control-wizard.md) slouží k účelu, podobně jako u Průvodce aplikací MFC. Při můžete psát aplikace MFC bez většinu těchto nástrojů, nástroje výrazně zjednodušit a urychlit práci.  
@@ -41,7 +41,7 @@ Visual C++ obsahuje několik průvodců pro použití v MFC – programování, 
 > [!NOTE]
 >  Zobrazení tříd také pomáhá přepsání virtuální funkce do tříd MFC. Vyberte třídu a virtuální funkce pro přepsání. Zbytek procesu je podobná zpracování zpráv, jak je popsáno v následujících odstavcích.  
   
- Aplikace běžící v systému Windows jsou [zpráva řízené](../mfc/message-handling-and-mapping.md). Akcemi uživatelů a dalších událostí, ke kterým došlo v programu spuštěný systém Windows k odesílání zpráv do systému windows v programu. Například pokud uživatel klikne na tlačítko myši v okně, systém Windows odešle `WM_LBUTTONDOWN` při stisknutí levým tlačítkem myši a zpráv `WM_LBUTTONUP` zprávy při vydání tlačítko. Systém Windows odešle také **wm_command –** zprávy, když uživatel vybere příkazy z řádku nabídek.  
+ Aplikace běžící v systému Windows jsou [zpráva řízené](../mfc/message-handling-and-mapping.md). Akcemi uživatelů a dalších událostí, ke kterým došlo v programu spuštěný systém Windows k odesílání zpráv do systému windows v programu. Například pokud uživatel klikne na tlačítko myši v okně, systém Windows odešle zprávu WM_LBUTTONDOWN při stisknutí levým tlačítkem myši a zprávu WM_LBUTTONUP po vydání tlačítko. Windows rovněž odesílá wm_command – zprávy, když uživatel vybere příkazy z řádku nabídek.  
   
  V rozhraní MFC framework různé objekty, jako jsou dokumenty, zobrazení, okna s rámečkem, šablony dokumentů a objekt aplikace může "zpracovávat" zprávy. Takového objektu poskytuje "obslužné rutiny funkce" jako jeden z jeho členských funkcí a rozhraní mapuje příchozí zpráva její obslužnou rutinu.  
   

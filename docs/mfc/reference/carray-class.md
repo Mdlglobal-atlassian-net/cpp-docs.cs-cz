@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357180"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953385"
 ---
 # <a name="carray-class"></a>Carray – třída
 Podporuje pole, které jsou podobné C pole, ale může dynamicky snížit a růst podle potřeby.  
@@ -70,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TYPE`  
- Parametr šablony, která určuje typ objektů, které jsou uložené v poli. `TYPE` je parametr, který je vrácen `CArray`.  
+ *TYP*  
+ Parametr šablony, která určuje typ objektů, které jsou uložené v poli. *TYP* je parametr, který je vrácen `CArray`.  
   
- `ARG` *_* `TYPE`  
- Parametr šablony, která určuje typ argumentu, který se používá pro přístup k objektům, které jsou uložené v poli. Často odkaz na `TYPE`. `ARG_TYPE` je parametr, který je předán `CArray`.  
+ *ARG* *_* *TYPU*  
+ Parametr šablony, která určuje typ argumentu, který se používá pro přístup k objektům, které jsou uložené v poli. Často odkaz na *typu*. *ARG_TYPE* je parametr, který je předán `CArray`.  
   
 ## <a name="members"></a>Členové  
   
@@ -147,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr šablony určení typu argumentů odkazy na elementy v toto pole.  
   
- `newElement`  
+ *newElement*  
  Element, který se má přidat do tohoto pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index přidaný prvek.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud [SetSize](#setsize) je použito `nGrowBy` mohou být přiděleny hodnotu větší než 1, pak paměť navíc. Horní mez však bude zvýšit pouze 1.  
+ Pokud [SetSize](#setsize) je použito *nGrowBy* mohou být přiděleny hodnotu větší než 1, pak paměť navíc. Horní mez však bude zvýšit pouze 1.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -179,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>Poznámky  
  Pole musí být stejného typu.  
   
- V případě potřeby **připojení** může přidělit paměť navíc, aby dokázala pojmout elementy k poli.  
+ V případě potřeby `Append` může přidělit paměť navíc, aby dokázala pojmout elementy k poli.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -211,7 +211,7 @@ void Copy(const CArray& src);
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce člena přepsat prvky jednoho pole s prvky jiné pole.  
   
- **Kopírování** není uvolnit paměť, nicméně v případě potřeby **kopie** může přidělit paměť navíc, aby dokázala pojmout elementů zkopírovaných do pole.  
+ **Kopírování** není uvolnit paměť, nicméně v případě potřeby `Copy` může přidělit paměť navíc, aby dokázala pojmout elementů zkopírovaných do pole.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -225,7 +225,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -262,7 +262,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TYP*  
  Určení typu prvků pole parametr šablony.  
   
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -336,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Poznámky  
  Protože indexy pole jsou od nuly, tato funkce vrátí hodnotu 1 menší než `GetSize`.  
   
- Podmínka **(GetUpperBound)** = -1 označuje, že pole neobsahuje žádné elementy.  
+ Podmínka `GetUpperBound( )` = -1 označuje, že pole neobsahuje žádné elementy.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CArray::GetAt](#getat).  
@@ -356,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který může být větší než hodnoty vrácené `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr šablony určující typ elementů v toto pole.  
   
- `newElement`  
+ *newElement*  
  Element umístit do tohoto pole.  
   
- `nCount`  
+ *nCount*  
  Počet, který tento element musí být vložen (výchozí hodnota je 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Celé číslo index, který může být větší než hodnoty vrácené [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
+ *pNewArray*  
  Další pole, které obsahuje prvky, který se má přidat do tohoto pole.  
   
 ### <a name="remarks"></a>Poznámky  
  V procesu posune (podle zvyšování index) existující element v indexu a posune až všechny elementy nad ním.  
   
- Druhá verze vloží všechny elementy z jiné `CArray` kolekce, začínající `nStartIndex` pozici.  
+ Druhá verze vloží všechny elementy z jiné `CArray` kolekce, začínající *nStartIndex* pozici.  
   
  `SetAt` Funkce, naproti tomu nahrazuje jeden element zadané pole a není posunutí žádné elementy.  
   
@@ -406,7 +406,7 @@ const TYPE& operator[](int_ptr nindex) const;
  *TYP*  
  Parametr šablony určující typ elementů v toto pole.  
   
- `nIndex`  
+ *nIndex*  
  Index elementu nelze přistupovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -429,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pNewData`  
+ *pNewData*  
  Vyrovnávací paměť nového pole elementů.  
   
- `pData`  
+ *pData*  
  Původní pole elementů.  
   
- `nCount`  
+ *nCount*  
  Počet prvků v poli starý.  
   
 ### <a name="remarks"></a>Poznámky  
- `pNewData` je vždy dostatečně velký pro uložení všech `pData` elementy.  
+ *pNewData* je vždy dostatečně velký pro uložení všech *pData* elementy.  
   
  [Carray –](../../mfc/reference/carray-class.md) implementace používá tato metoda zkopírovat stará data do vyrovnávací paměť nového, pokud má pole zvětšovat a zmenšovat (když [SetSize](#setsize) nebo [FreeExtra](#freeextra) se nazývají). Výchozí implementace právě zkopíruje data.  
   
@@ -468,10 +468,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  Počet elementů k odebrání.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -490,13 +490,13 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr šablony určení typu používá pro odkazování na elementy pole argumentů.  
   
- `newElement`  
+ *newElement*  
  Nová hodnota elementu ukládaly na zadané pozici.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -515,13 +515,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr šablony určující typ elementů v poli.  
   
- `newElement`  
+ *newElement*  
  Element, který se má přidat do tohoto pole. A **NULL** je povolena hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -540,10 +540,10 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewSize`  
+ *nNewSize*  
  Novou velikost pole (počet elementů). Musí být větší než nebo rovna 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Minimální počet element sloty přidělit, pokud je nutné zvýšit velikost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -551,7 +551,7 @@ void SetSize(
   
  Pomocí této funkce můžete nastavit velikost pole, než začnete používat pole. Pokud nepoužijete `SetSize`, přidávání elementů do pole způsobí, že se často znovu přidělit a zkopírovat. Časté opakované přidělení a kopírování jsou neefektivní a může fragmentovat paměti.  
   
- `nGrowBy` Parametr ovlivňuje přidělení interní paměť, když se pole zvětšuje. Jeho použití nikdy ovlivňuje velikost pole, podle [getsize –](#getsize) a [GetUpperBound](#getupperbound). Pokud je použita výchozí hodnota, MFC přidělí paměť způsobem, počítáno tak, že vyhnout fragmentace paměti a optimalizaci efektivity pro většině případů.  
+ *NGrowBy* parametr ovlivňuje přidělení interní paměť, když se pole zvětšuje. Jeho použití nikdy ovlivňuje velikost pole, podle [getsize –](#getsize) a [GetUpperBound](#getupperbound). Pokud je použita výchozí hodnota, MFC přidělí paměť způsobem, počítáno tak, že vyhnout fragmentace paměti a optimalizaci efektivity pro většině případů.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [GetData](#getdata).  

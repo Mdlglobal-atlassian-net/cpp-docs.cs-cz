@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 176ad940e95fbbf18e4ea86800111b483ee32135
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382473"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953593"
 ---
 # <a name="simple-data-type-classes"></a>Třídy jednoduchého datového typu
-Následující třídy zapouzdření kreslení souřadnice, znakové řetězce a času a informace o datu, což pohodlný pomocí syntaxe jazyka C++. Tyto objekty se často používají jako parametry pro členské funkce tříd Windows v knihovně tříd. Protože `CPoint`, `CSize`, a `CRect` odpovídají **bodu**, **velikost**, a `RECT` struktury v uvedeném pořadí, ve Windows SDK, můžete použít tyto objekty C++ třídy, kde můžete použít tyto struktury jazyka C. Třídy poskytují užitečné rozhraní prostřednictvím svých členských funkcí. `CStringT` poskytuje velmi flexibilní dynamické znakových řetězců. `CTime`, `COleDateTime`, `CTimeSpan`, a **COleTimeSpan** představují hodnoty data a času. Další informace o těchto tříd naleznete v článku [datum a čas](../atl-mfc-shared/date-and-time.md).  
+Následující třídy zapouzdření kreslení souřadnice, znakové řetězce a času a informace o datu, což pohodlný pomocí syntaxe jazyka C++. Tyto objekty se často používají jako parametry pro členské funkce tříd Windows v knihovně tříd. Protože `CPoint`, `CSize`, a `CRect` odpovídají **bodu**, **velikost**, a **Rect –** struktur v uvedeném pořadí, ve Windows SDK vždy, když můžete použít tyto struktury jazyka C, můžete použít objekty tyto třídy jazyka C++. Třídy poskytují užitečné rozhraní prostřednictvím svých členských funkcí. `CStringT` poskytuje velmi flexibilní dynamické znakových řetězců. `CTime`, `COleDateTime`, `CTimeSpan`, a `COleTimeSpan` představují hodnoty data a času. Další informace o těchto tříd naleznete v článku [datum a čas](../atl-mfc-shared/date-and-time.md).  
   
- Třídy, které začínají řetězcem "**COle**" jsou encapsulations datových typů poskytované OLE. Tyto datové typy lze použít v aplikacích Windows bez ohledu na to, jestli se používají jiné funkce OLE.  
+ Třídy, které začínají řetězcem "`COle`" jsou encapsulations datových typů poskytované OLE. Tyto datové typy lze použít v aplikacích Windows bez ohledu na to, jestli se používají jiné funkce OLE.  
   
  [CStringT – třída](../atl-mfc-shared/reference/cstringt-class.md)  
  Obsahuje řetězce znaků.  

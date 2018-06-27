@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355159"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957400"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint – třída
 Implementuje funkce, které může být animovaný jejichž souřadnice bodu.  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pXTransition`  
+ *pXTransition*  
  Ukazatel na přechodu pro souřadnice X.  
   
- `pYTransition`  
+ *pYTransition*  
  Ukazatel na přechodu pro Y koordinovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -138,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptDefault`  
+ *ptDefault*  
  Určuje souřadnice bodu výchozí.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `nObjectID`  
+ *nObjectID*  
  Určuje ID objektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Určuje uživatelská data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -161,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *obrázků*  
  Když funkce vrátí hodnotu, obsahuje odkazy na dva objekty CAnimationVariable představující souřadnice X a Y.  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -185,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptValue`  
+ *ptValue*  
  Výstup. Po návratu tato metoda obsahuje aktuální hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -255,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptSrc`  
+ *ptSrc*  
  Odkazuje na CPoint nebo bodu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -269,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptDefault`  
+ *ptDefault*  
  Určuje hodnotu, výchozí bod.  
   
 ### <a name="remarks"></a>Poznámky  

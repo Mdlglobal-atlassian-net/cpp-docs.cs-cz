@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1dada4601b7e20dd4e05af861d48099ce2391c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385226"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950977"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvořit aplikaci, která má ve výchozím nastavení pásu karet. Na pásu karet můžete rozbalit přidáním **vlastní** kategorie pásu karet, který má **oblíbených položek** pásu karet panelech a pak přidáte některé často používané příkazy do panelu.  
@@ -32,7 +32,7 @@ Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvo�
   
 1.  Použití **Průvodce aplikací knihovny MFC** k vytvoření aplikace knihovny MFC, který má pásu karet. Spuštění průvodce, na **soubor** nabídce přejděte na **nový**a potom klikněte na **projektu**.  
   
-2.  V **nový projekt** dialogové okno, rozbalte seznam **Visual C++** pod uzlem **nainstalovaných šablonách**, vyberte **MFC**a potom vyberte  **Aplikace MFC**. Zadejte název projektu, například `MFCRibbonApp`a potom klikněte na **OK**.  
+2.  V **nový projekt** dialogové okno, rozbalte seznam **Visual C++** pod uzlem **nainstalovaných šablonách**, vyberte **MFC**a potom vyberte  **Aplikace MFC**. Zadejte název projektu, například *MFCRibbonApp*a potom klikněte na **OK**.  
   
 3.  Na první stránce **Průvodce aplikací knihovny MFC**, klikněte na tlačítko **Další**.  
   
@@ -40,7 +40,7 @@ Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvo�
   
 5.  Na **složené podporu dokumentu** stránky, ujistěte se, že **žádné** je vybrána a potom klikněte na **Další**.  
   
-6.  Na **vlastnosti šablony dokumentu** stránky v **příponu souboru** zadejte příponu názvu souboru pro dokumenty, které vytvoří tuto aplikaci, například `mfcrbnapp`. Klikněte na tlačítko **Další**.  
+6.  Na **vlastnosti šablony dokumentu** stránky v **příponu souboru** zadejte příponu názvu souboru pro dokumenty, které vytvoří tuto aplikaci, například *mfcrbnapp*. Klikněte na tlačítko **Další**.  
   
 7.  Na **podpory databáze** stránky, ujistěte se, že **žádné** je vybrána a potom klikněte na **Další**.  
   
@@ -62,14 +62,14 @@ Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvo�
   
      Kategorie, která má popisek **kategorie 1** je vytvořena. Kategorie standardně obsahuje jeden panel.  
   
-     Klikněte pravým tlačítkem na **kategorie 1** a pak klikněte na **vlastnosti**. V **vlastnosti** změňte **popisek** k `Custom`.  
+     Klikněte pravým tlačítkem na **kategorie 1** a pak klikněte na **vlastnosti**. V **vlastnosti** změňte **popisek** k *vlastní*.  
   
      **Velkých obrázků** a **malých obrázků** vlastnosti zadejte rastrové obrázky, které jsou použity jako ikony pro prvky pásu karet v této kategorii. Jelikož je tvorba vlastních rastrových obrázků nad rámec tohoto návodu, stačí použít obrázky vytvořené průvodcem. Malé rastrové obrázky mají velikost 16 × 16 pixelů. Pro malé obrázky použijte rastrové obrázky, ke kterým se přistupuje pomocí ID prostředku IDB_FILESMALL. Velké rastrové obrázky mají velikost 32 × 32 pixelů. Pro velké obrázky použijte rastrové obrázky, ke kterým se přistupuje pomocí ID prostředku IDB_FILELARGE.  
   
     > [!NOTE]
     >  Na displejích s vysokým počtem bodů na palec (HDPI) jsou automaticky použity HDPI verze obrázků.  
   
-3.  Dále panel přizpůsobte. Panely se používají k seskupování položek, které spolu logicky souvisejí. Například **Domů** kartě této aplikace **Vyjmout**, **kopie**, a **vložení** příkazy jsou umístěny na  **Schránky** panelu. Chcete-li přizpůsobit panel, klikněte pravým tlačítkem na **Panel1** a pak klikněte na **vlastnosti**. V **vlastnosti** změňte **popisek** k `Favorites`.  
+3.  Dále panel přizpůsobte. Panely se používají k seskupování položek, které spolu logicky souvisejí. Například **Domů** kartě této aplikace **Vyjmout**, **kopie**, a **vložení** příkazy jsou umístěny na  **Schránky** panelu. Chcete-li přizpůsobit panel, klikněte pravým tlačítkem na **Panel1** a pak klikněte na **vlastnosti**. V **vlastnosti** změňte **popisek** k *Oblíbené*.  
   
      Můžete zadat **Index bitové kopie** pro panel. Tato hodnota určuje ikona, která se zobrazí v případě panelu pásu karet je přidán do **nástrojů Rychlý přístup**. Ikona není zobrazena na panelu pásu karet samotném.  
   
@@ -83,9 +83,9 @@ Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvo�
   
      Chcete-li vytvořit **tiskových** tlačítko, přetáhněte nástroj tlačítka na panelu.  
   
-     V **vlastnosti** změňte **ID** vlastnost **id_file_print –**, který by měl již být definován. Změna **popisek** k `Print`. Změna **obrázek indexu** k `4`.  
+     V **vlastnosti** změňte **ID** vlastnost **id_file_print –**, který by měl již být definován. Změna **popisek** k *tisk*. Změna **obrázek indexu** k *4*.  
   
-     Chcete-li vytvořit **rychlý tisk** tlačítko, klikněte ve sloupci Hodnota vlastnosti vedle **položky nabídky**a pak klikněte na tlačítko se třemi tečkami (**...** ). V **položky Editor**, klikněte na bez popisku **přidat** tlačítko vytvořte položku nabídky. V **vlastnosti** změňte **popisek** k `Quick Print`, **ID** k `ID_FILE_PRINT_DIRECT`, a **Image** k `5` . Vlastnost Obrázek určuje ikonu Rychlý tisk v prostředku rastrového obrázku IDB_FILESMALL.  
+     Chcete-li vytvořit **rychlý tisk** tlačítko, klikněte ve sloupci Hodnota vlastnosti vedle **položky nabídky**a pak klikněte na tlačítko se třemi tečkami (**...** ). V **položky Editor**, klikněte na bez popisku **přidat** tlačítko vytvořte položku nabídky. V **vlastnosti** změňte **popisek** k *rychlý tisk*, **ID** k *ID_FILE_PRINT_DIRECT*, a **Image** k *5*. Vlastnost Obrázek určuje ikonu Rychlý tisk v prostředku rastrového obrázku IDB_FILESMALL.  
   
 3.  Chcete-li ověřit, zda byla tlačítka přidána na panel pásu karet, sestavte a spusťte aplikaci. Vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Pokud aplikace sestavení úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky. **Tiskových** tlačítko a se seznamem se pole na **Oblíbené** panelu na **vlastní** se má zobrazit na pásu karet.  
   

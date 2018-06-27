@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356029"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956665"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar – třída
 Základní třída pro třídy ovládacích pruhů [cstatusbar –](../../mfc/reference/cstatusbar-class.md), [ctoolbar –](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), a [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLength`  
- Požadovaný dimenzi ovládacích pruhů vodorovné nebo svislé, v závislosti na `dwMode`.  
+ *nLength*  
+ Požadovaný dimenzi ovládacích pruhů vodorovné nebo svislé, v závislosti na *dwMode*.  
   
- `nMode`  
+ *nMode*  
  Následující předdefinované příznaky se používají k určení výška a Šířka pruhu dynamické řízení. Použít bitové operace OR (&#124;) operátor kombinovat příznaků.  
   
 |Příznaky režimu rozložení|Co znamená|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|Určuje, zda by měl být roztažen tak ovládacích pruhů, aby velikost rámečku. Nastavit, pokud panelu není ukotvení panelu (není k dispozici pro ukotvení). Není nastaven při panelu ukotvený nebo plovoucí (k dispozici pro ukotvení). Pokud nastavíte, `LM_STRETCH` ignoruje `nLength` a vrátí dimenze na základě `LM_HORZ` stavu. `LM_STRETCH` Podobně jako funguje `bStretch` parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
-|`LM_HORZ`|Označuje, že je na panelu orientované vodorovně nebo svisle. Nastavte, pokud je vodorovně orientované na panelu, a pokud je svisle orientované, není nastaven. `LM_HORZ` Podobně jako funguje `bHorz` parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
-|**LM_MRUWIDTH**|Naposledy použité dynamické šířku. Ignoruje `nLength` parametr a používá zapamatovaných naposledy použité šířky.|  
-|`LM_HORZDOCK`|Vodorovný ukotven dimenzí. Ignoruje `nLength` parametr a vrátí velikost dynamické s největší šířku.|  
-|`LM_VERTDOCK`|Svislý ukotven dimenzí. Ignoruje `nLength` parametr a vrátí velikost dynamické s největší výšku.|  
-|`LM_LENGTHY`|Nastavit, pokud `nLength` Určuje výšku (směru osy Y) namísto šířku.|  
-|`LM_COMMIT`|Obnoví **LM_MRUWIDTH** aktuální šířky plovoucí ovládacích pruhů.|  
+|`LM_STRETCH`|Určuje, zda by měl být roztažen tak ovládacích pruhů, aby velikost rámečku. Nastavit, pokud panelu není ukotvení panelu (není k dispozici pro ukotvení). Není nastaven při panelu ukotvený nebo plovoucí (k dispozici pro ukotvení). Pokud nastavíte, `LM_STRETCH` ignoruje *nLength* a vrátí dimenze na základě `LM_HORZ` stavu. `LM_STRETCH` Podobně jako funguje *bStretch* parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
+|`LM_HORZ`|Označuje, že je na panelu orientované vodorovně nebo svisle. Nastavte, pokud je vodorovně orientované na panelu, a pokud je svisle orientované, není nastaven. `LM_HORZ` Podobně jako funguje *bHorz* parametr použitý v [CalcFixedLayout](#calcfixedlayout); najdete v části tohoto členská funkce pro další informace o vztah mezi roztažení a orientace.|  
+|`LM_MRUWIDTH`|Naposledy použité dynamické šířku. Ignoruje *nLength* parametr a používá zapamatovaných naposledy použité šířky.|  
+|`LM_HORZDOCK`|Vodorovný ukotven dimenzí. Ignoruje *nLength* parametr a vrátí velikost dynamické s největší šířku.|  
+|`LM_VERTDOCK`|Svislý ukotven dimenzí. Ignoruje *nLength* parametr a vrátí velikost dynamické s největší výšku.|  
+|`LM_LENGTHY`|Nastavit, pokud *nLength* Určuje výšku (směru osy Y) namísto šířku.|  
+|`LM_COMMIT`|Obnoví `LM_MRUWIDTH` aktuální šířky plovoucí ovládacích pruhů.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ovládacích pruhů velikost, v pixelech, nástroje [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bStretch`  
- Určuje, zda by měl být roztažen tak panelu, aby velikost rámečku. `bStretch` Parametr je nenulové hodnoty v případě, že na panelu není ukotvení panelu (není k dispozici pro ukotvení) a 0, když je ukotveného nebo plovoucí (k dispozici pro ukotvení).  
+ *bStretch*  
+ Určuje, zda by měl být roztažen tak panelu, aby velikost rámečku. *BStretch* parametr je nenulové hodnoty v případě, že na panelu není ukotvení panelu (není k dispozici pro ukotvení) a 0, když je ukotveného nebo plovoucí (k dispozici pro ukotvení).  
   
- `bHorz`  
- Označuje, že je na panelu orientované vodorovně nebo svisle. `bHorz` Parametr je nenulové hodnoty v případě panelu orientován vodorovně a je 0, pokud je to svisle orientovaný.  
+ *bHorz*  
+ Označuje, že je na panelu orientované vodorovně nebo svisle. *BHorz* parametr je nenulové hodnoty v případě panelu orientován vodorovně a je 0, pokud je to svisle orientovaný.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ovládacích pruhů velikost, v pixelech, nástroje `CSize` objektu.  
@@ -185,9 +185,9 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Poznámky  
  Ovládací pruhy například panely nástrojů lze roztáhnout vodorovně nebo svisle pro přizpůsobení tlačítka obsažené v ovládacím panelu.  
   
- Pokud `bStretch` je **TRUE**, funkce stretch dimenze podél orientaci poskytované `bHorz`. Jinými slovy Pokud `bHorz` je **FALSE**, ovládacích pruhů je roztažen tak svisle. Pokud `bStretch` je **FALSE**, dojde k žádné stretch. Následující tabulka uvádí počet možných kombinací a výsledný styly ovládacích pruhů, z `bStretch` a `bHorz`.  
+ Pokud *bStretch* je **TRUE**, funkce stretch dimenze podél orientaci poskytované *bHorz*. Jinými slovy Pokud *bHorz* je **FALSE**, ovládacích pruhů je roztažen tak svisle. Pokud *bStretch* je **FALSE**, dojde k žádné stretch. Následující tabulka uvádí počet možných kombinací a výsledný styly ovládacích pruhů, z *bStretch* a *bHorz*.  
   
-|bStretch|bHorz|Roztažení|orientace|Ukotvení nebo nebyla ukotvení|  
+|bStretch|bHorz|Roztažení|Orientace|Ukotvení nebo nebyla ukotvení|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
 |**HODNOTA TRUE**|**HODNOTA TRUE**|Vodorovné roztažení|Vodorovně|Není ukotvení|  
 |**HODNOTA TRUE**|**FALSE**|Svislé roztažení|Orientovány svisle|Není ukotvení|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Obsahuje aktuální dimenze ovládací prvek panelu; včetně ohraničení.  
   
- `bHorz`  
- Označuje, že je na panelu orientované vodorovně nebo svisle. `bHorz` Parametr je nenulové hodnoty v případě panelu orientován vodorovně a je 0, pokud je to svisle orientovaný.  
+ *bHorz*  
+ Označuje, že je na panelu orientované vodorovně nebo svisle. *BHorz* parametr je nenulové hodnoty v případě panelu orientován vodorovně a je 0, pokud je to svisle orientovaný.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána před vykreslením ovládacích pruhů.  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Odkazuje na kontext zařízení, který má být používané k vykreslování ohraničení a úchytu ovládacího panelu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Odkazuje na kontext zařízení, který má být používané k vykreslování ohraničení panelu ovládacího prvku.  
   
- `rect`  
+ *Rect –*  
  A `CRect` objekt obsahující rozměry ovládacích pruhů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Odkazuje na kontext zařízení, který má být používané k vykreslování úchytu ovládacího panelu.  
   
- `rect`  
+ *Rect –*  
  A `CRect` objekt obsahující rozměry úchytu ovládacího panelu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDockStyle`  
+ *dwDockStyle*  
  Určuje, jestli ovládacích pruhů podporuje ukotvení a postranní jeho nadřazeného okna, do kterého lze ukotvit ovládacích pruhů, pokud podporován. Může být jeden nebo více následujících akcí:  
   
 - `CBRS_ALIGN_TOP` Umožňuje ukotvení v horní části oblasti klienta.  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CRect` objekt, který obsahuje aktuální šířku každé straně objekt ovládacího prvku panel (v pixelech). Například hodnota `left` člena z [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu, je šířka ohraničení vlevo.  
+ A `CRect` objekt, který obsahuje aktuální šířku každé straně objekt ovládacího prvku panel (v pixelech). Například hodnota *levém* člena z [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu, je šířka ohraničení vlevo.  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  Vrátí počet jinou hodnotu než `HWND` položky na `CControlBar` objektu.  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_bAutoDelete` je veřejné proměnné typu **BOOL**.  
+ *m_bAutoDelete* je veřejné proměnné typu **BOOL**.  
   
- Objekt ovládacího prvku panel je obvykle vložený objekt oken s rámečkem. V takovém případě `m_bAutoDelete` je 0, protože objekt embedded ovládací prvek panelu zničen při zničena rámce okna.  
+ Objekt ovládacího prvku panel je obvykle vložený objekt oken s rámečkem. V takovém případě *m_bAutoDelete* je 0, protože objekt embedded ovládací prvek panelu zničen při zničena rámce okna.  
   
  Tuto proměnnou nastavit na nenulovou hodnotu, pokud přidělíte `CControlBar` objekt na haldě a vy nemáte v plánu volání **odstranit**.  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTarget`  
+ *pTarget*  
  Body do hlavního rámce okna aplikace. Ukazatel this se používá pro směrování zpráv aktualizace.  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  Příznak, který indikuje, zda prvek, který nemá žádná obslužná rutina aktualizace by měla být automaticky zobrazen jako zakázáno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Požadované styly pro ovládací prvek panelu. Může být jeden nebo více následujících akcí:  
   
 - `CBRS_ALIGN_TOP` Umožňuje panelu řízení ukotvit do horní části klientské oblasti okně s rámečkem.  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` Způsobí, že text zprávy aktualizovat ve stejnou dobu jako popisy.  
   
-- **CBRS_GRIPPER** způsobí, že úchytu, podobně jako využívá pruhy v **CReBar** objekt, které se mají vykreslovat pro žádné `CControlBar`-odvozené třídy.  
+- `CBRS_GRIPPER` Způsobí, že úchytu, podobně jako využívá pruhy v `CReBar` objekt, které se mají vykreslovat pro žádné `CControlBar`-odvozené třídy.  
   
 ### <a name="remarks"></a>Poznámky  
  Nemá vliv **WS_** nastavení (styl okna).  
@@ -476,7 +476,7 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  Výška ovládacích pruhů dolní ohraničení (v pixelech).  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje aktuální šířku (v pixelech) každou ohraničení panelu objekt ovládacího prvku.  
   
 ### <a name="example"></a>Příklad  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Ukazatel na `CWnd` objektu.  
   
 ### <a name="remarks"></a>Poznámky  

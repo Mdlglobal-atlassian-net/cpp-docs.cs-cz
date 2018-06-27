@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f891366c4d195c012f57a6de9a6b96bc1aafceb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19cb52659c92b470057098edf3b65de4042e3bb9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381943"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950367"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Použití editoru dialogových oken k přidávání ovládacích prvků
-Při vytváření prostředku šablony dialogového okna s [editoru dialogového okna](../windows/dialog-editor.md), přetáhněte ovládací prvky z palety ovládací prvky a umístěte je do dialogových oken. Tento postup přidá specifikace pro daný typ ovládacího prvku prostředku šablony dialogového okna. Při vytvoření objektu dialogového okna a volání jeho **vytvořit** nebo `DoModal` – členská funkce rozhraní framework vytvoří ovládacího prvku Windows a umístí jej v dialogovém okně na obrazovce.  
+Při vytváření prostředku šablony dialogového okna s [editoru dialogového okna](../windows/dialog-editor.md), přetáhněte ovládací prvky z palety ovládací prvky a umístěte je do dialogových oken. Tento postup přidá specifikace pro daný typ ovládacího prvku prostředku šablony dialogového okna. Při vytvoření objektu dialogového okna a volání jeho `Create` nebo `DoModal` – členská funkce rozhraní framework vytvoří ovládacího prvku Windows a umístí jej v dialogovém okně na obrazovce.  
   
  Místo toho můžete [ručně vytvořit ovládací prvky](../mfc/adding-controls-by-hand.md) podle potřeby. To je další práci.  
   

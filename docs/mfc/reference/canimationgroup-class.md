@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355630"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955732"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup – třída
 Implementuje animace skupiny, která spojuje animace storyboard, animace objektů a přechody k definování animace.  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na objekt storyboard COM.  
   
- `bAddDeep`  
+ *bAddDeep*  
  Určuje, zda tato metoda by měla přidat do scénáře klíčových snímků, které závisí na jiné klíčových snímků.  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na objekt storyboard COM.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  Animuje skupinu.  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda úspěšně. jinak hodnota FALSE.  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentController`  
+ *pParentController*  
  Ukazatel na animace řadiče, které vytvoří skupinu.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pVariable`  
+ *pVariable*  
  Ukazatel na proměnnou animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimer`  
+ *pTimer*  
  Ukazatel na časovače animace.  
   
- `time`  
+ *čas*  
  Určuje čas při plánování animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Určuje, jak se zničit přechody.  
   
 ### <a name="remarks"></a>Poznámky  

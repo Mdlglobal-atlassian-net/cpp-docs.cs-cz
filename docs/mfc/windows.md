@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384462"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950471"
 ---
 # <a name="windows"></a>Windows
 Tato řada článků popisuje objekty oken v rozhraní MFC framework. Všechny systémy windows MFC odvozena od třídy [CWnd](../mfc/reference/cwnd-class.md), včetně okna s rámečkem, zobrazení, dialogových oken a ovládacích prvků.  
   
- První skupina článků popisuje [objekty oken](../mfc/window-objects.md) obecně. Odkazovat na tuto skupinu pro obecné informace o C++ objekty oken, jak zapouzdřují popisovačem HWND a jak je používat při vytváření vlastní windows, jako je například podřízená okna.  
+ První skupina článků popisuje [objekty oken](../mfc/window-objects.md) obecně. Odkazovat na tuto skupinu pro obecné informace o objekty oken C++, jak zapouzdřují `HWND`, a jak je používat při vytváření vlastní windows, jako je například podřízená okna.  
   
  Druhá skupina článků popisuje [okna s rámečkem](../mfc/frame-windows.md)– windows, které ukládají kolem obsahu – konkrétně. Odkazovat na tuto skupinu pro informace o správě rozhraní MFC framework okna s rámečkem a obsah, který se rámce, včetně ovládací pruhy a zobrazení.  
   

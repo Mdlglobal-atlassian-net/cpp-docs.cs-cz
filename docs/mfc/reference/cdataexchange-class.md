@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368934"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953344"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange – třída
 Podporuje výměna dialogových dat (DDX) a používá třídy Microsoft Foundation rutiny ověření (DDV) dat dialogového okna.  
@@ -75,7 +75,7 @@ class CDataExchange
   
  Tuto třídu použít, pokud píšete rutiny výměny dat pro vlastní datové typy nebo ovládací prvky, nebo pokud píšete vlastní rutiny ověřování dat. Další informace o psaní vlastní rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV najdete v tématu [výměna dialogových dat a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [dialogová okna](../../mfc/dialog-boxes.md).  
   
- A `CDataExchange` objekt poskytuje informace o kontextu, které jsou potřebné pro DDX a DDV přijmout umístit. Příznak `m_bSaveAndValidate` je **FALSE** při DDX slouží k vyplnění počáteční hodnoty ovládací prvky dialogového okna z datových členů. Příznak `m_bSaveAndValidate` je **TRUE** při DDX používá k nastavení aktuální hodnoty ovládací prvky dialogového okna do datových členů a když DDV slouží k ověření datových hodnot. Pokud DDV ověření selže, bude postup DDV zobrazit okno se zprávou vysvětlením vstupních chyb. Postup DDV pak zavolá **nezdaří** obnovit fokus do ovládacího prvku problematické a způsobí výjimku zastavit proces ověření.  
+ A `CDataExchange` objekt poskytuje informace o kontextu, které jsou potřebné pro DDX a DDV přijmout umístit. Příznak *m_bSaveAndValidate* je **FALSE** při DDX slouží k vyplnění počáteční hodnoty ovládací prvky dialogového okna z datových členů. Příznak *m_bSaveAndValidate* je **TRUE** při DDX používá k nastavení aktuální hodnoty ovládací prvky dialogového okna do datových členů a když DDV slouží k ověření datových hodnot. Pokud DDV ověření selže, bude postup DDV zobrazit okno se zprávou vysvětlením vstupních chyb. Postup DDV pak zavolá `Fail` obnovit fokus do ovládacího prvku problematické a způsobí výjimku zastavit proces ověření.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CDataExchange`  
@@ -96,7 +96,7 @@ CDataExchange(
  *pDlgWnd*  
  Ukazatel do nadřazeného okna, který obsahuje ovládací prvek. To je obvykle [CDialog](../../mfc/reference/cdialog-class.md)-odvozené objektu.  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  Pokud **TRUE**, tento objekt ověří data a pak zapíše data z ovládacích prvků do členů. Pokud **FALSE**, tento objekt se přesun dat z členy do ovládacích prvků.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -113,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- **Selhání** obnoví fokus a výběr do ovládacího prvku, jejichž ověření se nezdařilo (Pokud je ovládací prvek obnovit). **Selhání** poté vyvolá výjimku typu [CUserException](../../mfc/reference/cuserexception-class.md) zastavit proces ověření. Výjimka způsobí, že se zprávou vysvětlením zobrazí chyba. Po ověření DDV nezdaří, uživatel může znovu zadat dat v ovládacím prvku problematické.  
+ `Fail` Obnoví fokus a výběr do ovládacího prvku, jejichž ověření se nezdařilo (Pokud je ovládací prvek obnovit). `Fail` poté vyvolá výjimku typu [CUserException](../../mfc/reference/cuserexception-class.md) zastavit proces ověření. Výjimka způsobí, že se zprávou vysvětlením zobrazí chyba. Po ověření DDV nezdaří, uživatel může znovu zadat dat v ovládacím prvku problematické.  
   
- Můžete volat implementors vlastní rutiny DDV **nezdaří** z jejich rutiny, když se ověřování nezdaří.  
+ Můžete volat implementors vlastní rutiny DDV `Fail` z jejich rutiny, když se ověřování nezdaří.  
   
  Další informace o psaní vlastní rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV najdete v tématu [výměna dialogových dat a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [dialogové okno pole témata](../../mfc/dialog-boxes.md).  
   
@@ -153,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku připravit pro DDX a DDV.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -176,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDC`  
+ *nIDC*  
  ID ovládacích prvků pro úpravy být připraveny DDX a DDV.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -199,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE připravit pro DDX a DDV.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356535"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952095"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue – třída
 Implementuje funkce animace objektu, který má jednu hodnotu.  
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTransition`  
+ *pTransition*  
  Ukazatel na přechod objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -125,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Určuje výchozí hodnotu.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `nObjectID`  
+ *nObjectID*  
  Určuje ID objektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Určuje uživatelská data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -150,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *obrázků*  
  Když funkce vrátí hodnotu, obsahuje ukazatel na CAnimationVariable představující animovaný hodnotu.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -162,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblValue`  
+ *dblValue*  
  Výstup. Když funkce vrátí hodnotu obsahuje aktuální hodnotu proměnné animace.  
   
- `nValue`  
+ *nHodnota*  
  Výstup. Když funkce vrátí hodnotu obsahuje aktuální hodnotu proměnné animace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -229,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblVal`  
+ *dblVal*  
  Určuje hodnotu přiřazení hodnoty animace.  
   
- `nVal`  
+ *nVal*  
  Určuje hodnotu přiřazení hodnoty animace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -246,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Určuje výchozí hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  

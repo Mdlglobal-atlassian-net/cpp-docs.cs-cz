@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385154"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955999"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Pořadí bajtů
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá pořadí bajtů. Další problémy, které jsou popsané v článcích: [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  
@@ -80,7 +80,7 @@ V tomto článku a dvě doprovodné články vysvětlují několik problémů v 
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- V jazyce C++ `struct` je v podstatě totéž jako třída. `Message` Struktura může mít členské funkce, jako `Serialize` členské funkce deklarována výše. `Serialize` – Členská funkce může vypadat například takto:  
+ V jazyce C++ **struktura** je v podstatě totéž jako třída. `Message` Struktura může mít členské funkce, jako `Serialize` členské funkce deklarována výše. `Serialize` – Členská funkce může vypadat například takto:  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   

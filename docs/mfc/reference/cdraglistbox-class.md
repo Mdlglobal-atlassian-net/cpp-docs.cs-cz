@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367208"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955986"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox – třída
 Kromě zajištění funkce Windows pole se seznamem `CDragListBox` třída umožňuje uživateli přesunout položky seznamu pole, jako jsou názvy souborů, v rámci pole se seznamem.  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice přetažen položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice přetažen položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje x a y obrazovky souřadnice kurzor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index počítaný od nuly kurzor.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  Určuje index založený na nule vynechaných řetězce.  
   
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice rozevírací lokality.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí chování zkopíruje položku seznamu a jeho data do nového umístění a poté se odstraní původní položce. Přepsání této funkci můžete přizpůsobit výchozí chování, například povolení kopie položky seznamu pole přetáhnout do jiných umístění v seznamu.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Volání této funkce můžete získat index založený na nule položky seznamu, pole umístěné v `pt`.  
+ Volání této funkce můžete získat index založený na nule položky seznamu, pole umístěné v *pt*.  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt obsahující souřadnice bodu v rámci pole se seznamem.  
   
  *bAutoScroll*  

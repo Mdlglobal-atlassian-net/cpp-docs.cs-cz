@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381190"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952856"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty a atributy ovládacího prvku karta
 Máte značnou ovládat vzhled a chování karet, které tvoří ovládacího prvku karta ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Každé kartě může mít štítek, ikonu, v položce stavu a s ním spojená hodnotu 32-bit definované aplikací. Pro každé kartě můžete zobrazit ikona, popisek nebo obojí.  
   
- Kromě toho každá položka karta může mít tři možné stavy: stisknutí, stavů nebo zvýraznit. Tento stav lze nastavit pouze úpravou existující položky kartě. Pokud chcete upravit existující položky kartě, načíst pomocí volání [GetItem](../mfc/reference/ctabctrl-class.md#getitem), upravit `TCITEM` struktury (konkrétně **dwState** a **dwStateMask** datové členy ) a pak se vraťte upravené `TCITEM` struktura s volání [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Pokud je nutné vymazat stavy položek všechny karty položek v `CTabCtrl` objektu, ujistěte se, volání [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Tato funkce obnoví stav všechny položky kartě nebo všechny položky s výjimkou toho, které jsou aktuálně vybrané.  
+ Kromě toho každá položka karta může mít tři možné stavy: stisknutí, stavů nebo zvýraznit. Tento stav lze nastavit pouze úpravou existující položky kartě. Pokud chcete upravit existující položky kartě, načíst pomocí volání [GetItem](../mfc/reference/ctabctrl-class.md#getitem), upravit `TCITEM` struktury (konkrétně *dwState* a *dwStateMask* datové členy ) a pak se vraťte upravené `TCITEM` struktura s volání [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Pokud je nutné vymazat stavy položek všechny karty položek v `CTabCtrl` objektu, ujistěte se, volání [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Tato funkce obnoví stav všechny položky kartě nebo všechny položky s výjimkou toho, které jsou aktuálně vybrané.  
   
  Následující kód vymaže stav všechny karty položky a poté změní stav třetí položky:  
   

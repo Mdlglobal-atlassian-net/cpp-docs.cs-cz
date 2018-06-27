@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355457"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951413"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty – třída
 Vlastnost asynchronně přenáší a uložené v mezipaměti v paměti soubor ovládacího prvku implementuje OLE.  
@@ -53,7 +53,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="remarks"></a>Poznámky  
  Soubor paměti je uložená v paměti RAM místo na disku a je užitečné pro přenosy prostřednictvím rychlého dočasné.  
   
- Spolu s **CAysncMonikerFile** a `CDataPathProperty`, `CCachedDataPathProperty` poskytuje funkce pro použití asynchronní monikery v ovládací prvky OLE. S `CCachedDataPathProperty` objekty, budete moci asynchronně přenosu dat ze zdroje adresu URL nebo soubor a uložte ho do souboru paměti prostřednictvím `m_Cache` veřejné proměnné. Veškerá data budou uložena v souboru paměti a není nutné přepsat [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) Pokud chcete sledovat pro oznámení a reagovat. Například pokud přenášíte velké. Soubor ve formátu GIF a chcete oznámit vlastního ovládacího prvku, aby byl doručen více dat a ho měli překreslit, přepsání `OnDataAvailable` aby oznámení.  
+ Spolu s `CAysncMonikerFile` a `CDataPathProperty`, `CCachedDataPathProperty` poskytuje funkce pro použití asynchronní monikery v ovládací prvky OLE. S `CCachedDataPathProperty` objekty, budete moci asynchronně přenosu dat ze zdroje adresu URL nebo soubor a uložte ho do souboru paměti prostřednictvím `m_Cache` veřejné proměnné. Veškerá data budou uložena v souboru paměti a není nutné přepsat [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) Pokud chcete sledovat pro oznámení a reagovat. Například pokud přenášíte velké. Soubor ve formátu GIF a chcete oznámit vlastního ovládacího prvku, aby byl doručen více dat a ho měli překreslit, přepsání `OnDataAvailable` aby oznámení.  
   
  Třída `CCachedDataPathProperty` je odvozený od `CDataPathProperty`.  
   
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pControl`  
+ *pControl*  
  Ukazatel na objekt ovládací prvek ActiveX, který má být přidruženy s tímto `CCachedDataPathProperty` objektu.  
   
- `lpszPath`  
+ *lpszPath*  
  Cesta, která může být absolutní nebo relativní, použít k vytvoření asynchronní přezdívka, který odkazuje na skutečnou absolutní umístění vlastnosti. `CCachedDataPathProperty` adresy URL, ne názvy souborů používá. Pokud chcete `CCachedDataPathProperty` objektu pro soubor, předřazení file:// k cestě.  
   
 ### <a name="remarks"></a>Poznámky  
- `COleControl` Objektu na kterou odkazuje `pControl` používá [otevřete](../../mfc/reference/cdatapathproperty-class.md#open) a načíst odvozené třídy. Pokud `pControl` je **NULL**, ovládací prvek použít s **otevřete** musí být nastavená s [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Pokud `lpszPath` je **NULL**, můžete předat v cestě prostřednictvím **otevřete** nebo nastavte její [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
+ `COleControl` Objektu na kterou odkazuje *pControl* používá [otevřete](../../mfc/reference/cdatapathproperty-class.md#open) a načíst odvozené třídy. Pokud *pControl* je **NULL**, ovládací prvek použít s `Open` musí být nastavená s [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Pokud *lpszPath* je **NULL**, můžete předat v cestě prostřednictvím `Open` nebo nastavte její [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Obsahuje název třídy paměti souboru, do kterého se data uloží do mezipaměti.  

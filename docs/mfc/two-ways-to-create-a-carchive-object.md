@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386116"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954790"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dva způsoby vytvoření objektu CArchive
 Existují dva způsoby, jak vytvořit `CArchive` objektu:  
@@ -48,7 +48,7 @@ Existují dva způsoby, jak vytvořit `CArchive` objektu:
   
 3.  Vytvoří `CArchive` objekt, který ukazuje na to `CFile` objektu. Při vytváření `CArchive` objektu rozhraní nastaví režim "úložiště" (zápisu, serializovat), a "zatížení" (čtení, deserializovat).  
   
-4.  Volání `Serialize` funkci definovanou v vaše **CDocument**-odvozené třídy, předání odkaz na `CArchive` objektu.  
+4.  Volání `Serialize` funkci definovanou v vaše `CDocument`-odvozené třídy, předání odkaz na `CArchive` objektu.  
   
  Váš dokument `Serialize` funkce pak zapíše data do `CArchive` objektu, jak je popsáno za chvíli. Po návratu z vaší `Serialize` zničí rozhraní framework funkce, `CArchive` objekt a potom `CFile` objektu.  
   

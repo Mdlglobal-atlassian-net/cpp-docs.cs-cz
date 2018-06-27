@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356489"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955658"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 Základní třída pro architekturu map zpráv Microsoft Foundation Class Library.  
@@ -131,7 +131,7 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce se uživateli zobrazí, že je zaneprázdněný, jako např. kdy volá framework **CDocument** objekt načte nebo samotné uloží do souboru.  
+ Tato funkce se uživateli zobrazí, že je zaneprázdněný, jako např. kdy volá framework `CDocument` objekt načte nebo samotné uloží do souboru.  
   
  Akce `BeginWaitCursor` nejsou vždy efektivní mimo obslužnou rutinu jedné zprávy jako jiné akce, jako například `OnSetCursor` zpracování, by se mohly změnit kurzor.  
   
@@ -159,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iVerb`  
+ *iVerb*  
  Číselný identifikátor operace.  
   
- `lpMsg`  
+ *lpMsg*  
  Ukazatel [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) struktura popisující událost (například poklikejte na soubor), která volá příkaz.  
   
- `hWndParent`  
+ *hWndParent*  
  Popisovač okna dokumentu, který obsahuje objekt.  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura obsahující souřadnice v pixelech, které definují objekt je ohraničujícího rámečku v *hwndParent*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -228,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  Ukazatel na ukazatel na [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud objekt podporuje alespoň jeden příkaz OLE (v takovém případě \* `ppenumOleVerb` odkazuje na **IEnumOLEVERB** enumerátor rozhraní), jinak hodnota FALSE.  
+ Hodnota TRUE, pokud objekt podporuje alespoň jeden příkaz OLE (v takovém případě \* *ppenumOleVerb* odkazuje na `IEnumOLEVERB` enumerátor rozhraní), jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento člen funkce je v podstatě implementací [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
@@ -245,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDispatch`  
+ *lpDispatch*  
  Ukazatel na `IDispatch` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CCmdTarget` objekt přidružený k `lpDispatch`. Funkce vrátí hodnotu **NULL** Pokud `IDispatch` objektu nebyl rozpoznán jako třída Microsoft Foundation `IDispatch` objektu.  
+ Ukazatel `CCmdTarget` objekt přidružený k *lpDispatch*. Funkce vrátí hodnotu **NULL** Pokud `IDispatch` objektu nebyl rozpoznán jako třída Microsoft Foundation `IDispatch` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Výsledkem této funkce je inverzní volání funkce člen `GetIDispatch`.  
@@ -303,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen v podstatě implementuje [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
   
- Odvozené třídy by měly přepsat tuto funkci k vrátí počet rozhraní informace typu poskytovaných (0 nebo 1). Pokud přepsána nejsou, **GetTypeInfoCount** vrátí hodnotu 0. Chcete-li přepsat, použijte [implement_oletypelib –](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, která také implementuje `GetTypeLib` a `GetTypeLibCache`.  
+ Odvozené třídy by měly přepsat tuto funkci k vrátí počet rozhraní informace typu poskytovaných (0 nebo 1). Pokud přepsána nejsou, `GetTypeInfoCount` vrátí hodnotu 0. Chcete-li přepsat, použijte [implement_oletypelib –](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, která také implementuje `GetTypeLib` a `GetTypeLibCache`.  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  Načte popis typu, který odpovídá zadaným identifikátorem GUID.  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lcid`  
+ *lcid*  
  Identifikátor národního prostředí ( `LCID`).  
   
- `guid`  
+ *Identifikátor GUID*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) popisu typu.  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  Ukazatel na ukazatel `ITypeInfo` rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- HRESULT indikující úspěch nebo selhání volání. V případě úspěšného * `ppTypeInfo` odkazuje na typ informace rozhraní.  
+ HRESULT indikující úspěch nebo selhání volání. V případě úspěšného * *ppTypeInfo* odkazuje na typ informace rozhraní.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Získá ukazatel na knihovny typů.  
@@ -338,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lcid`  
+ *lcid*  
  Identifikátor národního prostředí ( `LCID`).  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  Ukazatel na ukazatel `ITypeLib` rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- HRESULT indikující úspěch nebo selhání volání. V případě úspěšného * `ppTypeLib` odkazuje na typ knihovny rozhraní.  
+ HRESULT indikující úspěch nebo selhání volání. V případě úspěšného * *ppTypeLib* odkazuje na typ knihovny rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Odvozené třídy by měly přepsat tuto – členská funkce (Pokud přepsána nejsou, `GetTypeLib` vrátí TYPE_E_CANTLOADLIBRARY). Použití [implement_oletypelib –](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, která také implementuje `GetTypeInfoCount` a `GetTypeLibCache`.  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel **CTypeLibCache** objektu.  
+ Ukazatel na `CTypeLibCache` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Odvozené třídy by měly přepsat tuto – členská funkce (Pokud přepsána nejsou, **GetTypeLibCache** vrátí hodnotu NULL). Použití [implement_oletypelib –](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, která také implementuje `GetTypeInfoCount` a `GetTypeLib`.  
+ Odvozené třídy by měly přepsat tuto – členská funkce (Pokud přepsána nejsou, `GetTypeLibCache` vrátí hodnotu NULL). Použití [implement_oletypelib –](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, která také implementuje `GetTypeInfoCount` a `GetTypeLib`.  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- Tato funkce je volána implementací knihovny MFC z **volání metody IDispatch::Invoke** k určení, zda metoda daného automatizace (identifikovaný `dispid`) může být volána.  
+ Tato funkce je volána implementací knihovny MFC z `IDispatch::Invoke` k určení, zda metoda daného automatizace (identifikovaný *dispid*) může být volána.  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispid`  
+ *dispID*  
  Odesílání ID.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota TRUE, pokud metoda může být vyvolaná, jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `IsInvokeAllowed` vrátí hodnotu TRUE, **Invoke** pokračuje k volání metody; jinak `Invoke` se nezdaří, vrátí E_UNEXPECTED.  
+ Pokud `IsInvokeAllowed` vrátí hodnotu TRUE, `Invoke` pokračuje k volání metody; jinak `Invoke` se nezdaří, vrátí E_UNEXPECTED.  
   
  Odvozené třídy můžete přepsat této funkci vrátíte odpovídající hodnoty (Pokud přepsána nejsou, `IsInvokeAllowed` vrátí hodnotu TRUE). Viz zejména [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
@@ -411,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Obsahuje ID příkazu.  
   
- `nCode`  
- Určuje kód příkaz oznámení. V tématu **poznámky** pro další informace o hodnotách pro `nCode`.  
+ *nCode*  
+ Určuje kód příkaz oznámení. V tématu **poznámky** pro další informace o hodnotách pro *nCode*.  
   
- `pExtra`  
- Použít podle hodnoty `nCode`. V tématu **poznámky** Další informace o `pExtra`.  
+ *pExtra*  
+ Použít podle hodnoty *nCode*. V tématu **poznámky** Další informace o *pExtra*.  
   
- `pHandlerInfo`  
- Není-li **NULL**, `OnCmdMsg` vyplní **pTarget** a **pmf** členy `pHandlerInfo` struktura místo odeslání příkazu. Obvykle se tento parametr by měl být **NULL**.  
+ *pHandlerInfo*  
+ Není-li **NULL**, `OnCmdMsg` vyplní *pTarget* a *pmf* členy *pHandlerInfo* struktura místo odeslání příkaz. Obvykle se tento parametr by měl být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se zpracovává zprávy; jinak 0.  
@@ -433,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  Ve výjimečných případech můžete chtít funkci člen rozšíření rozhraní framework přepsat standardního směrování příkazů. Odkazovat na [Technická poznámka 21](../../mfc/tn021-command-and-message-routing.md) rozšířené informace o architektuře směrování příkazů.  
   
- Pokud přepíšete `OnCmdMsg`, je nutné zadat hodnotu vhodnou pro `nCode`, kód příkaz oznámení a `pExtra`, která závisí na hodnotu `nCode`. Následující tabulka uvádí jejich příslušné hodnoty:  
+ Pokud přepíšete `OnCmdMsg`, je nutné zadat hodnotu vhodnou pro *nCode*, kód příkaz oznámení a *pExtra*, která závisí na hodnotu *nCode* . Následující tabulka uvádí jejich příslušné hodnoty:  
   
-|`nCode` Hodnota|`pExtra` Hodnota|  
+|*nCode* hodnota|*pExtra* hodnota|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  

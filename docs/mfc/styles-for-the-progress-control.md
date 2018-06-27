@@ -17,35 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1044c82c2864d71047e4fe3c7461d03a17d9d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b29d0df8342ce00a2ddb0d46970d9504a06edd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380107"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956678"
 ---
 # <a name="styles-for-the-progress-control"></a>Styly pro ovládací prvek průběh
-Při počátečním vytváření ovládací prvek průběh ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), použijte `dwStyle` parametr k určení požadované okno Styly pro ovládací prvek průběh. V následujícím seznamu jsou styly použít oken. Ovládací prvek ignoruje všechny styl okna než ty, které jsou zde uvedeny. Vždy byste měli vytvořit ovládacího prvku jako podřízeného okna, obvykle z nadřazené pole dialogové okno.  
+Při počátečním vytváření ovládací prvek průběh ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), použijte *dwStyle* parametr k určení požadované okno Styly pro ovládací prvek průběh. V následujícím seznamu jsou styly použít oken. Ovládací prvek ignoruje všechny styl okna než ty, které jsou zde uvedeny. Vždy byste měli vytvořit ovládacího prvku jako podřízeného okna, obvykle z nadřazené pole dialogové okno.  
   
 |Styl okna|Efekt|  
 |------------------|------------|  
-|`WS_BORDER`|Vytvoří ohraničení kolem okna.|  
-|**WS_CHILD –**|Vytvoří podřízeného okna (by se měl pro `CProgressCtrl`).|  
-|**WS_CLIPCHILDREN –**|Vyloučí oblasti obsazena podřízená okna při kreslení v rámci nadřazeného okna. Používá se při vytváření nadřazené okno.|  
-|**WS_CLIPSIBLINGS –**|Podřízená okna klipů relativně k sobě navzájem.|  
-|**WS_DISABLED –**|Vytvoří okno, které je původně zakázána.|  
-|**WS_VISIBLE –**|Vytvoří okno, které je původně viditelná.|  
-|**WS_TABSTOP –**|Určuje, že ovládací prvek mohou získat fokus po stisknutí klávesy TAB pro přesun do ní.|  
+|WS_BORDER –|Vytvoří ohraničení kolem okna.|  
+|WS_CHILD –|Vytvoří podřízeného okna (by se měl pro `CProgressCtrl`).|  
+|WS_CLIPCHILDREN –|Vyloučí oblasti obsazena podřízená okna při kreslení v rámci nadřazeného okna. Používá se při vytváření nadřazené okno.|  
+|WS_CLIPSIBLINGS –|Podřízená okna klipů relativně k sobě navzájem.|  
+|WS_DISABLED –|Vytvoří okno, které je původně zakázána.|  
+|WS_VISIBLE –|Vytvoří okno, které je původně viditelná.|  
+|WS_TABSTOP –|Určuje, že ovládací prvek mohou získat fokus po stisknutí klávesy TAB pro přesun do ní.|  
   
- Kromě toho můžete zadat dvě stylů, které se vztahují pouze na ovládací prvek Průběh `PBS_VERTICAL` a `PBS_SMOOTH`.  
+ Kromě toho můžete zadat dvě stylů, které se vztahují pouze na ovládací prvek průběh pbs_vertical – a pbs_smooth –.  
   
- Použití `PBS_VERTICAL` pro orientaci ovládacího prvku ve svislém směru, než vodorovně. Použití `PBS_SMOOTH` vyplníte ovládací prvek úplně, místo zobrazení malé vymezen čtverce, které postupně vyplnění ovládacího prvku.  
+ Pbs_vertical – použijte pro orientaci ovládacího prvku ve svislém směru, než vodorovně. Funkce pbs_smooth – k řízení úplně, místo zobrazení malé vymezen čtverce, které postupně vyplnění ovládacího prvku.  
   
- Bez `PBS_SMOOTH` styl:  
+ Bez pbs_smooth – styl:  
   
  ![Styl panelu Standardní průběh](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- S `PBS_SMOOTH` a `PBS_VERTICAL` styly:  
+ S pbs_smooth – a pbs_vertical – styly:  
   
  ![Průběhu panelu styl, technologie smooth a svislého](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   

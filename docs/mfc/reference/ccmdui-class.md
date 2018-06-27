@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356685"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954149"
 ---
 # <a name="ccmdui-class"></a>CCmdUI – třída
 Se používá jenom v `ON_UPDATE_COMMAND_UI` obslužné rutiny v `CCmdTarget`-odvozené třídy.  
@@ -79,7 +79,7 @@ class CCmdUI
   
  Když uživatel aplikace vrátí dolů nabídky, každý nabídky položky musí vědět, jestli by se měla zobrazit jako povolené nebo zakázané. Cíl příkazu nabídky implementací poskytuje tyto informace `ON_UPDATE_COMMAND_UI` obslužné rutiny. Okno Vlastnosti pro každý příkaz objektů uživatelského rozhraní v aplikaci lze použijte k vytvoření mapy zpráv položku a funkce prototypu pro každou obslužnou rutinu.  
   
- Když v nabídce načítána, rozhraní vyhledá a volá všechny `ON_UPDATE_COMMAND_UI` volá obslužnou rutinu, každou obslužnou rutinu `CCmdUI` členské funkce, jako **povolit** a **zkontrolujte**a potom rozhraní správně zobrazí každou položku nabídky.  
+ Když v nabídce načítána, rozhraní vyhledá a volá všechny `ON_UPDATE_COMMAND_UI` volá obslužnou rutinu, každou obslužnou rutinu `CCmdUI` členské funkce, jako `Enable` a `Check`, a rozhraní potom správně zobrazí každou položku nabídky.  
   
  Položky nabídky lze nahradit s tlačítkem na ovládací prvek panelu nebo jiného objektu příkaz uživatelského rozhraní beze změny kódu v rámci `ON_UPDATE_COMMAND_UI` obslužné rutiny.  
   
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bOn`  
+ *Pozvánka*  
  **Hodnota TRUE,** povolit položky **FALSE** ji zakázat.  
   
 ### <a name="example"></a>Příklad  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- **NULL** Pokud položka není nabídky. Pokud je automaticky otevírané okno, v nabídce dílčí `m_nID` obsahuje ID první položka v místní nabídce. Další informace najdete v tématu [Technická poznámka 21](../../mfc/tn021-command-and-message-routing.md).  
+ **NULL** Pokud položka není nabídky. Pokud je automaticky otevírané okno, v nabídce dílčí *m_nID* obsahuje ID první položka v místní nabídce. Další informace najdete v tématu [Technická poznámka 21](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Ukazatele (typu `CWnd`) do okna objekt, jako je například nástroj nebo stavový řádek, který odeslána oznámení.  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCheck`  
+ *nZkontrolujte*  
  Určuje stav zkontrolujte nastavení. Pokud 0, zruší tohoto systému zaškrtnutí; Pokud 1, zkontroluje; a pokud 2, nastaví neurčitou.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Ukazatel na textový řetězec.  
   
 ### <a name="example"></a>Příklad  

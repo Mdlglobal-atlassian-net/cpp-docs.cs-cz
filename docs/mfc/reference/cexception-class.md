@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368030"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951706"
 ---
 # <a name="cexception-class"></a>CException – třída
 Základní třída pro všechny výjimky v knihovny Microsoft Foundation Class.  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>Parametry  
  *b_AutoDelete*  
- Zadejte **TRUE** Pokud paměti pro `CException` objekt byl přidělen v haldě. To způsobí, že `CException` objekt, který chcete odstranit, když **odstranit** – členská funkce je volána odstranit výjimku. Zadejte **FALSE** Pokud `CException` objekt je v zásobníku nebo je objekt globální. V takovém případě `CException` objekt nebude odstraněn, když **odstranit** členské funkce je volána.  
+ Zadejte **TRUE** Pokud paměti pro `CException` objekt byl přidělen v haldě. To způsobí, že `CException` objekt, který chcete odstranit, když `Delete` – členská funkce je volána odstranit výjimku. Zadejte **FALSE** Pokud `CException` objekt je v zásobníku nebo je objekt globální. V takovém případě `CException` objekt nebude odstraněn, když `Delete` členské funkce je volána.  
   
 ### <a name="remarks"></a>Poznámky  
  Potřebovali byste normálně nikdy přímo volat tento konstruktor. Funkci, která vyvolá výjimku, by měl vytvořit instanci `CException`-odvozené třídy a volat jeho konstruktoru, nebo pomocí některé z knihovny MFC vyvoláním funkce, jako například [afxthrowfileexception –](exception-processing.md#afxthrowfileexception), má být vyvolána předdefinované typu. Tato dokumentace se poskytuje jen pro úplnost.  
   
 ##  <a name="delete"></a>  CException::Delete  
- Tato funkce zkontroluje, zda **CException** objekt byl vytvořen v haldě, a pokud ano, zavolá **odstranit** operátor v objektu.  
+ Tato funkce zkontroluje, zda `CException` objekt byl vytvořen v haldě, a pokud ano, zavolá **odstranit** operátor v objektu.  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Při odstraňování **CException** objektu, použijte **odstranit** – členská funkce odstranit výjimku. Nepoužívejte **odstranit** operátor přímo, protože `CException` objekt může být objekt globální nebo byly vytvořeny v zásobníku.  
+ Při odstraňování `CException` objektu, použijte `Delete` – členská funkce odstranit výjimku. Nepoužívejte **odstranit** operátor přímo, protože `CException` objekt může být objekt globální nebo byly vytvořeny v zásobníku.  
   
  Můžete určit, zda objekt měla by být odstraněna, když se objekt. Další informace najdete v tématu [CException::CException](#cexception).  
   
- Je třeba volat **odstranit** Pokud používáte C++ **zkuste**- **catch** mechanismus. Pokud používáte makry MFC **zkuste** a **CATCH**, pak tyto makra bude automaticky volání této funkce.  
+ Je třeba volat `Delete` Pokud používáte C++ **zkuste**- **catch** mechanismus. Pokud používáte makry MFC **zkuste** a **CATCH**, pak tyto makra bude automaticky volání této funkce.  
   
 ### <a name="example"></a>Příklad  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nType`  
+ *Noznámení*  
  Určuje styl do pole zpráva. Použít libovolnou kombinaci [styly oken zpráv](styles-used-by-mfc.md#message-box-styles) do pole. Pokud tento parametr nezadáte, výchozí hodnota je **mb_ok –**.  
   
  *nMessageID*  

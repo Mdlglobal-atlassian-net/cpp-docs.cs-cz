@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354132"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954673"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize – třída
 Implementuje funkce velikost objektu může být animovaný jejíž dimenze.  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCXTransition`  
+ *pCXTransition*  
  Ukazatel na přechod pro šířku.  
   
- `pCYTransition`  
+ *pCYTransition*  
  Ukazatel na přechodu pro výšku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -138,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szDefault`  
+ *szDefault*  
  Určuje výchozí velikost.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `nObjectID`  
+ *nObjectID*  
  Určuje ID objektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Určuje uživatelská data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -163,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *obrázků*  
  Když funkce vrátí hodnotu, obsahuje odkazy na dva objekty CAnimationVariable představující šířku a výšku.  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -213,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szValue`  
+ *szValue*  
  Výstup. Po návratu tato metoda obsahuje aktuální hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -257,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szSrc`  
+ *szSrc*  
  Odkazuje na CSize nebo velikost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -271,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szDefault`  
+ *szDefault*  
  Určuje nové výchozí velikost.  
   
 ### <a name="remarks"></a>Poznámky  

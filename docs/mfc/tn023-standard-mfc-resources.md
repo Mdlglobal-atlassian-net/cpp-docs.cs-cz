@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383172"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952034"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Standardní prostředky MFC
 Tato poznámka popisuje standardní prostředky k dispozici s a vyžaduje knihovny MFC.  
@@ -45,7 +45,7 @@ Tato poznámka popisuje standardní prostředky k dispozici s a vyžaduje knihov
   
 -   Indicate.rc: Obsahuje řetězcové prostředky pro ukazatele stavu klíč stavového řádku, jako je například "CAP" pro klávesy Caps Lock.  
   
--   Prompts.rc: Obsahuje řádku nabídky řetězcové prostředky pro každý přednastaveného příkazu, jako je například "Vytvořit nový dokument" pro `ID_FILE_NEW`.  
+-   Prompts.rc: Obsahuje řádku nabídky řetězcové prostředky pro každý přednastaveného příkazu, jako je například "Vytvořit nový dokument" pro id_file_new –.  
   
 -   COMMDLG.rc: Soubor kompatibilní .rc Visual C++, který obsahuje standardní šablony COMMDLG dialogu.  
   
@@ -77,7 +77,7 @@ Tato poznámka popisuje standardní prostředky k dispozici s a vyžaduje knihov
 >  Dejte pozor, abyste přesunout prostředky z Common.rc neúmyslně trvale. Podržíte klávesu CTRL a přetáhněte prostředky, se vytvoří kopie. Pokud není podržte klávesu CTRL a přetažení, přesunou se prostředky. Pokud máte obavy, že může omylem provedené změny do souboru Common.rc, klikněte na tlačítko "Ne", když budete dotázáni, zda chcete uložit změny do Common.rc.  
   
 > [!NOTE]
->  Soubory .rc prostředků mít speciální `TEXTINCLUDE` prostředek v nich, který zabrání v uložení omylem nad soubory standardní .rc.  
+>  Soubory .rc prostředků mít speciální TEXTINCLUDE prostředků v nich, které zabrání ukládání omylem nad soubory standardní .rc.  
   
 ### <a name="customizing-standard-framework-resources"></a>Přizpůsobení prostředky standardní architektury  
  Prostředky standardní architektury jsou obvykle součástí aplikace pomocí #include příkaz do souboru prostředků aplikace. Objekty AppWizard vygeneruje soubor prostředků. Tento soubor obsahuje prostředky odpovídající standardní architektury, v závislosti na tom, které objekty AppWizard možnosti vyberete. Můžete zkontrolovat, přidat nebo odebrat prostředky, ke kterým jsou zahrnuty změnou direktivy kompilaci. Chcete-li to provést, otevřete **prostředků** nabídku a vyberte **nastavit zahrnuje**. Podívejte se na položku upravit "Kompilaci direktivy". Příklad:  

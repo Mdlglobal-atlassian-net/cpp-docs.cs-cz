@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349253"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951179"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE – struktura
 `AFX_EXTENSION_MODULE` Je během inicializace MFC – rozšiřující knihovny DLL používané pro udržení stav rozšíření MFC DLL – modul.  
@@ -43,7 +43,7 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **Hodnota TRUE,** Pokud byl inicializován modulu DLL `AfxInitExtensionModule`.  
   
- `hModule`  
+ *hModule*  
  Určuje popisovač modul knihovny DLL.  
   
  *hResource*  
@@ -60,13 +60,13 @@ struct AFX_EXTENSION_MODULE
   
 -   Volání [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) a zkontrolujte návratovou hodnotu.  
   
--   Vytvoření **CDynLinkLibrary** objektu, pokud bude export knihovny DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekty nebo má svou vlastní vlastní prostředky.  
+-   Vytvoření `CDynLinkLibrary` objektu, pokud bude export knihovny DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekty nebo má svou vlastní vlastní prostředky.  
   
  `AFX_EXTENSION_MODULE` Struktura se používá pro uložení kopie rozšíření MFC DLL modulu stavu, včetně kopie runtime třídy objektů, které byly inicializovány rozšíření MFC DLL jako součást normální statický objekt konstrukce spuštěny před `DllMain` je byl zadán. Příklad:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Modul informace uložené v `AFX_EXTENSION_MODULE` struktura je možné zkopírovat do **CDynLinkLibrary** objektu. Příklad:  
+ Modul informace uložené v `AFX_EXTENSION_MODULE` struktura je možné zkopírovat do `CDynLinkLibrary` objektu. Příklad:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

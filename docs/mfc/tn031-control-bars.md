@@ -24,22 +24,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6744b4c5ea2da1f572ad721f980f719bb9b25af8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385323"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952999"
 ---
 # <a name="tn031-control-bars"></a>TN031: Ovládací pruhy
 > [!NOTE]
 >  Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.  
   
- Tato poznámka popisuje třídy panelu ovládacích prvků v prostředí MFC: Obecné [ccontrolbar –](#_mfcnotes_ccontrolbar), [cstatusbar –](#_mfcnotes_cstatusbar), [ctoolbar –](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)a  **CDockBar**.  
+ Tato poznámka popisuje třídy panelu ovládacích prvků v prostředí MFC: Obecné [ccontrolbar –](#_mfcnotes_ccontrolbar), [cstatusbar –](#_mfcnotes_cstatusbar), [ctoolbar –](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)a `CDockBar`.  
   
 ## <a name="_mfcnotes_ccontrolbar"></a> Ccontrolbar – 
   
- A **ControlBar** je `CWnd`-odvozené třídy, který:  
+ A `ControlBar` je `CWnd`-odvozené třídy, který:  
   
 -   Je zarovnán do pravého horního nebo dolního okně s rámečkem.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "33385323"
   
  Ovládací pruhy podporují další styly:  
   
-- `CBRS_TOP` (Výchozí) připnout na ovládací prvek panelu na začátek.  
+- PIN kód CBRS_TOP (výchozí) na panelu Ovládací prvek na začátek.  
   
-- `CBRS_BOTTOM` Připnete na ovládací prvek panelu do dolní.  
+- PIN kód CBRS_BOTTOM ovládacích pruhů dolů.  
   
-- `CBRS_NOALIGN` Když změní velikost nadřazené není přemístit na ovládací prvek panelu.  
+- Provést CBRS_NOALIGN není přemístit ovládacích pruhů a když nadřazený změní.  
   
  Třídy odvozené od `CControlBar` poskytovat zajímavějšího implementace:  
   
@@ -61,9 +61,9 @@ ms.locfileid: "33385323"
   
 - `CDialogBar` Rámeček panelu nástrojů jako obsahující standardní windows ovládacích prvků (vytvořené z prostředku šablony dialogové okno).  
   
-- **CDockBar** zobecněný ukotvení oblasti pro ostatní `CControlBar` odvozené objekty. Konkrétní členské funkce a proměnné, které jsou k dispozici v této třídě jsou pravděpodobně v budoucích verzích změnit.  
+- `CDockBar` Zobecněný ukotvení oblasti pro ostatní `CControlBar` odvozené objekty. Konkrétní členské funkce a proměnné, které jsou k dispozici v této třídě jsou pravděpodobně v budoucích verzích změnit.  
   
- Všechny ovládací prvek panelu objekty nebo windows bude podřízená okna některé nadřazeného rámce okna. Jsou obvykle přidávána na stejné úrovni jako klientské oblasti rámečku (například klienta MDI nebo zobrazení). ID podřízené okno ovládacích pruhů je důležité. Výchozí rozložení ovládacích pruhů funguje výhradně u ovládací pruhy s identifikátory v rozsahu **AFX_IDW_CONTROLBAR_FIRST** k **AFX_IDW_CONTROLBAR_LAST**. Všimněte si, že i když je rozsah 256 ovládacího panelu ID, první 32 tyto ovládací prvek panelu ID jsou speciální vzhledem k tomu, že jsou přímo nepodporuje architektura náhledu tisku.  
+ Všechny ovládací prvek panelu objekty nebo windows bude podřízená okna některé nadřazeného rámce okna. Jsou obvykle přidávána na stejné úrovni jako klientské oblasti rámečku (například klienta MDI nebo zobrazení). ID podřízené okno ovládacích pruhů je důležité. Výchozí rozložení ovládacích pruhů funguje výhradně u ovládací pruhy s ID v rozsahu AFX_IDW_CONTROLBAR_FIRST k AFX_IDW_CONTROLBAR_LAST. Všimněte si, že i když je rozsah 256 ovládacího panelu ID, první 32 tyto ovládací prvek panelu ID jsou speciální vzhledem k tomu, že jsou přímo nepodporuje architektura náhledu tisku.  
   
  `CControlBar` Třída poskytuje standardní implementace pro:  
   
@@ -73,10 +73,10 @@ ms.locfileid: "33385323"
   
 -   Podpora implementace odvozené třídy.  
   
- Objekty C++ ovládací prvek panelu obvykle budou vloženy jako členy `CFrameWnd` odvozené třídy a kdy se vyčistí nadřazený `HWND` a jsou zničení objektu. Pokud potřebujete přidělit objekt ovládací prvek panelu v haldě, můžete jednoduše nastavit **m_bAutoDestruct** člena **TRUE** aby ovládacích pruhů "**odstranit tento**" při `HWND` zničena.  
+ Objekty C++ ovládací prvek panelu obvykle budou vloženy jako členy `CFrameWnd` odvozené třídy a kdy se vyčistí nadřazený `HWND` a jsou zničení objektu. Pokud potřebujete přidělit objekt ovládací prvek panelu v haldě, můžete jednoduše nastavit *m_bAutoDestruct* člena **TRUE** aby ovládacích pruhů "**odstranit tento**" při `HWND` zničena.  
   
 > [!NOTE]
->  Pokud vytvoříte vlastní `CControlBar`-odvozené třídy, nikoli pomocí jedné z knihovny MFC odvozených tříd, jako například `CStatusBar`, `CToolBar`, nebo `CDialogBar`, budete muset nastavit `m_dwStyle` – datový člen. To lze provést v přepsané **vytvořit**:  
+>  Pokud vytvoříte vlastní `CControlBar`-odvozené třídy, nikoli pomocí jedné z knihovny MFC odvozených tříd, jako například `CStatusBar`, `CToolBar`, nebo `CDialogBar`, budete muset nastavit *m_dwStyle* – datový člen. To lze provést v přepsané `Create`:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
@@ -94,11 +94,11 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  **Algoritmus rozložení ovládacích pruhů**  
   
- Algoritmus rozložení ovládacího prvku panel je velmi jednoduchý. Okně s rámečkem odešle zprávu **WM_SIZEPARENT** na všechny podřízené objekty v rozsahu ovládací prvek panelu. Společně se tato zpráva je předán ukazatel na obdélníku klienta nadřazeného objektu. Tato zpráva je odeslána podřízených objektů v pořadí Z-order. Tyto informace použít podřízených ovládacích pruhů samy stanovují a snížení velikosti nadřazeného klientské oblasti. Konečné obdélníku, který se nechá oblasti normální klienta (méně ovládací pruhy) se používá k umístění okna Hlavní klienta (obvykle klienta, zobrazení nebo rozdělovače okna MDI).  
+ Algoritmus rozložení ovládacího prvku panel je velmi jednoduchý. Okně s rámečkem odešle zprávu WM_SIZEPARENT na všechny podřízené objekty v rozsahu ovládací prvek panelu. Společně se tato zpráva je předán ukazatel na obdélníku klienta nadřazeného objektu. Tato zpráva je odeslána podřízených objektů v pořadí Z-order. Tyto informace použít podřízených ovládacích pruhů samy stanovují a snížení velikosti nadřazeného klientské oblasti. Konečné obdélníku, který se nechá oblasti normální klienta (méně ovládací pruhy) se používá k umístění okna Hlavní klienta (obvykle klienta, zobrazení nebo rozdělovače okna MDI).  
   
  V tématu `CWnd::RepositionBars` a `CFrameWnd::RecalcLayout` další podrobnosti.  
   
- MFC privátní Windows zprávy, včetně **WM_SIZEPARENT**, jsou dokumentovány v článku [Technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
+ MFC privátní Windows zprávy, včetně WM_SIZEPARENT, jsou popsané v [Technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
 ## <a name="_mfcnotes_cstatusbar"></a>  Cstatusbar –  
   
@@ -118,20 +118,20 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 |Položka|Hodnota barvy systému Windows|Výchozí RGB|  
 |----------|-------------------------|-----------------|  
-|Stav pozadí panelu|**COLOR_BTNFACE**|RGB (192, 192 192.)|  
-|Text stavového řádku|**COLOR_BTNTEXT**|RGB (000, 000 000.)|  
-|Stavový řádek levého horního okraje|**COLOR_BTNHIGHLIGHT**|RGB (255, 255 255.)|  
-|Stavový řádek robota/pravého okraje|**COLOR_BTNSHADOW**|RGB (128, 128, 128)|  
+|Stav pozadí panelu|COLOR_BTNFACE|RGB (192, 192 192.)|  
+|Text stavového řádku|COLOR_BTNTEXT|RGB (000, 000 000.)|  
+|Stavový řádek levého horního okraje|COLOR_BTNHIGHLIGHT|RGB (255, 255 255.)|  
+|Stavový řádek robota/pravého okraje|COLOR_BTNSHADOW|RGB (128, 128, 128)|  
   
  **Cstatusbar – podpora CCmdUI**  
   
- Způsob, jakým jsou obvykle aktualizovány indikátory je prostřednictvím `ON_UPDATE_COMMAND_UI` mechanismus. Na dobu nečinnosti, bude volat stavového řádku `ON_UPDATE_COMMAND_UI` obslužná rutina s ID řetězec podokně indikátoru.  
+ Způsob, jakým jsou obvykle aktualizovány indikátory je přes mechanismus on_update_command_ui –. Na dobu nečinnosti zavolá na stavovém řádku on_update_command_ui – obslužná rutina s ID řetězec podokně indikátoru.  
   
- `ON_UPDATE_COMMAND_UI` Můžete volat obslužné rutiny:  
+ On_update_command_ui – obslužná rutina můžete volat:  
   
-- **Povolit**: Pokud chcete povolit nebo zakázat v podokně. Zakázané podokně vypadá přesně povoleno podokně ale text je neviditelné (tedy vypne indikátor text).  
+- `Enable`: Chcete-li povolit nebo zakázat v podokně. Zakázané podokně vypadá přesně povoleno podokně ale text je neviditelné (tedy vypne indikátor text).  
   
-- **SetText –**: Chcete-li změnit text. Dávejte pozor, pokud to použít, protože v podokně se automaticky nezmění.  
+- `SetText`: Chcete-li změnit text. Dávejte pozor, pokud to použít, protože v podokně se automaticky nezmění.  
   
  Odkazovat třídy [cstatusbar –](../mfc/reference/cstatusbar-class.md) v *knihovny tříd* podrobnosti o `CStatusBar` vytváření a přizpůsobení rozhraní API. Většina přizpůsobení stavových řádků se má provést před stavový řádek původně jsou dostupná.  
   
@@ -139,7 +139,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 ## <a name="_mfcnotes_ctoolbar"></a>  Ctoolbar –  
   
- Panel nástrojů je ovládací prvek panel s řádek rastrový obrázek tlačítka, která může obsahovat oddělovače. Podporují se dva styly tlačítek: tlačítek a tlačítka, zaškrtněte políčko. Funkce skupiny přepínačů mohou být vytvořeny políčko tlačítka a `ON_UPDATE_COMMAND_UI`.  
+ Panel nástrojů je ovládací prvek panel s řádek rastrový obrázek tlačítka, která může obsahovat oddělovače. Podporují se dva styly tlačítek: tlačítek a tlačítka, zaškrtněte políčko. Funkce skupiny přepínačů mohou být vytvořeny políčko tlačítka a on_update_command_ui –.  
   
  Tlačítka rastrového obrázku na panelu nástrojů jsou převzaty z jedné bitové mapy. Tento rastrový obrázek musí obsahovat jednu bitovou kopii nebo glyfů pro každé tlačítko. Pořadí bitové kopie nebo glyfů v souboru bitové mapy je obvykle stejné pořadí, ve kterém se budou vykreslovat na obrazovce. (Toto můžete změnit pomocí přizpůsobení rozhraní API.)  
   
@@ -151,9 +151,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 |Položka|Hodnota barvy systému Windows|Výchozí RGB|  
 |----------|-------------------------|-----------------|  
-|Pozadí panelu nástrojů|**COLOR_BTNFACE**|RGB(192,192,192)|  
-|Tlačítka panelu nástrojů levého horního okraje|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
-|Tlačítka panelu nástrojů robota/pravého okraje|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
+|Pozadí panelu nástrojů|COLOR_BTNFACE|RGB(192,192,192)|  
+|Tlačítka panelu nástrojů levého horního okraje|COLOR_BTNHIGHLIGHT|RGB(255,255,255)|  
+|Tlačítka panelu nástrojů robota/pravého okraje|COLOR_BTNSHADOW|RGB(128,128,128)|  
   
  Kromě toho jsou rastrového obrázku tlačítka panelu nástrojů přebarveny, jako kdyby byly standardní ovládací prvky Windows tlačítko. Tato přebarvení nastane, když bitmapy je načtena z prostředku a v reakci na změny v systému barvy v reakci na uživatele přizpůsobení v Ovládacích panelech. Následující barev v rastrového obrázku panelu nástrojů bude přebarvení automaticky, je možné používat opatrně. Pokud nechcete, aby tak, aby měl část vaší bitové mapy přebarveny, použijte barvu, která se blíží jednu namapovanou hodnoty RGB. Mapování je potřeba podle přesné hodnoty RGB.  
   
@@ -169,11 +169,11 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
  Přizpůsobení rozhraní API slouží k úpravě tlačítko ID, styly, šířka oddělovací a které image glyfy se používá pro jaké tlačítko. Ve výchozím nastavení není potřeba použijte tato rozhraní API.  
   
 ## <a name="ccmdui-support-for-ctoolbar"></a>Ctoolbar – podpora CCmdUI  
- Způsob, jakým jsou vždy aktualizovány tlačítka panelu nástrojů je prostřednictvím `ON_UPDATE_COMMAND_UI` mechanismus. Na dobu nečinnosti, bude volat panelu nástrojů `ON_UPDATE_COMMAND_UI` obslužná rutina s ID příkazu, který tohoto tlačítka. `ON_UPDATE_COMMAND_UI` není volán pro oddělovače, ale je volána pro tlačítek a tlačítka, zaškrtněte políčko.  
+ Přes mechanismus on_update_command_ui – je způsob, jakým jsou vždy aktualizovány tlačítka panelu nástrojů. Na dobu nečinnosti zavolá panelu nástrojů on_update_command_ui – obslužná rutina s ID příkazu, který tohoto tlačítka. On_update_command_ui – není volána pro oddělovače, ale je volána pro tlačítek a tlačítka, zaškrtněte políčko.  
   
- `ON_UPDATE_COMMAND_UI` Můžete volat obslužné rutiny:  
+ On_update_command_ui – obslužná rutina můžete volat:  
   
-- **Povolit**: Pokud chcete povolit nebo zakázat tlačítko. Tento postup funguje stejně pro tlačítek a tlačítka, zaškrtněte políčko.  
+- `Enable`: Chcete-li povolit nebo zakázat tlačítko. Tento postup funguje stejně pro tlačítek a tlačítka, zaškrtněte políčko.  
   
 - `SetCheck`: Chcete-li nastavení kontroly stavu tlačítko. Toto volání pro tlačítka panelu nástrojů zapněte i do tlačítka zaškrtávací políčko. `SetCheck` přebírá parametr, který může být 0 (není zaškrtnuto), 1 (zaškrtnuto) nebo 2 (neurčitém)  
   
@@ -181,9 +181,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  Zaškrtněte políčko tlačítka jsou tlačítka, zaškrtněte políčko "AUTO"; To znamená když uživatel stiskne je jejich okamžitě změní stav. Zaškrtnutí je vypnutý nebo stisknuté stavu. Neexistuje žádné integrované uživatelské rozhraní způsob, jak změnit tlačítko do stavu "neurčitém"; které je třeba provést prostřednictvím kódu.  
   
- Přizpůsobení rozhraní API vám umožní změnit stav tlačítka panelu nástrojů dané, ideálně by se měl změnit těchto stavů v `ON_UPDATE_COMMAND_UI` obslužné rutiny pro příkaz představuje tlačítka panelu nástrojů. Pamatujte si, že zpracování při nečinnosti se změní stav tlačítka panelu nástrojů s `ON_UPDATE_COMMAND_UI` obslužné rutiny, takže všechny změny na tyto stavy provedeny prostřednictvím SetButtonStyle může dojít ke ztrátě po další nečinnosti.  
+ Přizpůsobení rozhraní API vám umožní změnit stav tlačítka panelu nástrojů dané, ideálně by se měl změnit těchto stavů v on_update_command_ui – obslužná rutina pro příkaz, který představuje tlačítka panelu nástrojů. Pamatujte si, že zpracování při nečinnosti se změní stav tlačítka panelu nástrojů s on_update_command_ui – obslužná rutina, tak všechny změny na tyto stavy provedeny prostřednictvím SetButtonStyle může dojít ke ztrátě po další nečinnosti.  
   
- Tlačítka panelu nástrojů odešle **wm_command –** zprávy jako normální tlačítka nebo položek nabídky a jsou obvykle zpracovávány `ON_COMMAND` obslužné rutiny ve stejné třídě, která poskytuje `ON_UPDATE_COMMAND_UI` obslužné rutiny.  
+ Tlačítka panelu nástrojů odešle wm_command – zprávy jako normální tlačítka nebo položek nabídky a jsou obvykle zpracováván obslužnou rutinou on_command – ve stejné třídě, která poskytuje on_update_command_ui – obslužná rutina.  
   
  Existují čtyři nástrojů styly tlačítek (TBBS_ hodnoty) používá pro zobrazení stavů:  
   
@@ -214,14 +214,14 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  A `CDialogBar` slouží k náhledu nástrojů, který obsahuje standardní uzavření tlačítkem ovládací prvky.  
   
- Použití `CDialogBar` je podobné jako použití `CFormView`. Je nutné definovat šablony dialogového okna pro panel dialogového okna a odeberte všechny styly s výjimkou **ws_child –**. Všimněte si, že dialogu nesmí být viditelné.  
+ Použití `CDialogBar` je podobné jako použití `CFormView`. Musí definovat šablony dialogového okna pro panel dialogového okna a odeberte všechny kromě ws_child – styly. Všimněte si, že dialogu nesmí být viditelné.  
   
  Oznámení ovládacího prvku pro `CDialogBar` budou odeslány do nadřazené ovládacích pruhů (stejně jako tlačítka panelu nástrojů).  
   
 ## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI podpora CDialogBar  
- Tlačítka panelu dialogovém okně by měly být aktualizovány prostřednictvím `ON_UPDATE_COMMAND_UI` mechanismus obslužné rutiny. V době nečinnosti, bude volat panel dialogového okna `ON_UPDATE_COMMAND_UI` obslužná rutina s ID příkazu, který všechny tlačítka s Identifikátorem > = 0x8000 (který je v rozsahu identifikátory příkazů).  
+ Dialogové okno tlačítek na panelu je třeba aktualizovat přes mechanismus on_update_command_ui – obslužná rutina. V době nečinnosti dialogového pruhu zavolá on_update_command_ui – obslužná rutina s ID příkazu, který všechny tlačítka s Identifikátorem > = 0x8000 (který je v rozsahu identifikátory příkazů).  
   
- `ON_UPDATE_COMMAND_UI` Můžete volat obslužné rutiny:  
+ On_update_command_ui – obslužná rutina můžete volat:  
   
 -   Povolit: k povolení nebo zakázání tlačítko.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384720"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957221"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Dělená okna
 Tato poznámka se popisuje MFC [CSplitterWnd třída](../mfc/reference/csplitterwnd-class.md), který poskytuje okno rozdělí a spravuje Změna velikosti windows jiných podokně.  
@@ -66,7 +66,7 @@ Tato poznámka se popisuje MFC [CSplitterWnd třída](../mfc/reference/csplitter
  Podokno:  
  Okno s specifické pro aplikaci, `CSplitterWnd` spravuje. Podokno je obvykle objekt, který je odvozený od [CView – třída](../mfc/reference/cview-class.md), ale může být libovolná [CWnd](../mfc/reference/cwnd-class.md) objekt, který má odpovídající podřízené okno ID.  
   
- Používat `CWnd`-odvozené objektu, předat `RUNTIME_CLASS` objektu `CreateView` fungovat stejně jako Pokud jste používali `CView`-odvozené třídy. Musí používat vlastní třídy `DECLARE_DYNCREATE` a `IMPLEMENT_DYNCREATE` protože rozhraní používá dynamického vytváření za běhu. I když je velké množství kódu v `CSplitterWnd` týkající se `CView` třídy, [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) je vždy použita dříve, než se provádí tyto akce.  
+ Použít `CWnd`-odvozené objektu, předejte RUNTIME_CLASS objektu `CreateView` fungovat stejně jako Pokud jste používali `CView`-odvozené třídy. Třídě musíte použít DECLARE_DYNCREATE – a IMPLEMENT_DYNCREATE, protože rozhraní používá dynamického vytváření za běhu. I když je velké množství kódu v `CSplitterWnd` týkající se `CView` třídy, [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) je vždy použita dříve, než se provádí tyto akce.  
   
  Rozdělovač:  
  Ovládací prvek, který je umístěn mezi řádků a sloupců podokna. Může se použít ke změně velikosti řádků nebo sloupce podokna.  
@@ -88,14 +88,14 @@ Tato poznámka se popisuje MFC [CSplitterWnd třída](../mfc/reference/csplitter
 [      ][      ][v]  
 ```  
   
- Když se uživatel přesune posuvníku, `WM_VSCROLL` zprávy budou odeslány do obou zobrazeních. Když buď zobrazení nastaví pozici posunutí panelu, nastaví se sdílené posuvníku.  
+ Pokud se uživatel přesune posuvníku, odešlou WM_VSCROLL zprávy do obou zobrazeních. Když buď zobrazení nastaví pozici posunutí panelu, nastaví se sdílené posuvníku.  
   
  Upozorňujeme, že sdílené posuvníky jsou velmi užitečné s podobnými objekty zobrazení. Pokud můžete kombinovat různé typy zobrazení v rozdělovač, budete muset napsat speciální kód pro koordinaci jejich posuňte pozic. Všechny `CView`-odvozené třídy, která používá `CWnd` posuvníku rozhraní API bude delegovat na sdílené posuvníku, pokud existuje. `CScrollView` Implementace je příkladem `CView` třídu, která podporuje sdílené posuvníky. Třídy, které nejsou odvozeny od `CView`, tříd, které jsou závislé na posuvníky – ovládací prvek nebo třídy, které používají standardní implementace systému Windows (například `CEditView`) nebude fungovat se funkci panelu sdílené scroll `CSplitterWnd`.  
   
 ## <a name="minimum-sizes"></a>Minimální velikosti  
  Pro každý řádek je minimální výšku řádku a pro každý sloupec je sloupec minimální šířku. Toto minimum zaručuje, že podokno není příliš malá, která se má zobrazit podrobné.  
   
- Statické rozdělovače období je počáteční řádek minimální výška a ve sloupci šířku 0. Dynamické rozdělovače období, se nastavují šířku počáteční řádek minimální výška a ve sloupci `sizeMin` parametr `CSplitterWnd::Create` funkce.  
+ Statické rozdělovače období je počáteční řádek minimální výška a ve sloupci šířku 0. Dynamické rozdělovače období, se nastavují šířku počáteční řádek minimální výška a ve sloupci *sizeMin* parametr `CSplitterWnd::Create` funkce.  
   
  Tyto minimální velikosti můžete změnit pomocí [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) a [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) funkce.  
   

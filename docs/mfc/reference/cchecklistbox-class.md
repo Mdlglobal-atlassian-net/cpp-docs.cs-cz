@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358196"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956564"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox – třída
 Poskytuje funkci Windows kontrolní seznam pole.  
@@ -82,7 +82,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox` je pouze pro ovládací prvky vykreslované uživatelem, protože seznam obsahuje více než textové řetězce. V nejjednodušším pole kontrolní seznam obsahuje textové řetězce a zaškrtávací políčka, ale není potřeba mít textu vůbec. Například můžete mít seznam malé bitmap s zaškrtávací políčko vedle každé položky.  
   
- Pokud chcete vytvořit vlastní pole kontrolní seznam, musí být vaše vlastní třídy z `CCheckListBox`. Vlastní třída odvozena zápis konstruktoru odvozené třídy, pak zavolají **vytvořit**.  
+ Pokud chcete vytvořit vlastní pole kontrolní seznam, musí být vaše vlastní třídy z `CCheckListBox`. Vlastní třída odvozena zápis konstruktoru odvozené třídy, pak volání `Create`.  
   
  Pokud chcete pro zpracování zpráv s oznámením Windows posílá nadřazené pole se seznamem (obvykle třída odvozená z [CDialog](../../mfc/reference/cdialog-class.md)), přidejte map zpráv položku a obslužné rutiny zpráv členské funkce do nadřazené třídy pro každou zprávu.  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **afx_msg** `void` `memberFxn` **();**  
   
- Existuje pouze jedna položka mapování zpráv, která se týkají konkrétně pro **CCheckListBox** (viz také položky mapy zpráv pro, ale [clistbox –](../../mfc/reference/clistbox-class.md)):  
+ Existuje pouze jedna položka mapování zpráv, která se týkají konkrétně pro `CCheckListBox` (viz také položky mapy zpráv pro, ale [clistbox –](../../mfc/reference/clistbox-class.md)):  
   
 - **ON_CLBN_CHKCHANGE** uživatele došlo ke změně stavu zaškrtávací políčko položce.  
   
@@ -126,7 +126,7 @@ CCheckListBox();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CCheckListBox` objektu ve dvou krocích. Nejdříve definovat třídy odvozené od `CCheckListBox`, pak zavolají **vytvořit**, která inicializuje políčko kontrolního seznamu Windows a připojí jej k `CCheckListBox` objektu.  
+ Můžete vytvořit `CCheckListBox` objektu ve dvou krocích. Nejdříve definovat třídy odvozené od `CCheckListBox`, pak zavolají `Create`, která inicializuje políčko kontrolního seznamu Windows a připojí jej k `CCheckListBox` objektu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl políčko kontrolního seznamu. Musí být styl **lbs_hasstrings –** a buď **lbs_ownerdrawfixed –** (všechny položky v seznamu jsou stejné výšce) nebo **lbs_ownerdrawvariable –** (položky v seznamu jsou různé výšky). Tento styl zkombinovat s jinými [styly seznamů](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) s výjimkou **lbs_usetabstops –**.  
   
- `rect`  
+ *Rect –*  
  Určuje políčko kontrolního seznamu velikost a umístění. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje pole kontrolní seznam nadřazeného okna (obvykle `CDialog` objekt). Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID políčko kontrolního seznamu ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CCheckListBox` objektu ve dvou krocích. Nejprve definovat třídy odvozené od **CcheckListBox** a pak zavolají **vytvořit**, která inicializuje políčko kontrolního seznamu Windows a připojí jej k `CCheckListBox`. V tématu [CCheckListBox::CCheckListBox](#cchecklistbox) pro ukázku.  
+ Můžete vytvořit `CCheckListBox` objektu ve dvou krocích. Nejprve definovat třídy odvozené od `CcheckListBox` a pak zavolají `Create`, která inicializuje políčko kontrolního seznamu Windows a připojí jej k `CCheckListBox`. V tématu [CCheckListBox::CCheckListBox](#cchecklistbox) pro ukázku.  
   
- Když **vytvořit** provede, odešle Windows [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), a [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) zprávy do ovládacího prvku políčko kontrolního seznamu.  
+ Když `Create` provede, odešle Windows [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), a [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) zprávy do ovládacího prvku políčko kontrolního seznamu.  
   
  Tyto zprávy jsou zpracovávány ve výchozím nastavení [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), a [ongetminmaxinfo –](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) členské funkce v `CWnd` základní třídy. Rozšířit zpracování zpráv výchozí, přidejte mapování zpráv do odvozené třídě a členské funkce přepsání předchozí popisovač zpráv. Přepsání `OnCreate`, například k provedení potřebných inicializace pro novou třídu.  
   
@@ -189,7 +189,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Dlouhé ukazatel [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) struktura, která obsahuje informace o typu kreslení vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -197,9 +197,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Ve výchozím nastavení tato funkce nevykresluje výchozím seznamu zaškrtávací políčko, obsahující seznam řetězců s výchozí velikosti zaškrtávací políčko nalevo. Velikost seznamu zaškrtávací políčko je uvedené v [vytvořit](#create).  
   
- Člen funkci implementovat kreslení vykreslování vlastníka kontrolní seznam polí, které nejsou výchozí, jako je například kontrolní seznam polí se seznamy, které nejsou řetězce, Proměnná výška položky nebo s zaškrtávací políčka, která nejsou na levé straně přepište. Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v `lpDrawItemStruct` před ukončení této funkce člen.  
+ Člen funkci implementovat kreslení vykreslování vlastníka kontrolní seznam polí, které nejsou výchozí, jako je například kontrolní seznam polí se seznamy, které nejsou řetězce, Proměnná výška položky nebo s zaškrtávací políčka, která nejsou na levé straně přepište. Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před ukončení této funkce člen.  
   
- Pokud políčko položky kontrolního seznamu nejsou stejné výška, v seznamu úkolů pole styl (zadaný v **vytvořit**) musí být **LBS_OWNERVARIABLE**, a je nutné přepsat [measureitem –](#measureitem) funkce.  
+ Pokud políčko položky kontrolního seznamu nejsou stejné výška, v seznamu úkolů pole styl (zadaný v `Create`) musí být **LBS_OWNERVARIABLE**, a je nutné přepsat [measureitem –](#measureitem) funkce.  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  Volání této funkce, které chcete povolit nebo zakázat položku kontrolní seznam pole.  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index položky pole kontrolní seznam povolení.  
   
- `bEnabled`  
+ *bEnabled*  
  Určuje, zda je povoleno položky.  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,7 +225,7 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index počítaný od nuly zaškrtávací políčko, které se nachází v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -272,7 +272,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Dlouhé ukazatel [measureitemstruct –](../../mfc/reference/measureitemstruct-structure.md) struktura.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -291,7 +291,7 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  Pozice a velikosti položky seznamu.  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  Výchozí umístění a velikost položky zaškrtávacího políčka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -310,14 +310,14 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index počítaný od nuly zaškrtávací políčko, které se nachází v seznamu.  
   
- `nCheck`  
+ *nZkontrolujte*  
  Tlačítko stavu pro zadané pole. Možné hodnoty v části poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
- Následující tabulka uvádí možné hodnoty pro `nCheck` parametr.  
+ Následující tabulka uvádí možné hodnoty pro *nZkontrolujte* parametr.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
@@ -333,7 +333,7 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStyle`  
+ *nStyle*  
  Určuje styl zaškrtnutí políček v poli seznamu úkolů.  
   
 ### <a name="remarks"></a>Poznámky  

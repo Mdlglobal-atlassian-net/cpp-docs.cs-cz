@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 683281af3d029dca7e8060bb250a49f8e095d597
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384953"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954579"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflexe zprávy pro ovládací prvky Windows
 > [!NOTE]
@@ -54,25 +54,25 @@ ms.locfileid: "33384953"
   
  **Co je reflexe zpráv**  
   
- Ovládací prvky Windows často zasílání oznámení k jejich nadřazené systému windows. Například mnoho ovládacích prvků odeslat zprávu oznámení ovládacího prvku barvu (`WM_CTLCOLOR` nebo jednoho z jeho variant) k jejich nadřazené umožňující nadřazené k poskytování štětce pro vykreslování pozadí ovládacího prvku.  
+ Ovládací prvky Windows často zasílání oznámení k jejich nadřazené systému windows. Například mnoho ovládacích prvků odeslat zprávu řízení barva oznámení (WM_CTLCOLOR – nebo jeden z jeho variant) k jejich nadřazené umožňující nadřazené k poskytování štětce pro vykreslování pozadí ovládacího prvku.  
   
  V systému Windows a v prostředí MFC před verze 4.0 nadřazené okno, často dialogového okna, je zodpovědná za zpracování těchto zpráv. To znamená, že kód pro zpracování zprávy musí být v třídě nadřazeného okna a že má zkopírovat do každá třída, kterou je zpracování této zprávy. V případě výše každých dialogu, který chtěli ovládacích prvků pomocí vlastní pozadí musel zpracování oznámení ovládacího prvku barev. Je mnohem jednodušší znovu použít kód, pokud lze zapsat třída ovládacích prvků, které se zpracovávají barvu pozadí.  
   
- V MFC 4.0, původní mechanismus stále funguje – windows nadřazené dokáže zpracovat zprávy s oznámením. Kromě toho však MFC 4.0 usnadňuje opakované použití tím, že poskytuje funkci "zpráva reflexe", který umožňuje zpracovávat v okně řízení podřízené nebo nadřazené okno, nebo v obou těchto zpráv s oznámením. V příkladu barvu pozadí ovládacího prvku, teď můžete napsat řízení třídu, která nastaví barvu pozadí ve zpracování reflektované `WM_CTLCOLOR` zpráva – aniž byste museli spoléhat na nadřazený. (Všimněte si, že vzhledem k tomu, že reflexe zpráv je implementováno modulem MFC, v systému Windows, nadřazené třídy okna nesmí být odvozen od `CWnd` pro reflexe zprávy pro práci.)  
+ V MFC 4.0, původní mechanismus stále funguje – windows nadřazené dokáže zpracovat zprávy s oznámením. Kromě toho však MFC 4.0 usnadňuje opakované použití tím, že poskytuje funkci "zpráva reflexe", který umožňuje zpracovávat v okně řízení podřízené nebo nadřazené okno, nebo v obou těchto zpráv s oznámením. V příkladu barvu pozadí ovládacího prvku, teď můžete napsat řízení třídu, která nastaví barvu pozadí ve zpracování reflektovaných WM_CTLCOLOR – zpráva – aniž byste museli spoléhat na nadřazený. (Všimněte si, že vzhledem k tomu, že reflexe zpráv je implementováno modulem MFC, v systému Windows, nadřazené třídy okna nesmí být odvozen od `CWnd` pro reflexe zprávy pro práci.)  
   
- Starší verze knihovny MFC se něco podobného jako reflexe zpráv tím, že poskytuje virtuální funkce pro několik zprávy, jako je například zprávy pro seznamy vykreslovaných vlastníkem (`WM_DRAWITEM`a tak dále). Nového mechanismu reflexe zprávy je zobecněný a konzistentní.  
+ Starší verze knihovny MFC se něco podobného jako reflexe zpráv tím, že poskytuje virtuální funkce pro několik zprávy, jako je například zprávy pro vykreslovaných vlastníkem seznamy (WM_DRAWITEM a tak dále). Nového mechanismu reflexe zprávy je zobecněný a konzistentní.  
   
  Reflexe zpráv je zpětně kompatibilní s kódu napsaného pro verze knihovny MFC než 4.0.  
   
- Pokud jste zadali obslužnou rutinu pro konkrétní zprávou, nebo pro celou řadu zprávy do nadřazeného okna třídy, se přepíší projeví obslužné rutiny zpráv pro stejnou zprávu zadaný nemůžete volat základní třídu obslužné rutiny ve vaší vlastní obslužné rutiny. Například, pokud zpracováváte `WM_CTLCOLOR` ve vaší třídy dialogového okna, vaše zpracování přepíší všechny rutiny zrcadlené zprávy.  
+ Pokud jste zadali obslužnou rutinu pro konkrétní zprávou, nebo pro celou řadu zprávy do nadřazeného okna třídy, se přepíší projeví obslužné rutiny zpráv pro stejnou zprávu zadaný nemůžete volat základní třídu obslužné rutiny ve vaší vlastní obslužné rutiny. Například Pokud zpracováváte WM_CTLCOLOR – ve vaší třídy dialogového okna, vaše zpracování přepíše jakékoli zrcadlené zprávy obslužné rutiny.  
   
- Pokud v okně vaší nadřazené třídy zadáte obslužnou rutinu pro konkrétní **wm_notify –** zpráva nebo rozsah **wm_notify –** zprávy, vaší obslužné rutiny bude volán, pouze pokud nemá podřízený ovládací prvek odesílání těchto zpráv není nutné obslužná rutina zrcadlené zprávy prostřednictvím **ON_NOTIFY_REFLECT()**. Pokud používáte **ON_NOTIFY_REFLECT_EX()** mapy zpráv vaší obslužné rutiny zpráv může nebo nemusí umožňovat nadřazeného okna pro zpracování zprávy. Pokud obslužná rutina vrátí **FALSE**, zpráva bude zpracován adresou nadřazené taky při volání, které vrátí **TRUE** neumožňuje nadřazené se nezdařilo. Upozorňujeme, že je před oznámení zajistit zrcadlené zprávy.  
+ Pokud v okně vaší nadřazené třídy zadáte obslužnou rutinu pro konkrétní wm_notify – zpráva nebo rozsah wm_notify – zprávy, bude vaše obslužná rutina volat pouze v případě, že podřízený ovládací prvek odesílání těchto zpráv nemá obslužná rutina zrcadlené zprávy prostřednictvím `ON_NOTIFY_REFLECT()`. Pokud používáte `ON_NOTIFY_REFLECT_EX()` mapy zpráv vaší obslužné rutiny zpráv může nebo nemusí umožňovat nadřazeného okna pro zpracování zprávy. Pokud obslužná rutina vrátí **FALSE**, zpráva bude zpracován adresou nadřazené taky při volání, které vrátí **TRUE** neumožňuje nadřazené se nezdařilo. Upozorňujeme, že je před oznámení zajistit zrcadlené zprávy.  
   
- Když **wm_notify –** je odeslána zpráva, ovládacího prvku se nabízí první příležitosti se nezdařilo. Pokud se pošle další zrcadlené zprávy nadřazeného okna má první příležitosti se nezdařilo a ovládacího prvku obdrží zrcadlené zprávy. Uděláte to tak, bude je nutné funkce obslužné rutiny a odpovídající položku v mapy zpráv třídy ovládacího prvku.  
+ Při odeslání wm_notify – zpráva ovládacího prvku se nabízí první příležitosti se nezdařilo. Pokud se pošle další zrcadlené zprávy nadřazeného okna má první příležitosti se nezdařilo a ovládacího prvku obdrží zrcadlené zprávy. Uděláte to tak, bude je nutné funkce obslužné rutiny a odpovídající položku v mapy zpráv třídy ovládacího prvku.  
   
- Makra map zpráv pro zrcadlené zprávy se poněkud liší od pravidelných oznámení: má **_REFLECT** připojí k jeho obvyklé názvu. Například pro zpracování **wm_notify –** zpráva v nadřazené, použijte makro `ON_NOTIFY` v mapy zpráv nadřazeného objektu. Zpracování reflektovaných zpráv v ovládacím prvku podřízené, použijte **on_notify_reflect –** makro v mapy zpráv podřízeného ovládacího prvku. V některých případech parametry se liší, také. Všimněte si, ClassWizard můžete obvykle přidávat položky mapy zpráv pro vás a poskytovat implementace kostru funkce se správnými parametry.  
+ Makra map zpráv pro zrcadlené zprávy se poněkud liší od pravidelných oznámení: má *_REFLECT* připojí k jeho obvyklé názvu. Například pro zpracování wm_notify – zpráva v nadřízeném, použijete on_notify – makro v poli nadřazeného objektu mapy zpráv. Zpracování reflektovaných zpráv v ovládacím prvku podřízené, použijte on_notify_reflect – makro v podřízený ovládací prvek mapy zpráv. V některých případech parametry se liší, také. Všimněte si, ClassWizard můžete obvykle přidávat položky mapy zpráv pro vás a poskytovat implementace kostru funkce se správnými parametry.  
   
- V tématu [TN061: ON_NOTIFY a wm_notify – zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md) informace o nové **wm_notify –** zprávy.  
+ V tématu [TN061: ON_NOTIFY a wm_notify – zprávy](../mfc/tn061-on-notify-and-wm-notify-messages.md) informace o nové wm_notify – zpráva.  
   
  **Mapy zpráv položek a prototypy funkcí obslužné rutiny pro Reflektované zprávy**  
   
@@ -80,19 +80,19 @@ ms.locfileid: "33384953"
   
  ClassWizard můžete obvykle přidejte tyto položky mapy zpráv pro vás a poskytovat implementace kostru funkce. V tématu [definování obslužné rutiny zpráv pro zprávu projeví](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) informace o tom, jak definovat obslužné rutiny pro zrcadlené zprávy.  
   
- Převést z název zprávy k názvu reflektované makro, předřadit **ON_** a připojte **_REFLECT**. Například `WM_CTLCOLOR` stane **on_wm_ctlcolor_reflect –**. (Zprávy, které může projevit najdete proveďte převod opačně orientované na makro položky v následující tabulce.)  
+ Převést z název zprávy k názvu reflektované makro, předřadit *ON_* a připojte *_REFLECT*. WM_CTLCOLOR – například bude on_wm_ctlcolor_reflect –. (Zprávy, které může projevit najdete proveďte převod opačně orientované na makro položky v následující tabulce.)  
   
  Tři výjimky pro výše uvedené pravidlo jsou následující:  
   
--   Makro pro **wm_command –** oznámení je **on_control_reflect –**.  
+-   Makro wm_command – oznámení je on_control_reflect –.  
   
--   Makro pro **wm_notify –** odrazů je **on_notify_reflect –**.  
+-   Makro pro odrazů wm_notify – je on_notify_reflect –.  
   
--   Makro pro `ON_UPDATE_COMMAND_UI` odrazů je **on_update_command_ui_reflect –**.  
+-   Pro odrazů on_update_command_ui – makro je on_update_command_ui_reflect –.  
   
  V každé z výše uvedených zvláštních případech musíte zadat název členské funkce obslužné rutiny. V ostatních případech musíte použít standardní název funkce obslužné rutiny.  
   
- Významy parametry a návratové hodnoty funkce popsané v části název funkce nebo název funkce s **na** přidá jako předpona. Například **CtlColor** je popsána v `OnCtlColor`. Obslužné rutiny několik zrcadlené zprávy potřebovat méně parametrů, než podobně jako obslužné rutiny v nadřazené okno. Právě odpovídat názvům v následující tabulce s názvy formální parametry v dokumentaci.  
+ Významy parametry a návratové hodnoty funkce popsané v části název funkce nebo název funkce s *na* přidá jako předpona. Například `CtlColor` je popsána v `OnCtlColor`. Obslužné rutiny několik zrcadlené zprávy potřebovat méně parametrů, než podobně jako obslužné rutiny v nadřazené okno. Právě odpovídat názvům v následující tabulce s názvy formální parametry v dokumentaci.  
   
 |Položku mapování|Prototyp funkce|  
 |---------------|------------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "33384953"
 |**ON_WM_VSCROLL_REFLECT –)**|**afx_msg void VScroll (Celé_číslo** `nSBCode` **, UINT** `nPos` **);**|  
 |**ON_WM_PARENTNOTIFY_REFLECT –)**|**afx_msg void ParentNotify (Celé_číslo** `message` **, LPARAM** `lParam` **);**|  
   
- **On_notify_reflect –** a **on_control_reflect –** makra mají varianty, které umožňují více než jeden objekt (například ovládací prvek a jeho nadřazený objekt) pro zpracování danou zprávou.  
+ On_notify_reflect – a on_control_reflect – makra mít varianty, které umožňují více než jeden objekt (například ovládací prvek a jeho nadřazený objekt) pro zpracování danou zprávou.  
   
 |Položku mapování|Prototyp funkce|  
 |---------------|------------------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "33384953"
   
 2.  V projektu načtena do Visual C++, použijte ClassWizard vytvořit novou třídu s názvem `CYellowEdit` na základě `CEdit`.  
   
-3.  Přidejte tři členské proměnné na vaše `CYellowEdit` třídy. První dvě bude **COLORREF** proměnné, do kterých barvu textu a barvu pozadí. Třetí bude `CBrush` objekt, který bude obsahovat štětce pro vykreslování pozadí. `CBrush` Objekt vám umožní vytvořit štětce jednou, jenom odkazování poté a zrušení stopy automaticky při `CYellowEdit` řízení zničena.  
+3.  Přidejte tři členské proměnné na vaše `CYellowEdit` třídy. První dvě bude *COLORREF* proměnné, do kterých barvu textu a barvu pozadí. Třetí bude `CBrush` objekt, který bude obsahovat štětce pro vykreslování pozadí. `CBrush` Objekt vám umožní vytvořit štětce jednou, jenom odkazování poté a zrušení stopy automaticky při `CYellowEdit` řízení zničena.  
   
 4.  Inicializace členské proměnné napsáním konstruktoru následujícím způsobem:  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33384953"
  }  
  ```  
   
-5.  Pomocí ClassWizard, přidejte obslužnou rutinu pro reflektované `WM_CTLCOLOR` zprávy do vaší `CYellowEdit` třídy. Všimněte si, že rovná před název zprávy seznam zpráv, které lze zpracovat označuje tato zpráva se odrazí. To je popsáno v [definování obslužné rutiny zpráv pro zprávu projeví](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
+5.  Pomocí ClassWizard, přidejte obslužnou rutinu pro reflektované zprávy WM_CTLCOLOR – vaše `CYellowEdit` třídy. Všimněte si, že rovná před název zprávy seznam zpráv, které lze zpracovat označuje tato zpráva se odrazí. To je popsáno v [definování obslužné rutiny zpráv pro zprávu projeví](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
   
      ClassWizard přidá následující funkce makro a kostru mapy zpráv pro vás:  
   

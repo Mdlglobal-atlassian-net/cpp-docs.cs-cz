@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354191"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956230"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush – třída
 Základní třída CD2DLinearGradientBrush a CD2DRadialGradientBrush tříd.  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `gradientStops`  
+ *gradientStops*  
  Ukazatel na pole D2D1_GRADIENT_STOP struktury.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Hodnota větší než nebo rovna 1, která určuje počet Přechodové zarážky v poli gradientStops.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Místo, na které barevně se provádí interpolace mezi Přechodové zarážky.  
   
- `extendMode`  
+ *extendMode*  
  Chování přechodu mimo normalizovaný rozsah [0, 1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ukazatel na krytí a transformace štětce.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

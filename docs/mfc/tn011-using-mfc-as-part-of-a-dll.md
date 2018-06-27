@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b558bb373416338f4136a6142ca6d491b28b510
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384707"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951455"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Použití prostředí MFC jako součásti knihovny DLL
 Tato poznámka popisuje regulární knihovny MFC DLL, který vám umožní používat knihovny MFC jako součást Windows dynamická knihovna (DLL). Přitom se předpokládá, že jste obeznámeni s knihovny DLL systému Windows a jak sestavit je. Informace o MFC – rozšiřující knihovny DLL, pomocí kterého můžete vytvořit rozšíření ke knihovně MFC najdete v části [DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md).  
@@ -65,7 +65,7 @@ Tato poznámka popisuje regulární knihovny MFC DLL, který vám umožní použ
   
  Místní vaše rozhraní API v samostatných hlavičku, která může být zahrnuta v souborech C a C++. Najdete v hlavičce ScreenCap.h v ukázce MFC rozšířené koncepty [DLLScreenCap](../visual-cpp-samples.md) příklad. Export funkcí, zadejte je do `EXPORTS` části souboru definice modulu (. DEF) nebo `__declspec(dllexport)` na vaše definice funkcí. Použití `__declspec(dllimport)` naimportujte tyto funkce spustitelný soubor klienta.  
   
- Je nutné přidat `AFX_MANAGE_STATE` makro na začátku všech exportovaných funkcí v běžných knihovnách DLL MFC, která dynamicky propojené s knihovnou MFC. Toto makro nastaví aktuální stav modulu pro knihovnu DLL. Použití tohoto makra, přidejte následující řádek kódu na začátek funkce exportované z knihovny DLL:  
+ AFX_MANAGE_STATE – makro je nutné přidat na začátku všech exportovaných funkcí v běžných knihovnách DLL MFC, která dynamicky propojené s knihovnou MFC. Toto makro nastaví aktuální stav modulu pro knihovnu DLL. Použití tohoto makra, přidejte následující řádek kódu na začátek funkce exportované z knihovny DLL:  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   

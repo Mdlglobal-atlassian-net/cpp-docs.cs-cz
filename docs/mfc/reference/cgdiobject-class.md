@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369012"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956126"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject – třída
 Poskytuje základní třídu pro různé druhy Windows grafické objekty rozhraní GDI zařízení například rastrové obrázky, oblasti, štětce, pera, palety a písem.  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
+ *hObject*  
  A `HANDLE` na objekt GDI systému Windows (například `HPEN` nebo `HBRUSH`).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CGdiObject` přímo. Místo toho vytvoříte objekt z jednoho z jeho odvozené třídy, jako například `CPen` nebo **Cbrush**.  
+ Nikdy vytvoříte `CGdiObject` přímo. Místo toho vytvoříte objekt z jednoho z jeho odvozené třídy, jako například `CPen` nebo `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  Načte popisovač pro některý z předdefinovaných uložených Windows GDI pera, štětce nebo písem a připojí GDI objekt, který má `CGdiObject` objektu.  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Určení typu objektu uložených potřeby konstanta. V tématu parametr *fnObject* pro [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) ve Windows SDK pro popis příslušné hodnoty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
+ *hObject*  
  A `HANDLE` na objekt GDI systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCount`  
- Určuje počet bajtů, které chcete zkopírovat do `lpObject` vyrovnávací paměti.  
+ *nCount*  
+ Určuje počet bajtů, které chcete zkopírovat do *lpObject* vyrovnávací paměti.  
   
- `lpObject`  
+ *lpObject*  
  Body do vyrovnávací paměti zadanou uživatelem, který je k získání požadovaných informací.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `obj`  
+ *obj*  
  Ukazatele na existující `CGdiObject`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `obj`  
+ *obj*  
  Odkaz na existující `CGdiObject`.  
   
 ### <a name="remarks"></a>Poznámky  

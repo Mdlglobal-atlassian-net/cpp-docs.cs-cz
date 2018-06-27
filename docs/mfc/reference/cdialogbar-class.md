@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366711"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951553"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar – třída
 Poskytuje funkci Windows nemodální dialogového okna v ovládacím panelu.  
@@ -53,7 +53,7 @@ class CDialogBar : public CControlBar
 ## <a name="remarks"></a>Poznámky  
  Panel dialogového okna se podobá dialogové okno, protože obsahuje standardní ovládací prvky systému Windows, které může uživatel kartě mezi. Jiné podobnosti je, že vytvořit šablony dialogového okna představují panel dialogového okna.  
   
- Vytvoření a použití dialogového pruhu je podobná vytváření a používání `CFormView` objektu. Nejprve pomocí [editoru dialogového okna](../../windows/dialog-editor.md) definovat šablony dialogového okna se stylem **ws_child –** a žádný jiný styl. Šablona nesmí obsahovat styl **ws_visible –**. V kódu aplikace, volat konstruktor k vytvoření `CDialogBar` objekt a potom volání **vytvořit** vytvořit okno panel dialogového okna a jeho k připojení `CDialogBar` objektu.  
+ Vytvoření a použití dialogového pruhu je podobná vytváření a používání `CFormView` objektu. Nejprve pomocí [editoru dialogového okna](../../windows/dialog-editor.md) definovat šablony dialogového okna se stylem **ws_child –** a žádný jiný styl. Šablona nesmí obsahovat styl **ws_visible –**. V kódu aplikace, volat konstruktor k vytvoření `CDialogBar` objekt a potom volání `Create` vytvořit okno panel dialogového okna a jeho k připojení `CDialogBar` objektu.  
   
  Další informace o `CDialogBar`, najdete v článku [dialogové pruhy](../../mfc/dialog-bars.md) a [Technická poznámka 31](../../mfc/tn031-control-bars.md), ovládací pruhy.  
   
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na nadřazený `CWnd` objektu.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Ukazatel na název `CDialogBar` šablony prostředků – dialogové objektu.  
   
- `nStyle`  
+ *nStyle*  
  Styl panelu nástrojů. Styly dalších nástrojů, které jsou podporované jsou:  
   
-- `CBRS_TOP` Ovládací prvek panelu je v horní části okna rámce.  
+- **CBRS_TOP** ovládacích pruhů je v horní části okna rámce.  
   
-- `CBRS_BOTTOM` Ovládací prvek panelu je v dolní části okna rámce.  
+- **CBRS_BOTTOM** je ovládací prvek panelu v dolní části okna rámce.  
   
-- `CBRS_NOALIGN` Ovládací prvek panelu není změnit jejich umístění při změně velikosti nadřazeného objektu.  
+- **CBRS_NOALIGN** ovládacích pruhů není změnit jejich umístění při změně velikosti nadřazeného objektu.  
   
-- `CBRS_TOOLTIPS` Ovládací prvek panelu zobrazí popisy.  
+- **Cbrs_tooltips –** zobrazí popisy ovládacích pruhů.  
   
 - **Cbrs_size_dynamic –** ovládacích pruhů je dynamický.  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** je plovoucí ovládacích pruhů.  
   
-- `CBRS_FLYBY` Stavový řádek zobrazí informace o tlačítko.  
+- **Cbrs_flyby –** stavový řádek obsahuje informace o tlačítko.  
   
 - **CBRS_HIDE_INPLACE** není zobrazovat uživateli, ovládacích pruhů.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku panel dialogového okna.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ID prostředku `CDialogBar` dialogového šablony objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud zadáte `CBRS_TOP` nebo `CBRS_BOTTOM` zarovnání styl, šířka panel dialogového okna je, že rámce okna a jeho výšku je u prostředku zadaného parametrem `nIDTemplate`. Pokud zadáte `CBRS_LEFT` nebo `CBRS_RIGHT` zarovnání styl, výška panel dialogového okna je, že rámce okna a jeho šířka je, že z prostředku zadaného parametrem `nIDTemplate`.  
+ Pokud zadáte **CBRS_TOP** nebo **CBRS_BOTTOM** zarovnání styl, šířka panel dialogového okna je, že rámce okna a jeho výšku je u prostředku zadaného parametrem *nIDTemplate*. Pokud zadáte **CBRS_LEFT** nebo **CBRS_RIGHT** zarovnání styl, výška panel dialogového okna je, že rámce okna a jeho šířka je, že z prostředku zadaného parametrem *nIDTemplate*.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384579"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956844"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 Tato poznámka popisuje Podpora MFC pro samoobslužné vykreslování a vlastní ovládací prvky. Také popisuje dynamické vytváření podtříd a popisuje vztah mezi [CWnd](../mfc/reference/cwnd-class.md) objekty a `HWND`s.  
@@ -100,11 +100,11 @@ Tato poznámka popisuje Podpora MFC pro samoobslužné vykreslování a vlastní
 ## <a name="using-self-draw-controls-and-menus"></a>Pomocí automatických vykreslení ovládacích prvků a nabídky  
  Pro samoobslužné kreslení nabídky, je nutné přepsat i `OnMeasureItem` a `OnDrawItem` metody.  
   
- Pro samoobslužné kreslení seznamy a pole se seznamem, je nutné přepsat `OnMeasureItem` a `OnDrawItem`. Je nutné zadat `LBS_OWNERDRAWVARIABLE` styl seznamy nebo `CBS_OWNERDRAWVARIABLE` styl pro pole se seznamem oknech v šablony dialogového okna. `OWNERDRAWFIXED` Styl nebude fungovat s samoobslužné kreslení položky, protože výška pevné položka je určen před svým vykreslení ovládacích prvků, které jsou připojené k pole se seznamem. (Můžete použít metody [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) a [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) k překonání tohoto omezení.)  
+ Pro samoobslužné kreslení seznamy a pole se seznamem, je nutné přepsat `OnMeasureItem` a `OnDrawItem`. V dialogovém okně šabloně musíte zadat lbs_ownerdrawvariable – styl pro seznamy nebo styl cbs_ownerdrawvariable – pole se seznamem. Styl OWNERDRAWFIXED nebude fungovat s samoobslužné kreslení položky, protože výška pevné položka je určen před svým vykreslení ovládacích prvků, které jsou připojené k pole se seznamem. (Můžete použít metody [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) a [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) k překonání tohoto omezení.)  
   
- Přepnutí do `OWNERDRAWVARIABLE` styl vynutí systému pro použití `NOINTEGRALHEIGHT` styl do ovládacího prvku. Protože ovládacího prvku nelze vypočítat integrální výšky s proměnnou velikost položky, výchozí styl `INTEGRALHEIGHT` je ignorován a ovládací prvek je vždy `NOINTEGRALHEIGHT`. Pokud své položky jsou pevnou výšku, můžete zabránit částečné položky přitahuje zadáním na velikost ovládacího prvku celé číslo násobitel velikosti položky.  
+ Přepnutí do stylu OWNERDRAWVARIABLE vynutí systému použít styl NOINTEGRALHEIGHT do ovládacího prvku. Protože ovládacího prvku nelze vypočítat integrální výšky s proměnnou velikostí položky, výchozí styl INTEGRALHEIGHT je ignorován a ovládací prvek je vždy NOINTEGRALHEIGHT. Pokud své položky jsou pevnou výšku, můžete zabránit částečné položky přitahuje zadáním na velikost ovládacího prvku celé číslo násobitel velikosti položky.  
   
- Pro samoobslužné kreslení seznamy a pole se seznamem s `LBS_SORT` nebo `CBS_SORT` styl, je nutné přepsat `OnCompareItem` metoda.  
+ Pro kreslení samoobslužné seznamy a pole se seznamem s lbs_sort – nebo cbs_sort – styl, je nutné přepsat `OnCompareItem` metoda.  
   
  Pro samoobslužné kreslení seznamy a pole se seznamem, `OnDeleteItem` není obvykle přepsána. Můžete přepsat `OnDeleteItem` Pokud chcete provést žádné speciální zpracování. Jeden případ, kde bude příslušné je při další paměti nebo jiných prostředků se ukládají s každou položku seznamu pole nebo pole se seznamem pole.  
   

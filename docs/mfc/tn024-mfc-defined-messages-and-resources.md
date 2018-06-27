@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385609"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957182"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Zprávy a prostředky definované knihovnou MFC
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33385609"
   
  Tyto privátní zpráv systému Windows a přidružené parametr struktury jsou deklarované v hlavičce privátní MFC ' AFXPRIV. H ". Se upozornění, že některé z vašeho kódu, která zahrnuje tuto hlavičku může být spoléhat na nedokumentovanými chování a budou pravděpodobně přerušení v budoucnosti verze knihovny MFC.  
   
- Ve výjimečných případě museli zpracovat jeden z těchto zpráv, měli byste použít `ON_MESSAGE` zpráva makra mapy a zpracování zprávy v obecné LRESULT/WPARAM/LPARAM formátu.  
+ Ve výjimečných případě museli zpracovat jeden z těchto zpráv by měl použít on_message – makro mapy zpráv a zpracování zprávy v obecné LRESULT/WPARAM/LPARAM formát.  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -60,12 +60,12 @@ ms.locfileid: "33385609"
   
  **WM_SIZEPARENT**  
   
- Tuto zprávu posílá okně s rámečkem jeho přímé podřízené objekty při změně velikosti (**CFrameWnd::OnSize** volání `CFrameWnd::RecalcLayout` který volá `CWnd::RepositionBars`) změňte umístění ovládací pruhy kolem na straně rámečku. **AFX_SIZEPARENTPARAMS** struktura obsahuje aktuální rámeček dostupných klientů nadřazený a HDWP, (který může mít hodnotu NULL) ke které má být volání `DeferWindowPos` minimalizovat překreslení.  
+ Tuto zprávu posílá okně s rámečkem jeho přímé podřízené objekty při změně velikosti (`CFrameWnd::OnSize` volání `CFrameWnd::RecalcLayout` který volá `CWnd::RepositionBars`) změňte umístění ovládací pruhy kolem na straně rámečku. Struktura AFX_SIZEPARENTPARAMS obsahuje aktuální rámeček dostupných klientů nadřazený a HDWP, (který může mít hodnotu NULL) ke které má být volání `DeferWindowPos` minimalizovat překreslení.  
   
 |||  
 |-|-|  
 |wParam|Nepoužívá se|  
-|lParam|Adresa **AFX_SIZEPARENTPARAMS** struktura|  
+|lParam|Adresa AFX_SIZEPARENTPARAMS strukturu|  
 |vrací|Nepoužívá se (0)|  
   
  Ignorování zprávy označuje, že okno neberou v rámci v rozložení.  
@@ -82,7 +82,7 @@ ms.locfileid: "33385609"
   
  **WM_IDLEUPDATECMDUI**  
   
- Tato zpráva je odeslána v nečinnosti implementovat doby nečinnosti aktualizace obslužné rutiny aktualizace příkaz uživatelského rozhraní. Pokud okno (obvykle ovládacích pruhů) zpracovává zprávy, vytvoří `CCmdUI` (nebo objektu odvozené třídy) a volání **CCmdUI::DoUpdate** pro každou z "položky" v okně. To zase zkontroluje `ON_UPDATE_COMMAND_UI` obslužné rutiny pro objekty v řetězu obslužná rutina příkazu.  
+ Tato zpráva je odeslána v nečinnosti implementovat doby nečinnosti aktualizace obslužné rutiny aktualizace příkaz uživatelského rozhraní. Pokud okno (obvykle ovládacích pruhů) zpracovává zprávy, vytvoří `CCmdUI` (nebo objektu odvozené třídy) a volání `CCmdUI::DoUpdate` pro každou z "položky" v okně. Pak se změnami pro obslužnou rutinu on_update_command_ui – pro objekty v řetězu obslužná rutina příkazu.  
   
 |||  
 |-|-|  
@@ -90,11 +90,11 @@ ms.locfileid: "33385609"
 |lParam|Nepoužívá se (0)|  
 |vrací|Nepoužívá se (0)|  
   
- *bDisableIfNoHandler* nenulový a zakázat objekt uživatelského rozhraní, pokud není ani `ON_UPDATE_COMMAND_UI` ani `ON_COMMAND` obslužné rutiny.  
+ *bDisableIfNoHandler* je zakázat objekt uživatelského rozhraní, pokud dojde on_update_command_ui – ani obslužnou rutinu on_command – nenulové hodnoty.  
   
  **WM_EXITHELPMODE**  
   
- Tato zpráva je odeslána do `CFrameWnd` režimu, které chcete-li ukončit závislé na kontextu pomoci. Přijetí této zprávy ukončí modální smyčky spustí **CFrameWnd::OnContextHelp.**  
+ Tato zpráva je odeslána do `CFrameWnd` režimu, které chcete-li ukončit závislé na kontextu pomoci. Přijetí této zprávy ukončí modální smyčky spustí `CFrameWnd::OnContextHelp`.  
   
 |||  
 |-|-|  
@@ -150,35 +150,35 @@ ms.locfileid: "33385609"
   
  **WM_FLOATSTATUS**  
   
- Tato zpráva je odeslána do všech automaticky otevíraná okna vlastníkem okně s rámečkem při rámečku je buď aktivace nebo deaktivace pomocí jiného nejvyšší úrovně rámce okna. Toto je používáno implementace **MFS_SYNCACTIVE** v `CMiniFrameWnd`, aby synchronizovaná s aktivace nejvyšší úrovně rámce okna aktivace tato automaticky otevíraná okna.  
+ Tato zpráva je odeslána do všech automaticky otevíraná okna vlastníkem okně s rámečkem při rámečku je buď aktivace nebo deaktivace pomocí jiného nejvyšší úrovně rámce okna. Toto je používáno implementace MFS_SYNCACTIVE v `CMiniFrameWnd`, aby synchronizovaná s aktivace nejvyšší úrovně rámce okna aktivace tato automaticky otevíraná okna.  
   
 |||  
 |-|-|  
-|wParam|Je jedním z následujících hodnot:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|Je jedním z následujících hodnot:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|Nepoužívá se (0)|  
   
- Návratová hodnota by měla být nulová Pokud **FS_SYNCACTIVE** je sada a synchronizuje okno její aktivaci s použitím nadřazeného rámce. `CMiniFrameWnd` vrátí nenulový styl nastavena na **MFS_SYNCACTIVE.**  
+ Návratová hodnota by měla být nenulové Pokud FS_SYNCACTIVE je sada a synchronizuje okno její aktivaci s použitím nadřazeného rámce. `CMiniFrameWnd` vrátí nenulový styl nastavena na MFS_SYNCACTIVE.  
   
  Další informace najdete v tématu implementace `CMiniFrameWnd`.  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- Tato zpráva je odeslána do nejvyšší úrovně okna při aktivace nebo deaktivace okna v jeho "nejvyšší úrovně skupinu". Okno je součástí skupiny nejvyšší úrovně, pokud je okno nejvyšší úrovně (žádný nadřazený nebo vlastníka), nebo je vlastněná serverem takového okna. Tato zpráva je podobný používají, aby **WM_ACTIVATEAPP,** , ale funguje v situacích, kde jsou kombinované windows, které patří do různých procesů v jednom okně hierarchii (v aplikacích OLE běžné).  
+ Tato zpráva je odeslána do nejvyšší úrovně okna při aktivace nebo deaktivace okna v jeho "nejvyšší úrovně skupinu". Okno je součástí skupiny nejvyšší úrovně, pokud je okno nejvyšší úrovně (žádný nadřazený nebo vlastníka), nebo je vlastněná serverem takového okna. Tato zpráva je používán podobná WM_ACTIVATEAPP, ale funguje v situacích, kdy jsou patřící do různých procesů systému windows ve smíšeném v jednom okně hierarchii (v aplikacích OLE běžné).  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_EXITHELPMODE WM_COMMANDHELP, WM_HELPHITTEST,  
  Tyto zprávy se používají k implementaci Kontextová nápověda. Naleznete [Technická poznámka 28](../mfc/tn028-context-sensitive-help-support.md) Další informace.  
   
 ## <a name="mfc-private-resource-formats"></a>Formáty prostředku privátní knihovny MFC  
- V současné době MFC definuje dva formáty privátního prostředku: **rt_toolbar –** a **RT_DLGINIT**.  
+ V současné době MFC definuje dva formáty privátního prostředku: rt_toolbar – a RT_DLGINIT.  
   
 ## <a name="rttoolbar-resource-format"></a>Formát rt_toolbar – prostředek  
- Výchozí panel nástrojů poskytl objekty AppWizard je založena na **rt_toolbar –** vlastních prostředků, která byla představena v MFC 4.0. Můžete upravit tento prostředek pomocí editoru panelu nástrojů.  
+ Výchozí panel nástrojů poskytl objekty AppWizard je založena na vlastní prostředek rt_toolbar –, která byla představena v MFC 4.0. Můžete upravit tento prostředek pomocí editoru panelu nástrojů.  
   
 ## <a name="rtdlginit-resource-format"></a>Formát prostředku RT_DLGINIT  
  Jednoho formátu privátního prostředku MFC slouží k uložení informace o inicializaci navíc dialogové okno. To zahrnuje počáteční řetězce, které jsou uložené v poli se seznamem. Formát tohoto prostředku nespouští ručně upravovat, ale jsou zpracována Visual C++.  
   
- Visual C++ a to **RT_DLGINIT** prostředků nemusí používat související funkce MFC, protože rozhraní API alternativu k použití informací v prostředku. Pomocí Visual C++ proto jednodušší k zápisu, udržovat a převede dlouhodobě vaší aplikace.  
+ Visual C++ a tento prostředek RT_DLGINIT nemusí používat související funkce MFC, protože rozhraní API alternativu k použití informací v prostředku. Pomocí Visual C++ proto jednodušší k zápisu, udržovat a převede dlouhodobě vaší aplikace.  
   
- Základní struktura **RT_DLGINIT** prostředků je následující:  
+ Základní struktura prostředku RT_DLGINIT vypadá takto:  
   
 ```  
 +---------------+    \  

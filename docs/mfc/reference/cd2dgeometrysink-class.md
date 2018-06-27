@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355282"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952369"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink – třída
 Obálka pro ID2D1GeometrySink.  
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `arc`  
+ *Oblouk*  
  Segment oblouk pro přidání do obrázku  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bezier`  
+ *Bézierovy křivky*  
  Struktura, která popisuje kontrolních bodů a koncového bodu Bézierovy křivky přidat.  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `beziers`  
+ *Beziérovy křivky*  
  Pole Bézierovy segmentů, které popisuje Bézierových křivek vytvořit. Křivka vykreslením z aktuální bodu podřízený Geometrie (koncový bod poslední segment vykreslovat nebo umístění, které BeginFigure) pro koncový bod první segment Bézierovy křivky v poli. Pokud pole obsahuje další Bézierovy segmenty, každý další segment Bézierovy používá koncový bod předchozího segmentu Bézierovy jako počáteční bod.  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Bod*  
  Koncový bod řádku k vykreslení.  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `points`  
+ *Body*  
  Pole jeden nebo více bodů, které popisují, řádky určené k vykreslení. Řádek je znázorněna od geometrie podřízený aktuálnímu bodu (koncový bod poslední segment vykreslovat nebo umístění, které BeginFigure) do prvního bodu v poli. Pokud pole obsahuje další body, řádek vykreslením z prvního bodu na druhý bod v poli, z druhý bod do třetí bodu a tak dále. Pole pořadí koncových bodů čar k vykreslení.  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bezier`  
+ *Bézierovy křivky*  
  Struktura, která popisuje řídicí bod a koncovým bodem kvadratické Bézierovy křivky přidat.  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `beziers`  
+ *Beziérovy křivky*  
  Pole pořadí kvadratické Bézierovy segmentů.  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `startPoint`  
+ *startPoint*  
  Bod, od kterého má začít nový obrázek.  
   
- `figureBegin`  
+ *figureBegin*  
  Jestli nový obrázek by měl být prázdné nebo vyplněné.  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pathGeometry`  
+ *pathGeometry*  
  Existující objekt CD2DPathGeometry.  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `figureEnd`  
+ *figureEnd*  
  Hodnota, která označuje, zda aktuální obrázek je uzavřený. Pokud na obrázku je zavřená, je mezi bodem aktuální a počáteční bod určeného BeginFigure vykresluje řádku.  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fillMode`  
+ *fillMode*  
  Metoda použitá k určení, zda je k danému bodu součástí geometrie.  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vertexFlags`  
+ *vertexFlags*  
  Možnosti tahu a spojení má být použita pro nové segmenty, které jsou přidány do geometrie jímky.  
   
 ## <a name="see-also"></a>Viz také  

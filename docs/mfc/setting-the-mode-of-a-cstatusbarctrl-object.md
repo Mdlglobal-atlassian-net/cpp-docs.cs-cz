@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d875f2b93309e96bc3d612a8adc55b5af387026
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380916"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956808"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Nastavení režimu objektu CStatusBarCtrl
 Existují dva režimy pro `CStatusBarCtrl` objektu: jednoduché a nejednoduché. Ve většině případů budou mít ovládací prvek panelu Stav jedné nebo více částí, spolu s textem a případně ikonu nebo ikony. Toto je voláno nejednoduché režimu. Další informace o tomto režimu najdete v tématu [inicializace částí objektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
   
- Ale existují případy, kdy je potřeba jenom zobrazit na jednom řádku textu. Jednoduchý režim v takovém případě stačí pro vaše potřeby. Chcete-li změnit režim `CStatusBarCtrl` objektu na jednoduchý, ujistěte se, volání [setsimple –](../mfc/reference/cstatusbarctrl-class.md#setsimple) – členská funkce. Jakmile ovládacího prvku panel stav v stručném režimu, nastavení textu voláním **SetText –** – členská funkce, jako hodnotu předávání 255 **nPane** parametr.  
+ Ale existují případy, kdy je potřeba jenom zobrazit na jednom řádku textu. Jednoduchý režim v takovém případě stačí pro vaše potřeby. Chcete-li změnit režim `CStatusBarCtrl` objektu na jednoduchý, ujistěte se, volání [setsimple –](../mfc/reference/cstatusbarctrl-class.md#setsimple) – členská funkce. Jakmile ovládacího prvku panel stav v stručném režimu, nastavení textu voláním `SetText` – členská funkce, jako hodnotu předávání 255 *nPane* parametr.  
   
  Můžete použít [issimple –](../mfc/reference/cstatusbarctrl-class.md#issimple) funkce k určení jakém režimu `CStatusBarCtrl` objekt je v.  
   

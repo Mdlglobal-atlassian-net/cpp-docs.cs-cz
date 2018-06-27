@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368043"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951849"
 ---
 # <a name="cdialogex-class"></a>CDialogEx – třída
 `CDialogEx` Třída určuje barvu pozadí a obrázku pozadí dialogového okna.  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIDTemplate`  
+ [v] *nIDTemplate*  
  ID prostředku šablony pole dialogového okna.  
   
- [v] `lpszTemplateName`  
+ [v] *lpszTemplateName*  
  Název prostředku šablony pole dialogového okna.  
   
- [v] `pParent`  
+ [v] *pParent*  
  Ukazatel do nadřazeného okna. Výchozí hodnota je `NULL`.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel do nadřazeného okna. Výchozí hodnota je `NULL`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
  Hodnotu barva RGB.  
   
- [v] `bRepaint`  
+ [v] *bRepaint*  
  `TRUE` Chcete-li okamžitě aktualizovat na obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hBitmap`  
+ [v] *hBitmap*  
  Popisovač pro obrázek pozadí.  
   
- [v] `uiBmpResId`  
+ [v] *uiBmpResId*  
  ID prostředku obrázku pozadí.  
   
- [v] `location`  
+ [v] *umístění*  
  Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty patří BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.  
   
- [v] `bAutoDestroy`  
+ [v] *bAutoDestroy*  
  `TRUE` Chcete-li automaticky odstranit obrázku pozadí; v opačném `FALSE`.  
   
- [v] `bRepaint`  
+ [v] *bRepaint*  
  `TRUE` okamžitě ho překreslit dialogové okno. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  

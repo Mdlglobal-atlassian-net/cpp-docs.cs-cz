@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385106"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956792"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelské rozhraní pásu karet. Visual Studio podporuje na pásu karet Office 2007 a pásu karet Scenic Windows 7. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásů karet](http://go.microsoft.com/fwlink/p/?linkid=129233) na webu MSDN.  
@@ -186,31 +186,31 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
 3.  Tlačítko aplikace můžete přizpůsobit úpravou jeho vlastnosti. ID zprávy, které se používají v tomto kódu jsou již definováni v nabídce Klikyháky 1.0.  
   
-4.  V návrhovém zobrazení klikněte na tlačítko aplikace zobrazíte její vlastnosti. Změnit hodnoty vlastností následujícím způsobem: **bitové kopie** k `IDB_RIBBON_MAIN`, **výzva** k `File`, **klíče** k `f`, **velkých obrázků** k `IDB_RIBBON_FILELARGE`, a **malých obrázků** k `IDB_RIBBON_FILESMALL`.  
+4.  V návrhovém zobrazení klikněte na tlačítko aplikace zobrazíte její vlastnosti. Změnit hodnoty vlastností následujícím způsobem: **bitové kopie** k *IDB_RIBBON_MAIN*, **výzva** k *soubor*, **klíče** k *f*, **velkých obrázků** k *IDB_RIBBON_FILELARGE*, a **malých obrázků** k *IDB_RIBBON_ FILESMALL*.  
   
 5.  Následující úpravy vytvořit v nabídce, která se zobrazí, když uživatel klikne na tlačítko aplikace. Klikněte na tlačítko se třemi tečkami (**...** ) vedle **položky hlavní** otevřete **položky Editor**.  
   
-    1.  Klikněte na tlačítko **přidat** přidání tlačítka. Změna **popisek** k `&New`, **ID** k `ID_FILE_NEW`, **bitové kopie** k `0`, **velký obrázek** k `0`.  
+    1.  Klikněte na tlačítko **přidat** přidání tlačítka. Změna **popisek** k *& Nový*, **ID** k *id_file_new –*, **bitové kopie** k *0*, **Velký obrázek** k *0*.  
   
-    2.  Klikněte na tlačítko **přidat** pro přidání druhé tlačítko. Změna **popisek** k `&Save`, **ID** k `ID_FILE_SAVE`, **bitové kopie** k `2`, a **velký obrázek** k `2`.  
+    2.  Klikněte na tlačítko **přidat** pro přidání druhé tlačítko. Změna **popisek** k *& Uložit*, **ID** k *id_file_save –*, **bitové kopie** k *2* , a **velký obrázek** k *2*.  
   
-    3.  Klikněte na tlačítko **přidat** třetí tlačítko Přidat. Změna **popisek** k `Save &As`, **ID** k `ID_FILE_SAVE_AS`, **bitové kopie** k `3`, a **velký obrázek** k `3`.  
+    3.  Klikněte na tlačítko **přidat** třetí tlačítko Přidat. Změna **popisek** k *& Uložit jako*, **ID** k *id_file_save_as –*, **bitové kopie** k *3*, a **velký obrázek** k *3*.  
   
-    4.  Klikněte na tlačítko **přidat** čtvrté tlačítko Přidat. Změna **popisek** k `&Print`, **ID** k `ID_FILE_PRINT`, **bitové kopie** k `4`, a **velký obrázek** k `4`.  
+    4.  Klikněte na tlačítko **přidat** čtvrté tlačítko Přidat. Změna **popisek** k *& Tisk*, **ID** k *id_file_print –*, **bitové kopie** k *4* , a **velký obrázek** k *4*.  
   
     5.  Změna **položky** typ **oddělovače** a pak klikněte na **přidat**.  
   
-    6.  Změna **položky** typ **tlačítko**. Klikněte na tlačítko **přidat** páté tlačítko Přidat. Změna **popisek** k `&Close`, **ID** k `ID_FILE_CLOSE`, **bitové kopie** k `5`, a **velký obrázek** k `5`.  
+    6.  Změna **položky** typ **tlačítko**. Klikněte na tlačítko **přidat** páté tlačítko Přidat. Změna **popisek** k *& Zavřít*, **ID** k *id_file_close –*, **bitové kopie** k *5* , a **velký obrázek** k *5*.  
   
 6.  Následující úpravy Vytvoření podnabídky pod na tlačítko Tisk, kterou jste vytvořili v předchozím kroku.  
   
-    1.  Klikněte na tlačítko **tiskových** tlačítko, změňte **položky** typ **popisek**a potom klikněte na **vložit**. Změna **popisek** k `Preview and print the document`.  
+    1.  Klikněte na tlačítko **tiskových** tlačítko, změňte **položky** typ **popisek**a potom klikněte na **vložit**. Změna **popisek** k *náhled a tisk dokumentu*.  
   
-    2.  Klikněte na tlačítko **tiskových** tlačítko, změňte **položky** typ **tlačítko**a klikněte na tlačítko **vložit**. Změna **popisek** k `&Print`, **ID** k `ID_FILE_PRINT`, **bitové kopie** k `4`, a **velký obrázek** k `4`.  
+    2.  Klikněte na tlačítko **tiskových** tlačítko, změňte **položky** typ **tlačítko**a klikněte na tlačítko **vložit**. Změna **popisek** k *& Tisk*, **ID** k *id_file_print –*, **bitové kopie** k *4* , a **velký obrázek** k *4*.  
   
-    3.  Klikněte **tiskových** tlačítko a pak klikněte na **vložit** přidání tlačítka. Změna **popisek** k `&Quick Print`, **ID** k `ID_FILE_PRINT_DIRECT`, **bitové kopie** k `7`, a **velký obrázek** k `7`.  
+    3.  Klikněte **tiskových** tlačítko a pak klikněte na **vložit** přidání tlačítka. Změna **popisek** k *& Rychlý tiskových*, **ID** k *ID_FILE_PRINT_DIRECT*, **bitové kopie** k *7*, a **velký obrázek** k *7*.  
   
-    4.  Klikněte na tlačítko **tiskových** tlačítko a pak klikněte na **vložit** na jiné tlačítko Přidat. Změna **popisek** k `Print Pre&view`, **ID** k `ID_FILE_PRINT_PREVIEW`, **bitové kopie** k `6`, a **velký obrázek** k `6`.  
+    4.  Klikněte na tlačítko **tiskových** tlačítko a pak klikněte na **vložit** na jiné tlačítko Přidat. Změna **popisek** k *& Náhled tisku*, **ID** k *id_file_print_preview –*, **bitové kopie** na *6*, a **velký obrázek** k *6*.  
   
     5.  Nyní jste změnili **položky hlavní**. Klikněte na tlačítko **Zavřít** ukončíte **položky Editor**.  
   
@@ -218,7 +218,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
     1.  V **vlastnosti** okně klikněte na tlačítko se třemi tečkami (**...** ) vedle **tlačítko** otevřete **položky Editor**.  
   
-    2.  Klikněte na tlačítko **přidat** přidání tlačítka. Změna **popisek** k `E&xit`, **ID** k `ID_APP_EXIT`, **bitové kopie** k `8`.  
+    2.  Klikněte na tlačítko **přidat** přidání tlačítka. Změna **popisek** k *vý &*, **ID** k *id_app_exit –*, **bitové kopie** k *8* .  
   
  [[Části](#top)]  
   
@@ -233,7 +233,7 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
     CMFCRibbonBar m_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ Tento návod ukazuje, jak upravit existující aplikaci MFC použít uživatelsk
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>Přidat kategorii domovské a upravit panely  
   
-1.  Scribble program vyžaduje pouze jednu kategorii. V návrhovém zobrazení, klikněte na tlačítko **kategorie** zobrazíte její vlastnosti. Následujícím způsobem změnit hodnoty vlastností: **popisek** k `&Home`, **velkých obrázků** k `IDB_RIBBON_HOMELARGE`, **malých obrázků** k `IDB_RIBBON_HOMESMALL`.  
+1.  Scribble program vyžaduje pouze jednu kategorii. V návrhovém zobrazení, klikněte na tlačítko **kategorie** zobrazíte její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **popisek** k *& Domů*, **velkých obrázků** k *IDB_RIBBON_HOMELARGE*,  **Malé obrázky** k *IDB_RIBBON_HOMESMALL*.  
   
-2.  Každá kategorie pásu karet je uspořádán do pojmenované panelů. Jednotlivé panely obsahuje sadu ovládacích prvků, které provádějí související operace. Tato kategorie má jednoho panelu. Klikněte na tlačítko **Panel**a poté změňte **popisek** k `Edit` a **Index bitové kopie** k `0`.  
+2.  Každá kategorie pásu karet je uspořádán do pojmenované panelů. Jednotlivé panely obsahuje sadu ovládacích prvků, které provádějí související operace. Tato kategorie má jednoho panelu. Klikněte na tlačítko **Panel**a poté změňte **popisek** k *upravit* a **Index bitové kopie** k *0*.  
   
-3.  Na **upravit** panelu, přidání tlačítka, která je odpovědná za vymazání obsah dokumentu. ID zprávy pro toto tlačítko již byl definován v rámci IDR_SCRIBBTYPE nabídky prostředku. Zadejte `Clear All` jako text tlačítka a index rastrového obrázku, která upraví tlačítko. Otevřete **sada nástrojů**a poté přetáhněte **tlačítko** k **upravit** panelu. Klikněte na tlačítko a poté změňte **popisek** k `Clear All`, **ID** k `ID_EDIT_CLEAR_ALL`, **Index bitové kopie** k `0`, **velké Index bitové kopie**  k `0`.  
+3.  Na **upravit** panelu, přidání tlačítka, která je odpovědná za vymazání obsah dokumentu. ID zprávy pro toto tlačítko již byl definován v rámci IDR_SCRIBBTYPE nabídky prostředku. Zadejte *Vymazat vše* jako text tlačítka a index rastrového obrázku, která upraví tlačítko. Otevřete **sada nástrojů**a poté přetáhněte **tlačítko** k **upravit** panelu. Klikněte na tlačítko a poté změňte **popisek** k *Vymazat vše*, **ID** k *id_edit_clear_all –*, **Index bitové kopie** k *0*, **velký obrázek indexu** k *0*.  
   
 4.  Uložte změny a sestavte a spusťte aplikaci. Aplikace Scribble mají být zobrazeny, a měl by mít panelu pásu karet v horní části okna místo řádku nabídek. Na pásu karet panelu musí mít jednu kategorii **Domů**, a **Domů** by měl mít jeden panel **upravit**. Tlačítka pásu karet, které jste přidali by měly být přidružené stávající obslužné rutiny událostí a **otevřete**, **Zavřít**, **Uložit**, **tiskových**, a **Vymazat vše** tlačítka by měla fungovat podle očekávání.  
   

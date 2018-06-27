@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385304"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955671"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Internetu bez úprav. Můžete však změnit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, existují další aspekty. Soubor .ocx a všechny podpůrné soubory musí být v cílovém počítači nebo stáhnout přes Internet. Díky velikosti kódu a stažení čas důležitý faktor. Stahování se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit ovládací prvek jako bezpečné pro skriptování a jako bezpečné pro inicializaci.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  `-s 6144` Parametr rezervy místa v souboru CAB pro podepisování kódu.  
   
 ### <a name="the-version-tag"></a>Verze značky  
- Všimněte si zde, že `#Version` informace zadaný soubor CAB se vztahují k ovládacímu prvku určeného `CLASSID` parametr `<OBJECT>` značky.  
+ Všimněte si zde, že `#Version` informace zadaný soubor CAB se vztahují k ovládacímu prvku určeného *atribut CLASSID* parametr `<OBJECT>` značky.  
   
- V závislosti na verzi zadaný můžete vynutit stažení ovládacího prvku. Pro dokončení specifikace `OBJECT` včetně značky `CODEBASE` parametr a referenční dokumentace najdete W3C.  
+ V závislosti na verzi zadaný můžete vynutit stažení ovládacího prvku. Pro dokončení specifikace `OBJECT` včetně značky *CODEBASE* parametr a referenční dokumentace najdete W3C.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Označení řízení bezpečné pro skriptování a inicializaci  
  Ovládací prvky ActiveX, které používají ve webových stránkách by měl být označen jako bezpečné pro skriptování a inicializaci, pokud jsou ve skutečnosti bezpečné. Bezpečné ovládací prvek nebude provádět v/v disku nebo přístup k paměti nebo registry počítače.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  V části OCX 96 pokyny ovládacího prvku musí vždy Uvědomte si, jeho palety na pozadí.  
   
- Odešle starší kontejnery, které nepoužívají vlastnost palette vedlejším `WM_QUERYNEWPALETTE` a `WM_PALETTECHANGED` zprávy. Můžete přepsat ovládacího prvku `OnQueryNewPalette` a `OnPaletteChanged` pro zpracování těchto zpráv.  
+ Starší kontejnery, které nepoužívají vlastnost palette vedlejším bude odesílat zprávy WM_QUERYNEWPALETTE a WM_PALETTECHANGED. Můžete přepsat ovládacího prvku `OnQueryNewPalette` a `OnPaletteChanged` pro zpracování těchto zpráv.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Řízení chování a úrovně zabezpečení prohlížeče Internet Explorer  
  Prohlížeč obsahuje možnosti pro úroveň zabezpečení, konfigurovatelná uživatelem. Protože webové stránky může obsahovat aktivní obsah, který může potenciálně poškodit počítač uživatele prohlížečů umožňuje uživateli vybrat možnosti pro úroveň zabezpečení. V závislosti na způsobu, prohlížeč implementuje úrovně zabezpečení ovládacího prvku nemusí vůbec stáhnout, nebo se zobrazí certifikát nebo upozornění chcete umožnit uživatelům zvolit za běhu, zda ke stažení ovládacího prvku. Níže je uveden seznam chování ovládacích prvků ActiveX v části zabezpečení Vysoká, střední a nízké úrovně v Internet Exploreru.  

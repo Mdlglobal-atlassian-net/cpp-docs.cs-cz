@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598dca9f0d5f394a8e742c1b886588eab3518bf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fc207dcff5002262c345b106be99a775ed626b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381508"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953720"
 ---
 # <a name="tree-control-item-labels"></a>Popisky položek ovládacího prvku strom
 Text popisku pro položku obvykle zadat, pokud položku přidáte do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` – Členská funkce můžete předat [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktura, která definuje vlastnosti položky, včetně řetězec obsahující text popisku. `InsertItem` má několik přetížení, která může být volána s různé kombinace parametrů.  
   
- Ovládací prvek stromu přidělí paměť pro ukládání každou položku; text popisky položek zabírá podstatnou část tuto paměť. Pokud vaše aplikace udržuje kopii řetězce v ovládacím prvku stromu, můžete snížit požadavky na paměť ovládacího prvku tak, že zadáte **LPSTR_TEXTCALLBACK** hodnotu **pszText** členem `TV_ITEM` nebo `lpszItem` parametr neprochází skutečné řetězce do ovládacího prvku strom. Pomocí **LPSTR_TEXTCALLBACK** způsobí, že k získání textu popisku položky z aplikace, vždy, když je položka překreslit ovládacího prvku strom. K získání textu, odešle ovládací prvek stromu [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) zprávy oznámení, která zahrnuje adresu [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. Musí odpovědět, a to nastavením odpovídající členů struktury zahrnuty.  
+ Ovládací prvek stromu přidělí paměť pro ukládání každou položku; text popisky položek zabírá podstatnou část tuto paměť. Pokud vaše aplikace udržuje kopii řetězce v ovládacím prvku stromu, můžete snížit požadavky na paměť ovládacího prvku tak, že zadáte **LPSTR_TEXTCALLBACK** hodnotu *pszText* členem `TV_ITEM` nebo *lpszItem* parametr neprochází skutečné řetězce do ovládacího prvku strom. Pomocí **LPSTR_TEXTCALLBACK** způsobí, že k získání textu popisku položky z aplikace, vždy, když je položka překreslit ovládacího prvku strom. K získání textu, odešle ovládací prvek stromu [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) zprávy oznámení, která zahrnuje adresu [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. Musí odpovědět, a to nastavením odpovídající členů struktury zahrnuty.  
   
  Ovládací prvek stromu používá paměti přidělené z haldy procesu, který vytváří ovládací prvek stromu. Maximální počet položek v ovládacím prvku stromu podle množství paměti k dispozici v haldě. Každá položka má 64 bajtů.  
   

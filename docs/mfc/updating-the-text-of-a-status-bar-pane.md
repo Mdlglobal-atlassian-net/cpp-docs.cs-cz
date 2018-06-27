@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb2f14f274be3c7282a897c271049fe46434f3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec085bcd519aa1694cb889a06ce9b1881e065514
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384475"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951483"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizace textu na panelu stavového řádku
 Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně panelu aplikace MFC stavu. Stavový řádek – objektem okna třídy [cstatusbar –](../mfc/reference/cstatusbar-class.md) – obsahuje několik "podokna." Každý podokno je obdélníkovou oblast stavový řádek, který můžete použít k zobrazení informací. Například mnoho aplikace se zobrazí stav klávesy CAPS LOCK NUMLOCK a jiných klíčů ve nejvíce vpravo podokna. Aplikace se zobrazí také často informativní text v krajní levé podokno (0), někdy označuje jako "podokno zpráva". Například výchozí MFC stavového řádku používá v podokně zpráv pro zobrazení řetězec vysvětlením tlačítko nabídky aktuálně vybrané položky nebo na panelu nástrojů. Na obrázku v [stavové řádky](../mfc/status-bar-implementation-in-mfc.md) zobrazuje indikátor stavu z aplikace vytvořené – Průvodce aplikací knihovny MFC.  
   
- Ve výchozím nastavení, nepovolí MFC `CStatusBar` podokně, když vytváří v podokně. Pokud chcete aktivovat podokno, musíte použít `ON_UPDATE_COMMAND_UI` makro pro každý podokně Stav panel a aktualizujte podokna. Protože podokna Neodesílat **wm_command –** zprávy (nejsou jako tlačítka panelu nástrojů), musíte ručně zadat kód.  
+ Ve výchozím nastavení, nepovolí MFC `CStatusBar` podokně, když vytváří v podokně. Pokud chcete aktivovat podokno, musíte použít on_update_command_ui – makro pro každý podokně na stavovém řádku a aktualizovat podokna. Protože podokna Neodesílat wm_command – zprávy (nejsou jako tlačítka panelu nástrojů), musíte ručně zadat kód.  
   
  Předpokládejme například, jeden podokno má `ID_INDICATOR_PAGE` jako jeho identifikátoru příkazu a který obsahuje aktuální číslo stránky v dokumentu. Následující postup popisuje, jak vytvořit nové podokno ve stavovém řádku.  
   
@@ -45,16 +45,16 @@ Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně pane
   
      K zobrazení prostředků otevřený, klikněte dvakrát na **řetězec tabulky** v okně, které jsou uvedeny typy prostředků pro vaši aplikaci. S **tabulky řetězců** editoru otevřete, zvolte **nový řetězec** z **vložit** nabídky. V okně Vlastnosti řetězce, vyberte ID do podokna příkazu (například `ID_INDICATOR_PAGE`) a zadejte výchozí hodnotu řetězce, jako je například "Stránka". Zavřete editor řetězce. (Potřebujete výchozí řetězec, aby se zabránilo chybě kompilátoru.)  
   
-3.  Přidat podokno **indikátory** pole.  
+3.  Přidat podokno *indikátory* pole.  
   
-     V souboru MAINFRM. CPP, vyhledejte **indikátory** pole. Toto pole obsahuje ID příkazu pro všechny indikátory stavového řádku v pořadí zleva doprava. V odpovídajícím bodě v poli, zadejte do podokna příkazu ID, jak je vidět tady pro `ID_INDICATOR_PAGE`:  
+     V souboru MAINFRM. CPP, vyhledejte *indikátory* pole. Toto pole obsahuje ID příkazu pro všechny indikátory stavového řádku v pořadí zleva doprava. V odpovídajícím bodě v poli, zadejte do podokna příkazu ID, jak je vidět tady pro `ID_INDICATOR_PAGE`:  
   
      [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
   
- Doporučený způsob zobrazení textu v podokno je volání **SetText –** funkce člena třídy `CCmdUI` v obslužná rutina funkci aktualizace pro podokně. Například můžete chtít nastavit proměnná typu integer `m_nPage` obsahující aktuální číslo stránky a použijte **SetText –** nastavení textu v podokně na řetězec verzi toto číslo.  
+ Doporučený způsob zobrazení textu v podokno je volání `SetText` funkce člena třídy `CCmdUI` v obslužná rutina funkci aktualizace pro podokně. Například můžete chtít nastavit proměnná typu integer *m_nPage* obsahující aktuální číslo stránky a použijte `SetText` nastavení textu v podokně na řetězec verzi toto číslo.  
   
 > [!NOTE]
->  **SetText –** se doporučuje přístup. Je možné provést tuto úlohu na mírně nižší úrovni voláním `CStatusBar` – členská funkce `SetPaneText`. I tak je stále nutné obslužnou rutinu aktualizace. Bez takové obslužnou rutinu pro podokně MFC automaticky zakáže podokně mazání jeho obsah.  
+>  `SetText` Se doporučuje přístup. Je možné provést tuto úlohu na mírně nižší úrovni voláním `CStatusBar` – členská funkce `SetPaneText`. I tak je stále nutné obslužnou rutinu aktualizace. Bez takové obslužnou rutinu pro podokně MFC automaticky zakáže podokně mazání jeho obsah.  
   
  Následující postup ukazuje, jak používat funkci obslužné rutiny aktualizace zobrazení textu v podokně.  
   
@@ -72,11 +72,11 @@ Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně pane
   
      Poslední tři řádky této rutiny se kód, který zobrazí text.  
   
-3.  V příslušnou zprávu mapy, přidejte `ON_UPDATE_COMMAND_UI` makro, jak je vidět tady pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):  
+3.  V mapě příslušná zpráva přidat on_update_command_ui – makro, jak je vidět tady pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):  
   
      [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
   
- Jakmile definujete hodnotu `m_nPage` členské proměnné (třídy `CMainFrame`), tento postup způsobí, že se objeví v podokně během zpracování při nečinnosti stejným způsobem, že aplikace aktualizuje další indikátory číslo stránky. Pokud `m_nPage` změn, změny zobrazení během další nečinné smyčky.  
+ Jakmile definujete hodnotu *m_nPage* členské proměnné (třídy `CMainFrame`), tento postup způsobí, že se objeví v podokně během zpracování při nečinnosti stejným způsobem, že aplikace aktualizuje další indikátory číslo stránky. Pokud *m_nPage* změn, změny zobrazení během další nečinné smyčky.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   

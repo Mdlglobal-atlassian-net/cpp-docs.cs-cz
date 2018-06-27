@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385628"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950211"
 ---
 # <a name="using-documents"></a>Použití dokumentů
 Spolupráci, dokumenty a zobrazení:  
@@ -44,7 +44,7 @@ Spolupráci, dokumenty a zobrazení:
   
 -   [Zpracování](../mfc/handling-commands-in-the-document.md) většina příkazů a zpráv vaší aplikace.  
   
- Dokument je zvláště účastnící se správa dat. Ukládání dat, obvykle v dokumentu třída členské proměnné. Pro přístup k datům pro zobrazení a aktualizaci zobrazení používá tyto proměnné. Mechanismu serializace výchozí dokumentu spravuje čtení a zápis dat do a z soubory. Dokumenty může také zpracovat příkazy (ale ne Windows zprávy jiné než **wm_command –**).  
+ Dokument je zvláště účastnící se správa dat. Ukládání dat, obvykle v dokumentu třída členské proměnné. Pro přístup k datům pro zobrazení a aktualizaci zobrazení používá tyto proměnné. Mechanismu serializace výchozí dokumentu spravuje čtení a zápis dat do a z soubory. Dokumenty může také zpracovat příkazy (ale ne zpráv systému Windows než wm_command –).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   

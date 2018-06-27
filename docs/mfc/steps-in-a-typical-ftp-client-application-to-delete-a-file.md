@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb595dfdc1a73ecd068e251cec5df99d4daaab30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380562"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951917"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Postup odstranění souboru v typické aplikaci klienta FTP
 Následující tabulka uvádí kroky, které můžete provést v typické aplikaci klienta FTP, který odstraní soubor.  
@@ -35,7 +35,7 @@ Následující tabulka uvádí kroky, které můžete provést v typické aplika
 |Změnit na nový adresář serveru FTP na serveru.|Použití [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Změní na adresář, který jste aktuálně připojeni k na serveru.|  
 |Najít první soubor v adresáři serveru FTP.|Použití [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Vyhledá první soubor. Vrátí hodnotu FALSE, pokud nejsou nalezeny žádné soubory.|  
 |Najít další soubor v adresáři serveru FTP.|Použití [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Vyhledá další soubor. Vrátí hodnotu FALSE, pokud soubor nebyl nalezen.|  
-|Odstraňte soubor nalezena **FindFile** nebo `FindNextFile`.|Použití [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), pomocí názvu souboru vrácený **FindFile** nebo `FindNextFile`.|Odstraní soubor na serveru pro čtení nebo zápis.|  
+|Odstraňte soubor nalezena `FindFile` nebo `FindNextFile`.|Použití [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), pomocí názvu souboru vrácený `FindFile` nebo `FindNextFile`.|Odstraní soubor na serveru pro čtení nebo zápis.|  
 |Zpracování výjimek.|Použití [CInternetException](../mfc/reference/cinternetexception-class.md) třídy.|Zpracovává všechny běžné typy výjimek Internetu.|  
 |Ukončení relace FTP.|Odstranění [CInternetSession](../mfc/reference/cinternetsession-class.md) objektu.|Automaticky vyčistí otevřených popisovačů souborů a připojení.|  
   

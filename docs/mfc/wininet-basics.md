@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38506d0b25918bbc9d70ec1801971b070d620bf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7061c3203436197eb1bd03ae56058e0bd0f26f9d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385921"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955580"
 ---
 # <a name="wininet-basics"></a>WinInet – základy
-WinInet můžete přidat podporu FTP ke stažení a ukládání souborů z v rámci vaší aplikace. Můžete přepsat [onstatuscallback –](../mfc/reference/cinternetsession-class.md#onstatuscallback) a použít `dwContext` parametr zadat informace o průběhu pro uživatele, jsou pro hledání a stahování souborů.  
+WinInet můžete přidat podporu FTP ke stažení a ukládání souborů z v rámci vaší aplikace. Můžete přepsat [onstatuscallback –](../mfc/reference/cinternetsession-class.md#onstatuscallback) a použít *dwContext* parametr zadat informace o průběhu pro uživatele, jsou pro hledání a stahování souborů.  
   
  Tento článek obsahuje následující témata:  
   
@@ -57,14 +57,14 @@ WinInet můžete přidat podporu FTP ke stažení a ukládání souborů z v rá
 ## <a name="use-onstatuscallback"></a>Onstatuscallback – použití  
  Při používání tříd WinInet, můžete použít [onstatuscallback –](../mfc/reference/cinternetsession-class.md#onstatuscallback) členem vaší aplikace [CInternetSession](../mfc/reference/cinternetsession-class.md) objekt, který chcete načíst informace o stavu. Pokud odvozujete vlastní `CInternetSession` objektu, přepsání `OnStatusCallback`a povolit stav zpětná volání, zavolá MFC vaší `OnStatusCallback` funkce s informace o průběhu o všechny aktivity v této relaci Internet.  
   
- Protože jedné relace může podporovat několik připojení, (a které průběhu své životnosti, může provedení mnoha různých různých operací), `OnStatusCallback` musí mechanismus k identifikaci každé změně stavu s konkrétní připojení nebo transakci. Tento mechanismus jsou poskytovány na řadu členské funkce ve podpůrných tříd WinInet parametru ID kontextu. Tento parametr je vždy typu `DWORD` a je vždy s názvem `dwContext`.  
+ Protože jedné relace může podporovat několik připojení, (a které průběhu své životnosti, může provedení mnoha různých různých operací), `OnStatusCallback` musí mechanismus k identifikaci každé změně stavu s konkrétní připojení nebo transakci. Tento mechanismus jsou poskytovány na řadu členské funkce ve podpůrných tříd WinInet parametru ID kontextu. Tento parametr je vždy typu **DWORD** a je vždy s názvem *dwContext*.  
   
  Kontext přiřazen určitý objekt Internet slouží pouze k identifikaci aktivity objekt způsobí, že v `OnStatusCallback` členem `CInternetSession` objektu. Volání `OnStatusCallback` přijímá několik parametrů, tyto parametry spolupracují oznámit aplikaci, které nebyly pro jaké transakce a připojení.  
   
- Při vytváření `CInternetSession` objekt, můžete zadat `dwContext` parametr konstruktoru. `CInternetSession` samotný nepoužívá ID kontextu; Místo toho předává ID kontextu k žádné **InternetConnection**-odvozené objekty, které explicitně Nezískávat vlastní ID kontextu. V vypnout, ty `CInternetConnection` objekty předá ID kontextu společně na `CInternetFile` objekty vytvoří Pokud nezadáte explicitně kontextu jiné ID. Pokud na druhé straně určíte vlastní ID konkrétní kontextu, objekt a všechny pracovní bude přidružen ID tohoto kontextu. Kontext ID můžete použít k identifikaci, jaké informace o stavu je ohledem v vaší `OnStatusCallback` funkce.  
+ Při vytváření `CInternetSession` objekt, můžete zadat *dwContext* parametr konstruktoru. `CInternetSession` samotný nepoužívá ID kontextu; Místo toho předává ID kontextu k žádné **InternetConnection**-odvozené objekty, které explicitně Nezískávat vlastní ID kontextu. V vypnout, ty `CInternetConnection` objekty předá ID kontextu společně na `CInternetFile` objekty vytvoří Pokud nezadáte explicitně kontextu jiné ID. Pokud na druhé straně určíte vlastní ID konkrétní kontextu, objekt a všechny pracovní bude přidružen ID tohoto kontextu. Kontext ID můžete použít k identifikaci, jaké informace o stavu je ohledem v vaší `OnStatusCallback` funkce.  
   
 ##  <a name="_core_display_progress_information_while_transferring_files"></a> Zobrazit informace o průběhu při přenosu souborů  
- Například pokud píšete aplikaci, která vytvoří připojení k serveru FTP pro čtení souboru a také se připojí k serveru HTTP získat na webové stránce, budete mít `CInternetSession` objektu, dva `CInternetConnection` objekty (jeden by **CFtpSession** a dalších by **CHttpSession**) a dvě `CInternetFile` objekty (jeden pro každé připojení). Pokud jste použili výchozí hodnoty pro `dwContext` parametrů, nebude možné rozlišit mezi `OnStatusCallback` volání, které indikují průběh pro připojení FTP a volání, které indikují průběh pro připojení protokolu HTTP. Pokud zadáte `dwContext` ID, které lze později otestovat v `OnStatusCallback`, budete vědět, kterou operaci generované zpětné volání.  
+ Například pokud píšete aplikaci, která vytvoří připojení k serveru FTP pro čtení souboru a také se připojí k serveru HTTP získat na webové stránce, budete mít `CInternetSession` objektu, dva `CInternetConnection` objekty (jeden by `CFtpSession` a dalších by `CHttpSession`) a dvě `CInternetFile` objekty (jeden pro každé připojení). Pokud jste použili výchozí hodnoty pro *dwContext* parametrů, nebude možné rozlišit mezi `OnStatusCallback` volání, které indikují průběh pro připojení FTP a volání, které indikují průběh pro Připojení HTTP. Pokud zadáte *dwContext* ID, které lze později otestovat v `OnStatusCallback`, budete vědět, kterou operaci generované zpětné volání.  
   
 ## <a name="see-also"></a>Viz také  
  [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   

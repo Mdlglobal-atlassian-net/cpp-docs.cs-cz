@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357084"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957195"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect – třída
 Implementuje funkce obdélníku, jehož strany může být animace.  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLeftTransition`  
+ *pLeftTransition*  
  Určuje přechodu pro levé straně.  
   
- `pTopTransition`  
+ *pTopTransition*  
  Určuje přechodu pro horní straně.  
   
- `pRightTransition`  
+ *pRightTransition*  
  Určuje přechodu pro pravé straně.  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  Určuje přechodu pro dole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Určuje výchozí obdélník.  
   
- `nGroupID`  
+ *nGroupID*  
  Určuje ID skupiny.  
   
- `nObjectID`  
+ *nObjectID*  
  Určuje ID objektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Určuje uživatelská data.  
   
- `pt`  
+ *PT*  
  Souřadnice levého horního rohu.  
   
- `sz`  
+ *sz*  
  Velikost rámečku.  
   
- `nLeft`  
+ *nLeft*  
  Určuje souřadnice levého hranice.  
   
- `nTop`  
+ *sady Windows NT*  
  Určuje souřadnici horní vázána.  
   
- `nRight`  
+ *nRight*  
  Určuje souřadnici správné hranice.  
   
- `nBottom`  
+ *nBottom*  
  Určuje souřadnici dolní vázána.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *obrázků*  
  Když funkce vrátí hodnotu, obsahuje odkazy na čtyři CAnimationVariable objekty, které představují souřadnice obdélník.  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Výstup. Po návratu tato metoda obsahuje aktuální hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Nová hodnota obdélníku animace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Určuje nové výchozí hodnoty pro vlevo, horní, pravé a dolní.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53daaaa5ef4997762342cbfb74ae4d5fa96097d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d86faf89aea0f991a9fdd27bec6bb7969404986
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366158"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956908"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo – struktura
 `CDaoRelationFieldInfo` Struktura obsahuje informace o pole v vztah definovaný pro přístup k objektům dat (DAO).  
@@ -38,10 +38,10 @@ struct CDaoRelationFieldInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Název pole ve vztahu k primární tabulce.  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  Název pole v tabulce cizí vztahu.  
   
 ## <a name="remarks"></a>Poznámky  

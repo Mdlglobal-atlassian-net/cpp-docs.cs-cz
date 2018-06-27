@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025fd280dc6bf0947dae59cf77abe141bc312df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88f86a8f22bae990261be5150755a26d50d4bef8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385190"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950458"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Typově bezpečný přístup k ovládacím prvkům s průvodci kódem
 Pokud jste obeznámeni s funkcemi DDX, můžete použít vlastnost ovládacího prvku v [Průvodce přidáním členské proměnné](../ide/add-member-variable-wizard.md) vytvořit typově bezpečný přístup. Tento přístup je jednodušší než vytváření ovládacím prvkům bez průvodců kódem.  
   
  Pokud chcete jednoduše přístup k ovládacím prvku hodnotu, poskytuje DDX ji. Pokud chcete získat přístup více než hodnota ovládacího prvku, použijte Průvodce přidáním členské proměnné přidání členské proměnné příslušné třídy do vlastní třídy dialogového okna. Tato proměnná člen připojte k vlastnosti ovládacího prvku.  
   
- Členské proměnné může mít vlastnost řídicí místo vlastnosti Value. Hodnota vlastnosti odkazuje na typ data vrácená z ovládacího prvku, například `CString` nebo `int`. Vlastnost ovládacího prvku umožňuje přímý přístup k řízení prostřednictvím datový člen, jejichž typ je jedním z třídy ovládacích prvků v prostředí MFC, jako například `CButton` nebo `CEdit`.  
+ Členské proměnné může mít vlastnost řídicí místo vlastnosti Value. Hodnota vlastnosti odkazuje na typ data vrácená z ovládacího prvku, například `CString` nebo **int**. Vlastnost ovládacího prvku umožňuje přímý přístup k řízení prostřednictvím datový člen, jejichž typ je jedním z třídy ovládacích prvků v prostředí MFC, jako například `CButton` nebo `CEdit`.  
   
 > [!NOTE]
 >  Pro daný ovládací prvek můžete, pokud chcete, máte několik členské proměnné se hodnota vlastnosti a maximálně jeden členské proměnné s vlastností ovládacího prvku. Může mít pouze jeden objekt MFC mapovat do ovládacího prvku, protože více objektů, které jsou připojené k prvku nebo libovolného jiného okna nezkopírujete, dojde k to nejednoznačnost v mapy zpráv.  
   
- Tento objekt můžete použít k volání funkce kteréhokoli člena pro objekt ovládacího prvku. Takové volání ovlivní ovládacího prvku v dialogovém okně. Například pro ovládací prvek zaškrtávací políčko reprezentována proměnné `m_Checkbox`, typu `CButton`, může volat:  
+ Tento objekt můžete použít k volání funkce kteréhokoli člena pro objekt ovládacího prvku. Takové volání ovlivní ovládacího prvku v dialogovém okně. Například pro ovládací prvek zaškrtávací políčko reprezentována proměnné *m_Checkbox*, typu `CButton`, může volat:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
   
- Zde členské proměnné `m_Checkbox` slouží ke stejnému účelu jako členskou funkci `GetMyCheckbox` ukazuje [typově bezpečný přístup k ovládacích prvků bez průvodců kódem](../mfc/type-safe-access-to-controls-without-code-wizards.md). Pokud políčko není zaškrtnutí políčka automaticky, stále nutné obslužnou rutinu v vlastní třídy dialogového okna pro **BN_CLICKED** oznámení ovládacího prvku při kliknutí na tlačítko.  
+ Zde členské proměnné *m_Checkbox* slouží ke stejnému účelu jako členskou funkci `GetMyCheckbox` ukazuje [typově bezpečný přístup k ovládacích prvků bez průvodců kódem](../mfc/type-safe-access-to-controls-without-code-wizards.md). Pokud políčko není zaškrtnutí políčka automaticky, stále potřebovali byste obslužnou rutinu v vlastní třídy dialogového okna pro zprávu oznámení ovládacího prvku BN_CLICKED při kliknutí na tlačítko.  
   
  Další informace o ovládacích prvcích najdete v tématu [ovládací prvky](../mfc/controls-mfc.md).  
   

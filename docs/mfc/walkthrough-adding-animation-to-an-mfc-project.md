@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ae7496daf6827a6be7769d60af10bca45f7a3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edc17f099a208e69242a51c1273b1bd11bb5353d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384746"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954566"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Návod: Přidání animace do projektu MFC
 Tento názorný postup učí, jak přidat základní animovaný objekt pro aplikaci Visual C++, projektu Microsoft Foundation Class Library (MFC).  
@@ -48,7 +48,7 @@ Tento názorný postup učí, jak přidat základní animovaný objekt pro aplik
   
 1.  Na **soubor** nabídky, přejděte na příkaz **nový** a pak klikněte na **projektu**.  
   
-2.  V **nový projekt** dialogové okno, v levém podokně v části **nainstalovaných šablonách**, rozbalte položku **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte `MFCAnimationWalkthrough`. Click **OK**.  
+2.  V **nový projekt** dialogové okno, v levém podokně v části **nainstalovaných šablonách**, rozbalte položku **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCAnimationWalkthrough*. Klikněte na tlačítko **OK**.  
   
 3.  V **Průvodce aplikací knihovny MFC** dialogové okno ověřte, zda **typ aplikace** je **více dokumentů**, **styl projektu** je  **Visual Studio**a **Document/View – architektura podporu** je vybraná možnost. Klikněte na tlačítko **Dokončit**.  
   
@@ -58,13 +58,13 @@ Tento názorný postup učí, jak přidat základní animovaný objekt pro aplik
   
 2.  V **zobrazení prostředků**, přejděte na **nabídky** složky a otevřete ji. Dvakrát klikněte `IDR_MFCAnimationWalTYPE` prostředků otevřít pro úpravy.  
   
-3.  V řádku nabídek v **zde typ** zadejte `A&nimation` k vytvoření nabídky animace.  
+3.  V řádku nabídek v **zde typ** zadejte *A & nimaci* k vytvoření nabídky animace.  
   
-4.  V části **animace**v **zde typ** zadejte `Start &Forward` k vytvoření příkazu Start dál.  
+4.  V části **animace**v **zde typ** zadejte *spustit & předávat* k vytvoření příkazu Start dál.  
   
-5.  V části **spustit dál**v **zde typ** zadejte `Start &Backward`.  
+5.  V části **spustit dál**v **zde typ** zadejte *počáteční & zpětně*.  
   
-6.  V části **spustit zpětné**v **zde typ** zadejte `S&top` vytvořit příkaz Stop.  
+6.  V části **spustit zpětné**v **zde typ** zadejte *& Zastavit* vytvořit příkaz Stop.  
   
 7.  MFCAnimationWalkthrough.rc uložte a zavřete ji.  
   
@@ -152,173 +152,132 @@ Tento názorný postup učí, jak přidat základní animovaný objekt pro aplik
   
  ```  
     m_animationController.EnableAnimationTimerEventHandler();
-m_animationController.EnablePriorityComparisonHandler(UI_ANIMATION_PHT_TRIM);
+    m_animationController.EnablePriorityComparisonHandler(UI_ANIMATION_PHT_TRIM);
 
- 
-    m_animationColor = RGB(255,
-    255,
-    255);
+    m_animationColor = RGB(255, 255, 255);
 
-    m_animationRect = CRect(0,
-    0,
-    0,
-    0);
+    m_animationRect = CRect(0, 0, 0, 0);
 
- 
-    m_animationColor.SetID(-1,
-    nAnimationGroup);
+    m_animationColor.SetID(-1, nAnimationGroup);
 
-    m_animationRect.SetID(-1,
-    nAnimationGroup);
+    m_animationRect.SetID(-1, nAnimationGroup);
 
- 
     m_animationController.AddAnimationObject(&m_animationColor);
 
- m_animationController.AddAnimationObject(&m_animationRect);
-
+    m_animationController.AddAnimationObject(&m_animationRect);
  ```  
   
 7.  Vyhledejte `CAnimationWalthroughView::PreCreateWindow` metodu a nahraďte ji následujícím kódem.  
   
  ```  
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)  
- { *// TODO: Modify the Window class or styles here by modifying *//  the CREATESTRUCT cs  
+     { *// TODO: Modify the Window class or styles here by modifying *//  the CREATESTRUCT cs  
  
     m_animationController.SetRelatedWnd(this);
 
- return CView::PreCreateWindow(cs);
+     return CView::PreCreateWindow(cs);
 
- }  
+     }  
  ```  
   
 8.  Vyhledejte `CAnimationWalkthroughView::OnDraw` metodu a nahraďte ji následujícím kódem.  
   
  ```  
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)  
- {  
-    CMFCAnimationWalkthroughDoc* pDoc = GetDocument();
-ASSERT_VALID(pDoc);
-
- if (!pDoc)  
-    return; 
- *// TODO: add draw code for native data here  
-    CMemDC dcMem(*pDC,
-    this);
-
-    CDC& dc = dcMem.GetDC();
-
- 
-    CRect rect;  
-    GetClientRect(rect);
-
- 
-    dc.FillSolidRect(rect,
-    GetSysColor(COLOR_WINDOW));
-
- 
-    CString strRGB;  
-    strRGB.Format(_T("Fill Color is: %d; %d; %d"),
-    GetRValue(m_animationColor),
-    GetGValue(m_animationColor),
-    GetBValue(m_animationColor));
-
- 
-    dc.DrawText(strRGB,
-    rect,
-    DT_CENTER);
-
-    rect.top += nInfoAreaHeight;  
- 
-    CBrush br;  
- 
-    br.CreateSolidBrush(m_animationColor);
-
- CBrush* pBrushOld = dc.SelectObject(&br);
-
- 
-    dc.Rectangle((CRect)m_animationRect);
-
- dc.SelectObject(pBrushOld);
-
- }  
+    {  
+        CMFCAnimationWalkthroughDoc* pDoc = GetDocument();
+        ASSERT_VALID(pDoc);
+    
+        if (!pDoc)  
+           return; 
+        // TODO: add draw code for native data here  
+        CMemDC dcMem(*pDC, this);
+    
+        CDC& dc = dcMem.GetDC();
+    
+        CRect rect;  
+        GetClientRect(rect);
+    
+        dc.FillSolidRect(rect,
+        GetSysColor(COLOR_WINDOW));
+    
+        CString strRGB;  
+        strRGB.Format(_T("Fill Color is: %d; %d; %d"),
+        GetRValue(m_animationColor),
+        GetGValue(m_animationColor),
+        GetBValue(m_animationColor));
+    
+        dc.DrawText(strRGB, rect, DT_CENTER);
+    
+        rect.top += nInfoAreaHeight;  
+     
+        CBrush br;  
+     
+        br.CreateSolidBrush(m_animationColor);
+    
+        CBrush* pBrushOld = dc.SelectObject(&br);
+    
+        dc.Rectangle((CRect)m_animationRect);
+    
+        dc.SelectObject(pBrushOld);
+    }  
  ```  
   
 9. Na konci souboru přidejte následující kód.  
   
  ```  
     void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)  
- {  
-    static UI_ANIMATION_SECONDS duration = 3;  
-    static DOUBLE dblSpeed = 35.;  
-    static BYTE nStartColor = 50;  
-    static BYTE nEndColor = 255;  
- 
-    BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;  
-    BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;  
-    BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;  
- 
-    CLinearTransition* pRedTransition = new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
-
-    CSmoothStopTransition* pGreenTransition = new CSmoothStopTransition(duration, (DOUBLE)nGreenColorFinal);
-
-    CLinearTransitionFromSpeed* pBlueTransition = new CLinearTransitionFromSpeed(dblSpeed, (DOUBLE)nBlueColorFinal);
-
- 
-    m_animationColor.AddTransition(pRedTransition,
-    pGreenTransition,
-    pBlueTransition);
-
- 
-    CRect rectClient;  
-    GetClientRect(rectClient);
-
- rectClient.top += nInfoAreaHeight;  
- 
-    int nLeftFinal = bDirection  rectClient.left : rectClient.CenterPoint().x;  
-    int nTopFinal = bDirection  rectClient.top : rectClient.CenterPoint().y;  
-    int nRightFinal = bDirection  rectClient.right : rectClient.CenterPoint().x;  
-    int nBottomFinal = bDirection  rectClient.bottom : rectClient.CenterPoint().y;  
- 
-    CLinearTransition* pLeftTransition = new CLinearTransition(duration,
-    nLeftFinal);
-
-    CLinearTransition* pTopTransition = new CLinearTransition(duration,
-    nTopFinal);
-
-    CLinearTransition* pRightTransition = new CLinearTransition(duration,
-    nRightFinal);
-
-    CLinearTransition* pBottomTransition = new CLinearTransition(duration,
-    nBottomFinal);
-
- 
-    m_animationRect.AddTransition(pLeftTransition,
-    pTopTransition,
-    pRightTransition,
-    pBottomTransition);
-
- 
-    CBaseKeyFrame* pKeyframeStart = CAnimationController::GetKeyframeStoryboardStart();
-CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup,
-    pBlueTransition);
-
- 
-    pLeftTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
-    pTopTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
-    pRightTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
-    pBottomTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
- 
-    m_animationController.AnimateGroup(nAnimationGroup);
-
- }  
+    {  
+        static UI_ANIMATION_SECONDS duration = 3;  
+        static DOUBLE dblSpeed = 35.;  
+        static BYTE nStartColor = 50;  
+        static BYTE nEndColor = 255;  
+     
+        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;  
+        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;  
+        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;  
+     
+        CLinearTransition* pRedTransition = new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
+    
+        CSmoothStopTransition* pGreenTransition = new CSmoothStopTransition(duration, (DOUBLE)nGreenColorFinal);
+    
+        CLinearTransitionFromSpeed* pBlueTransition = new CLinearTransitionFromSpeed(dblSpeed, (DOUBLE)nBlueColorFinal);
+    
+        m_animationColor.AddTransition(pRedTransition, pGreenTransition, pBlueTransition);
+    
+        CRect rectClient;  
+        GetClientRect(rectClient);
+    
+        rectClient.top += nInfoAreaHeight;  
+     
+        int nLeftFinal = bDirection  rectClient.left : rectClient.CenterPoint().x;  
+        int nTopFinal = bDirection  rectClient.top : rectClient.CenterPoint().y;  
+        int nRightFinal = bDirection  rectClient.right : rectClient.CenterPoint().x;  
+        int nBottomFinal = bDirection  rectClient.bottom : rectClient.CenterPoint().y;  
+     
+        CLinearTransition* pLeftTransition = new CLinearTransition(duration, nLeftFinal);
+    
+        CLinearTransition* pTopTransition = new CLinearTransition(duration, nTopFinal);
+    
+        CLinearTransition* pRightTransition = new CLinearTransition(duration, nRightFinal);
+    
+        CLinearTransition* pBottomTransition = new CLinearTransition(duration, nBottomFinal);
+    
+        m_animationRect.AddTransition(pLeftTransition, pTopTransition, pRightTransition, pBottomTransition);
+    
+        CBaseKeyFrame* pKeyframeStart = CAnimationController::GetKeyframeStoryboardStart();
+        CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup, pBlueTransition);
+    
+        pLeftTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        pTopTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        pRightTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        pBottomTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        m_animationController.AnimateGroup(nAnimationGroup);
+    }  
  ```  
   
 10. Na **projektu** nabídky, klikněte na tlačítko **Průvodce třídou**.  
@@ -331,36 +290,32 @@ CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup,
   
  ```  
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)  
- {  
-    return TRUE;  
- }  
+    {  
+        return TRUE;  
+    }  
  ```  
   
 14. Nahraďte implementace `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, a `CMFCAnimationWalkthroughView::OnAnimationStop` následujícím kódem.  
   
  ```  
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()  
- {  
-    Animate(TRUE);
-
- }  
+    {  
+        Animate(TRUE);
+    }  
  
     void CMFCAnimationWalkthroughView::OnAnimationStartbackward()  
- {  
-    Animate(FALSE);
-
- }  
+    {  
+        Animate(FALSE);
+    }  
  
     void CMFCAnimationWalkthroughView::OnAnimationStop()  
- {  
-    IUIAnimationManager* pManager = m_animationController.GetUIAnimationManager();
-if (pManager != NULL)  
- {  
-    pManager->AbandonAllStoryboards();
-
- }  
- }  
- 
+    {  
+        IUIAnimationManager* pManager = m_animationController.GetUIAnimationManager();
+        if (pManager != NULL)  
+        {  
+            pManager->AbandonAllStoryboards();
+        }  
+    }  
  ```  
   
 15. Soubor uložte a zavřete ho.  
@@ -384,32 +339,23 @@ if (pManager != NULL)
 6.  V MFCAnimationWalkthroughView.cpp, nahraďte kód pro `CMFCAnimationWalkthroughView::OnSize` následujícím kódem.  
   
  ```  
-    void CMFCAnimationWalkthroughView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
+    void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
 
- 
-    CRect rect;  
-    GetClientRect(rect);
-
- rect.top += nInfoAreaHeight;  
- 
-    CRect rectAnim = m_animationRect;  
-    m_animationRect = CRect(CPoint(rect.CenterPoint().x - rectAnim.Width() / 2,   
-    rect.CenterPoint().y - rectAnim.Height() / 2),   
-    rectAnim.Size());
-
- 
-    if (m_animationController.IsAnimationInProgress())  
- {  
-    Animate(m_bCurrentDirection);
-
- }  
- }  
+        CRect rect;  
+        GetClientRect(rect);
+    
+        rect.top += nInfoAreaHeight;  
+     
+        CRect rectAnim = m_animationRect;  
+        m_animationRect = CRect(CPoint(rect.CenterPoint().x - rectAnim.Width() / 2, rect.CenterPoint().y - rectAnim.Height() / 2), rectAnim.Size());
+    
+        if (m_animationController.IsAnimationInProgress())  
+        {  
+            Animate(m_bCurrentDirection);
+        }  
+    }  
  ```  
   
 7.  Na začátku v konstruktoru pro `CMFCAnimationWalkthroughView`, přidejte následující kód.  

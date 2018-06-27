@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386051"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955889"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutiny DDX a DDV
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  Seznam všech rutiny výměny dat dialogového okna a rutiny ověřování dat dialogového okna dodávané s knihovnou MFC naleznete v tématu 'afxdd_.h'.  
   
- Právě toho pak bude dat dialogových oken: data členů v **CMyDialog** třídy. Nejsou uložena v struktury nebo nic podobné.  
+ Právě toho pak bude dat dialogových oken: data členů v `CMyDialog` třídy. Nejsou uložena v struktury nebo nic podobné.  
   
 ## <a name="notes"></a>Poznámky  
  I když nazýváme soubor "dat dialogových oken", všechny funkce jsou k dispozici v jakékoli třídy odvozené od `CWnd` a nejsou omezeny pouze dialogy.  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>Jak to funguje  
  Není nutné pochopit následující, abyste mohli používat dat dialogových oken. Však pochopení, jak to funguje na pozadí můžete napsat vlastní proceduru exchange nebo ověření.  
   
- `DoDataExchange` – Členská funkce je podobné jako `Serialize` – členská funkce – je zodpovědná za získání nebo nastavení data do nebo z formuláře externí (v tomto případě ovládacích prvků do dialogového okna) z/do data členů v třídě. `pDX` Parametr je kontext provádění výměny dat a je podobná `CArchive` parametru `CObject::Serialize`. `pDX` ( `CDataExchange` Objektu) s se příznak mnohem jako `CArchive` má příznak směru:  
+ `DoDataExchange` – Členská funkce je podobné jako `Serialize` – členská funkce – je zodpovědná za získání nebo nastavení data do nebo z formuláře externí (v tomto případě ovládacích prvků do dialogového okna) z/do data členů v třídě. *PDX* parametr je kontext provádění výměny dat a je podobná `CArchive` parametru `CObject::Serialize`. *PDX* ( `CDataExchange` objektu) s se příznak mnohem jako `CArchive` má příznak směru:  
   
--   Pokud **! m_bSaveAndValidate**, pak můžete načíst stav dat do ovládacích prvků.  
+-   Pokud! *m_bSaveAndValidate*, pak můžete načíst stav dat do ovládacích prvků.  
   
--   Pokud `m_bSaveAndValidate`, potom nastavit stav data z ovládacích prvků.  
+-   Pokud *m_bSaveAndValidate*, potom nastavit stav data z ovládacích prvků.  
   
- Ověření dochází pouze při `m_bSaveAndValidate` nastavena. Hodnota `m_bSaveAndValidate` je určen podle parametru BOOL `CWnd::UpdateData`.  
+ Ověření dochází pouze při *m_bSaveAndValidate* nastavena. Hodnota *m_bSaveAndValidate* je určen podle parametru BOOL `CWnd::UpdateData`.  
   
  Existují tři další zajímavé `CDataExchange` členy:  
   
-- `m_pDlgWnd`: Okno (obvykle dialogovém okně) obsahující ovládací prvky. To je k tomu, aby volající globální funkce DDX_ a DDV_ předat 'this' každé rutiny DDX/DDV.  
+- *m_pDlgWnd*: okno (obvykle dialogovém okně), které obsahuje ovládací prvky. To je k tomu, aby volající globální funkce DDX_ a DDV_ předat 'this' každé rutiny DDX/DDV.  
   
 - `PrepareCtrl`, a `PrepareEditCtrl`: připraví ovládací prvek dialogového okna pro data systému exchange. Uloží popisovač tohoto ovládacího prvku nastavení fokusu, pokud se ověřování nezdaří. `PrepareCtrl` slouží pro ovládací prvky nonedit a `PrepareEditCtrl` se používá pro ovládacích prvcích pro úpravy.  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  Takové libovolný výrazy ClassWizard se nedá upravit a proto by měl být přesunut mimo komentáře speciální formátu (/ / {{AFX_DATA_MAP(CMyClass)).  
   
- Máte **DoDialogExchange** – členská funkce patří podmíněné příkazy nebo žádné jiné platné příkazy C++ s míchán výměna a ověření volání funkcí.  
+ Máte `DoDialogExchange` – členská funkce patří podmíněné příkazy nebo žádné jiné platné příkazy C++ s míchán výměna a ověření volání funkcí.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

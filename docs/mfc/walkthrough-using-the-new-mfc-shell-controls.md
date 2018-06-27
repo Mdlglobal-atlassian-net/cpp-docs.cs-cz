@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f349c955724b66ccc8cb1b19fc826ca0b8354258
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385093"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951946"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. Vytvoříte okno, které obsahuje dvě podokna. V levém podokně bude obsahovat [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objekt, který se zobrazuje v hierarchické zobrazení plochy. V pravém podokně bude obsahovat [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) který ukazuje soubory ve složce, který je vybraný v levém podokně.  
@@ -31,7 +31,7 @@ V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů.
   
 1.  Použití **Průvodce aplikací knihovny MFC** k vytvoření nové aplikace MFC. Spuštění průvodce, z **souboru** nabídky vyberte možnost **nový**a potom vyberte **projektu**. **Nový projekt** zobrazí se dialogové okno.  
   
-2.  V **nový projekt** dialogové okno rozbalte položku **Visual C++** uzlu **typy projektů** panelu a vyberte **MFC**. Potom v **šablony** podokně, vyberte **aplikace knihovny MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. **Průvodce aplikací knihovny MFC** se zobrazí.  
+2.  V **nový projekt** dialogové okno rozbalte položku **Visual C++** uzlu **typy projektů** panelu a vyberte **MFC**. Potom v **šablony** podokně, vyberte **aplikace knihovny MFC**. Zadejte název projektu, například *MFCShellControls* a klikněte na tlačítko **OK**. **Průvodce aplikací knihovny MFC** se zobrazí.  
   
 3.  V **Průvodce aplikací knihovny MFC** dialogové okno, klikněte na tlačítko **Další**. **Typ aplikace** podokně se zobrazí.  
   
@@ -65,18 +65,21 @@ V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů.
   
      Nyní přidejte členské proměnné typu `CMFCShellListCtrl`. Nejdříve vyhledejte následující komentář v záhlaví souboru:  
   
- "' * / / Generované funkce mapy zpráv  
+ ``` 
+    // Generated message map functions  
  ```  
   
-     Immediately above that comment add this code:  
+     Okamžitě nad tuto poznámku přidejte tento kód:  
   
  ```  
-    privátní: CMFCShellListCtrl m_wndList;  
+    private: 
+    CMFCShellListCtrl m_wndList;  
  ```  
   
-2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
+2.  **Průvodce aplikací knihovny MFC** už vytvořený `CMFCShellTreeCtrl` objekt v `CMainFrame` třídy, ale je chráněný člen. Tento objekt není později bude přístup. Proto vytvořte přistupující objekt pro ni teď. Otevřete soubor hlaviček MainFrm.h poklepáním v **Průzkumníku řešení**. Vyhledejte následující komentář:  
   
- ``` *// Attributes  
+ ``` 
+    // Attributes  
  ```  
   
      Bezprostředně pod, přidejte následující deklarace metody:  
@@ -84,66 +87,50 @@ V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů.
  ```  
     public: 
     CMFCShellTreeCtrl& GetShellTreeCtrl();
-
  ```  
   
      V dalším kroku otevřít zdrojový soubor MainFrm.cpp poklepáním v **Průzkumníku řešení**. V dolní části tento soubor přidejte následující definici metody:  
   
  ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
- {  
-    return m_wndTree;  
- }  
+    {  
+        return m_wndTree;  
+    }  
  ```  
   
-3.  Nyní budeme aktualizovat `CMFCShellControlsView` třídy pro zpracování **WM_CREATE** zpráv systému windows. Otevřete soubor hlaviček MFCShellControlsView.h a klikněte na tento řádek kódu:  
+3.  Nyní budeme aktualizovat `CMFCShellControlsView` třídy pro zpracování zprávy WM_CREATE systému windows. Otevřete soubor hlaviček MFCShellControlsView.h a klikněte na tento řádek kódu:  
   
  ```  
     class CMFCShellControlsView : public CView  
  ```  
   
-     Vedle **vlastnosti** okně klikněte na tlačítko **zprávy** ikonu. Přejděte dolů na zjistíte **WM_CREATE** zprávy. Z rozevíracího seznamu vedle **WM_CREATE**, vyberte  **\<Přidat > OnCreate**. Tím se vytvoří obslužné rutiny zpráv pro nás a mapy zpráv knihovny MFC automaticky aktualizuje.  
+     Vedle **vlastnosti** okně klikněte na tlačítko **zprávy** ikonu. Přejděte dolů na Najít WM_CREATE zprávy. Z rozevíracího seznamu vedle WM_CREATE, vyberte  *\<Přidat > OnCreate*. Tím se vytvoří obslužné rutiny zpráv pro nás a mapy zpráv knihovny MFC automaticky aktualizuje.  
   
      V `OnCreate` metoda Nyní vytvoříme naše `CMFCShellListCtrl` objektu. Najít `OnCreate` definici metody v MFCShellControlsView.cpp zdrojového souboru a jeho implementace nahraďte následujícím kódem:  
   
  ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
- {  
-    if (CView::OnCreate(lpCreateStruct) == -1)  
-    return -1;  
- 
-    CRect rectDummy (0,
-    0,
-    0,
-    0);
-
-    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-    rectDummy,
-    this,
-    1);
-
- 
-    return 0;  
- }  
+    {  
+        if (CView::OnCreate(lpCreateStruct) == -1)  
+            return -1;  
+     
+        CRect rectDummy (0, 0, 0, 0);
+    
+        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT, rectDummy, this, 1);
+    
+        return 0;  
+    }  
  ```  
   
-4.  Opakujte předchozí krok, ale u **WM_SIZE** zprávy. To způsobí, že vaše aplikace zobrazení překreslit vždy, když uživatel změní velikost okna aplikace. Nahraďte definici `OnSize` metoda následujícím kódem:  
+4.  Opakujte předchozí krok, ale WM_SIZE zprávy. To způsobí, že vaše aplikace zobrazení překreslit vždy, když uživatel změní velikost okna aplikace. Nahraďte definici `OnSize` metoda následujícím kódem:  
   
  ```  
-    void CMFCShellControlsView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
-
-    m_wndList.SetWindowPos(NULL, -1, -1,
-    cx,
-    cy,  
-    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
-
- }  
+    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
+    
+        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+    }  
  ```  
   
 5.  Posledním krokem je pro připojení `CMFCShellTreeCtrl` a `CMFCShellListCtrl` objekty pomocí [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metoda. Po tuto metodu lze volat `CMFCShellListCtrl` se automaticky zobrazí obsah k položce vybrané `CMFCShellTreeCtrl`. Uděláme to `OnActivateView` metoda, která je přepsat z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).  
@@ -152,30 +139,21 @@ V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů.
   
  ```  
     protected: 
-    virtual void OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView);
-
+    virtual void OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);
  ```  
   
      V dalším kroku přidejte definici pro tuto metodu ke zdrojovému souboru MFCShellControlsView.cpp:  
   
  ```  
-    void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView)   
- {  
-    if (bActivate&& AfxGetMainWnd() != NULL)  
- {  
- ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
-
- }  
- 
-    CView::OnActivateView(bActivate,
-    pActivateView,
-    pDeactiveView);
-
- }  
+    void CMFCShellControlsView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView)   
+    {  
+        if (bActivate&& AfxGetMainWnd() != NULL)  
+        {  
+            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+        }  
+     
+        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);
+    }  
  ```  
   
      Protože jsme se volání metod z `CMainFrame` třídu, musí přidáme `#include` direktivy v horní části MFCShellControlsView.cpp zdrojového souboru:  
@@ -198,4 +176,3 @@ V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů.
   
 ## <a name="see-also"></a>Viz také  
  [Návody](../mfc/walkthroughs-mfc.md)
-

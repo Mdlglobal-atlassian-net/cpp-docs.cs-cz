@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354618"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954488"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush – třída
 Obálka pro ID2D1BitmapBrush.  
@@ -142,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -176,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Ukazatel na cíl vykreslení.  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Ukazatel na režimy rozšíření a režim interpolace štětce rastrového obrázku.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ukazatel na krytí a transformace štětce.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Označuje, že bude objekt zničí vlastník (pParentTarget).  
   
- `uiResID`  
+ *uiResID*  
  Číslo ID prostředku prostředku.  
   
- `lpszType`  
+ *lpszType*  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje typ prostředku.  
   
- `sizeDest`  
+ *sizeDest*  
  Velikost cílového bitmapy.  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  Ukazatel na řetězec ukončené hodnotou null, který obsahuje název souboru.  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -208,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Ukazatel na stopy vlastnosti rastrového obrázku.  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -219,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ukazatel na cíl vykreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -331,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Zdroj bitové mapy používané štětce  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -342,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `extendModeX`  
+ *extendModeX*  
  Hodnota, která určuje, jak stopy vodorovně dlaždice těchto oblastí, které rozšiřují po jeho rastrového obrázku  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -353,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `extendModeY`  
+ *extendModeY*  
  Hodnota, která určuje, jak stopy svisle dlaždice těchto oblastí, které rozšiřují po jeho rastrového obrázku  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -364,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `interpolationMode`  
+ *interpolationMode*  
  Režim interpolace použít, když je škálovat nebo otáčet rastrový obrázek štětce  
   
 ## <a name="see-also"></a>Viz také  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368332"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952245"
 ---
 # <a name="cdbexception-class"></a>CDBException – třída
 Představuje podmínku vzniklých databázové třídy.  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** váš požadavek na uzamčení záznamů pro aktualizaci nelze splnit, protože ovladač ODBC nepodporuje uzamčení.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, která** můžete volat `CRecordset::Update` nebo **odstranit** pro tabulku bez jedinečné klíče a změnit více záznamů.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, která** můžete volat `CRecordset::Update` nebo `Delete` pro tabulku bez jedinečné klíče a změnit více záznamů.  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD** jste se pokusili získat upravit nebo odstranit záznam dříve odstraněné. Po odstranění se musí přejděte na nový aktuální záznam.  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** vaši žádost pro dynamická sada nelze splnit, protože vaše ovladač ODBC nepodporuje umístěné aktualizace.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** můžete volat `CRecordset::Update` nebo **odstranit**, ale když operaci zahájil záznamu může již nelze nalézt.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** můžete volat `CRecordset::Update` nebo `Delete`, ale když operaci zahájil záznamu může již nelze nalézt.  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** pokus o načtení ODBC. Knihovny DLL se nezdařilo; Windows nelze najít, nebo nelze načíst tuto knihovnu DLL. Tato chyba je závažná.  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY** jste se pokusili aktualizovat sadu záznamů jen pro čtení, nebo zdroj dat je jen pro čtení. Sady záznamů lze provést žádné operace aktualizace nebo `CDatabase` objekt je přidružený.  
   
-- **SQL_ERROR** funkce se nezdařilo. Chybová zpráva vrácená funkcí rozhraní ODBC **funkce SQLError** je uložen v **m_strError** – datový člen.  
+- **SQL_ERROR** funkce se nezdařilo. Chybová zpráva vrácená funkcí rozhraní ODBC `SQLError` je uložen v **m_strError** – datový člen.  
   
 - **SQL_INVALID_HANDLE** funkce došlo prostředí neplatný popisovač, popisovač připojení nebo popisovač příkazu. To znamená chybě programování. Žádné další informace jsou k dispozici z funkce ODBC **funkce SQLError**.  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>Poznámky  
  Řetězec je je formulář "stav: % s, nativní: % ld původu: % s", kde jsou kódy formát, v pořadí, nahrazují hodnoty, které popisují:  
   
--   **SQLSTATE**, s kódem chyby pěti znacích, vrátí se v řetězce ukončené hodnotou null *szSqlState* parametr funkce ODBC **funkce SQLError**. **SQLSTATE** hodnoty jsou uvedené v dodatku A, [kódy chyb ODBC](https://msdn.microsoft.com/library/ms714687.aspx)v *referenční informace pro programátory ODBC*. Příklad: "S0022".  
+-   **SQLSTATE**, s kódem chyby pěti znacích, vrátí se v řetězce ukončené hodnotou null *szSqlState* parametr funkce ODBC `SQLError`. **SQLSTATE** hodnoty jsou uvedené v dodatku A, [kódy chyb ODBC](https://msdn.microsoft.com/library/ms714687.aspx)v *referenční informace pro programátory ODBC*. Příklad: "S0022".  
   
--   Vrácený kód chyby nativní, specifické pro zdroj dat v *pfNativeError* parametr **funkce SQLError** funkce. Příklad: 207.  
+-   Vrácený kód chyby nativní, specifické pro zdroj dat v *pfNativeError* parametr `SQLError` funkce. Příklad: 207.  
   
--   Vrátí text chybové zprávy *szErrorMsg* parametr **funkce SQLError** funkce. Tato zpráva se skládá z několika názvů v závorkách. Jako chybu je předaný z její zdroj pro uživatele, jednotlivých součástí rozhraní ODBC (zdroj dat, ovladače, správce ovladačů) připojí svůj vlastní název. Tyto informace pomáhají ke kotvícímu bodu počátek chyby. Příklad: [Microsoft] [ovladač ODBC SQL Server] [SQL Server]  
+-   Vrátí text chybové zprávy *szErrorMsg* parametr `SQLError` funkce. Tato zpráva se skládá z několika názvů v závorkách. Jako chybu je předaný z její zdroj pro uživatele, jednotlivých součástí rozhraní ODBC (zdroj dat, ovladače, správce ovladačů) připojí svůj vlastní název. Tyto informace pomáhají ke kotvícímu bodu počátek chyby. Příklad: [Microsoft] [ovladač ODBC SQL Server] [SQL Server]  
   
  Rozhraní framework interpretuje řetězec chyby a vloží jeho součástí do **m_strStateNativeOrigin**; Pokud **m_strStateNativeOrigin** obsahuje informace pro více než jednu chybu, jsou odděleny chyby Vložení znaků newline. Rozhraní framework vloží text alfanumerické chyby do **m_strError**.  
   

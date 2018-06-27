@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367227"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952284"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo – struktura
 `CDaoQueryDefInfo` Struktura obsahuje informace o objektu querydef definované pro přístup k objektům dat (DAO).  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Objekt querydef jedinečné názvy. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO. Volání [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) přímo načíst tuto vlastnost.  
   
- `m_nType`  
+ *m_nType*  
  Hodnota, která označuje provozní typ objektu querydef. Hodnota může být jeden z následujících akcí:  
   
 - **dbQSelect** vyberte – výběru záznamů.  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  Další informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  Datum a čas, kdy byl vytvořen querydef. Chcete-li načíst přímo datum, byl vytvořen querydef, volejte [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) členské funkce `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Také naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  Datum a čas poslední změny provedené querydef. Chcete-li načíst přímo datum poslední aktualizace v tabulce, volejte [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) – členská funkce querydef. Další informace naleznete v tématu komentáře níže. A naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Určuje, zda objekt querydef můžete provedeny změny. Pokud je tato vlastnost **TRUE**querydef je aktualizovat; jinak, není. Možností aktualizace znamená, že objekt querydef definice dotazu lze změnit. Aktualizovatelné objektu querydef je nastavena na **TRUE** Pokud definice dotazu lze aktualizovat, i když není možné aktualizovat, výsledná sada záznamů. Tato vlastnost načíst přímo, volání querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) – členská funkce. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  Příkaz jazyka SQL, který definuje dotaz provedený objektu querydef. Vlastnost SQL obsahuje příkaz jazyka SQL, která určuje, jak jsou vybrány záznamy, seskupené a seřazené při spuštění dotazu. Dotaz můžete použít k výběru záznamy mají být zahrnuty v objektu dynamické nebo snímku sady záznamů. Můžete také definovat dotazy hromadnou úpravou dat bez vrácení záznamů. Hodnota této vlastnosti můžete načíst přímo voláním querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) – členská funkce.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Poskytuje informace o zdroji této databáze používaná v předávací dotaz. Tyto informace má podobu tohoto řetězce. Další informace o připojení řetězce a informace o načtení hodnota této vlastnosti přímo najdete v tématu [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) – členská funkce.  
   
  *m_nODBCTimeout*  

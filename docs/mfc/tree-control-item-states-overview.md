@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bc62308642492aa00a139fb15cc9e6cdcfc3247
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0be7a3da4582a80f3001a9bc951276c955191850
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383146"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957283"
 ---
 # <a name="tree-control-item-states-overview"></a>Přehled stavů položek ovládacího prvku strom
 Každá položka v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) má aktuální stav. Například může být vybrána položka, zakázaná, Rozšířená a tak dále. Ve většině případů ovládací prvek stromu automaticky nastaví stav položky tak, aby odrážela uživatelské akce, jako je výběr položky. Však můžete také nastavit stav položky pomocí [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) – členská funkce a načtěte aktuální stav položky pomocí [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) – členská funkce. Úplný seznam stavů položek, najdete v části [stromové zobrazení ovládacího prvku konstanty](http://msdn.microsoft.com/library/windows/desktop/bb759985) ve Windows SDK.  
   
- Je zadána aktuální stav položky `nState` parametr. Ovládací prvek stromu může změnit stav položky tak, aby odrážela akci uživatele, například výběrem položky nebo nastavení zaměřená na položky. Kromě toho aplikace může změnit stav položky zakázat nebo skryje položku nebo k zadání překrytí obrázek nebo obrázek stavu.  
+ Je zadána aktuální stav položky *nInformace* parametr. Ovládací prvek stromu může změnit stav položky tak, aby odrážela akci uživatele, například výběrem položky nebo nastavení zaměřená na položky. Kromě toho aplikace může změnit stav položky zakázat nebo skryje položku nebo k zadání překrytí obrázek nebo obrázek stavu.  
   
- Když zadáte nebo změna stavu pro položku `nStateMask` parametr určuje, které stavu bits k nastavení a `nState` parametr obsahuje nové hodnoty pro tyto služby bits. Například následující příklad změní aktuální stav nadřazené položky (zadáno v `hParentItem`) v `CTreeCtrl` objektu (`m_treeCtrl`) k **TVIS_EXPANDPARTIAL**:  
+ Když zadáte nebo změna stavu pro položku *nStateMask* parametr určuje, které stavu bits k nastavení a *nInformace* parametr obsahuje nové hodnoty pro tyto služby bits. Například následující příklad změní aktuální stav nadřazené položky (zadáno v *hParentItem*) v `CTreeCtrl` objektu (`m_treeCtrl`) k `TVIS_EXPANDPARTIAL`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#71](../mfc/codesnippet/cpp/tree-control-item-states-overview_1.cpp)]  
   
- Další příklad změny stavu bude nastavení položky překrytí image. K tomu `nStateMask` musí obsahovat `TVIS_OVERLAYMASK` hodnotu, a `nState` musí zahrnovat na základě jeden index bitové kopie překrytí zapuštěno zbývajících osm bits pomocí [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makro. Index může být 0 pro žádné překrytí bitové kopie. Bitovou kopii překrytí musí být přidán do seznamu ovládací prvek stromu bitových kopií překrytí voláním předchozí [CImageList::SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) funkce. Funkce určuje na základě jeden index image přidat; Toto je index použít s **INDEXTOOVERLAYMASK** makro. Ovládací prvek stromu může mít až čtyři obrázky překrytí.  
+ Další příklad změny stavu bude nastavení položky překrytí image. K tomu *nStateMask* musí zahrnovat `TVIS_OVERLAYMASK` hodnotu, a *nInformace* musí zahrnovat na základě jeden index bitové kopie překrytí zapuštěno zbývajících osm bits pomocí [ INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makro. Index může být 0 pro žádné překrytí bitové kopie. Bitovou kopii překrytí musí být přidán do seznamu ovládací prvek stromu bitových kopií překrytí voláním předchozí [CImageList::SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) funkce. Funkce určuje na základě jeden index image přidat; Toto je index použít s INDEXTOOVERLAYMASK makro. Ovládací prvek stromu může mít až čtyři obrázky překrytí.  
   
- Nastavit obrázek stavu pro položku, `nStateMask` musí obsahovat `TVIS_STATEIMAGEMASK` hodnotu, a `nState` musí zahrnovat na základě jeden index obrázku stavu zapuštěno zbývajících 12 bits pomocí [INDEXTOSTATEIMAGEMASK](http://msdn.microsoft.com/library/windows/desktop/bb775597) makro. Index může být 0 pro žádné obrázek stavu. Další informace o bitových kopiích překrytí a stavu najdete v tématu [seznamy obrázků ovládací prvek stromu](../mfc/tree-control-image-lists.md).  
+ Nastavit obrázek stavu pro položku, *nStateMask* musí zahrnovat `TVIS_STATEIMAGEMASK` hodnotu, a *nInformace* musí zahrnovat na základě jeden index obrázku stavu zapuštěno zbývajících 12 bits pomocí [ INDEXTOSTATEIMAGEMASK](http://msdn.microsoft.com/library/windows/desktop/bb775597) makro. Index může být 0 pro žádné obrázek stavu. Další informace o bitových kopiích překrytí a stavu najdete v tématu [seznamy obrázků ovládací prvek stromu](../mfc/tree-control-image-lists.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   

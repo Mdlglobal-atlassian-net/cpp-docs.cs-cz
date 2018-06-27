@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384433"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956470"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC
 Základ pro každý internetových klientských aplikací je relace Internetu. MFC implementuje relací Internetu jako objekty třídy [CInternetSession](../mfc/reference/cinternetsession-class.md). Pomocí této třídy, můžete vytvořit jednu relaci Internet nebo několik souběžných relací.  
@@ -43,9 +43,9 @@ Základ pro každý internetových klientských aplikací je relace Internetu. M
   
 -   Pokud používáte `CInternetSession::OpenURL` k navázání připojení k serveru, volání `OpenURL` vrátí `CStdioFile`.  
   
--   Pokud pomocí **CInternetSession::GetFtpConnection**, `GetGopherConnection`, nebo `GetHttpConnection` k navázání připojení k serveru, musí volat `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, nebo **CHttpConnection::OpenRequest,**  , vrátit `CInternetFile`, `CGopherFile`, nebo `CHttpFile`, v uvedeném pořadí.  
+-   Pokud pomocí `CInternetSession::GetFtpConnection`, `GetGopherConnection`, nebo `GetHttpConnection` k navázání připojení k serveru, musí volat `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, nebo `CHttpConnection::OpenRequest`, vrátit `CInternetFile`, `CGopherFile`, nebo `CHttpFile`, v uvedeném pořadí.  
   
- Postup při provádění internetových klientských aplikací lišit v závislosti na tom, jestli vytvoříte obecné Internet klienta na základě **OpenURL** nebo specifické pro protokol klienta pomocí jedné z **GetConnection** funkce.  
+ Postup při provádění internetových klientských aplikací lišit v závislosti na tom, jestli vytvoříte obecné Internet klienta na základě `OpenURL` nebo specifické pro protokol klienta pomocí jedné z `GetConnection` funkce.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
   

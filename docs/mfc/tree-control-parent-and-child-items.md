@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7937ef604d14c464141c6e432a4d20a9d06e172
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382512"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954504"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Nadřízené a podřízené položky ovládacího prvku strom
 Všechny položky v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) může mít seznam podřízených položek, které se nazývají podřízené položky, které s ním spojená. Položku, která obsahuje jednu nebo více podřízených položek se nazývá nadřazené položky. Podřízené položky se zobrazí pod její nadřazené položky a odsazeno se indikovat, že podřízená nadřazené. Položku, která nemá nadřazený je na nejvyšší úrovni hierarchie a je volána kořenovou položku.  
   
  V každém okamžiku stav nadřazené položky seznamu podřízené položky můžete buď rozbalit nebo sbalit. Pokud je stav rozbalen, podřízené položky se zobrazí pod nadřazené položky. Když sbalena, nejsou zobrazeny podřízené položky. V seznamu automaticky přepíná mezi stavy rozšířené a sbalené při poklepání nadřazené položky nebo, pokud má nadřazený **TVS_HASBUTTONS** styl, když uživatel klikne na tlačítko přidružené k nadřazené položce. Aplikace můžete rozbalit nebo sbalit podřízené položky pomocí [rozbalte](../mfc/reference/ctreectrl-class.md#expand) – členská funkce.  
   
- Přidání položky do ovládacího prvku strom voláním [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) – členská funkce. Funkce vrátí hodnotu popisovače **HTREEITEM** typu, který jednoznačně identifikuje položku. Při přidávání položky, je nutné zadat popisovač novou položku nadřazené položky. Pokud zadáte **NULL** nebo **TVI_ROOT** hodnotu namísto popisovač nadřazené položky v [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) struktura nebo `hParent` parametr, položka je přidána jako kořenové položka.  
+ Přidání položky do ovládacího prvku strom voláním [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) – členská funkce. Funkce vrátí hodnotu popisovače **HTREEITEM** typu, který jednoznačně identifikuje položku. Při přidávání položky, je nutné zadat popisovač novou položku nadřazené položky. Pokud zadáte **NULL** nebo **TVI_ROOT** hodnotu namísto popisovač nadřazené položky v [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) struktura nebo *hParent* parametr, položka je přidána jako kořenovou položku.  
   
  Odešle ovládacím prvkem strom [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) oznámení po chystáte rozbalit nebo sbalit seznam nadřazené položky podřízené položky. Oznámení vám dává příležitost, aby se změny, nebo nastavit atributy nadřazené položky, které závisí na stavu seznam podřízené položky. Po změně stavu v seznamu, odešle ovládací prvek stromu [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) oznámení.  
   

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd752ff649491ce23b537987ff9f4aebf7811255
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351673"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956749"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget – třída
 Obálka pro ID2D1BitmapRenderTarget.  
@@ -91,7 +91,7 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTarget`  
+ *pTarget*  
  Existující vykreslení cílové rozhraní. Nemůže mít hodnotu NULL  
   
 ##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bitmap`  
+ *Rastrový obrázek*  
  Po návratu tato metoda obsahuje platný rastrový obrázek pro tento cíl vykreslení. Tento rastrový obrázek slouží pro vykreslení operace.  
   
 ### <a name="return-value"></a>Návratová hodnota  

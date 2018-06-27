@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ba9615f583069ec63946fe52840dc5bc4fa545e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73596ec5ec9f17b2007a6816bbe0ab90b1463430
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376460"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957101"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler – třída
 `CDataRecoveryHandler` Autosaves dokumenty a obnoví je, pokud neočekávaně ukončí aplikaci.  
@@ -188,21 +188,21 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pDocument`|Ukazatel `CDocument` uložit.|  
-|[v] `bResetModifiedFlag`|`TRUE` Určuje, že `CDataRecoveryHandler` zvažuje `pDocument` má být změněn; `FALSE` označuje, že rozhraní zvažuje `pDocument` být beze změny. Najdete v části poznámky Další informace o účinek tento příznak.|  
+|[v] *pDocument*|Ukazatel `CDocument` uložit.|  
+|[v] *bResetModifiedFlag*|`TRUE` Určuje, že `CDataRecoveryHandler` zvažuje *pDocument* má být změněn; `FALSE` označuje, že rozhraní zvažuje *pDocument* být beze změny. Najdete v části poznámky Další informace o účinek tento příznak.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud jsou nastavená příslušnými příznaky a `pDocument` je platná `CDocument` objektu.  
+ `TRUE` Pokud jsou nastavená příslušnými příznaky a *pDocument* je platná `CDocument` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Každý `CDocument` objekt má příznak, který určuje, jestli se změnil od posledního uložení. Použití [CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified) určit stav pro tento příznak. Pokud `CDocument` nezměnil se od posledního uložení `AutosaveDocumentInfo` odstraní všechny soubory automaticky uloženo pro tento dokument. Pokud dokument došlo ke změně od posledního uložení zavřením vyzývá uživatele k dokument před zavřením uložit.  
   
 > [!NOTE]
->  Pomocí `bResetModifiedFlag` na změnu stavu dokumentu na beze změny může způsobit, že uživatel ztratí neuložená data. Pokud rozhraní zvažuje dokumentu ponechat beze změny, zavřením nezobrazí výzvu uživateli uložit.  
+>  Pomocí *bResetModifiedFlag* na změnu stavu dokumentu na beze změny může způsobit, že uživatel ztratí neuložená data. Pokud rozhraní zvažuje dokumentu ponechat beze změny, zavřením nezobrazí výzvu uživateli uložit.  
   
- Tato metoda vyvolá výjimku s [ASSERT](diagnostic-services.md#assert) makro Pokud `pDocument` není platným `CDocument` objektu.  
+ Tato metoda vyvolá výjimku s [ASSERT](diagnostic-services.md#assert) makro Pokud *pDocument* není platným `CDocument` objektu.  
   
- Chcete-li použít tuto metodu, buď `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` nebo `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` musí být nastavena v `m_dwRestartManagerSupportFlags`.   
+ Chcete-li použít tuto metodu, buď `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` nebo `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` musí být nastavena v *m_dwRestartManagerSupportFlags*.   
   
 ##  <a name="cdatarecoveryhandler"></a>  CDataRecoveryHandler::CDataRecoveryHandler  
  Vytvoří `CDataRecoveryHandler` objektu.  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `dwRestartManagerSupportFlags`|Určuje, které možnosti Správce restartování jsou podporované.|  
-|[v] `nAutosaveInterval`|Doba mezi autosaves. Tento parametr je v milisekundách.|  
+|[v] *dwRestartManagerSupportFlags*|Určuje, které možnosti Správce restartování jsou podporované.|  
+|[v] *nAutosaveInterval*|Doba mezi autosaves. Tento parametr je v milisekundách.|  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní MFC framework automaticky vytvoří `CDataRecoveryHandler` objekt pro vaši aplikaci při použití **nový projekt** průvodce. Pokud jsou úpravy, bude se chování obnovení dat nebo správce restartování, byste je neměli vytvářet `CDataRecoveryHandler` objektu.  
@@ -237,15 +237,15 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pDocument`|Ukazatel na `CDocument`. Tato metoda vytvoří dokument informace pro tento `CDocument`.|  
+|[v] *pDocument*|Ukazatel na `CDocument`. Tato metoda vytvoří dokument informace pro tento `CDocument`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace vrací `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda ověří, zda `pDocument` je již v seznamu dokumentů před přidáním dokumentu. Pokud `pDocument` je již v seznamu, tato metoda odstraní přidružený soubor automaticky uloženo `pDocument`.  
+ Tato metoda ověří, zda *pDocument* je již v seznamu dokumentů před přidáním dokumentu. Pokud *pDocument* je již v seznamu, tato metoda odstraní přidružený soubor automaticky uloženo *pDocument*.  
   
- Chcete-li použít tuto metodu, buď `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` nebo `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` musí být nastavena v `m_dwRestartManagerSupportFlags`. 
+ Chcete-li použít tuto metodu, buď `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` nebo `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` musí být nastavena v *m_dwRestartManagerSupportFlags*. 
   
 ##  <a name="deleteallautosavedfiles"></a>  CDataRecoveryHandler::DeleteAllAutosavedFiles  
  Odstraní všechny aktuální soubory automaticky uloženo.  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `strAutosavedFile`|Řetězec, který obsahuje název souboru automaticky uloženo.|  
+|[v] *strAutosavedFile*|Řetězec, který obsahuje název souboru automaticky uloženo.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výchozí implementace vždy návratový `TRUE`.  
@@ -285,11 +285,11 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `strDocumentName`  
+ [v] *strDocumentName*  
  Řetězec, který obsahuje název dokumentu. `GenerateAutosaveFileName` Tento název dokumentu se používá ke generování odpovídající název souboru automatické ukládání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název souboru automatické ukládání vygenerovat z `strDocumentName`.  
+ Název souboru automatické ukládání vygenerovat z *strDocumentName*.  
   
 ### <a name="remarks"></a>Poznámky  
  Každý název dokumentu má mapování 1: 1 s názvem souboru automatické ukládání.  
@@ -326,13 +326,13 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pDocument`|Ukazatel na `CDocument`. `GetDocumentListName` načte název dokumentu z tohoto `CDocument`.|  
+|[v] *pDocument*|Ukazatel na `CDocument`. `GetDocumentListName` načte název dokumentu z tohoto `CDocument`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název dokumentu z `pDocument`.  
+ Název dokumentu z *pDocument*.  
   
 ### <a name="remarks"></a>Poznámky  
- `CDataRecoveryHandler` Používá název dokumentu jako klíče v `m_mapDocNameToAutosaveName`, `m_mapDocNameToDocumentPtr`, a `m_mapDocNameToRestoreBool`. Povolit tyto parametr `CDataRecoveryHandler` monitorování `CDocument` objekty, název souboru automatické ukládání a automatické ukládání nastavení.  
+ `CDataRecoveryHandler` Používá název dokumentu jako klíče v *m_mapDocNameToAutosaveName*, *m_mapDocNameToDocumentPtr*, a *m_mapDocNameToRestoreBool*. Povolit tyto parametr `CDataRecoveryHandler` monitorování `CDocument` objekty, název souboru automatické ukládání a automatické ukládání nastavení.  
   
 ##  <a name="getnormaldocumenttitle"></a>  CDataRecoveryHandler::GetNormalDocumentTitle  
  Načte normální název zadaný dokument.  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pDocument`|Ukazatel na `CDocument`.|  
+|[v] *pDocument*|Ukazatel na `CDocument`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Normální název pro zadaný dokument.  
@@ -362,7 +362,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `strDocumentTitle`  
+ [v] *strDocumentTitle*  
  Normální název dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -433,7 +433,7 @@ virtual void QueryRestoreAutosavedDocuments();
 ### <a name="remarks"></a>Poznámky  
  Pokud je aplikace kódování Unicode, zobrazí tato metoda [objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) uživateli. Jinak, používá rozhraní [AfxMessageBox –](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) dotazovat uživatele.  
   
- Po `QueryRestoreAutosavedDocuments` shromažďuje všechny odpovědi od uživatele, ukládá informace v členské proměnné `m_mapDocNameToRestoreBool`. Tato metoda neobnoví dokumenty automaticky uloženo.  
+ Po `QueryRestoreAutosavedDocuments` shromažďuje všechny odpovědi od uživatele, ukládá informace v členské proměnné *m_mapDocNameToRestoreBool*. Tato metoda neobnoví dokumenty automaticky uloženo.  
   
 ##  <a name="readopendocumentlist"></a>  CDataRecoveryHandler::ReadOpenDocumentList  
  Načte seznam otevřít dokument z registru.  
@@ -446,7 +446,7 @@ virtual BOOL ReadOpenDocumentList();
  `TRUE` Určuje, že `ReadOpenDocumentList` načíst informace pro minimálně jeden dokument z registru; `FALSE` označuje byl načteny žádné informace o dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce načte informace otevřít dokument z registru a ukládá je v členské proměnné `m_mapDocNameToAutosaveName`.  
+ Tato funkce načte informace otevřít dokument z registru a ukládá je v členské proměnné *m_mapDocNameToAutosaveName*.  
   
  Po `ReadOpenDocumentList` načte všechna data, odstraní informace o dokumentu z registru.  
   
@@ -462,17 +462,17 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pDocument`|Ukazatel na dokument, který chcete odebrat.|  
+|[v] *pDocument*|Ukazatel na dokument, který chcete odebrat.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud `pDocument` byla odebrána ze seznamu; `FALSE` Pokud došlo k chybě.  
+ `TRUE` Pokud *pDocument* byla odebrána ze seznamu; `FALSE` Pokud došlo k chybě.  
   
 ### <a name="remarks"></a>Poznámky  
  Když uživatel nezavře dokumentu, rozhraní používá tato metoda ho odebrat ze seznamu otevřené dokumenty.  
   
- Pokud `RemoveDocumentInfo` nelze najít `pDocument` v seznamu otevřené dokumenty, neprovede žádnou akci a vrátí `TRUE`.  
+ Pokud `RemoveDocumentInfo` nelze najít *pDocument* v seznamu otevřené dokumenty, neprovede žádnou akci a vrátí `TRUE`.  
   
- Při použití této metody `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` musí být nastavena v `m_dwRestartManagerSupportFlags`.   
+ Při použití této metody `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` musí být nastavena v *m_dwRestartManagerSupportFlags*.   
   
 ##  <a name="reopenpreviousdocuments"></a>  CDataRecoveryHandler::ReopenPreviousDocuments  
  Otevře se dříve otevřené dokumenty.  
@@ -487,7 +487,7 @@ virtual BOOL ReopenPreviousDocuments();
 ### <a name="remarks"></a>Poznámky  
  Tato metoda otevře nejnovější uložení o dříve otevřené dokumenty. Pokud nebyla uložena dokumentu nebo automaticky uložená, `ReopenPreviousDocuments` otevře prázdný dokument založený na šabloně pro daný typ souboru.  
   
- Při použití této metody `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` musí být nastavena v `m_dwRestartManagerSupportFlags`. Pokud tento parametr není nastaven, `ReopenPreviousDocuments` neprovede žádnou akci a vrátí `FALSE`.  
+ Při použití této metody `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` musí být nastavena v *m_dwRestartManagerSupportFlags*. Pokud tento parametr není nastaven, `ReopenPreviousDocuments` neprovede žádnou akci a vrátí `FALSE`.  
   
  Pokud neexistují žádné dokumenty uložené v seznamu dříve otevřené dokumenty `ReopenPreviousDocuments` neprovede žádnou akci a vrátí `FALSE`.  
   
@@ -529,7 +529,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nAutosaveInterval`  
+ [v] *nAutosaveInterval*  
  Nové automatické ukládání interval v milisekundách.  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `strAutosavePath`|Cesta, kam se ukládají automaticky ukládat soubory.|  
+|[v] *strAutosavePath*|Cesta, kam se ukládají automaticky ukládat soubory.|  
   
 ### <a name="remarks"></a>Poznámky  
  Změna adresáře automatické ukládání nepřesouvá aktuálně soubory automaticky uloženo.  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `strRestartIdentifier`|Jedinečný identifikátor pro správce restartování.|  
+|[v] *strRestartIdentifier*|Jedinečný identifikátor pro správce restartování.|  
   
 ### <a name="remarks"></a>Poznámky  
  Správce restartování zaznamenává informace o otevřené dokumenty v registru. Tyto informace se uloží spolu restartování jedinečný identifikátor jako klíč. Restartování identifikátor je jedinečný pro každou instanci aplikace více instancí aplikace může neočekávaně ukončit a správce restartování můžete obnovit každý z nich.  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `bSaveOnIdle`|`TRUE` Uložte dokument informace během aktuální nečinnosti cyklu; `FALSE to not perform a save`.|  
+|[v] *bSaveOnIdle*|`TRUE` Uložte dokument informace během aktuální nečinnosti cyklu; `FALSE to not perform a save`.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  Nastaví, zda předchozí ukončení aplikace bylo způsobeno správce restartování.  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `bShutdownByRestartManager`|`TRUE` k označení, že správce restartování způsobilo, že aplikace ukončíte; `FALSE` k označení, že aplikace byl ukončen z jiného důvodu.|  
+|[v] *bShutdownByRestartManager*|`TRUE` k označení, že správce restartování způsobilo, že aplikace ukončíte; `FALSE` k označení, že aplikace byl ukončen z jiného důvodu.|  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní se chová různě v závislosti na tom, jestli se předchozí ukončovací nebo zda byl inicializován nástrojem Správce restartování.  
@@ -609,15 +609,15 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pDocument`|Ukazatel na uložený dokument.|  
+|[v] *pDocument*|Ukazatel na uložený dokument.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud tato metoda dokumentu automaticky uložená a aktualizovat informace o dokumentu; `FALSE` Pokud došlo k chybě.  
   
 ### <a name="remarks"></a>Poznámky  
- Když uživatel uloží dokument, odebere aplikace automaticky uloženo soubor, protože už je potřeba. `UpdateDocumentInfo` Odstraní soubor automaticky uloženo voláním [CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo). `UpdateDocumentInfo` potom přidá informace z `pDocument` do seznamu aktuálně otevřené dokumenty protože `RemoveDocumentInfo` odstraní informace, ale uložené dokument je stále otevřen.  
+ Když uživatel uloží dokument, odebere aplikace automaticky uloženo soubor, protože už je potřeba. `UpdateDocumentInfo` Odstraní soubor automaticky uloženo voláním [CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo). `UpdateDocumentInfo` potom přidá informace z *pDocument* do seznamu aktuálně otevřené dokumenty protože `RemoveDocumentInfo` odstraní informace, ale uložené dokument je stále otevřen.  
   
- Při použití této metody `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` musí být nastavena v `m_dwRestartManagerSupportFlags`.   
+ Při použití této metody `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` musí být nastavena v *m_dwRestartManagerSupportFlags*.   
   
 ## <a name="see-also"></a>Viz také  
  [Třídy](../../mfc/reference/mfc-classes.md)   

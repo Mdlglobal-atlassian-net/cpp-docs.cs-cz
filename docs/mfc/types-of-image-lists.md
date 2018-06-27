@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8988dc55bbbaa1d446ee14bf78a0cd799b422834
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 580969195de9241d935e1c27e1659f6e0c4c40ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385882"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953205"
 ---
 # <a name="types-of-image-lists"></a>Typy seznamů obrázků
 Existují dva typy seznamů obrázků ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked a maskované. "Nonmasked image seznam" se skládá z barva rastrového obrázku, který obsahuje jeden nebo více bitových kopií. "Maskované image seznam" se skládá ze dvou bitmap rovna velikosti. První je barva rastrového obrázku, který obsahuje Image a druhá černobílý rastrový obrázek, který obsahuje řadu masek – jeden pro každé bitové kopie v první rastrového obrázku.  
   
- Jeden z přetížení **vytvořit** – členská funkce trvá příznak označující, zda je maskovat seznamu obrázků. (Další přetížení vytvořit seznamy maskované obrázků.)  
+ Jeden z přetížení `Create` – členská funkce trvá příznak označující, zda je maskovat seznamu obrázků. (Další přetížení vytvořit seznamy maskované obrázků.)  
   
  Pokud se nevykreslí nonmasked bitové kopie, je jednoduše zkopírují do kontextu cílové zařízení; To znamená se vykresluje přes existující barvu pozadí kontextu zařízení. Při sestavování maskované bitové kopie, služba bits bitové kopie spolu se bity maska, kde je zobrazeno barvu pozadí cílový kontext zařízení obvykle generovala průhledné oblasti v souboru bitové mapy. Při kreslení maskované bitové kopie můžete zadat několik kreslení stylů. Například můžete zadat, že se k označení vybraný objekt tónovaná bitovou kopii.  
   

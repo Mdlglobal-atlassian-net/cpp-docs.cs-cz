@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21c08dbd1d26e519fe7108018299d3d4e94854
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385535"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954364"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Použití soketů s archivy
 Tento článek popisuje [CSocket programovací model](#_core_the_csocket_programming_model). Třída [CSocket](../mfc/reference/csocket-class.md) poskytuje podporu soketu na vyšší úrovni abstrakce než třída [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` používá verzi protokolu serializace MFC k předávání dat do a z objekt soketu prostřednictvím knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. `CSocket` poskytuje blokování (při správě zpracování na pozadí zpráv systému Windows) a poskytuje přístup k `CArchive`, který spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracovaná rozhraní API nebo třída `CAsyncSocket`.  
@@ -47,7 +47,7 @@ Tento článek popisuje [CSocket programovací model](#_core_the_csocket_program
   
 2.  Použít objekt k vytvoření základní **SOKETU** zpracování.  
   
-     Pro `CSocket` objektu klienta za normálních okolností byste měli používat výchozí parametry, které chcete [vytvořit](../mfc/reference/casyncsocket-class.md#create), pokud potřebujete datagram soketu. Pro `CSocket` objekt serveru, je nutné zadat port v **vytvořit** volání.  
+     Pro `CSocket` objektu klienta za normálních okolností byste měli používat výchozí parametry, které chcete [vytvořit](../mfc/reference/casyncsocket-class.md#create), pokud potřebujete datagram soketu. Pro `CSocket` objekt serveru, je nutné zadat port v `Create` volání.  
   
     > [!NOTE]
     >  `CArchive` nefunguje s sokety datagramů. Pokud chcete použít `CSocket` pro soket datagram, musíte použít třídu, jako byste použili `CAsyncSocket`, která je bez archivu. Protože datagramy nespolehlivé (není zaručené doručení a může se znovu nebo mimo pořadí), nejsou kompatibilní s serializace prostřednictvím archivu. Očekáváte serializace operace dokončit spolehlivě a v pořadí. Pokud se pokusíte použít `CSocket` s `CArchive` objekt pro datagram, kontrolní výrazy MFC selže.  
@@ -59,7 +59,7 @@ Tento článek popisuje [CSocket programovací model](#_core_the_csocket_program
      Pokud soket serveru, volání [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) zahájíte naslouchání pro pokusy o připojení z klienta. Po přijetí požadavku na připojení, přijměte voláním [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
     > [!NOTE]
-    >  **Přijmout** – členská funkce trvá odkaz na nový, prázdný `CSocket` objektu jako její parametr. Je nutné vytvořit tento objekt před voláním **přijmout**. Pokud se tento objekt soketu se ocitne mimo obor, připojení se ukončí. Nevolejte **vytvořit** pro tento nový objekt soketu.  
+    >  `Accept` – Členská funkce trvá odkaz na nový, prázdný `CSocket` objektu jako její parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Pokud se tento objekt soketu se ocitne mimo obor, připojení se ukončí. Nevolejte `Create` pro tento nový objekt soketu.  
   
 4.  Vytvoření [CSocketFile](../mfc/reference/csocketfile-class.md) objektu přidružení `CSocket` objektu s ním.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc26f74de76205041228ce92e29309af1ce8959f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351950"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951670"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Přidání třídy z průvodce knihovnou typů
 Pomocí tohoto průvodce můžete přidat třídy knihovny MFC z knihovny k dispozici typu. Průvodce vytvoří třídu pro každé rozhraní, které přidáte z knihovny vybraného typu.  
@@ -54,12 +54,12 @@ Pomocí tohoto průvodce můžete přidat třídy knihovny MFC z knihovny k disp
 |**<\<**|Odebere všechny třídy v **generované třídy** seznamu. Pokud neaktivní **generované třídy** seznam je prázdný.|  
   
  **Vygenerované třídy**  
- Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí **>** nebo **>>** tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v `Class` a název souboru v **soubor** pole, které průvodce generuje po kliknutí na tlačítko  **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
+ Určuje názvy tříd, které mají být vygenerovány z rozhraní přidaných pomocí **>** nebo **>>** tlačítko. Můžete kliknutím na toto políčko, vyberte třídu a potom pomocí nahoru a dolů klíče vyhledejte v seznamu zobrazuje název každé třídy v **třída** a název souboru v **souboru** pole Průvodce generuje při můžete Klikněte na tlačítko **Dokončit**. V tomto poli můžete vybrat jenom jedna třída najednou.  
   
  Třídu můžete odebrat výběrem v tomto seznamu a kliknutím na **<**. Není nutné k výběru třídy v poli generované třídy odebrat všechny třídy; Kliknutím na **<<**, odeberte všechny třídy v **generované třídy** pole.  
   
- `Class`  
- Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na tlačítko **Dokončit**. Můžete upravit název v `Class` pole.  
+ **– Třída**  
+ Určuje název třídy vybraný v **generované třídy** pole, které průvodce přidá po kliknutí na tlačítko **Dokončit**. Můžete upravit název v **třída** pole.  
   
  **Soubor**  
  Nastaví název hlavičky souboru pro novou třídu. Ve výchozím nastavení, tento název je založen na názvu poskytují v **generované třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby nebo připojit k existující soubor deklaraci třídy. Pokud zvolíte existující soubor, průvodce jej neuloží do vybraného umístění dokud klikněte na tlačítko **Dokončit** v průvodci.  

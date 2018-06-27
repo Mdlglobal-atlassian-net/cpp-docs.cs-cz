@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367032"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954062"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo – struktura
 `CDaoIndexInfo` Struktura obsahuje informace o objektu indexu definované pro přístup k objektům dat (DAO).  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Objekt pole jedinečné názvy. Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  Ukazatel na pole [cdaoindexfieldinfo –](../../mfc/reference/cdaoindexfieldinfo-structure.md) objekty o tom, která tabledef nebo sada záznamů pole klíčová pole v indexu. Každý objekt identifikuje jedno pole v indexu. Výchozí index řazení je vzestupně. Index objekt může mít jedno či více polí představující index klíče pro každý záznam. To může být vzestupné, sestupně, nebo jejich kombinaci.  
   
- `m_nFields`  
- Počet polí, které jsou uložené v `m_pFieldInfos`.  
+ *m_nFields*  
+ Počet polí, které jsou uložené v *m_pFieldInfos*.  
   
  *m_bPrimary*  
  Pokud je vlastnost primární **TRUE**, objekt index představuje primární index. Primární index se skládá z jednoho nebo více polí, které jedinečně identifikují všechny záznamy v tabulce v předdefinovaném pořadí. Protože index pole musí být jedinečný, jedinečný Index objektu je také nastavena na **TRUE** v rozhraní DAO. Pokud primární index se skládá z více než jedno pole, každé pole může obsahovat duplicitní hodnoty, ale kombinace hodnot z indexovaného pole musí být jedinečný. Primární index se skládá z klíče pro tabulku a obvykle obsahuje pole stejný jako primární klíč.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  Další informace naleznete v tématu "Vlastnost" v nápovědě rozhraní DAO.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Určuje, zda objekt DAO index vyžaduje nenulovou hodnotu. Pokud je tato vlastnost **TRUE**, objekt index nepovoluje hodnotu Null. Další informace naleznete v tématu "Požadované vlastnosti" v nápovědě rozhraní DAO.  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  Index objekty nejsou reprezentované pomocí třídy knihovny MFC. Místo toho rozhraní DAO objekty základní MFC objekty třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) obsahovat kolekce objektů index názvem kolekce indexů. Členské funkce pro přístup k jednotlivé položky index informace zadat tyto třídy nebo jejich najednou pomocí `CDaoIndexInfo` objekt voláním `GetIndexInfo` členské funkce obsahující objektu.  
   
- `CDaoIndexInfo` má konstruktor a destruktor, aby bylo možné správně přidělit a navrátit informace index pole v `m_pFieldInfos`.  
+ `CDaoIndexInfo` má konstruktor a destruktor, aby bylo možné správně přidělit a navrátit informace index pole v *m_pFieldInfos*.  
   
  Načte informace `GetIndexInfo` členské funkce tabledef objektu je uložen v `CDaoIndexInfo` struktura. Volání `GetIndexInfo` členské funkce obsahující tabledef objektu, v jehož kolekce indexů index objekt se uloží. `CDaoIndexInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoIndexInfo` objektu.  
   

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b8e52750f6f4589f90048e248305b2f0f5b4855
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383413"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953071"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializace: Příprava serializovatelné třídy
 Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níže a vysvětlené v následujících částech:  
@@ -71,7 +71,7 @@ Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níž
  Můžete také [CArchive::Read](../mfc/reference/carchive-class.md#read) a [CArchive::Write](../mfc/reference/carchive-class.md#write) členské funkce pro čtení a zápis velkých objemů dat bez typu.  
   
 ##  <a name="_core_using_the_declare_serial_macro"></a> Pomocí declare_serial – makro  
- `DECLARE_SERIAL` Makro je nutné v deklaraci třídy, které budou podporovat serializace, jak je vidět tady:  
+ Declare_serial – makro je nutné v deklaraci třídy, které budou podporovat serializace, jak je vidět tady:  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
@@ -81,18 +81,18 @@ Pěti hlavních kroků nutné vytvořit třídu serializable. Jsou uvedeny níž
  Veřejné, chráněný nebo privátní lze deklarovat tento konstruktor. Pokud provedete je chráněný nebo privátních, pomůže vám, ujistěte se, že se bude použit pouze pomocí funkce serializace. Konstruktor musíte umístit objekt ve stavu, který mohou být odstraněn v případě potřeby.  
   
 > [!NOTE]
->  Pokud zapomenete zadat konstruktor bez argumentů ve třídě, která používá `DECLARE_SERIAL` a `IMPLEMENT_SERIAL` makra, zobrazí se upozornění kompilátoru "žádný výchozí konstruktor dostupný" na řádku kde `IMPLEMENT_SERIAL` makro se používá.  
+>  Pokud zapomenete zadat konstruktor bez argumentů ve třídě, která používá declare_serial – a implement_serial – makra, zobrazí se upozornění kompilátoru "žádný výchozí konstruktor dostupný" na řádku, kde se používá implement_serial – makro.  
   
 ##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> V souboru implementace pomocí implement_serial – makro  
- `IMPLEMENT_SERIAL` Makro se používá k definování různých funkcí, třeba při odvozování serializovatelné třídy z `CObject`. Použití tohoto makra v souboru implementace (. CPP) pro třídu. První dva argumenty, které mají makro jsou název třídy a název své okamžitou základní třídy.  
+ Implement_serial – makro se používá k definování různých funkcí, třeba při odvozování serializovatelné třídy z `CObject`. Použití tohoto makra v souboru implementace (. CPP) pro třídu. První dva argumenty, které mají makro jsou název třídy a název své okamžitou základní třídy.  
   
  Třetí argument toto makro je číslo schématu. Číslo schématu je v podstatě číslo verze pro objekty třídy. Použijte celé číslo větší než nebo rovna 0 pro číslo schématu. (Nezaměňujte toto číslo schématu s terminologie databáze.)  
   
  MFC kód serializace kontroluje číslo schématu při čtení objektů do paměti. Pokud počet schématu objektu na disku neodpovídá schématu počet třídy v paměti, vyvolá výjimku knihovny `CArchiveException`, znemožňuje čtení nesprávná verze objektu vašeho programu.  
   
- Pokud chcete, aby vaše `Serialize` – členská funkce mohli přečíst více verzí – to znamená, soubory, které jsou napsané v různých verzích aplikace – můžete použít hodnotu **versionable_schema –** jako argument pro `IMPLEMENT_SERIAL` makro. Informace o využití a příklad najdete v tématu `GetObjectSchema` funkce člena třídy `CArchive`.  
+ Pokud chcete, aby vaše `Serialize` – členská funkce mohli přečíst více verzí – to znamená, soubory, které jsou napsané v různých verzích aplikace – můžete použít hodnotu *versionable_schema –* jako argument pro implement_serial – makro. Informace o využití a příklad najdete v tématu `GetObjectSchema` funkce člena třídy `CArchive`.  
   
- Následující příklad ukazuje, jak používat `IMPLEMENT_SERIAL` pro třídu, `CPerson`, který je odvozen od `CObject`:  
+ Následující příklad ukazuje, jak používat implement_serial – pro třídu, `CPerson`, který je odvozen od `CObject`:  
   
  [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   

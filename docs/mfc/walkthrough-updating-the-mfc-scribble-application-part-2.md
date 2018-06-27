@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385388"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952427"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Návod: Aktualizace aplikace MFC Scribble (část 2)
 [Část 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) Tento průvodce vám ukázal, jak přidat Office Fluent Ribbon do classic Klikyháky aplikace. Tato část popisuje postup pro přidání panelů pásu karet a ovládacích prvků, které uživatelé můžou použít místo nabídek a příkazů.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385388"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>K přidání panelů zobrazení a oken panelech na panelu pásu karet  
   
-1.  Vytvořit panel s názvem `View`, která má dva políček, která přepnutí stavového řádku a panelu nástrojů.  
+1.  Vytvořit panel s názvem *zobrazení*, která má dva políček, která přepnutí stavového řádku a panelu nástrojů.  
   
     1.  Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte dvě **zaškrtávací políčka** do panelu.  
   
-    2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `View`.  
+    2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k *zobrazení*.  
   
-    3.  Klikněte na první zaškrtávací políčko, chcete-li upravit jeho vlastnosti. Změna **ID** k `ID_VIEW_TOOLBAR` a **popisek** k `Toolbar`.  
+    3.  Klikněte na první zaškrtávací políčko, chcete-li upravit jeho vlastnosti. Změna **ID** k *id_view_toolbar –* a **popisek** k *nástrojů*.  
   
-    4.  Klikněte na tlačítko Upravit její vlastnosti, druhý zaškrtnutím políčka. Změna **ID** k `ID_VIEW_STATUS_BAR` a **popisek** k `Status Bar`.  
+    4.  Klikněte na tlačítko Upravit její vlastnosti, druhý zaškrtnutím políčka. Změna **ID** k *id_view_status_bar –* a **popisek** k *stavového řádku*.  
   
-2.  Vytvořit panel s názvem `Window` s tlačítko rozdělení. Když uživatel klikne na tlačítko rozdělení, zobrazí místní nabídka tři příkazy, které jsou již definováni v aplikaci Scribble.  
+2.  Vytvořit panel s názvem *okno* s tlačítko rozdělení. Když uživatel klikne na tlačítko rozdělení, zobrazí místní nabídka tři příkazy, které jsou již definováni v aplikaci Scribble.  
   
     1.  Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte **tlačítko** do panelu.  
   
-    2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `Window`.  
+    2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k *okno*.  
   
-    3.  Klikněte na tlačítko. Změna **popisek** k `Windows`, **klíče** k `w`, **velký obrázek indexu** k `1`, a **rozdělení režimu** k `False`. Pak klikněte na tlačítko se třemi tečkami (**...** ) vedle **položky nabídky** otevřete **položky Editor** dialogové okno.  
+    3.  Klikněte na tlačítko. Změna **popisek** k *Windows*, **klíče** k *w*, **velký obrázek indexu** k *1* , a **rozdělení režimu** k *False*. Pak klikněte na tlačítko se třemi tečkami (**...** ) vedle **položky nabídky** otevřete **položky Editor** dialogové okno.  
   
     4.  Klikněte na tlačítko **přidat** třikrát přidat tři tlačítka.  
   
-    5.  Klikněte na první tlačítko a poté změňte **popisek** k `New Window`, a **ID** k `ID_WINDOW_NEW`.  
+    5.  Klikněte na první tlačítko a poté změňte **popisek** k *nové okno*, a **ID** k *id_window_new –*.  
   
-    6.  Klikněte na tlačítko druhý a poté změňte **popisek** k `Cascade`, a **ID** k `ID_WINDOW_CASCADE`.  
+    6.  Klikněte na tlačítko druhý a poté změňte **popisek** k *Cascade*, a **ID** k *id_window_cascade –*.  
   
-    7.  Klikněte na tlačítko třetí a poté změňte **popisek** k `Tile`, a **ID** k `ID_WINDOW_TILE_HORZ`.  
+    7.  Klikněte na tlačítko třetí a poté změňte **popisek** k *dlaždice*, a **ID** k *id_window_tile_horz –*.  
   
 3.  Uložte změny a sestavte a spusťte aplikaci. **Zobrazení** a **okno** panelů má být zobrazen. Pomocí tlačítek potvrďte, že fungují správně.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385388"
   
 1.  Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte dvě **tlačítka** do panelu.  
   
-2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `Help`.  
+2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k *pomoci*.  
   
-3.  Klikněte na první tlačítko. Změna **popisek** k `Help Topics`, a **ID** k `ID_HELP_FINDER`.  
+3.  Klikněte na první tlačítko. Změna **popisek** k *témata nápovědy*, a **ID** k *ID_HELP_FINDER*.  
   
-4.  Klikněte na tlačítko druhý. Změna **popisek** k `About Scribble...`, a **ID** k `ID_APP_ABOUT`.  
+4.  Klikněte na tlačítko druhý. Změna **popisek** k *o Scribble...* , a **ID** k *id_app_about –*.  
   
 5.  Uložte změny a sestavte a spusťte aplikaci. A **pomoci** má být zobrazen panel, který obsahuje dvě tlačítka pásu karet.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385388"
   
 1.  Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte **políčko** a dvě **pole se seznamem** do panelu.  
   
-2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `Pen`.  
+2.  Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k *pera*.  
   
-3.  Klikněte na zaškrtávací políčko. Změna **popisek** k `Use Thick`, a **ID** k `ID_PEN_THICK_OR_THIN`.  
+3.  Klikněte na zaškrtávací políčko. Změna **popisek** k *používat silná*, a **ID** k *ID_PEN_THICK_OR_THIN*.  
   
-4.  Klikněte na první pole se seznamem. Změna **popisek** k `Thin Pen`, **ID** k `ID_PEN_THIN_WIDTH`, **Text** k `2`, **typ** k `Drop List`, a **Data** k `1;2;3;4;5;6;7;8;9;`.  
+4.  Klikněte na první pole se seznamem. Změna **popisek** k *dynamicky pera*, **ID** k *ID_PEN_THIN_WIDTH*, **Text** k *2* , **Typ** k *vyřadit seznamu*, a **Data** k *1, 2, 3; 4; 5; 6; 7; 8, 9;*.  
   
-5.  Klikněte na tlačítko druhé pole se seznamem. Změna **popisek** k `Thick Pen`, **ID** k `ID_PEN_THICK_WIDTH`, **Text** k `5`, **typ** k `Drop List`, a **Data** k `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
+5.  Klikněte na tlačítko druhé pole se seznamem. Změna **popisek** k *konvenčním pera*, **ID** k *ID_PEN_THICK_WIDTH*, **Text** k  *5*, **typ** k *vyřadit seznamu*, a **Data** k *5, 6, 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19, 20;*.  
   
 6.  Nové pole se seznamem nemusí odpovídat všechny existující položky nabídky. Proto je nutné vytvořit položku nabídky pro všechny dostupné možnosti pera.  
   
     1.  V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky.  
   
-    2.  Klikněte na tlačítko **pera** otevřete p**en** nabídky. Pak klikněte na tlačítko **zde typ** a typ `Thi&n Pen`.  
+    2.  Klikněte na tlačítko **pera** otevřete p**en** nabídky. Pak klikněte na tlačítko **zde typ** a typ *Thi & n pera*.  
   
-    3.  Klikněte pravým tlačítkem na text, který jste právě zadali, otevřete **vlastnosti** okna a potom změnu ID vlastnosti `ID_PEN_THIN_WIDTH`.  
+    3.  Klikněte pravým tlačítkem na text, který jste právě zadali, otevřete **vlastnosti** okna a potom změnu ID vlastnosti *ID_PEN_THIN_WIDTH*.  
   
     4.  Musíte taky vytvořit obslužnou rutinu události pro každou položku nabídky pera. Klikněte pravým tlačítkem myši **Thi & n pera** položky nabídky, který jste právě vytvořili a potom klikněte na **přidejte obslužné rutiny události**. **Průvodce obslužnou rutinou události** se zobrazí.  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi – (pThinComboBox -> GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Přidání tlačítka barvy pera panely  
   
-1.  Než přidáte tlačítko barvy, vytvořte pro tuto položku nabídky. V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky. Klikněte **pera** položku otevřete nabídku pera. Pak klikněte na tlačítko **zde typ** a typ `&Color`. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okno. Změnit ID na `ID_PEN_COLOR`.  
+1.  Než přidáte tlačítko barvy, vytvořte pro tuto položku nabídky. V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky. Klikněte **pera** položku otevřete nabídku pera. Pak klikněte na tlačítko **zde typ** a typ *& Barva*. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okno. Změnit ID na *ID_PEN_COLOR*.  
   
 2.  Nyní přidejte tlačítko barvy. Z **sada nástrojů**, přetáhněte **barva tlačítko** k **pera** panelu.  
   
-3.  Klikněte na tlačítko barvy. Změna **popisek** k `Color`, **ID** k `ID_PEN_COLOR`, **SimpleLook** k `True`, **velký obrázek indexu** na `1`, a **rozdělení režimu** k `False`.  
+3.  Klikněte na tlačítko barvy. Změna **popisek** k *barva*, **ID** k *ID_PEN_COLOR*, **SimpleLook** k  *Hodnota TRUE,*, **velký obrázek indexu** k *1*, a **rozdělení režimu** k *False*.  
   
 4.  Uložte změny a sestavte a spusťte aplikaci. Tlačítko nové barva se má zobrazit na **pera** panelu. Ale jej nelze použít, protože ještě nemá obslužné rutiny události. Další kroky ukazují, jak přidat obslužné rutiny události pro tlačítko barvy.  
   

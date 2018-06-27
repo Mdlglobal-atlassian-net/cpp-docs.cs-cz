@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385375"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952408"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyku Visual C++
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Při kompilaci Visual C++. RC soubor definuje **APSTUDIO_INVOKED** a také **RC_INVOKED**. Pokud strukturu vytvořené objekty AppWizard soubor je poškozený a přečte výše #error řádku Visual C++, sestavy na závažnou chybu a přerušit čtení. RC soubor.  
+ Při kompilaci Visual C++. RC soubor definuje `APSTUDIO_INVOKED` a také `RC_INVOKED`. Pokud strukturu vytvořené objekty AppWizard soubor je poškozený a přečte výše #error řádku Visual C++, sestavy na závažnou chybu a přerušit čtení. RC soubor.  
   
  **Správa symboly, které jsou sdíleny více Visual C++ upravit. RC – soubory**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** je hodnotě další symbol, který se použije pro dialogové okno prostředků, prostředků nabídky a tak dále. Platný rozsah hodnot symbol prostředků je 1 – 0x6FFF.  
+ `_APS_NEXT_RESOURCE_VALUE` je hodnotě další symbol, který se použije pro dialogové okno prostředků, prostředků nabídky a tak dále. Platný rozsah hodnot symbol prostředků je 1 – 0x6FFF.  
   
- **_APS_NEXT_COMMAND_VALUE** je hodnotě další symbol, který se použije pro identifikaci příkaz. Platný rozsah pro příkaz symbol hodnoty je 0x8000 k 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` je hodnotě další symbol, který se použije pro identifikaci příkaz. Platný rozsah pro příkaz symbol hodnoty je 0x8000 k 0xDFFF.  
   
- **_APS_NEXT_CONTROL_VALUE** je hodnotě další symbol, který se použije pro ovládací prvek dialogového okna. Platný rozsah pro dialogové okno ovládacího prvku symbol hodnoty je 8 k 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` je hodnotě další symbol, který se použije pro ovládací prvek dialogového okna. Platný rozsah pro dialogové okno ovládacího prvku symbol hodnoty je 8 k 0xDFFF.  
   
- **_APS_NEXT_SYMED_VALUE** je další symbol hodnotu, která způsobí vystavení, když ho ručně nepřiřadíte hodnotu symbol použít nový příkaz, v prohlížeči Symbol.  
+ `_APS_NEXT_SYMED_VALUE` Další symbol hodnotu, která způsobí vystavení, když ho ručně nepřiřadíte hodnotu symbol používá nový příkaz v prohlížeči Symbol.  
   
  Visual C++ začíná mírně vyšší hodnoty, právních nejnižší hodnotu v případě vytvoření nové. RC soubor. Objekty AppWizard také inicializuje tyto hodnoty na něco pro aplikace MFC vhodnější. Další informace o rozsahy hodnota ID najdete v tématu [Technická poznámka 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Teď pokaždé, když vytvoříte nový soubor prostředků, i v rámci jednoho projektu, Visual C++ definuje stejné **_APS_NEXT\_**  hodnoty. To znamená, že pokud přidáte, můžete, více v dialogových oknech v dva různé. RC – soubory, je velmi pravděpodobné, který stejné #define hodnota se přiřadí různé dialogová okna. Například IDD_MY_DLG1 v prvním. RC soubor může být přiřazen stejný počet, 101, jako IDD_MY_DLG2 za sekundu. RC soubor.  
+ Teď pokaždé, když vytvoříte nový soubor prostředků, i v rámci jednoho projektu, Visual C++ definuje stejné `_APS_NEXT_` hodnoty. To znamená, že pokud přidáte, můžete, více v dialogových oknech v dva různé. RC – soubory, je velmi pravděpodobné, který stejné #define hodnota se přiřadí různé dialogová okna. Například IDD_MY_DLG1 v prvním. RC soubor může být přiřazen stejný počet, 101, jako IDD_MY_DLG2 za sekundu. RC soubor.  
   
- Abyste tomu předešli, by měl vyhradit samostatné číselný rozsah pro každé z domén, čtyři ID v příslušné. RC – soubory. To provedete ruční aktualizace **_APS_NEXT** hodnoty v jednotlivých. RC – soubory `before` začnete přidávat prostředky. Například pokud první. RC soubor používá výchozí **_APS_NEXT** hodnoty, pak můžete přiřadit následující **_APS_NEXT** hodnoty na druhý. RC soubor:  
+ Abyste tomu předešli, by měl vyhradit samostatné číselný rozsah pro každé z domén, čtyři ID v příslušné. RC – soubory. To provedete ruční aktualizace `_APS_NEXT` hodnoty v jednotlivých. RC – soubory **před** začnete přidávat prostředky. Například pokud první. RC soubor používá výchozí `_APS_NEXT` hodnoty, pak můžete přiřadit následující `_APS_NEXT` hodnoty na druhý. RC soubor:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

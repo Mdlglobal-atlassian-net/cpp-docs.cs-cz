@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1095061cce8ff8f189984aca99a06eb741a46e83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382070"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956379"
 ---
 # <a name="window-procedure-entry-points"></a>Vstupní bod procedury okna
-K ochraně procedury oken MFC, modul statické propojení s na speciální okno Postup implementace. Propojení se automaticky nastane, když modul je propojené s knihovnou MFC. Tento postup okno používá `AFX_MANAGE_STATE` makro správně nastavit stav efektivní modulu, pak zavolá **AfxWndProc**, která zase deleguje `WindowProc` členské funkce odpovídající `CWnd`-odvozené objekt.  
+K ochraně procedury oken MFC, modul statické propojení s na speciální okno Postup implementace. Propojení se automaticky nastane, když modul je propojené s knihovnou MFC. Tento postup okno používá AFX_MANAGE_STATE – makro správně nastavit stav efektivní modul a potom zavolá `AfxWndProc`, která zase deleguje `WindowProc` členské funkce odpovídající `CWnd`-odvozené objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Správa údajů o stavu modulů knihovny MFC](../mfc/managing-the-state-data-of-mfc-modules.md)

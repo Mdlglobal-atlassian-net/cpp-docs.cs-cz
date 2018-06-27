@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384866"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954592"
 ---
 # <a name="using-tree-controls"></a>Použití ovládacích prvků strom
 Typické použití ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) se následující níže:  
@@ -31,7 +31,7 @@ Typické použití ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreec
   
 -   Ukládat data do ovládacího prvku voláním `CTreeCtrl`na [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkce jednou pro každou položku dat. `InsertItem` Vrátí popisovač pro položku, kterou můžete použít k odkazování na ho později, například při přidání podřízené položky. Je vhodná doba k chybě při inicializaci dat v `OnInitDialog` (pro ovládací prvky v dialogových oknech) nebo `OnInitialUpdate` (pro zobrazení).  
   
--   Jako uživatel pracuje s ovládacím prvkem, odešle různých zpráv s oznámením. Můžete zadat funkci pro zpracování jednotlivých zpráv chcete zpracovat tak, že přidáte **on_notify_reflect –** makro v mapy zpráv okno řízení nebo přidáním `ON_NOTIFY` makro do nadřazeného okna mapa zpráv. V tématu [zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md) dál v tomto tématu pro seznam možných oznámení.  
+-   Jako uživatel pracuje s ovládacím prvkem, odešle různých zpráv s oznámením. Můžete zadat funkci pro zpracování jednotlivých zpráv, které chcete zpracovávat přidáním on_notify_reflect – makro mapy zpráv okno řízení nebo přidáním on_notify – makro do nadřazeného okna mapa zpráv. V tématu [zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md) dál v tomto tématu pro seznam možných oznámení.  
   
 -   Volání různé sady členské funkce pro nastavení hodnot pro ovládací prvek. Změny, které můžete provést zahrnují nastavení odsazení a změna text, image nebo data přidružená položce.  
   

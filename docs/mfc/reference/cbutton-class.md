@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcf6fd613231567cbb54b95c8be924919d93269
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e232c363da4c9bbaf7e049551f9e2915671098c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357725"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957439"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 Poskytuje funkce Windows ovládacích prvků.  
@@ -153,9 +153,9 @@ class CButton : public CWnd
   
  Kromě toho [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) třída odvozená z `CButton` podporuje vytváření ovládacích prvků tlačítko označený verzí rastrové obrázky místo textu. A `CBitmapButton` může mít samostatné bitmap pro tlačítko je, dolů, zaměřuje a zakázané stavy.  
   
- Ovládací prvek tlačítko můžete vytvořit buď z šablony dialogového okna, nebo přímo v kódu. V obou případech nejprve volat konstruktor `CButton` vytvořit `CButton` objektu; potom zavolejte **vytvořit** – členská funkce vytvoření okna pro ovládací prvek tlačítko a připojte ji k `CButton` objektu.  
+ Ovládací prvek tlačítko můžete vytvořit buď z šablony dialogového okna, nebo přímo v kódu. V obou případech nejprve volat konstruktor `CButton` vytvořit `CButton` objektu; potom zavolejte `Create` – členská funkce vytvoření okna pro ovládací prvek tlačítko a připojte ji k `CButton` objektu.  
   
- Konstrukce může být jednoduchý proces v třídy odvozené od `CButton`. Zápis konstruktoru odvozené třídy a volání **vytvořit** z v konstruktoru.  
+ Konstrukce může být jednoduchý proces v třídy odvozené od `CButton`. Zápis konstruktoru odvozené třídy a volání `Create` z v konstruktoru.  
   
  Pokud chcete pro zpracování zpráv s oznámením Windows posílá nadřazenému prvku tlačítko (obvykle třída odvozená z [CDialog](../../mfc/reference/cdialog-class.md)), přidejte map zpráv položku a obslužné rutiny zpráv členské funkce do nadřazené třídy pro každou zprávu.  
   
@@ -215,26 +215,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszCaption`  
+ *lpszCaption*  
  Určuje text prvku tlačítka.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku tlačítko. Použít libovolnou kombinaci [tlačítko styly](../../mfc/reference/styles-used-by-mfc.md#button-styles) pro tlačítko.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacího prvku tlačítko. Může být buď `CRect` objekt nebo `RECT` struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje ovládacího prvku tlačítko nadřazené okno, obvykle `CDialog`. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CButton` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří ovládacího prvku tlačítko Windows a připojí jej k `CButton` objektu.  
+ Můžete vytvořit `CButton` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří ovládacího prvku tlačítko Windows a připojí jej k `CButton` objektu.  
   
  Pokud **ws_visible –** je zadána styl, systém Windows odešle ovládacího prvku tlačítko všechny zprávy, které jsou potřebné pro aktivaci a na tlačítko zobrazit.  
   
@@ -261,11 +261,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Dlouhé ukazatel [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) struktura. Struktura obsahuje informace o položce, které se mají vykreslovat a typ kreslení vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
- Vykreslovaných vlastníkem tlačítko má **bs_ownerdraw –** styl sady. Člen funkci implementovat kreslení pro vykreslovaných vlastníkem přepsat `CButton` objektu. Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v `lpDrawItemStruct` před člen funkce ukončí.  
+ Vykreslovaných vlastníkem tlačítko má **bs_ownerdraw –** styl sady. Člen funkci implementovat kreslení pro vykreslovaných vlastníkem přepsat `CButton` objektu. Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před člen funkce ukončí.  
   
  Viz také [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) hodnoty stylu.  
   
@@ -370,7 +370,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  Ukazatel na seznamu bitové kopie `CButton` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] `lpszNote`|Ukazatel na vyrovnávací paměť, která má volající zodpovídá za přidělování a rušení přidělení. Pokud je vrácenou hodnotou `true`, Poznámka: text, který je přidružen aktuální příkaz odkaz ovládacího prvku; jinak hodnota obsahuje vyrovnávací paměť, vyrovnávací paměť je beze změny.|  
-|[ve out] `cchNote`|Ukazatel na proměnnou celé číslo bez znaménka.<br /><br /> Když tato metoda je volána, obsahuje proměnnou velikost vyrovnávací paměti určeného `lpszNote` parametr.<br /><br /> Když tato metoda vrátí hodnotu, pokud je vrácenou hodnotou `true` velikost Poznámka přidružený k ovládacímu prvku aktuální příkaz odkaz obsahuje proměnnou. Pokud je vrácenou hodnotou `false`, obsahuje proměnnou musí obsahovat Poznámka velikost vyrovnávací paměti.|  
+|[out] *lpszNote*|Ukazatel na vyrovnávací paměť, která má volající zodpovídá za přidělování a rušení přidělení. Pokud je vrácenou hodnotou `true`, Poznámka: text, který je přidružen aktuální příkaz odkaz ovládacího prvku; jinak hodnota obsahuje vyrovnávací paměť, vyrovnávací paměť je beze změny.|  
+|[ve out] *cchNote*|Ukazatel na proměnnou celé číslo bez znaménka.<br /><br /> Když tato metoda je volána, obsahuje proměnnou velikost vyrovnávací paměti určeného *lpszNote* parametr.<br /><br /> Když tato metoda vrátí hodnotu, pokud je vrácenou hodnotou `true` velikost Poznámka přidružený k ovládacímu prvku aktuální příkaz odkaz obsahuje proměnnou. Pokud je vrácenou hodnotou `false`, obsahuje proměnnou musí obsahovat Poznámka velikost vyrovnávací paměti.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  V první přetížení [CString](../../atl-mfc-shared/using-cstring.md) objekt, který obsahuje text poznámky, který je přidružený k ovládacímu prvku aktuální příkaz odkaz.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] `pInfo`|Ukazatel na [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura, která přijímá informace o aktuální ovládací prvek tlačítko rozdělení. Volající zodpovídá za přidělování strukturu.|  
+|[out] *pInfo*|Ukazatel na [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura, která přijímá informace o aktuální ovládací prvek tlačítko rozdělení. Volající zodpovídá za přidělování strukturu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] `pSize`|Ukazatel na [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|  
+|[out] *pSize*|Ukazatel na [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -549,7 +549,7 @@ BOOL GetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pmargin`  
+ *pmargin*  
  Ukazatel na rozpětí textu `CButton` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -569,7 +569,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hBitmap`  
+ *hBitmap*  
  Popisovač rastrový obrázek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -607,10 +607,10 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStyle`  
+ *nStyle*  
  Určuje, [tlačítko Styl](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- `bRedraw`  
+ *bRedraw*  
  Určuje, zda je tlačítko překreslit. Nenulovou hodnotu překreslí tlačítko. Hodnota 0 zůstávají beze změny tlačítko. Ve výchozím nastavení bude překreslen tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -627,7 +627,7 @@ void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCheck`  
+ *nZkontrolujte*  
  Určuje stav kontroly. Tento parametr může být jedna z následujících akcí:  
   
 |Hodnota|Význam|  
@@ -650,7 +650,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hCursor`  
+ *hCursor*  
  Popisovač kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `fDropDown`|`true` Chcete-li nastavit `BST_DROPDOWNPUSHED` stavu; jinak hodnota, `false`.|  
+|[v] *fDropDown*|`true` Chcete-li nastavit `BST_DROPDOWNPUSHED` stavu; jinak hodnota, `false`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -698,7 +698,7 @@ BOOL SetDropDownState(BOOL fDropDown);
  Tato metoda odesílá [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) zprávy, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_splitButton`, který používá k programovému přístupu ovládacího prvku tlačítko rozdělení. Tato proměnná se používá v následujícím příkladu.  
+ Následující příklad kódu definuje proměnnou, *m_splitButton*, který používá k programovému přístupu ovládacího prvku tlačítko rozdělení. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -736,7 +736,7 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hIcon`  
+ *hIcon*  
  Popisovač ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -770,7 +770,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  Ukazatel na nový seznam obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `lpszNote`|Ukazatel na řetězec znaků Unicode, který je nastaven jako text poznámky pro ovládací prvek odkazu příkazu.|  
+|[v] *lpszNote*|Ukazatel na řetězec znaků Unicode, který je nastaven jako text poznámky pro ovládací prvek odkazu příkazu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -801,7 +801,7 @@ BOOL SetNote(LPCTSTR lpszNote);
  Tato metoda odesílá [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) zprávy, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad kódu definuje proměnnou, `m_cmdLink`, který používá k programovému přístupu ovládací prvek odkazu příkazu. Tato proměnná se používá v následujícím příkladu.  
+ Následující příklad kódu definuje proměnnou, *m_cmdLink*, který používá k programovému přístupu ovládací prvek odkazu příkazu. Tato proměnná se používá v následujícím příkladu.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `chGlyph`|Znak, který určuje glyf, který chcete použít jako na šipku rozevíracího seznamu tlačítka rozdělení.|  
+|[v] *chGlyph*|Znak, který určuje glyf, který chcete použít jako na šipku rozevíracího seznamu tlačítka rozdělení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -829,7 +829,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze použít pouze s ovládacími prvky, které mají stylů tlačítek `BS_SPLITBUTTON` nebo `BS_DEFSPLITBUTTON`.  
   
- Glyf je fyzický reprezentace znaku v určité písmo. `chGlyph` Parametr se nepoužívá jako glyf, ale místo toho slouží k výběru glyf ze sady glyfů definovaná systémem. Základního glyfu šipku rozevíracího seznamu je zadána znakem '6' a vypadá takto: znak Unicode ČERNÝM dolů TROJÚHELNÍK SMĚŘUJÍCÍ (U + 25BC).  
+ Glyf je fyzický reprezentace znaku v určité písmo. *ChGlyph* parametr se nepoužívá jako glyf, ale místo toho slouží k výběru glyf ze sady glyfů definovaná systémem. Základního glyfu šipku rozevíracího seznamu je zadána znakem '6' a vypadá takto: znak Unicode ČERNÝM dolů TROJÚHELNÍK SMĚŘUJÍCÍ (U + 25BC).  
   
  Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_GLYPH` příznak a `himlGlyph` člen s `chGlyph` parametr a poté odešle, které struktury v [ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
   
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pSplitImageList`|Ukazatel na [CImageList](../../mfc/reference/cimagelist-class.md) objekt, který chcete přiřadit aktuální ovládací prvek tlačítko rozdělení.|  
+|[v] *pSplitImageList*|Ukazatel na [CImageList](../../mfc/reference/cimagelist-class.md) objekt, který chcete přiřadit aktuální ovládací prvek tlačítko rozdělení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu lze použít pouze s ovládacími prvky mají tlačítko Styl `BS_SPLITBUTTON` nebo `BS_DEFSPLITBUTTON`.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_IMAGE` příznak a `himlGlyph` člen s `pSplitImageList` parametr a poté odešle, které struktury v [ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_IMAGE` příznak a `himlGlyph` člen s *pSplitImageList* parametr a potom odešle této struktury v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Určuje parametry, které určují, jak Windows nevykresluje aktuální ovládací prvek tlačítko rozdělení.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pInfo`|Ukazatel na [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura, která definuje aktuální ovládací prvek tlačítko rozdělení.|  
+|[v] *pInfo*|Ukazatel na [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktura, která definuje aktuální ovládací prvek tlačítko rozdělení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pSize`|Ukazatel na [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|  
+|[v] *pSize*|Ukazatel na [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  Když je rozšířena ovládacího prvku tlačítko rozdělení, zobrazí rozevírací seznam součástí například ovládací prvek seznamu nebo pager řízení. Tato metoda určuje velikost ohraničující obdélník, který obsahuje komponentu rozevíracího seznamu.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_SIZE` příznak a `size` člen s `pSize` parametr a poté odešle, které struktury v [ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_SIZE` příznak a `size` člen s *pSize* parametr a poté odešle, struktury v [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_splitButton`, který používá k programovému přístupu ovládacího prvku tlačítko rozdělení. Tato proměnná se používá v následujícím příkladu.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `uSplitStyle`|Bitová kombinace styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.|  
+|[v] *uSplitStyle*|Bitová kombinace styly tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -939,7 +939,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  Styly tlačítek rozdělení zadejte zarovnání, poměr stran a grafické formátu, pomocí kterého Windows nevykresluje ikonu tlačítka rozdělení. Další informace najdete v tématu `uSplitStyle` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury.  
   
- Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_STYLE` příznak a `uSplitStyle` člen s `uSplitStyle` parametr a poté odešle, které struktury v [ BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
+ Tato metoda inicializuje `mask` členem [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struktury s `BCSIF_STYLE` příznak a `uSplitStyle` člen s *uSplitStyle* parametr a pak odešle v této struktury [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) zpráva, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje proměnnou, `m_splitButton`, který používá k programovému přístupu ovládacího prvku tlačítko rozdělení.  
@@ -978,7 +978,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pmargin`  
+ *pmargin*  
  Ukazatel na nové okraj textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

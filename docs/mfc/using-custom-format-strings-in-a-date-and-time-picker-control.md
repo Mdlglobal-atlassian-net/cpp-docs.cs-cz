@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2b365439f1681cf72bd58218ea4f55fbb2f44c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aeb6c02041a4ba90f9721f23a1397e17a4cdf81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381999"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955755"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Použití řetězců vlastního formátu v ovládacím prvku pro výběr data a času
 Ve výchozím nastavení ovládací prvky pro výběr data a času poskytují že tři typy (každý formát odpovídající jedinečný styl) formátu pro zobrazení aktuálního data a času:  
@@ -34,7 +34,7 @@ Ve výchozím nastavení ovládací prvky pro výběr data a času poskytují ž
   
  Ale můžete přizpůsobit vzhled data a času pomocí vlastní řetězec formátu. Tento vlastní řetězec se skládá z existující formát znaky, znaky nonformat nebo obojí. Po vlastním řetězcem, ujistěte se, volání [CDateTimeCtrl::SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) předávání v vlastní řetězec. Prvku pro výběr data a času se potom zobrazí aktuální hodnotu pomocí vlastní formátovací řetězec.  
   
- Následující příklad kódu (kde `m_dtPicker` je `CDateTimeCtrl` objektu) ukazuje jedním z možných řešení:  
+ Následující příklad kódu (kde *m_dtPicker* je `CDateTimeCtrl` objektu) ukazuje jedním z možných řešení:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   

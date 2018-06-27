@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a52846754bdf1293e03a47127ae8886e0f1cd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385465"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952423"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE – implementace třídy IUnknown
 > [!NOTE]
@@ -89,7 +89,7 @@ public:
 };  
 ```  
   
- Chcete-li získat IPrintInterface, pokud máte pouze [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), volání [QueryInterface –](http://msdn.microsoft.com/library/windows/desktop/ms682521) pomocí `IID` z **IPrintInterface**. `IID` Je 128-bit číslo, které jednoznačně identifikuje rozhraní. Došlo `IID` pro každém rozhraní, které můžete případně OLE definovat. Pokud `pUnk` je ukazatel na [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) objekt, může být kód pro načtení IPrintInterface z něj:  
+ Chcete-li získat IPrintInterface, pokud máte pouze [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), volání [QueryInterface –](http://msdn.microsoft.com/library/windows/desktop/ms682521) pomocí `IID` z `IPrintInterface`. `IID` Je 128-bit číslo, které jednoznačně identifikuje rozhraní. Došlo `IID` pro každém rozhraní, které můžete případně OLE definovat. Pokud *pUnk* je ukazatel na [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) objekt, může být kód pro načtení IPrintInterface z něj:  
   
 ```  
 IPrintInterface* pPrint = NULL;  
@@ -116,7 +116,7 @@ virtual void PrintObject();
 };  
 ```  
   
- Implementace [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379) a [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317) by přesně stejné jako ty, které jsou implementované výše. **CPrintObj::QueryInterface** by vypadat přibližně takto:  
+ Implementace [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379) a [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317) by přesně stejné jako ty, které jsou implementované výše. `CPrintObj::QueryInterface` by vypadat přibližně takto:  
   
 ```  
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)  
@@ -301,15 +301,15 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 2.  Použití `DECLARE_INTERFACE_MAP` funkce v definici odvozené třídy.  
   
-3.  Pro každé rozhraní, které chcete podporovat, použijte `BEGIN_INTERFACE_PART` a `END_INTERFACE_PART` makra v definici třídy.  
+3.  Pro každé rozhraní, které chcete podporovat použijte begin_interface_part – a end_interface_part – makra v definici třídy.  
   
-4.  V souboru implementace použít `BEGIN_INTERFACE_MAP` a `END_INTERFACE_MAP` makra k definování třídy rozhraní mapy.  
+4.  V souboru implementace použijte k definování třídy rozhraní mapy begin_interface_map – a end_interface_map – makra.  
   
-5.  Pro každý IID podporovány, použijte `INTERFACE_PART` makro mezi `BEGIN_INTERFACE_MAP` a `END_INTERFACE_MAP` maker, pro tento IID namapovat na konkrétní "část" vaší třídy.  
+5.  Pro každý IID podporovány použijte interface_part – makro mezi begin_interface_map – a end_interface_map – makra pro mapování této IID na konkrétní "část" vaší třídy.  
   
 6.  Implementujte všechny vnořené třídy, které představují rozhraní, které podporujete.  
   
-7.  Použití `METHOD_PROLOGUE` makro přístupu k nadřazenému `CCmdTarget`-odvozené objektu.  
+7.  Method_prologue – makro používat pro přístup k nadřazeným prvkem, `CCmdTarget`-odvozené objektu.  
   
 8. [Addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) můžete delegovat na `CCmdTarget` provádění těchto funkcí (`ExternalAddRef`, `ExternalRelease`, a `ExternalQueryInterface`).  
   
@@ -338,7 +338,7 @@ END_INTERFACE_PART(PrintObj)
 };  
 ```  
   
- Výše uvedené deklaraci vytvoří třídy odvozené od `CCmdTarget`. `DECLARE_INTERFACE_MAP` Makro informuje rozhraní, že tato třída bude mít vlastní rozhraní mapy. Kromě toho `BEGIN_INTERFACE_PART` a `END_INTERFACE_PART` makra definovat vnořené třídy, v takovém případě s názvy CEditObj a CPrintObj (X slouží pouze k odlišení od globální třídy, které začínat "C" a rozhraní třídy, které začínat "I vnořené třídy "). Budou vytvořeny dva vnořené členy z těchto tříd: m_CEditObj a m_CPrintObj, v uvedeném pořadí. Makra automaticky deklarovat [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkce; proto je pouze deklarovat funkce specifické pro toto rozhraní: EditObject a PrintObject (makro OLE `STDMETHOD` se používá, aby `_stdcall` a virtuální klíčová slova jsou dostupné jako vhodný pro cílové platformy).  
+ Výše uvedené deklaraci vytvoří třídy odvozené od `CCmdTarget`. Declare_interface_map – makro informuje rozhraní, že tato třída bude mít vlastní rozhraní mapy. Kromě toho begin_interface_part – a end_interface_part – makra definovat vnořené třídy, v takovém případě s názvy CEditObj a CPrintObj (X slouží pouze k odlišení od globální třídy, které začněte s "C" a rozhraní třídy, které vnořené třídy Začněte u "I"). Budou vytvořeny dva vnořené členy z těchto tříd: m_CEditObj a m_CPrintObj, v uvedeném pořadí. Makra automaticky deklarovat [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkce; proto je pouze deklarovat funkce specifické pro toto rozhraní: EditObject a PrintObject (slouží STDMETHOD – makro OLE tak, aby **_stdcall** a virtuální klíčová slova jsou dostupné jako vhodný pro cílové platformy).  
   
  K implementaci rozhraní mapy pro tuto třídu:  
   
@@ -356,7 +356,7 @@ END_INTERFACE_MAP()
   
  To připojí IID_IPrintInterface IID s m_CPrintObj a IID_IEditInterface m_CEditObj v uvedeném pořadí. `CCmdTarget` Implementace [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) používá k vrácení ukazatele m_CPrintObj a m_CEditObj vyžádání mapy. Není nutné zahrnovat záznam pro `IID_IUnknown`; rozhraní použije první rozhraní v mapě (v tomto případě m_CPrintObj) při `IID_IUnknown` se požaduje.  
   
- I když `BEGIN_INTERFACE_PART` makro automaticky deklarován [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317) a [QueryInterface –](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkce pro vás, stále je třeba implementovat:  
+ Přestože begin_interface_part – makro automaticky deklarovaný [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317) a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) funkce pro vás, stále je třeba implementovat:  
   
 ```  
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()  
@@ -404,10 +404,10 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 -   Na obou vašich rozhraní deklarovat žádnou z těchto předdefinovaných metod  
   
- Kromě toho rozhraní používá interně mapy zpráv. To umožňuje odvozena od třídy framework vyslovte `COleServerDoc`, který již podporuje určitá rozhraní a poskytuje náhrady nebo doplňky rozhraní poskytované rozhraní. To můžete provést, protože rozhraní plně podporuje dědění mapování rozhraní ze základní třídy. Proč se z důvodu `BEGIN_INTERFACE_MAP` používá jako její druhý parametr název základní třídy.  
+ Kromě toho rozhraní používá interně mapy zpráv. To umožňuje odvozena od třídy framework vyslovte `COleServerDoc`, který již podporuje určitá rozhraní a poskytuje náhrady nebo doplňky rozhraní poskytované rozhraní. To můžete provést, protože rozhraní plně podporuje dědění mapování rozhraní ze základní třídy. To je důvod, proč begin_interface_map – přebírá jako její druhý parametr název základní třídy.  
   
 > [!NOTE]
->  Obecně není možné znovu použít, implementace MFC na předdefinované implementace rozhraní OLE právě embedded specializace tohoto rozhraní, která dědí z verze rozhraní MFC. To není možné protože použití `METHOD_PROLOGUE` makro získat přístup k obsahující `CCmdTarget`-znamená odvozené objektu *pevné odsazení* embedded objektu z `CCmdTarget`-odvozené objektu. To znamená, například embedded XMyAdviseSink nelze odvodit z implementace knihovny MFC ve `COleClientItem::XAdviseSink`, protože XAdviseSink používá tento údaj na konkrétní posunu z horní části `COleClientItem` objektu.  
+>  Obecně není možné znovu použít, implementace MFC na předdefinované implementace rozhraní OLE právě embedded specializace tohoto rozhraní, která dědí z verze rozhraní MFC. To není možné protože použití method_prologue – makro získat přístup k obsahující `CCmdTarget`-znamená odvozené objektu *pevné odsazení* embedded objektu z `CCmdTarget`-odvozené objektu. To znamená, například embedded XMyAdviseSink nelze odvodit z implementace knihovny MFC ve `COleClientItem::XAdviseSink`, protože XAdviseSink používá tento údaj na konkrétní posunu z horní části `COleClientItem` objektu.  
   
 > [!NOTE]
 >  Můžete, ale delegovat na implementace MFC pro všechny funkce, které chcete MFC je výchozí chování. To se provádí v implementace MFC `IOleInPlaceFrame` (XOleInPlaceFrame) v `COleFrameHook` – třída (dojde k delegaci na m_xOleInPlaceUIWindow pro mnoho funkcí). Tento návrh byl zvolen ke snížení velikosti runtime objekty, které implementují třídu mnoho rozhraní; eliminuje nutnost back ukazatel (například m_pParent způsob, jak byl použit v předchozí části).  
@@ -418,13 +418,13 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
  Existují dva způsoby, jak používat agregace: (1) pomocí objektu COM, která podporuje agregace a (2) implementace objekt, který se dají agregovat v jiné. Tyto možnosti můžete se označuje jako "použití agregovaný objekt" a "Změna objektu na agregovatelných". MFC podporuje obě.  
   
 ### <a name="using-an-aggregate-object"></a>Pomocí agregovaný objekt  
- Použití agregační objekt, a tam, musí být nějakým způsobem ke svázání agregace do QueryInterface mechanismu. Jinými slovy agregovaný objekt musí chovat, jako kdyby je nativní součástí objektu. Jak tedy této vazbě do knihovny MFC rozhraní mapování mechanismus kromě `INTERFACE_PART` makro, kde vnořeného objektu je namapována na IID, můžete také deklarovat agregovaný objekt v rámci vaší `CCmdTarget` odvozené třídy. Uděláte to tak, `INTERFACE_AGGREGATE` makro se používá. To vám umožní určit členské proměnné (která musí být ukazatel na [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nebo odvozené třídy), což je integraci do mapy mechanismu rozhraní. Pokud je ukazatel nemá hodnotu NULL při `CCmdTarget::ExternalQueryInterface` je názvem rozhraní automaticky zavolá agregovaný objekt [QueryInterface –](http://msdn.microsoft.com/library/windows/desktop/ms682521) člen fungovat, pokud `IID` požadovaný není jedním z nativního `IID`s nepodporuje `CCmdTarget` samotného objektu.  
+ Použití agregační objekt, a tam, musí být nějakým způsobem ke svázání agregace do QueryInterface mechanismu. Jinými slovy agregovaný objekt musí chovat, jako kdyby je nativní součástí objektu. Jak tedy nemá této vazbě do knihovny MFC rozhraní mapy mechanismu kromě interface_part – makro, kde vnořeného objektu je namapována na IID, můžete také deklarovat agregovaný objekt v rámci vaší `CCmdTarget` odvozené třídy. K tomu slouží INTERFACE_AGGREGATE makro. To vám umožní určit členské proměnné (která musí být ukazatel na [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nebo odvozené třídy), což je integraci do mapy mechanismu rozhraní. Pokud je ukazatel nemá hodnotu NULL při `CCmdTarget::ExternalQueryInterface` je názvem rozhraní automaticky zavolá agregovaný objekt [QueryInterface –](http://msdn.microsoft.com/library/windows/desktop/ms682521) člen fungovat, pokud `IID` požadovaný není jedním z nativního `IID`s nepodporuje `CCmdTarget` samotného objektu.  
   
 ##### <a name="to-use-the-interfaceaggregate-macro"></a>Chcete-li použít makro INTERFACE_AGGREGATE  
   
 1.  Deklarovat členské proměnné ( `IUnknown*`) který bude obsahovat ukazatel na agregovaný objekt.  
   
-2.  Patří `INTERFACE_AGGREGATE` makro v mapě rozhraní, která odkazuje na členské proměnné podle názvu.  
+2.  Patří INTERFACE_AGGREGATE makro v mapě rozhraní, která odkazuje na členské proměnné podle názvu.  
   
 3.  V určitém okamžiku (obvykle při `CCmdTarget::OnCreateAggregates`), inicializace členské proměnné na jinou hodnotu než NULL.  
   
@@ -508,10 +508,10 @@ void EnableAggregation();
 ## <a name="remarks"></a>Poznámky  
   
 #### <a name="parameters"></a>Parametry  
- `lpIID`  
+ *lpIID*  
  Úplně ukazatel na IID (první argument QueryInterface)  
   
- `ppvObj`  
+ *ppvObj*  
  Ukazatel na IUnknown * (druhý argument QueryInterface)  
   
 ## <a name="remarks"></a>Poznámky  
@@ -550,7 +550,7 @@ DECLARE_INTERFACE_MAP
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Použití tohoto makra v jakékoli třídy odvozené od `CCmdTarget` , bude mít rozhraní mapy. Použít stejným způsobem jako `DECLARE_MESSAGE_MAP`. Toto volání makro musí být umístěny v definici třídy, obvykle v hlavičce (. H) soubor. Třída s `DECLARE_INTERFACE_MAP` musí definovat mapy rozhraní v souboru implementace (. CPP) s `BEGIN_INTERFACE_MAP` a `END_INTERFACE_MAP` makra.  
+ Použití tohoto makra v jakékoli třídy odvozené od `CCmdTarget` , bude mít rozhraní mapy. Použít prakticky stejně jako DECLARE_MESSAGE_MAP –. Toto volání makro musí být umístěny v definici třídy, obvykle v hlavičce (. H) soubor. Třída s declare_interface_map – musí definovat mapy rozhraní v souboru implementace (. CPP) s begin_interface_map – a end_interface_map – makra.  
   
 ### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>Begin_interface_part – a end_interface_part – – makro popisy  
   
@@ -567,18 +567,18 @@ END_INTERFACE_PART(
 ## <a name="remarks"></a>Poznámky  
   
 #### <a name="parameters"></a>Parametry  
- `localClass`  
+ *localClass*  
  Název třídy, který implementuje rozhraní  
   
- `iface`  
+ *iface*  
  Název rozhraní, které tato třída implementuje  
   
 ## <a name="remarks"></a>Poznámky  
- U každého rozhraní, která implementuje třídu, je potřeba mít `BEGIN_INTERFACE_PART` a `END_INTERFACE_PART` pár. Tyto makra definovat místní třídy odvozené z rozhraní OLE, které definujete a také embedded členské proměnné této třídy. [Addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) jsou automaticky deklarované členy. Musí zahrnovat deklarace pro jiné členské funkce, které jsou součástí rozhraní se implementuje (tyto deklarace jsou umístěny mezi `BEGIN_INTERFACE_PART` a `END_INTERFACE_PART` makra).  
+ U každého rozhraní, která implementuje třídu musíte mít dvojici begin_interface_part – a end_interface_part –. Tyto makra definovat místní třídy odvozené z rozhraní OLE, které definujete a také embedded členské proměnné této třídy. [Addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379), [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), a [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) jsou automaticky deklarované členy. Musí zahrnovat deklarace pro jiné členské funkce, které jsou součástí rozhraní se implementuje (tyto deklarace jsou umístěny mezi begin_interface_part – a end_interface_part – makra).  
   
- `iface` Argument je rozhraní OLE, které chcete implementovat, jako například `IAdviseSink`, nebo `IPersistStorage` (nebo vaše vlastní vlastní rozhraní).  
+ *Iface* argument je rozhraní OLE, které chcete implementovat, jako například `IAdviseSink`, nebo `IPersistStorage` (nebo vaše vlastní vlastní rozhraní).  
   
- `localClass` Argument je název místní třídu, která bude definována. ' X' bude automaticky před název. Tyto zásady vytváření názvů se používá k zabrání se tím kolizím s globální třídy se stejným názvem. Kromě toho název vloženého člena, stejně jako `localClass` název s výjimkou předponou 'm_x'.  
+ *LocalClass* argument je název místní třídu, která bude definována. ' X' bude automaticky před název. Tyto zásady vytváření názvů se používá k zabrání se tím kolizím s globální třídy se stejným názvem. Kromě toho název vloženého člena, stejně jako *localClass* název s výjimkou předponou 'm_x'.  
   
  Příklad:  
   
@@ -621,14 +621,14 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>Poznámky  
   
 #### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Třída, ve kterém má být definován mapy rozhraní  
   
- `baseClass`  
- Třídu, ze které `theClass` je odvozena z.  
+ *baseclass –*  
+ Třídu, ze které *theClass* je odvozena z.  
   
 ## <a name="remarks"></a>Poznámky  
- `BEGIN_INTERFACE_MAP` a `END_INTERFACE_MAP` makra se používají v souboru implementace ve skutečnosti definovat mapy rozhraní. U každého rozhraní, která je implementována je jeden nebo více `INTERFACE_PART` makro volání. Pro každý agregaci, která používá třídu, existuje jedno `INTERFACE_AGGREGATE` makro volání.  
+ Begin_interface_map – a end_interface_map – makra se používají v souboru implementace ve skutečnosti definovat mapy rozhraní. U každého rozhraní, která je implementována je jeden nebo více interface_part – makro volání. Pro každý agregaci, která používá třídu je jedna INTERFACE_AGGREGATE makro volání.  
   
 ### <a name="interfacepart--macro-description"></a>Interface_part – – Popis makro  
   
@@ -643,17 +643,17 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>Poznámky  
   
 #### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Název třídy, která obsahuje mapy rozhraní.  
   
- `iid`  
+ *identifikátory IID*  
  `IID` , Který má být namapovaný na vložené třídy.  
   
- `localClass`  
+ *localClass*  
  Název třídy místní (méně 'X').  
   
 ## <a name="remarks"></a>Poznámky  
- Toto makro se používá mezi `BEGIN_INTERFACE_MAP` makro a `END_INTERFACE_MAP` makro u každého rozhraní objektu bude podporovat. Umožňuje mapovat IID členem třídy indikován `theClass` a `localClass`. 'm_x' bude přidán do `localClass` automaticky. Všimněte si, že více než jeden `IID` může být přidružen jednoho člena. To je užitečné, když jsou implementace pouze "nejvíce odvozené" rozhraní a chcete zajistit také všechny zprostředkující rozhraní. Dobrým příkladem toho je `IOleInPlaceFrameWindow` rozhraní. Hierarchii vypadá takto:  
+ Toto makro se používá mezi begin_interface_map – makro a end_interface_map – makro pro každé rozhraní, které budou podporovat objektu. Umožňuje mapovat IID členem třídy indikován *theClass* a *localClass*. 'm_x' bude přidán do *localClass* automaticky. Všimněte si, že více než jeden `IID` může být přidružen jednoho člena. To je užitečné, když jsou implementace pouze "nejvíce odvozené" rozhraní a chcete zajistit také všechny zprostředkující rozhraní. Dobrým příkladem toho je `IOleInPlaceFrameWindow` rozhraní. Hierarchii vypadá takto:  
   
 ```  
 IUnknown  
@@ -662,7 +662,7 @@ IUnknown
     IOleInPlaceFrameWindow 
 ```  
   
- Pokud objekt implementuje `IOleInPlaceFrameWindow`, může klient `QueryInterface` na žádném z těchto rozhraní: `IOleUIWindow`, `IOleWindow`, nebo [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), kromě rozhraní "nejodvozenějších" `IOleInPlaceFrameWindow` (ten se ve skutečnosti implementace). Chcete-li se o to postarají můžete použít více než jeden `INTERFACE_PART` makro pro každé základní rozhraní pro mapování `IOleInPlaceFrameWindow` rozhraní:  
+ Pokud objekt implementuje `IOleInPlaceFrameWindow`, může klient `QueryInterface` na žádném z těchto rozhraní: `IOleUIWindow`, `IOleWindow`, nebo [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), kromě rozhraní "nejodvozenějších" `IOleInPlaceFrameWindow` (ten se ve skutečnosti implementace). Pro toto zpracování můžete použít více než jeden interface_part – makro pro každé základní rozhraní pro mapování `IOleInPlaceFrameWindow` rozhraní:  
   
  v souboru definice třídy:  
   
@@ -701,14 +701,14 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>Poznámky  
   
 #### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Název třídy, která obsahuje rozhraní mapy  
   
- `theAggr`  
+ *theAggr*  
  Název členské proměnné, které se mají agregovat.  
   
 ## <a name="remarks"></a>Poznámky  
- Toto makro se používá rozhraní říct, že třída používá agregovaný objekt. Musí být mezi `BEGIN_INTERFACE_PART` a `END_INTERFACE_PART` makra. Agregovaný objekt je samostatný objekt, odvozené od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Pomocí agregace a `INTERFACE_AGGREGATE` makro, můžete provést všechny rozhraní, která zobrazí agregační podporuje přímo podporovaná objektem. `theAggr` Argument je jednoduše název členské proměnné třídy, které je odvozeno z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (přímo ani nepřímo). Všechny `INTERFACE_AGGREGATE` musí následovat makra `INTERFACE_PART` makra při uvedení v mapě služby rozhraní.  
+ Toto makro se používá rozhraní říct, že třída používá agregovaný objekt. Musí být uvedeny mezi begin_interface_part – a end_interface_part – makra. Agregovaný objekt je samostatný objekt, odvozené od [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509). Pomocí agregace a makro INTERFACE_AGGREGATE můžete provést všechny rozhraní, která zobrazí agregační podporuje přímo podporovaná objektem. *TheAggr* argument je jednoduše název členské proměnné třídy, které je odvozeno z [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (přímo ani nepřímo). Všechny INTERFACE_AGGREGATE makra musí následovat interface_part – makra při uvedení v mapě služby rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   

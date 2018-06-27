@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374611"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955011"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 Základní třída používaná pro zobrazování dialogových oken na obrazovce.  
@@ -97,7 +97,7 @@ class CDialog : public CWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|Přepsání nastavení za účelem provedení tlačítko Zrušit nebo reakce na stisknutí klávesy ESC. Výchozí hodnota zavře dialogové okno a **DoModal** vrátí **IDCANCEL**.|  
+|[CDialog::OnCancel](#oncancel)|Přepsání nastavení za účelem provedení tlačítko Zrušit nebo reakce na stisknutí klávesy ESC. Výchozí hodnota zavře dialogové okno a `DoModal` vrátí **IDCANCEL**.|  
 |[CDialog::OnOK](#onok)|Přepsání nastavení za účelem provedení akce tlačítko OK v dialogovém okně modální. Výchozí hodnota zavře dialogové okno a `DoModal` vrátí **IDOK**.|  
   
 ## <a name="remarks"></a>Poznámky  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  Mapování dat se generuje automaticky zpracovat výměnu dat mezi ovládacími prvky dialogových oken a proměnné členů. Mapování dat poskytuje funkce, které se inicializovat ovládací prvky v dialogovém okně s správné hodnoty, načtení dat a ověřit data.  
   
- Chcete-li modální dialogové okno vytvořit, vytvořit objekt v zásobníku pomocí konstruktoru pro vlastní třídy odvozené dialogového okna a potom volejte `DoModal` vytvoření dialogového okna a jeho ovládacích prvků. Pokud chcete vytvořit dialogového okna bez režimu, zavolejte **vytvořit** v konstruktoru vlastní třídy dialogového okna.  
+ Chcete-li modální dialogové okno vytvořit, vytvořit objekt v zásobníku pomocí konstruktoru pro vlastní třídy odvozené dialogového okna a potom volejte `DoModal` vytvoření dialogového okna a jeho ovládacích prvků. Pokud chcete vytvořit dialogového okna bez režimu, zavolejte `Create` v konstruktoru vlastní třídy dialogového okna.  
   
  Můžete také vytvořit šablonu v paměti pomocí [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) datové struktury, jak je popsáno v sadě Windows SDK. Po sestavení `CDialog` objektu, volání [CreateIndirect](#createindirect) k vytvoření nemodální dialogové okno nebo volání [InitModalIndirect](#initmodalindirect) a [DoModal](#domodal) vytvořit modální Dialogové okno.  
   
@@ -166,13 +166,13 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony – dialogové okno.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje počet ID prostředku šablony – dialogové okno.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -182,10 +182,10 @@ CDialog();
   
  Poté, co vytvoříte modální dialogové okno s jedním z výše uvedených metod, volání `DoModal`.  
   
- Vytvoření nemodálního dialogové okno, používat chráněný formu `CDialog` konstruktor. Konstruktor je chráněna, protože musí být odvozeny vlastní dialogového třídu pro implementaci dialogového okna bez režimu. Vytváření nemodálních dialogového okna je dvoustupňový proces. První volání konstruktoru; potom zavolejte **vytvořit** členskou funkci pro vytvoření založené na prostředcích dialogového okna, nebo volejte `CreateIndirect` dialogové okno Vytvořit ze šablony v paměti.  
+ Vytvoření nemodálního dialogové okno, používat chráněný formu `CDialog` konstruktor. Konstruktor je chráněna, protože musí být odvozeny vlastní dialogového třídu pro implementaci dialogového okna bez režimu. Vytváření nemodálních dialogového okna je dvoustupňový proces. První volání konstruktoru; potom zavolejte `Create` členskou funkci pro vytvoření založené na prostředcích dialogového okna, nebo volejte `CreateIndirect` dialogové okno Vytvořit ze šablony v paměti.  
   
 ##  <a name="create"></a>  CDialog::Create  
- Volání **vytvořit** k vytvoření nemodálního okna pole použití šablony dialogového z prostředku.  
+ Volání `Create` k vytvoření nemodálního okna pole použití šablony dialogového z prostředku.  
   
 ```  
 virtual BOOL Create(
@@ -199,30 +199,30 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony – dialogové okno.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na nadřazený objekt okno (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje počet ID prostředku šablony – dialogové okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí nenulové hodnoty, pokud byly úspěšné; – dialogové okno Vytvoření a inicializace obou formulářů jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vložit volání **vytvořit** v konstruktoru nebo volání po konstruktoru vyvolání.  
+ Můžete vložit volání `Create` v konstruktoru nebo volání po konstruktoru vyvolání.  
   
- Dvě formy **vytvořit** – členská funkce jsou poskytovány pro přístup k prostředku šablony dialogového názvem šablony nebo šablony identifikační číslo (například IDD_DIALOG1).  
+ Dvě formy `Create` – členská funkce jsou poskytovány pro přístup k prostředku šablony dialogového názvem šablony nebo šablony identifikační číslo (například IDD_DIALOG1).  
   
- Pro buď formulář předejte ukazatel okno nadřazený objekt. Pokud `pParentWnd` je **NULL**, vytvoří se dialogové okno s jeho nadřazený nebo vlastníka okno nastavena na hlavní okno aplikace.  
+ Pro buď formulář předejte ukazatel okno nadřazený objekt. Pokud *pParentWnd* je **NULL**, vytvoří se dialogové okno s jeho nadřazený nebo vlastníka okno nastavena na hlavní okno aplikace.  
   
- **Vytvořit** – členská funkce vrátí okamžitě po vytvoření dialogové okno.  
+ `Create` – Členská funkce vrátí okamžitě po vytvoření dialogové okno.  
   
  Použití **ws_visible –** styl v šabloně – dialogové okno, pokud při vytváření nadřazené okno by se zobrazit dialogové okno. Jinak, musí volat `ShowWindow`. Další – dialogové okno Styly a jejich použití najdete v tématu [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktura ve Windows SDK a [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) v *odkaz knihovny MFC*.  
   
- Použití `CWnd::DestroyWindow` funkce zrušení dialogové okno vytvořené **vytvořit** funkce.  
+ Použití `CWnd::DestroyWindow` funkce zrušení dialogové okno vytvořené `Create` funkce.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -243,16 +243,16 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  Odkazuje na paměti, která obsahuje šablonu dialogového použít k vytvoření dialogové okno. Tato šablona je ve formátu [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktura a řízení informace, jak je popsáno v sadě Windows SDK.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazeného objektu dialogového okna (typu [CWnd](../../mfc/reference/cwnd-class.md)). Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  Odkazuje na **DLGINIT** prostředků.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  Obsahuje popisovač pro globální paměť obsahující šablonu – dialogové okno. Tato šablona je ve formátu **DLGTEMPLATE** strukturu a dat pro každý ovládací prvek v dialogovém okně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `int` Hodnotu, která určuje hodnotu `nResult` parametr, který byl předán [CDialog::EndDialog](#enddialog) členská funkce, který se používá k dialogové okno zavřete. Vrácená hodnota je -1, pokud funkci nelze vytvořit dialogové okno, nebo **IDABORT** Pokud došlo k jiné chybě, v takovém případě ve výstupním okně bude obsahovat informace o chybě z [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ **Int** hodnotu, která určuje hodnotu *Nvýsledek* parametr, který byl předán [CDialog::EndDialog](#enddialog) členská funkce, který se používá k dialogové okno zavřete. Vrácená hodnota je -1, pokud funkci nelze vytvořit dialogové okno, nebo **IDABORT** Pokud došlo k jiné chybě, v takovém případě ve výstupním okně bude obsahovat informace o chybě z [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen zpracovává veškerou interakci s uživatelem při dialogové okno je aktivní. To je díky modální; dialogových oken To znamená uživatel nemůže komunikovat s jinými dokud nezavře dialogové okno.  
@@ -296,11 +296,11 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nResult`  
+ *Nvýsledek*  
  Obsahuje hodnotu, která má být vrácen z dialogového okna do volajícího `DoModal`.  
   
 ### <a name="remarks"></a>Poznámky  
- Členské funkce vrátí hodnotu `nResult` jako návratová hodnota `DoModal`. Je nutné použít `EndDialog` funkci dokončí zpracování vždy, když je vytvořena modální dialogové okno.  
+ Členské funkce vrátí hodnotu *Nvýsledek* jako návratová hodnota `DoModal`. Je nutné použít `EndDialog` funkci dokončí zpracování vždy, když je vytvořena modální dialogové okno.  
   
  Můžete volat `EndDialog` kdykoli, dokonce i v [OnInitDialog](#oninitdialog), v takovém případě by měl zavřete dialogové okno dříve, než se zobrazí nebo před nastavením zaměření pro vstup.  
   
@@ -332,11 +332,11 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndCtrl`  
+ *pWndCtrl*  
  Identifikuje okna (řízení), které má být vybrán.  
   
 ### <a name="remarks"></a>Poznámky  
- Získání ukazatele na ovládací prvek (podřízeného okna) předat jako `pWndCtrl`, volání `CWnd::GetDlgItem` členská funkce, která vrátí hodnotu ukazatel na [CWnd](../../mfc/reference/cwnd-class.md) objektu.  
+ Získání ukazatele na ovládací prvek (podřízeného okna) předat jako *pWndCtrl*, volání `CWnd::GetDlgItem` členská funkce, která vrátí hodnotu ukazatel na [CWnd](../../mfc/reference/cwnd-class.md) objektu.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
@@ -357,16 +357,16 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  Odkazuje na paměti, která obsahuje šablonu dialogového použít k vytvoření dialogové okno. Tato šablona je ve formátu [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) struktura a řízení informace, jak je popsáno v sadě Windows SDK.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  Obsahuje popisovač pro globální paměť obsahující šablonu – dialogové okno. Tato šablona je ve formátu **DLGTEMPLATE** strukturu a dat pro každý ovládací prvek v dialogovém okně.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  Odkazuje na **DLGINIT** prostředků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -385,7 +385,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -393,7 +393,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  **GetDialogBaseUnits** funkce Windows vrací informace o velikosti písma systému, ale jiné písmo pro každé pole v dialogovém okně můžete zadat, pokud použijete **DS_SETFONT** styl v Soubor definice prostředků. `MapDialogRect` Funkce systému Windows používá příslušného písma pro tohoto dialogového okna.  
   
- `MapDialogRect` – Členská funkce nahrazuje dialogového jednotky v `lpRect` s obrazovky jednotek (v pixelech) tak, aby rámeček umožňuje vytvoření dialogového nebo umístit ovládacího prvku v rámci pole.  
+ `MapDialogRect` – Členská funkce nahrazuje dialogového jednotky v *lprect –* s obrazovky jednotek (v pixelech) tak, aby rámeček umožňuje vytvoření dialogového nebo umístit ovládacího prvku v rámci pole.  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  Přejdete na další ovládací prvek v dialogovém okně.  
@@ -472,7 +472,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pFont`  
+ [v] *pFont*  
  Určuje ukazatel na písma, který se použije jako výchozí pro všechny ovládací prvky v tomto seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Určuje ID uzavření tlačítkem ovládací prvek, který se stane výchozí.  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376568"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955073"
 ---
 # <a name="cfilefind-class"></a>CFileFind – třída
 Provede vyhledávání místního souboru a je základní třídou pro [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) a [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), které provádí hledání souborů Internetu.  
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTM`  
+ *Druh*  
  Ukazatel na objekt CAtlTransactionManager  
   
 ### <a name="example"></a>Příklad  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>Poznámky  
  Zavře soubor určený touto aktuální hodnota popisovač vyhledávání. Přepsání této funkci můžete změnit výchozí chování.  
   
- Je třeba zavolat [FindFile](#findfile) nebo [FindNextFile](#findnextfile) funkce alespoň jednou pro načtení popisovače platné vyhledávání. **FindFile** a `FindNextFile` funkce použití popisovače hledání najít soubory s názvy, které odpovídají zadaným názvem.  
+ Je třeba zavolat [FindFile](#findfile) nebo [FindNextFile](#findnextfile) funkce alespoň jednou pro načtení popisovače platné vyhledávání. `FindFile` a `FindNextFile` funkce použití popisovače hledání najít soubory s názvy, které odpovídají zadaným názvem.  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  Volání této funkce člen otevřete hledání souborů.  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrName`  
- Ukazatel na řetězec, který obsahuje název souboru, který se najít. Pokud předáte **NULL** pro `pstrName`, **FindFile** nemá zástupný znak (*.\*) vyhledávání.  
+ *pstrName*  
+ Ukazatel na řetězec, který obsahuje název souboru, který se najít. Pokud předáte **NULL** pro *pstrName*, **FindFile** nemá zástupný znak (*.\*) vyhledávání.  
   
  *dwUnused*  
- Vyhrazené aby **FindFile** polymorfní s odvozené třídy. Musí být 0.  
+ Vyhrazené aby `FindFile` polymorfní s odvozené třídy. Musí být 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0. Chcete-li získat rozšířené informace o chybě, volejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
- Po volání **FindFile** zahájíte hledání souborů volání [FindNextFile](#findnextfile) načíst následné soubory. Je třeba volat `FindNextFile` alespoň jednou před voláním všechny následující atribut členské funkce:  
+ Po volání `FindFile` zahájíte hledání souborů volání [FindNextFile](#findnextfile) načíst následné soubory. Je třeba volat `FindNextFile` alespoň jednou před voláním všechny následující atribut členské funkce:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimeStamp`  
+ *pTimeStamp*  
  Ukazatel [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura obsahující čas vytvoření souboru.  
   
- `refTime`  
+ *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refTime`  
+ *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Ukazatel [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura obsahující čas posledního přístupu k souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimeStamp`  
+ *pTimeStamp*  
  Ukazatel [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura obsahující času posledního zápisu souboru na.  
   
- `refTime`  
+ *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwMask`  
+ *dwMask*  
  Určuje jeden nebo více atributů souboru v identifikovat [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktura souboru nalezen. Chcete-li vyhledat několik atributů, použijte bitová hodnota OR (&#124;) operátor. Je přípustné libovolnou kombinaci následující atributy:  
   
 -   FILE_ATTRIBUTE_ARCHIVE soubor je soubor archivu. Označení souborů k zálohování nebo odebrání aplikací pomocí tohoto atributu.  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367058"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951684"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange – třída
 Podporuje pole záznamu (exchange – RFX) a rutiny exchange (Bulk RFX) pole záznamu hromadné používá databázové třídy.  
@@ -53,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  Pokud pracujete s třídy objektů DAO (Data Access), nikoli třídy připojení ODBC (Open Database), použijte třídu [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) místo. Další informace najdete v článku [programování přehled: databáze](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` objekt poskytuje kontextové informace potřebné pro – record field exchange nebo hromadná výměna pole záznamu provést umístit. `CFieldExchange` objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. RFX a Bulk RFX operací na členy třídy sady záznamů dat typy definované `enum` **typ pole** v `CFieldExchange`. Možné **typ pole** hodnoty jsou:  
+ A `CFieldExchange` objekt poskytuje kontextové informace potřebné pro – record field exchange nebo hromadná výměna pole záznamu provést umístit. `CFieldExchange` objekty podporují několik operací, včetně vázané parametry a pole datových členů a nastavení různé příznaky na pole na aktuální záznam. RFX a Bulk RFX operací na členy třídy sady záznamů dat typy definované **výčtu** **typ pole** v `CFieldExchange`. Možné **typ pole** hodnoty jsou:  
   
 - **CFieldExchange::outputColumn** pro pole datových členů.  
   
@@ -96,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFieldType`  
+ *nFieldType*  
  Hodnota **výčtu typ pole**, deklarované v `CFieldExchange`, který může být jedna z následujících akcí:  
   
 - **CFieldExchange::outputColumn**  
@@ -121,7 +121,7 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|Výstupní parametr. Vrácená hodnota sady záznamů uložené procedury.|  
 |**CFieldExchange::inoutParam**|Vstupní a výstupní parametr. Hodnota, která je předán do a, kterou vrátil uloženou proceduru sady záznamů.|  
   
- Obecně platí, každou skupinu funkce RFX přidružené pole datových členů nebo parametry datových členů musí předcházet volání `SetFieldType`. `nFieldType` Parametr jednotlivých `SetFieldType` volání jsou uvedeny typy datových členů reprezentována funkce RFX, které následují `SetFieldType` volání.  
+ Obecně platí, každou skupinu funkce RFX přidružené pole datových členů nebo parametry datových členů musí předcházet volání `SetFieldType`. *NFieldType* parametr jednotlivých `SetFieldType` volání jsou uvedeny typy datových členů reprezentována funkce RFX, které následují `SetFieldType` volání.  
   
  Další informace o zpracování výstupní a vstupní a výstupní parametry, najdete v článku `CRecordset` – členská funkce [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Další informace o funkcích RFX a Bulk RFX, naleznete v tématu [funkce výměny polí v záznamu](../../mfc/reference/record-field-exchange-functions.md). Související informace o hromadné načítání řádků, najdete v článku [sada záznamů: načítání záznamů v hromadné (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   

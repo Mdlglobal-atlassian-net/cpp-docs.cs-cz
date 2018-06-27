@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322508"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957387"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO
 
@@ -99,9 +99,9 @@ Hlavní změny na funkce, které můžou ovlivnit vaše aplikace a vyžadují v�
 
    Třídy ODBC knihovny MFC potřebné k definování těchto možností prostřednictvím makra nebo výčet typů.
 
-   Pomocí třídy DAO DAO poskytuje definici z těchto možností v záhlaví souboru (DBDAOINT. H). Proto je sada záznamů typu výčtové členem `CRecordset`, ale DAO je konstanta místo. Například byste použili `snapshot` při zadávání typ `CRecordset` v rozhraní ODBC, ale `DB_OPEN_SNAPSHOT` při zadávání typ `CDaoRecordset`.
+   Pomocí třídy DAO DAO poskytuje definici z těchto možností v záhlaví souboru (DBDAOINT. H). Proto je sada záznamů typu výčtové členem `CRecordset`, ale DAO je konstanta místo. Například byste použili **snímku** při zadávání typ `CRecordset` v rozhraní ODBC, ale **DB_OPEN_SNAPSHOT** při zadávání typ `CDaoRecordset`.
 
-- Výchozí typ záznamů pro `CRecordset` je `snapshot` při výchozí typ záznamů pro `CDaoRecordset` je `dynaset` (viz poznámka níže další problému, o snímky třídy rozhraní ODBC).
+- Výchozí typ záznamů pro `CRecordset` je **snímku** při výchozí typ záznamů pro `CDaoRecordset` je **dynamická sada** (viz poznámka níže další problému, o snímky třídy rozhraní ODBC).
 
 - ODBC `CRecordset` třída má možnost pro vytvoření typ dopředné sady záznamů. V `CDaoRecordset` třída, dopředné není typu sady záznamů, ale místo vlastnosti (nebo možnost) určitých typů sady záznamů.
 
@@ -111,7 +111,7 @@ Hlavní změny na funkce, které můžou ovlivnit vaše aplikace a vyžadují v�
 
 - Třídy výjimek byl změněn. `CDBExceptions` jsou vyvolány v třídy rozhraní ODBC a `CDaoExceptions` v třídy DAO.
 
-- `RFX_Date` používá `CTime` a `TIMESTAMP_STRUCT` objekty při `DFX_Date` používá `COleDateTime`. `COleDateTime` Je téměř shodná `CTime`, ale je založena na 8 bajtů OLE `DATE` místo 4 bajtů `time_t` tak může uchovávat mnohem větší rozsah data.
+- `RFX_Date` používá `CTime` a `TIMESTAMP_STRUCT` objekty při `DFX_Date` používá `COleDateTime`. `COleDateTime` Je téměř shodná `CTime`, ale je založena na 8 bajtů OLE **datum** místo 4 bajtů **time_t** tak může uchovávat mnohem větší rozsah data.
 
    > [!NOTE]
    > Rozhraní DAO (`CDaoRecordset`) snímky jsou jen pro čtení při ODBC (`CRecordset`) snímky mohou být v aktualizovatelné v závislosti na ovladače a použití knihovny kurzorů ODBC. Pokud používáte knihovna kurzorů `CRecordset` snímky jsou lze aktualizovat. Pokud používáte některou z plochy ovladač Pack 3.0 ovladače společnosti Microsoft bez knihovna kurzorů rozhraní ODBC `CRecordset` snímky jsou jen pro čtení. Pokud používáte jiný ovladač, podívejte se do dokumentace ovladače a zjistěte, zda snímků (`STATIC_CURSORS`) jsou jen pro čtení.

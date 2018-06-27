@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc461a0a2325f768711f6d7529949ee24a1b4a25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385177"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954881"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets – použití třídy CAsyncSocket
 Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Upozorňujeme, že tato třída zapouzdří rozhraní API systému Windows Sockets na velmi nízké úrovni. `CAsyncSocket` je pro používané programátory, kteří síťové komunikace podrobně znát, ale chcete pohodlí zpětných volání pro oznámení o události sítě. Podle této předpokladů, tento článek obsahuje pouze základní instrukcí. Měli byste pravděpodobně zvážit použití `CAsyncSocket` Pokud má Windows Sockets snadnou práci s několika síťových protokolů v aplikaci MFC, ale nechcete vzdát flexibilitu. Může také cítíte, že můžete získat lepší efektivitu programování další komunikace přímo sami, než jste může pomocí obecnější alternativní modelu třídy `CSocket`.  
@@ -57,9 +57,9 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     Vytvoří první konstruktor výše `CAsyncSocket` objektu v zásobníku. Druhý konstruktor vytvoří `CAsyncSocket` v haldě. První [vytvořit](../mfc/reference/casyncsocket-class.md#create) volání výše používá výchozí hodnoty parametrů se vytvořit soket datového proudu. Druhý **vytvořit** volání vytvoří datagram soketu se zadaný port a adresa. (Můžete použít buď **vytvořit** verze pomocí některé z metod konstrukce.)  
+     Vytvoří první konstruktor výše `CAsyncSocket` objektu v zásobníku. Druhý konstruktor vytvoří `CAsyncSocket` v haldě. První [vytvořit](../mfc/reference/casyncsocket-class.md#create) volání výše používá výchozí hodnoty parametrů se vytvořit soket datového proudu. Druhý `Create` volání vytvoří datagram soketu se zadaný port a adresa. (Můžete použít buď `Create` verze pomocí některé z metod konstrukce.)  
   
-     Parametry, které chcete **vytvořit** jsou:  
+     Parametry, které chcete `Create` jsou:  
   
     -   "port": krátké celé číslo.  
   
@@ -82,7 +82,7 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
      Po přijetí připojení, můžete provést úkoly, jako je ověřování hesla.  
   
     > [!NOTE]
-    >  **Přijmout** – členská funkce trvá odkaz na nový, prázdný `CSocket` objektu jako její parametr. Je nutné vytvořit tento objekt před voláním **přijmout**. Pokud se tento objekt soketu se ocitne mimo obor, připojení se ukončí. Nevolejte **vytvořit** pro tento nový objekt soketu. Příklad najdete v článku [Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).  
+    >  `Accept` – Členská funkce trvá odkaz na nový, prázdný `CSocket` objektu jako její parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Pokud se tento objekt soketu se ocitne mimo obor, připojení se ukončí. Nevolejte `Create` pro tento nový objekt soketu. Příklad najdete v článku [Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).  
   
 3.  Provádění komunikace s další sockets voláním `CAsyncSocket` objektu členské funkce, které zapouzdřují funkce rozhraní Windows Sockets API.  
   
@@ -107,7 +107,7 @@ Tento článek vysvětluje, jak používat třídu [CAsyncSocket](../mfc/referen
   
  Definice tyto podmínky a další informace naleznete v tématu [Windows Sockets: blokování](../mfc/windows-sockets-blocking.md), [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md) .  
   
- Přes všechny tyto problémy třídy **CAsycnSocket** může být správnou volbou pro vás, pokud vaše aplikace vyžaduje flexibilitu a řízení můžete získat. Pokud ne, měli byste zvážit použití třídy `CSocket` místo. `CSocket` Skryje velké množství informací od vás: it čerpadel Windows zpráv během blokování volání a získáte přístup k `CArchive`, který spravuje rozdíly pořadí bajtů a převod řetězce pro vás.  
+ Přes všechny tyto problémy třídy `CAsycnSocket` může být správnou volbou pro vás, pokud vaše aplikace vyžaduje flexibilitu a řízení můžete získat. Pokud ne, měli byste zvážit použití třídy `CSocket` místo. `CSocket` Skryje velké množství informací od vás: it čerpadel Windows zpráv během blokování volání a získáte přístup k `CArchive`, který spravuje rozdíly pořadí bajtů a převod řetězce pro vás.  
   
  Další informace naleznete v tématu:  
   

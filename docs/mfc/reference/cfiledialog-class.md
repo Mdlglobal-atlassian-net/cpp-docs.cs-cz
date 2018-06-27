@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255766"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955242"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog – třída
 Zapouzdří běžné dialogových oken, který se používá pro otevření souboru nebo soubor uložte operace.  
@@ -248,7 +248,7 @@ class CFileDialog : public CCommonDialog
   
  Můžete použít `CFileDialog` tak, jak jsou s konstruktorem zadaná nebo odvozujete vlastní třídy dialogového okna z `CFileDialog` a zápis konstruktoru tak, aby vyhovovala vašim potřebám. V obou případech tyto dialogy budou chovat jako standardní dialogová okna MFC vzhledem k tomu, že jsou odvozeny od [CCommonDialog třída](../../mfc/reference/ccommondialog-class.md). `CFileDialog` spoléhá na COMMDLG. Soubor knihovny DLL, která je součástí systému Windows.  
   
- Vzhled a funkce `CFileDialog` se systémem Windows Vista nebo novější se liší od předchozích verzích systému Windows. Výchozí hodnota `CFileDialog` automaticky použije nové Windows Vista nebo novější styl bez změny kódu, pokud je program kompilované a běh systému Windows Vista nebo novější. Použití `bVistaStyle` parametr v konstruktoru ručně přepsat tuto automatických aktualizací. Výjimkou automatických aktualizací je přizpůsobené dialogová okna. Nebude převeden do nového stylu. Další informace o konstruktoru najdete v tématu [CFileDialog::CFileDialog](#cfiledialog).  
+ Vzhled a funkce `CFileDialog` se systémem Windows Vista nebo novější se liší od předchozích verzích systému Windows. Výchozí hodnota `CFileDialog` automaticky použije nové Windows Vista nebo novější styl bez změny kódu, pokud je program kompilované a běh systému Windows Vista nebo novější. Použití *bVistaStyle* parametr v konstruktoru ručně přepsat tuto automatických aktualizací. Výjimkou automatických aktualizací je přizpůsobené dialogová okna. Nebude převeden do nového stylu. Další informace o konstruktoru najdete v tématu [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
 >  ID systému správy se liší v systému Windows Vista nebo novější z dřívějších verzích systému Windows při použití `CFileDialog`. Je nutné aktualizovat všechny odkazy na `CFileDialog` ovládací prvky v kódu předtím, než můžete portu projektu ze starší verze systému Windows.  
@@ -319,13 +319,13 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID zaškrtněte tlačítko Přidat.  
   
- `strLabel`  
+ *strLabel*  
  Název tlačítka kontroly.  
   
- `bChecked`  
+ *bChecked*  
  Logickou hodnotu udávající, aktuální stav na tlačítko se zaškrtnutím. `TRUE` Pokud zaškrtnutí; `FALSE` jinak  
   
 ### <a name="remarks"></a>Poznámky  
@@ -338,7 +338,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID pole se seznamem přidat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -354,13 +354,13 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru přidat položku do.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky.  
   
- `strLabel`  
+ *strLabel*  
  Text položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -375,10 +375,10 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID textové pole pro přidání.  
   
- `strText`  
+ *strText*  
  Upravit název pole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -393,10 +393,10 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID nabídky přidat.  
   
- `strLabel`  
+ *strLabel*  
  Název nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -416,13 +416,13 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFolder`  
+ *lpszFolder*  
  Cesta ke složce, které budou dostupné pro uživatele. To může být pouze do složky.  
   
- `fdap`  
+ *fdap*  
  Určuje, kde je umístěn složce v seznamu.  
   
- `psi`  
+ *psi*  
  Ukazatel IShellItem, která představuje složku, které budou dostupné pro uživatele. To může být pouze do složky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -437,10 +437,10 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID na tlačítko Přidat.  
   
- `strLabel`  
+ *strLabel*  
  Název tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -453,7 +453,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID skupiny přepínače přidat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -466,7 +466,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Přidat ID oddělovače.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -481,10 +481,10 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID text přidat.  
   
- `strText`  
+ *strText*  
  Název textu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -522,36 +522,36 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bOpenFileDialog`  
+ [v] *bOpenFileDialog*  
  Parametr, který určuje, jaký typ dialogové okno vytvořit. Nastavte ji na `TRUE` k vytvoření **otevřít soubor** dialogové okno. Nastavte ji na `FALSE` k vytvoření **uložit jako** dialogové okno.  
   
- [v] `lpszDefExt`  
- Výchozí přípona názvu souboru. Pokud uživatel neobsahuje známou příponou, (jeden, který má přidružení v počítači uživatele) do pole název souboru, rozšíření určeného `lpszDefExt` se automaticky připojí k názvu souboru. Pokud tento parametr je `NULL`, se připojí žádné rozšíření.  
+ [v] *lpszDefExt*  
+ Výchozí přípona názvu souboru. Pokud uživatel neobsahuje známou příponou, (jeden, který má přidružení v počítači uživatele) do pole název souboru, rozšíření určeného *lpszDefExt* se automaticky připojí k názvu souboru. Pokud tento parametr je `NULL`, se připojí žádné rozšíření.  
   
- [v] `lpszFileName`  
+ [v] *lpszFileName*  
  Název počáteční souboru, který se zobrazí v poli Název souboru. Pokud `NULL`, zobrazí se žádné počáteční název souboru.  
   
- [v] `dwFlags`  
+ [v] *dwFlags*  
  Kombinace jeden nebo více příznaky, které můžete použít k přizpůsobení dialogové okno. Popis tyto příznaky najdete v tématu [název otevřeného souboru](http://msdn.microsoft.com/library/windows/desktop/ms646839) struktura ve Windows SDK. Pokud změníte `m_ofn.Flags` struktury člen, použijte operátor bitové operace OR změny zachovat výchozí chování beze změn.  
   
- [v] `lpszFilter`  
+ [v] *lpszFilter*  
  Řadu páry řetězec, které určují filtry můžete použít k souboru. Pokud zadáte filtry souborů, zobrazí se pouze soubory, které odpovídají kritériím filtru v seznamu souborů. Další informace o tom, jak pracovat s filtry souborů v části poznámky.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel na okno nadřazené nebo vlastníka dialogového okna souboru.  
   
- [v] `dwSize`  
+ [v] *dwSize*  
  Velikost `OPENFILENAME` struktura. Tato hodnota závisí na verzi operačního systému. MFC použít tento parametr k určení odpovídající druh dialogové okno vytvořit. Výchozí velikost 0 znamená, že kód MFC určí správné rozměry dialogového okna používat podle verze operačního systému, na kterém je program spustit.  
   
- [v] `bVistaStyle`  
+ [v] *bVistaStyle*  
  **Poznámka:** tento parametr je k dispozici v sadě Visual Studio 2008 a novější a bude je způsobit dialogového okna Nový styl a používat pouze v případě, že používáte v systému Windows Vista nebo novější.  
   
  Parametr, který určuje typ dialogového okna souboru. Nastavte ji na `TRUE` používat nové dialogy souboru styl Vista. Jinak se použije staré styl dialogová okna. Naleznete v části poznámky Další informace spuštěna pod Vista.  
   
 ### <a name="remarks"></a>Poznámky  
- Buď **otevřít soubor** nebo **uložit jako** sestavený dialogové okno, v závislosti na hodnotě `bOpenFileDialog`.  
+ Buď **otevřít soubor** nebo **uložit jako** sestavený dialogové okno, v závislosti na hodnotě *bOpenFileDialog*.  
   
- Určení výchozí rozšíření pomocí `lpszDefExt` nemusí poskytovat chování, které očekáváte, protože je málokdy předvídatelný jaká rozšíření se přidružení souborů v počítači uživatele. Pokud potřebujete větší kontrolu nad připojování výchozí přípona, můžete odvodit vlastní třídy z `CFileDialog`a přepsat `CFileDialog::OnFileNameOK` metodu za účelem zpracování vlastní rozšíření.  
+ Určení výchozí rozšíření pomocí *lpszDefExt* nemusí poskytovat chování, které očekáváte, protože je málokdy předvídatelný jaká rozšíření se přidružení souborů v počítači uživatele. Pokud potřebujete větší kontrolu nad připojování výchozí přípona, můžete odvodit vlastní třídy z `CFileDialog`a přepsat `CFileDialog::OnFileNameOK` metodu za účelem zpracování vlastní rozšíření.  
   
  Chcete-li povolit uživateli vybrat více souborů, nastavte `OFN_ALLOWMULTISELECT` příznak před voláním [DoModal](#domodal). Je třeba zadat vlastní vyrovnávací paměť názvu souboru pro uložení seznamu vrácených více názvů souborů. To udělat tak, že nahradíte `m_ofn.lpstrFile` pomocí ukazatele do vyrovnávací paměti jste přidělili, co vytvoříte [CFileDialog](../../mfc/reference/cfiledialog-class.md), ale před voláním `DoModal`. Kromě toho je nutné nastavit `m_ofn.nMaxFile` s počtem znaků ve vyrovnávací paměti, na kterou odkazuje `m_ofn.lpstrFile`. Pokud nastavíte maximální počet souborů, aby byl vybrán k `n`, nezbytné vyrovnávací paměť je `n`*(_MAX_PATH + 1) + 1. Příklad:  
   
@@ -559,7 +559,7 @@ explicit CFileDialog(
   
  Chcete-li zajistit, aby uživatel ke změně velikosti dialogové okno stylu Průzkumníku pomocí myši nebo klávesnice, nastavte `OFN_ENABLESIZING` příznak. Nastavením tohoto příznaku je nutné pouze v případě, že poskytuje háku postup nebo vlastní šablony. Příznak funguje pouze v dialogovém okně knihovny stylu Průzkumníku; dialogová okna starého nelze změnit.  
   
- `lpszFilter` Parametr se používá k určení typu název souboru, který se má zobrazit v seznamu souborů musí mít soubor. První řetězec v páru řetězec popisuje filtr; druhý řetězec Určuje příponu názvu souboru použít. Při použití středník (znak ';') jako oddělovač, který může zadat několik rozšíření. Řetězec končí dva '&#124;se znaky, za nímž následuje `NULL` znak. Můžete použít také [CString](../../atl-mfc-shared/using-cstring.md) objekt pro tento parametr.  
+ *LpszFilter* parametr se používá k určení typu název souboru, který se má zobrazit v seznamu souborů musí mít soubor. První řetězec v páru řetězec popisuje filtr; druhý řetězec Určuje příponu názvu souboru použít. Při použití středník (znak ';') jako oddělovač, který může zadat několik rozšíření. Řetězec končí dva '&#124;se znaky, za nímž následuje `NULL` znak. Můžete použít také [CString](../../atl-mfc-shared/using-cstring.md) objekt pro tento parametr.  
   
  Například [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] umožňuje uživatelům otevírat soubory, které mají rozšíření XLC (graf) nebo XLS (list), mimo jiné. Filtr pro aplikaci Excel může zapsat jako:  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  Ale pokud budete chtít použít tento řetězec k přímo aktualizovat `OPENFILENAME` struktura, by měl oddělování vaší řetězců s znak hodnoty null, '\0' místo svislých pruhů ('&#124;').  
   
- `bVistaStyle` Parametr platí jenom v případě, že je spuštěna v systému Windows Vista nebo novějším. V dřívějších verzích systému Windows tento parametr je ignorován. Pokud `bVistaStyle` je nastaven na `TRUE`, když zkompilujete program s Visual Studio 2008 nebo novější, nový styl Vista **dialogové okno souboru** se použije. V opačném styl předchozí MFC **dialogové okno souboru** se použije.  
+ *BVistaStyle* parametr platí jenom v případě, že je spuštěna v systému Windows Vista nebo novějším. V dřívějších verzích systému Windows tento parametr je ignorován. Pokud *bVistaStyle* je nastaven na `TRUE`, když zkompilujete program s Visual Studio 2008 nebo novější, nový styl Vista **dialogové okno souboru** se použije. V opačném styl předchozí MFC **dialogové okno souboru** se použije.  
   
- Šablony dialogu nejsou podporovány na na základě dialogová okna `bVistaStyle`  
+ Šablony dialogu nejsou podporovány na dialogová okna na základě *bVistaStyle*  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CFileDialog::DoModal](#domodal).  
@@ -606,7 +606,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID rozevíracího seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -633,10 +633,10 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID políčko.  
   
- `bChecked`  
+ *bChecked*  
  Stav zaškrtnutí políčka. `TRUE` označuje zaškrtnuté; `FALSE` označuje nezaškrtnuté.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -652,13 +652,13 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky.  
   
- `dwState`  
+ *dwState*  
  Odkaz na proměnnou, která přijímá jeden z více hodnot z CDCONTROLSTATE výčet, který označuje aktuální stav ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -673,10 +673,10 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku.  
   
- `dwState`  
+ *dwState*  
  Odkaz na proměnnou, která přijímá jeden nebo více hodnot z CDCONTROLSTATE výčet, který označuje aktuální stav ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -691,10 +691,10 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID pole pro úpravy.  
   
- `strText`  
+ *strText*  
  Textové hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -773,7 +773,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  Ukazatel na vnitřní objekt COM pro `CFileDialog`. Je vaší povinností k uvolnění tento ukazatel správně.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce pouze pod Windows Vista nebo novější s objektem, který má `bVistaStyle` nastavena na `true`. Pokud použijete tuto funkci při `bVistaStyle` je `false`, vrátí `NULL` v režimu vydání a throw kontrolní výrazy v režimu ladění.  
+ Pomocí této funkce pouze pod Windows Vista nebo novější s objektem, který má *bVistaStyle* nastavena na `true`. Pokud použijete tuto funkci při *bVistaStyle* je `false`, vrátí `NULL` v režimu vydání a throw kontrolní výrazy v režimu ladění.  
   
  Další informace o `IFileDialogCustomize` rozhraní najdete v tématu [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
@@ -793,7 +793,7 @@ IFileOpenDialog* GetIFileOpenDialog();
  Ukazatel na vnitřní objekt COM pro `CFileDialog`. Je vaší povinností k uvolnění tento ukazatel správně.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce pouze pod Windows Vista nebo novější s objektem, který má `bVistaStyle` nastavena na `true`. Funkce vrátí hodnotu `NULL` Pokud `CFileDialog` není **otevřete** dialogové okno nebo, pokud `bVistaStyle` je nastaven na `false`. V tomto případě konečné pouze funkce vrátí `NULL` v režimu vydání – v režimu ladění se vyvolá výjimku kontrolní výrazy.  
+ Pomocí této funkce pouze pod Windows Vista nebo novější s objektem, který má *bVistaStyle* nastavena na `true`. Funkce vrátí hodnotu `NULL` Pokud `CFileDialog` není **otevřete** dialogové okno nebo, pokud *bVistaStyle* je nastaven na `false`. V tomto případě konečné pouze funkce vrátí `NULL` v režimu vydání – v režimu ladění se vyvolá výjimku kontrolní výrazy.  
   
  Další informace o `IFileOpenDialog` rozhraní najdete v tématu [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
@@ -813,7 +813,7 @@ IFileSaveDialog* GetIFileSaveDialog();
  Ukazatel na vnitřní objekt COM pro `CFileDialog`. Je vaší povinností k uvolnění tento ukazatel správně.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce pouze pod Windows Vista nebo novější s objektem, který má `bVistaStyle` nastavena na `true`. Tato funkce vrací `NULL` Pokud `CFileDialog` není **Uložit** dialogové okno nebo, pokud `bVistaStyle` je nastaven na `false`. V tomto případě konečné pouze funkce vrátí `NULL` v režimu vydání – v režimu ladění se vyvolá výjimku kontrolní výrazy.  
+ Pomocí této funkce pouze pod Windows Vista nebo novější s objektem, který má *bVistaStyle* nastavena na `true`. Tato funkce vrací `NULL` Pokud `CFileDialog` není **Uložit** dialogové okno nebo, pokud *bVistaStyle* je nastaven na `false`. V tomto případě konečné pouze funkce vrátí `NULL` v režimu vydání – v režimu ladění se vyvolá výjimku kontrolní výrazy.  
   
  Další informace o `IFileSaveDialog` rozhraní najdete v tématu [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
@@ -830,7 +830,7 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odkaz na **pozice** hodnoty vrácené předchozí `GetNextPathName` nebo `GetStartPosition` volání funkce. **NULL** Pokud bylo dosaženo konce seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -924,10 +924,10 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky, kterou uživatel vybraný v ovládacím prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -950,7 +950,7 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID ovládacího prvku skrýt.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -972,7 +972,7 @@ BOOL IsPickFoldersMode() const;
  `m_ofn` je struktura typu `OPENFILENAME`. Data v této struktuře představuje aktuální stav `CFileDialog`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato struktura se používá k chybě při inicializaci vzhled **otevřít soubor** nebo **uložit jako** dialogu, co ji vytvoříte, ale před zobrazením s [DoModal](#domodal) metoda. Například můžete nastavit `lpstrTitle` členem `m_ofn` na titulek má dialogu mít.  
+ Tato struktura se používá k chybě při inicializaci vzhled **otevřít soubor** nebo **uložit jako** dialogu, co ji vytvoříte, ale před zobrazením s [DoModal](#domodal) metoda. Například můžete nastavit *lpstrTitle* členem `m_ofn` na titulek má dialogu mít.  
   
  S Windows Vista nebo novější styl [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` není zaručeno, že vždy odpovídat stav dialogové okno. Synchronizovat se službou dialogového okna v dřívějších verzích systému Windows. V tématu [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) a [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) pro další informace o synchronizaci `m_ofn` struktura a `CFileDialog` stavu v systému Windows Vista nebo novějším.  
   
@@ -1026,7 +1026,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1039,7 +1039,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1054,10 +1054,10 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID políčko.  
   
- `bChecked`  
+ *bChecked*  
  Zaškrtnuté nebo nezaškrtnuté.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1070,7 +1070,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1139,10 +1139,10 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1161,17 +1161,17 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  ID pole se seznamem nebo pole se seznamem, v němž došlo k výběru.  
   
- `iCurSel`  
+ *iCurSel*  
  Index aktuální výběr.  
   
- `nCode`  
+ *nCode*  
  Kód oznámení ovládacího prvku. Tento parametr musí mít jednu z následujících hodnot:  
   
-- **CD_LBSELCHANGE** Určuje `iCurSel` pro vybranou položku v seznamu jedním výběrem.  
+- **CD_LBSELCHANGE** Určuje *iCurSel* pro vybranou položku v seznamu jedním výběrem.  
   
-- **CD_LBSELSUB** Určuje, že `iCurSel` je již vybrána v multiselection seznamu.  
+- **CD_LBSELSUB** Určuje, že *iCurSel* je již vybrána v multiselection seznamu.  
   
-- **CD_LBSELADD** Určuje, že `iCurSel` je vybraný v multiselection seznamu.  
+- **CD_LBSELADD** Určuje, že *iCurSel* je vybraný v multiselection seznamu.  
   
 - **CD_LBSELNOITEMS** Určuje, že žádná výběru v multiselection seznamu existuje.  
   
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Cesta souboru, na kterém došlo k narušení sdílení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1225,10 +1225,10 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru odebrat položku z.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1243,10 +1243,10 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID políčko.  
   
- `bChecked`  
+ *bChecked*  
  Stav zaškrtnutí políčka. `TRUE` označuje zaškrtnuté; `FALSE` označuje Unchecked.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1262,13 +1262,13 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky.  
   
- `dwState`  
+ *dwState*  
  Jedna nebo více hodnot z výčtu CDCONTROLSTATE které označují nový stav ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1284,13 +1284,13 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky.  
   
- `strLabel`  
+ *strLabel*  
  Text položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1305,10 +1305,10 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku.  
   
- `strLabel`  
+ *strLabel*  
  Název ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1323,10 +1323,10 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku.  
   
- `dwState`  
+ *dwState*  
  Jedna nebo více hodnot z výčtu CDCONTROLSTATE které označují aktuální stav ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1346,10 +1346,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku, pro kterou chcete nastavit text.  
   
- [v] `lpsz`  
+ [v] *lpsz*  
  Ukazatel na řetězec, který obsahuje nastavení pro ovládací prvek text.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1365,7 +1365,7 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Ukazatel na řetězec obsahující výchozí rozšíření pro pole objektu dialogového okna. Tento řetězec nesmí obsahovat tečku (.).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1381,10 +1381,10 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID pole pro úpravy.  
   
- `strText`  
+ *strText*  
  Textové hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1397,7 +1397,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPropList`  
+ *lpszPropList*  
  Seznam předdefinovaných vlastností oddělených ";". Seznam příznaků, najdete v článku `Flags` části [název otevřeného souboru](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1412,10 +1412,10 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID ovládacího prvku kontejneru.  
   
- `dwIDItem`  
+ *dwIDItem*  
  ID položky, kterou uživatel vybraný v ovládacím prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1435,16 +1435,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nWin3ID`  
+ [v] *nWin3ID*  
  Obsahuje počet ID prostředku šablony pro jiný Explorer `CFileDialog` objektu. Tato šablona se používá pouze v systému Windows NT 3.51, nebo když styl OFN_EXPLORER není k dispozici.  
   
- [v] `nWin4ID`  
+ [v] *nWin4ID*  
  Obsahuje počet ID prostředku šablony pro aplikaci Explorer `CFileDialog` objektu. Tato šablona se používá pouze v [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] a novější verze, systém Windows 95 a novější verze, nebo pokud je styl OFN_EXPLORER přítomna.  
   
- [v] `lpWin3ID`  
+ [v] *lpWin3ID*  
  Obsahuje název prostředku šablony pro jiný Explorer `CFileDialog` objektu. Tato šablona se používá pouze v systému Windows NT 3.51, nebo když styl OFN_EXPLORER není k dispozici.  
   
- [v] `lpWin4ID`  
+ [v] *lpWin4ID*  
  Obsahuje název prostředku šablony Průzkumníku `CFileDialog` objektu. Tato šablona se používá pouze v [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] a novější verze, systém Windows 95 a novější verze, nebo pokud je styl OFN_EXPLORER přítomna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1463,10 +1463,10 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  ID visual skupiny.  
   
- `strLabel`  
+ *strLabel*  
  Název skupiny.  
   
 ### <a name="remarks"></a>Poznámky  

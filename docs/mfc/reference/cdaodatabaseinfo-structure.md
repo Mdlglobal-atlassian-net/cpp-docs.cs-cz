@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352737"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951930"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo – struktura
 `CDaoDatabaseInfo` Struktura obsahuje informace o objektu databáze definované pro přístup k objektům dat (DAO).  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Jedinečné názvy objekt databáze. Chcete-li tuto vlastnost načíst přímo, volejte [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Určuje, zda můžete provedeny změny v databázi. Chcete-li tuto vlastnost načíst přímo, volejte [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Podrobnosti naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Označuje verzi databázového stroje Microsoft Jet. K načtení hodnoty této vlastnosti přímo, volání objekt databáze [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) – členská funkce. Podrobnosti naleznete v tématu "Verze vlastnost" v nápovědě rozhraní DAO.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Určuje pořadí řazení v textu pro porovnání řetězců nebo řazení. Možné hodnoty patří:  
   
 - **dbSortGeneral** použijte obecné pořadí řazení (angličtina, francouzština, němčina, portugalština, italština a moderní španělština).  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  Počet sekund, databázového stroje Microsoft Jet čeká, než vypršení časového limitu nastane při spuštění dotazu v databázi ODBC. Výchozí hodnota časového limitu je 60 sekund. Když QueryTimeout nastavena na hodnotu 0, dojde k bez časového limitu; To může způsobit program přestal reagovat. K načtení hodnoty této vlastnosti přímo, volání objekt databáze [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) – členská funkce. Podrobnosti naleznete v tématu "QueryTimeout vlastnost" v nápovědě rozhraní DAO.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Poskytuje informace o zdroji otevřenou databázi. Informace o připojení řetězce a informace o načtení hodnota této vlastnosti přímo najdete v tématu [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) – členská funkce. Další informace naleznete v tématu "Připojit vlastnost" v nápovědě rozhraní DAO.  
   
 ## <a name="remarks"></a>Poznámky  

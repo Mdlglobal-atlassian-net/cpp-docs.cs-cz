@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368979"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957075"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog – třída
 Umožňuje implementovat standardní řetězec vyhledání a nahrazení dialogových oken v aplikaci.  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Jednou `CFindReplaceDialog` objekt byl vytvořen, je třeba zavolat [vytvořit](#create) – členská funkce k vytváření a zobrazování dialogových oken.  
   
- Použití [m_fr](#m_fr) struktura inicializace dialogu před voláním **vytvořit**. `m_fr` Struktura je typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Další informace o tuto strukturu najdete v části Windows SDK.  
+ Použití [m_fr](#m_fr) struktura inicializace dialogu před voláním `Create`. `m_fr` Struktura je typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Další informace o tuto strukturu najdete v části Windows SDK.  
   
  Aby nadřazené okno, které mají být informování vyhledání a nahrazení požadavků, musíte použít Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) fungovat a využívat [on_registered_message –](message-map-macros-mfc.md#on_registered_message) makra map zpráv vaší rámce okno, která zpracovává registrované zpráva.  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Protože `CFindReplaceDialog` objekt nemodální dialogového okna, je nutné ji vytvořit v haldě pomocí `new` operátor.  
+ Protože `CFindReplaceDialog` objekt nemodální dialogového okna, je nutné ji vytvořit v haldě pomocí **nové** operátor.  
   
- Při odstraňování, rozhraní pokusu o provedení `delete this` na ukazatel na dialogové okno. Pokud jste vytvořili dialogových oken v zásobníku, `this` ukazatel neexistuje a může způsobit nedefinované chování.  
+ Při odstraňování, rozhraní pokusu o provedení **odstranit tento** na ukazatel na dialogové okno. Pokud jste vytvořili dialogových oken v zásobníku, **to** ukazatel neexistuje a může způsobit nedefinované chování.  
   
  Další informace o budování `CFindReplaceDialog` objekty, najdete [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) Přehled. Použití [CFindReplaceDialog::Create](#create) členské funkce k zobrazení dialogového okna.  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Tento parametr nastavte na `TRUE` k zobrazení **najít** dialogové okno. Nastavte ji na `FALSE` k zobrazení **vyhledání a nahrazení** dialogové okno.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Ukazatel na výchozí řetězec hledání, když se zobrazí dialogové okno. Pokud `NULL`, dialogové okno neobsahuje výchozí hledaný řetězec.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Ukazatel na výchozí náhradní řetězec, když se zobrazí dialogové okno. Pokud `NULL`, dialogové okno neobsahuje výchozí náhradní řetězec.  
   
- `dwFlags`  
+ *dwFlags*  
  Jeden nebo více příznaky, které můžete použít k přizpůsobení nastavení dialogovém okně spojovat pomocí bitový operátor OR. Výchozí hodnota je `FR_DOWN`, která určuje, že hledání je chcete-li pokračovat v klesající směru. Najdete v článku [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) struktura ve Windows SDK pro další informace o tyto příznaky.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatele v dialogovém okně nadřazené nebo vlastníka. Toto je okno, která bude přijímat speciální zpráva označující, že je vyžadován akce vyhledání a nahrazení. Pokud `NULL`, se používá v hlavním okně aplikace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lParam`  
+ *lParam*  
  **Lparam** hodnota předaná do okna rámce **OnFindReplace** – členská funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  

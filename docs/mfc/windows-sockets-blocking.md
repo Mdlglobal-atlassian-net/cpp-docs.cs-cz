@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 400114e557632c9a1dd11cc2f9ec5b3101eb8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ec6b8383f13e8b632163a1fe83a2cd79f7966c5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385947"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956184"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: Blokování
 V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá blokování. Další problémy, které jsou popsané v článcích: [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  
@@ -31,7 +31,7 @@ V tomto článku a dvě doprovodné články vysvětlují několik problémů v 
  Pokud používáte nebo odvozena od třídy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), budete muset řešení těchto problémů. Pokud používáte nebo odvozena od třídy [CSocket](../mfc/reference/csocket-class.md), spravuje MFC za vás.  
   
 ## <a name="blocking"></a>Blokování  
- Soket může být v "režimu blokování" nebo "neblokový režimu." Funkce soketů v režimu blokování (nebo synchronní) nevrátí, dokud se jejich akci dokončit. Tento postup se nazývá blokování protože soketu, jejichž funkce byla zavolána nemůžete udělat nic – blokováno – dokud vrátí volání. Volání **Receive** – členská funkce, například může trvat dokončit, protože se čeká na odesílající aplikací k odeslání nahodile dlouho (to je, pokud používáte `CSocket`, nebo pomocí `CAsyncSocket` s blokování). Pokud `CAsyncSocket` objekt je v neblokový režimu (operační asynchronně), vrátí volání okamžitě a aktuální kód chyby, se dá načíst [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) – členská funkce je **WSAEWOULDBLOCK**, která určuje, že by blokovaly volání, kdyby se nebyla vrácena okamžitě z důvodu režimu. (`CSocket` nikdy vrátí **WSAEWOULDBLOCK**. Třída spravuje blokování za vás.)  
+ Soket může být v "režimu blokování" nebo "neblokový režimu." Funkce soketů v režimu blokování (nebo synchronní) nevrátí, dokud se jejich akci dokončit. Tento postup se nazývá blokování protože soketu, jejichž funkce byla zavolána nemůžete udělat nic – blokováno – dokud vrátí volání. Volání `Receive` – členská funkce, například může trvat dokončit, protože se čeká na odesílající aplikací k odeslání nahodile dlouho (to je, pokud používáte `CSocket`, nebo pomocí `CAsyncSocket` s blokování). Pokud `CAsyncSocket` objekt je v neblokový režimu (operační asynchronně), vrátí volání okamžitě a aktuální kód chyby, se dá načíst [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) – členská funkce je **WSAEWOULDBLOCK**, která určuje, že by blokovaly volání, kdyby se nebyla vrácena okamžitě z důvodu režimu. (`CSocket` nikdy vrátí **WSAEWOULDBLOCK**. Třída spravuje blokování za vás.)  
   
  Chování sockets se liší v 32bitové a 64bitové verze operačních systémů (například systému Windows 95 nebo Windows 98) než v části 16bitové operačních systémů (například systému Windows 3.1). Na rozdíl od 16bitové operační systémy 32bitové a 64bitové verze operačních systémů použít preemptivní multitasking a zadejte více vláken. V části 32bitové a 64bitové verze operačních systémů můžou vaše sockets v samostatných pracovních vláken. Soket ve vlákně můžete blokovat bez zasahování další aktivity v aplikaci a bez výdaje dobu výpočtů na blokování. Informace o vícevláknové programování, najdete v článku [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
@@ -40,7 +40,7 @@ V tomto článku a dvě doprovodné články vysvětlují několik problémů v 
   
  Zbytek Tato diskuse se pro programátory v jazyce cílení 16bitové operační systémy:  
   
- Za normálních okolností Pokud používáte `CAsyncSocket`, měli byste nepoužívejte blokování operace a pracovat asynchronně místo. V asynchronních operací z bodu příjmu **WSAEWOULDBLOCK** kód chyby po volání **Receive**, například čekat vaší `OnReceive` – členská funkce je volána oznámení můžete, který si můžete přečíst znovu. Asynchronní volání jsou provedené zpětné volání funkce oznámení vaše soketu odpovídající zpětného volání, jako například [události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
+ Za normálních okolností Pokud používáte `CAsyncSocket`, měli byste nepoužívejte blokování operace a pracovat asynchronně místo. V asynchronních operací z bodu příjmu **WSAEWOULDBLOCK** kód chyby po volání `Receive`, například čekat vaší `OnReceive` – členská funkce je volána s upozorněním, že si můžete přečíst znovu. Asynchronní volání jsou provedené zpětné volání funkce oznámení vaše soketu odpovídající zpětného volání, jako například [události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
   
  V části Windows blokování volání jsou považovány za chybný postup. Ve výchozím nastavení [CAsyncSocket](../mfc/reference/casyncsocket-class.md) podporuje asynchronní volání a musí spravovat blokování sami pomocí zpětné volání oznámení. Třída [CSocket](../mfc/reference/csocket-class.md), na druhé straně je synchronní. To čerpadla zpráv systému Windows a spravuje blokování za vás.  
   

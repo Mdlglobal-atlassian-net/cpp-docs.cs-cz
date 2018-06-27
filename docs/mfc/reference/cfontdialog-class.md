@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368345"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953672"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog – třída
 Umožňuje začlenit dialogové okno Výběr písma do vaší aplikace.  
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- l `plfInitial`  
+ *plfInitial*  
  Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) datová struktura, která vám umožní nastavit některé z vlastností písma.  
   
- `charFormat`  
+ *charFormat*  
  Ukazatel [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) ovládacích prvků pro úpravy datová struktura, která vám umožní nastavit některé z vlastností písma v s formátováním.  
   
- `dwFlags`  
+ *dwFlags*  
  Určuje jeden nebo více příznaků zvolit písmo. Jeden nebo více přednastavené hodnoty lze spojovat pomocí bitový operátor OR. Pokud změníte `m_cf.Flag`s struktura člena, je nutné používat bitový operátor OR v změny zachovat výchozí chování beze změn. Podrobnosti o každé z těchto příznaků, najdete v části Popis [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) struktura ve Windows SDK.  
   
- pdcPrinter  
+ *pdcPrinter*  
  Ukazatel na kontextu zařízení tiskárny. Pokud je zadaný, tento parametr odkazuje na kontextu tiskárny zařízení tiskárny, na které mají být vybrán písma.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na písma dialogové okno nadřazené nebo vlastníka.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura obsahující informace o formátování vybraného písma.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

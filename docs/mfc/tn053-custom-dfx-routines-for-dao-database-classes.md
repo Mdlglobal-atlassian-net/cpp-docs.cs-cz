@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386090"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951991"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Vlastní rutiny DFX pro databázové třídy DAO
 > [!NOTE]
@@ -134,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |Operace|Popis|  
 |---------------|-----------------|  
-|**AddToParameterList**|Klauzule parametry sestavení|  
-|**AddToSelectList**|Klauzule SELECT sestavení|  
-|**BindField**|Nastaví strukturu vazby|  
-|**BindParam**|Nastaví hodnoty parametru|  
-|**Oprava**|Nastaví stav hodnotu NULL|  
-|**AllocCache**|Přidělí mezipaměti pro změny kontroly|  
-|**StoreField**|Uloží aktuální záznam do mezipaměti|  
-|**LoadField**|Obnovení mezipaměti hodnoty členů|  
-|**FreeCache**|Uvolní mezipaměti|  
+|`AddToParameterList`|Klauzule parametry sestavení|  
+|`AddToSelectList`|Klauzule SELECT sestavení|  
+|`BindField`|Nastaví strukturu vazby|  
+|`BindParam`|Nastaví hodnoty parametru|  
+|`Fixup`|Nastaví stav hodnotu NULL|  
+|`AllocCache`|Přidělí mezipaměti pro změny kontroly|  
+|`StoreField`|Uloží aktuální záznam do mezipaměti|  
+|`LoadField`|Obnovení mezipaměti hodnoty členů|  
+|`FreeCache`|Uvolní mezipaměti|  
 |`SetFieldNull`|Nastaví pole stavové & hodnotu na hodnotu NULL|  
-|**MarkForAddNew**|Označí pole nekonzistence není-li PSEUDO hodnotu NULL.|  
-|**MarkForEdit**|Pokud změny pole značky neshodují mezipaměti|  
-|**SetDirtyField**|Nastaví pole hodnoty, které jsou označeny jako nečisté|  
+|`MarkForAddNew`|Označí pole nekonzistence není-li PSEUDO hodnotu NULL.|  
+|`MarkForEdit`|Pokud změny pole značky neshodují mezipaměti|  
+|`SetDirtyField`|Nastaví pole hodnoty, které jsou označeny jako nečisté|  
   
  V další části, bude každé operace vysvětlené podrobněji pro `DFX_Text`.  
   
@@ -168,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Podrobnosti o dfx_text –  
  Jak je uvedeno nahoře, je nejlepší způsob, jak vysvětlují, jak funguje DFX pro práci v příkladu. Pro tento účel projít interní položky `DFX_Text` by pomáhají alespoň základní znalosti o DFX velmi dobře fungovat.  
   
- **AddToParameterList**  
- Tato operace vytvoří SQL **parametry** – klauzule ("`Parameters <param name>, <param type> ... ;`") vyžaduje Jet. Každý parametr s názvem a zadali (jako je zadaný ve volání RFX). Najdete v části funkce **CDaoFieldExchange::AppendParamType** funkce, které chcete zobrazit názvy jednotlivých typů. U `DFX_Text`, je typu použitého `text`.  
+ `AddToParameterList`  
+ Tato operace vytvoří SQL **parametry** – klauzule ("`Parameters <param name>, <param type> ... ;`") vyžaduje Jet. Každý parametr s názvem a zadali (jako je zadaný ve volání RFX). Najdete v části funkce `CDaoFieldExchange::AppendParamType` funkce, které chcete zobrazit názvy jednotlivých typů. U `DFX_Text`, je typu použitého **text**.  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  Sestavení SQL **vyberte** klauzule. To je poměrně rovnou předávat název sloupce zadané ve volání DFX je jednoduše připojen ("`SELECT <column name>, ...`").  
   
- **BindField**  
+ `BindField`  
  Nejvíce komplexní operací. Jak je uvedeno nahoře, to je, kde strukturu DAO vazby používané `GetRows` nastavení. Jak vidíte z kódu v `DFX_Text` typy informací ve struktuře zahrnují DAO typu použitého (**DAO_CHAR** nebo **DAO_WCHAR** u `DFX_Text`). Kromě toho typu vazby použít také nastavená. V dřívější části `GetRows` byla pouze stručně popisuje, ale byla dostatečná vysvětlení, že typ vazby využívané prostředím MFC je vždy vazbu přímé adresy (**DAOBINDING_DIRECT**). Kromě toho pro vazbu na sloupec s proměnlivou délkou (jako je `DFX_Text`) zpětného volání vazby se používá, aby MFC můžete řídit přidělování paměti a zadejte adresu správnou délku. To znamená, že MFC vždy poznáte DAO "kde" dat, což umožňuje vazbu přímo do proměnné členů. Zbytek strukturu vazby vyplněno takové věci, jako adresa funkce zpětného volání přidělování paměti a typ vazba sloupce (vazby název sloupce).  
   
- **BindParam**  
+ `BindParam`  
  Toto je jednoduchá operace, která volá `SetParamValue` s hodnotou parametru určenou v parametr člena.  
   
- **Oprava**  
+ `Fixup`  
  Vyplní **NULL** stav pro každé pole.  
   
  `SetFieldNull`  
  Tato operace pouze označí stav každého pole jako **NULL** a nastaví hodnoty proměnné člena na **PSEUDO_NULL**.  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  Volání `SetFieldValue` pro každé pole označila jako neaktualizované.  
   
  Všechny ostatní operace řešit pouze pomocí datové mezipaměti. Mezipaměť dat je navíc vyrovnávací paměť dat v aktuální záznam, který se používá k zajištění některé aspekty jednodušší. Například můžete být automaticky zjišťují "nekonzistence" pole. Jak je popsáno v online dokumentaci ho může být vypnuto zcela nebo na úrovni pole. Implementace vyrovnávací paměti využívá mapy. Tato mapa slouží k přiřazování dynamicky přidělené kopie dat s adresou pole "vázaná" (nebo `CDaoRecordset` odvozené – datový člen).  
   
- **AllocCache**  
+ `AllocCache`  
  Dynamicky přiděluje hodnota v mezipaměti pole a přidá ji do mapy.  
   
- **FreeCache**  
+ `FreeCache`  
  Odstraní hodnotu uloženou v mezipaměti pole a odebere ji z mapování.  
   
- **StoreField**  
+ `StoreField`  
  Aktuální hodnota pole zkopíruje do mezipaměti data.  
   
- **LoadField**  
+ `LoadField`  
  Hodnota uložená v mezipaměti se zkopíruje do pole člena.  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  Ověří, zda je aktuální hodnota pole jinou hodnotu než**NULL** a označí nekonzistence v případě potřeby.  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  Porovná aktuální hodnotu pole s datovou mezipaměť a označí nekonzistence v případě potřeby.  
   
 > [!TIP]

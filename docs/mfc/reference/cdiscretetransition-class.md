@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366932"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957029"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition – třída
 Zapouzdří diskrétní přechod.  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `delay`  
+ *delay*  
  Množství času, podle kterého zpoždění okamžitou přepínač tak, aby konečná hodnota.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Hodnota proměnné animace na konci přechodu.  
   
- `hold`  
+ *uložení*  
  Množství času, podle kterého pro uložení proměnné v jeho konečná hodnota.  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
 
   

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352932"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951062"
 ---
 # <a name="cbytearray-class"></a>CByteArray – třída
 Podporuje dynamická pole bajtů.  
@@ -112,7 +112,7 @@ class CByteArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá element v zadaném indexu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CByteArray` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud je pole bajtů uložen do archivu, buď pomocí přetížené vložení ( **<<**) operátor nebo s `Serialize` – členská funkce každý prvek se naopak serializovat.  
+ `CByteArray` zahrnuje implement_serial – makro pro podporu serializace a vypsání jejích elementů. Pokud je pole bajtů uložen do archivu, buď pomocí přetížené vložení ( **<<**) operátor nebo s `Serialize` – členská funkce každý prvek se naopak serializovat.  
   
 > [!NOTE]
 >  Před použitím pole, použijte `SetSize` k zahájení jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidávání elementů do pole způsobí, že se často znovu přidělit a zkopírovat. Časté opakované přidělení a kopírování jsou neefektivní a může fragmentovat paměti.  
