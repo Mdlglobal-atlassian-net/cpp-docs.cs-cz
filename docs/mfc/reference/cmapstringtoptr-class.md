@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e079717d031f4e1f5de27a528384f336f45d4ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd2810c8f67fb2d6f3db884446d23011daba7a64
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367744"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040779"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr – třída
 Podporuje mapy neplatné ukazatele s klíči `CString` objekty.  
@@ -61,7 +61,7 @@ class CMapStringToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Členové  
- Členské funkce `CMapStringToPtr` jsou podobné funkce člena třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti, můžete použít `CMapStringToOb` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CObject` ukazatel jako parametr funkce nebo vrací hodnotu, nahraďte ukazatel na `void`.  
+ Členské funkce `CMapStringToPtr` jsou podobné funkce člena třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti, můžete použít `CMapStringToOb` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CObject` ukazatel jako parametr funkce nebo vrací hodnotu, nahraďte ukazatel na **void**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

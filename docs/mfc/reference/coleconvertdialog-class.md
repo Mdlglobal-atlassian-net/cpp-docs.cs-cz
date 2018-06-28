@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370286"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042518"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog – třída
 Další informace najdete v tématu [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktura ve Windows SDK.  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Odkazuje na položku, kterou chcete převést nebo aktivovat.  
   
- `dwFlags`  
+ *dwFlags*  
  Vytvoření příznak, který obsahuje libovolný počet následující hodnoty spojovat pomocí bitové hodnotě – operátor or:  
   
 - **CF_SELECTCONVERTTO** Určuje, že přepínač převést na vybere původně při volání dialogové okno. Toto nastavení je výchozí.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogové okno.  
   
- `pClassID`  
- Body CLSID položku, kterou chcete převést nebo aktivovat. Pokud **NULL**, **CLSID** přidružené `pItem` se použije.  
+ *pClassID má*  
+ Body CLSID položku, kterou chcete převést nebo aktivovat. Pokud **NULL**, **CLSID** přidružené *pItem* se použije.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna nastavena na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Odkazuje na položku, kterou chcete převést nebo aktivovat. Nemůže být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370904"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041257"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton – třída
 Implementuje tlačítko nabídky pásu karet, které obsahuje Galerie pásu karet.  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -132,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uiID`  
- ID příkazu tlačítka. Toto je hodnota odeslaných za **wm_command –** zprávy po kliknutí na toto tlačítko.  
+ *uiID*  
+ ID příkazu tlačítka. Toto je hodnota wm_command – zprávy odeslané po kliknutí na toto tlačítko.  
   
- `iImage`  
- Index bitové kopie zobrazíte pomocí tlačítka nabídky galerie. Bitové kopie jsou uloženy v `imagesPalette` parametr.  
+ *iImage*  
+ Index bitové kopie zobrazíte pomocí tlačítka nabídky galerie. Bitové kopie jsou uloženy v *imagesPalette* parametr.  
   
- `lpszText`  
+ *lpszText*  
  Text pro zobrazení na tlačítko nabídky.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Obsahuje seznam obrázků pro zobrazení v galerii.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  ID prostředku seznam obrázků pro obrázky, které chcete zobrazit v galerii.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Určuje šířku v pixelech bitovou kopii k zobrazení v galerii.  
   
 ### <a name="remarks"></a>Poznámky  

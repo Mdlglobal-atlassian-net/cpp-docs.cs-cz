@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374173"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040857"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit – třída
 Implementuje ovládací prvek úprav, který se nachází na panelu pásu karet.  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID pro příkaz `CMFCRibbonEdit` ovládacího prvku.  
   
- [v] `nWidth`  
+ [v] *nWindth*  
  Šířka v pixelech textového pole pro `CMFCRibbonEdit` ovládacího prvku.  
   
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Popisek pro `CMFCRibbonEdit` ovládacího prvku.  
   
- [v] `nImage`  
+ [v] *nImage*  
  Index pro malý obrázek `CMFCRibbonEdit` ovládacího prvku. Kolekce malé bitové kopie je možný díky kategorie nadřazeného pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
  Zdroj `CMFCRibbonEdit` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- `src` Parametr musí být typu `CMFCRibbonEdit`.  
+ *Src* parametr musí být typu `CMFCRibbonEdit`.  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  Vytvoří nové textové pole pro [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objektu.  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel na okno nadřazené `CMFCRibbonEdit` objektu.  
   
- [v] `dwEditStyle`  
+ [v] *dwEditStyle*  
  Určuje styl textového pole. Styly oken uvedené v části poznámky s můžete kombinovat [upravit styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775464) , jsou popsány v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nMin`  
+ [v] *nMin*  
  Minimální hodnota číselníku.  
   
- [v] `nMax`  
+ [v] *nMax*  
  Maximální hodnota číselníku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bInFloatyMode`  
+ [v] *bInFloatyMode*  
  `TRUE` Pokud `CMFCRibbonEdit` ovládací prvek nachází plovoucí režimu, jinak hodnota `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.  
   
- [v] `strText`  
- Zobrazovaný text [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit třída").  
+ [v] *strText*  
+ Zobrazovaný text [cmfcribbonedit třída](../../mfc/reference/cmfcribbonedit-class.md "").  
   
- [v] `nTextOffset`  
+ [v] *nTextOffset*  
  Vzdálenost v pixelech, z levé strany zobrazovaný text v rozevíracím seznamu.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Rámeček pro zobrazení `CMFCRibbonEdit` ovládacího prvku.  
   
- [v] `bIsSelected`  
+ [v] *bIsSelected*  
  Tento parametr není používán.  
   
- [v] `bHighlighted`  
+ [v] *bHighlighted*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Chcete-li povolit ovládacího prvku; `FALSE` zakázat ovládací prvek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bHighlight`  
+ [v] *bHighlight*  
  `TRUE` Pokud je ukazatel v hranice `CMFCRibbonEdit` řízení; jinak `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsMenuKey`  
+ [v] *bIsMenuKey*  
  `TRUE` Pokud keytip zobrazí místní nabídky; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsRTL`  
+ [v] *bIsRTL*  
  `TRUE` Pokud je rozložení-doleva; `FALSE` Pokud je rozložení zleva doprava.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  `TRUE` Chcete-li zobrazit ovládací prvek; `FALSE` ke skrytí ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  Ukazatel do nadřazeného okna pro `CMFCRibbonEdit` objektu.  
   
- `data`  
+ *data*  
  Data pro usnadnění přístupu `CMFCRibbonEdit` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `strText`  
+ [v] *strText*  
  Text pro textové pole.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nAlign`  
+ [v] *nAlign*  
  Zarovnání textu ve výčtu objevit hodnotu. Možné hodnoty v části poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametr `nAlign` je jedním z následujících upravit styly ovládacího prvku:  
+ Parametr *nAlign* je jedním z následujících upravit styly ovládacího prvku:  
   
 - **Es_left –** pro zarovnání doleva  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nWidth`  
+ [v] *nWindth*  
  Šířka v pixelech textového pole.  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` Chcete-li nastavit šířku pro plovoucí režim; `FALSE` nastavit šířku pro regulární režim.  
   
 ### <a name="remarks"></a>Poznámky  

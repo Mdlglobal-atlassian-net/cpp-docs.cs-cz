@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374960"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040818"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl – třída
 `CMFCShellListCtrl` Třída poskytuje funkce ovládací prvek seznamu Windows a rozbalí zahrnutím možnost zobrazit seznam položek prostředí.  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszPath`  
+ [v] *lpszPath*  
  Řetězec, který obsahuje cestu ke složce.  
   
- [v] `lpItemInfo`  
+ [v] *lpItemInfo*  
  Ukazatel na `LPAFX_SHELLITEMINFO` struktura, která popisuje složku pro zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Logická hodnota, která určuje, zda rozhraní umožňuje místní nabídky.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strPath`  
+ [out] *strPath*  
  Odkaz na řetězcový parametr, kam metodu zapisuje cestu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strName`  
+ [out] *%{strName/*  
  Odkaz na metodu, kam zapisuje název parametr řetězce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strPath`  
+ [out] *strPath*  
  Odkaz na řetězec, který obdrží cestu.  
   
- [v] `iItem`  
+ [v] *položky*  
  Index položky seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` v případě úspěšného; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Index poskytl `iItem` je založena na položky zobrazené ve [CMFCShellListCtrl třída](../../mfc/reference/cmfcshelllistctrl-class.md) objektu.  
+ Index poskytl *položky* je založena na položky zobrazené ve [CMFCShellListCtrl třída](../../mfc/reference/cmfcshelllistctrl-class.md) objektu.  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  Vrátí typ položky zobrazené ve [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objektu.  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lParam1`  
- [v] `lParam2`  
- [v] `iColumn`  
+ [v] *lParam1*  
+ [v] *lParam2*  
+ [v] *iColumn*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `tmFile`  
+ [v] *tmFile*  
  Datum přidružené k souboru.  
   
- [out] `str`  
+ [out] *str*  
  Řetězec, který obsahuje datum formátovaného souboru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lFileSize`  
+ [v] *lFileSize*  
  Velikost souboru, který se zobrazí rozhraní.  
   
- [out] `str`  
+ [out] *str*  
  Řetězec, který obsahuje velikost formátovaného souboru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iItem`  
+ [v] *položky*  
  Index položky.  
   
- [v] `pItem`  
+ [v] *pItem*  
  A `LPAFX_SHELLITEMINFO` parametr, který popisuje položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>Poznámky  
  Index bitové kopie ikonu je založen na seznamu obrázků systému.  
   
- Ve výchozím nastavení, tato metoda je založena na `pItem` parametr. Hodnota `iItem` ještě není používáno ve výchozí implementace. Můžete použít `iItem` implementovat vlastní chování.  
+ Ve výchozím nastavení, tato metoda je založena na *pItem* parametr. Hodnota *položky* ještě není používáno ve výchozí implementace. Můžete použít *položky* implementovat vlastní chování.  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  Tato metoda volá framework při musí získat text položky prostředí.  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iItem`  
+ [v] *položky*  
  Index položky.  
   
- [v] `iColumn`  
+ [v] *iColumn*  
  Sloupec, které vás zajímají.  
   
- [v] `pItem`  
+ [v] *pItem*  
  A `LPAFX_SHELLITEMINFO` parametr, který popisuje položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>Poznámky  
  Jednotlivé položky `CMFCShellListCtrl` objekt může mít text v jedné nebo více sloupců. Když tato metoda volá framework, určuje sloupec, který je zajímá. Pokud volání této funkce ručně, musíte zadat také sloupec, který vás zajímá.  
   
- Ve výchozím nastavení, tato metoda je založena na `pItem` parametr k určení, které položky procesu. Hodnota `iItem` ještě není používáno ve výchozí implementace.  
+ Ve výchozím nastavení, tato metoda je založena na *pItem* parametr k určení, které položky procesu. Hodnota *položky* ještě není používáno ve výchozí implementace.  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  Tato metoda volá framework při nastaví názvy sloupců.  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nTypes`  
+ [v] *nTypes*  
  Typy seznam položek, které `CMFCShellListCtrl` objektu podporuje.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322404"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041107"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession – třída
 
@@ -422,7 +422,7 @@ Ukazatel na řetězec obsahující uživatelské jméno.
 Ukazatel na řetězec obsahující přístupové heslo.
 
 *dwFlags*  
-Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Podívejte se na tabulku v **poznámky** části [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) popis `dwFlags` hodnoty.
+Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Podívejte se na tabulku v **poznámky** části [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) popis *dwFlags* hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
