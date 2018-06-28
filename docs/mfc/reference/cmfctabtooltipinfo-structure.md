@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373726"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037480"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Struktura CMFCTabToolTipInfo
 Tato struktura poskytuje informace o kartě MDI, který uživatel ukazatele myši.  
@@ -43,7 +43,7 @@ struct CMFCTabToolTipInfo
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|Text popisku.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ukazatel na `CMFCTabToolTipInfo` struktura je předán jako parametr `AFX_WM_ON_GET_TAB_TOOLTIP` zprávy. Tato zpráva se vygeneruje, když MDI karty jsou povolené a uživatel bude umístěn nad ovládacího prvku karta.  
+ Ukazatel na `CMFCTabToolTipInfo` struktura je předán jako parametr AFX_WM_ON_GET_TAB_TOOLTIP zprávy. Tato zpráva se vygeneruje, když MDI karty jsou povolené a uživatel bude umístěn nad ovládacího prvku karta.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob `CMFCTabToolTipInfo` se používá v [MDITabsDemo ukázka: MFC – záložkami aplikace MDI](../../visual-cpp-samples.md).  

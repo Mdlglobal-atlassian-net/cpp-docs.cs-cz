@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09f92440a926f547f051dd0bee73468a1958813e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367643"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041023"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection – třída
 Spravuje připojení k serveru HTTP.  
@@ -100,36 +100,36 @@ CHttpConnection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSession`  
+ *pSession*  
  Ukazatel [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu.  
   
- `hConnected`  
+ *hConnected*  
  Popisovač pro připojení k Internetu.  
   
- `pstrServer`  
+ *pstrServer*  
  Ukazatel na řetězec obsahující název serveru.  
   
- `dwContext`  
- Identifikátor kontext pro `CInternetConnection` objektu. V tématu **poznámky** Další informace o `dwContext`.  
+ *dwContext*  
+ Identifikátor kontext pro `CInternetConnection` objektu. V tématu **poznámky** Další informace o *dwContext*.  
   
- `nPort`  
+ *nPort*  
  Číslo, které identifikuje port Internetu pro toto připojení.  
   
- `pstrUserName`  
+ *pstrUserName*  
  Ukazatel na řetězec ukončené hodnotou null, který určuje jméno uživatele k přihlášení. Pokud **NULL**, výchozí hodnota je anonymní.  
   
- `pstrPassword`  
- Ukazatel na řetězec ukončené hodnotou null, který určuje heslo pro použití k protokolování. Pokud oba `pstrPassword` a `pstrUserName` jsou **NULL**, výchozí anonymního hesla je uživatelské jméno e-mailu. Pokud `pstrPassword` je **NULL** (nebo prázdný řetězec), ale `pstrUserName` není **NULL**, se používá prázdné heslo. Následující tabulka popisuje chování čtyři možné nastavení `pstrUserName` a `pstrPassword`:  
+ *pstrPassword*  
+ Ukazatel na řetězec ukončené hodnotou null, který určuje heslo pro použití k protokolování. Pokud oba *pstrPassword* a *pstrUserName* jsou **NULL**, výchozí anonymního hesla je uživatelské jméno e-mailu. Pokud *pstrPassword* je **NULL** (nebo prázdný řetězec), ale *pstrUserName* není **NULL**, se používá prázdné heslo. Následující tabulka popisuje chování čtyři možné nastavení *pstrUserName* a *pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|Uživatelské jméno odeslané na FTP server|Heslo odeslat na FTP server|  
+|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslat na FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL** nebo ""|**NULL** nebo ""|"anonymní"|Uživatelské jméno e-mailu|  
-|Není- **NULL** řetězec|**NULL** nebo ""|`pstrUserName`|" "|  
+|Není- **NULL** řetězec|**NULL** nebo ""|*pstrUserName*|" "|  
 |**NULL** jinou hodnotu než **NULL** řetězec|**CHYBA**|**CHYBA**||  
-|Není- **NULL** řetězec|Není- **NULL** řetězec|`pstrUserName`|`pstrPassword`|  
+|Není- **NULL** řetězec|Není- **NULL** řetězec|*pstrUserName*|*pstrPassword*|  
   
- `dwFlags`  
- Libovolnou kombinaci **INTERNET_ FLAG_\***  příznaky. Podívejte se na tabulku v **poznámky** části [CHttpConnection::OpenRequest](#openrequest) popis `dwFlags` hodnoty.  
+ *dwFlags*  
+ Libovolnou kombinaci **INTERNET_ FLAG_\***  příznaky. Podívejte se na tabulku v **poznámky** části [CHttpConnection::OpenRequest](#openrequest) popis *dwFlags* hodnoty.  
   
 ### <a name="remarks"></a>Poznámky  
  Nikdy vytvoříte `CHttpConnection` přímo. Místo toho vytvořte objekt voláním [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
@@ -159,31 +159,31 @@ CHttpFile* OpenRequest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrVerb`  
+ *pstrVerb*  
  Ukazatel na řetězec obsahující příkaz, který má používat v požadavku. Pokud `NULL`, "GET" se používá.  
   
- `pstrObjectName`  
+ *pstrObjectName*  
  Ukazatel na řetězec obsahující cílový objekt zadaný příkaz. Obecně je název souboru, spustitelný soubor modulu nebo specifikátor vyhledávání.  
   
- `pstrReferer`  
- Ukazatel na řetězec, který určuje adresu (URL) dokumentu, ze které adresu URL v požadavku ( `pstrObjectName`) byl získán. Pokud `NULL`, je zadána žádné záhlaví HTTP.  
+ *pstrReferer*  
+ Ukazatel na řetězec, který určuje adresu (URL) dokumentu, ze které adresu URL v požadavku ( *pstrObjectName*) byl získán. Pokud `NULL`, je zadána žádné záhlaví HTTP.  
   
- `dwContext`  
- Identifikátor kontextu `OpenRequest` operaci. Najdete v části poznámky Další informace `dwContext`.  
+ *dwContext*  
+ Identifikátor kontextu `OpenRequest` operaci. Najdete v části poznámky Další informace *dwContext*.  
   
- `ppstrAcceptTypes`  
- Ukazatel na ukončené hodnotou null pole `LPCTSTR` ukazatele na řetězce, které označují typy obsahu akceptovat klienta. Pokud `ppstrAcceptTypes` je `NULL`, servery interpretovat klienta přijímá pouze dokumenty typu "text / *" (to znamená, dokumenty pouze text a není obrázky nebo jiné binární soubory). Typ obsahu je ekvivalentní typ_obsahu proměnné CGI, která identifikuje typu dat pro dotazy, které obsahují připojené informace, jako je například HTTP POST a PUT.  
+ *ppstrAcceptTypes*  
+ Ukazatel na ukončené hodnotou null pole `LPCTSTR` ukazatele na řetězce, které označují typy obsahu akceptovat klienta. Pokud *ppstrAcceptTypes* je `NULL`, servery interpretovat klienta přijímá pouze dokumenty typu "text / *" (to znamená, dokumenty pouze text a není obrázky nebo jiné binární soubory). Typ obsahu je ekvivalentní typ_obsahu proměnné CGI, která identifikuje typu dat pro dotazy, které obsahují připojené informace, jako je například HTTP POST a PUT.  
   
- `pstrVersion`  
+ *pstrVersion*  
  Ukazatel na řetězec definování verzi protokolu HTTP. Pokud `NULL`, se používá "HTTP/1.0".  
   
- `dwFlags`  
- Libovolnou kombinaci příznaky INTERNET_ FLAG_ *. Najdete v části poznámky popis možné `dwFlags` hodnoty.  
+ *dwFlags*  
+ Libovolnou kombinaci příznaky INTERNET_ FLAG_ *. Najdete v části poznámky popis možné *dwFlags* hodnoty.  
   
- `nVerb`  
+ *nVerb*  
  Počet, přidružený typ požadavku HTTP. Může být jedna z následujících akcí:  
   
-|Typ požadavku HTTP|`nVerb` Hodnota|  
+|Typ požadavku HTTP|*nVerb* hodnota|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -197,7 +197,7 @@ CHttpFile* OpenRequest(
  Ukazatel [CHttpFile](../../mfc/reference/chttpfile-class.md) požadovaný objekt.  
   
 ### <a name="remarks"></a>Poznámky  
- `dwFlags` Může být jedna z následujících akcí:  
+ *dwFlags* může být jedna z následujících akcí:  
   
 |Příznak Internetu|Popis|  
 |-------------------|-----------------|  

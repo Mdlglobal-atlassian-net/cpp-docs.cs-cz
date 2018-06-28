@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a48cbe09d493ecc86bf8927ad4c66fd03d7662f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371738"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038058"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 – třída
-`CMFCVisualManagerVS2005` Poskytuje aplikaci Microsoft Visual Studio 2005 vzhled.  
+`CMFCVisualManagerVS2005` poskytuje aplikaci Microsoft Visual Studio 2005 vzhled.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -143,7 +143,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPropList`  
+ [v] *pPropList*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -166,15 +166,15 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabWnd`  
- [v] `clrDark`  
- [v] `clrBlack`  
- [v] `clrHighlight`  
- [v] `clrFace`  
- [v] `clrDarkShadow`  
- [v] `clrLight`  
- [v] `pbrFace`  
- [v] `pbrBlack`  
+ [v] *pTabWnd*  
+ [v] *clrDark*  
+ [v] *clrBlack*  
+ [v] *clrHighlight*  
+ [v] *clrFace*  
+ [v] *clrDarkShadow*  
+ [v] *clrLight*  
+ [v] *pbrFace*  
+ [v] *pbrBlack*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -201,10 +201,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectBounds`  
- [v] `rectBorderSize`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *rectBounds*  
+ [v] *rectBorderSize*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -223,13 +223,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `bActive`  
- [v] `bHorz`  
- [v] `bMaximized`  
- [v] `bDisabled`  
- [v] `nImageID`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *bActive*  
+ [v] *bHorz*  
+ [v] *bMaximized*  
+ [v] *bDisabled*  
+ [v] *nImageID*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -246,11 +246,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `bActive`  
- [v] `rectCaption`  
- [v] `rectButtons`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *bActive*  
+ [v] *rectCaption*  
+ [v] *rectButtons*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -268,10 +268,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
- [v] `bIsHoriz`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
+ [v] *bIsHoriz*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -288,11 +288,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectTab`  
- [v] `iTab`  
- [v] `bIsActive`  
- [v] `pTabWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *rectTab*  
+ [v] *iTab*  
+ [v] *bIsActive*  
+ [v] *pTabWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -306,8 +306,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -322,9 +322,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pTabWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pTabWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -339,9 +339,9 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -357,10 +357,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pBrush`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pBrush*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -376,10 +376,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectCaption`  
- [v] `pFrameWnd`  
- [v] `bActive`  
+ [v] *primárního řadiče domény*  
+ [v] *rectCaption*  
+ [v] *pFrameWnd*  
+ [v] *bActive*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   

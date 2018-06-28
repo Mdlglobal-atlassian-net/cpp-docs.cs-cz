@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376207"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042544"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage – třída
 Slouží k zobrazení vlastností vlastního ovládacího prvku v grafickém rozhraní, podobně jako dialogové okno.  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID prostředku ovládací prvek stránky vlastností.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pnObjects`  
+ *pnObjects*  
  Ukazatel na celé číslo bez znaménka dlouhý, která bude přijímat počet objektů upravovaný stránkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatele na pole `IDispatch` ukazatele, které se používají pro přístup k vlastnostem každý ovládací prvek na stránce vlastností. Volající nesmí uvolnit tyto ukazatele rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
- Každou vlastnost objektu page udržuje ukazatele na pole `IDispatch` rozhraní objektů upravovaný stránkou. Tato funkce nastaví jeho `pnObjects` argument počet elementů v tomto poli a vrací ukazatel na první prvek pole.  
+ Každou vlastnost objektu page udržuje ukazatele na pole `IDispatch` rozhraní objektů upravovaný stránkou. Tato funkce nastaví jeho *pnObjects* argument počet elementů v tomto poli a vrací ukazatel na první prvek pole.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Získá ukazatel na stránce vlastností `IPropertyPageSite` rozhraní.  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  ID ovládacího prvku, který se má ignorovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti Upravovaný.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Obsahuje ID ovládacího prvku stránky vlastností.  
   
- `bDirty`  
+ *bDirty*  
  Určuje, pokud byla změněna pole její stránku vlastností. Nastavte na **TRUE** Pokud pole byl upraven, **FALSE** Pokud byl změněn.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  Řetězec obsahující stručné informace o zobrazení ve stavovém řádku nebo jiné umístění.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Název souboru nápovědy její stránku vlastností.  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bModified`  
+ *bModified*  
  Určuje novou hodnotu upravené příznak její stránku vlastností.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

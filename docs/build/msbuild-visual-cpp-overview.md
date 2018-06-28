@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379260"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039086"
 ---
 # <a name="msbuild-visual-c-overview"></a>Přehled nástroje MSBuild (Visual C++)  
   
@@ -126,7 +126,7 @@ Existují stovky cílů v podpůrných souborů Visual C++. Většina však jsou
   
 Následující tabulka uvádí několik užitečné cíle orientovaných na uživatele.  
   
-|cíl|Popis|  
+|Cíl|Popis|  
 |------------|-----------------|  
 |BscMake|Spustí nástroj Microsoft procházet údržby nástroje pro konfiguraci bscmake.exe.|  
 |Sestavení|Vytvoří projekt.<br /><br /> Toto je výchozí cíl pro projekt.|  
@@ -139,7 +139,10 @@ Následující tabulka uvádí několik užitečné cíle orientovaných na uži
 |Opětovné sestavení|Vyčistí a pak sestavení projektu.|  
 |ResourceCompile|Spustí nástroj Microsoft kompilátor prostředků Windows rc.exe.|  
 |XdcMake|Spustí nástroj dokumentace XML xdcmake.exe.|  
-|XSD|Spustí nástroj XML Schema Definition xsd.exe.|  
+|XSD|Spustí nástroj XML Schema Definition xsd.exe. *Viz poznámka níže.*|  
+
+> [!NOTE] 
+> V aplikaci Visual Studio 2017 projektu C++ podpora **xsd** soubory je zastaralý. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** přidáním **CppCodeProvider.dll** ručně do mezipaměti GAC.
   
 ## <a name="see-also"></a>Viz také  
   

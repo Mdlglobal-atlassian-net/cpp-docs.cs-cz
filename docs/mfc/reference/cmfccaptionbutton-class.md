@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368774"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040626"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton – třída
 `CMFCCaptionButton` Třída implementuje tlačítko, které se zobrazí na panelu popisek pro ukotvené podokno nebo zkrácená rámce okna. Obvykle rozhraní popisek tlačítka automaticky vytvoří.  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nHit`  
+ [v] *nHit*  
  Příkaz přidružený tlačítko.  
   
- [v] `bLeftAlign`  
+ [v] *bLeftAlign*  
  Určuje, zda je tlačítko zarovnán doleva.  
   
- Následující tabulka uvádí možné hodnoty pro `nHit` parametr.  
+ Následující tabulka uvádí možné hodnoty pro *nHit* parametr.  
   
 |Hodnota|Příkaz|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bHorz`  
+ [v] *bHorz*  
  `TRUE` Šipka doleva nebo doprava bitové kopie ID; `FALSE` pro nahoru nebo šipku dolů bitové kopie ID.  
   
- [v] `bMaximized`  
+ [v] *bMaximized*  
  `TRUE` pro bitovou kopii s ID maximalizovat; `FALSE` minimalizovat bitové kopie ID.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ptTo`  
+ [v] *ptTo*  
  Nové umístění.  
   
- [v] `bHide`  
+ [v] *bHide*  
  Určuje, zda se zobrazí tlačítko.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro tlačítko.  
   
- [v] `bActive`  
+ [v] *bActive*  
  Určuje, zda se k vykreslení bitovou kopii aktivní tlačítko.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Vyhrazené pro použití v odvozené třídě.  
   
- [v] `bMaximized`  
+ [v] *bMaximized*  
  Určuje, zda se k vykreslení obrázek tlačítka maximalizovaném okně.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  Určuje, zda se k vykreslení image povoleno tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- `bMaximized` Parametr se používá při tlačítko Maximalizovat nebo minimalizovat tlačítko.  
+ *BMaximized* parametr se používá při tlačítko Maximalizovat nebo minimalizovat tlačítko.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Nastaví minimální velikost záhlaví.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  `TRUE` pro výška panelu mini title; `FALSE` pro výchozí název panelu výšku.  
   
 ## <a name="see-also"></a>Viz také  

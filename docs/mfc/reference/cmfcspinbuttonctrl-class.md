@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366795"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039463"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl – třída
 `CMFCSpinButtonCtrl` Třída podporuje visual správce, který se vykreslí ovládací prvek typu číselník tlačítko.  
@@ -79,7 +79,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367140"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041828"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb – třída
 Podporuje mapy `CObject` ukazatele s klíči 16bitové slova.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>Členové  
- Členské funkce `CMapWordToOb` jsou podobné funkce člena třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti, můžete použít `CMapStringToOb` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CString` nebo **const** ukazatel na `char` jako parametr funkce nebo vrací hodnotu, nahraďte **WORD**.  
+ Členské funkce `CMapWordToOb` jsou podobné funkce člena třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti, můžete použít `CMapStringToOb` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CString` nebo **const** ukazatel na **char** jako parametr funkce nebo vrací hodnotu, nahraďte **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

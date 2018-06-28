@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943dc2e56b896531b7deeb14a17602c97484926c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e32b127a31cf27fa2bddb189335d2edf19a8f7de
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378224"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041192"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 Rozšiřuje funkce [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), okně s rámečkem Windows rozhraní více dokumentů (MDI).  
@@ -314,10 +314,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokně k registraci.  
   
- [v] `bTail`  
+ [v] *bTail*  
  Určuje, jestli chcete přidat v tomto podokně na konec seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -341,7 +341,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hdwp`  
+ [v] *hdwp*  
  Identifikuje strukturu více umístění okna. Tuto hodnotu můžete získat voláním `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -355,7 +355,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `pnMDITabsType`  
+ [out] *pnMDITabsType*  
  Ukazatel na proměnná typu integer, která určuje, které funkce jsou povolené:  
   
 -   0: všechny funkce jsou vypnuté.  
@@ -395,7 +395,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Ukazatel na ukotvení podokně převést.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -414,10 +414,10 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpcszDocName`  
+ [v] *lpcszDocName*  
  Textový řetězec, který obsahuje identifikátor dokumentu. Obvykle je úplnou cestu k souboru dokumentu.  
   
- [v] `pObj`  
+ [v] *pObj*  
  Ukazatel na objekt definovaný uživatelem. Vývojář může například vytvořit strukturu dat specifické pro aplikaci popisující dokumentu a o tom, jak je třeba inicializovat dokumentu při spuštění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -445,10 +445,10 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpcszDocName`  
+ [v] *lpcszDocName*  
  Název dokumentu.  
   
- [v] `pObj`  
+ [v] *pObj*  
  Vyhrazeno pro budoucí použití.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -465,13 +465,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokno ukotvení.  
   
- [v] `nDockBarID`  
+ [v] *nDockBarID*  
  Určuje, které strany rámce okna a ukotvit.  
   
- [v] `lpRect`  
+ [v] *lprect –*  
  Nepoužívá se.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -492,17 +492,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokně ukotvení.  
   
- [v] `pLeftOf`  
+ [v] *pLeftOf*  
  Ukazatel na podokně, která slouží jako webu ukotvení. .  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `TRUE` Pokud byla operace úspěšná. V opačném případě vrátí `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze ukotvení několik podokno objekty v předdefinovaném pořadí. Tato metoda ukotvené podokně určeného `pBar` nalevo od podokně určeného `pLeftOf`.  
+ Voláním této metody lze ukotvení několik podokno objekty v předdefinovaném pořadí. Tato metoda ukotvené podokně určeného *pBar* nalevo od podokně určeného *pLeftOf*.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje jak `DockPaneLeftOf` metoda se používá [VisualStudioDemo ukázka: MFC Visual Studio Application](../../visual-cpp-samples.md).  
@@ -517,7 +517,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
  Určuje strany hlavního rámce okna, které budou povolené. Použijte jeden nebo více z následujících příznaků.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -546,7 +546,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
  Určuje styl ukotvení, který chcete použít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -567,7 +567,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnableMenu`  
+ [v] *bEnableMenu*  
  `TRUE` Zobrazit hlavní nabídky v režimu celé obrazovky nebo `FALSE` ho chcete skrýt.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -580,7 +580,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiFullScreenCmd`  
+ [v] *uiFullScreenCmd*  
  ID příkazu, který povolí nebo zakáže režim celé obrazovky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -594,7 +594,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Chcete-li povolit načítání ukotvení stavu `FALSE` zakázat načítání ukotvení stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -609,10 +609,10 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Pokud `TRUE`, je povolena funkce skupiny v záložkách MDI; Pokud `FALSE`, funkce skupiny v záložkách MDI je zakázaná.  
   
- [v] `params`  
+ [v] *parametry*  
  Určuje parametry, které se vztahuje rozhraní podřízená okna, které jsou vytvořené v oblasti MDI klienta.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -628,9 +628,9 @@ void EnableMDITabbedGroups(
   
 -   Aplikace můžete uložit aktuální rozložení oken s kartami a seznam aktuálně otevřenou dokumentů.  
   
- Když zavoláte tuto metodu s `bEnable` nastavena na `FALSE`, `params` je ignorována.  
+ Když zavoláte tuto metodu s *bEnable* nastavena na `FALSE`, *parametry* je ignorována.  
   
- I v případě, že MDI – záložkami skupiny je již povolen, můžete volat tuto metodu znovu k úpravám nastavení pro podřízené windows. Volání metody s `bEnable` nastavena na `TRUE` a ke změně členů `CMDITabInfo` objektu, která jsou určené `params` parametr.  
+ I v případě, že MDI – záložkami skupiny je již povolen, můžete volat tuto metodu znovu k úpravám nastavení pro podřízené windows. Volání metody s *bEnable* nastavena na `TRUE` a ke změně členů `CMDITabInfo` objektu, která jsou určené *parametry* parametr.  
   
  – Skupiny se záložkami Další informace o tom, jak používat MDI, najdete v části [skupiny v záložkách MDI](../../mfc/mdi-tabbed-groups.md).  
   
@@ -654,33 +654,33 @@ void EnableMDITabs(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, zda je povoleno karty.  
   
- `bIcons`  
+ *bIcons*  
  Určuje, zda má být zobrazena ikony na kartách.  
   
- `tabLocation`  
+ *tabLocation*  
  Určuje umístění popisků kartě.  
   
- `bTabCloseButton`  
+ *bTabCloseButton*  
  Určuje, jestli se mají zobrazovat tlačítka Zavřít karta.  
   
- `style`  
+ *Styl*  
  Určuje styl karty. Použití `STYLE_3D_SCROLLED` pro běžné karty nebo `STYLE_3D_ONENOTE` pro aplikaci Microsoft OneNote karty.  
   
- `bTabCustomTooltips`  
+ *bTabCustomTooltips*  
  Určuje, zda je povoleno vlastní popisky.  
   
- `bActiveTabCloseButton`  
+ *bActiveTabCloseButton*  
  Pokud `TRUE`, **Zavřít** tlačítko se zobrazí na kartě active místo v pravém rohu oblast karty.  
   
 ### <a name="remarks"></a>Poznámky  
  Volejte tuto metodu, pokud chcete povolit nebo zakázat funkci MDI karty pro rámce okna MDI. Když je povolené, všechny podřízená okna se zobrazí jako karty.  
   
- Karta štítky mohou být umístěny v horní nebo dolní části rámečku, v závislosti na nastavení parametru `tabLocation`. Můžete buď určit `CMFCTabCtrl::LOCATION_BOTTOM` (výchozí nastavení) nebo `CMFCTabCtrl::LOCATION_TOP`.  
+ Karta štítky mohou být umístěny v horní nebo dolní části rámečku, v závislosti na nastavení parametru *tabLocation*. Můžete buď určit `CMFCTabCtrl::LOCATION_BOTTOM` (výchozí nastavení) nebo `CMFCTabCtrl::LOCATION_TOP`.  
   
- Pokud `bTabCustomTooltips` je `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` zpráva bude odeslána do hlavního rámce okna. Kódu můžete zpracovat tuto zprávu a poskytnout vlastní popisky rozhraní pro MDI karty.  
+ Pokud *bTabCustomTooltips* je `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` zpráva bude odeslána do hlavního rámce okna. Kódu můžete zpracovat tuto zprávu a poskytnout vlastní popisky rozhraní pro MDI karty.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob `EnableMDITabs` se používá v [MDITabsDemo ukázka: MFC – záložkami aplikace MDI](../../visual-cpp-samples.md).  
@@ -695,7 +695,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bLastActiveTab`  
+ [v] *bLastActiveTab*  
  Pokud `TRUE`, povolit aktivace poslední active karty. Pokud `FALSE`, zákaz aktivace poslední aktivní karty.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -723,22 +723,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Pokud `TRUE`, je povoleno automatické zpracování nabídky panelu; Pokud `FALSE`, automatické zpracování je zakázána.  
   
- [v] `uiCustomizeCmd`  
+ [v] *uiCustomizeCmd*  
  ID příkazu **přizpůsobit** položku nabídky. Tato položka nabídky se obvykle přidá na konec seznamu podokna.  
   
- [v] `strCustomizeLabel`  
+ [v] *strCustomizeLabel*  
  Text, který se bude zobrazovat u **přizpůsobit** položku nabídky (pro lokalizaci).  
   
- [v] `uiViewToolbarsMenuEntryID`  
+ [v] *uiViewToolbarsMenuEntryID*  
  Určuje ID položku nabídky panelu nástrojů, které se otevře nabídky panelu. To je obvykle **panely nástrojů** podnabídce **zobrazení** nabídky.  
   
- [v] `bContextMenuShowsToolbarsOnly`  
+ [v] *bContextMenuShowsToolbarsOnly*  
  Pokud `TRUE`, v nabídce podokně zobrazí pouze seznam panely nástrojů. Pokud `FALSE`, v nabídce zobrazí seznam panelů nástrojů a ukotvení řádků.  
   
- [v] `bViewMenuShowsToolbarsOnly`  
+ [v] *bViewMenuShowsToolbarsOnly*  
  Pokud `TRUE`, v nabídce podokně zobrazí pouze seznam panely nástrojů. Pokud `FALSE`, v nabídce zobrazí seznam panelů nástrojů a ukotvení řádků.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -768,20 +768,20 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiMenuId`  
+ [v] *uiMenuId*  
  Určuje ID prostředku nabídky.  
   
- [v] `lpszMenuText`  
+ [v] *lpszMenuText*  
  Určuje text položky.  
   
- [v] `bShowHelpButton`  
+ [v] *bShowHelpButton*  
  Určuje, jestli se má zobrazit **pomoci** tlačítka v dialogovém okně správy systému windows.  
   
- [v] `uiMenuTextResId`  
+ [v] *uiMenuTextResId*  
  Identifikátor prostředku řetězec, který obsahuje položky textový řetězec.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této metody můžete vložit položku nabídky, jejichž příkaz volá dialogové okno MDI okno podřízené správy ( [CMFCWindowsManagerDialog třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nová položka vložena do nabídky určeného `uiMenuId`. Volání `EnableWindowsDialog` při zpracování `WM_CREATE` zprávy.  
+ Pomocí této metody můžete vložit položku nabídky, jejichž příkaz volá dialogové okno MDI okno podřízené správy ( [CMFCWindowsManagerDialog třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nová položka vložena do nabídky určeného *uiMenuId*. Volání `EnableWindowsDialog` při zpracování zprávy WM_CREATE.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje způsob `EnableWindowsDialog` se používá v [VisualStudioDemo ukázka: MFC Visual Studio Application](../../visual-cpp-samples.md).  
@@ -884,11 +884,11 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na podokně, který má zadaný ovládací prvek ID, pokud existuje. V opačném `NULL`.  
+ Ukazatel na podokně, který má zadaný ovládací prvek ID, pokud existuje. v opačném `NULL`.  
   
 ##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar  
  Načte ovládacích prvků pásu karet panelu pro rámečku.  
@@ -925,10 +925,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítka panelu nástrojů.  
   
- [v] `strTTText`  
+ [v] *strTTText*  
  Text popisku, který má být zobrazen pro tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -947,20 +947,20 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokně má být vložen.  
   
- [v] `pTarget`  
+ [v] *pTarget*  
  Ukazatel na podokně před nebo po kterém se má vložit v podokně.  
   
- [v] `bAfter`  
- Pokud `TRUE`, `pControlBar` vkládají `pTarget`. Pokud `FALSE`, `pControlBar` je vložen před `pTarget`.  
+ [v] *bAfter*  
+ Pokud `TRUE`, *pControlBar* vkládají *pTarget*. Pokud `FALSE`, *pControlBar* je vložen před *pTarget*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud metoda úspěšně registruje v podokně `FALSE` Pokud již byla zaregistrována v podokně s správce ukotvení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte Správce ukotvení říct o podokno určeného `pControlBar`. Správce ukotvení zarovnané v tomto podokně podle zarovnání a pozici v seznamu interní ukotvení správce v podokně.  
+ Tuto metodu použijte Správce ukotvení říct o podokno určeného *pControlBar*. Správce ukotvení zarovnané v tomto podokně podle zarovnání a pozici v seznamu interní ukotvení správce v podokně.  
   
 ##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
  Určuje, zda je okně s rámečkem v režimu celé obrazovky.  
@@ -996,7 +996,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na okno s kartami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1023,13 +1023,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Zadaný bod v souřadnice obrazovky.  
   
- [v] `dwBarAlignment`  
+ [v] *dwBarAlignment*  
  Určuje, které hraniční bod je téměř. Možné hodnoty jsou `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, a `CBRS_ALIGN_BOTTOM`  
   
- [v] `bOuterEdge`  
+ [v] *bOuterEdge*  
  `TRUE` Pokud je bod téměř vnější ohraničení ukotvení serveru. `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1062,16 +1062,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIDResource`  
+ [v] *nIDResource*  
  ID sdílený prostředek přidružené rámce okna.  
   
- [v] `dwDefaultStyle`  
+ [v] *dwDefaultStyle*  
  Styl rámce okna.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel na hodnotu parent rámečku.  
   
- [v] `pContext`  
+ [v] *pContext*  
  Ukazatel [CCreateContext struktura](../../mfc/reference/ccreatecontext-structure.md). Tento parametr může být `NULL`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1085,7 +1085,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszProfileName`  
+ [v] *lpszProfileName*  
  Určuje název profilu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1115,7 +1115,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bNext`  
+ [v] *bNext*  
  Pokud `TRUE`, na kartě Přesun na další záložkách skupinu. Pokud `FALSE`, přesuňte jej do předchozí záložkách skupiny.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
@@ -1126,7 +1126,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bVert`  
+ [v] *bVert*  
  Určuje zarovnání nové skupiny. Pokud `TRUE`, nové skupiny je zarovnán svisle. Pokud `FALSE`, nové skupiny je zarovnán vodorovně.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1178,7 +1178,7 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nBorderCmd`  
+ [v] *nBorderCmd*  
  Obsahuje jeden z následujících hodnot z výčtu `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
@@ -1187,7 +1187,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [ve out] `lpRectBorder`  
+ [ve out] *lpRectBorder*  
  Ukazatel na [Rect – struktura](../../mfc/reference/rect-structure1.md) nebo [CRect třída](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje souřadnice ohraničení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1204,11 +1204,11 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na podokně dochází k uzavření.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je možné uzavřít podokně ukotvení. V opačném `FALSE`.  
+ `TRUE` Pokud je možné uzavřít podokně ukotvení. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem zpracování skrývání ukotvení podokna. Vrátí `FALSE` Pokud chcete zabránit ukotvené podokno skryté.  
@@ -1223,11 +1223,11 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na dochází k uzavření zkrácená rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je možné uzavřít plovoucího zkrácená rámce okna. V opačném `FALSE`.  
+ `TRUE` Pokud je možné uzavřít plovoucího zkrácená rámce okna. v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu za účelem zpracování skrytí z okna s rámečkem zkrácené číslo s plovoucí čárkou. Vrátí `FALSE` Pokud chcete zabránit skryté plovoucího zkrácená rámce okna.  
@@ -1242,7 +1242,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuPopup`  
+ [v] *pMenuPopup*  
  Ukazatel na místní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID příkazu.  
   
- [v] `nCode`  
- Určuje kód příkaz oznámení. V tématu [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) pro další informace o hodnotách pro `nCode`.  
+ [v] *nCode*  
+ Určuje kód příkaz oznámení. V tématu [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) pro další informace o hodnotách pro *nCode*.  
   
- [v] `pExtra`  
- Použít podle hodnoty `nCode`. V tématu [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Další informace o `pExtra`.  
+ [v] *pExtra*  
+ Použít podle hodnoty *nCode*. V tématu [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Další informace o *pExtra*.  
   
- [ve out] `pHandlerInfo`  
- Obvykle se tento parametr by měl být `NULL`. Není-li `NULL`, `OnCmdMsg` vyplní `pTarget` a `pmf` členy `pHandlerInfo` struktura místo odeslání příkazu.  
+ [ve out] *pHandlerInfo*  
+ Obvykle se tento parametr by měl být `NULL`. Není-li `NULL`, `OnCmdMsg` vyplní `pTarget` a `pmf` členy *pHandlerInfo* struktura místo odeslání příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se zpracovává zprávy; jinak 0.  
@@ -1286,13 +1286,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pMenuButton`  
+ [v] *pMenuButton*  
  Ukazatel na tlačítka nabídky.  
   
- [v] `rectImage`  
+ [v] *rectImage*  
  Ohraničující obdélník bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1302,7 +1302,7 @@ virtual BOOL OnDrawMenuImage(
  Potlačí tuto metodu, pokud chcete přizpůsobit vykreslování obrázků pro položky nabídky, které patří do panelu nabídek vlastníkem `CMDIFrameWndEx`-odvozené objektu. Výchozí implementace neprovede žádnou akci.  
   
 ##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
- Voláno rámcem při [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)procesy `WM_PAINT` zprávy.  
+ Voláno rámcem při [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)zpracuje zprávu WM_PAINT.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -1325,10 +1325,10 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
  `TRUE` Pokud aplikace zprávu zpracuje a vymaže na pozadí.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkci člena přepsat, pokud chcete zpracovat `WM_ERASEBKGND` zprávy v `CMDIFrameWndEx`-odvozené třídy.  
+ Funkci člena přepsat, pokud chcete zpracovat zprávu WM_ERASEBKGND v `CMDIFrameWndEx`-odvozené třídy.  
   
 ##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
- Voláno rámcem při [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)objektu procesy `WM_NCHITTEST` zprávy.  
+ Voláno rámcem při [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)objekt zpracuje zprávu WM_NCHITTEST.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1337,14 +1337,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Tlačítka panelu nástrojů.  
   
- [out] `pTI`  
+ [out] *pTI*  
  Ukazatel na [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud aplikace doplní `pTI` parametr. Výchozí implementace vrací `FALSE`.  
+ `TRUE` Pokud aplikace doplní *pTI* parametr. Výchozí implementace vrací `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu, pokud chcete zadat informace o položkách konkrétní nabídky pro popisek. Výchozí implementace neprovede žádnou akci.  
@@ -1357,7 +1357,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pFrame`  
+ [v] *pFrame*  
  Ukazatel na zkrácená rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1373,10 +1373,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bPreview`  
+ [v] *bPreview*  
  Pokud `TRUE`, nastaví režim náhledu. Pokud `FALSE`, zruší náhled režimu.  
   
- [v] `pState`  
+ [v] *pState*  
  Ukazatel na `CPrintPreviewState` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1392,10 +1392,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuPane`  
+ [v] *pMenuPane*  
  Ukazatel na podokně rychlé přizpůsobení.  
   
- [v] `uiToolbarID`  
+ [v] *uiToolbarID*  
  Ovládací prvek ID k přizpůsobení panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1417,10 +1417,10 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Umístění v nabídce v souřadnice obrazovky.  
   
- [v] `dwAllowedItems`  
+ [v] *dwAllowedItems*  
  Bitový operátor OR kombinace příznaky určující, jaké akce jsou povoleny pro aktuální karta:  
   
 - `BCGP_MDI_CREATE_VERT_GROUP` – můžete vytvořit skupinu vertikální tabulátor.  
@@ -1433,7 +1433,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - `BCGP_MDI_CAN_BE_DOCKED` -Přepnout dokumentů s kartami ukotveného stavu (platí pro pouze dokumentů s kartami).  
   
- [v] `bTabDrop`  
+ [v] *bTabDrop*  
  `TRUE` Chcete-li zobrazit v nabídce v důsledku přetažení kartě na jinou skupinu s kartami. `FALSE` zobrazení nabídky jako místní nabídky na kartě momentálně aktivní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1455,11 +1455,11 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  `TRUE` k zobrazení podokna, `FALSE` ke skrytí podokna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se změní stav podoken v důsledku voláním této metody `FALSE` když podoken jsou již ve stavu určeného `bShow`. Například, pokud jsou skryté podoken a `bShow` je `FALSE`, je vrácenou hodnotou `FALSE`.  
+ `TRUE` Pokud se změní stav podoken v důsledku voláním této metody `FALSE` když podoken jsou již ve stavu určeného *bShow*. Například, pokud jsou skryté podoken a *bShow* je `FALSE`, je vrácenou hodnotou `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace odebere z okna nejvyšší úrovně rámečku panelu nástrojů.  
@@ -1474,7 +1474,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud v místní nabídce se mají zobrazit. V opačném `FALSE`. Výchozí implementace vrací `TRUE`.  
+ `TRUE` Pokud v místní nabídce se mají zobrazit. v opačném `FALSE`. Výchozí implementace vrací `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu, pokud chcete implementovat speciální zpracování po aktivaci místní nabídky. Pokud chcete změnit položky regulární nabídky na tlačítka nabídky Barva, nastavte úplné vypnutí řádky a tak dále.  
@@ -1491,10 +1491,10 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rectOld`  
+ [v] *rectOld*  
  Aktuální velikost okna MDI klienta.  
   
- [v] `rectNew`  
+ [v] *rectNew*  
  Novou velikost okna MDI klienta.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1509,10 +1509,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuPopup`  
+ [v] *pMenuPopup*  
  Ukazatel na místní nabídky.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na panel úplné vypnutí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1529,7 +1529,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenuAlt`  
+ [v] *hMenuAlt*  
  Popisovač pro nabídky.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
@@ -1550,23 +1550,23 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Bod (v souřadnice obrazovky).  
   
- [v] `nSensitivity`  
+ [v] *nSensitivity*  
  Okno obdélník každý zaškrtnuté podokně je ve všech směrech rozšířeno o tuto hodnotu.  
   
- [v] `bExactBar`  
- Pokud `TRUE`, `nSensitivity` parametr je ignorován.  
+ [v] *bExactBar*  
+ Pokud `TRUE`, *nSensitivity* parametr je ignorován.  
   
- [v] `pRTCBarType`  
+ [v] *pRTCBarType*  
  Pokud jinou hodnotu než `NULL`, metoda iteruje nad pouze podokna zadaného typu.  
   
- [out] `dwAlignment`  
+ [out] *dwAlignment*  
  Pokud podokno najde, bude tento parametr zadejte, které straně podokně je nejblíže k Zadaný bod.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na ukotvení podokně nebo `NULL` Pokud žádnou kontrolu obsahuje bodu určeného `point`.  
+ Ukazatel na ukotvení podokně nebo `NULL` Pokud žádnou kontrolu obsahuje bodu určeného *bodu*.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání je přesměrován na [CDockingManager třída](../../mfc/reference/cdockingmanager-class.md). V tématu [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) Další informace.  
@@ -1579,7 +1579,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bNotify`  
+ [v] *bNotify*  
  Určuje, zda aktivní položky na místě rámce okna obdrží upozornění na změnu rozložení. Pokud `TRUE`, položka je oznámený; jinak hodnota `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1598,19 +1598,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokně odeberou.  
   
- [v] `bDestroy`  
+ [v] *bDestroy*  
  `TRUE` Chcete-li odstranit podokně odebrané. `FALSE` Chcete-li není odstranit.  
   
- [v] `bAdjustLayout`  
+ [v] *bAdjustLayout*  
  `TRUE` Chcete-li upravit ukotvení rozložení okamžitě. Pokud `FALSE`, úpravou dojde, když událost překreslování dochází pouze z jiných důvodů (uživatel změní velikost okna, nastavuje tažením hlavního rámce, atd.).  
   
- [v] `bAutoHide`  
+ [v] *bAutoHide*  
  `TRUE` v podokně odebrat ze seznamu autohide – podokna. `FALSE` v podokně odebrat ze seznamu regulární podokna.  
   
- [v] `pBarReplacement`  
+ [v] *pBarReplacement*  
  Ukazatel na podokně, který nahrazuje podokně odebrané.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1626,7 +1626,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszProfileName`  
+ [v] *lpszProfileName*  
  Určuje název profilu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1660,7 +1660,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na rámec okna náhledu tisku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1676,13 +1676,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `menu`  
+ [v] *nabídky*  
  Odkaz na [cmenu – třída](../../mfc/reference/cmenu-class.md) objekt, který chcete upravit.  
   
- [v] `uiViewUserToolbarCmdFirst`  
+ [v] *uiViewUserToolbarCmdFirst*  
  Určuje první příkaz definovaný uživatelem.  
   
- [v] `uiViewUserToolbarCmdLast`  
+ [v] *uiViewUserToolbarCmdLast*  
  Určuje poslední příkaz definovaný uživatelem.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
@@ -1706,16 +1706,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokno zobrazen nebo skryt.  
   
- [v] `bShow`  
+ [v] *bShow*  
  `TRUE` Chcete-li zobrazit v podokně. `FALSE` Chcete-li skrýt podokno.  
   
- [v] `bDelay`  
+ [v] *bDelay*  
  `TRUE` zpoždění při každém přepočítání ukotvení rozložení. `FALSE` Přepočítat rozložení ukotvení okamžitě.  
   
- [v] `bActivate`  
+ [v] *bActivate*  
  `TRUE` Zobrazit v podokně si jako aktivní. `FALSE` Chcete-li zobrazit v podokně jako neaktivní.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1746,7 +1746,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMDIChildWnd`  
+ *pMDIChildWnd*  
  Ukazatel na podřízeného okna MDI, který obsahuje ukotvení podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwData`  
- Určuje data podle potřeby pro typ nápovědy určeného `nCmd`.  
+ [v] *dwData*  
+ Určuje data podle potřeby pro typ nápovědy určeného *nCmd*.  
   
- [v] `nCmd`  
- Určuje typ nápovědy požadovaný. Seznam možných hodnot a jejich vlivu `dwData` parametr, najdete v části [WinHelp funkce](http://msdn.microsoft.com/library/windows/desktop/bb762267) ve Windows SDK.  
+ [v] *nCmd*  
+ Určuje typ nápovědy požadovaný. Seznam možných hodnot a jejich vlivu *dwData* parametr, najdete v části [WinHelp funkce](http://msdn.microsoft.com/library/windows/desktop/bb762267) ve Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Přepíše tuto metodu [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

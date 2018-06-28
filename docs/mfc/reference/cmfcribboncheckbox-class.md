@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369704"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042053"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox – třída
 `CMFCRibbonCheckBox` Třída implementuje zaškrtávací políčko, které můžete přidat k nabídce panelu, panel nástrojů Rychlý přístup nebo automaticky otevíraného okna pásu karet.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-kde `nID` je ID příkazu, který zaškrtávací políčko a `lpszText` je textový popisek zaškrtávacího políčka.  
+kde *nID* je ID příkazu, který zaškrtávací políčko a *lpszText* je textový popisek zaškrtávacího políčka.  
   
  Zaškrtávací políčko můžete přidat na panel pásu karet pomocí [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  Určuje ID příkazu.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Určuje text popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel `CDC` přidružené zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel `CDC` přidružené toto políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel `CDC` objekt přidružený k toto políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel `CDC` ve kterém se má nakreslit zaškrtávací políčko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CDC*`  
+ [v] *CDC**  
  Ukazatel `CDC` přidružené zaškrtávací políčko.  
   
- [v] `CRect`  
+ [v] *CRect*  
  A `CRect` určující obdélníku, ve kterém k vykreslení bitovou kopii nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na zařízení kontextu, ve kterém k vykreslení zaškrtávací políčko.  
   
- [v] `strText`  
+ [v] *strText*  
  Zobrazovaný text.  
   
- [v] `nTextOffset`  
+ [v] *nTextOffset*  
  Vzdálenost v pixelech, z levé strany zobrazovaný text v rozevíracím seznamu.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélník zobrazení zaškrtávacího políčka.  
   
- [v] `bIsSelected`  
+ [v] *bIsSelected*  
  `TRUE` Pokud je políčko zaškrtnuto, nebo `FALSE` není-li.  
   
- [v] `bHighlighted`  
+ [v] *bHighlighted*  
  `TRUE` Pokud políčko zvýrazní, nebo `FALSE` není-li.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  Nadřazené okno Zaškrtávací políčko.  
   
- `data`  
+ *data*  
  Usnadnění data zaškrtávacího políčka.  
   
 ### <a name="return-value"></a>Návratová hodnota  

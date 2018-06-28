@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372203"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037854"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony dialogového okna.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje číslo ID prostředku šablony dialogového okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Standardní `HRESULT` hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- Člen funkci Vytvořit nebo získat objektu sady řádků a vrácení popisovače musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací popisovač řádků uložené v zobrazení záznamů, pokud existuje. Pokud ne, vytvoří objektu sady řádků typu zadán s ClassWizard a volání jeho **otevřete** člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí popisovač k objektu.  
+ Člen funkci Vytvořit nebo získat objektu sady řádků a vrácení popisovače musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací popisovač řádků uložené v zobrazení záznamů, pokud existuje. Pokud ne, vytvoří objektu sady řádků typu zadán s ClassWizard a volání jeho `Open` člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí popisovač k objektu.  
   
 > [!NOTE]
 >  Předchozí MFC 7.0 `OnGetRowset` vrátil ukazatel na `CRowset`. Pokud máte kód, který volá `OnGetRowset`, budete muset změnit návratový typ k třídě šablonou **CRowset <>**.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Jedna z následujících hodnot ID standardních příkazů:  
   
 - `ID_RECORD_FIRST` – Přesunout na první záznam v sadě záznamů.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Nenulové hodnoty, pokud byl přesun úspěšný; jinak hodnota 0, pokud žádost o přesunutí byl odepřen.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace volá odpovídající **přesunout** členské funkce `CRowset` objekt přidružený k zobrazení záznamu.  
+ Výchozí implementace volá odpovídající `Move` členské funkce `CRowset` objekt přidružený k zobrazení záznamu.  
   
  Ve výchozím nastavení `OnMove` aktualizuje na aktuální záznam ve zdroji dat, pokud uživatel se změnilo v zobrazení záznamů.  
   

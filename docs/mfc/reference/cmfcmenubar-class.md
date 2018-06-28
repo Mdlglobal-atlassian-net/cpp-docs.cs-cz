@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377791"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039268"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar – třída
 Panel nabídek, který implementuje ukotvení.  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bStretch`  
- [v] `bHorz`  
+ [v] *bStretch*  
+ [v] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwMode`  
- [v] `nLength`  
+ [v] *dwMode*  
+ [v] *nLength*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -333,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel do nadřazeného okna pro novou `CMFCMenuBar` objektu.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Styl nového řádku nabídek.  
   
- [v] `nID`  
+ [v] *nID*  
  ID pro podřízeného okna řádku nabídek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -366,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel do nadřazeného okna Nový `CMFCMenuBar` objektu.  
   
- [v] `dwCtrlStyle`  
+ [v] *dwCtrlStyle*  
  Další styly pro nový panel nabídek.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Hlavní styl nového řádku nabídek.  
   
- [v] `rcBorders`  
+ [v] *rcBorders*  
  A `CRect` parametr, který určuje velikostí pro ohraničení `CMFCMenuBar` objektu.  
   
- [v] `nID`  
+ [v] *nID*  
  ID pro podřízeného okna řádku nabídek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -406,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenu`  
+ [v] *hMenu*  
  Popisovač pro prostředek nabídky. `CreateFromMenu` používá jako šablonu pro tento prostředek `CMFCMenuBar`.  
   
- [v] `bDefaultMenu`  
+ [v] *bDefaultMenu*  
  Logická hodnota, která určuje, zda je nové nabídky v nabídce výchozí.  
   
- [v] `bForceUpdate`  
+ [v] *bForceUpdate*  
  Logická hodnota, která určuje, zda tato metoda vynutí nabídky aktualizace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  ID příkazu pro tlačítko o **pomoci** – pole se seznamem.  
   
- [v] `lpszPrompt`  
+ [v] *lpszPrompt*  
  Řetězec, který obsahuje text, který rozhraní zobrazí v seznamu, pokud je prázdný a není aktivní. Například "zadejte text sem".  
   
- [v] `nComboBoxWidth`  
+ [v] *nComboBoxWidth*  
  Šířka tlačítko pro pole se seznamem v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  **Pomoci** vypadá takto: pole se seznamem **pomoci** – pole se seznamem v panelu nabídek z [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
   
- Při volání této metody se `uiID` nastaven na hodnotu 0, tato metoda skryje pole se seznamem. Jinak tato metoda zobrazí pole se seznamem automaticky na pravé straně panelu nabídek. Po volání této metody volejte [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) k získání ukazatele na vloženého [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objektu.  
+ Při volání této metody se *uiID* nastaven na hodnotu 0, tato metoda skryje pole se seznamem. Jinak tato metoda zobrazí pole se seznamem automaticky na pravé straně panelu nabídek. Po volání této metody volejte [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) k získání ukazatele na vloženého [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objektu.  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  Umožňuje stínů pro místní nabídky.  
@@ -451,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Parametr typu Boolean, která určuje, zda se má povolit stínů pro místní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -513,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -558,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bHorz`  
+ [v] *bHorz*  
  Logický parametr, který určuje, jestli se mají vracet písmo vodorovně nebo svisle. `TRUE` Určuje vodorovné písmo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iItem`  
+ [v] *položky*  
  Index položky nabídky vrátit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CMFCToolBarButton` objekt, který odpovídá index zadaný `iItem`. `NULL` Pokud index není platný.  
+ Ukazatel `CMFCToolBarButton` objekt, který odpovídá index zadaný *položky*. `NULL` Pokud index není platný.  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiBtn`  
- [v] `bByCommand`  
+ [v] *uiBtn*  
+ [v] *bByCommand*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -639,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bHighlight`  
+ [v] *bHighlight*  
  Parametr typu Boolean, která určuje, zda rozhraní označuje položky nabídky není k dispozici.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -740,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszProfileName`  
+ [v] *lpszProfileName*  
  Řetězec, který obsahuje cestu klíče registru Windows.  
   
- [v] `nIndex`  
+ [v] *nIndex*  
  ID ovládacího prvku pro řádku nabídek.  
   
- [v] `uiID`  
+ [v] *uiID*  
  Rezervovaná hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -765,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iHot`  
+ [v] *iHot*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -777,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenu`  
+ [v] *hMenu*  
  Popisovač pro nabídce připojené k `CMFCMenuBar` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -791,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -805,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) objekt, který chce uživatel upravit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
- [v] `pTI`  
+ [v] *bodu*  
+ [v] *pTI*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -839,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMsg`  
+ [v] *pMsg*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -871,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszProfileName`  
+ [v] *lpszProfileName*  
  Řetězec, který obsahuje cestu klíče registru Windows.  
   
- [v] `nIndex`  
+ [v] *nIndex*  
  ID ovládacího prvku pro řádku nabídek.  
   
- [v] `uiID`  
+ [v] *uiID*  
  Rezervovaná hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -896,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiResId`  
+ [v] *uiResId*  
  ID prostředku pro nové nabídky výchozí.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -912,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bValue`  
+ [v] *bValue*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bMax`  
+ [v] *bMax*  
  Logická hodnota, která určuje režim. Další informace naleznete v části Poznámky.  
   
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na podřízeného okna MDI, který mění.  
   
- [v] `bRecalcLayout`  
+ [v] *bRecalcLayout*  
  Logická hodnota, která určuje, zda rozložení panelu nabídek by měla být přepočítána okamžitě.  
   
 ### <a name="remarks"></a>Poznámky  
- Při maximalizaci podřízeného okna MDI zobrazíte panel nabídek připojený k hlavního rámce okna MDI nabídku a **minimalizaci**, **Maximalizovat** a **Zavřít** tlačítka. Pokud `bMax` je `TRUE` a `pWnd` není `NULL`, maximalizaci podřízeného okna MDI a řádku nabídek musí obsahovat další ovládací prvky. Řádek nabídek, jinak vrátí do stavu regulární.  
+ Při maximalizaci podřízeného okna MDI zobrazíte panel nabídek připojený k hlavního rámce okna MDI nabídku a **minimalizaci**, **Maximalizovat** a **Zavřít** tlačítka. Pokud *bMax* je `TRUE` a *pWnd* není `NULL`, maximalizaci podřízeného okna MDI a řádku nabídek musí obsahovat další ovládací prvky. Řádek nabídek, jinak vrátí do stavu regulární.  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  Nastaví informace o třídě modul runtime rozhraní používá, když uživatel vytvoří tlačítka nabídky.  
@@ -947,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuButtonRTC`  
+ [v] *pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informace pro třídu odvozenou z [CMFCMenuButton třída](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpLogFont`  
+ [v] *lpLogFont*  
  Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) struktura, která definuje písmo nastavit.  
   
- [v] `bHorz`  
- Hodnota TRUE, pokud chcete, aby `lpLogFont` parametr má být použit pro svislé písmo, FALSE, pokud chcete, který se má použít pro vodorovné písma.  
+ [v] *bHorz*  
+ Hodnota TRUE, pokud chcete, aby *lpLogFont* parametr má být použit pro svislé písmo, FALSE, pokud chcete, který se má použít pro vodorovné písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bOn`  
+ [v] *Pozvánka*  
  Logická hodnota, která určuje, zda se zobrazí nedávno použité příkazy.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShowAllCommands`  
+ [v] *bShowAllCommands*  
  Logický parametr, který určuje, zda v rozbalovací nabídce zobrazuje všechny příkazy nabídky.  
   
 ### <a name="remarks"></a>Poznámky  

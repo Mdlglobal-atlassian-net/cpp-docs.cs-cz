@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367153"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040139"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl – třída
 Poskytuje funkce ovládacího prvku WebBrowser ActiveX v okně knihovny MFC.  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszWindowName`  
+ *lpszWindowName*  
  Tento parametr se nepoužívá.  
   
- `dwStyle`  
+ *dwStyle*  
  Tento parametr se nepoužívá.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacího prvku.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje ovládacího prvku nadřazeného okna. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku.  
   
- `pContext`  
+ *pContext*  
  Tento parametr se nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppDocument`  
+ *ppDocument*  
  Rozhraní dokumentu.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

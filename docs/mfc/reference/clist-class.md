@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372518"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039135"
 ---
 # <a name="clist-class"></a>CList – třída
 Podporuje seřazené seznamy nejedinečný objekty přístupné postupně nebo podle hodnoty.  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Určení typu prvku seznam (může být odkaz) parametr šablony.  
   
- `newElement`  
+ *newElement*  
  Nového elementu.  
   
- `pNewList`  
- Ukazatel na jiný `CList` seznamu. Prvky v `pNewList` bude přidán do tohoto seznamu.  
+ *pNewList*  
+ Ukazatel na jiný `CList` seznamu. Prvky v *pNewList* bude přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první verze **pozice** hodnota nově vloženou elementu.  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Určení typu prvku seznam (může být odkaz) parametr šablony.  
   
- `newElement`  
+ *newElement*  
  Element, který má být přidán do tohoto seznamu.  
   
- `pNewList`  
- Ukazatel na jiný `CList` seznamu. Prvky v `pNewList` bude přidán do tohoto seznamu.  
+ *pNewList*  
+ Ukazatel na jiný `CList` seznamu. Prvky v *pNewList* bude přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první verze **pozice** hodnota nově vloženou elementu.  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Členitost přidělení paměti pro rozšíření seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- S růstem seznamu jednotek se přidělí paměť `nBlockSize` položky.  
+ S růstem seznamu jednotek se přidělí paměť *nBlockSize* položky.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- Vyhledá v seznamu postupně najít první prvek odpovídající zadané `searchValue`.  
+ Vyhledá v seznamu postupně najít první prvek odpovídající zadané *searchValue*.  
   
 ```  
 POSITION Find(
@@ -223,13 +223,13 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Určení typu prvku seznam (může být odkaz) parametr šablony.  
   
- `searchValue`  
+ *searchValue*  
  Hodnota, která se má najít v seznamu.  
   
- `startAfter`  
+ *startAfter*  
  Počáteční pozice pro vyhledávání. Pokud není zadaná žádná hodnota, hledání začíná head element.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -239,18 +239,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- Používá hodnotu `nIndex` jako index do seznamu.  
+ Používá hodnotu *nIndex* jako index do seznamu.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule elementu seznamu nalezen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A **pozice** hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatel; **NULL** Pokud `nIndex` je záporný nebo příliš velký.  
+ A **pozice** hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatel; **NULL** Pokud *nIndex* je záporný nebo příliš velký.  
   
 ### <a name="remarks"></a>Poznámky  
  Spuštěním kontroly sekvenční z hlavičky v seznamu na *n*element TD.  
@@ -338,7 +338,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- Získá seznam element identifikovaný `rPosition`, potom nastaví `rPosition` k **pozice** hodnotu další položky v seznamu.  
+ Získá seznam element identifikovaný *rPosition*, potom nastaví *rPosition* k **pozice** hodnotu další položky v seznamu.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,7 +349,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *TYP*  
  Parametr šablony určující typ elementů v seznamu.  
   
- `rPosition`  
+ *rPosition*  
  Odkaz na **pozice** hodnoty vrácené předchozí `GetNext`, [GetHeadPosition](#getheadposition), nebo jiné členské funkce volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -358,7 +358,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  Pokud je seznam není **const**, `GetNext` vrátí odkaz na element seznamu. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete použít `GetNext` ve smyčce dopředného iterace Pokud vytvořit počáteční pozice pomocí volání `GetHeadPosition` nebo **najít**.  
+ Můžete použít `GetNext` ve smyčce dopředného iterace Pokud vytvořit počáteční pozice pomocí volání `GetHeadPosition` nebo `Find`.  
   
  Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
@@ -379,7 +379,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *TYP*  
  Parametr šablony určující typ elementů v seznamu.  
   
- `rPosition`  
+ *rPosition*  
  Odkaz na **pozice** hodnoty vrácené předchozí `GetPrev` nebo jiné členské funkce volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -388,11 +388,11 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  Pokud je seznam není **const**, `GetPrev` vrátí odkaz na element seznamu. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete použít `GetPrev` ve smyčce zpětné iterace Pokud vytvořit počáteční pozice pomocí volání `GetTailPosition` nebo **najít**.  
+ Můžete použít `GetPrev` ve smyčce zpětné iterace Pokud vytvořit počáteční pozice pomocí volání `GetTailPosition` nebo `Find`.  
   
  Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
- Pokud je načtený element první v seznamu, pak nová hodnota `rPosition` je nastaven na **NULL**.  
+ Pokud je načtený element první v seznamu, pak nová hodnota *rPosition* je nastaven na **NULL**.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -456,12 +456,12 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parametry  
  *Pozice*  
- A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo **najít** volání funkce člen.  
+ A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo `Find` volání funkce člen.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Určení typu prvku seznamu parametr šablony.  
   
- `newElement`  
+ *newElement*  
  Element, který má být přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parametry  
  *Pozice*  
- A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo **najít** volání funkce člen.  
+ A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo `Find` volání funkce člen.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Určení typu prvku seznam (může být odkaz) parametr šablony.  
   
- `newElement`  
+ *newElement*  
  Element, který má být přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -587,13 +587,13 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  **Pozice** elementu nastavit.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Určení typu prvku seznam (může být odkaz) parametr šablony.  
   
- `newElement`  
+ *newElement*  
  Element, který chcete přidat do seznamu.  
   
 ### <a name="remarks"></a>Poznámky  

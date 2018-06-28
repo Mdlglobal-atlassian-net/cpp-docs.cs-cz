@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239421"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039152"
 ---
 # <a name="cmap-class"></a>CMap – třída
 Třída kolekce slovník, který mapuje klíče jedinečné hodnoty.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `KEY`  
+ *KEY*  
  Třída objektu použitého jako klíč k mapy.  
   
- `ARG_KEY`  
- Datový typ používaný pro `KEY` argumenty; obvykle odkaz na `KEY`.  
+ *ARG_KEY*  
+ Datový typ používaný pro *klíč* argumenty; obvykle odkaz na *klíč*.  
   
- `VALUE`  
+ *HODNOTA*  
  Třída objektu uložené v mapě.  
   
- `ARG_VALUE`  
- Datový typ používaný pro `VALUE` argumenty; obvykle odkaz na `VALUE`.  
+ *ARG_VALUE*  
+ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnotu*.  
   
 ## <a name="members"></a>Členové  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Určuje členitost přidělení paměti pro rozšíření mapy.  
   
 ### <a name="remarks"></a>Poznámky  
- S růstem mapy jednotek se přidělí paměť `nBlockSize` položky.  
+ S růstem mapy jednotek se přidělí paměť *nBlockSize* položky.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rNextPosition`  
+ *rNextPosition*  
  Určuje odkaz na **pozice** hodnoty vrácené předchozí `GetNextAssoc` nebo `GetStartPosition` volání.  
   
  *KEY*  
  Určení typu klíče mapy pro parametr šablony.  
   
- `rKey`  
+ *rKey*  
  Určuje vrácená klíč načtený elementu.  
   
  *HODNOTA*  
  Parametr šablony určující typ hodnoty na mapě.  
   
- `rValue`  
+ *rValue*  
  Určuje vrácená hodnota načtené elementu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je nejvhodnější pro iterace v rámci všechny elementy v mapě. Všimněte si, že pořadí pozice není nutně stejná jako hodnota klíče pořadí.  
   
- Pokud načtené elementem je poslední v mapě, pak nová hodnota `rNextPosition` je nastaven na **NULL**.  
+ Pokud načtené elementem je poslední v mapě, pak nová hodnota *rNextPosition* je nastaven na **NULL**.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMap::SetAt](#setat).  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hashSize`  
+ *hashSize*  
  Počet položek v zatřiďovací tabulce.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Pokud **TRUE**, přidělí zatřiďovací tabulku při inicializaci; v opačném případě je přidělená v tabulce, v případě potřeby.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_KEY`  
- Parametr šablony určující typ `key` hodnotu.  
+ *ARG_KEY*  
+ Parametr šablony určující typ *klíč* hodnotu.  
   
- `key`  
+ *Klíč*  
  Určuje klíč, který identifikuje elementu, který chcete vyhledávat.  
   
  *HODNOTA*  
  Určuje typ hodnota, která má být prohledávat.  
   
- `rValue`  
+ *rValue*  
  Získá hodnotu vyhledaných.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *HODNOTA*  
  Parametr šablony určující typ hodnoty mapy.  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  Parametr šablony zadejte hodnotu klíče.  
   
- `key`  
+ *Klíč*  
  Klíč používaný k načtení hodnoty z mapování.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- Načte elementu mapy, na kterou odkazuje `pAssocRec`.  
+ Načte elementu mapy, na kterou odkazuje *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč elementu má být vyhledán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_KEY`  
+ *ARG_KEY*  
  Určení typu klíče parametr šablony.  
   
- `key`  
+ *Klíč*  
  Klíč elementu k odebrání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_KEY`  
- Parametr šablony určující typ `key` parametr.  
+ *ARG_KEY*  
+ Parametr šablony určující typ *klíč* parametr.  
   
- `key`  
+ *Klíč*  
  Určuje klíč nového elementu.  
   
- `ARG_VALUE`  
- Parametr šablony určující typ `newValue` parametr.  
+ *ARG_VALUE*  
+ Parametr šablony určující typ *newValue* parametr.  
   
- `newValue`  
+ *newValue*  
  Určuje hodnotu nového elementu.  
   
 ### <a name="remarks"></a>Poznámky  

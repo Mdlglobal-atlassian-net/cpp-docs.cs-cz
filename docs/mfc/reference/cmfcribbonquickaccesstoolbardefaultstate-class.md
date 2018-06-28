@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370917"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041802"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState – třída
 Pomocná třída, která spravuje výchozího stavu pro panel nástrojů Rychlý přístup, který je umístěn na panelu pásu karet ( [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] uiCmd`  
+ *[uiCmd v]*  
  Určuje ID příkazu.  
   
- `[in] bIsVisible`  
+ *[bIsVisible v]*  
  Nastaví viditelnost příkazu panelu nástrojů Rychlý přístup je ve výchozím stavu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
  Odkaz na zdroj `CMFCRibbonQuickAccessToolBarDefaultState` objekt, který chcete zkopírovat z.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a05553843c4478109c0fe63dd79f08b2116f58c7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378771"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039242"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem – třída
 Poskytuje rozhraní serveru položkám OLE.  
@@ -119,7 +119,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::GetDocument](#getdocument)|Vrátí dokumentu na serveru, který obsahuje položky.|  
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Získá **CF_EMBEDSOURCE** dat položky OLE.|  
 |[COleServerItem::GetItemName](#getitemname)|Vrací název položky. Používá se pouze propojené položky.|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Získá `CF_LINKSOURCE` dat položky OLE.|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Získá **CF_LINKSOURCE** dat položky OLE.|  
 |[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|Získá **CF_OBJECTDESCRIPTOR** dat položky OLE.|  
 |[COleServerItem::IsConnected](#isconnected)|Určuje, zda položka je aktuálně připojena k active kontejneru.|  
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Určuje, zda položka reprezentuje propojené položky OLE.|  
@@ -185,7 +185,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataSource`  
+ *pDataSource*  
  Ukazatel `COleDataSource` objektu, ve kterém má být umístěn data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -201,10 +201,10 @@ COleServerItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pServerDoc`  
+ *pServerDoc*  
  Ukazatel na dokument, který bude obsahovat nová položka.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Příznak, který udává, zda objekt může být odstraněny při odkazu na vydání. Tuto možnost nastavíte na **FALSE** Pokud `COleServerItem` objekt je nedílnou součástí vašeho dokumentu data, která je nutné odstranit. Tuto možnost nastavíte na **TRUE** Pokud se objekt sekundární struktura použít k identifikaci rozsah v datech vašeho dokumentu, který může odstranit rozhraní.  
   
 ##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
@@ -215,7 +215,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bIncludeLink`  
+ *bIncludeLink*  
  Tuto možnost nastavíte na **TRUE** Pokud data propojení by se měl zkopírovat do schránky. Tuto možnost nastavíte na **FALSE** Pokud vaše serverová aplikace nepodporuje odkazy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -237,23 +237,23 @@ DROPEFFECT DoDragDrop(
  *lpRectItem*  
  Položky obdélníku na obrazovce, v pixelech, relativně k klientské oblasti.  
   
- `ptOffset`  
- Posun od `lpItemRect` kde pozice myši byl v době přetahování.  
+ *ptOffset*  
+ Posun od *lpItemRect* kde pozice myši byl v době přetahování.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  Tuto možnost nastavíte na **TRUE** Pokud data propojení by se měl zkopírovat do schránky. Nastavte ji na **FALSE** Pokud vaše aplikace nepodporuje odkazy.  
   
- `dwEffects`  
+ *dwEffects*  
  Určuje účinky, které vám umožní zdroje operace přetažení v operaci přetažení (kombinaci kopírovat, přesunout a odkaz).  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Ukazatel na obdélníku, která definuje, kde přetáhněte skutečně spustí. Další informace naleznete v následující části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota z `DROPEFFECT` výčtu. Pokud je `DROPEFFECT_MOVE`, měla by být odebrána původní data.  
   
 ### <a name="remarks"></a>Poznámky  
- Operaci přetažení myší nespustí okamžitě. Čeká, dokud myší opustí rámeček určeného `lpRectStartDrag` nebo dokud předané zadaný počet milisekund. Pokud `lpRectStartDrag` je **NULL**, obdélníku výchozí se používá, aby přetahování spustí, když se ukazatelem myši přesune o bod.  
+ Operaci přetažení myší nespustí okamžitě. Čeká, dokud myší opustí rámeček určeného *lpRectStartDrag* nebo dokud předané zadaný počet milisekund. Pokud *lpRectStartDrag* je **NULL**, obdélníku výchozí se používá, aby přetahování spustí, když se ukazatelem myši přesune o bod.  
   
  Doba zpoždění je určena nastavení klíče registru. Doba zpoždění lze změnit pomocí volání [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) nebo [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Pokud nezadáte čas zpoždění, se používá výchozí hodnota je 200 MS. Doba zpoždění přetažení se ukládají následujícím způsobem:  
   
@@ -277,20 +277,20 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataSource`  
+ *pDataSource*  
  Ukazatel `COleDataSource` objekt, který bude přijímat data OLE položky ve všech podporovaných formátů.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **Hodnota TRUE,** Pokud data propojení by se měl zkopírovat do schránky. **FALSE** Pokud vaše serverová aplikace nepodporuje odkazy.  
   
- `lpOffset`  
+ *lpOffset*  
  Posun v pixelech myší z tohoto počátku objektu.  
   
- `lpSize`  
+ *lpSize*  
  Velikost objektu v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce volá [GetEmbedSourceData](#getembedsourcedata) – členská funkce získat nativní data pro položky OLE a volání [AddOtherClipboardData](#addotherclipboarddata) – členská funkce získat formát prezentace a všechny Podporované formáty převod. Pokud `bIncludeLink` je **TRUE**, také voláním funkce [GetLinkSourceData](#getlinksourcedata) k získání dat odkaz pro položku.  
+ Tato funkce volá [GetEmbedSourceData](#getembedsourcedata) – členská funkce získat nativní data pro položky OLE a volání [AddOtherClipboardData](#addotherclipboarddata) – členská funkce získat formát prezentace a všechny Podporované formáty převod. Pokud *bIncludeLink* je **TRUE**, také voláním funkce [GetLinkSourceData](#getlinksourcedata) k získání dat odkaz pro položku.  
   
  Funkci přepsat, pokud chcete uvést do formátů `COleDataSource` objekt před nebo po tyto formáty poskytl `CopyToClipboard`.  
   
@@ -328,7 +328,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStgMedium`  
+ *lpStgMedium*  
  Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat **CF_EMBEDSOURCE** data pro položku OLE.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -359,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStgMedium`  
+ *lpStgMedium*  
  Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat `CF_LINKSOURCE` data pro položku OLE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -383,17 +383,17 @@ void GetObjectDescriptorData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpOffset`  
+ *lpOffset*  
  Posunutí myši klikněte na tlačítko z levého horního rohu položky OLE. Může být **NULL**.  
   
- `lpSize`  
+ *lpSize*  
  Velikost položky OLE. Může být **NULL**.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Ukazatel [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat **CF_OBJECTDESCRIPTOR** data pro položku OLE.  
   
 ### <a name="remarks"></a>Poznámky  
- Informace se zkopírují **STGMEDIUM** struktura na kterou odkazuje `lpStgMedium`. Tento formát obsahuje informace potřebné pro dialogové okno Vložit jinak.  
+ Informace se zkopírují **STGMEDIUM** struktura na kterou odkazuje *lpStgMedium*. Tento formát obsahuje informace potřebné pro dialogové okno Vložit jinak.  
   
  Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) ve Windows SDK.  
   
@@ -443,7 +443,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nDrawAspect`  
+ *nDrawAspect*  
  Hodnota z `DVASPECT` výčtu, která určuje, které aspekt položky OLE se změnila. Tento parametr může mít některý z následujících hodnot:  
   
 - `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
@@ -465,7 +465,7 @@ virtual void OnDoVerb(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iVerb`  
+ *iVerb*  
  Určuje příkaz provést. Může být některého z následujících akcí:  
   
 |Hodnota|Význam|Symbol|  
@@ -495,10 +495,10 @@ virtual BOOL OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel [CDC](../../mfc/reference/cdc-class.md) objekt, u kterého k vykreslení položky. Kontext zobrazení je automaticky připojená k kontext atribut zobrazení, bude možné volat funkce atribut, i když to proto by zkontrolujte metafile konkrétní zařízení.  
   
- `rSize`  
+ *parametru rSize*  
  Velikost v **HIMETRIC** jednotky, ve kterém k vykreslení metafile.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -518,10 +518,10 @@ virtual BOOL OnDrawEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel [CDC](../../mfc/reference/cdc-class.md) objekt, u kterého k vykreslení položky. Řadič domény je automaticky připojená k atribut řadič domény, bude možné volat funkce atribut, i když to proto by zkontrolujte metafile konkrétní zařízení.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Hodnota z `DVASPECT` výčtu. Tento parametr může mít některý z následujících hodnot:  
   
 - `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
@@ -554,13 +554,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bIncludeLink`  
+ *bIncludeLink*  
  Tuto možnost nastavíte na **TRUE** Pokud data propojení by se měl zkopírovat do schránky. Tuto možnost nastavíte na **FALSE** Pokud vaše serverová aplikace nepodporuje odkazy.  
   
- `lpOffset`  
+ *lpOffset*  
  Posun myší z tohoto počátku objektu v pixelech.  
   
- `lpSize`  
+ *lpSize*  
  Velikost objektu v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -579,7 +579,7 @@ virtual BOOL OnGetExtent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nDrawAspect`  
+ *nDrawAspect*  
  Určuje aspektů OLE položek, jejichž hranice jsou mají být načteny. Tento parametr může mít některý z následujících hodnot:  
   
 - `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
@@ -590,7 +590,7 @@ virtual BOOL OnGetExtent(
   
 - `DVASPECT_DOCPRINT` Položka je reprezentována jako kdyby byly vytisknout, pomocí příkazu Tisk z nabídky soubor.  
   
- `rSize`  
+ *parametru rSize*  
  Odkaz na `CSize` objektu, která bude přijímat velikost položky OLE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -610,7 +610,7 @@ virtual void OnHide();
  Volání výchozí **COleServerDoc::OnShowDocument (FALSE)**. Funkce taky upozorní kontejneru je skrytý položky OLE. Tato funkce přepsání, pokud chcete provést speciální zpracování při skrytí položky OLE.  
   
 ##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
- Voláno rámcem se inicializovat OLE položku pomocí obsah `pDataObject`.  
+ Voláno rámcem se inicializovat OLE položku pomocí obsah *pDataObject*.  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -619,17 +619,17 @@ virtual BOOL OnInitFromData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *pDataObject*  
  Ukazatel na objekt OLE dat obsahující data v různých formátech pro inicializaci položky OLE.  
   
- `bCreation`  
+ *bCreation*  
  **Hodnota TRUE,** Pokud je tato funkce volána k chybě při inicializaci položku OLE se nově vytvořené aplikace kontejneru. **FALSE** Pokud je tato funkce volána nahradit obsah již existující položky OLE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bCreation` je **TRUE**, tato funkce je volána, pokud kontejner implementuje vložit nový objekt v závislosti na aktuální výběr. Vybraná data se používá při vytváření nové položky OLE. Například když vyberete oblast buněk v tabulkovém programu a potom použít vložit nový objekt k vytvoření grafu na základě hodnot ve vybrané oblasti. Výchozí implementace neprovede žádnou akci. Přepsání této funkci můžete zvolit přijatelný formát od těch, které nabízí `pDataObject` a inicializace OLE položky na základě dat poskytuje. Toto je rozšířené přepisovatelné.  
+ Pokud *bCreation* je **TRUE**, tato funkce je volána, pokud kontejner implementuje vložit nový objekt v závislosti na aktuální výběr. Vybraná data se používá při vytváření nové položky OLE. Například když vyberete oblast buněk v tabulkovém programu a potom použít vložit nový objekt k vytvoření grafu na základě hodnot ve vybrané oblasti. Výchozí implementace neprovede žádnou akci. Přepsání této funkci můžete zvolit přijatelný formát od těch, které nabízí *pDataObject* a inicializace OLE položky na základě dat poskytuje. Toto je rozšířené přepisovatelné.  
   
  Další informace najdete v tématu [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) ve Windows SDK.  
   
@@ -670,10 +670,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Odkazuje na [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém má být vrácen data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -682,7 +682,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Poznámky  
  Zadaný formát je jeden dříve umístili ve `COleDataSource` pomocí [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) nebo [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) – členská funkce pro zpožděné vykreslování. Výchozí implementace této funkce volá [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata), pokud zadaný úložné médium je soubor nebo paměti. Jestliže je zadán ani jeden z těchto formátů, výchozí implementace vrátí hodnotu 0 a neprovede žádnou akci.  
   
- Pokud `lpStgMedium` ->  *objekt tymed* je **TYMED_NULL**, **STGMEDIUM** by měla přidělená a vyplněna podle specifikace *lpFormatEtc -> objekt tymed*. Není-li **TYMED_NULL**, **STGMEDIUM** je nutné zadat místní s daty.  
+ Pokud *lpStgMedium*-> *objekt tymed* je **TYMED_NULL**, **STGMEDIUM** by měla přidělená a vyplněna podle specifikace *lpFormatEtc -> objekt tymed*. Není-li **TYMED_NULL**, **STGMEDIUM** je nutné zadat místní s daty.  
   
  Toto je rozšířené přepisovatelné. Funkci poskytnout vaše data v požadovaný formát a střední přepište. V závislosti na vaše data můžete místo toho jeden z jiné verze této funkce přepsání. Pokud vaše data jsou malé a pevnou velikost, mají přednost před `OnRenderGlobalData`. Pokud vaše data jsou v souboru nebo s proměnnou velikostí, mají přednost před `OnRenderFileData`.  
   
@@ -698,10 +698,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
   
- `pFile`  
+ *pFile*  
  Odkazuje na `CFile` objektu, ve kterém má být vykreslen data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -724,10 +724,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
   
- `phGlobal`  
+ *phGlobal*  
  Odkazuje na popisovač pro globální paměť, ve kterém má být vrácen data. Pokud byl přidělen není dostatek paměti, tento parametr může být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -736,7 +736,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Poznámky  
  Zadaný formát je jeden dříve umístili ve `COleDataSource` pomocí [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) – členská funkce pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrací **FALSE**.  
   
- Pokud `phGlobal` je **NULL**, pak nový `HGLOBAL` by měl být přidělené a vrácených v `phGlobal`. V opačném `HGLOBAL` specifikováno na základě `phGlobal` by mělo být zadáno s daty. Množství dat umístěny `HGLOBAL` nesmí být delší než aktuální velikost bloku paměti. Navíc bloku nelze znovu přidělit, větší velikost.  
+ Pokud *phGlobal* je **NULL**, pak nový `HGLOBAL` by měl být přidělené a vrácených v *phGlobal*. Jinak `HGLOBAL` specifikace *phGlobal* by mělo být zadáno s daty. Množství dat umístěny `HGLOBAL` nesmí být delší než aktuální velikost bloku paměti. Navíc bloku nelze znovu přidělit, větší velikost.  
   
  Toto je rozšířené přepisovatelné. Funkci poskytnout vaše data v požadovaný formát a střední přepište. V závislosti na vaše data můžete místo toho jeden z jiné verze této funkce přepsání. Pokud chcete zpracovat více úložných médií, mají přednost před [OnRenderData](#onrenderdata). Pokud vaše data jsou v souboru nebo s proměnnou velikostí, mají přednost před [OnRenderFileData](#onrenderfiledata).  
   
@@ -750,7 +750,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpLogPalette`  
+ *lpLogPalette*  
  Ukazatel na Windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -772,14 +772,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Ukazatel na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát data.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Ukazatel na [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém se nachází data.  
   
- `bRelease`  
- Určuje, kdo je vlastníkem úložiště střední po dokončení volání funkce. Volající rozhodne, který je zodpovědný za uvolnění prostředky přidělené jménem paměťového média. Volající dosahuje tím, že nastavení `bRelease`. Pokud `bRelease` je nenulové hodnoty, položku serveru trvá vlastnictví, uvolnění médium, až se dokončí, jeho použití. Když `bRelease` je 0, volající uchovává vlastnictví a položku serveru můžete použít úložiště střední pouze po dobu trvání volání.  
+ *bRelease*  
+ Určuje, kdo je vlastníkem úložiště střední po dokončení volání funkce. Volající rozhodne, který je zodpovědný za uvolnění prostředky přidělené jménem paměťového média. Volající dosahuje tím, že nastavení *bRelease*. Pokud *bRelease* je nenulové hodnoty, položku serveru trvá vlastnictví, uvolnění médium, až se dokončí, jeho použití. Když *bRelease* je 0, volající uchovává vlastnictví a položku serveru můžete použít úložiště střední pouze po dobu trvání volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -801,7 +801,7 @@ virtual BOOL OnSetExtent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nDrawAspect`  
+ *nDrawAspect*  
  Určuje aspektů OLE položek, jejichž hranice jsou specifikované. Tento parametr může mít některý z následujících hodnot:  
   
 - `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
@@ -812,14 +812,14 @@ virtual BOOL OnSetExtent(
   
 - `DVASPECT_DOCPRINT` Položka je reprezentována jako kdyby byly vytisknout, pomocí příkazu Tisk z nabídky soubor.  
   
- `size`  
+ *Velikost*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) struktura určení nové velikosti položky OLE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace kontejneru vytvořené pomocí knihovny Microsoft Foundation Class, tato funkce je volána, když [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) – členská funkce k odpovídající položce `COleClientItem` objektu se říká. Výchozí implementace sady [m_sizeExtent](#m_sizeextent) člen zadané velikosti Pokud `nDrawAspect` je `DVASPECT_CONTENT`; jinak vrátí hodnotu 0. Funkci provést zvláštní zpracování, když změníte velikost položky přepište.  
+ Aplikace kontejneru vytvořené pomocí knihovny Microsoft Foundation Class, tato funkce je volána, když [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) – členská funkce k odpovídající položce `COleClientItem` objektu se říká. Výchozí implementace sady [m_sizeExtent](#m_sizeextent) člen zadané velikosti Pokud *nDrawAspect* je `DVASPECT_CONTENT`; jinak vrátí hodnotu 0. Funkci provést zvláštní zpracování, když změníte velikost položky přepište.  
   
 ##  <a name="onshow"></a>  COleServerItem::OnShow  
  Voláno rámcem dáte pokyn, aby serverová aplikace zobrazíte položky OLE na místě.  
@@ -845,16 +845,16 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSender`  
+ *pSender*  
  Ukazatel na položku upravit dokumentu. Může být **NULL**.  
   
- `lHint`  
+ *lHint*  
  Obsahuje informace o této úpravy.  
   
- `pHint`  
+ *pHint*  
  Ukazatel na objekt ukládání informací o úpravy.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Hodnota z `DVASPECT` výčtu. Tento parametr může mít jednu z následujících hodnot:  
   
 - `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
@@ -886,7 +886,7 @@ void SetItemName(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszItemName`  
+ *lpszItemName*  
  Ukazatel na nový název položky.  
   
 ### <a name="remarks"></a>Poznámky  

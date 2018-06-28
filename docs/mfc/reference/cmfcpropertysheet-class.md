@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372717"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040009"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet – třída
 `CMFCPropertySheet` Třída podporuje seznam vlastností, kde každé stránce vlastnost je označený jako kartu stránky, tlačítka panelu nástrojů, řídicí uzel stromu nebo položku seznamu.  
@@ -151,7 +151,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPage`  
+ [v] *Fyzická_stránka*  
  Ukazatel na objekt stránky. Tento parametr nemůže být `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -171,20 +171,20 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCategory`  
+ [v] *pCategory*  
  Ukazatel na nadřazeného uzlu stromu, nebo `NULL` pro přidružení na určenou stránku nejvyšší úrovně uzlu. Volání [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metoda získat tento ukazatel.  
   
- [v] `pPage`  
+ [v] *Fyzická_stránka*  
  Ukazatel na objekt vlastnosti stránky.  
   
- [v] `nIconNum`  
+ [v] *nIconNum*  
  Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud není vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
   
- [v] `nSelIconNum`  
+ [v] *nSelIconNum*  
  Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud je vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přidá stránky vlastností jako na základní úrovni ovládacím prvkem strom. Přidání stránky vlastností, vytvoření `CMFCPropertySheet` objektu, volání [CMFCPropertySheet::SetLook](#setlook) metoda s `look` parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom pomocí této metody přidat stránku vlastností.  
+ Tato metoda přidá stránky vlastností jako na základní úrovni ovládacím prvkem strom. Přidání stránky vlastností, vytvoření `CMFCPropertySheet` objektu, volání [CMFCPropertySheet::SetLook](#setlook) metoda s *vypadat* parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom tuto metodu použijte k přidání stránky vlastností .  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Přidá nový uzel do ovládacího prvku strom.  
@@ -198,23 +198,23 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Název uzlu.  
   
- [v] `nIconNum`  
+ [v] *nIconNum*  
  Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud není vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
   
- [v] `nSelectedIconNum`  
+ [v] *nSelectedIconNum*  
  Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud je vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
   
- [v] `pParentCategory`  
+ [v] *pParentCategory*  
  Ukazatel na nadřazeného uzlu stromu, nebo `NULL` pro přidružení na určenou stránku nejvyšší úrovně uzlu. Nastavte tento parametr se [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metoda.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nový uzel ve stromové struktuře.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte, chcete-li přidat nový uzel, který se také označuje jako kategorii, do ovládacího prvku strom. Přidat uzel, vytvoření `CMFCPropertySheet` objektu, volání [CMFCPropertySheet::SetLook](#setlook) metoda s `look` parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom pomocí této metody přidat uzel.  
+ Tuto metodu použijte, chcete-li přidat nový uzel, který se také označuje jako kategorii, do ovládacího prvku strom. Přidat uzel, vytvoření `CMFCPropertySheet` objektu, volání [CMFCPropertySheet::SetLook](#setlook) metoda s *vypadat* parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom pomocí této metody přidat uzel.  
   
  Návratová hodnota tuto metodu použijte v následující volání [CMFCPropertySheet::AddPageToTree](#addpagetotree) a [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
@@ -234,16 +234,16 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pszCaption`  
+ [v] *pszCaption*  
  Řetězec, který obsahuje titulek list vlastností. Nemůže být `NULL`.  
   
- [v] `nIDCaption`  
+ [v] *nIDCaption*  
  ID prostředku, který obsahuje titulek list vlastností.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel do nadřazeného okna vlastností, nebo `NULL` Pokud nadřazeného okna je hlavní okno aplikace. Výchozí hodnota je `NULL`.  
   
- [v] `iSelectPage`  
+ [v] *iSelectPage*  
  Index založený na nule nejvyšší vlastnost stránky. Výchozí hodnota je 0.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -257,11 +257,11 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nHeaderHeight`  
+ [v] *nHeaderHeight*  
  Výška záhlaví má v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Použít hodnotu `nHeaderHeight` parametr kreslení vlastní hlavičky přepsat [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metoda.  
+ Použít hodnotu *nHeaderHeight* parametr kreslení vlastní hlavičky přepsat [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metoda.  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Načte výšku aktuální záhlaví.  
@@ -334,7 +334,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPage`  
+ [v] *Fyzická_stránka*  
  Ukazatel na objekt vlastnosti stránky, který představuje stránku povolená vlastnost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -351,13 +351,13 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `nPage`  
+ [v] *nPage*  
  Číslo od nuly vlastnost stránky.  
   
- [v] `rectHeader`  
+ [v] *rectHeader*  
  Ohraničující obdélník, která určuje, kde k vykreslení záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -371,7 +371,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPage`  
+ [v] *Fyzická_stránka*  
  Ukazatel na objekt vlastností stránky, který představuje stránku vlastností a odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -385,7 +385,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCategory`  
+ [v] *pCategory*  
  Ukazatel na kategorii (uzel) Chcete-li odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -400,14 +400,14 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPage`  
+ [v] *Fyzická_stránka*  
  Ukazatel na vlastnost stránky objekt, který reprezentuje stránku vlastností a odebrat. Nemůže být `NULL`.  
   
- [v] `nPage`  
+ [v] *nPage*  
  Index stránky, odeberte nule.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odstraní zadanou vlastnost stránku a zničí jeho přidružené okno. Stránka vlastností objektu, který `pPage` parametr určuje nebude odstraněn, až [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) zavření časového intervalu.  
+ Tato metoda odstraní zadanou vlastnost stránku a zničí jeho přidružené okno. Stránka vlastností objektu, který *Fyzická_stránka* parametr určuje nebude odstraněn, až [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) zavření časového intervalu.  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Určuje seznam bitové kopie, které se používají v ovládacím prvku navigačním podokně aplikace Outlook.  
@@ -421,16 +421,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiImageListResID`  
+ [v] *uiImageListResID*  
  ID prostředku seznamu obrázků.  
   
- [v] `cx`  
+ [v] *cx*  
  Šířka v pixelech ikony v seznamu obrázků.  
   
- [v] `clrTransparent`  
+ [v] *clrTransparent*  
  Barva průhledný obrázek. Části bitové kopie, které jsou tato barva bude průhledná. Výchozí hodnota je purpurová barva, RGB(255,0,255).  
   
- [v] `hIcons`  
+ [v] *hIcons*  
  Obslužná rutina do existujícího seznamu bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -451,16 +451,16 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `look`  
+ [v] *vypadat*  
  Jedna z hodnot výčtu, která určuje vzhled seznamu vlastností. Výchozí styl pro seznam vlastností je `CMFCPropertySheet::PropSheetLook_Tabs`. Další informace najdete v tabulce v části poznámky v tomto tématu.  
   
- [v] `nNavControlWidth`  
+ [v] *nNavControlWidth*  
  Šířka navigační ovládacího prvku v pixelech. Výchozí hodnota je 100.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete zobrazit seznam vlastností ve stylu jiné než výchozí, volejte tuto metodu, před vytvořením okna List vlastností.  
   
- Následující tabulka uvádí hodnot výčtu, která lze zadat v `look` parametr.  
+ Následující tabulka uvádí hodnot výčtu, která lze zadat v *vypadat* parametr.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  

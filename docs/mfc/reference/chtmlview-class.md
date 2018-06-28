@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbc5972d244d9dfd969221d88299e868f617a5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378279"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039346"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 Poskytuje funkce ovládacího prvku WebBrowser v kontextu na MFC document/view – architektura.  
@@ -383,25 +383,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Bodů na řetězec znaků ukončené hodnotou null, který názvy třídy Windows. Název třídy může být jakýkoli název zaregistrována [afxregisterwndclass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globální funkce nebo **RegisterClass** funkce systému Windows. Pokud **NULL**, používá předdefinovanou výchozí [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributy.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který představuje název okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl atributů okna. Ve výchozím nastavení **ws_visible –** a **ws_child –** styly Windows jsou nastavené.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura velikost a umístění okna. `rectDefault` Systému Windows zadejte velikost a umístění nového okna umožní hodnotu.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura velikost a umístění okna. *RectDefault* systému Windows zadejte velikost a umístění nového okna umožní hodnotu.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna ovládacího prvku.  
   
- `nID`  
+ *nID*  
  Číslo ID zobrazení. Ve výchozím nastavení **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Ukazatel [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** ve výchozím nastavení.  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
@@ -416,16 +416,16 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pContainer`  
+ *pContainer*  
  Ukazatel [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) objekt obsahující ovládacího prvku.  
   
- `ppSite`  
+ *ppSite*  
  Ukazatel na ukazatel [COleControlSite](../../mfc/reference/colecontrolsite-class.md) objekt, poskytuje webu pro ovládací prvek.  
   
- `nID`  
+ *nID*  
  Identifikátor pro hostování ovládacího prvku.  
   
- `clsid`  
+ *CLSID*  
  CLSID ovládacího prvku pro hostování  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -445,7 +445,7 @@ HRESULT ExecFormsCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCommandID`  
+ *dwCommandID*  
  Příkaz, který má být proveden. Tento příkaz musí patřit do **CMDSETID3_Forms3** skupiny.  
   
  *pVarIn*  
@@ -472,13 +472,13 @@ void ExecWB(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Příkaz k provedení.  
   
  *cmdexecopt*  
  Nastavte možnosti pro provádění příkazu.  
   
- `pvaIn`  
+ *pvaIn*  
  Hodnotu typu variant použit k určení vstupní argumenty příkazu.  
   
  *pvaOut*  
@@ -684,10 +684,10 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProperty`  
+ *lpszProperty*  
  Ukazatel na řetězec obsahující vlastnosti, která má načíst.  
   
- `strValue`  
+ *strValue*  
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který přijme aktuální hodnota vlastnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -759,7 +759,7 @@ BOOL GetSource(CString& strRef);
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="parameters"></a>Parametry  
- `refString`  
+ *refString*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) který bude obsahovat zdrojový kód.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -911,10 +911,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszResource`  
+ *lpszResource*  
  Ukazatel na řetězec obsahující název prostředku načíst.  
   
- `nRes`  
+ *nRes*  
  ID vyrovnávací paměti, který obsahuje název prostředku načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -940,19 +940,19 @@ void Navigate(
  *ADRESA URL*  
  Volající přidělené řetězec, který obsahuje adresu URL, přejděte na, nebo úplnou cestu souboru, který se zobrazí.  
   
- `dwFlags`  
+ *dwFlags*  
  Příznaky proměnné, která určuje, jestli se má daný prostředek přidejte do seznamu historie, jestli se má pro čtení nebo zápisu z mezipaměti a jestli se má zobrazit prostředku v novém okně. Proměnná může být kombinací hodnot definované [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) výčtu.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Ukazatel na řetězec, který obsahuje název rámec, ve kterém chcete zobrazit prostředku.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP k odeslání na server. Tyto hlavičky se přidají do výchozí hlavičky Internet Explorer. Hlavičky můžete zadat takových akcí jako dělat serveru, typ dat, které jsou předávány na server nebo stavový kód. Tento parametr je ignorována, pokud *URL* není adresu URL protokolu HTTP.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Ukazatel na data k odeslání s transakce HTTP POST. Například POST transakce se používá k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není nastavena žádná data post **přejděte** problémy transakci HTTP GET. Tento parametr je ignorována, pokud *URL* není adresu URL protokolu HTTP.  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  Data k odeslání s transakce HTTP POST. Například POST transakce se používá k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není nastavena žádná data post **přejděte** problémy transakci HTTP GET. Tento parametr je ignorována, pokud *URL* není adresu URL protokolu HTTP.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -989,25 +989,25 @@ void Navigate2(
  *pIDL*  
  Ukazatel na [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) struktury.  
   
- `dwFlags`  
+ *dwFlags*  
  Příznaky proměnné, která určuje, jestli se má daný prostředek přidejte do seznamu historie, jestli se má pro čtení nebo zápisu z mezipaměti a jestli se má zobrazit prostředku v novém okně. Proměnná může být kombinací hodnot definované [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) výčtu.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Ukazatel na řetězec, který obsahuje název rámec, ve kterém chcete zobrazit prostředku.  
   
- `lpszURL`  
+ *lpszURL*  
  Ukazatel na řetězec, který obsahuje adresu URL.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Data k odeslání s transakce HTTP POST. Například POST transakce se používá k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není nastavena žádná data post `Navigate2` problémy transakci HTTP GET. Tento parametr je ignorována, pokud *URL* není protokolu HTTP nebo HTTPS adresou URL.  
   
- `dwPostDataLen`  
- Délka v bajtech dat, na kterou odkazuje `lpvPostData` parametr.  
+ *dwPostDataLen*  
+ Délka v bajtech dat, na kterou odkazuje *lpvPostData* parametr.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP nebo HTTPS k odeslání na server. Tyto hlavičky se přidají do výchozí hlavičky Internet Explorer. Hlavičky můžete zadat takových akcí jako dělat serveru, typ dat, které jsou předávány na server nebo stavový kód. Tento parametr je ignorována, pokud *URL* není protokolu HTTP nebo HTTPS adresou URL.  
   
- `baPostedData`  
+ *baPostedData*  
  Odkaz na [CByteArray](../../mfc/reference/cbytearray-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1032,22 +1032,22 @@ virtual void OnBeforeNavigate2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszURL`  
+ *lpszURL*  
  Ukazatel na řetězec obsahující přejděte na adresu URL.  
   
- `nFlags`  
+ *nFlags*  
  Vyhrazeno pro budoucí použití.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Řetězec, který obsahuje název rámec, ve kterém chcete zobrazit prostředek, nebo **NULL** Pokud žádné pojmenované rámečku je určeno pro prostředek.  
   
- `baPostedData`  
+ *baPostedData*  
  Odkaz na `CByteArray` objekt obsahující data k odeslání na server, pokud se používá transakce HTTP POST.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Ukazatel na řetězec obsahující další hlavičky protokolu HTTP k odeslání na server (pouze adresy HTTP URL). Hlavičky můžete zadat takových akcí jako dělat serveru, typ dat, které jsou předávány na server nebo stavový kód.  
   
- `pbCancel`  
+ *pbCancel*  
  Ukazatel na příznak Storno. Aplikace může tento parametr nastavte na nenulové hodnoty pro zrušení operace navigační nebo nule tak, aby ji, aby bylo možné pokračovat.  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
@@ -1063,7 +1063,7 @@ virtual void OnCommandStateChange(
  *Npříkaz*  
  Identifikátor příkazu, jehož povolený stav se změnil.  
   
- `bEnable`  
+ *bEnable*  
  Povoleném stavu. Tento parametr je nenulové hodnoty, pokud je povoleno příkaz nebo nula, pokud je zakázána.  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
@@ -1074,13 +1074,13 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszURL`  
+ *lpszURL*  
  Ukazatel na řetězec, který se vyhodnocuje adresu URL, UNC souboru, název nebo PIDL (ukazatel na seznam identifikátorů položek), který byl přešli.  
   
 ### <a name="remarks"></a>Poznámky  
  Ne každý rámeček se aktivují tuto událost, ale každý rámce, který aktivuje [OnDownloadBegin](#ondownloadbegin) událostí bude platit odpovídající `OnDocumentComplete` událostí.  
   
- Adresa URL označená `lpszURL` může lišit od adresu URL, která v prohlížeči se sdělili přejděte na, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například pokud aplikace určuje adresu URL "www.microsoft.com" v volání do [přejděte](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "http://www.microsoft.com/". Navíc pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrované adresy URL se zobrazí tady.  
+ Adresa URL označená *lpszURL* může lišit od adresu URL, která v prohlížeči se sdělili přejděte na, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například pokud aplikace určuje adresu URL "www.microsoft.com" v volání do [přejděte](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "http://www.microsoft.com/". Navíc pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrované adresy URL se zobrazí tady.  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  Volání z aplikace Internet Explorer nebo MSHTML implementace **IOleInPlaceActiveObject::OnDocWindowActivate**, která upozorní, že aktivní objekt v místní okna dokumentu kontejneru je aktivace nebo deaktivace.  
@@ -1090,7 +1090,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fActivate`  
+ *fActivate*  
  Označuje stav okna dokumentu. Pokud je tato hodnota nenulové, aktivování okna. Pokud je tato hodnota nulová, je právě deaktivována okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1124,7 +1124,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fEnable`  
+ *fEnable*  
  Určuje, zda jsou povolena nebo zakázána hostitele nemodální dialogová okna. Pokud je tato hodnota nenulové, jsou povolené nemodální dialogová okna. Pokud je tato hodnota nulová, nemodální dialogová okna jsou zakázány.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1143,7 +1143,7 @@ virtual HRESULT OnFilterDataObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *pDataObject*  
  Adresa [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) rozhraní poskytl aplikace Internet Explorer nebo MSHTML.  
   
  *ppDataObject*  
@@ -1163,7 +1163,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fActivate`  
+ *fActivate*  
  Označuje stav kontejneru nejvyšší úrovně rámce okna. Pokud je tato hodnota nenulové, aktivování okna. Pokud je tato hodnota nulová, je právě deaktivována okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1193,10 +1193,10 @@ virtual HRESULT OnGetDropTarget(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDropTarget`  
+ *pDropTarget*  
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) aplikace Internet Explorer nebo MSHTML navrhuje používat.  
   
- `ppDropTarget`  
+ *ppDropTarget*  
  Adresa `IDropTarget` která přijme `IDropTarget` ukazatel rozhraní hostitele chce zajistit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1230,7 +1230,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Adresa [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) struktura, která přijímá možnosti uživatelského rozhraní hostiteli.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1249,10 +1249,10 @@ virtual HRESULT OnGetOptionKeyPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pchKey`  
+ *pchKey*  
  Adresa `LPOLESTR` která přijme řetězec podklíčů registru, kde hostitele ukládá jeho výchozí možnosti. Tento podklíč bude pod klíčem HKEY_CURRENT_USER. Přidělte této paměti pomocí [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727). Volající aplikace je zodpovědná za uvolnění této paměti pomocí [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722). Tento parametr by měl být vždy inicializována tak, aby **NULL**i v případě, že metoda selže.  
   
- `dwReserved`  
+ *dwReserved*  
  Vyhrazeno pro budoucí použití. Není právě používána.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1313,16 +1313,16 @@ virtual void OnNavigateError(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszURL`  
+ *lpszURL*  
  Adresa URL, pro kterou se nepovedlo navigace.  
   
  *lpszFrame*  
  Název rámec, ve kterém je prostředek zobrazit, nebo hodnotu NULL, pokud žádné pojmenované rámečku je určený pro prostředek.  
   
- `dwError`  
+ *dwError*  
  Stavový kód chyby, pokud je k dispozici. Seznam možných stavové kódy HRESULT a HTTP, naleznete v části [NavigateError událostí stavové kódy.](https://msdn.microsoft.com/library/aa768365.aspx)  
   
- `pbCancel`  
+ *pbCancel*  
  Určuje, jestli chcete zrušit přechodu na stránku nebo žádné další automatické hledání. Pokud **TRUE** (výchozí), pokračujte navigace na chybové stránky nebo automatické hledání; Pokud **FALSE**, zrušit navigace na chybové stránky nebo automatické hledání.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1340,10 +1340,10 @@ virtual void OnNewWindow2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppDisp`  
+ *ppDisp*  
  Ukazatel na ukazatele rozhraní, která je volitelně přijímá `IDispatch` ukazatel rozhraní nového objektu WebBrowser nebo Internet Explorer.  
   
- `Cancel`  
+ *Zrušení*  
  Ukazatel na příznak Storno. Aplikace může tento parametr nastavte na nenulové hodnoty pro zrušení operace navigační nebo nule tak, aby ji, aby bylo možné pokračovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProperty`  
+ *lpszProperty*  
  Ukazatel na řetězec, který obsahuje název vlastnosti.  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
@@ -1397,13 +1397,13 @@ virtual HRESULT OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prcBorder`  
+ *prcBorder*  
  Nové vnější obdélníku místo ohraničení.  
   
- `pUIWindow`  
+ *pUIWindow*  
  Ukazatel rozhraní pro rámce nebo dokumentu okno objekt, jehož ohraničení došlo ke změně.  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  **Hodnota TRUE,** Pokud volá rámec okna [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), jinak **FALSE**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1424,16 +1424,16 @@ virtual HRESULT OnShowContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwID`  
+ *dwID*  
  Identifikátor v místní nabídce, který se má zobrazit. V tématu **IDocHostUIHandler::ShowContextMenu** ve Windows SDK pro seznam hodnot.  
   
- `ppt`  
+ *ppt*  
  Souřadnice obrazovky nabídky.  
   
- `pcmdtReserved`  
+ *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) rozhraní sloužící k dotazování stavu příkazu a spuštění příkazů na tento objekt.  
   
- `pdispReserved`  
+ *pdispReserved*  
  Koordinuje rozhraní IDispatch objektu na obrazovce. To umožňuje hostitele k odlišení konkrétní objekty, které chcete zadat konkrétnější kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1455,19 +1455,19 @@ virtual HRESULT OnShowUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwID`  
+ *dwID*  
  Vyhrazeno pro budoucí použití.  
   
- `pActiveObject`  
+ *pActiveObject*  
  [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) rozhraní objekt aktuálně aktivní.  
   
- `pCommandTarget`  
+ *pCommandTarget*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) rozhraní objektu.  
   
- `pFrame`  
+ *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) rozhraní objektu. To je nutné pro nabídek a panelů nástrojů.  
   
- `pDoc`  
+ *pDoc*  
  [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) rozhraní pro objekt. To je nutné pro panely nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1495,7 +1495,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Řetězec, který obsahuje nový text stavového řádku.  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
@@ -1517,7 +1517,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Nový název dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1545,13 +1545,13 @@ virtual HRESULT OnTranslateAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMsg`  
+ *lpMsg*  
  Odkazuje na zprávu, která může být nutné přeložit.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Příkaz identifikátor skupiny.  
   
- `nCmdID`  
+ *nCmdID*  
  Identifikátor příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1571,13 +1571,13 @@ virtual HRESULT OnTranslateUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwTranslate`  
+ *dwTranslate*  
  Vyhrazeno pro budoucí použití.  
   
- `pchURLIn`  
+ *pchURLIn*  
  Adresa řetězec poskytl aplikace Internet Explorer nebo MSHTML, který představuje adresu URL k převodu.  
   
- `ppchURLOut`  
+ *ppchURLOut*  
  Adresa ukazatele řetězec, který obdrží adresu přeložený adresy URL. Hostitel přiděluje vyrovnávací paměti, pomocí přidělení paměti úlohy. Obsah tohoto parametru by měl být vždy inicializována tak, aby **NULL**i v případě, že adresa URL není přeložit nebo metodu selže.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1607,7 +1607,7 @@ virtual void OnVisible(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bVisible`  
+ *bVisible*  
  Nenulové hodnoty, pokud je objekt viditelný nebo jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1643,11 +1643,11 @@ void PutProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProperty`  
+ *lpszProperty*  
  Řetězec obsahující vlastnost nastavit.  
   
  *vtValue*  
- Nová hodnota vlastnosti indikován `lpszProperty`.  
+ Nová hodnota vlastnosti indikován *lpszProperty*.  
   
  *lpszPropertyName*  
  Ukazatel na řetězec obsahující název vlastnosti, které chcete nastavit.  
@@ -1655,13 +1655,13 @@ void PutProperty(
  *dValue*  
  Nová hodnota vlastnosti.  
   
- `lValue`  
+ *lValue*  
  Nová hodnota vlastnosti.  
   
- `lpszValue`  
+ *lpszValue*  
  Ukazatel na řetězec obsahující nová hodnota vlastnosti.  
   
- `nValue`  
+ *nHodnota*  
  Nová hodnota vlastnosti.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1679,17 +1679,17 @@ HRESULT QueryFormsCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCommandID`  
+ *dwCommandID*  
  Identifikátor příkazu, která je dotazována pro.  
   
  *pbSupported*  
- Ukazatel na **BOOL** v případě zadání příkazu (identifikovaný `dwCommandID`) je podporováno. V případě hodnoty TRUE je podporována příkaz; jinak hodnota FALSE.  
+ Ukazatel na **BOOL** v případě zadání příkazu (identifikovaný *dwCommandID*) je podporováno. V případě hodnoty TRUE je podporována příkaz; jinak hodnota FALSE.  
   
- `pbEnabled`  
- Ukazatel na **BOOL** v případě zadání příkazu (identifikovaný `dwCommandID`) je povoleno. V případě hodnoty TRUE je podporována příkaz; jinak hodnota FALSE.  
+ *pbEnabled*  
+ Ukazatel na **BOOL** v případě zadání příkazu (identifikovaný *dwCommandID*) je povoleno. V případě hodnoty TRUE je podporována příkaz; jinak hodnota FALSE.  
   
  *pbChecked*  
- Ukazatel na **BOOL** v případě zadání příkazu (identifikovaný `dwCommandID`) je zaškrtnuté. V případě hodnoty TRUE je podporována příkaz; jinak hodnota FALSE.  
+ Ukazatel na **BOOL** v případě zadání příkazu (identifikovaný *dwCommandID*) je zaškrtnuté. V případě hodnoty TRUE je podporována příkaz; jinak hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu. Úplný seznam možných hodnot, naleznete v [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) ve Windows SDK.  
@@ -1705,7 +1705,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) hodnota příkazu, pro niž je volající informace o stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1736,7 +1736,7 @@ void Refresh2(int nLevel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLevel`  
+ *nLevel*  
  Adresa proměnnou zadání úroveň aktualizace. Možné proměnné jsou definovány v [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1752,7 +1752,7 @@ void SetAddressBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty zobrazíte adresa; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1766,7 +1766,7 @@ void SetFullScreen(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty pro režim celé obrazovky; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1782,7 +1782,7 @@ void SetHeight(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewValue`  
+ *nNewValue*  
  Výška v pixelech hlavního okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1796,7 +1796,7 @@ void SetLeft(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewValue`  
+ *nNewValue*  
  Souřadnice obrazovky je levý okraj hlavního okna.  
   
 ##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar  
@@ -1807,7 +1807,7 @@ void SetMenuBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty zobrazíte řádek nabídek. jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1821,7 +1821,7 @@ void SetOffline(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty ke čtení z místní mezipaměti; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1837,7 +1837,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Určuje, zda aplikace Internet Explorer je registrována jako nejvyšší úrovně prohlížeče. Pokud nenulové hodnoty, webový prohlížeč je zaregistrován jako nejvyšší úrovně prohlížeč; Pokud nula, není nejvyšší úrovně prohlížeče. Výchozí hodnota je nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1853,7 +1853,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Určuje, zda je zaregistrován ovládacího prvku WebBrowser jako cíle přetažení pro navigaci. Pokud je nenulový, objekt je registrován jako cíle přetažení; Pokud nula, není cíle přetažení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1867,7 +1867,7 @@ void SetSilent(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Pokud je nenulový, dialogová okna se nezobrazí; Pokud nula, zobrazí se dialogová okna. Výchozí hodnota je nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1881,7 +1881,7 @@ void SetStatusBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty, pokud je zobrazen; stavový řádek jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1895,7 +1895,7 @@ void SetTheaterMode(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty pro nastavení ovládacího prvku WebBrowser do režimu celé obrazovky; jinak hodnota nula. Výchozí hodnota je nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1911,7 +1911,7 @@ void SetToolBar(int nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewValue`  
+ *nNewValue*  
  Označuje, jestli se má zobrazit panelu nástrojů. Nenulové hodnoty, pokud je panel nástrojů, který se má zobrazit; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1925,7 +1925,7 @@ void SetTop(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewValue`  
+ *nNewValue*  
  Souřadnice obrazovky jsou horní okraje hlavního okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1939,7 +1939,7 @@ void SetVisible(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  Nenulové hodnoty, pokud je ovládací prvek viditelný; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1953,7 +1953,7 @@ void SetWidth(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewValue`  
+ *nNewValue*  
  Šířka v pixelech hlavní okno Internet Exploreru.  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  

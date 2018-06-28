@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f492e7fc3e29c74caba7303179b72c5dacad72e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377119"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040685"
 ---
 # <a name="coledocument-class"></a>COleDocument – třída
 Základní třída pro OLE dokumenty, které podporují úpravy s náhledem.  
@@ -119,15 +119,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|Voláno rámcem aktualizovat příkaz uživatelského rozhraní pro položku nabídky vložení.|  
   
 ## <a name="remarks"></a>Poznámky  
- `COleDocument` je odvozený od **CDocument**, což umožňuje vaší aplikace rozhraní OLE používat architektuře dokument/zobrazení poskytované knihovny Microsoft Foundation Class.  
+ `COleDocument` je odvozený od `CDocument`, což umožňuje vaší aplikace rozhraní OLE používat architektuře dokument/zobrazení poskytované knihovny Microsoft Foundation Class.  
   
  `COleDocument` zpracovává dokumentu jako kolekce [CDocItem](../../mfc/reference/cdocitem-class.md) objekty zpracování položek OLE. Kontejner a serverové aplikace vyžadují takové architekturu, protože své dokumenty musí být schopen obsahovat OLE – položky. [COleServerItem](../../mfc/reference/coleserveritem-class.md) a [COleClientItem](../../mfc/reference/coleclientitem-class.md) třídy, i odvozený od `CDocItem`, Správa interakcí mezi aplikacemi a OLE – položky.  
   
- Pokud píšete aplikace jednoduché kontejneru, odvozena třídě dokumentu z `COleDocument`. Pokud píšete kontejneru aplikace, která podporuje propojování vložené položky obsažený v jeho dokumenty, odvozena třídě dokumentu z [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Pokud píšete serveru aplikace nebo kombinaci typu server/kontejner odvozena třídě dokumentu z [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` a `COleServerDoc` jsou odvozeny od `COleDocument`, takže tyto třídy dědí všechny služby k dispozici v `COleDocument` a **CDocument**.  
+ Pokud píšete aplikace jednoduché kontejneru, odvozena třídě dokumentu z `COleDocument`. Pokud píšete kontejneru aplikace, která podporuje propojování vložené položky obsažený v jeho dokumenty, odvozena třídě dokumentu z [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Pokud píšete serveru aplikace nebo kombinaci typu server/kontejner odvozena třídě dokumentu z [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` a `COleServerDoc` jsou odvozeny od `COleDocument`, takže tyto třídy dědí všechny služby k dispozici v `COleDocument` a `CDocument`.  
   
  Chcete-li použít `COleDocument`, odvození třídy z něj a přidá funkce pro správu aplikace jiných než OLE data a také vložené nebo propojené položky. Pokud definujete `CDocItem`-odvozených třídách k uložení dat nativní aplikace, můžete použít výchozí implementace definované `COleDocument` k uložení OLE a jiných než OLE data. Můžete taky navrhnout vlastní datové struktury pro ukládání dat jiných než OLE odděleně od položky OLE. Další informace najdete v článku [kontejnery: složené soubory](../../mfc/containers-compound-files.md)...  
   
- **CDocument** podporuje odesílání vašeho dokumentu prostřednictvím e-mailu, pokud je k dispozici podporu pošty (MAPI). `COleDocument` byl aktualizován [onfilesendmail –](#onfilesendmail) správně zpracovat složené dokumenty. Další informace najdete v článcích [MAPI](../../mfc/mapi.md) a [Podpora MAPI v MFC](../../mfc/mapi-support-in-mfc.md)...  
+ `CDocument` podporuje odesílání vašeho dokumentu prostřednictvím e-mailu, pokud je k dispozici podporu pošty (MAPI). `COleDocument` byl aktualizován [onfilesendmail –](#onfilesendmail) správně zpracovat složené dokumenty. Další informace najdete v článcích [MAPI](../../mfc/mapi.md) a [Podpora MAPI v MFC](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -149,7 +149,7 @@ virtual void AddItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na dokument položku přidávanou.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -164,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptd`  
+ *ptd*  
  Ukazatel na **DVTARGETDEVICE** datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může být **NULL**.  
   
- `ppd`  
+ *PPD*  
  Ukazatel na **PRINTDLG** datová struktura, která obsahuje informace o nové tiskové cílové zařízení. Může být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -197,7 +197,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, zda je povoleno podpora složené souborů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -208,14 +208,14 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
  Po podpora složené souborů je povoleno nebo zakázáno pro dokument, neměli byste ji měnit nastavení během doby platnosti dokumentu.  
   
 ##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
- Volání této funkce můžete získat OLE položku, která je aktuálně aktivovat zavedené v rámci okna obsahující zobrazení identifikovaný `pWnd`.  
+ Volání této funkce můžete získat OLE položku, která je aktuálně aktivovat zavedené v rámci okna obsahující zobrazení identifikovaný *pWnd*.  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Ukazatel na okno, které zobrazí dokument kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -229,14 +229,14 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odkaz na **pozice** hodnotu sadu voláním předchozí `GetNextClientItem`; počáteční hodnota je vrácený `GetStartPosition` – členská funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na další položku klienta v dokumentu, nebo **NULL** Pokud neexistují žádné další položky klienta.  
   
 ### <a name="remarks"></a>Poznámky  
- Po každé volání hodnota `pos` je nastaven pro další položky v dokumentu, který může nebo nemusí být položku klienta.  
+ Po každé volání hodnotu *pos* je nastaven pro další položky v dokumentu, který může nebo nemusí být položku klienta.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
@@ -249,14 +249,14 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odkaz na **pozice** hodnotu sadu voláním předchozí `GetNextItem`; počáteční hodnota je vrácený `GetStartPosition` – členská funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na dokument položky na zadané pozici.  
   
 ### <a name="remarks"></a>Poznámky  
- Po každé volání hodnotu `pos` je nastaven na **pozice** hodnota další položky v dokumentu. Pokud je načtený element posledním prvkem v dokumentu, nová hodnota `pos` je **NULL**.  
+ Po každé volání hodnotu *pos* je nastaven na **pozice** hodnota další položky v dokumentu. Pokud je načtený element posledním prvkem v dokumentu, nová hodnota *pos* je **NULL**.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
@@ -269,14 +269,14 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odkaz na **pozice** hodnotu sadu voláním předchozí `GetNextServerItem`; počáteční hodnota je vrácený `GetStartPosition` – členská funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na další položku serveru v dokumentu, nebo **NULL** Pokud neexistují žádné další položky serveru.  
   
 ### <a name="remarks"></a>Poznámky  
- Po každé volání hodnota `pos` je nastaven pro další položky v dokumentu, který může nebo nemusí být položku serveru.  
+ Po každé volání hodnotu *pos* je nastaven pro další položky v dokumentu, který může nebo nemusí být položku serveru.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
@@ -289,7 +289,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pView`  
+ *pView*  
  Ukazatel na objekt active zobrazení zobrazení dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -366,7 +366,7 @@ afx_msg void OnFileSendMail();
 ### <a name="remarks"></a>Poznámky  
  `OnFileSendMail` volání `OnSaveDocument` k serializaci (bez názvu a upravené dokumenty do dočasného souboru, která se pak posílají pomocí e-mailové Uložit). Pokud dokument byl změněn, není potřeba dočasný soubor; Původní se odesílají. `OnFileSendMail` načte MAPI32. Knihovny DLL, pokud již nebyla načtena.  
   
- Na rozdíl od implementace `OnFileSendMail` pro **CDocument**, tato funkce zpracovává složené soubory správně.  
+ Na rozdíl od implementace `OnFileSendMail` pro `CDocument`, tato funkce zpracovává složené soubory správně.  
   
  Další informace najdete v tématu [MAPI témata](../../mfc/mapi.md) a [Podpora MAPI v MFC](../../mfc/mapi-support-in-mfc.md) články...  
   
@@ -378,7 +378,7 @@ virtual void OnShowViews(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bVisible`  
+ *bVisible*  
  Určuje, zda dokument má stát viditelný nebo neviditelná.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -392,8 +392,8 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace **povolit** členské funkce `CCmdUI` struktury prostřednictvím `pCmdUI` aktualizace uživatelského rozhraní.  
+ *pCmdUI*  
+ Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace `Enable` členské funkce `CCmdUI` struktury prostřednictvím *pCmdUI* aktualizace uživatelského rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  `OnUpdateEditChangeIcon` aktualizuje uživatelské rozhraní příkazu v závislosti na tom, zda existuje platné ikona v dokumentu. Potlačí tuto funkci můžete změnit chování.  
@@ -406,8 +406,8 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace **povolit** členské funkce `CCmdUI` struktury prostřednictvím `pCmdUI` aktualizace uživatelského rozhraní.  
+ *pCmdUI*  
+ Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace `Enable` členské funkce `CCmdUI` struktury prostřednictvím *pCmdUI* aktualizace uživatelského rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Počínaje první OLE položky v dokumentu, `OnUpdateEditLinksMenu` přistupuje k jednotlivých položek, testuje, zda položka je odkaz a pokud je odkaz, umožňuje příkaz propojení. Potlačí tuto funkci můžete změnit chování.  
@@ -420,8 +420,8 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace **povolit** členské funkce `CCmdUI` struktury prostřednictvím `pCmdUI` aktualizace uživatelského rozhraní.  
+ *pCmdUI*  
+ Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace `Enable` členské funkce `CCmdUI` struktury prostřednictvím *pCmdUI* aktualizace uživatelského rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  `OnUpdateObjectVerbMenu` aktualizace *ObjectName* příkazu uživatelské rozhraní v závislosti na tom, zda existuje platný objekt v dokumentu. Pokud objekt existuje, *ObjectName* příkaz v nabídce Upravit je povolen. Pokud je vybraný tento příkaz nabídky, zobrazí se příkaz podnabídky. Příkaz podnabídky obsahuje všechny příkazy příkaz k dispozici pro objekt, jako jsou úpravy, vlastnosti a tak dále. Potlačí tuto funkci můžete změnit chování.  
@@ -434,8 +434,8 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace **povolit** členské funkce `CCmdUI` struktury prostřednictvím `pCmdUI` aktualizace uživatelského rozhraní.  
+ *pCmdUI*  
+ Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace `Enable` členské funkce `CCmdUI` struktury prostřednictvím *pCmdUI* aktualizace uživatelského rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Příkaz nabídky Vložit jinak povolená nebo zakázaná v závislosti na tom, zda položka lze vložit do dokumentu nebo ne.  
@@ -448,8 +448,8 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace **povolit** členské funkce `CCmdUI` struktury prostřednictvím `pCmdUI` aktualizace uživatelského rozhraní.  
+ *pCmdUI*  
+ Ukazatel na `CCmdUI` struktura, která představuje v nabídce, která vygenerovala příkaz update. Volání obslužné rutiny aktualizace `Enable` členské funkce `CCmdUI` struktury prostřednictvím *pCmdUI* aktualizace uživatelského rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Příkaz nabídky Paste a tlačítko povolených a zakázaných v závislosti na tom, zda položka lze vložit do dokumentu nebo ne.  
@@ -462,7 +462,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na položku dokumentu odeberou.  
   
 ### <a name="remarks"></a>Poznámky  

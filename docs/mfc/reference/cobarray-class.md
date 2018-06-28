@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377911"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040204"
 ---
 # <a name="cobarray-class"></a>CObArray – třída
 Podporuje pole `CObject` ukazatele.  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  Stejně jako u pole C, čas přístupu `CObArray` indexované element konstantní a je nezávislý na velikost pole.  
   
- `CObArray` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud pole `CObject` ukazatele je uložen do archivu s operátorem přetížené vložení nebo s `Serialize` členské funkce se každý `CObject` element je, pak serializovat společně s jeho index pole.  
+ `CObArray` zahrnuje implement_serial – makro pro podporu serializace a vypsání jejích elementů. Pokud pole `CObject` ukazatele je uložen do archivu s operátorem přetížené vložení nebo s `Serialize` členské funkce se každý `CObject` element je, pak serializovat společně s jeho index pole.  
   
  Pokud potřebujete výpis individuální `CObject` prvků v poli, je nutné nastavit hloubka `CDumpContext` objekt, který má 1 nebo vyšší.  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  Pole odvození třídy je podobná odvození seznamu. Podrobnosti o odvození třídy speciální seznamu, najdete v článku [kolekce](../../mfc/collections.md).  
   
 > [!NOTE]
->  Je nutné použít `IMPLEMENT_SERIAL` makro k implementaci vaší odvozené třídy, pokud chcete serializovat pole.  
+>  Implement_serial – makro musíte použít k implementaci odvozené třídy, pokud chcete serializovat pole.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newElement`  
+ *newElement*  
  `CObject` Ukazatele, který se má přidat do tohoto pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index přidaný prvek.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud [SetSize](#setsize) je použito `nGrowBy` mohou být přiděleny hodnotu větší než 1, pak paměť navíc. Horní mez však bude zvýšit pouze 1.  
+ Pokud [SetSize](#setsize) je použito *nGrowBy* mohou být přiděleny hodnotu větší než 1, pak paměť navíc. Horní mez však bude zvýšit pouze 1.  
   
  Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::Add`.  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Poznámky  
  Pole musí být stejného typu.  
   
- V případě potřeby **připojení** může přidělit paměť navíc, aby dokázala pojmout elementy k poli.  
+ V případě potřeby `Append` může přidělit paměť navíc, aby dokázala pojmout elementy k poli.  
   
  Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::Append`.  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  Zdroj elementy zkopírovány do pole.  
   
 ### <a name="remarks"></a>Poznámky  
- **Kopírování** není uvolnit paměť, nicméně v případě potřeby **kopie** může přidělit paměť navíc, aby dokázala pojmout elementů zkopírovaných do pole.  
+ `Copy` není volné paměti. Nicméně, v případě potřeby `Copy` může přidělit paměť navíc, aby dokázala pojmout elementů zkopírovaných do pole.  
   
  Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::Copy`.  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `GetUpperBound`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `GetUpperBound`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který může být větší než hodnoty vrácené `GetUpperBound`.  
   
- `newElement`  
- `CObject` Ukazatel umístit do tohoto pole. A `newElement` hodnoty **NULL** je povolen.  
+ *newElement*  
+ `CObject` Ukazatel umístit do tohoto pole. A *newElement* hodnoty **NULL** je povolen.  
   
- `nCount`  
+ *nCount*  
  Počet, který tento element musí být vložen (výchozí hodnota je 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Celé číslo index, který může být větší než hodnoty vrácené `GetUpperBound`.  
   
- `pNewArray`  
+ *pNewArray*  
  Další pole, které obsahuje prvky, který se má přidat do tohoto pole.  
   
 ### <a name="remarks"></a>Poznámky  
  První verze součásti `InsertAt` Vloží jednu elementu (nebo více kopií elementu) na zadaný index v poli. V procesu posune (podle zvyšování index) existující element v indexu a posune až všechny elementy nad ním.  
   
- Druhá verze vloží všechny elementy z jiné `CObArray` kolekce, začínající `nStartIndex` pozici.  
+ Druhá verze vloží všechny elementy z jiné `CObArray` kolekce, začínající *nStartIndex* pozici.  
   
  `SetAt` Funkce, naproti tomu nahrazuje jeden element zadané pole a není posunutí žádné elementy.  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `GetUpperBound`.  
   
- `nCount`  
+ *nCount*  
  Počet elementů k odebrání.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `GetUpperBound`.  
   
- `newElement`  
+ *newElement*  
  Ukazatel objekt, který má být vložen do tohoto pole. A **NULL** je povolena hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0.  
   
- `newElement`  
+ *newElement*  
  Ukazatel objektu, který má být přidán do tohoto pole. A **NULL** je povolena hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewSize`  
+ *nNewSize*  
  Novou velikost pole (počet elementů). Musí být větší než nebo rovna 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Minimální počet element sloty přidělit, pokud je nutné zvýšit velikost.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud novou velikost je menší než původní velikost, se zkrátí pole a vydání všechny nepoužívané paměti. Efektivitu, volání `SetSize` k nastavení velikosti pole před jeho použitím. Tím se zabrání potřeba znovu přidělte a zkopírujte pole pokaždé, když je položka přidána.  
   
- `nGrowBy` Parametr ovlivňuje přidělení interní paměť, když se pole zvětšuje. Jeho použití nikdy ovlivňuje velikost pole, podle `GetSize` a `GetUpperBound`.  
+ *NGrowBy* parametr ovlivňuje přidělení interní paměť, když se pole zvětšuje. Jeho použití nikdy ovlivňuje velikost pole, podle `GetSize` a `GetUpperBound`.  
   
  Pokud se zvětšil velikost pole, přiděleny všechny nově **CObject \***  ukazatele jsou nastaveny na hodnotu NULL.  
   

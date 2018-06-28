@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366880"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040971"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile – třída
 Poskytuje funkce pro vyhledání a přečtení souborů na gopher serveru.  
@@ -46,7 +46,7 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|Vytvoří `CGopherFile` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Službu gopher neumožňuje uživatelům zapsat data do souboru gopher, protože tato služba funguje především jako nabídkou řízený rozhraní pro vyhledávání informací. `CGopherFile` Členské funkce **zápisu**, `WriteString`, a `Flush` nejsou implementované pro `CGopherFile`. Volání na tyto funkce `CGopherFile` objektu, vrátí [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Službu gopher neumožňuje uživatelům zapsat data do souboru gopher, protože tato služba funguje především jako nabídkou řízený rozhraní pro vyhledávání informací. `CGopherFile` Členské funkce `Write`, `WriteString`, a `Flush` nejsou implementované pro `CGopherFile`. Volání na tyto funkce `CGopherFile` objektu, vrátí [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
  Další informace o tom, `CGopherFile` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
+ *hfile –*  
  Popisovač pro `HINTERNET` souboru.  
   
- `refLocator`  
+ *refLocator*  
  Odkaz na [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objektu.  
   
- `pConnection`  
+ *pConnection*  
  Ukazatel [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objektu.  
   
- `hSession`  
+ *hSession*  
  Popisovač pro aktuální relaci Internet.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Ukazatel na řetězec používaná k nalezení gopher serveru. V tématu [Gopher relací](cgopherlocator-class.md) Další informace o gopher lokátory.  
   
  *dwLocLen*  
- DWORD, který obsahuje počet bajtů v `pstrLocator`.  
+ DWORD, který obsahuje počet bajtů v *pstrLocator*.  
   
- `dwContext`  
+ *dwContext*  
  Ukazatel na identifikátor kontextu otevíraný soubor.  
   
 ### <a name="remarks"></a>Poznámky  

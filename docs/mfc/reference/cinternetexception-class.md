@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366893"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037886"
 ---
 # <a name="cinternetexception-class"></a>CInternetException – třída
 Představuje podmínku výjimky související s operace Internetu.  
@@ -76,7 +76,7 @@ CInternetException(DWORD dwError);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwError`  
+ *dwError*  
  Chyba, která způsobila výjimku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -90,7 +90,7 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Identifikátor kontextu je byl původně specifikován v [CInternetSession](../../mfc/reference/cinternetsession-class.md) a předaná MFC k [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- a [CInternetFile](../../mfc/reference/cinternetfile-class.md)-odvozených třídách. Můžete přepsat toto výchozí nastavení a přiřazení některého `dwContext` parametr hodnotu dle vlastního výběru. `dwContext` je přidružen k žádné operace daného objektu. `dwContext` identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ Identifikátor kontextu je byl původně specifikován v [CInternetSession](../../mfc/reference/cinternetsession-class.md) a předaná MFC k [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- a [CInternetFile](../../mfc/reference/cinternetfile-class.md)-odvozených třídách. Můžete přepsat toto výchozí nastavení a přiřazení některého *dwContext* parametr hodnotu dle vlastního výběru. *dwContext* souvisí s všechny operace daného objektu. *dwContext* identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  Chyba, která způsobila výjimku.  

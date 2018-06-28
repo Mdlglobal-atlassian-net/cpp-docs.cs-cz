@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371361"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037608"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter – třída
 Spravuje souběžnosti vyžaduje interakci aplikace rozhraní OLE.  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  `BeginBusyState` a `EndBusyState` volání zvýší a sníží, čítač, který určuje, zda je zaneprázdněn. Například dvě volání `BeginBusyState` a jedno volání `EndBusyState` stále výsledek v zaneprázdněn stavu. Zrušit zaneprázdněn stavu, je nutné volat `EndBusyState` stejný počet `BeginBusyState` byla volána.  
   
- Ve výchozím nastavení, zadá rozhraní zaneprázdněn stavu během zpracování při nečinnosti, která se provádí pomocí [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Když aplikace zpracovává **ON_COMMANDUPDATEUI** oznámení, příchozí volání zpracovává později, po dokončení zpracování při nečinnosti.  
+ Ve výchozím nastavení, zadá rozhraní zaneprázdněn stavu během zpracování při nečinnosti, která se provádí pomocí [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Když aplikace zpracovává ON_COMMANDUPDATEUI oznámení, příchozí volání zpracovává později, po dokončení zpracování při nečinnosti.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Vytvoří `COleMessageFilter` objektu.  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  `BeginBusyState` a `EndBusyState` volání zvýší a sníží, čítač, který určuje, zda je zaneprázdněn. Například dvě volání `BeginBusyState` a jedno volání `EndBusyState` stále výsledek v zaneprázdněn stavu. Zrušit zaneprázdněn stavu, je nutné volat `EndBusyState` stejný počet `BeginBusyState` byla volána.  
   
- Ve výchozím nastavení, zadá rozhraní zaneprázdněn stavu během zpracování při nečinnosti, která se provádí pomocí [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Když aplikace zpracovává `ON_UPDATE_COMMAND_UI` oznámení, příchozí volání zpracovává po dokončení zpracování při nečinnosti.  
+ Ve výchozím nastavení, zadá rozhraní zaneprázdněn stavu během zpracování při nečinnosti, která se provádí pomocí [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Když aplikace zpracovává on_update_command_ui – oznámení, jsou zpracovávány příchozí volání po dokončení zpracování při nečinnosti.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Voláno rámcem zpracování zpráv, když probíhá volání OLE.  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMsg`  
+ *pMsg*  
  Ukazatel na čeká na zprávu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Při čekání na dokončení volání je volající aplikace, volá framework `OnMessagePending` pomocí ukazatele na čeká na zprávu. Ve výchozím nastavení, odešle zprávu rozhraní `WM_PAINT` zpráv, tak, aby okno aktualizace může dojít během volání, která trvá dlouhou dobu.  
+ Při čekání na dokončení volání je volající aplikace, volá framework `OnMessagePending` pomocí ukazatele na čeká na zprávu. Ve výchozím nastavení odešle rozhraní WM_PAINT zprávy, tak, aby okno aktualizace může dojít během volání, která trvá dlouhou dobu.  
   
  Je nutné zaregistrovat vaše filtr zpráv prostřednictvím volání [zaregistrovat](#register) může stát aktivní.  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTimeout`  
+ *nČasový limit*  
  Počet milisekund pro zpoždění čeká na zprávu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRetryReply`  
+ *nRetryReply*  
  Počet milisekund mezi opakovanými pokusy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  Odpověď volajícího se řídí funkce `SetRetryReply` a [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Určuje, jak dlouho má volající aplikace čekat mezi opakovanými pokusy pro danou volání. `SetMessagePendingDelay` Určuje, jak dlouho je volající aplikace čeká na odpověď od serveru před provedením další akce.  
   
- Obvykle výchozí hodnoty jsou přijatelné a není potřeba změnit. Rozhraní framework opakování volání každých `nRetryReply` milisekundách dokud prochází volání nebo zpoždění čeká na zprávu vypršela. Hodnota 0 pro `nRetryReply` určuje okamžitou opakování a - 1 znamená zrušení volání.  
+ Obvykle výchozí hodnoty jsou přijatelné a není potřeba změnit. Rozhraní framework opakování volání každých *nRetryReply* milisekundách dokud prochází volání nebo zpoždění čeká na zprávu vypršela. Hodnota 0 pro *nRetryReply* určuje okamžitou opakování a - 1 znamená zrušení volání.  
   
  Pokud vypršela platnost zpoždění čeká na zprávu, OLE "zaneprázdněn dialogových oken" (viz [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)), zobrazí se uživateli můžete vybrat možnost zrušení nebo volání opakovat. Volání [EnableBusyDialog](#enablebusydialog) k povolení nebo zakázání tohoto dialogového okna.  
   

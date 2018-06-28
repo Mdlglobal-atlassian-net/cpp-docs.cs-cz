@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378489"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039307"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase – třída
 Představuje komponentu úprav HTML.  
@@ -391,7 +391,7 @@ HRESULT AddToGlyphTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szTag`  
+ *szTag*  
  Název značky (například "P" nebo "tabulka").  
   
  *szImgUrl*  
@@ -444,7 +444,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID ovládacího prvku tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -461,7 +461,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID ovládací prvek zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -530,7 +530,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID ovládacího prvku rozevíracího seznamu výběru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -571,10 +571,10 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  ID příkazu, který má být proveden. Seznam najdete v tématu [identifikátory příkazů MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
- `cmdExecOpt`  
+ *cmdExecOpt*  
  Hodnoty, které jsou převzaty z [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) výčtu, které popisují, jak by měla objekt spustit příkaz.  
   
  *pInVar*  
@@ -613,7 +613,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud je vlastnost pozice elementu nastavena na "absolutní."  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -630,7 +630,7 @@ HRESULT GetBackColor(int& nColor) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColor`  
+ *nColor*  
  Barva pozadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -698,7 +698,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppDoc`  
+ *ppDoc*  
  Objekt dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -712,7 +712,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szHTML`  
+ *szHTML*  
  Kód HTML.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -740,7 +740,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppEventObj`  
+ *ppEventObj*  
  Objekt události.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -768,14 +768,14 @@ HRESULT GetFontFace(CString& strFace) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strFace`  
+ *strFace*  
  Název písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud aktuální výběr používá více než jeden písma `strFace` bude prázdný řetězec.  
+ Pokud aktuální výběr používá více než jeden písma *strFace* bude prázdný řetězec.  
   
  Tato metoda odesílá [ID příkazu IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) do ovládacího prvku WebBrowser.  
   
@@ -787,7 +787,7 @@ HRESULT GetFontSize(short& nSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSize`  
+ *nSize*  
  Velikost písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -804,7 +804,7 @@ HRESULT GetForeColor(int& nColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColor`  
+ *nColor*  
  Barvu popředí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -848,7 +848,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud se zobrazí glyf pro všechny elementy, které mají **styleFloat** vlastnost; NEPRAVDA, pokud se zobrazí žádné glyfů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -865,7 +865,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazuje glyfy zobrazíte umístění všechny značky v dokumentu; hodnotu false, pokud neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -882,7 +882,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazí glyf oblasti značky, false. Pokud není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -899,7 +899,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazí glyf Brazílie značky, false, pokud nepodporuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -916,7 +916,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazí glyf značky pro komentáře, false, pokud nepodporuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -933,7 +933,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  True, pokud WebBrowser zobrazí všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0, false, pokud neexistuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -950,7 +950,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazí glyf všechny značky skriptu false. Pokud není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -967,7 +967,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazí glyf všechny styl značky, false, pokud je nepoužívá  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -984,7 +984,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCurValue`  
+ *bCurValue*  
  Hodnota TRUE, pokud WebBrowser zobrazí glyf všechny neznámé značky, false, pokud je nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1018,7 +1018,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szUrl`  
+ *szUrl*  
  Adresu URL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1035,7 +1035,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szData`  
+ *szData*  
  Řetězec, který se má vložit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1052,7 +1052,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro vložené rámce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1069,7 +1069,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szUrl`  
+ *szUrl*  
  Název a cesta k souboru bitové kopie má být vložen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1099,7 +1099,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1116,7 +1116,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1133,7 +1133,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro skrytý ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1150,7 +1150,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1167,7 +1167,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek heslo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1184,7 +1184,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek resetování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1201,7 +1201,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek odeslání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1218,7 +1218,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek pro uložení souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1235,7 +1235,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bValue`  
+ *bValue*  
  Hodnota TRUE, pokud se element nachází staticky umístěného, false, jinak hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1252,7 +1252,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bValue`  
+ *bValue*  
  Hodnota TRUE, pokud se element nachází absolutně umístěného, false, jinak hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1321,7 +1321,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro ovládací prvek seznam.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1338,7 +1338,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1365,7 +1365,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro uspořádaného seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1395,7 +1395,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID pro odstavce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1427,7 +1427,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  Cesta k tisku šablonu; Pokud není zadaný žádný, je použita výchozí tiskové šablona.  
   
  *bShowPrintDialog*  
@@ -1448,7 +1448,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  Cesta k tisku šablony.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1465,11 +1465,11 @@ long QueryStatus(long cmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  ID příkazu. Identifikátory příkazů jsou převzaty z `CGID_MSHTML` skupina příkazu. Tyto příkazy jsou definovány v Mshtmcid.h. Můžete také získat seznamu online [identifikátory příkazů MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) označující stav `cmdID`, nebo 0 při selhání.  
+ Vrátí [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) označující stav *cmdID*, nebo 0 při selhání.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Přepíše ovládací prvek přepínač na aktuální výběr.  
@@ -1479,7 +1479,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID přepínač.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1522,7 +1522,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szPath`  
+ *szPath*  
  Název a cesta k souboru do kterého se mají uložit webové stránky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1552,7 +1552,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true absolutně umístěného elementy lze přesunout přetažením.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1569,7 +1569,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true, vlastnost pozice elementu je "absolutní;" Pokud je hodnota false, je "statická".  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1586,7 +1586,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true bude lze vybrat pouze jako jednotku libovolný element, který má atribut ATOMICSELECTION nastavit na hodnotu TRUE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1603,7 +1603,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true je povoleno automatické zjišťování adresy URL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1621,11 +1621,11 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColor`  
- Barva. V tématu `pvaIn` v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ *nColor*  
+ Barva. V tématu *pvaIn* v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
- `szColor`  
- Barva. V tématu `pvaIn` v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ *szColor*  
+ Barva. V tématu *pvaIn* v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
@@ -1641,7 +1641,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szFormat`  
+ *szFormat*  
  Formát značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1675,7 +1675,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLevel`  
+ *nLevel*  
  Úroveň šablon stylů CSS. Předejte 0, pokud nechcete, aby podporu šablon stylů CSS.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1714,10 +1714,10 @@ HRESULT SetDefaultComposeSettings(
  *bBold*  
  Předá hodnotu true pro tučně.  
   
- `bItalic`  
+ *bItalic*  
  Předá hodnotu true pro text kurzívou.  
   
- `bUnderline`  
+ *bUnderline*  
  Předá hodnotu true pro podtržený text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1734,7 +1734,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bMode`  
+ *bMode*  
  V případě hodnoty true zapne režimu návrhu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1748,7 +1748,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true, zakáže šrafované ohraničení a zpracovává kolem Volitelný element lokality Pokud element má "upravit fokusu" v režimu návrhu; To znamená, když text nebo obsah elementu se dá upravit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1765,7 +1765,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szHTML`  
+ *szHTML*  
  Kód HTML.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1779,7 +1779,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szFace`  
+ *szFace*  
  Název písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1796,7 +1796,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
+ *Velikost*  
  Velikost písma HTML (1-7). Hodnota 0 nastaví velikost písma na 1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1814,10 +1814,10 @@ HRESULT SetForeColor(int nColor) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szColor`  
+ *szColor*  
  Barva.  
   
- `nColor`  
+ *nColor*  
  Barva.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1834,7 +1834,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true všechny operace vložení jsou kompatibilní s Internet Explorer 5. Pokud je hodnota false, jsou kompatibilní s Internet Explorer 5.5 operace vkládání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1851,7 +1851,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true způsobí, že WebBrowser aktualizovat vzhled elementu nepřetržitě během operace změny velikosti nebo přesunutí; Pokud je hodnota false, aktualizuje jenom po dokončení přesunu nebo změny velikosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1868,7 +1868,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true umožňuje výběr více než jeden element lze vybrat lokalitu v době, kdy uživatel obsahuje dolů kláves SHIFT nebo CTRL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1885,7 +1885,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true WebBrowser nezmění ukazatel myši.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1902,7 +1902,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bMode`  
+ *bMode*  
  V případě hodnoty true je přepsat režimu zadávání textu; Pokud je hodnota false, režim zadávání textu je insert.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1919,7 +1919,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true všechny elementy, které mají viditelnost nastaven na "skrytá" nebo zobrazení vlastností nastavenou na "žádný" se nezobrazí v režimu návrhu a procházecí režim; Když má hodnotu false, zobrazí se pouze v režimu procházení těchto elementů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1936,7 +1936,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf všechny elementy, které mají **styleFloat** vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1953,7 +1953,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyfů zobrazíte umístění všechny značky v dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1970,7 +1970,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf pro všechny oblasti značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1987,7 +1987,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf všechny Brazílie značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2004,7 +2004,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf všechny značky pro komentáře.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2021,7 +2021,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true, zobrazí se všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2038,7 +2038,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf všechny značky skriptu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2055,7 +2055,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf všechny styl značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2072,7 +2072,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bNewValue`  
+ *bNewValue*  
  V případě hodnoty true zobrazí glyf všechny neznámé značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2089,7 +2089,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID víceřádkový text vstupního ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2106,7 +2106,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID ovládacího prvku text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2162,7 +2162,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szId`  
+ *szId*  
  ID neuspořádaného seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

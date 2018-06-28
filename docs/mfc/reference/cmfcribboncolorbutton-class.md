@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa188930f6fe80d26282252ef3aae875aa19922f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bc3b4be5b7b5a6168287135511f3f401203a7e2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372557"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037912"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton – třída
 `CMFCRibbonColorButton` Třída implementuje tlačítko barev, které můžete přidat na pásu karet na řádek. Na pásu karet tlačítko barev zobrazí rozevírací nabídce, která obsahuje jeden nebo více palety barev.  
@@ -128,13 +128,13 @@ void AddColorsGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszName`  
+ [v] *lpszName*  
  Název skupiny.  
   
- [v] `lstColors`  
+ [v] *lstColors*  
  Seznam barev.  
   
- [v] `bContiguousColumns`  
+ [v] *bContiguousColumns*  
  Ovládací prvky zobrazení barvu položky ve skupině. Pokud `TRUE`, barvu položky jsou vykreslovány bez svislé mezery. Pokud `FALSE`, barvu položky jsou vykreslovány s svislé mezery.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -164,22 +164,22 @@ CMFCRibbonColorButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  Určuje ID příkaz příkaz ke spuštění, když uživatel klikne na tlačítko.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Určuje text, který se zobrazí na tlačítko.  
   
- [v] `nSmallImageIndex`  
+ [v] *nSmallImageIndex*  
  Index počítaný od nuly malý obrázek na tlačítko zobrazit.  
   
- [v] `color`  
+ [v] *barev*  
  Barva tlačítko (výchozí černé).  
   
- [v] `bSimpleButtonLook`  
+ [v] *bSimpleButtonLook*  
  Pokud `TRUE`, tlačítko vykreslením jako jednoduchý obdélník.  
   
- [v] `nLargeImageIndex`  
+ [v] *nLargeImageIndex*  
  Index počítaný od nuly velký obrázek na tlačítko zobrazit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -200,22 +200,22 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Popisek pro **automatické** tlačítko.  
   
- [v] `colorAutomatic`  
+ [v] *barvaAutomatická*  
  Hodnotu RGB, která určuje **automatické** tlačítka výchozí barvu.  
   
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Pokud **automatické** tlačítko je dostupné; `FALSE` jestli není zakázaný.  
   
- [v] `lpszToolTip`  
+ [v] *lpszToolTip*  
  Popis **automatické** tlačítko.  
   
- [v] `bOnTop`  
+ [v] *bOnTop*  
  Určuje, zda **automatické** tlačítko je v horní části před paletu barev.  
   
- [v] `bDrawBorder`  
+ [v] *bDrawBorder*  
  `TRUE` Pokud aplikace nevykresluje na pásu karet tlačítko barvu ohraničení pruhu barev. Pruhu barev zobrazí aktuálně vybrané barvy. `FALSE` Pokud aplikace není vykreslení ohraničení  
   
 ##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
@@ -228,10 +228,10 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLabel`  
+ *lpszLabel*  
  Popisek tlačítka.  
   
- `lpszToolTip`  
+ *lpszToolTip*  
  Text popisku pro **jiných** tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -307,7 +307,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
  Barva nastavit.  
   
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
@@ -318,7 +318,7 @@ void SetColorBoxSize(CSize sizeBox);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `sizeBox`  
+ [v] *sizeBox*  
  Novou velikost tlačítka barev palety barev.  
   
 ##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
@@ -331,10 +331,10 @@ static void __stdcall SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
  Hodnota RGB barvy.  
   
- [v] `strName`  
+ [v] *%{strName/*  
  Nový název pro zadaná barva.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -348,7 +348,7 @@ void SetColumns(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nColumns`  
+ [v] *nColumns*  
  Počet barev ikony zobrazíte v jednotlivých řádcích.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -363,10 +363,10 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Text, který se má zobrazit pomocí barev dokumentu.  
   
- [v] `lstColors`  
+ [v] *lstColors*  
  Odkaz na seznam hodnoty RGB.  
   
 ##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPalette`  
+ [v] *pPalette*  
  Ukazatel na paletu barev.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -390,11 +390,11 @@ void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
  Barva vybraná uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
- `CMFCRibbonColorButton::UpdateColor` Metoda změní barvu aktuálně vybrané tlačítko a upozorní nadřazené odesláním `WM_COMMAND` zpráv s `BN_CLICKED` standardní oznámení. Použití [CMFCRibbonColorButton::GetColor](#getcolor) metoda pro načtení vybrané barvy.  
+ `CMFCRibbonColorButton::UpdateColor` Metoda změní barvu aktuálně vybrané tlačítko a upozorní nadřazené odesláním wm_command – zprávy s BN_CLICKED standardní oznámení. Použití [CMFCRibbonColorButton::GetColor](#getcolor) metoda pro načtení vybrané barvy.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

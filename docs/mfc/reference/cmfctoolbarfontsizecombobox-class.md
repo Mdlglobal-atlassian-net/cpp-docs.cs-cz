@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f87dd55373599f8ab8394284a6271930b9fcd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372779"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037506"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox – třída
 Tlačítka panelu nástrojů, který obsahuje prvek pole se seznamem, který umožňuje uživateli vybrat velikost písma.  
@@ -105,7 +105,7 @@ void RebuildFontSizes(const CString& strFontName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] strFontName`  
+ [v] *strFontName*  
  Určuje název písma.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -119,7 +119,7 @@ void SetTwipSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nSize`  
+ [v] *nSize*  
  Určuje velikost písma (v twipech) k nastavení.  
   
 ### <a name="remarks"></a>Poznámky  

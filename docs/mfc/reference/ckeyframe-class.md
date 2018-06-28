@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367182"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038455"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame – třída
 Představuje klíčový snímek animace.  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénář.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Určuje, jestli chcete přidat klíčový snímek nebo přechod rekurzivně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénář.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Určuje, zda chcete přidat rekurzivně přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Ukazatel na scénář.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Určuje, zda chcete-li přidat klíčový tento klíčový snímek závisí na rekurzivní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTransition`  
+ *pTransition*  
  Ukazatel na přechod.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Ukazatel na klíčový snímek.  
   
- `offset`  
+ *Posun*  
  Posun v sekundách, z určeného pKeyframe klíčový snímek.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369346"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040844"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd – třída
 Poskytuje funkci Windows více okna podřízené rozhraní (MDI) dokumentu, společně s členů pro správu okna.  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  Existují tři způsoby, jak vytvořit okna MDI podřízené:  
   
--   Přímo vytvořit pomocí **vytvořit**.  
+-   Přímo vytvořit pomocí `Create`.  
   
 -   Přímo vytvořit pomocí `LoadFrame`.  
   
 -   Nepřímo ho vytvořte pomocí šablony dokumentu.  
   
- Před voláním **vytvořit** nebo `LoadFrame`, je nutné vytvořit objekt oken s rámečkem v haldě pomocí C++ **nové** operátor. Před voláním **vytvořit** budete taky moct registrovat třídu okno s [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámečku.  
+ Před voláním `Create` nebo `LoadFrame`, je nutné vytvořit objekt oken s rámečkem v haldě pomocí C++ **nové** operátor. Před voláním `Create` budete taky moct registrovat třídu okno s [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámečku.  
   
- Použití **vytvořit** – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
+ Použití `Create` – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
   
- `LoadFrame` vyžaduje argumenty méně než **vytvořit**a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Chcete-li být přístupné `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
+ `LoadFrame` vyžaduje argumenty méně než `Create`a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Chcete-li být přístupné `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
   
  Když `CMDIChildWnd` objekt obsahuje zobrazení a dokumenty, jsou nepřímo vytvořené pomocí rozhraní místo přímo z programátorů. `CDocTemplate` Objekt orchestruje vytvoření rámečku, vytvoření obsahující zobrazení a připojení k zobrazení odpovídající dokumentu. Parametry `CDocTemplate` zadejte konstruktor `CRuntimeClass` tří tříd podílejí (dokumentu, rámečkem a zobrazení). A `CRuntimeClass` objekt používají rozhraní dynamicky vytvořit nové rámce při zadané uživatelem (například pomocí souboru nový příkaz nebo nového okna MDI příkazu).  
   
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který pojmenuje třídě Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název zaregistrována [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce. Musí být **NULL** pro standardní `CMDIChildWnd`.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který představuje název okna. Používá jako text záhlaví.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje okno [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributy. **Ws_child –** styl se vyžaduje.  
   
- `rect`  
+ *Rect –*  
  Obsahuje velikost a umístění okna. `rectDefault` Systému Windows zadejte velikost a umístění nového umožní hodnotu `CMDIChildWnd`.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje nadřazený okna. Pokud **NULL**, hlavní okno aplikace se používá.  
   
- `pContext`  
+ *pContext*  
  Určuje [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury. Tento parametr může být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  Aktuálně aktivní okno rámce podřízeného MDI můžete určit titulek nadřazeného rámce okna. Tato funkce je vypnutá vypnutím **fws_addtotitle –** styl bit podřízeného rámce okna.  
   
- Volá rámec této funkce člen v reakci na příkaz uživatele k vytvoření podřízeného okna a používá rozhraní `pContext` parametru správně podřízeného okna připojit k aplikaci. Při volání **vytvořit**, `pContext` může být **NULL**.  
+ Volá rámec této funkce člen v reakci na příkaz uživatele k vytvoření podřízeného okna a používá rozhraní *pContext* parametru správně podřízeného okna připojit k aplikaci. Při volání `Create`, *pContext* může být **NULL**.  
   
 ### <a name="example"></a>Příklad  
  Příklad 1:  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hMenu`  
+ *hMenu*  
  Obslužná rutina nabídky prostředku.  
   
- `hAccel`  
+ *hAccel*  
  Popisovač prostředek akcelerátoru.  
   
 ### <a name="remarks"></a>Poznámky  

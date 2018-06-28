@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368290"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038598"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo – třída
 `CMFCFontInfo` Třída popisuje název a další atributy písma.  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszName`  
+ [v] *lpszName*  
  Název písma. Další informace najdete v tématu `lfFaceName` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [v] `lpszScript`  
+ [v] *lpszScript*  
  Název skriptu (znaková sada) písma.  
   
- [v] `nCharSet`  
+ [v] *nCharSet*  
  Hodnota, která určuje znakovou sadu (skript) písma. Další informace najdete v tématu `lfCharSet` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [v] `nPitchAndFamily`  
+ [v] *nPitchAndFamily*  
  Hodnota, která určuje výšku a řadu písmo. Další informace najdete v tématu `lfPitchAndFamily` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [v] `nType`  
+ [v] *Noznámení*  
  Hodnota, která určuje typ písma. Tento parametr může být bitovou kombinaci (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
   
- [v] `src`  
+ [v] *src*  
  Existující `CMFCFontInfo` objektu, jejíž členové jsou používány k vytváření to `CMFCFontInfo` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu `nCharSet` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *nCharSet* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Hodnota, která určuje výšku (velikost bodu) a (například serif, sans-serif a neproporcionální) řadu písmo.  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu `nPitchAndFamily` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *nPitchAndFamily* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Hodnota, která určuje typ písma.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu `nType` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *Noznámení* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  Název písma: například **Arial**.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu `lpszName` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *lpszName* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  Název znakovou sadu (skript) přidružené k písmo.  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu `lpszScript` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *lpszScript* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

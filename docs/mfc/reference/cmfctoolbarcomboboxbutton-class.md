@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377363"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039190"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton – třída
 Tlačítka panelu nástrojů, který obsahuje prvek pole se seznamem ( [CComboBox – třída](../../mfc/reference/ccombobox-class.md)).  
@@ -138,7 +138,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  2. Vytvořit `CMFCToolBarComboBoxButton` objektu.  
   
- 3. V popisovač zpráv, který zpracovává `AFX_WM_RESETTOOLBAR` zprávy, nahraďte zástupný tlačítko tlačítka Nová pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. V popisovač zpráv, který zpracovává zprávy AFX_WM_RESETTOOLBAR, nahraďte tlačítko fiktivní tlačítka Nová pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad tlačítka panelu nástrojů pole se seznamem najdete příklad projektu VisualStudioDemo.  
   
@@ -168,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszItem`  
+ [v] *lpszItem*  
  Text položky pro přidání do seznamu.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data přidružená k položce přidat do seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -192,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszItem`  
+ [v] *lpszItem*  
  Text položky pro přidání do seznamu.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data přidružená k položce přidat do seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -226,16 +226,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  ID příkazu tlačítko Nový.  
   
- [v] `iImage`  
+ [v] *iImage*  
  Index obrázku přidružený tlačítko nové bitové kopie.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Styl tlačítko Nový.  
   
- [v] `iWidth`  
+ [v] *iWidth*  
  Šířka v pixelech tlačítko Nový.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -263,10 +263,10 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszItem1`  
+ [v] *lpszItem1*  
  První řetězec určený k porovnání  
   
- [v] `lpszItem2`  
+ [v] *lpszItem2*  
  Druhý řetězec určený k porovnání  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -306,10 +306,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel do nadřazeného okna tlačítka.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -326,13 +326,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel do nadřazeného okna tlačítka.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník nové textové pole.  
   
- [v] `dwEditStyle`  
+ [v] *dwEditStyle*  
  Ovládací prvek styl nové textové pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -351,13 +351,13 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky pro odstranění.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data související s položka, která má být odstraněna.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Text položky pro odstranění. Pokud je vybráno více položek se stejný text, první položku, je odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -383,7 +383,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Povolit úpravy a pole se seznamem polí; `FALSE` zakázat polích upravit a pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -397,7 +397,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `menuButton`  
+ [out] *tlačítko nabídky*  
  Odkaz na tlačítka s nabídkou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -411,7 +411,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Text, který chcete vyhledat v rozevíracím seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -429,10 +429,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole se seznamem.  
   
- [v] `bIsFocus`  
+ [v] *bIsFocus*  
  `TRUE` Chcete-li hledat pouze zaměřuje tlačítka; `FALSE` k vyhledání všech tlačítek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -482,7 +482,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -511,7 +511,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -550,7 +550,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index položky v seznamu nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -569,10 +569,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole se seznamem.  
   
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -589,7 +589,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -608,10 +608,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole se seznamem.  
   
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -630,10 +630,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu, který se zobrazí tlačítko pro pole se seznamem.  
   
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -674,7 +674,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole s konkrétní pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -728,7 +728,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hwnd`  
+ [v] *hwnd*  
  Popisovač okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -765,7 +765,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iNotifyCode`  
+ [v] *iNotifyCode*  
  Oznámení, které souvisí s příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -789,13 +789,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko pole se seznamem.  
   
- [v] `sizeDefault`  
+ [v] *sizeDefault*  
  Výchozí velikost tlačítko pole se seznamem.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Stav ukotvení panelu nástrojů nadřazené. `TRUE` Když se panelu nástrojů ukotveno vodorovně a `FALSE` když panelu nástrojů ukotveno svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -809,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel na panelu nástrojů nové nadřazené.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -822,10 +822,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel do nadřazeného okna tlačítka pole se seznamem.  
   
- [v] `bDelay`  
+ [v] *bDelay*  
  Vyhrazené pro použití v odvozené třídě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -841,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko pole se seznamem.  
   
- [v] `nCtlColor`  
+ [v] *nCtlColor*  
  Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -869,28 +869,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `Pdc`  
+ [v] *Primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník tlačítko.  
   
- [v] `pImages`  
+ [v] *pImages*  
  Kolekce bitové kopie, který je přidružen tlačítko.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Stav ukotvení panelu nástrojů nadřazené. `TRUE` Když se panelu nástrojů ukotveno vodorovně a `FALSE` když panelu nástrojů ukotveno svisle.  
   
- [v] `bCustomizeMode`  
+ [v] *bCustomizeMode*  
  Zda je aplikace v režimu vlastní nastavení.  
   
- [v] `bHighlight`  
+ [v] *bHighlight*  
  Určuje, zda se k vykreslení tlačítko pole se seznamem zvýrazněná.  
   
- [v] `bDrawBorder`  
+ [v] *bDrawBorder*  
  Určuje, zda se k vykreslení tlačítka pole se seznamem s ohraničení.  
   
- [v] `bGrayDisabledButtons`  
+ [v] *bGrayDisabledButtons*  
  `TRUE` Kreslení šedou barvou zakázané tlačítka; `FALSE` používat zakázáno Image kolekce.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
@@ -904,13 +904,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko pole se seznamem.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník tlačítko pole se seznamem.  
   
- [v] `bSelected`  
+ [v] *bSelected*  
  `TRUE` pole se seznamem se tlačítko bude vybrána. v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -938,7 +938,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Určuje, zda skrytí nebo zobrazení tlačítka pole se seznamem.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
@@ -949,7 +949,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iSize`  
+ [v] *iSize*  
  Nové šířka tlačítko pole se seznamem.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
@@ -964,16 +964,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel do nadřazeného okna pro tlačítko pole se seznamem.  
   
- [v] `iButtonIndex`  
+ [v] *iButtonIndex*  
  ID tlačítko pole se seznamem.  
   
- [v] `wndToolTip`  
+ [v] *wndToolTip*  
  Nástroj popisek, který chcete přidružit k tlačítko pole se seznamem.  
   
- [v] `str`  
+ [v] *str*  
  Text popisu nástroje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1002,16 +1002,16 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
- [v] `bNotify`  
+ [v] *bNotify*  
  `TRUE` Upozornit na tlačítko pole se seznamem výběru; v opačném případě `FALSE`.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data přidružená k položce v seznamu.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Text položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1039,16 +1039,16 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka pole se seznamem, které obsahuje pole se seznamem.  
   
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu. Hodnota -1 Odebere všechny aktuální výběr v seznamu a vymaže textové pole.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data, která položky v seznamu.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Text položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1064,7 +1064,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] `ar`  
+ [ve out] *ar*  
  `CArchive` Objektu k serializaci.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1080,10 +1080,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
  Nadřazené okno tlačítka pole se seznamem.  
   
- [out] `data`  
+ [out] *dat*  
  A `CAccessibilityData` objekt, který přijímá data usnadnění z tlačítko pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1097,7 +1097,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bCenterVert`  
+ [v] *bCenterVert*  
  `TRUE` na střed tlačítko pole se seznamem na panelu nástrojů; `FALSE` Chcete-li zarovnat tlačítko pole se seznamem do horní části panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1111,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiResID`  
+ [v] *uiResID*  
  ID místní nabídky prostředku.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1122,7 +1122,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nHeight`  
+ [v] *nHeight*  
  Výška v pixelech pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1136,7 +1136,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bFlat`  
+ [v] *bFlat*  
  `TRUE` pro plochý vzhled; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1150,7 +1150,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nStyle`  
+ [v] *nStyle*  
  Bitová kombinace (nebo) stylů panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1164,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Ukazatel na řetězec, který obsahuje text pro textové pole.  
   
 ## <a name="see-also"></a>Viz také  

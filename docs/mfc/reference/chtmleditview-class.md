@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367341"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040610"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView – třída
 Poskytuje funkci platformou WebBrowser úpravy v kontextu na MFC document/view – architektura.  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Bodů na řetězec znaků ukončené hodnotou null, který názvy třídy Windows. Název třídy může být jakýkoli název zaregistrována [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nebo **RegisterClass** funkce systému Windows. Pokud **NULL**, používá předdefinovanou výchozí [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributy.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který představuje název okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl atributů okna. Ve výchozím nastavení **ws_visible –** a **ws_child –** styly Windows jsou nastavené.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura velikost a umístění okna. `rectDefault` Systému Windows zadejte velikost a umístění nového okna umožní hodnotu.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura velikost a umístění okna. *RectDefault* systému Windows zadejte velikost a umístění nového okna umožní hodnotu.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna ovládacího prvku.  
   
- `nID`  
+ *nID*  
  Číslo ID zobrazení. Ve výchozím nastavení **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Ukazatel [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** ve výchozím nastavení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppDocument`  
+ *ppDocument*  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

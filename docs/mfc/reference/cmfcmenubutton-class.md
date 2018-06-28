@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375386"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040165"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton – třída
 Tlačítko, které se zobrazí místní nabídka a sestavy v nabídce výběry uživatele.  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMsg`  
+ [v] *pMsg*  
  Odkazuje na [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bCalcOnly`  
+ [v] *bCalcOnly*  
  Parametr typu Boolean, která určuje, zda tato metoda změní na tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který určuje novou velikost pro tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud volání této funkce a `bCalcOnly` je `TRUE`, `SizeToContent` vypočítá novou velikost tlačítko.  
+ Pokud volání této funkce a *bCalcOnly* je `TRUE`, `SizeToContent` vypočítá novou velikost tlačítko.  
   
  Velikost nového tlačítka se počítá podle text tlačítka, image a šipku. Rozhraní framework přidává předdefinované okraje 10 pixelů pro vodorovné okraj a 5 pixelů pro vertikální okraj.  
   

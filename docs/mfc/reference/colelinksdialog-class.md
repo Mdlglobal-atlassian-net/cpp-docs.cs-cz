@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368966"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042531"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog – třída
 Používá se pro dialogové okno OLE upravit propojení.  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Body OLE dokumentu, který obsahuje odkazy k provádění úprav.  
   
- `pView`  
- Odkazuje na aktuální zobrazení na `pDoc`.  
+ *pView*  
+ Odkazuje na aktuální zobrazení na *pDoc*.  
   
- `dwFlags`  
+ *dwFlags*  
  Vytvoření příznak, který obsahuje buď 0 nebo **ELF_SHOWHELP** k určení, zda na tlačítko Nápověda se zobrazí, když se zobrazí dialogové okno.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna nastavena na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  

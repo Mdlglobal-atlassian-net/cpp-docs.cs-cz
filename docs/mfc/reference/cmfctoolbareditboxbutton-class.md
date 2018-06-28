@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bddd7274feb9ecde268a94d7e9a6e857c906650
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e6c4493239030380ab935d473af48d4107556d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376815"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041419"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton – třída
 Tlačítka panelu nástrojů, který obsahuje ovládací prvek úprav ( [CEdit třída](../../mfc/reference/cedit-class.md)).  
@@ -110,7 +110,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Voláno rámcem vypočítat velikost tlačítko pro zadané zařízení kontextu a ukotvení stavu. (Přepisuje [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Voláno rámcem při vložení do nového panelu nástrojů na tlačítko. (Přepisuje [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarEditBoxButton::OnClick](#onclick)|Voláno rámcem, když uživatel klikne na tlačítko myši. (Přepisuje [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Voláno rámcem při zpracovává nadřazené nástrojů `WM_CTLCOLOR` zprávy. (Přepisuje [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|Voláno rámcem při panelu nástrojů nadřazené zpracovává WM_CTLCOLOR – zpráva. (Přepisuje [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
 |`CMFCToolBarEditBoxButton::OnDraw`|Voláno rámcem k vykreslení tlačítko pomocí zadané styly a možnosti. (Přepisuje [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
 |`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|Voláno rámcem k vykreslení tlačítko **příkazy** podokně **přizpůsobit** dialogové okno. (Přepisuje [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|Voláno rámcem, pokud došlo ke změně globální písmo. (Přepisuje [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
@@ -133,7 +133,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  2. Vytvořit `CMFCToolBarEditBoxButton` objektu.  
   
- 3. V popisovač zpráv, který zpracovává `AFX_WM_RESETTOOLBAR` zprávy, nahraďte zástupný tlačítko tlačítka Nová pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. V popisovač zpráv, který zpracovává zprávy AFX_WM_RESETTOOLBAR, nahraďte tlačítko fiktivní tlačítka Nová pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
@@ -177,16 +177,16 @@ CMFCToolBarEditBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  Určuje ID ovládacího prvku.  
   
- [v] `iImage`  
+ [v] *iImage*  
  Určuje index obrázku panelu nástrojů na nule. Bitovou kopii se nachází v [CMFCToolBarImages třída](../../mfc/reference/cmfctoolbarimages-class.md) objektu, který [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md) udržuje – třída.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Určuje styl ovládací prvek upravit.  
   
- [v] `iWidth`  
+ [v] *iWidth*  
  Určuje šířku v pixelech ovládacích prvků pro úpravy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
  Odkaz na tlačítko zdroj ze kterého chcete zkopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu pro kopírování jiný tlačítka panelu nástrojů do tohoto tlačítka panelu nástrojů. `src` musí být typu `CMFCToolBarEditBoxButton`.  
+ Volejte tuto metodu pro kopírování jiný tlačítka panelu nástrojů do tohoto tlačítka panelu nástrojů. *src* musí být typu `CMFCToolBarEditBoxButton`.  
   
 ##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
  Vytvoří nový ovládací prvek upravit v tlačítko.  
@@ -220,10 +220,10 @@ virtual CEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] pWndParent`  
+ [v] *pWndParent*  
  Určuje nadřazeného okna ovládacích prvků pro úpravy. Nesmí být NULL.  
   
- `[in] rect`  
+ [v] *Rect –*  
  Určuje velikost a umístění textové pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -240,7 +240,7 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu pro načtení tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -257,7 +257,7 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID příkazu tlačítka, ze kterého chcete načíst obsah.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -287,7 +287,7 @@ virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectBorder`  
+ [out] *rectBorder*  
  Odkaz na `CRect` objekt, který přijme ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -368,11 +368,11 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iNotifyCode`  
+ [v] *iNotifyCode*  
  Oznámení, které souvisí s příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tlačítko zpracovává `WM_COMMAND` zprávy, nebo `FALSE` indikující, že zprávy musí být zpracována nadřazené panelu nástrojů.  
+ `TRUE` Pokud tlačítko zpracovává wm_command – zprávy, nebo `FALSE` indikující, že zprávy musí být zpracována nadřazené panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework volá tuto metodu, když je odeslání [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zpráva do nadřazeného okna.  
@@ -399,7 +399,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel do nového nadřazeného okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -415,10 +415,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Nepoužívá se.  
   
- [v] `bDelay`  
+ [v] *bDelay*  
  Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -428,7 +428,7 @@ virtual BOOL OnClick(
  Tato metoda přepsání implementace třídy base ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) vrácením nenulovou hodnotu, pokud interní `CEdit` objekt je zobrazen.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
- Voláno rámcem při zpracovává nadřazené nástrojů `WM_CTLCOLOR` zprávy.  
+ Voláno rámcem při panelu nástrojů nadřazené zpracovává WM_CTLCOLOR – zpráva.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -437,10 +437,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v] `nCtlColor`  
+ [v] *nCtlColor*  
  Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -481,11 +481,11 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Určuje, zda je tlačítko viditelná. Pokud tento parametr je `TRUE`, tlačítko je viditelné. Tlačítko, jinak hodnota není viditelný.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) tím, že pokud se zobrazuje na tlačítko `bShow` je `TRUE`. Tuto metodu, jinak hodnota skryje tlačítko.  
+ Tato metoda rozšiřuje základní třída implementace ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) tím, že pokud se zobrazuje na tlačítko *bShow* je `TRUE`. Tuto metodu, jinak hodnota skryje tlačítko.  
   
 ##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
  Voláno rámcem, když nadřazené nástrojů změní jeho velikost nebo pozice a tato změna způsobí, že na tlačítko Změnit velikost.  
@@ -495,7 +495,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iSize`  
+ [v] *iSize*  
  Nové šířka tlačítko v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -513,16 +513,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Nepoužívá se.  
   
- [v] `iButtonIndex`  
+ [v] *iButtonIndex*  
  Nepoužívá se.  
   
- [v] `wndToolTip`  
+ [v] *wndToolTip*  
  Ovládací prvek, který zobrazí text popisku.  
   
- [out] `str`  
+ [out] *str*  
  A `CString` objekt, který přijme text aktualizované popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -539,7 +539,7 @@ virtual void SetContents(const CString& sContents);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] sContents`  
+ [v] *sContents*  
  Určuje nastavení nového textu.  
   
 ##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
@@ -552,10 +552,10 @@ static BOOL SetContentsAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  Určuje ID příkazu pro kterou se text změní ovládacího prvku.  
   
- [v] `strContents`  
+ [v] *strContents*  
  Určuje nastavení nového textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -569,7 +569,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmd`  
+ [v] *uiCmd*  
  ID prostředku v místní nabídce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -583,7 +583,7 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bFlat`  
+ [v] *bFlat*  
  Plochý pro pole tlačítka Upravit. Pokud tento parametr je `TRUE`, je povoleno plochý vzhled; v opačném případě je plochý vzhled zakázaná.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -597,11 +597,11 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nStyle`  
+ [v] *nStyle*  
  Nový styl nastavit.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nastaví [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) k `nStyle` ho také zakáže textového pole, když je aplikace v režimu přizpůsobení a umožní, pokud aplikace není v režimu přizpůsobení (viz [CMFCToolBar: : SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) a [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). V tématu [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam platný styl příznaky.  
+ Tato metoda nastaví [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle) k *nStyle* ho také zakáže textového pole, když je aplikace v režimu přizpůsobení a umožní, pokud aplikace není v režimu přizpůsobení (viz [ CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode) a [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)). V tématu [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam platný styl příznaky.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

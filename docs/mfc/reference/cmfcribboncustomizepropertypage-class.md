@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368004"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040672"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage – třída
 Implementuje vlastní stránky pro **přizpůsobit** dialogové okno v aplikacích založených na pásu karet.  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `lpszName`|Určuje název vlastní kategorie.|  
-|[v] `lstIDS`|Obsahuje příkaz pásu karet ID zobrazený v vlastní kategorie.|  
+|[v] *lpszName*|Určuje název vlastní kategorie.|  
+|[v] *lstIDS*|Obsahuje příkaz pásu karet ID zobrazený v vlastní kategorie.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přidá kategorie s názvem `lpszName` k **příkazy** – pole se seznamem. Pokud uživatel vybere kategorii, příkazy zadaná v `lstIDS` se zobrazí v seznamu příkazů.  
+ Tato metoda přidá kategorie s názvem *lpszName* k **příkazy** – pole se seznamem. Pokud uživatel vybere kategorii, příkazy zadaná v *lstIDS* se zobrazí v seznamu příkazů.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Vytvoří `CMFCRibbonCustomizePropertyPage` objektu.  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRibbonBar`  
+ [v] *pRibbonBar*  
  Ukazatel na ovládacího prvku pásu karet, pro které možnosti chcete přizpůsobit.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

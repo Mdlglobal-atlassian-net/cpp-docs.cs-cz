@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370504"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039372"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox – třída
 Implementuje pole se seznamem, který obsahuje seznam písem. Pole se seznamem umístíte na pásu karet panelu.  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFontType`  
+ [v] *nFontType*  
  Určuje písmo typ písma, které chcete přidat.  
   
- [v] `nCharSet`  
+ [v] *nCharSet*  
  Určuje znakovou sadu písma, které chcete přidat.  
   
- [v] `nPitchAndFamily`  
+ [v] *nPitchAndFamily*  
  Určuje výšku a rodiny písem, které chcete přidat.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID příkazu, příkazu, který provede, když uživatel vybere položku z pole se seznamem.  
   
- [v] `nFontType`  
+ [v] *nFontType*  
  Určuje, které Písmo typy zobrazení v pole se seznamem. Platné možnosti jsou **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, a **TRUETYPE_FONTTYPE**, nebo jejich bitové kombinace.  
   
- [v] `nCharSet`  
+ [v] *nCharSet*  
  Filtry písem v poli se seznamem na ty, které patří do sady zadaný znak...  
   
- [v] `nPitchAndFamily`  
+ [v] *nPitchAndFamily*  
  Určuje výšku a rodiny písem, která se zobrazí v seznamu.  
   
- [v] `nWidth`  
+ [v] *nWindth*  
  Určuje šířku v pixelech, pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o možných `nFontType` hodnoty parametrů, najdete v části [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) v dokumentaci k Windows SDK.  
+ Další informace o možných *nFontType* hodnoty parametrů, najdete v části [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) v dokumentaci k Windows SDK.  
   
- Další informace o platný znakových sad, které lze přiřadit k `nCharSet`a platné hodnoty, které lze přiřadit k `nPitchAndFamily`, najdete v části [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) v dokumentaci k Windows SDK.  
+ Další informace o platný znakových sad, které lze přiřadit k *nCharSet*a platné hodnoty, které lze přiřadit k *nPitchAndFamily*, najdete v části [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) v Dokumentace sady Windows SDK.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ ' lpszName *  
  Určuje název písma. Chcete-li vybrat.  
   
- `nCharSet`  
+ *nCharSet*  
  Určuje znakovou sadu pro vybrané písmo.  
   
- `bExact`  
+ *bExact*  
  `TRUE` Chcete-li určit, že při výběru písmo; musí odpovídat znakové sady `FALSE` k určení, že při výběru písmo můžete ignorovat znaková sada.  
   
 ### <a name="return-value"></a>Návratová hodnota  

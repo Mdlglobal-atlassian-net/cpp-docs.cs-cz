@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368319"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037369"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea – třída
 Poskytuje oblast obrázku, který používáte k úpravě bitovou kopii v dialogovém okně editor bitové kopie.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pParentDlg`|Ukazatel na okno, které je nadřazená image editoru.|  
+|[v] *pParentDlg*|Ukazatel na okno, které je nadřazená image editoru.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Načte aktuální režim kreslení.  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pBitmap`|Nový rastrový obrázek pro zobrazení.|  
+|[v] *pBitmap*|Nový rastrový obrázek pro zobrazení.|  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `pBitmap` je `NULL`, tato metoda nastaví velikost oblasti upravitelnými Malování na nulu. Nastaví, jinak hodnota velikosti oblasti upravitelnými Malování velikost zadaná rastrového obrázku.  
+ Pokud *pBitmap* je `NULL`, tato metoda nastaví velikost oblasti upravitelnými Malování na nulu. Nastaví, jinak hodnota velikosti oblasti upravitelnými Malování velikost zadaná rastrového obrázku.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Nastaví barvu aktuální kreslení.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `color`|Nové kreslení barva.|  
+|[v] *barev*|Nové kreslení barva.|  
   
 ### <a name="remarks"></a>Poznámky  
  Když vyberte barvu z panelu image editor palety nebo volby barev, rozhraní volá tuto metodu za účelem aktualizace aktuální kreslení barvu. Černá je počáteční barvu kreslení ( `COLORREF` hodnota 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.|  
+|[v] *režimu*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

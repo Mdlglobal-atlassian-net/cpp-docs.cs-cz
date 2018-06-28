@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374081"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037899"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane – třída
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiImage`  
+ [v] *uiImage*  
  Určuje identifikátor prostředku bitmapy.  
   
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Určuje text, na tlačítko.  
   
- [v] `iIdCommand`  
+ [v] *iIdCommand*  
  Určuje ID ovládacího prvku tlačítko.  
   
- [v] `iInsertAt`  
+ [v] *iInsertAt*  
  Na stránce panelu aplikace outlook, kam chcete vložit tlačítko Určuje index založený na nule.  
   
- [v] `uiLabel`  
+ [v] *uiLabel*  
  Řetězec prostředku.  
   
- [v] `szBmpFileName`  
+ [v] *szBmpFileName*  
  Určuje název souboru bitové kopie disku načíst.  
   
- [v] `szLabel`  
+ [v] *szLabel*  
  Určuje text, na tlačítko.  
   
- [v] `hBmp`  
+ [v] *hBmp*  
  Popisovač pro rastrový obrázek na tlačítko.  
   
- [v] `hIcon`  
+ [v] *hIcon*  
  Popisovač pro ikonu tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>Poznámky  
  Tuto metodu použijte k vložení nového tlačítka na panelu aplikace Outlook stránku. Obrázek na tlačítko se dají načíst z prostředky aplikace nebo z soubor na disku.  
   
- Pokud ID stránky určuje `uiPageID` je -1, na tlačítko se vloží do na první stránku.  
+ Pokud ID stránky určuje *uiPageID* je -1, na tlačítko se vloží do na první stránku.  
   
- Pokud index zadaný `iInsertAt` je -1, na tlačítko se přidá na konci stránky.  
+ Pokud index zadaný *iInsertAt* je -1, na tlačítko se přidá na konci stránky.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Určuje nadřazeného okna Ovládací prvek panelu podokně aplikace Outlook. Nesmí být `NULL`.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Styl okna.  Seznam styly oken, naleznete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v] `uiID`  
+ [v] *uiID*  
  ID ovládacího prvku. Musí být jedinečný pro povolení ukládání stavu ovládacího prvku.  
   
- [v] `dwControlBarStyle`  
+ [v] *dwControlBarStyle*  
  Určuje zvláštní stylů, které definují chování ovládacího prvku panel podokně Outlook, když je odpojený od panelu aplikace Outlook.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítka panelu nástrojů, který klikl na uživatele.  
   
- [v] `pPopup`  
+ [v] *pPopup*  
  Ukazatel na místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bPageScroll`  
+ [v] *bPageScroll*  
  Pokud `TRUE`, povolte režim scroll stránky. Pokud `FALSE`, zakázat režim scroll stránky.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIdCommand`  
+ [v] *iIdCommand*  
  Určuje ID příkazového tlačítka s odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
  Určuje barvu pozadí nové.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiImageID`  
+ [v] *uiImageID*  
  Určuje ID prostředku bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrRegText`  
+ [v] *clrRegText*  
  Určuje barvu nové-vybraný text.  
   
- [v] `clrSelText`  
+ [v] *clrSelText*  
  Určuje barvu nové pro vybraný text.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Určuje průhlednou barvu nové.  
   
 ### <a name="remarks"></a>Poznámky  

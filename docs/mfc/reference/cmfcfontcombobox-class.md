@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375742"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039996"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox – třída
 `CMFCFontComboBox` Třída vytvoří prvek pole se seznamem, který obsahuje seznam písem.  
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDesc`  
+ [v] *pDesc*  
  Odkazuje na objekt popis písma.  
   
- [v] `lpszName`  
+ [v] *lpszName*  
  Určuje název písma.  
   
- [v] `nCharSet`  
+ [v] *nCharSet*  
  Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFontType`  
+ [v] *nFontType*  
  Určuje typ písma. Výchozí hodnota je bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
   
- [v] `nCharSet`  
+ [v] *nCharSet*  
  Určuje písmo znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET.  
   
- [v] `nPitchAndFamily`  
+ [v] *nPitchAndFamily*  
  Určuje výšku písma a rodiny. Výchozí hodnota je DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Návratová hodnota  

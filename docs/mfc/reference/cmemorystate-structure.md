@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367968"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040739"
 ---
 # <a name="cmemorystate-structure"></a>Struktura CMemoryState
 Nabízí pohodlný způsob, jak zjistit, že nevracení paměti v programu.  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  Stejně jako u jiných diagnostiky `CMemoryState` diagnostiky jsou dostupné jenom v ladicí verze vašeho programu. Ladicí verze musí mít **_DEBUG –** konstanta definované.  
   
- Pokud máte podezření na nevracení paměti má program, můžete použít `Checkpoint`, **rozdíl**, a `DumpStatistics` funkce ke zjištění rozdílu mezi je stav paměti (objekty přidělené) na dva různé body v programu provádění. Tato informace může být užitečné při určování, zda je funkce vyčistit všechny objekty, které přiděluje.  
+ Pokud máte podezření na nevracení paměti má program, můžete použít `Checkpoint`, `Difference`, a `DumpStatistics` funkce ke zjištění rozdílu mezi je stav paměti (objekty přidělené) na dva různé body, ve spuštění programu. Tato informace může být užitečné při určování, zda je funkce vyčistit všechny objekty, které přiděluje.  
   
  Pokud jednoduše zároveň budete vědět, kde dochází k nevyváženosti v přidělené a odebrané nenabízí dostatek informací, můžete použít `DumpAllObjectsSince` funkce vypsat všechny objekty přidělené od předchozího volání `Checkpoint`. Tento výpis zobrazuje pořadí přidělení, zdrojový soubor a řádku, kde byl přidělen objektu (Pokud používáte `DEBUG_NEW` pro přidělení) a odvození objektu, jeho adresy a jeho velikost. `DumpAllObjectsSince` také voláním každý objekt `Dump` funkce lze zadat informace o aktuálním stavu.  
   

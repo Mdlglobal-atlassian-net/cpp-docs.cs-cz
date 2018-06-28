@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d837ec17623887eb63b49810066937fcd4bf5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34c364357ad14db2cd0ebc53e2a9cdcd5455f5ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377934"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042128"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages – třída
 Bitové kopie na panelu nástrojů. `CMFCToolBarImages` Třída spravuje nástrojů obrázky načtené z prostředky aplikace nebo soubory.  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrBase`  
- [v] `clrTone`  
+ [v] *clrBase*  
+ [v] *clrTone*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -297,10 +297,10 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hIcon`  
+ [v] *hIcon*  
  Popisovač pro ikonu, která má být přidán.  
   
- [v] `bAlphaBlend`  
+ [v] *bAlphaBlend*  
  `TRUE` Pokud tato ikona je použita s alfa míchání; v opačném případě `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -320,16 +320,16 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hbmp`  
+ [v] *hbmp*  
  Popisovač rastrového obrázku, který chcete přidat.  
   
- [v] `bSetBitPerPixel`  
+ [v] *bSetBitPerPixel*  
  `TRUE` Pokud `CMFCToolBarImages` objektu používá hloubku barvy (bitů na pixel) novou bitovou kopii; `FALSE` Pokud `CMFCToolbarImages` objekt udržuje barevné hloubky.  
   
- [v] `imageList`  
+ [v] *imageList*  
  Odkaz na `CMFCToolbarImages` objekt, který obsahuje bitovou kopii přidat.  
   
- [v] `nIndex`  
+ [v] *nIndex*  
  Index ve zdroji `CMFCToolbarImages` objekt bitovou kopii přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -369,7 +369,7 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iImage`  
+ [v] *iImage*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -383,7 +383,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `imageList`  
+ [v] *imageList*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -397,7 +397,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `imageList`  
+ [v] *imageList*  
  Seznam obrázků má být použit jako zdroj pro obrázků panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bmp`  
- [v] `clrTransparent`  
+ [v] *bmp*  
+ [v] *clrTransparent*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -431,7 +431,7 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iImage`  
+ [v] *iImage*  
  Určuje index založený na nule bitové kopie odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -455,34 +455,34 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `x`  
+ [v] *x*  
  Souřadnice X levé straně obdélníku, kde má být vykreslen bitová kopie.  
   
- [v] `y`  
+ [v] *y*  
  Souřadnice Y horní části obdélníku, kde má být vykreslen bitová kopie.  
   
- [v] `iImageIndex`  
+ [v] *iImageIndex*  
  Index založený na nule bitové kopie, který se má zobrazit.  
   
- [v] `bHilite`  
+ [v] *bHilite*  
  `TRUE` Pokud má bitová kopie se zvýrazněnou; v opačném případě `FALSE`.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  `TRUE` Pokud má být vykreslen v zakázaném styl; bitová kopie v opačném případě `FALSE`.  
   
- [v] `bIndeterminate`  
+ [v] *bIndeterminate*  
  `TRUE` Pokud má obrázek se vykresluje v neurčitém stavu styl; v opačném případě `FALSE`.  
   
- [v] `bShadow`  
+ [v] *bShadow*  
  `TRUE` Pokud je bitovou kopii, které se mají vykreslovat s stín; v opačném případě `FALSE`.  
   
- [v] `bInactive`  
+ [v] *bInactive*  
  `TRUE` Pokud má obrázek se vykresluje v neaktivním stavu styl; v opačném případě `FALSE`.  
   
- [v] `alphaSrc`  
+ [v] *alphaSrc*  
  Hodnotu alfa kanálu (krytí). Hodnota 255 znamená bitovou kopii je vykresleného neprůhledné. Hodnota 0 znamená obrázek se vykresluje transparentní. Tato hodnota se používá pouze pro 32bitové barev obrázků a bitové kopie, které zobrazují přehledné styl Windows Vista.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -506,15 +506,15 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `iImageIndex`  
- [v] `horzAlign`  
- [v] `vertAlign`  
- [v] `rectSrc`  
- [v] `0`  
- [v] `0)`  
- [v] `alphaSrc`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *iImageIndex*  
+ [v] *horzAlign*  
+ [v] *vertAlign*  
+ [v] *rectSrc*  
+ [v] *0*  
+ [v] *0)*  
+ [v] *alphaSrc*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -528,7 +528,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsRTL`  
+ [v] *bIsRTL*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -540,7 +540,7 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ds`  
+ [v] *ds*  
  Odkaz na `CAfxDrawState` objekt, který byl předán `PrepareDrawImage` metoda.  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
@@ -551,11 +551,11 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Index založený na nule v seznamu obrázků, na kterém je obrázek, který má být extrahovat jako ikony nachází.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu extrahované nebo `NULL` Pokud `nIndex` je mimo rozsah.  
+ Popisovač pro ikonu extrahované nebo `NULL` Pokud *nIndex* je mimo rozsah.  
   
 ##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  Vyplní obdélníku barvy pozadí panelu nástrojů.  
@@ -567,10 +567,10 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Souřadnice obdélníku k vyplnění.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -629,7 +629,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bDest`  
+ [v] *bDest*  
  `TRUE` načtení velikost cílového; `FALSE` načíst zdroj velikost bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -705,7 +705,7 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iImage`  
+ [v] *iImage*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -719,7 +719,7 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiResId`  
+ [v] *uiResId*  
  Identifikátor prostředku bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -744,14 +744,14 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nGrayImageLuminancePercentage`  
+ [v] *nGrayImageLuminancePercentage*  
  Procento světelnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud byly úspěšně; šedý bitové kopie v kolekci v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda upraví jeho obrázků průměrování červené, zelené a modré součástí každého pixelů a vynásobením výsledku podle `nGrayImageLuminancePercentage` dělený 100. Pokud `nGrayImageLuminancePercentage` je nula nebo záporná, použita výchozí hodnota 130 je místo.  
+ Tato metoda upraví jeho obrázků průměrování červené, zelené a modré součástí každého pixelů a vynásobením výsledku podle *nGrayImageLuminancePercentage* dělený 100. Pokud *nGrayImageLuminancePercentage* je nula nebo záporná, použita výchozí hodnota 130 je místo.  
   
 > [!NOTE]
 >  Pokud chcete vrátit zpět změny, musíte znovu načtete bitové kopie ze zdroje. To provedete pomocí volání [CMFCToolBarImages::Load](#load) nebo [CMFCToolBarImages::UpdateImage](#updateimage) (pouze pro uživatelské Image), nebo voláním [CMFCToolBarImages::Clear](#clear)a přidání bitové kopie znovu voláním [CMFCToolBarImages::AddIcon](#addicon) nebo [CMFCToolBarImages::AddImage](#addimage).  
@@ -844,19 +844,19 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiResID`  
+ [v] *uiResID*  
  ID prostředku bitové mapy.  
   
- [v] `hinstRes`  
+ [v] *hinstRes*  
  Instance prostředků knihovny DLL.  
   
- [v] `bAdd`  
+ [v] *bAdd*  
  `TRUE` Přidání načíst rastrového obrázku do existujícího rastrového obrázku nebo `FALSE` k nahrazení existujícího rastrového obrázku.  
   
- [v] `lpszBmpFileName`  
+ [v] *lpszBmpFileName*  
  Cesta k souboru na disku pro načtení bitové mapy.  
   
- [v] `nMaxFileSize`  
+ [v] *nMaxFileSize*  
  Maximální počet bajtů v souboru bitové mapy. nebo 0 pro načtení rastrového obrázku bez ohledu na velikost souboru. Pokud velikost souboru překročí této maximální velikosti, vrátí metoda `FALSE` a nenačte bitové mapy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -876,9 +876,9 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszResourceName`  
- [v] `hinstRes`  
- [v] `bAdd`  
+ [v] *lpszResourceName*  
+ [v] *hinstRes*  
+ [v] *bAdd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
- [v] `bUseRGBQUAD`  
+ [v] *barev*  
+ [v] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -912,9 +912,9 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bUseRGBQUAD`  
- [v] `clrSrc`  
- [v] `clrDest`  
+ [v] *bUseRGBQUAD*  
+ [v] *clrSrc*  
+ [v] *clrDest*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
- [v] `bUseRGBQUAD`  
+ [v] *barev*  
+ [v] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -945,7 +945,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -974,10 +974,10 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] `hbmp`  
+ [ve out] *hbmp*  
  Popisovač pro rastrový obrázek pro zrcadlení.  
   
- [v] `cxImage`  
+ [v] *cxImage*  
  Šířka obrázku v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hbmp`  
- [v] `cyImage`  
+ [v] *hbmp*  
+ [v] *cyImage*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hbmp`  
- [v] `bAutoCheckPremlt`  
+ [v] *hbmp*  
+ [v] *bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1066,13 +1066,13 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ds`  
+ [v] *ds*  
  Odkaz na `CAfxDrawState` struktura, která ukládá přidělené prostředky mezi fázích vykreslování obrázku.  
   
- [v] `sizeImageDest`  
+ [v] *sizeImageDest*  
  Určuje velikost bitové kopie cílový.  
   
- [v] `bFadeInactive`  
+ [v] *bFadeInactive*  
  `TRUE` Pokud chcete neaktivní bitové kopie, které se mají vykreslovat barevně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1089,14 +1089,14 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszBmpFileName`  
+ *lpszBmpFileName*  
  Cesta k souboru na disku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud se úspěšně; uložily obrázků panelu nástrojů v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem ukládání bitových kopií uživatelem definované do souboru na disku. Pokud `lpszBmpFileName` je `NULL`, metoda ukládá do souboru, ze které byla načtena bitmapy podle bitmapy [CMFCToolBarImages::Load](#load) metoda.  
+ Volejte tuto metodu za účelem ukládání bitových kopií uživatelem definované do souboru na disku. Pokud *lpszBmpFileName* je `NULL`, metoda ukládá do souboru, ze které byla načtena bitmapy podle bitmapy [CMFCToolBarImages::Load](#load) metoda.  
   
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
@@ -1106,7 +1106,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAlwaysLight`  
+ [v] *bAlwaysLight*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1118,7 +1118,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nValue`  
+ [v] *nHodnota*  
  Novou hodnotu alfa kanálu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1132,7 +1132,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nValue`  
+ [v] *nHodnota*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1146,7 +1146,7 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `sizeImage`  
+ [v] *sizeImage*  
  Nová velikost obrázků panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1160,7 +1160,7 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nValue`  
+ [v] *nHodnota*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1172,7 +1172,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bMapTo3DColors`  
+ [v] *bMapTo3DColors*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1184,7 +1184,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAuto`  
+ [v] *bAuto*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1205,14 +1205,14 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrTransparent`  
+ [v] *clrTransparent*  
  Hodnotu RGB.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Průhledná barva předchozí.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jste nebo rozhraní volání [CMFCToolBarImages::Draw](#draw), metoda není kreslení žádné pixelů, který odpovídá barvu určeného `clrTransparent`.  
+ Pokud jste nebo rozhraní volání [CMFCToolBarImages::Draw](#draw), metoda není kreslení žádné pixelů, který odpovídá barvu určeného *clrTransparent*.  
   
 ##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  Aktualizuje uživatelské nástrojů image z rastrového obrázku.  
@@ -1224,10 +1224,10 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iImage`  
+ [v] *iImage*  
  Index založený na nule bitové kopie k aktualizaci.  
   
- [v] `hbmp`  
+ [v] *hbmp*  
  Popisovač pro bitovou mapu ze kterého chcete aktualizovat image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1241,7 +1241,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clrTransparent`  
+ *clrTransparent*  
  Určuje průhlednou barvu podtržené rastrových obrázků.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1290,7 +1290,7 @@ BOOL SmoothResize(double dblImageScale);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblImageScale`  
+ *dblImageScale*  
  Měřítko zvětšení.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369411"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038526"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind – třída
 Usnadňuje hledání souborů Internetu gopher serverů.  
@@ -119,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pConnection`  
+ *pConnection*  
  Ukazatel [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objektu.  
   
- `dwContext`  
- Identifikátor kontextu pro danou operaci. V tématu **poznámky** Další informace o `dwContext`.  
+ *dwContext*  
+ Identifikátor kontextu pro danou operaci. V tématu **poznámky** Další informace o *dwContext*.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí hodnota pro `dwContext` odesílají MFC k `CGopherFileFind` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CGopherFileFind` objektu. Když vytvoříte `CGopherFileFind` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Výchozí hodnota pro *dwContext* odesílají MFC k `CGopherFileFind` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CGopherFileFind` objektu. Když vytvoříte `CGopherFileFind` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  Volání této funkce člen najít soubor gopher.  
@@ -144,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refLocator`  
+ *refLocator*  
  Odkaz na [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objektu.  
   
  *pstrString*  
  Ukazatel na řetězec, který obsahuje název souboru.  
   
- `dwFlags`  
+ *dwFlags*  
  Příznaky popisující, jak zpracovat tuto relaci. Platné příznaky jsou:  
   
 -   INTERNET_FLAG_RELOAD získat data ze vzdáleného serveru, i když je v místní mezipaměti.  
@@ -186,10 +186,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimeStamp`  
+ *pTimeStamp*  
  Ukazatel [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura obsahující čas vytvoření souboru.  
   
- `refTime`  
+ *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -210,10 +210,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refTime`  
+ *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Ukazatel [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura obsahující čas posledního přístupu k souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -234,10 +234,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimeStamp`  
+ *pTimeStamp*  
  Ukazatel [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktura obsahující času posledního zápisu souboru na.  
   
- `refTime`  
+ *refTime*  
  Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

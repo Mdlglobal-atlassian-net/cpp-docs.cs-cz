@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371696"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042375"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl – třída
 Poskytuje funkci běžné SysLink ovládacího prvku Windows.  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Ukazatel na nule ukončena řetězec, který označen jako obsahuje zobrazený text. Další informace najdete v části "Značek a odkaz Access" v tématu [prvky SysLink přehled](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl řízení propojení. Použijte libovolnou kombinaci styly ovládacího prvku. V tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) v `Windows SDK` Další informace.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění řízení propojení. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje řízení propojení nadřazeného okna. Nesmí být `NULL`.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku odkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>Poznámky  
  Můžete vytvořit `CLinkCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří řízení propojení a připojí jej k `CLinkCtrl` objektu. Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CLinkCtrl::CreateEx](#createex) místo `Create`.  
   
- O druhou podobu `Create` metoda je zastaralá. První formulář, který určuje použijte `lpszLinkMarkup` parametr.  
+ O druhou podobu `Create` metoda je zastaralá. První formulář, který určuje použijte *lpszLinkMarkup* parametr.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad kódu definuje dvě proměnné, s názvem `m_Link1` a `m_Link2`, které se používají pro přístup k dvou ovládacích prvků propojení.  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Ukazatel na nule ukončena řetězec, který označen jako obsahuje zobrazený text. Další informace najdete v části "Značek a odkaz Access" v tématu [prvky SysLink přehled](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwExStyle`  
- Určuje styl rozšířené ovládací prvek odkazu. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené ovládací prvek odkazu. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl řízení propojení. Použijte libovolnou kombinaci styly ovládacího prvku. Další informace najdete v tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění řízení propojení. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje řízení propojení nadřazeného okna. Nesmí být `NULL`.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku odkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené konstanty styl systému Windows.  
   
- O druhou podobu `CreateEx` metoda je zastaralá. První formulář, který určuje použijte `lpszLinkMarkup` parametr.  
+ O druhou podobu `CreateEx` metoda je zastaralá. První formulář, který určuje použijte *lpszLinkMarkup* parametr.  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Načte ideální výšku ovládací prvek odkazu.  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `cxMaxWidth`|Maximální šířka odkazu, který je v pixelech.|  
-|[out] * `pSize`|Ukazatel na Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura. Po návratu tato metoda `cy` členem `SIZE` struktura obsahuje výšku textu ideální odkaz k šířce text odkazu, která je zadána `cxMaxWidth`. `cx` Členů struktury obsahuje šířku text odkazu, která je skutečně potřeba.|  
+|[v] *cxMaxWidth*|Maximální šířka odkazu, který je v pixelech.|  
+|[out] * *pSize*|Ukazatel na Windows [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura. Po návratu tato metoda *cy* členem `SIZE` struktura obsahuje výšku textu ideální odkaz k šířce text odkazu, která je zadána *cxMaxWidth*. *Cx* členů struktury obsahuje šířku text odkazu, která je skutečně potřeba.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Upřednostňované výška text odkazu, v pixelech. Vrácená hodnota je stejná jako hodnota `cy` členem `SIZE` struktura.  
+ Upřednostňované výška text odkazu, v pixelech. Vrácená hodnota je stejná jako hodnota *cy* členem `SIZE` struktura.  
   
 ### <a name="remarks"></a>Poznámky  
  Příklad `GetIdealSize` metodu, najdete v příkladu v [CLinkCtrl::Create](#create).  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktura přijímat informace o položce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Index položky ovládacího prvku odkazu.  
   
  *hodnoty %{strid/*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Index položky ovládacího prvku odkazu.  
   
- `pnState`  
+ *pnState*  
  Hodnota položky zadaného stavu.  
   
- `stateMask`  
+ *stateMask*  
  Kombinace příznaků popisující, které položky stavu se získat. Seznam hodnot, najdete v části Popis **stavu** člena v [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury. Povolené položky jsou stejné jako, které jsou povoleny v **stavu**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Index položky ovládacího prvku odkazu.  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje adresu URL reprezentována zadanou položku  
   
- `szUrl`  
+ *szUrl*  
  Obsahující adresu URL zadanou položku reprezentována řetězce ukončené hodnotou null  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktura obsahující informace o nastavení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Index položky ovládacího prvku odkazu.  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Index položky ovládacího prvku odkazu.  
   
- `pnState`  
+ *pnState*  
  Hodnota položky zadaného stavu Probíhá nastavení.  
   
- `stateMask`  
+ *stateMask*  
  Kombinace příznaků popisující položku stavu Probíhá nastavení. Seznam hodnot, najdete v části Popis **stavu** člena v [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury. Povolené položky jsou stejné jako, které jsou povoleny v **stavu**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Index položky ovládacího prvku odkazu.  
   
- `szUrl`  
+ *szUrl*  
  Obsahující adresu URL zadanou položku reprezentována řetězce ukončené hodnotou null  
   
 ### <a name="return-value"></a>Návratová hodnota  

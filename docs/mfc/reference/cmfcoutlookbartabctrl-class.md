@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373300"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042306"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl – třída
 Ovládacího prvku karta, která má vzhled **navigačním podokně** v aplikaci Microsoft Outlook.  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndCtrl`  
+ [v] *pWndCtrl*  
  Ukazatel na ovládací prvek pro přidání.  
   
- [v] `lpszName`  
+ [v] *lpszName*  
  Určuje název karty.  
   
- [v] `bDetachable`  
+ [v] *bDetachable*  
  Pokud `TRUE`, stránka bude vytvořena jako odpojitelných.  
   
- [v] `nImageID`  
+ [v] *nImageID*  
  Index bitové kopie v seznamu obrázků interní bitové kopie, který se má zobrazit na nové kartě.  
   
- [v] `dwControlBarStyle`  
+ [v] *dwControlBarStyle*  
  Určuje, AFX_ `CBRS_`* styl zabalené ukotvení podokna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -168,7 +168,7 @@ void AddControl(
   
  Tato funkce interně volá na [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- Pokud nastavíte `bDetachable` k `TRUE`, `AddControl` interně vytvoří `CDockablePaneAdapter` objektu a zabalí přidání ovládacího prvku. Automaticky nastaví třídu runtime okno s kartami třídu runtime `CMFCOutlookBar` a třída runtime plovoucí rámce k `CMultiPaneFrameWnd`.  
+ Pokud nastavíte *bDetachable* k `TRUE`, `AddControl` interně vytvoří `CDockablePaneAdapter` objektu a zabalí přidání ovládacího prvku. Automaticky nastaví třídu runtime okno s kartami třídu runtime `CMFCOutlookBar` a třída runtime plovoucí rámce k `CMultiPaneFrameWnd`.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `AddControl` metoda v `CMFCOutlookBarTabCtrl` třídy. Tento fragment kódu je součástí [Outlook Demo-ukázka](../../visual-cpp-samples.md).  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Určuje počáteční velikost a umístění v pixelech.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Body do nadřazeného okna. Nesmí být `NULL`.  
   
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v ovládacím prvku vytvořeného úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládací prvky karet panelu outlook obvykle vytvářejí při [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md) ovládací prvky `WM_CREATE` zpráva procesu.  
+ Ovládací prvky karet panelu outlook obvykle vytvářejí při [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md) řídí zpráva WM_CREATE procesu.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Určuje, zda je povoleno, ke kterému dochází při přepínání mezi active karty animace.  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Určuje, zda by měl být animace povoleno nebo zakázáno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Pokud `TRUE`, Povolit místní úpravy textu popisku. Pokud `FALSE`, zakažte úpravy na místě.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Určuje, zda se zobrazí tlačítka posuvníku.  
   
- [v] `bIsUp`  
+ [v] *bIsUp*  
  Určuje, zda je nejvyšší scrollbar zobrazovat.  
   
- [v] `bIsDown`  
+ [v] *bIsDown*  
  Určuje, zda je zobrazen scrollbar dolní.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty otevřít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nBorderSize`  
+ [v] *nBorderSize*  
  Určuje velikost nového ohraničení v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -400,21 +400,21 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiAlign`  
+ [v] *uiAlign*  
  Určuje zarovnání textu.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  Pokud `TRUE`, bude překreslit okno aplikace outlook.  
   
 ### <a name="remarks"></a>Poznámky  
  Pomocí této funkce můžete změnit zarovnání textu pro stránku tlačítka.  
   
- `uiAlign` Může být jedna z následujících hodnot:  
+ *uiAlign* může být jedna z následujících hodnot:  
   
 |Konstanta|Význam|  
 |--------------|-------------|  
 |TA_LEFT|Zarovnání doleva|  
-|TA_CENTER|Zarovnání na střed|  
+|TA_CENTER|zarovnání na střed|  
 |TA_RIGHT|Zarovnání doprava|  
   
  Výchozí hodnota je TA_CENTER.  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  Určuje ID prostředku bitové kopie k načtení.  
   
- [v] `cx`  
+ [v] *cx*  
  Určuje šířku obrázku v seznamu obrázků v pixelech.  
   
- [v] `clrTransp`  
+ [v] *clrTransp*  
  Hodnoty RGB, který určuje průhlednou barvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nVisiblePageButtons`  
+ [v] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>Poznámky  
   

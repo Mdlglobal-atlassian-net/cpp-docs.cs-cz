@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366906"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039479"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed – třída
 Zapouzdří lineární rychlost přechodu.  
@@ -84,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblSpeed`  
+ *dblSpeed*  
  Absolutní hodnota proměnné rychlosti.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Hodnota proměnné animace na konci přechodu.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
-`pLibrary`  
+*pLibrary*  
  Ukazatel na [IUIAnimationTransitionLibrary rozhraní](https://msdn.microsoft.com/library/windows/desktop/dd371897), která definuje knihovnu standardní přechodů.  
   
 ### <a name="return-value"></a>Návratová hodnota  

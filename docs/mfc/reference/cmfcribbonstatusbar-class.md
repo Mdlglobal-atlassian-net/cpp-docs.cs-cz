@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374662"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038100"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar – třída
 `CMFCRibbonStatusBar` Třída implementuje ovládacích prvků na panelu stavu, která může zobrazovat prvky pásu karet.  
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElement`  
+ [v] *pElement*  
  Ukazatel na dynamické elementu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElement`  
+ [v] *pElement*  
  Ukazatel na přidaný prvek.  
   
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Text popisku elementu.  
   
- [v] `bIsVisible`  
+ [v] *bIsVisible*  
  `TRUE` Pokud chcete přidat jako viditelná, element `FALSE` Pokud chcete přidat prvek jako skrytá.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElement`  
+ [v] *pElement*  
  Ukazatel na přidaný prvek.  
   
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Textový popisek elementu.  
   
- [v] `bIsVisible`  
+ [v] *bIsVisible*  
  `TRUE` Pokud chcete přidat jako viditelná, element `FALSE` Pokud chcete přidat prvek jako skrytá.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatel do nadřazeného okna.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Logická nebo kombinace styly ovládacího prvku.  
   
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku na stavovém řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Logická nebo kombinace další styly pro vytvoření objektu panelu stavu.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl ovládacího prvku na stavovém řádku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku na stavovém řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
- [v] `BOOL`  
+ [v] *uiCmdID*  
+ [v] *BOOL*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  ID elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index počítaný od nuly elementu, který je umístěný v oblasti hlavního panelu řízení stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index elementu, který je umístěný v oblasti rozšířené ovládacího panelu Stav založený na nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na element, který se nachází na zadaný index v oblasti rozšířené stavového řádku pásu karet. `NULL` Pokud `nIndex` je záporný nebo větší než počet elementů v oblasti rozšířené stavového řádku pásu karet.  
+ Ukazatel na element, který se nachází na zadaný index v oblasti rozšířené stavového řádku pásu karet. `NULL` Pokud *nIndex* je záporný nebo větší než počet elementů v oblasti rozšířené stavového řádku pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElement`  
+ [v] *pElement*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `strInfo`  
+ [v] *strInfo*  
  Informace o řetězce.  
   
- [v] `rectInfo`  
+ [v] *rectInfo*  
  Ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled řetězec informací na stavovém řádku. Použití [CMFCRibbonStatusBar::SetInformation](#setinformation) metoda uvést do režimu informace na stavovém řádku. V tomto režimu se na stavovém řádku skryje všechny podokna a zobrazí informace o řetězec určený `strInfo`.  
+ Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled řetězec informací na stavovém řádku. Použití [CMFCRibbonStatusBar::SetInformation](#setinformation) metoda uvést do režimu informace na stavovém řádku. V tomto režimu se na stavovém řádku skryje všechny podokna a zobrazí informace o řetězec určený *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  ID elementu k odebrání stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud element se zadaným `uiID` se odebere. `FALSE` jinak.  
+ `TRUE` Pokud element se zadaným *uiID* se odebere. `FALSE` jinak.  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Povolí nebo zakáže režimu informace na pásu karet stavový řádek.  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszInfo`  
+ [v] *lpszInfo*  
  Informace o řetězce.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte uvést do režimu informace na stavovém řádku. V tomto režimu se na stavovém řádku skryje všechny podokna a zobrazí informace o řetězec určený `lpszInfo`.  
+ Tuto metodu použijte uvést do režimu informace na stavovém řádku. V tomto režimu se na stavovém řádku skryje všechny podokna a zobrazí informace o řetězec určený *lpszInfo*.  
   
  Pokud je lpszInfo `NULL`, stavový řádek přejde do režimu regulární.  
   

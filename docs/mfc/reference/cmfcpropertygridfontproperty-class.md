@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367611"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039035"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty – třída
 `CMFCPropertyGridFileProperty` Třída podporuje ovládací prvek položky seznamu vlastnosti, které se otevře dialogové okno Výběr písma.  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `strName`  
+ [v] *%{strName/*  
  Název vlastnosti  
   
- [v] `lf`  
+ [v] *lf*  
  Struktura logické písma, která určuje atributy písma.  
   
- [v] `dwFontDialogFlags`  
- Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnota rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu `Flags` parametr [CHOOSEFONT struktura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ [v] *dwFontDialogFlags*  
+ Styly, které se použijí pro dialogové okno písmo, který se zobrazí po kliknutí na tlačítko Vlastnosti hodnota rozevíracího seznamu. Výchozí hodnota je bitová kombinace (nebo) CF_EFFECTS a CF_SCREENFONTS. Další informace najdete v tématu *příznaky* parametr [CHOOSEFONT struktura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [v] `lpszDescr`  
+ [v] *lpszDescr*  
  Popis vlastnosti písma. Výchozí hodnota je `NULL`.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Specifické pro aplikaci data, jako třeba celé číslo nebo ukazatel na další data, která souvisí s vlastností. Výchozí hodnota je 0.  
   
- [v] `color`  
+ [v] *barev*  
  Barva písma. Výchozí hodnota je výchozí barvu.  
   
 ### <a name="remarks"></a>Poznámky  

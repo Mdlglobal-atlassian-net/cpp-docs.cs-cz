@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374507"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038329"
 ---
 # <a name="coledataobject-class"></a>COleDataObject – třída
 Používá se v přenosech souborů pro načítání dat v různých formátech ze schránky, prostřednictvím přetažení, nebo z vložené položky OLE.  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  Odkazuje na objekt dat OLE.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **Hodnota TRUE,** Pokud OLE datový objekt musí být uvolněna při `COleDataObject` objekt je zničení; jinak hodnota **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Formát, ve kterém má být vrácen data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Odkazuje na [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura, která bude přijímat data.  
   
- `lpFormatEtc`  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného `cfFormat`. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ *lpFormatEtc*  
+ Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Formát, ve kterém má být vrácen data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
- `lpFormatEtc`  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného `cfFormat`. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ *lpFormatEtc*  
+ Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nové `CFile` nebo `CFile`-odvozené objekt obsahující data, pokud úspěšná, jinak hodnota **NULL**.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Formát, ve kterém má být vrácen data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
- `lpFormatEtc`  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného `cfFormat`. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ *lpFormatEtc*  
+ Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být vrácen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač globální paměť bloku obsahující data v případě úspěšného; v opačném případě **NULL**.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura, která přijímá informace o formátu při volání funkce vrátí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
- Formát dat schránky pro použití ve struktuře na kterou odkazuje `lpFormatEtc`. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ *cfFormat*  
+ Formát dat schránky pro použití ve struktuře na kterou odkazuje *lpFormatEtc*. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
- `lpFormatEtc`  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát potřeby. Zadejte hodnotu tohoto parametru, pouze v případě, že chcete zadat informace o dalších formátu nad rámec formát schránky určeného `cfFormat`. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ *lpFormatEtc*  
+ Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát potřeby. Zadejte hodnotu tohoto parametru, pouze v případě, že chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud jsou k dispozici v zadaném formátu; data jinak 0.  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `IDataObject` Byl přidružen `COleDataObject` voláním **Attach** nebo `AttachClipboard` explicitně nebo rozhraní. Pokud `bAutoRelease` parametr **Attach** je **FALSE**, `IDataObject` nebude uvolnění objektu. V takovém případě volající zodpovídá za vydání `IDataObject` voláním [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ `IDataObject` Byl přidružen `COleDataObject` voláním `Attach` nebo `AttachClipboard` explicitně nebo rozhraní. Pokud `bAutoRelease` parametr `Attach` je **FALSE**, `IDataObject` nebude uvolnění objektu. V takovém případě volající zodpovídá za vydání `IDataObject` voláním [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka MFC HIERSVR](../../visual-cpp-samples.md)   

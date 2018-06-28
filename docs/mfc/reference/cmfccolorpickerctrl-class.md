@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374812"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042040"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl – třída
 `CMFCColorPickerCtrl` Třída poskytuje funkce pro ovládací prvek, který slouží k výběru barvy.  
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Určuje obdélníkovou oblast kolem vybrané barvy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `hue`  
+ [out] *hue*  
  Ukazatel na proměnné typu double, obdrží hue informace.  
   
- [out] `luminance`  
+ [out] *světlostí*  
  Ukazatel na proměnné typu double, obdrží světlostí informace.  
   
- [out] `saturation`  
+ [out] *zpracováváním dat*  
  Ukazatel na proměnné typu double, obdrží sytost informace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `R`  
+ [v] *R*  
  Komponenta červenou barvu.  
   
- [v] `G`  
+ [v] *G*  
  Komponenta zelenou barvu.  
   
- [v] `B`  
+ [v] *B*  
  Komponenta modrou barvu.  
   
- [v] `x`  
+ [v] *x*  
  Souřadnice x kurzoru, který odkazuje na šestiúhelníku buňky.  
   
- [v] `y`  
+ [v] *y*  
  Souřadnice y kurzoru, který odkazuje na šestiúhelníku buňky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `Color`  
+ [v] *Barev*  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hue`  
+ [v] *hue*  
  Hue hodnota.  
   
- [v] `luminance`  
+ [v] *světlostí*  
  Hodnotu světelnosti.  
   
- [v] `saturation`  
+ [v] *zpracováváním dat*  
  Hodnota sytost.  
   
- [v] `bInvalidate`  
+ [v] *bInvalidate*  
  `TRUE` Chcete-li vynutit okno okamžitě aktualizovat na novou barvu; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `Hue`  
+ [v] *Hue*  
  Hue hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `Luminance`  
+ [v] *Světlostí*  
  Hodnotu světelnosti.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `w`  
+ [v] *w*  
  Šířka pruhu světlostí měřená v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte ke změně velikosti panelu světlostí, který je na **vlastní** kartě ovládacího prvku pro výběr barev. `w` Parametr určuje nové Šířka pruhu světelnosti. Hodnota width se ignoruje, pokud přesahuje tříčtvrtinovou šířku oblasti klienta.  
+ Tuto metodu použijte ke změně velikosti panelu světlostí, který je na **vlastní** kartě ovládacího prvku pro výběr barev. *w* parametr určuje nové Šířka pruhu světelnosti. Hodnota width se ignoruje, pokud přesahuje tříčtvrtinovou šířku oblasti klienta.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Nastaví počáteční vybrané barvy.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ref`  
+ [v] *ref*  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPalette`  
+ [v] *pPalette*  
  Ukazatel na paletu barev.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `Saturation`  
+ [v] *Zpracováváním dat*  
  Hodnota sytost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `colorType`  
+ [v] *colorType*  
  Typ ovládacího prvku pro výběr barev.  
   
  Typy jsou definovány `CMFCColorPickerCtrl::COLORTYPE` výčtu. Možné typy jsou `LUMINANCE`, `PICKER`, `HEX` a `HEX_GREYSCALE`. Je výchozím typem `PICKER`.  

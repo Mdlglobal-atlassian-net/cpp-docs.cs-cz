@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374878"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042167"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog – třída
 Používá se pro dialogové okno Vložit objekt OLE.  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Vytvoření příznak, který obsahuje libovolný počet následující hodnoty a nelze jej zkombinovat pomocí operátoru bitové operace OR:  
   
 - **IOF_SHOWHELP** Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogové okno.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** Určuje, že by měl dialogové okno ověření třídy se přidá do seznamu tím, že zajistí, že zadané v databázi registrace servery existují předtím, než se zobrazí dialogové okno. Nastavením tohoto příznaku může výrazně zhoršit výkon.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, okno nadřazeného objektu dialogové okno bude nastaveno na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Odkazuje na položku, kterou chcete vytvořit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Jedna z následujících hodnot:  
   
  `COleInsertDialog::DocObjectsOnly` Vloží pouze DocObjects.  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378415"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039126"
 ---
 # <a name="coblist-class"></a>CObList – třída
 fSupports seřazené seznamy nejedinečný `CObject` ukazatele přístupné postupně nebo ukazatel hodnotu.  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  Element vložení je velmi rychle v seznamu head, od nějž a v známá **pozice**. Sekvenční vyhledávání je nezbytné pro vyhledávání element na hodnotu nebo index. Toto hledání může být pomalé, pokud je seznam dlouho.  
   
- `CObList` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud seznam `CObject` ukazatele je uložen do archivu, a to buď operátor přetížené vložení nebo s `Serialize` členské funkce se každý `CObject` element serializován naopak.  
+ `CObList` zahrnuje implement_serial – makro pro podporu serializace a vypsání jejích elementů. Pokud seznam `CObject` ukazatele je uložen do archivu, a to buď operátor přetížené vložení nebo s `Serialize` členské funkce se každý `CObject` element serializován naopak.  
   
  Pokud potřebujete výpis individuální `CObject` prvky v seznamu, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newElement`  
+ *newElement*  
  `CObject` Ukazatele, který se má přidat do tohoto seznamu.  
   
- `pNewList`  
- Ukazatel na jiný `CObList` seznamu. Prvky v `pNewList` bude přidán do tohoto seznamu.  
+ *pNewList*  
+ Ukazatel na jiný `CObList` seznamu. Prvky v *pNewList* bude přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první verze **pozice** hodnota nově vloženou elementu.  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newElement`  
+ *newElement*  
  `CObject` Ukazatele, který se má přidat do tohoto seznamu.  
   
- `pNewList`  
- Ukazatel na jiný `CObList` seznamu. Prvky v `pNewList` bude přidán do tohoto seznamu.  
+ *pNewList*  
+ Ukazatel na jiný `CObList` seznamu. Prvky v *pNewList* bude přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí první verze **pozice** hodnota nově vloženou elementu.  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Členitost přidělení paměti pro rozšíření seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- S růstem seznamu jednotek se přidělí paměť `nBlockSize` položky. V případě selhání přidělení paměti `CMemoryException` je vyvolána výjimka.  
+ S růstem seznamu jednotek se přidělí paměť *nBlockSize* položky. V případě selhání přidělení paměti `CMemoryException` je vyvolána výjimka.  
   
  Následující tabulka uvádí další členské funkce, které jsou podobné `CObList::CObList`.  
   
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `searchValue`  
+ *searchValue*  
  Ukazatel objektu, která se má najít v tomto seznamu.  
   
- `startAfter`  
+ *startAfter*  
  Počáteční pozice pro vyhledávání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -285,18 +285,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- Používá hodnotu `nIndex` jako index do seznamu.  
+ Používá hodnotu *nIndex* jako index do seznamu.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule elementu seznamu nalezen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A **pozice** hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatel; **NULL** Pokud `nIndex` je příliš velký. (Rozhraní generuje kontrolní výrazy, pokud `nIndex` je záporná.)  
+ A **pozice** hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatel; **NULL** Pokud *nIndex* je příliš velký. (Rozhraní generuje kontrolní výrazy, pokud *nIndex* je záporná.)  
   
 ### <a name="remarks"></a>Poznámky  
  Spuštěním kontroly sekvenční z hlavičky v seznamu na *n*element TD.  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>Parametry  
  *Pozice*  
- A **pozice** hodnoty vrácené předchozí `GetHeadPosition` nebo **najít** volání funkce člen.  
+ A **pozice** hodnoty vrácené předchozí `GetHeadPosition` nebo `Find` volání funkce člen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Naleznete v popisu návratovou hodnotu pro [GetHead](#gethead).  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- Získá seznam element identifikovaný `rPosition`, pak nastaví `rPosition` k `POSITION` hodnotu další položky v seznamu.  
+ Získá seznam element identifikovaný *rPosition*, pak nastaví *rPosition* k `POSITION` hodnotu další položky v seznamu.  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
+ *rPosition*  
  Odkaz na `POSITION` hodnoty vrácené předchozí `GetNext`, `GetHeadPosition`, nebo jiné členské funkce volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  Musíte zajistit, aby vaše `POSITION` hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
- Pokud načtené elementem je poslední v seznamu, pak nová hodnota `rPosition` je nastaven na `NULL`.  
+ Pokud načtené elementem je poslední v seznamu, pak nová hodnota *rPosition* je nastaven na `NULL`.  
   
  Je možné odebrat element během iterace. Podívejte se na příklad pro [RemoveAt](#removeat).  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- Získá seznam element identifikovaný `rPosition`, pak nastaví `rPosition` k `POSITION` hodnotu předchozí položky v seznamu.  
+ Získá seznam element identifikovaný *rPosition*, pak nastaví *rPosition* k `POSITION` hodnotu předchozí položky v seznamu.  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
+ *rPosition*  
  Odkaz na `POSITION` hodnoty vrácené předchozí `GetPrev` nebo jiné členské funkce volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>Parametry  
  *Pozice*  
- A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo **najít** volání funkce člen.  
+ A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo `Find` volání funkce člen.  
   
  `newElement`  
  Ukazatel objektu, který má být přidán do tohoto seznamu.  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>Parametry  
  *Pozice*  
- A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo **najít** volání funkce člen.  
+ A **pozice** hodnoty vrácené předchozí `GetNext`, `GetPrev`, nebo `Find` volání funkce člen.  
   
- `newElement`  
+ *newElement*  
  Ukazatel objektu, který má být přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  **Pozice** elementu nastavit.  
   
- `newElement`  
+ *newElement*  
  `CObject` Ukazatel má být zapsán do seznamu.  
   
 ### <a name="remarks"></a>Poznámky  

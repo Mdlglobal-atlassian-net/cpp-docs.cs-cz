@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368797"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037958"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar – třída
 A `CMFCReBar` objekt je ovládací prvek panel, který poskytuje informace o stavu pro ovládací prvky matrice, rozložení a trvalost.  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] `pBar`  
+ [v] [out] *pBar*  
  Ukazatel na podřízeného okna, které má být vložen do matrice. Odkazovaný objekt musí mít **ws_child –** styl oken.  
   
- [v] `pszText`  
+ [v] *pszText*  
  Určuje text, který se zobrazí na matrice. Text není součástí podřízeného okna. Místo toho se zobrazí na matrice sám sebe.  
   
- [v] [out] `pbmp`  
+ [v] [out] *pbmp*  
  Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Obsahuje stylu použít vzdálené správy. Úplný seznam styly vzdálené správy, naleznete v popisu pro `fStyle` v [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktura v dokumentaci k Windows SDK.  
   
- [v] `clrFore`  
+ [v] *clrFore*  
  Představuje barvu popředí matrice.  
   
- [v] `clrBack`  
+ [v] *clrBack*  
  Představuje barvu pozadí matrice.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] `pParentWnd`  
+ [v] [out] *pParentWnd*  
  Ukazatel do nadřazeného okna tohoto ovládacího prvku matrice.  
   
- [v] `dwCtrlStyle`  
+ [v] *dwCtrlStyle*  
  Určuje styl ovládacího prvku matrice. Styl výchozí hodnota je **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení přiléhající pruhy v ovládacím prvku matrice. Seznam styly platná najdete v tématu [– styly ovládacího prvku matrice](http://msdn.microsoft.com/library/windows/desktop/bb774377) v dokumentaci k Windows SDK.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Styl okna ovládacího prvku matrice. Seznam styly platná najdete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v] `nID`  
+ [v] *nID*  
  ID matrice podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bStretch`  
- [v] `bHorz`  
+ [v] *bStretch*  
+ [v] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CPoint`  
+ [v] *CPoint*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
- [v] `pTI`  
+ [v] *bodu*  
+ [v] *pTI*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTarget`  
- [v] `bDisableIfNoHndler`  
+ [v] *pTarget*  
+ [v] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwAlignment`  
+ [v] *dwAlignment*  
   
 ### <a name="remarks"></a>Poznámky  
   

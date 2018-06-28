@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f9eaa33abd0f24a1d584c5ba2a1e4d6f9e5d44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d7a15243f68143f043d12486f9fd21b27373a17
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374549"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039957"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 Implementuje OLE – automatizace na straně klienta.  
@@ -89,7 +89,7 @@ class COleDispatchDriver
 ## <a name="remarks"></a>Poznámky  
  `COleDispatchDriver` nemá základní třídu.  
   
- OLE – rozhraní dispatch poskytnout přístup k metody a vlastnosti objektu. Členské funkce `COleDispatchDriver` připojení, odpojení, vytvořte a vydání odesílání připojení typu `IDispatch`. Použití jiné členské funkce seznamy argumentů proměnných ke zjednodušení volání **volání metody IDispatch::Invoke**.  
+ OLE – rozhraní dispatch poskytnout přístup k metody a vlastnosti objektu. Členské funkce `COleDispatchDriver` připojení, odpojení, vytvořte a vydání odesílání připojení typu `IDispatch`. Použití jiné členské funkce seznamy argumentů proměnných ke zjednodušení volání `IDispatch::Invoke`.  
   
  Tato třída slouží přímo, ale obecně se používá pouze pomocí třídy vytvořený pomocí průvodce Přidat třídu. Když vytvoříte nové třídy C++ importováním knihovny typů, jsou nové třídy odvozené od `COleDispatchDriver`.  
   
@@ -115,10 +115,10 @@ void AttachDispatch(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDispatch`  
+ *lpDispatch*  
  Ukazatel na OLE `IDispatch` objekt, který má být připojen k `COleDispatchDriver` objektu.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  Určuje, zda odesílání se uvolní, když tento objekt je mimo rozsah.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -137,13 +137,13 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDispatch`  
+ *lpDispatch*  
  Ukazatel na OLE `IDispatch` objekt, který má být připojen k `COleDispatchDriver` objektu.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  Určuje, zda odesílání se uvolní, když tento objekt je mimo rozsah.  
   
- `dispatchSrc`  
+ *dispatchSrc*  
  Odkaz na existující `COleDispatchDriver` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -171,13 +171,13 @@ BOOL CreateDispatch(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *CLSID*  
  ID třídy `IDispatch` objekt připojení, který se má vytvořit.  
   
- `pError`  
+ *pError*  
  Ukazatel na objekt výjimky OLE, který bude obsahovat kód stavu vyplývající z vytvoření.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Ukazatel na programový identifikátor, jako je například "Excel.Document.5" automatizace objektu, pro kterou má být vytvořen objekt odeslání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -205,7 +205,7 @@ LPDISPATCH DetachDispatch();
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
   
 ##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty  
- Získá vlastnost objektu určeného `dwDispID`.  
+ Získá vlastnost objektu určeného *dwDispID*.  
   
 ```  
 void GetProperty(
@@ -215,20 +215,20 @@ void GetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje vlastnost, která má být načtena.  
   
- `vtProp`  
+ *vtProp*  
  Určuje vlastnost, která má být načtena. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](#invokehelper).  
   
- `pvProp`  
- Adresa proměnné, která se zobrazí hodnota vlastnosti. Musí se shodovat s typem zadaným ve `vtProp`.  
+ *pvProp*  
+ Adresa proměnné, která se zobrazí hodnota vlastnosti. Musí se shodovat s typem zadaným ve *vtProp*.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]  
   
 ##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper  
- Volá metodu objekt nebo vlastnost určeného `dwDispID`, v rámci určeného `wFlags`.  
+ Volá metodu objekt nebo vlastnost určeného *dwDispID*, v rámci určeného *wFlags*.  
   
 ```  
 void AFX_CDECL InvokeHelper(
@@ -240,32 +240,32 @@ void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje metodu nebo vlastnost, která má být volána.  
   
- `wFlags`  
- Příznaky popisující kontext volání **volání metody IDispatch::Invoke**. . Seznam možných hodnot najdete v tématu `wFlags` parametr v [volání metody IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) ve Windows SDK.  
+ *wFlags*  
+ Příznaky popisující kontext volání **volání metody IDispatch::Invoke**. . Seznam možných hodnot najdete v tématu *wFlags* parametr v [volání metody IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) ve Windows SDK.  
   
- `vtRet`  
+ *vtRet*  
  Určuje typ vrácené hodnoty. Možné hodnoty najdete v části poznámky.  
   
- `pvRet`  
- Adresa proměnné, která bude přijímat hodnota vlastnosti nebo vrátit hodnotu. Musí se shodovat s typem zadaným ve `vtRet`.  
+ *pvRet*  
+ Adresa proměnné, která bude přijímat hodnota vlastnosti nebo vrátit hodnotu. Musí se shodovat s typem zadaným ve *vtRet*.  
   
- `pbParamInfo`  
- Ukazatel na řetězce ukončené hodnotou null bajtů určení typů parametrů následující `pbParamInfo`.  
+ *pbParamInfo*  
+ Ukazatel na řetězce ukončené hodnotou null bajtů určení typů parametrů následující *pbParamInfo*.  
   
  *...*  
- Seznam proměnných parametrů typů zadaný v `pbParamInfo`.  
+ Seznam proměnných parametrů typů zadaný v *pbParamInfo*.  
   
 ### <a name="remarks"></a>Poznámky  
- `pbParamInfo` Parametr určuje typy parametrů předaných pracovnímu metody nebo vlastnosti. Proměnné seznam argumentů je reprezentována **...**  v deklaraci syntaxe.  
+ *PbParamInfo* parametr určuje typy parametrů předaných pracovnímu metody nebo vlastnosti. Proměnné seznam argumentů je reprezentována **...**  v deklaraci syntaxe.  
   
- Možné hodnoty `vtRet` argument jsou převzaty z `VARENUM` výčtu. Možné hodnoty jsou následující:  
+ Možné hodnoty *vtRet* argument jsou převzaty z `VARENUM` výčtu. Možné hodnoty jsou následující:  
   
 |Symbol|Návratový typ|  
 |------------|-----------------|  
-|`VT_EMPTY`|`void`|  
+|`VT_EMPTY`|**void**|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
@@ -273,15 +273,15 @@ void AFX_CDECL InvokeHelper(
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATUM**|  
 |`VT_BSTR`|`BSTR`|  
-|**VT_DISPATCH**|`LPDISPATCH`|  
+|`VT_DISPATCH`|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
-|**VT_VARIANT**|**VARIANT**|  
-|**VT_UNKNOWN**|`LPUNKNOWN`|  
+|`VT_VARIANT`|**VARIANT**|  
+|`VT_UNKNOWN`|`LPUNKNOWN`|  
   
- `pbParamInfo` Argument je seznam oddělených mezerami **VTS_** konstanty. Jeden nebo více z těchto hodnot, oddělené mezerami (ne čárkami), určuje seznam parametrů funkce. Možné hodnoty jsou uvedena s [event_custom –](event-maps.md#event_custom) makro.  
+ *PbParamInfo* argument je seznam oddělených mezerami **VTS_** konstanty. Jeden nebo více z těchto hodnot, oddělené mezerami (ne čárkami), určuje seznam parametrů funkce. Možné hodnoty jsou uvedena s [event_custom –](event-maps.md#event_custom) makro.  
   
- Tato funkce převede parametry, které chcete **VARIANTARG** hodnoty a potom volá [volání metody IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) metoda. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud `SCODE` vrácený (kód stavu) **volání metody IDispatch::Invoke** je `DISP_E_EXCEPTION`, funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md) objektu; jinak vyvolá [ COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
+ Tato funkce převede parametry, které chcete **VARIANTARG** hodnoty a potom volá [volání metody IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) metoda. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud `SCODE` vrácený (kód stavu) `IDispatch::Invoke` je `DISP_E_EXCEPTION`, funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md) objektu; jinak vyvolá [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
   
  Další informace najdete v tématu [VARIANTARG](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [implementace rozhraní IDispatch](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx), [volání metody IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx), a [struktura z COM kódy chyb](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
   
@@ -326,7 +326,7 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispatchSrc`  
+ *dispatchSrc*  
  Ukazatele na existující `COleDispatchDriver` objektu.  
   
 ##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH  
@@ -347,13 +347,13 @@ void ReleaseDispatch();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud automaticky verze byla nastavena pro toto připojení, tato funkce volá **IDispatch::Release** před uvolněním rozhraní.  
+ Pokud automaticky verze byla nastavena pro toto připojení, tato funkce volá `IDispatch::Release` před uvolněním rozhraní.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [COleDispatchDriver::AttachDispatch](#attachdispatch).  
   
 ##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty  
- Nastaví vlastnost objektu OLE určeného `dwDispID`.  
+ Nastaví vlastnost objektu OLE určeného *dwDispID*.  
   
 ```  
 void AFX_CDECL SetProperty(
@@ -362,14 +362,14 @@ void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje vlastnost, která má být nastavena.  
   
- `vtProp`  
+ *vtProp*  
  Určuje typ vlastnosti, která má být nastavena. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](#invokehelper).  
   
  *...*  
- Jeden parametr v typu zadaném pomocí `vtProp`.  
+ Jeden parametr v typu zadaném pomocí *vtProp*.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]  

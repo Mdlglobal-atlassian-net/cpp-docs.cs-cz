@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371579"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040831"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate – třída
 Definuje šablonu dokumentu, který implementuje rozhraní více dokumentů (MDI).  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
+ *nIDResource*  
  Určuje ID prostředků použitý s typem dokumentu. To může zahrnovat nabídky, ikona, tabulka akcelerátoru a řetězcové prostředky.  
   
  Řetězec prostředku se skládá z až sedm dílčích řetězců oddělenými znakem '\n' (znak '\n, je potřeba jako zástupný symbol, pokud neuvedete dílčí řetězec; však nejsou nutné koncové znaky '\n'); Tyto dílčích řetězců popisují typ dokumentu. Informace o dílčích řetězců najdete v tématu [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Tento řetězec prostředku se nachází v souboru prostředků aplikace. Příklad:  
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  Další informace o těchto typech prostředků najdete v tématu [editory prostředků](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Odkazuje na `CRuntimeClass` objekt třídy dokumentu. Tato třída je **CDocument**-odvozené třídy, které definujete, aby představují dokumentů.  
+ *pDocClass*  
+ Odkazuje na `CRuntimeClass` objekt třídy dokumentu. Tato třída je `CDocument`-odvozené třídy, které definujete, aby představují dokumentů.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Odkazuje na `CRuntimeClass` objekt třídy oken s rámečkem. Tato třída může být `CMDIChildWnd`-odvozené třídy, nebo může být `CMDIChildWnd` samotné Pokud chcete použít výchozí chování pro vaše okna s rámečkem dokumentu.  
   
- `pViewClass`  
+ *pViewClass*  
  Odkazuje na `CRuntimeClass` objekt třídy zobrazení. Tato třída je `CView`-odvozené třídy, které definujete pro zobrazení dokumentů.  
   
 ### <a name="remarks"></a>Poznámky  

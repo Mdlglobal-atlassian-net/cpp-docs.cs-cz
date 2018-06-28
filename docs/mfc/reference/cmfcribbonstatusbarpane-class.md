@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369187"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038429"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane – třída
 `CMFCRibbonStatusBarPane` Třída implementuje na pásu karet element, který můžete přidat do stavového řádku pásu karet.  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nCmdID`  
+ [v] *nCmdID*  
  Určuje ID příkazu, který podokna.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Určuje textový řetězec, který se má zobrazit v podokně.  
   
- [v] `bIsStatic`  
+ [v] *bIsStatic*  
  Pokud `TRUE`, v podokně Stav nemůže být zvýrazněná nebo vybrat kliknutím ji.  
   
- [v] `hIcon`  
+ [v] *hIcon*  
  Určuje popisovač pro ikonu, která se zobrazí v podokně.  
   
- [v] `lpszAlmostLargeText`  
+ [v] *lpszAlmostLargeText*  
  Určuje nejdelší textový řetězec, který lze zobrazit v podokně.  
   
- [v] `hBmpAnimationList`  
+ [v] *hBmpAnimationList*  
  Určuje popisovač pro seznamu obrázků, který se používá pro animace.  
   
- [v] `cxAnimation`  
+ [v] *cxAnimation*  
  Určuje šířku v pixelech na ikonu v seznamu obrázků, který se používá pro animace.  
   
- [v] `clrTrnsp`  
+ [v] *clrTrnsp*  
  Určuje průhlednou barvu obrázků v seznamu obrázků, které se používají pro animace.  
   
- [v] `uiAnimationListResID`  
+ [v] *uiAnimationListResID*  
  Určuje ID prostředku ze seznamu obrázků, který se používá pro animace.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CDC*`  
+ [v] *CDC**  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszAlmostLargeText`  
+ [v] *lpszAlmostLargeText*  
  Určuje nejdelší řetězec, který lze zobrazit v podokně Stav panelu bez zkrácení.  
   
 ### <a name="remarks"></a>Poznámky  
- Knihovny vypočítá velikost textu, který `lpszAlmostLargeText` určuje a změní velikost podokně odpovídajícím způsobem. Text bude zkrácen, pokud ho stále nevejde v podokně.  
+ Knihovny vypočítá velikost textu, který *lpszAlmostLargeText* určuje a změní velikost podokně odpovídajícím způsobem. Text bude zkrácen, pokud ho stále nevejde v podokně.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  Připojí k panelu řádku stav seznamu obrázků, které lze použít pro animace.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hBmpAnimationList`  
+ [v] *hBmpAnimationList*  
  Určuje popisovač pro seznamu obrázků.  
   
- [v] `cxAnimation`  
+ [v] *cxAnimation*  
  Určuje šířku v pixelech rámce v seznamu obrázků.  
   
- [v] `clrTransp`  
+ [v] *clrTransp*  
  Určuje průhlednou barvu ze seznamu obrázků.  
   
- [v] `uiAnimationListResID`  
+ [v] *uiAnimationListResID*  
  Určuje ID prostředku seznamu obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -298,15 +298,15 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nAlign`  
+ [v] *nAlign*  
  Určuje zarovnání textu.  
   
 ### <a name="remarks"></a>Poznámky  
- `nAlign` Může mít jednu z následujících hodnot:  
+ *nAlign* může mít jeden z následujících hodnot:  
   
 - `TA_LEFT`: zarovnání vlevo  
   
-- `TA_CENTER:` Zarovnání na střed  
+- `TA_CENTER:` zarovnání na střed  
   
 - `TA_RIGHT:` Zarovnání doprava  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFrameDelay`  
+ [v] *nFrameDelay*  
  Určuje frekvenci snímků animace, v milisekundách.  
   
- [v] `nDuration`  
+ [v] *nDuration*  
  Určuje, jak dlouho přehrávání animace, v milisekundách. Použít hodnotu -1 pro nekonečné smyčce.  
   
 ### <a name="remarks"></a>Poznámky  

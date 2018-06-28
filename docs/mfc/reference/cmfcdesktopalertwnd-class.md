@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370653"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039983"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd – třída
 `CMFCDesktopAlertWnd` Třída implementuje funkce nemodální dialogové okno, které se zobrazí na obrazovce informovat uživatele o události.  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] `pWndOwner`  
+ [v] [out] *pWndOwner*  
  Určuje vlastník okna výstrah. Tento vlastník se potom zobrazí všechna oznámení okně upozornění na ploše. Tato hodnota nemůže být `NULL`.  
   
- [v] `uiDlgResID`  
+ [v] *uiDlgResID*  
  Určuje ID prostředku okna výstrah.  
   
- [v] `hMenu`  
+ [v] *hMenu*  
  Určuje nabídce, která se zobrazí, když uživatel klikne na tlačítko nabídky. Pokud `NULL`, se nezobrazí tlačítko nabídky.  
   
- [v] `ptPos`  
+ [v] *ptPos*  
  Určuje počáteční pozici, kde se zobrazí okno výstrahy, pomocí souřadnice obrazovky. Pokud tento parametr je (-1, -1), okně upozornění se zobrazí v pravém dolním rohu obrazovky.  
   
- [v] `pRTIDlgBar`  
+ [v] *pRTIDlgBar*  
  Informace o třídě modulu runtime pro třídy vlastní dialogového okna, které pokrývá okně oznámení klientské oblasti.  
   
- [v] `params`  
+ [v] *parametry*  
  Určuje parametry, které se používají k vytvoření výstrahy okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CPoint&`  
+ [v] *CPoint &*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wParam`  
- [v] `lParam`  
+ [v] *wParam*  
+ [v] *lParam*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hwnd`  
+ [v] *hwnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nSpeed`  
+ [v] *nSpeed*  
  Určuje nové rychlost animace, v milisekundách.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `type`  
+ [v] *typu*  
  Určuje typ animace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nTime`  
+ [v] *nTime*  
  Doba v milisekundách, která uplyne mezi výstrahy okno automaticky zavře.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSmallCaption`  
+ [v] *bSmallCaption*  
  `TRUE` k určení, že okno výstrahy zobrazuje malé popisek; v opačném `FALSE` pro určení, že okna výstrah zobrazí popisek regular velikost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nTransparency`  
+ [v] *nTransparency*  
  Určuje úroveň průhlednosti. Tato hodnota musí být mezi 0 a 255 (včetně). Čím vyšší hodnota, další neprůhledné okna.  
   
 ### <a name="remarks"></a>Poznámky  

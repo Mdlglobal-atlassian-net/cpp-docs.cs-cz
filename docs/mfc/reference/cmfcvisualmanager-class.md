@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f9006b78d90a26aa6d4a2ee2bbbb010241298e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13fa7aea135099a8e0903ef0fc5fd20ca0cca5ff
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378979"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039502"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager – třída
 Poskytuje podporu pro Změna vzhledu vaší aplikace na globální úrovni. `CMFCVisualManager` Třídy funguje nejlépe společně s třídu, která obsahuje pokyny k vykreslení ovládacích prvků grafického uživatelského rozhraní aplikace pomocí konzistentní styl. Tyto další třídy jsou označovány jako visual správci a dědí z `CMFCBaseVisualManager`.  
@@ -650,7 +650,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bTemporary`  
+ [v] *bTemporary*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -662,7 +662,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAutoDestroyOnly`  
+ [v] *bAutoDestroyOnly*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -678,10 +678,10 @@ void DoDrawHeaderSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bIsUp`  
- [v] `bDlgCtrl`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bIsUp*  
+ [v] *bDlgCtrl*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -697,9 +697,9 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CDC*`  
- [v] `CRect`  
- [v] `BOOL`  
+ [v] *CDC**  
+ [v] *CRect*  
+ [v] *BOOL*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -717,9 +717,9 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CDC*`  
- [v] `CRect`  
- [v] `BOOL`  
+ [v] *CDC**  
+ [v] *CRect*  
+ [v] *BOOL*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -736,10 +736,10 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CDC*`  
- [v] `CRect`  
- [v] `CMFCButton*`  
- [v] `UINT`  
+ [v] *CDC**  
+ [v] *CRect*  
+ [v] *CMFCButton**  
+ [v] *Celé_číslo*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -759,12 +759,12 @@ virtual BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `strText`  
- [v] `rect`  
- [v] `dwFlags`  
- [v] `nGlowSize`  
- [v] `clrText`  
+ [v] *primárního řadiče domény*  
+ [v] *strText*  
+ [v] *Rect –*  
+ [v] *dwFlags*  
+ [v] *nGlowSize*  
+ [v] *clrText*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -778,7 +778,7 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -790,11 +790,11 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel automaticky skrýt tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu `pButton`.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu *pButton*.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě Chcete-li přizpůsobit barvy automaticky skrýt tlačítka ve vaší aplikaci. Chcete-li to provést, vrátí barvu, která má aplikace použít jako barvu textu.  
@@ -820,11 +820,11 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na záhlaví.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu v `pBar`.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu v *pBar*.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v vaší odvozené třídy za účelem přizpůsobení barvu textu pro záhlaví. V způsob přepsaného vrátíte požadovanou barvu.  
@@ -874,7 +874,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -928,9 +928,9 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
- [v] `bHighlighted`  
- [v] `bDisabled`  
+ [v] *pButton*  
+ [v] *bHighlighted*  
+ [v] *bDisabled*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -957,8 +957,8 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSmall`  
- Parametr typu Boolean, která určuje, zda `GetNcBtnSize` musí načíst velikost tlačítka malý nebo velký systému. Pokud `bSmall` je `TRUE`, `GetNcBtnSize` vrátí velikost tlačítko malé systému. Jinak vrátí velikost tlačítka velké systému.  
+ [v] *bSmall*  
+ Parametr typu Boolean, která určuje, zda `GetNcBtnSize` musí načíst velikost tlačítka malý nebo velký systému. Pokud *bSmall* je `TRUE`, `GetNcBtnSize` vrátí velikost tlačítko malé systému. Jinak vrátí velikost tlačítka velké systému.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který označuje velikost tlačítka systému.  
@@ -998,11 +998,11 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPropList`  
+ [v] *pPropList*  
  Ukazatel na seznamu vlastností, které je kreslení rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu pozadí `pPropList`.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu pozadí *pPropList*.  
   
 ### <a name="remarks"></a>Poznámky  
  Chcete-li přizpůsobit barvy pozadí seznam vlastností ve vaší aplikaci funkci přepište.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPropList`  
+ [v] *pPropList*  
  Ukazatel na seznamu vlastností.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1032,7 +1032,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pHyperLink`  
+ [v] *pHyperLink*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1046,7 +1046,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CMFCRibbonPanelMenu*`  
+ [v] *CMFCRibbonPanelMenu**  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1082,7 +1082,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bDisabled`  
+ [v] *bDisabled*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1102,12 +1102,12 @@ virtual void GetRibbonSliderColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pSlider`  
- [v] `bIsHighlighted`  
- [v] `bIsPressed`  
- [v] `bIsDisabled`  
- [v] `clrLine`  
- [v] `clrFill`  
+ [v] *pSlider*  
+ [v] *bIsHighlighted*  
+ [v] *bIsPressed*  
+ [v] *bIsDisabled*  
+ [v] *clrLine*  
+ [v] *clrFill*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1119,7 +1119,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pStatusBar`  
+ [v] *pStatusBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1135,8 +1135,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `sizeDefault`  
+ [v] *primárního řadiče domény*  
+ [v] *sizeDefault*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1152,8 +1152,8 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrBaseGroupBackground`  
- [v] `clrBaseGroupBorder`  
+ [v] *clrBaseGroupBackground*  
+ [v] *clrBaseGroupBorder*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1190,8 +1190,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pStatusBar`  
- [v] `pPane`  
+ [v] *pStatusBar*  
+ [v] *pPane*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1214,31 +1214,31 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na okno s kartami, kde je rámečku kreslení na kartě.  
   
- [out] `clrDark`  
+ [out] *clrDark*  
  Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, kde tato metoda ukládá barvu ohraničení tmavý karty.  
   
- [out] `clrBlack`  
+ [out] *clrBlack*  
  Odkaz na `COLORREF` parametr, kde tato metoda ukládá barvu ohraničení okno s kartou. Výchozí barvu ohraničení je černá.  
   
- [out] `clrHighlight`  
+ [out] *clrHighlight*  
  Odkaz na `COLORREF` parametr, kde tato metoda ukládá barva zvýraznění stavu okno s kartou.  
   
- [out] `clrFace`  
+ [out] *clrFace*  
  Odkaz na `COLORREF` parametr, kde tato metoda ukládá barva čelní strany okna Karta.  
   
- [out] `clrDarkShadow`  
+ [out] *clrDarkShadow*  
  Odkaz na `COLORREF` parametr, kde tato metoda ukládá barvu stínu okno s kartou.  
   
- [out] `clrLight`  
+ [out] *clrLight*  
  Odkaz na `COLORREF` parametr, kde tato metoda ukládá barvu pro lehké okraji okna Karta.  
   
- [out] `pbrFace`  
+ [out] *pbrFace*  
  Ukazatel na odkaz pro štětce. Tato metoda ukládá štětce, který používá k vyplnění tučné okno s kartou v tomto parametru.  
   
- [out] `pbrBlack`  
+ [out] *pbrBlack*  
  Ukazatel na odkaz pro štětce. Tato metoda ukládá stopy, která se používá k vyplnění černým okraji okna Karta v tomto parametru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1252,7 +1252,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CMFCBaseTabCtrl*`  
+ [v] *CMFCBaseTabCtrl&#42;*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1269,9 +1269,9 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CMFCBaseTabCtrl*`  
- [v] `int`  
- [v] `BOOL`  
+ [v] *CMFCBaseTabCtrl&#42;*  
+ [v] *int*  
+ [v] *BOOL*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1386,14 +1386,14 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítka panelu nástrojů.  
   
- [v] `state`  
+ [v] *stavu*  
  Stav tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva textu `pButton` Pokud je indikován stav `state`.  
+ Barva textu *pButton* Pokud je indikován stav *stavu*.  
   
 ### <a name="remarks"></a>Poznámky  
  Barva textu [CMFCToolBarButton třída](../../mfc/reference/cmfctoolbarbutton-class.md) objekt závisí na stavu tlačítka. Možné stavy tlačítka panelu nástrojů jsou `ButtonsIsRegular`, `ButtonsIsPressed`, nebo `ButtonsIsHighlighted`.  
@@ -1456,8 +1456,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `params`  
- [v] `nType`  
+ [v] *parametry*  
+ [v] *Noznámení*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1492,7 +1492,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CMFCDesktopAlertWndButton*`  
+ [v] *CMFCDesktopAlertWndButton**  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1668,7 +1668,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CMFCToolBar*`  
+ [v] *CMFCToolBar&#42;*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1695,8 +1695,8 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
- [v] `bActive`  
+ [v] *pWnd*  
+ [v] *bActive*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1712,22 +1712,22 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectBounds`  
+ [v] *rectBounds*  
  Velikost a umístění automaticky skrýt tlačítko.  
   
- [v] `rectBorderSize`  
+ [v] *rectBorderSize*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md) parametr, který obsahuje velikosti ohraničení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítko automaticky skrýt. Rozhraní je kreslení ohraničení pro toto tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled ohraničení automaticky skrýt tlačítko. Ve výchozím nastavení tato metoda doplní ploché ohraničení s barvu stínu výchozí pro vaši aplikaci.  
   
- `rectBorderSize` Parametr neobsahuje souřadnice ohraničení. Obsahuje velikost ohraničení v `top`, `bottom`, `left`, a `right` datových členů. Hodnotu menší než nebo rovna 0 označuje žádné ohraničení na této straně automaticky skrýt tlačítko.  
+ *RectBorderSize* parametr neobsahuje souřadnice ohraničení. Obsahuje velikost ohraničení v `top`, `bottom`, `left`, a `right` datových členů. Hodnotu menší než nebo rovna 0 označuje žádné ohraničení na této straně automaticky skrýt tlačítko.  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManager::OnDrawBarGripper  
  Voláno rámcem, pokud ji nevykresluje úchytu pro ovládací prvek panelu.  
@@ -1741,16 +1741,16 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro ovládací prvek panelu.  
   
- [v] `rectGripper`  
+ [v] *rectGripper*  
  Ohraničující obdélník pro ovládací prvek panelu.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Logický parametr, který určuje, zda je ovládací prvek panel ukotven vodorovně nebo svisle.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na ovládacím panelu. Správce visual nevykresluje úchytu tento ovládací prvek panel.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1769,19 +1769,19 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranicí pro tlačítko procházení.  
   
- [v] `pEdit`  
+ [v] *pEdit*  
  Ukazatel na ovládací prvek upravit. Správce visual nevykresluje tlačítko procházení pro tento ovládací prvek upravit.  
   
- [v] `state`  
+ [v] *stavu*  
  Výčtová hodnota určuje stav tlačítko.  
   
- [out] `clrText`  
+ [out] *clrText*  
  Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr. Toto je rezervovaná hodnota a není aktuálně používána.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1802,16 +1802,16 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení tlačítka panelu nástrojů.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítka panelu nástrojů. Rozhraní framework ohraničení toto tlačítko.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítka panelu nástrojů.  
   
- [v] `state`  
+ [v] *stavu*  
  Výčtové datový typ, který určuje aktuální stav tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1832,11 +1832,11 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `state`  
- [v] `bHorz`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *stavu*  
+ [v] *bHorz*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1853,19 +1853,19 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na `CMFCCaptionBar` objektu. Rozhraní framework nevykresluje tento panel titulek.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice panelu titulek.  
   
- [v] `clrBarBorder`  
+ [v] *clrBarBorder*  
  Barva ohraničení.  
   
- [v] `bFlatBorder`  
+ [v] *bFlatBorder*  
  Logická hodnota parametr, který určuje, zda se má plochý, 2D vzhledu ohraničení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1887,14 +1887,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
- [v] `bIsPressed`  
- [v] `bIsHighlighted`  
- [v] `bIsDisabled`  
- [v] `bHasDropDownArrow`  
- [v] `bIsSysButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
+ [v] *bIsPressed*  
+ [v] *bIsHighlighted*  
+ [v] *bIsDisabled*  
+ [v] *bHasDropDownArrow*  
+ [v] *bIsSysButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1909,9 +1909,9 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1930,26 +1930,26 @@ virtual void OnDrawCaptionButton (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na `CMFCCaptionButton` objektu. Rozhraní framework nevykresluje toto tlačítko titulek.  
   
- [v] `bActive`  
+ [v] *bActive*  
  Logický parametr, který určuje, zda tlačítko je aktivní.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Logický parametr, který určuje, zda je titulek vodorovné.  
   
- [v] `bMaximized`  
+ [v] *bMaximized*  
  Logický parametr, který určuje, zda je maximalizovaný podokně nadřazené.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  Logický parametr, který určuje, zda je titulek tlačítko zakázáno.  
   
- [v] `nImageID`  
- Index obrázku ikony pro tlačítko. Pokud `nImageID` je -1, tato metoda používá index bitové kopie zaznamenaná v `pButton`.  
+ [v] *nImageID*  
+ Index obrázku ikony pro tlačítko. Pokud *nImageID* je -1, tato metoda používá index bitové kopie zaznamenaná v *pButton*.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této metody zobrazí malé tlačítko z globální instance `CMenuImages` třídy. Tlačítka jsou uvedeny v záhlaví souboru `CMenuImages`. Mezi příklady patří `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`, a `CMenuImages::IdPinHorz`.  
@@ -1969,11 +1969,11 @@ virtual void OnDrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bHighlighted`  
- [v] `bChecked`  
- [v] `bEnabled`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bHighlighted*  
+ [v] *bChecked*  
+ [v] *bEnabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1991,12 +1991,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `nState`  
- [v] `bHighlighted`  
- [v] `bPressed`  
- [v] `bEnabled`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *nInformace*  
+ [v] *bHighlighted*  
+ [v] *bPressed*  
+ [v] *bEnabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2014,22 +2014,22 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na zařízení kontextu tlačítko pole se seznamem.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítko pole se seznamem.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  Parametr typu Boolean, která určuje, zda je k dispozici tlačítko pole se seznamem.  
   
- [v] `bIsDropped`  
+ [v] *bIsDropped*  
  Parametr typu Boolean, která určuje, zda pole se seznamem je vyřazeno.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený tlačítko pole se seznamem.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na `CMFCToolBarComboBoxButton` objektu. Rozhraní framework nevykresluje toto tlačítko pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2049,22 +2049,22 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice rozevírací tlačítko.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  Parametr typu Boolean, který určuje, zda je k dispozici rozevírací tlačítko.  
   
- [v] `bIsDropped`  
+ [v] *bIsDropped*  
  Parametr typu Boolean, která určuje, zda pole se seznamem je vyřazeno.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený na rozevírací tlačítko.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na `CMFCToolBarComboBoxButton` objektu. Rozhraní framework nevykresluje rozevírací tlačítko pro toto tlačítko pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2078,7 +2078,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndCtrl`  
+ [v] *pWndCtrl*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2095,19 +2095,19 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectImage`  
+ [v] *rectImage*  
  Obdélníku, která určuje hranice výchozí image.  
   
- [v] `bIsDisabled`  
+ [v] *bIsDisabled*  
  Parametr typu Boolean, která určuje, zda je k dispozici na pásu karet tlačítko.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Parametr typu Boolean, která určuje, zda stisknutí tlačítka pásu karet.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený na pásu karet tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2126,19 +2126,19 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice `CMFCToolBarEditBoxButton` objektu.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  Parametr typu Boolean, která určuje, zda je k dispozici tlačítko.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený na tlačítko.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na `CMFCToolBarEditBoxButton` objektu. Rozhraní framework ohraničení toto políčko tlačítko Upravit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2156,10 +2156,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bIsOpened`  
- [v] `colorBox`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bIsOpened*  
+ [v] *colorBox*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2175,22 +2175,22 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pToolBar`  
+ [v] *pToolBar*  
  Ukazatel na plovoucí panel nástrojů.  
   
- [v] `rectBorder`  
+ [v] *rectBorder*  
  Obdélníku, která určuje hranice plovoucí panel nástrojů.  
   
- [v] `rectBorderSize`  
+ [v] *rectBorderSize*  
  Obdélníku, která určuje velikost ohraničení panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
  Plovoucí panel nástrojů je panel nástrojů, který se zobrazí jako zkrácená rámce okna. Obvykle k tomu dochází, když uživatel nastavuje tažením panelu nástrojů tak, aby je již ukotvena.  
   
- Velikost ohraničení je zadána odpovídající parametr v `rectBorderSize`. Například je zadána šířka horního ohraničení panelu nástrojů `rectBorderSize.top`.  
+ Velikost ohraničení je zadána odpovídající parametr v *rectBorderSize*. Například je zadána šířka horního ohraničení panelu nástrojů `rectBorderSize.top`.  
   
  Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu ohraničení plovoucí panel nástrojů.  
   
@@ -2207,19 +2207,19 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCtrl`  
+ [v] *pCtrl*  
  Ukazatel na `CMFCHeaderCtrl` objektu. Rozhraní framework ohraničení tohoto ovládacího prvku záhlaví.  
   
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice ovládacího prvku záhlaví.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Parametr typu Boolean, která určuje, zda je stisknutí ovládacím prvku záhlaví.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený ovládací prvek záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2237,20 +2237,20 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCtrl`  
+ [v] *pCtrl*  
  Ukazatel na ovládacím prvkem záhlaví. Správce visual nevykresluje šipku řazení tohoto [CMFCHeaderCtrl třída](../../mfc/reference/cmfcheaderctrl-class.md) objektu.  
   
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice šipku řazení.  
   
- [v] `bIsUp`  
+ [v] *bIsUp*  
  Logická hodnota, která určuje směr řazení šipky.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bIsUp` je `TRUE`, správce visual nevykresluje šipka nahoru řazení. Pokud je `FALSE`, správce visual nevykresluje šipku řazení. Přepsání `OnDrawHeaderCtrlSortArrow` v odvozené třídě přizpůsobit vzhled tlačítka pro řazení.  
+ Pokud *bIsUp* je `TRUE`, správce visual nevykresluje šipka nahoru řazení. Pokud je `FALSE`, správce visual nevykresluje šipku řazení. Přepsání `OnDrawHeaderCtrlSortArrow` v odvozené třídě přizpůsobit vzhled tlačítka pro řazení.  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
 
@@ -2263,9 +2263,9 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectCommand`  
- [v] `bSelected`  
+ [v] *primárního řadiče domény*  
+ [v] *rectCommand*  
+ [v] *bSelected*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2280,13 +2280,13 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení `CMFCPopupMenu` objektu.  
   
- [v] `pMenu`  
+ [v] *pMenu*  
  Ukazatel na `CMFCPopupMenu` objektu. Rozhraní framework ohraničení kolem tohoto místní nabídky.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice místní nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2305,11 +2305,11 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `bHighlight`  
- [v] `bIsRadio`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *bHighlight*  
+ [v] *bIsRadio*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2326,11 +2326,11 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rectButton`  
- [v] `bHighlight`  
- [v] `bDisabled`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *rectButton*  
+ [v] *bHighlight*  
+ [v] *bDisabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2344,8 +2344,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2362,9 +2362,9 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `nResizeFlags`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *nResizeFlags*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2382,22 +2382,22 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítko posuvníku.  
   
- [v] `bIsScrollDown`  
+ [v] *bIsScrollDown*  
  Logická hodnota, která určuje, jaký typ tlačítko visual manager nevykresluje. Hodnota `TRUE` označuje visual manager nevykresluje dolů tlačítko.  
   
- [v] `bIsHighlited`  
+ [v] *bIsHighlited*  
  Logická hodnota, která určuje, zda je označený na tlačítko.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Logická hodnota, která určuje, zda stisknutí tlačítka.  
   
- [v] `bIsDisabled`  
+ [v] *bIsDisabled*  
  Logická hodnota, která označuje, zda je tlačítko zakázána.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2420,15 +2420,15 @@ virtual void OnDrawMenuShadow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectClient`  
- [v] `rectExclude`  
- [v] `nDepth`  
- [v] `iMinBrightness`  
- [v] `iMaxBrightness`  
- [v] `pBmpSaveBottom`  
- [v] `pBmpSaveRight`  
- [v] `bRTL`  
+ [v] *primárního řadiče domény*  
+ [v] *rectClient*  
+ [v] *rectExclude*  
+ [v] *nDepth*  
+ [v] *iMinBrightness*  
+ [v] *iMaxBrightness*  
+ [v] *pBmpSaveBottom*  
+ [v] *pBmpSaveRight*  
+ [v] *bRTL*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2445,19 +2445,19 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítko.  
   
- [v] `uiSystemCommand`  
+ [v] *uiSystemCommand*  
  Příznak, který určuje příkazu systému, na který je přidružen tlačítko. Možné hodnoty jsou SC_CLOSE, SC_MINIMIZE a SC_RESTORE.  
   
- [v] `nStyle`  
+ [v] *nStyle*  
  Příznak, který určuje aktuální styl tlačítko. Možné hodnoty jsou TBBS_PRESSED, TBBS_DISABLED a 0.  
   
- [v] `bHighlight`  
+ [v] *bHighlight*  
  Logický parametr, který určuje, zda je označený na tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2477,10 +2477,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pFrameWnd`  
- [v] `rectBorder`  
- [v] `rectBorderSize`  
+ [v] *primárního řadiče domény*  
+ [v] *pFrameWnd*  
+ [v] *rectBorder*  
+ [v] *rectBorderSize*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2494,10 +2494,10 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectSplitter`  
+ [v] *rectSplitter*  
  Obdélníku, která určuje hranice rozdělovače.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2515,16 +2515,16 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectBtn`  
+ [v] *rectBtn*  
  Obdélníku, která určuje okrajem tlačítko stránky aplikace Outlook.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Logická hodnota, která určuje, zda je označený na tlačítko.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Logická hodnota, která určuje, zda stisknutí tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2541,13 +2541,13 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na zařízení kontextu ovládacích pruhů.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokno. Správce visual ohraničení v tomto podokně.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice v podokně.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2566,19 +2566,19 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na `CDockablePane` objektu. Rozhraní framework nevykresluje popisek pro toto podokno.  
   
- [v] `bActive`  
+ [v] *bActive*  
  Logický parametr, který určuje, zda je ovládací prvek panelu aktivní.  
   
- [v] `rectCaption`  
+ [v] *rectCaption*  
  Obdélníku, která určuje hranice titulek.  
   
- [v] `rectButtons`  
+ [v] *rectButtons*  
  Obdélníku, která určuje hranice tlačítek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2599,10 +2599,10 @@ virtual void OnDrawPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pSlider`  
- [v] `rect`  
- [v] `bAutoHideMode`  
+ [v] *primárního řadiče domény*  
+ [v] *pSlider*  
+ [v] *Rect –*  
+ [v] *bAutoHideMode*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2616,8 +2616,8 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2632,9 +2632,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectClient`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *rectClient*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2649,9 +2649,9 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectCaption`  
- [v] `pPopupWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *rectCaption*  
+ [v] *pPopupWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2667,10 +2667,10 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel **hlavní tlačítko** na pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2686,10 +2686,10 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) objektu. Rozhraní framework ohraničení pro toto tlačítko pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2706,13 +2706,13 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pGroup`  
+ [v] *pGroup*  
  Ukazatel na skupina tlačítek na pásu karet. Rozhraní framework nevykresluje tato skupina tlačítek.  
   
- [v] `rectGroup`  
+ [v] *rectGroup*  
  Obdélníku, která určuje hranice skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2733,16 +2733,16 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na pásu karet na řádek. Správce visual nevykresluje tento panel pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice panelu pásu karet.  
   
- [v] `rectText`  
+ [v] *rectText*  
  Obdélníku, která určuje hranice text titulku panelu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2758,10 +2758,10 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- `pButton`  
+ *pButton*  
  Ukazatel na `CMFCRibbonCaptionButton` třídy. Rozhraní framework nevykresluje toto tlačítko titulek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2778,13 +2778,13 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pCategory`  
+ [v] *pCategory*  
  Ukazatel na `CMFCRibbonCategory` objektu. Rozhraní framework nevykresluje tuto kategorii pásu karet.  
   
- [v] `rectCategory`  
+ [v] *rectCategory*  
  Obdélníku, která určuje hranice všechny kategorie panely na pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2802,10 +2802,10 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kreslení kontext.  
   
- [v] `pContextCaption`  
+ [v] *pContextCaption*  
  Ukazatel na záhlaví. Správce visual nevykresluje to [CMFCRibbonContextCaption třída](../../mfc/reference/cmfcribboncontextcaption-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2824,8 +2824,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pScroll`  
+ [v] *primárního řadiče domény*  
+ [v] *pScroll*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2840,13 +2840,13 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pTab`  
+ [v] *pTab*  
  Ukazatel na instanci `CMFCRibbonTab` třídy. Rozhraní framework nevykresluje na této kartě.  
   
- [v] `bIsActive`  
+ [v] *bIsActive*  
  Parametr typu Boolean, která určuje, zda je na kartě aktivní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2868,11 +2868,11 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pCheckBox`  
- [v] `rect`  
- [v] `bIsSelected`  
- [v] `bHighlighted`  
+ [v] *primárního řadiče domény*  
+ [v] *pCheckBox*  
+ [v] *Rect –*  
+ [v] *bIsSelected*  
+ [v] *bHighlighted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2894,16 +2894,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pColorButton`  
- [v] `pIcon`  
- [v] `color`  
- [v] `rect`  
- [v] `bDrawTopEdge`  
- [v] `bDrawBottomEdge`  
- [v] `bIsHighlighted`  
- [v] `bIsChecked`  
- [v] `bIsDisabled`  
+ [v] *primárního řadiče domény*  
+ [v] *pColorButton*  
+ [v] *pIcon*  
+ [v] *barev*  
+ [v] *Rect –*  
+ [v] *bDrawTopEdge*  
+ [v] *bDrawBottomEdge*  
+ [v] *bIsHighlighted*  
+ [v] *bIsChecked*  
+ [v] *bIsDisabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2917,10 +2917,10 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na výchozí tlačítko v podokně pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2938,8 +2938,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2956,11 +2956,11 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `bIsSelected`  
- [v] `bHighlighted`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *bIsSelected*  
+ [v] *bHighlighted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2975,9 +2975,9 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rectBorder`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *rectBorder*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2991,8 +2991,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3008,10 +3008,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pElement`  
- [v] `rect`  
- [v] `str`  
+ [v] *primárního řadiče domény*  
+ [v] *pElement*  
+ [v] *Rect –*  
+ [v] *str*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3026,13 +3026,13 @@ virtual void OnDrawRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pLabel`  
+ [v] *pLabel*  
  Ukazatel [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objektu. Rozhraní framework nevykresluje tento popisek pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3048,10 +3048,10 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na `CMFCRibbonButton` nachází na hlavní panel na pásu karet. Rozhraní framework ohraničení pro toto tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3068,13 +3068,13 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pPanel`  
+ [v] *pPanel*  
  Ukazatel `CMFCRibbonMainPanel`.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice `CMFCRibbonMainPanel`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3091,9 +3091,9 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3109,16 +3109,16 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pPanel`  
+ [v] *pPanel*  
  Ukazatel na `CMFCRibbonPanel` objektu. Rozhraní framework nevykresluje tento panel pásu karet.  
   
- [v] `rectPanel`  
+ [v] *rectPanel*  
  Obdélníku, která určuje hranice panelu.  
   
- [v] `rectCaption`  
+ [v] *rectCaption*  
  Obdélníku, která určuje hranice titulek pro panel.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3138,13 +3138,13 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pPanel`  
+ [v] *pPanel*  
  Ukazatel na `CMFCRibbonPanel` objektu. Rozhraní framework nevykresluje titulek pro tento panel pásu karet.  
   
- [v] `rectCaption`  
+ [v] *rectCaption*  
  Obdélníku, která určuje hranice titulek pro panel pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3163,19 +3163,19 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pProgress`  
+ [v] *pProgress*  
  Ukazatel na `CMFCRibbonProgressBar` objektu. Rozhraní framework nevykresluje tento indikátor průběhu.  
   
- [v] `rectProgress`  
+ [v] *rectProgress*  
  Obdélníku, která určuje hranice indikátor průběhu.  
   
- [v] `rectChunk`  
+ [v] *rectChunk*  
  Obdélníku, která určuje hranice oblast kolem indikátor průběhu.  
   
- [v] `bInfiniteMode`  
+ [v] *bInfiniteMode*  
  Logický parametr, který určuje režim indikátor průběhu. Hodnota `TRUE` znamená panelu v nekonečné režimu. Výchozí implementace nepoužívá tento parametr.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3192,13 +3192,13 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSeparator`  
+ [v] *pSeparator*  
  Ukazatel [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) objektu. Rozhraní framework nevykresluje tento oddělovače pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice oddělovače.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3215,13 +3215,13 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pPanel`  
+ [v] *pPanel*  
  Ukazatel **hlavní** panely na pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice rámce pro seznam naposledy použitých souborů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3238,13 +3238,13 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSlider`  
+ [v] *pSlider*  
  Ukazatel na objekt CMFCRibbonSlider. Rozhraní framework nevykresluje kanál pro tento jezdec pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice pro kanál posuvníku pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3264,22 +3264,22 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSlider`  
+ [v] *pSlider*  
  Ukazatel na `CMFCRibbonSlider`. Rozhraní framework nevykresluje úchytu pro tento jezdec pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice úchytu pro posuvník pásu karet.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Logický parametr, který určuje, pokud je označený jezdce.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Logický parametr, který určuje, pokud je stisknutí jezdce.  
   
- [v] `bIsDisabled`  
+ [v] *bIsDisabled*  
  Parametr typu Boolean, který určuje, zda je k dispozici jezdce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3300,25 +3300,25 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSlider`  
+ [v] *pSlider*  
  Ukazatel na `CMFCRibbonSlider` objektu. Rozhraní framework nevykresluje tento jezdec pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítka Přiblížení na posuvníku možnost pásu karet.  
   
- [v] `bIsZoomOut`  
+ [v] *bIsZoomOut*  
  Parametr typu Boolean, která určuje, které tlačítko nevykresluje rozhraní. Hodnota `TRUE` označuje levé tlačítko s "-" pro zmenšení. Hodnota `FALSE` označuje pravé tlačítko s "+" pro přiblížení v.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený na tlačítko.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Parametr typu Boolean, která určuje, zda stisknutí tlačítka.  
   
- [v] `bIsDisabled`  
+ [v] *bIsDisabled*  
  Parametr typu Boolean, která určuje, zda je k dispozici tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3335,13 +3335,13 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na stavovém řádku, který obsahuje v podokně.  
   
- [v] `pPane`  
+ [v] *pPane*  
  Ukazatel na panelu podokno stavu. Rozhraní framework nevykresluje to [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3361,13 +3361,13 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- `pWndRibbonBar`  
+ *pWndRibbonBar*  
  Ukazatel [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) objektu. Rozhraní framework nevykresluje rámečku tohoto panelu pásu karet.  
   
- `rectTab`  
+ *rectTab*  
  Obdélníku, která určuje hranice karty pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3389,11 +3389,11 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `nBorderSize`  
- [v] `iImage`  
- [v] `bHilited`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *nBorderSize*  
+ [v] *iImage*  
+ [v] *bHilited*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3409,16 +3409,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro ovládací prvek panelu.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na panel, který obsahuje oddělovač.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice oddělovače.  
   
- [v] `bIsHoriz`  
+ [v] *bIsHoriz*  
  Parametr typu Boolean, která určuje orientaci ukotveného panelu. Hodnota `TRUE` označuje, že je v podokně ukotven vodorovně. Hodnota `FALSE` označuje, že je v podokně ukotven svisle.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3435,9 +3435,9 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `state`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *stavu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3454,23 +3454,23 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectSpin`  
+ [v] *rectSpin*  
  Obdélníku, která určuje hranice ovládací prvek typu číselník  
   
- [v] `nState`  
+ [v] *nInformace*  
  Příznak, který označuje stav ovládací prvek typu číselník. Další informace naleznete v části Poznámky.  
   
- [v] `bOrientation`  
+ [v] *bOrientation*  
  Logický parametr, který určuje orientaci ovládací prvek typu číselník. Hodnota `TRUE` označuje ovládací prvek typu číselník je vodorovné. Jinak je svislý.  
   
- [v] `pSpinCtrl`  
+ [v] *pSpinCtrl*  
  Ukazatel na ovládací prvek typu číselník. Rozhraní framework nevykresluje tlačítka pro tento ovládací prvek.  
   
 ### <a name="remarks"></a>Poznámky  
- `nState` Parametr označuje stav ovládací prvek typu číselník. Parametr je jedním z následujících hodnot:  
+ *NInformace* parametr označuje stav ovládací prvek typu číselník. Parametr je jedním z následujících hodnot:  
   
 -   AFX_SPIN_PRESSEDUP  
   
@@ -3495,13 +3495,13 @@ virtual void OnDrawSplitterBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSplitterWnd`  
+ [v] *pSplitterWnd*  
  Ukazatel na rozděleném okně. Rozhraní framework ohraničení pro toto okno.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice rozdělovače oken.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3518,13 +3518,13 @@ virtual void OnDrawSplitterBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSplitterWnd`  
+ [v] *pSplitterWnd*  
  Ukazatel na rozděleném okně. Rozhraní framework nevykresluje pole pro toto okno rozdělovače.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice rozdělovače oken.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3543,19 +3543,19 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na `CMFCStatusBar` objektu. Rozhraní framework nevykresluje tento objekt panelu stavu.  
   
- [v] `rectPane`  
+ [v] *rectPane*  
  Obdélníku, která určuje hranice stavový řádek.  
   
- [v] `uiID`  
+ [v] *uiID*  
  ID stavový řádek.  
   
- [v] `nStyle`  
+ [v] *nStyle*  
  Styl stavový řádek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3578,31 +3578,31 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro stavový řádek.  
   
- [v] `pStatusBar`  
+ [v] *pStatusBar*  
  `CMFCStatusBar` Objekt, který obsahuje indikátor průběhu.  
   
- [v] `rectProgress`  
+ [v] *rectProgress*  
  Obdélníku, která určuje hranice indikátor průběhu.  
   
- [v] `nProgressTotal`  
+ [v] *nProgressTotal*  
  Celkový počet pro indikátor průběhu.  
   
- [v] `nProgressCurr`  
+ [v] *nProgressCurr*  
  Aktuální stav pro indikátor průběhu.  
   
- [v] `clrBar`  
+ [v] *clrBar*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje počáteční barvu pro indikátor průběhu. Hodnota je buď počáteční barvu přechodu nebo dokončení barva indikátoru průběhu.  
   
- [v] `clrProgressBarDest`  
- A `COLORREF` parametr, který označuje konec přechod barev pro indikátor průběhu. Pokud `clrProgressBarDest` je -1, rozhraní není kreslení indikátor průběhu jako přechod barev. Místo toho vyplní celé indikátor průběhu barvu určeného `clrBar`.  
+ [v] *clrProgressBarDest*  
+ A `COLORREF` parametr, který označuje konec přechod barev pro indikátor průběhu. Pokud *clrProgressBarDest* je -1, rozhraní není kreslení indikátor průběhu jako přechod barev. Místo toho vyplní celé indikátor průběhu barvu určeného *clrBar*.  
   
- [v] `clrProgressText`  
- A `COLORREF` parametr, který určuje barvu textu pro textovou reprezentaci aktuální průběh. Tento parametr je ignorována, pokud `bProgressText` je nastaven na `FALSE`.  
+ [v] *clrProgressText*  
+ A `COLORREF` parametr, který určuje barvu textu pro textovou reprezentaci aktuální průběh. Tento parametr je ignorována, pokud *bProgressText* je nastaven na `FALSE`.  
   
- [v] `bProgressText`  
+ [v] *bProgressText*  
  Parametr typu Boolean, která určuje, jestli se má zobrazit textová reprezentace aktuální průběh.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3619,13 +3619,13 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pStatBar`  
+ [v] *pStatBar*  
  Ukazatel na stavovém řádku. Rozhraní framework nevykresluje velikost pole pro tento stavový řádek.  
   
- [v] `rectSizeBox`  
+ [v] *rectSizeBox*  
  Obdélníku, která určuje hranice pole velikost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3644,19 +3644,19 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectTab`  
+ [v] *rectTab*  
  Obdélníku, která určuje hranice ovládacího prvku karta.  
   
- [v] `iTab`  
+ [v] *iTab*  
  Index kartě nevykresluje rozhraní.  
   
- [v] `bIsActive`  
+ [v] *bIsActive*  
  Logická hodnota parametr, který určuje, jestli je na kartě aktivní.  
   
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na `CMFCBaseTabCtrl` objektu. Rozhraní framework nevykresluje tohoto ovládacího prvku karta.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3678,26 +3678,26 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice **Zavřít** tlačítko.  
   
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na ovládacího prvku karta. Rozhraní framework nevykresluje **Zavřít** tlačítko pro tento ovládací prvek karty.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda **Zavřít** zvýrazní tlačítko.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Parametr typu Boolean, která určuje, zda **Zavřít** stisknutí tlačítka.  
   
- [v] `bIsDisabled`  
+ [v] *bIsDisabled*  
  Parametr typu Boolean, která určuje, zda **Zavřít** tlačítko k dispozici.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu **Zavřít** tlačítko na kartě active `pTabWnd`.  
+ Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu **Zavřít** tlačítko na kartě active *pTabWnd*.  
   
 ##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent  
  Rozhraní framework volá tuto metodu, pokud se obsah nachází na vnitřek instanci nevykresluje [CMFCBaseTabCtrl třída](../../mfc/reference/cmfcbasetabctrl-class.md).  
@@ -3713,22 +3713,22 @@ virtual void OnDrawTabContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectTab`  
+ [v] *rectTab*  
  Obdélníku, která určuje hranice vnitřního kartě.  
   
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty. Rozhraní framework nevykresluje vnitřek na této kartě.  
   
- [v] `bIsActive`  
+ [v] *bIsActive*  
  Parametr typu Boolean, která určuje, zda je na kartě aktivní.  
   
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na záložkách ovládací prvek, který obsahuje na kartě přitahuje.  
   
- [v] `clrText`  
+ [v] *clrText*  
  Barva textu vnitřek kartě.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3747,19 +3747,19 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice na kartě tlačítko.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCButton](../../mfc/reference/cmfcbutton-class.md) objektu. Rozhraní framework ohraničení pro tento `CMFCButton` instance.  
   
- [v] `uiState`  
+ [v] *uiState*  
  Celé číslo bez znaménka, které určuje stav tlačítko.  
   
- [v] `pWndTab`  
+ [v] *pWndTab*  
  Ukazatel do nadřazeného okna Karta.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3778,23 +3778,23 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pTask`  
+ [v] *pTask*  
  Ukazatel [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) objektu. Rozhraní framework nevykresluje této úlohy.  
   
- [v] `pIcons`  
+ [v] *pIcons*  
  Ukazatel na seznamu obrázků přidružené do podokna úloh. Každý úkol obsahuje index pro obrázek v tomto seznamu.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Logický parametr, který určuje, zda je označený zobrazených úloh.  
   
- [v] `bIsSelected`  
+ [v] *bIsSelected*  
  Logický parametr, který určuje, zda je zaškrtnuto zobrazených úloh.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní zobrazuje úlohy, na hlavním panelu na ikonu a text. `pIcons` Parametr obsahuje ikonu pro úlohu indikován `pTask`.  
+ Rozhraní zobrazuje úlohy, na hlavním panelu na ikonu a text. *PIcons* parametr obsahuje ikonu pro úlohu indikován *pTask*.  
   
  Potlačí tuto metodu v odvozené třídě přizpůsobit vzhled úlohy na hlavním panelu.  
   
@@ -3810,16 +3810,16 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice oblasti skupinu v podokně úloh.  
   
- [v] `bSpecial`  
+ [v] *bSpecial*  
  Logický parametr, který určuje, pokud je označený ohraničení. Hodnota `TRUE` označuje, že je označený ohraničení.  
   
- [v] `bNoTitle`  
+ [v] *bNoTitle*  
  Logický parametr, který určuje, zda je skupina oblast název. Hodnota `TRUE` označuje, že skupina oblast nemá název.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3838,19 +3838,19 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pGroup`  
+ [v] *pGroup*  
  Ukazatel na `CMFCTasksPaneTaskGroup` objektu. Rozhraní framework nevykresluje titulek pro tuto skupinu.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, jestli je označený skupině.  
   
- [v] `bIsSelected`  
+ [v] *bIsSelected*  
  Parametr typu Boolean, která určuje, zda je aktuálně vybrané skupině.  
   
- [v] `bCanCollapse`  
+ [v] *bCanCollapse*  
  Parametr typu Boolean, která určuje, zda lze sbalit skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3872,12 +3872,12 @@ virtual void OnDrawTasksGroupIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pGroup`  
- [v] `nIconHOffset`  
- [v] `bIsHighlighted`  
- [v] `bIsSelected`  
- [v] `bCanCollapse`  
+ [v] *primárního řadiče domény*  
+ [v] *pGroup*  
+ [v] *nIconHOffset*  
+ [v] *bIsHighlighted*  
+ [v] *bIsSelected*  
+ [v] *bCanCollapse*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3892,13 +3892,13 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice titulek.  
   
- [v] `bIsActive`  
+ [v] *bIsActive*  
  `TRUE` Pokud je aktivní; popisek `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3916,8 +3916,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3931,10 +3931,10 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Obdélníku, která určuje hranice MDI klientské oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3954,9 +3954,9 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectClient`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *rectClient*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -3971,17 +3971,17 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice oblast karty.  
   
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na kartě okno. Rozhraní framework vymaže oblast karty pro zadanou kartu okno.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je volána rámcem při [CMFCBaseTabCtrl třída](../../mfc/reference/cmfcbasetabctrl-class.md) objektu procesy `WM_PAINT` zpráva a vymaže oblast karty.  
+ Tato funkce je volána rámcem při [CMFCBaseTabCtrl třída](../../mfc/reference/cmfcbasetabctrl-class.md) objekt zpracuje zprávu WM_PAINT a vymaže oblast karty.  
   
  Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu karty.  
   
@@ -3997,20 +3997,20 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice na kartě tlačítko.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na kartě tlačítko. Rozhraní framework vymaže text a ikona pro toto tlačítko.  
   
- [v] `pWndTab`  
+ [v] *pWndTab*  
  Ukazatel na ovládacího prvku karta, která obsahuje tlačítko karta.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework vymaže text a ikony pro tlačítko při [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objektu procesy `WM_ERASEBKGND` zprávy.  
+ Rozhraní framework vymaže text a ikony pro tlačítko při [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) WM_ERASEBKGND zprávu zpracuje objektu.  
   
  Potlačí tuto metodu v odvozené visual manager přizpůsobit vzhled tlačítek kartě.  
   
@@ -4025,20 +4025,20 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice okno s kartou.  
   
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na kartě okno. Rozhraní framework vymaže rámeček pro tento `CMFCBaseTabCtrl`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud je metoda úspěšná. `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vyplní celé oblasti indikován `rect` barvou pozadí active karty. Je volána, když `CMFCBaseTabCtrl` objektu procesy `WM_PAINT` zpráva a vymaže karta rámce.  
+ Tato metoda vyplní celé oblasti indikován *Rect –* barvou pozadí active karty. Je volána, když `CMFCBaseTabCtrl` objekt zpracuje zprávu WM_PAINT a vymaže karta rámce.  
   
 ##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManager::OnFillAutoHideButtonBackground  
  Tato metoda volá framework při zaplňování na pozadí automaticky skrýt tlačítko.  
@@ -4051,13 +4051,13 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice automaticky skrýt tlačítko.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objektu. Rozhraní framework doplní na pozadí pro toto tlačítko automaticky skrýt.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4076,19 +4076,19 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro ovládací prvek panelu.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na `CBasePane` objektu. Rozhraní framework doplní na pozadí v tomto podokně.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Obdélníku, která určuje hranice v podokně.  
   
- [v] `rectClip`  
+ [v] *rectClip*  
  Obdélníku, která určuje oblasti výstřižek podokna.  
   
- [v] `bNCArea`  
+ [v] *bNCArea*  
  Rezervovaná hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4111,16 +4111,16 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení tlačítka panelu nástrojů.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Rozhraní framework doplní na pozadí pro toto tlačítko.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítka panelu nástrojů.  
   
- [v] `state`  
+ [v] *stavu*  
  Stav tlačítka panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4144,14 +4144,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
- [v] `bIsPressed`  
- [v] `bIsHighlighted`  
- [v] `bIsDisabled`  
- [v] `bHasDropDownArrow`  
- [v] `bIsSysButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
+ [v] *bIsPressed*  
+ [v] *bIsHighlighted*  
+ [v] *bIsDisabled*  
+ [v] *bHasDropDownArrow*  
+ [v] *bIsSysButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -4168,13 +4168,13 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítko.  
   
- [v] `bIsSelected`  
+ [v] *bIsSelected*  
  Parametr typu Boolean, která určuje, zda je zaškrtnuto tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -4194,13 +4194,13 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCtrl`  
+ [v] *pCtrl*  
  Ukazatel [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) objektu. Rozhraní framework doplní na pozadí pro tento ovládací prvek záhlaví.  
   
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice ovládacího prvku záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4218,16 +4218,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectCaption`  
+ [v] *rectCaption*  
  Obdélníku, která určuje hranice panelu titulek.  
   
- [v] `pFrameWnd`  
+ [v] *pFrameWnd*  
  Ukazatel na mini rámce okna. Rozhraní framework nevykresluje panelu popisek pro toto okno.  
   
- [v] `bActive`  
+ [v] *bActive*  
  Parametr typu Boolean, která určuje, pokud je aktivní okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -4247,13 +4247,13 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectCaption`  
+ [v] *rectCaption*  
  Obdélníku, která určuje hranice panelu titulek.  
   
- [out] `clrText`  
+ [out] *clrText*  
  Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr. Metoda zapíše barvu textu na panelu popisek pro tento parametr.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4272,19 +4272,19 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice tlačítko stránky aplikace Outlook.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Logický parametr, který určuje, zda je označený na tlačítko.  
   
- [v] `bIsPressed`  
+ [v] *bIsPressed*  
  Logický parametr, který určuje, zda stisknutí tlačítka.  
   
- [out] `clrText`  
+ [out] *clrText*  
  Odkaz na [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr. Tato metoda ukládá barvu textu tlačítka stránky outlook v tomto parametru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4300,10 +4300,10 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice automaticky otevíraném okně.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4319,14 +4319,14 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) objektu. Rozhraní framework doplní vnitřek toto tlačítko pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva textu pro tlačítko pásu karet určeného `pButton` Pokud tlačítko pásu karet podporuje text. Hodnota -1, pokud textu je neplatný pro tlačítko pásu karet.  
+ Barva textu pro tlačítko pásu karet určeného *pButton* Pokud tlačítko pásu karet podporuje text. Hodnota -1, pokud textu je neplatný pro tlačítko pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené visual manager přizpůsobit vzhled tlačítek pásu karet.  
@@ -4348,35 +4348,35 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pEdit`  
+ [v] *pEdit*  
  Ukazatel na `CMFCRibbonRichEditCtrl` objektu. Rozhraní framework doplní vnitřek tento ovládací prvek upravit.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice ovládacích prvků pro úpravy.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Parametr typu Boolean, která určuje, zda je označený ovládací prvek upravit.  
   
- [v] `bIsPaneHighlighted`  
+ [v] *bIsPaneHighlighted*  
  Parametr typu Boolean, která určuje, zda je zvýrazněn v podokně nadřazené.  
   
- [v] `bIsDisabled`  
+ [v] *bIsDisabled*  
  Parametr typu Boolean, který určuje, zda je k dispozici ovládací prvek upravit.  
   
- [v] `clrText`  
+ [v] *clrText*  
  Odkaz na barvu textu ovládacích prvků pro úpravy.  
   
- [v] `clrSelBackground`  
+ [v] *clrSelBackground*  
  Odkaz na barvu pozadí ovládacích prvků pro úpravy při zvýrazní se.  
   
- [v] `clrSelText`  
+ [v] *clrSelText*  
  Odkaz na barvu vybraný text na ovládací prvek upravit.  
   
 ### <a name="remarks"></a>Poznámky  
- `CMFCRibbonRichEditCtrl` Indikován `pEdit` můžou být součástí tlačítko pole se seznamem na pásu karet.  
+ `CMFCRibbonRichEditCtrl` Indikován *pEdit* můžou být součástí tlačítko pole se seznamem na pásu karet.  
   
  Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu `CMFCRibbonRichEditCtrl`.  
   
@@ -4390,14 +4390,14 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCRibbonButton třída](../../mfc/reference/cmfcribbonbutton-class.md) objektu. Rozhraní framework doplní toto tlačítko pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva textu pro tlačítko pásu karet určeného `pButton` Pokud tlačítko pásu karet podporuje text. Hodnota -1, pokud textu je neplatný pro tlačítko pásu karet.  
+ Barva textu pro tlačítko pásu karet určeného *pButton* Pokud tlačítko pásu karet podporuje text. Hodnota -1, pokud textu je neplatný pro tlačítko pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Potlačí tuto metodu v odvozené visual manager přizpůsobit vzhled tlačítek pásu karet na **hlavní** panelu.  
@@ -4413,13 +4413,13 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pPanel`  
+ [v] *pPanel*  
  Ukazatel na instanci [CMFCRibbonMainPanel třída](../../mfc/reference/cmfcribbonmainpanel-class.md). Rozhraní framework doplní rámečku nabídky pro tento panel pásu karet.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice rámečku nabídky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4436,9 +4436,9 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pMenuBar`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pMenuBar*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -4453,13 +4453,13 @@ virtual void OnFillSplitterBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pSplitterWnd`  
+ [v] *pSplitterWnd*  
  Ukazatel na instanci [CSplitterWndEx třída](csplitterwndex-class.md). Rozhraní framework doplní na pozadí pro toto okno rozdělovače.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice rozdělovače oken.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4479,22 +4479,22 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectFill`  
+ [v] *rectFill*  
  Obdélníku, která určuje za hranice okna Karta.  
   
- [v] `pbrFill`  
+ [v] *pbrFill*  
  Ukazatel na stopu. Rozhraní používá tento stopy karta okna.  
   
- [v] `iTab`  
+ [v] *iTab*  
  Index počítaný od nuly karta na kartě, pro který rozhraní doplní na pozadí.  
   
- [v] `bIsActive`  
+ [v] *bIsActive*  
  `TRUE` Pokud je na kartě aktivní; v opačném případě `FALSE`.  
   
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na kartě nadřazeného ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4511,13 +4511,13 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice skupiny úloh.  
   
- [v] `bSpecial`  
+ [v] *bSpecial*  
  Logická hodnota, která označuje, pokud vnitřek je vyplněn speciální barvou.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4533,10 +4533,10 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectWorkArea`  
+ [v] *rectWorkArea*  
  Obdélníku, která určuje hranice do podokna úloh.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4554,22 +4554,22 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro nabídky.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) objekt, který chcete zobrazit. Výchozí implementace nepoužívá tento parametr.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice položku nabídky.  
   
- [v] `clrText`  
+ [v] *clrText*  
  Aktuální barva textu položek zvýrazněné nabídky. Výchozí implementace nepoužívá tento parametr.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této metody nepoužívá parametry `pButton` nebo `clrText`. Zaplňování rámeček určeného `rect` barvou pozadí standardní.  
+ Výchozí implementace této metody nepoužívá parametry *pButton* nebo *clrText*. Zaplňování rámeček určeného *Rect –* barvou pozadí standardní.  
   
- Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu položky zvýrazněné nabídky. Použití `clrText` parametr změnit barvu textu položky nabídky zvýrazněné.  
+ Potlačí tuto metodu v odvozené visual správce k přizpůsobení vzhledu položky zvýrazněné nabídky. Použití *clrText* parametr změnit barvu textu položky nabídky zvýrazněné.  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManager::OnHighlightRarelyUsedMenuItems  
  Tato metoda volá framework při nakreslí příkazu zvýrazněné nabídky.  
@@ -4581,10 +4581,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectRarelyUsed`  
+ [v] *rectRarelyUsed*  
  Obdélníku, která určuje hranice zvýrazněný příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4600,8 +4600,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
- [v] `bActive`  
+ [v] *pWnd*  
+ [v] *bActive*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -4618,13 +4618,13 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na okno jejichž neklientská oblast nevykresluje rozhraní.  
   
- [v] `lstSysButtons`  
+ [v] *lstSysButtons*  
  Seznam tlačítka systému. Jedná se také označuje jako popisek tlačítka.  
   
- [v] `rectRedraw`  
+ [v] *rectRedraw*  
  Obdélníku, která určuje hranice neklientská oblast.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -4643,10 +4643,10 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Ukazatel na okno s oblasti, který změnil.  
   
- [v] `sizeWindow`  
+ [v] *sizeWindow*  
  Velikost okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -4663,7 +4663,7 @@ virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework jako součást zpracování `WM_SYSCOLORCHANGE` zprávy. Výchozí implementace neprovede žádnou akci. Přepíše tuto metodu v odvozené visual správce, pokud chcete provést vlastní kód, pokud barvy změnit ve vaší aplikaci.  
+ Tato metoda jako součást zpracování zprávy WM_SYSCOLORCHANGE volá framework. Výchozí implementace neprovede žádnou akci. Přepíše tuto metodu v odvozené visual správce, pokud chcete provést vlastní kód, pokud barvy změnit ve vaší aplikaci.  
   
 ##  <a name="redrawall"></a>  CMFCVisualManager::RedrawAll  
  Okamžitě překreslí ovládací pruhy v aplikaci.  
@@ -4680,7 +4680,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `color`  
+ [v] *barev*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -4694,7 +4694,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRTI`  
+ [v] *pRTI*  
  Ukazatel na informace o běhu programu pro visual správce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4710,7 +4710,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEmboss`  
+ [v] *bEmboss*  
  Parametr typu Boolean, která určuje, zda chcete povolit reliéfu režim pro zakázané obrázků panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4724,7 +4724,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bFade`  
+ [v] *bFade*  
  Logická hodnota parametr, který určuje, jestli se má povolit osvětlení účinek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4738,7 +4738,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bMenuFlatLook`  
+ [v] *bMenuFlatLook*  
  Parametr typu Boolean, která určuje, zda se mají zobrazovat tlačítka nabídky ploché.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4752,7 +4752,7 @@ void SetMenuShadowDepth(int nDepth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nDepth`  
+ [v] *nDepth*  
  Celé číslo, které určuje hloubku stínové nabídky v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -4766,7 +4766,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShadow`  
+ [v] *bShadow*  
  Parametr typu Boolean, která určuje, zda správce visual zobrazí stín v části zvýrazněná Image.  
   
 ### <a name="remarks"></a>Poznámky  

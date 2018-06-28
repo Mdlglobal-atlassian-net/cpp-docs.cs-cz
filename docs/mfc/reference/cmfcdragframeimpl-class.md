@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f743c074bc956181e8b62a02062ac2f22cdfb6e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373827"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040945"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl – třída
 `CMFCDragFrameImpl` Třída nevykresluje přetáhněte obdélníku, která se zobrazí, když uživatel nastavuje tažením podokno v režimu standardní ukotvení.  
@@ -52,7 +52,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bClearInternalRects`  
+ [v] *bClearInternalRects*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -64,7 +64,7 @@ void Init(CWnd* pDraggedWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDraggedWnd`  
+ [v] *pDraggedWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -76,7 +76,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForceMove`  
+ [v] *bForceMove*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -92,9 +92,9 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabbedBar`  
- [v] `bFirstTime`  
- [v] `pCBarToPlaceOn`  
+ [v] *pTabbedBar*  
+ [v] *bFirstTime*  
+ [v] *pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -106,7 +106,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pOldTargetBar`  
+ [v] *pOldTargetBar*  
   
 ### <a name="remarks"></a>Poznámky  
   

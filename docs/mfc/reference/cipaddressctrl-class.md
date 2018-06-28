@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368911"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042154"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl – třída
 Poskytuje funkci ovládacím prvku Windows běžné adres IP.  
@@ -119,16 +119,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. Musí zahrnovat **ws_child –** styl, protože ovládací prvek musí být podřízeného okna. V tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ve Windows SDK pro seznam styly systému windows.  
   
- `rect`  
+ *Rect –*  
  Odkaz na velikost a umístění ovládací prvek adresy IP. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna Ovládací prvek adresy IP. Nesmí být **hodnotu NULL.**  
   
- `nID`  
+ *nID*  
  ID ovládací prvek adresy IP.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -139,9 +139,9 @@ virtual BOOL Create(
   
 1.  Volání konstruktoru, který vytvoří `CIPAddressCtrl` objektu.  
   
-2.  Volání **vytvořit**, která vytvoří ovládací prvek adresy IP.  
+2.  Volání `Create`, která vytvoří ovládací prvek adresy IP.  
   
- Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo **vytvořit**.  
+ Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo `Create`.  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Volání této funkce vytvoření ovládacího prvku (podřízeného okna) a její přidružení `CIPAddressCtrl` objektu.  
@@ -156,19 +156,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. Musí zahrnovat **ws_child –** styl, protože ovládací prvek musí být podřízeného okna. V tématu [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ve Windows SDK pro seznam styly systému windows.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -191,26 +191,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField0`  
+ *nField0*  
  Odkaz na hodnotě pole 0 z sbalené IP adresy.  
   
- `nField1`  
+ *nField1*  
  Odkaz na hodnotě pole 1 z sbalené IP adresy.  
   
- `nField2`  
+ *nField2*  
  Odkaz na hodnotě pole 2 z sbalené IP adresy.  
   
- `nField3`  
+ *nField3*  
  Odkaz na hodnotě pole 3 z sbalené IP adresy.  
   
- `dwAddress`  
- Odkaz na adresu `DWORD` hodnotu, která přijímá IP adresu. V tématu **poznámky** pro tabulku, která ukazuje, jak `dwAddress` je vyplněna.  
+ *dwAddress*  
+ Odkaz na adresu `DWORD` hodnotu, která přijímá IP adresu. V tématu **poznámky** pro tabulku, která ukazuje, jak *dwAddress* je vyplněna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet neprázdných polí v ovládací prvek adresy IP.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), jak je popsáno v sadě Windows SDK. V první prototypu výše čísla v polích 0 až 3 ovládacího prvku, čtení zleva doprava v uvedeném pořadí, naplnit čtyři parametry. V druhé prototypu výše `dwAddress` je naplněn takto.  
+ Tato funkce člen implementuje chování zprávy Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), jak je popsáno v sadě Windows SDK. V první prototypu výše čísla v polích 0 až 3 ovládacího prvku, čtení zleva doprava v uvedeném pořadí, naplnit čtyři parametry. V druhé prototypu výše *dwAddress* je naplněn takto.  
   
 |Pole|Služba BITS obsahující hodnota pole|  
 |-----------|-------------------------------------|  
@@ -246,23 +246,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField0`  
+ *nField0*  
  Hodnota pole 0 z sbalené IP adresy.  
   
- `nField1`  
+ *nField1*  
  Hodnota pole 1 z sbalené IP adresy.  
   
- `nField2`  
+ *nField2*  
  Hodnota pole 2 z sbalené IP adresy.  
   
- `nField3`  
+ *nField3*  
  Hodnota pole 3 z sbalené IP adresy.  
   
- `dwAddress`  
+ *dwAddress*  
  A `DWORD` hodnotu, která obsahuje novou IP adresu. V tématu **poznámky** pro tabulku, která ukazuje, jak `DWORD` hodnota je vyplněna.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), jak je popsáno v sadě Windows SDK. V první prototypu výše čísla v polích 0 až 3 ovládacího prvku, čtení zleva doprava v uvedeném pořadí, naplnit čtyři parametry. V druhé prototypu výše `dwAddress` je naplněn takto.  
+ Tato funkce člen implementuje chování zprávy Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), jak je popsáno v sadě Windows SDK. V první prototypu výše čísla v polích 0 až 3 ovládacího prvku, čtení zleva doprava v uvedeném pořadí, naplnit čtyři parametry. V druhé prototypu výše *dwAddress* je naplněn takto.  
   
 |Pole|Služba BITS obsahující hodnota pole|  
 |-----------|-------------------------------------|  
@@ -279,7 +279,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField`  
+ *nPole*  
  Index počítaný od nuly pole, do které by měla být nastavena fokus. Pokud tato hodnota je vyšší než počet polí, fokus nastavená na první prázdné pole. Pokud jsou všechna pole prázdná, fokus nastavená na první pole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -296,17 +296,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField`  
+ *nPole*  
  Index počítaný od nuly pole, do které se použijí v rozsahu.  
   
- `nLower`  
+ *nLower*  
  Odkaz na typ integer příjem dolní limit dané pole ve tento ovládací prvek adresy IP.  
   
- `nUpper`  
+ *nUpper*  
  Odkaz na typ integer příjem horní limit počtu dané pole ve tento ovládací prvek adresy IP.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen implementuje chování zprávy Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), jak je popsáno v sadě Windows SDK. Použít dva parametry `nLower` a `nUpper`, k označení horní a dolní mez v poli místo *wRange* parametr použít se zprávou Win32.  
+ Tato funkce člen implementuje chování zprávy Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), jak je popsáno v sadě Windows SDK. Použít dva parametry *nLower* a *nUpper*, k označení horní a dolní mez v poli místo *wRange* parametr použít se zprávou Win32.  
   
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   

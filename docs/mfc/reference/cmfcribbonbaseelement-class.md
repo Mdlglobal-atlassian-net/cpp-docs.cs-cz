@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378678"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042261"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement – třída
 `CMFCRibbonBaseElement` Třída je základní třída pro všechny elementy, které můžete přidat do [pásu karet panelu](../../mfc/reference/cmfcribbonbar-class.md). Příklad prvků pásu karet jsou pásu karet tlačítek, zaškrtněte políčka pásu karet a pásu karet pole se seznamem.  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `arElems`  
+ [v] *arElems*  
  Odkaz na [carray –](../../mfc/reference/carray-class.md) z popisy tlačítek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndListBox`  
+ [v] *pWndListBox*  
  Ukazatel na pole se seznamem příkazy.  
   
- [v] `bDeep`  
+ [v] *bDeep*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
  Zdroj [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `type`  
+ [v] *typu*  
  Typ image uvedené hodnoty. Naleznete v části poznámky o seznamu možných hodnot.  
   
- [v] `rectImage`  
+ [v] *rectImage*  
  Rámeček bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
  Ve výchozím nastavení tato metoda neprovede žádnou akci. Potlačí tuto metodu v odvozené třídě k vykreslení bitovou kopii pro element pásu karet.  
   
- Následující tabulka uvádí možné hodnoty pro `type` parametr:  
+ Následující tabulka uvádí možné hodnoty pro *typ* parametr:  
   
  `RibbonImageLarge`  
  Velikost bitové kopie velké 32 x 32 pixelů.  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElement`  
+ [v] *pElement*  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na pásu karet element Pokud `pElement` body k aktuálnímu objektu; v opačném případě `NULL`.  
+ Ukazatel na pásu karet element Pokud *pElement* body k aktuálnímu objektu; v opačném případě `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwData`  
+ [v] *dwData*  
  Data související s element pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  ID příkazu pro element pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pOriginal`  
+ [v] *pOriginal*  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] `arElements`  
+ [ve out] *arElements*  
  Pole prvky pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  ID příkazu elementu pásu karet.  
   
- [v] `arElements`  
+ [v] *arElements*  
  Pole prvky pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `bIsMenu`  
+ [v] *bIsMenu*  
  `TRUE` Pokud element pásu karet zobrazuje místní nabídky; v opačném případě `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nDelay`  
+ [v] *nDelay*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bWithDelay`  
+ [v] *bWithDelay*  
  `TRUE` Chcete-li přidat příkaz oznámení do fronty zpráv okna nadřazené; `FALSE` okamžitě odeslat zprávu do nadřazeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Index elementu pásu karet v seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `qat`  
+ [v] *qat*  
  Panel nástrojů Rychlý přístup.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPanelMenuBar`  
+ [v] *pPanelMenuBar*  
  Tento parametr není používán.  
   
- [v] `pHot`  
+ [v] *pHot*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Hranice rámečku keytip.  
   
- [v] `bIsMenu`  
+ [v] *bIsMenu*  
  `TRUE` Pokud je keytip pro tlačítko místní nabídky; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Nabídky obdélníku bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro element pásu karet.  
   
- [v] `strText`  
+ [v] *strText*  
  Zobrazovaný text.  
   
- [v] `nTextOffset`  
+ [v] *nTextOffset*  
  Vzdálenost v pixelech, z levé strany zobrazovaný text v rozevíracím seznamu.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélník zobrazení pro element pásu karet.  
   
- [v] `bIsSelected`  
+ [v] *bIsSelected*  
  Tento parametr není používán.  
   
- [v] `bHighlighted`  
+ [v] *bHighlighted*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsMenuKey`  
+ [v] *bIsMenuKey*  
  `TRUE` Pokud keytip zobrazí místní nabídky; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nUpperChar`  
+ [v] *nUpperChar*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nChar`  
+ [v] *nChar*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsRTL`  
+ [v] *bIsRTL*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Tento parametr není používán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdId`  
+ [v] *uiCmdId*  
  Parametr se nepoužívá.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  Nadřazené okno pro element pásu karet.  
   
- `data`  
+ *data*  
  Usnadnění data pro element pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bCompactMode`  
+ [v] *bCompactMode*  
  `TRUE` ke snížení velikosti zobrazení pásu karet elementu; `FALSE` a zvyšte velikost zobrazení prvku pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
  Následující tabulka shrnuje logiku pro tuto metodu.  
   
-|`bCompactMode`|Aktuální velikost element pásu karet|Nová velikost element pásu karet|  
+|*bCompactMode*|Aktuální velikost element pásu karet|Nová velikost element pásu karet|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|Compact|Žádná změna.|  
 |`TRUE`|Zprostředkující|Compact, pokud je to možné.|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwData`  
+ [v] *dwData*  
  Hodnota data.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsDefaultMenuLook`  
+ [v] *bIsDefaultMenuLook*  
  `TRUE` Chcete-li nastavit pásu karet elementu, který chcete zobrazit jako místní příkaz; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Popis pro element pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID příkazu.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bOneRow`  
+ [v] *bOneRow*  
  `TRUE` k omezení velikosti zobrazení pro element pásu karet compact nebo mezilehlé; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszKeys`  
+ [v] *lpszKeys*  
  Keytip pro element pásu karet.  
   
- [v] `lpszMenuKeys`  
+ [v] *lpszMenuKeys*  
  Keytip pro místní nabídky pásu karet elementu.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pOriginal`  
+ [v] *pOriginal*  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
  Ukazatel na pásu karet kategorie.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuBar`  
+ [v] *pMenuBar*  
  V nabídce nadřazené.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRibbonBar`  
+ [v] *pRibbonBar*  
  Ukazatel na panelu nadřazené pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Dimenze rámeček.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Text a keytip pro element pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li nastavit keytip pro element pásu karet, připojte nového řádku – řídicí sekvence následované znaky keytip k `lpszText`.  
+ Chcete-li nastavit keytip pro element pásu karet, připojte nového řádku – řídicí sekvence následované znaky keytip k *lpszText*.  
   
 ### <a name="example"></a>Příklad  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  `TRUE` Chcete-li zobrazit text na pravé straně; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Text popisku.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bIsVisible`  
+ [v] *bIsVisible*  
  `TRUE` Chcete-li zobrazit pásu karet element; `FALSE` ke skrytí elementu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Tento parametr není používán.  
   
- [v] `nHeight`  
+ [v] *nHeight*  
  Výška řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  

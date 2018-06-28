@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377807"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040870"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite – třída
 Poskytuje podporu pro rozhraní vlastního ovládacího prvku na straně klienta.  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Dimenze ovládacího prvku lokality.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato podpora je hlavním prostředkem, podle kterého embedded ovládací prvek ActiveX získává informace o umístění a rozsah jeho zobrazení lokality, její přezdívka, jeho uživatelské rozhraní, jeho vedlejším vlastnostem a dalším prostředkům poskytované jejímu kontejneru. `COleControlSite` plně implementuje [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),  **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) rozhraní. Kromě toho se implementuje rozhraní IDispatch (poskytování podpory vedlejším vlastnostem a jímky událostí).  
+ Tato podpora je hlavním prostředkem, podle kterého embedded ovládací prvek ActiveX získává informace o umístění a rozsah jeho zobrazení lokality, její přezdívka, jeho uživatelské rozhraní, jeho vedlejším vlastnostem a dalším prostředkům poskytované jejímu kontejneru. `COleControlSite` plně implementuje [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), `IBoundObjectSite`, `INotifyDBEvents`, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) rozhraní. Kromě toho se implementuje rozhraní IDispatch (poskytování podpory vedlejším vlastnostem a jímky událostí).  
   
  Chcete-li vytvořit k ActiveX řízení lokality pomocí `COleControlSite`, odvození třídy z `COleControlSite`. Ve vašem `CWnd`-přepsání v odvozené třídě pro kontejner (například vašem dialogovém okně) **CWnd::CreateControlSite** funkce.  
   
@@ -231,16 +231,16 @@ virtual void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje, **DISPID** vlastnosti na ovládacího prvku vázané na data, která má být svázán s ovládacím zdroj dat.  
   
- `vtProp`  
- Určuje typ vlastnosti, která má být vázána – například `VT_BSTR`, **VT_VARIANT**a tak dále.  
+ *vtProp*  
+ Určuje typ vlastnosti, která má být vázána – například **VT_BSTR**, **VT_VARIANT**a tak dále.  
   
- `szFieldName`  
+ *szFieldName*  
  Určuje název sloupce, v kurzor poskytované prvek zdroje dat, ke kterému bude vázán vlastnost.  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  Ukazatel `CWnd`-odvozené objekt, který je hostitelem prvku zdroj dat, ke kterému bude vázán vlastnost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -259,7 +259,7 @@ virtual void BindProperty(
  *dwDispId*  
  Určuje, **DISPID** vlastnosti na ovládacího prvku vázané na data, která má být svázán s ovládacím zdroj dat.  
   
- `pWndDSC`  
+ *pWndDSC*  
  Ukazatel `CWnd`-odvozené objekt, který je hostitelem prvku zdroj dat, ke kterému bude vázán vlastnost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -273,7 +273,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCtrlCont`  
+ *pCtrlCont*  
  Ukazatel na kontejneru ovládacího prvku (která představuje okna, který je hostitelem ovládacího prvku AtiveX).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -309,50 +309,50 @@ virtual HRESULT CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndCtrl`  
+ *pWndCtrl*  
  Ukazatel na okno objekt reprezentující ovládacího prvku.  
   
- `clsid`  
+ *CLSID*  
  ID jedinečný třídy ovládacího prvku.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Ukazatel na text, který se zobrazí v ovládacím prvku. Nastaví hodnotu vlastnosti winodw titulek nebo Text (pokud existuje).  
   
- `dwStyle`  
+ *dwStyle*  
  Styly systému Windows. Styly k dispozici jsou uvedeny v seznamu **poznámky** části.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacího prvku. Může být buď `CRect` objekt nebo `RECT` struktury.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku podřízené okno.  
   
- `pPersist`  
+ *pPersist*  
  Ukazatel na `CFile` obsahující trvalý stav pro ovládací prvek. Výchozí hodnota je **NULL**, která určuje, že ovládací prvek se inicializuje bez obnovení stavu z jakékoli trvalé úložiště. Není-li **NULL**, by mělo být ukazatel na `CFile`-odvozené objekt, který obsahuje trvalé data ovládacího prvku ve formě datového proudu nebo úložiště. Tato data by byla uložena v předchozí aktivace klienta. `CFile` Může obsahovat další data, ale musí mít jeho ukazatele pro čtení a zápis nastavit do prvního bajtu trvalé dat při volání `CreateControl`.  
   
- `bStorage`  
- Určuje, zda data v `pPersist` by měl být interpretován jako `IStorage` nebo `IStream` data. Pokud data v `pPersist` je úložiště, `bStorage` by měla být **TRUE**. Pokud data v `pPersist` je datový proud, `bStorage` by měla být **FALSE**. Výchozí hodnota je **FALSE**.  
+ *bStorage*  
+ Určuje, zda data v *pPersist* by měl být interpretován jako `IStorage` nebo `IStream` data. Pokud data v *pPersist* je úložiště, *bStorage* by měla být **TRUE**. Pokud data v *pPersist* je datový proud, *bStorage* by měla být **FALSE**. Výchozí hodnota je **FALSE**.  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  Volitelné licence klíčová data. Tato data je potřeba pouze při vytváření ovládacích prvků, které vyžadují spuštění licenční klíč. Pokud ovládací prvek podporuje licencování, je nutné zadat licenční klíč pro vytvoření ovládacího prvku proběhla úspěšně. Výchozí hodnota je **NULL**.  
   
- `ppt`  
- Ukazatel **bodu** struktura, která obsahuje levém horním rohu ovládacího prvku. Velikost ovládacího prvku je dáno hodnotu *psize*. `ppt` a *psize* hodnoty jsou volitelné metodu sloužící k určení velikosti a pozice zpracovatelského ovládacího prvku.  
+ *ppt*  
+ Ukazatel **bodu** struktura, která obsahuje levém horním rohu ovládacího prvku. Velikost ovládacího prvku je dáno hodnotu *psize*. *Ppt* a *psize* hodnoty jsou volitelné metodu sloužící k určení velikosti a pozice zpracovatelského ovládacího prvku.  
   
  *psize*  
- Ukazatel **velikost** struktura, která obsahuje velikosti ovládacího prvku. Levém horním rohu je dáno hodnotu `ppt`. `ppt` a *psize* hodnoty jsou volitelné metodu sloužící k určení velikosti a pozice zpracovatelského ovládacího prvku.  
+ Ukazatel **velikost** struktura, která obsahuje velikosti ovládacího prvku. Levém horním rohu je dáno hodnotu *ppt*. *Ppt* a *psize* hodnoty jsou volitelné metodu sloužící k určení velikosti a pozice zpracovatelského ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Standardní `HRESULT` hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze podmnožinu Windows `dwStyle` příznaky podporuje `CreateControl`:  
+ Pouze podmnožinu Windows *dwStyle* příznaky podporuje `CreateControl`:  
   
 - **Ws_visible –** vytvoří okno, které je původně viditelná. Vyžaduje, pokud chcete ovládat viditelné okamžitě, stejně jako obyčejnou windows.  
   
 - **Ws_disabled –** vytvoří okno, které je původně zakázána. Okno zakázané nemůže přijímat vstup od uživatele. Můžete nastavit, pokud má vlastnost povoleno ovládacího prvku.  
   
-- `WS_BORDER` Vytvoří okno se dynamicky čáry ohraničení. Můžete nastavit, pokud má vlastnost styl okraje na ovládací prvek.  
+- **Ws_border –** vytvoří okno s dynamicky čáry ohraničení. Můžete nastavit, pokud má vlastnost styl okraje na ovládací prvek.  
   
 - **Ws_group –** Určuje první prvek skupiny ovládacích prvků. Uživatel může změnit fokus klávesnice z jednoho ovládacího prvku ve skupině na další pomocí klíčů směr. Všechny ovládací prvky, které jsou definované pomocí **ws_group –** styl po první prvek patří do stejné skupiny. Na další ovládací prvek s **ws_group –** styl končí skupině a spustí na další skupinu.  
   
@@ -383,7 +383,7 @@ virtual HRESULT DoVerb(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nVerb`  
+ *nVerb*  
  Určuje příkaz provést. Může obsahovat jednu z těchto možností:  
   
 |Hodnota|Význam|Symbol|  
@@ -394,10 +394,10 @@ virtual HRESULT DoVerb(
 |-2|Upraví položky v samostatném okně.|`OLEIVERB_OPEN`|  
 |-3|Skryje objektu.|`OLEIVERB_HIDE`|  
 |-4|Aktivuje ovládací prvek na místě.|`OLEIVERB_UIACTIVATE`|  
-|-5|Aktivuje ovládací prvek v místě, bez další prvky uživatelského rozhraní.|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|Zobrazení vlastností ovládacího prvku.|**OLEIVERB_PROPERTIES**|  
+|-5|Aktivuje ovládací prvek v místě, bez další prvky uživatelského rozhraní.|`OLEIVERB_INPLACEACTIVATE`|  
+|-7|Zobrazení vlastností ovládacího prvku.|`OLEIVERB_PROPERTIES`|  
   
- `lpMsg`  
+ *lpMsg*  
  Ukazatel na zprávu, která způsobila, že položka, která má být aktivována.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -426,7 +426,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, jestli chcete povolit nebo zakázat okna: **TRUE** Pokud má být povoleno, jinak hodnota okno vstup **FALSE**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -440,11 +440,11 @@ void FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bFreeze`  
+ *bFreeze*  
  Určuje, jestli chce přestane přijímat události ovládacího prvku lokality. Nenulové hodnoty, pokud ovládací prvek nepřijímá události; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bFreeze` je **TRUE**, řízení lokality požadavky na zastavení fring události ovládacího prvku. Pokud `bFreeze` je **FALSE**, chcete-li pokračovat, která iniciovala události ovládacího prvku požadavky řízení lokality.  
+ Pokud *bFreeze* je **TRUE**, řízení lokality požadavky na zastavení fring události ovládacího prvku. Pokud *bFreeze* je **FALSE**, chcete-li pokračovat, která iniciovala události ovládacího prvku požadavky řízení lokality.  
   
 > [!NOTE]
 >  Ovládací prvek není potřeba zastavit aktivaci událostí, pokud požadoval ovládacího prvku lokality. Pálení může pokračovat, ale všechny následné události budou ignorovány lokalita ovládacího prvku.  
@@ -493,11 +493,11 @@ BOOL GetEventIID(IID* piid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piid`  
+ *piid*  
  Ukazatel na identifikátor rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud bylo úspěšné, jinak hodnota 0. V případě úspěšného `piid` obsahuje ID rozhraní pro rozhraní událostí výchozí ovládacího prvku.  
+ Nenulové hodnoty, pokud bylo úspěšné, jinak hodnota 0. V případě úspěšného *piid* obsahuje ID rozhraní pro rozhraní událostí výchozí ovládacího prvku.  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  Načte rozšířené styly oken na.  
@@ -513,7 +513,7 @@ virtual DWORD GetExStyle() const;
  Chcete-li načíst regulární stylů, volejte [COleControlSite::GetStyle](#getstyle).  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- Získá vlastnost ovládacího prvku určeného `dwDispID`.  
+ Získá vlastnost ovládacího prvku určeného *dwDispID*.  
   
 ```  
 virtual void GetProperty(
@@ -523,17 +523,17 @@ virtual void GetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje ID odesílání vlastnost nalezena ve výchozím nastavení ovládacího prvku `IDispatch` rozhraní mají být načteny.  
   
- `vtProp`  
+ *vtProp*  
  Určuje typ vlastnosti, které mají být načteny. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvProp`  
- Adresa proměnné, která se zobrazí hodnota vlastnosti. Musí se shodovat s typem zadaným ve `vtProp`.  
+ *pvProp*  
+ Adresa proměnné, která se zobrazí hodnota vlastnosti. Musí se shodovat s typem zadaným ve *vtProp*.  
   
 ### <a name="remarks"></a>Poznámky  
- Prostřednictvím je vrácena hodnota `pvProp`.  
+ Je vrácena hodnota prostřednictvím *pvProp*.  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  Načte styly ovládacího prvku lokality.  
@@ -556,14 +556,14 @@ virtual void GetWindowText(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str`  
+ *str –*  
  Odkaz na `CString` objekt, který obsahuje aktuální text ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud ovládací prvek podporuje uložených vlastností titulku, tato hodnota se vrátí. Pokud uložených vlastností popisek není podporován, je vrácena hodnota pro vlastnost Text.  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- Vyvolá metody nebo vlastnosti určeného `dwDispID`, v rámci určeného `wFlags`.  
+ Vyvolá metody nebo vlastnosti určeného *dwDispID*, v rámci určeného *wFlags*.  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -575,31 +575,31 @@ virtual void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje ID odesílání vlastnosti nebo metody, najít ovládacího prvku na `IDispatch` rozhraní, které má být volána.  
   
- `wFlags`  
- Příznaky popisující kontext volání volání metody IDispatch::Invoke. Pro možné `wFlags` hodnoty, najdete v části `IDispatch::Invoke` ve Windows SDK.  
+ *wFlags*  
+ Příznaky popisující kontext volání volání metody IDispatch::Invoke. Pro možné *wFlags* hodnoty, najdete v části `IDispatch::Invoke` ve Windows SDK.  
   
- `vtRet`  
+ *vtRet*  
  Určuje typ vrácené hodnoty. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvRet`  
- Adresa proměnné, která bude přijímat hodnota vlastnosti nebo vrátit hodnotu. Musí se shodovat s typem zadaným ve `vtRet`.  
+ *pvRet*  
+ Adresa proměnné, která bude přijímat hodnota vlastnosti nebo vrátit hodnotu. Musí se shodovat s typem zadaným ve *vtRet*.  
   
- `pbParamInfo`  
- Ukazatel na řetězce ukončené hodnotou null bajtů určení typů parametrů následující `pbParamInfo`. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ *pbParamInfo*  
+ Ukazatel na řetězce ukončené hodnotou null bajtů určení typů parametrů následující *pbParamInfo*. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Seznam proměnných parametrů typů zadaný v `pbParamInfo`.  
+ Seznam proměnných parametrů typů zadaný v *pbParamInfo*.  
   
 ### <a name="remarks"></a>Poznámky  
- `pbParamInfo` Parametr určuje typy parametrů předaných pracovnímu metody nebo vlastnosti. Proměnné seznam argumentů je reprezentována... v deklaraci syntaxe.  
+ *PbParamInfo* parametr určuje typy parametrů předaných pracovnímu metody nebo vlastnosti. Proměnné seznam argumentů je reprezentována... v deklaraci syntaxe.  
   
- Tato funkce převede parametry, které chcete **VARIANTARG** hodnoty a potom volá **volání metody IDispatch::Invoke** metoda na ovládací prvek. Pokud volání **volání metody IDispatch::Invoke** selže, tato funkce vyvolá výjimku. Pokud vrácený kód stavu **volání metody IDispatch::Invoke** je `DISP_E_EXCEPTION`, funkce vyvolá **COleDispatchException** objektu, jinak hodnota vyhodí `COleException`.  
+ Tato funkce převede parametry, které chcete **VARIANTARG** hodnoty a potom volá `IDispatch::Invoke` metoda na ovládací prvek. Pokud volání `IDispatch::Invoke` selže, tato funkce vyvolá výjimku. Pokud vrácený kód stavu `IDispatch::Invoke` je `DISP_E_EXCEPTION`, funkce vyvolá `COleDispatchException` objektu, jinak hodnota vyhodí `COleException`.  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- Vyvolá metody nebo vlastnosti určeného `dwDispID`, v rámci určeného `wFlags`.  
+ Vyvolá metody nebo vlastnosti určeného *dwDispID*, v rámci určeného *wFlags*.  
   
 ```  
 virtual void InvokeHelperV(
@@ -612,26 +612,26 @@ virtual void InvokeHelperV(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje ID odesílání vlastnosti nebo metody, najít ovládacího prvku na `IDispatch` rozhraní, které má být volána.  
   
- `wFlags`  
+ *wFlags*  
  Příznaky popisující kontext volání volání metody IDispatch::Invoke.  
   
- `vtRet`  
+ *vtRet*  
  Určuje typ vrácené hodnoty. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `pvRet`  
- Adresa proměnné, která bude přijímat hodnota vlastnosti nebo vrátit hodnotu. Musí se shodovat s typem zadaným ve `vtRet`.  
+ *pvRet*  
+ Adresa proměnné, která bude přijímat hodnota vlastnosti nebo vrátit hodnotu. Musí se shodovat s typem zadaným ve *vtRet*.  
   
- `pbParamInfo`  
- Ukazatel na řetězce ukončené hodnotou null bajtů určení typů parametrů následující `pbParamInfo`. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ *pbParamInfo*  
+ Ukazatel na řetězce ukončené hodnotou null bajtů určení typů parametrů následující *pbParamInfo*. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `argList`  
+ *Seznam_argumentů*  
  Ukazatel na seznam argumentů s proměnnou.  
   
 ### <a name="remarks"></a>Poznámky  
- `pbParamInfo` Parametr určuje typy parametrů předaných pracovnímu metody nebo vlastnosti. Další parametry pro metodu nebo vlastnost volaná mohou být předány pomocí *VA_LIST –* parametr.  
+ *PbParamInfo* parametr určuje typy parametrů předaných pracovnímu metody nebo vlastnosti. Další parametry pro metodu nebo vlastnost volaná mohou být předány pomocí *VA_LIST –* parametr.  
   
  Obvykle se tato funkce je volána `COleControlSite::InvokeHelper`.  
   
@@ -790,13 +790,13 @@ virtual BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwRemove`  
+ *dwRemove*  
  Styly odeberou z aktuální styly oken.  
   
- `dwAdd`  
+ *dwAdd*  
  Styly přidávaného z aktuální styly oken.  
   
- `nFlags`  
+ *nFlags*  
  Okno umístění příznaky. Seznam možných hodnot najdete v tématu [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkce ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -807,7 +807,7 @@ virtual BOOL ModifyStyle(
   
  Upravit styly oken ovládacího prvku. Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR ( &#124; ) operátor. Najdete v článku [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) funkce ve Windows SDK pro informace o dostupném časovém intervalu stylů.  
   
- Pokud `nFlags` nenulový, `ModifyStyle` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete `nFlags` s následující čtyři příznaky:  
+ Pokud *nFlags* nenulový, `ModifyStyle` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete *nFlags* s následující čtyři příznaky:  
   
 - `SWP_NOSIZE` Zachová aktuální velikost.  
   
@@ -830,13 +830,13 @@ virtual BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwRemove`  
+ *dwRemove*  
  Rozšířené styly odeberou z aktuální styly oken.  
   
- `dwAdd`  
+ *dwAdd*  
  Rozšířené styly přidávaného z aktuální styly oken.  
   
- `nFlags`  
+ *nFlags*  
  Okno umístění příznaky. Seznam možných hodnot najdete v tématu [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) funkce ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -847,7 +847,7 @@ virtual BOOL ModifyStyleEx(
   
  Upravuje okno Rozšířené styly objekt ovládacího prvku lokality. Styly, které chcete přidat nebo odebrat lze spojovat pomocí bitová hodnota OR ( &#124; ) operátor. Najdete v článku [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce ve Windows SDK pro informace o dostupném časovém intervalu stylů.  
   
- Pokud `nFlags` nenulový, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete `nFlags` s následující čtyři příznaky:  
+ Pokud *nFlags* nenulový, `ModifyStyleEx` volá funkci Win32 `SetWindowPos`nebo ho překreslí okno tím, že zkombinujete *nFlags* s následující čtyři příznaky:  
   
 - `SWP_NOSIZE` Zachová aktuální velikost.  
   
@@ -877,10 +877,10 @@ virtual void MoveWindow(
  *y*  
  Nové umístění horní části okna.  
   
- `nWidth`  
+ *nWindth*  
  Šířka nové okno  
   
- `nHeight`  
+ *nHeight*  
  Nové výšku okna.  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
@@ -899,7 +899,7 @@ virtual BOOL QuickActivate();
  `IPersist*::Load` a `IPersist*::InitNew` metody by měla být volána po dokončení rychlé aktivace. Ovládací prvek zavede jeho připojení k kontejneru jímky během rychlé aktivace. Tato připojení však nejsou za provozu, dokud `IPersist*::Load` nebo `IPersist*::InitNew` byla volána.  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- Nastaví vlastnost ovládacího prvku určeného `dwDispID`.  
+ Nastaví vlastnost ovládacího prvku určeného *dwDispID*.  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -908,14 +908,14 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje ID odesílání vlastnosti nebo metody, najít ovládacího prvku na `IDispatch` rozhraní, které chcete nastavit.  
   
- `vtProp`  
+ *vtProp*  
  Určuje typ vlastnosti nastavit. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Jeden parametr v typu zadaném pomocí `vtProp`.  
+ Jeden parametr v typu zadaném pomocí *vtProp*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -933,7 +933,7 @@ void SetDefaultButton(BOOL bDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bDefault`  
+ *bDefault*  
  Nenulové hodnoty, pokud se ovládací prvek by měl stane výchozí tlačítko; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -949,7 +949,7 @@ virtual int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Nová hodnota identifikátor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -973,7 +973,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
  Ukazatel na okno, která dřív měla fokus.  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- Nastaví vlastnost ovládacího prvku určeného `dwDispID`.  
+ Nastaví vlastnost ovládacího prvku určeného *dwDispID*.  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -982,22 +982,22 @@ virtual void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje ID odesílání vlastnosti nebo metody, najít ovládacího prvku na `IDispatch` rozhraní, které chcete nastavit.  
   
- `vtProp`  
+ *vtProp*  
  Určuje typ vlastnosti nastavit. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
  *...*  
- Jeden parametr v typu zadaném pomocí `vtProp`.  
+ Jeden parametr v typu zadaném pomocí *vtProp*.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud `SetProperty` komunikaci se chyba, je vyvolána výjimka.  
   
- Typ výjimky je určen podle návratová hodnota pokus o nastavení vlastnosti nebo metody. Pokud je vrácenou hodnotou `DISP_E_EXCEPTION`, **COleDispatchExcpetion** výjimce dojde; jinak hodnota `COleException`.  
+ Typ výjimky je určen podle návratová hodnota pokus o nastavení vlastnosti nebo metody. Pokud je vrácenou hodnotou `DISP_E_EXCEPTION`, `COleDispatchExcpetion` výjimce dojde; jinak hodnota `COleException`.  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- Nastaví vlastnost ovládacího prvku určeného `dwDispID`.  
+ Nastaví vlastnost ovládacího prvku určeného *dwDispID*.  
   
 ```  
 virtual void SetPropertyV(
@@ -1007,19 +1007,19 @@ virtual void SetPropertyV(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Určuje ID odesílání vlastnosti nebo metody, najít ovládacího prvku na `IDispatch` rozhraní, které chcete nastavit.  
   
- `vtProp`  
+ *vtProp*  
  Určuje typ vlastnosti nastavit. Možné hodnoty, najdete v části poznámky pro [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
   
- `argList`  
+ *Seznam_argumentů*  
  Ukazatel na seznam argumentů.  
   
 ### <a name="remarks"></a>Poznámky  
  Další parametry pro metodu nebo vlastnost volaná může být passeed pomocí *arg_list* parametr. Pokud `SetProperty` komunikaci se chyba, je vyvolána výjimka.  
   
- Typ výjimky je určen podle návratová hodnota pokus o nastavení vlastnosti nebo metody. Pokud je vrácenou hodnotou `DISP_E_EXCEPTION`, **COleDispatchExcpetion** výjimce dojde; jinak hodnota `COleException`.  
+ Typ výjimky je určen podle návratová hodnota pokus o nastavení vlastnosti nebo metody. Pokud je vrácenou hodnotou `DISP_E_EXCEPTION`, `COleDispatchExcpetion` výjimce dojde; jinak hodnota `COleException`.  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  Nastaví velikost, umístění a pořadí vykreslování ovládacího prvku lokality.  
@@ -1035,7 +1035,7 @@ virtual BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndInsertAfter`  
+ *pWndInsertAfter*  
  Ukazatel na okno.  
   
  *x*  
@@ -1044,13 +1044,13 @@ virtual BOOL SetWindowPos(
  *y*  
  Nové umístění horní části okna.  
   
- `cx`  
+ *CX*  
  Šířka nové okno  
   
- `cy`  
+ *CY*  
  Nové výšku okna.  
   
- `nFlags`  
+ *nFlags*  
  Určuje interval pro změnu velikosti a rozmístění příznaky. Možné hodnoty, najdete v části poznámky pro [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1064,7 +1064,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
+ *lpszString*  
  Ukazatel na řetězce ukončené hodnotou null má být použit jako nový název nebo ovládací prvek text.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1078,7 +1078,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCmdShow`  
+ *nCmdShow*  
  Určuje, jak řízení lokality se nezobrazí. Musí být jedna z následujících hodnot:  
   
 - **SW_HIDE** skryje toto okno a předává aktivace pro další okno.  

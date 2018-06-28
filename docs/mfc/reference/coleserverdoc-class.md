@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7df4ea13313758c517188e1c4ce0441618a99b4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377665"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039054"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc – třída
 Základní třída pro OLE – dokumenty na serveru.  
@@ -237,7 +237,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna aplikace typu kontejner.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -269,7 +269,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFrameWnd`  
+ *pFrameWnd*  
  Ukazatel do okna s rámečkem na místě zničení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -306,7 +306,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDocSite`  
+ *pDocSite*  
  Ukazatel `IOleDocumentSite` rozhraní, které bude tento dokument připojit k serveru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -340,7 +340,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpClipRect`  
+ *lpClipRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt, který chcete přijímat souřadnice výstřižek obdélníku položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -356,7 +356,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPosRect`  
+ *lpPosRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt, který chcete přijímat souřadnice položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -381,7 +381,7 @@ BOOL GetZoomFactor(
  *lpSizeDenom*  
  Ukazatel na objekt třídy `CSize` , bude obsahovat na faktor zvětšování jmenovatel. Může být **NULL**.  
   
- `lpPosRect`  
+ *lpPosRect*  
  Ukazatel na objekt třídy `CRect` , který popisuje nové umístění. Pokud tento argument je **NULL**, funkce, která používá aktuální umístění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -456,7 +456,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszNewName`  
+ *lpszNewName*  
  Ukazatel na řetězec určující název nového dokumentu na serveru; Obvykle se jedná o plně kvalifikovanou cestu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -480,7 +480,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCloseOption`  
+ *dwCloseOption*  
  Hodnota z výčtu `OLECLOSE`. Tento parametr může mít jednu z následujících hodnot:  
   
 - `OLECLOSE_SAVEIFDIRTY` Soubor zůstane uložen, pokud se změnila.  
@@ -516,13 +516,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bUndoable`  
+ *bUndoable*  
  Určuje, zda mohou být změny vrátit zpět.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce obnoví uživatelské rozhraní aplikace kontejneru do původního stavu, skrytí žádné nabídky a jiných ovládacích prvků, které byly vytvořeny pro aktivace na místě.  
   
- Rozhraní framework vždy nastaví `bUndoable` k **FALSE**. Pokud je server podporuje vrácení zpět a operace, která lze vrátit zpět, volat základní třídy implementaci s `bUndoable` nastavena na **TRUE**.  
+ Rozhraní framework vždy nastaví *bUndoable* k **FALSE**. Pokud je server podporuje vrácení zpět a operace, která lze vrátit zpět, volat základní třídy implementaci s *bUndoable* nastavena na **TRUE**.  
   
 ##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  Rozhraní framework volá tuto funkci aktivovat nebo deaktivovat okna dokumentu pro úpravy na místě.  
@@ -532,7 +532,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bActivate`  
+ *bActivate*  
  Určuje, zda okna dokumentu je aktivace nebo deaktivace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -553,11 +553,11 @@ virtual HRESULT OnExecOleCmd(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Ukazatel na identifikátor GUID, který identifikuje sadu příkazů. Může být **NULL** udávajících do výchozí skupiny příkaz.  
   
- `nCmdID`  
- Příkaz k provedení. Musí být ve skupině identifikovaný `pguidCmdGroup`.  
+ *nCmdID*  
+ Příkaz k provedení. Musí být ve skupině identifikovaný *pguidCmdGroup*.  
   
  *nCmdExecOut*  
  Způsob, jakým objekt by měla spustit příkaz, jeden nebo více z následujících hodnot z **OLECMDEXECOPT** výčtu:  
@@ -570,10 +570,10 @@ virtual HRESULT OnExecOleCmd(
   
  **OLECMDEXECOPT_SHOWHELP**  
   
- `pvarargIn`  
+ *pvarargIn*  
  Ukazatel na **VARIANTARG** obsahující vstupní argumenty pro příkaz. Může být **NULL**.  
   
- `pvarargOut`  
+ *pvarargOut*  
  Ukazatel na **VARIANTARG** přijímat vrácené hodnoty výstupu z příkazu. Může být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -584,10 +584,10 @@ virtual HRESULT OnExecOleCmd(
 |**E_UNEXPECTED**|Došlo k neočekávané chybě|  
 |**E_FAIL**|Došlo k chybě|  
 |**E_NOTIMPL**|Označuje MFC samotné pokusí přeložit a odeslat příkaz|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` jinou hodnotu než **NULL** , ale neurčuje platný příkaz skupiny|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` nerozpoznal jako platný příkaz ve skupině `pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|Příkaz určený `nCmdID` je zakázané a nelze provést|  
-|**OLECMDERR_NOHELP**|Volající požádali o pomoc na příkaz identifikovaný `nCmdID` , ale je k dispozici žádná Nápověda|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* jinou hodnotu než **NULL** , ale neurčuje platný příkaz skupiny|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* nerozpoznal jako platný příkaz ve skupině *pguidCmdGroup*|  
+|**OLECMDERR_DISABLED**|Příkaz určený *nCmdID* je zakázané a nelze provést|  
+|**OLECMDERR_NOHELP**|Volající požádali o pomoc na příkaz identifikovaný *nCmdID* , ale je k dispozici žádná Nápověda|  
 |**OLECMDERR_CANCELED**|Uživatel stornoval provádění|  
   
 ### <a name="remarks"></a>Poznámky  
@@ -595,11 +595,11 @@ virtual HRESULT OnExecOleCmd(
   
  Rozhraní framework volání funkce dřív, než se převede a odeslat příkaz OLE dokumentu. Nemusíte přepsat tuto funkci pro zpracování standardní příkazy OLE dokumentu, ale je nutné zadat přepsání pro tuto funkci, pokud chcete zpracovávat vlastních příkazů nebo zpracování příkazy, které přijímají parametry, nebo může vracet výsledky.  
   
- Většina příkazů, nezadávejte trvat argumenty nebo návratové hodnoty. Pro většinu příkazů můžete předat volající **NULL**s pro `pvarargIn` a `pvarargOut`. Pro příkazy, které očekávají vstupní hodnoty, volající deklarace a inicializace **VARIANTARG** proměnné a předejte ukazatel na proměnné v `pvarargIn`. Pro příkazy, které vyžadují jednu hodnotu, může být argument přímo v uložená **VARIANTARG** a předaný funkci. Více argumentů musí být zabalené v rámci **VARIANTARG** pomocí jedné z podporovaných typů (jako například `IDispatch` a **SAFEARRAY** ).  
+ Většina příkazů, nezadávejte trvat argumenty nebo návratové hodnoty. Pro většinu příkazů můžete předat volající **NULL**s pro *pvarargIn* a *pvarargOut*. Pro příkazy, které očekávají vstupní hodnoty, volající deklarace a inicializace **VARIANTARG** proměnné a předejte ukazatel na proměnné v *pvarargIn*. Pro příkazy, které vyžadují jednu hodnotu, může být argument přímo v uložená **VARIANTARG** a předaný funkci. Více argumentů musí být zabalené v rámci **VARIANTARG** pomocí jedné z podporovaných typů (jako například `IDispatch` a **SAFEARRAY** ).  
   
- Podobně, pokud příkaz vrátí argumenty volající musí deklarovat **VARIANTARG**, inicializujte ho, aby `VT_EMPTY`a předejte adresy v `pvarargOut`. Pokud příkaz vrátí jednu hodnotu, objekt můžete uložit hodnotu přímo v `pvarargOut`. Více hodnot výstup musí být zabalené nějakým způsobem vhodné pro **VARIANTARG**.  
+ Podobně, pokud příkaz vrátí argumenty volající musí deklarovat **VARIANTARG**, inicializujte ho, aby `VT_EMPTY`a předejte adresy v *pvarargOut*. Pokud příkaz vrátí jednu hodnotu, objekt můžete uložit hodnotu přímo v *pvarargOut*. Více hodnot výstup musí být zabalené nějakým způsobem vhodné pro **VARIANTARG**.  
   
- Provede implementace třídy base této funkce **OLE_COMMAND_MAP** struktury související s cíl příkazu a zkuste odeslat příkaz pro příslušnou obslužnou rutinu. Implementace třídy base pracuje pouze s příkazy, které přijímají argumenty nebo návratové hodnoty. Pokud potřebujete pro zpracování příkazy, které přijímají argumenty nebo návratové hodnoty, musíte funkci přepsat a pracovat `pvarargIn` a `pvarargOut` parametry sami.  
+ Provede implementace třídy base této funkce **OLE_COMMAND_MAP** struktury související s cíl příkazu a zkuste odeslat příkaz pro příslušnou obslužnou rutinu. Implementace třídy base pracuje pouze s příkazy, které přijímají argumenty nebo návratové hodnoty. Pokud potřebujete pro zpracování příkazy, které přijímají argumenty nebo návratové hodnoty, musíte funkci přepsat a pracovat *pvarargIn* a *pvarargOut* parametry sami.  
   
 ##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  Pokud je aktivace nebo deaktivace oken s rámečkem kontejnerové aplikace volá rámec této funkce.  
@@ -609,7 +609,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bActivate`  
+ *bActivate*  
  Určuje, zda okně s rámečkem na aktivace nebo deaktivace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -656,14 +656,14 @@ virtual void OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRectBorder`  
+ *lpRectBorder*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt, který určuje souřadnice ohraničení.  
   
- `lpUIWindow`  
+ *lpUIWindow*  
  Ukazatel na objekt třídy **IOleInPlaceUIWindow** , který je vlastníkem aktuální relace úprav na místě.  
   
  *bFrame*  
- **Hodnota TRUE,** Pokud `lpUIWindow` odkazuje na oken s rámečkem nejvyšší úrovně aplikace typu kontejner, nebo **FALSE** Pokud `lpUIWindow` odkazuje na kontejner aplikace oken s rámečkem úrovni dokumentu.  
+ **Hodnota TRUE,** Pokud *lpUIWindow* odkazuje na oken s rámečkem nejvyšší úrovně aplikace typu kontejner, nebo **FALSE** Pokud *lpUIWindow* odkazuje na kontejner oken s rámečkem úrovni dokumentu aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce změní a upraví panely nástrojů a další prvky uživatelského rozhraní v souladu s novou velikost okna.  
@@ -682,10 +682,10 @@ virtual void OnSetHostNames(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszHost`  
+ *lpszHost*  
  Ukazatel na řetězec, který určuje název aplikace kontejneru.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  Ukazatel na řetězec, který určuje název kontejneru pro dokument.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -703,10 +703,10 @@ virtual void OnSetItemRects(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPosRect`  
+ *lpPosRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt, který určuje pozici okna rámečkem na místě relativně ke kontejneru aplikace klientské oblasti.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt, který určuje okno rámečkem na místě výstřižek obdélník relativní vzhledem k aplikaci kontejneru klientské oblasti.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -715,7 +715,7 @@ virtual void OnSetItemRects(
  Tato funkce je volána obvykle v reakci `RequestPositionChange` zavolat, i když je možné volat kdykoli v kontejneru požadavek na změnu pozice pro položku na místě.  
   
 ##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
- Volá rámec této funkci můžete zobrazit nebo skrýt ovládací pruhy serverová aplikace přidružené k rámce okna identifikovaný `pFrameWnd`.  
+ Volá rámec této funkci můžete zobrazit nebo skrýt ovládací pruhy serverová aplikace přidružené k rámce okna identifikovaný *pFrameWnd*.  
   
 ```  
 virtual void OnShowControlBars(
@@ -724,10 +724,10 @@ virtual void OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFrameWnd`  
+ *pFrameWnd*  
  Ukazatel na rámec okna jejichž ovládací pruhy by měla být skrytý nebo vidět.  
   
- `bShow`  
+ *bShow*  
  Určuje, zda jsou ovládací pruhy zobrazen nebo skryt.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -741,11 +741,11 @@ virtual void OnShowDocument(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bShow`  
+ *bShow*  
  Určuje, zda uživatelské rozhraní v dokumentu je zobrazen nebo skryt.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bShow` je **TRUE**, výchozí implementaci serverové aplikace, aktivuje se v případě potřeby a způsobí, že aplikace kontejneru posuňte jeho okna tak, aby položka. Pokud `bShow` je **FALSE**, výchozí implementace deaktivuje položky prostřednictvím volání `OnDeactivate`, ničí nebo skryje všechna okna s rámečkem vytvořené pro dokument, s výjimkou první z nich. Pokud žádné viditelné dokumenty zůstanou, skryje výchozí implementaci serverové aplikace.  
+ Pokud *bShow* je **TRUE**, výchozí implementaci serverové aplikace, aktivuje se v případě potřeby a způsobí, že aplikace kontejneru posuňte jeho okna tak, aby položka. Pokud *bShow* je **FALSE**, výchozí implementace deaktivuje položky prostřednictvím volání `OnDeactivate`, ničí nebo skryje všechna okna s rámečkem vytvořené pro dokument, kromě prvního jeden. Pokud žádné viditelné dokumenty zůstanou, skryje výchozí implementaci serverové aplikace.  
   
 ##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  Voláno rámcem při ukládání dokumentu, který je vložený položku v složeného dokumentu.  
@@ -768,7 +768,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPosRect`  
+ *lpPosRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt obsahující nové umístění.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -792,7 +792,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sizeScroll`  
+ *sizeScroll*  
  Určuje, jak daleko je dokument kontejneru posun.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -813,16 +813,16 @@ void UpdateAllItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSender`  
+ *pSender*  
  Ukazatel na položku upravit dokumentu nebo **NULL** všechny položky mají-li aktualizovat.  
   
- `lHint`  
+ *lHint*  
  Obsahuje informace o této úpravy.  
   
- `pHint`  
+ *pHint*  
  Ukazatel na objekt ukládání informací o úpravy.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Určuje, jak má být odeslána položky. Je to hodnota z `DVASPECT` výčtu. Tento parametr může mít jednu z následujících hodnot:  
   
 - `DVASPECT_CONTENT` Položka je reprezentována tak, že lze zobrazit jako vložený objekt uvnitř jeho kontejneru.  
@@ -836,7 +836,7 @@ void UpdateAllItems(
 ### <a name="remarks"></a>Poznámky  
  Tato funkce se obvykle volání, poté, co uživatel změní dokumentu na serveru. Pokud položku OLE je propojený s automatické propojení dokumentu, položku aktualizovat tak, aby odrážely změny. V kontejneru aplikací vytvořených pomocí knihovny Microsoft Foundation Class [při změně](../../mfc/reference/coleclientitem-class.md#onchange) členské funkce `COleClientItem` je volána.  
   
- Tato funkce volá `OnUpdate` – členská funkce pro všechny položky dokumentu s výjimkou odesílání položek, předávání `pHint`, `lHint`, a `nDrawAspect`. Použijte tyto parametry k předání informací k položkám o změny provedené v dokumentu. Můžete kódovat pomocí informace `lHint` nebo můžete definovat `CObject`-odvozené třídy k ukládání informací o změny a předat objekt této třídy pomocí `pHint`. Přepsání `OnUpdate` členské funkce ve vaší `COleServerItem`-odvozené třídy za účelem optimalizace, aktualizuje se každou položku v závislosti na tom, zda došlo ke změně jeho prezentaci.  
+ Tato funkce volá `OnUpdate` – členská funkce pro všechny položky dokumentu s výjimkou odesílání položek, předávání *pHint*, *lHint*, a *nDrawAspect*. Použijte tyto parametry k předání informací k položkám o změny provedené v dokumentu. Můžete kódovat pomocí informace *lHint* nebo můžete definovat `CObject`-odvozené třídy k ukládání informací o změny a předat objekt této třídy pomocí *pHint*. Přepsání `OnUpdate` členské funkce ve vaší `COleServerItem`-odvozené třídy za účelem optimalizace, aktualizuje se každou položku v závislosti na tom, zda došlo ke změně jeho prezentaci.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka MFC HIERSVR](../../visual-cpp-samples.md)   

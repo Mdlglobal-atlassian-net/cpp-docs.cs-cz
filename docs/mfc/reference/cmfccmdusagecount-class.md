@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369239"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037340"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount – třída
 Sleduje počet použití zpráv systému Windows, například když uživatel vybere položku z nabídky.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `uiCmd`|Určuje příkaz čítače se zvýší.|  
+|[v] *uiCmd*|Určuje příkaz čítače se zvýší.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda přidá novou položku mapy struktura příkaz počty `m_CmdUsage`, pokud položka již neexistuje.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   Rozhraní framework nástrojů je v režimu přizpůsobení ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) metoda vrátí nenulovou hodnotu).  
   
--   Příkaz odkazuje na dílčí nebo nabídky oddělovače ( `uiCmd` rovná 0 nebo -1).  
+-   Příkaz odkazuje na dílčí nebo nabídky oddělovače ( *uiCmd* rovná 0 nebo -1).  
   
-- `uiCmd` odkazuje na standardních příkazů (na globální `IsStandardCommand` funkce vrátí nenulovou hodnotu).  
+- *uiCmd* odkazuje na standardních příkazů (na globální `IsStandardCommand` funkce vrátí nenulovou hodnotu).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Načte počet použití, který je přidružen ID daného příkazu.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `uiCmd`|ID čítač příkaz pro načtení.|  
+|[v] *uiCmd*|ID čítač příkaz pro načtení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet použití, který je přidružen ID daného příkazu.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `uiCmd`|Určuje příkaz, který chcete zkontrolovat.|  
+|[v] *uiCmd*|Určuje příkaz, který chcete zkontrolovat.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se často používá příkaz; jinak 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `ar`|A `CArchive` objektu k serializaci z nebo na.|  
+|[v] *ar*|A `CArchive` objektu k serializaci z nebo na.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda serializuje strukturu mapy příkaz počty `m_CmdUsage`a celkový počet příkaz využití `m_nTotalUsage`, čítač z nebo na zadané archivu.  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `nStartCount`|Nové počáteční počet všechny sledované příkazy.|  
-|[v] `nMinUsagePercentage`|Nové procento minimální využití.|  
+|[v] *nStartCount*|Nové počáteční počet všechny sledované příkazy.|  
+|[v] *nMinUsagePercentage*|Nové procento minimální využití.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda bude úspěšná, `FALSE` Pokud `nMinUsagePercentage` parametr je větší než nebo roven 100.  
+ `TRUE` Pokud metoda bude úspěšná, `FALSE` Pokud *nMinUsagePercentage* parametr je větší než nebo roven 100.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nastaví sdílený `CMFCCmdUsageCount` třídy datových členů `m_nStartCount` a `m_nMinUsagePercentage` k `nStartCount` a `nMinUsagePercentage`, v uvedeném pořadí. `m_nStartCount` je používán [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) metoda k určení, zda tento objekt se budou shromažďovat data sledování minimální velikost. `m_nMinUsagePercentage` je používán [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) metoda k určení, zda daný příkaz se často používá.  
+ Tato metoda nastaví sdílený `CMFCCmdUsageCount` třídy datových členů `m_nStartCount` a `m_nMinUsagePercentage` k *nStartCount* a *nMinUsagePercentage*, v uvedeném pořadí. `m_nStartCount` je používán [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) metoda k určení, zda tento objekt se budou shromažďovat data sledování minimální velikost. `m_nMinUsagePercentage` je používán [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) metoda k určení, zda daný příkaz se často používá.  
   
  V sestavení pro ladění tato metoda generuje chybu assertion, pokud `nMinUsagePercentage` parametr je větší než nebo roven 100.  
   

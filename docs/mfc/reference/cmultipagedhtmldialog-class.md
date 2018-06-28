@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373889"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038003"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog – třída
 Vícestránkové dialogové okno zobrazí více stránek HTML postupně a zpracovává události z každé stránce.  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Řetězce ukončené hodnotou null, která je název prostředku šablony – dialogové okno.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  Řetězce ukončené hodnotou null, která je název prostředek HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na nadřazené nebo vlastníka objektu okna (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje počet ID prostředku šablony – dialogové okno.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Obsahuje počet ID prostředek HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

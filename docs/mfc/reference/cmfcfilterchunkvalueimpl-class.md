@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376327"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040126"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl – třída
 Toto je třída, která zjednodušuje bloku i pro vlastnost hodnota pár logiku.  
@@ -166,7 +166,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStatChunk`  
+ *pStatChunk*  
  Ukazatel na hodnotu cílové popisující charakteristiky bloku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -182,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pValue`  
+ *pValue*  
  Určuje zdroj hodnotu pro kopírování z.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -243,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppPropVariant`  
+ *ppPropVariant*  
  Když funkce vrátí hodnotu, tento parametr obsahuje hodnotu bloku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud byl úspěšně přidělen PROPVARIANT a hodnota bloku byl úspěšně zkopírován do S_OK `ppPropVariant`jinak chybový kód.  
+ Pokud byl úspěšně přidělen PROPVARIANT a hodnota bloku byl úspěšně zkopírován do S_OK *ppPropVariant*jinak chybový kód.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -300,25 +300,25 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `bVal`  
+ *bVal*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -340,22 +340,22 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -378,25 +378,25 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `dwVal`  
+ *dwVal*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -419,25 +419,25 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `dtVal`  
+ *dtVal*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -460,25 +460,25 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `nVal`  
+ *nVal*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -501,25 +501,25 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `nVal`  
+ *nVal*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -542,25 +542,25 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `lVal`  
+ *lVal*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -583,25 +583,25 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `systemTime`  
+ *SYSTEMTIME –*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -624,25 +624,25 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pkey`  
+ *pkey*  
  Určuje klíč vlastnost.  
   
- `pszValue`  
+ *pszValue*  
  Určuje hodnotu bloku nastavit.  
   
- `chunkType`  
+ *chunkType*  
  Příznaky označuje, zda obsahuje tento blok typem text nebo typ hodnoty vlastnosti. Příznak hodnoty jsou převzaty z výčtu CHUNKSTATE.  
   
- `locale`  
+ *Národní prostředí*  
  Jazyk a související s poškozeným textu dílčího jazyka. Národní prostředí bloku je dokument indexery používané k provádění dělení textu správné slov. Pokud u bloku je typ text ani typu hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole je ignorováno.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  Délka ve znacích zdrojový text, ze kterého byl odvozené aktuální bloku. Nulová hodnota označuje znak po znaku propojeni zdrojový text a odvozené text. Nenulová hodnota znamená, že žádné přímé korespondence existuje.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  Posun, ze kterého zdrojový text pro odvozené bloku spustí v bloku dat zdroje.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Typ přerušení, která odděluje předchozí bloku od aktuální bloku. Hodnoty jsou CHUNK_BREAKTYPE výčtu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370119"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042492"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel – třída
 Implementuje nelze klepnout textový popisek pro pásu karet.  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Text se zobrazí v popisku.  
   
- [v] `bIsMultiLine`  
+ [v] *bIsMultiLine*  
  `TRUE` k určení, že je popisek popisek Víceřádkový; v opačném `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
  Představuje nadřazeného okna aktuální popisku pásu karet.  
   
- [out] `data`  
+ [out] *dat*  
  Objekt typu `CAccessibilityData` který naplněný daty usnadnění aktuální popisku pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud `data` parametr byl úspěšně vyplněná s daty usnadnění aktuální popisku pásu karet, jinak hodnota `FALSE`.  
+ `TRUE` Pokud *data* parametr byl úspěšně vyplněná s daty usnadnění aktuální popisku pásu karet, jinak hodnota `FALSE`.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

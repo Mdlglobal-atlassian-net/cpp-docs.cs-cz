@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375096"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041042"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog – třída
 Používá se pro dialogové okno OLE změnit ikonu.  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Odkazuje na položku, která má být převeden.  
   
- `dwFlags`  
+ *dwFlags*  
  Vytvoření příznak, který obsahuje libovolný počet následující hodnoty spojovat pomocí bitové hodnotě – operátor or:  
   
 - **CIF_SELECTCURRENT** Určuje, že aktuální přepínač vybere původně při volání dialogové okno. Toto nastavení je výchozí.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** Určuje, že na ikonu by měla být rozbalena z spustitelný soubor určený v **szIconExe** pole z [m_ci](#m_ci) místo načíst z typu. To je užitečné pro vložení nebo jiných než OLE souborů.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna bude nastavena pro hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Odkazuje na položku, jehož ikona se mění.  
   
 ### <a name="return-value"></a>Návratová hodnota  

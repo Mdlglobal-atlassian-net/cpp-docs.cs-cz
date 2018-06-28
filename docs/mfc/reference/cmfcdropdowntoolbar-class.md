@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369805"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042115"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar – třída
 Panel nástrojů, který se zobrazí, když uživatel stiskne a obsahuje tlačítka panelu nástrojů nejvyšší úrovně.  
@@ -133,22 +133,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiResID`  
+ [v] *uiResID*  
  ID prostředku bitové mapy, který odkazuje na jeho aktivní obrázků.  
   
- [v] `uiColdResID`  
+ [v] *uiColdResID*  
  ID prostředku bitové mapy, který odkazuje na jeho cold obrázků.  
   
- [v] `uiMenuResID`  
+ [v] *uiMenuResID*  
  ID prostředku bitové mapy, která odkazuje na Image regulární nabídky.  
   
- [v] `bLocked`  
+ [v] *blokován*  
  `TRUE` Zamknout panelu nástrojů; v opačném případě `FALSE`.  
   
- [v] `uiDisabledResID`  
+ [v] *uiDisabledResID*  
  ID prostředku bitové mapy, který odkazuje na jeho zakázané obrázků.  
   
- [v] `uiMenuDisabledResID`  
+ [v] *uiMenuDisabledResID*  
  ID prostředku bitové mapy, který odkazuje na Image zakázané nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiResID`  
- [v] `uiColdResID`  
- [v] `uiMenuResID`  
- [v] `BOOL`  
- [v] `uiDisabledResID`  
- [v] `uiMenuDisabledResID`  
- [v] `uiHotResID`  
+ [v] *uiResID*  
+ [v] *uiColdResID*  
+ [v] *uiMenuResID*  
+ [v] *BOOL*  
+ [v] *uiDisabledResID*  
+ [v] *uiMenuDisabledResID*  
+ [v] *uiHotResID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFlags`  
- [v] `point`  
+ [v] *nFlags*  
+ [v] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFlags`  
- [v] `point`  
+ [v] *nFlags*  
+ [v] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTarget`  
- [v] `bDisableIfNoHndler`  
+ [v] *pTarget*  
+ [v] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Poznámky  
   

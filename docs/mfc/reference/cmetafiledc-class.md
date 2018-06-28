@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368144"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039534"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC – třída
 Implementuje WMF, který obsahuje posloupnost grafiky zařízení rozhraní GDI příkazy, které můžete přehráním vytvořit požadovanou image nebo text.  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  Potom pošle `CMetaFileDC` objektu pořadí `CDC` GDI příkazy, které chcete pro něj opakování. Pouze GDI příkazy, které vytvoření výstupu, jako například `MoveTo` a `LineTo`, můžete použít.  
   
- Po odeslání požadované příkazy metafile volání **Zavřít** členská funkce, která zavře kontexty zařízení metafile a vrátí popisovač metafile. Pak odstranění `CMetaFileDC` objektu.  
+ Po odeslání požadované příkazy metafile volání `Close` členská funkce, která zavře kontexty zařízení metafile a vrátí popisovač metafile. Pak odstranění `CMetaFileDC` objektu.  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) lze následně použít popisovač metafile k opakované přehrávání metafile. Metafile můžete manipulovat rovněž prostřednictvím funkce systému Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), který zkopíruje metasoubory na disk.  
   
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDCRef`  
+ *pDCRef*  
  Odkaz na zařízení, které EMF identifikuje.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Odkazuje na řetězec znaků ukončený hodnotou null. Určuje název souboru pro EMF, který se má vytvořit. Pokud tento parametr je **NULL**, je EMF paměti na základě a její obsah ztráty při zničena objektu nebo při Win32 **DeleteEnhMetaFile** funkce je volána.  
   
- `lpBounds`  
+ *lpBounds*  
  Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura dat nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje dimenze v **HIMETRIC** jednotek (v přírůstcích po.01 milimetru) na obrázku má být uložen v EMF.  
   
- `lpszDescription`  
+ *lpszDescription*  
  Bodů na nule ukončena řetězec, který určuje název aplikace, která vytvořila na obrázku, stejně jako nadpis na obrázku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>Poznámky  
  Tento řadič domény můžete použít k uložení obrázku nezávislé na zařízení.  
   
- Odkaz na zařízení identifikovaný používá Windows `pDCRef` parametr k zaznamenání překlad IP adres a jednotky zařízení původně zobrazovaly obrázku. Pokud `pDCRef` parametr je **NULL**, používá aktuální zobrazovací zařízení pro referenci.  
+ Odkaz na zařízení identifikovaný používá Windows *pDCRef* parametr k zaznamenání překlad IP adres a jednotky zařízení původně zobrazovaly obrázku. Pokud *pDCRef* parametr je **NULL**, používá aktuální zobrazovací zařízení pro referenci.  
   
- Členové levého a horního `RECT` struktura dat na kterou odkazuje `lpBounds` parametr musí být menší než členy vpravo a dole v uvedeném pořadí. Body podél okrajů obdélníku, jsou součástí na obrázku. Pokud `lpBounds` je **NULL**, rozhraní zařízení grafiky (GDI) vypočítá dimenze nejmenší obdélníku, který může zahrnout obrázek vykreslovat aplikací. `lpBounds` By měl být zadán parametr, kde je to možné.  
+ Členové levého a horního `RECT` struktura dat na kterou odkazuje *lpBounds* parametr musí být menší než členy vpravo a dole v uvedeném pořadí. Body podél okrajů obdélníku, jsou součástí na obrázku. Pokud *lpBounds* je **NULL**, rozhraní zařízení grafiky (GDI) vypočítá dimenze nejmenší obdélníku, který může zahrnout obrázek vykreslovat aplikací. *LpBounds* by měl být zadán parametr, kde je to možné.  
   
- Řetězec na kterou odkazuje `lpszDescription` parametr musí obsahovat znak hodnoty null mezi název aplikace a název obrázku a musí být ukončen s dva znaky null – například "XYZ grafiky Editor\0Bald Eagle\0\0," kde \0 představuje hodnotu null znak. Pokud `lpszDescription` je **NULL**, neexistuje žádný odpovídající záznam v hlavičce enhanced metafile.  
+ Řetězec na kterou odkazuje *lpszDescription* parametr musí obsahovat znak hodnoty null mezi název aplikace a název obrázku a musí být ukončen s dva znaky null – například "XYZ grafiky Editor\0Bald Eagle\0\0, "kde \0 představuje znak hodnoty null. Pokud *lpszDescription* je **NULL**, neexistuje žádný odpovídající záznam v hlavičce enhanced metafile.  
   
  Aplikace používat k ukládání grafiky obrázek ve formátu EMF řadič domény vytvořené pomocí této funkce. Všechny funkce GDI lze předat popisovač identifikující tento řadič domény.  
   
- Po aplikace ukládá obrázek ve formátu EMF, ho můžete zobrazit na jakéhokoli výstupu zařízení voláním `CDC::PlayMetaFile` funkce. Při zobrazení na obrázku, systém Windows používá obdélníku, na kterou odkazuje `lpBounds` parametr a řešení data ze zařízení odkaz pozice a škálovat na obrázku. Kontext zařízení, vrátí tato funkce obsahuje stejnou výchozí atributy přidružené žádné nový řadič domény.  
+ Po aplikace ukládá obrázek ve formátu EMF, ho můžete zobrazit na jakéhokoli výstupu zařízení voláním `CDC::PlayMetaFile` funkce. Při zobrazení na obrázku, systém Windows používá obdélníku, na kterou odkazuje *lpBounds* parametr a řešení data ze zařízení odkaz pozice a škálovat na obrázku. Kontext zařízení, vrátí tato funkce obsahuje stejnou výchozí atributy přidružené žádné nový řadič domény.  
   
  Aplikace musí používat Win32 **GetWinMetaFileBits** funkce převést EMF starší formát WMF.  
   

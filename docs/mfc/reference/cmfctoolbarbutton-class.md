@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c0827bea8669743f8e0512ce2c6b1f82d978c46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c23c7b503610ef9ffea290bfb48c6e9a6e4d09
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378836"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042339"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton – třída
 Poskytuje funkce tlačítko na panely nástrojů.  
@@ -239,8 +239,8 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)|Voláno rámcem při vložení do nového panelu nástrojů na tlačítko.|  
 |[CMFCToolBarButton::OnClick](#onclick)|Voláno rámcem, když uživatel klikne na tlačítko myši.|  
 |[CMFCToolBarButton::OnClickUp](#onclickup)|Voláno rámcem, když uživatel uvolní tlačítko myši.|  
-|[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Voláno rámcem při zpracovává nadřazené nástrojů `WM_HELPHITTEST` zprávy.|  
-|[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Voláno rámcem při zpracovává nadřazené nástrojů `WM_CTLCOLOR` zprávy.|  
+|[CMFCToolBarButton::OnContextHelp](#oncontexthelp)|Voláno rámcem při panelu nástrojů nadřazené zpracovává zprávu WM_HELPHITTEST.|  
+|[CMFCToolBarButton::OnCtlColor](#onctlcolor)|Voláno rámcem při panelu nástrojů nadřazené zpracovává WM_CTLCOLOR – zpráva.|  
 |[CMFCToolBarButton::OnCustomizeMenu](#oncustomizemenu)|Umožňuje na tlačítko Upravit nabídce zadaná, pokud aplikace zobrazí na panelu nástrojů nadřazené místní nabídky.|  
 |[CMFCToolBarButton::OnDblClk](#ondblclk)|Voláno rámcem při zpracovává nadřazené nástrojů [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy.|  
 |[CMFCToolBarButton::OnDraw](#ondraw)|Voláno rámcem k vykreslení tlačítko pomocí zadané styly a možnosti.|  
@@ -289,7 +289,7 @@ class CMFCToolBarButton : public CObject
   
  `CMFCToolBarButton` objekty zobrazení obrázků z globální kolekce obrázků panelu nástrojů v aplikaci. Tyto kolekce se spravuje pomocí panelu nástrojů nadřazené [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md). Další informace najdete v tématu [CMFCToolBarImages třída](../../mfc/reference/cmfctoolbarimages-class.md).  
   
- Když uživatel klikne tlačítko panelu nástrojů, jeho nadřazený nástrojů zpracovává zprávy myši a komunikuje příslušné akce na tlačítko. Pokud tlačítko má platný příkaz ID, odešle nadřazené panelu nástrojů `WM_COMMAND` zprávu nadřazeného rámce.  
+ Když uživatel klikne tlačítko panelu nástrojů, jeho nadřazený nástrojů zpracovává zprávy myši a komunikuje příslušné akce na tlačítko. Pokud tlačítko má platný příkaz ID, panelu nástrojů nadřazené odešle zprávu wm_command – nadřazeného rámce.  
   
  `CMFCToolBarButton` Třída je základní třída pro jiné třídy tlačítka panelu nástrojů, jako například [CMFCToolBarMenuButton třída](../../mfc/reference/cmfctoolbarmenubutton-class.md), [CMFCToolBarEditBoxButton třída](../../mfc/reference/cmfctoolbareditboxbutton-class.md), a [ Třída CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
@@ -315,7 +315,7 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pToolbar`  
+ [v] *pToolbar*  
  Nepoužívá se.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -371,19 +371,19 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  ID příkazu tlačítka.  
   
- [v] `iImage`  
+ [v] *iImage*  
  Index obrázku tlačítka v kolekci imagí.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Textový popisek tlačítka. Může být `NULL`.  
   
- [v] `bUserButton`  
+ [v] *bUserButton*  
  Logická hodnota, která určuje, zda je tlačítko definovaný uživatelem. Pokud tento parametr je `TRUE`, tlačítko je definovaný uživatelem. Obrázek tlačítka, jinak hodnota je načten z prostředku.  
   
- [v] `bLocked`  
+ [v] *blokován*  
  Logická hodnota, která určuje, zda lze na tlačítko Přizpůsobit. Pokud tento parametr je `TRUE`, nelze na tlačítko Přizpůsobit. Tlačítko jinak, lze přizpůsobit.  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
@@ -394,7 +394,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `other`  
+ [v] *jiné*  
  Odkaz na objekt k porovnání s touto instancí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -411,7 +411,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
  Odkaz na tlačítko zdroj ze kterého chcete zkopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -425,7 +425,7 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDataObject`  
+ [v] *pDataObject*  
  Objekt zdrojových dat OLE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -442,7 +442,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Tento parametr nastavte na `TRUE` povolit vstup, nebo `FALSE` zakázat vstup.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -456,7 +456,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `menuButton`  
+ [v] *tlačítko nabídky*  
  Odkaz na tlačítko nabídky Cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -510,7 +510,7 @@ int GetImage() const;
  Index obrázku přidružený toto tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tlačítko má bitovou kopii uživatelem definované (tj. Pokud `bUserButton` byla `TRUE` v konstruktoru), vrácený index určuje obrázek, který v kolekci uživatelem definované bitových kopií (najdete v části [CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). Index, jinak hodnota určuje obrázek, který v kolekci imagí, které jsou načtené ze souboru prostředků (viz [CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)). Další informace o zdrojových souborech najdete v tématu [práce se zdrojovými soubory](../../windows/working-with-resource-files.md).  
+ Pokud tlačítko má bitovou kopii uživatelem definované (tj. Pokud *bUserButton* byla `TRUE` v konstruktoru), vrácený index určuje obrázek, který v kolekci uživatelem definované bitových kopií (najdete v části [CMFCToolBar:: GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). Index, jinak hodnota určuje obrázek, který v kolekci imagí, které jsou načtené ze souboru prostředků (viz [CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)). Další informace o zdrojových souborech najdete v tématu [práce se zdrojovými soubory](../../windows/working-with-resource-files.md).  
   
 ##  <a name="getinvalidaterect"></a>  CMFCToolBarButton::GetInvalidateRect  
  Načte oblast klientské oblasti tlačítka, které musí být překreslen.  
@@ -742,14 +742,14 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hwnd`  
+ [v] *hwnd*  
  Popisovač okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je tlačítko vlastníkem popisovač zadaný okna; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vrátí nenulové hodnoty, pokud `hwnd` odkazuje na popisovač přímé okna nebo je podřízená popisovač okna, který je přidružen tlačítko. Tato metoda vrátí hodnotu 0, pokud `hwnd` je `NULL`.  
+ Tato metoda vrátí nenulové hodnoty, pokud *hwnd* odkazuje na popisovač přímé okna nebo je podřízená popisovač okna, který je přidružen tlačítko. Tato metoda vrátí hodnotu 0, pokud *hwnd* je `NULL`.  
   
 ##  <a name="isvisible"></a>  CMFCToolBarButton::IsVisible  
  Určuje, zda je viditelná tlačítka panelu nástrojů.  
@@ -891,7 +891,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iNotifyCode`  
+ [v] *iNotifyCode*  
  Oznámení, které souvisí s příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -900,7 +900,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework volá tuto metodu, když je odeslání [wm_command –](http://msdn.microsoft.com/library/windows/desktop/ms647591) zpráva do nadřazeného okna.  
   
- Ve výchozím nastavení, tato metoda vrátí hodnotu `FALSE`. Potlačí tuto metodu vrátit `TRUE` Pokud chcete zpracovat `WM_COMMAND` zpráva nebo `FALSE` indikující, že zpráva by měla řídit tyto panelu nástrojů nadřazené.  
+ Ve výchozím nastavení, tato metoda vrátí hodnotu `FALSE`. Potlačí tuto metodu vrátit `TRUE` Pokud chcete zpracovat wm_command – zprávy nebo `FALSE` indikující, že zpráva by měla řídit tyto panelu nástrojů nadřazené.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarButton::OnAddToCustomizePage  
  Voláno rámcem při přidání tlačítka do **přizpůsobit** dialogové okno.  
@@ -935,7 +935,7 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTarget`  
+ [v] *pTarget*  
  Cíl operace přetažení myší.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -957,13 +957,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v] `sizeDefault`  
+ [v] *sizeDefault*  
  Výchozí velikost tlačítka.  
   
- [v] `bHorz`  
+ [v] *bHorz*  
  Stav ukotvení panelu nástrojů nadřazené. Tento parametr je `TRUE` Pokud panelu nástrojů ukotven vodorovně nebo je plovoucí, nebo `FALSE` Pokud panelu nástrojů ukotven svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -994,7 +994,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Nové nadřazené okno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1012,10 +1012,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Nadřazené okno tlačítka panelu nástrojů.  
   
- [v] `bDelay`  
+ [v] *bDelay*  
  `TRUE` Pokud zpráva má zacházet s zpožděním.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1042,14 +1042,14 @@ virtual BOOL OnClickUp();
  Výchozí implementace neprovede žádnou akci a vrátí `FALSE`. Potlačí tuto metodu vrátit nenulovou hodnotu, pokud zpracovává zprávy klikněte na tlačítko.  
   
 ##  <a name="oncontexthelp"></a>  CMFCToolBarButton::OnContextHelp  
- Voláno rámcem při zpracovává nadřazené nástrojů `WM_HELPHITTEST` zprávy.  
+ Voláno rámcem při panelu nástrojů nadřazené zpracovává zprávu WM_HELPHITTEST.  
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Nadřazené okno tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1058,7 +1058,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této metody neprovede žádnou akci a vrátí `FALSE`. Potlačí tuto metodu vrátit nenulovou hodnotu v případě na tlačítko Nápověda zprávu zpracuje.  
   
- Další informace o `WM_HELPHITTEST` zpráv najdete v tématu [TN028: podpora pomoci Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).  
+ Další informace o zprávě, WM_HELPHITTEST najdete v tématu [TN028: podpora pomoci Context-Sensitive](../../mfc/tn028-context-sensitive-help-support.md).  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor  
  Voláno rámcem při zpracovává nadřazené nástrojů `WM_CTLCOLOR` zprávy.  
@@ -1070,17 +1070,17 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v] `nCtlColor`  
+ [v] *nCtlColor*  
  Konkrétní barvu oznámení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Popisovač pro štětce objekt, který používá rozhraní k vyplnění pozadí tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework při zpracování nadřazené panelu nástrojů `WM_CTLCOLOR` zprávu pro tlačítka panelu nástrojů, který obsahuje ovládacího prvku Windows. Rozhraní framework tato metoda není volána, pokud je tlačítko panelu nástrojů bez oken.  
+ Tato metoda volá framework když panelu nástrojů nadřazené zpracovává WM_CTLCOLOR – zpráva pro tlačítka panelu nástrojů, který obsahuje ovládacího prvku Windows. Rozhraní framework tato metoda není volána, pokud je tlačítko panelu nástrojů bez oken.  
   
  Rozhraní framework volá tuto metodu, pokud rozhraní nástrojů je v režimu přizpůsobení a tlačítka panelu nástrojů se odemkne. Další informace o přizpůsobení režimu najdete v tématu [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode). Další informace o uzamčení tlačítka panelu nástrojů najdete v tématu [CMFCToolBarButton::IsLocked](#islocked).  
   
@@ -1094,7 +1094,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenu`  
+ [v] *pMenu*  
  V nabídce přizpůsobit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1111,7 +1111,7 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  -   Nadřazené okno tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1135,28 +1135,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník tlačítko.  
   
- [v] `pImages`  
+ [v] *pImages*  
  Kolekce obrázků panelu nástrojů, který je přidružen tlačítko.  
   
- [v] `bHorz`  
- Stav ukotvení panelu nástrojů nadřazené. Tento parametr je `TRUE` když tlačítko ukotveno vodorovně a `FALSE` když tlačítko ukotveno svisle.  
+ [v] * bHorz`  
+ The dock state of the parent toolbar. This parameter is `TRUE` when the button is docked horizontally and `FALSE, pokud je tlačítko svisle ukotven.  
   
- [v] `bCustomizeMode`  
+ [v] *bCustomizeMode*  
  Určuje, zda je panel nástrojů v režimu vlastní nastavení. Tento parametr je `TRUE` po panelu nástrojů v režimu přizpůsobení a `FALSE` při panelu nástrojů není v režimu vlastní nastavení.  
   
- [v] `bHighlight`  
+ [v] *bHighlight*  
  Určuje, zda je označený na tlačítko. Tento parametr je `TRUE` když je označený na tlačítko a `FALSE` při není zvýrazněná tlačítko.  
   
- [v] `bDrawBorder`  
+ [v] *bDrawBorder*  
  Určuje, zda má na tlačítko zobrazit jeho ohraničení. Tento parametr je `TRUE` při tlačítko by měl zobrazit jeho ohraničení a `FALSE` při nesmí na tlačítko zobrazit jeho ohraničení.  
   
- [v] `bGrayDisabledButtons`  
+ [v] *bGrayDisabledButtons*  
  Určuje, jestli stín zakázané tlačítka nebo použijte kolekci zakázané bitové kopie. Tento parametr je `TRUE` při by měla být zakázané tlačítka šedou barvou a `FALSE` když tato metoda by měla použít kolekci zakázané bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1173,13 +1173,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Kontext zařízení, který se zobrazí tlačítko.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník tlačítko.  
   
- [v] `bSelected`  
+ [v] *bSelected*  
  Určuje, zda je zaškrtnuto tlačítko. Pokud tento parametr je `TRUE`, výběru tlačítka. Pokud tento parametr je `FALSE`, tlačítko není vybraná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1200,7 +1200,7 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strToolTip`  
+ [out] *strToolTip*  
  A `CString` objekt, který přijme jeho vlastní text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1239,7 +1239,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Určuje, zda je tlačítko viditelná. Pokud tento parametr je `TRUE`, tlačítko je viditelné. Tlačítko, jinak hodnota není viditelný.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1253,7 +1253,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iSize`  
+ [v] *iSize*  
  Nové šířka tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1269,10 +1269,10 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
  Nadřazené okno tlačítka. Může být `NULL`.  
   
- [v] `pTI`  
+ [v] *pTI*  
  A `TOOLINFO` struktura, která obsahuje informace o nástroji v ovládacím prvku popisek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1299,16 +1299,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Nadřazené okno.  
   
- [v] `iButtonIndex`  
+ [v] *iButtonIndex*  
  Index založený na nule tlačítka v nadřazené tlačítko kolekce.  
   
- [v] `wndToolTip`  
+ [v] *wndToolTip*  
  Ovládací prvek, který zobrazí text popisku.  
   
- [out] `str`  
+ [out] *str*  
  A `CString` objekt, který přijme text aktualizované popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1325,7 +1325,7 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `srcItem`  
+ [v] *srcItem*  
  A `COleDataSource` objekt, který obsahuje informace o operaci přetažení myší stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1380,7 +1380,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ar`  
+ [v] *ar*  
  `CArchive` Objekt, ze které nebo která k serializaci.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1398,10 +1398,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
  Nadřazené okno tlačítka panelu nástrojů.  
   
- [v] `data`  
+ [v] *dat*  
  A `CAccessibilityData` objekt, který je naplněn data usnadnění tlačítka panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1418,7 +1418,7 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszName`  
+ [v] *lpszName*  
  Název nové volné globální paměti. Nemůže být `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1434,13 +1434,13 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iImage`  
+ [v] *iImage*  
  Index bitové kopie v kolekci obrázků panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je tlačítko panelu nástrojů oddělovač, `iImage` odkazuje na novou šířku tlačítko oddělovač.  
+ Pokud je tlačítko panelu nástrojů oddělovač, *iImage* odkazuje na novou šířku tlačítko oddělovač.  
   
- Pokud `iImage` je menší než nula, tato metoda zakáže kreslení obrázku a umožňuje kreslení textu popisku tlačítka.  
+ Pokud *iImage* je menší než nula, tato metoda zakáže kreslení obrázku a umožňuje kreslení textu popisku tlačítka.  
   
 ##  <a name="setprotectedcommands"></a>  CMFCToolBarButton::SetProtectedCommands  
  Nastaví seznam příkazů, které nelze přizpůsobit uživatele.  
@@ -1450,7 +1450,7 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lstCmds`  
+ [v] *lstCmds*  
  Seznam chráněných příkazů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1476,7 +1476,7 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Nové ohraničující obdélník tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1490,7 +1490,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nStyle`  
+ [v] *nStyle*  
  Nový styl tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1504,7 +1504,7 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Logická hodnota, která určuje, jestli se mají zobrazit či skrýt tlačítko. Pokud tento parametr je `TRUE`, se zobrazí tlačítko. Pokud je parametr `FALSE`, tlačítko skryt.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1518,11 +1518,11 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Logická hodnota, která určuje, jestli se mají zobrazit či skrýt tlačítko. Pokud tento parametr je `TRUE`, se zobrazí tlačítko. Pokud je parametr `FALSE`, tlačítko skryt.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto metodu za účelem aktualizace viditelnost tlačítek panelu nástrojů při změně velikosti jejich nadřazené panelu nástrojů. Tato metoda se volá framework `bShow` nastavena na `FALSE` při tlačítko již nové v rámci hranice panelu nástrojů. Tato metoda se volá framework `bShow` nastavena na `TRUE` při po změně velikosti na tlačítko znovu vešla hranice panelu nástrojů.  
+ Rozhraní framework volá tuto metodu za účelem aktualizace viditelnost tlačítek panelu nástrojů při změně velikosti jejich nadřazené panelu nástrojů. Tato metoda se volá framework *bShow* nastavena na `FALSE` při tlačítko již nové v rámci hranice panelu nástrojů. Tato metoda se volá framework *bShow* nastavena na `TRUE` při po změně velikosti na tlačítko znovu vešla hranice panelu nástrojů.  
   
  Použití [CMFCToolBarButton::SetVisible](#setvisible) metodu a nastavit viditelnost obecné tlačítko.  
   

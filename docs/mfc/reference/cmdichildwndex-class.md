@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377620"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041887"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
 `CMDIChildWndEx` Třída poskytuje funkci systému Windows více dokumentů (MDI) rozhraní podřízeného okna. Ji rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tato třída, pokud aplikace MDI používá některých tříd MFC.  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokně.  
   
- [v] `bTail`  
+ [v] *bTail*  
  `TRUE` Chcete-li přidat v podokně na konec seznamu podokna pro ukotvení správce; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokně.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hdwp`  
+ [v] *hdwp*  
  Popisovač strukturu pozice odložené okna.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokně.  
   
- [v] `nDockBarID`  
+ [v] *nDockBarID*  
  ID podokně.  
   
- [v] `lpRect`  
+ [v] *lprect –*  
  Ukazatel na obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
- `lpRect` Parametr se nepoužívá.  
+ *Lprect –* parametr se nepoužívá.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Ukotvené jeden podokně nalevo od jiného podokna.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Ukazatel na panel, který má být ukotven.  
   
- `pLeftOf`  
+ *pLeftOf*  
  Ukazatel na podokně, která slouží jako bod odkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` v případě úspěchu `FALSE` při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přebírá podokně určeného `pBar` a ukotvené v levé části podokna určeného `pLeftOf`.  
+ Tato metoda přebírá podokně určeného *pBar* a ukotvené v levé části podokna určeného *pLeftOf*.  
   
  Tuto metodu volejte, když chcete ukotvení několika podoken v předdefinované pořadí.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
  Určuje postranní okna hlavního rámce, který je povolený. Použijte jeden nebo více z následujících příznaků.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwDockStyle`  
+ [v] *dwDockStyle*  
  Určuje zarovnání ukotvení povolit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku v podokně k vyhledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokně Vložit.  
   
- [v] `pTarget`  
+ [v] *pTarget*  
  Ukazatel na sousedících podokně.  
   
- [v] `bAfter`  
- Pokud `TRUE`, `pControlBar` vkládají `pTarget`. Pokud `FALSE`, `pControlBar` je vložen před `pTarget`.  
+ [v] *bAfter*  
+ Pokud `TRUE`, *pControlBar* vkládají *pTarget*. Pokud `FALSE`, *pControlBar* je vložen před *pTarget*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud metoda bude úspěšná, `FALSE` jinak.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Zadaný bod.  
   
- [v] `dwBarAlignment`  
+ [v] *dwBarAlignment*  
  Určuje, které hraniční bod je téměř. Možné hodnoty jsou `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, a `CBRS_ALIGN_BOTTOM`  
   
- [v] `bOuterEdge`  
+ [v] *bOuterEdge*  
  `TRUE` Pokud je bod téměř vnější ohraničení ukotvení serveru. `FALSE` jinak.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pFrame`  
+ [v] *pFrame*  
  Ukazatel na zkrácená rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bPreview`  
+ [v] *bPreview*  
  Pokud `TRUE`, zadejte režim náhledu. Pokud `FALSE`, ukončit režim náhledu tisku.  
   
- [v] `pState`  
+ [v] *pState*  
  Ukazatel na strukturu stavu náhledu tisku.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAddToTitle`  
+ [v] *bAddToTitle*  
  Pokud `TRUE`, přidejte název dokumentu na název.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Určuje bod, v souřadnice obrazovky ke kontrole.  
   
- [v] `nSensitivity`  
+ [v] *nSensitivity*  
  Toto množství zvýšit oblasti hledání. Podokno splňuje kritéria hledání, pokud danému bodu spadá do oblasti vyšší.  
   
- [v] `bExactBar`  
- `TRUE` Ignorovat `nSensitivity` parametr, jinak hodnota `FALSE`.  
+ [v] *bExactBar*  
+ `TRUE` Ignorovat *nSensitivity* parametr, jinak hodnota `FALSE`.  
   
- [v] `pRTCBarType`  
+ [v] *pRTCBarType*  
  Není-li `NULL`, tato metoda vyhledá pouze podokna zadaného typu.  
   
- [v] `dwAlignment`  
+ [v] *dwAlignment*  
  Pokud podokno se nachází zde zadaný bod, tento parametr obsahuje na straně panelu, který je nejblíže k Zadaný bod. Další informace najdete v části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze zjistit, zda podokno obsahuje zadaný bod podle k zadaným podmínkám, jako je například třída runtime a viditelnosti.  
   
- Když funkce vrátí hodnotu a byla nalezena podokno, `dwAlignment` obsahuje zarovnání Zadaný bod. Například, pokud byl bod nejblíže k horní části podokna `dwAlignment` je nastaven na `CBRS_ALIGN_TOP`.  
+ Když funkce vrátí hodnotu a byla nalezena podokno, *dwAlignment* obsahuje zarovnání Zadaný bod. Například, pokud byl bod nejblíže k horní části podokna *dwAlignment* je nastaven na `CBRS_ALIGN_TOP`.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Přepočítá rozložení okna.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bNotify`  
+ [v] *bNotify*  
  Pokud `TRUE`, aktivní položky na místě pro okno obdrží upozornění na změnu rozložení.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
+ [v] *pControlBar*  
  Ukazatel na podokno odebrat.  
   
- [v] `bDestroy`  
+ [v] *bDestroy*  
  Pokud `TRUE`, odebrané podokně zničena.  
   
- [v] `bAdjustLayout`  
+ [v] *bAdjustLayout*  
  Pokud `TRUE`, upravte ukotvení rozložení okamžitě.  
   
- [v] `bAutoHide`  
+ [v] *bAutoHide*  
  Pokud `TRUE`, ukotvení rozložení se vztahuje k seznamu autohide – řádky. Pokud `FALSE`, ukotvení rozložení se vztahuje k seznamu regulární podokna.  
   
- [v] `pBarReplacement`  
+ [v] *pBarReplacement*  
  Ukazatel na podokně, který nahrazuje podokně odebrané.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `p`  
+ [v] *p*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
- [v] `bShow`  
- [v] `bDelay`  
- [v] `bActivate`  
+ [v] *pBar*  
+ [v] *bShow*  
+ [v] *bDelay*  
+ [v] *bActivate*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hIcon`  
+ *hIcon*  
  Popisovač pro ikonu, která se zobrazí na kartě hlavního panelu Windows 7.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  Určuje, zda tato funkce musí zkontrolovat počet podřízených prvků MDI zaregistrována MDI karty. Pokud toto číslo 0, tato funkce odebere rámeček výstřižek z miniaturu panelu aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Určuje nové výstřižek rámeček. Pokud rámeček je prázdná nebo null, odeberou se výstřižek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Kombinace hodnot STPFLAG. Další informace najdete v tématu [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBefore`  
+ *pWndBefore*  
  Ukazatel na podřízeného okna MDI, jejichž miniaturu je vložit do levé straně. Toto okno musí být zaregistrována pomocí `RegisterTaskbarTab`. Pokud je tato hodnota `NULL`, nové miniaturu se přidá na konec seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBefore`  
+ *pWndBefore*  
  Ukazatel na podřízeného okna MDI, jejichž miniaturu je vložit do levé straně. Toto okno musí být zaregistrována pomocí `RegisterTaskbarTab`. Pokud je tato hodnota `NULL`, nové miniaturu se přidá na konec seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hBmpDst`  
+ *hBmpDst*  
  Popisovač pro rastrový obrázek cílový.  
   
- `rectDst`  
+ *rectDst*  
  Určuje cílový rámeček.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  Popisovač pro rastrový obrázek zdroje.  
   
- `rectSrc`  
+ *rectSrc*  
  Určuje zdroj rámeček.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  Určuje ukazatel na nejvyšší úrovně nadřazeného okna okna aktivace probíhá. Ukazatele může být v dočasné a by neměly být uloženy.  
   
- `nHitTest`  
+ *nHitTest*  
  Určuje kód oblasti vstupů do testu. Testu přístupů je test, který určuje umístění kurzoru.  
   
- `message`  
+ *message*  
  Určuje číslo zprávy myši.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nState`  
+ *nInformace*  
  Určuje, zda `CWnd` je Probíhá aktivace nebo deaktivace.  
   
- `pWndOther`  
+ *pWndOther*  
  Ukazatel `CWnd` Probíhá aktivace nebo deaktivace. Může být ukazatele `NULL`, a může být dočasné.  
   
- `bMinimized`  
+ *bMinimized*  
  Určuje minimalizovaném okně Stav `CWnd` Probíhá aktivace nebo deaktivace. Hodnota `TRUE` označuje je minimalizován okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWindth*  
  Určuje šířku požadované rastrového obrázku.  
   
- `nHeight`  
+ *nHeight*  
  Určuje výšku požadované rastrového obrázku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  Tento parametr je `TRUE` Pokud se pro podřízeného MDI požaduje bitovou mapu, která je aktuálně aktivní a hlavní okno není minimalizovaná. Výchozí zpracování v tomto případě pořídí snímek hlavního okna.  
   
- `ptLocation`  
+ *ptLocation*  
  Určuje umístění bitmapy v hlavní (nejvyšší úrovně) souřadnice klienta okno. Tento bod by měl být poskytovaný volaného.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, jestli se má povolit ( `TRUE`), nebo zakázat ( `FALSE`) automatický výběr část časového období klientské oblasti pro zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  

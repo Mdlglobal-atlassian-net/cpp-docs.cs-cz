@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86250968fa8f6dfd9cb1a3b9a790549f70baa569
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375843"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039106"
 ---
 # <a name="cimagelist-class"></a>CImageList – třída
 Poskytuje funkci Windows ovládací prvek běžné seznamu obrázků.  
@@ -189,16 +189,16 @@ int Add(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pbmImage`  
+ *pbmImage*  
  Ukazatel na rastrový obrázek obsahující bitové kopie nebo bitové kopie. Počet bitových kopií je odvozeno z šířka rastrového obrázku.  
   
- `pbmMask`  
+ *pbmMask*  
  Ukazatel na rastrový obrázek s maskou. Pokud žádné maska používá s seznamu obrázků, tento parametr je ignorován.  
   
- `crMask`  
+ *crMask*  
  Barva použitá ke generování maska. Každý pixel tato barva v dané rastrového obrázku se změní na černé a příslušné bity maska nastaven na jednu.  
   
- `hIcon`  
+ *hIcon*  
  Popisovač ikonu, která obsahuje rastrového obrázku a maska pro novou bitovou kopii.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -218,7 +218,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hImageList`  
+ *hImageList*  
  Popisovač pro objekt seznamu bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -237,10 +237,10 @@ BOOL BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie a přetáhněte nule.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Souřadnice přetáhněte pozice (obvykle pozice kurzoru). Souřadnice jsou relativní vzhledem k levém horním rohu bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -280,10 +280,10 @@ BOOL Copy(
  *iDst*  
  Index založený na nule bitové kopie, který se má použít jako cíl operace kopírování.  
   
- `iSrc`  
+ *Kód*  
  Index založený na nule bitové kopie má být použit jako zdroj kopírování.  
   
- `uFlags`  
+ *uFlags*  
  Bitová hodnota příznak, který určuje typ operace kopírování má být provedeno. Tento parametr může být jedna z následujících hodnot:  
   
 |Hodnota|Význam|  
@@ -291,7 +291,7 @@ BOOL Copy(
 |`ILCF_MOVE`|Zdrojová bitová kopie se zkopíruje na cílový obrázek indexu. Tato operace má za následek více instancí danou bitovou kopii. `ILCF_MOVE` je výchozí.|  
 |`ILCF_SWAP`|Bitové kopie zdrojové a cílové exchange pozice v seznamu obrázků.|  
   
- `pSrc`  
+ *pSrc*  
  Ukazatel na `CImageList` objekt, který je cílem operace kopírování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -338,13 +338,13 @@ BOOL Create(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Dimenze každý obrázku v pixelech.  
   
- `cy`  
+ *CY*  
  Dimenze každý obrázku v pixelech.  
   
- `nFlags`  
+ *nFlags*  
  Určuje typ seznamu obrázků k vytvoření. Tento parametr může být kombinací těchto hodnot, ale může obsahovat pouze jeden z `ILC_COLOR` hodnoty.  
   
 |Hodnota|Význam|  
@@ -358,40 +358,40 @@ BOOL Create(CImageList* pImageList);
 |`ILC_COLORDDB`|Použijte bitovou mapu závislé na zařízení.|  
 |`ILC_MASK`|Používá masku. Seznam obrázků obsahuje dvě bitové mapy, z nichž jeden je Černobílý rastr použít jako masku. Pokud tuto hodnotu nezadáte, seznamu obrázků obsahuje pouze jeden rastrového obrázku. V tématu [vykreslování obrázků ze seznamu obrázků](../../mfc/drawing-images-from-an-image-list.md) Další informace o maskované bitové kopie.|  
   
- `nInitial`  
+ *nInitial*  
  Počet bitové kopie, které původně obsahuje seznamu obrázků.  
   
- `nGrow`  
+ *nGrow*  
  Počet obrázků, které můžou růst seznamu obrázků, když je potřeba změnit velikost seznamu, aby uvolnil prostor pro nové bitové kopie systému. Tento parametr představuje počet nových bitových kopií, které může obsahovat seznam změněnou obrázků.  
   
- `nBitmapID`  
+ *nBitmapID*  
  ID prostředků bitmapy přidruženou seznamu obrázků.  
   
- `crMask`  
+ *crMask*  
  Barva použitá ke generování masku. Každý pixel tato barva v zadaný rastrový obrázek se změní na černé a příslušné bity maska nastaven na jednu.  
   
- `lpszBitmapID`  
+ *lpszBitmapID*  
  Řetězec obsahující ID obrazů prostředků.  
   
- `imagelist1`  
+ *imagelist1*  
  Odkaz na `CImageList` objektu.  
   
- `nImage1`  
+ *nImage1*  
  Index prvního existující bitová kopie.  
   
- `imagelist2`  
+ *imagelist2*  
  Odkaz na `CImageList` objektu.  
   
- `nImage2`  
+ *nImage2*  
  Index druhý existující bitová kopie.  
   
- `dx`  
+ *DirectX*  
  Posun osy x druhý bitové kopie ve vztahu k první obrázku v pixelech.  
   
- `dy`  
+ *dy*  
  Posun osy y druhý bitové kopie ve vztahu k první obrázku v pixelech.  
   
- `pImageList`  
+ *pImageList*  
  Ukazatel na `CImageList` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -443,7 +443,7 @@ HIMAGELIST Detach();
   Podívejte se na příklad pro [CImageList::Attach](#attach).  
   
 ##  <a name="dragenter"></a>  CImageList::DragEnter  
- Během operace přetažení, zamkne aktualizace do okna určeného `pWndLock` a zobrazí obrázek přetáhněte na pozici určeného `point`.  
+ Během operace přetažení, zamkne aktualizace do okna určeného *pWndLock* a zobrazí obrázek přetáhněte na pozici určeného *bodu*.  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -452,10 +452,10 @@ static BOOL PASCAL DragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndLock`  
+ *pWndLock*  
  Ukazatel na okno vlastní obrázek přetažení.  
   
- `point`  
+ *Bod*  
  Pozice, kdy má být umožňuje zobrazit obrázek přetažení. Souřadnice jsou relativní vzhledem k levém horním rohu okna (ne klientské oblasti).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -464,7 +464,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="remarks"></a>Poznámky  
  Souřadnice jsou relativní vzhledem k okně na levém horním rohu, takže šířek okno prvky, jako jsou například ohraničení, záhlaví a řádku nabídek musí kompenzovat při zadávání souřadnice.  
   
- Pokud `pWndLock` je **NULL**, tato funkce nakreslí obrázek v kontextu zobrazení související s okně plochy a souřadnice jsou relativní vzhledem k levém horním rohu obrazovky.  
+ Pokud *pWndLock* je **NULL**, tato funkce nakreslí obrázek v kontextu zobrazení související s okně plochy a souřadnice jsou relativní vzhledem k levém horním rohu obrazovky.  
   
  Tato funkce zamkne všechny další aktualizace do daného okna během operace přetažení. Pokud je potřeba udělat všechny kreslení během operace přetažení, jako je například zvýraznění cíl operace přetahování myší, dočasně můžete skrýt taženou bitové kopie, pomocí [CImageList::DragLeave](#dragleave) funkce.  
   
@@ -472,14 +472,14 @@ static BOOL PASCAL DragEnter(
   Podívejte se na příklad pro [CImageList::BeginDrag](#begindrag).  
   
 ##  <a name="dragleave"></a>  CImageList::DragLeave  
- Odemkne okna určeného `pWndLock` a skryje obrázek přetažení, povolení okno na aktualizovat.  
+ Odemkne okna určeného *pWndLock* a skryje obrázek přetažení, povolení okno na aktualizovat.  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndLock`  
+ *pWndLock*  
  Ukazatel na okno vlastní obrázek přetažení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -496,7 +496,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Nové přetáhněte pozici.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -516,7 +516,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bShow`  
+ *bShow*  
  Určuje, jestli přetažení obrázku je zobrazený.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -537,23 +537,23 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext cílové zařízení.  
   
- `nImage`  
+ *nImage*  
  Index bitové kopie k vykreslení nule.  
   
- `pt`  
+ *PT*  
  Umístění, kam chcete kreslení v rámci zadaného zařízení.  
   
- `nStyle`  
+ *nStyle*  
  Příznak určující styl vykreslování. Může být jeden nebo více z těchto hodnot:  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
 |`ILD_BLEND25`, **ILD_FOCUS**|Nakreslí obrázek, prolnutí 25 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznamu obrázků neobsahuje masku.|  
 |`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Nakreslí obrázek, prolnutí 50 procent barvou zvýraznění systému. Tato hodnota nemá žádný vliv, pokud seznamu obrázků neobsahuje masku.|  
-|**ILD_MASK**|Nakreslí maska.|  
+|`ILD_MASK`|Nakreslí maska.|  
 |`ILD_NORMAL`|Nakreslí obrázek pomocí barvu pozadí pro seznamu obrázků. Pokud je barva pozadí `CLR_NONE` hodnotu, bitovou kopii je vykresleno transparentně pomocí masky.|  
 |`ILD_TRANSPARENT`|Nakreslí obrázek transparentně pomocí maska, bez ohledu na barvu pozadí.|  
   
@@ -578,17 +578,17 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext cílové zařízení.  
   
- `nImage`  
+ *nImage*  
  Index bitové kopie k vykreslení nule.  
   
- `pt`  
+ *PT*  
  Umístění, kam chcete kreslení v rámci zadaného zařízení.  
   
- `sz`  
- Velikost část bitovou kopii k vykreslení relativně k levém horním rohu bitové kopie. V tématu `dx` a *dy* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) ve Windows SDK.  
+ *sz*  
+ Velikost část bitovou kopii k vykreslení relativně k levém horním rohu bitové kopie. V tématu *DirectX* a *dy* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) ve Windows SDK.  
   
  *clrBk*  
  Barva pozadí bitovou kopii. V tématu *rgbBk* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) ve Windows SDK.  
@@ -596,7 +596,7 @@ BOOL DrawEx(
  *clrFg*  
  Barvu popředí bitové kopie. V tématu *rgbFg* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) ve Windows SDK.  
   
- `nStyle`  
+ *nStyle*  
  Příznak určující styl vykreslování. V tématu *fStyle* v [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -634,30 +634,30 @@ BOOL DrawIndirect(
  *pimldp*  
  Ukazatel na [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktura, která obsahuje informace o operaci kreslení.  
   
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext cílové zařízení. To je nutné odstranit [CDC](../../mfc/reference/cdc-class.md) objektu až skončíte s ním.  
   
- `nImage`  
+ *nImage*  
  Index založený na nule bitové kopie, které se mají vykreslovat.  
   
- `pt`  
+ *PT*  
  A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura obsahující souřadnic x a y-místo, kde bude vykreslovat bitovou kopii.  
   
- `sz`  
+ *sz*  
  A [velikost](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která určuje velikost bitové kopie, které se mají vykreslovat.  
   
  *ptOrigin*  
  A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura obsahující souřadnic x a y-zadání levém horním rohu kreslení operace s ohledem na bitovou kopii sám sebe. Nejsou vykresluje pixelů bitové kopie, které jsou vlevo souřadnice x a výše souřadnici y.  
   
- `fStyle`  
+ *fStyle*  
  Příznak určující styl vykreslování a volitelně bitovou kopii překrytí. Najdete v části poznámky informace na bitovou kopii překrytí. Výchozí implementace MFC `ILD_NORMAL`, nakreslí obrázek pomocí barvu pozadí pro seznamu obrázků. Pokud je barva pozadí `CLR_NONE` hodnotu, bitovou kopii je vykresleno transparentně pomocí masky.  
   
- Další možné styly jsou popsané v části **fStyle** členem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
+ Další možné styly jsou popsané v části *fStyle* členem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
   
  *dwRop*  
- Hodnota, která určuje kód rastrové operace. Tyto kódy definovat, jak data barvu pro rámeček zdroj bude sloučen s barva data pro cílové rámeček k dosažení konečného barvu. MFC pro výchozí implementace, **SRCCOPY**, zkopíruje rámeček zdroj přímo do cílového rámeček. Tento parametr je ignorována, pokud `fStyle` parametr nezahrnuje **ILD_ROP** příznak.  
+ Hodnota, která určuje kód rastrové operace. Tyto kódy definovat, jak data barvu pro rámeček zdroj bude sloučen s barva data pro cílové rámeček k dosažení konečného barvu. MFC pro výchozí implementace, **SRCCOPY**, zkopíruje rámeček zdroj přímo do cílového rámeček. Tento parametr je ignorována, pokud *fStyle* parametr nezahrnuje **ILD_ROP** příznak.  
   
- Další možné hodnoty jsou popsané v části **dwRop** členem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
+ Další možné hodnoty jsou popsané v části *dwRop* členem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
   
  *rgbBack*  
  Barva pozadí obrázku, ve výchozím nastavení `CLR_DEFAULT`. Tento parametr může být hodnotu RGB definované aplikací nebo jeden z následujících hodnot:  
@@ -675,7 +675,7 @@ BOOL DrawIndirect(
 |`CLR_DEFAULT`|Výchozí barvu popředí. Obrázek je vykreslovány pomocí Barva zvýraznění systému jako barvu popředí.|  
 |`CLR_NONE`|Barva žádné blend. Obrázek je smíšení barvou kontextu cílové zařízení.|  
   
- Tento parametr se používá pouze v případě `fStyle` zahrnuje `ILD_BLEND25` nebo `ILD_BLEND50` příznak.  
+ Tento parametr se používá pouze v případě *fStyle* zahrnuje `ILD_BLEND25` nebo `ILD_BLEND50` příznak.  
   
  *fState*  
  Příznak určující kreslení stavu. Tento člen může obsahovat jeden nebo více příznaků stavu seznamu bitové kopie.  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Poznámky  
  Pokud chcete k vyplnění strukturu Win32 sami, použijte první verzi. Druhá verze použijte, pokud chcete využít výhod jeden nebo více argumentů výchozí knihovny MFC nebo zabránění jejímu provedení Správa strukturu.  
   
- Překrytí obrázek je obrázek, který je vykreslen nad primární bitovou kopii, zadaný ve funkci tento člen ve `nImage` parametr. Kreslení pomocí masky překrytí [kreslení](#draw) – členská funkce s index na základě jedné zadaná pomocí maska překrytí [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) – makro.  
+ Překrytí obrázek je obrázek, který je vykreslen nad primární bitovou kopii, zadaný ve funkci tento člen ve *nImage* parametr. Kreslení pomocí masky překrytí [kreslení](#draw) – členská funkce s index na základě jedné zadaná pomocí maska překrytí [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) – makro.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -722,7 +722,7 @@ HICON ExtractIcon(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -742,7 +742,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hImageList`  
+ *hImageList*  
  Určuje seznam obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -762,7 +762,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hImageList`  
+ *hImageList*  
  Určuje seznam obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -797,7 +797,7 @@ static CImageList* PASCAL GetDragImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoint`  
+ *lppoint –*  
  Adresa [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) přetáhněte struktura, která přijímá aktuální pozici.  
   
  *lpPointHotSpot*  
@@ -829,7 +829,7 @@ BOOL GetImageInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie nule.  
   
  *pImageInfo*  
@@ -889,7 +889,7 @@ BOOL Read(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pArchive`  
+ *pArchive*  
  Ukazatel na `CArchive` objekt, ze kterého má být čtení seznamu obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -906,14 +906,14 @@ BOOL Remove(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie k odebrání nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny položky následující `nImage` nyní přesunout o jednu pozici dolů. Například pokud seznamu obrázků obsahuje dvě položky, odstranění první položka způsobí, že zbývající položka, která má být nyní v první pozici. `nImage`= 0 pro položky v první pozici.  
+ Všechny položky následující *nImage* nyní přesunout o jednu pozici dolů. Například pokud seznamu obrázků obsahuje dvě položky, odstranění první položka způsobí, že zbývající položka, která má být nyní v první pozici. *nImage*= 0 pro položky v první pozici.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
@@ -934,22 +934,22 @@ int Replace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie a nahraďte nule.  
   
- `pbmImage`  
+ *pbmImage*  
  Ukazatel na rastrový obrázek, který obsahuje bitovou kopii.  
   
- `pbmMask`  
+ *pbmMask*  
  Ukazatel na rastrový obrázek s maskou. Pokud žádné maska používá s seznamu obrázků, tento parametr je ignorován.  
   
- `hIcon`  
+ *hIcon*  
  Popisovač pro ikonu, která obsahuje rastrového obrázku a maska pro novou bitovou kopii.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrácení verze **BOOL** vrátí nenulové hodnoty, pokud úspěšná, jinak hodnota 0.  
   
- Vrácení verze `int` vrátí index o základu 0 bitové kopie, pokud úspěšná, jinak hodnota - 1.  
+ Vrácení verze **int** vrátí index o základu 0 bitové kopie, pokud úspěšná, jinak hodnota - 1.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání této funkce člen po volání [SetImageCount](#setimagecount) přiřadit nový, platný bitové kopie na zástupný symbol obrázku čísla indexů.  
@@ -965,7 +965,7 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *znaky CR*  
  Barva pozadí nastavit. Může být `CLR_NONE`. V takovém případě bitové kopie jsou vykreslovány transparentně pomocí masky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -987,7 +987,7 @@ BOOL SetDragCursorImage(
  *nDrag*  
  Index novou bitovou kopii a nelze jej zkombinovat s bitovou kopií přetažení.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Pozice aktivního bodu v rámci novou bitovou kopii.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1028,7 +1028,7 @@ BOOL SetOverlayImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie a použít jako masku překrytí nule.  
   
  *nOverlay*  
@@ -1053,7 +1053,7 @@ BOOL Write(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pArchive`  
+ *pArchive*  
  Ukazatel na `CArchive` objektu, ve kterém má být uložena seznamu obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  

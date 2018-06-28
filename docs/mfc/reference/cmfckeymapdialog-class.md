@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369031"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037285"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog – třída
 `CMFCKeyMapDialog` Třída podporuje ovládací prvek, který mapuje příkazy kláves na klávesnici.  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParentFrame`  
+ [v] *pWndParentFrame*  
  Ukazatel na okno nadřazené `CMFCKeyMapDialog` objektu.  
   
- [v] `bEnablePrint`  
+ [v] *bEnablePrint*  
  `TRUE` Pokud je seznam klávesy akcelerátoru můžete vytisknout; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nItem`  
+ [v] *nItem*  
  Index založený na nule položky v seznamu interní klíče mapování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  ID příkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na tlačítka panelu nástrojů, který se používá k mapování kombinaci kláves klávesnice na příkaz název a popis. Položka klíče mapy je uložena v ovládacím prvku vnitřní seznam.  
   
- [v] `nItem`  
+ [v] *nItem*  
  Index počítaný od nuly, který určuje, kam chcete vložit novou položku klíče mapy v ovládacím prvku vnitřní seznam.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dc`  
+ [v] *řadiče domény*  
  Kontext zařízení pro tiskárny.  
   
- [v] `nPage`  
+ [v] *nPage*  
  Číslo stránky k vytištění.  
   
- [v] `cx`  
+ [v] *cx*  
  Vodorovný posun záhlaví má v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dc`  
+ [v] *řadiče domény*  
  Kontext zařízení tiskárny.  
   
- [v] `nItem`  
+ [v] *nItem*  
  Index založený na nule položky k vytištění.  
   
- [v] `y`  
+ [v] *y*  
  Svislý posun od pozice položky horní části stránky.  
   
- [v] `cx`  
+ [v] *cx*  
  Vodorovný posun mezi levé části stránky a umístění položky.  
   
- [v] `bCalcHeight`  
+ [v] *bCalcHeight*  
  `TRUE` Chcete-li vypočítat nejlepší výšku pro položku tiskové; `FALSE` zkrátit tiskové položky tak, aby odpovídal výchozí místo.  
   
 ### <a name="return-value"></a>Návratová hodnota  

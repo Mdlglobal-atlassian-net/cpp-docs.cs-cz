@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372953"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042066"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl – třída
 Na základě implementace rozšířených popisek [CToolTipCtrl – třída](../../mfc/reference/ctooltipctrl-class.md). Na základě popisek `CMFCToolTipCtrl` třída může zobrazit ikony, popisek a popis. Pomocí přechodu výplně, vlastní text a barvy ohraničení, tučně, zaoblenými hranami nebo bublinách styl můžete přizpůsobit její vzhled.  
@@ -169,7 +169,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParams`  
+ [v] *pParams*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -204,13 +204,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- `[in] rect`  
+ [v] *Rect –*  
  Ohraničující obdélník popisek.  
   
- `[in] clrLine`  
+ [v] *clrLine*  
  Barva ohraničení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -227,9 +227,9 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bCalcOnly`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bCalcOnly*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -245,10 +245,10 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectImage`  
+ [v] *rectImage*  
  Souřadnice ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -268,13 +268,13 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- `[in] rect`  
+ [v] *Rect –*  
  Ohraničující obdélník popisek oblasti.  
   
- `[in] bCalcOnly`  
+ [v] *bCalcOnly*  
  Pokud `TRUE`, nebude vykreslovat popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -295,16 +295,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `x1`  
+ [v] *x1*  
  Vodorovné souřadnice levého konce oddělovače.  
   
- [v] `x2`  
+ [v] *x2*  
  Vodorovné souřadnice pravého konce oddělovače.  
   
- [v] `Y`  
+ [v] *Y*  
  Svislé souřadnice oddělovače.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -324,20 +324,20 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- `[in] rect`  
+ [v] *Rect –*  
  Určuje ohraničující obdélník oblasti k vyplnění.  
   
- `[in] clrText`  
+ [v] *clrText*  
  Popisek barvu popředí.  
   
- `[in] clrLine`  
+ [v] *clrLine*  
  Barva ohraničení a řádek oddělovač mezi popisek a popis.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace doplní obdélníku, která je zadána `rect` s barvu nebo vzorek určeného nejnovější volání [CMFCToolTipCtrl::SetParams](#setparams).  
+ Výchozí implementace doplní obdélníku, která je zadána *Rect –* s barvu nebo vzorek určeného nejnovější volání [CMFCToolTipCtrl::SetParams](#setparams).  
   
  Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled popisek.  
   
@@ -349,7 +349,7 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] strDesrciption`  
+ [v] *strDesrciption*  
  Text popisu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nWidthRegular`  
- [v] `nWidthLargeImage`  
+ [v] *nWidthRegular*  
+ [v] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -378,7 +378,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRibbonButton`  
+ [v] *pRibbonButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -390,7 +390,7 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pt`  
+ [v] *pt*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -402,11 +402,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] pParams`  
+ [v] *pParams*  
  Ukazatel na [CMFCToolTipInfo třída](../../mfc/reference/cmfctooltipinfo-class.md) objekt, který obsahuje parametry zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
- Vždy, když se zobrazí popisek, kreslení pomocí barvy a styly visual, který `pParams` určuje. Hodnota `pParams` je uložen v chráněného člena `m_Params`, který je přístupný pomocí odvozené třídy, který přepíše [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl::OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), nebo [CMFCToolTipCtrl::OnFillBackground](#onfillbackground) k údržbě Zadaný vzhled.  
+ Vždy, když se zobrazí popisek, kreslení pomocí barvy a styly visual, který *pParams* určuje. Hodnota *pParams* je uložen v chráněného člena `m_Params`, který je přístupný pomocí odvozené třídy, který přepíše [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), nebo [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)udržovat zadaný vzhled.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

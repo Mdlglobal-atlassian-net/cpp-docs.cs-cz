@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5640f634276f87d0a41633354a7dde0ed65a2940
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 935728856a00a27afa1f386f493832ddb955538b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372492"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040997"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar – třída
 Podokno s kartami s vzhled **navigačním podokně** v aplikaci Microsoft Outlook 2000 nebo 2003 aplikace Outlook. `CMFCOutlookBar` Objekt obsahuje [CMFCOutlookBarTabCtrl třída](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objekt a řadu karty. Karty může být buď [CMFCOutlookBarPane třída](../../mfc/reference/cmfcoutlookbarpane-class.md) objekty nebo `CWnd`-odvozené objekty. Pro uživatele se zobrazí na panelu aplikace Outlook jako řadu tlačítek a zobrazení oblasti. Když uživatel klikne na tlačítko, se zobrazí tlačítko podokna nebo odpovídající ovládacího prvku.  
@@ -111,7 +111,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  Při zpracování `WM_CREATE` zprávy v hlavního rámce, volání [CMFCOutlookBar::Create](#create) metodu pro vytvoření aplikace Outlook panelu Ovládací prvek karty.  
+2.  Při zpracování zprávy WM_CREATE v hlavního rámce, volání [CMFCOutlookBar::Create](#create) metodu pro vytvoření aplikace Outlook panelu Ovládací prvek karty.  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -147,7 +147,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  Volání [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) přidat každou novou kartu. Nastavte `bDetachable` parametru `FALSE` aby bez odpojitelných stránky. Nebo použijte [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) přidat odpojitelných stránky.  
+5.  Volání [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) přidat každou novou kartu. Nastavte *bDetachable* parametru `FALSE` aby bez odpojitelných stránky. Nebo použijte [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) přidat odpojitelných stránky.  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
@@ -207,7 +207,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na další podokno, které ukotven na tomto podokně.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -216,7 +216,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="remarks"></a>Poznámky  
  Pokud na panelu aplikace Outlook je v režimu Outlook 2003, ukotvení se nepodporuje, tak, aby návratovou hodnotu `FALSE`.  
   
- Pokud `pBar` parametr `NULL`, vrátí tato metoda `FALSE`.  
+ Pokud *pBar* parametr `NULL`, vrátí tato metoda `FALSE`.  
   
  Jinak tato metoda chová jako základní metody [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane)kromě toho, že i v případě, že ukotvení není povolen, panel aplikace Outlook stále umožňují jiný panel aplikace Outlook k ukotvit nad ním.  
   
@@ -250,25 +250,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszCaption`  
+ [v] *lpszCaption*  
  Určuje titulek okna.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Určuje ukazatel do nadřazeného okna. Nesmí být NULL.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Určuje outlook panelu velikost a umístění v pixelech.  
   
- [v] `nID`  
+ [v] *nID*  
  Určuje ID ovládacího prvku. Musí být odlišný od jiných řízení ID používaná v aplikaci.  
   
- [v] `dwStyle`  
+ [v] *dwStyle*  
  Určuje styl panelu požadovaný ovládací prvek. Možné hodnoty, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [v] `dwControlBarStyle`  
+ [v] *dwControlBarStyle*  
  Určuje zvláštní styly definované knihovny.  
   
- [v] `pContext`  
+ [v] *pContext*  
  Vytvoření kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -277,7 +277,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  Můžete vytvořit `CMFCOutlookBar` objektu ve dvou krocích. První volání konstruktoru a pak zavolají `Create`, který vytvoří ovládací prvek panelu aplikace outlook a připojí jej k `CMFCOutlookBar` objektu.  
   
- V tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) seznam dostupné styly definované knihovny počtem `dwControlBarStyle`.  
+ V tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) seznam dostupné styly definované knihovny počtem *dwControlBarStyle*.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `Create` metodu `CMFCOutlookBar` třídy. Tento fragment kódu je součástí [ukázkové aplikace Outlook více zobrazení](../../visual-cpp-samples.md).  
@@ -297,16 +297,16 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszPageName`  
+ [v] *lpszPageName*  
  Název stránky.  
   
- [v] `bActivatePage`  
+ [v] *bActivatePage*  
  Pokud `TRUE`, stane aktivní po vytvoření stránky.  
   
- [v] `dwEnabledDocking`  
+ [v] *dwEnabledDocking*  
  Kombinace příznaků CBRS_ALIGN_, který určuje povolené ukotvení postranní při stránky je odpojená.  
   
- [v] `bEnableTextLabels`  
+ [v] *bEnableTextLabels*  
  Pokud `TRUE`, textové popisky jsou povoleny pro tlačítka nacházející se na stránce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -347,16 +347,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokno float.  
   
- [v] `nTabID`  
+ [v] *nTabID*  
  Index založený na nule karty na float.  
   
- [v] `dockMethod`  
+ [v] *dockMethod*  
  Určuje metodu sloužící k uvolnit podokně.  Další informace najdete v tématu [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [v] `bHide`  
+ [v] *bHide*  
  `TRUE` Chcete-li skrýt podokno před plovoucí; v opačném `FALSE`. Na rozdíl od základní třídy verzi tuto metodu tento parametr nemá výchozí hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -388,10 +388,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Pokud funkce vrátí hodnotu obsahuje velikost a umístění (v souřadnicích klienta) oblast nejvyšší karty.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Obsahuje velikost a umístění (v souřadnicích klienta) oblast karty dolní při funkce vrátí hodnotu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -422,7 +422,7 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nPage`  
+ [v] *nPage*  
  Index založený na nule stránce karty, který byl změněn aktivní.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -436,7 +436,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nPage`  
+ [v] *nPage*  
  Index založený na nule kartě stránky, která má být nastaveno jako aktivní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -452,7 +452,7 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bDown`  
+ [v] *bDown*  
  `TRUE` Pokud je na panelu aplikace Outlook posouvání dolů, nebo `FALSE` Pokud je posouvání nahoru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -467,10 +467,10 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiPage`  
+ [v] *element uiPage*  
  Index stránky v okně aplikace Outlook nadřazené nule.  
   
- [v] `pTargetWnd`  
+ [v] *pTargetWnd*  
  Pointerto nadřazeného okna aplikace Outlook.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -493,10 +493,10 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pFont`  
+ [v] *pFont*  
  Určuje písmo nové.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  Pokud `TRUE`, bude překreslit panelu aplikace Outlook.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -510,7 +510,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bMode2003`  
+ [v] *bMode2003*  
  V případě hodnoty TRUE je povolen režim Office 2003.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b44878f5b860a05029f31492a7ca8ae06d83b607
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a81ce168c99f4ad473619c72941842085c3a5a8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379044"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042414"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 Zapouzdřuje funkce ovládacího prvku"seznamu zobrazení," obsahující kolekce položek, každý se skládá z ikonu (ze seznamu obrázků) a štítek.  
@@ -436,7 +436,7 @@ class CListCtrl : public CWnd
   
  Následuje stručný přehled `CListCtrl` třídy. Podrobné, koncepční informace, naleznete v [pomocí CListCtrl](../../mfc/using-clistctrl.md) a [ovládací prvky](../../mfc/controls-mfc.md).  
   
-## <a name="views"></a>zobrazení  
+## <a name="views"></a>Zobrazení  
  Ovládací prvky zobrazení seznamu můžete zobrazit jejich obsah čtyři různými způsoby, které se nazývají "zobrazení."  
   
 -   Zobrazení ikon.  
@@ -487,7 +487,7 @@ class CListCtrl : public CWnd
 ## <a name="items-and-subitems"></a>Položky a podřízených položek  
  Každá položka v ovládacím prvku zobrazení seznamu se skládá z ikonu (ze seznamu obrázků), štítky, aktuální stav a hodnotu definované aplikací (označované jako "položky data"). Jeden nebo více podřízených položek může být také související s každou položkou. "Podpoložek" je řetězec, který v zobrazení sestavy lze zobrazit ve sloupci vpravo od ikonu a popisku položky. Všechny položky v ovládacím prvku zobrazení seznamu musí mít stejný počet podřízených položek.  
   
- Třída **CListCtrl** poskytuje několik funkcí pro vkládání, odstraňování, vyhledávání a úprava tyto položky. Další informace najdete v tématu [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), a [CListCtrl::FindItem](#finditem), [přidávání položek do ovládacího prvku](../adding-items-to-the-control.md), a [posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam](../scrolling-arranging-sorting-and-finding-in-list-controls.md).  
+ Třída `CListCtrl` poskytuje několik funkcí pro vkládání, odstraňování, vyhledávání a úprava tyto položky. Další informace najdete v tématu [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), a [CListCtrl::FindItem](#finditem), [přidávání položek do ovládacího prvku](../adding-items-to-the-control.md), a [posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam](../scrolling-arranging-sorting-and-finding-in-list-controls.md).  
   
  Ve výchozím nastavení zodpovídá za ukládání položky ikonu a text. atributy ovládacího prvku zobrazení seznamu. Ale kromě těchto typů položek třídy `CListCtrl` podporuje "položky zpětného volání." Položky zobrazení seznamu pro kterou je "Zpětného volání položka" aplikace – místo ovládacího prvku – ukládá text, ikonu nebo obojí. Maska zpětného volání slouží k určení aplikací jsou zadaná položka atributy, které (text nebo ikonu). Pokud aplikace používá položky zpětného volání, musí být možné zadat text nebo ikonu atributy na vyžádání. Položky zpětného volání jsou užitečné, když je aplikace již udržuje některé z těchto informací. Další informace najdete v tématu [pomocí CListCtrl: položky zpětného volání a maska zpětného volání](../callback-items-and-the-callback-mask.md).  
   
@@ -535,10 +535,10 @@ CSize ApproximateViewRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sz`  
+ *sz*  
  Navrhované dimenze ovládacího prvku v pixelech. Pokud nebyly zadány dimenze, systém použije aktuální šířky nebo výšky hodnoty ovládacího prvku.  
   
- `iCount`  
+ *iCount*  
  Počet položek, který se má zobrazit v ovládacím prvku. Pokud má parametr hodnotu -1, rozhraní celkový počet položek aktuálně používá v ovládacím prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -555,7 +555,7 @@ BOOL Arrange(UINT nCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCode`  
+ *nCode*  
  Určuje styl zarovnání položek. Může být jedna z následujících hodnot:  
   
 - `LVA_ALIGNLEFT` Zarovnává položky podél levého okraje okna.  
@@ -570,7 +570,7 @@ BOOL Arrange(UINT nCode);
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- `nCode` Parametr určuje styl zarovnání.  
+ *NCode* parametr určuje styl zarovnání.  
   
 ### <a name="example"></a>Příklad    
 ```cpp  
@@ -610,25 +610,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku seznam. Použít libovolnou kombinaci stylů ovládacího prvku seznam do ovládacího prvku. V tématu [styly oken zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774739) ve Windows SDK pro úplný seznam tyto styly. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle).  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacího prvku seznam. Může být buď `CRect` objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje nadřazeného okna pro ovládací prvek seznamu, obvykle `CDialog`. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku seznam.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CListCtrl` ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří ovládacího prvku zobrazení seznamu a připojí jej k `CListCtrl` objektu.  
+ Můžete vytvořit `CListCtrl` ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří ovládacího prvku zobrazení seznamu a připojí jej k `CListCtrl` objektu.  
   
- Chcete-li použít rozšířené styly Windows pro objekt ovládacího prvku seznam, volejte [CreateEx](#createex) místo **vytvořit**.  
+ Chcete-li použít rozšířené styly Windows pro objekt ovládacího prvku seznam, volejte [CreateEx](#createex) místo `Create`.  
   
 ### <a name="example"></a>Příklad  
 
@@ -652,19 +652,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku seznam. Použít libovolnou kombinaci stylů ovládacího prvku seznam do ovládacího prvku. Úplný seznam tyto styly, najdete v části [styly oken zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774739) ve Windows SDK.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -673,10 +673,10 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
- `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného `dwExStyle`. Chcete-li nastavit konkrétní rozšířené styly ovládacího prvku, volejte [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **LVS_EX_FULLROWSELECT**. Další informace najdete v tématu styly popsané v tématu [rozšířené styly zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774732) ve Windows SDK.  
+ `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného *dwExStyle*. Chcete-li nastavit konkrétní rozšířené styly ovládacího prvku, volejte [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **LVS_EX_FULLROWSELECT**. Další informace najdete v tématu styly popsané v tématu [rozšířené styly zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774732) ve Windows SDK.  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
- Vytvoří seznam přetažení obrázku pro položku určeného `nItem`.  
+ Vytvoří seznam přetažení obrázku pro položku určeného *nItem*.  
   
 ```  
 CImageList* CreateDragImage(
@@ -685,10 +685,10 @@ CImageList* CreateDragImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky seznamu jejichž přetahování obrázků se má vytvořit.  
   
- `lpPoint`  
+ *lppoint –*  
  Adresa [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která přijímá počáteční umístění levého horního rohu bitové kopie, koordinuje v zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -734,7 +734,7 @@ BOOL DeleteColumn(int nCol);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Index sloupce k odstranění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -761,7 +761,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Určuje index položky k odstranění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -787,7 +787,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Dlouhé ukazatel `DRAWITEMSTRUCT` struktura, která obsahuje informace o typu kreslení vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -805,7 +805,7 @@ CEdit* EditLabel(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky zobrazení seznamu, který je k provádění úprav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -836,7 +836,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fEnable`  
+ *fEnable*  
  Označuje, zda povolit ovládacím prvku listview do skupiny zobrazit položky. **Hodnota TRUE,** povolit seskupení; **FALSE** ji zakázat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -861,17 +861,17 @@ BOOL EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky zobrazení seznamu, který má být viditelné.  
   
- `bPartialOK`  
+ *bPartialOK*  
  Určuje, jestli je přijatelné částečné viditelnosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazení ovládacího prvku seznam je přesunut oblasti v případě potřeby. Pokud `bPartialOK` parametr je nenulové hodnoty, žádné posouvání dojde, pokud je položka částečně viditelná.  
+ Zobrazení ovládacího prvku seznam je přesunut oblasti v případě potřeby. Pokud *bPartialOK* parametr je nenulové hodnoty, žádné posouvání dojde, pokud je položka částečně viditelná.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -892,17 +892,17 @@ int FindItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFindInfo`  
+ *pFindInfo*  
  Ukazatel na [LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745) struktura obsahující informace o položce má být vyhledán.  
   
- `nStart`  
- Index položky k zahájení hledání se nebo -1, aby začít od začátku. Položku na `nStart` je vyloučen z hledání, pokud `nStart` není rovno -1.  
+ *nStart*  
+ Index položky k zahájení hledání se nebo -1, aby začít od začátku. Položku na *nStart* je vyloučen z hledání, pokud *nStart* není rovno -1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index položky v případě úspěchu nebo -1, jinak hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
- `pFindInfo` Parametr odkazuje na **LVFINDINFO** struktura, která obsahuje informace, které slouží k vyhledání pro položky zobrazení seznamu.  
+ *PFindInfo* parametr odkazuje na **LVFINDINFO** struktura, která obsahuje informace, které slouží k vyhledání pro položky zobrazení seznamu.  
   
 ### <a name="example"></a>Příklad  
 
@@ -942,7 +942,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `plvbkImage`  
+ *plvbkImage*  
  Ukazatel na **LVBKIMAGE** struktura obsahující aktuální obrázku pozadí v zobrazení seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -991,7 +991,7 @@ BOOL GetCheck(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index založený na nule řízení položky seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1013,10 +1013,10 @@ BOOL GetColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Index sloupce, jejichž atributy jsou mají být načteny.  
   
- `pColumn`  
+ *pColumn*  
  Adresa [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) struktura, která určuje informace načíst a přijímat informace o sloupci. **Maska** člen určuje sloupec, jehož atributy pro načtení. Pokud **maska** určuje člena `LVCF_TEXT` hodnota, **pszText** člen musí obsahovat adresu vyrovnávací paměti, která přijímá text položky a **cchTextMax** člen musíte zadat velikost vyrovnávací paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1051,10 +1051,10 @@ BOOL GetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piArray`  
+ *piArray*  
  Ukazatel na vyrovnávací paměť, která bude obsahovat hodnoty indexu sloupců v ovládacím prvku zobrazení seznamu. Vyrovnávací paměti musí být dostatečně velký, obsahuje celkový počet sloupců v ovládacím prvku zobrazení seznamu.  
   
- `iCount`  
+ *iCount*  
  Počet sloupců v ovládacím prvku zobrazení seznamu. Pokud má parametr hodnotu -1, počet sloupců automaticky načte rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1100,11 +1100,11 @@ int GetColumnWidth(int nCol) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Určuje index sloupce, jejichž šířka je mají být načteny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka v pixelech sloupec zadaný ve `nCol`.  
+ Šířka v pixelech sloupec zadaný ve *nCol*.  
   
 ### <a name="example"></a>Příklad  
 
@@ -1251,10 +1251,10 @@ int GetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identifikátor skupiny, jejichž informace je možné načíst.  
   
- `pgrp`  
+ *pgrp*  
  Ukazatel [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) obsahující informace o zadané skupině.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iIndex`|Index nule skupiny.|  
-|[out] `pGroup`|Ukazatel na [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktura, která přijímá informace o skupině určeného `iIndex` parametr.<br /><br /> Volající zodpovídá za inicializaci členů [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury. Nastavte `cbSize` člen velikost strukturu a příznaky z `mask` člen můžete určit informace o načtení.|  
+|[v] *iIndex*|Index nule skupiny.|  
+|[out] *pGroup*|Ukazatel na [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktura, která přijímá informace o skupině určeného *iIndex* parametr.<br /><br /> Volající zodpovídá za inicializaci členů [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury. Nastavte `cbSize` člen velikost strukturu a příznaky z `mask` člen můžete určit informace o načtení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -1333,7 +1333,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  Ukazatel [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) obsahující informace o skupinách metriky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1353,15 +1353,15 @@ BOOL GetGroupRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iGroupId`|Určuje skupinu.|  
-|[ve out] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Pokud tato metoda je úspěšné, struktura obdrží souřadnice obdélníku skupiny, která je zadána `iGroupId`.|  
-|[v] `iCoords`|Určuje souřadnice obdélníku pro načtení. Použijte jednu z těchto hodnot:<br /><br /> - `LVGGR_GROUP` -Souřadnice celou skupinu rozšířené (výchozí).<br />- `LVGGR_HEADER` -Souřadnice pouze záhlaví (sbalené skupiny).<br />- `LVGGR_SUBSETLINK` -Souřadnice jenom podmnožina propojení (podmnožina značek).|  
+|[v] *iGroupId*|Určuje skupinu.|  
+|[ve out] *lprect –*|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Pokud tato metoda je úspěšné, struktura obdrží souřadnice obdélníku skupiny, která je zadána *iGroupId*.|  
+|[v] *iCoords*|Určuje souřadnice obdélníku pro načtení. Použijte jednu z těchto hodnot:<br /><br /> - `LVGGR_GROUP` -Souřadnice celou skupinu rozšířené (výchozí).<br />- `LVGGR_HEADER` -Souřadnice pouze záhlaví (sbalené skupiny).<br />- `LVGGR_SUBSETLINK` -Souřadnice jenom podmnožina propojení (podmnožina značek).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
- Volající zodpovídá za přidělování [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura na kterou odkazuje `pRect` parametr.  
+ Volající zodpovídá za přidělování [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura na kterou odkazuje *pRect* parametr.  
   
  Tato metoda odesílá [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) zprávy, která je popsána v sadě Windows SDK.  
   
@@ -1406,14 +1406,14 @@ UINT GetGroupState(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iGroupId`|Index nule skupiny.|  
-|[v] `dwMask`|Maska, která určuje hodnotu stav pro načtení pro zadanou skupinu. Další informace najdete v tématu `mask` členem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury.|  
+|[v] *iGroupId*|Index nule skupiny.|  
+|[v] *dwMask*|Maska, která určuje hodnotu stav pro načtení pro zadanou skupinu. Další informace najdete v tématu `mask` členem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Požadovaný stav pro zadanou skupinu nebo 0, pokud skupiny nebyl nalezen.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrácená hodnota je výsledek bitové operace AND na `dwMask` parametr a hodnotu `state` členem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktura, který představuje aktuální ovládacího prvku zobrazení seznamu.  
+ Vrácená hodnota je výsledek bitové operace AND na *dwMask* parametr a hodnotu `state` členem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktura, který představuje aktuální ovládacího prvku zobrazení seznamu.  
   
  Tato metoda odesílá [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) zprávy, která je popsána v sadě Windows SDK. Další informace najdete v tématu [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) makro.  
   
@@ -1512,7 +1512,7 @@ CImageList* GetImageList(int nImageList) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImageList`  
+ *nImageList*  
  Hodnota, která určuje, které seznamu obrázků pro načtení. Může být jedna z těchto hodnot:  
   
 - `LVSIL_NORMAL` Seznam obrázků s ikony. velké ikony.  
@@ -1541,7 +1541,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lvim`  
+ *lvim*  
  Ukazatel na [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) struktura obsahující informace pro značku insert.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1571,7 +1571,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRect`  
+ *pRect*  
  Ukazatel na `RECT` struktura, která obsahuje souřadnice obdélníku bounds kurzor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1592,7 +1592,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura, která přijímá položky atributy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1622,7 +1622,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky seznamu, jejichž data se mají být načteny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pItemIndex`|Ukazatel na [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturu pro nadřazené položky podpoložek.<br /><br /> Volající zodpovídá za přidělování a nastavení členů [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Tento parametr nemůže být `NULL`.|  
-|[v] `iColumn`|Index sloupce v ovládacím prvku nule.|  
-|[v] `rectType`|Část zobrazení seznamu podpoložek, pro kterého je načtena ohraničující obdélník. Zadejte jednu z následujících hodnot:<br /><br /> `LVIR_BOUNDS` -Vrátí ohraničující obdélník podřízenou položku včetně ikonu a popisku.<br /><br /> `LVIR_ICON` -Vrátí ohraničující obdélník ikony nebo malé ikony podpoložek.<br /><br /> `LVIR_LABEL` -Vrátí ohraničující obdélník text podpoložek.|  
-|[out] `pRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace o ohraničující obdélník podpoložek.<br /><br /> Volající zodpovídá za přidělování [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Tento parametr nemůže být `NULL`.|  
+|[v] *pItemIndex*|Ukazatel na [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturu pro nadřazené položky podpoložek.<br /><br /> Volající zodpovídá za přidělování a nastavení členů [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Tento parametr nemůže být `NULL`.|  
+|[v] *iColumn*|Index sloupce v ovládacím prvku nule.|  
+|[v] *rectType*|Část zobrazení seznamu podpoložek, pro kterého je načtena ohraničující obdélník. Zadejte jednu z následujících hodnot:<br /><br /> `LVIR_BOUNDS` -Vrátí ohraničující obdélník podřízenou položku včetně ikonu a popisku.<br /><br /> `LVIR_ICON` -Vrátí ohraničující obdélník ikony nebo malé ikony podpoložek.<br /><br /> `LVIR_LABEL` -Vrátí ohraničující obdélník text podpoložek.|  
+|[out] *pRect*|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá informace o ohraničující obdélník podpoložek.<br /><br /> Volající zodpovídá za přidělování [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Tento parametr nemůže být `NULL`.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -1709,10 +1709,10 @@ BOOL GetItemPosition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejíž pozice se mají být načteny.  
   
- `lpPoint`  
+ *lppoint –*  
  Adresa [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která přijímá pozice levého horního rohu položky, koordinuje v zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1746,13 +1746,13 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejíž pozice se mají být načteny.  
   
- `lpRect`  
+ *lprect –*  
  Adresa [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.  
   
- `nCode`  
+ *nCode*  
  Část položky zobrazení seznamu, pro které chcete načíst ohraničující obdélník. Může být jedna z těchto hodnot:  
   
 - `LVIR_BOUNDS` Vrátí ohraničující obdélník celou položku, včetně ikonu a popisku.  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `fSmall`|Zobrazení, pro které chcete načíst položky mezery. Zadejte `true` pro malé ikony zobrazení, nebo `false` pro zobrazení ikon.|  
-|[out] `pnHorzSpacing`|Obsahuje vodorovný rozestup mezi položkami.|  
-|[out] `pnVertSpacing`|Obsahuje svislé mezery mezi položkami.|  
+|[v] *fSmall*|Zobrazení, pro které chcete načíst položky mezery. Zadejte `true` pro malé ikony zobrazení, nebo `false` pro zobrazení ikon.|  
+|[out] *pnHorzSpacing*|Obsahuje vodorovný rozestup mezi položkami.|  
+|[out] *pnVertSpacing*|Obsahuje svislé mezery mezi položkami.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -1841,10 +1841,10 @@ UINT GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejichž stav je mají být načteny.  
   
- `nMask`  
+ *nMask*  
  Maska určující, které položky stavu flags vrátit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1872,25 +1872,25 @@ CString GetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejíž text je mají být načteny.  
   
- `nSubItem`  
+ *nSubItem*  
  Určuje podpoložek, jejíž text je mají být načteny.  
   
- `lpszText`  
+ *lpszText*  
  Ukazatel na řetězec, který je pro příjem text položky.  
   
- `nLen`  
- Délka vyrovnávací paměti na kterou odkazuje `lpszText`.  
+ *nLen*  
+ Délka vyrovnávací paměti na kterou odkazuje *lpszText*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrácení verze `int` vrátí délku načtené řetězec.  
+ Vrácení verze **int** vrátí délku načtené řetězec.  
   
  Vrácení verze `CString` vrátí text položky.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `nSubItem` rovná nule, tato funkce načte popisek položky; Pokud `nSubItem` je nenulové hodnoty, načte text podpoložek. Další informace o podpoložek argument, přečtěte si diskuzi o [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura ve Windows SDK.  
+ Pokud *nSubItem* rovná nule, tato funkce načte popisek položky; Pokud *nSubItem* je nenulové hodnoty, načte text podpoložek. Další informace o podpoložek argument, přečtěte si diskuzi o [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura ve Windows SDK.  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  Vyhledá seznam zobrazit položky, který má zadané vlastnosti a který nenese Zadaný vztah pro danou položku.  
@@ -1902,10 +1902,10 @@ int GetNextItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky k zahájení hledání s nebo -1, aby najít první položku, která odpovídá zadané příznaky. Zadaná položka samotné je vyloučen z hledání.  
   
- `nFlags`  
+ *nFlags*  
  Geometrickou vztah požadovaná položka pro zadanou položku a stav požadovaná položka. Geometrickou vztah může být jedna z těchto hodnot:  
   
 - `LVNI_ABOVE` Vyhledá položku, která je nad určenou položku.  
@@ -1944,30 +1944,30 @@ BOOL GetNextItemIndex(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[ve out] `pItemIndex`|Ukazatel [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky, kde začíná hledání nebo -1 najít první položka, která odpovídá příznaky ve `nFlags` parametr.<br /><br /> Pokud tato metoda je úspěšné, `LVITEMINDEX` struktura Popisuje položku nalezen.|  
-|[v] `nFlags`|Bitová kombinace (nebo) příznaky, které určují, jak provádět vyhledávání.<br /><br /> Hledání, může záviset na index, stavu nebo vzhled cílová položka nebo cílová položka fyzické pozice relativně k položce zadána `pItemIndex` parametr. Další informace najdete v tématu `flags` parametr ve [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) zprávy.|  
+|[ve out] *pItemIndex*|Ukazatel [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky, kde začíná hledání nebo -1 najít první položka, která odpovídá příznaky ve *nFlags* parametr.<br /><br /> Pokud tato metoda je úspěšné, `LVITEMINDEX` struktura Popisuje položku nalezen.|  
+|[v] *nFlags*|Bitová kombinace (nebo) příznaky, které určují, jak provádět vyhledávání.<br /><br /> Hledání, může záviset na index, stavu nebo vzhled cílová položka nebo cílová položka fyzické pozice relativně k položce zadána *pItemIndex* parametr. Další informace najdete v tématu *příznaky* parametr ve [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) zprávy.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
- Volající zodpovídá za přidělování a nastavení členů `LVITEMINDEX` struktura na kterou odkazuje `pItemIndex` parametr.  
+ Volající zodpovídá za přidělování a nastavení členů `LVITEMINDEX` struktura na kterou odkazuje *pItemIndex* parametr.  
   
  Tato metoda odesílá [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) zprávy, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
- Získá index položky seznamu identifikovaný `pos`, pak nastaví *pos* k **pozice** hodnotu.  
+ Získá index položky seznamu identifikovaný *pos*, pak nastaví *pos* k **pozice** hodnotu.  
   
 ```  
 int GetNextSelectedItem(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odkaz na **pozice** hodnoty vrácené z předchozího volání `GetNextSelectedItem` nebo `GetFirstSelectedItemPosition`. Hodnota se aktualizuje na další pozici toto volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index položky seznamu identifikovaný `pos`.  
+ Index položky seznamu identifikovaný *pos*.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete použít `GetNextSelectedItem` ve smyčce dopředného iterace Pokud vytvořit počáteční pozice pomocí volání `GetFirstSelectedItemPosition`.  
@@ -2058,7 +2058,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoint`  
+ *lppoint –*  
  Adresa [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která přijímá počátek zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2137,11 +2137,11 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Adresa jehož šířka je možné určit řetězce ukončené hodnotou null.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířku v pixelech, na kterou odkazuje řetězce `lpsz`.  
+ Šířku v pixelech, na kterou odkazuje řetězce *lpsz*.  
   
 ### <a name="remarks"></a>Poznámky  
  Vrácený šířku bere v úvahu aktuálním písmem ovládacího prvku a okraje sloupců, ale ne šířku malé ikony.  
@@ -2190,7 +2190,7 @@ BOOL GetSubItemRect(
   
 - `LVIR_LABEL` Vrátí ohraničující obdélník celou položku, včetně ikonu a popisku. Toto je stejný jako `LVIR_BOUNDS`.  
   
- `ref`  
+ *ref*  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje souřadnice podřízenou položku této ohraničujícího rámečku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2250,7 +2250,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptvi`  
+ *ptvi*  
  Ukazatel na [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) struktura, která přijímá načtené informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2334,7 +2334,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Adresa [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2353,10 +2353,10 @@ void GetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWorkAreas`  
+ *nWorkAreas*  
  Počet `RECT` struktury, které jsou součástí *ČLR* pole.  
   
- `prc`  
+ *ČLR*  
  Ukazatel na pole `RECT` struktury (nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekty), přijímat pracovní oblasti ovládacího prvku zobrazení seznamu. Hodnoty v těchto struktur jsou v souřadnicích klienta.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2373,7 +2373,7 @@ BOOL HasGroup(int iGroupId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identifikátor skupiny požadováno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2394,22 +2394,22 @@ int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  Adresa **LVHITTESTINFO** struktura, která obsahuje pozici narazila na test a který obdrží informace o výsledcích přístupů testu.  
   
- `pt`  
+ *PT*  
  Bod má být testována.  
   
- `pFlags`  
+ *pFlags*  
  Ukazatel na celé číslo, které obdrží informace o výsledky testu. Zde uvidíte vysvětlení **příznaky** členem [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) struktura ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index položky na pozici určeného `pHitTestInfo`, pokud existuje, nebo -1, jinak hodnota.  
+ Index položky na pozici určeného *pHitTestInfo*, pokud existuje, nebo -1, jinak hodnota.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete použít `LVHT_ABOVE`, `LVHT_BELOW`, `LVHT_TOLEFT`, a `LVHT_TORIGHT` hodnoty strukturu na **příznak** člen k určení, zda posouvat obsah ovládacího prvku zobrazení seznamu. Dva z těchto příznaků lze spojovat, například pokud pozici nahoru a doleva od klientské oblasti.  
   
- Můžete vyzkoušet **LVHT_ONITEM** hodnotu struktury **příznak** vlastnosti k určení, zda je dané pozici přes položky zobrazení seznamu. Tato hodnota je operace bitové operace OR na `LVHT_ONITEMICON`, `LVHT_ONITEMLABEL`, a `LVHT_ONITEMSTATEICON` hodnoty strukturu na **příznak** člen.  
+ Můžete vyzkoušet `LVHT_ONITEM` hodnotu struktury **příznak** vlastnosti k určení, zda je dané pozici přes položky zobrazení seznamu. Tato hodnota je operace bitové operace OR na `LVHT_ONITEMICON`, `LVHT_ONITEMLABEL`, a `LVHT_ONITEMSTATEICON` hodnoty strukturu na **příznak** člen.  
   
 ### <a name="example"></a>Příklad  
 
@@ -2452,22 +2452,22 @@ int InsertColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Index nového sloupce.  
   
- `pColumn`  
+ *pColumn*  
  Adresa **LVCOLUMN** struktura, která obsahuje atributy nového sloupce.  
   
  *lpszColumnHeading*  
  Adresa řetězec obsahující záhlaví sloupce.  
   
- `nFormat`  
+ *nFormat*  
  Určení zarovnání sloupce celé číslo. Může být jedna z těchto hodnot: **LVCFMT_LEFT**, **LVCFMT_RIGHT**, nebo **LVCFMT_CENTER**.  
   
- `nWidth`  
+ *nWindth*  
  Šířka sloupce v pixelech. Pokud má parametr hodnotu -1, není nastavená šířka sloupce.  
   
- `nSubItem`  
+ *nSubItem*  
  Index podpoložek přidružený sloupec. Pokud má parametr hodnotu -1, je přidružené ke sloupci žádné podpoložek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2491,7 +2491,7 @@ LRESULT InsertGroup(
  *index*  
  Index položky, kde má být vložen skupině.  
   
- `pgrp`  
+ *pgrp*  
  Ukazatel na [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktura obsahující skupiny, kterou chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2546,29 +2546,29 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura, která určuje atributy položky, jak je popsáno v sadě Windows SDK.  
   
- `nItem`  
+ *nItem*  
  Index položky má být vložen.  
   
- `lpszItem`  
+ *lpszItem*  
  Adresa řetězec obsahující popisek položky nebo `LPSTR_TEXTCALLBACK` Pokud je položka položka zpětného volání. Informace o položky zpětného volání, najdete v části [CListCtrl::GetCallbackMask](#getcallbackmask).  
   
- `nImage`  
+ *nImage*  
  Index položky obrázku nebo `I_IMAGECALLBACK` Pokud je položka položka zpětného volání. Informace o položky zpětného volání, najdete v části [CListCtrl::GetCallbackMask](#getcallbackmask).  
   
- `nMask`  
- `nMask` Parametr určuje, která položka atributy předány jako parametry jsou platné. Může mít jednu nebo více hodnot maska popsané v [LVITEM struktura](http://msdn.microsoft.com/library/windows/desktop/bb774760) ve Windows SDK. Platné hodnoty lze spojovat s bitový operátor OR.  
+ *nMask*  
+ *NMask* parametr určuje, která položka atributy předány jako parametry jsou platné. Může mít jednu nebo více hodnot maska popsané v [LVITEM struktura](http://msdn.microsoft.com/library/windows/desktop/bb774760) ve Windows SDK. Platné hodnoty lze spojovat s bitový operátor OR.  
   
- `nState`  
+ *nInformace*  
  Označuje stav, stav image a image překrytí položky. Najdete v tématech Windows SDK [LVITEM struktura](http://msdn.microsoft.com/library/windows/desktop/bb774760) Další informace a [stavy položky zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774733) seznam platný příznaky.  
   
- `nStateMask`  
+ *nStateMask*  
  Určuje, které bits člena stavu bude načíst nebo upravit. V tématu [LVITEM struktura](http://msdn.microsoft.com/library/windows/desktop/bb774760) ve Windows SDK pro další informace.  
   
- `lParam`  
- Hodnota 32-bit specifické pro aplikace přidružené k položce. Pokud je tento parametr zadán, je nutné nastavit `nMask` atribut `LVIF_PARAM`.  
+ *lParam*  
+ Hodnota 32-bit specifické pro aplikace přidružené k položce. Pokud je tento parametr zadán, je nutné nastavit *nMask* atribut `LVIF_PARAM`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index novou položku v případě úspěchu nebo -1, jinak hodnota.  
@@ -2611,10 +2611,10 @@ int InsertMarkHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPoint`  
+ *pPoint*  
  Ukazatel [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) koordinuje struktura, která obsahuje ověření pozice relativně k klientské oblasti ovládacího prvku seznam.  
   
- `lvim`  
+ *lvim*  
  Ukazatel na [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) struktura, která určuje nejblíže k souřadnice definované parametr bodu kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `index`|Index položky v ovládacím prvku aktuální zobrazení seznamu nule.|  
+|[v] *indexu*|Index položky v ovládacím prvku aktuální zobrazení seznamu nule.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud zadaná položka je viditelná, jinak hodnota `false`.  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `id`|Jedinečné ID položky.|  
+|[v] *id*|Jedinečné ID položky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Aktuální index pro zadané ID.  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `index`|Index založený na nule položky.|  
+|[v] *indexu*|Index založený na nule položky.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jedinečné ID pro zadanou položku.  
@@ -2751,10 +2751,10 @@ LRESULT MoveGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identifikátor skupiny můžete přesunout.  
   
- `toIndex`  
+ *toIndex*  
  Index založený na nule kde skupině se má přesunout.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2773,10 +2773,10 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `idItemFrom`  
+ [v] *idItemFrom*  
  Index položky k přesunu.  
   
- [v] `idGroupTo`  
+ [v] *idGroupTo*  
  Identifikátor skupiny položka bude přesunuta do.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -2796,17 +2796,17 @@ BOOL RedrawItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFirst`  
+ *nFirst*  
  Index první položky na překreslen.  
   
- `nLast`  
+ *Nposlední*  
  Index poslední položky překreslen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Zadané položky nejsou ve skutečnosti překreslen, dokud neobdrží okna zobrazení seznamu `WM_PAINT` zprávy. Pokud chcete překreslit okamžitě, volání Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) funkce po použití této funkce.  
+ Zadaných položek nejsou ve skutečnosti překreslen, dokud neobdrží zprávu WM_PAINT okna zobrazení seznamu. Pokud chcete překreslit okamžitě, volání Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) funkce po použití této funkce.  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  Odebere všechny skupiny z ovládacího prvku zobrazení seznamu.  
@@ -2826,7 +2826,7 @@ LRESULT RemoveGroup(int iGroupId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identifikátor skupiny odeberou.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2843,8 +2843,8 @@ BOOL Scroll(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
- A `CSize` určující množství vodorovného a svislého posouvání v pixelech. **y** členem `size` dělení výška v pixelech řádku ovládacího prvku zobrazení seznamu a přesunut oblasti ovládacího prvku o výsledný počet řádků.  
+ *Velikost*  
+ A `CSize` určující množství vodorovného a svislého posouvání v pixelech. **y** členem *velikost* dělení výška v pixelech řádku ovládacího prvku zobrazení seznamu a přesunut oblasti ovládacího prvku o výsledný počet řádků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -2857,7 +2857,7 @@ BOOL SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *znaky CR*  
  Pokud chcete nastavit, barva pozadí nebo `CLR_NONE` hodnotu pro žádné barvu pozadí. Ovládací prvky zobrazení seznamu s barvy pozadí ho překreslit sami výrazně rychlejší než ty, které bez barvy pozadí. Informace najdete v tématu [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2894,13 +2894,13 @@ BOOL SetBkImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `plvbkImage`  
+ *plvbkImage*  
  Adresa **LVBKIMAGE** struktura, která obsahuje nové informace o obrázku pozadí.  
   
- `hbm`  
+ *hbm*  
  Popisovač rastrový obrázek.  
   
- `pszUrl`  
+ *pszUrl*  
  A **NULL**-ukončena řetězec, který obsahuje adresu URL obrázku pozadí.  
   
  *fTile*  
@@ -2931,7 +2931,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMask`  
+ *nMask*  
  Nová hodnota maska zpětného volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2959,11 +2959,11 @@ BOOL SetCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index založený na nule řízení položky seznamu.  
   
- `fCheck`  
- Určuje, zda má být obrázek stavu položky viditelné nebo ne. Ve výchozím nastavení *podívejte* je **TRUE** a je viditelný obrázek stavu. Pokud `fCheck` je **FALSE**, se nezobrazuje.  
+ *Podívejte*  
+ Určuje, zda má být obrázek stavu položky viditelné nebo ne. Ve výchozím nastavení *podívejte* je **TRUE** a je viditelný obrázek stavu. Pokud *podívejte* je **FALSE**, se nezobrazuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se změnami, jinak hodnota 0.  
@@ -2997,10 +2997,10 @@ BOOL SetColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Index sloupce, jejichž atributy jsou nastavení.  
   
- `pColumn`  
+ *pColumn*  
  Adresa [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) atributy struktura, která obsahuje nového sloupce, jak je popsáno v sadě Windows SDK. Nastavení struktury **maska** člen určuje sloupec, jehož atributy k nastavení. Pokud **maska** určuje člena `LVCF_TEXT` hodnoty strukturu na **pszText** člen je adresa řetězce ukončené hodnotou null a struktura **cchTextMax**člen se ignoruje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3019,10 +3019,10 @@ BOOL SetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piArray`  
+ *piArray*  
  Ukazatel na vyrovnávací paměť obsahující hodnoty indexu sloupců v ovládacím prvku zobrazení seznamu (zleva doprava). Vyrovnávací paměti musí být dostatečně velký, obsahuje celkový počet sloupců v ovládacím prvku zobrazení seznamu.  
   
- `iCount`  
+ *iCount*  
  Počet sloupců v ovládacím prvku zobrazení seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3044,10 +3044,10 @@ BOOL SetColumnWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Index sloupce, pro kterou má být nastavena šířku. V zobrazení seznamu tento parametr musí být 0.  
   
- `cx`  
+ *CX*  
  Nové šířka sloupce. Může být buď **LVSCW_AUTOSIZE** nebo **LVSCW_AUTOSIZE_USEHEADER**, jak je popsáno v [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3061,7 +3061,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwNewStyle`  
+ *dwNewStyle*  
  Kombinace rozšířené styly má být používána ovládacího prvku zobrazení seznamu. Popisný seznam tyto styly, najdete v článku [rozšířené styly zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774732) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3090,10 +3090,10 @@ int SetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identifikátor skupiny, jejichž informace nastavena.  
   
- `pgrp`  
+ *pgrp*  
  Ukazatel na [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktura, která obsahuje informace o nastavení. Volající zodpovídá za přidělování tato struktura a nastavení její členy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3110,7 +3110,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  Ukazatel na [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) struktura obsahující informace o skupinách metriky nastavit.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3146,7 +3146,7 @@ int SetHotItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
+ *iIndex*  
  Položka, která má být nastavená jako aktivní položka index počítáno od nuly.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3190,13 +3190,13 @@ CSize SetIconSpacing(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Vzdálenost (v pixelech) mezi ikony na ose x.  
   
- `cy`  
+ *CY*  
  Vzdálenost (v pixelech) mezi ikony na ose y.  
   
- `size`  
+ *Velikost*  
  A `CSize` mezi ikon na x - a y, osa určující vzdálenost (v pixelech).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3224,10 +3224,10 @@ CImageList* SetImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Ukazatel na seznamu obrázků přiřadit.  
   
- `nImageListType`  
+ *nImageListType*  
  Typ seznamu obrázků. Může být jedna z těchto hodnot:  
   
 - `LVSIL_NORMAL` Seznam obrázků s ikony. velké ikony.  
@@ -3267,7 +3267,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lvim`  
+ *lvim*  
  Ukazatel na [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) struktura určující, kde se má nastavit kurzor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3284,7 +3284,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktura zadání barvu, která nastavení kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3324,47 +3324,47 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Adresa [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktura, která obsahuje novou položku atributy, jak je popsáno v sadě Windows SDK. Nastavení struktury **položky** a **iSubItem** členy identifikaci položky, nebo podřízenou položku a struktura **maska** člen Určuje atributy, které chcete nastavit. Další informace o **maska** člena, najdete v článku **poznámky**.  
   
- `nItem`  
+ *nItem*  
  Index položky, jejichž atributy jsou nastavení.  
   
- `nSubItem`  
+ *nSubItem*  
  Index podpoložek, jejichž atributy jsou nastavení.  
   
- `nMask`  
+ *nMask*  
  Určuje atributy, které mají být nastaveny (viz poznámky).  
   
- `lpszItem`  
+ *lpszItem*  
  Adresa zadání popisek položky řetězce ukončené hodnotou null.  
   
- `nImage`  
+ *nImage*  
  Index položky obrázku v seznamu obrázků.  
   
- `nState`  
+ *nInformace*  
  Určuje hodnoty pro stavy změnit (viz poznámky).  
   
- `nStateMask`  
+ *nStateMask*  
  Určuje, jaké stavy jsou změnit (viz poznámky).  
   
- `lParam`  
+ *lParam*  
  Hodnotu 32-bit specifické pro aplikaci jako přidružená k položce.  
   
- `nIndent`  
- Šířka v pixelech odsazení. Pokud `nIndent` je menší než minimální šířka definované v systému nové šířka je nastavena na minimum definované v systému  
+ *nIndent*  
+ Šířka v pixelech odsazení. Pokud *nIndent* je menší než minimální šířka definované v systému nové šířka je nastavena na minimum definované v systému  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- **Položky** a **iSubItem** členy **LVITEM** struktura a `nItem` a `nSubItem` parametry identifikaci položky a jehož subitem atributy se mají nastavit.  
+ **Položky** a **iSubItem** členy **LVITEM** struktura a *nItem* a *nSubItem* Parametry identifikaci položek a podpoložek, jejichž atributy jsou nastavení.  
   
- **Maska** členem **LVITEM** struktura a `nMask` parametr zadejte položky, které atributy jsou nastavení:  
+ **Maska** členem **LVITEM** struktura a *nMask* parametr zadejte položky, které atributy jsou nastavení:  
   
-- `LVIF_TEXT` **PszText** člen nebo `lpszItem` parametr je adresa řetězce ukončené hodnotou null; **cchTextMax** člen se ignoruje.  
+- `LVIF_TEXT` **PszText** člen nebo *lpszItem* parametr je adresa řetězce ukončené hodnotou null; **cchTextMax** člen se ignoruje.  
   
-- `LVIF_STATE` **StateMask** člen nebo `nStateMask` parametr určuje, která položka stavů změnit a **stavu** člen nebo `nState` parametr obsahuje hodnoty pro tyto stavy.  
+- `LVIF_STATE` **StateMask** člen nebo *nStateMask* parametr určuje, která položka stavů změnit a **stavu** člen nebo *nInformace* parametr obsahuje hodnoty pro tyto stavy.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CListCtrl::HitTest](#hittest).  
@@ -3377,7 +3377,7 @@ void SetItemCount(int nItems);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItems`  
+ *nItems*  
  Počet položek, které budou nakonec obsahovat ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3413,10 +3413,10 @@ BOOL SetItemCountEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iCount`  
+ *iCount*  
  Počet položek, které budou nakonec obsahovat ovládacího prvku.  
   
- `dwFlags`  
+ *dwFlags*  
  Určuje chování ovládacího prvku zobrazení seznamu po resetování počet položek. Tato hodnota může být kombinací následující:  
   
 - **LVSICF_NOINVALIDATEALL** ovládacího prvku zobrazení seznamu nebude překreslit pouze v případě ovlivněné položky jsou aktuálně v zobrazení. Jedná se o výchozí hodnotu.  
@@ -3451,17 +3451,17 @@ BOOL SetItemCountEx(
 
   
 ##  <a name="setitemdata"></a>  CListCtrl::SetItemData  
- Nastaví hodnotu 32-bit specifické pro aplikace přidružené k položce určeného `nItem`.  
+ Nastaví hodnotu 32-bit specifické pro aplikace přidružené k položce určeného *nItem*.  
   
 ```  
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky seznamu, jejichž data je možné nastavit.  
   
- `dwData`  
+ *dwData*  
  32bitová hodnota být přidružená k položce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3496,17 +3496,17 @@ BOOL SetItemIndexState(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pItemIndex`|Ukazatel na [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky. Volající zodpovídá za přidělování tato struktura a nastavení její členy.|  
-|[v] `dwState`|Stav nastavit položku, což je bitovou kombinaci [seznam stavů zobrazení položek](http://msdn.microsoft.com/library/windows/desktop/bb774733). Zadejte 0 pro nulu na obnovit nebo jeden k nastavení stavu.|  
-|[v] `dwMask`|Maska platný bity stavu určeného `dwState` parametr. Zadejte bitovou kombinaci (nebo) [seznam stavů zobrazení položek](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
+|[v] *pItemIndex*|Ukazatel na [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky. Volající zodpovídá za přidělování tato struktura a nastavení její členy.|  
+|[v] *dwState*|Stav nastavit položku, což je bitovou kombinaci [seznam stavů zobrazení položek](http://msdn.microsoft.com/library/windows/desktop/bb774733). Zadejte 0 pro nulu na obnovit nebo jeden k nastavení stavu.|  
+|[v] *dwMask*|Maska platný bity stavu určeného *dwState* parametr. Zadejte bitovou kombinaci (nebo) [seznam stavů zobrazení položek](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o `dwState` parametr, najdete v části [stavy položky zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
+ Další informace o *dwState* parametr, najdete v části [stavy položky zobrazení seznamu](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
   
- Další informace o `dwMask` parametr, najdete v článku `stateMask` členem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury.  
+ Další informace o *dwMask* parametr, najdete v článku *stateMask* členem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury.  
   
  Tato metoda odesílá [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) zprávy, která je popsána v sadě Windows SDK.  
   
@@ -3520,10 +3520,10 @@ BOOL SetItemPosition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejíž pozice s má být nastavena.  
   
- `pt`  
+ *PT*  
  A [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura zadání nové umístění, v zobrazení souřadnice levého horního rohu položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3553,16 +3553,16 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejichž stav je možné nastavit.  
   
- `pItem`  
+ *pItem*  
  Adresa [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, jak je popsáno v sadě Windows SDK. Nastavení struktury **stateMask** člen Určuje, které stavu bits k změn a struktura **stavu** člen obsahuje nové hodnoty pro tyto služby bits. Jiní členové jsou ignorovány.  
   
- `nState`  
+ *nInformace*  
  Nové hodnoty pro stav služby bits. Seznam možných hodnot najdete v tématu [CListCtrl::GetNextItem](#getnextitem) a [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) člen stavu.  
   
- `nMask`  
+ *nMask*  
  Maska určující, které stavu bits změnit. Tato hodnota odpovídá stateMask členem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3585,13 +3585,13 @@ BOOL SetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky, jejíž text je možné nastavit.  
   
- `nSubItem`  
+ *nSubItem*  
  Index podpoložek nebo nula nastavit popisek položky.  
   
- `lpszText`  
+ *lpszText*  
  Ukazatel na řetězec, který obsahuje nový text položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3611,7 +3611,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Nové [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktura obsahující obrysovou barvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3645,7 +3645,7 @@ int SetSelectionMark(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
+ *iIndex*  
  Index založený na nule první položky v vícenásobný výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3665,7 +3665,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *znaky CR*  
  A **COLORREF** zadání barva pozadí textu. Informace najdete v tématu [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3690,7 +3690,7 @@ BOOL SetTextColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *znaky CR*  
  A **COLORREF** zadání barva textu. Informace najdete v tématu [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3733,7 +3733,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptvi`  
+ *ptvi*  
  Ukazatel na [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) struktura obsahující informace o nastavení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3750,7 +3750,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndTip`  
+ *pWndTip*  
  Ukazatel na `CToolTipCtrl` objekt, který bude používat ovládací prvek seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3788,10 +3788,10 @@ void SetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWorkAreas`  
- Počet `RECT` struktury (nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekty) v poli, na kterou odkazuje `lpRect`.  
+ *nWorkAreas*  
+ Počet `RECT` struktury (nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekty) v poli, na kterou odkazuje *lprect –*.  
   
- `lpRect`  
+ *lprect –*  
  Adresa pole `RECT` struktury (nebo `CRect` objekty), zadejte nové pracovní oblasti ovládacího prvku zobrazení seznamu. Tyto oblasti je třeba zadat v souřadnicích klienta. Pokud tento parametr je **NULL**, pracovní plocha bude nastavena pro klientské oblasti ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -3816,10 +3816,10 @@ BOOL SortGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_pfnGroupCompare`  
+ *_pfnGroupCompare*  
  Ukazatel na funkci porovnání skupiny.  
   
- `_plv`  
+ *_plv*  
  Neplatný ukazatel.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3838,12 +3838,12 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pfnCompare`  
+ [v] *pfnCompare*  
  Adresa funkce definované aplikací porovnání.  
   
  Operace řazení volá funkci porovnání pokaždé, když je třeba určit relativní pořadí dvě položky seznamu. Porovnání funkce musí být buď je statický člen třídy nebo samostatnou funkci, která není členem žádné třídě.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Hodnota definované aplikací, která je předaný funkci porovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -3852,7 +3852,7 @@ BOOL SortItems(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda mění index každé položky tak, aby odrážela nové pořadí.  
   
- Funkci porovnání `pfnCompare`, má následující formát:  
+ Funkci porovnání *pfnCompare*, má následující formát:  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -3861,12 +3861,12 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 Funkce porovnání musí vracet záporná, pokud první položka by měl předcházet druhý, kladnou hodnotu, pokud první položka postupujte podle druhý nebo nula, pokud dvě položky jsou stejné.  
   
- `lParam1` Parametr je 32bitová hodnota přidružená k první položka, která se porovná a `lParam2` parametr je hodnota přidružená k položce druhý. Jedná se o hodnoty, které byly uvedený v `lParam` členem položky se [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, pokud byly vloženy do seznamu. `lParamSort` Parametr je stejný jako `dwData` hodnotu.  
+ *LParam1* parametr je 32bitová hodnota přidružená k první položka, která se porovná a *lParam2* parametr je hodnota přidružená k položce druhý. Jedná se o hodnoty, které byly uvedený v *lParam* členem položky se [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, pokud byly vloženy do seznamu. *LParamSort* parametr je stejný jako *dwData* hodnotu.  
   
  Tato metoda odesílá [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227) zprávy, která je popsána v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
- Tady je jednoduché porovnání funkci, která má za následek položky řazen podle jejich `lParam` hodnoty.  
+ Tady je jednoduché porovnání funkci, která má za následek položky řazen podle jejich *lParam* hodnoty.  
   
 ```cpp  
 // Sort items by associated lParam
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pfnCompare`|Adresa funkce definované aplikací porovnání.<br /><br /> Operace řazení volá funkci porovnání pokaždé, když je třeba určit relativní pořadí dvě položky seznamu. Porovnání funkce musí být buď je statický člen třídy nebo samostatnou funkci, která není členem žádné třídě.|  
-|[v] `dwData`|Porovnání funkci byl předán aplikace definovanou hodnotu.|  
+|[v] *pfnCompare*|Adresa funkce definované aplikací porovnání.<br /><br /> Operace řazení volá funkci porovnání pokaždé, když je třeba určit relativní pořadí dvě položky seznamu. Porovnání funkce musí být buď je statický člen třídy nebo samostatnou funkci, která není členem žádné třídě.|  
+|[v] *dwData*|Porovnání funkci byl předán aplikace definovanou hodnotu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -3908,14 +3908,14 @@ BOOL SortItemsEx(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda mění index každé položky tak, aby odrážela nové pořadí.  
   
- Funkci porovnání `pfnCompare`, má následující formát:  
+ Funkci porovnání *pfnCompare*, má následující formát:  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-Tato zpráva je jako [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), s výjimkou typu informací, předaný funkci porovnání. V [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), `lParam1` a `lParam2` jsou hodnoty položek k porovnání. V [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), `lParam1` je aktuální index první položky k porovnání a `lParam2` je aktuální index druhý položky. Můžete odeslat [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) zpráva, která má-li získat další informace o položce.  
+Tato zpráva je jako [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), s výjimkou typu informací, předaný funkci porovnání. V [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), *lParam1* a *lParam2* jsou hodnoty položek k porovnání. V [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), *lParam1* je aktuální index první položky k porovnání a *lParam2* je aktuální index druhý položky. Můžete odeslat [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) zpráva, která má-li získat další informace o položce.  
   
  Funkce porovnání musí vracet záporná, pokud první položka by měl předcházet druhý, kladnou hodnotu, pokud první položka postupujte podle druhý nebo nula, pokud dvě položky jsou stejné.  
   
@@ -3977,7 +3977,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Ukazatel [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -4008,14 +4008,14 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
   
 ##  <a name="update"></a>  CListCtrl::Update  
- Vynutí ovládacího prvku zobrazení seznamu chcete překreslit položka určeného `nItem`.  
+ Vynutí ovládacího prvku zobrazení seznamu chcete překreslit položka určeného *nItem*.  
   
 ```  
 BOOL Update(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky aktualizovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367955"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037361"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel – třída
 Implementuje panely pásu karet, která se zobrazí po kliknutí na tlačítko [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -90,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] `pElem`  
+ [v] [out] *pElem*  
  Ukazatel na pásu karet elementu, který chcete přidat do hlavní panel.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -106,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLabel`  
+ *lpszLabel*  
  Určuje řetězec, přidejte do seznamu posledních souborů.  
   
- `nWidth`  
+ *nWindth*  
  Určuje šířku v pixelech panelu seznam posledních souborů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -122,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] `pElem`  
+ [v] [out] *pElem*  
  Ukazatel na pásu karet elementu, který chcete přidat do dolní části na hlavním panelu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -137,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pElem`  
+ *pElem*  
  Ukazatel na pásu karet element mají být přidány do pravé straně hlavního panelu.  
   
- `nWidth`  
+ *nWindth*  
  Určuje šířku v pixelech pravém panelu.  
   
 ### <a name="remarks"></a>Poznámky  

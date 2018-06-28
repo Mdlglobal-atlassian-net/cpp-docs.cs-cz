@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371329"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040698"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask – třída
 `CMFCTasksPaneTask` Třída je pomocná třída, která představuje úlohy pro ovládací prvek podokna úloh ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Objekt úlohy představuje položku ve skupině úloh ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Každý úkol může mít příkaz, který rozhraní provede, když uživatel klikne na úlohy a ikonu, která se zobrazí vlevo od název úlohy.  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Určuje, [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) , ke které patří úkol.  
   
- `lpszName`  
+ *lpszName*  
  Určuje název úlohy.  
   
- `nIcon`  
+ *nIcon*  
  Určuje index image úkolu v seznamu obrázků.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Určuje příkaz ID příkazu, který se spustí, až po kliknutí na úlohu.  
   
- `dwUserData`  
+ *dwUserData*  
  Uživatelská data.  
   
- `hwndTask`  
+ *hwndTask*  
  Určuje popisovač okna úloh.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Pokud `TRUE`, okno úlohy budou automaticky zničena.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Určuje výšku okna úloh.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
  Představuje nadřazeného okna aktuální úlohy.  
   
- [out] `data`  
+ [out] *dat*  
  Objekt typu `CAccessibilityData` který naplněný daty usnadnění aktuálního úkolu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud `data` parametr byl úspěšně vyplněná s daty usnadnění aktuálního úkolu, jinak hodnota `FALSE`.  
+ `TRUE` Pokud *data* parametr byl úspěšně vyplněná s daty usnadnění aktuálního úkolu, jinak hodnota `FALSE`.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

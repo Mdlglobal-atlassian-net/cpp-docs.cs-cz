@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370806"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041978"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage – třída
 Představuje stránku vlastností, která můžete vybrat vlastní barvy v dialogovém okně barvy.  
@@ -91,9 +91,9 @@ void Setup(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `R`|Komponentu red hodnoty RGB.|  
-|[v] `G`|Zelená součást hodnotou.|  
-|[v] `B`|Modré součást hodnotou.|  
+|[v] *R*|Komponentu red hodnoty RGB.|  
+|[v] *G*|Zelená součást hodnotou.|  
+|[v] *B*|Modré součást hodnotou.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda aktualizace aktuální RGB a přidružené HLS (hue, světlost a sytost) Barva hodnoty na stránce vlastností. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metoda volá tuto metodu, pokud rozhraní inicializuje dialogové okno barev nebo stisknutí levé tlačítko. Další informace o `CMFCColorDialog`, najdete v části [CMFCColorDialog třída](../../mfc/reference/cmfccolordialog-class.md).  

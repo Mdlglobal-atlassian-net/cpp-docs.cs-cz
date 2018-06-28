@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370718"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042362"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout – třída
 Určuje, jak jsou ovládací prvky v okně přesunout a po změně velikosti jako uživatel změní velikost okna.  
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hwnd`  
+ *hWnd*  
  Popisovač do okna Přidat.  
   
- `nID`  
+ *nID*  
  ID podřízený ovládací prvek pro přidání.  
   
- `moveSettings`  
+ *moveSettings*  
  Struktura, která popisuje, jak přesunout ovládacího prvku jako změny velikost okna.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Struktura, která popisuje, jak by měla být ovládacího prvku změně velikosti jako změny velikost okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- pHostWnd  
+ *pHostWnd*  
  Ukazatel na okno hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Po funkce vrátí hodnotu, tento parametr obsahuje ohraničující obdélník oblasti rozložení. Toto je výstupní parametr; Vstupní hodnota se přepíše.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hwnd`  
+ *hWnd*  
  Popisovač okna pro ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pHostWnd`  
+ *pHostWnd*  
  Ukazatel na okno hostitele.  
   
- `lpResource`  
+ *lpResource*  
  Ukazatel na vyrovnávací paměť, která obsahuje AFX_DIALOG_LAYOUT prostředek.  
   
- `dwSize`  
+ *dwSize*  
  Velikost vyrovnávací paměti v bajtech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -248,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek je vodorovně přesunuta když uživatel změní velikost okna hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -264,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nXRatio`  
+ *nXRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek je vodorovně přesunuta když uživatel změní velikost okna hostitele.  
   
- `nYRatio`  
+ *nYRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek je svisle přesunuta když uživatel změní velikost okna hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -336,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek je svisle přesunuta když uživatel změní velikost okna hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -352,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
+ *Velikost*  
  Požadovaná velikost pod nějž se nezohledňuje rozložení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -366,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek se změnila velikost vodorovně když uživatel změní velikost okna hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -382,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nXRatio`  
+ *nXRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek se změnila velikost vodorovně když uživatel změní velikost okna hostitele.  
   
- `nYRatio`  
+ *nYRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek je po změně velikosti ve svislém směru když uživatel změní velikost okna hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -453,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Definuje jako procento, jak daleko podřízený ovládací prvek je po změně velikosti ve svislém směru když uživatel změní velikost okna hostitele.  
   
 ### <a name="return-value"></a>Návratová hodnota  

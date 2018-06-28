@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377237"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041708"
 ---
 # <a name="cobject-class"></a>CObject – třída
 Hlavní základní třída pro knihovny Microsoft Foundation Class.  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>Poznámky  
  Výchozí verze je automaticky volána konstruktoru odvozené třídy.  
   
- Pokud je vaše třída serializovatelný (její součástí jsou `IMPLEMENT_SERIAL` makro), pak musí mít výchozí konstruktor (konstruktor bez argumentů) ve vaší deklaraci třídy. Pokud není nutné výchozí konstruktor, deklarovat privátního nebo chráněný "prázdný" konstruktor. Další informace najdete v tématu [pomocí CObject](../../mfc/using-cobject.md).  
+ Pokud je vaše třída serializovatelný (její součástí jsou implement_serial – makro), pak musí mít výchozí konstruktor (konstruktor bez argumentů) ve vaší deklaraci třídy. Pokud není nutné výchozí konstruktor, deklarovat privátního nebo chráněný "prázdný" konstruktor. Další informace najdete v tématu [pomocí CObject](../../mfc/using-cobject.md).  
   
  Standardní C++ výchozí třídy kopie konstruktor nemá kopii člena člena. Přítomnost privátní `CObject` kopírovacího konstruktoru zaručuje chybová zpráva kompilátoru, pokud je konstruktor copy vaší třídy potřebných ale není k dispozici. Proto je nutné zadat kopírovacího konstruktoru, pokud tato možnost vyžaduje, aby třídě.  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *řadič domény*  
  Kontext diagnostiky výpis pro vypsání obvykle `afxDump`.  
   
 ### <a name="remarks"></a>Poznámky  
- Když píšete vlastní třídu, by měly přepsat `Dump` funkce poskytovat diagnostiky pro vy a ostatní uživatelé vaší třídy. Přepsané `Dump` obvykle volá `Dump` funkce její základní třída před tiskem datových členů, které jsou jedinečné pro odvozené třídy. `CObject::Dump` Zobrazí název třídy, pokud používá třídu `IMPLEMENT_DYNAMIC` nebo `IMPLEMENT_SERIAL` makro.  
+ Když píšete vlastní třídu, by měly přepsat `Dump` funkce poskytovat diagnostiky pro vy a ostatní uživatelé vaší třídy. Přepsané `Dump` obvykle volá `Dump` funkce její základní třída před tiskem datových členů, které jsou jedinečné pro odvozené třídy. `CObject::Dump` Zobrazí název třídy, pokud používá třídu `IMPLEMENT_DYNAMIC` nebo implement_serial – makro.  
   
 > [!NOTE]
 >  Vaše `Dump` funkce nesmí tisku znak nového řádku na konci její výstup.  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pClass`  
+ *pClass*  
  Ukazatel na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktura přidružené k vaší `CObject`-odvozené třídy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud objekt odpovídá třídy; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce testy `pClass` zda (1) je objekt pro zadanou třídu nebo (2) je objekt třídy odvozené od pro zadanou třídu. Tato funkce funguje pouze pro třídy deklarovat s [DECLARE_DYNAMIC –](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE –](run-time-object-model-services.md#declare_dyncreate), nebo [declare_serial –](run-time-object-model-services.md#declare_serial) makro.  
+ Tato funkce testy *pClass* zda (1) je objekt pro zadanou třídu nebo (2) je objekt třídy odvozené od pro zadanou třídu. Tato funkce funguje pouze pro třídy deklarovat s [DECLARE_DYNAMIC –](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE –](run-time-object-model-services.md#declare_dyncreate), nebo [declare_serial –](run-time-object-model-services.md#declare_serial) makro.  
   
  Nepoužívejte tuto funkci hojně, protože účinně chrání před funkci polymorfismus C++. Místo toho použijte virtuální funkce.  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  A `CArchive` objektu k serializaci do nebo z.  
   
 ### <a name="remarks"></a>Poznámky  

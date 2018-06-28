@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373576"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042206"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem – třída
 Obsahování pro aktivní dokument implementuje.  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pContainerDoc`  
+ *pContainerDoc*  
  Ukazatel `COleDocument` objekt, který funguje jako kontejner pro aktivní dokument. Tento parametr musí být **NULL** povolit **IMPLEMENT_SERIALIZE**. Obvykle se vytvářejí OLE – položky s jinou hodnotu než **NULL** ukazatel dokumentu.  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCaller`  
+ *pCaller*  
  Ukazatel [CView](../../mfc/reference/cview-class.md) objekt, který odesílá příkaz pro tisk.  
   
- `pInfo`  
+ *pInfo*  
  Ukazatel [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) objekt, který popisuje úlohy k tisku.  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,14 +138,14 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCmdID`  
- Identifikátor provedení příkazu. Musí být ve skupině identifikovaný `pguidCmdGroup`.  
+ *nCmdID*  
+ Identifikátor provedení příkazu. Musí být ve skupině identifikovaný *pguidCmdGroup*.  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  Určuje možnosti provedení příkazu. Ve výchozím nastavení se spustit příkaz bez výzvy pro uživatele. V tématu [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) seznam hodnot.  
   
- `pguidCmdGroup`  
- Jedinečný identifikátor skupiny pro příkaz. Ve výchozím nastavení **NULL**, která určuje skupiny standardní. Příkaz předaná `nCmdID` musí patřit do skupiny.  
+ *pguidCmdGroup*  
+ Jedinečný identifikátor skupiny pro příkaz. Ve výchozím nastavení **NULL**, která určuje skupiny standardní. Příkaz předaná *nCmdID* musí patřit do skupiny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí `S_OK` v případě úspěšného; jinak vrátí jeden z následující kódy chyb.  
@@ -155,14 +155,14 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Došlo k neočekávané chybě.|  
 |**E_FAIL**|Došlo k chybě.|  
 |**E_NOTIMPL**|Označuje MFC samotné pokusí přeložit a odeslat příkaz.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` jinou hodnotu než **NULL** , ale neurčuje skupinu platný příkaz.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` se nerozpoznal jako platný příkaz v pGroup skupiny.|  
-|**OLECMDERR_DISABLED**|Příkaz určený `nCmdID` je zakázána a nelze ho provést.|  
-|**OLECMDERR_NOHELP**|Volající požádali o pomoc na příkaz identifikovaný `nCmdID` , ale je k dispozici žádná nápověda.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* jinou hodnotu než **NULL** , ale neurčuje skupinu platný příkaz.|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* nerozpoznal jako platný příkaz v pGroup skupiny.|  
+|**OLECMDERR_DISABLED**|Příkaz určený *nCmdID* je zakázána a nelze ho provést.|  
+|**OLECMDERR_NOHELP**|Volající požádali o pomoc na příkaz identifikovaný *nCmdID* , ale je k dispozici žádná nápověda.|  
 |**OLECMDERR_CANCELLED**|Uživatel stornoval provádění.|  
   
 ### <a name="remarks"></a>Poznámky  
- `pguidCmdGroup` a `nCmdID` parametry společně jednoznačně příkaz k vyvolání. `nCmdExecOpt` Parametr určuje přesné akci provést.  
+ *PguidCmdGroup* a *nCmdID* parametry společně jednoznačně příkaz k vyvolání. *NCmdExecOpt* parametr určuje přesné akci provést.  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Volání této funkce člen získat ukazatel `IOleDocumentView` rozhraní aktuálně aktivního zobrazení.  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCaller`  
+ *pCaller*  
  Ukazatel [CView](../../mfc/reference/cview-class.md) objekt, který odesílá příkaz pro tisk.  
   
- `pInfo`  
+ *pInfo*  
  Ukazatel [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) objekt, který popisuje úlohy k tisku.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Určuje, zda celý dokument k tisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCaller`  
+ *pCaller*  
  Ukazatel na CView objekt, který odesílá příkaz pro tisk.  
   
- `pInfo`  
+ *pInfo*  
  Ukazatel [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) objekt, který popisuje úlohy k tisku.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Určuje, zda celý dokument k tisku.  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCmdID`  
+ *nCmdID*  
  identifikátor příkazu, která je dotazována pro.  
   
- `pdwStatus`  
+ *pdwStatus*  
  Ukazatel na příznaky vrátí jako výsledek dotazu. Seznam možných hodnot najdete v tématu [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
   
- `pCmdText`  
+ *pCmdText*  
  Ukazatel na [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) struktury, ve kterém k vrácení informací o název a stav pro jeden příkaz. Může být **NULL** indikující, že volající není nutné tyto informace.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Jedinečný identifikátor skupiny příkaz; může být **NULL** určíte standardní skupinu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -277,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCloseOption`  
+ *dwCloseOption*  
  Příznak určující, za jakých okolností je položka OLE uložena, až se obnoví načíst stav. Seznam možných hodnot najdete v tématu [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).  
   
 ### <a name="remarks"></a>Poznámky  

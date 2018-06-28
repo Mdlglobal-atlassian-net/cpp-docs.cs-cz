@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370754"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040711"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI – třída
 Implementuje metodu pro MFC aktualizovat stav objektů uživatelského rozhraní související s `IOleCommandTarget`-řízené funkce vaší aplikace.  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rgCmds`  
+ *rgCmds*  
  Seznam podporovaných příkazů, které jsou přidružené k zadaným identifikátorem GUID. **OLECMD** struktura přidruží příkazy příznaky příkazu.  
   
  *cCmds*  
- Počet příkazy v `rgCmds`.  
+ Počet příkazy v *rgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Ukazatel na identifikátor GUID, který identifikuje sadu příkazů.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bOn`  
+ *Pozvánka*  
  Určuje, zda příkaz přidružené `COleCmdUI` objektu by měla být povolená nebo zakázaná. NonZero umožňuje příkaz; 0 zakáže příkaz.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,14 +113,14 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCheck`  
+ *nZkontrolujte*  
  Zjištění stavu přepnutí zapnout nebo vypnout nastavit hodnotu příkazu. Hodnoty jsou:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |**1**|Příkaz nastaví na hodnotu on.|  
 |**2**|Nastaví příkaz na neurčitou; Stav nelze určit, protože je atribut tohoto příkazu v jak zapnout a vypnout stavů v příslušné výběr.|  
-|Jakákoli jiná hodnota|Nastaví vypnuto příkazu.|  
+|jakákoli jiná hodnota|Nastaví vypnuto příkazu.|  
   
 ##  <a name="settext"></a>  COleCmdUI::SetText  
  Volání této funkce vrátit textový řetězec názvu nebo stavu pro příkaz.  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Ukazatel na text, který se použije příkaz.  
   
 ## <a name="see-also"></a>Viz také  

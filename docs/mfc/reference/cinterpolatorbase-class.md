@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367757"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041270"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase – třída
 Implementuje zpětné volání, která je volána rozhraním API animace, když má k výpočtu novou hodnotu proměnné animace.  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInterpolator`  
+ *pInterpolator*  
  Ukazatel na vlastní interpolator.  
   
- `ppHandler`  
+ *ppHandler*  
  Výstup. Ukazatel na instanci CInterpolatorBase obsahuje po návratu funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Výstup. Aspekty interpolator, které jsou závislé na počáteční hodnota předaný SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Výstup. Aspekty interpolator, které závisí na rychlosti počáteční předaný SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Výstup. Aspekty interpolator, které jsou závislé na dobu trvání předaný SetDuration.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Výstup. Doba trvání přechodu, v sekundách.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `value`  
+ *value*  
  Výstup. Konečná hodnota proměnné na konci přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `offset`  
+ *Posun*  
  Posun od začátku přechodu. Posun je vždy větší než nebo roven nule a menší než doba trvání přechodu. Tato metoda není volána, pokud trvání přechodu je nulová.  
   
- `value`  
+ *value*  
  Výstup. Interpolované hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `offset`  
+ *Posun*  
  Posun od začátku přechodu. Posun je vždy větší než nebo roven nule a menší než nebo rovna trvání přechodu. Tato metoda není volána, pokud trvání přechodu je nulová.  
   
- `velocity`  
+ *rychlosti postupu*  
  Výstup. Rychlosti proměnnou na posunu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInterpolator`  
+ *pInterpolator*  
  Ukazatel na vlastní interpolator.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Doba trvání přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initialValue`  
+ *Počáteční hodnota*  
  Hodnota proměnné na začátku přechodu.  
   
- `initialVelocity`  
+ *initialVelocity*  
  Rychlosti proměnnou na začátku přechodu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

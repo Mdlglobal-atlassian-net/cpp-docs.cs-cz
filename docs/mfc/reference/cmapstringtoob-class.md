@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375768"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042245"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb – třída
 Třídy kolekce slovník, který je přiřazen jedinečný `CString` objekty ke `CObject` ukazatele.  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Určuje členitost přidělení paměti pro rozšíření mapy.  
   
 ### <a name="remarks"></a>Poznámky  
- S růstem mapy jednotek se přidělí paměť `nBlockSize` položky.  
+ S růstem mapy jednotek se přidělí paměť *nBlockSize* položky.  
   
  Následující tabulka uvádí další členské funkce, které jsou podobné **CMapStringToOb:: CMapStringToOb**.  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč, jehož hodnota hash je vypočtena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hashSize`  
+ *hashSize*  
  Počet položek v zatřiďovací tabulce.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Pokud **TRUE**, přidělí zatřiďovací tabulku při inicializaci; v opačném případě je přidělená v tabulce, v případě potřeby.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Určuje klíč řetězec, který identifikuje elementu, který chcete vyhledávat.  
   
- `rValue`  
+ *rValue*  
  Určuje vrácená hodnota z vyhledaných elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Určuje klíč řetězec, který identifikuje elementu, který chcete vyhledávat.  
   
- `rKey`  
+ *rKey*  
  Odkaz na související klíč.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na ukazatel `CObject` objektu; nebo **NULL** Pokud mapy je prázdný nebo `key` je mimo rozsah.  
+ Odkaz na ukazatel `CObject` objektu; nebo **NULL** Pokud mapy je prázdný nebo *klíč* je mimo rozsah.  
   
 ### <a name="remarks"></a>Poznámky  
  Proto je lze použít pouze na levé straně příkazu přiřazení (l hodnota). Pokud neexistuje žádný element mapy se zadaným klíčem, je vytvoření nového elementu.  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Určuje řetězec, který používá pro vyhledávání map.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Určuje řetězec, který je klíč nového elementu.  
   
- `newValue`  
+ *newValue*  
  Určuje, `CObject` ukazatele, který je hodnota nového elementu.  
   
 ### <a name="remarks"></a>Poznámky  

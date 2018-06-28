@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372457"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038074"
 ---
 # <a name="cmutex-class"></a>CMutex – třída
 Představuje "mutex" – na synchronizační objekt, který umožňuje jedno vlákno vzájemně se vylučuje přístupu k prostředku.  
@@ -74,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  Určuje při vytváření vlákna `CMutex` objekt původně má přístup k prostředkům řídí mutex.  
   
- `lpszName`  
- Název `CMutex` objektu. Pokud existuje jiný objekt mutex se stejným názvem, `lpszName` musí zadat, pokud objekt se použije přes hranice procesu. Pokud **NULL**, bude mutex nepojmenované. Pokud název odpovídá existující objekt mutex, konstruktoru vytvoří novou `CMutex` objekt, který odkazuje na objekt mutex s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není mutex, konstrukce se nezdaří.  
+ *lpszName*  
+ Název `CMutex` objektu. Pokud existuje jiný objekt mutex se stejným názvem, *lpszName* musí zadat, pokud objekt se použije přes hranice procesu. Pokud **NULL**, bude mutex nepojmenované. Pokud název odpovídá existující objekt mutex, konstruktoru vytvoří novou `CMutex` objekt, který odkazuje na objekt mutex s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není mutex, konstrukce se nezdaří.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atributy zabezpečení pro objekt mutex. Úplný popis tuto strukturu, najdete v části [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) ve Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  

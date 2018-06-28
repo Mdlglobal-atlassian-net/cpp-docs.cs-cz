@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369148"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040724"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager – třída
 Vrstva mezi odvozené visual správci a rozhraní API motiv systému Windows.  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník políčko.  
   
- [v] `bHighlighted`  
+ [v] *bHighlighted*  
  Určuje, zda je označený políčko.  
   
- [v] `nState`  
+ [v] *nInformace*  
  0 pro není zaškrtnuto, 1 pro zaškrtnuté normální  
   
  2 pro smíšený normální.  
   
- [v] `bEnabled`  
+ [v] *bEnabled*  
  Určuje, zda je políčko povoleno.  
   
- [v] `bPressed`  
+ [v] *bPressed*  
  Určuje, zda je políčko stisknutí tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnoty `nState` odpovídají následující styly zaškrtávací políčko.  
+ Hodnoty *nInformace* odpovídají následující styly zaškrtávací políčko.  
   
 |nInformace|Styl zaškrtávací políčko|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník okraj pole se seznamem.  
   
- [v] `bDisabled`  
+ [v] *bDisabled*  
  Určuje, zda je zakázána okraj pole se seznamem.  
   
- [v] `bIsDropped`  
+ [v] *bIsDropped*  
  Určuje, jestli je okraj pole se seznamem zahodit.  
   
- [v] `bIsHighlighted`  
+ [v] *bIsHighlighted*  
  Určuje, zda je označený okraj pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `pDC`|Ukazatel na kontextu zařízení.|  
-|[v] `rect`|Ohraničující obdélník rozevírací tlačítko pole se seznamem.|  
-|[v] `bDisabled`|Určuje, zda je vypnuté rozevírací tlačítko pole se seznamem.|  
-|[v] `bIsDropped`|Určuje, zda je tlačítko rozevírací pole se seznamem vyřazen.|  
-|[v] `bIsHighlighted`|Určuje, zda je označený rozevírací tlačítko pole se seznamem.|  
+|[v] *primárního řadiče domény*|Ukazatel na kontextu zařízení.|  
+|[v] *Rect –*|Ohraničující obdélník rozevírací tlačítko pole se seznamem.|  
+|[v] *bDisabled*|Určuje, zda je vypnuté rozevírací tlačítko pole se seznamem.|  
+|[v] *bIsDropped*|Určuje, zda je tlačítko rozevírací pole se seznamem vyřazen.|  
+|[v] *bIsHighlighted*|Určuje, zda je označený rozevírací tlačítko pole se seznamem.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník tlačítko.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel [CMFCButton třída](../../mfc/reference/cmfcbutton-class.md) objektu k vykreslení.  
   
- [v] `uiState`  
- Ignorovat. Stav je převzat ze `pButton`.  
+ [v] *uiState*  
+ Ignorovat. Stav je převzat ze *pButton*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud je povoleno rozhraní API motiv; v opačném případě `FALSE`.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník přepínač.  
   
- [v] `bHighlighted`  
+ [v] *bHighlighted*  
  Určuje, zda je označený přepínač.  
   
- [v] `bChecked`  
+ [v] *bChecked*  
  Určuje, jestli je zaškrtnuté přepínač.  
   
- [v] `bEnabled`  
+ [v] *bEnabled*  
  Určuje, zda je povoleno přepínač.  
   
- [v] `bPressed`  
+ [v] *bPressed*  
  Určuje, zda je stisknutí přepínač.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pStatusBar`  
+ [v] *pStatusBar*  
  Ukazatel na stavovém řádku. Tato hodnota je ignorována.  
   
- [v] `rectProgress`  
- Ohraničující obdélník indikátoru průběhu ve `pDC` souřadnice.  
+ [v] *rectProgress*  
+ Ohraničující obdélník indikátoru průběhu ve *primárního řadiče domény* souřadnice.  
   
- [v] `nProgressTotal`  
+ [v] *nProgressTotal*  
  Hodnota celkový průběh.  
   
- [v] `nProgressCurr`  
+ [v] *nProgressCurr*  
  Aktuální hodnota průběhu.  
   
- [v] `clrBar`  
+ [v] *clrBar*  
  Počáteční barvu. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy, můžete tyto informace použít pro barevné přechody.  
   
- [v] `clrProgressBarDest`  
+ [v] *clrProgressBarDest*  
  Koncová barva. `CMFCBaseVisualManager` to bude ignorovat. Odvozené třídy, můžete tyto informace použít pro barevné přechody.  
   
- [v] `clrProgressText`  
+ [v] *clrProgressText*  
  Barva textu v průběhu. `CMFCBaseVisualManager` to bude ignorovat. Barva textu je definována `afxGlobalData.clrBtnText`.  
   
- [v] `bProgressText`  
+ [v] *bProgressText*  
  Určuje, jestli chcete-li zobrazit průběh text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `pBar`  
+ [v] *pBar*  
  Ukazatel na podokno vykreslovat jejichž pozadí.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Ohraničující obdélník oblasti, aby byla vyplněna.  
   
 ### <a name="return-value"></a>Návratová hodnota  

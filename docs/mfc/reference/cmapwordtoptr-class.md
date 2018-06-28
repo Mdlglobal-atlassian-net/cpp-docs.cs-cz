@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c20de761f91f304c1d7684dbd19a03c0b8efa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 510f0416686c981682236f6d6c05ae761fe8230d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366991"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041727"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr – třída
 Podporuje mapy neplatné ukazatele s klíči 16bitové slova.  
@@ -61,7 +61,7 @@ class CMapWordToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Členové  
- Členské funkce `CMapWordToPtr` jsou podobné funkce člena třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti, můžete použít `CMapStringToOb` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CObject` ukazatel jako parametr funkce nebo vrací hodnotu, nahraďte ukazatel na `void`. Po zobrazení `CString` nebo **const** ukazatel na `char` jako parametr funkce nebo vrací hodnotu, nahraďte **WORD**.  
+ Členské funkce `CMapWordToPtr` jsou podobné funkce člena třídy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Z důvodu této podobnosti, můžete použít `CMapStringToOb` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CObject` ukazatel jako parametr funkce nebo vrací hodnotu, nahraďte ukazatel na **void**. Po zobrazení `CString` nebo **const** ukazatel na **char** jako parametr funkce nebo vrací hodnotu, nahraďte **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

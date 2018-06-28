@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8dd962a06d6c7edadcdd029bd83d44b251aec8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45e0499297c814e4a214962bc2f51404960a8c38
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377736"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039216"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl – třída
 Zapouzdřuje funkce ovládací prvek měsíční kalendář.  
@@ -226,19 +226,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalendář. V tématu [styly ovládacího prvku měsíční kalendář](http://msdn.microsoft.com/library/windows/desktop/bb760919) ve Windows SDK pro další informace o stylů.  
   
- `rect`  
+ *Rect –*  
  Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.  
   
- `pt`  
+ *PT*  
  Odkaz na [bodu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktura, která identifikuje umístění ovládací prvek měsíční kalendář.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je okno nadřazeného prvku měsíční kalendář. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku měsíční kalendář  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -251,11 +251,11 @@ virtual BOOL Create(
   
 2.  Volání této funkce člen, který vytvoří ovládací prvek měsíční kalendář a připojí jej k `CMonthCalCtrl` objektu.  
   
- Při volání **vytvořit**, běžné ovládací prvky jsou inicializovány. Verze **vytvořit** jste volání Určuje, jak je velikost:  
+ Při volání `Create`, běžné ovládací prvky jsou inicializovány. Verze `Create` můžete volání Určuje, jak je velikost:  
   
--   Pokud chcete, aby MFC automaticky velikost ovládacího prvku na jeden měsíc, volání přepsání, které používá `pt` parametr.  
+-   Pokud chcete, aby MFC automaticky velikost ovládacího prvku na jeden měsíc, volání přepsání, které používá *pt* parametr.  
   
--   Chcete-li velikost ovládacího prvku, volejte přepsání této funkce, která používá `rect` parametr.  
+-   Chcete-li velikost ovládacího prvku, volejte přepsání této funkce, která používá *Rect –* parametr.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] `pmcGridInfo`|Ukazatel na [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) struktura, která přijímá informace o ovládacího prvku kalendář aktuálního měsíce. Volající zodpovídá za přidělování a inicializace tuto strukturu.|  
+|[out] *pmcGridInfo*|Ukazatel na [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) struktura, která přijímá informace o ovládacího prvku kalendář aktuálního měsíce. Volající zodpovídá za přidělování a inicializace tuto strukturu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -331,15 +331,15 @@ CALID GetCalID() const;
  Tato metoda odesílá [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) zprávy, která je popsána v sadě Windows SDK.  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
- Načte barva oblast v měsíci v ovládacím prvku určeného kalendář `nRegion`.  
+ Načte barva oblast v měsíci v ovládacím prvku určeného kalendář *nRegion*.  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRegion`  
- Oblast prvku měsíční kalendář, ze kterého je načíst barvu. Seznam hodnot, najdete v článku `nRegion` parametr [setcolor –](#setcolor).  
+ *nRegion*  
+ Oblast prvku měsíční kalendář, ze kterého je načíst barvu. Seznam hodnot, najdete v článku *nRegion* parametr [setcolor –](#setcolor).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnota, která určuje barvu přidružené část ovládací prvek měsíční kalendář, pokud bylo úspěšné. Tato funkce člena, jinak vrátí hodnotu -1.  
@@ -384,10 +384,10 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refDateTime`  
+ *refDateTime*  
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu. Přijme aktuální čas.  
   
- `pDateTime`  
+ *pDateTime*  
  Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude přijímat informace o aktuálně vybraném datu. Tento parametr musí být platná adresa a nemůže být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -480,7 +480,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRect`  
+ *pRect*  
  Ukazatel [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude přijímat ohraničující obdélník informace. Tento parametr musí být platná adresa a nemůže být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -523,19 +523,19 @@ int GetMonthRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refMinRange`  
+ *refMinRange*  
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt obsahující minimální povolené datum.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Odkaz na `COleDateTime` nebo `CTime` objekt obsahující maximální povolené datum.  
   
- `pMinRange`  
+ *pMinRange*  
  Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ukazatel na `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
   
- `dwFlags`  
+ *dwFlags*  
  Hodnota, která určuje obor omezení rozsahu mají být načteny. Tato hodnota musí mít jednu z následujících akcí.  
   
 |Hodnota|Význam|  
@@ -544,7 +544,7 @@ int GetMonthRange(
 |GMR_VISIBLE|Zahrnout pouze měsíců, které jsou zcela zobrazeny.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celé číslo, které představuje rozsah, v měsících, předané dvě omezení indikován `refMinRange` a `refMaxRange` ve verzích první a druhý nebo `pMinRange` a `pMaxRange` ve třetí verzi.  
+ Celé číslo, které představuje rozsah, v měsících, předané dvě omezení indikován *refMinRange* a *refMaxRange* ve verzích první a druhý nebo *pMinRange* a *pMaxRange* ve třetí verzi.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), jak je popsáno v sadě Windows SDK. Implementace MFC na `GetMonthRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
@@ -570,10 +570,10 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMinRange`  
+ *pMinRange*  
  Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující datum na nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -581,8 +581,8 @@ DWORD GetRange(
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|GDTR_MAX|Maximální limit je nastaven pro ovládací prvek; `pMaxRange` je platný a obsahuje informace o příslušných datu.|  
-|GDTR_MIN|Minimální limit je nastaven pro ovládací prvek; `pMinRange` je platný a obsahuje informace o příslušných datu.|  
+|GDTR_MAX|Maximální limit je nastaven pro ovládací prvek; *pMaxRange* platný a obsahuje informace o příslušných datu.|  
+|GDTR_MIN|Minimální limit je nastaven pro ovládací prvek; *pMinRange* platný a obsahuje informace o příslušných datu.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování zprávy Win32 [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), jak je popsáno v sadě Windows SDK. Implementace MFC na `GetRange`, můžete zadat `COleDateTime` využití, `CTime` využití, nebo `SYSTEMTIME` struktury využití.  
@@ -608,16 +608,16 @@ BOOL GetSelRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refMinRange`  
+ *refMinRange*  
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt obsahující minimální povolené datum.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Odkaz na `COleDateTime` nebo `CTime` objekt obsahující maximální povolené datum.  
   
- `pMinRange`  
+ *pMinRange*  
  Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ukazatel na `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -638,10 +638,10 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refDateTime`  
+ *refDateTime*  
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje po aktuálním dni.  
   
- `pDateTime`  
+ *pDateTime*  
  Ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude přijímat informace o datu. Tento parametr musí být platná adresa a nemůže být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -733,10 +733,10 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `cxyBorder`|Šířka ohraničení v pixelech.|  
+|[v] *cxyBorder*|Šířka ohraničení v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda bude úspěšná, šířka ohraničení nastavená na `cxyBorder` parametr. Jinak je šířka ohraničení resetovat na výchozí hodnotu, která je zadána aktuální [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud se nepoužívají motivů.  
+ Pokud tato metoda bude úspěšná, šířka ohraničení nastavená na *cxyBorder* parametr. Jinak je šířka ohraničení resetovat na výchozí hodnotu, která je zadána aktuální [motiv](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), nebo nula, pokud se nepoužívají motivů.  
   
  Tato metoda odesílá [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) zprávy, která je popsána v sadě Windows SDK.  
   
@@ -773,13 +773,13 @@ BOOL SetCalID(CALID calid);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `calid`|Jeden z [kalendáře identifikátor](http://msdn.microsoft.com/library/windows/desktop/dd317732) konstanty.|  
+|[v] *ID_kal*|Jeden z [kalendáře identifikátor](http://msdn.microsoft.com/library/windows/desktop/dd317732) konstanty.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje identifikátor kalendáře kalendář oblast, například Gregoriánský (lokalizovaný), japonština nebo hidžra kalendáře. Použití `SetCalID` metodu pro zobrazení kalendáře, která je zadána `calid` parametru národního prostředí, který obsahuje kalendáře je nainstalován ve vašem počítači.  
+ Určuje identifikátor kalendáře kalendář oblast, například Gregoriánský (lokalizovaný), japonština nebo hidžra kalendáře. Použití `SetCalID` metodu pro zobrazení kalendáře, která je zadána *ID_kal* parametru národního prostředí, který obsahuje kalendáře je nainstalován ve vašem počítači.  
   
  Tato metoda odesílá [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) zprávy, která je popsána v sadě Windows SDK.  
   
@@ -816,7 +816,7 @@ COLORREF SetColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRegion`  
+ *nRegion*  
  Celočíselná hodnota určující jakou barvu kalendáře měsíc nastavit. Tato hodnota může být jedna z následujících akcí.  
   
 |Hodnota|Význam|  
@@ -828,7 +828,7 @@ COLORREF SetColor(
 |MCSC_TITLETEXT|Barva použitá k zobrazení textu v nadpisu kalendáře.|  
 |MCSC_TRAILINGTEXT|Barva použitá k zobrazení textu záhlaví a koncové den. Úvodní a koncové dny jsou dny z předešlých a následných měsíců, které se zobrazují na aktuálním kalendáři.|  
   
- `ref`  
+ *ref*  
  A **COLORREF** hodnotu pro nové nastavení barvu pro zadaný část ovládací prvek měsíční kalendář.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `dwNewView`|Jeden z následujících hodnot, která určuje měsíční, roční, desetiletí nebo století zobrazení.<br /><br /> MCMV_MONTH: Měsíční zobrazení<br /><br /> MCMV_YEAR: Zobrazení pro roční<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|  
+|[v] *dwNewView*|Jeden z následujících hodnot, která určuje měsíční, roční, desetiletí nebo století zobrazení.<br /><br /> MCMV_MONTH: Měsíční zobrazení<br /><br /> MCMV_YEAR: Zobrazení pro roční<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -869,10 +869,10 @@ BOOL SetCurSel(const CTime& refDateTime);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refDateTime`  
+ *refDateTime*  
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje ovládacího prvku Kalendář aktuálně vybraném měsíci.  
   
- `pDateTime`  
+ *pDateTime*  
  Ukazatel na [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která obsahuje data nastavit jako aktuální výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -895,9 +895,9 @@ BOOL SetDayState(
   
 ### <a name="parameters"></a>Parametry  
  *nMonths*  
- Hodnotu, která určuje, kolik prvky jsou v poli, která `pStates` odkazuje na.  
+ Hodnotu, která určuje, kolik prvky jsou v poli, která *pStates* odkazuje na.  
   
- `pStates`  
+ *pStates*  
  Ukazatel [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) pole hodnot, které definují, jak bude ovládací prvek měsíční kalendář kreslení každý den v jeho zobrazení. **MONTHDAYSTATE** datový typ je bit pole, kde každý bit (1 až 31) představuje stav den v měsíci. Pokud je bit na, zobrazí se odpovídající den v bold; v opačném případě se bude zobrazovat s žádné zvýraznění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -955,7 +955,7 @@ BOOL SetMaxSelCount(int nMax);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMax`  
+ *nMax*  
  Hodnota, která bude nastavena pro představují maximální počet dní volitelný.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1027,10 +1027,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMinRange`  
+ *pMinRange*  
  Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ukazatel `COleDateTime` objekt, `CTime` objekt, nebo `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1062,10 +1062,10 @@ BOOL SetSelRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMinRange`  
+ *pMinRange*  
  Ukazatel na `COleDateTime` objekt, `CTime` objekt, nebo [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura obsahující data na nejnižší konec rozsahu.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Ukazatel `COleDateTime` objekt, `CTime` objekt, nebo `SYSTEMTIME` struktura obsahující datum na nejvyšší konec rozsahu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1084,10 +1084,10 @@ void SetToday(const CTime* pDateTime);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refDateTime`  
+ *refDateTime*  
  Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje aktuální datum.  
   
- `pDateTime`  
+ *pDateTime*  
  V druhé verzi ukazatel na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt obsahující informace o aktuálním datem. Ve třetí verzi ukazatel [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která obsahuje informace o aktuálním datem.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1117,7 +1117,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRepaint`  
+ *bRepaint*  
  Určuje, zda ovládacího prvku překreslen. Ve výchozím nastavení **TRUE**. Pokud **FALSE**, dojde k žádné překreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1137,13 +1137,13 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která definuje obdélníku, která obsahuje požadovanou hodnotu v kalendáři.|  
+|[v] *lprect –*|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která definuje obdélníku, která obsahuje požadovanou hodnotu v kalendáři.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která definuje obdélníku, jejíž aktuální velikost je menší než nebo rovna rámeček definované `lpRect` parametr.  
+ Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která definuje obdélníku, jejíž aktuální velikost je menší než nebo rovna rámeček definované *lprect –* parametr.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vypočítá, kolik kalendáře můžete začlenit v obdélníku určeného `lpRect` parametr a potom se vrátí nejmenší obdélníku, která může obsahovat tento počet kalendáře. V důsledku toho tato metoda zmenší zadaný rámeček přesně podle požadovaný počet kalendáře.  
+ Tato metoda vypočítá, kolik kalendáře můžete začlenit v obdélníku určeného *lprect –* parametr a potom se vrátí nejmenší obdélníku, která může obsahovat tento počet kalendáře. V důsledku toho tato metoda zmenší zadaný rámeček přesně podle požadovaný počet kalendáře.  
   
  Tato metoda odesílá [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) zprávy, která je popsána v sadě Windows SDK.  
   

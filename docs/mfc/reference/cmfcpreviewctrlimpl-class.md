@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370409"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040074"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl – třída
 Tato třída implementuje okno, které je umístěn na hostitelské okno poskytuje prostředí pro verzi Preview formátováním.  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
+ *hWndParent*  
  Popisovač pro okno hostitele poskytl prostředí pro verzi Preview formátováním.  
   
- `prc`  
+ *ČLR*  
  Určuje počáteční velikost a umístění okna.  
   
- `pContext`  
+ *pContext*  
  Ukazatel na vytvoření kontextu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro malování.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDocument`  
+ *pDocument*  
  Ukazatel na implementaci dokumentu.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
+ *hWndParent*  
  Popisovač do nového nadřazeného okna.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clrBack`  
+ *clrBack*  
  Barva pozadí z okna náhledu.  
   
- `clrText`  
+ *clrText*  
  Barva textu z okna náhledu.  
   
- `plf`  
+ *PLF*  
  Písmo použité k zobrazení textu v podokně náhledu. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prc`  
+ *ČLR*  
  Určuje nové velikost a umístění ovládacího prvku preview.  
   
- `bRedraw`  
+ *bRedraw*  
  Určuje, zda by měl být překreslen ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  

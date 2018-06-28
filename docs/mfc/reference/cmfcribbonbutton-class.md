@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376415"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040035"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton – třída
 `CMFCRibbonButton` Třída implementuje tlačítka, který můžete umístit na pásu karet panelu prvky, jako jsou například panelů, panely nástrojů Rychlý přístup a místní nabídky.  
@@ -261,10 +261,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pSubItem`  
+ [v] *pSubItem*  
  Určuje ukazatel na nové elementu, který chcete přidat.  
   
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index, pro kterou chcete přidat element do pole položek nabídky tlačítka; Chcete-li přidat element na konci tohoto pole položky nabídky hodnotu -1.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
@@ -318,19 +318,19 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  Určuje ID příkazového tlačítka.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Určuje textový popisek tlačítka.  
   
- [v] `nSmallImageIndex`  
+ [v] *nSmallImageIndex*  
  Určuje indexem malý obrázek na tlačítko v seznamu obrázků nadřazené kategorie.  
   
- [v] `nLargeImageIndex`  
+ [v] *nLargeImageIndex*  
  Určuje indexem velký obrázek na tlačítko v seznamu obrázků nadřazené kategorie.  
   
- [v] `hIcon`  
+ [v] *hIcon*  
  Určuje popisovač pro ikonu, která aplikace bude používat jako obrázek na tlačítko.  
   
 ### <a name="example"></a>Příklad  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `bCalcOnly`  
+ [v] *primárního řadiče domény*  
+ [v] *bCalcOnly*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -366,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `type`  
- [v] `rectImage`  
+ [v] *primárního řadiče domény*  
+ [v] *typu*  
+ [v] *rectImage*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -385,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `strText`  
- [v] `rectText`  
- [v] `uiDTFlags`  
- [v] `clrText`  
+ [v] *primárního řadiče domény*  
+ [v] *strText*  
+ [v] *rectText*  
+ [v] *uiDTFlags*  
+ [v] *clrText*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -403,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  Určuje ID příkazu, který položky místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index založený na nule dílčí položky, které je přidružené `uiID`. -1, pokud neexistuje žádná dílčí položka.  
+ Index založený na nule dílčí položky, které je přidružené *uiID*. -1, pokud neexistuje žádná dílčí položka.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -428,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -442,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bLargeIcon`  
+ [v] *bLargeIcon*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -456,7 +456,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bLargeImage`  
+ [v] *bLargeImage*  
  Pokud `TRUE`, vrátí index bitové kopie v seznamu obrázků, který obsahuje velkých obrázků; v opačném případě vrátí index bitové kopie v seznamu obrázků, který obsahuje malé bitových kopií.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -470,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `type`  
+ [v] *typu*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -484,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -519,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -751,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -763,7 +763,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Určuje pozici kliknutí myší.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -777,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -789,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -801,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -822,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index založený na nule položky nabídky, kterou chcete odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud zadaná položka bude po odebrání úspěšně; v opačném případě `FALSE` Pokud `nIndex` je záporný nebo větší než počet položek nabídky v rozbalovací nabídce.  
+ `TRUE` Pokud zadaná položka bude po odebrání úspěšně; v opačném případě `FALSE` Pokud *nIndex* je záporný nebo větší než počet položek nabídky v rozbalovací nabídce.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
  Nastaví data usnadnění pro tlačítko pásu karet.  
@@ -838,10 +838,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  Nadřazené okno pro element pásu karet.  
   
- `data`  
+ *data*  
  Usnadnění data pro element pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -857,7 +857,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  Pokud `TRUE`, na tlačítko zobrazí velký obrázek. Tlačítko zobrazí, jinak hodnota malý obrázek.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
@@ -868,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  Pokud `TRUE`, tlačítko možné provést příkaz jeho výchozí. Pokud `FALSE`, tlačítko není možné provést příkaz jeho výchozí.  
   
 ### <a name="remarks"></a>Poznámky  
- `bSet` týká se pouze pokud má tlačítko nabídky. Pokud `bSet` je `TRUE`, tlačítko možné provést příkaz jeho výchozí a přiřazené místní nabídky se zobrazí, pouze když uživatel klikne na šipku na pravé straně tlačítko. Jinak tlačítko není možné provést příkaz jeho výchozí a v místní nabídce se zobrazí, bez ohledu na to, které oblasti tlačítka uživatel klikne na.  
+ *bSet* je relevantní, jenom když má tlačítko nabídky. Pokud *bSet* je `TRUE`, tlačítko možné provést příkaz jeho výchozí a přiřazené místní nabídky se zobrazí, pouze když uživatel klikne na šipku na pravé straně tlačítko. Jinak tlačítko není možné provést příkaz jeho výchozí a v místní nabídce se zobrazí, bez ohledu na to, které oblasti tlačítka uživatel klikne na.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -882,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -896,10 +896,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index bitové kopie.  
   
- [v] `bLargeImage`  
+ [v] *bLargeImage*  
  Pokud `TRUE`, se zadaným indexem odkazuje na seznam velkých obrázků. Index, jinak hodnota odkazuje na seznamu obrázků na malá.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
@@ -918,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hMenu`  
+ *hMenu*  
  Obslužná rutina nabídky systému Windows.  
   
- `bIsDefaultCommand`  
+ *bIsDefaultCommand*  
  Pokud `TRUE`, tlačítko možné provést příkaz jeho výchozí; v opačném případě na tlačítko zobrazí místní nabídky.  
   
- `bRightAlign`  
+ *bRightAlign*  
  Pokud `TRUE`, je v nabídce vpravo zarovnaný. V nabídce, jinak je zarovnaný doleva.  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  Nabídky prostředku.  
   
 ### <a name="remarks"></a>Poznámky  
- Když aplikace v nabídce přiřadí tlačítko, zobrazí tlačítko šipka na jeho pravé straně. Pokud `bIsDefaultCommand` je `TRUE`, v nabídce se zobrazí, pouze když uživatel klikne na šipku. Pokud uživatel klikne na tlačítko, je jeho výchozí příkaz spustit. Pokud `bIsDefaultCommand` je `FALSE`, klepnutím na libovolné místo na tlačítko se zobrazí v nabídce.  
+ Když aplikace v nabídce přiřadí tlačítko, zobrazí tlačítko šipka na jeho pravé straně. Pokud *bIsDefaultCommand* je `TRUE`, v nabídce se zobrazí, pouze když uživatel klikne na šipku. Pokud uživatel klikne na tlačítko, je jeho výchozí příkaz spustit. Pokud *bIsDefaultCommand* je `FALSE`, klepnutím na libovolné místo na tlačítko se zobrazí v nabídce.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -941,7 +941,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -953,7 +953,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  Pokud `TRUE`, je v nabídce vpravo zarovnaný. Jinak je v nabídce vlevo zarovnaný  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
@@ -964,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
   
 ### <a name="remarks"></a>Poznámky  
   

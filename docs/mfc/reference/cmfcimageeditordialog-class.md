@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376246"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040766"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog – třída
 `CMFCImageEditorDialog` Třída podporuje dialogové okno editor bitové kopie.  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Ukazatel na bitovou kopii.  
   
- `pParent`  
+ *pParent*  
  Ukazatel do nadřazeného okna aktuální dialogového okna editoru bitové kopie.  
   
- `nBitsPixel`  
- Počet bitů používá k reprezentování barvu jednoho pixelů, která je také označována jako hloubka barev.  Pokud `nBitsPixel` parametr -1, hloubky barev je odvozený od bitovou kopii určeného `pBitmap` parametr. Výchozí hodnota je -1.  
+ *nBitsPixel*  
+ Počet bitů používá k reprezentování barvu jednoho pixelů, která je také označována jako hloubka barev.  Pokud *nBitsPixel* parametr -1, hloubky barev je odvozený od bitovou kopii určeného *pBitmap* parametr. Výchozí hodnota je -1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  K úpravě bitovou kopii, předejte ukazatel bitovou kopii na `CMFCImageEditorDialog` konstruktor. Potom zavolejte `DoModal` metoda otevřete modální dialogové okno. Když `DoModal` metoda vrací výsledek, obsahuje bitovou mapu novou bitovou kopii.  

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375921"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039203"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd – třída
 `CMultiPaneFrameWnd` Rozšiřuje třídu [CPaneFrameWnd třída](../../mfc/reference/cpaneframewnd-class.md). Může podporovat více podoken. Místo jedné embedded popisovač pro ovládacích pruhů `CMultiPaneFrameWnd` obsahuje [CPaneContainerManager třída](../../mfc/reference/cpanecontainermanager-class.md) objekt, který umožňuje uživatelům ukotvení jeden `CMultiPaneFrameWnd` do druhého a dynamicky vytvořit více plovoucí, – záložkami Windows.  
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -200,7 +200,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -237,11 +237,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndToDock`  
- [v] `ptMouse`  
- [v] `rectResult`  
- [v] `bDrawTab`  
- [v] `ppTargetBar`  
+ [v] *pWndToDock*  
+ [v] *ptMouse*  
+ [v] *rectResult*  
+ [v] *bDrawTab*  
+ [v] *ppTargetBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -264,7 +264,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDockingBar`  
+ [v] *pDockingBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDockedFrame`  
- [v] `dockMethod`  
+ [v] *pDockedFrame*  
+ [v] *dockMethod*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -322,7 +322,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDockedBar`  
+ [v] *pDockedBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -336,7 +336,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -419,9 +419,9 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pControlBar`  
- [v] `pTarget`  
- [v] `bAfter`  
+ [v] *pControlBar*  
+ [v] *pTarget*  
+ [v] *bAfter*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszProfileName`  
- [v] `uiID`  
+ [v] *lpszProfileName*  
+ [v] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
- [v] `bShow`  
+ [v] *pBar*  
+ [v] *bShow*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -506,9 +506,9 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
- [v] `nSensitivity`  
- [v] `bCheckVisibility`  
+ [v] *bodu*  
+ [v] *nSensitivity*  
+ [v] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -534,9 +534,9 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
- [v] `bDestroy`  
- [v] `bNoDelayedDestroy`  
+ [v] *pBar*  
+ [v] *bDestroy*  
+ [v] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBarOrg`  
- [v] `pBarReplaceWith`  
+ [v] *pBarOrg*  
+ [v] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszProfileName`  
- [v] `uiID`  
+ [v] *lpszProfileName*  
+ [v] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -580,7 +580,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ar`  
+ [v] *ar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -592,7 +592,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDockManager`  
+ [v] *pDockManager*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -604,7 +604,7 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hwnd`  
+ [v] *hwnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -619,9 +619,9 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `preDockState`  
- [v] `pBarToDock`  
- [v] `dockMethod`  
+ [v] *preDockState*  
+ [v] *pBarToDock*  
+ [v] *dockMethod*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -635,7 +635,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDockingBar`  
- [v] `pTabbedBar`  
+ [v] *pDockingBar*  
+ [v] *pTabbedBar*  
   
 ### <a name="remarks"></a>Poznámky  
   

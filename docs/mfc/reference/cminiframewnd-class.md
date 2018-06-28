@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378379"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038579"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd – třída
 Představuje okně s rámečkem poloviční výškou zpravidla se zobrazí kolem plovoucí panely nástrojů.  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpClassName`  
+ *lpClassName*  
  Bodů na řetězec znaků ukončené hodnotou null, který názvy třídy Windows. Název třídy může být jakýkoli název zaregistrována na globální [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) funkce. Pokud **NULL**, třídu okna se zaregistruje pro vás rámcem. MFC poskytuje výchozí třídu následující styly a atributy:  
   
 -   Nastaví styl bit **CS_DBLCLKS**, které odesílá poklikejte na zprávy do okna postupu při poklepání myší.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Nastaví okna na výchozí velikost a umístění, jak je uvedeno v systému Windows.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který obsahuje název okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl atributů okna. Může jít o standardní okno Styly a jeden nebo více následujících speciální stylů:  
   
 - **MFS_MOVEFRAME** umožňuje zkrácená rámce okna přesunování kliknutím na libovolné okno, nikoli pouze záhlaví.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  V tématu [CWnd::Create](../../mfc/reference/cwnd-class.md#create) popis možné okno Styl hodnoty. Je typické používanou ke okna s rámečkem zkrácená **ws_popup –&#124;ws_caption –&#124;ws_sysmenu –**.  
   
- `rect`  
+ *Rect –*  
  A `RECT` struktura určení požadované dimenzí okna.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Body do nadřazeného okna. Použití **NULL** pro systém windows nejvyšší úrovně.  
   
- `nID`  
+ *nID*  
  Jako podřízeného okna při vytváření okna zkrácená rámečku, toto je identifikátor podřízeného ovládacího prvku; jinak 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
+ *dwExStyle*  
  Určuje styl rozšířené `CMiniFrameWnd` vytváří. Použít libovolný z [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) do okna.  
   
- `lpClassName`  
+ *lpClassName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který pojmenuje třídě Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název zaregistrována na globální [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) funkce nebo některé názvy předdefinované třída ovládacích prvků. Nesmí být **NULL**.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Odkazuje na řetězec znaků ukončené hodnotou null, který obsahuje název okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl atributů okna. V tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [CWnd::Create](../../mfc/reference/cwnd-class.md#create) popis možných hodnot.  
   
- `rect`  
- Velikost a umístění okna, v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Velikost a umístění okna, v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Body v nadřazeném okně objektu.  
   
- `nID`  
+ *nID*  
  Identifikátor podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  Přepsání Další **na *** zpráva* zprávy obslužné rutiny přidat další funkce odvozené třídy.  
   
- Pokud **ws_visible –** je zadána styl, systém Windows odešle okno všechny zprávy pro aktivaci a zobrazí okno potřeba. Pokud styl okna určuje záhlaví, název okna na kterou odkazuje `lpszWindowName` parametr se zobrazí v záhlaví.  
+ Pokud **ws_visible –** je zadána styl, systém Windows odešle okno všechny zprávy pro aktivaci a zobrazí okno potřeba. Pokud styl okna určuje záhlaví, název okna na kterou odkazuje *lpszWindowName* parametr se zobrazí v záhlaví.  
   
- `dwStyle` Parametr může být libovolnou kombinací [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ *DwStyle* parametr může být libovolnou kombinací [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  Stará sada nástrojů windows palety styl již nejsou podporovány. Původní styl, který nemá tlačítko Zavřít "X", byl podporován při spuštění aplikace knihovny MFC v dřívějších verzích systému Windows, ale už není podporovaná ve Visual C++ .NET. Pouze nové `WS_EX_TOOLWINDOW` styl se teď podporuje; popis tohoto stylu naleznete v tématu [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   

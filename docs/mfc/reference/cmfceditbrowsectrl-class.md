@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369320"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037971"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl – třída
 `CMFCEditBrowseCtrl` Třída podporuje řízení procházet úpravy, které je upravitelné textové pole, které volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládacího prvku provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeče souboru nebo složky prohlížeče.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Zajistit vlastní obrázek pro tlačítko procházení volání [SetBrowseButtonImage](#setbrowsebuttonimage) metoda nebo přepsání [OnDrawBrowseButton](#ondrawbrowsebutton) metoda.  
   
-7.  Chcete-li na tlačítko Procházet odebrat z ovládacího prvku úprav procházet, volejte [enablebrowsebutton –](#enablebrowsebutton) metoda s `bEnable` parametr nastaven na `FALSE`.  
+7.  Chcete-li na tlačítko Procházet odebrat z ovládacího prvku úprav procházet, volejte [enablebrowsebutton –](#enablebrowsebutton) metoda s *bEnable* parametr nastaven na `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  `TRUE` Chcete-li zobrazit na tlačítko Procházet; `FALSE` nechcete zobrazit na tlačítko Procházet. Výchozí hodnota je `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  Popisek, který se zobrazí na tlačítko Procházet. Výchozí hodnota je " **...** ".  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bEnable` parametr `TRUE`, implementovat vlastní akce se provede při kliknutí na tlačítko Procházet. Pokud chcete implementovat vlastní akci, odvození třídy z `CMFCEditBrowseCtrl` třídy a pak přepsat jeho [onbrowse –](#onbrowse) metoda.  
+ Pokud *bEnable* parametr `TRUE`, implementovat vlastní akce se provede při kliknutí na tlačítko Procházet. Pokud chcete implementovat vlastní akci, odvození třídy z `CMFCEditBrowseCtrl` třídy a pak přepsat jeho [onbrowse –](#onbrowse) metoda.  
   
  Pokud `bEnable` parametr `TRUE`, je procházecí režim ovládacího prvku `BrowseMode_Default`, jinak je procházecí režim `BrowseMode_None`. Další informace o režimech Procházet najdete v tématu [GetMode](#getmode) metoda.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszDefExt`  
+ *lpszDefExt*  
  Určuje výchozí příponu názvu souboru, který se používá v dialogovém okně Výběr souboru. Výchozí hodnota je `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Určuje výchozí řetězec filtru, který se používá v dialogovém okně Výběr souboru. Výchozí hodnota je `NULL`.  
   
- `dwFlags`  
+ *dwFlags*  
  Dialogové okno pole příznaky. Výchozí hodnota je bitová kombinace (nebo) OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- `Rect`  
+ *Rect –*  
  Ohraničující obdélník na tlačítko Procházet.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` Pokud stisknutí tlačítka; v opačném `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Pokud je tlačítko označený; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hIcon`  
+ *hIcon*  
  Popisovač ikonu.  
   
- `hBitmap`  
+ *hBitmap*  
  Popisovač rastrový obrázek.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  ID prostředku rastrový obrázek.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` můžete odstranit zadaný ikony nebo rastrového obrázku, když tato metoda ukončí; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strFileName`  
+ *%{strFileName/*  
  Určuje název souboru neplatný.  
   
 ### <a name="return-value"></a>Návratová hodnota  

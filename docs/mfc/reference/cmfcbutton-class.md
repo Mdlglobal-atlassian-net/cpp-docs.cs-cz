@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afd30c9f27d83e7d4cfaf9b993b258b069f73dc4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378823"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039229"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton – třída
 `CMFCButton` Třída přidává funkce [CButton](../../mfc/reference/cbutton-class.md) třída například zarovnání text tlačítka, kombinace text tlačítka a bitovou kopii, vyberete kurzoru a zadat popis tlačítka.  
@@ -218,7 +218,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bOn`  
+ [v] *Pozvánka*  
  `TRUE` Chcete-li zobrazit celý text; `FALSE` na text zobrazení zkrácen.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -233,10 +233,10 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bOn`  
+ [v] *Pozvánka*  
  `TRUE` Písmo nabídky aplikace používat jako písmo textu tlačítka; `FALSE` používat systém písmo. Výchozí hodnota je `TRUE`.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  `TRUE` okamžitě ho překreslit obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -250,7 +250,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` aktuální motiv systému Windows použít k vykreslení ohraničení tlačítko; `FALSE` nechcete použít motiv systému Windows. Výchozí hodnota je `TRUE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -473,13 +473,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Odkaz na obdélníku bounds tlačítko.  
   
- [v] `uiState`  
+ [v] *uiState*  
  Aktuální stav tlačítko. Další informace najdete v tématu `itemState` členem [drawitemstruct – struktura](../../mfc/reference/drawitemstruct-structure.md) tématu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -496,13 +496,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Odkaz na obdélníku bounds tlačítko.  
   
- [v] `uiState`  
+ [v] *uiState*  
  Aktuální stav tlačítko. Další informace najdete v tématu `itemState` členem [drawitemstruct – struktura](../../mfc/reference/drawitemstruct-structure.md) tématu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -518,10 +518,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Odkaz na obdélníku bounds tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -540,19 +540,19 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Odkaz na obdélníku bounds tlačítko.  
   
- [v] `strText`  
+ [v] *strText*  
  Text k vykreslení.  
   
- [v] `uiDTFlags`  
- Příznaky, které určují způsob formátování textu. Další informace najdete v tématu `nFormat` parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda.  
+ [v] *uiDTFlags*  
+ Příznaky, které určují způsob formátování textu. Další informace najdete v tématu *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda.  
   
- [v] `uiState`  
+ [v] *uiState*  
  (Vyhrazené).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -568,10 +568,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Odkaz na obdélníku bounds tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -585,7 +585,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -601,11 +601,11 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nTimeDelay`  
+ [v] *nTimeDelay*  
  Nezáporné číslo, které udává interval mezi zprávy odeslané do nadřazeného okna. Interval se měří v milisekundách a jeho výchozí hodnota je 500 milisekund. Zadejte nula. Chcete-li zakázat režim automatické opakování zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda způsobí, že tlačítko neustále odesílání wm_command – zprávy do nadřazeného okna, dokud tlačítko vydání, nebo `nTimeDelay` parametr je nastaven na hodnotu nula.  
+ Tato metoda způsobí, že tlačítko neustále odesílání wm_command – zprávy do nadřazeného okna, dokud tlačítko vydání, nebo *nTimeDelay* parametr je nastaven na hodnotu nula.  
   
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  Nastaví obrázek pro tlačítko zaškrtnuté.  
@@ -634,40 +634,40 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hIcon`  
+ [v] *hIcon*  
  Zpracování na ikonu, který obsahuje bitovou mapu a maska pro novou bitovou kopii.  
   
- [v] `bAutoDestroy`  
+ [v] *bAutoDestroy*  
  `TRUE` Chcete-li určit, že rastrový obrázek prostředky ukončit automaticky; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
- [v] `hIconHot`  
+ [v] *hIconHot*  
  Zpracování na ikonu, která obsahuje bitovou kopii pro vybraný stav.  
   
- [v] `hBitmap`  
+ [v] *hBitmap*  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro jiný vybraný stav.  
   
- [v] `hBitmapHot`  
+ [v] *hBitmapHot*  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro vybraný stav.  
   
- [v] `bMap3dColors`  
+ [v] *bMap3dColors*  
  Určuje průhlednou barvu pozadí tlačítko; To znamená, vzhled tlačítka. `TRUE` Chcete použít hodnotu barva RGB (192, 192, 192); `FALSE` použít hodnoty barvy definované `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [v] `uiBmpResId`  
+ [v] *uiBmpResId*  
  ID prostředku bitové kopie není vybraná.  
   
- [v] `uiBmpHotResId`  
+ [v] *uiBmpHotResId*  
  ID prostředku pro vybranou image.  
   
- [v] `hIconDisabled`  
+ [v] *hIconDisabled*  
  Zpracování na ikonu pro bitovou kopii zakázané.  
   
- [v] `hBitmapDisabled`  
+ [v] *hBitmapDisabled*  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii zakázané.  
   
- [v] `uiBmpDsblResID`  
+ [v] *uiBmpDsblResID*  
  ID prostředku zakázané rastrového obrázku.  
   
- [v] `bAlphaBlend`  
+ [v] *bAlphaBlend*  
  `TRUE` Chcete-li používat pouze 32-bit Image, které používají alfa kanálu; `FALSE`, nechcete použít pouze obrázky alfa kanálu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -682,10 +682,10 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `crFace`  
+ [v] *crFace*  
  Hodnotu barva RGB.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  `TRUE` na obrazovce ho překreslit okamžitě; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -718,40 +718,40 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hIcon`  
+ [v] *hIcon*  
  Zpracování na ikonu, který obsahuje bitovou mapu a maska pro novou bitovou kopii.  
   
- [v] `bAutoDestroy`  
+ [v] *bAutoDestroy*  
  `TRUE` Chcete-li určit, že rastrový obrázek prostředky ukončit automaticky; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
   
- [v] `hIconHot`  
+ [v] *hIconHot*  
  Zpracování na ikonu, která obsahuje bitovou kopii pro vybraný stav.  
   
- [v] `hBitmap`  
+ [v] *hBitmap*  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro jiný vybraný stav.  
   
- [v] `hBitmapHot`  
+ [v] *hBitmapHot*  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii pro vybraný stav.  
   
- [v] `uiBmpResId`  
+ [v] *uiBmpResId*  
  ID prostředku bitové kopie není vybraná.  
   
- [v] `uiBmpHotResId`  
+ [v] *uiBmpHotResId*  
  ID prostředku pro vybranou image.  
   
- [v] `bMap3dColors`  
+ [v] *bMap3dColors*  
  Určuje průhlednou barvu pozadí tlačítko; To znamená, vzhled tlačítka. `TRUE` Chcete použít hodnotu barva RGB (192, 192, 192); `FALSE` použít hodnoty barvy definované `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [v] `hIconDisabled`  
+ [v] *hIconDisabled*  
  Zpracování na ikonu pro bitovou kopii zakázané.  
   
- [v] `hBitmapDisabled`  
+ [v] *hBitmapDisabled*  
  Popisovač rastrového obrázku, který obsahuje bitovou kopii zakázané.  
   
- [v] `uiBmpDsblResID`  
+ [v] *uiBmpDsblResID*  
  ID prostředku zakázané rastrového obrázku.  
   
- [v] `bAlphaBlend`  
+ [v] *bAlphaBlend*  
  `TRUE` Chcete-li používat pouze 32-bit Image, které používají alfa kanálu; `FALSE`, nechcete použít pouze obrázky alfa kanálu. Výchozí hodnota je `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -770,7 +770,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hcursor`  
+ [v] *hcursor*  
  Popisovač kurzoru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -803,13 +803,13 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `id`  
+ [v] *id*  
  Jeden z identifikátorů tlačítko bitové kopie, které je definováno v `CMenuImage::IMAGES_IDS` výčtu. Hodnoty bitové kopie specifikujte bitové kopie, jako je například šipky, kódy PIN a přepínače.  
   
- [v] `state`  
+ [v] *stavu*  
  Jeden z identifikátorů stavu tlačítko bitové kopie, které je definováno v `CMenuImages::IMAGE_STATE` výčtu. Stavy image zadat tlačítko barvy například černé, šedé, světla šedá bílé a tmavým šedá. Výchozí hodnota je `CMenuImages::ImageBlack`.  
   
- [v] `idDisabled`  
+ [v] *idDisabled*  
  Jeden z identifikátorů tlačítko bitové kopie, které je definováno v `CMenuImage::IMAGES_IDS` výčtu. Obrázek označuje, že tlačítko zakázána. Výchozí hodnota je první obrázek tlačítka ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -822,7 +822,7 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrText`  
+ [v] *clrText*  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -835,7 +835,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrTextHot`  
+ [v] *clrTextHot*  
  Hodnotu barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -848,7 +848,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszToolTipText`  
+ [v] *lpszToolTipText*  
  Ukazatel na hodnotu text pro popis tlačítka. Zadejte hodnotu NULL zakázat popisek.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -861,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bCalcOnly`  
+ [v] *bCalcOnly*  
  `TRUE` vypočítat, ale nemění velikost nového tlačítka; `FALSE` ke změně velikosti tlačítka. Výchozí hodnota je `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  

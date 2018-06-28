@@ -240,15 +240,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34fd742e6ec5c68944ae8ea854e7b8c79fb0a422
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378649"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039585"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 – třída
-`CMFCVisualManagerOffice2007` Poskytuje aplikace Microsoft Office 2007 vzhled. 
+`CMFCVisualManagerOffice2007` poskytuje aplikace Microsoft Office 2007 vzhled. 
 
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -431,7 +431,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -445,7 +445,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -462,9 +462,9 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
- [v] `bHighlighted`  
- [v] `bDisabled`  
+ [v] *pButton*  
+ [v] *bHighlighted*  
+ [v] *bDisabled*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -478,7 +478,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSmall`  
+ [v] *bSmall*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -492,7 +492,7 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -506,7 +506,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pHyperLink`  
+ [v] *pHyperLink*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -520,7 +520,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pPopup`  
+ [v] *pPopup*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -556,7 +556,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bDisabled`  
+ [v] *bDisabled*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -570,7 +570,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pStatusBar`  
+ [v] *pStatusBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -586,8 +586,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `sizeDefault`  
+ [v] *primárního řadiče domény*  
+ [v] *sizeDefault*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -603,8 +603,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pStatusBar`  
- [v] `pPane`  
+ [v] *pStatusBar*  
+ [v] *pPane*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -627,15 +627,15 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabWnd`  
- [v] `clrDark`  
- [v] `clrBlack`  
- [v] `clrHighlight`  
- [v] `clrFace`  
- [v] `clrDarkShadow`  
- [v] `clrLight`  
- [v] `pbrFace`  
- [v] `pbrBlack`  
+ [v] *pTabWnd*  
+ [v] *clrDark*  
+ [v] *clrBlack*  
+ [v] *clrHighlight*  
+ [v] *clrFace*  
+ [v] *clrDarkShadow*  
+ [v] *clrLight*  
+ [v] *pbrFace*  
+ [v] *pbrBlack*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -647,7 +647,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -664,9 +664,9 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabWnd`  
- [v] `iTab`  
- [v] `bIsActive`  
+ [v] *pTabWnd*  
+ [v] *iTab*  
+ [v] *bIsActive*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -682,8 +682,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
- [v] `state`  
+ [v] *pButton*  
+ [v] *stavu*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -710,8 +710,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `params`  
- [v] `nType`  
+ [v] *parametry*  
+ [v] *Noznámení*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -769,7 +769,7 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
+ [v] *pWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -787,10 +787,10 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectGripper`  
- [v] `bHorz`  
- [v] `pBar`  
+ [v] *primárního řadiče domény*  
+ [v] *rectGripper*  
+ [v] *bHorz*  
+ [v] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -806,10 +806,10 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `state`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *stavu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -826,11 +826,11 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `state`  
- [v] `bHorz`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *stavu*  
+ [v] *bHorz*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -845,9 +845,9 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -865,12 +865,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `nState`  
- [v] `bHighlighted`  
- [v] `bPressed`  
- [v] `bEnabled`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *nInformace*  
+ [v] *bHighlighted*  
+ [v] *bPressed*  
+ [v] *bEnabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -888,12 +888,12 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bDisabled`  
- [v] `bIsDropped`  
- [v] `bIsHighlighted`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bDisabled*  
+ [v] *bIsDropped*  
+ [v] *bIsHighlighted*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -911,12 +911,12 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bDisabled`  
- [v] `bIsDropped`  
- [v] `bIsHighlighted`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bDisabled*  
+ [v] *bIsDropped*  
+ [v] *bIsHighlighted*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -933,11 +933,11 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectImage`  
- [v] `bIsDisabled`  
- [v] `bIsPressed`  
- [v] `bIsHighlighted`  
+ [v] *primárního řadiče domény*  
+ [v] *rectImage*  
+ [v] *bIsDisabled*  
+ [v] *bIsPressed*  
+ [v] *bIsHighlighted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -954,11 +954,11 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bDisabled`  
- [v] `bIsHighlighted`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bDisabled*  
+ [v] *bIsHighlighted*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -974,10 +974,10 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pToolBar`  
- [v] `rectBorder`  
- [v] `rectBorderSize`  
+ [v] *primárního řadiče domény*  
+ [v] *pToolBar*  
+ [v] *rectBorder*  
+ [v] *rectBorderSize*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -994,11 +994,11 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pCtrl`  
- [v] `pDC`  
- [v] `rect`  
- [v] `bIsPressed`  
- [v] `bIsHighlighted`  
+ [v] *pCtrl*  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bIsPressed*  
+ [v] *bIsHighlighted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1013,9 +1013,9 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pMenu`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pMenu*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1032,11 +1032,11 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `bHighlight`  
- [v] `bIsRadio`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *bHighlight*  
+ [v] *bIsRadio*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1053,11 +1053,11 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rectButton`  
- [v] `bHighlight`  
- [v] `bDisabled`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *rectButton*  
+ [v] *bHighlight*  
+ [v] *bDisabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1071,8 +1071,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1089,9 +1089,9 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `nResizeFlags`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *nResizeFlags*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1109,12 +1109,12 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bIsScrollDown`  
- [v] `bIsHighlited`  
- [v] `bIsPressed`  
- [v] `bIsDisabled`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bIsScrollDown*  
+ [v] *bIsHighlited*  
+ [v] *bIsPressed*  
+ [v] *bIsDisabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1131,11 +1131,11 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `uiSystemCommand`  
- [v] `nStyle`  
- [v] `bHighlight`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *uiSystemCommand*  
+ [v] *nStyle*  
+ [v] *bHighlight*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1151,10 +1151,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pFrameWnd`  
- [v] `rectBorder`  
- [v] `rectBorderSize`  
+ [v] *primárního řadiče domény*  
+ [v] *pFrameWnd*  
+ [v] *rectBorder*  
+ [v] *rectBorderSize*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1168,8 +1168,8 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectSplitter`  
+ [v] *primárního řadiče domény*  
+ [v] *rectSplitter*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1185,10 +1185,10 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectBtn`  
- [v] `bIsHighlighted`  
- [v] `bIsPressed`  
+ [v] *primárního řadiče domény*  
+ [v] *rectBtn*  
+ [v] *bIsHighlighted*  
+ [v] *bIsPressed*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1205,11 +1205,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `bActive`  
- [v] `rectCaption`  
- [v] `rectButtons`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *bActive*  
+ [v] *rectCaption*  
+ [v] *rectButtons*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1226,9 +1226,9 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectCaption`  
- [v] `pPopupWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *rectCaption*  
+ [v] *pPopupWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1247,11 +1247,11 @@ virtual COLORREF OnDrawPropertySheetListItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pParent`  
- [v] `rect`  
- [v] `bIsHighlihted`  
- [v] `bIsSelected`  
+ [v] *primárního řadiče domény*  
+ [v] *pParent*  
+ [v] *Rect –*  
+ [v] *bIsHighlihted*  
+ [v] *bIsSelected*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1267,8 +1267,8 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1282,8 +1282,8 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1298,9 +1298,9 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pGroup`  
- [v] `rectGroup`  
+ [v] *primárního řadiče domény*  
+ [v] *pGroup*  
+ [v] *rectGroup*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1318,10 +1318,10 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rectCaption`  
- [v] `rectText`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *rectCaption*  
+ [v] *rectText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1335,8 +1335,8 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1351,9 +1351,9 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pCategory`  
- [v] `rectCategory`  
+ [v] *primárního řadiče domény*  
+ [v] *pCategory*  
+ [v] *rectCategory*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1367,8 +1367,8 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pContextCaption`  
+ [v] *primárního řadiče domény*  
+ [v] *pContextCaption*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1384,8 +1384,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pScroll`  
+ [v] *primárního řadiče domény*  
+ [v] *pScroll*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1400,9 +1400,9 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pTab`  
- [v] `bIsActive`  
+ [v] *primárního řadiče domény*  
+ [v] *pTab*  
+ [v] *bIsActive*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1421,11 +1421,11 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pCheckBox`  
- [v] `rect`  
- [v] `bIsSelected`  
- [v] `bHighlighted`  
+ [v] *primárního řadiče domény*  
+ [v] *pCheckBox*  
+ [v] *Rect –*  
+ [v] *bIsSelected*  
+ [v] *bHighlighted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1439,8 +1439,8 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1457,11 +1457,11 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `bIsSelected`  
- [v] `bHighlighted`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *bIsSelected*  
+ [v] *bHighlighted*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1476,9 +1476,9 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rectBorder`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *rectBorder*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1492,8 +1492,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1509,10 +1509,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pElement`  
- [v] `rect`  
- [v] `str`  
+ [v] *primárního řadiče domény*  
+ [v] *pElement*  
+ [v] *Rect –*  
+ [v] *str*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1526,8 +1526,8 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1542,9 +1542,9 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pPanel`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pPanel*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1559,9 +1559,9 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1577,10 +1577,10 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pPanel`  
- [v] `rectPanel`  
- [v] `rectCaption`  
+ [v] *primárního řadiče domény*  
+ [v] *pPanel*  
+ [v] *rectPanel*  
+ [v] *rectCaption*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1597,9 +1597,9 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pPanel`  
- [v] `rectCaption`  
+ [v] *primárního řadiče domény*  
+ [v] *pPanel*  
+ [v] *rectCaption*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1616,11 +1616,11 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pProgress`  
- [v] `rectProgress`  
- [v] `rectChunk`  
- [v] `bInfiniteMode`  
+ [v] *primárního řadiče domény*  
+ [v] *pProgress*  
+ [v] *rectProgress*  
+ [v] *rectChunk*  
+ [v] *bInfiniteMode*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1635,9 +1635,9 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pPanel`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pPanel*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1652,9 +1652,9 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pSlider`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pSlider*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1672,12 +1672,12 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pSlider`  
- [v] `rect`  
- [v] `bIsHighlighted`  
- [v] `bIsPressed`  
- [v] `bIsDisabled`  
+ [v] *primárního řadiče domény*  
+ [v] *pSlider*  
+ [v] *Rect –*  
+ [v] *bIsHighlighted*  
+ [v] *bIsPressed*  
+ [v] *bIsDisabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1696,13 +1696,13 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pSlider`  
- [v] `rect`  
- [v] `bIsZoomOut`  
- [v] `bIsHighlighted`  
- [v] `bIsPressed`  
- [v] `bIsDisabled`  
+ [v] *primárního řadiče domény*  
+ [v] *pSlider*  
+ [v] *Rect –*  
+ [v] *bIsZoomOut*  
+ [v] *bIsHighlighted*  
+ [v] *bIsPressed*  
+ [v] *bIsDisabled*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1717,9 +1717,9 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `pPane`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *pPane*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1736,9 +1736,9 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pWndRibbonBar`  
- [v] `rectTab`  
+ [v] *primárního řadiče domény*  
+ [v] *pWndRibbonBar*  
+ [v] *rectTab*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1757,11 +1757,11 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `nBorderSize`  
- [v] `iImage`  
- [v] `bHilited`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *nBorderSize*  
+ [v] *iImage*  
+ [v] *bHilited*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1777,10 +1777,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
- [v] `bIsHoriz`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
+ [v] *bIsHoriz*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1795,9 +1795,9 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `state`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *stavu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1814,11 +1814,11 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rectPane`  
- [v] `uiID`  
- [v] `nStyle`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *rectPane*  
+ [v] *uiID*  
+ [v] *nStyle*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1833,9 +1833,9 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pStatBar`  
- [v] `rectSizeBox`  
+ [v] *primárního řadiče domény*  
+ [v] *pStatBar*  
+ [v] *rectSizeBox*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1852,11 +1852,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectTab`  
- [v] `iTab`  
- [v] `bIsActive`  
- [v] `pTabWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *rectTab*  
+ [v] *iTab*  
+ [v] *bIsActive*  
+ [v] *pTabWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1873,11 +1873,11 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pButton`  
- [v] `uiState`  
- [v] `pWndTab`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pButton*  
+ [v] *uiState*  
+ [v] *pWndTab*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1894,11 +1894,11 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pTask`  
- [v] `pIcons`  
- [v] `bIsHighlighted`  
- [v] `bIsSelected`  
+ [v] *primárního řadiče domény*  
+ [v] *pTask*  
+ [v] *pIcons*  
+ [v] *bIsHighlighted*  
+ [v] *bIsSelected*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1915,11 +1915,11 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pGroup`  
- [v] `bIsHighlighted`  
- [v] `bIsSelected`  
- [v] `bCanCollapse`  
+ [v] *primárního řadiče domény*  
+ [v] *pGroup*  
+ [v] *bIsHighlighted*  
+ [v] *bIsSelected*  
+ [v] *bCanCollapse*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1934,9 +1934,9 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bIsActive`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bIsActive*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1950,8 +1950,8 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectClient`  
+ [v] *primárního řadiče domény*  
+ [v] *rectClient*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1968,9 +1968,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pTabWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pTabWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1986,10 +1986,10 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pButton`  
- [v] `pWndTab`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pButton*  
+ [v] *pWndTab*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2004,9 +2004,9 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pTabWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pTabWnd*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2025,11 +2025,11 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rectClient`  
- [v] `rectClip`  
- [v] `bNCArea`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *rectClient*  
+ [v] *rectClip*  
+ [v] *bNCArea*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2045,10 +2045,10 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `state`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *stavu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2068,14 +2068,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pBar`  
- [v] `rect`  
- [v] `bIsPressed`  
- [v] `bIsHighlighted`  
- [v] `bIsDisabled`  
- [v] `bHasDropDownArrow`  
- [v] `bIsSysButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pBar*  
+ [v] *Rect –*  
+ [v] *bIsPressed*  
+ [v] *bIsHighlighted*  
+ [v] *bIsDisabled*  
+ [v] *bHasDropDownArrow*  
+ [v] *bIsSysButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2093,10 +2093,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `pBrush`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *pBrush*  
+ [v] *pButton*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2112,10 +2112,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectCaption`  
- [v] `pFrameWnd`  
- [v] `bActive`  
+ [v] *primárního řadiče domény*  
+ [v] *rectCaption*  
+ [v] *pFrameWnd*  
+ [v] *bActive*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2132,9 +2132,9 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectCaption`  
- [v] `clrText`  
+ [v] *primárního řadiče domény*  
+ [v] *rectCaption*  
+ [v] *clrText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2151,11 +2151,11 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
- [v] `bIsHighlighted`  
- [v] `bIsPressed`  
- [v] `clrText`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
+ [v] *bIsHighlighted*  
+ [v] *bIsPressed*  
+ [v] *clrText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2169,8 +2169,8 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2184,8 +2184,8 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2208,15 +2208,15 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pEdit`  
- [v] `rect`  
- [v] `bIsHighlighted`  
- [v] `bIsPaneHighlighted`  
- [v] `bIsDisabled`  
- [v] `clrText`  
- [v] `clrSelBackground`  
- [v] `clrSelText`  
+ [v] *primárního řadiče domény*  
+ [v] *pEdit*  
+ [v] *Rect –*  
+ [v] *bIsHighlighted*  
+ [v] *bIsPaneHighlighted*  
+ [v] *bIsDisabled*  
+ [v] *clrText*  
+ [v] *clrSelBackground*  
+ [v] *clrSelText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2230,8 +2230,8 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2248,9 +2248,9 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pPanel`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pPanel*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2265,9 +2265,9 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pMenuBar`  
- [v] `rect`  
+ [v] *primárního řadiče domény*  
+ [v] *pMenuBar*  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2285,12 +2285,12 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectFill`  
- [v] `pbrFill`  
- [v] `iTab`  
- [v] `bIsActive`  
- [v] `pTabWnd`  
+ [v] *primárního řadiče domény*  
+ [v] *rectFill*  
+ [v] *pbrFill*  
+ [v] *iTab*  
+ [v] *bIsActive*  
+ [v] *pTabWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2306,10 +2306,10 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `pButton`  
- [v] `rect`  
- [v] `clrText`  
+ [v] *primárního řadiče domény*  
+ [v] *pButton*  
+ [v] *Rect –*  
+ [v] *clrText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2323,8 +2323,8 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- [v] `rectRarelyUsed`  
+ [v] *primárního řadiče domény*  
+ [v] *rectRarelyUsed*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -2338,8 +2338,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
- [v] `bActive`  
+ [v] *pWnd*  
+ [v] *bActive*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2356,9 +2356,9 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
- [v] `lstSysButtons`  
- [v] `rectRedraw`  
+ [v] *pWnd*  
+ [v] *lstSysButtons*  
+ [v] *rectRedraw*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2374,8 +2374,8 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWnd`  
- [v] `sizeWindow`  
+ [v] *pWnd*  
+ [v] *sizeWindow*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2398,7 +2398,7 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hinstRes`  
+ [v] *hinstRes*  
   
 ### <a name="remarks"></a>Poznámky  
   

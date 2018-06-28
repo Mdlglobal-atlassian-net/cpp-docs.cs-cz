@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369333"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040217"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar – třída
 Implementuje ovládací prvek, který označuje vizuálně průběh operace může trvat dlouho.  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  Určuje ID příkazu pro indikátor průběhu pásu karet.  
   
- [v] `nWidth`  
+ [v] *nWindth*  
  Určuje šířku v pixelech indikátor průběhu pásu karet.  
   
- [v] `nHeight`  
+ [v] *nHeight*  
  Určuje výšku v pixelech indikátor průběhu pásu karet.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  `TRUE` k určení, že indikátor průběhu je v režimu nekonečné; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nPos`  
+ [v] *nPos –*  
  Určuje pozici, na kterou je nastavena indikátor průběhu.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  Určuje, zda by měl být překreslen indikátor průběhu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nMin`  
+ [v] *nMin*  
  Určuje minimální hodnotu rozsahu.  
   
- [v] `nMax`  
+ [v] *nMax*  
  Určuje maximální hodnotu rozsahu.  
   
 ### <a name="remarks"></a>Poznámky  

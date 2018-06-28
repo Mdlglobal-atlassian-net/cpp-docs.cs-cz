@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375934"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038205"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory – třída
 Implementuje OLE třídy factory, který vytvoří objekty OLE například servery, objekty automatizace a dokumenty.  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *CLSID*  
  Odkaz na ID třídy OLE představuje tento objekt pro vytváření.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  Ukazatel na run-time třída C++ objektů, které můžete vytvořit tento objekt pro vytváření.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Určuje, zda jednu instanci aplikace může podporovat více instancí. Pokud **TRUE**, pro každý požadavek pro vytvoření objektu je spuštěných víc instancí aplikace.  
   
- `nFlags`  
+ *nFlags*  
  Obsahuje jeden nebo více z následujících příznaků:  
   
 - **afxRegDefault** ThreadingModel nastaví model vláken typu Apartment =.  
   
 - **afxreginsertable –** umožňuje zobrazit v **vložit objekt** dialogové okno pro objekty OLE.  
   
-- `afxRegApartmentThreading` Nastaví v registru na ThreadingModel model vláken typu Apartment =.  
+- **afxregapartmentthreading –** nastaví model vláken v registru na ThreadingModel = typu Apartment.  
   
 - **afxregfreethreading –** nastaví model vláken v registru na ThreadingModel = volné.  
   
      Dvěma příznaky můžete kombinovat `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obě. V tématu [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) ve Windows SDK pro další informace o dělení na vlákna registrace modelu.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Ukazatel na řetězec obsahující identifikátor ústní programu, například "Microsoft Excel."  
   
 ### <a name="remarks"></a>Poznámky  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  Další informace najdete v tématu [klíč CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) ve Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- Požadavky jedinečný licenční klíč z ovládacího prvku DLL a uloží jej do `BSTR` na kterou odkazuje `pbstrKey`.  
+ Požadavky jedinečný licenční klíč z ovládacího prvku DLL a uloží jej do `BSTR` na kterou odkazuje *pbstrKey*.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwReserved`  
+ *dwReserved*  
  Vyhrazeno pro budoucí použití.  
   
- `pbstrKey`  
+ *pbstrKey*  
  Ukazatel na `BSTR` , uloží licenční klíč.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProgID`  
+ *lpszProgID*  
  Ukazatel na řetězec obsahující identifikátor čitelná pro člověka programu, například "Excel.Document.5."  
   
- `bRegister`  
+ *bRegister*  
  Určuje, zda objekt pro vytváření objektů třída ovládacích prvků k registraci.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** zaregistruje tento objekt pro vytváření objektů OLE systémový registr. Tato funkce je volána obvykle [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.  
   
-- **UpdateRegistry (** `bRegister` **)** je přepisovatelné Tato forma funkce. Pokud `bRegister` je **TRUE**, tato funkce zaregistruje třída ovládacích prvků s registrem systému. V opačném. zrušení registrace třídy.  
+- **UpdateRegistry (** `bRegister` **)** je přepisovatelné Tato forma funkce. Pokud *bRegister* je **TRUE**, tato funkce zaregistruje třída ovládacích prvků s registrem systému. V opačném. zrušení registrace třídy.  
   
      Pokud použijete k vytvoření projektu knihovny MFC ActiveX ControlWizard, poskytuje ControlWizard přepsání tohoto čistý virtuální funkce.  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRegister`  
+ *bRegister*  
  Určuje, zda objekt pro vytváření objektů třída ovládacích prvků k registraci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bstrKey`  
+ *bstrKey*  
  A `BSTR` ukládání kontejneru verze řetězec licence.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je licence běhu platný; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí verze volání [getlicensekey –](#getlicensekey) získat kopii ovládací prvek je řetězec licence a porovná je s řetězec v `bstrKey`. Pokud se dva řetězce shodují, funkce vrátí nenulovou hodnotu; v opačném případě vrátí hodnotu 0.  
+ Výchozí verze volání [getlicensekey –](#getlicensekey) získat kopii ovládací prvek je řetězec licence a porovná je s řetězec v *bstrKey*. Pokud se dva řetězce shodují, funkce vrátí nenulovou hodnotu; v opačném případě vrátí hodnotu 0.  
   
  Této funkci můžete poskytovat přizpůsobené ověření licence, které můžete přepsat.  
   

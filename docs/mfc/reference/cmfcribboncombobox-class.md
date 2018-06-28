@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371511"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040743"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox – třída
 `CMFCRibbonComboBox` Třída implementuje prvek pole se seznamem, který můžete přidat na panel pásu karet, panel pásu karet nebo místní nabídky pásu karet.  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszItem`  
+ [v] *lpszItem*  
  Řetězec položka k přidání.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data přidružená k položce přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID pole se seznamem.  
   
- [v] `bHasEditBox`  
+ [v] *bHasEditBox*  
  `TRUE` Pokud chcete, aby textové pole v rámci prvku; `FALSE` jinak.  
   
- [v] `nWidth`  
+ [v] *nWindth*  
  Šířka pole se seznamem v pixelech; nebo -1 pro výchozí šířku.  
   
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Zobrazovaný název pole se seznamem.  
   
- [v] `nImage`  
+ [v] *nImage*  
  Malý obrázek indexu pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky pro odstranění.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data související s položka, která má být odstraněna.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Řetězec položka, která má být odstraněna. Pokud je vybráno více položek se do jednoho řetězce, je první položka odstraněna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  `TRUE` Chcete-li povolit změnu velikosti; `FALSE` zakázat, změnu velikosti.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszText`  
+ [v] *lpszText*  
  Řetězec, položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nItem`  
+ [v] *nItem*  
  Index vybrané položky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky v seznamu.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Data přidružená k položce v seznamu.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Řetězec, položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nHeight`  
+ [v] *nHeight*  
  Výška v pixelech pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368615"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041991"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame – třída
 Poskytuje funkce okno rámce rozevíracího seznamu panely nástrojů rozevíracího seznamu a tlačítka panelu nástrojů rozevíracího seznamu.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pWndParent`|Nadřazené okno rámce rozevíracího seznamu.|  
-|[v] `x`|Souřadnice obrazovky vodorovné umístění nižší dole.|  
-|[v] `y`|Souřadnice svislé obrazovky pro umístění nižší dole.|  
-|[v] `pWndOriginToolbar`|Panel nástrojů, má tato metoda používá k vyplnění nového objektu rámce rozevíracího seznamu tlačítka pro rozevírací seznam.|  
+|[v] *pWndParent*|Nadřazené okno rámce rozevíracího seznamu.|  
+|[v] *x*|Souřadnice obrazovky vodorovné umístění nižší dole.|  
+|[v] *y*|Souřadnice svislé obrazovky pro umístění nižší dole.|  
+|[v] *pWndOriginToolbar*|Panel nástrojů, má tato metoda používá k vyplnění nového objektu rámce rozevíracího seznamu tlačítka pro rozevírací seznam.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud rámce rozevíracího seznamu byl úspěšně vytvořen; v opačném případě `FALSE`.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `bNotify`|Nepoužívá se.|  
+|[v] *bNotify*|Nepoužívá se.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda volá framework rámečku rozevíracího seznamu je při vytváření nebo změně velikosti nadřazeného okna. Tato metoda se vypočítává pozice a velikosti rámce rozevíracího seznamu pozice a velikosti okna nadřazené.  
@@ -171,11 +171,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAutoDestroy`  
+ [v] *bAutoDestroy*  
  `TRUE` automaticky zrušení okna přidružené rozevírací seznam nástrojů; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bAutoDestroy` je `TRUE`, pak se `CMFCDropDownFrame` destruktor zničí okna přidružené nástrojů rozevíracího seznamu. Výchozí hodnota je `TRUE`.  
+ Pokud *bAutoDestroy* je `TRUE`, pak se `CMFCDropDownFrame` destruktor zničí okna přidružené nástrojů rozevíracího seznamu. Výchozí hodnota je `TRUE`.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

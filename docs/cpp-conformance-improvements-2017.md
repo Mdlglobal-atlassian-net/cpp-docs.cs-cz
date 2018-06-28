@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7c6a3c3384debb33a9192dc2e887725088bc3f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238588"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042326"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153), [15,5](#improvements_155), [15,6 operací](#improvements_156), a [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Vylepšení shoda C++ verze Visual Studio 2017 15.0, [15.3](#improvements_153), [15,5](#improvements_155), [15,6 operací](#improvements_156), [15.7](#improvements_157)
 
 Podpora pro zobecněný constexpr a NSDMI pro agregace Microsoft Visual C++ compiler je u konce pro funkce přidané do C ++ 14 Standard. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. V tématu [přizpůsobení jazyka Visual C++](visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
@@ -339,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) změny `std::traits_type` členské funkce `length`, `compare`, a `find` aby bylo možné provést `std::string_view` použitelné v konstantní výrazy. (Ve Visual Studio 2017 verze 15,6 operací, podporovaná Clang/LLVM jenom pro. Ve verzi Preview 15.7 2, podporu je téměř dokončena pro ClXX také)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Opravy chyb ve verzích sady Visual Studio 15.0, [15.3](#update_153), [15,5](#update_155), a [15.7](#update_157)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Opravy chyb ve verzích sady Visual Studio 15.0, [15.3](#update_153), [15,5](#update_155), [15.7](#update_157), a [15.8](#update_158)
 
 ### <a name="copy-list-initialization"></a>Kopie – seznam – inicializace
 
@@ -1621,6 +1621,211 @@ int main() {
     return 0;
 }
 
+```
+
+## <a name="update_158"></a> Opravy chyb a změny chování v aplikaci Visual Studio 2017 verze 15.8
+
+### <a name="typename-on-unqualified-identifiers"></a>TypeName na nekvalifikované identifikátory
+
+V [/ projektovou-](build/reference/permissive-standards-conformance.md) režimu, nesprávné `typename` klíčová slova na nekvalifikované identifikátory v definicích šablony alias už přijímat jsou kompilátoru. Následující kód vytvoří teď C7511 *'T': 'typename' – klíčové slovo musí následovat kvalifikovaný název*:
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+Opravte chybu, jednoduše změňte druhý řádek pro `using  X = T;`.
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>__declspec() na pravé straně definice šablony alias
+
+[__declspec](cpp/declspec.md) přestane být povoleno na na straně pravou stranu na definici šablony alias. To byl dříve přijali kompilátorem, ale byla úplně ignorována a nikdy povedou k vyřazení upozornění při alias byl použit.
+
+Standardní atribut C++ [ \[ \[zastaralé\] \] ](cpp/attributes.md) může místo toho použít a bude respektovat od verze Visual Studio 2017 verze 15,6 operací. Následující kód vytvoří teď C2760 *Chyba syntaxe: Neočekávaný token '__declspec' očekává specifikátor typu*:
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+Opravte chybu, změňte na kód takto (s atributem umístěna před '=' v definici alias):
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>Dvoufázové název vyhledávání diagnostiky
+
+Vyhledání názvu dvoufázového vyžaduje, aby názvy nezávislých použité v šabloně těla musí viditelné v šabloně v době definice. Dříve Microsoft C++ compiler ponecháte nenalezeným elementem název looked un-up až do doby vytvoření instance. Nyní vyžaduje navázány nezávislých názvy v těle šablony.
+
+Jedním ze způsobů, které to můžete manifest je s vyhledávání do závislé základní třídy. Dříve kompilátor povoleno použití názvů, které jsou definovány v závislé základní třídy, protože se bude vyhledávat v době vytváření instancí, když jsou vyřešeny všechny typy. Nyní tento kód, který je považovat za chybu. V těchto případech můžete vynutit proměnnou k určení s typem základní třídu nebo jinak díky tomu závislé, například přidáním vyhledávány v době vytváření instancí `this->` ukazatel.
+
+V **/ projektovou-** režim, následující vyvolá nyní kód C3861: *'base_value': nebyl nalezen identifikátor*:
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+Chcete-li chybu opravit, změňte `return` příkaz, který má `return this->base_value;`.
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>předávání deklarace a definice v oboru názvů – std
+
+Standardní C++ neumožňuje uživateli přidat dopředného deklarace nebo definice do oboru názvů `std`. Přidání deklarace nebo definice do oboru názvů `std` nebo do oboru názvů, v rámci oboru názvů – std teď výsledkem nedefinované chování.
+
+Někdy v budoucnu přesune Microsoft umístění, kde jsou definovány některé typy STL. V takovém případě poruší existující kód, který přidá dopředného deklarace oboru názvů `std`. Nové upozornění, C4643, pomáhá identifikovat tyto problémy zdroje. Upozornění je povolené v **/výchozí** režimu a ve výchozím nastavení. Bude to mít vliv programy, které jsou kompilovat s **/horní** nebo **wdn**. 
+
+Následující kód nyní vyvolá C4643: *dál deklarace v oboru názvů – std není povolen podle C++ Standard, vector'*. 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+Chcete-li opravit chyby, použijte **zahrnují** direktivy místo deklaraci předat dál:
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>Konstruktory, které delegovat na sebe
+
+Standardní C++ naznačuje, že by měl kompilátor emitování Diagnostika při delegování konstruktoru deleguje na sebe sama. Microsoft C++ compiler v [/std: c ++ 17](build/reference/std-specify-language-standard-version.md) a [/std: c ++ nejnovější](build/reference/std-specify-language-standard-version.md) režimy nyní vyvolá C7535: *'X::X': delegování Konstruktor volá sám sebe*.
+
+Bez této chyby následující program bude kompilovat, ale bude generovat nekonečná smyčka:
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+Abyste se vyhnuli nekonečná smyčka, delegovat na jiný konstruktor:
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>offsetof – s konstantní výrazy
+
+[offsetof –](c-runtime-library/reference/offsetof-macro.md) tradičně byl implementován použití makra, která vyžaduje [reinterpret_cast](cpp/reinterpret-cast-operator.md). Toto je neplatný v kontextu, které vyžadují konstantní výraz, ale Microsoft C++ compiler má tradičně je povolené. Offsetof – makro, který je dodáván jako součást STL správně používá vnitřní kompilátor (**__builtin_offsetof**), ale Spousta lidí použili efektu makro k definování vlastní **offsetof –**.  
+
+V aplikaci Visual Studio 2017 verze 15.8 kompilátor omezí oblasti, které tyto reinterpret_casts může zobrazit ve výchozím režimu, abyste pomohli kód odpovídat standardní C++ chování. V části [/ projektovou-](build/reference/permissive-standards-conformance.md), jsou i přísnější omezení. Pomocí výsledek offsetof – v místech, které vyžadují konstantní výrazy může mít za následek kód, který vydá upozornění C4644 *je nestandardní využití offsetof – makro na základě vzoru v konstantní výrazy; offsetof – použití definován ve verzi C++ standard Knihovna místo* nebo C2975 *šablony neplatný argument, by měl být kompilaci konstantní výraz*.
+
+Následující kód vyvolá C4644 v **/výchozí** a **/std: c ++ 17** režimy a C2975 v **/ projektovou-** režimu: 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+Chcete-li opravit chyby, použijte **offsetof –** definovaným prostřednictvím \<cstddef – >:
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>Kvalifikátory odchylka nákladů na základní třídy vztahují pack rozšíření
+
+Předchozí verze Microsoft C++ compiler se nepodařilo rozpoznat, že základní třída měla odchylka nákladů kvalifikátory Pokud bylo rovněž vztahují pack rozšíření. 
+
+V aplikaci Visual Studio 2017 verze 15.8 v **/ projektovou-** režimu následující kód vyvolá C3770 *'const S': není platnou třídu base*: 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>Template – klíčové slovo a vnořené specifikátory název
+
+V **/ projektovou-** režim, kompilátor teď vyžaduje, aby `template` – klíčové slovo předcházet název šablony, pokud jde po vnořené název specifikátorem závislé. 
+
+Následující kód v **/ projektovou-** režimu nyní vyvolá C7510: *"foo": použití názvu závislé šablony musí obsahovat předponu 'šablony'. Poznámka: najdete odkaz na vytvoření instance šablony třídy ' X<T>' se kompilované*:
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+Chcete-li opravit chyby, přidejte `template` – klíčové slovo k `Base<T>::foo<int>();` příkaz, jak je znázorněno v následujícím příkladu:
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
 ```
 
 ## <a name="see-also"></a>Viz také:

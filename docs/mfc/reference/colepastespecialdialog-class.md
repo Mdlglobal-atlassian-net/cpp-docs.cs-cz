@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374354"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039159"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog – třída
 Používá se pro dialogové okno OLE Vložit jinak.  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Vlastní formáty přidá do seznamu formátů, které můžete vložit vaše aplikace.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Přidá novou položku do seznamu podporovaných formátů schránky.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Přidá **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`a volitelně `CF_LINKSOURCE` do seznamu formáty může vložit vaše aplikace.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Přidá **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**a volitelně **CF_LINKSOURCE** do seznamu formáty může vložit vaše aplikace .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Vytvoří položku v kontejneru dokumentu pomocí zadaného formátu.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Zobrazí dialogové okno OLE Vložit jinak.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Určuje, jestli se k vykreslení položky jako ikony nebo ne.|  
@@ -130,22 +130,22 @@ void AddFormat(
  *FMT*  
  Odkaz na datový typ, který chcete přidat.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Řetězec, který popisuje formát pro uživatele.  
   
  *lpszResult*  
  Řetězec, který popisuje výsledek, pokud je tento formát zvolena v dialogovém okně.  
   
- `flags`  
+ *příznaky*  
  Různé propojování a vkládání možnosti, které jsou k dispozici pro tento formát. Tento příznak je bitová kombinace jednoho nebo více různých hodnot v **OLEUIPASTEFLAG** výčtového typu.  
   
- `cf`  
+ *CR*  
  Formát schránky, které chcete přidat.  
   
  *objekt tymed*  
  Typy médií, které jsou k dispozici v tomto formátu. To je bitová kombinace jednoho nebo více hodnot v **objekt TYMED** výčtového typu.  
   
- `nFormatID`  
+ *nFormatID*  
  ID řetězec, který identifikuje tento formát. Formát tohoto řetězce je dva samostatné řetězce oddělenými znakem '\n'. První řetězec je stejný, které by byly předány v *lpstrFormat* parametr a druhý je stejný jako *lpstrResult* parametr.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  Formát schránky, které chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"Vložený objekt"**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Vytvoření příznak obsahuje libovolný počet kombinované pomocí operátoru bitové operace OR následující příznaky:  
   
 - `PSF_SELECTPASTE` Určuje, že přepínač vložení bude ověřen původně při volání dialogové okno. Nelze použít v kombinaci s `PSF_SELECTPASTELINK`. Toto nastavení je výchozí.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogové okno.  
   
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) pro vložení. Pokud je tato hodnota **NULL**, získá `COleDataObject` ze schránky.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna nastavena na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  

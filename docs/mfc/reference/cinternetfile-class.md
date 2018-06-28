@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c60027195024a9abb1af5ce5ec47dc6f6a6bfbf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372415"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038982"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile – třída
 Umožňuje přístup k souborům na vzdálené systémy, které používají internetové protokoly.  
@@ -97,7 +97,7 @@ class CInternetFile : public CStdioFile
 ## <a name="remarks"></a>Poznámky  
  Poskytuje základní třídu pro [CHttpFile](../../mfc/reference/chttpfile-class.md) a [CGopherFile](../../mfc/reference/cgopherfile-class.md) třídy souborů. Nikdy vytvoříte `CInternetFile` objektu přímo. Místo toho vytvořte objekt jednoho z jeho odvozené třídy voláním [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) nebo [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Také můžete vytvořit `CInternetFile` objekt voláním [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
- `CInternetFile` Členské funkce **otevřete**, `LockRange`, `UnlockRange`, a `Duplicate` nejsou implementované pro `CInternetFile`. Když zavoláte na tyto funkce `CInternetFile` objektů, zobrazí se [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ `CInternetFile` Členské funkce `Open`, `LockRange`, `UnlockRange`, a `Duplicate` nejsou implementované pro `CInternetFile`. Když zavoláte na tyto funkce `CInternetFile` objektů, zobrazí se [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
  Další informace o tom, `CInternetFile` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -123,7 +123,7 @@ virtual void Abort();
 ### <a name="remarks"></a>Poznámky  
  Pokud jste ještě zavřeli soubor před zničení objektu, destruktoru se automaticky zavře.  
   
- Při zpracování výjimek, **Abort** se liší od [Zavřít](#close) důležité dvěma způsoby. Nejdřív **Abort** funkce nevyvolá výjimku o selhání, protože ignoruje selhání. Druhý, **Abort** nemá **ASSERT** Pokud je soubor nebyl otevřen nebo dříve bylo ukončeno.  
+ Při zpracování výjimek, `Abort` se liší od [Zavřít](#close) důležité dvěma způsoby. Nejdřív `Abort` funkce nevyvolá výjimku o selhání, protože ignoruje selhání. Druhý, `Abort` nemá **ASSERT** Pokud je soubor nebyl otevřen nebo dříve bylo ukončeno.  
   
 ##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  Tento člen funkce je volána, když `CInternetFile` je vytvořen objekt.  
@@ -146,25 +146,25 @@ CInternetFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
+ *hfile –*  
  Popisovač pro soubor Internetu.  
   
- `pstrFileName`  
+ *pstrFileName*  
  Ukazatel na řetězec, který obsahuje název souboru.  
   
- `pConnection`  
+ *pConnection*  
  Ukazatel [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) objektu.  
   
  *bReadMode*  
  Určuje, zda soubor je jen pro čtení.  
   
- `hSession`  
+ *hSession*  
  Popisovač pro relaci Internet.  
   
- `pstrServer`  
+ *pstrServer*  
  Ukazatel na řetězec, který obsahuje název serveru.  
   
- `dwContext`  
+ *dwContext*  
  Identifikátor kontext pro `CInternetFile` objektu. V tématu [WinInet – Základy](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -212,7 +212,7 @@ operator HINTERNET() const;
 ```  
   
 ##  <a name="read"></a>  CInternetFile::Read  
- Volání této funkce člen k načtení do dané paměti, počínaje `lpvBuf`, zadaný počet bajtů, `nCount`.  
+ Volání této funkce člen k načtení do dané paměti, počínaje *lpvBuf*, zadaný počet bajtů, *nCount*.  
   
 ```  
 virtual UINT Read(
@@ -221,17 +221,17 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Ukazatel na adresu paměti pro soubor, který je číst data.  
   
- `nCount`  
+ *nCount*  
  Počet bajtů, které mají být zapsána.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet bajtů přenesených do vyrovnávací paměti. Vrácená hodnota může být menší než `nCount` Pokud bylo dosaženo konce souboru.  
+ Počet bajtů přenesených do vyrovnávací paměti. Vrácená hodnota může být menší než *nCount* Pokud bylo dosaženo konce souboru.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce vrátí počet bajtů přečtených ve skutečnosti – číslo, které může být menší než `nCount` Pokud skončí soubor. Pokud dojde k chybě při čtení souboru, funkce vyvolá [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu, která popisuje danou chybu. Všimněte si, že čtení za koncem souboru není považují za chybu a bude vyvolána žádná výjimka.  
+ Funkce vrátí počet bajtů přečtených ve skutečnosti – číslo, které může být menší než *nCount* Pokud skončí soubor. Pokud dojde k chybě při čtení souboru, funkce vyvolá [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu, která popisuje danou chybu. Všimněte si, že čtení za koncem souboru není považují za chybu a bude vyvolána žádná výjimka.  
   
  Aby se načítají všechna data, musí aplikace nadále volání **CInternetFile::Read** metoda dokud vrátí tato metoda hodnotu nula.  
   
@@ -248,13 +248,13 @@ virtual LPTSTR ReadString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstr`  
+ *pstr*  
  Ukazatel na řetězec, který se zobrazí na řádku, který je čten.  
   
- `nMax`  
+ *nMax*  
  Maximální počet znaků ke čtení.  
   
- `rString`  
+ *rString*  
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který přijme čtení řádku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -263,7 +263,7 @@ virtual LPTSTR ReadString(
  **NULL** Pokud end souboru bylo dosaženo bez přečtení všech dat, nebo pokud je to logická hodnota, **FALSE** Pokud end souboru bylo dosaženo bez přečtení žádná data.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce umístí výsledný řádek do paměti odkazuje `pstr` parametr. Zastaví načítání znaků až dorazí do maximální počet znaků, určeného `nMax`. Vyrovnávací paměť vždy obdrží ukončující znak hodnoty null.  
+ Funkce umístí výsledný řádek do paměti odkazuje *pstr* parametr. Zastaví načítání znaků až dorazí do maximální počet znaků, určeného *nMax*. Vyrovnávací paměť vždy obdrží ukončující znak hodnoty null.  
   
  Když zavoláte `ReadString` bez první volání [SetReadBufferSize](#setreadbuffersize), zobrazí se vyrovnávací paměť 4096 bajtů.  
   
@@ -277,17 +277,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lOffset`  
+ *lOffset*  
  Posun v bajtech přesunout ukazatel pro čtení a zápis v souboru.  
   
- `nFrom`  
+ *nFrom*  
  Relativní odkaz posunu. Musí být jedna z následujících hodnot:  
   
-- **CFile::begin** přesunout ukazatel souboru `lOff` bajtů předávání od začátku souboru.  
+- **CFile::begin** přesunout ukazatel souboru *lOff* bajtů předávání od začátku souboru.  
   
-- **CFile::current** přesunout ukazatel souboru `lOff` bajtů z aktuální pozice v souboru.  
+- **CFile::current** přesunout ukazatel souboru *lOff* bajtů z aktuální pozice v souboru.  
   
-- **CFile::end** přesunout ukazatel souboru `lOff` bajtů od konce souboru. `lOff` musí být záporné k vyhledání do existující soubor; kladné hodnoty bude hledat za koncem souboru.  
+- **CFile::end** přesunout ukazatel souboru *lOff* bajtů od konce souboru. *lOff* musí být záporné k vyhledání do existujících souborů; kladné hodnoty bude hledat za koncem souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Posun od začátku souboru, pokud je požadovaný pozice právní; bajtů, nové jinak hodnota je definovaný a [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu je vyvolána výjimka.  
@@ -320,7 +320,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Základní rozhraní API WinInet není provést ukládání do vyrovnávací paměti, takže zvolte velikost vyrovnávací paměti, který umožňuje aplikaci číst data efektivně, bez ohledu na množství dat ke čtení. Pokud každé volání do [čtení](#read) obvykle zahrnuje velké aount dat (například minimálně 4 kB), neměli byste potřebovat vyrovnávací paměti. Ale při volání **čtení** získat malé bloky dat, nebo pokud používáte [ReadString](#readstring) číst jednotlivé řádky současně, pak vyrovnávací paměti pro čtení vylepšuje výkon aplikace.  
+ Základní rozhraní API WinInet není provést ukládání do vyrovnávací paměti, takže zvolte velikost vyrovnávací paměti, který umožňuje aplikaci číst data efektivně, bez ohledu na množství dat ke čtení. Pokud každé volání do [čtení](#read) obvykle zahrnuje velké aount dat (například minimálně 4 kB), neměli byste potřebovat vyrovnávací paměti. Ale když zavoláte `Read` získat malé bloky dat, nebo pokud používáte [ReadString](#readstring) číst jednotlivé řádky současně, pak vyrovnávací paměti pro čtení vylepšuje výkon aplikace.  
   
  Ve výchozím nastavení `CInternetFile` objekt neposkytuje žádné ukládání do vyrovnávací paměti pro čtení. Když zavoláte tuto – členská funkce, musí být jisti, že byla otevřena soubor přístup pro čtení.  
   
@@ -346,7 +346,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Ve výchozím nastavení `CInternetFile` objekt neposkytuje žádné ukládání do vyrovnávací paměti pro zápis. Když zavoláte tuto – členská funkce, musí být jisti, že soubor byla otevřena pro zápis. Velikost vyrovnávací paměti pro zápis můžete změnit kdykoli, ale to způsobí tak, že implicitní volání [vyprázdnění](#flush).  
   
 ##  <a name="write"></a>  CInternetFile::Write  
- Volání této funkce členů k zápisu do daného paměti `lpvBuf`, zadaný počet bajtů, `nCount`.  
+ Volání této funkce členů k zápisu do daného paměti *lpvBuf*, zadaný počet bajtů, *nCount*.  
   
 ```  
 virtual void Write(
@@ -355,10 +355,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Ukazatel na prvním bajtem k zapsání.  
   
- `nCount`  
+ *nCount*  
  Určuje počet bajtů, které mají být zapsána.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -372,7 +372,7 @@ virtual void WriteString(LPCTSTR pstr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstr`  
+ *pstr*  
  Ukazatel na řetězec obsahující obsah má být proveden zápis.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371387"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041442"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile – třída
 Představuje datový proud ( `IStream`) v souboru složené jako součást OLE strukturovaných úložiště.  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStream`  
+ *lpStream*  
  Odkazuje na datový proud OLE ( `IStream`) být přidruženy k objektu. Nemůže být **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStream`  
+ *lpStream*  
  Ukazatel na datový proud OLE být přidruženy k objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `lpStream` je **NULL**objekt není přidružen OLE datového proudu, jinak, tento objekt je přidružený s zadaný datový proud OLE.  
+ Pokud *lpStream* je **NULL**objekt není přidružen OLE datového proudu, jinak, tento objekt je přidružený s zadaný datový proud OLE.  
   
  Další informace najdete v tématu [IStream on Request](http://msdn.microsoft.com/library/windows/desktop/aa380034) ve Windows SDK.  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pError`  
+ *pError*  
  Odkazuje na [CFileException](../../mfc/reference/cfileexception-class.md) objekt nebo **NULL** určující stav dokončení operace vytvoření. Zadejte tento parametr, pokud chcete monitorovat možné výjimky generované pokusu o vytvoření datového proudu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStorage`  
+ *lpStorage*  
  Odkazuje na objekt OLE úložiště, který obsahuje datový proud, který se má vytvořit. Nemůže být **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Název datového proudu, který se má vytvořit. Nemůže být **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Režim přístupu používat při otevírání datového proudu. Exkluzivní, čtení a zápis a vytvořte režimy se používají ve výchozím nastavení. Úplný seznam dostupných režimů, najdete v části [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Odkazuje na [CFileException](../../mfc/reference/cfileexception-class.md) objekt nebo **NULL**. Zadejte tento parametr, pokud chcete monitorovat možné výjimky generované pokusu o vytvoření datového proudu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud datový proud je vytvořen úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výjimky souborů bude vyvolána, pokud se nezdaří open a `pError` není **NULL**.  
+ Výjimky souborů bude vyvolána, pokud se nezdaří open a *pError* není **NULL**.  
   
  Další informace najdete v tématu [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) ve Windows SDK.  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStorage`  
+ *lpStorage*  
  Odkazuje na objekt OLE úložiště, který obsahuje datového proudu k otevření. Nemůže být **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Název datového proudu k otevření. Nemůže být **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Režim přístupu používat při otevírání datového proudu. Výhradní a režimy, které se používají ve výchozím nastavení pro čtení a zápis. Úplný seznam dostupných režimů najdete v tématu [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Odkazuje na [CFileException](../../mfc/reference/cfileexception-class.md) objekt nebo **NULL**. Zadejte tento parametr, pokud chcete monitorovat možné výjimky generované pokusu o otevření datového proudu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je datový proud otevřen úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výjimky souborů bude vyvolána, pokud se nezdaří open a `pError` není **NULL**.  
+ Výjimky souborů bude vyvolána, pokud se nezdaří open a *pError* není **NULL**.  
   
  Další informace najdete v tématu [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) ve Windows SDK.  
   

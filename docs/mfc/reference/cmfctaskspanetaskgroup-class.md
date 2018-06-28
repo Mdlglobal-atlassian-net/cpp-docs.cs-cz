@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370842"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037493"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup – třída
 `CMFCTasksPaneTaskGroup` Třída je pomocná třída používané [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. Objekty typu `CMFCTasksPaneTaskGroup` představují *skupina úkolů*. Skupiny úloh je seznam položek, které zobrazuje rozhraní samostatné pole, která obsahuje tlačítko Sbalit. Pole může mít volitelné popisek (název skupiny). Pokud skupina sbalena, seznam úloh není viditelná.  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Určuje název skupiny v záhlaví skupiny.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Určuje, zda je skupině zarovnán k dolnímu okraji ovládacího prvku podokno úlohy.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Určuje, zda skupiny je určený jako *speciální* a tedy jestli titulek skupiny je plná barvu.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Určuje, zda je skupina sbalena.  
   
- `pPage`  
+ *Fyzická_stránka*  
  Určuje vlastnost stránku, který je součástí této skupiny úloh.  
   
- `hIcon`  
+ *hIcon*  
  Určuje ikona, která se zobrazí v záhlaví skupiny.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParent`  
+ [v] *pParent*  
  Představuje nadřazeného okna aktuální skupiny úlohy.  
   
- [out] `data`  
+ [out] *dat*  
  Objekt typu `CAccessibilityData` který naplněný daty usnadnění aktuální skupiny úlohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud `data` parametr byl úspěšně vyplněná s daty usnadnění aktuální skupiny úlohy, jinak hodnota `FALSE`.  
+ `TRUE` Pokud *data* parametr byl úspěšně vyplněná s daty usnadnění aktuální skupiny úlohy, jinak hodnota `FALSE`.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

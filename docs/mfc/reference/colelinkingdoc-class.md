@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369844"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039970"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc – třída
 Základní třída pro dokumenty kontejneru OLE, které podporují propojování vložené položky, které obsahují.  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- Připojit vaše `COleTemplateServer` objekt, který má vaše šablony dokumentu voláním objektu `ConnectTemplate` – členská funkce a všechny třídy objektů pomocí systému OLE voláním registrace **COleTemplateServer::RegisterAll**:  
+ Připojit vaše `COleTemplateServer` objekt, který má vaše šablony dokumentu voláním objektu `ConnectTemplate` – členská funkce a všechny třídy objektů pomocí systému OLE voláním registrace `COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszItemName`  
+ *lpszItemName*  
  Ukazatel na název embedded OLE požadovaná položka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszItemName`  
+ *lpszItemName*  
  Ukazatel na název propojené OLE požadovaná položka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  Ukazatele na objekt factory OLE (může být **NULL**).  
   
- `lpszPathName`  
+ *lpszPathName*  
  Ukazatel na plně kvalifikovanou cestu dokument kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372911"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040984"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget – třída
 Poskytuje mechanismus komunikace mezi ovládacího prvku karta a knihoven OLE.  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pWnd`|Nepoužívá se.|  
-|[v] `pDataObject`|Ukazatel na objekt, který uživatel nastavuje tažením.|  
-|[v] `dwKeyState`|Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, a `MK_RBUTTON`.|  
-|[v] `point`|Umístění kurzoru v souřadnicích klienta.|  
+|[v] *pWnd*|Nepoužívá se.|  
+|[v] *pDataObject*|Ukazatel na objekt, který uživatel nastavuje tažením.|  
+|[v] *dwKeyState*|Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, a `MK_RBUTTON`.|  
+|[v] *bodu*|Umístění kurzoru v souřadnicích klienta.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- O tom, že výsledků Pokud rozevíracího dochází v umístění, které `point`. Může být jeden nebo více následujících akcí:  
+ O tom, že výsledků Pokud rozevíracího dochází v umístění, které *bodu*. Může být jeden nebo více následujících akcí:  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pWnd`|Nepoužívá se.|  
+|[v] *pWnd*|Nepoužívá se.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda volá `CMFCBaseTabCtrl::OnDragLeave` metoda k provedení operace přetažení.  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pWnd`|Nepoužívá se.|  
-|[v] `pDataObject`|Ukazatel na objekt, který uživatel nastavuje tažením.|  
-|[v] `dwKeyState`|Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, a `MK_RBUTTON`.|  
-|[v] `point`|Umístění ukazatele myši v souřadnice klienta.|  
+|[v] *pWnd*|Nepoužívá se.|  
+|[v] *pDataObject*|Ukazatel na objekt, který uživatel nastavuje tažením.|  
+|[v] *dwKeyState*|Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, a `MK_RBUTTON`.|  
+|[v] *bodu*|Umístění ukazatele myši v souřadnice klienta.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- O tom, že výsledků Pokud rozevíracího dochází v umístění, které `point`. Může být jeden nebo více následujících akcí:  
+ O tom, že výsledků Pokud rozevíracího dochází v umístění, které *bodu*. Může být jeden nebo více následujících akcí:  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pWnd`|Nepoužívá se.|  
-|[v] `pDataObject`|Ukazatel na objekt, který uživatel nastavuje tažením.|  
-|[v] `dropEffect`|Operace odstranění výchozí.|  
-|[v] `dropList`|Nepoužívá se.|  
-|[v] `point`|Umístění ukazatele myši v souřadnice klienta.|  
+|[v] *pWnd*|Nepoužívá se.|  
+|[v] *pDataObject*|Ukazatel na objekt, který uživatel nastavuje tažením.|  
+|[v] *dropEffect*|Operace odstranění výchozí.|  
+|[v] *rozbalovacího seznamu*|Nepoužívá se.|  
+|[v] *bodu*|Umístění ukazatele myši v souřadnice klienta.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Výsledný efekt vyřaďte. Může být jeden nebo více následujících akcí:  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá `CMFCBaseTabCtrl::OnDrop` Pokud rozhraní nástrojů je v režimu přizpůsobení a formát dat schránky je k dispozici. Pokud volání `CMFCBaseTabCtrl::OnDrop` vrátí nenulovou hodnotu, tato metoda vrátí výchozí efekt rozevírací určeného `dropEffect`. Jinak tato metoda vrátí hodnotu `DROPEFFECT_NONE`. Další informace o vyřazení důsledky, najdete v části [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Tato metoda volá `CMFCBaseTabCtrl::OnDrop` Pokud rozhraní nástrojů je v režimu přizpůsobení a formát dat schránky je k dispozici. Pokud volání `CMFCBaseTabCtrl::OnDrop` vrátí nenulovou hodnotu, tato metoda vrátí výchozí efekt rozevírací určeného *dropEffect*. Jinak tato metoda vrátí hodnotu `DROPEFFECT_NONE`. Další informace o vyřazení důsledky, najdete v části [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Další informace o přizpůsobení režimu najdete v tématu [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Další informace o formáty dat schránky najdete v tématu [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pOwner`|Ovládacího prvku karta zaregistrovat jako cíle přetažení.|  
+|[v] *pOwner*|Ovládacího prvku karta zaregistrovat jako cíle přetažení.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud byla registrace úspěšná; jinak 0.  

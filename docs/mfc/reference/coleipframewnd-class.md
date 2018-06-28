@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370377"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040022"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd – třída
 Základ pro úpravy okna aplikace na místě.  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPosRect`  
+ *lpPosRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt obsahující na místě rámce okna na aktuální pozici souřadnice, v pixelech, relativně k klientské oblasti.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Ukazatel na `RECT` struktura nebo `CRect` objekt obsahující na místě rámce okna aktuální výstřižek obdélníku souřadnice, v pixelech, relativně k klientské oblasti.  
   
 ### <a name="remarks"></a>Poznámky  

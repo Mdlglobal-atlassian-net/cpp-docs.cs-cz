@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373700"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042219"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 – třída
 `CMFCVisualManagerWindows7` Poskytuje aplikace vzhled [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikace.  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pEdit`  
+ [v] *pEdit*  
  Ukazatel na ovládací prvek upravit. Tato hodnota nemůže být `NULL`.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  Vrátí, zda je označený pole pásu karet.  
   
- [out] `bIsPaneHighlighted`  
- Vrátí `TRUE` Pokud panelu na pásu karet, která obsahuje `pEdit` zvýrazní.  
+ [out] *bIsPaneHighlighted*  
+ Vrátí `TRUE` Pokud panelu na pásu karet, která obsahuje *pEdit* zvýrazní.  
   
- [out] `bIsDisabled`  
- Vrátí zda `pEdit` je zakázána.  
+ [out] *bIsDisabled*  
+ Vrátí zda *pEdit* je zakázána.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva pozadí textové pole `pEdit`.  
+ Barva pozadí textové pole *pEdit*.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení tlačítka s nabídkou.  
   
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na `CMFCToolBarButton`. Rozhraní framework doplní na pozadí pro toto tlačítko.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Obdélníku, která určuje hranice oblasti obrázku tlačítka nabídky.  
   
- [v] `state`  
+ [v] *stavu*  
  Tlačítko stavu.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370165"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041244"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton – třída
 `CMFCRibbonUndoButton` Třída implementuje rozevíracího seznamu tlačítka, které obsahuje nejnovější příkazy uživatele. Uživatelé mohou vybrat jednu nebo více nejnovější příkazů z rozevíracího seznamu vrátit nebo vrátit zpět, je.  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszLabel`  
+ [v] *lpszLabel*  
  Popisek akce, která se zobrazí v rozevíracím seznamu.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  Určuje identifikátor příkazu.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Určuje textový popisek tlačítka.  
   
- [v] `nSmallImageIndex`  
+ [v] *nSmallImageIndex*  
  Index v seznamu obrázků nadřazeného objektu, pro malý obrázek na tlačítko nule.  
   
- [v] `nLargeImageIndex`  
+ [v] *nLargeImageIndex*  
  Index počítaný od nuly v seznamu obrázků nadřazeného objektu, pro velké obrázku tlačítka.  
   
- [v] `hIcon`  
+ [v] *hIcon*  
  Popisovač pro ikonu, která můžete použít jako obrázek na tlačítko.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367926"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040958"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl – třída
 Implementuje a popisku řídit, která [CMFCPropertyGridCtrl třída](../../mfc/reference/cmfcpropertygridctrl-class.md) používá zobrazíte popisy tlačítek.  
@@ -106,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndParent`  
+ [v] *pWndParent*  
  Ukazatel do nadřazeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -130,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rect`  
+ [out] *Rect –*  
  Obsahuje poslední pozice ovládacího prvku popisek.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -148,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nTextMargin`  
+ [v] *nTextMargin*  
  Určuje mezery mezi ovládací prvek text popisku a ohraničení popisku okna. Výchozí hodnota je 10 pixelů.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
  Určuje umístění a velikost ovládacího prvku tooltip.  
   
- [v] `strText`  
+ [v] *strText*  
  Určuje text, který se zobrazí v popisu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda zobrazí ovládací prvek popisek v umístění a velikost určeného `rect`. Pokud od posledního volání této metody se nezměnily pozici, velikost a text, tato metoda nemá žádný vliv.  
+ Tato metoda zobrazí ovládací prvek popisek v umístění a velikost určeného *Rect –*. Pokud od posledního volání této metody se nezměnily pozici, velikost a text, tato metoda nemá žádný vliv.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

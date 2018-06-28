@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367913"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040230"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog – třída
 `CMFCColorDialog` Třída reprezentuje dialogové okno Výběr barev.  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clrInit`  
+ [v] *clrInit*  
  Výchozí výběr barev. Pokud není zadaná žádná hodnota, výchozí hodnota je RGB(0,0,0) (černé).  
   
- [v] `dwFlags`  
+ [v] *dwFlags*  
  (Vyhrazené).  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Ukazatele v dialogovém okně nadřazené nebo vlastníka.  
   
- [v] `hPal`  
+ [v] *hPal*  
  Popisovač pro palety barev.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rgb`  
+ [v] *rgb*  
  Hodnotu barva RGB  
   
 ### <a name="remarks"></a>Poznámky  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rgb`  
+ [v] *rgb*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) určující barva RGB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `R`  
+ [v] *R*  
  Určuje komponentu red hodnoty RGB.  
   
- [v] `G`  
+ [v] *G*  
  Určuje komponentu zelená hodnoty RGB.  
   
- [v] `B`  
+ [v] *B*  
  Určuje komponentu blue hodnoty RGB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `R`  
+ [v] *R*  
  Určuje komponentu red hodnoty RGB  
   
- [v] `G`  
+ [v] *G*  
  Určuje komponentu zelená hodnoty RGB  
   
- [v] `B`  
+ [v] *B*  
  Určuje komponentu blue hodnoty RGB  
   
 ### <a name="remarks"></a>Poznámky  

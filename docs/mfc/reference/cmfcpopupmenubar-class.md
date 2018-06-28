@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374471"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037751"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar – třída
 Panel nabídek vkládat do místní nabídky.  
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bRecalcLayout`  
+ [v] *bRecalcLayout*  
  `TRUE` automaticky přepočítat rozložení v místní nabídce panelu podokně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiMenuResID`  
+ [v] *uiMenuResID*  
  Určuje ID nabídky prostředku nabídky načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Bod na obrazovce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenu`  
+ [v] *hMenu*  
  V nabídce, ze kterých chcete importovat tlačítka místní nabídky.  
   
- [v] `bShowAllCommands`  
+ [v] *bShowAllCommands*  
  `TRUE` Pokud jsou všechny příkazy v nabídce k importu, nebo `FALSE` Pokud zřídka používané ty mohou být skryty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenu`  
+ [v] *hMenu*  
  Popisovač pro archivované nabídky načíst.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Index založený na nule tlačítka panelu nástrojů, jehož styl má být nastavena.  
   
- [v] `nStyle`  
+ [v] *nStyle*  
  Styl tlačítko. V tématu [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam styly tlačítek panelu nástrojů k dispozici.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iOffset`  
+ [v] *iOffset*  
  Počet řádků, že by měl posun nabídek v automaticky otevřeném okně.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMenuButton`  
+ [v] *pMenuButton*  
  Ukazatel na tlačítko nabídky, pro kterou chcete nastavit časovač zpoždění.  
   
- [v] `nDelayFactor`  
+ [v] *nDelayFactor*  
  Faktor zpoždění, alespoň jednu, chcete-li vynásobit doba zpoždění standardní nabídky (obvykle mezi půl sekundy a pět sekund).  
   
 ### <a name="remarks"></a>Poznámky  

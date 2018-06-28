@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376874"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041630"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray – třída
 Třída pro práci s poli libovolného typu a dimenze.  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppvData`  
+ *ppvData*  
  Ukazatel na ukazatel na pole data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDims`  
+ *dwDims*  
  Počet dimenzí v zabezpečené pole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `saSrc`  
+ *saSrc*  
  Existující `COleSafeArray` objekt nebo **SAFEARRAY** zkopírovat do nové `COleSafeArray` objektu.  
   
- `vtSrc`  
+ *vtSrc*  
  **VARTYPE** nový `COleSafeArray` objektu.  
   
- `psaSrc`  
+ *psaSrc*  
  Ukazatel **SAFEARRAY** zkopírovat do nové `COleSafeArray` objektu.  
   
  *varSrc*  
  Existující **VARIANT** nebo `COleVariant` objekt, který má být zkopírován do nové `COleSafeArray` objektu.  
   
- `pSrc`  
+ *pSrc*  
  Ukazatel **VARIANT** objekt, který má být zkopírován do nové `COleSafeArray` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Všechny tyto konstruktory vytvořit nový `COleSafeArray` objekty. Pokud neexistuje žádný parametr prázdnou `COleSafeArray` je vytvořen objekt ( `VT_EMPTY`). Pokud `COleSafeArray` zkopírováno z jiného pole, jehož [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) se implicitně označuje ( `COleSafeArray`, `COleVariant`, nebo **VARIANT**), **VARTYPE** z zdrojové pole se zachovává a není nutné zadávat. Pokud `COleSafeArray` zkopírováno z jiného pole, jehož **VARTYPE** nezná ( **SAFEARRAY**), **VARTYPE** musí být zadány v `vtSrc` parametr.  
+ Všechny tyto konstruktory vytvořit nový `COleSafeArray` objekty. Pokud neexistuje žádný parametr prázdnou `COleSafeArray` je vytvořen objekt ( `VT_EMPTY`). Pokud `COleSafeArray` zkopírováno z jiného pole, jehož [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) se implicitně označuje ( `COleSafeArray`, `COleVariant`, nebo **VARIANT**), **VARTYPE** z zdrojové pole se zachovává a není nutné zadávat. Pokud `COleSafeArray` zkopírováno z jiného pole, jehož **VARTYPE** nezná ( **SAFEARRAY**), **VARTYPE** musí být zadány v *vtSrc* parametr.  
   
  V případě chyby, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vtSrc`  
- Základní typ pole (který je **VARTYPE** jednotlivých prvků pole). **VARTYPE** je omezen na podmnožinu typy variant. Ani **VT_ARRAY** ani **VT_BYREF** může být nastaven příznak. `VT_EMPTY` a **VT_NULL** nejsou platné základní typy pro pole. Všechny ostatní typy jsou právní.  
+ *vtSrc*  
+ Základní typ pole (který je **VARTYPE** jednotlivých prvků pole). **VARTYPE** je omezen na podmnožinu typy variant. Ani **VT_ARRAY** ani **VT_BYREF** může být nastaven příznak. **VT_EMPTY** a **VT_NULL** nejsou platné základní typy pro pole. Všechny ostatní typy jsou právní.  
   
- `dwDims`  
+ *dwDims*  
  Počet dimenzí v poli. To se dá změnit po vytvoření pole s [Redim](#redim).  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vtSrc`  
+ *vtSrc*  
  Základní typ pole (který je **VARTYPE** jednotlivých prvků pole).  
   
- `dwElements`  
+ *dwElements*  
  Počet prvků v poli. To se dá změnit po vytvoření pole s [ResizeOneDim](#resizeonedim).  
   
- `pvSrcData`  
+ *pvSrcData*  
  Ukazatel na data chcete zkopírovat do pole.  
   
  *nLBound*  
  Dolní mez pole.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce přiděluje a inicializuje data pro toto pole kopírování zadaná data, pokud je ukazatel `pvSrcData` není **NULL**.  
+ Funkce přiděluje a inicializuje data pro toto pole kopírování zadaná data, pokud je ukazatel *pvSrcData* není **NULL**.  
   
  V případě chyby, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bytes`  
+ *Bajty*  
  Odkaz na [CByteArray](../../mfc/reference/cbytearray-class.md) objektu.  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rgIndices`  
+ *rgIndices*  
  Ukazatel na pole indexů pro Každá dimenze pole.  
   
- `pvData`  
+ *pvData*  
  Ukazatel na umístění pro element pole.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce automaticky volání funkce windows `SafeArrayLock` a `SafeArrayUnlock` před a po načtení elementu. Pokud datový prvek je řetězec, objekt nebo typ variant, funkce zkopíruje element správným způsobem. Parametr `pvData` by měla odkazovat na velké nedostatek vyrovnávací paměti tak, aby obsahovala elementu.  
+ Tato funkce automaticky volání funkce windows `SafeArrayLock` a `SafeArrayUnlock` před a po načtení elementu. Pokud datový prvek je řetězec, objekt nebo typ variant, funkce zkopíruje element správným způsobem. Parametr *pvData* by měla odkazovat na velké nedostatek vyrovnávací paměti tak, aby obsahovala elementu.  
   
  V případě chyby, funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDim`  
+ *dwDim*  
  Rozměry pole, pro které chcete získat dolní hranice.  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDim`  
+ *dwDim*  
  Rozměry pole, pro které chcete získat horní mez.  
   
  *pUBound*  
@@ -581,11 +581,11 @@ void PtrOfIndex (dlouho * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (dlouho * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements);
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

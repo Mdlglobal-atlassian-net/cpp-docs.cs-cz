@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372373"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037301"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu – třída
 Představuje místní nabídky, který uživatelé používat pro výběr barev v dokumentu nebo aplikace.  
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `colors`  
+ [v] *barvy*  
  Pole barev, které rozhraní zobrazí v místní nabídce.  
   
- [v] `color`  
+ [v] *barev*  
  Výchozí hodnota vybrat barvu.  
   
- [v] `lpszAutoColor`  
+ [v] *lpszAutoColor*  
  Textový popisek *automatické* tlačítko barvy (výchozí), nebo `NULL`.  
   
  Standardní popisek tlačítka automatické je **automatické**.  
   
- [v] `lpszOtherColor`  
+ [v] *lpszOtherColor*  
  Textový popisek *jiných* tlačítko, které zobrazí další volby barev, nebo `NULL`.  
   
  Standardní popisek pro tlačítko Další je **Další barvy...** .  
   
- [v] `lpszDocColors`  
+ [v] *lpszDocColors*  
  Textový popisek tlačítka barvy dokumentu. Barevná paleta dokumentu jsou uvedeny všechny barev, které aktuálně používá v dokumentu.  
   
- [v] `lstDocColors`  
+ [v] *lstDocColors*  
  Seznam barev, které aktuálně používá v dokumentu.  
   
- [v] `nColumns`  
+ [v] *nColumns*  
  Počet sloupců, které má pole barev.  
   
- [v] `nHorzDockRows`  
+ [v] *nHorzDockRows*  
  Počet řádků, které má pruhu barev, kde je umístěn vodorovně.  
   
- [v] `nVertDockColumns`  
+ [v] *nVertDockColumns*  
  Počet sloupců, které nemá pruhu barev, pokud jej ukotven svisle.  
   
- [v] `colorAutomatic`  
+ [v] *barvaAutomatická*  
  Výchozí barvu, která rozhraní platí po kliknutí na tlačítko Automatická.  
   
- [v] `uiCommandID`  
+ [v] *uiCommandID*  
  ID příkazu řízení pruhu barev.  
   
- [v] `bStdColorDlg`  
+ [v] *bStdColorDlg*  
  Logická hodnota, která označuje, zda se zobrazí dialogové okno barvy standardní systém nebo [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialogové okno.  
   
- [v] `pParentBtn`  
+ [v] *pParentBtn*  
  Ukazatel na nadřazené tlačítko.  
   
- [v] `nID`  
+ [v] *nID*  
  ID příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `pWndMain`|Ukazatel do nadřazeného okna panelu úplné vypnutí.|  
-|[v] `uiID`|ID příkazu panel úplné vypnutí.|  
-|[v] `lpszName`|Okno text panel úplné vypnutí.|  
+|[v] *pWndMain*|Ukazatel do nadřazeného okna panelu úplné vypnutí.|  
+|[v] *uiID*|ID příkazu panel úplné vypnutí.|  
+|[v] *lpszName*|Okno text panel úplné vypnutí.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na nový objekt panel úplné vypnutí ovládacího prvku.  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndList`  
+ [v] *pWndList*  
  Ukazatel na objekt ovládacího prvku mřížky vlastnosti.  
   
 ## <a name="see-also"></a>Viz také  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373130"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039599"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget – třída
 Poskytuje mechanismus komunikace mezi okno a knihoven OLE.  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Přechází do bodů do okna kurzor.  
   
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na datový objekt obsahující data, která může být přetažen.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, a **MK_RBUTTON**.  
   
- `point`  
+ *Bod*  
  Obsahuje aktuální umístění kurzoru v souřadnice klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- O tom, že by dojít, pokud byla podniknuta pokles v umístění, které `point`. Může být jeden nebo více následujících akcí:  
+ O tom, že by dojít, pokud byla podniknuta pokles v umístění, které *bodu*. Může být jeden nebo více následujících akcí:  
   
 - `DROPEFFECT_NONE` Pokles nebude možné.  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Po skončení bodů do okna kurzor.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna přes se nachází kurzor.  
   
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na datový objekt, který obsahuje data, která mají být vyřazeny.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, a **MK_RBUTTON**.  
   
- `point`  
+ *Bod*  
  Obsahuje aktuální umístění kurzoru v souřadnice klienta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- O tom, že by dojít, pokud byla podniknuta pokles v umístění, které `point`. Může být jeden nebo více následujících akcí:  
+ O tom, že by dojít, pokud byla podniknuta pokles v umístění, které *bodu*. Může být jeden nebo více následujících akcí:  
   
 - `DROPEFFECT_NONE` Pokles nebude možné.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Voláno rámcem před voláním [ondragenter –](#ondragenter) nebo [ondragover –](#ondragover) k určení zda `point` v oblasti s možností posouvání.  
+ Voláno rámcem před voláním [ondragenter –](#ondragenter) nebo [ondragover –](#ondragover) k určení zda *bodu* v oblasti s možností posouvání.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna kurzor je aktuálně přes.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, a **MK_RBUTTON**.  
   
- `point`  
+ *Bod*  
  Obsahuje umístění kurzoru v pixelech, relativně k obrazovce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- O tom, že by dojít, pokud byla podniknuta pokles v umístění, které `point`. Může být jeden nebo více následujících akcí:  
+ O tom, že by dojít, pokud byla podniknuta pokles v umístění, které *bodu*. Může být jeden nebo více následujících akcí:  
   
 - `DROPEFFECT_NONE` Pokles nebude možné.  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna kurzor je aktuálně přes.  
   
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na datový objekt, který obsahuje data, která mají být vyřazeny.  
   
- `dropEffect`  
+ *dropEffect*  
  O tom, že se uživatel rozhodl pro operace vyřazení. Může být jeden nebo více následujících akcí:  
   
 - `DROPEFFECT_COPY` Operace kopírování by se provedla.  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
   
- `point`  
+ *Bod*  
  Obsahuje umístění kurzoru v pixelech, relativně k obrazovce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna kurzor je aktuálně přes.  
   
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na datový objekt, který obsahuje data, která mají být vyřazeny.  
   
- `dropDefault`  
+ *dropDefault*  
  O tom, že se uživatel rozhodl pro operace vyřazení výchozí na základě aktuálního stavu klíče. Může být `DROPEFFECT_NONE`. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
   
- `dropList`  
+ *rozbalovacího seznamu*  
  Seznam rozevírací účinky, které podporuje zdroji vyřaďte. Vyřaďte vliv hodnoty lze spojovat pomocí bitová hodnota OR ( **&#124;**) operaci. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
   
- `point`  
+ *Bod*  
  Obsahuje umístění kurzoru v pixelech, relativně k obrazovce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vliv rozevírací rozevírací pokus o umístění, které je výsledkem `point`. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
+ Vliv rozevírací rozevírací pokus o umístění, které je výsledkem *bodu*. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je nejdřív volá framework. Pokud nezpracovává rozevíracího, pak zavolá rozhraní [OnDrop](#ondrop). Obvykle se přepíše [ondropex –](../../mfc/reference/cview-class.md#ondropex) ve třídě zobrazení pro podporu pravé tlačítko myši přetažení. Obvykle třídy zobrazení [OnDrop](../../mfc/reference/cview-class.md#ondrop) slouží ke zpracování případu podpory pro jednoduché přetažení.  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna, které má být registrován jako cíle přetažení.  
   
 ### <a name="return-value"></a>Návratová hodnota  

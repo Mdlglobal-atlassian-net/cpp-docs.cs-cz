@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367666"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041010"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager – třída
 Spravuje úplné vypnutí nabídky. Úplné vypnutí nabídky je nabídky v řádku nabídek. Uživatele můžete odebrat z nabídky úplné vypnutí v nabídce panelu způsobuje v nabídce úplné vypnutí float.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiTearOffBarID`  
- [v] `strText`  
+ [v] *uiTearOffBarID*  
+ [v] *strText*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszRegEntry`  
+ [v] *lpszRegEntry*  
  Řetězec, který obsahuje cestu položky registru. Aplikace ukládá nastavení pro řádky úplné vypnutí v této položky registru.  
   
- [v] `uiTearOffMenuFirst`  
+ [v] *uiTearOffMenuFirst*  
  První nabídky ID nabídky úplné vypnutí.  
   
- [v] `uiTearOffMenuLast`  
+ [v] *uiTearOffMenuLast*  
  ID poslední nabídky nabídky úplné vypnutí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozsah ID nabídky z `uiTearOffMenuFirst` k `uiTearOffMenuLast` musí být průběžné intervalu. Interval definuje počet úplné vypnutí nabídky, které se mohou objevit v aplikaci najednou.  
+ Rozsah ID nabídky z *uiTearOffMenuFirst* k *uiTearOffMenuLast* musí být průběžné intervalu. Interval definuje počet úplné vypnutí nabídky, které se mohou objevit v aplikaci najednou.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `str`  
+ [v] *str*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hmenu`  
+ [v] *hmenu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdId`  
- [v] `bUse`  
+ [v] *uiCmdId*  
+ [v] *bUse*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hMenu`  
+ [v] *hMenu*  
   
 ### <a name="remarks"></a>Poznámky  
   

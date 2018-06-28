@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374036"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038887"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd – třída
 Poskytuje funkci Windows více okna rámce rozhraní (MDI) dokumentu, společně s členů pro správu okna.  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Můžete vytvořit rámce okna MDI pomocí volání [vytvořit](../../mfc/reference/cframewnd-class.md#create) nebo [loadframe –](../../mfc/reference/cframewnd-class.md#loadframe) členské funkce `CFrameWnd`.  
   
- Před voláním **vytvořit** nebo `LoadFrame`, je nutné vytvořit objekt rámce okna v haldě pomocí C++ **nové** operátor. Před voláním **vytvořit** budete taky moct registrovat třídu okno s [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámečku.  
+ Před voláním `Create` nebo `LoadFrame`, je nutné vytvořit objekt rámce okna v haldě pomocí C++ **nové** operátor. Před voláním `Create` budete taky moct registrovat třídu okno s [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámečku.  
   
- Použití **vytvořit** – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
+ Použití `Create` – členská funkce předat parametry vytvoření rámečku jako okamžitou argumenty.  
   
- `LoadFrame` vyžaduje argumenty méně než **vytvořit**a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Přístup `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
+ `LoadFrame` vyžaduje argumenty méně než `Create`a místo toho načítá většinu jeho výchozí hodnoty z prostředků, včetně titulku rámečku, ikona, tabulka akcelerátoru a nabídky. Přístup `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například **IDR_MAINFRAME**).  
   
  I když **MDIFrameWnd** je odvozený od `CFrameWnd`, třídy oken s rámečkem odvozené od `CMDIFrameWnd` nemusí deklarovat s `DECLARE_DYNCREATE`.  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Volání **vytvořit** nebo `LoadFrame` – členská funkce vytvořit viditelné rámce okna MDI.  
+ Volání `Create` nebo `LoadFrame` – členská funkce vytvořit viditelné rámce okna MDI.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Dlouhé ukazatel [createstruct –](../../mfc/reference/createstruct-structure.md) struktura.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Ukazatel na okno místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pClass`  
+ *pClass*  
  Run-time třída z podřízeného okna, který se má vytvořit.  
   
  *nResource*  
  ID sdílené prostředky, které jsou přidružené k podřízeného okna.  
   
- `hMenu`  
+ *hMenu*  
  Nabídka podřízeného okna.  
   
- `hAccel`  
+ *hAccel*  
  Accelerator podřízeného okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nType`  
+ *Noznámení*  
  Určuje příznak cascade. Lze zadat pouze následující příznak: `MDITILE_SKIPDISABLED`, která zabraňuje zakázané podřízených oken MDI se kaskádových.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna maximalizovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Body do okna obnovení.  
   
 ### <a name="example"></a>Příklad  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Určuje, v nabídce nové nabídky oken s rámečkem. Pokud **NULL**, v nabídce se nezmění.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Určuje, v nabídce místní nabídky okna. Pokud **NULL**, v nabídce se nezmění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nType`  
+ *Noznámení*  
  Určuje příznak vedle sebe. Tento parametr může být některého z následujících příznaků:  
   
 - `MDITILE_HORIZONTAL` Dlaždice podřízených oken MDI tak dané jeden okno se zobrazí nad jiné.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Dlaždice podřízených oken MDI tak dané jeden okno se zobrazí vedle jiné.  
   
 ### <a name="remarks"></a>Poznámky  
- První verze součásti `MDITile`, bez parametrů, dlaždice windows svisle v systémech Windows verze 3.1 nebo novější. Druhá verze dlaždice windows vertikálně nebo horizontálně, v závislosti na hodnotě `nType` parametr.  
+ První verze součásti `MDITile`, bez parametrů, dlaždice windows svisle v systémech Windows verze 3.1 nebo novější. Druhá verze dlaždice windows vertikálně nebo horizontálně, v závislosti na hodnotě *Noznámení* parametr.  
   
 ### <a name="example"></a>Příklad  
  Podívejte se na příklad pro [CMDIFrameWnd::MDICascade](#mdicascade).  

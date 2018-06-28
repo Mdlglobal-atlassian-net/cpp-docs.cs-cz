@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369047"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038500"
 ---
 # <a name="cjumplist-class"></a>CJumpList – třída
 A `CJumpList` je seznam zástupců zobrazených po klikněte pravým tlačítkem na ikonu na hlavním panelu.  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  Určuje název kategorie. Pokud zadaná kategorie neexistuje, bude vytvořen.  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  Určuje cestu k cílovému souboru.  
   
- `strCategoryName`  
+ *strCategoryName*  
  Určuje název kategorie. Pokud zadaná kategorie neexistuje, bude vytvořen.  
   
- `pShellItem`  
+ *pShellItem*  
  Určuje položku prostředí představující cíl, který chcete přidat.  
   
- `pShellLink`  
+ *pShellLink*  
  Určuje odkaz prostředí představující cíl, který chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `category`  
+ *kategorie*  
  Určuje typ známé kategorie. Může být buď `KDC_RECENT`, nebo `KDC_KNOWN`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  Určuje cílovou cestu úloh.  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  Určuje argumenty příkazového řádku ke spustitelnému souboru určeného strTargetExecutablePath.  
   
- `strTitle`  
+ *strTitle*  
  Název úlohy, která se zobrazí v seznamu cíl.  
   
- `strIconLocation`  
+ *strIconLocation*  
  Umístění ikony, která se zobrazí v seznamu cíl společně s název.  
   
- `iIconIndex`  
+ *iIconIndex*  
  Ikona index.  
   
- `pShellLink`  
+ *pShellLink*  
  Odkaz prostředí, který představuje přidat úloha.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObjectCollection`  
+ *pObjectCollection*  
  Kolekci úloh má být přidán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutoCommit`  
+ *bAutoCommit*  
  Pokud má parametr hodnotu FALSE v seznamu není v destruktoru potvrdí automaticky.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strAppID`  
+ *strAppID*  
  Řetězec, který určuje ID modelu uživatele aplikace.  
   
 ## <a name="see-also"></a>Viz také  

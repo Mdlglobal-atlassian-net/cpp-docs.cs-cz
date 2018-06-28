@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369619"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037726"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl – třída
 `CMFCListCtrl` Třídy rozšiřuje funkce [CListCtrl – třída](../../mfc/reference/clistctrl-class.md) třída díky podpoře funkce ovládacího prvku rozšířené hlavičky [CMFCHeaderCtrl třída](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bMark`  
+ [v] *bMark*  
  Parametr typu Boolean, která určuje, jestli se má povolit jinou barvu pozadí.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  Parametr typu Boolean, která určuje, zda se okamžitě ho překreslit ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Logická hodnota, která určuje, jestli chcete povolit režim řazení více sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lParam1`  
+ [v] *lParam1*  
  První položka k porovnání.  
   
- [v] `lParam2`  
+ [v] *lParam2*  
  Druhá položka k porovnání.  
   
- [v] `iColumn`  
+ [v] *iColumn*  
  Index sloupce, který tato metoda je řazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nRow`  
+ [v] *nRow*  
  Řádek buněk v.  
   
- [v] `nColumn`  
+ [v] *nColumn*  
  Sloupce v buňky.  
   
- [v] `dwData`  
+ [v] *dwData*  
  Uživatelská data. Výchozí implementace nepoužívá tento parametr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nRow`  
+ [v] *nRow*  
  Řádek buněk v.  
   
- [v] `nColumn`  
+ [v] *nColumn*  
  Sloupce v buňky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iColumn`  
+ [v] *iColumn*  
  Sloupec, který chcete odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iColumn`  
+ [v] *iColumn*  
  Tento sloupec seřadit.  
   
- [v] `bAscending`  
+ [v] *bAscending*  
  Logická hodnota, která určuje pořadí řazení.  
   
- [v] `bAdd`  
- Logická hodnota, která určuje, zda metoda přidá sloupec indikován `iColumn` do seznamu řazení sloupců.  
+ [v] *bAdd*  
+ Logická hodnota, která určuje, zda metoda přidá sloupec indikován *iColumn* do seznamu řazení sloupců.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda předá vstupní parametry do ovládacího prvku záhlaví pomocí metody [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iColumn`  
+ [v] *iColumn*  
  Tento sloupec seřadit.  
   
- [v] `bAscending`  
+ [v] *bAscending*  
  Logická hodnota, která určuje pořadí řazení.  
   
- [v] `bAdd`  
- Logická hodnota, která určuje, zda tato metoda přidá sloupec indikován `iColumn` do seznamu řazení sloupců.  
+ [v] *bAdd*  
+ Logická hodnota, která určuje, zda tato metoda přidá sloupec indikován *iColumn* do seznamu řazení sloupců.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

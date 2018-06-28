@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371725"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038351"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl – třída
 `CMFCLinkCtrl` Třída zobrazí tlačítko jako hypertextový odkaz a vyvolá na odkaz cíl při kliknutí na tlačítko.  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectClient`  
+ [v] *rectClient*  
  Obdélníku, která bounds ovládací prvek odkazu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszURL`  
+ [v] *lpszURL*  
  Text tlačítka pro zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszPrefix`  
+ [v] *lpszPrefix*  
  Předponu adresy URL protokolu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bVCenter`  
+ [v] *bVCenter*  
  `TRUE` na střed tlačítko text a rastrový obrázek svisle mezi horní a dolní část řízení propojení; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
- [v] `bHCenter`  
+ [v] *bHCenter*  
  `TRUE` na střed tlačítko text a rastrový obrázek vodorovně mezi levé a pravé straně ovládacího prvku odkaz; v opačném `FALSE`. Výchozí hodnota je `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  

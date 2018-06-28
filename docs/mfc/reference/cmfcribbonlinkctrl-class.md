@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368433"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039008"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl – třída
 Implementuje hypertextový odkaz, který je umístěn na pásu karet. Po kliknutí na tlačítko se otevře hypertextový odkaz na webové stránce.  
@@ -106,13 +106,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  Určuje příkaz ID příkazu, který provede, když se po kliknutí na ovládací prvek odkazu.  
   
- [v] `lpszText`  
+ [v] *lpszText*  
  Určuje popisek zobrazíte na ovládací prvek odkazu.  
   
- [v] `lpszLink`  
+ [v] *lpszLink*  
  Určuje hypertextový odkaz přidružený k ovládacímu prvku odkazu.  
   
 ### <a name="example"></a>Příklad  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CDC*`  
- [v] `CRect`  
+ [v] *CDC**  
+ [v] *CRect*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszLink`  
+ [v] *lpszLink*  
  Určuje text hypertextového odkazu.  
   
 ## <a name="see-also"></a>Viz také  

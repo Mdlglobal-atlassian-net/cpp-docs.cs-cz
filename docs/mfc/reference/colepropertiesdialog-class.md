@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371683"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040178"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog – třída
 Zapouzdří dialogové okno Vlastnosti objektu OLE systému Windows běžné.  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na položku dokumentu, jehož vlastnosti jsou spuštěny.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Maximální velikost v procentech pro obrázek položky dokumentu.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na nadřazené nebo vlastníka dialogových oken.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na položku dokumentu, jehož vlastnosti jsou spuštěny.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Číselná hodnota měřítka, dialogové okno.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  Výchozí implementace neprovede žádnou akci. Je nutné přepsat tuto funkci povolit škálování ovládací prvky.  
   
 > [!NOTE]
->  Před zobrazením běžné dialogové okno Vlastnosti objektu OLE, tato funkce se volá framework **NULL** pro `pItem` a -1 pro `nCurrentScale`. To slouží k určení, zda by měl být povolený škálování ovládací prvky.  
+>  Před zobrazením běžné dialogové okno Vlastnosti objektu OLE, tato funkce se volá framework **NULL** pro *pItem* a -1 pro *nCurrentScale*. To slouží k určení, zda by měl být povolený škálování ovládací prvky.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka MFC str](../../visual-cpp-samples.md)   

@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ee30d461bac43831bf59c19f5aac95884057eea
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378451"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042232"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl – třída
 Implementuje základní funkce pro záložkách windows.  
@@ -436,10 +436,10 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hIcon`  
+ [v] *hIcon*  
  Popisovač pro ikonu, která má být přidán.  
   
- [v] `iIcon`  
+ [v] *iIcon*  
  Index nule na ikonu v chráněného `CImageList m_Images` člen.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -463,23 +463,23 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pTabWnd`  
+ [v] *pTabWnd*  
  Ukazatel na okně, které tato metoda představuje jako novou kartu.  
   
- [v] `lpszTabLabel`  
+ [v] *lpszTabLabel*  
  Řetězec, který obsahuje popisek pro novou kartu.  
   
- [v] `uiImageId`  
+ [v] *uiImageId*  
  ID bitové kopie ze seznamu obrázků. Ovládacího prvku karta používá tuto bitovou kopii jako na ikonu pro novou kartu.  
   
- [v] `uiResTabLabel`  
+ [v] *uiResTabLabel*  
  ID prostředku pro popisek.  
   
- [v] `bDetachable`  
+ [v] *bDetachable*  
  Parametr typu Boolean, která určuje, zda je na nové kartě odpojitelných.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `pTabWnd` odkazuje na objekt, který není odvozen od [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) a pokud `bDetachable` je `TRUE`, rozhraní automaticky vytvoří obálku pro `pTabWnd` objektu. Vytvoří obálku `pTabWnd` odpojitelných objektu. Ve výchozím nastavení je obálku instance [CDockablePaneAdapter třída](../../mfc/reference/cdockablepaneadapter-class.md). Pokud funkce nabízené výchozí obálku nepřijatelný, použijte [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metody určíte jiný obálku.  
+ Pokud *pTabWnd* odkazuje na objekt, který není odvozen od [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) a pokud *bDetachable* je `TRUE`, automaticky vytvoří rozhraní framework Obálka pro *pTabWnd* objektu. Vytvoří obálku *pTabWnd* odpojitelných objektu. Ve výchozím nastavení je obálku instance [CDockablePaneAdapter třída](../../mfc/reference/cdockablepaneadapter-class.md). Pokud funkce nabízené výchozí obálku nepřijatelný, použijte [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metody určíte jiný obálku.  
   
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
@@ -489,7 +489,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bUseTabIndexes`  
+ [v] *bUseTabIndexes*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -501,7 +501,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAutoDestroy`  
+ [v] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -513,7 +513,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rectEdit`  
+ [v] *rectEdit*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -546,24 +546,24 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pWndToWrap`  
+ [v] *pWndToWrap*  
  Ukazatel na rámec okna, který je uzavřen.  
   
- [v] `lpszTabLabel`  
+ [v] *lpszTabLabel*  
  Řetězec, který obsahuje popisek pro okno.  
   
- [v] `bDetachable`  
+ [v] *bDetachable*  
  Logický parametr, který určuje, zda je odpojitelných okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na obálku odvozené z `CDockablePane` třídy Pokud `CreateWrapper` úspěšně vytvoří obálkovou třídu pro `pWndToWrap`. Pokud metoda selže, je retruns `pWndToWrap`.  
+ Ukazatel na obálku odvozené z `CDockablePane` třídy Pokud `CreateWrapper` úspěšně vytvoří obálkovou třídu pro *pWndToWrap*. Pokud metoda selže, je retruns *pWndToWrap*.  
   
 ### <a name="remarks"></a>Poznámky  
  Okno s kartami lze ukotvení libovolného objektu odvozeného z `CWnd`. Ale v pořadí `CMFCBaseTabCtrl Class` objekt, který má být lze ukotvit, každého objektu na `CMFCBaseTabCtrl` musí být odpojitelných. Proto `CMFCBaseTabCtrl` automaticky sbalí všechny objekty, které nejsou odvozeny od `CDockablePane`.  
   
  Ve výchozím nastavení `CMFCBaseTabCtrl` vytváří instance [CDockablePaneAdapter třída](../../mfc/reference/cdockablepaneadapter-class.md). Chcete-li změnit obálku výchozí třídu, volejte [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
- Pokud `pWndToWrap` je odvozený od `CDockablePane`, tato metoda nevytvoří obálku. Místo toho se nezdaří a vrátí `pWndToWrap`.  
+ Pokud *pWndToWrap* je odvozený od `CDockablePane`, tato metoda nevytvoří obálku. Místo toho se nezdaří a vrátí *pWndToWrap*.  
   
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  Rozhraní framework volá tuto metodu za účelem odpojení na kartě z ovládacího prvku karta.  
@@ -576,20 +576,20 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dockMethod`  
+ [v] *dockMethod*  
  Výčtový typ dat. poskytované [CBasePane třída](../../mfc/reference/cbasepane-class.md). Tento typ dat určuje metodu použitou k odpojení na kartě.  
   
- [v] `nTabNum`  
+ [v] *nTabNum*  
  Index založený na nule karty být odpojit.  
   
- [v] `bHide`  
+ [v] *bHide*  
  Parametr typu Boolean, která určuje, zda by měl rozhraní skrýt kartě odpojit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud na kartě Určuje `nTabNum` je jiný odpojitelných, tato funkce se nezdaří a vrátí `FALSE`.  
+ Pokud na kartě Určuje *nTabNum* je jiný odpojitelných, tato funkce se nezdaří a vrátí `FALSE`.  
   
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
@@ -599,7 +599,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bLastActive`  
+ [v] *bLastActive*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -611,7 +611,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Parametr typu Boolean, která určuje, zda systém použije automatické barvy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -627,7 +627,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Logická hodnota, která určuje, jestli se má použít vlastní popisky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -644,7 +644,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Logická hodnota parametr, který určuje, jestli se má povolit přímé úpravy popisků kartě.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -664,10 +664,10 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
- [v] `bEnable`  
+ [v] *bEnable*  
  Logická hodnota, která určuje, zda má být na kartě odpojitelných.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -681,7 +681,7 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
+ [v] *bEnable*  
  Logická hodnota, která označuje, zda povolit odkládací kartě.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -695,14 +695,14 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda nemá vliv, pokud na kartě indikován `iTab` je již zobrazen.  
+ Tato metoda nemá vliv, pokud na kartě indikován *iTab* je již zobrazen.  
   
  Ve výchozím nastavení, tato metoda není podporovaná `CMFCBaseTabCtrl Class`. Tuto funkci byste měli implementovat vlastní třídy odvozené od `CMFCBaseTabCtrl` Pokud podporuje tento ovládací prvek karty vlastní kartě posouvání. Tato metoda podporuje [CMFCTabCtrl třída](../../mfc/reference/cmfctabctrl-class.md).  
   
@@ -723,7 +723,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pt`  
+ [v] *pt*  
  Bod, který je definován pomocí klientské oblasti souřadnic [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -740,7 +740,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nNewTab`  
+ [v] *nNewTab*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -752,7 +752,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nNewTab`  
+ [v] *nNewTab*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -830,19 +830,19 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `iTabNum`  
+ [out] *iTabNum*  
  Odkaz na celé číslo. Tato metoda zapíše index založený na nule první viditelné karty tento parametr.  
   
- [v] `iStartFrom`  
+ [v] *iStartFrom*  
  Index založený na nule na první kartě ke kontrole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel na první kartě viditelné v případě úspěšného; v opačném případě `NULL`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tato metoda selže, zapíše hodnota -1, která má `iStartFrom`.  
+ Pokud tato metoda selže, zapíše hodnota -1, která má *iStartFrom*.  
   
- Pokud `iStartFrom` je větší než nebo rovno počtu karty ovládacího prvku karta `GetFirstVisibleTab` automaticky selže.  
+ Pokud *iStartFrom* je větší než nebo rovno počtu karty ovládacího prvku karta `GetFirstVisibleTab` automaticky selže.  
   
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
@@ -895,7 +895,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTabNum`  
+ [v] *iTabNum*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -935,10 +935,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rectTabAreaTop`  
+ [v] *rectTabAreaTop*  
  Odkaz na `CRect` objektu. `GetTabArea` Tento objekt se používá k ukládání velikost a umístění oblast nejvyšší karty.  
   
- [v] `rectTabAreaBottom`  
+ [v] *rectTabAreaBottom*  
  Odkaz na `CRect` objektu. `GetTabArea` Tento objekt se používá k ukládání velikost a umístění dolní oblast karty.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -954,11 +954,11 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která určuje barvu pozadí zadaný karty; -1, pokud `iTab` je mimo rozsah.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která určuje barvu pozadí zadaný karty; -1, pokud *iTab* je mimo rozsah.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Získá velikost ohraničení karta v ovládacího prvku karta.  
@@ -981,7 +981,7 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `id`  
+ [v] *id*  
  Karta ID.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1009,11 +1009,11 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hwnd`  
+ [v] *hwnd*  
  Popisovač pro okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index založený na nule karty v případě úspěšného; -1, pokud žádné karta obsahuje `hwnd`.  
+ Index založený na nule karty v případě úspěšného; -1, pokud žádné karta obsahuje *hwnd*.  
   
 ##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  Načte kartu, která obsahuje zadaný bod.  
@@ -1023,11 +1023,11 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pt`  
+ [v] *pt*  
  Bod v souřadnicích klienta ovládacího prvku karta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index kartu, která obsahuje `pt`; -1, pokud žádné karta obsahuje `pt`.  
+ Index kartu, která obsahuje *pt*; -1, pokud žádné karta obsahuje *pt*.  
   
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
@@ -1037,7 +1037,7 @@ virtual int GetTabFullWidth(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1051,7 +1051,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1065,7 +1065,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1082,11 +1082,11 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID kartě nebo -1, pokud `iTab` je mimo rozsah.  
+ ID kartě nebo -1, pokud *iTab* je mimo rozsah.  
   
 ##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  Načte text popisku karty.  
@@ -1098,17 +1098,17 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
- [out] `strLabel`  
+ [out] *strLabel*  
  Odkaz na `CString` objektu. Tato metoda ukládá popisek karty v tomto parametru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` v případě úspěšného; `FALSE` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda selže-li index `iTab` je neplatný.  
+ Tato metoda selže-li index *iTab* je neplatný.  
   
  Při vytváření kartě pomocí nastavte popisek pro kartě [CMFCBaseTabCtrl::AddTab](#addtab). Popisek můžete také změnit po vytvoření pomocí metody [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
@@ -1122,10 +1122,10 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
- [out] `rect`  
+ [out] *Rect –*  
  Odkaz na `CRect` objektu. Tato metoda ukládá velikost a umístění karty v tomto parametru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1160,7 +1160,7 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `rect`  
+ [v] *Rect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1172,11 +1172,11 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu zadaný karty; -1, pokud `iTab` je mimo rozsah.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu textu zadaný karty; -1, pokud *iTab* je mimo rozsah.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  V podokně, který se nachází na kartě zadaný vrátí ukazatele.  
@@ -1186,11 +1186,11 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který se nachází na kartě, `iTab` určuje. `NULL` Pokud `iTab` je neplatný.  
+ Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který se nachází na kartě, *iTab* určuje. `NULL` Pokud *iTab* je neplatný.  
   
 ### <a name="remarks"></a>Poznámky  
  Vráceného objektu je ten, který přidat aplikaci, když ji volat buď [CMFCBaseTabCtrl::AddTab](#addtab) nebo [CMFCBaseTabCtrl::InsertTab](#inserttab).  
@@ -1205,11 +1205,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který se nachází na kartě zadaný; `NULL` Pokud `iTab` je neplatný.  
+ Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který se nachází na kartě zadaný; `NULL` Pokud *iTab* je neplatný.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda načítá přímé odkazy `CWnd` objektu, zda jste přidali pomocí buď metody [CMFCBaseTabCtrl::AddTab](#addtab) nebo [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` načte ukazatel na přidaném `CWnd`i v případě, že rozhraní přidat obálku pro objekt. Další informace o obálky a [CMFCBaseTabCtrl třída](../../mfc/reference/cmfcbasetabctrl-class.md), najdete v části [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
@@ -1244,7 +1244,7 @@ virtual BOOL HasImage(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1258,7 +1258,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bHide`  
+ [v] *bHide*  
  Logická hodnota, která určuje, jestli se má Povolit skrytí jedné karty.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1285,26 +1285,26 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pNewWnd`  
+ [v] *pNewWnd*  
  Ukazatel na okně, které tato metoda se přidá jako novou kartu.  
   
- [v] `lpszTabLabel`  
+ [v] *lpszTabLabel*  
  Řetězec, který obsahuje popisek pro novou kartu.  
   
- [v] `nInsertAt`  
+ [v] *nInsertAt*  
  Index založený na nule na nové kartě.  
   
- [v] `uiImageId`  
+ [v] *uiImageId*  
  ID bitové kopie ze seznamu obrázků. Ovládacího prvku karta používá tuto bitovou kopii jako na ikonu pro novou kartu.  
   
- [v] `bDetachable`  
+ [v] *bDetachable*  
  Parametr typu Boolean, která určuje, zda je na nové kartě odpojitelných.  
   
- [v] `uiResTabLabel`  
+ [v] *uiResTabLabel*  
  ID prostředku pro popisek.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud objekt indikován `pNewWnd` není odvozen od [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) a pokud `bDetachable` parametr je `TRUE`, rozhraní framework vytvoří speciální obálku pro novou kartu. Ve výchozím nastavení je obálku instance [CDockablePaneAdapter třída](../../mfc/reference/cdockablepaneadapter-class.md). Použití [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metodu pro vytvoření různých obálkovou třídu. Všechny vlastní Obálková třída musí být odvozen od `CDockablePaneAdapter`.  
+ Pokud objekt indikován *pNewWnd* není odvozen od [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) a pokud *bDetachable* parametr je `TRUE`, vytvoří rozhraní speciální obálku pro novou kartu. Ve výchozím nastavení je obálku instance [CDockablePaneAdapter třída](../../mfc/reference/cdockablepaneadapter-class.md). Použití [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metodu pro vytvoření různých obálkovou třídu. Všechny vlastní Obálková třída musí být odvozen od `CDockablePaneAdapter`.  
   
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
@@ -1314,7 +1314,7 @@ void InvalidateTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hIcon`  
- [v] `iIcon`  
+ [v] *hIcon*  
+ [v] *iIcon*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1500,7 +1500,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Bod, který chcete otestovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1539,7 +1539,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty ke kontrole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1556,7 +1556,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1586,7 +1586,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty ke kontrole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nSource`  
- [v] `nDest`  
+ [v] *Nzdrojový*  
+ [v] *nDest*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1659,9 +1659,9 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `COleDataObject*`  
- [v] `DROPEFFECT`  
- [v] `CPoint`  
+ [v] *COleDataObject**  
+ [v] *DROPEFFECT*  
+ [v] *CPoint*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1678,9 +1678,9 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `COleDataObject*`  
- [v] `DWORD`  
- [v] `CPoint`  
+ [v] *COleDataObject**  
+ [v] *DWORD*  
+ [v] *CPoint*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1706,9 +1706,9 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `COleDataObject*`  
- [v] `DWORD`  
- [v] `CPoint`  
+ [v] *COleDataObject**  
+ [v] *DWORD*  
+ [v] *CPoint*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `int`  
- [v] `CString&`  
+ [v] *int*  
+ [v] *CString &*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1737,7 +1737,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pMsg`  
+ [v] *pMsg*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -1773,10 +1773,10 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
- [v] `bRecalcLayout`  
+ [v] *bRecalcLayout*  
  Logický parametr, který určuje, zda chcete přepočítat rozložení kartě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1811,7 +1811,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ar`  
+ [v] *ar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1823,7 +1823,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule kartě `SetActiveTab` aktivuje na kartě s tento index.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1840,7 +1840,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clr`  
+ [v] *clr*  
  Určuje barvu pozadí nové.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1854,7 +1854,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `clr`  
+ [v] *clr*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu nového textu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1868,11 +1868,11 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `arColors`  
+ [v] *arColors*  
  Pole RGB barvy.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud jste zadali vlastní pole barev, pole výchozí barvy se ignoruje. Pokud parametr `arColors` je prázdná, rozhraní se vrátí do výchozího pole barev.  
+ Pokud jste zadali vlastní pole barev, pole výchozí barvy se ignoruje. Pokud parametr *arColors* je prázdná, rozhraní se vrátí do výchozího pole barev.  
   
  Pokud chcete povolit režim Automatická barva, použijte [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) metoda.  
   
@@ -1884,7 +1884,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRTC`  
+ [v] *pRTC*  
  Modul runtime – třída informace pro novou třídu obálky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1900,10 +1900,10 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bNoPrefix`  
+ [v] *bNoPrefix*  
  `TRUE` Pokud chcete zpracovat předpon pro; v opačném případě `FALSE`.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  `TRUE` Pokud chcete ho překreslit okno s kartami; v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1922,16 +1922,16 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiID`  
+ [v] *uiID*  
  Rastrový obrázek prostředku. `SetImageList` načte seznam obrázků z tohoto prostředku.  
   
- [v] `cx`  
+ [v] *cx*  
  Šířka každého obrázku v pixelech.  
   
- [v] `clrTransp`  
+ [v] *clrTransp*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje průhledná barva obrázku.  
   
- [v] `hImageList`  
+ [v] *hImageList*  
  Popisovač pro seznam předem načtené bitové kopie.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1940,7 +1940,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>Poznámky  
  Bitové kopie ze seznamu obrázků ikonu se zobrazí spolu s popisky karty. Zobrazit ikonu, musíte zadat jeho index při volání [CMFCBaseTabCtrl::AddTab](#addtab).  
   
- `SetImageList` Pokud ovládacího prvku karta byl vytvořen s plochým styl se nezdaří. Se také nezdaří, pokud rozhraní nelze načíst obrázek indikován `uiID`.  
+ `SetImageList` Pokud ovládacího prvku karta byl vytvořen s plochým styl se nezdaří. Se také nezdaří, pokud rozhraní nelze načíst obrázek indikován *uiID*.  
   
  Tato metoda přepočítá výška karty podle velikosti obrázku a text.  
   
@@ -1952,7 +1952,7 @@ virtual void SetLocation(Location location);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `location`  
+ [v] *umístění*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -1966,10 +1966,10 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
- [v] `color`  
+ [v] *barev*  
  Barva nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1985,10 +1985,10 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nTabBorderSize`  
+ [v] *nTabBorderSize*  
  Nové ohraničení velikost, v pixelech.  
   
- [v] `bRepaint`  
+ [v] *bRepaint*  
  Parametr typu Boolean, která určuje, zda rozhraní ho překreslí ovládacího prvku.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
@@ -2001,10 +2001,10 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty. Tato metoda se změní na ikonu na této kartě.  
   
- [v] `hIcon`  
+ [v] *hIcon*  
  Popisovač pro ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2020,10 +2020,10 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty aktualizace.  
   
- [v] `uiIcon`  
+ [v] *uiIcon*  
  Ikona ID na ikonu nový. Toto ID odkazuje na interní [CImageList](../../mfc/reference/cimagelist-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2040,13 +2040,13 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty změnit.  
   
- [v] `bIconOnly`  
+ [v] *bIconOnly*  
  Parametr typu Boolean, která určuje, jestli se má zobrazit pouze ikony.  
   
- [v] `bShowTooltipAlways`  
+ [v] *bShowTooltipAlways*  
  Parametr typu Boolean, která určuje, zda rozhraní zobrazuje popisy pro popisek karty, který zobrazuje pouze ikony.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2065,10 +2065,10 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty aktualizace.  
   
- [v] `strLabel`  
+ [v] *strLabel*  
  Odkaz na řetězec, který obsahuje nový text pro popisek karty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2091,14 +2091,14 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `arOrder`  
+ [v] *arOrder*  
  Pole od nuly indexy, které definuje nové pořadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` v případě úspěšného; `FAIL` jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Velikost `arOrder` pole musí být roven počtu karet do ovládacího prvku karta.  
+ Velikost *arOrder* pole musí být roven počtu karet do ovládacího prvku karta.  
   
 ##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  Nastaví barvu textu pro konkrétní kartě.  
@@ -2110,10 +2110,10 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index založený na nule karty.  
   
- [v] `color`  
+ [v] *barev*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, který určuje barvu nového textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2131,23 +2131,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
  Index na kartě, `ShowTab` bude zobrazit nebo skrýt.  
   
- [v] `bShow`  
+ [v] *bShow*  
  Parametr typu Boolean, která určuje, jestli se má zobrazit na kartě.  
   
- [v] `bRecalcLayout`  
+ [v] *bRecalcLayout*  
  Parametr typu Boolean, která určuje, zda okamžitě přepočítat rozložení okna.  
   
- [v] `bActivate`  
- Logický parametr, který označuje, zda vyberte kartu určeného `iTab`.  
+ [v] *bActivate*  
+ Logický parametr, který označuje, zda vyberte kartu určeného *iTab*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametr `bActivate` platí pouze v případě `bShow` je `TRUE`. Pokud `bActivate` je `TRUE` a pokud `ShowTab` úspěšně, `ShowTab` odešle zprávu AFX_WM_CHANGE_ACTIVE_TAB do nadřazené okno s kartou.  
+ Parametr *bActivate* platí pouze v případě *bShow* je `TRUE`. Pokud *bActivate* je `TRUE` a pokud `ShowTab` úspěšně, `ShowTab` odešle zprávu AFX_WM_CHANGE_ACTIVE_TAB do nadřazené okno s kartou.  
   
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
@@ -2157,7 +2157,7 @@ virtual BOOL StartRenameTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTab`  
+ [v] *iTab*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nFisrtTabID`  
- [v] `nSecondTabID`  
+ [v] *nFisrtTabID*  
+ [v] *nSecondTabID*  
   
 ### <a name="remarks"></a>Poznámky  
   

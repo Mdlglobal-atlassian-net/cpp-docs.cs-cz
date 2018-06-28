@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372694"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037722"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider – třída
 `CMFCRibbonSlider` Třída implementuje ovládací prvek typu jezdec, který můžete přidat na pásu karet řádek nebo pásu karet stavový řádek. V ovládacím prvku posuvník pásu karet se podobá posuvníků zvětšení, které se zobrazují v aplikacích Office 2007.  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nID`  
+ [v] *nID*  
  ID posuvníku.  
   
- [v]. `nWidth`  
+ [v]. *nWindth*  
  Šířka posuvníku v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří posuvníku pásu karet, která je `nWidth` pixelů v panelu kategorie, kde se přidá posuvníku. Ve výchozím nastavení je vodorovný posuvníku.  
+ Vytvoří posuvníku pásu karet, která je *nWindth* pixelů v panelu kategorie, kde se přidá posuvníku. Ve výchozím nastavení je vodorovný posuvníku.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Vrátí aktuální pozici v ovládacím prvku posuvník.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nPos`  
+ [v] *nPos –*  
  Určuje pozici pro posuvníku. Pozice je relativní vzhledem k začátku posuvníku.  
   
- [v] `bRedraw`  
+ [v] *bRedraw*  
  Pokud `TRUE`, bude překreslit posuvníku.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nMin`  
+ [v] *nMin*  
  Určuje minimální hodnotu jezdce.  
   
- [v] `nMax`  
+ [v] *nMax*  
  Určuje maximální hodnotu jezdce.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v]. `bSet`  
+ [v]. *bSet*  
  `TRUE` k zobrazení tlačítka přiblížení; `FALSE` jejich skrytí.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nZoomIncrement`  
+ [v] *nZoomIncrement*  
  Určuje přírůstek zvětšení ovládacího prvku posuvník.  
   
 ## <a name="see-also"></a>Viz také  

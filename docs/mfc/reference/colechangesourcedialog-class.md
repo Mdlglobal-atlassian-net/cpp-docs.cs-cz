@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376447"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037593"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog – třída
 Používá se pro dialogové okno OLE změnit zdroj.  
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na propojenou [COleClientItem](../../mfc/reference/coleclientitem-class.md) jejíž zdroj se bude aktualizovat.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna bude nastavena pro hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  

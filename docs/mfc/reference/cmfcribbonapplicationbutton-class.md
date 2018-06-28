@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369161"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037418"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton – třída
 Implementuje speciální tlačítko nachází v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevření nabídky, která obvykle obsahuje běžné **soubor** příkazy jako **otevřete**, **Uložit**, a **ukončení**.  
@@ -98,10 +98,10 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiBmpResID`  
+ [v] *uiBmpResID*  
  ID prostředku bitové kopie pro zobrazení na tlačítko aplikace.  
   
- [v] `hBmp`  
+ [v] *hBmp*  
  Popisovač pro rastrový obrázek pro zobrazení na tlačítko aplikace.  
   
 ### <a name="remarks"></a>Poznámky  

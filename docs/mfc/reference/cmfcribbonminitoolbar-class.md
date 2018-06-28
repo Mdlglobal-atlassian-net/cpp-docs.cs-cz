@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371670"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041747"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar – třída
 Implementuje kontextové místní panel nástrojů.  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRibbonBar`  
+ [v] *pRibbonBar*  
  Panel pásu karet, který vyhledá malém panelu nástrojů tlačítka pro zobrazení.  
   
- [v] `lstCommands`  
+ [v] *lstCommands*  
  Seznam příkazů, který se má zobrazit v malém panelu nástrojů. Najít tlačítka přidružené budou prohledány všechny kategorie pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `x`  
+ [v] *x*  
  Určuje vodorovné umístění malém panelu nástrojů v souřadnice obrazovky.  
   
- [v] `y`  
+ [v] *y*  
  Určuje svislé umístění malém panelu nástrojů v souřadnice obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `x`  
+ [v] *x*  
  Určuje vodorovné umístění v místní nabídce v souřadnice obrazovky.  
   
- [v] `y`  
+ [v] *y*  
  Určuje svislé umístění v místní nabídce v souřadnice obrazovky.  
   
- [v] `uiMenuResID`  
+ [v] *uiMenuResID*  
  Určuje ID prostředku v místní nabídce k zobrazení.  
   
- [v] `pWndOwner`  
+ [v] *pWndOwner*  
  Identifikuje okna, která přijímá zprávy z místní nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375308"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038296"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton – třída
 Tlačítko, které zobrazí nebo skryje [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) nakonfigurovaný skrýt.  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pParentBar`  
+ [v] *pParentBar*  
  Ukazatel na panelu nástrojů nadřazené.  
   
- [v] `pAutoHideWnd`  
+ [v] *pAutoHideWnd*  
  Ukazatel [CDockablePane](../../mfc/reference/cdockablepane-class.md) objektu. Toto tlačítko automaticky skrýt skryje a ukazuje, že `CDockablePane`.  
   
- [v] `dwAlignment`  
+ [v] *dwAlignment*  
  Hodnota, která určuje zarovnání na tlačítko se hlavního rámce okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Poznámky  
  Při vytváření `CMFCAutoHideButton` objekt, je nutné přidružit ke konkrétní automaticky skrýt tlačítko `CDockablePane`. Uživatel může použít tlačítko automaticky skrýt skrýt a zobrazit přidruženého `CDockablePane`.  
   
- `dwAlignment` Parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Parametr může být jakýkoli z následujících hodnot:  
+ *DwAlignment* parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Parametr může být jakýkoli z následujících hodnot:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectBounds`  
+ [v] *rectBounds*  
  Ohraničující obdélník automaticky skrýt tlačítko.  
   
- [v] `rectBorderSize`  
+ [v] *rectBorderSize*  
  Tloušťka ohraničení pro každé straně automaticky skrýt tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník automaticky skrýt tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Logická hodnota, která určuje, zda tato metoda zobrazuje připojený `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bShow`  
+ [v] *bShow*  
  Logická hodnota, která určuje, zda chcete automaticky skrýt tlačítko zobrazit.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nOffset`  
+ [v] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pNewBar`  
+ [v] *pNewBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pFirstBarInGroup`  
+ [v] *pFirstBarInGroup*  
  Ukazatel na prvním řádku ve skupině.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bHighlight`  
+ *bHighlight*  
  Určuje nové automaticky skrýt tlačítko stavu. `TRUE` označuje tlačítko zvýrazní, `FALSE` označuje není zvýrazněná tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  

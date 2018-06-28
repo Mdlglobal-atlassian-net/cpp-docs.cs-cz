@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376017"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041955"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl – třída
 Poskytuje funkci ovládacím prvku Windows běžné záhlaví.  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColumn`  
+ *nColumn*  
  Sloupec hodnotu určující, který filtr vymazat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacím prvku záhlaví. Popis styly ovládacího prvku záhlaví najdete v tématu [styly ovládacího prvku záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775241) ve Windows SDK.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění prvku záhlaví. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje nadřazeného prvku záhlaví okna, obvykle `CDialog`. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku záhlaví.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se inicializace byla úspěšná. jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CHeaderCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří ovládacím prvku záhlaví a připojí jej k `CHeaderCtrl` objektu.  
+ Můžete vytvořit `CHeaderCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří ovládacím prvku záhlaví a připojí jej k `CHeaderCtrl` objektu.  
   
  Kromě styly ovládacího prvku záhlaví, můžete použít následující běžné styly ovládacího prvku určit, jak ovládací prvky záhlaví umisťuje a změní velikost sebe sama (viz [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) Další informace):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **Ws_tabstop –** určuje jedné z několika ovládacích prvků, pomocí kterých může uživatel přesunout pomocí klávesy TAB. Klávesy TAB přesune na další ovládací prvek určeného uživatele **ws_tabstop –** stylu.  
   
- Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo **vytvořit**.  
+ Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo `Create`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl ovládacím prvku záhlaví. Popis styly ovládacího prvku záhlaví najdete v tématu [styly ovládacího prvku záhlaví](http://msdn.microsoft.com/library/windows/desktop/bb775241) ve Windows SDK. V tématu [vytvořit](#create) seznam dalších stylů.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `CreateEx` místo **vytvořit** použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
+ Použití `CreateEx` místo `Create` použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Vytvoří transparentní verze obrázku položky v ovládacím prvku hlavička.  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule položky v ovládacím prvku záhlaví. Bitová kopie přiřazená tato položka je základem pro bitovou kopii transparentní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos –*  
  Určuje index založený na nule položky odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Ukazatel [drawitemstruct –](http://msdn.microsoft.com/library/windows/desktop/bb775802) struktura popisující položka, která má být vykresluje.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Ve výchozím nastavení tato funkce člen neprovede žádnou akci. Člen funkci implementovat kreslení pro kreslení vlastníka přepsat `CHeaderCtrl` objektu.  
   
- Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v `lpDrawItemStruct` před tento člen funkce ukončí.  
+ Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před tento člen funkce ukončí.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColumn`  
+ *nColumn*  
  Sloupec, který chcete upravit.  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  Hodnotu, která určuje způsob zpracování uživatele je úpravy změny, pokud uživatel právě úpravy filtru při [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) je zpráva odeslána.  
   
  Zadejte `true` se zahodit změny provedené uživatelem, nebo `false` tak, aby přijímal změny provedené uživatelem.  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos –*  
  Určuje index položky k načtení založený na nule.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Ukazatel na [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktura, která přijímá nová položka. Tato struktura se používá s `InsertItem` a `SetItem` členské funkce. Žádné příznaky se nastavují **maska** element Ujistěte se, že hodnoty v odpovídajících prvcích jsou správně vyplnit po návratu. Pokud **maska** element je nastaven na hodnotu nula, nemají smysl, hodnoty v jiných elementy struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iItem`|Index položky záhlaví, jehož styl je počítáno od nuly `HDF_SPLITBUTTON`. Další informace najdete v tématu `fmt` členem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
-|[out] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura získat ohraničující obdélník informace.|  
+|[v] *položky*|Index položky záhlaví, jehož styl je počítáno od nuly `HDF_SPLITBUTTON`. Další informace najdete v tématu `fmt` členem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
+|[out] *lprect –*|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura získat ohraničující obdélník informace.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` je-li tuto funkci úspěšně; v opačném `false`.  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index založený na nule položky ovládacího prvku záhlaví.  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel na adresu [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piArray`  
+ *piArray*  
  Ukazatel na adresu vyrovnávací paměť, která přijímá index hodnoty položek v ovládacím prvku záhlaví, v pořadí, ve kterém se zobrazí zleva doprava.  
   
- `iCount`  
+ *iCount*  
  Počet položek ovládacího prvku záhlaví. Musí být nezáporná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[out] `lpRect`|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník informace.|  
+|[out] *lprect –*|Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník informace.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` je-li tuto funkci úspěšně; v opačném `false`.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[ve out] `phdhti`|Ukazatel na [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktura, která určuje bod k testování a přijímá výsledky testu.|  
+|[ve out] *phdhti*|Ukazatel na [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktura, která určuje bod k testování a přijímá výsledky testu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule položky záhlaví, pokud existuje, na zadané pozici; jinak hodnota -1.  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos –*  
  Index založený na nule položky, které má být vložen. Pokud je hodnota nula, položka vložena na začátku prvku záhlaví. Pokud je hodnota větší než maximální hodnota, položku vložit na konci tohoto ovládacího prvku záhlaví.  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWindth*  
  Šířka, zadaný v pixelech doba, která obklopuje rastrového obrázku v rámci existujícího ovládacího prvku záhlaví.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iItem`|Index položky záhlaví počítáno od nuly.|  
+|[v] *položky*|Index položky záhlaví počítáno od nuly.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Umístění ukazatele. Ovládacím prvku záhlaví označuje odpovídající dělicí na základě pozice ukazatele.  
   
- `nIndex`  
+ *nIndex*  
  Index zvýrazněná oddělovače.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Ukazatel na `CImageList` objekt obsahující seznam obrázků pro přiřazení do ovládacího prvku záhlaví.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos –*  
  Index založený na nule položky na Upravit.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Ukazatel na [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktura, která obsahuje informace o novou položku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iCount`  
+ *iCount*  
  Počet položek ovládacího prvku záhlaví.  
   
- `piArray`  
+ *piArray*  
  Ukazatel na adresu vyrovnávací paměť, která přijímá index hodnoty položek v ovládacím prvku záhlaví, v pořadí, ve kterém se zobrazí zleva doprava.  
   
 ### <a name="return-value"></a>Návratová hodnota  

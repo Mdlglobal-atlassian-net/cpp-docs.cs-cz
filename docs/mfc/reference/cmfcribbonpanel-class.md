@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a1af8887a1c07aefd3fc3593b0aae6222e51a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613076e38d8033a5af92913fcbe8e195ebdc2c60
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378040"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042141"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel – třída
 Implementuje panel, který obsahuje sadu elementů pásu karet. Při sestavování panelu zobrazí tolik elementy jako nejlépe, velikost panelu.  
@@ -235,7 +235,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] `pElem`  
+ [ve out] *pElem*  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -262,16 +262,16 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiToolbarResID`  
+ [v] *uiToolbarResID*  
  Určuje ID prostředku panelu nástrojů přidat.  
   
- [v] `uiColdResID`  
+ [v] *uiColdResID*  
  Určuje ID prostředku bitové kopie cold panelu nástrojů.  
   
- [v] `uiHotResID`  
+ [v] *uiHotResID*  
  Určuje ID prostředku bitové kopie aktivního panelu nástrojů.  
   
- [v] `uiDisabledResID`  
+ [v] *uiDisabledResID*  
  Určuje ID prostředku bitové kopie zakázané panelu nástrojů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -292,13 +292,13 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszName`  
+ [v] *lpszName*  
  Název panelu pásu karet.  
   
- [v] `hIcon`  
+ [v] *hIcon*  
  Zpracování na ikonu na výchozí tlačítko panelu pásu karet.  
   
- [v] `pPaletteButton`  
+ [v] *pPaletteButton*  
  Ukazatel na galerii pásu karet pro panel pásu karet.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
@@ -309,7 +309,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwData`  
+ [v] *dwData*  
  Data související s element pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -325,7 +325,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  ID příkazu elementu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -397,11 +397,11 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index založený na nule elementu načtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Neplatný ukazatel na element základní pásu karet umístěný na pozici `nIndex` v panelu pásu karet nebo `NULL` Pokud neexistuje žádný element v zadaném indexu.  
+ Neplatný ukazatel na element základní pásu karet umístěný na pozici *nIndex* v panelu pásu karet nebo `NULL` Pokud neexistuje žádný element v zadaném indexu.  
   
 ##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
  Načte všechny prvky pásu karet, které jsou obsaženy v panelu pásu karet.  
@@ -411,7 +411,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `arElements`  
+ [out] *arElements*  
  Pole vyplníte všechny prvky pásu karet, které jsou obsaženy v panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -426,10 +426,10 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  ID příkazu pro element pásu karet.  
   
- [v] `arElements`  
+ [v] *arElements*  
  Pole elementů pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -455,7 +455,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElem`  
+ [v] *pElem*  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -471,7 +471,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `lstItems`  
+ [out] *lstItems*  
  Seznam ID příkazu pro prvky pásu karet, které jsou obsaženy v panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -528,7 +528,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rect`  
+ [out] *Rect –*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -569,7 +569,7 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pElem`  
+ [v] *pElem*  
  Ukazatel na pásu karet elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -587,10 +587,10 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bHighlight`  
+ [v] *bHighlight*  
  `TRUE` abyste měli na očích panelu pásu karet. `FALSE` k unhighlight panelu pásu karet.  
   
- [v] `point`  
+ [v] *bodu*  
  Souřadnice x a y ukazatele, relativně k levém horním rohu okna.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -605,10 +605,10 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Souřadnice x a y ukazatele, relativně k levém horním rohu okna.  
   
- [v] `bCheckPanelCaption`  
+ [v] *bCheckPanelCaption*  
  `TRUE` k testování titulek panely pásu karet; v opačném případě `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -625,7 +625,7 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `point`  
+ [v] *bodu*  
  Souřadnice x a y ukazatele, relativně k levém horním rohu okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -644,17 +644,17 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] `pElem`  
+ [ve out] *pElem*  
  Ukazatel na pásu karet elementu.  
   
- [v] `nIndex`  
+ [v] *nIndex*  
  Hodnoty s nulovým základem, od -1 do počet prvků pásu karet, které jsou obsaženy v poli.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud úspěšně; vložení prvku pásu karet v opačném případě `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud hodnota `nIndex` je -1, nebo pokud `nIndex` rovná počet prvků pásu karet v poli, zadaný pásu karet prvek přidán na konec pole. Pokud hodnota `nIndex` je mimo rozsah, metoda selže.  
+ Pokud hodnota *nIndex* je -1, nebo pokud *nIndex* rovná počet prvků pásu karet v poli, zadaný pásu karet prvek přidán na konec pole. Pokud hodnota *nIndex* je mimo rozsah, metoda selže.  
   
 ##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
  Vloží oddělovač na dané pozici.  
@@ -664,14 +664,14 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index založený na nule vloženy oddělovače.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `TRUE` Pokud byla vložena oddělovače úspěšně; v opačném `FALSE`.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze vložit na pozici určeného oddělovače `nIndex`. Chcete-li vložit oddělovač vedle naposledy přidaný prvek pásu karet, volejte [CMFCRibbonPanel::AddSeparator](#addseparator).  
+ Voláním této metody lze vložit na pozici určeného oddělovače *nIndex*. Chcete-li vložit oddělovač vedle naposledy přidaný prvek pásu karet, volejte [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
 ##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
  Určuje, zda svislé pozice elementů pásu karet je umístěn na střed obdélníku jejich zobrazení.  
@@ -753,7 +753,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nChar`  
+ [v] *nChar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -769,10 +769,10 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro panel pásu karet.  
   
- [v] `nHeight`  
+ [v] *nHeight*  
  Výška panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -788,14 +788,14 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index elementu, který se odebere z panelu pásu karet na nule.  
   
- [v] `bDelete`  
+ [v] *bDelete*  
  `TRUE` odstranit element odebírána; v opačném `FALSE`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud element byl odebrán a odstranit (Pokud `bDelete` je `TRUE`); `FALSE` Pokud element nebyla odebrána nebo pokud neexistuje žádný element pásu karet umístěné v `nIndex`.  
+ `TRUE` Pokud element byl odebrán a odstranit (Pokud *bDelete* je `TRUE`); `FALSE` Pokud element nebyla odebrána nebo pokud neexistuje žádný element pásu karet umístěné v *nIndex*.  
   
 ### <a name="remarks"></a>Poznámky  
  Voláním této metody lze odebrat element z panelu pásu karet.  
@@ -820,10 +820,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index elementu, který chcete nahradit na nule.  
   
- [v] [out] `pElem`  
+ [v] [out] *pElem*  
  Neplatný ukazatel na elementu, který nahradí původní element.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -842,10 +842,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  Určuje příkaz ID elementu nahradit.  
   
- [v] [out] `pElem`  
+ [v] [out] *pElem*  
  Neplatný ukazatel na elementu, který nahradí původní elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -862,7 +862,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  `TRUE` na střed svislé pozice pásu karet elementů v rámci jejich zobrazení obdélníku; `FALSE` tuto funkci zakázat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -875,7 +875,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwData`  
+ [v] *dwData*  
  Určuje nastavení dat uživatelem definované pro.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -900,19 +900,19 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  Určuje ID příkazu, který pásu karet elementu, kde je v nabídce Přidat.  
   
- [v] `hMenu`  
+ [v] *hMenu*  
  Určuje popisovač nabídku Windows přidat do panelu pásu karet.  
   
- [v] `bIsDefautCommand`  
+ [v] *bIsDefautCommand*  
  `TRUE` Chcete-li určit, že příkaz přidružený element pásu karet se má provést po kliknutí na pásu karet elementu. V nabídce je v tomto případě otevřít pouze když uživatel klikne na šipku vedle pásu karet elementu. `FALSE` Chcete-li určit, že příkaz přidružený element pásu karet by neměl být spouštěn po kliknutí na pásu karet elementu. Místní nabídky v takovém případě se zobrazí bez ohledu na to, kde uživatel klikne na elementu.  
   
- [v] `bRightAlign`  
+ [v] *bRightAlign*  
  `TRUE` k určení, že je v místní nabídce vpravo zarovnaný; v opačném `FALSE`.  
   
- [v] `uiMenuResID`  
+ [v] *uiMenuResID*  
  Určuje ID prostředku v nabídce Přidat do panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -931,10 +931,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nIndex`  
+ [v] *nIndex*  
  Určuje index elementu pásu karet, který chcete přidat na nule.  
   
- [v] [out] `pRTC`  
+ [v] [out] *pRTC*  
  Ukazatel na informace o třídě modulu runtime pro element pásu karet, které se přidají do panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -953,10 +953,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `uiCmdID`  
+ [v] *uiCmdID*  
  Určuje příkaz ID elementu pásu karet pro přidání.  
   
- [v] [out] `pRTC`  
+ [v] [out] *pRTC*  
  Ukazatel na informace o třídě modulu runtime přidružený element pásu karet, které se přidají do panelu pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -999,7 +999,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSet`  
+ [v] *bSet*  
  `TRUE` Chcete-li upravit šířku prvky pásu karet ve stejném sloupci šířky prvku největší pásu karet v sloupci. `FALSE` zakázat tato úprava šířky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1013,7 +1013,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszKeys`  
+ [v] *lpszKeys*  
  Keytip pro výchozí tlačítko panelu pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1027,7 +1027,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pButton`  
+ [v] *pButton*  
  Ukazatel na výchozí tlačítko pro panel pásu karet.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1044,7 +1044,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pNewFocus`  
+ *pNewFocus*  
  Ukazatel na pásu karet element, který obdrží fokus.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1057,7 +1057,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na pásu karet element zobrazíte.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1084,7 +1084,7 @@ CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `arElements`  
+ *arElements*  
  Když funkce vrátí hodnotu, tento parametr obsahuje pole viditelné elementů.  
   
 ### <a name="remarks"></a>Poznámky  

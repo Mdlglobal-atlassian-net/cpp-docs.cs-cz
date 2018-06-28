@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369870"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042180"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar – třída
 `CMFCAutoHideBar` Třída je speciální nástrojů třídu, která implementuje funkce automatického skrytí.  
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pAutoHideWnd`  
+ [v] *pAutoHideWnd*  
  Okno, které chcete skrýt.  
   
- [v] `dwAlignment`  
+ [v] *dwAlignment*  
  Hodnota, která určuje zarovnání automaticky skrýt tlačítko s okna aplikace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- `dwAlignment` Parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Parametr může být jakýkoli z následujících hodnot:  
+ *DwAlignment* parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Parametr může být jakýkoli z následujících hodnot:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bStretch`  
- [v] `bHorz`  
+ [v] *bStretch*  
+ [v] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -207,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszClassName`  
- [v] `dwStyle`  
- [v] `rect`  
- [v] `pParentWnd`  
- [v] `nID`  
- [v] `dwControlBarStyle`  
- [v] `pContext`  
+ [v] *lpszClassName*  
+ [v] *dwStyle*  
+ [v] *Rect –*  
+ [v] *pParentWnd*  
+ [v] *nID*  
+ [v] *dwControlBarStyle*  
+ [v] *pContext*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -261,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CPoint`  
+ [v] *CPoint*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -275,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  Automaticky skrýt okna odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] BOOL `bActive`  
+ [v] BOOL *bActive*  
  Hodnota TRUE, mají-li nastavená jako aktivní; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -305,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bState`  
+ [v] *bState*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -320,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] CDockablePane * `pAutoHideWnd`  
- [v] BOOL `bShow`  
+ [v] CDockablePane * *pAutoHideWnd*  
+ [v] BOOL *bShow*  
  Hodnota TRUE, mají-li zobrazit okno.  
   
- [v] BOOL `bDelay`  
+ [v] BOOL *bDelay*  
  Tento parametr je ignorován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -342,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `nLength`  
+ [v] *nLength*  
  Tato hodnota se nepoužívá v základní implementaci. V odvozených implementace používá se k označení délka podokně změněnou tuto hodnotu.  
   
- [v] `bVert`  
+ [v] *bVert*  
  Tato hodnota se nepoužívá v základní implementaci. V odvozených implementacích použít `TRUE` pro případ, kdy panelu automaticky skrýt sbalena ve svislém směru, zpracování a `FALSE` pro případ, kdy panelu automaticky skrýt sbalena vodorovně.  
   
 ### <a name="return-value"></a>Návratová hodnota  

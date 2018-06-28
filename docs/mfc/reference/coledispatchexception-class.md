@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373383"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037867"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException – třída
 Zpracovává výjimky, které jsou specifické pro OLE `IDispatch` rozhraní, které je klíčovou součástí automatizace OLE.  
@@ -55,7 +55,7 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-určitý kód chyby.|  
   
 ## <a name="remarks"></a>Poznámky  
- Jako další výjimky třídy odvozené od `CException` základní třídy, `COleDispatchException` lze použít s **THROW**, `THROW_LAST`, **zkuste**, **CATCH**, `AND_CATCH`, a `END_CATCH` makra.  
+ Jako další výjimky třídy odvozené od `CException` základní třídy, `COleDispatchException` lze použít s THROW, throw_last –, zkuste, CATCH, and_catch – a end_catch – makra.  
   
  Obecně platí, by měly volat [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) k vytvoření a throw `COleDispatchException` objektu.  
   

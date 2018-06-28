@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367071"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038227"
 ---
 # <a name="class-factories-and-licensing"></a>Objekty pro vytváření tříd a licencování
 K vytvoření instance ovládacího prvku OLE, zavolá aplikace kontejneru členské funkce ovládacího prvku třídy objektu pro vytváření. Vlastní ovládací prvek je skutečný objekt OLE, objektu pro vytváření tříd je zodpovědný za vytváření instancí ovládacího prvku. Třída ovládacích prvků každé OLE musí mít objekt pro vytváření tříd.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hInstance`  
+ *hInstance*  
  Popisovač instance knihovny DLL přidruženého k ovládacímu prvku licencované.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Odkazuje na řetězec znaků ukončené hodnotou null obsahující název souboru licencí.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Odkazuje na pořadí bajtů, které musí odpovídat pořadí najít na začátku souboru s licencí.  
   
- `cch`  
- Počet znaků v `pszLicFileContents`.  
+ *cch*  
+ Počet znaků v *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud existuje soubor licencí a začíná posloupnost znaků v `pszLicFileContents`; jinak hodnota 0.  
+ Nenulové hodnoty, pokud existuje soubor licencí a začíná posloupnost znaků v *pszLicFileContents*; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `cch` -1, je tato funkce používá:  
+ Pokud *cch* -1, je tato funkce používá:  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

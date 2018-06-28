@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368749"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040152"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl – třída
 Poskytuje funkci běžné aktivní klíče ovládacího prvku Windows.  
@@ -73,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  Tento ovládací prvek (a proto `CHotKeyCtrl` třída) je k dispozici pouze pro aplikace běžící v rámci verze systému Windows 95/98 a systému Windows NT 3.51 a novějším.  
   
- Při výběru kombinaci kláves uživatelem aplikace můžete načíst zadaný kombinace kláves z ovládacího prvku a použít **WM_SETHOTKEY** zpráva nastavit klávesové zkratky v systému. Vždy, když uživatel stisknutím klávesové zkratky následně z jakékoliv části systému okno specifikované v **WM_SETHOTKEY** zprávu přijme `WM_SYSCOMMAND` zadání zprávy **SC_HOTKEY**. Tato zpráva aktivuje okně, které ji přijme. Klávesové zkratky zůstává platná do aplikace, která volá **WM_SETHOTKEY** ukončí.  
+ Při výběru kombinaci kláves uživatelem aplikace můžete načíst zadaný kombinace kláves z ovládacího prvku a použít **WM_SETHOTKEY** zpráva nastavit klávesové zkratky v systému. Vždy, když uživatel stisknutím klávesové zkratky následně z jakékoliv části systému okno specifikované v **WM_SETHOTKEY** zprávu přijme **WM_SYSCOMMAND** zadání zprávy **SC_HOTKEY** . Tato zpráva aktivuje okně, které ji přijme. Klávesové zkratky zůstává platná do aplikace, která volá **WM_SETHOTKEY** ukončí.  
   
  Tento mechanismus se liší od aktivního klíče podpory, které závisí na **WM_HOTKEY** zprávu a Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkce.  
   
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl aktivní klíče ovládacího prvku. Použijte libovolnou kombinaci styly ovládacího prvku. V tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK pro další informace.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění aktivního klíče ovládacího prvku. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje aktivní klíče řízení nadřazené okno, obvykle [CDialog](../../mfc/reference/cdialog-class.md). Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID aktivního klíče ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se inicializace byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CHotKeyCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří prvku aktivního klíče a připojí jej k `CHotKeyCtrl` objektu.  
+ Můžete vytvořit `CHotKeyCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří prvku aktivního klíče a připojí jej k `CHotKeyCtrl` objektu.  
   
- Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo **vytvořit**.  
+ Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Volání této funkce vytvoření ovládacího prvku (podřízeného okna) a její přidružení `CHotKeyCtrl` objektu.  
@@ -143,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl aktivní klíče ovládacího prvku. Použijte libovolnou kombinaci styly ovládacího prvku. Další informace najdete v tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `wVirtualKeyCode`  
+ [out] *wVirtualKeyCode*  
  Virtuální klíče kód klávesové zkratky. Seznam kódů standardní virtuální klíčů najdete v tématu winuser.  
   
- [out] `wModifiers`  
+ [out] *wModifiers*  
  Bitová kombinace (nebo) příznaky, které indikují modifikační klávesy v klávesové zkratky.  
   
  Modifikátor příznaky jsou následující:  
@@ -220,14 +220,14 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vk`  
+ *Vk*  
  Kód virtuální klíče.  
   
  *fExtended*  
  Pokud je virtuální klíče kód klíčem rozšířené **TRUE**jinak **FALSE**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Lokalizovaný název je klíč zadaný pomocí `vk` parametr. Pokud klíč nemá žádné namapované název `GetKeyName` vrátí prázdný řetězec.  
+ Lokalizovaný název je klíč zadaný pomocí *vk* parametr. Pokud klíč nemá žádné namapované název `GetKeyName` vrátí prázdný řetězec.  
   
 ### <a name="remarks"></a>Poznámky  
  Název klíče, který vrátí tato funkce pochází z ovladač klávesnice, takže můžete nainstalovat ovladač Nelokalizováno klávesnice lokalizované verze systému Windows a naopak.  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wVirtualKeyCode`  
+ [v] *wVirtualKeyCode*  
  Virtuální klíče kód klávesové zkratky. Seznam kódů standardní virtuální klíčů najdete v tématu winuser.  
   
- [v] `wModifiers`  
+ [v] *wModifiers*  
  Bitová kombinace (nebo) příznaky, které indikují modifikační klávesy v klávesové zkratky.  
   
  Modifikátor příznaky jsou následující:  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `wInvalidComb`  
+ *wInvalidComb*  
  Pole příznaky, které určuje neplatná kombinace kláves. Může být kombinací následujícího:  
   
 - `HKCOMB_A` ALT  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  Pole příznaky, které určuje kombinaci kláves pro použijte, pokud uživatel zadá neplatnou kombinaci. Další informace o příznaky modifikátor najdete v tématu [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Poznámky  
- Když uživatel zadá neplatná kombinace kláves, podle definice příznaků zadaných ve `wInvalidComb`, používá systém operátor OR kombinovat klíče zadané uživatelem s příznaků zadaných ve `wModifiers`. Výsledná kombinace kláves je převést na řetězec a následně se zobrazují v ovládacím prvku aktivního klíče.  
+ Když uživatel zadá neplatná kombinace kláves, podle definice příznaků zadaných ve *wInvalidComb*, používá systém operátor OR kombinovat klíče zadané uživatelem s příznaků zadaných ve *wModifiers*. Výsledná kombinace kláves je převést na řetězec a následně se zobrazují v ovládacím prvku aktivního klíče.  
   
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   
