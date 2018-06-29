@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377224"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079645"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog – třída
 Zapouzdří služeb poskytovaných běžné dialogové okno pro tisk.  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bPrintSetupOnly`  
- Určuje, zda se zobrazí dialogové okno standardní tisk systému Windows nebo dialogové okno Nastavení tisku. Tento parametr nastavte na **TRUE** zobrazíte standardní dialogové okno Nastavení tisku systému Windows. Nastavte ji na **FALSE** k zobrazení dialogového okna Tisk systému Windows. Pokud `bPrintSetupOnly` je **FALSE**, tlačítko možnost nastavení tisku se pořád zobrazí v dialogovém okně tisku.  
+ *bPrintSetupOnly*  
+ Určuje, zda se zobrazí dialogové okno standardní tisk systému Windows nebo dialogové okno Nastavení tisku. Tento parametr nastavte na **TRUE** zobrazíte standardní dialogové okno Nastavení tisku systému Windows. Nastavte ji na **FALSE** k zobrazení dialogového okna Tisk systému Windows. Pokud *bPrintSetupOnly* je **FALSE**, tlačítko možnost nastavení tisku se pořád zobrazí v dialogovém okně tisku.  
   
- `dwFlags`  
+ *dwFlags*  
  Jeden nebo více příznaky, které můžete použít k přizpůsobení nastavení dialogovém okně spojovat pomocí bitový operátor OR. Například **PD_ALLPAGES** příznak nastaví výchozí rozsah tisku na všechny stránky z dokumentu. Najdete v článku [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) struktura ve Windows SDK pro další informace o tyto příznaky.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatele v dialogovém okně nadřazené nebo vlastníka.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Po volání `DoModal`, můžete volat jiné členské funkce načíst nastavení nebo uživatelský vstup informace do dialogových oken.  
   
- Upozorňujeme, že pokud volat konstruktor s `bPrintSetupOnly` nastavena na **FALSE**, **PD_RETURNDC** příznak se používá automaticky. Po volání `DoModal`, `GetDefaults`, nebo `GetPrinterDC`, tiskárny řadič domény bude vrácen v `m_pd.hDC`. Tento řadič domény musí být uvolněno pomocí volání [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) volající z `CPrintDialog`.  
+ Upozorňujeme, že pokud volat konstruktor s *bPrintSetupOnly* nastavena na **FALSE**, **PD_RETURNDC** příznak se používá automaticky. Po volání `DoModal`, `GetDefaults`, nebo `GetPrinterDC`, tiskárny řadič domény bude vrácen v `m_pd.hDC`. Tento řadič domény musí být uvolněno pomocí volání [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) volající z `CPrintDialog`.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Poznámky  
  Načtené hodnoty jsou umístěny v `m_pd` struktura.  
   
- V některých případech bude volat volání této funkce [konstruktor](#cprintdialog) pro `CPrintDialog` s `bPrintSetupOnly` nastavena na **FALSE**. V těchto případech tiskárny řadiče domény a **hDevNames je** a **hDevMode** (dvě obslužné rutiny umístěný v `m_pd` – datový člen) jsou automaticky přiděleny.  
+ V některých případech bude volat volání této funkce [konstruktor](#cprintdialog) pro `CPrintDialog` s *bPrintSetupOnly* nastavena na **FALSE**. V těchto případech tiskárny řadiče domény a **hDevNames je** a **hDevMode** (dvě obslužné rutiny umístěný v `m_pd` – datový člen) jsou automaticky přiděleny.  
   
  Pokud v konstruktoru pro `CPrintDialog` byla volána s `bPrintSetupOnly` nastavena na **FALSE**, tato funkce nebude vrátit pouze **hDevNames je** a **hDevMode** (nachází se ve **m_pd.hDevNames** a **m_pd.hDevMode**) volajícího, ale také vrátí tiskárnu řadiče domény v **m_pd.hDC**. Zodpovídá volající odstranit tiskárny řadiče domény a volání Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funkce na obslužné rutiny pro zpracování po dokončení se `CPrintDialog` objektu.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Popisovač pro kontext tiskárny zařízení v případě úspěšného; v opačném případě **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bPrintSetupOnly` parametr `CPrintDialog` konstruktor byl **FALSE** (což znamená, že se zobrazí dialogové okno tisku), pak `GetPrinterDC` vrátí popisovač do kontextu zařízení tiskárny. Je třeba volat Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkce můžete odstranit kontextu zařízení, když jste hotovi jeho použití.  
+ Pokud *bPrintSetupOnly* parametr `CPrintDialog` konstruktor byl **FALSE** (což znamená, že se zobrazí dialogové okno tisku), pak `GetPrinterDC` vrátí popisovač zařízení tiskárny kontext. Je třeba volat Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkce můžete odstranit kontextu zařízení, když jste hotovi jeho použití.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

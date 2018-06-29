@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376288"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079541"
 ---
 # <a name="cruntimeclass-structure"></a>Struktura CRuntimeClass
 Jednotlivé třídy odvozené od `CObject` je přidružen `CRuntimeClass` struktura, která můžete použít k získání informací o objektu nebo její základní třída za běhu.  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Známé název třídy, který se má vytvořit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Známé název třídy odvozené od `CObject`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CRuntimeClass` objekt, odpovídající název jako předaná `lpszClassName`. Funkce vrátí hodnotu **NULL** Pokud nebyl nalezen žádný odpovídající název třídy.  
+ Ukazatel `CRuntimeClass` objekt, odpovídající název jako předaný v *lpszClassName*. Funkce vrátí hodnotu **NULL** Pokud nebyl nalezen žádný odpovídající název třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  Relace je určen podle "proti" ze člena třídy řetězem odvozených tříd úplně k nejvyšší. Tato funkce vrátí pouze **FALSE** Pokud není nalezena žádná shoda pro základní třídy.  
   
 > [!NOTE]
->  Použít `CRuntimeClass` strukturu, musíte zahrnout `IMPLEMENT_DYNAMIC`, `IMPLEMENT_DYNCREATE`, nebo `IMPLEMENT_SERIAL` makro k implementaci třídy, pro který chcete načíst informace o běhu objektu.  
+>  Použít `CRuntimeClass` strukturu, musíte zahrnout implement_dynamic –, IMPLEMENT_DYNCREATE nebo implement_serial – makro implementace třídy, pro který chcete načíst informace o běhu objektu.  
   
  Další informace o používání `CRuntimeClass`, najdete v článku [CObject – třída: informace o třídě přístup k Run-Time](../../mfc/accessing-run-time-class-information.md).  
   

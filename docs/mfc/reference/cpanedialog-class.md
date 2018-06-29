@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374937"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078540"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog – třída
 `CPaneDialog` Třída podporuje nemodální, lze ukotvit dialogové okno.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Zpracovává [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zprávy. (Znovu definuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Zpracovává [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy. (Znovu definuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Zpracovává [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) zprávy. (Znovu definuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Voláno rámcem aktualizace dialogového okna pole. (Přepisuje [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Voláno rámcem aktualizace dialogového okna pole. (Přepisuje [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
 |`CPaneDialog::OnWindowPosChanging`|Zpracovává [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) zprávy. (Znovu definuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Určuje šablonu pro dialogové okno, které je kontejneru ovládacího prvku OLE.|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszWindowName`  
+ [v] *lpszWindowName*  
  Název dialogového okna ukotvení.  
   
- [v] `pParentWnd`  
+ [v] *pParentWnd*  
  Body do nadřazeného okna.  
   
- [v] `bHasGripper`  
+ [v] *bHasGripper*  
  `TRUE` Chcete-li vytvořit dialogové okno ukotvení s popiskem (úchytu); v opačném `FALSE`.  
   
- [v] `lpszTemplateName`  
+ [v] *lpszTemplateName*  
  Název šablony dialogového okna prostředků.  
   
- [v] `nStyle`  
+ [v] *nStyle*  
  Styl systému Windows.  
   
- [v] `nID`  
+ [v] *nID*  
  ID ovládacího prvku.  
   
- [v] `nIDTemplate`  
+ [v] *nIDTemplate*  
  ID prostředku šablony dialogového okna.  
   
- [v] `dwTabbedStyle`  
+ [v] *dwTabbedStyle*  
  Styl okna s kartami, který nastane, když uživatel nastavuje tažením jiné podokně ovládacího prvku na titulek v tomto podokně ovládacího prvku. Výchozí hodnota je `AFX_CBRS_REGULAR_TABS`. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metoda.  
   
- [v] `dwControlBarStyle`  
+ [v] *dwControlBarStyle*  
  Atributy stylu Další. Výchozí hodnota je `AFX_DEFAULT_DOCKING_PANE_STYLE`. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metoda.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `wParam`  
+ [v] *wParam*  
  Popisovač ovládací prvek, který má být vybrán výchozí klávesnice.  
   
- [v] `lParam`  
+ [v] *lParam*  
  Určuje další inicializační data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`. Kromě toho `TRUE` nastaví fokus klávesnice do ovládacího prvku určeného `wParam` parametr; `FALSE` brání fokus klávesnice výchozí nastavení.  
+ `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`. Kromě toho `TRUE` nastaví fokus klávesnice do ovládacího prvku určeného *wParam* parametr; `FALSE` brání fokus klávesnice výchozí nastavení.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní používá tato metoda se inicializovat ovládací prvky a vzhled dialogového okna. Tato metoda volá framework předtím, než se zobrazí dialogové okno.  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pOccDialogInfo`  
+ [v] *pOccDialogInfo*  
  Ukazatel na pole šablony dialogového okna, který se používá k vytvoření objektu pole dialogového okna. Hodnota tohoto parametru je následně předán do [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metoda.  
   
 ### <a name="return-value"></a>Návratová hodnota  

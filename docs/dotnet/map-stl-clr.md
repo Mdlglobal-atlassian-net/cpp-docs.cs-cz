@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305823"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079900"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `map` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -147,7 +147,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ elementu v řízené sekvenci komponenta klíče.  
   
@@ -1516,7 +1516,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  klíč  
  Hodnota klíče k použití.  
   
- Mapovat  
+ mapovat  
  Mapovat hodnotu k vyhledání.  
   
 ### <a name="remarks"></a>Poznámky  

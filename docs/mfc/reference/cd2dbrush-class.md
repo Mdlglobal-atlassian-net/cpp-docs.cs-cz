@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952051"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078553"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush – třída
 Obálka pro ID2D1Brush.  
@@ -110,7 +110,7 @@ virtual ~CD2DBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DBrush::Attach  
- Připojí existující prostředek rozhraní k objektu  
+ Připojí existující prostředek rozhraní k objektu.  
   
 ```  
 void Attach(ID2D1Brush* pResource);
@@ -118,7 +118,7 @@ void Attach(ID2D1Brush* pResource);
   
 ### <a name="parameters"></a>Parametry  
  *pResource*  
- Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
+ Existující rozhraní prostředků. Nemůže mít hodnotu NULL.  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  Vytvoří objekt CD2DBrush.  
@@ -148,7 +148,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBrush::detach  
- Umožňuje odpojit prostředek rozhraní z objektu  
+ Umožňuje odpojit prostředek rozhraní z objektu.  
   
 ```  
 ID2D1Brush* Detach();
@@ -175,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota mezi 0 a 1, která určuje krytí stopy. Tato hodnota je konstantní násobitel, který škáluje lineárně alfa sestavil stopy všechny pixelů. Předtím, než se násobí společně, jsou hodnoty krytí těsně v rozsahu od 0 do 1  
+ Hodnota mezi 0 a 1, která určuje krytí stopy. Tato hodnota je konstantní násobitel, který škáluje lineárně alfa sestavil stopy všechny pixelů. Krytí hodnoty jsou v rozsahu od 0 do 1 těsně před se násobí společně.  
   
 ##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  Získá aktuální transformace vykreslení cíle  
@@ -186,7 +186,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
   
 ### <a name="parameters"></a>Parametry  
  *transformace*  
- Pokud tento příkaz vrátí, obsahuje aktuální transformace vykreslení cíle. Tento parametr se předává Neinicializovaný  
+ Pokud tento příkaz vrátí, obsahuje aktuální transformace vykreslení cíle. Tento parametr je předán bez inicializace.  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  Kontrola platnosti prostředků  
@@ -231,10 +231,10 @@ void SetOpacity(FLOAT opacity);
   
 ### <a name="parameters"></a>Parametry  
  *Neprůhlednost.*  
- Hodnota mezi 0 a 1, která určuje krytí stopy. Tato hodnota je konstantní násobitel, který škáluje lineárně alfa sestavil stopy všechny pixelů. Předtím, než se násobí společně, jsou hodnoty krytí těsně v rozsahu od 0 do 1  
+ Hodnota mezi 0 a 1, která určuje krytí stopy. Tato hodnota je konstantní násobitel, který škáluje lineárně alfa sestavil stopy všechny pixelů. Krytí hodnoty jsou v rozsahu od 0 do 1 těsně před se násobí společně.  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
- Zadaná transformace se vztahuje na cíl vykreslování, nahraďte existující transformace. Všechny následné kreslení operace dojít v transformovaných prostoru  
+ Zadaná transformace se vztahuje na cíl vykreslování, nahraďte existující transformace. Všechny následné kreslení operace dojít v transformovaných prostoru.  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);

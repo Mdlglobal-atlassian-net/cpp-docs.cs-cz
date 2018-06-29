@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305875"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079717"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `multimap` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element. Element obsahuje klíč, pro řazení sekvenci a namapované hodnotu, kterou má význam pro pravé.  
@@ -127,7 +127,7 @@ ms.locfileid: "36305875"
   
  `GMapped` je stejný jako `Mapped` Pokud k tomu je typu ref, v takovém případě je `Mapped^`  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key,  
@@ -144,7 +144,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ elementu v řízené sekvenci komponenta klíče.  
   
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny typové elementů.|  
 |ITree\<klíče, hodnota >|Udržujte obecné kontejneru.|  
   
-### <a name="remarks"></a>Poznámky  
+## <a name="remarks"></a>Poznámky  
  Objekt přiděluje a uvolní úložiště pro pořadí, které ovládá jako jednotlivé uzly. Vloží elementy na (téměř) vyrovnáváním stromové struktury, která udržuje seřazené změnou propojení mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odeberte elementy volně bez narušení zbývající elementy.  
   
  Objekt řadí pořadí jimi řídí voláním objektu uložené delegáta typu [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte multimap; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<(key_type, key_type)`. Přístup k této uložené objekt voláním členské funkce [multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
@@ -1514,7 +1514,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  klíč  
  Hodnota klíče k použití.  
   
- Mapovat  
+ mapovat  
  Mapovat hodnotu k vyhledání.  
   
 ### <a name="remarks"></a>Poznámky  

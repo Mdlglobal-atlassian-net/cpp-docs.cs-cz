@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377168"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079640"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl – třída
 `CPagerCtrl` Třída zabalí řízení pager Windows, které můžete přejděte do zobrazení obsažené okno, které nebudou vyhovovat obsahující okno.  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `dwStyle`|Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [styly ovládacího prvku pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) má být použita pro ovládací prvek.|  
-|[v] `rect`|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku souřadnice klienta.|  
-|[v] `pParentWnd`|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže být `NULL`.|  
-|[v] `nID`|ID ovládacího prvku.|  
+|[v] *dwStyle*|Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [styly ovládacího prvku pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) má být použita pro ovládací prvek.|  
+|[v] *Rect –*|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku souřadnice klienta.|  
+|[v] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže být `NULL`.|  
+|[v] *nID*|ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `dwExStyle`|Bitová kombinace rozšířené styly použité pro ovládací prvek. Další informace najdete v tématu `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
-|[v] `dwStyle`|Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [styly ovládacího prvku pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) má být použita pro ovládací prvek.|  
-|[v] `rect`|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku souřadnice klienta.|  
-|[v] `pParentWnd`|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže být `NULL`.|  
-|[v] `nID`|ID ovládacího prvku.|  
+|[v] *dwExStyle*|Bitová kombinace rozšířené styly použité pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkce.|  
+|[v] *dwStyle*|Bitovou kombinaci (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [styly ovládacího prvku pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) má být použita pro ovládací prvek.|  
+|[v] *Rect –*|Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která obsahuje umístění a velikost ovládacího prvku souřadnice klienta.|  
+|[v] *pParentWnd*|Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku. Tento parametr nemůže být `NULL`.|  
+|[v] *nID*|ID ovládacího prvku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud tato metoda je úspěšná. v opačném `false`.  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `bForward`|`true` k předávání zpráv myši nebo `false` není předávat zprávy myši.|  
+|[v] *bForward*|`true` k předávání zpráv myši nebo `false` není předávat zprávy myši.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) zprávy, která je popsána v sadě Windows SDK.  
@@ -273,10 +273,10 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButton`|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Stav tlačítko určeného `iButton` parametr. Stav je buď `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, nebo `PGF_HOT`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
+ Stav tlačítko určeného *iButton* parametr. Stav je buď `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, nebo `PGF_HOT`. Další informace najdete v tématu části vrátit hodnotu [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) zprávy, která je popsána v sadě Windows SDK.  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButton`|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud zadaný tlačítko je ve stavu při stisknutí tlačítka; v opačném `false`.  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButton`|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud je tlačítko zadaný v šedým stavu; v opačném `false`.  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButton`|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud je tlačítko zadaný v aktivního stavu; v opačném `false`.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButton`|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud je tlačítko zadaný v neviditelná stavu; v opačném `false`.  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButton`|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[v] *iButton*|Určuje, na tlačítko, pro kterou je načíst stav. Pokud je styl řízení pager `PGS_HORZ`, zadejte `PGB_TOPORLEFT` pro levé tlačítko a `PGB_BOTTOMORRIGHT` pro pravé tlačítko. Pokud je styl řízení pager `PGS_VERT`, zadejte `PGB_TOPORLEFT` pro tlačítko horní a `PGB_BOTTOMORRIGHT` pro tlačítko dole. Další informace najdete v tématu [styly ovládacího prvku Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud je tlačítko zadaný v normálním stavu; v opačném `false`.  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje novou barvu pozadí ovládacího prvku pager.|  
+|[v] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje novou barvu pozadí ovládacího prvku pager.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje předchozí barvu pozadí ovládacího prvku pager.  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iBorder`|Novou velikost ohraničení měřená v pixelech. Pokud `iBorder` nachází záporný parametr, bude velikost ohraničení nastavena na hodnotu nula.|  
+|[v] *iBorder*|Novou velikost ohraničení měřená v pixelech. Pokud *iBorder* nachází záporný parametr, bude velikost ohraničení nastavena na hodnotu nula.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost předchozí ohraničení měřená v pixelech.  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iButtonSize`|Velikost nové tlačítko měřená v pixelech.|  
+|[v] *iButtonSize*|Velikost nové tlačítko měřená v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Velikost předchozí tlačítko měřená v pixelech.  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `hwndChild`|Zpracování do okna být obsaženy.|  
+|[v] *hwndChild*|Zpracování do okna být obsaženy.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) zprávy, která je popsána v sadě Windows SDK.  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iPos`|Nové pozici posunutí měřená v pixelech.|  
+|[v] *iPos*|Nové pozici posunutí měřená v pixelech.|  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) zprávy, která je popsána v sadě Windows SDK.  

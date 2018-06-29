@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377584"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079459"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl – třída
 Zapouzdřuje funkce ovládacího prvku matrice, což je kontejner pro podřízeného okna.  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index počítaný od nuly vzdálené správy, který bude mít vliv na operaci přetažení myší.  
   
- `dwPos`  
- A `DWORD` hodnotu, která obsahuje počáteční souřadnic myši. Vodorovné souřadnice je součástí LOWORD a svislé souřadnice je součástí HIWORD. Pokud předáte `(DWORD)-1`, ovládacího prvku matrice použije pozici myš, čas posledního ovládacího prvku vlákno názvem **GetMessage** nebo **PeekMessage**.  
+ *dwPos*  
+ A `DWORD` hodnotu, která obsahuje počáteční souřadnic myši. Vodorovné souřadnice je součástí LOWORD a svislé souřadnice je součástí HIWORD. Pokud předáte `(DWORD)-1`, ovládacího prvku matrice použije pozici myš, čas posledního ovládacího prvku vlákno názvem `GetMessage` nebo `PeekMessage`.  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Vytvoří ovládacího prvku matrice a připojí jej k `CReBarCtrl` objektu.  
@@ -252,16 +252,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje kombinaci styly ovládacího prvku matrice použité pro ovládací prvek. V tématu [– styly ovládacího prvku matrice](http://msdn.microsoft.com/library/windows/desktop/bb774377) ve Windows SDK pro seznam podporovaných stylů.  
   
- `rect`  
+ *Rect –*  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, což je pozice a velikosti ovládacího prvku matrice.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je okno nadřazeného ovládacího prvku matrice. Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku matrice ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -292,19 +292,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje kombinaci styly ovládacího prvku matrice použité pro ovládací prvek. Seznam podporovaných styly najdete v tématu [– styly ovládacího prvku matrice](http://msdn.microsoft.com/library/windows/desktop/bb774377) ve Windows SDK.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -331,7 +331,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index nule pásma k odstranění.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -348,8 +348,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwPos`  
- A `DWORD` hodnotu, která obsahuje nové souřadnic myši. Vodorovné souřadnice je součástí LOWORD a svislé souřadnice je součástí HIWORD. Pokud předáte `(DWORD)-1`, ovládacího prvku matrice použije pozici myš, čas posledního ovládacího prvku vlákno názvem **GetMessage** nebo **PeekMessage**.  
+ *dwPos*  
+ A `DWORD` hodnotu, která obsahuje nové souřadnic myši. Vodorovné souřadnice je součástí LOWORD a svislé souřadnice je součástí HIWORD. Pokud předáte `(DWORD)-1`, ovládacího prvku matrice použije pozici myš, čas posledního ovládacího prvku vlákno názvem `GetMessage` nebo `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  Implementuje chování zprávy Win32 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), jak je popsáno v sadě Windows SDK.  
@@ -368,10 +368,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index počítaný od nuly vzdálené správy, pro kterou bude načten ohraničení.  
   
- `prc`  
+ *ČLR*  
  Ukazatel [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude přijímat ohraničení vzdálené správy. Pokud má ovládacího prvku matrice **RBS_BANDBORDERS** styl, každý člen této struktury obdrží počet pixelů na odpovídající straně vzdálené správy, které tvoří ohraničení. Pokud nemá ovládacího prvku matrice **RBS_BANDBORDERS** styl jen levém členem tato struktura obdrží platné informace. Popis styly ovládacího prvku matrice najdete v tématu [styly ovládacího prvku matrice](http://msdn.microsoft.com/library/windows/desktop/bb774377) ve Windows SDK.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -394,10 +394,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index počítaný od nuly vzdálené správy, pro kterou se načíst informace.  
   
- `prbbi`  
+ *prbbi*  
  Ukazatel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) k přijetí informací o vzdálené strukturu. Je nutné nastavit `cbSize` členem této struktury a `sizeof(REBARBANDINFO)` a nastavte **fMask** člena do položky, které chcete načíst před odesláním této zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -435,8 +435,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prbi`  
- Ukazatel [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktura, která bude přijímat informace o ovládacího prvku matrice. Je nutné nastavit `cbSize` členem této struktury a `sizeof(REBARINFO)` před odesláním této zprávy.  
+ *prbi*  
+ Ukazatel [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktura, která bude přijímat informace o ovládacího prvku matrice. Je nutné nastavit *cbSize* členem této struktury a `sizeof(REBARINFO)` před odesláním této zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -459,7 +459,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpcs`  
+ *lpcs*  
  Ukazatel [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktury, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -486,7 +486,7 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Bitová kombinace (nebo) příznaky, které indikují rozšířené styly. Možné příznaky jsou `RBS_EX_SPLITTER` a `RBS_EX_TRANSPARENT`. Další informace najdete v tématu `dwMask` parametr [CReBarCtrl::SetExtendedStyle](#setextendedstyle) metoda.  
+ Bitová kombinace (nebo) příznaky, které indikují rozšířené styly. Možné příznaky jsou `RBS_EX_SPLITTER` a `RBS_EX_TRANSPARENT`. Další informace najdete v tématu *dwMask* parametr [CReBarCtrl::SetExtendedStyle](#setextendedstyle) metoda.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) zprávy, která je popsána v sadě Windows SDK.  
@@ -530,10 +530,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index vzdálené správy v ovládacím prvku matrice počítáno od nuly.  
   
- `prc`  
+ *ČLR*  
  Ukazatel [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která bude přijímat hranice matrice vzdálené správy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -636,8 +636,8 @@ BOOL InsertBand(
  *uIndex*  
  Index nule, budou vloženy vzdálené umístění. Pokud tento parametr nastavte na hodnotu -1, ovládacího prvku přidá nové vzdálené správy na posledním místě.  
   
- `prbbi`  
- Ukazatel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktura, která definuje vzdálené správy, který má být vložen. Je nutné nastavit `cbSize` členem této struktury a `sizeof(REBARBANDINFO)` před voláním této funkce.  
+ *prbbi*  
+ Ukazatel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktura, která definuje vzdálené správy, který má být vložen. Je nutné nastavit *cbSize* členem této struktury a `sizeof(REBARBANDINFO)` před voláním této funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -653,7 +653,7 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index vzdálené správy na maximalizovat, počítáno od nuly.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -670,7 +670,7 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index vzdálené minimalizaci počítáno od nuly.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -708,11 +708,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index nule pásma, jejichž dvojitou má poslat.  
   
- `lAppValue`  
- Aplikace definována 32bitovou hodnotu. V tématu `lAppValue` v [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) ve Windows SDK.  
+ *lAppValue*  
+ Aplikace definována 32bitovou hodnotu. V tématu *lAppValue* v [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) ve Windows SDK.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  Změní velikost vzdálené správy v ovládacím prvku matrice na jeho ideální velikost.  
@@ -722,7 +722,7 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index vzdálené správy na maximalizovat, počítáno od nuly.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -741,10 +741,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index nule pásma, aby přijaly nové nastavení.  
   
- `prbbi`  
+ *prbbi*  
  Ukazatel na [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktura, která definuje vzdálené správy, který má být vložen. Je nutné nastavit `cbSize` členem této struktury a `sizeof(REBARBANDINFO)` před odesláním této zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `uBand`|Index počítaný od nuly matrice vzdálené.|  
-|[v] `cxWidth`|Nové šířka pásma, matrice, v pixelech.|  
+|[v] *uBand*|Index počítaný od nuly matrice vzdálené.|  
+|[v] *cxWidth*|Nové šířka pásma, matrice, v pixelech.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `true` Pokud je metoda úspěšná. v opačném `false`.  
@@ -793,7 +793,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prbi`  
+ *prbi*  
  Ukazatel [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktura, která obsahuje informace o nastavení. Je nutné nastavit `cbSize` členem této struktury a `sizeof(REBARINFO)` před odesláním této zprávy  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -810,7 +810,7 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clr`  
+ *CLR*  
  **COLORREF** hodnotu, která představuje nový výchozí barvu pozadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `dwMask`|Bitová kombinace (nebo) příznaky, které určují, které příznaky ve `dwStyleEx` použít parametr. Pomocí jednoho nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, zobrazit rozdělovače na dolní ve vodorovném režimu a doprava ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zpráva do nadřazeného okna.|  
-|[v] `dwStyleEx`|Bitová kombinace (nebo) příznaky, které určují, styly, které chcete použít. Pokud chcete nastavit styl, zadejte stejné příznak, který se používá v `dwMask` parametr. Chcete-li obnovit styl, zadejte binární nula.|  
+|[v] *dwMask*|Bitová kombinace (nebo) příznaky, které určují, které příznaky ve *dwStyleEx* použít parametr. Pomocí jednoho nebo více z následujících hodnot:<br /><br /> RBS_EX_SPLITTER: Ve výchozím nastavení, zobrazit rozdělovače na dolní ve vodorovném režimu a doprava ve svislém režimu.<br /><br /> RBS_EX_TRANSPARENT: Předávání [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zpráva do nadřazeného okna.|  
+|[v] *dwStyleEx*|Bitová kombinace (nebo) příznaky, které určují, styly, které chcete použít. Pokud chcete nastavit styl, zadejte stejné příznak, který se používá v *dwMask* parametr. Chcete-li obnovit styl, zadejte binární nula.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí rozšířený styl.  
@@ -863,7 +863,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Ukazatel [CImageList](../../mfc/reference/cimagelist-class.md) objekt obsahující seznam obrázků pro přiřazení do ovládacího prvku matrice.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -877,7 +877,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Ukazatel na `CWnd` objekt, který chcete nastavit jako vlastník ovládacího prvku matrice.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -914,7 +914,7 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clr`  
+ *CLR*  
  A **COLORREF** hodnotu, která představuje nový text barvu `CReBarCtrl` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -945,7 +945,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszSubAppName`  
+ *pszSubAppName*  
  Ukazatel na řetězec znaků Unicode, který obsahuje vizuální styl matrice nastavit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -964,7 +964,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Index vzdálené správy v ovládacím prvku matrice počítáno od nuly.  
   
  *fShow*  
@@ -981,7 +981,7 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Odkaz na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje obdélníku, která ovládacího prvku matrice by měl být dimenzovány pro.  
   
 ### <a name="return-value"></a>Návratová hodnota  

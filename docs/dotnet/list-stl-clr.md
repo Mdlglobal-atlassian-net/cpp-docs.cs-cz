@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305914"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079783"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `list` spravovat pořadí elementů jako obousměrný odkazovaného seznamu uzlů, ukládání jeden element.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Hodnota  
  Typ elementu v řízené sekvenci  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace:** cliext – 
 
-## <a name="members"></a>Členové  
+## <a name="declarations"></a>Deklarace  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
   
+## <a name="members"></a>Členové
+
 ## <a name="assign"></a> list::Assign (STL/CLR)
 Nahradí všechny elementy.  
   

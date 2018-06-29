@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377459"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079770"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 Představuje seznam vlastností, také známé jako dialogová okna karet.  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPage`  
+ *Fyzická_stránka*  
  Bodů na stránku, který se má přidat do seznamu vlastností. Nemůže být **NULL**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDCaption`  
+ *nIDCaption*  
  ID titulek má být použit pro seznam vlastností.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna seznamu vlastností. Pokud **NULL**, nadřazené okno bude hlavní okno aplikace.  
   
- `iSelectPage`  
+ *iSelectPage*  
  Index stránky, která bude zpočátku nahoře. Výchozí hodnota je na první stránku přidat do seznamu.  
   
- `pszCaption`  
+ *pszCaption*  
  Ukazatel na řetězec, který obsahuje titulek, který se má použít pro seznam vlastností. Nemůže být **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Popisovač vodoznak bitové mapy ze stránky vlastností.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Popisovač paletu vodoznak rastrový obrázek nebo rastrový obrázek hlavičky.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Popisovač rastrového obrázku záhlaví stránky vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -253,7 +253,7 @@ void Construct(
   
  Chcete-li zobrazit seznam vlastností, zavolejte [DoModal](#domodal) nebo [vytvořit](#create). Řetězec obsažené v první parametr bude uložena v umístění panelu popisek pro seznam vlastností.  
   
- Můžete zobrazit obrázky vodoznak nebo záhlaví automaticky Pokud používáte třetí nebo čtvrtý prototypů `Construct`uvedené výše a předat platné hodnoty pro `hbmWatermark`, `hpalWatermark`, nebo `hbmHeader` parametry.  
+ Můžete zobrazit obrázky vodoznak nebo záhlaví automaticky Pokud používáte třetí nebo čtvrtý prototypů `Construct`uvedené výše a předat platné hodnoty pro *hbmWatermark*, *hpalWatermark* , nebo *hbmHeader* parametry.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, v části co jste okolností by volání `Construct`.  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDCaption`  
+ *nIDCaption*  
  ID titulek má být použit pro seznam vlastností.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Body do nadřazeného okna seznamu vlastností. Pokud **NULL**, nadřazené okno bude hlavní okno aplikace.  
   
- `iSelectPage`  
+ *iSelectPage*  
  Index stránky, která bude zpočátku nahoře. Výchozí hodnota je na první stránku přidat do seznamu.  
   
- `pszCaption`  
+ *pszCaption*  
  Odkazuje na řetězec, který obsahuje titulek, který se má použít pro seznam vlastností. Nemůže být **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Popisovač pro rastrový obrázek pozadí seznamu vlastností.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Popisovač pro paletu vodoznak rastrový obrázek nebo rastrový obrázek hlavičky.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Popisovač pro bitovou mapu záhlaví stránky vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -324,7 +324,7 @@ CPropertySheet(
   
  Pokud máte několik parametrů (například pokud používáte pole), použijte [vytvořit](#construct) místo `CPropertySheet`.  
   
- Můžete zobrazit obrázky vodoznak nebo záhlaví automaticky Pokud používáte třetí nebo čtvrtý prototypů `CPropertySheet`výše, a předat platné hodnoty pro `hbmWatermark`, `hpalWatermark`, nebo `hbmHeader` parametry.  
+ Můžete zobrazit obrázky vodoznak nebo záhlaví automaticky Pokud používáte třetí nebo čtvrtý prototypů `CPropertySheet`výše, a předat platné hodnoty pro *hbmWatermark*, *hpalWatermark*, a / nebo *hbmHeader* parametry.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
@@ -339,26 +339,26 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Body do nadřazeného okna. Pokud **NULL**, nadřazená položka plochy.  
   
- `dwStyle`  
+ *dwStyle*  
  Styly oken pro seznam vlastností. Úplný seznam dostupných stylů, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Rozšířené styly oken pro seznam vlastností. Úplný seznam dostupných stylů, najdete v části [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je úspěšně; vytvořil seznam vlastností jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání **vytvořit** lze v konstruktoru, nebo můžete volat, po vyvolání konstruktoru.  
+ Volání `Create` lze v konstruktoru, nebo můžete volat, po vyvolání konstruktoru.  
   
- Výchozí styl, vyjádřené předáním -1 jako `dwStyle`, je ve skutečnosti **ws_sysmenu –&#124;**`WS_POPUP`**&#124;ws_caption –&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_ VIDITELNÉ**. Výchozí hodnota rozšířený styl oken, vyjádřené jako 0 předáním `dwExStyle`, je ve skutečnosti **ws_ex_dlgmodalframe –**.  
+ Výchozí styl, vyjádřené předáním -1 jako *dwStyle*, je ve skutečnosti **ws_sysmenu –&#124;**`WS_POPUP`**&#124;ws_caption –&#124;DS_MODALFRAME&#124;DS CONTEXTHELP&#124;ws_visible –**. Výchozí hodnota rozšířený styl oken, vyjádřené jako 0 předáním *dwExStyle*, je ve skutečnosti **ws_ex_dlgmodalframe –**.  
   
- **Vytvořit** – členská funkce vrátí ihned po vytvoření seznamu vlastností. Chcete-li odstranit seznamu vlastností, zavolejte [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
+ `Create` – Členská funkce vrátí ihned po vytvoření seznamu vlastností. Chcete-li odstranit seznamu vlastností, zavolejte [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
   
- Nemodální vlastností, zobrazí se volání **vytvořit** nemají, zrušit, použít nyní tlačítka OK a nápovědy, stejně jako modální dialogové okno vlastností. Požadované tlačítka musí být vytvořený uživatelem.  
+ Nemodální vlastností, zobrazí se volání `Create` nemají, zrušit, použít nyní tlačítka OK a nápovědy, stejně jako modální dialogové okno vlastností. Požadované tlačítka musí být vytvořený uživatelem.  
   
  Chcete-li zobrazit modální vlastností, zavolejte [DoModal](#domodal) místo.  
   
@@ -418,13 +418,13 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bStacked`  
- Určuje, zda jsou povolena skládaný karty v seznamu vlastností. Zakažte skládaný řádky značky nastavením `bStacked` k **FALSE**.  
+ *bStacked*  
+ Určuje, zda jsou povolena skládaný karty v seznamu vlastností. Zakažte skládaný řádky značky nastavením *bStacked* k **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení Pokud má seznam vlastností další karty, než se vejde na šířku jednoho řádku seznamu vlastností, bude karty zásobníku v více řádků. Použití posouvání karet místo Skládání karty, volání `EnableStackedTabs` s `bStacked` nastavena na **FALSE** před voláním [DoModal](#domodal) nebo [vytvořit](#create).  
+ Ve výchozím nastavení Pokud má seznam vlastností další karty, než se vejde na šířku jednoho řádku seznamu vlastností, bude karty zásobníku v více řádků. Použití posouvání karet místo Skládání karty, volání `EnableStackedTabs` s *bStacked* nastavena na **FALSE** před voláním [DoModal](#domodal) nebo [vytvořit](#create).  
   
- Je třeba volat `EnableStackedTabs` při vytváření modální nebo nemodálního seznamu vlastností. Chcete-li zahrnout tento styl v `CPropertySheet`-odvozené třídy, zápis obslužné rutiny zpráv pro `WM_CREATE`. V přepsané verzi [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), volání **EnableStackedTabs (FALSE)** před voláním implementaci základní třídy.  
+ Je třeba volat `EnableStackedTabs` při vytváření modální nebo nemodálního seznamu vlastností. Chcete-li zahrnout tento styl v `CPropertySheet`-odvozené třídy, zápis obslužné rutiny zpráv pro WM_CREATE. V přepsané verzi [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), volání **EnableStackedTabs (FALSE)** před voláním implementaci základní třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
@@ -485,11 +485,11 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPage`  
+ *nPage*  
  Index na požadovanou stránku začínajícím hodnotou 0. Musí být mezi 0 a jeden menší než počet stránek v seznamu vlastností (včetně).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Má ukazatel na odpovídající stránky k `nPage` parametr.  
+ Má ukazatel na odpovídající stránky k *nPage* parametr.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPage`  
+ *Fyzická_stránka*  
  Bodů na stránku s indexem, která se má najít. Nemůže být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -547,7 +547,7 @@ CTabCtrl* GetTabControl() const;
  Struktura, jejíž členové uložení charakteristika [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
 ### <a name="remarks"></a>Poznámky  
- Použijte tuto strukturu k chybě při inicializaci vzhled vlastností po je vytvořený, ale předtím, než se zobrazí se [DoModal](#domodal) – členská funkce. Například nastavit `dwSize` členem `m_psh` velikosti chcete vlastností tak, aby měl.  
+ Použijte tuto strukturu k chybě při inicializaci vzhled vlastností po je vytvořený, ale předtím, než se zobrazí se [DoModal](#domodal) – členská funkce. Například nastavit *dwSize* členem `m_psh` velikosti chcete vlastností tak, aby měl.  
   
  Další informace o tuto strukturu, včetně seznamu svých členů, najdete v části **PROPSHEETHEADER** ve Windows SDK.  
   
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) funkce Windows vrací informace o velikosti písma systému, ale jiné písmo pro každý vlastností můžete zadat, pokud použijete **DS_SETFONT** styl v Soubor definice prostředků. [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) funkce systému Windows, popsané v sadě Windows SDK používá příslušného písma pro tohoto dialogového okna.  
   
- `MapDialogRect` – Členská funkce nahrazuje dialogového jednotky v `lpRect` s obrazovky jednotek (v pixelech) tak, aby rámeček umožňuje vytvoření dialogového nebo umístit ovládacího prvku v rámci pole.  
+ `MapDialogRect` – Členská funkce nahrazuje dialogového jednotky v *lprect –* s obrazovky jednotek (v pixelech) tak, aby rámeček umožňuje vytvoření dialogového nebo umístit ovládacího prvku v rámci pole.  
   
 ##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog  
  Přepsání posílení inicializace list vlastností.  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Určuje, zda má aplikace nastavena zaměření pro vstup na jednu z ovládacích prvků v seznamu vlastností. Pokud **OnInitDialog** vrátí nenulovou, Windows nastaví zaměření pro vstup na první ovládací prvek v seznamu vlastností. Aplikace může vrátit 0, pouze v případě, že se má zaměření pro vstup explicitně nastavit na jednu z ovládacích prvků v seznamu vlastností.  
+ Určuje, zda má aplikace nastavena zaměření pro vstup na jednu z ovládacích prvků v seznamu vlastností. Pokud `OnInitDialog` vrátí nenulovou, Windows nastaví zaměření pro vstup na první ovládací prvek v seznamu vlastností. Aplikace může vrátit 0, pouze v případě, že se má zaměření pro vstup explicitně nastavit na jednu z ovládacích prvků v seznamu vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členské funkce je volána v reakci **WM_INITDIALOG** zprávy. Tato zpráva je odeslána do seznamu vlastností během [vytvořit](#create) nebo [DoModal](#domodal) volání, které nastat bezprostředně před zobrazením seznamu vlastností je.  
+ Tento člen funkce je volána v odpovědi na zprávu WM_INITDIALOG. Tato zpráva je odeslána do seznamu vlastností během [vytvořit](#create) nebo [DoModal](#domodal) volání, které nastat bezprostředně před zobrazením seznamu vlastností je.  
   
  Funkci člena přepište, pokud je třeba provést zvláštní zpracování při inicializaci seznamu vlastností. V přepsané verze, nejprve volat základní třídy `OnInitDialog` ale Ignorovat hodnoty. Obvykle bude vracet **TRUE** z přepsaného – členská funkce.  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nButton`  
+ *nButton*  
  nButton: identifikuje být stisknutí tlačítka. Tento parametr může být jedna z následujících hodnot:  
   
 - **PSBTN_BACK** rozhodne na tlačítko Zpět.  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPage`  
+ *Fyzická_stránka*  
  Bodů na stránku a odebrat ze seznamu vlastností. Nemůže být `NULL`.  
   
- `nPage`  
+ *nPage*  
  Index stránky odeberou. Musí být mezi 0 a jeden menší než počet stránek v seznamu vlastností (včetně).  
   
 ### <a name="remarks"></a>Poznámky  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPage`  
+ *nPage*  
  Index stránky lze nastavit. Musí být mezi 0 a jeden menší než počet stránek v seznamu vlastností (včetně).  
   
- `pPage`  
+ *Fyzická_stránka*  
  Bodů na stránku nastavení v seznamu vlastností. Nemůže být **NULL**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -672,7 +672,7 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Odkazuje na text, který se zobrazí na tlačítko Dokončit příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -691,10 +691,10 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStyle`  
+ *nStyle*  
  Určuje styl název. Styl musí být určený na 0 nebo **PSH_PROPTITLE**. Pokud je styl nastavená jako **PSH_PROPTITLE**, slova "Vlastnosti" se zobrazí po bude text zadaný jako popisek. Například volání `SetTitle`("Jednoduché", **PSH_PROPTITLE**) bude mít za následek popisek list vlastnost "Jednoduché vlastností."  
   
- `lpszText`  
+ *lpszText*  
  Odkazuje na text, který se použije jako popisek v záhlaví okna seznamu vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Sada příznaky, které přizpůsobit funkce a vzhled tlačítka průvodce. Tento parametr může být kombinací následujícího:  
   
 - **PSWIZB_BACK** tlačítko Zpět  

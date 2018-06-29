@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370204"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078680"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange – třída
 Zapouzdří vlnovitě rozsah přechodu, který má zadaný rozsah kývání.  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Ukazatel na přechod knihovny, která zodpovídá za vytvoření standardní přechodů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Doba trvání*  
  Doba trvání přechodu.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  Hodnota proměnné animace v žlábku vlnovitě tvaru.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  Hodnota proměnné animace na vrcholu vlnovitě wave.  
   
- `period`  
+ *Období*  
  Období kmitání vlnovitě wave v sekundách.  
   
- `slope`  
+ *sklon*  
  Sklon na začátku přechodu.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

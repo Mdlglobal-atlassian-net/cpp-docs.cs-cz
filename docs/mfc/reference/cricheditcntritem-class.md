@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368417"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078605"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem – třída
 S [cricheditview –](../../mfc/reference/cricheditview-class.md) a [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
@@ -86,8 +86,8 @@ CRichEditCntrItem(
  *preo*  
  Ukazatel na [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura, která popisuje položky OLE. Nové `CRichEditCntrItem` objektu je postavena na tuto položku OLE. Pokud *preo* je **NULL**, položka klienta je prázdná.  
   
- `pContainer`  
- Ukazatel na dokument kontejneru, který bude obsahovat tuto položku. Pokud `pContainer` je **NULL**, musíte explicitně volat [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) na tuto položku klienta přidat do dokumentu.  
+ *pContainer*  
+ Ukazatel na dokument kontejneru, který bude obsahovat tuto položku. Pokud *pContainer* je **NULL**, musíte explicitně volat [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) na tuto položku klienta přidat do dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce nebude provádět všechny inicializace OLE.  
@@ -95,7 +95,7 @@ CRichEditCntrItem(
  Další informace najdete v tématu [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktura ve Windows SDK.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- Volání této funkce synchronizovat zařízení aspekt, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), tohoto **CRichEditCntrltem** na které *Znov*.  
+ Volání této funkce synchronizovat zařízení aspekt, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), tohoto `CRichEditCntrltem` na které *Znov*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);

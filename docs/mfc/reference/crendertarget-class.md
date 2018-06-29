@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7550e3e3d8bf7e49f9f93ea6e9a931d6567ef0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab1f4a056e1a65475a71ede0b51db45189d2dd9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377755"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079757"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget – třída
 Obálka pro ID2D1RenderTarget.  
@@ -246,7 +246,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Existující vykreslení cílové rozhraní. Nemůže mít hodnotu NULL  
   
 ##  <a name="begindraw"></a>  CRenderTarget::BeginDraw  
@@ -264,7 +264,7 @@ void Clear(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  Barva, ke kterému je oblasti výkresu vymazán.  
   
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
@@ -277,10 +277,10 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Barva*  
  RGB hodnota.  
   
- `nAlpha`  
+ *nAlpha*  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Hodnota D2D1_COLOR_F.  
@@ -298,19 +298,19 @@ BOOL CreateCompatibleRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bitmapTarget`  
+ *bitmapTarget*  
  Po návratu tato metoda obsahuje adresu ukazatel na nový cílový vykreslení rastrového obrázku. Tento parametr je předán bez inicializace.  
   
- `sizeDesired`  
+ *sizeDesired*  
  Požadovaná velikost nová cílová vykreslení v pixelech nezávislé na zařízení, pokud má být liší od originálu vykreslení cíl, nebo hodnotu NULL. Další informace najdete v části poznámky.  
   
- `sizePixelDesired`  
+ *sizePixelDesired*  
  Požadovaná velikost nová cílová vykreslení v pixelech, pokud má být liší od originálu vykreslení cíl, nebo hodnotu NULL. Další informace najdete v části poznámky.  
   
- `desiredFormat`  
+ *desiredFormat*  
  Požadované Pixelový formát a alfa režim nový vykreslení cíl, nebo hodnotu NULL. Pokud Pixelový formát je nastavený na DXGI_FORMAT_UNKNOWN nebo pokud tento parametr hodnotu null, nová cílová vykreslení používá stejný formát pixelů jako původní vykreslení cíl. Pokud alfa režim je D2D1_ALPHA_MODE_UNKNOWN nebo tento parametr hodnotu NULL, alfa režimu nová cílová vykreslení výchozí D2D1_ALPHA_MODE_PREMULTIPLIED. Informace o podporovaných pixelů formátech najdete v tématu podporované formáty pixelů a Alpha režimy.  
   
- `options`  
+ *Možnosti*  
  Hodnota, která určuje, zda musí být kompatibilní s GDI nová cílová vykreslení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -331,7 +331,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bDeleteResources`  
+ *bDeleteResources*  
  Pokud bDeleteResources hodnotu PRAVDA, všechny prostředky, které jsou umístěné v m_lstResources budou automaticky zničena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -360,19 +360,19 @@ void DrawBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Rastrový obrázek pro vykreslení.  
   
- `rectDest`  
+ *rectDest*  
  Velikost a umístění v pixelech nezávislé na zařízení v prostoru souřadnic cíl vykreslení oblasti, ke kterému se nevykreslí bitové mapy. Rámeček není dobře seřazený, nic se nevykreslí, ale cíl vykreslení nevstupuje do chybového stavu.  
   
- `fOpacity`  
+ *fOpacity*  
  Hodnota mezi 0,0 f a 1,0 f (včetně), která určuje hodnotu krytí platí pro bitovou mapu; Tato hodnota se násobí proti hodnoty alfa obsahu rastrového obrázku.  
   
- `interpolationMode`  
+ *interpolationMode*  
  Režim interpolace použijte, pokud je bitmapy škálovat nebo otáčet o kreslení operaci.  
   
- `pRectSrc`  
+ *pRectSrc*  
  Velikost a umístění v pixelech nezávislé na zařízení v souřadnicového prostoru rastrového obrázku na oblasti v rámci bitové mapy k vykreslení.  
   
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
@@ -387,16 +387,16 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ellipse`  
+ *třemi tečkami*  
  Pozice a radius se třemi tečkami k vykreslení v pixelech nezávislé na zařízení.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění outline se třemi tečkami.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Tloušťka tahu se třemi tečkami. Tahu se jedná o outline se třemi tečkami.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu aplikovat na obrys se třemi tečkami nebo hodnota NULL pro malování plnou tahu.  
   
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
@@ -411,16 +411,16 @@ void DrawGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGeometry`  
+ *pGeometry*  
  Geometrie k vykreslení.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění geometrické tahu.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Tloušťka geometrické tahu. Tahu se jedná o geometrie outline.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu pro použití geometrické outline nebo hodnota NULL pro malování plnou tahu.  
   
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
@@ -435,16 +435,16 @@ void DrawGlyphRun(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptBaseLineOrigin`  
+ *ptBaseLineOrigin*  
  Původ v pixelech nezávislé na zařízení, glyfů standardních hodnot.  
   
- `glyphRun`  
+ *glyphRun*  
  Glyfů pro vykreslení.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  Štětce použita k vyplnění zadaný glyfů.  
   
- `measuringMode`  
+ *measuringMode*  
  Hodnota, která určuje, jak jsou glyfy metriky používá k měření text při formátování. Výchozí hodnota je DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine  
@@ -460,19 +460,19 @@ void DrawLine(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptFrom`  
+ *ptFrom*  
  Počáteční bod čáry v pixelech nezávislé na zařízení.  
   
- `ptTo`  
+ *ptTo*  
  Koncový bod řádku v pixelech nezávislé na zařízení.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění tahu na řádku.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Hodnota větší než nebo rovna hodnotě 0,0 f, která určuje šířku tahu. Pokud není tento parametr zadán, bude výchozí 1.0f. Tahu je umístěn na střed v řádku.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu Malování, nebo hodnotu NULL pro malování na souvislou čáru.  
   
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
@@ -487,16 +487,16 @@ void DrawRectangle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Dimenze rámeček k vykreslení v pixelech nezávislé na zařízení  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění tahu obdélníku  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Hodnota větší než nebo rovno 0, která určuje šířku tahu obdélníku 0f. Tahu se jedná o obdélníku outline.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu Malování, nebo hodnotu NULL pro malování plnou tahu.  
   
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
@@ -511,16 +511,16 @@ void DrawRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rectRounded`  
+ *rectRounded*  
  Dimenze zaoblený obdélník k vykreslení v pixelech nezávislé na zařízení.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění zaoblený obdélník outline.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Šířku tahu zaoblený obdélník. Tahu se jedná o zaoblený obdélník outline. Výchozí hodnota je 1.0f.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl tahu zaoblený obdélník nebo hodnota NULL pro malování plnou tahu. Výchozí hodnota je NULL.  
   
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText  
@@ -537,22 +537,22 @@ void DrawText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strText`  
+ *strText*  
  Ukazatel na pole znaků Unicode k vykreslení.  
   
- `rect`  
+ *Rect –*  
  Velikost a umístění oblasti, ve kterém se nevykreslí text.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  Štětce použita k vyplnění text.  
   
- `textFormat`  
+ *textFormat*  
  Objekt, který popisuje formátování podrobnosti text k vykreslení, jako jsou například písmo, velikost písma a směr toku.  
   
- `options`  
+ *Možnosti*  
  Hodnota, která určuje, zda text by měl být přichyceno k hranice pixelů a jestli text by měl být oříznuto rámeček rozložení. Výchozí hodnota je D2D1_DRAW_TEXT_OPTIONS_NONE, která označuje, že text by měl být přichyceno k hranice pixelů a nesmí být oříznut na obdélník rozložení.  
   
- `measuringMode`  
+ *measuringMode*  
  Hodnota, která určuje, jak jsou glyfy metriky používá k měření text při formátování. Výchozí hodnota je DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
@@ -567,16 +567,16 @@ void DrawTextLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptOrigin`  
+ *ptOrigin*  
  Bod popsané v pixelech nezávislé na zařízení, na kterých se vykresluje levém horním rohu popsaného textLayout textu.  
   
- `textLayout`  
+ *textLayout*  
  Formátovaný text k vykreslení. Kreslení důsledky, které nedědí z ID2D1Resource se ignorují. Pokud existují kreslení účinky, které dědí od ID2D1Resource které nejsou štětce, tato metoda selže a cíl vykreslení zprovozněn v chybovém stavu.  
   
- `pBrushForeground`  
+ *pBrushForeground*  
  Štětce použita k vyplnění jakýkoli text v textLayout, který ještě nemá štětce přidružené jako kreslení vliv (zadaný metodou IDWriteTextLayout::SetDrawingEffect).  
   
- `options`  
+ *Možnosti*  
  Hodnota, která určuje, zda text by měl být přichyceno k hranice pixelů a jestli text by měl být oříznuto rámeček rozložení. Výchozí hodnota je D2D1_DRAW_TEXT_OPTIONS_NONE, která označuje, že text by měl být přichyceno k hranice pixelů a nesmí být oříznut na obdélník rozložení.  
   
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
@@ -599,10 +599,10 @@ void FillEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ellipse`  
+ *třemi tečkami*  
  Pozice a protokolu radius v pixelech nezávislé na zařízení se třemi tečkami k vyplnění.  
   
- `pBrush`  
+ *pBrush*  
  Štětec k vyplnění vnitřku se třemi tečkami.  
   
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
@@ -616,13 +616,13 @@ void FillGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGeometry`  
+ *pGeometry*  
  Geometrie k vyplnění.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění geometrie je vnitřní.  
   
- `pOpacityBrush`  
+ *pOpacityBrush*  
  Maska krytí použít geometrie; Hodnota NULL pro žádné krytí masku. Pokud je zadán masky krytí (parametr opacityBrush), musí být štětce ID2D1BitmapBrush, který má režimech rozšířit x a y nastavena na D2D1_EXTEND_MODE_CLAMP. Další informace najdete v části poznámky.  
   
 ##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
@@ -635,10 +635,10 @@ void FillMesh(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMesh`  
+ *pMesh*  
  OK k vyplnění.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění OK.  
   
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
@@ -654,19 +654,19 @@ void FillOpacityMask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pOpacityMask`  
+ *pOpacityMask*  
  Pozice a protokolu radius v pixelech nezávislé na zařízení se třemi tečkami k vyplnění.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění oblast vykreslování cíle určeného destinationRectangle.  
   
- `content`  
+ *Obsah*  
  Typ obsahu, který obsahuje maska krytí. Hodnota se používá k určení barevný prostor, ve kterém je maska krytí smíšení.  
   
- `rectDest`  
+ *rectDest*  
  Oblast vykreslování cíl pro malování v pixelech nezávislé na zařízení.  
   
- `rectSrc`  
+ *rectSrc*  
  Oblast rastrový obrázek, který chcete použít jako masku krytí v pixelech nezávislé na zařízení.  
   
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
@@ -679,10 +679,10 @@ void FillRectangle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect –*  
  Dimenze rámeček pro malování v pixelech nezávislé na zařízení.  
   
- `pBrush`  
+ *pBrush*  
  Štětce použita k vyplnění rámeček je vnitřní.  
   
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
@@ -695,10 +695,10 @@ void FillRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rectRounded`  
+ *rectRounded*  
  Dimenze zaoblený obdélník k vyplnění v nezávislých pixelů zařízení.  
   
- `pBrush`  
+ *pBrush*  
  Štětec k vyplnění vnitřku zaoblený obdélník.  
   
 ##  <a name="flush"></a>  CRenderTarget::Flush  
@@ -711,10 +711,10 @@ void Flush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `tag1`  
+ *tag1*  
  Obsahuje značky pro kreslení operace, které způsobit chyby, nebo 0, pokud nedošlo k chybám. Tento parametr je předán bez inicializace.  
   
- `tag2`  
+ *tag2*  
  Obsahuje značky pro kreslení operace, které způsobit chyby, nebo 0, pokud nedošlo k chybám. Tento parametr je předán bez inicializace.  
   
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
@@ -797,10 +797,10 @@ void GetTags(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `tag1`  
+ *tag1*  
  Obsahuje první popisek pro další kreslení operacích. Tento parametr je předán bez inicializace. Pokud je zadána hodnota NULL, je načíst žádnou hodnotu tohoto parametru.  
   
- `tag2`  
+ *tag2*  
  Obsahuje druhý popisek pro další kreslení operacích. Tento parametr je předán bez inicializace. Pokud je zadána hodnota NULL, je načíst žádnou hodnotu tohoto parametru.  
   
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
@@ -821,7 +821,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `textRenderingParams`  
+ *textRenderingParams*  
  Po návratu tato metoda je textRenderingParamscontains adresu ukazatel na cíl vykreslení aktuální možnosti vykreslování textu.  
   
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
@@ -832,7 +832,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `transform`  
+ *transformace*  
  Transformace použít k vykreslení cíli.  
   
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported  
@@ -843,7 +843,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `renderTargetProperties`  
+ *renderTargetProperties*  
  Vykreslení vlastnosti cíle pro testování  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -914,10 +914,10 @@ void PushAxisAlignedClip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rectClip`  
+ *rectClip*  
  Velikost a umístění oblasti výstřižek v pixelech nezávislé na zařízení.  
   
- `mode`  
+ *režim*  
  Vyhlazení režim, který slouží k vykreslení okrajů klip rects, které mají subpixel hranice a a přizpůsobte klip se scény obsahem. Prolnutí se provádí po při PopAxisAlignedClip metoda je volána a doporučení se netýká každý primitivní ve vrstvě.  
   
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
@@ -930,10 +930,10 @@ void PushLayer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `layerParameters`  
+ *layerParameters*  
  Obsahu hranice, geometrickou maska, krytí, masku krytí a možnosti vyhlazení vrstvy.  
   
- `layer`  
+ *Vrstva*  
  Vrstva, která přijímá následných kreslení operací.  
   
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
@@ -944,7 +944,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  Nový stav kreslení vykreslení cíle.  
   
 ##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState  
@@ -955,7 +955,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  Po návratu tato metoda obsahuje aktuální stav kreslení vykreslení cíle. Tento parametr se musí inicializovat před předáním k metodě.  
   
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
@@ -966,7 +966,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `antialiasMode`  
+ *antialiasMode*  
  Režim antialiasingu pro budoucí kreslení operace.  
   
 ##  <a name="setdpi"></a>  CRenderTarget::SetDpi  
@@ -977,7 +977,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sizeDPI`  
+ *sizeDPI*  
  Hodnota větší než nebo rovna nule, který určuje vodorovný/verticalDPI vykreslení cíle.  
   
 ##  <a name="settags"></a>  CRenderTarget::SetTags  
@@ -990,10 +990,10 @@ void SetTags(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `tag1`  
+ *tag1*  
  Štítek pro použití na další kreslení operacích.  
   
- `tag2`  
+ *tag2*  
  Štítek pro použití na další kreslení operacích.  
   
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
@@ -1004,7 +1004,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `textAntialiasMode`  
+ *textAntialiasMode*  
  Vyhlazení režim pro použití pro následující text a glyfy kreslení operace.  
   
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
@@ -1015,7 +1015,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `textRenderingParams`  
+ *textRenderingParams*  
  Možnosti vykreslování textu má být použita pro všechny následující text a glyfy kreslení operace; Hodnota NULL, zrušte aktuální možnosti vykreslování textu.  
   
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform  
@@ -1027,7 +1027,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `transform`  
+ *transformace*  
  Transformace použít k vykreslení cíli.  
   
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
@@ -1038,7 +1038,7 @@ BOOL VerifyResource(CD2DResource* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Ukazatel na CD2DResource objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  

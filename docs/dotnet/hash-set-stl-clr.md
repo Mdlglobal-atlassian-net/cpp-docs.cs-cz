@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba3494599c57160bf87a10e53aa2143d9e2b78c0
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 9c701bfa64e96594050ddaf46d56c12849a0ad30
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305735"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079744"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `hash_set` ke správě pořadí elementů jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojené seznam uzlů a každý uzel ukládání jeden element. Hodnota jednotlivých prvků slouží jako klíč k pořadí řazení.  
   
  V popisu níže `GValue` je stejný jako `GKey`, který naopak je stejný jako `Key` Pokud k tomu je typu ref, v takovém případě je `Key^`.  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key>  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ elementu v řízené sekvenci komponenta klíče.  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **Namespace:** cliext –  
 
-## <a name="members"></a>Členové  
+## <a name="declarations"></a>Deklarace  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny typové elementů.|  
 |IHash\<klíče, hodnota >|Udržujte obecné kontejneru.|  
   
-### <a name="remarks"></a>Poznámky  
+## <a name="remarks"></a>Poznámky  
  Objekt přiděluje a uvolní úložiště pro pořadí, které ovládá jako jednotlivé uzly v obousměrných odkazovaného seznamu. Objekt k urychlení přístupu, také udržuje různých délka pole ukazatele do seznamu (zatřiďovací tabulku), efektivně spravovat celý seznam jako posloupnost podřízených seznamů, nebo intervalů. Vloží elementy na bloku, který udržuje seřazené změnou propojení mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odeberte elementy volně bez narušení zbývající elementy.  
   
  Objekt řadí každé sady jimi řídí voláním objektu uložené delegáta typu [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte hash_set; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<=(key_type, key_type)`.  
@@ -240,6 +240,8 @@ template<typename Key>
   
  Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
   
+## <a name="members"></a>Členové
+
 ## <a name="begin"></a> hash_set::begin (STL/CLR)
 Určuje začátek řízené sekvence.  
   

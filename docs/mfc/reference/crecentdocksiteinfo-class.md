@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae0a967fc8be50ec6b777cf5513543e0e2aecde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374432"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078997"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo – třída
 `CRecentDockSiteInfo` Třída je pomocná třída, která ukládá nejnovější informace o stavu pro [CPane třída](../../mfc/reference/cpane-class.md).  
@@ -112,7 +112,7 @@ CRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
+ [v] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -135,7 +135,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
+ [v] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -149,7 +149,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
+ [v] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -163,7 +163,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
+ [v] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -177,7 +177,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
+ [v] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -191,7 +191,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
+ [v] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -214,7 +214,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
+ [v] *bForSlider*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -228,7 +228,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [v] *src*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -244,9 +244,9 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `CList<HWND`  
- [v] `lstOrg`  
- [v] `bForSlider`  
+ [v] *CList < HWND*  
+ [v] *lstOrg*  
+ [v] *bForSlider*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bForSlider`  
- [v] `srcInfo`  
+ [v] *bForSlider*  
+ [v] *srcInfo*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRecentContainer`  
- [v] `pTabbedBar`  
+ [v] *pRecentContainer*  
+ [v] *pTabbedBar*  
   
 ### <a name="remarks"></a>Poznámky  
   

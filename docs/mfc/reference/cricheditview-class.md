@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353a45cad513e9c862b6ae6c15ab5383d3d65d48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06793ae544b76ac959a51224aae754ad58e1af78
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378953"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079848"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
 S [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) a [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce ovládacího prvku RichEdit v kontextu zobrazení architektury MFC na dokumentu.  
@@ -259,19 +259,19 @@ void DoPaste(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dataobj`  
+ *dataobj*  
  [COleDataObject](../../mfc/reference/coledataobject-class.md) obsahující data, která mají vložit.  
   
- `cf`  
+ *CR*  
  Požadovaný formát schránky.  
   
- `hMetaPict`  
+ *hMetaPict*  
  Metafile, který představuje položku vložit.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce volá framework jako součást výchozí implementaci [QueryAcceptData](#queryacceptdata).  
   
- Tato funkce určuje typ vložení na základě výsledků obslužné rutiny pro Vložit jinak. Pokud `cf` je 0, používá aktuální ikony reprezentace novou položku. Pokud `cf` nenulový a `hMetaPict` není **NULL**, používá nová položka `hMetaPict` pro její reprezentace.  
+ Tato funkce určuje typ vložení na základě výsledků obslužné rutiny pro Vložit jinak. Pokud *CR* je 0, používá aktuální ikony reprezentace novou položku. Pokud *CR* nenulový a *hMetaPict* není **NULL**, používá nová položka *hMetaPict* pro její reprezentace.  
   
 ##  <a name="findtext"></a>  CRichEditView::FindText  
  Volání této funkce vyhledá zadaný text a nastavte ji jako aktuální výběr.  
@@ -285,20 +285,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Obsahuje řetězec pro vyhledávání.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda hledání velká a malá písmena.  
   
- `bWord`  
+ *bWord*  
  Označuje, pokud hledání by měl Hledat celá slova, nikoli části slov.  
   
- `bNext`  
+ *bNext*  
  Určuje směr hledání. Pokud **TRUE**, směr vyhledávání je na konci vyrovnávací paměti. Pokud **FALSE**, směr vyhledávání je k začátku vyrovnávací paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `lpszFind` je nalezen text; jinak hodnota 0.  
+ Pokud nenulové hodnoty *lpszFind* je nalezen text; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce zobrazí kurzor čekání během operace hledání.  
@@ -318,20 +318,20 @@ BOOL FindTextSimple(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Obsahuje řetězec pro vyhledávání.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda hledání velká a malá písmena.  
   
- `bWord`  
+ *bWord*  
  Označuje, pokud hledání by měl Hledat celá slova, nikoli části slov.  
   
- `bNext`  
+ *bNext*  
  Určuje směr hledání. Pokud **TRUE**, směr vyhledávání je na konci vyrovnávací paměti. Pokud **FALSE**, směr vyhledávání je k začátku vyrovnávací paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `lpszFind` je nalezen text; jinak hodnota 0.  
+ Pokud nenulové hodnoty *lpszFind* je nalezen text; jinak hodnota 0.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRichEditView::FindText](#findtext).  
@@ -364,10 +364,10 @@ virtual HRESULT GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpchrg`  
- Ukazatel [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura zadání rozsahu znaky (a OLE – položky) pro kopírování na datový objekt určeného `lplpdataobj`.  
+ *lpchrg*  
+ Ukazatel [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura zadání rozsahu znaky (a OLE – položky) zkopírujte datový objekt určeného *lplpdataobj*.  
   
- `dwReco`  
+ *dwReco*  
  Příznak operaci schránky. Může být jedna z těchto hodnot.  
   
 - **RECO_COPY** zkopírujte do schránky.  
@@ -380,17 +380,17 @@ virtual HRESULT GetClipboardData(
   
 - **RECO_PASTE** vložte ze schránky.  
   
- `lpRichDataObj`  
+ *lpRichDataObj*  
  Ukazatel na [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objekt obsahující data schránky z bohaté ovládacích prvků pro úpravy ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)).  
   
- `lplpdataobj`  
- Ukazatel na proměnné ukazatele, která přijímá adresu `IDataObject` objektu, který představuje zadaný v rozsah `lpchrg` parametr. Hodnota `lplpdataobj` je ignorována, pokud se vrátí chyba.  
+ *lplpdataobj*  
+ Ukazatel na proměnné ukazatele, která přijímá adresu `IDataObject` objektu, který představuje zadaný v rozsah *lpchrg* parametr. Hodnota *lplpdataobj* je ignorována, pokud se vrátí chyba.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `HRESULT` Hodnotu úspěch operace vytváření sestav. Další informace o `HRESULT`, najdete v části [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud návratová hodnota označuje úspěch, **IRichEditOleCallback::GetClipboardData** vrátí `IDataObject` přístup `lplpdataobj`, jinak vrátí jeden přístup `lpRichDataObj`. Přepsání této funkci můžete zadat vlastní data ze schránky. Výchozí implementace této funkce vrátí **E_NOTIMPL**.  
+ Pokud návratová hodnota označuje úspěch, **IRichEditOleCallback::GetClipboardData** vrátí `IDataObject` přístup *lplpdataobj*, jinak vrátí jeden přístup  *lpRichDataObj*. Přepsání této funkci můžete zadat vlastní data ze schránky. Výchozí implementace této funkce vrátí **E_NOTIMPL**.  
   
  Toto je rozšířené přepisovatelné.  
   
@@ -410,10 +410,10 @@ virtual HMENU GetContextMenu(
  *seltyp*  
  Výběr typu. Výběr typu hodnoty jsou popsané v oddílu Poznámky.  
   
- `lpoleobj`  
- Ukazatel na **objekt OLE** struktura určující první vybraný objekt OLE, je-li výběr obsahuje jeden nebo více položek OLE. Pokud výběr neobsahuje žádné položky `lpoleobj` je **NULL**. **Objekt OLE** struktura obsahuje ukazatel na OLE objektu v tabulku.  
+ *lpoleobj*  
+ Ukazatel na **objekt OLE** struktura určující první vybraný objekt OLE, je-li výběr obsahuje jeden nebo více položek OLE. Pokud výběr neobsahuje žádné položky *lpoleobj* je **NULL**. **Objekt OLE** struktura obsahuje ukazatel na OLE objektu v tabulku.  
   
- `lpchrg`  
+ *lpchrg*  
  Ukazatel na [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura obsahující aktuální výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -575,14 +575,14 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Hodnota, která určuje způsob, který má být použit při určování délka textu. Tento člen může mít jednu nebo více hodnot uvedených v příznaky členem [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) popsané v sadě Windows SDK.  
   
- `uCodePage`  
+ *uCodePage*  
  Znaková stránka pro překlad (CP_ACP ANSI znakové stránky, 1200 pro kódování Unicode).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet znaků nebo bajtů v ovládacím prvku upravit. Pokud byly v nekompatibilní příznaky `dwFlags`, vrátí tato funkce člen `E_INVALIDARG`.  
+ Počet znaků nebo bajtů v ovládacím prvku upravit. Pokud nekompatibilní příznaky, které byly nastavené *dwFlags*, vrátí tato funkce člen `E_INVALIDARG`.  
   
 ### <a name="remarks"></a>Poznámky  
  `GetTextLengthEx` Další způsoby určování délka textu. Podporuje funkci bohaté upravit 2.0. Další informace najdete v tématu [o bohaté upravit ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb787873) ve Windows SDK.  
@@ -595,7 +595,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec, který obsahuje název souboru, který má být vložen.  
   
 ##  <a name="insertitem"></a>  CRichEditView::InsertItem  
@@ -606,7 +606,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Ukazatel na položku, která má být vložen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -616,18 +616,18 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
  Další informace o `HRESULT`, najdete v části [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
- Volání této funkce určete, zda `cf` je formát schránky, což je text, formátovaným textem nebo RTF s OLE – položky.  
+ Volání této funkce určete, zda *CR* je formát schránky, což je text, formátovaným textem nebo RTF s OLE – položky.  
   
 ```  
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  Formát schránky, které vás zajímají.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `cf` je bohaté formát schránky upravit nebo text.  
+ Pokud nenulové hodnoty *CR* je bohaté formát schránky upravit nebo text.  
   
 ##  <a name="isselected"></a>  CRichEditView::IsSelected  
  Volání této funkce k určení, pokud zadaná položka OLE je aktuálně vybraný v tomto zobrazení.  
@@ -637,7 +637,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDocItem`  
+ *pDocItem*  
  Ukazatel na objekt v zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -682,16 +682,16 @@ void OnCharEffect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwMask`  
+ *dwMask*  
  Chcete-li upravit v aktuálním výběru formátování znaků.  
   
- `dwEffect`  
+ *dwEffect*  
  Požadovaný seznam formátování důsledky k přepnutí znaků.  
   
 ### <a name="remarks"></a>Poznámky  
  Každé volání této funkce přepne zadaný formátování důsledky pro aktuální výběr.  
   
- Další informace o `dwMask` a `dwEffect` parametry a jejich potenciální hodnoty, najdete v části odpovídající členů dat [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) ve Windows SDK.  
+ Další informace o *dwMask* a *dwEffect* parametry a jejich potenciální hodnoty, najdete v části odpovídající členů dat [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
@@ -708,16 +708,16 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Řetězec, který se má najít.  
   
- `bNext`  
+ *bNext*  
  Směru vyhledávání: **TRUE** označuje; **FALSE**, až.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda hledání se velká a malá písmena.  
   
- `bWord`  
+ *bWord*  
  Určuje, zda hledání Hledat celá slova pouze nebo ne.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -731,7 +731,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této funkce volá [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) – členská funkce bez pomocného parametru informací (tedy pomocí výchozích hodnot 0 pro `lHint` parametr a **NULL** pro `pHint` parametr). Přepsání této funkci můžete provést všechny jednorázové inicializace, který vyžaduje informace o dokumentu. Například pokud aplikace má pevnou velikostí dokumenty, můžete použít tuto funkci k chybě při inicializaci zobrazení posouvání omezení na základě velikosti dokumentu. Pokud vaše aplikace podporuje dokumenty proměnlivé velikosti, použijte `OnUpdate` aktualizovat posouvání omezuje pokaždé, když změny dokumentu.  
+ Výchozí implementace této funkce volá [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) – členská funkce bez pomocného parametru informací (tedy pomocí výchozích hodnot 0 pro *lHint* parametr a **hodnotu NULL.**  pro *pHint* parametr). Přepsání této funkci můžete provést všechny jednorázové inicializace, který vyžaduje informace o dokumentu. Například pokud aplikace má pevnou velikostí dokumenty, můžete použít tuto funkci k chybě při inicializaci zobrazení posouvání omezení na základě velikosti dokumentu. Pokud vaše aplikace podporuje dokumenty proměnlivé velikosti, použijte `OnUpdate` aktualizovat posouvání omezuje pokaždé, když změny dokumentu.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRichEditView::m_nWordWrap](#m_nwordwrap).  
@@ -765,7 +765,7 @@ void OnParaAlign(WORD wAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `wAlign`  
+ *wAlign*  
  Zarovnání požadované odstavce. Jedna z následujících hodnot:  
   
 - `PFA_LEFT` Zarovnává odstavců s levým okrajem.  
@@ -785,11 +785,11 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dcPrinter`  
+ *dcPrinter*  
  A [CDC](../../mfc/reference/cdc-class.md) objekt pro nové tiskárny.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace nastaví velikost papíru fyzické výška a šířka výstupní zařízení (tiskárny). Pokud není přidružený žádný kontext zařízení `dcPrinter`, výchozí implementace nastaví velikost papíru na 8.5 podle 11 palců.  
+ Výchozí implementace nastaví velikost papíru fyzické výška a šířka výstupní zařízení (tiskárny). Pokud není přidružený žádný kontext zařízení *dcPrinter*, výchozí implementace nastaví velikost papíru na 8.5 podle 11 palců.  
   
 ##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll  
  Voláno rámcem při zpracování nahradit všechny příkazy z dialogového okna nahradit.  
@@ -803,16 +803,16 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, který má být nahrazen.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Nahrazení textu.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda hledání velká a malá písmena.  
   
- `bWord`  
+ *bWord*  
  Označuje, pokud vyhledávání musíte vybrat celá slova nebo ne.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -834,19 +834,19 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, který má být nahrazen.  
   
- `bNext`  
+ *bNext*  
  Určuje směr hledání: **TRUE** nefunguje; **FALSE**, až.  
   
- `bCase`  
+ *bCase*  
  Určuje, zda hledání velká a malá písmena.  
   
- `bWord`  
+ *bWord*  
  Označuje, pokud vyhledávání musíte vybrat celá slova nebo ne.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Nahrazení textu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -860,7 +860,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Text, který nebyl nalezen.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -882,19 +882,19 @@ void OnUpdateCharEffect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
+ *pCmdUI*  
  Ukazatel na [CCmdUI](../../mfc/reference/ccmdui-class.md) objektu.  
   
- `dwMask`  
+ *dwMask*  
  Určuje formátování maska znaků.  
   
- `dwEffect`  
+ *dwEffect*  
  Určuje formátování vliv znaků.  
   
 ### <a name="remarks"></a>Poznámky  
- Maska `dwMask` Určuje, který znak formátování atributy ke kontrole. V příznacích `dwEffect` seznam atributů pro sadu a Vymazat formátování znaků.  
+ Maska *dwMask* Určuje, který znak formátování atributy ke kontrole. V příznacích *dwEffect* seznam atributů pro sadu a Vymazat formátování znaků.  
   
- Další informace o `dwMask` a `dwEffect` parametry a jejich potenciální hodnoty, najdete v části odpovídající členů dat [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) ve Windows SDK.  
+ Další informace o *dwMask* a *dwEffect* parametry a jejich potenciální hodnoty, najdete v části odpovídající členů dat [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) ve Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
@@ -909,10 +909,10 @@ void OnUpdateParaAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
+ *pCmdUI*  
  Ukazatel na [CCmdUI](../../mfc/reference/ccmdui-class.md) objektu.  
   
- `wAlign`  
+ *wAlign*  
  Zarovnání odstavce ke kontrole. Jedna z následujících hodnot:  
   
 - `PFA_LEFT` Zarovnává odstavců s levým okrajem.  
@@ -925,7 +925,7 @@ void OnUpdateParaAlign(
  [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
 ##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect  
- Volání této funkce k formátování rozsah textu v ovládacím prvku RichEdit nevejde se do *rectLayout* pro zařízení určeného `pDC`.  
+ Volání této funkce k formátování rozsah textu v ovládacím prvku RichEdit nevejde se do *rectLayout* pro zařízení určeného *primárního řadiče domény*.  
   
 ```  
 long PrintInsideRect(
@@ -937,16 +937,16 @@ long PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro oblasti výstup.  
   
  *rectLayout*  
  [Rect –](../../mfc/reference/rect-structure1.md) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) určující oblasti výstup.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Index prvního znaku, který má být formátována nule.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Index počítaný od nuly poslední znak, který má být ve formátu.  
   
  *bOutput*  
@@ -962,7 +962,7 @@ long PrintInsideRect(
   Podívejte se na příklad pro [CRichEditView::GetPaperSize](#getpapersize).  
   
 ##  <a name="printpage"></a>  CRichEditView::PrintPage  
- Volání této funkce k formátování rozsah textu v ovládacím prvku RichEdit pro výstupní zařízení určeného `pDC`.  
+ Volání této funkce k formátování rozsah textu v ovládacím prvku RichEdit pro výstupní zařízení určeného *primárního řadiče domény*.  
   
 ```  
 long PrintPage(
@@ -972,13 +972,13 @@ long PrintPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení pro výstup stránky.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Index prvního znaku, který má být formátována nule.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Index počítaný od nuly poslední znak, který má být ve formátu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1008,13 +1008,13 @@ virtual HRESULT QueryAcceptData(
  *lpcfFormat*  
  Ukazatel na formát dat přijatelný.  
   
- `dwReco`  
+ *dwReco*  
  Nepoužívá se.  
   
  *bReally*  
  Určuje, zda se operace vložení pokračovat nebo ne.  
   
- `hMetaFile`  
+ *hMetaFile*  
  Popisovač pro metafile používá pro kreslení ikony položky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1036,11 +1036,11 @@ void SetCharFormat(CHARFORMAT2 cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) struktura obsahující nové výchozí formátování atributy.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze atributy určeného **dwMask** členem `cf` došlo ke změně pomocí této funkce.  
+ Pouze atributy určeného **dwMask** členem *CR* došlo ke změně pomocí této funkce.  
   
  Další informace najdete v tématu [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) zprávy a [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) struktura ve Windows SDK.  
   
@@ -1091,14 +1091,14 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pf`  
+ *PF*  
  [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) struktura obsahující nový výchozí bod atributy formátování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze atributy určeného **dwMask** členem `pf` došlo ke změně pomocí této funkce.  
+ Pouze atributy určeného **dwMask** členem *pf* došlo ke změně pomocí této funkce.  
   
  Další informace najdete v tématu [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) zprávy a [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) struktura ve Windows SDK.  
   
@@ -1113,13 +1113,13 @@ void TextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Obsahuje textový řetězec, který nebyl nalezen.  
   
 ### <a name="remarks"></a>Poznámky  
  Doporučuje se, že se tato metoda volána hned po volání se nezdařilo [řetězec FindText](#findtext) tak, aby se správně resetuje stav vnitřní vyhledávání ovládacího prvku.  
   
- `lpszFind` Parametru by měla obsahovat stejný obsah jako řetězec poskytované [řetězec FindText](#findtext). Po obnovení stavu interní vyhledávání, bude volat tuto metodu [OnTextNotFound](#ontextnotfound) metoda s zadaný hledaný řetězec.  
+ *LpszFind* parametru by měla obsahovat stejný obsah jako řetězec poskytované [řetězec FindText](#findtext). Po obnovení stavu interní vyhledávání, bude volat tuto metodu [OnTextNotFound](#ontextnotfound) metoda s zadaný hledaný řetězec.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CRichEditView::FindText](#findtext).  

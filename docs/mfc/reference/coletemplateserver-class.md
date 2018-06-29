@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374380"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077975"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer – třída
 Použít pro OLE visual úpravy servery, automatizační servery a kontejnery odkaz (aplikace, které podporují odkazy na vložené části).  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *CLSID*  
  Odkaz na ID třídy OLE, které požadavky šablony.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Ukazatel na šabloně dokumentu.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Určuje, zda jednu instanci aplikace může podporovat více instancí. Pokud **TRUE**, pro každý požadavek pro vytvoření objektu je spuštěných víc instancí aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAppType`  
+ *nAppType*  
  Hodnota z **OLE_APPTYPE** výčtu, která je definována v AFXDISP. H. Může mít jednu z následujících hodnot:  
   
 - `OAT_INPLACE_SERVER` Server má celého serveru uživatelského rozhraní.  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` Objekt je `IDispatch`-podporující.  
   
-- **OAT_DOC_OBJECT_SERVER** Server podporuje obě vložení a součástí modelu objektu dokumentu.  
+- `OAT_DOC_OBJECT_SERVER` Server podporuje obě vložení a součástí modelu objektu dokumentu.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Seznam položek, které se zapíše do registru pouze v případě, že neexistují žádné položky.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Seznam položek, které se zapíše do registru bez ohledu na to, zda existují jakékoli předchozí položky.  
   
- `bRegister`  
- Určuje, zda třída je nutné zaregistrovat. Pokud `bRegister` je **TRUE**, třída není zaregistrována systémový registr. V opačném. zrušení registrace třídy.  
+ *bRegister*  
+ Určuje, zda třída je nutné zaregistrovat. Pokud *bRegister* je **TRUE**, třída není zaregistrována systémový registr. V opačném. zrušení registrace třídy.  
   
 ### <a name="remarks"></a>Poznámky  
  Informace o registraci je načten prostřednictvím volání [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Dílčích řetězců načíst odpovídají identifikovaný indexy **regFileTypeId**, **regFileTypeName**, a **fileNewName**, jak je popsáno v `GetDocString` — Referenční stránky.  
   
  Pokud **regFileTypeId** dílčí řetězec je prázdný nebo pokud volání `GetDocString` selže z jiného důvodu, tato funkce se nezdaří a informací o souboru není zadaný v registru.  
   
- Informace v argumenty `rglpszRegister` a `rglpszOverwrite` je zapsán do registru prostřednictvím volání [afxoleregisterserverclass –](application-control.md#afxoleregisterserverclass). Výchozí informace, která je registrována, pokud jsou dva argumenty **NULL**, je vhodná pro většinu aplikací. Informace o struktuře informace v těchto argumentů najdete v tématu `AfxOleRegisterServerClass`.  
+ Informace v argumenty *rglpszRegister* a *rglpszOverwrite* je zapsán do registru prostřednictvím volání [afxoleregisterserverclass –](application-control.md#afxoleregisterserverclass). Výchozí informace, která je registrována, pokud jsou dva argumenty **NULL**, je vhodná pro většinu aplikací. Informace o struktuře informace v těchto argumentů najdete v tématu `AfxOleRegisterServerClass`.  
   
- Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka MFC HIERSVR](../../visual-cpp-samples.md)   

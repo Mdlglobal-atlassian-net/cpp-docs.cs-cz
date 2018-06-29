@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371618"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079062"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate – třída
 Definuje šablonu dokumentu, který implementuje rozhraní s jedním dokumentem (SDI).  
@@ -45,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Šablona dokumentu definuje vztahy mezi tři typy tříd:  
   
--   Třída dokumentu, která je odvozena od **CDocument**.  
+-   Třída dokumentu, která je odvozena od `CDocument`.  
   
 -   Třídy zobrazení, která zobrazuje data z dokumentu třídy uvedené výše. Můžete dědit z této třídy `CView`, `CScrollView`, `CFormView`, nebo `CEditView`. (Můžete také použít `CEditView` přímo.)  
   
@@ -81,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
+ *nIDResource*  
  Určuje ID prostředků použitý s typem dokumentu. To může zahrnovat nabídky, ikona, tabulka akcelerátoru a řetězcové prostředky.  
   
  Řetězec prostředku se skládá z až sedm dílčích řetězců oddělenými znakem '\n' (znak '\n, je potřeba jako zástupný znak, pokud neuvedete dílčí řetězec; však nejsou nutné koncové znaky '\n'); Tyto dílčích řetězců popisují typ dokumentu. Informace o dílčích řetězců najdete v tématu [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Tento řetězec prostředku se nachází v souboru prostředků aplikace. Příklad:  
@@ -100,13 +100,13 @@ CSingleDocTemplate(
   
  Další informace o těchto typech prostředků najdete v tématu [Editor řetězce](../../windows/string-editor.md).  
   
- `pDocClass`  
- Odkazuje na `CRuntimeClass` objekt třídy dokumentu. Tato třída je **CDocument**-odvozené třídy, které definujete, aby představují dokumentů.  
+ *pDocClass*  
+ Odkazuje na `CRuntimeClass` objekt třídy dokumentu. Tato třída je `CDocument`-odvozené třídy, které definujete, aby představují dokumentů.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Odkazuje na `CRuntimeClass` objekt třídy rámce okna. Tato třída může být `CFrameWnd`-odvozené třídy, nebo může být `CFrameWnd` samotné Pokud chcete použít výchozí chování pro rámec hlavního okna.  
   
- `pViewClass`  
+ *pViewClass*  
  Odkazuje na `CRuntimeClass` objekt třídy zobrazení. Tato třída je `CView`-odvozené třídy, které definujete pro zobrazení dokumentů.  
   
 ### <a name="remarks"></a>Poznámky  

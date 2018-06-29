@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376376"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079587"
 ---
 # <a name="cpen-class"></a>CPen – třída
 Zapouzdří pera Windows zařízení grafické rozhraní (GDI).  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPenStyle`  
+ *nPenStyle*  
  Určuje styl pera. Tento parametr v první verzi konstruktor může být jedna z následujících hodnot:  
   
 - **PS_SOLID** vytvoří pera plnou.  
@@ -118,7 +118,7 @@ CPen(
   
 - **PS_NULL** vytvoří pera hodnotu null.  
   
-- **PS_INSIDEFRAME** vytvoří pera, který se vykreslí řádku uvnitř rámečku uzavřené obrazce vytvořeného pomocí funkcí výstup GDI systému Windows, které určují ohraničující obdélník (například **elipsy**, **obdélníku** , `RoundRect`, `Pie`, a `Chord` členské funkce). Když tento styl se používá s funkcemi výstup GDI systému Windows, které neurčují ohraničující obdélník (například `LineTo` – členská funkce), oblasti výkresu pera není omezeno rámečku.  
+- **PS_INSIDEFRAME** vytvoří pera, který se vykreslí řádku uvnitř rámečku uzavřené obrazce vytvořeného pomocí funkcí výstup GDI systému Windows, které určují ohraničující obdélník (například `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, a `Chord` členské funkce). Když tento styl se používá s funkcemi výstup GDI systému Windows, které neurčují ohraničující obdélník (například `LineTo` – členská funkce), oblasti výkresu pera není omezeno rámečku.  
   
  Druhá verze `CPen` konstruktor Určuje kombinaci typu, stylu, zakončení a atributy spojení. Hodnoty z každé kategorie by měl být kombinaci pomocí bitový operátor OR (&#124;). Typ pera může být jedna z následujících hodnot:  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC** vytvoří pera kosmetická.  
   
-     Druhá verze `CPen` konstruktor přidá následující styly pera pro `nPenStyle`:  
+     Druhá verze `CPen` konstruktor přidá následující styly pera pro *nPenStyle*:  
   
 - **PS_ALTERNATE** vytvoří pera, který nastaví všechny ostatní pixelů. (Tento styl lze použít pouze u kosmetické pera.)  
   
@@ -148,24 +148,24 @@ CPen(
   
 - **PS_JOIN_ROUND** spojení se zaokrouhlí.  
   
- `nWidth`  
+ *nWindth*  
  Určuje šířku pera.  
   
 -   Pro první verze součásti konstruktoru Pokud je tato hodnota 0, je vždy 1 pixel, bez ohledu na režim mapování šířku v jednotkách zařízení.  
   
--   Pro druhou verzi konstruktoru Pokud `nPenStyle` je **PS_GEOMETRIC**, šířka je uveden v logické jednotky. Pokud `nPenStyle` je **PS_COSMETIC**, šířka musí být nastavena na hodnotu 1.  
+-   Pro druhou verzi konstruktoru Pokud *nPenStyle* je **PS_GEOMETRIC**, šířka je uveden v logické jednotky. Pokud *nPenStyle* je **PS_COSMETIC**, šířka musí být nastavena na hodnotu 1.  
   
- `crColor`  
+ *crColor*  
  Obsahuje barva RGB pro pero.  
   
- `pLogBrush`  
- Odkazuje na `LOGBRUSH` struktury. Pokud `nPenStyle` je **PS_COSMETIC**, `lbColor` členem `LOGBRUSH` struktura Určuje barvu pera a `lbStyle` členem `LOGBRUSH` struktury musí být nastavena na **BS_ PLNOU**. Pokud `nPenStyle` je **PS_GEOMETRIC**, všechny členy, musí se použít k zadání atributy štětce pera.  
+ *pLogBrush*  
+ Odkazuje na `LOGBRUSH` struktury. Pokud *nPenStyle* je **PS_COSMETIC**, *lbColor* členem `LOGBRUSH` struktura Určuje barvu pera a *lbStyle*členem `LOGBRUSH` struktury musí být nastavena na **BS_SOLID**. Pokud *nPenStyle* je **PS_GEOMETRIC**, všechny členy, musí se použít k zadání atributy štětce pera.  
   
- `nStyleCount`  
- Určuje délku v jednotkách doubleword z `lpStyle` pole. Tato hodnota musí být nula v případě `nPenStyle` není **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Určuje délku v jednotkách doubleword z *lpStyle* pole. Tato hodnota musí být nula v případě *nPenStyle* není **PS_USERSTYLE**.  
   
- `lpStyle`  
- Bodů na pole hodnot doubleword. První hodnota určuje první čárka ve stylu definovaný uživatelem, druhá hodnota udává délku první místa a tak dále. Musí být tento ukazatel **NULL** Pokud `nPenStyle` není **PS_USERSTYLE**.  
+ *lpStyle*  
+ Bodů na pole hodnot doubleword. První hodnota určuje první čárka ve stylu definovaný uživatelem, druhá hodnota udává délku první místa a tak dále. Musí být tento ukazatel **NULL** Pokud *nPenStyle* není **PS_USERSTYLE**.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud používáte konstruktor bez argumentů, musí inicializovat výsledná `CPen` objektu s `CreatePen`, `CreatePenIndirect`, nebo `CreateStockObject` členské funkce.  
@@ -194,27 +194,27 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPenStyle`  
- Určuje styl pro pero. Seznam možných hodnot najdete v tématu `nPenStyle` parametr ve [CPen](#cpen) konstruktor.  
+ *nPenStyle*  
+ Určuje styl pro pero. Seznam možných hodnot najdete v tématu *nPenStyle* parametr ve [CPen](#cpen) konstruktor.  
   
- `nWidth`  
+ *nWindth*  
  Určuje šířku pera.  
   
 -   Pro první verze součásti `CreatePen`, pokud je tato hodnota je 0, šířka v jednotkách zařízení je vždy 1 pixel, bez ohledu na režim mapování.  
   
--   Pro druhou verzi `CreatePen`, pokud `nPenStyle` je **PS_GEOMETRIC**, šířka je uveden v logické jednotky. Pokud `nPenStyle` je **PS_COSMETIC**, šířka musí být nastavena na hodnotu 1.  
+-   Pro druhou verzi `CreatePen`, pokud *nPenStyle* je **PS_GEOMETRIC**, šířka je uveden v logické jednotky. Pokud *nPenStyle* je **PS_COSMETIC**, šířka musí být nastavena na hodnotu 1.  
   
- `crColor`  
+ *crColor*  
  Obsahuje barva RGB pro pero.  
   
- `pLogBrush`  
- Odkazuje na [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktura. Pokud `nPenStyle` je **PS_COSMETIC**, **lbColor** členem `LOGBRUSH` struktura Určuje barvu pera a `lbStyle` členem `LOGBRUSH` musí být struktura Nastavte na **BS_SOLID**. Pokud **nPenStyle** je **PS_GEOMETRIC**, všechny členy, musí se použít k zadání atributy štětce pera.  
+ *pLogBrush*  
+ Odkazuje na [logbrush –](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktura. Pokud *nPenStyle* je **PS_COSMETIC**, **lbColor** členem `LOGBRUSH` struktura Určuje barvu pera a *lbStyle*členem `LOGBRUSH` struktury musí být nastavena na **BS_SOLID**. Pokud **nPenStyle** je **PS_GEOMETRIC**, všechny členy, musí se použít k zadání atributy štětce pera.  
   
- `nStyleCount`  
- Určuje délku v jednotkách doubleword z `lpStyle` pole. Tato hodnota musí být nula v případě `nPenStyle` není **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Určuje délku v jednotkách doubleword z *lpStyle* pole. Tato hodnota musí být nula v případě *nPenStyle* není **PS_USERSTYLE**.  
   
- `lpStyle`  
- Bodů na pole hodnot doubleword. První hodnota určuje první čárka ve stylu definovaný uživatelem, druhá hodnota udává délku první místa a tak dále. Musí být tento ukazatel **NULL** Pokud `nPenStyle` není **PS_USERSTYLE**.  
+ *lpStyle*  
+ Bodů na pole hodnot doubleword. První hodnota určuje první čárka ve stylu definovaný uživatelem, druhá hodnota udává délku první místa a tak dále. Musí být tento ukazatel **NULL** Pokud *nPenStyle* není **PS_USERSTYLE**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud bylo úspěšné, nebo nula, pokud metoda selže.  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  Druhá verze `CreatePen` inicializuje logické kosmetické nebo geometrickou pera, který má zadaný styl, šířku a zdokonalit atributy. Šířka pera kosmetické je vždy 1; Šířka pera geometrickou je vždy určen v jednotkách world. Jakmile aplikace vytvoří logické pera, můžete ho vybrat pera v kontextu zařízení voláním [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) funkce. Po výběru pera se v kontextu zařízení, můžete použít k vykreslení čar a křivek.  
   
--   Pokud `nPenStyle` je **PS_COSMETIC** a **PS_USERSTYLE**, položky v `lpStyle` pole zadejte délky čárek a mezer v jednotkách stylu. Styl jednotka je definována podle zařízení, ve kterém se používá pera kreslení čáry.  
+-   Pokud *nPenStyle* je **PS_COSMETIC** a **PS_USERSTYLE**, položky v *lpStyle* pole zadejte délky čárek a mezer v Styl jednotky. Styl jednotka je definována podle zařízení, ve kterém se používá pera kreslení čáry.  
   
--   Pokud `nPenStyle` je **PS_GEOMETRIC** a **PS_USERSTYLE**, položky v `lpStyle` pole zadejte délky čárek a mezer v logické jednotky.  
+-   Pokud *nPenStyle* je **PS_GEOMETRIC** a **PS_USERSTYLE**, položky v *lpStyle* pole zadejte délky čárek a mezer v logické jednotky.  
   
--   Pokud `nPenStyle` je **PS_ALTERNATE**, styl jednotky je ignorována a bude nastavena každých dalších pixelů.  
+-   Pokud *nPenStyle* je **PS_ALTERNATE**, styl jednotky je ignorována a bude nastavena každých dalších pixelů.  
   
  Pokud aplikace vyžaduje už danou pera, by měly volat [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) členské funkce nebo zničení `CPen` objektu, prostředek je již používán. Aplikace by neměl odstranit pera, když pera je vybraný v kontextu zařízení.  
   
@@ -240,14 +240,14 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- Inicializuje pera, který má styl, šířku a barvu uvedené ve struktuře, na kterou odkazuje `lpLogPen`.  
+ Inicializuje pera, který má styl, šířku a barvu uvedené ve struktuře, na kterou odkazuje *lpLogPen*.  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpLogPen`  
+ *lpLogPen*  
  Odkazuje na Windows [logpen –](../../mfc/reference/logpen-structure.md) struktura, která obsahuje informace o pera.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -289,7 +289,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLogPen`  
+ *pLogPen*  
  Odkazuje na [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) struktura, která obsahuje informace o pera.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -321,7 +321,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLogPen`  
+ *pLogPen*  
  Odkazuje na [logpen –](http://msdn.microsoft.com/library/windows/desktop/dd145041) struktura bude obsahovat informace o pera.  
   
 ### <a name="return-value"></a>Návratová hodnota  

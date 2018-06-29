@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e969607e4017191539a0b0301b0c27ccb9f1ae
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372966"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078981"
 ---
 # <a name="csinglelock-class"></a>CSingleLock – třída
 Představuje mechanismus řízení přístupu používá při řízení přístupu k prostředku v programu s více vlákny.  
@@ -57,7 +57,7 @@ class CSingleLock
 ## <a name="remarks"></a>Poznámky  
  `CSingleLock` nemá základní třídu.  
   
- Chcete-li používat synchronizační třídy [prohlížení](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), a [CEvent](../../mfc/reference/cevent-class.md), je nutné vytvořit buď `CSingleLock` nebo [CMultiLock](../../mfc/reference/cmultilock-class.md) objekt, který má čekat na a verzí objekt synchronizace. Použití `CSingleLock` když potřebujete jenom čekat na jeden objekt v čase. Použít **CMultiLock** když existuje více objektů, které můžete použít v určitou dobu.  
+ Chcete-li používat synchronizační třídy [prohlížení](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), a [CEvent](../../mfc/reference/cevent-class.md), je nutné vytvořit buď `CSingleLock` nebo [CMultiLock](../../mfc/reference/cmultilock-class.md) objekt, který má čekat na a verzí objekt synchronizace. Použití `CSingleLock` když potřebujete jenom čekat na jeden objekt v čase. Použít `CMultiLock` když existuje více objektů, které můžete použít v určitou dobu.  
   
  Použít `CSingleLock` objektu, volání jeho konstruktoru uvnitř členské funkce ve třídě řízené prostředků. Potom zavolejte [islocked –](#islocked) – členská funkce k určení, zda je prostředek k dispozici. Pokud se jedná, pokračujte se zbývajícími – členská funkce. Pokud prostředek není k dispozici, počkejte zadanou dobu pro daný prostředek k uvolnění nebo vrátí hodnotu neúspěch. Po dokončení použít prostředku buď volání [odemčení](#unlock) fungovat, pokud `CSingleLock` objektu je znovu použít, nebo povolíte `CSingleLock` objekt, který má být zničený.  
   
@@ -79,10 +79,10 @@ explicit CSingleLock(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObject`  
+ *pObject*  
  Odkazuje na objekt synchronizace nelze přistupovat. Nemůže být **NULL**.  
   
- `bInitialLock`  
+ *bInitialLock*  
  Určuje, jestli na začátku pokusí o přístup k zadaného objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -137,10 +137,10 @@ BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lCount`  
+ *lCount*  
  Počet přístupů k uvolnění. Musí být větší než 0. Pokud počet objektu, který má být vyšší než její maximální by způsobilo určenou dobu, není-li změnit počet a funkce vrátí hodnotu **FALSE**.  
   
- `lPrevCount`  
+ *lPrevCount*  
  Odkazuje na proměnnou, která bude přijímat předchozí počet objekt synchronizace. Pokud **NULL**, počet předchozího nevrátí.  
   
 ### <a name="return-value"></a>Návratová hodnota  

@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 03c41bc17b6d8e5853203533a2d20d81063316a1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954743"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079286"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap – třída
 Obálka pro ID2D1Bitmap.  
@@ -152,7 +152,7 @@ virtual ~CD2DBitmap();
 ```  
   
 ##  <a name="attach"></a>  CD2DBitmap::Attach  
- Připojí existující prostředek rozhraní k objektu  
+ Připojí existující prostředek rozhraní k objektu.  
   
 ```  
 void Attach(ID2D1Bitmap* pResource);
@@ -160,7 +160,7 @@ void Attach(ID2D1Bitmap* pResource);
   
 ### <a name="parameters"></a>Parametry  
  *pResource*  
- Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
+ Existující rozhraní prostředků. Nemůže mít hodnotu NULL.  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  Vytvoří objekt CD2DBitmap z prostředku.  
@@ -216,14 +216,14 @@ CD2DBitmap(
  Popisovač bitové mapy.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
- Inicializuje objekt  
+ Inicializuje objekt.  
   
 ```  
 void CommonInit();
 ```  
   
 ##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
- Zkopíruje zadané oblasti ze zadaného bitové mapy do aktuální rastrového obrázku  
+ Zkopíruje zadané oblasti ze zadaného bitové mapy do aktuální rastrového obrázku.  
   
 ```  
 HRESULT CopyFromBitmap(
@@ -234,19 +234,19 @@ HRESULT CopyFromBitmap(
   
 ### <a name="parameters"></a>Parametry  
  *pBitmap*  
- Rastrový obrázek pro kopírování z  
+ Rastrový obrázek zkopírovat z.  
   
  *destPoint*  
- V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován  
+ V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován.  
   
  *srcRect*  
- Oblasti rastrový obrázek ke zkopírování  
+ Oblasti rastrový obrázek pro kopírování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- Zkopíruje zadané oblasti z paměti do aktuální rastrového obrázku  
+ Zkopíruje zadané oblasti z paměti do aktuální rastrového obrázku.  
   
 ```  
 HRESULT CopyFromMemory(
@@ -257,19 +257,19 @@ HRESULT CopyFromMemory(
   
 ### <a name="parameters"></a>Parametry  
  *srcData*  
- Data ke zkopírování  
+ Data ke zkopírování.  
   
  *Výška*  
- Stride nebo výška, uložené v srcData bitmapy zdroje. Stride je počet bajtů řádkového rozkladu (jeden řádek pixelů v paměti). Stride můžete vypočítaný z tohoto vzorce: šířka v pixelech * bajtů za pixelů + paměti odsazení  
+ Stride nebo výška, uložené v srcData bitmapy zdroje. Stride je počet bajtů řádkového rozkladu (jeden řádek pixelů v paměti). Stride můžete vypočítaný z tohoto vzorce: šířka v pixelech * bajtů za pixelů + odsazení paměti.  
   
  *destRect*  
- V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován  
+ V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován. 
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- Kopie zadané oblasti ze zadaného vykreslení cíl do aktuální rastrového obrázku  
+ Kopie zadané oblasti ze zadaného vykreslit cíl do aktuální rastrového obrázku.  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -280,13 +280,13 @@ HRESULT CopyFromRenderTarget(
   
 ### <a name="parameters"></a>Parametry  
  *pRenderTarget*  
- Vykreslení cíl, který obsahuje oblast pro kopírování  
+ Vykreslení cíl, který obsahuje oblast pro kopírování.  
   
  *destPoint*  
- V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován  
+ V aktuální rastrového obrázku levém horním rohu oblasti, ke které oblasti určeného srcRect zkopírován.  
   
  *srcRect*  
- Oblasti RenderTarget ke kopírování.  
+ Oblasti RenderTarget kopírování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
@@ -313,7 +313,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBitmap::detach  
- Umožňuje odpojit prostředek rozhraní z objektu  
+ Umožňuje odpojit prostředek rozhraní z objektu.  
   
 ```  
 ID2D1Bitmap* Detach();
@@ -323,7 +323,7 @@ ID2D1Bitmap* Detach();
  Ukazatel rozhraní odpojit prostředků.  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
- Vrátí ID2D1Bitmap rozhraní  
+ Vrátí ID2D1Bitmap rozhraní.  
   
 ```  
 ID2D1Bitmap* Get();
@@ -333,7 +333,7 @@ ID2D1Bitmap* Get();
  Ukazatel na rozhraní ID2D1Bitmap nebo hodnota NULL, pokud objekt dosud není inicializován.  
   
 ##  <a name="getdpi"></a>  CD2DBitmap::GetDPI  
- Vrátí bodů na palec (DPI) bitmapy  
+ Vrátí bodů na palec (DPI) bitmapy.  
   
 ```  
 CD2DSizeF GetDPI() const;  
@@ -353,7 +353,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
  Pixelů formátu a alpha režim bitmapy.  
   
 ##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
- Vrátí velikost v jednotky závislé na zařízení (v pixelech), bitmapy  
+ Vrátí velikost v jednotky závislé na zařízení (v pixelech), bitmapy.  
   
 ```  
 CD2DSizeU GetPixelSize() const;  
@@ -363,7 +363,7 @@ CD2DSizeU GetPixelSize() const;
  Velikost v pixelech bitovou mapu...  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
- Vrátí velikost v pixelech nezávislé na zařízení (vyhrazené), bitmapy  
+ Vrátí velikost v pixelech nezávislé na zařízení (vyhrazené), bitmapy.  
   
 ```  
 CD2DSizeF GetSize() const;  
@@ -373,7 +373,7 @@ CD2DSizeF GetSize() const;
  Velikost v vyhrazené IP adresy, bitmapy.  
   
 ##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
- Kontrola platnosti prostředků  
+ Ověří platnost prostředku.  
   
 ```  
 virtual BOOL IsValid() const;  

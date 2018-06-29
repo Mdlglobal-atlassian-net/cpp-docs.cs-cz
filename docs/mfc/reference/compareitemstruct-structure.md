@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368628"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078255"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT – struktura
 `COMPAREITEMSTRUCT` Struktura poskytuje identifikátory a aplikace zadaná data pro dvě položky v seznamu seřazená, vykreslovaných vlastníkem nebo pole se seznamem.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** (který určuje pole se seznamem vykreslování vlastníka) nebo **ODT_COMBOBOX** (který určuje pole se seznamem vykreslování vlastníka).  
   
- `CtlID`  
+ *CtlID*  
  ID ovládacího prvku pole se seznamem nebo pole se seznamem.  
   
- `hwndItem`  
+ *hwndItem*  
  Popisovač okna ovládacího prvku.  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  Zadaná aplikace data pro druhou položku porovnávané. Tato hodnota byla předána volání, které přidá položku do pole se seznamem nebo seznamu.  
   
 ## <a name="remarks"></a>Poznámky  
- Vždy, když aplikace přidá novou položku do pole se seznamem vykreslovaných vlastníkem nebo pole se seznamem vytvořené pomocí **cbs_sort –** nebo **lbs_sort –** styl, systém Windows odešle vlastník `WM_COMPAREITEM` zprávy. `lParam` Parametr zprávy obsahuje dlouho ukazatel `COMPAREITEMSTRUCT` struktura. Po přijetí zprávy, vlastník porovná dvě položky a vrátí hodnotu, která určuje, která položka seřadí před dalších.  
+ Vždy, když aplikace přidá novou položku do pole se seznamem vykreslovaných vlastníkem nebo pole se seznamem vytvořené pomocí **cbs_sort –** nebo **lbs_sort –** styl, systém Windows odešle vlastník WM_COMPAREITEM zprávu. *LParam* parametr zprávy obsahuje dlouho ukazatel `COMPAREITEMSTRUCT` struktura. Po přijetí zprávy, vlastník porovná dvě položky a vrátí hodnotu, která určuje, která položka seřadí před dalších.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

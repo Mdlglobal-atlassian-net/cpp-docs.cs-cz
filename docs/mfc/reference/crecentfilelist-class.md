@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377250"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079013"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList – třída
 Podporuje ovládací prvek seznamu naposledy použitých souborů (naposledy použitých).  
@@ -115,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Určuje název cesty, který se má přidat do seznamu.  
   
- `lpszAppID`  
+ *lpszAppID*  
  Určuje Application User Model ID aplikace.  
   
- `pItem`  
+ *pItem*  
  Určuje ukazatel na položku prostředí mají být přidány do seznamu.  
   
- `pLink`  
+ *pLink*  
  Určuje ukazatel na odkaz prostředí má být přidán do seznamu.  
   
- `pidl`  
+ *PIDL*  
  Určuje IDLIST pro položku prostředí, které musí být přidaní do poslední složky Dokumenty.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -146,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStart`  
+ *nStart*  
  Posunutí pro číslování v nabídce zobrazení seznamu (naposledy použité) naposledy použitých souborů.  
   
- `lpszSection`  
+ *lpszSection*  
  Body k názvu oddílu registru nebo aplikace. Soubor INI, kde je seznam naposledy použitých souborů číst nebo zapisovat.  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  Odkazuje na řetězec formátu, který má být použit pro názvy položky uložené v registru nebo v aplikaci. Soubor INI.  
   
- `nSize`  
+ *nSize*  
  Maximální počet souborů v seznamu naposledy použitých souborů.  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  Maximální délka ve znacích, k dispozici pro zobrazení nabídky Název souboru v seznamu naposledy použitých souborů.  
   
 ### <a name="remarks"></a>Poznámky  
- Řetězec formátu na kterou odkazuje `lpszEntryFormat` by měl obsahovat "%d", který se použije pro nahrazení index každé naposledy použitých položky. Například, pokud je řetězec formátu `"file%d"` pak bude mít název položky `file0`, `file1`a tak dále.  
+ Řetězec formátu na kterou odkazuje *lpszEntryFormat* by měl obsahovat "%d", který se použije pro nahrazení index každé naposledy použitých položky. Například, pokud je řetězec formátu `"file%d"` pak bude mít název položky `file0`, `file1`a tak dále.  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Získá zobrazovaný název souboru v seznamu naposledy použitých souborů pro použití v nabídce zobrazení seznamu naposledy použitých.  
@@ -177,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strName`  
+ *%{strName/*  
  Úplná cesta souboru, jehož název je má být zobrazen v nabídce seznam naposledy použitých souborů.  
   
- `nIndex`  
+ *nIndex*  
  Index nule souboru v seznamu naposledy použitých souborů.  
   
  *lpszCurDir*  
@@ -189,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  Délka řetězce pro aktuální adresář.  
   
- `bAtLeastName`  
- Pokud nenulové hodnoty, určuje, zda má být vrácen základní název souboru, i v případě, že by byl překročen maximální zobrazení délka (předány jako `nMaxDispLen` parametru `CRecentFileList` konstruktor).  
+ *bAtLeastName*  
+ Pokud nenulové hodnoty, určuje, zda má být vrácen základní název souboru, i v případě, že by byl překročen maximální zobrazení délka (předány jako *nMaxDispLen* parametru `CRecentFileList` konstruktor).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  **FALSE** Pokud neexistuje žádný název souboru v zadaném indexu v seznamu naposledy použitých souborů (naposledy použitých).  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je soubor v aktuálním adresáři, ponechá funkce adresáři mimo zobrazení. Pokud název souboru je příliš dlouhý, se odstraní adresář a rozšíření. Pokud název souboru je stále příliš dlouhý, zobrazovaný název je nastavit na prázdný řetězec, pokud `bAtLeastName` nenulový.  
+ Pokud je soubor v aktuálním adresáři, ponechá funkce adresáři mimo zobrazení. Pokud název souboru je příliš dlouhý, se odstraní adresář a rozšíření. Pokud název souboru je stále příliš dlouhý, zobrazovaný název je nastavit na prázdný řetězec, pokud *bAtLeastName* nenulový.  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Načte počet souborů v seznamu naposledy použitých souborů.  
@@ -209,14 +209,14 @@ int GetSize() const;
  Počet souborů v aktuální naposledy použité seznamu souborů (naposledy použitých).  
   
 ##  <a name="operator_at"></a>  [CRecentFileList::operator]  
- Přetížené dolní index ( `[]`) operátor vrátí jeden `CString` určeného index založený na nule v `nIndex`.  
+ Přetížené dolní index ( `[]`) operátor vrátí jeden `CString` určeného index založený na nule v *nIndex*.  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index počítaný od nuly `CString` v sadě `CString`s.  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -234,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index nule souboru, který se odeberou ze seznamu naposledy použitých souborů (naposledy použitých).  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -245,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
+ *pCmdUI*  
  Ukazatel [CCmdUI](../../mfc/reference/ccmdui-class.md) objekt pro nabídky seznam naposledy použitých souborů (naposledy použitých).  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

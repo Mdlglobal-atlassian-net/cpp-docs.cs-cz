@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377273"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079678"
 ---
 # <a name="cpalette-class"></a>CPalette – třída
 Zapouzdří palety barev systému Windows.  
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartIndex`  
+ *nStartIndex*  
  Určuje první položku v palety být animace.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Určuje počet položek v palety být animace.  
   
- `lpPaletteColors`  
- Odkazuje na první prvek pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury nahradit palety identifikovaný `nStartIndex` a `nNumEntries`.  
+ *lpPaletteColors*  
+ Odkazuje na první prvek pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury nahradit palety identifikovaný *nStartIndex* a *nNumEntries*.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud aplikace zavolá `AnimatePalette`, nemá aktualizovat klientské oblasti, protože Windows mapuje nové položky do systémové palety okamžitě.  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Identifikuje kontextu zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpLogPalette`  
+ *lpLogPalette*  
  Odkazuje na [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktura, která obsahuje informace o barev v logické palety.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hPalette`  
+ *hPalette*  
  Popisovač pro palety barev GDI systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Určuje barvu, která bude odpovídat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartIndex`  
+ *nStartIndex*  
  Určuje první položku v logické palety mají být načteny.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Určuje počet položek v logické palety mají být načteny.  
   
- `lpPaletteColors`  
- Odkazuje na pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem palety položky. Pole musí obsahovat alespoň tolik datové struktury podle specifikace `nNumEntries`.  
+ *lpPaletteColors*  
+ Odkazuje na pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem palety položky. Pole musí obsahovat alespoň tolik datové struktury podle specifikace *nNumEntries*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet položek, které jsou načteny z logické palety; 0, pokud funkce se nezdařilo.  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  Další informace o použití grafických objektů najdete v článku [obrázek objekty](http://msdn.microsoft.com/library/windows/desktop/dd144962) ve Windows SDK.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- Změní velikost logické palety připojené k `CPalette` objekt, který má počet položek určeného `nNumEntries`.  
+ Změní velikost logické palety připojené k `CPalette` objekt, který má počet položek určeného *nNumEntries*.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNumEntries`  
+ *nNumEntries*  
  Určuje počet položek v paletě po změně velikosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartIndex`  
+ *nStartIndex*  
  Určuje první položku v logické palety nastavit.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Určuje počet položek v logické palety nastavit.  
   
- `lpPaletteColors`  
- Odkazuje na pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem palety položky. Pole musí obsahovat alespoň tolik datové struktury podle specifikace `nNumEntries`.  
+ *lpPaletteColors*  
+ Odkazuje na pole [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem palety položky. Pole musí obsahovat alespoň tolik datové struktury podle specifikace *nNumEntries*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nastavit počet položek v logické palety; 0, pokud funkce se nezdařilo.  

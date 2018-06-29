@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373482"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079144"
 ---
 # <a name="crecordview-class"></a>CRecordView – třída
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony dialogové okno.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje počet ID prostředku šablony dialogové okno.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** volání `UpdateData`, který volá `DoDataExchange`. Počáteční volání `DoDataExchange` připojí `CRecordView` (nepřímo) na ovládací prvky `CRecordset` pole datových členů vytvořené ClassWizard. Tyto datové členy nelze použít až po zavolání metody základní třídy **CFormView::OnInitialUpdate** – členská funkce.  
   
 > [!NOTE]
->  Pokud používáte ClassWizard, Průvodce definuje `enum` hodnotu `CRecordView::IDD`, určuje v deklaraci třídy a používá ho v seznamu členů inicializace pro konstruktor.  
+>  Pokud používáte ClassWizard, Průvodce definuje **výčtu** hodnotu `CRecordView::IDD`, určuje v deklaraci třídy a používá ho v seznamu členů inicializace pro konstruktor.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  Tato funkce je užitečná pro psaní vlastního implementace výchozí obslužné rutiny aktualizace příkazů, které ClassWizard zapíše pro podporu uživatelského rozhraní pro přesun mezi záznamy.  
   
 > [!CAUTION]
->  Výsledkem této funkce je spolehlivé, s tím rozdílem, že zobrazení nedokáže detekovat konec sady záznamů, dokud uživatel má přesunuty za ho. Uživatel musí přesunout mimo poslední záznam před zobrazení záznamu zjistíte, že je nutné zakázat všechny objekty uživatelského rozhraní pro přesun na další nebo poslední záznam. Pokud uživatel přesune za poslední záznam a pak přejde zpět na poslední záznam (nebo před ním), můžete zobrazení záznamů sledovat pozici uživatele v sadě záznamů a správně zakázat objekty uživatelského rozhraní. `IsOnLastRecord` je také po volání funkce implementace nespolehlivé **OnRecordLast**, která zpracovává `ID_RECORD_LAST` příkazu, nebo `CRecordset::MoveLast`.  
+>  Výsledkem této funkce je spolehlivé, s tím rozdílem, že zobrazení nedokáže detekovat konec sady záznamů, dokud uživatel má přesunuty za ho. Uživatel musí přesunout mimo poslední záznam před zobrazení záznamu zjistíte, že je nutné zakázat všechny objekty uživatelského rozhraní pro přesun na další nebo poslední záznam. Pokud uživatel přesune za poslední záznam a pak přejde zpět na poslední záznam (nebo před ním), můžete zobrazení záznamů sledovat pozici uživatele v sadě záznamů a správně zakázat objekty uživatelského rozhraní. `IsOnLastRecord` je také po volání funkce implementace nespolehlivé `OnRecordLast`, která zpracovává `ID_RECORD_LAST` příkazu, nebo `CRecordset::MoveLast`.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Vrátí ukazatel `CRecordset`-odvozené objekt přidružený k zobrazení záznamu.  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  Ukazatel na `CRecordset`-odvozené objektu, pokud objekt byl úspěšně vytvořený; jinak hodnota **NULL** ukazatel.  
   
 ### <a name="remarks"></a>Poznámky  
- Člen funkci Vytvořit nebo získat objekt sady záznamů a vrátíte se k němu ukazatel musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací uložené v zobrazení záznamů, pokud existuje sada záznamů ukazatele. Pokud ne, vytvoří objekt sady záznamů typu zadán s ClassWizard a volání jeho **otevřete** člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí ukazatel na objekt.  
+ Člen funkci Vytvořit nebo získat objekt sady záznamů a vrátíte se k němu ukazatel musí přepsat. Pokud je deklarovat třídě zobrazení záznamu s ClassWizard, zapíše průvodce přepsat výchozí. ClassWizard pro výchozí implementace vrací uložené v zobrazení záznamů, pokud existuje sada záznamů ukazatele. Pokud ne, vytvoří objekt sady záznamů typu zadán s ClassWizard a volání jeho `Open` člen funkce Otevřít v tabulce nebo spustit dotaz a pak vrátí ukazatel na objekt.  
   
  Další informace a příklady naleznete v článku [zobrazení záznamu: použití zobrazení záznamů](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Nenulové hodnoty, pokud byl přesun úspěšný; jinak hodnota 0, pokud žádost o přesunutí byl odepřen.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace volá odpovídající **přesunout** členské funkce `CRecordset` objekt přidružený k zobrazení záznamu.  
+ Výchozí implementace volá odpovídající `Move` členské funkce `CRecordset` objekt přidružený k zobrazení záznamu.  
   
  Ve výchozím nastavení `OnMove` aktualizuje na aktuální záznam ve zdroji dat, pokud uživatel se změnilo v zobrazení záznamů.  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Pokud přesunete za poslední záznam v sadě záznamů, zobrazení záznamů stále zobrazuje poslední záznam. Pokud přesunete zpátky po první záznam, zobrazení záznamů stále zobrazuje na první záznam.  
   
 > [!CAUTION]
->  Volání metody `OnMove` vyvolá výjimku, pokud má sada záznamů žádné záznamy. Volání funkce obslužné rutiny aktualizace odpovídající uživatelské rozhraní – **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, nebo  **OnUpdateRecordPrev** – před odpovídající operace přesunutí, aby určit, zda má sadu záznamů žádné záznamy.  
+>  Volání metody `OnMove` vyvolá výjimku, pokud má sada záznamů žádné záznamy. Volání funkce obslužné rutiny aktualizace odpovídající uživatelské rozhraní – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, nebo `OnUpdateRecordPrev` – před odpovídající operace přesunutí, aby určit, zda má sadu záznamů žádné záznamy.  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy CFormView – třída](../../mfc/reference/cformview-class.md)   

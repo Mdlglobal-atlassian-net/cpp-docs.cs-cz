@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376171"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079626"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage – třída
 Představuje jednotlivých stránek vlastností známé jako dialogové okno karty.  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID šablony použité pro tuto stránku.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID názvu se mají umístit na kartě pro tuto stránku. Pokud 0, bude název převzat ze šablony dialogového okna pro tuto stránku.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Obsahuje řetězec ukončené hodnotou null, který je název prostředku šablony.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  ID názvu umístit do umístění název vlastnosti záhlaví stránky. Ve výchozím nastavení 0.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  ID názvu umístit do umístění subtitle vlastnosti záhlaví stránky. Ve výchozím nastavení 0.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -189,9 +189,9 @@ void Construct(
   
 -   Uživatel vybral (na kartách k) na této stránce.  
   
- Volání **vytvořit** Pokud jeden z jiné třídy konstruktorů nebyla volána. `Construct` – Členská funkce je flexibilní, protože můžete ponechat prázdné příkaz parametr a potom zadejte více parametrů a konstrukce v libovolném bodě v kódu.  
+ Volání `Construct` Pokud jeden z jiné třídy konstruktorů nebyla volána. `Construct` – Členská funkce je flexibilní, protože můžete ponechat prázdné příkaz parametr a potom zadejte více parametrů a konstrukce v libovolném bodě v kódu.  
   
- Je nutné použít `Construct` při práci s pole a musí volat **vytvořit** pro každého člena pole tak, aby členové data jsou přiřazeny správné hodnoty.  
+ Je nutné použít `Construct` při práci s pole a musí volat `Construct` pro každého člena pole tak, aby členové data jsou přiřazeny správné hodnoty.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID šablony použité pro tuto stránku.  
   
- `nIDCaption`  
+ *nIDCaption*  
  ID názvu se mají umístit na kartě pro tuto stránku. Pokud 0, bude název převzat ze šablony dialogového okna pro tuto stránku.  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  Odkazuje na řetězec obsahující název šablony pro tuto stránku. Nemůže být **NULL**.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  ID názvu umístit do umístění název vlastnosti záhlaví stránky.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  ID názvu umístit do umístění subtitle vlastnosti záhlaví stránky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `wParam`  
+ *wParam*  
  Určuje další informace závislé na zprávy.  
   
- `lParam`  
+ *lParam*  
  Určuje další informace závislé na zprávu  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bChanged`  
+ *bChanged*  
  **Hodnota TRUE,** k označení, že od poslední se uplatňují; byl změněn nastavení stránky vlastností **FALSE** že aplikovala nastavení vlastností stránky, nebo třeba ji ignorovat.  
   
 ### <a name="remarks"></a>Poznámky  

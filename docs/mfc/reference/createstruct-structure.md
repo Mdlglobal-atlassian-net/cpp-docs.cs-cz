@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370868"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078464"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT – struktura
 `CREATESTRUCT` Struktura definuje Inicializace parametrů předaných pracovnímu postupu okno aplikace.  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `lpCreateParams`  
+ *lpCreateParams*  
  Body tak, aby data použít k vytvoření okna.  
   
- `hInstance`  
+ *hInstance*  
  Identifikuje instancí modulu popisovač modul, který vlastní nové okno.  
   
- `hMenu`  
+ *hMenu*  
  Identifikuje nabídku použije se v novém okně. Pokud podřízeného okna, obsahuje ID celé číslo.  
   
- `hwndParent`  
+ *hwndParent*  
  Identifikuje okně, které vlastní nové okno. Tento člen je **NULL** Pokud je okno nové okno nejvyšší úrovně.  
   
- `cy`  
+ *CY*  
  Určuje výšku nové okno.  
   
- `cx`  
+ *CX*  
  Určuje šířku nové okno.  
   
- `y`  
+ *y*  
  Určuje souřadnici y levého horního rohu novém okně. Souřadnice jsou relativní vzhledem k nadřazené okno, pokud je okno nového podřízeného okna; v opačném případě souřadnice jsou relativně ke zdroji obrazovky.  
   
- `x`  
+ *x*  
  Určuje souřadnici x v levém horním rohu okna nové. Souřadnice jsou relativní vzhledem k nadřazené okno, pokud je okno nového podřízeného okna; v opačném případě souřadnice jsou relativně ke zdroji obrazovky.  
   
- `style`  
+ *Styl*  
  Určuje nové okno [styl](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
+ *lpszName*  
  Odkazuje na řetězec ukončené hodnotou null, který určuje název nové okno.  
   
- `lpszClass`  
+ *lpszClass*  
  Odkazuje na řetězec ukončené hodnotou null, který určuje název třídy Windows nové okno ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury; Další informace najdete v tématu Windows SDK).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Určuje, [rozšířený styl](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v novém okně.  
   
 ## <a name="requirements"></a>Požadavky  

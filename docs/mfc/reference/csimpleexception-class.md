@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369922"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078233"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException – třída
 Tato třída je základní třídu pro kritické prostředků MFC – výjimky.  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutoDelete`  
- Zadejte **TRUE** Pokud paměti pro `CSimpleException` objekt byl přidělen v haldě. To způsobí, že `CSimpleException` objekt, který chcete odstranit, když **odstranit** – členská funkce je volána odstranit výjimku. Zadejte **FALSE** Pokud `CSimpleException` objekt je v zásobníku nebo je objekt globální. V takovém případě `CSimpleException` objekt nebude odstraněn, když **odstranit** členské funkce je volána.  
+ *bAutoDelete*  
+ Zadejte **TRUE** Pokud paměti pro `CSimpleException` objekt byl přidělen v haldě. To způsobí, že `CSimpleException` objekt, který chcete odstranit, když `Delete` – členská funkce je volána odstranit výjimku. Zadejte **FALSE** Pokud `CSimpleException` objekt je v zásobníku nebo je objekt globální. V takovém případě `CSimpleException` objekt nebude odstraněn, když `Delete` členské funkce je volána.  
   
 ### <a name="remarks"></a>Poznámky  
  Potřebovali byste normálně nikdy přímo volat tento konstruktor. Funkci, která vyvolá výjimku, by měl vytvořit instanci `CException`-odvozené třídy a volat jeho konstruktoru, nebo pomocí některé z knihovny MFC vyvoláním funkce, jako například [afxthrowfileexception –](exception-processing.md#afxthrowfileexception), má být vyvolána předdefinované typu.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszError`  
+ *lpszError*  
  Ukazatel na vyrovnávací paměť, která se zobrazí chybová zpráva.  
   
- `nMaxError`  
+ *nMaxError*  
  Maximální počet znaků, vyrovnávací paměť, mohou být uloženy včetně **NULL** ukončovací znak.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  Adresa **Celé_číslo** , obdrží ID kontextové nápovědy Pokud **NULL**, bude vrácen žádné ID.  
   
 ### <a name="return-value"></a>Návratová hodnota  

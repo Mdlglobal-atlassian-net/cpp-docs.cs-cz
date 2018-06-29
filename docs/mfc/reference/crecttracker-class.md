@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375905"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079665"
 ---
 # <a name="crecttracker-class"></a>Crecttracker – třída
 Umožňuje položku, kterou chcete zobrazit, přesunout a změnit různé způsoby.  
@@ -124,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nHandle`  
+ *nHandle*  
  Index popisovače použít.  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel na aktuální velikost rámeček. (Velikost obdélníku je dána jeho výškou a šířkou.)  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí chování tato funkce umožňuje orientaci obdélníku, chcete-li změnit pouze tehdy, když `Track` a `TrackRubberBand` se nazývají s převrácení povoleny.  
   
- Funkci k řízení úpravu rámeček sledování během operace přetahování přepište. Jednou z možností je nastavit souřadnice určeného `lpRect` před vrácením.  
+ Funkci k řízení úpravu rámeček sledování během operace přetahování přepište. Jednou z možností je nastavit souřadnice určeného *lprect –* před vrácením.  
   
  Speciální funkce, které nepodporují přímo `CRectTracker`, jako například přichycení k mřížce nebo udržování poměr stran, může být implementováno přepsáním této funkce.  
   
@@ -150,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSrcRect`  
+ *lpSrcRect*  
  Souřadnice objektu obdélník.  
   
- `nStyle`  
+ *nStyle*  
  Určuje styl `CRectTracker` objektu. Podporovány jsou následující styly:  
   
 - **CRectTracker::solidLine** použít na souvislou čáru ohraničení rámečku.  
@@ -169,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched vzor popisuje celý rámeček.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí konstruktor inicializuje `CRectTracker` objektu hodnotami z `lpSrcRect` a inicializuje dalších velikostí systémových výchozích hodnot. Pokud objekt je vytvořen bez parametrů, `m_rect` a `m_nStyle` datových členů Neinicializovaný.  
+ Výchozí konstruktor inicializuje `CRectTracker` objektu hodnotami z *lpSrcRect* a inicializuje dalších velikostí systémových výchozích hodnot. Pokud objekt je vytvořen bez parametrů, `m_rect` a `m_nStyle` datových členů Neinicializovaný.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  Volání této funkce kreslení obdélníku vnější čar a vnitřní oblasti.  
@@ -179,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení, ve kterém k vykreslení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -197,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Ukazatel `RECT` obsahující rámeček k vykreslení.  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  Ukazatel na okna pro použití v výstřižek rámeček.  
   
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení, ve kterém k vykreslení.  
   
- `pWnd`  
+ *pWnd*  
  Ukazatel na okno, kdy nastane kreslení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -243,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpTrueRect`  
+ *lpTrueRect*  
  Ukazatel `RECT` souřadnic struktura, která bude obsahovat zařízení `CRectTracker` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Dimenze obdélníku zahrnují výška a šířka všechny změny velikosti popisovače umístěn na vnější ohraničení. Při vrácení, `lpTrueRect` je vždy normalizovaný rámečku v souřadnicích zařízení.  
+ Dimenze obdélníku zahrnují výška a šířka všechny změny velikosti popisovače umístěn na vnější ohraničení. Při vrácení, *lpTrueRect* je vždy normalizovaný rámečku v souřadnicích zařízení.  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
  Volání této funkce a zjistěte, zda má uživatel převzatý popisovač změny velikosti.  
@@ -257,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Bod*  
  Bod v souřadnicích zařízení k testování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -328,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nHandle`  
+ *nHandle*  
  Obslužná rutina vybraný uživatelem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Odkazuje na okno, které aktuálně obsahuje kurzor.  
   
- `nHitTest`  
- Výsledky předchozí přístupů testu z `WM_SETCURSOR` zprávy.  
+ *nHitTest*  
+ Výsledky předchozí přístupů testu z WM_SETCURSOR zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud předchozí položka prostřednictvím sledovací modul rámeček; nenulové hodnoty jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce z uvnitř funkce okna, která zpracovává `WM_SETCURSOR` zprávy (obvykle `OnSetCursor`).  
+ Volání této funkce z uvnitř funkce okna, která zpracovává zprávy WM_SETCURSOR (obvykle `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  Volání této funkce, které chcete zobrazit uživatelské rozhraní pro změnu velikosti rámeček.  
@@ -387,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Okno objekt, který obsahuje rámeček.  
   
- `point`  
+ *Bod*  
  Souřadnice zařízení aktuální myši pozice relativně k klientské oblasti.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Pokud **TRUE**, rámeček lze obráceným podél osy x nebo y; jinak **FALSE**.  
   
- `pWndClipTo`  
- Okno, které kreslení operace bude oříznut, aby. Pokud **NULL**, `pWnd` slouží jako rámeček výstřižek.  
+ *pWndClipTo*  
+ Okno, které kreslení operace bude oříznut, aby. Pokud **NULL**, *pWnd* slouží jako rámeček výstřižek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud stisknutí klávesy ESC se zastavit proces sledování, rámeček uložené v nástroji Sledování se nezmění, a 0 se vrátí. Pokud změna se potvrdí, tak, že pohyb myši a uvolněním levým tlačítkem myši, nové pozice a velikosti se zaznamenává v obdélníku ke sledovacímu modulu a nenulové hodnoty se vrátí.  
@@ -407,7 +407,7 @@ BOOL Track(
   
  Tato funkce zaznamená myš, dokud uživatel uvolní levé tlačítko myši, stisknutí klávesy ESC nebo stiskem tlačítka pravým tlačítkem myši. Uživatel přesune myší, zpětné vazby aktualizuje voláním `DrawTrackerRect` a `OnChangedRect`.  
   
- Pokud `bAllowInvert` je **TRUE**, rámeček sledování můžete obrácený na ose x nebo osy y.  
+ Pokud *bAllowInvert* je **TRUE**, rámeček sledování můžete obrácený na ose x nebo osy y.  
   
 ##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
  Volání této funkce Uděláte to pružné vzdálené výběr.  
@@ -420,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Okno objekt, který obsahuje rámeček.  
   
- `point`  
+ *Bod*  
  Souřadnice zařízení aktuální myši pozice relativně k klientské oblasti.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Pokud **nastavena hodnota TRUE,** rámeček lze obráceným podél osy x nebo y; jinak **FALSE**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se přesunul myši a rámeček není prázdná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Obvykle nazývá z uvnitř funkce aplikace, který zpracovává `WM_LBUTTONDOWN` zprávy (obvykle `OnLButtonDown`).  
+ Obvykle nazývá z uvnitř funkce aplikace, který zpracovává zprávy WM_LBUTTONDOWN (obvykle `OnLButtonDown`).  
   
  Tato funkce zaznamená myš, dokud uživatel uvolní levé tlačítko myši, stisknutí klávesy ESC nebo stiskem tlačítka pravým tlačítkem myši. Uživatel přesune myší, zpětné vazby aktualizuje voláním `DrawTrackerRect` a `OnChangedRect`.  
   

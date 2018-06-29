@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305537"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079433"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR záhlaví `<cliext/adapter>` určuje dvě šablony třídy (`collection_adapter` a `range_adapter`) a funkce šablony `make_collection`.  
@@ -80,7 +80,7 @@ STL/CLR záhlaví `<cliext/adapter>` určuje dvě šablony třídy (`collection_
   
  **Namespace:** cliext – 
   
-## <a name="members"></a>Členové  
+## <a name="declarations"></a>Deklarace  
   
 |Třída|Popis|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ STL/CLR záhlaví `<cliext/adapter>` určuje dvě šablony třídy (`collection_
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Vytvoří pomocí dvojici iterator adaptér rozsahu.|   
   
+## <a name="members"></a>Členové
+
 ## <a name="collection_adapter"></a> collection_adapter – (STL/CLR)
 Zabalí typu .NET collection používat jako kontejner STL/CLR. A `collection_adapter` je třída šablony, která popisuje jednoduchého objektu kontejneru STL/CLR. Zabalí základní třídy knihovny (BCL) rozhraní a vrátí dvojici iterator, který používáte k manipulaci s řízené sekvenci.  
   

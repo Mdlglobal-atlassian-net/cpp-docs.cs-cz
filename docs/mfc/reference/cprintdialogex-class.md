@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376643"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079095"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx – třída
 Zapouzdří služeb poskytovaných vlastností Tisk systému Windows.  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Jeden nebo více příznaky, které můžete použít k přizpůsobení nastavení dialogovém okně spojovat pomocí bitový operátor OR. Například **PD_ALLPAGES** příznak nastaví výchozí rozsah tisku na všechny stránky z dokumentu. Najdete v článku [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktura ve Windows SDK pro další informace o tyto příznaky.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatele v dialogovém okně nadřazené nebo vlastníka.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  A `CString` zadání názvu ovladače definovaná systémem.  
   
 ### <a name="remarks"></a>Poznámky  
- Použijte odkazy `CString` objekt vrácený `GetDriverName` jako hodnotu `lpszDriverName` ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Použijte odkazy `CString` objekt vrácený `GetDriverName` jako hodnotu *lpszDriverName* ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Volání této funkce po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) načíst název portu aktuálně vybrané tiskárny.  

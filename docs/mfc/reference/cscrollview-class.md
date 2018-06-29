@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375539"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079564"
 ---
 # <a name="cscrollview-class"></a>CScrollView – třída
 A [CView](../../mfc/reference/cview-class.md) s možností posouvání.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  Před `OnDraw` je volána funkce člen vaší třídy odvozené zobrazení, `CScrollView` automaticky přizpůsobí počátek zobrazení `CPaintDC` objekt kontextu zařízení, který předává do `OnDraw`.  
   
- Upravit zobrazení počátek okno posouvání `CScrollView` přepsání [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Toto nastavení je automatické pro `CPaintDC` kontextu zařízení, `CScrollView` předá `OnDraw`, ale musí volat **CScrollView::OnPrepareDC** sami pro jiné kontexty zařízení použijete, jako je například `CClientDC`. Můžete přepsat **CScrollView::OnPrepareDC** nastavit pera, barva pozadí a další atributy kreslení, ale volat základní třídy, chcete-li provést škálování.  
+ Upravit zobrazení počátek okno posouvání `CScrollView` přepsání [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Toto nastavení je automatické pro `CPaintDC` kontextu zařízení, `CScrollView` předá `OnDraw`, ale musí volat `CScrollView::OnPrepareDC` sami pro jiné kontexty zařízení použijete, například `CClientDC`. Můžete přepsat `CScrollView::OnPrepareDC` nastavit pera, barva pozadí a další atributy kreslení, ale volat základní třídy, chcete-li provést škálování.  
   
  Posuvníky můžete zobrazit na třech místech relativně k zobrazení, jak je znázorněno v následujících případech:  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Kontext zařízení, ve kterém má být práce naplnění.  
   
- `pBrush`  
+ *pBrush*  
  Štětec, se kterou má být vyplněna oblasti.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -190,7 +190,7 @@ CPoint GetDeviceScrollPosition() const;
  `GetDeviceScrollPosition` vrací hodnoty v jednotkách zařízení. Pokud chcete, aby logické jednotky, použijte `GetScrollPosition` místo.  
   
 ##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes` Získá aktuální režim mapování, celková velikost a velikosti řádku a stránka posouvatelného zobrazení.  
+ `GetDeviceScrollSizes` získá aktuální režim mapování, celková velikost a velikosti řádku a stránka posouvatelného zobrazení.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMapMode`  
+ *nMapMode*  
  Vrátí aktuální režim mapování pro toto zobrazení. Seznam možných hodnot najdete v tématu `SetScrollSizes`.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Vrátí aktuální celková velikost zobrazení, přejděte v jednotkách zařízení.  
   
- `sizePage`  
+ *sizePage*  
  Vrátí aktuální vodorovného a svislého objemy posun v každém směru v reakci na myši, klikněte na tlačítko v hřídel posuvníku. **Cx** člen obsahuje vodorovné velikost. **Cy** člen obsahuje vertikální velikost.  
   
- `sizeLine`  
+ *sizeLine*  
  Vrátí aktuální vodorovného a svislého objemy posun v každém směru v reakci na myši, klikněte na tlačítko v posouvací šipky. **Cx** člen obsahuje vodorovné velikost. **Cy** člen obsahuje vertikální velikost.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Bod přesuňte, logické jednotky. **x** člena musí být kladné celé číslo (větší než nebo rovno 0 až celková velikost zobrazení). Totéž platí pro **y** člen, pokud je režim mapování `MM_TEXT`. **y** člen je záporný mapování režimy, jiné než `MM_TEXT`.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sizeTotal`  
+ *sizeTotal*  
  Vodorovného a svislého velikosti, na které se škálovat zobrazení. Posuňte zobrazení velikost se měří v logické jednotky. Je součástí vodorovné velikost **cx** člen. Svislé velikost je součástí **cy** člen. Obě **cx** a **cy** musí být větší než nebo rovna 0.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMapMode`  
+ *nMapMode*  
  Režim mapování pro toto zobrazení. Možné hodnoty patří:  
   
 |Mapování režimu|Logická jednotka|Kladné osy y Extends...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  Všechny tyto režimy jsou definovány v systému Windows. Dva režimy standardní mapování `MM_ISOTROPIC` a `MM_ANISOTROPIC`, nepoužívají se pro `CScrollView`. Poskytuje knihovny tříd `SetScaleToFitSize` – členská funkce škálování zobrazení tak, aby velikost okna. Tři sloupce v tabulce výše popisuje souřadnic orientaci.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Celková velikost posuňte zobrazení. **Cx** člen obsahuje vodorovné rozsah. **Cy** člen obsahuje vertikální rozsah. Velikosti jsou v logické jednotky. Obě **cx** a **cy** musí být větší než nebo rovna 0.  
   
- `sizePage`  
+ *sizePage*  
  Posuňte se v každém směru v reakci na myši činí vodorovného a svislého klikněte v hřídel posuvníku. **Cx** člen obsahuje vodorovné velikost. **Cy** člen obsahuje vertikální velikost.  
   
- `sizeLine`  
+ *sizeLine*  
  Posuňte se v každém směru v reakci na myši činí vodorovného a svislého klikněte v posouvací šipky. **Cx** člen obsahuje vodorovné velikost. **Cy** člen obsahuje vertikální velikost.  
   
 ### <a name="remarks"></a>Poznámky  

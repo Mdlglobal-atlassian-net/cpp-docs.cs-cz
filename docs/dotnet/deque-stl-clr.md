@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305862"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079822"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů s náhodným přístupem. Použít metodu kontejneru `deque` ke správě pořadí elementů, který vypadá jako souvislý blok úložiště, ale které zvětšit nebo zmenšit na obou koncích, aniž by bylo nutné zkopírovat všechny zbývající elementy. Proto můžete implementovat efektivně `double-ended queue`. (Proto název.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** cliext –  
 
-## <a name="members"></a>Členové  
+## <a name="declarations"></a>Deklarace  
   
 |Definice typu|Popis|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
  
-## <a name="member-definitions"></a>Definice člena
+## <a name="members"></a>Členové
 
 ## <a name="assign"></a> deque::Assign (STL/CLR)
 Nahradí všechny elementy.  

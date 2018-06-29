@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d18e1352e0d8ba74709e2f1a5626678e81729a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51d1cdb8eb803f9e76f7929f6f46279a7d4e7ea0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378810"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079926"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl – třída
 Poskytuje funkce ovládacího prvku RichEdit.  
@@ -301,14 +301,14 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFormat`  
+ *nFormat*  
  Formát dat schránky pro dotaz. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud lze vložit formát schránky; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `nFormat` 0, `CanPaste` se pokusí použít na libovolném formátu aktuálně ve schránce.  
+ Pokud *nFormat* 0, `CanPaste` se pokusí použít na libovolném formátu aktuálně ve schránce.  
   
  Další informace najdete v tématu [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) zprávy a [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce ve Windows SDK.  
   
@@ -347,14 +347,14 @@ BOOL CanUndo() const;
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
 ##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
- Načte informace o znak, od bodu je určena parametrem `pt`.  
+ Načte informace o znak, od bodu je určena parametrem *pt*.  
   
 ```  
 int CharFromPos(CPoint pt) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt obsahující souřadnice Zadaný bod.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -373,7 +373,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odstranění provádí **zrušte** můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
+ Odstranění provádí `Clear` můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
   
  Chcete-li odstranit aktuální výběr a umístit odstraněné obsah do schránky, zavolejte [Vyjmout](#cut) – členská funkce.  
   
@@ -407,27 +407,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládací prvek upravit. Použít kombinaci styly oken uvedené v **poznámky** části níže, a [upravit styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775464), které jsou popsány v sadě Windows SDK.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění textové pole. Může být [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](../../mfc/reference/rect-structure1.md) struktura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Určuje textové pole nadřazeného okna (často [CDialog](../../mfc/reference/cdialog-class.md)). Nesmí být **NULL**.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládací prvek upravit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěšného; inicializace jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CRichEditCtrl` objektu ve dvou krocích. Nejprve volání [CRichEditCtrl](#cricheditctrl) konstruktor, pak zavolají **vytvořit**, který vytvoří ovládacího prvku úprav Windows a připojí jej k `CRichEditCtrl` objekt.  
+ Můžete vytvořit `CRichEditCtrl` objektu ve dvou krocích. Nejprve volání [CRichEditCtrl](#cricheditctrl) konstruktor, pak zavolají `Create`, který vytvoří ovládacího prvku úprav Windows a připojí jej k `CRichEditCtrl` objekt.  
   
  Když vytvoříte pomocí této funkce ovládacího prvku RichEdit, je nutné nejdřív načíst potřebné knihovny běžných ovládacích prvků. Chcete-li načíst knihovnu, zavolejte funkci globální [afxinitrichedit –](application-information-and-management.md#afxinitrichedit), která zase inicializuje knihovny běžných ovládacích prvků. Je třeba volat `AfxInitRichEdit` jen jednou v procesu.  
   
- Když **vytvořit** provede, odešle Windows [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), a [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) zprávy pro ovládací prvek upravit.  
+ Když `Create` provede, odešle Windows [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), a [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) zprávy pro ovládací prvek upravit.  
   
  Tyto zprávy jsou zpracovávány ve výchozím nastavení [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), a [ongetminmaxinfo –](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) členské funkce v `CWnd` základní třídy. Rozšíření zpracování zpráv výchozí, odvození třídy z `CRichEditCtrl`, přidejte mapy zpráv do nové třídy a přepsat výše členské funkce obslužné rutiny zpráv. Přepsání `OnCreate`, například k provedení potřebných inicializace pro novou třídu.  
   
@@ -461,26 +461,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládací prvek upravit. Použít kombinaci styly oken uvedené v **poznámky** části [vytvořit](#create) a [upravit styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775464), které jsou popsány v sadě Windows SDK.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `CreateEx` místo **vytvořit** použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
+ Použití `CreateEx` místo `Create` použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
  Vytvoří `CRichEditCtrl` objektu.  
@@ -503,7 +503,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odstranění provádí **Vyjmout** můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
+ Odstranění provádí `Cut` můžete odvolat voláním [vrátit zpět](#undo) – členská funkce.  
   
  Chcete-li odstranit aktuální výběr bez umístění odstraněný text do schránky, zavolejte [zrušte](#clear) – členská funkce.  
   
@@ -520,14 +520,14 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDisplayRect`  
+ *pDisplayRect*  
  Ukazatel na [Rect –](../../mfc/reference/rect-structure1.md) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) určující oblasti zařízení k zobrazení textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, je-li zobrazení formátovaný text úspěšné, jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Text a OLE – položky jsou oříznuto oblasti určeného ukazatele `pDisplayRect`.  
+ Text a OLE – položky jsou oříznuto oblasti určeného ukazatele *pDisplayRect*.  
   
  Další informace najdete v tématu [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) ve Windows SDK.  
   
@@ -561,8 +561,8 @@ long FindText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
- Seznam možných hodnot najdete v tématu `wParam` v [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) ve Windows SDK.  
+ *dwFlags*  
+ Seznam možných hodnot najdete v tématu *wParam* v [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) ve Windows SDK.  
   
  *pFindText*  
  Ukazatel [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) struktury poskytnutí parametrů pro vyhledání a vrácení rozsahu, kde byla nalezena shoda.  
@@ -579,7 +579,7 @@ long FindText(
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
 ##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
- Vyhledá další dělení textu před nebo po pozice určeného `nStart`.  
+ Vyhledá další dělení textu před nebo po pozice určeného *nStart*.  
   
 ```  
 DWORD FindWordBreak(
@@ -588,14 +588,14 @@ DWORD FindWordBreak(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCode`  
- Určuje akci provést. Seznamu možných hodnot, naleznete v popisu parametru `code` v **EM_FINDWORDBREAK** ve Windows SDK.  
+ *nCode*  
+ Určuje akci provést. Seznamu možných hodnot, naleznete v popisu parametru *kód* v **EM_FINDWORDBREAK** ve Windows SDK.  
   
- `nStart`  
+ *nStart*  
  Pozice znaku nule ze kterého má začít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Na základě parametru `nCode`. Další informace najdete v tématu [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) ve Windows SDK.  
+ Na základě parametru *nCode*. Další informace najdete v tématu [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) ve Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Tento člen funkce slouží k načtení informací o znak na dané pozici.  
@@ -635,14 +635,14 @@ CPoint GetCharPos(long lChar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lChar`  
+ *lChar*  
  Index nule znaku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Umístění levého horního rohu určeného znaku `lChar`.  
+ Umístění levého horního rohu určeného znaku *lChar*.  
   
 ### <a name="remarks"></a>Poznámky  
- Znak, který je zadán tím, že její hodnota index o základu 0. Pokud `lChar` je větší než index poslední znak v tomto `CRichEditCtrl` objektu návratovou hodnotu určuje souřadnice znak na pozici právě za jeho poslední znak v tomto `CRichEditCtrl` objektu.  
+ Znak, který je zadán tím, že její hodnota index o základu 0. Pokud *lChar* je větší než index poslední znak v tomto `CRichEditCtrl` objektu návratovou hodnotu určuje souřadnice znak na pozici právě za jeho poslední znak v tomto `CRichEditCtrl` objektu.  
   
  Další informace najdete v tématu [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) ve Windows SDK.  
   
@@ -654,13 +654,13 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  V první verzi, odkazy **CHARFORMAT** struktura, která uchovává výchozí znakovou atributů formátování.  
   
  V druhé verzi ukazatel na **CHARFORMAT2** struktura, což je rozšíření bohaté upravit 2.0 na **CHARFORMAT** struktura, která uchovává výchozí znakovou atributů formátování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **DwMask** data členem `cf`. Není zadán výchozí znakovou atributů formátování.  
+ **DwMask** data členem *CR*. Není zadán výchozí znakovou atributů formátování.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu **EM_GETCHARFORMAT** zprávy a **CHARFORMAT** a **CHARFORMAT2** struktury v sadě Windows SDK.  
@@ -703,7 +703,7 @@ int GetFirstVisibleLine() const;
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
 ##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
- Přistupuje **IRichEditOle** rozhraní pro toto `CRichEditCtrl` objektu.  
+ Přistupuje `IRichEditOle` rozhraní pro toto `CRichEditCtrl` objektu.  
   
 ```  
 IRichEditOle* GetIRichEditOle() const;  
@@ -750,17 +750,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Index řádku k načtení nule.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Odkazuje na vyrovnávací paměť pro příjem text. První slovo vyrovnávací paměti, musíte zadat maximální počet bajtů, které je možné zkopírovat do vyrovnávací paměti.  
   
- `nMaxLength`  
- Maximální počet znaků, které je možné zkopírovat do `lpszBuffer`. O druhou podobu `GetLine` umístí tuto hodnotu do první slovo vyrovnávací paměti určeného `lpszBuffer`.  
+ *nMaxLength*  
+ Maximální počet znaků, které je možné zkopírovat do *lpszBuffer*. O druhou podobu `GetLine` umístí tuto hodnotu do první slovo vyrovnávací paměti určeného *lpszBuffer*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet znaků, které jsou zkopírovány do `lpszBuffer`.  
+ Počet znaků, které jsou zkopírovány do *lpszBuffer*.  
   
 ### <a name="remarks"></a>Poznámky  
  Zkopírovaného řádku neobsahuje ukončovací znak hodnoty null.  
@@ -825,16 +825,16 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pf`  
+ *PF*  
  V první verzi, odkazy [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) struktura k uchování atributy aktuálního výběru formátování odstavce.  
   
  V druhé verzi ukazatel na [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) struktura, což je rozšíření bohaté upravit 2.0 na **PARAFORMAT** struktura, která uchovává výchozí znakovou atributů formátování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **DwMask** data členem `pf`. Určuje atributy, které jsou konzistentní v rámci aktuální výběr formátování odstavce.  
+ **DwMask** data členem *pf*. Určuje atributy, které jsou konzistentní v rámci aktuální výběr formátování odstavce.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je vybrána více než jeden odstavec, `pf` obdrží atributy vybrané odstavce. Návratová hodnota Určuje atributy, které jsou konzistentní v rámci výběr.  
+ Pokud je vybrána více než jeden odstavec, *pf* obdrží atributy vybrané odstavce. Návratová hodnota Určuje atributy, které jsou konzistentní v rámci výběr.  
   
  Další informace najdete v tématu [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) zprávy a **PARAFORMAT** a **PARAFORMAT2** struktury v sadě Windows SDK.  
   
@@ -851,10 +851,10 @@ BOOL GetPunctuation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fType`  
- Příznak typ interpunkční znaménka, jak je popsáno v `fType` parametr [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) ve Windows SDK.  
+ *fType*  
+ Příznak typ interpunkční znaménka, jak je popsáno v *fType* parametr [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) ve Windows SDK.  
   
- `lpPunc`  
+ *lpPunc*  
  Ukazatel [INTERPUNKCE](http://msdn.microsoft.com/library/windows/desktop/bb787944) struktury, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -871,7 +871,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel na [Rect –](../../mfc/reference/rect-structure1.md) přijímat formátování obdélník `CRichEditCtrl` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -907,13 +907,13 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *znaky CR*  
  Odkaz na [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura přijímat hranice aktuální výběr.  
   
- `nStartChar`  
+ *nStartChar*  
  Index prvního znaku v aktuálním výběru nule.  
   
- `nEndChar`  
+ *nEndChar*  
  Index počítaný od nuly poslední znak v aktuálním výběru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -921,9 +921,9 @@ void GetSel(
   
 - **GetSel (** `cr` **)** používá tento formulář **CHARRANGE** struktury s jeho **cpMin** a **cpMax** členy Vrátí hranice.  
   
-- **GetSel (** `nStartChar` **,** `nEndChar` **)** tento formulář vrátí hranice v parametrech `nStartChar` a `nEndChar`.  
+- **GetSel (** `nStartChar` **,** `nEndChar` **)** tento formulář vrátí hranice v parametrech *nStartChar* a *nEndChar* .  
   
- Výběr zahrnuje vše, pokud začátku ( **cpMin** nebo `nStartChar`) je 0 a end ( **cpMax** nebo `nEndChar`) je - 1.  
+ Výběr zahrnuje vše, pokud začátku ( **cpMin** nebo *nStartChar*) je 0 a end ( **cpMax** nebo *nEndChar*) je - 1.  
   
  Další informace najdete v tématu [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) zprávy a [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura ve Windows SDK.  
   
@@ -938,16 +938,16 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  V první verzi, odkazy [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura přijímat formátování atributy aktuální výběr znaků.  
   
  V druhé verzi ukazatel na [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) struktura, což je rozšíření bohaté upravit 2.0 na **CHARFORMAT** struktura přijímat formátování atributy aktuální výběr znaků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **DwMask** data členem `cf`. Určuje formátování atributy, které jsou konzistentní v rámci aktuální výběr znaků.  
+ **DwMask** data členem *CR*. Určuje formátování atributy, které jsou konzistentní v rámci aktuální výběr znaků.  
   
 ### <a name="remarks"></a>Poznámky  
- `cf` Parametr obdrží atributy první znak v aktuálním výběru. Návratová hodnota Určuje atributy, které jsou konzistentní v rámci výběr.  
+ *CR* parametr obdrží atributy první znak v aktuálním výběru. Návratová hodnota Určuje atributy, které jsou konzistentní v rámci výběr.  
   
  Další informace najdete v tématu [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) zprávy a **CHARFORMAT** a **CHARFORMAT2** struktury v sadě Windows SDK.  
   
@@ -988,13 +988,13 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Ukazatel na vyrovnávací paměť pro příjem text v aktuálním výběru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Závisí na formuláři:  
   
-- **GetSelText (** `lpBuf` **)** počet znaků, které jsou zkopírovány do `lpBuf`, není včetně ukončení hodnotu null.  
+- **GetSelText (** `lpBuf` **)** počet znaků, které jsou zkopírovány do *lpBuf*, není včetně ukončení hodnotu null.  
   
 - **(GetSelText)** řetězec obsahující aktuální výběr.  
   
@@ -1032,14 +1032,14 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Hodnota, která určuje způsob, který má být použit při určování délka textu. Tento člen může mít jednu nebo více hodnot uvedených v příznaky členem [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) popsané v sadě Windows SDK.  
   
- `uCodePage`  
+ *uCodePage*  
  Znaková stránka pro překlad (CP_ACP ANSI znakové stránky, 1200 pro kódování Unicode).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet znaků nebo bajtů v ovládacím prvku upravit. Pokud byly v nekompatibilní příznaky `dwFlags`, vrátí tato funkce člen `E_INVALIDARG`.  
+ Počet znaků nebo bajtů v ovládacím prvku upravit. Pokud nekompatibilní příznaky, které byly nastavené *dwFlags*, vrátí tato funkce člen `E_INVALIDARG`.  
   
 ### <a name="remarks"></a>Poznámky  
  `GetTextLengthEx` Další způsoby určování délka textu. Podporuje funkci bohaté upravit 2.0. V tématu [o bohaté upravit ovládací prvky](http://msdn.microsoft.com/library/windows/desktop/bb787873) v systému Windows SDKfor Další informace.  
@@ -1065,13 +1065,13 @@ int GetTextRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFirst`  
+ *nFirst*  
  Znak na pozici indexu bezprostředně před první znak v rozsahu.  
   
- `nLast`  
+ *Nposlední*  
  Pozice znaku hned za jeho poslední znak v rozsahu.  
   
- `refString`  
+ *refString*  
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který se zobrazí text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1118,14 +1118,14 @@ void HideSelection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bHide`  
+ *bHide*  
  Určuje, pokud by měl výběr zobrazen nebo skryt, **TRUE** Skrýt výběr.  
   
- `bPerm`  
+ *bPerm*  
  Určuje, pokud má být tato změna v viditelnost pro výběr trvalé.  
   
 ### <a name="remarks"></a>Poznámky  
- Když `bPerm` je **TRUE**, změní `ECO_NOHIDESEL` možnost pro tento `CRichEditCtrl` objektu. Stručný popis této možnosti najdete v tématu [SetOptions](#setoptions). Tato funkce slouží k nastavení všech možností pro toto `CRichEditCtrl` objektu.  
+ Když *bPerm* je **TRUE**, změní `ECO_NOHIDESEL` možnost pro tento `CRichEditCtrl` objektu. Stručný popis této možnosti najdete v tématu [SetOptions](#setoptions). Tato funkce slouží k nastavení všech možností pro toto `CRichEditCtrl` objektu.  
   
  Další informace najdete v tématu [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) ve Windows SDK.  
   
@@ -1140,7 +1140,7 @@ void LimitText(long nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChars`  
+ *nChars*  
  Určuje text, který může uživatel zadat délku (v bajtech). Pokud má parametr hodnotu 0 (výchozí hodnota), délka textu je nastavená na 64 kB.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1162,11 +1162,11 @@ long LineFromChar(long nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Obsahuje hodnotu index o základu 0 pro požadovaný znak v textu ovládacích prvků pro úpravy, nebo obsahuje hodnotu -1. Pokud `nIndex` je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
+ *nIndex*  
+ Obsahuje hodnotu index o základu 0 pro požadovaný znak v textu ovládacích prvků pro úpravy, nebo obsahuje hodnotu -1. Pokud *nIndex* je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet řádků od nuly řádek obsahující znakový index určeného `nIndex`. Pokud `nIndex` je -1, vrátí se číslo řádku, který obsahuje první znak výběru. Pokud není nic vybráno, bude vrácena aktuální číslo řádku.  
+ Počet řádků od nuly řádek obsahující znakový index určeného *nIndex*. Pokud *nIndex* je -1, vrátí se číslo řádku, který obsahuje první znak výběru. Pokud není nic vybráno, bude vrácena aktuální číslo řádku.  
   
 ### <a name="remarks"></a>Poznámky  
  Znakový index je počet znaků od začátku prvku RichEdit. Pro počítání znaků, položku OLE se počítá jako jeden znak.  
@@ -1184,11 +1184,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLine`  
- Obsahuje hodnotu indexu pro požadovaný řádek v textu ovládacích prvků pro úpravy nebo -1. Pokud `nLine` je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
+ *Online*  
+ Obsahuje hodnotu indexu pro požadovaný řádek v textu ovládacích prvků pro úpravy nebo -1. Pokud *využívat* je -1, určuje aktuálního řádku, tedy řádek, který obsahuje pomocí kurzoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Znakový index řádku zadaný v `nLine` nebo -1, pokud je zadané číslo řádku větší a počet řádků v ovládacím prvku upravit.  
+ Znakový index řádku zadaný v *využívat* nebo -1, pokud je zadané číslo řádku větší a počet řádků v ovládacím prvku upravit.  
   
 ### <a name="remarks"></a>Poznámky  
  Znakový index je počet znaků od začátku prvku RichEdit, který má zadaný řádek.  
@@ -1206,11 +1206,11 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLine`  
+ *Online*  
  Určuje znakový index znaku v řádku, jehož délka má být načtena. Pokud tento parametr hodnotu -1, se vrátí délku aktuálního řádku (řádek, který obsahuje vsuvka), není včetně Délka libovolného vybraný text v řádku. Když `LineLength` je volána pro jednořádkové textové pole, je tento parametr ignorován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Když `LineLength` je volána pro ovládací prvek upravit více řádků, je vrácenou hodnotu délka (v `TCHAR`) řádku určeného `nLine`.  Nebude obsahovat znak návratu na konec řádku. Když `LineLength` je volána pro jednořádkové textové pole, je vrácenou hodnotu délka (v `TCHAR`) textu v textovém poli. Pokud je vyšší než počet znaků v ovládacím prvku využívat, je vrácenou hodnotu nula.
+ Když `LineLength` je volána pro ovládací prvek upravit více řádků, je vrácenou hodnotu délka (v `TCHAR`) řádku určeného *využívat*.  Nebude obsahovat znak návratu na konec řádku. Když `LineLength` je volána pro jednořádkové textové pole, je vrácenou hodnotu délka (v `TCHAR`) textu v textovém poli. Pokud je vyšší než počet znaků v ovládacím prvku využívat, je vrácenou hodnotu nula.
   
 ### <a name="remarks"></a>Poznámky  
  Použití [LineIndex](#lineindex) – členská funkce načíst znakový index pro daný řádek číslo v rámci to `CRichEditCtrl` objektu.  
@@ -1230,14 +1230,14 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLines`  
+ *nLines*  
  Určuje počet řádků posunu svisle.  
   
- `nChars`  
+ *nChars*  
  Určuje počet pozic znak, který má vodorovný posun. Tato hodnota je ignorována, pokud má prvku RichEdit buď **es_right –** nebo **es_center –** stylu. [Styly pro úpravy](../../mfc/reference/styles-used-by-mfc.md#edit-styles) jsou určené v [vytvořit](#create).  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládací prvek upravit neposouvá svisle za poslední řádek textu v textovém poli. Pokud aktuální řádek plus počet řádků určeného `nLines` větší než celkový počet řádků v ovládacím prvku úprav, hodnota se nastaví tak, aby poslední řádek ovládacích prvků pro úpravy je přechod na horní části okna textové pole.  
+ Ovládací prvek upravit neposouvá svisle za poslední řádek textu v textovém poli. Pokud aktuální řádek plus počet řádků určeného *nLines* větší než celkový počet řádků v ovládacím prvku úprav, hodnota se nastaví tak, aby poslední řádek ovládacích prvků pro úpravy je přechod na horní části okna textové pole.  
   
  `LineScroll` slouží k vodorovnému posouvání za jeho poslední znak kterýkoli řádek.  
   
@@ -1297,7 +1297,7 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChar`  
+ *NChar*  
  Index založený na nule znaku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1329,10 +1329,10 @@ void ReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszNewText`  
+ *lpszNewText*  
  Ukazatel na obsahující text, kterým řetězce ukončené hodnotou null.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Chcete-li určit, že tato funkce může být vrátit zpět, nastavte hodnotu tohoto parametru k **TRUE**. Výchozí hodnota je **FALSE**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1367,7 +1367,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bEnable*  
  Určuje, zda je ovládací prvek nastaven automaticky zjišťovat adresu URL. Pokud **TRUE**, je povoleno. Pokud **FALSE**, je zakázaná.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1389,11 +1389,11 @@ COLORREF SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bSysColor`  
- Označuje, pokud barvu pozadí je třeba nastavit na hodnotu systému. Pokud je tato hodnota **TRUE**, `cr` je ignorována.  
+ *bSysColor*  
+ Označuje, pokud barvu pozadí je třeba nastavit na hodnotu systému. Pokud je tato hodnota **TRUE**, *cr* je ignorována.  
   
- `cr`  
- Barva pozadí požadovaný. Použít pouze v případě `bSysColor` je **FALSE**.  
+ *znaky CR*  
+ Barva pozadí požadovaný. Použít pouze v případě *bSysColor* je **FALSE**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Předchozí barva pozadí pro tento `CRichEditCtrl` objektu.  
@@ -1415,7 +1415,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  V první verzi, odkazy [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura obsahující nové výchozí formátování atributy.  
   
  V druhé verzi ukazatel na [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) struktura, což je rozšíření bohaté upravit 2.0 na **CHARFORMAT** struktura, obsahující znak výchozí formátování atributy.  
@@ -1424,7 +1424,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
  Nenulové hodnoty v případě úspěchu; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze atributy určeného **dwMask** členem `cf` došlo ke změně pomocí této funkce.  
+ Pouze atributy určeného **dwMask** členem *CR* došlo ke změně pomocí této funkce.  
   
  Další informace najdete v tématu [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) zprávy a **CHARFORMAT** a **CHARFORMAT2** struktury v sadě Windows SDK.  
   
@@ -1461,7 +1461,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bModified`  
+ *bModified*  
  Hodnota **TRUE** byla změněna text a hodnota **FALSE** označuje je beze změny. Ve výchozím nastavení je upravený nastavený příznak.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1480,14 +1480,14 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCallback`  
+ *pCallback*  
  Ukazatel na [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) objekt které tento `CRichEditCtrl` objekt se používá k udržení materiály související s rozhraním OLE a informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- To `CRichEditCtrl` bude volat objekt [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) se zvýší počet použití pro objekt COM určeného `pCallback`.  
+ To `CRichEditCtrl` bude volat objekt [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) se zvýší počet použití pro objekt COM určeného *pCallback*.  
   
  Další informace najdete v tématu [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) zprávy a [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) rozhraní v sadě Windows SDK.  
   
@@ -1504,15 +1504,15 @@ void SetOptions(
  *wOp*  
  Určuje typ operace. Jedna z následujících hodnot:  
   
-- `ECOOP_SET` Nastavit na uvedenými v `dwFlags`.  
+- `ECOOP_SET` Nastavit na uvedenými v *dwFlags*.  
   
-- `ECOOP_OR` Aktuální možnosti sloučit s uvedenými v `dwFlags`.  
+- `ECOOP_OR` Aktuální možnosti sloučit s uvedenými v *dwFlags*.  
   
-- `ECOOP_AND` Zachovat pouze aktuální možnosti, které jsou také určené `dwFlags`.  
+- `ECOOP_AND` Zachovat pouze aktuální možnosti, které jsou také určené *dwFlags*.  
   
-- `ECOOP_XOR` Logicky exkluzivní OR aktuální možnosti s uvedenými v `dwFlags`.  
+- `ECOOP_XOR` Logicky exkluzivní OR aktuální možnosti s uvedenými v *dwFlags*.  
   
- `dwFlags`  
+ *dwFlags*  
  Bohaté možnosti úprav. Příznak hodnoty jsou uvedené v oddílu Poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1548,7 +1548,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pf`  
+ *PF*  
  V první verzi, odkazy [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) struktura obsahující nový výchozí bod atributy formátování.  
   
  V druhé verzi ukazatel na [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) struktura, což je rozšíření bohaté upravit 2.0 na **PARAFORMAT** struktura, která uchovává výchozí znakovou atributů formátování.  
@@ -1557,7 +1557,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
  Nenulové hodnoty v případě úspěchu; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze atributy určeného **dwMask** členem `pf` došlo ke změně pomocí této funkce.  
+ Pouze atributy určeného **dwMask** členem *pf* došlo ke změně pomocí této funkce.  
   
  Další informace najdete v tématu [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) zprávy a **PARAFORMAT** a **PARAFORMAT2** struktury v sadě Windows SDK.  
   
@@ -1574,10 +1574,10 @@ BOOL SetPunctuation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fType`  
- Příznak interpunkce. Seznam možných hodnot najdete v tématu `fType` parametr pro [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) ve Windows SDK.  
+ *fType*  
+ Příznak interpunkce. Seznam možných hodnot najdete v tématu *fType* parametr pro [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) ve Windows SDK.  
   
- `lpPunc`  
+ *lpPunc*  
  Ukazatel [INTERPUNKCE](http://msdn.microsoft.com/library/windows/desktop/bb787944) struktury, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1594,7 +1594,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bReadOnly`  
+ *bReadOnly*  
  Určuje, pokud `CRichEditCtrl` objektu by měla jen pro čtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1616,7 +1616,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel na [Rect –](../../mfc/reference/rect-structure1.md) určující nové hranice pro formátování rámeček.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1639,13 +1639,13 @@ void SetSel(CHARRANGE& cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartChar`  
+ *nStartChar*  
  Index prvního znaku pro výběr nule.  
   
- `nEndChar`  
+ *nEndChar*  
  Index počítaný od nuly poslední znak pro výběr.  
   
- `cr`  
+ *znaky CR*  
  [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) struktura, která obsahuje hranice aktuální výběr.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1653,9 +1653,9 @@ void SetSel(CHARRANGE& cr);
   
 - **SetSel (** `cr` **)** používá tento formulář **CHARRANGE** struktury s jeho **cpMin** a **cpMax** členy Nastavte rozsah.  
   
-- **SetSel (** `nStartChar` **,** `nEndChar` **)** tento formulář použijte parametry `nStartChar` a `nEndChar` nastavit rozsah.  
+- **SetSel (** `nStartChar` **,** `nEndChar` **)** tento formulář použijte parametry *nStartChar* a *nEndChar*nastavit rozsah.  
   
- Na konci výběr indikován větší spouštění je umístěn pomocí kurzoru ( **cpMin** nebo `nStartChar`) a end ( **cpMax** nebo `nEndChar`) indexy. Tato funkce se posouvá společně obsah `CRichEditCtrl` tak, aby pomocí kurzoru.  
+ Na konci výběr indikován větší spouštění je umístěn pomocí kurzoru ( **cpMin** nebo *nStartChar*) a end ( **cpMax** nebo *nEndChar*) indexy. Tato funkce se posouvá společně obsah `CRichEditCtrl` tak, aby pomocí kurzoru.  
   
  Vyberte veškerý text v tomto `CRichEditCtrl` objektu, volání `SetSel` s počáteční index 0 a end index - 1.  
   
@@ -1673,7 +1673,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  V první verzi, odkazy [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura obsahující bude nové formátování atributy pro aktuální výběr.  
   
  V druhé verzi ukazatel na [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) struktura, což je rozšíření bohaté upravit 2.0 na **CHARFORMAT** struktura, která obsahuje nové atributy pro aktuální formátování výběr.  
@@ -1682,7 +1682,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
  Nenulové hodnoty v případě úspěchu; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze atributy určeného **dwMask** členem `cf` došlo ke změně pomocí této funkce.  
+ Pouze atributy určeného **dwMask** členem *CR* došlo ke změně pomocí této funkce.  
   
  Další informace najdete v tématu [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) a **CHARFORMAT** a **CHARFORMAT2** struktury v sadě Windows SDK.  
   
@@ -1704,13 +1704,13 @@ BOOL SetTargetDevice(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
+ *hDC*  
  Popisovač kontext zařízení pro nové cílové zařízení.  
   
  *lLineWidth*  
  Šířka čáry pro formátování.  
   
- `dc`  
+ *řadič domény*  
  [CDC](../../mfc/reference/cdc-class.md) pro nové cílové zařízení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1769,7 +1769,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CR*  
  V první verzi, odkazy [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura obsahující bude nové formátování atributy pro aktuálně vybrané aplikace word.  
   
  V druhé verzi ukazatel na [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) struktura, což je rozšíření bohaté upravit 2.0 na **CHARFORMAT** struktura, obsahující bude nové formátování atributy pro aktuálně vybrané aplikace word.  
@@ -1778,7 +1778,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
  Nenulové hodnoty v případě úspěchu; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze atributy určeného **dwMask** členem `cf` došlo ke změně pomocí této funkce.  
+ Pouze atributy určeného **dwMask** členem *CR* došlo ke změně pomocí této funkce.  
   
  Další informace najdete v tématu [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) zprávy a **CHARFORMAT** a **CHARFORMAT2** struktury v sadě Windows SDK.  
   
@@ -1793,7 +1793,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uFlags`  
+ *uFlags*  
  Možnosti nastavit pro zabalení aplikace word a dělení slov. Seznam možných možnosti najdete v tématu [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1824,17 +1824,17 @@ long StreamIn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFormat`  
+ *nFormat*  
  Příznaky určující vstupní data formátů. Další informace naleznete v části Poznámky.  
   
- `es`  
+ *ES*  
  [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) struktura určení vstupního datového proudu. Další informace naleznete v části Poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet znaků pro čtení ze vstupního datového proudu.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota `nFormat` musí mít jednu z následujících akcí:  
+ Hodnota *nFormat* musí mít jednu z následujících akcí:  
   
 - `SF_TEXT` Označuje pouze text čtení.  
   
@@ -1842,7 +1842,7 @@ long StreamIn(
   
  Některé z těchto hodnot je možné kombinovat s `SFF_SELECTION`. Pokud `SFF_SELECTION` není zadaný, `StreamIn` nahradí aktuální výběr vstupního datového proudu obsahu. Pokud není zadaný, `StreamIn` nahradí celý obsah této `CRichEditCtrl` objektu.  
   
- V **EDITSTREAM** parametr `es`, zadejte funkce zpětného volání, které doplní vyrovnávací paměť s textem. Tato funkce zpětného volání je volána opakovaně, dokud vyčerpá vstupního datového proudu.  
+ V **EDITSTREAM** parametr *es*, zadejte funkce zpětného volání, které doplní vyrovnávací paměť s textem. Tato funkce zpětného volání je volána opakovaně, dokud vyčerpá vstupního datového proudu.  
   
  Další informace najdete v tématu [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) zprávy a [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) struktura ve Windows SDK.  
   
@@ -1861,17 +1861,17 @@ long StreamOut(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFormat`  
+ *nFormat*  
  Příznaky určující formáty dat výstup. Další informace naleznete v části Poznámky.  
   
- `es`  
+ *ES*  
  [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) struktura určení výstupního datového proudu. Další informace naleznete v části Poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet znaků, které jsou zapsány do výstupního datového proudu.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota `nFormat` musí mít jednu z následujících akcí:  
+ Hodnota *nFormat* musí mít jednu z následujících akcí:  
   
 - `SF_TEXT` Označuje pouze text zápis.  
   
@@ -1883,7 +1883,7 @@ long StreamOut(
   
  Všechny tyto hodnoty mohou být kombinovány s `SFF_SELECTION`. Pokud `SFF_SELECTION` není zadaný, `StreamOut` zapíše na aktuální výběr do výstupního datového proudu. Pokud není zadaný, `StreamOut` zapíše se celý obsah této `CRichEditCtrl` objektu.  
   
- V **EDITSTREAM** parametr `es`, zadejte funkce zpětného volání, které doplní vyrovnávací paměť s textem. Tato funkce zpětného volání je volána opakovaně, až do vyčerpání do výstupního datového proudu.  
+ V **EDITSTREAM** parametr *es*, zadejte funkce zpětného volání, které doplní vyrovnávací paměť s textem. Tato funkce zpětného volání je volána opakovaně, až do vyčerpání do výstupního datového proudu.  
   
  Další informace najdete v tématu [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) zprávy a [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) struktura ve Windows SDK.  
   
@@ -1903,7 +1903,7 @@ BOOL Undo();
  Nenulové hodnoty, pokud je operace vrácení zpět úspěšně; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Operace vrácení zpět může být také vrátit zpět. Například můžete obnovit odstraněné textu s prvním volání **vrátit zpět**. Také neprobíhá žádná použité operace upravit, můžete odebrat text znovu s druhé volání **vrátit zpět**.  
+ Operace vrácení zpět může být také vrátit zpět. Například můžete obnovit odstraněné textu s prvním volání `Undo`. Také neprobíhá žádná použité operace upravit, můžete odebrat text znovu s druhé volání `Undo`.  
   
  Další informace najdete v tématu [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) ve Windows SDK.  
   

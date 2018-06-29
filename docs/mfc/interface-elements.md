@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1906505e75273cc62a0eac55e6ed1a9686a3b76f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352574"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078441"
 ---
 # <a name="interface-elements"></a>Prvky rozhraní
-Tento dokument popisuje elementy rozhraní, které byly zavedeny v [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 a také popisuje rozdíly mezi starší verzi knihovny.  
+Tento dokument popisuje elementy rozhraní, které byly zavedeny v sadě Visual Studio 2008 SP1 a také popisuje rozdíly mezi starší verzi knihovny.  
   
  Následující obrázek znázorňuje aplikaci, která byla vytvořená pomocí nové prvky rozhraní.  
   

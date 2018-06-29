@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370152"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078418"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Vytvoření aplikace knihovny MFC ve stylu Průzkumníka souborů
 Mnoho aplikací systému Windows pomocí uživatelského rozhraní (UI) pro Průzkumníka souborů. Když spustíte Průzkumníka souborů, například zobrazí aplikace s svislé rozdělovače panelu dělení klientské oblasti. Na levé straně klientské oblasti poskytuje navigaci a procházení funkcí a na pravé straně klientské oblasti zobrazuje podrobnosti týkající se výběru v levém podokně. Když uživatel klikne na položku v levém podokně, aplikace znovu naplní v pravém podokně. V aplikaci MDI, můžete použít příkazy na **zobrazení** chcete změnit úroveň podrobností zobrazí v pravém podokně, v nabídce. (V aplikaci SDI nebo více dokumentů nejvyšší úrovně, můžete změnit podrobnosti, pomocí tlačítka panelu nástrojů.)  
@@ -32,7 +32,7 @@ Mnoho aplikací systému Windows pomocí uživatelského rozhraní (UI) pro Prů
   
  Průvodce pro vás vytvoří následující třídy:  
   
--   **CLeftView** třída definuje v levém podokně klientské oblasti. Vždy je odvozený od [CTreeView](../../mfc/reference/ctreeview-class.md).  
+-   `CLeftView` Třída definuje v levém podokně klientské oblasti. Vždy je odvozený od [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
 -   C*ProjName*zobrazení třída definuje v pravém podokně klientské oblasti. Ve výchozím nastavení je odvozený od [CListView](../../mfc/reference/clistview-class.md) , ale může být jiný typ zobrazení v závislosti na třídě zadáte z **základní třída** v seznamu [generované třídy](../../mfc/reference/generated-classes-mfc-application-wizard.md) stránky Průvodce.  
   

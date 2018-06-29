@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399020"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070074"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -72,7 +72,7 @@ Vrátí nula v případě *, s výjimkou* rovná nule, nebo pokud byly úspěšn
 |FE_INVALID|Došlo k chybě domény v dříve operaci s plovoucí desetinnou čárkou.|
 |FE_OVERFLOW|Rozsah došlo k chybě; výsledek operace s plovoucí desetinnou čárkou starší byl příliš velký a nelze je.|
 |FE_UNDERFLOW|Výsledek operace s plovoucí desetinnou čárkou starší byla příliš malé a nelze na úplné přesnost; Hodnota denormal byla vytvořena.|
-|FE_ALLEXCEPT|Bitová hodnota OR všech podporována s plovoucí desetinnou čárkou výjimky.|
+|FE_ALL_EXCEPT|Bitová hodnota OR všech podporována s plovoucí desetinnou čárkou výjimky.|
 
 *, S výjimkou* argument může být nula nebo bitová hodnota OR jeden nebo více makra podporované výjimek. Výsledek jakoukoli jinou hodnotu argumentu není definován.
 
@@ -84,7 +84,7 @@ Vrátí nula v případě *, s výjimkou* rovná nule, nebo pokud byly úspěšn
 
 Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>

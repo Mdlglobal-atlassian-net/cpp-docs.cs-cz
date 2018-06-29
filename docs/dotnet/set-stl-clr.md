@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305888"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079874"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, která má obousměrný přístup. Použít metodu kontejneru `set` spravovat pořadí elementů jako (téměř) vyrovnáváním seřazené strom uzlů, ukládání jeden element.  
   
  V popisu níže `GValue` je stejný jako `GKey`, který naopak je stejný jako `Key` Pokud k tomu je typu ref, v takovém případě je `Key^`.  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ elementu v řízené sekvenci komponenta klíče.  
   
+## <a name="requirements"></a>Požadavky  
+ **Záhlaví:** \<cliext – nebo nastavení >  
+  
+ **Namespace:** cliext –  
+
 ## <a name="declarations"></a>Deklarace  
   
 |Definice typu|Popis|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny typové elementů.|  
 |ITree\<klíče, hodnota >|Udržujte obecné kontejneru.|  
   
-### <a name="remarks"></a>Poznámky  
+## <a name="remarks"></a>Poznámky  
  Objekt přiděluje a uvolní úložiště pro pořadí, které ovládá jako jednotlivé uzly. Vloží elementy na (téměř) vyrovnáváním stromové struktury, která udržuje seřazené změnou propojení mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odeberte elementy volně bez narušení zbývající elementy.  
   
  Objekt řadí pořadí jimi řídí voláním objektu uložené delegáta typu [set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte sadu; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<(key_type, key_type)`. Přístup k této uložené objekt voláním členské funkce [set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
@@ -228,11 +233,6 @@ template<typename Key>
  Iterator sadu uloží popisovač do přidruženou sadu uzlu, který je pak uloží popisovač pro jeho přidružené kontejneru. Iterátory lze použít pouze jejich přidružené kontejnerové objekty. Iterator sadu zůstane platný tak dlouho, dokud je přidružený některé sadou jeho přidruženou sadu uzel. Kromě toho je platný iterator dereferencable – slouží k přístupu k nebo alter hodnota elementu se označí – tak dlouho, dokud není rovno `end()`.  
   
  Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že nemá kontejner popisovače `not` zrušení jeho elementy.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<cliext – nebo nastavení >  
-  
- **Namespace:** cliext –  
  
 ## <a name="members"></a>Členové
 

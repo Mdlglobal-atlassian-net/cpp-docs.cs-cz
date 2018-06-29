@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306031"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079528"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délkou seřazené pořadí prvků, které má omezený přístup. Můžete použít adaptér kontejneru `priority_queue` ke správě kontejner základní jako priority fronty.  
   
  V popisu níže `GValue` je stejný jako `Value` Pokud k tomu je typu ref, v takovém případě je `Value^`. Podobně `GContainer` je stejný jako `Container` Pokud k tomu je typu ref, v takovém případě je `Container^`.  
   
-### <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 template<typename Value,  
@@ -84,11 +84,11 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Hodnota  
  Typ elementu v řízené sekvenci  
   
- kontejner  
+ Kontejner  
  Typ základního kontejneru.  
   
 ## <a name="requirements"></a>Požadavky  
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplicitní objekt.|  
 |IPriorityQueue\<hodnota, kontejner >|Udržujte adaptér obecné kontejneru.|  
   
-### <a name="remarks"></a>Poznámky  
+## <a name="remarks"></a>Poznámky  
  Objekt přiděluje a uvolní úložiště pro pořadí jimi řídí prostřednictvím kontejner základní typu `Container`, který ukládá `Value` elementy a zvětšování na vyžádání. Pořadí řazení jako haldy, s nejvyšší prioritou elementem (element nejvyšší) snadno přístupné a vyměnitelné udržuje. Objekt omezuje přístup k vložení nové prvky a odebrání právě nejvyšší prioritou elementu implementace priority fronty.  
   
  Objekt řadí pořadí jimi řídí voláním objektu uložené delegáta typu [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Objekt uložené delegáta můžete zadat, když vytvoříte priority_queue; Pokud zadáte žádný objekt delegáta, výchozí hodnota je porovnání `operator<(value_type, value_type)`. Přístup k této uložené objekt voláním členské funkce [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  

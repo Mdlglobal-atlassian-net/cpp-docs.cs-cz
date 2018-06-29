@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305550"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079704"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů, který má přístup první, v jakém byly vytvořeny. Můžete použít adaptér kontejneru `queue` ke správě kontejner základní jako fronty.  
@@ -97,11 +97,11 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Hodnota  
  Typ elementu v řízené sekvenci  
   
- kontejner  
+ Kontejner  
  Typ základního kontejneru.  
   
 ## <a name="requirements"></a>Požadavky  
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplicitní objekt.|  
 |IQueue\<hodnota, kontejner >|Udržujte adaptér obecné kontejneru.|  
   
-### <a name="remarks"></a>Poznámky  
+## <a name="remarks"></a>Poznámky  
  Objekt přiděluje a uvolní úložiště pro pořadí jimi řídí prostřednictvím kontejner základní typu `Container`, který ukládá `Value` elementy a zvětšování na vyžádání. Objekt omezuje přístup jenom vkládání první prvek a odebrání posledním elementem, implementace ven first-in fronty (také označované jako fronty FIFO nebo jednoduše fronty).  
   
 ## <a name="members"></a>Členové

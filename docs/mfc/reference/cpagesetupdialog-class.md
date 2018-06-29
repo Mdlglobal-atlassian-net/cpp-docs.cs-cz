@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374646"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079180"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog – třída
 Zapouzdří služeb poskytovaných běžných nastavení stránky OLE dialogové okno s dodatečnou podporou pro nastavení a úprava tisku okraje.  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *dwFlags*  
  Jeden nebo více příznaky, které můžete použít k přizpůsobení nastavení dialogové okno. Hodnoty lze spojovat pomocí operátoru bitové operace OR. Tyto hodnoty mají následující významy:  
   
 - **PSD_DEFAULTMINMARGINS** Nastaví minimální povolená šířek pro okraje stránky, aby byla stejná jako minimálních tiskárny. Tento příznak se ignoruje, pokud **PSD_MARGINS** a **PSD_MINMARGINS** příznaky jsou také zadány.  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** zakáže oblasti kreslení dialogového okna.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na nadřazené nebo vlastníka dialogových oken.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název zařízení, které jsou používané **CPageSetupDialog** objektu.  
+ Název zařízení, které jsou používané `CPageSetupDialog` objektu.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Volání této funkce po volání `DoModal` k načtení informací o kontextu zařízení tiskárny `CPageSetupDialog` objektu.  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zařízení tiskárny.  
   
- `nMessage`  
+ *nZpráva*  
  Určuje zprávu, s upozorněním oblast stránky aktuálně přitahuje. Může být jedna z následujících akcí:  
   
 - **WM_PSD_FULLPAGERECT** oblasti celou stránku.  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** oblast pro znázornění zpáteční adresu. Tato oblast rozšiřuje s okraji oblasti ukázkové stránky.  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel na [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect –](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) objekt obsahující souřadnice oblasti výkresu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>Poznámky  
  V rámci běžných dialogových oken OLE stránky instalace se následně zobrazí tuto bitovou kopii. Výchozí implementace nakreslí obrázek stránku textu.  
   
- Přepsání této funkci můžete přizpůsobit kreslení konkrétní oblasti bitovou kopii nebo celého obrázku. Můžete to provést pomocí `switch` příkaz s **případ** příkazy kontrolou hodnoty `nMessage`. Chcete-li přizpůsobit vykreslování obsahu stránce bitové kopie, můžete například použít následující příklad kódu:  
+ Přepsání této funkci můžete přizpůsobit kreslení konkrétní oblasti bitovou kopii nebo celého obrázku. Můžete to provést pomocí **přepínač** příkaz s **případ** příkazy kontrolou hodnoty *nZpráva*. Chcete-li přizpůsobit vykreslování obsahu stránce bitové kopie, můžete například použít následující příklad kódu:  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Všimněte si, že není nutné pro zpracování každé malá `nMessage`. Můžete pro zpracování jedna součást bitové kopie, několik součástí bitovou kopii, nebo celou oblast.  
+ Všimněte si, že není nutné pro zpracování každé malá *nZpráva*. Můžete pro zpracování jedna součást bitové kopie, několik součástí bitovou kopii, nebo celou oblast.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Voláno rámcem před kreslení obrazovky bitové kopie na tištěných stránce.  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  Určuje hodnotu, která určuje velikost papíru. Tato hodnota může být jedna z **DMPAPER_** hodnoty uvedené v popis [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktura.  
   
- `wFlags`  
+ *wFlags*  
  Označuje orientace papíru nebo obálky, a jestli je tiskárna maticové nebo zařízení HPPCL (jazyk pro ovládací prvek Hewlett Packard tiskárny). Tento parametr může mít jednu z následujících hodnot:  
   
 -   0x001 papír v režimu na šířku (tečka matice)  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f obálky v režimu na výšku (tečka matice)  
   
- `pPSD`  
+ *pPSD*  
  Ukazatel na **PAGESETUPDLG** struktury. Další informace o [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), najdete v části Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  

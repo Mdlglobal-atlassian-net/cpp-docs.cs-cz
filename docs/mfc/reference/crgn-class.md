@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376766"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079600"
 ---
 # <a name="crgn-class"></a>Třída CRgn
 Zapouzdří oblast Windows zařízení grafické rozhraní (GDI).  
@@ -138,20 +138,20 @@ int CombineRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn1`  
+ *pRgn1*  
  Určuje existující oblasti.  
   
- `pRgn2`  
+ *pRgn2*  
  Určuje existující oblasti.  
   
- `nCombineMode`  
+ *nCombineMode*  
  Určuje operaci provést, pokud kombinace dvě zdrojových oblastí. Může být některého z následujících hodnot:  
   
 - **RGN_AND** používá překrývající se oblasti obou oblastí (průnik).  
   
-- **RGN_COPY** vytvoří kopii oblast 1 (identifikovaný `pRgn1`).  
+- **RGN_COPY** vytvoří kopii oblast 1 (identifikovaný *pRgn1*).  
   
-- **RGN_DIFF** vytvoří oblasti, které se skládají z oblastí, které oblasti 1 (identifikovaný `pRgn1`), nejsou součástí oblasti 2 (identifikovaný `pRgn2`).  
+- **RGN_DIFF** vytvoří oblasti, které se skládají z oblastí, které oblasti 1 (identifikovaný *pRgn1*), nejsou součástí oblasti 2 (identifikovaný *pRgn2*).  
   
 - **RGN_OR** kombinuje obou oblastí jako celek (sjednocení).  
   
@@ -169,7 +169,7 @@ int CombineRgn(
 - **SIMPLEREGION** novou oblast nemá žádné překrývající se hranice.  
   
 ### <a name="remarks"></a>Poznámky  
- Oblasti se zkombinují zadané `nCombineMode`.  
+ Oblasti se zkombinují zadané *nCombineMode*.  
   
  Dva zadané oblasti se zkombinují a výsledný popisovač oblast je uložen v `CRgn` objektu. Proto je libovolnou oblast uložený v `CRgn` objektu je nahrazena kombinované oblast.  
   
@@ -181,14 +181,14 @@ int CombineRgn(
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn  
- Zkopíruje oblasti definované `pRgnSrc` do `CRgn` objektu.  
+ Zkopíruje oblasti definované *pRgnSrc* do `CRgn` objektu.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgnSrc`  
+ *pRgnSrc*  
  Určuje existující oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -220,23 +220,23 @@ BOOL CreateEllipticRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Určuje logické souřadnici x levého horního rohu ohraničující obdélník se třemi tečkami.  
   
- `y1`  
+ *Y1*  
  Určuje logické souřadnici y levého horního rohu ohraničující obdélník se třemi tečkami.  
   
- `x2`  
+ *x2*  
  Určuje logické souřadnici x pravém dolním rohu ohraničující obdélník se třemi tečkami.  
   
- `y2`  
+ *y2*  
  Určuje logické souřadnici y pravém dolním rohu ohraničující obdélník se třemi tečkami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Oblast je definována ohraničující obdélník určeného `x1`, `y1`, `x2`, a `y2`. Oblast je uložen v `CRgn` objektu.  
+ Oblast je definována ohraničující obdélník určeného *x1*, *y1*, *x2*, a *y2*. Oblast je uložen v `CRgn` objektu.  
   
  Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
   
@@ -253,14 +253,14 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura nebo `CRect` objekt, který obsahuje logické souřadnice levého a pravého dolního rozích ohraničující obdélník se třemi tečkami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se operace úspěšně; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Oblasti definované struktury nebo na kterou odkazuje objekt `lpRect` a je uložen ve `CRgn` objektu.  
+ Oblasti definované struktury nebo na kterou odkazuje objekt *lprect –* a je uložen ve `CRgn` objektu.  
   
  Velikost oblasti je omezený na 32 767 podle 32 767 logické jednotky nebo 64 kB paměti, než je menší.  
   
@@ -283,10 +283,10 @@ BOOL CreateFromData(
  *lpXForm*  
  Odkazuje na [xform –](../../mfc/reference/xform-structure.md) datová struktura, která definuje transformace provádět v oblasti. Pokud je tento ukazatel **NULL**, transformaci identity se používá.  
   
- `nCount`  
- Určuje počet bajtů, na kterou odkazuje `pRgnData`.  
+ *nCount*  
+ Určuje počet bajtů, na kterou odkazuje *pRgnData*.  
   
- `pRgnData`  
+ *pRgnData*  
  Odkazuje na [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která obsahuje data oblast.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -303,14 +303,14 @@ BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Identifikuje kontextu zařízení, který obsahuje uzavřené cestu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Kontext zařízení se identifikovanou pomocí `pDC` parametr musí obsahovat uzavřené cestu. Po `CreateFromPath` převede cestu do oblasti, Windows zahodí uzavřené cesty z daného kontextu zařízení.  
+ Kontext zařízení se identifikovanou pomocí *primárního řadiče domény* parametr musí obsahovat uzavřené cestu. Po `CreateFromPath` převede cestu do oblasti, Windows zahodí uzavřené cesty z daného kontextu zařízení.  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  Vytvoří polygonálních oblast.  
@@ -323,7 +323,7 @@ BOOL CreatePolygonRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Odkazuje na pole **bodu** struktury nebo pole `CPoint` objekty. Každá struktura určuje souřadnice x a y souřadnice jednoho vrcholu mnohoúhelníku. **Bodu** struktura má následující formát:  
   
  `typedef struct tagPOINT {`  
@@ -334,10 +334,10 @@ BOOL CreatePolygonRgn(
   
  `} POINT;`  
   
- `nCount`  
- Určuje počet **bodu** struktury nebo `CPoint` objektů v poli, na kterou odkazuje `lpPoints`.  
+ *nCount*  
+ Určuje počet **bodu** struktury nebo `CPoint` objektů v poli, na kterou odkazuje *lpPoints*.  
   
- `nMode`  
+ *nMode*  
  Určuje režim naplnění pro oblast. Tento parametr může být buď **alternativní** nebo **VINUTÍ**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -369,7 +369,7 @@ BOOL CreatePolyPolygonRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Odkazuje na pole **bodu** struktury nebo pole `CPoint` objekty, které definuje vrcholy polygonů. Každého mnohoúhelníku musí explicitně zavřít, protože je systém automaticky nezavře. Polygonů nejsou zadány za sebou. **Bodu** struktura má následující formát:  
   
  `typedef struct tagPOINT {`  
@@ -380,13 +380,13 @@ BOOL CreatePolyPolygonRgn(
   
  `} POINT;`  
   
- `lpPolyCounts`  
- Bodů na pole celých čísel. První celé číslo udává číslo vrcholy v první mnohoúhelníku ve `lpPoints` pole, druhý celé číslo udává číslo vrcholy v druhé mnohoúhelníku a tak dále.  
+ *lpPolyCounts*  
+ Bodů na pole celých čísel. První celé číslo udává číslo vrcholy v první mnohoúhelníku ve *lpPoints* pole, druhý celé číslo udává číslo vrcholy v druhé mnohoúhelníku a tak dále.  
   
- `nCount`  
- Určuje celkový počet celých čísel v `lpPolyCounts` pole.  
+ *nCount*  
+ Určuje celkový počet celých čísel v *lpPolyCounts* pole.  
   
- `nPolyFillMode`  
+ *nPolyFillMode*  
  Určuje režim naplnění mnohoúhelníku. Tato hodnota může být buď **alternativní** nebo **VINUTÍ**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -417,16 +417,16 @@ BOOL CreateRectRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Určuje logické souřadnici x levého horního rohu oblasti.  
   
- `y1`  
+ *Y1*  
  Určuje logické souřadnici y levého horního rohu oblasti.  
   
- `x2`  
+ *x2*  
  Určuje logické souřadnici x pravém dolním rohu oblasti.  
   
- `y2`  
+ *y2*  
  Určuje logické souřadnici y pravém dolním rohu oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -450,7 +450,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura nebo `CRect` objekt, který obsahuje logické souřadnice levém horním a pravém dolním rozích oblasti. `RECT` Struktura má následující formát:  
   
  `typedef struct tagRECT {`  
@@ -490,22 +490,22 @@ BOOL CreateRoundRectRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Určuje logické souřadnici x levého horního rohu oblasti.  
   
- `y1`  
+ *Y1*  
  Určuje logické souřadnici y levého horního rohu oblasti.  
   
- `x2`  
+ *x2*  
  Určuje logické souřadnici x pravém dolním rohu oblasti.  
   
- `y2`  
+ *y2*  
  Určuje logické souřadnici y pravém dolním rohu oblasti.  
   
  *x3*  
  Určuje šířku se třemi tečkami použít k vytvoření zaoblenými hranami.  
   
- `y3`  
+ *Y3*  
  Určuje výšku se třemi tečkami použít k vytvoření zaoblenými hranami.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -540,7 +540,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn`  
+ *pRgn*  
  Určuje oblast.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -557,7 +557,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hRgn`  
+ *hRgn*  
  Určuje popisovač v oblasti systému Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -576,14 +576,14 @@ int GetRegionData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRgnData`  
+ *lpRgnData*  
  Odkazuje na [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která přijímá informace. Pokud tento parametr je **NULL**, počet bajtů, které jsou potřebné pro oblast dat obsahuje návratovou hodnotu.  
   
- `nCount`  
- Určuje velikost v bajtech, a to `lpRgnData` vyrovnávací paměti.  
+ *nCount*  
+ Určuje velikost v bajtech, a to *lpRgnData* vyrovnávací paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud se podaří funkce a `nCount` určuje odpovídající počet bajtů, se vrácená hodnota je vždy `nCount`. Pokud funkce selže, nebo pokud `nCount` určuje menší než odpovídající počet bajtů, vrácená hodnota je 0 (chyba).  
+ Pokud se podaří funkce a *nCount* určuje odpovídající počet bajtů, se vrácená hodnota je vždy *nCount*. Pokud funkce selže, nebo pokud *nCount* určuje menší než odpovídající počet bajtů, vrácená hodnota je 0 (chyba).  
   
 ### <a name="remarks"></a>Poznámky  
  Tato data zahrnují dimenze obdélníky, které tvoří oblasti. Tato funkce se používá ve spojení s `CRgn::CreateFromData` funkce.  
@@ -596,7 +596,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura nebo `CRect` objekt, který chcete přijímat souřadnice ohraničující obdélník. `RECT` Struktura má následující formát:  
   
  `typedef struct tagRECT {`  
@@ -643,8 +643,8 @@ int OffsetRgn(POINT point);
  *y*  
  Určuje počet jednotek přesunout nahoru nebo dolů.  
   
- `point`  
- Souřadnici x `point` určuje počet jednotek přesunout doleva nebo doprava. Souřadnici y `point` určuje počet jednotek přesunout nahoru nebo dolů. `point` Parametr může být buď **bodu** struktura nebo `CPoint` objektu.  
+ *Bod*  
+ Souřadnici x *bodu* určuje počet jednotek přesunout doleva nebo doprava. Souřadnici y *bodu* určuje počet jednotek přesunout nahoru nebo dolů. *Bodu* parametr může být buď **bodu** struktura nebo `CPoint` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Typ nové oblasti. Může být některého z následujících hodnot:  
@@ -698,21 +698,21 @@ BOOL PtInRegion(POINT point) const;
  *y*  
  Určuje logické souřadnici y bodu k testování.  
   
- `point`  
- X-y souřadnice a `point` zadejte x - a souřadnice y bodu k testování hodnotu. `point` Parametr může být buď **bodu** struktura nebo `CPoint` objektu.  
+ *Bod*  
+ X-y souřadnice a *bodu* zadejte x - a souřadnice y bodu k testování hodnotu. *Bodu* parametr může být buď **bodu** struktura nebo `CPoint` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je bod v oblasti; jinak 0.  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- Určuje, zda libovolná součást rámeček určeného `lpRect` nachází uvnitř monitorované geografické oblasti uložené v `CRgn` objektu.  
+ Určuje, zda libovolná součást rámeček určeného *lprect –* nachází uvnitř monitorované geografické oblasti uložené v `CRgn` objektu.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect –*  
  Odkazuje na `RECT` struktura nebo `CRect` objektu. `RECT` Struktura má následující formát:  
   
  `typedef struct tagRECT {`  
@@ -744,23 +744,23 @@ void SetRectRgn(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Určuje souřadnici x levého horního rohu obdélníkovou oblast.  
   
- `y1`  
+ *Y1*  
  Určuje souřadnici y levého horního rohu obdélníkovou oblast.  
   
- `x2`  
+ *x2*  
  Určuje souřadnici x v pravém dolním rohu obdélníkovou oblast.  
   
- `y2`  
+ *y2*  
  Určuje souřadnici y pravém dolním rohu obdélníkovou oblast.  
   
- `lpRect`  
+ *lprect –*  
  Určuje obdélníkovou oblast. Může být buď ukazatel na `RECT` struktura nebo `CRect` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Na rozdíl od [CreateRectRgn](#createrectrgn), ale ji není přidělit žádné další paměť z lokální haldy aplikace systému Windows. Místo toho použije místo přidělené pro oblast uložené v `CRgn` objektu. To znamená, že `CRgn` objekt musí již byly inicializovány s platnou oblastí Windows před voláním `SetRectRgn`. Body poskytují `x1`, `y1`, `x2`, a `y2` určit minimální velikost přidělené místo.  
+ Na rozdíl od [CreateRectRgn](#createrectrgn), ale ji není přidělit žádné další paměť z lokální haldy aplikace systému Windows. Místo toho použije místo přidělené pro oblast uložené v `CRgn` objektu. To znamená, že `CRgn` objekt musí již byly inicializovány s platnou oblastí Windows před voláním `SetRectRgn`. Body poskytují *x1*, *y1*, *x2*, a *y2* určit minimální velikost přidělené místo.  
   
  Tato funkce je místo `CreateRectRgn` – členská funkce, aby se zabránilo volání správci místní paměti.  
   

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b787828c59535f0e3008816df6f4ab209e1d882c
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373664"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079131"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo – třída
 Definuje vzhled elementů inteligentní značky ukotvení.  
@@ -119,7 +119,7 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `params`  
+ [out] *parametry*  
  Objekt typu `CSmartDockingInfo` , se zobrazí v parametrech aktuální inteligentní ukotvení.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375438"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079446"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder – třída
 Implementuje vlastnosti obrázku, která umožňuje uživatelům zobrazit obrázek v vlastního ovládacího prvku.  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `idResource`  
+ *idResource*  
  ID prostředku bitové mapy prostředků.  
   
- `pBitmap`  
+ *pBitmap*  
  Ukazatel na [CBitmap](../../mfc/reference/cbitmap-class.md) objektu.  
   
  *pPal*  
  Ukazatel na [CPalette](../../mfc/reference/cpalette-class.md) objektu.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Označuje, zda objekt obrázek budou brát rastrového obrázku a paleta objektů.  
   
- `hbm`  
+ *hbm*  
  Zpracování pro bitovou mapu, ze kterého `CPictureHolder` je vytvořen objekt.  
   
- `hpal`  
+ *hpal*  
  Popisovač palety používané k vykreslování bitové mapy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud objekt je úspěšně vytvořen; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bTransferOwnership` je **TRUE**, volající neměli používat bitmapy nebo vrátí objekt palety žádným způsobem po toto volání. Pokud `bTransferOwnership` je **FALSE**, volající zodpovídá za zajištění, že objekty rastrového obrázku a palety jsou dál platné po dobu jeho existence objektu obrázku.  
+ Pokud *bTransferOwnership* je **TRUE**, volající neměli používat bitmapy nebo vrátí objekt palety žádným způsobem po toto volání. Pokud *bTransferOwnership* je **FALSE**, volající zodpovídá za zajištění, že objekty rastrového obrázku a palety jsou dál platné po dobu jeho existence objektu obrázku.  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  Používá ikonu k chybě při inicializaci objektu obrázek ve `CPictureHolder`.  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `idResource`  
+ *idResource*  
  ID prostředku bitové mapy prostředků.  
   
- `hIcon`  
+ *hIcon*  
  Zpracování na ikonu, ze kterého `CPictureHolder` je vytvořen objekt.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Určuje, zda objekt obrázku se převzít vlastnictví objektu ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud objekt je úspěšně vytvořen; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bTransferOwnership` je **TRUE**, volající neměli používat objekt ikonu žádným způsobem po vrátí toto volání. Pokud `bTransferOwnership` je **FALSE**, volající zodpovídá za zajištění, že objekt ikonu zůstane platný po dobu jeho existence objektu obrázku.  
+ Pokud *bTransferOwnership* je **TRUE**, volající neměli používat objekt ikonu žádným způsobem po vrátí toto volání. Pokud *bTransferOwnership* je **FALSE**, volající zodpovídá za zajištění, že objekt ikonu zůstane platný po dobu jeho existence objektu obrázku.  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  Používá k inicializaci objektu obrázku v metasoubory `CPictureHolder`.  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hmf`  
+ *hmf*  
  Popisovač metafile použít k vytvoření `CPictureHolder` objektu.  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  Rozsah Y na obrázku.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Určuje, zda objekt obrázku se převzít vlastnictví objektu metafile.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud objekt je úspěšně vytvořen; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `bTransferOwnership` je **TRUE**, volající neměli používat objekt metafile žádným způsobem po vrátí toto volání. Pokud `bTransferOwnership` je **FALSE**, volající zodpovídá za zajištění, že objekt metafile zůstane platný po dobu jeho existence objektu obrázku.  
+ Pokud *bTransferOwnership* je **TRUE**, volající neměli používat objekt metafile žádným způsobem po vrátí toto volání. Pokud *bTransferOwnership* je **FALSE**, volající zodpovídá za zajištění, že objekt metafile zůstane platný po dobu jeho existence objektu obrázku.  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  Načte řetězec, který se zobrazí v prohlížeči vlastností kontejneru.  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strValue`  
+ *strValue*  
  Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který má obsahovat řetězec zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  CPictureHolder::Render  
- Vykreslí obrázek v obdélníku odkazuje `rcRender`.  
+ Vykreslí obrázek v obdélníku odkazuje *rcRender*.  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Ukazatel na kontext zobrazení, ve kterém má být vykreslen na obrázku.  
   
- `rcRender`  
+ *rcRender*  
  Obdélníku, ve kterém má být vykreslen na obrázku.  
   
  *rcWBounds*  
- Obdélník představující ohraničující obdélník objekt vykreslování obrázku. Pro ovládací prvek, je tento obdélník `rcBounds` parametr předaný přepsání [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
+ Obdélník představující ohraničující obdélník objekt vykreslování obrázku. Pro ovládací prvek, je tento obdélník *rcBounds* parametr předaný přepsání [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  Připojí `CPictureHolder` do objektu `IPictureDisp` rozhraní.  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDisp`  
+ *pDisp*  
  Ukazatel na nové `IPictureDisp` rozhraní.  
   
 ## <a name="see-also"></a>Viz také  

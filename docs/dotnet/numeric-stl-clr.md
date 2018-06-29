@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305511"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079037"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 Definuje kontejneru šablony funkce, které provádět algoritmy poskytuje pro číselné zpracování.  
@@ -57,7 +57,7 @@ Definuje kontejneru šablony funkce, které provádět algoritmy poskytuje pro �
 |[inner_product (STL/CLR)](#inner_product)|Vypočítá součet element-wise součin dvou rozsahy a přidává ji k zadaná počáteční hodnota nebo vypočítá výsledek obecný postup kde binárních operací sum a produktu jsou nahrazovány jiné zadaný binární operace.|  
 |[partial_sum (STL/CLR)](#partial_sum)|Vypočítá řadu součtů ve vstupní oblasti z první prvek prostřednictvím `i`element TD a ukládá výsledek každé součet v `i`element TD cílového rozsahu nebo vypočítá výsledek obecný postup kde operaci součet je nahrazena jinou zadaný binární operace.|  
  
-## <a name="functions"></a>Funkce
+## <a name="members"></a>Členové
 
 ## <a name="accumulate"></a> accumulate (STL/CLR)
 Vypočítá součet všech elementů v zadaném rozsahu včetně některé počáteční hodnoty tak, že vypočítá následných částečné součtů nebo vypočítá výsledek podobně získané z pomocí zadané operace binární než součet následných částečné výsledky.  

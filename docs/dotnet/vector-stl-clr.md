@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305768"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079809"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Šablony třídy popisuje objekt, který řídí různých délka pořadí elementů s náhodným přístupem. Použít metodu kontejneru `vector` ke správě pořadí elementů jako souvislý blok úložiště. Blok je implementovaný jako pole, které zvětšování na vyžádání.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Hodnota  
  Typ elementu v řízené sekvenci  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Mazání nebo odebrání element volání destruktoru pro jeho uložené hodnoty. Zničení kontejneru vymaže všechny elementy. Proto kontejner, jehož typ elementu je třída ref zajistí, že žádné elementy outlive kontejneru. Upozorňujeme však, že kontejner popisovače nezničí jejích elementů.  
   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** \<cliext – / vektoru >  
-  
- **Namespace:** cliext –  
+## <a name="members"></a>Členové
 
 ## <a name="assign"></a> Vector::Assign (STL/CLR)
 Nahradí všechny elementy.  

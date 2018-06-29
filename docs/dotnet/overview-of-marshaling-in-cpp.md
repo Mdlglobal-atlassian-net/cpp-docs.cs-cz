@@ -1,7 +1,7 @@
 ---
 title: Přehled zařazování v jazyku C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,16 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137131"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079157"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Přehled zařazování v jazyku C++
-Ve smíšeném režimu někdy musí zařazování data mezi nativní a spravovaná typy. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] zavedly knihovny zařazování pomohou zařazování a převést data v jednoduchý způsob.  
-  
+Ve smíšeném režimu někdy musí zařazování data mezi nativní a spravovaná typy. Visual Studio 2008 zavedená *knihovny zařazování* pomohou zařazování a převést data v jednoduchý způsob.  Knihovny zařazování obsahuje sadu funkcí a `marshal_context` třídu, která provádět zařazování pro běžné typy. Knihovny je definován v záhlaví v těchto **zahrnují/msclr –** adresáře vaší verze sady Visual Studio:
+
+|Záhlaví|Popis|  
+|---------------|-----------------|
+|Marshal.h|`marshal_context` Třída a kontext volné zařazování funkce|
+|marshal_atl.h| Funkce pro zařazování typů knihovny ATL|
+|marshal_cppstd.h|Funkce pro zařazování standardní typy C++|
+|marshal_windows.h|Funkce pro zařazování typy systému Windows|
+
+
+Výchozí cesta pro **msclr –** složka je přibližně toto podle toho, která edice máte a číslo sestavení:
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  Můžete použít knihovny zařazování bez ohledu [marshal_context – třída](../dotnet/marshal-context-class.md). Některé převody vyžadují kontextu. Jiné převody lze implementovat pomocí [marshal_as](../dotnet/marshal-as.md) funkce. V následující tabulce jsou uvedeny aktuální převody podporována, zda vyžaduje kontextu a jaké zařazování soubor je nutné zahrnout:  
   
 |Z typu|Na typ|Zařazování – metoda|Zahrnout soubor|  
@@ -62,7 +76,7 @@ Ve smíšeném režimu někdy musí zařazování data mezi nativní a spravovan
 > [!NOTE]
 >  Pokud jste vložili `NULL`s ve vašem řetězci výsledek zařazování řetězec není zaručena. Vložený `NULL`s může způsobit, že řetězec, který má být zkrácen nebo může být zachována.  
   
- Zařazování hlaviček knihoven jsou umístěné v adresáři include v podadresáři msclr –. Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace záhlaví zahrnout:  
+Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace záhlaví zahrnout:  
   
  `#include "msclr\marshal_cppstd.h"`  
   

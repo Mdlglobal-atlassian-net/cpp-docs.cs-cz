@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374835"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078153"
 ---
 # <a name="collection-class-helpers"></a>Pomocné rutiny třídy kolekce
-Třídy kolekce `CMap`, `CList`, a `CArray` použít šablonované globální pomocných funkcí pro tyto účely jako porovnávání, kopírování a serializace prvků. Jako součást vaší implementace třídy na základě `CMap`, `CList`, a `CArray`, je nutné přepsat tyto funkce v případě potřeby s verzemi přizpůsobit typ dat uložených na mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že **constructelements –** a **destructelements –** jsou zastaralé.  
+Třídy kolekce `CMap`, `CList`, a `CArray` použít šablonované globální pomocných funkcí pro tyto účely jako porovnávání, kopírování a serializace prvků. Jako součást vaší implementace třídy na základě `CMap`, `CList`, a `CArray`, je nutné přepsat tyto funkce v případě potřeby s verzemi přizpůsobit typ dat uložených na mapě, seznamu nebo pole. Informace o přepsání pomocných funkcí, jako `SerializeElements`, najdete v článku [kolekcí: jak provádět typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md). Všimněte si, že `ConstructElements` a `DestructElements` jsou zastaralé.  
   
  Knihovny Microsoft Foundation Class poskytuje následující globální funkce v afxtempl.h při přizpůsobení kolekce tříd:  
   
@@ -57,24 +57,24 @@ CompareElements(
  *TYP*  
  Typ první prvek, který se má porovnat.  
   
- `pElement1`  
+ *pElement1*  
  Ukazatel na první prvek, který se má porovnat.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Typ druhého elementu, který se má porovnat.  
   
- `pElement2`  
+ *pElement2*  
  Ukazatel na druhý prvkem, který se má porovnat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud objekt na kterou odkazuje `pElement1` je stejný jako objekt, na kterou odkazuje `pElement2`; jinak hodnota 0.  
+ Nenulové hodnoty, pokud objekt na kterou odkazuje *pElement1* je stejný jako objekt, na kterou odkazuje *pElement2*; jinak hodnota 0.  
   
 ### <a name="remarks"></a>Poznámky  
  `CMap` Volá použití `CMap` parametry šablony *klíč* a `ARG_KEY`.  
   
  Výchozí implementace vrací výsledek při porovnání  *\*pElement1* a  *\*pElement2*. Funkci přepište tak, aby porovná elementy způsobem, který je vhodný pro vaši aplikaci.  
   
- Relační operátor definuje jazyka C++ ( `==`) pro jednoduché typy ( `char`, `int`, **float**a tak dále), ale nedefinuje operátor porovnání pro třídy a struktury. Pokud chcete použít `CompareElements` nebo k vytvoření instance jednoho typu tříd kolekce, které se používá, musíte definovat relační operátor nebo přetížení `CompareElements` s verzí, která vrátí odpovídající hodnoty.  
+ Relační operátor definuje jazyka C++ ( `==`) pro jednoduché typy ( **char**, **int**, **float**a tak dále), ale nedefinuje operátor porovnání pro třídy a struktury. Pokud chcete použít `CompareElements` nebo k vytvoření instance jednoho typu tříd kolekce, které se používá, musíte definovat relační operátor nebo přetížení `CompareElements` s verzí, která vrátí odpovídající hodnoty.  
   
 ### <a name="requirements"></a>Požadavky  
    **Záhlaví:** afxtempl.h   
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *TYP*  
  Parametr šablony určující typ elementů, které se mají zkopírovat.  
   
- `pDest`  
+ *pDest*  
  Ukazatel na cílový, které budou elementy zkopírovány.  
   
- `pSrc`  
+ *pSrc*  
  Ukazatel na zdroj prvky, které mají být zkopírovány.  
   
- `nCount`  
+ *nCount*  
  Počet prvků, které se mají zkopírovat.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -123,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *řadič domény*  
  Dump kontext pro vypsání elementy.  
   
  *TYP*  
  Určení typu elementů parametr šablony.  
   
- `pElements`  
+ *pElements*  
  Ukazatel na elementy, které mají být uloženy.  
   
- `nCount`  
+ *nCount*  
  Počet prvků mají být uloženy.  
   
 ### <a name="remarks"></a>Poznámky  
- **CArray::Dump**, **CList::Dump**, a **CMap::Dump** funkce toto volání, pokud je hloubkou výpisu větší než 0.  
+ `CArray::Dump`, `CList::Dump`, A `CMap::Dump` funkce toto volání, pokud je hloubkou výpisu větší než 0.  
   
  Výchozí implementace neprovede žádnou akci. Pokud elementy kolekce jsou odvozeny od `CObject`, přepsání bude obvykle iteraci v rámci kolekce elementů, volání `Dump` pro každý prvek v vypněte.  
   
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_KEY`  
+ *ARG_KEY*  
  Parametr šablony zadání datový typ používaný pro přístup k klíče mapy.  
   
- `key`  
+ *Klíč*  
  Klíč, jehož hodnota hash je vypočtena.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je volána přímo nástrojem [CMap::RemoveKey](cmap-class.md#removekey) a nepřímo [CMap::Lookup](cmap-class.md#lookup) a [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- Výchozí implementace vytvoří hodnotu hash přepínáním `key` přímo pomocí čtyř pozic. Funkci přepište tak, aby ho vrátil hodnoty hash vhodné pro vaši aplikaci.  
+ Výchozí implementace vytvoří hodnotu hash přepínáním *klíč* přímo pomocí čtyř pozic. Funkci přepište tak, aby ho vrátil hodnoty hash vhodné pro vaši aplikaci.  
   
 ### <a name="example"></a>Příklad
  ```cpp  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *TYP*  
  Určení typu elementů parametr šablony.  
   
- `ar`  
+ *ar*  
  Objekt archivu pro archivaci do nebo z.  
   
- `pElements`  
+ *pElements*  
  Ukazatel na elementy archivován.  
   
- `nCount`  
+ *nCount*  
  Počet elementů archivovaných  
   
 ### <a name="remarks"></a>Poznámky  

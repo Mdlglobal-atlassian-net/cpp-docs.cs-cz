@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 71399d254b2b47b33959695a00227e316c04a008
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a494993eea8a82307243ee1a05b92212dd4cb216
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305797"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079835"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Definuje funkce šablony kontejneru STL/CLR, které provádět algoritmy.  
@@ -172,7 +172,7 @@ Definuje funkce šablony kontejneru STL/CLR, které provádět algoritmy.
   
  **Namespace:** cliext –  
     
-## <a name="functions"></a>Funkce  
+## <a name="declarations"></a>Deklarace  
   
 |Funkce|Popis|  
 |--------------|-----------------|  
@@ -243,6 +243,7 @@ Definuje funkce šablony kontejneru STL/CLR, které provádět algoritmy.
 |[unique_copy (STL/CLR)](#unique_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu s výjimkou sousedících duplicitních prvků.|  
 |[upper_bound (STL/CLR)](#upper_bound)|Najde pozici prvního prvku v seřazeném rozsahu, který má hodnotu větší než zadaná hodnota, kde kritérium pořadí může být určeno binárním predikátem.|  
  
+## <a name="members"></a>Členové
 
 ## <a name="adjacent_find"></a> adjacent_find – (STL/CLR)
 Vyhledá dva sousedící prvky, které jsou buď rovny, nebo splňují zadanou podmínku.  

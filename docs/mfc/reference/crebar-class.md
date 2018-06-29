@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371139"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078764"
 ---
 # <a name="crebar-class"></a>CReBar – třída
 Ovládací prvek panel, který poskytuje informace o stavu pro ovládací prvky matrice, rozložení a trvalost.  
@@ -56,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Matrice – ovládací prvek  
  Objekt matrice se chová podobně jako objekt panelu nástrojů. Matrice používá mechanismus kliknutím a přetažením ke změně velikosti jeho pásma. Ovládacím prvkem matrice může obsahovat jeden nebo více pruhy s každé pásmo s libovolnou kombinaci řádku úchytu, rastrový obrázek, text popisku a podřízeného okna. Pruhy však nemůže obsahovat více než jeden podřízeného okna.  
   
- **CReBar** používá [crebarctrl –](../../mfc/reference/crebarctrl-class.md) třída k zajištění jeho implementace. Přistupujete prostřednictvím ovládacího prvku matrice [GetReBarCtrl](#getrebarctrl) využívat možnosti přizpůsobení ovládacího prvku. Další informace o ovládacích prvcích matrice najdete v tématu `CReBarCtrl`. Další informace o používání ovládací prvky matrice najdete v tématu [crebarctrl pomocí –](../../mfc/using-crebarctrl.md).  
+ `CReBar` používá [crebarctrl –](../../mfc/reference/crebarctrl-class.md) třída k zajištění jeho implementace. Přistupujete prostřednictvím ovládacího prvku matrice [GetReBarCtrl](#getrebarctrl) využívat možnosti přizpůsobení ovládacího prvku. Další informace o ovládacích prvcích matrice najdete v tématu `CReBarCtrl`. Další informace o používání ovládací prvky matrice najdete v tématu [crebarctrl pomocí –](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Matrice a objekty ovládacího prvku matrice nepodporují MFC ovládací prvek panelu ukotvení. Pokud **CRebar::EnableDocking** je volána, aplikace bude uplatnit.  
+>  Matrice a objekty ovládacího prvku matrice nepodporují MFC ovládací prvek panelu ukotvení. Pokud `CRebar::EnableDocking` je volána, aplikace bude uplatnit.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -95,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Ukazatel na `CWnd` objekt, který je podřízeného okna Vložit do matrice. Odkazovaný objekt musí mít **ws_child –**.  
   
- `lpszText`  
- Ukazatel na řetězec obsahující text, který se zobrazí na matrice. **NULL** ve výchozím nastavení. Text obsažené v `lpszText` není součástí podřízeného okna; se nachází na matrice sám sebe.  
+ *lpszText*  
+ Ukazatel na řetězec obsahující text, který se zobrazí na matrice. **NULL** ve výchozím nastavení. Text obsažené v *lpszText* není součástí podřízeného okna; se nachází na matrice sám sebe.  
   
- `pbmp`  
+ *pbmp*  
  Ukazatel na `CBitmap` objekt, který se má zobrazit na pozadí matrice. **NULL** ve výchozím nastavení.  
   
- `dwStyle`  
+ *dwStyle*  
  A `DWORD` obsahující stylu použít matrice. Najdete v článku **fStyle** funkce Popis ve struktuře Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) úplný seznam stylů vzdálené správy.  
   
  *clrFore*  
@@ -131,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel `CWnd` objektu, jehož okno systému Windows je nadřazená stavový řádek. Za normálních okolností rámce okna.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Styl ovládacího prvku matrice. Ve výchozím nastavení **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení přiléhající pruhy v ovládacím prvku matrice. V tématu [– styly ovládacího prvku matrice](http://msdn.microsoft.com/library/windows/desktop/bb774377) ve Windows SDK pro seznam stylů.  
   
- `dwStyle`  
+ *dwStyle*  
  Styly oken matrice.  
   
- `nID`  
+ *nID*  
  ID matrice podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  

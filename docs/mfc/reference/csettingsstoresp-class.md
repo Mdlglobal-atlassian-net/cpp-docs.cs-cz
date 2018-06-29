@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376042"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078696"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP – třída
 `CSettingsStoreSP` Třída je pomocná třída, která můžete použít k vytvoření instance [CSettingsStore třída](../../mfc/reference/csettingsstore-class.md).  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bAdmin`  
+ [v] *bAdmin*  
  Logický parametr, který určuje, zda `CSettingsStore` objekt se vytvoří v režimu správce.  
   
- [v] `bReadOnly`  
+ [v] *bReadOnly*  
  Logický parametr, který určuje, zda `CSettingsStore` objekt se vytvoří pro přístup jen pro čtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  Pokud vytvoříte `CSettingsStore` objektů v režimu správce, HKEY_LOCAL_MACHINE je výchozím umístěním pro všechny přístup k registru. Jinak je výchozím umístěním pro všechny přístup k registru HKEY_CURRENT_USER.  
   
- Pokud `bAdmin` je `TRUE`, aplikace musí mít administrativní oprávnění. Jinak dojde při pokusu o přístup k registru.  
+ Pokud *bAdmin* je `TRUE`, aplikace musí mít administrativní oprávnění. Jinak dojde při pokusu o přístup k registru.  
   
 ### <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak používat `Create` metodu `CSettingsStoreSP` třídy.  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `dwUserData`  
+ [v] *dwUserData*  
  Uživatelem definované datové, `CSettingsStoreSP` objektu úložiště.  
   
 ### <a name="remarks"></a>Poznámky  
- `CSettingsStoreSP` Objekt ukládá data z `dwUserData` v proměnné chráněného člena `m_dwUserData`.  
+ `CSettingsStoreSP` Objekt ukládá data z *dwUserData* v proměnné chráněného člena `m_dwUserData`.  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Nastaví třídu modulu runtime. Metoda [CSettingsStoreSP::Create](#create) používá runtime třídu k určení typu objektu k vytvoření.  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pRTI`  
+ [v] *pRTI*  
  Ukazatel na informace o běhu programu třída pro třídy odvozené od [CSettingsStore třída](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` v případě úspěšného; `FALSE` Pokud třída identifikovaný `pRTI` není odvozen od `CSettingsStore`.  
+ `TRUE` v případě úspěšného; `FALSE` Pokud třída identifikovaný *pRTI* není odvozen od `CSettingsStore`.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete použít [CSettingsStoreSP třída](../../mfc/reference/csettingsstoresp-class.md) odvozovat z `CSettingsStore`. Pomocí této metody `SetRuntimeClass` Pokud budete chtít vytvořit objekty vlastní třídy, který je odvozený od `CSettingsStore`.  
