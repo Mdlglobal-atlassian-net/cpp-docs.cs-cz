@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375970"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121822"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkce výměny dat dialogových oken pro ovládací prvky OLE
 Toto téma uvádí DDX_OC funkce, které slouží pro výměnu dat mezi vlastností ovládacího prvku OLE ve dialogového okna, formátu zobrazení nebo objekt zobrazení ovládacího prvku a datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
@@ -48,8 +48,8 @@ Toto téma uvádí DDX_OC funkce, které slouží pro výměnu dat mezi vlastnos
 |[Ddx_occolorro –](#ddx_occolorro)|Spravuje přenos **OLE_COLOR** dat mezi jen pro čtení vlastnost ovládacího prvku OLE a **OLE_COLOR** – datový člen.|  
 |[Ddx_ocfloat –](#ddx_ocfloat)|Spravuje přenos **float** (nebo **dvojité**) dat mezi vlastností ovládacího prvku OLE a **float** (nebo **dvojité**) – datový člen.|  
 |[Ddx_ocfloatro –](#ddx_ocfloatro)|Spravuje přenos **float** (nebo **dvojité**) dat mezi jen pro čtení vlastnost ovládacího prvku OLE a **float** (nebo **dvojité**) dat člen.|  
-|[Ddx_ocint –](#ddx_ocint)|Spravuje přenos `int` (nebo **dlouho**) dat mezi vlastností ovládacího prvku OLE a `int` (nebo **dlouho**) – datový člen.|  
-|[Ddx_ocintro –](#ddx_ocintro)|Spravuje přenos `int` (nebo **dlouho**) dat mezi jen pro čtení vlastnost ovládacího prvku OLE a `int` (nebo **dlouho**) – datový člen.|  
+|[Ddx_ocint –](#ddx_ocint)|Spravuje přenos **int** (nebo **dlouho**) dat mezi vlastností ovládacího prvku OLE a **int** (nebo **dlouho**) – datový člen.|  
+|[Ddx_ocintro –](#ddx_ocintro)|Spravuje přenos **int** (nebo **dlouho**) dat mezi jen pro čtení vlastnost ovládacího prvku OLE a **int** (nebo **dlouho**) – datový člen.|  
 |[Ddx_ocshort –](#ddx_ocshort)|Spravuje přenos **krátké** dat mezi vlastností ovládacího prvku OLE a **krátké** – datový člen.|  
 |[Ddx_ocshortro –](#ddx_ocshortro)|Spravuje přenos **krátké** dat mezi jen pro čtení vlastnost ovládacího prvku OLE a **krátké** – datový člen.|  
 |[Ddx_octext –](#ddx_octext)|Spravuje přenos **CString** dat mezi vlastností ovládacího prvku OLE a **CString** – datový člen.|  
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -116,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **Záhlaví** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  Ddx_occolor –  
- `DDX_OCColor` Funkce spravuje přenos **OLE_COLOR** formuláři dat mezi vlastností ovládacího prvku OLE v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **OLE_COLOR** dialogového okna, – datový člen zobrazení formuláře, nebo objekt zobrazení ovládacího prvku.  
+ `DDX_OCColor` Funkce spravuje přenos dat OLE_COLOR mezi vlastností ovládacího prvku OLE v dialogovém okně, zobrazení formuláře, nebo objekt zobrazení ovládacího prvku a členem OLE_COLOR dat dialogových oken, zobrazení formuláře nebo řízení objekt zobrazení.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -146,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **Záhlaví** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  Ddx_occolorro –  
- `DDX_OCColorRO` Funkce spravuje přenos **OLE_COLOR** formuláři dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **OLE_COLOR** členem data Dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
+ `DDX_OCColorRO` Funkce spravuje přenos dat OLE_COLOR mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, zobrazení formuláře, nebo objekt zobrazení ovládacího prvku a členem OLE_COLOR dat dialogových oken, zobrazení formuláře nebo řízení objekt zobrazení.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **Záhlaví** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  Ddx_ocint –  
- `DDX_OCInt` Funkce spravuje přenos `int` (nebo **dlouho**) dat mezi vlastností ovládacího prvku OLE v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a `int` (nebo **dlouho**) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
+ `DDX_OCInt` Funkce spravuje přenos **int** (nebo **dlouho**) dat mezi vlastností ovládacího prvku OLE v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a **int**(nebo **dlouho**) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -284,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **Záhlaví** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  Ddx_ocintro –  
- `DDX_OCIntRO` Funkce spravuje přenos `int` (nebo **dlouho**) dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a `int` (nebo **dlouho** ) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
+ `DDX_OCIntRO` Funkce spravuje přenos **int** (nebo **dlouho**) dat mezi vlastnost jen pro čtení OLE ovládacího prvku v dialogovém okně, tvoří zobrazení, nebo objekt zobrazení ovládacího prvku a **int** (nebo **dlouho**) – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel **CDataExchange** objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel na `CDataExchange` objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku OLE v dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
   
- `dispid`  
+ *dispID*  
  Odesílání ID vlastnosti ovládacího prvku.  
   
  *value*  

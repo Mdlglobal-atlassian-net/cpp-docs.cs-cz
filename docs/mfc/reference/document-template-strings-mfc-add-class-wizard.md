@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371928"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121510"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Řetězce šablony dokumentu, Průvodce přidáním třídy MFC
 Tato stránka průvodce je k dispozici pouze pro třídy splňující následující kritéria:  
@@ -43,7 +43,7 @@ Tato stránka průvodce je k dispozici pouze pro třídy splňující následuj�
  Platí pro aplikace, které vytvářejí dokumenty uživatele. Uživatelé mohli otevřít a uložit dokumenty snadněji, pokud má typ dokumentu příponu souboru a ID typu souboru. Tyto položky nejsou lokalizovány, protože se používají v systému, a nikoli uživatele.  
   
  **Přípona souboru**  
- Nastaví přípona souboru, který je přidružený k typu dokumentu pro tuto aplikaci formulářů. Výchozí přípona souboru na základě názvu třídy. Například pokud je název nové třídy MFC **CWidget**, ve výchozím nastavení, přípona souboru je. WID Přípona souboru se používá v filtry souborů a **otevřete** a **uložit jako** dialogová okna.  
+ Nastaví přípona souboru, který je přidružený k typu dokumentu pro tuto aplikaci formulářů. Výchozí přípona souboru na základě názvu třídy. Například pokud je název nové třídy MFC `CWidget`, ve výchozím nastavení, přípona souboru je. WID Přípona souboru se používá v filtry souborů a **otevřete** a **uložit jako** dialogová okna.  
   
  Pokud změníte příponu souboru, změna se projeví v **název filtru** pole.  
   
@@ -63,10 +63,10 @@ Tato stránka průvodce je k dispozici pouze pro třídy splňující následuj�
  Nastaví název, který mohou uživatelé použít pro soubory typu zadaný soubor najít. Tato možnost je dostupná z **soubory typu** a **uložit jako typ** možnosti v systému Windows standardní **otevřete** a **uložit jako** dialogová okna. Ve výchozím nastavení je název založen na název projektu a soubory, a příponu uvedené v **příponu souboru**. Pokud projektu jmenuje Widget a přípona souboru je WID, například **název filtru** soubory Widget (*.wid) je ve výchozím nastavení.  
   
  **Nové krátký název souboru**  
- Nastaví název zobrazovaný v standardní Windows `New` dialogové okno, pokud projekt má více než jedna šablona dokumentu. Pokud je vaše aplikace [automatizační server](../../mfc/automation-servers.md), tento název se používá jako krátký název objektu automatizace. Ve výchozím nastavení je tento název založen na název třídy.  
+ Nastaví název zobrazovaný v standardní Windows **nový** dialogové okno, pokud projekt má více než jedna šablona dokumentu. Pokud je vaše aplikace [automatizační server](../../mfc/automation-servers.md), tento název se používá jako krátký název objektu automatizace. Ve výchozím nastavení je tento název založen na název třídy.  
   
  **Dlouhý název typu souboru**  
- Nastaví název typu souboru v registru systému. Pokud je aplikace Automatizační server, tento název se používá jako dlouhý název objektu automatizace. Ve výchozím nastavení tento název je založen na název třídy plus. Dokument. Například, pokud je název třídy **CWidget**, **typ souboru dlouhý název** je dokument Widget.  
+ Nastaví název typu souboru v registru systému. Pokud je aplikace Automatizační server, tento název se používá jako dlouhý název objektu automatizace. Ve výchozím nastavení tento název je založen na název třídy plus. Dokument. Například, pokud je název třídy `CWidget`, **typ souboru dlouhý název** je dokument Widget.  
   
  **Třída dokumentu**  
  Určuje třída dokumentu projektu. Ve výchozím nastavení, tato třída je třída dokumentu v hlavní aplikaci, jak je uvedeno v [Přehled vytvořených tříd](../../mfc/reference/generated-classes-mfc-application-wizard.md) stránky Průvodce aplikací MFC. V seznamu můžete vybrat jinou třídu dokumentu, pokud jste přidali další třídy dokumentů v projektu.  

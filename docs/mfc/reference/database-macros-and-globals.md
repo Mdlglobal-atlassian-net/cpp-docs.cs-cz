@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb4dbb75dba33fe616fbce95cdec74bd81cc3fe9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370770"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121913"
 ---
 # <a name="database-macros-and-globals"></a>Databázová makra a globální prvky
 Makra a globální prvky, které jsou níže uvedené platí pro aplikace založené na rozhraní ODBC databáze. Používají nejsou s aplikace založené na rozhraní DAO.  
@@ -52,7 +52,7 @@ Makra a globální prvky, které jsou níže uvedené platí pro aplikace založ
 
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule –
-Pro databázi knihovny MFC (nebo DAO) podporují z regulární knihovny MFC DLL dynamicky propojené s knihovnou MFC, přidejte volání této funkce ve vašem regulární MFC DLL **CWinApp::InitInstance** databáze funkce k chybě při inicializaci knihovny MFC DLL.  
+Pro databázi knihovny MFC (nebo DAO) podporují z regulární knihovny MFC DLL dynamicky propojené s knihovnou MFC, přidejte volání této funkce ve vašem regulární MFC DLL `CWinApp::InitInstance` databáze funkce k chybě při inicializaci knihovny MFC DLL.  
    
 ### <a name="syntax"></a>Syntaxe    
 ```
@@ -60,7 +60,7 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>Poznámky  
- Zajistěte, aby toto volání dojde před voláním jakékoli základní třídy nebo přidané kód, který přistupuje k databázi MFC DLL. Databáze MFC DLL je knihovnu DLL; v pořadí pro knihovnu DLL do **CDynLinkLibrary** řetězci, musíte vytvořit **CDynLinkLibrary** objektu v kontextu každý modul, který bude používat ho. `AfxDbInitModule` vytvoří **CDynLinkLibrary** objektu v kontextu vaší regulární MFC DLL tak, aby získá přes drátové sítě do **CDynLinkLibrary** objektu řetězu běžné knihovny MFC DLL.  
+ Zajistěte, aby toto volání dojde před voláním jakékoli základní třídy nebo přidané kód, který přistupuje k databázi MFC DLL. Databáze MFC DLL je knihovnu DLL; v pořadí pro knihovnu DLL do `CDynLinkLibrary` řetězci, musíte vytvořit `CDynLinkLibrary` objektu v kontextu každý modul, který bude používat ho. `AfxDbInitModule` vytvoří `CDynLinkLibrary` objektu v kontextu vaší regulární MFC DLL tak, aby získá přes drátové sítě do `CDynLinkLibrary` objektu řetězu běžné knihovny MFC DLL.  
    
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** < afxdll_.h >  
@@ -78,19 +78,19 @@ AFX_ODBC_CALL(SQLFunc)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `SQLFunc`  
+ *SQLFunc*  
  Funkce rozhraní API ODBC. Další informace o funkcích rozhraní API ODBC najdete v části Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  `AFX_ODBC_CALL` opakovaně volá funkci dokud už vrátí `SQL_STILL_EXECUTING`.  
   
- Před vyvoláním `AFX_ODBC_CALL`, je třeba deklarovat proměnnou, `nRetCode`, typu **RETCODE**.  
+ Před vyvoláním `AFX_ODBC_CALL`, je třeba deklarovat proměnnou, `nRetCode`, typu RETCODE.  
   
- Všimněte si, že třídy knihovny MFC rozhraní ODBC nyní použití pouze synchronní zpracování. Chcete-li provést asynchronní operaci, musí volat rozhraní API ODBC funkce **SQLSetConnectOption**. Další informace naleznete v tématu "Provádění funkce asynchronně" v sadě Windows SDK.  
+ Všimněte si, že třídy knihovny MFC rozhraní ODBC nyní použití pouze synchronní zpracování. Chcete-li provést asynchronní operaci, musí volat rozhraní API ODBC funkce `SQLSetConnectOption`. Další informace naleznete v tématu "Provádění funkce asynchronně" v sadě Windows SDK.  
 
   
 ### <a name="example"></a>Příklad  
- Tento příklad používá `AFX_ODBC_CALL` k volání **SQLColumns** funkce rozhraní API ODBC, který vrátí seznam hodnot sloupců v tabulce s názvem podle `strTableName`. Všimněte si prohlášení o `nRetCode` a využívat data členů sady záznamů předat parametry funkce. Tento příklad také ukazuje Kontrola výsledků volání s **zkontrolujte**, členské funkce třídy `CRecordset`. Proměnná `prs` je ukazatel na `CRecordset` objekt, deklarovaný jinde.  
+ Tento příklad používá `AFX_ODBC_CALL` k volání `SQLColumns` funkce rozhraní API ODBC, který vrátí seznam hodnot sloupců v tabulce s názvem podle `strTableName`. Všimněte si prohlášení o `nRetCode` a využívat data členů sady záznamů předat parametry funkce. Tento příklad také ukazuje Kontrola výsledků volání s `Check`, členské funkce třídy `CRecordset`. Proměnná `prs` je ukazatel na `CRecordset` objekt, deklarovaný jinde.  
   
  [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
 
@@ -105,17 +105,17 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prs`  
+ *prs*  
  Ukazatel `CRecordset` objekt nebo `CDatabase` objektu. Počínaje MFC 4.2, tato hodnota parametru je ignorována.  
   
- `SQLFunc`  
+ *SQLFunc*  
  Funkce rozhraní API ODBC. Další informace o funkcích rozhraní API ODBC najdete v části Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- `AFX_SQL_ASYNC` jednoduše volá makro [afx_odbc_call –](#afx_odbc_call) a ignoruje `prs` parametr. Ve verzích MFC před 4.2 `AFX_SQL_ASYNC` se používá k volání rozhraní API ODBC funkce, které může vrátit `SQL_STILL_EXECUTING`. Pokud funkce rozhraní API ODBC nevrátila `SQL_STILL_EXECUTING`, pak `AFX_SQL_ASYNC` by volání `prs->OnWaitForDataSource`.  
+ `AFX_SQL_ASYNC` jednoduše volá makro [afx_odbc_call –](#afx_odbc_call) a ignoruje *prs* parametr. Ve verzích MFC před 4.2 `AFX_SQL_ASYNC` se používá k volání rozhraní API ODBC funkce, které může vrátit `SQL_STILL_EXECUTING`. Pokud funkce rozhraní API ODBC nevrátila `SQL_STILL_EXECUTING`, pak `AFX_SQL_ASYNC` by volání `prs->OnWaitForDataSource`.  
   
 > [!NOTE]
->  Třídy MFC rozhraní ODBC teď použít pouze synchronní zpracování. Chcete-li provést asynchronní operaci, musí volat rozhraní API ODBC funkce **SQLSetConnectOption**. Další informace naleznete v tématu "Provádění funkce asynchronně" v sadě Windows SDK.  
+>  Třídy MFC rozhraní ODBC teď použít pouze synchronní zpracování. Chcete-li provést asynchronní operaci, musí volat rozhraní API ODBC funkce `SQLSetConnectOption`. Další informace naleznete v tématu "Provádění funkce asynchronně" v sadě Windows SDK.  
   
 ### <a name="requirements"></a>Požadavky  
   **Záhlaví** afxdb.h  
@@ -128,13 +128,13 @@ AFX_SQL_SYNC(SQLFunc)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `SQLFunc`  
+ *SQLFunc*  
  Funkce rozhraní API ODBC. Další informace o těchto funkcích najdete v části Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití tohoto makra k volání rozhraní API ODBC funkce, které nevrátí `SQL_STILL_EXECUTING`.  
   
- Před voláním `AFX_SQL_SYNC`, je třeba deklarovat proměnnou, `nRetCode`, typu **RETCODE**. Můžete zkontrolovat hodnotu `nRetCode` po volání makro.  
+ Před voláním `AFX_SQL_SYNC`, je třeba deklarovat proměnnou, `nRetCode`, typu RETCODE. Můžete zkontrolovat hodnotu `nRetCode` po volání makro.  
   
  Všimněte si, že implementace `AFX_SQL_SYNC` v MFC 4.2 změnit. Vzhledem k tomu, že kontrola stavu serveru nebyla nutná, už `AFX_SQL_SYNC` jednoduše přiřadí hodnota `nRetCode`. Například místo uskutečněním hovoru  
   

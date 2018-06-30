@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372979"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122689"
 ---
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ ms.locfileid: "33372979"
 |[END_DELEGATE_MAP –](#end_delegate_map)|Ukončí mapu delegáta.|
 |[END_INTERFACE_MAP –](#end_interface_map)|Ukončí mapy rozhraní v souboru implementace. |
 |[EVENT_DELEGATE_ENTRY –](#event_delegate_entry)|Vytvoří položku v mapě delegáta.|
-|[INTERFACE_PART –](#interface_part)|Použít mezi `BEGIN_INTERFACE_MAP` makro a `END_INTERFACE_MAP` makro u každého rozhraní objektu bude podporovat.|
+|[INTERFACE_PART –](#interface_part)|Použít mezi begin_interface_map – makro a end_interface_map – makro pro jednotlivá rozhraní, které budou podporovat objektu.|
 |[MAKE_DELEGATE –](#make_delegate)|Připojí do ovládacího prvku spravované obslužné rutiny události.|
 
 
@@ -43,7 +43,7 @@ Zahájí mapu delegáta.
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>Parametry  
- `CLASS`  
+ *– TŘÍDA*  
  Třída, ve kterém je hostovaná spravované ovládací prvek.  
    
 ### <a name="remarks"></a>Poznámky  
@@ -63,14 +63,14 @@ Zahájí definici připojený mapy při použití v souboru implementace.
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Třída, ve kterém má být definován mapy rozhraní  
   
- `baseClass`  
- Třídu, ze které `theClass` je odvozena z.  
+ *baseclass –*  
+ Třídu, ze které *theClass* je odvozena z.  
    
 ### <a name="remarks"></a>Poznámky  
- U každého rozhraní, která je implementována, je jeden nebo více `INTERFACE_PART` makro volání. Pro každý agregaci, která používá třídu, existuje jedno **INTERFACE_AGGREGATE** makro volání.  
+ U každého rozhraní, která je implementována je jeden nebo více interface_part – makro volání. Pro každý agregaci, která používá třídu je jedna INTERFACE_AGGREGATE makro volání.  
   
  Další informace o rozhraní mapy, najdete v části [Technická poznámka 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -85,7 +85,7 @@ Zaregistruje zpětné volání metody se příkaz zdroj.
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  ID příkazu.  
    
 ### <a name="remarks"></a>Poznámky  
@@ -109,10 +109,10 @@ Zaregistruje zpětné volání metody se zprávou příkazu update uživatelské
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  ID příkazu.  
   
- `cmdUI`  
+ *cmdUI*  
  ID příkazu zprávy.  
    
 ### <a name="remarks"></a>Poznámky  
@@ -173,20 +173,20 @@ Vytvoří položku v mapě delegáta.
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>Parametry  
- `MEMBER`  
+ *ČLEN*  
  Obslužná rutina události být připojené k ovládacímu prvku.  
   
- `ARG0`  
- První argument funkce spravovaná obslužná rutina události, jako například **objekt ^**.  
+ *ARG0*  
+ První argument funkce spravovaná obslužná rutina události, jako například `Object^`.  
   
- `ARG1`  
- Druhý argument spravovaná obslužná rutina události, jako například **EventArgs ^**.  
+ *ARG1*  
+ Druhý argument spravovaná obslužná rutina události, jako například `EventArgs^`.  
    
 ### <a name="remarks"></a>Poznámky  
  Každá položka v mapě delegáta odpovídá delegáta obslužné rutiny spravovaného události vytvořené [MAKE_DELEGATE –](#make_delegate).  
    
 ### <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje, jak používat `EVENT_DELEGATE_ENTRY` vytvořit položku v mapě delegáta pro `OnClick` obslužné rutiny události; také najdete v příkladu v `MAKE_DELEGATE`. Další informace najdete v tématu [postup: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+ Následující příklad kódu ukazuje, jak vytvořit položku v mapě delegáta pro pomocí EVENT_DELEGATE_ENTRY – `OnClick` obslužné rutiny události; také najdete příklad kódu v MAKE_DELEGATE –. Další informace najdete v tématu [postup: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -205,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART –
-Použít mezi `BEGIN_INTERFACE_MAP` makro a `END_INTERFACE_MAP` makro u každého rozhraní objektu bude podporovat.  
+Použít mezi begin_interface_map – makro a end_interface_map – makro pro jednotlivá rozhraní, které budou podporovat objektu.  
    
 ### <a name="syntax"></a>Syntaxe    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Název třídy, která obsahuje mapy rozhraní.    
- `iid`  
+ *identifikátory IID*  
  Identifikátory IID, který se má namapovat k třídě embedded.    
  *localClass*  
  Název třídy místní.  
    
 ### <a name="remarks"></a>Poznámky  
- Umožňuje mapovat IID členem třídy indikován `theClass` a *localClass*.  
+ Umožňuje mapovat IID členem třídy indikován *theClass* a *localClass*.  
   
  Další informace o rozhraní mapy, najdete v části [Technická poznámka 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -236,14 +236,14 @@ Připojí do ovládacího prvku spravované obslužné rutiny události.
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>Parametry  
- `DELEGATE`  
+ *DELEGÁT*  
  Typ obslužné rutiny spravovaného události delegovat, jako například [obslužná rutina události](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
- `MEMBER`  
+ *ČLEN*  
  Název metody obslužné rutiny události být připojené k ovládacímu prvku.  
    
 ### <a name="remarks"></a>Poznámky  
- Toto makro vytvoří delegáta obslužné rutiny událostí spravovaného typu `DELEGATE` a názvu `MEMBER`. Delegát obslužná rutina události spravované umožňuje nativních tříd pro zpracování spravovaného události.  
+ Toto makro vytvoří delegáta obslužné rutiny událostí spravovaného typu *delegovat* a názvu *člen*. Delegát obslužná rutina události spravované umožňuje nativních tříd pro zpracování spravovaného události.  
    
 ### <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje, jak volat `MAKE_DELEGATE` připojit `OnClick` obslužné rutiny události pro ovládací prvek MFC `MyControl`. Širší vysvětlení, jak tento makro funguje v aplikaci MFC najdete v tématu [postup: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  

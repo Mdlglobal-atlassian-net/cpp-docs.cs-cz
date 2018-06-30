@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f74782241ec69d77ec55b8613c59f87adb40fb
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374585"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122827"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList – třída
 Typově bezpečný "obálky" poskytuje pro objekty třídy `CPtrList`.  
@@ -54,10 +54,10 @@ class CTypedPtrList : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy seznamu typu ukazatele; musí být třída seznamu ukazatele ( `CObList` nebo `CPtrList`).  
   
- `TYPE`  
+ *TYP*  
  Typ elementů uložený v seznamu základní třídy.  
   
 ## <a name="members"></a>Členové  
@@ -119,17 +119,17 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYP*  
  Typ elementů uložený v seznamu základní třídy.  
   
- `newElement`  
- Ukazatel objektu, který má být přidán do tohoto seznamu. A **NULL** je povolena hodnota.  
+ *newElement*  
+ Ukazatel objektu, který má být přidán do tohoto seznamu. Je povolena hodnota NULL.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy seznamu typu ukazatele; musí být třída seznamu ukazatele ( [CObList](../../mfc/reference/coblist-class.md) nebo [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- Ukazatel na jiný [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objektu. Prvky v `pNewList` bude přidán do tohoto seznamu.  
+ *pNewList*  
+ Ukazatel na jiný [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objektu. Prvky v *pNewList* bude přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí první verze **pozice** hodnota nově vloženou elementu.  
+ První verze vrací hodnotu pozice nově vloženou elementu.  
   
 ### <a name="remarks"></a>Poznámky  
  První verze přidá nového elementu před první pozice v seznamu. Druhá verze přidá jiného seznamu elementů před hlavičky.  
@@ -146,23 +146,23 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYP*  
  Typ elementů uložený v seznamu základní třídy.  
   
- `newElement`  
- Ukazatel objektu, který má být přidán do tohoto seznamu. A **NULL** je povolena hodnota.  
+ *newElement*  
+ Ukazatel objektu, který má být přidán do tohoto seznamu. Je povolena hodnota NULL.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy seznamu typu ukazatele; musí být třída seznamu ukazatele ( [CObList](../../mfc/reference/coblist-class.md) nebo [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- Ukazatel na jiný [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objektu. Prvky v `pNewList` bude přidán do tohoto seznamu.  
+ *pNewList*  
+ Ukazatel na jiný [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) objektu. Prvky v *pNewList* bude přidán do tohoto seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí první verze **pozice** hodnota nově vloženou elementu.  
+ První verze vrací hodnotu pozice nově vloženou elementu.  
   
 ### <a name="remarks"></a>Poznámky  
  První verze přidá nového elementu za konec seznamu. Druhá verze přidá jiného seznamu elementů za konec seznamu.  
   
 ##  <a name="getat"></a>  CTypedPtrList::GetAt  
- Proměnné typu **pozice** je klíč pro seznamu.  
+ Klíč pro seznamu je proměnná typu POZICI.  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -174,17 +174,17 @@ TYPE GetAt(POSITION position) const;
  Parametr šablony určující typ elementů, které jsou uloženy v seznamu.  
   
  *Pozice*  
- A **pozice** hodnoty vrácené předchozí `GetHeadPosition` nebo **najít** volání funkce člen.  
+ Hodnota pozice vrácený předchozím `GetHeadPosition` nebo `Find` volání funkce člen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud v seznamu je přístupné přes ukazatel na **const CTypedPtrList**, pak `GetAt` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
+ Pokud v seznamu je přístupné přes ukazatel na `const CTypedPtrList`, pak `GetAt` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
   
  Pokud v seznamu přistupuje přímo nebo prostřednictvím ukazatele na `CTypedPtrList`, pak `GetAt` vrátí odkaz na ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Není stejný jako index a nemůže pracovat **pozice** hodnotu sami. `GetAt` načte `CObject` ukazatel přidružené k dané pozici.  
+ Není stejný jako index a jste nemůže pracovat na hodnotu pozice sami. `GetAt` načte `CObject` ukazatel přidružené k dané pozici.  
   
- Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
+ Je nutné zajistit, že hodnota pozice představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
  Tato vložená funkce volá `BASE_CLASS` **:: GetAt**.  
   
@@ -201,7 +201,7 @@ TYPE GetHead() const;
  Parametr šablony určující typ elementů, které jsou uloženy v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud v seznamu je přístupné přes ukazatel na **const CTypedPtrList**, pak `GetHead` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
+ Pokud v seznamu je přístupné přes ukazatel na `const CTypedPtrList`, pak `GetHead` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
   
  Pokud v seznamu přistupuje přímo nebo prostřednictvím ukazatele na `CTypedPtrList`, pak `GetHead` vrátí odkaz na ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
@@ -209,7 +209,7 @@ TYPE GetHead() const;
  Ujistěte se, že v seznamu není prázdná před voláním `GetHead`. Pokud je seznam prázdný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí. Použití [IsEmpty](../../mfc/reference/coblist-class.md#isempty) ověřit, jestli seznam obsahuje elementy.  
   
 ##  <a name="getnext"></a>  CTypedPtrList::GetNext  
- Získá seznam element identifikovaný `rPosition`, potom nastaví `rPosition` k **pozice** hodnotu další položky v seznamu.  
+ Získá seznam element identifikovaný *rPosition*, pak nastaví *rPosition* na POZICI hodnotu další položky v seznamu.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -220,25 +220,25 @@ TYPE GetNext(POSITION& rPosition) const;
  *TYP*  
  Parametr šablony určující typ elementů obsažených v tomto seznamu.  
   
- `rPosition`  
- Odkaz na **pozice** hodnoty vrácené předchozí `GetNext`, `GetHeadPosition`, nebo jiné členské funkce volání.  
+ *rPosition*  
+ Odkaz na hodnotu pozice vrácený předchozím `GetNext`, `GetHeadPosition`, nebo jiné členské funkce volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud v seznamu je přístupné přes ukazatel na **const CTypedPtrList**, pak `GetNext` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
+ Pokud v seznamu je přístupné přes ukazatel na `const CTypedPtrList`, pak `GetNext` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
   
  Pokud v seznamu přistupuje přímo nebo prostřednictvím ukazatele na `CTypedPtrList`, pak `GetNext` vrátí odkaz na ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
 ### <a name="remarks"></a>Poznámky  
  Můžete použít `GetNext` ve smyčce dopředného iterace Pokud vytvořit počáteční pozice pomocí volání `GetHeadPosition` nebo [CPtrList::Find](../../mfc/reference/coblist-class.md#find).  
   
- Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
+ Je nutné zajistit, že hodnota pozice představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
- Pokud načtené elementem je poslední v seznamu, pak nová hodnota `rPosition` je nastaven na **NULL**.  
+ Pokud načtené elementem je poslední v seznamu, pak nová hodnota *rPosition* je nastaven na hodnotu NULL.  
   
  Je možné odebrat element během iterace. Podívejte se na příklad pro [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
 ##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
- Získá seznam element identifikovaný `rPosition`, potom nastaví `rPosition` k **pozice** hodnotu předchozí položky v seznamu.  
+ Získá seznam element identifikovaný *rPosition*, pak nastaví *rPosition* na POZICI hodnotu předchozí položky v seznamu.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -249,20 +249,20 @@ TYPE GetPrev(POSITION& rPosition) const;
  *TYP*  
  Parametr šablony určující typ elementů obsažených v tomto seznamu.  
   
- `rPosition`  
- Odkaz na **pozice** hodnoty vrácené předchozí `GetPrev` nebo jiné členské funkce volání.  
+ *rPosition*  
+ Odkaz na hodnotu pozice vrácený předchozím `GetPrev` nebo jiné členské funkce volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud v seznamu je přístupné přes ukazatel na **const CTypedPtrList**, pak `GetPrev` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
+ Pokud v seznamu je přístupné přes ukazatel na `const CTypedPtrList`, pak `GetPrev` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
   
  Pokud v seznamu přistupuje přímo nebo prostřednictvím ukazatele na `CTypedPtrList`, pak `GetPrev` vrátí odkaz na ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete použít `GetPrev` ve smyčce zpětné iterace Pokud vytvořit počáteční pozice pomocí volání `GetTailPosition` nebo **najít**.  
+ Můžete použít `GetPrev` ve smyčce zpětné iterace Pokud vytvořit počáteční pozice pomocí volání `GetTailPosition` nebo `Find`.  
   
- Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
+ Je nutné zajistit, že hodnota pozice představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
- Pokud je načtený element první v seznamu, pak nová hodnota `rPosition` je nastaven na **NULL**.  
+ Pokud je načtený element první v seznamu, pak nová hodnota *rPosition* je nastaven na hodnotu NULL.  
   
 ##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Získá ukazatele, který reprezentuje element head tohoto seznamu.  
@@ -277,7 +277,7 @@ TYPE GetTail() const;
  Parametr šablony určující typ elementů, které jsou uloženy v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud v seznamu je přístupné přes ukazatel na **const CTypedPtrList**, pak `GetTail` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
+ Pokud v seznamu je přístupné přes ukazatel na `const CTypedPtrList`, pak `GetTail` vrací ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a tedy chrání před změnou seznamu.  
   
  Pokud v seznamu přistupuje přímo nebo prostřednictvím ukazatele na `CTypedPtrList`, pak `GetTail` vrátí odkaz na ukazatel s typem zadaným parametrem šablony *typu*. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a proto umožňuje do seznamu položek má být změněn.  
   
@@ -326,19 +326,19 @@ void SetAt(POSITION pos, TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
- **Pozice** elementu nastavit.  
+ *POS*  
+ POZICE elementu, který chcete nastavit.  
   
  *TYP*  
  Typ elementů uložený v seznamu základní třídy.  
   
- `newElement`  
+ *newElement*  
  Ukazatel objekt, který má být zapsán do seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- Proměnné typu **pozice** je klíč pro seznamu. Není stejný jako index a nemůže pracovat **pozice** hodnotu sami. `SetAt` zapíše objekt ukazatel na zadané pozici v seznamu.  
+ Klíč pro seznamu je proměnná typu POZICI. Není stejný jako index a jste nemůže pracovat na hodnotu pozice sami. `SetAt` zapíše objekt ukazatel na zadané pozici v seznamu.  
   
- Musíte zajistit, aby vaše **pozice** hodnota představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
+ Je nutné zajistit, že hodnota pozice představuje platnou místo v seznamu. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
  Podrobné poznámky, najdete v části [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).  
   

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375145"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122712"
 ---
 # <a name="cstringlist-class"></a>CStringList – třída
 Podporuje seznamy `CString` objekty.  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Poznámky  
  Všechny porovnání se provádí hodnotu, což znamená, že místo adresy řetězce jsou porovnávány znaky v řetězci.  
   
- `CStringList` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud seznam `CString` objekty ukládána do archivu, a to buď operátor přetížené vložení nebo s `Serialize` členské funkce se každý `CString` element serializován naopak.  
+ `CStringList` zahrnuje implement_serial – makro pro podporu serializace a vypsání jejích elementů. Pokud seznam `CString` objekty ukládána do archivu, a to buď operátor přetížené vložení nebo s `Serialize` členské funkce se každý `CString` element serializován naopak.  
   
  Pokud potřebujete výpis individuální `CString` elementy, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
   

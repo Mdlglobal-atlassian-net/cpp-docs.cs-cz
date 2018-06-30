@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372992"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122634"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox – třída
 `CVSListBox` Třída podporuje ovládací prvek seznamu upravovat.  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `strIext`  
+ [v] *strIext*  
  Odkaz na řetězec.  
   
- [v] `dwData`  
+ [v] *dwData*  
  32bitovou hodnotu specifické pro aplikaci, která souvisí s řetězcem. Výchozí hodnota je 0.  
   
- [v] `iIndex`  
- Index založený na nule pozice, který bude obsahovat řetězec. Pokud `iIndex` parametr hodnotu -1, řetězec se přidá na konec seznamu. Výchozí hodnota je -1.  
+ [v] *iIndex*  
+ Index založený na nule pozice, který bude obsahovat řetězec. Pokud *iIndex* parametr hodnotu -1, řetězec se přidá na konec seznamu. Výchozí hodnota je -1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index založený na nule pozice řetězce v ovládacím prvku seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [CVSListBox::GetItemData](#getitemdata) metoda se načíst hodnotu, která je zadána `dwData` parametr. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na další data.  
+ Použití [CVSListBox::GetItemData](#getitemdata) metoda se načíst hodnotu, která je zadána *dwData* parametr. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na další data.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Vytvoří `CVSListBox` objektu.  
@@ -158,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index položky ovládací prvek seznamu nule.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se operace upravování spustí úspěšně; v opačném `FALSE`.  
+ Hodnota TRUE, pokud operace upravování spustí úspěšně; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Uživatel spustí operace úpravy poklepáním na popisek položky nebo stisknutím klávesy **F2** nebo **MEZERNÍK** klávesy, když se položky je aktivní.  
@@ -188,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -246,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud zadaná položka je odebrána; v opačném `FALSE`.  
+ Hodnota TRUE, pokud zadaná položka je odebrána; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -262,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iItem`  
+ [v] *položky*  
  Index založený na nule položky ovládacího prvku seznam upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vybere zadanou položku a v případě potřeby, posune položky do zobrazení.  
@@ -281,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iIndex`  
+ [v] *iIndex*  
  Index založený na nule položky ovládacího prvku seznam upravovat.  
   
- [v] `dwData`  
+ [v] *dwData*  
  32bitová hodnota. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na další data.  
   
 ### <a name="remarks"></a>Poznámky  

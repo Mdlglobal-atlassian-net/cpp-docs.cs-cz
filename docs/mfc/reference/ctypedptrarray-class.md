@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375817"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122912"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray – třída
 Typově bezpečný "obálky" poskytuje pro objekty třídy `CPtrArray` nebo `CObArray`.  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy pole typu ukazatele; musí být třídu pole ( `CObArray` nebo `CPtrArray`).  
   
- `TYPE`  
+ *TYP*  
  Typ elementů uložené v poli základní třídy.  
   
 ## <a name="members"></a>Členové  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *TYP*  
  Parametr šablony určující typ elementu, který se má přidat do pole.  
   
- `newElement`  
+ *newElement*  
  Element, který se má přidat do tohoto pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  Podrobné poznámky, najdete v části [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- Tato funkce člen volá `BASE_CLASS` **:: připojení**.  
+ Tato funkce člen volá `BASE_CLASS`:: připojení **.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy pole typu ukazatele; musí být třídu pole ( [CObArray](../../mfc/reference/cobarray-class.md) nebo [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYP*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy pole typu ukazatele; musí být třídu pole ( [CObArray](../../mfc/reference/cobarray-class.md) nebo [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYP*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *TYP*  
  Parametr šablony určující typ elementů uložené v toto pole.  
   
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Dočasné odkaz na element v umístění, které `nIndex`. Tento element je typu zadaném pomocí parametr šablony *typu*.  
+ Dočasné odkaz na element v umístění, které *nIndex*. Tento element je typu zadaném pomocí parametr šablony *typu*.  
   
 ### <a name="remarks"></a>Poznámky  
  Podrobné poznámky, najdete v části [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *TYP*  
  Parametr šablony určující typ elementů uložené v poli.  
   
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Kopie element v umístění, které `nIndex`. Tento element je typu zadaném pomocí parametr šablony *typu*.  
+ Kopie element v umístění, které *nIndex*. Tento element je typu zadaném pomocí parametr šablony *typu*.  
   
 ### <a name="remarks"></a>Poznámky  
  Podrobné poznámky, najdete v části [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který může být větší než hodnoty vrácené [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYP*  
  Typ elementů uložené v poli základní třídy.  
   
- `newElement`  
- Objekt ukazatel umístit do tohoto pole. A `newElement` hodnoty **NULL** je povolen.  
+ *newElement*  
+ Objekt ukazatel umístit do tohoto pole. A *newElement* hodnoty **NULL** je povolen.  
   
- `nCount`  
+ *nCount*  
  Počet, který tento element musí být vložen (výchozí hodnota je 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Celé číslo index, který může být větší než hodnoty vrácené `CObArray::GetUpperBound`.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy pole typu ukazatele; musí být třídu pole ( [CObArray](../../mfc/reference/cobarray-class.md) nebo [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- `pNewArray`  
+ *pNewArray*  
  Další pole, které obsahuje prvky, který se má přidat do tohoto pole.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *TYP*  
  Parametr šablony určující typ elementů uložené v poli.  
   
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0 a menší než nebo rovna hodnotě vrácené [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYP*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Celé číslo index, který je větší než nebo rovna 0.  
   
  *TYP*  
  Typ elementů uložené v poli základní třídy.  
   
- `newElement`  
+ *newElement*  
  Ukazatel objektu, který má být přidán do tohoto pole. A **NULL** je povolena hodnota.  
   
 ### <a name="remarks"></a>Poznámky  

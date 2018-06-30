@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c423f1423c874dbf110cfd6951b3510fe0506af
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375600"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121874"
 ---
 # <a name="csocket-class"></a>CSocket – třída
 Odvozená z `CAsyncSocket`, dědí jeho zapouzdření rozhraní Windows Sockets API a představuje vyšší úrovni abstrakce, než `CAsyncSocket` objektu.  
@@ -58,10 +58,10 @@ class CSocket : public CAsyncSocket
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|Připojí **SOKETU** popisovač `CSocket` objektu.|  
+|[CSocket::Attach](#attach)|Připojí popisovač SOKETU pro `CSocket` objektu.|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Zruší blokování volání, které právě probíhá.|  
 |[CSocket::Create](#create)|Vytvoří soketu.|  
-|[CSocket::FromHandle](#fromhandle)|Vrátí ukazatel na `CSocket` objekt, daný **SOKETU** zpracování.|  
+|[CSocket::FromHandle](#fromhandle)|Vrátí ukazatel na `CSocket` objekt, daný popisovač SOKETU.|  
 |[CSocket::IsBlocking](#isblocking)|Určuje, zda blokování volání v průběhu.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
@@ -73,9 +73,9 @@ class CSocket : public CAsyncSocket
 ## <a name="remarks"></a>Poznámky  
  `CSocket` funguje s třídami `CSocketFile` a `CArchive` ke správě odesílání a příjem dat.  
   
- A `CSocket` objekt také poskytuje blokování, které je nezbytné pro synchronní operace `CArchive`. Blokování funkce, jako například `Receive`, `Send`, `ReceiveFrom`, `SendTo`, a `Accept` (všechny zděděné z `CAsyncSocket`), nevrátí `WSAEWOULDBLOCK` došlo k chybě v `CSocket`. Místo toho tyto funkce počkejte na dokončení operace. Kromě toho bude ukončen původní volání s chybou `WSAEINTR` Pokud `CancelBlockingCall` je volána při jednu z těchto funkcí je zablokovaná.  
+ A `CSocket` objekt také poskytuje blokování, které je nezbytné pro synchronní operace `CArchive`. Blokování funkce, jako například `Receive`, `Send`, `ReceiveFrom`, `SendTo`, a `Accept` (všechny zděděné z `CAsyncSocket`), nevrátí `WSAEWOULDBLOCK` došlo k chybě v `CSocket`. Místo toho tyto funkce počkejte na dokončení operace. Kromě toho původní volání přeruší s chybou WSAEINTR Pokud `CancelBlockingCall` je volána při jednu z těchto funkcí je zablokovaná.  
   
- Použít `CSocket` objektu, volání konstruktoru, pak zavolají `Create` vytvořit základní `SOCKET` zpracování (typ `SOCKET`). Výchozí parametry `Create` vytvořit soket datového proudu, ale pokud nepoužíváte soketu s `CArchive` objekt, můžete zadat parametr, který se vytvořit soket datagram místo, nebo vytvořit vazbu na určitém portu se vytvořit soket serveru. Připojte se k soketu klienta pomocí `Connect` na straně klienta a `Accept` na straně serveru. Pak vytvořte `CSocketFile` objektu a přidružte ji k `CSocket` objekt v `CSocketFile` konstruktor. Dále vytvořte `CArchive` objekt pro odesílání a jeden pro příjem dat (podle potřeby), pak je přidružit `CSocketFile` objekt v `CArchive` konstruktor. Po dokončení komunikace se destroy `CArchive`, `CSocketFile`, a `CSocket` objekty. `SOCKET` Datový typ je popsána v článku [Windows Sockets: pozadí](../../mfc/windows-sockets-background.md).  
+ Použít `CSocket` objektu, volání konstruktoru, pak zavolají `Create` pro vytvoření základní popisovač SOKETU (typ SOKETU). Výchozí parametry `Create` vytvořit soket datového proudu, ale pokud nepoužíváte soketu s `CArchive` objekt, můžete zadat parametr, který se vytvořit soket datagram místo, nebo vytvořit vazbu na určitém portu se vytvořit soket serveru. Připojte se k soketu klienta pomocí `Connect` na straně klienta a `Accept` na straně serveru. Pak vytvořte `CSocketFile` objektu a přidružte ji k `CSocket` objekt v `CSocketFile` konstruktor. Dále vytvořte `CArchive` objekt pro odesílání a jeden pro příjem dat (podle potřeby), pak je přidružit `CSocketFile` objekt v `CArchive` konstruktor. Po dokončení komunikace se destroy `CArchive`, `CSocketFile`, a `CSocket` objekty. Datový typ SOKETU je popsána v článku [Windows Sockets: pozadí](../../mfc/windows-sockets-background.md).  
   
  Při použití `CArchive` s `CSocketFile` a `CSocket`, může nastat situace, kdy `CSocket::Receive` zadá smyčku (podle `PumpMessages(FD_READ)`) čekání na požadovaný počet bajtů. Důvodem je, že rozhraní Windows sockets povolit pouze jedno volání přijatých za FD_READ oznámení, ale `CSocketFile` a `CSocket` povolit více volání přijatých za FD_READ. Pokud dojde FD_READ po žádná data ke čtení, dojde k zablokování aplikace. Pokud se nikdy jiné FD_READ, aplikace přestane komunikaci přes soketu.  
   
@@ -108,14 +108,14 @@ BOOL Attach(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hSocket`  
+ *hSocket*  
  Obsahuje popisovač pro soket.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěšného funkce.  
   
 ### <a name="remarks"></a>Poznámky  
- **SOKETU** popisovač je uložený v objektu [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) – datový člen.  
+ Popisovač SOKETU je uložený v objektu [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) – datový člen.  
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -134,11 +134,11 @@ void CancelBlockingCall();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce zruší všechny nevyřízené operace blokování této soketu. Původní blokování volání s chybou přeruší co nejdříve **WSAEINTR**.  
+ Tato funkce zruší všechny nevyřízené operace blokování této soketu. Původní blokování volání s chybou WSAEINTR přeruší co nejdříve.  
   
- V případě blokování **Connect** operace, implementace rozhraní Windows Sockets se ukončí blokování volání, jakmile to možné, ale nemusí být možné soketu prostředky k uvolnění až po dokončení připojení (a pak bylo nastaveno) nebo vypršení časového limitu. Je to pravděpodobně byly patrné pouze v případě, že aplikace se hned pokusí otevřít nové soket (pokud jsou k dispozici žádné sockets) nebo pro připojení k témuž partnerovi.  
+ V případě blokování `Connect` operace, implementace rozhraní Windows Sockets se ukončí blokování volání, také možné, ale nemusí být možné soketu prostředky k uvolnění dokud připojení dokončil (a pak bylo nastaveno) nebo Vypršel časový limit. Je to pravděpodobně byly patrné pouze v případě, že aplikace se hned pokusí otevřít nové soket (pokud jsou k dispozici žádné sockets) nebo pro připojení k témuž partnerovi.  
   
- Všechny operace zrušení jiné než **přijmout** soketu můžete nechat v neurčitém stavu. Pokud aplikace zruší blokování operace na soketu, jenom operace, které aplikace může záviset na schopnost provádět na soket je volání **Zavřít**, i když jiné operace může fungovat na některé Windows Sockets implementace. Pokud vyžadujete maximální přenositelnost pro vaši aplikaci, musí být pozor, abyste závisí na provádění operací po Storno.  
+ Všechny operace zrušení jiné než `Accept` soketu můžete nechat v neurčitém stavu. Pokud aplikace zruší blokování operace na soketu, jenom operace, které aplikace může záviset na schopnost provádět na soket je volání `Close`, i když na některé implementace rozhraní Windows Sockets může fungovat jiné operace. Pokud vyžadujete maximální přenositelnost pro vaši aplikaci, musí být pozor, abyste závisí na provádění operací po Storno.  
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -153,27 +153,27 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSocketPort`  
+ *nSocketPort*  
  Konkrétní port pro použití s soket nebo 0, pokud chcete, aby MFC vyberte port.  
   
- `nSocketType`  
- **SOCK_STREAM** nebo **SOCK_DGRAM**.  
+ *nSocketType*  
+ SOCK_STREAM nebo SOCK_DGRAM.  
   
- `lpszSocketAddress`  
- Ukazatel na řetězec obsahující síťovou adresu připojené soketu desítkovém číslo, například "128.56.22.8". Předávání **NULL** řetězec pro tento parametr určuje **CSocket** instance má naslouchat činnost klienta na všech síťových rozhraní.  
+ *lpszSocketAddress*  
+ Ukazatel na řetězec obsahující síťovou adresu připojené soketu desítkovém číslo, například "128.56.22.8". Předávání hodnotu NULL řetězec pro tento parametr určuje `CSocket` instance má naslouchat činnost klienta na všech síťových rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, je-li funkce úspěšně; v opačném případě 0 a určitý kód chyby může být načten voláním `GetLastError`.  
   
 ### <a name="remarks"></a>Poznámky  
- **Vytvoření** pak zavolá **vazby** pro vazbu na zadanou adresu soketu. Jsou podporovány následující typy soketu:  
+ `Create` pak zavolá `Bind` pro vazbu na zadanou adresu soketu. Jsou podporovány následující typy soketu:  
   
-- **SOCK_STREAM** sekvencování, poskytuje spolehlivé, obousměrný, založeného na připojení bajtové datové proudy. Rodina adres Internetu používá protokol TCP (Transmission Control).  
+- SOCK_STREAM poskytuje sekvencování, spolehlivé, obousměrný, založeného na připojení bajtové datové proudy. Rodina adres Internetu používá protokol TCP (Transmission Control).  
   
-- **SOCK_DGRAM** podporuje datagramy, které jsou bez připojení, nespolehlivé vyrovnávací paměti pevné (obvykle malé) maximální délky. Rodina adres Internetu používá protokol UDP (User Datagram). Chcete-li použít tuto možnost, nesmí používat soketu s `CArchive` objektu.  
+- Datagramy SOCK_DGRAM podporuje, které jsou bez připojení, nespolehlivé vyrovnávací paměti pevné (obvykle malé) maximální délky. Rodina adres Internetu používá protokol UDP (User Datagram). Chcete-li použít tuto možnost, nesmí používat soketu s `CArchive` objektu.  
   
     > [!NOTE]
-    >  **Přijmout** – členská funkce trvá odkaz na nový, prázdný `CSocket` objektu jako její parametr. Je nutné vytvořit tento objekt před voláním **přijmout**. Mějte na paměti, že pokud tento objekt soketu prochází oboru, zavře připojení. Nevolejte **vytvořit** pro tento nový objekt soketu.  
+    >  `Accept` – Členská funkce trvá odkaz na nový, prázdný `CSocket` objektu jako její parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Mějte na paměti, že pokud tento objekt soketu prochází oboru, zavře připojení. Nevolejte `Create` pro tento nový objekt soketu.  
   
  Další informace o sokety datového proudu a datagram, najdete v článcích [Windows Sockets: pozadí](../../mfc/windows-sockets-background.md), [Windows Sockets: porty a adresy soketů](../../mfc/windows-sockets-ports-and-socket-addresses.md), a [Windows Sockets: použití Sokety s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -185,7 +185,7 @@ CSocket();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytváření, musí volat **vytvořit** – členská funkce.  
+ Po vytváření, musí volat `Create` – členská funkce.  
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -197,14 +197,14 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hSocket`  
+ *hSocket*  
  Obsahuje popisovač pro soket.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na `CSocket` objekt, nebo **NULL** Pokud neexistuje žádné `CSocket` objekt připojený k `hSocket`.  
+ Ukazatel na `CSocket` objektu, nebo hodnota NULL, pokud neexistuje žádné `CSocket` objekt připojený k *hSocket*.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud zadané **SOKETU** zpracování, pokud `CSocket` objektu není připojený k popisovač, vrátí funkce člen **hodnotu NULL** a nevytvoří dočasný objekt.  
+ Pokud je zadaný popisovač SOKETU, pokud `CSocket` objektu není připojený k popisovač, – členská funkce vrátí hodnotu NULL a nevytvoří dočasný objekt.  
   
  Další informace najdete v tématu [Windows Sockets: použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   

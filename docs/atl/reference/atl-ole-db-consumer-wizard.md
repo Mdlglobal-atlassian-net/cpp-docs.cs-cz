@@ -1,7 +1,7 @@
 ---
 title: Průvodce příjemce OLE DB ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364947"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121686"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemce ATL OLE DB
 Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby dat potřebné pro přístup k zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB.  
@@ -133,7 +133,7 @@ Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby da
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  
@@ -172,13 +172,13 @@ Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby da
  **Tabulka**  
  Tuto možnost vyberte, pokud chcete použít `CTable` nebo **db_table** k vytvoření tabulky a přistupující k tabulce deklarace tříd.  
   
- **příkaz**  
+ **Příkaz**  
  Tuto možnost vyberte, pokud chcete použít `CCommand` nebo **db_command** k vytvoření příkazu a příkazu přistupující deklarace tříd. Toto je výchozí výběr.  
   
  **Podpora**  
  Vyberte pole a určete typy aktualizací, které mají být podporovány v příjemci (výchozí hodnota je žádný). Každý z těchto nastaví [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) a odpovídající položky pro [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) ve vlastnosti nastavit mapy.  
   
- **změnit**  
+ **Změna**  
  Určuje, že příjemce podporuje aktualizace řádek dat v dané sadě řádků.  
   
  **Vložení**  

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ff4e48bd7006c3706909d1791b82aa8cda2658
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377898"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123120"
 ---
 # <a name="cview-class"></a>CView – třída
 Poskytuje základní funkce pro třídy uživatelem definované zobrazení.  
@@ -155,7 +155,7 @@ class AFX_NOVTABLE CView : public CWnd
   
 - [CTreeView](../../mfc/reference/ctreeview-class.md), zobrazení, které umožňuje použití dokumentu - view – architektura s ovládacích prvků strom.  
   
- `CView` Třída také obsahuje implementace odvozené třídy s názvem **CPreviewView**, který je využíván jiným rozhraní k zobrazení náhledu tisku. Tato třída poskytuje podporu pro funkce, které jsou jedinečné pro okno náhledu, například panel nástrojů, zobrazení stránek jedním nebo double, a přiblížení a oddálení, který se zvětšení zobrazeného obrazu. Nemusíte volání nebo přepsat kterékoliv **CPreviewView**na členské funkce, pokud chcete implementovat vlastní rozhraní pro náhledu tisku (například pokud chcete zajistit podporu úpravy v režimu náhledu tisku). Další informace o používání `CView`, najdete v části [Document/View – architektura](../../mfc/document-view-architecture.md) a [tisk](../../mfc/printing.md). Kromě toho najdete v části [Technická poznámka 30](../../mfc/tn030-customizing-printing-and-print-preview.md) Další informace o přizpůsobení náhledu tisku.  
+ `CView` Třída také obsahuje implementace odvozené třídy s názvem `CPreviewView`, který je využíván jiným rozhraní k zobrazení náhledu tisku. Tato třída poskytuje podporu pro funkce, které jsou jedinečné pro okno náhledu, například panel nástrojů, zobrazení stránek jedním nebo double, a přiblížení a oddálení, který se zvětšení zobrazeného obrazu. Nemusíte volání nebo přepsat kterékoliv `CPreviewView`na členské funkce, pokud chcete implementovat vlastní rozhraní pro náhledu tisku (například pokud chcete zajistit podporu úpravy v režimu náhledu tisku). Další informace o používání `CView`, najdete v části [Document/View – architektura](../../mfc/document-view-architecture.md) a [tisk](../../mfc/printing.md). Kromě toho najdete v části [Technická poznámka 30](../../mfc/tn030-customizing-printing-and-print-preview.md) Další informace o přizpůsobení náhledu tisku.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -187,14 +187,14 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud může začít tisku nebo náhledu; 0, pokud operace byla zrušena.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce chování závisí na tom, zda je volána pro tisku nebo náhledu (určená elementem **m_bPreview** členem `pInfo` parametr). Pokud tisku souboru této funkce vyvolá dialogové okno tisku, pomocí hodnoty v [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktury, která `pInfo` bodů poté, co uživatel zavřel dialogové okno, funkce vytvoří tiskárny kontextu zařízení na základě nastavení zadané v dialogovém okně vyberte uživatele a vrátí tento kontext zařízení prostřednictvím `pInfo` parametr. Tento kontext zařízení se používá k vytištění dokumentu.  
+ Tato funkce chování závisí na tom, zda je volána pro tisku nebo náhledu (určená elementem `m_bPreview` členem *pInfo* parametr). Pokud tisku souboru této funkce vyvolá dialogové okno tisku, pomocí hodnoty v [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktury, která *pInfo* bodů poté, co uživatel zavřel dialogové okno, vytvoří funkce kontext zařízení tiskárny na základě nastavení zadané v dialogovém okně vyberte uživatele a vrátí tento kontext zařízení prostřednictvím *pInfo* parametr. Tento kontext zařízení se používá k vytištění dokumentu.  
   
  Pokud soubor prohlíženého, tato funkce vytvoří kontextu zařízení tiskárny pomocí aktuálního nastavení tiskárny; Tento kontext zařízení se používá pro simulaci tiskárny verzi Preview.  
   
@@ -206,7 +206,7 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CDocument](../../mfc/reference/cdocument-class.md) objekt přidružený k zobrazení. **NULL** Pokud zobrazení není připojen k dokumentu.  
+ Ukazatel [CDocument](../../mfc/reference/cdocument-class.md) objekt přidružený k zobrazení. Hodnota NULL, pokud zobrazení není připojen k dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
  To umožňuje volání členských funkcí dokumentu.  
@@ -219,14 +219,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDocItem`  
+ *pDocItem*  
  Odkazuje na položku dokumentu testuje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud je vybrána položka zadaný dokument; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této funkce vrátí **FALSE**. Přepsat tuto funkci při implementaci výběr pomocí [CDocItem](../../mfc/reference/cdocitem-class.md) objekty. Tato funkce je nutné přepsat, pokud zobrazení obsahuje OLE – položky.  
+ Výchozí implementace této funkce vrátí hodnotu FALSE. Přepsat tuto funkci při implementaci výběr pomocí [CDocItem](../../mfc/reference/cdocitem-class.md) objekty. Tato funkce je nutné přepsat, pokud zobrazení obsahuje OLE – položky.  
   
 ##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  Voláno rámcem, pokud je aktivace nebo deaktivace rámce okna obsahující zobrazení.  
@@ -238,16 +238,16 @@ virtual void OnActivateFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nState`  
+ *nInformace*  
  Určuje, zda se okně s rámečkem aktivace nebo deaktivace. Může být jedna z následujících hodnot:  
   
-- **WA_INACTIVE** rámce okna je právě deaktivována.  
+- Okně s rámečkem WA_INACTIVE je právě deaktivována.  
   
-- **WA_ACTIVE** rámce okna je právě aktivován prostřednictvím některé metody jiného, než klikněte na tlačítko myši (například pomocí rozhraní klávesnice vyberte okno).  
+- WA_ACTIVE, který je právě aktivován rámce okna pomocí některé jiné metody než myši klikněte na tlačítko (například pomocí rozhraní klávesnice vyberte okno).  
   
-- **WA_CLICKACTIVE** rámce okna je právě aktivován kliknutí myší  
+- Okně s rámečkem WA_CLICKACTIVE je právě aktivován kliknutí myší  
   
- `pFrameWnd`  
+ *pFrameWnd*  
  Ukazatel na rámec okna, který má být aktivována.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -264,19 +264,19 @@ virtual void OnActivateView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bActivate`  
+ *bActivate*  
  Určuje, zda zobrazení se aktivace nebo deaktivace.  
   
- `pActivateView`  
+ *pActivateView*  
  Odkazuje na objekt zobrazení, který je právě aktivována.  
   
- `pDeactiveView`  
+ *pDeactiveView*  
  Odkazuje na objekt zobrazení, který je právě deaktivována.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této funkce se nastaví fokus na zobrazení právě aktivována. Tato funkce přepsání, pokud chcete provést zvláštní zpracování, pokud je aktivace nebo deaktivace zobrazení. Například pokud chcete zadat speciální vizuální upozornění, které rozlišit aktivní zobrazení z neaktivní zobrazení, které by zkoumat `bActivate` parametr a vzhled zobrazení se aktualizují odpovídajícím způsobem.  
+ Výchozí implementace této funkce se nastaví fokus na zobrazení právě aktivována. Tato funkce přepsání, pokud chcete provést zvláštní zpracování, pokud je aktivace nebo deaktivace zobrazení. Například pokud chcete zadat speciální vizuální upozornění, které rozlišit aktivní zobrazení z neaktivní zobrazení, které by zkoumat *bActivate* parametr a vzhled zobrazení se aktualizují odpovídajícím způsobem.  
   
- `pActivateView` a `pDeactiveView` parametry příkaz stejné zobrazení, pokud aplikace hlavního rámce okna se aktivuje beze změny v aktivním zobrazení – například, pokud je přenášení fokus z jiné aplikace na tento jeden, nikoli z jednoho zobrazení do druhého v aplikaci nebo při přepínání mezi podřízených oken MDI. To umožňuje zobrazení chcete znovu jeho palety, v případě potřeby.  
+ *PActivateView* a *pDeactiveView* parametry příkaz stejné zobrazení, pokud aplikace hlavního rámce okna se aktivuje beze změny v aktivním zobrazení – například pokud je fokus přenést z jiné aplikace na tento jeden, nikoli z jednoho zobrazení do druhého v rámci aplikace nebo při přepínání mezi podřízených oken MDI. To umožňuje zobrazení chcete znovu jeho palety, v případě potřeby.  
   
  Tyto parametry se liší při [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) je volán s zobrazení, které se liší od co [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) by vrátit. K tomu dochází nejčastěji s rozdělovače oken.  
   
@@ -290,10 +290,10 @@ virtual void OnBeginPrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Body do kontextu zařízení tiskárny.  
   
- `pInfo`  
+ *pInfo*  
  Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -312,30 +312,30 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) přetažen do oblasti přetažení zobrazení.  
   
- `dwKeyState`  
- Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, a **MK_RBUTTON**.  
+ *dwKeyState*  
+ Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.  
   
- `point`  
+ *Bod*  
  Aktuální myši pozice relativně k klientské oblasti zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota z `DROPEFFECT` výčtového typu, který určuje typ drop, která, pokud je uživatel vyřadit objekt v této pozici. Typ rozevírací obvykle závisí na aktuální klíče stavu indikován `dwKeyState`. Standardní mapování keystates k `DROPEFFECT` hodnoty je:  
+ Hodnota z DROPEFFECT vytvořit výčet typu, který určuje typ drop, která, pokud je uživatel vyřadit objekt v této pozici. Typ rozevírací obvykle závisí na aktuální klíče stavu indikován *dwKeyState*. Standardní mapování keystates DROPEFFECT hodnoty je:  
   
-- `DROPEFFECT_NONE` Datový objekt nelze vyřadit, v tomto okně.  
+- V tomto okně nelze vyřadit DROPEFFECT_NONE datový objekt.  
   
-- `DROPEFFECT_LINK` pro **MK_CONTROL &#124; MK_SHIFT** vytvoří propojení mezi objektem a jeho serverem.  
+- DROPEFFECT_LINK pro MK_CONTROL &#124; MK_SHIFT vytvoří propojení mezi objektem a jeho serverem.  
   
-- `DROPEFFECT_COPY` pro **MK_CONTROL** vytvoří kopii vynechaných objektu.  
+- DROPEFFECT_COPY pro MK_CONTROL vytvoří kopii vynechaných objektu.  
   
-- `DROPEFFECT_MOVE` pro **MK_ALT** vytvoří kopii vynechaných objektu a původní objekt odstranit. Toto je obvykle rozevírací platit výchozí, pokud zobrazení může přijmout tento objekt data.  
+- DROPEFFECT_MOVE pro MK_ALT vytvoří kopii vynechaných objektu a odstranit původní objekt. Toto je obvykle rozevírací platit výchozí, pokud zobrazení může přijmout tento objekt data.  
   
  Další informace najdete v tématu ukázku rozšířené koncepty MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace je Neprovádět žádnou akci a vrátí `DROPEFFECT_NONE`.  
+ Výchozí implementace je Neprovádět žádnou akci a vrátí DROPEFFECT_NONE.  
   
  Funkci pro přípravu na budoucí volání přepsat [ondragover –](#ondragover) – členská funkce. V tuto chvíli pro pozdější použití v mají být načtena žádná data, která vyžaduje z datový objekt `OnDragOver` – členská funkce. Zobrazení by měl být i během této doby visual názor uživatele. Další informace najdete v článku [přetažení: implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -360,30 +360,30 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) přetažen přes cíle přetažení.  
   
- `dwKeyState`  
- Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, a **MK_RBUTTON**.  
+ *dwKeyState*  
+ Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.  
   
- `point`  
+ *Bod*  
  Aktuální myši pozice relativně k zobrazení klientské oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota z `DROPEFFECT` výčtového typu, který určuje typ drop, která, pokud je uživatel vyřadit objekt v této pozici. Typ rozevírací často závisí na aktuální stav klíče podle `dwKeyState`. Standardní mapování keystates k `DROPEFFECT` hodnoty je:  
+ Hodnota z DROPEFFECT vytvořit výčet typu, který určuje typ drop, která, pokud je uživatel vyřadit objekt v této pozici. Typ rozevírací často závisí na aktuální stav klíče podle *dwKeyState*. Standardní mapování keystates DROPEFFECT hodnoty je:  
   
-- `DROPEFFECT_NONE` Datový objekt nelze vyřadit, v tomto okně.  
+- V tomto okně nelze vyřadit DROPEFFECT_NONE datový objekt.  
   
-- `DROPEFFECT_LINK` pro **MK_CONTROL &#124; MK_SHIFT** vytvoří propojení mezi objektem a jeho serverem.  
+- DROPEFFECT_LINK pro MK_CONTROL &#124; MK_SHIFT vytvoří propojení mezi objektem a jeho serverem.  
   
-- `DROPEFFECT_COPY` pro **MK_CONTROL** vytvoří kopii vynechaných objektu.  
+- DROPEFFECT_COPY pro MK_CONTROL vytvoří kopii vynechaných objektu.  
   
-- `DROPEFFECT_MOVE` pro **MK_ALT** vytvoří kopii vynechaných objektu a původní objekt odstranit. Toto je obvykle rozevírací platit výchozí, pokud zobrazení může přijmout datový objekt.  
+- DROPEFFECT_MOVE pro MK_ALT vytvoří kopii vynechaných objektu a odstranit původní objekt. Toto je obvykle rozevírací platit výchozí, pokud zobrazení může přijmout datový objekt.  
   
  Další informace najdete v tématu ukázku rozšířené koncepty MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace je Neprovádět žádnou akci a vrátí `DROPEFFECT_NONE`.  
+ Výchozí implementace je Neprovádět žádnou akci a vrátí DROPEFFECT_NONE.  
   
  Přepsání této funkce můžete poskytnout zpětnou vazbu od visual uživatelů během operace přetažení. Vzhledem k tomu, že tato funkce je volána nepřetržitě, kód, jsou v něm obsažena by mělo být optimalizované co nejvíc. Další informace najdete v článku [přetažení: implementace cíle přetažení](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -397,24 +397,24 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwKeyState`  
- Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, a **MK_RBUTTON**.  
+ *dwKeyState*  
+ Obsahuje stav modifikační klávesy. Jedná se o kombinaci libovolný počet následující: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.  
   
- `point`  
+ *Bod*  
  Obsahuje umístění kurzoru v pixelech, relativně k obrazovce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota z `DROPEFFECT` výčtového typu, který určuje typ drop, která, pokud je uživatel vyřadit objekt v této pozici. Typ rozevírací obvykle závisí na aktuální klíče stavu indikován `dwKeyState`. Standardní mapování keystates k `DROPEFFECT` hodnoty je:  
+ Hodnota z DROPEFFECT vytvořit výčet typu, který určuje typ drop, která, pokud je uživatel vyřadit objekt v této pozici. Typ rozevírací obvykle závisí na aktuální klíče stavu indikován *dwKeyState*. Standardní mapování keystates DROPEFFECT hodnoty je:  
   
-- `DROPEFFECT_NONE` Datový objekt nelze vyřadit, v tomto okně.  
+- V tomto okně nelze vyřadit DROPEFFECT_NONE datový objekt.  
   
-- `DROPEFFECT_LINK` pro **MK_CONTROL &#124; MK_SHIFT** vytvoří propojení mezi objektem a jeho serverem.  
+- DROPEFFECT_LINK pro MK_CONTROL &#124; MK_SHIFT vytvoří propojení mezi objektem a jeho serverem.  
   
-- `DROPEFFECT_COPY` pro **MK_CONTROL** vytvoří kopii vynechaných objektu.  
+- DROPEFFECT_COPY pro MK_CONTROL vytvoří kopii vynechaných objektu.  
   
-- `DROPEFFECT_MOVE` pro **MK_ALT** vytvoří kopii vynechaných objektu a původní objekt odstranit.  
+- DROPEFFECT_MOVE pro MK_ALT vytvoří kopii vynechaných objektu a odstranit původní objekt.  
   
-- `DROPEFFECT_SCROLL` Označuje, že operaci přetažení scroll dojde nebo dochází v cílové zobrazení.  
+- DROPEFFECT_SCROLL znamená, že operaci přetažení scroll dojde nebo dochází v cílové zobrazení.  
   
  Další informace najdete v tématu ukázku rozšířené koncepty MFC [OCLIENT](../../visual-cpp-samples.md).  
   
@@ -429,13 +429,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Odkazuje na kontext zařízení, který má být používané k vykreslování obrázek dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
  Volá rámec této funkci můžete provést obrazovky zobrazení, tisku a tiskového náhledu a předává kontextu různých zařízení v každém případu. Neexistuje žádný výchozí implementace.  
   
- Je nutné přepsat tuto funkci k zobrazení zobrazení dokumentu. Můžete provádět volání rozhraní GDI grafické zařízení pomocí [CDC](../../mfc/reference/cdc-class.md) objektu na kterou odkazuje `pDC` parametr. Můžete vybrat GDI prostředky, například pera nebo písem a do kontextu zařízení před vykreslením a později je zrušte. Kreslení kód často může být nezávislé na zařízení; To znamená nevyžaduje informace o jaký typ zařízení zobrazit bitovou kopii.  
+ Je nutné přepsat tuto funkci k zobrazení zobrazení dokumentu. Můžete provádět volání rozhraní GDI grafické zařízení pomocí [CDC](../../mfc/reference/cdc-class.md) objektu na kterou odkazuje *primárního řadiče domény* parametr. Můžete vybrat GDI prostředky, například pera nebo písem a do kontextu zařízení před vykreslením a později je zrušte. Kreslení kód často může být nezávislé na zařízení; To znamená nevyžaduje informace o jaký typ zařízení zobrazit bitovou kopii.  
   
  K optimalizaci vykreslování, volání [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) – členská funkce kontextu zařízení a zjistěte, zda se daný obdélníku přidělit. Pokud potřebujete k rozlišení obrazovky normální zobrazení a tisk, zavolejte [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) – členská funkce kontextu zařízení.  
   
@@ -450,28 +450,28 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ ' pDataObject *  
  Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) , je však zrušeno do cíle přetažení.  
   
- `dropEffect`  
+ *dropEffect*  
  Rozevírací účinky, které požadoval uživatel.  
   
-- `DROPEFFECT_COPY` Vytvoří kopii datový objekt probíhá vyřazování.  
+- DROPEFFECT_COPY vytvoří kopii datový objekt probíhá vyřazování.  
   
-- `DROPEFFECT_MOVE` Přesune datový objekt na aktuální umístění myši.  
+- DROPEFFECT_MOVE přesune datový objekt na aktuální umístění myši.  
   
-- `DROPEFFECT_LINK` Vytvoří vazbu mezi objekt dat a jeho serverem.  
+- DROPEFFECT_LINK vytvoří propojení mezi objekt dat a jeho serverem.  
   
- `point`  
+ *Bod*  
  Aktuální myši pozice relativně k zobrazení klientské oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se rozevírací byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace neprovede žádnou akci a vrátí **FALSE**.  
+ Výchozí implementace neprovede žádnou akci a vrátí hodnotu FALSE.  
   
- Potlačí tuto funkci implementovat účinku OLE rozevírací do klientské oblasti zobrazení. Datový objekt může být prověřen prostřednictvím `pDataObject` pro data ze schránky formáty a data vyřazen Zadaný bod.  
+ Potlačí tuto funkci implementovat účinku OLE rozevírací do klientské oblasti zobrazení. Datový objekt může být prověřen prostřednictvím *pDataObject* pro data ze schránky formáty a data vyřazen Zadaný bod.  
   
 > [!NOTE]
 >  Rozhraní není volání této funkce, pokud dojde přepsání pro [ondropex –](#ondropex) v této třídě zobrazení.  
@@ -488,20 +488,20 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *pDataObject*  
  Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) , je však zrušeno do cíle přetažení.  
   
- `dropDefault`  
- O tom, že se uživatel rozhodl pro operace vyřazení výchozí na základě aktuálního stavu klíče. To může být `DROPEFFECT_NONE`. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
+ *dropDefault*  
+ O tom, že se uživatel rozhodl pro operace vyřazení výchozí na základě aktuálního stavu klíče. To může být DROPEFFECT_NONE. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
   
- `dropList`  
+ *rozbalovacího seznamu*  
  Seznam rozevírací účinky, které podporuje zdroji vyřaďte. Vyřaďte vliv hodnoty lze spojovat pomocí bitová hodnota OR ( **&#124;**) operaci. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
   
- `point`  
+ *Bod*  
  Aktuální myši pozice relativně k zobrazení klientské oblasti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vliv rozevírací rozevírací pokus o umístění, které je výsledkem `point`. Musí být jedna z hodnot indikován *dropEffectList*. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
+ Vliv rozevírací rozevírací pokus o umístění, které je výsledkem *bodu*. Musí být jedna z hodnot indikován *dropEffectList*. Vyřaďte důsledky jsou popsané v oddílu Poznámky.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace je Neprovádět žádnou akci a vrátí fiktivní hodnoty (-1) k označení, že by měly volat rozhraní [OnDrop](#ondrop) obslužné rutiny.  
@@ -512,27 +512,27 @@ virtual DROPEFFECT OnDropEx(
   
 -   Pokud pravé tlačítko myši je vypnutý, přepsání by měl zobrazit místní nabídky, který nabízí podporu důsledky rozevírací rozevírací zdroj.  
   
-    -   Zkontrolujte `dropList` k určení rozevírací důsledky nepodporuje zdroj vynechání. Povolte jenom tyto akce v místní nabídce.  
+    -   Zkontrolujte *rozbalovacího seznamu* k určení rozevírací důsledky nepodporuje zdroj vynechání. Povolte jenom tyto akce v místní nabídce.  
   
-    -   Použití [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) k nastavení výchozí akce na základě `dropDefault`.  
+    -   Použití [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) k nastavení výchozí akce na základě *dropDefault*.  
   
     -   Nakonec proveďte akci indikován výběr uživatele z místní nabídky.  
   
--   Pokud není pravé tlačítko myši dolů, zpracovat tuto jako standardní rozevírací požadavek by měl přepsání. Použijte rozevírací efekt zadaný v `dropDefault`. Alternativně můžete přepsání vrátit fiktivní hodnoty (-1), která označuje, že `OnDrop` zpracuje tato operace odstranění.  
+-   Pokud není pravé tlačítko myši dolů, zpracovat tuto jako standardní rozevírací požadavek by měl přepsání. Použijte rozevírací efekt zadaný v *dropDefault*. Alternativně můžete přepsání vrátit fiktivní hodnoty (-1), která označuje, že `OnDrop` zpracuje tato operace odstranění.  
   
- Použití `pDataObject` prozkoumat `COleDataObject` pro data ze schránky formátu a data vyřazen Zadaný bod.  
+ Použití *pDataObject* prozkoumat `COleDataObject` pro data ze schránky formátu a data vyřazen Zadaný bod.  
   
  Účinky rozevírací popisují akce spojené s operace odstranění. Najdete v následujícím seznamu rozevírací důsledky:  
   
-- `DROPEFFECT_NONE` Pokles nebude možné.  
+- Rozevírací DROPEFFECT_NONE A nebude možné.  
   
-- `DROPEFFECT_COPY` Operace kopírování by se provedla.  
+- Operace kopírování A DROPEFFECT_COPY by se provedla.  
   
-- `DROPEFFECT_MOVE` Operace přesunu by se provedla.  
+- Operace přesunutí A DROPEFFECT_MOVE by se provedla.  
   
-- `DROPEFFECT_LINK` Odkaz z vynechaných dat na původní data by byla založena.  
+- Odkaz A DROPEFFECT_LINK z vynechaných dat na původní data by byla založena.  
   
-- `DROPEFFECT_SCROLL` Označuje, že posuňte operaci přetažení dojde nebo dochází na cíli.  
+- DROPEFFECT_SCROLL znamená, že posuňte operaci přetažení dojde nebo dochází na cíli.  
   
  Další informace o nastavení výchozí příkaz nabídky najdete v tématu [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) ve Windows SDK a [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) v tomto svazku.  
   
@@ -546,10 +546,10 @@ virtual void OnEndPrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Body do kontextu zařízení tiskárny.  
   
- `pInfo`  
+ *pInfo*  
  Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -567,20 +567,20 @@ virtual void OnEndPrintPreview(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Body do kontextu zařízení tiskárny.  
   
- `pInfo`  
+ *pInfo*  
  Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy.  
   
- `point`  
+ *Bod*  
  Určuje bod na stránku, která byla naposledy zobrazených v režimu preview.  
   
- `pView`  
+ *pView*  
  Odkazuje na objekt zobrazení použitý pro zobrazení náhledu.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této funkce volá [OnEndPrinting –](#onendprinting) – členská funkce a obnovení začal hlavního okna rámce do stavu před náhledu tisku. Funkci provést zvláštní zpracování po ukončení režimu preview přepište. Například pokud chcete zachovat pozici uživatele v dokumentu při přepnutí z režimu náhledu na režim Normální zobrazení, můžete procházet pozice popsaného `point` parametr a `m_nCurPage` členem `CPrintInfo` struktura která `pInfo` parametr odkazuje na.  
+ Výchozí implementace této funkce volá [OnEndPrinting –](#onendprinting) – členská funkce a obnovení začal hlavního okna rámce do stavu před náhledu tisku. Funkci provést zvláštní zpracování po ukončení režimu preview přepište. Například pokud chcete zachovat pozici uživatele v dokumentu při přepnutí z režimu náhledu na režim Normální zobrazení, můžete procházet pozice popsaného *bodu* parametr a `m_nCurPage` členem `CPrintInfo` struktury, která *pInfo* parametr odkazuje na.  
   
  Vždy volat základní třída verzi `OnEndPrintPreview` z přepsání, obvykle na konci funkce.  
   
@@ -592,7 +592,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace této funkce volá [OnUpdate](#onupdate) – členská funkce bez pomocného parametru informací (tedy pomocí výchozích hodnot 0 pro `lHint` parametr a **NULL** pro `pHint` parametr). Přepsání této funkci můžete provést všechny jednorázové inicializace, který vyžaduje informace o dokumentu. Například pokud aplikace má pevnou velikostí dokumenty, můžete použít tuto funkci k chybě při inicializaci zobrazení posouvání omezení na základě velikosti dokumentu. Pokud vaše aplikace podporuje dokumenty proměnlivé velikosti, použijte [OnUpdate](#onupdate) aktualizovat posouvání omezuje pokaždé, když změny dokumentu.  
+ Výchozí implementace této funkce volá [OnUpdate](#onupdate) – členská funkce bez pomocného parametru informací (tedy pomocí výchozích hodnot 0 pro *lHint* parametr a hodnotu NULL pro  *pHint* parametr). Přepsání této funkci můžete provést všechny jednorázové inicializace, který vyžaduje informace o dokumentu. Například pokud aplikace má pevnou velikostí dokumenty, můžete použít tuto funkci k chybě při inicializaci zobrazení posouvání omezení na základě velikosti dokumentu. Pokud vaše aplikace podporuje dokumenty proměnlivé velikosti, použijte [OnUpdate](#onupdate) aktualizovat posouvání omezuje pokaždé, když změny dokumentu.  
   
 ##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  Voláno rámcem před [OnDraw –](#ondraw) – členská funkce je volána pro zobrazení na obrazovce a před [při tisku](#onprint) – členská funkce je volána pro jednotlivé stránky během tisku nebo náhledu.  
@@ -604,24 +604,24 @@ virtual void OnPrepareDC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Odkazuje na kontext zařízení, který má být používané k vykreslování obrázek dokumentu.  
   
- `pInfo`  
- Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy, pokud `OnPrepareDC` je volána pro tisku nebo náhledu; `m_nCurPage` člen Určuje stránku chystáte jej vytisknout. Tento parametr je **NULL** Pokud `OnPrepareDC` je volána pro zobrazení na obrazovce.  
+ *pInfo*  
+ Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy, pokud `OnPrepareDC` je volána pro tisku nebo náhledu; `m_nCurPage` člen Určuje stránku chystáte jej vytisknout. Tento parametr hodnotu NULL, pokud `OnPrepareDC` je volána pro zobrazení na obrazovce.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace této funkce se nic nestane. Pokud je tato funkce volána pro zobrazení na obrazovce. Ale tato funkce je přepsání v odvozené třídy, například [CScrollView](../../mfc/reference/cscrollview-class.md), chcete-li upravit atributy kontextu zařízení; v důsledku toho by měly vždy volat základní třída implementaci na začátku přepsání.  
   
- Pokud je tato funkce volána pro tisk, výchozí implementace prozkoumá stránky informace uložené v `pInfo` parametr. Pokud délka dokumentu nebyl zadán, `OnPrepareDC` předpokládá dokumentu, který má být jednu stránku dlouhé a zastaví tiskové smyčky po vytištění jednu stránku. Funkce zastaví tiskové smyčky nastavením `m_bContinuePrinting` členem k strukturu **FALSE**.  
+ Pokud je tato funkce volána pro tisk, výchozí implementace prozkoumá stránky informace uložené v *pInfo* parametr. Pokud délka dokumentu nebyl zadán, `OnPrepareDC` předpokládá dokumentu, který má být jednu stránku dlouhé a zastaví tiskové smyčky po vytištění jednu stránku. Funkce zastaví tiskové smyčky nastavením `m_bContinuePrinting` členem strukturu na hodnotu FALSE.  
   
  Přepsání `OnPrepareDC` pro některý z následujících důvodů:  
   
 -   Chcete-li upravit atributy kontextu zařízení podle potřeby pro zadanou stránku. Například pokud je nutné nastavit mapování režimu nebo dalších vlastností kontextu zařízení, to provést v této funkci.  
   
--   K provedení stránkování čas tisku. Obvykle se po zahájení tisk pomocí zadat délku dokumentu [OnPreparePrinting –](#onprepareprinting) – členská funkce. Ale pokud neznáte předem jak dlouho dokument je (například při tisku neurčená počet záznamů z databáze), přepsání `OnPrepareDC` k otestování tohoto dokumentu, zatímco ho vytisknout. Pokud není žádné další dokumentu pro tisk, nastavit `m_bContinuePrinting` členem `CPrintInfo` struktury k **FALSE**.  
+-   K provedení stránkování čas tisku. Obvykle se po zahájení tisk pomocí zadat délku dokumentu [OnPreparePrinting –](#onprepareprinting) – členská funkce. Ale pokud neznáte předem jak dlouho dokument je (například při tisku neurčená počet záznamů z databáze), přepsání `OnPrepareDC` k otestování tohoto dokumentu, zatímco ho vytisknout. Pokud není žádné další dokumentu pro tisk, nastavit `m_bContinuePrinting` členem `CPrintInfo` struktura na hodnotu FALSE.  
   
--   K odeslání řídicí kódy tiskárny na základě po stránkách. K odeslání řídicí kódy z `OnPrepareDC`, volání **řídicí** členské funkce `pDC` parametr.  
+-   K odeslání řídicí kódy tiskárny na základě po stránkách. K odeslání řídicí kódy z `OnPrepareDC`, volání `Escape` členské funkce *primárního řadiče domény* parametr.  
   
  Volat základní třída verzi `OnPrepareDC` na začátku přepsání.  
   
@@ -636,7 +636,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Odkazuje na [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktura, která popisuje aktuální tiskové úlohy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -645,13 +645,13 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="remarks"></a>Poznámky  
  Výchozí implementace neprovede žádnou akci.  
   
- Je nutné přepsat tuto funkci povolit tisku a přehled tisku. Volání [doprepareprinting –](#doprepareprinting) – členská funkce, předání `pInfo` parametr a pak se vraťte hodnoty; `DoPreparePrinting` zobrazí dialogové okno tisku a vytvoří kontextu zařízení tiskárny. Pokud chcete k chybě při inicializaci dialogové okno tisku s hodnoty jiné než výchozí hodnoty, přiřadit hodnoty k členům `pInfo`. Například pokud znáte délka dokumentu, předejte hodnota, která má [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) členské funkce `pInfo` před voláním `DoPreparePrinting`. Tato hodnota se zobrazí v Komu: pole v části rozsah dialogovém okně tisku.  
+ Je nutné přepsat tuto funkci povolit tisku a přehled tisku. Volání [doprepareprinting –](#doprepareprinting) – členská funkce, předání *pInfo* parametr a pak se vraťte hodnoty; `DoPreparePrinting` zobrazí dialogové okno tisku a vytvoří kontextu zařízení tiskárny. Pokud chcete k chybě při inicializaci dialogové okno tisku s hodnoty jiné než výchozí hodnoty, přiřadit hodnoty k členům *pInfo*. Například pokud znáte délka dokumentu, předejte hodnota, která má [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) členské funkce *pInfo* před voláním `DoPreparePrinting`. Tato hodnota se zobrazí v Komu: pole v části rozsah dialogovém okně tisku.  
   
- `DoPreparePrinting` Dialogové okno tisku pro úlohu preview nezobrazí. Pokud chcete dialogové okno tisku pro tisková úloha vynechat, zkontrolujte, zda **m_bPreview** členem `pInfo` je **FALSE** a nastavte ji na **TRUE** před předáním na `DoPreparePrinting`; ji obnovit na **FALSE** později.  
+ `DoPreparePrinting` Dialogové okno tisku pro úlohu preview nezobrazí. Pokud chcete dialogové okno tisku pro tisková úloha vynechat, zkontrolujte, zda `m_bPreview` členem *pInfo* skončí s výsledkem FALSE a nastavte ji na hodnotu TRUE před předáním na `DoPreparePrinting`; ho resetovat na hodnotu FALSE, později.  
   
  Pokud potřebujete provést inicializacích, které vyžadují přístup k `CDC` přepsat objekt reprezentující tiskárny kontextu zařízení (například pokud je potřeba vědět velikost stránky před zadáním délka dokumentu), `OnBeginPrinting` člena funkce.  
   
- Pokud chcete nastavit hodnotu **m_nNumPreviewPages** nebo **m_strPageDesc** členy `pInfo` parametr učinit po volání `DoPreparePrinting`. `DoPreparePrinting` Členské funkce sady **m_nNumPreviewPages** na hodnotu do aplikace. Soubor INI a nastaví **m_strPageDesc** na výchozí hodnotu.  
+ Pokud chcete nastavit hodnotu `m_nNumPreviewPages` nebo `m_strPageDesc` členy *pInfo* parametr učinit po volání `DoPreparePrinting`. `DoPreparePrinting` Členské funkce sady `m_nNumPreviewPages` na hodnotu do aplikace. Soubor INI a nastaví `m_strPageDesc` na výchozí hodnotu.  
   
 ### <a name="example"></a>Příklad  
   Přepsání `OnPreparePrinting` a volání `DoPreparePrinting` z přepsání tak, aby rozhraní bude zobrazit dialogové okno tisku a za vás vytvořit tiskárnu řadiče domény.  
@@ -672,14 +672,14 @@ virtual void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primárního řadiče domény*  
  Body do kontextu zařízení tiskárny.  
   
- `pInfo`  
+ *pInfo*  
  Odkazuje na `CPrintInfo` struktura, která popisuje aktuální tiskové úlohy.  
   
 ### <a name="remarks"></a>Poznámky  
- Pro jednotlivé stránky, tisku, volá framework ihned po volání této funkce [onpreparedc –](#onpreparedc) – členská funkce. Je zadána tisku stránky `m_nCurPage` členem [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktury, která `pInfo` odkazuje na. Výchozí implementace volá [OnDraw –](#ondraw) – členská funkce a předává je kontextu zařízení tiskárny.  
+ Pro jednotlivé stránky, tisku, volá framework ihned po volání této funkce [onpreparedc –](#onpreparedc) – členská funkce. Je zadána tisku stránky `m_nCurPage` členem [cprintinfo –](../../mfc/reference/cprintinfo-structure.md) struktury, která *pInfo* odkazuje na. Výchozí implementace volá [OnDraw –](#ondraw) – členská funkce a předává je kontextu zařízení tiskárny.  
   
  Přepište tuto funkci pro některý z následujících důvodů:  
   
@@ -691,7 +691,7 @@ virtual void OnPrint(
   
 -   K implementaci záhlaví a zápatí stránky. Můžete dál používat `OnDraw` Uděláte to tak, že omezíte k oblasti, která tisku na vykreslování.  
   
- Všimněte si, že **m_rectDraw** členem `pInfo` parametr popisuje tisknutelná oblast stránky v logické jednotky.  
+ Všimněte si, že `m_rectDraw` členem *pInfo* parametr popisuje tisknutelná oblast stránky v logické jednotky.  
   
  Nevolejte `OnPrepareDC` v přepsání z `OnPrint`; framework volání `OnPrepareDC` automaticky před voláním `OnPrint`.  
   
@@ -713,34 +713,34 @@ virtual BOOL OnScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nScrollCode`  
+ *nScrollCode*  
  Posuvníku kód, který označuje uživatele je posouvání požadavku. Tento parametr se skládá ze dvou částí: nejnižší bajtů, která určuje typ posouvání výskytu vodorovně, a horní bajtů, která určuje typ posouvání výskytu svisle:  
   
-- **SB_BOTTOM** posouvá dolů.  
+- Posouvá SB_BOTTOM dolů.  
   
-- **SB_LINEDOWN** jeden řádek posune stránku dolů.  
+- Jeden řádek SB_LINEDOWN posouvá směrem dolů.  
   
-- **SB_LINEUP** posune jeden řádek nahoru.  
+- Posouvá SB_LINEUP jeden řádek nahoru.  
   
-- **SB_PAGEDOWN** jednu stránku posune stránku dolů.  
+- Posouvá SB_PAGEDOWN jednu stránku dolů.  
   
-- **SB_PAGEUP** posune jednu stránku nahoru.  
+- Posouvá SB_PAGEUP jednu stránku nahoru.  
   
-- **SB_THUMBTRACK** Drags posouvacího políčka na zadané pozici. Aktuální pozice je zadána v `nPos`.  
+- SB_THUMBTRACK Drags posuňte pole na zadané pozici. Aktuální pozice je zadána v *nPos –*.  
   
-- **SB_TOP** posune nahoru.  
+- Posouvá SB_TOP nahoru.  
   
- `nPos`  
- Obsahuje aktuální pozici posouvací políčko, pokud je kód posuvníku **SB_THUMBTRACK**; v opačném případě se nepoužívá. V závislosti na rozsahu počáteční scroll `nPos` může být záporný a by měl být přetypovat `int` v případě potřeby.  
+ *nPos –*  
+ Obsahuje aktuální pozici posouvací políčko, pokud je kód posuvníku SB_THUMBTRACK; jinak se nepoužije. V závislosti na rozsahu počáteční scroll *nPos –* může být záporný a by měl být přetypovat **int** v případě potřeby.  
   
- `bDoScroll`  
- Určuje, zda by měla ve skutečnosti provést zadanou akci posouvání. Pokud **nastavena hodnota TRUE,** pak posouvání by měl proběhnout; Pokud **FALSE**, pak posouvání nedojde.  
+ *bDoScroll*  
+ Určuje, zda by měla ve skutečnosti provést zadanou akci posouvání. V případě hodnoty TRUE, pak posouvání se uskuteční; Pokud je hodnota FALSE, pak posouvání nedojde.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud `bDoScroll` je **TRUE** a ve skutečnosti přesunut oblasti zobrazení, pak se vraťte nenulové; jinak hodnota 0. Pokud `bDoScroll` je **FALSE**, pak se vraťte hodnotu, která by mít vrácena pokud `bDoScroll` byly **TRUE**, i když neuděláte ve skutečnosti posouvání.  
+ Pokud *bDoScroll* hodnotu TRUE a ve skutečnosti přesunut oblasti zobrazení, pak se vraťte nenulové; jinak hodnota 0. Pokud *bDoScroll* je FALSE a vrátí hodnotu, která by mít vrácena pokud *bDoScroll* měla hodnotu TRUE, i když neuděláte ve skutečnosti posouvání.  
   
 ### <a name="remarks"></a>Poznámky  
- V jednom případě tato funkce je volána rámcem s `bDoScroll` nastavena na **TRUE** při zobrazení přijme zprávu o scrollbar. V takovém případě byste měli ve skutečnosti přejít zobrazení. V ostatních případech tato funkce je volána s `bDoScroll` nastavena na **FALSE** při položku OLE je původně přetažen oblast automatické posouvání cíle přetažení před ve skutečnosti posouvání probíhá. V takovém případě by neměl posunete ve skutečnosti zobrazení.  
+ V jednom případě tato funkce je volána rámcem s *bDoScroll* nastavit na hodnotu TRUE, když zobrazení přijme zprávu o scrollbar. V takovém případě byste měli ve skutečnosti přejít zobrazení. V ostatních případech tato funkce je volána s *bDoScroll* nastavena na hodnotu FALSE, když položku OLE je původně přetažen oblast automatické posouvání cíle přetažení před ve skutečnosti posouvání probíhá. V takovém případě by neměl posunete ve skutečnosti zobrazení.  
   
 ##  <a name="onscrollby"></a>  CView::OnScrollBy  
  Voláno rámcem, když uživatel prohlíží oblasti za existuje zobrazení dokumentu, buď tak, že přetáhnete položky OLE proti ohraničení aktuální zobrazení nebo manipulace s posuvníky svislé nebo vodorovné.  
@@ -752,11 +752,11 @@ virtual BOOL OnScrollBy(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sizeScroll`  
+ *sizeScroll*  
  Počet pixelů přešli vodorovně a svisle.  
   
- `bDoScroll`  
- Určuje, zda má být provedena posouvání zobrazení. Pokud **nastavena hodnota TRUE,** pak posouvání probíhá; pokud **FALSE**, pak posouvání nedojde.  
+ *bDoScroll*  
+ Určuje, zda má být provedena posouvání zobrazení. V případě hodnoty TRUE, pak posouvání probíhá; Pokud je hodnota FALSE, pak posouvání nebude fungovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud zobrazení bylo možné posunout; jinak 0.  
@@ -766,7 +766,7 @@ virtual BOOL OnScrollBy(
   
  Výchozí implementace této metody nedojde ke změně zobrazení, ale pokud není volán, nebude v posuňte zobrazení `CScrollView`-odvozené třídy.  
   
- Pokud dokument šířky nebo výšky překračuje 32767 pixelů, posouvání po 32767 selže, protože `OnScrollBy` je volán s neplatnou `sizeScroll` argument.  
+ Pokud dokument šířky nebo výšky překračuje 32767 pixelů, posouvání po 32767 selže, protože `OnScrollBy` je volán s neplatnou *sizeScroll* argument.  
   
 ##  <a name="onupdate"></a>  CView::OnUpdate  
  Voláno rámcem po zobrazení byly změny; Tato funkce je volána [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) a umožňuje zobrazit aktualizace jeho zobrazení tak, aby odrážela tyto změny.  
@@ -779,23 +779,23 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSender`  
- Odkazuje na úpravy dokumentu, zobrazení nebo **NULL** Pokud jsou všechny zobrazení aktualizovat.  
+ *pSender*  
+ Odkazuje na zobrazení, který změnil dokumentu, nebo hodnota NULL, pokud jsou všechny zobrazení aktualizovat.  
   
- `lHint`  
+ *lHint*  
  Obsahuje informace o změny.  
   
- `pHint`  
+ *pHint*  
  Odkazuje na objekt ukládání informací o změny.  
   
 ### <a name="remarks"></a>Poznámky  
- Také je volána metodou výchozí implementaci [OnInitialUpdate](#oninitialupdate). Výchozí implementace by způsobila neplatnost celého klienta, označení k vykreslování při dalším `WM_PAINT` přijata zpráva. Tato funkce přepsání, pokud chcete aktualizovat pouze oblasti, které jsou mapovány na změněné části dokumentu. K tomu musí projít informace o úpravy pomocí pomocného parametru parametrů.  
+ Také je volána metodou výchozí implementaci [OnInitialUpdate](#oninitialupdate). Výchozí implementace zruší platnost celého klienta, označení pro malování, když je obdržena další WM_PAINT zprávy. Tato funkce přepsání, pokud chcete aktualizovat pouze oblasti, které jsou mapovány na změněné části dokumentu. K tomu musí projít informace o úpravy pomocí pomocného parametru parametrů.  
   
- Chcete-li použít `lHint`, určit speciální pomocný parametr hodnot, obvykle bitová maska nebo výčtového typu, a v dokumentu předat jednu z těchto hodnot. Použít `pHint`, odvození třídy z pomocný parametr [CObject](../../mfc/reference/cobject-class.md) a mít dokumentu ukazatel předat objekt pomocný parametr; při přepisování `OnUpdate`, použijte [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) členské funkce Určuje typ spuštění objektu pomocný parametr.  
+ Chcete-li použít *lHint*, určit speciální pomocný parametr hodnot, obvykle bitová maska nebo výčtového typu, a v dokumentu předat jednu z těchto hodnot. Použít *pHint*, odvození třídy z pomocný parametr [CObject](../../mfc/reference/cobject-class.md) a mít dokumentu ukazatel předat objekt pomocný parametr; při přepisování `OnUpdate`, použijte [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) Členská funkce určit typ spuštění objektu pomocný parametr.  
   
  Obvykle neměli proveďte kteroukoli kreslení přímo z `OnUpdate`. Místo toho určete rámečku v souřadnicích zařízení popisující k oblasti, která vyžaduje aktualizaci; předat obdélníku do [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). To způsobí, že Malování příštím [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) přijata zpráva.  
   
- Pokud `lHint` je 0 a `pHint` je **NULL**, dokumentu odeslal obecné aktualizace oznámení. Pokud zobrazení obdrží upozornění na obecné aktualizace, nebo ho nelze dekódovat pomocné parametry, by měl platnost jeho celého klienta.  
+ Pokud *lHint* je 0 a *pHint* má hodnotu NULL, dokumentu odeslal obecné aktualizace oznámení. Pokud zobrazení obdrží upozornění na obecné aktualizace, nebo ho nelze dekódovat pomocné parametry, by měl platnost jeho celého klienta.  
   
 ## <a name="see-also"></a>Viz také  
  [Ukázka MFC MDIDOCVW](../../visual-cpp-samples.md)   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371556"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122494"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog – třída
 Obálka pro třídy dialogového okna knihovny MFC, který je hostitelem uživatelského ovládacího prvku Windows Forms.  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  Obsahuje ID prostředku šablony dialogové okno pole. Použití editoru dialogových oken k vytvoření šablony dialogového okna a jeho uložení v souboru skriptu prostředků aplikace. Další informace o dialogovém okně šablony najdete v tématu [CDialog – třída](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  Logická hodnota, která určuje, zda má být z aplikace nastavte na některou z ovládacích prvků zaměření pro vstup v dialogovém okně. Pokud `OnInitDialog` vrátí nenulovou, Windows nastaví zaměření pro vstup na první ovládací prvek v dialogovém okně. Tato metoda může vrátit 0, pouze v případě, že aplikace má v dialogovém okně explicitně nastavit zaměření pro vstup na jednu z ovládacích prvků.  
   
 ### <a name="remarks"></a>Poznámky  
- Když je vytvořen v dialogovém okně knihovny MFC (pomocí [vytvořit](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), nebo [DoModal](../../mfc/reference/cdialog-class.md#domodal) metoda zděděno z [CDialog](../../mfc/reference/cdialog-class.md)), `WM_INITDIALOG` je zpráva odeslána a tato metoda je volána. Vytvoří instanci ovládacího prvku Windows Forms v dialogovém okně a upraví velikost dialogových oken, aby dokázala pojmout velikost uživatelského ovládacího prvku. Potom hostuje nový ovládací prvek v dialogovém okně knihovny MFC.  
+ Vytvoření dialogového okna knihovny MFC (pomocí [vytvořit](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), nebo [DoModal](../../mfc/reference/cdialog-class.md#domodal) metoda zděděno z [CDialog](../../mfc/reference/cdialog-class.md)), WM_ Odeslání zprávy INITDIALOG a tato metoda je volána. Vytvoří instanci ovládacího prvku Windows Forms v dialogovém okně a upraví velikost dialogových oken, aby dokázala pojmout velikost uživatelského ovládacího prvku. Potom hostuje nový ovládací prvek v dialogovém okně knihovny MFC.  
   
  Funkci člena přepište, pokud je třeba provést zvláštní zpracování při inicializaci dialogové okno. Další informace o použití této metody naleznete v části [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   

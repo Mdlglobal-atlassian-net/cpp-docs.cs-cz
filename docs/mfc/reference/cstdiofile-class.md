@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89de8dddae6d6549fe12086b84e6bb656afcbc4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95e05c071057025bda8e841be2cd5c6b17971626
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374985"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122565"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile – třída
 Představuje soubor datového proudu běhu C, jak otevřít funkce běhové [fopen –](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -109,28 +109,28 @@ CStdioFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pOpenStream`  
+ *pOpenStream*  
  Určuje ukazatele souboru vrácené voláním funkce C Runtime [fopen –](../../c-runtime-library/reference/fopen-wfopen.md).  
   
- `lpszFileName`  
+ *lpszFileName*  
  Určuje řetězec, který představuje cestu k souboru požadovaného. Cesta může být relativní nebo absolutní.  
   
- `nOpenFlags`  
- Určuje možnosti pro vytvoření souboru, sdílení souborů a režimy přístupu k souboru. Je-li zadat více možností pomocí bitová hodnota OR ( `|`) operátor.  
+ *nOpenFlags*  
+ Určuje možnosti pro vytvoření souboru, sdílení souborů a režimy přístupu k souboru. Je-li zadat více možností pomocí bitová hodnota OR ( **|** ) operátor.  
   
  Jedna možnost režimu přístup k souboru je povinná; Další režimy jsou volitelné. V tématu [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) seznam možností režimu a další příznaky. V prostředí MFC verze 3.0 a novější jsou povoleny příznaky sdílené složky.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na CAtlTransactionManager objektu.  
   
 ### <a name="remarks"></a>Poznámky  
  Výchozí konstruktor nepřipojí soubor, který chcete `CStdioFile` objektu. Při používání tohoto konstruktoru, je nutné použít `CStdioFile::Open` metodu pro otevření souboru a připojte ji k `CStdioFile` objektu.  
   
- Jeden parametr konstruktoru připojí otevření souboru datového proudu k `CStdioFile` objektu. Povolené hodnoty ukazatele zahrnují ukazatele předdefinované vstupní a výstupní soubor `stdin`, `stdout`, nebo `stderr`.  
+ Jeden parametr konstruktoru připojí otevření souboru datového proudu k `CStdioFile` objektu. Povolené hodnoty ukazatele zahrnují ukazatele předdefinované vstupní a výstupní soubor *stdin –*, *stdout*, nebo *stderr*.  
   
  Vytvoří dvě parametr konstruktoru `CStdioFile` objektu a odpovídající soubor se otevře v zadané cestě.  
   
- Pokud předáte `NULL` pro buď `pOpenStream` nebo `lpszFileName`, vyvolá konstruktoru `CInvalidArgException*`.  
+ Pokud předáte hodnotu NULL pro buď *pOpenStream* nebo *lpszFileName*, vyvolá konstruktoru `CInvalidArgException*`.  
   
  Pokud je soubor nelze otevřít nebo vytvořit, vyvolá konstruktoru `CFileException*`.  
   
@@ -145,7 +145,7 @@ FILE* m_pStream;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je **NULL** Pokud je soubor, který otevírá nebo bylo ukončeno.  
+ Pokud je soubor, který otevírá nebo bylo ukončeno je NULL.  
   
 ##  <a name="open"></a>  CStdioFile::Open  
  Přetíženo. Otevřete je určen k použití s výchozím `CStdioFile` konstruktor.  
@@ -165,25 +165,25 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Řetězec, který je cesta k souboru požadovaného. Cesta může být relativní nebo absolutní.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Režim sdílení a přístup. Určuje akci, která se má provést při otevření souboru. Možnosti můžete kombinovat pomocí bitové operace OR (&#124;) operátor. Jeden přístupová oprávnění a možnost jednu sdílenou složku jsou povinné; režimy modeCreate a modeNoInherit jsou volitelné.  
   
- `pError`  
+ *pError*  
  Ukazatel na existující objekt výjimky souborů, který se zobrazí stav neúspěšnou operaci.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na `CAtlTransactionManager` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud je úspěšné; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="readstring"></a>  CStdioFile::ReadString  
- Načte text dat do vyrovnávací paměti, až limitu `nMax`-1 znaků ze souboru přidružené `CStdioFile` objektu.  
+ Načte text dat do vyrovnávací paměti, až limitu *nMax*-1 znaků ze souboru přidružené `CStdioFile` objektu.  
   
 ```  
 virtual LPTSTR ReadString(
@@ -194,25 +194,25 @@ virtual BOOL ReadString(CString& rString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Určuje ukazatel uživatelem zadané vyrovnávací paměť, která bude přijímat ukončené hodnotou null textový řetězec.  
   
- `nMax`  
+ *nMax*  
  Určuje maximální počet znaků ke čtení, není počítání ukončující znak hodnoty null.  
   
- `rString`  
+ *rString*  
  Odkaz na `CString` objekt, který bude obsahovat řetězec, když funkce vrátí hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na obsahující textové datové vyrovnávací paměti. **NULL** Pokud end souboru bylo dosaženo bez přečtení všech dat; nebo pokud je to logická hodnota, **FALSE** Pokud end souboru bylo dosaženo bez přečtení žádná data.  
+ Ukazatel na obsahující textové datové vyrovnávací paměti. Hodnota NULL, pokud koncový souboru bylo dosaženo bez přečtení všech dat; nebo pokud logická hodnota, FALSE, pokud koncový souboru bylo dosaženo bez přečtení žádná data.  
   
 ### <a name="remarks"></a>Poznámky  
- Čtení je zastavena první znak nového řádku. Pokud v takovém případě méně než `nMax`přečetli znaků-1, znak nového řádku je uložený ve vyrovnávací paměti. V obou případech se připojí znak hodnoty null ('\0').  
+ Čtení je zastavena první znak nového řádku. Pokud v takovém případě méně než *nMax*přečetli znaků-1, znak nového řádku je uložený ve vyrovnávací paměti. V obou případech se připojí znak hodnoty null ('\0').  
   
  [CFile::Read](../../mfc/reference/cfile-class.md#read) je k dispozici také pro režim textové vstupu, ale nezavře na pár znaků CR vrátit-konce řádku.  
   
 > [!NOTE]
->  `CString` Odebere verze této funkce `'\n'` pokud existuje; `LPTSTR` verze nepracuje.  
+>  `CString` Odebere verze této funkce `'\n'` pokud existuje; LPTSTR verze nepracuje.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
@@ -227,17 +227,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lOff`  
+ *lOff*  
  Počet bajtů přesunout ukazatel.  
   
- `nFrom`  
+ *nFrom*  
  Režim pohyb ukazatele. Musí být jedna z následujících hodnot:  
   
-- `CFile::begin`: Přesunutí ukazatele souboru `lOff` bajtů předávání od začátku souboru.  
+- `CFile::begin`: Přesunutí ukazatele souboru *lOff* bajtů předávání od začátku souboru.  
   
-- `CFile::current`: Přesunutí ukazatele souboru `lOff` bajtů z aktuální pozice v souboru.  
+- `CFile::current`: Přesunutí ukazatele souboru *lOff* bajtů z aktuální pozice v souboru.  
   
-- `CFile::end`: Přesunutí ukazatele souboru `lOff` bajtů od konce souboru. Všimněte si, že `lOff` musí být záporné k vyhledání do existujících souborů; kladné hodnoty bude hledat za koncem souboru.  
+- `CFile::end`: Přesunutí ukazatele souboru *lOff* bajtů od konce souboru. Všimněte si, že *lOff* musí být záporné k vyhledání do existujících souborů; kladné hodnoty bude hledat za koncem souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Pokud je požadovaný pozice právní, `Seek` vrátí novou posun bajtů od začátku souboru. Jinak, není definován návratovou hodnotu a `CFileException` objektu je vyvolána výjimka.  
@@ -262,15 +262,15 @@ virtual void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Určuje ukazatel na vyrovnávací paměť, která obsahuje řetězce ukončené hodnotou null.  
   
 ### <a name="remarks"></a>Poznámky  
- Ukončovací znak hodnoty null ( `\0`) není zapsán do souboru. Tato metoda se zapisují znaky nového řádku `lpsz` k souboru jako pár znaků CR vrátit/konce řádku.  
+ Ukončovací znak hodnoty null ( `\0`) není zapsán do souboru. Tato metoda se zapisují znaky nového řádku *lpsz* k souboru jako pár znaků CR vrátit/konce řádku.  
   
  Pokud chcete zapisovat data, která není null ukončena do souboru, použijte `CStdioFile::Write` nebo [CFile::Write](../../mfc/reference/cfile-class.md#write).  
   
- Tato metoda vyvolá `CInvalidArgException*` zadáte-li `NULL` pro `lpsz` parametr.  
+ Tato metoda vyvolá `CInvalidArgException*` Pokud zadáte hodnotu NULL pro *lpsz* parametr.  
   
  Tato metoda vyvolá `CFileException*` v reakci na chyby.  
   

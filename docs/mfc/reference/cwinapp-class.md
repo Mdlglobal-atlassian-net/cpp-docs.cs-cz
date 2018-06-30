@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105e8860746c4de4086e9481b06417b186ddc9ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aab01b0f55d19ef3c9d39fed38b42471f559ba8d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378713"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123198"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 Základní třída, ze kterého odvodíte objekt aplikace systému Windows.  
@@ -238,7 +238,7 @@ class CWinApp : public CWinThread
 |[CWinApp::DelRegTree](#delregtree)|Odstraní zadaný klíč a všechny jeho podklíče.|  
 |[CWinApp::DoMessageBox](#domessagebox)|Implementuje [AfxMessageBox –](cstring-formatting-and-message-box-display.md#afxmessagebox) pro aplikaci.|  
 |[CWinApp::DoWaitCursor](#dowaitcursor)|Kurzor čekání vypíná a zapíná.|  
-|[CWinApp::EnableD2DSupport](#enabled2dsupport)|Umožňuje aplikaci `D2D` podporovat. Tuto metodu volejte před inicializací hlavní okno.|  
+|[CWinApp::EnableD2DSupport](#enabled2dsupport)|Umožňuje podporu D2D aplikace. Tuto metodu volejte před inicializací hlavní okno.|  
 |[CWinApp::EnableHtmlHelp](#enablehtmlhelp)|Implementuje HTMLHelp aplikace, nikoli WinHelp.|  
 |[CWinApp::EnableTaskbarInteraction](#enabletaskbarinteraction)|Umožňuje interakci panelu.|  
 |[CWinApp::ExitInstance](#exitinstance)|Přepsání nastavení za účelem vyčištění při ukončení aplikace.|  
@@ -301,13 +301,13 @@ class CWinApp : public CWinThread
 |[CWinApp::EnableShellOpen](#enableshellopen)|Umožňuje uživateli otevřít datových souborů ze Správce souborů systému Windows.|  
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Načítání standard. Nastavení souboru INI a umožňuje naposledy použitých souborů funkce seznamu.|  
 |[CWinApp::OnContextHelp](#oncontexthelp)|Zpracovává SHIFT + F1 – Nápověda v aplikaci.|  
-|[CWinApp::OnFileNew](#onfilenew)|Implementuje `ID_FILE_NEW` příkaz.|  
-|[CWinApp::OnFileOpen](#onfileopen)|Implementuje `ID_FILE_OPEN` příkaz.|  
-|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|Implementuje `ID_FILE_PRINT_SETUP` příkaz.|  
+|[CWinApp::OnFileNew](#onfilenew)|Implementuje id_file_new – příkaz.|  
+|[CWinApp::OnFileOpen](#onfileopen)|Implementuje id_file_open – příkaz.|  
+|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|Implementuje id_file_print_setup – příkaz.|  
 |[CWinApp::OnHelp](#onhelp)|Zpracovává nápovědy F1 v rámci aplikace (pomocí aktuálního kontextu).|  
-|[CWinApp::OnHelpFinder](#onhelpfinder)|Zpracovává `ID_HELP_FINDER` a `ID_DEFAULT_HELP` příkazy.|  
-|[CWinApp::OnHelpIndex](#onhelpindex)|Zpracovává `ID_HELP_INDEX` příkazů a poskytuje výchozí téma nápovědy.|  
-|[CWinApp::OnHelpUsing](#onhelpusing)|Zpracovává `ID_HELP_USING` příkaz.|  
+|[CWinApp::OnHelpFinder](#onhelpfinder)|Zpracovává příkazy ID_HELP_FINDER a id_default_help –.|  
+|[CWinApp::OnHelpIndex](#onhelpindex)|Zpracuje id_help_index – příkaz a poskytuje výchozí téma nápovědy.|  
+|[CWinApp::OnHelpUsing](#onhelpusing)|Zpracovává id_help_using – příkaz.|  
 |[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|Zaregistruje typů dokumentů. všechny aplikace s Správce souborů systému Windows.|  
 |[CWinApp::SetAppID](#setappid)|Nastaví explicitně Application User Model ID aplikace. Tato metoda by měla být volána, než bude zobrazeno žádné uživatelské rozhraní pro uživatele (nejlepší místo je konstruktor aplikace).|  
 |[CWinApp::SetRegistryKey](#setregistrykey)|Způsobí, že nastavení aplikace má být uložen v registru místo. Soubory INI.|  
@@ -365,7 +365,7 @@ class CWinApp : public CWinThread
   
 - `CWinApp`pro klíče k přepisovatelným.  
   
- **M_hPrevInstance** – datový člen již existuje. Informace o zjišťování předchozí instance `CWinApp`, najdete v článku znalostní báze "Jak k identifikaci předchozí instanci z aplikace" (KB106385) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).  
+ `m_hPrevInstance` – Datový člen již existuje. Informace o zjišťování předchozí instance `CWinApp`, najdete v článku znalostní báze "Jak k identifikaci předchozí instanci z aplikace" (KB106385) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -387,7 +387,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTemplate`  
+ *pTemplate*  
  Ukazatel `CDocTemplate` má být přidán.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -397,14 +397,14 @@ void AddDocTemplate(CDocTemplate* pTemplate);
  [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]  
   
 ##  <a name="addtorecentfilelist"></a>  CWinApp::AddToRecentFileList  
- Volání této funkce člen přidat `lpszPathName` do seznamu naposledy použitých souborů.  
+ Volání této funkce člen přidat *lpszPathName* do seznamu naposledy použitých souborů.  
   
 ```  
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Cesta k souboru.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -423,7 +423,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpvParam`  
+ [v] *lpvParam*  
  Vyhrazeno pro budoucí použití.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -444,8 +444,8 @@ void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEndSession`  
- Určuje, zda se skončí relace Windows. Je **TRUE** Pokud relace je zakončeno; jinak hodnota **FALSE**.  
+ *bEndSession*  
+ Určuje, zda se skončí relace Windows. Hodnotu TRUE, pokud relace skončí; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [HideApplication](#hideapplication) před voláním `CloseAllDocuments`.  
@@ -458,7 +458,7 @@ BOOL CreatePrinterDC(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *řadič domény*  
  Odkaz na kontextu zařízení tiskárny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -470,15 +470,15 @@ BOOL CreatePrinterDC(CDC& dc);
  Pokud funkci úspěšné, po dokončení tisku, musíte zničit kontextu zařízení. Můžete je nechat destruktoru objektu [CDC](../../mfc/reference/cdc-class.md) objektu provést, nebo můžete provést explicitně voláním [CDC::DeleteDC](../../mfc/reference/cdc-class.md#deletedc).  
   
 ##  <a name="cwinapp"></a>  CWinApp::CWinApp  
- Vytvoří `CWinApp` objekt a předává `lpszAppName` ukládaly jako název aplikace.  
+ Vytvoří `CWinApp` objekt a předává *lpszAppName* ukládaly jako název aplikace.  
   
 ```  
 CWinApp(LPCTSTR lpszAppName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszAppName`  
- Řetězec ukončené hodnotou null, který obsahuje název aplikace, které používá systém Windows. Pokud je tento argument se nedodává nebo **NULL**, `CWinApp` používá řetězec prostředku **AFX_IDS_APP_TITLE** nebo název spustitelného souboru.  
+ *lpszAppName*  
+ Řetězec ukončené hodnotou null, který obsahuje název aplikace, které používá systém Windows. Pokud tento argument není zadaný nebo má hodnotu NULL, `CWinApp` používá řetězec prostředku AFX_IDS_APP_TITLE nebo název spustitelného souboru.  
   
 ### <a name="remarks"></a>Poznámky  
  Je potřeba vytvořit jeden globální objekt vaší `CWinApp`-odvozené třídy. Může mít jen jeden `CWinApp` objektu ve vaší aplikaci. Konstruktor ukládá ukazatel `CWinApp` objektu tak, aby `WinMain` můžete volat objektu členské funkce k inicializaci a spuštění aplikace.  
@@ -528,10 +528,10 @@ virtual int DoMessageBox(
  *lpszPrompt*  
  Adresa text do pole zpráva.  
   
- `nType`  
+ *Noznámení*  
  Do pole zpráva [styl](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).  
   
- `nIDPrompt`  
+ *nIDPrompt*  
  Index pro řetězec kontextové nápovědy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -550,7 +550,7 @@ virtual void DoWaitCursor(int nCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCode`  
+ *nCode*  
  Pokud tento parametr je 1, zobrazí se kurzoru čekání. Pokud je 0, počkejte kurzor je obnoven bez zvyšování počet odkazů. Pokud-1, ukončí kurzor čekání.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -575,10 +575,10 @@ DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `d2dFactoryType`  
+ *d2dFactoryType*  
  Model vláken D2D tovární nastavení a prostředky vytvoří.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Hodnotu, která určuje, zda se objekt factory zápisu sdílené nebo izolované  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -614,17 +614,17 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
- Určuje, zda se má povolit interakci s hlavním systému Windows 7 ( `TRUE`), nebo zakázat ( `FALSE`).  
+ *bEnable*  
+ Určuje, zda by měla být povolená (TRUE) interakci s hlavním systému Windows 7, nebo zakázána (FALSE).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `TRUE` Pokud interakce panelu můžete povolit nebo zakázat.  
+ Vrátí hodnotu TRUE, pokud interakce panelu můžete povolit nebo zakázat.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda musí být volána před vytvořením hlavní okno, v opačném případě vyhodnotí a vrátí `FALSE`.  
+ Tato metoda musí být volána před vytvořením hlavní okno, v opačném případě se vyhodnotí a vrátí hodnotu FALSE.  
   
 ##  <a name="exitinstance"></a>  CWinApp::ExitInstance  
- Voláno rámcem uvnitř **spustit** – členská funkce ukončíte tuto instanci aplikace.  
+ Voláno rámcem uvnitř `Run` – členská funkce ukončíte tuto instanci aplikace.  
   
 ```  
 virtual int ExitInstance();
@@ -634,7 +634,7 @@ virtual int ExitInstance();
  Ukončovací kód aplikace; 0 znamená žádné chyby a hodnoty, které jsou větší než 0 indikují chybu. Tato hodnota se používá jako návratová hodnota z `WinMain`.  
   
 ### <a name="remarks"></a>Poznámky  
- Nevolejte tuto funkci člena z libovolného místa ale uvnitř **spustit** – členská funkce.  
+ Nevolejte tuto funkci člena z libovolného místa ale uvnitř `Run` – členská funkce.  
   
  Výchozí implementace této funkce zapíše framework možnosti do aplikace. Soubor INI. Funkci odstranit při ukončí aplikaci přepište.  
   
@@ -652,7 +652,7 @@ virtual LPVOID GetApplicationRecoveryParameter();
  Výchozí vstupní parametr pro metodu obnovení aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
- Vrátí výchozí chování této funkce `NULL`.  
+ Výchozí chování této funkce vrátí hodnotu NULL.  
   
  Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).  
   
@@ -688,13 +688,13 @@ virtual DWORD GetApplicationRestartFlags();
   
  Možné hodnoty pro příznaky správce restartování jsou následující:  
   
-- `RESTART_NO_CRASH`  
+- RESTART_NO_CRASH  
   
-- `RESTART_NO_HANG`  
+- RESTART_NO_HANG  
   
-- `RESTART_NO_PATCH`  
+- RESTART_NO_PATCH  
   
-- `RESTART_NO_REBOOT`  
+- RESTART_NO_REBOOT  
   
 ##  <a name="getappregistrykey"></a>  CWinApp::GetAppRegistryKey  
  Vrátí klíč pro HKEY_CURRENT_USER\\\RegistryKey\ProfileName "Software".  
@@ -704,11 +704,11 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTM`  
+ *Druh*  
  Ukazatel na `CAtlTransactionManager` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Klíč aplikace, pokud funkci úspěšně. v opačném případě `NULL`.  
+ Klíč aplikace, pokud funkci úspěšně. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -725,7 +725,7 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 ### <a name="remarks"></a>Poznámky  
  Každou aplikaci, která používá správce restartování musí mít jednu instanci [CDataRecoveryHandler třída](../../mfc/reference/cdatarecoveryhandler-class.md). Tato třída je odpovědná za monitorování otevřené dokumenty a automatické ukládání souborů. Chování `CDataRecoveryHandler` závisí na konfiguraci správce restartování. Další informace najdete v tématu [CDataRecoveryHandler třída](../../mfc/reference/cdatarecoveryhandler-class.md).  
   
- Tato metoda vrátí hodnotu `NULL` v operačních systémech starších než Windows Vista. Správce restartování není podporováno v operačních systémech starších než Windows Vista.  
+ Tato metoda vrátí hodnotu NULL v operačních systémech starších než Windows Vista. Správce restartování není podporováno v operačních systémech starších než Windows Vista.  
   
  Pokud aplikace nemá aktuálně obslužnou rutinu obnovení dat, tato metoda vytvoří jednu a vrátí ukazatel na ni.  
   
@@ -737,10 +737,10 @@ POSITION GetFirstDocTemplatePosition() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A **pozice** hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatel; **NULL** Pokud je seznam prázdný.  
+ Hodnota pozice, který lze použít pro iteraci nebo načtení objektu ukazatel; Hodnota NULL, pokud je seznam prázdný.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití **pozice** vrácena hodnota v volání [GetNextDocTemplate](#getnextdoctemplate) získat první [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objektu.  
+ Použití vrácena hodnota pozice v volání [GetNextDocTemplate](#getnextdoctemplate) získat první [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objektu.  
   
 ##  <a name="gethelpmode"></a>  CWinApp::GetHelpMode  
  Načte typ nápovědy používá aplikace.  
@@ -753,15 +753,15 @@ AFX_HELP_TYPE GetHelpMode();
  Typ nápovědy používá aplikace. V tématu [CWinApp::m_eHelpType](#m_ehelptype) Další informace.  
   
 ##  <a name="getnextdoctemplate"></a>  CWinApp::GetNextDocTemplate  
- Získá šablonu dokumentu identifikovaný `pos`, pak nastaví `pos` k **pozice** hodnotu.  
+ Získá šablonu dokumentu identifikovaný *pos*, pak nastaví *pos* na POZICI hodnotu.  
   
 ```  
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
- Odkaz na **pozice** hodnoty vrácené z předchozího volání `GetNextDocTemplate` nebo [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Hodnota se aktualizuje na další pozici toto volání.  
+ *POS*  
+ Odkaz na hodnotu pozice vrácené z předchozího volání `GetNextDocTemplate` nebo [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Hodnota se aktualizuje na další pozici toto volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Ukazatel [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objektu.  
@@ -769,9 +769,9 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ### <a name="remarks"></a>Poznámky  
  Můžete použít `GetNextDocTemplate` ve smyčce dopředného iterace Pokud vytvořit počáteční pozice pomocí volání `GetFirstDocTemplatePosition`.  
   
- Musíte zajistit, aby vaše **pozice** hodnota je platná. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
+ Je nutné zajistit, že vaše pozice hodnota je platná. Pokud je neplatný, ladění verzi knihovny Microsoft Foundation Class se vyhodnotí.  
   
- Pokud šablona načtená dokumentu je poslední, k dispozici, pak nová hodnota `pos` je nastaven na **NULL**.  
+ Pokud šablona načtená dokumentu je poslední, k dispozici, pak nová hodnota *pos* je nastaven na hodnotu NULL.  
   
 ##  <a name="getprinterdevicedefaults"></a>  CWinApp::GetPrinterDeviceDefaults  
  Volání této funkce člen Příprava kontextu zařízení tiskárny pro tisk.  
@@ -824,7 +824,7 @@ BOOL GetProfileBinary(
  Tato funkce člen není rozlišuje velká a malá písmena, takže řetězců v *lpszSection* a *lpszEntry* parametry se můžou lišit v případě.  
   
 > [!NOTE]
-> **GetProfileBinary** přiděluje vyrovnávací paměti a vrátí jeho adresy v \* *ppData*. Volající zodpovídá za uvolnění vyrovnávací paměti pomocí **odstranit []**.  
+> `GetProfileBinary` přidělení vyrovnávací paměti a vrátí jeho adresy v \* *ppData*. Volající zodpovídá za uvolnění vyrovnávací paměti pomocí **odstranit []**.  
   
 > [!IMPORTANT]
 >  Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -845,22 +845,22 @@ UINT GetProfileInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSection`  
+ *lpszSection*  
  Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku.  
   
- `lpszEntry`  
+ *lpszEntry*  
  Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, jejíž hodnota má být načtena.  
   
- `nDefault`  
+ *nDefault*  
  Určuje výchozí vrácenou hodnotu, pokud rozhraní položku nemůže najít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Celočíselná hodnota řetězce, který následuje zadanou položku, pokud je funkce úspěšná. Vrácená hodnota je hodnota parametru `nDefault`, pokud funkce položku nenalezne. Vrácená hodnota je 0, pokud hodnota, která odpovídá zadané položce, není celé číslo.  
+ Celočíselná hodnota řetězce, který následuje zadanou položku, pokud je funkce úspěšná. Vrácená hodnota je hodnota *nDefault* parametr, pokud funkci nelze nalézt položku. Vrácená hodnota je 0, pokud hodnota, která odpovídá zadané položce, není celé číslo.  
   
- Tato členská funkce podporuje šestnáctkovou notaci hodnot v souboru .INI. Při načtení celého čísla se znaménkem byste tuto hodnotu měli přetypovat na typ `int`.  
+ Tato členská funkce podporuje šestnáctkovou notaci hodnot v souboru .INI. Pokud načítáte znaménkem, by měl přetypovat hodnotu do **int**.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato členská funkce nerozlišuje velikost písmen, takže se řetězce v parametrech `lpszSection` a `lpszEntry` mohou ve velikosti písmen lišit.  
+ Tato funkce člen není rozlišuje velká a malá písmena, takže řetězců v *lpszSection* a *lpszEntry* parametry se můžou lišit v případě.  
   
 > [!IMPORTANT]
 >  Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [zabraňující způsobí přetečení vyrovnávací paměti](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -881,17 +881,17 @@ CString GetProfileString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSection`  
+ *lpszSection*  
  Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku.  
   
- `lpszEntry`  
- Odkazuje na řetězec ukončené hodnotou null, který obsahuje položku, na nichž je řetězec mají být načteny. Tato hodnota nesmí být **NULL**.  
+ *lpszEntry*  
+ Odkazuje na řetězec ukončené hodnotou null, který obsahuje položku, na nichž je řetězec mají být načteny. Tato hodnota nesmí být NULL.  
   
- `lpszDefault`  
+ *lpszDefault*  
  Odkazuje na výchozí hodnotu řetězce pro danou položku, pokud položka nebyla nalezena v inicializační soubor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrácená hodnota je řetězec z aplikace. Soubor INI nebo `lpszDefault` Pokud řetězec nelze nalézt. Maximální délka řetězce nepodporuje rozhraní je `_MAX_PATH`. Pokud `lpszDefault` je **NULL**, vrácená hodnota je prázdný řetězec.  
+ Vrácená hodnota je řetězec z aplikace. Soubor INI nebo *lpszDefault* Pokud řetězec nelze nalézt. Maximální délka řetězce nepodporuje rozhraní je _max_path –. Pokud *lpszDefault* má hodnotu NULL, vrácená hodnota je prázdný řetězec.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -913,14 +913,14 @@ CAtlTransactionManager* pTM = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSection`  
+ *lpszSection*  
  Název klíče, který se získat.  
   
- `pTM`  
+ *Druh*  
  Ukazatel na `CAtlTransactionManager` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Oddíl klíč, pokud funkci úspěšně. v opačném případě `NULL`.  
+ Oddíl klíč, pokud funkci úspěšně. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -941,11 +941,11 @@ virtual void HtmlHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwData`  
- Určuje další data. Hodnota použitá závisí na hodnotu `nCmd` parametr.  
+ *dwData*  
+ Určuje další data. Hodnota použitá závisí na hodnotu *nCmd* parametr.  
   
- `nCmd`  
- Určuje typ nápovědy požadovaný. Seznam možných hodnot a jejich vliv `dwData` parametr, najdete v článku `uCommand` parametr popsané v o the HTMLHelp funkce rozhraní API ve Windows SDK.  
+ *nCmd*  
+ Určuje typ nápovědy požadovaný. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku *uCommand* parametr popsané v o the HTMLHelp funkce rozhraní API ve Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce má být vyvolán HTMLHelp aplikace také volá framework.  
@@ -968,7 +968,7 @@ virtual BOOL InitInstance();
  Přepsání `InitInstance` k chybě při inicializaci každou novou instanci třídy vaši aplikaci běžící v systému Windows. Obvykle přepsat `InitInstance` k sestavení objektu sady hlavní okno a nastavení `CWinThread::m_pMainWnd` – datový člen tak, aby odkazoval na toto okno. Další informace o přepsání této – členská funkce najdete v tématu [CWinApp: třídy aplikace](../../mfc/cwinapp-the-application-class.md).  
   
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Když zavoláte [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vaší `InitInstance` přepsat, zadejte `COINIT_APARTMENTTHREADED` (místo `COINIT_MULTITHREADED`). Další informace najdete v tématu PRB: MFC aplikace přestane reagovat při inicializaci aplikace jako a více vláken typu Apartment (828643) v [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Když zavoláte [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) ve vaší `InitInstance` přepsat, zadejte COINIT_APARTMENTTHREADED (nikoli COINIT_MULTITHREADED). Další informace najdete v tématu PRB: MFC aplikace přestane reagovat při inicializaci aplikace jako a více vláken typu Apartment (828643) v [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]  
@@ -981,27 +981,27 @@ virtual BOOL IsTaskbarInteractionEnabled();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `TRUE` Pokud `EnableTaskbarInteraction` byla volána a je operační systém Windows 7 nebo vyšší.  
+ Vrátí hodnotu TRUE, pokud `EnableTaskbarInteraction` byla volána a je operační systém Windows 7 nebo vyšší.  
   
 ### <a name="remarks"></a>Poznámky  
  Interakce panelu znamená, že aplikace MDI zobrazuje obsah MDI, děti v samostatných záložkách miniatur, které se zobrazují, když ukazatel myši nad tlačítka panelu aplikace.  
   
 ##  <a name="loadcursor"></a>  CWinApp::LoadCursor  
- Načte prostředek kurzor s názvem podle `lpszResourceName` nebo specifikace `nIDResource` z aktuální spustitelný soubor.  
+ Načte prostředek kurzor s názvem podle *lpszResourceName* nebo specifikace *nIDResource* z aktuální spustitelný soubor.  
   
 ```  
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszResourceName`  
+ *lpszResourceName*  
  Odkazuje na řetězec ukončené hodnotou null, který obsahuje název prostředku kurzoru. Můžete použít `CString` pro tento argument.  
   
- `nIDResource`  
+ *nIDResource*  
  ID prostředku kurzoru. Seznam prostředků najdete v tématu [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro kurzor v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač pro kurzor v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  `LoadCursor` načte kurzor do paměti pouze v případě, že nebyla dříve načíst; jinak načte popisovač existující prostředek.  
@@ -1012,21 +1012,21 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
  [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]  
   
 ##  <a name="loadicon"></a>  CWinApp::LoadIcon  
- Načte ikonu prostředek s názvem podle `lpszResourceName` nebo specifikace `nIDResource` ze spustitelného souboru.  
+ Načte ikonu prostředek s názvem podle *lpszResourceName* nebo specifikace *nIDResource* ze spustitelného souboru.  
   
 ```  
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszResourceName`  
+ *lpszResourceName*  
  Odkazuje na řetězec ukončené hodnotou null, který obsahuje název prostředku ikonu. Můžete použít také `CString` pro tento argument.  
   
- `nIDResource`  
+ *nIDResource*  
  Číslo ID prostředku ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač pro ikonu v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  `LoadIcon` načte ikonu pouze v případě, že nebyla dříve načíst; jinak načte popisovač existující prostředek.  
@@ -1034,21 +1034,21 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
  Můžete použít [LoadStandardIcon](#loadstandardicon) nebo [LoadOEMIcon](#loadoemicon) – členská funkce pro přístup k předdefinované ikony systému Windows.  
   
 > [!NOTE]
->  Tato funkce člen volá funkce rozhraní API Win32 [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), který načtěte jenom na ikonu, jehož velikost odpovídá **SM_CXICON** a **SM_CYICON** hodnoty metriky systému.  
+>  Tato funkce člen volá funkce rozhraní API Win32 [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), který načtěte jenom na ikonu, jehož velikost odpovídá hodnoty metriky systému SM_CXICON a SM_CYICON.  
   
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor  
- Načítání Windows předdefinované kurzoru prostředku zadaného parametrem `nIDCursor`.  
+ Načítání Windows předdefinované kurzoru prostředku zadaného parametrem *nIDCursor*.  
   
 ```  
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDCursor`  
- **OCR_** manifest konstantní identifikátor, který určuje předdefinované Windows kurzoru. Musíte mít **#define OEMRESOURCE** před **#include \<afxwin.h >** k získání přístupu k **OCR_** konstanty v systému WINDOWS. H.  
+ *nIDCursor*  
+ **OCR_** manifest konstantní identifikátor, který určuje předdefinované Windows kurzoru. Musíte mít `#define OEMRESOURCE` před `#include \<afxwin.h>` k získání přístupu k **OCR_** konstanty v systému WINDOWS. H.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro kurzor v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač pro kurzor v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `LoadOEMCursor` nebo [LoadStandardCursor](#loadstandardcursor) – členská funkce pro přístup k předdefinované kurzory systému Windows.  
@@ -1059,59 +1059,59 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
  [!code-cpp[NVC_MFCWindowing#46](../../mfc/reference/codesnippet/cpp/cwinapp-class_13.cpp)]  
   
 ##  <a name="loadoemicon"></a>  CWinApp::LoadOEMIcon  
- Načítání Windows předdefinované ikonu prostředku zadaného parametrem `nIDIcon`.  
+ Načítání Windows předdefinované ikonu prostředku zadaného parametrem *nIDIcon*.  
   
 ```  
 HICON LoadOEMIcon(UINT nIDIcon) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDIcon`  
- **OIC_** manifest konstantní identifikátor, který určuje předdefinované ikonu systému Windows. Musíte mít **#define OEMRESOURCE** před **#include \<afxwin.h >** k přístupu **OIC_** konstanty v systému WINDOWS. H.  
+ *nIDIcon*  
+ **OIC_** manifest konstantní identifikátor, který určuje předdefinované ikonu systému Windows. Musíte mít `#define OEMRESOURCE` před `#include \<afxwin.h>` k přístupu **OIC_** konstanty v systému WINDOWS. H.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač pro ikonu v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `LoadOEMIcon` nebo [LoadStandardIcon](#loadstandardicon) – členská funkce pro přístup k předdefinované ikony systému Windows.  
   
 ##  <a name="loadstandardcursor"></a>  CWinApp::LoadStandardCursor  
- Načítání Windows předdefinované prostředků kurzoru, `lpszCursorName` určuje.  
+ Načítání Windows předdefinované prostředků kurzoru, *lpszCursorName* určuje.  
   
 ```  
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszCursorName`  
- **IDC_** manifest konstantní identifikátor, který určuje předdefinované Windows kurzoru. Tyto identifikátory jsou definovány v systému WINDOWS. H. V následujícím seznamu jsou možné předem definovaných hodnot a význam pro `lpszCursorName`:  
+ *lpszCursorName*  
+ **IDC_** manifest konstantní identifikátor, který určuje předdefinované Windows kurzoru. Tyto identifikátory jsou definovány v systému WINDOWS. H. V následujícím seznamu jsou možné předem definovaných hodnot a význam pro *lpszCursorName*:  
   
-- **IDC_ARROW** Standardní šipka kurzoru  
+- Standardní IDC_ARROW šipku kurzoru  
   
-- **IDC_IBEAM** kurzoru standardní vkládání textu  
+- Standardní IDC_IBEAM kurzoru vkládání textu  
   
-- **IDC_WAIT** přesýpací hodiny kurzor používá, když Windows provede časově náročný úkol  
+- Přesýpací hodiny IDC_WAIT kurzor používá, když Windows provede časově náročný úkol  
   
-- **IDC_CROSS** kříž kurzor pro výběr  
+- IDC_CROSS kříž kurzor pro výběr  
   
-- **IDC_UPARROW** šipka směřující nahoru  
+- Šipka IDC_UPARROW, který odkazuje nahoru  
   
-- **IDC_SIZE** zastaralé a nepodporovaný; použít **IDC_SIZEALL**  
+- IDC_SIZE zastaralé a nepodporované; použít IDC_SIZEALL  
   
-- **IDC_SIZEALL** šipku se čtyřmi odkazoval. Kurzor sloužící k změnit velikost okna.  
+- IDC_SIZEALL A čtyřmi odkazoval šipku. Kurzor sloužící k změnit velikost okna.  
   
-- **IDC_ICON** zastaralé a nepodporované. Použití **IDC_ARROW**.  
+- IDC_ICON zastaralé a nepodporované. Použijte IDC_ARROW.  
   
-- **IDC_SIZENWSE** dvojitá šipka doplněná končí v levé horní a dolní pravá  
+- Dvojitá šipka IDC_SIZENWSE s končí v levé horní a dolní pravá  
   
-- **IDC_SIZENESW** dvojitá šipka doplněná končí v levé horní vpravo a nižší  
+- Dvojitá šipka IDC_SIZENESW s končí v levé horní vpravo a nižší  
   
-- **IDC_SIZEWE** vodorovné dvojitá šipka  
+- IDC_SIZEWE vodorovné dvojitá šipka  
   
-- **IDC_SIZENS** svislé dvojitá šipka  
+- IDC_SIZENS svislé dvojitá šipka  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro kurzor v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač pro kurzor v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `LoadStandardCursor` nebo [LoadOEMCursor](#loadoemcursor) – členská funkce pro přístup k předdefinované kurzory systému Windows.  
@@ -1120,18 +1120,18 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
  [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]  
   
 ##  <a name="loadstandardicon"></a>  CWinApp::LoadStandardIcon  
- Ikona prostředků předdefinované zatížení systému Windows, `lpszIconName` určuje.  
+ Ikona prostředků předdefinované zatížení systému Windows, *lpszIconName* určuje.  
   
 ```  
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszIconName`  
+ *lpszIconName*  
  Manifestu konstantní identifikátor, který určuje předdefinované ikonu systému Windows. Tyto identifikátory jsou definovány v systému WINDOWS. H. Seznam možných předem definovaných hodnot a jejich popisy najdete v tématu *lpIconName* parametr v [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač pro ikonu v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Použití `LoadStandardIcon` nebo [LoadOEMIcon](#loadoemicon) – členská funkce pro přístup k předdefinované ikony systému Windows.  
@@ -1144,21 +1144,21 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMaxMRU`  
+ *nMaxMRU*  
  Počet naposledy použitých souborů ke sledování.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `nMaxMRU` je 0, žádný seznam naposledy použitých se zachová.  
+ Pokud *nMaxMRU* je 0, žádný seznam naposledy použitých se zachová.  
   
 ##  <a name="m_bhelpmode"></a>  CWinApp::m_bHelpMode  
- **Hodnota TRUE,** Pokud aplikace je v režimu kontextové nápovědy (obvykle volat pomocí klávesy SHIFT + F1); jinak **FALSE**.  
+ Hodnota TRUE, pokud je aplikace v režimu kontextové nápovědy (obvykle volat pomocí klávesy SHIFT + F1); jinak hodnota FALSE.  
   
 ```  
 BOOL m_bHelpMode;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- V režimu kontextové nápovědy kurzoru změní na otazník a uživatele můžete přesunout o na obrazovce. Zkontrolujte tento příznak, pokud chcete implementovat zvláštní zpracování v režimu nápovědy. `m_bHelpMode` je veřejné proměnné typu **BOOL**.  
+ V režimu kontextové nápovědy kurzoru změní na otazník a uživatele můžete přesunout o na obrazovce. Zkontrolujte tento příznak, pokud chcete implementovat zvláštní zpracování v režimu nápovědy. `m_bHelpMode` je veřejné proměnné typu BOOL.  
   
 ##  <a name="m_dwrestartmanagersupportflags"></a>  CWinApp::m_dwRestartManagerSupportFlags  
  Příznaky, které určují, jak se chová správce restartování.  
@@ -1173,26 +1173,26 @@ DWORD m_dwRestartManagerSupportFlags;
 |||  
 |-|-|  
 |Příznak|Popis|  
-|`AFX_RESTART_MANAGER_SUPPORT_RESTART`|Aplikace je registrován pomocí [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Správce restartování je zodpovědná za restartování aplikace, pokud neočekávaně ukončí se.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY`|Aplikace není zaregistrována správce restartování a správce restartování volání funkce zpětného volání pro zotavení po restartování aplikace. Výchozí funkce zpětného volání pro obnovení je [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
-|- `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`|Je povoleno automatické ukládání a autosaves správce restartování žádné otevřít dokumenty, když se aplikace restartuje.|  
-|- `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`|Je povoleno automatické ukládání a autosaves správce restartování žádné otevřít dokumenty v pravidelných intervalech. Interval je definována [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|  
-|- `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`|Správce restartování otevře dříve otevřené dokumenty po restartování aplikace z neočekávané ukončení. [CDataRecoveryHandler třída](../../mfc/reference/cdatarecoveryhandler-class.md) zpracovává ukládání seznam otevřené dokumenty a jejich obnovení.|  
-|- `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`|Správce restartování vyzývá uživatele k obnovení souborů automaticky uloženo po restartování aplikace. `CDataRecoveryHandler` Třída dotazuje uživatele.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE`|Sjednocení `AFX_RESTART_MANAGER_SUPPORT_RESTART`, `AFX_RESTART_MANAGER_SUPPORT_RECOVER`, a `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS`|Sjednocení `AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`, a `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS`|Sjednocení `AFX_RESTART_MANAGER_SUPPORT_RESTART`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`, a `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS`|Sjednocení `AFX_RESTART_MANAGER_SUPPORT_RECOVERY`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`, a `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
+|AFX_RESTART_MANAGER_SUPPORT_RESTART|Aplikace je registrován pomocí [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Správce restartování je zodpovědná za restartování aplikace, pokud neočekávaně ukončí se.|  
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Aplikace není zaregistrována správce restartování a správce restartování volání funkce zpětného volání pro zotavení po restartování aplikace. Výchozí funkce zpětného volání pro obnovení je [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Je povoleno automatické ukládání a autosaves správce restartování žádné otevřít dokumenty, když se aplikace restartuje.|  
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Je povoleno automatické ukládání a autosaves správce restartování žádné otevřít dokumenty v pravidelných intervalech. Interval je definována [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|  
+|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Správce restartování otevře dříve otevřené dokumenty po restartování aplikace z neočekávané ukončení. [CDataRecoveryHandler třída](../../mfc/reference/cdatarecoveryhandler-class.md) zpracovává ukládání seznam otevřené dokumenty a jejich obnovení.|  
+|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Správce restartování vyzývá uživatele k obnovení souborů automaticky uloženo po restartování aplikace. `CDataRecoveryHandler` Třída dotazuje uživatele.|  
+|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Sjednocení AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_SUPPORT_RECOVER a AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|  
+|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Sjednocení AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|  
+|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Sjednocení AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|  
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES a AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|  
   
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType  
- Typ této – datový člen je Výčtový typ **AFX_HELP_TYPE**, která je definována v rámci `CWinApp` třídy.  
+ Typ této – datový člen je výčtového typu AFX_HELP_TYPE, která je definována v rámci `CWinApp` třídy.  
   
 ```  
 AFX_HELP_TYPE m_eHelpType;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- **AFX_HELP_TYPE** výčet je definován následujícím způsobem:  
+ Výčet AFX_HELP_TYPE je definován následujícím způsobem:  
   
 ```  
 enum AFX_HELP_TYPE {  
@@ -1201,32 +1201,32 @@ enum AFX_HELP_TYPE {
     };  
 ```  
   
--   Chcete-li nastavit aplikace Nápověda HTML – Nápověda, volejte [SetHelpMode](#sethelpmode) a zadejte **afxHTMLHelp**.  
+-   Chcete-li nastavit aplikace Nápověda HTML – Nápověda, volejte [SetHelpMode](#sethelpmode) a zadejte `afxHTMLHelp`.  
   
--   Chcete-li nastavit aplikace Nápověda WinHelp, volejte `SetHelpMode` a zadejte **afxWinHelp**.  
+-   Chcete-li nastavit aplikace Nápověda WinHelp, volejte `SetHelpMode` a zadejte `afxWinHelp`.  
   
 ##  <a name="m_hinstance"></a>  CWinApp::m_hInstance  
- Odpovídá `hInstance` parametr předaná Windows `WinMain`.  
+ Odpovídá *hInstance* parametr předaná Windows `WinMain`.  
   
 ```  
 HINSTANCE m_hInstance;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_hInstance` – Datový člen je popisovač pro aktuální instanci aplikace běžící v systému Windows. To je vrácené funkcí globální [afxgetinstancehandle –](application-information-and-management.md#afxgetinstancehandle). `m_hInstance` je veřejné proměnné typu `HINSTANCE`.  
+ `m_hInstance` – Datový člen je popisovač pro aktuální instanci aplikace běžící v systému Windows. To je vrácené funkcí globální [afxgetinstancehandle –](application-information-and-management.md#afxgetinstancehandle). `m_hInstance` je veřejné proměnné typu HINSTANCE.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]  
   
 ##  <a name="m_lpcmdline"></a>  CWinApp::m_lpCmdLine  
- Odpovídá `lpCmdLine` parametr předaná Windows `WinMain`.  
+ Odpovídá *lpCmdLine* parametr předaná Windows `WinMain`.  
   
 ```  
 LPTSTR m_lpCmdLine;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odkazuje na řetězec ukončené hodnotou null, který určuje příkazový řádek pro aplikaci. Použití `m_lpCmdLine` pro přístup k žádných argumentů příkazového řádku zadané uživatelem při spuštění aplikace. `m_lpCmdLine` je veřejné proměnné typu `LPTSTR`.  
+ Odkazuje na řetězec ukončené hodnotou null, který určuje příkazový řádek pro aplikaci. Použití `m_lpCmdLine` pro přístup k žádných argumentů příkazového řádku zadané uživatelem při spuštění aplikace. `m_lpCmdLine` je veřejné proměnné typu LPTSTR.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]  
@@ -1242,14 +1242,14 @@ int m_nAutosaveInterval;
  Můžete nakonfigurovat správce restartování pro automatické ukládání otevřené dokumenty ve stanovených intervalech. Pokud aplikace nemá automaticky ukládat soubory, tento parametr nemá žádný vliv.  
   
 ##  <a name="m_ncmdshow"></a>  CWinApp::m_nCmdShow  
- Odpovídá `nCmdShow` parametr předaná Windows `WinMain`.  
+ Odpovídá *nCmdShow* parametr předaná Windows `WinMain`.  
   
 ```  
 int m_nCmdShow;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- By měla předávat `m_nCmdShow` jako argument při volání [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) pro hlavní okno vaší aplikace. `m_nCmdShow` je veřejné proměnné typu `int`.  
+ By měla předávat `m_nCmdShow` jako argument při volání [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) pro hlavní okno vaší aplikace. `m_nCmdShow` je veřejné proměnné typu **int**.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]  
@@ -1258,7 +1258,7 @@ int m_nCmdShow;
  Tento člen data použijte k ukládání ukazatel na hlavní okno aplikace OLE kontejneru, který má váš server aplikace na místě OLE aktivován.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je tento člen dat **NULL**, aplikace není aktivní na místě.  
+ Pokud tento člen dat mají hodnotu NULL, není aktivní místní aplikace.  
   
  Rozhraní framework nastaví tento členské proměnné po okně s rámečkem na místě aktivován aplikace kontejneru OLE.  
   
@@ -1280,7 +1280,7 @@ LPCTSTR m_pszAppName;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Název aplikace mohou pocházet z parametr předaný [CWinApp](#cwinapp) konstruktoru, nebo pokud není zadaný, na řetězec prostředku s ID **AFX_IDS_APP_TITLE**. Pokud název aplikace nebyl nalezen v prostředku, pochází z tohoto programu. Název souboru EXE.  
+ Název aplikace mohou pocházet z parametr předaný [CWinApp](#cwinapp) konstruktoru, nebo pokud není zadaný, na řetězec prostředku s ID AFX_IDS_APP_TITLE. Pokud název aplikace nebyl nalezen v prostředku, pochází z tohoto programu. Název souboru EXE.  
   
  Globální funkce [afxgetappname –](application-information-and-management.md#afxgetappname). `m_pszAppName` je veřejné proměnné typu **const char\***.  
   
@@ -1395,7 +1395,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
  [!code-cpp[NVC_MFCWindowing#48](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]  
   
 ##  <a name="onfilenew"></a>  CWinApp::OnFileNew  
- Implementuje `ID_FILE_NEW` příkaz.  
+ Implementuje id_file_new – příkaz.  
   
 ```  
 afx_msg void OnFileNew();
@@ -1412,7 +1412,7 @@ afx_msg void OnFileNew();
  [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
 ##  <a name="onfileopen"></a>  CWinApp::OnFileOpen  
- Implementuje `ID_FILE_OPEN` příkaz.  
+ Implementuje id_file_open – příkaz.  
   
 ```  
 afx_msg void OnFileOpen();
@@ -1429,7 +1429,7 @@ afx_msg void OnFileOpen();
  [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
 ##  <a name="onfileprintsetup"></a>  CWinApp::OnFilePrintSetup  
- Implementuje **id_file_print_setup –** příkaz.  
+ Implementuje id_file_print_setup – příkaz.  
   
 ```  
 afx_msg void OnFilePrintSetup();
@@ -1462,7 +1462,7 @@ afx_msg void OnHelp();
  Člen funkci nastavit kontext nápovědy na jinou hodnotu než okna, dialogové okno, položku nabídky nebo tlačítka panelu nástrojů, který je aktuálně aktivní přepište. Volání `WinHelp` s požadovanou pomůže ID kontextu.  
   
 ##  <a name="onhelpfinder"></a>  CWinApp::OnHelpFinder  
- Zpracovává **ID_HELP_FINDER** a **id_default_help –** příkazy.  
+ Zpracovává příkazy ID_HELP_FINDER a id_default_help –.  
   
 ```  
 afx_msg void OnHelpFinder();
@@ -1472,7 +1472,7 @@ afx_msg void OnHelpFinder();
  Je nutné přidat `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` příkaz, který má vaše `CWinApp` třída mapy zpráv pro povolení této funkce člen. Pokud je povoleno, rozhraní volá funkci tento popisovač zpráv, pokud uživatel aplikace vybere příkaz pomůže vyhledávací k vyvolání `WinHelp` se standardem **HELP_FINDER** tématu.  
   
 ##  <a name="onhelpindex"></a>  CWinApp::OnHelpIndex  
- Zpracovává **id_help_index –** příkazů a poskytuje výchozí téma nápovědy.  
+ Zpracuje id_help_index – příkaz a poskytuje výchozí téma nápovědy.  
   
 ```  
 afx_msg void OnHelpIndex();
@@ -1482,7 +1482,7 @@ afx_msg void OnHelpIndex();
  Je nutné přidat `ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )` příkaz, který má vaše `CWinApp` třída mapy zpráv pro povolení této funkce člen. Pokud je povoleno, rozhraní volá funkci tento popisovač zpráv, pokud uživatel aplikace vybere příkaz nápovědě k vyvolání `WinHelp` se standardem **HELP_INDEX** tématu.  
   
 ##  <a name="onhelpusing"></a>  CWinApp::OnHelpUsing  
- Zpracovává **id_help_using –** příkaz.  
+ Zpracovává id_help_using – příkaz.  
   
 ```  
 afx_msg void OnHelpUsing();
@@ -1499,8 +1499,8 @@ virtual BOOL OnIdle(LONG lCount);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lCount`  
- Čítač zvýší pokaždé, když `OnIdle` je volána, když se fronta zpráv aplikace je prázdný. Toto je čítač nastaven na 0 pokaždé, když je novou zprávu zpracovat. Můžete použít `lCount` parametr k určení relativních doba běhu aplikace bylo nečinné bez zpracování zprávy.  
+ *lCount*  
+ Čítač zvýší pokaždé, když `OnIdle` je volána, když se fronta zpráv aplikace je prázdný. Toto je čítač nastaven na 0 pokaždé, když je novou zprávu zpracovat. Můžete použít *lCount* parametr k určení relativních doba běhu aplikace bylo nečinné bez zpracování zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty pro příjem více zpracování doby nečinnosti; 0, pokud není nutná žádná další doby nečinnosti.  
@@ -1508,27 +1508,27 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="remarks"></a>Poznámky  
  `OnIdle` ve smyčce zpráv výchozí je volána, když fronta zpráv aplikace je prázdný. Pomocí přepsání volání vlastní pozadí úlohy nečinnosti obslužné rutiny.  
   
- `OnIdle` by měl vrátit 0 k označení, že není vyžadováno žádné nečinnosti doba zpracování. `lCount` Parametr se zvýší pokaždé, když `OnIdle` je volána, když je prázdný fronty zpráv a resetuje na hodnotu 0 pokaždé, když je novou zprávu zpracovat. Vaše různých nečinnosti rutiny založené na tento počet můžete volat.  
+ `OnIdle` by měl vrátit 0 k označení, že není vyžadováno žádné nečinnosti doba zpracování. *LCount* parametr se zvýší pokaždé, když `OnIdle` je volána, když je prázdný fronty zpráv a resetuje na hodnotu 0 pokaždé, když je novou zprávu zpracovat. Vaše různých nečinnosti rutiny založené na tento počet můžete volat.  
   
  Zde je souhrn zpracování nečinné smyčky:  
   
-1.  Pokud zpráva smyčky v knihovny Microsoft Foundation Class zkontroluje fronty zpráv a ne zjistí čekajících zpráv, zavolá `OnIdle` pro objekt aplikace a zdroje 0 jako `lCount` argument.  
+1.  Pokud zpráva smyčky v knihovny Microsoft Foundation Class zkontroluje fronty zpráv a ne zjistí čekajících zpráv, zavolá `OnIdle` pro objekt aplikace a zdroje 0 jako *lCount* argument.  
   
 2. `OnIdle` provádí některé zpracování a vrátí nenulovou hodnotu indikující ho by měla být volána znovu udělat další zpracování.  
   
-3.  Zpráva smyčky znovu kontroluje fronty zpráv. Pokud žádné zprávy čekají na vyřízení, zavolá `OnIdle` znovu zvyšování `lCount` argument.  
+3.  Zpráva smyčky znovu kontroluje fronty zpráv. Pokud žádné zprávy čekají na vyřízení, zavolá `OnIdle` znovu zvyšování *lCount* argument.  
   
 4.  Nakonec `OnIdle` dokončí zpracování její nečinnosti úkoly a vrátí hodnotu 0. Tato hodnota informuje zpráva smyčky zastavit volání `OnIdle` dokud přijetí další zprávy z fronty zpráv v tomto okamžiku nečinnosti cyklus restartuje s argumentem nastaven na hodnotu 0.  
   
  Neprovádějte zdlouhavé úlohy během `OnIdle` vzhledem k tomu, že aplikace nemůže zpracovat vstup uživatele, dokud `OnIdle` vrátí.  
   
 > [!NOTE]
->  Výchozí implementaci `OnIdle` příkaz aktualizace objektů uživatelského rozhraní, jako je například položek nabídky a tlačítka panelu nástrojů a provede interních datových struktura čištění. Proto pokud přepíšete `OnIdle`, musí volat `CWinApp::OnIdle` s `lCount` ve vaší verzi přepsané. Nejdřív voláním zpracování při nečinnosti všechny základní třídy (to znamená, dokud základní třídy `OnIdle` vrátí hodnotu 0). Pokud potřebujete k práci, než dokončí zpracování základní třídy, přečtěte si základní třída implementace a vyberte správnou `lCount` během které k práci.  
+>  Výchozí implementaci `OnIdle` příkaz aktualizace objektů uživatelského rozhraní, jako je například položek nabídky a tlačítka panelu nástrojů a provede interních datových struktura čištění. Proto pokud přepíšete `OnIdle`, musí volat `CWinApp::OnIdle` s `lCount` ve vaší verzi přepsané. Nejdřív voláním zpracování při nečinnosti všechny základní třídy (to znamená, dokud základní třídy `OnIdle` vrátí hodnotu 0). Pokud potřebujete k práci, než dokončí zpracování základní třídy, přečtěte si základní třída implementace a vyberte správnou *lCount* během které k práci.  
   
- Pokud nechcete, aby `OnIdle` volá se vždy, když se načte zprávu z fronty zpráv, můžete přepsat [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage). Pokud aplikace má nastavit velmi krátké časovač, nebo pokud je odesílání systému **WM_SYSTIMER** zprávy, pak `OnIdle` bude volána opakovaně a snížit výkon.  
+ Pokud nechcete, aby `OnIdle` volá se vždy, když se načte zprávu z fronty zpráv, můžete přepsat [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage). Pokud aplikace má nastavit velmi krátké časovač, nebo pokud systému odesílá zprávy WM_SYSTIMER pak `OnIdle` bude volána opakovaně a snížit výkon.  
   
 ### <a name="example"></a>Příklad  
- Následující dva příklady ukazují, jak používat `OnIdle`. V prvním příkladu zpracovává dvě nečinnosti úlohy pomocí `lCount` argument k určení priority úlohy. První úlohou je s vysokou prioritou a měli byste udělat, je to možné. V druhé úloze je méně důležité a by měl být v době, kdy je dlouhá pozastavení vstup uživatele. Všimněte si volání základní třídy verzi `OnIdle`. V druhém příkladu spravuje skupinu nečinnosti úlohy s různými prioritami.  
+ Následující dva příklady ukazují, jak používat `OnIdle`. V prvním příkladu zpracovává dvě nečinnosti úlohy pomocí *lCount* argument k určení priority úlohy. První úlohou je s vysokou prioritou a měli byste udělat, je to možné. V druhé úloze je méně důležité a by měl být v době, kdy je dlouhá pozastavení vstup uživatele. Všimněte si volání základní třídy verzi `OnIdle`. V druhém příkladu spravuje skupinu nečinnosti úlohy s různými prioritami.  
   
  [!code-cpp[NVC_MFCWindowing#51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]  
   
@@ -1542,14 +1542,14 @@ BOOL bAddToMRU = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszFileName`  
+ [v] *lpszFileName*  
  Název souboru, který se otevřít.  
   
- [v] `bAddToMRU`  
- `TRUE` Označuje, že dokument je jednou z nejnovější soubory; `FALSE` označuje dokument není jedním z nejnovější soubory.  
+ [v] *bAddToMRU*  
+ Pravda označuje, že dokument je jednou z nejnovější soubory; NEPRAVDA označuje, že dokument není jedním z nejnovější soubory.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CDocument` li úspěšné, jinak hodnota `NULL`.  
+ Ukazatel na `CDocument` Pokud úspěšná, jinak hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud dokument, který má tento název je již otevřeno, bude první okno rámce, který obsahuje tento dokument získat fokus. Pokud aplikace podporuje více šablon dokumentů, rozhraní používá k nalezení šablony příslušný dokument k pokusu o načtení dokumentu příponu názvu souboru. Pokud bylo úspěšné, vytvoří šablona dokumentu pak oken s rámečkem a zobrazení pro dokument.  
@@ -1565,7 +1565,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rCmdInfo`  
+ *rCmdInfo*  
  Odkaz na [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -1591,7 +1591,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMsg`  
+ *pMsg*  
  Ukazatel [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1607,10 +1607,10 @@ virtual BOOL ProcessMessageFilter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `code`  
- Určuje kód háku. Tato funkce člen kód používá určit, jak zpracovat `lpMsg.`  
+ *Kód*  
+ Určuje kód háku. Tato funkce člen kód používá určit, jak zpracovat *lpMsg.*  
   
- `lpMsg`  
+ *lpMsg*  
  Ukazatel na Windows [MSG](../../mfc/reference/msg-structure1.md) struktura.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -1622,18 +1622,18 @@ virtual BOOL ProcessMessageFilter(
  Pokud přepíšete tato pokročilé funkce, je nutné volat základní třídy verze Udržovat rozhraní framework napojit zpracování.  
   
 ##  <a name="processshellcommand"></a>  CWinApp::ProcessShellCommand  
- Tento člen funkce volá [InitInstance –](#initinstance) tak, aby přijímal parametrů předaných z `CCommandLineInfo` objekt identifikovaný `rCmdInfo`a provádět uvedené akce.  
+ Tento člen funkce volá [InitInstance –](#initinstance) tak, aby přijímal parametrů předaných z `CCommandLineInfo` objekt identifikovaný *rCmdInfo*a provádět uvedené akce.  
   
 ```  
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rCmdInfo`  
+ *rCmdInfo*  
  Odkaz na [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je úspěšně zpracovat příkaz prostředí. Pokud 0, vrátí **FALSE** z [InitInstance](#initinstance).  
+ Nenulové hodnoty, pokud je úspěšně zpracovat příkaz prostředí. Pokud 0, vrátí hodnotu FALSE z [InitInstance](#initinstance).  
   
 ### <a name="remarks"></a>Poznámky  
  Při spuštění nového projektu knihovny MFC pomocí Průvodce aplikací v Průvodce vytvořením aplikace vytvoří místní instanci `CCommandLineInfo`a pak zavolají `ProcessShellCommand` a [ParseCommandLine](#parsecommandline) v `InitInstance` – členská funkce. Příkazový řádek odpovídá trasy popsané dál:  
@@ -1673,11 +1673,11 @@ virtual LRESULT ProcessWndProcException(
  *e*  
  Ukazatel na nezachycenou výjimku.  
   
- `pMsg`  
+ *pMsg*  
  A [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje informace o zprávě systému windows, která způsobila, že rozhraní framework má být vyvolána výjimka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota, která má být vrácen do systému Windows. Obvykle je to 0L pro zpráv systému windows, 1L ( **TRUE**) pro příkaz zprávy.  
+ Hodnota, která má být vrácen do systému Windows. Obvykle je to 0L pro zpráv systému windows, 1L (TRUE) pro příkaz zprávy.  
   
 ### <a name="remarks"></a>Poznámky  
  Nevolejte tuto funkci člen přímo.  
@@ -1707,8 +1707,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bCompat`  
- `TRUE` Přidá položky registrace pro příkazy prostředí tiskových a tisku na, umožňuje uživatelům tisknout soubory přímo z prostředí nebo přetažením souboru na objekt tiskárny. Také přidá DefaultIcon klíč. Ve výchozím nastavení je tento parametr `FALSE` z důvodu zpětné kompatibility.  
+ [v] *bCompat*  
+ Hodnota TRUE přidá položky registrace pro příkazy prostředí tiskových a tisku na, umožňuje uživatelům tisknout soubory přímo z prostředí nebo přetažením souboru na objekt tiskárny. Také přidá DefaultIcon klíč. Ve výchozím nastavení je tento parametr hodnotu FALSE pro zpětnou kompatibilitu.  
   
 ### <a name="remarks"></a>Poznámky  
  To umožňuje uživateli otevřít datový soubor vytvořené aplikace dvojitým kliknutím na soubor z v rámci Správce souborů. Volání `RegisterShellFileTypes` po zavolání metody [AddDocTemplate](#adddoctemplate) pro každou z šablony dokumentů v aplikaci. Také zavolat [enableshellopen –](#enableshellopen) – členská funkce při volání `RegisterShellFileTypes`.  
@@ -1743,36 +1743,36 @@ DWORD dwCallbackFlags);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] `bRegisterRecoveryCallback`|`TRUE` Označuje, že tuto instanci aplikace používá funkci zpětného volání obnovení; `FALSE` označuje, že je nepoužívá. Při ukončení aplikace neočekávaně volá framework funkce zpětného volání pro obnovení. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
-|[v] `strRestartIdentifier`|Jedinečného řetězce, který identifikuje tuto instanci správce restartování. Restartování manager identifikátor je jedinečný pro každou instanci aplikace.|  
-|[v] `pwzCommandLineArgs`|Řetězec, který obsahuje všechny další argumenty z příkazového řádku.|  
-|[v] `dwRestartFlags`|Volitelné příznaky pro správce restartování. Další informace najdete v části poznámky.|  
-|[v] `pRecoveryCallback`|Funkce zpětného volání pro obnovení. Tato funkce vyžaduje `LPVOID` parametr jako vstup a vraťte se `DWORD`. Výchozí funkce zpětného volání pro obnovení je `CWinApp::ApplicationRecoveryCallback`.|  
-|[v] `lpvParam`|Vstupní parametr pro zpětné volání funkce obnovení. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
-|[v] `dwPingInterval`|Časový interval, který správce restartování čeká funkce zpětného volání obnovení vrátit. Tento parametr je v milisekundách.|  
-|[v] `dwCallbackFlags`|Příznaky předaný funkci zpětného volání pro obnovení. Vyhrazeno pro budoucí použití.|  
+|[v] *bRegisterRecoveryCallback*|Pravda označuje, že tuto instanci aplikace používá funkci zpětného volání obnovení; NEPRAVDA označuje, že je nepoužívá. Při ukončení aplikace neočekávaně volá framework funkce zpětného volání pro obnovení. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
+|[v] *strRestartIdentifier*|Jedinečného řetězce, který identifikuje tuto instanci správce restartování. Restartování manager identifikátor je jedinečný pro každou instanci aplikace.|  
+|[v] *pwzCommandLineArgs*|Řetězec, který obsahuje všechny další argumenty z příkazového řádku.|  
+|[v] *dwRestartFlags*|Volitelné příznaky pro správce restartování. Další informace najdete v části poznámky.|  
+|[v] *pRecoveryCallback*|Funkce zpětného volání pro obnovení. Tato funkce musí přijmout parametr LPVOID jako vstup a vrátit typu DWORD. Výchozí funkce zpětného volání pro obnovení je `CWinApp::ApplicationRecoveryCallback`.|  
+|[v] *lpvParam*|Vstupní parametr pro zpětné volání funkce obnovení. Další informace najdete v tématu [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
+|[v] *dwPingInterval*|Časový interval, který správce restartování čeká funkce zpětného volání obnovení vrátit. Tento parametr je v milisekundách.|  
+|[v] *dwCallbackFlags*|Příznaky předaný funkci zpětného volání pro obnovení. Vyhrazeno pro budoucí použití.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `S_OK` Pokud je metoda úspěšná. v opačném případě chybový kód.  
+ S_OK, pokud je metoda úspěšná. v opačném případě chybový kód.  
   
 ### <a name="remarks"></a>Poznámky  
  Pokud vaše aplikace používá výchozí implementace MFC automatické ukládání souborů, používejte jednoduché verzi `RegisterWithRestartManager`. Použijte komplexní verzi `RegisterWithRestartManager` Pokud chcete přizpůsobit automatické ukládání chování vaší aplikace.  
   
- Pokud tuto metodu lze volat s prázdný řetězec pro `strRestartIdentifier`, `RegisterWithRestartManager` vytvoří řetězec jedinečný identifikátor pro tuto instanci restartování správce.  
+ Pokud tuto metodu lze volat s prázdný řetězec pro *strRestartIdentifier*, `RegisterWithRestartManager` vytvoří řetězec jedinečný identifikátor pro tuto instanci restartování správce.  
   
  Při ukončení aplikace, neočekávaně, správce restartování restartuje aplikace z příkazového řádku a zajišťuje, že že jedinečný identifikátor jako volitelný argument restartovat. V tomto scénáři volá framework `RegisterWithRestartManager` dvakrát. První volání pochází z [CWinApp::InitInstance](#initinstance) s prázdný řetězec pro identifikátor řetězce. Potom metoda [CWinApp::ProcessShellCommand](#processshellcommand) volání `RegisterWithRestartManager` s identifikátorem jedinečný restartování.  
   
- Po registraci aplikace pomocí Správce restartování, monitoruje správce restartování aplikace. Pokud aplikace neočekávaně ukončí, správce restartování volání funkce zpětného volání obnovení během procesu vypnutí dolů. Manager čeká restartování `dwPingInterval` na odpověď od obnovení funkce zpětného volání. Pokud funkce zpětného volání obnovení neodpoví během této doby, aplikace se ukončí bez provádění obnovení funkce zpětného volání.  
+ Po registraci aplikace pomocí Správce restartování, monitoruje správce restartování aplikace. Pokud aplikace neočekávaně ukončí, správce restartování volání funkce zpětného volání obnovení během procesu vypnutí dolů. Manager čeká restartování *dwPingInterval* na odpověď od obnovení funkce zpětného volání. Pokud funkce zpětného volání obnovení neodpoví během této doby, aplikace se ukončí bez provádění obnovení funkce zpětného volání.  
   
- Ve výchozím nastavení dwRestartFlags nejsou podporovány, ale jsou k dispozici pro budoucí použití. Možné hodnoty `dwRestartFlags` jsou následující:  
+ Ve výchozím nastavení dwRestartFlags nejsou podporovány, ale jsou k dispozici pro budoucí použití. Možné hodnoty *dwRestartFlags* jsou následující:  
   
-- `RESTART_NO_CRASH`  
+- RESTART_NO_CRASH  
   
-- `RESTART_NO_HANG`  
+- RESTART_NO_HANG  
   
-- `RESTART_NO_PATCH`  
+- RESTART_NO_PATCH  
   
-- `RESTART_NO_REBOOT`  
+- RESTART_NO_REBOOT  
   
 ##  <a name="reopenpreviousfilesatrestart"></a>  CWinApp::ReopenPreviousFilesAtRestart  
  Určuje, zda správce restartování neotevře soubory, které byly otevřené, pokud aplikace byl neočekávaně ukončen.  
@@ -1782,7 +1782,7 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` označuje znovu otevře správce restartování dříve otevřených souborů; `FALSE` označuje správce restartování neexistuje.  
+ Pravda označuje, že správce restartování neotevře dříve otevřených souborů; NEPRAVDA označuje, že správce restartování neexistuje.  
   
 ##  <a name="restartinstance"></a>  CWinApp::RestartInstance  
  Zpracuje restartování aplikace iniciovaná správce restartování.  
@@ -1792,12 +1792,12 @@ virtual BOOL CWinApp::RestartInstance();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud obslužná rutina dat obnovení otevře dříve otevřete dokumenty; `FALSE` Pokud obslužná rutina obnovení dat došlo k chybě, nebo pokud nejsou žádné dříve otevřené dokumenty.  
+ Hodnota TRUE, pokud obslužná rutina dat obnovení otevře dříve otevřené dokumenty; FALSE, pokud obslužná rutina obnovení dat došlo k chybě, nebo pokud nejsou žádné dříve otevřené dokumenty.  
   
 ### <a name="remarks"></a>Poznámky  
  Po restartování aplikace Správce restartování rozhraní volá tuto metodu. Tato metoda načítá obslužná rutina obnovení dat a obnoví soubory automaticky uloženo. Tato metoda volá [CDataRecoveryHandler::RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments) k určení, jestli uživatel chce obnovit soubory automaticky uloženo.  
   
- Tato metoda vrátí hodnotu `FALSE` Pokud [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) Určuje, že neexistují žádné otevřené dokumenty. Pokud nebyly žádné otevřené dokumenty, aplikace se spustí normálně.  
+ Tato metoda vrátí hodnotu FALSE, pokud [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) Určuje, že neexistují žádné otevřené dokumenty. Pokud nebyly žádné otevřené dokumenty, aplikace se spustí normálně.  
   
 ##  <a name="restoreautosavedfilesatrestart"></a>  CWinApp::RestoreAutosavedFilesAtRestart  
  Určuje, zda správce restartování obnoví soubory automaticky uloženo po restartování aplikace.  
@@ -1807,7 +1807,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Určuje soubory automaticky uloženo restartování správce obnovení; `FALSE` označuje správce restartování neexistuje.  
+ Pravda označuje, že správce restartování obnoví soubory automaticky uloženo; NEPRAVDA označuje, že správce restartování neexistuje.  
   
 ##  <a name="run"></a>  CWinApp::Run  
  Poskytuje výchozí zprávu smyčku.  
@@ -1817,12 +1817,12 @@ virtual int Run();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `int` Hodnotu, která vrátí `WinMain`.  
+ **Int** hodnotu, která vrátí `WinMain`.  
   
 ### <a name="remarks"></a>Poznámky  
- **Spustit** odeslání zpráv systému Windows, dokud neobdrží aplikace a operace čtení **WM_QUIT** zprávy. Pokud aplikace zprávu fronty aktuálně obsahuje žádné zprávy **spustit** volání [OnIdle](#onidle) k provedení zpracování doby nečinnosti. Příchozí zprávy přejít na [PreTranslateMessage –](#pretranslatemessage) – členská funkce pro zvláštní zpracování a pak na funkce systému Windows **TranslateMessage** pro překlad standardní klávesnice; nakonec  **DispatchMessage** je volána funkce systému Windows.  
+ `Run` odeslání zpráv systému Windows, dokud aplikace přijme zprávu o WM_QUIT a operace čtení. Pokud aplikace zprávu fronty aktuálně obsahuje žádné zprávy `Run` volání [OnIdle](#onidle) k provedení zpracování doby nečinnosti. Příchozí zprávy přejít na [PreTranslateMessage –](#pretranslatemessage) – členská funkce pro zvláštní zpracování a pak na funkce systému Windows `TranslateMessage` pro překlad standardní klávesnice; nakonec `DispatchMessage` je volána funkce systému Windows.  
   
- **Spustit** zřídka přepsána, ale ji, aby poskytovala zvláštní chování můžete přepsat.  
+ `Run` zřídka přepsána, ale ji, aby poskytovala zvláštní chování můžete přepsat.  
   
 ##  <a name="runautomated"></a>  CWinApp::RunAutomated  
  Volání této funkce můžete určit, zda " **/Automation**"nebo" **-automatizace**" možnost je přítomen, což naznačuje, zda aplikace server byl spuštěn klientské aplikace.  
@@ -1851,7 +1851,7 @@ BOOL RunEmbedded();
  Pokud je k dispozici, je možnost odebrat z příkazového řádku. Další informace o vložení, najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).  
   
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified  
- Voláno rámcem k uložení všech dokumentů, pokud je okno hlavního rámce aplikace bude uzavřen, nebo prostřednictvím `WM_QUERYENDSESSION` zprávy.  
+ Voláno rámcem uložit všechny dokumenty, pokud je okno hlavního rámce aplikace bude uzavřen, nebo prostřednictvím WM_QUERYENDSESSION zprávu.  
   
 ```  
 virtual BOOL SaveAllModified();
@@ -1874,17 +1874,17 @@ void SelectPrinter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDevNames`  
+ *hDevNames je*  
  Popisovač pro [DEVNAMES](../../mfc/reference/devnames-structure.md) struktura, která identifikuje ovladače, zařízení a názvy port výstupu dané tiskárny.  
   
- `hDevMode`  
+ *hDevMode*  
  Popisovač pro [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktura, která určuje informace o prostředí tiskárny a inicializace zařízení.  
   
  *bFreeOld*  
  Uvolní dříve vybrané tiskárny.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud oba `hDevMode` a `hDevNames` jsou **NULL**, `SelectPrinter` používá výchozí tiskárnu.  
+ Pokud oba *hDevMode* a *hDevNames je* má hodnotu NULL, `SelectPrinter` používá výchozí tiskárnu.  
   
 ##  <a name="sethelpmode"></a>  CWinApp::SetHelpMode  
  Nastaví typ nápovědy aplikace.  
@@ -1894,13 +1894,13 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `eHelpType`  
+ *eHelpType*  
  Určuje typ nápovědy k použití. V tématu [CWinApp::m_eHelpType](#m_ehelptype) Další informace.  
   
 ### <a name="remarks"></a>Poznámky  
  Nastaví typ nápovědy aplikace.  
   
- Postup nastavení typu nápovědy aplikace HTMLHelp, můžete volat [EnableHTMLHelp](#enablehtmlhelp). Jakmile zavoláte `EnableHTMLHelp`, aplikace musí používat HTMLHelp jako jeho aplikace nápovědy. Pokud chcete změnit použití WinHelp, můžete zavolat `SetHelpMode` a nastavte `eHelpType` k **afxWinHelp**.  
+ Postup nastavení typu nápovědy aplikace HTMLHelp, můžete volat [EnableHTMLHelp](#enablehtmlhelp). Jakmile zavoláte `EnableHTMLHelp`, aplikace musí používat HTMLHelp jako jeho aplikace nápovědy. Pokud chcete změnit použití WinHelp, můžete zavolat `SetHelpMode` a nastavte *eHelpType* k `afxWinHelp`.  
   
 ##  <a name="setregistrykey"></a>  CWinApp::SetRegistryKey  
  Způsobí, že nastavení aplikace má být uložen v registru místo soubory INI.  
@@ -1928,7 +1928,7 @@ virtual BOOL SupportsApplicationRecovery() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` označuje uvolní správce restartování aplikace; `FALSE` označuje správce restartování neexistuje.  
+ Pravda označuje, že správce restartování obnoví aplikaci; NEPRAVDA označuje, že správce restartování neexistuje.  
   
 ##  <a name="supportsautosaveatinterval"></a>  CWinApp::SupportsAutosaveAtInterval  
  Určuje, zda autosaves správce restartování otevřít dokumenty v pravidelných intervalech.  
@@ -1938,7 +1938,7 @@ virtual BOOL SupportsAutosaveAtInterval() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Udává, že autosaves správce restartování otevřít dokumenty; `FALSE` označuje správce restartování neexistuje.  
+ Pravda označuje, že autosaves správce restartování otevřít dokumenty; NEPRAVDA označuje, že správce restartování neexistuje.  
   
 ##  <a name="supportsautosaveatrestart"></a>  CWinApp::SupportsAutosaveAtRestart  
  Určuje, zda autosaves správce restartování žádné otevřít dokumenty, když se aplikace restartuje.  
@@ -1948,7 +1948,7 @@ virtual BOOL SupportsAutosaveAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Udává, že autosaves správce restartování otevřít dokumenty, když se aplikace restartuje; `FALSE` označuje správce restartování neexistuje.  
+ Pravda označuje, že autosaves správce restartování otevřít dokumenty, když se aplikace restartuje; NEPRAVDA označuje, že správce restartování neexistuje.  
   
 ##  <a name="supportsrestartmanager"></a>  CWinApp::SupportsRestartManager  
  Určuje, jestli aplikace podporuje správce restartování.  
@@ -1958,7 +1958,7 @@ virtual BOOL SupportsRestartManager() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Označuje, že aplikace podporuje správce restartování; `FALSE` označuje aplikace neexistuje.  
+ Pravda označuje, že aplikace podporuje správce restartování; NEPRAVDA označuje, že aplikace neexistuje.  
   
 ##  <a name="unregister"></a>  CWinApp::Unregister  
  Zruší registraci všechny soubory, zaregistrovaný objekt aplikace.  
@@ -1992,11 +1992,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwData`  
- Určuje další data. Hodnota použitá závisí na hodnotu `nCmd` parametr.  
+ *dwData*  
+ Určuje další data. Hodnota použitá závisí na hodnotu *nCmd* parametr.  
   
- `nCmd`  
- Určuje typ nápovědy požadovaný. Seznam možných hodnot a jejich vlivu `dwData` parametr, najdete v článku [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) funkce systému Windows.  
+ *nCmd*  
+ Určuje typ nápovědy požadovaný. Seznam možných hodnot a jejich vlivu *dwData* parametr, najdete v článku [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) funkce systému Windows.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce má být vyvolán WinHelp aplikace také volá framework.  
@@ -2018,16 +2018,16 @@ BOOL WriteProfileBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSection`  
+ *lpszSection*  
  Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku. Pokud v části neexistuje, vytvoří se. Název oddílu, je případ nezávislé; řetězec může být libovolnou kombinaci velkých a velkých písmen.  
   
- `lpszEntry`  
+ *lpszEntry*  
  Odkazuje na řetězec ukončené hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaný oddíl neexistuje, vytvoří se.  
   
- `pData`  
+ *pData*  
  Odkazuje na data, která mají být zapsána.  
   
- `nBytes`  
+ *nBytes*  
  Obsahuje počet bajtů, které mají být zapsána.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2051,13 +2051,13 @@ BOOL WriteProfileInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSection`  
+ *lpszSection*  
  Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku. Pokud v části neexistuje, vytvoří se. Název oddílu, je případ nezávislé; řetězec může být libovolnou kombinaci velkých a velkých písmen.  
   
- `lpszEntry`  
+ *lpszEntry*  
  Odkazuje na řetězec ukončené hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaný oddíl neexistuje, vytvoří se.  
   
- `nValue`  
+ *nHodnota*  
  Obsahuje hodnotu, která má být proveden zápis.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -2081,14 +2081,14 @@ BOOL WriteProfileString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSection`  
+ *lpszSection*  
  Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku. Pokud v části neexistuje, vytvoří se. Název oddílu, je případ nezávislé; řetězec může být libovolnou kombinaci velkých a velkých písmen.  
   
- `lpszEntry`  
- Odkazuje na řetězec ukončené hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaný oddíl neexistuje, vytvoří se. Pokud tento parametr je `NULL`, v části určeného `lpszSection` se odstraní.  
+ *lpszEntry*  
+ Odkazuje na řetězec ukončené hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaný oddíl neexistuje, vytvoří se. Pokud tento parametr hodnotu NULL, v části určeného *lpszSection* se odstraní.  
   
- `lpszValue`  
- Odkazuje na řetězec, který má být zapsána. Pokud tento parametr je `NULL`, položka určeného `lpszEntry` parametr se odstraní.  
+ *lpszValue*  
+ Odkazuje na řetězec, který má být zapsána. Pokud tento parametr hodnotu NULL, položka určeného *lpszEntry* parametr se odstraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -2106,7 +2106,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpcszAppID`  
+ *lpcszAppID*  
  Určuje ID aplikace uživatele modelu.  
   
 ### <a name="remarks"></a>Poznámky  

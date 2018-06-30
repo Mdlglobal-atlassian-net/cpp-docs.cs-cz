@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368872"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121647"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx – třída
 
@@ -81,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
- Ukazatel na kontext zařízení. Pokud tento parametr je `NULL`, rozhraní ho překreslí aktivní okno.  
+ [v] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení. Pokud tento parametr hodnotu NULL, rozhraní překreslí aktivní okno.  
   
- [v] `nType`  
+ [v] *Noznámení*  
  Jeden z `CSplitterWnd::ESplitType` hodnot výčtu, která určuje prvku rozdělovač okno k vykreslení. Platné hodnoty jsou `splitBox`, `splitBar`, `splitIntersection`, a `splitBorder`.  
   
- [v] `rect`  
+ [v] *Rect –*  
  Ohraničující obdélník, který určuje rozměry a umístění k vykreslení elementu zadané rozdělovací okno.  
   
 ### <a name="remarks"></a>Poznámky  

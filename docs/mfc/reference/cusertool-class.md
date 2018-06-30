@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374750"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121313"
 ---
 # <a name="cusertool-class"></a>CUserTool – třída
 Nástroj pro uživatele je položku nabídky, který spouští externí aplikací. **Nástroje** kartě **přizpůsobit** dialogové okno ( [CMFCToolBarsCustomizeDialog třída](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umožňuje uživateli přidat uživatele nástroje a zadejte název, argumenty, a Počáteční adresář pro každého uživatele nástroje.  
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pDC`  
+ [v] *primárního řadiče domény*  
  Ukazatel na kontextu zařízení.  
   
- [v] `rectImage`  
+ [v] *rectImage*  
  Určuje souřadnice oblasti zobrazíte ikonu.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu načíst ( `HICON`), nebo `NULL` Pokud výchozí ikonu nelze načíst.  
+ Popisovač pro načíst ikony (HICON), nebo hodnota NULL, pokud výchozí ikonu nelze načíst.  
   
 ### <a name="remarks"></a>Poznámky  
  Rozhraní framework volá tuto metodu, když se nepodařilo načíst ikonu pro nástroj uživatelem definované ze spustitelného souboru nástroje.  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `ar`  
+ [v] *ar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -223,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `lpszCmd`  
+ [v] *lpszCmd*  
  Určuje novou aplikaci, která bude přidružen nástroj pro uživatele.  
   
 ### <a name="remarks"></a>Poznámky  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322280"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122977"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `DECLARE_DISPATCH_MAP` makro na konci deklarace třídy. Pak na. Funkce CPP souboru, který definuje člena pro třídu, použijte `BEGIN_DISPATCH_MAP` makro. Potom zahrnovat makro položky pro každý z vaší třídy je vystavený metody a vlastnosti ( `DISP_FUNCTION`, `DISP_PROPERTY`a tak dále). Nakonec použijte `END_DISPATCH_MAP` makro.
+Použijte declare_dispatch_map – makro na konci deklarace třídy. Pak na. CPP soubor, který definuje členské funkce pro třídu, použijte begin_dispatch_map – makro. Potom zahrňte makro položky pro každý vlastní třídy zveřejněné metod a vlastností (disp_function – disp_property – a tak dále). Nakonec použijte end_dispatch_map – makro.
 
 > [!NOTE]
-> Pokud deklarovat žádné členy po `DECLARE_DISPATCH_MAP`, je nutné zadat nový typ přístupu ( **veřejné**, **privátní**, nebo **chráněné**) pro ně.
+> Pokud je po declare_dispatch_map – deklarovat žádné členy, je nutné zadat nový typ přístupu ( **veřejné**, **privátní**, nebo **chráněné**) pro ně.
 
 Průvodce vytvořením aplikace a kód průvodců pomáhat při vytváření třídy automatizace a zachování expediční mapy. Další informace o expediční mapy, najdete v části [automatizační servery](../../mfc/automation-servers.md).
 
@@ -84,7 +84,7 @@ Určuje název základní třídy *theClass*.
 
 ### <a name="remarks"></a>Poznámky
 
-V souboru implementace (sada), který definuje členské funkce pro třídu, spusťte mapa odesílání s `BEGIN_DISPATCH_MAP` makro, přidejte makro položky pro každý odesílání funkcí a vlastností a dokončení odesílání mapa s `END_DISPATCH_MAP` makro.
+V souboru implementace (sada), který definuje členské funkce pro třídu začínat begin_dispatch_map – makro mapy odesílání, přidejte makro položky pro každý odesílání funkcí a vlastností a dokončení odesílání mapa s END_DISPATCH_ Makra MAPY.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Musíte ho použít ve spojení s `BEGIN_DISPATCH_MAP`.
+Musíte ho použít ve spojení s begin_dispatch_map –.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -138,23 +138,23 @@ Seznam jedné nebo více konstant určující seznam parametrů pro funkci oddě
 
 ### <a name="remarks"></a>Poznámky
 
-*VtRetVal* argument je typu **VARTYPE**. Z následujících možných hodnot pro tento argument, která `VARENUM` výčtu:
+*VtRetVal* argument je typu VARTYPE. Z následujících možných hodnot pro tento argument, která `VARENUM` výčtu:
 
 |Symbol|Návratový typ|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE –|DATUM|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|HODNOTA VT_UNKNOWN|LPUNKNOWN|
 
 *VtsParams* argument je seznam hodnot oddělených mezerami `VTS_*` konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne čárkami) určuje seznam parametrů funkce. Například
 
@@ -166,31 +166,31 @@ Určuje seznam obsahující krátké celé číslo následuje ukazatel na krátk
 
 |Symbol|Typ parametru|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` nebo `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` nebo `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__krátký\*__|
-|`VTS_PI4`|__dlouhá\*__|
-|`VTS_PR4`|__plovoucí desetinná čárka\*__|
-|`VTS_PR8`|__Double\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|Žádné parametry|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` nebo `CY*`|
+|VTS_DATE|DATUM|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*` nebo `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__krátký\*__|
+|VTS_PI4|__dlouhá\*__|
+|VTS_PR4|__plovoucí desetinná čárka\*__|
+|VTS_PR8|__Double\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|Žádné parametry|
 
 ### <a name="requirements"></a>Požadavky
 
@@ -224,22 +224,22 @@ Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-*VtPropType* argument je typu **VARTYPE**. Z možných hodnot pro tento argument, která `VARENUM` výčtu:
+*VtPropType* argument je typu **VARTYPE**. Možné hodnoty pro tento argument jsou převzaty z výčtu VARENUM:
 
 |Symbol|Typ vlastnosti|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE –|DATUM|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|HODNOTA VT_UNKNOWN|LPUNKNOWN|
 
 Až se změní hodnota členské proměnné určeného vlastnosti externích klientských *memberName* změní; nejsou žádná oznámení změny.
 
@@ -281,7 +281,7 @@ Hodnota určující typ vlastnosti.
 
 *MemberGet* a *sada členů* funkce mají podpisy dáno *vtPropType* argument. *MemberGet* funkce nezadávaly žádné argumenty a vrátí hodnotu typu zadaném pomocí *vtPropType*. *Sada členů* funkce přebírá argument v typu zadaném pomocí *vtPropType* a nic.
 
-*VtPropType* argument je typu `VARTYPE`. Z možných hodnot pro tento argument, která `VARENUM` výčtu. Seznam těchto hodnot, najdete v části poznámky pro *vtRetVal* parametr v [disp_function –](#disp_function). Všimněte si, že `VT_EMPTY`, uvedené v `DISP_FUNCTION` remarks, není povolen jako datový typ vlastnosti.
+*VtPropType* argument je typu VARTYPE. Možné hodnoty pro tento argument jsou převzaty z výčtu VARENUM. Seznam těchto hodnot, najdete v části poznámky pro *vtRetVal* parametr v [disp_function –](#disp_function). Všimněte si, že VT_EMPTY, uvedené v disp_function – poznámky, není povolen jako datový typ vlastnosti.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -319,24 +319,24 @@ Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od vlastnosti definované s `DISP_PROPERTY`, vlastnost definovanou s `DISP_PROPERTY_NOTIFY` automaticky zavolá funkci určeného *pfnAfterSet* při změně vlastnosti.
+Na rozdíl od vlastnosti definované s disp_property –, bude vlastnost definovanou s disp_property_notify – automaticky volání funkce určeného *pfnAfterSet* při změně vlastnosti.
 
-*VtPropType* argument je typu `VARTYPE`. Z možných hodnot pro tento argument, která `VARENUM` výčtu:
+*VtPropType* argument je typu VARTYPE. Možné hodnoty pro tento argument jsou převzaty z výčtu VARENUM:
 
 |Symbol|Typ vlastnosti|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE –|DATUM|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|HODNOTA VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>Požadavky
 
@@ -378,7 +378,7 @@ Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od `DISP_PROPERTY_EX` makro, toto makro umožňuje určit seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastnosti, které jsou indexované nebo parametry.
+Na rozdíl od disp_property_ex – makro toto makro umožňuje určit seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastnosti, které jsou indexované nebo parametry.
 
 ### <a name="example"></a>Příklad
 
@@ -386,7 +386,7 @@ Vezměte v úvahu následující deklaraci get a nastavte členské funkce, kter
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Tyto odpovídají následující `DISP_PROPERTY_PARAM` makro v odesílání mapy ovládacího prvku:
+Tyto hodnoty odpovídají následující disp_property_param – makro v odesílání mapy ovládacího prvku:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ Další příklad zvažte následující get a nastavte členské funkce:
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Tyto odpovídají následující `DISP_PROPERTY_PARAM` makro v odesílání mapy ovládacího prvku:
+Tyto hodnoty odpovídají následující disp_property_param – makro v odesílání mapy ovládacího prvku:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

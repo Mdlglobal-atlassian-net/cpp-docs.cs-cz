@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377514"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123029"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 Toto téma obsahuje seznam DDX_Field – funkce, které slouží pro výměnu dat mezi [CRecordset](../../mfc/reference/crecordset-class.md) a [CRecordView](../../mfc/reference/crecordview-class.md) formuláře nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) a [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formuláře.  
@@ -77,16 +77,16 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *index*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -120,16 +120,16 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -163,16 +163,16 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -189,7 +189,7 @@ void AFXAPI DDX_FieldCBStringExact(
   **Záhlaví** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  Ddx_fieldcheck –  
- `DDX_FieldCheck` Funkce spravuje přenos `int` formuláři dat mezi ovládací prvek zaškrtávací políčko v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a `int` – datový člen dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku.  
+ `DDX_FieldCheck` Funkce spravuje přenos **int** formuláři dat mezi ovládací prvek zaškrtávací políčko v dialogovém okně, zobrazení, nebo objekt zobrazení ovládacího prvku a **int** dialogové okno, zobrazení formuláře nebo ovládacího prvku – datový člen objekt zobrazení.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -206,16 +206,16 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID prostředku ovládací prvek zaškrtávací políčko, které jsou spojené s vlastností ovládacího prvku.  
   
  *value*  
  Odkaz na členské proměnné dialogové okno, zobrazení formuláře nebo objekt ovládacího prvku zobrazení, ke které se vyměňují data.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -227,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
   **Záhlaví** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  Ddx_fieldlbindex –  
- `DDX_FieldLBIndex` Funkce synchronizuje index vybrané položky v ovládacím prvku seznamu pole v zobrazení záznamu a `int` pole datových členů sady záznamů přidružené zobrazení záznamu.  
+ `DDX_FieldLBIndex` Funkce synchronizuje index vybrané položky v ovládacím prvku seznamu pole v zobrazení záznamu a **int** pole datových členů sady záznamů přidružené zobrazení záznamu.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -244,16 +244,16 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *index*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -287,16 +287,16 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -330,16 +330,16 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -356,7 +356,7 @@ void AFXAPI DDX_FieldLBStringExact(
   **Záhlaví** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  Ddx_fieldradio –  
- `DDX_FieldRadio` Funkce přidruží nulovým základem `int` členské proměnné sady záznamů zobrazení záznamu s aktuálně vybraného přepínače ve skupině přepínacích tlačítek v zobrazení záznamu.  
+ `DDX_FieldRadio` Funkce přidruží nulovým základem **int** členské proměnné sady záznamů zobrazení záznamu s aktuálně vybraného přepínače ve skupině přepínacích tlačítek v zobrazení záznamu.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -373,16 +373,16 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
- ID první ve skupině (se stylem **ws_group –**) prvků sousedících přepínačů v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
+ *nIDC*  
+ ID první ve skupině (s styl ws_group –) prvků sousedících přepínačů v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -399,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
   **Záhlaví** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  Ddx_fieldscroll –  
- `DDX_FieldScroll` Funkce synchronizuje pozici posunutí ovládací prvek posuvníku v zobrazení záznamu a `int` pole datových členů sady záznamů přidružené zobrazení záznamu (nebo s jakoukoli proměnná s celým číslem rozhodnete namapovat je na).  
+ `DDX_FieldScroll` Funkce synchronizuje pozici posunutí ovládací prvek posuvníku v zobrazení záznamu a **int** pole datových členů sady záznamů přidružené zobrazení záznamu (nebo s jakoukoli proměnná s celým číslem rozhodnete namapovat je na) .  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -416,16 +416,16 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
- ID první ve skupině (se stylem **ws_group –**) prvků sousedících přepínačů v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
+ *nIDC*  
+ ID první ve skupině (s styl ws_group –) prvků sousedících přepínačů v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -442,7 +442,7 @@ void AFXAPI DDX_FieldScroll(
   **Záhlaví** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
-`DDX_FieldSlider` Funkce synchronizuje jezdec pozice ovládací prvek typu jezdec v zobrazení záznamů a `int` pole datových členů sady záznamů přidružené zobrazení záznamu (nebo s jakoukoli proměnná s celým číslem rozhodnete namapovat je na).  
+`DDX_FieldSlider` Funkce synchronizuje jezdec pozice ovládací prvek typu jezdec v zobrazení záznamů a **int** pole datových členů sady záznamů přidružené zobrazení záznamu (nebo s jakoukoli proměnná s celým číslem rozhodnete namapovat je na).  
    
 ### <a name="syntax"></a>Syntaxe  
   ```
@@ -459,16 +459,16 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID prostředku v ovládacím prvku posuvník.  
   
  *value*  
  Odkaz na hodnotu výměnu. Tento parametr obsahuje nebo se použije k nastavení ovládacího prvku posuvník aktuální pozici jezdce.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel na přidruženého `CRecordset` nebo `CDaoRecordset` objekt, ke které se vyměňují data.  
    
 ### <a name="remarks"></a>Poznámky  
@@ -490,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
  [Makra a globální prvky](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText –  
- `DDX_FieldText` Funkce spravuje přenos `int`, **krátké**, **dlouho**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **dvojité**, **BOOL**, nebo **BAJTŮ** dat mezi prvek upravit a pole datových členů sady záznamů.  
+ `DDX_FieldText` Funkce spravuje přenos **int**, **krátké**, **dlouho**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **dvojité**, **BOOL**, nebo **BAJTŮ** dat mezi prvek upravit a pole datových členů sady záznamů.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -603,16 +603,16 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní framework poskytuje tento objekt k vytvoření kontextu dat systému exchange, včetně jeho směr.  
   
- `nIDC`  
+ *nIDC*  
  ID ovládacího prvku v [CRecordView](../../mfc/reference/crecordview-class.md) nebo [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objektu.  
   
  *value*  
  Odkaz na pole datových členů v přidruženém `CRecordset` nebo `CDaoRecordset` objektu. Datový typ hodnoty závisí na kterém přetížené verze `DDX_FieldText` používáte.  
   
- `pRecordset`  
+ *pRecordset*  
  Ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt, ke které se vyměňují data. Umožňuje tento ukazatel `DDX_FieldText` ke zjišťování a nastavit hodnoty Null.  
   
 ### <a name="remarks"></a>Poznámky  

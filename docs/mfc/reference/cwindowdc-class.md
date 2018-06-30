@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368479"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121539"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC – třída
 Odvozené z `CDC`.  
@@ -48,7 +48,7 @@ class CWindowDC : public CDC
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|`HWND` Ke kterému tato `CWindowDC` je připojen.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|HWND, ke kterému tato `CWindowDC` je připojen.|  
   
 ## <a name="remarks"></a>Poznámky  
  Volání funkce systému Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)během vytváření a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) během odstraňování. To znamená, že `CWindowDC` objekt přistupuje k oblasti celou obrazovku [CWnd](../../mfc/reference/cwnd-class.md) (klient a nonclient oblasti).  
@@ -66,14 +66,14 @@ class CWindowDC : public CDC
  Záhlaví: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Vytvoří `CWindowDC` objekt, který má přístup k celé oblasti obrazovky (klient a nonclient) `CWnd` objektu na kterou odkazuje `pWnd`.  
+ Vytvoří `CWindowDC` objekt, který má přístup k celé oblasti obrazovky (klient a nonclient) `CWnd` objektu na kterou odkazuje *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Okno jejichž klientské oblasti objekt kontextu zařízení bude mít přístup.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -85,14 +85,14 @@ explicit CWindowDC(CWnd* pWnd);
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- `HWND` z `CWnd` ukazatele se používá pro konstrukci `CWindowDC` objektu.  
+ HWND z `CWnd` ukazatele se používá pro konstrukci `CWindowDC` objektu.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_hWnd` je chráněný proměnná typu `HWND`.  
+ `m_hWnd` je chráněný proměnná typu HWND.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWindowDC::CWindowDC](#cwindowdc).  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374688"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122964"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl – třída
 Poskytuje funkci ovládacím prvku tlačítko typu číselník běžné Windows.  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku tlačítko otočení. Použít libovolnou kombinaci styly pro ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsané v [styly ovládacího prvku číselník](http://msdn.microsoft.com/library/windows/desktop/bb759885) ve Windows SDK.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacího prvku tlačítko otočení. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura  
   
- `pParentWnd`  
- Ukazatel na ovládací prvek tlačítko typu číselník nadřazené okno, obvykle `CDialog`. Nesmí být **hodnotu NULL.**  
+ *pParentWnd*  
+ Ukazatel na ovládací prvek tlačítko typu číselník nadřazené okno, obvykle `CDialog`. Nesmí být NULL.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku tlačítko otočení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud se inicializace byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CSpinButtonCtrl` objekt ve dvou krocích, volat konstruktor a pak zavolají **vytvořit**, které ovládací prvek typu číselník vytvoří a připojí jej k `CSpinButtonCtrl` objektu.  
+ Můžete vytvořit `CSpinButtonCtrl` objekt ve dvou krocích, volat konstruktor a pak zavolají `Create`, které ovládací prvek typu číselník vytvoří a připojí jej k `CSpinButtonCtrl` objektu.  
   
- Chcete-li vytvořit ovládací prvek typu číselník tlačítko s rozšířené styly oken, volejte [CSpinButtonCtrl::CreateEx](#createex) místo **vytvořit**.  
+ Chcete-li vytvořit ovládací prvek typu číselník tlačítko s rozšířené styly oken, volejte [CSpinButtonCtrl::CreateEx](#createex) místo `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Vytvoří ovládací prvek (podřízeného okna) a přidruží ji s `CSpinButtonCtrl` objektu.  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam styly rozšířené windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam styly rozšířené windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku tlačítko otočení. Použít libovolnou kombinaci styly pro ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsané v [styly ovládacího prvku číselník](http://msdn.microsoft.com/library/windows/desktop/bb759885) ve Windows SDK.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
+ Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows WS_EX_.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Vytvoří `CSpinButtonCtrl` objektu.  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAccel`  
- Počet prvků v poli určeného `pAccel`.  
+ *nAccel*  
+ Počet prvků v poli určeného *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Ukazatele na pole [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) struktury, které obdrží akcelerace informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpbError*  
- Ukazatel na logickou hodnotu, která je nastavena na nulu pokud hodnota je úspěšně načtena, nebo nenulové Pokud dojde k chybě. Pokud tento parametr je nastaven na **NULL**, nejsou hlášeny chyby.  
+ Ukazatel na logickou hodnotu, která je nastavena na nulu pokud hodnota je úspěšně načtena, nebo nenulové Pokud dojde k chybě. Pokud tento parametr je nastaven na hodnotu NULL, nejsou hlášeny chyby.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  První verze Vrátí 16bitové aktuální pozici v aplikaci word nejnižší. Horní slovo je nenulové hodnoty, pokud došlo k chybě.  
@@ -255,7 +255,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Nižší*  
+ *nižší*  
  Odkaz na celé číslo, které obdrží nižší limit pro ovládací prvek.  
   
  *horní*  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAccel`  
- Počet [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) struktury určeného `pAccel`.  
+ *nAccel*  
+ Počet [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) struktury určeného *pAccel*.  
   
- `pAccel`  
- Ukazatele na pole `UDACCEL` struktury, které obsahují informace akcelerace. Elementy musí být seřazeny ve vzestupném pořadí podle **nSec** člen.  
+ *pAccel*  
+ Ukazatel na pole UDACCEL struktury, které obsahují informace akcelerace. Elementy musí být seřazeny ve vzestupném pořadí podle `nSec` člen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBase`  
+ *nBase*  
  Nová hodnota základní pro ovládací prvek. Může být 10 pro desetinná čísla nebo 16 pro šestnáctkové číslo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBuddy`  
+ *pWndBuddy*  
  Ukazatel na nové okno kamarád.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos –*  
  Nové umístění pro ovládací prvek. Tato hodnota musí být v rozsahu určeném horní a dolní limity pro ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLower` A `nUpper`  
- Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani omezení může být větší než **UD_MAXVAL** nebo menší než **UD_MINVAL**; kromě toho nesmí překročit rozdíl mezi dvěma limity **UD_MAXVAL**. `SetRange32` Nenastaví žádná omezení na omezení; použijte všechny celých čísel.  
+ *nLower* a *nUpper*  
+ Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani omezení může být větší než UD_MAXVAL nebo nižší než UD_MINVAL; kromě toho rozdíl mezi dvěma limity nesmí překročit UD_MAXVAL. `SetRange32` Nenastaví žádná omezení na omezení; použijte všechny celých čísel.  
   
 ### <a name="remarks"></a>Poznámky  
  Členská funkce `SetRange32` Nastaví rozsah 32bitové pro ovládací prvek typu číselník tlačítko.  

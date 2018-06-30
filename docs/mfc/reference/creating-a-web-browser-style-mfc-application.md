@@ -1,7 +1,7 @@
 ---
 title: Vytváření webové aplikace MFC stylu prohlížeče | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374520"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122550"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Vytváření aplikací MFC ve stylu webového prohlížeče
 Webové prohlížeče stylu aplikace k dispozici informace z Internetu (například HTML nebo aktivní dokumenty) nebo intranetu, jakož i složky v místním systému souborů a v síti. Odvozené třídy zobrazení aplikace z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektivně provedete webový prohlížeč pro aplikaci tím, že poskytuje zobrazení pomocí ovládacího prvku WebBrowser.  
@@ -50,30 +50,30 @@ Webové prohlížeče stylu aplikace k dispozici informace z Internetu (napřík
   
  `CHtmlView` funguje jako obálka pro ovládací prvek webového prohlížeče, které poskytuje vaší aplikaci zobrazení webu nebo stránku HTML. Průvodce vytvoří přepsání pro [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkce ve třídě zobrazení, poskytne navigační odkaz na web Microsoft Visual C++:  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+Tento web můžete nahradit vlastním, nebo můžete použít [LoadFromResource –](../../mfc/reference/chtmlview-class.md#loadfromresource) – členská funkce otevřete stránku HTML, který se nachází ve skriptu prostředků projektu jako výchozí obsah pro zobrazení. Příklad:  
   
- Tento web můžete nahradit vlastním, nebo můžete použít [LoadFromResource –](../../mfc/reference/chtmlview-class.md#loadfromresource) – členská funkce otevřete stránku HTML, který se nachází ve skriptu prostředků projektu jako výchozí obsah pro zobrazení. Příklad:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>Viz také  

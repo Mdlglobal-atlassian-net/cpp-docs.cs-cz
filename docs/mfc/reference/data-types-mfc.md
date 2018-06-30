@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375350"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121011"
 ---
 # <a name="data-types-mfc"></a>Datové typy (MFC)
 Toto téma uvádí typy dat nejčastěji používaná v knihovny Microsoft Foundation Class. Většina datových typů jsou stejné jako v platformě Software Development Kit (SDK), zatímco jiné jsou jedinečné pro MFC.  
@@ -48,9 +48,9 @@ Toto téma uvádí typy dat nejčastěji používaná v knihovny Microsoft Found
   
  Datové typy, které jsou jedinečné pro knihovny Microsoft Foundation Class zahrnují následující:  
   
--   **POZICE** hodnotu používá k označení pozice element v kolekci; používá MFC – třídy kolekce.  
+-   Hodnota pozice A používá k označení pozice element v kolekci; MFC – třídy kolekce používán.  
   
--   **Lpcrect –** 32bitová ukazatel na konstanta (neupravitelnými) `RECT` struktura.  
+-   Lpcrect – 32bitová ukazatel na konstanta (neupravitelnými) `RECT` struktura.  
   
 ## <a name="see-also"></a>Viz také  
  [Přehled třídy](../../mfc/class-library-overview.md)   

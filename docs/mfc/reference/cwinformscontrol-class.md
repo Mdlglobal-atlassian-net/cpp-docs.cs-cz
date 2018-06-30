@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375275"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121634"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl – třída
 Poskytuje základní funkce pro hostování ovládacího prvku Windows Forms.  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pType`  
+ *pType*  
  Datový typ ovládacího prvku, který se má vytvořit. Musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl okna, které chcete použít pro ovládací prvek. Zadejte kombinaci [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). V současné době jsou podporovány pouze následující styly: ws_tabstop –, ws_visible –, ws_disabled – a ws_group –.  
   
- `rect`  
+ *Rect –*  
  A [Rect – struktura](../../mfc/reference/rect-structure1.md) souřadnice levého a pravého dolního rozích ovládacího prvku, který definuje (nejprve přetížení pouze).  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  Popisovač řízení držitel statické místní umístěny v editoru prostředků. Nově vytvořený ovládacího prvku Windows Forms nahrazuje statické ovládací prvek, za předpokladu, že její umístění, pořadí z-order a styly (druhý přetížení pouze).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel do nadřazeného okna.  
   
- `nID`  
+ *nID*  
  Číslo ID zdroje pro přiřazení do nově vytvořené ovládacího prvku.  
   
- `pControl`  
+ *pControl*  
  Instanci ovládacího prvku Windows Forms, který má být spojen s [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) objektu (pouze čtvrtý přetížení).  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Poznámky  
  Tato metoda vytvoří instanci ovládacího prvku rozhraní .NET Framework Windows Forms v MFC kontejner.  
   
- První přetížení metody přijímá datový typ rozhraní .NET Framework `pType` tak, aby MFC můžete vytvořit nový objekt tohoto typu. `pType` musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
+ První přetížení metody přijímá datový typ rozhraní .NET Framework *pType* tak, aby MFC můžete vytvořit nový objekt tohoto typu. *pType* musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
   
- Vytvoří druhý přetížení metody ovládacího prvku Windows Forms na základě `TManagedControl` parametr šablony `CWinFormsControl` třídy. Na základě velikost a umístění ovládacího prvku `RECT` struktura předaný metodě. Pouze `dwStyle` záleží pro stylů.  
+ Vytvoří druhý přetížení metody ovládacího prvku Windows Forms na základě `TManagedControl` parametr šablony `CWinFormsControl` třídy. Na základě velikost a umístění ovládacího prvku `RECT` struktura předaný metodě. Pouze *dwStyle* záleží pro stylů.  
   
- Třetí přetížení metody vytvoří ovládacího prvku Windows Forms, který nahrazuje statického ovládacího prvku, zničení ho a za předpokladu, že její umístění, pořadí z-order a stylů. Statické ovládací prvek slouží pouze jako zástupný symbol pro ovládacího prvku Windows Forms. Při vytváření ovládacího prvku, toto přetížení kombinuje styly z `dwStyle` s styly prostředků statické ovládací prvek.  
+ Třetí přetížení metody vytvoří ovládacího prvku Windows Forms, který nahrazuje statického ovládacího prvku, zničení ho a za předpokladu, že její umístění, pořadí z-order a stylů. Statické ovládací prvek slouží pouze jako zástupný symbol pro ovládacího prvku Windows Forms. Při vytváření ovládacího prvku, toto přetížení kombinuje styly z *dwStyle* s styly prostředků statické ovládací prvek.  
   
- Čtvrtý přetížení metody umožňuje předat již vytvořenou instanci ovládacího prvku Windows Forms `pControl` , budou zahrnovat MFC. Musí být stejného typu jako `TManagedControl` parametr šablony `CWinFormsControl` třídy.  
+ Čtvrtý přetížení metody umožňuje předat již vytvořenou instanci ovládacího prvku Windows Forms *pControl* , budou zahrnovat MFC. Musí být stejného typu jako `TManagedControl` parametr šablony `CWinFormsControl` třídy.  
   
  V tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) ukázky na pomocí formuláře Windows ovládací prvky.  
   

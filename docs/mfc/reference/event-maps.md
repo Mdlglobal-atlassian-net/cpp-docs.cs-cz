@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce997441c11287626e9681a661f858e33ccdde24
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322209"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122386"
 ---
 # <a name="event-maps"></a>Mapy událostí
 
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `DECLARE_EVENT_MAP` makro na konci deklarace třídy. Potom v souboru sada, která definuje členské funkce pro třídu, použijte `BEGIN_EVENT_MAP` makro, makro položky pro všechny události ovládacího prvku a `END_EVENT_MAP` makro deklarovat konce seznamu událostí.
+Použijte declare_event_map – makro na konci deklarace třídy. Potom v souboru sada, která definuje členské funkce pro třídu, použijte begin_event_map – makro, makro položky pro všechny události ovládacího prvku a end_event_map – makro deklarovat konce seznamu událostí.
 
 Další informace o mapy událostí najdete v článku [– ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
 
@@ -97,9 +97,9 @@ Určuje název základní třídu *theClass*.
 
 ### <a name="remarks"></a>Poznámky
 
-V souboru implementace (sada), který definuje členské funkce pro třídu, spusťte mapa událostí s `BEGIN_EVENT_MAP` makro, potom můžete přidat makro položky pro všechny události a dokončení mapa událostí s `END_EVENT_MAP` makro.
+V souboru implementace (sada), který definuje členské funkce pro třídu začínat mapa událostí begin_event_map – Makro potom přidejte makro položky pro všechny události a dokončení mapa událostí s end_event_map – makro.
 
-Další informace o události mapuje a `BEGIN_EVENT_MAP` makro, najdete v článku [– ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapy událostí a begin_event_map – makro, najdete v článku [– ovládací prvky ActiveX: události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -107,7 +107,7 @@ Další informace o události mapuje a `BEGIN_EVENT_MAP` makro, najdete v člán
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP –
 
-Použití `END_EVENT_MAP` makro na konec definici mapy událostí.
+End_event_map – makro Použíjte k ukončení definici mapy událostí.
 
 ```cpp
 END_EVENT_MAP()
@@ -148,36 +148,36 @@ Určuje barvu, která hodnotu následovanou ukazatel na seznam obsahující 32bi
 
 |Symbol|Typ parametru|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_COLOR`|`OLE_COLOR`|
-|`VTS_CY`|`CURRENCY`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|**Const** __char\*__|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_FONT`|`IFontDispatch*`|
-|`VTS_HANDLE`|`HANDLE`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_OPTEXCLUSIVE`|`OLE_OPTEXCLUSIVE`|
-|`VTS_PICTURE`|`IPictureDisp*`|
-|`VTS_TRISTATE`|`OLE_TRISTATE`|
-|`VTS_XPOS_PIXELS`|`OLE_XPOS_PIXELS`|
-|`VTS_YPOS_PIXELS`|`OLE_YPOS_PIXELS`|
-|`VTS_XSIZE_PIXELS`|`OLE_XSIZE_PIXELS`|
-|`VTS_YSIZE_PIXELS`|`OLE_YSIZE_PIXELS`|
-|`VTS_XPOS_HIMETRIC`|`OLE_XPOS_HIMETRIC`|
-|`VTS_YPOS_HIMETRIC`|`OLE_YPOS_HIMETRIC`|
-|`VTS_XSIZE_HIMETRIC`|`OLE_XSIZE_HIMETRIC`|
-|`VTS_YSIZE_HIMETRIC`|`OLE_YSIZE_HIMETRIC`|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_COLOR –|OLE_COLOR|
+|VTS_CY|MĚNA.|
+|VTS_DATE|DATUM|
+|VTS_BSTR|**Const** __char\*__|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_FONT –|`IFontDispatch*`|
+|VTS_HANDLE –|POPISOVAČ|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_OPTEXCLUSIVE –|OLE_OPTEXCLUSIVE|
+|VTS_PICTURE –|`IPictureDisp*`|
+|VTS_TRISTATE –|OLE_TRISTATE|
+|VTS_XPOS_PIXELS –|OLE_XPOS_PIXELS|
+|VTS_YPOS_PIXELS –|OLE_YPOS_PIXELS|
+|VTS_XSIZE_PIXELS –|OLE_XSIZE_PIXELS|
+|VTS_YSIZE_PIXELS –|OLE_YSIZE_PIXELS|
+|TS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
+|VTS_YPOS_HIMETRIC –|OLE_YPOS_HIMETRIC|
+|VTS_XSIZE_HIMETRIC –|OLE_XSIZE_HIMETRIC|
+|VTS_YSIZE_HIMETRIC –|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Další variant konstanty nebyly definovány pro všechny typy variant, s výjimkou produktů `VTS_FONT` a `VTS_PICTURE`, které poskytují ukazatel na variant – datové konstanta. Tyto konstanty jsou pojmenované pomocí `VTS_Pconstantname` konvence. Například `VTS_PCOLOR` je ukazatel na `VTS_COLOR` konstantní.
+> Nebyly definovány další variant konstanty pro všechny variant typy, s výjimkou vts_font – a vts_picture –, které poskytují ukazatel na variant – datové konstanta. Tyto konstanty jsou pojmenované pomocí `VTS_Pconstantname` konvence. Například VTS_PCOLOR je ukazatel na vts_color – konstanta.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -251,7 +251,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Hodnoty *lpMsg*, *hWndParent*, a *lprect –* parametry jsou převzaty z odpovídajících parametrů **Funkce IOleObject::DoVerb** – členská funkce.
+Hodnoty *lpMsg*, *hWndParent*, a *lprect –* parametry jsou převzaty z odpovídajících parametrů `IOleObject::DoVerb` – členská funkce.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -275,7 +275,7 @@ Funkce voláno rámcem při vyvolání příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Standardní operace indexu je ve formátu `OLEIVERB_`, za nímž následují akce. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, a `OLEIVERB_UIACTIVATE` jsou některé příklady standardní příkazy.
+Standardní operace indexu je ve formátu `OLEIVERB_`, za nímž následují akce. OLEIVERB_SHOW, OLEIVERB_HIDE a OLEIVERB_UIACTIVATE jsou některé příklady standardní příkazy.
 
 V tématu [on_oleverb –](#on_oleverb) popis prototypu funkce má být použit jako *memberFxn* parametr.
 

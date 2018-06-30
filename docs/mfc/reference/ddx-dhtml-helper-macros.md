@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372072"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121699"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Makra DDX_DHtml pomocné rutiny
 Makra pomocná DDX_DHtml umožní snadný přístup k běžně používané vlastností ovládacích prvků na stránce HTML.  
@@ -66,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -89,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -114,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -140,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -163,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny. V tématu *hodnotu* v [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
 ## <a name="remarks"></a>Poznámky  
@@ -188,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -213,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
@@ -236,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DirectX*  
  Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.  
   
- `name`  
+ *Jméno*  
  Hodnota, která jste zadali pro parametr ID ovládacího prvku HTML.  
   
- `var`  
+ *var*  
  Hodnota během výměny.  
   
 ## <a name="remarks"></a>Poznámky  
- Při použití `DDX_DHtml_Img_Src` makro načíst vlastnost src pro element OBRÁZKU objekt image aplikace Internet Explorer vrátí plně uvozovacími znaky adresy URL pro zdroj bitové kopie. Například pokud použijete `DDX_DHtml_Img_Src` makro nastavit vlastnost src elementu bitové kopie na řetězec "některé zajímavé formát," Pokud načítáte tuto vlastnost, Internet Explorer vrátí řetězec "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
+ Při použití makra DDX_DHtml_Img_Src načíst vlastnost src pro element OBRÁZKU, vrátí objekt image aplikace Internet Explorer plně uvozovacími znaky adresy URL pro zdroj bitové kopie. Například pokud používáte makro DDX_DHtml_Img_Src o nastavení vlastnosti src bitové kopie elementu na řetězec "některé zajímavé formát", když je načíst tuto vlastnost, Internet Explorer vrátí řetězec "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
   
  Toto makro volá [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkce pomocí DISPID_IHTMLIMGELEMENT_SRC odesílání ID.  
 

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373811"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121835"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane – třída
 Implementuje funkce podokně odpojitelných karty.  
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Poznámky  
  Rozhraní framework automaticky vytvoří instance této třídy, když uživatel připojí jeden podokně do jiného tak, že odkazuje na titulek druhé části okna. Všechny záložkách podokna, které jsou vytvořené pomocí rozhraní mají ID-1.  
   
- Chcete-li zadat regulární karty místo karty stylu Outlook, předat `AFX_CBRS_REGULAR_TABS` styl k [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metoda.  
+ Chcete-li zadat regulární karty místo karty stylu Outlook, předat AFX_CBRS_REGULAR_TABS styl, který se [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metoda.  
   
  Pokud vytvoříte záložkách podokně odpojitelných karty, v podokně může být zničený, automaticky podle rozhraní framework, neměli byste ukládat ukazatele. Získání ukazatele do podokna s kartami, volání `CBasePane::GetParentTabbedPane` metoda.  
   
@@ -177,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
- [v] `bHide`  
+ [v] *pBar*  
+ [v] *bHide*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -192,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bEnable`  
- `TRUE` Chcete-li povolit automatické barevné zvýrazňování karet; v opačném `FALSE`.  
+ [v] *bEnable*  
+ Hodnota TRUE, mají-li povolit automatické barevné zvýrazňování karet; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
  Tuto statickou metodu použijte k povolení nebo zakázání automatické barevné zvýrazňování karet ve všech záložkách podokna v aplikaci. Pokud je tato funkce povolena, každé kartě vyplní vlastní barvy. Můžete najít seznam barev, které se používají k barva karty voláním [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metoda.  
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pBar`  
- [v] `nTabID`  
- [v] `dockMethod`  
- [v] `bHide`  
+ [v] *pBar*  
+ [v] *nTabID*  
+ [v] *dockMethod*  
+ [v] *bHide*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -233,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Obsahuje velikost a umístění, v souřadnice obrazovky oblasti nejvyšší karet.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Obsahuje velikost a umístění, v souřadnice obrazovky oblasti dolní karet.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud oblast karty se nachází v dolní části okna s kartami; v opačném `FALSE`.  
+ Hodnota TRUE, pokud oblast karty se nachází v dolní části okna s kartami; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -286,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavit tento statický člen na `TRUE` vynutit všechny karty v aplikaci, který se zobrazí v horní části podokna s kartami.  
+ Nastavte tento statický člen na hodnotu PRAVDA, aby platnost všechny karty v aplikaci, který se zobrazí v horní části podokna s kartami.  
   
  Předtím, než byl vytvořen s kartami podokně, je nutné nastavit tuto hodnotu.  
   
- Výchozí hodnota je `FALSE`.  
+ Výchozí hodnota je FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozené objektu.  
@@ -320,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `arColors`  
+ [v] *arColors*  
  Obsahuje-li nastavit pole.  
   
 ### <a name="remarks"></a>Poznámky  

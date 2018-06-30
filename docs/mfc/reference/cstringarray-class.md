@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da29c1b3c62769157735bca556eedc7557a4268d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375503"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121809"
 ---
 # <a name="cstringarray-class"></a>CStringArray – třída
 Podporuje pole [CString](../../atl-mfc-shared/using-cstring.md) objekty.  
@@ -120,7 +120,7 @@ class CStringArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá element v zadaném indexu.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CStringArray` zahrnuje `IMPLEMENT_SERIAL` makro pro podporu serializace a vypsání jejích elementů. Pokud pole `CString` objekty ukládána do archivu, a to buď operátor přetížené vložení nebo s `Serialize` – členská funkce, každý prvek serializován naopak.  
+ `CStringArray` zahrnuje implement_serial – makro pro podporu serializace a vypsání jejích elementů. Pokud pole `CString` objekty ukládána do archivu, a to buď operátor přetížené vložení nebo s `Serialize` – členská funkce, každý prvek serializován naopak.  
   
 > [!NOTE]
 >  Před použitím pole, použijte `SetSize` k zahájení jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidávání elementů do pole způsobí, že se často znovu přidělit a zkopírovat. Časté opakované přidělení a kopírování jsou neefektivní a může fragmentovat paměti.  

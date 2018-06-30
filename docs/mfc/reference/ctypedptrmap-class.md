@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376392"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121861"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap – třída
 Poskytuje bezpečnost typů "obálky" pro objekty třídy map ukazatel `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Základní třída třídy map typu ukazatele; musí být třída mapy ukazatele ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, nebo `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Třída objektu použitého jako klíč k mapy.  
   
- `VALUE`  
+ *HODNOTA*  
  Třída objektu uložené v mapě.  
   
 ## <a name="members"></a>Členové  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
- Určuje odkaz na **pozice** hodnoty vrácené předchozí `GetNextAssoc` nebo `BASE_CLASS` **:: GetStartPosition** volání.  
+ *rPosition*  
+ Určuje odkaz na hodnotu pozice vrácený předchozím `GetNextAssoc` nebo `BASE_CLASS` **:: GetStartPosition** volání.  
   
  *KEY*  
  Určení typu klíče mapy pro parametr šablony.  
   
- `rKey`  
+ *rKey*  
  Určuje vrácená klíč načtený elementu.  
   
  *HODNOTA*  
  Parametr šablony určení typu hodnoty na mapě.  
   
- `rValue`  
+ *rValue*  
  Určuje vrácená hodnota načtené elementu.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce je nejvhodnější pro iterace v rámci všechny elementy v mapě. Všimněte si, že pořadí pozice není nutně stejná jako hodnota klíče pořadí.  
   
- Pokud načtené elementem je poslední v mapě, pak nová hodnota `rNextPosition` je nastaven na **NULL**.  
+ Pokud načtené elementem je poslední v mapě, pak nová hodnota `rNextPosition` je nastaven na hodnotu NULL.  
   
  Tato vložená funkce volá `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Parametr šablony zadání toto mapování třídy základní třídy.  
   
- `key`  
+ *Klíč*  
  Klíč elementu, který chcete vyhledávat.  
   
  *HODNOTA*  
  Parametr šablony určující typy hodnot uložených v této mapě.  
   
- `rValue`  
+ *rValue*  
  Určuje vrácená hodnota načtené elementu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *HODNOTA*  
  Parametr šablony určující typy hodnot uložených v této mapě.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Parametr šablony zadání toto mapování třídy základní třídy.  
   
- `key`  
+ *Klíč*  
  Klíč elementu, který chcete vyhledávat nebo vytvořené v mapě.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Určení typu klíče mapy pro parametr šablony.  
   
- `key`  
+ *Klíč*  
  Klíč elementu k odebrání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Určení typu klíče mapy pro parametr šablony.  
   
- `key`  
+ *Klíč*  
  Určuje hodnotu klíče newValue.  
   
- `newValue`  
+ *newValue*  
  Určuje ukazatele objektu, který je hodnota nového elementu.  
   
 ### <a name="remarks"></a>Poznámky  

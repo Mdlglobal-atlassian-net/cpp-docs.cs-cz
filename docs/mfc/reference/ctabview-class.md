@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375220"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121754"
 ---
 # <a name="ctabview-class"></a>CTabView – třída
 `CTabView` Třída zjednodušuje použití třídy ovládacího prvku karta ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) v aplikacích používajících knihovny MFC document/view – architektura.  
@@ -95,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `pViewClass`  
+ [v] *pViewClass*  
  Ukazatel na třídu runtime vložené zobrazení.  
   
- [v] `strViewLabel`  
+ [v] *strViewLabel*  
  Určuje text, na kartě.  
   
- [v] `iIndex`  
+ [v] *iIndex*  
  Určuje pozici od nuly, kam chcete vložit zobrazení. Je-li pozice -1 je na konci vložit novou kartu.  
   
- [v] `pContext`  
+ [v] *pContext*  
  Ukazatel `CCreateContext` zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -121,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `hWndView`  
+ [v] *hWndView*  
  Popisovač zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Neplatný ukazatel na aktivní zobrazení, nebo `NULL` Pokud neexistuje žádné aktivní zobrazení.  
+ Neplatný ukazatel na aktivní zobrazení, nebo hodnota NULL, pokud neexistuje žádné aktivní zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -160,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud by se vytvořit zobrazení kartě spolu s sdílené posuvníku. V opačném `FALSE`.  
+ Hodnota TRUE, pokud Karta zobrazení by měl vytvořit společně s sdílené posuvníku. Jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework při `CTabView` vytvoření objektu.  
+ Tato metoda volá framework při *CTabView* vytvoření objektu.  
   
- Přepsání `IsScrollBar` metoda v `CTabView`-odvozené třídy a vraťte se `TRUE` Pokud chcete vytvořit zobrazení, který má sdílené vodorovného posuvníku.  
+ Přepsání *IsScrollBar* metoda v *CTabView*-odvozené třídy a vrátí hodnotu PRAVDA, pokud chcete vytvořit zobrazení, který má sdílené vodorovného posuvníku.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Voláno rámcem při zobrazení Karta je aktivní nebo neaktivní.  
@@ -175,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `view`  
+ [v] *zobrazení*  
  Ukazatel na zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -189,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTabNum`  
+ [v] *iTabNum*  
  Index zobrazení odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -205,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `iTabNum`  
+ [v] *iTabNum*  
  Index založený na nule kartě zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud bylo zadané zobrazení aktivní, `FALSE` Pokud zobrazení index není platný.  
+ Hodnota TRUE, pokud zadané zobrazení se provádí aktivní, FALSE v případě zobrazení index není platný.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v části [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

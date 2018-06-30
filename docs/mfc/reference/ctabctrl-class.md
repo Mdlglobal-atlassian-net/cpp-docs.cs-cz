@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e46a7d5720be765f2523ebde5d40655fb47b057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 561f407fc651c08d46fe97486e2f9201cfe17333
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378553"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123172"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl – třída
 Poskytuje funkce Windows běžné ovládacího prvku karta.  
@@ -170,10 +170,10 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bLarger`  
- Určuje, kterou operaci provést. Pokud tento parametr je **TRUE**, `lpRect` určuje obdélníku zobrazení a získá odpovídající obdélníku okna. Pokud tento parametr je **FALSE**, `lpRect` určuje obdélníku okno a získá odpovídající obdélník zobrazení.  
+ *bLarger*  
+ Určuje, kterou operaci provést. Pokud tento parametr je hodnota TRUE, *lprect –* určuje obdélníku zobrazení a získá odpovídající obdélníku okna. Pokud má parametr hodnotu FALSE, *lprect –* určuje obdélníku okno a získá odpovídající obdélník zobrazení.  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která určuje dané rámeček a přijímá počítaný obdélník.  
   
 ### <a name="example"></a>Příklad  
@@ -191,37 +191,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku karta. Použít libovolnou kombinaci [kartě styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb760549), které jsou popsány v sadě Windows SDK. V tématu **poznámky** seznam styly oken, které můžete provést také do ovládacího prvku.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacího prvku karta. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
- `pParentWnd`  
- Určuje nadřazeného ovládacího prvku karta okna, obvykle `CDialog`. Nesmí být **NULL**.  
+ *pParentWnd*  
+ Určuje nadřazeného ovládacího prvku karta okna, obvykle `CDialog`. Nesmí být NULL.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku karta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud inicializace objektu byla úspěšná, jinak hodnota **FALSE**.  
+ Hodnota TRUE, pokud se inicializace objektu byla úspěšná. jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CTabCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří ovládacího prvku karta a připojí jej k `CTabCtrl` objektu.  
+ Můžete vytvořit `CTabCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří ovládacího prvku karta a připojí jej k `CTabCtrl` objektu.  
   
  Kromě styly ovládacího prvku karta můžete použít následující styly oken do ovládacího prvku karta:  
   
-- **Ws_child –** vytvoří podřízeného okna, který představuje ovládacího prvku karta. Nelze použít s `WS_POPUP` stylu.  
+- Ws_child – vytvoří podřízeného okna, který představuje ovládacího prvku karta. Nelze použít s ws_popup – styl.  
   
-- **Ws_visible –** vytvoří ovládacího prvku karta, která původně viditelná.  
+- Ws_visible – vytvoří ovládacího prvku karta, která původně viditelná.  
   
-- **Ws_disabled –** vytvoří okno, které je původně zakázána.  
+- Ws_disabled – vytvoří okno, které je původně zakázána.  
   
-- **Ws_group –** Určuje první prvek skupiny ovládacích prvků, ve kterých může uživatel přesunout z jednoho ovládacího prvku na další pomocí klávesy se šipkami. Všechny ovládací prvky, které jsou definované pomocí **ws_group –** styl po první prvek patří do stejné skupiny. Na další ovládací prvek s **ws_group –** styl končí skupinu stylů a spustí na další skupinu (to znamená, jedna skupina elementy end kde začíná další).  
+- Ws_group – Určuje první prvek skupiny ovládacích prvků, ve kterých může uživatel přesunout z jednoho ovládacího prvku na další pomocí klávesy se šipkami. Po první prvek patří do stejné skupiny definované ve stylu ws_group – všechny ovládací prvky. Na další ovládací prvek s ws_group – styl končí skupinu stylů a spustí na další skupinu (to znamená, jedna skupina elementy end kde začíná další).  
   
-- **Ws_tabstop –** určuje jedné z několika ovládacích prvků, pomocí kterých může uživatel přesunout pomocí klávesy TAB. Klávesy TAB přesune na další ovládací prvek určeného uživatele **ws_tabstop –** stylu.  
+- Ws_tabstop – určuje jedné z několika ovládacích prvků, pomocí kterých může uživatel přesunout pomocí klávesy TAB. Klávesy TAB uživatel přesune na další ovládací prvek určeného ws_tabstop – styl.  
   
- Chcete-li vytvořit ovládacího prvku karta s rozšířené styly oken, volejte [CTabCtrl::CreateEx](#createex) místo **vytvořit**.  
+ Chcete-li vytvořit ovládacího prvku karta s rozšířené styly oken, volejte [CTabCtrl::CreateEx](#createex) místo `Create`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
@@ -239,19 +239,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Určuje styl ovládacího prvku karta. Použít libovolnou kombinaci [kartě styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb760549), které jsou popsány v sadě Windows SDK. V tématu **poznámky** v [vytvořit](#create) seznam styly oken, které můžete provést také do ovládacího prvku.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -260,7 +260,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Poznámky  
  Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
   
- `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného `dwExStyle`. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako **ws_ex_contexthelp –**, ale použít `SetExtendedStyle` nastavit tyto styly jako **tcs_ex_flatseparators –**. Další informace najdete v tématu styly popsané v [rozšířené styly ovládacího prvku karta](http://msdn.microsoft.com/library/windows/desktop/bb760546) ve Windows SDK.  
+ `CreateEx` Vytvoří ovládacího prvku rozšířené styly Windows určeného *dwExStyle*. Rozšířené styly specifické pro ovládací prvek pomocí sady [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit jako ws_ex_contexthelp – tyto styly, ale používat `SetExtendedStyle` nastavit jako tcs_ex_flatseparators – tyto styly. Další informace najdete v tématu styly popsané v [rozšířené styly ovládacího prvku karta](http://msdn.microsoft.com/library/windows/desktop/bb760546) ve Windows SDK.  
   
 ##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
  Vytvoří `CTabCtrl` objektu.  
@@ -287,7 +287,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Hodnoty s nulovým základem položky odstranit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -305,7 +305,7 @@ void DeselectAll(BOOL fExcludeFocus);
   
 ### <a name="parameters"></a>Parametry  
  *fExcludeFocus*  
- Příznak, který určuje rozsah deselection položky. Pokud tento parametr je nastaven na **FALSE**, všechny tlačítka karta se resetuje. Pokud je nastaven na hodnotu **TRUE**, pak všechny položky karta s výjimkou aktuálně vybraného se resetuje.  
+ Příznak, který určuje rozsah deselection položky. Pokud tento parametr je nastaven na hodnotu FALSE, všechny tlačítka karta se resetuje. Pokud je nastaveno na hodnotu TRUE, pak všechny kartě s výjimkou ten, který je aktuálně vybrané položky se resetuje.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato funkce člen implementuje chování Win32 zprávy, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), jak je popsáno v sadě Windows SDK.  
@@ -318,15 +318,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Ukazatel [drawitemstruct –](http://msdn.microsoft.com/library/windows/desktop/bb775802) struktura popisující položka, která má být vykresluje.  
   
 ### <a name="remarks"></a>Poznámky  
- **ItemAction** členem `DRAWITEMSTRUCT` struktura definuje kreslení akci, která má být provedena.  
+ `itemAction` Členem `DRAWITEMSTRUCT` struktura definuje kreslení akci, která má být provedena.  
   
  Ve výchozím nastavení tato funkce člen neprovede žádnou akci. Člen funkci implementovat kreslení pro kreslení vlastníka přepsat `CTabCtrl` objektu.  
   
- Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v `lpDrawItemStruct` před tento člen funkce ukončí.  
+ Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před tento člen funkce ukončí.  
   
 ##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
  Načte index na kartě s aktuální fokus.  
@@ -369,7 +369,7 @@ CImageList* GetImageList() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného ukazatel na seznamu obrázků na kartě řízení; v opačném **NULL**.  
+ V případě úspěšného ukazatel na seznamu obrázků na kartě řízení; jinak hodnota NULL.  
   
 ##  <a name="getitem"></a>  CTabCtrl::GetItem  
  Načte informace o kartě v ovládacím prvkem karta.  
@@ -379,42 +379,42 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Na kartě index počítaný od nuly.  
   
- `pTabCtrlItem`  
+ *pTabCtrlItem*  
  Ukazatel na [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktura, umožňuje zadat informace pro načtení. Používá se také získat informace o kartě. Tato struktura se používá s `InsertItem`, `GetItem`, a `SetItem` členské funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěšného; **FALSE** jinak.  
+ Vrátí hodnotu TRUE, pokud bylo úspěšné; FALSE jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Při odeslání zprávy **maska** člen Určuje atributy, které vrátit. Pokud **maska** určuje člena `TCIF_TEXT` hodnota, **pszText** člen musí obsahovat adresu vyrovnávací paměti, která přijímá text položky a **cchTextMax** člen musíte zadat velikost vyrovnávací paměti.  
+ Při odeslání zprávy `mask` člen Určuje atributy, které vrátit. Pokud `mask` člen určuje hodnota TCIF_TEXT `pszText` člen musí obsahovat adresu vyrovnávací paměti, která přijímá text položky a `cchTextMax` člen musíte zadat velikost vyrovnávací paměti.  
   
- **Maska**  
+ `mask`  
  Hodnota, která určuje, které `TCITEM` struktury členy načíst nebo nastavit. Tento člen může být nula nebo kombinaci těchto hodnot:  
   
-- `TCIF_TEXT` **PszText** člena je neplatný.  
+- TCIF_TEXT `pszText` člena je neplatný.  
   
-- `TCIF_IMAGE` `iImage` Člena je neplatný.  
+- TCIF_IMAGE `iImage` člena je neplatný.  
   
-- `TCIF_PARAM` **LParam** člena je neplatný.  
+- TCIF_PARAM `lParam` člena je neplatný.  
   
-- `TCIF_RTLREADING` Text **pszText** se zobrazí v hebrejštině nebo arabské systému pomocí pořadí čtení zprava doleva.  
+- TCIF_RTLREADING text z `pszText` se zobrazí v hebrejštině nebo arabské systému pomocí pořadí čtení zprava doleva.  
   
-- `TCIF_STATE` **DwState** člena je neplatný.  
+- TCIF_STATE `dwState` člena je neplatný.  
   
- **pszText**  
+ `pszText`  
  Ukazatel na obsahující text kartě, pokud struktura obsahuje informace o kartě řetězce ukončené hodnotou null. Pokud strukturu přijímá informace, určuje tento člen adresu vyrovnávací paměti, která přijímá text karty.  
   
- **cchTextMax**  
- Velikost vyrovnávací paměti, na kterou odkazuje **pszText**. Tento člen je ignorována, pokud strukturu nepřijímá informace.  
+ `cchTextMax`  
+ Velikost vyrovnávací paměti, na kterou odkazuje `pszText`. Tento člen je ignorována, pokud strukturu nepřijímá informace.  
   
  `iImage`  
  Index do ovládacího prvku karta seznamu obrázků, nebo - 1, pokud neexistuje žádný obrázek karty.  
   
- **lParam**  
- Definované aplikací data přidružená k kartě. Pokud existuje více než čtyři bajtů dat aplikace definované na kartě, aplikace musí definovat strukturu a použít místo `TCITEM` struktura. Musí být prvním členem struktury definované aplikací [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)struktury. **TCITEMHEADER** struktura je stejný jako `TCITEM` struktury, ale bez **lParam** člen. Rozdíl mezi velikost strukturu a velikost **TCITEMHEADER** struktury musí být roven počtu bajtů navíc na kartě.  
+ lParam  
+ Definované aplikací data přidružená k kartě. Pokud existuje více než čtyři bajtů dat aplikace definované na kartě, aplikace musí definovat strukturu a použít místo `TCITEM` struktura. Musí být prvním členem struktury definované aplikací [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)struktury. `TCITEMHEADER` Struktura je stejný jako `TCITEM` struktury, ale bez `lParam` člen. Rozdíl mezi velikost strukturu a velikost `TCITEMHEADER` struktura by měl být roven počtu bajtů navíc na kartě.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
@@ -440,10 +440,10 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky karta nule.  
   
- `lpRect`  
+ *lprect –*  
  Ukazatel na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník na kartě. Tyto souřadnice používat aktuální režim mapování zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -453,7 +453,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
   Podívejte se na příklad pro [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
- Načte stav položky ovládacího prvku karta identifikovaný `nItem`.  
+ Načte stav položky ovládacího prvku karta identifikovaný *nItem*.  
   
 ```  
 DWORD GetItemState(
@@ -462,22 +462,22 @@ DWORD GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Číslo od nuly index položky, pro které chcete načíst informace o stavu.  
   
- `dwMask`  
+ *dwMask*  
  Maska určující, které položky stavu flags vrátit. Seznam hodnot najdete v tématu členem maska [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktury, jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na `DWORD` hodnota přijetí informace o stavu. Může být jedna z následujících hodnot:  
+ Odkaz na hodnotu DWORD přijímá informace o stavu. Může být jedna z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Je vybrána položka ovládacího prvku karta.|  
-|**TCIS_HIGHLIGHTED**|Položky ovládacího prvku karta je zvýrazněna a karta a text jsou vykreslovány pomocí aktuální barva zvýraznění. Pokud používáte barva zvýraznění, bude hodnota true, interpolace, tónovaná barva.|  
+|TCIS_BUTTONPRESSED|Je vybrána položka ovládacího prvku karta.|  
+|TCIS_HIGHLIGHTED|Položky ovládacího prvku karta je zvýrazněna a karta a text jsou vykreslovány pomocí aktuální barva zvýraznění. Pokud používáte barva zvýraznění, bude hodnota true, interpolace, tónovaná barva.|  
   
 ### <a name="remarks"></a>Poznámky  
- Je zadána stav položky **dwState** členem `TCITEM` struktura.  
+ Je zadána stav položky `dwState` členem `TCITEM` struktura.  
   
 ##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
  Načte aktuální počet řádků v ovládacím prvkem karta.  
@@ -490,7 +490,7 @@ int GetRowCount() const;
  Počet řádků v ovládacím prvku karta karet.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze kartě ovládací prvky, které mají **TCS_MULTILINE** styl může mít více řádků karty.  
+ Pouze ovládací prvky karet, které mají styl TCS_MULTILINE může mít více řádků karty.  
   
 ##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
  Načte popisovač spojené s ovládacím prvkem karta ovládacím prvkem popis tlačítka.  
@@ -500,10 +500,10 @@ CToolTipCtrl* GetToolTips() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač ovládacím prvkem popis tlačítka v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač ovládacím prvkem popis tlačítka v případě úspěšného; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládacího prvku karta vytvoří prvkem popis tlačítka, pokud má **TCS_TOOLTIPS** stylu. Můžete také přiřadit prvkem popis tlačítka do ovládacího prvku karta pomocí `SetToolTips` – členská funkce.  
+ Pokud má styl TCS_TOOLTIPS, vytvoří ovládacího prvku karta prvkem popis tlačítka. Můžete také přiřadit prvkem popis tlačítka do ovládacího prvku karta pomocí `SetToolTips` – členská funkce.  
   
 ##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
  Nastaví stav zvýraznění položka tabulátoru.  
@@ -513,11 +513,11 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `idItem`  
+ *idItem*  
  Index položky ovládacího prvku karta nule.  
   
- `fHighlight`  
- Hodnota, která určuje nastavení stavu zvýraznění. Pokud je tato hodnota **TRUE**, je označený na kartě; Pokud **FALSE**, je nastaven na kartě do výchozího stavu.  
+ *fHighlight*  
+ Hodnota, která určuje nastavení stavu zvýraznění. Pokud má hodnotu TRUE, je označený na kartě; Pokud je hodnota FALSE, na kartě nastavena do výchozího stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -533,7 +533,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  Ukazatel na [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) struktury, jak je popsáno v sadě Windows SDK, která určuje pozici obrazovky pro testování.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -578,35 +578,35 @@ LONG InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index počítaný od nuly novou kartu.  
   
- `pTabCtrlItem`  
+ *pTabCtrlItem*  
  Ukazatel na [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktura, která určuje atributy karty.  
   
- `lpszItem`  
+ *lpszItem*  
  Adresa řetězce ukončené hodnotou null, který obsahuje text, na kartě.  
   
- `nImage`  
+ *nImage*  
  Index založený na nule bitové kopie k vložení ze seznamu obrázků.  
   
- `nMask`  
+ *nMask*  
  Určuje, které `TCITEM` struktury atributy k nastavení. Může být nula nebo kombinaci těchto hodnot:  
   
-- `TCIF_TEXT` **PszText** člena je neplatný.  
+- TCIF_TEXT `pszText` člena je neplatný.  
   
-- `TCIF_IMAGE` `iImage` Člena je neplatný.  
+- TCIF_IMAGE `iImage` člena je neplatný.  
   
-- `TCIF_PARAM` **LParam** člena je neplatný.  
+- TCIF_PARAM *lParam* člena je neplatný.  
   
-- `TCIF_RTLREADING` Text **pszText** se zobrazí v hebrejštině nebo arabské systému pomocí pořadí čtení zprava doleva.  
+- TCIF_RTLREADING text z `pszText` se zobrazí v hebrejštině nebo arabské systému pomocí pořadí čtení zprava doleva.  
   
-- `TCIF_STATE` **DwState** člena je neplatný.  
+- TCIF_STATE *dwState* člena je neplatný.  
   
- `lParam`  
+ *lParam*  
  Definované aplikací data přidružená k kartě.  
   
- `dwState`  
+ *dwState*  
  Určuje hodnoty pro položky stavy. Další informace najdete v tématu [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) ve Windows SDK.  
   
  *dwStateMask*  
@@ -626,7 +626,7 @@ void RemoveImage(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Index bitové kopie k odebrání nule.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -640,7 +640,7 @@ void SetCurFocus(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Určuje index na kartě, který získá fokus.  
   
 ### <a name="remarks"></a>Poznámky  
@@ -654,14 +654,14 @@ int SetCurSel(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index založený na nule položky, aby byl vybrán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index nule dříve vybrané kartě, pokud bylo úspěšné, jinak hodnota - 1.  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládacího prvku karta neodesílá **TCN_SELCHANGING** nebo **TCN_SELCHANGE** oznámení, pokud je vybrána na kartě, použití této funkce. Tato oznámení se odesílají, pomocí **wm_notify –**, když uživatel klikne na tlačítko nebo změnit karet pomocí klávesnice.  
+ Ovládacího prvku karta není odeslat zprávu oznámení TCN_SELCHANGING nebo TCN_SELCHANGE, pokud je vybrána na kartě, použití této funkce. Tato oznámení se odesílají, pomocí wm_notify –, když uživatel klikne na tlačítko nebo změnit karet pomocí klávesnice.  
   
 ##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  Nastaví rozšířené styly pro ovládací prvek karty.  
@@ -671,14 +671,14 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwNewStyle`  
+ *dwNewStyle*  
  Hodnota, která určuje kombinaci karta řídit rozšířené styly.  
   
- `dwExMask`  
- A `DWORD` hodnotu, která určuje, jaké styly v `dwNewStyle` mají mít vliv. Rozšířené styly pouze v `dwExMask` se změní. Všechny ostatní styly se zachová, jako je. Pokud má parametr hodnotu nula, pak všechny styly v `dwNewStyle` bude mít vliv.  
+ *dwExMask*  
+ Hodnotu DWORD, která určuje, jaké styly v *dwNewStyle* mají mít vliv. Rozšířené styly pouze v *dwExMask* se změní. Všechny ostatní styly se zachová, jako je. Pokud má parametr hodnotu nula, pak všechny styly v *dwNewStyle* bude mít vliv.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `DWORD` hodnotu, která obsahuje předchozí [kartě řízení extended styly](http://msdn.microsoft.com/library/windows/desktop/bb760546), jak je popsáno v sadě Windows SDK.  
+ Hodnotu DWORD, který obsahuje předchozí [kartě řízení extended styly](http://msdn.microsoft.com/library/windows/desktop/bb760546), jak je popsáno v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Tato funkce člen implementuje chování zprávy Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), jak je popsáno v sadě Windows SDK.  
@@ -691,11 +691,11 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Ukazatel na seznamu obrázků přiřazení ovládacího prvku karta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrací ukazatel na předchozí seznamu obrázků nebo **NULL** Pokud není žádná předchozí seznamu obrázků.  
+ Vrací ukazatel na předchozí seznamu obrázků nebo hodnota NULL, pokud není žádná předchozí seznamu obrázků.  
   
 ##  <a name="setitem"></a>  CTabCtrl::SetItem  
  Nastaví některé nebo všechny na kartě atributy.  
@@ -705,11 +705,11 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Index položky nule.  
   
- `pTabCtrlItem`  
- Ukazatel na [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktura, která obsahuje nové atributy položek. **Maska** člen Určuje atributy, které chcete nastavit. Pokud **maska** určuje člen `TCIF_TEXT` hodnotu, **pszText** člen je adresa řetězce ukončené hodnotou null a **cchTextMax** člen se ignoruje.  
+ *pTabCtrlItem*  
+ Ukazatel na [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktura, která obsahuje nové atributy položek. `mask` Člen Určuje atributy, které chcete nastavit. Pokud `mask` člen určuje hodnota TCIF_TEXT `pszText` člen je adresa řetězce ukončené hodnotou null a `cchTextMax` člen se ignoruje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -725,7 +725,7 @@ BOOL SetItemExtra(int nBytes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
+ *nBytes*  
  Počet bajtů navíc k nastavení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -742,14 +742,14 @@ CSize SetItemSize(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
+ *Velikost*  
  Nové šířka a výška v pixelech položek ovládacího prvku karta.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí původní šířka a výška položky ovládacího prvku karta.  
   
 ##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
- Nastaví stav položky ovládacího prvku karta identifikovaný `nItem`.  
+ Nastaví stav položky ovládacího prvku karta identifikovaný *nItem*.  
   
 ```  
 BOOL SetItemState(
@@ -759,19 +759,19 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Číslo od nuly index položky, pro kterou chcete nastavit informace o stavu.  
   
- `dwMask`  
+ *dwMask*  
  Maska určující, které položky stavu flags nastavit. Seznam hodnot najdete v tématu členem maska [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) struktury, jak je popsáno v sadě Windows SDK.  
   
- `dwState`  
- Odkaz na `DWORD` hodnotu obsahující informace o stavu. Může být jedna z následujících hodnot:  
+ *dwState*  
+ Odkaz na hodnotu DWORD s hodnotou obsahující informace o stavu. Může být jedna z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Je vybrána položka ovládacího prvku karta.|  
-|**TCIS_HIGHLIGHTED**|Položky ovládacího prvku karta je zvýrazněna a karta a text jsou vykreslovány pomocí aktuální barva zvýraznění. Pokud používáte barva zvýraznění, bude hodnota true, interpolace, tónovaná barva.|  
+|TCIS_BUTTONPRESSED|Je vybrána položka ovládacího prvku karta.|  
+|TCIS_HIGHLIGHTED|Položky ovládacího prvku karta je zvýrazněna a karta a text jsou vykreslovány pomocí aktuální barva zvýraznění. Pokud používáte barva zvýraznění, bude hodnota true, interpolace, tónovaná barva.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak 0.  
@@ -784,7 +784,7 @@ int SetMinTabWidth(int cx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Minimální šířka, jež bude nastavena pro položku ovládacího prvku karta. Pokud tento parametr je nastaven na hodnotu -1, ovládacího prvku použije výchozí kartě šířku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -801,7 +801,7 @@ void SetPadding(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
+ *Velikost*  
  Nastaví množství místa (odsazení) kolem ikona a popisek v ovládacím prvkem karta každé kartě.  
   
 ##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
@@ -812,7 +812,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndTip`  
+ *pWndTip*  
  Popisovač ovládacím prvkem popis tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  

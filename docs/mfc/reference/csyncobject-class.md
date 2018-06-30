@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374094"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122066"
 ---
 # <a name="csyncobject-class"></a>CSyncObject – třída
 Čistý virtuální třídu, která poskytuje funkce, které jsou společné pro objekty synchronizace v Win32.  
@@ -89,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrName`  
- Název objektu. Pokud **NULL**, *pstrName* bude mít hodnotu null.  
+ *pstrName*  
+ Název objektu. Pokud hodnotu NULL, *pstrName* bude mít hodnotu null.  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  Volání této funkce můžete získat přístup k prostředkům řídí objekt synchronizace.  
@@ -100,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwTimeout`  
- Určuje dobu v milisekundách pro čekání synchronizace objekt, který má být k dispozici (signalizovala). Pokud **NEKONEČNÉ**, `Lock` budou čekat na objekt signalizace před vrácením.  
+ *dwTimeout*  
+ Určuje dobu v milisekundách pro čekání synchronizace objekt, který má být k dispozici (signalizovala). Pokud NEKONEČNÉ, `Lock` budou čekat na objekt signalizace před vrácením.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty, pokud funkci byla úspěšná. jinak 0.  
@@ -124,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu popisovač objektu synchronizace; v opačném **NULL**.  
+ V případě úspěchu popisovač objektu synchronizace; jinak hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Popisovač můžete přímo volat rozhraní API systému Windows.  
@@ -139,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lCount`  
+ *lCount*  
  Výchozí implementace používá není.  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  Výchozí implementace používá není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výchozí implementace vždy vrátí **TRUE**.  
+ Výchozí implementace vždy vrátí hodnotu TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace deklarace s dva parametry vždy vrátí **TRUE**. Tato funkce je volána k uvolnění přístup k objektu synchronizace vlastníkem volající vlákno. Druhý prohlášení je stanoveno synchronizačními objekty, jako je například semaforů, které umožňují přístup více řízené prostředku.  
+ Výchozí implementace deklarace s dva parametry vždy vrátí hodnotu TRUE. Tato funkce je volána k uvolnění přístup k objektu synchronizace vlastníkem volající vlákno. Druhý prohlášení je stanoveno synchronizačními objekty, jako je například semaforů, které umožňují přístup více řízené prostředku.  
   
 ## <a name="see-also"></a>Viz také  
  [CObject – třída](../../mfc/reference/cobject-class.md)   

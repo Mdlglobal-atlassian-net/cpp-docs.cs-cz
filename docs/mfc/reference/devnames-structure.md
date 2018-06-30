@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3234df2f0430ea75399791f4fd88a636a63b67e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c13167c42c6acbfcc5f3af500205eed6ab884d9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371475"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121572"
 ---
 # <a name="devnames-structure"></a>DEVNAMES – struktura
 `DEVNAMES` Struktura obsahuje řetězců, které identifikují ovladače, zařízení a názvy výstupní port pro tiskárny.  
@@ -44,16 +44,16 @@ typedef struct tagDEVNAMES { /* dvnm */
  (Vstup/výstup) Určuje posun ve znacích na řetězec ukončené hodnotou null, který obsahuje název souboru (bez přípony) ovladače zařízení. Na vstupu tento řetězec se používá k určení tiskárny pro zobrazení původně v dialogovém okně.  
   
  *wDeviceOffset*  
- (Vstup/výstup) Určuje posunutí v znaků řetězce ukončené hodnotou null (maximálně 32 bajtů včetně hodnotu null), který obsahuje název zařízení. Tento řetězec musí být stejný jako **dmDeviceName** členem [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktura.  
+ (Vstup/výstup) Určuje posunutí v znaků řetězce ukončené hodnotou null (maximálně 32 bajtů včetně hodnotu null), který obsahuje název zařízení. Tento řetězec musí být stejný jako `dmDeviceName` členem [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktura.  
   
  *wOutputOffset*  
  (Vstup/výstup) Určuje posunutí v znaků do řetězce ukončené hodnotou null, který obsahuje název zařízení DOS pro fyzické výstup střední (výstupní port).  
   
  *wDefault*  
- Určuje, zda řetězce součástí `DEVNAMES` struktura identifikovat tiskárny výchozí. Tento řetězec se používá k ověření, že se tiskárny výchozí nezměnil od poslední operaci tisku. Vstupní, je-li **DN_DEFAULTPRN** nastavený příznak, ostatní hodnoty `DEVNAMES` struktura jsou zkontrolován výchozí tiskárnu. Pokud některý řetězec neshodují, se zobrazí zpráva s upozorněním informující uživatele, který dokument muset naformátována. Na výstupu **wDefault** člen se změní jenom v případě, že se zobrazí dialogové okno Nastavení tisku a Uživatel reagoval na tlačítko OK. **DN_DEFAULTPRN** je příznak nastaven, pokud jste vybrali výchozí tiskárny. Pokud je vybrána konkrétní tiskárnu, není nastaven příznak. Všechny bity v tento člen je vyhrazeno pro interní použití pole procedurou dialogové okno tisku.  
+ Určuje, zda řetězce součástí `DEVNAMES` struktura identifikovat tiskárny výchozí. Tento řetězec se používá k ověření, že se tiskárny výchozí nezměnil od poslední operaci tisku. Na vstupu, pokud je nastavený příznak DN_DEFAULTPRN, dalších hodnot v `DEVNAMES` struktura jsou zkontrolován výchozí tiskárnu. Pokud některý řetězec neshodují, se zobrazí zpráva s upozorněním informující uživatele, který dokument muset naformátována. Na výstupu `wDefault` člen se změní jenom v případě, že se zobrazí dialogové okno Nastavení tisku a Uživatel reagoval na tlačítko OK. Příznak DN_DEFAULTPRN je nastavit, pokud jste vybrali výchozí. Pokud je vybrána konkrétní tiskárnu, není nastaven příznak. Všechny bity v tento člen je vyhrazeno pro interní použití pole procedurou dialogové okno tisku.  
   
 ## <a name="remarks"></a>Poznámky  
- **PrintDlg** funkce používá tyto řetězce k chybě při inicializaci členů v dialogových oken tiskových definovaná systémem. Když uživatel zavře dialogové okno, v této struktuře se vrátí informace o vybrané tiskárny.  
+ `PrintDlg` Funkce používá tyto řetězce k chybě při inicializaci členů v dialogových oken tiskových definovaná systémem. Když uživatel zavře dialogové okno, v této struktuře se vrátí informace o vybrané tiskárny.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** commdlg.h  

@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450021fd1ea05831f44dd5af7a9f1e39a9d6fc5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ffe43c33e4b371f6d5dcf5dc7da327b11328af7
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371781"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121376"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Podrobnosti podpory knihovny ATL přidané průvodcem knihovnou ATL
 Pokud jste [přidání podpory knihovny ATL do stávající spustitelný soubor knihovny MFC nebo knihovny DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ provede následující změny v existující projektu knihovny MFC (v tomto příkladu se nazývá projektu `MFCEXE`):  
   
 -   Se přidají dva nové soubory (souboru IDL a soubor .rgs, který se používá k registraci serveru).  
   
--   V hlavní aplikaci hlavičku a implementace souborech (Mfcexe.h a Mfcexe.cpp) novou třídu (odvozený z **CAtlMFCModule**) je přidána. Kromě, nová třída kód je přidán do `InitInstance` pro registraci. Kód je také přidán do `ExitInstance` funkce pro odvolání objektu třídy. V záhlaví souboru, nakonec dva nové soubory hlavičky (Initguid.h a Mfcexe_i.c) jsou zahrnuty v souboru implementace deklarace a inicializace nové identifikátory GUID pro **CAtlMFCModule**-odvozené třídy.  
+-   V hlavní aplikaci hlavičku a implementace souborech (Mfcexe.h a Mfcexe.cpp) novou třídu (odvozený z `CAtlMFCModule`) je přidána. Kromě, nová třída kód je přidán do `InitInstance` pro registraci. Kód je také přidán do `ExitInstance` funkce pro odvolání objektu třídy. V záhlaví souboru, nakonec dva nové soubory hlavičky (Initguid.h a Mfcexe_i.c) jsou zahrnuty v souboru implementace deklarace a inicializace nové identifikátory GUID pro `CAtlMFCModule`-odvozené třídy.  
   
 -   Registrace serveru správně, je záznam pro nové souboru do souboru prostředků projektu.  
   
 ## <a name="notes-for-dll-projects"></a>Poznámky pro projekty knihovny DLL  
- Při přidání podpory knihovny ATL do projektu MFC DLL, zobrazí se některé rozdíly. Kód je přidán do **DLLRegisterServer** a **DLLUnregisterServer** funkce pro registraci a zrušení registrace knihovny DLL. Kód je taky přidaný ke [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) a [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
+ Při přidání podpory knihovny ATL do projektu MFC DLL, zobrazí se některé rozdíly. Kód je přidán do `DLLRegisterServer` a `DLLUnregisterServer` funkce pro registraci a zrušení registrace knihovny DLL. Kód je taky přidaný ke [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) a [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
 ## <a name="see-also"></a>Viz také  
  [Podpora knihovny ATL v projektu knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   

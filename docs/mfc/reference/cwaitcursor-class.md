@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372505"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122668"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor – třída
 Poskytuje způsob jednořádkové čekání kurzor, který je obvykle zobrazený jako přesýpací hodiny, když provádíte časově náročná operace.  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  Kvůli jejich konstruktory a destruktory fungování `CWaitCursor` objekty jsou vždy deklarované jako místní proměnné – nikdy deklarovány jako globální proměnné ani jsou budou přiděleny s **nové**.  
   
- Pokud provádíte operace, což by mohlo způsobit kurzor změnit, jako je například zobrazení okno se zprávou nebo dialogové okno, volání [obnovení](#restore) – členská funkce obnovení kurzor čekání. Je to v pořádku pro volání **obnovení** i při čekání kurzoru je aktuálně zobrazený.  
+ Pokud provádíte operace, což by mohlo způsobit kurzor změnit, jako je například zobrazení okno se zprávou nebo dialogové okno, volání [obnovení](#restore) – členská funkce obnovení kurzor čekání. Je to v pořádku pro volání `Restore` i při čekání kurzoru je aktuálně zobrazený.  
   
  Dalším způsobem zobrazíte kurzoru čekání je pomocí kombinace [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)a případně [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Ale `CWaitCursor` je jednodušší použít, protože nemusíte nastavte kurzor na předchozí kurzor, když jste hotovi s náročná operace.  
   
@@ -106,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je možné volat **obnovení** i při čekání kurzor je aktuálně zobrazený.  
+ Je možné volat `Restore` i při čekání kurzor je aktuálně zobrazený.  
   
  Pokud potřebujete obnovit čekání kurzor v průběhu funkce než ten, ve kterém `CWaitCursor` je deklarován objekt, můžete volat [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
   

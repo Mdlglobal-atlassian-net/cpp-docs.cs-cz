@@ -1,7 +1,7 @@
 ---
 title: Komentáře v jazyce C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384343"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121741"
 ---
 # <a name="c-comments"></a>Komentáře v jazyce C
 "Komentář" je posloupnost znaků počínaje kombinaci dopředné lomítko/hvězdičky (<b>/\*</b>), je považován za jeden prázdný znak kompilátorem a v opačném případě je ignorováno. Komentář může obsahovat libovolnou kombinaci znaků z reprezentovat znaková sada, včetně znaky nového řádku, s výjimkou oddělovač "ukončení komentáře" (<b>\*/</b>). Komentáře mohou zaujímat více než jeden řádek, ale nelze je vnořovat.  
@@ -70,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Konkrétní Microsoft**  
   
- Kompilátor Microsoft také podporuje jeden řádek komentáře před sebou dvě lomítka (**//**). Je-li program kompilován s možností /Za (standard ANSI), vygenerují tyto komentáře chyby. Tyto komentáře nemohou přesahovat na druhý řádek.  
+ Kompilátor Microsoft také podporuje jeden řádek komentáře před sebou dvě lomítka (__//__). Je-li program kompilován s možností /Za (standard ANSI), vygenerují tyto komentáře chyby. Tyto komentáře nemohou přesahovat na druhý řádek.  
   
 ```  
 // This is a valid comment  
 ```  
   
- Komentáře počínaje dvě lomítka (**//**) se ukončila příkazem další znak nového řádku, který není sebou řídicí znak. V dalším příkladu, znak nového řádku předchází zpětné lomítko (**\\**), vytváření "– řídicí sekvence." Díky této řídicí sekvenci kompilátor považuje další řádek za součást předchozího řádku. (Další informace najdete v tématu [řídicí sekvence](../c-language/escape-sequences.md).)  
+ Komentáře počínaje dvě lomítka (__//__) se ukončila příkazem další znak nového řádku, který není sebou řídicí znak. V dalším příkladu, znak nového řádku předchází zpětné lomítko (**\\**), vytváření "– řídicí sekvence." Díky této řídicí sekvenci kompilátor považuje další řádek za součást předchozího řádku. (Další informace najdete v tématu [řídicí sekvence](../c-language/escape-sequences.md).)  
   
 ```  
 // my comment \  

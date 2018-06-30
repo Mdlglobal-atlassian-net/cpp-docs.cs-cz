@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b89f51fbcb3ca46afdb5ad56a6e162e7fe42cf0d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375526"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122888"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl – třída
 Poskytuje funkce ovládacího panelu Windows běžné stavu.  
@@ -132,27 +132,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
- Určuje styl panelu řízení stavu. Použít libovolnou kombinaci stavový řádek – styly ovládacích prvků uvedených v [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK. Tento parametr musí obsahovat **ws_child –** stylu. Měl by obsahovat také **ws_visible –** stylu.  
+ *dwStyle*  
+ Určuje styl panelu řízení stavu. Použít libovolnou kombinaci stavový řádek – styly ovládacích prvků uvedených v [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK. Tento parametr musí obsahovat ws_child – styl. Měl by obsahovat také ws_visible – styl.  
   
- `rect`  
+ *Rect –*  
  Určuje velikost a umístění ovládacích prvků panelu stavu. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura.  
   
- `pParentWnd`  
- Určuje stav panelu ovládacího prvku nadřazeného okna, obvykle `CDialog`. Nesmí být **hodnotu NULL.**  
+ *pParentWnd*  
+ Určuje stav panelu ovládacího prvku nadřazeného okna, obvykle `CDialog`. Nesmí být NULL.  
   
- `nID`  
+ *nID*  
  Určuje ID ovládacího prvku panel stav.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CStatusBarCtrl` ve dvou krocích. Nejprve volat konstruktor a pak zavolají **vytvořit**, který vytvoří ovládacího prvku panel stav a připojí jej k `CStatusBarCtrl` objektu.  
+ Můžete vytvořit `CStatusBarCtrl` ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří ovládacího prvku panel stav a připojí jej k `CStatusBarCtrl` objektu.  
   
- Výchozí umístění stavu okna je podél dolního okraje nadřazeného okna, ale můžete zadat `CCS_TOP` styl, který se následně zobrazí v horní části okna nadřazené klientské oblasti. Můžete zadat **SBARS_SIZEGRIP** styl zahrnout úchyt na pravém konci stavové okno. Kombinování `CCS_TOP` a **SBARS_SIZEGRIP** styly se nedoporučuje, protože výsledná úchyt není funkční, i když systém nevykresluje se v okně Stav.  
+ Výchozí umístění stavu okna je podél dolního okraje nadřazeného okna, ale můžete určit styl CCS_TOP jej zobrazí v horní části okna nadřazené klientské oblasti. Můžete určit styl SBARS_SIZEGRIP zahrnout úchyt na pravém konci stavové okno. Kombinování styly CCS_TOP a SBARS_SIZEGRIP se nedoporučuje, protože výsledná úchyt není funkční, i když systém nevykresluje se v okně Stav.  
   
- Chcete-li vytvořit stavového řádku s rozšířené styly oken, volejte [CStatusBarCtrl::CreateEx](#createex) místo **vytvořit**.  
+ Chcete-li vytvořit stavového řádku s rozšířené styly oken, volejte [CStatusBarCtrl::CreateEx](#createex) místo `Create`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
@@ -170,19 +170,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu `dwExStyle` parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ *dwExStyle*  
+ Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
   
- `dwStyle`  
- Určuje styl panelu řízení stavu. Použít libovolnou kombinaci stavový řádek – styly ovládacích prvků uvedených v [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK. Tento parametr musí obsahovat **ws_child –** stylu. Měl by obsahovat také **ws_visible –** stylu.  
+ *dwStyle*  
+ Určuje styl panelu řízení stavu. Použít libovolnou kombinaci stavový řádek – styly ovládacích prvků uvedených v [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK. Tento parametr musí obsahovat ws_child – styl. Měl by obsahovat také ws_visible – styl.  
   
- `rect`  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta `pParentWnd`.  
+ *Rect –*  
+ Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ukazatel na okně, které je nadřazeného ovládacího prvku.  
   
- `nID`  
+ *nID*  
  ID ovládacího prvku podřízeného okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -206,15 +206,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Dlouhé ukazatel [drawitemstruct –](http://msdn.microsoft.com/library/windows/desktop/bb775802) struktura, která obsahuje informace o typu kreslení vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
- **ItemAction** členem `DRAWITEMSTRUCT` struktura definuje kreslení akci, která má být provedena.  
+ `itemAction` Členem `DRAWITEMSTRUCT` struktura definuje kreslení akci, která má být provedena.  
   
  Ve výchozím nastavení tato funkce člen neprovede žádnou akci. Člen funkci implementovat kreslení pro kreslení vlastníka přepsat `CStatusBarCtrl` objektu.  
   
- Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v `lpDrawItemStruct` před tento člen funkce ukončí.  
+ Aplikace by měla obnovit všechny grafiky zařízení rozhraní GDI objekty vybrané pro zadaný kontext zobrazení v *lpDrawItemStruct* před tento člen funkce ukončí.  
   
 ##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  Načte ovládací prvek panelu Stav aktuální šířky vodorovného a svislého ohraničení a mezery mezi obdélníky.  
@@ -261,10 +261,10 @@ HICON GetIcon(int iPart) const;
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|[v] `iPart`|Index založený na nule části, která obsahuje ikonu, která mají být načteny. Pokud má parametr hodnotu -1, se předpokládá stavového řádku, jako jednoduchý režim stavového řádku.|  
+|[v] *iPart*|Index založený na nule části, která obsahuje ikonu, která mají být načteny. Pokud má parametr hodnotu -1, se předpokládá stavového řádku, jako jednoduchý režim stavového řádku.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač ikonu Pokud metoda úspěšná. v opačném `NULL`.  
+ Popisovač ikonu Pokud metoda úspěšná. jinak hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) zprávy, která je popsána v sadě Windows SDK.  
@@ -291,11 +291,11 @@ int GetParts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nParts`  
+ *nParts*  
  Počet částí, pro které chcete načíst souřadnice. Pokud tento parametr je vyšší než počet částí v ovládacím prvku, načte zprávu souřadnice pouze existující části.  
   
  *pParts*  
- Adresa celočíselné pole mají stejný počet elementů jako počet částí určeného `nParts`. Každý prvek v poli, obdrží klient souřadnice pravého okraje odpovídající části. Pokud element je nastaven na hodnotu - 1, pozice pravý okraj pro tuto část rozšiřuje na pravý okraj stavový řádek.  
+ Adresa celočíselné pole mají stejný počet elementů jako počet částí určeného *nParts*. Každý prvek v poli, obdrží klient souřadnice pravého okraje odpovídající části. Pokud element je nastaven na hodnotu - 1, pozice pravý okraj pro tuto část rozšiřuje na pravý okraj stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Počet částí v ovládacím prvku v případě úspěchu nebo nula, jinak hodnota.  
@@ -316,10 +316,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Index nule části, jejichž ohraničující obdélník je mají být načteny.  
   
- `lpRect`  
+ *lprect –*  
  Adresa [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura, která přijímá ohraničující obdélník.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -343,22 +343,22 @@ int GetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Adresa vyrovnávací paměti, která přijímá text. Tento parametr je řetězce ukončené hodnotou null.  
   
- `nPane`  
+ *nPane*  
  Index nule části, ze kterého chcete načíst text.  
   
- `pType`  
+ *pType*  
  Ukazatel na celé číslo, které obdrží informace o typu. Typ může být jedna z těchto hodnot:  
   
 - **0** text se vykresluje ohraničení zobrazí nižší než roviny tohoto stavový řádek.  
   
-- `SBT_NOBORDERS` Text se nevykreslí bez ohraničení.  
+- SBT_NOBORDERS text vykreslením bez ohraničení.  
   
-- `SBT_POPOUT` Text je vykresluje ohraničení zobrazí vyšší než roviny tohoto stavový řádek.  
+- SBT_POPOUT text vykreslením ohraničením zobrazí vyšší než roviny tohoto stavový řádek.  
   
-- `SBT_OWNERDRAW` Pokud má text `SBT_OWNERDRAW` kreslení typu `pType` obdrží tuto zprávu a vrátí hodnotu 32-bit přidružené textu místo typ délku a operace.  
+- SBT_OWNERDRAW Pokud text má SBT_OWNERDRAW kreslení typu *pType* obdrží tuto zprávu a vrátí hodnotu 32-bit přidružené textu místo typ délku a operace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Délka ve znacích textu nebo [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující aktuální text.  
@@ -376,19 +376,19 @@ int GetTextLength(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Index nule části, ze kterého chcete načíst text.  
   
- `pType`  
+ *pType*  
  Ukazatel na celé číslo, které obdrží informace o typu. Typ může být jedna z těchto hodnot:  
   
 - **0** text se vykresluje ohraničení zobrazí nižší než roviny tohoto stavový řádek.  
   
-- `SBT_NOBORDERS` Text se nevykreslí bez ohraničení.  
+- SBT_NOBORDERS text vykreslením bez ohraničení.  
   
-- `SBT_OWNERDRAW` Text je vykreslen pomocí nadřazeného okna.  
+- SBT_OWNERDRAW text vykreslením podle nadřazeného okna.  
   
-- `SBT_POPOUT` Text je vykresluje ohraničení zobrazí vyšší než roviny tohoto stavový řádek.  
+- SBT_POPOUT text vykreslením ohraničením zobrazí vyšší než roviny tohoto stavový řádek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Délka ve znacích textu.  
@@ -404,7 +404,7 @@ CString GetTipText(int nPane) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Index založený na nule panelu řádku stav přijímat text popisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -437,8 +437,8 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
- **COLORREF** hodnotu, která určuje barvu pozadí nové. Zadejte `CLR_DEFAULT` hodnoty způsobila stavovém řádku použijte jeho výchozí barvu pozadí.  
+ *znaky CR*  
+ COLORREF hodnota, která určuje nové barvu pozadí. Zadejte hodnotu CLR_DEFAULT způsobí stavovém řádku použijte jeho výchozí barvu pozadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která představuje předchozí výchozí barvu pozadí.  
@@ -459,11 +459,11 @@ BOOL SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Index založený na nule podokna, která bude přijímat ikonu. Pokud má parametr hodnotu -1, stavový řádek se považuje za jednoduché stavového řádku.  
   
- `hIcon`  
- Zpracování na ikonu nastavení. Pokud je tato hodnota **NULL**, na ikonu se odebere z části.  
+ *hIcon*  
+ Zpracování na ikonu nastavení. Pokud má hodnotu NULL, odeberou se z části ikonu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -482,11 +482,11 @@ void SetMinHeight(int nMin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Minimální výška v pixelech, ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
- Minimální výška je součet hodnot `nMin` a dvakrát šířku v pixelech svislé ohraničení ovládacího prvku panel stav.  
+ Minimální výška je součet hodnot *nMin* a dvakrát šířku v pixelech svislé ohraničení ovládacího prvku panel stav.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
@@ -501,11 +501,11 @@ BOOL SetParts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nParts`  
+ *nParts*  
  Počet částí nastavit. Počet částí nemůže být větší než 255.  
   
  *pWidths*  
- Adresa celočíselné pole mají stejný počet elementů jako části určené v `nParts`. Každý prvek v poli určuje pozici souřadnice klienta, je pravý okraj odpovídající části. Pokud je element - 1, pozice pravý okraj pro tuto část rozšiřuje na pravý okraj ovládacího prvku.  
+ Adresa celočíselné pole mají stejný počet elementů jako části určené v *nParts*. Každý prvek v poli určuje pozici souřadnice klienta, je pravý okraj odpovídající části. Pokud je element - 1, pozice pravý okraj pro tuto část rozšiřuje na pravý okraj ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `bSimple`  
- Příznak zobrazení type. Pokud tento parametr je `TRUE`, tento ovládací prvek zobrazí jednoduchý text; Pokud je `FALSE`, zobrazí se více částí.  
+ [v] *bSimple*  
+ Příznak zobrazení type. Pokud má parametr hodnotu TRUE, tento ovládací prvek zobrazí jednoduchý text; Pokud je FALSE, zobrazí se více částí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vždy vrátí hodnotu 0.  
@@ -541,20 +541,20 @@ BOOL SetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
- Adresa zadání text, který chcete nastavit řetězce ukončené hodnotou null. Pokud `nType` je `SBT_OWNERDRAW`, `lpszText` představuje 32 bity data.  
+ *lpszText*  
+ Adresa zadání text, který chcete nastavit řetězce ukončené hodnotou null. Pokud *Noznámení* je SBT_OWNERDRAW, *lpszText* představuje 32 bity data.  
   
- `nPane`  
+ *nPane*  
  Index počítaný od nuly část můžete nastavit. Pokud tato hodnota je 255, ovládacího prvku panel stav se považuje za jednoduchý ovládací prvek s pouze jednou ze součástí.  
   
- `nType`  
+ *Noznámení*  
  Typ vykreslování operaci. V tématu [SB_SETTEXT zpráva](http://msdn.microsoft.com/library/bb760758\(vs.85\).aspx) seznam možných hodnot.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Zpráva by způsobila neplatnost část ovládací prvek, který změnil způsobuje zobrazit nového textu přijetí ovládacího prvku další `WM_PAINT` zprávy.  
+ Zpráva by způsobila neplatnost část ovládací prvek, který změnil způsobuje ovládacího prvku vedle obdrží zprávu WM_PAINT zobrazit nového textu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
@@ -569,7 +569,7 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Index založený na nule panelu řádku stav přijímat text popisku.  
   
  *pszTipText*  

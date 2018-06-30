@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373537"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122193"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Řetězce šablon dokumentů, Průvodce aplikací MFC
 Na této stránce Průvodce aplikací MFC zadejte nebo upřesněte následující možnosti, které pomáhají při správě dokumentů a lokalizace. Řetězce šablony dokumentu jsou k dispozici pro aplikace, které zahrnují **Document/view – architektura podporu** v [typ aplikace](../../mfc/reference/application-type-mfc-application-wizard.md). Nejsou k dispozici pro dialogová okna. Protože většina řetězce šablony dokumentu je viditelná a použitá s aplikace, jsou lokalizovány do **jazyk prostředku** uvedené v **typ aplikace** stránce průvodce.  
@@ -43,7 +43,7 @@ Na této stránce Průvodce aplikací MFC zadejte nebo upřesněte následujíc�
 |**Titulek hlavního rámce**|Nastaví text, zobrazí v horní části hlavního rámce aplikace. Ve výchozím nastavení je to název projektu.|  
 |**Název typu dokumentu**|Určuje typ dokumentu, pod kterým je možné seskupit dokumentu aplikace. Ve výchozím nastavení je to název projektu. Změna výchozí další možnosti v tomto dialogovém nezmění.|  
 |**Název filtru**|Nastaví název, který mohou uživatelé použít k vyhledání váš typ souborů. Tato možnost je dostupná z **soubory typu** a **uložit jako typ** možnosti v systému Windows standardní **otevřete** a **uložit jako** dialogová okna. Ve výchozím nastavení název projektu a soubory, a příponu součástí **příponu souboru**. Pokud projektu jmenuje Widget a přípona souboru je, například **název filtru** soubory Widget (*.wgt) je ve výchozím nastavení.|  
-|**Nové krátký název souboru**|Nastaví název zobrazovaný v standardní Windows `New` dialogové okno, pokud existuje více než jednu šablonu dokumentu. Pokud je vaše aplikace [automatizační server](../../mfc/automation-servers.md), tento název se používá jako krátký název objektu automatizace. Ve výchozím nastavení je to název projektu.|  
+|**Nové krátký název souboru**|Nastaví název zobrazovaný v standardní Windows **nový** dialogové okno, pokud existuje více než jednu šablonu dokumentu. Pokud je vaše aplikace [automatizační server](../../mfc/automation-servers.md), tento název se používá jako krátký název objektu automatizace. Ve výchozím nastavení je to název projektu.|  
 |**Dlouhý název typu souboru**|Nastaví název typu souboru v registru systému. Pokud je aplikace Automatizační server, tento název se používá jako dlouhý název objektu automatizace. Ve výchozím nastavení je to název projektu a. Dokument.|  
   
 ## <a name="see-also"></a>Viz také  

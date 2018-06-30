@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1198c85b8366d7dec4d38d002b65468c38347c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372632"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121726"
 ---
 # <a name="csocketfile-class"></a>CSocketFile – třída
 A `CFile` objekt používaný pro odesílání a příjmu dat přes síť pomocí rozhraní Windows Sockets.  
@@ -48,11 +48,11 @@ class CSocketFile : public CFile
  K serializaci dat (Odeslat), můžete ji vložit do archivu, který volá `CSocketFile` členské funkce zapsat data do `CSocket` objektu. K deserializaci (přijímat) data, rozbalte z archivu. To způsobí, že archivu volat `CSocketFile` členské funkce Číst data z `CSocket` objektu.  
   
 > [!TIP]
->  Kromě použití `CSocketFile` podle postupu popsaného tady, můžete ho jako objekt samostatného souboru, stejně jako v `CFile`, jeho základní třída. Můžete také použít `CSocketFile` s všechny funkce na základě archivu serializace MFC. Protože `CSocketFile` nepodporuje všechny `CFile`je funkce, některé výchozí MFC serializovat funkce nejsou kompatibilní s `CSocketFile`. To platí hlavně z `CEditView` třídy. By se neměl pokoušet serializovat `CEditView` data prostřednictvím `CArchive` objekt připojený k `CSocketFile` pomocí `CEditView::SerializeRaw`; použít **CEditView::Serialize** místo. `SerializeRaw` Funkce očekává objektu soubor do mají funkce, jako například `Seek`, že `CSocketFile` nemá.  
+>  Kromě použití `CSocketFile` podle postupu popsaného tady, můžete ho jako objekt samostatného souboru, stejně jako v `CFile`, jeho základní třída. Můžete také použít `CSocketFile` s všechny funkce na základě archivu serializace MFC. Protože `CSocketFile` nepodporuje všechny `CFile`je funkce, některé výchozí MFC serializovat funkce nejsou kompatibilní s `CSocketFile`. To platí hlavně z `CEditView` třídy. By se neměl pokoušet serializovat `CEditView` data prostřednictvím `CArchive` objekt připojený k `CSocketFile` pomocí `CEditView::SerializeRaw`; použít `CEditView::Serialize` místo. `SerializeRaw` Funkce očekává objektu soubor do mají funkce, jako například `Seek`, že `CSocketFile` nemá.  
   
- Při použití `CArchive` s `CSocketFile` a `CSocket`, může nastat situace, kdy **CSocket::Receive** zadá smyčku (podle **PumpMessages(FD_READ)**) čekání požadovaný počet bajtů. Důvodem je, že rozhraní Windows sockets povolit pouze jedno volání přijatých za FD_READ oznámení, ale `CSocketFile` a `CSocket` povolit více volání přijatých za FD_READ. Pokud dojde FD_READ po žádná data ke čtení, dojde k zablokování aplikace. Pokud se nikdy jiné FD_READ, aplikace přestane komunikaci přes soketu.  
+ Při použití `CArchive` s `CSocketFile` a `CSocket`, může nastat situace, kdy `CSocket::Receive` zadá smyčku (podle `PumpMessages(FD_READ)`) čekání na požadovaný počet bajtů. Důvodem je, že rozhraní Windows sockets povolit pouze jedno volání přijatých za FD_READ oznámení, ale `CSocketFile` a `CSocket` povolit více volání přijatých za FD_READ. Pokud dojde FD_READ po žádná data ke čtení, dojde k zablokování aplikace. Pokud se nikdy jiné FD_READ, aplikace přestane komunikaci přes soketu.  
   
- Tento problém můžete vyřešit následujícím způsobem. V `OnReceive` metoda třídy soketů, volání **CAsyncSocket::IOCtl (FIONREAD,...)**  před voláním `Serialize` metoda třídě zpráv při čtení ze soketu očekávaná data překračuje velikost jednoho paketu protokolu TCP (hodnota MTU střední sítě, obvykle alespoň 1096 bajtů). Pokud velikost dostupné dat je menší než je potřeba, počkejte všechna data a přijímat pouze spusťte operace čtení.  
+ Tento problém můžete vyřešit následujícím způsobem. V `OnReceive` metoda třídy soketů, volání `CAsyncSocket::IOCtl(FIONREAD, ...)` před voláním `Serialize` metoda třídě zpráv při čtení ze soketu očekávaná data překračuje velikost jednoho paketu protokolu TCP (jednotka MTU střední sítě obvykle alespoň 1096 bajtů). Pokud velikost dostupné dat je menší než je potřeba, počkejte všechna data a přijímat pouze spusťte operace čtení.  
   
  V následujícím příkladu `m_dwExpected` je přibližný počet bajtů, které uživatel očekává. Předpokládá se, že deklarujete ho jinde v kódu.  
   
@@ -80,17 +80,17 @@ explicit CSocketFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSocket`  
+ *pSocket*  
  Připojit k soketu `CSocketFile` objektu.  
   
- `bArchiveCompatible`  
- Určuje, zda je objekt souboru pro použití s `CArchive` objektu. Předat **FALSE** pouze v případě, že chcete použít `CSocketFile` objektu samostatné způsobem jako samostatný `CFile` objekt s některými omezeními. Tento příznak změny jak `CArchive` objekt připojený k `CSocketFile` objekt spravuje vyrovnávací paměti pro čtení.  
+ *bArchiveCompatible*  
+ Určuje, zda je objekt souboru pro použití s `CArchive` objektu. Pass FALSE, pouze pokud chcete použít `CSocketFile` objektu samostatné způsobem jako samostatný `CFile` objekt s některými omezeními. Tento příznak změny jak `CArchive` objekt připojený k `CSocketFile` objekt spravuje vyrovnávací paměti pro čtení.  
   
 ### <a name="remarks"></a>Poznámky  
  Destruktoru objektu zrušíte sám sebe z objektu soketu při objekt ocitne mimo rozsah, nebo je odstranit.  
   
 > [!NOTE]
->  A `CSocketFile` lze také použít jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru `bArchiveCompatible` parametr **TRUE**. To určuje, že objekt souboru je pro použití s archivu. Chcete-li použít objekt souboru bez archiv, předat **FALSE** v `bArchiveCompatible` parametr.  
+>  A `CSocketFile` lze také použít jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru *bArchiveCompatible* parametr má hodnotu TRUE. To určuje, že objekt souboru je pro použití s archivu. Chcete-li použít objekt souboru bez archiv, předat hodnotu FALSE v *bArchiveCompatible* parametr.  
   
  V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a snižuje nebezpečí "vzájemné zablokování." Dojde k zablokování, když přijímající a odesílající sokety čekají na sobě navzájem, nebo pro běžné prostředků. Tato situace může nastat, pokud `CArchive` objekt pracoval s `CSocketFile` způsob, jak v případě `CFile` objektu. S `CFile`, archivu můžete předpokládat, že pokud obdrží menší počet bajtů, než je požadováno, na konci souboru byl dosažen.  
   

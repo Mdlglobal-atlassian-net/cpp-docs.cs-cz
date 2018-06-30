@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb7daba666e8aaf983eadc77417cad46180e7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff4596a52170d0c6d197a0bda431963b5f0e9344
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378266"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120931"
 ---
 # <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT – struktura
 `DRAWITEMSTRUCT` Struktura poskytuje informace okno vlastníka musí mít určit, jak k vyplnění vykreslovaných vlastníkem nebo nabídky ovládací prvek položku.  
@@ -43,65 +43,65 @@ typedef struct tagDRAWITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `CtlType`  
+ *CtlType*  
  Typ ovládacího prvku. Typy ovládacích prvků hodnoty jsou následující:  
   
-- **ODT_BUTTON** tlačítko vykreslované uživatelem  
+- Tlačítko ODT_BUTTON vykreslované uživatelem  
   
-- **ODT_COMBOBOX** vykreslovaných vlastníkem pole se seznamem  
+- ODT_COMBOBOX vykreslovaných vlastníkem pole se seznamem  
   
-- **ODT_LISTBOX** pole se seznamem vykreslované uživatelem  
+- Pole se seznamem vykreslovaných vlastníkem ODT_LISTBOX  
   
-- **ODT_MENU** vykreslovaných vlastníkem nabídky  
+- Vlastní vykreslené nabídky ODT_MENU  
   
-- **ODT_LISTVIEW** ovládacího prvku zobrazení seznamu  
+- Ovládací prvek seznamu ODT_LISTVIEW  
   
-- **ODT_STATIC** vykreslovaných vlastníkem statického ovládacího prvku  
+- ODT_STATIC vykreslovaných vlastníkem statického ovládacího prvku  
   
-- **ODT_TAB** kartě ovládací prvek  
+- Ovládací prvek karty ODT_TAB  
   
- `CtlID`  
+ *CtlID*  
  ID ovládacího prvku pole se seznamem, pole se seznamem nebo tlačítko. Tento člen není použit nabídky.  
   
- `itemID`  
- ID položky nabídky pro nabídky nebo index položky v seznamu nebo pole se seznamem. Prázdný seznam nebo pole se seznamem, je tento člen zápornou hodnotu, která umožní aplikaci k vykreslení pouze rámečku fokusu v souřadnice určeného **rcItem** člen, i když neexistují žádné položky v ovládacím prvku. Uživatel může zobrazit proto zda pole se seznamem nebo pole se seznamem má zaměření pro vstup. Nastavení bity **itemAction** člen Určuje, zda rámeček je k tomu, jako kdyby pole se seznamem nebo pole se seznamem má vstupu fokus.  
+ *itemID*  
+ ID položky nabídky pro nabídky nebo index položky v seznamu nebo pole se seznamem. Prázdný seznam nebo pole se seznamem, je tento člen zápornou hodnotu, která umožní aplikaci k vykreslení pouze rámečku fokusu v souřadnice určeného `rcItem` člen, i když neexistují žádné položky v ovládacím prvku. Uživatel může zobrazit proto zda pole se seznamem nebo pole se seznamem má zaměření pro vstup. Nastavení bity `itemAction` člen Určuje, zda rámeček je k tomu, jako kdyby pole se seznamem nebo pole se seznamem má vstupu fokus.  
   
- `itemAction`  
+ *itemAction*  
  Definuje kreslení vyžadována akce. Bude jím nejméně jeden z následujících bits:  
   
-- **ODA_DRAWENTIRE** tento bit nastaven při celý ovládací prvek, je nutné vykreslit.  
+- ODA_DRAWENTIRE tato verze se nastaví, pokud je nutné vykreslit celý ovládací prvek.  
   
-- **ODA_FOCUS** tento bit nastaven při získá ovládací prvek nebo ztratí zaměření pro vstup. **ItemState** člen kontroly k určení, zda má právě fokus, ovládacího prvku.  
+- ODA_FOCUS tento bit nastaven při získá ovládací prvek nebo ztratí zaměření pro vstup. `itemState` Člen kontroly k určení, zda má právě fokus, ovládacího prvku.  
   
-- **ODA_SELECT** tento bit nastaven při pouze stav výběru se změnil. **ItemState** člen zkontrolovat určit nový stav výběru.  
+- ODA_SELECT tato verze se nastaví, pokud došlo ke změně pouze stav výběru. `itemState` Člen zkontrolovat určit nový stav výběru.  
   
  *itemState*  
- Určuje visual stav položky po aktuální kreslení akce se provede. To znamená, pokud položku nabídky je jako neaktivní, stav příznak **ODS_GRAYED** bude nastavena. Příznaky stavu jsou následující:  
+ Určuje visual stav položky po aktuální kreslení akce se provede. To znamená pokud položku nabídky má být neaktivní, stav příznak ODS_GRAYED se nastaví. Příznaky stavu jsou následující:  
   
-- **ODS_CHECKED** tento bit nastaven, pokud má být zkontrolován položku nabídky. Tato verze se používá pouze v nabídce.  
+- ODS_CHECKED tento bit nastaven, pokud má být zkontrolován položku nabídky. Tato verze se používá pouze v nabídce.  
   
-- **ODS_DISABLED** tento bit nastaven, pokud je položka, které se mají vykreslovat jako zakázané.  
+- ODS_DISABLED tento bit nastaven, pokud je položka, které se mají vykreslovat jako zakázané.  
   
-- **ODS_FOCUS** tento bit nastaven, pokud má položka vstupních fokus.  
+- ODS_FOCUS tento bit bude nastavena, pokud má položka vstupních fokus.  
   
-- **ODS_GRAYED** tento bit nastaven, pokud položka má být neaktivní. Tato verze se používá pouze v nabídce.  
+- ODS_GRAYED tento bit nastaven, pokud položka má být neaktivní. Tato verze se používá pouze v nabídce.  
   
-- **ODS_SELECTED** tento bit nastaven, pokud je vybraný stav položky.  
+- ODS_SELECTED tento bit nastaven, pokud je vybraný stav položky.  
   
-- **ODS_COMBOBOXEDIT** kreslení probíhá v poli Výběr (ovládací prvek pro úpravy) – pole se seznamem ownerdrawn.  
+- ODS_COMBOBOXEDIT kreslení probíhá v poli Výběr (ovládací prvek pro úpravy) – pole se seznamem ownerdrawn.  
   
-- **ODS_DEFAULT** položka je výchozí položku.  
+- ODS_DEFAULT položka je výchozí položku.  
   
- `hwndItem`  
- Určuje popisovač okna ovládacího prvku pole se seznamem, seznamy a tlačítka. Určuje popisovač v nabídce (`HMENU`) obsahující položku pro nabídky.  
+ *hwndItem*  
+ Určuje popisovač okna ovládacího prvku pole se seznamem, seznamy a tlačítka. Určuje popisovač v nabídce (HMENU), který obsahuje položky pro nabídky.  
   
- `hDC`  
+ *hDC*  
  Identifikuje kontextu zařízení. Tento kontext zařízení musí být použita při provádění operací kreslení na ovládací prvek.  
   
  *rcItem*  
- Obdélníku v kontextu zařízení určeného `hDC` člena, který definuje hranice řízení, které se mají vykreslovat. Windows automaticky klipy nic, co vlastník nevykresluje v kontextu zařízení pro pole se seznamem, seznamy a tlačítka, ale jeho není oříznutí položky nabídky. Při kreslení položky nabídky, vlastník nesmí kreslení mimo hranice rámeček definované **rcItem** člen.  
+ Obdélníku v kontextu zařízení určeného *hDC* člena, který definuje hranice řízení, které se mají vykreslovat. Windows automaticky klipy nic, co vlastník nevykresluje v kontextu zařízení pro pole se seznamem, seznamy a tlačítka, ale jeho není oříznutí položky nabídky. Při kreslení položky nabídky, vlastník nesmí kreslení mimo hranice rámeček definované `rcItem` člen.  
   
- `itemData`  
+ *itemData*  
  Pole se seznamem nebo pole se seznamem tento člen obsahuje hodnotu, která byla předána do pole se seznamem pomocí jedné z následujících akcí:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -121,7 +121,7 @@ typedef struct tagDRAWITEMSTRUCT {
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
 ## <a name="remarks"></a>Poznámky  
- Okno vlastník nabídky nebo ovládací prvek položky vykreslovaných vlastníkem obdrží ukazatel na tato struktura jako `lParam` parametr `WM_DRAWITEM` zprávy.  
+ Okno vlastník nabídky nebo ovládací prvek položky vykreslovaných vlastníkem obdrží ukazatel na tato struktura jako *lParam* parametr WM_DRAWITEM zprávy.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  
