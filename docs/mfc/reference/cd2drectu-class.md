@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DRectU | Microsoft Docs
+title: Cd2drectu – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336466"
 ---
-# <a name="cd2drectu-class"></a>CD2DRectU – třída
+# <a name="cd2drectu-class"></a>Cd2drectu – třída
 Obálka pro `D2D1_RECT_U`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,13 +48,13 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Vrátí **boolean** hodnotu, která určuje, zda výraz neobsahuje žádná platná data ( **null**).|  
+|[CD2DRectU::IsNull](#isnull)|Vrátí **logická** hodnotu, která určuje, zda výraz neobsahuje žádná platná data (NULL).|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CD2DRectU::Operator CRect](#operator_crect)|Převede `CD2DRectU` k `CRect` objektu.|  
+|[Crect – CD2DRectU::Operator](#operator_crect)|Převede `CD2DRectU` k `CRect` objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `D2D1_RECT_U`  
@@ -65,7 +65,7 @@ class CD2DRectU : public D2D1_RECT_U;
  **Záhlaví:** afxrendertarget.h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- Vytvoří objekt CD2DRectU z CRect objektu.  
+ Vytvoří objekt cd2drectu – z crect – objektu.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -81,20 +81,20 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Rect –*  
- Zdroj obdélníku  
+ *Rect*  
+ zdrojového obdélníku  
   
  *uLeft*  
- levou souřadnici zdroje  
+ Levá souřadnice zdroje  
   
  *uTop*  
  horní souřadnici zdroje  
   
  *uRight*  
- Zdroj právo souřadnic  
+ zdroj přímo souřadnice  
   
  *uBottom*  
- souřadnice dolního zdroje  
+ Dolní souřadnice zdroje  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  
  Vrátí logickou hodnotu, která určuje, zda výraz neobsahuje žádná platná data (Null).  
@@ -104,17 +104,17 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud jsou všechny rovna 0; horní obdélníku, vlevo, dolní a pravé hodnoty jinak hodnota FALSE.  
+ Hodnota TRUE, pokud jsou všechny rovnat 0; horní části obdélníku, vlevo, dolní a správné hodnoty v opačném případě FALSE.  
   
-##  <a name="operator_crect"></a>  CD2DRectU::Operator CRect  
- Převede CD2DRectU CRect objektu.  
+##  <a name="operator_crect"></a>  Crect – CD2DRectU::Operator  
+ Převede cd2drectu – crect – objektu.  
   
 ```  
 operator CRect();
 ```   
   
 ### <a name="return-value"></a>Návratová hodnota  
- Aktuální hodnota D2D obdélník.  
+ Aktuální hodnota obdélníku D2D.  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy](../../mfc/reference/mfc-classes.md)

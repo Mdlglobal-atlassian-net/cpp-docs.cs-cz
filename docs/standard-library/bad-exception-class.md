@@ -1,5 +1,5 @@
 ---
-title: Třída bad_exception | Microsoft Docs
+title: bad_exception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b30763f1382b7a12f68cd6a45b87960f623649
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3813fae7a9ae6105d4a3dfe4e72ac1773a10e65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954653"
 ---
 # <a name="badexception-class"></a>Třída bad_exception
 
-Třída popisuje výjimku, která může být vyvolána z neočekávané obslužné rutiny.
+Tato třída popisuje výjimku, která mohou být vyvolány z neočekávané obslužné rutiny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,23 +35,23 @@ class bad_exception    : public exception {};
 
 ## <a name="remarks"></a>Poznámky
 
-[neočekávané](../standard-library/exception-functions.md#unexpected) vyvolá výjimku `bad_exception` místo ukončení nebo namísto volání jinou funkci zadaným [set_unexpected –](../standard-library/exception-functions.md#set_unexpected) Pokud `bad_exception` je uveden v seznamu throw funkce.
+[neočekávané](../standard-library/exception-functions.md#unexpected) vyvolá výjimku `bad_exception` místo ukončení nebo místo volání další funkce zadaným [set_unexpected](../standard-library/exception-functions.md#set_unexpected) Pokud `bad_exception` je součástí seznamu vyvolání výjimky funkce.
 
-Hodnoty vrácené **co** je řetězec definované implementací C. Žádná z členské funkce throw jakékoli výjimky.
+Hodnota vrácená `what` je řetězec C definované implementací. Žádná z členské funkce generovat žádné výjimky.
 
-Pro seznam členů zdědí `bad_exception` třídy najdete v tématu [třída exception](../standard-library/exception-class.md).
+Pro seznam členů děděné `bad_exception` najdete v tématu [tříd výjimek](../standard-library/exception-class.md).
 
 ## <a name="example"></a>Příklad
 
-V tématu [set_unexpected –](../standard-library/exception-functions.md#set_unexpected) příklad použití [neočekávané](../standard-library/exception-functions.md#unexpected) vyvolání `bad_exception`.
+Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití [neočekávané](../standard-library/exception-functions.md#unexpected) vyvolání `bad_exception`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<výjimka >
+**Záhlaví:** \<výjimky >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [exception – třída](../standard-library/exception-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

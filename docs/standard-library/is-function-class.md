@@ -1,5 +1,5 @@
 ---
-title: is_function – třída | Microsoft Docs
+title: is_function – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f470f07c59860118b682784dca6c83587ee87b04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ef542ea54c0fc570443fa07908968ffa3398232
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844104"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953781"
 ---
 # <a name="isfunction-class"></a>is_function – třída
 
-Testy, pokud typ je typ funkce.
+Testuje, zda je typ je typ funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_function;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` – funkce typu, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je to typ funkce, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -85,9 +85,9 @@ is_function<float()> == true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_object – třída](../standard-library/is-object-class.md)<br/>

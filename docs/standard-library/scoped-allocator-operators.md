@@ -1,5 +1,5 @@
 ---
-title: '&lt;scoped_allocator –&gt; operátory | Microsoft Docs'
+title: '&lt;scoped_allocator –&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 66cf60dd3d70719fe42645215b1190c9fb752ff3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2c61e3fce5d1cf58f59bc9dd51920bccc0eb2f3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854675"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966469"
 ---
 # <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator –&gt; operátory
 
@@ -24,7 +24,7 @@ ms.locfileid: "33854675"
 
 ## <a name="op_neq"></a>  Operator! =
 
-Dva testy `scoped_allocator_adaptor` objekty nerovnost.
+Testuje dva `scoped_allocator_adaptor` objekty nerovnost.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -35,9 +35,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Levé straně `scoped_allocator_adaptor` objektu.
+*Vlevo* vlevo `scoped_allocator_adaptor` objektu.
 
-`right` Právo `scoped_allocator_adaptor` objektu.
+*Pravé* vpravo `scoped_allocator_adaptor` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -45,7 +45,7 @@ bool operator!=(
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Dva testy `scoped_allocator_adaptor` objekty rovnosti.
+Testuje dva `scoped_allocator_adaptor` objekty pro rovnost.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -56,14 +56,14 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Levé straně `scoped_allocator_adaptor` objektu.
+*Vlevo* vlevo `scoped_allocator_adaptor` objektu.
 
-`right` Právo `scoped_allocator_adaptor` objektu.
+*Pravé* vpravo `scoped_allocator_adaptor` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `left.outer_allocator() == right.outer_allocator() && left.inner_allocator() == right.inner_allocator()`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<scoped_allocator>](../standard-library/scoped-allocator.md)<br/>

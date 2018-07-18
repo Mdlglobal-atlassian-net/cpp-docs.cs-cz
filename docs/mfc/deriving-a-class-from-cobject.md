@@ -1,5 +1,5 @@
 ---
-title: Odvození třídy z objektu CObject | Microsoft Docs
+title: Odvození třídy z objektu CObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,35 +23,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349354"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026114"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Odvození třídy z objektu CObject
-Tento článek popisuje minimální kroky potřebné k odvození třídy z [CObject](../mfc/reference/cobject-class.md). Další `CObject` třída články popisují kroky potřebné k využít výhod konkrétní `CObject` funkce, jako je serializace a diagnostiky podporu ladění.  
+Tento článek popisuje minimální kroky potřebné k odvození třídy z [CObject](../mfc/reference/cobject-class.md). Další `CObject` třídy články popisují kroky potřebné k využít výhod konkrétní `CObject` funkce, jako je serializaci a diagnostických podporu ladění.  
   
- V otázkách, `CObject`, se často používají podmínky "soubor rozhraní" a "implementace soubor". Soubor rozhraní (často říká soubor hlaviček, nebo. Soubor H) obsahuje deklaraci třídy a všechny ostatní informace, které jsou potřeba k použití třídy. Soubor implementace (nebo. Soubor CPP) obsahuje definice třídy, jakož i kód, který implementuje členské funkce tříd. Například pro třídu s názvem `CPerson`, vytvořili byste obvykle soubor rozhraní s názvem osoby. H a implementace soubor s názvem osoby. CPP. Pro některé malé třídy, které nebude sdílené mezi aplikacemi, je však někdy usnadňují kombinace rozhraní a implementaci do jednoho. Soubor CPP.  
+ V diskuzích o `CObject`, často používají soubor podmínky"rozhraní" a "implementační soubor". Soubor rozhraní (často označované jako soubor hlaviček nebo. Soubor H) obsahuje deklaraci třídy a všechny ostatní informace potřebné k použití třídy. Implementace souboru (nebo). Soubor CPP) obsahuje definice třídy, jakož i kód, který implementuje členské funkce třídy. Například pro třídu s názvem `CPerson`, byste obvykle vytvořili soubor rozhraní s názvem osoby. H a implementační soubor s názvem osoby. CPP. Pro některé malé třídy, které se sdílejí mezi aplikacemi, je však někdy usnadňuje kombinovat rozhraní a implementaci do jednoho. Soubor CPP.  
   
  Můžete zvolit ze čtyř úrovní funkčnosti při odvození třídy z `CObject`:  
   
--   Základní funkce: žádná podpora pro run-time třída informace nebo serializace ale zahrnuje Správa diagnostiky paměti.  
+-   Základní funkce: žádná podpora pro informace o třídě za běhu nebo serializace ale zahrnuje správu diagnostiky paměti.  
   
--   Základní funkce a podporu run-time třída informace.  
+-   Základní funkce plus podporu pro informace o třídě za běhu.  
   
--   Základní funkce a podporu run-time třída informace a dynamického vytváření.  
+-   Základní funkce plus podporu pro informace o třídě za běhu a dynamické vytváření.  
   
--   Základní funkce a podporu pro run-time třída informace, dynamických a serializace.  
+-   Základní funkce plus podporu pro informace o třídě za běhu, dynamické vytváření a serializace.  
   
- Třídy pro opakované použití (ty, které později bude sloužit jako základní třídy) by měla obsahovat alespoň run-time třída podporu a podporu serializace, pokud se očekává nutnosti budoucí serializace.  
+ Třídy pro opakované použití (ty, které bude později sloužit jako základní třídy) by měl obsahovat alespoň run-time třída podporu a podporu serializace, pokud všechny potřeby budoucí serializace je očekávané výsledky.  
   
- Vyberte úroveň funkčnosti pomocí konkrétní deklaraci a implementaci makra v deklaraci a implementaci odvozujete od třídy `CObject`.  
+ Vyberte úroveň funkčnosti pomocí konkrétní deklaraci a implementaci makra v deklaraci a implementaci tříd, které jsou odvozeny z `CObject`.  
   
- Následující tabulka znázorňuje vztah mezi makra použít pro podporu serializace a informace o běhu.  
+ Následující tabulka ukazuje vztah mezi makra použitá pro podporu serializace a informace doby běhu.  
   
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Makra používá k serializaci a informace o běhu  
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Makra použitá k serializaci a informace doby běhu  
   
 |Použít – makro|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|  
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
@@ -60,17 +60,17 @@ Tento článek popisuje minimální kroky potřebné k odvození třídy z [CObj
 |`DECLARE_DYNCREATE`|Ano|Ano|Ne|  
 |`DECLARE_SERIAL`|Ano|Ano|Ano|  
   
-#### <a name="to-use-basic-cobject-functionality"></a>Použití funkce základní třídy CObject  
+#### <a name="to-use-basic-cobject-functionality"></a>Jak používat funkce základní třídy CObject  
   
-1.  Použijte normální syntaxi C++ odvození třídě z `CObject` (nebo z třídy odvozené od `CObject`).  
+1.  Použijte normální syntaxí jazyka C++ se odvodit třídu z `CObject` (nebo z třídy odvozené od `CObject`).  
   
-     Následující příklad ukazuje nejjednodušším případě odvození třídy z `CObject`:  
+     Následující příklad ukazuje nejjednodušší případ odvození třídy z `CObject`:  
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- Za normálních okolností však můžete přepsat některé `CObject`na členské funkce pro zpracování jsou specifikace novou třídu. Například, obvykle můžete přepsat `Dump` funkce `CObject` zajistit výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: vypsání obsah objektu](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence dat členů třídy objektů. Popis toho, jak lze přepsat `AssertValid`, najdete v části [assert_valid – MFC a CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: výpis obsah objektu](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
   
- Článek [určení úrovní funkčnosti](../mfc/specifying-levels-of-functionality.md) popisuje, jak určit jiných úrovních funkčnosti, včetně informací o run-time třída, vytváření dynamických objektů a serializace.  
+ Tento článek [určení úrovní funkčnosti](../mfc/specifying-levels-of-functionality.md) popisuje, jak určit jiných úrovních funkčnosti, včetně informací o třídě za běhu, vytváření dynamických objektů a serializace.  
   
 ## <a name="see-also"></a>Viz také  
  [Použití objektů CObject](../mfc/using-cobject.md)

@@ -1,5 +1,5 @@
 ---
-title: codecvt_utf16 | Microsoft Docs
+title: codecvt_utf16 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93113e64e9b6a72f40557d063f83724c5ff8da62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cdfcf3c6a562f7aab0164e3d63d468ba39ec0023
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841063"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954096"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
-Představuje [národního prostředí](../standard-library/locale-class.md) omezující vlastnosti, který převádí mezi široké znaky kódovaná jako UCS-2 nebo UCS 4 a datového proudu bajtů kódování UTF-16LE nebo UTF-16BE.
+Představuje [národní prostředí](../standard-library/locale-class.md) omezující vlastnost, která převede mezi široké znaky zakódován jako UCS-2 nebo UCS-4 a kódováním UTF-16LE nebo UTF-16BE datový proud bajtů.
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -34,16 +34,16 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametry
 
-`Elem` Typ elementu široká charakterová.
-`Maxcode` Maximální počet znaků pro omezující vlastnost národního prostředí.
-`Mode` Informace o konfiguraci pro omezující vlastnost národního prostředí.
+*Elem* typ elementu širokého znaku.
+*Maxcode* maximální počet znaků pro omezující vlastnost národního prostředí.
+*Režim* informace o konfiguraci pro omezující vlastnost národního prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablony převede mezi široké znaky kódovaná jako UCS-2 nebo UCS 4 a datového proudu bajtů kódovaná jako znakové sady UTF-16LE, pokud režim & little_endian nebo UTF-16BE jinak.
+Této třídy šablony převede mezi široké znaky zakódován jako UCS-2 nebo UCS-4 a datový proud bajtů kódováním UTF-16LE, pokud režim & little_endian nebo UTF-16BE jinak.
 
-Datový proud bajtů by měly být zapsány do binárního souboru; může být poškozená, pokud zapsána do textového souboru.
+Bajtový proud by měly být zapsány do binárního souboru; může být poškozený, pokud zapsána do textového souboru.
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: \<codecvt – > Namespace: – std
+Záhlaví: \<codecvt – > Namespace: std

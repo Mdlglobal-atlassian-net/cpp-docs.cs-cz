@@ -1,5 +1,5 @@
 ---
-title: sync_none – třída | Microsoft Docs
+title: sync_none – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953007"
 ---
 # <a name="syncnone-class"></a>sync_none – třída
 
@@ -51,14 +51,14 @@ class sync_none
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přiděluje blok paměti.|
-|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|
-|[equals](#equals)|Porovná dva mezipamětí rovnosti.|
+|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
+|[equals](#equals)|Porovná rovnost dvou mezipamětí.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  sync_none::allocate
 
@@ -72,15 +72,15 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`count`|Počet prvků v poli, která bude přidělena.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu `cache.allocate(count)`, kde `cache` je objekt mezipaměti.
+Členská funkce vrátí `cache.allocate(count)`, kde `cache` je objekt mezipaměti.
 
 ## <a name="deallocate"></a>  sync_none::deallocate
 
-Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.
+Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -90,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na první objekt, který má být navrácena z úložiště.|
-|`count`|Počet objektů, které chcete být navrácena z úložiště.|
+|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
+|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -99,7 +99,7 @@ Volání členských funkcí `cache.deallocate(ptr, count)`, kde `cache` předst
 
 ## <a name="equals"></a>  sync_none::Equals
 
-Porovná dva mezipamětí rovnosti.
+Porovná rovnost dvou mezipamětí.
 
 ```cpp
 bool equals(const sync<Cache>& Other) const;
@@ -109,15 +109,15 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Cache`|Objekt mezipaměti filtru synchronizace.|
-|`Other`|Objekt mezipaměti pro porovnání rovnosti.|
+|*mezipaměť*|Objekt mezipaměti filtr synchronizace.|
+|*Jiné*|Mezipaměť objekt k porovnání rovnosti.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vždy vrátí hodnotu `true`.
+Členská funkce vždy vrátí **true**.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

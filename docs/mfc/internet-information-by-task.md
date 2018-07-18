@@ -1,5 +1,5 @@
 ---
-title: Internetové informace podle úloh | Microsoft Docs
+title: Internetové informace podle úloh | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086955d2d5668b447163e7b14677c265d4823190
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22f0ab233f50a356c3a59eaf62ef8c25572233
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345499"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026848"
 ---
 # <a name="internet-information-by-task"></a>Internetové informace podle úloh
-Úkoly vypsané v tomto tématu jsou seřazené podle úlohy, kterou chcete provést.  
+Úkoly vypsané v tomto tématu jsou seřazeny podle úloh, které chcete provést.  
   
  V tomto tématu jsou uvedeny následující kategorie úloh:  
   
--   [Ovládací prvky ActiveX, dokumenty a Přezdívka asynchronní úlohy](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)  
+-   [Ovládací prvky ActiveX, dokumenty a asynchronní zástupný název úlohy](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)  
   
--   [WinInet úlohy](#_core_wininet_tasks)  
+-   [Wininet – úlohy](#_core_wininet_tasks)  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat  
   
-###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Ovládací prvky ActiveX, dokumenty a Přezdívka asynchronní úlohy  
+###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Ovládací prvky ActiveX, dokumenty a asynchronní zástupný název úlohy  
   
 -   [Další informace o aktivní dokumenty](../mfc/active-documents-on-the-internet.md)  
   
@@ -44,13 +44,13 @@ ms.locfileid: "33345499"
   
 -   [Optimalizace ovládacího prvku ActiveX](../mfc/mfc-activex-controls-optimization.md)  
   
--   [Vytvoření souborů podepsaný soubor CAB pro ovládací prvky knihovny ATL a MFC](http://msdn.microsoft.com/en-us/14e50724-2505-4258-ae6b-326b706de409)  
+-   [Vytvoření souborů podepsaný soubor CAB pro knihovny MFC a ovládacích prvků knihovny ATL.](http://msdn.microsoft.com/14e50724-2505-4258-ae6b-326b706de409)  
   
-###  <a name="_core_wininet_tasks"></a> WinInet úlohy  
+###  <a name="_core_wininet_tasks"></a> Wininet – úlohy  
   
--   [Další informace o WinInet funkcí rozhraní Win32 API pro přístup k Internetu](../mfc/wininet-basics.md)  
+-   [Další informace o rozhraní WinInet, funkce rozhraní Win32 API pro přístup k Internetu](../mfc/wininet-basics.md)  
   
--   [Zkontrolujte, co se týká WinInet programování](../mfc/win32-internet-extensions-wininet.md)  
+-   [Přečtěte si, co souvisí s Wininet – programování](../mfc/win32-internet-extensions-wininet.md)  
   
 -   [Zápis internetových klientských aplikací, pomocí tříd WinInet knihovny MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33345499"
   
 -   [Napsat aplikaci klienta HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
   
--   [Zápis aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Napíšeme aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)

@@ -1,5 +1,5 @@
 ---
-title: _HAS_ITERATOR_DEBUGGING | Microsoft Docs
+title: _HAS_ITERATOR_DEBUGGING | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab2de61df8c4e22b1955e9fd4798b5128a3e12be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81f0509c6230020b586c0341e1de608981c05476
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845892"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965975"
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING
 
-Nahrazeno [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), tento makro definuje, zda je povoleno iterator ladění funkce v sestavení ladicí verze. Ve výchozím nastavení ladění iterátorů povoleno v sestavení pro ladění a zakázáno v prodejní sestavení. Další informace najdete v tématu [podpora ladění iterátorů](../standard-library/debug-iterator-support.md).
+Nahrazeno [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), toto makro definuje, zda je povoleno ladění funkce iterátoru v sestavení pro ladění. Ve výchozím nastavení je pro iterační ladění povoleno v sestaveních ladění a v prodejní buildy zakázáno. Další informace najdete v tématu [Debug Iterator Support](../standard-library/debug-iterator-support.md).
 
 > [!IMPORTANT]
-> Přímé použití `_HAS_ITERATOR_DEBUGGING` makro je zastaralý. Místo toho použijte `_ITERATOR_DEBUG_LEVEL` k řízení iterator nastavení ladění. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Přímé použití makra _HAS_ITERATOR_DEBUGGING je zastaralé. Místo toho použijte _ITERATOR_DEBUG_LEVEL nastavení ladění ovládacích prvků iterátoru. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li povolit iterator ladění v sestavení pro ladění, nastavte `_ITERATOR_DEBUG_LEVEL` 2. Jde o ekvivalent `_HAS_ITERATOR_DEBUGGING` nastavení 1 nebo povoleno:
+Pokud chcete povolit pro iterační ladění v sestaveních ladění, nastavte _ITERATOR_DEBUG_LEVEL na 2. To je ekvivalentní nastavení _HAS_ITERATOR_DEBUGGING 1 nebo povoleno:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 2
 ```
 
-`_ITERATOR_DEBUG_LEVEL` Nelze nastavit na hodnotu 2 (a `_HAS_ITERATOR_DEBUGGING` nelze nastavit na hodnotu 1) v prodejní sestavení.
+_ITERATOR_DEBUG_LEVEL nelze nastavit na 2 (a _HAS_ITERATOR_DEBUGGING nelze nastavit na hodnotu 1) v maloobchodním prodeji sestavení.
 
-Chcete-li zakázat ladění iterátory v sestavení pro ladění, nastavte `_ITERATOR_DEBUG_LEVEL` na 0 nebo 1. Jde o ekvivalent `_HAS_ITERATOR_DEBUGGING` nastavení 0 nebo vypne:
+Pokud chcete zakázat ladění iterátorů v sestavení ladění, nastavte _ITERATOR_DEBUG_LEVEL na hodnotu 0 nebo 1. To je ekvivalentní nastavení _HAS_ITERATOR_DEBUGGING 0 nebo zakázané:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
 [Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)<br/>

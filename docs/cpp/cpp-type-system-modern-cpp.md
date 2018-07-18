@@ -1,5 +1,5 @@
 ---
-title: C++ – systém typů (moderní verze jazyka C++) | Microsoft Docs
+title: C++ – systém typů (moderní verze jazyka C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,29 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c017b7048c8b62f58068d22b8efefd72f31d4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418507"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027271"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
-Koncept *typu* je velmi důležité v jazyce C++. Všechny proměnné, argumenty funkcí a návratové hodnoty funkcí musí mít typ, aby bylo možné je zkompilovat. Každému výrazu (včetně hodnot literálů) navíc kompilátor před vyhodnocením implicitně přidělí typ. Některé příklady typů `int` k uložení celočíselné hodnoty, `double` pro uložení hodnot s plovoucí desetinnou čárkou (také označované jako *skalární* datových typů), nebo třída standardní knihovna [std::basic_string](../standard-library/basic-string-class.md) k ukládání textu. Můžete vytvořit vlastní typ definováním `class` nebo `struct`. Typ určuje velikost paměti, kterou chcete přidělit proměnné (nebo výsledku výrazu), druhy hodnot, které mohou být v dané proměnné uloženy, způsob interpretace těchto hodnot (jako vzorců bitů) a operace, které lze s proměnnou provést. Tento článek obsahuje přehled hlavních funkcí systému typů v jazyce C++.  
+Koncept *typ* je v jazyce C++ velmi důležitý. Všechny proměnné, argumenty funkcí a návratové hodnoty funkcí musí mít typ, aby bylo možné je zkompilovat. Každému výrazu (včetně hodnot literálů) navíc kompilátor před vyhodnocením implicitně přidělí typ. Mezi typy patří **int** pro ukládání integrálních hodnot, **double** k ukládání hodnot s plovoucí desetinnou čárkou (označované také jako *skalární* datové typy), nebo standardní knihovna tříd [std::basic_string](../standard-library/basic-string-class.md) pro ukládání textu. Můžete vytvořit vlastní typ definováním **třídy** nebo **struktura**. Typ určuje velikost paměti, kterou chcete přidělit proměnné (nebo výsledku výrazu), druhy hodnot, které mohou být v dané proměnné uloženy, způsob interpretace těchto hodnot (jako vzorců bitů) a operace, které lze s proměnnou provést. Tento článek obsahuje přehled hlavních funkcí systému typů v jazyce C++.  
   
 ## <a name="terminology"></a>Terminologie  
- **Proměnné**: symbolický odkaz název množství dat, aby název můžete použít pro přístup k datům odkazuje v rámci rozsahu kódu, kde je definován. V jazyce C++ *proměnná* obecně slouží k odkazování na instancí skalární datových typů, zatímco se obvykle označují jako instancí jiné typy *objekty*.  
+ **Proměnné**: symbolický název množství dat tak, aby název lze použít pro přístup k datům, na který odkazuje v rámci rozsahu kódu, kde je definován. V jazyce C++ *proměnnou* se obecně používá k označování instancí skalárních datových typů, že instance ostatních typů se obvykle nazývají *objekty*.  
   
- **Objekt**: kvůli jednoduchosti a přehlednosti, tento článek používá termín *objekt* odkazovat na jakoukoli instanci třídu nebo strukturu, a pokud se používá v tom smyslu, Obecné obsahuje všechny typy, dokonce i skalární proměnné.  
+ **Objekt**: kvůli jednoduchosti a přehlednosti, tento článek používá termín *objekt* k odkazování na jakoukoli instanci třídy nebo struktury a používá se v obecném smyslu tento pojem zahrnuje všechny typy, včetně skalárních proměnných.  
   
- **Typ POD** (prostý stará data): tuto kategorii neformální datových typů v jazyce C++ odkazuje na typy, které jsou skalární (naleznete v části základní typy) nebo *POD třídy*. Třída POD nemá žádné statické datové členy, které nejsou rovněž POD, a nemá žádné uživatelem definované konstruktory, destruktory ani operátory přiřazení. Třída POD navíc nemá žádné virtuální funkce, žádnou základní třídu a žádné soukromé ani chráněné nestatické datové členy. Typy POD se často používají pro výměnu externích dat, například s modulem napsaným v jazyce C (který má pouze typy POD).  
+ **Typ POD** (obyčejná stará data): Tato neformální kategorie datových typů jazyka C++ odkazuje na Skalární typy (viz oddíl základní typy) nebo jsou *třídy POD*. Třída POD nemá žádné statické datové členy, které nejsou rovněž POD, a nemá žádné uživatelem definované konstruktory, destruktory ani operátory přiřazení. Třída POD navíc nemá žádné virtuální funkce, žádnou základní třídu a žádné soukromé ani chráněné nestatické datové členy. Typy POD se často používají pro výměnu externích dat, například s modulem napsaným v jazyce C (který má pouze typy POD).  
   
 ## <a name="specifying-variable-and-function-types"></a>Určení typů proměnných a funkcí  
- Je C++ *silného typu* jazyk a je také *staticky typované*; každý objekt má typ a který typ nikdy změny (není Nezaměňovat s objekty statických dat).   
-**Když je deklarovat proměnnou** ve vašem kódu, musíte buď explicitně zadat typ nebo použijte `auto` – klíčové slovo kompilátoru odvodit typ z inicializátoru.   
-**Když je funkce deklarovat** v kódu, je nutné zadat typ každý argument a hodnoty, nebo `void` Pokud žádná hodnota je vráceným funkcí. Výjimkou je použití šablon funkce, které umožňují použití argumentů libovolných typů.  
+ C++ je *silného typu* jazyk a je také *staticky typovaný*; každý objekt má typ, který se nikdy nemění (Nepleťte si se statickými datovými objekty).   
+**Pokud deklarujete proměnnou** ve vašem kódu, musíte buď explicitně zadat její typ nebo použít **automaticky** – klíčové slovo, abyste instruovali kompilátor k odvození typu z inicializátoru.   
+**Pokud deklarujete funkci** ve vašem kódu, je třeba zadat typ každého argumentu a vrácenou hodnota, nebo **void** Pokud funkcí není vrácena žádná hodnota. Výjimkou je použití šablon funkce, které umožňují použití argumentů libovolných typů.  
   
- Po prvotním deklarování proměnné nelze její typ později změnit. Můžete však zkopírovat hodnotu proměnné nebo návratové hodnoty funkce do jiné proměnné jiného typu. Tyto operace se nazývají *převody typu*, které jsou někdy nezbytné, ale jsou také zdroje potenciální ztrátě dat nebo nesprávnosti.  
+ Po prvotním deklarování proměnné nelze její typ později změnit. Můžete však zkopírovat hodnotu proměnné nebo návratové hodnoty funkce do jiné proměnné jiného typu. Tyto operace jsou označovány jako *převody typů*, které jsou někdy nezbytné, ale představují potenciální riziko ztráty dat nebo nepřesnosti.  
   
  Po deklarování proměnné typu POD důrazně doporučujeme ji inicializovat, což znamená, že jí přiřadíte počáteční hodnotu. Dokud proměnnou neinicializujete, má hodnotu „garbage“, která se skládá z jakýchkoli bitů, které se původně nacházely v daném umístění v paměti. To je důležitý aspekt jazyka C++. Nezapomeňte na něj zejména v případě, že přecházíte z jiného jazyka, který zpracovává inicializaci za vás. Při deklarování proměnné jiného typu třídy než POD zpracovává inicializaci konstruktor.  
   
@@ -60,9 +60,9 @@ int maxValue;                // Not recommended! maxValue contains
 ```  
   
 ## <a name="fundamental-built-in-types"></a>Základní (vestavěné) typy  
- Na rozdíl od některých jazyků nemá C++ žádný univerzální základní typ, z něhož by byly odvozeny všechny ostatní typy. Provádění jazyka Visual C++ zahrnuje mnoho *základní typy*, také známé jako *vestavěné typy*. To zahrnuje číselnými typy, jako `int`, `double`, `long`, `bool`, a `char` a `wchar_t` typy pro znaky ASCII a UNICODE, v uvedeném pořadí. Většina základních typů (s výjimkou `bool`, `double`, `wchar_t` a související typy) všechny mít nepodepsané verze, které upravit rozsah hodnot, které můžou ukládat proměnnou. Například `int`, která ukládá 32-bit znaménkem, může představovat hodnotu z-2,147,483,648 na 2 147 483 647. `unsigned int`, Což je také uloženo jako 32 bity můžete ukládat hodnotu od 0 do 4 294 967 295. Celkový počet možných hodnot je ve všech případech stejný, liší se pouze rozsah.  
+ Na rozdíl od některých jazyků nemá C++ žádný univerzální základní typ, z něhož by byly odvozeny všechny ostatní typy. Implementace jazyka Visual C++ obsahuje mnoho *základní typy*, označované také jako *předdefinovaných typů*. To zahrnuje číselné typy jako **int**, **double**, **dlouhé**, **bool**, plus **char** a **wchar_t** typy pro znaky ASCII a UNICODE v uvedeném pořadí. Většina základních typů (s výjimkou **bool**, **double**, **wchar_t** a souvisejících typů) mají všechny nepodepsané verze, které upravují rozsah hodnot, které může proměnná ukládat. Například **int**, který ukládá 32bitové celé číslo se znaménkem, může představovat hodnotu od-2,147,483,648 do 2 147 483 647. **Unsigned int**, která je také uložena jako 32bitová, může ukládat hodnotu od 0 do 4 294 967 295. Celkový počet možných hodnot je ve všech případech stejný, liší se pouze rozsah.  
   
- Základní typy jsou rozpoznávány kompilátorem, který má vestavěná pravidla určující, jaké operace lze s jednotlivými typy provádět a jak je lze převést na jiné základní typy. Úplný seznam předdefinovaných typů a jejich velikost a číselné omezení, najdete v části [základní typy](../cpp/fundamental-types-cpp.md).  
+ Základní typy jsou rozpoznávány kompilátorem, který má vestavěná pravidla určující, jaké operace lze s jednotlivými typy provádět a jak je lze převést na jiné základní typy. Úplný seznam předdefinovaných typů a jejich velikosti a číselné limitů naleznete v tématu [základní typy](../cpp/fundamental-types-cpp.md).  
   
  Následující ilustrace znázorňuje relativní velikosti předdefinovaných typů:  
   
@@ -76,16 +76,16 @@ int maxValue;                // Not recommended! maxValue contains
 |double|8 bajtů|Výchozí volba pro hodnoty s plovoucí desetinnou čárkou.|  
 |bool|1 bajt|Představuje hodnoty, které mohou být „true“ nebo „false“.|  
 |char|1 bajt|Používá se pro znaky standardu ASCII ve starších řetězcích stylu C nebo objektů std::string, které nikdy nebude nutné převést do kódování UNICODE.|  
-|wchar_t|2 bajtů|Představuje hodnoty „širokých“ znaků, které mohou být kódovány ve formátu UNICODE (UTF-16 v systému Windows, v jiných operačních systémech se může lišit). Jedná se o typ znak, který se používá v řetězcích typu `std::wstring`.|  
-|unsigned char|1 bajt|C++ nemá žádnou integrovanou `byte` typu.  Umožňuje znázornit hodnotu bajtu pomocí unsigned char.|  
+|wchar_t|2 bajty|Představuje hodnoty „širokých“ znaků, které mohou být kódovány ve formátu UNICODE (UTF-16 v systému Windows, v jiných operačních systémech se může lišit). Toto je typ znaku, který se používá v řetězcích typu `std::wstring`.|  
+|unsigned char|1 bajt|Jazyk C++ nemá žádný předdefinovaný `byte` typu.  Umožňuje znázornit hodnotu bajtu pomocí unsigned char.|  
 |unsigned int|4 bajty|Výchozí volba pro bitové příznaky.|  
 |long long|8 bajtů|Představuje hodnoty tvořené vysokým celým číslem.|  
   
 ## <a name="the-void-type"></a>Typ void  
- `void` Typu, je zvláštním typem; nelze deklarovat proměnnou typu `void`, ale můžou deklarovat proměnnou typu `void *` (ukazatel na `void`), který je někdy nezbytné při přidělování paměti nezpracovaná (beztypové). Ale ukazatele na `void` jsou není bezpečný a obecně pro jejich používání není doporučeno v moderní verze jazyka C++. V deklaraci funkce `void` návratová hodnota znamená, že funkce nevrátí hodnotu; to je běžné a přijatelné používání z `void`. Při jazyk požadované funkce C, které mají žádné parametry deklarovat `void` v seznamu parametrů, například `fou(void)`, tento postup se nedoporučuje v moderní verze jazyka C++ a musí být deklarován `fou()`. Další informace najdete v tématu [typ převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ **Void** typ je speciální typ; nemůžete deklarovat proměnnou typu **void**, ale můžete deklarovat proměnnou typu `void *` (ukazatel na **void**), což je někdy nezbytné při přidělování nezpracované (netypové) paměti. Nicméně ukazatele na **void** nejsou typově bezpečné a obecně jejich použití je silně nedoporučeno v moderním jazyce C++. V deklaraci funkce **void** návratová hodnota znamená, že funkce nevrátí hodnotu; to je běžné a přijatelné použití typu **void**. Přestože jazyk C vyžaduje funkce, které mají nulové parametry pro deklaraci **void** v seznamu parametrů, třeba `fou(void)`, tato praxe se nedoporučuje v moderním jazyce C++ a by měly být deklarovány `fou()`. Další informace najdete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="const-type-qualifier"></a>Kvalifikátor typu const  
- Jakýkoli vestavěný nebo uživatelem definovaný typ může být kvalifikován pomocí klíčového slova const. Kromě toho může být členské funkce `const`-kvalifikovaný a to i v `const`-přetížený. Hodnota `const` typ nelze změnit, jakmile je inicializován.  
+ Jakýkoli vestavěný nebo uživatelem definovaný typ může být kvalifikován pomocí klíčového slova const. Členské funkce mohou navíc mít **const**-kvalifikovaný a dokonce i **const**-přetížené. Hodnota **const** nelze změnit po inicializaci.  
   
 ```cpp  
   
@@ -94,26 +94,26 @@ PI = .75 //Error. Cannot modify const variable.
   
 ```  
   
- `const` Kvalifikátor je často používány v deklaracích funkce a proměnné a "const správnost" Důležitou koncepcí v jazyce C++, v podstatě znamená používání `const` zaručit při kompilaci, že nejsou neúmyslně měnit hodnoty . Další informace najdete v tématu [const](../cpp/const-cpp.md).  
+ **Const** kvalifikátor je často používána v deklaracích funkcí a proměnných a "správnost const" je důležitý koncept v jazyce C++; v podstatě znamená použití **const** k zajištění v době kompilace úpravě hodnot. Další informace najdete v tématu [const](../cpp/const-cpp.md).  
   
- A `const` typu se liší od jeho verze není const; například `const int` je typu distinct z `int`. Můžete použít C++ `const_cast` operátor na těchto výjimečných případech, kdy je nutné odebrat *const obchodní* z proměnné. Další informace najdete v tématu [typ převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ A **const** se liší od své nekonstantní verze; například `const int` je odlišný od typu **int**. Můžete použít C++ **const_cast** operátor v těch výjimečných případech, kdy je třeba odebrat *const-ness* z proměnné. Další informace najdete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="string-types"></a>Typy řetězců  
- Přesněji řečeno jazyk C++ nemá žádný typ předdefinované řetězec; `char` a `wchar_t` ukládání jedné znaků – je potřeba deklarovat pole z těchto typů sblížit řetězec, přidání ukončující hodnotu null (například ASCII `'\0'`) na jeden element pole za poslední neplatný znak (také nazývané *C-style řetězec*). Psaní řetězců ve stylu C vyžadovalo zapsat mnohem více kódu nebo využít funkce externí knihovny pro tvorbu řetězců. Ale v moderní verze jazyka C++, typy standardní knihovny `std::string` (pro 8bitové `char`– typ řetězce znaků) nebo `std::wstring` (pro 16bitové `wchar_t`– typ řetězce znaků). Tyto kontejnery standardní knihovna C++ můžete představit jako typy nativní řetězce vzhledem k tomu, že jsou součástí standardní knihovny, které jsou součástí žádné kompatibilní sestavení prostředí C++. Jednoduše použijte `#include <string>` – direktiva, aby se tyto typy k dispozici v programu. (Pokud používáte knihovnu MFC nebo ATL, je k dispozici také třída CString, ta ale není součástí standardu C++.) Použití polí znaků zakončených hodnotou null (výše zmíněné řetězce ve stylu C) se v moderním jazyce C++ důrazně nedoporučuje.  
+ Přesněji řečeno jazyk C++ nemá žádný typ integrované řetězec; **char** a `wchar_t` ukládají jednotlivé znaky – třeba deklarovat více těchto typů aproximace řetězce, přidávání ukončující hodnotu null (například ASCII `'\0'`) jeden prvek pole za posledním platným znak (také nazývané *řetězce ve stylu C*). Psaní řetězců ve stylu C vyžadovalo zapsat mnohem více kódu nebo využít funkce externí knihovny pro tvorbu řetězců. Ale v moderní C++ máme typy standardní knihovny `std::string` (pro 8bitové **char**-řetězce znaků typu) nebo `std::wstring` (pro 16bitové `wchar_t`-řetězce znaků typu). Tyto kontejnery standardní knihovny C++ lze považovat za nativní typy řetězce vzhledem k tomu, že jsou součástí standardní knihovny, které jsou součástí žádné kompatibilní prostředí pro sestavení C++. Jednoduše použít `#include <string>` – direktiva tyto typy dostupné v programu. (Pokud používáte knihovnu MFC nebo ATL, je k dispozici také třída CString, ta ale není součástí standardu C++.) Použití polí znaků zakončených hodnotou null (výše zmíněné řetězce ve stylu C) se v moderním jazyce C++ důrazně nedoporučuje.  
   
 ## <a name="user-defined-types"></a>Uživateli definované typy  
- Když definujete `class`, `struct`, `union`, nebo `enum`, že konstrukce se používá ve zbývající části kódu, jako by šlo základní typ. Má známou velikost v paměti a na kontrolu doby kompilace a doby trvání programu při běhu se vztahují některá pravidla týkající se způsobu jeho použití. Nejdůležitější rozdíly mezi základními typy a typy definovanými uživateli jsou následující:  
+ Při definování **třídy**, **struktura**, **sjednocení**, nebo **výčtu**, tato konstrukce použita ve zbytku kódu jako by šlo o základní typ. . Má známou velikost v paměti a na kontrolu doby kompilace a doby trvání programu při běhu se vztahují některá pravidla týkající se způsobu jeho použití. Nejdůležitější rozdíly mezi základními typy a typy definovanými uživateli jsou následující:  
   
--   Kompilátor neobsahuje žádné předdefinované informace o uživatelském typu. Ho zjišťuje typu, když narazí definici během kompilace.  
+-   Kompilátor neobsahuje žádné předdefinované informace o uživatelském typu. Pokud se setká poprvé definici během kompilace, učí se typu.  
   
--   Jako uživatel určujete, jaké operace lze s vaším typem provádět a jak ho lze převést na další typy. K tomu definujete (pomocí přetížení) příslušné operátory, buď jako členy třídy nebo jako nečlenské funkce. Další informace najdete v tématu [přetížení funkcí](function-overloading.md).  
+-   Jako uživatel určujete, jaké operace lze s vaším typem provádět a jak ho lze převést na další typy. K tomu definujete (pomocí přetížení) příslušné operátory, buď jako členy třídy nebo jako nečlenské funkce. Další informace najdete v tématu [přetížení funkce](function-overloading.md).  
   
--   Není nutné zadávat typy staticky (pravidlo, že typ objektu se nikdy nemění). Prostřednictvím mechanismy na *dědičnosti* a *polymorfismus*, proměnná deklarován jako typ uživatelem definované třídy (označované jako instanci objektu třídy) může mít jiný typ při spuštění než v Doba kompilace. Další informace najdete v tématu [dědičnosti](../cpp/inheritance-cpp.md).  
+-   Není nutné zadávat typy staticky (pravidlo, že typ objektu se nikdy nemění). Prostřednictvím mechanismů *dědičnosti* a *polymorfismus*, proměnná definovaná jako uživatelem definovaný typ třídy (dále jako instance objektu třídy) může mít jiný typ v době běhu, než na Doba kompilace. Další informace najdete v tématu [dědičnosti](../cpp/inheritance-cpp.md).  
   
 ## <a name="pointer-types"></a>Typy ukazatelů  
- Z roku nejstarší verze jazyka C, C++ nadále umožňují deklarace proměnné typu ukazatele pomocí speciální deklarátor `*` (hvězdičky *). Typ ukazatele ukládá adresu umístění v paměti, kde je uložena skutečná hodnota dat. V moderní verze jazyka C++, to se označuje jako *nezpracovaná ukazatele*a ke kterým se přistupuje ve vašem kódu prostřednictvím speciální operátory `*` (hvězdičky *) nebo `->` (čárka s větší – než). To se označuje jako *vyhodnocení*, a které ten, který použijete, závisí na tom, jestli jsou vyhodnocení ukazatel na skalární hodnota nebo ukazatel na člena v objektu. Práce s typy ukazatelů byla dlouhou dobu jedním z nejsložitějších a nejvíce matoucích aspektů vývoje programů v jazycích C a C++. Tato část popisuje některé faktů a postupy pro zlepšení použijte nezpracovaná ukazatele, pokud chcete, ale v moderní verze jazyka C++ už obsahuje požadované (nebo doporučené) používat nezpracovaná ukazatele pro přenos vlastnictví objektu vůbec, z důvodu vývoj [chytré ukazatele](../cpp/smart-pointers-modern-cpp.md) () uvedeny další na konci této části). Nezpracované ukazatele lze stále s výhodou a bezpečně používat ke sledování objektů, pokud je však potřebujete použít pro vlastnictví objektu, měli byste tak činit s rozvahou a velmi pečlivě promyslet, jak se budou objekty vlastněné těmito ukazateli vytvářet a odstraňovat.  
+ Už od nejstarší verze jazyka C, C++ i nadále umožňuje deklarovat proměnnou typu ukazatel pomocí speciálního deklarátoru `*` (hvězdička). Typ ukazatele ukládá adresu umístění v paměti, kde je uložena skutečná hodnota dat. V moderním jazyce C++, tyto jsou označovány jako *nezpracované ukazatele*a jsou přístupné z kódu pomocí speciálních operátorů `*` (hvězdička) nebo `->` (pomlčka s větší-než). Tento postup se nazývá *přesměrování*, a který z nich použijete, závisí na tom, zda dereferencujete ukazatel na skalár nebo ukazatel na člen v objektu. Práce s typy ukazatelů byla dlouhou dobu jedním z nejsložitějších a nejvíce matoucích aspektů vývoje programů v jazycích C a C++. Tato část popisuje některé skutečnosti a postupy umožňující použití nezpracovaných ukazatele, pokud chcete, ale v moderní C++ již má požadované (nebo doporučené) používat nezpracované ukazatele pro vlastnictví objektu, vzhledem k vývoji [inteligentního ukazatele](../cpp/smart-pointers-modern-cpp.md) () podrobněji na konci této části). Nezpracované ukazatele lze stále s výhodou a bezpečně používat ke sledování objektů, pokud je však potřebujete použít pro vlastnictví objektu, měli byste tak činit s rozvahou a velmi pečlivě promyslet, jak se budou objekty vlastněné těmito ukazateli vytvářet a odstraňovat.  
   
- Základní princip, který byste měli znát, je, že deklarací proměnné nezpracovaného ukazatele se přidělí pouze paměť potřebná k uložení adresy umístění v paměti, na které bude ukazatel odkazovat při zrušení reference. Přidělení paměti pro vlastní hodnota dat (také nazývané *záložnímu úložišti*) ještě není přidělena. Jinými slovy, deklarováním proměnné nezpracovaného ukazatele vytváříte proměnnou adresy v paměti, nikoli skutečnou datovou proměnnou. Zrušení reference na proměnnou ukazatele, aniž byste se ujistili, že proměnná obsahuje platnou adresu záložního úložiště, způsobí v programu nedefinované chování (obvykle závažnou chybu). Následující příklad ukazuje tento druh chyby:  
+ Základní princip, který byste měli znát, je, že deklarací proměnné nezpracovaného ukazatele se přidělí pouze paměť potřebná k uložení adresy umístění v paměti, na které bude ukazatel odkazovat při zrušení reference. Přidělení paměti pro samotnou hodnotu dat (také nazývané *záložní úložiště*) není v tomto okamžiku nepřidělí. Jinými slovy, deklarováním proměnné nezpracovaného ukazatele vytváříte proměnnou adresy v paměti, nikoli skutečnou datovou proměnnou. Zrušení reference na proměnnou ukazatele, aniž byste se ujistili, že proměnná obsahuje platnou adresu záložního úložiště, způsobí v programu nedefinované chování (obvykle závažnou chybu). Následující příklad ukazuje tento druh chyby:  
   
 ```cpp  
   
@@ -143,9 +143,9 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
 ```  
   
- Opravené kód příklad používá místní zásobníku paměti k vytvoření základní úložiště, který `pNumber` odkazuje na. Pro jednoduchost používáme základní typ. V praxi, úložiště zálohování pro ukazatele se většina často uživatelem definované typy, které jsou dynamicky přidělené v oblast paměti volat *haldy* (nebo *volné úložiště*) pomocí `new` – klíčové slovo výraz (ve stylu jazyka C programování starší `malloc()` použila funkce knihoven C runtime). Jakmile přiděleno, tyto proměnné se obvykle označují jako objekty, zejména v případě, že jsou založené na definici třídy. Paměť, která je přidělena s `new` musí být odstraněn odpovídající `delete` – příkaz (nebo, pokud jste použili `malloc()` funkce přidělit ji funkci C runtime `free()`).  
+ Příklad opraveného kódu používá místní zásobník paměti k vytvoření základní úložiště `pNumber` odkazuje na. Pro jednoduchost používáme základní typ. V praxi záložním úložištěm pro ukazatele jsou většinu uživatelem definované typy, které jsou dynamicky přiřazovány do oblasti paměti pojmenované *haldy* (nebo *volné úložiště*) pomocí **nové** výrazu klíčového slova (v programování ve stylu C, starší `malloc()` byla použita funkce knihovny C runtime). Po přidělení, tyto proměnné jsou obvykle označovány jako objekty, zejména v případě, že jsou založeny na definici třídy. Paměť přidělená k **nové** musí být odstraněna odpovídajícím **odstranit** – příkaz (nebo pokud jste použili `malloc()` funkce k přidělení funkce modulu runtime jazyka C `free()`).  
   
- Je však snadno zapomněli odstranit dynamicky přidělené objekt-zejména v složitý kód, což způsobí, že chyby prostředků názvem *nevrácená paměť systému*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Je téměř vždy lepší zabalit nezpracovaná ukazatel v [chytré ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky vydá paměť při vyvolání jeho – destruktor (Pokud je kód ocitne mimo rozsah pro inteligentní ukazatele); pomocí chytré ukazatele je prakticky Odstraňte celou třídu chyby v C++ programy. V následujícím příkladu se předpokládá `MyClass` je uživatelem definovaný typ, který má veřejná metoda `DoSomeWork();`  
+ Je však snadné zapomenout odstranit dynamicky přiřazované objekty-zejména v komplexním kódu, který způsobí chybu prostředků zvanou *nevracení paměti*. Z tohoto důvodu se používání nezpracovaných ukazatelů v moderním jazyce C++ nedoporučuje. Je téměř vždy lepší využít obtékání ukazatele raw [inteligentního ukazatele](../cpp/smart-pointers-modern-cpp.md), který automaticky uvolní paměť při vyvolání jeho destruktoru (když kód vzroste mimo rozsah pro inteligentní ukazatele); pomocí inteligentních ukazatelů můžete prakticky Eliminujte celé třídy chyb ve vašich programech C++. V následujícím příkladu předpokládejme `MyClass` je uživatelem definovaný typ, který má veřejnou metodu `DoSomeWork();`  
   
 ```cpp  
   
@@ -158,24 +158,24 @@ void someFunction() {
   
 ```  
   
- Chytré ukazatele na další informace najdete v tématu [chytré ukazatele](../cpp/smart-pointers-modern-cpp.md).  
+ Další informace o inteligentních ukazatelích naleznete v tématu [inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md).  
   
- Převody ukazatele na další informace najdete v tématu [typ převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ Další informace o převodech ukazatelů naleznete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
- Další informace o ukazatele obecně platí, najdete v části [ukazatele](../cpp/pointers-cpp.md).  
+ Další informace o ukazatelích obecně naleznete v tématu [ukazatele](../cpp/pointers-cpp.md).  
   
 ## <a name="windows-data-types"></a>Datové typy ve Windows  
- V classic Win32 programování pro C a C++, většina funkcí pomocí definice TypeDef specifické pro systém Windows a #define makra (definované v `windef.h`) určit typy parametry a návratové hodnoty. Tyto datové typy systému Windows jsou většinou právě speciální názvy (aliasy) na předdefinované typy jazyka C/C++. Úplný seznam těchto – definice TypeDef a definice preprocesoru najdete v tématu [Windows datové typy](http://msdn.microsoft.com/en-us/4553cafc-450e-4493-a4d4-cb6e2f274d46). Některé tyto funkce typedef, jako např. HRESULT a LCID, jsou užitečné a mají popisný charakter. Jiné, například INT, nemají zvláštní význam a představují pouze aliasy základních typů jazyka C++. Další datové typy systému Windows si zachovaly názvy pocházející z dob programování v jazyce C a 16bitových procesorů a ve světě moderního hardwaru a operačních systémů již nemají místo ani smysl. Existují také speciální datové typy, které jsou přidružené ke knihovně Windows Runtime, uveden jako [prostředí Windows Runtime základní datové typy](http://msdn.microsoft.com/en-us/b5735851-ec07-48c1-92b4-ca9f768096f6). V moderním jazyce C++ platí obecná rada preferovat základní typy C++, pokud typ Windows nesděluje některý další význam o tom, jak má být daná hodnota interpretována.  
+ V klasickém programování Win32 pro C a C++ většina funkcí používá specifické pro Windows – definice TypeDef a #define makra (definované v `windef.h`) k určení typů parametrů a návratové hodnoty. Tyto datové typy Windows jsou většinou pouze zvláštní názvy (aliasy) na předdefinované typy jazyka C/C++. Úplný seznam těchto – definice TypeDef a definičních souborů preprocesoru naleznete v tématu [datové typy Windows](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46). Některé tyto funkce typedef, jako např. HRESULT a LCID, jsou užitečné a mají popisný charakter. Jiné, například INT, nemají zvláštní význam a představují pouze aliasy základních typů jazyka C++. Další datové typy systému Windows si zachovaly názvy pocházející z dob programování v jazyce C a 16bitových procesorů a ve světě moderního hardwaru a operačních systémů již nemají místo ani smysl. Existují také speciální datové typy přidružené ke knihovně Runtime Windows uvedené jako [základní datové typy Windows Runtime](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6). V moderním jazyce C++ platí obecná rada preferovat základní typy C++, pokud typ Windows nesděluje některý další význam o tom, jak má být daná hodnota interpretována.  
   
 ## <a name="more-information"></a>Další informace  
  Další informace o systému typů v jazyce C++ naleznete v následujících tématech.  
   
 |||  
 |-|-|  
-|[Typy hodnot](../cpp/value-types-modern-cpp.md)|Popisuje *typů hodnot* spolu se problémy týkající se jejich použití.|  
-|[Typ převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Popisuje běžné problémy při převodu typů a ukazuje, jak se jim vyhnout.|  
+|[Typy hodnot](../cpp/value-types-modern-cpp.md)|Popisuje *typů hodnot* a problémy týkající se jejich použití.|  
+|[Převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md)|Popisuje běžné problémy při převodu typů a ukazuje, jak se jim vyhnout.|  
   
 ## <a name="see-also"></a>Viz také  
  [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)   
+ [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
  [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

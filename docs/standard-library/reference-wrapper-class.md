@@ -1,5 +1,5 @@
 ---
-title: reference_wrapper – třída | Microsoft Docs
+title: reference_wrapper – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858783"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954640"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper – třída
 
-Zabalí odkaz.
+Obaluje referenci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,11 +63,11 @@ private:
 
 ## <a name="remarks"></a>Poznámky
 
-A `reference_wrapper<Ty>` je kopie zkonstruovatelný a kopírování Přiřaditelné obálku kolem odkaz na objekt nebo funkci typu `Ty`a obsahuje ukazatele, který odkazuje na objekt daného typu. A `reference_wrapper` lze použít k ukládání odkazů ve standardní kontejnery a předávání objektů s odkazem na `std::bind`.
+A `reference_wrapper<Ty>` je kopírovací a kopírování lze přiřadit obálku kolem odkaz na objekt nebo funkce typu `Ty`a drží ukazatel, který odkazuje na objekt daného typu. A `reference_wrapper` slouží k ukládání odkazů ve standardních kontejnerů a předat objekty s odkazem na `std::bind`.
 
-Typ `Ty` musí být typu objektu nebo typ funkce nebo statické assert selže v době kompilace.
+Typ `Ty` musí být typem objektu nebo funkce typu nebo statický kontrolní výraz selže v době kompilace.
 
-Podpůrné funkce [std::ref](functional-functions.md#ref) a [std::cref](functional-functions.md#cref) slouží k vytvoření `reference_wrapper` objekty.
+Pomocné funkce [std::ref](functional-functions.md#ref) a [std::cref](functional-functions.md#cref) slouží k vytvoření `reference_wrapper` objekty.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -79,30 +79,30 @@ Podpůrné funkce [std::ref](functional-functions.md#ref) a [std::cref](function
 
 |Název typu|Popis|
 |-|-|
-|[result_type](#result_type)|Slabé výsledný typ zabalené odkaz.|
-|[Typ](#type)|Typ zabalené odkaz.|
+|[result_type](#result_type)|Typ výsledku Slabý odkaz zabalené.|
+|[Typ](#type)|Typ zabalené odkazu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[get](#get)|Získá odkaz na zabalená.|
+|[get](#get)|Získá zabalené odkaz.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[reference_wrapper::Operator Ty&amp;](#op_ty_amp)|Získá ukazatel k zabalené odkazu.|
+|[reference_wrapper::Operator Ty&amp;](#op_ty_amp)|Získá ukazatel na odkaz zabalené.|
 |[reference_wrapper::operator()](#op_call)|Volá zabalené odkaz.|
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="get"></a>  reference_wrapper::Get
 
-Získá odkaz na zabalená.
+Získá zabalené odkaz.
 
 ```cpp
 Ty& get() const noexcept;
@@ -110,7 +110,7 @@ Ty& get() const noexcept;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí odkaz na zabalená.
+Členská funkce vrátí zabalené odkaz.
 
 ### <a name="example"></a>Příklad
 
@@ -149,7 +149,7 @@ operator Ty&() const noexcept;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrací člena operátor `*ptr`.
+Členský operátor vrátí `*ptr`.
 
 ### <a name="example"></a>Příklad
 
@@ -186,13 +186,13 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-`Types` Typy seznamu argumentů.
+*Typy* typy seznamu argumentů.
 
-`args` Seznam argumentů.
+*args* seznamu argumentů.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablony členských `operator()` vrátí `std::invoke(get(), std::forward<Types>(args)...)`.
+Šablona člena `operator()` vrátí `std::invoke(get(), std::forward<Types>(args)...)`.
 
 ### <a name="example"></a>Příklad
 
@@ -229,13 +229,13 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k zalomení.
+*Ty* typ, který chcete zabalit.
 
-`val` Hodnota k zalomení.
+*Val* hodnota, kterou chcete zabalit.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor nastaví uložené hodnoty `ptr` k `&val`.
+Konstruktor je uložená hodnota nastaví `ptr` k `&val`.
 
 ### <a name="example"></a>Příklad
 
@@ -270,7 +270,7 @@ i = -1
 
 ## <a name="result_type"></a>  reference_wrapper::result_type
 
-Slabé výsledný typ zabalené odkaz.
+Typ výsledku Slabý odkaz zabalené.
 
 ```cpp
 typedef R result_type;
@@ -278,7 +278,7 @@ typedef R result_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`result_type` Typedef je synonymum pro slabé výsledný typ zabalená funkce. Tato typedef má smysl pro typy funkce pouze.
+`result_type` Definice typedef je synonymum pro typ výsledku slabé zabalené funkce. Tato definice typedef má smysl pro typy funkcí pouze.
 
 ### <a name="example"></a>Příklad
 
@@ -309,7 +309,7 @@ val = -3
 
 ## <a name="type"></a>  reference_wrapper::type
 
-Typ zabalené odkaz.
+Typ zabalené odkazu.
 
 ```cpp
 typedef Ty type;
@@ -317,7 +317,7 @@ typedef Ty type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum argumentu šablony `Ty`.
+Typedef je synonymum pro argument šablony `Ty`.
 
 ### <a name="example"></a>Příklad
 
@@ -349,7 +349,7 @@ i = 1
 rwi = 1
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[cref –](../standard-library/functional-functions.md#cref)<br/>
+[cref](../standard-library/functional-functions.md#cref)<br/>
 [ref](../standard-library/functional-functions.md#ref)<br/>

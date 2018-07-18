@@ -1,5 +1,5 @@
 ---
-title: Vytváření aplikací MFC | Microsoft Docs
+title: Vytvoření aplikace MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b30b1e0f5e8031609845c78da7558e8b3207862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368810"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026988"
 ---
 # <a name="creating-an-mfc-application"></a>Vytvoření aplikace MFC
-Aplikace MFC je spustitelný soubor aplikace pro Windows, která je založena na knihovna Microsoft Foundation Class (MFC). Nejjednodušší způsob, jak vytvořit aplikaci MFC je použití Průvodce aplikací MFC.  
+Aplikace knihovny MFC je spustitelná aplikace pro Windows, který je založen na knihovny Microsoft Foundation Class (MFC). Nejjednodušším způsobem vytvoření aplikace knihovny MFC je použití Průvodce aplikací knihovny MFC.  
   
 > [!IMPORTANT]
->  Projekty knihovny MFC nejsou podporovány v edicích sady Visual Studio Express.  
+>  Projekty MFC nejsou podporovány v edici Visual Studio Express.  
   
- Spustitelné soubory knihovny MFC obvykle spadají do pěti typů: standardní aplikace systému Windows, dialogová okna, formulářů, aplikace ve stylu Průzkumníku a webové prohlížeče stylu aplikace. Další informace naleznete v tématu:  
+ Spustitelné soubory knihovny MFC se obecně dělí do pěti typů: standardní aplikace Windows, dialogová okna, aplikace založené na formulářích, aplikace stylu Průzkumník a webové aplikace ve stylu prohlížeče. Další informace naleznete v tématu:  
   
--   [Použití tříd pro psaní aplikací systému Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
+-   [Použití tříd pro psaní aplikací pro Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
 -   [Vytváření a zobrazování dialogových oken](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
@@ -41,26 +41,26 @@ Aplikace MFC je spustitelný soubor aplikace pro Windows, která je založena na
   
 -   [Vytvoření aplikace MFC ve stylu webového prohlížeče](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
   
- Průvodce aplikací MFC generuje příslušné třídy a soubory pro některý z těchto typů aplikací, v závislosti na možnostech, které vyberete v průvodci.  
+ Průvodce aplikací knihovny MFC generuje příslušné třídy a soubory pro všechny typy aplikací, v závislosti na možnostech, které vyberete v průvodci.  
   
-### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>K vytvoření aplikace knihovny MFC pomocí Průvodce aplikací MFC  
+### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Vytvoření aplikace knihovny MFC pomocí Průvodce aplikací MFC  
   
-1.  Postupujte podle pokynů v tématu nápovědy [vytvoření projektu pomocí Průvodce aplikací Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Postupujte podle pokynů v tématu nápovědy [vytvoření projektu pomocí Průvodce aplikací jazyka Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  V **nový projekt** dialogové okno, vyberte **aplikace knihovny MFC** v podokně šablon otevřete průvodce.  
+2.  V **nový projekt** dialogu **aplikace knihovny MFC** v podokně šablon a spusťte průvodce.  
   
-3.  Zadejte nastavení aplikace pomocí [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md).  
+3.  Definujte nastavení aplikace pomocí [Průvodce aplikací knihovny MFC](../../mfc/reference/mfc-application-wizard.md).  
   
     > [!NOTE]
-    >  Přeskočit tento krok průvodce zachovat výchozí nastavení.  
+    >  Přeskočení tohoto kroku zachová průvodce výchozí nastavení.  
   
-4.  Klikněte na tlačítko **Dokončit** zavřete průvodce a otevřete nový projekt ve vývojovém prostředí.  
+4.  Klikněte na tlačítko **Dokončit** zavřete průvodce a otevření nového projektu ve vývojovém prostředí.  
   
- Po vytvoření projektu, můžete zobrazit soubory vytvořené v **Průzkumníku řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v souboru projektu vygenerované souboru ReadMe.txt. Další informace o typech souborů najdete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řešení**. Další informace o souborech Průvodce vytvoří pro váš projekt, naleznete v generovaném souboru ReadMe.txt. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Příprava ladění: Aplikace Visual C++ Windows](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Příprava ladění: Visual C++ Windows aplikací](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

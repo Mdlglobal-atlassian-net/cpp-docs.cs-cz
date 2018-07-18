@@ -1,5 +1,5 @@
 ---
-title: Slice – třída | Microsoft Docs
+title: Slice – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,54 +22,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965874"
 ---
 # <a name="slice-class"></a>slice – třída
 
-Třída nástrojů k valarray –, který se používá k definování jednorozměrné podmnožiny valarray – nadřazené. Pokud valarray – považuje za dvourozměrná matice se všechny elementy ve pole, řez extrahuje vektoru v jednu dimenzi mimo dvourozměrná pole.
+Třídy nástrojů pro valarray –, který se používá k definování jednorozměrné podmnožiny valarray nadřazené. Pokud valarray se považuje za dvojrozměrné matici po všechny elementy v matici, řez extrahuje vektor v jedné dimenzi mimo dvourozměrné pole.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída ukládá parametry, které charakterizovat objekt typu [slice_array](../standard-library/slice-array-class.md) podmnožinu valarray – je nepřímo vytvořený, když objekt třídy řez se zobrazí jako argument pro objekt třídy [valarray – ](../standard-library/valarray-class.md#op_at)  **\<Typ >**. Uložené hodnoty, které zadejte do něj podmnožinu vybraný z nadřazené valarray – patří:
+Třída obsahuje parametry, které charakterizují objekt typu [slice_array –](../standard-library/slice-array-class.md) podmnožinu valarray zkonstruování nepřímo když objekt třídy řez se objeví jako argument pro objekt třídy [valarray ](../standard-library/valarray-class.md#op_at)  **\<Typ >**. Uložené hodnoty, které určují dílčí vybrat z nadřazené valarray patří:
 
-- Počáteční index v valarray –.
+- Počáteční index valarray.
 
-- Celková délka, nebo počet elementů v řez.
+- Celková délka, nebo počet elementů v řezu.
 
-- Stride, nebo vzdálenost mezi následné indexy elementů v valarray –.
+- Stride nebo vzdálenost mezi následné indexy prvků valarray.
 
-Pokud sada definované řez je podmnožinou konstantní valarray –, řez je nové valarray –. Pokud sada definované řez je podmnožinou nonconstant valarray –, řez má sémantiku původní valarray – referenční dokumentace. Vyhodnocení mechanismus pro nonconstant valarray – třídy šetří čas a paměti.
+Pokud množiny definované řez je podmnožinou konstantní valarray, je řez nové valarray. Pokud množiny definované řez je podmnožinou nekonstantním valarray, řez má sémantiku odkazu pro původní valarray. Vyhodnocení mechanismus pro nekonstantním valarrays šetří čas a paměti.
 
-Operace na valarray – třídy jsou zaručit pouze v případě, že zdrojový a cílový podmnožiny definované řezy jsou jedinečné a jsou platné všechny indexy.
+Operace s valarrays zaručeno pouze v případě, že zdrojové a cílové podmnožiny určené řezy se liší a jsou platné všechny indexy.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[Řez](#slice)|Definuje podmnožinu `valarray` který se skládá z řady elementy, které jsou do stejné vzdálenosti a která začínají zadaný element.|
+|[řez](#slice)|Definuje podmnožinu `valarray` , který se skládá z počet prvků, které jsou stejné vzdálenosti a, která začínají na zadaný prvek.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Velikost](#size)|Nalezne počet elementů v řez z `valarray`.|
-|[Spuštění](#start)|Vyhledá počáteční index řezy `valarray`.|
-|[STRIDE](#stride)|Najde rozdíl mezi elementy v řez systému `valarray`.|
+|[Velikost](#size)|Zjistí počet prvků v řez `valarray`.|
+|[Spuštění](#start)|Vyhledá počáteční index řez `valarray`.|
+|[STRIDE](#stride)|Najde rozdíl mezi prvky v řez `valarray`.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<valarray – >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="size"></a>  Slice::size
 
-Vyhledá v řez valarray – počet elementů.
+Zjistí počet prvků v řezu valarray.
 
 ```cpp
 size_t size() const;
@@ -77,7 +77,7 @@ size_t size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet elementů v řez valarray –.
+Počet prvků v řezu valarray.
 
 ### <a name="example"></a>Příklad
 
@@ -133,7 +133,7 @@ The size of slice vaSlice is: 6.
 
 ## <a name="slice"></a>  Slice::Slice
 
-Definuje podmnožinu valarray –, která se skládá z prvky, které jsou do stejné vzdálenosti a která začínají zadaný element.
+Definuje podmnožinu valarray –, který se skládá z počet prvků, které jsou stejné vzdálenosti a, která začínají na zadaný prvek.
 
 ```cpp
 slice();
@@ -146,19 +146,19 @@ slice(
 
 ### <a name="parameters"></a>Parametry
 
-`_StartIndex` Valarray – index první prvek v podmnožině.
+*_StartIndex* valarray index prvního prvku v podmnožině rozhraní.
 
-`_Len` Počet elementů v podmnožině.
+*_Len* počet prvků v podmnožině rozhraní.
 
-`stride` Vzdálenost mezi elementy v podmnožině.
+*STRIDE* vzdálenost mezi prvky v podmnožině rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí konstruktor ukládá nulami pro počáteční index, celková délka a stride. Druhý konstruktor úložiště `_StartIndex` pro počáteční index, `_Len` pro celková délka a `stride` pro stride.
+Výchozí konstruktor ukládá nulami pro počáteční index, celková délka a stride. Druhý konstruktor ukládá *_StartIndex* pro počáteční index *_Len* celkové délky a *stride* pro stride.
 
 ### <a name="remarks"></a>Poznámky
 
-Stride může mít zápornou hodnotu.
+Stride může být záporná.
 
 ### <a name="example"></a>Příklad
 
@@ -203,7 +203,7 @@ va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 
 ## <a name="start"></a>  Slice::Start
 
-Vyhledá počáteční index řez valarray –.
+Počáteční index řezu valarray najde.
 
 ```cpp
 size_t start() const;
@@ -211,7 +211,7 @@ size_t start() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční index řez valarray –.
+Počáteční index řezu valarray.
 
 ### <a name="example"></a>Příklad
 
@@ -261,7 +261,7 @@ The start index of slice vaSlice is: 3.
 
 ## <a name="stride"></a>  Slice::STRIDE
 
-Najde rozdíl mezi elementy v řez valarray –.
+Vyhledá vzdálenost mezi prvky v řezu valarray.
 
 ```cpp
 size_t stride() const;
@@ -269,7 +269,7 @@ size_t stride() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vzdálenost mezi elementy v řez valarray –.
+Vzdálenost mezi prvky v řezu valarray.
 
 ### <a name="example"></a>Příklad
 
@@ -317,6 +317,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

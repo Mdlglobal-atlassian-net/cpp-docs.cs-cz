@@ -1,5 +1,5 @@
 ---
-title: Bitmapinfo – struktura | Microsoft Docs
+title: Bitmapinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99cfb77f295530f65b3d3b07888b0735fc0b6a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9b1bd896157d7f11792a5a6514e30ecd3d46a19
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336254"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO – struktura
-`BITMAPINFO` Struktura definuje dimenzí a barevné informace pro Windows device independent bitmap (DIB).  
+`BITMAPINFO` Struktury definuje rozměry a informace o barvě pro Windows device independent bitmap (DIB).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +37,17 @@ typedef struct tagBITMAPINFO {
   
 #### <a name="parameters"></a>Parametry  
  *bmiHeader*  
- Určuje [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) struktura, která obsahuje informace o dimenzí a barvu formát device independent bitmap.  
+ Určuje [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) strukturu, která obsahuje informace o dimenzích a formát barvy rastrového obrázku nezávislých na zařízení.  
   
  *bmiColors*  
- Určuje pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) nebo `DWORD` datové typy, které definují barvy v souboru bitové mapy.  
+ Určuje pole [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) nebo DWORD datové typy, které definují barvy rastrového obrázku nastaven.  
   
 ## <a name="remarks"></a>Poznámky  
- Device independent bitmap se skládá ze dvou různých částí: `BITMAPINFO` struktura, která popisuje dimenzí a barvy bitovou mapu a pole bajtů, které určují pixelů v souboru bitové mapy. Bity v poli jsou zabaleny dohromady, ale každý řádek kontroly musí být doplněno nulami končí na `LONG` hranic. Pokud výška kladné, bitmapy pochází z levého dolního rohu. Pokud výška je hodnota záporná, je počátek levého horního rohu.  
+ Bitmap nezávislých na zařízení se skládá ze dvou samostatných částí: `BITMAPINFO` struktura, která popisuje dimenze a barvy rastrového obrázku a pole bajtů, které určují pixely rastrového obrázku nastaven. Bity v pole jsou zkomprimována společně, ale každý řádek kontroly musí být doplněny nulami skončí **dlouhé** hranic. Při pozitivní výšku rastrového obrázku pochází z levého dolního rohu. Pokud je záporné, původ levém horním rohu.  
   
- A *sbalené rastrový obrázek* je rastrový obrázek, kde následuje pole bajtů `BITMAPINFO` struktura. Zabalená bitmap odkazuje jeden ukazatel.  
+ A *komprimovat komprimovaný objekt bitmap* je rastrový obrázek, ve kterém následuje bajtového pole `BITMAPINFO` struktury. Komprimovat komprimovaný objekt Bitmap odkazuje jeden ukazatel.  
   
- Další informace o `BITMAPINFO` struktury a příslušné hodnoty pro členy `BITMAPINFOHEADER` a `RGBQUAD` struktury, najdete v následujících tématech v dokumentaci k Windows SDK.  
+ Další informace o `BITMAPINFO` struktury a vhodné hodnoty pro členy programu `BITMAPINFOHEADER` a `RGBQUAD` struktury, naleznete v následujících tématech v dokumentaci Windows SDK.  
   
 - [Bitmapinfo – struktura](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
   
@@ -56,7 +56,7 @@ typedef struct tagBITMAPINFO {
 - [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) struktura  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** wingdi.h systému  
+ **Záhlaví:** wingdi.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

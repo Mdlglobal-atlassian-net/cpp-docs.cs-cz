@@ -1,5 +1,5 @@
 ---
-title: ATL COM plochy součásti | Microsoft Docs
+title: ATL COM desktopové komponenty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,50 +15,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255990"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953846"
 ---
-# <a name="atl-com-desktop-components"></a>ATL COM plochy součásti
-Odkaz na ATL dokumentů ATL Active Template Library (), sadu na základě šablon C++ třídy, které zjednodušují programování objekty modelu COM (Component Object). Pokud chcete plně využít výhod ATL, se důrazně doporučuje pracovní znalost COM.  
+# <a name="atl-com-desktop-components"></a>COM desktopové komponenty ATL
+ATL – referenční dokumentace dokumenty aktivní šablony knihovny (ATL), sady založené na šablonách třídy jazyka C++, které zjednodušují programování objektů modelu COM (Component Object). Chcete-li plně využít výhod ATL, pracovní znalost COM důrazně doporučujeme.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Přehled třídy ATL](../atl/atl-class-overview.md)  
- Obsahuje odkazy na a stručný popis třídy ATL uspořádané podle kategorie.  
+ Obsahuje odkazy na a stručný popis ATL – třídy uspořádané podle kategorie.  
   
  [Třídy a struktury ATL](../atl/reference/atl-classes.md)  
- Poskytuje referenční materiál na třídy a struktury abecedním pořadí.  
+ Poskytuje referenční materiál o třídách a strukturách, které jsou uspořádány podle abecedy.  
   
  [Funkce ATL](../atl/reference/atl-functions.md)  
- Poskytuje referenční materiál na globální funkce abecedním pořadí. Obsahuje témata uspořádání funkce do kategorií.  
+ Poskytuje referenční materiál pro globální funkce, které jsou uspořádány podle abecedy. Obsahuje témata uspořádání funkce do kategorií.  
   
  [Globální proměnné ATL](../atl/reference/atl-global-variables.md)  
- Poskytuje referenční materiál na globální proměnné abecedním pořadí.  
+ Poskytuje referenční materiál pro globální proměnné, které jsou uspořádány podle abecedy.  
   
  [Makra ATL](../atl/reference/atl-macros.md)  
- Poskytuje referenční materiál na makra abecedním pořadí. Obsahuje témata uspořádání makra do kategorií.  
+ Poskytuje referenční materiál makra uspořádány podle abecedy. Obsahuje témata uspořádání makra do kategorií.  
   
- [ATL – definice TypeDef](../atl/reference/atl-typedefs.md)  
- Poskytuje referenční materiál na definice TypeDef abecedním pořadí  
+ [Definice Typedef ATL](../atl/reference/atl-typedefs.md)  
+ Poskytuje referenční materiál o funkce typedefs uspořádány podle abecedy  
   
  [Archetyp pracovního procesu](../atl/reference/worker-archetype.md)  
- Obsahuje odkazy na archetype ATL pracovního procesu.  
-  
- [Zastaralé tématech knihovny ATL](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- Poskytuje referenční materiál na třídy, makra a funkce, které jsou zastaralé nebo zastaralé.  
+ Obsahuje odkazy na archetyp pracovního ATL procesu.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje témata o tom, jak program pomocí knihovny Active šablony (ATL).  
+ Obsahuje témata o tom, jak programovat pomocí aktivní šablony knihovny (ATL).  
   
  [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)  
- Vás provede vytvoření ovládacího prvku a ukazuje základy některé knihovny ATL v procesu.  
+ Vás provede vytvořením ovládacího prvku a ukazuje některé ATL – principy vytváření v procesu.  
   
  [Ukázky knihovny ATL](../visual-cpp-samples.md)  
- Ukázkový kód, který ukazuje, jak pomocí knihovny ATL COM – objekty zapsat.  
+ Ukázkový kód, který ukazuje způsob použití knihovny ATL pro zápis objektů COM.  
   
  [Šablony OLE DB](../data/oledb/ole-db-templates.md)  
- Poskytuje referenční materiál pro příjemce a zprostředkovatele šablony technologie OLE DB sadu tříd šablon, které implementují mnoha běžně používaných rozhraní OLE DB.  
+ Poskytuje referenční materiál pro spotřebitele a zprostředkovatele šablony technologie OLE DB sady tříd šablon, které implementují mnoho běžně používaných rozhraní OLE DB.  

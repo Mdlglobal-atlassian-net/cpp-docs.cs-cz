@@ -1,5 +1,5 @@
 ---
-title: '&lt;řazené kolekce členů&gt; funkce | Microsoft Docs'
+title: '&lt;řazené kolekce členů&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858809"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966404"
 ---
 # <a name="lttuplegt-functions"></a>&lt;řazené kolekce členů&gt; funkce
 
 ||||
 |-|-|-|
-|[get](#get)|[make_tuple](#make_tuple)|[Tie –](#tie)|
+|[get](#get)|[make_tuple](#make_tuple)|[Tie](#tie)|
 
-## <a name="get"></a>  GET
+## <a name="get"></a>  získat
 
-Získá element z `tuple` objektu podle indexu nebo (C ++ 14) podle typu.
+Získá prvek z `tuple` objektu pomocí indexu nebo (v C ++ 14) podle typu.
 
 ```cpp
 // by index:
@@ -64,19 +64,23 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-`Index` Index elementu, který chcete získat.
+*Index*  
+ Index prvku, který chcete získat.
 
-`Types` Pořadí typů deklarované v řazené kolekci členů, v pořadí deklarace.
+*Typy*  
+ Posloupnost typy deklarované v řazené kolekci členů, v pořadí deklarace.
 
-`T` Typ elementu, který chcete získat.
+*T*  
+ Typ elementu, který chcete získat.
 
-`Tuple` Std::tuple, který obsahuje libovolný počet elementů.
+*Řazené kolekce členů*  
+ Std::tuple, která obsahuje libovolný počet prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablony funkcí vrátí odkaz na hodnotu v indexu `Index`, nebo typu `T` v `tuple` objektu.
+Funkce šablony vrátí odkaz na hodnotu indexu *Index*, nebo typu *T* v `tuple` objektu.
 
-Volání metody `get<T>(Tuple)` způsobí chybu kompilátoru, pokud řazené kolekce členů obsahuje více nebo méně než jeden element typu T.
+Volání `get<T>(Tuple)` způsobí chybu kompilátoru, pokud řazená kolekce členů obsahuje více nebo méně než jeden element typu T.
 
 ### <a name="example"></a>Příklad
 
@@ -109,7 +113,7 @@ int main() {
 
 ## <a name="make_tuple"></a>  make_tuple –
 
-Díky `tuple` z hodnot elementu.
+Díky `tuple` z hodnot prvků.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -118,15 +122,17 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ parametru Nth – funkce.
+*TN*  
+ Typ parametru Nth – funkce
 
-`tN` Hodnota parametru Nth – funkce
+*tN*  
+ Hodnota parametru n-tý funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, kde každý typ `Vi` je `X&` při odpovídající typ `Ti` je `cv` `reference_wrapper<X>`, jinak hodnota je `Ti`.
+Šablona funkce vrátí `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, kde každý typ `Vi` je `X&` při příslušného `Ti` je `cv` `reference_wrapper<X>`; v opačném případě je `Ti`.
 
-Jednou z výhod `make_tuple` je, že typy objektů, které ukládají automaticky určuje kompilátoru a není nutné explicitně určena. Nepoužívejte jako argumenty explicitní šablony `make_tuple<int, int>(1, 2)` při použití `make_tuple` protože je zbytečně podrobné a přidá komplexní deklarátor odkazu problémy, které může způsobit chyby kompilace.
+Jednou z výhod `make_tuple` je, že typy ukládaných objektů jsou určeny automaticky kompilátorem a není nutné explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako `make_tuple<int, int>(1, 2)` při použití `make_tuple` protože je zbytečně podrobný a přidá komplexní rvalue reference problémy, které mohou způsobit selhání kompilace.
 
 ### <a name="example"></a>Příklad
 
@@ -163,9 +169,9 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  Tie –
+## <a name="tie"></a>  Tie
 
-Díky `tuple` z elementu odkazy.
+Díky `tuple` z elementu odkazů.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -174,11 +180,12 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Základní typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Základní typ řazené kolekce členů n-tý prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
+Šablona funkce vrátí `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 
 ### <a name="example"></a>Příklad
 
@@ -221,6 +228,6 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<řazené kolekce členů >](../standard-library/tuple.md)<br/>

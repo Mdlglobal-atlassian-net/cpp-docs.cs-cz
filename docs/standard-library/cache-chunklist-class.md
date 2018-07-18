@@ -1,5 +1,5 @@
 ---
-title: cache_chunklist – třída | Microsoft Docs
+title: cache_chunklist – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953257"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist – třída
 
-Definuje [blokovat allocator](../standard-library/allocators-header.md) , přiděluje a zruší přidělení bloků paměti jedné velikosti.
+Definuje [blokovat allocator](../standard-library/allocators-header.md) , který přiděluje a zruší přidělení bloků paměti z jednoho velikost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Sz`|Počet prvků v poli, která bude přidělena.|
+|*Sz*|Počet prvků v poli, které mají být přiděleny.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablona používá `operator new` přidělení bloků paměti raw, suballocating blokuje se přidělit úložiště pro blok paměti v případě potřeby; ukládá bloky deallocated paměti v samostatných volné seznamu pro každého bloku a používá `operator delete` se zrušit přidělení bloku, pokud žádná z jeho bloky paměti se používá.
+Pomocí této třídy šablony **operátor new** přidělení bloků paměti nezpracovaná suballocating blokuje k přidělení úložiště pro blok paměti v případě potřeby; ukládá uvolnění paměťových bloků v samostatných bezplatné seznamu pro každý blok a používá **operátor delete** se uvolnit blok, pokud žádná z jeho bloky paměti není používán.
 
-Každý blok paměti obsahuje `Sz` bajtů použitelné paměti a ukazatel na dávky, která patří do. Obsahuje každého bloku `Nelts` bloky paměti, tři ukazatele, int a data, `operator new` a `operator delete` vyžadují.
+Každý blok paměti obsahuje *Sz* bajtů použitelné paměti a ukazatelem na blok dat, který patří do. Každý blok obsahuje `Nelts` paměťových bloků, tří ukazatelů, int a data, která **operátor new** a **operátor delete** vyžadují.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -61,13 +61,13 @@ Každý blok paměti obsahuje `Sz` bajtů použitelné paměti a ukazatel na dá
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přiděluje blok paměti.|
-|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|
+|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  cache_chunklist::allocate
 
@@ -81,11 +81,11 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`count`|Počet prvků v poli, která bude přidělena.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt přidělená.
+Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -101,7 +101,7 @@ cache_chunklist();
 
 ## <a name="deallocate"></a>  cache_chunklist::deallocate
 
-Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.
+Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -111,11 +111,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na první objekt, který má být navrácena z úložiště.|
-|`count`|Počet objektů, které chcete být navrácena z úložiště.|
+|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
+|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

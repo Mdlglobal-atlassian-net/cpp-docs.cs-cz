@@ -1,5 +1,5 @@
 ---
-title: '&lt;budoucí&gt; | Microsoft Docs'
+title: '&lt;budoucí&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847192"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954015"
 ---
-# <a name="ltfuturegt"></a>&lt;Budoucí&gt;
+# <a name="ltfuturegt"></a>&lt;budoucí&gt;
 
-Zahrnují standardní hlavičku \<budoucí > k definování tříd šablon a podpůrné šablony, které zjednodušují spuštění funkce – případně v samostatné vlákna – a načítání její výsledek. Výsledkem je hodnota, kterou vrátí funkce nebo výjimku, která je vysílaných funkce ale není zachycena ve funkci.
+Zahrnout standardní hlavička \<budoucí > k definování tříd šablon a podpůrných šablon, které zjednodušují spuštění funkce – pravděpodobně v samostatném vlákně – a načítání jeho výsledek. Výsledkem je hodnota vrácená funkcí nebo výjimku, která je vygenerován pomocí funkce ale není zachycena ve funkci.
 
-Tuto hlavičku použije Concurrency Runtime (ConcRT), takže ho můžete použít společně s jiným mechanismem ConcRT. Další informace o ConcRT najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+Toto záhlaví používá Concurrency Runtime (ConcRT), takže ho můžete použít společně s další mechanismy ConcRT. Další informace o ConcRT najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,21 +36,21 @@ Tuto hlavičku použije Concurrency Runtime (ConcRT), takže ho můžete použí
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> V kódu, který se zkompiluje pomocí **/CLR**, tuto hlavičku je blokovaný.
+> V kódu, který je zkompilován s použitím **/CLR**, tato hlavička se zablokuje.
 
-*Asynchronní zprostředkovatele* ukládá výsledek volání funkce. *Asynchronní návratové objekt* se používá k načtení výsledek volání funkce. *Přidružené asynchronní stavu* poskytuje komunikaci mezi poskytovatele asynchronní a jeden nebo více asynchronní návratové objektů.
+*Asynchronního poskytovatele* ukládá výsledek volání funkce. *Asynchronní vrácený objekt* slouží k načtení výsledku volání funkce. *Přidružený asynchronní stav* zajišťuje komunikaci mezi asynchronního poskytovatele a jeden nebo více asynchronních návratových objektů.
 
-Program nevytváří přímo všechny objekty přidružené asynchronní stavu. Program vytvoří asynchronní zprostředkovatele, vždy, když ho potřebovat a od vytvoří asynchronní návratové objekt, který sdílí stav asynchronní související s poskytovatelem. Asynchronní zprostředkovatelů a objektů asynchronní návratové spravovat objekty, které mají spojenou s jejich sdílený stav asynchronní. Při poslední objekt, který odkazuje na přidružený stav asynchronní uvolněním, objekt, který obsahuje přidružený stav asynchronní zničena.
+Program přímo nevytváří žádné objekty přidružený asynchronní stav. Program vytvoří asynchronního poskytovatele pokaždé, když je potřeba a z té vytvoří asynchronní vrácený objekt, který sdílí přidružený asynchronní stav s tímto poskytovatelem. Asynchronní poskytovatelů a asynchronních návratových objektů spravovat objekty, které obsahují, že jejich sdílené přidružený asynchronní stav. Když ho uvolní poslední objekt, který odkazuje na přidružený asynchronní stav, je objekt, který obsahuje přidružený asynchronní stav zničen.
 
-Asynchronní zprostředkovatele nebo asynchronní návratové objekt, který nemá žádný související stav asynchronní *prázdný*.
+Asynchronního poskytovatele nebo asynchronní vrácený objekt, který nemá žádný přidružený asynchronní stav je *prázdný*.
 
-Je k dispozici přidružený stav asynchronní *připraven* jenom v případě jeho asynchronní zprostředkovatelem má uložené návratovou hodnotu nebo uložené výjimku.
+Je přidružený asynchronní stav *připravené* pouze v případě, že jeho asynchronního poskytovatele má uložené návratovou hodnotu nebo uložené výjimku.
 
-Funkce šablony `async` a třídy šablony `promise` a `packaged_task` asynchronní poskytovatelé. Třídy šablon `future` a `shared_future` popisují asynchronní návratové objekty.
+Funkce šablony `async` a tříd šablon `promise` a `packaged_task` asynchronní poskytovatelé. Třídy šablon `future` a `shared_future` popisují asynchronních návratových objektů.
 
-Každý tříd šablon `promise`, `future`, a `shared_future` má specializace pro typ `void` a částečná specializace pro ukládání a načítání hodnotu odkazem. Tyto specializací se liší od primární šablony pouze v podpisy a sémantiku funkce, které ukládají a načítají vrácené hodnoty.
+Každý z tříd šablon `promise`, `future`, a `shared_future` má specializaci pro typ **void** a částečnou specializaci pro ukládání a načítání hodnoty podle odkazu. Tyto specializace se liší od primární šablony pouze v podpisy a sémantika funkcí, které ukládají a načítají vrácené hodnoty.
 
-Třídy šablon `future` a `shared_future` nikdy blokovat v jejich destruktory, s výjimkou v jeden případ, který se zachová, i pro zpětnou kompatibilitu: na rozdíl od jiných futures pro `future`– nebo poslední `shared_future`– připojená k úloze Práce s `std::async`destruktor bloky, pokud úloha nebyla dokončena; to znamená, blokuje, pokud tohoto podprocesu ještě nezavolalo `.get()` nebo `.wait()` a je stále spuštěná úloha. Následující poznámka použitelnost byl přidán do popis `std::async` ve verzi standard konceptu: "[Poznámka: Pokud budoucí získané z std::async je přesunut mimo místní rozsah, musí být jiný kód, který používá budoucí vědět, že může blokovat do budoucna – destruktor pro sdílené stavu Připraveno. k – Poznámka end] "ve všech ostatních případech `future` a `shared_future` destruktory jsou povinné a je zaručeno, že nikdy blokovat.
+Třídy šablon `future` a `shared_future` není nikdy blokována v jejich destruktory, s výjimkou v jednom případě, že je zachována z důvodu zpětné kompatibility: na rozdíl od jiných termínu pro `future`– nebo poslední `shared_future`–, který je připojen k úloze Práce s `std::async`je destruktor blokován, pokud úkol nebyl dokončen, tedy blokuje, pokud toto vlákno dosud nevolalo `.get()` nebo `.wait()` a je stále spuštěn úkol. Byla přidána následující poznámka použitelnost pro popis `std::async` koncept standardu: "[Poznámka: Pokud budoucí získané z std::async je přesunut mimo místní rozsah, jiný kód, který se používá v budoucnosti musí mějte na paměti, že do budoucna destruktor může blokovat pro sdílený stav připraveno. k – poslední poznámku] "ve všech ostatních případech `future` a `shared_future` destruktory jsou vyžadovány a zaručeně není nikdy blokována.
 
 ## <a name="members"></a>Členové
 
@@ -58,37 +58,37 @@ Třídy šablon `future` a `shared_future` nikdy blokovat v jejich destruktory, 
 
 |Název|Popis|
 |----------|-----------------|
-|[future – třída](../standard-library/future-class.md)|Popisuje asynchronní návratové objekt.|
-|[future_error – třída](../standard-library/future-error-class.md)|Popisuje výjimka objekt, který může být vyvolána metodami typů, které spravují `future` objekty.|
-|[packaged_task – třída](../standard-library/packaged-task-class.md)|Popisuje asynchronní zprostředkovatele, který představuje obálku volání a jejíž volání podpis je `Ty(ArgTypes...)`. Jeho přidružený stav asynchronní obsahuje kopii svého s objektu kromě potenciální výsledek.|
-|[promise – třída](../standard-library/promise-class.md)|Popisuje asynchronní zprostředkovatele.|
-|[shared_future – třída](../standard-library/shared-future-class.md)|Popisuje asynchronní návratové objekt. Rozdíl s `future` objektu asynchronní zprostředkovatele lze přidružit libovolný počet `shared_future` objekty.|
+|[future – třída](../standard-library/future-class.md)|Popisuje asynchronous vrácený objekt.|
+|[future_error – třída](../standard-library/future-error-class.md)|Popisuje objekt výjimky, které mohou být vyvolány pomocí jiných metod typů, které spravují `future` objekty.|
+|[packaged_task – třída](../standard-library/packaged-task-class.md)|Popisuje asynchronous zprostředkovatele, který je obálka volání a jehož signatura volání je `Ty(ArgTypes...)`. Přidružený asynchronní stav obsahuje kopii jeho volatelný objekt kromě potenciální výsledek.|
+|[promise – třída](../standard-library/promise-class.md)|Popisuje asynchronous zprostředkovatele.|
+|[shared_future – třída](../standard-library/shared-future-class.md)|Popisuje asynchronous vrácený objekt. Rozdíl od se `future` objektu, lze přidružit libovolný počet asynchronního poskytovatele `shared_future` objekty.|
 
 ### <a name="structures"></a>Struktury
 
 |Název|Popis|
 |----------|-----------------|
-|[is_error_code_enum – struktura](../standard-library/is-error-code-enum-structure.md)|Specializace, která označuje, že `future_errc` je vhodný pro ukládání `error_code`.|
-|[uses_allocator – struktura](../standard-library/uses-allocator-structure.md)|Specializace, který obsahuje vždy hodnotu true.|
+|[is_error_code_enum – struktura](../standard-library/is-error-code-enum-structure.md)|Specializace, která označuje, že `future_errc` je vhodná pro ukládání `error_code`.|
+|[uses_allocator – struktura](../standard-library/uses-allocator-structure.md)|Platí to vždy specializace.|
 
 ### <a name="functions"></a>Funkce
 
 |Název|Popis|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Představuje asynchronní zprostředkovatele.|
-|[future_category –](../standard-library/future-functions.md#future_category)|Vrátí odkaz na `error_category` objekt, který charakterizuje chyby, které jsou přidružené `future` objekty.|
-|[make_error_code](../standard-library/future-functions.md#make_error_code)|Vytvoří `error_code` který má `error_category` objekt, který charakterizuje `future` chyby.|
-|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Vytvoří `error_condition` který má `error_category` objekt, který charakterizuje `future` chyby.|
-|[Swap](../standard-library/future-functions.md#swap)|Výměny přidružený stav asynchronní jednoho `promise` objekt se stejným jiného.|
+|[future_category –](../standard-library/future-functions.md#future_category)|Vrátí odkaz na `error_category` objekt, který charakterizuje chyby, které jsou přidružené k `future` objekty.|
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Vytvoří `error_code` , který má `error_category` objekt, který charakterizuje `future` chyby.|
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Vytvoří `error_condition` , který má `error_category` objekt, který charakterizuje `future` chyby.|
+|[Prohození](../standard-library/future-functions.md#swap)|Vymění přidružený asynchronní stav jednoho `promise` objektu z jiného.|
 
 ### <a name="enumerations"></a>Výčty
 
 |Název|Popis|
 |----------|-----------------|
-|[future_errc](../standard-library/future-enums.md#future_errc)|Poskytuje symbolické názvy chyby, které jsou hlášeny `future_error` třídy.|
-|[future_status](../standard-library/future-enums.md#future_status)|Poskytuje symbolické názvy z důvodů, které můžou vrátit funkce vypršel čekání.|
-|[Spuštění](../standard-library/future-enums.md#launch)|Představuje typ bitová maska, která popisuje možné režimy pro funkce šablony `async`.|
+|[future_errc](../standard-library/future-enums.md#future_errc)|Poskytuje symbolické názvy pro chyby, které jsou hlášeny sadou `future_error` třídy.|
+|[future_status –](../standard-library/future-enums.md#future_status)|Poskytuje symbolické názvy pro důvody, které můžou vrátit funkce vypršel časový limit čekání.|
+|[spuštění](../standard-library/future-enums.md#launch)|Představuje typ bitová maska, která popisuje možné režimy pro šablonu funkce `async`.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;mutex&gt; | Microsoft Docs'
+title: '&lt;objekt mutex&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c58f32847084407d19afea8f2946f8b3041efa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cd4f968543ff777b9178c8f6fa6b3c1699ee465
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861516"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965653"
 ---
-# <a name="ltmutexgt"></a>&lt;mutex&gt;
+# <a name="ltmutexgt"></a>&lt;objekt mutex&gt;
 
-Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recursive_mutex`, `timed_mutex`, a `recursive_timed_mutex`; šablony `lock_guard` a `unique_lock`; a podpůrné typy a funkce, které definují vzájemné vyloučení kód oblasti.
+Zahrnout standardní hlavička \<vzájemně vyloučený přístup > k definování třídy `mutex`, `recursive_mutex`, `timed_mutex`, a `recursive_timed_mutex`; šablony `lock_guard` a `unique_lock`; a podporuje typy a funkce, které definují oblasti vyloučeného kódu.
 
 > [!WARNING]
-> Od verze sady Visual Studio 2015, typy synchronizace standardní knihovna C++ jsou založené na Windows synchronizace primitiv a nadále používat ConcRT (kromě případů, kdy cílové platformy systému Windows XP). Typy definované v \<mutex > by se neměla používat s žádné ConcRT typů nebo funkcí.
+> Synchronizace typy standardní knihovny C++ od v sadě Visual Studio 2015, jsou založené na Windows synchronizací primitiv a již nebudete používat ConcRT (s výjimkou případu, kdy Cílová platforma Windows XP). Typy definované v \<vzájemně vyloučený přístup > se nemá používat s všechny typy ConcRT nebo funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,61 +37,61 @@ Zahrnují standardní hlavičku \<mutex > k definování tříd `mutex`, `recurs
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> V kódu, který se zkompiluje pomocí **/CLR**, tuto hlavičku je blokovaný.
+> V kódu, který je zkompilován s použitím **/CLR**, tato hlavička se zablokuje.
 
-Třídy `mutex` a `recursive_mutex` jsou *mutex typy*. Typ mutex má výchozí konstruktor a destruktor, který nevyvolá výjimku výjimky. Tyto objekty mají metody, které poskytují vzájemné vyloučení při pokusu o uzamčení na stejný objekt více vláken. Konkrétně typu mutex obsahuje metody `lock`, `try_lock`, a `unlock`:
+Třídy `mutex` a `recursive_mutex` jsou *mutex typy*. Typ mutex má výchozí konstruktor a destruktor, který nevrací výjimky. Tyto objekty mají metody, které poskytují vzájemné vyloučení při více vláken pokusí Uzamknout na stejný objekt. Konkrétně typ mutex obsahuje metody `lock`, `try_lock`, a `unlock`:
 
-- `lock` Metoda blokuje volající vlákno, dokud vlákno získá vlastnictví mutex. Vrácená hodnota se ignoruje.
+- `lock` Metoda blokuje volající vlákno, dokud vlákno nezíská vlastnictví objektu mutex. Vrácená hodnota je ignorována.
 
-- `try_lock` Metoda se pokusí získat vlastnictví mutex bez blokování. Její návratový typ je převést na `bool` a je `true` Pokud metoda získá vlastnictví, ale jinak `false`.
+- `try_lock` Metoda se pokusí získat vlastnictví objektu mutex bez blokování. Její typ vrácené hodnoty je převést na **bool** a je **true** Pokud metoda získává vlastnictví, ale jinak **false**.
 
-- `unlock` Metoda uvolní vlastnictví mutex z volající vlákno.
+- `unlock` Metoda uvolní vlastnictví objektu mutex z volajícího vlákna.
 
-Mutex typy jako argumenty typu můžete použít k vytvoření instance šablony `lock_guard` a `unique_lock`. Můžete použít objekty tyto typy, jako `Lock` argument Čekání členské funkce v šabloně [condition_variable_any](../standard-library/condition-variable-any-class.md).
+Mutex – typy jako argumenty typu můžete použít k vytvoření instance šablony `lock_guard` a `unique_lock`. Můžete použít objekty těchto typů, jako `Lock` argument pro členské funkce čekání v šabloně [condition_variable_any –](../standard-library/condition-variable-any-class.md).
 
-A *vypršel časový limit typu mutex* splňuje požadavky pro typ mutex. Kromě toho má `try_lock_for` a `try_lock_until` metod, které musí být možné volat pomocí jeden argument a musí vracet typ, který je převést na `bool`. Typ vypršel mutex můžete definovat tyto funkce pomocí další argumenty, za předpokladu, že tyto další argumenty všechny výchozí hodnoty.
+A *vypršel časový limit typ mutex* splňuje požadavky pro typ mutex. Kromě toho má `try_lock_for` a `try_lock_until` metody, které musí být možné volat pomocí jeden argument a musí vrátit typ, který lze převést na **bool**. Vypršel časový limit vzájemně vyloučený přístup typu můžete definovat tyto funkce pomocí další argumenty za předpokladu, že tyto další všechny argumenty mají výchozí hodnoty.
 
-- `try_lock_for` Metoda musí být možné volat pomocí jeden argument, `Rel_time`, jejichž typ je vytváření instancí z [chrono::duration](../standard-library/duration-class.md). Metoda se pokusí získat vlastnictví mutex, ale vrátí v čase, který je určen podle `Rel_time`, bez ohledu na to úspěch. Návratová hodnota převede na `true` Pokud metoda získá vlastnictví; jinak návratovou hodnotu převede na `false`.
+- `try_lock_for` Metoda musí být možné volat pomocí jednoho argumentu `Rel_time`, jehož typ je instance [chrono::duration](../standard-library/duration-class.md). Metoda se pokusí získat vlastnictví objektu mutex, ale vrátí v čase, které je určeno `Rel_time`, bez ohledu na úspěch. Návratová hodnota převede na **true** Pokud metoda získává vlastnictví; v opačném případě návratovou hodnotu převede **false**.
 
-- `try_lock_until` Metoda musí být možné volat pomocí jeden argument, `Abs_time`, jejichž typ je vytváření instancí z [chrono::time_point](../standard-library/time-point-class.md). Metoda se pokusí získat vlastnictví mutex, ale ne později než čas, který je určen podle vrátí `Abs_time`, bez ohledu na to úspěch. Návratová hodnota převede na `true` Pokud metoda získá vlastnictví; jinak návratovou hodnotu převede na `false`.
+- `try_lock_until` Metoda musí být možné volat pomocí jednoho argumentu `Abs_time`, jehož typ je instance [chrono::time_point](../standard-library/time-point-class.md). Metoda se pokusí získat vlastnictví objektu mutex, ale vrátí pozdější než čas, který je stanovena podle prvku `Abs_time`, bez ohledu na úspěch. Návratová hodnota převede na **true** Pokud metoda získává vlastnictví; v opačném případě návratovou hodnotu převede **false**.
 
-Je také označován jako typ objekt mutex *možno zablokovat typu*. Pokud ho neposkytne – členská funkce `try_lock`, je *základní typ možno zablokovat*. Typ vypršel mutex je také označován jako *vypršel časový limit možno zablokovat typu*.
+Typ mutex je také označován jako *možno zablokovat typ*. Pokud ho neposkytne členskou funkci `try_lock`, je *základní typ možno zablokovat*. Vypršel časový limit vzájemně vyloučený přístup typu se taky říká *vypršel časový limit možno zablokovat typ*.
 
 ### <a name="classes"></a>Třídy
 
 |Název|Popis|
 |----------|-----------------|
-|[lock_guard – třída](../standard-library/lock-guard-class.md)|Reprezentuje šablonu, která může být vytvořena instance pro vytvoření objektu jejichž destruktor odemkne `mutex`.|
-|[mutex – třída (standardní knihovna C++)](../standard-library/mutex-class-stl.md)|Představuje typ mutex. Použití objekty tohoto typu vynutit vzájemné vyloučení v rámci programu.|
-|[recursive_mutex – třída](../standard-library/recursive-mutex-class.md)|Představuje typ mutex. V constrast k `mutex` třída, je dobře definovaný chování volání metod uzamčení pro objekty, které jsou již uzamčena.|
-|[recursive_timed_mutex – třída](../standard-library/recursive-timed-mutex-class.md)|Představuje typ mutex vypršel. Použití objekty tohoto typu vynutit vzájemné vyloučení, který má časově omezené blokování v rámci programu. Na rozdíl od objekty typu `timed_mutex`, účinek volání uzamčení metod pro `recursive_timed_mutex` objektů je dobře definovaný.|
-|[timed_mutex – třída](../standard-library/timed-mutex-class.md)|Představuje typ mutex vypršel. Použití objekty tohoto typu vynutit vzájemné vyloučení, který má časově omezené blokování v rámci programu.|
-|[unique_lock – třída](../standard-library/unique-lock-class.md)|Reprezentuje šablonu, která se dá vytvořit instance k vytváření objektů, které spravují zamykání a odemykání `mutex`.|
+|[lock_guard – třída](../standard-library/lock-guard-class.md)|Reprezentuje šablonu, která se dá vytvořit instance pro vytvoření objektu, jehož destruktor odemkne `mutex`.|
+|[mutex – třída (standardní knihovna C++)](../standard-library/mutex-class-stl.md)|Představuje typ mutex. Použití objektů tohoto typu k zajištění vzájemného vyloučení v rámci programu.|
+|[recursive_mutex – třída](../standard-library/recursive-mutex-class.md)|Představuje typ mutex. V constrast k `mutex` třídy, volání metod zamykání pro objekty, které již jsou zamčeny chování je dobře definovaný.|
+|[recursive_timed_mutex – třída](../standard-library/recursive-timed-mutex-class.md)|Představuje typ mutex vypršel časový limit. Použití objektů tohoto typu k zajištění vzájemného vyloučení, který má časově omezenou blokování v rámci programu. Na rozdíl od objektů typu `timed_mutex`, efekt volání pro uzamčení metod `recursive_timed_mutex` objekty je dobře definovaný.|
+|[timed_mutex – třída](../standard-library/timed-mutex-class.md)|Představuje typ mutex vypršel časový limit. Použití objektů tohoto typu k zajištění vzájemného vyloučení, který má časově omezenou blokování v rámci programu.|
+|[unique_lock – třída](../standard-library/unique-lock-class.md)|Reprezentuje šablonu, která se dá vytvořit instance vytvořit objekty, které spravují zamykání a odemykání `mutex`.|
 
 ### <a name="functions"></a>Funkce
 
 |Název|Popis|
 |----------|-----------------|
-|[call_once](../standard-library/mutex-functions.md#call_once)|Poskytuje mechanismus pro volání právě jednou na zadaný objekt s během provádění.|
-|[lock](../standard-library/mutex-functions.md#lock)|Pokusí se uzamknout všechny argumenty bez vzájemného zablokování.|
+|[call_once](../standard-library/mutex-functions.md#call_once)|Poskytuje mechanismus pro volání zadané volatelný objekt právě jednou během provádění.|
+|[lock](../standard-library/mutex-functions.md#lock)|Se pokusí uzamknout všechny argumenty bez zablokování.|
 
 ### <a name="structs"></a>Struktury
 
 |Název|Popis|
 |----------|-----------------|
 |[adopt_lock_t – struktura](../standard-library/adopt-lock-t-structure.md)|Představuje typ, který se používá k definování `adopt_lock`.|
-|[defer_lock_t – struktura](../standard-library/defer-lock-t-structure.md)|Představuje typ, který definuje `defer_lock` objekt, který slouží k výběru jedné přetížené konstruktory `unique_lock`.|
-|[once_flag – struktura](../standard-library/once-flag-structure.md)|Představuje `struct` používané funkce šablony `call_once` zajistit, že inicializace kód je volat pouze jednou, ani za přítomnosti více vláken provádění.|
-|[try_to_lock_t – struktura](../standard-library/try-to-lock-t-structure.md)|Představuje `struct` , který definuje `try_to_lock` objektu a slouží k výběru jedné přetížené konstruktory `unique_lock`.|
+|[defer_lock_t – struktura](../standard-library/defer-lock-t-structure.md)|Představuje typ, který definuje `defer_lock` objekt, který se používá k vyberte jednu z přetížených konstruktorů z `unique_lock`.|
+|[once_flag – struktura](../standard-library/once-flag-structure.md)|Představuje **struktura** , který se používá funkce šablony `call_once` zajistit, že inicializace kód je volán pouze jednou, i v případě výskytu více vláken provádění.|
+|[try_to_lock_t – struktura](../standard-library/try-to-lock-t-structure.md)|Představuje **struktura** , který definuje `try_to_lock` objektu a umožňuje vybrat jednu z přetížených konstruktorů z `unique_lock`.|
 
 ### <a name="variables"></a>Proměnné
 
 |Název|Popis|
 |----------|-----------------|
-|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Představuje objekt, který se dá předat do konstruktory pro `lock_guard` a `unique_lock` k označení, že objekt mutex, který je také se předaný konstruktoru je uzamčen.|
-|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Představuje objekt, který lze předat v konstruktoru pro `unique_lock`, k označení, že by neměl konstruktoru zamknout objekt mutex, který je také předávána k němu.|
-|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Představuje objekt, který lze předat v konstruktoru pro `unique_lock` k označení, že konstruktoru opakovat odemknutí `mutex` také se předá do něj bez blokování.|
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Představuje objekt, který může být předán konstruktory pro `lock_guard` a `unique_lock` k označení, že objekt mutex také předávaný do konstruktoru je uzamčen.|
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Představuje objekt, který může být předán konstruktoru pro `unique_lock`, pro indikaci, že by neměl konstruktor zamknout objekt mutex také předávaný do něj.|
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Představuje objekt, který může být předán konstruktoru pro `unique_lock` k označení, že by měl konstruktoru pokusu o odemknutí `mutex` , který je také funkci ji bez blokování.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>

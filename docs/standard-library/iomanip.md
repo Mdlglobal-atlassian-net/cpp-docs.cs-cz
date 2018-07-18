@@ -1,5 +1,5 @@
 ---
-title: '&lt;iomanip –&gt; | Microsoft Docs'
+title: '&lt;iomanip&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953472"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip –&gt;
 
-Zahrnout `iostreams` standardní hlavičku \<iomanip – > zadat několik manipulátory, že každý trvat jeden argument.
+Zahrnout `iostreams` standardní hlavičku \<iomanip > k definování několika manipulátory, které každý přijímají jediný argument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,25 +37,25 @@ Zahrnout `iostreams` standardní hlavičku \<iomanip – > zadat několik manipu
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto manipulátory vrátí neurčeného typu, nazývá **T1** prostřednictvím **T10**, které obě přetížení `basic_istream` \< **Elem**, **Tr**>`::`[operátor >>](../standard-library/istream-operators.md#op_gt_gt) a `basic_ostream` \< **Elem**, **Tr** > `::` [operátor <<](../standard-library/ostream-operators.md#op_lt_lt).
+Každá z těchto manipulátory vrací neurčeného typu, volá `T1` prostřednictvím `T10`, které obě přetížení `basic_istream` \< **Elem**, **Tr** > `::` [operátor >>](../standard-library/istream-operators.md#op_gt_gt) a `basic_ostream` \< **Elem**, **Tr** > `::` [operátor <<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipulátory
 
 |||
 |-|-|
 |[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Získá peněžní částku, volitelně v mezinárodním formátu.|
-|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Získá čas ve struktuře čas pomocí zadaného formátu.|
+|[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Získá čas ve struktuře čas pomocí určeného formátu.|
 |[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Poskytuje peněžní částku, volitelně v mezinárodním formátu.|
-|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Poskytuje na čas ve struktura časové a řetězec formátu k použití.|
-|[v uvozovkách](../standard-library/iomanip-functions.md#quoted)|Umožňuje pohodlný odezvy řetězců s operátory vložení a extrakce.|
+|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Poskytuje čas ve struktuře čas a řetězec formátu použitý.|
+|[v uvozovkách](../standard-library/iomanip-functions.md#quoted)|Umožňuje pohodlný dopad na dobu odezvy řetězce s operátory vložení a extrakce.|
 |[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Vymaže zadané příznaky.|
 |[setbase](../standard-library/iomanip-functions.md#setbase)|Nastavte základ pro celá čísla.|
-|[setfill](../standard-library/iomanip-functions.md#setfill)|Nastaví znak, který se použije k vyplnění mezer v zobrazení se zarovnané vpravo.|
-|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Nastaví zadaný příznaků.|
-|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Nastaví přesnost pro hodnoty s plovoucí desetinnou čárkou.|
+|[setfill](../standard-library/iomanip-functions.md#setfill)|Nastaví znak, který se použije k vyplnění mezer v zobrazení zarovnána vpravo.|
+|[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Nastaví zadané příznaky.|
+|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Nastaví přesnosti pro hodnoty s plovoucí desetinnou čárkou.|
 |[setw](../standard-library/iomanip-functions.md#setw)|Určuje šířku pole zobrazení.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

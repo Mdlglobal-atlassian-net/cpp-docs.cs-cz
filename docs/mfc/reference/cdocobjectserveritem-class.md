@@ -1,5 +1,5 @@
 ---
-title: Třída CDocObjectServerItem | Microsoft Docs
+title: Cdocobjectserveritem – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956625"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027135"
 ---
-# <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem – třída
-Implementuje server OLE příkazy speciálně pro DocObject servery.  
+# <a name="cdocobjectserveritem-class"></a>Cdocobjectserveritem – třída
+Příkazy Implements OLE servere speciálně pro servery DocObject.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,24 +58,24 @@ class CDocObjectServerItem : public COleServerItem
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDocObjectServerItem::OnHide](#onhide)|Rozhraní framework se snaží skrýt položku DocObject, vyvolá výjimku.|  
-|[CDocObjectServerItem::OnShow](#onshow)|Voláno rámcem, aby DocObject položky místní active. Pokud položka není DocObject, zavolá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
+|[CDocObjectServerItem::OnHide](#onhide)|Vyvolá výjimku, pokud framework se snaží skrýt položku DocObject.|  
+|[CDocObjectServerItem::OnShow](#onshow)|Volá se rozhraním, aby vytisknout položky na místě aktivní. Pokud položka není DocObject, zavolá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDocObjectServerItem` Definuje přepisovatelné členské funkce: [skrytí](#onhide), [při otevření](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), a [viditelnost](#onshow).  
+ `CDocObjectServerItem` Definuje přepisovatelné členské funkce: [skrytí](#onhide), [při otevření](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), a [viditelnost](#onshow).  
   
- Použít `CDocObjectServerItem`, zajistil, který [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) potlačení v vaše `COleServerDoc`-odvozené třídě vrátí novou `CDocObjectServerItem` objektu. Pokud potřebujete změnit všechny funkce v dané položce, můžete vytvořit novou instanci třídy vlastní `CDocObjectServerItem`-odvozené třídy.  
+ Použití `CDocObjectServerItem`, bylo zaručeno, že [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) přepsat v vaše `COleServerDoc`-odvozené třídě vrátí nový `CDocObjectServerItem` objektu. Pokud potřebujete změnit všechny funkce v vaši položku, můžete vytvořit novou instanci třídy vlastní `CDocObjectServerItem`-odvozené třídy.  
   
- Další informace o DocObjects najdete v tématu [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) a [COleCmdUI](../../mfc/reference/colecmdui-class.md) v *odkaz knihovny MFC*. Viz také [první kroky Internet: aktivní dokumenty](../../mfc/active-documents-on-the-internet.md) a [aktivní dokumenty](../../mfc/active-documents-on-the-internet.md).  
+ Další informace o DocObjects najdete v tématu [cdocobjectserver –](../../mfc/reference/cdocobjectserver-class.md) a [colecmdui –](../../mfc/reference/colecmdui-class.md) v *odkaz knihovny MFC*. Viz také [první kroky Internet: aktivní dokumenty](../../mfc/active-documents-on-the-internet.md) a [aktivní dokumenty](../../mfc/active-documents-on-the-internet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [CDocItem](../../mfc/reference/cdocitem-class.md)  
+ [Cdocitem –](../../mfc/reference/cdocitem-class.md)  
   
- [COleServerItem](../../mfc/reference/coleserveritem-class.md)  
+ [Coleserveritem –](../../mfc/reference/coleserveritem-class.md)  
   
  `CDocObjectServerItem`  
   
@@ -94,7 +94,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  Ukazatel na dokument, který bude obsahovat nová položka DocObject.  
   
  *bAutoDelete*  
- Určuje, zda lze po vydání odkazu na Odstranit objekt. Argument na **FALSE** Pokud `CDocObjectServerItem` objekt je nedílnou součástí vašeho dokumentu data. Nastavte ji na **TRUE** Pokud se objekt sekundární struktura použít k identifikaci rozsah v datech vašeho dokumentu, který může odstranit rozhraní.  
+ Určuje, jestli objekt může odstranit při odkazu na vydání. Nastavte na hodnotu FALSE, pokud argument `CDocObjectServerItem` objektu je nedílnou součástí dat dokumentu. Nastavte na hodnotu TRUE, pokud je objekt sekundární struktura používaná k identifikaci oblast v dokumentu, a data, která je možné odstranit v rámci rozhraní.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
  Načte ukazatel na dokument, který obsahuje položku.  
@@ -104,33 +104,33 @@ COleServerDoc* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na dokument, který obsahuje položku; **NULL** Pokud položka není součástí dokumentu.  
+ Ukazatel na dokument, který obsahuje položky; Hodnota NULL, pokud položka není součástí dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
- To umožňuje přístup k dokumentu serveru, který můžete předat jako argument k [CDocObjectServerItem](#cdocobjectserveritem) konstruktor.  
+ To umožňuje přístup k dokumentu na serveru, který je předán jako argument [cdocobjectserveritem –](#cdocobjectserveritem) konstruktoru.  
   
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
- Voláno rámcem skrytí položky.  
+ Volá se rozhraním skryjete položky.  
   
 ```  
 virtual void OnHide();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace vyvolá výjimku, pokud je položka DocObject. Aktivní DocObject položku nelze skrýt, protože trvá celého zobrazení. Je nutné deaktivovat položce DocObject zmizí. Pokud položka není DocObject, výchozí implementace volá [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
+ Výchozí implementace vyvolá výjimku, pokud je položka DocObject. Aktivní položky DocObject nelze skrýt, protože trvá celého zobrazení. Je nutné deaktivovat položku DocObject, zmizí. Pokud položka není DocObject, výchozí implementace volá [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
 ##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
- Voláno rámcem dáte pokyn, aby serverová aplikace, aby DocObject položky místní active.  
+ Volá se rozhraním, dáte pokyn, aby se serverová aplikace mohla provést vytisknout položky místní aktivní.  
   
 ```  
 virtual void OnShow();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud položka není DocObject, výchozí implementace volá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Tato funkce přepsání, pokud chcete provést zvláštní zpracování při otevírání DocObject položky.  
+ Pokud položka není DocObject, výchozí implementace volá [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Tato funkce přepište, pokud chcete provést zvláštní zpracování při otevření položky DocObject.  
   
 ## <a name="see-also"></a>Viz také  
- [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)   
+ [Coleserveritem – třída](../../mfc/reference/coleserveritem-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CDocObjectServer – třída](../../mfc/reference/cdocobjectserver-class.md)   
+ [Cdocobjectserver – třída](../../mfc/reference/cdocobjectserver-class.md)   
  [COleDocObjectItem – třída](../../mfc/reference/coledocobjectitem-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Plus – struktura | Microsoft Docs
+title: Plus – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56c5ef5f8cc5a3061b18ec2ffcdc83bf850d641
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965727"
 ---
 # <a name="plus-struct"></a>plus – struktura
 
-Předdefinované funkce objekt, který provádí operace přidání (binární `operator+`) na její argumenty.
+Předdefinovaný objekt funkce, který provádí operace přidávání (binární `operator+`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,15 +49,15 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Typ, který podporuje binární `operator+` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* typ, který podporuje binární soubor `operator+` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand operace přidání. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace sčítání. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand operace přidání. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace sčítání. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left + Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou binární `operator+`.
+Výsledek `Left + Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácený binární `operator+`.
 
 ## <a name="example"></a>Příklad
 
@@ -113,9 +113,9 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

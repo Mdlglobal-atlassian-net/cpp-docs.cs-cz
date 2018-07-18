@@ -1,5 +1,5 @@
 ---
-title: Třída CFtpFileFind | Microsoft Docs
+title: Cftpfilefind – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336016"
 ---
-# <a name="cftpfilefind-class"></a>CFtpFileFind – třída
-Usnadňuje hledání souborů Internetu serverů FTP.  
+# <a name="cftpfilefind-class"></a>Cftpfilefind – třída
+Pomáhá při hledání internetových souborů na serverech FTP.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,21 +57,21 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::GetFileURL](#getfileurl)|Získá adresu URL, včetně cesty souboru nalezen.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CFtpFileFind` obsahuje členské funkce, které začínají vyhledávání, vyhledejte soubor a vrátit adresu URL nebo další popisné informace o souboru.  
+ `CFtpFileFind` zahrnuje členské funkce, které začínají vyhledávání, vyhledání souboru a vrátí adresu URL nebo jiné popisné informace o souboru.  
   
- Ostatní třídy MFC určená pro Internet a místního souboru vyhledávat obsahují [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) a [CFileFind](../../mfc/reference/cfilefind-class.md). Společně s `CFtpFileFind`, tyto třídy poskytují bezproblémové mechanismus pro klienta k vyhledání konkrétních souborů, bez ohledu na serveru protokolu nebo typ souboru (místní počítač nebo vzdálený server). Všimněte si, že neexistuje žádná třída knihovny MFC pro vyhledávání na serverech HTTP, protože HTTP nepodporuje přímé souboru manipulaci požadované pro hledání.  
+ Jiné třídy knihovny MFC navržené pro Internet a prohledávat místní soubor k zahrnutí [cgopherfilefind –](../../mfc/reference/cgopherfilefind-class.md) a [cfilefind –](../../mfc/reference/cfilefind-class.md). Spolu s `CFtpFileFind`, tyto třídy poskytnout bezproblémové mechanismus pro klienta vyhledat konkrétní soubory, bez ohledu na to, server protokolu nebo typ souboru (místní počítač nebo na vzdálený server). Všimněte si, že neexistuje žádná třída knihovny MFC pro vyhledávání na serverech HTTP, protože HTTP nepodporuje manipulace s přímým přístupem souboru vyžadované pro hledání.  
   
- Další informace o tom, jak používat `CFtpFileFind` a ostatní WinInet třídy, najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Další informace o tom, jak používat `CFtpFileFind` a jiných tříd WinInet, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje, jak vytvořit výčet všechny soubory v aktuálním adresáři serveru FTP.  
+ Následující kód ukazuje, jak vytvořit výčet všech souborů v aktuálním adresáři serveru FTP.  
   
  [!code-cpp[NVC_MFCWinInet#8](../../mfc/codesnippet/cpp/cftpfilefind-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CFileFind](../../mfc/reference/cfilefind-class.md)  
+ [Cfilefind –](../../mfc/reference/cfilefind-class.md)  
   
  `CFtpFileFind`  
   
@@ -79,7 +79,7 @@ class CFtpFileFind : public CFileFind
  **Záhlaví:** afxinet.h  
   
 ##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
- Tato funkce člen je volána k sestavení `CFtpFileFind` objektu.  
+ Tato členská funkce je volána k sestavení kompletních `CFtpFileFind` objektu.  
   
 ```  
 explicit CFtpFileFind(
@@ -89,19 +89,19 @@ explicit CFtpFileFind(
   
 ### <a name="parameters"></a>Parametry  
  *pConnection*  
- Ukazatel na `CFtpConnection` objektu. Připojení k serveru FTP můžete získat voláním [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
+ Ukazatel `CFtpConnection` objektu. Připojení k serveru FTP lze získat voláním [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
  *dwContext*  
- Identifikátor kontext pro `CFtpFileFind` objektu. V tématu **poznámky** Další informace o tomto parametru.  
+ Identifikátor kontextu `CFtpFileFind` objektu. Zobrazit **poznámky** Další informace o tomto parametru.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí hodnota pro *dwContext* odesílají MFC k `CFtpFileFind` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CFtpFileFind` objektu. Můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CFtpFileFind` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CFtpFileFind` objektu. Můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad v přehledu třídy dříve v tomto tématu.  
   
 ##  <a name="findfile"></a>  CFtpFileFind::FindFile  
- Volání této funkce člen najít soubor FTP.  
+ Voláním této členské funkce k vyhledání souboru protokolu FTP.  
   
 ```  
 virtual BOOL FindFile(
@@ -111,65 +111,65 @@ virtual BOOL FindFile(
   
 ### <a name="parameters"></a>Parametry  
  *pstrName*  
- Ukazatel na řetězec, který obsahuje název souboru, který se najít. Pokud **NULL**, provede volání hledání pomocí zástupných znaků (*).  
+ Ukazatel na řetězec obsahující název souboru, který má najít. Pokud má hodnotu NULL, provede volání hledání pomocí zástupných znaků (*).  
   
  *dwFlags*  
- Příznaky popisující, jak zpracovat tuto relaci. Tyto příznaky mohou být kombinovány s bitový operátor OR (&#124;) a jsou následující:  
+ Příznaky popisující, jak zpracovat tuto relaci. Tyto příznaky je možné kombinovat s bitový operátor OR (&#124;) a jsou následující:  
   
--   INTERNET_FLAG_RELOAD získat data z drátového připojení i v případě, že je v místní mezipaměti. Toto je výchozí příznak.  
+-   INTERNET_FLAG_RELOAD získat data z přenosu i v případě, že je v místní mezipaměti. Toto je výchozí příznak.  
   
--   INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, buď místně nebo v žádné brány.  
+-   INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v žádné brány.  
   
--   INTERNET_FLAG_RAW_DATA přepsat výchozí nastavení vrátit nezpracovaná data ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktury pro FTP).  
+-   INTERNET_FLAG_RAW_DATA přepsat výchozí nastavení pro vrácení nezpracovaných dat ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) struktury protokolu FTP).  
   
--   Zabezpečuje INTERNET_FLAG_SECURE transakce v drátové síti (Secure Sockets Layer) nebo procento Tento příznak se vztahuje na pouze požadavky HTTP.  
+-   Zabezpečuje INTERNET_FLAG_SECURE transakce na lince (Secure Sockets Layer) nebo v PROC. Tento příznak se vztahuje pouze na požadavky HTTP.  
   
--   INTERNET_FLAG_EXISTING_CONNECT Pokud je to možné, opakovaně používat existující připojení k serveru pro nové **FindFile** požadavků místo vytvoření nové relace pro každý požadavek.  
+-   INTERNET_FLAG_EXISTING_CONNECT Pokud je to možné, opakovaně používat existující připojení k serveru na nový `FindFile` požadavky na místo vytvoření nové relace pro každý požadavek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Chcete-li získat rozšířené informace o chybě, volejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Poznámky  
- Po volání **FindFile** načíst první soubor FTP, můžete volat [FindNextFile](#findnextfile) se budou načítat soubory následné FTP.  
+ Po volání `FindFile` načíst první soubor protokolu FTP, můžete volat [FindNextFile](#findnextfile) načíst následující soubory protokolu FTP.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na předchozí příklad v tomto tématu.  
   
 ##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile  
- Volání této funkce člen pokračujte hledání souboru zahájena volání [FindFile](#findfile) – členská funkce.  
+ Voláním této členské funkce pokračujte hledání souborů začal s voláním [FindFile](#findfile) členskou funkci.  
   
 ```  
 virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud existují další soubory; nula, pokud je soubor nalezen naposledy v adresáři, nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, volejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Pokud je soubor nalezen posledního souboru v adresáři, nebo pokud neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.  
+ Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce musí volat alespoň jednou před voláním jakékoli funkce atribut (viz [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
+ Lze zavolat tuto funkci alespoň jednou před voláním jakékoli funkce atribut (viz [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
  `FindNextFile` zabalí funkci Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
   
 ### <a name="example"></a>Příklad  
-  Podívejte se na příklad dříve v tomto tématu.  
+  Podívejte se na příklad výše v tomto tématu.  
   
 ##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
- Volání této funkce člen získat adresu URL zadaného souboru.  
+ Voláním této členské funkce získat adresu URL zadaného souboru.  
   
 ```  
 CString GetFileURL() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Soubor a cestu Universal prostředků Lokátor (URL).  
+ Souboru a cesty Universal Resource Locator (URL).  
   
 ### <a name="remarks"></a>Poznámky  
- `GetFileURL` je podobná – členská funkce [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)kromě toho, že se vrátí adresu URL ve formátu `ftp://moose/dir/file.txt`.  
+ `GetFileURL` se podobá na členskou funkci [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), s tím rozdílem, že vrátí adresu URL ve formě `ftp://moose/dir/file.txt`.  
   
 ## <a name="see-also"></a>Viz také  
- [CFileFind – třída](../../mfc/reference/cfilefind-class.md)   
+ [Cfilefind – třída](../../mfc/reference/cfilefind-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CGopherFileFind – třída](../../mfc/reference/cgopherfilefind-class.md)   
- [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)   
- [CGopherFile – třída](../../mfc/reference/cgopherfile-class.md)   
+ [Cgopherfilefind – třída](../../mfc/reference/cgopherfilefind-class.md)   
+ [Cinternetfile – třída](../../mfc/reference/cinternetfile-class.md)   
+ [Cgopherfile – třída](../../mfc/reference/cgopherfile-class.md)   
  [CHttpFile – třída](../../mfc/reference/chttpfile-class.md)

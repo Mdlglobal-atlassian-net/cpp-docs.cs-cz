@@ -1,5 +1,5 @@
 ---
-title: Třída CDialogEx | Microsoft Docs
+title: Cdialogex – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335955"
 ---
-# <a name="cdialogex-class"></a>CDialogEx – třída
-`CDialogEx` Třída určuje barvu pozadí a obrázku pozadí dialogového okna.  
+# <a name="cdialogex-class"></a>Cdialogex – třída
+`CDialogEx` Třída určuje barvu pozadí a obrázek pozadí dialogového okna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,17 +52,17 @@ class CDialogEx : public CDialog
 |Název|Popis|  
 |----------|-----------------|  
 |[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Nastaví barvu pozadí dialogového okna.|  
-|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Nastaví obrázek na pozadí dialogové okno.|  
+|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Nastaví obrázek pozadí dialogového okna.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použít `CDialogEx` třídy, odvození třídy z vaší dialogového okna `CDialogEx` místo `CDialog` třídy.  
+ Použít `CDialogEx` třídy, odvoďte vlastní třídy dialogového okna pole z `CDialogEx` místo na třídě `CDialog` třídy.  
   
- Dialogové okno pole Image jsou uložené v souboru prostředků. Rozhraní framework automaticky odstraní žádný obrázek, který je načten ze zdrojového souboru. Chcete-li odstranit prostřednictvím kódu programu aktuální obrázku pozadí, volejte [CDialogEx::SetBackgroundImage](#setbackgroundimage) metoda nebo implementace `OnDestroy` obslužné rutiny události. Při volání [CDialogEx::SetBackgroundImage](#setbackgroundimage) metoda, předejte jí `HBITMAP` parametr jako popisovač bitové kopie. `CDialogEx` Objektu bude převzít vlastnictví bitové kopie a odstranit, jestliže `m_bAutoDestroyBmp` je příznak `TRUE`.  
+ Dialogové okno pole Image se ukládají do souboru prostředků. Rozhraní automaticky odstraní všechny image, která jsou načtená ze souboru prostředků. Chcete-li programově odstranit aktuální obrázek na pozadí, zavolejte [CDialogEx::SetBackgroundImage](#setbackgroundimage) metody nebo implementovat `OnDestroy` obslužné rutiny události. Při volání [CDialogEx::SetBackgroundImage](#setbackgroundimage) metoda, předejte `HBITMAP` parametr jako popisovač bitové kopie. `CDialogEx` Objekt převzít vlastnictví na obrázku, který se odstranit, pokud `m_bAutoDestroyBmp` příznak je `TRUE`.  
   
- A `CDialogEx` objekt může být nadřazené položky [CMFCPopupMenu třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu. [CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu volání `CDialogEx::SetActiveMenu` metoda při [CMFCPopupMenu třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu se otevře. Potom `CDialogEx` objekt zpracovává událost žádné nabídky, dokud [CMFCPopupMenu třída](../../mfc/reference/cmfcpopupmenu-class.md) objekt je zavřený.  
+ A `CDialogEx` objekt může být nadřazená [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu. [Cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu volání `CDialogEx::SetActiveMenu` metoda při [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu se otevře. Následně `CDialogEx` objekt zpracovává událost všechny nabídky do [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objekt je zavřený.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -70,7 +70,7 @@ class CDialogEx : public CDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CDialogEx](../../mfc/reference/cdialogex-class.md)  
+ [Cdialogex –](../../mfc/reference/cdialogex-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdialogex.h  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nIDTemplate*  
- ID prostředku šablony pole dialogového okna.  
+ [in] *nIDTemplate*  
+ ID prostředku šablony dialogového okna.  
   
- [v] *lpszTemplateName*  
- Název prostředku šablony pole dialogového okna.  
+ [in] *lpszTemplateName*  
+ Název prostředku šablony dialogového okna.  
   
- [v] *pParent*  
- Ukazatel do nadřazeného okna. Výchozí hodnota je `NULL`.  
+ [in] *pParent*  
+ Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.  
   
- [v] *pParentWnd*  
- Ukazatel do nadřazeného okna. Výchozí hodnota je `NULL`.  
+ [in] *pParentWnd*  
+ Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -116,16 +116,16 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *barev*  
- Hodnotu barva RGB.  
+ [in] *barva*  
+ Hodnota barvy RGB.  
   
- [v] *bRepaint*  
- `TRUE` Chcete-li okamžitě aktualizovat na obrazovce; v opačném `FALSE`. Výchozí hodnota je `TRUE`.  
+ [in] *bRepaint*  
+ TRUE, pokud chcete okamžitě aktualizovat obrazovce. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
- Nastaví obrázek na pozadí dialogové okno.  
+ Nastaví obrázek pozadí dialogového okna.  
   
 ```  
 void SetBackgroundImage(
@@ -142,29 +142,29 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hBitmap*  
- Popisovač pro obrázek pozadí.  
+ [in] *hBitmap*  
+ Popisovač pro obrázek na pozadí.  
   
- [v] *uiBmpResId*  
+ [in] *uiBmpResId*  
  ID prostředku obrázku pozadí.  
   
- [v] *umístění*  
- Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty patří BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.  
+ [in] *umístění*  
+ Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty jsou BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.  
   
- [v] *bAutoDestroy*  
- `TRUE` Chcete-li automaticky odstranit obrázku pozadí; v opačném `FALSE`.  
+ [in] *bAutoDestroy*  
+ TRUE, pokud chcete automaticky odstranit obrázek pozadí; v opačném případě hodnota FALSE.  
   
- [v] *bRepaint*  
- `TRUE` okamžitě ho překreslit dialogové okno. v opačném `FALSE`.  
+ [in] *bRepaint*  
+ TRUE, pokud chcete okamžitě ho překreslit dialogové okno. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V druhé metody přetížení syntaxe, `TRUE` Pokud metoda úspěšná, jinak hodnota `FALSE`.  
+ Ve druhé metodě přetížení syntaxe, hodnotu TRUE Pokud je metoda úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Obrázek, který zadáte není roztažen tak, aby vyhovovaly oblast klienta dialogového okna.  
+ Klientskou oblast dialogového okna není roztažení obrázku, který zadáte.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)   
+ [Cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)   
  [CContextMenuManager – třída](../../mfc/reference/ccontextmenumanager-class.md)

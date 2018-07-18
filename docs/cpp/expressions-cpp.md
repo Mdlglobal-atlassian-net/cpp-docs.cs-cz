@@ -1,5 +1,5 @@
 ---
-title: Výrazy (C++) | Microsoft Docs
+title: Výrazy (C++) | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953360"
 ---
 # <a name="expressions-c"></a>Výrazy (C++)
-Tato část popisuje výrazů C++. Výrazy jsou pořadí operátory a operandy, které se používají pro jeden nebo více tyto účely:  
+Tato část popisuje výrazy jazyka C++. Výrazy jsou sekvence operátorů a operandů, které se používají pro jeden nebo více z těchto důvodů:  
   
--   Výpočet hodnoty z operandy.  
+-   Výpočet hodnoty z operandů.  
   
 -   Určení objekty nebo funkce.  
   
--   Generování "vedlejší účinky." (Vedlejší účinky jsou všechny akce než vyhodnocení výrazu – například úprava hodnotu objektu.)  
+-   Generování "vedlejší účinky." (Vedlejší účinky jsou všechny akce než vyhodnocování výrazu – například úpravy hodnoty vlastnosti objektu.)  
   
- V jazyce C++ operátory mohou být přetíženy, a jejich významů může být definovaný uživatelem. Však nemůže být upraven jejich prioritu a počet operandy, které budou trvat. Tato část popisuje syntaxe a sémantiku operátory jsou dodávaný s jazykem, není přetížený. Kromě [typy výrazů](../cpp/types-of-expressions.md) a [sémantika výrazů](../cpp/semantics-of-expressions.md), jsou popsané v následujících tématech:  
+ V jazyce C++ můžou být přetížené operátory a jejich význam může být definované uživatelem. Nelze však změnit jejich priorita a počet operandů, které přebírají. Tato část popisuje syntaxi a sémantiku operátorů, jako jsou dodávány s jazykem, není přetížen. Kromě [typy výrazů](../cpp/types-of-expressions.md) a [sémantika výrazů](../cpp/semantics-of-expressions.md), jsou popsané v následujících tématech:  
   
 -   [Primární výrazy](../cpp/primary-expressions.md)  
   
@@ -46,22 +46,20 @@ Tato část popisuje výrazů C++. Výrazy jsou pořadí operátory a operandy, 
   
 -   [Výrazy konstant](../cpp/cpp-constant-expressions.md)  
   
--   [Výrazy s explicitní převody typu](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
-  
 -   [Operátory přetypování](../cpp/casting-operators.md)  
   
 -   [Informace běhového typu](../cpp/run-time-type-information.md)  
   
- Témata na operátory v dalších částech:  
+ Témata operátorů v dalších částech:  
   
 -   [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
 -   [Přetížené operátory](../cpp/operator-overloading.md)  
   
--   [typeid](../windows/typeid-cpp-component-extensions.md)  
+-   [identifikátor TypeId.](../windows/typeid-cpp-component-extensions.md)  
   
     > [!NOTE]
-    >  Operátory pro vestavěné typy nemohou být přetíženy; je předdefinovaná jejich chování.  
+    >  Nemohou být přetíženy operátory pro vestavěné typy; jejich chování je předdefinovaná.  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

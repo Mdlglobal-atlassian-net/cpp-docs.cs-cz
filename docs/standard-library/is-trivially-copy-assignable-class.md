@@ -1,5 +1,5 @@
 ---
-title: is_trivially_copy_assignable třída | Microsoft Docs
+title: is_trivially_copy_assignable – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36808d375dd774286c3663a02fdc308cc4b2790
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953963"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable – třída
 
-Ověřuje, zda má tento typ operátor přiřazení trivial kopírování.
+Ověřuje, zda má typ jednoduchého dotazu kopírovacího operátoru přiřazení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,20 +36,20 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je třída, která má trivial kopie operátor přiřazení, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je třída, která má triviální operátor přiřazení kopie, jinak má hodnotu false.
 
-Přiřazení konstruktor pro třídu `T` je jednoduchá, pokud je implicitně poskytována, třída `T` nemá žádné virtuální funkce třídy `T` nemá žádné virtuální základů, mít trivial třídy všechny členy nestatické datového typu třídy operátory přiřazení a třídy všechny členy nestatické datové pole typu třídy mají operátory trivial přiřazení.
+Přiřazení konstruktor pro třídu *T* je jednoduché, pokud je implicitně určen, třída *T* nemá žádné virtuální funkce třídy *T* nemá žádné virtuální báze třídy všechny nestatické datové členy typu třídy mají operátory jednoduchého dotazu přiřazení a třídy nestatických datových členů typu pole třídy mají operátory přiřazení triviální.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

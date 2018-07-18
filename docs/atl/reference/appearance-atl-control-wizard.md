@@ -1,5 +1,5 @@
 ---
-title: Vzhled, Průvodce ovládacím prvkem ATL | Microsoft Docs
+title: Vzhled, Průvodce ovládacím prvkem ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,87 +16,86 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1d27b46f529d8423bdaf733928a9f3e46b3f185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358599"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025877"
 ---
-# <a name="appearance-atl-control-wizard"></a>Vzhled, Průvodce ovládacím prvkem knihovny ATL
-Sem vložte "Search" shrnutí výsledků.  
+# <a name="appearance-atl-control-wizard"></a>Vzhled, Průvodce ovládacím prvkem ATL
+Sem vložte "Výsledky hledání" souhrnu.  
   
- Tato stránka průvodce slouží k určení dalších možností elementu uživatele pro ovládací prvek. Tato stránka je k dispozici pro ovládací prvky identifikovat jako **standardní ovládací prvky** pod **řízení typu** na [možnosti, Průvodce ovládacím prvkem ATL](../../atl/reference/options-atl-control-wizard.md) stránky.  
+ Na této stránce průvodce k identifikaci další uživatelské možnosti elementu ovládacího prvku. Tato stránka je k dispozici pro ovládací prvky, které jsou identifikovány jako **standardní ovládací prvky** pod **ovládací prvek typu** na [možnosti, Průvodce ovládacím prvkem ATL](../../atl/reference/options-atl-control-wizard.md) stránky.  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Zobrazit stav**  
- Nastaví vzhled ovládacího prvku v kontejneru.  
+**Zobrazit stav**  
+Nastaví vzhled ovládacího prvku v rámci kontejneru.  
   
--   **Neprůhledné**: Nastaví `VIEWSTATUS_OPAQUE` bit ve [stavu](http://msdn.microsoft.com/library/windows/desktop/ms687201) výčet a nakreslí předaný rámeček celý ovládací prvek [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metoda. Ovládací prvek se zobrazí zcela neprůhledný a žádný z kontejneru zobrazí za hranicemi ovládacího prvku.  
+ -   **Neprůhledný**: Nastaví bit v VIEWSTATUS_OPAQUE [které](http://msdn.microsoft.com/library/windows/desktop/ms687201) výčet a nakreslí obdélník celý ovládací prvek předán [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metoda. Ovládací prvek zobrazí se stane zcela neprůhledný, a žádný z kontejneru za hranice ovládacího prvku.      
+      
+        Toto nastavení pomůže rychleji nakreslete ovládací prvek kontejneru. Pokud tato možnost není vybraná, může obsahovat ovládací prvek průhledné části.  
+      
+        Pouze neprůhledné ovládací prvek může mít jednobarevné pozadí.  
+      
+ -   Nastaví VIEWSTATUS_SOLIDBKGND bit ve které výčtu. Pozadí ovládacího prvku se zobrazí jako plná barva žádné vzorem.  
+      
+  Tato možnost je dostupná pouze tehdy, pokud **neprůhledné** je vybraná možnost.  
   
-     Toto nastavení pomůže rychleji vykreslení ovládacího prvku kontejneru. Pokud tuto možnost nevyberete, ovládacího prvku může obsahovat části transparentní.  
-  
-     Pouze neprůhledný ovládací prvek může mít plnou pozadí.  
-  
--   Nastaví `VIEWSTATUS_SOLIDBKGND` bit ve `VIEWSTATUS` výčtu. Pozadí ovládacího prvku se zobrazí jako plnobarevné pomocí žádné vzoru.  
-  
-     Tato možnost je dostupná pouze tehdy, pokud **neprůhledného** vybrané možnosti.  
-  
- **Přidání ovládacího prvku na základě**  
- Nastaví ovládací prvek byl založený na typu ovládacího prvku Windows přidáním [CContainedWindow](ccontainedwindowt-class.md) – datový člen třídy implementující ovládacího prvku. Také přidá mapy zpráv a funkce obslužných rutin zpráv pro zpracování zpráv systému Windows pro ovládací prvek. Vyberte ze seznamu typ ovládacího prvku systému Windows, které chcete vytvořit, pokud existuje.  
+**Přidání ovládacího prvku na základě**  
+Nastaví ovládací prvek byl založený na typu ovládacího prvku Windows tak, že přidáte [CContainedWindow](ccontainedwindowt-class.md) datový člen třídy implementující ovládací prvek. Také přidá mapy zpráv a funkce obslužné rutiny zpráv pro zpracování zpráv Windows pro ovládací prvek. Zvolte ze seznamu typ ovládacího prvku Windows, který chcete vytvořit, pokud existuje.  
 
+ -   `Button`  
+      
+ -   `ListBox`  
+      
+ -   `SysAnimate32`  
+      
+ -   `SysListView32`  
+      
+ -   `ComboBox`  
+      
+ -   `RichEdit`  
+      
+ -   `SysDateTimePick32`  
+      
+ -   `SysMonthCal32`  
+      
+ -   `ComboBoxEx32`  
+      
+ -   `ScrollBar`  
+      
+ -   `SysHeader32`  
+      
+ -   `SysTabControl32`  
+      
+ -   `Edit`  
+      
+ -   `Static`  
+      
+ -   `SysIPAddress32`  
+      
+ -   `SysTreeView32`  
   
--   `Button`  
+**Stav různé**  
+Nastaví další možnosti vzhledu a chování ovládacího prvku.  
   
--   `ListBox`  
+ -   **Neviditelné při spuštění**: Nastaví ovládací prvek v době běhu byla neviditelná. Neviditelné prvky můžete použít k provádění operací na pozadí, jako je například vyvolává události v časových intervalech.  
+      
+ -   **Slouží jako tlačítko**: Nastaví bit v OLEMISC_ACTSLIKEBUTTON [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) výčet umožňuje ovládat tak, aby fungoval jako tlačítko. Pokud kontejneru označil lokality klienta ovládacího prvku jako výchozího tlačítka, výběr této možnosti umožní zobrazení samotného jako výchozího tlačítka nakreslením samotného objektu Frame silnější ovládacího prvku tlačítka. Zobrazit [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Další informace.  
+      
+  -   **Funguje jako popisek**: Nastaví OLEMISC_ACTSLIKELABEL bit ve výčtu OLEMISC umožňuje ovládat nahradit nativní popisku kontejneru. Kontejner co dělat s Tento příznak určuje, zda cokoli.  
   
--   `SysAnimate32`  
+**Jiné**  
+Nastaví další chování možnosti pro ovládací prvek.  
   
--   `SysListView32`  
-  
--   `ComboBox`  
-  
--   `RichEdit`  
-  
--   `SysDateTimePick32`  
-  
--   `SysMonthCal32`  
-  
--   `ComboBoxEx32`  
-  
--   `ScrollBar`  
-  
--   `SysHeader32`  
-  
--   `SysTabControl32`  
-  
--   `Edit`  
-  
--   `Static`  
-  
--   `SysIPAddress32`  
-  
--   `SysTreeView32`  
-  
- **Stav – různé**  
- Nastaví další možnosti vzhled a chování pro ovládací prvek.  
-  
--   **Při spuštění neviditelná**: Nastaví ovládacího prvku v době běhu byla neviditelná. Neviditelné prvky můžete použít k provádění operací na pozadí, jako je například aktivaci událostí v určitých intervalech.  
-  
--   **Pracuje stejně jako tlačítko**: Nastaví `OLEMISC_ACTSLIKEBUTTON` bit ve [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) výčtu povolit ovládacího prvku tak, aby fungoval jako tlačítko. Pokud kontejner označila ovládacího prvku lokality klienta jako výchozího tlačítka, tato volba umožňuje zobrazit sám sebe jako výchozího tlačítka podle kreslení samotné se silnějším rámečkem ovládacího prvku tlačítka. V tématu [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Další informace.  
-  
--   **Chová jako popisek**: Nastaví `OLEMISC_ACTSLIKELABEL` bit ve `OLEMISC` výčtu povolení řízení nahradit nativní jmenovku kontejneru. Kontejner co dělat s Tento příznak určuje, zda nic.  
-  
- **Jiné**  
- Nastaví možnosti Další chování pro ovládací prvek.  
-  
--   **Normalizované DC**: Nastaví ovládacího prvku k vytvoření kontextu normalizovaný zařízení, když je volána k vykreslení sám sebe. Tato akce standardizuje vzhled ovládacího prvku, ale umožňuje méně efektivní kreslení.  
-  
--   **Okno pouze**: Určuje, že vlastní ovládací prvek nemůže být bez oken. Pokud tuto možnost nevyberete, vlastní ovládací prvek je automaticky bez oken v kontejnerech, které podporují objekty bez oken a je automaticky oddílové v kontejnerech, které nepodporují objekty bez oken. Výběrem této možnosti vynutí ovládací prvek se oddílové i v kontejnery, které podporují objekty bez oken.  
-  
--   **Vložitelný**: Vyberte tuto možnost, chcete-li ovládací prvek zobrazit v **vložit objekt** dialogové okno aplikací, jako jsou aplikace Word a Excel. Vlastní ovládací prvek může pak vložit jakékoli aplikace, která podporuje vložené objekty prostřednictvím tohoto dialogového okna.  
+ -   **Normalizované DC**: Nastaví ovládacího prvku k vytvoření normalizovaný kontext zařízení, když je volána k nakreslení sebe sama. Tím se standardizuje vzhled ovládacího prvku, ale je méně efektivní kreslení.  
+      
+ -   **Okno pouze**: Určuje, že váš ovládací prvek nemůže být bez oken. Pokud tuto možnost nevyberete, je váš ovládací prvek automaticky bez oken v kontejnerech, které podporují bez oken objekty a je automaticky oddílové v kontejnerech, které nepodporují objekty bez oken. Výběrem této možnosti způsobí, že ovládací prvek se zobrazením, dokonce i v kontejnerech, které podporují objekty bez oken.  
+      
+ -   **Vložitelný**: tuto možnost mít ovládací prvek se zobrazí v **vložit objekt** dialogového okna aplikace, jako je Word a Excel. Ovládací prvek pak může být vložen aplikací, která podporuje vložené objekty prostřednictvím tohoto dialogového okna.  
   
 ## <a name="see-also"></a>Viz také  
- [Průvodce ovládacím prvkem knihovny ATL](../../atl/reference/atl-control-wizard.md)   
- [SUBEDIT ukázka: Nadřazených tříd ovládacího prvku standardní Windows](http://msdn.microsoft.com/en-us/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md)   
+ [SUBEDIT vzorku: Nadřazených tříd ovládacího prvku standardní Windows](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
 

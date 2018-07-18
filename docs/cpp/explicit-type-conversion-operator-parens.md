@@ -1,5 +1,5 @@
 ---
-title: 'Operátor převodu explicitního typu: () | Microsoft Docs'
+title: 'Operátor převodu explicitního typu: () | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966661"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operátor převodu explicitního typu: ()
 Jazyk C++ umožňuje explicitní převod typu pomocí syntaxe podobné syntaxi volání funkce.  
@@ -34,9 +35,9 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- A *jednoduchý název typu* následuje *seznam výrazů* uzavřený v závorkách konstrukce objekt zadaného typu pomocí zadaných výrazů. Následující příklad ukazuje explicitní převod typu na typ int:  
+ A *simple-type-name* následovaný *seznam výrazů* uzavřeným v závorkách vytvoří objekt zadaného typu pomocí zadaných výrazů. Následující příklad ukazuje explicitní převod typu na typ int:  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
@@ -44,7 +45,7 @@ int i = int( d );
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>Výstup  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  Ačkoli předchozí příklad ukazuje explicitní převod typu s použitím konstant, stejný postup funguje při provádění těchto převodů s objekty. Následující fragment kódu to demonstruje:  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  Explicitní převody typu lze zadat také pomocí syntaxe „přetypování“. Předchozí příklad přepsaný pomocí syntaxe přetypování je:  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  Při převodu z jedné hodnoty vrací převody pomocí přetypování a převody stylu funkce stejné výsledky. Avšak u syntaxe stylu funkce lze zadat více než jeden argument převodu. Tento rozdíl je důležitý pro uživatelské typy. Vezměte v úvahu třídu `Point` a její převody:  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- V předchozím příkladu, který používá funkce stylu převodu, ukazuje, jak převést dvou hodnot (jednu pro *x* a jeden pro *y*) pro uživatelem definovaný typ `Point`.  
+ V předchozím příkladu, který používá převod stylu funkce, ukazuje, jak převést dvě hodnoty (jeden pro *x* a jeden pro *y*) pro uživatelem definovaný typ `Point`.  
   
 > [!CAUTION]
 >  Explicitní převody typu používejte opatrně, protože přepisují vestavěnou kontrolu typů kompilátoru jazyka C++.  
   
- [Přetypování](../cpp/cast-operator-parens.md) zápis se musí použít pro převody na typy, které nemají *jednoduchý název typu* (ukazatel nebo odkaz typy, například). Převod na typy, které může být vyjádřený s *jednoduchý název typu* může být napsán v jakémkoli tvaru. V tématu [specifikátory typu](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4) Další informace o co se považuje za *jednoduchý název typu*.  
+ [Přetypování](../cpp/cast-operator-parens.md) musí být použit zápis převody na typy, které nemají *simple-type-name* (typy ukazatelů nebo odkazů, třeba). Převod na typy, které lze vyjádřit pomocí *simple-type-name* může být napsán v obou tvarech.  
   
  Definice typu v rámci přetypování je neplatná.  
   

@@ -1,5 +1,5 @@
 ---
-title: Objekt zabezpečení třídy (ATL) | Microsoft Docs
+title: Objekt třídy zabezpečení (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355617"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953701"
 ---
-# <a name="object-safety-classes"></a>Objekt zabezpečení třídy
-Následující třídy poskytuje podporu pro objekt zabezpečení:  
+# <a name="object-safety-classes"></a>Třídy zabezpečení objektu
+Následující třída poskytuje podporu pro objekt zabezpečení:  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) umožňuje objekt tak, aby budou označeny jako bezpečné pro inicializaci nebo bezpečné pro skriptování.  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) umožňuje budou označeny jako bezpečné pro inicializaci nebo bezpečné pro skriptování.  
   
 ## <a name="related-articles"></a>Související články  
  [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

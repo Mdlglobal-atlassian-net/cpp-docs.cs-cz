@@ -1,5 +1,5 @@
 ---
-title: initializer_list třída | Microsoft Docs
+title: initializer_list – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847036"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954051"
 ---
 # <a name="initializerlist-class"></a>initializer_list – třída
 
-Poskytuje přístup k pole elementy, ve kterých je každý člen zadaného typu.
+Poskytuje přístup k poli prvků, ve kterých je každý člen zadaného typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,18 +44,18 @@ class initializer_list
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Type`|Element datový typ se neukládají v `initializer_list`.|
+|*Typ*|Typ dat prvku, který bude uložen do `initializer_list`.|
 
 
 ## <a name="remarks"></a>Poznámky
 
-`initializer_list` Lze sestavit pomocí braced inicializátoru seznamu:
+`initializer_list` Lze sestavit pomocí seznamu inicializátorů v závorkách:
 
 ```cpp
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-Kompilátor transformuje braced inicializační seznamy homogenní elementy do `initializer_list` vždy, když podpis funkce vyžaduje `initializer_list`. Další podrobnosti o použití `initializer_list`, najdete v části [jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md)
+Kompilátor převede seznamy inicializátorů v závorkách se homogenní prvky do `initializer_list` vždy, když se podpis funkce vyžaduje `initializer_list`. Další podrobnosti o použití `initializer_list`, naleznete v tématu [jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md)
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -67,30 +67,30 @@ Kompilátor transformuje braced inicializační seznamy homogenní elementy do `
 
 |Název typu|Popis|
 |-|-|
-|value_type|Typ elementů v `initializer_list`.|
-|reference|Typ, který obsahuje odkaz na element v `initializer_list`.|
-|const_reference|Typ, který poskytuje konstantní odkaz na element v `initializer_list`.|
-|size_type|Typ, který reprezentuje počet elementů ve `initializer_list`.|
-|iterátor|Typ, který poskytuje iterace pro `initializer_list`.|
-|const_iterator|Typ, který poskytuje konstantní iterator pro `initializer_list`.|
+|value_type|Typ prvků v `initializer_list`.|
+|reference|Typ, který poskytuje odkaz na prvek v `initializer_list`.|
+|const_reference|Typ, který poskytuje konstantní odkaz na prvek v `initializer_list`.|
+|size_type|Typ, který představuje počet prvků v `initializer_list`.|
+|iterátor|Typ, který poskytuje iterátor pro `initializer_list`.|
+|const_iterator|Typ, který poskytuje konstantní iterátor pro `initializer_list`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Začátek](#begin)|Vrací ukazatel na prvním elementem v `initializer_list`.|
-|[End](#end)|Vrací ukazatel na jednu po posledním prvkem v `initializer_list`.|
+|[začít](#begin)|Vrací ukazatel na první prvek v `initializer_list`.|
+|[ukončení](#end)|Vrací ukazatel na jedno místo za posledním prvkem v `initializer_list`.|
 |[Velikost](#size)|Vrátí počet prvků v `initializer_list`.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<initializer_list >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="begin"></a>  initializer_list::begin
 
-Vrací ukazatel na prvním elementem v `initializer_list`.
+Vrací ukazatel na první prvek v `initializer_list`.
 
 ```cpp
 constexpr const InputIterator* begin() const noexcept;
@@ -98,13 +98,13 @@ constexpr const InputIterator* begin() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na první prvek `initializer_list`. Pokud je seznam prázdný, ukazatele je stejný pro začátek a konec seznamu.
+Ukazatel na první prvek `initializer_list`. Pokud je seznam prázdný, ukazatel je stejný jako začátek a konec seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="end"></a>  initializer_list::end
 
-Vrací ukazatel na jednu po posledním prvkem v `initializer list`.
+Vrací ukazatel na jedno místo za posledním prvkem v `initializer list`.
 
 ```cpp
 constexpr const InputIterator* end() const noexcept;
@@ -112,7 +112,7 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na jednu po posledním prvkem v seznamu. Pokud je seznam prázdný, je to stejné jako má ukazatel na prvním elementem v seznamu.
+Ukazatel na jedno místo za posledním prvkem v seznamu. Pokud je seznam prázdný, to je stejný jako ukazatel na první prvek v seznamu.
 
 ## <a name="initializer_list"></a>  initializer_list::initializer_list
 
@@ -127,12 +127,12 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`First`|Pozice první prvek v rozsahu elementy, které se mají zkopírovat.|
-|`Last`|Pozice první prvek mimo rozsah elementy, které se mají zkopírovat.|
+|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
+|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
 
 ### <a name="remarks"></a>Poznámky
 
-`initializer_list` Je založena na pole objektů zadaného typu. Kopírování `initializer_list` vytvoří druhou instanci seznamu odkazující na stejné objekty; základní objekty nejsou zkopírovány.
+`initializer_list` Je založen na poli objektů zadaného typu. Kopírování `initializer_list` vytvoří druhou instanci seznamu ukazující na stejné objekty; objekty nejsou zkopírovány.
 
 ### <a name="example"></a>Příklad
 
@@ -207,10 +207,10 @@ constexpr size_t size() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet elementů v seznamu.
+Počet prvků v seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<forward_list>](../standard-library/forward-list.md)<br/>

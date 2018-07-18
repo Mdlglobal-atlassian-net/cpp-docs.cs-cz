@@ -1,5 +1,5 @@
 ---
-title: input_iterator_tag – struktura | Microsoft Docs
+title: input_iterator_tag – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797bc6353bd7396d409de073cc412480a803117f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95e2713f3c73a3dc35c11be8d245ede94b2c3bba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953976"
 ---
 # <a name="inputiteratortag-struct"></a>input_iterator_tag – struktura
 
-Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje vstupní iterator.
+Třída, která poskytuje návratový typ pro `iterator_category` funkce, která představuje iterátor vstupu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,21 +34,21 @@ input_iterator_tag – struktura {};
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy značky kategorie se používají jako zkompilovat značky pro výběr algoritmů. Funkce šablony musí najít nejvíce určitou kategorii její argument iterator tak, aby v době kompilace může použít algoritmus maximální efektivitou. Pro každý iterator typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category –** musí být definován jako nejvíce značky kategorii, která popisuje iteraci chování.
+Kategorie značky tříd se používají při kompilaci značky pro algoritmus výběru. Funkce šablony musí najít nejspecifičtější kategorie svůj argument iterátoru tak, aby ho používat co nejúčinnější algoritmus v době kompilace. Pro každý iterátor typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category** musí být definovány nejspecifičtější značky kategorii, která popisuje chování iterátoru.
 
-Typ je stejný jako **iterator** \< **Iter**> **:: iterator_category –** při **Iter** popisuje objekt, který může sloužit jako vstupní iterator.
+Typ je stejný jako **iterátoru** \< **Iter**> **:: iterator_category** při `Iter` popisuje objekt, který může sloužit jako vstupní iterátor.
 
 ## <a name="example"></a>Příklad
 
-V tématu [iterator_traits –](../standard-library/iterator-traits-struct.md) nebo [random_access_iterator_tag –](../standard-library/random-access-iterator-tag-struct.md) příklad použití **iterator_tag**s.
+Zobrazit [iterator_traits –](../standard-library/iterator-traits-struct.md) nebo [random_access_iterator_tag –](../standard-library/random-access-iterator-tag-struct.md) příklad, jak používat `iterator_tag`s.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: MFC MBCS DLL – doplněk | Microsoft Docs
+title: MFC MBCS DLL – doplněk | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 1/04/2018
 ms.technology:
@@ -14,22 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efcfac98c5ff36f84ec0b7c4d2fbd6ff40cbb0d4
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: aa6840fe54478b88e201dd09950917b95c7a1cc4
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239447"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025731"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL – doplněk
 
-Podpora MFC a knihovny jeho vícebajtové znakové sady MBCS vyžaduje další krok při instalaci sady Visual Studio ve Visual Studiu 2013 se 2015 a 2017.
+Podpora knihovny MFC a knihovny vícebajtovou znakovou sadu (MBCS) během instalace sady Visual Studio v sadě Visual Studio 2013, 2015 a 2017 vyžaduje další krok.
 
-**Visual Studio 2013**: ve výchozím nastavení, knihovny MFC nainstalován v sadě Visual Studio 2013 podporují pouze vývoj kódování Unicode. Potřebujete MBCS dll k sestavení projektu knihovny MFC ve Visual Studiu 2013, který má **znaková sada** vlastnost nastavena na hodnotu **použití vícebajtové znakové sady** nebo **není nastavena**. Stáhnout knihovny DLL na [vícebajtové MFC knihovny pro Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770).
+**Visual Studio 2013**: ve výchozím nastavení, knihovny MFC, nainstalovaná v sadě Visual Studio 2013 podporují jenom vývoj kódování Unicode. Knihovny DLL znakové sady MBCS je nutné k vytvoření projektu knihovny MFC v sadě Visual Studio 2013, který má **znaková sada** vlastnost nastavena na hodnotu **použít vícebajtovou znakovou sadu** nebo **Nenastaveno**. Stáhněte si knihovny DLL v [vícebajtová knihovna MFC pro sadu Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770).
 
-**Visual Studio 2015**: jak kódování Unicode a MBCS MFC – knihovny DLL jsou součástí Visual C++ součástí instalace, ale podpora MFC není nainstalována ve výchozím nastavení. Visual C++ a rozhraní MFC jsou volitelné instalace konfigurace v instalačním programu sady Visual Studio. Chcete-li mít jistotu, že je nainstalována MFC, zvolte **vlastní** v instalačním programu a v části **programovací jazyky**, ujistěte se, že **Visual C++** a **Microsoft Foundation Třídy pro jazyk C++** jsou vybrány. Pokud jste již nainstalovali Visual Studio, budete vyzváni k instalaci Visual C++ nebo MFC, při pokusu o vytvoření projektu knihovny MFC.
+**Visual Studio 2015**: jak kódování Unicode a MBCS MFC DLL jsou součástí instalace součásti Visual C++, ale podpora knihovny MFC není nainstalovaný ve výchozím nastavení. Visual C++ a knihovnou MFC jsou konfigurace volitelná instalace v instalačním programu sady Visual Studio. Chcete-li mít jistotu, že je nainstalovaná knihovny MFC, zvolte **vlastní** v instalačním programu a v části **programovací jazyky**, ujistěte se, že **Visual C++** a **Microsoft Foundation Třídy jazyka C++** jsou vybrány. Pokud jste již nainstalovali Visual Studio, budete vyzváni k instalaci Visual C++ a/nebo knihovny MFC, při pokusu o vytvoření projektu knihovny MFC.
 
-**Visual Studio 2017**: kódování Unicode a MBCS MFC – knihovny DLL, které jsou nainstalovány s **vývoj aplikací s jazykem C++** zatížení při výběru **MFC a knihovna ATL podporují** z **volitelné Součásti** podokně. Pokud vaše instalace neobsahuje tyto součásti, přejděte na **souboru | Nové projekty** dialogové okno a kliknutím **otevřete instalační program Visual Studio** odkaz.
+**Visual Studio 2017**: kódování Unicode a MBCS MFC DLL se instalují s **vývoj desktopových aplikací pomocí C++** zatížení při výběru **podporu knihovny MFC a ATL** z **volitelné Součásti** podokně. Pokud není instalace těchto součástí, přejděte **soubor | Nové projekty** dialogové okno a kliknutím **otevřít instalační program Visual Studio** odkaz.
 
 ## <a name="see-also"></a>Viz také:
 

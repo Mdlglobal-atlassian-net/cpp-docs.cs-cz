@@ -1,5 +1,5 @@
 ---
-title: _SECURE_SCL | Microsoft Docs
+title: _SECURE_SCL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e7153fa77c7a0aa213bfb01587f2ea080c6ddd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6a9fa05a4cb8c421a511a30fd62310d69003fde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966430"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
-Nahrazeno [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), definuje tato makro zda [zaškrtnutí iterátory](../standard-library/checked-iterators.md) jsou povoleny. Ve výchozím nastavení jsou checked – iterátory povoleno v sestavení pro ladění a v sestavení prodejní zakázáno.
+Nahrazeno [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), tato makra definuje, jestli [Checked Iterators](../standard-library/checked-iterators.md) jsou povolené. Ve výchozím nastavení jsou kontrolované iterátory povoleno v sestaveních ladění a v prodejní buildy zakázáno.
 
 > [!IMPORTANT]
-> Přímé použití `_SECURE_SCL` makro je zastaralý. Místo toho použijte `_ITERATOR_DEBUG_LEVEL` řídit nastavení zaškrtnuté iterator. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Přímé použití makra _SECURE_SCL je zastaralé. Místo toho použijte _ITERATOR_DEBUG_LEVEL nastavení iterátoru zaškrtnutí ovládacího prvku. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Po checked – iterátory povoleno, unsafe iterator použití způsobí, že chyba za běhu a program bude ukončen. Chcete-li povolit checked – iterátory, nastavte `_ITERATOR_DEBUG_LEVEL` 1 nebo 2. Jde o ekvivalent `_SECURE_SCL` nastavení 1 nebo povoleno:
+Při checked – iterátory jsou povolené, nebezpečné používání iterátorů způsobí chybu modulu runtime a program se ukončí. Pokud chcete povolit kontrolované iterátory, nastavte _ITERATOR_DEBUG_LEVEL na 1 nebo 2. To je ekvivalentní nastavení _SECURE_SCL 1 nebo povoleno:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-Chcete-li zakázat checked – iterátory, nastavte `_ITERATOR_DEBUG_LEVEL` na hodnotu 0. Jde o ekvivalent `_SECURE_SCL` nastavení 0 nebo vypne:
+Pokud chcete zakázat kontrolované iterátory, nastavit _ITERATOR_DEBUG_LEVEL na hodnotu 0. To je ekvivalentní nastavení _SECURE_SCL 0 nebo zakázané:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0
 ```
 
-Informace o tom, jak zakázat upozornění o checked – iterátory najdete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
+Informace o tom, jak zakázat varování o kontrolovaných iterátorech naleznete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
 [Checked – iterátory](../standard-library/checked-iterators.md)<br/>

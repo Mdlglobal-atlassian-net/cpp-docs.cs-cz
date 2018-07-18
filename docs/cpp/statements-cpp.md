@@ -1,5 +1,5 @@
 ---
-title: Příkazy (C++) | Microsoft Docs
+title: Příkazy (C++) | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422778"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025754"
 ---
 # <a name="statements-c"></a>Příkazy (C++)
 Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s objekty manipulováno. Tato část obsahuje:  
@@ -30,9 +30,9 @@ Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s obje
   
 -   Kategorie příkazů  
   
-    -   [Příkazy výrazu](../cpp/expression-statement.md). Tyto příkazy vyhodnotí výraz na jeho vedlejší účinky nebo jeho návratovou hodnotu.  
+    -   [Příkazy výrazů](../cpp/expression-statement.md). Tyto příkazy vyhodnotí výraz na jeho vedlejší účinky nebo jeho návratovou hodnotu.  
   
-    -   [Hodnota Null, příkazy](../cpp/null-statement.md). Tyto příkazy mohou být poskytnuty v případě, že je syntaxí jazyka C++ vyžadován příkaz, ale není třeba provést žádnou akci.  
+    -   [Příkazy Null](../cpp/null-statement.md). Tyto příkazy mohou být poskytnuty v případě, že je syntaxí jazyka C++ vyžadován příkaz, ale není třeba provést žádnou akci.  
   
     -   [Složené příkazy](../cpp/compound-statements-blocks.md). Tyto příkazy jsou skupiny příkazů, které jsou uzavřeny ve složených závorkách ({ }). Lze je použít všude, kde je možné použít jeden příkaz.  
   
@@ -42,9 +42,9 @@ Příkazy C++ jsou prvky programu určující, jak a v jakém pořadí je s obje
   
     -   [Jump – příkazy](../cpp/jump-statements-cpp.md). Tyto příkazy buď předají řízení na jiné místo ve funkci, nebo vrátí řízení z funkce.  
   
-    -   [Deklarační příkazy](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9). Deklarace zavádějí do programu název. ([Deklarace a definice](declarations-and-definitions-cpp.md) poskytuje podrobnější informace o deklaracích.)  
+    -   [Příkazy deklarace](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Deklarace zavádějí do programu název. ([Deklarace a definice](declarations-and-definitions-cpp.md) poskytuje podrobnější informace o deklaracích.)  
   
- Informace o příkazy zpracování výjimek v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).  
+ Informace o příkazy zpracování výjimek naleznete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

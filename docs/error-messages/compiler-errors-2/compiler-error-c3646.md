@@ -1,7 +1,7 @@
 ---
-title: C3646 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3646 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,27 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0a7f16b54d2a06586bdb4c26c87dbcf9ae7b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c038520c1a35fa5264e1e98b074687efb336d028
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "35658608"
 ---
-# <a name="compiler-error-c3646"></a>C3646 chyby kompilátoru
-'specifikátor': Neznámý přepsání specifikátor  
-  
- Kompilátor nalezen token v pozice, kdy se očekává nalezení specifikátor přepsání, ale token nebyl rozpoznán překladačem.  
-  
- Další informace najdete v tématu [přepsat specifikátory](../../windows/override-specifiers-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3646:  
-  
-```  
-// C3646.cpp  
-// compile with: /clr /c  
-ref class C {  
-   void f() unknown;   // C3646  
-   // try the following line instead  
-   // virtual void f() abstract;  
-};  
+# <a name="compiler-error-c3646"></a>Chyba kompilátoru C3646
+
+> "specifikátor": Neznámý specifikátor override
+
+## <a name="remarks"></a>Poznámky
+
+Kompilátor nalezen token na pozici, kde se očekávalo se nalezení specifikátor přepisu, ale token, který nebyl rozpoznán kompilátorem.
+
+Například pokud nerozpoznané *specifikátor* je **_NOEXCEPT**, nahraďte ho s klíčovým slovem **noexcept**.
+
+Další informace najdete v tématu [specifikátory přepisu](../../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3646 a ukazuje způsob, jak ho opravit:
+
+```cpp
+// C3646.cpp
+// compile with: /clr /c
+ref class C {
+   void f() unknown;   // C3646
+   // try the following line instead
+   // virtual void f() abstract;
+};
 ```

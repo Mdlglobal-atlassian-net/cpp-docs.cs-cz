@@ -1,7 +1,7 @@
 ---
-title: Comptr::asiid – metoda | Microsoft Docs
+title: Comptr::asiid – metoda | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870087"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025900"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID – metoda
-Vrátí objekt ComPtr, který představuje rozhraní identifikovaný ID specifikované rozhraní.  
+Vrátí objekt comptr –, který představuje rozhraní, které identifikují pomocí ID zadané rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,10 +41,10 @@ WRL_NOTHROW HRESULT AsIID(
  Identifikátor rozhraní.  
   
  `p`  
- Pokud podporován, dvakrát nepřímý ukazatel na rozhraní zadané `riid` parametr, jinak hodnota ukazatel IUnknown.  
+ Pokud objekt má rozhraní, jejichž ID se rovná `riid`, dvakrát nepřímé ukazatel na rozhraní určené typem `riid` parametr; jinak vrátí hodnotu, ukazatel na rozhraní IUnknown.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK v případě úspěšného; jinak hodnota HRESULT určující chyba.  
+ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: Less – struktura | Microsoft Docs
+title: Less – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac4528c976e99a77ceec8bc170323846a0e3a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858913"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954352"
 ---
 # <a name="less-struct"></a>less – struktura
 
-Predikát binární, který provádí je menší – než operaci ( `operator<`) na její argumenty.
+Binární predikát, který provádí méně – než operace (`operator<`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,19 +49,19 @@ struct less<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Žádný typ, který podporuje `operator<` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* libovolný typ, který podporuje `operator<` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand je menší – než operaci. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand je menší – než operaci. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left < Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator<`.
+Výsledek `Left < Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator<`.
 
 ## <a name="remarks"></a>Poznámky
 
-Binární predikát `less` <  `Type`> poskytuje striktní slabé řazení sady hodnot element typu `Type` do třídy ekvivalenční jenom v případě tohoto typu splňuje požadavky na standardní matematické pro proto řazen. Specializací pro jakýkoli typ ukazatele yield celkový řazení elementů v tom, že všechny elementy odlišné hodnoty jsou seřazené s ohledem na sebe navzájem.
+Binární predikát `less` <  `Type`> poskytuje přísné slabé seřazení sady hodnot prvků typu *typ* na rovnocennost třídy pouze v případě tento typ splňuje standard matematické požadavky na seřadí se tak. Specializace pro libovolný typ ukazatele yield celkového pořadí prvků, v tom, že všechny prvky různých hodnot jsou uspořádány ve vztahu mezi sebou.
 
 ## <a name="example"></a>Příklad
 
@@ -119,8 +119,8 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

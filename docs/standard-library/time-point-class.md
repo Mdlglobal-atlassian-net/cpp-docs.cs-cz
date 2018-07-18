@@ -1,5 +1,5 @@
 ---
-title: time_point – třída | Microsoft Docs
+title: time_point – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865561"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954257"
 ---
 # <a name="timepoint-class"></a>time_point – třída
 
-A `time_point` popisuje typ, který reprezentuje bod v čase. Drží objekt typu [doba trvání](../standard-library/duration-class.md) , ukládá uplynulý čas od epoch, která je reprezentována argument šablony `Clock`.
+A `time_point` popisuje typ, který představuje bod v čase. Obsahuje objekt typu [doba trvání](../standard-library/duration-class.md) , který ukládá čas uběhlý od epochy, která je reprezentována argument šablony `Clock`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ class time_point;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
 |Název|Popis|
 |----------|-----------------|
@@ -60,26 +60,26 @@ class time_point;
 
 |Název|Popis|
 |----------|-----------------|
-|[max](#max)|Určuje horní omezení pro `time_point::ref`.|
-|[Min.](#min)|Určuje dolní limit pro `time_point::ref`.|
-|[time_since_epoch](#time_since_epoch)|Vrátí uložené `duration` hodnotu.|
+|[max](#max)|Určuje horní mez pro `time_point::ref`.|
+|[min](#min)|Určuje dolní mez pro `time_point::ref`.|
+|[time_since_epoch](#time_since_epoch)|Vrátí uloženou `duration` hodnotu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[time_point::operator+=](#op_add_eq)|Přidá zadanou hodnotu do uložené doba trvání.|
-|[time_point::operator-=](#operator-_eq)|Odečte zadanou hodnotu z uložené doba trvání.|
+|[time_point::operator+=](#op_add_eq)|Přidá zadanou hodnotu k uložené hodnotě trvání.|
+|[time_point::operator-=](#operator-_eq)|Odečte zadanou hodnotu od uložené hodnoty duration.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<typu chrono >
+**Záhlaví:** \<chrono >
 
 **Namespace:** std::chrono
 
 ## <a name="max"></a>  time_point::max –
 
-Statickou metodu, která vrací horní mez pro hodnoty typu `time_point::ref`.
+Statická metoda, která vrátí horní mez pro hodnoty typu `time_point::ref`.
 
 ```cpp
 static constexpr time_point max();
@@ -91,7 +91,7 @@ V důsledku toho vrátí `time_point(duration::max())`.
 
 ## <a name="min"></a>  time_point::min –
 
-Statickou metodu, která vrací dolní mez pro hodnoty typu `time_point::ref`.
+Statická metoda, která vrátí dolní mez pro hodnoty typu `time_point::ref`.
 
 ```cpp
 static constexpr time_point min();
@@ -103,7 +103,7 @@ V důsledku toho vrátí `time_point(duration::min())`.
 
 ## <a name="op_add_eq"></a>  time_point::Operator +=
 
-Přidá zadanou hodnotu uložené [doba trvání](../standard-library/duration-class.md) hodnotu.
+Přidá zadanou hodnotu k uložené [doba trvání](../standard-library/duration-class.md) hodnotu.
 
 ```cpp
 time_point& operator+=(const duration& Dur);
@@ -111,15 +111,16 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-`Dur` A `duration` objektu.
+*Doba trvání*  
+ A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`time_point` Objektu po přidání provádí.
+`time_point` Objektu po provedení sčítání.
 
 ## <a name="time_point__operator-_eq"></a>  time_point::Operator-=
 
-Odečte zadanou hodnotu z uložené [doba trvání](../standard-library/duration-class.md) hodnotu.
+Odečte zadanou hodnotu od uložené [doba trvání](../standard-library/duration-class.md) hodnotu.
 
 ```cpp
 time_point& operator-=(const duration& Dur);
@@ -127,11 +128,12 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-`Dur` A `duration` objektu.
+*Doba trvání*  
+ A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`time_point` Objektu po provedení odčítání.
+`time_point` Objektu po provedení odečtení.
 
 ## <a name="time_point"></a>  time_point::time_point – konstruktor
 
@@ -148,27 +150,29 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parametry
 
-`Dur` A [doba trvání](../standard-library/duration-class.md) objektu.
+*Doba trvání*  
+ A [doba trvání](../standard-library/duration-class.md) objektu.
 
-`Tp` A `time_point` objektu.
+*Zpracování transakcí*  
+ A `time_point` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktoru vytvoří objekt jehož uložené `duration` hodnota se rovná [DURATION::Zero –](../standard-library/duration-class.md#zero).
+První konstruktor vytvoří objekt, jehož uložené `duration` hodnota se rovná [duration::zero](../standard-library/duration-class.md#zero).
 
-Druhý konstruktor vytvoří objekt, jehož uložené trvání hodnota se rovná `Dur`. Pokud `is_convertible<Duration2, duration>` *platí*, druhý konstruktor neúčastní rozlišení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
+Druhý konstruktor vytvoří objekt, jehož uložená hodnota trvání je rovna *doba trvání*. Není-li `is_convertible<Duration2, duration>` *platí*, druhý konstruktor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
 
-Třetí konstruktor inicializuje jeho `duration` hodnotu pomocí `Tp.time_since_epoch()`.
+Třetí konstruktor inicializuje jeho `duration` hodnotu s použitím `Tp.time_since_epoch()`.
 
 ## <a name="time_since_epoch"></a>  time_point::time_since_epoch –
 
-Načte uložené [doba trvání](../standard-library/duration-class.md) hodnotu.
+Načte uloženou [doba trvání](../standard-library/duration-class.md) hodnotu.
 
 ```cpp
 constexpr duration time_since_epoch() const;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<chrono>](../standard-library/chrono.md)<br/>

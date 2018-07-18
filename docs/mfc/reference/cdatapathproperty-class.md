@@ -1,5 +1,5 @@
 ---
-title: Třída CDataPathProperty | Microsoft Docs
+title: Cdatapathproperty – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e274a3fabf10e96aec41a92bb484f4ebcc5bf377
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 164742ea39f92194a3354ae24a90eeff9512f59c
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335968"
 ---
-# <a name="cdatapathproperty-class"></a>CDataPathProperty – třída
-Implementuje OLE řídit vlastnost, která mohou být načteny asynchronně.  
+# <a name="cdatapathproperty-class"></a>Cdatapathproperty – třída
+Implementuje ovládacího prvku OLE vlastnost, která lze načíst asynchronně.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,17 +58,17 @@ class CDataPathProperty : public CAsyncMonikerFile
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDataPathProperty::GetControl](#getcontrol)|Načte asynchronní OLE ovládací prvek související s `CDataPathProperty` objektu.|  
+|[CDataPathProperty::GetControl](#getcontrol)|Načte přidružený ovládací prvek asynchronní OLE `CDataPathProperty` objektu.|  
 |[CDataPathProperty::GetPath](#getpath)|Načte vlastnosti názvu cesty.|  
-|[CDataPathProperty::Open](#open)|Zahájí načítání asynchronní vlastnosti přidružené ovládacího prvku ActiveX (OLE).|  
-|[CDataPathProperty::ResetData](#resetdata)|Volání `CAsyncMonikerFile::OnDataAvailable` oznámit kontejneru, které se změnily vlastnosti ovládacích prvků.|  
-|[CDataPathProperty::SetControl](#setcontrol)|Nastaví asynchronní ovládací prvek ActiveX (OLE) související s vlastností.|  
-|[CDataPathProperty::SetPath](#setpath)|Nastaví vlastnosti názvu cesty.|  
+|[CDataPathProperty::Open](#open)|Iniciuje asynchronní vlastnosti ovládacího prvku ActiveX (OLE) přidružené načítání.|  
+|[CDataPathProperty::ResetData](#resetdata)|Volání `CAsyncMonikerFile::OnDataAvailable` oznámit kontejneru, který jste změnili vlastnosti ovládacího prvku.|  
+|[CDataPathProperty::SetControl](#setcontrol)|Nastaví asynchronní ovládacího prvku ActiveX (OLE) přidružený k vlastnosti.|  
+|[CDataPathProperty::SetPath](#setpath)|Nastaví cestu vlastnosti.|  
   
 ## <a name="remarks"></a>Poznámky  
- Po spuštění synchronní jsou načteny asynchronní vlastnosti.  
+ Asynchronní vlastnosti jsou načteny po zahájení synchronní.  
   
- Třída `CDataPathProperty` je odvozený od `CAysncMonikerFile`. Implementovat asynchronní vlastnosti v ovládacích prvků OLE, odvození třídy z `CDataPathProperty`a přepsat [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).  
+ Třída `CDataPathProperty` je odvozen z `CAysncMonikerFile`. K implementaci asynchronního vlastnosti v ovládací prvky OLE, odvoďte třídu z `CDataPathProperty`a přepsat [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).  
   
  Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací najdete v následujících článcích:  
   
@@ -77,15 +77,15 @@ class CDataPathProperty : public CAsyncMonikerFile
 - [Internetu první kroky: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [Cfile –](../../mfc/reference/cfile-class.md)  
   
- [COleStreamFile](../../mfc/reference/colestreamfile-class.md)  
+ [Colestreamfile –](../../mfc/reference/colestreamfile-class.md)  
   
- [CMonikerFile](../../mfc/reference/cmonikerfile-class.md)  
+ [Cmonikerfile –](../../mfc/reference/cmonikerfile-class.md)  
   
- [CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)  
+ [Casyncmonikerfile –](../../mfc/reference/casyncmonikerfile-class.md)  
   
  `CDataPathProperty`  
   
@@ -105,33 +105,33 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
  Ukazatel na objekt ovládacího prvku OLE mají být spojeny s tímto `CDataPathProperty` objektu.  
   
  *lpszPath*  
- Cesta, která může být absolutní nebo relativní, použít k vytvoření asynchronní přezdívka, který odkazuje na skutečnou absolutní umístění vlastnosti. `CDataPathProperty` adresy URL, ne názvy souborů používá. Pokud chcete `CDataPathProperty` objektu pro soubor, předřadit `file://` k cestě.  
+ Cesty, která může být absolutní nebo relativní, je použít k vytvoření asynchronní monikeru, který odkazuje na aktuální absolutní umístění vlastnost. `CDataPathProperty` pomocí adresy URL, ne názvy souborů. Pokud chcete, aby `CDataPathProperty` objektu pro soubor, předřaďte `file://` k cestě.  
   
 ### <a name="remarks"></a>Poznámky  
- `COleControl` Objektu na kterou odkazuje `pControl` používá `Open` a načíst odvozené třídy. Pokud *pControl* je **NULL**, ovládací prvek použít s `Open` musí být nastavená s `SetControl`. Pokud `lpszPath` je **NULL**, můžete předat v cestě prostřednictvím `Open` nebo nastavte její `SetPath`.  
+ `COleControl` Objekt, který odkazuje *pControl* používá `Open` a načíst z odvozených tříd. Pokud *pControl* má hodnotu NULL, ovládací prvek použitý s `Open` by měla být nastavena s `SetControl`. Pokud *lpszPath* má hodnotu NULL, můžete předat cestu prostřednictvím `Open` nebo ji nastavte `SetPath`.  
   
 ##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
- Volání této funkce člen načíst `COleControl` objekt přidružený k `CDataPathProperty` objektu.  
+ Voláním této členské funkce k načtení `COleControl` objekt přidružený k `CDataPathProperty` objektu.  
   
 ```  
 COleControl* GetControl();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí přidružený ukazatel do ovládacího prvku OLE `CDataPathProperty` objektu. **NULL** Pokud není ovládací prvek je spojen.  
+ Vrátí přidružený ukazatel na ovládací prvek OLE `CDataPathProperty` objektu. Hodnota NULL, pokud není ovládací prvek souvisí.  
   
 ##  <a name="getpath"></a>  CDataPathProperty::GetPath  
- Volání této funkce člen chcete načíst cestu, nastavte, kdy `CDataPathProperty` objekt byl vytvořený, nebo zadaný v `Open`, nebo je zadána v předchozích volání `SetPath` – členská funkce.  
+ Zavolat tuto členskou funkci, chcete-li načíst cestu, nastavit, když `CDataPathProperty` objekt byl vytvořen nebo podle `Open`, zadané v předchozí volání nebo `SetPath` členskou funkci.  
   
 ```  
 CString GetPath() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí název cesty přímo pro vlastnost. Může být prázdný, pokud nebyla zadána žádná cesta.  
+ Vrátí cestu k samotné vlastnosti. Může být prázdný, pokud nebyla zadána žádná cesta.  
   
 ##  <a name="open"></a>  CDataPathProperty::Open  
- Volání této funkce člen zahájíte načítání asynchronní vlastnosti pro související ovládací prvek.  
+ Voláním této členské funkce k zahájení načítání asynchronní vlastnosti pro přidružený ovládací prvek.  
   
 ```  
 virtual BOOL Open(
@@ -157,35 +157,35 @@ virtual BOOL Open(CFileException* pError = NULL);
  Ukazatel na objekt ovládacího prvku OLE mají být spojeny s tímto `CDataPathProperty` objektu.  
   
  *pError*  
- Ukazatel na výjimky souborů. V případě chyby bude nastavena pro příčinu.  
+ Ukazatel na soubor výjimku. V případě chyby nastaví se na příčinu.  
   
  *lpszPath*  
- Cesta, která může být absolutní nebo relativní, použít k vytvoření asynchronní přezdívka, který odkazuje na skutečnou absolutní umístění vlastnosti. `CDataPathProperty` adresy URL, ne názvy souborů používá. Pokud chcete `CDataPathProperty` objektu pro soubor, předřadit `file://` k cestě.  
+ Cesty, která může být absolutní nebo relativní, je použít k vytvoření asynchronní monikeru, který odkazuje na aktuální absolutní umístění vlastnost. `CDataPathProperty` pomocí adresy URL, ne názvy souborů. Pokud chcete, aby `CDataPathProperty` objektu pro soubor, předřaďte `file://` k cestě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
  Funkce se pokusí získat `IBindHost` rozhraní z ovládacího prvku.  
   
- Před voláním `Open` bez cesty, musí být nastavena hodnota vlastnosti cesty. To lze provést, pokud je objekt vytvořený, nebo při volání `SetPath` – členská funkce.  
+ Před voláním `Open` bez cesty, musí být nastavena hodnota pro cestu vlastnosti. To můžete udělat, když je objekt vytvořený, nebo pomocí volání `SetPath` členskou funkci.  
   
- Před voláním `Open` bez řízení, může být přidružený k objektu ovládacího prvku ActiveX (dříve označované jako ovládací prvek OLE). To lze provést, pokud je objekt vytvořený, nebo voláním `SetControl`.  
+ Před voláním `Open` bez ovládací prvek může být přidružený k objektu ovládacího prvku ActiveX (dříve označované jako ovládací prvek OLE). To můžete udělat, když je objekt vytvořený, nebo pomocí volání `SetControl`.  
   
- Všechny přetížení [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) jsou dostupné i z `CDataPathProperty`.  
+ Všechna přetížení [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) jsou dostupné i z `CDataPathProperty`.  
   
 ##  <a name="resetdata"></a>  CDataPathProperty::ResetData  
- Volání této funkce můžete získat `CAsyncMonikerFile::OnDataAvailable` kontejneru upozornit, že vlastnosti ovládacích prvků změnily, a všechny informace načíst asynchronně již není používána.  
+ Voláním této funkce získáte `CAsyncMonikerFile::OnDataAvailable` kontejneru upozornit, že jste změnili vlastnosti ovládacích prvků a všechny informace, které jsou načítána asynchronně již není používána.  
   
 ```  
 virtual void ResetData();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Otevírání by měla být restartována. Odvozené třídy mohou přepsat tuto funkci pro různé výchozí hodnoty.  
+ Otevření by měla být restartována. Odvozené třídy mohou přepsat tuto funkci pro různé výchozí hodnoty.  
   
 ##  <a name="setcontrol"></a>  CDataPathProperty::SetControl  
- Volání této funkce člen přidružit prvek asynchronní OLE s `CDataPathProperty` objektu.  
+ Voláním této členské funkce pro přidružení asynchronní ovládací prvek OLE se `CDataPathProperty` objektu.  
   
 ```  
 void SetControl(COleControl* pControl);
@@ -193,10 +193,10 @@ void SetControl(COleControl* pControl);
   
 ### <a name="parameters"></a>Parametry  
  *pControl*  
- Ukazatel na asynchronní ovládací prvek OLE být přidružená vlastnost.  
+ Ukazatel na asynchronní ovládací prvek OLE má být přidružena k vlastnosti.  
   
 ##  <a name="setpath"></a>  CDataPathProperty::SetPath  
- Volání této funkce člen k nastavení názvu cesty vlastnosti.  
+ Voláním této členské funkce pro nastavení vlastnosti názvu cesty.  
   
 ```  
 void SetPath(LPCTSTR lpszPath);
@@ -204,10 +204,10 @@ void SetPath(LPCTSTR lpszPath);
   
 ### <a name="parameters"></a>Parametry  
  *lpszPath*  
- Cesta, která může být absolutní nebo relativní pro vlastnost načítá asynchronně. `CDataPathProperty` adresy URL, ne názvy souborů používá. Pokud chcete `CDataPathProperty` objektu pro soubor, předřadit `file://` k cestě.  
+ Cesta, která může být absolutní nebo relativní k vlastnosti načítán asynchronně. `CDataPathProperty` pomocí adresy URL, ne názvy souborů. Pokud chcete, aby `CDataPathProperty` objektu pro soubor, předřaďte `file://` k cestě.  
   
 ## <a name="see-also"></a>Viz také  
- [Obrázek ukázkové MFC](../../visual-cpp-samples.md)   
- [CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)   
+ [Obrázek ukázky knihovny MFC](../../visual-cpp-samples.md)   
+ [Casyncmonikerfile – třída](../../mfc/reference/casyncmonikerfile-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CAsyncMonikerFile – třída](../../mfc/reference/casyncmonikerfile-class.md)

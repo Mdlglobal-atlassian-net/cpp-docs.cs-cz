@@ -1,5 +1,5 @@
 ---
-title: goto – příkaz (C++) | Microsoft Docs
+title: goto – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953392"
 ---
 # <a name="goto-statement-c"></a>goto – příkaz (C++)
-`goto` Příkaz bezpodmínečně předá řízení příkaz označené zadaného identifikátoru.  
+**Goto** příkaz bezpodmínečně přenese ovládací prvek na příkaz s popiskem podle zadaného identifikátoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,18 +33,18 @@ goto identifier;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Příkaz s popiskem, který je určen podle `identifier` musí být v aktuální funkce. Všechny `identifier` názvy jsou členy vnitřní obor názvů a proto nebudou v konfliktu s další identifikátory.  
+ Příkaz s popiskem určeným `identifier` musí být v aktuální funkci. Všechny `identifier` názvy jsou členy vnitřní obor názvů a proto nejsou v konfliktu s další identifikátory.  
   
- Má smysl pouze pro příkaz štítek `goto` příkaz; jinak, jsou ignorovány příkaz popisky. Popisky nelze deklarovat.  
+ Má smysl jenom na popisek příkazu **goto** příkazu; v opačném případě se ignorují popisků příkazů. Popisky nelze deklarovat znovu.  
   
- Je vhodné programování styl použitý `break`, `continue`, a `return` příkazy místo `goto` příkaz kdykoli je to možné. Ale protože `break` příkaz ukončí z pouze jedna úroveň smyčku, možná budete muset použít `goto` příkaz ukončíte hluboko vložené smyčky.  
+ Styl programování je dobrým **přerušení**, **pokračovat**, a **vrátit** příkazy místo **goto** příkaz pokaždé, když je to možné. Ale protože **přerušení** příkaz ukončí pouze jednu úroveň smyčky, možná budete muset použít **goto** příkaz Ukončit hluboce vnořený smyčku.  
   
- Další informace o popisky a `goto` prohlášení, najdete v části [příkazy s popiskem](../cpp/labeled-statements.md) a [pomocí štítků s goto příkaz](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe).  
+ Další informace o popisky a **goto** příkaz, naleznete v tématu [příkazy s popiskem](../cpp/labeled-statements.md).  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu `goto` příkaz předá řízení bod s názvem bez přípony `stop` při `i` rovná 3.  
+ V tomto příkladu **goto** příkaz přenese ovládací prvek na bod s názvem `stop` při `i` rovná 3.  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

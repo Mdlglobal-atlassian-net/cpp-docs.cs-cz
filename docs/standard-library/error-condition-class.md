@@ -1,5 +1,5 @@
 ---
-title: error_condition – třída | Microsoft Docs
+title: error_condition – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202add45c335adea086087aed9ce3374e56a7e39
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847865"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027336"
 ---
 # <a name="errorcondition-class"></a>error_condition – třída
 
@@ -46,7 +46,7 @@ class error_condition;
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt typu `error_condition` ukládá chybovou hodnotu kód a ukazatele na objekt, který představuje [kategorie](../standard-library/error-category-class.md) kódů chyb používá pro hlášené chyby definované uživatelem.
+Objekt typu `error_condition` ukládá chybovou hodnotu kód a ukazatele na objekt, který představuje [kategorie](../standard-library/error-category-class.md) z chybové kódy používané pro hlášené chyby definovaný uživatelem.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -58,36 +58,36 @@ Objekt typu `error_condition` ukládá chybovou hodnotu kód a ukazatele na obje
 
 |Název typu|Popis|
 |-|-|
-|[value_type](#value_type)|Typ, který představuje hodnotu kódu uložené chyby.|
+|[value_type](#value_type)|Typ představující uložený chybová hodnota kódu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Přiřadí hodnotu kódu chyby a kategorie chybový stav.|
-|[Kategorie](#category)|Vrátí kategorie chyby.|
-|[Zrušte zaškrtnutí](#clear)|Vymaže hodnotu kódu chyby a kategorie.|
-|[message](#message)|Vrací název kód chyby.|
+|[přiřazení](#assign)|Hodnota kódu chyby a kategorie služby přiřadí chybovou podmínku.|
+|[Kategorie](#category)|Vrací kategorie chyby.|
+|[Vymazat](#clear)|Vymaže hodnota kódu chyby a kategorie.|
+|[message](#message)|Vrátí název kód chyby.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator==](#op_eq_eq)|Testování rovnosti mezi `error_condition` objekty.|
-|[operator!=](#op_neq)|Testy nerovnost mezi `error_condition` objekty.|
-|[operátor <](#op_lt)|Testuje, pokud `error_condition` objekt je menší než `error_code` objekt předaná pro porovnání.|
-|[operátor =](#op_eq)|Přiřadí novou hodnotu výčtu k `error_condition` objektu.|
-|[operátor bool](#op_bool)|Vrhá proměnné typu `error_condition`.|
+|[operator==](#op_eq_eq)|Ověřuje rovnost mezi `error_condition` objekty.|
+|[operator!=](#op_neq)|Testy pro nerovnost mezi `error_condition` objekty.|
+|[Operator <](#op_lt)|Testuje, zda `error_condition` objekt je menší než `error_code` objekt předaný k porovnání.|
+|[operátor =](#op_eq)|Přiřadí novou hodnotu výčtu `error_condition` objektu.|
+|[bool – operátor](#op_bool)|Přetypování proměnné typu `error_condition`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<system_error – >
+**Záhlaví:** \<system_error >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="assign"></a>  error_condition::Assign
 
-Přiřadí hodnotu kódu chyby a kategorie chybový stav.
+Hodnota kódu chyby a kategorie služby přiřadí chybovou podmínku.
 
 ```cpp
 void assign(value_type val, const error_category& _Cat);
@@ -97,16 +97,16 @@ void assign(value_type val, const error_category& _Cat);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`val`|Hodnotu kód chyby pro ukládání `error_code`.|
-|`_Cat`|Chyba kategorii, kterou chcete uložit `error_code`.|
+|*Val*|Hodnota kódu chyby k ukládání `error_code`.|
+|*_Cat*|Kategorie chyby pro uložení v `error_code`.|
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce úložiště `val` jako hodnotu kódu chyby a ukazatel na `_Cat`.
+Členské funkce úložiště *val* jako hodnota kódu chyby a ukazatel na *_Cat*.
 
 ## <a name="category"></a>  error_condition::category
 
-Vrátí kategorie chyby.
+Vrací kategorie chyby.
 
 ```cpp
 const error_category& category() const;
@@ -120,7 +120,7 @@ Odkaz na kategorie uložené chyby
 
 ## <a name="clear"></a>  error_condition::clear
 
-Vymaže hodnotu kódu chyby a kategorie.
+Vymaže hodnota kódu chyby a kategorie.
 
 ```cpp
 clear();
@@ -128,7 +128,7 @@ clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce ukládá nulová hodnota kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category) objektu.
+Členská funkce ukládá nulová hodnota kódu chyby a ukazatel [generic_category](../standard-library/system-error-functions.md#generic_category) objektu.
 
 ## <a name="error_condition"></a>  error_condition::error_condition
 
@@ -149,21 +149,21 @@ error_condition(_Enum _Errcode,
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`val`|Hodnotu kód chyby pro ukládání `error_condition`.|
-|`_Cat`|Chyba kategorii, kterou chcete uložit `error_condition`.|
-|`_Errcode`|Hodnota výčtu pro ukládání `error_condition`.|
+|*Val*|Hodnota kódu chyby k ukládání `error_condition`.|
+|*_Cat*|Kategorie chyby pro uložení v `error_condition`.|
+|*_Errcode*|Hodnota výčtu k ukládání `error_condition`.|
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor ukládá nulová hodnota kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category).
+První konstruktor uloží nulová hodnota kódu chyby a ukazatel [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Druhý konstruktor úložiště `val` jako hodnotu kódu chyby a ukazatel na [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Druhý konstruktor ukládá *val* jako hodnota kódu chyby a ukazatel na [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
-Třetí úložiště konstruktor `(value_type)_Errcode` jako hodnotu kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category).
+Třetí konstruktor ukládá `(value_type)_Errcode` jako hodnota kódu chyby a ukazatel [generic_category](../standard-library/system-error-functions.md#generic_category).
 
 ## <a name="message"></a>  error_condition::Message
 
-Vrací název kód chyby.
+Vrátí název kód chyby.
 
 ```cpp
 string message() const;
@@ -175,11 +175,11 @@ A `string` představující název kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu `category().message(value())`.
+Tato členská funkce vrátí `category().message(value())`.
 
 ## <a name="op_eq_eq"></a>  error_condition::Operator ==
 
-Testování rovnosti mezi `error_condition` objekty.
+Ověřuje rovnost mezi `error_condition` objekty.
 
 ```cpp
 bool operator==(const error_condition& right) const;
@@ -189,19 +189,19 @@ bool operator==(const error_condition& right) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|Ojbect má být testována rovnosti.|
+|*doprava*|Ojbect chcete testovat rovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud objekty jsou stejné; **false** Pokud objekty nejsou stejné.
+**Hodnota TRUE** Pokud jsou objekty shodné; **false** Pokud objekty nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrací člena operátor `category() == right.category() && value == right.value()`.
+Členský operátor vrátí `category() == right.category() && value == right.value()`.
 
 ## <a name="op_neq"></a>  error_condition::Operator! =
 
-Testy nerovnost mezi `error_condition` objekty.
+Testy pro nerovnost mezi `error_condition` objekty.
 
 ```cpp
 bool operator!=(const error_condition& right) const;
@@ -211,19 +211,19 @@ bool operator!=(const error_condition& right) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|Objekt, který má být testována nerovnost.|
+|*doprava*|Objekt, který má být testována nerovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud `error_condition` objekt není rovno `error_condition` objekt předaný v `right`; v opačném případě **false**.
+**true** Pokud `error_condition` není roven objektu `error_condition` objekt předaný v *správné*; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrací člena operátor `!(*this == right)`.
+Členský operátor vrátí `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_condition::Operator&lt;
 
-Testuje, pokud `error_condition` objekt je menší než `error_code` objekt předaná pro porovnání.
+Testuje, zda `error_condition` objekt je menší než `error_code` objekt předaný k porovnání.
 
 ```cpp
 bool operator<(const error_condition& right) const;
@@ -233,19 +233,19 @@ bool operator<(const error_condition& right) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`right`|`error_condition` Objekt, který má být porovnána.|
+|*doprava*|`error_condition` Objekt k porovnání.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud `error_condition` objekt je menší než `error_condition` objekt předaná pro porovnání; V opačném **false**.
+**Hodnota TRUE** Pokud `error_condition` objekt je menší než `error_condition` objekt předaný k porovnání; V opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrací člena operátor `category() < right.category() || category() == right.category() && value < right.value()`.
+Členský operátor vrátí `category() < right.category() || category() == right.category() && value < right.value()`.
 
 ## <a name="op_eq"></a>  error_condition::Operator =
 
-Přiřadí novou hodnotu výčtu k `error_condition` objektu.
+Přiřadí novou hodnotu výčtu `error_condition` objektu.
 
 ```cpp
 template <class _Enum>
@@ -259,19 +259,19 @@ error_condition(_Enum error,
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Errcode`|Hodnota výčtu přiřadit `error_condition` objektu.|
+|*_Errcode*|Hodnota výčtu přiřadit `error_condition` objektu.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na `error_condition` objekt, který je právě přiřazován nová hodnota výčtu člen funkce.
+Odkaz na `error_condition` objekt, který se přiřadí novou hodnotu výčtu členskou funkci.
 
 ### <a name="remarks"></a>Poznámky
 
-Úložiště operátor člen `(value_type)error` jako hodnotu kódu chyby a odkazy [generic_category](../standard-library/system-error-functions.md#generic_category). Vrátí `*this`.
+Operátor úložišť člen `(value_type)error` jako hodnota kódu chyby a ukazatel [generic_category](../standard-library/system-error-functions.md#generic_category). Vrátí `*this`.
 
 ## <a name="op_bool"></a>  error_condition::Operator bool
 
-Vrhá proměnné typu `error_condition`.
+Přetypování proměnné typu `error_condition`.
 
 ```cpp
 explicit operator bool() const;
@@ -283,11 +283,11 @@ Logická hodnota `error_condition` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu převoditelné na operátor `true` pouze v případě [hodnota](#value) není rovna hodnotě nula. Návratový typ je převést pouze na `bool`, nikoli k `void *` nebo jiné známé Skalární typy.
+Operátor vrací lze převést na typ hodnota **true** pouze tehdy, pokud [hodnotu](#value) není rovna hodnotě nula. Návratový typ je lze převést pouze na **bool**, nikoli k `void *` nebo jiné známé Skalární typy.
 
 ## <a name="value"></a>  error_condition::Value
 
-Vrátí hodnotu kódu uložené chyby.
+Vrátí uložené chybová hodnota kódu.
 
 ```cpp
 value_type value() const;
@@ -295,13 +295,13 @@ value_type value() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota kódu uložené chyba typu [value_type](#value_type).
+Hodnota kódu uložených chyba typu [value_type](#value_type).
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="value_type"></a>  error_condition::value_type
 
-Typ, který představuje hodnotu kódu uložené chyby.
+Typ představující uložený chybová hodnota kódu.
 
 ```cpp
 typedef int value_type;
@@ -309,9 +309,9 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Definice typu je synonymum pro `int`.
+Definice typu je synonymum pro **int**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [error_category – třída](../standard-library/error-category-class.md)<br/>
 [<system_error>](../standard-library/system-error.md)<br/>

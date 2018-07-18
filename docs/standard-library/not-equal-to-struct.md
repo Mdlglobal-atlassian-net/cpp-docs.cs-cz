@@ -1,5 +1,5 @@
 ---
-title: not_equal_to – struktura | Microsoft Docs
+title: not_equal_to – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966352"
 ---
 # <a name="notequalto-struct"></a>not_equal_to – struktura
 
-Predikát binární, který provede operaci nerovnosti ( `operator!=`) na její argumenty.
+Binární predikát, který provádí operace nerovnosti (`operator!=`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,19 +49,19 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Žádný typ, který podporuje `operator!=` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* libovolný typ, který podporuje `operator!=` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand nerovnosti operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace nerovnost. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand nerovnosti operace. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace nerovnost. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left != Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator!=`.
+Výsledek `Left != Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator!=`.
 
 ## <a name="remarks"></a>Poznámky
 
-Objekty typu `Type` musí být porovnatelný z hlediska rovnosti. To vyžaduje, aby `operator!=` definované v matematickém vlastnosti vztahu ekvivalenční splňuje sadu objektů. Všechny předdefinované typy číselné a ukazatel splnění tohoto požadavku.
+Objekty typu *typ* musí být porovnatelný z rovnosti. To vyžaduje, aby `operator!=` definované v matematické vlastnosti vztahu ekvivalence splňuje sadu objektů. Všechny vestavěné typy číselné a ukazatel splnění tohoto požadavku.
 
 ## <a name="example"></a>Příklad
 
@@ -126,8 +126,8 @@ between v1 & v2 is: ( 0 0 1 0 1 0 )
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

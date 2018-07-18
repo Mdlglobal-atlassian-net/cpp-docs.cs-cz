@@ -1,5 +1,5 @@
 ---
-title: CGopherFile – třída | Microsoft Docs
+title: Cgopherfile – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c6c4f87ffb1538e581320e9d6f36e8d4fbc6fc12
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335679"
 ---
-# <a name="cgopherfile-class"></a>CGopherFile – třída
-Poskytuje funkce pro vyhledání a přečtení souborů na gopher serveru.  
+# <a name="cgopherfile-class"></a>Cgopherfile – třída
+Poskytuje funkce pro hledání a čtení souborů na gopher serveru.  
   
 > [!NOTE]
->  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členové jsou zastaralé protože nepracují na platformě Windows XP, ale budou i nadále fungovat na starší operační systémy.  
+>  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členy jsou zastaralé, protože nebude fungovat na platformě Windows XP, ale budou i nadále fungovat na starší platformy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,18 +46,18 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|Vytvoří `CGopherFile` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Službu gopher neumožňuje uživatelům zapsat data do souboru gopher, protože tato služba funguje především jako nabídkou řízený rozhraní pro vyhledávání informací. `CGopherFile` Členské funkce `Write`, `WriteString`, a `Flush` nejsou implementované pro `CGopherFile`. Volání na tyto funkce `CGopherFile` objektu, vrátí [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Služba gopher nedovoluje uživatelům k zápisu dat do souboru gopher, protože tato služba functions především jako nabídkou řízený rozhraní pro hledání informací. `CGopherFile` Členské funkce `Write`, `WriteString`, a `Flush` nejsou implementovány pro `CGopherFile`. Volání těchto funkcí na `CGopherFile` objektu, vrátí [cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Další informace o tom, `CGopherFile` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Další informace o tom, `CGopherFile` funguje s jinými třídami MFC Internetu najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [Cfile –](../../mfc/reference/cfile-class.md)  
   
- [CStdioFile](../../mfc/reference/cstdiofile-class.md)  
+ [Cstdiofile –](../../mfc/reference/cstdiofile-class.md)  
   
- [CInternetFile](../../mfc/reference/cinternetfile-class.md)  
+ [Cinternetfile –](../../mfc/reference/cinternetfile-class.md)  
   
  `CGopherFile`  
   
@@ -65,7 +65,7 @@ class CGopherFile : public CInternetFile
  **Záhlaví:** afxinet.h  
   
 ##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
- Tato funkce člen je volána k sestavení `CGopherFile` objektu.  
+ Tato členská funkce je volána k sestavení kompletních `CGopherFile` objektu.  
   
 ```  
 CGopherFile(
@@ -84,35 +84,35 @@ CGopherFile(
   
 ### <a name="parameters"></a>Parametry  
  *hfile –*  
- Popisovač pro `HINTERNET` souboru.  
+ Popisovač souboru HINTERNET.  
   
  *refLocator*  
- Odkaz na [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objektu.  
+ Odkaz na [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objektu.  
   
  *pConnection*  
- Ukazatel [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objektu.  
+ Ukazatel [cgopherconnection –](../../mfc/reference/cgopherconnection-class.md) objektu.  
   
  *hSession*  
- Popisovač pro aktuální relaci Internet.  
+ Popisovač s aktuální relací Internetu.  
   
  *pstrLocator*  
- Ukazatel na řetězec používaná k nalezení gopher serveru. V tématu [Gopher relací](cgopherlocator-class.md) Další informace o gopher lokátory.  
+ Ukazatel na řetězec používaná k nalezení gopher serveru. Zobrazit [Gopher relace](cgopherlocator-class.md) Další informace o gopher lokátory.  
   
  *dwLocLen*  
- DWORD, který obsahuje počet bajtů v *pstrLocator*.  
+ Hodnota DWORD obsahující počet bajtů v *pstrLocator*.  
   
  *dwContext*  
- Ukazatel na identifikátor kontextu otevíraný soubor.  
+ Ukazatel na identifikátor kontextu právě otevřený soubor.  
   
 ### <a name="remarks"></a>Poznámky  
- Je nutné `CGopherFile` objektu určeného ke čtení ze souboru během relace gopher Internetu.  
+ Je nutné `CGopherFile` objektu určeného ke čtení ze souboru během relace gopher Internet.  
   
- Nikdy vytvoříte `CGopherFile` objektu přímo. Místo toho volat [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) otevřít soubor na serveru gopher.  
+ Nikdy nevytvářejte `CGopherFile` objektu přímo. Namísto toho zavolejte metodu [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) otevřít soubor na gopher serveru.  
   
 ## <a name="see-also"></a>Viz také  
- [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)   
+ [Cinternetfile – třída](../../mfc/reference/cinternetfile-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)   
- [CGopherLocator – třída](../../mfc/reference/cgopherlocator-class.md)   
- [CGopherFileFind – třída](../../mfc/reference/cgopherfilefind-class.md)   
+ [Cinternetfile – třída](../../mfc/reference/cinternetfile-class.md)   
+ [Cgopherlocator – třída](../../mfc/reference/cgopherlocator-class.md)   
+ [Cgopherfilefind – třída](../../mfc/reference/cgopherfilefind-class.md)   
  [CGopherConnection – třída](../../mfc/reference/cgopherconnection-class.md)

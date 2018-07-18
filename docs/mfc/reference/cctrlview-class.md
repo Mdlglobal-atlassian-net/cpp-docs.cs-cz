@@ -1,5 +1,5 @@
 ---
-title: Třída CCtrlView | Microsoft Docs
+title: Cctrlview – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336329"
 ---
-# <a name="cctrlview-class"></a>CCtrlView – třída
-Přizpůsobení zobrazení dokumentu architekturu pro běžné ovládací prvky, které podporuje verze Windows 98 a systému Windows NT 3.51 a novější.  
+# <a name="cctrlview-class"></a>Cctrlview – třída
+Přizpůsobí architekturu document / view pro běžné ovládací prvky, které podporuje Windows 98 a Windows NT verze 3.51 a vyšší.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,21 +54,21 @@ class CCtrlView : public CView
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCtrlView::OnDraw](#ondraw)|Voláno rámcem kreslení pomocí kontextu zadané zařízení.|  
+|[CCtrlView::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit v kontextu zadané zařízení.|  
 |[CCtrlView::PreCreateWindow](#precreatewindow)|Volá se před vytvořením okna Windows připojených k tomuto `CCtrlView` objektu.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Obsahuje výchozí styl pro třídu zobrazení.|  
-|[CCtrlView::m_strClass](#m_strclass)|Obsahuje název třídy Windows pro třídu zobrazení.|  
+|[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Obsahuje výchozí styl pro danou třídu zobrazení.|  
+|[CCtrlView::m_strClass](#m_strclass)|Obsahuje název třídy Windows pro danou třídu zobrazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída `CCtrlView` a odvozené, [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md), a [cricheditview –](../../mfc/reference/cricheditview-class.md), přizpůsobit zobrazení dokumentu architekturu pro nové běžné ovládací prvky podporuje systém Windows 95/98 a systému Windows NT 3.51 a novější verze. Další informace o architektuře dokument zobrazení najdete v tématu [Document/View – architektura](../../mfc/document-view-architecture.md).  
+ Třída `CCtrlView` a odvozené, [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md), a [cricheditview –](../../mfc/reference/cricheditview-class.md), přizpůsobit architektuře document / view do nové běžné ovládací prvky, nepodporuje Windows 95/98 a Windows NT verze 3.51 a vyšší. Další informace o architektuře document / view najdete v tématu [architekturu Document/View](../../mfc/document-view-architecture.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -92,44 +92,44 @@ CCtrlView(
   
 ### <a name="parameters"></a>Parametry  
  *lpszClass*  
- Název třídy Windows třídy zobrazení  
+ Název třídy Windows třídy zobrazení.  
   
  *dwStyle*  
  Styl zobrazení třídy.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá konstruktor při vytvoření nové okně s rámečkem nebo je rozdělit okno. Přepsání [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) k inicializaci zobrazení po je dokument připojen. Volání [CWnd::Create](../../mfc/reference/cwnd-class.md#create) nebo [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) k vytvoření objektu Windows.  
+ Rozhraní volá konstruktor, když se vytvoří nový objekt okna rámce nebo je rozdělit okno. Přepsat [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) k inicializaci zobrazení po dokumentu. Volání [CWnd::Create](../../mfc/reference/cwnd-class.md#create) nebo [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) k vytvoření objektu Windows.  
   
 ##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
- Obsahuje název třídy Windows pro třídu zobrazení.  
+ Obsahuje název třídy Windows pro danou třídu zobrazení.  
   
 ```  
 CString m_strClass;  
 ```  
   
 ##  <a name="m_dwdefaultstyle"></a>  CCtrlView::m_dwDefaultStyle  
- Obsahuje výchozí styl pro třídu zobrazení.  
+ Obsahuje výchozí styl pro danou třídu zobrazení.  
   
 ```  
 DWORD m_dwDefaultStyle;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Toto je použit, když se vytvoří okno.  
+ Tento styl se použije, když se vytvoří okno.  
   
 ##  <a name="ondraw"></a>  CCtrlView::OnDraw  
- Voláno rámcem k vykreslení obsahu `CCtrlView` objektu v kontextu zadané zařízení.  
+ Volá se rozhraním, chcete-li nakreslit obsah `CCtrlView` objektu v kontextu zadané zařízení.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *primárního řadiče domény*  
- Ukazatel na zařízení kontext, ve kterém dojde k kreslení.  
+ *primární řadič domény*  
+ Ukazatel na kontext zařízení, ve kterém dochází výkresu.  
   
 ### <a name="remarks"></a>Poznámky  
- `OnDraw` obvykle nazývá pro zobrazení na obrazovce, předávání určeného kontextu zařízení obrazovky *primárního řadiče domény*.  
+ `OnDraw` je obvykle volána pro obrazovku, předávání určeného kontextu zařízení obrazovky *primárního řadiče domény*.  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Volá se před vytvořením okna Windows připojených k tomuto `CWnd` objektu.  
@@ -140,17 +140,17 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>Parametry  
  *cs*  
- A [createstruct –](http://msdn.microsoft.com/library/windows/desktop/ms632603) struktura.  
+ A [soubor CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud by měly pokračovat ve vytváření oken; 0 k označení vytvoření se nezdařilo.  
+ Nenulové, pokud by měly pokračovat ve vytváření oken; 0 označující selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce nikdy volat přímo.  
+ Nikdy přímo volat tuto funkci.  
   
- Výchozí implementace této funkce zkontroluje **NULL** název třídy okna a nahradí odpovídající výchozí. Člen funkci k úpravě přepsat `CREATESTRUCT` struktury před vytvořením okna.  
+ Výchozí implementace této funkce kontroluje název třídy okna NULL a nahradí vhodné výchozí nastavení. Přepsání této členské funkce lze upravit `CREATESTRUCT` strukturu před vytvořením okna.  
   
- Jednotlivé třídy odvozené od `CCtrlView` přidá svůj vlastní funkce k jeho přepsání `PreCreateWindow`. Návrh tyto odvození z `PreCreateWindow` nejsou popsané. Pokud chcete určit vhodné pro každou třídu a vzájemné závislosti mezi stylů styly, můžete zkontrolovat MFC zdrojový kód pro základní třídu vaší aplikace. Pokud se rozhodnete přepsat `PreCreateWindow`, můžete určit, zda styly využívané v základní třídě vaší aplikace poskytují funkce, je nutné pomocí informace získané z MFC zdrojového kódu.  
+ Každá třída odvozena z `CCtrlView` přidá vlastní funkce k jeho přepsání `PreCreateWindow`. Standardně tyto odvození z `PreCreateWindow` nejsou uvedené. K určení styly, které jsou vhodné pro každou třídu a vzájemné závislosti mezi styly, můžete zkontrolovat zdrojový kód knihovny MFC pro základní třídu vaší aplikace. Pokud budete chtít přepsat `PreCreateWindow`, můžete určit, zda stylů použitých v základní třídě vaší aplikace poskytují funkce, je nutné pomocí informace získané z zdrojového kódu knihovny MFC.  
   
  Další informace o změně styly oken, najdete v článku [změna stylů okna vytvořeného rozhraním MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
   

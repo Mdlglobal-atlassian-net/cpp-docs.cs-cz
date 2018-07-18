@@ -1,5 +1,5 @@
 ---
-title: underflow_error – třída | Microsoft Docs
+title: underflow_error – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1886a1da667ed038e677c6dd3395058ecd13078
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f8e45320c1dd0a3358d19bf3bd0b83a56a841723
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855289"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027047"
 ---
 # <a name="underflowerror-class"></a>underflow_error – třída
 
-Třída slouží jako základní třída pro všechny výjimky vydané nahlásit aritmetické podtečení.
+Tato třída slouží jako základní třída pro všechny výjimky vyvolané hlásit k podtečení aritmetické.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Příklad
 
@@ -73,10 +73,10 @@ Type: class std::underflow_error
 
 **Záhlaví:** \<stdexcept – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<stdexcept – > členy](http://msdn.microsoft.com/en-us/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
+[\<stdexcept – > Členové](http://msdn.microsoft.com/7b6b0a73-916e-44aa-9a3f-f5b6b3ce98e6)<br/>
 [runtime_error – třída](../standard-library/runtime-error-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

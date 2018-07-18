@@ -1,5 +1,5 @@
 ---
-title: _variant_t::detach | Microsoft Docs
+title: _variant_t::detach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53d6dc51117ffe9b82511c6084e36bc49873b88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421939"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026257"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Umožňuje odpojit zapouzdřené **VARIANT** objekt z tohoto `_variant_t` objektu.  
+ Odpojí zapouzdřeného `VARIANT` objektu z tohoto `_variant_t` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,12 +40,12 @@ VARIANT Detach( );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Zapouzdřené **VARIANT**.  
+ Zapouzdřený objekt `VARIANT`.  
   
 ## <a name="remarks"></a>Poznámky  
- Extrahuje a vrátí zapouzdřené **VARIANT**, pak tato vymaže `_variant_t` objektu bez zničení ho. Tato funkce člen odebere **VARIANT** z zapouzdření a nastaví **VARTYPE** tohoto `_variant_t` do objektu `VT_EMPTY`. Je na vás k uvolnění vrácený **VARIANT** voláním [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) funkce.  
+ Extrahuje a vrátí zapouzdřený objekt `VARIANT`, následně smaže `_variant_t` objekt bez došlo k jeho zničení. Tato členská funkce odebere `VARIANT` ze zapouzdření a nastaví `VARTYPE` tohoto `_variant_t` objekt VT_EMPTY. Je na vás, abyste uvolnili vrácený `VARIANT` voláním [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) funkce.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_variant_t – třída](../cpp/variant-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;alokátorů&gt; | Microsoft Docs'
+title: '&lt;alokátory&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847309"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965740"
 ---
-# <a name="ltallocatorsgt"></a>&lt;alokátorů&gt;
+# <a name="ltallocatorsgt"></a>&lt;alokátory:&gt;
 
-Definuje několik šablon, které pomáhají přidělit a volné bloky paměti pro kontejnery založené na uzlu.
+Definuje několik šablon, které pomáhají přidělit a uvolnit bloky paměti pro kontejnery založené na uzlu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,15 +35,15 @@ Definuje několik šablon, které pomáhají přidělit a volné bloky paměti p
 
 ## <a name="remarks"></a>Poznámky
 
-\<Alokátorů > záhlaví poskytuje šesti allocator šablony, které lze použít k výběru strategie správy paměti pro kontejnery založené na uzlu. Pro použití s tyto šablony je také několik různých synchronizace filtrů podle strategie správy paměti, která celou řadu různých multithreading schémata (včetně none). Odpovídající strategie správy paměti pro vzory využití paměti známé a požadavků na synchronizaci, konkrétní aplikace můžete často rychlosti zvýšit nebo snížit požadavky na celkové paměti aplikace.
+\<Alokátorů > záhlaví obsahuje šest allocator šablony, které slouží k výběru strategie správy paměti pro kontejnery založené na uzlu. Pro použití s těmito šablonami poskytuje také několik různých synchronizace filtrů pro přizpůsobení strategie správy paměti, která širokou škálu různých multithreading schémata (včetně žádný). Často odpovídající strategie správy paměti vzorů využití paměti známé a požadavky na synchronizaci, konkrétní aplikace může zvýšit rychlost nebo snižte celkové požadavky na paměť aplikace.
 
-Allocator šablony jsou implementovány s opakovaně použitelné součásti, které lze přizpůsobit nebo nahradit zajistit další správa paměti strategie.
+Allocator šablony jsou implementovány pomocí opakovaně použitelné komponenty, které můžete přizpůsobit nebo nahradit, aby poskytují další správa paměti strategie.
 
-Na základě uzlu kontejnery v standardní knihovna C++ (std::list, std::set, std::multiset, std::map a std::multimap) uložit jejich elementů v jednotlivých uzlech. Všechny uzly pro typ konkrétním kontejneru jsou stejnou velikost, takže není nutné flexibilitu správce pro obecné účely paměti. Protože je v době kompilace velikost každého bloku paměti, správce paměti může být mnohem jednodušší a rychlejší.
+Kontejnery založené na uzlu ve standardní knihovně C++ (std::list, std::set, std::multiset, std::map a std::multimap) ukládají jejich prvky v jednotlivých uzlech. Všechny uzly konkrétní typy kontejnerů mají stejnou velikost, takže není potřeba flexibilitu správce paměti pro obecné účely. Protože každý blok paměti velikosti je znám v době kompilace, správce paměti může být mnohem jednodušší a rychlejší.
 
-Při použití s kontejnery, které nejsou založené na uzlu (například standardní knihovna C++ kontejnery std::vector std::deque a std::basic_string), šablony alllocator nebude pracovat správně, ale nejsou může zajistit zlepšení výkonu prostřednictvím Výchozí přidělení.
+Při použití s kontejnery, které nejsou založené na uzlu (například std::deque std::vector kontejnery standardní knihovny C++ a std::basic_string), šablony alllocator bude správně fungovat, ale nejsou pravděpodobně kvůli zlepšení výkonu za výchozího přidělujícího modulu.
 
-Přidělení je třída šablony, která popisuje objekt, který spravuje přidělení úložiště a uvolnění pro objekty a pole objektů určené typu. Přidělování objektů jsou používány několik tříd šablon kontejner ve standardní knihovně C++.
+Přidělování je třída šablony popisující objekt, který spravuje rozdělení úložiště a uvolnění pro objekty a pole objektů určeného typu. Přidělování objektů používá několik tříd šablon kontejneru ve standardní knihovně jazyka C++.
 
 Alokátorů jsou všechny šablony tohoto typu:
 
@@ -51,21 +51,21 @@ Alokátorů jsou všechny šablony tohoto typu:
 
 `class allocator;`
 
-kde argument šablony `Type` je typ spravuje allocator instance. Standardní knihovna C++ poskytuje výchozí přidělení, šablony třídy [allocator](../standard-library/allocator-class.md), která je definována v [ \<paměti >](../standard-library/memory.md). \<Alokátorů > záhlaví poskytuje následující alokátorů:
+Pokud argument šablony `Type` je typ spravovaných instancí alokátoru. Standardní knihovny C++ poskytuje výchozího přidělujícího modulu, třídy šablony [alokátoru](../standard-library/allocator-class.md), který je definován v [ \<paměti >](../standard-library/memory.md). \<Alokátorů > záhlaví obsahuje následující alokátory:
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
-- [allocator_unbounded](../standard-library/allocator-unbounded-class.md)
+- [allocator_unbounded –](../standard-library/allocator-unbounded-class.md)
 
 - [allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)
 
-- [allocator_variable_size](../standard-library/allocator-variable-size-class.md)
+- [allocator_variable_size –](../standard-library/allocator-variable-size-class.md)
 
 - [allocator_suballoc](../standard-library/allocator-suballoc-class.md)
 
 - [allocator_chunklist](../standard-library/allocator-chunklist-class.md)
 
-Při vytváření kontejneru, například následující příklad kódu, použijte příslušné konkretizaci přidělení jako druhý argument typu.
+Používejte příslušné instance alokátoru jako druhý argument typu při vytváření kontejneru, jako v následujícím příkladu kódu.
 
 `#include <list>`
 
@@ -75,7 +75,7 @@ Při vytváření kontejneru, například následující příklad kódu, použi
 
 _List0 přiděluje uzly s `allocator_chunklist` a výchozí filtr synchronizace.
 
-Použijte makro [allocator_decl –](../standard-library/allocators-functions.md#allocator_decl) vytvoření šablon allocator s filtry synchronizace jiné než výchozí:
+Použijte makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) k vytvoření šablony allocator s filtry synchronizace jiné než výchozí:
 
 `#include <list>`
 
@@ -85,13 +85,13 @@ Použijte makro [allocator_decl –](../standard-library/allocators-functions.md
 
 `std::list<int, alloc<int> > _List1;`
 
-_Lst1 přiděluje uzly s `allocator_chunklist` a [sync_per_thread](../standard-library/sync-per-thread-class.md) filtr synchronizace.
+_Lst1 přiděluje uzly s `allocator_chunklist` a [sync_per_thread –](../standard-library/sync-per-thread-class.md) filtr synchronizace.
 
-Allocator bloku je mezipaměť nebo filtr. Mezipaměť je šablona třídu, která přijímá jeden argument std::size_t typu. Definuje allocator bloku, která přiděluje a zruší přidělení bloků paměti jedné velikosti. Je nutné získat paměti pomocí operátoru `new`, ale nemusí díky samostatné volání operátor `new` pro každý blok. Ho může například suballocate z větší bloku nebo mezipaměti navrácena bloky pro následné opakované přidělení.
+Allocator bloku je mezipaměť nebo filtru. Mezipaměť je třída šablony, která přijímá jeden argument typu std::size_t. Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost. Je nutné získat paměť pomocí operátoru **nové**, ale nemusí díky samostatné volání operátoru **nové** pro každý blok. To může například suballocate z větší bloku nebo přidělení bloků pro následné realokace mezipaměti.
 
-Hodnota _Sz argument předaný mezipaměti členské funkce s kompilátorem, který nelze kompilovat obnovení vazby, které se hodnota argumentu std::size_t používá, když šablona byla vytvořena instance není nutně přidělit a navrácení.
+Hodnota _Sz argument předaný do mezipaměti členské funkce s kompilátorem, který nejde zkompilovat obnovení vazby hodnoty argumentu std::size_t při šablona byla vytvořena instance, není nutně přidělit a uvolnit.
 
-\<alokátorů > poskytuje následující šablony mezipaměti:
+\<alokátory > poskytuje následující šablony mezipaměti:
 
 - [cache_freelist](../standard-library/cache-freelist-class.md)
 
@@ -99,7 +99,7 @@ Hodnota _Sz argument předaný mezipaměti členské funkce s kompilátorem, kte
 
 - [cache_chunklist](../standard-library/cache-chunklist-class.md)
 
-Filtr je allocator blok, který implementuje jeho členské funkce pomocí jiné allocator blok, který je předán jako argument šablony. Nejběžnější formu filtr je filtr synchronizace, která se vztahuje k řízení přístupu k členské funkce instance jiný blok allocator zásady synchronizace. \<alokátorů > poskytuje následující filtry synchronizace:
+Filtr je blok alokátoru, který implementuje její členské funkce pomocí jiného bloku alokátoru, který se předá jako argument šablony. Nejběžnější forma filtru je filtr synchronizace, který použije synchronizace zásady řízení přístupu na členské funkce instance jiného bloku alokátoru. \<alokátory > poskytuje následující filtry synchronizace:
 
 - [sync_none](../standard-library/sync-none-class.md)
 
@@ -109,15 +109,15 @@ Filtr je allocator blok, který implementuje jeho členské funkce pomocí jiné
 
 - [sync_shared](../standard-library/sync-shared-class.md)
 
-\<alokátorů > také poskytuje filtr [rts_alloc](../standard-library/rts-alloc-class.md), který obsahuje více allocator bloku instancí a určuje, kterou instanci chcete použít pro přidělení nebo navrácení za běhu místo v době kompilace. Používá se s kompilátory, které nelze kompilovat obnovení vazby.
+\<alokátory > také obsahuje filtr [rts_alloc –](../standard-library/rts-alloc-class.md), který obsahuje více bloku přidělování instancí a určuje, kterou instanci chcete použít pro přidělení nebo zrušení přidělení v době běhu místo v době kompilace. Používá se s kompilátory, které nelze zkompilovat obnovení vazby.
 
-Zásady synchronizace určuje, jak allocator instance zpracovává souběžných požadavků na přidělení a navrácení z více vláken. Nejjednodušší zásad je předat všechny požadavky přímo prostřednictvím základní objekt mezipaměti a správy synchronizace pro uživatele. Složitější zásad může být mutex určený k serializaci přístup k základní objekt mezipaměti.
+Synchronizace zásad určuje, jak allocator instance zpracovává souběžné požadavky na přidělování a navracení zpět z více vláken. Nejjednodušší zásad je předat všechny požadavky přímo prostřednictvím základní objekt mezipaměti byste museli opustit správu synchronizace pro uživatele. Určený objekt mutex k serializaci přístup k základní objekt mezipaměti může být složitější zásady.
 
-Pokud kompilátor podporuje kompilace jednovláknové i vícevláknové aplikace, je výchozí filtr synchronizace pro jednovláknové aplikace `sync_none`; všech ostatních případech je `sync_shared`.
+Pokud kompilátor podporuje kompilace s jedním vláknem i vícevláknové aplikace, je výchozí filtr synchronizace pro aplikace s jedním vláknem `sync_none`; u všech ostatních případech je `sync_shared`.
 
-Šablona mezipaměti `cache_freelist` použije argument maximální – třída, která určuje maximální počet elementů k uložení do seznamu volné.
+Šablonu mezipaměti `cache_freelist` přijímá argument maximální třídy, která určuje maximální počet prvků, které mají být uloženy v seznamu zdarma.
 
-\<alokátorů > poskytuje následující maximální třídy:
+\<alokátory > obsahuje následující třídy, max:
 
 - [max_none](../standard-library/max-none-class.md)
 
@@ -131,11 +131,11 @@ Pokud kompilátor podporuje kompilace jednovláknové i vícevláknové aplikace
 
 |– Makro|Popis|
 |-|-|
-|[ALLOCATOR_DECL –](../standard-library/allocators-functions.md#allocator_decl)|Vypočítá přidělení třídy šablony.|
-|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Vypočítá `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
-|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Vypočítá `stdext::allocators::cache_freelist<sizeof(Type), max>`.|
-|[CACHE_SUBALLOC –](../standard-library/allocators-functions.md#cache_suballoc)|Vypočítá `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
-|[SYNC_DEFAULT –](../standard-library/allocators-functions.md#sync_default)|Vypočítá filtr synchronizace.|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Vrací alokátoru třídy šablony.|
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Vrací `stdext::allocators::cache_chunklist<sizeof(Type)>`.|
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Vrací `stdext::allocators::cache_freelist<sizeof(Type), max>`.|
+|[CACHE_SUBALLOC –](../standard-library/allocators-functions.md#cache_suballoc)|Vrací `stdext::allocators::cache_suballoc<sizeof(Type)>`.|
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Vrací filtr synchronizace.|
 
 ### <a name="operators"></a>Operátory
 
@@ -148,33 +148,33 @@ Pokud kompilátor podporuje kompilace jednovláknové i vícevláknové aplikace
 
 |Třída|Popis|
 |-|-|
-|[allocator_base –](../standard-library/allocator-base-class.md)|Definuje základní třídu a běžné funkce, které jsou nutné k vytvoření přidělení uživatelem definované z filtr synchronizace.|
-|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Popisuje objekt, který spravuje přidělení úložiště a uvolnění objektů pomocí mezipaměti typu [cache_chunklist –](../standard-library/cache-chunklist-class.md).|
-|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Popisuje objekt, který spravuje přidělení úložiště a uvolnění objektů typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_fixed_size](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementuje přidělení, který používá `operator delete` se zrušit přidělení paměti bloku a `operator new` přidělit blok paměti.|
-|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Popisuje objekt, který spravuje přidělení úložiště a uvolnění objektů typu `Type` použití mezipaměti typu [cache_suballoc –](../standard-library/cache-suballoc-class.md).|
-|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Popisuje objekt, který spravuje přidělení úložiště a uvolnění objektů typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_unbounded](../standard-library/max-unbounded-class.md).|
-|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Popisuje objekt, který spravuje přidělení úložiště a uvolnění objektů typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_variable_size](../standard-library/max-variable-size-class.md).|
-|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Definuje allocator bloku, která přiděluje a zruší přidělení bloků paměti jedné velikosti.|
-|[cache_freelist](../standard-library/cache-freelist-class.md)|Definuje allocator bloku, která přiděluje a zruší přidělení bloků paměti jedné velikosti.|
-|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Definuje allocator bloku, která přiděluje a zruší přidělení bloků paměti jedné velikosti.|
-|[FreeList](../standard-library/freelist-class.md)|Spravuje seznam bloky paměti.|
-|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Popisuje objekt maximální třídy, která omezuje [freelist](../standard-library/freelist-class.md) objekt, který má pevnou maximální délku.|
-|[max_none](../standard-library/max-none-class.md)|Popisuje objekt maximální třídy, která omezuje [freelist](../standard-library/freelist-class.md) objekt, který má maximální délku nula.|
+|[allocator_base –](../standard-library/allocator-base-class.md)|Definuje základní třídu a běžné funkce potřebné k vytváření alokátorem definovaný uživatelem z filtru synchronizace.|
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění objektů použití mezipaměti typu [cache_chunklist –](../standard-library/cache-chunklist-class.md).|
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_fixed_size –](../standard-library/max-fixed-size-class.md).|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementuje alokátoru, který používá **operátor delete** k uvolnění paměti bloku a **operátor new** přidělení bloku paměti.|
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_suballoc –](../standard-library/cache-suballoc-class.md).|
+|[allocator_unbounded –](../standard-library/allocator-unbounded-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_unbounded –](../standard-library/max-unbounded-class.md).|
+|[allocator_variable_size –](../standard-library/allocator-variable-size-class.md)|Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu `Type` použití mezipaměti typu [cache_freelist –](../standard-library/cache-freelist-class.md) s délkou spravuje [max_variable_size –](../standard-library/max-variable-size-class.md).|
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost.|
+|[cache_freelist](../standard-library/cache-freelist-class.md)|Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost.|
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Definuje bloku alokátoru, který přiděluje a zruší přidělení bloků paměti z jednoho velikost.|
+|[FreeList –](../standard-library/freelist-class.md)|Spravuje seznam bloky paměti.|
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Popisuje objekt maximální třídy, která omezuje [freelist](../standard-library/freelist-class.md) objektu na pevnou maximální délku.|
+|[max_none](../standard-library/max-none-class.md)|Popisuje objekt maximální třídy, která omezuje [freelist](../standard-library/freelist-class.md) objekt má maximální délku nula.|
 |[max_unbounded](../standard-library/max-unbounded-class.md)|Popisuje maximální třídu objektu, který neomezuje maximální délku [freelist](../standard-library/freelist-class.md) objektu.|
-|[max_variable_size](../standard-library/max-variable-size-class.md)|Popisuje objekt maximální třídy, která omezuje [freelist](../standard-library/freelist-class.md) objekt, který má maximální délku, která je přibližně přímo úměrná počtu přidělené bloky paměti.|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|Rts_alloc – třída šablony popisuje [filtru](../standard-library/allocators-header.md) , obsahuje pole mezipaměti instancí a určuje, kterou instanci chcete použít pro přidělení a navrácení za běhu místo v době kompilace.|
+|[max_variable_size](../standard-library/max-variable-size-class.md)|Popisuje objekt maximální třídy, která omezuje [freelist](../standard-library/freelist-class.md) objekt má maximální délku, která je přibližně úměrný počtu přidělených paměťových bloků.|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Rts_alloc – třída šablony popisuje [filtr](../standard-library/allocators-header.md) , který obsahuje celou řadu mezipaměti instancí a určuje, kterou instanci chcete použít pro přidělování a navracení zpět za běhu místo v době kompilace.|
 |[sync_none](../standard-library/sync-none-class.md)|Popisuje synchronizaci filtr, který poskytuje žádná synchronizace.|
-|[sync_per_container](../standard-library/sync-per-container-class.md)|Popisuje synchronizaci filtr, který obsahuje objekt samostatné mezipaměti pro každý objekt přidělení.|
+|[sync_per_container](../standard-library/sync-per-container-class.md)|Popisuje synchronizaci filtr, který poskytuje objekt samostatné mezipaměti pro každý objekt alokátoru.|
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|Popisuje synchronizaci filtr, který poskytuje objekt samostatné mezipaměti pro každé vlákno.|
-|[sync_shared](../standard-library/sync-shared-class.md)|Popisuje synchronizaci filtr, který se používá k řízení přístupu k objektu mezipaměti, který je sdílen všechny alokátorů mutex.|
+|[sync_shared](../standard-library/sync-shared-class.md)|Popisuje synchronizaci filtr, který se používá k řízení přístupu pro objekt z mezipaměti, jež jsou sdílena všechny alokátory mutex.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>

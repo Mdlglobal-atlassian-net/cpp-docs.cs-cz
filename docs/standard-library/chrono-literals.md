@@ -1,5 +1,5 @@
 ---
-title: literály typu chrono | Microsoft Docs
+title: literály typu chrono | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022f2bb5355b59ca9ee614c79fee310526e094d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 059974efa00d384f669c88a3e2dafbc3a7bc5746
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953688"
 ---
 # <a name="chrono-literals"></a>literály typu chrono
 
-(C ++ 14) \<Typu chrono > záhlaví definuje 12 [uživateli definované literály](../cpp/user-defined-literals-cpp.md) usnadňuje pomocí literály, které představují hodiny, minuty, sekundy, milisekundách, mikrosekundách a nanosekundách. Každé uživatelské literál má integrální hodnotu a s plovoucí desetinnou čárkou přetížení. Literály jsou definovány v oboru názvů vloženého literals::chrono_literals, která je uvedena do oboru automaticky po std::chrono v oboru.
+(C ++ 14) \<Chrono > záhlaví definuje 12 [uživateli definované literály](../cpp/user-defined-literals-cpp.md) usnadnit pomocí literály, které představují hodiny, minuty, sekundy, milisekund, mikrosekundách a nanosekundách. Každý uživatelem definovaného literálu má integral a s plovoucí desetinnou čárkou přetížení. Literály jsou definovány v oboru názvů vloženého literals::chrono_literals, což je přeneseny do rozsahu automaticky při std::chrono je v oboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,11 +70,11 @@ inline namespace literals {
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Literály, které provést `long long` argument, vrátí hodnotu nebo příslušného typu. Literály, které provést plovoucí bodu argument návratový [doba trvání](../standard-library/duration-class.md).
+Literály, které provést **long long** argument vrací hodnotu nebo odpovídající typ. Literály, které trvat plovoucí bodu návratový argument [doba trvání](../standard-library/duration-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklady osev použití literály typu chrono.
+Následující příklady zasaďte použití literály typu chrono.
 
 ```cpp
 constexpr auto day = 24h;
@@ -84,10 +84,10 @@ constexpr auto my_duration_unit = 108ms;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<typu chrono >
+**Hlavička**: \<chrono >
 
 **Namespace**: std::literals::chrono_literals
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<chrono>](../standard-library/chrono.md)<br/>

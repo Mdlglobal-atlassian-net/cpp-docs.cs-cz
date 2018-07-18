@@ -1,5 +1,5 @@
 ---
-title: '&lt;vektor&gt; | Microsoft Docs'
+title: '&lt;vektor&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857633"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953859"
 ---
 # <a name="ltvectorgt"></a>&lt;vektor&gt;
 
-Definuje vektoru třída šablony kontejneru a několika podpůrné šablony.
+Definuje kontejner šablony třídy vektoru a několik podpůrných šablon.
 
-`vector` Je kontejner, který slouží k uspořádání elementy daného typu v lineární pořadí. Umožňuje vysoká rychlost náhodného přístup k žádné elementu a dynamické přidání a odstraňování do a z pořadí. `vector` Je upřednostňovaný kontejner pro pořadí, když výkonu náhodný přístup premium.
+`vector` Je kontejner, který slouží k uspořádání prvků daného typu v lineární posloupnosti. Umožňuje rychlý náhodný přístup k libovolný element a dynamické přidání a odebrání do a z pořadí. `vector` Je kontejneru upřednostňované pořadí, když v na úrovni premium je výkon náhodný přístup.
 
-Další informace o třídě `vector`, najdete v části [vector – třída](../standard-library/vector-class.md). Informace o specializace `vector<bool>`, najdete v části [vektoru\<bool > třída](../standard-library/vector-bool-class.md).
+Další informace o třídě `vector`, naleznete v tématu [vector – třída](../standard-library/vector-class.md). Informace o tom, specializace `vector<bool>`, naleznete v tématu [vektoru\<bool > třída](../standard-library/vector-bool-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,44 +83,48 @@ void swap (
 
 ### <a name="parameters"></a>Parametry
 
-Zadejte parametr šablony pro typ dat uložených v vektoru.
+*Typ*  
+ Parametr šablony pro typ dat uložených ve vektoru.
 
-Allocator parametr šablony pro objekt uložená allocator zodpovědná za přidělování paměti a zrušení přidělení.
+*Allocator –*  
+ Parametr šablony pro uložený objekt alokátoru za přidělování a vracení paměti.
 
-`left` První vektoru (levém) v rámci operace porovnání
+*doleva*  
+ V operaci porovnání prvnímu vektoru (vlevo)
 
-`right` Druhý vektoru (napravo) v rámci operace porovnání.
+*doprava*  
+ Druhý (vpravo) vektoru v operaci porovnání.
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[Operator – operátor! =](../standard-library/vector-operators.md#op_neq)|Testy, pokud vektoru objekt na levé straně operátoru není stejný jako vektoru objekt na pravé straně.|
-|[operátor <](../standard-library/vector-operators.md#op_lt)|Testy, pokud vektoru objekt na levé straně operátor je menší než vektoru objekt na pravé straně.|
-|[Operátor\<=](../standard-library/vector-operators.md#op_gt_eq)|Pokud vektoru objekt na levé straně operátoru testů je menší než nebo rovno vektoru objekt na pravé straně.|
-|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Testy, pokud vektoru objekt na levé straně operátoru rovná vektoru objekt na pravé straně.|
-|[operátor >](../standard-library/vector-operators.md#op_gt)|Testy, pokud vektoru objekt na levé straně operátoru je větší než vektoru objekt na pravé straně.|
-|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testy, pokud je vektoru objekt na levé straně operátoru větší než nebo rovna hodnotě vektoru objekt na pravé straně.|
+|[operátor! =](../standard-library/vector-operators.md#op_neq)|Testuje, zda vektorový objekt na levé straně operátoru není roven vektorový objekt na pravé straně.|
+|[Operator <](../standard-library/vector-operators.md#op_lt)|Testuje, zda je objekt vektoru na levé straně operátoru menší než vektorový objekt na pravé straně.|
+|[– Operátor\<=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda je objekt vektoru na levé straně operátoru je menší než nebo rovna hodnotě vektorový objekt na pravé straně.|
+|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Testuje, zda vektorový objekt na levé straně operátoru roven objektu vektoru na pravé straně.|
+|[Operator >](../standard-library/vector-operators.md#op_gt)|Testuje, zda je objekt vektoru na levé straně operátoru větší než vektorový objekt na pravé straně.|
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testuje, zda vektorový objekt na levé straně operátoru větší než nebo rovna hodnotě vektorový objekt na pravé straně.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[vector – třída](../standard-library/vector-class.md)|Šablony třídy kontejnerů pořadí, které umožňuje uspořádat prvky daného typu v lineární uspořádání a povolit vysoká rychlost náhodného přístup k libovolného elementu.|
+|[vector – třída](../standard-library/vector-class.md)|Třída šablony kontejnery sekvence, které uspořádat prvky daného typu v lineární uspořádání a umožňují rychlý náhodný přístup k libovolnému prvku.|
 
 ### <a name="specializations"></a>Specializace
 
 |||
 |-|-|
-|[vektor\<bool > – třída](../standard-library/vector-bool-class.md)|Úplné specializace šablony vektoru třídy pro elementy typu `bool` s přidělení pro základní typ používané specializace.|
+|[vektor\<bool > třída](../standard-library/vector-bool-class.md)|Úplné specializace šablony vektoru třídu pro prvky typu `bool` s Alokátor pro základní typ používán specializací.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<vektoru >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

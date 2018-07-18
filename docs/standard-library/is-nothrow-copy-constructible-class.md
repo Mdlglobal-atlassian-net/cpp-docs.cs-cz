@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_copy_constructible – třída | Microsoft Docs
+title: is_nothrow_copy_constructible – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3a9818b6334ddd2d2769fc79c55fc8fd72e6dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc4f839ed955048b96f6327c63cd2cc82fef8aca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842557"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953769"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible – třída
 
-Kontroluje, zda má typ **nothrow** kopírovacího konstruktoru.
+Testuje, jestli má typ **nothrow** kopírovací konstruktor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,18 +36,18 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` má nothrow kopírovacího konstruktoru, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* má nothrow kopírovací konstruktor, jinak má hodnotu false.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_constructible třída | Microsoft Docs
+title: is_nothrow_constructible – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112da495673517f86a00437672ccc52429fbd251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c4a96224b86cb12af4e3abfed1f02b33e8a2594
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842739"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966560"
 ---
 # <a name="isnothrowconstructible-class"></a>is_nothrow_constructible – třída
 
-Ověřuje, zda je zkonstruovatelný typu a není znám výjimku, pokud se používá zadané typy argumentů.
+Testuje, jestli constructible typu a se ví, že vyvolat zadáním zadanými typy argumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,20 +37,20 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
-`Args` Typy argumentů tak, aby odpovídaly v konstruktoru objektu `T`.
+*Args* typy argumentů tak, aby odpovídaly v konstruktoru sady *T*.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je zkonstruovatelný pomocí typy argumentů v `Args`a konstruktoru není znám kompilátorem throw; jinak má hodnotu false. Typ `T` je zkonstruovatelný Pokud za definicí proměnné `T t(std::declval<Args>()...);` je ve správném formátu. Obě `T` a všechny typy v `Args` musí být úplný typy `void`, nebo pole neznámé hranice.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je constructible pomocí typy argumentů v *Args*a konstruktor se ví, že kompilátor vyvolá; v opačném případě obsahuje hodnotu false. Typ *T* je constructible Pokud za definicí proměnné `T t(std::declval<Args>()...);` ve správném formátu. Obě *T* a všechny typy v *Args* musí být kompletními typy **void**, nebo pole s neznámým rozsahem.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

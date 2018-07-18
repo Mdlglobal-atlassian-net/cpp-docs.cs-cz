@@ -1,5 +1,5 @@
 ---
-title: 'Správa paměti: Přidělení s rámečkem | Microsoft Docs'
+title: 'Správa paměti: Rámec přidělení | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,25 +28,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 27cde859c20f4c9cddc1ceb3e2cae568afb6e960
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931057"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027216"
 ---
 # <a name="memory-management-frame-allocation"></a>Správa paměti: Přidělení rámců
-Přidělení rámec trvá jeho název z "rámce zásobníku", který je nastaven vždy, když je volána funkce. Rámec zásobníku je oblast paměti, která dočasně obsahuje argumenty funkce a také všechny proměnné, které jsou definovány místní funkce. Proměnné rámce se často nazývají "automatické" proměnné, protože kompilátor automaticky přiděluje místo pro ně.  
+Přidělení v rámci přebírá její název ze "rámce zásobníku", který je nastaven při každém volání funkce. Rámec zásobníku je oblast paměti, která se dočasně uchovává argumenty pro funkci, stejně jako jakékoli proměnné, které jsou definovány místní funkci. Proměnné rámce jsou často nazývány "automatické" proměnné, protože kompilátor automaticky přiděluje místo pro ně.  
   
- Existují dva klíče charakteristika přidělení rámce. Nejprve když definujete proměnnou místní, dostatek místa na přiděluje rámce zásobníku pro uložení celé proměnnou, i když je velké pole nebo datová struktura. Proměnné rámce druhý, automaticky se odstraní při jejich se dostala mimo rozsah:  
+ Existují dvě klíčové vlastnosti rámec přidělení. Nejprve, při definování místní proměnné dostatek místo přiděluje podle rámce zásobníku pro uložení celé proměnné i v případě, že se o velké pole ani datové struktury. Za druhé se automaticky odstraní proměnné rámce při mizení z rozsahu:  
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Pro místní funkce proměnné tento přechod oboru se stane, když funkce ukončí, ale rozsahu proměnné rámce může být menší než funkci, pokud se používají vnořené složené závorky. Toto automatické odstranění proměnné rámce je velmi důležité. V případě jednoduchého primitivní typy (například **int** nebo **bajtů**), pole nebo datové struktury, automatické odstranění jednoduše získá množství paměti používané proměnnou. Vzhledem k tomu, že proměnná byla mimo rozsah, nelze přesto přistupovat. V případě objekty C++ ale proces automatické odstranění je trochu složitější.  
+ Lokální funkce proměnné tohoto přechodu je obor se stane při ukončení funkce, ale rozsahu rámce proměnné může být menší než funkce, pokud se používají vnořených složených závorek. Toto automatické odstranění proměnné rámce je velmi důležité. V případě jednoduchého primitivní typy (například **int** nebo **bajtů**), pole nebo datových struktur, automatické odstranění jednoduše uvolní paměť používanou proměnné. Vzhledem k tomu, že má proměnná nepřejdou mimo rozsah, nelze přistupovat přesto. V případě objektů jazyka C++ ale proces automatické odstranění je o něco složitější.  
   
- Pokud objekt je definován jako proměnnou a rámečku, jeho konstruktor se automaticky vyvolá v okamžiku, kdy došlo k definici. Když se objekt dostane mimo rozsah, jeho destruktor se automaticky vyvolá předtím, než je uvolnit paměť pro objekt. Toto automatické vytváření a odstraňování může být velmi užitečný, ale musíte být vědomi automatické volání, především při destruktoru.  
+ Když je objekt definován jako proměnné rámce, jeho konstruktor je automaticky vyvolána v místě, kde došlo k definici. Když objekt dostane mimo rozsah, vyvolání jeho destruktoru automaticky před uvolnit paměť pro objekt. Toto automatické konstrukcí a destrukcí může být velmi užitečná, ale je nutné znát automatické volání, zejména destruktor.  
   
- Hlavní výhodou přidělování objektů na rámci je, že se automaticky odstraní. Při přidělování vašich objektů v rámečku, nemusíte starat o zapomenuté objekty způsobuje nevracení paměti. (Podrobnosti o nevracení paměti najdete v článku [zjišťování nevracení paměti v prostředí MFC](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Přidělení rámce tu nevýhodu, že proměnné rámce se nedají použít mimo jejich oboru. Jiné faktorem při volbě přidělení rámce oproti přidělení haldy je, že pro velké struktury a objekty, je často lepší použít halda místo v zásobníku úložiště, protože je často omezená místa v zásobníku.  
+ Hlavní výhodou přidělování objektů na rámci je, že automaticky odebrány. Při přidělování objektů v rámci nemusíte starat o zapomenuté objekty způsobí nevracení paměti. (Podrobnosti o nevracení paměti, najdete v článku [zjištění nevracení paměti v knihovně MFC](http://msdn.microsoft.com/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Přidělení rámce nevýhodou je, že rámec proměnné nelze použít mimo jejich rozsah. Dalším faktorem při výběru rámec přidělení a přidělení haldy je, že velké struktury a objekty, často je lepší použít haldy namísto zásobníku pro úložiště, protože je často omezené místo v zásobníku.  
   
 ## <a name="see-also"></a>Viz také  
  [Správa paměti](../mfc/memory-management.md)

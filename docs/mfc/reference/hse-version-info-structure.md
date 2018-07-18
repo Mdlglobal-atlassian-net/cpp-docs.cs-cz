@@ -1,5 +1,5 @@
 ---
-title: Hse_version_info – struktura | Microsoft Docs
+title: Hse_version_info – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335812"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO – struktura
-Tato struktura ukazuje `pVer` parametr ve `CHttpServer::GetExtensionVersion` – členská funkce. Poskytuje číslo verze ISA a text popisu ISA.  
+Tato struktura je na které odkazují *pVer* parametr `CHttpServer::GetExtensionVersion` členskou funkci. Obsahuje číslo verze ISA a textový popis ISA.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ typedef struct _HSE_VERSION_INFO {
  Číslo verze ISA.  
   
  *lpszExtensionDesc*  
- Textový popis ISA. Poskytuje výchozí implementaci zástupný text; přepsání `CHttpServer::GetExtensionVersion` poskytnout vlastní popis.  
+ Textový popis ISA. Zástupný text; poskytuje výchozí implementaci Přepsat `CHttpServer::GetExtensionVersion` poskytnout vlastní popis.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** httpext.h  

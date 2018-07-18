@@ -1,5 +1,5 @@
 ---
-title: COMPLEX – třída | Microsoft Docs
+title: COMPLEX – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848242"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026404"
 ---
 # <a name="complex-class"></a>complex – třída
 
-Šablony třídy popisuje objekt, který ukládá dva objekty typu **typu**, ten, který reprezentuje část skutečné komplexního čísla a ten, který reprezentuje část pomyslná.
+Třída šablony popisuje objekt, který ukládá dva objekty typu `Type`, jedna reprezentuje skutečný část komplexního čísla a ten, který představuje imaginární části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,56 +42,56 @@ class complex
 
 ## <a name="remarks"></a>Poznámky
 
-Třída objektu **typ**:
+Objekt třídy `Type`:
 
-- Má výchozí veřejný konstruktor, destruktor, kopírovacího konstruktoru a operátor přiřazení s konvenční chování.
+- Nemá veřejný výchozí konstruktor, destruktor, kopírovací konstruktor a operátor přiřazení s konvenčním chování.
 
-- Můžete přiřadit celé číslo nebo číslo s plovoucí desetinnou čárkou nebo zadejte přetypování na tyto hodnoty se konvenční chování.
+- Je možné přiřadit celé číslo nebo hodnoty s plovoucí desetinnou čárkou nebo zadejte přetypování na tyto hodnoty s konvenčním chování.
 
-- Definuje aritmetické operátory a matematické funkce, podle potřeby, které jsou definovány pro typy s plovoucí desetinnou čárkou s konvenční chování.
+- Definuje aritmetické operátory a matematické funkce, podle potřeby, které jsou definovány pro typy s plovoucí desetinnou čárkou s konvenčním chování.
 
-Konkrétně žádné jemně lišit mohou existovat mezi vytváření kopie a výchozí konstrukce, za nímž následuje přiřazení. Žádná z operací u objektů třídy **typ** může vyvolat výjimky.
+Konkrétně se žádné lišila mohou existovat mezi konstrukci kopie a výchozí konstrukce, za nímž následuje přiřazení. Žádná z operací u objektů třídy `Type` může vyvolat výjimky.
 
-Explicitní specializace šablony třídy komplexní existovat tři typy s plovoucí desetinnou čárkou. V této implementaci hodnotu žádným jiným typem **typ** je přiřazení k typu **dvojité** pro skutečné výpočty s **dvojité** výsledek přiřazen objekt uložené typ **typ**`.`
+Explicitní specializace šablony třídy komplexní existují tři typy s plovoucí desetinnou čárkou. V této implementaci hodnoty libovolného typu `Type` přetypovat na **double** pro skutečné výpočty s **double** výsledek zpětně přiřazena poté uložený objekt typu `Type``.`
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[complex](#complex)|Vytvoří komplexního čísla se zadanou skutečné a pomyslná částí nebo jako kopii některé komplexního čísla.|
+|[complex](#complex)|Sestaví komplexního čísla se zadaným reálné a imaginární části nebo jako kopii některé komplexního čísla.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[value_type](#value_type)|Typ, který představuje typ dat používá k reprezentování části skutečné a pomyslná komplexního čísla.|
+|[value_type](#value_type)|Typ, který představuje datový typ používá k reprezentování reálné a imaginární části komplexního čísla.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[imag](#imag)|Extrahuje komponentu pomyslná komplexního čísla.|
-|[skutečné](#real)|Extrahuje komponentu skutečné komplexního čísla.|
+|[imag](#imag)|Extrahuje imaginární komplexního čísla.|
+|[Real](#real)|Extrahuje reálnou součástí komplexního čísla.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[Operator * =](#op_star_eq)|Vynásobí komplexního čísla cílového faktorem, který může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.|
-|[operator+=](#op_add_eq)|Přidá číslo na číslo komplexní cíl, kde číslo přidat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.|
-|[-= – operátor](#operator-_eq)|Odečítá od číslo od cílového komplexního čísla, kde číslo odečítat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.|
-|[/ = – operátor](#op_div_eq)|Vydělí cíl komplexního čísla dělitelem, která může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.|
-|[operátor =](#op_eq)|Přiřadí číslo na číslo komplexní cíl, kde může být složité číslo přiřazené nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, který je právě přiřazován.|
+|[Operator * =](#op_star_eq)|Vynásobí číslo cílového komplexní faktoru, který může být komplexní nebo stejného typu jako reálné a imaginární části komplexních číslo.|
+|[operator+=](#op_add_eq)|Přidá číslo cílového komplexního čísla, kde počet přidaných může být složitý nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.|
+|[operátor-=](#operator-_eq)|Odečte číslo z cílové komplexního čísla, kde číslo odečtena může být složitý nebo stejného typu jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.|
+|[/ = – operátor](#op_div_eq)|Vydělí cílové komplexního čísla dělitelem, která může být komplexní nebo být stejného typu, jako jsou reálné a imaginární části komplexních číslo.|
+|[operátor =](#op_eq)|Přiřadí číslo cílového komplexního čísla, kde může být složitý číslo přiřazené nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přiřazen.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<komplexní >
+**Hlavička**: \<komplexní >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="complex"></a>  COMPLEX::Complex
 
-Vytvoří komplexního čísla se zadanou skutečné a pomyslná částí nebo jako kopii některé komplexního čísla.
+Sestaví komplexního čísla se zadaným reálné a imaginární části nebo jako kopii některé komplexního čísla.
 
 ```cpp
 constexpr complex(
@@ -108,17 +108,17 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-`_RealVal` Hodnota skutečné část použitý k inicializaci komplexního čísla vytvářen.
+*_RealVal* hodnotu skutečné část použitý k inicializaci komplexního čísla při konstrukci.
 
-`_ImagVal` Hodnota pomyslná část použitý k inicializaci komplexního čísla vytvářen.
+*_ImagVal* hodnotu imaginární části použitý k inicializaci komplexního čísla při konstrukci.
 
-`complexNum` Komplexní číslo, jehož skutečné a pomyslná částí se používají k inicializaci komplexního čísla vytvářen.
+*complexNum* komplexní čísla, jejichž reálné a imaginární části se používají k inicializaci komplexního čísla při konstrukci.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje uložené skutečných část k _ *RealVal* a uložené pomyslná část \_ *Imagval*. Druhý konstruktor inicializuje uložené na skutečném část `complexNum` **.real**() a uložené pomyslná část `complexNum` **.imag**().
+První konstruktor inicializuje uložený reálné část k _ *RealVal* a imaginární části uložené na \_ *Imagval*. Druhý konstruktor inicializuje uložený na skutečném část `complexNum` **.real**() a imaginární části uložené na `complexNum` **.imag**().
 
-V této implementaci, pokud převodník nepodporuje členské funkce šablony, šablony:
+V této implementaci, pokud převaděč nepodporuje šablony členské funkce, šablony:
 
 ```cpp
 template <class Other>
@@ -132,7 +132,7 @@ nahradí:
 complex(const complex& right);
 ```
 
-což je konstruktor copy.
+což je kopírovací konstruktor.
 
 ### <a name="example"></a>Příklad
 
@@ -176,7 +176,7 @@ int main( )
 
 ## <a name="imag"></a>  COMPLEX::Imag
 
-Extrahuje komponentu pomyslná komplexního čísla.
+Extrahuje imaginární komplexního čísla.
 
 ```cpp
 T imag() const;
@@ -187,15 +187,15 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Komplexní číslo, jehož pomyslná hodnota má být rozbalena.
+*správné* komplexní čísla, jehož imaginární hodnota má být extrahován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pomyslná část reprezentující komplexní čísla.
+Imaginární části komplexního čísla.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro komplexní číslo *+ bi*, pomyslná část nebo součást je *Im(a + bi) = b.*
+Pro komplexní čísla *+ bi*, imaginární části nebo komponenty je *Im(a + bi) = b.*
 
 ### <a name="example"></a>Příklad
 
@@ -230,7 +230,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 
 ## <a name="op_star_eq"></a>  COMPLEX::Operator * =
 
-Vynásobí komplexního čísla cílového faktorem, který může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.
+Vynásobí číslo cílového komplexní faktoru, který může být komplexní nebo stejného typu jako reálné a imaginární části komplexních číslo.
 
 ```cpp
 template <class Other>
@@ -243,15 +243,15 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Komplexní číslo nebo číslo, které je stejný typ jako parametr komplexního čísla cíl.
+*správné* komplexní číslo nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní číslo, které byly vynásobí číslo, zadané jako parametr.
+Komplexní čísla, která byla vynásobí číslo zadané jako parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace lze provést bez převodu dat do konkrétní formátu.
+Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
 
 ### <a name="example"></a>Příklad
 
@@ -313,7 +313,7 @@ int main() {
 
 ## <a name="op_add_eq"></a>  COMPLEX::Operator +=
 
-Přidá číslo na číslo komplexní cíl, kde číslo přidat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.
+Přidá číslo cílového komplexního čísla, kde počet přidaných může být složitý nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.
 
 ```cpp
 template <class Other>
@@ -326,15 +326,15 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Komplexní číslo nebo číslo, které je stejný typ jako parametr komplexního čísla cíl.
+*správné* komplexní číslo nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní číslo, které se použila číslo, zadané jako parametr přidat.
+Komplexní čísla, který byl zadán jako parametr přidá číslo.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace lze provést bez převodu dat do konkrétní formátu.
+Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
 
 ### <a name="example"></a>Příklad
 
@@ -415,7 +415,7 @@ The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="complex__operator-_eq"></a>  COMPLEX::Operator-=
 
-Odečítá od číslo od cílového komplexního čísla, kde číslo odečítat může být složité nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, ke kterému se přidá.
+Odečte číslo z cílové komplexního čísla, kde číslo odečtena může být složitý nebo stejného typu jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.
 
 ```cpp
 template <class Other>
@@ -428,17 +428,17 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Komplexní číslo bude odečítat od cílového komplexního čísla.
+*complexNum* komplexního čísla do odečtena od cílové komplexního čísla.
 
-`_RealPart` Reálné číslo bude odečítat od cílového komplexního čísla.
+*_RealPart* reálné číslo, které bude odečítat od cílové komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní číslo, které má měla číslo, zadané jako parametr odečten z něj.
+Komplexní čísla, pro který byla jako číslo zadané jako parametr odečtena od něj.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace lze provést bez převodu dat do konkrétní formátu.
+Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
 
 ### <a name="example"></a>Příklad
 
@@ -521,7 +521,7 @@ The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 
 ## <a name="op_div_eq"></a>  COMPLEX::Operator / =
 
-Vydělí cíl komplexního čísla dělitelem, která může být složité, nebo být stejného typu, jako jsou části skutečné a pomyslná komplexního čísla.
+Vydělí cílové komplexního čísla dělitelem, která může být komplexní nebo být stejného typu, jako jsou reálné a imaginární části komplexních číslo.
 
 ```cpp
 template <class Other>
@@ -534,17 +534,17 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Komplexní číslo bude odečítat od cílového komplexního čísla.
+*complexNum* komplexního čísla do odečtena od cílové komplexního čísla.
 
-`_RealPart` Reálné číslo bude odečítat od cílového komplexního čísla.
+*_RealPart* reálné číslo, které bude odečítat od cílové komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní číslo, které byly dělený číslo, zadané jako parametr.
+Komplexní čísla, které byly rozdělené podle čísla, zadaný jako parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace lze provést bez převodu dat do konkrétní formátu.
+Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
 
 ### <a name="example"></a>Příklad
 
@@ -623,7 +623,7 @@ The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 
 ## <a name="op_eq"></a>  COMPLEX::Operator =
 
-Přiřadí číslo na číslo komplexní cíl, kde může být složité číslo přiřazené nebo stejného typu, jako jsou části skutečné a pomyslná komplexního čísla, který je právě přiřazován.
+Přiřadí číslo cílového komplexního čísla, kde může být složitý číslo přiřazené nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přiřazen.
 
 ```cpp
 template <class Other>
@@ -634,15 +634,15 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Komplexní číslo nebo číslo, které je stejný typ jako parametr komplexního čísla cíl.
+*správné* komplexní číslo nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komplexní číslo, které byl přiřazen jako číslo zadané jako parametr.
+Komplexní čísla, který byl přiřazen jako číslo zadané jako parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Operace je přetížena tak, aby jednoduché aritmetické operace lze provést bez převodu dat do konkrétní formátu.
+Operace je přetížena tak, aby jednoduché aritmetické operace se můžou provádět bez převodu dat na konkrétní formát.
 
 ### <a name="example"></a>Příklad
 
@@ -700,7 +700,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 
 ## <a name="real"></a>  COMPLEX::Real
 
-Získá nebo nastaví komponentu skutečné komplexního čísla.
+Získá nebo nastaví reálnou součástí komplexního čísla.
 
 ```cpp
 constexpr T real() const;
@@ -711,15 +711,15 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Komplexní číslo, jehož skutečné hodnoty má být rozbalena.
+*správné* komplexní čísla, jejichž skutečné hodnoty je třeba extrahovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Skutečné část reprezentující komplexní čísla.
+Skutečné součástí komplexní čísla.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro komplexní číslo *+ bi*, skutečné část nebo součást je *Re(a + bi) =.*
+Pro komplexní čísla *+ bi*, skutečné část nebo součást je *Re(a + bi) =.*
 
 ### <a name="example"></a>Příklad
 
@@ -754,7 +754,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 
 ## <a name="value_type"></a>  COMPLEX::value_type
 
-Typ, který představuje typ dat používá k reprezentování části skutečné a pomyslná komplexního čísla.
+Typ, který představuje datový typ používá k reprezentování reálné a imaginární části komplexního čísla.
 
 ```
 
@@ -763,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_type` je komplexní synonymum pro třídu **typ** parametr šablony.
+`value_type` je synonymum pro třídu komplexní `Type` parametr šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -790,7 +790,7 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[komplexní členy](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[komplexní členy](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

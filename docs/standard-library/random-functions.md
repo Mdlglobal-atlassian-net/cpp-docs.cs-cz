@@ -1,5 +1,5 @@
 ---
-title: '&lt;náhodné&gt; funkce | Microsoft Docs'
+title: '&lt;náhodné&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,21 +8,21 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852813"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954155"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;náhodné&gt; funkce
 
 ## <a name="generate_canonical"></a>  generate_canonical
 
-Vrátí hodnotu s plovoucí desetinnou čárkou z náhodné pořadí.
+Vrátí hodnotu s plovoucí desetinnou čárkou v náhodném pořadí.
 
 > [!NOTE]
-> Standardní C++ ISO stavy, že tato funkce by měla vrátit hodnoty v rozsahu [ `0`, `1`). Visual Studio není kompatibilní s tímto omezením. Jako řešení generování hodnot v tomto rozsahu, použijte [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).
+> Norma ISO C++ uvádí, že tato funkce by měla vrátit hodnoty v rozsahu [ `0`, `1`). Visual Studio není kompatibilní s tímto omezením. Jako alternativní řešení pro generování hodnot v tomto rozsahu, použijte [uniform_real_distribution –](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -31,16 +31,16 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parametry
 
-`RealType` Integrální typu procedura bodu. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*RealType* celočíselného typu s plovoucí desetinnou čárkou. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-`Bits` Generátoru náhodných čísel.
+*Služba BITS* generátor náhodných čísel.
 
-`Gen` Generátoru náhodných čísel.
+*Obecné* generátor náhodných čísel.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání funkce šablony `operator()` z `Gen` opakovaně a sady vrácené hodnoty na hodnotu s plovoucí desetinnou čárkou `x` typu `RealType` dokud shromáždil zadaný počet bitů mantisa `x`. Zadané číslo je menší z `Bits` (které musí být nenulové hodnoty) a úplné počet bitů mantisa `RealType`. První volání poskytuje nejnižší pořadí bits. Funkce vrátí hodnotu `x`.
+Volání šablony funkce `operator()` z *Obecné* opakovaně a sady vrácené hodnoty na hodnotu s plovoucí desetinnou čárkou `x` typu *RealType* dokud shromáždil zadané číslo mantisa bitů v `x`. Zadané číslo je menší z hodnot *Bits* (který musí být nenulové) a úplná počet bitů mantisa v *RealType*. První volání je zadán bits nejnižším pořadím. Funkce vrátí `x`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

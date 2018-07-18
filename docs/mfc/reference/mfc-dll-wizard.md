@@ -1,5 +1,5 @@
 ---
-title: MFC DLL – Průvodce | Microsoft Docs
+title: Průvodce MFC DLL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d02d6e6f598d6d18a6e17e9a99a3190a836dc780
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372154"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025767"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL – průvodce knihovnou
-Pokud použijete Průvodce MFC DLL vytvořit projektu knihovny MFC, dostanete výchozí s integrovanou funkci, když kompilovat, bude implementace základní funkce [DLL](../../build/dlls-in-visual-cpp.md). Výchozí program knihovny MFC zahrnuje C++ zdrojové (sada) soubory, soubory prostředků (RC) a soubor projektu (VCXPROJ). Kód, který vygenerovala v těchto souborech starter vychází MFC. Podrobnější informace naleznete v souboru Readme.txt, který se vygeneruje pro svůj projekt v sadě Visual Studio a [třídy a funkce generované průvodcem MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
+Když použijete Průvodce MFC DLL pro vytvoření projektu knihovny MFC DLL, získáte funkční aplikaci starter s integrovanými funkcemi, při kompilaci, implementuje základní funkce [DLL](../../build/dlls-in-visual-cpp.md). Výchozí program knihovny MFC zahrnuje C++ (CPP) zdrojové soubory, soubory prostředků (.rc) a soubor projektu (.vcxproj). Kód generovaný v těchto souborech starter je založena na knihovně MFC. Podrobnější informace naleznete v souboru Readme.txt, který je generován pro váš projekt v sadě Visual Studio a [třídy a funkce generované průvodcem knihovnou MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
   
 ## <a name="overview"></a>Přehled  
- Tato stránka průvodce popisuje aktuální [nastavení aplikace pro projektu knihovny MFC DLL](../../mfc/reference/application-settings-mfc-dll-wizard.md) vytváříte. Ve výchozím nastavení vytvoření projektu jako pravidelných projektu MFC DLL (MFC sdílené) bez dalších nastavení.  
+ Tato stránka průvodce popisuje aktuální [nastavení aplikace pro projekt knihovny MFC](../../mfc/reference/application-settings-mfc-dll-wizard.md) vytváříte. Ve výchozím nastavení vytvoření projektu jako pravidelné projektové knihovny MFC DLL (MFC sdílená) bez dalších nastavení.  
   
- Chcete-li změnit toto výchozí nastavení, klikněte na tlačítko **nastavení aplikace** v levém sloupci průvodce a zkontrolujte změny v této stránce Průvodce MFC DLL.  
+ Chcete-li změnit výchozí nastavení, klikněte na tlačítko **nastavení aplikace** v levém sloupci průvodce a proveďte změny na této stránce Průvodce MFC DLL.  
   
- Po vytvoření projektu knihovny MFC, můžete přidat objekty nebo ovládacích prvků do projektu Visual C++ pomocí [code průvodců](../../ide/adding-functionality-with-code-wizards-cpp.md).  
+ Po vytvoření projektu knihovny MFC lze přidat objekty nebo ovládací prvky k projektu Visual C++ pomocí [průvodců kódu](../../ide/adding-functionality-with-code-wizards-cpp.md).  
   
- Můžete provádět následující úlohy a typy rozšíření základní projektu knihovny MFC DLL:  
+ Můžete provádět následující úkoly a typy rozšíření základní projekt knihovny MFC DLL:  
   
 -   [Export z knihovny DLL](../../build/exporting-from-a-dll.md)  
   
@@ -47,10 +47,10 @@ Pokud použijete Průvodce MFC DLL vytvořit projektu knihovny MFC, dostanete v�
 -   [Inicializace knihovny DLL](../../build/run-time-library-behavior.md#initializing-a-dll)  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření a správa projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Stránky vlastností](../../ide/property-pages-visual-cpp.md)   
  [Práce s vlastnostmi projektu](../../ide/working-with-project-properties.md)   
- [Nasazení aplikací](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
+ [Nasazení aplikací](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementace rozhraní](../../ide/implementing-an-interface-visual-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: Třída CCriticalSection | Microsoft Docs
+title: CCriticalSection – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aba8c9ebe1eee6ca80d17fdff20c7d3dc30e2ae
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1ae8582147d6ad50731c457f7996b4ee6ed36324
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335623"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection – třída
-Reprezentuje "kritické oddíl" – na synchronizační objekt, který umožňuje jedno vlákno najednou k přístupu k prostředku nebo části kódu.  
+Představuje "kritický oddíl" – synchronizační objekt umožňující vždy jednomu vláknu postupně, aby přístup k prostředku nebo části kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,41 +52,41 @@ class CCriticalSection : public CSyncObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCriticalSection::Lock](#lock)|Použijte k získání přístupu k `CCriticalSection` objektu.|  
+|[CCriticalSection::Lock](#lock)|Použít k získání přístupu k `CCriticalSection` objektu.|  
 |[CCriticalSection::Unlock](#unlock)|Verze `CCriticalSection` objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|Načte ukazatel na interní **CRITICAL_SECTION** objektu.|  
+|[CCriticalSection::operator critical_section – *](#operator_critical_section_star)|Načte ukazatel na vnitřní objekt critical_section –.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CCriticalSection::m_sect](#m_sect)|A **CRITICAL_SECTION** objektu.|  
+|[CCriticalSection::m_sect](#m_sect)|Critical_section – objekt.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kritické oddíly jsou užitečné, když může být povoleno pouze jedno vlákno najednou upravovat data nebo jiný řízené prostředek. Například přidání uzlů do odkazovaného seznamu je proces, který pouze má být povoleno jedno vlákno najednou. Pomocí `CCriticalSection` objektu k řízení odkazovaného seznamu pouze jedno vlákno najednou můžete získat přístup k seznamu.  
+ Kritické oddíly jsou užitečné, pokud najednou pouze jedno vlákno může být povoleno upravovat data nebo jiný řízené prostředek. Například přidání uzlů do propojený seznam je proces, který pouze by měl být povoleno jedno vlákno najednou. Pomocí `CCriticalSection` objekt pro řízení seznamu propojených pouze jedno vlákno najednou můžete získat přístup k seznamu.  
   
 > [!NOTE]
->  Funkce `CCriticalSection` třída poskytuje skutečné Win32 **CRITICAL_SECTION** objektu.  
+>  Funkce `CCriticalSection` třída poskytuje skutečný objekt critical_section – Win32.  
   
- Kritické oddíly se používají místo mutex – třídy (viz [CMutex](../../mfc/reference/cmutex-class.md)) Pokud rychlost je klíčová a prostředek se nepoužijí přes hranice procesu.  
+ Kritické oddíly se používají místo vzájemně vyloučené přístupy (viz [CMutex](../../mfc/reference/cmutex-class.md)) při rychlost je klíčová a zdroje nesmí použít přes hranice procesu.  
   
  Existují dvě metody pro použití `CCriticalSection` objektu: samostatné a vložené v třídě.  
   
--   Samostatné metodu použít samostatný `CCriticalSection` objektu, vytvořit `CCriticalSection` objektu, když je to potřeba. Po úspěšné vrátit z konstruktoru, explicitně zamknout objekt s volání [zámku](#lock). Volání [odemčení](#unlock) po dokončení přístup k části důležité. Tato metoda při přesnější někomu čtení vašeho zdrojového kódu, je více náchylné k chybám jako nezapomeňte při zamykání a odemykání kritická sekce před a za přístup.  
+-   Samostatné metodu použít samostatný `CCriticalSection` objektu, vytvořit `CCriticalSection` objektu, když ho nepotřebují. Po úspěšném návrat z konstruktoru explicitně zamknout objekt voláním [Zámek](#lock). Volání [odemknout](#unlock) po dokončení přístupu k kritický oddíl. Tato metoda při přesnější někomu čtení zdrojového kódu, je více náchylné k chybám jako nesmíte zapomenout při zamykání a odemykání kritický oddíl před a za přístup.  
   
-     Více vhodnější metodou je použití [CSingleLock](../../mfc/reference/csinglelock-class.md) třídy. Je také `Lock` a `Unlock` metoda, ale nemusíte si dělat starosti o odemknutí prostředku, pokud dojde k výjimce.  
+     Vhodnější metodou je použít [CSingleLock](../../mfc/reference/csinglelock-class.md) třídy. Má také `Lock` a `Unlock` metody, ale nemusíte starat o odemknutí prostředku, pokud dojde k výjimce.  
   
--   Vložené metoda třídu můžete také sdílet s více vlákny přidáním `CCriticalSection`– typ datový člen třídy a uzamčení datového člena v případě potřeby.  
+-   Vložené metody třídy můžete také sdílet s více vlákny tak, že přidáte `CCriticalSection`– datový člen typu třídy a zamykání datový člen v případě potřeby.  
   
  Další informace o používání `CCriticalSection` objekty, najdete v článku [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
@@ -103,15 +103,15 @@ CCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Přístup k nebo verzi `CCriticalSection` objektu, vytvoření [CSingleLock](../../mfc/reference/csinglelock-class.md) objekt a volání jeho [zámku](../../mfc/reference/csinglelock-class.md#lock) a [odemčení](../../mfc/reference/csinglelock-class.md#unlock) členské funkce. Pokud `CCriticalSection` objekt se používá samostatné, volejte jeho [odemčení](#unlock) – členská funkce pro uvolnění.  
+ Přístup nebo vydání `CCriticalSection` objektu, vytvořit [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu a volání jeho [Zámek](../../mfc/reference/csinglelock-class.md#lock) a [odemknout](../../mfc/reference/csinglelock-class.md#unlock) členské funkce. Pokud `CCriticalSection` objektu používá samostatné, zavolejte jeho [odemknout](#unlock) členskou funkci pro uvolnění.  
   
- Pokud se nezdaří přidělit požadované systémové paměti, paměti výjimky konstruktoru (typu [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) automaticky vyvolá výjimku.  
+ Pokud selže přidělování požadované systémové paměti, s výjimkou paměti konstruktoru (typu [cmemoryexception –](../../mfc/reference/cmemoryexception-class.md)) je automaticky vyvolána.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CCriticalSection::Lock](#lock).  
   
 ##  <a name="lock"></a>  CCriticalSection::Lock  
- Volání této funkce člen k získání přístupu k objektu kritická sekce.  
+ Zavolejte tuto členskou funkci získat přístup k objektu kritický oddíl.  
   
 ```  
 BOOL Lock();  
@@ -120,52 +120,52 @@ BOOL Lock(DWORD dwTimeout);
   
 ### <a name="parameters"></a>Parametry  
  *dwTimeout*  
- `Lock` ignoruje hodnotě tohoto parametru.  
+ `Lock` Tento parametr ignoruje.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud funkci byla úspěšná. jinak 0.  
+ Nenulové, pokud funkce byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- `Lock` je blokování volání, která nevrátí, dokud nebude objekt kritická sekce signalizace (k dispozici).  
+ `Lock` je blokovacího hovoru, který nebude vracet, dokud je signalizována objekt kritický oddíl (k dispozici).  
   
- Pokud jsou nutné vypršel počká, můžete použít [CMutex](../../mfc/reference/cmutex-class.md) objektu místo `CCriticalSection` objektu.  
+ Pokud vypršel časový limit čekání jsou nezbytné, můžete použít [CMutex](../../mfc/reference/cmutex-class.md) místo objektu `CCriticalSection` objektu.  
   
- Pokud `Lock` nepodaří přidělit potřebné systémové paměti, výjimka paměti (typu [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) automaticky vyvolá výjimku.  
+ Pokud `Lock` selže přidělování nezbytné systémové paměti, s výjimkou paměti (typu [cmemoryexception –](../../mfc/reference/cmemoryexception-class.md)) je automaticky vyvolána.  
   
 ### <a name="example"></a>Příklad  
- Tento příklad ukazuje způsob vnořené kritická sekce řízením přístupu ke sdíleným prostředkům (statické `_strShared` objektu) pomocí sdílenou `CCriticalSection` objektu. `SomeMethod` Funkce ukazuje aktualizace sdíleného prostředku bezpečným způsobem.  
+ Tento příklad ukazuje postup vnořené kritický oddíl, řízení přístupu ke sdílenému prostředku (statické `_strShared` objektů) pomocí sdíleného `CCriticalSection` objektu. `SomeMethod` Funkce ukazuje aktualizaci sdíleného prostředku bezpečným způsobem.  
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
 ##  <a name="m_sect"></a>  CCriticalSection::m_sect  
- Obsahuje kritická sekce objekt, který je používán všechny `CCriticalSection` metody.  
+ Obsahuje objekt kritický oddíl, který se používá ve všech `CCriticalSection` metody.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *  
- Načte **CRITICAL_SECTION** objektu.  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator critical_section – *  
+ Načte objekt critical_section –.  
   
 ```  
 operator CRITICAL_SECTION*();
 ```   
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce načíst ukazatel na interní **CRITICAL_SECTION** objektu.  
+ Voláním této funkce načtete ukazatel na vnitřní objekt critical_section –.  
   
 ##  <a name="unlock"></a>  CCriticalSection::Unlock  
- Verze `CCriticalSection` objekt pro použití jiné vlákno.  
+ Verze `CCriticalSection` objektu používá jiné vlákno.  
   
 ```  
 BOOL Unlock();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `CCriticalSection` vlákno se vlastníkem objektu, a verze byla úspěšná, jinak hodnota 0.  
+ Nenulovou hodnotu, pokud `CCriticalSection` byl vlastníkem objektu vlákna a vydání bylo úspěšné; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `CCriticalSection` používá samostatné, `Unlock` musí být volána hned po dokončení použití prostředků řízené kritická sekce. Pokud [CSingleLock](../../mfc/reference/csinglelock-class.md) objekt se používá, `CCriticalSection::Unlock` bude volána objektem zámku `Unlock` – členská funkce.  
+ Pokud `CCriticalSection` používá samostatné, `Unlock` musí být volána ihned po dokončení používání prostředků řídí kritický oddíl. Pokud [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu se používá, `CCriticalSection::Unlock` zavolá se zamknout objekt `Unlock` členskou funkci.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CCriticalSection::Lock](#lock).  

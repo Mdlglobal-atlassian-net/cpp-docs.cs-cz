@@ -1,5 +1,5 @@
 ---
-title: '&lt;nastavit&gt; operátory | Microsoft Docs'
+title: '&lt;Nastavte&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a7ec98b2c6fc4de1a85b0f942dd109dfe94839f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861763"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965640"
 ---
-# <a name="ltsetgt-operators"></a>&lt;nastavit&gt; operátory
+# <a name="ltsetgt-operators"></a>&lt;Nastavte&gt; operátory
 
 ||||
 |-|-|-|
@@ -38,7 +38,7 @@ ms.locfileid: "33861763"
 
 ## <a name="op_neq"></a>  Operator! = (set)
 
-Testy, pokud sada objekt na levé straně operátoru není stejný jako sada objekt na pravé straně.
+Testuje, zda je objekt set na levé straně operátoru není roven objektu set na pravé straně.
 
 ```cpp
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -46,17 +46,17 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **nastavit**.
+*levé* objekt typu `set`.
 
-`right` Objekt typu **nastavit**.
+*správné* objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud sady není stejný; **false** Pokud sady jsou stejné.
+**Hodnota TRUE** Pokud sady nejsou stejné; **false** Pokud sady jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty sada je založená na pairwise porovnání mezi jejich elementů. Dvě sady jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi sadu objektů podle pairwise srovnání jejich prvky. Dvě sady jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -97,7 +97,7 @@ The sets s1 and s3 are equal.
 
 ## <a name="op_lt"></a>  operátor&lt; (set)
 
-Testy, pokud je sada objekt na levé straně operátoru menší než sadu objekt na pravé straně.
+Testuje, zda je objekt set na levé straně operátoru menší než objekt set na pravé straně.
 
 ```cpp
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -105,17 +105,17 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **nastavit**.
+*levé* objekt typu `set`.
 
-`right` Objekt typu **nastavit**.
+*správné* objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud sada na levé straně operátoru je striktně menší než sadu na pravé straně operátoru; v opačném případě **false**.
+**Hodnota TRUE** Pokud sada na levé straně operátoru není striktně menší než sada na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty sad je založena na pairwise porovnání jejich součástí. Je menší – než vztah mezi dvěma objekty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi sadu objektů podle pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -156,7 +156,7 @@ The set s1 is not less than the set s3.
 
 ## <a name="op_lt_eq"></a>  operátor&lt;= (set)
 
-Testy, pokud sada objekt na levé straně operátoru je menší než nebo stejný jako sada objekt na pravé straně.
+Testuje, zda je sada objekt na levé straně operátoru je menší než nebo roven objektu set na pravé straně.
 
 ```cpp
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -164,17 +164,17 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **nastavit**.
+*levé* objekt typu `set`.
 
-`right` Objekt typu **nastavit**.
+*správné* objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud sada na levé straně operátoru je menší než nebo rovná sadu na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud je sada na levé straně operátoru menší než nebo rovna sada na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty sad je založena na pairwise porovnání jejich součástí. Je menší než nebo rovna na relaci mezi dvěma objekty je založena na porovnání první pár nerovné elementů.
+Porovnání mezi sadu objektů podle pairwise porovnání jejich prvky. Je menší než nebo rovna na vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -222,7 +222,7 @@ Set s1 is less than or equal to the set s4.
 
 ## <a name="op_eq_eq"></a>  Operator == (set)
 
-Testy, pokud sada objekt na levé straně operátoru rovná sadu objekt na pravé straně.
+Testuje, zda je objekt set na levé straně operátoru roven objektu set na pravé straně.
 
 ```cpp
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -230,17 +230,17 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **nastavit**.
+*levé* objekt typu `set`.
 
-`right` Objekt typu **nastavit**.
+*správné* objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud je sada na levé straně operátoru rovná sadu na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud je sada na levé straně operátoru roven sada na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty sad je založena na pairwise porovnání jejich součástí. Dvě sady jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi sadu objektů podle pairwise porovnání jejich prvky. Dvě sady jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -281,7 +281,7 @@ The sets s1 and s3 are equal.
 
 ## <a name="op_gt"></a>  operátor&gt; (set)
 
-Testy, pokud je sada objekt na levé straně operátoru větší než sadu objekt na pravé straně.
+Testuje, zda je objekt set na levé straně operátoru větší než objekt set na pravé straně.
 
 ```cpp
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -289,17 +289,17 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **nastavit**.
+*levé* objekt typu `set`.
 
-`right` Objekt typu **nastavit**.
+*správné* objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud sada na levé straně operátoru je větší než sadu na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud je sada na levé straně operátoru větší než sada na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty sad je založena na pairwise porovnání jejich součástí. Delší – než vztah mezi dvěma objekty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi sadu objektů podle pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -340,7 +340,7 @@ The set s1 is greater than the set s3.
 
 ## <a name="op_gt_eq"></a>  operátor&gt;= (set)
 
-Testy, pokud je sada objekt na levé straně operátoru větší než nebo rovna hodnotě sadu objekt na pravé straně.
+Testuje, zda je objekt set na levé straně operátoru větší než nebo roven objektu set na pravé straně.
 
 ```cpp
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -348,17 +348,17 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **nastavit**.
+*levé* objekt typu `set`.
 
-`right` Objekt typu **nastavit**.
+*správné* objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud sada na levé straně operátoru je větší než nebo rovná sadu na pravé straně seznamu; jinak hodnota **false**.
+**Hodnota TRUE** Pokud je sada na levé straně operátoru větší než nebo rovna hodnotě sada na pravé straně seznamu; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty sad je založena na pairwise porovnání jejich součástí. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár nerovné elementů.
+Porovnání mezi sadu objektů podle pairwise porovnání jejich prvky. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -406,7 +406,7 @@ Set s1 is greater than or equal to set s4.
 
 ## <a name="op_neq_multiset"></a>  Operator! = (multiset)
 
-Testy, pokud multiset objekt na levé straně operátoru není stejný jako multiset objekt na pravé straně.
+Testuje, zda je objekt multiset – na levé straně operátoru není roven multiset – objekt na pravé straně.
 
 ```cpp
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -414,17 +414,17 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `multiset`.
+*levé* objekt typu `multiset`.
 
-`right` Objekt typu `multiset`.
+*správné* objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud multisets nebo sady nejsou stejné; **false** Pokud multisets nebo sady jsou stejné.
+**Hodnota TRUE** Pokud sady nebo multisets nejsou stejné; **false** Pokud sady nebo multisets jsou si rovny.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi multiset – objekty je založena na pairwise porovnání mezi jejich elementů. Dvě sady nebo multisets jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi multiset – objekty podle pairwise srovnání jejich prvky. Dvě sady nebo multisets jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -465,7 +465,7 @@ The multisets s1 and s3 are equal.
 
 ## <a name="op_lt_multiset"></a>  operátor&lt; (multiset)
 
-Testy, pokud multiset objekt na levé straně operátor je menší než multiset objekt na pravé straně.
+Testuje, zda je objekt multiset – na levé straně operátoru menší než multiset – objekt na pravé straně.
 
 ```cpp
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -473,17 +473,17 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `multiset`.
+*levé* objekt typu `multiset`.
 
-`right` Objekt typu `multiset`.
+*správné* objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud multimnožina na levé straně operátoru je striktně menší než multiset na pravé straně operátoru; v opačném případě **false**.
+**Hodnota TRUE** Pokud multiset na levé straně operátoru je striktně menší než multiset na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi multiset – objekty je založena na pairwise porovnání jejich součástí. Je menší – než vztah mezi dvěma objekty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi multiset – objekty podle pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -528,7 +528,7 @@ The multiset s1 is not less than the multiset s3.
 
 ## <a name="op_lt_eq_multiset"></a>  operátor&lt;= (multiset)
 
-Pokud multiset objekt na levé straně operátoru testů je menší než nebo rovna hodnotě multiset objekt na pravé straně.
+Testuje, zda je třída multiset objekt na levé straně operátoru je menší než nebo rovna hodnotě multiset – objekt na pravé straně.
 
 ```cpp
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -536,17 +536,17 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `multiset`.
+*levé* objekt typu `multiset`.
 
-`right` Objekt typu `multiset`.
+*správné* objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud multimnožina na levé straně operátoru je menší než nebo rovná multiset na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud multiset na levé straně operátoru menší než nebo rovna hodnotě multiset na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi multiset – objekty je založena na pairwise porovnání jejich součástí. Je menší než nebo rovna na relaci mezi dvěma objekty je založena na porovnání první pár nerovné elementů.
+Porovnání mezi multiset – objekty podle pairwise porovnání jejich prvky. Je menší než nebo rovna na vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -600,7 +600,7 @@ The multiset s1 is less than or equal to the multiset s4.
 
 ## <a name="op_eq_eq_multiset"></a>  Operator == (multiset)
 
-Testy, pokud multiset objekt na levé straně operátoru rovná multiset objekt na pravé straně.
+Testuje, zda je objekt multiset – na levé straně operátoru rovná multiset – objekt na pravé straně.
 
 ```cpp
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -608,17 +608,17 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `multiset`.
+*levé* objekt typu `multiset`.
 
-`right` Objekt typu `multiset`.
+*správné* objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud multimnožina na levé straně operátor je rovno multiset na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** multiset na levé straně operátoru je jinak multiset na pravé straně operátoru roven **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi multiset – objekty je založena na pairwise porovnání jejich součástí. Dvě sady nebo multisets jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi multiset – objekty podle pairwise porovnání jejich prvky. Dvě sady nebo multisets jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -659,7 +659,7 @@ The multisets s1 and s3 are equal.
 
 ## <a name="op_gt_multiset"></a>  operátor&gt; (multiset)
 
-Testy, pokud multiset objekt na levé straně operátoru je větší než multiset objekt na pravé straně.
+Testuje, zda je objekt multiset – na levé straně operátoru větší než multiset – objekt na pravé straně.
 
 ```cpp
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -667,17 +667,17 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `multiset`.
+*levé* objekt typu `multiset`.
 
-`right` Objekt typu `multiset`.
+*správné* objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud multimnožina na levé straně operátoru je větší než multiset na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud multiset na levé straně operátoru větší než multiset na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi multiset – objekty je založena na pairwise porovnání jejich součástí. Delší – než vztah mezi dvěma objekty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi multiset – objekty podle pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -722,7 +722,7 @@ The multiset s1 is greater than the multiset s3.
 
 ## <a name="op_gt_eq_multiset"></a>  operátor&gt;= (multiset)
 
-Testy, pokud se multiset objekt na levé straně operátoru větší než nebo rovna hodnotě multiset objekt na pravé straně.
+Testuje, zda je objekt multiset – na levé straně operátoru větší než nebo rovna hodnotě multiset – objekt na pravé straně.
 
 ```cpp
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -730,17 +730,17 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `multiset`.
+*levé* objekt typu `multiset`.
 
-`right` Objekt typu `multiset`.
+*správné* objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud multimnožina na levé straně operátoru je větší než nebo rovná multiset na pravé straně seznamu; jinak hodnota **false**.
+**Hodnota TRUE** Pokud multiset na levé straně operátoru větší než nebo rovna hodnotě multiset na pravé straně seznamu; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi multiset – objekty je založena na pairwise porovnání jejich součástí. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár nerovné elementů.
+Porovnání mezi multiset – objekty podle pairwise porovnání jejich prvky. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -792,6 +792,6 @@ The multiset s1 is greater than or equal to the multiset s4.
 *\
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<set>](../standard-library/set.md)<br/>

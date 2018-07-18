@@ -1,5 +1,5 @@
 ---
-title: CDialogBar – třída | Microsoft Docs
+title: CDialogBar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 5ff69a4974cd85471b0cfa039f32ee0c1a76f82a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336381"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar – třída
-Poskytuje funkci Windows nemodální dialogového okna v ovládacím panelu.  
+Poskytuje funkce pro nemodální dialogovému oknu Windows na ovládacím panelu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,20 +48,20 @@ class CDialogBar : public CControlBar
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDialogBar::Create](#create)|Vytvoří dialogového pruhu Windows a připojí jej k `CDialogBar` objektu.|  
+|[CDialogBar::Create](#create)|Vytvoří panel dialogového okna Windows a připojí ho k `CDialogBar` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Panel dialogového okna se podobá dialogové okno, protože obsahuje standardní ovládací prvky systému Windows, které může uživatel kartě mezi. Jiné podobnosti je, že vytvořit šablony dialogového okna představují panel dialogového okna.  
+ Panel dialogového okna se podobá dialogového okna, protože obsahuje standardní ovládací prvky Windows, které uživatel může mezi kartu. Jiné podobnosti je, že vytvoříte dialogové okno šablony, která představuje panel dialogového okna.  
   
- Vytvoření a použití dialogového pruhu je podobná vytváření a používání `CFormView` objektu. Nejprve pomocí [editoru dialogového okna](../../windows/dialog-editor.md) definovat šablony dialogového okna se stylem **ws_child –** a žádný jiný styl. Šablona nesmí obsahovat styl **ws_visible –**. V kódu aplikace, volat konstruktor k vytvoření `CDialogBar` objekt a potom volání `Create` vytvořit okno panel dialogového okna a jeho k připojení `CDialogBar` objektu.  
+ Vytvoření a použití dialogového pruhu se podobá vytváření a používání `CFormView` objektu. Nejprve [editoru dialogového okna](../../windows/dialog-editor.md) k definování šablony dialogového okna se stylem WS_CHILD a žádný jiný styl. Šablona nesmí obsahovat styl WS_VISIBLE. V kódu aplikace volat konstruktor k vytvoření `CDialogBar` objekt a potom voláním `Create` vytvořit panel dialogového okna okno a připojit ho k `CDialogBar` objektu.  
   
- Další informace o `CDialogBar`, najdete v článku [dialogové pruhy](../../mfc/dialog-bars.md) a [Technická poznámka 31](../../mfc/tn031-control-bars.md), ovládací pruhy.  
+ Další informace o `CDialogBar`, najdete v článku [dialogové pruhy](../../mfc/dialog-bars.md) a [Technická poznámka 31](../../mfc/tn031-control-bars.md), ovládacích pruhů.  
   
 > [!NOTE]
->  V aktuální verzi `CDialogBar` objektu nemůže být hostitelem ovládací prvky Windows Forms. Další informace o ovládacích prvcích Windows Forms v jazyce Visual C++ najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+>  V aktuální verzi `CDialogBar` objektu nelze umístit ovládací prvky Windows Forms. Další informace o ovládacích prvcích Windows Forms v jazyce Visual C++, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -82,7 +82,7 @@ CDialogBar();
 ```  
   
 ##  <a name="create"></a>  CDialogBar::Create  
- Načte prostředek – dialogové okno šablonu určenou položkou `lpszTemplateName` nebo `nIDTemplate`, vytvoří okno panel dialogového okna, nastaví její styl a přidruží ji s `CDialogBar` objektu.  
+ Načte dialogového okna prostředků šablonu určenou položkou `lpszTemplateName` nebo `nIDTemplate`, vytvoří panel dialogového okna okno, nastaví jeho styl a přidruží ji k `CDialogBar` objektu.  
   
 ```  
 virtual BOOL Create(
@@ -101,50 +101,50 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Ukazatel na nadřazený `CWnd` objektu.  
+ Ukazatel na nadřazenou `CWnd` objektu.  
   
  *lpszTemplateName*  
- Ukazatel na název `CDialogBar` šablony prostředků – dialogové objektu.  
+ Ukazatel na název `CDialogBar` objektu dialogového okna prostředků šablony.  
   
  *nStyle*  
- Styl panelu nástrojů. Styly dalších nástrojů, které jsou podporované jsou:  
+ Styl toolbar. Další toolbar – styly podporovány jsou:  
   
-- **CBRS_TOP** ovládacích pruhů je v horní části okna rámce.  
+- CBRS_TOP ovládací panel je v horní části okna rámce.  
   
-- **CBRS_BOTTOM** je ovládací prvek panelu v dolní části okna rámce.  
+- CBRS_BOTTOM ovládací panel je v dolní části okna rámce.  
   
-- **CBRS_NOALIGN** ovládacích pruhů není změnit jejich umístění při změně velikosti nadřazeného objektu.  
+- Při změně velikosti nadřazené není přemístí CBRS_NOALIGN ovládací panel.  
   
-- **Cbrs_tooltips –** zobrazí popisy ovládacích pruhů.  
+- CBRS_TOOLTIPS ovládací panel zobrazuje popisy tlačítek.  
   
-- **Cbrs_size_dynamic –** ovládacích pruhů je dynamický.  
+- CBRS_SIZE_DYNAMIC ovládací panel je dynamická.  
   
-- **Cbrs_size_fixed –** ovládacích pruhů vyřešen.  
+- CBRS_SIZE_FIXED ovládací panel vyřešen.  
   
-- **CBRS_FLOATING** je plovoucí ovládacích pruhů.  
+- Panel ovládacího prvku CBRS_FLOATING je s plovoucí desetinnou čárkou.  
   
-- **Cbrs_flyby –** stavový řádek obsahuje informace o tlačítko.  
+- CBRS_FLYBY stavový řádek zobrazuje informace o tlačítku.  
   
-- **CBRS_HIDE_INPLACE** není zobrazovat uživateli, ovládacích pruhů.  
+- Uživateli se nezobrazí CBRS_HIDE_INPLACE ovládací panel.  
   
  *nID*  
  ID ovládacího prvku panel dialogového okna.  
   
  *nIDTemplate*  
- ID prostředku `CDialogBar` dialogového šablony objektu.  
+ ID prostředku `CDialogBar` šablony dialog-box objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud zadáte **CBRS_TOP** nebo **CBRS_BOTTOM** zarovnání styl, šířka panel dialogového okna je, že rámce okna a jeho výšku je u prostředku zadaného parametrem *nIDTemplate*. Pokud zadáte **CBRS_LEFT** nebo **CBRS_RIGHT** zarovnání styl, výška panel dialogového okna je, že rámce okna a jeho šířka je, že z prostředku zadaného parametrem *nIDTemplate*.  
+ Pokud zadáte CBRS_TOP nebo CBRS_BOTTOM styl zarovnání, je panel dialogového okna šířku okna rámce a výšku, je prostředek určený souborem *nIDTemplate*. Pokud zadáte CBRS_LEFT nebo CBRS_RIGHT styl zarovnání, Výška pruhu dialogové okno je okno rámce a jeho šířka byla u prostředku zadaného parametrem *nIDTemplate*.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC CTRLBARS](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC CTRLBARS](../../visual-cpp-samples.md)   
  [Ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třídy CFormView – třída](../../mfc/reference/cformview-class.md)   
+ [CFormView – třída](../../mfc/reference/cformview-class.md)   
  [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)

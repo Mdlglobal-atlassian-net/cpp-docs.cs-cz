@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DSizeU | Microsoft Docs
+title: Cd2dsizeu – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335838"
 ---
-# <a name="cd2dsizeu-class"></a>CD2DSizeU – třída
+# <a name="cd2dsizeu-class"></a>Cd2dsizeu – třída
 Obálka pro D2D1_SIZE_U.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -48,7 +48,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Vrátí **boolean** hodnotu, která určuje, zda výraz neobsahuje žádná platná data ( **null**).|  
+|[CD2DSizeU::IsNull](#isnull)|Vrátí **logická** hodnotu, která určuje, zda výraz neobsahuje žádná platná data (NULL).|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -59,13 +59,13 @@ class CD2DSizeU : public D2D1_SIZE_U;
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `D2D1_SIZE_U`  
   
- [CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)  
+ [Cd2dsizeu –](../../mfc/reference/cd2dsizeu-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxrendertarget.h  
   
 ##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- Vytvoří objekt CD2DSizeU z CSize objektu.  
+ Vytvoří objekt cd2dsizeu – z CSize objektu.  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -96,10 +96,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud jsou prázdné; šířku a výšku. jinak hodnota FALSE.  
+ Hodnota TRUE, pokud šířky a výšky jsou prázdná. v opačném případě FALSE.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::Operator CSize  
- Převede CD2DSizeU CSize objektu.  
+ Převede cd2dsizeu – CSize objektu.  
   
 ```  
 operator CSize();

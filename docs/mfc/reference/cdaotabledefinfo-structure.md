@@ -1,5 +1,5 @@
 ---
-title: Cdaotabledefinfo – struktura | Microsoft Docs
+title: Cdaotabledefinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1422c4d0e45599ca8bc2e9c86a4263b8ac9b6
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ac88b3fd55a81237e6c54dbad422f9537950c9e6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335758"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo – struktura
-`CDaoTableDefInfo` Struktura obsahuje informace o objekt tabledef definované pro přístup k objektům dat (DAO).  
+`CDaoTableDefInfo` Struktura obsahuje informace o objektu tabledef definovány pro datový přístup k objektům (DAO).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,58 +47,58 @@ struct CDaoTableDefInfo
   
 #### <a name="parameters"></a>Parametry  
  *m_strName*  
- Objekt tabledef jedinečné názvy. K načtení hodnoty této vlastnosti přímo, volání objektu tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) – členská funkce. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
+ Objekt tabledef jedinečné názvy. K načtení hodnoty této vlastnosti přímo, volání objektu tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) členskou funkci. Další informace naleznete v tématu "Název vlastnosti" v nápovědě k DAO.  
   
  *m_bUpdatable*  
- Určuje, zda v tabulce můžete provedeny změny. Rychlým způsobem k určení, zda tabulka je v aktualizovatelné je otevřít `CDaoTableDef` objektu pro tabulku a volání objektu [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) – členská funkce. `CanUpdate` vždycky vrátí nenulovou hodnotu (**TRUE**) pro nově vytvořený objekt tabledef objekt a 0 (**FALSE**) připojené tabledef objektu. Nový objekt tabledef lze připojit pouze k databázi, pro kterou má aktuální uživatel oprávnění k zápisu. Pokud tabulka obsahuje pouze pole nonupdatable `CanUpdate` vrátí hodnotu 0. Pokud jeden nebo víc polích je možné aktualizovat, `CanUpdate` vrátí nenulovou hodnotu. Můžete upravit pouze aktualizovat pole. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
+ Určuje, zda můžete provést změny k tabulce. Rychlý způsob, jak zjistit, jestli je aktualizovat tabulku je otevřít `CDaoTableDef` pro tabulku a následně zavolat objekt [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) členskou funkci. `CanUpdate` vždycky vrátí nenulovou hodnotu (TRUE) pro nově vytvořený tabledef objekt a pro objekt připojené tabledef 0 (FALSE). Nový objekt tabledef lze připojit pouze k databázi, pro kterou má aktuální uživatel oprávnění k zápisu. Pokud tabulka obsahuje pouze pole nonupdatable `CanUpdate` vrátí hodnotu 0. Pokud jeden nebo více polí je možné aktualizovat, `CanUpdate` vrátí nenulovou hodnotu. Můžete upravit pouze pole aktualizovat. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě k DAO.  
   
  *m_lAttributes*  
- Určuje vlastnosti reprezentované objektem tabledef tabulky. Chcete-li získat aktuální atributy tabledef, volejte jeho [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) – členská funkce. Hodnota vrácená může být kombinací těchto dlouho konstanty (pomocí bitové operace OR (**&#124;**) operátor):  
+ Určuje vlastnosti tabulky tabledef objektem. Chcete-li načíst aktuální atributy tabledef, zavolejte jeho [GetAttributes –](../../mfc/reference/cdaotabledef-class.md#getattributes) členskou funkci. Vrácená hodnota může být kombinací těchto dlouhé konstanty (pomocí bitového operátoru OR (**&#124;**) – operátor):  
   
-- **dbAttachExclusive** pro databáze, které používají databázový stroj Microsoft Jet, určuje, v tabulce je otevřen pro výhradní použití připojené tabulka.  
+- `dbAttachExclusive` U databází, které používají databázovém stroji Microsoft Jet značí, že v tabulce je otevřen pro výhradní použití připojené tabulky.  
   
-- **dbAttachSavePWD** pro databáze, které používají databázový stroj Microsoft Jet, označuje, že ID uživatele a heslo pro připojené tabulku jsou uložit s informacemi o připojení.  
+- `dbAttachSavePWD` U databází, které používají databázovém stroji Microsoft Jet označuje, že se uloží ID uživatele a heslo pro připojené tabulku s informacemi o připojení.  
   
-- **dbSystemObject** označuje v tabulce je systémová tabulka poskytuje databázový stroj Microsoft Jet. (Jen pro čtení.)  
+- `dbSystemObject` Označuje, že systémová tabulka poskytuje databázový stroj Microsoft Jet je tabulka. (Jen pro čtení.)  
   
-- **dbHiddenObject** označuje v tabulce je skrytý tabulka poskytuje databázový stroj Microsoft Jet (pro dočasné použití). (Jen pro čtení.)  
+- `dbHiddenObject` Označuje, že tabulka se skryté tabulky, poskytovaných databázový stroj Microsoft Jet (pro dočasné použití). (Jen pro čtení.)  
   
-- **dbAttachedTable** označuje připojené tabulky z databáze rozhraní ODBC, jako je například databázový stroj je v tabulce.  
+- `dbAttachedTable` Označuje, že je tabulka připojené tabulky z databáze rozhraní ODBC, jako je databázový stroj.  
   
-- **dbAttachedODBC** označuje připojené tabulky z databáze ODBC, jako je Microsoft SQL Server je v tabulce.  
+- `dbAttachedODBC` Označuje, že je tabulka připojené tabulky z databáze ODBC, jako je Microsoft SQL Server.  
   
  *m_dateCreated*  
- Datum a čas, kdy byl vytvořen v tabulce. Chcete-li přímo získat datum vytvoření tabulky, volejte [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) členské funkce `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
+ Datum a čas, který byl vytvořen v tabulce. Chcete-li načíst přímo datum vytvoření tabulky, zavolejte [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) členskou funkci `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě k DAO.  
   
  *m_dateLastUpdated*  
- Datum a čas poslední změny provedené v návrhu tabulky. Chcete-li načíst přímo datum poslední aktualizace v tabulce, volejte [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) členské funkce `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
+ Datum a čas poslední změny v návrhu v tabulce. Chcete-li načíst přímo datum poslední aktualizace v tabulce, zavolejte [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) členskou funkci `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Související informace naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě k DAO.  
   
  *m_strSrcTableName*  
- Určuje název připojené tabulky, pokud existuje. Chcete-li načíst přímo názvu zdrojové tabulky, volejte [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) členské funkce `CDaoTableDef` objekt přidružený k tabulce.  
+ Určuje název připojené tabulky, pokud existuje. Chcete-li přímo načíst název zdrojové tabulky, zavolejte [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) členskou funkci `CDaoTableDef` objekt přidružený k tabulce.  
   
  *m_strConnect*  
- Poskytuje informace o zdroji otevřenou databázi. Tuto vlastnost můžete zkontrolovat pomocí volání [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) členské funkce vaší `CDaoTableDef` objektu. Další informace o připojení řetězce naleznete v tématu `GetConnect`.  
+ Poskytuje informace o zdroji otevřenou databázi. Tuto vlastnost můžete zkontrolovat, že volání [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) členskou funkci vaše `CDaoTableDef` objektu. Další informace o připojení řetězců naleznete v tématu `GetConnect`.  
   
  *m_strValidationRule*  
- Hodnota, která ověří data v tabledef pole, jako jsou změnit nebo přidat do tabulky. Ověření je podporováno pouze u databází, které používají databázový stroj Microsoft Jet. Chcete-li načíst přímo ověřovací pravidlo, volejte [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) členské funkce `CDaoTableDef` objekt přidružený k tabulce. Související informace naleznete v tématu "Vlastnosti Ověřovací pravidlo" v nápovědě rozhraní DAO.  
+ Hodnota, která ověřuje data v polích tabledef, protože se změnily nebo přibyly tabulku. Ověření se podporuje jenom pro databáze, které používají databázový stroj Microsoft Jet. Chcete-li načíst přímo ověřovacího pravidla, zavolejte [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) členskou funkci `CDaoTableDef` objekt přidružený k tabulce. Související informace naleznete v tématu "Ověřovací pravidlo vlastnost" v nápovědě k DAO.  
   
  *m_strValidationText*  
- Hodnota, která určuje text zprávy, který vaše aplikace by měl zobrazit, pokud není splněna ověřovací pravidlo určeného vlastností Ověřovací pravidlo. Související informace naleznete v tématu "Vlastnost Ověřovací text" v nápovědě rozhraní DAO.  
+ Hodnota, která určuje text zprávy, která vaše aplikace by měla zobrazí, pokud není splněná ověřovací pravidlo určené vlastností Ověřovací pravidlo. Související informace naleznete v tématu "Ověřovací vlastnost" v nápovědě k DAO.  
   
  *m_lRecordCount*  
- Počet záznamů v objektu tabledef získat přístup. Nastavení této vlastnosti je jen pro čtení. Chcete-li načíst přímo počet záznamů, volejte [getrecordcount –](../../mfc/reference/cdaotabledef-class.md#getrecordcount) členské funkce `CDaoTableDef` objektu. V dokumentaci k `GetRecordCount` popisuje další počet záznamů. Všimněte si, že načítání tento počet může být časově náročná operace Pokud tabulka obsahuje mnoho záznamů.  
+ Počet záznamů v objektu tabledef získat přístup. Nastavení této vlastnosti je jen pro čtení. Přímo načíst počet záznamů, zavolejte [getrecordcount –](../../mfc/reference/cdaotabledef-class.md#getrecordcount) členskou funkci `CDaoTableDef` objektu. V dokumentaci k `GetRecordCount` popisuje dál počet záznamů. Všimněte si, že načítání tohoto počtu může být časově náročná operace. Pokud tabulka obsahuje mnoho záznamů.  
   
 ## <a name="remarks"></a>Poznámky  
- Je třída objektu objekt tabledef [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Odkazy na primární, sekundární a všechny výše označuje, jak je vrácené informace [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) členské funkce ve třídě `CDaoDatabase`.  
+ Objekt třídy je tabledef [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md). Odkazy na primární, sekundární a všechny výše určit, jak vrácené informace [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) členské funkce ve třídě `CDaoDatabase`.  
   
- Načte informace [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) – členská funkce je uložen v `CDaoTableDefInfo` struktura. Volání `GetTableDefInfo` členské funkce `CDaoDatabase` objektu, v jehož tabledefs – kolekce tabledef objekt se uloží. `CDaoTableDefInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoTableDefInfo` objektu.  
+ Načte informace [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) členská funkce je uložen v `CDaoTableDefInfo` struktury. Volání `GetTableDefInfo` členskou funkci `CDaoDatabase` objekt, v jehož tabledefs – kolekce tabledef objekt se uloží. `CDaoTableDefInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoTableDefInfo` objektu.  
   
- Nastavení data a času jsou odvozené z počítače, na kterém byl vytvořen nebo naposledy aktualizován na základní tabulku. V prostředí musí uživatelé získávají těchto nastavení přímo ze souborového serveru, aby se zabránilo nesrovnalostí v DateCreated a LastUpdated nastavení vlastností.  
+ Nastavení data a času jsou odvozeny z počítače, na kterém byla vytvořena nebo poslední aktualizace základní tabulka. V prostředí musí uživatelé získají tato nastavení přímo ze souborového serveru, aby nedostatky v DateCreated a nastavení vlastností LastUpdated.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef – třída](../../mfc/reference/cdaotabledef-class.md)   
+ [Cdaotabledef – třída](../../mfc/reference/cdaotabledef-class.md)   
  [CDaoDatabase – třída](../../mfc/reference/cdaodatabase-class.md)

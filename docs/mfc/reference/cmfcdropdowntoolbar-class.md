@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCDropDownToolBar | Microsoft Docs
+title: CMFCDropDownToolbar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042115"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027307"
 ---
-# <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar – třída
-Panel nástrojů, který se zobrazí, když uživatel stiskne a obsahuje tlačítka panelu nástrojů nejvyšší úrovně.  
+# <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar – třída
+Panel nástrojů, který se zobrazí, když uživatel stiskne a podrží tlačítko panelu nástrojů nejvyšší úrovně.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Syntaxe  
@@ -53,43 +53,43 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Přepisuje `CPane::AllowShowOnPaneMenu`.)|  
-|[CMFCDropDownToolBar::LoadBitmap](#loadbitmap)|(Přepisuje [CMFCToolBar::LoadBitmap](../../mfc/reference/cmfctoolbar-class.md#loadbitmap).)|  
-|[CMFCDropDownToolBar::LoadToolBar](#loadtoolbar)|(Přepisuje [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar).)|  
+|[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Přepíše `CPane::AllowShowOnPaneMenu`.)|  
+|[CMFCDropDownToolBar::LoadBitmap](#loadbitmap)|(Přepíše [CMFCToolBar::LoadBitmap](../../mfc/reference/cmfctoolbar-class.md#loadbitmap).)|  
+|[CMFCDropDownToolBar::LoadToolBar](#loadtoolbar)|(Přepíše [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar).)|  
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
-|[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Přepisuje `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepisuje [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Přepíše `CMFCToolBar::OnSendCommand`.)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Poznámky  
- A `CMFCDropDownToolBar` objekt s chováním místní nabídky kombinuje vzhled panelu nástrojů. Když uživatel stiskem tlačítka a obsahuje tlačítka panelu nástrojů rozevíracího seznamu (najdete v části [CMFCDropDownToolbarButton třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), zobrazí se panel nástrojů rozevíracího seznamu a kterého uživatel může vybrat tlačítko panelu nástrojů rozevíracího seznamu tak, že k němu posouvání a uvolněním tlačítka myši tlačítko. Po výběru tlačítka na panelu nástrojů rozevíracího seznamu, že tlačítko se zobrazí jako aktuální tlačítka na panelu nástrojů nejvyšší úrovně.  
+ A `CMFCDropDownToolBar` objekt kombinuje vzhled panelu nástrojů s chováním v místní nabídce. Když uživatel stiskne a podrží tlačítko panelu nástrojů v rozevíracím seznamu (viz [cmfcdropdowntoolbarbutton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), zobrazí se rozevírací seznam nástrojů, a může uživatel vybrat tlačítko na panelu nástrojů v rozevíracím seznamu posouvání, aby ji mohl a uvolněním tlačítka myši tlačítko. Když uživatele vybere tlačítko na panelu rozevíracího seznamu, toto tlačítko se zobrazí jako aktuální tlačítko na panelu nástrojů nejvyšší úrovně.  
   
- Rozevírací seznam nástrojů nelze přizpůsobit nebo ukotven a nemá do stavu úplné vypnutí.  
+ Rozevírací seznam nástrojů nelze upravit nebo ukotven a nemá stav odnímatelnými nabídkami.  
   
- Následující obrázek znázorňuje `CMFCDropDownToolBar` objektu:  
+ Následující ilustrace ukazuje `CMFCDropDownToolBar` objektu:  
   
  ![Příklad CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- Vytvoříte `CMFCDropDownToolBar` objekt stejným způsobem jako vytvoříte obyčejnou panelu nástrojů (v tématu [CMFCToolBar třída](../../mfc/reference/cmfctoolbar-class.md)).  
+ Vytváření `CMFCDropDownToolBar` objekt stejným způsobem vytvoření běžný panel nástrojů (naleznete v tématu [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)).  
   
- Rozevírací seznam nástrojů vložení do nadřazené nástrojů:  
+ Chcete-li vložit rozevírací seznam nástrojů do nadřazeného panelu nástrojů:  
   
  1. Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů.  
   
- 2. Vytvoření `CMFCDropDownToolBarButton` objekt, který obsahuje panelu nástrojů rozevíracího seznamu (Další informace najdete v tématu [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
+ 2. Vytvoření `CMFCDropDownToolBarButton` objekt, který obsahuje rozevírací seznam nástrojů (Další informace najdete v tématu [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
   
- 3. Nahraďte zástupný tlačítka s `CMFCDropDownToolBarButton` objekt pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Nahraďte zástupné tlačítko s `CMFCDropDownToolBarButton` s použitím [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Další informace o tlačítka panelu nástrojů najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad nástrojů rozevíracího seznamu v tématu ukázkový projekt VisualStudioDemo.  
+ Další informace o tlačítka na panelu nástrojů najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad rozevírací seznam nástrojů naleznete v tématu ukázkový projekt VisualStudioDemo.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `Create` metoda v `CMFCDropDownToolBar` třídy. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `Create` metodu `CMFCDropDownToolBar` třídy. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -99,11 +99,11 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
- [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
+ [Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
- [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)  
+ [Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)  
   
- [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
+ [CMFCDropDownToolbar –](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdropdowntoolbar.h  
@@ -120,7 +120,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
- Načte obrázků panelu nástrojů z prostředků aplikace.  
+ Načte obrázky panelu nástrojů ze zdrojů aplikace.  
   
 ```  
 virtual BOOL LoadBitmap(
@@ -133,31 +133,31 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiResID*  
- ID prostředku bitové mapy, který odkazuje na jeho aktivní obrázků.  
+ [in] *uiResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image horké nástrojů.  
   
- [v] *uiColdResID*  
- ID prostředku bitové mapy, který odkazuje na jeho cold obrázků.  
+ [in] *uiColdResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image studenou nástrojů.  
   
- [v] *uiMenuResID*  
- ID prostředku bitové mapy, která odkazuje na Image regulární nabídky.  
+ [in] *uiMenuResID*  
+ ID prostředku rastrového obrázku, který odkazuje na regulární nabídky Image.  
   
- [v] *blokován*  
- `TRUE` Zamknout panelu nástrojů; v opačném případě `FALSE`.  
+ [in] *blokované*  
+ TRUE, pokud chcete zamknout nástrojů; v opačném případě FALSE.  
   
- [v] *uiDisabledResID*  
- ID prostředku bitové mapy, který odkazuje na jeho zakázané obrázků.  
+ [in] *uiDisabledResID*  
+ ID prostředku rastrového obrázku, který odkazuje na Image zakázané nástrojů.  
   
- [v] *uiMenuDisabledResID*  
- ID prostředku bitové mapy, který odkazuje na Image zakázané nabídky.  
+ [in] *uiMenuDisabledResID*  
+ ID prostředku rastrového obrázku, který odkazuje na zakázané nabídky Image.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud metoda úspěšně. jinak 0.  
+ Nenulové, pokud metoda uspěje; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda volá tuto metodu za účelem načtení bitové kopie, které jsou přidruženy panelu nástrojů. Potlačí tuto metodu za účelem provedení vlastní načítání prostředků bitové kopie.  
+ [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda volá tuto metodu za účelem načtení bitové kopie, které jsou spojeny s panelem nástrojů. Potlačí tuto metodu za účelem provedení vlastní načítání prostředků obrázků.  
   
- Volání `LoadBitmapEx` metodu pro načtení další Image, po vytvoření panelu nástrojů.  
+ Volání `LoadBitmapEx` metodu pro načtení další Image po vytvoření panelu nástrojů.  
   
 ##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar  
 
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiResID*  
- [v] *uiColdResID*  
- [v] *uiMenuResID*  
- [v] *BOOL*  
- [v] *uiDisabledResID*  
- [v] *uiMenuDisabledResID*  
- [v] *uiHotResID*  
+ [in] *uiResID*  
+ [in] *uiColdResID*  
+ [in] *uiMenuResID*  
+ [in] *BOOL*  
+ [in] *uiDisabledResID*  
+ [in] *uiMenuDisabledResID*  
+ [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nFlags*  
- [v] *bodu*  
+ [in] *nFlags*  
+ [in] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nFlags*  
- [v] *bodu*  
+ [in] *nFlags*  
+ [in] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pButton*  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -240,18 +240,18 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pTarget*  
- [v] *bDisableIfNoHndler*  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)   
+ [Cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md)   
  [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [CMFCDropDownToolbarButton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)   
+ [Cmfcdropdowntoolbarbutton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)   
  [Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 

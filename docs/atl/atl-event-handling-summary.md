@@ -1,5 +1,5 @@
 ---
-title: Zpracování Souhrn událostí ATL | Microsoft Docs
+title: Zpracování Souhrn událostí ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,45 +14,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 743939683d212de529816a165907e12063df03be
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356518"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027190"
 ---
-# <a name="atl-event-handling-summary"></a>Souhrn zpracování události knihovny ATL
-Obecně platí zpracování událostí modelu COM je poměrně jednoduché proces. Existují tři hlavní kroky:  
+# <a name="atl-event-handling-summary"></a>Shrnutí zpracování událostí ATL
+Obecně platí zpracování událostí modelu COM je poměrně jednoduchý proces. Existují tři hlavní kroky:  
   
--   Implementaci rozhraní událostí v objektu.  
+-   Implementace rozhraní události na váš objekt.  
   
--   Poraďte zdroj události, jestli chce přijímat události objektu.  
+-   Doporučte zdroj události, chce přijímat události objektu.  
   
--   Zdroj události Unadvise, pokud objekt již nepotřebuje přijímat události.  
+-   Když váš objekt už nebude potřeba příjem událostí, zrušíte avízo o zdroji události.  
   
 ## <a name="implementing-the-interface"></a>Implementace rozhraní  
- Existují čtyři hlavní způsoby implementace rozhraní pomocí ATL.  
+ Existují čtyři hlavní způsoby implementace rozhraní pomocí knihovny ATL.  
   
-|Odvozena od|Vhodná pro typ rozhraní|Vyžaduje, abyste implementovat všechny metody *|Vyžaduje knihovny typů v době běhu|  
+|Jsou odvozeny z|Vhodný pro typ rozhraní|Je potřeba implementovat všechny metody *|Vyžaduje knihovnu typů v době běhu|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
 |Rozhraní|Vtable|Ano|Ne|  
-|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Duální|Ano|Ano|  
-|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|Ne|Ano|  
-|[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|Ne|Ne|  
+|[Idispatchimpl –](../atl/reference/idispatchimpl-class.md)|Duální|Ano|Ano|  
+|[Idispeventimpl –](../atl/reference/idispeventimpl-class.md)|Dispinterface|Ne|Ano|  
+|[Idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|Ne|Ne|  
   
- \* Při použití třídy, které podporují ATL, nikdy musíte implementovat **IUnknown** nebo `IDispatch` metody ručně.  
+ \* Při použití třídy podpory knihovny ATL, nikdy musíte implementovat `IUnknown` nebo `IDispatch` metody ručně.  
   
-## <a name="advising-and-unadvising-the-event-source"></a>Poradenství a Unadvising zdroj události  
- Existují tři způsoby hlavní radí a unadvising zdroje událostí pomocí ATL.  
+## <a name="advising-and-unadvising-the-event-source"></a>Nutnost a Unadvising zdroj události  
+ Existují tři hlavní způsoby informacemi a unadvising zdroje událostí pomocí knihovny ATL.  
   
-|Poradit – funkce|Unadvise – funkce|Nejvhodnější pro použití s|Vyžaduje, abyste ke sledování souboru cookie|Komentáře|  
-|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
-
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable nebo duální rozhraní | Ano | `AtlAdvise` je globální funkce ATL. `CComPtrBase::Advise` používá [CComPtr](../atl/reference/ccomptr-class.md) a [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
-
-|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) nebo [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Ne | Parametry méně než `AtlAdvise` od základní třídy nemá další práci. |  
-|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| ActiveX – ovládací prvky v složené ovládací prvky | Ne | `CComCompositeControl::AdviseSinkMap` informuje o tom, všechny položky události jímky mapy. Stejnou funkci unadvises položky. Tato metoda je volána automaticky pomocí `CComCompositeControl` třídy. |  
-|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| ActiveX – ovládací prvky v dialogovém okně | Ne | `CAxDialogImpl::AdviseSinkMap` informuje o tom a unadvises všechny ovládací prvky ActiveX v prostředku dialogového okna. To se provádí automaticky za vás. |  
+|Doporučte – funkce|Zrušíte avízo o – funkce|Nejvhodnější pro použití se službou|Vyžaduje, abyste udržovat přehled o souboru cookie|Komentáře|  
+|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable nebo duální rozhraní|Ano|`AtlAdvise` globální funkce ATL je. `CComPtrBase::Advise` používá [CComPtr](../atl/reference/ccomptr-class.md) a [CComQIPtr](../atl/reference/ccomqiptr-class.md).|  
+|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[Idispeventimpl –](../atl/reference/idispeventimpl-class.md) nebo [idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md)|Ne|Méně parametrů než `AtlAdvise` od základní třídy provede další práci.|  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Ovládací prvky ActiveX v složených ovládacích prvků|Ne|`CComCompositeControl::AdviseSinkMap` vás informuje o tom, že všechny položky v případě jímky mapy. Stejnou funkci unadvises položky. Tato metoda je volána automaticky `CComCompositeControl` třídy.|  
+|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Ovládací prvky ActiveX v dialogovém okně|Ne|`CAxDialogImpl::AdviseSinkMap` vás informuje o tom a unadvises všechny ovládací prvky ActiveX v prostředku dialogového okna. To je prováděno automaticky za vás.|  
   
 ## <a name="see-also"></a>Viz také  
  [Zpracování událostí](../atl/event-handling-and-atl.md)   

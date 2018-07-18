@@ -1,5 +1,5 @@
 ---
-title: identity – struktura | Microsoft Docs
+title: identity – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844403"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952994"
 ---
 # <a name="identity-structure"></a>identity – struktura
 
-Struktura, která poskytuje definice typu jako parametr šablony.
+Struktura, která obsahuje definici typu jako parametr šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,20 +40,20 @@ struct identity {
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Hodnota k identifikaci.|
+|*doleva*|Hodnota k identifikaci.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída obsahuje definici veřejné typu `type`, což je stejný jako parametr šablony typu. Se používá ve spojení s funkce šablony [dál](../standard-library/utility-functions.md#forward) zajistit, že parametr funkce není požadovaný typ.
+Třída obsahuje definice veřejného typu `type`, což je stejná jako parametr šablony typu. Používá se ve spojení s funkcí šablony [vpřed](../standard-library/utility-functions.md#forward) a ujistěte se, že parametr funkce mají požadovaného typu.
 
-K zajištění kompatibility se starším kódu, třída také definuje funkci identity `operator()` která její argument vrací `left`.
+Z důvodu kompatibility se starším kódem, třída také definuje funkci identity `operator()` který vrátí svůj argument *levé*.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<nástroj >
+**Záhlaví:** \<nástroje >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<nástroj >](../standard-library/utility.md)<br/>
+[\<Nástroje >](../standard-library/utility.md)<br/>

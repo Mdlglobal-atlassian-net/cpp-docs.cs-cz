@@ -1,5 +1,5 @@
 ---
-title: Windowplacement – struktura | Microsoft Docs
+title: Windowplacement – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dbd9a921194146e260eb79f5266311caa3d0300
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379470"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026192"
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT – struktura
-`WINDOWPLACEMENT` Struktura obsahuje informace o umístění okna na obrazovce **.**  
+`WINDOWPLACEMENT` Struktura obsahuje informace o umístění okna na obrazovce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,47 +40,47 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Délka*  
- Určuje délku v bajtech struktury **.**  
+*Délka*  
+Určuje délku v bajtech struktury.  
   
- `flags`  
- Určuje příznaky, které řídí pozici minimalizované okno a metodu, podle kterého je okno obnovit. Tento člen může být jedno nebo obě následující příznaky:  
+*příznaky*  
+Určuje příznaky, které určují umístění minimalizované okno a metodu, pomocí kterého se obnoví okno. Tento člen může být jedno nebo obě z následujících příznaků:  
   
-- **WPF_SETMINPOSITION** určuje lze na x - a y pozici okna minimalizovaném okně **.** Tento příznak musí být zadán, pokud jsou souřadnice nastavené **ptMinPosition** člen.  
+ - WPF_SETMINPOSITION Určuje, že lze zadat x - a y pozice minimalizované okno. Musí být tento příznak zadán, pokud souřadnice jsou nastaveny v `ptMinPosition` člena.  
+      
+ - WPF_RESTORETOMAXIMIZED Určuje, že okno obnovené budou maximalizovat, bez ohledu na to, zda byl maximalizované předtím, než bylo minimalizováno. Toto nastavení je platný pouze při příštím spuštění okna se obnoví. Výchozí chování obnovení nezmění. Tento příznak je platný pouze v případě, že je zadána hodnota SW_SHOWMINIMIZED `showCmd` člena.  
   
-- **WPF_RESTORETOMAXIMIZED** Určuje, že okno obnovené největší, bez ohledu na to, jestli byl maximalizovaný předtím, než byla minimalizovaná. Toto nastavení je platný pouze při příštím spuštění okna obnovení. Výchozí chování obnovení nemění. Tento příznak je platná pouze tehdy, když **SW_SHOWMINIMIZED** je zadaná hodnota pro **showCmd** člen.  
+*showCmd*  
+Určuje aktuální stav zobrazení okna. Tento člen může být jeden z následujících hodnot:  
   
- *showCmd*  
- Určuje aktuální stav zobrazení okna. Tento člen může být jedna z následujících hodnot:  
+ - SW_HIDE skryje okno a předá do další okno aktivace.  
+      
+ - SW_MINIMIZE minimalizuje určené okno a aktivuje okno nejvyšší úrovně v seznamu v systému.  
+      
+ - Aktivuje SW_RESTORE a zobrazí okno. Pokud v okně je minimalizovaná nebo maximalizované, Windows jej obnoví na jeho původní velikost a umístění (stejné jako SW_SHOWNORMAL).  
+      
+ - SW_SHOW aktivuje okně a zobrazí jej v jeho aktuální velikost a umístění.  
+      
+ - SW_SHOWMAXIMIZED aktivuje okno a zobrazí ho jako maximalizovaném okně.  
+      
+ - SW_SHOWMINIMIZED aktivuje okno a zobrazí ho jako ikona.  
+      
+ - SW_SHOWMINNOACTIVE zobrazí jako ikonu časové období. V okně, která je aktuálně aktivní zůstává aktivní.  
+      
+ - SW_SHOWNA zobrazí okno v jejím aktuálním stavu. V okně, která je aktuálně aktivní zůstává aktivní.  
+      
+ - SW_SHOWNOACTIVATE zobrazí okno v jeho aktuální velikost a umístění. V okně, která je aktuálně aktivní zůstává aktivní.  
+      
+ - Aktivuje SW_SHOWNORMAL a zobrazí okno. Pokud v okně je minimalizovaná nebo maximalizované, Windows jej obnoví na jeho původní velikost a umístění (stejné jako SW_RESTORE).  
   
-- **SW_HIDE** skryje okna a předává aktivace pro další okno.  
+*ptMinPosition*  
+Určuje umístění levého horního rohu okna. Pokud minimalizované okno.  
   
-- **SW_MINIMIZE** minimalizuje zadané okno a aktivuje okno nejvyšší úrovně v seznamu systému.  
+*ptMaxPosition*  
+Určuje umístění levého horního rohu okna při maximalizované okno.  
   
-- **SW_RESTORE** Activates a zobrazí okno. Pokud je okno minimalizovaná nebo maximalizovaný, Windows se obnoví do původní velikost a umístění (stejné jako **SW_SHOWNORMAL**).  
-  
-- **SW_SHOW** aktivuje okno a zobrazí v jeho aktuální velikost a umístění.  
-  
-- **SW_SHOWMAXIMIZED** aktivuje okno a zobrazí jako maximalizovaném okně.  
-  
-- **SW_SHOWMINIMIZED** aktivuje okno a zobrazí jako ikonu.  
-  
-- **SW_SHOWMINNOACTIVE** zobrazí okno jako ikonu. Okno, který je aktuálně aktivní zůstává aktivní.  
-  
-- **SW_SHOWNA** okno se zobrazí v jejím aktuálním stavu. Okno, který je aktuálně aktivní zůstává aktivní.  
-  
-- **SW_SHOWNOACTIVATE** okno se zobrazí v jeho nejnovější velikost a umístění. Okno, který je aktuálně aktivní zůstává aktivní.  
-  
-- **SW_SHOWNORMAL** Activates a zobrazí okno. Pokud je okno minimalizovaná nebo maximalizovaný, Windows se obnoví do původní velikost a umístění (stejné jako **SW_RESTORE**).  
-  
- *ptMinPosition*  
- Určuje umístění levého horního rohu okna při minimalizaci okna.  
-  
- `ptMaxPosition`  
- Pokud je okno maximalizované, určuje umístění levého horního rohu okna.  
-  
- *rcNormalPosition*  
- Určuje souřadnice okna, když okno v normální pozice (obnovených).  
+*rcNormalPosition*  
+Určuje souřadnice okna, když je okno v normální pozice (obnovené).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

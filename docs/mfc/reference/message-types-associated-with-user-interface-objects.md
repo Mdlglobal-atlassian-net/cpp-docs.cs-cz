@@ -1,5 +1,5 @@
 ---
-title: Zpráva typy přidružené objekty uživatelského rozhraní | Microsoft Docs
+title: Typy přidružených k objektům uživatelského rozhraní zpráv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a2309556ca6c5204247ccbe916aebe472a1da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ecc948910dd618f343134b0e9e3133539d9e1f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335477"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Typy zpráv přidružených k objektům uživatelského rozhraní
-V následující tabulce jsou uvedeny typy objektů, se kterými pracujete a typy zpráv s nimi spojených.  
+V následující tabulce jsou uvedeny typy objektů, se kterými pracujete a typy zpráv přidružených k jejich.  
   
-### <a name="user-interface-objects-and-associated-messages"></a>Objekty uživatelského rozhraní a související zprávy  
+### <a name="user-interface-objects-and-associated-messages"></a>Objekty uživatelského rozhraní a přidružených zpráv  
   
 |ID objektu|Zprávy|  
 |---------------|--------------|  
-|Název třídy představující obsahující okno|Zprávy systému Windows [CWnd](../../mfc/reference/cwnd-class.md)-odvozené třídy: dialogové okno, okno, podřízeného okna, podřízeného okna MDI nebo nejhornější rámce okna.|  
-|Identifikátor nabídky nebo akcelerátoru|-   **PŘÍKAZ** zprávy (spustí funkce programu).<br />-   **UPDATE_COMMAND_UI** zprávy (dynamicky aktualizuje položky nabídky).|  
-|Identifikátor ovládacího prvku|Oznamující zprávy pro ovládací prvek pro vybraný typ ovládacího prvku.|  
+|Název třídy, představující obsahujícího okna|Zprávy Windows [CWnd](../../mfc/reference/cwnd-class.md)-odvozené třídy: dialogové okno, okna, podřízené okno, podřízené okno MDI nebo nejvyššího rámce okna.|  
+|Identifikátor nabídky nebo akcelerátoru|– Zpráva příkaz (spustí program funkce).<br />-UPDATE_COMMAND_UI zpráva (dynamicky aktualizuje položku nabídky).|  
+|Identifikátor ovládacího prvku|Zpráv s oznámením ovládacího prvku pro vybraný typ ovládacího prvku.|  
   
 ## <a name="see-also"></a>Viz také  
- [Mapování zpráv do funkcí](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
  [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)   
  [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)   
  [Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Popisovač zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Popisovače zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [Navigace strukturou třídy](../../ide/navigating-the-class-structure-visual-cpp.md)

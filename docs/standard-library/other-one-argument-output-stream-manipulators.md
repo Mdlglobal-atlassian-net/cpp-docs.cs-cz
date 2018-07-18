@@ -1,5 +1,5 @@
 ---
-title: Další jeden – Argument manipulátory výstupního datového proudu | Microsoft Docs
+title: Jiné – Stream manipulátory výstupního Argument | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853320"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953823"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Jiné manipulátory výstupního datového proudu s jedním argumentem
 
-Následující příklad používá třídu `money`, který je `long` typu. `setpic` Manipulator připojí formátování řetězce "formát" na třídu, která mohou být využívána operátor vložení přetížené datového proudu třídy `money`. Obrázek řetězce je uloženo jako statické proměnné v `money` třídy místo jako datový člen třídy datového proudu, takže nemáte k odvození novou třídu výstupní datový proud.
+Následující příklad používá třídu `money`, což je **dlouhé** typu. `setpic` Manipulátor připojí formátovací řetězec "Přehled" na třídu, která může používat operátor vkládání datového proudu přetížené třídy `money`. Formátovací řetězec se ukládá jako statická proměnná v `money` třídy, nikoli jako datový člen třídy datového proudu, takže není nutné odvozovat nové třídy výstupní datový proud.
 
 ## <a name="example"></a>Příklad
 
@@ -85,6 +85,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vlastní manipulátory s argumenty](../standard-library/custom-manipulators-with-arguments.md)<br/>

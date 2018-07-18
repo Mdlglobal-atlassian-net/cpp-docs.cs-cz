@@ -1,5 +1,5 @@
 ---
-title: '&lt;FileSystem&gt; výčty | Microsoft Docs'
+title: '&lt;systém souborů&gt; výčty | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846321"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025936"
 ---
-# <a name="ltfilesystemgt-enumerations"></a>&lt;FileSystem&gt; výčty
+# <a name="ltfilesystemgt-enumerations"></a>&lt;systém souborů&gt; výčty
 
 Toto téma popisuje výčty v hlavičce systému souborů.
 
@@ -38,7 +38,7 @@ Toto téma popisuje výčty v hlavičce systému souborů.
 
 ## <a name="copy_options"></a>  copy_options
 
-Výčet hodnot maskování bitů, které se používá s [kopie](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) a [copy_file –](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) funkce pro určení chování.
+Výčet hodnot bitová maska, které se používá s [kopírování](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) a [copy_file –](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) funkce k určení chování.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -61,21 +61,21 @@ enum class copy_options {
 
 |`Name`|Popis|
 |------------|-----------------|
-|`none`|Proveďte výchozí chování pro operaci.|
-|`skip_existing`|Pokud soubor již existuje, nekopírovat Neoznamovat k chybě.|
-|`overwrite_existing`|Soubor přepište, pokud již existuje.|
-|`update_existing`|Soubor přepište, pokud již existuje a je starší než nahrazení.|
-|`recursive`|Rekurzivnímu kopírování podadresářů a jejich obsah.|
-|`copy_symlinks`|Zkopírujte symbolické odkazy jako symbolické odkazy, namísto kopírování souborů, které odkazují.|
+|`none`|Pro tuto operaci proveďte výchozí.|
+|`skip_existing`|Pokud soubor již existuje, nekopírujte nehlásí chybu.|
+|`overwrite_existing`|Přepište soubor, pokud již existuje.|
+|`update_existing`|Přepište soubor, pokud již existuje a je starší než nahrazení.|
+|`recursive`|Podadresáře rekurzivně kopírovat a jejich obsah.|
+|`copy_symlinks`|Kopírovat jako symbolické odkazy, namísto kopírování souborů, které ukazují na symbolické odkazy.|
 |`skip_symlinks`|Ignorujte symbolické odkazy.|
-|`directories_only`|Pouze iterace v adresářích, ignorovat soubory.|
-|`create_symlinks`|Ujistěte se, symbolické odkazy místo kopírování souborů. Absolutní cesta musí být použít jako zdrojovou cestu, pokud cíl je to aktuální adresář.|
-|`create_hard_links`|Ujistěte se, pevné odkazy místo kopírování souborů.|
+|`directories_only`|Pouze iterovat adresáře, ignorování souborů.|
+|`create_symlinks`|Vytvořte symbolické odkazy namísto kopírování souborů. Absolutní cesta musí použít jako zdrojovou cestu, pokud cíl je aktuální adresář.|
+|`create_hard_links`|Ujistěte se, pevné odkazy namísto kopírování souborů.|
 
 
-## <a name="directory_options"></a> directory_options
+## <a name="directory_options"></a> directory_options –
 
-Určuje, jestli podle symbolické odkazy na adresáře nebo je ignorovat.
+Určuje, zda chcete postupovat podle symbolické odkazy na adresáře nebo je chcete ignorovat.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -90,12 +90,12 @@ enum class directory_options {
 
 |Název|Popis|
 |----------|-----------------|
-|`none`|Výchozí chování: Ignorovat symbolické odkazy na adresáře. Bylo odepřeno oprávnění je chyba.|
-|`follow_directory_symlink`|Považovat za symbolické odkazy na adresáře skutečné adresáře.|
+|`none`|Výchozí chování: Ignorovat symbolické odkazy na adresáře. Oprávnění byla odepřena se o chybu.|
+|`follow_directory_symlink`|Považovat za symbolické odkazy k adresářům skutečné adresáře.|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a>  file_type –
 
-Výčet pro typy souborů. Podporované hodnoty jsou regular, adresář, not_found a neznámý.
+Výčet pro typy souborů. Podporované hodnoty jsou standardní, adresář, not_found a neznámý.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -121,17 +121,17 @@ enum class file_type {
 |`not_found`|-1|Představuje soubor, který neexistuje.|
 |`none`|0|Představuje soubor, který nemá žádné atributy typu. (Není podporováno.)|
 |`regular`|1|Představuje soubor konvenční disku.|
-|`directory`|2|Představuje adresář.|
+|`directory`|2|Představuje adresáře.|
 |`symlink`|3|Představuje symbolický odkaz. (Není podporováno.)|
-|`block`|4|Představuje soubor zvláštní bloku v systémech UNIX. (Není podporováno.)|
-|`character`|5|Představuje soubor zvláštní znak v systémech UNIX. (Není podporováno.)|
-|`fifo`|6|Představuje soubor FIFO v systémech UNIX. (Není podporováno.)|
-|`socket`|7|Představuje soketu v systémech UNIX na základě. (Není podporováno.)|
-|`unknown`|8|Představuje soubor, jejichž stav nelze určit.|
+|`block`|4|Představuje soubor speciálních bloku na systémech UNIX. (Není podporováno.)|
+|`character`|5|Představuje soubor speciálních znaků v systémech UNIX. (Není podporováno.)|
+|`fifo`|6|Představuje soubor FIFO na systémech UNIX. (Není podporováno.)|
+|`socket`|7|Představuje soketu v systémech UNIX založené. (Není podporováno.)|
+|`unknown`|8|Představuje soubor nelze zjistit jejichž stav.|
 
 ## <a name="perms"></a>  oprávnění
 
-Příznaky pro oprávnění k souboru. Podporované hodnoty jsou v podstatě "jen pro čtení" a všechny. Pro soubor určený jen pro čtení, žádný z * jsou nastaveny _Write – bits. V opačném případě `all` je nastaven bit (0x0777).
+Příznaky pro oprávnění k souboru. Podporované hodnoty jsou v podstatě "jen pro čtení" a všechny. Pro soubor jen pro čtení, žádný z * _write bity jsou nastaveny. V opačném případě `all` nastaven bit (0x0777).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -162,7 +162,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<FileSystem >](../standard-library/filesystem.md)<br/>

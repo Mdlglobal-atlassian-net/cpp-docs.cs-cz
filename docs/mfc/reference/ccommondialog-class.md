@@ -1,5 +1,5 @@
 ---
-title: Třída CCommonDialog | Microsoft Docs
+title: Ccommondialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335912"
 ---
-# <a name="ccommondialog-class"></a>CCommonDialog – třída
-Základní třída pro třídy, které zapouzdřují funkce společná dialogová okna Windows.  
+# <a name="ccommondialog-class"></a>Ccommondialog – třída
+Základní třída pro třídy, které zapouzdřují funkce běžných dialogových oken Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,26 +43,26 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|Vytvoří `CCommonDialog` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Následující třídy zapouzdřují funkce společná dialogová okna Windows:  
+ Následující třídy zapouzdřují funkce běžných dialogových oken Windows:  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
-- [CFontDialog](../../mfc/reference/cfontdialog-class.md)  
+- [Cfontdialog –](../../mfc/reference/cfontdialog-class.md)  
   
-- [CColorDialog](../../mfc/reference/ccolordialog-class.md)  
+- [Ccolordialog –](../../mfc/reference/ccolordialog-class.md)  
   
-- [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)  
+- [Cpagesetupdialog –](../../mfc/reference/cpagesetupdialog-class.md)  
   
-- [CPrintDialog](../../mfc/reference/cprintdialog-class.md)  
+- [Cprintdialog –](../../mfc/reference/cprintdialog-class.md)  
   
 - [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)  
   
-- [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)  
+- [CFindReplaceDialog.](../../mfc/reference/cfindreplacedialog-class.md)  
   
-- [COleDialog](../../mfc/reference/coledialog-class.md)  
+- [Coledialog –](../../mfc/reference/coledialog-class.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -84,18 +84,18 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pParentWnd*  
- Odkazuje na objekt okno nadřazené nebo vlastníka (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je **NULL**, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
+ Odkazuje na objekt okna nadřazené nebo vlastník (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je hodnota NULL, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) úplné informace.  
+ Zobrazit [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) podrobnější informace.  
   
 ## <a name="see-also"></a>Viz také  
  [CDialog – třída](../../mfc/reference/cdialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CFileDialog – třída](../../mfc/reference/cfiledialog-class.md)   
- [CFontDialog – třída](../../mfc/reference/cfontdialog-class.md)   
- [CColorDialog – třída](../../mfc/reference/ccolordialog-class.md)   
- [CPageSetupDialog – třída](../../mfc/reference/cpagesetupdialog-class.md)   
- [CPrintDialog – třída](../../mfc/reference/cprintdialog-class.md)   
- [CFindReplaceDialog – třída](../../mfc/reference/cfindreplacedialog-class.md)   
+ [Cfiledialog – třída](../../mfc/reference/cfiledialog-class.md)   
+ [Cfontdialog – třída](../../mfc/reference/cfontdialog-class.md)   
+ [Ccolordialog – třída](../../mfc/reference/ccolordialog-class.md)   
+ [Cpagesetupdialog – třída](../../mfc/reference/cpagesetupdialog-class.md)   
+ [Cprintdialog – třída](../../mfc/reference/cprintdialog-class.md)   
+ [Cfindreplacedialog – třída](../../mfc/reference/cfindreplacedialog-class.md)   
  [COleDialog – třída](../../mfc/reference/coledialog-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Cdaodatabaseinfo – struktura | Microsoft Docs
+title: Cdaodatabaseinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0815d248b6726d830fc50af9886c729c34ba2f29
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336471"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo – struktura
-`CDaoDatabaseInfo` Struktura obsahuje informace o objektu databáze definované pro přístup k objektům dat (DAO).  
+`CDaoDatabaseInfo` Struktura obsahuje informace o databázový objekt definovaný pro datový přístup k objektům (DAO).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,73 +44,73 @@ struct CDaoDatabaseInfo
   
 #### <a name="parameters"></a>Parametry  
  *m_strName*  
- Jedinečné názvy objekt databáze. Chcete-li tuto vlastnost načíst přímo, volejte [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
+ Jedinečné názvy databázový objekt. Chcete-li tuto vlastnost načíst přímo, zavolejte [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě k DAO.  
   
  *m_bUpdatable*  
- Určuje, zda můžete provedeny změny v databázi. Chcete-li tuto vlastnost načíst přímo, volejte [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Podrobnosti naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
+ Určuje, zda můžete provést změny k databázi. Chcete-li tuto vlastnost načíst přímo, zavolejte [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Podrobnosti naleznete v tématu "Aktualizovat vlastnost" v nápovědě k DAO.  
   
  *m_bTransactions*  
- Určuje, zda zdroj dat podporuje transakce – záznamu řadu změny, které později možné vrátit zpět (zrušena) nebo potvrdit (Uložit). Pokud je databáze založená na databázový stroj Microsoft Jet, vlastnost transakce je nenulové hodnoty a transakce můžete používat. Další databázové stroje nemusí podporovat transakce. Chcete-li tuto vlastnost načíst přímo, volejte [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). Podrobnosti naleznete v tématu "Transakce vlastnost" v nápovědě rozhraní DAO.  
+ Určuje, zda zdroj dat podporuje transakce – záznam řady změn, které lze později vrátit (zrušit) nebo potvrzené (Uložit). Pokud je databáze založená na databázovém stroji Microsoft Jet, vlastnost transakce je nenulový a transakce můžete používat. Ostatní databázové stroje nemusí podporovat transakce. Chcete-li tuto vlastnost načíst přímo, zavolejte [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). Podrobnosti naleznete v tématu "Transakce vlastnost" v nápovědě k DAO.  
   
  *m_strVersion*  
- Označuje verzi databázového stroje Microsoft Jet. K načtení hodnoty této vlastnosti přímo, volání objekt databáze [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) – členská funkce. Podrobnosti naleznete v tématu "Verze vlastnost" v nápovědě rozhraní DAO.  
+ Určuje verzi modulu databázový stroj Microsoft Jet. K načtení hodnoty této vlastnosti přímo, volání objektu databáze [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) členskou funkci. Podrobnosti naleznete v tématu "Verze vlastnost" v nápovědě k DAO.  
   
  *m_lCollatingOrder*  
- Určuje pořadí řazení v textu pro porovnání řetězců nebo řazení. Možné hodnoty patří:  
+ Určuje pořadí řazení v textu pro porovnání řetězců nebo řazením. Možné hodnoty:  
   
-- **dbSortGeneral** použijte obecné pořadí řazení (angličtina, francouzština, němčina, portugalština, italština a moderní španělština).  
+- `dbSortGeneral` Použijte obecné pořadí řazení (angličtina, francouzština, němčina, portugalština, italština a moderní španělština).  
   
-- **dbSortArabic** použít Arabic řazení.  
+- `dbSortArabic` Použijte Arabské řazení.  
   
-- **dbSortCyrillic** použít ruština řazení.  
+- `dbSortCyrillic` Pomocí pořadí řazení s ruské.  
   
-- **dbSortCzech** použít České řazení.  
+- `dbSortCzech` Použijte České řazení.  
   
-- **dbSortDutch** použít Holandská řazení.  
+- `dbSortDutch` Použijte Nizozemská řazení.  
   
-- **dbSortGreek** použít řecké řazení.  
+- `dbSortGreek` Pomocí pořadí řazení řecké abecedy.  
   
-- **dbSortHebrew** použít hebrejského řazení.  
+- `dbSortHebrew` Použijte hebrejského řazení.  
   
-- **dbSortHungarian** použít Maďarská řazení.  
+- `dbSortHungarian` Použijte maďarské řazení.  
   
-- **dbSortIcelandic** použít islandském řazení.  
+- `dbSortIcelandic` Použijte islandském řazení.  
   
-- **dbSortNorwdan** použít Norská nebo Dánská řazení.  
+- `dbSortNorwdan` Pořadí řazení Norská nebo Dánská použijte.  
   
-- **dbSortPDXIntl** použít Paradox mezinárodní pořadí řazení.  
+- `dbSortPDXIntl` Pomocí pořadí řazení Paradox International.  
   
-- **dbSortPDXNor** použít Paradox Norská nebo Dánská řazení.  
+- `dbSortPDXNor` Použijte Paradox Norská nebo Dánská řazení.  
   
-- **dbSortPDXSwe** použít Paradox Švédská nebo Finská řazení.  
+- `dbSortPDXSwe` Použijte Paradox Švédská nebo finština řazení.  
   
-- **dbSortPolish** použít polština řazení.  
+- `dbSortPolish` Použijte polská řazení.  
   
-- **dbSortSpanish** použít Španělské řazení.  
+- `dbSortSpanish` Pomocí pořadí řazení španělština.  
   
-- **dbSortSwedFin** použít Švédská nebo Finská řazení.  
+- `dbSortSwedFin` Pořadí řazení Švédská nebo finština použijte.  
   
-- **dbSortTurkish** použít turečtinu řazení.  
+- `dbSortTurkish` Pomocí pořadí řazení pro turečtinu.  
   
-- **dbSortUndefined** pořadí řazení je neznámé nebo nedefinované.  
+- `dbSortUndefined` Pořadí řazení, je undefined nebo neznámý.  
   
- Další informace naleznete v tématu "Přizpůsobení Windows registru nastavení pro Data Access" v nápovědě rozhraní DAO.  
+ Další informace naleznete v tématu "Přizpůsobení Windows registru nastavení pro přístup k datům" v nápovědě k DAO.  
   
  *m_nQueryTimeout*  
- Počet sekund, databázového stroje Microsoft Jet čeká, než vypršení časového limitu nastane při spuštění dotazu v databázi ODBC. Výchozí hodnota časového limitu je 60 sekund. Když QueryTimeout nastavena na hodnotu 0, dojde k bez časového limitu; To může způsobit program přestal reagovat. K načtení hodnoty této vlastnosti přímo, volání objekt databáze [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) – členská funkce. Podrobnosti naleznete v tématu "QueryTimeout vlastnost" v nápovědě rozhraní DAO.  
+ Počet sekund, po které databázový stroj Microsoft Jet počká, než vypršení časového limitu vyvolá se při spuštění dotazu na databázi rozhraní ODBC. Výchozí hodnota časového limitu je 60 sekund. Když QueryTimeout je nastavena na hodnotu 0, dojde k žádný časový limit; To může způsobit, že program přestane reagovat. K načtení hodnoty této vlastnosti přímo, volání objektu databáze [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) členskou funkci. Podrobnosti naleznete v tématu "QueryTimeout vlastnost" v nápovědě k DAO.  
   
  *m_strConnect*  
- Poskytuje informace o zdroji otevřenou databázi. Informace o připojení řetězce a informace o načtení hodnota této vlastnosti přímo najdete v tématu [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) – členská funkce. Další informace naleznete v tématu "Připojit vlastnost" v nápovědě rozhraní DAO.  
+ Poskytuje informace o zdroji otevřenou databázi. Informace o připojení řetězce a informace o načtení hodnoty této vlastnosti přímo, najdete v článku [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) členskou funkci. Další informace naleznete v tématu "Připojit vlastnost" v nápovědě k DAO.  
   
 ## <a name="remarks"></a>Poznámky  
- Databáze je objekt DAO základní třída objektu MFC [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Odkazy na primární, sekundární a všechny výše označuje, jak je vrácené informace [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) – členská funkce.  
+ Databáze je základní objekt třídy knihovny MFC rozhraní DAO objekt [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Odkazy na primární, sekundární a všechny výše určit, jak vrácené informace [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) členskou funkci.  
   
- Načte informace [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) – členská funkce je uložen v `CDaoDatabaseInfo` struktura. Volání `GetDatabaseInfo` pro `CDaoWorkspace` objekt v kolekci jejichž databáze je uložený objekt databáze. `CDaoDatabaseInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoDatabaseInfo` objektu.  
+ Načte informace [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) členská funkce je uložen v `CDaoDatabaseInfo` struktury. Volání `GetDatabaseInfo` pro `CDaoWorkspace` objekt v kolekci jehož databáze je uložený objekt databáze. `CDaoDatabaseInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoDatabaseInfo` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace – třída](../../mfc/reference/cdaoworkspace-class.md)   
+ [Cdaoworkspace – třída](../../mfc/reference/cdaoworkspace-class.md)   
  [CDaoDatabase – třída](../../mfc/reference/cdaodatabase-class.md)

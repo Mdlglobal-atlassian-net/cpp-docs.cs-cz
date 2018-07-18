@@ -1,5 +1,5 @@
 ---
-title: Pomocné funkce ATL HTTP | Microsoft Docs
+title: Funkce nástrojů ATL HTTP | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,26 +8,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476ca29de5a44e8ebb20d53ec0b88834c7b03eea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363781"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026085"
 ---
-# <a name="atl-http-utility-functions"></a>Pomocné funkce protokolu HTTP ATL
+# <a name="atl-http-utility-functions"></a>Funkce nástrojů ATL HTTP
 
 Tyto funkce podporují zpracování adresy URL.
 
 |||  
 |-|-|  
-|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes adresu URL, která zahrnuje řídicí sekvence převodu nebezpečné znaky a mezery.|  
-|[AtlCombineUrl](#atlcombineurl)|Kombinuje základní adresu URL a relativní adresa URL na adresu URL jeden, kanonickém tvaru.|  
-|[AtlEscapeUrl](#atlescapeurl)|Převede všechny znaky unsafe, abyste se vyhnuli pořadí.|  
-|[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Získá výchozí číslo portu přidružené k určité protokolu IP nebo schéma.|  
+|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes na adresu URL, která zahrnuje převod do řídicích sekvencí problematické znaky a mezery.|  
+|[AtlCombineUrl](#atlcombineurl)|Kombinuje základní adresu URL a relativní adresu URL do jedné kanonické adresy URL.|  
+|[AtlEscapeUrl](#atlescapeurl)|Převede všechny problematické znaky na řídicí sekvence.|  
+|[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Získá výchozí číslo portu přidružené k určité Internet protocol nebo schéma.|  
 |[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Určuje, zda znak je bezpečný pro použití v adrese URL.|  
-|[AtlUnescapeUrl](#atlunescapeurl)|Převede uvozené znaky zpět na původní hodnoty.|  
-|[RGBToHtml](#rgbtohtml)|Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající této hodnotě barev.|
+|[AtlUnescapeUrl](#atlunescapeurl)|Převede uvozen řídicími znaky, znaky zpět na původní hodnoty.|  
+|[RGBToHtml](#rgbtohtml)|Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající hodnotě této barvy.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Voláním této funkce převedete systémový čas na řetězec ve formátu vhodném pro použití v hlavičkách protokolu HTTP.|
 
 ## <a name="requirements"></a>Požadavky  
@@ -45,31 +45,31 @@ inline BOOL AtlCanonicalizeUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szUrl`  
+ *szUrl*  
  Adresa URL chcete kanonizovat.  
   
- `szCanonicalized`  
- Volající přidělit vyrovnávací paměť pro příjem kanonizovaného adresy URL.  
+ *szCanonicalized*  
+ Volající – přidělené vyrovnávací paměti pro příjem kanonizovaného adresy URL.  
   
- `pdwMaxLength`  
- Ukazatel na proměnné, která obsahuje délka ve znacích `szCanonicalized`. Pokud funkci úspěšné, obdrží proměnnou počet znaků, které jsou zapsány do vyrovnávací paměti, včetně ukončující znak hodnoty null. Pokud funkce selže, obdrží proměnná má požadovanou délku v bajtech vyrovnávací paměti, včetně místa pro ukončující znak hodnoty null.  
+ *pdwMaxLength*  
+ Ukazatel na proměnnou, která obsahuje délky ve znacích *szCanonicalized*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti, včetně ukončujícího znaku null. Pokud funkce selže, obdrží proměnné má požadovanou délku v bajtech vyrovnávací paměti, včetně místo pro ukončující znak null.  
   
- `dwFlags`  
+ *dwFlags*  
  Příznaky ATL_URL řízení chování této funkce. 
 
-- `ATL_URL_BROWSER_MODE` Kódování nebo dekódování znaků za "#" nebo "?" a nedojde k odstranění prázdné znaky po "?". Pokud tato hodnota není zadaná, je zakódován úplnou adresu URL a bude odebrán prázdné znaky.
-- `ATL_URL_DECODE` Převede všechny % XX pořadí znaků, včetně řídicí sekvence, než je analyzovat adresu URL.
-- `ATL_URL_ENCODE_PERCENT` Kóduje všechny znaky procenta došlo. Ve výchozím nastavení nejsou znaky procenta kódování.
-- `ATL_URL_ENCODE_SPACES_ONLY` Kóduje pouze mezery.
-- `ATL_URL_ESCAPE` Převede všechny řídicí sekvence (% XX) na jejich odpovídající znaků.
-- `ATL_URL_NO_ENCODE` Nepřevádí řídicí sekvence nebezpečné znaky.
-- `ATL_URL_NO_META` Nedojde k odebrání meta pořadí (například "."a"...") z adresy URL. 
+- ATL_URL_BROWSER_MODE nepodporuje kódování nebo dekódování znaků za "#" nebo "?" a nedojde k odstranění prázdný znak po "?". Pokud tato hodnota není zadaná, je zakódovaný celou adresu URL a odebrat koncové prázdné znaky.
+- ATL_URL_DECODE převede všechny % XX sekvence znaků, včetně řídicí sekvence, než adresa URL se zpracuje.
+- Zakóduje ATL_URL_ENCODE_PERCENT došlo k jakékoli procenta. Ve výchozím nastavení nejsou kódovaný procenta.
+- Zakóduje ATL_URL_ENCODE_SPACES_ONLY pouze mezery.
+- Převede ATL_URL_ESCAPE všechny řídicí sekvence (% XX) na jejich odpovídající znaky.
+- ATL_URL_NO_ENCODE nepřevádí problematické znaky na řídicí sekvence.
+- ATL_URL_NO_META neodebere meta pořadí (jako například "."a"..") z adresy URL. 
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Chová se jako aktuální verze [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ale nevyžaduje WinInet nebo nainstalovaný Internet Explorer.  
+ Se chová jako aktuální verze [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.  
   
 ### <a name="see-also"></a>Viz také  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
@@ -88,25 +88,25 @@ inline BOOL AtlCombineUrl(
   
 ### <a name="parameters"></a>Parametry  
  *szBaseUrl*  
- Základní adresu URL.  
+ Základní adresa URL.  
   
  *szRelativeUrl*  
- Adresa URL relativní k základní adresu URL.  
+ Adresa URL relativní k základní adrese URL.  
   
- `szBuffer`  
- Volající přidělit vyrovnávací paměť pro příjem kanonizovaného adresy URL.  
+ *szBuffer*  
+ Volající – přidělené vyrovnávací paměti pro příjem kanonizovaného adresy URL.  
   
- `pdwMaxLength`  
- Ukazatel na proměnné, která obsahuje délka ve znacích `szBuffer`. Pokud funkci úspěšné, obdrží proměnnou počet znaků, které jsou zapsány do vyrovnávací paměti, včetně ukončující znak hodnoty null. Pokud funkce selže, obdrží proměnná má požadovanou délku v bajtech vyrovnávací paměti, včetně místa pro ukončující znak hodnoty null.  
+ *pdwMaxLength*  
+ Ukazatel na proměnnou, která obsahuje délky ve znacích *szBuffer*. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti, včetně ukončujícího znaku null. Pokud funkce selže, obdrží proměnné má požadovanou délku v bajtech vyrovnávací paměti, včetně místo pro ukončující znak null.  
   
- `dwFlags`  
- Příznaky řízení chování této funkce. V tématu [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
+ *dwFlags*  
+ Příznaky řízení chování této funkce. Zobrazit [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Chová se jako aktuální verze [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ale nevyžaduje WinInet nebo nainstalovaný Internet Explorer.  
+ Se chová jako aktuální verze [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  Voláním této funkce převedete všechny problematické znaky na řídicí sekvence.  
@@ -128,25 +128,25 @@ inline BOOL AtlEscapeUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszStringIn`  
+ *lpszStringIn*  
  Adresa URL má být převeden.  
   
- `lpszStringOut`  
- Volající přidělit vyrovnávací paměť ke kterému se zapíšou převedený adresy URL.  
+ *lpszStringOut*  
+ Volající – přidělené vyrovnávací paměti do kterého budou zapsány převedený adresy URL.  
   
- `pdwStrLen`  
- Ukazatel na proměnnou DWORD. Pokud funkci úspěšné, `pdwStrLen` obdrží počet znaků, které jsou zapsány do vyrovnávací paměti, včetně ukončující znak hodnoty null. Pokud funkce selže, obdrží proměnná má požadovanou délku v bajtech vyrovnávací paměti, včetně místa pro ukončující znak hodnoty null. Při použití této metody verze široká znaková `pdwStrLen` obdrží počet znaků, ne počet bajtů.  
+ *pdwStrLen*  
+ Ukazatel na proměnnou typu DWORD. Pokud funkce uspěje, *pdwStrLen* přijímá počet znaků zapsaných do vyrovnávací paměti, včetně ukončujícího znaku null. Pokud funkce selže, obdrží proměnné má požadovanou délku v bajtech vyrovnávací paměti, včetně místo pro ukončující znak null. Při použití této metody verze širokého znaku *pdwStrLen* přijímá počet znaků, nikoli počet bajtů.  
   
- `dwMaxLength`  
- Velikost vyrovnávací paměti `lpszStringOut`.  
+ *dwMaxLength*  
+ Velikost vyrovnávací paměti *lpszStringOut*.  
   
- `dwFlags`  
- Příznaky ATL_URL řízení chování této funkce. V tématu [ATLCanonicalizeUrl](#atlcanonicalizeurl) pro možné hodnoty.  
+ *dwFlags*  
+ Příznaky ATL_URL řízení chování této funkce. Zobrazit [ATLCanonicalizeUrl](#atlcanonicalizeurl) možných hodnot.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
-## <a name="atlgetdefaulturlport"></a> 
+## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
  Voláním této funkce získáte výchozí číslo portu přidružené ke konkrétnímu protokolu nebo schématu Internetu.  
   
 ```  
@@ -155,10 +155,10 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
   
 ### <a name="parameters"></a>Parametry  
  *m_nScheme*  
- [ATL_URL_SCHEME](atl-url-scheme-enum.md) hodnotu identifikace schéma, pro které chcete získat číslo portu.  
+ [ATL_URL_SCHEME](atl-url-scheme-enum.md) hodnotu identifikaci schéma, pro kterou chcete získat číslo portu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [ATL_URL_PORT](atl-typedefs.md#atl_url_port) přidružený k zadané schéma nebo ATL_URL_INVALID_PORT_NUMBER Pokud schéma nebyl rozpoznán.  
+ [ATL_URL_PORT](atl-typedefs.md#atl_url_port) přidružený k zadané schéma nebo ATL_URL_INVALID_PORT_NUMBER, pokud se schéma nerozpozná.  
 
 ## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Voláním této funkce zjistíte, zda lze znak bezpečně použít v adrese URL.  
@@ -168,14 +168,14 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `chIn`  
- Znak, který má být testována pro zabezpečení.  
+ *chIn*  
+ Znak, který má být testovány z hlediska zabezpečení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** Pokud vstupní znak nebezpečné, **FALSE** jinak.  
+ Vrátí hodnotu TRUE, pokud vstupní znak je nebezpečné, FALSE, jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Znaky, které by neměly být použití v adresách URL lze otestovat pomocí této funkce a převést pomocí [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
+ Znaky, které by neměly být použití v adresách URL lze otestovat pomocí této funkce a převeden pomocí [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Voláním této funkce převedete řídicí znaky zpět na jejich původní hodnoty.  
@@ -195,26 +195,26 @@ inline BOOL AtlUnescapeUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszStringIn`  
+ *lpszStringIn*  
  Adresa URL má být převeden.  
   
- `lpszStringOut`  
- Volající přidělit vyrovnávací paměť ke kterému se zapíšou převedený adresy URL.  
+ *lpszStringOut*  
+ Volající – přidělené vyrovnávací paměti do kterého budou zapsány převedený adresy URL.  
   
- `pdwStrLen`  
- Ukazatel na proměnnou DWORD. Pokud funkci úspěšné, obdrží proměnnou počet znaků, které jsou zapsány do vyrovnávací paměti, včetně ukončující znak hodnoty null. Pokud funkce selže, obdrží proměnná má požadovanou délku v bajtech vyrovnávací paměti, včetně místa pro ukončující znak hodnoty null.  
+ *pdwStrLen*  
+ Ukazatel na proměnnou typu DWORD. Pokud funkce uspěje, proměnná přijímá počet znaků zapsaných do vyrovnávací paměti, včetně ukončujícího znaku null. Pokud funkce selže, obdrží proměnné má požadovanou délku v bajtech vyrovnávací paměti, včetně místo pro ukončující znak null.  
   
- `dwMaxLength`  
- Velikost vyrovnávací paměti `lpszStringOut`.  
+ *dwMaxLength*  
+ Velikost vyrovnávací paměti *lpszStringOut*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Obrátí proces převodu používaný službou [AtlEscapeUrl](#atlescapeurl).  
+ Obrátí procesu převodu použil(a) [AtlEscapeUrl](#atlescapeurl).  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající této hodnotě barev.  
+Převede [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu na text HTML odpovídající hodnotě této barvy.  
   
 ```  
 bool inline RGBToHtml(  
@@ -224,20 +224,20 @@ bool inline RGBToHtml(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
- Hodnotu barva RGB.  
+ *Barva*  
+ Hodnota barvy RGB.  
   
- `pbOut`  
- Volající přidělit vyrovnávací paměť pro příjem text pro hodnoty barvy HTML. Vyrovnávací paměti musí mít prostor pro dlouhé alespoň 8 znaků včetně místa pro ukončení hodnotu null).  
+ *pbOut*  
+ Volající – přidělené vyrovnávací paměť pro přijetí textu pro hodnota barvy HTML. Vyrovnávací paměť musí mít prostoru pro alespoň 8 znaků, včetně místa pro ukončovacího znaku null).  
   
  *nBuffer*  
- Velikost v bajtech vyrovnávací paměti (včetně místa pro ukončení null).  
+ Velikost v bajtech vyrovnávací paměti (včetně místa pro ukončovacího znaku null).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnotu barvy HTML je znak křížku následuje 6 číslic šestnáctkové hodnoty pomocí 2 číslic pro všechny komponenty červené, zelené a modré barvy (například #FFFFFF je bílé).  
+ Hodnotu barvy HTML je znak křížku, za nímž následuje 6místným číselným šestnáctková hodnota používat číslice od 2 pro všechny komponenty červené, zelené a modré barvy (třeba #FFFFFF je bílé).  
   
 ## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Voláním této funkce převedete systémový čas na řetězec ve formátu vhodném pro použití v hlavičkách protokolu HTTP.  
@@ -249,11 +249,11 @@ inline void SystemTimeToHttpDate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `st`  
- Systémový čas na získat jako řetězec formátu protokolu HTTP.  
+ *St*  
+ Systémový čas získána jako řetězec ve formátu HTTP.  
   
  *strTime*  
- Odkaz na proměnnou string přijímat HTTP datum a čas, jak jsou definovány v dokumentu RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) a RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
+ Odkaz na proměnnou s řetězcem přijímat HTTP datum a čas, jak jsou definovány v dokumentu RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) a RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../../atl/active-template-library-atl-concepts.md)   

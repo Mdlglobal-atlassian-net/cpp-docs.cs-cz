@@ -1,5 +1,5 @@
 ---
-title: cache_suballoc – třída | Microsoft Docs
+title: cache_suballoc – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850304"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954320"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc – třída
 
-Definuje [blokovat allocator](../standard-library/allocators-header.md) , přiděluje a zruší přidělení bloků paměti jedné velikosti.
+Definuje [blokovat allocator](../standard-library/allocators-header.md) , který přiděluje a zruší přidělení bloků paměti z jednoho velikost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Sz`|Počet prvků v poli, která bude přidělena.|
+|*Sz*|Počet prvků v poli, které mají být přiděleny.|
 
 ## <a name="remarks"></a>Poznámky
 
-Cache_suballoc – třída šablony ukládá bloky deallocated paměti v bezplatné seznam s bez vazby délka pomocí `freelist<sizeof(Type), max_unbounded>`a suballocates bloky paměti z větší bloku, kterým je přiřazen `operator new` při volné seznam je prázdný.
+Cache_suballoc – třída šablony ukládá uvolnění paměťových bloků v bezplatné seznam o délce bez vazby, pomocí `freelist<sizeof(Type), max_unbounded>`a suballocates bloky paměti z větších bloků dat, kterým je přiřazen výraz **operátor new** po seznamu zdarma prázdný.
 
-Obsahuje každého bloku `Sz * Nelts` bajtů použitelné paměti a data, `operator new` a `operator delete` vyžadují. Přidělené bloky se nikdy uvolněno.
+Každý blok obsahuje `Sz * Nelts` bajtů použitelné paměti a data, která **operátor new** a **operátor delete** vyžadují. Přidělené bloky dat jsou nikdy uvolněna.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -61,13 +61,13 @@ Obsahuje každého bloku `Sz * Nelts` bajtů použitelné paměti a data, `opera
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přiděluje blok paměti.|
-|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|
+|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  cache_suballoc::allocate
 
@@ -81,11 +81,11 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`count`|Počet prvků v poli, která bude přidělena.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt přidělená.
+Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -101,7 +101,7 @@ cache_suballoc();
 
 ## <a name="deallocate"></a>  cache_suballoc::deallocate
 
-Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.
+Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -111,11 +111,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na první objekt, který má být navrácena z úložiště.|
-|`count`|Počet objektů, které chcete být navrácena z úložiště.|
+|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
+|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

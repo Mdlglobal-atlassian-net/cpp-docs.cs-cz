@@ -1,5 +1,5 @@
 ---
-title: Průvodce příjemce OLE DB ATL | Microsoft Docs
+title: Průvodce příjemcem ATL OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -18,120 +18,120 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121686"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025981"
 ---
-# <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemce ATL OLE DB
-Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby dat potřebné pro přístup k zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB.  
+# <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
+Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové vazby potřebné pro přístup k danému zdroji dat pomocí zadaného zprostředkovatele OLE DB.  
   
 > [!NOTE]
->  Tohoto průvodce, musíte kliknout na odkaz **zdroj dat** tlačítko vyberte zdroj dat před vstupem názvy v `Class` a **soubor h** pole.  
+>  Tohoto průvodce, musíte kliknout **zdroj dat** tlačítko Vybrat zdroj dat před zadáním názvů v `Class` a **souboru .h** pole.  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Zdroj dat**  
- **Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Po kliknutí na toto tlačítko **vlastnosti propojení dat** zobrazí se dialogové okno. Další informace o vytváření připojovacích řetězců a **vlastnosti propojení dat** dialogové okno, najdete v části [Data Link Přehled rozhraní API](https://msdn.microsoft.com/library/ms718102.aspx) v dokumentaci k Windows SDK.  
+**Zdroj dat**  
+**Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Po kliknutí na toto tlačítko **vlastnosti propojení dat** zobrazí se dialogové okno. Další informace o vytváření připojovacích řetězců a **vlastnosti propojení dat** dialogovém okně naleznete v tématu [Data přehled rozhraní API odkazu](https://msdn.microsoft.com/library/ms718102.aspx) v dokumentaci Windows SDK.  
   
 > [!NOTE]
->  V předchozích verzích Shift a kliknutí na **zdroj dat** tlačítko Otevřít soubor otevřete dialogové okno a umožní vám vybrat soubor dat propojení (UDL). Tato funkce již není podporována.  
+>  V předchozích verzích, kliknutím na posunu **zdroj dat** tlačítko Otevřít dialogové okno otevřít soubor a umožňuje tak vybrat soubor dat propojení (UDL). Tato funkce se už nepodporuje.  
   
- Dialogové okno obsahuje čtyři karty:  
+Dialogové okno obsahuje čtyři karty:  
   
-- **Zprostředkovatel** karta  
+ - **Zprostředkovatel** kartu  
   
-- **Připojení** karta  
+ - **Připojení** kartu  
   
-- **Rozšířené** karta  
+ - **Pokročilé** kartu  
   
-- **Všechny** karta  
+ - **Všechny** kartu  
   
-     Popisuje následující doplňkové informace na kartách v **vlastnosti propojení dat** dialogové okno.  
+Popisuje následující doplňkové informace na kartách v **vlastnosti propojení dat** dialogové okno.  
   
-     Klikněte na tlačítko **OK** ukončíte. **Vyberte objekt databáze** zobrazí se dialogové okno. Toto dialogové okno Vyberte tabulky, zobrazení nebo uložené procedury, která se použije k příjemce.  
+Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulky, zobrazení nebo uložené procedury, která bude používat příjemce.  
   
  **Zprostředkovatel**  
-     Vyberte příslušného poskytovatele ke správě připojení ke zdroji dat. Typ zprostředkovatele, se běžně Určuje typ databáze, ke kterému se chcete připojit. Klikněte `Next` tlačítko nebo klikněte na tlačítko **připojení** kartě.  
+   Vyberte příslušné poskytovatele spravovat připojení ke zdroji dat. Typ zprostředkovatele se běžně Určuje typ databáze, ke kterému se připojujete. Klikněte na tlačítko **Další** tlačítko nebo klikněte na tlačítko **připojení** kartu.  
   
  **Připojení**  
-     Obsah na této kartě závisí na zprostředkovateli, které jste vybrali. I když existuje mnoho typů poskytovatelů, tato část popisuje připojení dvě nejběžnější: data SQL a rozhraní ODBC. Ostatní jsou podobné varianty pole zde popsané.  
+   Obsah na této kartě záviset na poskytovateli, kterou jste vybrali. I když existuje mnoho typů poskytovatelů, tato část popisuje připojení pro dva nejběžnější: data SQL a ODBC. Ostatní jsou podobné varianty pole popsaná zde.  
   
-     Pro SQL data:  
+  Pro SQL data:  
   
-    1. **Vyberte nebo zadejte název serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované datové servery v síti a vyberte jednu.  
+   1. **Vyberte nebo zadejte název serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované datové servery v síti a vyberte jednu.  
   
-    2. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.  
+   2. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.  
   
-    3. **Vyberte databázi na serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované databáze na serveru dat a vyberte jednu.  
+   3. **Vyberte databázi na serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované databází na serveru pro data a vyberte jednu.  
   
          -nebo-  
   
- **Připojit soubor databáze jako název databáze:** zadejte soubor, který chcete použít jako databázi; zadejte explicitní názvu cesty.  
+    **Připojit soubor databáze jako název databáze:** zadejte soubor, který má být použit jako databáze; zadejte explicitní název cesty.  
   
-        > [!NOTE]
-        >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
+    > [!NOTE]
+    >  Dojde k problému zabezpečení s funkcí "Povolit uložení hesla" dialogové okno Vlastnosti datového připojení. V "Zadejte informace pro přihlášení k serveru", existují dva přepínače:  
   
- **Použít integrované zabezpečení Windows NT**  
+    **Pomocí zabezpečení systému Windows NT integrované**  
   
- **Použít určité uživatelské jméno a heslo**  
+    **Použít konkrétní uživatelské jméno a heslo**  
   
-         If you select **Use a specific user name and password**, you have the option of saving the password (using the check box for "Allow saving password"); however, this option is not secure. It is recommended that you select **Use Windows NT integrated security**; this option is secure because it encrypts the password.  
+     Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, mají možnost uložení hesla (pomocí zaškrtávací políčko "Povolit uložení hesla"), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost je bezpečná, protože je heslo zašifruje.  
   
-         There might be situations in which you want to select "Allow saving password." For example, if you are releasing a library with a private database solution, you should not access the database directly but instead use a middle-tier application to verify the user (through whatever authentication scheme you choose) and then limit the sort of data available to the user.  
+     Můžou nastat situace, ve kterých chcete možnost "Povolit uložení hesla." Například pokud uvolnění knihovny s privátní databázového řešení vám by měl není přímý přístup k databázi, ale místo toho použít k ověření uživatele (pomocí libovolné zvolíte schéma ověřování) a pak omezit druh dat aplikace střední vrstvy k dispozici pro uživatele.  
   
-         For ODBC data:  
+     U dat rozhraní ODBC:  
   
-         1. **Specify the source of data:** You can use a data source name or a connection string.  
+     1. **Zdroj dat:** můžete použít název zdroje dat nebo připojovací řetězec.  
   
- **Použijte název zdroje dat:** tohoto rozevíracího seznamu zobrazí zdroje dat registrované ve vašem počítači. Můžete nastavit zdroje dat předem pomocí Správce zdrojů dat ODBC- nebo -**použít připojovací řetězec:** buď zadejte připojovací řetězec jste už získali, nebo klikněte na tlačítko **sestavení** tlačítko; **Vybrat zdroj dat** zobrazí se dialogové okno. Vyberte zdroj dat souboru nebo počítače a klikněte na tlačítko **OK**.  
+    **Použijte název zdroje dat:** Tento rozevírací seznam zobrazuje zdroje dat registrované ve vašem počítači. Můžete nastavit zdroje dat pomocí Správce zdrojů dat ODBC předem- nebo -**použijte připojovací řetězec:** buď zadejte připojovací řetězec už získali, nebo klikněte na tlačítko **sestavení** tlačítko; **Vybrat zdroj dat** zobrazí se dialogové okno. Vyberte zdroj dat souboru nebo počítače a klikněte na tlačítko **OK**.  
   
-        > [!NOTE]
-        >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
+     > [!NOTE]
+     >  Připojovací řetězec můžete získat zobrazením vlastností existujícího připojení v Průzkumníku serveru nebo můžete vytvořit připojení na něj poklikejte **přidat připojení** v Průzkumníku serveru.  
   
-         2. **Enter information to log on to the server:** Enter a user name and password to log on to the data server.  
+     2. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.  
   
-         3. Enter the initial catalog to use.  
+     3. Zadejte počáteční katalog.  
   
-         4. Click **Test Connection**; if the test succeeds, click **OK**. If not, check your logon information, try another database, or try another data server.  
+     4. Klikněte na tlačítko **Test připojení**; Pokud je test úspěšný, klikněte na tlačítko **OK**. V opačném případě zkontrolujte vaše přihlašovací údaje, zkuste jiné databáze nebo zkuste jiný datový server.  
   
- **Pokročilé**  
- **Nastavení síťového:** zadejte **úroveň zosobnění** (úroveň zosobnění, který server se může použít při zosobňování klienta; odpovídá úrovní zosobnění RPC) a  **Úroveň ochrany** (úroveň ochrany dat odeslaných mezi klientem a serverem; odpovídá přímo na úrovních ochrany RPC).  
+**Pokročilé**  
+  **Nastavení sítě:** zadejte **úroveň zosobnění** (úroveň zosobnění, které může používat při zosobňování klienta serveru; odpovídá úrovní zosobnění RPC) a  **Úroveň ochrany** (stupeň ochrany dat odeslány mezi klientem a serverem; odpovídá přímo na úrovních ochrany RPC).  
   
- **Ostatní:** v **časový limit připojení**, zadejte počet sekund nečinnosti před dojde k vypršení časového limitu. V **přístupová oprávnění**, zadejte oprávnění k přístupu na datové připojení.  
+  **Ostatní:** v **časový limit připojení**, zadejte dobu v sekundách nečinnosti před dojde k vypršení časového limitu. V **přístupová oprávnění**, zadejte oprávnění k přístupu na datové připojení.  
   
-     Další informace o pokročilé inicializační vlastnosti naleznete v dokumentaci daného zprostředkovatele OLE DB.  
+    For more information about advanced initialization properties, refer to the documentation provided with each specific OLE DB provider.  
   
- **Všechny**  
+**Všechny**  
      Tato karta zobrazuje souhrn inicializační vlastnosti pro zdroj dat a připojení, které jste zadali. Můžete upravit tyto hodnoty.  
   
-     Klikněte na tlačítko **OK** ukončíte. **Vyberte objekt databáze** zobrazí se dialogové okno. Toto dialogové okno Vyberte tabulky, zobrazení nebo uložené procedury, která se použije k příjemce.  
+     Click **OK** to finish. The **Select Database Object** dialog box appears. From this dialog box, select the table, view, or stored procedure that the consumer will use.  
   
  `Class`  
- Po výběru zdroje dat, je výchozí název třídy na základě tabulky nebo uložené procedury, kterou jste vybrali naplněný toto políčko (viz **vyberte zdroj dat** níže). Můžete upravit název třídy.  
+ Po výběru zdroje dat, toto pole se vyplní výchozí název třídy na základě tabulky nebo uloženou proceduru, která jste vybrali (viz **vyberte zdroj dat** níže). Můžete upravit název třídy.  
   
- **soubor h**  
- Po výběru zdroje dat, je výchozí název třídy hlavičky na základě tabulky nebo uložené procedury, kterou jste vybrali naplněný toto políčko (viz **vyberte zdroj dat** níže). Můžete upravit název hlavičky souboru nebo vyberte existující soubor hlavičky.  
+ **soubor .h**  
+ Po výběru zdroje dat, toto pole se vyplní výchozí název třídy hlavičky na základě tabulky nebo uloženou proceduru, která jste vybrali (viz **vyberte zdroj dat** níže). Můžete upravit název souboru hlaviček nebo vybrat existující hlavičkový soubor.  
   
  **S atributy**  
- Tato možnost určuje, zda má průvodce vytvořit třídy příjemce pomocí atributů nebo deklarací šablon. Když vyberete tuto možnost, používá průvodce atributy namísto deklarace šablon (Toto je výchozí možnost). Při dalším tuto možnost, používá průvodce deklarace šablon místo atributy.  
+ Tato možnost určuje, zda má průvodce vytvořit pomocí atributů nebo deklarací šablony třídy příjemce. Když vyberete tuto možnost, Průvodce místo deklarací šablony (Toto je výchozí možnost) používá atributy. Pokud výběr této možnosti zrušíte, používá Průvodce místo atributů deklarace šablony.  
   
--   Pokud vyberete příjemce **typ** tabulky, používá průvodce `db_source` a **db_table** atributy pro vytvoření tabulky a přistupující k tabulce deklarace tříd a používá **db_column**  k vytvoření mapy sloupce, například:  
+ -   Pokud vyberete příjemce **typ** tabulky, používá průvodce `db_source` a `db_table` atributy k vytvoření tabulky a přistupující k tabulce deklarace tříd a používá `db_column` k vytvoření mapy sloupce, například:  
   
- ``` 
+```
  // Inject table class and table accessor class declarations  
  [db_source("<initialization_string>"), db_table("dbo.Orders")]  
  ... 
  // Column map  
  [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
  [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
- ...  
- ```  
+ ...
+```
   
-     místo použití `CTable` šablony třídy k deklaraci tabulky a třídu přistupující a makra BEGIN_COLUMN_MAP a END_COLUMN_MAP k vytvoření mapy sloupce, například:  
+   namísto použití `CTable` třída šablony, chcete-li deklarovat tabulka a tabulka přistupující objekt třídy a makra BEGIN_COLUMN_MAP a END_COLUMN_MAP k vytvoření mapy sloupce, například:  
   
- ``` 
+``` 
  // Table accessor class  
     class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
@@ -142,19 +142,19 @@ Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby da
     COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)  
  ...  
     END_COLUMN_MAP() 
- ```  
+```  
   
--   Pokud vyberete příjemce **typ** příkazu, používá průvodce `db_source` a **db_command** atributy a používá **db_column** k vytvoření mapy sloupce, například :  
+-   Pokud vyberete příjemce **typ** příkazu, používá průvodce `db_source` a `db_command` atributy a používá `db_column` k vytvoření mapy sloupce, například:  
   
- ```  
+```  
  [db_source("<initialization_string>"), db_command("SQL_command")]  
  ... 
  // Column map using db_column is the same as for consumer type of 'table'  
- ```  
+```  
   
-     místo použití příkazu a příkazu přistupující třídy deklarací v příkazu třídy .h souboru, například:  
+   namísto použití příkazu a deklarace třídy přistupujícího objektu příkazu v souboru .h třídy příkazu, například:  
   
- ```  
+```  
     Command accessor class:  
     class CListOrdersAccessor;  
     Command class:  
@@ -162,32 +162,32 @@ Tento průvodce nastavuje třída příjemce technologie OLE DB pomocí vazby da
  ... 
  // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as
  // for consumer type of 'table'  
- ```  
+```  
   
- V tématu [základní mechanismy atributů](../../windows/basic-mechanics-of-attributes.md) Další informace.  
+ Zobrazit [základní mechanismy atributů](../../windows/basic-mechanics-of-attributes.md) Další informace.  
   
  **Typ**  
- Vyberte jednu z těchto přepínačů, chcete-li určit, zda se třída spotřebitele odvozena z `CTable` nebo `CCommand` (výchozí).  
+ Vyberte jednu z těchto přepínačů, chcete-li určit, zda se třída příjemce odvozena z `CTable` nebo `CCommand` (výchozí).  
   
  **Tabulka**  
- Tuto možnost vyberte, pokud chcete použít `CTable` nebo **db_table** k vytvoření tabulky a přistupující k tabulce deklarace tříd.  
+ Tuto možnost vyberte, pokud chcete použít `CTable` nebo `db_table` vytvoření tabulky a přistupující k tabulce deklarace tříd.  
   
  **Příkaz**  
- Tuto možnost vyberte, pokud chcete použít `CCommand` nebo **db_command** k vytvoření příkazu a příkazu přistupující deklarace tříd. Toto je výchozí výběr.  
+ Tuto možnost vyberte, pokud chcete použít `CCommand` nebo `db_command` vytvořit příkaz a přístupový objekt příkazu deklarace tříd. Toto je výchozí výběr.  
   
  **Podpora**  
- Vyberte pole a určete typy aktualizací, které mají být podporovány v příjemci (výchozí hodnota je žádný). Každý z těchto nastaví [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) a odpovídající položky pro [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) ve vlastnosti nastavit mapy.  
+ Vyberte zaškrtávací políčka a určete typy aktualizací, aby se podporoval příjemce (výchozí hodnota je none). Každý z těchto nastaví [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) a odpovídající položky pro [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) ve vlastnosti nastavit mapování.  
   
  **Změna**  
- Určuje, že příjemce podporuje aktualizace řádek dat v dané sadě řádků.  
+ Určuje, že příjemci podporuje aktualizace řádek dat v dané sadě řádků.  
   
- **Vložení**  
- Určuje, že příjemce podporuje vložení řádků do sady řádků.  
+ **Vložit**  
+ Určuje, že příjemce nepodporuje vkládání řádků do sady řádků.  
   
  **Odstranit**  
- Určuje, že příjemce podporuje odstranění řádků ze sady řádků.  
+ Určuje, že příjemci podporuje odstranění řádků ze sady řádků.  
   
 ## <a name="see-also"></a>Viz také  
- [ATL technologie OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
+ [Příjemce knihovny ATL technologie OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Připojovací řetězce a Data odkazy (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Připojovací řetězce a propojení dat (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

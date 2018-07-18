@@ -1,5 +1,5 @@
 ---
-title: ATL – Průvodce projektem | Microsoft Docs
+title: Průvodce projektem ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,48 +17,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f47af89297efba2501e7f548075800d93dfda296
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357902"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025815"
 ---
-# <a name="atl-project-wizard"></a>Průvodce projektem knihovny ATL
-Aktivní šablony Library (ATL) je sada na základě šablon C++ třídy, které zjednodušují zápis objektů COM malé a rychlé. Průvodce projektem ATL vytvoří projekt s struktury tak, aby obsahovala COM – objekty.  
+# <a name="atl-project-wizard"></a>Průvodce projektem ATL
+Aktivní šablony knihovny (ATL) je sada šablonových tříd jazyka C++ a, které zjednodušují psaní malé a rychlé objekty modelu COM. Průvodce projektem ATL vytvoří projekt s struktury obsahující objekty modelu COM.  
   
 ## <a name="overview"></a>Přehled  
- Tato stránka průvodce popisuje aktuální [nastavení aplikace pro projekt knihovny ATL](../../atl/reference/application-settings-atl-project-wizard.md) vytváříte. Ve výchozím nastavení má projekt následující nastavení:  
+ Tato stránka průvodce popisuje aktuální [nastavení aplikace pro projekt knihovny ATL](../../atl/reference/application-settings-atl-project-wizard.md) vytváříte. Projekt má ve výchozím nastavení následující nastavení:  
   
--   Určuje, zda je server knihovny DLL a proto proces serveru knihovny.  
+-   Určuje, zda je server knihovny DLL a proto v procesový server knihovny.  
   
--   S atributy Určuje, že váš projekt používá atributy.  
+-   S atributy: Určuje, že váš projekt používá atributy.  
   
- Chcete-li změnit toto výchozí nastavení, klikněte na tlačítko **nastavení aplikace** v levém sloupci průvodce a zkontrolujte změny v této stránce Průvodce projektem ATL.  
+ Chcete-li změnit výchozí nastavení, klikněte na tlačítko **nastavení aplikace** v levém sloupci průvodce a proveďte změny na této stránce Průvodce projektem ATL.  
   
- Informace o výchozím nastavení projektu, včetně výběru znaková sada a propojování výchozí hodnoty, najdete v části [výchozí konfigurace projektu knihovny ATL](../../atl/reference/default-atl-project-configurations.md).  
+ Informace o výchozí nastavení projektu, včetně výběru znakové sady a propojování výchozí hodnoty, najdete v části [výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md).  
   
- Po vytvoření projektu knihovny ATL do projektu Visual C++ pomocí můžete přidat objekty nebo ovládací prvky [code průvodců](../../ide/adding-functionality-with-code-wizards-cpp.md). Můžete provést následující typy vylepšení základního projektu knihovny ATL pomocí průvodců kódem:  
+ Po vytvoření projektu knihovny ATL do projektu pomocí jazyka Visual C++ můžete přidat objekty nebo ovládací prvky [průvodců kódu](../../ide/adding-functionality-with-code-wizards-cpp.md). Můžete provést následující typy vylepšení základní projekt knihovny ATL pomocí průvodců kódem:  
   
--   [Přidání objektu a ovládacích prvků do projektu knihovny ATL](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)  
+-   [Přidání objektů a ovládacích prvků do projektu ATL](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)  
   
--   [Přidejte nové rozhraní v projektu knihovny ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)  
+-   [Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)  
   
--   [Přidání komponenty modelu COM + 1.0 do projektu knihovny ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)  
+-   [Přidat do projektu ATL komponenty modelu COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)  
   
- Při vytváření a rozšířeného projektu knihovny ATL dále zvažte tyto úlohy:  
+ Kromě toho zvažte tyto úkoly při vytváření a vylepšit projekt knihovny ATL:  
   
--   [ATL zamezení vytvoření objektu](../../atl/reference/making-an-atl-object-noncreatable.md)  
+-   [ATL – zamezení vytvoření objektu](../../atl/reference/making-an-atl-object-noncreatable.md)  
   
 -   [Optimalizace kompilátoru pro projekt knihovny ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Můžete zadat vlastnosti projektu (například [staticky propojit k CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) v [vlastnosti projektu](../../ide/general-property-page-project.md) stránky a můžete nastavit [konfigurace sestavení](/visualstudio/ide/understanding-build-configurations) pro ATL projektu. V tématu [pomocí projektů pro sestavení aplikace](http://msdn.microsoft.com/en-us/3339fa90-bac2-4b95-8361-662a2e0e7dfe) Další informace.  
+ Můžete určit vlastnosti projektu (například [, jestli se má propojit staticky CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) v [vlastnosti projektu](../../ide/general-property-page-project.md) stránku kde můžete nastavit [konfigurace sestavení](/visualstudio/ide/understanding-build-configurations) pro Projekt knihovny ATL. Zobrazit [pomocí projektů k sestavení aplikace](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) Další informace.  
   
 ## <a name="see-also"></a>Viz také  
- [Vytváření a správa projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Vytváření a spravování projektů Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Typy projektů Visual C++](../../ide/visual-cpp-project-types.md)   
- [Tvorba běžných projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Základy ATL COM – objekty](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Tvorba desktopových projektů pomocí průvodců aplikací](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)   
  [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Kurz](../../atl/active-template-library-atl-tutorial.md)
 

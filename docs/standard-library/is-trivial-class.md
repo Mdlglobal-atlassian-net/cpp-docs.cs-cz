@@ -1,5 +1,5 @@
 ---
-title: is_trivial třída | Microsoft Docs
+title: is_trivial – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b30b634a84dc47d839e1288bc34437b440e914c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eef350723dd8658bfc349495e905466e8179db1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965916"
 ---
 # <a name="istrivial-class"></a>is_trivial – třída
 
@@ -37,18 +37,18 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` trivial typu, jinak má hodnotu false. Trivial typy jsou Skalární typy, typy trivially kopírovatelná tříd, pole těchto typů a kvalifikovaný odchylka nákladů verze těchto typů.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* triviální typ, jinak má hodnotu false. Triviální typy jsou Skalární typy, typy triviálně kopírovatelné tříd, polí těchto typů a verzích kvalifikovaných cv tyto typy.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

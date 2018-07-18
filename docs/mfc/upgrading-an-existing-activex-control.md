@@ -1,5 +1,5 @@
 ---
-title: Upgradování existujícího ovládacího prvku ActiveX | Microsoft Docs
+title: Upgrade existujícího ovládacího prvku ActiveX | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,21 +22,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 175b64b40ab2fd242e3e430cf99d761f577835cb
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955671"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026417"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
-Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Internetu bez úprav. Můžete však změnit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, existují další aspekty. Soubor .ocx a všechny podpůrné soubory musí být v cílovém počítači nebo stáhnout přes Internet. Díky velikosti kódu a stažení čas důležitý faktor. Stahování se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit ovládací prvek jako bezpečné pro skriptování a jako bezpečné pro inicializaci.  
+Ovládací prvky ActiveX existující (dříve ovládací prvky OLE) je možné na Internetu bez úprav. Však můžete chtít upravit ovládací prvky pro zlepšení výkonu. Při použití ovládacího prvku na webové stránce, některé další aspekty. Soubor .ocx a všechny podpůrné soubory musí být na cílovém počítači nebo stáhnout přes Internet. Díky tomu velikost kódu a stažení čas, což je důležité. Soubory ke stažení se dá zabalit do souboru .cab podepsaný držitelem. Můžete označit jako bezpečné pro skriptování a jako bezpečné pro inicializaci ovládacího prvku.  
   
  Tento článek popisuje v následujících tématech:  
   
 - [Balení kódu pro stahování](#_core_packaging_code_for_downloading)  
   
-- [Označení řízení bezpečné pro skriptování a inicializaci](#_core_marking_a_control_safe_for_scripting_and_initializing)  
+- [Označení ovládací prvek bezpečný pro skriptování a inicializaci](#_core_marking_a_control_safe_for_scripting_and_initializing)  
   
 - [Problémy s licencí](#_core_licensing_issues)  
   
@@ -44,17 +44,17 @@ Ovládací prvky ActiveX existující (dříve OLE prvky) lze použít na Intern
   
 - [Správa palety](#_core_managing_the_palette)  
   
-- [Řízení chování a úrovně zabezpečení prohlížeče Internet Explorer](#_core_internet_explorer_browser_safety_levels_and_control_behavior)  
+- [Úrovně zabezpečení prohlížeče Internet Explorer a chování ovládacího prvku](#_core_internet_explorer_browser_safety_levels_and_control_behavior)  
   
- Můžete také přidat optimalizace, jak je popsáno v [– ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md). Monikery lze stáhnout vlastnosti a velké objekty BLOB asynchronně, jak je popsáno v [ActiveX – ovládací prvky na Internetu](../mfc/activex-controls-on-the-internet.md).  
+ Můžete také přidat optimalizace, jak je popsáno v [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md). Monikery je možné stáhnout vlastnosti a velké objekty BLOB asynchronně, jak je popsáno v [ovládací prvky Activexna Internetu](../mfc/activex-controls-on-the-internet.md).  
   
 ##  <a name="_core_packaging_code_for_downloading"></a> Balení kódu pro stahování  
- Další informace o této problematice naleznete v článku znalostní báze Knowledge Base "Balení MFC – ovládací prvky pro použití přes Internet" (Q167158). Můžete najít články znalostní báze Knowledge Base na [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
+ Další informace o této skutečnosti najdete v článku znalostní báze Knowledge Base "Balení MFC ovládacích prvků pro použití v Internetu" (Q167158). Můžete najít článků znalostní báze [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
-### <a name="the-codebase-tag"></a>CODEBASE značky  
- ActiveX – ovládací prvky jsou vloženy do webových stránek pomocí `<OBJECT>` značky. `CODEBASE` Parametr `<OBJECT>` značka udává umístění, ze kterého mají být staženy ovládacího prvku. `CODEBASE` může ukazovat na mnoha různých typech souborů úspěšně.  
+### <a name="the-codebase-tag"></a>Značka základu kódu  
+ Ovládací prvky ActiveX jsou vloženy do webových stránek pomocí `<OBJECT>` značky. `CODEBASE` Parametr `<OBJECT>` značka Určuje umístění, ze kterých mají být staženy ovládacího prvku. `CODEBASE` může odkazovat na mnoha různých typech souborů úspěšně.  
   
-### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Pomocí značky CODEBASE se souborem OCX  
+### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Použijte značku základu kódu se souborem OCX  
   
 ```  
 CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
@@ -63,17 +63,17 @@ CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
     1086"  
 ```  
   
- Toto řešení stáhne pouze soubory .ocx ovládacího prvku a vyžaduje všechny podpůrné knihoven DLL pro již nainstalované v klientském počítači. To bude fungovat pro Internet Explorer a MFC ActiveX – ovládací prvky vytvořené s nástroji Visual C++, protože aplikace Internet Explorer je dodáván s podpůrné knihovny DLL pro ovládací prvky jazyka Visual C++. Pokud jiný internetový prohlížeč, který je podporuje ovládací prvek ActiveX se používá k zobrazení tohoto ovládacího prvku, toto řešení nebude fungovat.  
+ Toto řešení stáhne jenom soubory .ocx ovládacího prvku a vyžaduje všechny podpůrné knihovny DLL již být nainstalovaný na klientském počítači. To bude fungovat pro Internet Explorer a ActiveX knihovny MFC ovládací prvky vytvořené v jazyce Visual C++, protože aplikace Internet Explorer se dodává s podpůrné knihovny DLL pro ovládací prvky jazyka Visual C++. Pokud jiný prohlížeč Internetu, který je podporuje ovládací prvek ActiveX se používá k zobrazení tohoto ovládacího prvku, toto řešení nebude fungovat.  
   
-### <a name="using-the-codebase-tag-with-an-inf-file"></a>Pomocí značky CODEBASE soubor INF  
+### <a name="using-the-codebase-tag-with-an-inf-file"></a>Značka základu kódu pomocí souboru INF  
   
 ```  
 CODEBASE="http://example.microsoft.com/trustme.inf"  
 ```  
   
- Soubor s příponou INF bude řídit instalaci .ocx a jeho podpůrné soubory. Tato metoda se nedoporučuje, protože není možné k podepsání souboru .inf (viz [podepisování kódu](#_core_signing_code) pro ukazatele na podepisování kódu).  
+ Soubor s příponou INF bude řídit instalaci .ocx a jeho podpůrné soubory. Tato metoda se nedoporučuje, protože není možné k podepsání souboru INF (viz [podepisování kódu](#_core_signing_code) pro ukazatele na podepisování kódu).  
   
-### <a name="using-the-codebase-tag-with-a-cab-file"></a>Pomocí značky CODEBASE soubor CAB  
+### <a name="using-the-codebase-tag-with-a-cab-file"></a>Použijte značku základu kódu se souborem CAB  
   
 ```  
 CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
@@ -82,17 +82,17 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
     0"  
 ```  
   
- Soubory CAB jsou doporučeným způsobem balíček ovládací prvky ActiveX, které používají MFC. Balení ovládacího prvku ActiveX knihovny MFC v souboru CAB umožňuje soubor s příponou INF mají být zahrnuty do ovládacího prvku instalace ovládacího prvku ActiveX a všechny závislé knihoven DLL (například MFC DLL). Pomocí souboru CAB automaticky komprimuje kódu pro rychlejší stahování. Pokud používáte soubor .cab pro součástí ke stažení, je rychlejší k podepsání souboru CAB celý než jednotlivých součástí.  
+ CAB soubory jsou doporučeným způsobem, jak balíček – ovládací prvky ActiveX, které používají knihovnu MFC. Balení ovládací prvek ActiveX knihovny MFC v souboru CAB umožňuje soubor s příponou INF mají být zahrnuty do ovládacího prvku instalace ovládacího prvku ActiveX a všechny závislé knihovny DLL (jako je například knihovny MFC DLL). Použití souboru CAB automaticky komprimuje kódu pro rychlejší stahování. Pokud používáte soubor .cab pro součástí ke stažení, je rychlejší k podepsání souboru CAB celý než jednotlivých komponent.  
   
 ### <a name="creating-cab-files"></a>Vytváření souborů CAB  
- Soubor CAB Development Kit si můžete stáhnout z článku znalostní báze [310618: Microsoft soubor CAB Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). V této sadě zjistíte nástroje potřebné k vytvoření souborů CAB.  
+ Soubor CAB Development Kit si můžete stáhnout z článku znalostní báze [310618: Sada SDK Microsoft soubor CAB](http://go.microsoft.com/fwlink/p/?linkid=148204). V této sadě najdete nástroje potřebné k vytvoření souborů CAB.  
   
- Soubor CAB na kterou odkazuje `CODEBASE` by měly obsahovat soubor .ocx pro ovládací prvek ActiveX a soubor s příponou INF k řízení jeho instalace. Vytvoříte soubor CAB tak, že zadáte název řídicí soubor a soubor s příponou INF. Nezahrnujte závislé knihovny DLL, které možná již existuje v systému v tomto souboru CAB. Knihovny MFC DLL jsou například zabalené do samostatného souboru CAB a řízení soubor INF.  
+ Soubor CAB odkazuje `CODEBASE` by měl obsahovat soubor .ocx ovládacího prvku ActiveX a soubor s příponou INF řídit její instalaci. Vytvořte soubor CAB tak, že zadáte název ovládacího prvku souboru a soubor s příponou INF. Nezahrnují závislé knihovny DLL, které mohou již existovat v systému v tomto souboru CAB. Například knihovny DLL MFC jsou zabalené v samostatném souboru CAB a řídící soubor INF.  
   
- Podrobnosti o tom, jak vytvořit soubor CAB najdete v tématu [vytváření souboru CAB](http://msdn.microsoft.com/en-us/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Podrobnosti o tom, jak vytvořit soubor CAB najdete v tématu [vytváření souboru CAB](http://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
   
 ### <a name="the-inf-file"></a>Soubor INF  
- Následující příklad, spindial.inf, seznamy podpůrné soubory a informace o verzi potřebné pro MFC Spindial řízení. Všimněte si, že umístění knihovny MFC DLL je webu společnosti Microsoft. Mfc42.cab dodána a podepsán společností Microsoft.  
+ Následující příklad, spindial.inf, seznamy podpůrné soubory a informace o verzi potřebné pro knihovny MFC Spindial ovládací prvek. Všimněte si, že umístění knihovny DLL MFC je web společnosti Microsoft. Mfc42.cab je k dispozici a podepsaný microsoftem.  
   
 ```  
 Contents of spindial.inf:  
@@ -112,8 +112,8 @@ file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
     0  
 ```  
   
-### <a name="the-object-tag"></a>\<OBJEKT > značky  
- Následující příklad ilustruje, pomocí `<OBJECT>` značka do balíčku ovládacího prvku MFC Spindial ukázka.  
+### <a name="the-object-tag"></a>\<Objektu > značky  
+ Následující příklad ukazuje použití `<OBJECT>` značka, které je ukázka ovládacího prvku knihovny MFC Spindial balíček.  
   
 ```  
 <OBJECT ID="Spindial1" WIDTH=100 HEIGHT=51  
@@ -127,37 +127,37 @@ file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
 </OBJECT>  
 ```  
   
- V takovém případě spindial.cab bude obsahovat dva soubory, spindial.ocx a spindial.inf. Následující příkaz vytvoří soubor CAB:  
+ V takovém případě spindial.cab bude obsahovat dva soubory, spindial.ocx a spindial.inf. Následující příkaz sestaví soubor CAB:  
   
 ```  
 C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf   
 ```  
   
- `-s 6144` Parametr rezervy místa v souboru CAB pro podepisování kódu.  
+ `-s 6144` Parametr rezervuje prostor v souboru formátu CAB pro podepisování kódu.  
   
-### <a name="the-version-tag"></a>Verze značky  
- Všimněte si zde, že `#Version` informace zadaný soubor CAB se vztahují k ovládacímu prvku určeného *atribut CLASSID* parametr `<OBJECT>` značky.  
+### <a name="the-version-tag"></a>Značka verze  
+ Poznámka: tady `#Version` zadaný soubor CAB informace platí pro ovládací prvek určený *CLASSID* parametr `<OBJECT>` značky.  
   
- V závislosti na verzi zadaný můžete vynutit stažení ovládacího prvku. Pro dokončení specifikace `OBJECT` včetně značky *CODEBASE* parametr a referenční dokumentace najdete W3C.  
+ V závislosti na verzi zadaný můžete vynutit stažení ovládacího prvku. Pro kompletní specifikace `OBJECT` včetně značky *CODEBASE* parametr, viz W3C odkaz.  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Označení řízení bezpečné pro skriptování a inicializaci  
- Ovládací prvky ActiveX, které používají ve webových stránkách by měl být označen jako bezpečné pro skriptování a inicializaci, pokud jsou ve skutečnosti bezpečné. Bezpečné ovládací prvek nebude provádět v/v disku nebo přístup k paměti nebo registry počítače.  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Označení ovládací prvek bezpečný pro skriptování a inicializaci  
+ Použít na webových stránkách – ovládací prvky ActiveX musí být označené jako bezpečný pro skriptování a inicializaci v případě, že jsou ve skutečnosti bezpečné. Bezpečný ovládací prvek nebude provádět vstupně-výstupních operací disku nebo přímý přístup k paměti nebo registrech počítače.  
   
- Ovládací prvky můžete označit jako bezpečné pro skriptování a inicializaci prostřednictvím registru. Upravit `DllRegisterServer` přidat položky podobné následující k označení prvku jako bezpečné pro skriptování a trvalost v registru. Je to alternativní metoda je implementace `IObjectSafety`.  
+ Ovládací prvky, může být označený jako bezpečný pro skriptování a inicializaci prostřednictvím registru. Upravit `DllRegisterServer` přidat položky podobné následující k označení ovládací prvek jako bezpečné pro skriptování a přetrvávání v registru. Je to alternativní metoda má implementovat `IObjectSafety`.  
   
- Určíte identifikátory GUID (globálně jedinečné identifikátory) pro ovládací prvek označit bezpečné pro skriptování a trvalost. Ovládací prvky, které můžete bezpečně skriptovány bude obsahovat položku registru, který je podobný následujícímu:  
+ Identifikátory GUID (globálně jedinečné identifikátory) budou definovat pro ovládací prvek k označení bezpečné pro skriptování a pro trvalost. Ovládací prvky, které může být bezpečně skripty bude obsahovat položku registru, který je podobný následujícímu:  
   
 ```  
 HKEY_CLASSES_ROOT\Component Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}  
 ```  
   
- Ovládací prvky, které může být bezpečně inicializována z trvalých dat jsou označeny jako bezpečné pro trvalost s položkou registru podobně jako:  
+ Ovládací prvky, které mohou být inicializovány bezpečně z trvalá data jsou označeny jako bezpečné pro trvalé uložení podobný položky registru:  
   
 ```  
 HKEY_CLASSES_ROOT\Component Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}  
 ```  
   
- Přidat položky podobné následující (ID místě nahraďte ovládacího prvku třídy `{06889605-B8D0-101A-91F1-00608CEAD5B3}`) Chcete-li přidružit klíče s následujícím ID třídy:  
+ Přidat položky podobné následující (ID místo nahrazení ovládacího prvku třídy `{06889605-B8D0-101A-91F1-00608CEAD5B3}`) k přidružení klíčů s následujícím ID třídy:  
   
 ```  
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}   
@@ -165,11 +165,11 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ```  
   
 ##  <a name="_core_licensing_issues"></a> Problémy s licencí  
- Pokud chcete použít licencovanou ovládacího prvku na webové stránce, je nutné ověřit, že licenční smlouva umožňuje jeho použití na Internetu a vytvoření souboru (LPK) pro něj.  
+ Pokud chcete použít licencovaného ovládacího prvku na webové stránce, musíte ověřit, že licenční smlouvy umožňuje jeho použití na Internetu a vytvoří soubor balíčku licencí (LPK) se pro něj.  
   
- Licencované ovládací prvek ActiveX nebude správně načíst na stránce HTML, pokud počítači aplikace Internet Explorer nemá licenci pro používání ovládacího prvku. Například pokud licencované ovládací prvek byl vytvořený pomocí Visual C++, stránky HTML pomocí ovládacího prvku načte správně v počítači, kde byl sestaven ovládacího prvku, ale nebude načtena v jiném počítači, pokud jsou zahrnuty licenční informace.  
+ Licencované ovládací prvek ActiveX nenačte správně na stránce HTML Pokud počítači se systémem Internet Explorer není licencován pro použití ovládacího prvku. Například pokud licencovaný ovládací prvek byl vytvořen pomocí jazyka Visual C++, HTML stránku pomocí ovládacího prvku se načte správně na počítači, ve kterém ovládací prvek byl vytvořen, ale nebude načten v jiném počítači, pokud licenční informace.  
   
- Chcete-li použít licencované ovládací prvek ActiveX v Internet Exploreru, je třeba zkontrolovat dodavatele licenční smlouvy k ověření, že licence pro ovládací prvek povoluje:  
+ Použití licencovaného ovládacího prvku ActiveX v Internet Exploreru, musíte zaškrtnout dodavatele licenční smlouvy k ověření, že licence pro ovládací prvek umožňuje:  
   
 -   Redistribuce  
   
@@ -177,19 +177,19 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   Použití parametru základu kódu  
   
- Chcete-li použít licencované ovládací prvek na stránce HTML na nonlicensed počítači, musíte vygenerovat souboru (LPK). Soubor LPK obsahuje běhu licencí pro licencované ovládací prvky na stránce HTML. Tento soubor je generována pomocí LPK_TOOL. Soubor EXE, který se dodává s ActiveX SDK. Další informace najdete v článku na webu MSDN na [ http://msdn.microsoft.com ](http://msdn.microsoft.com).  
+ Použití licencovaného ovládacího prvku na stránce HTML na nonlicensed počítači, musíte vygenerovat soubor balíčku licencí (LPK). Soubor LPK obsahuje licence za běhu pro licencované ovládací prvky na stránce HTML. Tento soubor je generován prostřednictvím LPK_TOOL. Soubor EXE, který se dodává se sadou SDK ActiveX. Další informace najdete v článku na webu MSDN na [ http://msdn.microsoft.com ](http://msdn.microsoft.com).  
   
-#### <a name="to-create-an-lpk-file"></a>Vytvořit soubor LPK  
+#### <a name="to-create-an-lpk-file"></a>Vytvořte soubor LPK  
   
-1.  Spusťte LPK_TOOL. EXE v počítači, který má licenci, použijte ovládací prvek.  
+1.  Spusťte LPK_TOOL. Soubor EXE v počítači, který je licenci k používání ovládacího prvku.  
   
-2.  V **nástroj pro tvorbu licenční balíček** dialogovém **dostupných ovládacích prvků** pole se seznamem, vyberte každý licencované ovládací prvek ActiveX, který se použije na stránce HTML a klikněte na tlačítko **přidat**.  
+2.  V **nástroj pro vytváření licenčního balíčku** v dialogu **dostupné ovládací prvky** pole se seznamem, vyberte každý licencovaný ovládací prvek ActiveX, který se použije na stránce HTML a klikněte na tlačítko **přidat**.  
   
-3.  Klikněte na tlačítko **uložit a ukončete** a zadejte název souboru LPK. Tato akce vytvoří LPK soubor a ukončete aplikaci.  
+3.  Klikněte na tlačítko **uložit Uko & nčení** a zadejte název souboru LPK. Tím vytvoříte LPK soubor a ukončete aplikaci.  
   
-#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>Chcete-li vložit licencované ovládací prvek na stránce HTML  
+#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>Chcete-li vložit licencovaného ovládacího prvku na stránku HTML  
   
-1.  Upravte stránku HTML. Na stránce HTML vložit \<OBJEKT > značky pro objekt správce licencí před všemi ostatními \<OBJEKT > značky. Správce licencí je ovládací prvek ActiveX, který je nainstalován pomocí Internet Exploreru. Jeho ID třídy je uveden níže. Nastavte vlastnost LPKPath objektu správce licencí na cestu a název souboru LPK. Můžete mít jenom jeden soubor LPK pro stránku HTML.  
+1.  Upravte stránku HTML. Na stránce HTML vložte \<objektu > značky pro objekt správce licencí před všemi ostatními \<objektu > značky. Správce licencí je ovládací prvek ActiveX, který je nainstalován pomocí aplikace Internet Explorer. ID třídy je uveden níže. Nastavte vlastnost LPKPath objektu správce licencí na cestu a název souboru LPK. Může mít pouze jeden soubor LPK na stránku HTML.  
   
  ```  
  <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
@@ -197,13 +197,13 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
  </OBJECT>  
  ```  
   
-2.  Vložit \<OBJEKT > značky pro licencované ovládací prvek po značce správce licencí.  
+2.  Vložit \<objektu > značky pro licencované ovládací prvek po značce správce licencí.  
   
-     Například stránky HTML, která zobrazí ovládací prvek maskované úpravy Microsoft jsou uvedeny níže. První třídy, na kterou je ID pro ovládací prvek správce licencí, sekundu třídy, na kterou je ID pro ovládací prvek maskované úpravy. Změňte značky tak, aby odkazoval na relativní cestu k souboru LPK, které jste vytvořili dříve a přidání značka object, včetně ID třídy pro vlastní ovládací prvek.  
+     Například stránky HTML, který se zobrazí Microsoft maskované upravit ovládací prvek je uveden níže. První třídy, kterou je ID pro ovládací prvek správce licencí, druhá třída ID je pro ovládací prvek maskované úpravy. Upravit značky a přejít na relativní cestu LPK soubor, který jste vytvořili dříve a přidejte značku objektu, včetně ID třídy ovládacího prvku.  
   
-3.  Vložit \<vložení > atribut souboru LPK, pokud používáte modul plug-in NCompass ActiveX.  
+3.  Vložit \<vložení > atribut pro LPK soubor, pokud používáte modul plug-in NCompass ActiveX.  
   
-     Pokud vaše řízení lze zobrazit v dalších aktivní povolené prohlížeče – například Netscape pomocí modulu plug-in NCompass ActiveX – je nutné přidat \<vložení > syntaxe, jak je uvedeno níže.  
+     Pokud váš ovládací prvek lze zobrazit na jiné aktivní povolené prohlížeče – například Netscape pomocí modulu plug-in NCompass ActiveX – je nutné přidat \<vložení > syntaxe, jak je znázorněno níže.  
   
  ```  
  <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
@@ -216,52 +216,52 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
  </OBJECT>  
  ```  
   
- Další informace o licencích řízení, najdete v části [– ovládací prvky ActiveX: licencování ovládacích prvků ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
+ Další informace o licencování ovládacích prvků naleznete v tématu [ovládací prvky ActiveX: licencování ovládacího prvku ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
 ##  <a name="_core_signing_code"></a> Podepisování kódu  
- Podepisování kódu slouží k identifikaci zdrojového kódu a zaručit, že se od jeho nezměnil kód byl podepsán. V závislosti na nastavení zabezpečení prohlížeče uživatelé mohou se zobrazit upozornění před stažením kódu. Uživatelé mohou zvolit za určité vlastníky certifikát nebo společnosti, ve kterých případu kód podepsaný tyto důvěryhodné, budou staženy bez upozornění. Aby se zabránilo zneužití digitálně podepsaný kód.  
+ Podepisování kódu slouží k identifikaci zdrojový kód a zajistit, že kód nebyl změněn od doby byla podepsána. V závislosti na nastavení zabezpečení prohlížeče uživatelé mohou zobrazit upozornění před stažením kódu. Uživatelé se můžou rozhodnout důvěřovat některé vlastníky certifikát nebo společnosti, ve kterých případu kódu jsou podepsány důvěryhodný, stáhnou se bez upozornění. Chcete-li zabránit manipulaci je digitálně podepsaný kód.  
   
- Zajistěte, aby že konečné kódu je podepsaný tak, aby vlastní ovládací prvek lze automaticky stáhnout bez zobrazení zprávy upozornění vztah důvěryhodnosti. Podrobnosti o tom, jak podepsat kód, naleznete v dokumentaci na Authenticode v sadě SDK ActiveX a najdete v tématu [podepsání souboru CAB](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Zajistěte, aby že konečný kód je podepsaný tak, aby váš ovládací prvek je automaticky stáhnout bez zobrazení zprávy upozornění vztah důvěryhodnosti. Podrobnosti o tom, jak podepsat kód, naleznete v dokumentaci na Authenticode v sadě SDK ActiveX a najdete v tématu [podepsání souboru CAB](http://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
   
- V závislosti na vztahu důvěryhodnosti a Prohlížeč úrovně nastavení zabezpečení může se zobrazit certifikát k identifikaci podpisový osobě nebo firmě. Pokud úroveň zabezpečení je none, nebo pokud je vlastník certifikát podepsaný držitelem ovládacího prvku důvěryhodný, certifikát se nezobrazí. V tématu [úrovně zabezpečení prohlížeče Internet Explorer a řídit chování](#_core_internet_explorer_browser_safety_levels_and_control_behavior) podrobnosti o tom, jak nastavení zabezpečení prohlížeče určí, zda stáhne vlastního ovládacího prvku a certifikát zobrazí.  
+ V závislosti na vztahu důvěryhodnosti a Prohlížeč úrovně nastavení zabezpečení může se zobrazit certifikát k identifikaci podpisový osobě nebo firmě. Pokud je úroveň zabezpečení, none nebo vlastník certifikát podepsaný držitelem ovládací prvek je důvěryhodný, certifikát se nezobrazí. Zobrazit [úrovně zabezpečení prohlížeče Internet Explorer a chování ovládacího prvku](#_core_internet_explorer_browser_safety_levels_and_control_behavior) podrobnosti o způsobu nastavení zabezpečení prohlížeče určí, jestli váš ovládací prvek stahován a certifikátu zobrazeného.  
   
- Digitální podepisování kódu záruky nebylo změněno vzhledem k tomu, že je podepsaný. Hodnota hash kód je přijatá a vkládat v certifikátu. Tato hodnota hash se později porovná se hodnota hash kód prováděné po stažení kód, ale před jeho spuštěním. Společnosti, jako je například Verisign může poskytovat privátní a veřejné klíče, které jsou potřebné pro podepsání kódu. Sada SDK ActiveX se dodává s MakeCert, nástroj pro vytváření testovací certifikáty.  
+ Digitální podepisování kódu záruky nezměnil, protože byla podepsána. Hodnota hash kódu je přijatá a vkládat v certifikátu. Tato hodnota hash později ve srovnání s křížkem kódu po stažení kódu, ale před jejím spuštěním. Společnosti, jako je například Verisign, můžete zadat privátní a veřejné klíče potřebné k podepsání kódu. Sada SDK ActiveX se dodává s MakeCert, nástroj pro vytváření testovací certifikáty.  
   
 ##  <a name="_core_managing_the_palette"></a> Správa palety  
- Kontejnery určit palety a zpřístupní ji jako vedlejší vlastnost, **DISPID_AMBIENT_PALETTE**. Kontejner (například Internet Explorer) zvolí palety, který je používán všechny ovládací prvky ActiveX na stránce určit vlastní paletu. Tím se zabrání zobrazení blikání a uvede konzistentní vzhled.  
+ Kontejnery určit na paletě a zpřístupní ji jako vedlejší vlastnost **DISPID_AMBIENT_PALETTE**. Kontejner (třeba Internet Explorer) vybere paletu, která se používá ve všech ovládacích prvků ActiveX na stránku k určení vlastní paletu. To zabrání zobrazení blikání a nabízí jednotný vzhled.  
   
- Můžete přepsat ovládacího prvku `OnAmbientPropertyChange` pro zpracování oznámení o změnách paletě.  
+ Ovládací prvek můžete přepsat `OnAmbientPropertyChange` zpracování oznámení o změnách na paletě.  
   
- Můžete přepsat ovládacího prvku `OnGetColorSet` vrátit barvu nastavit k vykreslení paletě. Kontejnery pomůže určit, zda je ovládací prvek podporující palety návratovou hodnotu.  
+ Ovládací prvek můžete přepsat `OnGetColorSet` vrátit barva nastavena na vykreslení na paletě. Kontejnery používat návratovou hodnotu k určení, zda je ovládací prvek s ohledem na paletě.  
   
- V části OCX 96 pokyny ovládacího prvku musí vždy Uvědomte si, jeho palety na pozadí.  
+ V části pravidla OCX 96 ovládací prvek musí vždy dobré si uvědomit svoji paletu na pozadí.  
   
- Starší kontejnery, které nepoužívají vlastnost palette vedlejším bude odesílat zprávy WM_QUERYNEWPALETTE a WM_PALETTECHANGED. Můžete přepsat ovládacího prvku `OnQueryNewPalette` a `OnPaletteChanged` pro zpracování těchto zpráv.  
+ Starší kontejnery, které nepoužívají vlastnost palette okolí bude odesílat zprávy WM_QUERYNEWPALETTE a WM_PALETTECHANGED. Ovládací prvek můžete přepsat `OnQueryNewPalette` a `OnPaletteChanged` zpracovává tyto zprávy.  
   
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Řízení chování a úrovně zabezpečení prohlížeče Internet Explorer  
- Prohlížeč obsahuje možnosti pro úroveň zabezpečení, konfigurovatelná uživatelem. Protože webové stránky může obsahovat aktivní obsah, který může potenciálně poškodit počítač uživatele prohlížečů umožňuje uživateli vybrat možnosti pro úroveň zabezpečení. V závislosti na způsobu, prohlížeč implementuje úrovně zabezpečení ovládacího prvku nemusí vůbec stáhnout, nebo se zobrazí certifikát nebo upozornění chcete umožnit uživatelům zvolit za běhu, zda ke stažení ovládacího prvku. Níže je uveden seznam chování ovládacích prvků ActiveX v části zabezpečení Vysoká, střední a nízké úrovně v Internet Exploreru.  
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Úrovně zabezpečení prohlížeče Internet Explorer a chování ovládacího prvku  
+ Prohlížeč obsahuje možnosti pro úroveň zabezpečení, konfigurovatelná uživatelem. Protože webové stránky mohou obsahovat aktivní obsah, který může potenciálně poškodit počítač uživatele, prohlížečů umožňuje uživateli vybrat možnosti pro úroveň zabezpečení. V závislosti na prohlížeči implementuje bezpečný přístup z více úrovní případech ovládacího prvku nemusí vůbec stáhnout nebo se zobrazí certifikát nebo upozornění, aby uživatel mohl zvolte v době běhu, jestli se mají stáhnout ovládací prvek. Chování ovládacích prvků ActiveX v části bezpečnosti vysoká, střední nebo nízké úrovně v Internet Exploreru je uveden níže.  
   
 ### <a name="high-safety-mode"></a>Režim vysoké zabezpečení  
   
--   Nepodepsané ovládací prvky, nebudou staženy.  
+-   Ovládací prvky bez znaménka nebudou staženy.  
   
--   Podepsané ovládací prvky zobrazí certifikát, pokud nedůvěryhodná (uživatel může zvolit možnost vždy důvěřovat kód z tohoto vlastníka certifikát od této chvíle).  
+-   Podepsané ovládací prvky se zobrazí certifikát, pokud nedůvěryhodné (může uživatel vybrat možnost vždy důvěřovat kód z tohoto vlastníka certifikát od této chvíle).  
   
--   Jenom prvky, které jsou označeny jako bezpečné bude trvalých dat nebo být možné používat skripty.  
+-   Pouze prvky, které jsou označeny jako bezpečné bude mít trvalých dat a/nebo být možné používat skripty.  
   
-### <a name="medium-safety-mode"></a>Režim střední úroveň zabezpečení  
+### <a name="medium-safety-mode"></a>Střední režim  
   
--   Nepodepsané ovládací prvky se zobrazí upozornění před stažením.  
+-   Ovládací prvky bez znaménka se zobrazí upozornění před stažením.  
   
--   Pokud nedůvěryhodná zobrazí podepsané ovládací prvky certifikát.  
+-   Podepsané ovládací prvky se zobrazí certifikát, pokud nedůvěryhodný.  
   
--   Ovládací prvky nejsou označeny jako bezpečné se zobrazí upozornění.  
+-   Nejsou označeny jako bezpečné ovládací prvky se zobrazí upozornění.  
   
-### <a name="low-safety-mode"></a>Režim nízké zabezpečení  
+### <a name="low-safety-mode"></a>Nízká režim  
   
--   Ovládací prvky se stáhnou bez upozornění.  
+-   Ovládací prvky se stáhnou bez předchozího upozornění.  
   
--   Skriptování a trvalost dojít bez upozornění.  
+-   Skriptování a stálost dojít bez upozornění.  
   
 ## <a name="see-also"></a>Viz také  
  [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   

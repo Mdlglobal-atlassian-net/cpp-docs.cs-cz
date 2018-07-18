@@ -1,5 +1,5 @@
 ---
-title: is_null_pointer třída | Microsoft Docs
+title: is_null_pointer – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1686900fe876d1fd884c8321654b7a7f866647
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966534"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer – třída
 
-Testy, pokud je typ std::nullptr_t.
+Testuje, zda je typ std::nullptr_t.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,18 +37,18 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je `std::nullptr_t`, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je `std::nullptr_t`, v opačném případě obsahuje hodnotu false.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

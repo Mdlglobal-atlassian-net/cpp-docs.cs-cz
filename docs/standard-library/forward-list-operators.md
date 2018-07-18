@@ -1,5 +1,5 @@
 ---
-title: '&lt;forward_list –&gt; operátory | Microsoft Docs'
+title: '&lt;forward_list –&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 7966d428dd200f0cbb280c679c4072e1ad75757a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dd02275364b611ef5f9011041840a10709aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846747"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965627"
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list –&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Testy, pokud se objekt dopředného seznamu na levé straně operátoru rovná objektu dopředného seznamu na pravé straně.
+Testuje, zda objekt dopředu seznamu na levé straně operátoru roven objektu dopředné seznamu na pravé straně.
 
 ```cpp
 bool operator==(
@@ -48,16 +48,16 @@ bool operator==(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Objekt typu `forward_list`.|
-|`right`|Objekt typu `forward_list`.|
+|*doleva*|Objekt typu `forward_list`.|
+|*doprava*|Objekt typu `forward_list`.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce šablony přetížení `operator==` k porovnání dvou objektů třídy šablony `forward_list`. Funkce vrátí hodnotu `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Tato funkce šablony přetížení `operator==` k porovnání dvou objektů třídy šablony `forward_list`. Funkce vrátí `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
 ## <a name="op_neq"></a>  Operator! =
 
-Testy, pokud není objekt dopředného seznamu na levé straně operátoru rovná objektu dopředného seznamu na pravé straně.
+Testuje, zda je objekt dopředu seznamu na levé straně operátoru není roven objektu dopředné seznamu na pravé straně.
 
 ```cpp
 bool operator!=(
@@ -69,20 +69,20 @@ bool operator!=(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Objekt typu `forward_list`.|
-|`right`|Objekt typu `forward_list`.|
+|*doleva*|Objekt typu `forward_list`.|
+|*doprava*|Objekt typu `forward_list`.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud seznamy není stejný; **false** Pokud seznamy jsou stejné.
+**Hodnota TRUE** Pokud nejsou stejné; seznamy **false** Pokud seznamy jsou si rovny.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí hodnotu `!(left == right)`.
+Tato šablona funkce vrátí `!(left == right)`.
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Testy, pokud objekt dopředného seznamu na levé straně operátoru je menší než dopředného list objekt na pravé straně.
+Testuje, zda objekt dopředu seznamu na levé straně operátoru menší než objekt dopředu seznamu na pravé straně.
 
 ```cpp
 bool operator<(
@@ -94,20 +94,20 @@ bool operator<(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Objekt typu `forward_list`.|
-|`right`|Objekt typu `forward_list`.|
+|*doleva*|Objekt typu `forward_list`.|
+|*doprava*|Objekt typu `forward_list`.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud v seznamu na levé straně operátor je menší než, ale není rovno v seznamu na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** -li v seznamu na levé straně operátoru menší než, ale není v seznamu na pravé straně operátoru roven; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce šablony přetížení `operator<` k porovnání dvou objektů třídy šablony `forward_list`. Funkce vrátí hodnotu `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Tato funkce šablony přetížení `operator<` k porovnání dvou objektů třídy šablony `forward_list`. Funkce vrátí `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Pokud seznamu dopředného objekt na levé straně operátoru testů je menší než nebo rovna hodnotě dopředného list objekt na pravé straně.
+Testuje, zda je objekt seznamu vpřed na levé straně operátoru je menší než nebo roven objektu dopředné seznamu na pravé straně.
 
 ```cpp
 bool operator<=(
@@ -119,20 +119,20 @@ bool operator<=(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Objekt typu `forward_list`.|
-|`right`|Objekt typu `forward_list`.|
+|*doleva*|Objekt typu `forward_list`.|
+|*doprava*|Objekt typu `forward_list`.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud v seznamu na levé straně operátor je menší než nebo rovna v seznamu na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** -li v seznamu na levé straně operátoru menší než nebo rovna hodnotě v seznamu na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí hodnotu `!(right < left)`.
+Tato šablona funkce vrátí `!(right < left)`.
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Testy, pokud objekt dopředného seznamu na levé straně operátoru je větší než dopředného list objekt na pravé straně.
+Testuje, zda objekt dopředu seznamu na levé straně operátoru větší než objekt dopředu seznamu na pravé straně.
 
 ```cpp
 bool operator>(
@@ -144,20 +144,20 @@ bool operator>(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Objekt typu `forward_list`.|
-|`right`|Objekt typu `forward_list`.|
+|*doleva*|Objekt typu `forward_list`.|
+|*doprava*|Objekt typu `forward_list`.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud v seznamu na levé straně operátor je větší než v seznamu na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** Pokud je v seznamu na levé straně operátoru větší než v seznamu na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí hodnotu `right < left`.
+Tato šablona funkce vrátí `right < left`.
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Testy, pokud objekt dopředného seznamu na levé straně operátoru je větší než nebo rovna hodnotě dopředného list objekt na pravé straně.
+Testuje, zda je objekt dopředu seznamu na levé straně operátoru větší než nebo roven objektu dopředné seznamu na pravé straně.
 
 ```cpp
 bool operator>=(
@@ -169,17 +169,17 @@ bool operator>=(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Objekt typu `forward_list`.|
-|`right`|Objekt typu `forward_list`.|
+|*doleva*|Objekt typu `forward_list`.|
+|*doprava*|Objekt typu `forward_list`.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud dopředného seznamu na levé straně operátoru je větší než nebo rovno dopředného seznamu na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** při přesměrování seznamu na levé straně operátoru větší než nebo rovna seznamu vpřed na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrátí `!(left < right)`.
+Šablona funkce vrátí `!(left < right)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<forward_list>](../standard-library/forward-list.md)<br/>

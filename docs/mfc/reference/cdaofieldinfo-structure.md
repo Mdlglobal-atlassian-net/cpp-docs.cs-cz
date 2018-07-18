@@ -1,5 +1,5 @@
 ---
-title: Cdaofieldinfo – struktura | Microsoft Docs
+title: Cdaofieldinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 937f78c25392f66f7bfa090e5a484ffb8dc983af
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336550"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo – struktura
-`CDaoFieldInfo` Struktura obsahuje informace o objekt pole definované pro přístup k objektům dat (DAO).  
+`CDaoFieldInfo` Struktura obsahuje informace o objektu pole definovány pro datový přístup k objektům (DAO).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,111 +51,111 @@ struct CDaoFieldInfo
   
 #### <a name="parameters"></a>Parametry  
  *m_strName*  
- Objekt pole jedinečné názvy. Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
+ Pole objektu jedinečné názvy. Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě k DAO.  
   
  *m_nType*  
- Hodnota, která určuje datový typ pole. Podrobnosti naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO. Hodnota této vlastnosti může být jeden z následujících akcí:  
+ Hodnota, která určuje datový typ pole. Podrobnosti naleznete v tématu "Vlastnost typu" v nápovědě k DAO. Hodnota této vlastnosti může být jedna z následujících akcí:  
   
-- **dbBoolean** Ano/Ne, stejné jako **TRUE**/**FALSE**  
+- `dbBoolean` Ano/Ne stejně jako TRUE nebo FALSE  
   
-- **dbByte** bajtů  
+- `dbByte` Bajtů  
   
-- **dbInteger** krátké  
+- `dbInteger` krátké  
   
-- **dbLong** dlouho  
+- `dbLong` Long  
   
-- **dbCurrency** měna; viz třídy knihovny MFC [COleCurrency](../../mfc/reference/colecurrency-class.md)  
+- `dbCurrency` Měně. Třída knihovny MFC naleznete v tématu [COleCurrency](../../mfc/reference/colecurrency-class.md)  
   
-- **dbSingle** jeden  
+- `dbSingle` Jeden  
   
-- **dbDouble** Double  
+- `dbDouble` Double  
   
-- **dbDate** datum a čas; viz třídy knihovny MFC [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)  
+- `dbDate` Datum a čas; Třída knihovny MFC naleznete v tématu [COleDateTime –](../../atl-mfc-shared/reference/coledatetime-class.md)  
   
-- **dbText** Text; viz třídy knihovny MFC [CString](../../atl-mfc-shared/reference/cstringt-class.md)  
+- `dbText` Text. Třída knihovny MFC naleznete v tématu [CString](../../atl-mfc-shared/reference/cstringt-class.md)  
   
-- **dbLongBinary** dlouhá binární (OLE Object); můžete chtít použít třídy MFC [CByteArray](../../mfc/reference/cbytearray-class.md) místo třída `CLongBinary` jako `CByteArray` je bohatší a snadněji použitelná.  
+- `dbLongBinary` Dlouhá binární soubor (objekt OLE); můžete chtít použít třídy MFC [CByteArray](../../mfc/reference/cbytearray-class.md) namísto třídy `CLongBinary` jako `CByteArray` bohatší a usnadňuje používání.  
   
-- **dbMemo** Memo; viz třídy knihovny MFC `CString`  
+- `dbMemo` Úloh. Třída knihovny MFC naleznete v tématu `CString`  
   
-- **dbGUID** A globálně jedinečný identifikátor nebo univerzálně jedinečný identifikátor použít s vzdálených volání procedur. Další informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
+- `dbGUID` Globálně jedinečný identifikátor/univerzálně jedinečný identifikátor využít vzdálené volání procedur. Další informace naleznete v tématu "Vlastnost typu" v nápovědě k DAO.  
   
 > [!NOTE]
->  Nepoužívejte řetězce pro binární data. To způsobí, že vaše data předávat vrstvě překlad Unicode/ANSI, výsledkem je vyšší nároky a může být neočekávaná překlad.  
+>  Nepoužívejte řetězcovými datovými typy pro binární data. To způsobí, že vaše data předávání transakční vrstva Unicode/ANSI, což vede k vyšší nároky a může být neočekávané překlad.  
   
  *m_lSize*  
- Hodnota, která určuje maximální velikost v bajtech objekt DAO pole, který obsahuje text nebo pevnou velikost pole objekt, který obsahuje textové nebo číselné hodnoty. Podrobnosti naleznete v tématu "Velikost vlastnost" v nápovědě rozhraní DAO. Velikost může být jedna z následujících hodnot:  
+ Hodnota, která určuje maximální velikost v bajtech DAO pole objektu, který obsahuje text nebo pevné velikosti pole objektu, který obsahuje textové nebo číselné hodnoty. Podrobnosti naleznete v tématu "Vlastnost Size" v nápovědě k DAO. Velikosti může být jedna z následujících hodnot:  
   
 |Typ|Velikost (bajty)|Popis|  
 |----------|--------------------|-----------------|  
-|**dbBoolean**|1 bajt|Ano (stejný jako True nebo False)|  
-|**dbByte**|1|Byte|  
-|**dbInteger**|2|Integer|  
-|**dbLong**|4|dlouhá|  
-|**dbCurrency**|8|Měna ([COleCurrency](../../mfc/reference/colecurrency-class.md))|  
-|**dbSingle**|4|Single|  
-|**dbDouble**|8|Double|  
-|**dbDate**|8|Datum a čas ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
-|**dbText**|1 - 255|Text ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
-|**dbLongBinary**|0|Dlouhá binární (objekt OLE; [CByteArray](../../mfc/reference/cbytearray-class.md); použít místo `CLongBinary`)|  
-|**dbMemo**|0|Memo ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
-|**dbGUID**|16|Globálně jedinečný identifikátor nebo univerzálně jedinečný identifikátor použít s vzdálených volání procedur.|  
+|`dbBoolean`|1 bajt|Ano/Ne (stejné jako True/False)|  
+|`dbByte`|1|Byte|  
+|`dbInteger`|2|Integer|  
+|`dbLong`|4|Long|  
+|`dbCurrency`|8|Měny ([COleCurrency](../../mfc/reference/colecurrency-class.md))|  
+|`dbSingle`|4|Single|  
+|`dbDouble`|8|Double|  
+|`dbDate`|8|Datum a čas ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
+|`dbText`|1 - 255|Text ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|`dbLongBinary`|0|Dlouhá binární soubor (OLE Object; [CByteArray](../../mfc/reference/cbytearray-class.md); použijte místo `CLongBinary`)|  
+|`dbMemo`|0|Memo ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|`dbGUID`|16|Globálně jedinečný identifikátor/univerzálně jedinečný identifikátor využít vzdálené volání procedur.|  
   
  *m_lAttributes*  
- Určuje vlastnosti objektu pole obsažené ve tabledef, sada záznamů, querydef nebo index objektu. Hodnota vrácená může být součet těchto konstanty, vytvořené pomocí C++ bitové operace OR (**&#124;**) operátor:  
+ Určuje vlastnosti pole objektů obsažených tabledef, sady záznamů, querydef nebo objekt indexu. Vrácená hodnota může být součet těchto konstanty, vytvořené pomocí jazyka C++ bitového operátoru OR (**&#124;**) – operátor:  
   
-- **dbFixedField** velikost pole vyřešen (výchozí nastavení pro číselné pole).  
+- `dbFixedField` Velikost pole je pevně (výchozí nastavení pro číselné pole).  
   
-- **dbVariableField** velikosti pole je proměnná (pouze textová pole).  
+- `dbVariableField` Velikost pole je proměnná (pouze textové pole).  
   
-- **dbAutoIncrField** hodnotu pole pro nové záznamy se automaticky zvýší na jedinečný dlouhé celé číslo, kterou nelze změnit. Podporováno pouze pro Microsoft Jet databázových tabulek.  
+- `dbAutoIncrField` Hodnotu pole pro nové záznamy se automaticky zvýší na jedinečné long integer, která se nedá změnit. Podporováno pouze pro Microsoft Jet databázových tabulek.  
   
-- **dbUpdatableField** hodnotu pole lze změnit.  
+- `dbUpdatableField` Můžete změnit hodnotu pole.  
   
-- **dbDescending** pole je seřazené v sestupném (Z - A, nebo 100-0) pořadí (platí pouze pro objekt pole v kolekci polí indexu objektu; v knihovně MFC, index sami objekty jsou obsažené v objektech tabledef). Pokud vynecháte tento konstanta, pole je seřadit ve vzestupném (A - Z nebo 0 - 100) pořadí (výchozí).  
+- `dbDescending` Pole je seřazen v sestupném (Z - A nebo 100-0) pořadí (platí pouze pro pole objektů v kolekci polí indexu objektu; v knihovně MFC, index samotné objekty jsou obsažené v objektech tabledef). Vynecháte-li tato konstanta, pole je seřazen vzestupně (A – Z nebo 0 – 100) pořadí (výchozí).  
   
- Při kontrole nastavení této vlastnosti, můžete použít C++ bitové – a – operátor (**&**) k testování pro konkrétní atribut. Při nastavování několik atributů, můžete je spojit kombinací příslušné konstanty s bitové operace OR (**&#124;**) operátor. Podrobnosti naleznete v tématu "Vlastnosti Attributes" v nápovědě rozhraní DAO.  
+ Při kontrole nastavení této vlastnosti můžete použít C++ bitový – a – operátor (**&**) k testování pro konkrétní atribut. Při nastavování více atributů, můžete je spojit kombinací odpovídající konstanty bitového operátoru OR (**&#124;**) – operátor. Podrobnosti naleznete v tématu "Atributy vlastnosti" v nápovědě k DAO.  
   
  *m_nOrdinalPosition*  
- Hodnota, která určuje číselného pořadí, ve kterém chcete pole reprezentována objekt DAO pole, který se má zobrazit relativně k další pole. Můžete nastavit tuto vlastnost s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). Podrobnosti naleznete v tématu "OrdinalPosition vlastnost" v nápovědě rozhraní DAO.  
+ Hodnota, která určuje číselného pořadí, ve kterém má být pole reprezentována objekt pole DAO zobrazeného vzhledem k jiné pole. Můžete nastavit tuto vlastnost s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). Podrobnosti naleznete v tématu "OrdinalPosition vlastnost" v nápovědě k DAO.  
   
  *m_bRequired*  
- Určuje, zda objekt DAO pole vyžaduje hodnotu než Null. Pokud je tato vlastnost **TRUE**, pole neumožňuje hodnotu Null. V případě potřeby je nastavený na **FALSE**, pole může obsahovat hodnoty Null, jakož i hodnoty, které splňují podmínky zadané vlastnosti nastavením Povolit nulovou délku a ověřovací pravidlo. Podrobnosti naleznete v tématu "Požadované vlastnosti" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Určuje, zda objekt pole DAO vyžaduje nenulovou hodnotu. Pokud je tato vlastnost hodnotu TRUE, pole neumožňuje hodnotu Null. V případě potřeby je nastavena na hodnotu FALSE, pole může obsahovat hodnoty Null, stejně jako hodnoty, které splňují podmínky určené nastavení vlastností nulovou a ověřovací pravidlo. Podrobnosti naleznete v tématu "Vyžaduje vlastnost" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_bAllowZeroLength*  
- Určuje, zda prázdný řetězec ("") je platná hodnota objekt DAO pole s datovým typem Text nebo Memo. Pokud je tato vlastnost **TRUE**, prázdný řetězec je platnou hodnotu. Tuto vlastnost lze nastavit **FALSE** zajistit prázdný řetězec nelze použít k nastavení hodnoty pole. Podrobnosti naleznete v tématu "Povolit nulovou délku vlastnost" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Označuje, zda prázdný řetězec ("") je platná hodnota objektu rozhraní DAO pole s datovým typem Text nebo. Pokud je tato vlastnost hodnotu TRUE, je prázdný řetězec platnou hodnotu. Tuto vlastnost můžete nastavit na FALSE, pokud chcete zajistit, že nelze použít prázdný řetězec a nastavit hodnotu pole. Podrobnosti naleznete v tématu "Nulovou vlastnost" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_lCollatingOrder*  
- Určuje pořadí řazení v textu pro porovnání řetězců nebo řazení. Podrobnosti naleznete v tématu "Přizpůsobení Windows registru nastavení pro Data Access" v nápovědě rozhraní DAO. Seznam možných hodnot vrácených najdete v tématu **m_lCollatingOrder** členem [cdaodatabaseinfo –](../../mfc/reference/cdaodatabaseinfo-structure.md) struktura. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Určuje pořadí řazení v textu pro porovnání řetězců nebo řazením. Podrobnosti najdete v tématu "Přizpůsobení Windows registru nastavení pro přístup k datům" v nápovědě rozhraní DAO. Seznam možných hodnot vrácených najdete v tématu `m_lCollatingOrder` člena [cdaodatabaseinfo –](../../mfc/reference/cdaodatabaseinfo-structure.md) struktury. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_strForeignName*  
- Hodnota, která v vztah, určuje název pole objekt DAO v cizí tabulku, která odpovídá poli v primární tabulce. Podrobnosti naleznete v tématu "ForeignName vlastnost" v nápovědě rozhraní DAO.  
+ Hodnota, která v relaci, určuje název objektu pole DAO v cizím tabulku, která odpovídají polím v primární tabulce. Podrobnosti naleznete v tématu "ForeignName vlastnost" v nápovědě k DAO.  
   
  *m_strSourceField*  
- Určuje název pole, která je původního zdroje dat pro objekt DAO pole obsažené ve tabledef, sada záznamů nebo querydef objektu. Tato vlastnost určuje původní název pole, které jsou přidružené k objektu pole. Například můžete tuto vlastnost použít k určení původního zdroje dat v dotazu pole, jehož název nesouvisí s název pole v podkladové tabulce. Podrobnosti naleznete v tématu "SourceField, vlastnosti SourceTable" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Určuje název pole, které je původní zdroj dat pro objekt pole DAO obsažené tabledef, záznamů nebo querydef objektu. Tato vlastnost určuje původní název pole, které jsou přidružené k objektu pole. Tato vlastnost může například použít k určení původní zdroj dat v dotazu pole, jehož název nesouvisí s názvem pole v podkladové tabulce. Podrobnosti naleznete v tématu "SourceField vlastnosti SourceTable" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_strSourceTable*  
- Určuje název tabulky, která je původního zdroje dat pro objekt DAO pole obsažené ve tabledef, sada záznamů nebo querydef objektu. Tato vlastnost určuje původní název tabulky, který je přidružený k objektu pole. Například můžete tuto vlastnost použít k určení původního zdroje dat v dotazu pole, jehož název nesouvisí s název pole v podkladové tabulce. Podrobnosti naleznete v tématu "SourceField, vlastnosti SourceTable" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Určuje název tabulky, která je původní zdroj dat pro objekt pole DAO obsažené tabledef, záznamů nebo querydef objektu. Tato vlastnost určuje původní název tabulky přidružené k objektu pole. Tato vlastnost může například použít k určení původní zdroj dat v dotazu pole, jehož název nesouvisí s názvem pole v podkladové tabulce. Podrobnosti naleznete v tématu "SourceField vlastnosti SourceTable" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_strValidationRule*  
- Hodnota, která ověří data v poli, protože je změnit nebo přidat do tabulky. Podrobnosti naleznete v tématu "Vlastnosti Ověřovací pravidlo" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Hodnota, která ověřuje data v poli jako ho se nezmění ani nepřidá do tabulky. Podrobnosti naleznete v tématu "Ověřovací pravidlo vlastnost" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- Související informace o tabledefs – najdete v tématu **m_strValidationRule** členem [cdaotabledefinfo –](../../mfc/reference/cdaotabledefinfo-structure.md) struktura.  
+ Související informace o tabledefs – najdete v tématu `m_strValidationRule` člena [cdaotabledefinfo –](../../mfc/reference/cdaotabledefinfo-structure.md) struktury.  
   
  *m_strValidationText*  
- Hodnota, která určuje text zprávy, která vaše aplikace zobrazí, pokud hodnota pole objekt DAO nesplňuje zadané pravidlo ověřování pomocí nastavení vlastnosti Ověřovací pravidlo. Podrobnosti naleznete v tématu "Vlastnost Ověřovací text" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Hodnota, která určuje text zprávy, která vaše aplikace zobrazí, pokud hodnota objekt DAO pole nevyhovuje zadané nastavením vlastnosti Ověřovací pravidlo ověřování. Podrobnosti naleznete v tématu "Ověřovací vlastnost" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_strDefaultValue*  
- Výchozí hodnota objekt DAO pole. Když je vytvořen nový záznam, nastavení vlastnosti výchozí hodnota se automaticky zadá, jako hodnota pro pole. Podrobnosti naleznete v tématu "Vlastnost Výchozí hodnota" v nápovědě rozhraní DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
+ Výchozí hodnota objektu pole DAO. Když se vytvoří nový záznam, nastavení vlastnosti DefaultValue se vyplní automaticky jako hodnotu pro pole. Podrobnosti naleznete v tématu "Výchozí hodnota vlastnosti" v nápovědě k DAO. Můžete nastavit tuto vlastnost pro tabledef s [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
 ## <a name="remarks"></a>Poznámky  
- Odkazy na primární, sekundární a všechny výše označuje, jak je vrácené informace `GetFieldInfo` členské funkce ve třídách [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo), a [ CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).  
+ Odkazy na primární, sekundární a všechny výše určit, jak vrácené informace `GetFieldInfo` členskou funkci třídy [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo), a [ CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).  
   
- Pole objektů nejsou reprezentované pomocí třídy knihovny MFC. Místo toho základní objekty následující třídy MFC rozhraní DAO objekty obsahovat kolekce objektů pole: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Členské funkce pro přístup k některé jednotlivých položek informací o poli zadejte tyto třídy nebo jejich najednou pomocí `CDaoFieldInfo` objekt voláním `GetFieldInfo` členské funkce obsahující objektu.  
+ Pole objektů nejsou reprezentovány třídy knihovny MFC. Místo toho základní objekty následující třídy knihovny MFC rozhraní DAO objekty obsahují kolekce pole objektů: [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md), [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), a [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md). Tyto třídy zadat členské funkce pro přístup k některé jednotlivých položek informací o poli, nebo je všechny najednou se dostanete `CDaoFieldInfo` objektu voláním `GetFieldInfo` členské funkce nadřazeného objektu.  
   
- Kromě toho pro zkoumání vlastnosti objektu jeho použití, můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr k vytvoření nové pole v tabledef. Jednodušší možnosti jsou k dispozici pro tento úkol, ale pokud chcete jemnějšího ovládání, můžete použít verzi [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) , která má `CDaoFieldInfo` parametr.  
+ Kromě jeho použití pro zkoumání vlastností objektu můžete také použít `CDaoFieldInfo` vytvořit vstupní parametr pro vytvoření nových polí v tabledef. Jednodušší možnosti jsou k dispozici pro tuto úlohu, ale pokud chcete lepší kontrolu, můžete použít verzi [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) , která přijímá `CDaoFieldInfo` parametru.  
   
- Načte informace `GetFieldInfo` – členská funkce (třídy, která obsahuje pole) je uložen v `CDaoFieldInfo` struktury. Volání `GetFieldInfo` – členská funkce okrajem objektu, v jehož kolekce polí pole objekt se uloží. `CDaoFieldInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoFieldInfo` objektu.  
+ Načte informace `GetFieldInfo` členská funkce (třídy, která obsahuje pole) je uložen v `CDaoFieldInfo` struktury. Volání `GetFieldInfo` obsahujícího objektu, v jehož kolekce polí objekt pole je uložen v členské funkci. `CDaoFieldInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoFieldInfo` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;vlákno&gt; | Microsoft Docs'
+title: '&lt;vlákno&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953026"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a různé podpůrné funkce.
+Zahrnout standardní hlavička \<vlákna > pro definování třídy **vlákno** a různé podpůrné funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,9 +34,9 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> V kódu, který se zkompiluje pomocí **/CLR**, tuto hlavičku je blokovaný.
+> V kódu, který je zkompilován s použitím **/CLR**, tato hlavička se zablokuje.
 
-`__STDCPP_THREADS__` Makro je definován jako nenulovou hodnotu indikující, že vláken podporuje tuto hlavičku.
+`__STDCPP_THREADS__` Makro je definováno jako nenulovou hodnotu označující, že toto záhlaví podporuje vlákna.
 
 ## <a name="members"></a>Členové
 
@@ -44,13 +44,13 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
 
 |Název|Popis|
 |----------|-----------------|
-|[thread – třída](../standard-library/thread-class.md)|Definuje objekt, který se používá k sledovat a spravovat vlákno při provádění v aplikaci.|
+|[thread – třída](../standard-library/thread-class.md)|Definuje objekt, který umožňuje sledovat a spravovat vlákno provádění v aplikaci.|
 
 ### <a name="public-structures"></a>Veřejné struktury
 
 |Název|Popis|
 |----------|-----------------|
-|[hash – struktura (standardní knihovna C++)](../standard-library/hash-structure-stl.md)|Definuje členské funkce, která vrátí hodnotu, která je jednoznačně dáno `thread::id`. Definuje – členská funkce [hash](../standard-library/hash-class.md) funkce, který je vhodný pro mapování hodnoty typu `thread::id` k distribučnímu index hodnot.|
+|[hash – struktura (standardní knihovna C++)](../standard-library/hash-structure-stl.md)|Definuje členskou funkci, která vrací hodnotu, která jednoznačně určuje `thread::id`. Definuje členskou funkci [hash](../standard-library/hash-class.md) funkce, která je vhodná pro mapování hodnot typu `thread::id` k distribuci hodnot indexu.|
 
 ### <a name="public-functions"></a>Veřejné funkce
 
@@ -58,23 +58,23 @@ Zahrnují standardní hlavičku \<vlákno > pro definování třídy `thread` a 
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Jednoznačně identifikuje aktuální vlákno provádění.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blokuje volající vlákno.|
-|[sleep_until –](../standard-library/thread-functions.md#sleep_until)|Volající vlákno blokuje alespoň do zadané doby.|
-|[Swap](../standard-library/thread-functions.md#swap)|Výměny stavy dva `thread` objekty.|
-|[yield](../standard-library/thread-functions.md#yield)|Signály operačního systému spustit jiná vlákna i v případě, že aktuální vlákno by normálně nadále fungoval.|
+|[sleep_until –](../standard-library/thread-functions.md#sleep_until)|Blokuje volající vlákno, alespoň do zadané doby.|
+|[Prohození](../standard-library/thread-functions.md#swap)|Vymění dvě stavy **vlákno** objekty.|
+|[yield](../standard-library/thread-functions.md#yield)|Signály ke spuštění jiných vláken operačního systému, i v případě, že aktuální vlákno by obvykle i nadále spouštět.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[Operator > = – operátor](../standard-library/thread-operators.md#op_gt_eq)|Určuje, zda jeden `thread::id` je větší než nebo rovna hodnotě jiný objekt.|
-|[Operator > – operátor](../standard-library/thread-operators.md#op_gt)|Určuje, zda jeden `thread::id` je větší než druhý objekt.|
-|[Operator < = – operátor](../standard-library/thread-operators.md#op_lt_eq)|Určuje, zda jeden `thread::id` objektu je menší než nebo rovna do jiného.|
-|[Operator < – operátor](../standard-library/thread-operators.md#op_lt)|Určuje, zda jeden `thread::id` objektu je menší než jiné.|
+|[Operator > = – operátor](../standard-library/thread-operators.md#op_gt_eq)|Určuje, zda jeden `thread::id` objekt je větší než nebo roven jinému.|
+|[Operator > – operátor](../standard-library/thread-operators.md#op_gt)|Určuje, zda jeden `thread::id` je větší než jiný objekt.|
+|[Operator < = – operátor](../standard-library/thread-operators.md#op_lt_eq)|Určuje, zda jeden `thread::id` je objekt menší než nebo rovna do jiného.|
+|[Operator < – operátor](../standard-library/thread-operators.md#op_lt)|Určuje, zda jeden `thread::id` je menší než jiný objekt.|
 |[Operator! = – operátor](../standard-library/thread-operators.md#op_neq)|Porovná dva `thread::id` objekty nerovnost.|
-|[Operator == – operátor](../standard-library/thread-operators.md#op_eq_eq)|Porovná dva `thread::id` objekty rovnosti.|
-|[operátor << – operátor](../standard-library/thread-operators.md#op_lt_lt)|Vloží text reprezentace `thread::id` objektu do datového proudu.|
+|[Operator == – operátor](../standard-library/thread-operators.md#op_eq_eq)|Porovná dva `thread::id` objekty pro rovnost.|
+|[operátor << – operátor](../standard-library/thread-operators.md#op_lt_lt)|Vloží textové vyjádření `thread::id` objektu do datového proudu.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

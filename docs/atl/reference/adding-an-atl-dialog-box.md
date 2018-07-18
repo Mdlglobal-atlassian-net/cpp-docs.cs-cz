@@ -1,5 +1,5 @@
 ---
-title: Přidání dialogové okno knihovny ATL | Microsoft Docs
+title: Přidání dialogového okna ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0883b87ce991b08a96b1d10b4acedf8562022a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab00af6480e8893226be460a3d7c5641b8755bcf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953218"
 ---
-# <a name="adding-an-atl-dialog-box"></a>Přidání dialogové okno knihovny ATL
-Pokud chcete přidat dialogového okna knihovny ATL do projektu, musí být projektu projektu knihovny ATL nebo projektu knihovny MFC, která zahrnuje podporu ATL. Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  
+# <a name="adding-an-atl-dialog-box"></a>Přidání dialogového okna ATL
+Přidání dialogového okna knihovny ATL do projektu, váš projekt musí být projekt knihovny ATL nebo projektu knihovny MFC, včetně podpory knihovny ATL. Můžete použít [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) k implementaci podpory knihovny ATL pro aplikaci knihovny MFC.  
   
- Ve výchozím nastavení, dialogové okno průvodce ATL implementuje dialogové okno odvozené z [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Tato třída zahrnuje podporu pro hostování ovládacích prvků ActiveX a systému Windows. Pokud nechcete, aby nároky na podporu ovládací prvek ActiveX, jakmile v Průvodci vygenerovala kódu, nahraďte všechny výskyty `CAxDialogImpl` s buď [CSimpleDialog](../../atl/reference/csimpledialog-class.md) nebo [CDialogImpl](../../atl/reference/cdialogimpl-class.md) jako základní třída .  
+ Ve výchozím nastavení, Průvodce dialogem ATL implementuje dialog odvozený od [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Tato třída obsahuje podporu pro hostování ovládacích prvků ActiveX a Windows. Pokud nechcete, aby nároky na podporu ovládacích prvků ActiveX, jakmile v Průvodci vygenerovala kódu, nahraďte všechny výskyty `CAxDialogImpl` s oběma [CSimpleDialog](../../atl/reference/csimpledialog-class.md) nebo [CDialogImpl](../../atl/reference/cdialogimpl-class.md) jako základní třídy. .  
   
 > [!NOTE]
->  `CSimpleDialog` vytvoří pouze modální dialogová okna, které podporují pouze běžné ovládací prvky Windows. `CDialogImpl` Vytvoří modální a nemodální dialogová okna.  
+>  `CSimpleDialog` vytvoří pouze modálních dialogových oken, které podporují pouze běžných ovládacích prvků Windows. `CDialogImpl` Vytvoří modální a nemodální dialogová okna.  
   
 ### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Chcete-li přidat dialogu knihovny ATL do projektu  
   
-1.  Vytvoření projektu knihovny ATL pomocí [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md).  
+1.  Vytvořte projekt knihovny ATL pomocí [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md).  
   
-2.  Z [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikněte pravým tlačítkem na název projektu a klikněte na **přidat** z místní nabídky. Klikněte na tlačítko **přidejte třídu**.  
+2.  Z [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu a klikněte na tlačítko **přidat** z místní nabídky. Klikněte na tlačítko **přidejte třídu**.  
   
-3.  V podokně šablon [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, klikněte na tlačítko **ATL Dialog**. Klikněte na tlačítko **otevřete** zobrazíte [ATL dialogové okno průvodce](../../atl/reference/atl-dialog-wizard.md).  
+3.  V podokně šablon [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, klikněte na tlačítko **ATL Dialog**. Klikněte na tlačítko **otevřít** zobrazíte [Průvodce dialogem ATL](../../atl/reference/atl-dialog-wizard.md).  
   
- Další informace najdete v tématu [implementace dialogové okno](../../atl/implementing-a-dialog-box.md).  
+ Další informace najdete v tématu [implementace dialogového okna](../../atl/implementing-a-dialog-box.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   

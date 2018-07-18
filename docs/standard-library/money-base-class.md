@@ -1,5 +1,5 @@
 ---
-title: money_base – třída | Microsoft Docs
+title: money_base – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864083"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965685"
 ---
 # <a name="moneybase-class"></a>money_base – třída
 
-Třída popisuje výčet a strukturou společné pro všechny specializací třídy šablony [moneypunct](../standard-library/moneypunct-class.md).
+Tato třída popisuje výčet a strukturu společné pro všechny specializace šablony třídy [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,24 +38,24 @@ struct pattern
 
 ## <a name="remarks"></a>Poznámky
 
-Výčet **část** popisuje možné hodnoty v elementech pole pole ve struktuře vzoru. Hodnoty **část** jsou:
+Výčet `part` popisuje možné hodnoty prvků pole ve struktuře vzoru. Hodnoty `part` jsou:
 
-- **žádný** odpovídat počtu nula či více mezery nebo nic vygenerování.
+- `none` pro vyhledání nula nebo více mezer, nebo generovat žádnou akci.
 
-- **přihlašovací** odpovídat nebo vygenerování znaménkem kladné a záporné.
+- `sign` pro vyhledání nebo generovat kladného či záporného znaménka.
 
-- **místo** odpovídat počtu nula či více mezery nebo vygenerování mezerou.
+- `space` pro vyhledání nula nebo více mezer, nebo vytvořit mezeru.
 
-- **symbol** odpovídat nebo vygenerování symbolu měny.
+- `symbol` pro vyhledání nebo generovat symbol měny.
 
-- **Hodnota** odpovídat nebo vygenerování peněžní hodnota.
+- `value` pro vyhledání nebo generování peněžní hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

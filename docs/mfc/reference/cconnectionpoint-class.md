@@ -1,5 +1,5 @@
 ---
-title: Třída CConnectionPoint | Microsoft Docs
+title: Cconnectionpoint – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7b092c6a097d39c3114193c578bc37c179ca0df7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336196"
 ---
-# <a name="cconnectionpoint-class"></a>CConnectionPoint – třída
-Definuje speciální typ rozhraní používaný ke komunikaci s jinými objekty OLE, označovaný jako "bod připojení".  
+# <a name="cconnectionpoint-class"></a>Cconnectionpoint – třída
+Definuje speciální typ rozhraní, které slouží ke komunikaci s další objekty OLE, nazývaný "bod připojení".  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,44 +62,44 @@ class CConnectionPoint : public CCmdTarget
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CConnectionPoint::GetConnections](#getconnections)|Načte všechny body připojení v mapě připojení.|  
-|[CConnectionPoint::GetContainer](#getcontainer)|Načte kontejneru ovládacího prvku, který vlastní mapy připojení.|  
-|[CConnectionPoint::GetIID](#getiid)|Načte ID rozhraní bod připojení.|  
-|[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Načte maximální počet bodů připojení ovládacím prvkem podporována.|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|Načte ukazatel element připojení v *pos*.|  
-|[CConnectionPoint::GetStartPosition](#getstartposition)|Spuštění mapy iterace vrácením **pozice** hodnotu, která se dá předat do `GetNextConnection` volání.|  
-|[CConnectionPoint::OnAdvise](#onadvise)|Voláno rámcem při vytvoření nebo porušením připojení.|  
-|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Načte ukazatel na požadovaný podřízený rozhraní.|  
+|[CConnectionPoint::GetConnections](#getconnections)|Načte všechny spojovací body na mapě připojení.|  
+|[CConnectionPoint::GetContainer](#getcontainer)|Získá kontejner ovládacího prvku, který vlastní mapu připojení.|  
+|[CConnectionPoint::GetIID](#getiid)|Načte rozhraní ID bodu připojení.|  
+|[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Získá maximální počet bodů připojení ovládacím prvkem podporována.|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Načte ukazatel na prvek připojení na *pos*.|  
+|[CConnectionPoint::GetStartPosition](#getstartposition)|Spuštění iterace mapování tak, že vrací hodnotu POZICI, která mohou být předány `GetNextConnection` volání.|  
+|[CConnectionPoint::OnAdvise](#onadvise)|Volá se rozhraním, když vytváří nebo přerušení připojení.|  
+|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Načte ukazatel na rozhraní požadovaný jímky.|  
   
 ## <a name="remarks"></a>Poznámky  
- Na rozdíl od normální rozhraní OLE, které se používají k implementaci a vystavit funkcionalitu ovládacího prvku OLE, implementuje bod připojení odchozí rozhraní, které je možné zahájit akce na jiné objekty, například na aktivaci události a upozornění na změnu.  
+ Na rozdíl od normální rozhraní OLE, které se používají k implementaci a vystavit funkčnost ovládacího prvku OLE, implementuje bod připojení odchozí rozhraní, které je možné spustit na jiných objektech, jako je například vyvolává události akcí a upozornění na změnu.  
   
- Připojení se skládá ze dvou částí: objekt volání rozhraní s názvem "zdroj" a objekt implementující rozhraní nazývá "podřízený". Díky zpřístupnění spojovací bod, umožňuje zdroj jímky ke zřízení spojení sama na sebe. Zdrojový objekt přes mechanismus bodu připojení, získá ukazatel na implementaci podřízený sadu členské funkce. Aktivovat událost implementované jímky, můžete v zdroji voláním vhodný způsob provádění jímky.  
+ Připojení se skládá ze dvou částí: volání rozhraní s názvem "zdroj" a objekt implementující rozhraní, objekt nazývá "sink". Zveřejněním spojovací bod umožňuje zdroji jímky ke zřízení spojení sám na sebe. Zdrojový objekt prostřednictvím mechanismus bodu připojení získá ukazatel na implementaci jímky sadu členské funkce. Chcete-li vyvolat událost implementované jímka zdroji můžete volat, odpovídající metodu jímky implementace.  
   
- Ve výchozím nastavení `COleControl`-odvozená třída implementuje dvěma spojovacími body: jeden pro události a jeden pro vlastnost upozornění na změnu. Tato připojení používají, respektive pro spouštění událostí a upozornění podřízený (například kontejneru ovládacího prvku), pokud hodnotu vlastnosti se změnila. Podpora je k dispozici také pro ovládací prvky OLE implementovat další spojovací body. Pro každý další připojení bod implementována ve třídě ovládacího prvku je potřeba deklarovat "připojení část", který implementuje spojovacího bodu. Pokud budete implementovat jednu nebo více bodů připojení, musíte taky deklarovat jedné "připojení mapy" ve třídě ovládacího prvku.  
+ Ve výchozím nastavení `COleControl`-odvozená třída implementuje dvě spojovací body: jeden pro události a jeden pro vlastnost upozornění na změnu. Tato připojení se používají, v uvedeném pořadí, pro jeho události spuštění a pro jímku (například kontejneru ovládacího prvku) při oznamování hodnotu vlastnosti se změnila. Podpora se poskytuje také pro ovládací prvky OLE implementovat další spojovací body. Pro každý další spojovací bod implementována ve třídě ovládacího prvku je třeba deklarovat "připojení část", který implementuje bod připojení. Pokud se rozhodnete implementovat jeden nebo více bodů připojení, musíte také deklarovat jediného "mapy připojení" ve třídě ovládacího prvku.  
   
- Následující příklad ukazuje jednoduchý připojení mapy a jeden spojovací bod pro `Sample` OLE ovládací prvek, který se skládá z dva fragmenty kódu: první část deklaruje mapy připojení a bod; druhý implementuje tento mapy a bodu. První fragment se vloží do deklaraci třídy ovládacího prvku v části `protected` části:  
+ Následující příklad ukazuje jednoduchý připojení mapy a jeden přípojný bod pro `Sample` ovládací prvek OLE, který se skládá z dva fragmenty kódu: první část deklaruje připojení mapy a bod; druhá implementuje toto mapování a bodu. První fragment je vložen do deklarace třídy ovládacího prvku, v části **chráněné** části:  
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- Begin_connection_part – a end_connection_part – makra deklarovat třídu embedded `XSampleConnPt` (odvozený z `CConnectionPoint`), která implementuje tuto konkrétní spojovacího bodu. Pokud chcete přepsat všechny `CConnectionPoint` členské funkce, nebo přidat členské funkce vlastní, deklarovat je mezi těmito dvěma makra. Příklad: přepsání connection_iid – makro `CConnectionPoint::GetIID` – členská funkce, když je umístěná mezi těmito dvěma makra.  
+ Makra BEGIN_CONNECTION_PART a END_CONNECTION_PART deklarovat třídu vložený `XSampleConnPt` (odvozený od `CConnectionPoint`), který implementuje tento bod připojení. Pokud je zapotřebí přepsat některé `CConnectionPoint` členské funkce, nebo přidat vlastní členské funkce, je deklarovat mezi těmito dvěma makra. Příklad: přepsání CONNECTION_IID – makro `CConnectionPoint::GetIID` členské funkce při umístěny mezi těmito dvěma makra.  
   
- Druhý fragment kódu je vložen do souboru implementace (. CPP) třídy ovládacího prvku. Tento kód implementuje mapy připojení, která obsahuje další spojovací bod, `SampleConnPt`:  
+ Druhý fragment kódu je vložen do implementace souboru (. CPP) třídy ovládacího prvku. Tento kód implementuje mapy připojení, která obsahuje další spojovací bod `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- Po vložení tyto fragmenty kódu prvek OLE ukázka poskytuje bod připojení pro `ISampleSink` rozhraní.  
+ Jakmile tyto fragmenty kódu jste vložili, ovládacího prvku OLE ukázka poskytuje bod připojení pro `ISampleSink` rozhraní.  
   
- Body připojení většinou podporují "vícesměrového vysílání", což je schopnost všesměrové vysílání pro více jímky připojené ke stejnému rozhraní. Následující fragment kódu ukazuje, jak provést vícesměrového vysílání pomocí iterace každý podřízený ve spojovacím bodě:  
+ Obvykle spojovací body podporují "vícesměrové vysílání", což je možnost vysílání více připojené ke stejnému rozhraní jímky. Následující fragment kódu ukazuje, jak provádět vícesměrové vysílání podle iterace v rámci každé jímky najdete v bodě připojení:  
   
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
- Tento příklad načte aktuální sadu připojení na `SampleConnPt` spojovací bod pomocí volání `CConnectionPoint::GetConnections`. Ji pak iteruje v rámci připojení a volání `ISampleSink::SinkFunc` na všechny aktivní připojení.  
+ Tento příklad načte aktuální sadu připojení na `SampleConnPt` spojovací bod voláním `CConnectionPoint::GetConnections`. Pak Iteruje přes připojení a volání `ISampleSink::SinkFunc` na každé aktivní připojení.  
   
  Další informace o používání `CConnectionPoint`, najdete v článku [spojovací body](../../mfc/connection-points.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -116,58 +116,58 @@ CConnectionPoint();
 ```  
   
 ##  <a name="getconnections"></a>  CConnectionPoint::GetConnections  
- Volání této funkce pro načtení všech aktivních připojení pro bod připojení.  
+ Voláním této funkce k načtení všech aktivních připojení pro bod připojení.  
   
 ```  
 const CPtrArray* GetConnections();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na pole aktivních připojení (jímky). Některé z následující ukazatele v poli, může mít hodnotu NULL. Každý ukazatel jinou hodnotu než NULL v toto pole může bezpečně převeden na ukazatel na rozhraní podřízený pomocí operátor přetypování.  
+ Ukazatel na celou řadu aktivních připojení (jímky). Některé z ukazatele jako pole může mít hodnotu NULL. Každý NENULOVÝ ukazatel v tomto poli lze bezpečně převést na ukazatel na rozhraní stoku pomocí operátoru přetypování.  
   
 ##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
- Voláno rámcem načíst **IConnectionPointContainer** pro spojovacího bodu.  
+ Volá se rozhraním, aby načíst `IConnectionPointContainer` pro bod připojení.  
   
 ```  
 virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěšného ukazatel na kontejneru; v opačném případě **NULL**.  
+ Pokud je úspěšná, ukazatel na kontejneru; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je obvykle implementované begin_connection_part – makro.  
+ Tato funkce je obvykle implementované BEGIN_CONNECTION_PART – makro.  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
- Voláno rámcem načíst ID rozhraní spojovacího bodu.  
+ Volá se rozhraním, aby se načetlo rozhraní ID bodu připojení.  
   
 ```  
 virtual REFIID GetIID() = 0;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na ID spojovací bod rozhraní.  
+ Odkaz na ID bodu připojení rozhraní.  
   
 ### <a name="remarks"></a>Poznámky  
  Přepsání této funkci vrátíte rozhraní ID pro tento bod připojení.  
   
 ##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
- Voláno rámcem načíst maximální počet připojení, které jsou podporované pomocí bodu připojení.  
+ Volá se rozhraním, aby získal maximální počet připojení podporovaných bodem připojení.  
   
 ```  
 virtual int GetMaxConnections();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Maximální počet připojení nepodporuje ovládací prvek nebo -1, pokud není nijak omezena.  
+ Maximální počet připojení podporovaných ovládacího prvku nebo -1, pokud žádný limit.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace vrátí hodnotu -1, označující není nijak omezena.  
+ Výchozí implementace vrací hodnotu -1, která bez omezení.  
   
- Tato funkce přepsání, pokud chcete omezit počet jímky, které se můžou připojit k vaší kontrole.  
+ Tato funkce přepište, pokud chcete omezit počet jímky, které se můžete připojit k ovládacího prvku.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- Načte ukazatel element připojení v *pos*.  
+ Načte ukazatel na prvek připojení na *pos*.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
@@ -175,35 +175,35 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
   
 ### <a name="parameters"></a>Parametry  
  *POS*  
- Určuje odkaz na **pozice** hodnoty vrácené předchozí `GetNextConnection` nebo [GetStartPosition](#getstartposition) volání.  
+ Určuje referenci na POZICI hodnotu vrácenou předchozím `GetNextConnection` nebo [GetStartPosition](#getstartposition) volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na element připojení určeného *pos*, nebo má hodnotu NULL.  
+ Ukazatel na prvek připojení určené *pos*, nebo má hodnotu NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je nejvhodnější pro iterace v rámci všechny elementy v mapě připojení. Během iterace, přeskočte všechny hodnoty Null vrácená této funkce.  
+ Tato funkce je zvláště užitečná pro procházení všech prvků v objektu map připojení. Během iterace, přeskočte všechny hodnoty Null vrácená touto funkcí.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
 ##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
- Spuštění mapy iterace vrácením **pozice** hodnotu, která se dá předat do [GetNextConnection](#getnextconnection) volání.  
+ Spuštění iterace mapování tak, že vrací hodnotu POZICI, která mohou být předány [GetNextConnection](#getnextconnection) volání.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A **pozice** hodnotu, která určuje počáteční pozici pro iterace mapování, nebo **NULL** Pokud mapy je prázdný.  
+ POZICE určující počáteční pozice pro iterace v mapě. nebo hodnota NULL, pokud mapa je prázdný.  
   
 ### <a name="remarks"></a>Poznámky  
- Iterace pořadí není předvídatelný; "první prvek v mapě" má proto žádné zvláštní význam.  
+ Iterace sekvence není předvídatelný; "první prvek v objektu map", proto nemá žádný speciální význam.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CConnectionPoint::GetNextConnection](#getnextconnection).  
   
 ##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
- Voláno rámcem při připojení je právě navázat nebo poškozený.  
+ Volá se rozhraním, když je vytvořeno nebo nefunkční.  
   
 ```  
 virtual void OnAdvise(BOOL bAdvise);
@@ -211,15 +211,15 @@ virtual void OnAdvise(BOOL bAdvise);
   
 ### <a name="parameters"></a>Parametry  
  *bAdvise*  
- **Hodnota TRUE,**, pokud je připojení navázáno; jinak hodnota **FALSE**.  
+ Hodnota TRUE, pokud bude připojení navázáno; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace neprovede žádnou akci.  
+ Výchozí implementace nemá žádný účinek.  
   
- Tato funkce přepsání, pokud chcete oznámení, když jímky připojení nebo odpojení ze spojovacího bodu.  
+ Tato funkce přepište, pokud chcete oznámení, když jímky připojení nebo odpojení z bodu připojení.  
   
 ##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
- Načte ukazatel na požadovaný podřízený rozhraní.  
+ Načte ukazatel na rozhraní požadovaný jímky.  
   
 ```  
 virtual HRESULT QuerySinkInterface(
@@ -229,13 +229,13 @@ virtual HRESULT QuerySinkInterface(
   
 ### <a name="parameters"></a>Parametry  
  *pUnkSink*  
- Identifikátor rozhraní podřízený požadováno.  
+ Identifikátor rozhraní stoku žádá.  
   
  *ppInterface*  
- Ukazatel na ukazatel rozhraní identifikovaný *pUnkSink*. Pokud objekt nepodporuje toto rozhraní \* *ppInterface* je nastaven na **NULL**.  
+ Ukazatel na ukazatel rozhraní, který je identifikován *pUnkSink*. Pokud objekt nepodporuje toto rozhraní \* *ppInterface* nastaven na hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní `HRESULT` hodnotu.  
+ Standardní hodnoty HRESULT.  
   
 ## <a name="see-also"></a>Viz také  
  [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)   

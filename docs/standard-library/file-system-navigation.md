@@ -1,5 +1,5 @@
 ---
-title: Navigace v systému souborů | Microsoft Docs
+title: Navigace v systému souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,38 +12,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5b1eeef0e5f07b0867eb79afc76ba9037a95e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e6e14e0b94000972873b6050f0e8154891b4e57
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846893"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026796"
 ---
 # <a name="file-system-navigation"></a>Navigace v systému souborů
 
-\<Filesystem > záhlaví implementuje 18822:2015 C++ souboru systému Technical specifikace ISO/IEC TS (konečné koncept: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) a má typy a funkce, které vám umožní zápisu nezávislé na platformě kód pro navigaci systému souborů. Protože je napříč platformami, obsahuje rozhraní API, která nejsou důležité pro systémy Windows. Například to znamená, že `is_fifo(const path&)` vždy vrátí hodnotu `false` v systému Windows.
+\<Systému souborů > záhlaví implementuje 18822:2015 C++ souboru systému technické specifikace ISO/IEC TS (konečný návrh: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) a má typy a funkce, které umožňují zapisovat nezávislá na platformě kód pro navigaci v systému souborů. Protože je multiplatformní, obsahuje rozhraní API, která nejsou relevantní pro systémy Windows. Například to znamená, že `is_fifo(const path&)` vždy vrátí **false** na Windows.
 
 ## <a name="overview"></a>Přehled
 
-Použití \<filesystem > rozhraní API pro následující úkoly:
+Použití \<filesystem > rozhraní API pro následující úlohy:
 
-- iterace souborů a adresářů v zadané cestě
+- Iterujte přes soubory a adresáře zadané cestě.
 
-- získání informací o souborech, včetně v době vytvoření, velikost, rozšíření a kořenový adresář
+- získání informací o souborech, včetně čas vytvoření, velikost, rozšíření a kořenový adresář
 
-- Napište, rozložit a porovnání cest
+- Sestavujte, rozložení a porovnat cesty
 
-- Vytvoření, kopírování a odstranění adresáře
+- vytváření, kopírování a odstraňujte adresáře
 
 - Zkopírujte a odstranit soubory
 
-Další informace o vstupně-výstupní soubor pomocí standardní knihovny najdete v tématu [iostream – programování](../standard-library/iostream-programming.md).
+Další informace o v/v souborů pomocí standardní knihovny najdete v tématu [iostream – programování](../standard-library/iostream-programming.md).
 
 ## <a name="paths"></a>Cesty
 
-### <a name="constructing-and-composing-paths"></a>Sestavování a skládání cesty
+### <a name="constructing-and-composing-paths"></a>Sestavování a vytváření cesty
 
-Cesty v systému Windows (od XP) jsou nativně uložené ve formátu Unicode. [Cesta](../standard-library/path-class.md) třída automaticky provede všechny potřebné řetězec převody. Přijímá argumenty obou široké a úzké znaková pole, a také `std::string` a `std::wstring` typů formátu UTF8 nebo UTF16. `path` Třída taky automaticky normalizuje cestu oddělovačů. Můžete vytvořit jeden lomítkem za oddělovač adresářů v argumenty konstruktoru. To umožňuje používat stejné řetězce pro uložení cest v prostředích Windows a UNIX:
+Cesty ve Windows (od verze XP) jsou uloženy nativně v kódování Unicode. [Cesta](../standard-library/path-class.md) třídy automaticky provede všechny převody potřebné řetězec. Přijímá argumenty obou široké a úzkými znaky pole, stejně jako `std::string` a `std::wstring` typů formátu UTF8 nebo UTF16. `path` Třídy také automaticky normalizuje cestu oddělovače. Jeden lomítkem slouží jako oddělovač adresáře v argumentech konstruktoru. To umožňuje používat stejné řetězce pro uložení cest v prostředí Windows a UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -51,7 +51,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Ke zřetězení dvě cesty, můžete použít přetížené `/` a `/=` operátory, které jsou obdobou `+` a `+=` operátory na `std::string` a `std::wstring`. `path` Objektu bude pohodlně zadat oddělovače, pokud to neuděláte.
+Ke zřetězení dvou možných cest, můžete použít přetížené `/` a `/=` operátory, které jsou obdobou `+` a `+=` operátory na `std::string` a `std::wstring`. `path` Objektu bude jednoduše zadat oddělovače, pokud to neuděláte.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -60,7 +60,7 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Zkoumání cesty
 
-Třída cesta obsahuje několik metod, které vracejí informace o různých částí od entity systému souborů, které může odkazovat na sebe, cesty. Můžete získat kořenové, relativní cesta, název souboru, přípona souboru a další. Můžete iterace v cesty objektu prozkoumat všechny složky v hierarchii. Následující příklad ukazuje, jak pro iteraci prostřednictvím cesty (ne adresář, který odkazuje na) a načíst informace o jejích částí.
+Cesta třídy má několik metod, které vracejí informace o různých částech cesty k samotné odlišuje entitu systému souboru, kterou může odkazovat na. Můžete získat kořenový adresář, relativní cesty, názvu souboru, přípona souboru a další. Můžete iterovat přes objekt cesty ke kontrole všechny složky v hierarchii. Následující příklad ukazuje, jak k iteraci přes cestu (ne adresář, který odkazuje na) a k načtení informací o jejích částí.
 
 ```cpp
 // filesystem_path_example.cpp
@@ -129,7 +129,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Porovnání cest
 
-`path` Třída přetížení stejné operátory porovnání jako `std::string` a `std::wstring`. Při porovnávání dvě cesty provádění porovnání řetězců po mít byla normalized oddělovače. Pokud chybí koncové lomítko (nebo zpětné lomítko) nebyla přidána a ovlivňuje porovnání. Následující příklad ukazuje, jak porovnat hodnoty cesta:
+`path` Třídy přetížení stejné operátory porovnání jako `std::string` a `std::wstring`. Při porovnávání dvou možných cest fungují po oddělovače mají normalizované. porovnání řetězců. Pokud chybí koncové lomítko (nebo zpětné lomítko) není přidán a má vliv na porovnání. Následující příklad ukazuje, jak porovnat hodnoty cest:
 
 ```cpp
 wstring ComparePaths()
@@ -160,11 +160,11 @@ C:\Documents\2013\Reports\ < C:\Documents\2014\: true
 C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 ```
 
-Pokud chcete spustit tento kód, vložte jej do úplné výše uvedeného příkladu před `main` a zrušte komentář u řádku, který volá v hlavní.
+Chcete-li spustit tento kód, vložte ho do Úplný příklad výše před `main` a zrušte komentář u řádku, který volá ve funkci main.
 
-### <a name="converting-between-path-and-string-types"></a>Převod mezi typy cestu a řetězce
+### <a name="converting-between-path-and-string-types"></a>Převod mezi typy cesty a řetězce
 
-A `path` je implicitně převést na objekt `std::wstring` nebo `std::string`. To znamená, že je cesta předat do funkce, jako [wofstream::open](../standard-library/basic-ofstream-class.md#open), jak je uvedeno v následujícím příkladu:
+A `path` je implicitně převést na objekt `std::wstring` nebo `std::string`. To znamená, že cestu můžete předat do funkce, jako [wofstream::open](../standard-library/basic-ofstream-class.md#open), jak je znázorněno v tomto příkladu:
 
 ```cpp
 // filesystem_path_conversion.cpp
@@ -217,6 +217,6 @@ Press Enter to exit
 
 ## <a name="iterating-directories-and-files"></a>Iterace adresářů a souborů
 
-\<Filesystem > záhlaví poskytuje [directory_iterator](../standard-library/directory-iterator-class.md) typ Iterujte přes jednoho adresáře a [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) třída iterace rekurzivně adresář a jejích podadresářů. Po sestavení iterovat předáním ho `path` objektu iteraci odkazuje na první directory_entry v cestě. Vytvořte end iterator voláním výchozí konstruktor.
+\<Systému souborů > obsahuje záhlaví [directory_iterator –](../standard-library/directory-iterator-class.md) typu k iteraci přes jednoho adresáře a [recursive_directory_iterator –](../standard-library/recursive-directory-iterator-class.md) třídy rekurzivně iteraci adresář a jeho podadresářích. Poté, co ji vytvoříte iterátor `path` objektu, odkazuje iterátor na první directory_entry – v cestě. Vytvořte koncový iterátor volání výchozího konstruktoru.
 
-Když iterace v rámci adresáře, existuje několik typů položek, které se můžete setkat, včetně mimo jiné adresáře, soubory, symbolické odkazy a soubory soketu. `directory_iterator` Vrátí jeho položky jako [directory_entry](../standard-library/directory-entry-class.md) objekty.
+Při procházení adresáře, existuje několik typů položek, které se můžete setkat, včetně, ale nikoli výhradně, adresářů, souborů, symbolické odkazy a soubory soketu. `directory_iterator` Vrátí jeho položky jako [directory_entry –](../standard-library/directory-entry-class.md) objekty.

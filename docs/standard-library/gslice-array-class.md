@@ -1,5 +1,5 @@
 ---
-title: gslice_array – třída | Microsoft Docs
+title: gslice_array – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953072"
 ---
 # <a name="gslicearray-class"></a>gslice_array – třída
 
-Třídu interní, pomocného šablony, která podporuje objekty obecné řez tím, že poskytuje mezi poli podmnožina definované obecné řezy valarray – operace.
+Interní, pomocné šablony třídy, který podporuje obecné řez objektů zadáním mezi dílčí pole určené obecné řezu valarray – operace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje objekt, který ukládá odkaz na objekt **va** třídy [valarray –](../standard-library/valarray-class.md)**\<typ >**, společně s objekt **gs**  třídy [gslice](../standard-library/gslice-class.md) které popisuje pořadí prvků pro výběr **valarray –\<typ >** objektu.
+Tato třída popisuje objekt, který uchovává odkaz na objekt `va` třídy [valarray](../standard-library/valarray-class.md)**\<typ >**, spolu s objektem `gs` třídy [ gslice –](../standard-library/gslice-class.md) vystihuje řadu prvků, můžete vybírat z `valarray<Type>` objektu.
 
-Můžete vytvořit **gslice_array\<typ >** objekt pouze napsáním výrazu ve formátu [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Členské funkce tříd gslice_array pak chovat jako odpovídající funkce podpisy definované pro **valarray –\<typ >** kromě toho, že má vliv jenom pořadí vybraných elementů.
+Můžete vytvořit `gslice_array<Type>` pouze v případě, že napíšeme výrazu v podobě [posouzení ohrožení zabezpečení&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Členské funkce třídy gslice_array – potom chovají jako odpovídající funkce podpisy definované pro `valarray<Type>`, s tím rozdílem, že má vliv jenom pořadí vybraných elementů.
 
-Šablony třídy je nepřímo vytvořené určité valarray – operace a nelze použít přímo v aplikaci. Třídu vnitřní šablonu pomocné místo toho je používán operátor dolního indexu řez:
+Třída šablony je nepřímo vytvořil určité valarray – operace a nelze jej použít přímo v aplikaci. Třídu šablony interní pomocné místo toho je používán operátor dolního indexu řez:
 
 `gslice_array`\< **Typ** >  `valarray` \< **typ**>:: `operator[]` ( **constgslice &**).
 
-Můžete vytvořit **gslice_array\<typ >** objekt pouze napsáním výrazu ve formátu **va [gsl]**, pro řez **gsl** z valarray –  **Va**. Členské funkce tříd gslice_array pak chovat jako odpovídající funkce podpisy definované pro **valarray –\<typ >** kromě toho, že má vliv jenom pořadí vybraných elementů. Pořadí řízené gslice_array je definován třemi parametry konstruktoru řez, index prvním elementem v první řez, počet elementů v každý řez a vzdálenost mezi elementy v každý řez.
+Můžete vytvořit `gslice_array<Type>` pouze v případě, že napíšeme výrazu v podobě `va[gsl]`, řezu `gsl` z valarray `va`. Členské funkce třídy gslice_array – potom chovají jako odpovídající funkce podpisy definované pro `valarray<Type>`, s tím rozdílem, že má vliv jenom pořadí vybraných elementů. Sekvence řízenou parametrem gslice_array – je definován pomocí tří parametrů volanému konstruktoru řez, index prvního prvku v první řez počet prvků v každém řezu a vzdálenost mezi prvky v každém řezu.
 
 V následujícím příkladu:
 
@@ -97,18 +97,18 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 //   indices 3, 5, 7, 10, 12, 14
 ```
 
-Indexy musí být platná pro proceduru platná.
+Indexy musí být platný postup, jak platit.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [gslice::gslice](../standard-library/gslice-class.md#gslice) příklad toho, jak deklarace a používání slice_array.
+Podívejte se na příklad pro [gslice::gslice](../standard-library/gslice-class.md#gslice) příklad toho, jak deklarovat a použít slice_array –.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<valarray – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

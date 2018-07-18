@@ -1,5 +1,5 @@
 ---
-title: Specifikátory | Microsoft Docs
+title: Specifikátory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422323"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953744"
 ---
 # <a name="specifiers"></a>Specifikátory
-Toto téma popisuje *decl specifikátory* součást (specifikátory deklarace) [deklarace](declarations-and-definitions-cpp.md).  
+Toto téma popisuje *specifikátory decl* součást (specifikátory deklarace) [deklarace](declarations-and-definitions-cpp.md).  
   
  Následující zástupné symboly a klíčová slova jazyka jsou specifikátory deklarace:  
   
  *specifikátor třídy úložiště*  
   
- *specifikace typu*  
+ *Specifikátor typu*  
   
- *Funkce – specifikátor*  
+ *Specifikátor funkce*  
   
  [friend](../cpp/friend-cpp.md)  
   
- [Definice TypeDef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
-  
- [__declspec](../cpp/declspec.md) `(` *rozšířené decl – modifikátor seq* `)`  
+ [typedef] ( [typedef](http://msdn.microsod) `(` *extended-decl-modifier-seq* `)`  
   
 ## <a name="remarks"></a>Poznámky  
- *Decl specifikátory* součástí deklaraci je nejdelší pořadí *decl specifikátory* , můžete provést znamená název typu, není včetně ukazatele, nebo odkaz modifikátory. Zbývající část deklaraci je *deklarátor*, který obsahuje zavedla název.  
+ *Specifikátory decl* část deklarace je nejdelší sekvence *specifikátory decl* , dá se přenést do název typu bez zahrnutí ukazatel nebo odkaz na modifikátory. Zbývající část deklarace je *deklarátor*, který zahrnuje uvedený název.  
   
- Následující tabulka uvádí čtyři deklarace a pak uvádí každý deklarace *decl specifers* a *deklarátor* součást samostatně.  
+ V následující tabulce jsou uvedeny čtyři deklarace a pak zobrazí seznam jednotlivých deklarace *decl-specifers* a *deklarátor* komponenty samostatně.  
   
-|Deklarace|*specifikátory decl*|`declarator`|  
+|Deklarace|*specifikátory decl-*|`declarator`|  
 |-----------------|------------------------|------------------|  
-|`char *lpszAppName;`|`char`|`*lpszAppName`|  
-|`typedef char * LPSTR;`|`char`|`*LPSTR`|  
-|`const int func1();`|`const int`|`func1`|  
-|`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
+|`char *lpszAppName;`|**char**|`*lpszAppName`|  
+|`typedef char * LPSTR;`|**char**|`*LPSTR`|  
+|`const int func1();`|**Const int**|`func1`|  
+|`volatile void *pvvObj;`|**volatile void**|`*pvvObj`|  
   
- Protože `signed`, `unsigned`, `long`, a `short` všechny implikují `int`, `typedef` název následující jedno z klíčových slov je provést jako člen *deklarátor list* není z *decl specifikátory*.  
+ Protože **podepsané**, **bez znaménka**, **dlouhé**, a **krátký** všechny implikují **int**,  **Definice TypeDef** pojmenujte následující jedním z těchto klíčových slov za člena *seznam deklarátorů* není *specifikátory decl*.  
   
 > [!NOTE]
 >  Vzhledem k tomu, že lze název předeklarovat, podléhá jeho interpretace poslední deklaraci v aktuálním rozsahu. Redeklarace může ovlivnit, jak jsou názvy interpretovány kompilátorem, a to zejména názvy `typedef`.  

@@ -1,5 +1,5 @@
 ---
-title: Mapování zpráv do funkcí | Microsoft Docs
+title: Mapování zpráv na funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3388cd8e9a52ef9aacb427d66b027d793b08ca75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 962a86139b7fdf8afac08e04e7b42240603b4374
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335523"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapování zpráv na funkce
-Okno vlastností umožňuje vytvořit vazbu obslužné rutiny zpráv (členské funkce tříd MFC uživatelského rozhraní) zprávy generované zdrojů vaší aplikace. Používají [mapy zpráv knihovny MFC](../../mfc/messages-and-commands-in-the-framework.md) pro vytvoření vazby.  
+V okně Vlastnosti umožňuje vytvořit vazbu obslužné rutiny zpráv (členské funkce tříd knihovny MFC uživatelského rozhraní) zprávy vygenerovaných vašimi prostředky vaší aplikace. Používají [mapy zpráv knihovny MFC](../../mfc/messages-and-commands-in-the-framework.md) pro vytvoření vazby.  
   
- Použijete-li vytvořit nové třídy odvozené od jedné ze tříd framework zobrazení tříd, se automaticky místech kompletní a funkční třídy v hlavičky () a implementace (sada) soubory, které zadáte.  
+ Použijete-li vytvořit novou třídu odvozenou z jedné třídy rámec zobrazení tříd, je automaticky umístí úplné a funkční třídy v záhlaví (.h) a implementaci (.cpp) soubory, které zadáte.  
   
 > [!NOTE]
->  Pokud chcete přidat novou třídu, která zpracovává zprávy, vytvořte třídu přímo v textovém editoru.  
+>  Chcete-li přidat novou třídu, která nezpracovává zprávy, vytvořte třídu přímo v textovém editoru.  
   
-### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>Definování nebo odebrat pomocí okna Vlastnosti obslužné rutiny zpráv  
+### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>Definování nebo odebrání obslužné rutiny zpráv pomocí okna Vlastnosti  
   
 1.  V zobrazení tříd klikněte na třídu.  
   
-2.  V okně vlastností klikněte **zprávy** tlačítko.  
+2.  V okně Vlastnosti klikněte na tlačítko **zprávy** tlačítko.  
   
     > [!NOTE]
-    >  **Zprávy** tlačítko je k dispozici, když vyberete název třídy v zobrazení tříd nebo když kliknete na okno zdrojového kódu.  
+    >  **Zprávy** tlačítko je k dispozici při výběru názvu třídy v zobrazení tříd nebo když kliknete na okno zdrojového kódu.  
   
-     Pokud váš projekt má obslužné rutiny pro zprávy, název obslužné rutiny zobrazí v pravém sloupci vedle zprávy.  
+     Pokud váš projekt obsahuje obslužné rutiny pro zprávy, název obslužné rutiny zobrazí v pravém sloupci vedle zprávy.  
   
-3.  Pokud zpráva nemá žádná obslužná rutina, klikněte na buňku v pravém sloupci v okně vlastností zobrazíte navrhovaný název obslužné rutiny jako \<Přidat >*HandlerName*. (Například `WM_TIMER` navrhuje obslužné rutiny zpráv \<Přidat >`OnTimer`).  
+3.  Pokud zpráva nemá žádná obslužná rutina, pak klikněte na buňku v pravém sloupci v okně Vlastnosti, chcete-li zobrazit navrhovaný název obslužné rutiny jako \<Přidat >*HandlerName*. (Například obslužná rutina zprávy WM_TIMER navrhuje \<Přidat >`OnTimer`).  
   
-4.  Klikněte na tlačítko Přidat se zakázaným inzerováním kódu pro funkce navrhovaný název.  
+4.  Kliknutím na navrhovaný název přidat kód zástupných procedur pro funkci.  
   
-5.  Úpravy obslužné rutiny zpráv, dvakrát klikněte na zprávu ve třídě zobrazení a úpravy kódu v okně zdroje.  
+5.  Úpravy obslužné rutiny zpráv, dvakrát klikněte na zprávu v zobrazení tříd a úpravy kódu v okně zdroje.  
   
- Pokud chcete odebrat obslužné rutiny zpráv, klikněte dvakrát na obslužnou rutinu v pravém sloupci a vyberte \<odstranit >*HandlerName*. Kód funkce je označeno jako komentář.  
+ K odebrání obslužné rutiny zpráv, klikněte dvakrát na obslužnou rutinu v pravém sloupci a vyberte \<odstranit >*HandlerName*. Je zakomentovaný, kód vaší funkce.  
   
 ## <a name="see-also"></a>Viz také  
- [Popisovač zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Popisovače zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
  [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)   
  [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)   
  [Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Přidání obslužných rutin událostí pro ovládací prvky dialogové okno](../../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Přidání obslužných rutin události pro ovládací prvky dialogového okna](../../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Navigace strukturou třídy](../../ide/navigating-the-class-structure-visual-cpp.md)

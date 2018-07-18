@@ -1,5 +1,5 @@
 ---
-title: Třída CWinFormsControl | Microsoft Docs
+title: CWinFormsControl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 797903c3f558cff9a0ff5addb689e31ae2adbed7
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121634"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026371"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl – třída
 Poskytuje základní funkce pro hostování ovládacího prvku Windows Forms.  
@@ -43,7 +43,7 @@ class CWinFormsControl : public CWnd
   
 #### <a name="parameters"></a>Parametry  
  `TManagedControl`  
- Prvku rozhraní .NET Framework Windows Forms, který se má zobrazit v aplikaci MFC.  
+ Ovládací prvek formulářů Windows rozhraní .NET Framework zobrazeného v aplikaci knihovny MFC.  
   
 ## <a name="members"></a>Členové  
   
@@ -51,38 +51,38 @@ class CWinFormsControl : public CWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Vytvoří objekt obálky knihovny MFC Windows Forms ovládací prvek.|  
+|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Vytvoří objekt obálky ovládacího prvku Windows Forms knihovny MFC.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Vytvoří ovládacího prvku Windows Forms v MFC kontejner.|  
-|[CWinFormsControl::GetControl](#getcontrol)|Načte ukazatel ovládacího prvku Windows Forms.|  
-|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Načte popisovač do ovládacího prvku Windows Forms.|  
+|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Vytvoří ovládacího prvku Windows Forms v MFC kontejneru.|  
+|[CWinFormsControl::GetControl](#getcontrol)|Načte ukazatel na ovládacím prvku Windows Forms.|  
+|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Načte popisovač na ovládacím prvku Windows Forms.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CWinFormsControl::operator-&gt;](#operator_-_gt)|Nahradí [CWinFormsControl::GetControl](#getcontrol) ve výrazech.|  
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Vrhá typu jako ukazatel do ovládacího prvku Windows Forms.|  
+|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Přetypování typu jako ukazatel na ovládacím prvku Windows Forms.|  
   
 ## <a name="remarks"></a>Poznámky  
  `CWinFormsControl` Třída poskytuje základní funkce pro hostování ovládacího prvku Windows Forms.  
   
- Další informace o používání Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- MFC kód by neměl mezipaměti popisovače oken (obvykle se uloží v `m_hWnd`). Některé vlastnosti ovládacích prvků Windows Forms vyžadovat, aby základní Win32 `Window` být zrušen a znovu vytvořena pomocí `DestroyWindow` a `CreateWindow`. Obslužné rutiny implementace MFC Windows Forms `Destroy` a `Create` události ovládacích prvků k aktualizaci `m_hWnd` člen.  
+ Kódu knihovny MFC by neměly ukládat do mezipaměti okno obslužné rutiny (obvykle ukládají do `m_hWnd`). Některé vlastnosti ovládacího prvku Windows Forms, který vyžaduje základní Win32 `Window` být zrušen a znovu vytvořit pomocí `DestroyWindow` a `CreateWindow`. Obslužné rutiny implementace MFC Windows Forms `Destroy` a `Create` událostí ovládacích prvků aktualizovat `m_hWnd` člena.  
   
 > [!NOTE]
->  MFC Windows Forms integrace funguje jenom v projektech, které dynamicky propojit s knihovnou MFC (ve kterém je definovaný AFXDLL –).  
+>  Integrace formulářů Windows MFC funguje jenom v projektech, které dynamicky propojit s knihovnou MFC (ve kterém je definována AFXDLL).  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwinforms.h  
   
 ##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
- Vytvoří ovládacího prvku Windows Forms v MFC kontejner.  
+ Vytvoří ovládacího prvku Windows Forms v MFC kontejneru.  
   
 ```  
 inline BOOL CreateManagedControl(
@@ -114,67 +114,67 @@ inline BOOL CreateManagedControl(
   
 ### <a name="parameters"></a>Parametry  
  *pType*  
- Datový typ ovládacího prvku, který se má vytvořit. Musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
+ Datový typ ovládacího prvku, který má být vytvořen. Musí být [typ](https://msdn.microsoft.com/library/system.type) datového typu.  
   
  *dwStyle*  
- Styl okna, které chcete použít pro ovládací prvek. Zadejte kombinaci [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). V současné době jsou podporovány pouze následující styly: ws_tabstop –, ws_visible –, ws_disabled – a ws_group –.  
+ Styl okna pro ovládací prvek. Určuje kombinaci [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). V současné době jsou podporovány pouze následující styly: WS_TABSTOP, WS_VISIBLE, WS_DISABLED a WS_GROUP.  
   
- *Rect –*  
- A [Rect – struktura](../../mfc/reference/rect-structure1.md) souřadnice levého a pravého dolního rozích ovládacího prvku, který definuje (nejprve přetížení pouze).  
+ *Rect*  
+ A [Rect – struktura](../../mfc/reference/rect-structure1.md) , který definuje souřadnice levého a pravého dolního rohu ovládacího prvku (první přetížení pouze).  
   
  *nPlaceHolderID*  
- Popisovač řízení držitel statické místní umístěny v editoru prostředků. Nově vytvořený ovládacího prvku Windows Forms nahrazuje statické ovládací prvek, za předpokladu, že její umístění, pořadí z-order a styly (druhý přetížení pouze).  
+ Obslužná rutina ovládacího prvku držitel statické místo umístěné v editoru prostředků. Nově vytvořený ovládací prvek Windows Forms nahradí statický ovládací prvek, za předpokladu, že jeho umístění, pořadí vykreslování a styly (druhé přetížení pouze).  
   
  *pParentWnd*  
  Ukazatel do nadřazeného okna.  
   
  *nID*  
- Číslo ID zdroje pro přiřazení do nově vytvořené ovládacího prvku.  
+ Číslo ID prostředků má být přiřazena k nově vytvořený ovládací prvek.  
   
  *pControl*  
- Instanci ovládacího prvku Windows Forms, který má být spojen s [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) objektu (pouze čtvrtý přetížení).  
+ Instance ovládacího prvku Windows Forms přidruženo [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) objekt (pouze čtvrtý přetížení).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí nenulovou hodnotu. Pokud je úspěšné, vrátí hodnotu 0.  
+ Pokud je úspěšná, vrátí nenulovou hodnotu. Pokud není úspěšné, vrátí hodnotu 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří instanci ovládacího prvku rozhraní .NET Framework Windows Forms v MFC kontejner.  
+ Tato metoda vytvoří instanci ovládacího prvku formulářů Windows rozhraní .NET Framework v kontejneru prvku knihovny MFC.  
   
- První přetížení metody přijímá datový typ rozhraní .NET Framework *pType* tak, aby MFC můžete vytvořit nový objekt tohoto typu. *pType* musí být [typ](https://msdn.microsoft.com/en-us/library/system.type) datového typu.  
+ První přetížení metody přijímá datový typ rozhraní .NET Framework *pType* tak, aby MFC instanci můžete vytvořit nový objekt tohoto typu. *pType* musí být [typ](https://msdn.microsoft.com/library/system.type) datového typu.  
   
- Vytvoří druhý přetížení metody ovládacího prvku Windows Forms na základě `TManagedControl` parametr šablony `CWinFormsControl` třídy. Na základě velikost a umístění ovládacího prvku `RECT` struktura předaný metodě. Pouze *dwStyle* záleží pro stylů.  
+ Druhé přetížení metody vytvoří ovládacího prvku Windows Forms na základě `TManagedControl` parametrem šablony `CWinFormsControl` třídy. Podle velikosti a pozice ovládacího prvku `RECT` předané metodě. Pouze *dwStyle* je důležité pro styly.  
   
- Třetí přetížení metody vytvoří ovládacího prvku Windows Forms, který nahrazuje statického ovládacího prvku, zničení ho a za předpokladu, že její umístění, pořadí z-order a stylů. Statické ovládací prvek slouží pouze jako zástupný symbol pro ovládacího prvku Windows Forms. Při vytváření ovládacího prvku, toto přetížení kombinuje styly z *dwStyle* s styly prostředků statické ovládací prvek.  
+ Třetí přetížení metody vytvoří ovládací prvek Windows Forms, který nahrazuje statický ovládací prvek, došlo k jeho zničení a za předpokladu, že jeho umístění, pořadí vykreslování a styly. Statický ovládací prvek slouží pouze jako zástupný symbol pro ovládací prvek Windows Forms. Při vytváření ovládacího prvku, toto přetížení kombinuje styly z *dwStyle* se styly prostředků statický ovládací prvek.  
   
- Čtvrtý přetížení metody umožňuje předat již vytvořenou instanci ovládacího prvku Windows Forms *pControl* , budou zahrnovat MFC. Musí být stejného typu jako `TManagedControl` parametr šablony `CWinFormsControl` třídy.  
+ Čtvrtý přetížení metody umožňuje předat v ovládacím prvku Windows Forms už vytvořenou instanci *pControl* , která se zalomí knihovny MFC. Musí být stejného typu jako `TManagedControl` parametrem šablony `CWinFormsControl` třídy.  
   
- V tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) ukázky na pomocí formuláře Windows ovládací prvky.  
+ Zobrazit [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) ve formuláři Windows ukázky pro ovládací prvky.  
   
 ##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
- Vytvoří objekt obálky knihovny MFC Windows Forms ovládací prvek.  
+ Vytvoří objekt obálky ovládacího prvku Windows Forms knihovny MFC.  
   
 ```  
 CWinFormsControl();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoření ovládacího prvku Windows Forms instance při volání [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
+ Při volání je vytvořena instance ovládacího prvku Windows Forms [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
 ##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
- Načte ukazatel ovládacího prvku Windows Forms.  
+ Načte ukazatel na ovládacím prvku Windows Forms.  
   
 ```  
 inline TManagedControl^ GetControl() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí ukazatel do ovládacího prvku Windows Forms.  
+ Vrací ukazatel na ovládacím prvku Windows Forms.  
   
 ### <a name="example"></a>Příklad  
-  V tématu [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
+  Zobrazit [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
 ##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
- Načte popisovač do ovládacího prvku Windows Forms.  
+ Načte popisovač na ovládacím prvku Windows Forms.  
   
 ```  
 inline HWND GetControlHandle() const;  
@@ -184,7 +184,7 @@ inline HWND GetControlHandle() const;
  Vrátí popisovač do ovládacího prvku Windows Forms.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetControlHandle` je pomocná metoda, která vrátí popisovač okna, které jsou uložené ve vlastnostech ovládacího prvku rozhraní .NET Framework. Hodnota popisovač okna se zkopíruje do [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) během volání [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
+ `GetControlHandle` je pomocná metoda, která vrací popisovač okna uložená ve vlastnosti ovládacího prvku rozhraní .NET Framework. Hodnota popisovače okna je zkopírován do [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) během volání [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
 ##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  Nahradí [CWinFormsControl::GetControl](#getcontrol) ve výrazech.  
@@ -194,19 +194,19 @@ inline TManagedControl^  operator->() const;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento operátor poskytuje pohodlné syntaxe, který nahrazuje `GetControl` ve výrazech.  
+ Tento operátor poskytuje pohodlné syntaxe, která nahrazuje `GetControl` ve výrazech.  
   
- Další informace o Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Další informace o Windows Forms, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
- Vrhá typu jako ukazatel do ovládacího prvku Windows Forms.  
+ Přetypování typu jako ukazatel na ovládacím prvku Windows Forms.  
   
 ```  
 inline operator TManagedControl^() const;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento operátor předá `CWinFormsControl<TManagedControl>` na funkce, které přijímají ukazatel do ovládacího prvku Windows Forms.  
+ Tento operátor předá `CWinFormsControl<TManagedControl>` na funkce, které přijímají ukazatel na ovládacím prvku Windows Forms.  
   
 ## <a name="see-also"></a>Viz také  
  [CWinFormsDialog – třída](../../mfc/reference/cwinformsdialog-class.md)   

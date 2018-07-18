@@ -1,5 +1,5 @@
 ---
-title: remove_all_extents – třída | Microsoft Docs
+title: remove_all_extents – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d027f2c1e9d8f5d4172fd3deff179d9ec8336baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853398"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953876"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents – třída
 
@@ -40,11 +40,11 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_all_extents<T>` obsahuje upravit – typ, který je typu elementu pro typ pole `T` s všechny dimenze pole odebrán, nebo `T` Pokud `T` není typu pole.
+Instance `remove_all_extents<T>` obsahuje změněný typ, který je typem elementu pole *T* s odebrány, všechny dimenze pole nebo *T* Pokud *T* není typem pole.
 
 ## <a name="example"></a>Příklad
 
@@ -72,9 +72,9 @@ int main()
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_extent – třída](../standard-library/remove-extent-class.md)<br/>

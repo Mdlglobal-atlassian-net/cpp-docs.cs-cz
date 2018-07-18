@@ -1,5 +1,5 @@
 ---
-title: space_info – struktura | Microsoft Docs
+title: space_info – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3506572586f0dc8edc3f9e97955e7612bcea46ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b143a37c306320223ac3abe430e41c9750c8ece9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859183"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025780"
 ---
 # <a name="spaceinfo-structure"></a>space_info – struktura
 
@@ -41,9 +41,9 @@ struct space_info   {
 
 |Název|Popis|
 |----------|-----------------|
-|`unsigned long long available`|Představuje počet bajtů, které jsou k dispozici, která bude představovat data na svazku.|
-|`unsigned long long capacity`|Představuje celkový počet bajtů, které může představovat svazku.|
-|`unsigned long long free`|Představuje počet bajtů, které nejsou používány k reprezentaci dat na svazku.|
+|`unsigned long long available`|Představuje počet bajtů, které jsou k dispozici pro reprezentaci dat na svazku.|
+|`unsigned long long capacity`|Představuje celkový počet bajtů, které mohou představovat svazku.|
+|`unsigned long long free`|Představuje počet bajtů, které nejsou použity pro reprezentaci dat na svazku.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -51,9 +51,9 @@ struct space_info   {
 
 **Namespace:** std::experimental::filesystem
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<FileSystem >](../standard-library/filesystem.md)<br/>
-[space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
+[space](http://msdn.microsoft.com/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
 [Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md)<br/>

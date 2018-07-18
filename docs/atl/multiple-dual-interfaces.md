@@ -1,5 +1,5 @@
 ---
-title: Duální rozhraní více | Microsoft Docs
+title: Více duálních rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ace347148f3a339c75fd9a1069be368c7373d351
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952926"
 ---
-# <a name="multiple-dual-interfaces"></a>Více duální rozhraní
-Možná budete chtít kombinovat výhod duální rozhraní (to znamená, flexibilitu vtable a pozdní vazba, díky čemuž třídy, k dispozici skriptovací jazyky, jakož i C++) pomocí technik vícenásobná dědičnost.  
+# <a name="multiple-dual-interfaces"></a>Více duálních rozhraní
+Možná budete chtít kombinovat výhody duální rozhraní (to znamená, flexibilitu vtable a pozdní vazba, díky čemuž třídu, k dispozici skriptovací jazyky, jakož i jazyka C++) s technikami vícenásobnou dědičnost.  
   
- Přestože je možné ke zveřejnění více duální rozhraní u jednoho objektu COM, se nedoporučuje. Pokud existuje více duální rozhraní, musí existovat jenom jeden `IDispatch` rozhraní vystavené. K dispozici zajistit, že se jedná o tento případ techniky provádění postihy například ztráty funkce nebo složitost vyšší kódu. Vývojář vzhledem k tomu tento přístup má pečlivě naváží výhody a nevýhody.  
+ I když je možné ke zveřejnění více duálních rozhraní na jeden objekt modelu COM, se nedoporučuje. Pokud existuje více duálních rozhraní, musí obsahovat pouze jeden `IDispatch` rozhraní vystavené. Techniky, které jsou k dispozici pro zajištění, že se jedná o tento případ provádět sankce, jako je například výpadek funkce nebo kód zvýšení složitosti. Pro vývojáře, vzhledem k tomu tento přístup pečlivě zvážit, jaké výhody a nevýhody.  
   
-## <a name="exposing-a-single-idispatch-interface"></a>Vystavení jednoho rozhraní IDispatch  
- Je možné ke zveřejnění více duální rozhraní na jediný objekt Odvozením ze dvou nebo více specializací `IDispatchImpl`. Ale pokud povolit klientům dotazovat na `IDispatch` rozhraní, budete muset použít [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) – makro (nebo [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) k určení, které základní třídu pro implementace `IDispatch`.  
+## <a name="exposing-a-single-idispatch-interface"></a>Vystavení jednotné rozhraní IDispatch  
+ Je možné zveřejnit více duálních rozhraní na jeden objekt odvozené ze dvou nebo více specializace `IDispatchImpl`. Však-li povolit klientům dotazovat na `IDispatch` rozhraní, budete muset použít [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) – makro (nebo [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) k určení, které základní třídy pro provádění `IDispatch`.  
   
  [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]  
   
- Protože pouze jeden `IDispatch` rozhraní je vystavený, klienti, kteří přístup jenom k vašich objektů prostřednictvím `IDispatch` rozhraní nebudou mít přístup k metody nebo vlastnosti v jiných rozhraní.  
+ Protože pouze jeden `IDispatch` rozhraní je přístupný, klienti, kteří přístup pouze objekty prostřednictvím `IDispatch` rozhraní nebude mít přístup k metody nebo vlastnosti v jiných rozhraní.  
   
-## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>Kombinace více duální rozhraní do jediná implementace typu IDispatch  
- ATL neposkytuje žádné podporu pro kombinace více duální rozhraní do jediná implementace typu `IDispatch`. Existuje však několik známé přístupy k ručně kombinování rozhraní, jako je například vytváření šablonované třídu, která obsahuje spojení samostatné `IDispatch` rozhraní, vytvoření nového objektu provést `QueryInterface` funkce nebo pomocí na základě TypeInfo – implementace vnořených objektů vytvořit `IDispatch` rozhraní.  
+## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>Spojování více duálních rozhraní do jedné implementace rozhraní IDispatch  
+ ATL neposkytuje žádné podporu pro sloučení více duálních rozhraní do jediná implementace typu `IDispatch`. Existují však několik známých přístupů se ručně sloučením rozhraní, jako je například vytvoření třídy bez vizuálního vzhledu, který obsahuje spojení jako samostatná `IDispatch` rozhraní, vytváří se nový objekt pro provedení `QueryInterface` funkce nebo pomocí provádění TypeInfo vnořené objekty vytvořit `IDispatch` rozhraní.  
   
- Tyto přístupy máte problémy s potenciální kolize názvů, jakož i kód složitosti a udržovatelnosti. Není doporučeno, abyste vytvořili více duální rozhraní.  
+ Tyto přístupy máte problémy s potenciální kolize názvů, jakož i kód složitosti a udržovatelnosti. Nedoporučuje se, že vytvoříte více duálních rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  [Duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md)

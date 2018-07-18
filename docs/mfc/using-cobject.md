@@ -1,5 +1,5 @@
 ---
-title: Použití objektů CObject | Microsoft Docs
+title: Použití objektů CObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 235bf1f4130f59a8af9548fcbf35e36d82255f14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382295"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027148"
 ---
 # <a name="using-cobject"></a>Použití objektů CObject
-[CObject](../mfc/reference/cobject-class.md) je kořenová základní třída pro většinu z Microsoft Foundation Class Library (MFC). `CObject` Třída obsahuje mnoho užitečných funkcí, které chcete zahrnout do vlastní objekty programu, včetně podpory serializace, run-time třída informace a výstup diagnostiky objektu. Pokud odvozujete třídě z `CObject`, třídě může zneužít tyto `CObject` funkce.  
+[CObject –](../mfc/reference/cobject-class.md) je kořenová základní třída pro většinu z třídy knihovny MFC (Microsoft Foundation). `CObject` Třída obsahuje mnoho užitečných funkcí, které možná budete chtít začlenit do vlastní objekty programu, včetně podpory serializace, run-time třída informace a výstup diagnostiky objektu. Pokud odvodíte třídu od `CObject`, vaše třída může zneužít tyto `CObject` funkce.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat  
   
--   [Odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md)  
+-   [Odvodit třídu z objektu CObject](../mfc/deriving-a-class-from-cobject.md)  
   
--   [Přidat podporu pro run-time třída informace, dynamických a serializace Moje odvozené třídy](../mfc/specifying-levels-of-functionality.md)  
+-   [Přidání podpory pro informace o třídě za běhu, dynamické vytváření a serializace Moje odvozené třídy](../mfc/specifying-levels-of-functionality.md)  
   
 -   [Přístup k informacím run-time třída](../mfc/accessing-run-time-class-information.md)  
   
--   [Vytváření objektů dynamicky](../mfc/dynamic-object-creation.md)  
+-   [Dynamicky vytvořit objekty](../mfc/dynamic-object-creation.md)  
   
--   [Dump data objektu k diagnostickým účelům](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [Výpis objektu dat k diagnostickým účelům](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
   
--   Ověření objektu vnitřní stav (viz [assert_valid – MFC a CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   Ověření objektu vnitřní stav (viz [MFC ASSERT_VALID a CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
--   [Mají třídu serializovat sama sebe do trvalého úložiště](../mfc/serialization-in-mfc.md)  
+-   [Třída serializovat sama sebe do trvalého úložiště](../mfc/serialization-in-mfc.md)  
   
--   Podívejte se do seznamu [CObject nejčastější dotazy](../mfc/cobject-class-frequently-asked-questions.md)  
+-   Podívejte se do seznamu [CObject – nejčastější dotazy](../mfc/cobject-class-frequently-asked-questions.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../mfc/mfc-concepts.md)   
  [Obecná témata MFC](../mfc/general-mfc-topics.md)   
- [Struktura CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)   
+ [CRuntimeClass – struktura](../mfc/reference/cruntimeclass-structure.md)   
  [Soubory](../mfc/files-in-mfc.md)   
  [Serializace](../mfc/serialization-in-mfc.md)
 

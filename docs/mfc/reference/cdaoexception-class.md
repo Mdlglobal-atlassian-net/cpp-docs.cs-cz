@@ -1,5 +1,5 @@
 ---
-title: Třída CDaoException | Microsoft Docs
+title: Cdaoexception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336183"
 ---
-# <a name="cdaoexception-class"></a>CDaoException – třída
-Představuje podmínku vzniklých třídami databází MFC podle dat přístup k objektům (DAO).  
+# <a name="cdaoexception-class"></a>Cdaoexception – třída
+Představuje podmínku výjimky vyplývající z databázových tříd MFC založených na datový přístup k objektům (DAO).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,35 +56,35 @@ class CDaoException : public CException
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDaoException::GetErrorCount](#geterrorcount)|Vrátí počet chyb v kolekci chybách databázového stroje.|  
-|[CDaoException::GetErrorInfo](#geterrorinfo)|Vrátí informace o chybě o konkrétní chybě objektu v kolekci chyby.|  
+|[CDaoException::GetErrorCount](#geterrorcount)|Vrátí počet chyb do kolekce chyb databázový stroj.|  
+|[CDaoException::GetErrorInfo](#geterrorinfo)|Vrátí informace o chybě o určité chybové objektu do kolekce chyb.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Obsahuje podrobné informace o chybě kód pro všechny chyby v tříd MFC rozhraní DAO.|  
+|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Obsahuje rozšířený kód chyby pro všechny chyby v tříd DAO knihovny MFC.|  
 |[CDaoException::m_pErrorInfo](#m_perrorinfo)|Ukazatel [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) objekt, který obsahuje informace o jeden objekt DAO chyby.|  
-|[CDaoException::m_scode](#m_scode)|[Kód SCODE](#m_scode) hodnotu přidruženou k chybě.|  
+|[CDaoException::m_scode](#m_scode)|[SCODE](#m_scode) hodnotu přidruženou k chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Třída zahrnuje veřejná data členů, které vám pomohou zjistit příčinu výjimky. `CDaoException` objekty jsou vytvořená a vyvolané členské funkce databázové třídy DAO.  
+ Třída zahrnuje veřejné datové členy, která vám pomůže určit příčinu chyby. `CDaoException` objekty jsou vytvořena a vyvolána členským funkcím databázové třídy DAO.  
   
 > [!NOTE]
->  Databázové třídy DAO se liší od třídami databází MFC založené na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mít předponu "CDao". Můžete i nadále přístup ke zdrojům dat ODBC s třídy DAO. Obecně platí třídy MFC založené na rozhraní DAO schopné více než třídy MFC založené na rozhraní ODBC; třídy založené na rozhraní DAO přístup k datům, včetně prostřednictvím ovladače ODBC prostřednictvím svých vlastních databázového stroje. Třídy založené na rozhraní DAO také podporují jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy, aniž by museli DAO volat přímo. Informace o výjimky generované třídy rozhraní ODBC, najdete v části [CDBException](../../mfc/reference/cdbexception-class.md).  
+>  Databázové třídy DAO se liší od databázových tříd MFC založených na připojení ODBC (Open Database). Všechny názvy tříd DAO databáze mají předponu "CDao". Je možné i nadále přístup ke zdrojům dat ODBC s tříd DAO. Obecně třídy knihovny MFC rozhraní DAO podle podporují více než třídy knihovny MFC založená na rozhraní ODBC; třídy založené na rozhraní DAO můžou přistupovat k datům, včetně prostřednictvím ovladače rozhraní ODBC, prostřednictvím vlastní databázového stroje. Třídy založené na rozhraní DAO také podporu jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy rozhraní, aniž byste museli DAO volat přímo. Informace o výjimkách vygenerovaných ODBC – třídy naleznete v tématu [CDBException](../../mfc/reference/cdbexception-class.md).  
   
- Dostanete objekty výjimek v rámci oboru [CATCH](../../mfc/reference/exception-processing.md#catch) výraz. Můžete také vyvolat `CDaoException` objekty z vlastního kódu pomocí [afxthrowdaoexception –](../../mfc/reference/exception-processing.md#afxthrowdaoexception) globální funkce.  
+ Můžete přistupovat objektech výjimek v rámci oboru [CATCH](../../mfc/reference/exception-processing.md#catch) výrazu. Můžete také vyvolat `CDaoException` objekty z vlastního kódu s využitím [afxthrowdaoexception –](../../mfc/reference/exception-processing.md#afxthrowdaoexception) globální funkce.  
   
- V prostředí MFC, jsou všechny chyby DAO vyjádřené jako výjimky, typu `CDaoException`. Pokud jste zachycení výjimek tohoto typu, můžete použít `CDaoException` členské funkce načíst informace z jakékoli DAO chyba objekty uložené v kolekce chyb databázového stroje. Jako dojde každé chybě, jeden nebo více objektů chyby jsou umístěny do kolekce chyb. (Obvykle kolekce obsahuje pouze jeden objekt chyby, pokud používáte zdroje dat ODBC, se pravděpodobně získat více objektů chyba.) Pokud jiná operace DAO vygeneruje chybu, kolekce chyb není zaškrtnuta, a nový objekt chyby se umístí do kolekce chyb. DAO operace, které nevydávají chybu mít žádný vliv na kolekce chyb.  
+ V knihovně MFC, jsou všechny chyby DAO vyjádřený jako výjimky typu `CDaoException`. Pokud při zachycení výjimky tohoto typu, můžete použít `CDaoException` členské funkce k načtení informací z jakékoli rozhraní DAO chyba objektů uložených v modulu databáze kolekce chyb. Jak dojde k každé chybě, jeden nebo více objektů chyby jsou umístěny do kolekce chyb. (Obvykle kolekce obsahuje pouze jeden objekt error, pokud používáte zdroji dat rozhraní ODBC, jste pravděpodobněji získáte více objektů chyba) Pokud jiná operace DAO vygeneruje chybu, se vymaže kolekci chyby a nový objekt chyby se umístí do kolekce chyb. Operace rozhraní DAO, které nejsou generovány chybu nemají žádný vliv na kolekce chyb.  
   
- Kódy chyb rozhraní DAO naleznete v souboru DAOERR. H. Související informace naleznete v tématu "Zachytitelné chyb přístupu k datům" v nápovědě rozhraní DAO.  
+ DAO – kódy chyb naleznete v souboru DAOERR. H. Související informace naleznete v tématu "Zachytitelné chyb přístupu k datům" v nápovědě k DAO.  
   
- Další informace o zpracování výjimek v obecné nebo o `CDaoException` objekty, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md). Druhý článek obsahuje ukázkový kód, který ukazuje zpracování výjimek v rozhraní DAO.  
+ Další informace o zpracování výjimek v obecné, nebo o `CDaoException` objekty, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md). Druhý článek obsahuje ukázkový kód, který znázorňuje zpracování výjimek v rozhraní DAO.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CException](../../mfc/reference/cexception-class.md)  
+ [Cexception –](../../mfc/reference/cexception-class.md)  
   
  `CDaoException`  
   
@@ -99,44 +99,44 @@ CDaoException();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework normálně, vytvoří objekty výjimek, když jeho kód, vyvolá výjimku. Je málokdy potřeba explicitně vytvořit objekt výjimky. Pokud chcete throw `CDaoException` z vlastního kódu volání globální funkce [afxthrowdaoexception –](../../mfc/reference/exception-processing.md#afxthrowdaoexception).  
+ Obvykle rozhraní vytvoří objekty výjimka při jeho kód vyvolá výjimku. Potřebujete jen zřídka explicitně vytvořit objekt výjimky. Pokud chcete vyvolat `CDaoException` z vlastního kódu, zavolejte funkci globální [afxthrowdaoexception –](../../mfc/reference/exception-processing.md#afxthrowdaoexception).  
   
- Můžete ale chtít explicitně vytvořit objekt výjimky, pokud provádíte přímé volání DAO prostřednictvím ukazatele rozhraní DAO, které zapouzdřují MFC – třídy. V takovém případě budete muset načíst informace o chybě z rozhraní DAO. Předpokládejme, že dojde k chybě v rozhraní DAO při volání rozhraní DAO metody prostřednictvím rozhraní DAODatabases pracovní prostor databáze kolekce.  
+ Můžete však explicitně vytvořit objekt výjimky, pokud provádíte přímá volání rozhraní DAO prostřednictvím ukazatele rozhraní DAO, které zapouzdřují třídy knihovny MFC. V takovém případě můžete potřebovat načíst informace o chybě z rozhraní DAO. Předpokládejme, že dojde k chybě v rozhraní DAO při volání metody rozhraní DAO prostřednictvím rozhraní DAODatabases pracovní prostor databáze kolekce.  
   
 ##### <a name="to-retrieve-the-dao-error-information"></a>Načíst informace o chybě rozhraní DAO  
   
-1.  Vytvořit `CDaoException` objektu.  
+1.  Vytvoření `CDaoException` objektu.  
   
-2.  Volání objekt výjimky [GetErrorCount](#geterrorcount) členské funkce k určení, kolik chyba objekty jsou v kolekci chybách databázového stroje. (Obvykle pouze jeden, pokud nepoužíváte zdroje dat ODBC.)  
+2.  Volání objektu výjimky [GetErrorCount](#geterrorcount) členskou funkci k určení, kolik chyb objekty jsou do kolekce chyb databázový stroj. (Obvykle pouze jeden, pokud nepoužíváte zdroje dat ODBC.)  
   
-3.  Volání objekt výjimky [GetErrorInfo –](#geterrorinfo) – členská funkce pro získání jeden objekt konkrétní chyby současně, podle indexu v kolekci, prostřednictvím objekt výjimky. Objekt výjimky si můžete představit jako proxy pro jeden objekt DAO chyby.  
+3.  Volání objektu výjimky [GetErrorInfo –](#geterrorinfo) členské funkce lze získat jeden objekt konkrétní chyba najednou, podle indexu v kolekci, prostřednictvím objektu výjimky. Objekt výjimky můžete představit jako proxy pro jeden objekt DAO chyby.  
   
-4.  Zkontrolujte aktuální [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktury, která `GetErrorInfo` vrátí [m_pErrorInfo](#m_perrorinfo) – datový člen. Její členy poskytují informace o chybě rozhraní DAO.  
+4.  Zkontrolujte aktuální [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktury, která `GetErrorInfo` vrátí [m_pErrorInfo](#m_perrorinfo) datový člen. Jeho členy poskytují informace o chybě rozhraní DAO.  
   
-5.  V případě zdroje dat ODBC zopakujte kroky 3 a 4 podle potřeby pro další objekty chyby.  
+5.  V případě zdroji dat rozhraní ODBC zopakujte kroky 3 a 4 podle potřeby pro více objektů chyby.  
   
-6.  Pokud jste sestavený objekt výjimky v haldě, odstraňte jej pomocí **odstranit** operátor po dokončení.  
+6.  Pokud je vytvořen objekt výjimky v haldě, odstraňte ho pomocí **odstranit** operátor po dokončení.  
   
- Další informace o zpracování chyb ve třídách knihovny MFC rozhraní DAO, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).  
+ Další informace o zpracování chyb v třídách knihovny MFC rozhraní DAO, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).  
   
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount  
- Volání této funkce člen načíst počet objektů DAO Chyba v kolekci chybách databázového stroje.  
+ Voláním této členské funkce se načíst počet objektů DAO Chyba v kolekci chyby databázový stroj.  
   
 ```  
 short GetErrorCount();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet objektů chyba DAO v kolekci chybách databázového stroje.  
+ Počet objektů DAO Chyba v kolekci chyby databázový stroj.  
   
 ### <a name="remarks"></a>Poznámky  
- Tyto informace jsou užitečné pro ve smyčce přes kolekce chyb pro načtení každou jeden nebo více rozhraní DAO chyba objektů v kolekci. Chcete-li načíst objekt error pomocí indexu nebo číslo chyby DAO, volejte [GetErrorInfo –](#geterrorinfo) – členská funkce.  
+ Tyto informace jsou užitečné pro opakování ve smyčce přes kolekce chyb pro načtení všech jeden nebo více rozhraní DAO chyba objektů v kolekci. Chcete-li načíst objekt error, index nebo podle čísla chyby rozhraní DAO, zavolejte [GetErrorInfo –](#geterrorinfo) členskou funkci.  
   
 > [!NOTE]
->  V kolekci chyby je obvykle pouze jeden objekt chyby. Pokud pracujete s zdroje dat ODBC, však může existovat více než jeden.  
+>  V kolekci chyby je obvykle pouze jeden objekt error. Při práci se zdroji dat rozhraní ODBC, však může existovat více než jeden.  
   
 ##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo  
- Vrátí informace o chybě o konkrétní chybě objektu v kolekci chyby.  
+ Vrátí informace o chybě o určité chybové objektu do kolekce chyb.  
   
 ```  
 void GetErrorInfo(int nIndex);
@@ -144,12 +144,12 @@ void GetErrorInfo(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index založený na informacích o chybě v kolekce chyb databázového stroje, pro vyhledávání podle indexu.  
+ Index s informacemi o chybě v kolekci chyby databázový stroj, pro vyhledávání podle indexu.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce člen získat následující druh informací o výjimce:  
+ Voláním této členské funkce získat následující druh informací o výjimce:  
   
--   Kód chyby  
+-   Kód chyby:  
   
 -   Zdroj  
   
@@ -159,28 +159,28 @@ void GetErrorInfo(int nIndex);
   
 -   Kontextové nápovědy  
   
- `GetErrorInfo` ukládá do objekt výjimky `m_pErrorInfo` – datový člen. Stručný popis vrácené informace najdete v tématu [m_pErrorInfo](#m_perrorinfo). Pokud catch k výjimce typu `CDaoException` vyvolané MFC, `m_pErrorInfo` člen bude již být vyplněna. Pokud zvolíte možnost DAO volat přímo, musí volat objekt výjimky `GetErrorInfo` – členská funkce sami k vyplnění `m_pErrorInfo`. Podrobnější popis najdete v tématu [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktura.  
+ `GetErrorInfo` ukládá informace v objektu výjimky `m_pErrorInfo` datový člen. Stručný popis informací, najdete v tématu [m_pErrorInfo](#m_perrorinfo). Při zachycení výjimky typu `CDaoException` vyvolané knihovny MFC, `m_pErrorInfo` člen už bude vyplněno. Pokud budete chtít přímo volat rozhraní DAO, musí volat objekt výjimky `GetErrorInfo` členskou funkci sami tak, aby vyplnil `m_pErrorInfo`. Podrobnější popis najdete v tématu [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.  
   
- Informace o rozhraní DAO výjimky a ukázkový kód, najdete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).  
+ Informace o výjimkách rozhraní DAO a ukázkový kód, naleznete v článku [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).  
   
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
- Obsahuje knihovny MFC Rozšířený kód chyby.  
+ Obsahuje knihovny MFC rozšířené kód chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Tento kód je zadána v případech, kde má zmýlila pro konkrétní součást tříd MFC rozhraní DAO.  
+ Tento kód je zadána v případech, kdy má zmýlila konkrétní součást tříd DAO knihovny MFC.  
   
  Možné hodnoty jsou:  
   
-- **NO_AFX_DAO_ERROR** poslední operaci nevedly MFC rozšířená chyba. Ale operaci může je tvořen dalších chyb z rozhraní DAO nebo OLE, takže byste měli zkontrolovat [m_pErrorInfo](#m_perrorinfo) a případně [m_scode](#m_scode).  
+- NO_AFX_DAO_ERROR, které poslední operaci nezpůsobil ztrátu v MFC rozšířená chyba. Ale operace může je tvořen jiné chyby z rozhraní DAO nebo OLE, takže byste měli počítač zkontrolovat [m_pErrorInfo](#m_perrorinfo) a případně [m_scode](#m_scode).  
   
-- **AFX_DAO_ERROR_ENGINE_INITIALIZATION** MFC nelze inicializovat databázový stroj Microsoft Jet. OLE může došlo k chybě při inicializaci, nebo je pravděpodobně bylo možné vytvořit instanci třídy DAO databázový stroj objekt. Tyto problémy obvykle zjistíte chybná instalace DAO nebo OLE.  
+- AFX_DAO_ERROR_ENGINE_INITIALIZATION MFC nebylo možné inicializovat databázový stroj Microsoft Jet. OLE – může se nepodařilo inicializovat nebo mohlo být možné vytvořit instanci databázového stroje objektu rozhraní DAO. Tyto problémy obvykle naznačují chybný instalace DAO nebo OLE.  
   
-- **AFX_DAO_ERROR_DFX_BIND** adresa použitá ve volání funkce Výměna pole záznamu exchange (DFX) neexistuje nebo je neplatný (adresu nebyl použit k vytvoření vazby dat). Chybná adresa může mít předán v DFX volání nebo adresu může mít zneplatní mezi operacemi DFX.  
+- AFX_DAO_ERROR_DFX_BIND adresu použít ve volání funkce exchange (DFX) DAO pole záznamu neexistuje nebo je neplatný (adresu nebyl použit k vytvoření vazby dat). Chybná adresa může být uplynulo ve volání DFX nebo adresa může být staly neplatnými mezi operacemi DFX.  
   
-- **AFX_DAO_ERROR_OBJECT_NOT_OPEN** jste se pokusili otevřít sadu záznamů na základě querydef nebo tabledef objekt, který nebyl v otevřeném stavu.  
+- AFX_DAO_ERROR_OBJECT_NOT_OPEN jste se pokusili otevřít sadu záznamů na základě querydef nebo tabledef objekt, který není v otevřeném stavu.  
   
 ##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
- Obsahuje odkazy `CDaoErrorInfo` struktura, která poskytuje informace o objektu DAO chyba, která poslední načten voláním [GetErrorInfo –](#geterrorinfo).  
+ Obsahuje ukazatel `CDaoErrorInfo` struktura, která poskytuje informace o objektu Chyba rozhraní DAO, který naposledy načten voláním [GetErrorInfo –](#geterrorinfo).  
   
 ### <a name="remarks"></a>Poznámky  
  Tento objekt obsahuje následující informace:  
@@ -188,22 +188,22 @@ void GetErrorInfo(int nIndex);
 |Cdaoerrorinfo – člen|Informace o|Význam|  
 |--------------------------|-----------------|-------------|  
 |`m_lErrorCode`|Kód chyby|Kód chyby rozhraní DAO|  
-|`m_strSource`|Zdroj|Název objektu nebo aplikace, který původně vytvořil chybu|  
-|`m_strDescription`|Popis|Popisný řetězec spojené s chybou|  
-|`m_strHelpFile`|Soubor nápovědy|Cesta k souboru nápovědy pro Windows, ve kterém může uživatel získat informace o problému|  
-|`m_lHelpContext`|Kontextové nápovědy|ID kontextu pro téma v souboru nápovědy rozhraní DAO|  
+|`m_strSource`|Zdroj|Název objektu nebo aplikaci, která původně vytvořil chybu|  
+|`m_strDescription`|Popis|Popisný řetězec přidružený k chybě|  
+|`m_strHelpFile`|Soubor nápovědy|Cesta k souboru nápovědy Windows ve kterém může uživatel získat informace o tomto problému|  
+|`m_lHelpContext`|Kontextové nápovědy|ID kontextu pro téma v souboru nápovědy k rozhraní DAO|  
   
- Úplné informace o informace obsažené v `CDaoErrorInfo` objektu, najdete v článku [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktura.  
+ Úplné podrobnosti o informace obsažené v `CDaoErrorInfo` objektu, najdete v článku [cdaoerrorinfo –](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.  
   
 ##  <a name="m_scode"></a>  CDaoException::m_scode  
- Obsahuje hodnotu typu `SCODE` , který popisuje chybu.  
+ Obsahuje hodnotu typu `SCODE` popisující chybu.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto je zadání kódu OLE. Je potřeba málokdy tuto hodnotu použijte, protože ve většině případů, je k dispozici v dalších konkrétnější DAO knihovny MFC nebo informace o chybě `CDaoException` datových členů.  
+ Toto je kód OLE. Je potřeba zřídka použít tuto hodnotu, protože v téměř všech případech je k dispozici v jiném konkrétnější informace o chybě rozhraní DAO knihovny MFC nebo `CDaoException` datové členy.  
   
- Informace o `SCODE`, podívejte se na téma [struktura z OLE kódy chyb](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK. `SCODE` Datový typ mapuje `HRESULT` datového typu.  
+ Informace o SCODE, naleznete v tématu [struktury z OLE kódy chyb](http://msdn.microsoft.com/library/windows/desktop/ms690088) v sadě Windows SDK. Datový typ SCODE mapuje na datový typ HRESULT.  
   
 ## <a name="see-also"></a>Viz také  
- [CException – třída](../../mfc/reference/cexception-class.md)   
+ [Cexception – třída](../../mfc/reference/cexception-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CException – třída](../../mfc/reference/cexception-class.md)

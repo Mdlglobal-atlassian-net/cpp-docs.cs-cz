@@ -1,5 +1,5 @@
 ---
-title: is_base_of – třída | Microsoft Docs
+title: is_base_of – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed73314d5cef6849c84a8e1019e1fd2d6c8ead86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43f4aec5796db6a277b6bfb1edecdcd2e7f5c455
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845385"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954614"
 ---
 # <a name="isbaseof-class"></a>is_base_of – třída
 
@@ -37,13 +37,13 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parametry
 
-`Base` Základní třída pro testování.
+*Základní* základní třídu pro testování.
 
-`Derived` Odvozený typ, který chcete otestovat.
+*Odvozené* odvozený typ pro testování.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Base` je základní třídou typu `Derived`, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *základní* je základní třídu typu *Derived*, v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -84,9 +84,9 @@ is_base_of<derived, base> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_convertible – třída](../standard-library/is-convertible-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: is_union – třída | Microsoft Docs
+title: is_union – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205b05b4832098bca1d97bd949137d7271f111d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ea1f79d9f57c34bf6deed94f04354b87759d794
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855686"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966579"
 ---
 # <a name="isunion-class"></a>is_union – třída
 
-Testy, pokud je typ spojení.
+Testuje, zda je typ sjednocení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_union;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je typu union nebo `cv-qualified` formulář typu union, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je typ sjednocení nebo `cv-qualified` formulář typu sjednocení, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -86,9 +86,9 @@ is_union<ints> == true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_class – třída](../standard-library/is-class-class.md)<br/>

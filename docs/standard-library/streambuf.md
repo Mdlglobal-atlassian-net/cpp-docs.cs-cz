@@ -1,5 +1,5 @@
 ---
-title: '&lt;streambuf –&gt; | Microsoft Docs'
+title: '&lt;streambuf –&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855263"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026929"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf –&gt;
 
-Zahrnují standardní hlavičku iostreams \<streambuf – > definovat šablony třídy [basic_streambuf](../standard-library/basic-streambuf-class.md), což je základní operace iostreams třídy. Tuto hlavičku je obvykle zahrnuté pro vás jiným hlaviček iostreams; je potřeba jen zřídka ho zahrňte přímo.
+Zahrnout standardní hlavička iostreams \<streambuf – > k definování šablony třídy [basic_streambuf](../standard-library/basic-streambuf-class.md), což je základní operace třídami iostreams. Tato hlavička se obvykle zahrnuté pro vás jiná záhlaví iostreams; je potřeba jen zřídka zahrnují přímo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,16 +38,16 @@ Zahrnují standardní hlavičku iostreams \<streambuf – > definovat šablony t
 
 |Název typu|Popis|
 |-|-|
-|[streambuf –](../standard-library/streambuf-typedefs.md#streambuf)|Specializace z `basic_streambuf` používající `char` jako parametry šablony.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Specializace z `basic_streambuf` používající `wchar_t` jako parametry šablony.|
+|[streambuf –](../standard-library/streambuf-typedefs.md#streambuf)|Specializace `basic_streambuf` , která používá **char** jako parametry šablony.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Specializace `basic_streambuf` , která používá **wchar_t** jako parametry šablony.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[basic_streambuf – třída](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Šablony třídy popisuje abstraktní základní třídu pro odvození datového proudu vyrovnávací paměti řídí přenos elementů do a z konkrétní reprezentace datového proudu.|
+|[basic_streambuf – třída](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Třída šablony popisuje abstraktní základní třída pro odvození vyrovnávací paměť datového proudu, který řídí přenosu prvky do a z konkrétní reprezentace datového proudu.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

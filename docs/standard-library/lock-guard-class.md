@@ -1,5 +1,5 @@
 ---
-title: lock_guard – třída | Microsoft Docs
+title: lock_guard – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953755"
 ---
 # <a name="lockguard-class"></a>lock_guard – třída
 
-Reprezentuje šablonu, která může být vytvořena instance pro vytvoření objektu jejichž destruktor odemkne `mutex`.
+Reprezentuje šablonu, která se dá vytvořit instance pro vytvoření objektu, jehož destruktor odemkne `mutex`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,28 +35,28 @@ class lock_guard;
 
 ## <a name="remarks"></a>Poznámky
 
-Argument šablony `Mutex` třeba zadat název *mutex typu*.
+Argument šablony `Mutex` nutné pojmenovat *typ mutex*.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
 |Název|Popis|
 |----------|-----------------|
-|`lock_guard::mutex_type`|Synonymum argumentu šablony `Mutex`.|
+|`lock_guard::mutex_type`|Synonymum pro argument šablony `Mutex`.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
 |Název|Popis|
 |----------|-----------------|
-|[lock_guard](#lock_guard)|Vytvoří `lock_guard` objektu.|
-|[lock_guard:: ~ lock_guard – destruktor](#dtorlock_guard_destructor)|Odemkne `mutex` byl předaný konstruktoru.|
+|[lock_guard –](#lock_guard)|Vytvoří `lock_guard` objektu.|
+|[lock_guard –:: ~ lock_guard – destruktor](#dtorlock_guard_destructor)|Odemkne `mutex` , která byla předána do konstruktoru.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<mutex >
+**Záhlaví:** \<vzájemně vyloučeného přístupu >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="lock_guard"></a>  lock_guard::lock_guard – konstruktor
 
@@ -70,17 +70,17 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parametry
 
-`Mtx` A *mutex typ* objektu.
+*Mtx* A *typ mutex* objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktoru vytvoří objekt typu `lock_guard` a zámky `Mtx`. Pokud `Mtx` není rekurzivní mutex, musí ho odemknout, když je volána tento konstruktor.
+První konstruktor vytvoří objekt typu `lock_guard` a zámky *Mtx*. Pokud *Mtx* není rekurzivní mutex, musí být odemčený, když tento konstruktor je volán.
 
-Druhý konstruktor nezamyká `Mtx`. `Mtx` je nutné uzamknout, když je volána tento konstruktor. Konstruktor, vyvolá žádné výjimky.
+Druhý konstruktor nepoužívejte zámky *Mtx*. *Mtx* musí být uzamčen při volání tohoto konstruktoru. Žádné výjimky, vyvolá konstruktor.
 
-## <a name="dtorlock_guard_destructor"></a>  lock_guard:: ~ lock_guard – destruktor
+## <a name="dtorlock_guard_destructor"></a>  lock_guard –:: ~ lock_guard – destruktor
 
-Odemkne `mutex` byl předaný konstruktoru.
+Odemkne `mutex` , která byla předána do konstruktoru.
 
 ```cpp
 ~lock_guard() noexcept;
@@ -88,9 +88,9 @@ Odemkne `mutex` byl předaný konstruktoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `mutex` neexistuje spuštění destruktoru chování není definován.
+Pokud `mutex` neexistuje při spuštění destruktoru, není chování definováno.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex >](../standard-library/mutex.md)<br/>
+[\<mutex – >](../standard-library/mutex.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Rozhraní IRegistrar | Microsoft Docs
+title: Iregistrar – rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363744"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993565"
 ---
-# <a name="iregistrar-interface"></a>IRegistrar rozhraní
-Toto rozhraní je definována v atliface.h a používá se interně pomocí CAtlModule členské funkce, jako [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+# <a name="iregistrar-interface"></a>Iregistrar – rozhraní
+Toto rozhraní je definováno v atliface.h a používá se interně pomocí catlmodule – členské funkce, jako [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ Toto rozhraní je definována v atliface.h a používá se interně pomocí CAtl
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Poznámky
-Podívejte se na téma [pomocí nahraditelné parametry (registrátora Preprocessor)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) další podrobnosti.  
+Naleznete v tématu [použití nahraditelných parametrů (preprocesor The registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) další podrobnosti.  
 
 ## <a name="members"></a>Členové  
   
@@ -52,7 +52,7 @@ Podívejte se na téma [pomocí nahraditelné parametry (registrátora Preproces
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Zaregistruje prostředku. |  
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Zruší registraci prostředku.|  
 |[IRegistrar::FileRegister](#fileregister)|Zaregistruje soubor.|  
-|[IRegistrar::FileUnregister](#fileunregister)|Zruší registraci soubor.|  
+|[IRegistrar::FileUnregister](#fileunregister)|Zruší registraci souboru.|  
 |[IRegistrar::StringRegister](#stringregister)|Zaregistruje řetězec.|  
 |[IRegistrar::StringUnregister](#stringunregister)|Zruší registraci řetězec|  
 |[IRegistrar::ResourceRegister](#resourceregister)|Zaregistruje prostředku.|  
@@ -96,7 +96,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
   
   
 ##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
-Zruší registraci soubor.
+Zruší registraci souboru.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
@@ -112,7 +112,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 ```  
   
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- Zruší registraci data zadaný řetězec.  
+ Zruší registraci dat zadaný řetězec.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -143,6 +143,6 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
  
 ## <a name="see-also"></a>Viz také  
  [Použití nahraditelných parametrů (preprocesor registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Přehled třídy](../../atl/atl-class-overview.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)   
  [Třídy modulů](../../atl/atl-module-classes.md)   
  [Komponenta registru (Registrar)](../../atl/atl-registry-component-registrar.md)  

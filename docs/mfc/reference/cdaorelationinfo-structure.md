@@ -1,5 +1,5 @@
 ---
-title: Cdaorelationinfo – struktura | Microsoft Docs
+title: Cdaorelationinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0fedf6ad90af670a462b0ccac23cc599a1a13e26
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336355"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo – struktura
-`CDaoRelationInfo` Struktura obsahuje informace o vztah mezi dvěma tabulkami v pole definované [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
+`CDaoRelationInfo` Struktura obsahuje informace o vztahu mezi dvěma tabulkami v definované [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,43 +46,43 @@ struct CDaoRelationInfo
   
 #### <a name="parameters"></a>Parametry  
 *m_strName*  
- Jedinečné názvy objekt relace. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
+ Objekt vztahu jedinečné názvy. Další informace naleznete v tématu "Název vlastnosti" v nápovědě k DAO.  
   
  *m_strTable*  
- Názvy v primární tabulce v vztah.  
+ Názvy ve vztahu primární tabulce.  
   
  *m_strForeignTable*  
- Názvy cizí tabulky v vztah. Cizí tabulka je tabulka použitá tak, aby obsahovala cizí klíče. Obecně platí používáte cizí tabulce k navázání nebo vynutit referenční integrity. Cizí tabulka je obvykle na straně n vztah jeden mnoho. Příklady cizí tabulky jsou tabulky, které obsahují kódy pro American stavy nebo Kanadští provincie nebo objednávek zákazníků.  
+ Názvy tabulce cizího ve vztahu. Tabulka cizího je tabulka obsahovaly cizí klíče. Tabulka cizího se obecně používá k navázání nebo vynutit referenční integritu. Tabulka cizího je obvykle na straně n vztah jeden mnoho. Cizí tabulky příklady tabulky obsahující kódy pro amerických států nebo Kanadské provincie nebo objednávek zákazníků.  
   
  *m_lAttributes*  
- Obsahuje informace o typ vztahu. Hodnota této vlastnosti může být jedno z následujících:  
+ Obsahuje informace o typu vztahu. Hodnota této vlastnosti může být kterýkoli z následujících:  
   
-- **dbRelationUnique** je relace 1: 1.  
+- `dbRelationUnique` Je relace 1: 1.  
   
-- **dbRelationDontEnforce** relace není vynucena (žádné referenční integrity).  
+- `dbRelationDontEnforce` Relace není vynucena (žádná referenční integrita).  
   
-- **dbRelationInherited** existuje relace v fixní databázi, která obsahuje dvě připojené tabulky.  
+- `dbRelationInherited` Existuje relace v databázi fixní, která obsahuje dvě připojené tabulky.  
   
-- **dbRelationLeft** relace je levé spojení. Levé vnější spojení zahrnuje všechny záznamy z první (levém) dvou tabulek, i když nejsou zjištěny odpovídající hodnoty pro záznamy v druhé tabulce (pravém).  
+- `dbRelationLeft` Relace je levé spojení. Levé vnější spojení zahrnuje všechny záznamy z první (vlevo) dvou tabulek, i když nejsou zjištěny odpovídající hodnoty pro záznamy v tabulce druhé (napravo).  
   
-- **dbRelationRight** relace není pravé spojení. Pravé vnější spojení zahrnuje všechny záznamy z druhého (pravém) dvou tabulek, i když nejsou zjištěny odpovídající hodnoty pro záznamy v první tabulce (levém).  
+- `dbRelationRight` Relace je pravé spojení. Pravé vnější spojení zahrnuje všechny záznamy z druhé (napravo) dvou tabulek, i když nejsou zjištěny odpovídající hodnoty pro záznamy v první tabulce (vlevo).  
   
-- **dbRelationUpdateCascade** budou přeneseny aktualizace.  
+- `dbRelationUpdateCascade` Aktualizace budou přeneseny.  
   
-- **dbRelationDeleteCascade** budou přeneseny odstranění.  
+- `dbRelationDeleteCascade` Odstranění budou přeneseny.  
   
 *m_pFieldInfos*  
- Ukazatel na pole [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Toto pole obsahuje jeden objekt pro každé pole v vztah. `m_nFields` – Datový člen poskytuje počet prvků pole.  
+ Ukazatel na pole [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Pole obsahuje jeden objekt pro každé pole v vztah. `m_nFields` Datový člen vrací počet prvků pole.  
   
 *m_nFields*  
- Počet `CDaoRelationFieldInfo` objekty v `m_pFieldInfos` – datový člen.  
+ Počet `CDaoRelationFieldInfo` objekty v `m_pFieldInfos` datový člen.  
   
 ## <a name="remarks"></a>Poznámky  
- Odkazy na primární a sekundární výše označuje, jak je vrácené informace [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) členské funkce ve třídě `CDaoDatabase`.  
+ Odkazy na primární a sekundární výše určit, jak vrácené informace [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) členské funkce ve třídě `CDaoDatabase`.  
   
- Objekty relace nejsou reprezentované pomocí třídy knihovny MFC. Místo toho, objekt DAO základní objekt MFC `CDaoDatabase` třída udržuje na kolekci objektů vztah: `CDaoDatabase` zdroje členské funkce pro přístup k některé jednotlivé položky informace o vztahu, nebo k nim mají přístup všechny najednou s `CDaoRelationInfo` objekt voláním `GetRelationInfo` členské funkce obsahující objektu databáze.  
+ Objekty relace nejsou reprezentovány třídy knihovny MFC. Místo toho, objekt DAO základní objekt knihovny MFC `CDaoDatabase` třída udržuje kolekci objektů vztah: `CDaoDatabase` poskytuje členské funkce pro přístup k některé jednotlivých položek informace o vztahu, nebo k nim přistupovat všechny najednou s `CDaoRelationInfo` objektu voláním `GetRelationInfo` členská funkce obsahující objekt databáze.  
   
- Načte informace [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) – členská funkce je uložen v `CDaoRelationInfo` struktura. `CDaoRelationInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoRelationInfo` objektu.  
+ Načte informace [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) členská funkce je uložen v `CDaoRelationInfo` struktury. `CDaoRelationInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoRelationInfo` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  

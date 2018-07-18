@@ -1,5 +1,5 @@
 ---
-title: is_class – třída | Microsoft Docs
+title: is_class – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843597"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966443"
 ---
 # <a name="isclass-class"></a>is_class – třída
 
-Testy, pokud je typ třídy.
+Testuje, zda je typ je třída.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je typ definovaný jako `class` nebo `struct`, nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je typ definován jako **třídy** nebo **struktura**, nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -77,9 +77,9 @@ is_class<int> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_compound – třída](../standard-library/is-compound-class.md)<br/>

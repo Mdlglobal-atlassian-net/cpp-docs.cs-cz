@@ -1,5 +1,5 @@
 ---
-title: value_compare – třída (&lt;mapy&gt;) | Microsoft Docs
+title: value_compare – třída (&lt;mapy&gt;) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856043"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965845"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare – třída (&lt;mapy&gt;)
 
-Poskytuje objekt funkce, který můžete porovnat elementy mapy srovnáním jejich klíčů určit jejich relativní pořadí v mapě.
+Poskytuje objekt funkce, který může porovnat prvky objektu map porovnáním hodnot jejich klíče pro určení jejich relativního pořadí v objektu map.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,21 +45,21 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Toto kritérium porovnání poskytované `value_compare` mezi **value_types** celou elementů obsažených mapu je vyvolané z porovnání mezi klíče příslušných elementů ve vytváření pomocná třída. Operátor členské funkce používá objekt **comp** typu `key_compare` uložené v objektu funkce poskytované `value_compare` k porovnání klíč řazení součástí dva elementy.
+Kritérium porovnání poskytované `value_compare` mezi `value_types` celé elementů obsažených mapy je vyvolaných z porovnání mezi službou klíče příslušných elementů pomocí vytváření pomocná třída. Objekt používá operátor členské funkce `comp` typu `key_compare` uloženou v objektu funkce poskytované `value_compare` k porovnání dvou prvků komponenty klíč řazení.
 
-Nastaví a multisets, které jsou jednoduché kontejnery, kde jsou hodnoty klíče shodné s hodnotami element, `value_compare` je ekvivalentní `key_compare`, mapy a multimaps nejsou, jako hodnota typu `pair` elementy není stejný jako Hodnota klíče elementu.
+Pro sady a multisets, které jsou jednoduché kontejnery, ve kterém jsou shodné s hodnoty prvků hodnoty klíče, `value_compare` je ekvivalentní `key_compare`; pro mapy a multimaps nejsou, jako hodnotu typu `pair` prvky není stejný jako hodnotu klíče prvku.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se příklad [value_comp –](../standard-library/map-class.md#value_comp) příklad toho, jak deklarace a používání `value_compare`.
+Viz příklad pro [value_comp –](../standard-library/map-class.md#value_comp) příklad toho, jak deklarace a používání `value_compare`.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<mapy >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [binary_function – struktura](../standard-library/binary-function-struct.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

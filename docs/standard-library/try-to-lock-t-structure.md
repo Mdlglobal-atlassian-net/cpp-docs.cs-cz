@@ -1,5 +1,5 @@
 ---
-title: try_to_lock_t – struktura | Microsoft Docs
+title: try_to_lock_t – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a093c42ef5783f5b838b2cdecdc9a70c3b2d56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1650f3afe243b238b2854d77c2c3736422b809b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853271"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952918"
 ---
 # <a name="trytolockt-structure"></a>try_to_lock_t – struktura
 
-Představuje `struct` , který definuje [try_to_lock –](../standard-library/mutex-functions.md#try_to_lock) objektu. Umožňuje vybrat jednu z přetížené konstruktory [unique_lock](../standard-library/unique-lock-class.md).
+Představuje **struktura** , který definuje [try_to_lock –](../standard-library/mutex-functions.md#try_to_lock) objektu. Umožňuje vybrat jednu z přetížených konstruktorů z [unique_lock –](../standard-library/unique-lock-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ struct try_to_lock_t;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<mutex >
+**Záhlaví:** \<vzájemně vyloučeného přístupu >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex >](../standard-library/mutex.md)<br/>
+[\<mutex – >](../standard-library/mutex.md)<br/>

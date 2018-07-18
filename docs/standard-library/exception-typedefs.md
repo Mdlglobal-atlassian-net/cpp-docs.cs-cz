@@ -1,5 +1,5 @@
 ---
-title: '&lt;výjimka&gt; – definice TypeDef | Microsoft Docs'
+title: '&lt;výjimka&gt; – definice TypeDef | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,12 +8,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 68f95407fe22c7e8b70426e555f46eb0a4c80338
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846256"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954122"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;výjimka&gt; – definice TypeDef
 
@@ -31,23 +31,23 @@ typedef unspecified exception_ptr;
 
 ### <a name="remarks"></a>Poznámky
 
-Neurčené interní třída, která se používá k implementaci `exception_ptr` typu.
+Neurčená vnitřní třída, která se používá k implementaci `exception_ptr` typu.
 
-Použijte `exception_ptr` objekt, který má odkazovat na aktuální výjimky nebo instanci výjimka zadaného uživatelem. V implementaci společnosti Microsoft, je reprezentována výjimku [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Každý `exception_ptr` objekt zahrnuje pole odkazu výjimka, která odkazuje na kopii `EXCEPTION_RECORD` struktura, která představuje výjimku.
+Použití `exception_ptr` pro odkázání na aktuální výjimku nebo instanci uživatelské výjimky. V implementaci společnosti Microsoft, je reprezentována výjimku [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Každý `exception_ptr` objekt obsahuje referenční pole výjimky, která odkazuje na kopii `EXCEPTION_RECORD` struktura, která představuje výjimku.
 
-Když je deklarovat `exception_ptr` proměnné, proměnné není přidružen k žádné výjimky. Tedy referenční pole výjimky je NULL. Takové `exception_ptr` objektu se říká *null exception_ptr*.
+Pokud deklarujete `exception_ptr` proměnné, proměnná není přidružen k žádné výjimce. Tedy referenční pole výjimky je NULL. Tyto `exception_ptr` objekt, se nazývá *nulový exception_ptr*.
 
-Použití `current_exception` nebo `make_exception_ptr` funkce přiřadit výjimku `exception_ptr` objektu. Přiřadíte-li výjimku `exception_ptr` proměnné, pole výjimka odkazu proměnnou odkazuje na kopii této výjimky. Pokud není k dispozici dostatek paměti pro kopírování výjimku, pole výjimka odkazu odkazuje na kopii [std::bad_alloc](../standard-library/bad-alloc-class.md) výjimka. Pokud `current_exception` nebo `make_exception_ptr` funkce nelze zkopírovat výjimku z jiného důvodu, volání funkce **ukončit** funkce CRT ukončíte aktuálním procesu.
+Použití `current_exception` nebo `make_exception_ptr` funkce pro přiřazení výjimky do `exception_ptr` objektu. Při přiřazení výjimky do `exception_ptr` proměnné, referenční pole výjimky proměnné odkazuje na kopii výjimky. Pokud není dostatek paměti pro zkopírování výjimky, referenční pole výjimky odkazuje na kopii [std::bad_alloc](../standard-library/bad-alloc-class.md) výjimky. Pokud `current_exception` nebo `make_exception_ptr` funkce nemůže zkopírovat výjimku z jiného důvodu, zavolá funkce `terminate` CRT funkce pro ukončení aktuálního procesu.
 
-Bez ohledu na jeho název `exception_ptr` objektu není sám sebe. je zde ukazatel. Ho neřídí sémantika ukazatele a nelze jej použít s přístup ke členu ukazatele ( `->`) nebo operátory indirection (*). `exception_ptr` Objekt nemá žádné členy veřejná data nebo členské funkce.
+Bez ohledu na její název `exception_ptr` objektu je sám není ukazatel. Nedodržuje sémantiku ukazatele a nelze použít s přístup ke členu ukazatel ( `->`) nebo operátory dereference (*). `exception_ptr` Objekt nemá žádné veřejné datové členy a členské funkce.
 
 **Porovnání:**
 
-Můžete rovno ( `==`) a není rovno ( `!=`) operátory k porovnání dvou `exception_ptr` objekty. Operátory porovnání není binární hodnotu (bitový) `EXCEPTION_RECORD` struktury, které představují výjimky. Místo toho operátory porovnání adresy v poli výjimka odkazu `exception_ptr` objekty. V důsledku toho s hodnotou null `exception_ptr` a porovnání jako rovnocenné hodnotu NULL.
+Můžete použít rovnosti ( `==`) a není rovno ( `!=`) operátory pro porovnání dvou `exception_ptr` objekty. Operátory neporovnávají binární hodnoty (bitový vzor) z `EXCEPTION_RECORD` struktury, které představují výjimky. Místo toho operátory porovnávají adresy v referenčním poli výjimky z `exception_ptr` objekty. V důsledku toho s hodnotou null `exception_ptr` a hodnota NULL rovnají.
 
 ## <a name="terminate_handler"></a>  terminate_handler
 
-Popisuje typ ukazatel na funkci, která je vhodná pro použití jako `terminate_handler`.
+Typ, který popisuje ukazatele na funkci vhodný pro použití jako `terminate_handler`.
 
 ```cpp
 typedef void (*terminate_handler)();
@@ -59,11 +59,11 @@ Typ, který popisuje ukazatele na funkci vhodný pro použití jako obslužná r
 
 ### <a name="example"></a>Příklad
 
-V tématu [set_terminate –](../standard-library/exception-functions.md#set_terminate) příklad použití `terminate_handler`.
+Zobrazit [set_terminate](../standard-library/exception-functions.md#set_terminate) příklad použití `terminate_handler`.
 
 ## <a name="unexpected_handler"></a>  unexpected_handler
 
-Popisuje typ ukazatel na funkci, která je vhodná pro použití jako `unexpected_handler`.
+Typ, který popisuje ukazatele na funkci vhodný pro použití jako `unexpected_handler`.
 
 ```cpp
 typedef void (*unexpected_handler)();
@@ -71,8 +71,8 @@ typedef void (*unexpected_handler)();
 
 ### <a name="example"></a>Příklad
 
-V tématu [set_unexpected –](../standard-library/exception-functions.md#set_unexpected) příklad použití `unexpected_handler`.
+Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití `unexpected_handler`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<Výjimka >](../standard-library/exception.md)<br/>
+[\<výjimky >](../standard-library/exception.md)<br/>

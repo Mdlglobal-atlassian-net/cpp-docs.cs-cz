@@ -1,5 +1,5 @@
 ---
-title: less_equal – struktura | Microsoft Docs
+title: less_equal – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b034b0179985d684df93575cc8ff934e5381554b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfe7f0c579e0e22e3de98a9e5edf3abee6cfc2b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852305"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953166"
 ---
 # <a name="lessequal-struct"></a>less_equal – struktura
 
-Predikát binární, který provede operaci menší než nebo rovno ( `operator<=`) na její argumenty.
+Binární predikát, který provádí operace menší než nebo rovno (`operator<=`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,19 +49,19 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Žádný typ, který podporuje `operator<=` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* libovolný typ, který podporuje `operator<=` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand operace menší než nebo rovno. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand operace menší než nebo rovno. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left <= Right`. Specializované šablony ideální předávání výsledku, který má typ vrácený `operator<=`.
+Výsledek `Left <= Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ vrácený `operator<=`.
 
 ## <a name="remarks"></a>Poznámky
 
-Binární predikát `less_equal` <  `Type`> poskytuje striktní slabé řazení sady hodnot element typu `Type` do třídy ekvivalenční jenom v případě tohoto typu splňuje požadavky na standardní matematické pro proto řazen. Specializací pro jakýkoli typ ukazatele yield celkový řazení elementů v tom, že všechny elementy odlišné hodnoty jsou seřazené s ohledem na sebe navzájem.
+Binární predikát `less_equal` <  `Type`> poskytuje přísné slabé seřazení sady hodnot prvků typu *typ* na rovnocennost třídy pouze v případě tento typ splňuje standard matematické požadavky na seřadí se tak. Specializace pro libovolný typ ukazatele yield celkového pořadí prvků, v tom, že všechny prvky různých hodnot jsou uspořádány ve vztahu mezi sebou.
 
 ## <a name="example"></a>Příklad
 
@@ -128,8 +128,8 @@ Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
