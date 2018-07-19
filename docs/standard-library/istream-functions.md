@@ -1,5 +1,5 @@
 ---
-title: '&lt;IStream on Request&gt; funkce | Microsoft Docs'
+title: '&lt;IStream&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,22 +11,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863888"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953645"
 ---
-# <a name="ltistreamgt-functions"></a>&lt;IStream on Request&gt; funkce
+# <a name="ltistreamgt-functions"></a>&lt;IStream&gt; funkce
 
 |||
 |-|-|
-|[Swap](#istream_swap)|[ws](#ws)|
+|[Prohození](#istream_swap)|[ws](#ws)|
 
-## <a name="istream_swap"></a>  Swap
+## <a name="istream_swap"></a>  Prohození
 
-Výměny elementy dva objekty datového proudu.
+Vymění prvky dvou objektů datového proudu.
 
 ```cpp
 template <class Elem, class Tr>
@@ -42,13 +42,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Datový proud.
+*levé* datového proudu.
 
-`right` Datový proud.
+*správné* datového proudu.
 
 ## <a name="ws"></a>  ws
 
-Přeskočí mezer v datovém proudu.
+Přeskočí prázdné místo v datovém proudu.
 
 ```cpp
 template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _Istr);
@@ -56,7 +56,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parametry
 
-`_Istr` Datový proud.
+*_Istr* datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -64,14 +64,14 @@ Datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulator extrahuje a zahodí všechny elementy `ch` pro kterou [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**>> ( [getloc –](../standard-library/ios-base-class.md#getloc)). **je**( **ctype** \< **Elem**>:: **místo**, **ch**) hodnotu true.
+Manipulátor extrahuje a zahodí všechny prvky `ch` pro kterou [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**>> ( [getloc –](../standard-library/ios-base-class.md#getloc)). **je**( **ctype** \< **Elem**>:: **místo**, **ch**) má hodnotu true.
 
-Volání funkcí [setstate –](../standard-library/basic-ios-class.md#setstate)( **eofbit**) v případě nalezení konec souboru při extrahování elementy. Vrátí `_Istr`.
+Volání funkcí [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), pokud dojde při extrahování prvků konec souboru. Vrátí *_Istr*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [operátor >>](../standard-library/istream-operators.md#op_gt_gt) příklad použití `ws`.
+Zobrazit [operátor >>](../standard-library/istream-operators.md#op_gt_gt) pro příklad použití `ws`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<IStream on Request >](../standard-library/istream.md)<br/>
+[\<IStream >](../standard-library/istream.md)<br/>

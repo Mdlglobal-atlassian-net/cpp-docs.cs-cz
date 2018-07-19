@@ -1,5 +1,5 @@
 ---
-title: is_integral – třída | Microsoft Docs
+title: is_integral – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954028"
 ---
 # <a name="isintegral-class"></a>is_integral – třída
 
-Testy, pokud typ je nedílnou součástí.
+Testuje, zda je typ je nedílnou součástí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je jedním z celočíselných typů nebo `cv-qualified` formu jeden z celočíselných typů, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je jedním z celočíselných typů nebo `cv-qualified` formě integrální typy, jinak má hodnotu false.
 
-Integrální typ je jedním z `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, a `unsigned long`. Kromě toho se kompilátory, které získají, typ integrální může být jedna z `long long`, `unsigned long long`, `__int64`, a `unsigned __int64`.
+Celočíselný typ je jednou z **bool**, **char**, **unsigned char**, **podepsané char**, **wchar_t**, **krátký**, **unsigned short**, **int**, **unsigned int**, **dlouhé**a **unsigned long**. Kromě toho s kompilátory, které získají, integrálový typ může být jeden z **long long**, **unsigned long long.**, **__int64**, a **unsigned __int64**.
 
 ## <a name="example"></a>Příklad
 
@@ -82,9 +82,9 @@ is_integral<float> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_enum – třída](../standard-library/is-enum-class.md)<br/>
