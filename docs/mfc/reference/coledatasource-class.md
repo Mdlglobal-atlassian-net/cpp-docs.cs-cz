@@ -1,5 +1,5 @@
 ---
-title: Coledatasource – třída | Microsoft Docs
+title: Coledatasource – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 839068647a6f4d118e1536f5fb4e0852657d963f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038552"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027778"
 ---
 # <a name="coledatasource-class"></a>Coledatasource – třída
-Jednání jako mezipaměť, do které aplikace umístí data, která nabízí během data přenášet operace, např. schránku nebo operací přetažení myší.  
+Slouží jako mezipaměť, do které aplikace umístí data, která bude nabízet během data transfer operace, jako je například schránky nebo operace přetažení myší.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,30 +74,30 @@ class COleDataSource : public CCmdTarget
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleDataSource::CacheData](#cachedata)|Nabízí data v zadaném formátu, který používá **STGMEDIUM** struktury.|  
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Nabízí data v zadaném formátu, který používá `HGLOBAL`.|  
-|[COleDataSource::DelayRenderData](#delayrenderdata)|Nabízí data v zadaném formátu pomocí zpožděné vykreslování.|  
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Nabízí data ve formátu určeného v `CFile` ukazatel.|  
-|[COleDataSource::DelaySetData](#delaysetdata)|Volá se pro každý formát, který je podporován v `OnSetData`.|  
-|[COleDataSource::DoDragDrop](#dodragdrop)|Operace přetažení myší se zdrojem dat provádí.|  
-|[COleDataSource::Empty](#empty)|Vyprázdní `COleDataSource` objekt data.|  
+|[COleDataSource::CacheData](#cachedata)|Nabízí data v zadaném formátu pomocí `STGMEDIUM` struktury.|  
+|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Nabízí data v zadaném formátu pomocí HGLOBAL.|  
+|[COleDataSource::DelayRenderData](#delayrenderdata)|Nabízí data v zadaném formátu pomocí zpožděného vykreslování.|  
+|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Nabízí data ve formátu určeného v `CFile` ukazatele.|  
+|[COleDataSource::DelaySetData](#delaysetdata)|Volá se pro každý formátu, který je podporovaný v `OnSetData`.|  
+|[COleDataSource::DoDragDrop](#dodragdrop)|Provádí operace přetažení myší se zdrojem dat.|  
+|[COleDataSource::Empty](#empty)|Vyprázdní `COleDataSource` objektu data.|  
 |[COleDataSource::FlushClipboard](#flushclipboard)|Vykreslí všechna data do schránky.|  
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Ověřuje, že data umístit do schránky je stále existuje.|  
-|[COleDataSource::OnRenderData](#onrenderdata)|Načte data v rámci zpožděné vykreslování.|  
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Načítání dat do `CFile` jako součást zpožděné vykreslování.|  
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Načte data do `HGLOBAL` jako součást zpožděné vykreslování.|  
-|[COleDataSource::OnSetData](#onsetdata)|Voláno k nahrazení data v `COleDataSource` objektu.|  
-|[COleDataSource::SetClipboard](#setclipboard)|Místech `COleDataSource` objektu do schránky.|  
+|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Ověří, zda data umístěná ve schránce je stále existuje.|  
+|[COleDataSource::OnRenderData](#onrenderdata)|Načte data jako součást zpožděné vykreslování.|  
+|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Načte data do `CFile` jako součást zpožděné vykreslování.|  
+|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Načte data do HGLOBAL jako součást zpožděné vykreslování.|  
+|[COleDataSource::OnSetData](#onsetdata)|Volá se, aby se nahradit data v `COleDataSource` objektu.|  
+|[COleDataSource::SetClipboard](#setclipboard)|Místa `COleDataSource` objektu do schránky.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvořením zdroje dat OLE přímo. Můžete také [COleClientItem](../../mfc/reference/coleclientitem-class.md) a [COleServerItem](../../mfc/reference/coleserveritem-class.md) třídy Vytvoření zdroje dat OLE v reakci na jejich `CopyToClipboard` a `DoDragDrop` členské funkce. V tématu [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) stručný popis. Přepsání `OnGetClipboardData` – členská funkce třída klienta položky nebo server položku pro přidání dalších formátech schránky do dat ve zdroji dat OLE pro vytvořit `CopyToClipboard` nebo `DoDragDrop` – členská funkce.  
+ Zdroje dat OLE můžete vytvořit přímo. Alternativně [COleClientItem](../../mfc/reference/coleclientitem-class.md) a [odvozenou třídu COleServerItem](../../mfc/reference/coleserveritem-class.md) třídy vytvořit zdroje dat OLE v reakci na jejich `CopyToClipboard` a `DoDragDrop` členské funkce. Zobrazit [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) stručný popis. Přepsat `OnGetClipboardData` členské funkce třídy vašeho klienta položky nebo server položky pro přidání dalších formátů schránky do dat ve zdroji dat OLE vytvořené pro `CopyToClipboard` nebo `DoDragDrop` členskou funkci.  
   
- Vždy, když chcete připravit data přenosu, doporučujeme vytvoření objektu této třídy a vyplňte v něm s daty pomocí metody nejvhodnější pro vaše data. Způsob, jakým je vložen do zdroje dat je přímo ovlivňován okamžitě zadaná data (okamžitou vykreslování) nebo na vyžádání (odložené vykreslování). Pro každý formát schránky, ve kterém jsou poskytuje data předáním formát schránky, který se má použít (a volitelné [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura), volání [DelayRenderData](#delayrenderdata).  
+ Pokaždé, když chcete připravit data pro přenos, by měl vytvořit objekt této třídy a naplňte ji s daty pomocí metody nejvhodnější pro vaše data. Způsob, jakým je vložen do zdroje dat je přímo ovlivňován řadou okamžitě zadaná data (okamžité vykreslování) nebo na vyžádání (odložené vykreslování). Pro každou formát schránky, ve kterém jsou poskytování dat tím, že předáte formát schránky, který se má použít (a případně [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury), volání [DelayRenderData](#delayrenderdata).  
   
- Další informace o zdrojích dat a přenos dat, najdete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Kromě toho článek [schránky témata](../../mfc/clipboard.md) popisuje mechanismu schránky OLE.  
+ Další informace o zdrojích dat a přenos dat, najdete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Kromě toho článku [schránky témata](../../mfc/clipboard.md) popisuje mechanismu schránky OLE.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -107,7 +107,7 @@ class COleDataSource : public CCmdTarget
  **Záhlaví:** afxole.h  
   
 ##  <a name="cachedata"></a>  COleDataSource::CacheData  
- Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
+ Voláním této funkce můžete určit formát, ve kterém dat se nabízelo pro data operace přenosu.  
   
 ```  
 void CacheData(
@@ -121,26 +121,26 @@ void CacheData(
  Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
  *lpStgMedium*  
- Odkazuje na [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura obsahující data ve formátu určeném.  
+ Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura obsahující data ve formátu určeném.  
   
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být nabízí data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Je třeba zadat data, protože tato funkce poskytuje ji pomocí okamžitou vykreslování. Data se uloží do mezipaměti, dokud nebude potřeba.  
+ Je nutné zadat data, protože tato funkce poskytuje okamžitou vykreslování pomocí. Data se do mezipaměti, dokud není potřeba.  
   
- Zadat data pomocí [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury. Můžete také `CacheGlobalData` – členská funkce pokud poskytuje množství dat, je dostatečně malé, které se mají přenést, efektivně pomocí `HGLOBAL`.  
+ Zadat data s využitím [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury. Můžete také použít `CacheGlobalData` členskou funkci, pokud dodání množství dat je dostatečně malá, aby přenést efektivně pomocí HGLOBAL.  
   
- Po zavolání `CacheData` **ptd** členem `lpFormatEtc` a obsah `lpStgMedium` jsou vlastněny datový objekt, ne podle volající.  
+ Po volání `CacheData` `ptd` členem `lpFormatEtc` a obsah *lpStgMedium* jsou vlastněny datový objekt volajícím.  
   
- Chcete-li použít zpožděné vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) – členská funkce. Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
  Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
   
 ##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
- Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
+ Voláním této funkce můžete určit formát, ve kterém dat se nabízelo pro data operace přenosu.  
   
 ```  
 void CacheGlobalData(
@@ -154,19 +154,19 @@ void CacheGlobalData(
  Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
  *hGlobal*  
- Popisovač globální paměť bloku obsahující data ve formátu určeném.  
+ Zpracování bloku globální paměti obsahující data ve formátu určeném.  
   
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být nabízí data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce poskytuje data pomocí okamžitou vykreslování, takže data musíte zadat při volání funkce; data se uloží do mezipaměti, dokud nebude potřeba. Použití `CacheData` – členská funkce, pokud jsou zadávání velké množství dat nebo pokud vyžadujete strukturovaných paměťového média.  
+ Tato funkce poskytuje data s využitím okamžité vykreslování, takže při volání funkce; je nutné zadat data data se do mezipaměti, dokud není potřeba. Použití `CacheData` členskou funkci, pokud zadáváte velká množství dat nebo pokud požadujete střední strukturované úložiště.  
   
- Chcete-li použít zpožděné vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) – členská funkce. Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Použití zpožděného vykreslování, zavolejte [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura ve Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
   
 ##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Vytvoří `COleDataSource` objektu.  
@@ -176,7 +176,7 @@ COleDataSource();
 ```  
   
 ##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
- Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
+ Voláním této funkce můžete určit formát, ve kterém dat se nabízelo pro data operace přenosu.  
   
 ```  
 void DelayRenderData(
@@ -189,21 +189,21 @@ void DelayRenderData(
  Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být nabízí data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce poskytuje data pomocí zpožděné vykreslování, takže data se nedodává okamžitě. [OnRenderData](#onrenderdata) nebo [OnRenderGlobalData](#onrenderglobaldata) – členská funkce je volána k vyžádání data.  
+ Tato funkce poskytuje data pomocí zpožděného vykreslování, takže data není zadáno okamžitě. [OnRenderData](#onrenderdata) nebo [OnRenderGlobalData](#onrenderglobaldata) členská funkce je volána k požadavku data.  
   
- Tuto funkci použít, pokud nechcete zadat data prostřednictvím `CFile` objektu. Pokud chcete zadat data prostřednictvím `CFile` objektu, volání [DelayRenderFileData](#delayrenderfiledata) – členská funkce. Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Tuto funkci použít, pokud se chystáte zadat data prostřednictvím `CFile` objektu. Pokud se chystáte zadat data prostřednictvím `CFile` objektů, zavolejte [DelayRenderFileData](#delayrenderfiledata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Chcete-li použít okamžitou vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) – členská funkce.  
+ Chcete-li použít okamžité vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) členskou funkci.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura ve Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
   
 ##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
- Volání této funkce můžete určit formát, ve kterém dat je nabídnuta během data operace přenosu.  
+ Voláním této funkce můžete určit formát, ve kterém dat se nabízelo pro data operace přenosu.  
   
 ```  
 void DelayRenderFileData(
@@ -216,21 +216,21 @@ void DelayRenderFileData(
  Formát schránky, ve kterém má být nabízí data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být nabízí data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém data nabízet. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce poskytuje data pomocí zpožděné vykreslování, takže data se nedodává okamžitě. [OnRenderFileData](#onrenderfiledata) – členská funkce je volána k vyžádání data.  
+ Tato funkce poskytuje data pomocí zpožděného vykreslování, takže data není zadáno okamžitě. [OnRenderFileData](#onrenderfiledata) členská funkce je volána k požadavku data.  
   
- Tuto funkci použít, pokud se bude používat `CFile` objekt, který chcete zadat data. Pokud nechcete použít `CFile` objektu, volání [DelayRenderData](#delayrenderdata) – členská funkce. Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Tuto funkci použít, pokud se chystáte použít `CFile` objekt slouží k poskytování data. Pokud se chystáte použít `CFile` objektů, zavolejte [DelayRenderData](#delayrenderdata) členskou funkci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Chcete-li použít okamžitou vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) – členská funkce.  
+ Chcete-li použít okamžité vykreslování, zavolejte [CacheData](#cachedata) nebo [CacheGlobalData](#cacheglobaldata) členskou funkci.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura ve Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
   
 ##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
- Volání této funkce můžete podporovat změnu obsah datového zdroje.  
+ Voláním této funkce pro podporu změnit obsah datového zdroje.  
   
 ```  
 void DelaySetData(
@@ -240,20 +240,20 @@ void DelaySetData(
   
 ### <a name="parameters"></a>Parametry  
  *cfFormat*  
- Formát schránky, ve kterém má být umístěn data. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
+ Formát schránky, ve kterém se data budou umístěny. Tento parametr může být jeden z předdefinovaných formátů schránky nebo hodnoty vrácené nativní Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkce.  
   
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém má být nahrazen data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formát schránky určeného *cfFormat*. Pokud je **NULL**, použijí se výchozí hodnoty pro v ostatních polích **FORMATETC** struktura.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura popisující formát, ve kterém se nahradit data. Zadejte hodnotu pro tento parametr, pokud chcete zadat informace o dalších formátu nad rámec formátu schránky určeném *cfFormat*. Pokud je hodnota NULL, budou použity výchozí hodnoty pro ostatní pole v `FORMATETC` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- [OnSetData](#onsetdata) bude volat rozhraní v takovém případě. Používá se jen při rozhraní vrátí zdroj dat z [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Pokud `DelaySetData` není volán, vaše `OnSetData` funkce nebude nikdy volat. `DelaySetData` by měla být volána pro každý schránky nebo **FORMATETC** formátu, které podporujete.  
+ [OnSetData](#onsetdata) se volá se rozhraním, když k tomu dojde. Používá se jenom návratu zdroj dat v rámci [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Pokud `DelaySetData` není volána, vaše `OnSetData` funkce nebude nikdy volána. `DelaySetData` by měla být volána pro každý schránky nebo `FORMATETC` formátu, které podporujete.  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura ve Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura v sadě Windows SDK.  
   
- Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) ve Windows SDK.  
+ Další informace najdete v tématu [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) v sadě Windows SDK.  
   
 ##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
- Volání `DoDragDrop` – členská funkce k provedení operace přetažení myší pro tento zdroj dat, obvykle v [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) obslužné rutiny.  
+ Volání `DoDragDrop` členská funkce k provedení operace přetažení myší pro tento zdroj dat, obvykle v [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) obslužné rutiny.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -263,43 +263,43 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *dwEffects*  
- Přetažení myší operace, které jsou povoleny na tomto datovém zdroji. Může být jeden nebo více následujících akcí:  
+*dwEffects*  
+Přetáhněte myší operace, které jsou povolené v tomto zdroji dat. Může být jeden nebo více z následujících akcí:  
   
-- `DROPEFFECT_COPY` Operace kopírování můžete provést.  
+ - DROPEFFECT_COPY, které nejde provést operaci kopírování.  
+      
+ - Operace přesunu A DROPEFFECT_MOVE může provést.  
+      
+ - Nedá se navázat odkaz A DROPEFFECT_LINK z vyřazené dat na původní data.  
+      
+ - DROPEFFECT_SCROLL znamená, že může dojít k posouvání operace přetažení.  
   
-- `DROPEFFECT_MOVE` Můžete provést operaci přesunutí.  
+*lpRectStartDrag*  
+Ukazatel na obdélník, který definuje, ve kterém ve skutečnosti spustí přetahování. Další informace naleznete v následující části poznámky.  
   
-- `DROPEFFECT_LINK` Může vytvořit odkaz z vynechaných dat na původní data.  
-  
-- `DROPEFFECT_SCROLL` Označuje, že mohlo dojít posuňte operaci přetažení.  
-  
- *lpRectStartDrag*  
- Ukazatel na obdélníku, která definuje, kde přetáhněte skutečně spustí. Další informace naleznete v následující části poznámky.  
-  
- *pDropSource*  
- Odkazuje na zdroje přetažení. Pokud **NULL** pak výchozí implementaci třídy [COleDropSource](../../mfc/reference/coledropsource-class.md) se použije.  
+*pDropSource*  
+Body do zdroje přemístění. Pokud se hodnota NULL, pak výchozí implementaci třídy [coledropsource –](../../mfc/reference/coledropsource-class.md) se použije.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vyřaďte vliv generovány operací přetažení myší; v opačném případě `DROPEFFECT_NONE` Pokud operaci nikdy začne, protože uživatel vydané před opuštěním zadaný obdélník tlačítko myši.  
+ Přetáhněte efekt generovaných operace přetažení myší; jinak DROPEFFECT_NONE Pokud nikdy zahájení operace vzhledem k tomu, že uživatel vydané před opuštěním zadaný obdélník tlačítko myši.  
   
 ### <a name="remarks"></a>Poznámky  
- Operaci přetažení myší nespustí okamžitě. Čeká, dokud myší opustí rámeček určeného *lpRectStartDrag* nebo dokud předané zadaný počet milisekund. Pokud *lpRectStartDrag* je **NULL**, velikost rámeček je jeden pixel.  
+ Operace přetažení myší nespustí ihned. To počká, dokud kurzor myši opustí obdélník určené *lpRectStartDrag* nebo dokud se zadaný počet milisekund prošly. Pokud *lpRectStartDrag* má hodnotu NULL, je velikost pravoúhelníku jeden pixel.  
   
- Doba zpoždění je určena nastavení klíče registru. Doba zpoždění lze změnit pomocí volání [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) nebo [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Pokud nezadáte čas zpoždění, se používá výchozí hodnota je 200 MS. Doba zpoždění přetažení se ukládají následujícím způsobem:  
+ Doba zpoždění je určené nastavení klíče registru. Doba zpoždění lze změnit pomocí volání [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) nebo [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Pokud nezadáte čas zpoždění, je použita výchozí hodnota 200 MS. Přetáhněte zpoždění je uložen následujícím způsobem:  
   
--   Doba zpoždění systému Windows NT přetáhněte je uložená v HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
+-   Doba zpoždění přetáhněte Windows NT se ukládají do HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
   
--   Doba zpoždění přetáhněte 3.x Windows je uložená v WIN. Soubor INI, části [Windows}.  
+-   Doba zpoždění přetáhněte 3.x Windows se ukládají do VÍTĚZSTVÍ. Soubor INI [Windows} oddílu.  
   
--   Doba zpoždění Windows 95/98 přetáhněte je uložená v mezipaměti verzi WIN. INI.  
+-   Přetáhněte Windows 95/98 zpoždění je uložen v mezipaměti verzi Windows. INI.  
   
- Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, najdete v části [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) ve Windows SDK.  
+ Pro další informace o tom, přetáhněte zpoždění informace jsou uloženy v registru buď nebo. Soubor INI, naleznete v tématu [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) v sadě Windows SDK.  
   
- Další informace najdete v článku [přetažení: implementace zdroje přetažení](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
+ Další informace najdete v článku [přetažení: implementace zdroje vyřadit](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
 ##  <a name="empty"></a>  COleDataSource::Empty  
- Volání této funkce na prázdnou `COleDataSource` objekt data.  
+ Voláním této funkce prázdný `COleDataSource` objektu data.  
   
 ```  
 void Empty();
@@ -308,10 +308,10 @@ void Empty();
 ### <a name="remarks"></a>Poznámky  
  Obě do mezipaměti a formáty vykreslení zpoždění jsou vyprázdněny, takže se můžete znovu použít.  
   
- Další informace najdete v tématu [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) ve Windows SDK.  
+ Další informace najdete v tématu [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) v sadě Windows SDK.  
   
 ##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
- Vykreslí data, která je do schránky a pak umožňuje vložení dat ze schránky po vypnutí aplikace.  
+ Vykreslí data, která je do schránky a pak umožňuje vložení dat ze schránky po ukončení vaší aplikace.  
   
 ```  
 static void PASCAL FlushClipboard();
@@ -321,17 +321,17 @@ static void PASCAL FlushClipboard();
  Použití [Modul SetClipboard](#setclipboard) dávat data do schránky.  
   
 ##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
- Určuje, zda data do schránky došlo ke změně od [Modul SetClipboard](#setclipboard) poslední volala a pokud ano, identifikuje aktuálního vlastníka.  
+ Určuje, jestli se data do schránky změnila od [Modul SetClipboard](#setclipboard) poslední se volá a pokud ano, identifikuje aktuální vlastník.  
   
 ```  
 static COleDataSource* PASCAL GetClipboardOwner();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Zdroj dat aktuálně na do schránky nebo **NULL** Pokud není nic do schránky nebo pokud schránky není vlastníkem je volající aplikace.  
+ Data source aktuálně do schránky nebo hodnota NULL, pokud není nic do schránky nebo jestliže schránky není vlastněn volající aplikace.  
   
 ##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
- Voláno rámcem k načtení dat v zadaném formátu.  
+ Volá se rozhraním, k načtení dat v zadaném formátu.  
   
 ```  
 virtual BOOL OnRenderData(
@@ -341,25 +341,25 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
   
  *lpStgMedium*  
- Odkazuje na [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém má být vrácen data.  
+ Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, ve kterém má být vrácena data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Zadaný formát je jeden dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) – členská funkce pro zpožděné vykreslování. Výchozí implementace této funkce bude volat [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata) Pokud zadaná úložné médium je soubor nebo paměti, v uvedeném pořadí. Pokud jsou zadány ani jeden z těchto formátů, bude výchozí implementace vraťte 0 a nic nestane. Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) nebo [DelayRenderFileData](#delayrenderfiledata) členskou funkci pro zpožděné vykreslování. Výchozí implementace této funkce bude volat [OnRenderFileData](#onrenderfiledata) nebo [OnRenderGlobalData](#onrenderglobaldata) Pokud je zadaný paměťovému médiu souboru nebo paměti, v uvedeném pořadí. Pokud ani jedno z těchto formátů údaje nezadáte, bude výchozí implementace vrátí 0 a Neprovádět žádnou akci. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Pokud *lpStgMedium*-> *objekt tymed* je **TYMED_NULL**, **STGMEDIUM** by měl být přidělené a vyplněna podle specifikace *lpFormatEtc -> objekt tymed*. Pokud není **TYMED_NULL**, **STGMEDIUM** je nutné zadat místní s daty.  
+ Pokud *lpStgMedium*-> *objekt tymed* je TYMED_NULL, `STGMEDIUM` by měl být přiděleno a vyplní podle specifikace *lpFormatEtc -> objekt tymed*. Pokud není TYMED_NULL, `STGMEDIUM` by mělo být vyplněno místo s daty.  
   
- Toto je rozšířené přepisovatelné. Funkci k poskytování vaše data v požadovaný formát a střední přepište. V závislosti na vaše data můžete místo toho jeden z jiné verze této funkce přepsání. Pokud vaše data jsou malé a pevnou velikost, mají přednost před `OnRenderGlobalData`. Pokud vaše data jsou v souboru nebo s proměnnou velikostí, mají přednost před `OnRenderFileData`.  
+ To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud vaše data je malý a pevnou velikost, má přednost před `OnRenderGlobalData`. Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktur, [objekt TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) typ výčtu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) v systému Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury, [objekt TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) typ výčtu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
   
 ##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
- Voláno rámcem k načtení dat v zadaném formátu, pokud zadaný úložné médium je soubor.  
+ Volá se rozhraním, k načtení dat v zadaném formátu souboru po zadanou paměťovému médiu.  
   
 ```  
 virtual BOOL OnRenderFileData(
@@ -369,23 +369,23 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
   
  *pFile*  
- Odkazuje na [cfile –](../../mfc/reference/cfile-class.md) objektu, ve kterém má být vykreslen data.  
+ Odkazuje [cfile –](../../mfc/reference/cfile-class.md) objektu, ve kterém se data mají být vykresleny.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Zadaný formát je jeden dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) – členská funkce pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrací **FALSE**.  
+ Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) členskou funkci pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrací hodnotu FALSE.  
   
- Toto je rozšířené přepisovatelné. Funkci k poskytování vaše data v požadovaný formát a střední přepište. V závislosti na vaše data můžete místo toho jeden z jiné verze této funkce přepsání. Pokud chcete zpracovat více úložná média, mají přednost před [OnRenderData](#onrenderdata). Pokud vaše data jsou v souboru nebo s proměnnou velikostí, mají přednost před `OnRenderFileData`. Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před `OnRenderFileData`. Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strukturu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) v sadě Windows SDK.  
   
 ##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
- Voláno rámcem k načtení dat v zadaném formátu, když střední zadané úložiště je globální paměť.  
+ Volá se rozhraním, k načtení dat v zadaném formátu po globální paměti zadaná paměťovému médiu.  
   
 ```  
 virtual BOOL OnRenderGlobalData(
@@ -395,25 +395,25 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve které je požadované informace.  
   
  *phGlobal*  
- Odkazuje na popisovač pro globální paměť, ve kterém má být vrácen data. Pokud nebyl ještě jednu byly přiděleny, tento parametr může být **NULL**.  
+ Odkazuje na popisovač do globální paměti, ve kterém má být vrácena data. Pokud nebyla ještě jeden byly přiděleny, tento parametr může mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Zadaný formát je jeden dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) – členská funkce pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrací **FALSE**.  
+ Zadaný formát je jedna dříve umístili ve `COleDataSource` pomocí [DelayRenderData](#delayrenderdata) členskou funkci pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrací hodnotu FALSE.  
   
- Pokud *phGlobal* je **NULL**, pak nový `HGLOBAL` by měl být přidělené a vrácených v *phGlobal*. Jinak `HGLOBAL` specifikace *phGlobal* by mělo být zadáno s daty. Množství dat umístěny `HGLOBAL` nesmí být delší než aktuální velikost bloku paměti. Navíc bloku nelze znovu přidělit, větší velikost.  
+ Pokud *phGlobal* má hodnotu NULL, pak nové HGLOBAL by měl být přiděleno a vrácené v *phGlobal*. V opačném případě HGLOBAL určené *phGlobal* by měl být vyplněny data. Množství dat, které jsou umístěny v HGLOBAL nesmí být delší než aktuální velikost bloku paměti. Navíc bloku nejde znovu přidělit, větší velikosti.  
   
- Toto je rozšířené přepisovatelné. Funkci k poskytování vaše data v požadovaný formát a střední přepište. V závislosti na vaše data můžete místo toho jeden z jiné verze této funkce přepsání. Pokud chcete zpracovat více úložná média, mají přednost před [OnRenderData](#onrenderdata). Pokud vaše data jsou v souboru nebo s proměnnou velikostí, mají přednost před [OnRenderFileData](#onrenderfiledata). Další informace o zpožděné vykreslování jako zpracované MFC, najdete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ To je moderní overridable. Tato funkce slouží k poskytování dat v požadovaný formát a střední přepište. V závislosti na vašich dat můžete chtít přepsat místo toho některou z dalších verzí této funkce. Pokud chcete zpracovávat více úložná média, má přednost před [OnRenderData](#onrenderdata). Pokud vaše data se v souboru nebo se s proměnnou velikostí, má přednost před [OnRenderFileData](#onrenderfiledata). Další informace o vykreslování zpožděné jako zpracované knihovnou MFC naleznete v článku [datové objekty a zdroje dat: manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) ve Windows SDK.  
+ Další informace najdete v tématu [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strukturu a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) v sadě Windows SDK.  
   
 ##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
- Voláno rámcem nastavit nebo nahradit data v `COleDataSource` objekt v zadaném formátu.  
+ Volá se rozhraním, aby nastavila nebo nahradila data v `COleDataSource` objektu v zadaném formátu.  
   
 ```  
 virtual BOOL OnSetData(
@@ -424,34 +424,34 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>Parametry  
  *lpFormatEtc*  
- Odkazuje na [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve kterém data nahradit.  
+ Odkazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktura určující formát, ve kterém se nahrazuje data.  
   
  *lpStgMedium*  
- Odkazuje na [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktura obsahující data, která nahradí aktuální obsah `COleDataSource` objektu.  
+ Odkazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury obsahující data, která nahradí aktuální obsah `COleDataSource` objektu.  
   
  *bRelease*  
- Určuje, kdo je vlastníkem úložiště střední po dokončení volání funkce. Volající rozhodne, který je zodpovědný za uvolnění prostředky přidělené jménem paměťového média. Volající dosahuje tím, že nastavení *bRelease*. Pokud *bRelease* je nenulové hodnoty, zdroj dat trvá vlastnictví, uvolnění médium, až se dokončí, jeho použití. Když *bRelease* je 0, volající uchovává vlastnictví a zdroj dat můžete použít úložiště střední pouze po dobu trvání volání.  
+ Označuje, kdo je vlastníkem úložiště média po dokončení volání funkce. Volající rozhodne, kdo je zodpovědná za uvolnění prostředků přidělených jménem paměťovému médiu. Volající toho dosahuje tím, že nastavíte *bRelease*. Pokud *bRelease* je nenulová, zdroj dat převezme vlastnictví, uvolnění médium po dokončení jeho použití. Když *bRelease* je 0, že volajícímu zůstane vlastnictví a zdroj dat můžete využít paměťovému médiu pouze po dobu trvání volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Zdroj dat nevyžaduje vlastnictví dat, dokud ho má byly úspěšně načteny. To znamená, že se nevyžaduje vlastnictví Pokud `OnSetData` vrátí hodnotu 0. Pokud zdroj dat používá vlastnictví, uvolní úložné médium voláním [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) funkce.  
+ Zdroj dat není převzít vlastnictví dat, dokud ji má byly úspěšně načteny. To znamená, nebere v vlastnictví Pokud `OnSetData` vrátí hodnotu 0. Pokud zdroj dat trvá vlastnictví, takže paměťovému médiu voláním [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) funkce.  
   
- Výchozí implementace neprovede žádnou akci. Přepsání této funkci můžete nahradit data v zadaném formátu. Toto je rozšířené přepisovatelné.  
+ Výchozí implementace nemá žádný účinek. Přepsání této funkce můžete nahradit data v zadaném formátu. To je moderní overridable.  
   
- Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury a [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) funkce ve Windows SDK.  
+ Další informace najdete v tématu [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury a [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) a [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) funkce v sadě Windows SDK.  
   
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
- Převádí data obsažená v `COleDataSource` objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), nebo [DelayRenderFileData](#delayrenderfiledata).  
+ Vloží data obsažená v `COleDataSource` objektu do schránky po volání jedné z následujících funkcí: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), nebo [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  
 void SetClipboard();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC HIERSVR](../../visual-cpp-samples.md)   
- [Ukázka MFC OCLIENT](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [COleDataObject – třída](../../mfc/reference/coledataobject-class.md)

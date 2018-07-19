@@ -1,5 +1,5 @@
 ---
-title: Možnosti kompilátoru makra | Microsoft Docs
+title: Makra možností kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,73 +26,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e84c92e8bbf65ff3b8b54111bcce2306628edb1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ec0ebd30f8fc871830e36878446a7cf6b5f875c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365850"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879930"
 ---
-# <a name="compiler-options-macros"></a>Možnosti kompilátoru makra
-Tyto makra řízení kompilátoru konkrétní funkce.  
+# <a name="compiler-options-macros"></a>Makra možností kompilátoru
+Tato makra řízení kompilátoru specifické funkce.  
   
 |||  
 |-|-|  
-|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, který umožňuje chyby v projektech převést z předchozích verzí ATL.|  
-|[_ATL_APARTMENT_THREADED –](#_atl_apartment_threaded)|Určete, zda jeden nebo více objektů použít dělení objektu apartment.|  
+|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, který umožňuje chyby v projektech, které jsou převedené z předchozích verzí knihovny ATL.|  
+|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Určete, zda jeden nebo více objektů použít podprocesový model apartment.|  
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Díky určité `CString` konstruktory explicitní, brání všechny neúmyslnému převody.|  
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Chcete-li použít C++ standardní kompatibilní syntaxi, která generuje chyba kompilátoru C4867 v případě jiných standardní syntaxi slouží k inicializaci ukazatel na členské funkce definujte toto makro.|  
-|[_ATL_FREE_THREADED –](#_atl_free_threaded)|Zadejte, pokud jeden nebo více objektům používat volné nebo neutrální dělení na vlákna.|  
-|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol, který označuje, projekt bude mít objekty, které jsou označeny jako obě volné nebo neutrální. Makro [_atl_free_threaded –](#_atl_free_threaded) by měl být místo toho použít.|  
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, který brání použití výchozí obor názvů jako ATL.|  
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Symbol, který brání související COM kód kompilován s projektem.|  
-|[ATL_NO_VTABLE](#atl_no_vtable)|Symbol, který zabrání ukazatel vtable inicializaci v konstruktoru a destruktoru třídy.|  
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Chcete-li použít standardní kompatibilní syntaxi C++, který vygeneruje chybu kompilátoru C4867, pokud není standardní syntaxe je použita k inicializaci ukazatele na členskou funkci definujte toto makro.|  
+|[_ATL_FREE_THREADED](#_atl_free_threaded)|Určete, zda jeden nebo více objektů pomocí bezplatné nebo neutrální dělení na vlákna.|  
+|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol, který označuje, projekt bude mít objekty, které jsou označeny jako obojí zdarma nebo neutrální. Makro [_ATL_FREE_THREADED](#_atl_free_threaded) by místo toho používat.|  
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, který brání použití výchozí obor názvů jako knihovnu ATL.|  
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Symbol, který zabraňuje modelu COM související kód kompilován s projektem.|  
+|[ATL_NO_VTABLE](#atl_no_vtable)|Symbol, který zabrání ukazatel vtable inicializaci konstruktor a destruktor třídy.|  
 |[ATL_NOINLINE](#atl_noinline)|Symbol, který označuje funkce by neměl být vložená.|  
-|[_ATL_SINGLE_THREADED –](#_atl_single_threaded)|Určete, zda všechny vaše objektů, které používají jeden model vláken.|  
+|[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Určete, zda všechny objekty používat jeden model vláken.|  
   
 ##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS  
- Symbol, který umožňuje chyby v projektech převést z předchozích verzí ATL.  
+ Symbol, který umožňuje chyby v projektech, které jsou převedené z předchozích verzí knihovny ATL.  
   
 ```
 #define _ATL_ALL_WARNINGS
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Před Visual C++ .NET 2002 ATL zakázané spoustu upozornění a je zakázaná, aby se nikdy vám ukázal, v uživatelském kódu zanechali. Konkrétně:  
+ Před Visual C++ .NET 2002 ATL zakázané spoustu upozornění a doleva je zakázat, aby se nikdy zobrazila v uživatelském kódu. Konkrétně:  
   
--   Podmíněným výrazem C4127 je konstant  
+-   C4127 podmíněný výraz je konstantní.  
   
--   C4786 identifikátor: identifikátor byl zkrácen na znaky "číslo" v informace o ladění  
+-   C4786 'identifier': identifikátor se zkrátil na znaků 'number' v informacích o ladění  
   
--   Nestandardní rozšíření C4201 používané: nameless struktura/sjednocení  
+-   C4201 používá se nestandardní rozšíření: struktura/sjednocení nameless  
   
--   C4103 filename: #pragma pack lze změnit zarovnání  
+-   C4103 filename: použít #pragma pack ke změně zarovnání  
   
--   C4291 deklarace: žádný odpovídající delete – operátor nalezen; Pokud se inicializace vyvolá výjimku, nebude uvolnit paměť  
+-   C4291 "deklarace": byl nalezen žádný odpovídající operátor delete paměť se neuvolní, pokud při inicializaci dojde k výjimce  
   
--   C4268 "identifikátor": 'const' statické nebo globálních dat inicializován s kompilátoru generované výchozí konstruktor doplní objekt s nulami  
+-   C4268 'identifier': 'const' statická/globální data inicializovaná s konstruktorem default generovaným kompilátorem vyplní objekt nulami  
   
--   C4702 nedostupný kódu  
+-   Nedosažitelný kód C4702  
   
- V projektech převést z předchozích verzí jsou tato upozornění stále zakázal hlavičky knihoven.  
+ V projektech převedené z předchozích verzí tato upozornění stále zakázal hlavičky knihovny.  
   
- Toto chování lze změnit přidáním následující řádek do souboru stdafx.h před zahrnutím hlavičky knihoven.  
+ Toto chování lze změnit přidáním následující řádek do souboru stdafx.h před zahrnutím hlavičky knihovny.  
   
  [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]  
   
- Pokud `#define` se přidá, ATL hlavičky jsou pozor, pokud chcete zachovat stav tato upozornění tak, že nejsou zakázané globálně (nebo uživatel explicitně zakáže jednotlivých upozornění nepovolíte je).  
+ Pokud tento `#define` se přidá, hlavičkách ATL. je pozor zachovat stav těchto upozornění tak, aby se globálně zakázané (nebo pokud uživatel explicitně zakáže jednotlivých upozornění, ne, aby se mohly).  
   
- Nové projekty nainstalován tento `#define` ve výchozím nastavení v stdafx.h.  
+ Máte nové projekty `#define` ve výchozím nastavení v souboru stdafx.h.  
   
-##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED –  
- Určete, zda jeden nebo více objektů použít dělení objektu apartment.  
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED  
+ Určete, zda jeden nebo více objektů použít podprocesový model apartment.  
   
 ```
 _ATL_APARTMENT_THREADED
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje dělení objektu apartment. V tématu [nastavení modelu vláken pro projekt](../../atl/specifying-the-threading-model-for-a-project-atl.md) pro ostatní vlákna možnosti, a [možnosti, ATL Simple Object Wizard](../../atl/reference/options-atl-simple-object-wizard.md) popis dělení na vlákna modely k dispozici pro objekt knihovny ATL.  
+ Určuje podprocesový model apartment. V tématu [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) pro ostatní vlákna možnosti, a [možnosti, Průvodce jednoduchý objekt knihovny ATL](../../atl/reference/options-atl-simple-object-wizard.md) popis práce s vlákny modely k dispozici pro objekt knihovny ATL.  
   
 ##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  Díky určité `CString` konstruktory explicitní, brání všechny neúmyslnému převody.  
@@ -102,106 +102,109 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je to definované, jsou všechny CString konstruktory, které přebírají jeden parametr kompilovat s explicitní klíčové slovo, které brání implicitní převody vstupní argumenty. To znamená, například, že když _UNICODE je definována, pokud se pokusíte použít char * řetězec jako argument konstruktoru CString, dojde k chybě kompilátoru. Použití tohoto makra v situacích, kdy potřebujete zabránit implicitní převody mezi řetězci úzké a široké typy.  
+ Když je definována, všechny konstruktory CString, které vyžadovat jeden parametr se kompilují pomocí explicitní klíčové slovo, které brání implicitních převodů vstupní argumenty. To znamená například, že když je definována _UNICODE, při pokusu o použití char * řetězec jako argument konstruktoru CString a způsobí chybu kompilátoru. Použijte toto makro v situacích, kdy potřebujete zabránit implicitní převody mezi typy úzké a široké řetězce.  
   
- Pomocí _T – makro všechny řetězcové argumenty konstruktoru, můžete definovat _ATL_CSTRING_EXPLICIT_CONSTRUCTORS a vyhnout se chybám kompilace bez ohledu na to, jestli je definován _UNICODE.  
+ Pomocí makra _T na všechny řetězcové argumenty konstruktoru, můžete definovat _ATL_CSTRING_EXPLICIT_CONSTRUCTORS a vyhněte se chyby při kompilaci bez ohledu na to, zda je definován _UNICODE.  
   
 ##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING  
- Chcete-li vynutit použití syntaxe kompatibilní se standardem standard ANSI C++ pro ukazatel na členské funkce definujte toto makro. Pomocí této makro způsobí, že chyba kompilátoru C4867 má být vygenerován při nestandardní syntaxe slouží k inicializaci ukazatel na funkci člen.  
+ Pokud chcete vynutit použití syntaxe vyhovující standardu ANSI C++ pro ukazatele na členské funkce definujte toto makro. Pomocí tohoto makra způsobí chybu kompilátoru C4867 vygenerování při nestandardní syntaxe je použita k inicializaci ukazatele na členskou funkci.  
   
 ```
 #define _ATL_ENABLE_PTM_WARNING
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Knihovny ATL a MFC změnilo tak, aby odpovídaly – kompilátor Visual C++ vylepšené standardní C++ dodržování předpisů. Podle standardu ANSI C++, musí mít syntaxe ukazatele na funkce člena třídy `&CMyClass::MyFunc`.  
+ Knihovny ATL a MFC se změnily tak, aby odpovídaly kompilátor Visual C++ vylepšené standard C++ dodržování předpisů. Podle standardu ANSI C++ by měl být syntaxe ukazatel na členskou funkci třídy `&CMyClass::MyFunc`.  
   
- Když [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) není definován (výchozí případ), ATL a MFC zakáže C4867 chyby ve službě maps – makro (mapy zejména zpráv), aby kód, který byl vytvořen v dřívějších verzích můžete nadále sestavení jako předtím. Pokud definujete **_ATL_ENABLE_PTM_WARNING**, váš kód by měl být standard C++ kompatibilní.  
+ Když [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) není definována (výchozí případ), ATL/MFC zakáže C4867 chyby v rámci služby maps – makro (zejména zprávy maps) tak, aby kód, který byl vytvořen ve starších verzích pokračovat v sestavení jako předtím. Pokud definujete **_ATL_ENABLE_PTM_WARNING**, váš kód by měl být kompatibilní s standard jazyka C++.  
   
- Však nestandardní formuláře se již nepoužívá, takže potřebujete přesunout existujícího kódu C++ standardní kompatibilní syntaxi. Například následující:  
+ Ale nestandardní formuláře je zastaralá, tak budete potřebovat přesunout existující kód C++ standardní kompatibilní syntaxi. Například následující:  
   
  [!code-cpp[NVC_MFCListView#14](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]  
   
- By mělo být změněno na:  
+ By měl být změněn na:  
   
  [!code-cpp[NVC_MFCListView#11](../../atl/reference/codesnippet/cpp/compiler-options-macros_3.cpp)]  
   
- Všimněte si, že pro makra mapy, které přidávají znak 'a', můžete nesmí ji znovu přidejte v kódu.  
+ Všimněte si, že pro mapu makra, které aplikacím dodávají znak '&', neměli byste přidávat ho znovu ve vašem kódu.  
   
-##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED –  
- Zadejte, pokud jeden nebo více objektům používat volné nebo neutrální dělení na vlákna.  
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED  
+ Určete, zda jeden nebo více objektů pomocí bezplatné nebo neutrální dělení na vlákna.  
   
 ```
 _ATL_FREE_THREADED
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje, volných vláken. Volných vláken je ekvivalentní k modelu objektu apartment s více vlákny. V tématu [nastavení modelu vláken pro projekt](../../atl/specifying-the-threading-model-for-a-project-atl.md) pro ostatní vlákna možnosti, a [možnosti, ATL Simple Object Wizard](../../atl/reference/options-atl-simple-object-wizard.md) popis dělení na vlákna modely k dispozici pro objekt knihovny ATL.  
+ Určuje, volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. V tématu [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) pro ostatní vlákna možnosti, a [možnosti, Průvodce jednoduchý objekt knihovny ATL](../../atl/reference/options-atl-simple-object-wizard.md) popis práce s vlákny modely k dispozici pro objekt knihovny ATL.  
   
 ##  <a name="_atl_multi_threaded"></a>  _ATL_MULTI_THREADED  
- Symbol, který označuje, projekt bude mít objekty, které jsou označeny jako obě volné nebo neutrální.  
+ Symbol, který označuje, projekt bude mít objekty, které jsou označeny jako obojí zdarma nebo neutrální.  
   
 ```
 _ATL_MULTI_THREADED
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je definována tento symbol, ATL načte v kódu, který bude synchronizovat správně přístup ke globálním datům. Nový kód by měl použít ekvivalentní makro [_atl_free_threaded –](#_atl_free_threaded) místo.  
+ Pokud tento symbol není definován, bude ATL o přijetí změn v kódu, který budou synchronizovat správně přístup ke globálním datům. Nový kód by měl použít makra ekvivalentní [_ATL_FREE_THREADED](#_atl_free_threaded) místo.  
   
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE  
- Symbol, který brání použití výchozí obor názvů jako ATL.  
+ Symbol, který brání použití výchozí obor názvů jako knihovnu ATL.  
   
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud není definován tento symbol, včetně atlbase.h provede **pomocí oboru názvů ATL** ve výchozím nastavení, což může způsobit konflikty pojmenování. Chcete-li tomu zabránit, definujte tento symbol.  
+ Pokud tento symbol není definován, včetně atlbase.h provede **s použitím oboru názvů ATL** ve výchozím nastavení, což může způsobit konflikty pojmenování. Chcete-li tomu zabránit, definujte tento symbol.  
   
 ##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT  
- Symbol, který brání související COM kód kompilován s projektem.  
+ Symbol, který zabraňuje modelu COM související kód kompilován s projektem.  
   
 ```
-_ATL_NO_COM_SUPPORT```  
+_ATL_NO_COM_SUPPORT
+```  
   
 ##  <a name="atl_no_vtable"></a>  ATL_NO_VTABLE  
- A symbol that prevents the vtable pointer from being initialized in the class's constructor and destructor.  
+ Symbol, který zabrání ukazatel vtable inicializaci konstruktor a destruktor třídy.  
   
 ```
 ATL_NO_VTABLE
 ```  
   
-### Remarks  
- If the vtable pointer is prevented from being initialized in the class's constructor and destructor, the linker can eliminate the vtable and all of the functions to which it points. Expands to **__declspec(novtable)**.  
+### <a name="remarks"></a>Poznámky  
+ Pokud ukazatel vtable se zabrání během inicializace v konstruktoru třídy a destruktor, linker vyloučit tabulku vtable a všechny funkce, na které odkazuje. Rozšíří **__declspec(novtable)**.  
   
-### Example  
+### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_COM#53](../../atl/codesnippet/cpp/compiler-options-macros_4.h)]  
   
 ##  <a name="atl_noinline"></a>  ATL_NOINLINE  
- A symbol that indicates a function should not be inlined.  
+ Symbol, který označuje funkce by neměl být vložená.  
   
 ```
     ATL_NOINLINE inline
     myfunction
- { ... }
+ {
+...
+ }
 ```  
   
-### Parameters  
- *myfunction*  
- The function that should not be inlined.  
+### <a name="parameters"></a>Parametry  
+ *MáFunkce*  
+ Funkce, která by neměla být vložená.  
   
-### Remarks  
- Use this symbol if you want to ensure a function does not get inlined by the compiler, even though it must be declared as inline so that it can be placed in a header file. Expands to **__declspec(noinline)**.  
+### <a name="remarks"></a>Poznámky  
+ Pokud chcete zajistit, aby že funkce nezíská vložené kompilátorem, přestože musí být deklarován jako vložený, takže může být umístěn v záhlaví souboru, použijte tento symbol. Rozšíří **__declspec(noinline)**.  
   
 ##  <a name="_atl_single_threaded"></a>  _ATL_SINGLE_THREADED  
- Define if all of your objects use the single threading model  
+ Určete, zda všechny objekty používat jeden model vláken  
   
 ```
-_ATL_SINGLE_THREADED –
+_ATL_SINGLE_THREADED
 ```  
   
-### Remarks  
- Specifies that the object always runs in the primary COM thread. See [Specifying the Project's Threading Model](../../atl/specifying-the-threading-model-for-a-project-atl.md) for other threading options, and [Options, ATL Simple Object Wizard](../../atl/reference/options-atl-simple-object-wizard.md) for a description of the threading models available for an ATL object.  
+### <a name="remarks"></a>Poznámky  
+ Určuje, že objekt vždy běží v primárním vláknu COM. V tématu [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) pro ostatní vlákna možnosti, a [možnosti, Průvodce jednoduchý objekt knihovny ATL](../../atl/reference/options-atl-simple-object-wizard.md) popis práce s vlákny modely k dispozici pro objekt knihovny ATL.  
   
-## See Also  
- [Macros](../../atl/reference/atl-macros.md)
+## <a name="see-also"></a>Viz také  
+ [Makra](../../atl/reference/atl-macros.md)

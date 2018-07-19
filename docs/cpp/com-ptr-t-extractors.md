@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t – extraktory | Microsoft Docs
+title: _com_ptr_t – extraktory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,14 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947643"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t – extraktory
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Extrahuje zapouzdřený ukazatel rozhraní COM.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,19 +56,19 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Poznámky  
   
--   **operátor Interface\***  vrátí ukazatel zapouzdřené rozhraní, které mohou být **NULL**.  
+-   **operátor Interface\***  vrátí zapouzdřený ukazatel rozhraní, což může mít hodnotu NULL.  
   
--   **operátor Interface &** vrátí odkaz na ukazatel zapouzdřené rozhraní a vyvolá chybu, pokud je ukazatel **NULL**.  
+-   **operátor Interface &** vrátí odkaz na zapouzdřený ukazatel rozhraní a vyvolá chybu, pokud ukazatel na hodnotu NULL.  
   
--   **operátor\***  umožňuje inteligentní ukazatele objektu tak, aby fungoval jako by šlo rozhraní skutečný obsah zapouzdřeného při Zrušením odkazu.  
+-   **operátor\***  umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.  
   
--   **Operator ->** umožňuje inteligentní ukazatele objektu tak, aby fungoval jako by šlo rozhraní skutečný obsah zapouzdřeného při Zrušením odkazu.  
+-   **Operator ->** umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.  
   
--   **operátor &** uvolní všechny ukazatel zapouzdřené rozhraní jeho nahrazením **NULL**a vrátí adresu zapouzdřené ukazatele. To umožňuje inteligentní ukazatele mají být předány podle adresy funkci, která má **out** parametr, pomocí kterého se vrátí ukazatele rozhraní.  
+-   **operátor &** uvolní všechny zapouzdřený ukazatel rozhraní, nahraďte ho hodnotou NULL a vrátí adresu zapouzdřený ukazatel. To umožňuje inteligentní ukazatel adresou předat funkci, která má *si* parametr, jehož pomocí funkce vrátí ukazatel rozhraní.  
   
--   **operátor bool** umožňuje objekt chytré ukazatele pro použití v podmíněným výrazem. Tento operátor vrací **true** Pokud je ukazatel není **NULL**.  
+-   **Operator bool** umožní objektu inteligentního ukazatele se použije v podmíněných výrazech. Tento operátor vrátí hodnotu PRAVDA, pokud ukazatel není NULL.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: uniform_real_distribution – třída | Microsoft Docs
+title: uniform_real_distribution – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedb88ae44faaea9d65b41dcc98a4e83354ea71b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858731"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963078"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution – třída
 
-Generuje uniform (každých hodnota je stejně pravděpodobných) s plovoucí desetinnou čárkou distribuční rozsahu výstupu, který je včetně vylučují.
+Generuje jednotné (každá hodnota byla stejně pravděpodobná) s plovoucí desetinnou čárkou distribuce v rámci výstupní oblasti, která je včetně vylučují.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,28 +81,28 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `double`. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*RealType* typu s plovoucí desetinnou čárkou výsledku, výchozí hodnota je **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje jako distribučního včetně vylučují, která vytváří hodnoty definované uživatelem integrální, tak, aby každé hodnotě stejně pravděpodobných plovoucí typ bodu s distribučním. Následující tabulka odkazy na články o jednotlivé členy.
+Třída šablony popisuje inkluzivní výhradně distribuce, který vytváří hodnoty uživatelem zadaného integral, plovoucí typ bodu pomocí distribučního tak, aby každá hodnota byla stejně pravděpodobná. Následující tabulka odkazuje na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-Vlastnost člena `a()` vrátí aktuálně uložené minimální vázaný distribuce, zatímco `b()` vrátí aktuálně uložené maximální hranice. Pro tuto třídu distribuční tyto minimální a maximální hodnoty jsou stejné jako vrácený běžné funkce vlastností `min()` a `max()` podrobněji popsaná [ \<náhodných >](../standard-library/random.md) tématu.
+Vlastnost člena `a()` vrátí aktuálně uložené minimální mez distribuci, zatímco `b()` vrátí aktuálně uložené maximální mez. Pro tuto třídu distribuční tyto minimální a maximální hodnoty se shodují s nastaveními vrácený běžné funkce vlastností `min()` a `max()` podle [ \<náhodné >](../standard-library/random.md) tématu.
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` balíček parametr uložené distribuce.
+Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
 
-`min()` a `max()` členské funkce vrátí nejmenší možný výsledek a největší možné výsledek, v uvedeném pořadí.
+`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
 
-`reset()` – Členská funkce zahodí všechny hodnoty v mezipaměti, aby výsledkem další volání `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
 
-`operator()` Členské funkce vrátí další generované hodnoty, které jsou založené na modulu URNG buď z aktuální parametr balíček nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
 
-Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="example"></a>Příklad
 
@@ -184,13 +184,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution
 
-Vytvoří rozdělení.
+Vytvoří rozložení.
 
 ```cpp
 explicit uniform_real_distribution(result_type a = 0.0, result_type b = 1.0);
@@ -199,23 +199,26 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a* dolní mez pro náhodných hodnot, včetně.
+*a*  
+Dolní mez pro náhodné hodnoty, včetně.
 
-*b* horní mez pro náhodných hodnot, které jsou výhradní.
+*b*  
+Horní mez pro náhodné hodnoty, vylučují.
 
-*Parametr* `param_type` struktura použitý k vytvoření distribuce.
+*Parametr*  
+`param_type` Struktura používaná k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou podmínku:** `a < b`
+**Předběžné podmínky:** `a < b`
 
-První konstruktoru vytvoří objekt jehož uložené `a` hodnota obsahuje hodnotu *a* a jehož uložené `b` hodnota obsahuje hodnotu *b*.
+První konstruktor vytvoří objekt, jehož uložená hodnota *a* drží hodnotu *a* a jehož uložená hodnota *b* drží hodnotu *b*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
 
 ## <a name="param_type"></a>  uniform_real_distribution::param_type
 
-Uloží všechny parametry rozdělení.
+Obsahuje všechny parametry distribuce.
 
 ```cpp
 struct param_type {
@@ -231,18 +234,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a* dolní mez pro náhodných hodnot, včetně.
+*a*  
+Dolní mez pro náhodné hodnoty, včetně.
 
-*b* horní mez pro náhodných hodnot, které jsou výhradní.
+*b*  
+Horní mez pro náhodné hodnoty, vylučují.
 
-*pravé* `param_type` objekt k porovnání s to.
+*doprava*  
+`param_type` Objekt k porovnání s tím.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou podmínku:** `a < b`
+**Předběžné podmínky:** `a < b`
 
-Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.
+Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

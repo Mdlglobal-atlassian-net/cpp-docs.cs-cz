@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::CreateInstance | Microsoft Docs
+title: _com_ptr_t::CreateInstance | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947597"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vytvoří novou instanci objektu zadané **CLSID** nebo **ProgID**.  
+ Vytvoří novou instanci objektu dle `CLSID` nebo `ProgID`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      HRESULT CreateInstance(  
+HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
    DWORD dwClsContext = CLSCTX_ALL   
@@ -49,31 +50,31 @@ HRESULT CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `rclsid`  
- **CLSID** objektu.  
+ *rclsid*  
+ `CLSID` Objektu.  
   
- `clsidString`  
- Řetězec znaků Unicode, který obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.  
+ *clsidString*  
+ Řetězec znaků Unicode udržující `CLSID` (počínaje "**{**") nebo `ProgID`.  
   
- `clsidStringA`  
- Vícebajtové řetězce, pomocí ANSI znaková stránka, která obsahuje buď **CLSID** (počínaje "**{**") nebo **ProgID**.  
+ *clsidStringA*  
+ Vícebajtový řetězec používající znakovou stránku ANSI, který udržuje `CLSID` (počínaje "**{**") nebo `ProgID`.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Kontext spuštění spustitelného kódu.  
   
- `pOuter`  
- Vnější Neznámý pro [agregace](../atl/aggregation.md).  
+ *pOuter*  
+ Vnější Neznámá pro [agregace](../atl/aggregation.md).  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto členské funkce volání `CoCreateInstance` k vytvoření nového objektu COM a pak dotazů pro typ rozhraní tento inteligentní ukazatel. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. **Verze** nazývá se sníží počet odkazů pro dříve zapouzdřené ukazatele. Tato rutina indikuje úspěch nebo neúspěch pomocí hodnoty `HRESULT`.  
+ Tyto členské funkce volají `CoCreateInstance` k vytvoření nového objektu modelu COM a pak dotazů pro typ rozhraní tohoto inteligentního ukazatele. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel. Tato rutina vrátí hodnotu HRESULT indikuje úspěch nebo selhání.  
   
--   **CreateInstance – (** `rclsid` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadané spuštěné **CLSID**.        
+-   **Funkci CreateInstance (***rclsid* **,***dwClsContext***)** vytvoří novou běžící instanci objektu dle `CLSID`.        
   
--   **CreateInstance – (** `clsidString` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadaný řetězec znaků Unicode, který obsahuje buď spuštěné **CLSID**(počínaje "**{**") nebo **ProgID**.        
+-   **Funkci CreateInstance (***clsidString* **,***dwClsContext***)** vytvoří novou běžící instanci objektu dle Řetězec znaků Unicode udržující `CLSID` (počínaje "**{**") nebo `ProgID`.        
   
--   **CreateInstance – (** `clsidStringA` **,**`dwClsContext`**)** vytvoří novou instanci objektu zadané vícebajtový řetězec, který obsahuje buď spuštěné **CLSID**  (počínaje "**{**") nebo **ProgID**.       Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), která předpokládá, že řetězec je v znaková stránka ANSI spíše než znakovou stránku pro výrobce OEM.  
+-   **Funkci CreateInstance (***clsidStringA* **,***dwClsContext***)** vytvoří novou běžící instanci objektu dle vícebajtový řetězec udržující `CLSID` (počínaje "**{**") nebo `ProgID`.       Volání [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), kde se předpokládá, že je řetězec uložen ve znakovou stránku ANSI, nikoli znakovou stránku OEM.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

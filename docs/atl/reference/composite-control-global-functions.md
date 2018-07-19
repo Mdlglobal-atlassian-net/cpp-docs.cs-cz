@@ -1,5 +1,5 @@
 ---
-title: Globální funkce složeného ovládacího prvku | Microsoft Docs
+title: Globální funkce složených ovládacích prvků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,34 +28,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366598"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882429"
 ---
-# <a name="composite-control-global-functions"></a>Globální funkce složeného ovládacího prvku
-Tyto funkce poskytuje podporu pro vytváření dialogových oken a pro vytváření, hostování a licencování ovládacích prvků ActiveX.  
+# <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
+Tyto funkce poskytují podporu pro vytváření dialogových oken a pro vytváření, hostování a licencování ovládacích prvků ActiveX.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze používat v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
 |[AtlAxDialogBox](#atlaxdialogbox)|Vytvoří modální dialogové okno z uživatelem zadané šablony dialogového okna. Dialogové okno může obsahovat ovládací prvky ActiveX.|  
 |[AtlAxCreateDialog](#atlaxcreatedialog)|Vytvoří nemodální dialogové okno z uživatelem zadané šablony dialogového okna. Dialogové okno může obsahovat ovládací prvky ActiveX.|  
 |[AtlAxCreateControl](#atlaxcreatecontrol)|Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně.|  
-|[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Vytvoří ovládací prvek ActiveX, inicializuje ji, hostitelem v zadané okno a načte ukazatele rozhraní (nebo ukazatele) z ovládacího prvku.|  
+|[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Vytvoří ovládací prvek ActiveX, inicializuje ji, hostuje v zadaném okně a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.|  
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně.|  
-|[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|Vytvoří licencované ovládací prvek ActiveX, inicializuje ji, hostitelem v zadané okno a načte ukazatele rozhraní (nebo ukazatele) z ovládacího prvku.|  
+|[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|Vytvoří licencovaného ovládacího prvku ActiveX, inicializuje ji, hostuje v zadaném okně a načte ukazatel rozhraní (nebo ukazatele) z ovládacího prvku.|  
 |[AtlAxAttachControl](#atlaxattachcontrol)|Připojí předchozí vytvořený ovládací prvek k zadanému oknu.|  
-|[AtlAxGetHost](#atlaxgethost)|Použít k získání přímého rozhraní ukazatel na kontejner pro vybrané okno (pokud existuje), zadána svého popisovače.|  
-|[AtlAxGetControl](#atlaxgetcontrol)|Použít k získání přímého rozhraní ukazatel na ovládací prvek nachází v zadané okno (pokud existuje), zadána svého popisovače.|  
-|[AtlSetChildSite](#atlsetchildsite)|Inicializuje **IUnknown** podřízené lokality.|  
-|[AtlAxWinInit](#atlaxwininit)|Inicializuje hostování kódu pro AxWin objekty.|  
-|[AtlAxWinTerm](#atlaxwinterm)|Uninitializes kód hostování pro AxWin objekty.|  
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Vrací informace o rozhraní výchozí zdrojového objektu.|  
+|[AtlAxGetHost](#atlaxgethost)|Získá přímý ukazatel rozhraní na kontejner zadaného okna (pokud existuje), uvedením jeho popisovače.|  
+|[AtlAxGetControl](#atlaxgetcontrol)|Získá přímý ukazatel rozhraní na ovládací prvek obsažený uvnitř zadaného okna (pokud existuje), uvedením jeho popisovače.|  
+|[AtlSetChildSite](#atlsetchildsite)|Inicializuje `IUnknown` podřízené lokality.|  
+|[AtlAxWinInit](#atlaxwininit)|Inicializuje kód hostování AxWin objektů.|  
+|[AtlAxWinTerm](#atlaxwinterm)|Zruší inicializaci kód hostování AxWin objektů.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Vrátí informace o výchozím zdrojovém rozhraní objektu.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlhost.h  
@@ -73,35 +73,35 @@ ATLAPI_(int) AtlAxDialogBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hInstance`  
- [v] Označuje instanci modulu, jehož spustitelný soubor obsahuje pole šablony dialogového okna.  
+ *hInstance*  
+ [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.  
   
- `lpTemplateName`  
- [v] Určuje pole šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků ukončené hodnotou null, který určuje název pole šablony dialogového okna, nebo celočíselná hodnota, která určuje identifikátor prostředku šablony pole dialogového okna. Pokud tento parametr určuje identifikátor prostředku, word jeho horní musí být nula a jeho nejnižší word musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) makro pro vytvoření této hodnoty.  
+ *lpTemplateName*  
+ [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.  
   
- `hWndParent`  
- [v] Identifikuje okně, které vlastní dialogové okno.  
+ *hWndParent*  
+ [in] Identifikuje okna, který vlastní dialogové okno.  
   
- `lpDialogProc`  
- [v] Body k postupu dialogové okno pole. Další informace o postupu pole dialogovém okně najdete v tématu [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ *lpDialogProc*  
+ [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
- `dwInitParam`  
- [v] Určuje hodnotu, která mají být předána do dialogového okna aplikace **lParam** parametr **WM_INITDIALOG** zprávy.  
+ *dwInitParam*  
+ [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Použít **AtlAxDialogBox** s šablony dialogového okna, který obsahuje ovládací prvek ActiveX, zadejte platný **CLSID**, **APPID** nebo řetězce adresy URL jako *text* pole z **řízení** části prostředku dialogového okna, společně s "AtlAxWin80" jako *název třídy* pole stejné části. Ukazuje, jaké platná následující **řízení** části může vypadat například:  
+ Použití `AtlAxDialogBox` pomocí šablony dialogového okna, která obsahuje ovládací prvek ActiveX, zadejte platný identifikátor CLSID, APPID nebo adresy URL řetězec jako *text* pole **ovládací PRVEK** oddílu prostředku dialogového okna, spolu s " AtlAxWin80 "jako *název třídy* pole v rámci stejného oddílu. Ukazuje, jaké platný následující **ovládací PRVEK** části může vypadat takto:  
   
 ```  
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Další informace o úpravách prostředků skriptů, najdete v části [postupy: otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry řízení](http://msdn.microsoft.com/library/windows/desktop/aa380902) v rámci sady Windows SDK *: SDK Tools*.  
+ Další informace o úpravách skripty prostředků najdete v tématu [postupy: otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry ovládací prvek](http://msdn.microsoft.com/library/windows/desktop/aa380902) v rámci sady Windows SDK *: SDK Tools*.  
   
- Další informace o dialogových oknech v obecné, najdete v části [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) a [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) ve Windows SDK.  
+ Další informace v dialogových oknech v Obecné [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) a [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) v sadě Windows SDK.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Vytvoří nemodální dialogové okno z uživatelem zadané šablony dialogového okna.  
@@ -116,20 +116,20 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hInstance`  
- [v] Označuje instanci modulu, jehož spustitelný soubor obsahuje pole šablony dialogového okna.  
+ *hInstance*  
+ [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.  
   
- `lpTemplateName`  
- [v] Určuje pole šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků ukončené hodnotou null, který určuje název pole šablony dialogového okna, nebo celočíselná hodnota, která určuje identifikátor prostředku šablony pole dialogového okna. Pokud tento parametr určuje identifikátor prostředku, word jeho horní musí být nula a jeho nejnižší word musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) makro pro vytvoření této hodnoty.  
+ *lpTemplateName*  
+ [in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.  
   
- `hWndParent`  
- [v] Identifikuje okně, které vlastní dialogové okno.  
+ *hWndParent*  
+ [in] Identifikuje okna, který vlastní dialogové okno.  
   
- `lpDialogProc`  
- [v] Body k postupu dialogové okno pole. Další informace o postupu pole dialogovém okně najdete v tématu [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ *lpDialogProc*  
+ [in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
- `dwInitParam`  
- [v] Určuje hodnotu, která mají být předána do dialogového okna aplikace **lParam** parametr **WM_INITDIALOG** zprávy.  
+ *dwInitParam*  
+ [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Poznámky  
  Dialogové okno může obsahovat ovládací prvky ActiveX.  
   
- V tématu [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) a [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) ve Windows SDK.  
+ Zobrazit [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) a [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) ve Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně.  
@@ -152,38 +152,38 @@ ATLAPI AtlAxCreateControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
- Ukazatel na řetězec předávané do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
+ *lpszName*  
+ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
   
 -   ProgID jako je například "MSCAL. Calendar.7 "  
   
--   CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   Identifikátor CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   Adresu URL, například "http://www.microsoft.com"  
+-   Adresa URL, jako "http://www.microsoft.com"  
   
--   Odkaz na aktivní dokument jako "file://\\\Documents\MyDoc.doc"  
+-   Odkaz na aktivní dokument jako například "file://\\\Documents\MyDoc.doc"  
   
--   Fragment HTML, například "MSHTML:\<HTML >\<textu > Toto je na řádku textu\</BODY > \< /HTML >"  
+-   Fragment HTML, jako "MSHTML:\<HTML >\<text > to je řádek textu\</BODY > \< /HTML >"  
   
     > [!NOTE]
-    >  "MSHTML:" musí předcházet HTML fragment, tak, aby je určený jako MSHTML datového proudu.  
+    >  "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.  
   
- `hWnd`  
- [v] Zpracování do okna Ovládací prvek bude připojen k.  
+ *hWnd*  
+ [in] Popisovač okna, který ovládací prvek bude připojen k.  
   
- `pStream`  
- [v] Ukazatel na datový proud, který se používá k chybě při inicializaci vlastností ovládacího prvku. Může být **NULL**.  
+ *pStream*  
+ [in] Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.  
   
- `ppUnkContainer`  
- [out] Adresu ukazatele, který se zobrazí **IUnknown** kontejneru. Může být **NULL**.  
+ *ppUnkContainer*  
+ [out] Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Globální funkce získáte stejný výsledek jako volání [AtlAxCreateControlEx](#atlaxcreatecontrolex)( `lpszName` **,** `hWnd` **,** `pStream` **, NULL, NULL, NULL, NULL** );.  
+ Tato globální funkce získáte stejný výsledek jako volání funkce [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszName*, *hWnd*, *pStream*, NULL, NULL, HODNOTA NULL, NULL);.  
   
- Vytvořit licencované ovládací prvek ActiveX, najdete v části [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
+ Vytvoření licencovaného ovládacího prvku ActiveX, najdete v tématu [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
 ##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  Vytvoří, inicializuje a hostuje ovládací prvek ActiveX v zadaném okně. Pro tento nový ovládací prvek lze také vytvořit ukazatel rozhraní a jímku událostí.  
@@ -200,47 +200,47 @@ ATLAPI AtlAxCreateControlEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
- Ukazatel na řetězec předávané do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
+ *lpszName*  
+ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
   
 -   ProgID jako je například "MSCAL. Calendar.7 "  
   
--   CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   Identifikátor CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   Adresu URL, například "http://www.microsoft.com"  
+-   Adresa URL, jako "http://www.microsoft.com"  
   
--   Odkaz na aktivní dokument jako "file://\\\Documents\MyDoc.doc"  
+-   Odkaz na aktivní dokument jako například "file://\\\Documents\MyDoc.doc"  
   
--   Fragment HTML, například "MSHTML:\<HTML >\<textu > Toto je na řádku textu\</BODY > \< /HTML >"  
+-   Fragment HTML, jako "MSHTML:\<HTML >\<text > to je řádek textu\</BODY > \< /HTML >"  
   
     > [!NOTE]
-    >  "MSHTML:" musí předcházet HTML fragment, tak, aby je určený jako MSHTML datového proudu.  
+    >  "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.  
   
- `hWnd`  
- [v] Zpracování do okna Ovládací prvek bude připojen k.  
+ *hWnd*  
+ [in] Popisovač okna, který ovládací prvek bude připojen k.  
   
- `pStream`  
- [v] Ukazatel na datový proud, který se používá k chybě při inicializaci vlastností ovládacího prvku. Může být **NULL**.  
+ *pStream*  
+ [in] Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.  
   
- `ppUnkContainer`  
- [out] Adresu ukazatele, který se zobrazí **IUnknown** kontejneru. Může být **NULL**.  
+ *ppUnkContainer*  
+ [out] Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.  
   
- `ppUnkControl`  
- [out] Adresu ukazatele, který se zobrazí **IUnknown** vytvořený ovládacího prvku. Může být **NULL**.  
+ *ppUnkControl*  
+ [out] Adresa ukazatel, který se zobrazí `IUnknown` vytvořený ovládacího prvku. Může mít hodnotu NULL.  
   
- `iidSink`  
- Identifikátor rozhraní odchozí rozhraní na obsažený objekt.  
+ *iidSink*  
+ Identifikátor rozhraní odchozí rozhraní v obsažený objekt.  
   
  *punkSink*  
- Ukazatel **IUnknown** rozhraní podřízený objekt, který má být připojen k bodu připojení určeného `iidSink` na obsažený objekt po obsažený objekt byl úspěšně vytvořen.  
+ Ukazatel `IUnknown` rozhraní jímky objektu k připojení k připojení bodu určeného *iidSink* na obsaženého objektu po úspěšném vytvoření obsažený objekt.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlAxCreateControlEx` je podobná [AtlAxCreateControl](#atlaxcreatecontrol) ale můžete taky přijímat ukazatele rozhraní do ovládacího prvku nově vytvořený a nastavení jímky událostí pro příjem událostí aktivováno pomocí ovládacího prvku.  
+ `AtlAxCreateControlEx` je podobný [AtlAxCreateControl](#atlaxcreatecontrol) , ale také umožňuje přijímat ukazatel rozhraní na nově vytvořený ovládací prvek a nastavit jímky událostí přijímat události vyvolané ovládacího prvku.  
   
- Vytvořit licencované ovládací prvek ActiveX, najdete v části [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
+ Vytvoření licencovaného ovládacího prvku ActiveX, najdete v tématu [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně.  
@@ -255,39 +255,39 @@ ATLAPI AtlAxCreateControlLic(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
- Ukazatel na řetězec předávané do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
+ *lpszName*  
+ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
   
 -   ProgID jako je například "MSCAL. Calendar.7 "  
   
--   CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   Identifikátor CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   Adresu URL, například "http://www.microsoft.com"  
+-   Adresa URL, jako "http://www.microsoft.com"  
   
--   Odkaz na aktivní dokument jako "file://\\\Documents\MyDoc.doc"  
+-   Odkaz na aktivní dokument jako například "file://\\\Documents\MyDoc.doc"  
   
--   Fragment HTML, například "MSHTML:\<HTML >\<textu > Toto je na řádku textu\</BODY > \< /HTML >"  
+-   Fragment HTML, jako "MSHTML:\<HTML >\<text > to je řádek textu\</BODY > \< /HTML >"  
   
     > [!NOTE]
-    >  "MSHTML:" musí předcházet HTML fragment, tak, aby je určený jako MSHTML datového proudu.  
+    >  "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.  
   
- `hWnd`  
- Zpracování do okna Ovládací prvek bude připojen k.  
+ *hWnd*  
+ Popisovač okna, který ovládací prvek bude připojen k.  
   
- `pStream`  
- Ukazatel na datový proud, který se používá k chybě při inicializaci vlastností ovládacího prvku. Může být **NULL**.  
+ *pStream*  
+ Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.  
   
- `ppUnkContainer`  
- Adresu ukazatele, který se zobrazí **IUnknown** kontejneru. Může být **NULL**.  
+ *ppUnkContainer*  
+ Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.  
   
- `bstrLic`  
- BSTR obsahující licence pro ovládací prvek.  
+ *bstrLic*  
+ BSTR obsahující licenci pro ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="example"></a>Příklad  
- V tématu [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pro ukázkové použití `AtlAxCreateControlLic`.  
+ Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku toho, jak používat `AtlAxCreateControlLic`.  
   
 ##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně. Pro tento nový ovládací prvek lze také vytvořit ukazatel rozhraní a jímku událostí.  
@@ -305,51 +305,51 @@ ATLAPI AtlAxCreateControlLicEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
- Ukazatel na řetězec předávané do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
+ *lpszName*  
+ Ukazatel na řetězec předají do ovládacího prvku. Musí být ve formátu v jednom z následujících způsobů:  
   
 -   ProgID jako je například "MSCAL. Calendar.7 "  
   
--   CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   Identifikátor CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   Adresu URL, například "http://www.microsoft.com"  
+-   Adresa URL, jako "http://www.microsoft.com"  
   
--   Odkaz na aktivní dokument jako "file://\\\Documents\MyDoc.doc"  
+-   Odkaz na aktivní dokument jako například "file://\\\Documents\MyDoc.doc"  
   
--   Fragment HTML, například "MSHTML:\<HTML >\<textu > Toto je na řádku textu\</BODY > \< /HTML >"  
+-   Fragment HTML, jako "MSHTML:\<HTML >\<text > to je řádek textu\</BODY > \< /HTML >"  
   
     > [!NOTE]
-    >  "MSHTML:" musí předcházet HTML fragment, tak, aby je určený jako MSHTML datového proudu.  
+    >  "MSHTML:" musí předcházet HTML fragment, takže je určený jako proud MSHTML aplikace.  
   
- `hWnd`  
- Zpracování do okna Ovládací prvek bude připojen k.  
+ *hWnd*  
+ Popisovač okna, který ovládací prvek bude připojen k.  
   
- `pStream`  
- Ukazatel na datový proud, který se používá k chybě při inicializaci vlastností ovládacího prvku. Může být **NULL**.  
+ *pStream*  
+ Ukazatel na datový proud, který slouží k inicializaci vlastnosti ovládacího prvku. Může mít hodnotu NULL.  
   
- `ppUnkContainer`  
- Adresu ukazatele, který se zobrazí **IUnknown** kontejneru. Může být **NULL**.  
+ *ppUnkContainer*  
+ Adresa ukazatel, který se zobrazí `IUnknown` kontejneru. Může mít hodnotu NULL.  
   
- `ppUnkControl`  
- [out] Adresu ukazatele, který se zobrazí **IUnknown** vytvořený ovládacího prvku. Může být **NULL**.  
+ *ppUnkControl*  
+ [out] Adresa ukazatel, který se zobrazí `IUnknown` vytvořený ovládacího prvku. Může mít hodnotu NULL.  
   
- `iidSink`  
- Identifikátor rozhraní odchozí rozhraní na obsažený objekt.  
+ *iidSink*  
+ Identifikátor rozhraní odchozí rozhraní v obsažený objekt.  
   
  *punkSink*  
- Ukazatel **IUnknown** rozhraní podřízený objekt, který má být připojen k bodu připojení určeného `iidSink` na obsažený objekt po obsažený objekt byl úspěšně vytvořen.  
+ Ukazatel `IUnknown` rozhraní jímky objektu k připojení k připojení bodu určeného *iidSink* na obsaženého objektu po úspěšném vytvoření obsažený objekt.  
   
- `bstrLic`  
- BSTR obsahující licence pro ovládací prvek.  
+ *bstrLic*  
+ BSTR obsahující licenci pro ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlAxCreateControlLicEx` je podobná [AtlAxCreateControlLic](#atlaxcreatecontrollic) ale můžete taky přijímat ukazatele rozhraní do ovládacího prvku nově vytvořený a nastavení jímky událostí pro příjem událostí aktivováno pomocí ovládacího prvku.  
+ `AtlAxCreateControlLicEx` je podobný [AtlAxCreateControlLic](#atlaxcreatecontrollic) , ale také umožňuje přijímat ukazatel rozhraní na nově vytvořený ovládací prvek a nastavit jímky událostí přijímat události vyvolané ovládacího prvku.  
   
 ### <a name="example"></a>Příklad  
- V tématu [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pro ukázkové použití `AtlAxCreateControlLicEx`.  
+ Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) ukázku toho, jak používat `AtlAxCreateControlLicEx`.  
   
 ##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  Připojí předchozí vytvořený ovládací prvek k zadanému oknu.  
@@ -362,23 +362,23 @@ ATLAPI AtlAxAttachControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pControl`  
- [v] Ukazatel **IUnknown** ovládacího prvku.  
+ *pControl*  
+ [in] Ukazatel `IUnknown` ovládacího prvku.  
   
- `hWnd`  
- [v] Popisovač okna, který bude hostitelem ovládacího prvku.  
+ *hWnd*  
+ [in] Popisovač okna, který bude hostitelem ovládacího prvku.  
   
- `ppUnkContainer`  
- [out] Ukazatel na ukazatel **IUnknown** objektu kontejneru.  
+ *ppUnkContainer*  
+ [out] Ukazatel na ukazatel `IUnknown` objektu kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [AtlAxCreateControlEx](#atlaxcreatecontrolex) a [AtlAxCreateControl](#atlaxcreatecontrol) současně vytvořit a připojit ovládacího prvku.  
+ Použití [AtlAxCreateControlEx](#atlaxcreatecontrolex) a [AtlAxCreateControl](#atlaxcreatecontrol) chcete současně vytvořit a připojit ovládacího prvku.  
   
 > [!NOTE]
->  Připojovaný objekt ovládacího prvku se musí správně inicializovat před voláním `AtlAxAttachControl`.  
+>  Připojovaný objekt ovládacího prvku musí být správně inicializován před voláním `AtlAxAttachControl`.  
   
 ##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  Získá přímý ukazatel rozhraní na kontejner zadaného okna (pokud existuje) s uvedením jeho popisovače.  
@@ -388,11 +388,11 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- [v] Obslužná rutina do okna, který je hostitelem ovládacího prvku.  
+ *h*  
+ [in] Popisovač okna, které je hostitelem ovládacího prvku.  
   
- `pp`  
- [out] **IUnknown** kontejneru ovládacího prvku.  
+ *str*  
+ [out] `IUnknown` Kontejneru ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
@@ -405,17 +405,17 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- [v] Obslužná rutina do okna, který je hostitelem ovládacího prvku.  
+ *h*  
+ [in] Popisovač okna, které je hostitelem ovládacího prvku.  
   
- `pp`  
- [out] **IUnknown** hostované ovládacího prvku.  
+ *str*  
+ [out] `IUnknown` Hostované ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Jeden standardní hodnoty HRESULT.  
   
 ##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
- Volání této funkce nastavit webu podřízený objekt, který má **IUnknown** nadřazeného objektu.  
+ Voláním této funkce nastavíte lokalitu podřízeného objektu `IUnknown` nadřazeného objektu.  
   
 ```
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
@@ -423,41 +423,41 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
   
 ### <a name="parameters"></a>Parametry  
  *punkChild*  
- [v] Ukazatel **IUnknown** rozhraní podřízeného.  
+ [in] Ukazatel `IUnknown` rozhraní podřízeného.  
   
- `punkParent`  
- [v] Ukazatel **IUnknown** rozhraní nadřazeného objektu.  
+ *punkParent*  
+ [in] Ukazatel `IUnknown` rozhraní nadřazeného prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit  
- Tato funkce inicializuje ovládací prvek ATL pro hostování kódu tak, že zaregistrujete **"AtlAxWin80"** a **"AtlAxWinLic80"** třídy oken s plus několik vlastní okno zprávy.  
+ Tato funkce inicializuje ATL řídicího hostitelského kódu tak, že zaregistrujete **"AtlAxWin80"** a **"AtlAxWinLic80"** třídy oken a několika vlastních zpráv okna.  
   
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se inicializace ovládacího prvku hostování kódu byla úspěšná. v opačném případě **FALSE**.  
+ Nenulové, pokud inicializaci řídicího hostitelského kódu byla úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce musí být volána před použitím ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** okno třídu lze použít v jeho voláních [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nebo [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), jak je popsáno v sadě Windows SDK.  
+ Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) nebo [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), jak je popsáno v sadě Windows SDK.  
 
-##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
- Tato funkce uninitializes řízení ATL pro hostování kódu zrušením registrace **"AtlAxWin80"** a **"AtlAxWinLic80"** třídy oken.  
+##  <a name="atlaxwinterm"></a>  Call AtlAxWinTerm  
+ Tato funkce zruší inicializaci ATL řídicího hostitelského kódu při zrušení registrace **"AtlAxWin80"** a **"AtlAxWinLic80"** tříd oken.  
   
 ```
 inline BOOL AtlAxWinTerm();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí hodnotu **TRUE**.  
+ Vždy vrátí hodnotu TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce jednoduše volá [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) jak je popsáno v sadě Windows SDK.  
+ Jednoduše volá tuto funkci [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) jak je popsáno v sadě Windows SDK.  
   
- Volání této funkce odstraňování až po všechny existující hostitele windows mají byl zničen, pokud jste volali metodu [AtlAxWinInit](#atlaxwininit) a už je potřeba vytvořit hostitele windows. Pokud nemáte volání této funkce, třída okno bude zrušena automaticky při ukončení procesu.  
+ Voláním této funkce Vyčištění po všechny existující hostitele windows nejsou zničeny, pokud jste volali [AtlAxWinInit](#atlaxwininit) a už nebude potřeba vytvořit hostitele windows. Pokud není voláním této funkce, třídy okna se odregistrovat automaticky při ukončení procesu.  
   
 ##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  Voláním této funkce načtete informace o výchozím zdrojovém rozhraní objektu.  
@@ -472,32 +472,32 @@ ATLAPI AtlGetObjectSourceInterface(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `punkObj`  
- [v] Ukazatel na objekt, pro který má být vrácen informace.  
+ *punkObj*  
+ [in] Ukazatel na objekt, pro který má být vrácen informace.  
   
- `plibid`  
- [out] Ukazatel na ID KNIHOVNY obsahující definice rozhraní zdroje knihovny typů.  
+ *plibid*  
+ [out] Ukazatel na LIBID knihovnu typů obsahující definice zdrojové rozhraní.  
   
- `piid`  
- [out] Ukazatel rozhraní ID objektu výchozí zdroj rozhraní.  
+ *piid*  
+ [out] Ukazatel na Identifikátor rozhraní objektu výchozím zdrojovém rozhraní.  
   
  *pdwMajor*  
- [out] Ukazatel na hlavní číslo verze knihovny typů obsahující definice rozhraní zdroje.  
+ [out] Ukazatel na číslo hlavní verze knihovny typů obsahující definice zdrojové rozhraní.  
   
  *pdwMinor*  
- [out] Ukazatel na číslo podverze knihovny typů obsahující definice rozhraní zdroje.  
+ [out] Ukazatel na číslo podverze knihovnu typů obsahující definice zdrojové rozhraní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- `AtlGetObjectSourceInterface` můžete zadat můžete s ID rozhraní výchozí zdroj rozhraní, společně s ID KNIHOVNY a hlavní a podverze čísla knihovny typů popisující tohoto rozhraní.  
+ `AtlGetObjectSourceInterface` můžete poskytují rozhraní ID výchozím zdrojovém rozhraní, spolu s LIBID a hlavní a podverze čísla knihovnu typů popisující rozhraní.  
   
 > [!NOTE]
->  Pro tuto funkci úspěšně načíst požadované informace o objektu reprezentována `punkObj` musí implementovat `IDispatch` (a vrátí informace o typu prostřednictvím **IDispatch::GetTypeInfo**) a také musí implementovat buď `IProvideClassInfo2` nebo `IPersist`. Informace o typu pro rozhraní zdroje musí být ve stejné knihovny typů jako typ informace pro `IDispatch`.  
+>  Pro tuto funkci se úspěšně načíst požadované informace objekt reprezentovaný *punkObj* musí implementovat `IDispatch` (a vrátí informace o typu skrze `IDispatch::GetTypeInfo`) a navíc musí také implementovat buď `IProvideClassInfo2` nebo `IPersist`. Informace o typu pro zdrojové rozhraní musí být v knihovně typů jako informace o typu `IDispatch`.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak se definuje třídu jímky událostí `CEasySink`, která omezuje počet argumentů šablony, které můžete předat do `IDispEventImpl` na nezbytné součásti. `EasyAdvise` a `EasyUnadvise` použít `AtlGetObjectSourceInterface` k chybě při inicializaci [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) členy před voláním [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) nebo [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
+ Následující příklad ukazuje, jak můžete třeba definovat třídu jímky událostí `CEasySink`, který snižuje počet argumentů šablony, které můžete předat `IDispEventImpl` k úplné essentials. `EasyAdvise` a `EasyUnadvise` použít `AtlGetObjectSourceInterface` inicializovat [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) členy před voláním [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) nebo [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   

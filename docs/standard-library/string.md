@@ -1,5 +1,5 @@
 ---
-title: '&lt;řetězec&gt; | Microsoft Docs'
+title: '&lt;řetězec&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861861"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954568"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-Definuje třídu šablony kontejneru `basic_string` a různé podpůrné šablony.
+Definuje kontejner šablony třídy `basic_string` a různé podpůrných šablon.
 
-Další informace o `basic_string`, najdete v části [basic_string – třída](../standard-library/basic-string-class.md)
+Další informace o `basic_string`, naleznete v tématu [basic_string – třída](../standard-library/basic-string-class.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,47 +38,47 @@ Další informace o `basic_string`, najdete v části [basic_string – třída]
 
 ## <a name="remarks"></a>Poznámky
 
-Jazyk C++ a standardní knihovny C++ podporují dva typy řetězců:
+Jazyk C++ a standardní knihovny C++ podporuje dva typy řetězce:
 
-- Často označuje jako C řetězce ukončené hodnotou null znak pole.
+- Označovaný také jako C řetězce polí znaků zakončených znakem null.
 
-- Objekty třídy šablony, typu `basic_string`, které zpracovávají všechny `char`-jako argumenty pro šablony.
+- Objekty třídy šablony, typu `basic_string`, zpracovávaly všechny **char**– jako argumenty šablony.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Typ, který popisuje specializace šablon třídy `basic_string` elementy typu `char` jako `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Typ, který popisuje specializace šablon třídy `basic_string` elementy typu `wchar_t` jako `wstring`.|
-|[u16string](../standard-library/string-typedefs.md#u16string)|Typ, který popisuje specializace šablon třídy `basic_string` podle elementy typu `char16_t`.|
-|[u32string –](../standard-library/string-typedefs.md#u32string)|Typ, který popisuje specializace šablon třídy `basic_string` podle elementy typu `char32_t`.|
+|[string](../standard-library/string-typedefs.md#string)|Typ, který popisuje specializace třídy šablony `basic_string` elementy typu **char** jako `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Typ, který popisuje specializace třídy šablony `basic_string` elementy typu **wchar_t** jako `wstring`.|
+|[u16string](../standard-library/string-typedefs.md#u16string)|Typ, který popisuje specializace třídy šablony `basic_string` založené na prvky typu `char16_t`.|
+|[u32string](../standard-library/string-typedefs.md#u32string)|Typ, který popisuje specializace třídy šablony `basic_string` založené na prvky typu `char32_t`.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor +](../standard-library/string-operators.md#op_add)|Zřetězí dva objekty řetězce.|
-|[operator!=](../standard-library/string-operators.md#op_neq)|Testy, pokud řetězec objekt na levé straně operátoru není stejný jako řetězec objekt na pravé straně.|
-|[operator==](../standard-library/string-operators.md#op_eq_eq)|Testy, pokud řetězec objekt na levé straně operátoru rovná řetězec objekt na pravé straně.|
-|[operátor <](../standard-library/string-operators.md#op_lt)|Testuje, pokud objekt na levé straně operátoru řetězce je menší než na objekt řetězce na pravé straně.|
-|[Operator < =](../standard-library/string-operators.md#op_lt_eq)|Pokud řetězec objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt řetězce na pravé straně.|
-|[operátor <\<](../standard-library/string-operators.md#op_lt_lt)|Funkce šablony, která vloží řetězec do výstupního datového proudu.|
-|[operátor >](../standard-library/string-operators.md#op_gt)|Testy, pokud je řetězec objekt na levé straně operátoru větší než na objekt řetězce na pravé straně.|
-|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testy, pokud je řetězec objekt na levé straně operátoru větší než nebo rovna hodnotě řetězec objekt na pravé straně.|
-|[operátor >>](../standard-library/string-operators.md#op_gt_gt)|Funkce šablony, která extrahuje řetězec ze vstupního datového proudu.|
+|[Operator +](../standard-library/string-operators.md#op_add)|Zřetězí dva objekty řetězce.|
+|[operator!=](../standard-library/string-operators.md#op_neq)|Testuje, zda je na objekt řetězce na levé straně operátoru není roven objektu string na pravé straně.|
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Testuje, zda na objekt řetězce na levé straně operátoru roven objektu řetězce na pravé straně.|
+|[Operator <](../standard-library/string-operators.md#op_lt)|Testuje, zda je na objekt řetězce na levé straně operátoru menší než do objektu string na pravé straně.|
+|[Operator < =](../standard-library/string-operators.md#op_lt_eq)|Testuje, zda je řetězec, objekt na levé straně operátoru je menší než nebo rovno řetězci objekt na pravé straně.|
+|[Operator <\<](../standard-library/string-operators.md#op_lt_lt)|Funkce šablony, která vloží řetězec do výstupního datového proudu.|
+|[Operator >](../standard-library/string-operators.md#op_gt)|Testuje, zda je řetězec objekt na levé straně operátoru větší než objekt řetězce na pravé straně.|
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Testuje, zda je na objekt řetězce na levé straně operátoru větší než nebo rovno řetězci objekt na pravé straně.|
+|[operátor >>](../standard-library/string-operators.md#op_gt_gt)|Funkce šablony, který extrahuje řetězce ze vstupního datového proudu.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
 |||
 |-|-|
-|[Swap](../standard-library/string-functions.md#swap)|Výměny pole znaků dva řetězce.|
-|[stod –](../standard-library/string-functions.md#stod)|Převede posloupnost znaků pro `double.`|
-|[stof –](../standard-library/string-functions.md#stof)|Převede posloupnost znaků do `float`.|
-|[stoi –](../standard-library/string-functions.md#stoi)|Převede posloupnost znaků na celé číslo.|
-|[stold –](../standard-library/string-functions.md#stold)|Převede posloupnost znaků do `long double`.|
-|[stoll –](../standard-library/string-functions.md#stoll)|Převede posloupnost znaků do `long long`.|
-|[stoul –](../standard-library/string-functions.md#stoul)|Převede posloupnost znaků do `unsigned long`.|
-|[stoull –](../standard-library/string-functions.md#stoull)|Převede posloupnost znaků do `unsigned long long`.|
+|[Prohození](../standard-library/string-functions.md#swap)|Vymění pole znaků dva řetězce.|
+|[stod –](../standard-library/string-functions.md#stod)|Převede znakovou sekvenci k **double**.|
+|[stof](../standard-library/string-functions.md#stof)|Převede znakovou sekvenci k **float**.|
+|[stoi](../standard-library/string-functions.md#stoi)|Převede znakovou sekvenci na celé číslo.|
+|[stold](../standard-library/string-functions.md#stold)|Převede znakovou sekvenci k **long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Převede znakovou sekvenci k **long long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Převede znakovou sekvenci do **unsigned long**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Převede znakovou sekvenci do **unsigned long long**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Převede hodnotu na `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Převede hodnotu na široké `string`.|
 
@@ -86,31 +86,31 @@ Jazyk C++ a standardní knihovny C++ podporují dva typy řetězců:
 
 |Funkce|Popis|
 |-|-|
-|[getline šablony](../standard-library/string-functions.md#getline)|Extrahujte řetězce ze vstupního proudu řádek po řádku.|
+|[getline šablony](../standard-library/string-functions.md#getline)|Extrahuje řetězce ze vstupního proudu řádek po řádku.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[basic_string – třída](../standard-library/basic-string-class.md)|Šablony třídy, která popisuje objekty, které můžete ukládat posloupnost libovolný znak jako objekty.|
-|[char_traits – struktura](../standard-library/char-traits-struct.md)|Třídu šablony, která popisuje atributy přidružené znak typu CharType|
+|[basic_string – třída](../standard-library/basic-string-class.md)|Třída šablony popisuje objekty, které můžete ukládat posloupnost libovolný znak jako objekty.|
+|[char_traits – struktura](../standard-library/char-traits-struct.md)|Třída šablony popisující atributy přidružené k znaku typu CharType|
 
 ### <a name="specializations"></a>Specializace
 
 |||
 |-|-|
-|[char_traits –\<char > – Struktura](../standard-library/char-traits-char-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char`.|
-|[char_traits<wchar_t> – struktura](../standard-library/char-traits-wchar-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `wchar_t`.|
-|[char_traits<char16_t> – struktura](../standard-library/char-traits-char16-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char16_t`.|
-|[char_traits<char32_t> – struktura](../standard-library/char-traits-char32-t-struct.md)|Struktura, která je specializace šablony struktura `char_traits` \<CharType > elementu typu `char32_t`.|
+|[char_traits\<char > – Struktura](../standard-library/char-traits-char-struct.md)|Struktura, která je specializací šablony struktury `char_traits` \<CharType > pro element typu `char`.|
+|[char_traits<wchar_t> – struktura](../standard-library/char-traits-wchar-t-struct.md)|Struktura, která je specializací šablony struktury `char_traits` \<CharType > pro element typu `wchar_t`.|
+|[char_traits<char16_t> – struktura](../standard-library/char-traits-char16-t-struct.md)|Struktura, která je specializací šablony struktury `char_traits` \<CharType > pro element typu `char16_t`.|
+|[char_traits<char32_t> – struktura](../standard-library/char-traits-char32-t-struct.md)|Struktura, která je specializací šablony struktury `char_traits` \<CharType > pro element typu `char32_t`.|
 
 ## <a name="requirements"></a>Požadavky
 
 - **Záhlaví:** \<řetězec >
 
-- **Namespace:** – std
+- **Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

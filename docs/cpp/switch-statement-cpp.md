@@ -1,5 +1,5 @@
 ---
-title: přepínače – příkaz (C++) | Microsoft Docs
+title: Switch – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947631"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C++)
-Umožňuje výběr mezi více oddílů kódu, v závislosti na hodnotě výrazu integrální.  
+Umožňuje výběr mezi více částí kódu v závislosti na hodnotě integrálního výrazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,23 +39,23 @@ Umožňuje výběr mezi více oddílů kódu, v závislosti na hodnotě výrazu 
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- *Výraz* musí být celočíselné typu nebo typu třídy, pro kterou je konverzi jednoznačným integrální typu. Integrální povýšení se provádí, jak je popsáno v [standardní převody](standard-conversions.md).  
+ *Výraz* musí být integrálního typu nebo typu třídy, pro kterou existuje jednoznačný převod na integrální typ. Integrální propagace se provádí, jak je popsáno v [standardní převody](standard-conversions.md).  
   
- `switch` Těla příkazu se skládá z řady **případ** popisky a volitelné **výchozí** popisek. Žádné dvě konstantní výrazy v **případ** příkazy lze vyhodnotit na stejnou hodnotu. **Výchozí** popisek může vyskytovat pouze jednou. Příkaz s popiskem nejsou syntaktické požadavky, ale `switch` příkaz nemá význam bez nich.   Příkaz výchozí nemusí pocházet na konci; může vyskytovat kdekoli v těle příkazem switch. Případ nebo výchozí štítek může vyskytovat pouze uvnitř příkazu switch.  
+ **Přepnout** tělo s příkazy se skládá z řady **případ** popisky a volitelně **výchozí** popisek. Žádné dva konstantní výrazy u **případ** nemohou hodnotit stejnou hodnotu. **Výchozí** popisek se může objevit pouze jednou. Označené příkazy nejsou syntaktickými požadavky, ale **přepnout** příkaz je bez nich nemá význam.   Výchozí příkaz se nemusí nacházet pouze na konci; může se zobrazit kdekoli v textu příkazu switch. Případ nebo výchozí popisek může být použito pouze uvnitř příkazu switch.  
   
- *Konstantní výraz* v každé **případ** popisek je převést na typ *výraz* a v porovnání s *výraz* pro rovnosti. Ovládací prvek předává do příkazu, jehož **případ** *konstantní výraz* odpovídá hodnotě *výraz*. Výsledné chování je uvedené v následující tabulce.  
+ *Konstantní výraz* v každém **případ** popisek je převeden na typ *výraz* a ve srovnání s *výraz* pro rovnost. Ovládací prvek se předá příkazu jehož **případ** *konstantní výraz* odpovídá hodnotě *výraz*. Výsledné chování je uvedeno v následující tabulce.  
   
 ### <a name="switch-statement-behavior"></a>Chování příkazů přepínače  
   
 |Podmínka|Akce|  
 |---------------|------------|  
-|Převedená hodnota odpovídá propagovaných řízení výrazu.|Ovládací prvek je přenesen do příkazu následující tohoto popisku.|  
-|Konstanty neodpovídají konstanty v **případ** popisků; **výchozí** popisek je k dispozici.|Ovládací prvek je přenesen na **výchozí** popisek.|  
-|Konstanty neodpovídají konstanty v **případ** popisků; **výchozí** popisek není k dispozici.|Ovládací prvek je přenesen do příkazu po `switch` příkaz.|  
+|Převedená hodnota odpovídá zpropagovanému kontrolnímu výrazu.|Ovládací prvek bude převeden na příkaz následující po daném štítku.|  
+|Žádná Konstanta neodpovídá konstantě v **případ** popisků; **výchozí** popisek je k dispozici.|Ovládací prvek bude převeden na **výchozí** popisek.|  
+|Žádná Konstanta neodpovídá konstantě v **případ** popisků; **výchozí** popisek není k dispozici.|Ovládací prvek bude převeden na příkaz následující po **přepnout** příkazu.|  
   
- Pokud je nalezen odpovídající výraz, ovládací prvek není bránit následné **případ** nebo **výchozí** popisky. [Zalomení](../cpp/break-statement-cpp.md) příkaz slouží k zastavit provádění a přenos řízení na příkaz po `switch` příkaz. Bez **zalomení** příkaz, každý příkaz z odpovídající **případ** popisek na konec `switch`, včetně **výchozí**, je proveden. Příklad:  
+ Pokud je nalezen odpovídající výraz, ovládací prvek není ovlivněn následujícími **případ** nebo **výchozí** popisky. [Přerušení](../cpp/break-statement-cpp.md) prohlášení se používá k zastavení spuštěného procesu a předání řízení příkazu následujícímu po **přepnout** příkazu. Bez **přerušení** prohlášení, každý příkaz ze spárovaného **případ** popisek na konec objektu **přepnout**, včetně **výchozí**, je spustit. Příklad:  
   
-```  
+```cpp 
 // switch_statement1.cpp  
 #include <stdio.h>  
   
@@ -83,9 +84,9 @@ int main() {
 }  
 ```  
   
- V předchozím příkladu `capa` se zvýší, pokud `c` je velkým `A`. `break` Příkaz po `capa++` ukončí provádění `switch` těla příkazu a řízení předá do `while` smyčky. Bez `break` prohlášení, provádění by "předáno" do další příkaz s popiskem, tak, aby `lettera` a `nota` by se taky zvýší. Je podobné účel poskytovaný `break` příkaz pro `case 'a'`. Pokud `c` je jedno malé písmeno `a`, `lettera` se zvýší a `break` ukončuje příkaz `switch` těla příkazu. Pokud `c` není `a` nebo `A`, `default` spustit příkaz.  
+ Ve výše uvedeném příkladu `capa` se zvýší, pokud `c` je velké písmeno `A`. **Přerušení** příkazem za `capa++` ukončí provádění **přepnout** tělo s příkazy a řízení se předá **při** smyčky. Bez **přerušení** prohlášení, provádění by "předáno" do další příkaz s popiskem, tak, aby `lettera` a `nota` by se také zvýší. K podobnému účelu slouží **přerušení** příkaz pro `case 'a'`. Pokud `c` je malým `a`, `lettera` je zvýšen a **přerušení** příkaz ukončí **přepnout** těla příkazu. Pokud `c` není `a` nebo `A`, **výchozí** je proveden příkaz.  
 
- **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atribut je uveden v standardu C ++ 17. Je možné v `switch` příkaz jako nápovědu pro kompilátor (nebo na nikoho čtení kódu) je určený chování pro tento patří. – Kompilátor Visual C++ aktuálně neupozorňuje na fallthrough chování, takže tento atribut má chování kompilátoru žádný vliv. Všimněte si, že atribut je použit prázdný příkaz v rámci příkaz s popiskem; jinými slovy je nutné středník.
+ **Visual Studio 2017 a novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` je zadán atribut v standardu C ++ 17. Je možné v **přepnout** příkaz jako Nápověda pro kompilátor (nebo každému, kdo čte kód) je určena propuštěním chování. Kompilátor Visual C++ aktuálně neupozorňuje na fallthrough chování, tento atribut nemá žádný vliv na chování kompilátoru. Všimněte si, že atribut je použit prázdný příkaz v rámci příkaz s popiskem; jinými slovy je nezbytné středník.
 
 ```cpp
 int main()
@@ -113,7 +114,7 @@ int main()
 }
 ```
 
- **Visual Studio 2017 verze 15.3 a novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): příkaz switch může znamenat a inicializace proměnné, jejíž obor je omezený na blok příkazu switch:
+ **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): příkaz switch může zavádět a inicializujte proměnnou, jejíž rozsah je omezen na blok příkazu switch:
 
 ```cpp
  switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +127,7 @@ int main()
         };
 ```
 
- Vnitřní blok `switch` příkaz může obsahovat definice s inicializacích, dokud jsou dostupné – to znamená, není přeskočí všechny možné provádění cesty. Názvy zavedená pomocí tyto deklarace mít místní rozsah. Příklad:  
+ Vnitřní blok **přepnout** příkaz může obsahovat definice s inicializacemi, dokud budou dosažitelné – to znamená nebudou obcházeny všemi možnými cestami spuštění. Názvy zavedené pomocí těchto prohlášení mají místní rozsah. Příklad:  
   
 ```cpp  
 // switch_statement2.cpp  
@@ -161,15 +162,15 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- A `switch` příkaz mohou být použity. V takových případech **případ** nebo **výchozí** popisky přidružit na nejbližší `switch` příkaz, který je uzavře.  
+ A **přepnout** příkaz mohou být vnořené. V takových případech **případ** nebo **výchozí** popisky přidružují k nejbližšímu **přepnout** příkaz, který je obklopuje.  
 
  
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Microsoft C neomezuje počet případů hodnot v `switch` příkaz. Číslo je omezena pouze dostupné paměti. ANSI C vyžaduje alespoň 257 případu popisky povolené v `switch` příkaz.  
+ Microsoft C neomezuje počet případových hodnoty v **přepnout** příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v **přepnout** příkazu.  
   
- Výchozí nastavení pro Microsoft C je, že jsou povolené rozšíření Microsoft. Použití [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru zakázání tyto rozšíření.  
+ Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společnosti Microsoft. Použití [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru pro zákaz těchto rozšíření.  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy výběru](../cpp/selection-statements-cpp.md)   

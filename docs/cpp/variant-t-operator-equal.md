@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Operator = | Microsoft Docs
+title: _variant_t::Operator = | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0db0ea95fe3f5491780cd0297e8d3f56b6800e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947669"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      _variant_t& operator=(  
+_variant_t& operator=(  
    const VARIANT& varSrc   
 );  
   
@@ -127,39 +128,39 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Poznámky  
  Operátor přiřadí novou hodnotu objektu `_variant_t`:  
   
--   **Operator = (***varSrc***)** přiřadí existující **VARIANT** k `_variant_t` objektu.      
+-   **Operator = (***varSrc***)** přiřadí existující `VARIANT` k `_variant_t` objektu.      
   
--   **Operator = (***pVarSrc***)** přiřadí existující **VARIANT** k `_variant_t` objektu.      
+-   **Operator = (***pVarSrc***)** přiřadí existující `VARIANT` k `_variant_t` objektu.      
   
 -   **Operator = (***var_t_Src***)** přiřadí existující `_variant_t` do objektu `_variant_t` objektu.      
   
--   **Operator = (***sSrc***)** přiřadí **krátké** celočíselnou hodnotu a `_variant_t` objektu.      
+-   **operátor = (***sSrc***)** přiřadí **krátký** celočíselnou hodnotu `_variant_t` objektu.      
   
--   **Operator = (**`lSrc`**)** přiřadí **dlouho** celočíselnou hodnotu a `_variant_t` objektu.      
+-   **operátor = (**`lSrc`**)** přiřadí **dlouhé** celočíselnou hodnotu `_variant_t` objektu.      
   
 -   **operátor = (***fltSrc***)** přiřadí **float** číselnou hodnotu `_variant_t` objektu.      
   
--   **operátor = (***dblSrc***)** přiřadí **dvojité** číselnou hodnotu `_variant_t` objektu.      
+-   **operátor = (***dblSrc***)** přiřadí **double** číselnou hodnotu `_variant_t` objektu.      
   
--   **Operator = (***cySrc***)** přiřadí **CY** do objektu `_variant_t` objektu.      
+-   **operátor = (***cySrc***)** přiřadí `CY` do objektu `_variant_t` objektu.      
   
--   **Operator = (***bstrSrc***)** přiřadí `BSTR` do objektu `_variant_t` objektu.      
+-   **operátor = (***bstrSrc***)** přiřadí `BSTR` do objektu `_variant_t` objektu.      
   
--   **operátor = (***wstrSrc***)** přiřadí řetězec kódování Unicode `_variant_t` objektu.      
+-   **Operator = (***wstrSrc***)** přiřadí řetězec znakové sady Unicode `_variant_t` objektu.      
   
--   **Operator = (**`strSrc`**)** přiřadí řetězec vícebajtové tak, aby `_variant_t` objektu.      
+-   **Operator = (**`strSrc`**)** přiřadí vícebajtový řetězec `_variant_t` objektu.      
   
--   **Operator = (** `bSrc` **)** přiřadí `bool` hodnotu `_variant_t` objektu.    
+-   **Operator = (** `bSrc` **)** přiřadí **bool** hodnota, která se `_variant_t` objektu.    
   
--   **Operator = (***pDispSrc***)** přiřadí **VT_DISPATCH** do objektu `_variant_t` objektu.      
+-   **operátor = (***pDispSrc***)** přiřadí `VT_DISPATCH` do objektu `_variant_t` objektu.      
   
--   **Operator = (***pIUnknownSrc***)** přiřadí **VT_UNKNOWN** do objektu `_variant_t` objektu.      
+-   **operátor = (***pIUnknownSrc***)** přiřadí `VT_UNKNOWN` do objektu `_variant_t` objektu.      
   
--   **operátor = (***decSrc***)** přiřadí **DECIMAL** hodnotu `_variant_t` objektu.      
+-   **Operator = (***decSrc***)** přiřadí `DECIMAL` hodnota, která se `_variant_t` objektu.      
   
--   **Operator = (** `bSrc` **)** přiřadí **BAJTŮ** hodnotu `_variant_t` objektu.    
+-   **Operator = (** `bSrc` **)** přiřadí `BYTE` hodnota, která se `_variant_t` objektu.    
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_variant_t – třída](../cpp/variant-t-class.md)

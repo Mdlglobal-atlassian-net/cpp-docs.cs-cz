@@ -1,5 +1,5 @@
 ---
-title: Conditional – třída | Microsoft Docs
+title: Conditional – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962397"
 ---
 # <a name="conditional-class"></a>conditional – třída
 
@@ -40,22 +40,22 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`B` Hodnota, která určuje vybraného typu.
+*B* hodnotu, která určuje vybraný typ.
 
-`T1` Výsledek typu, pokud B hodnotu true.
+*T1* výsledek typu při B má hodnotu true.
 
-`T2` Výsledek typu při B je false.
+*T2* výsledek typu při B má hodnotu false.
 
 ## <a name="remarks"></a>Poznámky
 
-Typedef člen šablony `conditional<B, T1, T2>::type` vyhodnotí jako `T1` při `B` vyhodnotí jako `true`a vyhodnocuje `T2` při `B` vyhodnocuje `false`.
+Definice typu člena šablony `conditional<B, T1, T2>::type` vyhodnotí jako *T1* při *B* vyhodnotí jako **true**a je vyhodnocena jako *T2* při  *B* vyhodnotí jako **false**.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

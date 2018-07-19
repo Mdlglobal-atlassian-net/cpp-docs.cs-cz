@@ -1,5 +1,5 @@
 ---
-title: Proveďte-while – příkaz (C++) | Microsoft Docs
+title: Proveďte-while – příkaz (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947647"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C++)
-Spustí *příkaz* opakovaně až do ukončení zadanou podmínku ( *výraz*) vyhodnotí na hodnotu nula.  
+Spustí *příkaz* opakovaně, dokud není zadaná ukončovací podmínka ( *výraz*) vyhodnocen jako nula.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +38,18 @@ while ( expression ) ;
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Test stavu ukončení se provádí po každé spuštění smyčky; Proto `do-while` provede jeden či více krát, v závislosti na hodnotě výrazu ukončení smyčky. `do-while` Příkaz můžete také při ukončení [zalomení](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), nebo [vrátit](../cpp/return-statement-cpp.md) do těla příkazu je spustit příkaz.  
+ Podmínka ukončení zkoušky se provádí po každém spuštění smyčky; Proto **proveďte – zatímco** cyklus se opakuje, jednou nebo vícekrát, v závislosti na hodnotě výrazu ukončení. **Proveďte-při** příkaz může také skončit při [přerušení](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), nebo [vrátit](../cpp/return-statement-cpp.md) je proveden příkaz v rámci těla příkazu.  
   
- *Výraz* musí mít typ aritmetické nebo ukazatel. Provádění pokračuje následujícím způsobem:  
+ *Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:  
   
-1.  Provede se tělo příkaz.  
+1.  Provede se tělo příkazu.  
   
-2.  Dále *výraz* vyhodnotí. Pokud *výraz* je nastavena hodnota false, `do-while` příkaz ukončí a předá řízení další příkaz v programu. Pokud *výraz* hodnotu true (nenulové hodnoty), tento proces se opakuje, počínaje z kroku 1.  
+2.  Dále *výraz* vyhodnocena. Pokud *výraz* má hodnotu false, **proveďte-při** příkaz skončí a předá řízení dalšímu příkazu v programu. Pokud *výraz* má hodnotu true (nenulový), proces se opakuje, počínaje krokem 1.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje `do-while` příkaz:  
+ Následující příklad ukazuje **proveďte – zatímco** – příkaz:  
   
-```  
+```cpp 
 // do_while_statement.cpp  
 #include <stdio.h>  
 int main()  
@@ -63,7 +64,7 @@ int main()
   
 ## <a name="see-also"></a>Viz také  
  [Příkazy iterace](../cpp/iteration-statements-cpp.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [while – příkaz (C++)](../cpp/while-statement-cpp.md)   
- [pro příkaz (C++)](../cpp/for-statement-cpp.md)   
+ [for – příkaz (C++)](../cpp/for-statement-cpp.md)   
  [Příkaz For založený na rozsahu (C++)](../cpp/range-based-for-statement-cpp.md)

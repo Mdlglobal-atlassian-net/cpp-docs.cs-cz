@@ -1,5 +1,5 @@
 ---
-title: static_assert | Microsoft Docs
+title: static_assert | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47046090da45d963cc0005f47e2bea680ad17795
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc51fab2dade4c6bed0456dd353258df82722de5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947693"
 ---
 # <a name="staticassert"></a>static_assert
-Testuje softwarové tvrzení v době kompilace. Pokud je zadaný konstantní výraz `false`, kompilátor zobrazí určenou zprávu, pokud je k dispozici a kompilace se nezdaří s chybou C2338; jinak deklaraci nemá žádný vliv.  
+Testuje výraz softwaru v době kompilace. Pokud se zadaný výraz konstanty je FALSE, kompilátor zobrazí zadanou zprávu, pokud je zadáno a kompilace selže s chybou C2338; jinak deklarace nemá žádný vliv.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,33 +42,33 @@ static_assert( constant-expression );
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`constant-expression`|Celočíselné konstantní výraz, který lze převést na logickou hodnotu.<br /><br /> Je-li vyhodnocený výraz nula (false), `string-literal` parametr se zobrazí a kompilace se nezdaří s chybou. Pokud ve výrazu je nenulové hodnoty (pravda), `static_assert` deklarace nemá žádný vliv.|  
-|`string-literal`|Zprávu, která se zobrazí, pokud `constant-expression` parametr je nulová. Zpráva je řetězec znaků [základní znakovou sadu](../c-language/ascii-character-set.md) kompilátoru; je, nikoli [vícebajtové a široké znaky](../c-language/multibyte-and-wide-characters.md).|  
+|`constant-expression`|Celočíselný konstantní výraz, který lze převést na logickou hodnotu.<br /><br /> Pokud vyhodnocený výraz je nula (false), `string-literal` parametrů se zobrazí a kompilace selže s chybou. Pokud má výraz hodnotu nenulová (pravda), **static_assert** deklarace nemá žádný vliv.|  
+|`string-literal`|Zprávu, která se zobrazí, pokud `constant-expression` parametru je nula. Zpráva je řetězec znaků [základní znakové sadě](../c-language/ascii-character-set.md) kompilátoru; který je, nikoli [vícebajtové široké znaky](../c-language/multibyte-and-wide-characters.md).|  
   
 ## <a name="remarks"></a>Poznámky  
- `constant-expression` Parametr `static_assert` představuje deklarace *softwaru assertion*. Kontrolní výraz softwaru Určuje podmínku, která byste měli být na určitém místě v programu na hodnotu true. Pokud je podmínka vyhodnocena jako true, `static_assert` deklarace nemá žádný vliv. Pokud je podmínka vyhodnocena jako false, kontrolní výraz selže, kompilátor zobrazí zprávu ve `string-literal` parametr a kompilace selže s chybou. Visual Studio 2017 a novější je volitelný parametr řetězcový literál. 
+ `constant-expression` Parametr **static_assert** představuje prohlášení *softwarové tvrzení*. Softwarové tvrzení Určuje podmínku, která očekáváte, že na hodnotu true v určitém místě v programu. Pokud je podmínka pravdivá, **static_assert** deklarace nemá žádný vliv. Pokud je podmínka NEPRAVDA, výraz se nezdaří, kompilátor zobrazí zprávu v `string-literal` parametr a kompilace selže s chybou. V sadě Visual Studio 2017 nebo novější je volitelný parametr řetězcový literál. 
   
- `static_assert` Deklarace testuje softwarové tvrzení v době kompilace. Naproti tomu [assert – makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makro testuje assertion softwaru v době běhu a vznikly náklady běhu v místa a času. `static_assert` Deklarace je zvláště užitečná pro ladění šablony, protože můžou být součástí šablony argumenty `constant-expression` parametr.  
+ **Static_assert** deklarace testuje výraz softwaru v době kompilace. Naproti tomu [vyhodnocení makra, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro testuje výraz softwaru v době běhu a má náklady běhu prostor nebo čas. **Static_assert** deklarace je zvláště užitečná pro šablony ladění, protože argumenty šablony mohou být součástí `constant-expression` parametru.  
   
- Kompilátor prověří `static_assert` deklarace chyby syntaxe, když dojde k deklaraci. Kompilátor vyhodnotí `constant-expression` parametr okamžitě, pokud není závislý na parametru šablony. Jinak, kompilátor vyhodnotí `constant-expression` parametr při vytváření instance šablony. V důsledku toho kompilátor může vydat diagnostické zprávy jednou při zjistil deklaraci se a znovu když šablona je vytvořena instance.  
+ Kompilátor ověří **static_assert** prohlášení o syntaktických chybách při výskytu prohlášení. Kompilátor vyhodnotí `constant-expression` parametr okamžitě, pokud není závislý na parametru šablony. V opačném případě kompilátor vyhodnocuje `constant-expression` parametr při vytváření instance šablony. V důsledku toho kompilátor může vydat diagnostickou zprávu jednou při výskytu prohlášení a znovu když šablona je vytvořena instance.  
   
- Můžete použít `static_assert` – klíčové slovo v oboru názvů, třída nebo obor bloku. ( `static_assert` – Klíčové slovo je technicky deklaraci, i když ho nezavádí nový název do programu, protože je možné použít v oboru názvů.)  
+ Můžete použít **static_assert** – klíčové slovo v oboru názvů, třídy nebo oboru bloku. ( **Static_assert** – klíčové slovo je technicky prohlášení, i když nezavádí nové jméno do programu, protože může být použito v oboru názvů.)  
   
 ## <a name="description"></a>Popis  
- V následujícím příkladu `static_assert` deklarace má obor názvů. Protože kompilátor zná velikost typu `void *`, je tento výraz vyhodnocen okamžitě.  
+ V následujícím příkladu **static_assert** má deklarace oboru názvů. Protože kompilátor zná velikost typu `void *`, je výraz vyhodnocen ihned.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");  
 ```  
   
 ## <a name="description"></a>Popis  
- V následujícím příkladu `static_assert` deklarace má rozsah třídy. `static_assert` Ověřuje, že je parametr šablony *prostý stará data* typu (POD). Kompilátor prověří `static_assert` deklarace je deklarovaná, ale nelze vyhodnotit `constant-expression` parametr až `basic_string` vytvoření instance šablony třídy v `main()`.  
+ V následujícím příkladu **static_assert** má deklarace oboru třídy. **Static_assert** ověří, zda je parametr šablony *obyčejná stará data* typ (POD). Kompilátor ověří **static_assert** prohlášení, pokud je deklarovaná, ale není vyhodnocen `constant-expression` parametr až `basic_string` vytváření instance šablony třídy v `main()`.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 #include <type_traits>  
 #include <iosfwd>  
 namespace std {  
@@ -91,11 +92,11 @@ int main()
 ```  
   
 ## <a name="description"></a>Popis  
- V následujícím příkladu `static_assert` deklarace obsahuje rozsah bloku. `static_assert` Ověřuje, že velikost strukturu VMPage je rovno pagesize virtuální paměti systému.  
+ V následujícím příkladu **static_assert** má deklarace oboru bloku. **Static_assert** ověří, zda je velikost struktury VMPage rovna pagesize virtuální paměti systému.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 #include <sys/param.h> // defines PAGESIZE  
 class VMMClient {  
 public:  
@@ -112,7 +113,7 @@ public:
   
 ## <a name="see-also"></a>Viz také  
  [Kontrolní výraz a uživatelem zadané zprávy (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)   
- [#error – direktiva (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)   
+ [#error – direktiva (C++)](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [Šablony](../cpp/templates-cpp.md)   
  [Znaková sada ASCII](../c-language/ascii-character-set.md)   

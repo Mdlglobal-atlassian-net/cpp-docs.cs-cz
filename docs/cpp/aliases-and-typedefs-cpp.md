@@ -1,5 +1,5 @@
 ---
-title: Aliasy a definice TypeDef (C++) | Microsoft Docs
+title: Aliasy a definice TypeDef (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947594"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy a definice Typedef (C++)
-Můžete použít *alias deklarace* deklarovat název, který bude používat jako synonymum pro dříve deklarovaného typu. (Tento mechanismus se také označuje neformálně jako *typ alias*). Tento mechanismus můžete také použít k vytvoření *alias šablony*, což může být obzvláště užitečné pro vlastní alokátorů.  
+Můžete použít *deklarace aliasu* deklarovat název, který chcete použít jako synonymum pro dřív deklarovaného typu. (Tento mechanismus se také nazývá neformálně *alias typu*). Tento mechanismus lze také použít k vytvoření *šablonu aliasů*, což může být zvláště užitečná pro vlastních alokátorů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,11 +35,11 @@ using identifier = type;
  Název aliasu.  
   
  `type`  
- Identifikátor typu, který vytváříte alias.  
+ Identifikátor typu, kterou vytváříte alias.  
   
- Alias nezavádí nový typ a nelze změnit význam stávající název typu.  
+ Alias nezavádí nový typ a nelze změnit význam existujícím názvem typu.  
   
- Nejjednodušší forma alias je ekvivalentní `typedef` mechanismus z C ++ 03:  
+ Nejjednodušší forma alias je ekvivalentní **typedef** mechanismus z C ++ 03:  
   
 ```cpp  
 // C++11  
@@ -48,7 +49,7 @@ using counter = long;
 // typedef long counter;  
 ```  
   
- Obě tyto umožňují vytvářet proměnné typu "čítač". Něco užitečnější by alias typ tohoto typu pro `std::ios_base::fmtflags`:  
+ Obě tyto umožňují vytvářet proměnné typu informací, že čítač". Něco užitečnější by být alias typu, jako je ten pro `std::ios_base::fmtflags`:  
   
 ```cpp  
 // C++11  
@@ -63,7 +64,7 @@ fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout
 std::cout.flags(fl_hex);  
 ```  
   
- Aliasy také práci s ukazatelů na funkce, ale jsou mnohem srozumitelnější než ekvivalentní typedef:  
+ Aliasy také fungovat ukazatelů na funkce, ale jsou mnohem čitelnější než ekvivalentní definice typu:  
   
 ```cpp  
 // C++11  
@@ -78,7 +79,7 @@ func fptr = &actual_function;
   
 ```  
   
- O omezení `typedef` mechanismus je, že předchozí postup nebude fungovat se šablonami. Typ alias syntaxe C ++ 11 však umožňuje vytváření šablon alias:  
+ Omezení **typedef** mechanismu je, že nebude fungovat se šablonami. Syntaxe alias typu v C ++ 11, ale umožňuje vytvářet šablony aliasů:  
   
 ```cpp  
 template<typename T> using ptr = T*;   
@@ -89,7 +90,7 @@ ptr<int> ptr_int;
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat šablonu alias s vlastní allocator – v takovém případě celé vector typu. Můžete nahradit libovolný typ pro `int` Chcete-li vytvořit alias pohodlný skrytí komplexního parametru jsou uvedené v hlavním funkční kódu. Pomocí přidělujícího modulu vlastní prostřednictvím vašeho kódu můžete zlepšení čitelnosti a snižte riziko představení chyby způsobené překlepům.  
+ Následující příklad ukazuje, jak pomocí vlastního alokátoru šabloně aliasů – v takovém případě celé vektorového typu. Můžete použít libovolný typ pro **int** vytvořit alias vhodné skrýt komplexního parametru jsou uvedeny v hlavním funkční kódu. Pomocí vlastního alokátoru v rámci kódu můžete zlepšit čitelnost a snížit riziko zavlečení chyby způsobené překlepy.  
   
 ```cpp  
 #include <stdlib.h>  
@@ -148,24 +149,24 @@ int main ()
 ```  
   
 ## <a name="typedefs"></a>Typedefs  
- A `typedef` deklarace představuje název, který v rámci svého oboru, stane synonymum pro typ poskytují *deklaraci typu* část deklarace.  
+ A **typedef** deklarace zavádí název, který v rámci své působnosti stane synonymem pro typ daný *deklarace typu* částí deklarace.  
   
  Deklarace typedef je možné použít k vytvoření kratších nebo výstižnějších názvů pro typy, které jsou již definovány jazykem, nebo vlastní deklarované typy. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.  
   
- Rozdíl k **třída**, `struct`, **– typ union**, a `enum` deklarace, `typedef` deklarace není zavést nové typy – se zavést nové názvy pro existující typy.  
+ Rozdíl od **třídy**, **struktury**, **sjednocení**, a **výčtu** deklarace, **typedef** deklarace nezavádí nové typy – ale zavádí nové názvy pro existující typy.  
   
- Názvy deklarováno s použitím `typedef` zabírají stejného oboru názvů jako ostatní identifikátory (s výjimkou příkaz popisky). Proto nemohou používat identifikátor shodný s dříve deklarovaným názvem, vyjma deklarací typů tříd. Podívejte se na následující příklad:  
+ Názvy deklarované pomocí **typedef** zabírat stejný obor názvů jako jiné identifikátory (kromě popisků příkazů). Proto nemohou používat identifikátor shodný s dříve deklarovaným názvem, vyjma deklarací typů tříd. Vezměte v úvahu v následujícím příkladu:  
   
-```  
+```cpp 
 // typedef_names1.cpp  
 // C2377 expected  
 typedef unsigned long UL;   // Declare a typedef name, UL.  
 int UL;                     // C2377: redefined.  
 ```  
   
- Pravidla skrývání názvů platná pro jiné identifikátory řídí i viditelnost názvů deklarovaných pomocí direktivy `typedef`. Následující příklad je proto v jazyce C++ platný:  
+ Pravidla skrývání názvů, které se vztahují na jiné identifikátory řídí i viditelnost názvů deklarovaných pomocí **typedef**. Následující příklad je proto v jazyce C++ platný:  
   
-```  
+```cpp 
 // typedef_names2.cpp  
 typedef unsigned long UL;   // Declare a typedef name, UL  
 int main()  
@@ -177,7 +178,7 @@ int main()
 ```  
  
   
-```  
+```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  
   
@@ -193,33 +194,33 @@ void myproc( int )
   
  Při deklarování identifikátoru místního oboru se stejným názvem jako typedef nebo při deklarování členu struktury nebo sjednocení ve stejném oboru nebo ve vnitřním oboru musí být určen specifikátor typu. Příklad:  
   
-```  
+```cpp 
 typedef char FlagType;  
 const FlagType x;  
 ```  
   
  Pro opětovné použití názvu `FlagType` pro identifikátor, člen struktury nebo člen sjednocení musí být určen typ:  
   
-```  
+```cpp 
 const int FlagType;  // Type specifier required  
 ```  
   
  Nestačí říct  
   
-```  
+```cpp 
 const FlagType;      // Incomplete specification  
 ```  
   
  protože `FlagType` se považuje za část typu, nikoli identifikátor, který je znovu deklarován. Tato deklarace je neplatnou jako  
   
-```  
+```cpp 
 int;  // Illegal declaration   
 ```  
   
  Pomocí typedef je možné deklarovat jakýkoli typ, včetně ukazatele, funkce a typů polí. Je možné deklarovat název typedef pro ukazatel na typ struktury nebo sjednocení před definováním typu struktury nebo sjednocení, pokud má definice stejnou viditelnost jako deklarace.  
   
 ### <a name="examples"></a>Příklady  
- Jedno z použití deklarací `typedef` je vytvoření jednotnějších a kompaktnějších deklarací. Příklad:  
+ Jedno použití **typedef** deklarace je, aby deklarace jednotnějších a kompaktnějších. Příklad:  
   
 ```cpp  
 typedef char CHAR;          // Character type.  
@@ -229,31 +230,31 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- Pro použití klíčového slova `typedef` ke specifikaci základních a odvozených typů ve stejné deklaraci je možné oddělit deklarátory čárkami. Příklad:  
+ Chcete-li použít **typedef** stanovit základních a odvozených typů ve stejné deklaraci je možné oddělit deklarátory čárkami. Příklad:  
   
-```  
+```cpp 
 typedef char CHAR, *PSTR;  
 ```  
   
  Následující příklad poskytuje typ `DRAWF` pro funkci nevracející žádnou hodnotu a přijímající dva celočíselné argumenty:  
   
-```  
+```cpp 
 typedef void DRAWF( int, int );  
 ```  
   
- Po výše uvedeném příkazu `typedef` bude deklarace  
+ Po výše uvedeném **typedef** prohlášení, deklarace  
   
-```  
+```cpp 
 DRAWF box;   
 ```  
   
  ekvivalentní deklaraci  
   
-```  
+```cpp 
 void box( int, int );  
 ```  
   
- Klíčové slovo `typedef` je často spojeno s klíčovým slovem `struct` pro deklarování a pojmenování uživatelských typů:  
+ **Definice TypeDef** je často v kombinaci s **struktura** pro deklarování a pojmenování uživatelských typů:  
   
 ```cpp  
 // typedef_specifier2.cpp  
@@ -272,14 +273,14 @@ int main()
     ms.f = 0.99;  
     printf_s("%d   %f\n", ms.i, ms.f);  
 }  
-```  
+``` 
   
 ```Output  
 10   0.990000  
-```  
+``` 
   
-### <a name="re-declaration-of-typedefs"></a>Opakované deklarace – definice TypeDef  
- Deklaraci `typedef` lze použít ke změně deklarace stejného názvu k odkazování na stejný typ. Příklad:  
+### <a name="re-declaration-of-typedefs"></a>Opětovná deklarace TypeDef  
+ **Typedef** ke změně deklarace stejného názvu k odkazování na stejný typ. je možné deklarace. Příklad:  
   
 ```cpp  
 // FILE1.H  
@@ -291,16 +292,16 @@ typedef char CHAR;
 // PROG.CPP  
 #include "file1.h"  
 #include "file2.h"   // OK  
-```  
+``` 
   
- Program PROG.CPP obsahuje dva soubory hlaviček, z nichž oba obsahují deklarace `typedef` pro název `CHAR`. Pokud obě tyto deklarace odkazují na stejný typ, je taková změna deklarace přijatelná.  
+ Program *ProgID. CPP* obsahuje dva soubory hlaviček, z nichž oba obsahují **typedef** deklarace pro název `CHAR`. Pokud obě tyto deklarace odkazují na stejný typ, je taková změna deklarace přijatelná.  
   
- Deklarace `typedef` nemůže předefinovat název, který byl dříve deklarován jako jiný typ. Proto pokud soubor FILE2.H obsahuje  
+ A **typedef** název, který se dřív deklaroval jako jiný typ nejde předefinovat. Proto pokud *FILE2. H* obsahuje  
   
 ```cpp  
 // FILE2.H  
 typedef int CHAR;     // Error  
-```  
+``` 
   
  kompilátor vygeneruje chybu z důvodu pokusu o změnu deklarace názvu `CHAR`, aby odkazoval na jiný typ. Dojde k rozšíření na konstrukce, jako jsou například:  
   
@@ -313,10 +314,10 @@ typedef union REGS      // OK: name REGS redeclared
     struct wordregs x;  //  same meaning.  
     struct byteregs h;  
 } REGS;  
-```  
+``` 
   
-### <a name="typedefs-in-c-vs-c"></a>Definice TypeDef v C++ vs. C  
- Použití specifikátoru `typedef` spolu s typy tříd je široce podporováno kvůli postupům standardu ANSI C při deklarování nepojmenovaných struktur u deklarací `typedef`. Mnoho programátorů v jazyce C používá například následující:  
+### <a name="typedefs-in-c-vs-c"></a>v sadě Visual Studio C++ – definice TypeDef. C  
+ Použití **typedef** specifikátor s typy tříd je široce podporováno kvůli ANSI C při deklarování nepojmenovaných struktur u **– typedef** deklarace. Mnoho programátorů v jazyce C používá například následující:  
   
 ```cpp  
 // typedef_with_class_types1.cpp  
@@ -326,21 +327,21 @@ typedef struct {   // Declare an unnamed structure and give it the
    unsigned x;  
    unsigned y;  
 } POINT;  
-```  
+``` 
   
  Výhodou takovéto deklarace je, že umožňuje deklarace, jako jsou:  
   
-```  
+```cpp  
 POINT ptOrigin;  
-```  
+``` 
   
  místo:  
   
-```  
+```cpp 
 struct point_t ptOrigin;  
 ```  
   
- V jazyce C++ rozdíl mezi `typedef` názvy a typy skutečné (deklarovat s **třída**, `struct`, **sjednocení**, a `enum` klíčová slova) více jedinečná. Přestože postup uplatňovaný v jazyce C, který spočívá v deklaraci nepojmenované struktury v příkazu `typedef`, stále funguje, neposkytuje žádné konvenční výhody jako v jazyce C.  
+ V jazyce C++ je rozdíl mezi **– typedef** názvy a reálnými typy (deklarované pomocí **třídy**, **struktury**, **sjednocení**a **výčtu** klíčových slov) zřetelný. I když deklaraci nepojmenované struktury v praxi C **typedef** příkazu stále funguje, žádné konvenční výhody jako v jazyce C.  
   
 ```cpp  
 // typedef_with_class_types2.cpp  
@@ -352,9 +353,9 @@ typedef struct {
 } POINT;  
 ```  
   
- Předchozí příklad deklaruje třídu s názvem `POINT` pomocí syntaxe nepojmenované třídy `typedef`. `POINT` je považován za název třídy. Na názvy zavedené tímto způsobem se však vztahují následující omezení:  
+ Předchozí příklad deklaruje třídu s názvem `POINT` pomocí Nepojmenovaná třída **typedef** syntaxe. `POINT` je považován za název třídy. Na názvy zavedené tímto způsobem se však vztahují následující omezení:  
   
--   Název (synonymum) se nesmí nacházet za **třída**, `struct`, nebo **sjednocení** předponu.  
+-   Název (synonymum) se nemůže objevit po **třídy**, **struktura**, nebo **sjednocení** předponu.  
   
 -   Název nelze použít jako název konstruktoru nebo destruktoru v deklaraci třídy.  
   

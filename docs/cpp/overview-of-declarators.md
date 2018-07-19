@@ -1,5 +1,5 @@
 ---
-title: Přehled deklarátorů | Microsoft Docs
+title: Přehled Deklarátorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947521"
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
-Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory, popsané v [deklarace a definice](declarations-and-definitions-cpp.md), nesou vlastnosti, například třída typ a úložiště. Modifikátory, popsané v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravte deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
+Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory diskutované v [deklarace a definice](declarations-and-definitions-cpp.md), poskytují informace o vlastnostech, jako je například typ nebo třída úložiště. Modifikátory diskutované v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravují deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.  
   
- ![Modifikátory specifikátory a deklarátory](../cpp/media/vc38qy1.gif "vc38QY1")  
+ ![Modifikátory specifikátorů a deklarátorů](../cpp/media/vc38qy1.gif "vc38QY1")  
 Specifikátory, modifikátory a deklarátory  
   
- **Konkrétní Microsoft**  
+ **Specifické pro Microsoft**  
   
  Většinu klíčových slov rozšířených společností Microsoft lze použít jako modifikátory a vytvořit tak odvozené typy. Nejsou to specifikátory ani deklarátory. (Viz [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).)  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
- Deklarátory se vyskytují v syntaxi deklarace za nepovinným seznamem specifikátorů. Tyto specifikátory jsou popsané v [deklarace.](declarations-and-definitions-cpp.md) Deklarace může obsahovat více než jeden deklarátor, ale každý deklarátor deklaruje pouze jeden název.  
+ Deklarátory se vyskytují v syntaxi deklarace za nepovinným seznamem specifikátorů. Těchto specifikátorech pojednává téma [deklarace.](declarations-and-definitions-cpp.md) Deklarace může obsahovat více než jeden deklarátor, ale každý deklarátor deklaruje pouze jeden název.  
   
  Následující vzorová deklarace ukazuje, jak kombinace specifikátorů a deklarátorů utváří úplnou deklaraci:  
   
-```  
+```cpp 
 const char *pch, ch;  
 ```  
   
- V předchozím deklaraci, klíčová slova **const** a `char` tvoří seznam specifikátory. Jsou uvedeny dva deklarátory: `*pch` a `ch`.  Deklarace deklarující několik entit sestává ze specifikátoru typu následovaného čárkou odděleným seznamem deklarátorů ukončeným středníkem.  
+ V předchozí deklaraci, klíčová slova **const** a **char** tvoří seznam specifikátorů. Jsou uvedeny dva deklarátory: `*pch` a `ch`.  Deklarace deklarující několik entit sestává ze specifikátoru typu následovaného čárkou odděleným seznamem deklarátorů ukončeným středníkem.  
   
  **Deklarátory pro jednoduché objekty**  
   
@@ -50,29 +51,29 @@ const char *pch, ch;
   
  `int (i); // declarator is (i)`  
   
- **Deklarátory pro ukazatele, odkazy a pole**  
+ **Deklarátory pro ukazatele, reference a pole**  
   
  Operátory ukazatelů vložené před název zajistí, že objekt bude ukazatel nebo reference.  **\*** Operátor deklaruje název jako ukazatel; **&** operátor ji deklaruje jako odkaz.  
   
-```  
+```cpp 
 int *i; // declarator is *i  
 int **i; // declarator is **i;  
 int &i = x; // declaratory is &i  
 ```  
   
- Připojením klíčového slova `const` nebo `volatile` získá ukazatel tyto speciální vlastnosti.  Použití těchto specifikátorů v deklarátoru (na rozdíl od specifikátoru typu) upravuje vlastnosti ukazatele, nikoli objektu, na který ukazatel ukazuje:  
+ Přidávání **const** nebo **volatile** získá ukazatel tyto speciální vlastnosti.  Použití těchto specifikátorů v deklarátoru (na rozdíl od specifikátoru typu) upravuje vlastnosti ukazatele, nikoli objektu, na který ukazatel ukazuje:  
   
-```  
+```cpp 
 char *const cpc; // const pointer to char   
 const char *pcc; // pointer to const char   
 const char *const cpcc; // const pointer to const char  
 ```  
   
- Další informace naleznete v [ukazatelé const a volatile](../cpp/const-and-volatile-pointers.md).  
+ Další informace lze nalézt v [ukazatelé const a volatile](../cpp/const-and-volatile-pointers.md).  
   
  Ukazatel na člen třídy nebo struktury je deklarován s příslušným zanořeným specifikátorem názvu:  
   
-```  
+```cpp 
 int X::* pIntMember;   
 int ::X::* pIntMember; // the initial :: specifies X is in global scope  
 char Outer::Inner::* pIntMember; // pointer to char in a nested class  
@@ -80,24 +81,24 @@ char Outer::Inner::* pIntMember; // pointer to char in a nested class
   
  Závorky uzavírající nepovinný konstantní výraz za názvem přetváří objekt na pole.  Následné závorky deklarují další rozměry pole.  
   
-```  
+```cpp 
 int i[5]; // array with five elements of type int numbered from 0 to 4  
 int i[]; // array of unknown size  
 char *s[4]; // array of pointers to char  
 int i[2][2]; // two dimensional array  
 ```  
   
- **Deklarátory funkcí**  
+ **Deklarace pro funkce**  
   
- Pro deklaraci funkce se používají závorky obsahující seznam argumentů za názvem.  Následující kód deklaruje funkci návratového typu `int` a třemi argumenty typu `int`.  
+ Pro deklaraci funkce se používají závorky obsahující seznam argumentů za názvem.  Následující deklaruje funkci návratového typu **int** a třemi argumenty typu **int**.  
   
-```  
+```cpp 
 int f(int a, int b, int c);  
 ```  
   
  Ukazatele a reference na funkce jsou deklarovány přidáním operátoru ukazatele nebo reference před název funkce tak, jak je uvedeno níže.  Obvykle nepovinné závorky jsou vyžadovány pro rozlišení ukazatele na funkci od funkce vracející ukazatel:  
   
-```  
+```cpp 
 int (*pf)(int); // pointer to function returning int  
 int *f(int i); // function returning pointer to int  
 int (&pf)(int); // reference to function   
@@ -105,34 +106,34 @@ int (&pf)(int); // reference to function
   
  Ukazatele na členské funkce jsou odlišeny vnořenými specifikátory názvů:  
   
-```  
+```cpp 
 int (X::* pmf)(); // pointer to member function of X returning int  
 int* (X::* pmf)(); // pointer to member function returning pointer to int  
 ```  
   
- Viz také [ukazatelé na členy](../cpp/pointers-to-members.md).  
+ Viz také [ukazatelů na členy](../cpp/pointers-to-members.md).  
   
- **Funkce a objekty ve stejné deklaraci**  
+ **Funkce a objekty v jedné deklaraci**  
   
  Funkce a objekty lze deklarovat v jedné deklaraci takto:  
   
-```  
+```cpp 
 int i, *j, f(int k);  // int, pointer to int, function returning int  
 ```  
   
  Syntaxe může být v některých případech matoucí.  Následující deklarace  
   
-```  
+```cpp 
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- může vypadat jako deklarace ukazatele `int` a funkce vracející typ `int*`, ale není tomu tak.  To proto, že operátor * je součástí deklarátoru proměnné `i`, nikoli součástí deklarátoru funkce `f`.  
+ může vypadat jako deklarace **int** ukazatele a funkci vracející `int*`, ale není to.  To proto, že operátor * je součástí deklarátoru proměnné `i`, nikoli součástí deklarátoru funkce `f`.  
   
- **Ke zjednodušení syntaxe deklarátoru s – typedef**  
+ **Zjednodušení syntaxe deklarátoru pomocí direktivy typedef**  
   
- Lepší technikou je však použití direktivy `typedef` nebo kombinace závorek a klíčového slova `typedef`. Vezměte v úvahu deklaraci pole ukazatelů na funkce:  
+ Lepší technikou je však použití **typedef** nebo kombinace závorek a **typedef** – klíčové slovo. Vezměte v úvahu deklaraci pole ukazatelů na funkce:  
   
-```  
+```cpp 
 //  Function returning type int that takes one   
 //   argument of type char *.  
 typedef int (*PIFN)( char * );  
@@ -142,48 +143,43 @@ typedef int (*PIFN)( char * );
 PIFN pifnDispatchArray[7];  
 ```  
   
- Ekvivalentní deklaraci lze napsat bez deklarace `typedef`, je však tak komplikovaná, že riziko chyb převažuje nad všemi výhodami:  
+ Ekvivalentní deklaraci lze napsat bez **typedef** deklaraci, ale je to složité, riziko chyb převažuje veškeré výhody:  
   
-```  
+```cpp 
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
- Další informace o typedef najdete v tématu [aliasy a definice TypeDef](aliases-and-typedefs-cpp.md).  
+ Další informace o typedef naleznete v tématu [aliasy a definice TypeDef](aliases-and-typedefs-cpp.md).  
   
  Ukazatele, reference a pole jednoho základního typu lze v jedné deklaraci kombinovat oddělením čárkami následovně  
   
-```  
+```cpp 
 int a, *b, c[5], **d, &e=a;  
 ```  
   
  **Složitější syntaxe deklarátoru**  
   
--   Deklarátory ukazatelů, referencí, polí a funkcí lze kombinovat, a určovat tak objekty jako pole ukazatelů na funkce, ukazatele na pole apod.  
+- Deklarátory ukazatelů, referencí, polí a funkcí lze kombinovat, a určovat tak objekty jako pole ukazatelů na funkce, ukazatele na pole apod.  
   
--   Následující rekurzivní gramatika plně popisuje syntaxi deklarátoru ukazatele.  
+- Následující rekurzivní gramatika plně popisuje syntaxi deklarátoru ukazatele.  
   
--   Deklarátor `declarator` je definován jako:  
+- Deklarátor `declarator` je definován jako:  
+
+  - identifikátor   
+  - kvalifikovaný název   
+  - deklarátor (seznam argumentů) [qualfiers cv] [výjimka – specifikace]  
+  - deklarátor [[konstantního výrazu.]]
+  - deklarátoru ukazatele-– operátor   
+  - (deklarátor)  
+
   
-```  
-1. identifier   
-2. qualified-name   
-3. declarator ( argument-list ) [cv-qualfiers] [exception-spec]  
-4. declarator [ [ constant-expression ] ]   
+- a *operátoru ukazatele* patří:  
   
-5. pointer-operatordeclarator   
-6. ( declarator )  
-```  
+  - * [kvalifikátory cv]  
+  - & [kvalifikátory cv]:: vnořené specifikátorem názvu * [kvalifikátory cv]  
+
   
--   a *ukazatel-– operátor* je jedním z:  
-  
-```  
-  
-      * [cv-qualifiers]  
-& [cv-qualifiers]  
-::nested-name-specifier * [cv-qualfiers]  
-```  
-  
- Protože může deklarátor obsahovat deklarátory, lze pomocí výše zmíněných pravidel vytvořit složitější odvozené typy jako pole ukazatelů či funkce vracející pole ukazatelů na funkce.  Chcete-li utvořit každý z kroků konstrukce, začněte s identifikátorem představujícím základní datový typ a použijte výše zmíněné pravidlo syntaxe s předchozím výrazem jako deklarátor `declarator`.  Pořadí použití pravidel syntaxe by mělo být opačné oproti způsobu, jak je výraz vyjádřen v angličtině.  Pokud použití *ukazatel-– operátor* syntaxe pravidlo výraz pole nebo funkce závorky lze použít, pokud chcete, aby ukazatel na pole nebo funkce, jako poslední řádek v následující tabulce.  
+ Protože může deklarátor obsahovat deklarátory, lze pomocí výše zmíněných pravidel vytvořit složitější odvozené typy jako pole ukazatelů či funkce vracející pole ukazatelů na funkce.  Chcete-li utvořit každý z kroků konstrukce, začněte s identifikátorem představujícím základní datový typ a použijte výše zmíněné pravidlo syntaxe s předchozím výrazem jako deklarátor `declarator`.  Pořadí použití pravidel syntaxe by mělo být opačné oproti způsobu, jak je výraz vyjádřen v angličtině.  Pokud použití *operátoru ukazatele* pravidlo syntaxe na výraz pole nebo funkce použít závorky, pokud má ukazatel na pole nebo funkce, jako poslední řádek v tabulce níže.  
   
  Následující příklad ukazuje tvorbu „ukazatele na pole 10 ukazatelů na typ int“.  
   
@@ -194,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |pole o 10|`(*i)[10]`|4|  
 |ukazatelích na|`*((*i)[10])`|6, a potom 5|  
   
- Při použití většího počtu modifikátorů ukazatelů, referencí, polí nebo funkcí se deklarátory mohou výrazně komplikovat.  Téma [interpretace další složité Deklarátory](../c-language/interpreting-more-complex-declarators.md) popisuje, jak číst složitější syntaxe deklarátoru.  Téma se vztahuje na C a C++, i když v jazyce C++, kdekoli * slouží k označení ukazatel, kvalifikovaný název, jako je například MyClass::\* může použít k určení ukazatel na člena třídy.
+ Při použití většího počtu modifikátorů ukazatelů, referencí, polí nebo funkcí se deklarátory mohou výrazně komplikovat.  Téma [interpretace složitějších Deklarátorů](../c-language/interpreting-more-complex-declarators.md) popisuje, jak číst složitější syntaxi deklarátorů.  Téma se vztahuje na C a C++, ačkoli v jazyce C++, kdekoli * se používá k označení ukazatel, úplný název, například MyClass::\* slouží k určení ukazatele na člen třídy.

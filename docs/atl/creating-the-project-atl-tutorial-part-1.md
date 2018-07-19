@@ -1,5 +1,5 @@
 ---
-title: Vytvoření projektu (ATL – tutoriál, část 1) | Microsoft Docs
+title: Vytvoření projektu (ATL – tutoriál, část 1) | Dokumentace Microsoftu
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -12,65 +12,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aedf7b4112d4c8d4bb5b2a174e93925f5a46ce5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1906ac1ae8c1e526d78690e131a7ca5147283d76
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357715"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025923"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Vytvoření projektu (ATL – tutoriál, část 1)
-V tomto kurzu provede vás provede procesem neoznačené atributy ATL projekt, který vytvoří objekt ActiveX, který zobrazí mnohoúhelníku. Objekt obsahuje možnosti pro povolení uživatele Chcete-li změnit počet stran tvořících mnohoúhelníku a kód aktualizovat zobrazení.  
+Tento kurz vás provede bez atributové projekt knihovny ATL, který vytvoří objekt ActiveX, který zobrazí mnohoúhelníku. Objekt obsahuje možnosti pro povolení uživatele Chcete-li změnit počet stran tvořící mnohoúhelníků a kódu, aktualizujte zobrazení.  
   
 > [!NOTE]
->  ATL a MFC nepodporuje obecně edice Express sady Visual Studio.  
+>  ATL a MFC nejsou podporovány obecně v edicích Express sady Visual Studio.  
   
 > [!NOTE]
->  V tomto kurzu vytvoří ze stejného zdrojového kódu jako ukázka mnohoúhelníku. Pokud chcete, aby se zabránilo ručně zadat zdrojový kód, si můžete stáhnout z [mnohoúhelníku ukázka abstraktní](../visual-cpp-samples.md). Pak najdete ve zdrojovém kódu mnohoúhelníku absolvování tohoto kurzu, nebo použít ke kontrole chyb v vlastní projektu.  
+>  Tento kurz vytvoří stejný zdrojový kód jako ukázka mnohoúhelníku. Pokud chcete se vyhnout ručním zadáním zdrojového kódu, můžete ji stáhnout [abstraktní ukázky mnohoúhelníku](../visual-cpp-samples.md). Poté můžete odkázat ke zdrojovému kódu mnohoúhelníku při projít tento kurz, a použít ho ke kontrole chyb ve vašem vlastním projektu.  
   
-### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Chcete-li vytvořit počáteční projekt knihovny ATL pomocí Průvodce projektu knihovny ATL  
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Chcete-li vytvořit počáteční projekt knihovny ATL pomocí Průvodce projektem ATL  
   
-1.  Ve vývojovém prostředí sady Visual Studio, klikněte na tlačítko **nový** na **soubor** nabídce a pak klikněte na tlačítko **projektu**.  
+1.  Ve vývojovém prostředí sady Visual Studio, klikněte na tlačítko **nový** na **souboru** nabídky a pak klikněte na tlačítko **projektu**.  
   
-2.  Klikněte **projekty Visual C++** složky a vyberte **projektu knihovny ATL**.  
+2.  Klikněte na tlačítko **projekty Visual C++** a pak zvolte položku **projekt knihovny ATL**.  
   
-3.  Typ `Polygon` jako název projektu.  
+3.  Typ *mnohoúhelníku* jako název projektu.  
   
-     Moje Documents\Visual Studio projekty obvykle použije výchozí umístění pro zdrojový kód a automaticky se vytvoří novou složku.  
+     Umístění pro zdrojový kód se obvykle ve výchozím nastavení projekty Documents\Visual Studio a automaticky se vytvoří novou složku.  
   
-4.  Klikněte na tlačítko **OK** a otevře se Průvodce projektu knihovny ATL.  
+4.  Klikněte na tlačítko **OK** a otevře se Průvodce projektem ATL.  
   
-5.  Klikněte na tlačítko **nastavení aplikace** zobrazíte možnosti dostupné.  
+5.  Klikněte na tlačítko **nastavení aplikace** chcete zobrazit dostupné možnosti.  
   
-6.  Jako jsou vytvoření ovládacího prvku a ovládacího prvku musí být proces serveru, ponechejte **typ aplikace** jako knihovny DLL.  
+6.  Jako jsou vytvoření ovládacího prvku a ovládací prvek musí být v procesový server, ponechte **typ aplikace** jako knihovnu DLL.  
   
-7.  Ponechte výchozí hodnoty další možnosti a klikněte na tlačítko **Dokončit**.  
+7.  U ostatních možností ponechte jejich výchozí hodnoty a klikněte na tlačítko **Dokončit**.  
   
- Průvodce projektem ATL vytvoří projekt vygenerováním několik souborů. Tyto soubory můžete zobrazit v Průzkumníku řešení rozšířením objekt mnohoúhelníku. Soubory jsou uvedeny níže.  
+ Průvodce projektem ATL vytvoří vygenerováním několik souborů projektu. Tyto soubory můžete zobrazit v Průzkumníku řešení tak, že rozbalíte objekt mnohoúhelníku. Soubory jsou uvedeny níže.  
   
-|Soubor|Popis|  
-|----------|-----------------|  
-|Polygon.cpp|Obsahuje implementace `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, a `DllUnregisterServer`. Také obsahuje mapování objektu, který je seznamu objektů knihovny ATL v projektu. Toto je původně prázdné.|  
-|Polygon.def|Tento soubor definice modulu poskytuje linkeru s informacemi o exporty vyžadují knihovny DLL.|  
-|Polygon.IDL|Rozhraní definice souboru jazyka, který popisuje specifické pro vaše objekty rozhraní.|  
-|Polygon.rgs|Tento skript registru obsahuje informace o registraci vašeho programu DLL.|  
-|Polygon.rc|Soubor prostředků, který původně obsahuje informace o verzi a řetězec obsahující název projektu.|  
-|Resource.h|Hlavičky souboru pro soubor prostředků.|  
-|Polygonps.def|Tento soubor definice modulu poskytuje linkeru s informacemi o exporty vyžadovanou kód serveru proxy a se zakázaným inzerováním podporující volání napříč Apartment.|  
-|stdafx.cpp|Soubor, který bude `#include` ATL implementace soubory.|  
-|stdafx.h|Soubor, který bude `#include` ATL hlavičkových souborů.|  
+    |Soubor|Popis|  
+    |----------|-----------------|  
+    |Polygon.cpp|Obsahuje implementaci `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, a `DllUnregisterServer`. Obsahuje také mapy objektu, která je seznamu objektů knihovny ATL v projektu. Toto je původně prázdné.|  
+    |Polygon.def|Tento soubor definice modulu poskytuje linkeru s informacemi o exportech vyžadované vaší knihovny DLL.|  
+    |Polygon.IDL|Rozhraní language souboru definice, které popisuje specifické pro objekty rozhraní.|  
+    |Polygon.rgs|Tento skript registru obsahuje informace o registraci knihovny DLL váš program.|  
+    |Polygon.rc|Soubor prostředků, která původně obsahuje informace o verzi a řetězec obsahující název projektu.|  
+    |Resource.h|Hlavičkový soubor pro soubor prostředků.|  
+    |Polygonps.def|Tento soubor definice modulu poskytuje linkeru s informacemi o vývozu vyžadované kódu proxy a zástupných procedur, které podporují volání napříč objekty apartment.|  
+    |stdafx.cpp|Soubor, který bude `#include` ATL implementační soubory.|  
+    |stdafx.h|Soubor, který bude `#include` hlavičkové soubory ATL.|  
   
 1.  V Průzkumníku řešení klikněte pravým tlačítkem myši `Polygon` projektu.  
   
 2.  V místní nabídce klikněte na tlačítko **vlastnosti**.  
   
-3.  Klikněte na **Linkeru**. Změna **za UserRedirection** možnost k **Ano**.  
+3.  Klikněte na **Linkeru**. Změnit **za UserRedirection** umožňuje **Ano**.  
   
-4.  Click **OK**.  
+4.  Klikněte na tlačítko **OK**.  
   
- V dalším kroku přidáte ovládacího prvku do projektu.  
+ V dalším kroku přidáte ovládací prvek do projektu.  
   
- [Na krok 2](../atl/adding-a-control-atl-tutorial-part-2.md)  
+ [Ke kroku 2](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
 ## <a name="see-also"></a>Viz také  
  [Kurz](../atl/active-template-library-atl-tutorial.md)

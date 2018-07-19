@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: rozhraní mezi kódem výjimek a ostatním kódem | Microsoft Docs'
+title: 'Postupy: rozhraní mezi kódem výjimek a ostatním kódem | Dokumentace Microsoftu'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417272"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940115"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
-Tento článek popisuje, jak implementovat konzistentní výjimek v C++ modulu a také jak přeložit tyto výjimky do a z kódy chyb v hranicích výjimka.  
+Tento článek popisuje, jak implementovat konzistentní zpracování výjimek v modulu jazyka C++ a také způsob převodu těchto výjimek z chybových kódů na hranicích výjimek.  
   
- V některých případech musí modulu C++ rozhraní s kódem, který nepoužívá výjimky (ostatním kód). Takového rozhraní se označuje jako *výjimka hranic*. Například můžete chtít volání funkce Win32 `CreateFile` v programu C++. `CreateFile` nepodporuje generování výjimek; Místo toho nastaví kódy chyb, které může načíst `GetLastError` funkce. Pokud vaše programu C++ netriviální, pak v ní pravděpodobně chcete mít konzistentní zásady zpracování chyb na základě výjimky. A pravděpodobně nechcete abandon výjimky právě, protože rozhraní ostatním kódem a ani chcete kombinovat zásad na základě výjimky a není určena pro výjimky Chyba v modulu C++.  
+ Někdy musí modul C++ pracovat s kódem, který nepoužívá výjimky (kód bez výjimek). Toto rozhraní se označuje jako *hranice výjimky*. Například můžete chtít volat funkci Win32 `CreateFile` ve svém programu C++. `CreateFile` nevyvolá výjimky; Místo toho definuje kódy chyb, které je možné načíst podle `GetLastError` funkce. Pokud C++ program je netriviální, potom v něm pravděpodobně dáváte mají konzistentní zásady zpracování chyb založené na výjimku. A je pravděpodobně nebudete chtít opustit výjimky jen proto rozhraní s nevýjimečným kódem, a ani nebudete chtít míchat zásady chyb na základě výjimky a nezaložené výjimku v modulu jazyka C++.  
   
-## <a name="calling-non-exceptional-functions-from-c"></a>Volání funkcí ostatním z jazyka C++  
- Při volání ostatním funkce z jazyka C++ na nápad je zabalit této funkce ve funkci C++, který zjistí všechny chyby a pravděpodobně vyvolá výjimku. Při návrhu obálku funkci nejprve rozhodnout, jaký typ výjimky záruku zajistit: Ne throw, silné a basic. Druhý Navrhněte funkci tak, aby všechny prostředky, například popisovače souborů, jsou vydávány správně, pokud je vyvolána výjimka. Obvykle to znamená, které umožňují chytré ukazatele nebo podobné správci prostředků vlastní prostředky. Další informace o aspektech návrhu najdete v tématu [postupy: návrh na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).  
+## <a name="calling-non-exceptional-functions-from-c"></a>Volání Nevýjimečné funkce z jazyka C++  
+ Při volání nevýjimečné funkce z jazyka C++, myšlenka je zabalit tuto funkci ve funkci jazyka C++, který zjistí všechny chyby a pak případně vyvolá výjimku. Při návrhu takové funkce obálky, nejdřív se rozhodněte, který typ záruky výjimky chcete poskytnout: bez vyvolávání, silný nebo základní. Za druhé Navrhněte funkci tak, aby všechny prostředky, například obslužné rutiny souborů, byly správně uvolněny, pokud je vyvolána výjimka. Obvykle to znamená použít inteligentní ukazatele nebo podobné správce prostředků pro vlastnění zdrojů. Další informace o zvažování návrhu naleznete v tématu [postupy: návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje funkcí jazyka C++, které používají Win32 `CreateFile` a `ReadFile` funkce interně otevřít a přečíst si dva soubory.  `File` Třída je získávání prostředků je inicializace (RAII) obálku pro popisovače souborů. Jeho konstruktoru rozpozná stav "soubor nebyl nalezen" a vyvolá výjimku potřebný k šíření chyba zásobníkem volání modulu C++ (v tomto příkladu `main()` funkce). Pokud je vyvolána výjimka po `File` plně sestavený objekt, automaticky volání destruktoru `CloseHandle` k uvolnění popisovač souboru. (Pokud dáváte přednost, můžete použít Active šablony Library (ATL) `CHandle` třídu pro tento účel stejné nebo `unique_ptr` spolu s vlastní metoda odstranění.) Funkce, které volání Win32 a rozhraní API CRT zjištění chyby a poté vyvolat výjimky jazyka C++ pomocí místně definované `ThrowLastErrorIf` funkce, které dále používá `Win32Exception` třídy, které jsou odvozené od `runtime_error` třídy. Všechny funkce v tomto příkladu zadejte silné výjimka záruku; Pokud je vyvolána výjimka v libovolném bodě tyto funkce, jsou úniku žádné prostředky a žádné program stav je měnit.  
+ Následující příklad ukazuje funkce jazyka C++, které používají rozhraní Win32 `CreateFile` a `ReadFile` functions interně pro otevření a čtení dvou souborů.  `File` Třída je získání prostředků je obálka inicializace (RAII) pro popisovače souborů. Jeho konstruktor rozpozná stav "soubor nebyl nalezen" a dojde k výjimce šíření chyb v zásobníku volání modulu C++ (v tomto příkladu `main()` funkce). Pokud je vyvolána výjimka po `File` objektu je plně sestaveny, destruktor automaticky volá `CloseHandle` k uvolnění popisovače souboru. (Pokud dáváte přednost, můžete použít aktivní šablony knihovny (ATL) `CHandle` třídy pro stejný účel, nebo `unique_ptr` společně s vlastním odstraňovačem.) Funkce, které volají Win32 a rozhraní API CRT detekují chyby a poté vyvolají výjimky C++ pomocí místně definované `ThrowLastErrorIf` funkce, která dále používá `Win32Exception` třídu odvozenou z `runtime_error` třídy. Všechny funkce v tomto příkladu zadejte záruku silné výjimky; Pokud v libovolném bodě těchto funkcí je vyvolána výjimka, žádných zdrojů a je upraven žádný stav programu.  
   
 ```cpp  
 // compile with: /EHsc  
@@ -164,10 +164,10 @@ int main ( int argc, char* argv[] )
   
 ```  
   
-## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Volání kódu výjimečných z ostatním kódu  
- Funkce C++, které jsou deklarovány jako "extern C" lze volat programy C. Servery C++ COM mohou být spotřebovávána kód napsaný v některé z mnoha různých jazycích. Pokud implementujete veřejné výjimka deklaracemi funkce v jazyce C++ k ostatním kódem, C++ funkce nesmí umožňovat jakékoli výjimky rozšíří zpět do volající. Funkce C++ proto musí catch konkrétně každých výjimka, která věděl, že může postupy zpracování a v případě potřeby převést na kód chyby, která funguje s technologií volající výjimku. Pokud nejsou všechny potenciální výjimky jsou známé, by mělo mít funkce C++ `catch(...)` bloku jako poslední obslužná rutina. V takovém případě je nejlepší na závažnou chybu nahlásit volající, protože váš program může být v neznámém stavu.  
+## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Volání výjimečného Nevýjimečným kódem  
+ Funkce jazyka C++, které jsou deklarovány jako "extern C" mohou být volány programy c. Servery C++ COM mohou být spotřebovány kódem napsaným v některém z mnoha různých jazycích. Při implementaci veřejných funkcí podporujících výjimky v C++, které jsou volány kódem bez výjimek, nesmí funkce C++ povolit všechny výjimky zpět na volajícího. Funkce C++ proto musí konkrétně zachytit každou výjimku, kterou umí zpracovat a v případě potřeby ji převést do srozumitelného chybového kódu, který volající rozumí. Pokud jsou známy všechny potenciální výjimky, by měl mít funkce C++ `catch(...)` bloku jako poslední obslužnou rutinou. V takovém případě je nejlepší oznámit závažnou chybu volajícímu, protože váš program může být v neznámém stavu.  
   
- Následující příklad ukazuje funkce, která předpokládá, že se všechny výjimky, které mohou být vyvolány Win32Exception – nebo typ výjimky odvozené z `std::exception`. Funkce zachytí všechny výjimky z těchto typů a odešlou informace o chybě jako kód chyby Win32 volajícímu.  
+ Následující příklad ukazuje funkci, která předpokládá, že jakoukoliv výjimku, která by mohla být vyvolána je buď Win32Exception, nebo typ výjimky odvozený z `std::exception`. Funkce zachytí jakoukoli výjimku těchto typů a šíří informace o chybě jako chybový kód Win32 k volajícímu.  
   
 ```cpp  
 BOOL DiffFiles2(const string& file1, const string& file2)   
@@ -197,7 +197,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
   
 ```  
   
- Při převodu z výjimek na kódy chyb jeden potenciální problém je, že kódy chyb často nemáte obsahovat bohatost informace, které můžete ukládat výjimku. Chcete-li to vyřešit, můžete zadat `catch` blok pro každý typ určité výjimky, které mohou být vyvolány a protokolování zaznamenejte podrobnosti o výjimce, než je převést na kód chyby. Tuto metodu můžete vytvořit mnoho opakování kódu, pokud všechny víc funkcí použít stejnou sadu `catch` bloky. Je dobrým způsobem, jak se vyhnout opakování kódu refaktoringu tyto bloky do jednu funkci privátní nástroj, který implementuje `try` a `catch` blokuje a přijímá objekt funkce, která je volána v `try` bloku. V každé veřejné funkci předáte kód funkce nástroj jako výrazu lambda.  
+ Při převodu z výjimek na chybové kódy jedním potenciálním problémem je, že kódy chyb často neobsahují bohatost informací, které mohou ukládat výjimky. Chcete-li to vyřešit, můžete poskytnout **catch** blok pro každý typ výjimky, která by mohla být vyvolána a provádět protokolování pro zaznamenání podrobnosti o výjimce, než je převedena na chybový kód. Tento přístup může vytvořit velké množství opakování kódu, pokud více funkcí používá stejnou sadu **catch** bloky. Dobrým způsobem, jak zabránit opakování kódu, je refaktoring bloků do jedné soukromé funkce nástroje, který implementuje **zkuste** a **catch** a ostatní porty blokuje přijímá objekt funkce, která je volána v **zkuste** bloku. V každé veřejné funkci předejte kód funkci nástroje jako lambda výraz.  
   
 ```cpp  
 template<typename Func>   
@@ -220,7 +220,7 @@ bool Win32ExceptionBoundary(Func&& f)
   
 ```  
   
- Následující příklad ukazuje, jak zapsat výrazu lambda, která definuje functor. Když functor definované "vložené" pomocí výrazu lambda, je často snadněji přečíst, než by bylo, pokud byly napsány jako objekt s názvem funkce.  
+ Následující příklad ukazuje, jak zapsat lambda výraz, který definuje funktor. Když je funktor definovaný "vloženě" pomocí lambda výrazu, je často čitelnější než by bylo, pokud by byl zapsán jako objekt pojmenované funkce.  
   
 ```cpp  
 bool DiffFiles3(const string& file1, const string& file2)   
@@ -240,7 +240,7 @@ bool DiffFiles3(const string& file1, const string& file2)
   
 ```  
   
- Další informace o výrazy lambda najdete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).  
+ Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)   

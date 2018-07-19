@@ -1,5 +1,5 @@
 ---
-title: Ukazatelé na členy | Microsoft Docs
+title: Ukazatelé na členy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,60 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34686848"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947694"
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
-Deklarace ukazatelů členů jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
+Deklarace ukazatelů na členy jsou zvláštní případy deklarace ukazatelů.  Jsou deklarovány následujícím způsobem:  
   
 ```  
 [storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]qualified-name ::* [cv-qualifiers] identifier  
 [= & qualified-name :: member-name];  
 ```  
   
-1.  Specifikátor deklarace:  
+1. Specifikátor deklarace:  
+  - Volitelný specifikátor paměťové třídy.  
   
-    -   Specifikátor třídy úložiště volitelné.  
+  - Volitelné **const** a/nebo **volatile** specifikátorů.  
   
-    -   Volitelné **const** nebo `volatile` specifikátory.  
+  - Specifikátor typu: název typu.  Jedná se o typ členu, který chcete zdůraznit, ne na třídu.  
   
-    -   Specifikátor typu: název typu.  Jedná se o typ člena pro odkazovat, ne na třídu.  
+1. Deklarátor:  
+
+  - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
+1. Kvalifikovaný název třídy obsahující odkazovala na členy.  
+  - :: Operator.  
+  - **\*** Operátor.  
+  - Volitelné **const** a/nebo **volatile** specifikátorů.  
+  - Identifikátor pojmenování ukazatel na člen.  
   
-2.  Deklarátor:  
+  - Volitelný inicializátor:  
+  - **=** Operátor.  
+  - **&** Operátor.  
+  - Kvalifikovaný název třídy.  
+  - Operátor `::`.  
+  - Název Nestatický člen třídy příslušného typu.  
+  -  Jako vždy víc deklarátorů. (a všechny přidružené inicializátory) jsou povoleny v jedné deklaraci.  
   
-    -   Volitelné Microsoft konkrétní modifikátor. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
+ Ukazatel na člen třídy, se liší od normální ukazatel, protože obsahuje informace o typu pro typ člena a třídy, do které patří člena. Identifikuje normální ukazatel (má adresu) pouze jeden objekt v paměti. Ukazatel na člen třídy identifikuje člena v jakékoli instance třídy. Následující příklad deklaruje třídu, `Window`a některé ukazatele na člen data.  
   
-    -   Kvalifikovaný název třídy obsahující členy odkazovat.   
-  
-    -   :: Operátor.  
-  
-    -   **\*** Operátor.  
-  
-    -   Volitelné **const** nebo `volatile` specifikátory.  
-  
-    -   Identifikátor pojmenování ukazatele na člena.  
-  
-    -   Inicializátoru volitelné:  
-  
- **=** Operátor.  
-  
- **&** Operátor.  
-  
- Kvalifikovaný název třídy.  
-  
- Operátor `::`.  
-  
- Název nestatické členské třídy příslušného typu.  
-  
- Jako vždy více deklarátor (a všechny přidružené inicializátory) jsou povoleny v jediné deklaraci.  
-  
- Ukazatel na člena třídy se liší od normální ukazatel, protože obsahuje informace o typu pro typ člena a třídy, do které patří člen. Identifikuje normální ukazatel (má adresu) jenom jeden objekt v paměti. Ukazatel na člena třídy identifikuje tohoto člena v žádné instanci třídy. Následující příklad uvádí třídu, `Window`a některé ukazatele na člena data.  
-  
-```  
+```cpp 
 // pointers_to_members1.cpp  
 class Window  
 {  
@@ -91,16 +79,16 @@ int main()
 }  
 ```  
   
- V předchozím příkladu `pwCaption` ukazatel do kteréhokoli člena třídy `Window` který má typ **char\***. Typ `pwCaption` je `char * Window::* `. Deklaruje ukazatele na další fragment kódu `SetCaption` a `GetCaption` členské funkce.  
+ V předchozím příkladu `pwCaption` je ukazatel na člena třídy `Window` , který má typ **char\***. Typ `pwCaption` je `char * Window::* `. Další fragment kódu deklaruje ukazatele na `SetCaption` a `GetCaption` členské funkce.  
   
-```  
+```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
 bool (Window::*pfnwSC)( const char * ) = &Window::SetCaption;  
 ```  
   
- Následující ukazatele `pfnwGC` a `pfnwSC` přejděte na příkaz `GetCaption` a `SetCaption` z `Window` třídy, v uvedeném pořadí. Kód zkopíruje informace na titulek okno přímo pomocí ukazatele na člena `pwCaption`:  
+ Ukazatelů `pfnwGC` a `pfnwSC` přejděte `GetCaption` a `SetCaption` z `Window` třídy, v uvedeném pořadí. Kód zkopíruje informace do titulek okna přímo pomocí ukazatele na člen `pwCaption`:  
   
-```  
+```cpp 
 Window wMainWindow;  
 Window *pwChildWindow = new Window;  
 char   *szUntitled    = "Untitled -  ";  
@@ -113,13 +101,13 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Rozdíl mezi **.\***  a **-> \*** operátory (operátory ukazatelů na členy) je, že **.\***  operátor vybere členy zadaný objekt, nebo odkaz na objekt, při **-> \*** operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorů najdete v tématu [výrazy s operátory ukazatelů na členy](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Rozdíl mezi **.\***  a **-> \*** operátory (operátory pointer-to-member) je, že **.\***  operátor vybere členů zadaný objekt nebo odkaz na objekt, zatímco **-> \*** operátor vybere členy prostřednictvím ukazatele. (Další informace o těchto operátorech naleznete v tématu [výrazy s operátory Pointer-to-Member](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Typ člena je výsledek operátory ukazatelů na členy – v takovém případě **char \*** .  
+ Typ člena je výsledek operátory pointer-to-member – v takovém případě **char \*** .  
   
- Následující fragment kódu vyvolá členské funkce `GetCaption` a `SetCaption` pomocí ukazatelé na členy:  
+ Následující fragment kódu vyvolává členské funkce `GetCaption` a `SetCaption` pomocí ukazatele na členy:  
   
-```  
+```cpp 
 // Allocate a buffer.  
 enum {  
     sizeOfBuffer = 100  
@@ -135,16 +123,16 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Omezení ukazatelů členů  
- Adresa statického členu není ukazatelem na člen. Je běžným ukazatelem na jednu instanci statického členu. Vzhledem k tomu, že pro všechny objekty dané třídy, běžné adres of existuje pouze jedna instance je statický člen **(&)** a dereference **(\*)** operátory lze použít.  
+ Adresa statického členu není ukazatelem na člen. Je běžným ukazatelem na jednu instanci statického členu. Vzhledem k tomu, že existuje pouze jedna instance statického členu pro všechny objekty dané třídy, běžné adresa of **(&)** a přístupu přes ukazatel **(\*)** operátory lze používat.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Ukazatelé na členy a virtuální funkce  
  Volání virtuální funkce pomocí funkce ukazatele na člen funguje, jako by byla tato funkce volána přímo. Správná funkce je vyhledána v tabulce a zavolána.  
   
- Klíč k fungování virtuálních funkcí je jako vždy volá prostřednictvím ukazatele na základní třídu. (Další informace o virtuálních funkcí najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).)  
+ Klíč k fungování virtuálních funkcí je jako vždy volá prostřednictvím ukazatele na základní třídu. (Další informace o virtuálních funkcích naleznete v tématu [virtuální funkce](../cpp/virtual-functions.md).)  
   
  Následující kód ukazuje, jak zavolat virtuální funkci pomocí funkce ukazatele na člen:  
   
-```  
+```cpp 
 // virtual_functions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -152,35 +140,35 @@ using namespace std;
   
 class Base  
 {  
-public:  
-virtual void Print();  
+    public:  
+    virtual void Print();  
 };  
 void (Base ::* bfnPrint)() = &Base :: Print;  
 void Base :: Print()  
 {  
-cout << "Print function for class Base\n";  
+    cout << "Print function for class Base\n";  
 }  
   
 class Derived : public Base  
 {  
-public:  
-void Print();  // Print is still a virtual function.  
+    public:  
+    void Print();  // Print is still a virtual function.  
 };  
   
 void Derived :: Print()  
 {  
-cout << "Print function for class Derived\n";  
+    cout << "Print function for class Derived\n";  
 }  
   
 int main()  
 {  
     Base   *bPtr;  
     Base    bObject;  
-Derived dObject;  
-bPtr = &bObject;    // Set pointer to address of bObject.  
-(bPtr->*bfnPrint)();  
-bPtr = &dObject;    // Set pointer to address of dObject.  
-(bPtr->*bfnPrint)();  
+    Derived dObject;  
+    bPtr = &bObject;    // Set pointer to address of bObject.  
+    (bPtr->*bfnPrint)();  
+    bPtr = &dObject;    // Set pointer to address of dObject.  
+    (bPtr->*bfnPrint)();  
 }  
   
 //Output: Print function for class Base  

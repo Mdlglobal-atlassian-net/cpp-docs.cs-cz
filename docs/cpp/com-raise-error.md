@@ -1,5 +1,5 @@
 ---
-title: _com_raise_error – | Microsoft Docs
+title: _com_raise_error | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,53 +16,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e7b28c9d48704eede883cbcd387d9e77798647f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f38a0d97b90f1512e5f16b3bd147bda3e0614e4f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947601"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Vyvolá [_com_error](../cpp/com-error-class.md) v reakci na selhání.  
+ Vyvolá výjimku [_com_error](../cpp/com-error-class.md) v reakci na selhání.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      void __stdcall _com_raise_error(  
+void __stdcall _com_raise_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = 0  
 );  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hr`  
- Informace `HRESULT`.  
+ *hr*  
+ Informace o HRESULT.  
   
- `perrinfo`  
- **IErrorInfo** objektu.  
+ *perrinfo*  
+ `IErrorInfo` objekt.  
   
 ## <a name="remarks"></a>Poznámky  
- `_com_raise_error`, která je definována v \<comdef.h >, lze nahradit uživatele zapsat verze se stejným názvem a prototypu. To může provést, pokud chcete použít `#import` , ale nechcete použít zpracovávání výjimek v jazyce C++. V takovém případě uživatel verzi **_com_raise_error –** rozhodnout uděláte `longjmp` nebo zobrazit okno se zprávou a zastavit. Verze uživatele by neměla vrátit, ale protože kód podpory kompilátoru modelu COM neočekává ho vrátit.  
+ `_com_raise_error`, který je definován v \<comdef.h >, lze nahradit uživatelem zapsaný verze stejný název a vytváření prototypů. To může provést, pokud chcete použít `#import` , ale nechcete použít zpracování výjimek jazyka C++. V takovém případě uživatel verzi `_com_raise_error` může rozhodnout provést `longjmp` nebo zobrazení okna se zprávou a zastavit. Uživatel verze by neměly vracet, protože kód podpory kompilátoru modelu COM, který to vrátit neočekává.  
   
- Můžete také použít [_set_com_error_handler –](../cpp/set-com-error-handler.md) nahradit výchozí chybovou funkci.  
+ Můžete také použít [_set_com_error_handler –](../cpp/set-com-error-handler.md) nahradit výchozí funkce zpracování chyb.  
   
- Ve výchozím nastavení `_com_raise_error` je definován následujícím způsobem:  
+ Ve výchozím nastavení `_com_raise_error` je definovaná následujícím způsobem:  
   
-```  
+```cpp  
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {  
    throw _com_error(hr, perrinfo);  
 }  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<comdef.h >  
   
- **Lib:** Pokud **wchar_t je nativní typ** – možnost kompilátoru zapnutý, použijte comsuppw.lib nebo comsuppwd.lib. Pokud **wchar_t je nativní typ** je vypnuto, použijte comsupp.lib. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **Lib:** Pokud **wchar_t je nativní typ** – možnost kompilátoru je na, použijte comsuppw.lib nebo comsuppwd.lib. Pokud **wchar_t je nativní typ** je, použijte comsupp.lib. Další informace najdete v tématu [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Globální funkce kompilátoru modelu COM](../cpp/compiler-com-global-functions.md)   

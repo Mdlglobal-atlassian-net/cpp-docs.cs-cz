@@ -1,5 +1,5 @@
 ---
-title: novtable | Microsoft Docs
+title: novtable | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283ff09c320b67686e353f0497c665828cd8b5d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947634"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- Jedná se o rozšířený atribut `__declspec`.  
+ Jedná se **__declspec** rozšířeného atributu.  
   
- Tuto formu atributu `__declspec` lze použit pro všechny deklarace tříd, ale měla by být použita pouze na třídy rozhraní, z nichž nikde nebude vytvořena instance samostatně. Atribut `__declspec` ukončí generování kódu kompilátoru za účelem inicializace konstruktoru vfptr a destruktoru třídy. V mnoha případech jsou tímto odebrány odkazy na tabulku vtable, které jsou přidruženy ke třídě a budou tedy odebrány linkerem. Použití této formy atributu `__declspec` může vést k významnému snížení velikosti kódu.  
+ Tato forma **__declspec** lze použít pro všechny deklarace tříd, ale bude použito pouze na rozhraní třídy, tedy třídy, které se nikde nebude vytvořena instance samostatně. **__Declspec** zastaví kompilátoru generování kódu inicializace konstruktoru vfptr a destruktoru třídy. V mnoha případech jsou tímto odebrány odkazy na tabulku vtable, které jsou přidruženy ke třídě a budou tedy odebrány linkerem. Použití této formy atributu **__declspec** může vést k významnému snížení velikosti kódu.  
   
  Při pokusu o vytvoření instance třídy označené jako `novtable` a následném přístupu k členu třídy obdržíte zprávu o narušení přístupu (AV).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // novtable.cpp  
 #include <stdio.h>  
   
@@ -60,7 +61,7 @@ int main() {
 In Y  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__declspec](../cpp/declspec.md)   

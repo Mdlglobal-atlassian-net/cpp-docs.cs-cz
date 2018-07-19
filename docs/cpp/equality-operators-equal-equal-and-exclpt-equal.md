@@ -1,5 +1,5 @@
 ---
-title: 'Operátory rovnosti: == a! = | Microsoft Docs'
+title: 'Operátory rovnosti: == a! = | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e4a85f31777581df1a138de6d50b1057253e5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaf0c52cc9811e84fab026e333ee3c0808d4effd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947685"
 ---
 # <a name="equality-operators--and-"></a>Operátory rovnosti: == a !=
 ## <a name="syntax"></a>Syntaxe  
@@ -39,18 +40,18 @@ expression != expression
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátory rovnosti binární porovnání operandy striktní rovnosti nebo nerovnosti.  
+ Binární relační operátory porovnání operandy striktní zjištění rovnosti či nerovnosti.  
   
- Operátory rovnosti rovno (`==`) a není rovno (`!=`), mít nižší prioritu než relační operátory, ale chovají podobně. Typ výsledku pro tyto operátory je `bool`.  
+ Relační operátory je rovno (`==`) a není rovno (`!=`), mají nižší prioritu než relační operátory, ale chovají podobně. Je typ výsledku pro tyto operátory **bool**.  
   
- Operátor je rovno (`==`) vrátí **true** (1) Pokud oba operandy mají stejnou hodnotu; jinak vrátí **false** (0). Operátor není rovno (`!=`) vrátí **true** Pokud operandy nemají stejnou hodnotu; jinak vrátí **false**.  
+ Operátor rovnosti (`==`) vrátí **true** (1), pokud oba operandy mají stejnou hodnotu; v opačném případě vrátí **false** (0). Operátor není rovno (`!=`) vrátí **true** Pokud operandy nemají stejnou hodnotu; v opačném případě vrátí **false**.  
   
-## <a name="operator-keyword-for-"></a>Operator – klíčové slovo pro! =  
- Operátor `not_eq` je textový ekvivalent operátoru `!=`. Existují dva způsoby pro přístup `not_eq` operátor v programy: zahrnout soubor hlaviček `iso646.h`, nebo kompilovat s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázat jazyková rozšíření).  
+## <a name="operator-keyword-for-"></a>Klíčové slovo pro operátor! =  
+ Operátor `not_eq` je textový ekvivalent operátoru `!=`. Existují dva způsoby přístupu k `not_eq` operátor ve svých programech: zahrnutím souboru hlaviček `iso646.h`, nebo kompilací s [/Za](../build/reference/za-ze-disable-language-extensions.md) – možnost kompilátoru (zakázání jazykových rozšíření).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_Equality_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -66,9 +67,9 @@ int main() {
 }  
 ```  
   
- Operátory rovnosti můžete porovnat ukazatelé na členy stejného typu. Porovnání jsou prováděny převody ukazatele na člena. Ukazatelé na členy můžete také porovnání s konstantní výraz, jehož výsledkem je 0.  
+ Operátory rovnosti můžete porovnat ukazatelů na členy stejného typu. Porovnání jsou provedeny převody ukazatele na člen. Ukazatelé na členy je také možné porovnat s konstantním výrazem vyhodnoceným na hodnotu 0.  
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Relační operátory a operátory rovnosti jazyka C](../c-language/c-relational-and-equality-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: noinline | Microsoft Docs
+title: noinline | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f81ab892fd7f406292925f424bebc7514fd7ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947627"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft  
- **__declspec(noinline)** instruuje kompilátor, aby nikdy vložené konkrétní členské funkce (funkce v třídě).  
+ **__declspec(noinline)** instruuje kompilátor, aby nikdy nevkládal členské funkce (funkce ve třídě).  
   
  Nevkládání funkce může být výhodné, je-li malé a není-li důležité pro výkon kódu. To znamená, je-li funkce malá a nebude volána často, například funkce, která zpracovává chybovou podmínku.  
   
- Mějte na paměti, že pokud je funkce označena jako `noinline`, volání funkce bude menší, a samo tedy bude kandidátem pro vkládání kompilátoru.  
+ Mějte na paměti, která pokud je funkce označena **noinline**, volání funkce bude menší a proto samotné kandidátem pro vkládání kompilátoru.  
   
-```  
+```cpp 
 class X {  
    __declspec(noinline) int mbrfunc() {  
       return 0;   
@@ -39,10 +40,10 @@ class X {
 };  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__declspec](../cpp/declspec.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
- [vložené, __inline, \__forceinline](inline-functions-cpp.md)
+ [klíčová slova](../cpp/keywords-cpp.md)   
+ [inline, __inline, \__forceinline](inline-functions-cpp.md)
 

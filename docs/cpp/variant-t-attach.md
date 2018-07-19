@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Attach | Microsoft Docs
+title: _variant_t::Attach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947681"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Připojí **VARIANT** objektu do `_variant_t` objektu.  
+ Připojí `VARIANT` objektu do `_variant_t` objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *varSrc*  
- A **VARIANT** objekt, který má být připojen k tomuto `_variant_t` objektu.  
+ A `VARIANT` objektu, který chcete připojit k tomuto `_variant_t` objektu.  
   
 ## <a name="remarks"></a>Poznámky  
- Přebírá vlastnictví **VARIANT** zapouzdřením ho. Tato funkce člen uvolní všechny existující zapouzdřené **VARIANT**, pak zkopíruje zadaných **VARIANT**a nastaví její **VARTYPE** k `VT_EMPTY` a ujistěte se jeho prostředky lze vydat pouze `_variant_t` destruktor.  
+ Převezme vlastnictví `VARIANT` zapouzdřením ho. Tato členská funkce uvolní všechny existující zapouzdřené `VARIANT`, pak zkopíruje zadané `VARIANT`a nastaví její `VARTYPE` VT_EMPTY Ujistěte se, že její prostředky lze pouze budou vydány `_variant_t` destruktor.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_variant_t – třída](../cpp/variant-t-class.md)

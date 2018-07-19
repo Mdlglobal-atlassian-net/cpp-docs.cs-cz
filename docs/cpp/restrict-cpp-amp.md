@@ -1,5 +1,5 @@
 ---
-title: omezení (C++ AMP) | Microsoft Docs
+title: omezení (C++ AMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe3bd4f737cfb26a326a1f0d83b731c36e6c7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947636"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynucuje omezení kódu ve funkci a chování funkce v aplikacích používajících modul runtime C++ Accelerated Massive Parallelism (C++ AMP).  
   
 > [!NOTE]
->  Informace o `restrict` – klíčové slovo, který je součástí `__declspec` atributy třídy úložiště, najdete v části [omezit](../cpp/restrict.md).  
+>  Informace o **omezit** – klíčové slovo, který je součástí **__declspec** atributy třídy úložiště, najdete v článku [omezit](../cpp/restrict.md).  
   
- Klauzule `restrict` může mít následující podoby:  
+ **Omezit** klauzule mít následující podoby:  
   
 |Klauzule|Popis|  
 |------------|-----------------|  
@@ -38,7 +39,7 @@ Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynuc
 |Sekvence specifikátorů `restrict(cpu)` a `restrict(amp)`.|Funkce musí dodržovat omezení specifikátoru `restrict(cpu)` i `restrict(amp)`. Funkci lze zavolat funkcemi deklarovanými pomocí specifikátorů `restrict(cpu)`, `restrict(amp)`, `restrict(cpu, amp)` nebo `restrict(amp, cpu)`.<br /><br /> Tvar `restrict(A) restrict(B)` lze zapsat jako `restrict(A,B)`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Klíčové slovo `restrict` je kontextovým klíčovým slovem. Specifikátory omezení `cpu` a `amp` nejsou vyhrazenými slovy. Seznam specifikátorů nelze rozšířit. Funkce neobsahující klauzuli `restrict` je shodná s funkcí obsahující klauzuli `restrict(cpu)`.  
+ **Omezit** – klíčové slovo je kontextové klíčové slovo. Specifikátory omezení `cpu` a `amp` nejsou vyhrazenými slovy. Seznam specifikátorů nelze rozšířit. Funkce, která nemá **omezit** klauzule je stejný jako funkce, která má `restrict(cpu)` klauzuli.  
   
  Funkce obsahující klauzuli `restrict(amp)` má následující omezení:  
   
@@ -46,7 +47,7 @@ Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynuc
   
 -   Funkci musí být možné vložit.  
   
--   Funkce může deklarovat pouze proměnné typu `int`, `unsigned int`, `float` a `double` a třídy a struktury obsahující pouze tyto typy. Typ `bool` je povolen také, pro použití ve složeném typu však musí být zarovnán na 4 bajty.  
+-   Funkci lze deklarovat pouze **int**, **unsigned int**, **float**, a **double** proměnné a třídy a struktury, které obsahují pouze Tyto typy. **BOOL** také může, ale musí být 4 zarovnané bajtové použití ve složeném typu.  
   
 -   Funkce lambda nedokážou zachytit ukazatele a hodnoty dle reference.  
   
@@ -56,7 +57,7 @@ Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynuc
   
     -   Rekurze.  
   
-    -   Proměnné deklarovat s [volatile](../cpp/volatile-cpp.md) – klíčové slovo.  
+    -   Proměnné deklarované s [volatile](../cpp/volatile-cpp.md) – klíčové slovo.  
   
     -   Virtuální funkce.  
   
@@ -68,30 +69,30 @@ Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynuc
   
     -   Ukazatele na ukazatele.  
   
-    -   Příkazy `goto`.  
+    -   **příkaz goto** příkazy.  
   
     -   Příkazy s popisky.  
   
-    -   Příkazy `try`, `catch` nebo `throw`.  
+    -   **Zkuste**, **catch**, nebo **throw** příkazy.  
   
     -   Globální proměnné.  
   
     -   Statické proměnné. Použití [tile_static – klíčové slovo](../cpp/tile-static-keyword.md) místo.  
   
-    -   Přetypování `dynamic_cast`.  
+    -   **přetypování dynamic_cast** přetypování.  
   
-    -   Operátor `typeid`.  
+    -   **Typeid** operátor.  
   
     -   Deklarace asm.  
   
     -   Argumenty vararg.  
   
- Informace funkce omezení, naleznete v [restrict(amp) omezení](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
+ Diskuzi o omezeních funkcí naleznete v tématu [omezení restrict(amp)](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob použití `restrict(amp)`klauzule.  
+ Následující příklad ukazuje způsob použití `restrict(amp)`klauzuli.  
   
-```  
+```cpp 
   
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   

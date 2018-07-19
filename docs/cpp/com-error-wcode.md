@@ -1,5 +1,5 @@
 ---
-title: _com_error::WCode | Microsoft Docs
+title: _com_error::WCode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354d490446795e55b41fa0c548e8dd8aa38c71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 810a5c16df1027aba976bea3c165b19f765d15a6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411533"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941837"
 ---
 # <a name="comerrorwcode"></a>_com_error::WCode
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Načte kód chyby 16bitové namapovat na zapouzdřené `HRESULT`.  
+ Načte 16bitové chybový kód namapovat na zapouzdřený HRESULT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +37,12 @@ WORD WCode ( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud `HRESULT` je v rozsahu 0x80040200 0x8004FFFF **wcode –** metoda vrátí `HRESULT` minus 0x80040200; jinak vrátí hodnotu nula.  
+ Pokud je hodnota HRESULT v rozsahu 0x80040200 až 0x8004FFFF, `WCode` metoda vrátí hodnotu HRESULT mínus 0x80040200; v opačném případě vrátí 0.  
   
 ## <a name="remarks"></a>Poznámky  
- **Wcode –** metoda se používá k mapování, který se stane v kódu Podpora COM vrátit zpět. Obálka pro **dispinterface** vlastnost nebo metoda k volání rutiny podpory, které balíčky argumentů a volání **volání metody IDispatch::Invoke**. Po návratu, pokud selhání `HRESULT` z `DISP_E_EXCEPTION` se vrátí informace o chybě se načítají **EXCEPINFO** struktura předaný **volání metody IDispatch::Invoke**. Kód chyby může to být 16bitové hodnotou uloženou v `wCode` členem **EXCEPINFO** struktura nebo úplné 32bitovou hodnotu v **kód scode** členem **EXCEPINFO**struktura. Je-li vrácena 16bitová hodnota `wCode`, musí být nejprve namapována na 32bitové selhání `HRESULT`.  
+ `WCode` Metoda se používá k vrácení mapování se děje v kódu podpory modelu COM. Obálka `dispinterface` vlastnost nebo metoda zavolá rutinu podpory, která zabalí argumenty a zavolá `IDispatch::Invoke`. Po návratu, pokud se vrátí selhání HRESULT DISP_E_EXCEPTION, informace o této chybě je načten z `EXCEPINFO` předané do `IDispatch::Invoke`. Kód chyby může být 16bitová hodnota uložená v `wCode` člena `EXCEPINFO` struktury nebo úplná 32bitová hodnota v `scode` člena `EXCEPINFO` struktury. Pokud 16 bitů `wCode` je vrácena, musí být nejprve namapována na 32bitové selhání hodnoty HRESULT.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   

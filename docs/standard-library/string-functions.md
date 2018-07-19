@@ -1,5 +1,5 @@
 ---
-title: '&lt;řetězec&gt; funkce | Microsoft Docs'
+title: '&lt;řetězec&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -34,25 +34,25 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0089a7259601b766bff3b470c5ba23c1b9952fb6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862670"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954900"
 ---
 # <a name="ltstringgt-functions"></a>&lt;řetězec&gt; funkce
 
 ||||
 |-|-|-|
-|[getline](#getline)|[stod –](#stod)|[stof –](#stof)|
-|[stoi –](#stoi)|[stol –](#stol)|[stold –](#stold)|
-|[stoll –](#stoll)|[stoul –](#stoul)|[stoull –](#stoull)|
-|[Swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
+|[getline](#getline)|[stod –](#stod)|[stof](#stof)|
+|[stoi](#stoi)|[stol](#stol)|[stold](#stold)|
+|[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
+|[Prohození](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
 ## <a name="getline"></a>  getline
 
-Extrahuje řetězce z vstupního datového proudu řádek po řádku.
+Extrahuje řetězce z vstupní datový proud řádek po řádku.
 
 ```cpp
 // (1) delimiter as parameter
@@ -85,43 +85,43 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-`is` Vstupní datový proud, ze které je extrahována řetězec.
+*je* vstupní datový proud, ze kterého má být extrahován řetězec.
 
-`str` Řetězec, do kterého se čtou znaky ze vstupního datového proudu.
+*Str* řetězec, do kterého se čtení znaků ze vstupního datového proudu.
 
-`delim` Oddělovač řádků.
+*delim* oddělovač řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vstupní datový proud `is`.
+Vstupní datový proud *je*.
 
 ### <a name="remarks"></a>Poznámky
 
-Dvojice funkce podpisy označena `(1)` extrahuje znaky z `is` dokud `delim` nenajde, uložit je do v `str`.
+Pár signatury funkce označené `(1)` extrahovat znaky z *je* dokud *delim* nenajde, jejich uložením v *str*.
 
-Dvojice funkce podpisy označena `(2)` pomocí nového řádku jako oddělovač řádků výchozí a chovat jako **getline**( `is`, `str`, `is`. `widen`(' `\n`')).
+Pár signatury funkce označené `(2)` znaku nového řádku použijte jako oddělovač výchozí řádek a chovat stejně jako **getline**(`is`, `str`, `is`. `widen`(' `\n`')).
 
-Druhý každý pár je analogie na první z nich pro podporu [odkazy rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
+Druhá funkce každé dvojice je analogie té předchozí pro podporu [odkazy rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
-Extrakce zastaví, když dojde k jedné z následujících akcí:
+Extrakce chvíle, kdy dojde k jedné z následujících akcí:
 
-- Na koncové souboru v takovém případě příznak vnitřní stav `is` je nastaven na `ios_base::eofbit`.
+- Na ukončení souboru v takovém případě příznak vnitřní stav *je* je nastavena na `ios_base::eofbit`.
 
-- Po funkce extrahuje element, který porovnává rovna **delim**, v takovém případě elementu je vrátit zpět ani připojenou k řízené sekvenci.
+- Po funkci extrahuje element, který při porovnání rovna `delim`, v takovém případě elementu je vrátit ani připojenou k řízené sekvence.
 
-- Po funkce extrahuje `str.` [max_size](../standard-library/basic-string-class.md#max_size) prvky, ve kterém případ příznak vnitřní stav `is` je nastaven na `ios_base::failbit`.
+- Po funkci extrahuje `str.` [max_size](../standard-library/basic-string-class.md#max_size) prvků, ve kterém malá a velká příznak vnitřní stav *je* je nastavena na `ios_base::failbit`.
 
-- Některé jiné chybě, která dříve uvedené, v takovém případě příznak vnitřní stav `is` nastavený na `ios_base::badbit`
+- Jiná chyba než ty, které dříve uvedené, v takovém případě příznak vnitřní stav *je* nastavený na `ios_base::badbit`
 
-Informace o vnitřní stav příznaky najdete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
+Informace o vnitřní stav příznaků najdete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-Pokud funkci extrahuje žádné elementy, vnitřní stav příznak `is` je nastaven na `ios_base::failbit`. V každém případě `getline` vrátí `is`.
+Pokud funkci extrahuje žádné elementy, vnitřní stav příznak *je* je nastavena na `ios_base::failbit`. V každém případě `getline` vrátí *je*.
 
-Pokud je vyvolána výjimka, `is` a `str` jsou ponechána v platném stavu.
+Pokud je vyvolána výjimka, *je* a *str* jsou ponechána v platném stavu.
 
 ### <a name="example"></a>Příklad
 
-Následující kód ukazuje `getline()` ve dvou režimech: nejdřív se výchozí oddělovač (každý na jednom řádku) a druhý s prázdný znak jako oddělovač. Znak end souboru (CTRL-Z na klávesnici) se používá k řízení ukončení chvíli smyčky. Toto nastaví příznak vnitřní stav `cin` k `eofbit`, které je potřeba smazat s [basic_ios::clear()](../standard-library/basic-ios-class.md#clear) před druhý při smyčka bude fungovat správně.
+Následující kód ukazuje `getline()` ve dvou režimech: nejdřív s výchozím oddělovačem (nový řádek) a druhý s mezery jako oddělovače. Znak koncové souboru (CTRL-Z na klávesnici) se používá k řízení ukončení while smyčky. Tím se nastaví vnitřní stav příznak `cin` k `eofbit`, které musí být zrušeno zaškrtnutí s [basic_ios::clear()](../standard-library/basic-ios-class.md#clear) před sekundu, zatímco smyčka bude fungovat správně.
 
 ```cpp
 // compile with: /EHsc /W4
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="stod"></a>  stod –
 
-Převede posloupnost znaků do `double`.
+Převede znakovou sekvenci k **double**.
 
 ```cpp
 double stod(
@@ -182,20 +182,20 @@ double stod(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`double` Hodnotu.
+**Double** hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `double` jakoby pomocí volání metody `strtod( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **double** jako kdyby volala `strtod( str.c_str(), _Eptr)`, kde `_Eptr` je interní pro funkci, objekt. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stof"></a>  stof –
+## <a name="stof"></a>  stof
 
-Převede na typ float posloupnost znaků.
+Převede znakovou sekvenci na typ float.
 
 ```cpp
 float stof(
@@ -211,20 +211,20 @@ float stof(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota typu float.
+Hodnota float.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `float` jakoby pomocí volání metody `strtof( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **float** jako kdyby volala `strtof( str.c_str(), _Eptr)`, kde `_Eptr` je interní pro funkci, objekt. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoi"></a>  stoi –
+## <a name="stoi"></a>  stoi
 
-Převede posloupnost znaků na celé číslo.
+Převede znakovou sekvenci na celé číslo.
 
 ```cpp
 int stoi(
@@ -246,21 +246,21 @@ Celočíselná hodnota.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Obsahuje index prvního znaku nepřevedeném na vrátit.|
-|`base`|Počet základní použití.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Obsahuje index prvního znaku nepřevedeném návratu.|
+|*base*|Počet základních k použití.|
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce `stoi` převede posloupnost znaků v `str` na hodnotu typu `int` a vrátí hodnotu. Například když uplyne posloupnost znaků "10", hodnota vrácený `stoi` je celé číslo 10.
+Funkce `stoi` převede sekvenci znaků v *str* na hodnotu typu **int** a vrátí hodnotu. Například při předání sekvence znaků "10", vrácena hodnota `stoi` je celočíselná hodnota 10.
 
-`stoi` funkce se chová podobně jako `strtol` jednobajtové znaky, když je volána způsobem `strtol( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní funkci; nebo `wcstol` pro široké znaky, když je volána v podobným způsobem, `wcstol(Str.c_str(), _Eptr, idx)`. Další informace najdete v tématu [strtol –, wcstol –, _strtol_l –, _wcstol_l –](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).
+`stoi` se chová podobně jako funkce `strtol` pro jednobajtové znaky, když je volána způsobem `strtol( str.c_str(), _Eptr, idx)`, kde `_Eptr` je interní pro funkci, objekt nebo `wcstol` pro široké znaky, když je volána v podobným způsobem, `wcstol(Str.c_str(), _Eptr, idx)`. Další informace najdete v tématu [strtol – wcstol –, _strtol_l – _wcstol_l –](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).
 
-Pokud `str.c_str() == *_Eptr`, `stoi` objekt typu, vyvolá `invalid_argument`. Pokud se nastavuje volání `errno`, nebo pokud vrácená hodnota nemůže být reprezentován jako objekt typu `int`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr - str.c_str()` v `*idx`.
+Pokud `str.c_str() == *_Eptr`, `stoi` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, nebo pokud vrácená hodnota nemůže být reprezentovaný jako objekt typu **int**, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr - str.c_str()` v `*idx`.
 
-## <a name="stol"></a>  stol –
+## <a name="stol"></a>  stol
 
-Převede posloupnost znaků do `long`.
+Převede znakovou sekvenci k **dlouhé**.
 
 ```cpp
 long stol(
@@ -278,21 +278,21 @@ long stol(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
-|`base`|Počet základní použití.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Long – celočíselná hodnota.
+Hodnotu typu long integer.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `long` jakoby pomocí volání metody `strtol( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **dlouhé** jako kdyby volala `strtol( str.c_str(), _Eptr, idx)`, kde `_Eptr` je interní pro funkci, objekt. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stold"></a>  stold –
+## <a name="stold"></a>  stold
 
-Převede posloupnost znaků do `long double`.
+Převede znakovou sekvenci k **long double**.
 
 ```cpp
 double stold(
@@ -308,20 +308,20 @@ double stold(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`long double` Hodnotu.
+**Long double** hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `long double` jakoby pomocí volání metody `strtold( str.c_str(), _Eptr)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **long double** jako kdyby volala `strtold( str.c_str(), _Eptr)`, kde `_Eptr` je interní pro funkci, objekt. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoll"></a>  stoll –
+## <a name="stoll"></a>  stoll
 
-Převede posloupnost znaků do `long long`.
+Převede znakovou sekvenci k **long long**.
 
 ```cpp
 long long stoll(
@@ -339,21 +339,21 @@ long long stoll(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
-|`base`|Počet základní použití.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`long long` Hodnotu.
+**Long long** hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `long long` jakoby pomocí volání metody `strtoll( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **long long** jako kdyby volala `strtoll( str.c_str(), _Eptr, idx)`, kde `_Eptr` je interní pro funkci, objekt. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoul"></a>  stoul –
+## <a name="stoul"></a>  stoul
 
-Převede nepodepsaný posloupnost znaků dlouhé.
+Převede znakovou sekvenci na nepodepsaný dlouhý.
 
 ```cpp
 unsigned long stoul(
@@ -371,21 +371,21 @@ unsigned long stoul(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
-|`base`|Počet základní použití.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nepodepsané dlouho celočíselná hodnota.
+Hodnota bez znaménka typu long integer.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `unsigned long` jakoby pomocí volání metody `strtoul( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **unsigned long** jako kdyby volala `strtoul( str.c_str(), _Eptr, idx)`, kde `_Eptr` je interní pro funkci, objekt . Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="stoull"></a>  stoull –
+## <a name="stoull"></a>  stoull
 
-Převede posloupnost znaků do `unsigned long long`.
+Převede znakovou sekvenci do **unsigned long long**.
 
 ```cpp
 unsigned long long stoull(
@@ -403,21 +403,21 @@ unsigned long long stoull(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`str`|Posloupnost znaků, který má být převeden.|
-|`idx`|Hodnota index prvního znaku nepřevedeném.|
-|`base`|Počet základní použití.|
+|*str*|Sekvence znaků, který má být převeden.|
+|*IDX*|Hodnota indexu prvního nepřevedeném znaku.|
+|*base*|Počet základních k použití.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`unsigned long long` Hodnotu.
+**Unsigned long long.** hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce převede pořadí elementů v `str` na hodnotu `val` typu `unsigned long long` jakoby pomocí volání metody `strtoull( str.c_str(), _Eptr, idx)`, kde `_Eptr` je objekt interní funkce. Pokud ` str.c_str() == *_Eptr` vyhodí objekt typu `invalid_argument`. Pokud se nastavuje volání `errno`, vyvolá objekt typu `out_of_range`. Jinak Pokud `idx` není ukazatele null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
+Funkce převede pořadí prvků v *str* na hodnotu `val` typu **unsigned long long.** jako kdyby volala `strtoull( str.c_str(), _Eptr, idx)`, kde `_Eptr` je interní objekt funkce. Pokud ` str.c_str() == *_Eptr` vyvolá objekt typu `invalid_argument`. Pokud taková volání by nastavit `errno`, vyvolá objekt typu `out_of_range`. Jinak, pokud *idx* není ukazatel s hodnotou null, funkce úložiště `*_Eptr -  str.c_str()` v `*idx` a vrátí `val`.
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  Prohození
 
-Výměny pole znaků dva řetězce.
+Vymění pole znaků dva řetězce.
 
 ```cpp
 template <class Traits, class Allocator>
@@ -426,13 +426,13 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parametry
 
-`left` Jeden řetězec, jehož elementy jsou záměnu s těmi jiným řetězcem.
+*levé* jeden řetězec, jehož prvky mají vyměnit s těmi, která z jiného řetězce.
 
-`right` Jiný řetězec, jehož elementy jsou k si místo se první řetězec.
+*správné* jiný řetězec, jehož prvky mají vyměnit s první řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony spustí speciální členské funkce *levém*.[ swap](../standard-library/basic-string-class.md#swap)(*správné*) pro řetězce, což zaručuje konstantní složitost.
+Funkce šablony provede speciální členská funkce *levé*.[ Prohození](../standard-library/basic-string-class.md#swap)(*správné*) pro řetězce, který zaručuje konstantní složitost.
 
 ### <a name="example"></a>Příklad
 
@@ -469,7 +469,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>  to_string –
+## <a name="to_string"></a>  to_string
 
 Převede hodnotu na `string`.
 
@@ -489,35 +489,35 @@ string to_string(long double Val);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Val`|Hodnota, která má být převedena.|
+|*Val*|Hodnota, která má být převedena.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`string` Představující hodnotu.
+`string` , Který představuje hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Převede funkce `Val` pořadí elementů uložené v objektu array `Buf` vnitřní funkce, jako kdyby pomocí volání metody `sprintf(Buf, Fmt, Val)`, kde `Fmt` je
+Funkce převede *Val* na řadu prvků, které jsou uloženy v objektu pole `Buf` interní pro funkci, jako kdyby volala `sprintf(Buf, Fmt, Val)`, kde `Fmt` je
 
-- `"%d"` Pokud `Val` má typ `int`
+- `"%d"` Pokud `Val` má typ **int**
 
-- `"%u"` Pokud `Val` má typ `unsigned int`
+- `"%u"` Pokud `Val` má typ **int bez znaménka**
 
-- `"%ld"` Pokud `Val` má typ `long`
+- `"%ld"` Pokud `Val` má typ **dlouhý**
 
-- `"%lu"` Pokud `Val` má typ `unsigned long`
+- `"%lu"` Pokud `Val` má typ **unsigned long**
 
-- `"%lld"` Pokud `Val` má typ `long long`
+- `"%lld"` Pokud `Val` má typ **long long**
 
-- `"%llu"` Pokud `Val` má typ `unsigned long long`
+- `"%llu"` Pokud `Val` má typ **unsigned long long.**
 
-- `"%f"` Pokud `Val` má typ `float` nebo `double`
+- `"%f"` Pokud `Val` má typ **float** nebo **double**
 
-- `"%Lf"` Pokud `Val` má typ `long double`
+- `"%Lf"` Pokud `Val` má typ **long double**
 
-Funkce vrátí hodnotu `string(Buf)`.
+Funkce vrátí `string(Buf)`.
 
-## <a name="to_wstring"></a>  to_wstring –
+## <a name="to_wstring"></a>  to_wstring
 
 Převede hodnotu na široký řetězec.
 
@@ -545,26 +545,26 @@ wstring to_wstring(long double Val);
 
 ### <a name="remarks"></a>Poznámky
 
-Převede funkce `Val` pořadí elementů uložené v objektu array `Buf` vnitřní funkce, jako kdyby pomocí volání metody `swprintf(Buf, Len, Fmt, Val)`, kde `Fmt` je
+Funkce převede `Val` na řadu prvků, které jsou uloženy v objektu pole `Buf` interní pro funkci, jako kdyby volala `swprintf(Buf, Len, Fmt, Val)`, kde `Fmt` je
 
-- `L"%d"` Pokud `Val` má typ `int`
+- `L"%d"` Pokud `Val` má typ **int**
 
-- `L"%u"` Pokud `Val` má typ `unsigned int`
+- `L"%u"` Pokud `Val` má typ **int bez znaménka**
 
-- `L"%ld"` Pokud `Val` má typ `long`
+- `L"%ld"` Pokud `Val` má typ **dlouhý**
 
-- `L"%lu"` Pokud `Val` má typ `unsigned long`
+- `L"%lu"` Pokud `Val` má typ **unsigned long**
 
-- `L"%lld"` Pokud `Val` má typ `long long`
+- `L"%lld"` Pokud `Val` má typ **long long**
 
-- `L"%llu"` Pokud `Val` má typ `unsigned long long`
+- `L"%llu"` Pokud `Val` má typ **unsigned long long.**
 
-- `L"%f"` Pokud `Val` má typ `float` nebo `double`
+- `L"%f"` Pokud `Val` má typ **float** nebo **double**
 
-- `L"%Lf"` Pokud `Val` má typ `long double`
+- `L"%Lf"` Pokud `Val` má typ **long double**
 
-Funkce vrátí hodnotu `wstring(Buf)`.
+Funkce vrátí `wstring(Buf)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<řetězec >](../standard-library/string.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: selectany | Microsoft Docs
+title: selectany | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb4f4ccd3cbfb5bb26e9f58a862eaa87dba3c538
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947639"
 ---
 # <a name="selectany"></a>selectany
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
  Říká kompilátoru, že deklarovaná položka globálních dat (proměnná nebo objekt) je vybrána libovolnou sekvencí COMDAT (zabalenou funkcí).  
   
@@ -35,21 +36,21 @@ __declspec( selectany ) declarator
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je v době spojení nalezeno více definic sekvencí COMDAT, linker jednu vybere a zbytek zahodí. Pokud – možnost linkeru [/OPT:REF](../build/reference/opt-optimizations.md) (optimalizace) je vybraná, pak sekvence COMDAT odstranění dojde k odebrání všech neregistrované datové položky ve výstupu linkeru.  
+ Pokud je v době spojení nalezeno více definic sekvencí COMDAT, linker jednu vybere a zbytek zahodí. Pokud možnost [OPT](../build/reference/opt-optimizations.md) (optimalizace) je vybraná, pak dojde k odstranění sekvence COMDAT odebrat všechny položky neodkazovaná data ve výstupu linkeru.  
   
  Konstruktory a přiřazení pomocí globálních funkcí nebo statických metod v deklaraci nevytvoří odkaz a nezabrání eliminaci možnosti /OPT:REF. Vedlejší účinky takového kódu by neměly být závislé na tom, zda neexistují žádné odkazy na tato data.  
   
- U dynamicky inicializovaných globálních objektů zahodí atribut `selectany` také kód inicializace objektu bez odkazu.  
+ U dynamicky inicializovaných globálních objektů **selectany** neodkazovaná objektový kód inicializace, také dojde ke zrušení.  
   
- V projektu EXE nebo DLL lze položku globálních dat obvykle inicializovat pouze jednou. Atribut `selectany` lze použít při inicializaci globálních dat definovaných hlavičkami, když se stejná hlavička objeví ve více než jednom zdrojovém souboru. Atribut `selectany` je k dispozici v kompilátorech jazyka C i jazyka C++.  
+ V projektu EXE nebo DLL lze položku globálních dat obvykle inicializovat pouze jednou. **selectany** lze použít při inicializaci globálních dat definovaných hlavičkami, když se stejná hlavička objeví ve více než jednom zdrojovém souboru. **selectany** je k dispozici v kompilátorech jazyka C i C++.  
   
 > [!NOTE]
->  Atribut `selectany` lze použít pouze pro vlastní inicializaci položek globálních dat, které jsou externě viditelné.  
+>  **selectany** jde použít jedině pro vlastní inicializaci položek globálních dat, které jsou externě viditelné.  
   
 ## <a name="example"></a>Příklad  
- Tento kód ukazuje, jak použít atribut `selectany`:  
+ Tento kód ukazuje způsob použití **selectany** atribut:  
   
-```  
+```cpp 
 //Correct - x1 is initialized and externally visible   
 __declspec(selectany) int x1=1;  
   
@@ -80,9 +81,9 @@ __declspec(selectany) X x(1);
 ```  
   
 ## <a name="example"></a>Příklad  
- Tento kód ukazuje způsob použití `selectany` atribut zajistit data sekvence COMDAT skládání, pokud používáte [/OPT:ICF](../build/reference/opt-optimizations.md) – možnost linkeru. Všimněte si, že data musí být označen `selectany` a umístěný v **const** část (jen pro čtení). Část jen pro čtení je nutné explicitně zadat.  
+ Tento kód ukazuje způsob použití **selectany** atribut zajistit skládání dat sekvence COMDAT při současném použití [/OPT:ICF](../build/reference/opt-optimizations.md) – možnost linkeru. Všimněte si, že data musí být označené **selectany** a umístí se do **const** oddílu (jen pro čtení). Část jen pro čtení je nutné explicitně zadat.  
   
-```  
+```cpp 
 // selectany2.cpp  
 // in the following lines, const marks the variables as read only  
 __declspec(selectany) extern const int ix = 5;  
@@ -93,7 +94,7 @@ int main() {
 }  
 ```  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [__declspec](../cpp/declspec.md)   

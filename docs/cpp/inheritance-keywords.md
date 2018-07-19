@@ -1,5 +1,5 @@
 ---
-title: Klíčová slova dědičnosti | Microsoft Docs
+title: Klíčová slova dědičnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,14 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947592"
 ---
 # <a name="inheritance-keywords"></a>Klíčová slova dědičnosti
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
 ```  
 class [__single_inheritance] class-name;
@@ -50,20 +51,20 @@ class [__virtual_inheritance] class-name;
   
  Jazyk C++ umožňuje deklarovat ukazatel na člen třídy před definicí třídy. Příklad:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- Ve výše, kódu `p` je deklarován jako ukazatel na celé číslo člena třídy S. Ale `class S` má ještě není definován v tomto kódu; ho pouze bylo deklarováno. Když kompilátor na takový ukazatel narazí, musí vytvořit obecné rozlišení ukazatele. Velikost rozlišení je závislá na zadaném modelu dědičnosti. Pro určení modelu dědičnosti existují čtyři způsoby:  
+ Ve výše uvedeném kódu `p` je deklarováno jako ukazatel na celočíselný člen třídy S. Ale `class S` má ještě není definována v tomto kódu; to je pouze deklarována. Když kompilátor na takový ukazatel narazí, musí vytvořit obecné rozlišení ukazatele. Velikost rozlišení je závislá na zadaném modelu dědičnosti. Pro určení modelu dědičnosti existují čtyři způsoby:  
   
--   V prostředí IDE pod **reprezentace ukazatele na člena**  
+-   V integrovaném vývojovém prostředí v rámci **reprezentace ukazatele na člena**  
   
--   Pomocí příkazového řádku [/vmg](../build/reference/vmb-vmg-representation-method.md) přepínače  
+-   Pomocí příkazového řádku [/vmg](../build/reference/vmb-vmg-representation-method.md) přepnout  
   
--   Pomocí [pointers_to_members –](../preprocessor/pointers-to-members.md) – Direktiva pragma  
+-   Použití [pointers_to_members](../preprocessor/pointers-to-members.md) – Direktiva pragma  
   
--   Pomocí klíčových slov dědičnosti `__single_inheritance`, `__multiple_inheritance` a `__virtual_inheritance`. Tento postup řídí model dědičnosti na základě každé třídy.  
+-   Pomocí klíčových slov dědičnosti **__single_inheritance**, **__multiple_inheritance**, a **__virtual_inheritance**. Tento postup řídí model dědičnosti na základě každé třídy.  
   
     > [!NOTE]
     >  Je-li vždy po definování třídy deklarován ukazatel na člen třídy, není třeba použít žádnou z těchto možností.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Je-li výše uvedený příklad změněn na:  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  
@@ -82,7 +83,7 @@ int S::*p;
 > [!NOTE]
 >  Stejná dopředná deklarace reprezentace ukazatele na člen třídy by se měla nacházet v každé jednotce překladu, která deklaruje ukazatele na členy této třídy, a deklarace by se měla objevit před deklarací ukazatelů na členy.  
   
- **Konkrétní Microsoft END**  
+ **Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [Klíčová slova](../cpp/keywords-cpp.md)
