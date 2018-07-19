@@ -1,5 +1,5 @@
 ---
-title: " Třídy ATL třídu objektů Factory | Microsoft Docs"
+title: " ATL – třídy objektů pro vytváření tříd | Dokumentace Microsoftu"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958488"
 ---
-# <a name="class-factories-classes"></a>Třída objekty pro vytváření tříd
-Následující třídy implementovat nebo podporu objekt třídy:  
+# <a name="class-factories-classes"></a>Třídy objektů pro vytváření tříd
+Následující třídy implementace nebo podporovat objekt pro vytváření tříd:  
   
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md) poskytuje výchozí třídu objekt factory pro vytvoření objektu.  
+-   [Ccomclassfactory –](../atl/reference/ccomclassfactory-class.md) poskytuje výchozí objekt factory třídy pro vytvoření objektu.  
   
--   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) řídí vytváření objektu prostřednictvím licenci.  
+-   [Ccomclassfactory2 –](../atl/reference/ccomclassfactory2-class.md) řídí vytváření objektů prostřednictvím licenci.  
   
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md) umožňuje objekty vytvořené v několika Apartment ve fondu vláken.  
+-   [Ccomclassfactoryautothread –](../atl/reference/ccomclassfactoryautothread-class.md) umožňuje objektů bude vytvořena ve více klientů ve fondu vláken objekty apartment.  
   
--   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) vytvoří jeden objekt.  
+-   [Ccomclassfactorysingleton –](../atl/reference/ccomclassfactorysingleton-class.md) vytvoří jeden objekt.  
   
 -   [CComCoClass](../atl/reference/ccomcoclass-class.md) definuje objekt pro vytváření tříd pro objekt.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)   
+ [Přehled tříd](../atl/atl-class-overview.md)   
  [Agregační makra a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)
 

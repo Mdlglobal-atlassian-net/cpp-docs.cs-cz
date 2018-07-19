@@ -1,5 +1,5 @@
 ---
-title: Třídy body připojení (ATL) | Microsoft Docs
+title: Třídy bodů připojení (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0d75c101bb23b3e7b788e607e325c18d729c81
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d458fb5805b99c8dcc5cc25abc9f85f88f08e92
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957647"
 ---
-# <a name="connection-points-classes"></a>Třídy body připojení
+# <a name="connection-points-classes"></a>Třídy bodů připojení
 Následující třídy poskytují podporu pro spojovací body:  
   
--   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementuje kontejner bod připojení.  
+-   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementuje kontejner bodu připojení.  
   
 -   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementuje bod připojení.  
   
--   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementuje představující bod připojení [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní.  
+-   [Ipropertynotifysinkcp –](../atl/reference/ipropertynotifysinkcp-class.md) implementuje představující bod připojení [ipropertynotifysink –](http://msdn.microsoft.com/library/windows/desktop/ms692638) rozhraní.  
   
--   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) spravuje neomezený počet připojení mezi bod připojení a jeho jímky.  
+-   [Ccomdynamicunkarray –](../atl/reference/ccomdynamicunkarray-class.md) spravuje neomezené možnosti připojení mezi bodem připojení a jeho jímky.  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) spravuje pevný počet připojení mezi bod připojení a jeho jímky.  
+-   [Ccomunkarray –](../atl/reference/ccomunkarray-class.md) spravuje pevný počet připojení mezi bodem připojení a jeho jímky.  
   
--   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) upozorní podřízený klienta, který vlastnost objektu došlo ke změně nebo se chystáte se změnit.  
+-   [Cfirepropnotifyevent –](../atl/reference/cfirepropnotifyevent-class.md) upozorní jímkou klienta, který na vlastnost objektu došlo ke změně nebo je změnit.  
   
--   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) poskytuje podporu pro spojovací body pro objekt ATL COM. Tyto body připojení jsou namapována na jímka mapa událostí, které zajišťuje objektu COM.  
+-   [Idispeventimpl –](../atl/reference/idispeventimpl-class.md) poskytuje podporu pro spojovací body pro objekt knihovny ATL modelu COM. S mapou jímky událostí, který je poskytován váš objekt modelu COM jsou mapovány tyto body připojení.  
   
--   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funguje ve spojení s jímky událostí mapy ve třídě události trasy k funkci příslušnou obslužnou rutinu.  
+-   [Idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md) mapování funguje ve spojení s jímky událostí ve své třídě pro směrování událostí na odpovídající obslužné rutiny.  
   
 ## <a name="related-articles"></a>Související články  
  [Body připojení](../atl/atl-connection-points.md)  
@@ -49,7 +49,7 @@ Následující třídy poskytují podporu pro spojovací body:
  [Zpracování událostí a ATL](../atl/event-handling-and-atl.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)   
- [Makra bodu připojení](../atl/reference/connection-point-macros.md)   
+ [Přehled tříd](../atl/atl-class-overview.md)   
+ [Makra bodů připojení](../atl/reference/connection-point-macros.md)   
  [Globální funkce bodů připojení](../atl/reference/connection-point-global-functions.md)
 

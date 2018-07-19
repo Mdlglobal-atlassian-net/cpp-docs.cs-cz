@@ -1,5 +1,5 @@
 ---
-title: Třída CGdiObject | Microsoft Docs
+title: Cgdiobject – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338415"
 ---
-# <a name="cgdiobject-class"></a>CGdiObject – třída
-Poskytuje základní třídu pro různé druhy Windows grafické objekty rozhraní GDI zařízení například rastrové obrázky, oblasti, štětce, pera, palety a písem.  
+# <a name="cgdiobject-class"></a>Cgdiobject – třída
+Poskytuje základní třídu pro různé druhy grafiky Windows objekty rozhraní GDI systému zařízení, jako je například rastrové obrázky, oblasti, štětce, pera, palety a písma.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,16 +68,16 @@ class CGdiObject : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CGdiObject::Attach](#attach)|Připojí do objekt GDI systému Windows `CGdiObject` objektu.|  
-|[CGdiObject::CreateStockObject](#createstockobject)|Načte popisovač pro některý z předdefinovaných uložených pera Windows, štětce nebo písem.|  
-|[CGdiObject::DeleteObject](#deleteobject)|Objekt Windows GDI připojený k odstranění `CGdiObject` objekt z paměti podle uvolnění všechny úložiště systému přidružená k objektu.|  
+|[CGdiObject::Attach](#attach)|Připojí objektů Windows GDI do `CGdiObject` objektu.|  
+|[CGdiObject::CreateStockObject](#createstockobject)|Načte popisovač na jednu z předdefinovaných uložených pera Windows, štětce nebo písma.|  
+|[CGdiObject::DeleteObject](#deleteobject)|Odstraní objektů Windows GDI připojené k `CGdiObject` objekt z paměti uvolněním veškeré součásti úložiště systémové přidružená k objektu.|  
 |[CGdiObject::DeleteTempMap](#deletetempmap)|Odstraní všechny dočasné `CGdiObject` objekty vytvořené `FromHandle`.|  
-|[CGdiObject::Detach](#detach)|Umožňuje odpojit objekt GDI systému Windows z `CGdiObject` objektu a vrací popisovač objektu GDI systému Windows.|  
-|[CGdiObject::FromHandle](#fromhandle)|Vrátí ukazatel na `CGdiObject` objekt daný popisovač objektu GDI systému Windows.|  
-|[CGdiObject::GetObject](#getobject)|Výplněmi vyrovnávací paměti s daty, která popisuje Windows GDI objekt připojený k `CGdiObject` objektu.|  
-|[CGdiObject::GetObjectType](#getobjecttype)|Načte typ objektu GDI.|  
-|[CGdiObject::GetSafeHandle](#getsafehandle)|Vrátí `m_hObject` Pokud `this` je `NULL`, v takovém případě `NULL` je vrácen.|  
-|[CGdiObject::UnrealizeObject](#unrealizeobject)|Obnoví původ štětce nebo obnoví logické palety.|  
+|[CGdiObject::Detach](#detach)|Odpojí objektů Windows GDI z `CGdiObject` objekt a vrátí popisovač do objektů Windows GDI.|  
+|[CGdiObject::FromHandle](#fromhandle)|Vrací ukazatel `CGdiObject` objekt daný popisovač objektů Windows GDI.|  
+|[CGdiObject::GetObject](#getobject)|Výplně vyrovnávací paměti s daty, která popisuje objektů Windows GDI připojené k `CGdiObject` objektu.|  
+|[CGdiObject::GetObjectType](#getobjecttype)|Získá typ objektu GDI.|  
+|[CGdiObject::GetSafeHandle](#getsafehandle)|Vrátí `m_hObject` Pokud **to** má hodnotu NULL, ve kterém je vrácena hodnota case NULL.|  
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|Obnoví původní štětce nebo obnoví logickou paletu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -85,21 +85,21 @@ class CGdiObject : public CObject
 |----------|-----------------|  
 |[CGdiObject::operator! =](#operator_neq)|Určuje, zda dva objekty GDI logicky není rovno.|  
 |[CGdiObject::operator ==](#operator_eq_eq)|Určuje, jestli jsou dva objekty GDI logicky stejné.|  
-|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Načte `HANDLE` k objektu připojené GDI systému Windows.|  
+|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Načte POPISOVAČ připojených objektů Windows GDI.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CGdiObject::m_hObject](#m_hobject)|A `HANDLE` obsahující `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, nebo `HFONT` připojen k tomuto objektu.|  
+|[CGdiObject::m_hObject](#m_hobject)|POPISOVAČ obsahující HBITMAP HPALETTE, HRGN, HBRUSH, HPEN nebo HFONT připojené k tomuto objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CGdiObject` přímo. Místo toho vytvoříte objekt z jednoho z jeho odvozené třídy, jako například `CPen` nebo `CBrush`.  
+ Nikdy nevytvářejte `CGdiObject` přímo. Místo toho vytvoření objektu z jednoho z jeho odvozených tříd, jako například `CPen` nebo `CBrush`.  
   
- Další informace o `CGdiObject`, najdete v části [grafické objekty](../../mfc/graphic-objects.md).  
+ Další informace o `CGdiObject`, naleznete v tématu [grafické objekty](../../mfc/graphic-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CGdiObject`  
   
@@ -107,7 +107,7 @@ class CGdiObject : public CObject
  **Záhlaví:** afxwin.h  
   
 ##  <a name="attach"></a>  CGdiObject::Attach  
- Připojí do objekt GDI systému Windows `CGdiObject` objektu.  
+ Připojí objektů Windows GDI do `CGdiObject` objektu.  
   
 ```  
 BOOL Attach(HGDIOBJ hObject);
@@ -115,10 +115,10 @@ BOOL Attach(HGDIOBJ hObject);
   
 ### <a name="parameters"></a>Parametry  
  *hObject*  
- A `HANDLE` na objekt GDI systému Windows (například `HPEN` nebo `HBRUSH`).  
+ POPISOVAČ pro objekt Windows GDI (například HPEN nebo HBRUSH).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud připojení úspěšné; jinak 0.  
+ Nenulové, pokud je úspěšné; přílohy jinak 0.  
   
 ##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  Vytvoří `CGdiObject` objektu.  
@@ -128,10 +128,10 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CGdiObject` přímo. Místo toho vytvoříte objekt z jednoho z jeho odvozené třídy, jako například `CPen` nebo `Cbrush`.  
+ Nikdy nevytvářejte `CGdiObject` přímo. Místo toho vytvoření objektu z jednoho z jeho odvozených tříd, jako například `CPen` nebo `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
- Načte popisovač pro některý z předdefinovaných uložených Windows GDI pera, štětce nebo písem a připojí GDI objekt, který má `CGdiObject` objektu.  
+ Načte popisovač na jednu z předdefinovaných uložených Windows GDI pera, štětce nebo písma a připojí rozhraní GDI objekt, který má `CGdiObject` objektu.  
   
 ```  
 BOOL CreateStockObject(int nIndex);
@@ -139,28 +139,28 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Určení typu objektu uložených potřeby konstanta. V tématu parametr *fnObject* pro [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) ve Windows SDK pro popis příslušné hodnoty.  
+ Konstanta určující typ požadovaného skladový objekt. Zobrazit parametr *fnObject* pro [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) v sadě Windows SDK pro popis příslušné hodnoty.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce s jedním z odvozené třídy, která odpovídá typu objektů GDI systému Windows, jako například `CPen` pro pera uložené.  
+ Volání této funkce s jednou z odvozené třídy, která odpovídá typ objektů Windows GDI, jako například `CPen` uložených pera.  
   
 ##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
- Odstraní objekt připojené GDI systému Windows z paměti podle uvolnění všechny úložiště systému přidružená k objektu GDI systému Windows.  
+ Odstraní připojených objektů Windows GDI z paměti uvolněním přidružené objektů Windows GDI všechna úložiště v systému.  
   
 ```  
 BOOL DeleteObject();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud objekt GDI byla úspěšně odstraněna; jinak 0.  
+ Nenulové, pokud se úspěšně odstranil objekt rozhraní GDI; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Úložiště přidružený k `CGdiObject` objekt nemá vliv toto volání. Aplikace by neměla volat `DeleteObject` na `CGdiObject` objekt, který je aktuálně vybraný v kontextu zařízení.  
+ Úložiště přidružené k `CGdiObject` objekt nemá vliv tohoto volání. Aplikace by neměl volat `DeleteObject` na `CGdiObject` objekt, který je aktuálně vybrána v kontextu zařízení.  
   
- Při odstranění štětce vzor rastrového obrázku přidružený stopy se neodstraní. Bitmapy musí odstranit samostatně.  
+ Při odstranění štětce vzor rastrový obrázek přidružený k štětce není odstraněn. Rastrový obrázek dají odstranit samostatně.  
   
 ##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
  Volá se automaticky `CWinApp` doby nečinnosti obslužnou rutinu, `DeleteTempMap` odstraní všechny dočasné `CGdiObject` objekty vytvořené `FromHandle`.  
@@ -170,23 +170,23 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `DeleteTempMap` Umožňuje odpojit objekt Windows GDI připojen do dočasného `CGdiObject` objekt před odstraněním `CGdiObject` objektu.  
+ `DeleteTempMap` Odpojí objektů Windows GDI připojené do dočasného `CGdiObject` objektu před odstraněním `CGdiObject` objektu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CGdiObject::Detach  
- Umožňuje odpojit objekt GDI systému Windows z `CGdiObject` objektu a vrací popisovač objektu GDI systému Windows.  
+ Odpojí objektů Windows GDI z `CGdiObject` objekt a vrátí popisovač do objektů Windows GDI.  
   
 ```  
 HGDIOBJ Detach();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `HANDLE` do Windows GDI objekt odpojit; jinak hodnota **NULL** Pokud žádný objekt GDI je připojen.  
+ A `HANDLE` Windows GDI na objekt odpojit; v opačném případě hodnota NULL, pokud je připojen žádný objekt GDI.  
   
 ##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
- Vrátí ukazatel na `CGdiObject` objekt daný popisovač objektu GDI systému Windows.  
+ Vrací ukazatel `CGdiObject` objekt daný popisovač objektů Windows GDI.  
   
 ```  
 static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
@@ -194,18 +194,18 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
   
 ### <a name="parameters"></a>Parametry  
  *hObject*  
- A `HANDLE` na objekt GDI systému Windows.  
+ POPISOVAČ pro objekt Windows GDI.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na `CGdiObject` , může být v dočasné nebo trvalé.  
+ Ukazatel `CGdiObject` , které můžou být dočasné nebo trvalé.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `CGdiObject` objekt není už připojený k objektu GDI systému Windows, dočasného `CGdiObject` objekt se vytvoří a připojené.  
+ Pokud `CGdiObject` objekt už není připojen ke objektů Windows GDI, dočasný `CGdiObject` objekt se vytvoří a připojí.  
   
- Toto dočasný `CGdiObject` objektu je platná pouze až po příštím aplikace má čas nečinnosti v jeho událostí ve smyčce, po kterém se odstraní všechny dočasné grafické objekty. Jinými slovy to je, že dočasný objekt platí pouze při zpracování zprávy jeden interval.  
+ Tento dočasný `CGdiObject` objektu je platná pouze až do příštího aplikace má čas nečinnosti v jeho smyčkou událostí, po kterém se odstraní všechny dočasné grafických objektů. Jinými slovy to je, že dočasný objekt platí pouze při zpracování zprávy jedno okno.  
   
 ##  <a name="getobject"></a>  CGdiObject::GetObject  
- Doplní vyrovnávací paměť s daty, která definuje zadaný objekt.  
+ Naplní vyrovnávací paměť s daty, která definuje zadaného objektu.  
   
 ```  
 int GetObject(
@@ -215,16 +215,16 @@ int GetObject(
   
 ### <a name="parameters"></a>Parametry  
  *nCount*  
- Určuje počet bajtů, které chcete zkopírovat do *lpObject* vyrovnávací paměti.  
+ Určuje počet bajtů, které mají zkopírovat do *lpObject* vyrovnávací paměti.  
   
  *lpObject*  
- Body do vyrovnávací paměti zadanou uživatelem, který je k získání požadovaných informací.  
+ Odkazuje na vyrovnávací paměť uživatelem zadané, která je k získání požadovaných informací.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet bajtů načtených; v opačném případě dojde k 0, pokud se chyba.  
+ Počet bajtů načtených; v opačném případě dojde k 0, pokud chybu.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce načte datová struktura, jejíž typ závisí na typu grafického objektu, jak je ukázáno v následujícím seznamu:  
+ Funkce načte do datové struktury, jehož typ závisí na typu grafický objekt, jak je znázorněno v následujícím seznamu:  
   
 |Objekt|Typ vyrovnávací paměti|  
 |------------|-----------------|  
@@ -232,67 +232,67 @@ int GetObject(
 |`CBrush`|[LOGBRUSH –](../../mfc/reference/logbrush-structure.md)|  
 |`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
 |`CBitmap`|[RASTROVÝ OBRÁZEK](../../mfc/reference/bitmap-structure.md)|  
-|`CPalette`|**WORD**|  
+|`CPalette`|WORD|  
 |`CRgn`|Nepodporováno|  
   
- Pokud je objekt `CBitmap` objekt, `GetObject` vrátí pouze šířky, výšky a informace o formátu barva bitmapy. Skutečné službu bits můžete načíst pomocí [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
+ Pokud je objekt `CBitmap` objektu, `GetObject` vrátí pouze šířku, výšku a informace o formátu barvy rastrového obrázku. Skutečné službu bits můžete načíst pomocí [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- Pokud je objekt `CPalette` objekt, `GetObject` načte **WORD** určující počet položek v paletě. Funkce nenačítá [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktura, která definuje paletě. Aplikaci můžete získat informace o palety voláním [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
+ Pokud je objekt `CPalette` objektu, `GetObject` načte slova, která určuje počet položek, které na paletě. Funkce nenačte [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) strukturu, která definuje paletu. Aplikaci můžete získat informace o palety voláním [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
- Načte typ objektu GDI.  
+ Získá typ objektu GDI.  
   
 ```  
 UINT GetObjectType() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Typ objektu, pokud bylo úspěšné; jinak 0. Hodnota může být jeden z následujících akcí:  
+ Typ objektu, v případě úspěchu; jinak 0. Hodnota může být jeden z následujících akcí:  
   
-- **OBJ_BITMAP** rastrového obrázku  
+- OBJ_BITMAP rastrový obrázek  
   
-- **OBJ_BRUSH** štětce  
+- OBJ_BRUSH štětce  
   
-- **OBJ_FONT** písma  
+- OBJ_FONT písma  
   
-- **OBJ_PAL** palety  
+- OBJ_PAL palety  
   
-- **OBJ_PEN** pera  
+- OBJ_PEN pera  
   
-- **OBJ_EXTPEN** rozšířené pera  
+- Rozšířené OBJ_EXTPEN pera  
   
-- **OBJ_REGION** oblast  
+- OBJ_REGION oblasti  
   
-- **OBJ_DC** kontextu zařízení  
+- Kontext zařízení OBJ_DC  
   
-- **OBJ_MEMDC** paměti kontextu zařízení  
+- Kontext zařízení OBJ_MEMDC paměti  
   
-- **OBJ_METAFILE** Metafile  
+- OBJ_METAFILE metasoubor  
   
-- **OBJ_METADC** Metafile kontextu zařízení  
+- Kontextu zařízení metasouboru OBJ_METADC  
   
-- **OBJ_ENHMETAFILE** Enhanced metafile  
+- OBJ_ENHMETAFILE rozšířený metasoubor  
   
-- **OBJ_ENHMETADC** Enhanced metafile kontextu zařízení  
+- Kontext zařízení Enhanced metafile OBJ_ENHMETADC  
   
 ##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
- Vrátí `m_hObject` Pokud **to** je **NULL**, v takovém případě **NULL** je vrácen.  
+ Vrátí `m_hObject` Pokud **to** má hodnotu NULL, ve kterém je vrácena hodnota case NULL.  
   
 ```  
 HGDIOBJ GetSafeHandle() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `HANDLE` připojené Windows GDI objektu; v opačném případě **NULL** Pokud je připojen žádný objekt.  
+ POPISOVAČ připojených objektů Windows GDI; jinak hodnota NULL, pokud je připojen žádný objekt.  
   
 ### <a name="remarks"></a>Poznámky  
- To je součástí zlepší obecné popisovač rozhraní a je užitečné, když **NULL** je platný nebo speciální hodnotu pro popisovač.  
+ To je součástí rozhraní paradigma obecné popisovač a je užitečné, když hodnota NULL je platné nebo zvláštní hodnota pro popisovač.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).  
   
 ##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
- A `HANDLE` obsahující `HBITMAP`, **HRGN**, `HBRUSH`, `HPEN`, `HPALETTE`, nebo **HFONT** připojen k tomuto objektu.  
+ POPISOVAČ obsahující HBITMAP HRGN, HBRUSH, HPEN, HPALETTE nebo HFONT připojené k tomuto objektu.  
   
 ```  
 HGDIOBJ m_hObject;  
@@ -307,10 +307,10 @@ BOOL operator!=(const CGdiObject& obj) const;
   
 ### <a name="parameters"></a>Parametry  
  *obj*  
- Ukazatele na existující `CGdiObject`.  
+ Ukazatel na existující `CGdiObject`.  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje, zda GDI objekt na levé straně není rovno GDI objekt na pravé straně.  
+ Určuje, zda objekt rozhraní GDI na levé straně není roven objektu GDI na pravé straně.  
   
 ##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==  
  Určuje, jestli jsou dva objekty GDI logicky stejné.  
@@ -324,37 +324,37 @@ BOOL operator==(const CGdiObject& obj) const;
  Odkaz na existující `CGdiObject`.  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje, zda GDI objekt na levé straně stejný GDI objekt na pravé straně.  
+ Určuje, zda je objekt rozhraní GDI na levé straně stejný GDI objekt na pravé straně.  
   
 ##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
- Načte `HANDLE` připojené Windows GDI objektu; v opačném případě **NULL** Pokud je připojen žádný objekt.  
+ Načte POPISOVAČ připojených objektů Windows GDI; jinak hodnota NULL, pokud je připojen žádný objekt.  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
 ##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
- Obnoví původ štětce nebo obnoví logické palety.  
+ Obnoví původní štětce nebo obnoví logickou paletu.  
   
 ```  
 BOOL UnrealizeObject();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Při `UnrealizeObject` členských funkcí `CGdiObject` třídy, se by měla být volána pouze na `CBrush` nebo `CPalette` objekty.  
+ Zatímco `UnrealizeObject` je členská funkce `CGdiObject` třídy, to by mělo být vyvoláno pouze na `CBrush` nebo `CPalette` objekty.  
   
- Pro `CBrush` objekty, `UnrealizeObject` určí, že systém resetovat původ dané štětce příštím je vybrán v kontextu zařízení. Pokud je objekt `CPalette` objekt, `UnrealizeObject` určí, že systém si uvědomí palety, jako kdyby nebyla dříve realizováno. Při příštím aplikace volá [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) funkce pro zadaný palety systému úplně znovu mapuje logické palety na paletu systému.  
+ Pro `CBrush` objekty, `UnrealizeObject` určí, že systém resetovat původu dané štětce příště, vybere se do kontextu zařízení. Pokud je objekt `CPalette` objektu, `UnrealizeObject` určí, že systém pro realizaci paletu, jakoby nebyly dříve realizovat. Aplikace volá při příštím [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) funkce pro zadaný paletu systému úplně změní logickou paletu na paletě systému.  
   
- `UnrealizeObject` Funkce by neměla být použita s uložených objekty. `UnrealizeObject` Funkce musí být volána při každé nové počátek štětce nastavena (prostřednictvím [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) funkce). `UnrealizeObject` Funkce nesmí být volána pro aktuálně vybrané štětce nebo aktuálně vybrané paletu jakýkoliv kontext zobrazení.  
+ `UnrealizeObject` Funkce by neměla být použita s uložených objektů. `UnrealizeObject` Funkce musí být volána pokaždé, když je nastavena nová původu štětce (prostřednictvím [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) funkce). `UnrealizeObject` Funkce nesmí být volána pro aktuálně vybrané štětce nebo aktuálně vybraného paletu jakýkoli kontext zobrazení.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CBitmap – třída](../../mfc/reference/cbitmap-class.md)   
- [CBrush – třída](../../mfc/reference/cbrush-class.md)   
- [CFont – třída](../../mfc/reference/cfont-class.md)   
- [CPalette – třída](../../mfc/reference/cpalette-class.md)   
- [CPen – třída](../../mfc/reference/cpen-class.md)   
+ [Cbitmap – třída](../../mfc/reference/cbitmap-class.md)   
+ [Cbrush – třída](../../mfc/reference/cbrush-class.md)   
+ [Cfont – třída](../../mfc/reference/cfont-class.md)   
+ [Cpalette – třída](../../mfc/reference/cpalette-class.md)   
+ [Cpen – třída](../../mfc/reference/cpen-class.md)   
  [CRgn – třída](../../mfc/reference/crgn-class.md)

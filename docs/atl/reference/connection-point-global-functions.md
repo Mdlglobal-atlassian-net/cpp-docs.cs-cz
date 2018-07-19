@@ -1,5 +1,5 @@
 ---
-title: Spojovací bod globální funkce | Microsoft Docs
+title: Globální funkce bodů připojení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b85da5991357f1b67c6d2249d854e6084ee48c23
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362788"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884058"
 ---
-# <a name="connection-point-global-functions"></a>Spojovací bod globální funkce
+# <a name="connection-point-global-functions"></a>Globální funkce bodů připojení
 Tyto funkce poskytuje podporu pro spojovací body a jímky mapy.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze používat v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
 |[AtlAdvise](#atladvise)|Vytvoří propojení mezi připojovacím bodem objektu a jímkou klienta.|  
-|[AtlUnadvise](#atlunadvise)|Ukončí připojení bylo vytvořeno prostřednictvím `AtlAdvise`.|  
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Informuje o tom, nebo unadvises položky v mapě jímky událostí.|  
+|[AtlUnadvise](#atlunadvise)|Ukončí připojení navázané prostřednictvím `AtlAdvise`.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Vás informuje o tom nebo unadvises položky v mapě událostí jímky.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
@@ -44,7 +44,7 @@ Tyto funkce poskytuje podporu pro spojovací body a jímky mapy.
  Vytvoří propojení mezi připojovacím bodem objektu a jímkou klienta.  
   
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ```
 HRESULT    AtlAdvise(
@@ -55,32 +55,32 @@ HRESULT    AtlAdvise(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pUnkCP`  
- [v] Ukazatel **IUnknown** objektu se klient pokouší připojit s.  
+ *pUnkCP*  
+ [in] Ukazatel `IUnknown` objektu chce připojit pomocí klienta.  
   
  *pUnk*  
- [v] Ukazatel na klienta **IUnknown**.  
+ [in] Ukazatel na straně klienta `IUnknown`.  
   
- `iid`  
- [v] Identifikátor GUID spojovacího bodu. Obvykle je to stejné jako odchozí rozhraní spravuje spojovacího bodu.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.  
   
- `pdw`  
- [out] Ukazatel na souboru cookie, který jednoznačně identifikuje připojení.  
+ *pdw*  
+ [out] Ukazatel na soubor cookie, který jednoznačně identifikuje připojení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="remarks"></a>Poznámky  
- Jímky implementuje rozhraní odchozí nepodporuje spojovacího bodu. Klient použije `pdw` soubor cookie k odebrání připojení předáním jeho [AtlUnadvise](#atlunadvise).  
+ Jímka implementuje rozhraní odchozí podporovány bodem připojení. Klient použije *pdw* souboru cookie odebrat připojení tím, že ji předáte [AtlUnadvise](#atlunadvise).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
 ##  <a name="atlunadvise"></a>  AtlUnadvise  
- Ukončí připojení bylo vytvořeno prostřednictvím [AtlAdvise](#atladvise).  
+ Ukončí připojení navázané prostřednictvím [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ```
 HRESULT    AtlUnadvise(
@@ -90,17 +90,17 @@ HRESULT    AtlUnadvise(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pUnkCP`  
- [v] Ukazatel **IUnknown** objektu, který je klient připojen s.  
+ *pUnkCP*  
+ [in] Ukazatel `IUnknown` objektu, který je klient připojen s.  
   
- `iid`  
- [v] Identifikátor GUID spojovacího bodu. Obvykle je to stejné jako odchozí rozhraní spravuje spojovacího bodu.  
+ *identifikátor IID*  
+ [in] Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.  
   
- `dw`  
- [v] Soubor cookie, který jedinečně identifikuje připojení.  
+ *datový sklad*  
+ [in] Soubor cookie, který jednoznačně identifikuje připojení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
@@ -109,7 +109,7 @@ HRESULT    AtlUnadvise(
  Voláním této funkce vytvoříte nebo zrušíte avízo o všech položkách v mapě událostí jímky objektu.  
   
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -117,13 +117,13 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
   
 ### <a name="parameters"></a>Parametry  
  *PT*  
- [v] Ukazatel na objekt obsahující podřízený mapy.  
+ [in] Ukazatel na objekt obsahující mapování jímky.  
   
- `bAdvise`  
- [v] **true** všechny položky jímka mají-li být doporučila; **false** všechny položky jímka mají-li být unadvised.  
+ *bAdvise*  
+ [in] Hodnota TRUE, pokud mají všechny položky jímky doporučujeme; FALSE, pokud mají být unadvised všechny položky jímky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Standardní hodnota HRESULT.  
+ Standardní hodnoty HRESULT.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  

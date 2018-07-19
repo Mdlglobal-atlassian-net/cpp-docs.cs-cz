@@ -1,5 +1,5 @@
 ---
-title: Třída CColorDialog | Microsoft Docs
+title: Ccolordialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339303"
 ---
-# <a name="ccolordialog-class"></a>CColorDialog – třída
-Umožňuje začlenit dialogové okno Výběr barev do vaší aplikace.  
+# <a name="ccolordialog-class"></a>Ccolordialog – třída
+Umožňuje zahrnout do vaší aplikace dialogové okno Výběr barvy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,49 +58,49 @@ class CColorDialog : public CCommonDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CColorDialog::DoModal](#domodal)|Zobrazí dialogové okno barvy a umožní uživateli proveďte výběr.|  
-|[CColorDialog::GetColor](#getcolor)|Vrátí **COLORREF** struktura obsahující hodnoty vybrané barvy.|  
+|[CColorDialog::DoModal](#domodal)|Zobrazí dialogové okno barvy a umožňuje uživatelům provést výběr.|  
+|[CColorDialog::GetColor](#getcolor)|Vrátí `COLORREF` struktury obsahující hodnoty vybrané barvy.|  
 |[CColorDialog::GetSavedCustomColors](#getsavedcustomcolors)|Načte vlastní barvy vytvořený uživatelem.|  
-|[CColorDialog::SetCurrentColor](#setcurrentcolor)|Aktuální výběr barev zadaná barva vynutí.|  
+|[CColorDialog::SetCurrentColor](#setcurrentcolor)|Vynutí aktuální výběr barvy na zadanou barvu.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CColorDialog::OnColorOK](#oncolorok)|Přepsání nastavení za účelem ověření barvu vloženy do dialogových oken.|  
+|[CColorDialog::OnColorOK](#oncolorok)|Přepsání nastavení za účelem ověření barvu zadaný do dialogového okna.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CColorDialog::m_cc](#m_cc)|Struktura používaná pro přizpůsobení nastavení dialogové okno.|  
+|[CColorDialog::m_cc](#m_cc)|Struktura používané k úpravám nastavení dialogovém okně.|  
   
 ## <a name="remarks"></a>Poznámky  
- A `CColorDialog` objektu je dialogové okno se seznamem barev, které jsou definovány pro systém zobrazení. Uživatele můžete vybrat nebo vytvořit konkrétní barvu ze seznamu, která se pak vykazuje zpět do aplikace při ukončí dialogové okno.  
+ A `CColorDialog` objektu je dialogové okno se seznamem barev, které jsou definovány pro systém zobrazení. Uživatele můžete vybrat nebo vytvořit konkrétní barvu ze seznamu, který je pak hlášeny zpět do aplikace při ukončení dialogu.  
   
- K vytvoření `CColorDialog` objektu, použijte zadaný konstruktor nebo odvodit novou třídu a použijte vlastní vlastní konstruktor.  
+ K vytvoření `CColorDialog` objektu, použijte poskytnutý konstruktor nebo odvozovat nové třídy a použít vlastní vlastního konstruktoru.  
   
- Jakmile dialogové okno byl vytvořený, můžete nastavit nebo změnit všechny hodnoty v [m_cc](#m_cc) struktura k chybě při inicializaci hodnoty ovládací prvky dialogových oken. *M_cc* struktura je typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Jakmile byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v [m_cc](#m_cc) struktura inicializace hodnot ovládacích prvků v dialogovém okně. *M_cc* struktury je typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
- Po inicializaci ovládací prvky dialogových oken, volání `DoModal` – členská funkce a zobrazit dialogové okno Povolit uživateli vybrat barvu. `DoModal` Vrátí uživatele výběr buď OK dialogových oken ( **IDOK**) nebo zrušit ( **IDCANCEL**) tlačítko.  
+ Po inicializaci ovládací prvky dialogových oken, zavolejte `DoModal` členské funkce k zobrazení dialogového okna a umožnit uživateli vybrat barvu. `DoModal` Vrátí uživatele výběru buď v dialogovém okně tlačítko OK (IDOK) nebo zrušit (IDCANCEL).  
   
- Pokud `DoModal` vrátí **IDOK**, můžete použít jednu z `CColorDialog`na členské funkce načíst informace o zadaný uživatelem.  
+ Pokud `DoModal` vrátí IDOK, můžete použít jednu z `CColorDialog`pro členské funkce načtete informace o vstup uživatele.  
   
- Můžete použít Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě během inicializace dialogových oken a další informace o této chybě.  
+ Můžete použít Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě.  
   
- `CColorDialog` spoléhá na COMMDLG. Soubor knihovny DLL, která se dodává s verzí systému Windows verze 3.1 nebo novější.  
+ `CColorDialog` využívá COMMDLG. Soubor knihovny DLL, která se dodává s Windows verze 3.1 nebo novější.  
   
- Chcete-li přizpůsobit dialogové okno, odvození třídy z `CColorDialog`zadejte dialogové okno vlastní šablony a přidat mapy zpráv pro zpracování zprávy s oznámením z rozšířených ovládacích prvků. Všechny nezpracované zprávy by měla být předána základní třídy.  
+ Přizpůsobení dialogových oken, odvoďte třídu z `CColorDialog`zadejte šablonu vlastního dialogu a přidání mapy zpráv pro zpracování zpráv s oznámením z rozšířené ovládací prvky. Všechny nezpracované zprávy by měly být předány základní třídy.  
   
  Přizpůsobení funkce háku se nevyžaduje.  
   
 > [!NOTE]
->  Na některé instalace `CColorDialog` objekt nezobrazí barvou pozadí, pokud jste použili rozhraní aby dalších `CDialog` šedá objekty.  
+>  Na některé zařízení `CColorDialog` objektu nezobrazí na šedém pozadí, pokud používáte rozhraní provádět jiné `CDialog` objekty šedá.  
   
- Další informace o používání `CColorDialog`, najdete v části [společné třídy dialogových oken](../../mfc/common-dialog-classes.md)  
+ Další informace o používání `CColorDialog`, naleznete v tématu [společné třídy dialogových oken](../../mfc/common-dialog-classes.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -108,7 +108,7 @@ class CColorDialog : public CCommonDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
  `CColorDialog`  
   
@@ -127,111 +127,111 @@ CColorDialog(
   
 ### <a name="parameters"></a>Parametry  
  *clrInit*  
- Výchozí výběr barev. Pokud není zadaná žádná hodnota, výchozí hodnota je RGB(0,0,0) (černé).  
+ Výchozí výběr barvy. Pokud není zadána žádná hodnota, výchozí hodnota je RGB(0,0,0) (černá).  
   
  *dwFlags*  
- Sada příznaky, které funkce a vzhled dialogové okno přizpůsobit. Další informace najdete v tématu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) struktura ve Windows SDK.  
+ Sada příznaků, které funkce a vzhled dialogového okna přizpůsobit. Další informace najdete v tématu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) struktura v sadě Windows SDK.  
   
  *pParentWnd*  
- Ukazatele v dialogovém okně nadřazené nebo vlastníka.  
+ Ukazatel na okno nadřazené nebo vlastník dialogových oken.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
   
 ##  <a name="domodal"></a>  CColorDialog::DoModal  
- Volání této funkce a zobrazit dialogové okno barvy systému Windows běžné uživateli umožní vybrat barvu.  
+ Voláním této funkce dialogového okna Windows běžné barvy a umožní uživateli vybrat barvu.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **IDOK** nebo **IDCANCEL**. Pokud **IDCANCEL** je vrácen, volání Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
+ IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
   
- **IDOK** a **IDCANCEL** jsou konstanty, které označuje, zda uživatel vybrané na tlačítko OK nebo Storno.  
+ IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete k chybě při inicializaci různé možnosti – dialogové okno barvy nastavením členy [m_cc](#m_cc) struktura, bude třeba provést před voláním `DoModal` , ale po vytvoření objektu sady dialogového.  
+ Pokud chcete inicializovat různé možnosti dialogového okna barvy tak, že nastavíte členy [m_cc](#m_cc) strukturu, je potřeba to udělat před voláním `DoModal` , ale po vytvoření objektu dialogového okna.  
   
- Po volání `DoModal`, můžete volat jiné členské funkce načíst nastavení nebo uživatelský vstup informace do dialogových oken.  
+ Po volání `DoModal`, můžete volat ostatní členské funkce k načtení nastavení nebo informace o vstup uživatelem do dialogových oken.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CColorDialog::CColorDialog](#ccolordialog).  
   
 ##  <a name="getcolor"></a>  CColorDialog::GetColor  
- Volání této funkce po volání `DoModal` k načtení informací o barvu vybraného uživatele.  
+ Voláním této funkce po volání `DoModal` k načtení informací o barvě uživatel vybral.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje informace o RGB barvy vybraných v dialogovém okně barvy.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) hodnotu, která obsahuje informace o RGB barva vybraná v dialogovém okně barev.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
   
 ##  <a name="getsavedcustomcolors"></a>  CColorDialog::GetSavedCustomColors  
- `CColorDialog` objekty povolit uživatele, kromě výběr barvy, definovat až 16 vlastní barvy.  
+ `CColorDialog` objekty povolit uživateli, kromě výběr barev, definovat až 16 vlastní barvy.  
   
 ```  
 static COLORREF* PASCAL GetSavedCustomColors();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na pole 16 RGB – hodnoty barev, které ukládá vlastních barev vytvořený uživatelem.  
+ Ukazatel na pole 16 RGB – hodnoty barev, která ukládá vlastních barev vytvořený uživatelem.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetSavedCustomColors` – Členská funkce poskytuje přístup pro tyto barev. Tyto barvy lze získat po [DoModal](#domodal) vrátí **IDOK**.  
+ `GetSavedCustomColors` Členskou funkci poskytuje přístup k tyto barvy. Tyto barvy se dá načíst po [DoModal](#domodal) vrátí IDOK.  
   
- Každý z 16 hodnoty RGB v poli vráceném je inicializováno RGB(255,255,255) (bílé). Vlastní barvy volená uživatelem se uloží jenom mezi dialogové okno pole volání v aplikaci. Pokud chcete uložit tyto barvy mezi volání aplikace, musíte je uložit jiným způsobem, jako třeba v inicializaci (. Soubor INI).  
+ Všechny 16 hodnoty RGB ve vrácené pole je inicializován na RGB(255,255,255) (bílé). Vlastní barvy uživatelem se uloží pouze mezi vyvolání dialogového okna pole v rámci aplikace. Pokud chcete uložit tyto barvy mezi vyvoláními aplikace, je třeba je uložit jiným způsobem, jako například inicializace (. Soubor INI).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- Struktura typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), jejíž členové uložení charakteristiky a hodnot dialogového okna.  
+ Strukturu typu [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), ukládat obsahující vlastnosti a hodnoty dialogového okna.  
   
 ```  
 CHOOSECOLOR m_cc;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytváření `CColorDialog` objekt, můžete použít *m_cc* nastavit různé aspekty dialogu před voláním [DoModal](#domodal) – členská funkce.  
+ Po sestavení `CColorDialog` objektu, můžete použít *m_cc* nastavit různé aspekty dialogového okna před voláním [DoModal](#domodal) členskou funkci.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
   
 ##  <a name="oncolorok"></a>  CColorDialog::OnColorOK  
- Přepsání nastavení za účelem ověření barvu vloženy do dialogových oken.  
+ Přepsání nastavení za účelem ověření barvu zadaný do dialogového okna.  
   
 ```  
 virtual BOOL OnColorOK();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud by neměl zavře dialogové okno; jinak 0 tak, aby přijímal barvu, která byla zadána.  
+ Nenulové, pokud by neměla zavře dialogové okno; jinak 0 tak, aby přijímal barvy, který jste zadali.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce přepsání, pouze v případě, že chcete zadat vlastní ověření barvy, které uživatel vybere v dialogovém okně barvy.  
+ Potlačí tuto funkci pouze v případě, že chcete poskytnout vlastní ověřovací barvu, kterou uživatel vybere v dialogovém okně barev.  
   
- Uživatele můžete vybrat barvu pomocí jedné z následujících dvou metod:  
+ Uživatel může vybrat barvu pomocí jedné z těchto dvou metod:  
   
--   Kliknutím na tlačítko barvy na paletu barev. Hodnoty RGB vybrané barvy se projeví do příslušných polí RGB upravit.  
+-   Kliknutím na barvu na barvu z palety. Vybraná barva RGB hodnoty se projeví pak do příslušných polí RGB upravit.  
   
--   Vstup hodnoty RGB textových polí  
+-   Zadávání hodnoty RGB textových polí  
   
- Přepsání `OnColorOK` umožňuje odmítnout barvu, která uživatel zadá do běžné dialogové okno barvy z jakéhokoli důvodu specifické pro aplikaci.  
+ Přepsání `OnColorOK` umožňuje odmítnout barvu uživatel zadá do společného dialogové okno barvy z jakéhokoli důvodu specifické pro aplikaci.  
   
- Za normálních okolností není potřeba tuto funkci použít, protože rozhraní framework poskytuje výchozí ověření barvy a zobrazí okno se zprávou, pokud je zadaný neplatný barev.  
+ Za normálních okolností není nutné tuto funkci použít, protože rozhraní poskytuje výchozí ověřování barev a zobrazí okno se zprávou, pokud je zadán neplatný barvu.  
   
- Můžete volat [SetCurrentColor](#setcurrentcolor) uvnitř `OnColorOK` vynutit výběr barev. Jednou `OnColorOK` má aktivován (to znamená, že uživatel klikne na **OK** tak, aby přijímal Změna barvy), můžete volat [getcolor –](#getcolor) k získání hodnoty RGB nové barvy.  
+ Můžete volat [SetCurrentColor](#setcurrentcolor) v rámci `OnColorOK` vynutit výběr barvy. Jednou `OnColorOK` byla aktivována (to znamená, že uživatel klikne **OK** tak, aby přijímal Změna barvy), můžete volat [getcolor –](#getcolor) k získání hodnoty RGB novou barvu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- Volání této funkce po volání `DoModal` vynutit aktuální výběr barev barva hodnota zadaná v *clr*.  
+ Voláním této funkce po volání `DoModal` přinutit aktuální výběr barvu na barvu hodnotu zadanou v *clr*.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
@@ -239,17 +239,17 @@ void SetCurrentColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parametry  
  *CLR*  
- Hodnotu barva RGB.  
+ Hodnota barvy RGB.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je volána z v rámci obslužné rutiny zpráv nebo `OnColorOK`. Dialogové okno se automaticky aktualizuje na základě hodnoty z výběru uživatele *clr* parametr.  
+ Tato funkce je volána v rámci obslužné rutiny zpráv nebo `OnColorOK`. Dialogové okno automaticky aktualizuje na základě hodnoty z výběru uživatele *clr* parametru.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CColorDialog::OnColorOK](#oncolorok).  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC MDI](../../visual-cpp-samples.md)   
- [Ukázka MFC DRAWCLI](../../visual-cpp-samples.md)   
- [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)   
+ [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC DRAWCLI](../../visual-cpp-samples.md)   
+ [Ccommondialog – třída](../../mfc/reference/ccommondialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)
 

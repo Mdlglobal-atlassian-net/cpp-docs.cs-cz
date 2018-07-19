@@ -1,5 +1,5 @@
 ---
-title: '&lt;vektor&gt; operátory | Microsoft Docs'
+title: '&lt;vektor&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 779fe61bec63f55d7f3b8b3bb7f2e0d084fbab5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4dac24b73e2b0a228f712453b124ff01e5c13c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959680"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vektor&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
 
-Testy, pokud objekt na levé straně operátoru není stejný jako objekt na pravé straně.
+Testuje, zda je objekt na levé straně operátoru není roven objektu na pravé straně.
 
 ```cpp
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -44,17 +44,17 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **vektoru**.
+*levé* objekt typu `vector`.
 
-`right` Objekt typu **vektoru**.
+*správné* objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud vektory není stejný; **false** Pokud vektory jsou stejné.
+**Hodnota TRUE** Pokud vektory nejsou stejné; **false** Pokud jsou vektory stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Dva vektory jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Dva vektory jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -83,9 +83,9 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Testy, pokud je objekt na levé straně operátoru menší než objekt na pravé straně.
+Testuje, zda je objekt na levé straně operátoru menší než objekt na pravé straně.
 
 ```cpp
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -93,13 +93,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **vektoru**.
+*doleva*  
+ Objekt typu `vector`.
 
-`right` Objekt typu **vektoru**.
+*doprava*  
+ Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud vektoru na levé straně operátoru je menší než vektoru na pravé straně operátoru; v opačném případě **false**.
+**Hodnota TRUE** Pokud vektoru na levé straně operátoru menší než vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -132,9 +134,9 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Testy, pokud je objekt na levé straně operátoru menší než nebo rovna hodnotě objekt na pravé straně.
+Testuje, zda je objekt na levé straně operátoru menší než nebo roven objektu na pravé straně.
 
 ```cpp
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -142,13 +144,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **vektoru**.
+*doleva*  
+ Objekt typu `vector`.
 
-`right` Objekt typu **vektoru**.
+*doprava*  
+ Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud vektoru na levé straně operátoru je menší než nebo rovná vektoru na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud vektoru na levé straně operátoru menší než nebo rovna hodnotě vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -183,7 +187,7 @@ Vector v1 is less than or equal to vector v2.
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Testy, pokud je objekt na levé straně operátoru stejný objekt na pravé straně.
+Testuje, zda je objekt na levé straně operátoru roven objektu na pravé straně.
 
 ```cpp
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -191,17 +195,19 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **vektoru**.
+*doleva*  
+ Objekt typu `vector`.
 
-`right` Objekt typu **vektoru**.
+*doprava*  
+ Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud vektoru na levé straně operátoru rovná vektoru na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** vektoru na levé straně operátoru je jinak vektoru na pravé straně operátoru roven **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Dva vektory jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Dva vektory jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -230,9 +236,9 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Testy, pokud je objekt na levé straně operátoru větší než objekt na pravé straně.
+Testuje, zda je objekt na levé straně operátoru větší než objekt na pravé straně.
 
 ```cpp
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -240,13 +246,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **vektoru**.
+*doleva*  
+ Objekt typu `vector`.
 
-`right` Objekt typu **vektoru**.
+*doprava*  
+ Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud vektoru na levé straně operátoru je větší než vektoru na pravé straně operátoru jinak **false**.
+**Hodnota TRUE** Pokud vektoru na levé straně operátoru větší než vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -280,9 +288,9 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Testy, pokud je objekt na levé straně operátoru větší než nebo rovna hodnotě objekt na pravé straně.
+Testuje, zda je objekt na levé straně operátoru větší než nebo stejný jako objekt na pravé straně.
 
 ```cpp
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
@@ -290,13 +298,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **vektoru**.
+*doleva*  
+ Objekt typu `vector`.
 
-`right` Objekt typu **vektoru**.
+*doprava*  
+ Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud vektoru na levé straně operátoru je větší než nebo rovná vektoru na pravé straně vektoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud vektoru na levé straně operátoru větší než nebo rovna hodnotě vektoru na pravé straně vektoru; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -330,6 +340,6 @@ int main( )
 Vector v1 is greater than or equal to vector v2.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<vektor >](../standard-library/vector.md)<br/>

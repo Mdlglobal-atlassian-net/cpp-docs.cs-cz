@@ -1,5 +1,5 @@
 ---
-title: remove_reference – třída | Microsoft Docs
+title: remove_reference – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5aaf151d7591776857c5f731841847e31c41239
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957899"
 ---
 # <a name="removereference-class"></a>remove_reference – třída
 
@@ -40,11 +40,11 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_reference<T>` obsahuje upravit – typ, který je `T1` při `T` je ve formátu `T1&`, jinak `T`.
+Instance `remove_reference<T>` obsahuje změněný typ, který je `T1` při *T* má formu `T1&`, jinak *T*.
 
 ## <a name="example"></a>Příklad
 
@@ -72,9 +72,9 @@ remove_reference_t<int&> == int
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [add_lvalue_reference – třída](../standard-library/add-lvalue-reference-class.md)<br/>

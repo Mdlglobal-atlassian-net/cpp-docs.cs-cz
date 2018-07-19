@@ -1,5 +1,5 @@
 ---
-title: Minmaxinfo – struktura | Microsoft Docs
+title: Minmaxinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12161938f96e5044ae48f9eb5cf380fbc3840d3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337811"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO – struktura
-`MINMAXINFO` Struktura obsahuje informace o maximalizovaném okně velikost okna a pozice a jeho sledování minimální a maximální velikost.  
+`MINMAXINFO` Struktura obsahuje informace o maximální velikosti okna a pozice a jeho sledování minimální a maximální velikost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +43,16 @@ typedef struct tagMINMAXINFO {
  Vyhrazeno pro interní použití.  
   
  *ptMaxSize*  
- Určuje šířku maximalizovaném okně (point.x) a maximalizovaném okně výšku okna (point.y).  
+ Určuje maximální šířku (point.x) a maximální výšku okna (point.y).  
   
- `ptMaxPosition`  
- Určuje pozici na levé straně maximalizovaném okně (point.x) a pozice horní části okna maximalizovaném okně (point.y).  
+ *ptMaxPosition*  
+ Určuje pozici levé straně maximalizované okno (point.x) a pozice horní části okna maximalizované (point.y).  
   
  *ptMinTrackSize*  
- Určuje minimální šířku (point.x) pro sledování a minimální výška (point.y) okna pro sledování.  
+ Určuje minimální šířku (point.x) pro sledování a minimální výšku (point.y) okna pro sledování.  
   
  *ptMaxTrackSize*  
- Určuje maximální počet sledování šířka (point.x) a maximální výšku (point.y) okna pro sledování.  
+ Určuje maximální šířku (point.x) pro sledování a maximální výška (point.y) v okně pro sledování.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

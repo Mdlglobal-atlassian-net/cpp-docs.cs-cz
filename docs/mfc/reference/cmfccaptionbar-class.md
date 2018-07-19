@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCCaptionBar | Microsoft Docs
+title: CMFCCaptionBar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -76,15 +76,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338460"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar – třída
-A `CMFCCaptionBar` objekt je ovládací prvek panel, který může zobrazit tři prvky: tlačítko, štítek text a rastrový obrázek. Současně se může zobrazit pouze jeden element každého typu. Každý prvek levé nebo pravé hrany ovládací prvek nebo k centru můžete zarovnat. Styl ploché nebo 3D může platit taky pro horní a dolní ohraničení panelu titulek.  
+A `CMFCCaptionBar` objekt je ovládací panel, který může zobrazit tři prvky: tlačítko, textový popisek a rastrový obrázek. Současně může zobrazit pouze jeden prvek každého typu. Je možné zarovnat každý prvek do levého či pravého okraje ovládacího prvku nebo na střed. Můžete také použít styl ploché nebo 3D na horní a dolní ohraničení záhlaví.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,70 +98,70 @@ class CMFCCaptionBar : public CPane
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCCaptionBar::Create](#create)|Ovládací prvek popisek panelu vytvoří a připojí jej k `CMFCCaptionBar` objektu.|  
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Určuje, zda jiný podokně můžete dynamicky vložen mezi panelu popisek a jeho nadřazené rámečku. (Přepisuje [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
-|[CMFCCaptionBar::EnableButton](#enablebutton)|Povolí nebo zakáže tlačítka na panelu titulek.|  
+|[CMFCCaptionBar::Create](#create)|Vytvoří ovládací prvek panel titulek a připojí ho k `CMFCCaptionBar` objektu.|  
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Určuje, zda jiný podokně můžete dynamicky vložen mezi záhlaví a jeho nadřazeného rámce. (Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CMFCCaptionBar::EnableButton](#enablebutton)|Povolí nebo zakáže tlačítko v záhlaví.|  
 |[CMFCCaptionBar::GetAlignment](#getalignment)|Vrátí zadaný element zarovnání.|  
-|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Vrátí velikost ohraničení panelu titulek.|  
-|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Načte ohraničující obdélník tlačítka na panelu titulek.|  
-|[CMFCCaptionBar::GetMargin](#getmargin)|Vrací vzdálenost mezi okrajem panelu elementů popisek a okraji ovládacího panelu titulek.|  
-|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Určuje, jestli na titulek panelu je v režimu panelu zpráv.|  
-|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Odebere rastrového obrázku panelu titulek.|  
-|[CMFCCaptionBar::RemoveButton](#removebutton)|Odebere tlačítko panelu titulek.|  
-|[CMFCCaptionBar::RemoveIcon](#removeicon)|Odebere ikonu z panelu titulek.|  
-|[CMFCCaptionBar::RemoveText](#removetext)|Textový popisek, odeberete z panelu titulek.|  
-|[CMFCCaptionBar::SetBitmap](#setbitmap)|Nastaví pro bitovou kopii rastrového obrázku panelu titulek.|  
-|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Nastaví velikost ohraničení panelu titulek.|  
-|[CMFCCaptionBar::SetButton](#setbutton)|Nastaví na tlačítko panelu titulek.|  
-|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Určuje, zda zůstává tlačítko při stisknutí tlačítka.|  
-|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Nastaví popis tlačítka pro tlačítko.|  
-|[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Nastaví styl ohraničení panelu titulek.|  
-|[CMFCCaptionBar::SetIcon](#seticon)|Nastaví na ikonu pro záhlaví.|  
-|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Nastaví popisek pro bitovou kopii pro panelu titulek.|  
-|[CMFCCaptionBar::SetMargin](#setmargin)|Nastaví vzdálenost mezi hrany panelu element caption a okraji ovládacího panelu titulek.|  
-|[CMFCCaptionBar::SetText](#settext)|Nastaví textový popisek pro panelu titulek.|  
+|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Vrátí velikost ohraničení záhlaví.|  
+|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Načte ohraničující obdélník tlačítko v záhlaví.|  
+|[CMFCCaptionBar::GetMargin](#getmargin)|Vrací vzdálenost mezi hraniční prvky panelu titulek a okrajem ovládacího prvku panelu titulek.|  
+|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Určuje, zda záhlaví je v režimu panel zpráv.|  
+|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Odebere rastrový obrázek ze záhlaví.|  
+|[CMFCCaptionBar::RemoveButton](#removebutton)|Odebere tlačítko z záhlaví.|  
+|[CMFCCaptionBar::RemoveIcon](#removeicon)|Ikona se odebere ze záhlaví.|  
+|[CMFCCaptionBar::RemoveText](#removetext)|Textový popisek se odebere ze záhlaví.|  
+|[CMFCCaptionBar::SetBitmap](#setbitmap)|Nastavuje rastrový obrázek pro záhlaví.|  
+|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Nastaví velikost ohraničení záhlaví.|  
+|[CMFCCaptionBar::SetButton](#setbutton)|Nastaví na tlačítko pro záhlaví.|  
+|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Určuje, zda zůstává při stisknutí tlačítka.|  
+|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Nastaví popisek tlačítka.|  
+|[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Nastaví styl ohraničení záhlaví.|  
+|[CMFCCaptionBar::SetIcon](#seticon)|Určuje ikonu pro záhlaví.|  
+|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Nastaví popisek pro bitovou kopii pro záhlaví.|  
+|[CMFCCaptionBar::SetMargin](#setmargin)|Nastaví vzdálenost mezi okraj panelu element caption a okrajem ovládacího prvku panelu titulek.|  
+|[CMFCCaptionBar::SetText](#settext)|Nastaví textový popisek pro záhlaví.|  
   
 ### <a name="protected-methods"></a>Chráněné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Voláno rámcem k vyplnění pozadí panelu titulek.|  
-|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Voláno rámcem k vykreslení ohraničení panelu titulek.|  
-|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Voláno rámcem k vykreslení tlačítko panelu titulek.|  
-|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Voláno rámcem kreslení obrázku panelu titulek.|  
-|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Voláno rámcem k vykreslení panelu text titulku.|  
+|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Volá se rozhraním, aby vyplnit pozadí záhlaví.|  
+|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Volá se rozhraním, chcete-li nakreslit ohraničení záhlaví.|  
+|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Volá se rozhraním, chcete-li nakreslit tlačítko na panelu titulek.|  
+|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Volá se rozhraním, chcete-li nakreslit obrázek panelu titulek.|  
+|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Volá se rozhraním, chcete-li nakreslit text titulku panelu.|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Barva pozadí panelu titulek.|  
-|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Barva ohraničení panelu titulek.|  
-|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Barva řádku text titulku.|  
+|[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Barva pozadí záhlaví.|  
+|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Barva ohraničení záhlaví.|  
+|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Barva textu řádku titulek.|  
   
 ## <a name="remarks"></a>Poznámky  
  Pokud chcete vytvořit záhlaví, postupujte takto:  
   
-1.  Vytvořit `CMFCCaptionBar` objektu. Obvykle přidejte panelu popisek třídy oken s rámečkem.  
+1.  Vytvořit `CMFCCaptionBar` objektu. Obvykle by přidat záhlaví do třídy okna rámce.  
   
-2.  Volání [CMFCCaptionBar::Create](#create) metodu pro vytvoření ovládacího prvku popisek panelu a připojte ji k `CMFCCaptionBar` objektu.  
+2.  Volání [CMFCCaptionBar::Create](#create) metodu pro vytvoření ovládacích prvků panelu titulek a připojte ji k `CMFCCaptionBar` objektu.  
   
-3.  Volání [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), a [CMFCCaptionBar::SetBitmap](#setbitmap)nastavit elementy panelu titulek.  
+3.  Volání [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), a [CMFCCaptionBar::SetBitmap](#setbitmap)nastavit prvky panelu titulek.  
   
- Když nastavíte button element, je nutné přiřadit ID příkazu pro tlačítko. Když uživatel klikne na tlačítko, trasy panelu popisek `WM_COMMAND` zprávy, které mají toto ID do nadřazeného rámce okna.  
+ Když nastavíte prvku button, musíte přiřadit ID příkazu pro tlačítko. Když uživatel klikne na tlačítko, směruje záhlaví wm_command – zprávy, které bylo toto ID nadřazeného rámce okna.  
   
- Na panelu titulek může spolupracovat taky v režimu panelu zpráv, které emuluje panelu zpráv, který se zobrazí v aplikacích Microsoft Office 2007. V režimu panelu zpráv na titulek panelu zobrazí rastrový obrázek, zprávu a tlačítko (což obvykle otevře dialogové okno.) Popisek lze přiřadit bitové mapy.  
+ Záhlaví může spolupracovat také v režimu panel zpráv, které emuluje panel zpráv, který se zobrazí v aplikacích Microsoft Office 2007. V režimu zpráv panelu zobrazí záhlaví rastrový obrázek, zprávu a tlačítko (což obvykle otevře dialogové okno.) Popisek můžete přiřadit rastrového obrázku.  
   
- Chcete-li povolit režim panelu zprávy, volejte [CMFCCaptionBar::Create](#create) a nastavte čtvrtého parametru (bIsMessageBarMode) na `TRUE`.  
+ Chcete-li povolit režim panel zpráv, zavolejte [CMFCCaptionBar::Create](#create) a čtvrtý parametr (bIsMessageBarMode) nastavena na hodnotu TRUE.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pomocí různých metod v nástroji `CMFCCaptionBar` třídy. Příklad ukazuje postup vytvoření ovládacího prvku popisek panelu, nastavit 3D ohraničení panelu titulku, nastavena vzdálenost v pixelech, mezi hrany titulek panelu elementy a okraji ovládacího panelu titulku, nastavte na tlačítko panelu popisek , nastavit popis tlačítka pro tlačítko, nastavit textový popisek pro panelu titulku, nastavit rastrový obrázek pro panelu popisek a nastavit popis tlačítka pro bitovou kopii na panelu titulek. Tento fragment kódu je součástí [MS Office 2007 Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak použít různé metody v `CMFCCaptionBar` třídy. Tento příklad ukazuje, jak vytvořit ovládací prvek panel titulek, nastavte 3D okraj záhlaví, nastavte vzdálenost v pixelech mezi hraniční titulek panelu elementy a okrajem ovládacího prvku panelu titulek, nastavení tlačítka pro záhlaví , nastavit popisu tlačítka pro tlačítko, nastavte textový popisek pro záhlaví, nastavit rastrový obrázek pro záhlaví a nastavit popis bitové kopie v záhlaví. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -171,13 +171,13 @@ class CMFCCaptionBar : public CPane
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
- [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)  
+ [CMFCCaptionBar –](../../mfc/reference/cmfccaptionbar-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxcaptionbar.h  
   
 ##  <a name="create"></a>  CMFCCaptionBar::Create  
- Ovládací prvek popisek panelu vytvoří a připojí jej k `CMFCCaptionBar` objektu.  
+ Vytvoří ovládací prvek panel titulek a připojí ho k `CMFCCaptionBar` objektu.  
   
 ```  
 BOOL Create(
@@ -190,48 +190,48 @@ BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Logické nebo kombinace styly řádku titulku.  
+ Logický OR kombinace styly řádku titulek.  
   
  *pParentWnd*  
- Nadřazené okno ovládacího panelu titulek.  
+ Nadřazené okno ovládacího prvku panelu titulek.  
   
  *uID*  
- ID ovládacího panelu titulek.  
+ ID ovládacího prvku panelu titulek.  
   
  *nHeight*  
- Výška v pixelech ovládacího prvku popisek panelu. Pokud je -1, výška se vypočítává podle výšky na ikonu, text a tlačítko, které tento ovládací prvek popisek panelu zobrazí.  
+ Výška v pixelech, panel ovládacího prvku popisek. Pokud je hodnota -1, výška se vypočítává podle výšky na ikonu, text a tlačítko, které se zobrazí ovládací prvek panel titulek.  
   
  *bIsMessageBarMode*  
- `TRUE` Pokud je panel titulek v režimu panelu zpráv; `FALSE` jinak.  
+ Hodnota TRUE, pokud je záhlaví v režimu řádku zprávy; FALSE v opačném případě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud ovládací prvek popisek panelu je vytvořen úspěšně; `FALSE` jinak.  
+ Hodnota TRUE, pokud ovládací prvek panel titulků je vytvořen úspěšně; FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CMFCCaptionBar` objektu ve dvou krocích. Nejprve budete volat konstruktor, a poté zavoláte `Create` metoda, která vytvoří ovládacího prvku Windows a připojí jej k `CMFCCaptionBar` objektu.  
+ Můžete vytvořit `CMFCCaptionBar` objektu ve dvou krocích. Nejprve volat konstruktor a následně zavolat `Create` metodu, která vytvoří ovládací prvek Windows a připojí ho k `CMFCCaptionBar` objektu.  
   
 ##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore  
- Určuje, zda jiný podokně můžete dynamicky vložen mezi panelu popisek a jeho nadřazené rámečku.  
+ Určuje, zda jiný podokně můžete dynamicky vložen mezi záhlaví a jeho nadřazeného rámce.  
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `FALSE` přepsána.  
+ Vrátí hodnotu FALSE, pokud nejsou přepsány.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton  
- Povolí nebo zakáže tlačítka na panelu titulek.  
+ Povolí nebo zakáže tlačítko v záhlaví.  
   
 ```  
 void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Chcete-li na tlačítko Povolit `FALSE` na tlačítko zakázat.  
+ [in] *bEnable*  
+ TRUE pro povolení panelu FALSE zakázat tlačítko.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  Vrátí zadaný element zarovnání.  
@@ -241,14 +241,14 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *elem*  
- Element caption panelu pro které chcete načíst zarovnání.  
+ [in] *elem*  
+ Element caption panel pro kterou se má načíst zarovnání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Zarovnání elementu, jako je tlačítko rastrový obrázek, text nebo ikonu.  
+ Zarovnání prvku, jako je například tlačítko, rastrový obrázek, text nebo ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
- Zarovnání element může být jedna z následujících hodnot:  
+ Zarovnání prvku může být jedna z následujících hodnot:  
   
 -   ALIGN_INVALID  
   
@@ -259,7 +259,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 -   ALIGN_CENTER  
   
 ##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize  
- Vrátí velikost ohraničení panelu titulek.  
+ Vrátí velikost ohraničení záhlaví.  
   
 ```  
 int GetBorderSize() const;  
@@ -269,61 +269,61 @@ int GetBorderSize() const;
  Velikost v pixelech, ohraničení.  
   
 ##  <a name="getbuttonrect"></a>  CMFCCaptionBar::GetButtonRect  
- Načte ohraničující obdélník tlačítka na panelu titulek.  
+ Načte ohraničující obdélník tlačítko v záhlaví.  
   
 ```  
 CRect GetButtonRect() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `CRect` objekt, který obsahuje souřadnice ohraničující obdélník tlačítka na panelu titulek.  
+ A `CRect` objekt, který obsahuje souřadnice ohraničující obdélník tlačítko v záhlaví.  
   
 ##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin  
- Vrací vzdálenost mezi okrajem panelu elementů popisek a okraji ovládacího panelu titulek.  
+ Vrací vzdálenost mezi hraniční prvky panelu titulek a okrajem ovládacího prvku panelu titulek.  
   
 ```  
 int GetMargin() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vzdálenost v pixelech, mezi okraj řádku elementů popisek a okraji ovládacího panelu titulek.  
+ Vzdálenost v pixelech mezi hraniční prvky panelu titulek a okrajem ovládacího prvku panelu titulek.  
   
 ##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode  
- Určuje, jestli na titulek panelu je v režimu panelu zpráv.  
+ Určuje, zda záhlaví je v režimu panel zpráv.  
   
 ```  
 BOOL IsMessageBarMode() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je panel titulek v režimu panelu zpráv; `FALSE` jinak.  
+ Hodnota TRUE, pokud je záhlaví v režimu řádku zprávy; FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
- V režimu panelu zpráv na titulek panelu zobrazí obrázek s popisek, text zprávy a tlačítko.  
+ V režimu panel zpráv zobrazí záhlaví bitovou kopii s popis tlačítka, text zprávy a tlačítko.  
   
 ##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground  
- Barva pozadí panelu titulek.  
+ Barva pozadí záhlaví.  
   
 ```  
 COLORREF m_clrBarBackground  
 ```  
   
 ##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder  
- Barva ohraničení panelu titulek.  
+ Barva ohraničení záhlaví.  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
 ##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText  
- Barva řádku text titulku.  
+ Barva textu řádku titulek.  
   
 ```  
 COLORREF m_clrBarText  
 ```  
   
 ##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground  
- Voláno rámcem k vyplnění pozadí panelu titulek.  
+ Volá se rozhraním, aby vyplnit pozadí záhlaví.  
   
 ```  
 virtual void OnDrawBackground(
@@ -332,19 +332,19 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na zařízení kontextu panelu titulek.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení záhlaví.  
   
- [v] *Rect –*  
- Ohraničující obdélník k vyplnění.  
+ [in] *rect*  
+ Ohraničující obdélník tak, aby vyplnil.  
   
 ### <a name="remarks"></a>Poznámky  
- `OnDrawBackground` Metoda je volána, když na pozadí panelu popisek má být vyplněna. Výchozí implementace doplní na pozadí pomocí [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) barev.  
+ `OnDrawBackground` Metoda se volá, když na pozadí záhlaví je vyplnění. Výchozí implementace vyplní na pozadí s použitím [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) barvu.  
   
- Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy k přizpůsobení vzhledu ovládacího panelu titulek.  
+ Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy pro přizpůsobení vzhledu záhlaví.  
   
 ##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder  
- Voláno rámcem k vykreslení ohraničení panelu titulek.  
+ Volá se rozhraním, chcete-li nakreslit ohraničení záhlaví.  
   
 ```  
 virtual void OnDrawBorder(
@@ -353,19 +353,19 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
  Kontext zařízení, která se používá k zobrazení ohraničení.  
   
- [v] *Rect –*  
+ [in] *rect*  
  Ohraničující obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení mají ohraničení ploché styl.  
+ Ohraničení, která mají ve výchozím nastavení plochý.  
   
- Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy k přizpůsobení vzhledu ohraničení panelu titulek.  
+ Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy pro přizpůsobení vzhledu ohraničení panelu titulek.  
   
 ##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton  
- Voláno rámcem k vykreslení tlačítko panelu titulek.  
+ Volá se rozhraním, chcete-li nakreslit tlačítko na panelu titulek.  
   
 ```  
 virtual void OnDrawButton(
@@ -376,23 +376,23 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení, která se používá k zobrazení tlačítka.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení, který se používá k zobrazení tlačítka.  
   
- [v] *Rect –*  
- Ohraničující obdélník tlačítko.  
+ [in] *rect*  
+ Ohraničující obdélník na tlačítko.  
   
- [v] *strButton*  
- Text popisku tlačítka.  
+ [in] *strButton*  
+ Textový popisek tlačítka.  
   
- [v] *bEnabled*  
- `TRUE` Pokud je povoleno tlačítko; `FALSE` jinak.  
+ [in] *bEnabled*  
+ Hodnota TRUE, pokud je povolené tlačítko; FALSE v opačném případě.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy přizpůsobit vzhled tlačítka panelu titulek.  
+ Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy pro přizpůsobení vzhledu tlačítka záhlaví.  
   
 ##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage  
- Voláno rámcem kreslení obrázku panelu titulek.  
+ Volá se rozhraním, chcete-li nakreslit obrázek panelu titulek.  
   
 ```  
 virtual void OnDrawImage(
@@ -401,17 +401,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení, která se používá k zobrazení bitovou kopii.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení, který se používá k zobrazení obrázku.  
   
- [v] *Rect –*  
- Určuje ohraničující obdélník bitovou kopii.  
+ [in] *rect*  
+ Určuje ohraničující obdélník bitové kopie.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy přizpůsobit vzhled obrázku.  
+ Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy pro přizpůsobení vzhledu bitové kopie.  
   
 ##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText  
- Voláno rámcem k vykreslení panelu text titulku.  
+ Volá se rozhraním, chcete-li nakreslit text titulku panelu.  
   
 ```  
 virtual void OnDrawText(
@@ -421,53 +421,53 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení, která se používá k zobrazení tlačítka.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení, který se používá k zobrazení tlačítka.  
   
- [v] *Rect –*  
- Ohraničující obdélník text.  
+ [in] *rect*  
+ Ohraničující obdélník textu.  
   
- [v] *strText*  
+ [in] *strText*  
  Textový řetězec k zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace zobrazí text s použitím `CDC::DrawText` a [CMFCCaptionBar::m_clrBarText](#m_clrbartext) barev.  
+ Výchozí implementace zobrazí text pomocí `CDC::DrawText` a [CMFCCaptionBar::m_clrBarText](#m_clrbartext) barvu.  
   
- Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy přizpůsobit vzhled panelu titulek textu.  
+ Potlačí tuto metodu v `CMFCCaptionBar` odvozené třídy pro přizpůsobení vzhledu textu záhlaví.  
   
 ##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap  
- Odebere rastrového obrázku panelu titulek.  
+ Odebere rastrový obrázek ze záhlaví.  
   
 ```  
 void RemoveBitmap();
 ```  
   
 ##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton  
- Odebere tlačítko panelu titulek.  
+ Odebere tlačítko z záhlaví.  
   
 ```  
 void RemoveButton();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rozložení panelu prvků titulek jsou automaticky upraví.  
+ Automaticky se upraví rozložení prvků panelu titulek.  
   
 ##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon  
- Odebere ikonu z panelu titulek.  
+ Ikona se odebere ze záhlaví.  
   
 ```  
 void RemoveIcon();
 ```  
   
 ##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText  
- Textový popisek, odeberete z panelu titulek.  
+ Textový popisek se odebere ze záhlaví.  
   
 ```  
 void RemoveText();
 ```  
   
 ##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap  
- Nastaví pro bitovou kopii rastrového obrázku panelu titulek.  
+ Nastavuje rastrový obrázek pro záhlaví.  
   
 ```  
 void SetBitmap(
@@ -485,24 +485,24 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hBitmap*  
- Popisovač rastrového obrázku nastavit.  
+ [in] *hBitmap*  
+ Popisovač rastrový obrázek pro nastavení.  
   
- [v] *clrTransparent*  
- Hodnota RGB, který určuje průhlednou barvu bitmapy.  
+ [in] *clrTransparent*  
+ Hodnota RGB, která určuje průhlednou barvu rastrového obrázku.  
   
- [v] *bStretch*  
- Pokud `TRUE`, rastrový obrázek je roztažen tak, pokud nevejde do bitové kopie ohraničujícího rámečku. Jinak není roztažená bitové mapy.  
+ [in] *bStretch*  
+ Při hodnotě TRUE je roztažená rastrového obrázku, pokud nevejde do bitové kopie ohraničující obdélník. Jinak není roztažená rastrového obrázku.  
   
- [v] *bmpAlignment*  
- Zarovnání bitové mapy.  
+ [in] *bmpAlignment*  
+ Zarovnání rastrového obrázku.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k nastavení rastrový obrázek v řádku záhlaví.  
+ Pomocí této metody můžete nastavit rastrový obrázek záhlaví.  
   
- Předchozí rastrový obrázek automaticky zničena. Pokud panelu titulek zobrazí ikonu, protože jste volali metodu [CMFCCaptionBar::SetIcon](#seticon) metody bitmapy se nezobrazí, pokud odeberete ikonu voláním [CMFCCaptionBar::RemoveIcon](#removeicon).  
+ Předchozí rastrového obrázku je zničen automaticky. Pokud záhlaví zobrazuje ikonu, protože jste volali [CMFCCaptionBar::SetIcon](#seticon) metody rastrového obrázku se nezobrazí, dokud neodeberete ikonu voláním [CMFCCaptionBar::RemoveIcon](#removeicon).  
   
- Bitmapy je zarovnán podle *bmpAlignment* parametr.  Tento parametr může být jeden z následujících `BarElementAlignment` hodnoty:  
+ Rastrový obrázek je zarovnán podle *bmpAlignment* parametru.  Tento parametr může být jeden z následujících `BarElementAlignment` hodnoty:  
   
 -   ALIGN_INVALID  
   
@@ -513,18 +513,18 @@ void SetBitmap(
 -   ALIGN_CENTER  
   
 ##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize  
- Nastaví velikost ohraničení panelu titulek.  
+ Nastaví velikost ohraničení záhlaví.  
   
 ```  
 void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nSize*  
- Novou velikost v pixelech, ohraničení panelu titulek.  
+ [in] *nSize*  
+ Nová velikost v pixelech, popisek ohraničení panelu.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
- Nastaví na tlačítko panelu titulek.  
+ Nastaví na tlačítko pro záhlaví.  
   
 ```  
 void SetButton(
@@ -536,7 +536,7 @@ void SetButton(
   
 ### <a name="parameters"></a>Parametry  
  *lpszLabel*  
- Popisek příkazového tlačítka.  
+ Příkaz popisek tlačítka.  
   
  *uiCmdUI*  
  ID příkazu pro tlačítka.  
@@ -545,10 +545,10 @@ void SetButton(
  Zarovnání na tlačítko.  
   
  *bHasDropDownArrow*  
- `TRUE` je-li na tlačítko zobrazí rozevírací šipku, `FALSE` jinak.  
+ TRUE, pokud na tomto tlačítku zobrazí na rozevírací šipku, FALSE v opačném případě.  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
- Určuje, zda zůstává tlačítko při stisknutí tlačítka.  
+ Určuje, zda zůstává při stisknutí tlačítka.  
   
 ```  
 void SetButtonPressed(BOOL bPresed=TRUE);
@@ -556,10 +556,10 @@ void SetButtonPressed(BOOL bPresed=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bPresed*  
- `TRUE` Pokud tlačítko udržuje stav při stisknutí tlačítka `FALSE` jinak.  
+ TRUE, pokud tlačítko udržuje stavu při stisknutí FALSE v opačném případě.  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
- Nastaví popis tlačítka pro tlačítko.  
+ Nastaví popisek tlačítka.  
   
 ```  
 void SetButtonToolTip(
@@ -568,25 +568,25 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszToolTip*  
- Popisek popisek.  
+ [in] *lpszToolTip*  
+ Popisek popisu tlačítka.  
   
- [v] *lpszDescription*  
+ [in] *lpszDescription*  
  Popis popisku.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
- Nastaví styl ohraničení panelu titulek.  
+ Nastaví styl ohraničení záhlaví.  
   
 ```  
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bFlat*  
- `TRUE` Pokud je plochý ohraničení indikátoru titulek. `FALSE` Pokud není 3D.  
+ [in] *bFlat*  
+ TRUE, pokud je plochý ohraničení záhlaví. FALSE, pokud je 3D ohraničení.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
- Nastaví na ikonu pro záhlaví.  
+ Určuje ikonu pro záhlaví.  
   
 ```  
 void SetIcon(
@@ -595,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hIcon*  
+ [in] *hIcon*  
  Popisovač na ikonu nastavení.  
   
- [v] *iconAlignment*  
- Zarovnání ikonu.  
+ [in] *iconAlignment*  
+ Zarovnání na ikonu.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisek řádky můžete zobrazit ikony nebo bitmapy. V tématu [CMFCCaptionBar::SetBitmap](#setbitmap) a zjistěte, jak zobrazit rastrový obrázek. Pokud jste nastavili ikony i bitmapy, se vždy zobrazuje ikonu. Volání [CMFCCaptionBar::RemoveIcon](#removeicon) odebrání ikonu na panelu titulek.  
+ Titulek panely můžete zobrazit ikony nebo rastrové obrázky. Zobrazit [CMFCCaptionBar::SetBitmap](#setbitmap) a zjistěte, jak zobrazit rastrový obrázek. Pokud nastavíte ikony i bitmapy, ikony je vždy zobrazen. Volání [CMFCCaptionBar::RemoveIcon](#removeicon) ikona odebrání záhlaví.  
   
- Ikona je zarovnán podle požadavků *iconAlignment* parametr. Může být jeden z následujících `BarElementAlignment` hodnoty:  
+ Ikona je zarovnán podle *iconAlignment* parametru. Může být jeden z následujících `BarElementAlignment` hodnoty:  
   
 -   ALIGN_INVALID  
   
@@ -615,7 +615,7 @@ void SetIcon(
 -   ALIGN_CENTER  
   
 ##  <a name="setimagetooltip"></a>  CMFCCaptionBar::SetImageToolTip  
- Nastaví popisek pro bitovou kopii na panelu titulek.  
+ Nastaví popisek pro bitovou kopii v záhlaví.  
   
 ```  
 void SetImageToolTip(
@@ -624,25 +624,25 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszToolTip*  
+ [in] *lpszToolTip*  
  Text popisu tlačítka.  
   
- [v] *lpszDescription*  
+ [in] *lpszDescription*  
  Popis popisku.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
- Nastaví vzdálenost mezi hrany panelu element caption a okraji ovládacího panelu titulek.  
+ Nastaví vzdálenost mezi okraj panelu element caption a okrajem ovládacího prvku panelu titulek.  
   
 ```  
 void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nMargin*  
- Vzdálenost v pixelech, mezi okraj řádku elementů popisek a okraji ovládacího panelu titulek.  
+ [in] *nMargin*  
+ Vzdálenost v pixelech mezi hraniční prvky panelu titulek a okrajem ovládacího prvku panelu titulek.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
- Nastaví textový popisek pro panelu titulek.  
+ Nastaví textový popisek pro záhlaví.  
   
 ```  
 void SetText(
@@ -651,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *strText*  
- Textový řetězec, který chcete nastavit.  
+ [in] *strText*  
+ Textový řetězec pro nastavení.  
   
- [v] *textAlignment*  
+ [in] *textAlignment*  
  Zarovnání textu.  
   
 ### <a name="remarks"></a>Poznámky  
- Textový popisek je zarovnán podle *textAlignment* parametr. Může být jeden z následujících `BarElementAlignment` hodnoty:  
+ Textový popisek je zarovnán podle *textAlignment* parametru. Může být jeden z následujících `BarElementAlignment` hodnoty:  
   
 -   ALIGN_INVALID  
   

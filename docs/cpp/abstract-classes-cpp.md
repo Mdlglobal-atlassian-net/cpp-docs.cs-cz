@@ -1,5 +1,5 @@
 ---
-title: Abstraktní třídy (C++) | Microsoft Docs
+title: Abstraktní třídy (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705358"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957945"
 ---
 # <a name="abstract-classes-c"></a>Abstraktní třídy (C++)
 
-Abstraktní třídy fungují jako výrazy obecné koncepty, ze kterých lze odvodit více určité třídy. Nelze vytvořit objekt typu abstraktní třídy; Můžete však použít ukazatelů a odkazy na abstraktní typy tříd.
+Abstraktní třídy působí jako výrazy obecných konceptů, ze kterých mohou být odvozeny konkrétnější třídy. Nejde vytvořit objekt typu abstraktní třídy; Můžete však použít ukazatele a odkazy na abstraktní typy tříd.
 
-Třída, která obsahuje alespoň jeden čistý virtuální funkce považuje za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat čistou virtuální funkci nebo, příliš, jsou abstraktní třídy.
+Třída, která obsahuje alespoň jednu prázdnou virtuální funkci, je považován za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat čistě virtuální funkce nebo, příliš, jsou abstraktní třídy.
 
-Virtuální funkce je deklarován jako "čisté" pomocí *čistý specifikátor* syntaxe (popsané v [třída implementace protokolu](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Podívejte se na příklad uvedené v [virtuální funkce](../cpp/virtual-functions.md). Záměr třídy `Account` je poskytnout obecné funkce, ale objekty typu `Account` jsou příliš široké, aby byla užitečná. Proto `Account` je vhodným kandidátem pro abstraktní třídu:
+Zvažte příklad uvedený v [virtuální funkce](../cpp/virtual-functions.md). Záměrem třídy `Account` je poskytnout obecné funkce, ale objekty typu `Account` jsou příliš obecné, aby byla užitečná. Proto `Account` , je vhodným kandidátem pro abstraktní třídu:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -45,9 +45,9 @@ private:
 };
 ```
 
-Jediným rozdílem mezi toto prohlášení a předchozí je, že `PrintBalance` je deklarovaný s čistě specifikátor (`= 0`).
+Jediný rozdíl mezi předchozí a touto deklarací je, že `PrintBalance` je deklarován s čistým specifikátorem (`= 0`).
 
-## <a name="restrictions-on-abstract-classes"></a>Omezení na abstraktní třídy
+## <a name="restrictions-on-abstract-classes"></a>Omezení pro abstraktní třídy
 
 Abstraktní třídy nelze použít pro:
 
@@ -65,7 +65,7 @@ Dalším omezením je skutečnost, že pokud konstruktor abstraktní třídy zav
 
 *Název třídy abstraktní*::*název funkce*)
 
-Tato vlastnost je výhodná při návrhu hierarchií tříd, jejichž základní třídy zahrnují čistě virtuální destruktory, protože destruktory základních tříd jsou vždy volány během procesu ničení objektu. Podívejte se na následující příklad:
+Tato vlastnost je výhodná při návrhu hierarchií tříd, jejichž základní třídy zahrnují čistě virtuální destruktory, protože destruktory základních tříd jsou vždy volány během procesu ničení objektu. Vezměte v úvahu v následujícím příkladu:
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.

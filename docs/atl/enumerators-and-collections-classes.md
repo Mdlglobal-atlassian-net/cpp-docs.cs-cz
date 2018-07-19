@@ -1,5 +1,5 @@
 ---
-title: Výčty a třídy kolekcí (ATL) | Microsoft Docs
+title: Třídy enumerátorů a kolekcí (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe8dfb4610b88b9a53e90b7af5f52b4d1c2807f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355643"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847879"
 ---
-# <a name="enumerators-and-collections-classes"></a>Třídy kolekce a výčty
+# <a name="enumerators-and-collections-classes"></a>Třídy enumerátorů a kolekcí
 Následující třídy poskytují podporu pro COM kolekce a výčty:  
   
--   [CComEnum](../atl/reference/ccomenum-class.md) objekt enumerator definuje COM na základě pole.  
+-   [Ccomenum –](../atl/reference/ccomenum-class.md) enumerator – objekt COM definuje na základě pole.  
   
--   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v matici.  
+-   [Ccomenumimpl –](../atl/reference/ccomenumimpl-class.md) poskytuje implementaci pro uložení položky výčtu v poli rozhraní modelu COM enumerátor.  
   
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) objekt enumerator definuje COM založené na kolekci standardní knihovna C++.  
+-   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) definuje COM enumerator – objekt založené na kolekci standardní knihovny C++.  
   
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) poskytuje implementaci pro rozhraní modelu COM enumerátor ve výčtu jsou umístění v kontejneru C++ Standard kompatibilní knihovny.  
+-   [Ienumonstlimpl –](../atl/reference/ienumonstlimpl-class.md) poskytuje implementaci pro uložení položky výčtu v kontejneru kompatibilní knihovny C++ Standard rozhraní modelu COM enumerátor.  
   
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) poskytuje implementaci pro **počet**, **položky**, a `_NewEnum` vlastností rozhraní kolekce.  
+-   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) poskytuje implementaci pro `Count`, `Item`, a `_NewEnum` vlastností rozhraní kolekce.  
   
 ## <a name="related-articles"></a>Související články  
  [ATL – kolekce a výčty](../atl/atl-collections-and-enumerators.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: tuple_element – třída | Microsoft Docs
+title: tuple_element – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959066"
 ---
 # <a name="tupleelement-class"></a>tuple_element – třída
 
-Zabalí `tuple` elementu. Zabalení specializací `array` elementy a `pair` elementy.
+Zabalí `tuple` elementu. Zabalení specializace `array` elementy a `pair` elementy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,29 +66,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-*Index* index prvku určené.
+*Index*  
+Index prvku určené.
 
-*Řazené kolekce členů* typ řazenou kolekci členů.
+*Řazené kolekce členů*  
+Typ řazené kolekce členů.
 
-*Elem* typ pole elementu.
+*Elem*  
+Typ elementu pole.
 
-*Velikost* velikost pole.
+*Velikost*  
+Velikost pole.
 
-*T1* typ prvním elementem v pár.
+*T1*  
+Typ první prvek v páru.
 
-*T2* typ druhý prvkem v pár.
+*T2*  
+Typ druhý prvek v páru.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy `tuple_element` má vnořené typedef `type` tedy synonymum pro typ indexem `Index` typu řazené kolekce členů `Tuple`.
+Třída šablony `tuple_element` obsahuje vnořené typedef `type` , který je synonymum pro typ indexu *Index* typu řazené kolekce členů *řazené kolekce členů*.
 
-Typedef `tuple_element_t` je vhodné aliasu pro `tuple_element<Index, Tuple>::type`.
+Typedef `tuple_element_t` je vhodné alias pro `tuple_element<Index, Tuple>::type`.
 
-Poskytuje rozhraní pro specializaci třídy šablon pro pole `array` jako řazená kolekce členů `Size` prvky, z nichž každá má stejného typu. Každý specializace má vnořené typedef `type` tedy synonymum pro typ `Index` element `array`, s kvalifikací žádné const volatile zachovaná.
+Specializace třídy šablon pro pole poskytuje rozhraní pro `array` jako se řazená kolekce členů `Size` prvky, z nichž každá má stejného typu. Jednotlivé specializace obsahuje vnořené typedef `type` , který je synonymum pro typ *Index* elementu `array`, s kvalifikací jakékoli const-volatile zachovány.
 
-Specializace šablony pro `pair` typy každý zadejte definici typu jednoho člena `type`, což je synonymum pro typ elementu na zadané pozici v páru, s const nebo volatile kvalifikaci, která se zachovají. Typedef `tuple_element_t` je vhodné aliasu pro `tuple_element<N, pair<T1, T2>>::type`.
+Specializace šablony pro `pair` typy každý poskytují definice typu jednoho člena, `type`, což je synonymum pro typ prvku na konkrétní pozici v páru s kvalifikací jakékoli const nebo volatile zachovány. Typedef `tuple_element_t` je vhodné alias pro `tuple_element<N, pair<T1, T2>>::type`.
 
-Použití [get – funkce &lt;nástroj&gt; ](../standard-library/utility-functions.md#get) vrátit element na zadané pozici nebo zadaného typu.
+Použití [funkce get &lt;nástroj&gt; ](../standard-library/utility-functions.md#get) k vrácení prvku na určené pozici nebo zadaného typu.
 
 ## <a name="example"></a>Příklad
 
@@ -178,8 +184,8 @@ int main() {
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<řazené kolekce členů > **záhlaví:** \<pole > (pro pole specializace) **záhlaví:** \<nástroj > (pro dvojice specializací)  **Namespace:** – std
+**Záhlaví:** \<řazené kolekce členů > **hlavičky:** \<pole > (pro specializaci pole) **hlavičky:** \<nástroje > (pro dvojice specializace)  **Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[řazené kolekce členů ](../standard-library/tuple-class.md)<br/>
+[Řazené kolekce členů ](../standard-library/tuple-class.md)<br/>

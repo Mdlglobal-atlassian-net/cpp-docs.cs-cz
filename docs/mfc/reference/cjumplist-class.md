@@ -1,5 +1,5 @@
 ---
-title: Třída CJumpList | Microsoft Docs
+title: Cjumplist – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0c4090ebfa432f1d8b7f05942a6b1af68b75d270
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337889"
 ---
-# <a name="cjumplist-class"></a>CJumpList – třída
-A `CJumpList` je seznam zástupců zobrazených po klikněte pravým tlačítkem na ikonu na hlavním panelu.  
+# <a name="cjumplist-class"></a>Cjumplist – třída
+A `CJumpList` je seznam zástupců zobrazených po klepnutí pravým tlačítkem myši na ikonu na hlavním panelu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,40 +69,40 @@ class CJumpList;
 |Název|Popis|  
 |----------|-----------------|  
 |[CJumpList::CJumpList](#cjumplist)|Vytvoří `CJumpList` objektu.|  
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|Zničí `CJumpList` objektu.|  
+|[Cjumplist –:: ~ cjumplist –](#cjumplist__~cjumplist)|Odstraní `CJumpList` objektu.|  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CJumpList::AbortList](#abortlist)|Zruší vytváření seznamu transakce bez potvrzení.|  
-|[CJumpList::AddDestination](#adddestination)|Přetíženo. Cílový přidá do seznamu.|  
-|[CJumpList::AddKnownCategory](#addknowncategory)|Připojí kategorii známé do seznamu.|  
-|[CJumpList::AddTask](#addtask)|Přetíženo. Přidá položky kanonický kategorii úloh.|  
-|[CJumpList::AddTasks](#addtasks)|Přidá položky kanonický kategorii úloh.|  
+|[CJumpList::AbortList](#abortlist)|Přeruší transakci sestavování seznamu bez potvrzení.|  
+|[CJumpList::AddDestination](#adddestination)|Přetíženo. Přidá cílový do seznamu.|  
+|[CJumpList::AddKnownCategory](#addknowncategory)|Kategorie známé přidá do seznamu.|  
+|[CJumpList::AddTask](#addtask)|Přetíženo. Přidá položky ke kategorii úkolů canonical.|  
+|[CJumpList::AddTasks](#addtasks)|Přidá položky ke kategorii úkolů canonical.|  
 |[CJumpList::AddTaskSeparator](#addtaskseparator)|Přidá oddělovač mezi úkoly.|  
-|[CJumpList::ClearAll](#clearall)|Odebere všechny úlohy a cíle, které byly přidány do aktuální instancí třídy `CJumpList` dosavadní práce.|  
-|[CJumpList::ClearAllDestinations](#clearalldestinations)|Odebere všechny cíle, které byly přidány do aktuální instancí třídy `CJumpList` dosavadní práce.|  
-|[CJumpList::CommitList](#commitlist)|Ukončení transakce vytváření seznamu a potvrdí hlášené seznamu k úložišti přidružené (registru v tomto případě.)|  
-|[CJumpList::GetDestinationList](#getdestinationlist)|Načte ukazatele rozhraní do cílového seznamu.|  
-|[CJumpList::GetMaxSlots](#getmaxslots)|Načte maximální počet položek, včetně kategorie hlavičky, které můžete zobrazit v nabídce cílový volající aplikace.|  
+|[CJumpList::ClearAll](#clearall)|Odebere všechny úlohy a cíle, které byly přidány k aktuální instanci `CJumpList` doposud.|  
+|[CJumpList::ClearAllDestinations](#clearalldestinations)|Odebere všechny cíle, které byly přidány k aktuální instanci `CJumpList` doposud.|  
+|[CJumpList::CommitList](#commitlist)|Ukončí vytváření seznamu transakce a potvrzení seznamu ohlášené přidružené úložiště (registru v tomto případě.)|  
+|[CJumpList::GetDestinationList](#getdestinationlist)|Načte ukazatel rozhraní do cílového seznamu.|  
+|[CJumpList::GetMaxSlots](#getmaxslots)|Získá maximální počet položek, včetně záhlaví kategorií, které můžete zobrazit v nabídce Cíl volající aplikace.|  
 |[CJumpList::GetRemovedItems](#getremoveditems)|Vrátí pole položek, které představují odebrat cíle.|  
-|[CJumpList::InitializeList](#initializelist)|Zahájení transakce vytváření seznamu.|  
-|[CJumpList::SetAppID](#setappid)|Nastaví Application User Model ID pro seznam, který budou vytvořeny.|  
+|[CJumpList::InitializeList](#initializelist)|Zahájení sestavování seznamu transakce.|  
+|[CJumpList::SetAppID](#setappid)|Nastaví ID modelu uživatele aplikace pro seznam, který bude sestaven.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CJumpList](../../mfc/reference/cjumplist-class.md)  
+ [Cjumplist –](../../mfc/reference/cjumplist-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxadv.h  
   
-##  <a name="_dtorcjumplist"></a>  CJumpList:: ~ CJumpList  
- Zničí `CJumpList` objektu.  
+##  <a name="_dtorcjumplist"></a>  Cjumplist –:: ~ cjumplist –  
+ Odstraní `CJumpList` objektu.  
   
 ```  
 ~CJumpList();
 ```  
   
 ##  <a name="abortlist"></a>  CJumpList::AbortList  
- Zruší vytváření seznamu transakce bez potvrzení.  
+ Přeruší transakci sestavování seznamu bez potvrzení.  
   
 ```  
 void AbortList();
@@ -112,7 +112,7 @@ void AbortList();
  Voláním této metody má stejný účinek jako zničení `CJumpList` bez volání `CommitList`.  
   
 ##  <a name="adddestination"></a>  CJumpList::AddDestination  
- Cílový přidá do seznamu.  
+ Přidá cílový do seznamu.  
   
 ```  
 BOOL AddDestination(
@@ -132,43 +132,43 @@ BOOL AddDestination(
   
 ### <a name="parameters"></a>Parametry  
  *lpcszCategoryName*  
- Určuje název kategorie. Pokud zadaná kategorie neexistuje, bude vytvořen.  
+ Určuje název kategorie. Pokud se určené kategorii neexistuje, vytvoří se.  
   
  *strDestinationPath*  
  Určuje cestu k cílovému souboru.  
   
  *strCategoryName*  
- Určuje název kategorie. Pokud zadaná kategorie neexistuje, bude vytvořen.  
+ Určuje název kategorie. Pokud se určené kategorii neexistuje, vytvoří se.  
   
  *pShellItem*  
- Určuje položku prostředí představující cíl, který chcete přidat.  
+ Určuje položku prostředí představují cílovou přidán.  
   
  *pShellLink*  
- Určuje odkaz prostředí představující cíl, který chcete přidat.  
+ Určuje odkaz prostředí představují cílovou přidán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Instance `CJumpList` interně shromažďuje přidané cíle a pak je do potvrdí `CommitList`.  
+ Instance `CJumpList` interně nahromadí přidání cíle a pak je v potvrzení `CommitList`.  
   
 ##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory  
- Připojí kategorii známé do seznamu.  
+ Kategorie známé přidá do seznamu.  
   
 ```  
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *kategorie*  
- Určuje typ známé kategorie. Může být buď `KDC_RECENT`, nebo `KDC_KNOWN`.  
+ *Kategorie*  
+ Určuje typ známé kategorie. Může být KDC_RECENT nebo KDC_KNOWN.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Známé kategorie jsou častých a poslední kategorie, které jsme automaticky vypočítá pro každou aplikaci, která využívá `SHAddToRecentDocs` (nebo nepřímo používá jako prostředí bude volat jménem aplikace v některých případech).  
+ Označuje kategorie jsou časté a poslední kategorie, které jsme se automaticky vypočítat pro každou aplikaci, která využívá `SHAddToRecentDocs` (nebo nepřímo využívá jako prostředí bude volat jménem vaší aplikace v některých případech).  
   
 ##  <a name="addtask"></a>  CJumpList::AddTask  
- Přidá položky kanonický kategorii úloh.  
+ Přidá položky ke kategorii úkolů canonical.  
   
 ```  
 BOOL AddTask(
@@ -186,27 +186,27 @@ BOOL AddTask(IShellLink* pShellLink);
  Určuje cílovou cestu úloh.  
   
  *strCommandLineArgs*  
- Určuje argumenty příkazového řádku ke spustitelnému souboru určeného strTargetExecutablePath.  
+ Určuje argumenty příkazového řádku určený strTargetExecutablePath spustitelného souboru.  
   
  *strTitle*  
- Název úlohy, která se zobrazí v seznamu cíl.  
+ Název úkolu, který se zobrazí v seznamu cíl.  
   
  *strIconLocation*  
- Umístění ikony, která se zobrazí v seznamu cíl společně s název.  
+ Umístění ikony, která se zobrazí v seznamu cíl společně s názvem.  
   
  *iIconIndex*  
  Ikona index.  
   
  *pShellLink*  
- Odkaz prostředí, který představuje přidat úloha.  
+ Odkaz prostředí, který představuje úlohu chcete přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Instance `CJumpList` shromažďuje zadané úlohy a přidá je do seznamu cíl během `CommitList`. Úloha položky se zobrazí v kategorii v dolní části nabídky cílové aplikace. Tuto kategorii má přednost před všech ostatních kategorií, pokud je vyplněno uživatelského rozhraní.  
+ Instance `CJumpList` nahromadí zadané úlohy a přidá je do cílového seznamu během `CommitList`. V kategorii v dolní části nabídky cílové aplikace se zobrazí položky úkolu. Tato kategorie má přednost před všech ostatních kategorií po naplnění v uživatelském rozhraní.  
   
 ##  <a name="addtasks"></a>  CJumpList::AddTasks  
- Přidá položky kanonický kategorii úloh.  
+ Přidá položky ke kategorii úkolů canonical.  
   
 ```  
 BOOL AddTasks(IObjectArray* pObjectCollection);
@@ -214,12 +214,12 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
   
 ### <a name="parameters"></a>Parametry  
  *pObjectCollection*  
- Kolekci úloh má být přidán.  
+ Kolekce úloh se má přidat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Instanci CJumpList shromažďuje zadané úlohy a přidá je do seznamu cíl během `CommitList`. Úloha položky se zobrazí v kategorii v dolní části nabídky cílové aplikace. Tuto kategorii má přednost před všech ostatních kategorií, pokud je vyplněno uživatelského rozhraní.  
+ Instance cjumplist – nahromadí zadané úlohy a přidá je do cílového seznamu během `CommitList`. V kategorii v dolní části nabídky cílové aplikace se zobrazí položky úkolu. Tato kategorie má přednost před všech ostatních kategorií po naplnění v uživatelském rozhraní.  
   
 ##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator  
  Přidá oddělovač mezi úkoly.  
@@ -229,7 +229,7 @@ BOOL AddTaskSeparator();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je úspěšné, 0, pokud není.  
+ Nenulové, pokud je úspěšné, 0, pokud není.  
   
 ##  <a name="cjumplist"></a>  CJumpList::CJumpList  
  Vytvoří `CJumpList` objektu.  
@@ -240,30 +240,30 @@ CJumpList(BOOL bAutoCommit = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bAutoCommit*  
- Pokud má parametr hodnotu FALSE v seznamu není v destruktoru potvrdí automaticky.  
+ Pokud tento parametr je FALSE seznamu není potvrzena automaticky v destruktoru.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
- Odebere všechny úlohy a cíle, které byly přidány do aktuální instancí třídy `CJumpList` dosavadní práce.  
+ Odebere všechny úlohy a cíle, které byly přidány k aktuální instanci `CJumpList` doposud.  
   
 ```  
 void ClearAll();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vymaže a uvolní všechna data a interních rozhraní.  
+ Tato metoda vymaže a uvolní všechna data a interní rozhraní.  
   
 ##  <a name="clearalldestinations"></a>  CJumpList::ClearAllDestinations  
- Odebere všechny cíle, které byly přidány do aktuální instancí třídy CJumpList dosavadní práce.  
+ Odebere všechny cíle, které byly přidány k aktuální instanci cjumplist – zatím.  
   
 ```  
 void ClearAllDestinations();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je třeba odebrat všechny cíle, které byly přidány, pokud v aktuální relaci cílového seznamu vytváření a znovu přidejte jiným cílům, volání této funkce. Pokud interní `ICustomDestinationList` byl inicializován, je ponechán zachování připojení.  
+ Voláním této funkce, pokud je potřeba odebrat všechny cíle, které byly přidány zatím v aktuální relaci cílového seznamu budovy a znovu přidat další weby. Pokud interní `ICustomDestinationList` byl inicializován, že je ponechaný zachování připojení.  
   
 ##  <a name="commitlist"></a>  CJumpList::CommitList  
- Ukončí vytváření seznamu transakce a potvrdí seznamu hlášené přidružené úložiště (v tomto případě registru).  
+ Ukončí vytváření seznamu transakce a potvrzení seznamu ohlášené přidružené úložiště (v tomto případě registru).  
   
 ```  
 BOOL CommitList();
@@ -272,10 +272,10 @@ BOOL CommitList();
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Potvrzení je atomic. Pokud se potvrzení nezdaří, bude vrácena chyba.  Když `CommitList` nazývá aktuální seznam odebrané položky se vyčistí. Voláním této metody znovu nastaví objekt, takže nemá aktivní transakce vytváření seznamu. K aktualizaci seznamu `BeginList` musí být volán znovu.  
+ Potvrzení je atomické. Pokud se potvrzení nezdaří, bude vrácena chyba.  Když `CommitList` nazývá aktuální seznam odebrané položky se vymažou. Voláním této metody obnoví objekt tak, že nemá žádné aktivní transakce vytváření seznamu. K aktualizaci seznamu, `BeginList` musí být volána znovu.  
   
 ##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList  
- Načte ukazatele rozhraní do cílového seznamu.  
+ Načte ukazatel rozhraní do cílového seznamu.  
   
 ```  
 ICustomDestinationList* GetDestinationList();
@@ -284,10 +284,10 @@ ICustomDestinationList* GetDestinationList();
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud seznam odkazů nebyla inicializována, nebo byla zapsána nebo přerušena, bude vrácená hodnota `NULL`.  
+ Pokud seznam odkazů není inicializovaná, nebo byla potvrzena nebo přerušena, bude vrácenou hodnotou NULL.  
   
 ##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots  
- Načte maximální počet položek, včetně kategorie hlavičky, které můžete zobrazit v nabídce cílový volající aplikace.  
+ Získá maximální počet položek, včetně záhlaví kategorií, které můžete zobrazit v nabídce Cíl volající aplikace.  
   
 ```  
 UINT GetMaxSlots() const;  
@@ -296,7 +296,7 @@ UINT GetMaxSlots() const;
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace může hlásit pouze počet položek a kategorie hlavičky kombinaci až tuto hodnotu. Pokud volání `AppendCategory`, `AppendKnownCategory`, nebo `AddUserTasks` přesahovat tento počet, jejich, vrátí hodnotu neúspěch.  
+ Aplikace může jenom nahlásit to počet položek a záhlaví kategorií kombinaci až tuto hodnotu. Pokud volání `AppendCategory`, `AppendKnownCategory`, nebo `AddUserTasks` přesahovat tento počet, se vrátí hodnotu neúspěch.  
   
 ##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems  
  Vrátí pole položek, které představují odebrat cíle.  
@@ -308,10 +308,10 @@ IObjectArray* GetRemovedItems();
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Odebrané cíle jsou načteny během inicializace seznamu přechod. Při generování nový cílový seznam, aplikace by měly nejprve zpracovat odebrané seznamu a vymazání svá data sledování pro libovolnou položku vrácený odebrané seznamu enumerátor. Pokud se aplikace pokusí zadejte položku, která byla odebrána pouze v transakci. Toto volání aktuální `BeginList` spustili, volání metody, které znovu přidat daná položka se nepodaří, ujistěte se, že aplikace jsou bere ohledy na seznamu odebrána.  
+ Odebrané cíle jsou načteny během inicializace seznam odkazů. Při generování nového cílového seznamu, aplikace by měly nejprve zpracování seznamu odebrané cíle, vymazat svá data sledování pro všechny položky vrácené odebrané seznam výčtu. Pokud se aplikace pokusí zadat položku, která byla odebrána pouze v transakci, která aktuální volání `BeginList` začít, volání metody, které znovu přidat tuto položku se nezdaří, aby aplikace jsou ale současně zachovává seznamu odebrán.  
   
 ##  <a name="initializelist"></a>  CJumpList::InitializeList  
- Zahájení transakce vytváření seznamu.  
+ Zahájení sestavování seznamu transakce.  
   
 ```  
 BOOL InitializeList();
@@ -320,10 +320,10 @@ BOOL InitializeList();
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Není nutné explicitně volat tuto metodu, pokud chcete načíst ukazatel na `ICustomDestinationList` pomocí `GetDestinationList`, počet dostupné sloty pomocí `GetMaxSlots`, nebo seznam odebrané položky pomocí `GetRemovedItems`.  
+ Není nutné explicitně volat tuto metodu, pokud chcete získat ukazatel na `ICustomDestinationList` pomocí `GetDestinationList`, číslo dostupné sloty pomocí `GetMaxSlots`, nebo seznam odstraněných položek pomocí `GetRemovedItems`.  
   
 ##  <a name="setappid"></a>  CJumpList::SetAppID  
- Nastaví Application User Model ID pro seznam, který budou vytvořeny.  
+ Nastaví ID modelu uživatele aplikace pro seznam, který bude sestaven.  
   
 ```  
 void SetAppID(LPCTSTR strAppID);

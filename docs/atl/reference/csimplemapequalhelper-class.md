@@ -1,5 +1,5 @@
 ---
-title: Třída CSimpleMapEqualHelper | Microsoft Docs
+title: Csimplemapequalhelper – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361837"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879691"
 ---
-# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper – třída
-Tato třída je Pomocník pro [CSimpleMap](../../atl/reference/csimplemap-class.md) třídy.  
+# <a name="csimplemapequalhelper-class"></a>Csimplemapequalhelper – třída
+Tato třída je pomocné rutiny pro [csimplemap –](../../atl/reference/csimplemap-class.md) třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +37,10 @@ class CSimpleMapEqualHelper
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TKey`  
+ *TKey*  
  Klíčovým prvkem.  
   
- `TVal`  
+ *TVal*  
  Hodnota elementu.  
   
 ## <a name="members"></a>Členové  
@@ -49,34 +49,34 @@ class CSimpleMapEqualHelper
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statické) Testy dva klíče rovnosti.|  
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statické) Porovná dvě hodnoty rovnosti.|  
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statické) Testuje dva klíče pro rovnost.|  
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statické) Porovná dvě hodnoty na rovnost.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída vlastnosti je dodatek k `CSimpleMap` třídy. Poskytuje metody pro porovnání dvou `CSimpleMap` objektu elementy (konkrétně klíč a hodnotu komponenty) rovnosti. Ve výchozím nastavení, klíče a hodnoty jsou porovnávány pomocí `operator==()`, ale pokud mapy obsahuje komplexní datové typy, které nemají své vlastní operátor rovnosti, tato třída může být přepsáno za velmi požadovanou funkci.  
+ Tato třída vlastností je dodatek k `CSimpleMap` třídy. Poskytuje metody pro porovnání dvou `CSimpleMap` objektu prvky (konkrétně klíče a hodnoty komponent) pro rovnost. Ve výchozím nastavení, klíče a hodnoty jsou porovnány pomocí **operator==()**, ale pokud mapa obsahuje komplexní datové typy, které nemají vlastní operátor rovnosti, tato třída může být potlačena za účelem poskytují extra požadovanou funkci.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpcoll.h  
   
 ##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
- Testy dva klíče rovnosti.  
+ Testuje dva klíče pro rovnost.  
   
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `k1`  
+ *k1*  
  První klíč.  
   
- `k2`  
+ *k2*  
  Druhý klíč.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true Pokud klíče jsou stejné, jinak hodnota false.  
+ Vrátí true, pokud klíče jsou stejné, jinak hodnota false.  
   
 ##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
- Porovná dvě hodnoty rovnosti.  
+ Porovná dvě hodnoty na rovnost.  
   
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -90,8 +90,8 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
  Druhá hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu true Pokud hodnoty jsou stejné, jinak hodnota false.  
+ Vrátí true, pokud hodnoty jsou stejné, jinak hodnota false.  
   
 ## <a name="see-also"></a>Viz také  
- [CSimpleMapEqualHelperFalse – třída](../../atl/reference/csimplemapequalhelperfalse-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Csimplemapequalhelperfalse – třída](../../atl/reference/csimplemapequalhelperfalse-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

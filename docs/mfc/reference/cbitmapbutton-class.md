@@ -1,5 +1,5 @@
 ---
-title: Třída CBitmapButton | Microsoft Docs
+title: Cbitmapbutton – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ab7147e360d98eb054062b2c2e14ee0ef7febf91
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339057"
 ---
-# <a name="cbitmapbutton-class"></a>CBitmapButton – třída
-Vytvoří uzavření tlačítkem ovládací prvky označený verzí rastrových obrázků místo textu.  
+# <a name="cbitmapbutton-class"></a>Cbitmapbutton – třída
+Vytvoří kontrolní prvky stisknutelných tlačítek označené rastrovými obrázky místo textu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,60 +52,60 @@ class CBitmapButton : public CButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CBitmapButton::AutoLoad](#autoload)|Přidruží tlačítka v dialogovém okně objektu `CBitmapButton` třídu, načte bitmap(s) podle názvu a velikosti na tlačítko Přizpůsobit bitové mapy.|  
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicializuje objekt načítání jeden nebo více prostředků s názvem rastrový obrázek ze souboru prostředků aplikace a rastrových obrázků, které se připojuje k objektu.|  
-|[CBitmapButton::SizeToContent](#sizetocontent)|Velikostí tlačítko pro uložení bitové mapy.|  
+|[CBitmapButton::AutoLoad](#autoload)|Přidruží tlačítko v dialogovém okně objektu `CBitmapButton` třídy, načte bitmap(s) podle názvu a velikosti tlačítko Přizpůsobit rastrový obrázek.|  
+|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicializuje objekt načtením jeden nebo více prostředků pojmenovaných rastrový obrázek ze souboru prostředků aplikace a připojení rastrové obrázky do objektu.|  
+|[CBitmapButton::SizeToContent](#sizetocontent)|Velikost tlačítka podle rastrového obrázku.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CBitmapButton` objekty obsahovat až čtyři rastrové obrázky, které obsahují Image pro různé stavy tlačítko můžete předpokládat,: aktuálním (nebo normální), dolů (nebo vybrané), zaměřuje a zakáže. Pouze první rastrového obrázku není třeba; jiné jsou volitelné.  
+ `CBitmapButton` objekty obsahují až čtyři rastrové obrázky, které obsahují Image pro různé stavy tlačítka můžete předpokládat: nahoru (nebo normální), dolů (nebo vybraných), zaměřuje a zakázané. Pouze první rastrového obrázku je vyžadováno. ostatní jsou volitelné.  
   
- Rastrový obrázek tlačítko Image zahrnují ohraničení pro bitovou kopii a také bitovou kopii sám sebe. Ohraničení obvykle hraje součástí zobrazuje stav tlačítko. Například rastrový obrázek pro stav cílených obvykle je jako jeden aktuálním stavu, ale s přerušovanou obdélníku inset z ohraničení nebo na silné souvislou čáru na hranici. Bitmapy pro zakázaného stavu obvykle vypadá takto: jednu pro aktuálním stavu, ale má nižší kontrast (např. nabídky neaktivní nebo šedým výběr).  
+ Tlačítko s rastrovým Image zahrnují ohraničení kolem obrázku, jakož i samotný obrázek. Ohraničení obvykle hraje část v zobrazení stav tlačítka. Například rastrového obrázku pro cílené stav je obvykle třeba jednoho pro aktuálním stavu, ale s inset obdélník přerušované ohraničení nebo silný plnou čáru na hranicích. Rastrový obrázek pro zakázané stavu obvykle následujícímu aktuálním stavu, ale má nižší kontrastu (podobný výběr neaktivní nebo šedým nabídky).  
   
- Tyto bitmap může mít libovolnou velikost, ale všechny zacházeno, jako kdyby byly stejnou velikost jako rastrový obrázek pro aktuálním stavu.  
+ Tyto bitmapy může mít libovolnou velikost, ale všechny zacházeno, jako by byly stejné velikosti jako rastrový obrázek pro aktuálním stavu.  
   
- Různé aplikace potřebují různé kombinace rastrové obrázky:  
+ Různé aplikace vyžadují různé kombinace bitmapové obrázky:  
   
-|Nahoru|Dolů|Zaměřuje|Zakázané|Aplikace|  
+|Nahoru|Dolů|Fokus|Zakázané|Aplikace|  
 |--------|----------|-------------|--------------|-----------------|  
 |×||||Rastrový obrázek|  
-|×|×|||Tlačítko bez **ws_tabstop –** styl|  
+|×|×|||Tlačítka bez textu WS_TABSTOP styl|  
 |×|×|×|×|Dialogové okno tlačítko s všechny stavy|  
-|×|×|×||Dialogové okno tlačítka s **ws_tabstop –** styl|  
+|×|×|×||Dialogové okno tlačítka se stylem WS_TABSTOP|  
   
- Při vytváření ovládacího prvku tlačítko rastrového obrázku, nastavte **bs_ownerdraw –** styl, který určíte, že je tlačítko vykreslované uživatelem. To způsobí, že systému Windows pro odesílání `WM_MEASUREITEM` a `WM_DRAWITEM` zprávy pro tlačítko; rozhraní zpracovává tyto zprávy a spravuje vzhled tlačítka pro vás.  
+ Při vytváření ovládacího prvku button rastrový obrázek, nastavte styl BS_OWNERDRAW k určení, že je tlačítko vykreslovaných vlastníkem. To způsobí, že Windows k odesílání zpráv WM_MEASUREITEM a WM_DRAWITEM tlačítka; rozhraní framework zpracovává tyto zprávy a spravuje vzhled tlačítka za vás.  
   
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Vytvoření ovládacího prvku tlačítko rastrového obrázku v časového období klientské oblasti  
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>Vytvoření ovládacího prvku tlačítko s rastrovým v klientské oblasti okna.  
   
-1.  Vytvořte jeden až čtyři bitové kopie rastrový obrázek pro tlačítko.  
+1.  Vytváření imagí jednou až čtyřmi rastrový obrázek pro tlačítko.  
   
-2.  Vytvořit [CBitmapButton](#cbitmapbutton) objektu.  
+2.  Vytvořit [cbitmapbutton –](#cbitmapbutton) objektu.  
   
 3.  Volání [vytvořit](../../mfc/reference/cbutton-class.md#create) funkce vytvoření ovládacího prvku tlačítko Windows a připojte ji k `CBitmapButton` objektu.  
   
-4.  Volání [LoadBitmaps](#loadbitmaps) – členská funkce načíst prostředky rastrový obrázek po sestavený tlačítko rastrového obrázku.  
+4.  Volání [LoadBitmaps](#loadbitmaps) členskou funkci rastrový obrázek tlačítko zkonstruován načtení prostředků rastrového obrázku.  
   
 ### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>Vložení ovládacích prvků rastrového obrázku tlačítka v dialogovém okně  
   
-1.  Vytvořte jeden až čtyři bitové kopie rastrový obrázek pro tlačítko.  
+1.  Vytváření imagí jednou až čtyřmi rastrový obrázek pro tlačítko.  
   
-2.  Vytvoření šablony dialogového okna s tlačítkem vykreslování vlastníka umístěný, kam chcete tlačítko rastrového obrázku. Velikost tlačítka v šabloně nezáleží.  
+2.  Vytvoření šablony dialogového okna tlačítko vykreslené vlastníkem umístěn, ve kterém chcete tlačítko rastrového obrázku. Velikost tlačítka v šabloně není důležitá.  
   
-3.  Popisek tlačítka například nastavit na hodnotu " **MYIMAGE**" a definovat symbol pro tlačítko například **IDC_MYIMAGE**.  
+3.  Nastavit popisek tlačítka na hodnotu, jako je například "MYIMAGE" a definovat symbol pro tlačítko například IDC_MYIMAGE.  
   
-4.  Ve skriptu prostředek vaší aplikace poskytnout všechny bitové kopie, vytvořené pro tlačítko ID sestavený připojením mezi písmena "U", "D", "F," nebo "X" (pro nahoru, dolů, zaměřuje a zakázaná) řetězec používaný pro popisek tlačítka v kroku 3. Titulek tlačítko " **MYIMAGE**," ID by být například " **MYIMAGEU**," " **MYIMAGED**," " **MYIMAGEF**," a " **MYIMAGEX**. " Můžete **musí** zadejte ID vaší rastrové obrázky v rámci dvojité uvozovky. V opačném případě editoru prostředků bude k prostředku přiřadit celé číslo a MFC nebude při načítání bitovou kopii.  
+4.  Skript prostředků vaší aplikace poskytují všechny obrázky vytvořené na tlačítku pro ID vytvořený přidáním jedním z písmen "U", "D", "F" nebo "X" (pro nahoru, dolů, zaměřuje a zakázán) Chcete-li řetězec použitý pro Titulek tlačítka v kroku 3. Pro "MYIMAGE" popisek tlačítka pro ID může být například "MYIMAGEU", "MYIMAGED", "MYIMAGEF" a "MYIMAGEX." Můžete **musí** zadat ID vašeho rastrové obrázky do dvojitých uvozovek. V opačném případě editor prostředků přiřadí k prostředku celé číslo a knihovny MFC se nezdaří při načítání obrázku.  
   
-5.  Ve třídě dialog vaší aplikace (získané z `CDialog`), přidat `CBitmapButton` člen objektu.  
+5.  Ve třídě vaší aplikace dialogové okno (odvozený od `CDialog`), přidejte `CBitmapButton` členský objekt.  
   
-6.  V `CDialog` objektu [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) rutiny, volání `CBitmapButton` objektu [AutoLoad](#autoload) fungovat, používání jako parametrů ID ovládacího prvku tlačítka a `CDialog` objektu **to** ukazatel.  
+6.  V `CDialog` objektu [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) rutinní, volání `CBitmapButton` objektu [AutoLoad](#autoload) funkce, jako parametry pomocí ID ovládacího prvku tlačítka a `CDialog` objektu **to** ukazatele.  
   
- Pokud chcete pro zpracování zpráv s oznámením Windows, jako je například BN_CLICKED, zasílá ovládacího prvku tlačítko rastrového obrázku tak, aby jeho nadřazený objekt (obvykle třída odvozená z `CDialog`), přidejte do `CDialog`-odvozené objekt členem položku a obslužné rutiny zpráv map zpráv funkce pro každou zprávu. Oznámení zaslaná z `CBitmapButton` objekt jsou stejné jako poslal [CButton](../../mfc/reference/cbutton-class.md) objektu.  
+ Pokud chcete pro zpracování zpráv s oznámením Windows, jako je například BN_CLICKED, odesílá se tlačítko s rastrovým ovládacím prvkem k nadřazené úloze (obvykle třída odvozená z `CDialog`), přidejte do `CDialog`– odvozeného objektu členem položku a obslužná rutina zprávy map zpráv funkce pro každou zprávu. Oznámení zaslaná z `CBitmapButton` se shodují s nastaveními odesílaných [CButton](../../mfc/reference/cbutton-class.md) objektu.  
   
- Třída [ctoolbar –](../../mfc/reference/ctoolbar-class.md) přistupují k rastrového obrázku tlačítka.  
+ Třída [ctoolbar –](../../mfc/reference/ctoolbar-class.md) přebírá jiný přístup na rastrového obrázku tlačítka.  
   
- Další informace o `CBitmapButton`, najdete v části [ovládací prvky](../../mfc/controls-mfc.md).  
+ Další informace o `CBitmapButton`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -119,7 +119,7 @@ class CBitmapButton : public CButton
  **Záhlaví:** afxext.h  
   
 ##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
- Přidruží tlačítka v dialogovém okně objektu `CBitmapButton` třídu, načte bitmap(s) podle názvu a velikosti na tlačítko Přizpůsobit bitové mapy.  
+ Přidruží tlačítko v dialogovém okně objektu `CBitmapButton` třídy, načte bitmap(s) podle názvu a velikosti tlačítko Přizpůsobit rastrový obrázek.  
   
 ```  
 BOOL AutoLoad(
@@ -129,16 +129,16 @@ BOOL AutoLoad(
   
 ### <a name="parameters"></a>Parametry  
  *nID*  
- ID tlačítka ovládacího prvku.  
+ ID ovládacího prvku tlačítka  
   
  *pParent*  
- Ukazatel na objekt, který vlastní tlačítko.  
+ Ukazatel na objekt, který vlastní tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `AutoLoad` funkce k chybě při inicializaci vykreslování vlastníka tlačítka v dialogovém okně jako rastrový obrázek tlačítka. Pokyny k použití této funkce jsou v poznámky pro `CBitmapButton` třídy.  
+ Použití `AutoLoad` funkce lze inicializovat na vykreslené vlastníkem tlačítko v dialogovém okně rastrového obrázku tlačítka. Pokyny k použití této funkce jsou v poznámky pro `CBitmapButton` třídy.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
@@ -151,13 +151,13 @@ CBitmapButton();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytvoření C++ `CBitmapButton` objektu, volání [CButton::Create](../../mfc/reference/cbutton-class.md#create) vytvoření ovládacího prvku tlačítko Windows a připojte ji k `CBitmapButton` objektu.  
+ Po vytvoření jazyka C++ `CBitmapButton` objektu, volejte [CButton::Create](../../mfc/reference/cbutton-class.md#create) vytvořit ovládací prvek tlačítka Windows a připojte ji k `CBitmapButton` objektu.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
 ##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
- Tuto funkci použít, pokud chcete načíst rastrové obrázky se identifikovanou jejich názvy prostředků nebo čísla ID, nebo, pokud nelze použít `AutoLoad` fungovat, protože například vytváříte tlačítko rastrový obrázek, který není součástí dialogové okno.  
+ Tuto funkci použít, pokud chcete načíst bitmapové obrázky identifikovat podle jejich názvy prostředků nebo ID čísla nebo, pokud nelze použít `AutoLoad` fungovat, protože například vytváříte rastrového obrázku tlačítka, který není součástí dialogového okna.  
   
 ```  
 BOOL LoadBitmaps(
@@ -176,37 +176,37 @@ BOOL LoadBitmaps(
   
 ### <a name="parameters"></a>Parametry  
  *lpszBitmapResource*  
- Body řetězce ukončené hodnotou null, který obsahuje název rastrového obrázku pro tlačítko rastrový obrázek normální nebo "zapnuto". Požadováno.  
+ Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrový obrázek pro normální rastrového obrázku tlačítka nebo "do" stavu. Požadováno.  
   
  *lpszBitmapResourceSel*  
- Body řetězce ukončené hodnotou null, který obsahuje název rastrového obrázku pro tlačítko rastrového obrázku je vybrané nebo "stavu dolů". Může být **NULL**.  
+ Odkazuje na řetězec zakončený hodnotou null, která obsahuje název rastrový obrázek pro tlačítko s rastrovým vybraných nebo "dolů" stavu. Může mít hodnotu NULL.  
   
  *lpszBitmapResourceFocus*  
- Body řetězce ukončené hodnotou null, který obsahuje název rastrového obrázku pro tlačítko rastrový obrázek zaměřuje stavu. Může být **NULL**.  
+ Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrový obrázek pro tlačítko rastrový obrázek, zaměřuje stavu. Může mít hodnotu NULL.  
   
  *lpszBitmapResourceDisabled*  
- Body řetězce ukončené hodnotou null, který obsahuje název rastrového obrázku pro tlačítko rastrový obrázek zakázaném stavu. Může být **NULL**.  
+ Odkazuje na řetězec zakončený hodnotou null, který obsahuje název rastrový obrázek pro tlačítko rastrový obrázek zakázaném stavu. Může mít hodnotu NULL.  
   
  *nIDBitmapResource*  
- Určuje počet prostředků rastrový obrázek pro tlačítko rastrový obrázek normální nebo "zapnuto" pro ID prostředku. Požadováno.  
+ Určuje identifikační číslo prostředku rastrového obrázku tlačítka normální nebo "do" stavu prostředku rastrového obrázku. Požadováno.  
   
  *nIDBitmapResourceSel*  
- Určuje číslo ID prostředku prostředku rastrový obrázek pro tlačítko rastrového obrázku je vybrané nebo "dolů" stavu. Může být 0.  
+ Určuje identifikační číslo prostředku prostředku rastrového obrázku pro tlačítko s rastrovým vybraných nebo "dolů" stavu. Může být 0.  
   
  *nIDBitmapResourceFocus*  
- Určuje počet prostředků ID prostředku bitové mapy pro rastrový obrázek tlačítka cílených stavu. Může být 0.  
+ Určuje identifikační číslo prostředku prostředku rastrového obrázku pro cílené stav rastrového obrázku tlačítka. Může být 0.  
   
  *nIDBitmapResourceDisabled*  
- Určuje počet prostředků ID prostředku rastrový obrázek pro tlačítko rastrový obrázek zakázaném stavu. Může být 0.  
+ Určuje identifikační číslo prostředku prostředku rastrového obrázku pro tlačítko rastrový obrázek zakázaném stavu. Může být 0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
 ##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
- Volání této funkce ke změně velikosti tlačítko rastrového obrázku na velikost bitové mapy.  
+ Voláním této funkce velikost rastrového obrázku tlačítka na velikost rastrového obrázku.  
   
 ```  
 void SizeToContent();
@@ -216,7 +216,7 @@ void SizeToContent();
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC CTRLTEST](../../visual-cpp-samples.md)   
+ [Ukázky knihovny MFC CTRLTEST](../../visual-cpp-samples.md)   
  [CButton – třída](../../mfc/reference/cbutton-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)
 

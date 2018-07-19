@@ -1,5 +1,5 @@
 ---
-title: DCOMCNFG | Microsoft Docs
+title: DCOMCNFG | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a165102294f9f39d25f0c3118251382ecab067b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c188639a7ac9763bb2dcccb926ff6b0f419728
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357242"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851506"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
-**DCOMCNFG** je nástroj Windows NT 4.0, který umožňuje nakonfigurovat různá nastavení pro konkrétní DCOM v registru. **DCOMCNFG** okno má tři stránky: výchozí zabezpečení, výchozí vlastnosti a aplikace. V systému Windows 2000 na čtvrté stránce Výchozí protokoly nachází.  
+DCOMCNFG je nástroj Windows NT 4.0, který chcete nakonfigurovat různá nastavení specifická pro model DCOM v registru. V okně DCOMCNFG má tři stránky: výchozí zabezpečení, výchozí vlastnosti a aplikací. V části Windows 2000 čtvrtá stránka výchozí protokolů je k dispozici.  
   
 ## <a name="default-security-page"></a>Výchozí stránka zabezpečení  
- Stránka zabezpečení výchozí můžete nastavit výchozí oprávnění pro objekty v systému. Stránka výchozí zabezpečení má tři části: přístup, spuštění a konfigurace. Chcete-li změnit výchozí hodnoty pro oddíl, klikněte na odpovídající **upravit výchozí nastavení** tlačítko. Tato nastavení výchozí zabezpečení jsou uložené v registru v části `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.  
+ Na stránce zabezpečení můžete použít k určení výchozích oprávnění pro objekty v systému. Výchozí zabezpečení stránka má tři části: přístup, spuštění a konfigurace. Chcete-li změnit výchozí hodnoty pro oddíl, klikněte na odpovídající **upravit výchozí nastavení** tlačítko. Tato nastavení výchozí zabezpečení jsou uložena v registru pod `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.  
   
 ## <a name="default-protocols-page"></a>Výchozí stránka protokoly  
- Tato stránka obsahuje sadu síťových protokolů, které jsou k dispozici pro DCOM v tomto počítači. Určuje pořadí priority ve kterém se má používat; první v seznamu má nejvyšší prioritu. Protokoly můžete přidat nebo odstranit z této stránky.  
+ Tato stránka obsahuje sadu síťových protokolů, které jsou k dispozici DCOM v tomto počítači. Odpovídá pořadí priority, v němž budou používána; první v seznamu má nejvyšší prioritu. Protokoly můžete přidat nebo odstranit z této stránky.  
   
-## <a name="default-properties-page"></a>Výchozí vlastnosti stránky  
- Na stránce výchozí vlastnosti. je nutné vybrat **povolit používání objektů DCOM v tomto počítači** zaškrtávací políčko, pokud chcete, aby klienti na jiné počítače pro přístup COM objekty v tomto počítači spuštěna. Výběrem této možnosti se nastaví `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` hodnotu `Y`.  
+## <a name="default-properties-page"></a>Výchozí stránka Vlastnosti  
+ Na stránce výchozí vlastnosti. je nutné vybrat **povolit používání objektů DCOM v tomto počítači** zaškrtávací políčko, pokud chcete, aby klienti na jiné počítače pro přístup COM objekty, které běží na tomto počítači. Výběr, tato možnost nastaví `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` hodnota, která se `Y`.  
   
 ## <a name="applications-page"></a>Stránka aplikace  
- Můžete změnit nastavení pro konkrétní objekt s stránku aplikací. Stačí vybrat aplikaci ze seznamu a klikněte **vlastnosti** tlačítko. Okno vlastností má pět stránky:  
+ Můžete změnit nastavení pro daný objekt se stránkou aplikací. Jednoduše vyberte aplikaci ze seznamu a klikněte na tlačítko **vlastnosti** tlačítko. V okně vlastnosti má pět stránky:  
   
--   Stránku Obecné potvrdí aplikaci, kterou pracujete.  
+-   Obecná stránka potvrdí aplikace, kterou pracujete.  
   
--   Na stránce umístění můžete zadat, kde by měla spustit aplikace, když klient zavolá `CoCreateInstance` na příslušné CLSID. Pokud jste vybrali **spuštění aplikace na jiný počítač** zaškrtněte políčko a zadejte název počítače, pak `RemoteServerName` hodnota se přidá pod AppID pro příslušnou aplikaci. Vymazání **spuštění aplikace v tomto počítači** políčko přejmenuje `LocalService` hodnotu `_LocalService` a tím, zakáže ho.  
+-   Stránka umístění vám umožňuje určit, kde by měla spustit aplikace, když klient volá `CoCreateInstance` na relevantní identifikátoru CLSID. Pokud vyberete **spouštět aplikace na následujícím počítači** zaškrtněte políčko a zadejte název počítače, o `RemoteServerName` hodnota se přidá do části AppID pro danou aplikaci. Vymazání **spuštění aplikace na tomto počítači** přejmenování zaškrtávacího políčka `LocalService` hodnota, která se `_LocalService` a tím, zakáže.  
   
--   Stránka zabezpečení je podobná zabezpečení výchozí stránka nalezena v **DCOMCNFG** okně s tím rozdílem, že toto nastavení platí pouze pro aktuální aplikaci. Znovu tato nastavení uložena v ID aplikace pro daný objekt.  
+-   Na stránce zabezpečení je podobná stránka výchozí zabezpečení najdete v okně DCOMCNFG s tím rozdílem, že tato nastavení platí pouze pro aktuální aplikaci. Znovu jsou nastavení uložena v ID aplikace pro daný objekt.  
   
--   Stránka identifikace identifikuje, které uživatel slouží ke spuštění aplikace.  
+-   Stránka identifikace identifikuje, u kterého uživatele se používá ke spuštění aplikace.  
   
--   Na stránce koncové body zobrazí sadu protokoly a koncové body k dispozici pro klienty vybraného serveru DCOM.  
+-   Na stránce koncové body zobrazí sadu koncových bodů, které jsou k dispozici pro klienty vybraného serveru DCOM a protokoly.  
   
 ## <a name="see-also"></a>Viz také  
  [Služby](../atl/atl-services.md)

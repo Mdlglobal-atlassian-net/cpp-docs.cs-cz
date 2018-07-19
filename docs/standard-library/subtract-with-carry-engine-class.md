@@ -1,5 +1,5 @@
 ---
-title: subtract_with_carry_engine – třída | Microsoft Docs
+title: subtract_with_carry_engine – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955303"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine – třída
 
-Generuje náhodné pořadí algoritmem subtract s carry (tepelně izolováno Fibonacciho).
+Generuje náhodné pořadí pomocí algoritmu subtract s carry (opožděné Fibonacciho).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`UIntType` Výsledný typ celé číslo bez znaménka. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*UIntType*  
+ Typ výsledku celého čísla bez znaménka. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-`W` **Aplikace Word velikost**. Velikost jednotlivých slov v bitech, pořadí stavu. **Předběžnou**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **Word velikost**. Velikost jednotlivých slov v bitech, stav pořadí. **Předběžná podmínka**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Krátká prodleva**. Počet celočíselné hodnoty. **Předběžnou**: `0 < S < R`
+*S*  
+ **Krátká prodleva**. Počet hodnot typu integer. **Předběžná podmínka**: `0 < S < R`
 
-`R` **Dlouho funkce lag**. Určuje opakování v řadě vygenerovat.
+*R*  
+ **Dlouhá zpoždění**. Určuje opakování v řadě vygenerována.
 
 ## <a name="members"></a>Členové
 
@@ -60,34 +64,34 @@ class subtract_with_carry_engine;
 |-|-|-|
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|
-|`default_seed` je členem konstantní, definované jako `19780503u`, použít jako výchozí hodnota parametru pro `subtract_with_carry_engine::seed` a konstruktor jednu hodnotu.|||
+|`default_seed` je členem konstantní, definované jako `19780503u`, která se používá jako výchozí hodnota parametru pro `subtract_with_carry_engine::seed` a konstruktoru jednu hodnotu.|||
 
-Další informace o modulu členy najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o členech modul, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-`substract_with_carry_engine` Šablony třídy představuje vylepšení [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ani jeden z nich pro tyto moduly se tak rychle, nebo s jako vysoce kvalitního výsledky jako [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+`substract_with_carry_engine` Třída šablony je vylepšením oproti [linear_congruential_engine –](../standard-library/linear-congruential-engine-class.md). Ani pro tyto moduly je tak rychle, nebo se jako výsledky vysoce kvalitní, jako [mersenne_twister_engine –](../standard-library/mersenne-twister-engine-class.md).
 
-Tento modul vytváří hodnoty typu zadán uživatel nepodepsaných integrálních pomocí vztahu opakování ( *období*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, kde `cy(i)` má hodnotu `1` Pokud `x(i - S) - x(i - R) - cy(i - 1) < 0`, jinak hodnota `0`, a `M` má hodnotu `2` <sup>W</sup>. Stav stroje je carry indikátor plus `R` hodnoty. Tyto hodnoty se skládají z posledních `R` hodnoty vrácené v případě `operator()` byla volána alespoň `R` krát jinak `N` hodnoty, které byly vráceny a poslední `R - N` hodnoty počáteční hodnoty.
+Tento modul vytváří hodnoty uživatelem zadaného bez znaménka integrálového typu pomocí vztahu opakování ( *období*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, kde `cy(i)` má hodnotu `1` Pokud `x(i - S) - x(i - R) - cy(i - 1) < 0`, jinak `0`, a `M` má hodnotu `2` <sup>W</sup>. Stav stroje je provádět indikátor plus *R* hodnoty. Tyto hodnoty se skládají z poslední *R* hodnoty vrácené if `operator()` byla volána alespoň *R* krát, jinak `N` hodnoty, které byly vráceny a poslední `R - N` hodnot seedu.
 
-Argument šablony `UIntType` musí být dostatečně velký pro uložení hodnoty až `M - 1`.
+Argument šablony `UIntType` musí být dostatečně velký pro uložení hodnot až do `M - 1`.
 
-Přestože generátor z tento modul můžete vytvořit přímo, můžete také použít jednu z těchto předdefinovaných definice TypeDef:
+I když generátor tento modul můžete vytvořit přímo, můžete použít také jednu z těchto předdefinovaných – definice TypeDef:
 
-`ranlux24_base`: Použít jako základ pro `ranlux24`.
+`ranlux24_base`: Používá se jako základ pro `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Použít jako základ pro `ranlux48`.
+`ranlux48_base`: Používá se jako základ pro `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Podrobné informace o subract s algoritmem modulu carry, najdete v článku Wikipedia [generátor tepelně izolováno Fibonacciho](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Podrobné informace o subract s algoritmem carry modul najdete v článku na wikipedii [zaostávalo kvůli Fibonacciho generátor](http://go.microsoft.com/fwlink/p/?linkid=402445).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

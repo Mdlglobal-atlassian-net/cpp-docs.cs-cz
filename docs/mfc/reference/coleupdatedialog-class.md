@@ -1,5 +1,5 @@
 ---
-title: Třída COleUpdateDialog | Microsoft Docs
+title: Coleupdatedialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079971"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852104"
 ---
-# <a name="coleupdatedialog-class"></a>COleUpdateDialog – třída
-Použít pro ve speciálním případě dialogových oken OLE upravit propojení, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.  
+# <a name="coleupdatedialog-class"></a>Coleupdatedialog – třída
+Používá pro zvláštní případ dialogového okna upravení odkazů OLE, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,13 +48,13 @@ class COleUpdateDialog : public COleLinksDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|Zobrazí **upravit propojení** dialogové okno v režimu aktualizace.|  
+|[COleUpdateDialog::DoModal](#domodal)|Zobrazí **upravit odkazy** dialogové okno v režimu aktualizace.|  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace týkající se konkrétní OLE dialogových oken, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -62,11 +62,11 @@ class COleUpdateDialog : public COleLinksDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
- [COleDialog](../../mfc/reference/coledialog-class.md)  
+ [Coledialog –](../../mfc/reference/coledialog-class.md)  
   
- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)  
+ [Colelinksdialog –](../../mfc/reference/colelinksdialog-class.md)  
   
  `COleUpdateDialog`  
   
@@ -86,41 +86,41 @@ explicit COleUpdateDialog(
   
 ### <a name="parameters"></a>Parametry  
  *pDoc*  
- Odkazuje na dokument obsahující odkazy, které mohou vyžadovat aktualizaci.  
+ Ukazuje na dokument obsahující odkazy, které mohou vyžadovat aktualizaci.  
   
  *bUpdateLinks*  
- Příznak, který určuje, jestli propojené objekty se mají aktualizovat.  
+ Příznak, který určuje, zda má být aktualizován jsou propojené objekty.  
   
  *bUpdateEmbeddings*  
- Příznak, který určuje, jestli vložené objekty se mají aktualizovat.  
+ Příznak, který určuje, zda má být aktualizován jsou vložené objekty.  
   
  *pParentWnd*  
- Odkazuje na objekt okno nadřazené nebo vlastníka (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je **NULL**, nadřazeného okna dialogového okna bude nastavena pro hlavní okno aplikace.  
+ Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nastaví se nadřazené okno dialogového okna do hlavního okna aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce se vytvoří pouze `COleUpdateDialog` objektu. Chcete-li zobrazit dialogové okno, volejte [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Tato třída slouží místo `COleLinksDialog` Pokud chcete aktualizovat existující pouze propojené nebo vložené položky.  
+ Tato funkce vytvoří pouze `COleUpdateDialog` objektu. Chcete-li zobrazit dialogové okno, zavolejte [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Tato třída by měla být použita místo `COleLinksDialog` kdy budete chtít aktualizovat pouze existující propojené nebo vložené položky.  
   
 ##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
- Zobrazí dialogové okno Upravit propojení pole v aktualizaci režimu.  
+ Zobrazí dialogové okno Upravit odkazy pole v aktualizaci režimu.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Stav dokončení pro dialogové okno. Jedna z následujících hodnot:  
+ Stav dokončení pro dialogové okno. Jeden z následujících hodnot:  
   
-- **IDOK** úspěšně vrácen dialogové okno.  
+- IDOK, pokud bylo úspěšně vráceno dialogových oken.  
   
-- **IDCANCEL** Pokud žádná z propojené nebo vložené položky v aktuálním dokumentu vyžadovat aktualizaci.  
+- IDCANCEL Pokud žádná z položek propojené nebo vložené v aktuálním dokumentu je třeba aktualizovat.  
   
-- **IDABORT** Pokud došlo k chybě. Pokud **IDABORT** se volání vrátí, [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) – členská funkce získat další informace o typu Chyba, že došlo k chybě. Seznam možné chyby, najdete v článku [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkce ve Windows SDK.  
+- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkce v sadě Windows SDK.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud uživatel vybere na tlačítko Storno, jsou aktualizovány všechny odkazy nebo vložené části.  
+ Pokud uživatel vybere tlačítko Storno, se aktualizují všechny odkazy a/nebo vložené části.  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC OCLIENT](../../visual-cpp-samples.md)   
- [COleLinksDialog – třída](../../mfc/reference/colelinksdialog-class.md)   
+ [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)   
+ [Colelinksdialog – třída](../../mfc/reference/colelinksdialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [COleLinksDialog – třída](../../mfc/reference/colelinksdialog-class.md)

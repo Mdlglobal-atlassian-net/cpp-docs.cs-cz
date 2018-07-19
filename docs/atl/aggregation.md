@@ -1,5 +1,5 @@
 ---
-title: Agregace | Microsoft Docs
+title: Agregace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760a595274ba7a1901138cc0cceceddf97122725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353960"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847866"
 ---
 # <a name="aggregation"></a>Agregace
-Existují situace, když uživatel provádějící implementaci objektu chcete využít výhod služeb, které jiné, předem objektu. Kromě toho přeje tento druhý objekt zobrazí jako přirozené součást první. COM dosahuje obou těchto cílů prostřednictvím členství ve skupině a agregaci.  
+Existují situace, kdy implementátor objektu chtěli využívat služby nabízené objektem jiného, předem připravené. Kromě toho je vhodné tento druhý objekt jako přirozenou součástí první. COM dosahuje oba z těchto cílů prostřednictvím členství ve skupině a agregaci.  
   
- Agregace znamená, že objekt obsahující (vnějšího) vytvoří objekt obsažené (vnitřního) jako součást procesu její vytvoření a jsou vystaveny vnější rozhraní vnitřní objekt. Objekt umožňuje samotné být agregovatelné, nebo ne. Pokud se jedná, musí ho podle určitá pravidla za účelem agregace správně fungovat.  
+ Agregace znamená, že nadřazený objekt (vnějšího) vytvoří obsaženého objektu (vnitřní) jako součást procesu vytváření a rozhraní vnitřní objekt jsou viditelné ve vnější. Objekt umožňuje sám být agregovatelné, nebo ne. Pokud se jedná, pak musí podstoupit určitá pravidla pro agregaci fungovala správně.  
   
- Především se stává, všechny **IUnknown** volání metod na obsažený objekt musí delegovat na objekt obsahující.  
+ Především, všechny `IUnknown` volání metod na obsaženého objektu musí delegovat do obsahujícího objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Úvod do modelu COM](../atl/introduction-to-com.md)   

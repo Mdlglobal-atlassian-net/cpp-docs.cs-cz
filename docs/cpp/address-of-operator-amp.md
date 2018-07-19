@@ -1,5 +1,5 @@
 ---
-title: 'Adresa operátoru: &amp; | Microsoft Docs'
+title: 'Operátor address-of: &amp; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,13 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df243cac3b48a120345760f814a97b77667c770f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958582"
 ---
-# <a name="address-of-operator-amp"></a>Adresa operátoru: &amp;
+# <a name="address-of-operator-amp"></a>Operátor address-of: &amp;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Operátor unární adresy (**&**) přebírá adresu jeho operandu. Operand operátoru adresa může být označení funkce nebo je l hodnota, který určuje objekt, který není pole verze.  
+ Operátor unární address-of (**&**) přebírá adresu svého operandu. Operand operátoru address-of může být označením funkce nebo l hodnotou označující objekt, který není bitového pole.  
   
- Operátor adresy lze použít pouze na proměnné s základní, struktura, třídy, nebo union typy, které jsou deklarovány na úrovni oboru souboru, nebo na nich odkazuje na pole. V těchto výrazech můžete přidat do konstantní výraz, který nezahrnuje operátor adresy nebo odečten od výrazu adresy.  
+ Operátor address-of lze použít pouze pro proměnné základních, struktury, třídy, nebo typy sjednocení, které jsou deklarovány na úrovni rozsahu souboru, nebo na indexované reference polí. V těchto výrazech lze konstantní výraz, který neobsahuje operátor address-of přičíst k nebo odečíst od výrazu adresy.  
   
- Při použití funkce nebo hodnoty l, výsledkem výrazu je ukazatel typu (r-value) odvozený od typu operandu. Například, pokud je operand typu `char`, výsledkem výrazu je ukazatel typu `char`. Adresa operátor u **const** nebo `volatile` objekty, jehož výsledkem **const** `type` **\*** nebo `volatile` `type` **\***, kde `type` je typ původní objekt.  
+ Při použití funkce nebo l hodnotami, výsledek výrazu je typ ukazatele (r) odvozen od typu operandu. Například, pokud je operand typu **char**, výsledek výrazu je typu ukazatele do **char**. Operátoru address-of, u **const** nebo **volatile** objektů, je vyhodnocen jako **typ const \***  nebo **přechodný typ \*** , kde **typ** je typ původní objekt.  
   
- Když je použit operátor adresy [kvalifikovaný název](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), výsledek bude záviset na tom, zda *kvalifikovaný název* určuje je statický člen. Pokud ano, výsledkem je ukazatel na typ zadaný v deklaraci člena. Pokud není statický člen, výsledkem je ukazatel na člena *název* třídy indikován *kvalifikovaný název třídy*. (Viz [primární výrazy](../cpp/primary-expressions.md) Další informace o *kvalifikovaný název třídy*.) Následující fragment kódu ukazuje, jak výsledek liší v závislosti na tom, zda je statický člen:  
+ Při použití operátoru address-of na úplný název, výsledek závisí na tom, zda *kvalifikovaný název* Určuje statický člen. Pokud ano, výsledkem je ukazatel na typ zadaný v deklaraci člena. Pokud člen není statické, výsledkem je ukazatel na člen *název* třídy indikován *kvalifikovaný název třídy*. (Viz [primární výrazy](../cpp/primary-expressions.md) Další informace o tom *kvalifikovaný název třídy*.) Následující fragment kódu ukazuje, jak výsledek liší v závislosti na tom, zda je statický člen:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator.cpp  
 // C2440 expected  
 class PTM {  
 public:  
-           int   iValue;  
+    int iValue;  
     static float fValue;  
 };  
   
@@ -56,15 +57,15 @@ int main() {
 }  
 ```  
   
- V tomto příkladu výraz `&PTM::fValue` vypočítá typ `float *` místo typu `float PTM::*` protože `fValue` je statický člen.  
+ V tomto příkladu výraz `&PTM::fValue` vrací typ `float *` místo typu `float PTM::*` protože `fValue` je to statický člen.  
   
- Adresa přetížených funkce můžete provést jenom v případě, že je zřejmé, která verze funkce je odkazováno. V tématu [přetížení funkcí](function-overloading.md) informace o tom, jak získat adresu na konkrétní přetížení funkce.  
+ Adresu přetížené funkce můžete provést pouze v případě, že je jasné, která verze funkce odkazují. Zobrazit [přetížení funkce](function-overloading.md) informace o tom, jak získat adresu konkrétní přetížení funkce.  
   
- Použití address-of – operátor typu odkazu dává stejný výsledek v podobě použití operátor na objekt, ke kterému je vázán odkaz. Příklad:  
+ Použití operátoru address-of na odkazový typ poskytuje stejný výsledek jako použití operátoru na objekt, ke kterému je vázán odkaz. Příklad:  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // expre_Address_Of_Operator2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,9 +86,9 @@ int main() {
 &d equals &rd  
 ```  
   
- Následující příklad používá operátor adresy předat argument ukazatel na funkci:  
+ Operátor address-of předat argument ukazatele na funkci v následujícím příkladu:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator3.cpp  
 // compile with: /EHsc  
 // Demonstrate address-of operator &  
@@ -114,6 +115,6 @@ int main() {
   
 ## <a name="see-also"></a>Viz také  
  [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)   
- [Předdefinované C++ operátory, prioritu a Asociativnost](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Deklarátor odkazu lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Dereferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md)

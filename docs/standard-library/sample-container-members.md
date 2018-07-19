@@ -1,5 +1,5 @@
 ---
-title: Ukázkové členy kontejneru | Microsoft Docs
+title: Ukázkové členy kontejneru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c844416151874714aa86a2ffe9762949c6a62a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33a251b2b9bf9b010367a88a4c9f566a73acb544
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956778"
 ---
 # <a name="sample-container-members"></a>Ukázkové členy kontejneru
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
 ## <a name="reference"></a>Odkaz
 
@@ -32,27 +32,27 @@ ms.locfileid: "33856095"
 
 |||
 |-|-|
-|[const_iterator](../standard-library/container-class-const-iterator.md)|Popisuje objekt, který může sloužit jako konstantní iterator pro řízené sekvenci.|
-|[const_reference](../standard-library/container-class-const-reference.md)|Popisuje objekt, který může sloužit jako konstantní odkaz na element řízené sekvenci.|
-|[const_reverse_iterator](../standard-library/container-class-const-reverse-iterator.md)|Popisuje objekt, který může sloužit jako konstantní zpětné iterator pro řízené sekvenci.|
-|[difference_type](../standard-library/container-class-difference-type.md)|Popisuje objekt, který může představovat rozdíl mezi dvěma prvky v řízené sekvenci adresy.|
-|[Iterator](../standard-library/container-class-iterator.md)|Popisuje objekt, který může sloužit jako iterace pro řízené sekvenci.|
-|[Referenční dokumentace](../standard-library/container-class-reference.md)|Popisuje objekt, který může sloužit jako odkaz na element řízené sekvenci.|
-|[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|Popisuje objekt, který může sloužit jako reverzní iterator pro řízené sekvenci.|
-|[size_type](../standard-library/container-class-size-type.md)|Popisuje objekt, který může představovat délka žádné řízené sekvenci.|
-|[value_type](../standard-library/container-class-value-type.md)|Funguje synonymum pro parametr šablony **Ty**.|
+|[const_iterator](../standard-library/container-class-const-iterator.md)|Popisuje objekt, který může sloužit jako konstantní iterátoru řízené sekvence.|
+|[const_reference](../standard-library/container-class-const-reference.md)|Popisuje objekt, který může sloužit jako konstantní odkaz na prvek řízené sekvence.|
+|[const_reverse_iterator](../standard-library/container-class-const-reverse-iterator.md)|Popisuje objekt, který může sloužit jako konstantní zpětného iterátoru řízené sekvence.|
+|[difference_type](../standard-library/container-class-difference-type.md)|Popisuje objekt, který může představovat rozdíl mezi adresami dva prvky řízené sekvence.|
+|[iterátor](../standard-library/container-class-iterator.md)|Popisuje objekt, který může sloužit jako iterátoru řízené sekvence.|
+|[Referenční dokumentace](../standard-library/container-class-reference.md)|Popisuje objekt, který může sloužit jako odkaz na prvek řízené sekvence.|
+|[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|Popisuje objekt, který může sloužit jako "reverse iterator" pro řízenou sekvenci.|
+|[size_type](../standard-library/container-class-size-type.md)|Popisuje objekt, který může představovat délka jakékoli řízené sekvence.|
+|[value_type](../standard-library/container-class-value-type.md)|Synonymum pro parametr šablony funguje `Ty`.|
 
 ## <a name="member-functions"></a>Členské funkce
 
 |||
 |-|-|
-|[Začátek](../standard-library/container-class-begin.md)|Vrátí iterovat této body v prvním elementem pořadí (nebo jenom přesahuje za konec prázdnou sekvencí).|
-|[Zrušte zaškrtnutí](../standard-library/container-class-clear.md)|Volání [vymazat](../standard-library/container-class-erase.md)( [začít](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|
-|[prázdný](../standard-library/container-class-empty.md)|Vrátí **true** pro prázdný řízené sekvenci.|
-|[End](../standard-library/container-class-end.md)|Vrátí iterovat této body právě přesahuje za konec sekvenci.|
-|[vymazání](../standard-library/container-class-erase.md)|Vymaže elementu.|
-|[max_size](../standard-library/container-class-max-size.md)|Vrátí délku nejdelší pořadí, které můžete řídit objekt včas konstantní bez ohledu na délku řízené sekvenci.|
-|[rbegin –](../standard-library/container-class-rbegin.md)|Vrátí zpětného iterator, ukazující právě přesahuje za konec řízené sekvenci určení na začátek zpětné pořadí.|
-|[rend –](../standard-library/container-class-rend.md)|Členská funkce vrátí zpětné iterator této body v prvním elementem pořadí (nebo jenom přesahuje za konec prázdné sekvenci), určení konec zpětného pořadí.|
-|[Velikost](../standard-library/container-class-size.md)|Vrátí délku řízené sekvenci včas konstantní bez ohledu na délku řízené sekvenci.|
-|[Swap](../standard-library/container-class-swap.md)
+|[začít](../standard-library/container-class-begin.md)|Vrátí iterátor odkazující na první prvek pořadí (nebo hned za konec prázdná sekvence).|
+|[Vymazat](../standard-library/container-class-clear.md)|Volání [vymazat](../standard-library/container-class-erase.md)( [začít](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|
+|[prázdný](../standard-library/container-class-empty.md)|Vrátí **true** pro prázdnou řízenou sekvenci.|
+|[ukončení](../standard-library/container-class-end.md)|Vrátí iterátor, který ukazuje za konec sekvence.|
+|[vymazání](../standard-library/container-class-erase.md)|Odstraní prvek.|
+|[max_size](../standard-library/container-class-max-size.md)|Vrátí délku, nejdelší sekvence, která můžete řídit objektu v konstantním čase bez ohledu na délku řízené sekvence.|
+|[rbegin –](../standard-library/container-class-rbegin.md)|Vrátí zpětný iterátor, který ukazuje přesně za konec řízené sekvence označení začátku opačném pořadí.|
+|[rend –](../standard-library/container-class-rend.md)|Členská funkce vrátí "reverse iterator", na kterou odkazuje na první prvek pořadí (nebo přesně za konec k prázdné sekvenci), označení konce opačném pořadí.|
+|[Velikost](../standard-library/container-class-size.md)|Vrátí délku objektu řízené sekvence v konstantním čase bez ohledu na délku řízené sekvence.|
+|[Prohození](../standard-library/container-class-swap.md)

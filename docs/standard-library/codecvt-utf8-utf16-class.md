@@ -1,5 +1,5 @@
 ---
-title: codecvt_utf8_utf16 | Microsoft Docs
+title: codecvt_utf8_utf16 – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fba4925b6392969aceb1c00ac4c0f4e47b3b63a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 545fda08a027b1610f82d17c89ae98241ee5502b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958127"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
-Představuje [národního prostředí](../standard-library/locale-class.md) omezující vlastnosti, který převádí mezi široké kódováním UTF-16 znaků a datového proudu bajtů kódovaná jako UTF-8.
+Představuje [národní prostředí](../standard-library/locale-class.md) omezující vlastnost, která převede mezi široké znaky s kódováním UTF-16 a datový proud bajtů kódováním UTF-8.
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -34,14 +34,14 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametry
 
-`Elem` Typ elementu široká charakterová.
-`Maxcode` Maximální počet znaků pro omezující vlastnost národního prostředí.
-`Mode` Informace o konfiguraci pro omezující vlastnost národního prostředí.
+*Elem* typ elementu širokého znaku.
+*Maxcode* maximální počet znaků pro omezující vlastnost národního prostředí.
+*Režim* informace o konfiguraci pro omezující vlastnost národního prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-Datový proud bajtů je možné zapsat do binárního souboru nebo textového souboru.
+Bajtový proud je možné zapisovat na binární soubor nebo textový soubor.
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: <codecvt> Namespace: – std
+Záhlaví: <codecvt> Namespace: std

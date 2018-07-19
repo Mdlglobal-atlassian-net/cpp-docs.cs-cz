@@ -1,5 +1,5 @@
 ---
-title: is_unsigned – třída | Microsoft Docs
+title: is_unsigned – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f6ef4f70807e753c24d3a3595ab3665b45fdbe42
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954048"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955699"
 ---
 # <a name="isunsigned-class"></a>is_unsigned – třída
 
-Testy, pokud je typ celé číslo bez znaménka.
+Testuje, zda je typ celé číslo bez znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` nepodepsaných integrálních typu nebo `cv-qualified` nepodepsaných integrálních typu, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je celočíselný typ bez znaménka nebo `cv-qualified` unsigned celočíselného typu, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -83,9 +83,9 @@ is_unsigned<float> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_signed – třída](../standard-library/is-signed-class.md)<br/>

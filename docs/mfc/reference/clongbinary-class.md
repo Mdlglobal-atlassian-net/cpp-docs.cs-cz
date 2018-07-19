@@ -1,5 +1,5 @@
 ---
-title: CLongBinary – třída | Microsoft Docs
+title: CLongBinary – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338434"
 ---
 # <a name="clongbinary-class"></a>CLongBinary – třída
-Zjednodušuje pracovat s objekty velké binární data (často říká objektů BLOB, nebo "binární rozsáhlé objekty") v databázi.  
+Zjednodušuje práci s velmi velkými binárními datovými objekty (často nazývané objekty BLOB nebo "binární rozsáhlé objekty") v databázi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,23 +48,23 @@ class CLongBinary : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CLongBinary::m_dwDataLength](#m_dwdatalength)|Obsahuje skutečná velikost v bajtech datový objekt, jehož popisovač je uložen v `m_hData`.|  
-|[CLongBinary::m_hData](#m_hdata)|Obsahuje Windows `HGLOBAL` popisovač objektu skutečný obrázek.|  
+|[CLongBinary::m_dwDataLength](#m_dwdatalength)|Obsahuje skutečnou velikost v bajtech datového objektu, jehož popisovač je uložen v `m_hData`.|  
+|[CLongBinary::m_hData](#m_hdata)|Obsahuje Windows HGLOBAL popisovač pro objekt skutečný obraz.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pole záznamu v tabulce SQL může například obsahovat rastrový obrázek představující obrázku. A `CLongBinary` objekt ukládá takového objektu a uchovává informace o jeho velikost.  
+ Pole záznamu v tabulce SQL může například obsahovat rastrový obrázek představující obrázek. A `CLongBinary` objekt ukládá takového objektu a uchovává informace o jeho velikost.  
   
 > [!NOTE]
->  Obecně platí, je lepší postupem teď použít [CByteArray](../../mfc/reference/cbytearray-class.md) ve spojení s [dfx_binary –](record-field-exchange-functions.md#dfx_binary) funkce. Můžete dál používat `CLongBinary`, ale obecně `CByteArray` poskytuje další funkce v prostředí Win32, vzhledem k tomu, že je už omezení velikosti s 16bitové `CByteArray`. Toto doporučení se k programování s objekty DAO (Data Access), jakož i připojení ODBC (Open Database).  
+>  Obecně je doporučeno teď použít [CByteArray](../../mfc/reference/cbytearray-class.md) ve spojení s [dfx_binary –](record-field-exchange-functions.md#dfx_binary) funkce. Můžete dál používat `CLongBinary`, ale obecně `CByteArray` přinese další funkce v systému Win32, protože není už omezení velikosti s 16 bitů `CByteArray`. Toto doporučení platí pro programování pomocí objektů DAO (Data Access) a také připojení ODBC (Open Database).  
   
- Použít `CLongBinary` objekt, deklarovat pole datových členů typu `CLongBinary` ve vaší třídy sady záznamů. Tento člen bude embedded členem třídy sady záznamů a bude vypočten-li sada záznamů je vytvořená. Po `CLongBinary` vytvoření objektu, mechanismus pole záznamu (exchange – RFX) načte datový objekt z pole v aktuálním záznamu ve zdroji dat a uloží je zpět do záznamu při aktualizaci záznamu. RFX dotazuje zdroj dat pro velikost binární rozsáhlý objekt přiděluje úložiště pro něj (pomocí `CLongBinary` objektu `m_hData` – datový člen) a ukládá `HGLOBAL` zpracování dat v `m_hData`. RFX také ukládá skutečná velikost datového objektu v `m_dwDataLength` – datový člen. Práce s daty v objektu prostřednictvím `m_hData`, pomocí stejné techniky, které běžně používáte k manipulaci s daty uloženými v systému Windows `HGLOBAL` zpracování.  
+ Použití `CLongBinary` objektu, deklarujte datový člen pole typu `CLongBinary` ve své třídě sady záznamů. Tento člen bude vloženého člena třídy sady záznamů a bude vytvořen při sady záznamů je vytvořený. Po `CLongBinary` objekt je vytvořen, mechanismus pole záznamu (RFX) systému exchange načte objekt data z pole v aktuální záznam ve zdroji dat a uloží je zpět do záznamu při aktualizaci záznamu. RFX dotazuje zdroje dat pro velikost binárního velkého objektu alokují prostor pro něj (prostřednictvím `CLongBinary` objektu `m_hData` datový člen) a ukládá `HGLOBAL` zpracování dat v `m_hData`. RFX také ukládá skutečnou velikost datového objektu v `m_dwDataLength` datový člen. Práce s daty v objektu prostřednictvím `m_hData`, pomocí stejné techniky, které běžně používáte pro manipulaci s daty uloženými v Windows `HGLOBAL` zpracovat.  
   
- Při zrušení sady záznamů, vložený `CLongBinary` objektu je také zrušen a zruší její destruktor přidělení `HGLOBAL` popisovač data.  
+ Při zrušení sady záznamů, vložený `CLongBinary` také zničení objektu a jeho destruktor uvolní `HGLOBAL` popisovač data.  
   
- Další informace o rozsáhlé objekty a využívat `CLongBinary`, najdete v článcích [záznamů (ODBC)](../../data/odbc/recordset-odbc.md) a [sada záznamů: práce s velké datové položky (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
+ Další informace o velké objekty a použití `CLongBinary`, najdete v článcích [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md) a [sada záznamů: práce se velké datové položky (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CLongBinary`  
   
@@ -79,17 +79,17 @@ CLongBinary();
 ```  
   
 ##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
- Ukládá skutečná velikost v bajtech dat uložených v `HGLOBAL` zpracování v `m_hData`.  
+ Ukládá skutečnou velikost v bajtech dat uložených v úchytu HGLOBAL `m_hData`.  
   
 ```  
 SQLULEN m_dwDataLength;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato velikost může být menší než velikost bloku paměti přidělené pro data. Volání Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) funkce získat přidělená velikost.  
+ Tato velikost může být menší než velikost bloku paměti přidělené pro data. Volání Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) funkce získáte přidělená velikost.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
- Ukládá Windows `HGLOBAL` zpracování dat skutečný binární rozsáhlý objekt.  
+ Uloží popisovač Windows HGLOBAL data skutečné binárního rozsáhlého objektu.  
   
 ```  
 HGLOBAL m_hData;  

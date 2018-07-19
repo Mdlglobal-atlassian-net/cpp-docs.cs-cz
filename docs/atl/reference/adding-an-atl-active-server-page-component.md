@@ -1,5 +1,5 @@
 ---
-title: Přidání komponentu ATL Active Server Page | Microsoft Docs
+title: Přidání komponenty ATL Active Server stránky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2e8e15a19cfa7069e7dbaf8d9e9af8bc3dd6f0b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356463"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957321"
 ---
-# <a name="adding-an-atl-active-server-page-component"></a>Přidání komponenty stránka Active Server knihovny ATL
-Pokud chcete přidat objekt Active Template Library (ATL) do projektu, projektu musí být vytvořen jako aplikace ATL COM nebo jako aplikace knihovny MFC, který obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL, můžete vybrat **přidání podpory knihovny ATL do MFC** z [dialogové okno Přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, nebo můžete [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  
+# <a name="adding-an-atl-active-server-page-component"></a>Přidání komponenty ATL Active Server stránky
+Chcete-li do projektu přidat objekt Active Template Library (ATL), váš projekt musí být vytvořen jako aplikaci knihovny ATL modelu COM nebo jako aplikace knihovny MFC, která obsahuje podpory knihovny ATL Můžete použít [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL, můžete vybrat **přidat podporu ATL do MFC** z [dialogové okno Přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, nebo můžete [přidat objekt ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) k implementaci podpory knihovny ATL pro aplikaci knihovny MFC.  
   
- Active Server Pages komponenty jsou součástí architektury Internetová informační služba, která poskytuje následující funkce pro vývoj pokročilé webového:  
+ Active Server Pages komponenty jsou součástí architekturu Internetová informační služba, která poskytuje následující funkce pro vývoj pokročilých Web:  
   
--   Komponenty ASP lze vložit do vaší stránky HTML, které vytvoříte obsah dynamické a nezávislý na prohlížeči.  
+-   Komponenty ASP můžete vložit do stránek HTML k vytvoření dynamické a nezávislý na prohlížeči obsahu.  
   
--   Na stránkách ASP můžete zajistit připojení k databázi založených na standardech.  
+-   Stránky ASP můžete použít k zajištění připojení databáze založené na standardech.  
   
 -   Možnosti zpracování chyb ASP můžete použít pro vaše webové aplikace.  
   
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Chcete-li přidat komponentu ATL Active Server Pages do projektu  
+### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Chcete-li do projektu přidejte komponentu ATL Active Server Pages  
   
-1.  Buď **Průzkumníku řešení** nebo [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikněte pravým tlačítkem na název projektu, do které chcete přidat součást ATL Active Server Pages.  
+1.  V **Průzkumníka řešení** klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat komponenty ATL Active Server Pages.  
   
-2.  V místní nabídce klikněte na **přidat**a potom klikněte na **přidat třídu**.  
+2.  V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.  
   
-3.  V [přidat třídu](../../ide/add-class-dialog-box.md) kliknutím na dialogové okno, v podokně šablon **ATL Active Server Page Component**a potom klikněte na **otevřete** zobrazíte [aktivního serveru ATL Průvodce součástmi stránky](../../atl/reference/atl-active-server-page-component-wizard.md).  
+3.  V [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, v podokně šablon, klikněte na tlačítko **ATL Active Server Page Component**a potom klikněte na tlačítko **otevřít** zobrazíte [ATL Active Server Průvodce komponentami Pages](../../atl/reference/atl-active-server-page-component-wizard.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
- [Přidání nového rozhraní v projektu knihovny ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
- [Přidání body připojení k objektu](../../atl/adding-connection-points-to-an-object.md)   
+ [Přidání nového rozhraní projektu ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
+ [Přidání bodů připojení objektu](../../atl/adding-connection-points-to-an-object.md)   
  [Přidání metody](../../ide/adding-a-method-visual-cpp.md)   
  [Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Přidání generické třídy jazyka C++](../../ide/adding-a-generic-cpp-class.md)

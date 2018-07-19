@@ -1,5 +1,5 @@
 ---
-title: Přidání ovládacího prvku knihovny ATL | Microsoft Docs
+title: Přidání ovládacího prvku ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954679"
 ---
-# <a name="adding-an-atl-control"></a>Přidání ovládacího prvku knihovny ATL
-Pomocí tohoto průvodce můžete přidat objekt uživatelského rozhraní pro projekt, který podporuje rozhraní pro všechny potenciální kontejnery. Pro podporu těchto rozhraní, projekt musí být vytvořen jako aplikace knihovny ATL nebo jako aplikace knihovny MFC, který obsahuje podpory knihovny ATL Můžete použít [ATL – Průvodce projektem](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt knihovny ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) implementovat ATL – podpora pro aplikace MFC.  
+# <a name="adding-an-atl-control"></a>Přidání ovládacího prvku ATL
+Tohoto průvodce použijte k přidání do projektu, který podporuje rozhraní pro všechny potenciální kontejnery objekt uživatelského rozhraní. Pro podporu těchto rozhraní projektu musí být vytvořen jako aplikace ATL nebo MFC aplikaci, která obsahuje podpory knihovny ATL Můžete použít [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md) k vytvoření aplikace knihovny ATL nebo [přidat objekt ATL do aplikace knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) k implementaci podpory knihovny ATL pro aplikaci knihovny MFC.  
   
-### <a name="to-add-an-atl-control-to-your-project"></a>Přidání ovládacího prvku knihovny ATL do projektu  
+### <a name="to-add-an-atl-control-to-your-project"></a>Chcete-li přidat ovládací prvek ATL do projektu  
   
-1.  Buď **Průzkumníku řešení** nebo [zobrazení tříd](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikněte pravým tlačítkem na název projektu, do které chcete přidat ATL jednoduchého objektu.  
+1.  V jednom **Průzkumníka řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat jednoduchý objekt knihovny ATL.  
   
 2.  Klikněte na tlačítko **přidat** z místní nabídky a pak klikněte na tlačítko **přidat třídu**.  
   
-3.  V [přidat třídu](../../ide/add-class-dialog-box.md) kliknutím na dialogové okno, v podokně šablon **ovládací prvek ATL**a potom klikněte na **přidat** zobrazíte [Průvodce ovládacím prvkem ATL](../../atl/reference/atl-control-wizard.md).  
+3.  V [přidat třídu](../../ide/add-class-dialog-box.md) kliknutím na dialogové okno, v podokně šablony **ovládací prvek ATL**a potom klikněte na tlačítko **přidat** zobrazíte [Průvodce ovládacími prvky ATL](../../atl/reference/atl-control-wizard.md).  
   
- Pomocí **Průvodce ovládacím prvkem ATL**, můžete vytvořit tři typy ovládacích prvků:  
+ Použití **Průvodce ovládacími prvky ATL**, můžete vytvořit jeden ze tří typů ovládacích prvků:  
   
--   Standardního ovládacího prvku  
+-   Standardní ovládací prvek  
   
--   Složeného ovládacího prvku  
+-   Složený ovládací prvek  
   
 -   Ovládací prvek DHTML  
   
- Kromě toho může snížit velikost ovládacího prvku a odebrat rozhraní, které nejsou využívány většina kontejnery výběrem **minimální ovládací prvek** na **možnosti** stránce průvodce.  
+ Kromě toho může snížit velikost ovládacího prvku a odebrání rozhraní, které nejsou používány nástrojem většina kontejnery tak, že vyberete **minimální ovládací prvek** na **možnosti** stránky průvodce.  
   
 ## <a name="see-also"></a>Viz také  
  [Přidání funkcí do složeného ovládacího prvku](../../atl/adding-functionality-to-the-composite-control.md)   
- [Základy ATL COM – objekty](../../atl/fundamentals-of-atl-com-objects.md)   
- [Ukázka ATLFire](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)   
 

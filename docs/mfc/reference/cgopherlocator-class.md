@@ -1,5 +1,5 @@
 ---
-title: Třída CGopherLocator | Microsoft Docs
+title: Cgopherlocator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339290"
 ---
-# <a name="cgopherlocator-class"></a>CGopherLocator – třída
-Získá gopher "Lokátor" ze serveru gopher, určuje typ lokátoru a zpřístupní Lokátor [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
+# <a name="cgopherlocator-class"></a>Cgopherlocator – třída
+Získá gopher "Lokátor" ze serveru gopher, určí typ lokátoru a zpřístupní Lokátor [cgopherfilefind –](../../mfc/reference/cgopherfilefind-class.md).  
   
 > [!NOTE]
->  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členové jsou zastaralé protože nepracují na platformě Windows XP, ale budou i nadále fungovat na starší operační systémy.  
+>  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členy jsou zastaralé, protože nebude fungovat na platformě Windows XP, ale budou i nadále fungovat na starší platformy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,25 +51,25 @@ class CGopherLocator : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CGopherLocator::GetLocatorType](#getlocatortype)|Analyzuje lokátoru gopher a určuje jeho atributy.|  
+|[CGopherLocator::GetLocatorType](#getlocatortype)|Analyzuje gopher Lokátor a určuje jeho atributy.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Přímý přístup k znaky, které jsou uložené v `CGopherLocator` objekt jako řetězec stylu jazyka C.|  
+|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Přímý přístup k znaků uložených v `CGopherLocator` objektu jako řetězec stylu C.|  
   
 ## <a name="remarks"></a>Poznámky  
- Aplikace, musíte si gopher server Lokátor předtím, než bylo možné získat informace z tohoto serveru. Jakmile má Lokátor, ho Lokátor považovat neprůhledného token.  
+ Aplikace musí získat Lokátor gopher serveru předtím, než bylo možné získat informace z tohoto serveru. Jakmile obsahuje Lokátor, je nutné považovat za Lokátor neprůhledné token.  
   
- Každý gopher Lokátor má atributy, které určuje typ souboru nebo na serveru nalezen. V tématu [GetLocatorType](#getlocatortype) seznam typy lokátorů gopher.  
+ Každý gopher vyvolal atributy, které určují typ souboru nebo na serveru nalezen. Zobrazit [GetLocatorType](#getlocatortype) seznam typy lokátorů gopher.  
   
- Lokátor aplikace obvykle používá pro volání [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) načíst konkrétní informace.  
+ Aplikace obvykle používá pro volání Lokátor [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) načíst konkrétní informace.  
   
- Další informace o tom, `CGopherLocator` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Další informace o tom, `CGopherLocator` funguje s jinými třídami MFC Internetu najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CGopherLocator`  
   
@@ -77,7 +77,7 @@ class CGopherLocator : public CObject
  **Záhlaví:** afxinet.h  
   
 ##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
- Tato funkce člen je volána k vytvoření `CGopherLocator` objektu.  
+ Tato členská funkce je volána k vytvoření `CGopherLocator` objektu.  
   
 ```  
 CGopherLocator(const CGopherLocator& ref);
@@ -88,10 +88,10 @@ CGopherLocator(const CGopherLocator& ref);
  Odkaz na konstantu `CGopherLocator` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CGopherLocator` objektu přímo. Místo toho volat [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) vytvořte a vraťte ukazatel `CGopherLocator` objektu.  
+ Nikdy nevytvářejte `CGopherLocator` objektu přímo. Namísto toho zavolejte metodu [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) k vytvoření a vrátí ukazatel `CGopherLocator` objektu.  
   
 ##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
- Volání této funkce člen získat typ lokátoru.  
+ Voláním této členské funkce, chcete-li získat typ lokátoru.  
   
 ```  
 BOOL GetLocatorType(DWORD& dwRef) const;  
@@ -99,53 +99,53 @@ BOOL GetLocatorType(DWORD& dwRef) const;
   
 ### <a name="parameters"></a>Parametry  
  *dwRef*  
- Odkaz na `DWORD` , obdrží Typ lokátoru. V tématu **poznámky** pro tabulku Lokátor typů.  
+ Odkaz na DWORD, který se zobrazí typ lokátoru. Zobrazit **poznámky** tabulka obsahující typy Lokátor.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
  Možné typy jsou následující:  
   
 |Hodnota|Význam|  
 |-----------|-------------|  
-|GOPHER_TYPE_TEXT_FILE|Textového souboru ASCII.|  
-|GOPHER_TYPE_DIRECTORY|Adresář další Gopher položky.|  
+|GOPHER_TYPE_TEXT_FILE|Textový soubor ASCII.|  
+|GOPHER_TYPE_DIRECTORY|Adresář další položky Gopher.|  
 |GOPHER_TYPE_CSO|Server CSO telefonního seznamu.|  
-|GOPHER_TYPE_ERROR|Označuje chybový stav.|  
+|GOPHER_TYPE_ERROR|Určuje chybovou podmínku.|  
 |GOPHER_TYPE_MAC_BINHEX|Macintosh soubor ve formátu BINHEX.|  
 |GOPHER_TYPE_DOS_ARCHIVE|Soubor archivu DOS.|  
-|GOPHER_TYPE_UNIX_UUENCODED|Soubor UUENCODED.|  
+|GOPHER_TYPE_UNIX_UUENCODED|Soubor kódování uuencode.|  
 |GOPHER_TYPE_INDEX_SERVER|Server indexu.|  
 |GOPHER_TYPE_TELNET|Telnet Server.|  
 |GOPHER_TYPE_BINARY|Binární soubor.|  
-|GOPHER_TYPE_REDUNDANT|Duplicitní server. Informace obsažené v rámci je duplicitní primární server. Primární server je poslední položky adresáře, který neměl GOPHER_TYPE_REDUNDANT typu.|  
-|GOPHER_TYPE_TN3270|TN3270 server.|  
-|GOPHER_TYPE_GIF|Grafika soubor GIF.|  
+|GOPHER_TYPE_REDUNDANT|Duplicitní serveru. Informace obsažené v rámci je duplicitní primárního serveru. Poslední položky adresáře, které nemají typ GOPHER_TYPE_REDUNDANT je primární server.|  
+|GOPHER_TYPE_TN3270|TN3270 serveru.|  
+|GOPHER_TYPE_GIF|Soubor grafiky ve formátu GIF.|  
 |GOPHER_TYPE_IMAGE|Soubor obrázku.|  
 |GOPHER_TYPE_BITMAP|Soubor rastrového obrázku.|  
-|GOPHER_TYPE_MOVIE|Soubor filmu.|  
+|GOPHER_TYPE_MOVIE|Video souboru.|  
 |GOPHER_TYPE_SOUND|Zvukový soubor.|  
 |GOPHER_TYPE_HTML|Dokument HTML.|  
 |GOPHER_TYPE_PDF|Soubor PDF.|  
 |GOPHER_TYPE_CALENDAR|Soubor kalendáře.|  
-|GOPHER_TYPE_INLINE|Vloženého souboru.|  
+|GOPHER_TYPE_INLINE|Vložený soubor.|  
 |GOPHER_TYPE_UNKNOWN|Typ položky neznámý.|  
-|GOPHER_TYPE_ASK|Požádejte + položku.|  
-|GOPHER_TYPE_GOPHER_PLUS|Gopher + položku.|  
+|GOPHER_TYPE_ASK|Požádejte + položky.|  
+|GOPHER_TYPE_GOPHER_PLUS|Gopher + položky.|  
   
 ##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
- Tento operátor přetypování užitečné poskytuje efektivní metodu pro přístup k součástí C řetězce ukončené hodnotou null `CGopherLocator` objektu.  
+ Tento operátor užitečná přetypování poskytuje způsob pro přístup k C řetězec zakončený hodnotou null obsažené v `CGopherLocator` objektu.  
   
 ```  
 operator LPCTSTR () const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Znak ukazatel na data řetězec.  
+ Ukazatel znaku řetězec data.  
   
 ### <a name="remarks"></a>Poznámky  
- Žádné znaky jsou zkopírovány; Vrátí se pouze ukazatel.  
+ Žádné znaky jsou zkopírovány; je vrácen pouze ukazatel.  
   
 ## <a name="see-also"></a>Viz také  
  [CObject – třída](../../mfc/reference/cobject-class.md)   

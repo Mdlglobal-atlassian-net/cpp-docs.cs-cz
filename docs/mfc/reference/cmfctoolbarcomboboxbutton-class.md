@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCToolBarComboBoxButton | Microsoft Docs
+title: Cmfctoolbarcomboboxbutton – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -74,15 +74,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039190"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854054"
 ---
-# <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton – třída
-Tlačítka panelu nástrojů, který obsahuje prvek pole se seznamem ( [CComboBox – třída](../../mfc/reference/ccombobox-class.md)).  
+# <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton – třída
+Tlačítka panelu nástrojů obsahující ovládací prvek pole se seznamem ( [CComboBox – třída](../../mfc/reference/ccombobox-class.md)).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -102,64 +102,64 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolBarComboBoxButton::AddItem](#additem)|Přidá položku na konec seznamu.|  
-|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Přidá položku do seznamu. Pořadí položek v seznamu je zadána `Compare`.|  
-|[CMFCToolBarComboBoxButton::Compare](#compare)|Porovná dvě položky. Voláno k seřazení položek, které `AddSortedItems` přidá do seznamu.|  
+|[CMFCToolBarComboBoxButton::AddItem](#additem)|Přidá položku do konce seznamu pole se seznamem.|  
+|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Přidá položku do seznamu pole se seznamem. Pořadí položek v seznamu je určená `Compare`.|  
+|[CMFCToolBarComboBoxButton::Compare](#compare)|Porovná dvě položky. Volána k řazení položek, které `AddSortedItems` přidá do seznamu pole se seznamem.|  
 |[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Vytvoří nový ovládací prvek úprav pro tlačítko pole se seznamem.|  
-|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Vymaže položku ze seznamu.|  
+|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Odstraní položku ze seznamu pole se seznamem.|  
 |[CMFCToolBarComboBoxButton::FindItem](#finditem)|Vrátí index položky, která obsahuje zadaný řetězec.|  
-|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Vrací ukazatel na tlačítko pole se seznamem s ID zadaný příkaz.|  
-|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Vrací ukazatel na prvek pole se seznamem, který je vložen do tlačítko pole se seznamem.|  
-|[CMFCToolBarComboBoxButton::GetCount](#getcount)|Vrátí počet položek, které se seznamem se pole seznamu.|  
-|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Vyhledá se seznamem se tlačítko pole, které má zadaný příkaz ID. Vrátí počet položek, které se seznamem se pole seznamu tohoto tlačítka.|  
-|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Vrátí index vybrané položky se seznamem se pole seznamu.|  
-|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Vyhledá se seznamem se tlačítko pole, které má zadaný příkaz ID a vrátí index vybrané položky se seznamem se pole seznamu tohoto tlačítka.|  
-|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Vrátí ovládací prvek úprav, který je součástí tlačítko pole se seznamem ukazatel.|  
-|[CMFCToolBarComboBoxButton::GetItem](#getitem)|Vrátí řetězec, který je přidružen zadanému indexu v se seznamem se seznam pole.|  
-|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Vyhledá se seznamem se tlačítko pole, které má zadaný příkaz ID a vrátí řetězec, který je přidružený index v seznamu pole se seznamem tohoto tlačítka.|  
-|[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Vrátí hodnotu 32-bit, která souvisí s zadaného indexu v se seznamem se pole seznamu.|  
-|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Vyhledá se seznamem se pole tlačítka, který má zadaný příkaz ID a vrátí hodnotu 32-bit, který je přidružený index v seznamu pole se seznamem tohoto tlačítka.|  
-|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Vyhledá se seznamem se tlačítko pole, které má zadaný příkaz ID. Načte hodnotu 32-bit, která je spojená indexu v seznamu pole se seznamem tohoto tlačítka a vrátí hodnotu 32-bit jako ukazatel.|  
-|[CMFCToolBarComboBoxButton::GetText](#gettext)|Vrátí text z ovládacího prvku pole se seznamem pro úpravy.|  
-|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Vyhledá se seznamem se pole tlačítka, který má zadaný příkaz ID a vrátí text z ovládací prvek pro úpravy tohoto tlačítka.|  
-|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Určuje, zda jsou tlačítka pole se seznamem v aplikaci na střed nebo v souladu s horní části panelu nástrojů.|  
-|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Určuje, zda mají tlačítka pole se seznamem v aplikaci s plochým vzhledem.|  
-|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Odebere všechny položky ze seznamu, pole a ovládacích prvků pole se seznamem pro úpravy.|  
-|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Vybere v pole se seznamem podle jeho indexu, 32bitovou hodnotu nebo řetězec a upozorní ovládacího prvku pole se seznamem o výběr.|  
-|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Vyhledá se seznamem se tlačítko pole, které má zadaný příkaz ID. Volání `SelectItem` vybrat položku do pole se seznamem tohoto tlačítka podle jeho řetězec, indexu nebo 32bitovou hodnotu.|  
-|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Určuje, zda jsou tlačítka pole se seznamem v aplikaci svisle na střed nebo v souladu s horní části panelu nástrojů.|  
-|[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Nastaví výšku rozevíracího seznamu.|  
-|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Určuje, jestli mají tlačítka pole se seznamem v aplikaci s plochým vzhledem.|  
+|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Vrací ukazatel na tlačítka pole se seznamem s ID zadaného příkazu.|  
+|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Vrací ukazatel na prvek pole se seznamem, který je součástí tlačítko pole se seznamem.|  
+|[CMFCToolBarComboBoxButton::GetCount](#getcount)|Vrátí počet položek, které pole se seznamem seznamu pole.|  
+|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu. Vrátí počet položek, které pole se seznamem pole seznamu toto tlačítko.|  
+|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Vrátí index vybrané položky pole se seznamem seznamu pole.|  
+|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu a vrátí index vybrané položky pole se seznamem pole seznamu toto tlačítko.|  
+|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Vrací ukazatel na ovládací prvek pro úpravy, které jsou součástí tlačítko pole se seznamem.|  
+|[CMFCToolBarComboBoxButton::GetItem](#getitem)|Vrátí řetězec, který je přidružený k zadanému indexu pole se seznamem seznamu pole.|  
+|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu a vrátí řetězec, který je přidružený k indexu v seznamu pole se seznamem toto tlačítko.|  
+|[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Vrátí hodnotu 32-bit, který je přidružený k zadanému indexu pole se seznamem seznamu pole.|  
+|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu a vrátí hodnotu 32-bit, který je spojen s indexem v seznamu pole se seznamem toto tlačítko.|  
+|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu. Načte 32bitovou hodnotu, která je spojená indexu v seznamu pole se seznamem tohoto tlačítka a vrátí hodnotu 32-bit jako ukazatel.|  
+|[CMFCToolBarComboBoxButton::GetText](#gettext)|Vrátí text z ovládacího prvku pro úpravy pole se seznamem.|  
+|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu a vrátí text z ovládací prvek pro úpravy tohoto tlačítka.|  
+|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Určuje, jestli jsou tlačítka pole se seznamem v aplikaci na střed nebo v souladu s horním panelu nástrojů.|  
+|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Určuje, zda mají tlačítka pole se seznamem v aplikaci jako plochá.|  
+|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Odebere všechny položky v seznamu pole a upravit ovládací prvek pole se seznamem.|  
+|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Vybere položku v poli se seznamem podle jeho index, 32bitová hodnota nebo řetězec a upozorní ovládací prvek pole se seznamem o výběru.|  
+|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Vyhledá pole se seznamem, tlačítka pole, která má ID zadaného příkazu. Volání `SelectItem` vybrat položku v poli se seznamem tohoto tlačítka podle jeho string, index a 32bitová hodnota.|  
+|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Určuje, zda jsou tlačítka pole se seznamem v aplikaci svisle na střed nebo v souladu s horním panelu nástrojů.|  
+|[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Nastaví výšku pole rozevíracího seznamu.|  
+|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Určuje, zda tlačítka pole se seznamem v aplikaci jako plochá.|  
   
 ## <a name="remarks"></a>Poznámky  
  Chcete-li přidat tlačítko pole se seznamem na panel nástrojů, postupujte takto:  
   
  1. Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů.  
   
- 2. Vytvořit `CMFCToolBarComboBoxButton` objektu.  
+ 2. Vytvoření `CMFCToolBarComboBoxButton` objektu.  
   
- 3. V popisovač zpráv, který zpracovává zprávy AFX_WM_RESETTOOLBAR, nahraďte tlačítko fiktivní tlačítka Nová pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. V popisovači zpráv, která zpracovává zprávu AFX_WM_RESETTOOLBAR, nahraďte zástupné tlačítko Nová tlačítka pole se seznamem pomocí [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad tlačítka panelu nástrojů pole se seznamem najdete příklad projektu VisualStudioDemo.  
+ Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md). Příklad tlačítka pole se seznamem viz příklad projektu VisualStudioDemo.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pomocí různých metod v nástroji `CMFCToolBarComboBoxButton` třídy. Tento příklad ukazuje, jak povolit polích upravit a pole se seznamem, nastaví svislou pozici polí se seznamem tlačítka pole v aplikaci, nastavit výška pole se seznamem při umístění, nastavte plochý vzhled tlačítek pole se seznamem v aplikaci a nastavit text do textového pole se seznamem se pro tlačítko pole. Tento fragment kódu je součástí [Visual Studio Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak použít různé metody v `CMFCToolBarComboBoxButton` třídy. Tento příklad ukazuje, jak povolit úpravy a pole se seznamem polí, nastaví svislou pozici polí se seznamem, tlačítka pole v aplikaci, nastavení výšky pole se seznamem, když se rozbalil, nastavte plochý vzhled tlačítka pole se seznamem v aplikaci a nastavit text podle pole pro úpravy pole se seznamem tlačítko pole. Tento fragment kódu je součástí [Visual Studio demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
+ [Cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
- [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
+ [Cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtoolbarcomboboxbutton.h  
   
 ##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem  
- Připojí položku jedinečný pro pole se seznamem.  
+ Připojí jedinečný položky pole se seznamem.  
   
 ```  
 virtual INT_PTR AddItem(
@@ -168,22 +168,22 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszItem*  
+ [in] *lpszItem*  
  Text položky pro přidání do seznamu.  
   
- [v] *dwData*  
- Data přidružená k položce přidat do seznamu.  
+ [in] *dwData*  
+ Data přidružená k položky pro přidání do seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index poslední položky v seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- Nepoužívejte tuto metodu, když je seřazen styl box seznamu.  
+ Nepoužívejte tuto metodu při řazení seznamu na styl box.  
   
- Pokud text položky je již v seznamu, nová data se uloží spolu existující položku. Vyhledejte položku je malá a velká písmena.  
+ Pokud text položky je už v seznamu, nová data se ukládají s existující položku. Vyhledejte položku je velká a malá písmena.  
   
 ##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
- Přidá položku do pole se seznamem v pořadí, ve kterém je definována [porovnat](#compare) metoda.  
+ Přidá položku do seznamu v pořadí, ve kterém je definována [porovnání](#compare) metody.  
   
 ```  
 virtual INT_PTR AddSortedItem(
@@ -192,30 +192,30 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszItem*  
+ [in] *lpszItem*  
  Text položky pro přidání do seznamu.  
   
- [v] *dwData*  
- Data přidružená k položce přidat do seznamu.  
+ [in] *dwData*  
+ Data přidružená k položky pro přidání do seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Index položky, která byla přidána do seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce můžete přidat položky do seznamu v určitém pořadí.  
+ Tuto funkci použijte k přidání položek do seznamu v určitém pořadí.  
   
 ##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched  
- Určuje, zda lze změnit velikost tlačítko pole se seznamem.  
+ Určuje, zda můžete změnit velikost tlačítka pole se seznamem.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `TRUE`.  
+ Vrátí hodnotu TRUE.  
   
 ##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
- Vytvoří [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objektu.  
+ Vytvoří [cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objektu.  
   
 ```  
 CMFCToolBarComboBoxButton(
@@ -226,35 +226,35 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiID*  
- ID příkazu tlačítko Nový.  
+ [in] *uiID*  
+ Identifikátor příkazu tlačítka Nový.  
   
- [v] *iImage*  
- Index obrázku přidružený tlačítko nové bitové kopie.  
+ [in] *iImage*  
+ Index obrázku přidružený k tlačítku nové bitové kopie.  
   
- [v] *dwStyle*  
- Styl tlačítko Nový.  
+ [in] *dwStyle*  
+ Styl tlačítka Nový.  
   
- [v] *iWidth*  
- Šířka v pixelech tlačítko Nový.  
+ [in] *iWidth*  
+ Šířka v pixelech, o nové tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí šířku je 150 pixelů.  
+ Výchozí šířka je 150 pixelů.  
   
- Seznam styly tlačítek panelu nástrojů najdete v části [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md)  
+ Seznam styly tlačítek panelu nástrojů najdete v části [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md)  
   
 ##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
- Uživatelem definované datové odstranění.  
+ Uživatelem definované datové odstraní.  
   
 ```  
 virtual void ClearData();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení tato metoda neprovede žádnou akci. Potlačí tuto metodu v odvozené třídě, pokud chcete odstranit všechna uživatelská data.  
+ Ve výchozím nastavení tato metoda nemá žádný účinek. Pokud chcete odstranit všechna data definovaný uživatelem, přepište tuto metodu v odvozené třídě.  
   
 ##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
- Porovnává dva řetězce.  
+ Porovná dva řetězce.  
   
 ```  
 virtual int Compare(
@@ -263,37 +263,37 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszItem1*  
+ [in] *lpszItem1*  
  První řetězec určený k porovnání  
   
- [v] *lpszItem2*  
+ [in] *lpszItem2*  
  Druhý řetězec určený k porovnání  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota, která označuje malá a velká písmena lexicographic vztah mezi řetězce. Následující tabulka uvádí možné hodnoty:  
+ Hodnota, která označuje malá a velká písmena lexikografickým vztah mezi řetězce. V následující tabulce jsou uvedeny možné hodnoty:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|\<0|První řetězec je menší než druhý.|  
-|0|První řetězec rovná druhé.|  
-|>0|První řetězec je větší než druhý.|  
+|\<0|První řetězec, který je menší než druhý.|  
+|0|První řetězec, který se rovná druhé.|  
+|>0|První řetězec, který je větší než druhý.|  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, chcete-li změnit řazení položky v seznamu.  
+ Přepsáním této metody můžete změnit způsob řazení položek v seznamu.  
   
- Porovnání rozlišuje velká a malá písmena.  
+ Porovnávání rozlišuje velká a malá písmena.  
   
- Tato metoda je volána pouze z [AddSortedItem](#addsorteditem) metoda.  
+ Tato metoda je volána pouze z [AddSortedItem](#addsorteditem) metody.  
   
 ##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
- Zkopíruje stav zadaného `CMFCToolBarComboBoxButton` jako aktuální objekt.  
+ Zkopíruje stav zadaného `CMFCToolBarComboBoxButton` aktuálnímu objektu.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] `src`  
+ [in] *src*  
  Zdroj `CMFCToolBarComboBoxButton` objektu.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
@@ -306,14 +306,14 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
+ [in] *pWndParent*  
  Ukazatel do nadřazeného okna tlačítka.  
   
- [v] *Rect –*  
+ [in] *rect*  
  Ohraničující obdélník pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na nové pole se seznamem, pokud metoda byla úspěšná. v opačném `NULL`.  
+ Ukazatel na nové pole se seznamem, pokud metoda byla úspěšná. v opačném případě hodnota NULL.  
   
 ##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
  Vytvoří nové textové pole pro tlačítko pole se seznamem.  
@@ -326,23 +326,23 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
+ [in] *pWndParent*  
  Ukazatel do nadřazeného okna tlačítka.  
   
- [v] *Rect –*  
- Ohraničující obdélník nové textové pole.  
+ [in] *rect*  
+ Ohraničující obdélník nové pole pro úpravy.  
   
- [v] *dwEditStyle*  
- Ovládací prvek styl nové textové pole.  
+ [in] *dwEditStyle*  
+ Styl ovládacího prvku nové pole pro úpravy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na nové textové pole, pokud metoda byla úspěšná. v opačném `NULL`.  
+ Ukazatel na nové textové pole, pokud metoda byla úspěšná. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework při vytváření nové textové pole pro tlačítko pole se seznamem. Potlačí tuto metodu, chcete-li změnit jak [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) je vytvořena.  
+ Rozhraní volá tuto metodu při vytváření nové textové pole pro tlačítko pole se seznamem. Přepsáním této metody můžete změnit způsob [cmfctoolbarcomboboxedit –](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) se vytvoří.  
   
 ##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
- Odstraní určenou položku z pole se seznamem.  
+ Odstraní zadanou položku ze seznamu.  
   
 ```  
 BOOL DeleteItem(int iIndex);  
@@ -351,17 +351,17 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Index založený na nule položky pro odstranění.  
+ [in] *iIndex*  
+ Index založený na nule položka, která má být odstraněna.  
   
- [v] *dwData*  
- Data související s položka, která má být odstraněna.  
+ [in] *dwData*  
+ Data přidružená k položka, která má být odstraněna.  
   
- [v] *lpszText*  
- Text položky pro odstranění. Pokud je vybráno více položek se stejný text, první položku, je odstranit.  
+ [in] *lpszText*  
+ Text položky, která má být odstraněna. Pokud existuje více položek se stejným textem, odstraní se první položka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud byla položka nachází a byla úspěšně odstraněna; v opačném `FALSE`.  
+ Hodnota TRUE, pokud byla položka nachází a byla úspěšně odstraněna; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -373,7 +373,7 @@ virtual void DuplicateData();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení tato metoda neprovede žádnou akci. Potlačí tuto metodu v odvozené třídě, pokud chcete zkopírovat všechna uživatelská data.  
+ Ve výchozím nastavení tato metoda nemá žádný účinek. Potlačí tuto metodu v odvozené třídě, pokud chcete zkopírovat všechny uživatelem definované datové.  
   
 ##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
  Povolí nebo zakáže úpravy a pole se seznamem polí.  
@@ -383,25 +383,25 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bEnable*  
- `TRUE` Povolit úpravy a pole se seznamem polí; `FALSE` zakázat polích upravit a pole se seznamem.  
+ [in] *bEnable*  
+ TRUE, pokud chcete povolit úpravy a pole se seznamem polí; FALSE, pokud chcete zakázat úpravy a pole se seznamem polí.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je zakázáno, ovládací prvky se nemůže stát aktivní a nemůže přijímat vstup uživatele.  
+ Pokud je zakázán, ovládací prvky se nemůže stát aktivní a nemůže přijímat uživatelský vstup.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
- ID kopie řetězec z tabulky řetězec aplikace tak, aby zadaný nabídky pomocí příkazu tlačítko pole se seznamem.  
+ Kopie řetězce z tabulky řetězců aplikaci do nabídky zadané pomocí příkazu tlačítka pole se seznamem ID.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *tlačítko nabídky*  
- Odkaz na tlačítka s nabídkou.  
+ [out] *menuButton*  
+ Odkaz na tlačítko nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy `TRUE`.  
+ Vždy TRUE.  
   
 ##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
  Vrátí index první položky v seznamu, který obsahuje zadaný řetězec.  
@@ -411,16 +411,16 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszText*  
- Text, který chcete vyhledat v rozevíracím seznamu.  
+ [in] *lpszText*  
+ Text, který chcete vyhledat v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index položky; nebo `CB_ERR` Pokud položka není nalezena.  
+ Index položky; nebo CB_ERR, pokud položka není nalezena.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd  
- Získá ukazatel na tlačítko pole se seznamem, který má zadaný příkaz ID.  
+ Získá ukazatel na tlačítka pole se seznamem, který má ID zadaného příkazu.  
   
 ```  
 static CMFCToolBarComboBoxButton* GetByCmd(
@@ -429,26 +429,26 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem.  
   
- [v] *bIsFocus*  
- `TRUE` Chcete-li hledat pouze zaměřuje tlačítka; `FALSE` k vyhledání všech tlačítek.  
+ [in] *bIsFocus*  
+ True pro pouze vyhledávání, zaměřuje tlačítka; FALSE, pokud chcete hledat všechna tlačítka.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na tlačítko pole se seznamem; nebo `NULL` Pokud tlačítko nebyl nalezen.  
+ Ukazatel na tlačítka pole se seznamem; nebo hodnota NULL, pokud se nenajde na tlačítko.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox  
- Vrací ukazatel na pole se seznamem se seznamem se tlačítko pole.  
+ Vrací ukazatel na pole se seznamem pole se seznamem tlačítko pole.  
   
 ```  
 CComboBox* GetComboBox() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CComboBox – třída](../../mfc/reference/ccombobox-class.md) objektu, pokud metoda byla úspěšná, jinak hodnota `NULL`.  
+ Ukazatel [CComboBox – třída](../../mfc/reference/ccombobox-class.md) objektu, pokud metoda byla úspěšná; jinak hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -460,7 +460,7 @@ UINT GetContextMenuID();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID místní nabídky prostředku.  
+ ID místní nabídce prostředku.  
   
 ##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
  Vrátí počet položek v seznamu.  
@@ -475,18 +475,18 @@ INT_PTR GetCount() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll  
- Získá počet položek v seznamu tlačítka pole se seznamem, který má zadaný příkaz ID.  
+ Získá počet položek v seznamu tlačítko pole se seznamem, který má ID zadaného příkazu.  
   
 ```  
 static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet položek v seznamu; v opačném `CB_ERR` Pokud tlačítko pole se seznamem nebylo nalezeno.  
+ Počet položek v seznamu pole. v opačném případě CB_ERR Pokud tlačítko pole se seznamem se nenašel.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -498,37 +498,37 @@ int GetCurSel() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index aktuálně vybrané položky v seznamu; nebo `CB_ERR` Pokud není vybrána žádná položka.  
+ Index aktuálně vybrané položky v seznamu pole. nebo CB_ERR, pokud není vybrána žádná položka.  
   
 ### <a name="remarks"></a>Poznámky  
- Indexu pole se seznamem je počítáno od nuly.  
+ Indexu pole se seznamem je založený na nule.  
   
 ##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
- Vrátí index aktuálně vybrané položky v seznamu pole se seznamem tlačítko pole, které má zadaný příkaz ID.  
+ Vrátí index aktuálně vybrané položky v seznamu pole se seznamem, tlačítka pole, která má ID zadaného příkazu.  
   
 ```  
 static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Index aktuálně vybrané položky v seznamu; v opačném `CB_ERR` Pokud není vybrána žádná položka nebo tlačítko pole se seznamem nebyl nalezen.  
+ Index aktuálně vybrané položky v seznamu pole. v opačném případě se nenašel CB_ERR, pokud není vybrána žádná položka nebo tlačítko pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
- Indexu pole se seznamem je počítáno od nuly.  
+ Indexu pole se seznamem je založený na nule.  
   
 ##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl  
- Vrací ukazatel na textové pole se seznamem se tlačítko pole.  
+ Vrací ukazatel na pole pro úpravy pole se seznamem tlačítko pole.  
   
 ```  
 virtual CEdit* GetEditCtrl();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na textové pole, pokud metoda byla úspěšná. v opačném `NULL`.  
+ Ukazatel na textové pole, pokud metoda byla úspěšná. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -540,27 +540,27 @@ virtual HWND GetHwnd();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač okna, nebo `NULL` Pokud pole se seznamem není spojen s objektem okna.  
+ Popisovač okna, nebo hodnota NULL, pokud není spojen s objektem okna v poli se seznamem.  
   
 ##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
- Vrátí řetězec přidružený k položku na zadaný index v poli seznamu.  
+ Vrací řetězec přidružený k položce na zadaném indexu v seznamu.  
   
 ```  
 LPCTSTR GetItem(int iIndex=-1) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Index položky v seznamu nule.  
+ [in] *iIndex*  
+ Z nuly vycházející index položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na řetězec, který je přidružená k položce; v opačném `NULL` Pokud parametr indexu je neplatná, nebo pokud parametr indexu -1 a v seznamu je vybrána žádná položka.  
+ Ukazatel na řetězec, který je přidružený k položce; v opačném případě hodnotu NULL, pokud parametr indexu je neplatný, nebo pokud je parametr indexu -1 a v poli se seznamem není vybrána žádná položka.  
   
 ### <a name="remarks"></a>Poznámky  
- Index parametru-1 vrátí řetězec aktuálně vybrané položky.  
+ Parametr indexu-1 vrátí řetězec, který je aktuálně vybrané položky.  
   
 ##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
- Vrátí řetězec přidružený k položku na zadaný index v poli seznamu tlačítka pole se seznamem, který má zadaný příkaz ID.  
+ Vrací řetězec přidružený k položce na zadaný index v poli seznamu tlačítko pole se seznamem, který má ID zadaného příkazu.  
   
 ```  
 static LPCTSTR GetItemAll(
@@ -569,37 +569,37 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem.  
   
- [v] *iIndex*  
- Index založený na nule položky v seznamu.  
+ [in] *iIndex*  
+ Index založený na nule položku v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na položky řetězec, pokud metoda byla úspěšná. jinak `NULL` Pokud index není platný, tlačítko pole se seznamem není nalezen, nebo pokud index, je -1 a není vybrána žádná položka v seznamu.  
+ Ukazatel na řetězec položky, pokud metoda byla úspěšná. v opačném případě hodnotu NULL, pokud je index není platný, tlačítka pole se seznamem není nalezen, nebo pokud je index -1 a v poli se seznamem není vybrána žádná položka.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota indexu -1 vrátí řetězec aktuálně vybrané položky.  
+ Hodnota indexu-1 vrátí řetězec, který je aktuálně vybrané položky.  
   
 ##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
- Vrací data související s položky na konkrétní indexu v seznamu.  
+ Vrátí data související s položkou v konkrétní indexu v seznamu.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex=-1) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Index založený na nule položky v seznamu.  
+ [in] *iIndex*  
+ Index založený na nule položku v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Data přidružená k položce; nebo 0, pokud položka neexistuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Index parametru-1 vrací data související s aktuálně vybrané položky.  
+ Parametr indexu-1 vrátí data přidružená k aktuálně vybrané položky.  
   
 ##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
- Vrátí data související s položky na konkrétní indexu v seznamu tlačítka pole se seznamem, které má konkrétní příkaz ID.  
+ Vrátí data související s položkou v konkrétní indexu v seznamu tlačítka pole se seznamem, který má ID konkrétní příkazu.  
   
 ```  
 static DWORD_PTR GetItemDataAll(
@@ -608,20 +608,20 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem.  
   
- [v] *iIndex*  
- Index založený na nule položky v seznamu.  
+ [in] *iIndex*  
+ Index založený na nule položku v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Data související s položkou, pokud metoda byla úspěšná. jinak hodnota 0, pokud zadaný index není platný nebo CB_ERR Pokud tlačítko pole se seznamem se nenašla.  
+ Data související s položkou, byla-li metoda úspěšná; v opačném případě 0, pokud zadaný index je neplatný nebo CB_ERR Pokud tlačítko pole se seznamem se nenašel.  
   
 ### <a name="remarks"></a>Poznámky  
- Index parametru-1 vrací data související s aktuálně vybrané položky.  
+ Parametr indexu-1 vrátí data přidružená k aktuálně vybrané položky.  
   
 ##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
- Vrátí data související s položky na konkrétní indexu v seznamu tlačítka pole se seznamem, které má konkrétní příkaz ID. Tato data jsou vrácena jako ukazatel.  
+ Vrátí data související s položkou v konkrétní indexu v seznamu tlačítka pole se seznamem, který má ID konkrétní příkazu. Tato data se vrátí jako ukazatel.  
   
 ```  
 static void* GetItemDataPtrAll(
@@ -630,26 +630,26 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu, který se zobrazí tlačítko pro pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem.  
   
- [v] *iIndex*  
- Index založený na nule položky v seznamu.  
+ [in] *iIndex*  
+ Index založený na nule položku v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel přidružené k položce, pokud metoda byla úspěšná. jinak hodnota -1, pokud dojde k chybě, nebo `NULL` Pokud tlačítko pole se seznamem nebylo nalezeno.  
+ Ukazatel přidružené k položce byla-li metoda úspěšná; v opačném případě dojde k-1, pokud chybu nebo hodnota NULL, pokud tlačítko pole se seznamem se nenašel.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
- Vrátí text výzvy pro se seznamem se tlačítko pole.  
+ Vrátí řetězec, který se pro pole se seznamem, tlačítka pole.  
   
 ```  
 virtual CString GetPrompt() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výzva řetězec.  
+ Řetězec, který se.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda není aktuálně implementována.  
@@ -667,88 +667,88 @@ LPCTSTR GetText() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll  
- Načte text do textového pole pro tlačítko pole se seznamem, který má zadaný příkaz ID.  
+ Načte text do textového pole tlačítko pole se seznamem, který má ID zadaného příkazu.  
   
 ```  
 static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole s konkrétní pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem konkrétní.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Text do textového pole, pokud metoda byla úspěšná. v opačném `NULL`.  
+ Text v textové pole, pokud metoda byla úspěšná. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="hasfocus"></a>  CMFCToolBarComboBoxButton::HasFocus  
- Určuje, zda pole se seznamem právě aktivní.  
+ Označuje, zda pole se seznamem má aktuálně fokus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud pole se seznamem má právě fokus; v opačném `FALSE`.  
+ Hodnota TRUE, pokud pole se seznamem má právě fokus; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda také vrátí hodnotu `TRUE` žádné podřízeného okna pole se seznamem má právě fokus.  
+ Tato metoda také vrátí hodnotu TRUE, pokud všechny podřízené okno pole se seznamem má aktuálně fokus.  
   
 ##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
- Vrátí pozice ve svislém směru tlačítek pole se seznamem v aplikaci.  
+ Vrátí svislá pozice tlačítka pole se seznamem v aplikaci.  
   
 ```  
 static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se na tlačítka; `FALSE` Pokud jsou v souladu tlačítek v horní části.  
+ Hodnota TRUE, pokud se na tlačítka; FALSE, pokud jsou zarovnané tlačítka v horní části.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode  
- Vrátí plochý vzhled tlačítek pole se seznamem v aplikaci.  
+ Vrací plochý vzhled tlačítka pole se seznamem v aplikaci.  
   
 ```  
 static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud máte tlačítka plochý; v opačném `FALSE`.  
+ Hodnota TRUE, pokud tlačítka mají plochý; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Je výchozí styl ploché pro tlačítka pole se seznamem `FALSE.`  
+ Výchozí styl ploché tlačítka pole se seznamem je FALSE.  
   
 ##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
- Určuje, zda je zadaný popisovač přidružený tlačítko pole se seznamem nebo jednu z jejích podřízených.  
+ Označuje, zda je zadaný popisovač spojené s tlačítko pole se seznamem nebo jedna z jejích podřízených.  
   
 ```  
 virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hwnd*  
+ [in] *hwnd*  
  Popisovač okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud popisovač assocated s tlačítko pole se seznamem nebo jednu z jejích podřízených; v opačném `FALSE`.  
+ Hodnota TRUE, pokud je popisovač je přidružený pomocí tlačítka pole se seznamem nebo jedna z jejích podřízených; v opačném případě hodnota FALSE.  
   
 ##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
- Určuje, zda tlačítko pole se seznamem se nachází na panelu pásu karet.  
+ Určuje, zda se nachází tlačítko pole se seznamem na panel pásu karet.  
   
 ```  
 BOOL IsRibbonButton() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy `FALSE`.  
+ Vždy hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení, tato metoda vždy vrátí `FALSE`, což znamená, že se seznamem se tlačítko pole se nikdy zobrazí na panelu pásu karet.  
+ Ve výchozím nastavení tato metoda vždy vrátí hodnotu FALSE, což znamená, že tlačítko pole se seznamem se nikdy zobrazí na panelu pásu karet.  
   
 ##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
- Vrátí stav viditelnosti se seznamem se tlačítko pole.  
+ Vrátí pole se seznamem stav viditelnosti tlačítka pole.  
   
 ```  
 virtual BOOL IsWindowVisible();
@@ -758,28 +758,28 @@ virtual BOOL IsWindowVisible();
  Stav viditelnosti tlačítka pole se seznamem.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand  
- Určuje, zda zprávu zpracuje tlačítko pole se seznamem.  
+ Určuje, zda tlačítko pole se seznamem zpracovávat zprávu.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iNotifyCode*  
- Oznámení, které souvisí s příkaz.  
+ [in] *iNotifyCode*  
+ Zprávy oznámení, který je přidružený příkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jestli zprávu zpracuje tlačítko pole se seznamem.  
+ Určuje, zda tlačítko pole se seznamem zpracovává zprávy.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
- Voláno rámcem, když je tlačítko přidán do **přizpůsobit** dialogové okno.  
+ Volá se rozhraním, když se přidá tlačítko do **vlastní** dialogové okno.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
 ##  <a name="oncalculatesize"></a>  CMFCToolBarComboBoxButton::OnCalculateSize  
- Voláno rámcem vypočítat velikost tlačítka.  
+ Volá se rozhraním vypočítat velikost tlačítka.  
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -789,31 +789,31 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko pole se seznamem.  
+ [in] *primárního řadiče domény*  
+ Kontext zařízení, která zobrazuje tlačítko pole se seznamem.  
   
- [v] *sizeDefault*  
- Výchozí velikost tlačítko pole se seznamem.  
+ [in] *sizeDefault*  
+ Výchozí velikost tlačítka pole se seznamem.  
   
- [v] *bHorz*  
- Stav ukotvení panelu nástrojů nadřazené. `TRUE` Když se panelu nástrojů ukotveno vodorovně a `FALSE` když panelu nástrojů ukotveno svisle.  
+ [in] *bHorz*  
+ Ukotvit stav nadřazeného panelu nástrojů. Hodnota TRUE, když se ukotví vodorovně a FALSE. když se ukotví svisle.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A `SIZE` struktura, která obsahuje dimenze tlačítko pole se seznamem v pixelech.  
+ A `SIZE` strukturu, která obsahuje dimenze tlačítko pole se seznamem v pixelech.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
- Voláno rámcem při tlačítko pole se seznamem se vloží do nového panelu nástrojů.  
+ Volá se rozhraním, když tlačítko pole se seznamem se vloží do nového panelu nástrojů.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
- Ukazatel na panelu nástrojů nové nadřazené.  
+ [in] *pWndParent*  
+ Ukazatel do nového nadřazeného panelu nástrojů.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
- Voláno rámcem, když uživatel klikne na tlačítko pole se seznamem.  
+ Volá se rozhraním, když uživatel klikne na tlačítko pole se seznamem.  
   
 ```  
 virtual BOOL OnClick(
@@ -822,17 +822,17 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- Ukazatel do nadřazeného okna tlačítka pole se seznamem.  
+ [in] *pWnd*  
+ Ukazatel na nadřazené okno tlačítko pole se seznamem.  
   
- [v] *bDelay*  
+ [in] *bDelay*  
  Vyhrazené pro použití v odvozené třídě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda zpracovává událost. v opačném `FALSE`.  
+ Hodnota TRUE, pokud metoda zpracovává události. v opačném případě hodnota FALSE.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
- Voláno rámcem, když uživatel změní barvu nadřazené nástrojů nastavit barvu tlačítko pole se seznamem se.  
+ Volá se rozhraním, když uživatel změní barvu nadřazené nástrojů nastavit barvu tlačítka pole se seznamem.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -841,20 +841,20 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko pole se seznamem.  
+ [in] *primárního řadiče domény*  
+ Kontext zařízení, která zobrazuje tlačítko pole se seznamem.  
   
- [v] *nCtlColor*  
- Nepoužívá se.  
+ [in] *nCtlColor*  
+ Nevyužité.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač štětce, který používá rozhraní k vyplnění pozadí tlačítko pole se seznamem.  
+ Popisovač štětec, který systém použije k vykreslení na pozadí tlačítka pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda také nastaví barvu textu tlačítka pole se seznamem.  
   
 ##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
- Voláno rámcem k vykreslení tlačítko pole se seznamem pomocí zadané styly a možnosti.  
+ Volá se rozhraním, chcete-li nakreslit tlačítko pole se seznamem na základě zadaného styly a možnosti.  
   
 ```  
 virtual void OnDraw(
@@ -869,32 +869,32 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko.  
+ [in] *Primárního řadiče domény*  
+ Kontext zařízení, která se zobrazí tlačítko.  
   
- [v] *Rect –*  
- Ohraničující obdélník tlačítko.  
+ [in] *rect*  
+ Ohraničující obdélník na tlačítko.  
   
- [v] *pImages*  
- Kolekce bitové kopie, který je přidružen tlačítko.  
+ [in] *pImages*  
+ Kolekci imagí, který je přidružený k tlačítku.  
   
- [v] *bHorz*  
- Stav ukotvení panelu nástrojů nadřazené. `TRUE` Když se panelu nástrojů ukotveno vodorovně a `FALSE` když panelu nástrojů ukotveno svisle.  
+ [in] *bHorz*  
+ Ukotvit stav nadřazeného panelu nástrojů. Hodnota TRUE, když se ukotví vodorovně a FALSE. když se ukotví svisle.  
   
- [v] *bCustomizeMode*  
- Zda je aplikace v režimu vlastní nastavení.  
+ [in] *bCustomizeMode*  
+ Určuje, zda je aplikace v režimu úprav.  
   
- [v] *bHighlight*  
- Určuje, zda se k vykreslení tlačítko pole se seznamem zvýrazněná.  
+ [in] *bHighlight*  
+ Určuje, zda chcete-li nakreslit zvýrazněným tlačítkem pole se seznamem.  
   
- [v] *bDrawBorder*  
- Určuje, zda se k vykreslení tlačítka pole se seznamem s ohraničení.  
+ [in] *bDrawBorder*  
+ Určuje, zda chcete-li nakreslit tlačítko pole se seznamem s ohraničením.  
   
- [v] *bGrayDisabledButtons*  
- `TRUE` Kreslení šedou barvou zakázané tlačítka; `FALSE` používat zakázáno Image kolekce.  
+ [in] *bGrayDisabledButtons*  
+ True pro vykreslení stín tlačítka Zakázané; FALSE, pokud chcete použít kolekci zakázané imagí.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
- Voláno rámcem kreslení tlačítko pole se seznamem **příkazy** podokně **přizpůsobit** dialogové okno.  
+ Volá se rozhraním, chcete-li nakreslit tlačítko pole se seznamem **příkazy** podokně **vlastní** dialogové okno.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -904,56 +904,56 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Kontext zařízení, který se zobrazí tlačítko pole se seznamem.  
+ [in] *primárního řadiče domény*  
+ Kontext zařízení, která zobrazuje tlačítko pole se seznamem.  
   
- [v] *Rect –*  
+ [in] *rect*  
  Ohraničující obdélník tlačítko pole se seznamem.  
   
- [v] *bSelected*  
- `TRUE` pole se seznamem se tlačítko bude vybrána. v opačném `FALSE`.  
+ [in] *bSelected*  
+ Hodnota TRUE, pokud je zaškrtnuto tlačítko pole se seznamem. v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka v pixelech tlačítko pole se seznamem.  
+ Šířka v pixelech, tlačítka pole se seznamem.  
   
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
- Voláno rámcem nastavit písma tlačítko pole se seznamem se při změně písma aplikace.  
+ Volá se rozhraním, nastavit pole se seznamem písma tlačítko pole při změně písmo aplikace.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
 ##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove  
- Voláno rámcem a změňte umístění tlačítka pole se seznamem, pokud se přesune panel nástrojů nadřazené.  
+ Volá se rozhraním, chcete-li změnit umístění tlačítka pole se seznamem přesun nadřazeného panelu nástrojů.  
   
 ```  
 virtual void OnMove();
 ```  
   
 ##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
- Voláno rámcem při tlačítko pole se seznamem je skrytý nebo zobrazení.  
+ Volá se rozhraním, když je skryta nebo zobrazena tlačítka pole se seznamem.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bShow*  
- Určuje, zda skrytí nebo zobrazení tlačítka pole se seznamem.  
+ [in] *bShow*  
+ Určuje, zda skrýt nebo zobrazit tlačítko pole se seznamem.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
- Voláno rámcem ke změně velikosti tlačítka pole se seznamem, když se změní velikost panelu nástrojů nadřazené.  
+ Volá se rozhraním, chcete-li změnit velikost tlačítka pole se seznamem při změně velikosti nadřazeného panelu nástrojů.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iSize*  
- Nové šířka tlačítko pole se seznamem.  
+ [in] *iSize*  
+ Novou šířku tlačítka pole se seznamem.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
- Voláno rámcem, když uživatel změní popis tlačítka pro tlačítko pole se seznamem.  
+ Volá se rozhraním, když uživatel změní popis tlačítka pro tlačítko pole se seznamem.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -964,20 +964,20 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndParent*  
+ [in] *pWndParent*  
  Ukazatel do nadřazeného okna pro tlačítko pole se seznamem.  
   
- [v] *iButtonIndex*  
+ [in] *iButtonIndex*  
  ID tlačítko pole se seznamem.  
   
- [v] *wndToolTip*  
- Nástroj popisek, který chcete přidružit k tlačítko pole se seznamem.  
+ [in] *wndToolTip*  
+ Popis tlačítka pro přidružení k tlačítko pole se seznamem.  
   
- [v] *str*  
- Text popisu nástroje.  
+ [in] *str*  
+ Text tipu nástroj.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda zpracovává událost. v opačném `FALSE`.  
+ Hodnota TRUE, pokud metoda zpracovává události. v opačném případě hodnota FALSE.  
   
 ##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  Odstraní všechny položky ze seznamu a úpravy polí.  
@@ -987,10 +987,10 @@ void RemoveAllItems();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Odebere všechny položky ze seznamu, pole a ovládacích prvků pole se seznamem pro úpravy.  
+ Odebere všechny položky v seznamu pole a upravit ovládací prvek pole se seznamem.  
   
 ##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem  
- Vyberte položku v seznamu.  
+ Vybere položku v seznamu.  
   
 ```  
 BOOL SelectItem(
@@ -1002,25 +1002,25 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iIndex*  
- Index založený na nule položky v seznamu.  
+ [in] *iIndex*  
+ Index založený na nule položku v seznamu.  
   
- [v] *bNotify*  
- `TRUE` Upozornit na tlačítko pole se seznamem výběru; v opačném případě `FALSE`.  
+ [in] *bNotify*  
+ TRUE, pokud chcete informovat tlačítko pole se seznamem výběru; v opačném případě FALSE.  
   
- [v] *dwData*  
- Data přidružená k položce v seznamu.  
+ [in] *dwData*  
+ Data související s položkou v seznamu.  
   
- [v] *lpszText*  
+ [in] *lpszText*  
  Text položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll  
- Vybere položku v seznamu tlačítka pole se seznamem, který má zadaný příkaz ID.  
+ Vybere položku v seznamu tlačítko pole se seznamem, který má ID zadaného příkazu.  
   
 ```  
 static BOOL SelectItemAll(
@@ -1039,39 +1039,39 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiCmd*  
- ID příkazu tlačítka pole se seznamem, které obsahuje pole se seznamem.  
+ [in] *uiCmd*  
+ Identifikátor příkazu tlačítka pole se seznamem, který obsahuje pole se seznamem.  
   
- [v] *iIndex*  
- Index založený na nule položky v seznamu. Hodnota -1 Odebere všechny aktuální výběr v seznamu a vymaže textové pole.  
+ [in] *iIndex*  
+ Index založený na nule položky v seznamu. Hodnota -1 se odeberou všechny aktuální výběr v seznamu a vymaže pole pro úpravy.  
   
- [v] *dwData*  
+ [in] *dwData*  
  Data, která položky v seznamu.  
   
- [v] *lpszText*  
+ [in] *lpszText*  
  Text položky v seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize  
- Čte tento objekt z archivu nebo zapíše ho do archivu.  
+ Čte tento objekt z archivu nebo zapíše do archivu.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [ve out] *ar*  
- `CArchive` Objektu k serializaci.  
+ [out v] *ar*  
+ `CArchive` Objektu určeného k serializaci.  
   
 ### <a name="remarks"></a>Poznámky  
- Nastavení v `CArchive` objekt určit, zda tato metoda čte nebo zapisuje do archivu.  
+ V nastavení `CArchive` objektu určit, jestli tato metoda čte nebo zapisuje do archivu.  
   
 ##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
- Naplní zadaný `CAccessibilityData` objekt pomocí usnadnění data z tlačítko pole se seznamem.  
+ Naplní zadaný `CAccessibilityData` objekt usnadnění daty z tlačítka pole se seznamem.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1080,97 +1080,97 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParent*  
- Nadřazené okno tlačítka pole se seznamem.  
+ [in] *pParent*  
+ Nadřazené okno tlačítko pole se seznamem.  
   
  [out] *dat*  
- A `CAccessibilityData` objekt, který přijímá data usnadnění z tlačítko pole se seznamem.  
+ A `CAccessibilityData` objekt, který přijímá data přístupnost z tlačítka pole se seznamem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda byla úspěšná. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.  
   
 ##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
- Nastaví pozice ve svislém směru tlačítek pole se seznamem v aplikaci.  
+ Nastaví svislou pozici tlačítka pole se seznamem v aplikaci.  
   
 ```  
 static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bCenterVert*  
- `TRUE` na střed tlačítko pole se seznamem na panelu nástrojů; `FALSE` Chcete-li zarovnat tlačítko pole se seznamem do horní části panelu nástrojů.  
+ [in] *bCenterVert*  
+ TRUE, pokud chcete prostřední tlačítko pole se seznamem na panelu nástrojů; FALSE pro zarovnání tlačítko pole se seznamem na horním panelu nástrojů.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení je zarovnán tlačítka pole se seznamem na začátek.  
+ Ve výchozím nastavení jsou tlačítka pole se seznamem zarovnaným k hornímu.  
   
 ##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
- Nastaví ID prostředku místní nabídky se seznamem se tlačítko pole.  
+ Nastaví ID prostředku místní nabídky pro pole se seznamem, tlačítka pole.  
   
 ```  
 void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiResID*  
- ID místní nabídky prostředku.  
+ [in] *uiResID*  
+ ID místní nabídce prostředku.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
- Výška pole se seznamem nastaví při umístění.  
+ Výška pole se seznamem nastaví, když se rozbalil.  
   
 ```  
 void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nHeight*  
- Výška v pixelech pole se seznamem.  
+ [in] *nHeight*  
+ Výška v pixelech, pole se seznamem.  
   
 ### <a name="remarks"></a>Poznámky  
- Výška výchozí je 150 pixelů.  
+ Výchozí výška je 150 pixelů.  
   
 ##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
- Nastaví plochý vzhled tlačítek pole se seznamem v aplikaci.  
+ Plochý vzhled tlačítka pole se seznamem nastaví v aplikaci.  
   
 ```  
 static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bFlat*  
- `TRUE` pro plochý vzhled; v opačném případě `FALSE`.  
+ [in] *bFlat*  
+ Hodnota TRUE pro plochý vzhled; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí styl ploché pro tlačítka pole se seznamem je `FALSE`.  
+ Výchozí styl ploché tlačítka pole se seznamem je FALSE.  
   
 ##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
- Nastaví zadaný styl pro se seznamem se tlačítko pole nebo ho překreslí ovládacího prvku, jestli není zakázaný.  
+ Nastaví zadaný styl pro pole se seznamem, tlačítka pole a překreslí ovládacího prvku, pokud to není zakázáno.  
   
 ```  
 virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nStyle*  
- Bitová kombinace (nebo) stylů panelu nástrojů.  
+ [in] *nStyle*  
+ Bitová kombinace (nebo) panel nástrojů stylů.  
   
 ### <a name="remarks"></a>Poznámky  
- Seznam styly tlačítek panelu nástrojů najdete v části [styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md)  
+ Seznam styly tlačítek panelu nástrojů najdete v části [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md)  
   
 ##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
- Nastaví text do textového pole se seznamem se pro tlačítko pole.  
+ Nastaví text do textového pole se seznamem pro tlačítko pole.  
   
 ```  
 void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszText*  
- Ukazatel na řetězec, který obsahuje text pro textové pole.  
+ [in] *lpszText*  
+ Ukazatel na řetězec, který obsahuje textu pro textové pole.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBarButton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [CComboBox – třída](../../mfc/reference/ccombobox-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
  [Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)

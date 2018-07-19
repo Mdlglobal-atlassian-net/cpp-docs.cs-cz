@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření a používání instancí ukazatelů shared_ptr | Microsoft Docs'
+title: 'Postupy: vytváření a používání instancí ukazatelů shared_ptr | Dokumentace Microsoftu'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -13,21 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38102895"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů shared_ptr
 Typ `shared_ptr` je inteligentní ukazatel ve standardní knihovně jazyka C++ určený pro scénáře, ve kterých musí více než jeden vlastník spravovat dobu života objektu v paměti. Po inicializaci typu `shared_ptr` jej lze zkopírovat, předat hodnotou argumentům funkce nebo přiřadit dalším instancím typu `shared_ptr`. Všechny tyto instance ukazují na stejný objekt a sdílejí přístup k jednomu „řídicímu bloku“, který zvyšuje a snižuje počet odkazů, kdykoli je nová instance typu `shared_ptr` přidána, dostane se mimo rozsah nebo je obnovena. Když počet odkazů dosáhne nuly, řídicí blok odstraní prostředky paměti a sám sebe.  
   
  Následující obrázek znázorňuje několik instancí typu `shared_ptr`, které odkazují na jedno umístění v paměti.  
   
- [![Sdílené ukazatel](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Sdílený ukazatel](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
 ## <a name="example"></a>Příklad  
- Kdykoli je to možné, použijte [make_shared –](../standard-library/memory-functions.md#make_shared) funkce k vytvoření `shared_ptr` vytvoření paměti prostředků poprvé. Funkce `make_shared` zaručuje bezpečnost výjimek. Používá stejné volání pro přidělení paměti řídicímu bloku a prostředku a tím snižuje zatížení při jejich konstrukci. Pokud funkci `make_shared` nepoužijete, je pro vytvoření objektu před jeho předáním konstruktoru typu `shared_ptr` nutné použít explicitní nový výraz. Následující příklad ukazuje různé způsoby deklarace a inicializace instancí typu `shared_ptr` společně s novým objektem.  
+ Kdykoli je to možné, použijte [make_shared](../standard-library/memory-functions.md#make_shared) funkci, která vytvoří `shared_ptr` kdy je prostředek paměti vytvořen poprvé. Funkce `make_shared` zaručuje bezpečnost výjimek. Používá stejné volání pro přidělení paměti řídicímu bloku a prostředku a tím snižuje zatížení při jejich konstrukci. Pokud funkci `make_shared` nepoužijete, je pro vytvoření objektu před jeho předáním konstruktoru typu `shared_ptr` nutné použít explicitní nový výraz. Následující příklad ukazuje různé způsoby deklarace a inicializace instancí typu `shared_ptr` společně s novým objektem.  
   
  [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]  
   
@@ -37,7 +37,7 @@ Typ `shared_ptr` je inteligentní ukazatel ve standardní knihovně jazyka C++ u
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
 ## <a name="example"></a>Příklad  
- `shared_ptr` je také užitečné v kontejnerech standardní knihovna C++ při použití algoritmy, které kopírování elementů. Prvky lze zabalit do instance typu `shared_ptr` a poté je zkopírovat do jiných kontejnerů s vědomím, že základní paměť je platná tak dlouho, dokud ji potřebujete a ne déle. Následující příklad ukazuje, jak použít algoritmus `replace_copy_if` s instancemi typu `shared_ptr` v instanci typu vector.  
+ `shared_ptr` je také užitečný v kontejnery standardní knihovny C++ při použití algoritmů, které kopírují prvky. Prvky lze zabalit do instance typu `shared_ptr` a poté je zkopírovat do jiných kontejnerů s vědomím, že základní paměť je platná tak dlouho, dokud ji potřebujete a ne déle. Následující příklad ukazuje, jak použít algoritmus `replace_copy_if` s instancemi typu `shared_ptr` v instanci typu vector.  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   
@@ -67,4 +67,4 @@ Typ `shared_ptr` je inteligentní ukazatel ve standardní knihovně jazyka C++ u
  [!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Chytré ukazatele](../cpp/smart-pointers-modern-cpp.md)
+ [Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)

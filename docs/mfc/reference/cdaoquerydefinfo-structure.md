@@ -1,5 +1,5 @@
 ---
-title: Cdaoquerydefinfo – struktura | Microsoft Docs
+title: Cdaoquerydefinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6fe098472eb31f0bd9b185adfa6793f7061a35ac
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338731"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo – struktura
-`CDaoQueryDefInfo` Struktura obsahuje informace o objektu querydef definované pro přístup k objektům dat (DAO).  
+`CDaoQueryDefInfo` Struktura obsahuje informace o objektu querydef definovány pro datový přístup k objektům (DAO).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,72 +46,72 @@ struct CDaoQueryDefInfo
   
 #### <a name="parameters"></a>Parametry  
  *m_strName*  
- Objekt querydef jedinečné názvy. Další informace naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO. Volání [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) přímo načíst tuto vlastnost.  
+ Objekt querydef jedinečné názvy. Další informace naleznete v tématu "Název vlastnosti" v nápovědě k DAO. Volání [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) přímo načíst tuto vlastnost.  
   
  *m_nType*  
- Hodnota, která označuje provozní typ objektu querydef. Hodnota může být jeden z následujících akcí:  
+ Hodnota, která určuje typ provozní querydef objektu. Hodnota může být jeden z následujících akcí:  
   
-- **dbQSelect** vyberte – výběru záznamů.  
+- `dbQSelect` Vyberte – výběru záznamů.  
   
-- **dbQAction** akce – dotaz přesune nebo změny dat ale nevrací záznamy.  
+- `dbQAction` Akce – dotaz se přesune nebo změní data ale nevrací záznamy.  
   
-- **dbQCrosstab** sestavě křížových tabulek – dotaz vrací data v tabulkovém formátu.  
+- `dbQCrosstab` Křížové – dotaz vrací data v tabulkovém formátu.  
   
-- **dbQDelete** odstranit – dotaz odstraní sadu zadaných řádků.  
+- `dbQDelete` Delete – dotaz odstraní sadu zadaných řádků.  
   
-- **dbQUpdate** aktualizace – dotaz se změní sadu záznamů.  
+- `dbQUpdate` Aktualizace – dotaz se změní sadu záznamů.  
   
-- **dbQAppend** připojení – dotaz přidá nové záznamy na konec tabulky nebo dotazu.  
+- `dbQAppend` Append – dotazu přidá nové záznamy na konec tabulky nebo dotazu.  
   
-- **dbQMakeTable** vytvářecí – dotaz vytvoří novou tabulku ze sady záznamů.  
+- `dbQMakeTable` Vytvořit tabulku – dotaz vytvoří novou tabulku ze sady záznamů.  
   
-- **dbQDDL** definiční – struktura tabulky nebo jejich části ovlivňuje dotazu.  
+- `dbQDDL` Definice dat – dotaz ovlivní strukturu tabulek nebo jejich části.  
   
-- **dbQSQLPassThrough** průchozí – příkaz jazyka SQL je předán přímo na back-end databáze, bez zprostředkující zpracování.  
+- `dbQSQLPassThrough` Předávací – přímo na back-end databáze, bez pokročilého zpracování je předán příkazu jazyka SQL.  
   
-- **dbQSetOperation** Union – dotaz vytvoří sada záznamů typu snímek objekt obsahující data z všechny zadané záznamy v dva nebo více tabulek s duplicitní záznamy odebrat. Chcete-li zahrnout duplicitní hodnoty, přidejte klíčové slovo **všechny** v příkazu SQL querydef.  
+- `dbQSetOperation` Union – dotaz vytvoří objekt typ snímku, záznamů obsahující data z všechny zadané záznamy ve dvou nebo více tabulek s duplicitní záznamy, které odebrána. Aby byly tyto duplikáty, přidejte klíčové slovo **všechny** v příkazu SQL querydef.  
   
-- **dbQSPTBulk** použít s **dbQSQLPassThrough** zadat dotaz, který nevrací záznamy.  
+- `dbQSPTBulk` Použít s `dbQSQLPassThrough` zadat dotaz, který nevrací záznamy.  
   
 > [!NOTE]
->  Pokud chcete vytvořit předávací dotaz SQL, kterou nenastavíte **dbQSQLPassThrough** konstantní. Je nastavena automaticky pro databázový stroj Microsoft Jet při vytváření objektu querydef a nastavte vlastnost připojení.  
+>  K vytvoření předávací dotaz SQL, nenastavíte `dbQSQLPassThrough` konstantní. To je nastavena automaticky v databázovém stroji Microsoft Jet při vytváření objektu querydef a nastavte vlastnost připojení.  
   
- Další informace naleznete v tématu "Vlastnost typu" v nápovědě rozhraní DAO.  
+ Další informace naleznete v tématu "Vlastnost typu" v nápovědě k DAO.  
   
  *m_dateCreated*  
- Datum a čas, kdy byl vytvořen querydef. Chcete-li načíst přímo datum, byl vytvořen querydef, volejte [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) členské funkce `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Také naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
+ Datum a čas, kdy byl vytvořen querydef. Chcete-li přímo načíst datum vytvoření querydef, zavolejte [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) členskou funkci `CDaoTableDef` objekt přidružený k tabulce. Další informace naleznete v tématu komentáře níže. Také naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě k DAO.  
   
  *m_dateLastUpdated*  
- Datum a čas poslední změny provedené querydef. Chcete-li načíst přímo datum poslední aktualizace v tabulce, volejte [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) – členská funkce querydef. Další informace naleznete v tématu komentáře níže. A naleznete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě rozhraní DAO.  
+ Datum a čas poslední změny provedené querydef. Chcete-li načíst přímo datum poslední aktualizace v tabulce, zavolejte [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) členskou funkci querydef. Další informace naleznete v tématu komentáře níže. A najdete v tématu "DateCreated LastUpdated vlastnosti" v nápovědě k DAO.  
   
  *m_bUpdatable*  
- Určuje, zda objekt querydef můžete provedeny změny. Pokud je tato vlastnost **TRUE**querydef je aktualizovat; jinak, není. Možností aktualizace znamená, že objekt querydef definice dotazu lze změnit. Aktualizovatelné objektu querydef je nastavena na **TRUE** Pokud definice dotazu lze aktualizovat, i když není možné aktualizovat, výsledná sada záznamů. Tato vlastnost načíst přímo, volání querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) – členská funkce. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
+ Určuje, zda můžete provést změny k objektu querydef. Pokud je tato vlastnost hodnotu TRUE, querydef aktualizovatelný; v opačném případě není. Hodnoty znamená, že definice dotazu querydef objektu můžete změnit. Aktualizovat vlastnost objektu querydef je nastavena na hodnotu TRUE Pokud definice dotazu je možné aktualizovat, i v případě, že není výslednou sadu záznamů aktualizovat. Chcete-li tuto vlastnost načíst přímo, zavolejte querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) členskou funkci. Další informace naleznete v tématu "Aktualizovat vlastnost" v nápovědě k DAO.  
   
  *m_bReturnsRecords*  
- Určuje, zda předávací dotaz SQL na externí databáze vrátí záznamy. Pokud je tato vlastnost **TRUE**, dotaz vrátí záznamy. Chcete-li tuto vlastnost načíst přímo, volejte [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Ne všechny předávací dotazy SQL k externím databázím vracet záznamy. Například SQL **aktualizace** příkaz aktualizují záznamy bez vrácení záznamů při SQL **vyberte** příkaz vrátit záznamy. Další informace naleznete v tématu "Vlastnost vrací záznamy" v nápovědě rozhraní DAO.  
+ Určuje, zda předávací dotaz SQL k externí databázi vrátí záznamy. Pokud je tato vlastnost hodnotu TRUE, dotaz vrátí záznamy. Chcete-li tuto vlastnost načíst přímo, zavolejte [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Ne všechny předávacích dotazů SQL k externím databázím vrací záznamy. Například SQL **aktualizace** příkaz aktualizuje záznamy bez vrácení záznamy při SQL **vyberte** příkaz vrátí záznamy. Další informace naleznete v tématu "Vrací záznamy vlastnost" v nápovědě k DAO.  
   
  *m_strSQL*  
- Příkaz jazyka SQL, který definuje dotaz provedený objektu querydef. Vlastnost SQL obsahuje příkaz jazyka SQL, která určuje, jak jsou vybrány záznamy, seskupené a seřazené při spuštění dotazu. Dotaz můžete použít k výběru záznamy mají být zahrnuty v objektu dynamické nebo snímku sady záznamů. Můžete také definovat dotazy hromadnou úpravou dat bez vrácení záznamů. Hodnota této vlastnosti můžete načíst přímo voláním querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) – členská funkce.  
+ Příkaz SQL, který definuje dotaz proveden querydef objektu. Vlastnost SQL obsahuje příkaz SQL, která určuje, jak jsou vybrány záznamy, seskupených a seřazených při spuštění dotazu. Dotaz můžete použít pro výběr záznamů, které mají být zahrnuty objekt sady záznamů typu dynamická sada nebo snímek. Můžete také definovat dotazy hromadně upravovat data bez vrácení záznamy. Hodnota této vlastnosti můžete načíst přímo pomocí volání querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) členskou funkci.  
   
  *m_strConnect*  
- Poskytuje informace o zdroji této databáze používaná v předávací dotaz. Tyto informace má podobu tohoto řetězce. Další informace o připojení řetězce a informace o načtení hodnota této vlastnosti přímo najdete v tématu [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) – členská funkce.  
+ Poskytuje informace o zdrojové databáze používaná v předávací dotaz. Tyto informace má formu připojovací řetězec. Další informace o připojení řetězce a informace o načtení hodnoty této vlastnosti přímo, najdete v článku [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) členskou funkci.  
   
  *m_nODBCTimeout*  
- Počet sekund, databázového stroje Microsoft Jet čeká, než vypršení časového limitu nastane při spuštění dotazu v databázi ODBC. Pokud používáte databázi aplikace rozhraní ODBC, jako je Microsoft SQL Server, může být zpoždění kvůli komunikaci nebo nadměrnému využití sítě serveru ODBC. Místo čekání po neomezeně, můžete určit, jak dlouho stroje Microsoft Jet čeká, než vyvolá chybu. Výchozí hodnota časového limitu je 60 sekund. Hodnota této vlastnosti můžete načíst přímo voláním querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) – členská funkce. Další informace naleznete v tématu "Odezvy vlastnost" v nápovědě rozhraní DAO.  
+ Počet sekund, po které databázový stroj Microsoft Jet počká, než vypršení časového limitu vyvolá se při spuštění dotazu na databázi rozhraní ODBC. Pokud používáte databázi aplikace rozhraní ODBC, jako je například Microsoft SQL Server, zpožděním může docházet kvůli provoz nebo velmi náročné využití sítě serveru ODBC. Namísto čekání po neomezeně dlouhou, můžete zadat, jak dlouho stroji Microsoft Jet čeká předtím, než dojde k chybě. Výchozí hodnota časového limitu je 60 sekund. Hodnota této vlastnosti můžete načíst přímo pomocí volání querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) členskou funkci. Další informace naleznete v tématu "Odezvy vlastnost" v nápovědě k DAO.  
   
 ## <a name="remarks"></a>Poznámky  
- Je třída objektu querydef [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Odkazy na primární, sekundární a všechny výše označuje, jak je vrácené informace [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) členské funkce ve třídě `CDaoDatabase`.  
+ Objekt třídy je querydef [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md). Odkazy na primární, sekundární a všechny výše určit, jak vrácené informace [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) členské funkce ve třídě `CDaoDatabase`.  
   
- Načte informace [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) – členská funkce je uložen v `CDaoQueryDefInfo` struktura. Volání `GetQueryDefInfo` pro objekt databáze, v jehož querydefs – kolekce querydef objekt se uloží. `CDaoQueryDefInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoQueryDefInfo` objektu. Třída `CDaoDatabase` také poskytuje členské funkce pro přímý přístup k všechny vlastnosti, vrátí se v `CDaoQueryDefInfo` objektu, takže bude pravděpodobně málokdy potřeba volat `GetQueryDefInfo`.  
+ Načte informace [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) členská funkce je uložen v `CDaoQueryDefInfo` struktury. Volání `GetQueryDefInfo` pro databázový objekt, v jehož querydefs – kolekce querydef objekt se uloží. `CDaoQueryDefInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoQueryDefInfo` objektu. Třída `CDaoDatabase` také poskytuje členské funkce pro přímý přístup k všechny vlastnosti vrácené v `CDaoQueryDefInfo` objektu, tedy zřídka pravděpodobně bude nutné zavolat `GetQueryDefInfo`.  
   
- Když přidáte nové pole nebo objekt parametr kolekci polí nebo parametry objektu querydef, je vyvolána výjimka, pokud základní databáze nepodporuje datový typ zadaný pro nový objekt.  
+ Po připojení nové pole nebo objekt parametr do pole nebo parametry kolekce querydef objektu, je vyvolána výjimka, pokud databáze nepodporuje datový typ zadaný pro nový objekt.  
   
- Nastavení data a času jsou odvozené z počítače, na kterém querydef vytvořená nebo poslední aktualizace. V prostředí, musí uživatelé získají tato nastavení přímo ze souborového serveru pomocí **net čas** příkaz, aby se zabránilo nesrovnalostí v nastavení vlastností DateCreated a LastUpdated.  
+ Nastavení data a času jsou odvozeny z počítače, na kterém querydef byl vytvořen nebo poslední aktualizace. V prostředí, uživatelé získají nastavení přímo ze souborového serveru pomocí **net čas** příkaz, aby nedostatky v DateCreated a LastUpdated nastavení vlastnosti.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef – třída](../../mfc/reference/cdaoquerydef-class.md)   
+ [Cdaoquerydef – třída](../../mfc/reference/cdaoquerydef-class.md)   
  [CDaoDatabase – třída](../../mfc/reference/cdaodatabase-class.md)

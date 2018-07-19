@@ -1,5 +1,5 @@
 ---
-title: condition_variable_any – třída | Microsoft Docs
+title: condition_variable_any – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959229"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any – třída
 
-Použití třídy `condition_variable_any` čekání na událost, která obsahuje některý `mutex` typu.
+Použití třídy `condition_variable_any` k čekání na událost, která má libovolný `mutex` typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,23 +51,23 @@ class condition_variable_any;
 
 |Název|Popis|
 |----------|-----------------|
-|[condition_variable_any](#condition_variable_any)|Vytvoří `condition_variable_any` objektu.|
+|[condition_variable_any –](#condition_variable_any)|Vytvoří `condition_variable_any` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Název|Popis|
 |----------|-----------------|
 |[notify_all](#notify_all)|Odblokuje všechna vlákna, která čekají `condition_variable_any` objektu.|
-|[notify_one](#notify_one)|Odblokuje jeden vláken, která čekají `condition_variable_any` objektu.|
+|[notify_one](#notify_one)|Odblokuje jedno z vláken, která čekají `condition_variable_any` objektu.|
 |[Počkej](#wait)|Blokuje vlákno.|
-|[wait_for](#wait_for)|Blokuje vlákno a nastaví časový interval, po jejímž uplynutí odblokuje vlákno.|
-|[wait_until](#wait_until)|Blokuje vlákno a nastaví maximální bodu v čase, kdy odblokuje vlákno.|
+|[wait_for](#wait_for)|Blokuje vlákno a nastavuje časový interval, po jejímž uplynutí se vlákno odblokuje.|
+|[wait_until](#wait_until)|Blokuje vlákno a nastavuje maximální bod v čase, kdy se vlákno odblokuje.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<condition_variable >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any – konstruktor
 
@@ -79,7 +79,7 @@ condition_variable_any();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je k dispozici není dostatek paměti, vyvolá konstruktoru [system_error –](../standard-library/system-error-class.md) objekt, který má `not_enough_memory` kód chyby. Pokud objekt nelze vytvořit, protože jiný prostředek není k dispozici, vyvolá konstruktoru `system_error` objekt, který má `resource_unavailable_try_again` kód chyby.
+Pokud není k dispozici není dostatek paměti, vyvolá konstruktor [system_error](../standard-library/system-error-class.md) objekt, který má `not_enough_memory` kód chyby. Pokud objekt nelze vytvořit, protože jiný prostředek není k dispozici, vyvolá konstruktor `system_error` objekt, který má `resource_unavailable_try_again` kód chyby.
 
 ## <a name="notify_all"></a>  condition_variable_any::notify_all –
 
@@ -91,7 +91,7 @@ void notify_all() noexcept;
 
 ## <a name="notify_one"></a>  condition_variable_any::notify_one –
 
-Jeden z vláken, která čekají na odblokuje `condition_variable_any` objektu.
+Odblokuje jedno z vláken, která čekají na `condition_variable_any` objektu.
 
 ```cpp
 void notify_one() noexcept;
@@ -111,15 +111,15 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-`Lck` A `mutex` objektu libovolného typu.
+*LCK* A `mutex` objekt jakéhokoli typu.
 
-`Pred` Jakýkoli výraz, který vrací `true` nebo `false`.
+*Před* libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-První metoda blokuje až `condition_variable_any` objekt signalizace voláním [notify_one](../standard-library/condition-variable-class.md#notify_one) nebo [notify_all](../standard-library/condition-variable-class.md#notify_all). Ho můžete také probuzení spuriously.
+První metoda blokuje, dokud `condition_variable_any` objekt signalizován voláním [notify_one](../standard-library/condition-variable-class.md#notify_one) nebo [notify_all](../standard-library/condition-variable-class.md#notify_all). To může také probudit falešně.
 
-Druhá metoda spustí platí následující kód.
+V důsledku druhá metoda spustí následující kód.
 
 ```cpp
 while (!Pred())
@@ -128,7 +128,7 @@ while (!Pred())
 
 ## <a name="wait_for"></a>  condition_variable_any::wait_for –
 
-Blokuje vlákno a nastaví časový interval, po jejímž uplynutí odblokuje vlákno.
+Blokuje vlákno a nastavuje časový interval, po jejímž uplynutí se vlákno odblokuje.
 
 ```cpp
 template <class Lock, class Rep, class Period>
@@ -140,23 +140,23 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parametry
 
-`Lck` A `mutex` objektu libovolného typu.
+*LCK* A `mutex` objekt jakéhokoli typu.
 
-`Rel_time` A `chrono::duration` probudí objekt, který určuje množství času, než vlákno.
+*Rel_time* A `chrono::duration` probudí objekt, který určuje dobu před vlákna.
 
-`Pred` Jakýkoli výraz, který vrací `true` nebo `false`.
+*Před* libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí první metoda `cv_status::timeout` Pokud ukončí dobu, kdy `Rel_time` uplynul. Jinak, vrátí metoda `cv_status::no_timeout`.
+První metoda vrátí `cv_status::timeout` Pokud čekání skončí, když *Rel_time* uplynul. V opačném případě vrátí metoda `cv_status::no_timeout`.
 
-Druhá metoda vrátí hodnotu `Pred`.
+Druhá metoda vrátí hodnotu *před*.
 
 ### <a name="remarks"></a>Poznámky
 
-První metoda blokuje až `condition_variable_any` objekt signalizace voláním [notify_one](../standard-library/condition-variable-class.md#notify_one) nebo [notify_all](../standard-library/condition-variable-class.md#notify_all), nebo dokud se časový interval `Rel_time` uplynul. Ho můžete také probuzení spuriously.
+První metoda blokuje, dokud `condition_variable_any` objekt signalizován voláním [notify_one](../standard-library/condition-variable-class.md#notify_one) nebo [notify_all](../standard-library/condition-variable-class.md#notify_all), nebo dokud časový interval *Rel_time* uplynul. To může také probudit falešně.
 
-Druhá metoda spustí platí následující kód.
+V důsledku druhá metoda spustí následující kód.
 
 ```cpp
 while(!Pred())
@@ -168,7 +168,7 @@ return true;
 
 ## <a name="wait_until"></a>  condition_variable_any::wait_until –
 
-Blokuje vlákno a nastaví maximální bodu v čase, kdy odblokuje vlákno.
+Blokuje vlákno a nastavuje maximální bod v čase, kdy se vlákno odblokuje.
 
 ```cpp
 template <class Lock, class Clock, class Duration>
@@ -192,23 +192,23 @@ void wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-`Lck` Objekt mutex.
+*LCK* objekt mutex.
 
-`Abs_time` A [chrono::time_point](../standard-library/time-point-class.md) objektu.
+*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) objektu.
 
-`Pred` Jakýkoli výraz, který vrací `true` nebo `false`.
+*Před* libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Metody, které vracejí `cv_status` návratový typ `cv_status::timeout` Pokud ukončí dobu, kdy `Abs_time` uplynutí. Jinak vrátí metody `cv_status::no_timeout`.
+Metody, které vracejí `cv_status` zadejte vrátit `cv_status::timeout` Pokud čekání skončí, když *Abs_time* uplyne. V opačném případě vrátí metody `cv_status::no_timeout`.
 
-Metody, které vracejí `bool` vrátí hodnotu `Pred`.
+Metody, které vracejí `bool` vrácení hodnoty *před*.
 
 ### <a name="remarks"></a>Poznámky
 
-První metoda blokuje až `condition_variable` objekt signalizace voláním [notify_one](../standard-library/condition-variable-class.md#notify_one) nebo [notify_all](../standard-library/condition-variable-class.md#notify_all), nebo dokud `Abs_time`. Ho můžete také probuzení spuriously.
+První metoda blokuje, dokud `condition_variable` objekt signalizován voláním [notify_one](../standard-library/condition-variable-class.md#notify_one) nebo [notify_all](../standard-library/condition-variable-class.md#notify_all), nebo dokud *Abs_time*. To může také probudit falešně.
 
-Druhá metoda spustí platí následující kód.
+V důsledku druhá metoda spustí následující kód.
 
 ```cpp
 while(!Pred())
@@ -218,9 +218,9 @@ while(!Pred())
 return true;
 ```
 
-Metody třetí a čtvrtý použití ukazatel na objekt typu `xtime` nahradit `chrono::time_point` objektu. `xtime` Objektu určuje maximální množství času čekání na signál.
+Třetí a čtvrtá metoda použije ukazatel na objekt typu `xtime` nahradit `chrono::time_point` objektu. `xtime` Objekt určuje maximální dobu čekání na signál.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [<condition_variable>](../standard-library/condition-variable.md)<br/>

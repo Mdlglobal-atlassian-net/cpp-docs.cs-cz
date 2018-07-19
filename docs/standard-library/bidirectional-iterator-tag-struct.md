@@ -1,5 +1,5 @@
 ---
-title: bidirectional_iterator_tag – struktura | Microsoft Docs
+title: bidirectional_iterator_tag – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958176"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag – struktura
 
-Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator obousměrné.
+Třída, která poskytuje návratový typ pro `iterator_category` funkce, která představuje obousměrný iterátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,21 +36,21 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy značky kategorie se používají jako zkompilovat značky pro výběr algoritmů. Funkce šablony musí najít nejvíce určitou kategorii její argument iterator tak, aby v době kompilace může použít algoritmus maximální efektivitou. Pro každý iterator typu `Iterator`, `iterator_traits` <  `Iterator`>:: **iterator_category –** musí být definován jako nejvíce značky kategorii, která popisuje iteraci chování.
+Kategorie značky tříd se používají při kompilaci značky pro algoritmus výběru. Funkce šablony musí najít největší určitou kategorii svého argumentu iterátoru, tak, aby ho používat co nejúčinnější algoritmus v době kompilace. Pro každý iterátor typu `Iterator`, `iterator_traits` <  `Iterator`>:: **iterator_category** musí být definovány nejspecifičtější značky kategorii, která popisuje chování iterátoru.
 
-Typ je stejný jako **iterator** \< **Iter**>:: **iterator_category –** při **Iter** popisuje objekt, který můžete sloužit jako iterator obousměrné.
+Typ je stejný jako **iterátoru** \< **Iter**>:: **iterator_category** při `Iter` popisuje objekt, který může sloužit jako obousměrné iterátor.
 
 ## <a name="example"></a>Příklad
 
-V tématu [random_access_iterator_tag –](../standard-library/random-access-iterator-tag-struct.md) příklad použití `bidirectional_iterator_tag`.
+Zobrazit [random_access_iterator_tag –](../standard-library/random-access-iterator-tag-struct.md) příklad, jak používat `bidirectional_iterator_tag`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [forward_iterator_tag – struktura](../standard-library/forward-iterator-tag-struct.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

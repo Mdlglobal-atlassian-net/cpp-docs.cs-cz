@@ -1,5 +1,5 @@
 ---
-title: Úvod do modelu COM a knihovna ATL | Microsoft Docs
+title: Úvod do modelu COM a knihovny ATL | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d64f4f44eeeee2d4780e61571355f8047b1bcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bb3337ffa82bf65ba0d4ff010d0b70afd7a99d7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355410"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848207"
 ---
 # <a name="introduction-to-com-and-atl"></a>Úvod do modelu COM a knihovny ATL
-Tato část obsahuje stručný úvod do modelu COM a ATL.  
+Tato část obsahuje stručný úvod do modelu COM a knihovny ATL.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Úvod do modelu COM](../atl/introduction-to-com.md)  
- Poskytuje přehled součást objektu modelu (COM) základní koncepty, včetně rozhraní, **IUnknown**, počítání odkazů `QueryInterface`, zařazování a agregaci.  
+ Poskytuje přehled o součást objektu modelu (COM) základní koncepty, včetně rozhraní, `IUnknown`, počítání odkazů `QueryInterface`, zařazování a agregaci.  
   
  [Úvod do ATL](../atl/introduction-to-atl.md)  
- Popisuje, stručně řečeno, co Active šablony Library (ATL) byl navržený pro, šablony knihoven a čísel verzí ATL. Obsahuje doporučení pro výběr mezi použitím knihovny ATL a MFC.  
+ Tento článek popisuje, stručně, co aktivní šablony knihovny (ATL) je navržená pro šablony knihoven a knihovny ATL čísla verzí. Obsahuje doporučení k výběru mezi ATL a MFC.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Komponentový objektový Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] Podstatným na modelu COM.  
+ [Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] Materiálu modelu COM.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Obsahuje odkazy na koncepční témata o tom, jak program pomocí knihovny Active šablony.  
+ Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.  
   
  [Přehled třídy ATL](../atl/atl-class-overview.md)  
- Poskytuje informace a odkazy na třídy ATL.
+ Poskytuje referenční informace a odkazy na ATL – třídy.
 

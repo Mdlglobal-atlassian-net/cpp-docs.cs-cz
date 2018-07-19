@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCImagePaintArea | Microsoft Docs
+title: Cmfcimagepaintarea – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037369"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852474"
 ---
-# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea – třída
-Poskytuje oblast obrázku, který používáte k úpravě bitovou kopii v dialogovém okně editor bitové kopie.  
+# <a name="cmfcimagepaintarea-class"></a>Cmfcimagepaintarea – třída
+Poskytuje oblast obrázku, který můžete použít ke změně obrázku v dialogovém okně editor obrázků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,23 +57,23 @@ class CMFCImagePaintArea : public CButton
 |||  
 |-|-|  
 |Název|Popis|  
-|[CMFCImagePaintArea::GetMode](#getmode)|Načte aktuální režim kreslení.|  
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Nastaví rastrový obrázek oblasti obrázku.|  
-|[CMFCImagePaintArea::SetColor](#setcolor)|Nastaví barvu aktuální kreslení.|  
-|[CMFCImagePaintArea::SetMode](#setmode)|Nastaví aktuální režim kreslení.|  
+|[CMFCImagePaintArea::GetMode](#getmode)|Načte aktuální režim vykreslování.|  
+|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Nastavuje rastrový obrázek pro oblasti obrázku.|  
+|[CMFCImagePaintArea::SetColor](#setcolor)|Nastaví aktuální vykreslení barvy.|  
+|[CMFCImagePaintArea::SetMode](#setmode)|Nastaví aktuální režim vykreslování.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato třída není určena pro použití přímo z vašeho kódu.  
+ Tato třída není určena pro použití přímo v kódu.  
   
- Rozhraní používá tuto třídu pro zobrazení oblasti obrázku v dialogovém okně editor bitové kopie. Další informace o dialogovém okně editor bitové kopie najdete v tématu [CMFCImageEditorDialog třída](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Rozhraní používá tuto třídu pro zobrazení oblasti obrázku v dialogovém okně editor obrázků. Další informace o dialogové okno editoru obrázků, naleznete v tématu [CMFCImageEditorDialog – třída](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit objekt `CMFCImagePaintArea` třídy, nastavte aktuální kreslení barvu, nastavit aktuální režim kreslení a rastrový obrázek oblasti obrázku.  
+ Následující příklad ukazuje, jak vytvořit objekt `CMFCImagePaintArea` třídy, nastavte aktuální vykreslení barvy, nastavte aktuální režim vykreslování a nastavte rastrový obrázek pro oblasti obrázku.  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -81,7 +81,7 @@ class CMFCImagePaintArea : public CButton
   
  [CButton](../../mfc/reference/cbutton-class.md)  
   
- [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)  
+ [Cmfcimagepaintarea –](../../mfc/reference/cmfcimagepaintarea-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afximagepaintarea.h  
@@ -98,20 +98,20 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *pParentDlg*|Ukazatel na okno, které je nadřazená image editoru.|  
+|[in] *pParentDlg*|Ukazatel na dialogovém okně, které je nadřazené editoru obrázků.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
- Načte aktuální režim kreslení.  
+ Načte aktuální režim vykreslování.  
   
 ```  
 IMAGE_EDIT_MODE GetMode() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.  
+ [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim vykreslování.  
   
 ##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
- Nastaví rastrový obrázek oblasti obrázku.  
+ Nastavuje rastrový obrázek pro oblasti obrázku.  
   
 ```  
 void SetBitmap(CBitmap* pBitmap);
@@ -122,13 +122,13 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *pBitmap*|Nový rastrový obrázek pro zobrazení.|  
+|[in] *pBitmap*|Nový rastrový obrázek k zobrazení.|  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *pBitmap* je `NULL`, tato metoda nastaví velikost oblasti upravitelnými Malování na nulu. Nastaví, jinak hodnota velikosti oblasti upravitelnými Malování velikost zadaná rastrového obrázku.  
+ Pokud *pBitmap* má hodnotu NULL, tato metoda nastaví velikost oblasti lze měnit barvy na nulu. Jinak nastaví velikost oblasti upravitelná malířského velikost zadaná rastrový obrázek.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
- Nastaví barvu aktuální kreslení.  
+ Nastaví aktuální vykreslení barvy.  
   
 ```  
 void SetColor(COLORREF color);
@@ -139,15 +139,15 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *barev*|Nové kreslení barva.|  
+|[in] *barva*|Nové vykreslení barvy.|  
   
 ### <a name="remarks"></a>Poznámky  
- Když vyberte barvu z panelu image editor palety nebo volby barev, rozhraní volá tuto metodu za účelem aktualizace aktuální kreslení barvu. Černá je počáteční barvu kreslení ( `COLORREF` hodnota 0).  
+ Když vyberte barvu z palety panelu editor image nebo výběr barev, rozhraní volá tuto metodu za účelem aktualizace aktuální vykreslení barvy. Počáteční barva vykreslování je černá (COLORREF hodnotu 0).  
   
- Kreslení barvu používá dialogové okno editor bitové kopie pro všechny režimy kreslení s výjimkou `IMAGE_EDIT_MODE_COLOR`. Další informace o kreslení režimy najdete v tématu [CMFCImagePaintArea::IMAGE_EDIT_MODE – výčet](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
+ Dialogové okno editor obrázků pro kreslení režimy všechny s výjimkou IMAGE_EDIT_MODE_COLOR používá vykreslení barvy. Další informace o vykreslování režimech najdete v tématu [cmfcimagepaintarea::image_edit_mode – výčet](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
- Nastaví aktuální režim kreslení.  
+ Nastaví aktuální režim vykreslování.  
   
 ```  
 void SetMode(IMAGE_EDIT_MODE mode);
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *režimu*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim kreslení.|  
+|[in] *režimu*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim vykreslování.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

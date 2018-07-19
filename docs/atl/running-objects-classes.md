@@ -1,5 +1,5 @@
 ---
-title: Spuštění objekty třídy (ATL) | Microsoft Docs
+title: Spuštění objekty tříd (knihovny ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958563"
 ---
-# <a name="running-objects-classes"></a>S objekty třídy
-Následující třídy poskytuje podporu pro spuštění objekty:  
+# <a name="running-objects-classes"></a>Třídy spuštěných objektů
+Následující třída poskytuje podporu pro spouštění objekty:  
   
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) určuje Pokud objekt běží, vynutí se jeho spuštění, nebo uzamkne ji do stavu spuštěno.  
+-   [Irunnableobjectimpl –](../atl/reference/irunnableobjectimpl-class.md) určuje Pokud objekt je spuštěná, vynutí jeho spuštění, nebo uzamčení do stavu spuštěno.  
   
 ## <a name="related-articles"></a>Související články  
  [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

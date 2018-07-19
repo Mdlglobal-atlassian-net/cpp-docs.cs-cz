@@ -1,5 +1,5 @@
 ---
-title: Sockaddr_in – struktura | Microsoft Docs
+title: Sockaddr_in – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373635"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885735"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN – struktura
-V rodina adres Internet `SOCKADDR_IN` struktura používá rozhraní Windows Sockets k zadejte adresu místního nebo vzdáleného koncového bodu, ke kterému chcete připojit k soketu.  
+V rodině adres sítě Internet `SOCKADDR_IN` struktura používá rozhraní Windows Sockets k určení adresy místního nebo vzdáleného koncového bodu pro připojení soketu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,21 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Parametry  
  *sin_family*  
- Rodina adres (musí být **AF_INET**).  
+ Rodina adres (musí být AF_INET).  
   
  *sin_port*  
- IP a portu.  
+ Port VIP.  
   
  *sin_addr*  
  IP adresa.  
   
  *Sin_Zero*  
- Odsazení aby struktura stejnou velikost jako `SOCKADDR`.  
+ Odsazení, aby struktura stejnou velikost jako `SOCKADDR`.  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je formu `SOCKADDR` struktury specifické pro rodina adres Internet a můžete převést na `SOCKADDR`.  
+ To je forma `SOCKADDR` struktury specifické pro rodinu adres sítě Internet a může být převeden na `SOCKADDR`.  
   
- IP adresa součástí tato struktura je typu **IN_ADDR**. **IN_ADDR** struktura je definována v záhlaví souboru Windows Sockets rozhraní WINSOCK. H následujícím způsobem:  
+ Součást adresy IP této struktury je typu `IN_ADDR`. `IN_ADDR` Struktura je definována v souboru hlaviček rozhraní Windows Sockets rozhraní WINSOCK. H následujícím způsobem:  
   
 ```  
 struct in_addr {

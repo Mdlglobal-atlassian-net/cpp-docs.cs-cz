@@ -1,5 +1,5 @@
 ---
-title: '&lt;system_error –&gt; funkce | Microsoft Docs'
+title: '&lt;system_error –&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 6135a3dc51b372c85545f01f52c70cbc6f236e64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 838a63fc43ef71561c0911cfa4c85c76cf04bc08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959662"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error –&gt; funkce
 
 ||||
 |-|-|-|
-|[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
+|[generic_category –](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
 |[system_category](#system_category)|
 
-## <a name="generic_category"></a>  generic_category
+## <a name="generic_category"></a>  generic_category –
 
-Představuje kategorii pro obecné chyby.
+Představuje konkrétní kategorii obecné chyby.
 
 ```cpp
 extern const error_category& generic_category();
@@ -38,11 +38,11 @@ extern const error_category& generic_category();
 
 ### <a name="remarks"></a>Poznámky
 
-`generic_category` Objektu je implementací [error_category](../standard-library/error-category-class.md).
+`generic_category` Objektu je implementace [error_category](../standard-library/error-category-class.md).
 
 ## <a name="make_error_code"></a>  make_error_code –
 
-Vytvoří objekt kódu chyby.
+Vytváří objekt error kódu.
 
 ```cpp
 error_code make_error_code(generic_errno _Errno);
@@ -52,17 +52,17 @@ error_code make_error_code(generic_errno _Errno);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Errno`|Hodnota výčtu ukládat v objektu, kód chyby.|
+|*_Errno*|Hodnota výčtu k uložení objektu kód chyby.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt, kód chyby.
+Objekt kódu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="make_error_condition"></a>  make_error_condition –
 
-Vytvoří objekt podmínku chyby.
+Vytváří objekt error podmínku.
 
 ```cpp
 error_condition make_error_condition(generic_errno _Errno);
@@ -72,7 +72,7 @@ error_condition make_error_condition(generic_errno _Errno);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`_Errno`|Hodnota výčtu uložit do objektu podmínku chyby.|
+|*_Errno*|Hodnota výčtu k uložení objektu chybová podmínka.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -80,9 +80,9 @@ Objekt, podmínku chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="system_category"></a>  system_category
+## <a name="system_category"></a>  system_category –
 
-Představuje kategorii pro chyby způsobené některé nízké úrovně systému.
+Představuje konkrétní kategorii chyby způsobené nižší úrovně systému přetečení.
 
 ```cpp
 extern const error_category& system_category();
@@ -90,8 +90,8 @@ extern const error_category& system_category();
 
 ### <a name="remarks"></a>Poznámky
 
-`system_category` Objektu je implementací [error_category](../standard-library/error-category-class.md).
+`system_category` Objektu je implementace [error_category](../standard-library/error-category-class.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<system_error>](../standard-library/system-error.md)<br/>

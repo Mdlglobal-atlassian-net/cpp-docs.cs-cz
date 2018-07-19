@@ -1,5 +1,5 @@
 ---
-title: '&lt;IOS&gt; funkce | Microsoft Docs'
+title: '&lt;IOS&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -52,29 +52,29 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 4937d79c04484dd0cd96f74abb7150873b6f7235
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959089"
 ---
 # <a name="ltiosgt-functions"></a>&lt;IOS&gt; funkce
 
 ||||
 |-|-|-|
-|[defaultfloat –](#ios_defaultfloat)|[boolalpha](#boolalpha)|[DEC](#dec)|
-|[Pevná](#fixed)|[Hex](#hex)|[internal](#internal)|
-|[Vlevo](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|
+|[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[DEC](#dec)|
+|[Oprava](#fixed)|[Hex](#hex)|[internal](#internal)|
+|[doleva](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|
 |[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|
-|[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[OCT](#oct)|
-|[Vpravo](#right)|[Scientific](#scientific)|[showbase](#showbase)|
+|[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[Říjen](#oct)|
+|[doprava](#right)|[vědecké](#scientific)|[showbase](#showbase)|
 |[showpoint](#showpoint)|[showpos](#showpos)|[skipws](#skipws)|
-|[unitbuf](#unitbuf)|[Velká písmena](#uppercase)|
+|[unitbuf](#unitbuf)|[velká písmena](#uppercase)|
 
 ## <a name="boolalpha"></a>  boolalpha
 
-Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) zobrazí jako **true** nebo **false** v datovém proudu.
+Určuje proměnné tohoto typu [bool](../cpp/bool-cpp.md) zobrazí jako **true** nebo **false** v datovém proudu.
 
 ```cpp
 ios_base& boolalpha(ios_base& str);
@@ -82,19 +82,19 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, proměnné typu `bool` zobrazují jako 1 nebo 0.
+Ve výchozím nastavení, proměnné typu **bool** se zobrazují jako 1 nebo 0.
 
-`boolalpha` efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`) a vrátí `str`.
+`boolalpha` efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`) a vrátí *str*.
 
-[noboolalpha](../standard-library/ios-functions.md#noboolalpha) obrátí účinku `boolalpha`.
+[noboolalpha](../standard-library/ios-functions.md#noboolalpha) obrátí účinek metody `boolalpha`.
 
 ### <a name="example"></a>Příklad
 
@@ -125,7 +125,7 @@ true
 
 ## <a name="dec"></a>  DEC
 
-Určuje celé číslo proměnné, které se zobrazují v základní 10 zápisu.
+Určuje, že celočíselné proměnné zobrazí v základní 10 zápisu.
 
 ```cpp
 ios_base& dec(ios_base& str);
@@ -133,17 +133,17 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení jsou proměnné celé číslo zobrazené na základní 10.
+Celočíselné proměnné jsou ve výchozím nastavení, zobrazí se základem 10.
 
-**DEC** efektivně volá `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec` **, ios_base::basefield**) a vrátí `str`.
+`dec` efektivně volá `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`, `ios_base::basefield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -175,9 +175,9 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>  &lt;IOS&gt; defaultfloat –
+## <a name="ios_defaultfloat"></a>  &lt;IOS&gt; defaultfloat
 
-Nakonfiguruje příznaky z `ios_base` objekt, který chcete použít výchozí zobrazení formát pro hodnoty typu float.
+Nakonfiguruje příznaky ze `ios_base` objektu, který chcete použít výchozí zobrazovací formát pro hodnoty typu float.
 
 ```cpp
 ios_base& defaultfloat(ios_base& _Iosbase);
@@ -185,15 +185,15 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>Parametry
 
-`_Iosbase` `ios_base` Objektu.
+*_Iosbase* `ios_base` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulator efektivně volá potvrzuj_i `osbase.` [ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, vrátí potvrzuj_i `osbase`.
+Manipulátor efektivně volá _I `osbase.` [ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, vrátí _I `osbase`.
 
-## <a name="fixed"></a>  Pevná
+## <a name="fixed"></a>  Oprava
 
-Určuje, že číslo s plovoucí desetinnou čárkou zobrazí notaci decimal.
+Určuje, že číslo s plovoucí desetinnou čárkou se zobrazí v oprava desítkovém zápisu.
 
 ```cpp
 ios_base& fixed(ios_base& str);
@@ -201,17 +201,17 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-**pevné** je zápis výchozí zobrazení pro čísla s plovoucí desetinnou čárkou. [Scientific](../standard-library/ios-functions.md#scientific) způsobí, že s plovoucí desetinnou čárkou čísla, který se má zobrazit pomocí exponenciální notace.
+`fixed` je výchozí zobrazení notace pro čísla s plovoucí desetinnou čárkou. [vědecké](../standard-library/ios-functions.md#scientific) způsobí, že s plovoucí desetinnou čárkou čísla, který se má zobrazit pomocí vědeckého zápisu.
 
-Manipulator efektivně volá * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**) a vrátí `str`.
+Efektivně volá manipulátor * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -240,7 +240,7 @@ int main( )
 
 ## <a name="hex"></a>  Hex
 
-Určuje, že proměnné celé číslo se zobrazí v základní 16 zápis.
+Určuje, že se zobrazí celočíselné proměnné v základní 16 zápisu.
 
 ```cpp
 ios_base& hex(ios_base& str);
@@ -248,25 +248,25 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení zobrazí se základní 10 notaci proměnné celé číslo. [DEC](../standard-library/ios-functions.md#dec) a [oct](../standard-library/ios-functions.md#oct) také změnit proměnné celé číslo způsob, jak se zobrazují.
+Ve výchozím nastavení jsou celočíselné proměnné zobrazí v základní 10 zápisu. [DEC](../standard-library/ios-functions.md#dec) a [oct](../standard-library/ios-functions.md#oct) také změnit způsob, jak celočíselné proměnné se zobrazí.
 
-Manipulator efektivně volá `str` **.** [setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**) a vrátí `str`.
+Efektivně volá manipulátor `str` **.** [setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, `ios_base::basefield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [dec](../standard-library/ios-functions.md#dec) příklad použití **šestnáctkových**.
+Zobrazit [dec](../standard-library/ios-functions.md#dec) příklad, jak používat `hex`.
 
 ## <a name="internal"></a>  Interní
 
-Způsobí, že přihlášení počet zbývajících oprávněné a číslo, které má být zarovnání doprava.
+Způsobí, že se znaménkem číslo vlevo oprávněné a číslo, které má být zarovnané vpravo.
 
 ```cpp
 ios_base& internal(ios_base& str);
@@ -274,17 +274,17 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze kterého `str` je odvozený.
+Odkaz na objekt, ze kterého *str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-[showpos](../standard-library/ios-functions.md#showpos) způsobí, že přihlášení k zobrazení kladná čísla.
+[showpos](../standard-library/ios-functions.md#showpos) způsobí, že znak, který má být zobrazen pro kladná čísla.
 
-Manipulator efektivně volá `str`. [SETF](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)) a vrátí `str`.
+Efektivně volá manipulátor `str`. [SETF](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -309,9 +309,9 @@ int main( void )
 -..123.456
 ```
 
-## <a name="left"></a>  Vlevo
+## <a name="left"></a>  doleva
 
-Způsobí, že text, který není široká jako šířka výstupu se objeví v vyprázdnění datového proudu s levým okrajem.
+Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v stream vyprázdnění se na levém okraji.
 
 ```cpp
 ios_base& left(ios_base& str);
@@ -319,15 +319,15 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::left`, `ios_base::adjustfield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -353,7 +353,7 @@ int main( )
 
 ## <a name="noboolalpha"></a>  noboolalpha
 
-Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) zobrazí jako 1 nebo 0 v datovém proudu.
+Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) jako 1 nebo 0 v datovém proudu.
 
 ```cpp
 ios_base& noboolalpha(ios_base& str);
@@ -361,27 +361,27 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
 Ve výchozím nastavení `noboolalpha` je v platnosti.
 
-`noboolalpha` efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`) a vrátí `str`.
+`noboolalpha` efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`) a vrátí *str*.
 
-[boolalpha](../standard-library/ios-functions.md#boolalpha) obrátí účinku `noboolalpha`.
+[boolalpha](../standard-library/ios-functions.md#boolalpha) obrátí účinek metody `noboolalpha`.
 
 ### <a name="example"></a>Příklad
 
-V tématu [boolalpha](../standard-library/ios-functions.md#boolalpha) příklad použití `noboolalpha`.
+Zobrazit [boolalpha](../standard-library/ios-functions.md#boolalpha) pro příklad použití `noboolalpha`.
 
 ## <a name="noshowbase"></a>  noshowbase
 
-Vypne označující konvenční základní, ve kterém se zobrazí číslo.
+Vypne označující konvenční základní třídy, ve kterém se zobrazí číslo.
 
 ```cpp
 ios_base& noshowbase(ios_base& str);
@@ -389,25 +389,25 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr `noshowbase` je standardně zapnutý. Použití [showbase](../standard-library/ios-functions.md#showbase) udávajících konvenční základní čísel.
+Parametr `noshowbase` je standardně zapnutý. Použití [showbase](../standard-library/ios-functions.md#showbase) udávajících konvenční základ čísla.
 
-Manipulator efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [showbase](../standard-library/ios-functions.md#showbase) příklad použití `noshowbase`.
+Zobrazit [showbase](../standard-library/ios-functions.md#showbase) příklad, jak používat `noshowbase`.
 
 ## <a name="noshowpoint"></a>  noshowpoint
 
-Zobrazí jenom část celé číslo s plovoucí desetinnou čárkou čísel, jejichž zlomkové části je nulová.
+Zobrazí pouze část celého čísla s plovoucí desetinnou čárkou čísel, jehož zlomkové části je nula.
 
 ```cpp
 ios_base& noshowpoint(ios_base& str);
@@ -415,17 +415,17 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-`noshowpoint` je ve výchozím; použít [showpoint](../standard-library/ios-functions.md#showpoint) a [přesnost](../standard-library/ios-base-class.md#precision) k zobrazení nul za desetinnou čárkou.
+`noshowpoint` je ve výchozím; použít [showpoint](../standard-library/ios-functions.md#showpoint) a [přesnost](../standard-library/ios-base-class.md#precision) zobrazíte nulami za desetinnou čárkou.
 
-Manipulator efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -453,7 +453,7 @@ int main( )
 
 ## <a name="noshowpos"></a>  noshowpos
 
-Způsobí, že nebyla výslovně podepsané kladná čísla.
+Způsobí, že kladná čísla nesmí být explicitně přihlášení.
 
 ```cpp
 ios_base& noshowpos(ios_base& str);
@@ -461,25 +461,25 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
 Parametr `noshowpos` je standardně zapnutý.
 
-Manipulator efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), vrátí `str`.
+Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), potom se vrací *str*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [showpos](../standard-library/ios-functions.md#showpos) příklad použití `noshowpos`.
+Zobrazit [showpos](../standard-library/ios-functions.md#showpos) pro příklad použití `noshowpos`.
 
 ## <a name="noskipws"></a>  noskipws
 
-Způsobit prostory a číst vstupního datového proudu.
+Způsobit prostory přečtou vstupní datový proud.
 
 ```cpp
 ios_base& noskipws(ios_base& str);
@@ -487,17 +487,17 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení [skipws](../standard-library/ios-functions.md#skipws) je v platnosti. Když mezeru se čtou v vstupního datového proudu, signalizuje konce vyrovnávací paměti.
+Ve výchozím nastavení [skipws](../standard-library/ios-functions.md#skipws) je v platnosti. Když místo je určen pro čtení vstupního datového proudu, signalizuje konec vyrovnávací paměti.
 
-Manipulator efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="nounitbuf"></a>  nounitbuf
 
-Příčiny výstupní vyrovnávací paměti a zpracování na při zaplnění vyrovnávací paměti.
+Způsobí, že výstupní ukládány do vyrovnávací paměti a zpracování na při vyrovnávací paměť je plná.
 
 ```cpp
 ios_base& nounitbuf(ios_base& str);
@@ -528,21 +528,21 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-[unitbuf](../standard-library/ios-functions.md#unitbuf) způsobí, že vyrovnávací paměť na zpracování, pokud není prázdná.
+[unitbuf](../standard-library/ios-functions.md#unitbuf) způsobí, že vyrovnávací paměť pro zpracování, pokud není prázdná.
 
-Manipulator efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`) a vrátí *str*.
 
 ## <a name="nouppercase"></a>  nouppercase
 
-Určuje, že šestnáctkové číslice a exponent v vědecká notace se objeví na malá písmena.
+Určuje, že šestnáctkových číslic a exponent za použití vědeckého zápisu se zobrazí na malá písmena.
 
 ```cpp
 ios_base& nouppercase(ios_base& str);
@@ -550,23 +550,23 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulator efektivně volá `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [velká](../standard-library/ios-functions.md#uppercase) příklad použití `nouppercase`.
+Zobrazit [velká](../standard-library/ios-functions.md#uppercase) pro příklad použití `nouppercase`.
 
-## <a name="oct"></a>  OCT
+## <a name="oct"></a>  Říjen
 
-Určuje celé číslo proměnné, které se zobrazují v základní 8 zápisu.
+Určuje, že celočíselné proměnné zobrazí v základní 8 zápisu.
 
 ```cpp
 ios_base& oct(ios_base& str);
@@ -574,25 +574,25 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze kterého *str* je odvozený.
+Odkaz na objekt, ze kterého *str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení zobrazí se základní 10 notaci proměnné celé číslo. [DEC](../standard-library/ios-functions.md#dec) a [šestnáctkových](../standard-library/ios-functions.md#hex) také změnit proměnné celé číslo způsob, jak se zobrazují.
+Ve výchozím nastavení jsou celočíselné proměnné zobrazí v základní 10 zápisu. [DEC](../standard-library/ios-functions.md#dec) a [hex](../standard-library/ios-functions.md#hex) také změnit způsob, jak celočíselné proměnné se zobrazí.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [dec](../standard-library/ios-functions.md#dec) příklad použití **oct**.
+Zobrazit [dec](../standard-library/ios-functions.md#dec) příklad, jak používat `oct`.
 
-## <a name="right"></a>  Vpravo
+## <a name="right"></a>  doprava
 
-Způsobí, že text, který není široká jako šířka výstupu se objeví v vyprázdnění datového proudu s pravým okrajem.
+Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v vyprázdnění datový proud s na pravém okraji.
 
 ```cpp
 ios_base& right(ios_base& str);
@@ -600,17 +600,17 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze kterého *str* je odvozený.
+Odkaz na objekt, ze kterého *str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-[levé](../standard-library/ios-functions.md#left) také upraví zarovnání do bloku textu.
+[levé](../standard-library/ios-functions.md#left) také upraví zarovnání textu.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -646,9 +646,9 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>  Scientific
+## <a name="scientific"></a>  vědecké
 
-Čísla s plovoucí desetinnou čárkou příčiny zobrazená pomocí exponenciální notace.
+Způsobí, že s plovoucí desetinnou čárkou čísla, který se má zobrazit pomocí vědeckého zápisu.
 
 ```cpp
 ios_base& scientific(ios_base& str);
@@ -656,17 +656,17 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení [pevné](../standard-library/ios-functions.md#fixed) zápisu je používána pro čísla s plovoucí desetinnou čárkou.
+Ve výchozím nastavení [oprava](../standard-library/ios-functions.md#fixed) zápisu je používána pro čísla s plovoucí desetinnou čárkou.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -692,7 +692,7 @@ int main( )
 
 ## <a name="showbase"></a>  showbase
 
-Označuje konvenční základní, ve kterém se zobrazí číslo.
+Označuje konvenční základní třídy, ve kterém se zobrazí číslo.
 
 ```cpp
 ios_base& showbase(ios_base& str);
@@ -700,17 +700,17 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Konvenční základ číslo může být změněna pomocí [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct), nebo [šestnáctkových](../standard-library/ios-functions.md#hex).
+Konvenční základní číslo je možné měnit pomocí [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct), nebo [hex](../standard-library/ios-functions.md#hex).
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -745,7 +745,7 @@ int main( )
 
 ## <a name="showpoint"></a>  showpoint
 
-Zobrazí celé číslo část číslo s plovoucí desetinnou čárkou a číslic vpravo od desetinné čárky, i v případě, že zlomkové části je nulová.
+Zobrazuje část celého čísla číslo s plovoucí desetinnou čárkou a číslic vpravo od desetinné čárky, i v případě, že zlomkové části je nula.
 
 ```cpp
 ios_base& showpoint(ios_base& str);
@@ -753,25 +753,25 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
 Ve výchozím nastavení [noshowpoint](../standard-library/ios-functions.md#noshowpoint) je v platnosti.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
-V tématu [noshowpoint](../standard-library/ios-functions.md#noshowpoint) příklad použití `showpoint`.
+Zobrazit [noshowpoint](../standard-library/ios-functions.md#noshowpoint) pro příklad použití `showpoint`.
 
 ## <a name="showpos"></a>  showpos
 
-Způsobí, že kladná čísla explicitně podepsat.
+Způsobí, že explicitně podepsat kladná čísla.
 
 ```cpp
 ios_base& showpos(ios_base& str);
@@ -779,17 +779,17 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-[noshowpos](../standard-library/ios-functions.md#noshowpos) je výchozí.
+[noshowpos](../standard-library/ios-functions.md#noshowpos) je výchozí nastavení.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -815,7 +815,7 @@ int main( )
 
 ## <a name="skipws"></a>  skipws
 
-Způsobit prostory a vstupní datový proud nelze číst.
+Způsobit prostory vstupního datového proudu nelze číst.
 
 ```cpp
 ios_base& skipws(ios_base& str);
@@ -823,17 +823,17 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze které _ *Str* je odvozený.
+Odkaz na objekt, ze které _ *Str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `skipws` je v platnosti. [noskipws](../standard-library/ios-functions.md#noskipws) způsobí, že prostory čtení ze vstupního datového proudu.
+Ve výchozím nastavení `skipws` je v platnosti. [noskipws](../standard-library/ios-functions.md#noskipws) způsobí, že prostory ke čtení ze vstupního datového proudu.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -868,7 +868,7 @@ int main( )
 
 ## <a name="unitbuf"></a>  unitbuf
 
-Příčiny výstupní mají být zpracovány, pokud vyrovnávací paměť není prázdný.
+Způsobí, že výstupní ke zpracování, pokud vyrovnávací paměť není prázdný.
 
 ```cpp
 ios_base& unitbuf(ios_base& str);
@@ -876,11 +876,11 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze kterého `str` je odvozený.
+Odkaz na objekt, ze kterého *str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -888,11 +888,11 @@ Všimněte si, že `endl` také vyprázdní vyrovnávací paměť.
 
 [nounitbuf](../standard-library/ios-functions.md#nounitbuf) ve výchozím nastavení je v platnosti.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)) a vrátí *str*.
 
-## <a name="uppercase"></a>  Velká písmena
+## <a name="uppercase"></a>  velká písmena
 
-Určuje, že šestnáctkové číslice a exponent v vědecká notace se objeví na velká písmena.
+Určuje, že šestnáctkových číslic a exponent za použití vědeckého zápisu se zobrazí na velká písmena.
 
 ```cpp
 ios_base& uppercase(ios_base& str);
@@ -900,17 +900,17 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-`str` Odkaz na objekt typu [ios_base](../standard-library/ios-base-class.md), nebo typu, který dědí z `ios_base`.
+*Str* odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt, ze kterého `str` je odvozený.
+Odkaz na objekt, ze kterého *str* pochází.
 
 ### <a name="remarks"></a>Poznámky
 
 Ve výchozím nastavení [nouppercase](../standard-library/ios-functions.md#nouppercase) je v platnosti.
 
-Manipulator efektivně volá `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)) a vrátí `str`.
+Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -940,6 +940,6 @@ a
 A
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<IOS >](../standard-library/ios.md)<br/>

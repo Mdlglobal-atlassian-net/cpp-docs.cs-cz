@@ -1,5 +1,5 @@
 ---
-title: Příkazy s popiskem | Microsoft Docs
+title: Příkazy s popiskem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d9456a62c97a2edf1523634268582a7f568b79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b54eb2757f4f58acd0339a058c8bee999b4c8b7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947490"
 ---
 # <a name="labeled-statements"></a>Příkaz s popiskem
-Popisky se používá k přenosu řízení programu přímo na zadaný příkaz.  
+Popisky lze převést řízení programu přímo na zadaný příkaz.  
   
 ```  
 identifier :  statement  
@@ -30,10 +31,10 @@ case constant-expression :  statement
 default :  statement  
 ```  
   
- Rozsah štítek je celý funkce, ve kterém je deklarovaná.  
+ Rozsah popisku je celou funkci, ve kterém je deklarována.  
   
 ## <a name="remarks"></a>Poznámky  
- Existují tři typy příkazů s popisky. Všechny používají k oddělení nějakého typu popisku od příkazu dvojtečku. Případ a výchozí popisky jsou specifické pro case – příkazy.  
+ Existují tři typy příkazů s popisky. Všechny používají k oddělení nějakého typu popisku od příkazu dvojtečku. Popisky case a default jsou specifické pro příkazy case.  
   
 ```cpp  
 #include <iostream>   
@@ -62,15 +63,15 @@ int main() {
   
 ```  
   
- **Příkaz goto – příkaz**  
+ **Goto – příkaz**  
   
- Vzhled *identifikátor* popisek v zdrojový program deklaruje štítek. Pouze [goto](../cpp/goto-statement-cpp.md) příkaz můžou přenášet řízení *identifikátor* popisek. Následující fragment kódu ukazuje použití `goto` příkaz a *identifikátor* štítku:  
+ Vzhled *identifikátor* popisek ve zdrojovém programu deklaruje popisek. Pouze [goto](../cpp/goto-statement-cpp.md) příkaz může přenést řízení k *identifikátor* popisek. Následující fragment kódu ukazuje použití **goto** příkazu a *identifikátor* popisku:  
   
  Popisek se nemůže objevit samostatně, ale musí být vždy připojen k příkazu. Pokud je potřebný samotný popisek, umístěte za tento popisek příkaz null.  
   
  Popisek má rozsah funkce a v rámci této funkce jej nelze opětovně deklarovat. Stejný název lze však použít jako popisek v jiných funkcích.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -87,11 +88,11 @@ int main() {
 //Output: At Test2 label.  
 ```  
   
- **Příkaz case**  
+ **Case – příkaz**  
   
- Popisky, které se zobrazí po **případ** – klíčové slovo nelze zobrazit i mimo `switch` příkaz. (Toto omezení platí také pro **výchozí** – klíčové slovo.) Následující fragment kódu ukazuje správné použití **případ** popisky:  
+ Popisky, které se zobrazí po **případ** – klíčové slovo nemohou zobrazit také mimo **přepnout** příkazu. (Toto omezení platí také pro **výchozí** – klíčové slovo.) Následující fragment kódu ukazuje správné použití **případ** popisků:  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -118,9 +119,9 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-case-statement"></a>Popisky case – příkaz  
- Popisky, které se zobrazí po **případ** – klíčové slovo nelze zobrazit i mimo `switch` příkaz. (Toto omezení platí také pro **výchozí** – klíčové slovo.) Následující fragment kódu ukazuje správné použití **případ** popisky:  
+ Popisky, které se zobrazí po **případ** – klíčové slovo nemohou zobrazit také mimo **přepnout** příkazu. (Toto omezení platí také pro **výchozí** – klíčové slovo.) Následující fragment kódu ukazuje správné použití **případ** popisků:  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -161,14 +162,14 @@ switch( msg )
 }  
 ```  
   
-## <a name="labels-in-the-goto-statement"></a>Popisky v příkazu goto – příkaz  
- Vzhled *identifikátor* popisek v zdrojový program deklaruje štítek. Pouze [goto](../cpp/goto-statement-cpp.md) příkaz můžou přenášet řízení *identifikátor* popisek. Následující fragment kódu ukazuje použití `goto` příkaz a *identifikátor* štítku:  
+## <a name="labels-in-the-goto-statement"></a>Popisků v příkazu goto  
+ Vzhled *identifikátor* popisek ve zdrojovém programu deklaruje popisek. Pouze [goto](../cpp/goto-statement-cpp.md) příkaz může přenést řízení k *identifikátor* popisek. Následující fragment kódu ukazuje použití **goto** příkazu a *identifikátor* popisku:  
   
  Popisek se nemůže objevit samostatně, ale musí být vždy připojen k příkazu. Pokud je potřebný samotný popisek, umístěte za tento popisek příkaz null.  
   
  Popisek má rozsah funkce a v rámci této funkce jej nelze opětovně deklarovat. Stejný název lze však použít jako popisek v jiných funkcích.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  

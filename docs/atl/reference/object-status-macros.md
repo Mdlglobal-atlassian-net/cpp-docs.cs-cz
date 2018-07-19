@@ -1,5 +1,5 @@
 ---
-title: Objekt stavu makra | Microsoft Docs
+title: Makra stavu objektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddfc28c659d0c1eb54794d8fc76a9f3a4f9e73b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360871"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883655"
 ---
-# <a name="object-status-macros"></a>Makra stav objektu
-Toto makro nastaví příznaky, které patří do ovládacích prvků ActiveX.  
+# <a name="object-status-macros"></a>Makra stavu objektů
+Toto makro nastaví příznaky, které patří ovládací prvky ActiveX.  
   
 |||  
 |-|-|  
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Používá se k nastavení v ovládacích prvcích ActiveX knihovny ATL **OLEMISC** příznaky.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Použít v ovládacích prvcích ActiveX knihovny ATL nastavit OLEMISC příznaky.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlcom  
 
 ##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- Používá se v ovládacích prvcích ActiveX knihovny ATL nastavení OLEMISC příznaků.  
+ Použít v ovládacích prvcích ActiveX knihovny ATL nastavit OLEMISC příznaky.  
   
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
@@ -43,7 +43,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  Všechny použitelné OLEMISC příznaky.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto makro se používá k nastavení OLEMISC příznaků pro ovládací prvek ActiveX. Odkazovat na [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) další podrobnosti.  
+ Toto makro se používá k nastavení OLEMISC příznaky pro ovládací prvek ActiveX. Odkazovat na [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) další podrobnosti.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

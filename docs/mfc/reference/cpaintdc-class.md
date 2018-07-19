@@ -1,5 +1,5 @@
 ---
-title: CPaintDC – třída | Microsoft Docs
+title: Cpaintdc – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c06fe7550598eeeb4136b233f39079d7425e9
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078216"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848912"
 ---
-# <a name="cpaintdc-class"></a>CPaintDC – třída
-Odvozené třídy kontextu zařízení z [CDC](../../mfc/reference/cdc-class.md).  
+# <a name="cpaintdc-class"></a>Cpaintdc – třída
+Kontext zařízení třída odvozená z [CDC](../../mfc/reference/cdc-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,21 +52,21 @@ class CPaintDC : public CDC
 |----------|-----------------|  
 |[CPaintDC::m_ps](#m_ps)|Obsahuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) použita k vyplnění klientské oblasti.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPaintDC::m_hWnd](#m_hwnd)|`HWND` Ke kterému tato `CPaintDC` objekt je připojený.|  
+|[CPaintDC::m_hWnd](#m_hwnd)|HWND, ke kterému je tento `CPaintDC` objekt připojen.|  
   
 ## <a name="remarks"></a>Poznámky  
- Provede [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) během vytváření a [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) během odstraňování.  
+ Funguje [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) v době konstrukce a [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) v době zničení.  
   
- A `CPaintDC` objekt lze použít pouze při odpovědi na [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) zprávy, obvykle v vaší `OnPaint` obslužné rutiny zpráv – členská funkce.  
+ A `CPaintDC` objektu jde použít jenom při odpovídání na [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) zpráv, obvykle v vaše `OnPaint` obslužná rutina zprávy členskou funkci.  
   
- Další informace o používání `CPaintDC`, najdete v části [kontexty zařízení](../../mfc/device-contexts.md).  
+ Další informace o používání `CPaintDC`, naleznete v tématu [kontexty zařízení](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
@@ -76,7 +76,7 @@ class CPaintDC : public CDC
  **Záhlaví:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
- Vytvoří `CPaintDC` objekt, připraví okna aplikace pro malování a ukládá [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktury v [m_ps](#m_ps) členské proměnné.  
+ Vytvoří `CPaintDC` připraví okna aplikace pro kreslení objektu a ukládá [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktury v [m_ps](#m_ps) členské proměnné.  
   
 ```  
 explicit CPaintDC(CWnd* pWnd);
@@ -84,47 +84,47 @@ explicit CPaintDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Odkazuje na `CWnd` objekt, ke kterému `CPaintDC` objekt náleží.  
+ Odkazuje na `CWnd` objekt, na který `CPaintDC` objekt patří.  
   
 ### <a name="remarks"></a>Poznámky  
- K výjimce (typu `CResourceException`) je vyvolána, pokud Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) volání selže. Kontext zařízení nemusí být k dispozici, pokud systém Windows všechny jeho kontexty zařízení k dispozici již přiděleno. Vaše aplikace bojuje pro pět běžné zobrazení kontexty dostupné v každém okamžiku v systému Windows.  
+ Výjimky (typu `CResourceException`) je vyvolána, pokud Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CPaintDC::m_hWnd  
- `HWND` Ke kterému tato `CPaintDC` objekt je připojený.  
+ `HWND` Ke kterému je tento `CPaintDC` objekt připojen.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- *m_hWnd* je chráněný proměnná typu `HWND`.  
+ *m_hWnd* je chráněná proměnná typu HWND.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
 ##  <a name="m_ps"></a>  CPaintDC::m_ps  
- `m_ps` je veřejný členské proměnné typu [paintstruct –](../../mfc/reference/paintstruct-structure.md).  
+ `m_ps` je veřejné členské proměnné typu [paintstruct –](../../mfc/reference/paintstruct-structure.md).  
   
 ```  
 PAINTSTRUCT m_ps;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je `PAINTSTRUCT` , je předán a vyplňovat [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint).  
+ Je `PAINTSTRUCT` , který je předán a vyplňuje [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint).  
   
  `PAINTSTRUCT` Obsahuje informace, které aplikace používá k vyplnění klientské oblasti okna přidružené `CPaintDC` objektu.  
   
- Všimněte si, že máte přístup prostřednictvím popisovač kontextu zařízení `PAINTSTRUCT`. Však může přistupovat k popisovač více přímo prostřednictvím `m_hDC` členské proměnné, `CPaintDC` dědí z `CDC`.  
+ Všimněte si, že dostanete popisovač kontextu zařízení prostřednictvím `PAINTSTRUCT`. Však můžete přistupovat k popisovač více přímo prostřednictvím `m_hDC` členské proměnné, která `CPaintDC` dědí z CSP.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CPaintDC::m_hWnd](#m_hwnd).  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC MDI](../../visual-cpp-samples.md)   
- [Třída CDC](../../mfc/reference/cdc-class.md)   
+ [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)   
+ [CDC – třída](../../mfc/reference/cdc-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)
 
 

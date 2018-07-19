@@ -1,5 +1,5 @@
 ---
-title: CHotKeyCtrl – třída | Microsoft Docs
+title: Chotkeyctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337255"
 ---
-# <a name="chotkeyctrl-class"></a>CHotKeyCtrl – třída
-Poskytuje funkci běžné aktivní klíče ovládacího prvku Windows.  
+# <a name="chotkeyctrl-class"></a>Chotkeyctrl – třída
+Poskytuje funkce ovládacího prvku Windows běžné výměně klíče.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,27 +60,27 @@ class CHotKeyCtrl : public CWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CHotKeyCtrl::Create](#create)|Vytvoří ovládacího prvku klávesová zkratka a připojí jej k `CHotKeyCtrl` objektu.|  
-|[CHotKeyCtrl::CreateEx](#createex)|Vytvoří zadaný Windows rozšířené styly ovládacího prvku klávesová zkratka a připojí jej k `CHotKeyCtrl` objektu.|  
-|[CHotKeyCtrl::GetHotKey](#gethotkey)|Načte virtuální klíče kód a modifikátor příznaky aktivní klíče z ovládacího prvku klávesová zkratka.|  
-|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Načte název klíče místní znakové sady, přiřazené klávesové zkratky.|  
-|[CHotKeyCtrl::GetKeyName](#getkeyname)|Načte název klíče místní znakové sady, přiřazena ke kódu zadaný virtuální klíče.|  
-|[CHotKeyCtrl::SetHotKey](#sethotkey)|Nastaví aktivní kombinace kláves pro ovládacího prvku klávesová zkratka.|  
-|[CHotKeyCtrl::SetRules](#setrules)|Definuje neplatná kombinace a výchozí modifikátor kombinace pro ovládacího prvku klávesová zkratka.|  
+|[CHotKeyCtrl::Create](#create)|Vytvoří ovládací prvek výměně klíčů a připojí ho k `CHotKeyCtrl` objektu.|  
+|[CHotKeyCtrl::CreateEx](#createex)|Vytvoří ovládací prvek výměně klíčů zadaný rozšířené styly Windows a připojí ho k `CHotKeyCtrl` objektu.|  
+|[CHotKeyCtrl::GetHotKey](#gethotkey)|Načte virtuální klíče kódu a modifikátor příznaky výměně klíče z ovládacího prvku výměně klíče.|  
+|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Načte název klíče, místní znakové sady, přiřazené klávesové zkratky.|  
+|[CHotKeyCtrl::GetKeyName](#getkeyname)|Načte název klíče, místní znakové sady, přiřazené k zadané virtuální kód.|  
+|[CHotKeyCtrl::SetHotKey](#sethotkey)|Nastaví klávesové kombinace kláves pro ovládací prvek výměně klíče.|  
+|[CHotKeyCtrl::SetRules](#setrules)|Definuje výchozí kombinaci Modifikátor pro ovládací prvek výměně klíčů a neplatná kombinace.|  
   
 ## <a name="remarks"></a>Poznámky  
- "Ovládacího prvku klávesová zkratka" je okno, které umožňuje uživatelům vytvořit klávesové zkratky. "Klávesové zkratky" je kombinace klíče, který může uživatel stisknout k provedení akce rychle. (Například uživatel může vytvořit klávesové zkratky, která aktivuje okno daného a, zobrazí se na začátek pořadí vykreslování.) Aktivní klíče ovládací prvek zobrazí volby uživatele a zajistí, že uživatel vybere platnou kombinaci.  
+ "Hot ovládacího prvku" je okno, které umožňuje uživateli vytvořit klávesové zkratky. "Klávesové zkratky" je může uživatel udělat rychle stisknout kombinaci kláves. (Například uživatel může vytvořit klávesové zkratky, která aktivuje daném okně a ukončí na něm na začátek pořadí.) Výměně klíčů ovládací prvek zobrazí možnosti uživatele a zajistí, že uživatel vybere platnou kombinaci kláves.  
   
- Tento ovládací prvek (a proto `CHotKeyCtrl` třída) je k dispozici pouze pro aplikace běžící v rámci verze systému Windows 95/98 a systému Windows NT 3.51 a novějším.  
+ Tento ovládací prvek (a tedy `CHotKeyCtrl` třídy) je dostupná jenom pro programy spuštěné v rámci Windows 95/98 a Windows NT verze 3.51 a vyšší.  
   
- Při výběru kombinaci kláves uživatelem aplikace můžete načíst zadaný kombinace kláves z ovládacího prvku a použít **WM_SETHOTKEY** zpráva nastavit klávesové zkratky v systému. Vždy, když uživatel stisknutím klávesové zkratky následně z jakékoliv části systému okno specifikované v **WM_SETHOTKEY** zprávu přijme **WM_SYSCOMMAND** zadání zprávy **SC_HOTKEY** . Tato zpráva aktivuje okně, které ji přijme. Klávesové zkratky zůstává platná do aplikace, která volá **WM_SETHOTKEY** ukončí.  
+ Když uživatel se rozhodl kombinaci kláves, můžete aplikaci načíst zadanou kombinaci kláves z ovládacího prvku a pomocí WM_SETHOTKEY nastavení klávesové zkratky v systému. Vždy, když uživatel stiskne klávesovou zkratku po tomto datu, z jakékoliv části systému, určená ve zprávě WM_SETHOTKEY okno obdrží zprávu WM_SYSCOMMAND zadání SC_HOTKEY. Tato zpráva aktivuje okně, které obdrží. Klávesové zkratky zůstane platný až do aplikace, která volá WM_SETHOTKEY ukončí.  
   
- Tento mechanismus se liší od aktivního klíče podpory, které závisí na **WM_HOTKEY** zprávu a Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkce.  
+ Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funkce.  
   
- Další informace o používání `CHotKeyCtrl`, najdete v části [ovládací prvky](../../mfc/controls-mfc.md) a [pomocí CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
+ Další informace o používání `CHotKeyCtrl`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md) a [používání atributu CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -99,7 +99,7 @@ CHotKeyCtrl();
 ```  
   
 ##  <a name="create"></a>  CHotKeyCtrl::Create  
- Vytvoří ovládacího prvku klávesová zkratka a připojí jej k `CHotKeyCtrl` objektu.  
+ Vytvoří ovládací prvek výměně klíčů a připojí ho k `CHotKeyCtrl` objektu.  
   
 ```  
 virtual BOOL Create(
@@ -111,27 +111,27 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Určuje styl aktivní klíče ovládacího prvku. Použijte libovolnou kombinaci styly ovládacího prvku. V tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK pro další informace.  
+ Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Zobrazit [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) v sadě Windows SDK pro další informace.  
   
- *Rect –*  
- Určuje velikost a umístění aktivního klíče ovládacího prvku. Může být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).  
+ *Rect*  
+ Určuje velikost a umístění výměně klíčů ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).  
   
  *pParentWnd*  
- Určuje aktivní klíče řízení nadřazené okno, obvykle [CDialog](../../mfc/reference/cdialog-class.md). Nesmí být **NULL**.  
+ Určuje, výměně klíčů nadřazené okno ovládacího prvku, obvykle [CDialog](../../mfc/reference/cdialog-class.md). Nesmí být NULL.  
   
  *nID*  
- Určuje ID aktivního klíče ovládacího prvku.  
+ Určuje ID výměně klíčů ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud se inicializace byla úspěšná. jinak 0.  
+ Nenulová, pokud se inicializace byla úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Můžete vytvořit `CHotKeyCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a pak zavolají `Create`, který vytvoří prvku aktivního klíče a připojí jej k `CHotKeyCtrl` objektu.  
+ Můžete vytvořit `CHotKeyCtrl` objektu ve dvou krocích. Nejprve volat konstruktor a poté zavolejte `Create`, která vytvoří ovládací prvek výměně klíčů a připojí ho k `CHotKeyCtrl` objektu.  
   
- Pokud chcete použít rozšířené windows styly s ovládacím prvkem, zavolejte [CreateEx](#createex) místo `Create`.  
+ Pokud chcete použít rozšířené windows styly ovládacího prvku, zavolejte [CreateEx](#createex) místo `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
- Volání této funkce vytvoření ovládacího prvku (podřízeného okna) a její přidružení `CHotKeyCtrl` objektu.  
+ Voláním této funkce vytvoření ovládacího prvku (podřízené okno) a přidružte jej k `CHotKeyCtrl` objektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -144,28 +144,28 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Určuje styl rozšířené vytváří ovládacího prvku. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) ve Windows SDK.  
+ Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) v sadě Windows SDK.  
   
  *dwStyle*  
- Určuje styl aktivní klíče ovládacího prvku. Použijte libovolnou kombinaci styly ovládacího prvku. Další informace najdete v tématu [běžné styly ovládacího prvku](http://msdn.microsoft.com/library/windows/desktop/bb775498) ve Windows SDK.  
+ Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Další informace najdete v tématu [– styly běžných ovládacích prvků](http://msdn.microsoft.com/library/windows/desktop/bb775498) v sadě Windows SDK.  
   
- *Rect –*  
- Odkaz na [Rect –](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující velikost a umístění okna byly vytvořeny v souřadnice klienta *pParentWnd*.  
+ *Rect*  
+ Odkaz na [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.  
   
  *pParentWnd*  
- Ukazatel na okně, které je nadřazeného ovládacího prvku.  
+ Ukazatel na okno, který je nadřazeného ovládacího prvku.  
   
  *nID*  
- ID ovládacího prvku podřízeného okna.  
+ ID ovládacího prvku podřízené okno.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určeného předponu rozšířené styl Windows **WS_EX_**.  
+ Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.  
   
 ##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
- Načte virtuální klíče kód a modifikátor příznaky systému klávesové zkratky z ovládacího prvku klávesová zkratka.  
+ Načte virtuální klíče kódu a modifikátor příznaky klávesové zkratky z ovládacího prvku výměně klíče.  
   
 ```  
 DWORD GetHotKey() const;  
@@ -177,41 +177,41 @@ void GetHotKey(
   
 ### <a name="parameters"></a>Parametry  
  [out] *wVirtualKeyCode*  
- Virtuální klíče kód klávesové zkratky. Seznam kódů standardní virtuální klíčů najdete v tématu winuser.  
+ Virtuální kód klávesové zkratky. Seznam kódů standardní virtuální klíče najdete v tématu winuser.  
   
  [out] *wModifiers*  
- Bitová kombinace (nebo) příznaky, které indikují modifikační klávesy v klávesové zkratky.  
+ Bitová kombinace (nebo) příznaků, které označují modifikační klávesy v klávesové zkratky.  
   
  Modifikátor příznaky jsou následující:  
   
-|Příznak|Odpovídající klíč|  
+|Příznak|Odpovídajícím klíčem|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|ALT klávesa|  
-|`HOTKEYF_CONTROL`|Klávesu CTRL|  
-|`HOTKEYF_EXT`|Rozšířené klíč|  
-|`HOTKEYF_SHIFT`|Klávesy SHIFT|  
+|HOTKEYF_ALT|ALT klávesa|  
+|HOTKEYF_CONTROL|Klávesa CTRL|  
+|HOTKEYF_EXT|Delší klíče|  
+|HOTKEYF_SHIFT|Klávesa SHIFT|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V prvním metodu, přetížených `DWORD` obsahující virtuální klíče kód a modifikátor příznaky. Nejnižší bajt aplikace word nejnižší obsahuje kód virtuální, vysokou pořadí bajtů aplikace word nejnižší obsahuje modifikátor příznaky a horní slovo je nulová.  
+ V první přetížená metoda, která obsahuje virtuální klíče kódu a modifikátor příznaky DWORD. Nejnižší bajt nižší řád slova obsahuje virtuální kód, na vyšší řád bajt nižší řád slova obsahuje modifikátor příznaky a vyšší řád slova je nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Kód virtuální a společně modifikační klávesy definovat klávesové zkratky.  
+ Virtuální kód a modifikační klávesy společně definují klávesové zkratky.  
   
 ##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
- Volání této funkce člen získat lokalizovaný název klávesové zkratky.  
+ Voláním této členské funkce, chcete-li získat lokalizovaný název klávesovou zkratku.  
   
 ```  
 CString GetHotKeyName() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Lokalizovaný název aktuálně vybrané klávesové zkratky. Pokud neexistuje žádné vybrané klávesové zkratky `GetHotKeyName` vrátí prázdný řetězec.  
+ Lokalizovaný název aktuálně vybraného klávesovou zkratku. Pokud neexistuje žádné vybrané klávesovou zkratku, `GetHotKeyName` vrátí prázdný řetězec.  
   
 ### <a name="remarks"></a>Poznámky  
- Název, který vrátí tato funkce člen pochází z klávesnice ovladače. Lokalizované verze systému Windows, můžete nainstalovat ovladač Nelokalizováno klávesnice a naopak.  
+ Název, který tato členská funkce vrátí pochází z ovladače klávesnice. Můžete nainstalovat ovladač nelokalizovaný klávesnice v lokalizované verzi systému Windows a naopak.  
   
 ##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
- Volání této funkce člen získat lokalizovaný název klíč přiřazený k zadané virtuální klíče kódu.  
+ Voláním této členské funkce, chcete-li získat lokalizovaný název klíče přiřazená zadaný kód virtuální klávesy.  
   
 ```  
 static CString GetKeyName(
@@ -221,22 +221,22 @@ static CString GetKeyName(
   
 ### <a name="parameters"></a>Parametry  
  *Vk*  
- Kód virtuální klíče.  
+ Virtuální kód.  
   
  *fExtended*  
- Pokud je virtuální klíče kód klíčem rozšířené **TRUE**jinak **FALSE**.  
+ Pokud virtuální kód je delší klíče, hodnotu PRAVDA. v opačném případě FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Lokalizovaný název je klíč zadaný pomocí *vk* parametr. Pokud klíč nemá žádné namapované název `GetKeyName` vrátí prázdný řetězec.  
+ Lokalizovaný název klíče určené *vk* parametru. Pokud klíč nemá žádný název mapované `GetKeyName` vrátí prázdný řetězec.  
   
 ### <a name="remarks"></a>Poznámky  
- Název klíče, který vrátí tato funkce pochází z ovladač klávesnice, takže můžete nainstalovat ovladač Nelokalizováno klávesnice lokalizované verze systému Windows a naopak.  
+ Název klíče, který tato funkce vrací pochází z ovladače klávesnice, můžete nainstalovat ovladač nelokalizovaný klávesnice v lokalizované verzi systému Windows a naopak.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
 ##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
- Nastaví klávesové zkratky pro ovládacího prvku klávesová zkratka.  
+ Nastaví klávesové zkratky pro ovládací prvek výměně klíče.  
   
 ```  
 void SetHotKey(
@@ -245,26 +245,26 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *wVirtualKeyCode*  
- Virtuální klíče kód klávesové zkratky. Seznam kódů standardní virtuální klíčů najdete v tématu winuser.  
+ [in] *wVirtualKeyCode*  
+ Virtuální kód klávesové zkratky. Seznam kódů standardní virtuální klíče najdete v tématu winuser.  
   
- [v] *wModifiers*  
- Bitová kombinace (nebo) příznaky, které indikují modifikační klávesy v klávesové zkratky.  
+ [in] *wModifiers*  
+ Bitová kombinace (nebo) příznaků, které označují modifikační klávesy v klávesové zkratky.  
   
  Modifikátor příznaky jsou následující:  
   
-|Příznak|Odpovídající klíč|  
+|Příznak|Odpovídajícím klíčem|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|ALT klávesa|  
-|`HOTKEYF_CONTROL`|Klávesu CTRL|  
-|`HOTKEYF_EXT`|Rozšířené klíč|  
-|`HOTKEYF_SHIFT`|Klávesy SHIFT|  
+|HOTKEYF_ALT|ALT klávesa|  
+|HOTKEYF_CONTROL|Klávesa CTRL|  
+|HOTKEYF_EXT|Delší klíče|  
+|HOTKEYF_SHIFT|Klávesa SHIFT|  
   
 ### <a name="remarks"></a>Poznámky  
- Kód virtuální a společně modifikační klávesy definovat klávesové zkratky.  
+ Virtuální kód a modifikační klávesy společně definují klávesové zkratky.  
   
 ##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
- Volání této funkce můžete definovat neplatná kombinace a výchozí modifikátor kombinace pro ovládacího prvku klávesová zkratka.  
+ Voláním této funkce pro definování neplatná kombinace a kombinaci výchozí Modifikátor pro ovládací prvek výměně klíčů.  
   
 ```  
 void SetRules(
@@ -274,29 +274,29 @@ void SetRules(
   
 ### <a name="parameters"></a>Parametry  
  *wInvalidComb*  
- Pole příznaky, které určuje neplatná kombinace kláves. Může být kombinací následujícího:  
+ Pole příznaky, které určuje neplatný kombinace kláves. Může být kombinací následujícího:  
   
-- `HKCOMB_A` ALT  
+- HKCOMB_A ALT  
   
-- `HKCOMB_C` CTRL  
+- HKCOMB_C CTRL  
   
-- `HKCOMB_CA` CTRL + ALT  
+- HKCOMB_CA CTRL + ALT  
   
-- `HKCOMB_NONE` Beze změny klíče  
+- Bez úprav HKCOMB_NONE klíče  
   
-- `HKCOMB_S` POSUNUTÍ  
+- HKCOMB_S SHIFT  
   
-- `HKCOMB_SA` SHIFT + ALT  
+- HKCOMB_SA SHIFT + ALT  
   
-- `HKCOMB_SC` SHIFT + CTRL  
+- HKCOMB_SC SHIFT + CTRL  
   
-- `HKCOMB_SCA` SHIFT + CTRL + ALT  
+- HKCOMB_SCA SHIFT + CTRL + ALT  
   
  *wModifiers*  
- Pole příznaky, které určuje kombinaci kláves pro použijte, pokud uživatel zadá neplatnou kombinaci. Další informace o příznaky modifikátor najdete v tématu [GetHotKey](#gethotkey).  
+ Pole příznaky, které určuje kombinaci kláves používat, když uživatel zadá neplatnou kombinaci. Další informace o příznacích modifikátor najdete v tématu [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Poznámky  
- Když uživatel zadá neplatná kombinace kláves, podle definice příznaků zadaných ve *wInvalidComb*, používá systém operátor OR kombinovat klíče zadané uživatelem s příznaků zadaných ve *wModifiers*. Výsledná kombinace kláves je převést na řetězec a následně se zobrazují v ovládacím prvku aktivního klíče.  
+ Když uživatel zadá neplatnou kombinaci kláves, jak jsou definovány pomocí příznaků zadaných ve *wInvalidComb*, systém použije operátor OR zkombinovat klíče zadané uživatelem pomocí příznaků zadaných ve *wModifiers*. Výsledný kombinace kláves je převést na řetězec a následně se zobrazí v ovládacím prvku výměně klíče.  
   
 ## <a name="see-also"></a>Viz také  
  [Třída CWnd](../../mfc/reference/cwnd-class.md)   

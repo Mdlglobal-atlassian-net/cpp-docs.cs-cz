@@ -1,5 +1,5 @@
 ---
-title: (ATL) při počítání referencí | Microsoft Docs
+title: (ATL) pro počítání odkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1ba27f00bf25f88575101b1299daf50f94000ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358245"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850810"
 ---
 # <a name="reference-counting"></a>Počítání odkazů
-COM, samotné nezkusí automaticky k odebrání objektu z paměti, když se domnívá, že objekt je již používána. Objekt programátorů místo toho musíte odebrat nepoužité objektu. Programátorů Určuje, zda objekt lze odebrat podle počet odkazů.  
+COM samotné nepokusí automaticky se odebere objekt z paměti při domnívá, že objekt je již nejsou déle používány. Programátor objekt místo toho musíte odebrat nepoužívané objektu. Programátor Určuje, zda objekt lze odebrat závislosti na počtu odkazů.  
   
- Používá COM **IUnknown** metody, [addref –](http://msdn.microsoft.com/library/windows/desktop/ms691379) a [verze](http://msdn.microsoft.com/library/windows/desktop/ms682317), ke správě počet odkazů rozhraní na objekt. Obecná pravidla pro volání těchto metod jsou:  
+ COM používá `IUnknown` metody, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) a [vydání](http://msdn.microsoft.com/library/windows/desktop/ms682317), spravovat počet odkazů rozhraní na objekt. Obecná pravidla pro volání těchto metod jsou:  
   
--   Vždy, když klient obdrží ukazatele rozhraní, `AddRef` musí být voláno na rozhraní.  
+-   Pokaždé, když klient obdrží ukazatel rozhraní, `AddRef` musí být volána na rozhraní.  
   
--   Vždy, když klient dokončí, pomocí rozhraní ukazatele, musí volat **verze**.  
+-   Pokaždé, když klient úspěšně proběhlo pomocí ukazatele rozhraní, musí volat `Release`.  
   
- Jednoduché implementace každý `AddRef` volání přírůstcích a každý **verze** volání snižuje proměnnou čítače v objektu. Pokud počet vrátí na nulu, rozhraní již má všechny uživatele a může sám sebe odebrat z paměti.  
+ V jednoduché implementace každý `AddRef` přírůstky a každé volání `Release` volání dekrementuje proměnnou čítače v objektu. Po návratu počty na nulu, rozhraní již má všechny uživatele a je zdarma k odebrání samotné z paměti.  
   
- Počítání odkazů můžete implementovat také tak, aby se počítá každý odkaz na objekt (ne pro jednotlivé rozhraní). V takovém případě každé `AddRef` a **verze** volání delegáti centrální implementaci na objekt, a **verze** celý objekt uvolní, když jeho počet odkazů hodnota nula.  
+ Počítání odkazů můžete implementovat také tak, aby se počítá každý odkaz na objekt (ne pro jednotlivá rozhraní). V tomto případě každý `AddRef` a `Release` volání delegáty pro centrální implementace objektu a `Release` při jeho počet odkazů dosáhne nuly, uvolní celý objekt.  
   
 > [!NOTE]
->  Při `CComObject`-odvozené objekt se vytvoří pomocí **nové** operátor, počet odkazů je 0. Proto volání `AddRef` musí být provedeny po úspěšném vytvoření `CComObject`-odvozené objektu.  
+>  Při `CComObject`-odvozené objekt je vytvořen pomocí **nové** operátor, počet odkazů je 0. Proto volání `AddRef` po úspěšném vytvoření se musí provádět `CComObject`-odvozenému objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Úvod do modelu COM](../atl/introduction-to-com.md)   

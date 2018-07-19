@@ -1,5 +1,5 @@
 ---
-title: bad_cast – výjimka | Microsoft Docs
+title: bad_cast – výjimka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947486"
 ---
 # <a name="badcast-exception"></a>bad_cast – výjimka
 Výjimka `bad_cast` je vyvolána operátorem `dynamic_cast` jako výsledek neúspěšného přetypování na typ odkazu.  
@@ -37,7 +38,7 @@ catch (bad_cast)
 ## <a name="remarks"></a>Poznámky  
  Rozhraní výjimky `bad_cast` je následující:  
   
-```  
+```cpp 
 class bad_cast : public exception {  
 public:  
    bad_cast(const char * _Message = "bad cast");  
@@ -48,7 +49,7 @@ public:
   
  Následující kód obsahuje příklad neúspěšného přetypování `dynamic_cast`, které vyvolá výjimku `bad_cast`.  
   
-```  
+```cpp 
 // expre_bad_cast_Exception.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -77,20 +78,20 @@ int main() {
 }  
 ```  
   
- Výjimka je vyvolána, protože přetypovaný objekt (Shape) není odvozen ze zadaného typu přetypování (Circle). Chcete-li se této výjimce vyhnout, přidejte do funkce `main` následující deklarace:  
+ Výjimka je vyvolána, protože přetypovaný objekt (Shape) není odvozen ze zadaného typu přetypování (Circle). Aby se zabránilo výjimky, přidejte tyto deklarace k **hlavní**:  
   
-```  
+```cpp 
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- Poté zaměňte význam přetypování v bloku `try` takto:  
+ Poté zaměňte význam přetypování v **zkuste** blokovat následujícím způsobem:  
   
-```  
+```cpp 
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
 ## <a name="see-also"></a>Viz také  
  [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)

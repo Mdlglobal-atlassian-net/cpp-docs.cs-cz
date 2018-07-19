@@ -1,5 +1,5 @@
 ---
-title: Pair – struktura | Microsoft Docs
+title: Pair – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854428"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955329"
 ---
 # <a name="pair-structure"></a>pair – struktura
 
-Struktura, která poskytuje pro možnost dva objekty považovat za jeden objekt.
+Struktura, která poskytuje možnost zpracovávat dva objekty jako jednoho objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>Parametry
 
-`Val1` Hodnota inicializace první prvek `pair`.
+*Val1* hodnotu, která inicializuje první prvek `pair`.
 
-`Val2` Hodnota inicializace druhého prvku `pair`.
+*Val2* hodnotu, která inicializuje druhý prvek `pair`.
 
-`Right` Pár, jejichž hodnoty se mají být použita k chybě při inicializaci elementy jinou dvojici.
+*Pravé* pár, jejichž hodnoty se mají použít k inicializaci prvků jinou dvojici.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-První (výchozí) konstruktor inicializuje první prvek, které odpovídá páru na výchozí hodnoty typu **T1** a druhý prvkem na výchozí typ **T2**.
+První (výchozí) konstruktor inicializuje první prvek dvojice na výchozí hodnotu typu `T1` a druhý prvek výchozí typ `T2`.
 
-Druhý konstruktor inicializuje první prvek, které odpovídá páru k `Val1` a druhý k *hodnota2.*
+Druhý konstruktor inicializuje první prvek dvojice k *Val1* a druhý k *Val2.*
 
-Třetí (šablony) konstruktor inicializuje první prvek, které odpovídá páru k `Right`. **první** a druhý k `Right`. **druhý**.
+Třetí konstruktor (šablona) inicializuje první prvek dvojice k `Right`. **první** a druhý k `Right`. **druhý**.
 
-Čtvrtý konstruktor inicializuje první prvek, které odpovídá páru k `Val1` a druhý k *hodnota2* pomocí [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Čtvrtý konstruktor inicializuje první prvek dvojice k *Val1* a druhý k *Val2* pomocí [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Struktura šablony ukládá pár objekty typu **T1** a **T2**, v uvedeném pořadí. Typ **first_type –** je stejný jako parametr šablony **T1** a typ **second_type –** je stejný jako parametr šablony **T2** . **T1** a **T2** každý musí zadat jenom výchozí konstruktor, konstruktor jeden argument a destruktor. Všechny členy typu `pair` nejsou veřejné, protože typ je deklarován jako `struct` spíš než jako **třída**. Jsou dvě nejběžnější používá pro pár jako návratové typy pro funkce, které vrací dvě hodnoty a jako elementy pro třídy asociativní kontejneru [map – třída](../standard-library/map-class.md) a [multimap – třída](../standard-library/multimap-class.md) mají oba klíče a Typ hodnoty přidružené k každý prvek. Splňuje požadavky pro kontejner asociativní pár a má typ hodnoty ve formátu `pair` <  **const**`key_type`, `mapped_type`>.
+Šablona struktura ukládá dvojici objektů typu `T1` a `T2`v uvedeném pořadí. Typ `first_type` je stejný jako parametr šablony `T1` a typ `second_type` je stejný jako parametr šablony `T2`. `T1` a `T2` každý potřebovat zadat pouze výchozí konstruktor, jedním argumentem konstruktor a destruktor. Všechny členy typu `pair` jsou veřejné, protože typ je deklarován jako `struct` spíše než stejně jako **třídy**. Tato dvě nejběžnější použití pro pár se jako návratové typy pro funkce, které vrací dvě hodnoty a jako prvky pro třídy asociativní kontejner [map – třída](../standard-library/map-class.md) a [multimap – třída](../standard-library/multimap-class.md) , které mají oba klíče a Typ hodnoty přidružené k každý prvek. Splňuje požadavky kontejner asociativních párů a s typem hodnoty ve formuláři `pair` <  **const**`key_type`, `mapped_type`>.
 
 ## <a name="example"></a>Příklad
 
@@ -165,10 +165,10 @@ The element with a key value of
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<nástroj >
+**Záhlaví:** \<nástroje >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Vytvoření agregovaného objektu | Microsoft Docs
+title: Vytvoření agregovaného objektu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ddbd6b8db853967a70de0427cc842689d55c82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f6ff5a0fdcff62d62469f17388f633b83739a09
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355017"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850823"
 ---
 # <a name="creating-an-aggregated-object"></a>Vytvoření agregovaného objektu
-Delegáti agregace **IUnknown** volání, poskytuje ukazatel na vnější objekt **IUnknown** vnitřní objekt.  
+Delegáti agregace `IUnknown` volání, poskytuje ukazatel na objekt vnější `IUnknown` na vnitřní objekt.  
   
-### <a name="to-create-an-aggregated-object"></a>Pro vytvoření agregovaného objektu  
+### <a name="to-create-an-aggregated-object"></a>Vytvoření agregovaného objektu  
   
-1.  Přidat **IUnknown** ukazatel do vaší třídy objektu a inicializujte ho, aby **NULL** v konstruktoru.  
+1.  Přidat `IUnknown` ukazatel na třídu objektu a inicializovat na hodnotu NULL v konstruktoru.  
   
-2.  Přepsání [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) vytvoření agregace.  
+2.  Přepsat [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) vytvoření agregace.  
   
-3.  Použití **IUnknown** ukazatele, definovaný v kroku 1, jako druhý parametr pro [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) makra.  
+3.  Použití `IUnknown` ukazatel definovaný v kroku 1, jako druhý parametr [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) makra.  
   
-4.  Přepsání [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) k uvolnění **IUnknown** ukazatel.  
+4.  Přepsat [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) uvolnit `IUnknown` ukazatele.  
   
 > [!NOTE]
->  Pokud používáte a verzi rozhraní z agregovaného objektu během `FinalConstruct`, měli byste přidat [DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) makro k definici třídy objektu.  
+>  Pokud používáte a uvolnění rozhraní z agregovaného objektu během `FinalConstruct`, měli byste přidat [DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) – makro na definici třídy objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)

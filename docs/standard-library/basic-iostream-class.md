@@ -1,5 +1,5 @@
 ---
-title: basic_iostream – třída | Microsoft Docs
+title: basic_iostream – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844273"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954705"
 ---
 # <a name="basiciostream-class"></a>basic_iostream – třída
 
-Datový proud třídu, která můžete provést i vstup a výstup.
+Datový proud třídu, která můžete provést jak vstupu a výstupu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje objekt, který řídí vložení prostřednictvím její základní třída [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> a extrakce prostřednictvím její základní třída [basic_ IStream on Request](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. Dva objekty sdílejí společné virtuální základní třídu [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Spravují běžné vyrovnávací paměť datového proudu, elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`. Konstruktor inicializuje jeho základních tříd prostřednictvím `basic_istream`( **strbuf**) a `basic_ostream`( **strbuf**).
+Třída šablony popisuje objekt, který řídí vkládání prostřednictvím její základní třídě [basic_ostream –](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> a extrakce prostřednictvím její základní třídě [basic_ IStream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. Dva objekty sdílejí společné virtuální základní třídy [basic_ios –](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Spravují běžné vyrovnávací paměť datového proudu, s prvky typu `Elem`, jehož vlastnosti znaků určuje třídu `Tr`. Konstruktor inicializuje její základní třídy prostřednictvím `basic_istream`( **strbuf**) a `basic_ostream`( **strbuf**).
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -57,19 +57,19 @@ public:
 
 |Členská funkce|Popis|
 |-|-|
-|[Swap](#swap)|Výměny obsah ze zadaných `basic_iostream` objekt pro obsah tohoto objektu.|
+|[Prohození](#swap)|Vyměňuje obsahy zadaných `basic_iostream` objektu bude obsah tohoto objektu.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Přiřadí hodnota zadané `basic_iostream` objekt, který má tento objekt. Jedná se o přesunutí přiřazení zahrnující `rvalue` , nenechává kopie za sebou.|
+|[operátor =](#op_eq)|Přiřadí hodnotu zadaného `basic_iostream` do tohoto objektu. Toto je zahrnující přiřazení pro přesun `rvalue` , nenechává kopii za sebou.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<IStream on Request >
+**Záhlaví:** \<istream >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="basic_iostream"></a>  basic_iostream::basic_iostream
 
@@ -85,19 +85,19 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parametry
 
-`strbuf` Existující `basic_streambuf` objektu.
+*strbuf* existující `basic_streambuf` objektu.
 
-`right` Existující `basic_iostream` objekt, který se používá k vytvoření nové `basic_iostream`.
+*správné* existující `basic_iostream` objekt, který slouží k vytvoření nového `basic_iostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje základních objektech prostřednictvím `basic_istream(strbuf)` a `basic_ostream(strbuf)`.
+První konstruktor inicializuje základní objekty prostřednictvím `basic_istream(strbuf)` a `basic_ostream(strbuf)`.
 
-Druhý konstruktor inicializuje základních objektech voláním `move(right)`.
+Druhý konstruktor inicializuje pomocí volání základních objektech `move(right)`.
 
 ## <a name="op_eq"></a>  basic_iostream::Operator =
 
-Přiřazení hodnoty zadané `basic_iostream` objekt, který má tento objekt. Toto je přiřazení přesunutí zahrnující rvalue kopii nenechává za sebou.
+Přiřadí hodnotu zadaného `basic_iostream` do tohoto objektu. Toto je přiřazení pro přesun zahrnující rvalue kopii nenechává za sebou.
 
 ```cpp
 basic_iostream& operator=(basic_iostream&& right);
@@ -105,15 +105,15 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `rvalue` Odkaz na `basic_iostream` objekt, který chcete přiřadit z.
+*správné* `rvalue` odkaz `basic_iostream` objekt přiřadit ručně z.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor volání člena `swap(right)`.
+Operátor volání člen `swap(right)`.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
-Výměny obsah ze zadaných `basic_iostream` objekt pro obsah tohoto objektu.
+Vyměňuje obsahy zadaných `basic_iostream` objektu bude obsah tohoto objektu.
 
 ```cpp
 void swap(basic_iostream& right);
@@ -121,13 +121,13 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `basic_iostream` Objekt, který chcete prohodit.
+*správné* `basic_iostream` objektu se prohodit.
 
 ### <a name="remarks"></a>Poznámky
 
 Volání členských funkcí `swap(right)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>

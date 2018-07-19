@@ -1,5 +1,5 @@
 ---
-title: '&lt;hash_map –&gt; | Microsoft Docs'
+title: '&lt;hash_map –&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959771"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Tuto hlavičku je zastaralé. Alternativou je [ \<unordered_map >](unordered-map.md).
+> Tato hlavička je zastaralý. Alternativou je [ \<unordered_map >](unordered-map.md).
 
-Definuje hash_map – kontejner šablony třídy a hash_multimap a jejich podpůrné šablony.
+Definuje kontejner šablony třídy hash_map a hash_multimap – a jejich podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,32 +38,32 @@ Definuje hash_map – kontejner šablony třídy a hash_multimap a jejich podpů
 
 |Hash_map – verze|Hash_multimap – verze|Popis|
 |-----------------------|----------------------------|-----------------|
-|[Operator! = (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testy, pokud hash_map nebo hash_multimap objekt na levé straně operátor není rovno hash_map nebo hash_multimap objekt na pravé straně.|
-|[Operator == (hash_map)](hash-map-operators.md#op_eq_eq)|[Operator == (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testy, pokud hash_map nebo hash_multimap objekt na levé straně operátoru rovná hash_map nebo hash_multimap objekt na pravé straně.|
+|[Operator! = (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Testuje, zda je objekt hash_map nebo hash_multimap na levé straně operátoru není roven objektu hash_map nebo hash_multimap na pravé straně.|
+|[Operator == (hash_map)](hash-map-operators.md#op_eq_eq)|[Operator == (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Testuje, zda hash_map nebo hash_multimap objekt na levé straně operátoru roven objektu hash_map nebo hash_multimap na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
 |Hash_map – verze|Hash_multimap – verze|Popis|
 |-----------------------|----------------------------|-----------------|
-|[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|Elementy dva hash_maps nebo hash_multimaps výměny.|
+|[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|Vymění prvky dvou hash_maps nebo hash_multimaps.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[hash_compare – třída](hash-compare-class.md)|Popisuje objekt, který můžete použít žádné kontejnery asociativní hash – hash_map, hash_multimap, hash_set, nebo hash_multiset – ve výchozím nastavení **vlastnosti** parametr objekt pořadí a hodnoty hash elementy obsahují.|
-|[value_compare – třída](value-compare-class.md)|Poskytuje objekt funkce, který můžete porovnat elementy hash_map srovnáním jejich klíčů určit jejich relativní pořadí v hash_map.|
-|[hash_map – třída](hash-map-class.md)|Používá pro ukládání a rychlé načítání dat z kolekce, ve kterém je každý prvek pár, který má klíč řazení, jehož hodnota je jedinečný a hodnotu přidružená data.|
-|[hash_multimap – třída](hash-multimap-class.md)|Používá pro ukládání a rychlé načítání dat z kolekce, ve kterém je každý prvek pár, který má klíč řazení, jehož hodnota nemusí být jedinečný a hodnotu přidružená data.|
+|[hash_compare – třída](hash-compare-class.md)|Popisuje objekt, který můžete použít některou z hodnot hash asociativní kontejnery – hash_map – hash_multimap, hash_set, nebo hash_multiset – jako výchozí `Traits` parametr objektu pořadí a hodnoty hash, který obsahují elementy.|
+|[value_compare – třída](value-compare-class.md)|Poskytuje objekt funkce, který může porovnat elementy hash_map porovnáním hodnot jejich klíče pro určení jejich relativního pořadí v hash_map –.|
+|[hash_map – třída](hash-map-class.md)|Používá pro ukládání a rychlé načítání dat z kolekce, ve kterém je každý prvek pár, který má klíč řazení, jehož hodnota je jedinečný a přidružená data hodnotu.|
+|[hash_multimap – třída](hash-multimap-class.md)|Používá pro ukládání a rychlé načítání dat z kolekce, ve kterém je každý prvek pár, který má klíč řazení, jehož hodnota nemusí být jedinečný a přidružená data hodnotu.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Header:** \<hash_map>
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Hlavičkové soubory odkaz](cpp-standard-library-header-files.md)
-[bezpečnost vlákna v standardní knihovně C++](thread-safety-in-the-cpp-standard-library.md)
-[C++ Standard – referenční dokumentace knihoven](cpp-standard-library-reference.md)
+[bezpečnost vlákna ve standardní knihovně C++](thread-safety-in-the-cpp-standard-library.md)
+[C++ standardní knihovna – referenční dokumentace](cpp-standard-library-reference.md)

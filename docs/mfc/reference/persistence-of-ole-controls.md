@@ -1,5 +1,5 @@
 ---
-title: Trvalost ovládacích prvků OLE | Microsoft Docs
+title: Trvalost ovládacích prvků OLE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336823"
 ---
 # <a name="persistence-of-ole-controls"></a>Trvalost ovládacích prvků OLE
-Jedna možnost ovládací prvky OLE je vlastnost trvalost (nebo serializace), což umožňuje ovládacího prvku OLE pro čtení nebo zápis hodnot vlastností do a ze souboru nebo datový proud. Kontejner aplikace můžete použít serializace k ukládání hodnot vlastností ovládacího prvku i po aplikaci byl zničen ovládacího prvku. Hodnoty vlastností ovládacího prvku OLE lze poté číst ze souboru nebo datový proud při novou instanci ovládacího prvku se vytvoří na později.  
+Jeden funkční ovládací prvky OLE je vlastnost trvalost (nebo serializace), který umožňuje ovládacího prvku OLE pro čtení nebo zápis hodnot vlastností do a ze souboru nebo datového proudu. Aplikace typu kontejner pro slouží k ukládání hodnot vlastností ovládacího prvku i po aplikace byl zničen ovládacího prvku serializace. Hodnoty vlastností ovládacího prvku OLE pak může číst ze souboru nebo datový proud při novou instanci ovládacího prvku proběhne později.  
   
 ### <a name="persistence-of-ole-controls"></a>Trvalost ovládacích prvků OLE  
   
 |||  
 |-|-|  
-|[Px_blob –](#px_blob)|Výměny řídicí vlastnost, která ukládá data binární rozsáhlý objekt (binární rozsáhlý OBJEKT).|  
-|[Px_bool –](#px_bool)|Výměny vlastnost ovládacího prvku typu **BOOL**.|  
-|[Px_color –](#px_color)|Výměny vlastnosti color ovládacího prvku.|  
-|[Px_currency –](#px_currency)|Výměny vlastnost ovládacího prvku typu **CY**.|  
-|[Px_datapath –](#px_datapath)|Výměny vlastnost ovládacího prvku typu `CDataPathProperty`.|  
-|[Px_double –](#px_double)|Výměny vlastnost ovládacího prvku typu **dvojité**.|  
-|[Px_font –](#px_font)|Výměny písma vlastností ovládacího prvku.|  
-|[Px_float –](#px_float)|Výměny vlastnost ovládacího prvku typu **float**.|  
-|[Px_iunknown –](#px_iunknown)|Výměny řízení vlastnost nedefinované typu.|  
-|[Px_long –](#px_long)|Výměny vlastnost ovládacího prvku typu **dlouho**.|  
-|[Px_picture –](#px_picture)|Výměny vlastnosti Obrázek ovládacího prvku.|  
-|[Px_short –](#px_short)|Výměny vlastnost ovládacího prvku typu **krátké**.|  
-|[Px_ulong –](#px_ulong)|Výměny vlastnost ovládacího prvku typu **ULONG**.|  
-|[Px_ushort –](#px_ushort)|Výměny vlastnost ovládacího prvku typu **USHORT**.|  
-|[PXstring](#px_string)|Výměny vlastnost řízení řetězec znaků.|  
-|[Px_vbxfontconvert –](#px_vbxfontconvert)|Vlastnosti související s písma ovládacího prvku VBX výměny do OLE řízení font – vlastnost.|  
+|[Px_blob –](#px_blob)|Vymění vlastností ovládacího prvku, který ukládá data binárního rozsáhlého objektu (BLOB).|  
+|[Px_bool –](#px_bool)|Vymění vlastnosti ovládacího prvku typu **BOOL**.|  
+|[Px_color –](#px_color)|Vymění vlastnost barvu ovládacího prvku.|  
+|[Px_currency –](#px_currency)|Vymění vlastnosti ovládacího prvku typu **CY**.|  
+|[Px_datapath –](#px_datapath)|Vymění vlastnosti ovládacího prvku typu `CDataPathProperty`.|  
+|[Px_double –](#px_double)|Vymění vlastnosti ovládacího prvku typu **double**.|  
+|[Px_font –](#px_font)|Vymění vlastnosti font ovládacího prvku.|  
+|[Px_float –](#px_float)|Vymění vlastnosti ovládacího prvku typu **float**.|  
+|[Px_iunknown –](#px_iunknown)|Vymění vlastnosti ovládacího prvku nedefinovaného typu.|  
+|[Px_long –](#px_long)|Vymění vlastnosti ovládacího prvku typu **dlouhé**.|  
+|[Px_picture –](#px_picture)|Vymění vlastnost obrázek ovládacího prvku.|  
+|[Px_short –](#px_short)|Vymění vlastnosti ovládacího prvku typu **krátký**.|  
+|[Px_ulong –](#px_ulong)|Vymění vlastnosti ovládacího prvku typu **ULONG**.|  
+|[Px_ushort –](#px_ushort)|Vymění vlastnosti ovládacího prvku typu **USHORT**.|  
+|[PXstring](#px_string)|Vymění vlastností ovládacího prvku řetězec znaků.|  
+|[Px_vbxfontconvert –](#px_vbxfontconvert)|Vymění vlastností písma související VBX ovládacího prvku do vlastnosti font ovládacího prvku OLE.|  
   
- Kromě toho `AfxOleTypeMatchGuid` globální funkce je k dispozici pro testování shody mezi `TYPEDESC` a zadaný identifikátor GUID.  
+ Kromě toho `AfxOleTypeMatchGuid` globální funkce je k dispozici pro testování shodují TYPEDESC a daný identifikátor GUID.  
   
 ##  <a name="px_blob"></a>  Px_blob –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost, která ukládá data binární rozsáhlý objekt (binární rozsáhlý OBJEKT).  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost, která ukládá data binárního rozsáhlého objektu (BLOB).  
   
 ```  
  
@@ -69,34 +69,34 @@ hBlobDefault
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `hBlob`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *hBlob*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti bude číst z nebo zapisovat do proměnné odkazuje `hBlob`podle potřeby. Tato proměnná by měla být inicializována tak, aby **NULL** před voláním původně `PX_Blob` první (obvykle to lze provést v konstruktoru ovládacího prvku). Pokud `hBlobDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces inicializace nebo serializace ovládacího prvku.  
+ Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *hBlob*podle potřeby. Tato proměnná je třeba inicializovat na hodnotu NULL před voláním zpočátku `PX_Blob` poprvé (obvykle to můžete udělat v konstruktoru ovládacího prvku). Pokud *hBlobDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces inicializace nebo serializace ovládacího prvku.  
   
- Obslužné rutiny pro zpracování `hBlob` a `hBlobDefault` odkazovat na blok paměti, který obsahuje následující:  
+ Úchyty *hBlob* a *hBlobDefault* odkazovat na blok paměti, který obsahuje následující:  
   
--   A `DWORD` obsahující délka v bajtech, binární data, která následuje, a potom okamžitě nástrojem  
+-   DWORD, který obsahuje délku v bajtech, binárních dat, který následuje, a potom hned za  
   
--   Blok paměť obsahující skutečná binární data.  
+-   Blok paměti obsahující skutečná binární data.  
   
- Všimněte si, že `PX_Blob` se přidělit paměť, pomocí Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) rozhraní API, při načítání vlastností typu BLOB. Jste zodpovědní za uvolnění tuto paměť. Proto by měly volat – destruktor ovládacího prvku [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) na žádnou vlastnost typu BLOB až popisovače uvolnit všechny paměť přidělená pro vlastní ovládací prvek.  
+ Všimněte si, že `PX_Blob` přidělí paměť v Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) rozhraní API, při načítání vlastností typ objektu BLOB. Zodpovídáte za uvolnění tuto paměť. Proto by měly volat destruktor ovládacího prvku [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) jakékoli vlastnosti typu BLOB až obslužné rutiny pro uvolnění paměti přidělené do ovládacího prvku.  
   
 ##  <a name="px_bool"></a>  Px_bool –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **BOOL**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu BOOL.  
   
 ```  
  
@@ -120,26 +120,26 @@ bValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `bValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *bValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `bDefault`  
+ *bDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti bude číst z nebo zapisovat do proměnné odkazuje `bValue`podle potřeby. Pokud `bDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *bValue*podle potřeby. Pokud *bDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_color"></a>  Px_color –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **OLE_COLOR**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` k serializaci nebo inicializovat vlastnost typu OLE_COLOR členskou funkci.  
   
 ```  
  
@@ -162,26 +162,26 @@ clrDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `clrValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *clrValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `clrDefault`  
- Výchozí hodnota pro vlastnost, podle definice vývojář ovládacího prvku.  
+ *clrDefault*  
+ Výchozí hodnota pro vlastnost, jak je definováno vývojářem ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti bude číst z nebo zapisovat do proměnné odkazuje `clrValue`podle potřeby. Pokud `clrDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *clrValue*podle potřeby. Pokud *clrDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_currency"></a>  Px_currency –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **Měna**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **měny**.  
   
 ```  
  
@@ -205,26 +205,26 @@ cyValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `cyValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *cyValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `cyDefault`  
+ *cyDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti bude číst z nebo zapisovat do proměnné odkazuje `cyValue`podle potřeby. Pokud `cyDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *cyValue*podle potřeby. Pokud *cyDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_datapath"></a>  Px_datapath –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat data cesta vlastnost typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializaci data cesty vlastnost typu [cdatapathproperty –](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
  
@@ -244,23 +244,23 @@ pPX,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `dataPathProperty`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *dataPathProperty*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Cesta vlastnosti dat implementovat asynchronní řízení vlastnosti. Hodnota vlastnosti bude číst z nebo zapisovat do proměnné odkazuje `dataPathProperty`podle potřeby.  
+ Vlastnosti cesty dat implementovat asynchronní ovládacího prvku vlastnosti. Hodnota vlastnosti se číst nebo zapisovat do proměnná odkazuje *dataPathProperty*podle potřeby.  
   
 ##  <a name="px_double"></a>  Px_double –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **dvojité**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **double**.  
   
 ```  
  
@@ -284,26 +284,26 @@ doubleValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `doubleValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *doubleValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `doubleDefault`  
+ *doubleDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `doubleValue`podle potřeby. Pokud `doubleDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *doubleValue*podle potřeby. Pokud *doubleDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_font"></a>  Px_font –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typ písma.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typ písma.  
   
 ```  
  
@@ -327,29 +327,29 @@ pFontDispAmbient
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `font`  
- Odkaz na `CFontHolder` objekt, který obsahuje vlastnost písma.  
+ *Písma*  
+ Odkaz na `CFontHolder` objekt, který obsahuje vlastnosti font.  
   
- `pFontDesc`  
- Ukazatel **FONTDESC** struktura obsahující hodnoty, které mají použít při inicializaci výchozí stav vlastnosti písma, v případě, kde `pFontDispAmbient` je **NULL**.  
+ *pFontDesc*  
+ Ukazatel `FONTDESC` struktury obsahující hodnoty pro použití při inicializaci výchozí stav vlastností písma, v případě, kde *pFontDispAmbient* má hodnotu NULL.  
   
- `pFontDispAmbient`  
- Ukazatel **IFontDisp** rozhraní písma pro použití v inicializaci výchozí stav vlastnost písma.  
+ *pFontDispAmbient*  
+ Ukazatel `IFontDisp` rozhraní písma pro použití v inicializaci výchozí stav vlastností písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do `font`, `CFontHolder` odkazovat, když je potřeba. Pokud `pFontDesc` a `pFontDispAmbient` jsou nastaveny, používají se pro inicializaci vlastnosti na výchozí hodnotu, v případě potřeby. Tyto hodnoty se použijí, pokud z nějakého důvodu selže proces serializace ovládacího prvku. Obvykle je předat **NULL** pro `pFontDesc` a vedlejším hodnoty vrácené `COleControl::AmbientFont` pro `pFontDispAmbient`. Všimněte si, že vrácený objekt písma `COleControl::AmbientFont` musí být vydán volání **IFontDisp::Release** – členská funkce.  
+ Hodnota vlastnosti je číst nebo zapisovat do `font`, `CFontHolder` odkazovat, pokud je to vhodné. Pokud *pFontDesc* a *pFontDispAmbient* nejsou zadány, používají se pro inicializaci výchozí hodnotu vlastnosti, pokud je nepotřebujete. Tyto hodnoty se použijí, pokud z nějakého důvodu selže procesu serializace ovládacího prvku. Obvykle předat hodnotu NULL pro *pFontDesc* a okolí hodnoty vrácené `COleControl::AmbientFont` pro *pFontDispAmbient*. Všimněte si, že vrácený objekt písmo `COleControl::AmbientFont` musí uvolnit voláním `IFontDisp::Release` členskou funkci.  
   
 ##  <a name="px_float"></a>  Px_float –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **float**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **float**.  
   
 ```  
  
@@ -373,26 +373,26 @@ floatValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `floatValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *floatValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `floatDefault`  
+ *floatDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `floatValue`podle potřeby. Pokud `floatDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *floatValue*podle potřeby. Pokud *floatDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_iunknown"></a>  Px_iunknown –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost reprezentované tak, že k objektu **IUnknown**-odvozené rozhraní.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializace je vlastnost reprezentována tím, že objektu `IUnknown`-odvozené rozhraní.  
   
 ```  
  
@@ -412,29 +412,29 @@ pUnkDefault
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
  *pUnk*  
  Odkaz na proměnnou obsahující rozhraní objektu, který představuje hodnotu vlastnosti.  
   
- `iid`  
- ID rozhraní označující, které rozhraní vlastnost objektu je používán ovládacího prvku.  
+ *identifikátor IID*  
+ ID rozhraní určující, které rozhraní objekt vlastnost se používá ovládacím prvkem.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje *pUnk*podle potřeby. Pokud `pUnkDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *pUnk*podle potřeby. Pokud *pUnkDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_long"></a>  Px_long –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **dlouho**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **dlouhé**.  
   
 ```  
  
@@ -458,26 +458,26 @@ lValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `lValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *l-hodnoty.*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `lDefault`  
+ *lDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `lValue`podle potřeby. Pokud `lDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *l-hodnoty*podle potřeby. Pokud *lDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_picture"></a>  Px_picture –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnosti Obrázek ovládacího prvku.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost obrázek ovládacího prvku.  
   
 ```  
  
@@ -501,26 +501,26 @@ pict  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `pict`  
- Odkaz na [CPictureHolder](../../mfc/reference/cpictureholder-class.md) objekt se uloží vlastnost (obvykle členské proměnné vaší třídy).  
+ *PICT*  
+ Odkaz [cpictureholder –](../../mfc/reference/cpictureholder-class.md) objekt vlastnost se mají ukládat (obvykle proměnné člena vaší třídy).  
   
- `pictDefault`  
+ *pictDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `pict`podle potřeby. Pokud `pictDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *pict*podle potřeby. Pokud *pictDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_short"></a>  Px_short –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **krátké**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **krátký**.  
   
 ```  
  
@@ -544,26 +544,26 @@ sValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `sValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *sValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `sDefault`  
+ *sDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `sValue`podle potřeby. Pokud `sDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *sValue*podle potřeby. Pokud *sDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_ulong"></a>  Px_ulong –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu **ULONG**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **ULONG**.  
   
 ```  
  
@@ -587,26 +587,26 @@ ulValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `ulValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *ulValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `ulDefault`  
+ *ulDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `ulValue`podle potřeby. Pokud `ulDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *ulValue*podle potřeby. Pokud *ulDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_ushort"></a>  Px_ushort –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k serializaci nebo inicializovat vlastnost typu `unsigned` **krátké**.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost typu **unsigned short**.  
   
 ```  
  
@@ -630,26 +630,26 @@ usValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
  *usValue*  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
  *usDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje *usValue*podle potřeby. Pokud *usDefault* je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *usValue*podle potřeby. Pokud *usDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_string"></a>  PXstring  
- Volání této funkce v rámci ovládacího prvku **dopropexchange –** – členská funkce k serializaci nebo inicializovat ve vlastnosti string. znak.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k serializaci nebo inicializovat vlastnost řetězce znaků.  
   
 ```  
  
@@ -673,26 +673,26 @@ strValue  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `pszPropName`  
- Název vlastnosti během výměny.  
+ *pszPropName*  
+ Název vlastnosti se vyměňují.  
   
- `strValue`  
- Odkaz na proměnnou, kde je uložen vlastnost (obvykle členské proměnné vaší třídy).  
+ *strValue*  
+ Odkaz na proměnnou, kde je uložen vlastnosti (obvykle proměnné člena vaší třídy).  
   
- `strDefault`  
+ *strDefault*  
  Výchozí hodnota pro vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vlastnosti je číst z nebo zapisovat do proměnné odkazuje `strValue`podle potřeby. Pokud `strDefault` je zadán, použije se jako výchozí hodnotu vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže proces serializace ovládacího prvku.  
+ Hodnota vlastnosti je číst nebo do proměnné odkazuje *strValue*podle potřeby. Pokud *strDefault* je zadán, použije se jako výchozí hodnota vlastnosti. Tato hodnota se používá, pokud z nějakého důvodu selže procesu serializace ovládacího prvku.  
   
 ##  <a name="px_vbxfontconvert"></a>  Px_vbxfontconvert –  
- Volání této funkce v rámci ovládacího prvku `DoPropExchange` – členská funkce k chybě při inicializaci vlastnost písma převedením vlastností souvisejících s písma VBX ovládacího prvku.  
+ Voláním této funkce v rámci ovládacího prvku `DoPropExchange` členskou funkci k inicializaci vlastnosti písma převedením vlastností písma související VBX ovládacího prvku.  
   
 ```  
  
@@ -704,19 +704,19 @@ pPX  ,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPX`  
- Ukazatel [CPropExchange](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předány jako parametr, který se `DoPropExchange`).  
+ *pPX*  
+ Ukazatel [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu (obvykle předán jako parametr `DoPropExchange`).  
   
- `font`  
- Vlastnost font OLE ovládací prvek, který bude obsahovat převedený VBX vlastnosti související s písma.  
+ *Písma*  
+ Vlastnosti font ovládacího prvku OLE, který bude obsahovat vlastnosti související s písma převedený VBX.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud exchange byla úspěšná. 0, pokud je neúspěšná.  
+ Nenulové, pokud bylo úspěšné; exchange 0, pokud není úspěšné.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce má být používána pouze ovládací prvek OLE, který slouží k přímé nahrazení VBX ovládacího prvku. Když vývojového prostředí jazyka Visual Basic převede obsahující ovládacího prvku VBX používat odpovídající nahrazení OLE ovládacího prvku formuláře, zavolá ovládacího prvku **IDataObject::SetData** funkce, předávání vlastnost nastavena, který obsahuje data vlastnost VBX ovládacího prvku. Tuto operaci, způsobí, že ovládacího prvku `DoPropExchange` funkce, která má být volána. `DoPropExchange` můžete volat `PX_VBXFontConvert` převést vlastnosti související s písma VBX ovládacího prvku (například "název písma," "Velikost písma," a tak dále) do odpovídající součástí prvku OLE font – vlastnost.  
+ Tato funkce by měly být používány pouze ovládací prvek OLE, který je navržený jako přímé nahrazení pro ovládací prvek VBX. Když vývojové prostředí jazyka Visual Basic převede formulář obsahující ovládací prvek VBX použít odpovídající náhradní ovládací prvek OLE, zavolá ovládacího prvku `IDataObject::SetData` funkci a předává jí sadu vlastností, která obsahuje data vlastnosti ovládacího prvku VBX. Tato operace však způsobí, že ovládacího prvku `DoPropExchange` funkce má být volána. `DoPropExchange` můžete volat `PX_VBXFontConvert` pro převod vlastnosti související se písmo VBX ovládacího prvku (například "název písma," "Velikost písma," a tak dále) do odpovídajících komponent vlastnosti font ovládacího prvku OLE.  
   
- `PX_VBXFontConvert` by měla být volána pouze při řízení je ve skutečnosti převáděn z formátu aplikace VBX. Příklad:  
+ `PX_VBXFontConvert` by měla volat pouze v případě ovládací prvek je ve skutečnosti převáděn z formuláře aplikace VBX. Příklad:  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  

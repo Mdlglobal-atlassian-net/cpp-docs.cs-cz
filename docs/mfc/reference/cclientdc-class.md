@@ -1,5 +1,5 @@
 ---
-title: CClientDC – třída | Microsoft Docs
+title: Cclientdc – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338578"
 ---
-# <a name="cclientdc-class"></a>CClientDC – třída
-Má na starosti volání funkcí Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) během vytváření a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) během odstraňování.  
+# <a name="cclientdc-class"></a>Cclientdc – třída
+Se postará o volání funkcí Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) v době konstrukce a [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) v době zničení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +42,21 @@ class CClientDC : public CDC
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|Vytvoří `CClientDC` připojený k objektu `CWnd`.|  
+|[CClientDC::CClientDC](#cclientdc)|Vytvoří `CClientDC` připojen k objektu `CWnd`.|  
   
-### <a name="protected-data-members"></a>Chráněné datové členy  
+### <a name="protected-data-members"></a>Chránění členové dat  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND` Období, pro které bude tato `CClientDC` je platný.|  
+|[CClientDC::m_hWnd](#m_hwnd)|HWND okno, pro které bude tato `CClientDC` je platný.|  
   
 ## <a name="remarks"></a>Poznámky  
- To znamená, že zařízení kontext přidružený `CClientDC` objekt je klientské oblasti časového období.  
+ To znamená, že zařízení kontext přidružený k `CClientDC` objekt je klientské oblasti okna.  
   
- Další informace o `CClientDC`, najdete v části [kontexty zařízení](../../mfc/device-contexts.md).  
+ Další informace o `CClientDC`, naleznete v tématu [kontexty zařízení](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **Záhlaví:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Vytvoří `CClientDC` objekt, který přistupuje k klientské oblasti [CWnd](../../mfc/reference/cwnd-class.md) na kterou odkazuje *pWnd*.  
+ Vytvoří `CClientDC` objekt, který přistupuje ke klientské oblasti [CWnd](../../mfc/reference/cwnd-class.md) odkazované *pWnd*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -74,12 +74,12 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Okno jejichž klientské oblasti objektu kontextu zařízení bude mít přístup.  
+ Okno, jehož klientské oblasti bude mít přístup k objektu kontextu zařízení.  
   
 ### <a name="remarks"></a>Poznámky  
- V konstruktoru volání funkce systému Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Konstruktor zavolá funkci Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- K výjimce (typu `CResourceException`) je vyvolána, pokud Windows `GetDC` volání selže. Kontext zařízení nemusí být k dispozici, pokud systém Windows všechny jeho kontexty zařízení k dispozici již přiděleno. Vaše aplikace bojuje pro pět běžné zobrazení kontexty dostupné v každém okamžiku v systému Windows.  
+ Výjimky (typu `CResourceException`) je vyvolána, pokud Windows `GetDC` volání selže. Kontext zařízení nemusí být k dispozici, pokud Windows má již přiděleno všechny jeho kontexty zařízení k dispozici. Vaše aplikace bojuje pěti běžných zobrazení kontextů k dispozici v daném okamžiku v části Windows.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
@@ -92,13 +92,13 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- *m_hWnd* je chráněný proměnné.  
+ *m_hWnd* je chráněná proměnná.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [CClientDC::CClientDC](#cclientdc).  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC MDI](../../visual-cpp-samples.md)   
- [Třída CDC](../../mfc/reference/cdc-class.md)   
+ [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)   
+ [CDC – třída](../../mfc/reference/cdc-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [CDC – třída](../../mfc/reference/cdc-class.md)

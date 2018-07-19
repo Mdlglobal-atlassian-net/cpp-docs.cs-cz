@@ -1,5 +1,5 @@
 ---
-title: Promise – třída | Microsoft Docs
+title: Promise – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8508cab7afc7e6614c29b64d78849383f5bc2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861043"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958550"
 ---
 # <a name="promise-class"></a>promise – třída
 
-Popisuje, *asynchronní zprostředkovatele*.
+Popisuje, *asynchronního poskytovatele*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,18 +60,18 @@ class promise;
 
 |Název|Popis|
 |----------|-----------------|
-|[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) přidružené k této promise.|
-|[set_exception](#set_exception)|Atomicky nastaví výsledky této promise udávajících výjimku.|
-|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Atomicky nastaví výsledky této promise udávajících výjimku a doručí oznámení, která byla zničena pouze po všech místní objekty v aktuální vlákno (obvykle při ukončení vlákna).|
-|[set_value](#set_value)|Atomicky nastaví výsledky této promise pro zobrazení hodnoty.|
-|[set_value_at_thread_exit](#set_value_at_thread_exit)|Atomicky nastaví výsledky této promise pro zobrazení hodnoty a doručí oznámení, která byla zničena pouze po všech místní objekty v aktuální vlákno (obvykle při ukončení vlákna).|
-|[Swap](#swap)|Výměnu *přidružené asynchronní stavu* z této promise s třídou promise zadaného objektu.|
+|[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) spojené s tímto příslibem.|
+|[set_exception](#set_exception)|Atomicky nastaví výsledek této snahy na označení výjimky.|
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Atomicky nastaví výsledek této snahy na označení výjimky a doručí oznámení pouze po všech místních objektů v aktuálním vlákně nejsou zničeny (obvykle při ukončení podprocesu).|
+|[set_value](#set_value)|Atomicky nastaví výsledek této snahy na označení hodnoty.|
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|Atomicky nastaví výsledek této snahy na označení hodnoty a doručí oznámení pouze po všech místních objektů v aktuálním vlákně nejsou zničeny (obvykle při ukončení podprocesu).|
+|[Prohození](#swap)|Výměna *přidružený asynchronní stav* tohoto objektu promise za zadaný objekt promise u.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Název|Popis|
 |----------|-----------------|
-|[Promise::Operator =](#op_eq)|Přiřazení sdílený stav tohoto objektu promise.|
+|[Promise::Operator =](#op_eq)|Přiřazení sdíleného stavu tohoto objektu promise.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -81,11 +81,11 @@ class promise;
 
 **Záhlaví:** \<budoucí >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="get_future"></a>  Promise::get_future –
 
-Vrátí [budoucí](../standard-library/future-class.md) objekt, který má stejné *přidružené asynchronní stavu* jako tento promise.
+Vrátí [budoucí](../standard-library/future-class.md) objekt, který má stejný *přidružený asynchronní stav* jako tento příslib.
 
 ```cpp
 future<Ty> get_future();
@@ -93,13 +93,13 @@ future<Ty> get_future();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt promise je prázdná, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) má [error_code](../standard-library/error-code-class.md) z `no_state`.
+Pokud objekt promise je prázdný, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má [error_code](../standard-library/error-code-class.md) z `no_state`.
 
-Pokud tato metoda již byla volána pro promise objekt, který má stejné přidružený stav asynchronní, vyvolá metoda `future_error` má `error_code` z `future_already_retrieved`.
+Pokud tato metoda již byla volána pro objekt promise, který má stejný přidružený asynchronní stav, vyvolá metoda `future_error` , který má `error_code` z `future_already_retrieved`.
 
 ## <a name="op_eq"></a>  Promise::Operator =
 
-Přenosy *přidružené asynchronní stavu* ze zadané `promise` objektu.
+Převody *přidružený asynchronní stav* ze zadaného `promise` objektu.
 
 ```cpp
 promise& operator=(promise&& Other) noexcept;
@@ -107,7 +107,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Other` A `promise` objektu.
+*Další* A `promise` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -115,7 +115,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor přenáší přidružený stav asynchronní z `Other`. Po předání `Other` je *prázdný*.
+Tento operátor přenese přidružený asynchronní stav z *jiných*. Po předání *jiných* je *prázdný*.
 
 ## <a name="promise"></a>  Promise::Promise – konstruktor
 
@@ -130,21 +130,21 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Al` Přidělení paměti. V tématu [ \<alokátorů >](../standard-library/allocators-header.md) Další informace.
+*Al* Přidělovač paměti. Zobrazit [ \<alokátorů >](../standard-library/allocators-header.md) Další informace.
 
-`Other` A `promise` objektu.
+*Další* A `promise` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstrukce konstruktor *prázdný* `promise` objektu.
+První konstruktor zkonstruuje *prázdný* `promise` objektu.
 
-Druhý konstruktor vytvoří prázdnou `promise` objekt a používá `Al` pro přidělení paměti.
+Druhý konstruktor vytvoří prázdnou `promise` a použije *Al* pro přidělení paměti.
 
-Třetí konstrukce konstruktor `promise` objektu a přenáší přidružený stav asynchronní z `Other`nebo je opustí `Other` prázdný.
+Třetí konstruktor vytvoří `promise` objektu a přenese přidružený asynchronní stav z *jiných*a nechá *jiných* prázdný.
 
 ## <a name="set_exception"></a>  Promise::set_exception –
 
-Atomicky ukládá výjimka v důsledku tohoto `promise` objekt a nastaví *přidružené asynchronní stavu* k *připraven*.
+Atomicky ukládá výjimku jako výsledek tohoto `promise` objekt a nastaví *přidružený asynchronní stav* k *připravené*.
 
 ```cpp
 void set_exception(exception_ptr Exc);
@@ -152,19 +152,19 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) touto metodou, je uložen v důsledku výjimky.
+*Výhradní* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) touto metodou, která je uložena jako výsledek výjimky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `promise` objekt nemá žádné přidružené asynchronní stavu, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud `promise` objekt nemá žádný přidružený asynchronní stav, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), nebo [set_value_at_thread_exit](#set_value_at_thread_exit) již byla volána pro `promise` objektu, který má stejné přidružené asynchronní stavu, tato metoda vyvolá `future_error` s kódem chyby `promise_already_satisfied`.
+Pokud `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), nebo [set_value_at_thread_exit](#set_value_at_thread_exit) již byly volány pro `promise` objekt, který má stejný připojený asynchronní stav, tato metoda vyvolá `future_error` , který má kód chyby `promise_already_satisfied`.
 
-V důsledku této metody stát žádné podprocesy, které blokují na přidružený stav asynchronní odblokování.
+V důsledku této metody budou odblokována veškerá vlákna, která jsou blokována v přidruženém asynchronním stavu.
 
 ## <a name="set_exception_at_thread_exit"></a>  Promise::set_exception_at_thread_exit –
 
-Atomicky nastaví výsledek tohoto `promise` udávajících výjimku doručování oznámení pouze po všech místní objekty v aktuální vlákno zničena (obvykle při ukončení vlákna).
+Atomicky nastaví výsledek této `promise` na označení výjimky a doručí oznámení pouze po všech místních objektů v aktuálním vlákně zničení (obvykle při ukončení podprocesu).
 
 ```cpp
 void set_exception_at_thread_exit(exception_ptr Exc);
@@ -172,19 +172,19 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) touto metodou, je uložen v důsledku výjimky.
+*Výhradní* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) touto metodou, která je uložena jako výsledek výjimky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt promise neobsahuje žádné *přidružené asynchronní stavu*, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud objekt promise nemá žádný *přidružený asynchronní stav*, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud [set_exception –](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value), nebo [set_value_at_thread_exit](#set_value_at_thread_exit) již byla volána pro `promise` objekt, který má stejné přidružený stav asynchronní, tato metoda vyvolá `future_error` s kódem chyby `promise_already_satisfied`.
+Pokud [set_exception](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value), nebo [set_value_at_thread_exit](#set_value_at_thread_exit) již byly volány pro `promise` objekt, který má stejný přidružený asynchronní stav, tato metoda vyvolá výjimku `future_error` , který má kód chyby `promise_already_satisfied`.
 
-Rozdíl k [set_exception –](#set_exception), tato metoda nenastaví přidružený stav asynchronní připravte až po všech místní objekty v aktuální vlákno zničena. Obvykle vláken, které blokují na přidružený stav asynchronní nejsou odblokuje, až do konce aktuální vlákno.
+Rozdíl od [set_exception](#set_exception), tato metoda nenastaví přidružený asynchronní stav na Připraveno, dokud všechny místní objekty v aktuálním vlákně nejsou zničeny. Vlákna, která jsou blokována v přidruženém asynchronním stavu obvykle nejsou odblokovány, dokud aktuální vlákno neskončí.
 
 ## <a name="set_value"></a>  Promise::set_value –
 
-Atomicky ukládá hodnotu jako výsledek tohoto `promise` objekt a nastaví *přidružené asynchronní stavu* k *připraven*.
+Atomicky ukládá hodnotu jako výsledek tohoto `promise` objekt a nastaví *přidružený asynchronní stav* k *připravené*.
 
 ```cpp
 void promise::set_value(const Ty& Val);
@@ -195,23 +195,23 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parametry
 
-`Val` Hodnota ukládaly jako výsledek.
+*Val* hodnota, která má být uložena jako výsledek.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `promise` objekt nemá žádné přidružené asynchronní stavu, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud `promise` objekt nemá žádný přidružený asynchronní stav, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud [set_exception –](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value`, nebo [set_value_at_thread_exit](#set_value_at_thread_exit) již byla volána pro `promise` objektu který má stejné přidružený stav asynchronní, tato metoda vyvolá `future_error` s kódem chyby `promise_already_satisfied`.
+Pokud [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value`, nebo [set_value_at_thread_exit](#set_value_at_thread_exit) již byly volány pro `promise` objektu který má stejný přidružený asynchronní stav, tato metoda vyvolá `future_error` , který má kód chyby `promise_already_satisfied`.
 
-V důsledku této metody stát žádné podprocesy, které blokují na přidružený stav asynchronní odblokování.
+V důsledku této metody budou odblokována veškerá vlákna, která jsou blokována v přidruženém asynchronním stavu.
 
-První metoda také výjimku, když je výjimka `Val` se zkopíruje do přidružený stav asynchronní. V takovém případě není přidružené asynchronní stav nastaven na hodnotu Připraveno.
+První metoda vyvolá také jakoukoliv výjimku, která je vyvolána, když *Val* zkopírována do přidruženého asynchronní stavu. V takovém případě není přidružený asynchronní stav nastaven na hodnotu Připraveno.
 
-Druhá metoda také výjimku, když je výjimka `Val` je přesunut do přidružený stav asynchronní. V takovém případě není přidružené asynchronní stav nastaven na hodnotu Připraveno.
+Druhá metoda vyvolá také jakoukoliv výjimku, která je vyvolána, když *Val* je přesunuta do přidruženého asynchronní stavu. V takovém případě není přidružený asynchronní stav nastaven na hodnotu Připraveno.
 
-Pro částečná specializace `promise<Ty&>`, uložené hodnoty je v platnosti odkaz na `Val`.
+Pro částečnou specializaci `promise<Ty&>`, uložené hodnoty je výsledkem odkaz na *Val*.
 
-Pro specializace `promise<void>`, neexistuje žádná hodnota uložené.
+Pro specializaci `promise<void>`, neexistuje žádná uložená hodnota.
 
 ## <a name="set_value_at_thread_exit"></a>  Promise::set_value_at_thread_exit –
 
@@ -226,27 +226,27 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parametry
 
-`Val` Hodnota ukládaly jako výsledek.
+*Val* hodnota, která má být uložena jako výsledek.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt promise neobsahuje žádné *přidružené asynchronní stavu*, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) s kódem chyby `no_state`.
+Pokud objekt promise nemá žádný *přidružený asynchronní stav*, tato metoda vyvolá [future_error](../standard-library/future-error-class.md) , který má kód chyby `no_state`.
 
-Pokud [set_exception –](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), nebo `set_value_at_thread_exit` již byla volána pro `promise` objekt, který má stejné přidružený stav asynchronní, tato metoda vyvolá `future_error` s kódem chyby `promise_already_satisfied`.
+Pokud [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), nebo `set_value_at_thread_exit` již byly volány pro `promise` objekt, který má stejný přidružený asynchronní stav, tato metoda vyvolá výjimku `future_error` , který má kód chyby `promise_already_satisfied`.
 
-Rozdíl k `set_value`, přidružené asynchronní stav není nastavený připravte až po všech místní objekty v aktuální vlákno zničena. Obvykle vláken, které blokují na přidružený stav asynchronní nejsou odblokuje, až do konce aktuální vlákno.
+Rozdíl od `set_value`, není přidružený asynchronní stav nastaven na Připraveno, dokud všechny místní objekty v aktuálním vlákně nejsou zničeny. Vlákna, která jsou blokována v přidruženém asynchronním stavu obvykle nejsou odblokovány, dokud aktuální vlákno neskončí.
 
-První metoda také výjimku, když je výjimka `Val` se zkopíruje do přidružený stav asynchronní.
+První metoda vyvolá také jakoukoliv výjimku, která je vyvolána, když *Val* zkopírována do přidruženého asynchronní stavu.
 
-Druhá metoda také výjimku, když je výjimka `Val` je přesunut do přidružený stav asynchronní.
+Druhá metoda vyvolá také jakoukoliv výjimku, která je vyvolána, když *Val* je přesunuta do přidruženého asynchronní stavu.
 
-Pro částečná specializace `promise<Ty&>`, uložené hodnoty je efektivně odkaz na `Val`.
+Pro částečnou specializaci `promise<Ty&>`, je uložená hodnota je v podstatě odkaz na *Val*.
 
-Pro specializace `promise<void>`, neexistuje žádná hodnota uložené.
+Pro specializaci `promise<void>`, neexistuje žádná uložená hodnota.
 
 ## <a name="swap"></a>  Promise::swap –
 
-Výměnu *přidružené asynchronní stavu* tohoto objektu promise se u zadaného objektu.
+Výměna *přidružený asynchronní stav* tohoto objektu promise za zadaný objekt.
 
 ```cpp
 void swap(promise& Other) noexcept;
@@ -254,8 +254,8 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Other` A `promise` objektu.
+*Další* A `promise` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>

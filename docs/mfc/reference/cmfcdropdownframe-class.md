@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCDropDownFrame | Microsoft Docs
+title: Cmfcdropdownframe – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041991"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849445"
 ---
-# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame – třída
-Poskytuje funkce okno rámce rozevíracího seznamu panely nástrojů rozevíracího seznamu a tlačítka panelu nástrojů rozevíracího seznamu.  
+# <a name="cmfcdropdownframe-class"></a>Cmfcdropdownframe – třída
+Poskytuje funkce okna rámce rozevíracího seznamu na panely nástrojů v rozevíracím seznamu a rozevírací tlačítka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,25 +58,25 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 |-|-|  
 |Název|Popis|  
 |[CMFCDropDownFrame::Create](#create)|Vytvoří `CMFCDropDownFrame` objektu.|  
-|`CMFCDropDownFrame::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Načte panelu nabídek nadřazené rámce rozevíracího seznamu.|  
-|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Načte nadřazené rozbalovací nabídce rámce rozevíracího seznamu.|  
-|`CMFCDropDownFrame::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Přemístí rámečku rozevíracího seznamu.|  
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Nastaví, zda automaticky zničen podřízeného okna nástrojů rozevíracího seznamu.|  
+|`CMFCDropDownFrame::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
+|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Načte nabídek nadřazeného rámce rozevíracího seznamu.|  
+|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Načte nadřazené rozbalovací nabídky rámce rozevíracího seznamu.|  
+|`CMFCDropDownFrame::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Přemístí rámce rozevíracího seznamu.|  
+|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Nastaví, zda je automaticky zničen podřízeného okna nástrojů v rozevíracím seznamu.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato třída není určena pro použití přímo z vašeho kódu.  
+ Tato třída není určena pro použití přímo v kódu.  
   
- Rozhraní používá tuto třídu zajistit rámce chování `CMFCDropDownToolbar` a `CMFCDropDownToolbarButton` třídy. Další informace o těchto tříd naleznete v tématu [CMFCDropDownToolBar třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) a [CMFCDropDownToolbarButton třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
+ Rozhraní používá k poskytování rámce chování této třídy `CMFCDropDownToolbar` a `CMFCDropDownToolbarButton` třídy. Další informace o těchto tříd naleznete v tématu [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md) a [cmfcdropdowntoolbarbutton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak načíst ukazatel `CMFCDropDownFrame` objektu z `CFrameWnd` třídy a jak nastavit podřízená okna nástrojů rozevíracího seznamu zničení automaticky.  
+ Následující příklad ukazuje, jak se načítají ukazatel na `CMFCDropDownFrame` objektu z `CFrameWnd` třídy a jak nastavit podřízené okno panelu nástrojů v rozevíracím seznamu zničení, automaticky.  
   
  [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -84,9 +84,9 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
  [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
- [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)  
+ [Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)  
   
- [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)  
+ [Cmfcdropdownframe –](../../mfc/reference/cmfcdropdownframe-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdropdowntoolbar.h  
@@ -107,47 +107,47 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *pWndParent*|Nadřazené okno rámce rozevíracího seznamu.|  
-|[v] *x*|Souřadnice obrazovky vodorovné umístění nižší dole.|  
-|[v] *y*|Souřadnice svislé obrazovky pro umístění nižší dole.|  
-|[v] *pWndOriginToolbar*|Panel nástrojů, má tato metoda používá k vyplnění nového objektu rámce rozevíracího seznamu tlačítka pro rozevírací seznam.|  
+|[in] *pWndParent*|Nadřazené okno rámce rozevíracího seznamu.|  
+|[in] *x*|Vodorovné obrazovky souřadnice umístění rozevírací rámce.|  
+|[in] *y*|Souřadnice obrazovky svislé umístění rámce rozevírací.|  
+|[in] *pWndOriginToolbar*|Panel nástrojů, který má rozevíracích tlačítek, které tato metoda používá k naplnění nový objekt rámce rozevíracího seznamu.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud rámce rozevíracího seznamu byl úspěšně vytvořen; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud rámec rozevíracího seznamu byl úspěšně vytvořen; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá základní [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metodu pro vytvoření okně s rámečkem rozevírací seznam s `WS_POPUP` stylu. Okně s rámečkem rozevírací seznam se zobrazuje na souřadnice zadaný obrazovky. Tato metoda selže, pokud [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metoda vrátí `FALSE`.  
+ Tato metoda volá základní [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metodu pro vytvoření stylem WS_POPUP oknem rámce rozevíracího seznamu. Okno rámce rozevíracího seznamu se zobrazí na souřadnicích zadanou obrazovku. Tato metoda selže, pokud [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metoda vrátí hodnotu FALSE.  
   
- `CMFCDropDownFrame` Třída se vytvoří kopie poskytnutého `CMFCDropDownToolBar` parametr. Tato metoda zkopíruje obrázky tlačítka a tlačítko stavy z `pWndOriginToolbar` parametru `m_pWndOriginToolbar` – datový člen.  
+ `CMFCDropDownFrame` Třídy vytvoří kopii zadaného `CMFCDropDownToolBar` parametru. Tato metoda zkopíruje obrázky tlačítka a tlačítka stavy z `pWndOriginToolbar` parametr `m_pWndOriginToolbar` datový člen.  
   
 ##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
- Načte panelu nabídek nadřazené rámce rozevíracího seznamu.  
+ Načte nabídek nadřazeného rámce rozevíracího seznamu.  
   
 ```  
 CMFCMenuBar* GetParentMenuBar() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na panelu nabídek nadřazené rámečku rozevíracího seznamu, nebo `NULL` Pokud rámečku nemá nadřazený.  
+ Ukazatel na řádku nabídek nadřazeného rámce rozevíracího seznamu nebo hodnota NULL, pokud rámec nemá žádný nadřazený objekt.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načte z nadřazené tlačítko panelu nabídek nadřazené. Tato metoda vrátí hodnotu `NULL` Pokud rámečku rozevíracího seznamu má žádné tlačítko nadřazené nebo tlačítko nadřazené žádný nadřazený řádku nabídek.  
+ Tato metoda načte panel nabídek nadřazené z nadřazené tlačítka. Tato metoda vrátí hodnotu NULL, pokud má frame rozevíracího seznamu se neobjeví tlačítko nadřazené nebo tlačítko nadřazené má nabídek žádné nadřazené.  
   
 ##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
- Načte nadřazené rozbalovací nabídce rámce rozevíracího seznamu.  
+ Načte nadřazené rozbalovací nabídky rámce rozevíracího seznamu.  
   
 ```  
 CMFCDropDownFrame* GetParentPopupMenu() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na nadřazené rozevírací nabídky rámečku rozevíracího seznamu, nebo `NULL` Pokud rámečku nemá nadřazený.  
+ Ukazatel na nadřazenou rozevírací nabídky rámce rozevíracího seznamu nebo hodnota NULL, pokud rámec nemá žádný nadřazený objekt.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda načte nabídce nadřazené z nadřazené tlačítko. Tato metoda vrátí hodnotu `NULL` Pokud rámečku rozevíracího seznamu má žádné tlačítko nadřazené nebo tlačítko nadřazené žádné nabídky nadřazené.  
+ Tato metoda načte nadřazené nabídky na panelu nadřazené. Tato metoda vrátí hodnotu NULL, pokud má rámec rozevíracího seznamu se neobjeví tlačítko nadřazené nebo nadřazené tlačítko nemá žádný nadřazený nabídky.  
   
 ##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
- Přemístí rámečku rozevíracího seznamu.  
+ Přemístí rámce rozevíracího seznamu.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -158,27 +158,27 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parametr|Popis|  
-|[v] *bNotify*|Nepoužívá se.|  
+|[in] *bNotify*|Nevyužité.|  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá framework rámečku rozevíracího seznamu je při vytváření nebo změně velikosti nadřazeného okna. Tato metoda se vypočítává pozice a velikosti rámce rozevíracího seznamu pozice a velikosti okna nadřazené.  
+ Rozhraní volá tuto metodu, když je vytvořen rámec rozevíracího seznamu nebo změně velikosti nadřazené okno. Tato metoda se vypočítává umístění a velikost rámce rozevíracího seznamu umístění a velikost nadřazeného okna.  
   
 ##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
- Nastaví, zda automaticky zničen podřízeného okna nástrojů rozevíracího seznamu.  
+ Nastaví, zda je automaticky zničen podřízeného okna nástrojů v rozevíracím seznamu.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bAutoDestroy*  
- `TRUE` automaticky zrušení okna přidružené rozevírací seznam nástrojů; v opačném `FALSE`.  
+ [in] *bAutoDestroy*  
+ TRUE, pokud chcete automaticky odstranit přidružený rozevírací seznam nástrojů okna. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud *bAutoDestroy* je `TRUE`, pak se `CMFCDropDownFrame` destruktor zničí okna přidružené nástrojů rozevíracího seznamu. Výchozí hodnota je `TRUE`.  
+ Pokud *bAutoDestroy* má hodnotu TRUE, pak bude `CMFCDropDownFrame` destruktor odstraní přidružené rozevírací seznam nástrojů okno. Výchozí hodnota je TRUE.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
  [CMFCDropDownToolbarButton – třída](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)

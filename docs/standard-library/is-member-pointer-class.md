@@ -1,5 +1,5 @@
 ---
-title: is_member_pointer – třída | Microsoft Docs
+title: is_member_pointer – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb4b2be959dc48bbf7c5c5f786f7b803dba1a8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d3549d222ccfcf317b2621c2e2f8869b6634249
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959216"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer – třída
 
-Testy, pokud je typ ukazatele na člena.
+Testuje, zda je typ ukazatel na člen.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je ukazatel na člena funkce nebo ukazatele na člena objekt nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je ukazatel na členskou funkci nebo ukazatel na člena objektu nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -91,9 +91,9 @@ is_member_pointer<int (functional::*)()> == true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_member_function_pointer – třída](../standard-library/is-member-function-pointer-class.md)<br/>

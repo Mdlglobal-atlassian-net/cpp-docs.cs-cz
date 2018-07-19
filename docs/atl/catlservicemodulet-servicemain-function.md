@@ -1,5 +1,5 @@
 ---
-title: Funkce CAtlServiceModuleT::ServiceMain | Microsoft Docs
+title: Catlservicemodulet::servicemain – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936090793890b1e33f0d5e29787d65f378afa84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dff3fa3f3ed20406955570f2ad72531f4e44f11
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355571"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848118"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain – funkce
-Volá správce řízení služeb (SCM) `ServiceMain` při otevření aplikace služby ovládacích panelů, vyberte službu a klikněte na **spustit**.  
+# <a name="catlservicemoduletservicemain-function"></a>Catlservicemodulet::servicemain – funkce
+Volá správce řízení služeb (SCM) `ServiceMain` při otevření aplikace ovládacím panelu služby, vyberte službu a klikněte na **Start**.  
   
- Po SCM volá `ServiceMain`, služba musí dát SCM funkce obslužné rutiny. Tato funkce umožňuje SCM získání stavu služby a předat konkrétní pokyny (například pozastavení nebo ukončení). SCM získá tuto funkci, když služba předá **_Handler** funkce rozhraní API Win32 [RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054). (**_Handler** je funkce statický člen, který volá nestatické členské funkce [obslužná rutina](../atl/reference/catlservicemodulet-class.md#handler).)  
+ Po SCM volá `ServiceMain`, služba musí poskytnout SCM funkci obslužné rutiny. Tato funkce umožňuje SCM získání stavu služby a předat konkrétní pokyny (jako je například pozastavení nebo ukončení). SCM získá tuto funkci, když se předá službě `_Handler` funkce rozhraní Win32 API [RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054). (`_Handler` je statickou členskou funkci, která volá nestatická členská funkce [obslužná rutina](../atl/reference/catlservicemodulet-class.md#handler).)  
   
- Při spuštění služby by měl také informovat o tom, SCM jeho aktuálního stavu. Dělá to pomocí předání **SERVICE_START_PENDING** funkce rozhraní API Win32 [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
+ Při spuštění služby by měl také informovat SCM jeho aktuální stav. Dělá to pomocí předání do funkce rozhraní Win32 API SERVICE_START_PENDING [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241).  
   
- `ServiceMain` pak zavolá `CAtlExeModuleT::InitializeCom`, která volá funkce rozhraní Win32 API [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Ve výchozím nastavení `InitializeCom` předá **COINIT_MULTITHREADED** příznak funkce. Tento příznak označuje, že tento program je jako podprocesy serveru.  
+ `ServiceMain` pak zavolá `CAtlExeModuleT::InitializeCom`, která volá funkce rozhraní Win32 API [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279). Ve výchozím nastavení `InitializeCom` předá COINIT_MULTITHREADED příznak funkce. Tento příznak určuje, že program má být server volných vláken.  
   
- Nyní `CAtlServiceModuleT::Run` je volána pro práci hlavní služby. **Spustit** bude pokračovat v provádění, dokud služba je zastavena.  
+ Nyní `CAtlServiceModuleT::Run` je volána k provedení hlavní služby. `Run` pokračuje v provádění, dokud se tato služba zastavená.  
   
 ## <a name="see-also"></a>Viz také  
  [Služby](../atl/atl-services.md)   
- [CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+ [Catlservicemodulet::servicemain –](../atl/reference/catlservicemodulet-class.md#servicemain)
 

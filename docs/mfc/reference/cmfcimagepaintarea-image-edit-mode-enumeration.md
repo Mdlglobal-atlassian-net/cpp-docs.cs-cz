@@ -1,5 +1,5 @@
 ---
-title: CMFCImagePaintArea::IMAGE_EDIT_MODE – výčet | Microsoft Docs
+title: Cmfcimagepaintarea::image_edit_mode – výčet | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef036c1d619bf85e21edafbd20f20cc27c7c12d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b87b0c8c179e2982c450d244c50ea89dad2a596a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369265"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848603"
 ---
 # <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE – výčet
-Určuje režim kreslení, který používáte k úpravě bitovou kopii v dialogovém okně editor bitové kopie.  
+Určuje režim kreslení, který můžete použít ke změně obrázku v dialogovém okně editor obrázků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +45,17 @@ enum IMAGE_EDIT_MODE
 |||  
 |-|-|  
 |Název|Popis|  
-|`IMAGE_EDIT_MODE_PEN`|Použít k vykreslení jednotlivých pixelů.|  
-|`IMAGE_EDIT_MODE_FILL`|Použitou k vyplnění všech sousedících oblastí, které obsahují barvu na aktuální umístění kurzoru.|  
-|`IMAGE_EDIT_MODE_LINE`|Použít kreslení čáry.|  
-|`IMAGE_EDIT_MODE_RECT`|Použít k vykreslení obdélníku.|  
-|`IMAGE_EDIT_MODE_ELLIPSE`|Použít k vykreslení elipsy.|  
-|`IMAGE_EDIT_MODE_COLOR`|Slouží k nastavení aktuální barvu na barvu na aktuální pozici kurzoru.|  
+|IMAGE_EDIT_MODE_PEN|Použít k vykreslení jednotlivých pixelech.|  
+|IMAGE_EDIT_MODE_FILL|Použitou k vyplnění všechny sousedící oblasti, které obsahují barvu na aktuální umístění kurzoru.|  
+|IMAGE_EDIT_MODE_LINE|Používá k nakreslení čáry.|  
+|IMAGE_EDIT_MODE_RECT|Použít k vykreslení obdélníku.|  
+|IMAGE_EDIT_MODE_ELLIPSE|Umožňuje Nakreslit elipsu.|  
+|IMAGE_EDIT_MODE_COLOR|Slouží k nastavení aktuální barvu na barvu na aktuální pozici kurzoru.|  
   
 ### <a name="remarks"></a>Poznámky  
- `CMFCImagePaintArea` a `CMFCImageEditorDialog` třídy můžete nastavit aktuální režim kreslení pomocí tento výčet. Režim kreslení a aktuální barva se používají k úpravě oblasti obrázku v dialogovém okně editor bitové kopie. Další informace o `CMFCImagePaintArea` a `CMFCImageEditorDialog`, najdete v části [CMFCImagePaintArea třída](../../mfc/reference/cmfcimagepaintarea-class.md) a [CMFCImageEditorDialog třída](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ `CMFCImagePaintArea` a `CMFCImageEditorDialog` třídy používají tento výčet nastavit aktuální režim vykreslování. Režim kreslení a aktuální barva se používají k úpravě oblast obrázku v dialogovém okně editoru obrázků. Další informace o `CMFCImagePaintArea` a `CMFCImageEditorDialog`, naleznete v tématu [cmfcimagepaintarea – třída](../../mfc/reference/cmfcimagepaintarea-class.md) a [CMFCImageEditorDialog – třída](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
- Když vyberete barvy z obrázku pomocí `IMAGE_EDIT_MODE_COLOR` režim kreslení rozhraní nastaví aktuální režim kreslení na `IMAGE_EDIT_MODE_PEN`.  
+ Při výběru barvy z obrázku pomocí režimu vykreslování IMAGE_EDIT_MODE_COLOR, nastaví rozhraní IMAGE_EDIT_MODE_PEN aktuální režim vykreslování.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afximagepaintarea.h  
@@ -64,5 +64,5 @@ enum IMAGE_EDIT_MODE
  [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCImagePaintArea – třída](../../mfc/reference/cmfcimagepaintarea-class.md)   
+ [Cmfcimagepaintarea – třída](../../mfc/reference/cmfcimagepaintarea-class.md)   
  [CMFCImageEditorDialog – třída](../../mfc/reference/cmfcimageeditordialog-class.md)

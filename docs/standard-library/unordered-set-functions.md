@@ -1,5 +1,5 @@
 ---
-title: '&lt;unordered_set –&gt; funkce | Microsoft Docs'
+title: '&lt;unordered_set –&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 515d16cf8b9f11f5e9eb0b9699a0f72a19a64053
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956667"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set –&gt; funkce
 
@@ -34,17 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`Key` Typ klíče.
+*Key*  
+ Klíčový typ
 
-`Hash` Typ objektu funkce hash.
+*Hash*  
+ Typ objektu hashovací funkce
 
-`Pred` Typ objektu rovnosti porovnání funkce.
+*Před*  
+ Typ objektu funkce porovnání rovnosti
 
-`Alloc` Allocator – třída.
+*ALLOC*  
+ Třída alokátoru
 
-`left` První kontejner chcete prohodit.
+*doleva*  
+ První kontejner přepínat.
 
-`right` Druhý kontejneru se prohodit.
+*doprava*  
+ Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -120,17 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`Key` Typ klíče.
+*Key*  
+ Klíčový typ
 
-`Hash` Typ objektu funkce hash.
+*Hash*  
+ Typ objektu hashovací funkce
 
-`Pred` Typ objektu rovnosti porovnání funkce.
+*Před*  
+ Typ objektu funkce porovnání rovnosti
 
-`Alloc` Allocator – třída.
+*ALLOC*  
+ Třída alokátoru
 
-`left` První kontejner chcete prohodit.
+*doleva*  
+ První kontejner přepínat.
 
-`right` Druhý kontejneru se prohodit.
+*doprava*  
+ Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -194,6 +206,6 @@ int main()
 
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<unordered_set>](../standard-library/unordered-set.md)<br/>

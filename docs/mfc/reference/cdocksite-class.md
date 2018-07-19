@@ -1,5 +1,5 @@
 ---
-title: Třída CDockSite | Microsoft Docs
+title: Cdocksite – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,17 +96,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336836"
 ---
-# <a name="cdocksite-class"></a>CDockSite – třída
+# <a name="cdocksite-class"></a>Cdocksite – třída
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- Poskytuje funkce pro uspořádání podokna, které jsou odvozeny od [CPane třída](../../mfc/reference/cpane-class.md) do sady řádků.  
+ Poskytuje funkce pro uspořádání podoken, které jsou odvozeny z [cpane – třída](../../mfc/reference/cpane-class.md) do sady řádků.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -121,24 +121,24 @@ class CDockSite: public CBasePane
 |Název|Popis|  
 |----------|-----------------|  
 |[CDockSite::AddRow](#addrow)||  
-|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(Přepisuje [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|  
-|[CDockSite::AdjustLayout](#adjustlayout)|(Přepisuje [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|  
+|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(Přepíše [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|  
+|[CDockSite::AdjustLayout](#adjustlayout)|(Přepíše [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|  
 |[CDockSite::AlignDockSite](#aligndocksite)||  
-|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(Přepisuje [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CDockSite::CanAcceptPane](#canacceptpane)|(Přepisuje [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane).)|  
-|[CDockSite::CreateEx](#createex)|(Přepisuje [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|  
+|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CDockSite::CanAcceptPane](#canacceptpane)|(Přepíše [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane).)|  
+|[CDockSite::CreateEx](#createex)|(Přepíše [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|  
 |[CDockSite::CreateRow](#createrow)||  
-|[CDockSite::DockPane](#dockpane)|(Přepisuje [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane).)|  
-|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Přepisuje [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CDockSite::DockPane](#dockpane)|(Přepíše [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane).)|  
+|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
 |[CDockSite::FindRowIndex](#findrowindex)||  
 |[CDockSite::FixupVirtualRects](#fixupvirtualrects)||  
 |[CDockSite::GetDockSiteID](#getdocksiteid)||  
 |[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||  
-|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|(Přepisuje `CBasePane::IsAccessibilityCompatible`.)|  
+|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|(Přepíše `CBasePane::IsAccessibilityCompatible`.)|  
 |[CDockSite::IsDragMode](#isdragmode)||  
 |[CDockSite::IsLastRow](#islastrow)||  
 |[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||  
-|[CDockSite::IsResizable](#isresizable)|(Přepisuje [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|  
+|[CDockSite::IsResizable](#isresizable)|(Přepíše [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|  
 |[CDockSite::MovePane](#movepane)||  
 |[CDockSite::OnInsertRow](#oninsertrow)||  
 |[CDockSite::OnRemoveRow](#onremoverow)||  
@@ -146,10 +146,10 @@ class CDockSite: public CBasePane
 |[CDockSite::OnSetWindowPos](#onsetwindowpos)||  
 |[CDockSite::OnShowRow](#onshowrow)||  
 |[CDockSite::OnSizeParent](#onsizeparent)||  
-|[CDockSite::PaneFromPoint](#panefrompoint)|Vrátí podokno, ve kterém je ukotvena v lokalitě ukotvení v okamžiku určeného daný parametr.|  
+|[CDockSite::PaneFromPoint](#panefrompoint)|Vrátí podokno, které je ukotveno na dokovacím místě v místě určeném daný parametr.|  
 |[CDockSite::DockPaneLeftOf](#dockpaneleftof)|Ukotvené podokno nalevo od jiného podokna.|  
-|[CDockSite::FindPaneByID](#findpanebyid)|Vrátí podokně, která je identifikovaná dané ID.|  
-|[CDockSite::GetPaneList](#getpanelist)|Vrátí seznam hodnot podokny, která jsou ukotven v lokalitě ukotvení.|  
+|[CDockSite::FindPaneByID](#findpanebyid)|Vrátí podokno, který je identifikován podle dané ID.|  
+|[CDockSite::GetPaneList](#getpanelist)|Vrátí seznam podoken, které jsou ukotveno na dokovacím místě.|  
 |[CDockSite::RectSideFromPoint](#rectsidefrompoint)||  
 |[CDockSite::RemovePane](#removepane)||  
 |[CDockSite::RemoveRow](#removerow)||  
@@ -157,14 +157,14 @@ class CDockSite: public CBasePane
 |[CDockSite::RepositionPanes](#repositionpanes)||  
 |[CDockSite::ResizeDockSite](#resizedocksite)||  
 |[CDockSite::ResizeRow](#resizerow)||  
-|[CDockSite::ShowPane](#showpane)|Zobrazuje v podokně.|  
+|[CDockSite::ShowPane](#showpane)|V podokně se zobrazí.|  
 |[CDockSite::ShowRow](#showrow)||  
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvoří rozhraní `CDockSite` objekty automaticky při volání [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Ukotvení lokality windows jsou umístěny na hranici klientské oblasti na hlavním okně rámce.  
+ Vytvoří rozhraní `CDockSite` objekty automaticky při volání [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Ukotvit webu windows jsou umístěny v hraniční části klientské oblasti okna hlavního rámce.  
   
- Obvykle není nutné volat služeb poskytovaných ukotvení lokality, protože [CFrameWndEx třída](../../mfc/reference/cframewndex-class.md) zpracovává těchto služeb.  
+ Obvykle není nutné volat služby poskytované dokovacího webu, protože [cframewndex – třída](../../mfc/reference/cframewndex-class.md) zpracovává tyto služby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit objekt `CDockSite` třídy.  
@@ -172,9 +172,9 @@ class CDockSite: public CBasePane
  [!code-cpp[NVC_MFC_RibbonApp#27](../../mfc/reference/codesnippet/cpp/cdocksite-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
+ [CObject –](../../mfc/reference/cobject-class.md) [CCmdTarget –](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CBasePane](../../mfc/reference/cbasepane-class.md) [CDockSite](../../mfc/reference/cdocksite-class.md)  
+ [Cbasepane –](../../mfc/reference/cbasepane-class.md) [cdocksite –](../../mfc/reference/cdocksite-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxDockSite.h  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pos*  
- [v] *nHeight*  
+ [in] *pos*  
+ [in] *nHeight*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -225,9 +225,9 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *rectToAlignBy*  
- [v] *rectResult*  
- [v] *bMoveImmediately*  
+ [in] *rectToAlignBy*  
+ [in] *rectResult*  
+ [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bStretch*  
- [v] *bHorz*  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -256,7 +256,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *dwStyleEx*  
- [v] *dwStyle*  
- [v] *Rect –*  
- [v] *pParentWnd*  
- [v] *dwControlBarStyle*  
- [v] *pContext*  
+ [in] *dwStyleEx*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -298,9 +298,9 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pParentDockBar*  
- [v] *nOffset*  
- [v] *nRowHeight*  
+ [in] *pParentDockBar*  
+ [in] *nOffset*  
+ [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -317,9 +317,9 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- [v] *dockMethod*  
- [v] *lprect –*  
+ [in] *pWnd*  
+ [in] *dockMethod*  
+ [in] *lprect –*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -333,14 +333,14 @@ virtual BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] *pBarToDock*  
- Ukazatel na podokno ukotvit nalevo od *pTargetBar*.  
+ [in] [out] *pBarToDock*  
+ Ukazatel do podokna ukotvit vlevo od *pTargetBar*.  
   
- [v] [out] *pTargetBar*  
- Ukazatel na podokně cíl.  
+ [in] [out] *pTargetBar*  
+ Ukazatel do podokna cíl.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud v podokně ukotven úspěšně; v opačném `FALSE`.  
+ Hodnota TRUE, pokud se v podokně je ukotven úspěšně; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -356,18 +356,18 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID  
- Vrátí v podokně s dané ID.  
+ Vrátí podokno s daným ID.  
   
 ```  
 CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nID*  
- ID příkazu k rozpoznání podokna.  
+ [in] *nID*  
+ ID příkazu podokna nalezen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na v podokně s ID zadaný příkaz nebo `NULL` Pokud nebyl nalezen v podokně.  
+ Ukazatel do podokna s ID zadaného příkazu, nebo hodnota NULL, pokud nebyl nalezen v podokně.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -379,7 +379,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRow*  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -417,14 +417,14 @@ const CObList& GetDockSiteRowsList() const;
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
- Vrátí seznam hodnot podokny, která jsou ukotven v lokalitě ukotvení.  
+ Vrátí seznam podoken, které jsou ukotveno na dokovacím místě.  
   
 ```  
 const CObList& GetPaneList() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jen pro čtení odkaz na seznam podokna aktuálně ukotven ukotvení panelu.  
+ Jen pro čtení odkaz na seznam podoken aktuálně v dokovací panel ukotven.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -456,7 +456,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRow*  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
- [v] *ptDelta*  
+ [in] *rect*  
+ [in] *ptDelta*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -501,9 +501,9 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- [v] *nFlags*  
- [v] *ptOffset*  
+ [in] *pWnd*  
+ [in] *nFlags*  
+ [in] *ptOffset*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -517,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pos*  
+ [in] *pos*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pos*  
- [v] *bByShow*  
+ [in] *pos*  
+ [in] *bByShow*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRowToResize*  
- [v] *nOffset*  
+ [in] *pRowToResize*  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *rectAvailable*  
- [v] *nSide*  
- [v] *bExpand*  
- [v] *nOffset*  
+ [in] *rectAvailable*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -583,9 +583,9 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndInsertAfter*  
- [v] *rectWnd*  
- [v] *nFlags*  
+ [in] *pWndInsertAfter*  
+ [in] *rectWnd*  
+ [in] *nFlags*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -601,24 +601,24 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pos*  
- [v] *bShow*  
+ [in] *pos*  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="panefrompoint"></a>  CDockSite::PaneFromPoint  
- Vrátí podokno, ve kterém je ukotvena v lokalitě ukotvení v okamžiku určeného daný parametr.  
+ Vrátí podokno, které je ukotveno na dokovacím místě v místě určeném daný parametr.  
   
 ```  
 virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pt*  
- Bod, v souřadnice obrazovky, v podokně pro načtení.  
+ [in] *pt*  
+ Bod, v souřadnicovém systému obrazovky, podokna pro načtení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na podokně nachází v zadané bodu nebo `NULL` Pokud žádné podokně nacházel na zadaný bod.  
+ Ukazatel do podokna umístěny v zadaném bodu nebo hodnota NULL, pokud žádné podokně nebyl nalezen zadaný okamžiku.  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Rect –*  
- [v] *bodu*  
+ [in] *rect*  
+ [in] *bodu*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
- [v] *dockMethod*  
+ [in] *pWnd*  
+ [in] *dockMethod*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -662,7 +662,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRow*  
+ [in] *pRow*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pOldBar*  
- [v] *pNewBar*  
+ [in] *pOldBar*  
+ [in] *pNewBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -691,7 +691,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *rectNewClientArea*  
+ [in] *rectNewClientArea*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nNewWidth*  
- [v] *nNewHeight*  
+ [in] *nNewWidth*  
+ [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -721,16 +721,16 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRow*  
- [v] *nNewSize*  
- [v] *bAdjustLayout*  
+ [in] *pRow*  
+ [in] *nNewSize*  
+ [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="showpane"></a>  CDockSite::ShowPane  
- Zobrazuje v podokně.  
+ V podokně se zobrazí.  
   
 ```  
 virtual BOOL ShowPane(
@@ -741,23 +741,23 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] [out] *pBar*  
- Ukazatel na podokno zobrazen nebo skryt.  
+ [in] [out] *pBar*  
+ Ukazatel do podokna zobrazený nebo skrytý.  
   
- [v] *bShow*  
- `TRUE` k určení, že v podokně se zobrazí; `FALSE` k určení, zda je v podokně jako skryté.  
+ [in] *bShow*  
+ TRUE, pokud chcete určit, že v podokně má být zobrazen; FALSE, pokud chcete určit, že v podokně jako skryté.  
   
- [v] *bDelay*  
- `TRUE` Chcete-li určit, že rozložení v podokně by se proto objevit až poté, co se zobrazí v podokně; v opačném `FALSE`.  
+ [in] *bDelay*  
+ TRUE, pokud chcete určit, že rozložení v podokně zpoždění až poté, co se zobrazuje v podokně; v opačném případě hodnota FALSE.  
   
- [v] *bActivate*  
+ [in] *bActivate*  
  Tento parametr není používán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se v podokně zobrazen nebo skryt úspěšně. `FALSE` Pokud zadaný podokně nepatří k tomuto webu ukotvení.  
+ TRUE, pokud se v podokně zobrazený nebo skrytý úspěšně. FALSE, pokud zadaný podokně nepatří do této dokovacího webu.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze zobrazit nebo skrýt ukotveného podokna. Za normálních okolností není nutné volat `CDockSite::ShowPane` přímo, protože se označuje jako nadřazeného rámce okna nebo základní podokně.  
+ Voláním této metody lze zobrazit nebo skrýt ukotveného podokna. Za normálních okolností není nutné volat `CDockSite::ShowPane` přímo, protože je volána v nadřazené okno rámce nebo základní podokně.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 
@@ -770,9 +770,9 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRow*  
- [v] *bShow*  
- [v] *bAdjustLayout*  
+ [in] *pRow*  
+ [in] *bShow*  
+ [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pFirstRow*  
- [v] *pSecondRow*  
+ [in] *pFirstRow*  
+ [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Poznámky  
   

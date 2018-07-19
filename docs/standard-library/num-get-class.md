@@ -1,5 +1,5 @@
 ---
-title: num_get – třída | Microsoft Docs
+title: num_get – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6e1df322ba6959431913097111e4af1a179cd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862745"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959817"
 ---
 # <a name="numget-class"></a>num_get – třída
 
-Třídu šablony, která popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převody pořadí typu `CharType` do číselných hodnot.
+Třída šablony popisující objekt, který může sloužit jako omezující vlastnost národního prostředí pro řízení převodu sekvencí typu `CharType` na číselné hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-`CharType` Typ v rámci programu použitá ke kódování znaků v národním prostředí.
+*CharType* typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
-`InputIterator` Typ iterator, ze kterého funkce číselné get, přečtěte si jejich vstup.
+*InputIterator* typ iterátoru, ze kterého číselné funkce get čtou svůj vstup.
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. Ukládá jedinečné kladnou hodnotu v první pokus o přístup k jeho uložené hodnoty **id.**
+Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k jeho uložené hodnotě uloží jedinečnou kladnou hodnotu v **id.**
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[num_get](#num_get)|V konstruktoru pro objekty typu `num_get` , se používají k získání číselné hodnoty z pořadí.|
+|[num_get](#num_get)|Konstruktor pro objekty typu `num_get` , který slouží k extrakci číselných hodnot ze sekvencí.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -76,7 +76,7 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="char_type"></a>  num_get::char_type
 
@@ -175,23 +175,23 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-`first` Začátek rozsahu znaků, z kterého se mají číst číslo.
+*první* začátek rozsahu znaků ze kterého se má přečíst číslo.
 
-`last` Konec rozsahu znaků, z kterého se mají číst číslo.
+*poslední* konec rozsahu znaků od kterého se mají číst číslo.
 
-`_Iosbase` [Ios_base](../standard-library/ios-base-class.md) jejichž příznaky jsou používány převod.
+*_Iosbase* [ios_base –](../standard-library/ios-base-class.md) jehož příznaky jsou používány převodu.
 
-`_State` Stavu, na které failbit (viz [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) je přidána při selhání.
+*_Stavu* stavu, na které failbit (naleznete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se přidá nebude úspěšná.
 
-`val` Hodnota, která byla načtena.
+*Val* hodnotu, která byla načtena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator po hodnota byl načten.
+Iterátor, jakmile byla načtena hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-První funkci virtuální chráněného člena
+První chráněná virtuální členská funkce
 
 ```cpp
 virtual iter_type do_get(
@@ -202,27 +202,27 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-odpovídá sekvenční elementy začínající na `first` v pořadí `[first, last)` dokud má rozpoznána úplná, neprázdná celé číslo vstupní pole. Pokud úspěšné, převede ji toto pole na ekvivalentní hodnotu jako typ `long`a ukládá výsledky v `val`. Vrátí iterovat určení první prvek nad rámec číselné vstupní pole. Jinak funkce ukládá ustanovení v `val` a nastaví `ios_base::failbit` v `state`. Vrátí iterovat určení první prvek nad rámec všechny předpony vstupní pole platné celé číslo. V obou případech, pokud se rovná návratovou hodnotu `last`, nastaví funkce `ios_base::eofbit` v `state`.
+Porovná sekvenční prvky počínaje *první* v sekvenci `[first, last)` dokud rozpoznal kompletní, prázdný celé číslo vstupní pole. Pokud úspěšné, převede toto pole na její ekvivalentní hodnotu jako typ **dlouhé**a uloží výsledek v *val*. Vrátí iterátor určení prvního prvku mimo číselné vstupní pole. V opačném případě funkce ukládá ustanovení *val* a nastaví `ios_base::failbit` v `state`. Vrátí iterátor určení prvního prvku mimo jakoukoli předponu platné celé číslo vstupní pole. V obou případech, pokud je návratová hodnota `last`, funkce nastaví `ios_base::eofbit` v `state`.
 
-Vstupní pole celé číslo je převedeno stejné pravidly používané funkce kontroly pro porovnávání a převody řadu `char` elementy ze souboru. (Každý například `char` element se předpokládá, že k mapování na ekvivalentní element typu `Elem` pomocí jednoduchého typu 1: 1, mapování.) Specifikace převod ekvivalentní kontroly je stanoven následujícím způsobem:
+Vstupní pole celé číslo je převedeno stejnými pravidly, používá funkce kontroly pro porovnávání a převod řadu **char** elementy ze souboru. (Každý například **char** element předpokládá, že je mapují na odpovídající element typu `Elem` tak jednoduchý, 1: 1, mapování.) Specifikace ekvivalentní kontrolu převodu je stanoven následujícím způsobem:
 
-Pokud `iosbase.` [ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), je specifikace převod `lo`.
+Pokud `iosbase.` [ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
 
-Pokud `iosbase.flags() & ios_base::basefield == ios_base::` [šestnáctkových](../standard-library/ios-functions.md#hex), je specifikace převod `lx`.
+Pokud `iosbase.flags() & ios_base::basefield == ios_base::` [hex](../standard-library/ios-functions.md#hex), je specifikace převodu `lx`.
 
-Pokud `iosbase.flags() & ios_base::basefield == 0`, je specifikace převod `li`.
+Pokud `iosbase.flags() & ios_base::basefield == 0`, je specifikace převodu `li`.
 
-Jinak je specifikace převod `ld`.
+V opačném případě je specifikace převodu `ld`.
 
-Formát vstupního pole celé číslo je dáno Další [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) `fac` volání vráceny [use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Konkrétně:
+Formát vstupního pole celé číslo další určené [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) `fac` vrácený voláním [use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct –](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Konkrétně:
 
-`fac.` [numpunct::Grouping](../standard-library/numpunct-class.md#grouping) `()` určuje způsob seskupení číslic nalevo od všech desetinné čárky
+`fac.` [numpunct::Grouping](../standard-library/numpunct-class.md#grouping) `()` určuje způsob seskupení číslic vlevo od desetinné čárky
 
-`fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky.
+`fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` Určuje sekvenci, která odděluje skupin číslic nalevo od desetinné čárky.
 
-Pokud žádné instance `fac.thousands_sep()` ke kterým došlo v číselné vstupní pole, je nevyžaduje žádné omezení seskupení. Jinak, nevyžaduje žádná omezení seskupení `fac.grouping()` prosazují a oddělovačů jsou odebrány, než dojde k převodu kontroly.
+Pokud žádné instance `fac.thousands_sep()` vyskytují v číselné vstupní pole, se nevyžaduje žádná omezení seskupení. V opačném případě technologie nevyžaduje žádná omezení seskupení `fac.grouping()` vynucují a oddělovače jsou odebrány, než dojde k převodu kontroly.
 
-Čtvrtý chráněného člena virtuální funkce:
+Čtvrtý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -233,9 +233,9 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že se nahradí převod specifikaci `ld` s `lu`. Pokud úspěšné převádí číselné vstupní pole na hodnotu typu `unsigned long` a uloží tuto hodnotu v `val`.
+chová se stejně jako první, s tím rozdílem, že ji nahradí specifikace převodu z `ld` s `lu`. Pokud úspěšně převede číselné vstupní pole na hodnotu typu **unsigned long** a uloží hodnotu v *val*.
 
-Funkci páté virtuální chráněného člena:
+Pátý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -246,9 +246,9 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že se nahradí převod specifikaci `ld` s `lld`. Pokud úspěšné převádí číselné vstupní pole na hodnotu typu `long long` a uloží tuto hodnotu v `val`.
+chová se stejně jako první, s tím rozdílem, že ji nahradí specifikace převodu z `ld` s `lld`. Pokud úspěšně převede číselné vstupní pole na hodnotu typu **long long** a uloží hodnotu v *val*.
 
-Šesté chráněného člena virtuální funkce:
+Šestý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -259,9 +259,9 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že se nahradí převod specifikaci `ld` s `llu`. Pokud úspěšné převádí číselné vstupní pole na hodnotu typu `unsigned long long` a uloží tuto hodnotu v `val`.
+chová se stejně jako první, s tím rozdílem, že ji nahradí specifikace převodu z `ld` s `llu`. Pokud úspěšně převede číselné vstupní pole na hodnotu typu **unsigned long long.** a uloží hodnotu v *val*.
 
-Funkci sedmého virtuální chráněného člena:
+Sedmý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -272,9 +272,9 @@ virtual iter_type do_get(
     float& val) const;
 ```
 
-Kromě toho, že ho endeavors tak, aby odpovídaly dokončení, neprázdná s plovoucí desetinnou čárkou vstupní pole se chová stejně jako první. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point) `()` určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikátor převod ekvivalentní kontroly je `lf`.
+chová se stejně jako první, s tím rozdílem, že ho endeavors tak, aby odpovídaly prázdný, kompletní s plovoucí desetinnou čárkou vstupní pole. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point) `()` Určuje sekvenci, která odděluje celá čísla od číslic zlomku. Je ekvivalentní kontroly specifikátoru převodu `lf`.
 
-Funkci osmého virtuální chráněného člena:
+Osmého chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -285,9 +285,9 @@ virtual iter_type do_get(
     double& val) const;
 ```
 
-Kromě toho, že ho endeavors tak, aby odpovídaly dokončení, neprázdná s plovoucí desetinnou čárkou vstupní pole se chová stejně jako první. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point) `()` určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikátor převod ekvivalentní kontroly je `lf`.
+chová se stejně jako první, s tím rozdílem, že ho endeavors tak, aby odpovídaly prázdný, kompletní s plovoucí desetinnou čárkou vstupní pole. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point) `()` Určuje sekvenci, která odděluje celá čísla od číslic zlomku. Je ekvivalentní kontroly specifikátoru převodu `lf`.
 
-Funkci deváté virtuální chráněného člena:
+Devátý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -298,9 +298,9 @@ virtual iter_type do_get(
     long double& val) const;
 ```
 
-se chová stejně jako osmou, s tím rozdílem, že je specifikátor převod ekvivalentní kontroly `Lf`.
+chová se stejně jako osmou, s tím rozdílem, že je kontrola ekvivalentní specifikátoru převodu `Lf`.
 
-Funkci desetinu virtuální chráněného člena:
+Desátý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -311,9 +311,9 @@ virtual iter_type do_get(
     void *& val) const;
 ```
 
-se chová stejně první, s tím rozdílem, že je specifikátor převod ekvivalentní kontroly `p`.
+se chová stejně první, s tím rozdílem, že je kontrola ekvivalentní specifikátoru převodu `p`.
 
-Poslední chráněného člena (eleventh) virtuální funkce:
+Poslední chráněná (eleventh) virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(
@@ -324,13 +324,13 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-Kromě toho, že ho endeavors tak, aby odpovídaly dokončení, neprázdná logické vstupní pole se chová stejně jako první. Pokud úspěšné převede ji logické vstupní pole na hodnotu typu `bool` a uloží tuto hodnotu v `val`.
+chová se stejně jako první, s tím rozdílem, že ho endeavors tak, aby odpovídaly prázdný, kompletní logické vstupní pole. Pokud úspěšně převede vstupní pole logickou hodnotu typu **bool** a uloží hodnotu v *val*.
 
-Logická hodnota vstupní pole má dvě formy. Pokud `iosbase.flags() & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) je nastavena hodnota false, s tím rozdílem, že převedená hodnota musí být buď 0 (false) nebo 1 (pravda) je stejný jako celé číslo vstupní pole. Pořadí, jinak hodnota musí odpovídat buď `fac.` [numpunct::falsename](../standard-library/numpunct-class.md#falsename) `()` (pro false), nebo `fac.` [numpunct::truename](../standard-library/numpunct-class.md#truename) `()` (pro true).
+Vstupní pole Boolean má jednu z těchto dvou tvarů. Pokud `iosbase.flags() & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) má hodnotu false, je stejný jako vstupní pole celé číslo, s tím rozdílem, že převedená hodnota musí být 0 (false) nebo 1 (pravda). V opačném pořadí musí odpovídat buď `fac.` [numpunct::falsename](../standard-library/numpunct-class.md#falsename) `()` (pro false), nebo `fac.` [numpunct::truename](../standard-library/numpunct-class.md#truename) `()` (pro hodnotu PRAVDA).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [získat](#get), kde je volána funkce člena virtuální `do_get`.
+Podívejte se na příklad pro [získat](#get), kde je virtuální členská funkce volána `do_get`.
 
 ## <a name="get"></a>  num_get::Get
 
@@ -417,45 +417,45 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-`first` Začátek rozsahu znaků, z kterého se mají číst číslo.
+*první* začátek rozsahu znaků ze kterého se má přečíst číslo.
 
-`last` Konec rozsahu znaků, z kterého se mají číst číslo.
+*poslední* konec rozsahu znaků od kterého se mají číst číslo.
 
-`_Iosbase` [Ios_base](../standard-library/ios-base-class.md) jejichž příznaky jsou používány převod.
+*_Iosbase* [ios_base –](../standard-library/ios-base-class.md) jehož příznaky jsou používány převodu.
 
-`_State` Stavu, na které failbit (viz [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) je přidána při selhání.
+*_Stavu* stavu, na které failbit (naleznete v tématu [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se přidá nebude úspěšná.
 
-`val` Hodnota, která byla načtena.
+*Val* hodnotu, která byla načtena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterator po hodnota byl načten.
+Iterátor, jakmile byla načtena hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
 Vrátí všechny členské funkce [do_get –](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).
 
-První virtuální chráněného člena funkce se pokusí vyhledat sekvenční elementy začínající na první v pořadí [ `first`, `last`) dokud má rozpoznána úplná, neprázdná celé číslo vstupní pole. Pokud úspěšné, převede ji toto pole na ekvivalentní hodnotu jako typ **dlouho** a ukládá výsledky v `val`. Vrátí iterovat určení první prvek nad rámec číselné vstupní pole. Jinak funkce ukládá ustanovení v `val` a nastaví `ios_base::failbit` v _ *stavu*. Vrátí iterovat určení první prvek nad rámec všechny předpony vstupní pole platné celé číslo. V obou případech, pokud se rovná návratovou hodnotu **poslední**, nastaví funkce `ios_base::eofbit` v `_State`.
+První chráněná virtuální členská funkce se pokusí porovnat sekvenční začínající na první v pořadí elementů [ `first`, `last`) dokud rozpoznal kompletní, prázdný celé číslo vstupní pole. Pokud úspěšné, převede toto pole na její ekvivalentní hodnotu jako typ **dlouhé** a uloží výsledek v *val*. Vrátí iterátor určení prvního prvku mimo číselné vstupní pole. V opačném případě funkce ukládá ustanovení *val* a nastaví `ios_base::failbit` v _ *stavu*. Vrátí iterátor určení prvního prvku mimo jakoukoli předponu platné celé číslo vstupní pole. V obou případech, pokud je návratová hodnota *poslední*, funkce nastaví `ios_base::eofbit` v *_stavu*.
 
-Vstupní pole celé číslo je převedeno stejné pravidly používané funkce kontroly pro porovnávání a převody řadu `char` elementy ze souboru. Každý například `char` element se předpokládá, že k mapování na ekvivalentní element typu **CharType** mapováním jednoduchý, 1: 1. Specifikace převod ekvivalentní kontroly je stanoven následujícím způsobem:
+Vstupní pole celé číslo je převedeno stejnými pravidly, používá funkce kontroly pro porovnávání a převod řadu **char** elementy ze souboru. Každé takové **char** element předpokládá, že je mapují na odpovídající element typu `CharType` mapováním jednoduché, 1: 1. Specifikace ekvivalentní kontrolu převodu je stanoven následujícím způsobem:
 
-- Pokud **iosbase**. [příznaky](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), je specifikace převod **u**.
+- Pokud `iosbase`. [příznaky](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), je specifikace převodu `lo`.
 
-- Pokud **iosbase.flags** & **ios_base::basefield** == `ios_base::`[šestnáctkových](../standard-library/ios-functions.md#hex), je specifikace převod **lx** .
+- Pokud **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), je specifikace převodu `lx`.
 
-- Pokud **iosbase.flags** & **ios_base::basefield** == 0, je specifikace převod `li`.
+- Pokud **iosbase.flags** & **ios_base::basefield** == 0, je specifikace převodu `li`.
 
-- Jinak je specifikace převod **ld**.
+- V opačném případě je specifikace převodu `ld`.
 
-Formát vstupního pole celé číslo je dáno Další [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** volání vráceny [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). Konkrétně:
+Formát vstupního pole celé číslo další určené [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class)**fac** vrácený voláním [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct – ](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase**. [getloc –](../standard-library/ios-base-class.md#getloc)). Konkrétně:
 
-- **FAC**. [seskupování](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic nalevo od všech desetinné čárky.
+- **FAC**. [seskupení](../standard-library/numpunct-class.md#grouping) určuje způsob seskupení číslic vlevo od desetinné čárky.
 
-- **FAC**. [thousands_sep –](../standard-library/numpunct-class.md#thousands_sep) určuje pořadí, který odděluje skupiny číslic nalevo od všech desetinné čárky.
+- **FAC**. [thousands_sep –](../standard-library/numpunct-class.md#thousands_sep) Určuje sekvenci, která odděluje skupin číslic nalevo od desetinné čárky.
 
-Pokud žádné instance **fac**. `thousands_sep` ve číselné vstupní pole, je nevyžaduje žádné omezení seskupení. Jinak, nevyžaduje žádná omezení seskupení **fac**. **seskupování** je vynucená a oddělovačů jsou odebrány, než dojde k převodu kontroly.
+Pokud žádné instance **fac**. `thousands_sep` Probíhá číselné vstupní pole, se nevyžaduje žádná omezení seskupení. V opačném případě technologie nevyžaduje žádná omezení seskupení **fac**. **seskupení** se nevynutí a oddělovače jsou odebrány, než dojde k převodu kontroly.
 
-Druhý virtuální chráněného člena funkce:
+Chráněná virtuální členská funkce second:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
@@ -465,9 +465,9 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-se chová stejně jako první, s tím rozdílem, že se nahradí převod specifikaci **ld** s **lu**. Pokud úspěšné, převede ji číselné vstupní pole na hodnotu typu `unsigned long` a uloží tuto hodnotu v `val`.
+chová se stejně jako první, s tím rozdílem, že ji nahradí specifikace převodu z `ld` s `lu`. Pokud úspěšné, převede číselné vstupní pole na hodnotu typu **unsigned long** a uloží hodnotu v *val*.
 
-Třetí virtuální chráněného člena funkce:
+Třetí chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
@@ -477,9 +477,9 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```
 
-Kromě toho, že se pokouší vyhledat dokončení, neprázdná s plovoucí desetinnou čárkou vstupní pole se chová stejně jako první. **FAC**. [decimal_point –](../standard-library/numpunct-class.md#decimal_point) určuje pořadí, který odděluje číslic celé číslo od zlomek číslic. Specifikátor převod ekvivalentní kontroly je **lf**.
+chová se stejně jako první, s tím rozdílem, pokusí se vyhledat prázdný, kompletní s plovoucí desetinnou čárkou vstupní pole. **FAC**. [decimal_point –](../standard-library/numpunct-class.md#decimal_point) Určuje sekvenci, která odděluje celá čísla od číslic zlomku. Je ekvivalentní kontroly specifikátoru převodu `lf`.
 
-Čtvrtý chráněného člena virtuální funkce:
+Čtvrtý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
@@ -489,9 +489,9 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-se chová stejně třetí, s tím rozdílem, že je specifikátor převod ekvivalentní kontroly **Lf**.
+se chová stejně třetí, s tím rozdílem, že je kontrola ekvivalentní specifikátoru převodu `Lf`.
 
-Funkci páté virtuální chráněného člena:
+Pátý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
@@ -501,9 +501,9 @@ virtual iter_type do_get(iter_type first,
     void *& val) const;
 ```
 
-se chová stejně první, s tím rozdílem, že je specifikátor převod ekvivalentní kontroly **p**.
+se chová stejně první, s tím rozdílem, že je kontrola ekvivalentní specifikátoru převodu `p`.
 
-Šesté chráněného člena virtuální funkce:
+Šestý chráněná virtuální členská funkce:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
@@ -513,9 +513,9 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```
 
-Kromě toho, že se pokouší vyhledat dokončení, neprázdná logické vstupní pole se chová stejně jako první. Pokud úspěšné převede ji logické vstupní pole na hodnotu typu `bool` a uloží tuto hodnotu v `val`.
+chová se stejně jako první, s tím rozdílem, pokusí se vyhledat prázdný, kompletní logické vstupní pole. Pokud úspěšně převede vstupní pole logickou hodnotu typu **bool** a uloží hodnotu v *val*.
 
-Logická hodnota vstupní pole má dvě formy. Pokud **iosbase**. **příznaky** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, s tím rozdílem, že převedená hodnota musí být buď 0 je stejný jako celé číslo vstupní pole (pro **false** ) nebo 1 (pro **true**). Pořadí, jinak hodnota musí odpovídat buď **fac**. [falsename –](../standard-library/numpunct-class.md#falsename) (pro **false**), nebo **fac**. [truename –](../standard-library/numpunct-class.md#truename) (pro **true**).
+Vstupní pole boolean má jednu z těchto dvou tvarů. Pokud **iosbase**. **příznaky** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, je stejný jako vstupní pole celé číslo, s tím rozdílem, že převedená hodnota musí být buď 0 (pro **false** ) nebo 1 (pro **true**). V opačném pořadí musí odpovídat buď **fac**. [falsename –](../standard-library/numpunct-class.md#falsename) (pro **false**), nebo **fac**. [truename –](../standard-library/numpunct-class.md#truename) (pro **true**).
 
 ### <a name="example"></a>Příklad
 
@@ -559,11 +559,11 @@ typedef InputIterator iter_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **InputIterator**.
+Typ je synonymum pro parametr šablony `InputIterator`.
 
 ## <a name="num_get"></a>  num_get::num_get
 
-V konstruktoru pro objekty typu `num_get` , se používají k získání číselné hodnoty z pořadí.
+Konstruktor pro objekty typu `num_get` , který slouží k extrakci číselných hodnot ze sekvencí.
 
 ```cpp
 explicit num_get(size_t _Refs = 0);
@@ -571,23 +571,23 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-`_Refs` Celočíselná hodnota určuje typ správy paměti pro objekt.
+*_Refs* celočíselnou hodnotu použít k určení typu Správa paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Možné hodnoty `_Refs` parametrů a jejich významu jsou:
+Možné hodnoty parametru *_Refs* parametrů a jejich význam:
 
-- 0: doba života objektu spravuje národní prostředí, které je obsahují.
+- 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
 
-- 1: doba života objektu, se musí ručně spravovat.
+- 1: doba života objektu je nutné ručně spravovat.
 
 - \> 1: tyto hodnoty nejsou definovány.
 
-Žádné přímé příklady je možné, protože je chráněn destruktoru.
+Žádné přímé příklady je to možné, protože destruktor je chráněn.
 
 Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<národní prostředí >](../standard-library/locale.md)<br/>
 [facet – třída](../standard-library/locale-class.md#facet_class)<br/>

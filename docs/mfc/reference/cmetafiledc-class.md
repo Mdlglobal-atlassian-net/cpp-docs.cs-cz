@@ -1,5 +1,5 @@
 ---
-title: CMetaFileDC – třída | Microsoft Docs
+title: Cmetafiledc – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338857"
 ---
-# <a name="cmetafiledc-class"></a>CMetaFileDC – třída
-Implementuje WMF, který obsahuje posloupnost grafiky zařízení rozhraní GDI příkazy, které můžete přehráním vytvořit požadovanou image nebo text.  
+# <a name="cmetafiledc-class"></a>Cmetafiledc – třída
+Implementuje metasoubor systému Windows, který obsahuje posloupnost grafiky zařízení (GDI) příkazy, které můžete zopakovat pro vytvoření požadovaného obrázku nebo textu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,30 +54,30 @@ class CMetaFileDC : public CDC
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMetaFileDC::Close](#close)|Zavře kontextu zařízení a vytvoří metafile popisovač.|  
-|[CMetaFileDC::CloseEnhanced](#closeenhanced)|Zavře kontextu zařízení enhanced metafile a vytvoří popisovač enhanced metafile.|  
-|[CMetaFileDC::Create](#create)|Kontext zařízení Windows metafile vytvoří a připojí jej k `CMetaFileDC` objektu.|  
-|[CMetaFileDC::CreateEnhanced](#createenhanced)|Vytvoří metafile kontextu zařízení pro metafile rozšířeného formátu.|  
+|[CMetaFileDC::Close](#close)|Ukončí kontext zařízení a vytvoří metasoubor popisovač.|  
+|[CMetaFileDC::CloseEnhanced](#closeenhanced)|Objekt context enhanced metafile zařízení se zavře a vytvoří popisovač enhanced metafile.|  
+|[CMetaFileDC::Create](#create)|Vytvoří kontextu zařízení metasouboru Windows a připojí ho k `CMetaFileDC` objektu.|  
+|[CMetaFileDC::CreateEnhanced](#createenhanced)|Vytvoří metasoubor kontext zařízení pro metasoubor rozšířeného formátu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li implementovat WMF, nejprve vytvořit `CMetaFileDC` objektu. Vyvolání `CMetaFileDC` konstruktoru, potom zavolejte [vytvořit](#create) členská funkce, který vytvoří kontextu zařízení Windows metafile a připojí jej k `CMetaFileDC` objektu.  
+ K implementaci metasoubor systému Windows, nejprve vytvořte `CMetaFileDC` objektu. Vyvolat `CMetaFileDC` konstruktor, poté zavolejte [vytvořit](#create) členskou funkci, která vytvoří kontextu zařízení metasouboru Windows a připojí ho k `CMetaFileDC` objektu.  
   
- Potom pošle `CMetaFileDC` objektu pořadí `CDC` GDI příkazy, které chcete pro něj opakování. Pouze GDI příkazy, které vytvoření výstupu, jako například `MoveTo` a `LineTo`, můžete použít.  
+ Potom pošle `CMetaFileDC` objekt sekvence CDC GDI příkazy, které jsou určené pro něj znovu přehrát. Pouze GDI příkazy, které vytvoří výstup, jako například `MoveTo` a `LineTo`, lze použít.  
   
- Po odeslání požadované příkazy metafile volání `Close` členská funkce, která zavře kontexty zařízení metafile a vrátí popisovač metafile. Pak odstranění `CMetaFileDC` objektu.  
+ Po odeslání požadované příkazy metasoubor volání `Close` členské funkce, která uzavře metasouborů kontexty zařízení a vrátí popisovač metasouboru. Potom `CMetaFileDC` objektu.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) lze následně použít popisovač metafile k opakované přehrávání metafile. Metafile můžete manipulovat rovněž prostřednictvím funkce systému Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), který zkopíruje metasoubory na disk.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) popisovač metasouboru. poté použít k přehrávání metasoubor opakovaně. Tento metasoubor lze také ovládat pomocí funkcí Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), který zkopíruje metasoubor na disk.  
   
- Když metafile již nepotřebujete, odstraňte jej z paměti s [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce systému Windows.  
+ Pokud je tento metasoubor už nepotřebujete, odstraňte ho z paměti s [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce Windows.  
   
- Můžete taky implementovat `CMetaFileDC` objektu tak, aby dokáže zpracovat výstup volání i atribut GDI volání, jako `GetTextExtent`. Takové metafile je flexibilnější a můžete více snadno opakovaně použít obecné GDI kód, který často se skládá z kombinace výstup a atribut volání. `CMetaFileDC` Třída dědí dva kontexty zařízení `m_hDC` a `m_hAttribDC`, z `CDC`. `m_hDC` Kontextu zařízení zpracovává všechny [CDC](../../mfc/reference/cdc-class.md) GDI výstup volání a `m_hAttribDC` kontextu zařízení zpracovává všechny `CDC` GDI atribut volání. Za normálních okolností kontexty tyto dvě zařízení odkazovat na stejné zařízení. U `CMetaFileDC`, atribut řadič domény je nastaven na **NULL** ve výchozím nastavení.  
+ Můžete také implementovat `CMetaFileDC` objektu tak, aby ji zvládne výstup volání i atribut GDI volání, jako `GetTextExtent`. Takové metasoubor je flexibilnější a můžete informace snadno opakovaně použít obecné rozhraní GDI kód, který se často se skládá z kombinace volání výstup a atribut. `CMetaFileDC` Třída dědí dvě kontexty zařízení `m_hDC` a `m_hAttribDC`, z CSP. `m_hDC` Kontextu zařízení zpracovává všechny [CDC](../../mfc/reference/cdc-class.md) GDI výstup volání a `m_hAttribDC` kontextu zařízení zpracovává všechna volání rozhraní GDI CDC atribut. Za normálních okolností kontexty tyto dvě zařízení odkazovat do stejného zařízení. V případě třídy `CMetaFileDC`, atribut řadič domény je standardně nastavená na hodnotu NULL.  
   
- Vytvořte druhý kontextu zařízení, které odkazuje na obrazovce, tiskárnu nebo zařízení než metasoubory, pak volat `SetAttribDC` – členská funkce přidružit nový kontext zařízení s `m_hAttribDC`. Volání GDI informace teď budou směrovány do nového `m_hAttribDC`. Výstup GDI volání přejde na `m_hDC`, která představuje metafile.  
+ Vytvoření druhého kontextu zařízení, na které odkazuje na obrazovce, tiskárna nebo zařízení, které metasoubor, pak volat `SetAttribDC` členskou funkci přidružit nový kontext zařízení s `m_hAttribDC`. Volání rozhraní GDI informace teď budou směrovány do nového `m_hAttribDC`. Výstup GDI volání budou moct `m_hDC`, která představuje metasoubor.  
   
- Další informace o `CMetaFileDC`, najdete v části [kontexty zařízení](../../mfc/device-contexts.md).  
+ Další informace o `CMetaFileDC`, naleznete v tématu [kontexty zařízení](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
@@ -87,63 +87,63 @@ class CMetaFileDC : public CDC
  **Záhlaví:** afxext.h  
   
 ##  <a name="close"></a>  CMetaFileDC::Close  
- Zavře kontextu zařízení metafile a vytvoří popisovačů metafile systému Windows, který slouží k přehrávání metafile pomocí [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) – členská funkce.  
+ Zavře kontextu zařízení metasouboru a vytvoří Windows metafile popisovač, který slouží k přehrávání metasoubor pomocí [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) členskou funkci.  
   
 ```  
 HMETAFILE Close();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Platná **HMETAFILE** Pokud je funkce úspěšná, jinak hodnota **NULL**.  
+ Platný HMETAFILE, pokud je funkce úspěšná. v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Popisovač metafile Windows můžete také použít k manipulaci metafile s funkcemi Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ Popisovač Windows metafile lze také použít k manipulaci s metasoubor s funkcemi Windows, jako [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
   
- Odstranit metafile po použití voláním Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce.  
+ Odstranit tento metasoubor po použití voláním Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funkce.  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
- Zavře kontextu zařízení enhanced metafile a vrátí popisovač, který identifikuje metafile rozšířeného formátu.  
+ Objekt context enhanced metafile zařízení se zavře a vrátí popisovač, který identifikuje metasoubor rozšířeného formátu.  
   
 ```  
 HENHMETAFILE CloseEnhanced();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač EMF, v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač rozšířený metasoubor, v případě úspěchu; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace můžete použít enhanced metafile popisovač vrácený tuto funkci k provádění následujících úloh:  
+ Aplikace může použít rozšířený metasoubor popisovač vrácený touto funkcí provádět následující úlohy:  
   
--   Zobrazení uložené v EMF obrázku  
+-   Zobrazí informace uložené v rozšířený metasoubor  
   
--   Vytvořit kopie EMF  
+-   Vytvoření kopie rozšířený metasoubor  
   
--   Zobrazení výčtu, upravit nebo zkopírovat jednotlivé záznamy v rozšířené metafile  
+-   Zobrazení výčtu, upravit nebo zkopírujte jednotlivé záznamy v rozšířený metasoubor  
   
--   Načtení volitelný popis metafile obsahu z hlavičky enhanced metafile  
+-   Načíst volitelný popis obsahu metasoubor z hlavičky rozšířený metasoubor  
   
--   Načtení kopie EMF – hlavička  
+-   Načíst kopii EMF – hlavička  
   
--   Načtení binární kopie EMF  
+-   Načíst binární kopie rozšířený metasoubor  
   
--   Zobrazení výčtu barev v volitelné palety  
+-   Výčet barev v paletě volitelné  
   
--   Převést do formátu Windows metafile metafile rozšířeného formátu  
+-   Převést na formát Windows metafile rozšířeného formátu metasoubor  
   
- Pokud aplikace již nepotřebuje EMF popisovač, ho měli uvolnit popisovač voláním Win32 **DeleteEnhMetaFile** funkce.  
+ Pokud aplikace nepotřebuje EMF popisovač, by měla uvolnit popisovač voláním rozhraní Win32 `DeleteEnhMetaFile` funkce.  
   
 ##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
- Vytvořit `CMetaFileDC` objektu ve dvou krocích.  
+ Vytvoření `CMetaFileDC` objektu ve dvou krocích.  
   
 ```  
 CMetaFileDC();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Nejprve volání `CMetaFileDC`, pak zavolají **vytvořit**, která vytvoří kontext Windows metafile zařízení a připojí jej k `CMetaFileDC` objektu.  
+ Nejprve volat `CMetaFileDC`, zavolejte `Create`, vytvoří kontextu zařízení metasouboru Windows a připojí ho k `CMetaFileDC` objektu.  
   
 ##  <a name="create"></a>  CMetaFileDC::Create  
- Vytvořit `CMetaFileDC` objektu ve dvou krocích.  
+ Vytvoření `CMetaFileDC` objektu ve dvou krocích.  
   
 ```  
 BOOL Create(LPCTSTR lpszFilename = NULL);
@@ -151,16 +151,16 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
   
 ### <a name="parameters"></a>Parametry  
  *lpszFilename*  
- Odkazuje na řetězec znaků ukončený hodnotou null. Určuje název souboru metafile vytvořit. Pokud *lpszFilename* je **NULL**, se vytvoří nový metafile v paměti.  
+ Odkazuje na řetězec znaků zakončené znakem null. Určuje název souboru metasoubor k vytvoření. Pokud *lpszFilename* má hodnotu NULL, je vytvořen nový metasoubor v paměti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Nenulové, pokud je funkce úspěšná; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Nejprve volat konstruktor `CMetaFileDC`, pak zavolají **vytvořit**, která vytvoří kontext Windows metafile zařízení a připojí jej k `CMetaFileDC` objektu.  
+ Nejprve volat konstruktor `CMetaFileDC`, zavolejte `Create`, vytvoří kontextu zařízení metasouboru Windows a připojí ho k `CMetaFileDC` objektu.  
   
 ##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
- Vytvoří kontext zařízení pro metafile rozšířeného formátu.  
+ Vytvoří kontext zařízení pro metasoubor rozšířeného formátu.  
   
 ```  
 BOOL CreateEnhanced(
@@ -172,39 +172,39 @@ BOOL CreateEnhanced(
   
 ### <a name="parameters"></a>Parametry  
  *pDCRef*  
- Odkaz na zařízení, které EMF identifikuje.  
+ Identifikuje odkazovacího zařízení pro rozšířený metasoubor.  
   
  *lpszFileName*  
- Odkazuje na řetězec znaků ukončený hodnotou null. Určuje název souboru pro EMF, který se má vytvořit. Pokud tento parametr je **NULL**, je EMF paměti na základě a její obsah ztráty při zničena objektu nebo při Win32 **DeleteEnhMetaFile** funkce je volána.  
+ Odkazuje na řetězec znaků zakončené znakem null. Určuje název souboru pro rozšířený metasoubor, který se má vytvořit. Pokud má parametr hodnotu NULL, je rozšířený metasoubor paměti na základě a její obsah, mimo jiné ušlých při zničení objektu, nebo když Win32 `DeleteEnhMetaFile` funkce je volána.  
   
  *lpBounds*  
- Odkazuje na [Rect –](../../mfc/reference/rect-structure1.md) struktura dat nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje dimenze v **HIMETRIC** jednotek (v přírůstcích po.01 milimetru) na obrázku má být uložen v EMF.  
+ Odkazuje [RECT](../../mfc/reference/rect-structure1.md) datová struktura nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje rozměry v jednotkách HIMETRIC (v přírůstcích po.01 milimetru) obrázku, který bude uložen do rozšířený metasoubor.  
   
  *lpszDescription*  
- Bodů na nule ukončena řetězec, který určuje název aplikace, která vytvořila na obrázku, stejně jako nadpis na obrázku.  
+ Odkazuje na řetězec ukončit nulou, který určuje název aplikace, která vytvoří na obrázku, stejně jako na obrázku názvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač kontextu zařízení pro EMF, v případě úspěšného; v opačném případě **NULL**.  
+ Popisovač kontextu zařízení pro rozšířený metasoubor, v případě úspěchu; v opačném případě hodnota NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tento řadič domény můžete použít k uložení obrázku nezávislé na zařízení.  
+ Tento řadič domény je možné uložit obrázek nezávislých na zařízení.  
   
- Odkaz na zařízení identifikovaný používá Windows *pDCRef* parametr k zaznamenání překlad IP adres a jednotky zařízení původně zobrazovaly obrázku. Pokud *pDCRef* parametr je **NULL**, používá aktuální zobrazovací zařízení pro referenci.  
+ Windows používá odkazovacího zařízení identifikován *pDCRef* parametr řešení a jednotky zařízení původně zobrazeny obrázku. Pokud *pDCRef* parametr hodnotu NULL, použije aktuální zobrazovací zařízení pro referenci.  
   
- Členové levého a horního `RECT` struktura dat na kterou odkazuje *lpBounds* parametr musí být menší než členy vpravo a dole v uvedeném pořadí. Body podél okrajů obdélníku, jsou součástí na obrázku. Pokud *lpBounds* je **NULL**, rozhraní zařízení grafiky (GDI) vypočítá dimenze nejmenší obdélníku, který může zahrnout obrázek vykreslovat aplikací. *LpBounds* by měl být zadán parametr, kde je to možné.  
+ Členové levém a horním `RECT` datová struktura na které odkazují *lpBounds* parametr musí být menší než členů vpravo a dole v uvedeném pořadí. Na obrázku jsou zahrnuty body okraje obdélníku. Pokud *lpBounds* má hodnotu NULL, rozhraní grafiky zařízení (GDI) vypočítá dimenze nejmenší obdélník, který je možné uzavřít do uvozovek na obrázku vykreslena aplikací. *LpBounds* by měl být uveden parametr, kde je to možné.  
   
- Řetězec na kterou odkazuje *lpszDescription* parametr musí obsahovat znak hodnoty null mezi název aplikace a název obrázku a musí být ukončen s dva znaky null – například "XYZ grafiky Editor\0Bald Eagle\0\0, "kde \0 představuje znak hodnoty null. Pokud *lpszDescription* je **NULL**, neexistuje žádný odpovídající záznam v hlavičce enhanced metafile.  
+ Řetězec s odkazem *lpszDescription* parametr musí obsahovat prázdný znak mezi název aplikace a název obrázku a musí končit dva znaky s hodnotou null, například "XYZ grafiky Editor\0Bald Eagle\0\0, "kde \0 představuje znak null. Pokud *lpszDescription* má hodnotu NULL, neexistuje žádný odpovídající položku v záhlaví enhanced metafile.  
   
- Aplikace používat k ukládání grafiky obrázek ve formátu EMF řadič domény vytvořené pomocí této funkce. Všechny funkce GDI lze předat popisovač identifikující tento řadič domény.  
+ Aplikace používají k ukládání obrázků grafiky v rozšířený metasoubor řadič domény vytvořené touto funkcí. Popisovač identifikující tento řadič domény je předat všechny funkce rozhraní GDI.  
   
- Po aplikace ukládá obrázek ve formátu EMF, ho můžete zobrazit na jakéhokoli výstupu zařízení voláním `CDC::PlayMetaFile` funkce. Při zobrazení na obrázku, systém Windows používá obdélníku, na kterou odkazuje *lpBounds* parametr a řešení data ze zařízení odkaz pozice a škálovat na obrázku. Kontext zařízení, vrátí tato funkce obsahuje stejnou výchozí atributy přidružené žádné nový řadič domény.  
+ Po aplikaci uloží obrázek rozšířený metasoubor, může zobrazit obrázek na libovolném zařízení výstup voláním `CDC::PlayMetaFile` funkce. Při zobrazení obrázku Windows používá obdélníku, na které odkazují *lpBounds* parametr a data řešení z odkazovacího zařízení pro nastavení pozice a velikost obrázku. Kontext zařízení vrácená touto funkcí obsahuje stejnou výchozí atributy přidružené k žádné nový řadič domény.  
   
- Aplikace musí používat Win32 **GetWinMetaFileBits** funkce převést EMF starší formát WMF.  
+ Aplikace musí používat Win32 `GetWinMetaFileBits` funkce pro převod rozšířený metasoubor na dřívější formát Windows metafile.  
   
- Název souboru pro rozšířené metafile měli používat. EMF rozšíření.  
+ Název souboru pro rozšířený metasoubor používejte. EMF rozšíření.  
   
 ## <a name="see-also"></a>Viz také  
- [Třída CDC](../../mfc/reference/cdc-class.md)   
+ [CDC – třída](../../mfc/reference/cdc-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)
 
 

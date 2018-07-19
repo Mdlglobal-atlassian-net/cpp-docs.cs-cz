@@ -1,5 +1,5 @@
 ---
-title: ATL – třídy kolekce | Microsoft Docs
+title: ATL – třídy kolekce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,88 +14,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa8bf42d255cfb582989d1376aa3479559e9309
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89576f96c50e62220e56050834b141e1f2ac6e08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955381"
 ---
 # <a name="collection-classes"></a>Třídy kolekce
-Následující třídy poskytovat podporu pro pole, seznamy, map a také vlastnosti metody pro pomoc s porovnávání a element přístup.  
+Následující třídy poskytují podporu pro pole, seznamy, mapy a také metody osobnostní rysy pro pomoc s porovnání a přístup k prvkům.  
   
--   [CAtlArray](../atl/reference/catlarray-class.md) Tato třída implementuje objekt array.  
+-   [Catlarray –](../atl/reference/catlarray-class.md) Tato třída implementuje objekt typu pole.  
   
--   [CAtlList](../atl/reference/catllist-class.md) Tato třída poskytuje metody pro vytváření a správu objekt seznamu.  
+-   [Catllist –](../atl/reference/catllist-class.md) Tato třída poskytuje metody pro vytváření a správa seznamu objektů.  
   
--   [CAtlMap](../atl/reference/catlmap-class.md) Tato třída poskytuje metody pro vytváření a správu objekt map.  
+-   [Catlmap –](../atl/reference/catlmap-class.md) Tato třída poskytuje metody pro vytváření a správu objektu map.  
   
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření pole chytré ukazatele.  
+-   [Cautoptrarray –](../atl/reference/cautoptrarray-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.  
   
--   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef užitečné při vytváření kolekcí chytré ukazatele.  
+-   [Cautoptrelementtraits –](../atl/reference/cautoptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce inteligentních ukazatelů.  
   
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při sestavování seznamu chytré ukazatele.  
+-   [Cautoptrlist –](../atl/reference/cautoptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu inteligentní ukazatele.  
   
--   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef užitečné při vytváření kolekcí chytré ukazatele pomocí nové vector a odstranit operátory.  
+-   [Cautovectorptrelementtraits –](../atl/reference/cautovectorptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce, a definice TypeDef, které jsou užitečné při vytváření kolekce inteligentních ukazatelů pomocí nové vektorové a odstranit operátory.  
   
--   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef užitečné při vytváření kolekcí COM rozhraní ukazatele.  
+-   [Ccomqiptrelementtraits –](../atl/reference/ccomqiptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce COM rozhraní ukazatele.  
   
--   [CComSafeArray](../atl/reference/ccomsafearray-class.md) Tato třída je obálka pro [SAFEARRAY datový typ](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) struktura.  
+-   [Ccomsafearray –](../atl/reference/ccomsafearray-class.md) Tato třída představuje obálku pro [datový typ SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) struktury.  
   
--   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Tato třída je obálka pro [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) struktury.  
+-   [Ccomsafearraybound –](../atl/reference/ccomsafearraybound-class.md) tvoří obálku pro tuto třídu [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) struktury.  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) ukládá tato třída **IUnknown** ukazatele a je určen k použití jako parametr, který se [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) třídy šablony.  
+-   [Ccomunkarray –](../atl/reference/ccomunkarray-class.md) této třídy ukládá **IUnknown** ukazatele a je určený jako parametr, který se použije [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) šablony třídy.  
   
--   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) Tato třída poskytuje dvě statické funkce pro převod znaků mezi velká a malá písmena.  
+-   [Cdefaultchartraits –](../atl/reference/cdefaultchartraits-class.md) Tato třída poskytuje dvě statické funkce pro převod znaků mezi velkými a malými písmeny.  
   
--   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) Tato třída poskytuje výchozí element porovnání funkcí.  
+-   [Cdefaultcomparetraits –](../atl/reference/cdefaultcomparetraits-class.md) Tato třída poskytuje výchozí element porovnání funkcí.  
   
--   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) Tato třída poskytuje výchozí metody a funkce pro třídu kolekce.  
+-   [Cdefaultelementtraits –](../atl/reference/cdefaultelementtraits-class.md) Tato třída poskytuje výchozí metody a funkce pro třídy kolekce.  
   
--   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) Tato třída poskytuje statické funkce pro výpočet hodnoty hash.  
+-   [Cdefaulthashtraits –](../atl/reference/cdefaulthashtraits-class.md) Tato třída poskytuje statické funkce pro výpočet hodnoty hash.  
   
--   [CElementTraits](../atl/reference/celementtraits-class.md) Tato třída se používá kolekce třídy zajistit metody a funkce pro přesunutí, kopírování, porovnání a použití algoritmu hash operace.  
+-   [Celementtraits –](../atl/reference/celementtraits-class.md) Tato třída používá kolekce tříd poskytují metody a funkce pro přesunutí, kopírování, porovnání a hashování operace.  
   
--   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) Tato třída poskytuje výchozí kopírování a přesunutí metody pro třídu kolekce.  
+-   [Celementtraitsbase –](../atl/reference/celementtraitsbase-class.md) Tato třída poskytuje výchozí kopírování a přesun metody pro třídu kolekce.  
   
--   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef užitečné při vytváření kolekcí haldy ukazatele.  
+-   [Cheapptrelementtraits –](../atl/reference/cheapptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce haldy ukazatelů.  
   
--   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při sestavování seznamu haldy ukazatele.  
+-   [Cheapptrlist –](../atl/reference/cheapptrlist-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu haldy ukazatele.  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření pole ukazatele rozhraní COM.  
+-   [Cinterfacearray –](../atl/reference/cinterfacearray-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření pole z ukazatele rozhraní modelu COM.  
   
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) Tato třída poskytuje metody, které jsou užitečné při sestavování seznamu ukazatele rozhraní COM.  
+-   [Cinterfacelist –](../atl/reference/cinterfacelist-class.md) Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu ukazatele rozhraní modelu COM.  
   
--   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) Tato třída poskytuje metody výchozí a funkce pro třídu kolekce tvořený primitivní datové typy.  
+-   [Cprimitiveelementtraits –](../atl/reference/cprimitiveelementtraits-class.md) Tato třída poskytuje výchozí metody a funkce pro třídy kolekce tvořené primitivní datové typy.  
   
--   [CRBMap](../atl/reference/crbmap-class.md) Tato třída reprezentuje strukturu mapování, pomocí binárního stromu Red černé.  
+-   [Crbmap –](../atl/reference/crbmap-class.md) Tato třída reprezentuje strukturu mapování pomocí binárního stromu Red Black.  
   
--   [CRBMultiMap](../atl/reference/crbmultimap-class.md) Tato třída reprezentuje strukturu mapování, která umožňuje každý klíč, který se má přidružit více než jednu hodnotu, pomocí binárního stromu Red černé.  
+-   [Crbmultimap –](../atl/reference/crbmultimap-class.md) Tato třída reprezentuje strukturu mapování, která umožňuje každý klíč, který se má přidružit více než jednu hodnotu pomocí binárního stromu Red Black.  
   
--   [CRBTree](../atl/reference/crbtree-class.md) Tato třída poskytuje metody pro vytváření a použití Red černé stromu.  
+-   [Crbtree –](../atl/reference/crbtree-class.md) Tato třída poskytuje metody pro vytváření a využívání Red černé stromu.  
   
--   [CSimpleArray](../atl/reference/csimplearray-class.md) Tato třída poskytuje metody pro správu jednoduchých polí.  
+-   [Csimplearray –](../atl/reference/csimplearray-class.md) Tato třída poskytuje metody pro správu jednoduché pole.  
   
--   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) Tato třída je Pomocník pro [CSimpleArray](../atl/reference/csimplearray-class.md) třídy.  
+-   [Csimplearrayequalhelper –](../atl/reference/csimplearrayequalhelper-class.md) Tato třída je pomocné rutiny pro [csimplearray –](../atl/reference/csimplearray-class.md) třídy.  
   
--   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) Tato třída je Pomocník pro [CSimpleArray](../atl/reference/csimplearray-class.md) třídy.  
+-   [Csimplearrayequalhelperfalse –](../atl/reference/csimplearrayequalhelperfalse-class.md) Tato třída je pomocné rutiny pro [csimplearray –](../atl/reference/csimplearray-class.md) třídy.  
   
--   [CSimpleMap](../atl/reference/csimplemap-class.md) Tato třída poskytuje podporu pro jednoduché mapování pole.  
+-   [Csimplemap –](../atl/reference/csimplemap-class.md) Tato třída poskytuje podporu pro jednoduché mapování pole.  
   
--   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) Tato třída je Pomocník pro [CSimpleMap](../atl/reference/csimplemap-class.md) třídy.  
+-   [Csimplemapequalhelper –](../atl/reference/csimplemapequalhelper-class.md) Tato třída je pomocné rutiny pro [csimplemap –](../atl/reference/csimplemap-class.md) třídy.  
   
--   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) Tato třída je Pomocník pro [CSimpleMap](../atl/reference/csimplemap-class.md) třídy.  
+-   [Csimplemapequalhelperfalse –](../atl/reference/csimplemapequalhelperfalse-class.md) Tato třída je pomocné rutiny pro [csimplemap –](../atl/reference/csimplemap-class.md) třídy.  
   
--   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) Tato třída poskytuje statické funkce používá ukládání třídy kolekce `CString` objekty.  
+-   [Cstringelementtraits –](../atl/reference/cstringelementtraits-class.md) Tato třída poskytuje statické funkce, které používají třídy kolekcí ukládání `CString` objekty.  
   
--   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) Tato třída poskytuje statické funkce související s řetězce, které jsou uložené v objektech třídy kolekce. Je podobná [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), ale provádí porovnávání.  
+-   [Cstringelementtraitsi –](../atl/reference/cstringelementtraitsi-class.md) Tato třída poskytuje statické funkce související se ukládají v objektech třídy kolekce řetězců. Je to podobné [cstringelementtraits –](../atl/reference/cstringelementtraits-class.md), ale provádí porovnávání bez rozlišování.  
   
--   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) Tato třída poskytuje statické funkce související s řetězce, které jsou uložené v objektech třídy kolekce. Řetězec objekty jsou uvedeny jako odkazy.  
+-   [Cstringrefelementtraits –](../atl/reference/cstringrefelementtraits-class.md) Tato třída poskytuje statické funkce související se ukládají v objektech třídy kolekce řetězců. Řetězcových objektů jsou zpracovány jako odkazy.  
   
 ## <a name="related-articles"></a>Související články  
  [ATL – třídy kolekce](../atl/atl-collection-classes.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)   
+ [Přehled tříd](../atl/atl-class-overview.md)   
  [Třídy kolekce](../atl/atl-collection-classes.md)
 

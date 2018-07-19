@@ -1,5 +1,5 @@
 ---
-title: Convertstringtobstr – | Microsoft Docs
+title: Convertstringtobstr – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947494"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Převede **char \***  hodnotu `BSTR`.  
+ Převede **char \***  hodnota, která se `BSTR`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      BSTR __stdcall ConvertStringToBSTR(  
-   const char* pSrc  
-)  
+BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pSrc`  
+ *pSrc*  
  A **char \***  proměnné.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // ConvertStringToBSTR.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -66,12 +65,12 @@ char * text: Test
 BSTR text: Test  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** \<comutil.h >  
   
- **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) informace)  
+ **Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)  
   
 ## <a name="see-also"></a>Viz také  
  [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

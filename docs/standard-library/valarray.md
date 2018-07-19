@@ -1,5 +1,5 @@
 ---
-title: '&lt;valarray –&gt; | Microsoft Docs'
+title: '&lt;valarray –&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862154"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954796"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray –&gt;
 
-Definuje valarray – třídy šablony a množství podpůrné šablony třídy a funkce.
+Definuje valarray – třída šablony a mnoho podpůrných tříd šablon a funkcí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,72 +36,72 @@ Definuje valarray – třídy šablony a množství podpůrné šablony třídy 
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto šablony třídy a funkce nejsou povolené neobvyklou zeměpisnou šířku v zájmu lepší výkon. Konkrétně všechny funkce, které vrací typ **valarray –\<** T1**>** může vrátit objekt jiný typ T2. V takovém případě žádné funkce, které přijímá jeden nebo více argumentů typu **valarray –\<** T2**>** přetížení, které přijímají libovolné kombinace těchto argumentů, musí mít každý argument typu T2 nahrazen.
+Tyto šablony třídy a funkce jsou povolené neobvyklé zeměpisná šířka v zájmu vylepšení výkonu. Konkrétně, všechny funkce vracející typ **valarray\<** T1**>** může vrátit objekt nějakého jiného typu T2. V takovém případě všechny funkce, které přijímá jeden nebo více argumentů typu **valarray\<** T2**>** přetížení, které přijímají kombinací libovolné z těchto argumentů, musí mít každý nahradí se argument typu T2.
 
 ### <a name="functions"></a>Funkce
 
 |Funkce|Popis|
 |-|-|
-|[Abs](../standard-library/valarray-functions.md#abs)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejná jako absolutní hodnota elementů vstupní valarray –.|
-|[ACOS](../standard-library/valarray-functions.md#acos)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna Arkus kosinus elementy vstupní valarray –.|
-|[ASIN](../standard-library/valarray-functions.md#asin)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna Arkus sinus elementy vstupní valarray –.|
-|[Atan](../standard-library/valarray-functions.md#atan)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejné pro hlavní hodnotu Arkus tangens elementy vstupní valarray –.|
-|[atan2](../standard-library/valarray-functions.md#atan2)|Vrátí valarray –, jehož elementy jsou rovna Arkus tangens kartézských součásti určeného kombinací konstanty a elementy valarray – třídy.|
-|[Cos](../standard-library/valarray-functions.md#cos)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou si rovny kosinu elementů vstupní valarray –.|
-|[COSH](../standard-library/valarray-functions.md#cosh)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna hyperbolický kosinus elementů vstupní valarray –.|
-|[exp](../standard-library/valarray-functions.md#exp)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou si rovny exponenciální elementů vstupní valarray – fyzickým.|
-|[Protokolu](../standard-library/valarray-functions.md#log)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna přirozený logaritmus elementů vstupní valarray –.|
-|[log10](../standard-library/valarray-functions.md#log10)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejné základní 10 nebo vypočítat dekadický logaritmus elementů vstupní valarray –.|
-|[Pow](../standard-library/valarray-functions.md#pow)|Funguje s prvky vstupní valarray – třídy a konstanty, vrácení valarray –, jehož elementy jsou si rovny na základní buď elementy vstupní valarray – nebo konstantní umocněné exponentem zadán buď elementy vstupní valarray – nebo konstanta.|
-|[Sin](../standard-library/valarray-functions.md#sin)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna sinus elementů vstupní valarray –.|
-|[SINH](../standard-library/valarray-functions.md#sinh)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna hyperbolický sinus elementů vstupní valarray –.|
-|[sqrt](../standard-library/valarray-functions.md#sqrt)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou stejné pro druhou odmocninu elementů vstupní valarray –.|
-|[Swap](../standard-library/valarray-functions.md#swap)||
-|[Tan](../standard-library/valarray-functions.md#tan)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna tangens elementů vstupní valarray –.|
-|[TANH](../standard-library/valarray-functions.md#tanh)|Funguje s prvky vstupní valarray – vrácení valarray –, jehož elementy jsou rovna hyperbolický tangens elementy vstupní valarray –.|
+|[Abs](../standard-library/valarray-functions.md#abs)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné absolutní hodnota prvků vstupní valarray pracuje.|
+|[Funkce ACOS](../standard-library/valarray-functions.md#acos)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné Arkus kosinus prvků vstupní valarray pracuje.|
+|[ASIN](../standard-library/valarray-functions.md#asin)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné Arkus sinus prvků vstupní valarray pracuje.|
+|[Atan](../standard-library/valarray-functions.md#atan)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hlavní hodnotu Arkus tangens prvků vstupní valarray pracuje.|
+|[atan2](../standard-library/valarray-functions.md#atan2)|Vrátí valarray, jehož prvky jsou rovné Arkus tangens Kartézském součástí určených kombinaci konstanty a prvky valarrays.|
+|[Cos](../standard-library/valarray-functions.md#cos)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné kosinus prvků vstupní valarray pracuje.|
+|[COSH –](../standard-library/valarray-functions.md#cosh)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hyperbolický kosinus hodnoty prvků vstupní valarray pracuje.|
+|[exp](../standard-library/valarray-functions.md#exp)|Funguje na prvcích vstupní valarray – vrácení valarray, jehož prvky jsou rovné exponenciální prvků vstupní valarray přirozený.|
+|[protokol](../standard-library/valarray-functions.md#log)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné přirozený logaritmus prvků vstupní valarray pracuje.|
+|[log10](../standard-library/valarray-functions.md#log10)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné základní 10 nebo vypočítat dekadický logaritmus prvků vstupní valarray pracuje.|
+|[Pow](../standard-library/valarray-functions.md#pow)|Funguje na prvcích vstupní valarrays a konstanty vrací valarray, jehož prvky jsou rovné základní zadané buď prvků vstupní valarray nebo konstantu umocněné na exponent zadané buď prvků vstupní valarray nebo Toto je konstanta.|
+|[Sin](../standard-library/valarray-functions.md#sin)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné sinus prvků vstupní valarray pracuje.|
+|[SINH –](../standard-library/valarray-functions.md#sinh)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hyperbolický sinus prvků vstupní valarray pracuje.|
+|[sqrt](../standard-library/valarray-functions.md#sqrt)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné druhou odmocninu prvků vstupní valarray pracuje.|
+|[Prohození](../standard-library/valarray-functions.md#swap)||
+|[Tan](../standard-library/valarray-functions.md#tan)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné tangens hodnoty prvků vstupní valarray pracuje.|
+|[TANH –](../standard-library/valarray-functions.md#tanh)|Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hyperbolický tangens hodnoty prvků vstupní valarray pracuje.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](../standard-library/valarray-operators.md#op_neq)|Testuje, jestli odpovídající elementy dva stejně velké valarray – třídy jsou různé nebo zda jsou všechny elementy valarray – nerovné zadanou hodnotu valarray – typ elementu.|
-|[% – operátor](../standard-library/valarray-operators.md#op_mod)|Získá zbytek po dělení odpovídající elementy dva stejně velké valarray – třídy nebo dělení valarray – zadaná hodnota valarray – element typu nebo dělení valarray – zadaná hodnota.|
-|[operátor &](../standard-library/valarray-operators.md#op_amp)|Získá bitové hodnotě **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.|
-|[Operator & &](../standard-library/valarray-operators.md#op_amp_amp)|Získá logické **a** mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu valarray – element typu.|
-|[operátor >](../standard-library/valarray-operators.md#op_gt)|Ověřuje, zda prvky jeden valarray – jsou větší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadaná hodnota valarray – element typu.|
-|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Ověřuje, zda prvky jeden valarray – jsou větší než nebo rovna hodnotě elementy stejně velké valarray – nebo jestli všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.|
-|[operátor >>](../standard-library/valarray-operators.md#op_gt_gt)|Posuny vpravo bits pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.|
-|[operátor <](../standard-library/valarray-operators.md#op_lt)|Ověřuje, zda elementy jeden valarray – je nižší než elementy stejně velké valarray – nebo zda jsou všechny elementy valarray – větší nebo menší než zadanou hodnotou.|
-|[Operator < =](../standard-library/valarray-operators.md#op_lt_eq)|Testuje, zda jsou elementy valarray – jeden, menší než nebo rovna hodnotě elementy stejně velké valarray – nebo zda všechny elementy valarray – jsou větší než nebo rovno nebo menší než nebo roven zadané hodnotě.|
-|[operátor <<](../standard-library/valarray-operators.md#op_lt_lt)|Levé posune bitů pro jednotlivé elementy valarray – po zadaný počet pozic nebo o element-wise částku určeného druhý valarray –.|
-|[operátor *](../standard-library/valarray-operators.md#op_star)|Získá element-wise produktu mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadaná hodnota valarray – element typu.|
-|[operátor +](../standard-library/valarray-operators.md#op_add)|Získá element-wise součet mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadaná hodnota valarray – element typu.|
-|[Operator –](../standard-library/valarray-operators.md#operator-)|Získá element-wise rozdíl mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadaná hodnota valarray – element typu.|
-|[operátor nebo](../standard-library/valarray-operators.md#op_div)|Získá element-wise podílu mezi odpovídající elementy dva stejně velké valarray – třídy nebo z mezi valarray – zadaná hodnota valarray – element typu.|
-|[operator==](../standard-library/valarray-operators.md#op_eq_eq)|Testy, jestli odpovídající elementy dva stejně velké valarray – třídy jsou stejné, nebo zda jsou všechny elementy valarray – rovnat zadanou hodnotu valarray – typ elementu.|
-|[Operator ^](../standard-library/valarray-operators.md#op_xor)|Získá bitový exkluzivní `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.|
-|[operator&#124;](../standard-library/valarray-operators.md#op_or)|Získá bitové hodnotě `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu typu prvku.|
-|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|Získá logické `OR` mezi odpovídající elementy dva stejně velké valarray – třídy nebo valarray – a zadanou hodnotu valarray – element typu.|
+|[operator!=](../standard-library/valarray-operators.md#op_neq)|Testuje, jestli odpovídající prvky dvou stejně velké valarrays nestejné nebo zda jsou všechny prvky valarray – nerovné zadaná hodnota valarray typ elementu.|
+|[% – operátor](../standard-library/valarray-operators.md#op_mod)|Získá zbytek po dělení odpovídající prvky dva stejně velké valarrays nebo dělení valarray zadanou hodnotou typ prvku valarray nebo dělení valarray zadanou hodnotu.|
+|[operátor &](../standard-library/valarray-operators.md#op_amp)|Získá bitový `AND` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.|
+|[Operator & &](../standard-library/valarray-operators.md#op_amp_amp)|Získá logickou `AND` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu valarray element typu.|
+|[Operator >](../standard-library/valarray-operators.md#op_gt)|Ověřuje, zda prvky jeden valarray jsou větší než prvky stejně velké valarray nebo zda jsou všechny prvky valarray větší nebo menší než zadaná hodnota valarray typ elementu.|
+|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Ověřuje, zda jsou elementy jeden valarray větší než nebo rovna hodnotě prvky stejně velké valarray nebo určuje, zda všechny prvky valarray jsou větší než nebo rovno nebo menší než nebo rovna zadané hodnotě.|
+|[operátor >>](../standard-library/valarray-operators.md#op_gt_gt)|Posuny doprava bity pro každý prvek valarray zadaný počet pozic, nebo částku element-wise určené druhý valarray.|
+|[Operator <](../standard-library/valarray-operators.md#op_lt)|Ověřuje, zda prvky valarray – jeden je menší než prvky stejně velké valarray nebo zda jsou všechny prvky valarray větší nebo menší než zadanou hodnotou.|
+|[Operator < =](../standard-library/valarray-operators.md#op_lt_eq)|Testuje, jestli prvky jeden valarray jsou menší než nebo rovna hodnotě elementy stejně velké valarray nebo zda všechny prvky valarray jsou větší než nebo rovno nebo menší než nebo rovna zadané hodnotě.|
+|[operátor <<](../standard-library/valarray-operators.md#op_lt_lt)|Vlevo posune bitů pro každý prvek valarray zadaný počet pozic, nebo částku element-wise určené druhý valarray.|
+|[Operator *](../standard-library/valarray-operators.md#op_star)|Získá produktu mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray – zadaná hodnota valarray typ elementu.|
+|[Operator +](../standard-library/valarray-operators.md#op_add)|Získá element-wise součet mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray – zadaná hodnota valarray typ elementu.|
+|[Operator-](../standard-library/valarray-operators.md#operator-)|Získá element-wise rozdíl mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray – zadaná hodnota valarray typ elementu.|
+|[Operator /](../standard-library/valarray-operators.md#op_div)|Získá element-wise podíl mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray – zadaná hodnota valarray typ elementu.|
+|[operator==](../standard-library/valarray-operators.md#op_eq_eq)|Testy, zda odpovídající prvky dvou stejně velké valarrays se rovná nebo zda jsou všechny prvky valarray rovnat zadaná hodnota valarray typ elementu.|
+|[operátor ^](../standard-library/valarray-operators.md#op_xor)|Získá bitový exkluzivní `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.|
+|[operator&#124;](../standard-library/valarray-operators.md#op_or)|Získá bitový `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.|
+|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|Získá logickou `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu valarray element typu.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[gslice – třída](../standard-library/gslice-class.md)|Třída nástrojů k valarray –, který se používá k definování vícerozměrných řezy valarray –.|
-|[gslice_array – třída](../standard-library/gslice-array-class.md)|Třídu interní, pomocného šablony, která podporuje objekty obecné řez tím, že poskytuje mezi poli podmnožina definované obecné řezy valarray – operace.|
-|[indirect_array – třída](../standard-library/indirect-array-class.md)|Třída interní, pomocného šablony, která podporuje objekty, které jsou podmnožiny valarray – třídy tím, že poskytuje operace mezi poli podmnožina definované zadáním podmnožinu indexy valarray – nadřazené.|
-|[mask_array – třída](../standard-library/mask-array-class.md)|Třída interní, pomocného šablony, která podporuje objekty, které jsou podmnožiny nadřazené valarray – třídy, zadaný logický výraz, tím, že poskytuje operace mezi poli podmnožina.|
-|[slice – třída](../standard-library/slice-class.md)|Třída nástrojů k valarray –, který se používá k definování jednorozměrné, vector jako podmnožiny valarray –.|
-|[slice_array – třída](../standard-library/slice-array-class.md)|Třídu interní, pomocného šablony, která podporuje objekty řez tím, že poskytuje operace mezi poli podmnožina definované řezy valarray –.|
-|[valarray – třída](../standard-library/valarray-class.md)|Šablony třídy popisuje objekt, který určuje posloupnost elementy typu **typ** které jsou uloženy jako pole a určené pro provádění vysokorychlostní matematické operace, které jsou optimalizované pro výpočetní výkon.|
+|[gslice – třída](../standard-library/gslice-class.md)|Třídy nástrojů pro valarray –, který se používá k definování multidimenzionální řezů valarray.|
+|[gslice_array – třída](../standard-library/gslice-array-class.md)|Interní, pomocné šablony třídy, který podporuje obecné řez objektů zadáním mezi dílčí pole určené obecné řezu valarray – operace.|
+|[indirect_array – třída](../standard-library/indirect-array-class.md)|Třída interní, pomocné šablony, která podporuje objekty, které jsou podmnožinou tohoto valarrays tím, že poskytuje operace mezi dílčí pole definovaná zadáním podmnožinu indexy valarray nadřazené.|
+|[mask_array – třída](../standard-library/mask-array-class.md)|Třída interní, pomocné šablony, která podporuje objekty, které jsou podmnožinou tohoto nadřazeného valarrays zadaným logický výraz, tím, že poskytuje operace mezi podmnožinu polí.|
+|[slice – třída](../standard-library/slice-class.md)|Třídy nástrojů pro valarray –, který se používá k definování jednorozměrné, jako vektor podmnožiny valarray.|
+|[slice_array – třída](../standard-library/slice-array-class.md)|Třída interní, pomocné šablony, která podporuje objekty řez tím, že poskytuje operace mezi dílčí pole určené řezu valarray –.|
+|[valarray – třída](../standard-library/valarray-class.md)|Třída šablony popisuje objekt, který řídí sekvence elementů typu `Type` , které jsou uloženy jako pole a navržené pro provádění vysokorychlostní matematických operací, které jsou optimalizované pro výpočetní výkon.|
 
 ### <a name="specializations"></a>Specializace
 
 |||
 |-|-|
-|[valarray –\<bool > – třída](../standard-library/valarray-bool-class.md)|Speciální verzi valarray – třídy šablony\<**typ**> na elementy typu `bool`.|
+|[valarray –\<bool > třída](../standard-library/valarray-bool-class.md)|Specializované verze valarray – třída šablony\<**typ**> k elementům typu **bool**.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

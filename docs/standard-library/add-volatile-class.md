@@ -1,5 +1,5 @@
 ---
-title: add_volatile – třída | Microsoft Docs
+title: add_volatile – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841294"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958887"
 ---
 # <a name="addvolatile-class"></a>add_volatile – třída
 
-Díky typu volatile ze zadaného typu.
+Díky **volatile** typu ze zadaného typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,7 +44,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `add_volatile<T>` má typedef člen `type` tedy *T* Pokud *T* je odkaz, funkci nebo volatile kvalifikovaný typ, jinak `volatile` *T*. Alias `add_volatile_t` je zástupce pro přístup k typedef člen `type`.
+Instance `add_volatile<T>` má člen **typedef** `type` , který je *T* Pokud *T* je odkaz, funkce nebo přechodný typ, jinak **volatile** *T*. Alias `add_volatile_t` je zástupce pro přístup k členu **typedef** `type`.
 
 ## <a name="example"></a>Příklad
 
@@ -72,9 +72,9 @@ add_volatile<int> == int
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_volatile – třída](../standard-library/remove-volatile-class.md)<br/>

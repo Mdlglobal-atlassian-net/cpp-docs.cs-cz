@@ -1,5 +1,5 @@
 ---
-title: Třída CMultiPaneFrameWnd | Microsoft Docs
+title: Cmultipaneframewnd – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039203"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852337"
 ---
-# <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd – třída
-`CMultiPaneFrameWnd` Rozšiřuje třídu [CPaneFrameWnd třída](../../mfc/reference/cpaneframewnd-class.md). Může podporovat více podoken. Místo jedné embedded popisovač pro ovládacích pruhů `CMultiPaneFrameWnd` obsahuje [CPaneContainerManager třída](../../mfc/reference/cpanecontainermanager-class.md) objekt, který umožňuje uživatelům ukotvení jeden `CMultiPaneFrameWnd` do druhého a dynamicky vytvořit více plovoucí, – záložkami Windows.  
+# <a name="cmultipaneframewnd-class"></a>Cmultipaneframewnd – třída
+`CMultiPaneFrameWnd` Třída rozšiřuje [cpaneframewnd – třída](../../mfc/reference/cpaneframewnd-class.md). Může podporovat více podoken. Místo jednoho popisovače vloženého na ovládací panel `CMultiPaneFrameWnd` obsahuje [cpanecontainermanager – třída](../../mfc/reference/cpanecontainermanager-class.md) objektu, který umožňuje uživateli Dokovat jeden `CMultiPaneFrameWnd` do druhého a dynamicky vytvořit více s plovoucí desetinnou čárkou, s kartami systém Windows.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -114,68 +114,68 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMultiPaneFrameWnd::AddPane](#addpane)|Přidá do podokna. (Přepisuje [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|  
+|[CMultiPaneFrameWnd::AddPane](#addpane)|Přidá do podokna. (Přepíše [CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane).)|  
 |[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||  
-|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Upraví rozložení zkrácená rámce okna. (Přepisuje [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
-|[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(Přepisuje [CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|  
-|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Vypočítá očekávané rámeček ukotveného okna. (Přepisuje [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|  
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Určuje, zda lze do jiného podokno nebo rámec okna ukotvení podokně aktuální. (Přepisuje [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
-|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Určuje, zda lze do podokna ukotvení zkrácená rámce okna. (Přepisuje [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
-|[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Přepisuje [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
-|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Přepisuje `CPaneFrameWnd::CloseMiniFrame`.)|  
-|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|V podokně se převede do dokumentů s kartami. (Přepisuje [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|  
+|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Upraví rozložení okna okna s minirámcem. (Přepíše [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
+|[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(Přepíše [CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|  
+|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Vypočítá očekávané obdélník ukotvené okno. (Přepíše [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|  
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Určuje, zda můžete ukotvit aktuálního podokna Další podokno nebo rámec okna. (Přepíše [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
+|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Určuje, zda podokno můžete ukotvit okno s minirámcem. (Přepíše [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
+|[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Přepíše [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
+|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Přepíše `CPaneFrameWnd::CloseMiniFrame`.)|  
+|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|V podokně se převede na dokument s kartami. (Přepíše [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|  
 |[CMultiPaneFrameWnd::DockFrame](#dockframe)||  
-|[CMultiPaneFrameWnd::DockPane](#dockpane)|Ukotvené podokně. (Přepisuje [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|  
+|[CMultiPaneFrameWnd::DockPane](#dockpane)|Ukotvené v podokně. (Přepíše [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|  
 |[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||  
-|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Vrátí text titulku. (Přepisuje [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|  
+|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Vrátí text titulku. (Přepíše [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|  
 |[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Vrátí odkaz na objekt správce interní kontejneru.|  
-|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Vrátí první viditelné podokno, které se nachází v okně s rámečkem zkrácená. (Přepisuje [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|  
-|[CMultiPaneFrameWnd::GetPane](#getpane)|Vrátí podokno, ve kterém se nachází v zkrácená rámce okna. (Přepisuje [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|  
-|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Vrátí počet podokna, které jsou obsaženy v okně s rámečkem zkrácená. (Přepisuje [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|  
-|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Vrátí počet viditelné podokna, které jsou obsaženy v okně s rámečkem zkrácená. (Přepisuje [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|  
+|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Vrátí první viditelné podokno, která je součástí okno s minirámcem. (Přepíše [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|  
+|[CMultiPaneFrameWnd::GetPane](#getpane)|Vrátí podokno, které jsou obsaženy v okně okna s minirámcem. (Přepíše [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|  
+|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Vrátí počet podoken, které jsou obsaženy v okno s minirámcem. (Přepíše [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|  
+|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Vrátí počet viditelných podoken, které jsou obsaženy v okno s minirámcem. (Přepíše [CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount).)|  
 |[CMultiPaneFrameWnd::InsertPane](#insertpane)||  
-|[CMultiPaneFrameWnd::LoadState](#loadstate)|V podokně Stav načte z registru. (Přepisuje [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|  
-|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Ukotvené zkrácená rámce okna na nejnovější pozici. (Přepisuje [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|  
-|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Zastaví časovač souhrn. (Přepisuje [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Upraví rozložení podokně uvnitř zkrácená rámce okna. (Přepisuje [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
-|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Nastaví časovač souhrn. (Přepisuje [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|  
-|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Voláno rámcem při je skrytý nebo zobrazení podokna v okně zkrácená rámce. (Přepisuje [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|  
-|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Vrátí podokno, pokud obsahuje bod uživatelem zadané v okně s rámečkem zkrácená. (Přepisuje [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|  
-|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Voláno rámcem odebrat neplatné podokna. (Přepisuje [CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|  
-|[CMultiPaneFrameWnd::RemovePane](#removepane)|Podokno odebere zkrácená rámce okna. (Přepisuje [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|  
-|[CMultiPaneFrameWnd::ReplacePane](#replacepane)|Nahradí jednu podokně jiné. (Přepisuje [CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane).)|  
-|[CMultiPaneFrameWnd::SaveState](#savestate)|V podokně Stav uloží do registru. (Přepisuje [CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate).)|  
-|[CMultiPaneFrameWnd::Serialize](#serialize)|(Přepisuje `CPaneFrameWnd::Serialize`.)|  
-|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|Nastaví stav ukotvení. (Přepisuje [CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).)|  
+|[CMultiPaneFrameWnd::LoadState](#loadstate)|Načte stav v podokně z registru. (Přepíše [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|  
+|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Ukotvené okno minirámcem na aktuální pozici. (Přepíše [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|  
+|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Zastaví časovač kumulativní. (Přepíše [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Upraví rozložení v podokně uvnitř okno s minirámcem. (Přepíše [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
+|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Nastaví kumulativní časovače. (Přepíše [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|  
+|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Volá se rozhraním, když je skryta nebo zobrazena podokna v okně okna s minirámcem. (Přepíše [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|  
+|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Vrátí podokno, pokud obsahuje uživatelem zadané bodu uvnitř okno s minirámcem. (Přepíše [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|  
+|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Volá se rozhraním odebrat neplatnými podoken. (Přepíše [CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes).)|  
+|[CMultiPaneFrameWnd::RemovePane](#removepane)|Podokno se odebere z okna s minirámcem. (Přepíše [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|  
+|[CMultiPaneFrameWnd::ReplacePane](#replacepane)|Nahradí jiným jedno podokno. (Přepíše [CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane).)|  
+|[CMultiPaneFrameWnd::SaveState](#savestate)|Uloží stav v podokně do registru. (Přepíše [CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate).)|  
+|[CMultiPaneFrameWnd::Serialize](#serialize)|(Přepíše `CPaneFrameWnd::Serialize`.)|  
+|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|Nastaví stav ukotvení. (Přepíše [CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).)|  
 |[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||  
-|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Nastaví predocking stavu. (Přepisuje [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|  
-|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(Přepisuje [CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|  
-|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Přepisuje [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
+|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Nastaví predocking stavu. (Přepíše [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|  
+|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(Přepíše [CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|  
+|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Přepíše [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>Poznámky  
- Většina metod v této třídě přepsání metody v [CPaneFrameWnd třída](../../mfc/reference/cpaneframewnd-class.md) třídy.  
+ Většina metod v této třídě přepsat metody v [cpaneframewnd – třída](../../mfc/reference/cpaneframewnd-class.md) třídy.  
   
- Pokud podokno používá `AFX_CBRS_AUTO_ROLLUP` styl a uživatel ukotvené tomto podokně do více podokně rámce okna, uživatel může souhrnné okno bez ohledu na nastavení styl ukotveného podoken.  
+ Pokud podokno používá styl AFX_CBRS_AUTO_ROLLUP a uživatel ukotvené tohoto podokna pro okno rámce více podokno, může uživatel souhrnné okno bez ohledu na nastavení styl ukotveného podokna.  
   
- Rozhraní framework automaticky vytvoří `CMultiPaneFrameWnd` objekt při uživatele jako plovoucí podokno, ve kterém se používá `CBRS_FLOAT_MULTI` stylu.  
+ Rozhraní framework automaticky vytvoří `CMultiPaneFrameWnd` objektu, když uživatel čísel s plovoucí čárkou podokno, které používá CBRS_FLOAT_MULTI styl.  
   
- Informace o odvození třídy z `CPaneFrameWnd` třídy a vytváření dynamicky, najdete v části [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ Informace o odvození třídy z `CPaneFrameWnd` třídy a vytváření dynamicky, naleznete v tématu [cpaneframewnd –](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak načíst ukazatel na `CMultiPaneFrameWnd` objektu. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak načíst ukazatel `CMultiPaneFrameWnd` objektu. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)  
+ [Cpaneframewnd –](../../mfc/reference/cpaneframewnd-class.md)  
   
- [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)  
+ [Cmultipaneframewnd –](../../mfc/reference/cmultipaneframewnd-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxMultiPaneFrameWnd.h  
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWnd*  
+ [in] *pWnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -200,7 +200,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -237,11 +237,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pWndToDock*  
- [v] *ptMouse*  
- [v] *rectResult*  
- [v] *bDrawTab*  
- [v] *ppTargetBar*  
+ [in] *pWndToDock*  
+ [in] *ptMouse*  
+ [in] *rectResult*  
+ [in] *bDrawTab*  
+ [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -264,7 +264,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pDockingBar*  
+ [in] *pDockingBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pDockedFrame*  
- [v] *dockMethod*  
+ [in] *pDockedFrame*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -322,7 +322,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pDockedBar*  
+ [in] *pDockedBar*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -336,7 +336,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -384,7 +384,7 @@ CPaneContainerManager& GetPaneContainerManager();
  Odkaz na objekt správce interní kontejneru.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu lze použít pro přístup k interní [CPaneContainerManager třída](../../mfc/reference/cpanecontainermanager-class.md) objektu.  
+ Tuto metodu lze použít pro přístup k interní [cpanecontainermanager – třída](../../mfc/reference/cpanecontainermanager-class.md) objektu.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 
@@ -419,9 +419,9 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- [v] *pTarget*  
- [v] *bAfter*  
+ [in] *pControlBar*  
+ [in] *pTarget*  
+ [in] *bAfter*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
- [v] *uiID*  
+ [in] *lpszProfileName*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *bShow*  
+ [in] *pBar*  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -506,9 +506,9 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
- [v] *nSensitivity*  
- [v] *bCheckVisibility*  
+ [in] *bodu*  
+ [in] *nSensitivity*  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -534,9 +534,9 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *bDestroy*  
- [v] *bNoDelayedDestroy*  
+ [in] *pBar*  
+ [in] *bDestroy*  
+ [in] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBarOrg*  
- [v] *pBarReplaceWith*  
+ [in] *pBarOrg*  
+ [in] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
- [v] *uiID*  
+ [in] *lpszProfileName*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -580,7 +580,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *ar*  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -592,7 +592,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pDockManager*  
+ [in] *pDockManager*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -604,7 +604,7 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hwnd*  
+ [in] *hwnd*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -619,9 +619,9 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *preDockState*  
- [v] *pBarToDock*  
- [v] *dockMethod*  
+ [in] *preDockState*  
+ [in] *pBarToDock*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -635,7 +635,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pDockingBar*  
- [v] *pTabbedBar*  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Poznámky  
   

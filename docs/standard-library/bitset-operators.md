@@ -1,5 +1,5 @@
 ---
-title: '&lt;bitset –&gt; operátory | Microsoft Docs'
+title: '&lt;bitset –&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3056546e5a543c0058f789e293e0a63a3d53283a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955017"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset –&gt; operátory
 
 ||||
 |-|-|-|
-|[Operátor&amp;](#op_amp)|[Operátor&gt;&gt;](#op_gt_gt)|[Operátor&lt;&lt;](#op_lt_lt)|
-|[Operator ^](#op_xor)|[– operátor|](#op_or)|
+|[– Operátor&amp;](#op_amp)|[– Operátor&gt;&gt;](#op_gt_gt)|[– Operátor&lt;&lt;](#op_lt_lt)|
+|[operátor ^](#op_xor)|[– operátor|](#op_or)|
 
-## <a name="op_amp"></a>  Operátor&amp;
+## <a name="op_amp"></a>  – Operátor&amp;
 
-Provede bitové `AND` mezi dvěma bitové sady.
+Provádí logické bitové `AND` mezi dvěma bitsets.
 
 ```cpp
 template <size_t size>
@@ -48,13 +48,13 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dvě bitové sady, jehož elementy příslušného mají nelze kombinovat s bitové hodnotě `AND`.
+*levé* první dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě `AND`.
+*správné* druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitset, jehož elementy jsou výsledkem provádění `AND` operace na odpovídající elementy `left` a `right`.
+Bitset –, jehož prvky jsou výsledkem provádění `AND` operace na odpovídající prvky *levé* a *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -84,9 +84,9 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  Operátor&lt;&lt;
+## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
 
-Vloží textovou reprezentaci pořadí bit do výstupního datového proudu.
+Vloží textové znázornění sekvence bit do výstupního datového proudu.
 
 ```
 
@@ -98,17 +98,17 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Objekt typu **bitset\<N >** , který má být vložena do výstupního datového proudu jako řetězec.
+*správné* objekt typu **bitset –\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Reprezentace textu bit pořadí v **ostr**.
+Textové vyjádření pořadí bitů v `ostr`.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení funkce šablony **operátor <<**, což bitset k zapsání bez první převádění na řetězce. Funkce šablony efektivně provede:
+Funkce přetížení šablon `operator<<`, což bitset – Chcete-li možné zapsat bez první převodu na řetězec. Funkce šablony efektivně provede:
 
-**ostr** << _ *vpravo*. [to_string –](bitset-class.md) < **CharType**, **vlastnosti**, **allocator** \< **CharType**>>)
+**ostr** << _ *vpravo*. [to_string](bitset-class.md) < **CharType**, **osobnostní rysy**, **alokátoru** \< **CharType**>>)
 
 ### <a name="example"></a>Příklad
 
@@ -141,9 +141,9 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  Operátor&gt;&gt;
+## <a name="op_gt_gt"></a>  – Operátor&gt;&gt;
 
-Načte do bitset řetězec rozšířené znaky.
+Načte řetězec rozšířené znaky do bitset –.
 
 ```
 
@@ -157,25 +157,25 @@ _Istr,
 
 ### <a name="parameters"></a>Parametry
 
-`_Istr` Řetězec, který jste zadali do vstupního datového proudu má být vložen do bitset.
+*_Istr* řetězec, který se zadá do vstupního datového proudu má být vložen do bitset –.
 
-`right` Bitset –, který přijímá bity ze vstupního datového proudu.
+*správné* bitset –, který přijímá bity ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Funkce šablony vrátí řetězec `_Istr`.
+Funkce šablony vrátí řetězec *_Istr*.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení funkce šablony **operátor >>** k uložení v bitset _ *vpravo* bitset – hodnota ( `str`), kde `str` je objekt typu [basic_string ](basic-string-class.md)  <  **CharType**, **vlastnosti**, **allocator** \< **CharType**> > **&** extrahují z `_Istr`.
+Funkce přetížení šablon `operator>>` ukládat v bitset – _ *vpravo* bitset – hodnota (`str`), kde `str` je objekt typu [basic_string](basic-string-class.md)  <  **CharType**, **osobnostní rysy**, **alokátoru** \< **CharType**>> **&** extrahují z *_Istr*.
 
-Funkce šablony extrahuje prvky z `_Istr` a vloží je do bitset – dokud:
+Funkce šablony extrahuje prvky z *_Istr* a vloží je do bitset – dokud:
 
-- Všechny elementy bit byly extrahovány ze vstupního datového proudu a uložené v bitset.
+- Všechny prvky bit byly extrahovány ze vstupního datového proudu a uložená v bitset –.
 
-- Bitset zaplní s bity ze vstupního datového proudu.
+- Bitset – je se vyplní bits ze vstupního datového proudu.
 
-- Zjistil se input element, který je 1 ani 0.
+- Input element, který není 1 ani 0 narazí.
 
 ### <a name="example"></a>Příklad
 
@@ -226,9 +226,9 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  Operator ^
+## <a name="op_xor"></a>  operátor ^
 
-Provede bitové `EXCLUSIVE-OR` mezi dvěma bitové sady.
+Provádí logické bitové `EXCLUSIVE-OR` mezi dvěma bitsets.
 
 ```cpp
 template <size_t size>
@@ -240,13 +240,13 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dvě bitové sady, jehož elementy příslušného mají nelze kombinovat s bitové hodnotě `EXCLUSIVE-OR`.
+*levé* první dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě `EXCLUSIVE-OR`.
+*správné* druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitset, jehož elementy jsou výsledkem provádění `EXCLUSIVE-OR` operace na odpovídající elementy `left` a `right`.
+Bitset –, jehož prvky jsou výsledkem provádění `EXCLUSIVE-OR` operace na odpovídající prvky *levé* a *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -278,7 +278,7 @@ bitset 3: 0110
 
 ## <a name="op_or"></a>  operátor |
 
-Provede bitové `OR` mezi dvěma bitové sady.
+Provádí logické bitové `OR` mezi dvěma bitsets.
 
 ```cpp
 template <size_t size>
@@ -290,13 +290,13 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-`left` První dvě bitové sady, jehož elementy příslušného mají nelze kombinovat s bitové hodnotě `OR`.
+*levé* první dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
 
-`right` Druhý dva valarray – třídy, jejichž příslušné prvky jsou a nelze jej zkombinovat s bitové hodnotě `OR`.
+*správné* druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitset, jehož elementy jsou výsledkem provádění `OR` operace na odpovídající elementy `left` a `right`.
+Bitset –, jehož prvky jsou výsledkem provádění `OR` operace na odpovídající prvky *levé* a *správné*.
 
 ### <a name="example"></a>Příklad
 
@@ -326,6 +326,6 @@ bitset 2: 0011
 bitset 3: 0111
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<bitset – >](../standard-library/bitset.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: time_get_byname – třída | Microsoft Docs
+title: time_get_byname – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c1e7c0992822f8f0a47011a873f99a17b2095d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854451"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955617"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname – třída
 
-Třída odvozená šablony popisuje objekt, který může sloužit jako národní prostředí omezující vlastnost typu `time_get` \<CharType, InputIterator >.
+Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí typu `time_get` \<CharType, InputIterator >.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,20 +50,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` S názvem národní prostředí.
+*_Locname*  
+ S názvem národního prostředí.
 
-`_Refs` Počet počáteční odkazů.
+*_Refs*  
+ Počet počáteční odkazů.
 
 ## <a name="requirements"></a>Požadavky
 
-Její chování je dáno s názvem národní prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator > ( `_Refs`).
+Její chování je určeno s názvem národního prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: mersenne_twister_engine – třída | Microsoft Docs
+title: mersenne_twister_engine – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959268"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine – třída
 
-Generuje náhodné posloupnost celých čísel založený na algoritmu twister Mersenne, vysoké kvality.
+Generuje náhodné posloupnosti vysoce kvalitní celých čísel podle algoritmu twister Mersenne.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`UIntType` Výsledný typ celé číslo bez znaménka. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*UIntType* celé číslo bez znaménka typu výsledku. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-`W` **Aplikace Word velikost**. Velikost jednotlivých slov v bitech, pořadí stavu. **Předběžnou**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **Word velikost**. Velikost jednotlivých slov v bitech, stav pořadí. **Předběžná podmínka**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **Velikost stavu**. Počet elementů (hodnoty) v pořadí stavu.
+*N* **stavu velikost**. Počet elementů (hodnoty) v pořadí stavu.
 
-`M` **Posunutí velikost**. Počet elementů při každém Točitost přeskočit. **Předběžnou**: `0 < M ≤ N`
+*M* **Shift velikost**. Počet prvků, které mají přeskočit při každé prvkem. **Předběžná podmínka**: `0 < M ≤ N`
 
-`R` **Maskování bitů**. **Předběžnou**: `R ≤ W`
+*R* **maskování bitů**. **Předběžná podmínka**: `R ≤ W`
 
-`A` **XOR maska**. **Předběžnou**: `A ≤ (1u<<W) - 1u`
+*A* **XOR maska**. **Předběžná podmínka**: `A ≤ (1u<<W) - 1u`
 
-`U`, `S`, `T`, `L` **Tempering shift parametry**. Použít jako hodnoty posunutí při kódování (popouštění). Předběžnou podmínku: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L* **Tempering shift parametry**. Použít jako hodnoty shift při kódování (popouštění). Předběžné podmínky: `U,S,T,L ≤ W`
 
-`D`, `B`, `C` **Tempering bit masky parametry**. Použít jako hodnoty bit masky při kódování (popouštění). Předběžnou podmínku: `D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C* **Tempering bitová maska parametry**. Používá se jako hodnoty bitové masky při kódování (popouštění). Předběžné podmínky: `D,B,C ≤ (1u<<W) - 1u`
 
-`F` **Inicializace násobitel**. Použít k s inicializací pořadí. Předběžnou podmínku: `F ≤ (1u<<W) - 1u`
+*F* **inicializace multiplikátor**. Využít k s inicializací pořadí. Předběžné podmínky: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Členové
 
@@ -64,21 +64,21 @@ class mersenne_twister_engine;
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|
 
-`default_seed` je členem konstantní, definované jako `5489u`, použít jako výchozí hodnota parametru pro `mersenne_twister_engine::seed` a konstruktor jednu hodnotu.
+`default_seed` je členem konstantní, definované jako `5489u`, která se používá jako výchozí hodnota parametru pro `mersenne_twister_engine::seed` a konstruktoru jednu hodnotu.
 
-Další informace o modulu členy najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o členech modul, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablony popisuje náhodné číslo modul vrací hodnoty v intervalu uzavřené [ `0`, `2` <sup>W</sup> - `1`]. Drží velké celočíselné hodnoty s `W * (N - 1) + R` bits. Extrahuje `W` bits současně z této velké hodnoty, a pokud se má použít službu bits ho twists velké hodnoty s posunem a kombinování bity tak, aby měl novou sadu bitů extrahovat z. Stav stroje je poslední `N` `W`-bit hodnoty použít v případě `operator()` byla volána alespoň `N` krát jinak `M` `W`-bit hodnoty, které již byly použity a poslední `N - M` hodnoty z počáteční hodnoty.
+Tato třída šablony Popisuje modul náhodných čísel, vrací hodnoty v uzavřeném intervalu [ `0`, `2` <sup>W</sup> - `1`]. Obsahuje velkou celočíselnou hodnotu s `W * (N - 1) + R` bits. Extrahuje *W* bitů současně z této velké hodnoty, a pokud použije všechny bity se otočí velkou hodnotu posunem a mícháním bitů tak, aby byly nové sady bitů pro extrakci. Stav stroje je poslední `N` `W`– bitová hodnota, pokud `operator()` byla volána alespoň *N* krát, jinak `M` `W`-bit, hodnoty, které již byly použity a posledních `N - M` hodnot seedu.
 
-Generátor twists vysokou hodnotu, která drží pomocí registru shift kroucená zobecněný zpětnou vazbu definované hodnoty posunutí `N` a `M`, hodnotu zákrutu `R`a podmíněného XOR maska `A`. Kromě toho jsou bity registru nezpracovaná shift kódována (zmírněna) podle kódování bit matice definované hodnoty `U`, `D`, `S`, `B`, `T`, `C`, a `L`.
+Generátor otočí velkou hodnotu, která obsahuje pomocí registru shift kroucená zobecněný zpětné vazby definované hodnoty posunu *N* a *M*, hodnota prvkem *R*a Podmíněné XOR maska *A*. Kromě toho jsou bity registru nezpracovaná shift zamíchal (korigovat) podle matice bit kódování definované hodnoty *U*, *D*, *S*, *B* , *T*, *C*, a *L*.
 
-Argument šablony `UIntType` musí být dostatečně velký pro uložení hodnoty až `2` <sup>W</sup> - `1`. Hodnoty jiné šablony argumentů musí splňovat následující požadavky: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
+Argument šablony `UIntType` musí být dostatečně velký pro uložení hodnot až do `2` <sup>W</sup> - `1`. Hodnoty ostatních argumentů šablony musí splňovat následující požadavky: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
-I když můžete vytvořit generátor z tento modul přímo, doporučuje se, že použijete jednu z těchto předdefinovaných definice TypeDef:
+I když generátor tento modul můžete vytvořit přímo, doporučujeme že použít jednu z těchto předdefinovaných – definice TypeDef:
 
-`mt19937`: 32-bit Mersenne twister modulu (Matsumoto a Nishimura, 1998).
+`mt19937`: 32-bit modulu twister Mersenne (Matsumoto a Nishimura 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -89,7 +89,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: 64-bit Mersenne twister modulu (Matsumoto a Nishimura 2000).
+`mt19937_64`: 64-bit modulu twister Mersenne (Matsumoto a Nishimura 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
@@ -100,18 +100,18 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;
 ```
 
-Podrobné informace o algoritmus twister Mersenne, najdete v článku Wikipedia [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356).
+Podrobné informace o algoritmu twister Mersenne, najdete v článku na wikipedii [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356).
 
 ## <a name="example"></a>Příklad
 
-Příklad kódu, najdete v části [ \<náhodných >](../standard-library/random.md).
+Příklad kódu naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

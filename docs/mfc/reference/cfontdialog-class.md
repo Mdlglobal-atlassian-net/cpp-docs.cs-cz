@@ -1,5 +1,5 @@
 ---
-title: Třída CFontDialog | Microsoft Docs
+title: Cfontdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,15 +44,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3b7f82988e8756a6894464c9d95ae47fe6baf922
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336810"
 ---
-# <a name="cfontdialog-class"></a>CFontDialog – třída
-Umožňuje začlenit dialogové okno Výběr písma do vaší aplikace.  
+# <a name="cfontdialog-class"></a>Cfontdialog – třída
+Umožňuje zahrnout do vaší aplikace dialogové okno Výběr písma.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,48 +72,48 @@ class CFontDialog : public CCommonDialog
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFontDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživateli proveďte výběr.|  
+|[CFontDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživatelům provést výběr.|  
 |[CFontDialog::GetCharFormat](#getcharformat)|Načte formátování vybraného písma.|  
-|[CFontDialog::GetColor](#getcolor)|Vrátí barvy vybraných písma.|  
-|[CFontDialog::GetCurrentFont](#getcurrentfont)|Přiřadí charakteristiky pro aktuálně vybrané písma `LOGFONT` struktury.|  
-|[CFontDialog::GetFaceName](#getfacename)|Vrací název vzhled vybrané písma.|  
+|[CFontDialog::GetColor](#getcolor)|Vrátí barvu vybraného písma.|  
+|[CFontDialog::GetCurrentFont](#getcurrentfont)|Přiřadí vlastnosti aktuálně zvoleného písma, `LOGFONT` struktury.|  
+|[CFontDialog::GetFaceName](#getfacename)|Vrátí název vybraného písma pro rozpoznávání tváře.|  
 |[CFontDialog::GetSize](#getsize)|Vrátí velikost vybraného písma.|  
 |[CFontDialog::GetStyleName](#getstylename)|Vrátí název stylu vybraného písma.|  
-|[CFontDialog::GetWeight](#getweight)|Vrací váhu vybrané písmo.|  
-|[CFontDialog::IsBold](#isbold)|Určuje, zda je tučné písmo.|  
+|[CFontDialog::GetWeight](#getweight)|Vrací váhu vybraného písma.|  
+|[CFontDialog::IsBold](#isbold)|Určuje, zda je písmo tučné.|  
 |[CFontDialog::IsItalic](#isitalic)|Určuje, zda je písmo kurzíva.|  
-|[CFontDialog::IsStrikeOut](#isstrikeout)|Určuje, zda se má zobrazit písma s přeškrtnutí.|  
-|[CFontDialog::IsUnderline](#isunderline)|Určuje, zda je podtržený písmo.|  
+|[CFontDialog::IsStrikeOut](#isstrikeout)|Určuje, zda se u přeškrtnutí zobrazí písma.|  
+|[CFontDialog::IsUnderline](#isunderline)|Určuje, zda je písmo podtržené.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFontDialog::m_cf](#m_cf)|Struktura sloužící k přizpůsobení `CFontDialog` objektu.|  
+|[CFontDialog::m_cf](#m_cf)|Struktura používané k úpravám `CFontDialog` objektu.|  
   
 ## <a name="remarks"></a>Poznámky  
- A `CFontDialog` objektu je dialogové okno se seznamem písem, které jsou aktuálně nainstalovány v systému. Uživatele můžete vybrat konkrétní písmo ze seznamu a tento výběr je pak hlášené zpět do aplikace.  
+ A `CFontDialog` objekt je dialogové okno se seznamem písma, které jsou nainstalovány v systému. Uživatel může vybrat zvolené písmo ze seznamu a tento výběr je pak hlášeny zpět do aplikace.  
   
- K vytvoření `CFontDialog` objektu, použijte zadaný konstruktor nebo odvození nové podtřídy a používat vlastní vlastní konstruktor.  
+ K vytvoření `CFontDialog` objektu, použijte poskytnutý konstruktor nebo odvodit novou podtřídu a použít vlastní vlastního konstruktoru.  
   
- Jednou `CFontDialog` objekt byl vytvořen, můžete použít `m_cf` struktura k chybě při inicializaci hodnoty nebo stavy, které ovládacích prvků v dialogovém okně. [M_cf](#m_cf) struktura je typu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Další informace o tuto strukturu najdete v části Windows SDK.  
+ Jednou `CFontDialog` objekt byl vytvořen, můžete použít `m_cf` struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. [M_cf](#m_cf) struktury je typu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Další informace o této struktuře naleznete v tématu Windows SDK.  
   
- Po inicializaci objektu dialogového okna Ovládací prvky, volání `DoModal` – členská funkce a zobrazit dialogové okno Povolit uživatelům výběr písma. `DoModal` Vrátí, zda uživatel vybral OK ( **IDOK**) nebo zrušit ( **IDCANCEL**) tlačítko.  
+ Po inicializaci objektu dialogového okna ovládacích prvků, volání `DoModal` členské funkce a zobrazte dialogové okno Povolit uživatelům výběr písma. `DoModal` Vrátí, zda uživatel vybral tlačítko OK (IDOK) nebo zrušit (IDCANCEL).  
   
- Pokud `DoModal` vrátí **IDOK**, můžete použít jednu z `CFontDialog`na členské funkce načíst informace o zadaný uživatelem.  
+ Pokud `DoModal` vrátí IDOK, můžete použít jednu z `CFontDialog`pro členské funkce načtete informace o vstup uživatele.  
   
- Můžete použít Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě během inicializace dialogových oken a další informace o této chybě. Další informace o této funkci najdete v části Windows SDK.  
+ Můžete použít Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě při inicializaci dialogového okna a další informace o této chybě. Další informace o této funkci najdete v tématu Windows SDK.  
   
- `CFontDialog` spoléhá na COMMDLG. Soubor knihovny DLL, která se dodává s verzí systému Windows verze 3.1 nebo novější.  
+ `CFontDialog` využívá COMMDLG. Soubor knihovny DLL, která se dodává s Windows verze 3.1 nebo novější.  
   
- Chcete-li přizpůsobit dialogové okno, odvození třídy z `CFontDialog`zadejte dialogové okno vlastní šablony a přidat mapy zpráv pro zpracování zprávy s oznámením z rozšířených ovládacích prvků. Všechny nezpracované zprávy by měla být předána základní třídy.  
+ Přizpůsobení dialogových oken, odvoďte třídu z `CFontDialog`zadejte šablonu vlastního dialogu a přidání mapy zpráv pro zpracování zpráv s oznámením z rozšířené ovládací prvky. Všechny nezpracované zprávy by měly být předány základní třídy.  
   
  Přizpůsobení funkce háku se nevyžaduje.  
   
- Další informace o používání `CFontDialog`, najdete v části [třídy společných dialogů](../../mfc/common-dialog-classes.md).  
+ Další informace o používání `CFontDialog`, naleznete v tématu [společné třídy dialogových oken](../../mfc/common-dialog-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -121,7 +121,7 @@ class CFontDialog : public CCommonDialog
   
  [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
+ [Ccommondialog –](../../mfc/reference/ccommondialog-class.md)  
   
  `CFontDialog`  
   
@@ -150,42 +150,42 @@ CFontDialog(
  Ukazatel [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) datová struktura, která vám umožní nastavit některé z vlastností písma.  
   
  *charFormat*  
- Ukazatel [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) ovládacích prvků pro úpravy datová struktura, která vám umožní nastavit některé z vlastností písma v s formátováním.  
+ Ukazatel [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) datová struktura, která vám umožní nastavit některé z vlastností písma v bohaté ovládací prvek textové pole.  
   
  *dwFlags*  
- Určuje jeden nebo více příznaků zvolit písmo. Jeden nebo více přednastavené hodnoty lze spojovat pomocí bitový operátor OR. Pokud změníte `m_cf.Flag`s struktura člena, je nutné používat bitový operátor OR v změny zachovat výchozí chování beze změn. Podrobnosti o každé z těchto příznaků, najdete v části Popis [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) struktura ve Windows SDK.  
+ Určuje jeden nebo více příznaků zvolit písmo. Jeden nebo více přednastavené hodnoty lze spojovat pomocí bitového operátoru OR. Pokud změníte `m_cf.Flag`člen struktury s, nezapomeňte použít bitový operátor OR své změny zachovat výchozí chování beze změny. Podrobnosti o každé z těchto příznaků, viz popis [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) struktura v sadě Windows SDK.  
   
  *pdcPrinter*  
- Ukazatel na kontextu zařízení tiskárny. Pokud je zadaný, tento parametr odkazuje na kontextu tiskárny zařízení tiskárny, na které mají být vybrán písma.  
+ Ukazatel na kontext zařízení tiskárny. Pokud je zadané, tento parametr odkazuje na kontext zařízení tiskárny pro tiskárny, na kterém mají být vybrán písma.  
   
  *pParentWnd*  
- Ukazatel na písma dialogové okno nadřazené nebo vlastníka.  
+ Ukazatel na písmo dialogové okno nadřazené nebo vlastníka.  
   
 ### <a name="remarks"></a>Poznámky  
- Všimněte si, že konstruktoru automaticky vyplní členů `CHOOSEFONT` struktura. Měli byste pouze změnit tyto Pokud chcete dialogové okno písmo jiné než výchozí.  
+ Všimněte si, že konstruktor automaticky vyplní členů `CHOOSEFONT` struktury. By měl změnit pouze ty Pokud chcete dialogové okno písmo jiné než výchozí.  
   
 > [!NOTE]
->  První verze součásti tuto funkci existuje pouze v případě, že podpora ovládací prvek pro úpravy s formátováním žádné.  
+>  První verze této funkce existuje pouze v případě, že podpora ovládacího prvku pro úpravy s formátováním žádné.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
 ##  <a name="domodal"></a>  CFontDialog::DoModal  
- Volání této funkce můžete zobrazit dialogové okno Písmo Windows běžné a umožnit uživatelům zvolit písmo.  
+ Voláním této funkce a zobrazte dialogové okno Písmo Windows běžné povolit uživateli, aby zvolil písmo.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **IDOK** nebo **IDCANCEL**. Pokud **IDCANCEL** je vrácen, volání Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
+ IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkce k určení, zda došlo k chybě.  
   
- **IDOK** a **IDCANCEL** jsou konstanty, které označuje, zda uživatel vybrané na tlačítko OK nebo Storno.  
+ IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete k chybě při inicializaci různé ovládací prvky dialogového okna písma a to nastavením členy [m_cf](#m_cf) struktura, bude třeba provést před voláním `DoModal`, ale po objektu dialogového okna je vytvořený.  
+ Pokud chcete inicializovat různé ovládací prvky písma dialogového okna tak, že nastavíte členy [m_cf](#m_cf) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.  
   
- Pokud `DoModal` vrátí **IDOK**, můžete volat jiné členské funkce načíst nastavení nebo uživatelský vstup informace do dialogových oken.  
+ Pokud `DoModal` vrátí IDOK, můžete volat ostatní členské funkce k načtení nastavení nebo informace o vstup uživatelem do dialogových oken.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklady pro [CFontDialog::CFontDialog](#cfontdialog) a [CFontDialog::GetColor](#getcolor).  
@@ -198,24 +198,24 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *CR*  
+ *CF*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura obsahující informace o formátování vybraného písma.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
- Volání této funkce načíst barvy vybraných písma.  
+ Volání této funkce načtete barvu vybraného písma.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Barva písma vybrané.  
+ Barva vybraného písma.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
- Volání této funkce můžete přiřadit charakteristiky písma aktuálně vybrané členy [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ Voláním této funkce k přiřazení vlastnosti aktuálně vybraného písma k členům [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
@@ -223,139 +223,139 @@ void GetCurrentFont(LPLOGFONT lplf);
   
 ### <a name="parameters"></a>Parametry  
  *lplf*  
- Ukazatel na `LOGFONT` struktury.  
+ Ukazatel `LOGFONT` struktury.  
   
 ### <a name="remarks"></a>Poznámky  
- Další `CFontDialog` členské funkce jsou k dispozici pro přístup k jednotlivých vlastnostech aktuálním písmem.  
+ Další `CFontDialog` členské funkce jsou k dispozici pro přístup k individuální vlastnosti aktuálním písmem.  
   
- Pokud je tato funkce je volána při volání [DoModal](#domodal), vrátí aktuální výběr v době (co uživatel uvidí, nebo má změnit v dialogovém okně). Pokud je tato funkce je volána po volání `DoModal` (pouze v případě `DoModal` vrátí **IDOK**), vrátí co ve skutečnosti vybraného uživatele.  
+ Pokud tato funkce je volána při volání [DoModal](#domodal), vrátí aktuální výběr v době (co uživatel uvidí, nebo je změnit v dialogovém okně). Pokud tato funkce je volána po volání `DoModal` (pouze tehdy, pokud `DoModal` vrátí IDOK), vrátí co uživatel skutečně vybrali.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
 ##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
- Volání této funkce načíst název vzhled vybrané písma.  
+ Volání této funkce načtete pro rozpoznávání tváře název vybraného písma.  
   
 ```  
 CString GetFaceName() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název řez písma vybraného v `CFontDialog` dialogové okno.  
+ Název pro rozpoznávání tváře písmo vybrané v `CFontDialog` dialogové okno.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
 ##  <a name="getsize"></a>  CFontDialog::GetSize  
- Volání této funkce načíst velikost vybraných písma.  
+ Voláním této funkce, aby se načetla velikost vybraného písma.  
   
 ```  
 int GetSize() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Velikost písma v desetin bodu.  
+ Velikost písma v desetiny bod.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
 ##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
- Volání této funkce načíst název stylu vybraného písma.  
+ Volání této funkce načtete název stylu vybraného písma.  
   
 ```  
 CString GetStyleName() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Název stylu písma.  
+ Styl písma.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
 ##  <a name="getweight"></a>  CFontDialog::GetWeight  
- Volání této funkce načíst váhu vybrané písmo.  
+ Volání této funkce načtete váhu vybraného písma.  
   
 ```  
 int GetWeight() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Váha vybrané písmo.  
+ Váha vybraného písma.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o váhu písmo, najdete v části [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont).  
+ Další informace o váze písma, naleznete v tématu [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
 ##  <a name="isbold"></a>  CFontDialog::IsBold  
- Volání této funkce můžete zjistit, jestli je vybrané písmo tučně.  
+ Voláním této funkce k určení, zda je vybrané písmo tučné.  
   
 ```  
 BOOL IsBold() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud vybrané písmo tučné vlastnosti povoleno; jinak 0.  
+ Nenulové, pokud vybrané písmo má tučné charakteristiku povolené; jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
 ##  <a name="isitalic"></a>  CFontDialog::IsItalic  
- Volání této funkce můžete zjistit, jestli je vybrané písmo kurzíva.  
+ Voláním této funkce k určení, zda je vybrané písmo kurzíva.  
   
 ```  
 BOOL IsItalic() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud vybrané písmo kurzíva vlastnosti povoleno; jinak 0.  
+ Nenulové, pokud vybrané písmo kurzíva charakteristiku povolené; jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
 ##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
- Volání této funkce můžete určit, pokud je s přeškrtnutí zobrazeny vybrané písmo.  
+ Voláním této funkce k určení, pokud vybrané písmo se zobrazí u přeškrtnutí.  
   
 ```  
 BOOL IsStrikeOut() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud vybrané písmo má vlastnosti přeškrtnutí povoleno; jinak 0.  
+ Nenulové, pokud vybrané písmo má charakteristiku přeškrtnutí povolené; jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
 ##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
- Volání této funkce k určení, pokud je vybrané písmo podtržené.  
+ Voláním této funkce k určení, pokud je vybrané písmo podtržené.  
   
 ```  
 BOOL IsUnderline() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud vybrané písmo má vlastnosti podtržení, které bylo povoleno; jinak 0.  
+ Nenulové, pokud vybrané písmo má charakteristiku podtržení povolené; jinak 0.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
 ##  <a name="m_cf"></a>  CFontDialog::m_cf  
- Struktura, jejíž členové uložení charakteristiky objektu dialogového okna.  
+ Struktura, jejíž členové uložení vlastnosti z objektu dialogového okna.  
   
 ```  
 CHOOSEFONT m_cf;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Po vytváření `CFontDialog` objekt, můžete použít `m_cf` změnit různé aspekty dialogu před voláním `DoModal` – členská funkce. Další informace o této struktuře naleznete v tématu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) ve Windows SDK.  
+ Po sestavení `CFontDialog` objektu, můžete použít `m_cf` upravit různé aspekty dialogového okna před voláním `DoModal` členskou funkci. Další informace o této struktuře naleznete v tématu [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC HIERSVR](../../visual-cpp-samples.md)   
- [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)   
+ [Ukázky knihovny MFC HIERSVR](../../visual-cpp-samples.md)   
+ [Ccommondialog – třída](../../mfc/reference/ccommondialog-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)
 
 

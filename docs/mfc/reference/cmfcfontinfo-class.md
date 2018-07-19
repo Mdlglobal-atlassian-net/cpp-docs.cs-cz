@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCFontInfo | Microsoft Docs
+title: Cmfcfontinfo – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,14 +28,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038598"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852416"
 ---
-# <a name="cmfcfontinfo-class"></a>CMFCFontInfo – třída
+# <a name="cmfcfontinfo-class"></a>Cmfcfontinfo – třída
 `CMFCFontInfo` Třída popisuje název a další atributy písma.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -56,23 +56,23 @@ class CMFCFontInfo : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCFontInfo::GetFullName](#getfullname)|Načte zřetězených názvy písmo a jeho znak nastavit (skript).|  
+|[CMFCFontInfo::GetFullName](#getfullname)|Načte nastavení zřetězených názvy písmo a jeho znak (skript).|  
   
 ### <a name="data-members"></a>Datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Hodnota, která určuje znakovou sadu (skript) přidružené k písmo.|  
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Hodnota, která určuje výšku a řadu písmo.|  
+|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Hodnota, která určuje znakovou sadu (skript) přidružené k písma.|  
+|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Hodnota, která určuje rozteč a rodiny písma.|  
 |[CMFCFontInfo::m_nType](#m_ntype)|Hodnota, která určuje typ písma.|  
 |[CMFCFontInfo::m_strName](#m_strname)|Název písma; například **Arial**.|  
-|[CMFCFontInfo::m_strScript](#m_strscript)|Název znakovou sadu (skript) přidružené k písmo.|  
+|[CMFCFontInfo::m_strScript](#m_strscript)|Název znakovou sadu (skript) přidružené k písma.|  
   
 ## <a name="remarks"></a>Poznámky  
- Můžete připojit `CMFCFontInfo` objekt, který chcete položky [CMFCToolBarFontComboBox třída](../../mfc/reference/cmfctoolbarfontcombobox-class.md) třída. Volání [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) metoda pro načtení ukazatel na `CMFCFontInfo` objektu.  
+ Můžete připojit `CMFCFontInfo` objekt položka [cmfctoolbarfontcombobox – třída](../../mfc/reference/cmfctoolbarfontcombobox-class.md) třídy. Volání [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) metodu pro načtení ukazatel `CMFCFontInfo` objektu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat různé členy `CMFCFontInfo` třídy. Příklad ukazuje, jak získat `CMFCFontInfo` objektu z `CMFCRibbonFontComboBox`a jak získat přístup k jeho místní proměnné. Tato ukázka je součástí [MSOffice 2007 Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak využívat různé členy `CMFCFontInfo` třídy. Tento příklad ukazuje, jak získat `CMFCFontInfo` objektu z `CMFCRibbonFontComboBox`a jak přistupovat ke své místní proměnné. V tomto příkladu je součástí [MSOffice 2007 demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]  
   
@@ -94,31 +94,31 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszName*  
- Název písma. Další informace najdete v tématu `lfFaceName` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ [in] *lpszName*  
+ Název písma. Další informace najdete v tématu `lfFaceName` člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [v] *lpszScript*  
+ [in] *lpszScript*  
  Název skriptu (znaková sada) písma.  
   
- [v] *nCharSet*  
- Hodnota, která určuje znakovou sadu (skript) písma. Další informace najdete v tématu `lfCharSet` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ [in] *nCharSet*  
+ Hodnota, která určuje znakové sady (skript) písma. Další informace najdete v tématu `lfCharSet` člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [v] *nPitchAndFamily*  
- Hodnota, která určuje výšku a řadu písmo. Další informace najdete v tématu `lfPitchAndFamily` členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
+ [in] *nPitchAndFamily*  
+ Hodnota, která určuje rozteč a rodiny písma. Další informace najdete v tématu `lfPitchAndFamily` člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [v] *Noznámení*  
- Hodnota, která určuje typ písma. Tento parametr může být bitovou kombinaci (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
+ [in] *nTyp*  
+ Hodnota, která určuje typ písma. Tento parametr může být bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.  
   
- [v] *src*  
- Existující `CMFCFontInfo` objektu, jejíž členové jsou používány k vytváření to `CMFCFontInfo` objektu.  
+ [in] *src*  
+ Existující `CMFCFontInfo` objekt, jehož členy se používají k vytvoření to `CMFCFontInfo` objektu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- Tato dokumentace používá podmínky *znaková sada* a *skriptu* zcela zaměnitelným významem. A *skriptu*, což je také označován jako písmo, je kolekce znaky a pravidla pro zápis těchto znaků v jeden nebo více jazyků. Kolekce znaků zahrnuje abecedy a interpunkce použít ve skriptu. Například latince slouží pro angličtinu, jako je používaný ve Spojených státech amerických a jeho abecedy obsahuje znaky a až Z. `lfCharSet` Členem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura Určuje znakovou sadu. Například hodnota `ANSI_CHARSET` Určuje [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] znaková sada, která zahrnuje abecedy latince.  
+ Tato dokumentace používá podmínky *znaková sada* a *skript* Zaměnitelně. A *skript*, což je také označovaný jako systém zápisu, je kolekce znaků a pravidla pro zápis tyto znaky v jedné nebo více jazyků. Kolekce znaků obsahuje abecedy a interpunkci v tomto skriptu. Například latince slouží pro angličtinu, jako je slyšet ve Spojených státech amerických a zahrnuje jeho abecední znaky a až Z. `lfCharSet` Člena [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktura Určuje znakovou sadu. Například hodnota ANSI_CHARSET Určuje, [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] znaková sada, která zahrnuje abecedy latince.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
- Načte zřetězených názvy písmo a jeho znak nastavit (skript).  
+ Načte nastavení zřetězených názvy písmo a jeho znak (skript).  
   
 ```  
 CString GetFullName() const;  
@@ -128,27 +128,27 @@ CString GetFullName() const;
  Řetězec, který obsahuje název písma a skript.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této metody můžete získat úplný název písma. Například pokud je název písma je `Arial` a je skript písma `Cyrillic`, tato metoda vrátí hodnotu "Arial (cyrilice)".  
+ Pomocí této metody můžete získat úplný název písma. Například, pokud je název písma **Arial** a skript písmo **cyrilice**, tato metoda vrátí "Arial (cyrilice)".  
   
 ##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet  
- Hodnota, která určuje znakovou sadu (skript) přidružené k písmo.  
+ Hodnota, která určuje znakovou sadu (skript) přidružené k písma.  
   
 ```  
 const BYTE m_nCharSet;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu *nCharSet* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *nCharSet* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktoru.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
- Hodnota, která určuje výšku (velikost bodu) a (například serif, sans-serif a neproporcionální) řadu písmo.  
+ Hodnota, která určuje rozteč (velikost) a řady (například serif, sans-serif a neproporcionální) písma.  
   
 ```  
 const BYTE m_nPitchAndFamily;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu *nPitchAndFamily* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *nPitchAndFamily* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktoru.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Hodnota, která určuje typ písma.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu *Noznámení* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *nTyp* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktoru.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  Název písma: například **Arial**.  
@@ -168,20 +168,20 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu *lpszName* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *lpszName* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktoru.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
- Název znakovou sadu (skript) přidružené k písmo.  
+ Název znakovou sadu (skript) přidružené k písma.  
   
 ```  
 const CString m_strScript;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu *lpszScript* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktor.  
+ Další informace najdete v tématu *lpszScript* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktoru.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBarFontComboBox – třída](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
+ [Cmfctoolbarfontcombobox – třída](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
  [CMFCToolBarFontSizeComboBox – třída](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)

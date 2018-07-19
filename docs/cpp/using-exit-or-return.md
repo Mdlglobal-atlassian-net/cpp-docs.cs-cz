@@ -1,5 +1,5 @@
 ---
-title: Pomocí ukončit, nebo může vracet | Microsoft Docs
+title: Pomocí ukončení nebo vrácení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947507"
 ---
 # <a name="using-exit-or-return"></a>Používání příkazů exit nebo return
-Při volání **ukončete** nebo spuštění `return` příkaz z **hlavní**, statické objekty jsou zničen v obráceném pořadí jejich inicializace. Následující příklad ukazuje, jak taková inicializace a vyčištění funguje.  
+Při volání **ukončit** nebo spuštění **vrátit** příkaz z `main`, statické objekty jsou zničeny v obráceném pořadí jejich inicializace. Následující příklad ukazuje, jak taková inicializace a vyčištění funguje.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- V předchozím příkladu jsou vytvořeny a inicializovány statické objekty `sd1` a `sd2` před vstupem do funkce `main`. Poté, co je program ukončen pomocí příkazu `return`, je zničen nejdříve objekt `sd2` a následně objekt `sd1`. Destruktor třídy `ShowData` zavře soubory přidružené k těmto statickým objektům.   
+ V předchozím příkladu jsou vytvořeny a inicializovány statické objekty `sd1` a `sd2` před vstupem do funkce `main`. Poté, co program ukončen pomocí **vrátit** prohlášení, první `sd2` zničen a potom `sd1`. Destruktor třídy `ShowData` zavře soubory přidružené k těmto statickým objektům.   
   
  Jiný způsob psaní tohoto kódu je deklarace objektů `ShowData` s rozsahem bloku, čímž je umožněno jejich zničení, dostanou-li se mimo rozsah:  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

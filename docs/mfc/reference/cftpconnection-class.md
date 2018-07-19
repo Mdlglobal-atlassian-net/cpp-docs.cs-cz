@@ -1,5 +1,5 @@
 ---
-title: Třída CFtpConnection | Microsoft Docs
+title: Cftpconnection – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303e89cd00091d8427bdb1d6e36c9a85b7aa5100
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337330"
 ---
-# <a name="cftpconnection-class"></a>CFtpConnection – třída
-Spravuje připojení k serveru FTP na Internet server a umožňuje přímé manipulaci adresářů a souborů na tomto serveru.  
+# <a name="cftpconnection-class"></a>Cftpconnection – třída
+Spravuje FTP připojení k internetovému serveru a umožňuje přímou manipulaci s adresářů a souborů na tomto serveru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,32 +68,32 @@ class CFtpConnection : public CInternetConnection
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CFtpConnection::Command](#command)|Odešle příkaz přímo k serveru FTP.|  
+|[CFtpConnection::Command](#command)|Odešle příkaz přímo na FTP server.|  
 |[CFtpConnection::CreateDirectory](#createdirectory)|Vytvoří adresář na serveru.|  
 |[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|Získá aktuální adresář pro toto připojení.|  
 |[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|Získá aktuální adresář pro toto připojení jako adresu URL.|  
-|[CFtpConnection::GetFile](#getfile)|Získá soubor ze serveru připojeného|  
-|[CFtpConnection::OpenFile](#openfile)|Otevře soubor na serveru připojený.|  
+|[CFtpConnection::GetFile](#getfile)|Načte soubor z připojeného serveru.|  
+|[CFtpConnection::OpenFile](#openfile)|Otevře soubor na připojeném serveru.|  
 |[CFtpConnection::PutFile](#putfile)|Umístí soubor na serveru.|  
 |[CFtpConnection::Remove](#remove)|Odebere soubor ze serveru.|  
-|[CFtpConnection::RemoveDirectory](#removedirectory)|Zadaný adresář se odebere ze serveru.|  
+|[CFtpConnection::RemoveDirectory](#removedirectory)|Odebere zadaný adresář ze serveru.|  
 |[CFtpConnection::Rename](#rename)|Přejmenuje soubor na serveru.|  
 |[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|Nastaví aktuální adresář serveru FTP.|  
   
 ## <a name="remarks"></a>Poznámky  
- FTP je jedním ze tří rozpoznáno tříd WinInet knihovny MFC služeb sítě Internet.  
+ FTP je jednou tři služeb sítě Internet rozpoznat pomocí tříd WinInet knihovny MFC.  
   
- Ke komunikaci se serverem FTP Internet, musíte nejdřív vytvořit instanci [CInternetSession](../../mfc/reference/cinternetsession-class.md)a pak vytvořte `CFtpConnection` objektu. Nikdy vytvoříte `CFtpConnection` objektu přímo; místo toho volat [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), která vytvoří `CFtpConnection` objektu a vrátí ukazatel na ni.  
+ Ke komunikaci se serverem FTP Internet, musíte nejprve vytvořit instanci [cinternetsession –](../../mfc/reference/cinternetsession-class.md)a pak vytvořte `CFtpConnection` objektu. Nikdy nevytvářejte `CFtpConnection` objektu přímo; místo toho volat [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), která vytvoří `CFtpConnection` objekt a vrátí ukazatel na něj.  
   
- Další informace o tom, `CFtpConnection` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md). Další informace o komunikaci s další dvě podporované služby, HTTP a gopher, viz třídy [CHttpConnection](../../mfc/reference/chttpconnection-class.md) a [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).  
+ Další informace o tom, `CFtpConnection` funguje s jinými třídami MFC Internetu najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md). Další informace o komunikaci s další dvě jako podporované služby, HTTP a gopher, viz třídy [chttpconnection –](../../mfc/reference/chttpconnection-class.md) a [cgopherconnection –](../../mfc/reference/cgopherconnection-class.md).  
   
 ## <a name="example"></a>Příklad  
-  Podívejte se na příklad v [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) přehledu třídy.  
+  Podívejte se na příklad v [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md) přehledu třídy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
+ [Cinternetconnection –](../../mfc/reference/cinternetconnection-class.md)  
   
  `CFtpConnection`  
   
@@ -101,7 +101,7 @@ class CFtpConnection : public CInternetConnection
  **Záhlaví:** afxinet.h  
   
 ##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection  
- Tato funkce člen je volána k sestavení `CFtpConnection` objektu.  
+ Tato členská funkce je volána k sestavení kompletních `CFtpConnection` objektu.  
   
 ```  
 CFtpConnection(
@@ -123,41 +123,41 @@ CFtpConnection(
   
 ### <a name="parameters"></a>Parametry  
  *pSession*  
- Ukazatel na související [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu.  
+ Ukazatel na související [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu.  
   
  *hConnected*  
- Popisovač Windows aktuální relace Internetu.  
+ Popisovač Windows aktuální relace Internet.  
   
  *pstrServer*  
  Ukazatel na řetězec obsahující název serveru FTP.  
   
  *dwContext*  
- Identifikátor kontextu pro danou operaci. *dwContext* identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.  
+ Identifikátor kontextu operace. *dwContext* identifikuje informace o stavu operace vracené [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Výchozí hodnota je nastavená na 1; Můžete však explicitně přiřadit konkrétní kontext ID operace. Objekt a veškerou práci, kterou provádí bude spojená s ID tohoto kontextu.  
   
  *pstrUserName*  
- Ukazatel na řetězec ukončené hodnotou null, který určuje jméno uživatele k přihlášení. Pokud **NULL**, výchozí hodnota je anonymní.  
+ Ukazatel na řetězec zakončený hodnotou null, který určuje jméno uživatele k přihlášení. Pokud má hodnotu NULL, výchozí hodnota je anonymous.  
   
  *pstrPassword*  
- Ukazatel na řetězec ukončené hodnotou null, který určuje heslo pro použití k protokolování. Pokud oba *pstrPassword* a *pstrUserName* jsou **NULL**, výchozí anonymního hesla je uživatelské jméno e-mailu. Pokud *pstrPassword* je **NULL** (nebo prázdný řetězec), ale *pstrUserName* není **NULL**, se používá prázdné heslo. Následující tabulka popisuje chování čtyři možné nastavení *pstrUserName* a *pstrPassword*:  
+ Ukazatel na řetězec zakončený hodnotou null, který určuje heslo pro použití k protokolování. Pokud mají oba *pstrPassword* a *pstrUserName* hodnotu Null, je výchozí heslo anonymní uživatelské jméno e-mailu. Pokud *pstrPassword* má hodnotu NULL (nebo prázdný řetězec), ale *pstrUserName* nemá hodnotu NULL, prázdné heslo se používá. Následující tabulka popisuje chování pro čtyři možných nastavení *pstrUserName* a *pstrPassword*:  
   
-|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslat na FTP server|  
+|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslaných na FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** nebo ""|**NULL** nebo ""|"anonymní"|Uživatelské jméno e-mailu|  
-|Není- **NULL** řetězec|**NULL** nebo ""|*pstrUserName*|" "|  
-|**NULL** jinou hodnotu než **NULL** řetězec|**CHYBA**|**CHYBA**||  
-|Není- **NULL** řetězec|Není- **NULL** řetězec|*pstrUserName*|*pstrPassword*|  
+|Hodnotu NULL nebo ""|Hodnotu NULL nebo ""|"anonymní"|Uživatelské jméno e-mailu|  
+|Řetězec NENULOVÉ|Hodnotu NULL nebo ""|*pstrUserName*|" "|  
+|Řetězec s NENULOVOU hodnotou NULL|CHYBA|CHYBA||  
+|Řetězec NENULOVÉ|Řetězec NENULOVÉ|*pstrUserName*|*pstrPassword*|  
   
  *nPort*  
- Číslo, které identifikuje port TCP/IP použít na serveru.  
+ Číslo, které identifikuje port TCP/IP pro použití na serveru.  
   
  *bPassive*  
- Určuje režim pasivní nebo aktivní pro tuto relaci FTP. Pokud nastavena na **TRUE**, nastaví rozhraní API Win32 *dwFlag* k **INTERNET_FLAG_PASSIVE**.  
+ Určuje režim pasivní nebo aktivní pro tuto relaci serveru FTP. Pokud je nastavena na hodnotu TRUE, nastaví rozhraní API systému Win32 *dwFlag* k INTERNET_FLAG_PASSIVE.  
   
 ### <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CFtpConnection` objektu přímo. Místo toho volat [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), která vytvoří **CFptConnection** objektu.  
+ Nikdy nevytvářejte `CFtpConnection` objektu přímo. Namísto toho zavolejte metodu [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), která vytvoří `CFptConnection` objektu.  
   
 ##  <a name="command"></a>  CFtpConnection::Command  
- Odešle příkaz přímo k serveru FTP.  
+ Odešle příkaz přímo na FTP server.  
   
 ```  
 CInternetFile* Command(
@@ -169,31 +169,31 @@ CInternetFile* Command(
   
 ### <a name="parameters"></a>Parametry  
  *pszCommand*  
- Ukazatel na řetězec, který obsahuje příkaz k odeslání.  
+ Ukazatel na řetězec obsahující příkaz k odeslání.  
   
  *eResponse*  
- Určuje, zda je očekáván odpověď ze serveru FTP. Může být jedna z následujících hodnot:  
+ Určuje, zda očekává se odpověď ze serveru FTP. Může být jedna z následujících hodnot:  
   
-- **CmdRespNone** žádná odpověď se očekává.  
+- `CmdRespNone` Není očekávána žádná odpověď.  
   
-- **CmdRespRead** odpověď se očekává.  
+- `CmdRespRead` Očekává se odpověď.  
   
  *dwFlags*  
- Hodnota obsahující příznaky, které řídí funkce. Úplný seznam najdete v tématu [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133).  
+ Hodnota obsahující příznaky, které řídí této funkce. Úplný seznam najdete v tématu [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133).  
   
  *dwContext*  
- Ukazatel na hodnotu obsahující hodnotu definované aplikací umožňují určit kontext aplikace ve zpětných volání.  
+ Ukazatel na hodnotu obsahující hodnotu definovaného aplikací umožňují určit kontext aplikace v zpětná volání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce člen emuluje funkce [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) fungovat, jak je popsáno v sadě Windows SDK.  
+ Tato členská funkce emuluje funkčnost [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) fungovat, jak je popsáno v sadě Windows SDK.  
   
- Pokud dojde k chybě, MFC vyvolá výjimku typu [CInternetException](../../mfc/reference/cinternetexception-class.md).  
+ Pokud dojde k chybě, MFC, vyvolá výjimku typu [cinternetexception –](../../mfc/reference/cinternetexception-class.md).  
   
 ##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory  
- Volání této funkce člen k vytvoření adresáře na serveru připojený.  
+ Voláním této členské funkce k vytvoření adresáře na připojeném serveru.  
   
 ```  
 BOOL CreateDirectory(LPCTSTR pstrDirName);
@@ -201,18 +201,18 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
   
 ### <a name="parameters"></a>Parametry  
  *pstrDirName*  
- Ukazatel na řetězec, který obsahuje název adresáře pro vytvoření.  
+ Ukazatel na řetězec obsahující název adresář, který chcete vytvořit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce systému Windows [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud selže volání funkce Windows [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `GetCurrentDirectory` k určení aktuální pracovní adresář pro toto připojení k serveru. Není Předpokládejme, že vzdálený systém, můžete je připojený ke kořenový adresář.  
+ Použití `GetCurrentDirectory` určit aktuální pracovní adresář pro toto připojení k serveru. Nepředpokládejte, že vzdálený systém, můžete se připojil do kořenového adresáře.  
   
- `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `CreateDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ `pstrDirName` Parametr může být buď částečně nebo plně kvalifikovaný název souboru relativní vzhledem k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `CreateDirectory` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
 ##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory  
- Volání této funkce člen získat název aktuálního adresáře.  
+ Voláním této členské funkce a získat tak název aktuálního adresáře.  
   
 ```  
 BOOL GetCurrentDirectory(CString& strDirName) const;  
@@ -235,18 +235,18 @@ BOOL GetCurrentDirectory(
 |||  
 |-|-|  
 |V položce|Velikost vyrovnávací paměti odkazuje *pstrDirName*.|  
-|Při návratu|Počet znaků, které jsou uložené na *pstrDirName*. Pokud – členská funkce selže a je vrácen ERROR_INSUFFICIENT_BUFFER, pak *lpdwLen* obsahuje počet bajtů, které aplikace musí přidělit k přijetí řetězce.|  
+|Při návratu|Počet znaků, které jsou uloženy do *pstrDirName*. Pokud má členská funkce se nezdaří a ERROR_INSUFFICIENT_BUFFER nevrátí, znamená *lpdwLen* obsahuje počet bajtů, které aplikace musí přidělit za účelem přijímání řetězec.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Chcete-li místo toho získat název adresáře jako adresu URL, volejte [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
+ Jako adresu URL získat místo toho název adresáře, volání [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
   
- Parametry *pstrDirName* nebo *strDirName* může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetCurrentDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ Parametry *pstrDirName* nebo *strDirName* může být buď částečně kvalifikované názvy souborů, vzhledem k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `GetCurrentDirectory` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
 ##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection::GetCurrentDirectoryAsURL  
- Volání této funkce člen se získat název aktuální adresář jako adresu URL.  
+ Voláním této členské funkce se získat název aktuální adresář jako adresu URL.  
   
 ```  
 BOOL GetCurrentDirectoryAsURL(CString& strDirName) const;  
@@ -269,18 +269,18 @@ BOOL GetCurrentDirectoryAsURL(
 |||  
 |-|-|  
 |V položce|Velikost vyrovnávací paměti odkazuje *pstrDirName*.|  
-|Při návratu|Počet znaků, které jsou uložené na *pstrDirName*. Pokud – členská funkce selže a je vrácen ERROR_INSUFFICIENT_BUFFER, pak *lpdwLen* obsahuje počet bajtů, které aplikace musí přidělit k přijetí řetězce.|  
+|Při návratu|Počet znaků, které jsou uloženy do *pstrDirName*. Pokud má členská funkce se nezdaří a ERROR_INSUFFICIENT_BUFFER nevrátí, znamená *lpdwLen* obsahuje počet bajtů, které aplikace musí přidělit za účelem přijímání řetězec.|  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetCurrentDirectoryAsURL` se chová stejně jako [GetCurrentDirectory](#getcurrentdirectory)  
+ `GetCurrentDirectoryAsURL` chová se stejně jako [GetCurrentDirectory](#getcurrentdirectory)  
   
- Parametr *strDirName* může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetCurrentDirectoryAsURL` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ Parametr *strDirName* může být buď částečně kvalifikované názvy souborů, vzhledem k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `GetCurrentDirectoryAsURL` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
 ##  <a name="getfile"></a>  CFtpConnection::GetFile  
- Volání této funkce člen od serveru FTP získat soubor a uložit v místním počítači.  
+ Voláním této členské funkce získat soubor ze serveru FTP a uloží je na místním počítači.  
   
 ```  
 BOOL GetFile(
@@ -294,53 +294,53 @@ BOOL GetFile(
   
 ### <a name="parameters"></a>Parametry  
  *pstrRemoteFile*  
- Ukazatel na ukončené hodnotou null řetězec obsahující název souboru k načtení ze serveru FTP.  
+ Ukazatel na řetězec zakončený hodnotou null obsahující název soubor, který chcete načíst ze serveru FTP.  
   
  *pstrLocalFile*  
- Ukazatel na ukončené hodnotou null řetězec obsahující název souboru k vytvoření místního systému.  
+ Ukazatel na řetězec zakončený hodnotou null obsahující název souboru k vytvoření místního systému.  
   
  *bFailIfExists*  
- Určuje, zda název souboru může použít už existující soubor. Pokud název místního souboru již existuje, a tento parametr je **TRUE**, `GetFile` selže. V opačném `GetFile` vymaže existující kopii souboru.  
+ Určuje, zda název souboru může použít už existující soubor. Pokud název místního souboru již existuje, a tento parametr má hodnotu TRUE, `GetFile` selže. V opačném případě `GetFile` vymaže stávající kopie souboru.  
   
  *dwAttributes*  
- Určuje atributy souboru. To může být libovolnou kombinací následující příznaky FILE_ATTRIBUTE_ *.  
+ Označuje atributy souboru. To může být libovolná kombinace následující příznaky FILE_ATTRIBUTE_ *.  
   
--   FILE_ATTRIBUTE_ARCHIVE soubor je soubor archivu. Označení souborů k zálohování nebo odebrání aplikací pomocí tohoto atributu.  
+-   FILE_ATTRIBUTE_ARCHIVE soubor je soubor archivu. K označení souborů pro zálohování nebo odebrání aplikací použijte tento atribut.  
   
--   Se komprimují FILE_ATTRIBUTE_COMPRESSED soubor nebo adresář. Pro soubor komprese znamená, že všechna data v souboru se komprimují. Komprese pro adresář, je výchozí pro nově vytvořené soubory a podadresáře.  
+-   Je komprimován FILE_ATTRIBUTE_COMPRESSED souboru nebo adresáře. Pro soubor komprese znamená, že všechna data v souboru je komprimován. Pro adresář komprese je výchozí pro nově vytvořené soubory a podadresáře.  
   
--   FILE_ATTRIBUTE_DIRECTORY soubor je adresář.  
+-   FILE_ATTRIBUTE_DIRECTORY souboru je adresář.  
   
--   FILE_ATTRIBUTE_NORMAL soubor nemá nastavené žádné jiné atributy. Tento atribut je platný pouze v případě, že použitá samostatně. Všechny ostatní atributy souboru přepsat FILE_ATTRIBUTE_NORMAL:  
+-   FILE_ATTRIBUTE_NORMAL soubor nemá nastavené žádné jiné atributy. Tento atribut je platný jenom v případě, že používat samostatně. Všechny ostatní atributy souboru přepsat FILE_ATTRIBUTE_NORMAL:  
   
--   FILE_ATTRIBUTE_HIDDEN souboru je skrytý. Není mají být zahrnuty v seznamu běžných adresářů.  
+-   FILE_ATTRIBUTE_HIDDEN souboru je skrytý. Není součástí běžných adresářů.  
   
--   FILE_ATTRIBUTE_READONLY soubor je jen pro čtení. Aplikace můžete přečíst soubor, ale nelze do něj zapisovat nebo odstranit.  
+-   FILE_ATTRIBUTE_READONLY soubor je jen pro čtení. Aplikace může číst soubor, ale nelze do ní zapisovat nebo ho odstranit.  
   
--   FILE_ATTRIBUTE_SYSTEM soubor je součástí nebo se používá výhradně podle operačního systému.  
+-   FILE_ATTRIBUTE_SYSTEM soubor je součástí nebo používá výhradně operační systém.  
   
--   FILE_ATTRIBUTE_TEMPORARY soubor se používá pro dočasné úložiště. Aplikace by měla zapisovat do souboru, pouze pokud je to nezbytně nutné. Většina dat soubor zůstane v paměti bez vyprazdňuje na médium, protože soubor má být odstraněna.  
+-   FILE_ATTRIBUTE_TEMPORARY soubor se používá jako dočasné úložiště. Aplikace by měla zapisovat do souboru pouze v případě, že je nezbytně nutné. Většina dat souboru zůstane v paměti bez vyprazdňuje na médiu, protože ho budou brzy odstraněny.  
   
  *dwFlags*  
- Určuje podmínky, za kterých dojde k přenosu. Tento parametr může být libovolná z *dwFlags* hodnoty popsané v [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) ve Windows SDK.  
+ Určuje podmínky, za kterých dojde k přenosu. Tento parametr lze rozdělit *dwFlags* podle hodnoty [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) v sadě Windows SDK.  
   
  *dwContext*  
- Identifikátor kontext pro načtení souboru. V tématu **poznámky** Další informace o *dwContext*.  
+ Identifikátor kontextu načítání souborů. Zobrazit **poznámky** Další informace o *dwContext*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetFile` je nejdůležitější rutiny, která zpracovává všechny režie spojená s čtení souboru ze serveru FTP a uložena místně. Aplikace, které jenom načítají data souboru nebo Zavřít kontrolu nad přenos souborů, které vyžadují by měly používat `OpenFile` a [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) místo.  
+ `GetFile` je základní rutinu, která zpracovává všechny režie spojená se čtením souboru ze serveru FTP a ukládat místně. Aplikace, které jen načítají data souboru nebo Zavřít kontrolu nad přenosy souborů, které vyžadují by měly používat `OpenFile` a [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) místo.  
   
- Pokud *dwFlags* je FILE_TRANSFER_TYPE_ASCII, překlad dat souboru taky převede ovládacího prvku a formátování znaků do Windows ekvivalenty. Výchozí přenos je binárního režimu, kde stažení souboru ve stejném formátu, který je uložen na serveru.  
+ Pokud *dwFlags* je FILE_TRANSFER_TYPE_ASCII překladu dat souboru platí také převede ovládacího prvku a formátování znaků, které mají Windows ekvivalenty. Výchozí přenos je binárním režimu, kde se soubor stáhne ve stejném formátu, jak je uložen na serveru.  
   
- Obě *pstrRemoteFile* a *pstrLocalFile* může být buď částečně kvalifikované názvy souborů vůči aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `GetFile` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ Obě *pstrRemoteFile* a *pstrLocalFile* může být buď částečně kvalifikované názvy souborů, vzhledem k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `GetFile` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
- Přepsání *dwContext* výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CFtpConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile  
- Volání této funkce člen a otevřete soubor nachází na serveru FTP pro čtení nebo zápis.  
+ Voláním této členské funkce a otevřete soubor umístěný na serveru FTP pro čtení nebo zápis.  
   
 ```  
 CInternetFile* OpenFile(
@@ -352,41 +352,41 @@ CInternetFile* OpenFile(
   
 ### <a name="parameters"></a>Parametry  
  *pstrFileName*  
- Ukazatel na řetězec, který obsahuje název souboru, který se otevřít.  
+ Ukazatel na řetězec obsahující název souboru, který má být otevřen.  
   
  *dwAccess*  
- Určuje, jak bude soubor přístupný. Může být všeobecné_čtení nebo všeobecné_zápis, ale ne obojí.  
+ Určuje, jak budou mít přístup souboru. Může být všeobecné_čtení nebo GENERIC_WRITE, ale ne obojí.  
   
  *dwFlags*  
- Určuje podmínky, za kterých dojde k následné přenosů. To může být libovolná z následující konstanty FTP_TRANSFER_ *:  
+ Určuje podmínky, za kterých dojde k následující převody. Tou může být kterákoli z následujících konstant FTP_TRANSFER_ *:  
   
--   FTP_TRANSFER_TYPE_ASCII soubor přenáší pomocí metody přenos FTP ASCII (typ A). Převede ovládacího prvku a formátování informace do místní ekvivalenty.  
+-   FTP_TRANSFER_TYPE_ASCII soubor přenese pomocí metody přenosu FTP ASCII (typu A). Převede ovládací prvek a informace o formátování na místní ekvivalenty.  
   
--   FTP_TRANSFER_TYPE_BINARY soubor přenáší data pomocí metody přenosu bitové kopie FTP's (typu I). Přenosy dat souboru přesně jako existuje beze změn. Toto je výchozí metodou přenosu.  
+-   FTP_TRANSFER_TYPE_BINARY soubor přenosy dat prostřednictvím metody přenosu FTP's Image, (typ I). Soubor přenese data přesně tak, jak ho existuje beze změny. Toto je výchozí metodou přenosu.  
   
  *dwContext*  
- Identifikátor kontext pro otevření souboru. V tématu **poznámky** Další informace o *dwContext*.  
+ Identifikátor kontextu pro otevření souboru. Zobrazit **poznámky** Další informace o *dwContext*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CInternetFile](../../mfc/reference/cinternetfile-class.md) objektu.  
+ Ukazatel [cinternetfile –](../../mfc/reference/cinternetfile-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- `OpenFile` je třeba používat v následujících situacích:  
+ `OpenFile` byste měli použít v následujících situacích:  
   
--   Aplikace obsahuje data, která potřebují odesílat a vytvořen jako soubor na serveru FTP, ale, že data nejsou v místním souboru. Jednou `OpenFile` otevře soubor, aplikace používá [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) k odesílání dat souboru FTP na server.  
+-   Aplikace obsahuje data, která se odesílají a vytvořen jako soubor na serveru FTP, ale, že data nejsou v místním souboru. Jednou `OpenFile` otevře soubor, tato aplikace používá [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) k odesílání dat souboru protokolu FTP k serveru.  
   
--   Aplikace musí načíst soubor ze serveru a umístěte ji do aplikace řízené paměť, místo zápisu na disk. Aplikace používá [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) po použití `OpenFile` k otevření souboru.  
+-   Aplikace musí načíst soubor ze serveru a umístěte ji do aplikace řízené paměti namísto zápis na disk. Aplikace používá [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) po použití `OpenFile` k otevření souboru.  
   
--   Aplikace musí dobře úroveň kontroly nad přenosu souborů. Aplikace může například, chcete-li zobrazit průběh řízení informace o průběhu stavu přenos souboru při stahování souboru.  
+-   Aplikace potřebuje jemné úroveň kontroly nad přenos souborů. Aplikace může třeba k zobrazení průběh řízení informace o průběhu stav přenosu souboru při stahování souboru.  
   
- Po volání `OpenFile` a dokud volání `CInternetConnection::Close`, aplikace může volat pouze [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, nebo [ CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Volání funkcí jiných FTP pro stejné relace FTP se nezdaří a nastavit kód chyby na FTP_ETRANSFER_IN_PROGRESS.  
+ Po volání `OpenFile` a až do volání `CInternetConnection::Close`, aplikace může volat pouze [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, nebo [ CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Volání dalších funkcí FTP pro stejné relace FTP bude selže a nastaví kód chyby: FTP_ETRANSFER_IN_PROGRESS.  
   
- *PstrFileName* parametr může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `OpenFile` před jeho použitím překládá oddělovačů název adresáře na příslušné znaků.  
+ *PstrFileName* parametr může být buď částečně kvalifikované název souboru úplnou nebo relativní k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `OpenFile` Přeloží název oddělovač do příslušných znaků před jeho použitím.  
   
- Přepsání *dwContext* výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CFtpConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ##  <a name="putfile"></a>  CFtpConnection::PutFile  
- Volání této funkce člen uložit soubor na serveru FTP.  
+ Zavolejte tuto členskou funkci pro uložení souboru na FTP server.  
   
 ```  
 BOOL PutFile(
@@ -398,27 +398,27 @@ BOOL PutFile(
   
 ### <a name="parameters"></a>Parametry  
  *pstrLocalFile*  
- Ukazatel na řetězec, který obsahuje název souboru k odeslání z místního systému.  
+ Ukazatel na řetězec obsahující název souboru má být odeslán z místního systému.  
   
  *pstrRemoteFile*  
- Ukazatel na řetězec, který obsahuje název souboru, který se vytvořit na serveru FTP.  
+ Ukazatel na řetězec obsahující název souboru k vytvoření serveru FTP.  
   
  *dwFlags*  
- Určuje podmínky, za kterých dojde k přenosu souboru. Může být konstanty FTP_TRANSFER_ * popsané v [OpenFile](#openfile).  
+ Určuje podmínky, za kterých dojde k přenosu souboru. Může být konstanty FTP_TRANSFER_ * je popsáno v [OpenFile](#openfile).  
   
  *dwContext*  
- Identifikátor kontext k umístění souboru. V tématu **poznámky** Další informace o *dwContext*.  
+ Identifikátor kontextu umístění souboru. Zobrazit **poznámky** Další informace o *dwContext*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `PutFile` je nejdůležitější rutiny, která zpracovává všechny operace spojené s ukládání souborů na serveru FTP. Aplikace, která jenom k odesílání dat nebo blíže kontrolu nad přenos souborů, které vyžadují by měly používat [OpenFile](#openfile) a [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
+ `PutFile` je základní rutinu, která zpracovává všechny operace spojené s ukládáním souboru na serveru FTP. Aplikace, která odesílala jen data, nebo, které vyžadují kontrolu nad přenosy souborů, by měly používat [OpenFile](#openfile) a [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
   
- Přepsání `dwContext` výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CFtpConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Přepsat `dwContext` výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CFtpConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ##  <a name="remove"></a>  CFtpConnection::Remove  
- Volání této funkce člen odstraňte zadaný soubor z připojeného serveru.  
+ Voláním této členské funkce odstranit zadaný soubor z připojeného serveru.  
   
 ```  
 BOOL Remove(LPCTSTR pstrFileName);
@@ -429,13 +429,13 @@ BOOL Remove(LPCTSTR pstrFileName);
  Ukazatel na řetězec obsahující název souboru, který chcete odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- *PstrFileName* parametr může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). **Odebrat** funkce překládá oddělovačů název adresáře na příslušné znaků před použitím.  
+ *PstrFileName* parametr může být buď částečně kvalifikované název souboru úplnou nebo relativní k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `Remove` Funkce překládá název oddělovač do příslušných znaků před jejich použití.  
   
 ##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory  
- Volání této funkce člena odebrat ze serveru připojeného zadaný adresář.  
+ Voláním této členské funkce k odebrání zadaného adresáře z připojeného serveru.  
   
 ```  
 BOOL RemoveDirectory(LPCTSTR pstrDirName);
@@ -443,18 +443,18 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
 ### <a name="parameters"></a>Parametry  
  *pstrDirName*  
- Ukazatel na řetězec obsahující adresář, který chcete odebrat.  
+ Ukazatel na řetězec obsahující adresář, který má být odebrán.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Použití [GetCurrentDirectory](#getcurrentdirectory) k určení serveru aktuální pracovní adresář. Není Předpokládejme, že vzdálený systém, můžete je připojený ke kořenový adresář.  
+ Použití [GetCurrentDirectory](#getcurrentdirectory) určit aktuální pracovní adresář serveru. Nepředpokládejte, že vzdálený systém, můžete se připojil do kořenového adresáře.  
   
- *PstrDirName* parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `RemoveDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ *PstrDirName* parametr může být buď částečně nebo plně kvalifikovaný název souboru relativní vzhledem k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `RemoveDirectory` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
 ##  <a name="rename"></a>  CFtpConnection::Rename  
- Volání této funkce člen přejmenovat zadaný soubor na serveru připojený.  
+ Voláním této členské funkce přejmenovat zadaný soubor na připojeném serveru.  
   
 ```  
 BOOL Rename(
@@ -464,19 +464,19 @@ BOOL Rename(
   
 ### <a name="parameters"></a>Parametry  
  *pstrExisting*  
- Ukazatel na řetězec obsahující aktuální název souboru, který se přejmenovat.  
+ Ukazatel na řetězec obsahující aktuální název souboru, který má být přejmenován.  
   
  *pstrNew*  
- Ukazatel na řetězec obsahující nový název souboru.  
+ Ukazatel na řetězec obsahující název nového souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- *PstrExisting* a *pstrNew* parametry může být buď částečně kvalifikovaný název souboru relativní k aktuálnímu adresáři nebo plně kvalifikovaný. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). **Přejmenujte** před použitím překládá oddělovačů název adresáře na příslušné znaků.  
+ *PstrExisting* a *pstrNew* parametrů může být buď částečně kvalifikované název souboru úplnou nebo relativní k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `Rename` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
 ##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory  
- Volání této funkce člen změnit na jiný adresář na serveru FTP.  
+ Voláním této členské funkce, chcete-li změnit na jiný adresář serveru FTP.  
   
 ```  
 BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
@@ -484,18 +484,18 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
   
 ### <a name="parameters"></a>Parametry  
  *pstrDirName*  
- Ukazatel na řetězec, který obsahuje název adresáře.  
+ Ukazatel na řetězec obsahující název adresáře.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- *PstrDirName* parametr může být buď částečně nebo plně kvalifikovaný název souboru vůči aktuálnímu adresáři. Zpětné lomítko (\\) nebo jako oddělovače adresář pro buď název lze použít lomítko (/). `SetCurrentDirectory` Před použitím, překládá oddělovačů název adresáře na příslušné znaků.  
+ *PstrDirName* parametr může být buď částečně nebo plně kvalifikovaný název souboru relativní vzhledem k aktuálnímu adresáři. Zpětné lomítko (\\) nebo lomítkem (/) lze použít jako oddělovač adresářů pro buď název. `SetCurrentDirectory` předtím, než se používají se přeloží název oddělovač do příslušných znaků.  
   
- Použití [GetCurrentDirectory](#getcurrentdirectory) k určení aktuální pracovní adresář serveru FTP. Není Předpokládejme, že vzdálený systém, můžete je připojený ke kořenový adresář.  
+ Použití [GetCurrentDirectory](#getcurrentdirectory) určit aktuální pracovní adresář serveru FTP. Nepředpokládejte, že vzdálený systém, můžete se připojil do kořenového adresáře.  
   
 ## <a name="see-also"></a>Viz také  
- [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)   
+ [Cinternetconnection – třída](../../mfc/reference/cinternetconnection-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)   
+ [Cinternetconnection – třída](../../mfc/reference/cinternetconnection-class.md)   
  [CInternetSession – třída](../../mfc/reference/cinternetsession-class.md)

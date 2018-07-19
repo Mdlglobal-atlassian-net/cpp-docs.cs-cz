@@ -1,5 +1,5 @@
 ---
-title: is_literal_type třída | Microsoft Docs
+title: is_literal_type – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b123144643fd50b019853d21e4140ba2d931f7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14b2fe5a14eaf264377a1f818227d73e134b030
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844982"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957960"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type – třída
 
-Kontroluje, zda typ lze použít jako `constexpr` proměnné nebo sestavený, používá nebo vrácená z `constexpr` funkce.
+Ověřuje, zda typ lze použít jako `constexpr` proměnné nebo vytvořen, používá nebo vrácená z `constexpr` funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,18 +37,18 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `T` je *typu literálu*, jinak má hodnotu false. Typ literálu je buď `void`, skalárního typu, typu odkazu, pole literálu typu nebo typu literálu třídy. Typ literálu třídy je typu třídy, který má trivial – destruktor, je typ agregace nebo má alespoň jeden jiný přesunutí, bez kopírování `constexpr` konstruktor a všechny jeho základní třídy a nestatické datových členů jsou typy literálu stálé. Typ literál je vždy typu literálu, koncept typu literálu obsahuje všechno, co kompilátor můžete vyhodnotit jako `constexpr` v době kompilace.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je *typ literálu*, v opačném případě obsahuje hodnotu false. Typ literálu je buď **void**, skalárního typu, typ odkazu, pole literálu typu nebo typu literál třídy. Typ literálu třídy je typ třídy, který má destruktor triviální, je typ agregace nebo má alespoň jeden bez – přesun, bez kopírování `constexpr` konstruktor a všechny její základní třídy a nestatické datové členy jsou typy literálu není typu volatile. Typ literálu je vždy typu literálu, koncept literál zahrnuje cokoli, co kompilátor můžete vyhodnotit jako `constexpr` v době kompilace.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

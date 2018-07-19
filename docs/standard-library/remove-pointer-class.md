@@ -1,5 +1,5 @@
 ---
-title: remove_pointer – třída | Microsoft Docs
+title: remove_pointer – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745711e1dd5abde022d0a21d5cb1ea6c013931a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d9c8ddf5941394a8979832a753ed73cfda5f0876
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959121"
 ---
 # <a name="removepointer-class"></a>remove_pointer – třída
 
@@ -40,11 +40,11 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_pointer<T>` obsahuje upravit – typ, který je `T1` při `T` je ve formátu `T1*`, `T1* const`, `T1* volatile`, nebo `T1* const volatile`, jinak `T`.
+Instance `remove_pointer<T>` obsahuje změněný typ, který je `T1` při *T* má formu `T1*`, `T1* const`, `T1* volatile`, nebo `T1* const volatile`, jinak *T*.
 
 ## <a name="example"></a>Příklad
 
@@ -72,9 +72,9 @@ remove_pointer_t<int *> == int
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [add_pointer – třída](../standard-library/add-pointer-class.md)<br/>

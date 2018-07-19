@@ -1,5 +1,5 @@
 ---
-title: soukromé (C++) | Microsoft Docs
+title: privátní (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb0b8c748a3cf92faae451ab024d5592bb24b47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8acbfb92ad8139d01581561aa61a29b6e429538f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947498"
 ---
 # <a name="private-c"></a>private (C++)
 ## <a name="syntax"></a>Syntaxe  
@@ -32,27 +33,27 @@ private base-class
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Při předchozím seznam členy třídy, `private` – klíčové slovo určuje, že jsou přístupné pouze z členských funkcí a přátel třídy členů. To platí pro všechny členy deklarovaný až další specifikátor přístupu nebo na konci třídy.  
+ Při předchozím seznam členů třídy **privátní** – klíčové slovo určuje, že tyto členy jsou přístupné pouze členskými funkcemi a přáteli třídy. To platí pro všechny členy deklarované až do dalšího specifikátoru přístupu nebo na konci třídy.  
   
- Při předchozím název základní třídy, `private` – klíčové slovo určuje, že veřejné a chráněné členy základní třídy jsou soukromé členy odvozené třídy.  
+ Když předchází název základní třídy **privátní** – klíčové slovo určuje, že jsou veřejné a chráněné členy základní třídy soukromé členy odvozené třídy.  
   
- Výchozí úroveň přístupu členů v třídě je soukromé. Výchozí úroveň přístupu členů ve struktuře nebo sjednocení je veřejný.  
+ Přístup k výchozím členů ve třídě je privátní. Přístup k výchozím členů struktury nebo sjednocení je přístup public.  
   
- Pro třídy privátní a veřejné pro struktury je výchozí přístup základní třídy. Sjednocení nemůžou mít základní třídy.  
+ Pro třídy privátních a veřejných pro struktury je výchozí přístup základní třídy. Sjednocení nemohou mít základní třídy.  
   
- Související informace najdete v tématu [friend](../cpp/friend-cpp.md), [veřejné](../cpp/public-cpp.md), [chráněné](../cpp/protected-cpp.md)a přístup ke členu tabulkou v [řízení přístupu ke členům třídy](member-access-control-cpp.md).  
+ Související informace naleznete v tématu [friend](../cpp/friend-cpp.md), [veřejné](../cpp/public-cpp.md), [chráněné](../cpp/protected-cpp.md)a v tabulce přístupu ke členům v [řízení přístupu ke členům třídy](member-access-control-cpp.md).  
   
 ## <a name="clr-specific"></a>Specifické pro možnost /clr  
- Typy CLR C++ přístup specifikátor klíčová slova (**veřejné**, `private`, a `protected`) může ovlivnit viditelnost typy a metody s ohledem na sestavení. Další informace najdete v tématu [řízení přístupu ke členu](member-access-control-cpp.md).  
+ U typů modulu CLR, klíčová slova specifikátoru přístupu jazyka C++ (**veřejné**, **privátní**, a **chráněné**) může ovlivnit viditelnost typů a metod s ohledem na sestavení. Další informace najdete v tématu [řízení přístupu ke členu](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Soubory kompilovat s [/LN](../build/reference/ln-create-msil-module.md) nemá vliv toto chování. V tomto případě budou všechny spravované třídy (veřejné nebo soukromé) viditelné.  
+>  Souborů zkompilovaných pomocí [/LN](../build/reference/ln-create-msil-module.md) toto chování netýká. V tomto případě budou všechny spravované třídy (veřejné nebo soukromé) viditelné.  
   
 ## <a name="end-clr-specific"></a>Specifické pro možnost END /clr  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // keyword_private.cpp  
 class BaseClass {  
 public:  

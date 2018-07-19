@@ -1,5 +1,5 @@
 ---
-title: Třída CMouseManager | Microsoft Docs
+title: Cmousemanager – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1788e5f3938cc496e66aa24d6d1b6a37603e7d7b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039944"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852470"
 ---
-# <a name="cmousemanager-class"></a>CMouseManager – třída
-Uživatel může přidružit jiné příkazy na konkrétní [CView](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř tohoto zobrazení.  
+# <a name="cmousemanager-class"></a>Cmousemanager – třída
+Umožňuje uživateli přidružit různé příkazy ke konkrétním [CView](../../mfc/reference/cview-class.md) objektu při poklepání uvnitř daného zobrazení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,22 +54,22 @@ class CMouseManager : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMouseManager::AddView](#addview)|Přidá `CView` do objektu **přizpůsobení** dialogové okno. **Přizpůsobení** dialogové okno umožňuje uživatelům přidružit příkaz dvakrát klikněte na soubor pro každou z uvedených zobrazení.|  
-|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Vrátí příkaz, který se spustí při poklepání uvnitř zadané zobrazení.|  
+|[CMouseManager::AddView](#addview)|Přidá `CView` objektu **přizpůsobení** dialogové okno. **Přizpůsobení** dialogové okno umožňuje uživateli přidružit dvakrát klikněte na příkaz pro každou z uvedených zobrazení.|  
+|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Vrátí příkaz, který se spouští při poklepání uvnitř zadaná zobrazení.|  
 |[CMouseManager::GetViewIconId](#getviewiconid)|Vrátí ikony přidružené k ID zadané zobrazení.|  
-|[CMouseManager::GetViewIdByName](#getviewidbyname)|Vrátí ID zobrazení, které jsou přidružené k názvu zadané zobrazení.|  
+|[CMouseManager::GetViewIdByName](#getviewidbyname)|Vrátí ID zobrazení související s názvem zadaného zobrazení.|  
 |[CMouseManager::GetViewNames](#getviewnames)|Načte seznam všech názvů přidané zobrazení.|  
-|[CMouseManager::LoadState](#loadstate)|Načítání `CMouseManager` stavu z registru systému Windows.|  
-|[CMouseManager::SaveState](#savestate)|Zapíše `CMouseManager` stavu do registru systému Windows.|  
-|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|Přidruží zadané příkaz a zadané zobrazení.|  
+|[CMouseManager::LoadState](#loadstate)|Načtení `CMouseManager` stavu z registru Windows.|  
+|[CMouseManager::SaveState](#savestate)|Zapíše `CMouseManager` stav do registru Windows.|  
+|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|Přidruží zadaný příkaz a zadané zobrazení.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMouseManager` Třída udržuje kolekci `CView` objekty. Každé zobrazení je identifikován podle názvu a podle ID. Tato zobrazení se zobrazují v **přizpůsobení** dialogové okno. Uživatel může změnit příkaz, který je přidružen ke žádné zobrazení prostřednictvím **přizpůsobení** dialogové okno. Přidružený příkaz se spustí při poklepání v tomto zobrazení. Pro podporu tohoto z hlediska kódování, je nutné zpracovat WM_LBUTTONDBLCLK zprávu a volání [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkce v kódu pro tento `CView` objektu...  
+ `CMouseManager` Třídy udržuje kolekci `CView` objekty. Každé zobrazení je identifikován název a identifikátor. Tato zobrazení jsou uvedeny v **přizpůsobení** dialogové okno. Uživatel může změnit příkaz, který je přidružený k libovolné zobrazení prostřednictvím **přizpůsobení** dialogové okno. Přidružený příkaz je proveden, když uživatel poklepe v tomto zobrazení. Z hlediska kódování z toho důvodu musí zpracovat zprávu WM_LBUTTONDBLCLK a volání [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkce v kódu, který `CView` objektu...  
   
- Byste je neměli vytvářet `CMouseManager` objekt ručně. Vytvoří se rámcem vaší aplikace. Ho bude také být zničený, automaticky při ukončení aplikace uživatelem. Chcete-li získat ukazatel myši správci pro vaši aplikaci, volejte [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager).  
+ Nevytvářejte `CMouseManager` objekt ručně. Vytvoří se v rámci rozhraní vaší aplikace. Je také zničí automaticky při ukončení aplikace uživatelem. Chcete-li získat ukazatel myši správci pro vaši aplikaci, zavolejte [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CMouseManager`  
   
@@ -77,7 +77,7 @@ class CMouseManager : public CObject
  **Záhlaví:** afxmousemanager.h  
   
 ##  <a name="addview"></a>  CMouseManager::AddView  
- Zaregistruje [CView](../../mfc/reference/cview-class.md) objektu s [CMouseManager třída](../../mfc/reference/cmousemanager-class.md) pro podporu vlastních myši chování.  
+ Zaregistruje [CView](../../mfc/reference/cview-class.md) objektu [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md) pro podporu myši vlastní chování.  
   
 ```  
 BOOL AddView(
@@ -93,86 +93,86 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iViewId*  
- ID zobrazení.  
+ [in] *iViewId*  
+ ID zobrazení  
   
- [v] *uiViewNameResId*  
- ID prostředku řetězec, který odkazuje na název zobrazení.  
+ [in] *uiViewNameResId*  
+ ID prostředku řetězce, který odkazuje na název zobrazení.  
   
- [v] *uiIconId*  
- Ikona ID zobrazení  
+ [in] *uiIconId*  
+ ID ikony zobrazení  
   
- [v] *iId*  
- ID zobrazení.  
+ [in] *iId*  
+ ID zobrazení  
   
- [v] *lpszViewName*  
+ [in] *lpszViewName*  
  Název zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Za účelem podpory chování vlastní myši, musí být registrovaný zobrazení pomocí `CMouseManager` objektu. Jakýkoli objekt odvozené z `CView` třídy lze registrovat pomocí myši správce. Řetězec a ikony přidružené zobrazení se zobrazují v **myši** kartě **přizpůsobit** dialogové okno.  
+ Za účelem podpory chování vlastní myši, zobrazení, musí zaregistrovat `CMouseManager` objektu. Libovolný objekt odvozený od `CView` třídy lze registrovat pomocí myši správce. Řetězec a ikonu přiřazenou k zobrazení se zobrazují v **myši** karty **vlastní** dialogové okno.  
   
- Je zodpovědností programátory k vytváření a údržbě zobrazení ID, jako *iViewId* a *iId*.  
+ Zodpovídá programátor k vytváření a údržbě zobrazení ID, jako *iViewId* a *iId*.  
   
  Další informace o tom, jak poskytnout vlastní myši chování najdete v tématu [přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md).  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak načíst ukazatel na `CMouseManager` objekt pomocí `CWinAppEx::GetMouseManager` metoda a `AddView` metoda v `CMouseManager` – třída. Tento fragment kódu je součástí [vzorek sběru stavu](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje, jak se načítají ukazatel na `CMouseManager` s použitím `CWinAppEx::GetMouseManager` metoda a `AddView` metoda ve `CMouseManager` třídy. Tento fragment kódu je součástí [vzorek sběru stavu](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
 ##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand  
- Vrátí příkaz, který se spustí při poklepání uvnitř zadané zobrazení.  
+ Vrátí příkaz, který se spouští při poklepání uvnitř zadaná zobrazení.  
   
 ```  
 UINT GetViewDblClickCommand(int iId) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iId*  
+ [in] *iId*  
  ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Identifikátor příkazu, pokud je zobrazení přidružený příkaz; jinak 0.  
+ Identifikátor příkazu, pokud zobrazení je spojen s příkazem; jinak 0.  
   
 ##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId  
- Načte ikonu spojené s ID zobrazení.  
+ Načte ikonu přiřazenou k ID zobrazení  
   
 ```  
 UINT GetViewIconId(int iViewId) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iViewId*  
+ [in] *iViewId*  
  ID zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Identifikátor prostředku ikony v případě úspěšného; jinak 0.  
+ Identifikátor prostředku ikony v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda se nezdaří, pokud zobrazení není nejprve zaregistrovat pomocí [CMouseManager::AddView](#addview).  
+ Tato metoda se nezdaří, pokud zobrazení není nejprve registrována pomocí [CMouseManager::AddView](#addview).  
   
 ##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName  
- Načte ID zobrazení související s názvem zobrazení.  
+ Načte zobrazení ID přidružené k názvu zobrazení.  
   
 ```  
 int GetViewIdByName(LPCTSTR lpszName) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszName*  
+ [in] *lpszName*  
  Název zobrazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- ID zobrazení v případě úspěšného; jinak 0.  
+ ID zobrazení v případě úspěchu; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda vyhledá prostřednictvím zobrazení registrovaný pomocí [CMouseManager::AddView](#addview).  
+ Tato metoda vyhledává registrovaných pomocí zobrazení [CMouseManager::AddView](#addview).  
   
 ##  <a name="getviewnames"></a>  CMouseManager::GetViewNames  
- Načte seznam všech názvů registrované zobrazení.  
+ Načte seznam všech názvů registrovaných zobrazení.  
   
 ```  
 void GetViewNames(CStringList& listOfNames) const;  
@@ -183,48 +183,48 @@ void GetViewNames(CStringList& listOfNames) const;
  Odkaz na `CStringList` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda doplní parametr `listOfNames` s názvy všech zobrazení registrovaný pomocí [CMouseManager::AddView](#addview).  
+ Tato metoda vyplní parametr `listOfNames` s názvy všech registrovaných pomocí zobrazení [CMouseManager::AddView](#addview).  
   
 ##  <a name="loadstate"></a>  CMouseManager::LoadState  
- Načte stav [CMouseManager třída](../../mfc/reference/cmousemanager-class.md) z registru.  
+ Načte stav [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md) z registru.  
   
 ```  
 BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
  Cesta klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Informace o stavu, který je načten z registru zahrnuje registrované zobrazení, zobrazit identifikátory a přidružené příkazy. Pokud parametr *lpszProfileName* je `NULL`, načte tato funkce `CMouseManager` data z umístění v registru výchozí řízené [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
+ Informace o stavu načíst z registru obsahuje registrovaná zobrazení, zobrazit identifikátory a přidružené příkazy. Pokud parametr *lpszProfileName* má hodnotu NULL, tato funkce načítá `CMouseManager` data z výchozího umístění registru řídí [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md).  
   
- Ve většině případů nemáte přímo volání této funkce. Je volána jako součást procesu inicializace pracovního prostoru. Další informace o procesu inicializace pracovního prostoru najdete v tématu [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
+ Ve většině případů není nutné tuto funkci volat přímo. Volá se jako součást procesu inicializace pracovního prostoru. Další informace o procesu inicializace pracovního prostoru najdete v tématu [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
 ##  <a name="savestate"></a>  CMouseManager::SaveState  
- Zapíše stav [CMouseManager třída](../../mfc/reference/cmousemanager-class.md) do registru.  
+ Zapíše stav [cmousemanager – třída](../../mfc/reference/cmousemanager-class.md) do registru.  
   
 ```  
 BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszProfileName*  
+ [in] *lpszProfileName*  
  Cesta klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Informace o stavu zapsat do registru zahrnuje všechny registrované zobrazení, zobrazit identifikátory a přidružené příkazy. Pokud parametr *lpszProfileName* je `NULL`, zapisuje tato funkce `CMouseManager` data do výchozího umístění registru řízené [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
+ Informace o stavu zapsána do registru obsahuje přidružené příkazy, zobrazit identifikátory a všech registrovaných zobrazení. Pokud parametr *lpszProfileName* má hodnotu NULL, tato funkce zapíše `CMouseManager` data do výchozího umístění registru řídí [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md).  
   
- Ve většině případů nemáte přímo volání této funkce. Je volána v rámci procesu serializace pracovního prostoru. Další informace o procesu serializace prostoru najdete v tématu [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
+ Ve většině případů není nutné tuto funkci volat přímo. Volá se jako součást procesu serializace pracovního prostoru. Další informace o pracovním prostoru procesu serializace naleznete v tématu [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
 ##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk  
- Přidruží vlastního příkazu zobrazení, které je nejprve zaregistrovat pomocí myši správce.  
+ Zobrazení, které je nejprve registrována pomocí myši správce přiřadí vlastní příkaz.  
   
 ```  
 void SetCommandForDblClk(
@@ -233,16 +233,16 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *iViewId*  
+ [in] *iViewId*  
  Identifikátor zobrazení.  
   
- [v] *uiCmd*  
+ [in] *uiCmd*  
  Identifikátor příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
- Aby bylo možné přidružit vlastního příkazu k zobrazení, je nutné nejprve zaregistrovat zobrazení pomocí [CMouseManager::AddView](#addview). `AddView` Metoda vyžaduje identifikátor zobrazení jako vstupní parametr. Jakmile si zaregistrujete zobrazení, můžete volat `CMouseManager::SetCommandForDblClk` s stejné zobrazení identifikátor vstupní parametr, který jste zadali do `AddView`. Při poklepání myši v registrovaných zobrazení, následně bude aplikace spustit příkaz indikován *uiCmd.* Pro podporu chování vlastní myš, bude také muset přizpůsobit zobrazení zaregistrován pomocí myši správce. Další informace o chování vlastní myši najdete v tématu [přizpůsobení klávesnice a myši](../keyboard-and-mouse-customization.md).  
+ Aby bylo možné přidružit k zobrazení vlastního příkazu, musíte se nejprve zaregistrovat zobrazení pomocí [CMouseManager::AddView](#addview). `AddView` Metoda vyžaduje zobrazení identifikátor jako vstupní parametr. Jakmile si zaregistrujete zobrazení, můžete volat `CMouseManager::SetCommandForDblClk` pomocí stejného zobrazení identifikátor vstupní parametr, který jste zadali do `AddView`. Po tomto datu, když uživatel pokliká myší v registrovaných zobrazení, aplikace se provést příkaz indikován *uiCmd.* Pro podporu myši vlastní chování, bude také muset přizpůsobit zobrazení zaregistrované pomocí myši správce. Další informace týkající se myši vlastní chování najdete v tématu [přizpůsobení klávesnice a myši](../keyboard-and-mouse-customization.md).  
   
- Pokud *uiCmd* je nastaven na hodnotu 0, zadané zobrazení je už přidružený příkaz.  
+ Pokud *uiCmd* je nastavena na hodnotu 0, zadané zobrazení je už přidružený příkaz.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

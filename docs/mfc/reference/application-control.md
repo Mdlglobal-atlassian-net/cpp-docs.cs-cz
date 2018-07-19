@@ -1,5 +1,5 @@
 ---
-title: Řízení aplikace | Microsoft Docs
+title: Řízení aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,52 +16,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338718"
 ---
 # <a name="application-control"></a>Řízení aplikace
-OLE vyžaduje významné kontrolu nad aplikací a jejich objekty. OLE systémové knihovny DLL musí být možné spustit a verze aplikace automaticky, koordinaci jejich produkční a úpravy objektů a tak dále. Funkce v tomto tématu splňovat tyto požadavky. Kromě volané systémem OLE knihovny DLL, musí tyto funkce někdy nazývá také aplikace. 
+OLE vyžaduje podstatné kontrolu nad aplikacemi a objekty. OLE systémové knihovny DLL musí být možné spouštět a vydávejte verze aplikací automaticky, koordinovat jejich výrobu a úpravy objektů a tak dále. Funkce v tomto tématu splňovat tyto požadavky. Kromě volané OLE systémové knihovny DLL, tyto funkce musí být říká se jim také aplikace. 
   
 ### <a name="application-control"></a>Řízení aplikace  
   
 |||  
 |-|-|  
-|[Afxolecanexitapp –](#afxolecanexitapp)|Určuje, zda můžete ukončit aplikaci.|  
-|[Afxolegetmessagefilter –](#afxolegetmessagefilter)|Načte aktuální filtr zpráv aplikace.|  
+|[Afxolecanexitapp –](#afxolecanexitapp)|Určuje, zda lze ukončit aplikaci.|  
+|[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Načte aktuální filtr zpráv aplikace.|  
 |[Afxolegetuserctrl –](#afxolegetuserctrl)|Načte aktuální příznak uživatelského ovládacího prvku.|  
 |[Afxolesetuserctrl –](#afxolesetuserctrl)|Nastaví nebo vymaže příznak uživatelského ovládacího prvku.|  
-|[Afxolelockapp –](#afxolelockapp)|Zvětší počet globální rozhraní framework počtu aktivních objektů v aplikaci.|  
-|[Afxolelockcontrol –](#afxolelockcontrol)| Zamkne objektu pro vytváření tříd zadaný ovládacího prvku. |
-|[Afxoleunlockapp –](#afxoleunlockapp)|Snižuje počet rozhraní framework počtu aktivních objektů v aplikaci.| 
-|[Afxoleunlockcontrol –](#afxoleunlockcontrol)| Odemkne objektu pro vytváření tříd zadaný ovládacího prvku. |
+|[AfxOleLockApp](#afxolelockapp)|Zvýší počet globální v rámci počtu aktivních objektů v aplikaci.|  
+|[Afxolelockcontrol –](#afxolelockcontrol)| Zamkne objekt pro vytváření tříd zadaného prvku. |
+|[Funkci AfxOleUnlockApp](#afxoleunlockapp)|Sníží počet rozhraní framework, které se počet aktivních objektů v aplikaci.| 
+|[Afxoleunlockcontrol –](#afxoleunlockcontrol)| Odemkne objekt pro vytváření tříd zadaného prvku. |
 |[Afxoleregisterserverclass –](#afxoleregisterserverclass)|Zaregistruje server v registru systému OLE.|  
-|[Afxoleseteditmenu –](#afxoleseteditmenu)|Implementuje uživatelské rozhraní pro *typename* objektu příkazu.|  
+|[Afxoleseteditmenu –](#afxoleseteditmenu)|Implementuje uživatelské rozhraní pro *typename* objekt příkazu.|  
 
   
 ##  <a name="afxolecanexitapp"></a>  Afxolecanexitapp –  
- Určuje, zda můžete ukončit aplikaci.  
+ Určuje, zda lze ukončit aplikaci.  
   
 ```   
 BOOL AFXAPI AfxOleCanExitApp(); 
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud aplikace můžete ukončit; jinak 0.  
+ Nenulové, pokud můžete ukončit aplikace; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Aplikace by neměl skončí, pokud existují nevyřízené odkazy na jeho objektů. Globální funkce `AfxOleLockApp` a `AfxOleUnlockApp` zvýší a sníží, čítač odkazy na objekty aplikace. Aplikace by neměl ukončit, pokud je toto počítadlo nenulové hodnoty. Pokud je čítač nenulové, hlavní okno aplikace je skrytý (ne zničení), když uživatel vybere ze systému nabídky nebo ukončení v nabídce Soubor zavřete. Tato funkce volá framework `CFrameWnd::OnClose`.  
+ Aplikace by neměl ukončit, pokud existují zbývajících odkazů na objekty. Globální funkce `AfxOleLockApp` a `AfxOleUnlockApp` zvýší a sníží, čítač odkazů na objekty aplikaci. Aplikace by neměl ukončit, když tento čítač je nenulové. Pokud je čítač nenulovou hodnotu, když uživatel vybere zavření ze systémové nabídky nebo ukončit v nabídce Soubor je skrytý (nejsou zničeny) hlavního okna aplikace. Rozhraní volá tuto funkci `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxdisp.h 
+ **Hlavička**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>  Afxolegetmessagefilter –  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
  Načte aktuální filtr zpráv aplikace.  
   
 ```   
@@ -72,7 +72,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
  Ukazatel na aktuální filtr zpráv.  
   
 ### <a name="remarks"></a>Poznámky  
- Volání této funkce pro přístup k aktuální `COleMessageFilter`-odvozené objekt, stejně, jako by volání `AfxGetApp` pro přístup k aktuálnímu objektu aplikace.  
+ Voláním této funkce pro přístup k aktuálním `COleMessageFilter`-odvozenému objektu, stejně jako by volání `AfxGetApp` pro přístup k aktuálnímu objektu aplikace.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAutomation#3](../../mfc/codesnippet/cpp/application-control_2.cpp)]  
@@ -80,7 +80,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
  [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxwin.h 
+ **Hlavička**: afxwin.h 
 
 ##  <a name="afxolegetuserctrl"></a>  Afxolegetuserctrl –  
  Načte aktuální příznak uživatelského ovládacího prvku.  
@@ -90,16 +90,16 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je uživatel v ovládacím prvku aplikace; jinak 0.  
+ Nenulové, pokud je uživatel v ovládacím prvku aplikace; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Uživatel je v ovládacím prvku aplikace, když uživatel explicitně otevřít nebo vytvořit nový dokument. Uživatel je také v ovládacím prvku Pokud aplikaci nebyl spuštěn OLE systémové knihovny DLL – jinými slovy, pokud uživatel spustí aplikaci s prostředí systému.  
+ Uživatel je v ovládacím prvku aplikace, když uživatel explicitně otevřít nebo vytvořit nový dokument. Uživatel je také v ovládacím prvku v případě, že se aplikace spustí OLE systémové knihovny DLL – jinými slovy, pokud uživatel spustí aplikaci k prostředí systému.  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxdisp.h
+ **Hlavička**: afxdisp.h
 
 ##  <a name="afxolesetuserctrl"></a>  Afxolesetuserctrl –  
- Nastaví nebo vymaže příznak uživatelský ovládací prvek, který je vysvětleno v referenční informace pro `AfxOleGetUserCtrl`.  
+ Nastaví nebo vymaže příznak uživatelský ovládací prvek, který je vysvětlen v referenční dokumentaci pro `AfxOleGetUserCtrl`.  
   
 ```  
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl); 
@@ -107,56 +107,56 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
   
 ### <a name="parameters"></a>Parametry  
  *bUserCtrl*  
- Určuje, zda příznak řízení uživatelských nastavení nebo vymazat.  
+ Určuje, zda je uživatelský ovládací prvek příznak nastavení nebo vymazat.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework volá tuto funkci po uživatel vytvoří nebo načtení dokumentu, ale není v případě, že dokument je načíst nebo vytvořena prostřednictvím nepřímé akce, jako načítání vložený objekt z kontejneru aplikace.  
+ Rozhraní volá tuto funkci Pokud uživatel vytvoří nebo načte dokument, ale ne v případě, že dokument je načtení nebo vytvoření prostřednictvím nepřímé akce, jako je načítání vloženého objektu z aplikace typu kontejner.  
   
- Volání této funkce, pokud jiné akce v aplikaci by měla umístění uživatele v ovládacím prvku aplikace.  
+ Voláním této funkce, když se další akce v aplikaci by měl uživatel v ovládacím prvku aplikace.  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxdisp.h
+ **Hlavička**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>  Afxolelockapp –  
- Zvětší počet globální rozhraní framework počtu aktivních objektů v aplikaci.  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
+ Zvýší počet globální v rámci počtu aktivních objektů v aplikaci.  
   
 ```   
 void AFXAPI AfxOleLockApp(); 
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní framework udržuje počet objektů v aplikaci aktivní. `AfxOleLockApp` a `AfxOleUnlockApp` funkcí, v uvedeném pořadí, zvýší a sníží tento počet.  
+ Rozhraní framework udržuje počet objektů v aplikace aktivní. `AfxOleLockApp` a `AfxOleUnlockApp` funkce, v uvedeném pořadí, zvýší a sníží počet.  
   
- Když se uživatel pokusí o zavřete aplikaci, která má aktivní objekty – aplikace, pro kterou je tento počet aktivních objektů nenulové hodnoty – rozhraní skryje aplikace ze zobrazení uživatele místo úplné vypnutí. `AfxOleCanExitApp` Funkce určuje, zda můžete ukončit aplikaci.  
+ Když se uživatel pokusí o zavřít aplikaci, která má aktivní objekty – aplikaci, pro kterou je nenulový počet aktivních objektů, které – skryje rozhraní framework aplikace z pohledu uživatele místo úplné vypnutí. `AfxOleCanExitApp` Funkce určuje, zda lze ukončit aplikaci.  
   
- Volání `AfxOleLockApp` z libovolného objektu, která vystavuje rozhraní OLE, pokud je žádoucí pro tento objekt zničení při nadále používány klientskou aplikaci. Také zavolat `AfxOleUnlockApp` v destruktoru objektu, který volá `AfxOleLockApp` v konstruktoru. Ve výchozím nastavení `COleDocument` (a odvozených třídách) automaticky zamknutí a odemknutí aplikace.  
+ Volání `AfxOleLockApp` z libovolného objektu, který zpřístupňuje rozhraní OLE, pokud by nežádoucí pro daný objekt, který se má zničit stále používán klientské aplikace. Také volat `AfxOleUnlockApp` v destruktoru objektu, který volá `AfxOleLockApp` v konstruktoru. Ve výchozím nastavení `COleDocument` (a odvozené třídy) automaticky zamknutí a odemknutí aplikace.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxdisp.h
+ **Hlavička**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>  Afxoleunlockapp –  
- Snižuje počet rozhraní framework aktivních objektů v aplikaci.  
+##  <a name="afxoleunlockapp"></a>  Funkci AfxOleUnlockApp  
+ Sníží počet rozhraní framework aktivních objektů v aplikaci.  
   
 ```   
 void AFXAPI AfxOleUnlockApp(); 
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu `AfxOleLockApp` Další informace.  
+ Zobrazit `AfxOleLockApp` pro další informace.  
   
- Pokud počet aktivních objektů hodnota nula, `AfxOleOnReleaseAllObjects` je volána.  
+ Když počet objektů služby active dosáhne nuly, `AfxOleOnReleaseAllObjects` je volána.  
   
 ### <a name="example"></a>Příklad  
- Podívejte se na příklad pro [afxolelockapp –](#afxolelockapp).  
+ Podívejte se na příklad pro [AfxOleLockApp](#afxolelockapp).  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxdisp.h  
+ **Hlavička**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
-Zamkne objektu pro vytváření tříd zadaný ovládacího prvku tak, aby zůstal dynamicky vytvořený data související s ovládacím prvkem v paměti.  
+Zamkne objekt pro vytváření tříd zadaného ovládacího prvku tak, aby dynamicky generovaný přidružený k ovládacímu prvku data zůstanou v paměti.  
    
 ### <a name="syntax"></a>Syntaxe    
 ```
@@ -164,17 +164,17 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- *CLSID*  
- ID jedinečný třídy ovládacího prvku.  
+ *identifikátor CLSID*  
+ Třída jedinečné ID ovládacího prvku.  
   
  *lpszProgID*  
  Jedinečný Identifikátor programu ovládacího prvku.  
    
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud objekt factory třídy ovládacího prvku byla úspěšně uzamčena; jinak 0.  
+ Nenulové, pokud objekt pro vytváření tříd ovládacího prvku byla úspěšně uzamčena; jinak 0.  
    
 ### <a name="remarks"></a>Poznámky  
- To výrazně urychlit zobrazení ovládacích prvků. Například po vytvoření ovládacího prvku v dialogovém okně a uzamčení ovládacího prvku s `AfxOleLockControl`, není potřeba vytvářet a znovu kill pokaždé, když je dialogové okno zobrazí nebo zničeno. Pokud uživatel otevře a zavře dialogové okno opakovaně, uzamčení vaše ovládací prvky můžete výrazně zvýšit výkon. Až budete připravení odstranění ovládacího prvku, volání `AfxOleUnlockControl`.  
+ To může výrazně urychlit zobrazení ovládacích prvků. Například po vytvoření ovládacího prvku v dialogovém okně a uzamknout ovládací prvek s `AfxOleLockControl`, není potřeba vytvářet a ukončit znovu pokaždé, když v dialogovém okně je zobrazen nebo zničení. Pokud uživatel otevře a zavře dialogové okno opakovaně, uzamykání ovládacích prvků můžete výrazně zvýšit výkon. Až budete připravení ke zničení ovládacího prvku, volání `AfxOleUnlockControl`.  
    
 ### <a name="example"></a>Příklad  
 ```cpp
@@ -193,7 +193,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
  [Afxoleunlockcontrol –](#afxoleunlockcontrol)
  
 ##  <a name="afxoleregisterserverclass"></a>  Afxoleregisterserverclass –  
- Tato funkce umožňuje zaregistrovat server v registru systému OLE.  
+ Tato funkce umožňuje registraci serveru v registru systému OLE.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterServerClass(
@@ -207,58 +207,58 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *CLSID*  
- Odkaz na ID serveru OLE třídy.  
+ *identifikátor CLSID*  
+ Odkaz na ID serveru OLE – třídy.  
   
  *lpszClassName*  
  Ukazatel na řetězec obsahující název třídy objektů serveru.  
   
  *lpszShortTypeName*  
- Ukazatel na řetězec, který obsahuje krátký název serveru typ objektu, například "Grafu."  
+ Ukazatel na řetězec, který obsahuje krátký název serveru typu objektu, například"."  
   
  *lpszLongTypeName*  
- Ukazatel na řetězec obsahující dlouhý název serveru typ objektu, například "Microsoft Excel 5.0 grafu."  
+ Ukazatel na řetězec, který obsahuje dlouhý název typ objektu serveru, jako je například "Microsoft Excel 5.0 grafu."  
   
  *nAppType*  
- Hodnotu převzaty z **OLE_APPTYPE** výčtu zadání typu aplikace OLE. Možné hodnoty jsou následující:  
+ Hodnota z výčtu OLE_APPTYPE určení typu aplikace OLE. Možné hodnoty jsou následující:  
   
-- `OAT_INPLACE_SERVER` Server má celého serveru uživatelského rozhraní.  
+- OAT_INPLACE_SERVER Server má plnou instalaci systému server uživatelského rozhraní.  
   
-- `OAT_SERVER` Server podporuje jenom vkládání.  
+- OAT_SERVER Server podporuje jenom vkládání.  
   
-- `OAT_CONTAINER` Kontejner podporuje odkazy na vložené části.  
+- OAT_CONTAINER kontejner podporuje odkazy na vložené části.  
   
-- `OAT_DISPATCH_OBJECT` `IDispatch`-podporující objektu.  
+- OAT_DISPATCH_OBJECT `IDispatch`-podporující objektu.  
   
  *rglpszRegister*  
- Pole ukazatele na řetězce představující klíče a hodnoty, které mají být přidány do registru systému OLE, pokud se nenajdou žádné existující hodnoty pro klíče.  
+ Pole ukazatelů na řetězce představující klíče a hodnoty, které mají být přidány do systémového registru OLE, pokud se nenajdou žádné existující hodnoty pro klíče.  
   
  *rglpszOverwrite*  
- Pole ukazatele na řetězce představující klíče a hodnoty, které mají být přidány do systémového registru OLE, pokud obsahuje existující hodnoty pro danou klíče registru.  
+ Pole ukazatelů na řetězce představující klíče a hodnoty, které mají být přidány do systémového registru OLE, pokud obsahuje existující hodnoty pro daný klíče registru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud je třída serveru úspěšně registrován; jinak 0.  
+ Nenulové, pokud třída serveru je úspěšně zaregistrovaný; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Většina aplikací můžete použít `COleTemplateServer::Register` k registraci typů dokumentů aplikace. Pokud formát systémového registru vaší aplikace nevejde typický vzor, můžete použít `AfxOleRegisterServerClass` větší kontrolu.  
+ Většina aplikací můžete použít `COleTemplateServer::Register` k registraci typů dokumentů aplikace. Pokud formát registru systému vaší aplikace se nevejde typický vzor, můžete použít `AfxOleRegisterServerClass` větší kontrolu.  
   
- Registr obsahuje sadu klíčů a hodnot. *RglpszRegister* a *rglpszOverwrite* argumenty pole ukazatele na řetězce, každý se skládá z klíče a jeho hodnota oddělená **NULL** znak ( `'\0'`). Každý z těchto řetězců může mít nahraditelné parametry, jejichž místech jsou označené nástrojem sekvence znaků *%1* prostřednictvím *%5*.  
+ V registru se skládá ze sady klíčů a hodnot. *RglpszRegister* a *rglpszOverwrite* argumenty jsou pole z ukazatele na řetězce, který se skládá z klíč a hodnotu oddělených **NULL** znak ( `'\0'`). Každý z těchto řetězců může mít nahraditelné parametry, jejichž místa jsou označené nástrojem znakové sekvence *%1* prostřednictvím *%5*.  
   
- Symboly jsou vyplněna takto:  
+ Symboly jsou vyplněna následujícím způsobem:  
   
 |Symbol|Hodnota|  
 |------------|-----------|  
-|%1|ID třídy, naformátovaná jako řetězec|  
+|%1|ID třídy naformátovaná jako řetězec|  
 |%2|Název třídy|  
 |%3|Cesta ke spustitelnému souboru|  
 |%4|Zadejte krátký název|  
 |%5|Název typu Long|  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxdisp.h
+ **Hlavička**: afxdisp.h
 
 ##  <a name="afxoleseteditmenu"></a>  Afxoleseteditmenu –  
- Implementuje uživatelské rozhraní pro *typename* objektu příkazu.  
+ Implementuje uživatelské rozhraní pro *typename* objekt příkazu.  
   
 ```   
 void AFXAPI AfxOleSetEditMenu(
@@ -272,59 +272,59 @@ void AFXAPI AfxOleSetEditMenu(
   
 ### <a name="parameters"></a>Parametry  
  *pClient*  
- Ukazatel na položce OLE klienta.  
+ Ukazatel na klienta položky OLE.  
   
  *pMenu*  
- Ukazatel na nabídky objekt, který chcete aktualizovat.  
+ Ukazatel na objekt nabídky, který chcete aktualizovat.  
   
  *iMenuItem*  
- Index položky nabídky aktualizovat.  
+ Index položky nabídky aktualizace.  
   
  *nIDVerbMin*  
- ID příkazu, která odpovídá primární požadavek.  
+ ID příkazu, který odpovídá primární požadavek.  
   
  *nIDVerbMax*  
- ID příkazu, která odpovídá na poslední operaci.  
+ ID příkazu, který odpovídá na poslední operaci.  
   
  *nIDConvert*  
- ID pro položku nabídky převést.  
+ ID pro položku nabídky Convert.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud server rozpoznal primární požadavek, se změní na položku nabídky "operaci *typename* objektu" a *nIDVerbMin* je odeslání příkazu, když uživatel vybere příkaz. Pokud server rozpoznal několik příkazů, pak se změní na položku nabídky " *typename* objektu" a podnabídky výpis všechny operace se zobrazí, když uživatel vybere příkaz. Když uživatel vybere operaci v podnabídce *nIDVerbMin* se odesílají, pokud je zvoleno první sloveso, *nIDVerbMin* + 1 je odeslán, pokud druhý příkaz je zvolená a tak dále. Výchozí hodnota `COleDocument` implementace automaticky zpracovává tuto funkci.  
+ Pokud server rozpozná pouze primární požadavek, položka nabídky stane "příkaz *typename* objektu" a *nIDVerbMin* příkazu se odešle, když uživatel vybere příkaz. Pokud server rozpoznal několik operací, a potom položku nabídky stane " *typename* objektu" a podnabídky výpis všechny akce se zobrazí, když uživatel vybere příkaz. Když uživatel vybere příkaz v podnabídce *nIDVerbMin* se odešle, pokud je vybrána první příkaz, *nIDVerbMin* + 1 se odešle, pokud je druhý příkaz zvolené a tak dále. Výchozí hodnota `COleDocument` implementace automaticky zpracovává tuto funkci.  
   
- Následující příkaz, musíte mít ve skriptu prostředků aplikace vašeho klienta (. Soubor RC):  
+ Musíte mít následující příkaz ve skriptu prostředků aplikace vašeho klienta (. Soubor RC):  
   
  **#include \<afxolecl.rc >**  
 
 ### <a name="requirements"></a>Požadavky  
- **Záhlaví**: afxole.h 
+ **Hlavička**: afxole.h 
 
 ## <a name="see-also"></a>Viz také  
  [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="afxoleunlockcontrol"></a> Afxoleunlockcontrol –
-Odemkne objektu pro vytváření tříd zadaný ovládacího prvku.  
+Odemkne objekt pro vytváření tříd zadaného prvku.  
    
 ### <a name="syntax"></a>Syntaxe  
-  ```
+```
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );  
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- *CLSID*  
- ID jedinečný třídy ovládacího prvku.  
+ *identifikátor CLSID*  
+ Třída jedinečné ID ovládacího prvku.  
   
  *lpszProgID*  
  Jedinečný Identifikátor programu ovládacího prvku.  
    
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud objekt factory třídy ovládacího prvku byla úspěšně odemčena; jinak 0.  
+ Nenulové, pokud objekt pro vytváření tříd ovládacího prvku se úspěšně odemkla; jinak 0.  
    
 ### <a name="remarks"></a>Poznámky  
- Ovládací prvek je uzamčen s `AfxOleLockControl`tak, aby dynamicky vytvořený data související s ovládacím prvkem zůstane v paměti. To výrazně urychlit zobrazení ovládacího prvku protože ovládací prvek nemusí být vytvořen a zničen pokaždé, když se zobrazí. Až budete připravení odstranění ovládacího prvku, volání `AfxOleUnlockControl`.  
+ Ovládací prvek je uzamčen s `AfxOleLockControl`tak, aby dynamicky generovaný přidružený k ovládacímu prvku data zůstanou v paměti. To může výrazně urychlit zobrazení ovládacího prvku vzhledem k tomu, že nemusí být vytvořeno a zničeno při pokaždé, když se zobrazí ovládací prvek. Až budete připravení ke zničení ovládacího prvku, volání `AfxOleUnlockControl`.  
    
 ### <a name="example"></a>Příklad  
- ```cpp
+```cpp
 // Unlock control's (Microsoft Calendar Control) class factory.
 
 AfxOleUnlockControl(_T("MSCAL.Calendar"));

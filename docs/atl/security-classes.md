@@ -1,5 +1,5 @@
 ---
-title: Zabezpečení třídy (ATL) | Microsoft Docs
+title: Třídy zabezpečení (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3ba3675196e0e6e3564beeca5bc76a57e8903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fecc4865d0138a08ba7dd264e95d3cc9809ff7b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362336"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848642"
 ---
 # <a name="security-classes"></a>Třídy zabezpečení
-Tyto třídy jsou obálek pro běžné Win32 zabezpečení třídy a objekty.  
+Tyto třídy jsou obálky pro běžné Win32 zabezpečení třídy a objekty.  
   
--   [CAccessToken](../atl/reference/caccesstoken-class.md) Tato třída je obálka pro přístupový token.  
+-   [Caccesstoken –](../atl/reference/caccesstoken-class.md) Tato třída představuje obálku pro přístupový token.  
   
--   [CAcl](../atl/reference/cacl-class.md) Tato třída je obálka pro **seznamu ACL** struktury (seznamu řízení přístupu).  
+-   [Cacl –](../atl/reference/cacl-class.md) Tato třída představuje obálku pro `ACL` struktury (seznamu řízení přístupu).  
   
--   [CDacl](../atl/reference/cdacl-class.md) Tato třída je obálka pro **DACL** struktury (seznamu volitelného řízení přístupu).  
+-   [Cdacl –](../atl/reference/cdacl-class.md) tvoří obálku pro tuto třídu `DACL` struktury (řízení přístupu volitelného seznamu).  
   
--   [CPrivateObjectSecurityDesc](../atl/reference/cprivateobjectsecuritydesc-class.md) Tato třída reprezentuje objekt popisovače zabezpečení soukromý objekt.  
+-   [Cprivateobjectsecuritydesc –](../atl/reference/cprivateobjectsecuritydesc-class.md) Tato třída reprezentuje objekt popisovače zabezpečení privátní objekt.  
   
--   [CSacl](../atl/reference/csacl-class.md) Tato třída je obálka pro **SACL** struktury (seznam řízení přístupu systému).  
+-   [Csacl –](../atl/reference/csacl-class.md) tvoří obálku pro tuto třídu `SACL` struktury (seznamu řízení přístupu na systém).  
   
--   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md) Tato třída je dynamické obálku pro **SECURITY_ATTRIBUTES** struktura.  
+-   [Csecurityattributes –](../atl/reference/csecurityattributes-class.md) Tato třída je obálka dynamického zajišťování pro `SECURITY_ATTRIBUTES` struktury.  
   
--   [CSecurityDesc](../atl/reference/csecuritydesc-class.md) Tato třída je obálka pro **SECURITY_DESCRIPTOR** struktura.  
+-   [Csecuritydesc –](../atl/reference/csecuritydesc-class.md) Tato třída představuje obálku pro `SECURITY_DESCRIPTOR` struktury.  
   
--   [Identifikační číslo volané stanice](../atl/reference/csid-class.md) Tato třída je obálka pro `SID` struktury (security identifier).  
+-   [Identifikační číslo volané stanice](../atl/reference/csid-class.md) tvoří obálku pro tuto třídu `SID` strukturu (security identifier).  
   
--   [CTokenGroups](../atl/reference/ctokengroups-class.md) Tato třída je obálka pro **TOKEN_GROUPS** struktury.  
+-   [Ctokengroups –](../atl/reference/ctokengroups-class.md) Tato třída představuje obálku pro `TOKEN_GROUPS` struktury.  
   
--   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md) Tato třída je obálka pro **TOKEN_PRIVILEGES** struktury.  
+-   [Ctokenprivileges –](../atl/reference/ctokenprivileges-class.md) Tato třída představuje obálku pro `TOKEN_PRIVILEGES` struktury.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)   
+ [Přehled tříd](../atl/atl-class-overview.md)   
  [Globální funkce zabezpečení](../atl/reference/security-global-functions.md)
 

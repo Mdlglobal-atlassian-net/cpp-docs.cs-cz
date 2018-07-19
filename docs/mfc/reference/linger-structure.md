@@ -1,5 +1,5 @@
 ---
-title: Linger – struktura | Microsoft Docs
+title: Linger – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339368"
 ---
 # <a name="linger-structure"></a>LINGER – struktura
-`LINGER` Struktura se používá pro manipulaci s **SO_LINGER** a **SO_DONTLINGER** možnosti `CAsyncSocket::GetSockOpt`.  
+`LINGER` Struktura se používá pro manipulaci s možností SO_LINGER a SO_DONTLINGER `CAsyncSocket::GetSockOpt`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Nastavení **SO_DONTLINGER** možnost brání blokování na – členská funkce **Zavřít** při čekání na neodeslaných dat k odeslání. Nastavení této možnosti je ekvivalentní nastavení **SO_LINGER** s **l_onoff** nastaven na hodnotu 0.  
+ Nastavení možnosti SO_DONTLINGER brání blokování u členské funkce `Close` při čekání na unsent dat k odeslání. Nastavení této možnosti je ekvivalentní nastavení SO_LINGER s `l_onoff` nastavena na hodnotu 0.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winsock2.h  

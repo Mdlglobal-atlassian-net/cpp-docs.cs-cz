@@ -1,5 +1,5 @@
 ---
-title: Třída CHtmlEditCtrl | Microsoft Docs
+title: Chtmleditctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338565"
 ---
-# <a name="chtmleditctrl-class"></a>CHtmlEditCtrl – třída
-Poskytuje funkce ovládacího prvku WebBrowser ActiveX v okně knihovny MFC.  
+# <a name="chtmleditctrl-class"></a>Chtmleditctrl – třída
+Poskytuje funkce pro ovládací prvek WebBrowser ActiveX v okně MFC.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,19 +53,19 @@ class CHtmlEditCtrl: public CWnd,
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::Create](#create)|Vytvoří ovládacího prvku WebBrowser ActiveX a připojí jej k `CHtmlEditCtrl` objektu. Tato funkce automaticky umístí do ovládacího prvku WebBrowser ActiveX do režimu úprav.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Načte [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní na dokument momentálně načtených v ovládacím prvku WebBrowser obsažené.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Načte adresu URL výchozí dokument k načtení v ovládacím prvku WebBrowser obsažené.|  
+|[CHtmlEditCtrl::Create](#create)|Vytvoří ovládací prvek WebBrowser ActiveX a připojí ho k `CHtmlEditCtrl` objektu. Tato funkce automaticky umístí do režimu úprav ovládacího prvku WebBrowser ActiveX.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Načte [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní na dokument aktuálně načtené obsažený ovládací prvek WebBrowser.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Načte adresu URL pro výchozí dokument k načtení v obsažený ovládací prvek WebBrowser.|  
   
 ## <a name="remarks"></a>Poznámky  
- Hostované WebBrowser, které řízení automaticky umístí do režimu úprav, po jejím vytvoření.  
+ Hostované ovládací prvek WebBrowser, které ovládací prvek automaticky přejde do režimu úprav po jeho vytvoření.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)  
+ [Chtmleditctrlbase –](../../mfc/reference/chtmleditctrlbase-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- Vytvoří ovládacího prvku WebBrowser ActiveX a připojí jej k `CHtmlEditCtrl` objektu. WebBrowser ActiveX řízení automaticky přejde na výchozí dokument a pak je umístěn v režimu úprav pomocí této funkce.  
+ Vytvoří ovládací prvek WebBrowser ActiveX a připojí ho k `CHtmlEditCtrl` objektu. WebBrowser ActiveX ovládací prvek automaticky přejde na výchozí dokument a pak se umístí do režimu úprav touto funkcí.  
   
 ```  
 virtual BOOL Create(
@@ -101,11 +101,11 @@ virtual BOOL Create(
  *dwStyle*  
  Tento parametr se nepoužívá.  
   
- *Rect –*  
+ *Rect*  
  Určuje velikost a umístění ovládacího prvku.  
   
  *pParentWnd*  
- Určuje ovládacího prvku nadřazeného okna. Nesmí být **NULL**.  
+ Určuje nadřazené okno ovládacího prvku. Nesmí být NULL.  
   
  *nID*  
  Určuje ID ovládacího prvku.  
@@ -114,10 +114,10 @@ virtual BOOL Create(
  Tento parametr se nepoužívá.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** v případě úspěchu **FALSE** při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- Načte [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní na dokument momentálně načtených v obsažené ovládacího prvku WebBrowser  
+ Načte [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) rozhraní na dokument aktuálně načtené obsažený ovládací prvek WebBrowser  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -128,7 +128,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  Rozhraní dokumentu.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- Načte adresu URL výchozí dokument k načtení v ovládacím prvku WebBrowser obsažené.  
+ Načte adresu URL pro výchozí dokument k načtení v obsažený ovládací prvek WebBrowser.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

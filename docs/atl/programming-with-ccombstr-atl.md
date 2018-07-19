@@ -1,5 +1,5 @@
 ---
-title: Programování pomocí třídy CComBSTR (ATL) | Microsoft Docs
+title: Programování pomocí třídy CComBSTR (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b957cca4ff1af93d3f62ab0bf667462c91b81bba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0cae1e2f05484aeccd76e987c2d63c41aec30f6
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357854"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848434"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programování pomocí třídy CComBSTR (ATL)
-Třídy ATL [CComBSTR](../atl/reference/ccombstr-class.md) poskytuje obálku kolem `BSTR` datového typu. Při `CComBSTR` je užitečným nástrojem, existuje několik situací, které vyžadují upozornění.  
+ATL – třídy [CComBSTR](../atl/reference/ccombstr-class.md) poskytuje obálku kolem datový typ BSTR. Zatímco `CComBSTR` je užitečný nástroj, existuje několik situací, které vyžadují upozornění.  
   
 -   [Problémy při převodu](#programmingwithccombstr_conversionissues)  
   
@@ -31,53 +31,53 @@ Třídy ATL [CComBSTR](../atl/reference/ccombstr-class.md) poskytuje obálku kol
   
 -   [Explicitní uvolnění objektu CComBSTR](#programmingwithccombstr_explicitlyfreeing)  
   
--   [Pomocí třídy CComBSTR objekty v smyčky](#programmingwithccombstr_usingloops)  
+-   [Pomocí třídy CComBSTR objekty ve smyčkách](#programmingwithccombstr_usingloops)  
   
--   [Problémy s nevrácenou pamětí](#programmingwithccombstr_memoryleaks)  
+-   [Problémy nevracení paměti](#programmingwithccombstr_memoryleaks)  
   
 ##  <a name="programmingwithccombstr_conversionissues"></a> Problémy při převodu  
- I když několik `CComBSTR` metody automaticky převede argument řetězec ANSI do kódu Unicode, metody vždy vrátí řetězce formátu Unicode. Převést ANSI výstupní řetězec, použijte třídu knihovny ATL převod. Další informace o převodu třídy ATL najdete v tématu [ATL a MFC makra převodů řetězec](reference/string-conversion-macros.md).  
+ I když několik `CComBSTR` metody automaticky převede argument řetězce ANSI na Unicode, metody vždy vrátí formátovací řetězce Unicode. Výstupní řetězec převést zpět na ANSI, použijte třídy knihovny ATL převodu. Další informace o převodu třídy ATL naleznete v tématu [knihovny ATL a MFC – makra převodu řetězců](reference/string-conversion-macros.md).  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]  
   
- Pokud používáte řetězcový literál upravit `CComBSTR` objektu, použijte široká znaková řetězce. Tím se sníží nepotřebné převody.  
+ Pokud používáte k úpravě řetězcového literálu `CComBSTR` objektu, pomocí řetězce širokého znaku. Tím se sníží zbytečné převody.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
 ##  <a name="programmingwithccombstr_scopeissues"></a> Obor problémy  
- Stejně jako u jakékoli dobře behaved třída `CComBSTR` uvolní jeho prostředky, když probíhá mimo rozsah. Pokud vrátí ukazatel na funkci `CComBSTR` řetězec, to může způsobit problémy, jako je ukazatel bude odkazovat na paměti, který již byl uvolněn. V těchto případech použít **kopie** metoda, jak je uvedeno níže.  
+ Stejně jako u jakékoli třídy dobře behaved `CComBSTR` uvolníte její prostředky, když dostane mimo rozsah. Pokud funkce vrátí ukazatel `CComBSTR` řetězec, to může způsobit potíže, jak bude ukazatel odkazovat paměti, který již byl uvolněn. V těchto případech použijte `Copy` způsob, jak je znázorněno níže.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
   
 ##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Explicitní uvolnění objektu CComBSTR  
- Je možné explicitně uvolnit řetězec součástí `CComBSTR` objektu před objekt nedostane mimo rozsah. Pokud po uvolnění řetězec `CComBSTR` objekt je neplatný.  
+ Je možné explicitně uvolnit řetězec obsažený v `CComBSTR` objektu předtím, než objekt dostane mimo rozsah. Pokud řetězec je uvolněn, `CComBSTR` objekt je neplatný.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
-##  <a name="programmingwithccombstr_usingloops"></a> Pomocí třídy CComBSTR objekty v smyčky  
- Jako `CComBSTR` třída přiděluje vyrovnávací paměti k provádění některých operací, jako `+=` operátor nebo **připojení** metoda, nedoporučuje se provést zacházení s řetězci uvnitř úzkou smyčky. V těchto situacích `CStringT` poskytuje lepší výkon.  
+##  <a name="programmingwithccombstr_usingloops"></a> Pomocí třídy CComBSTR objekty ve smyčkách  
+ Jako `CComBSTR` třídy přidělí vyrovnávací paměť k provádění určitých operací, jako `+=` operátor nebo `Append` metody není doporučeno, abyste provedli zacházení s řetězci v těsné smyčce. V těchto situacích `CStringT` poskytuje lepší výkon.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
-##  <a name="programmingwithccombstr_memoryleaks"></a> Problémy s nevrácenou pamětí  
- Předávání na adresu inicializovali `CComBSTR` fungovat jako **[out]** parametr způsobí, že nevrácenou pamětí.  
+##  <a name="programmingwithccombstr_memoryleaks"></a> Problémy nevracení paměti  
+ Předávání na adresu inicializovali `CComBSTR` fungovat jako **[out]** parametr způsobí, že nevracení paměti.  
   
- V následujícím příkladu řetězec přiděleno řetězec `"Initialized"` došlo při k úniku funkce `MyGoodFunction` nahrazuje řetězec.  
+ V následujícím příkladu řetězec přidělené pro uložení řetězce `"Initialized"` úniku při funkce `MyGoodFunction` nahradí řetězec.  
   
  [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]  
   
- Abyste se vyhnuli nevracení paměti, volání **prázdný** metoda na existující `CComBSTR` objekty před předáním adresy jako **[out]** parametr.  
+ Chcete-li zabránit nevracení paměti, zavolejte `Empty` metodu na existující `CComBSTR` objekty před předáním adresy jako **[out]** parametr.  
   
  Všimněte si, že stejný kód by způsobit, že pokud byl parametr funkce **[v, out]**.  
   
 ## <a name="see-also"></a>Viz také  
  [Koncepty](../atl/active-template-library-atl-concepts.md)   
- [CStringT – třída](../atl-mfc-shared/reference/cstringt-class.md)   
+ [Cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md)   
  [wstring](../standard-library/basic-string-class.md)   
  [Makra převodu řetězců](../atl/reference/string-conversion-macros.md)
 

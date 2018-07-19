@@ -1,5 +1,5 @@
 ---
-title: Třída CHttpFile | Microsoft Docs
+title: Chttpfile – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1020c8b0f2b97053951cde6eeb0724dcf60d02
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 23c3e1b42c228ea971bdedff952c01078735948e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337457"
 ---
-# <a name="chttpfile-class"></a>CHttpFile – třída
-Poskytuje funkce pro žádosti a číst soubory na serveru HTTP.  
+# <a name="chttpfile-class"></a>Chttpfile – třída
+Poskytuje funkce pro vyžádání a čtení souborů na HTTP server.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,29 +64,29 @@ class CHttpFile : public CInternetFile
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CHttpFile::AddRequestHeaders](#addrequestheaders)|Přidá hlavičky požadavek odeslaný na HTTP server.|  
-|[CHttpFile::EndRequest](#endrequest)|Ukončí požadavek HTTP serveru se odesílají [SendRequestEx](#sendrequestex) – členská funkce.|  
+|[CHttpFile::AddRequestHeaders](#addrequestheaders)|Přidá hlavičky požadavku odeslaného do serveru HTTP.|  
+|[CHttpFile::EndRequest](#endrequest)|Ukončení požadavku odeslaného do serveru HTTP se [SendRequestEx](#sendrequestex) členskou funkci.|  
 |[CHttpFile::GetFileURL](#getfileurl)|Získá adresu URL pro zadaný soubor.|  
 |[CHttpFile::GetObject](#getobject)|Získá cílový objekt operace v požadavku na HTTP server.|  
-|[CHttpFile::GetVerb](#getverb)|Získá akci, která byla použita v požadavku na HTTP server.|  
-|[CHttpFile::QueryInfo](#queryinfo)|Vrátí hlavičky odpovědi nebo žádostí o ze serveru HTTP.|  
-|[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|Načte kód stavu, který je přidružený požadavku HTTP a umístí jej do zadaných `dwStatusCode` parametr.|  
+|[CHttpFile::GetVerb](#getverb)|Načte příkaz, který byl použit v požadavku na HTTP server.|  
+|[CHttpFile::QueryInfo](#queryinfo)|Vrátí hlavičky odpovědi nebo abychom si vyžádali ze serveru HTTP.|  
+|[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|Získá stavový kód, který je přidružený k požadavku HTTP a umístí jej do zadané `dwStatusCode` parametru.|  
 |[CHttpFile::SendRequest](#sendrequest)|Odešle požadavek na HTTP server.|  
 |[CHttpFile::SendRequestEx](#sendrequestex)|Odešle požadavek na server HTTP pomocí [zápisu](../../mfc/reference/cinternetfile-class.md#write) nebo [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metody `CInternetFile`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud vaše relace Internet čte data z HTTP server, musíte vytvořit instanci `CHttpFile`.  
+ Pokud vaše relace Internet čte data ze serveru HTTP, musíte vytvořit instanci `CHttpFile`.  
   
- Další informace o tom, `CHttpFile` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Další informace o tom, `CHttpFile` funguje s jinými třídami MFC Internetu najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [Cfile –](../../mfc/reference/cfile-class.md)  
   
- [CStdioFile](../../mfc/reference/cstdiofile-class.md)  
+ [Cstdiofile –](../../mfc/reference/cstdiofile-class.md)  
   
- [CInternetFile](../../mfc/reference/cinternetfile-class.md)  
+ [Cinternetfile –](../../mfc/reference/cinternetfile-class.md)  
   
  `CHttpFile`  
   
@@ -94,7 +94,7 @@ class CHttpFile : public CInternetFile
  **Záhlaví:** afxinet.h  
   
 ##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders  
- Volání této funkce člen přidat jeden nebo více hlavičkách žádosti protokolu HTTP na požadavek HTTP zpracovat.  
+ Voláním této členské funkce, aby vám ho přidal nebo zpracovávat další hlavičky požadavků HTTP na požadavek HTTP.  
   
 ```  
 BOOL AddRequestHeaders(
@@ -110,36 +110,36 @@ BOOL AddRequestHeaders(
   
 ### <a name="parameters"></a>Parametry  
  *pstrHeaders*  
- Ukazatel na řetězec obsahující záhlaví nebo hlavičky připojit k žádosti. Každá hlavička musí být ukončen pár CR/LF.  
+ Ukazatel na řetězec obsahující záhlaví a záhlaví pro připojení k požadavku. Každá hlavička musí být ukončen pár znaků CR/LF.  
   
  *dwFlags*  
- Změní sémantiku na záhlaví nového. Může být jedna z následujících akcí:  
+ Změní sémantiku nové hlavičky. Může být jedna z následujících akcí:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Sloučí hlavičky se stejným názvem, pomocí příznaku přidat hlavičku první pro následné hlavička najít. Například "přijmout: text /\*" následované "přijmout: zvuk nebo\*" výsledkem je tvorba jeden hlavičky "přijmout: text /\*, zvuk nebo\*". Je volající aplikace k zajištění získá na ucelenosti schéma s ohledem na data, která přijímá požadavky odeslané s záhlaví sloučené nebo samostatné.  
+- Sloučí HTTP_ADDREQ_FLAG_COALESCE hlavičky se stejným názvem, pomocí příznaku přidáte první záhlaví nalezeno následující záhlaví. Například "přijmout: text /\*" následované "přijmout: zvuku /\*" výsledkem je tvorba jedné hlavičce "přijmout: text /\*, audio /\*". Je volající aplikace k zajištění získá na ucelenosti schéma s ohledem na data přijatá podle požadavků odeslaných sloučené nebo samostatné hlavičky.  
   
-- `HTTP_ADDREQ_FLAG_REPLACE` Provede odebrat a přidejte do nahradit aktuální záhlaví. Název hlavičky se použije k odebrat aktuální záhlaví a úplná hodnota se použije pro přidání nové záhlaví. Pokud je hodnota hlavičky prázdný a se nachází záhlaví, bude odebrán. Pokud není prázdná, je hodnota hlavičky nahrazena.  
+- HTTP_ADDREQ_FLAG_REPLACE provádí odebrat a přidat k nahrazení aktuální záhlaví. Název záhlaví se použije k odebrání aktuální záhlaví a naplno se použije k přidání nové záhlaví. Pokud se nachází záhlaví hodnota hlavičky je prázdný, odebere se současně. Není-li prázdné, hodnota hlavičky se nahradí.  
   
-- `HTTP_ADDREQ_FLAG_ADD_IF_NEW` Přidá hlavičku, pouze pokud ještě neexistuje. Pokud existuje, je vrácena chyba.  
+- Pouze HTTP_ADDREQ_FLAG_ADD_IF_NEW přidá hlavičku, pokud ještě neexistuje. Pokud takové existuje, vrátí se chyba.  
   
-- `HTTP_ADDREQ_FLAG_ADD` Použít s nahradit. Přidá hlavičku, pokud neexistuje.  
+- HTTP_ADDREQ_FLAG_ADD používá nahradit. Přidá hlavičku, pokud neexistuje.  
   
  *dwHeadersLen*  
- Délka ve znacích, z *pstrHeaders*. Pokud je to L-1, pak *pstrHeaders* bude ukončen nula hodnota a délka je počítaný.  
+ Délka ve znacích, z *pstrHeaders*. Pokud je to L hodnota-1, pak *pstrHeaders* předpokládá, že je ukončován nulou a délka je vypočítán.  
   
- *str –*  
- Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt obsahující hlavička požadavku nebo hlavičky, které chcete přidat.  
+ *str*  
+ Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje hlavičku požadavku nebo záhlaví, které mají být přidány.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- `AddRequestHeaders` připojí další, volného formátu hlavičky k obslužná rutina požadavků HTTP. Je určena pro použití sofistikované klienty, kteří potřebují podrobnou kontrolu nad přesný požadavek odeslaný na server HTTP.  
+ `AddRequestHeaders` připojí další, uvolněte formát hlavičky obslužná rutina požadavků HTTP. Je určena pro použití sofistikované klienty, kteří potřebují mít podrobnou kontrolu nad přesné požadavku odeslaného do serveru HTTP.  
   
 > [!NOTE]
->  Aplikace můžete předat více záhlaví v *pstrHeaders* nebo *str* pro `AddRequestHeaders` volat pomocí `HTTP_ADDREQ_FLAG_ADD` nebo `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Pokud se aplikace pokusí odeberte nebo nahraďte záhlaví pomocí `HTTP_ADDREQ_FLAG_REMOVE` nebo `HTTP_ADDREQ_FLAG_REPLACE`, můžete zadat pouze jedno záhlaví v *lpszHeaders*.  
+>  Aplikace můžete předat více záhlaví v *pstrHeaders* nebo *str* pro `AddRequestHeaders` zavolat pomocí HTTP_ADDREQ_FLAG_ADD nebo HTTP_ADDREQ_FLAG_ADD_IF_NEW. Pokud se aplikace pokusí odeberte nebo nahraďte záhlaví s použitím HTTP_ADDREQ_FLAG_REMOVE nebo HTTP_ADDREQ_FLAG_REPLACE, lze zadat pouze jedno záhlaví v *lpszHeaders*.  
   
 ##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
- Tato funkce člen je volána k sestavení `CHttpFile` objektu.  
+ Tato členská funkce je volána k sestavení kompletních `CHttpFile` objektu.  
   
 ```  
 CHttpFile(
@@ -160,7 +160,7 @@ CHttpFile(
   
 ### <a name="parameters"></a>Parametry  
  *hfile –*  
- Popisovač pro soubor Internetu.  
+ Popisovač souboru k Internetu.  
   
  *hSession*  
  Popisovač pro relaci Internet.  
@@ -169,24 +169,24 @@ CHttpFile(
  Ukazatel na řetězec obsahující `CHttpFile` objektu.  
   
  *pstrServer*  
- Ukazatel na řetězec, který obsahuje název serveru.  
+ Ukazatel na řetězec obsahující název serveru.  
   
  *pstrVerb*  
- Ukazatel na řetězec obsahující metoda má být použit při odesílání požadavku. Může být **POST**, **HEAD**, nebo **získat**.  
+ Ukazatel na řetězec obsahující metodu, která se použije při odesílání požadavku. Můžete být příspěvek, HEAD, nebo získat.  
   
  *dwContext*  
- Identifikátor kontext pro `CHttpFile` objektu. V tématu **poznámky** Další informace o tomto parametru.  
+ Identifikátor kontextu `CHttpFile` objektu. Zobrazit **poznámky** Další informace o tomto parametru.  
   
  *pConnection*  
- Ukazatel [CHttpConnection](../../mfc/reference/chttpconnection-class.md) objektu.  
+ Ukazatel [chttpconnection –](../../mfc/reference/chttpconnection-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CHttpFile` objektu přímo; místo volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) místo.  
+ Nikdy sestavit `CHttpFile` objektu přímo; místo toho volat [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) místo.  
   
- Výchozí hodnota pro `dwContext` odesílají MFC k `CHttpFile` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání `CInternetSession::OpenURL` nebo `CHttpConnection` k vytvoření `CHttpFile` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Výchozí hodnota pro `dwContext` odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání `CInternetSession::OpenURL` nebo `CHttpConnection` k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest  
- Volání této funkce člena na konec požadavek HTTP serveru se odesílají [SendRequestEx](#sendrequestex) – členská funkce.  
+ Zavolat tuto členskou funkci na konec požadavku odeslaného do serveru HTTP se [SendRequestEx](#sendrequestex) členskou funkci.  
   
 ```  
 BOOL EndRequest(
@@ -197,61 +197,61 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>Parametry  
  *dwFlags*  
- Příznaky, které popisují operaci. Seznam příslušnými příznaky, naleznete v části [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) ve Windows SDK.  
+ Příznaky popisující operace. Seznam příslušnými příznaky najdete v tématu [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) v sadě Windows SDK.  
   
  *lpBuffIn*  
- Ukazatel na inicializovali [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , který popisuje vstupní vyrovnávací paměť pro operaci použít.  
+ Ukazatel na inicializovali [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , který popisuje vstupní vyrovnávací paměti použité pro tuto operaci.  
   
  *dwContext*  
- Identifikátor kontextu `CHttpFile` operaci. Další informace o tomto parametru najdete v části poznámky.  
+ Identifikátor kontextu `CHttpFile` operace. Další informace o tomto parametru najdete v článku poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí hodnota pro *dwContext* odesílají MFC k `CHttpFile` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [CHttpConnection](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [chttpconnection –](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
- Volání této funkce člen získat název souboru protokolu HTTP jako adresu URL.  
+ Voláním této členské funkce a získat tak název souboru protokolu HTTP jako adresu URL.  
   
 ```  
 virtual CString GetFileURL() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje adresu URL odkazující na prostředek přidružené k tomuto souboru.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje adresu URL odkazující na prostředků přidružené k tomuto souboru.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="getobject"></a>  CHttpFile::GetObject  
- Volání této funkce člen získat název přidružený k tomuto objektu `CHttpFile`.  
+ Voláním této členské funkce a získat tak název přidružený k tomuto objektu `CHttpFile`.  
   
 ```  
 CString GetObject() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt obsahující název objektu.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje název objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="getverb"></a>  CHttpFile::GetVerb  
- Volání této funkce člen získat akce HTTP (ani metody) přidružený k tomuto `CHttpFile`.  
+ Voláním této členské funkce, příkaz HTTP (nebo metoda) přidružený k tomuto `CHttpFile`.  
   
 ```  
 CString GetVerb() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt obsahující název akce HTTP (nebo metodu).  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje název příkazem HTTP příkaz (nebo metoda).  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ##  <a name="queryinfo"></a>  CHttpFile::QueryInfo  
- Volání této funkce člen vrátí odpověď nebo hlavičky požadavku z požadavku HTTP.  
+ Voláním této členské funkce vrátí odpověď nebo hlavičky požadavku z požadavku HTTP.  
   
 ```  
 BOOL QueryInfo(
@@ -273,102 +273,102 @@ BOOL QueryInfo(
   
 ### <a name="parameters"></a>Parametry  
  *dwInfoLevel*  
- Kombinace atribut, který se dotaz a následující příznaky, které určují typ požadované informace:  
+ Kombinace atribut, který chcete dotaz a následující příznaky, které určují typ požadované informace:  
   
-- **HTTP_QUERY_CUSTOM** najde název hlavičky a vrátí tuto hodnotu v *lpvBuffer* na výstup. **HTTP_QUERY_CUSTOM** vyvolá kontrolní výrazy, pokud hlavička nebyla nalezena.  
+- HTTP_QUERY_CUSTOM najde název hlavičky a vrátí tuto hodnotu v *lpvBuffer* na výstupu. HTTP_QUERY_CUSTOM vyvolá kontrolní výraz, pokud hlavička nebyla nalezena.  
   
-- **HTTP_QUERY_FLAG_REQUEST_HEADERS** obvykle se aplikace dotazuje hlavičky odpovědi, ale aplikace může také dotazovat hlavičky žádosti pomocí tento příznak.  
+- Obvykle HTTP_QUERY_FLAG_REQUEST_HEADERS aplikace dotazy hlaviček odpovědí, ale aplikace můžete také zadávat dotazy hlavičky žádosti pomocí tohoto příznaku.  
   
-- **HTTP_QUERY_FLAG_SYSTEMTIME** pro tyto hlavičky, jehož hodnota je řetězec datum a čas, jako je například "Poslední upravit běhu," Tento příznak vrací hodnotu hlavičky jako standardní Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která nevyžaduje aplikace se analyzovat data. Pokud chcete použít tento příznak, můžete chtít použít `SYSTEMTIME` přepsat funkce.  
+- HTTP_QUERY_FLAG_SYSTEMTIME pro tyto hlavičky, jehož hodnota je řetězec data a času, například "Poslední upravil běhu," Tento příznak vrací hodnotu hlavičky jako standardním Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která nevyžaduje, aby aplikace analyzovat data. Pokud použijete tento příznak, můžete použít `SYSTEMTIME` přepsání funkce.  
   
-- **HTTP_QUERY_FLAG_NUMBER** pro tyto hlavičky, jehož hodnota je číslo, například kód stavu tento příznak vrátí data jako 32bitové číslo.  
+- HTTP_QUERY_FLAG_NUMBER pro tyto hlavičky, jehož hodnota je číslo, například stavový kód, tento příznak vrátí data jako 32bitová čísla.  
   
- Najdete v článku **poznámky** části seznamu možných hodnot.  
+ Zobrazit **poznámky** najdete seznam možných hodnot.  
   
  *lpvBuffer*  
  Ukazatel do vyrovnávací paměti, která přijímá informace.  
   
  *lpdwBufferLength*  
- V položce to ukazuje na hodnotu obsahující délka vyrovnávací paměť dat v počtu znaků nebo bajtů. Najdete v článku **poznámky** části pro podrobnější informace o tomto parametru.  
+ V položce to odkazuje na hodnotu obsahující délku vyrovnávací paměť dat v počtu znaků nebo bajtů. Zobrazit **poznámky** části Podrobné informace o tomto parametru.  
   
  *lpdwIndex*  
- Ukazatel na index počítaný od nuly záhlaví. Může být **NULL**. Pomocí tohoto příznaku se vytvořit výčet více záhlaví se stejným názvem. Na vstupu *lpdwIndex* značí index Zadaná hlavička vrátit. Na výstupu *lpdwIndex* značí index další záhlaví. Pokud nelze nalézt další index, **ERROR_HTTP_HEADER_NOT_FOUND** je vrácen.  
+ Ukazatel na index založený na nule záhlaví. Může mít hodnotu NULL. Pomocí tohoto příznaku se vytvořit výčet více záhlaví s tímto názvem. Na vstupu *lpdwIndex* Určuje index Zadaná hlavička se vraťte. Na výstupu *lpdwIndex* Určuje index další záhlaví. Pokud nelze najít další index, je vrácena ERROR_HTTP_HEADER_NOT_FOUND.  
   
- *str –*  
- Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt přijetí vrácené informace.  
+ *str*  
+ Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt příjem vrácených informací.  
   
  *dwIndex*  
- Hodnota indexu. V tématu *lpdwIndex*.  
+ Hodnota indexu. Zobrazit *lpdwIndex*.  
   
  *pSysTime*  
- Ukazatel na Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktura.  
+ Ukazatel na Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
  Můžete načíst následující typy dat z `QueryInfo`:  
   
 -   řetězce (výchozí)  
   
-- `SYSTEMTIME` (pro "Data:" "Expires:" apod, hlavičky)  
+- `SYSTEMTIME` (pro "Data:" "platnost vyprší:" etc, hlavičky)  
   
-- `DWORD` (pro **STATUS_CODE**, **CONTENT_LENGTH**atd.)  
+- DWORD (pro STATUS_CODE CONTENT_LENGTH, atd.)  
   
- Pokud řetězec je zapsán do vyrovnávací paměti a členské funkce úspěšné, `lpdwBufferLength` obsahuje délku řetězce ve znacích minus 1 pro ukončení **NULL** znak.  
+ Pokud řetězec je zapsán do vyrovnávací paměti a členské funkce uspěje, `lpdwBufferLength` obsahuje délku řetězce ve znacích odečte 1. pro ukončující znak NULL.  
   
- Možné *dwInfoLevel* hodnoty patří:  
+ Možné *dwInfoLevel* mezi hodnoty patří:  
   
-- **HTTP_QUERY_MIME_VERSION**  
+- HTTP_QUERY_MIME_VERSION  
   
-- **HTTP_QUERY_CONTENT_TYPE**  
+- HTTP_QUERY_CONTENT_TYPE  
   
-- **HTTP_QUERY_CONTENT_TRANSFER_ENCODING**  
+- HTTP_QUERY_CONTENT_TRANSFER_ENCODING  
   
-- **HTTP_QUERY_CONTENT_ID**  
+- HTTP_QUERY_CONTENT_ID  
   
-- **HTTP_QUERY_CONTENT_DESCRIPTION**  
+- HTTP_QUERY_CONTENT_DESCRIPTION  
   
-- **HTTP_QUERY_CONTENT_LENGTH**  
+- HTTP_QUERY_CONTENT_LENGTH  
   
-- **HTTP_QUERY_ALLOWED_METHODS**  
+- HTTP_QUERY_ALLOWED_METHODS  
   
-- **HTTP_QUERY_PUBLIC_METHODS**  
+- HTTP_QUERY_PUBLIC_METHODS  
   
-- **HTTP_QUERY_DATE**  
+- HTTP_QUERY_DATE  
   
-- **HTTP_QUERY_EXPIRES**  
+- HTTP_QUERY_EXPIRES  
   
-- **HTTP_QUERY_LAST_MODIFIED**  
+- HTTP_QUERY_LAST_MODIFIED  
   
-- **HTTP_QUERY_MESSAGE_ID**  
+- HTTP_QUERY_MESSAGE_ID  
   
-- **HTTP_QUERY_URI**  
+- HTTP_QUERY_URI  
   
-- **HTTP_QUERY_DERIVED_FROM**  
+- HTTP_QUERY_DERIVED_FROM  
   
-- **HTTP_QUERY_LANGUAGE**  
+- HTTP_QUERY_LANGUAGE  
   
-- **HTTP_QUERY_COST**  
+- HTTP_QUERY_COST  
   
-- **HTTP_QUERY_WWW_LINK**  
+- HTTP_QUERY_WWW_LINK  
   
-- **HTTP_QUERY_PRAGMA**  
+- HTTP_QUERY_PRAGMA  
   
-- **HTTP_QUERY_VERSION**  
+- HTTP_QUERY_VERSION  
   
-- **HTTP_QUERY_STATUS_CODE**  
+- HTTP_QUERY_STATUS_CODE  
   
-- **HTTP_QUERY_STATUS_TEXT**  
+- HTTP_QUERY_STATUS_TEXT  
   
-- **HTTP_QUERY_RAW_HEADERS**  
+- HTTP_QUERY_RAW_HEADERS  
   
-- **HTTP_QUERY_RAW_HEADERS_CRLF**  
+- HTTP_QUERY_RAW_HEADERS_CRLF  
   
 ##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
- Volání této funkce člen k získání stavového kódu přidružené k požadavku HTTP a umístěte ji do zadané *dwStatusCode* parametr.  
+ Voláním této členské funkce získání stavového kódu přidružené k požadavku HTTP a umístěte ji do zadané *dwStatusCode* parametru.  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
@@ -376,36 +376,36 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
   
 ### <a name="parameters"></a>Parametry  
  *dwStatusCode*  
- Odkaz na stavový kód. Stavové kódy udávající úspěch nebo selhání požadovaná událost. V tématu **poznámky** pro výběr popisů kód stavu.  
+ Odkaz na stavový kód. Stavové kódy indikuje úspěch nebo neúspěch požadované události. Zobrazit **poznámky** pro výběr kódu popis stavu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce člen až po úspěšném volání [Odesilani](#sendrequest) nebo na `CHttpFile` objekt úspěšně vytvořený [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
+ Tuto funkci člena použít až po úspěšném volání [Odesilani](#sendrequest) nebo `CHttpFile` úspěšně vytvořil objekt [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
- Stavové kódy HTTP spadají do skupin, která udává úspěch nebo selhání žádosti. Následující tabulky popisují skupiny kódu stavu a nejběžnější stavové kódy HTTP.  
+ Stavové kódy HTTP patří do skupiny udávající úspěch nebo selhání požadavku. Následující tabulky popisují stav skupiny kódu a nejběžnější stavové kódy HTTP.  
   
 |Skupina|Význam|  
 |-----------|-------------|  
 |200-299|Úspěch|  
 |300-399|Informace o|  
-|400-499|Žádost o chybě|  
+|400-499|Chyba žádosti|  
 |500-599|Chyba serveru|  
   
  Běžné kódy stavu HTTP:  
   
 |Stavový kód|Význam|  
 |-----------------|-------------|  
-|200|Adresa URL umístěný, způsobem přenosu|  
-|400|Nesrozumitelné požadavku|  
+|200|Adresa URL umístěný, přenosem odpovídá|  
+|400|Nesrozumitelný žádosti|  
 |404|Požadovaná adresa URL nebyla nalezena.|  
-|405|Server nepodporuje požadovaný – metoda|  
+|405|Server nepodporuje požadované – metoda|  
 |500|Neznámou chybu serveru|  
-|503|Dosaženo kapacity serveru|  
+|503|Bylo dosaženo kapacity serveru|  
   
 ##  <a name="sendrequest"></a>  CHttpFile::SendRequest  
- Volání této funkce člen odeslat požadavek na HTTP server.  
+ Voláním této členské funkce Odeslat požadavek na HTTP server.  
   
 ```  
 BOOL SendRequest(
@@ -423,25 +423,25 @@ BOOL SendRequest(
   
 ### <a name="parameters"></a>Parametry  
  *pstrHeaders*  
- Ukazatel na řetězec, který obsahuje název hlavičky k odeslání.  
+ Ukazatel na řetězec obsahující název hlavičky k odeslání.  
   
  *dwHeadersLen*  
- Délka záhlaví identifikovaný *pstrHeaders*.  
+ Délka hlavičky identifikovaný *pstrHeaders*.  
   
  *lpOptional*  
- Všechny volitelné data k odeslání ihned po hlavičky žádosti. To se obvykle používá pro **POST** a **PUT** operace. To může být **NULL** Pokud neexistují žádné volitelné data k odeslání.  
+ Libovolné volitelné data k odeslání ihned po hlavičky žádosti. Obecně se používá pro operace POST a PUT. To může mít hodnotu NULL, pokud neexistuje žádné volitelné data k odeslání.  
   
  *dwOptionalLen*  
  Délka *lpOptional*.  
   
  *strHeaders*  
- Řetězec obsahující název hlavičky pro žádost o odeslání.  
+ Řetězec obsahující název záhlaví pro žádost o odeslání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.  
   
 ##  <a name="sendrequestex"></a>  CHttpFile::SendRequestEx  
- Volání této funkce člen odeslat požadavek na HTTP server.  
+ Voláním této členské funkce Odeslat požadavek na HTTP server.  
   
 ```  
 BOOL SendRequestEx(
@@ -459,38 +459,38 @@ BOOL SendRequestEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwTotalLen*  
- Počet bajtů, které mají být odeslaných v požadavku.  
+ Počet bajtů k odeslání v požadavku.  
   
  *dwFlags*  
- Příznaky, které popisují operaci. Seznam příslušnými příznaky, naleznete v části [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) ve Windows SDK.  
+ Příznaky popisující operace. Seznam příslušnými příznaky najdete v tématu [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) v sadě Windows SDK.  
   
  *dwContext*  
- Identifikátor kontextu `CHttpFile` operaci. Další informace o tomto parametru najdete v části poznámky.  
+ Identifikátor kontextu `CHttpFile` operace. Další informace o tomto parametru najdete v článku poznámky.  
   
  *lpBuffIn*  
- Ukazatel na inicializovali [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , který popisuje vstupní vyrovnávací paměť pro operaci použít.  
+ Ukazatel na inicializovali [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , který popisuje vstupní vyrovnávací paměti použité pro tuto operaci.  
   
  *lpBuffOut*  
- Ukazatel na inicializovali **INTERNET_BUFFERS** , který popisuje výstupní vyrovnávací paměť pro operaci použít.  
+ Ukazatele inicializované INTERNET_BUFFERS, který popisuje výstupní vyrovnávací paměť, používá pro operaci.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.  
+ Nenulové, pokud je úspěšná. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce umožňuje vaší aplikace posílat data pomocí [zápisu](../../mfc/reference/cinternetfile-class.md#write) a [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metody `CInternetFile`. Je nutné znát délka data k odeslání před voláním buď přepsání této funkce. První přepsání můžete zadat data, která se má odeslat. Druhý přepsání přijímá ukazatele na **INTERNET_BUFFERS** struktur, která slouží k vyrovnávací paměť příliš podrobně popisují.  
+ Tato funkce umožňuje aplikaci posílat data pomocí [zápisu](../../mfc/reference/cinternetfile-class.md#write) a [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metody `CInternetFile`. Musíte vědět, délka dat k odeslání před voláním této funkce buď přepsat. První přepsání můžete zadat délku dat, které chcete odeslat. Druhý přepsání přijímá ukazatele na INTERNET_BUFFERS struktury, které je možné použít k popisu vyrovnávací paměť příliš podrobně.  
   
- Poté, co je zapisován obsah souboru, volejte [EndRequest](#endrequest) pro ukončení operace.  
+ Poté, co je napsán obsah do souboru, volejte [EndRequest](#endrequest) pro ukončení operace.  
   
- Výchozí hodnota pro *dwContext* odesílají MFC k `CHttpFile` objektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [CHttpConnection](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objekt, můžete přepsat výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na objekt, ke kterému se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [chttpconnection –](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ### <a name="example"></a>Příklad  
- Tento fragment kódu odešle obsah řetězec s názvem MFCISAPI knihovny DLL. Knihovny DLL na serveru LOCALHOST. Při tomto příkladě se používá pouze jednoho volání `WriteString`, pomocí více k odesílání dat do bloků je přijatelná.  
+ Tento fragment kódu odesílá obsah řetězce do knihovny DLL s názvem MFCISAPI. Knihovna DLL na serveru LOCALHOST. Při tomto příkladu se používá pouze jedno volání `WriteString`, použití více volání k odesílání dat do bloků je přijatelné.  
   
  [!code-cpp[NVC_MFCWinInet#9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
   
 ## <a name="see-also"></a>Viz také  
- [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)   
+ [Cinternetfile – třída](../../mfc/reference/cinternetfile-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CInternetFile – třída](../../mfc/reference/cinternetfile-class.md)   
- [CGopherFile – třída](../../mfc/reference/cgopherfile-class.md)   
+ [Cinternetfile – třída](../../mfc/reference/cinternetfile-class.md)   
+ [Cgopherfile – třída](../../mfc/reference/cgopherfile-class.md)   
  [CHttpConnection – třída](../../mfc/reference/chttpconnection-class.md)

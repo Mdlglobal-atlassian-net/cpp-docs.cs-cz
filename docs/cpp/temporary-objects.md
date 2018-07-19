@@ -1,5 +1,5 @@
 ---
-title: Dočasné objekty | Microsoft Docs
+title: Dočasné objekty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947504"
 ---
 # <a name="temporary-objects"></a>Dočasné objekty
 V některých případech je pro kompilátor nezbytné vytvořit dočasné objekty. Tyto dočasné objekty mohou být vytvořeny z následujících důvodů:  
   
--   Inicializace odkazu `const` s inicializátorem typu odlišného od základního typu inicializovaného odkazu.  
+-   Inicializace **const** odkaz s inicializátorem typu odlišného od základního typu inicializovaného odkazu.  
   
 -   Uložení návratové hodnoty funkce, která vrací uživatelský typ. Tyto dočasné objekty jsou vytvořeny pouze v případě, že program nekopíruje hodnotu vrácenou objektu. Příklad:  
   
-    ```  
+    ```cpp 
     UDT Func1();    //  Declare a function that returns a user-defined  
                     //   type.  
   
@@ -41,7 +42,7 @@ V některých případech je pro kompilátor nezbytné vytvořit dočasné objek
   
      Protože vrácená hodnota není do jiného objektu zkopírována, je vytvořen dočasný objekt. Častější případ, kdy jsou dočasné objekty vytvořeny, je při vyhodnocení výrazu, kde musí být volány funkce přetíženého operátoru. Tyto funkce přetíženého operátoru vrátí uživatelský typ, který často není zkopírován do jiného objektu.  
   
-     Vezměte v úvahu výraz `ComplexResult = Complex1 + Complex2 + Complex3`. Výraz `Complex1 + Complex2` je vyhodnocen a výsledek je uložen v dočasném objektu. Další, výraz *dočasné* `+ Complex3` je vyhodnocena a výsledek je zkopírovat do `ComplexResult` (za předpokladu, že operátor přiřazení není přetížený).  
+     Vezměte v úvahu výraz `ComplexResult = Complex1 + Complex2 + Complex3`. Výraz `Complex1 + Complex2` je vyhodnocen a výsledek je uložen v dočasném objektu. Další, výraz *dočasné* `+ Complex3` je vyhodnocen a výsledek je zkopírován do `ComplexResult` (za předpokladu, že operátor přiřazení není přetížen).  
   
 -   Uložení výsledku přetypování do uživatelského typu. Když je objekt daného typu explicitně převeden na uživatelský typ, tento nový objekt je zkonstruován jako dočasný objekt.  
   
@@ -51,6 +52,6 @@ V některých případech je pro kompilátor nezbytné vytvořit dočasné objek
   
 |Důvod vytvoření dočasného objektu|Bod zničení|  
 |------------------------------|-----------------------|  
-|Výsledek vyhodnocení výrazu|Všechny dočasné objekty vytvořené jako výsledek vyhodnocení výrazu jsou zničeny na konci příkazu výrazu (v místě středníku) nebo na konci řídicích výrazů příkazů `for`, `if`, `while`, `do` a `switch`.|  
-|Inicializace odkazů `const`|Pokud není inicializátorem l-hodnota stejného typu jako inicializovaný odkaz, je vytvořen dočasný objekt základního typu objektu a inicializován inicializačním výrazem. Tento dočasný objekt je zničen okamžitě po zničení odkazu na objekt, ke kterému je vázán.|  
+|Výsledek vyhodnocení výrazu|Všechny dočasné objekty vytvořené jako výsledek vyhodnocení výrazu jsou zničeny na konci příkazu výrazu (to znamená, že v místě středníku), nebo na konci řídicích výrazů **pro**, **Pokud**, **při**, **proveďte**, a **přepnout** příkazy.|  
+|Inicializace **const** odkazy|Pokud není inicializátorem l-hodnota stejného typu jako inicializovaný odkaz, je vytvořen dočasný objekt základního typu objektu a inicializován inicializačním výrazem. Tento dočasný objekt je zničen okamžitě po zničení odkazu na objekt, ke kterému je vázán.|  
   

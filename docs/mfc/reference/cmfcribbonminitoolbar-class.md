@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonMiniToolBar | Microsoft Docs
+title: Cmfcribbonminitoolbar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041747"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852884"
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar – třída
-Implementuje kontextové místní panel nástrojů.  
+# <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar – třída
+Implementuje kontextovou nabídku nástrojů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,21 +55,21 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
 |Název|Popis|  
 |----------|-----------------|  
-|`CMFCRibbonMiniToolBar::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
+|`CMFCRibbonMiniToolBar::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Přepisuje `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
+|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Přepíše `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Nastaví seznam příkazů, který se má zobrazit na panelu nástrojů.|  
-|[CMFCRibbonMiniToolBar::Show](#show)|Zobrazí malém panelu nástrojů v souřadnice zadaný obrazovky.|  
-|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Zobrazí mini nástrojů společně s z kontextové nabídky.|  
+|[CMFCRibbonMiniToolBar::Show](#show)|Zobrazí mini nástrojů na souřadnicích zadanou obrazovku.|  
+|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Zobrazí mini nástrojů spolu s místní nabídkou.|  
   
 ## <a name="remarks"></a>Poznámky  
- Mini nástrojů se obvykle zobrazí, až uživatel vybere objekt v dokumentu. Po výběru blok textu v textovém editoru, například aplikace zobrazí mini nástrojů, který obsahuje příkazy pro formátování textu.  
+ Mini nástrojů se obvykle zobrazí, když uživatele vybere objekt v dokumentu. Když uživatele vybere blok textu v textovém editoru, například aplikace zobrazí mini nástrojů, který obsahuje příkazy pro formátování textu.  
   
- Mini nástrojů viditelný, když ukazatel myši je mimo hranice malém panelu nástrojů.  
+ Mini nástrojů viditelný, když ukazatel myši je mimo rozsah mini nástrojů.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -77,13 +77,13 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
  [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
- [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)  
+ [Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)  
   
- [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)  
+ [Cmfcpopupmenu –](../../mfc/reference/cmfcpopupmenu-class.md)  
   
  `CMFCRibbonPanelMenu`  
   
- [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
+ [Cmfcribbonminitoolbar –](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonMiniToolBar.h  
@@ -98,22 +98,22 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pRibbonBar*  
- Panel pásu karet, který vyhledá malém panelu nástrojů tlačítka pro zobrazení.  
+ [in] *pRibbonBar*  
+ Na panelu pásu karet, která hledá mini nástrojů pro tlačítka pro zobrazení.  
   
- [v] *lstCommands*  
- Seznam příkazů, který se má zobrazit v malém panelu nástrojů. Najít tlačítka přidružené budou prohledány všechny kategorie pásu karet.  
+ [in] *lstCommands*  
+ Seznam příkazů, který se má zobrazit na panelu nástrojů mini. Najít související tlačítka jsou prohledány všechny kategorie pásu karet.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce můžete nastavit seznam příkazů, který se má zobrazit v malém panelu nástrojů.  
+ Pomocí této funkce můžete nastavit seznam příkazů, který se má zobrazit na panelu nástrojů zkrácené.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `SetCommands` metodu `CMFCRibbonMiniToolBar` třídy. Tento fragment kódu je součástí [MS Office 2007 Demo-ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `SetCommands` metodu `CMFCRibbonMiniToolBar` třídy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
 ##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
- Zobrazí malém panelu nástrojů v souřadnice zadaný obrazovky.  
+ Zobrazí mini nástrojů na souřadnicích zadanou obrazovku.  
   
 ```  
 BOOL Show(
@@ -122,17 +122,17 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *x*  
- Určuje vodorovné umístění malém panelu nástrojů v souřadnice obrazovky.  
+ [in] *x*  
+ Určuje vodorovná pozice mini nástrojů v souřadnicovém systému obrazovky.  
   
- [v] *y*  
- Určuje svislé umístění malém panelu nástrojů v souřadnice obrazovky.  
+ [in] *y*  
+ Určuje svislé umístění mini nástrojů v souřadnicovém systému obrazovky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se úspěšně; zobrazila malém panelu nástrojů v opačném `FALSE`.  
+ Hodnota TRUE, pokud byl úspěšně; zobrazí mini panel nástrojů v opačném případě hodnota FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
- Zobrazí mini nástrojů společně s z kontextové nabídky.  
+ Zobrazí mini nástrojů spolu s místní nabídkou.  
   
 ```  
 BOOL ShowWithContextMenu(
@@ -143,23 +143,23 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *x*  
- Určuje vodorovné umístění v místní nabídce v souřadnice obrazovky.  
+ [in] *x*  
+ Určuje vodorovné umístění v místní nabídce v souřadnicovém systému obrazovky.  
   
- [v] *y*  
- Určuje svislé umístění v místní nabídce v souřadnice obrazovky.  
+ [in] *y*  
+ Určuje svislé umístění v místní nabídce v souřadnicovém systému obrazovky.  
   
- [v] *uiMenuResID*  
- Určuje ID prostředku v místní nabídce k zobrazení.  
+ [in] *uiMenuResID*  
+ Určuje ID prostředku v místní nabídce pro zobrazení.  
   
- [v] *pWndOwner*  
- Identifikuje okna, která přijímá zprávy z místní nabídky.  
+ [in] *pWndOwner*  
+ Identifikuje okna, která přijímá zprávy z kontextové nabídky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud v místní nabídce zobrazila úspěšně; v opačném `FALSE`.  
+ Hodnota TRUE, pokud byl úspěšně; zobrazí místní nabídka v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pomocí této funkce můžete zobrazit mini nástrojů, který má z kontextové nabídky. V místní nabídce je umístěného 15 pixelů níže malém panelu nástrojů.  
+ Tuto funkci použijte, chcete-li zobrazit mini nástrojů, který má místní nabídka. V místní nabídce je umístěné 15 pixelů pod mini nástrojů.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCPropertySheet | Microsoft Docs
+title: CMFCPropertySheet – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040009"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854067"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet – třída
-`CMFCPropertySheet` Třída podporuje seznam vlastností, kde každé stránce vlastnost je označený jako kartu stránky, tlačítka panelu nástrojů, řídicí uzel stromu nebo položku seznamu.  
+`CMFCPropertySheet` Třída podporuje seznam vlastností, kde každou stránku vlastností označuje symbolem karty stránky, tlačítka panelu nástrojů, řídicí uzel stromu nebo položka seznamu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,57 +80,57 @@ class CMFCPropertySheet : public CPropertySheet
 |Název|Popis|  
 |----------|-----------------|  
 |[CMFCPropertySheet::AddPage](#addpage)|Na stránce se přidá do seznamu vlastností.|  
-|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Přidá novou stránku vlastnosti do ovládacího prvku strom.|  
-|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Přidá nový uzel do ovládacího prvku strom.|  
-|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Rezervy místa v horní části každé stránce kreslení vlastní hlavičky.|  
-|[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Načte výšku aktuální záhlaví.|  
+|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Přidá nové stránky vlastností do ovládacího prvku stromu.|  
+|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Přidá nový uzel stromové struktury.|  
+|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Rezervuje prostor v horní části každé stránky k vykreslení vlastní hlavičku.|  
+|[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Získá výšku aktuální záhlaví.|  
 |[CMFCPropertySheet::GetLook](#getlook)|Načte hodnotu výčtu, která určuje vzhled aktuální seznam vlastností.|  
-|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Opakuje šířku navigačního panelu v pixelech.|  
-|[CMFCPropertySheet::GetTab](#gettab)|Načte objekt interní karta ovládací prvek, který podporuje aktuální vlastnost stylů ovládacího prvku.|  
-|`CMFCPropertySheet::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicializuje vzhled aktuální vlastnost stylů ovládacího prvku.|  
-|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Voláno rámcem, pokud je povoleno stránky vlastností.|  
-|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Voláno rámcem kreslení vlastní vlastnosti záhlaví stránky.|  
-|`CMFCPropertySheet::OnInitDialog`|Zpracovává [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy. (Přepisuje [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
-|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Voláno rámcem odebrání ovládacím prvkem strom stránky vlastností.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Přeloží zprávy oken, než jsou odeslány do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce systému Windows. (Přepisuje `CPropertySheet::PreTranslateMessage`.)|  
-|[CMFCPropertySheet::RemoveCategory](#removecategory)|Odebrání uzlu z ovládacího prvku strom.|  
-|[CMFCPropertySheet::RemovePage](#removepage)|Stránky vlastností odebere ze seznamu vlastností.|  
-|[CMFCPropertySheet::SetIconsList](#seticonslist)|Určuje seznam bitové kopie, které se používají v ovládacím prvku navigačním podokně aplikace Outlook.|  
+|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Počet opakování šířka navigační panel v pixelech.|  
+|[CMFCPropertySheet::GetTab](#gettab)|Načte objekt interní kartu ovládacího prvku, který podporuje aktuální ovládacího prvku seznam vlastností.|  
+|`CMFCPropertySheet::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicializuje vzhled ovládacího prvku aktuální seznam vlastností.|  
+|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Volá se rozhraním, když je povolena stránka vlastností.|  
+|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Volá se rozhraním, chcete-li nakreslit vlastní vlastnosti záhlaví stránky.|  
+|`CMFCPropertySheet::OnInitDialog`|Zpracovává [nezavěsíte](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy. (Přepíše [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Volá se rozhraním odebrání ovládacím prvkem strom stránky vlastností.|  
+|`CMFCPropertySheet::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše `CPropertySheet::PreTranslateMessage`.)|  
+|[CMFCPropertySheet::RemoveCategory](#removecategory)|Odebrání uzlu z ovládacího prvku stromu.|  
+|[CMFCPropertySheet::RemovePage](#removepage)|Stránky vlastností se odebere ze seznamu vlastností.|  
+|[CMFCPropertySheet::SetIconsList](#seticonslist)|Určuje seznam imagí, které se používají v ovládacím prvku navigačního podokna aplikace Outlook.|  
 |[CMFCPropertySheet::SetLook](#setlook)|Určuje vzhled seznamu vlastností.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CMFCPropertySheet` Třída reprezentuje seznam vlastností, také známé jako dialogová okna karet. `CMFCPropertySheet` Třídy můžete zobrazit stránce vlastností v mnoha různými způsoby.  
+ `CMFCPropertySheet` Třída reprezentuje seznam vlastností, označovaný také jako dialogová okna Karta. `CMFCPropertySheet` Třídy můžete zobrazit stránku vlastností v mnoha různými způsoby.  
   
  Proveďte následující kroky a použít `CMFCPropertySheet` ve vaší aplikaci:  
   
-1.  Odvození třídy z `CMFCPropertySheet` třídy a název třídy, například CMyPropertySheet.  
+1.  Odvodit třídu z `CMFCPropertySheet` třídy a název třídy, například CMyPropertySheet.  
   
-2.  Vytvořit [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) objekt pro každou stránku vlastností.  
+2.  Vytvoření [cmfcpropertypage –](../../mfc/reference/cmfcpropertypage-class.md) objekt pro každou stránku vlastností.  
   
-3.  Volání [CMFCPropertySheet::SetLook](#setlook) metoda v konstruktoru CMyPropertySheet. Parametr této metody Určuje, že vlastnost stránky se zobrazí jako karty na nejvyšší nebo nalevo od poli vlastnosti. karty ve stylu Microsoft OneNote vlastností; tlačítka v ovládacím prvku panel nástrojů Microsoft Outlook; uzly na ovládacím prvkem strom; nebo seznam položek na levé straně seznamu vlastností.  
+3.  Volání [CMFCPropertySheet::SetLook](#setlook) metoda v konstruktoru CMyPropertySheet. Parametr této metody Určuje, že stránky vlastností se zobrazí jako karty podél horní nebo nalevo od vlastnosti. karty ve stylu seznamu vlastností Microsoft OneNote; tlačítka v ovládacím prvku panel nástrojů aplikace Microsoft Outlook; uzly na ovládací prvek stromu; nebo jako seznam položek na levé straně okna vlastností.  
   
-4.  Pokud vytvoříte seznam vlastností ve stylu panel nástrojů Microsoft Outlook, zavolejte [CMFCPropertySheet::SetIconsList](#seticonslist) metoda, jak přidružit seznamu obrázků společně s stránky vlastností.  
+4.  Pokud vytvoříte seznam vlastností ve stylu panel nástrojů aplikace Microsoft Outlook, zavolejte [CMFCPropertySheet::SetIconsList](#seticonslist) metody pro přidružení seznamu obrázků spolu s stránky vlastností.  
   
 5.  Volání [CMFCPropertySheet::AddPage](#addpage) metoda pro každou stránku vlastností.  
   
-6.  Vytvoření `CMFCPropertySheet` řízení a volat jeho `DoModal` metoda.  
+6.  Vytvoření `CMFCPropertySheet` řídit a volat jeho `DoModal` metoda.  
   
 ## <a name="illustrations"></a>Obrázky  
- Následující obrázek znázorňuje vlastností, který je ve stylu embedded nástrojů Microsoft Outlook. Na levé straně listu vlastností se zobrazí panel nástrojů aplikace Outlook.  
+ Následující obrázek znázorňuje seznam vlastností, která je ve stylu integrovaném panelu nástrojů aplikace Microsoft Outlook. Panel nástrojů aplikace Outlook se zobrazí na levé straně seznam vlastností.  
   
- ![Ovládací prvky Barva CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
+ ![Barva CMFCPropertySheet – ovládací prvky](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
   
- Následující obrázek znázorňuje seznam vlastností, která obsahuje [CMFCPropertyGridCtrl třída](../../mfc/reference/cmfcpropertygridctrl-class.md) objektu. Tento objekt je seznam vlastností ve stylu standardní běžné ovládací prvky vlastností.  
+ Následující obrázek znázorňuje seznam vlastností, která obsahuje [cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md) objektu. Tento objekt je seznam vlastností ve stylu standardní společný seznam vlastností ovládacích prvků.  
   
- ![Ovládací prvky seznamu a vlastnost CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
+ ![CMFCPropertySheet – seznam a vlastnosti ovládacích prvků](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
   
- Následující obrázek znázorňuje vlastností, který je ve stylu ovládacím prvkem strom.  
+ Následující obrázek znázorňuje seznam vlastností, která je ve stylu ovládacího prvku stromu.  
   
- ![Strom vlastností](../../mfc/reference/media/proptree.png "proptree")  
+ ![Strom](../../mfc/reference/media/proptree.png "proptree")  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -138,7 +138,7 @@ class CMFCPropertySheet : public CPropertySheet
   
  [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)  
   
- [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
+ [CMFCPropertySheet –](../../mfc/reference/cmfcpropertysheet-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpropertysheet.h  
@@ -151,16 +151,16 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Fyzická_stránka*  
- Ukazatel na objekt stránky. Tento parametr nemůže být `NULL`.  
+ [in] *Fyzická_stránka*  
+ Ukazatel na objekt stránky. Tento parametr nemůže mít hodnotu NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přidá stránku zadanou vlastnost kartě úplně vpravo v seznamu vlastností. Proto tuto metodu použijte k přidání stránky v pořadí zleva doprava.  
+ Tato metoda přidá zadanou vlastnost stránku kartě úplně vpravo v seznamu vlastností. Proto tuto metodu použijte pro přidání stránek v pořadí zleva doprava.  
   
- Pokud seznam vlastností ve stylu aplikace Microsoft Outlook, rozhraní zobrazí seznam navigačních tlačítek v levé části seznamu vlastností. Po této metody přidá stránky vlastností, přidá do seznamu odpovídající tlačítko. Stránky vlastností zobrazíte kliknutím na jeho odpovídající tlačítko. Další informace o styly vlastností najdete v tématu [CMFCPropertySheet::SetLook](#setlook).  
+ Pokud je seznam vlastností ve stylu Microsoft Outlook, zobrazí rozhraní seznam navigačních tlačítek v levé části seznamu vlastností. Až tato metoda přidá stránky vlastností, přidá do seznamu odpovídajících tlačítko. Pro zobrazení stránky vlastností, klikněte na jeho odpovídající tlačítko. Další informace o stylech seznamů vlastností najdete v tématu [CMFCPropertySheet::SetLook](#setlook).  
   
 ##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree  
- Přidá novou stránku vlastnosti do ovládacího prvku strom.  
+ Přidá nové stránky vlastností do ovládacího prvku stromu.  
   
 ```  
 void AddPageToTree(
@@ -171,23 +171,23 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pCategory*  
- Ukazatel na nadřazeného uzlu stromu, nebo `NULL` pro přidružení na určenou stránku nejvyšší úrovně uzlu. Volání [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metoda získat tento ukazatel.  
+ [in] *pCategory*  
+ Ukazatel na nadřazený uzel stromu, nebo hodnota NULL pro zadanou stránku přidružit uzel nejvyšší úrovně. Volání [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodu k získání tohoto ukazatele.  
   
- [v] *Fyzická_stránka*  
- Ukazatel na objekt vlastnosti stránky.  
+ [in] *Fyzická_stránka*  
+ Ukazatel na objekt stránky vlastností.  
   
- [v] *nIconNum*  
- Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud není vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
+ [in] *nIconNum*  
+ Index založený na nule ikony nebo -1, pokud je použita žádná ikona. Pokud není vybrána na stránce, zobrazí se na ikonu vedle na stránce vlastností ovládacího prvku stromu. Výchozí hodnota je -1.  
   
- [v] *nSelIconNum*  
- Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud je vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
+ [in] *nSelIconNum*  
+ Index založený na nule ikony nebo -1, pokud je použita žádná ikona. Pokud je vybrána na stránce, zobrazí se na ikonu vedle na stránce vlastností ovládacího prvku stromu. Výchozí hodnota je -1.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přidá stránky vlastností jako na základní úrovni ovládacím prvkem strom. Přidání stránky vlastností, vytvoření `CMFCPropertySheet` objektu, volání [CMFCPropertySheet::SetLook](#setlook) metoda s *vypadat* parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom tuto metodu použijte k přidání stránky vlastností .  
+ Tato metoda přidá jako listový ovládacím prvkem strom stránky vlastností. Přidání stránky vlastností, vytvořit `CMFCPropertySheet` objektů, zavolejte [CMFCPropertySheet::SetLook](#setlook) metodu s *vypadat* parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom tuto metodu použijte k přidání stránky vlastností .  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
- Přidá nový uzel do ovládacího prvku strom.  
+ Přidá nový uzel stromové struktury.  
   
 ```  
 CMFCPropertySheetCategoryInfo* AddTreeCategory(
@@ -198,25 +198,25 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszLabel*  
+ [in] *lpszLabel*  
  Název uzlu.  
   
- [v] *nIconNum*  
- Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud není vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
+ [in] *nIconNum*  
+ Index založený na nule ikony nebo -1, pokud je použita žádná ikona. Pokud není vybrána na stránce, zobrazí se na ikonu vedle na stránce vlastností ovládacího prvku stromu. Výchozí hodnota je -1.  
   
- [v] *nSelectedIconNum*  
- Indexem ikony nebo -1, pokud žádné ikona je použita. Pokud je vybrána stránce, zobrazí se ikona vedle jeho stránku vlastností ovládacího prvku strom. Výchozí hodnota je -1.  
+ [in] *nSelectedIconNum*  
+ Index založený na nule ikony nebo -1, pokud je použita žádná ikona. Pokud je vybrána na stránce, zobrazí se na ikonu vedle na stránce vlastností ovládacího prvku stromu. Výchozí hodnota je -1.  
   
- [v] *pParentCategory*  
- Ukazatel na nadřazeného uzlu stromu, nebo `NULL` pro přidružení na určenou stránku nejvyšší úrovně uzlu. Nastavte tento parametr se [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metoda.  
+ [in] *pParentCategory*  
+ Ukazatel na nadřazený uzel stromu, nebo hodnota NULL pro zadanou stránku přidružit uzel nejvyšší úrovně. Nastavte tento parametr se [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na nový uzel ve stromové struktuře.  
+ Ukazatel na novém uzlu ve stromovém zobrazení.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte, chcete-li přidat nový uzel, který se také označuje jako kategorii, do ovládacího prvku strom. Přidat uzel, vytvoření `CMFCPropertySheet` objektu, volání [CMFCPropertySheet::SetLook](#setlook) metoda s *vypadat* parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom pomocí této metody přidat uzel.  
+ Tuto metodu použijte, chcete-li přidat nový uzel, který se také označuje jako kategorie, do ovládacího prvku stromu. Přidat uzel, vytvořit `CMFCPropertySheet` objektů, zavolejte [CMFCPropertySheet::SetLook](#setlook) metodu s *vypadat* parametr nastaven na `CMFCPropertySheet::PropSheetLook_Tree`a potom tuto metodu použijte k přidání uzlu.  
   
- Návratová hodnota tuto metodu použijte v následující volání [CMFCPropertySheet::AddPageToTree](#addpagetotree) a [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
+ Používat návratovou hodnotu této metody v následných voláních [CMFCPropertySheet::AddPageToTree](#addpagetotree) a [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
 ##  <a name="cmfcpropertysheet"></a>  CMFCPropertySheet::CMFCPropertySheet  
  Vytvoří `CMFCPropertySheet` objektu.  
@@ -234,44 +234,44 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pszCaption*  
- Řetězec, který obsahuje titulek list vlastností. Nemůže být `NULL`.  
+ [in] *pszCaption*  
+ Řetězec, který obsahuje titulek list vlastností. Nemůže mít hodnotu NULL.  
   
- [v] *nIDCaption*  
+ [in] *nIDCaption*  
  ID prostředku, který obsahuje titulek list vlastností.  
   
- [v] *pParentWnd*  
- Ukazatel do nadřazeného okna vlastností, nebo `NULL` Pokud nadřazeného okna je hlavní okno aplikace. Výchozí hodnota je `NULL`.  
+ [in] *pParentWnd*  
+ Ukazatel do nadřazeného okna vlastností nebo hodnota NULL, pokud je okno nadřazeného hlavního okna aplikace. Výchozí hodnota je NULL.  
   
- [v] *iSelectPage*  
- Index založený na nule nejvyšší vlastnost stránky. Výchozí hodnota je 0.  
+ [in] *iSelectPage*  
+ Index založený na nule hlavní vlastnosti stránky. Výchozí hodnota je 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu parametry [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) konstruktor.  
+ Další informace najdete v tématu parametry [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) konstruktoru.  
   
 ##  <a name="enablepageheader"></a>  CMFCPropertySheet::EnablePageHeader  
- Rezervy místa v horní části každé stránce kreslení vlastní hlavičky.  
+ Rezervuje prostor v horní části každé stránky k vykreslení vlastní hlavičku.  
   
 ```  
 void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nHeaderHeight*  
- Výška záhlaví má v pixelech.  
+ [in] *nHeaderHeight*  
+ Výška záhlaví v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
- Použít hodnotu *nHeaderHeight* parametr kreslení vlastní hlavičky přepsat [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metoda.  
+ Použít hodnotu *nHeaderHeight* přepište parametr kreslení vlastní hlavičky, [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metody.  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
- Načte výšku aktuální záhlaví.  
+ Získá výšku aktuální záhlaví.  
   
 ```  
 int GetHeaderHeight() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výška záhlaví má v pixelech.  
+ Výška záhlaví v pixelech.  
   
 ### <a name="remarks"></a>Poznámky  
  Volání [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metoda před voláním této metody.  
@@ -284,64 +284,64 @@ PropSheetLook GetLook() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Jedna z hodnot výčtu, která určuje vzhled seznamu vlastností. Seznam možných hodnot najdete v tématu výčtu tabulce v části poznámky [CMFCPropertySheet::SetLook](#setlook).  
+ Jedna z hodnot výčtu, které určují vzhled seznamu vlastností. Seznam možných hodnot, najdete v tabulce výčtu v části poznámky [CMFCPropertySheet::SetLook](#setlook).  
   
 ##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth  
- Získá šířku navigačním panelu.  
+ Získává šířku objektu na navigačním panelu.  
   
 ```  
 int GetNavBarWidth() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Šířka navigačního panelu v pixelech.  
+ Šířka panelu navigace v pixelech.  
   
 ##  <a name="gettab"></a>  CMFCPropertySheet::GetTab  
- Načte objekt interní karta ovládací prvek, který podporuje aktuální vlastnost stylů ovládacího prvku.  
+ Načte objekt interní kartu ovládacího prvku, který podporuje aktuální ovládacího prvku seznam vlastností.  
   
 ```  
 CMFCTabCtrl& GetTab() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Objekt ovládacího prvku karta interní.  
+ Objekt interní kartu ovládacího prvku.  
   
 ### <a name="remarks"></a>Poznámky  
- Seznam vlastností můžete nastavit tak, aby se zobrazuje v různé styly, jako je například ovládacím prvkem strom, seznam navigačních tlačítek nebo sadu stránky s kartami.  
+ Seznam vlastností můžete nastavit, aby se zobrazovala v různých stylů, jako je například ovládací prvek stromu seznam navigačních tlačítek nebo sadu s kartami stránek.  
   
- Před voláním této metody volejte [CMFCPropertySheet::SetLook](#setlook) metoda k nastavení vzhledu ovládacího prvku list vlastností. Potom zavolejte [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) metoda pro inicializaci objekt ovládacího prvku karta interní. Tuto metodu použijte načíst objekt ovládacího prvku karta a pak použijte tento objekt pro práci s kartami na seznamu vlastností.  
+ Před voláním této metody zavolejte [CMFCPropertySheet::SetLook](#setlook) metody nastavte vzhled ovládacího prvku seznam vlastností. Zavolejte [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) metody k inicializaci objektu interní kartu ovládacího prvku. Pomocí této metody můžete načíst objekt ovládacího prvku karty a pak použít tento objekt pro práci se karty v seznamu vlastností.  
   
- Tato metoda se vyhodnotí v režimu ladění, pokud ovládací prvek seznamu vlastností vlastnost není nastavená na objeví ve stylu Microsoft OneNote.  
+ Tato metoda nepodmíněné výrazy v režimu ladění, pokud není nastavena ovládacího prvku seznam vlastností zobrazí ve stylu Microsoft OneNote.  
   
 ##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl  
- Inicializuje vzhled aktuální vlastnost stylů ovládacího prvku.  
+ Inicializuje vzhled ovládacího prvku aktuální seznam vlastností.  
   
 ```  
 virtual CWnd* InitNavigationControl();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na okno ovládacího prvku list vlastností.  
+ Ukazatel na okno ovládacího prvku seznam vlastností.  
   
 ### <a name="remarks"></a>Poznámky  
- Ovládací prvek seznamu vlastností Vlastnosti mohou objevit v několika různých formulářů, například sadu stránky s kartami, ovládacím prvkem strom nebo seznam navigačních tlačítek. Použití [CMFCPropertySheet::SetLook](#setlook) metoda k určení vzhledu ovládacího prvku list vlastností.  
+ Prvku seznamu vlastností se mohou objevit v několika různých formách, jako je například sada stránky se záložkami, ovládací prvek stromu nebo seznamu navigačních tlačítek. Použití [CMFCPropertySheet::SetLook](#setlook) metodu k určení vzhledu ovládacího prvku seznam vlastností.  
   
 ##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage  
- Voláno rámcem, pokud je povoleno stránky vlastností.  
+ Volá se rozhraním, když je povolena stránka vlastností.  
   
 ```  
 virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Fyzická_stránka*  
- Ukazatel na objekt vlastnosti stránky, který představuje stránku povolená vlastnost.  
+ [in] *Fyzická_stránka*  
+ Ukazatel na objekt stránky vlastností, který představuje stránku vlastnost enabled.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení tato metoda zajišťuje, že stránka povoleno vlastností přesunut do oblasti zobrazení. Obsahuje-li styl aktuální seznam vlastností podokně Microsoft Outlook, tato metoda nastaví na odpovídající tlačítko Outlook na zaškrtnutého stavu.  
+ Ve výchozím nastavení tato metoda zajišťuje, že vlastnost enabled stránky je přesunut do oblasti zobrazení. Pokud styl aktuální seznam vlastností obsahuje podokno Microsoft Outlook, tato metoda nastaví na odpovídající tlačítko Outlook na zaškrtnutém stavu.  
   
 ##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader  
- Voláno rámcem k vykreslení hlavičku pro stránky přizpůsobených vlastností.  
+ Volá se rozhraním, chcete-li nakreslit záhlaví stránky přizpůsobených vlastností.  
   
 ```  
 virtual void OnDrawPageHeader(
@@ -351,48 +351,48 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
- Ukazatel na kontextu zařízení.  
+ [in] *primárního řadiče domény*  
+ Ukazatel na kontext zařízení.  
   
- [v] *nPage*  
- Číslo od nuly vlastnost stránky.  
+ [in] *nPage*  
+ Číslo stránky vlastností založený na nule.  
   
- [v] *rectHeader*  
- Ohraničující obdélník, která určuje, kde k vykreslení záhlaví.  
+ [in] *rectHeader*  
+ Ohraničující obdélník, který určuje, kde chcete-li nakreslit záhlaví.  
   
 ### <a name="remarks"></a>Poznámky  
- Ve výchozím nastavení tato metoda neprovede žádnou akci. Pokud tuto metodu přepíšete, zavolejte [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metoda předtím, než tuto metodu volá framework.  
+ Ve výchozím nastavení tato metoda nemá žádný účinek. Pokud tuto metodu přepíšete, zavolejte [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metoda před rozhraní volá tuto metodu.  
   
 ##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage  
- Voláno rámcem odebrání ovládacím prvkem strom stránky vlastností.  
+ Volá se rozhraním odebrání ovládacím prvkem strom stránky vlastností.  
   
 ```  
 virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Fyzická_stránka*  
- Ukazatel na objekt vlastností stránky, který představuje stránku vlastností a odebrat.  
+ [in] *Fyzická_stránka*  
+ Ukazatel na objekt stránky vlastností, který představuje stránky vlastností k odebrání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory  
- Odebrání uzlu z ovládacího prvku strom.  
+ Odebrání uzlu z ovládacího prvku stromu.  
   
 ```  
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pCategory*  
- Ukazatel na kategorii (uzel) Chcete-li odebrat.  
+ [in] *pCategory*  
+ Ukazatel na kategorii (uzly) Chcete-li odebrat.  
   
 ### <a name="remarks"></a>Poznámky  
- Tuto metodu použijte k odebrání uzlu, který se také označuje jako kategorie, z ovládacího prvku strom. Použití [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metody přidat uzel do ovládacího prvku strom.  
+ Tuto metodu použijte k odebrání uzlu, který se také označuje jako kategorie, z ovládacího prvku stromu. Použití [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metody přidat uzel do ovládacího prvku stromu.  
   
 ##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage  
- Stránky vlastností odebere ze seznamu vlastností.  
+ Stránky vlastností se odebere ze seznamu vlastností.  
   
 ```  
 void RemovePage(CPropertyPage* pPage);
@@ -400,17 +400,17 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *Fyzická_stránka*  
- Ukazatel na vlastnost stránky objekt, který reprezentuje stránku vlastností a odebrat. Nemůže být `NULL`.  
+ [in] *Fyzická_stránka*  
+ Ukazatel na objekt stránky vlastností, představující stránky vlastností k odebrání. Nemůže mít hodnotu NULL.  
   
- [v] *nPage*  
- Index stránky, odeberte nule.  
+ [in] *nPage*  
+ Z nuly vycházející index stránky k odebrání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odstraní zadanou vlastnost stránku a zničí jeho přidružené okno. Stránka vlastností objektu, který *Fyzická_stránka* parametr určuje nebude odstraněn, až [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) zavření časového intervalu.  
+ Tato metoda odebere zadané vlastnosti stránky a odstraní přidružené okna. Na stránce vlastností objektu, který *Fyzická_stránka* parametr určuje není zničen, dokud [CMFCPropertySheet –](../../mfc/reference/cmfcpropertysheet-class.md) zavření časového intervalu.  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
- Určuje seznam bitové kopie, které se používají v ovládacím prvku navigačním podokně aplikace Outlook.  
+ Určuje seznam imagí, které se používají v ovládacím prvku navigačního podokna aplikace Outlook.  
   
 ```  
 BOOL SetIconsList(
@@ -421,25 +421,25 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *uiImageListResID*  
- ID prostředku seznamu obrázků.  
+ [in] *uiImageListResID*  
+ ID prostředku ze seznamu obrázků.  
   
- [v] *cx*  
+ [in] *cx*  
  Šířka v pixelech ikony v seznamu obrázků.  
   
- [v] *clrTransparent*  
- Barva průhledný obrázek. Části bitové kopie, které jsou tato barva bude průhledná. Výchozí hodnota je purpurová barva, RGB(255,0,255).  
+ [in] *clrTransparent*  
+ Barva průhledný obrázek. Součástí image, které jsou tato barva bude průhledný. Výchozí hodnota je barva purpurová, RGB(255,0,255).  
   
- [v] *hIcons*  
- Obslužná rutina do existujícího seznamu bitové kopie.  
+ [in] *hIcons*  
+ Popisovač pro existující seznam obrázků.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- V metodě první přetížení syntaxe, `TRUE` Pokud tato metoda je úspěšné, jinak hodnota `FALSE`.  
+ V první metodě přetížení syntaxe, nastavena hodnota TRUE v případě, že tato metoda je úspěšná. v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud seznam vlastností ve stylu aplikace Microsoft Outlook, rozhraní zobrazí seznam navigačních tlačítek, volá ovládací prvek podokně aplikace Outlook v levé části seznamu vlastností. Tuto metodu použijte k nastavení seznamu bitové kopie a použije se v podokně ovládacího prvku aplikace Outlook.  
+ Pokud je seznam vlastností ve stylu Microsoft Outlook, zobrazí rozhraní seznam navigačních tlačítek, volá ovládacího prvku podokno Outlooku, v levé části seznamu vlastností. Tuto metodu použijte k nastavení seznamu image používané ovládací prvek podokna aplikace Outlook.  
   
- Další informace o metodách, které podporují tuto metodu, najdete v části [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) a [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Další informace o tom, jak nastavit styl vlastností najdete v tématu [CMFCPropertySheet::SetLook](#setlook).  
+ Další informace o metodách, které podporují tuto metodu, najdete v části [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) a [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Další informace o tom, jak nastavit styl seznamu vlastností najdete v tématu [CMFCPropertySheet::SetLook](#setlook).  
   
 ##  <a name="setlook"></a>  CMFCPropertySheet::SetLook  
  Určuje vzhled seznamu vlastností.  
@@ -451,27 +451,27 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *vypadat*  
- Jedna z hodnot výčtu, která určuje vzhled seznamu vlastností. Výchozí styl pro seznam vlastností je `CMFCPropertySheet::PropSheetLook_Tabs`. Další informace najdete v tabulce v části poznámky v tomto tématu.  
+ [in] *vypadat*  
+ Jedna z hodnot výčtu, které určují vzhled seznamu vlastností. Výchozí styl seznamu vlastností je `CMFCPropertySheet::PropSheetLook_Tabs`. Další informace najdete v tabulce v části poznámky v tomto tématu.  
   
- [v] *nNavControlWidth*  
- Šířka navigační ovládacího prvku v pixelech. Výchozí hodnota je 100.  
+ [in] *nNavControlWidth*  
+ Šířka navigaci ovládacího prvku v pixelech. Výchozí hodnota je 100.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud chcete zobrazit seznam vlastností ve stylu jiné než výchozí, volejte tuto metodu, před vytvořením okna List vlastností.  
+ Chcete-li zobrazit seznam vlastností ve stylu jiné než výchozí, volejte tuto metodu, před vytvořením okna List vlastností.  
   
- Následující tabulka uvádí hodnot výčtu, která lze zadat v *vypadat* parametr.  
+ V následující tabulce jsou uvedeny hodnoty výčtu, které lze zadat v *vypadat* parametru.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|`CMFCPropertySheet::PropSheetLook_Tabs`|(Výchozí) Zobrazí kartu pro každou stránku vlastností. Karty se zobrazí v horní části seznamu vlastností a jsou skládaný, pokud existují další karty, než se vejde do jednoho řádku.|  
-|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Zobrazí seznam navigačních tlačítek v styl panelu Microsoft Outlook na levou stranu seznamu vlastností. Každé tlačítko v seznamu odpovídá stránky vlastností. Pokud existují další tlačítka, než se vejde v oblasti viditelné v seznamu, zobrazí rozhraní šipky posuvníku.|  
-|`CMFCPropertySheet::PropSheetLook_Tree`|Zobrazí ovládacím prvkem strom v levé části seznamu vlastností. Jednotlivé nadřazené nebo podřízené uzly ovládacího prvku strom odpovídá stránky vlastností. Pokud existují další uzly, než se vejde v oblasti viditelné v ovládacím prvku stromu, zobrazí rozhraní šipky posuvníku.|  
-|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Zobrazí na kartě ve stylu Microsoft OneNote pro každou stránku vlastností. Rozhraní zobrazuje karty v horní části seznamu vlastností a šipky posuvníku Pokud existují další karty, než se vejde do jednoho řádku.|  
-|`CMFCPropertySheet::PropSheetLook_List`|Zobrazí seznam v levé části seznamu vlastností. Každá položka seznamu odpovídá stránky vlastností. Pokud existují další položky seznamu, než se vejde v oblasti viditelné v seznamu, zobrazí rozhraní šipky posuvníku.|  
+|`CMFCPropertySheet::PropSheetLook_Tabs`|(Výchozí) Zobrazuje kartu pro každou stránku vlastností. Karty se zobrazí v horní části stránky vlastností a jsou uspořádány vedle, pokud existují další záložky, než se vejde do jednoho řádku.|  
+|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Zobrazí seznam navigačních tlačítek ve stylu na panelu aplikace Microsoft Outlook, v levé části seznamu vlastností. Stránka vlastností odpovídá každé tlačítko v seznamu. Pokud existují další tlačítka, než pojme viditelná oblast v seznamu zobrazí rozhraní šipky.|  
+|`CMFCPropertySheet::PropSheetLook_Tree`|Ovládací prvek stromu se zobrazí na levé straně seznam vlastností. Každý uzel nadřazené nebo podřízené ovládacího prvku strom odpovídá stránky vlastností. Pokud existuje více uzlů, než pojme viditelná oblast ovládacího prvku strom, zobrazí rozhraní šipky.|  
+|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Na kartě se zobrazí ve stylu Microsoft OneNote pro každou stránku vlastností. Rozhraní zobrazí karty v horní části stránky vlastností a šipky posuvníku Pokud existují další záložky, než se vejde na jednom řádku.|  
+|`CMFCPropertySheet::PropSheetLook_List`|Zobrazí seznam v levé části seznamu vlastností. Každá položka seznamu odpovídá stránky vlastností. Pokud existují další položky seznamu, než pojme viditelná oblast v seznamu zobrazí rozhraní šipky.|  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyPage – třída](../../mfc/reference/cmfcpropertypage-class.md)   
+ [Cmfcpropertypage – třída](../../mfc/reference/cmfcpropertypage-class.md)   
  [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)

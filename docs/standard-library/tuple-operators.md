@@ -1,5 +1,5 @@
 ---
-title: '&lt;řazené kolekce členů&gt; operátory | Microsoft Docs'
+title: '&lt;řazené kolekce členů&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,19 +13,19 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: c3e5c1e82e98379ff2cefae48f8af89f8fc0b698
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859069"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956960"
 ---
 # <a name="lttuplegt-operators"></a>&lt;řazené kolekce členů&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
 
@@ -40,11 +40,12 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí hodnotu false, kdy `N` je 0, jinak `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
+Funkce vrátí hodnotu false, kdy `N` je 0, v opačném případě `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
 ### <a name="example"></a>Příklad
 
@@ -91,7 +92,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
 Porovnání `tuple` objekty pro menší.
 
@@ -104,11 +105,12 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí hodnotu true, pokud `N` je větší než 0 a první různé hodnoty v `tpl1` porovná menší než odpovídající hodnota v `tpl2`, jinak vrátí hodnotu false.
+Tato funkce vrací true, pokud `N` je větší než 0 a první rozdílné hodnoty v `tpl1` porovná menší než odpovídající hodnota v `tpl2`, jinak vrátí hodnotu false.
 
 ### <a name="example"></a>Příklad
 
@@ -155,7 +157,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
 Porovnání `tuple` objekty pro menší nebo rovno.
 
@@ -168,11 +170,12 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí hodnotu `!(tpl2 < tpl1)`.
+Funkce vrátí `!(tpl2 < tpl1)`.
 
 ### <a name="example"></a>Příklad
 
@@ -221,7 +224,7 @@ false
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Porovnání `tuple` objekty rovnosti.
+Porovnání `tuple` objekty pro rovnost.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -232,11 +235,12 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí hodnotu true, pokud `N` je 0, jinak `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
+Tato funkce vrací true, pokud `N` je 0, v opačném případě `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
 ### <a name="example"></a>Příklad
 
@@ -283,7 +287,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
 Porovnání `tuple` objekty pro větší.
 
@@ -296,11 +300,12 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí hodnotu `tpl2 < tpl1`.
+Funkce vrátí `tpl2 < tpl1`.
 
 ### <a name="example"></a>Příklad
 
@@ -347,9 +352,9 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Porovnání `tuple` objekty pro větší nebo rovna.
+Porovnání `tuple` objekty pro větší nebo rovno.
 
 ```cpp
 template <class T1, class T2, ..., class TN,
@@ -360,11 +365,12 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ elementu n-tou řazené kolekce členů.
+*TN*  
+ Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí hodnotu `!(tpl1 < tpl2)`.
+Funkce vrátí `!(tpl1 < tpl2)`.
 
 ### <a name="example"></a>Příklad
 
@@ -411,6 +417,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<řazené kolekce členů >](../standard-library/tuple.md)<br/>

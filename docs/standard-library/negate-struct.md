@@ -1,5 +1,5 @@
 ---
-title: negate – struktura | Microsoft Docs
+title: negate – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956931"
 ---
 # <a name="negate-struct"></a>negate – struktura
 
-Předdefinované funkce objekt, který provede operaci aritmetické negace (unární `operator-`) na jeho argumentem.
+Předdefinovaný objekt funkce, který provádí operace aritmetické negace (unární `operator-`) na svůj argument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,13 +49,13 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type` Žádný typ, který podporuje `operator-` operand typu zadán nebo vyvozen, která má.
+*Typ* libovolný typ, který podporuje `operator-` , která přijímá zadaný nebo odvozený typ operandu.
 
-`Left` Operand pro být Negované. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `Type`.
+*Vlevo* operand bude negovat. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *typ*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `-Left.` specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou unární `operator-`.
+Výsledek `-Left.` specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácený unární `operator-`.
 
 ## <a name="example"></a>Příklad
 
@@ -103,9 +103,9 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

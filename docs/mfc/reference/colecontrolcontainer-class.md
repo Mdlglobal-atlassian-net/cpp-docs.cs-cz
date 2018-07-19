@@ -1,5 +1,5 @@
 ---
-title: Třída COleControlContainer | Microsoft Docs
+title: Colecontrolcontainer – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041926"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852299"
 ---
-# <a name="colecontrolcontainer-class"></a>COleControlContainer – třída
-Funguje jako kontejneru ovládacího prvku pro ovládací prvky ActiveX.  
+# <a name="colecontrolcontainer-class"></a>Colecontrolcontainer – třída
+Funguje jako kontejner ovládacího prvku pro ovládací prvky ActiveX.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -110,51 +110,51 @@ class COleControlContainer : public CCmdTarget
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Vytvoří řízení lokality, hostitelem kontejneru.|  
-|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informuje o všechny hostované ovládacích prvků, které se změnila vedlejší vlastnost.|  
-|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Upravuje zadané tlačítko – ovládací prvek.|  
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Vytvoří ovládací prvek webu, hostitelem kontejneru.|  
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informuje o tom všechny hostované ovládací prvky, které změní vlastnost ambient změnila.|  
+|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Upraví ovládacího prvku určeného tlačítka.|  
 |[COleControlContainer::CheckRadioButton](#checkradiobutton)|Vybere zadaný přepínač skupiny.|  
-|[COleControlContainer::CreateControl](#createcontrol)|Vytvoří hostované ovládací prvek ActiveX.|  
-|[COleControlContainer::CreateOleFont](#createolefont)|Vytvoří OLE písma.|  
-|[COleControlContainer::FindItem](#finditem)|Vrátí vlastní stránka daný ovládací prvek.|  
-|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Určuje, pokud řízení lokality přijímá události.|  
+|[COleControlContainer::CreateControl](#createcontrol)|Vytvoří hostovaného ovládacího prvku ActiveX.|  
+|[COleControlContainer::CreateOleFont](#createolefont)|Vytvoří písmo OLE.|  
+|[COleControlContainer::FindItem](#finditem)|Vrátí vlastní web určený ovládací prvek.|  
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Určuje, pokud ovládací prvek webu přijímá události.|  
 |[COleControlContainer::GetAmbientProp](#getambientprop)|Načte zadaný vedlejší vlastnost.|  
-|[COleControlContainer::GetDlgItem](#getdlgitem)|Načte zadaný dialogovém okně ovládacího prvku.|  
-|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Načte hodnotu zadaného dialogovém okně ovládacího prvku.|  
-|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Načte popisek ovládacího prvku zadaný dialogové okno.|  
+|[COleControlContainer::GetDlgItem](#getdlgitem)|Načte zadaný dialogového okna ovládacího prvku.|  
+|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Načte hodnotu zadaného dialogového okna ovládacího prvku.|  
+|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Načte popisek ovládacího prvku zadané dialogového okna.|  
 |[COleControlContainer::HandleSetFocus](#handlesetfocus)|Určuje, pokud kontejner zpracovává WM_SETFOCUS zprávy.|  
-|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Zpracovává zprávy odeslané do ovládacího prvku bez oken.|  
-|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Určuje stav dané tlačítko.|  
-|[COleControlContainer::OnPaint](#onpaint)|Voláno k překreslit část kontejneru.|  
-|[COleControlContainer::OnUIActivate](#onuiactivate)|Voláno, pokud je ovládací prvek bude aktivován na místě.|  
-|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Volá se při ovládacího prvku je deaktivovat.|  
-|[COleControlContainer::ScrollChildren](#scrollchildren)|Voláno rámcem při přijímání zprávy scroll z podřízeného okna.|  
-|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Odešle zprávu do zadané ovládacího prvku.|  
+|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Zpracovává zprávy odeslané na ovládací prvek bez oken.|  
+|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Určuje stav určeného tlačítka.|  
+|[COleControlContainer::OnPaint](#onpaint)|Volá se, aby repaint část kontejneru.|  
+|[COleControlContainer::OnUIActivate](#onuiactivate)|Volá se, když je ovládací prvek bude aktivovat na místě.|  
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Volá se, když je ovládací prvek se deaktivuje.|  
+|[COleControlContainer::ScrollChildren](#scrollchildren)|Volá se rozhraním při posouvání zprávy byly přijaty z podřízeného okna.|  
+|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Odešle zprávu pro zadaný ovládací prvek.|  
 |[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Nastaví hodnotu zadaného prvku.|  
-|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Nastaví text zadaný ovládacího prvku.|  
+|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Nastaví text zadaný ovládací prvek.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[COleControlContainer::m_crBack](#m_crback)|Barva pozadí kontejneru.|  
-|[COleControlContainer::m_crFore](#m_crfore)|Barvu popředí kontejneru.|  
-|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Seznam podporovaných řízení lokality.|  
-|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|Počet prvků hostované bez oken.|  
+|[COleControlContainer::m_crFore](#m_crfore)|Barva popředí kontejneru.|  
+|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Seznam podporovaných ovládací prvky stránky.|  
+|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|Počet hostované ovládací prvky bez oken.|  
 |[COleControlContainer::m_pOleFont](#m_polefont)|Ukazatel na písmo OLE vlastního ovládacího prvku lokality.|  
 |[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Ukazatel na ovládací prvek webu zachycení.|  
-|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Ukazatel na ovládací prvek, který má aktuálně vstupu fokus.|  
-|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Ukazatel na ovládací prvek, který je aktuálně aktivaci.|  
-|[COleControlContainer::m_pWnd](#m_pwnd)|Ukazatel na okno implementace kontejneru ovládacího prvku.|  
-|[COleControlContainer::m_siteMap](#m_sitemap)|Mapy webu.|  
+|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Ukazatel na ovládací prvek, který aktuálně má vstupní fokus.|  
+|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Ukazatel na ovládací prvek, který je aktuálně aktivovaná v místě.|  
+|[COleControlContainer::m_pWnd](#m_pwnd)|Ukazatel na implementaci kontejnerem ovládacího prvku okna.|  
+|[COleControlContainer::m_siteMap](#m_sitemap)|Mapa webu.|  
   
 ## <a name="remarks"></a>Poznámky  
- To se provádí prostřednictvím podpory pro jednu nebo více lokalit ovládacího prvku ActiveX (implementované `COleControlSite`). `COleControlContainer` plně implementuje [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) a [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) rozhraní, povolení obsažené ovládacích prvků ActiveX ke splnění jejich kvalifikaci jako položky na místě.  
+ Je to tím, že poskytuje podporu pro jednu nebo více lokalit ovládacího prvku ActiveX (implementované `COleControlSite`). `COleControlContainer` plně implementuje [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) a [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) rozhraní, což obsažené ovládací prvky ActiveX ke splnění jejich kvalifikace jako místní položky.  
   
- Běžně, tato třída se používá ve spojení s `COccManager` a `COleControlSite` implementovat vlastní kontejneru ovládacího prvku ActiveX, s vlastní weby pro jednu nebo více ovládacích prvků ActiveX.  
+ Tato třída se často používá ve spojení s `COccManager` a `COleControlSite` implementovat vlastní kontejner ovládacího prvku ActiveX, s vlastní weby pro jednu nebo více ovládacích prvků ActiveX.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -164,7 +164,7 @@ class COleControlContainer : public CCmdTarget
  **Záhlaví:** afxocc.h  
   
 ##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite  
- Voláno rámcem a vytvořte ovládacího prvku lokality.  
+ Volá se rozhraním, které chcete vytvořit a připojit lokalitu ovládacího prvku.  
   
 ```  
 virtual void AttachControlSite(
@@ -179,33 +179,33 @@ void AttachControlSite(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Ukazatel na `CWnd` objektu.  
+ Ukazatel `CWnd` objektu.  
   
  *nIDC*  
  ID ovládacího prvku na připojit.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce přepsání, pokud chcete přizpůsobit tohoto procesu.  
+ Tato funkce přepište, pokud chcete tento proces přizpůsobit.  
   
 > [!NOTE]
->  Pokud se staticky připojujete ke knihovně MFC, použijte první formulář této funkce. Vytváříte-li dynamicky propojení do knihovny MFC, použijte druhý formulář.  
+>  První formulář této funkce použijte, pokud jsou staticky připojování ke knihovně MFC. Pokud jsou dynamického propojení ke knihovně MFC, použijte druhý formulář.  
   
 ##  <a name="broadcastambientpropertychange"></a>  COleControlContainer::BroadcastAmbientPropertyChange  
- Informuje o všechny hostované ovládacích prvků, které se změnila vedlejší vlastnost.  
+ Informuje o tom všechny hostované ovládací prvky, které změní vlastnost ambient změnila.  
   
 ```  
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *dispID*  
- Odesílání ID vedlejší vlastnost mění.  
+ *identifikátor DISPID*  
+ ID odbavení vedlejší vlastnost mění.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce je volána rámcem při vedlejší vlastnost změnil hodnotu. Chcete-li přizpůsobit toto chování funkci přepište.  
+ Tato funkce je volána rozhraním, změní vlastnost ambient se při změně hodnoty. Tuto funkci k přizpůsobení toto chování přepište.  
   
 ##  <a name="checkdlgbutton"></a>  COleControlContainer::CheckDlgButton  
- Upravuje aktuální stav tlačítko.  
+ Změní aktuální stav tlačítka.  
   
 ```  
 virtual void CheckDlgButton(
@@ -218,16 +218,16 @@ virtual void CheckDlgButton(
  ID na tlačítko Upravit.  
   
  *nZkontrolujte*  
- Určuje stav tlačítko. Může být jedna z následujících akcí:  
+ Určuje stav tlačítka. Může být jedna z následujících akcí:  
   
-- **BST_CHECKED** nastaví stav tlačítka zaškrtnuté.  
+- Kontroluje stav tlačítka, který má BST_CHECKED sady.  
   
-- **BST_INDETERMINATE** nastaví stav tlačítka šedým, která určuje neurčitém stavu. Tuto hodnotu použijte pouze v případě na tlačítko **bs_3state –** nebo **bs_auto3state –** stylu.  
+- BST_INDETERMINATE sady šedý stav tlačítka, který má určující neurčitém stavu. Tuto hodnotu lze používejte pouze v případě, že tlačítko má BS_3STATE nebo BS_AUTO3STATE style.  
   
-- **BST_UNCHECKED** nastaví stav tlačítka nezaškrtnuté.  
+- BST_UNCHECKED nastaví stav tlačítka, který se má vymazat.  
   
 ##  <a name="checkradiobutton"></a>  COleControlContainer::CheckRadioButton  
- Vybere zadaný přepínače ve skupině a vymaže zbývající tlačítka ve skupině.  
+ Vybere zadaný přepínač ve skupině a vymaže zbývající tlačítka ve skupině.  
   
 ```  
 virtual void CheckRadioButton(
@@ -238,13 +238,13 @@ virtual void CheckRadioButton(
   
 ### <a name="parameters"></a>Parametry  
  *nIDFirstButton*  
- Určuje identifikátor první přepínače ve skupině.  
+ Určuje identifikátor první přepínací tlačítko ve skupině.  
   
  *nIDLastButton*  
- Určuje identifikátor poslední přepínače ve skupině.  
+ Určuje identifikátor používaného poslední přepínač ve skupině.  
   
  *nIDCheckButton*  
- Určuje identifikátor přepínač ke kontrole.  
+ Určuje identifikátor přepínací tlačítko, která se má zkontrolovat.  
   
 ##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
  Vytvoří `COleControlContainer` objektu.  
@@ -255,13 +255,13 @@ explicit COleControlContainer(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Ukazatel do nadřazeného okna kontejneru ovládacího prvku.  
+ Ukazatel na nadřazené okno ovládacího prvku kontejneru.  
   
 ### <a name="remarks"></a>Poznámky  
- Po úspěšném vytvoření objektu přidání vlastního ovládacího prvku serveru pomocí volání `AttachControlSite`.  
+ Po úspěšném vytvoření objektu přidat vlastní ovládací prvek webu pomocí volání `AttachControlSite`.  
   
 ##  <a name="createcontrol"></a>  COleControlContainer::CreateControl  
- Vytvoří ovládacího prvku ActiveX hostované zadaný `COleControlSite` objektu.  
+ Vytvoří ovládací prvek ActiveX hostitelem zadané `COleControlSite` objektu.  
   
 ```  
 BOOL CreateControl(
@@ -293,61 +293,61 @@ BOOL CreateControl(
   
 ### <a name="parameters"></a>Parametry  
  *pWndCtrl*  
- Ukazatel na okno objekt reprezentující ovládacího prvku.  
+ Ukazatel na objekt window představující ovládací prvek.  
   
- *CLSID*  
- ID jedinečný třídy ovládacího prvku.  
+ *identifikátor CLSID*  
+ Třída jedinečné ID ovládacího prvku.  
   
  *lpszWindowName*  
- Ukazatel na text, který se zobrazí v ovládacím prvku. Nastaví hodnotu vlastnosti ovládacího prvku popisek nebo Text (pokud existuje). Pokud **NULL**, popisek nebo Text ovládacího prvku se nezmění.  
+ Ukazatel na text, který se zobrazí v ovládacím prvku. Nastaví hodnotu vlastnosti ovládacího prvku popisek nebo Text (pokud existuje). Pokud má hodnotu NULL, titulek a Text ovládacího prvku se nezmění.  
   
  *dwStyle*  
- Styly systému Windows. Styly k dispozici jsou uvedeny v seznamu **poznámky** části.  
+ Styly Windows. Dostupné styly jsou uvedeny v části **poznámky** oddílu.  
   
- *Rect –*  
- Určuje velikost a umístění ovládacího prvku. Může být buď `CRect` objekt nebo `RECT` struktury.  
+ *Rect*  
+ Určuje velikost a umístění ovládacího prvku. Může se jednat buď `CRect` objektu nebo `RECT` struktury.  
   
  *nID*  
  Určuje ID ovládacího prvku podřízené okno.  
   
  *pPersist*  
- Ukazatel na `CFile` obsahující trvalý stav pro ovládací prvek. Výchozí hodnota je **NULL**, která určuje, že ovládací prvek se inicializuje bez obnovení stavu z jakékoli trvalé úložiště. Není-li **NULL**, by mělo být ukazatel na `CFile`-odvozené objekt, který obsahuje trvalé data ovládacího prvku ve formě datového proudu nebo úložiště. Tato data by byla uložena v předchozí aktivace klienta. `CFile` Může obsahovat další data, ale musí mít jeho ukazatele pro čtení a zápis nastavit do prvního bajtu trvalé dat při volání `CreateControl`.  
+ Ukazatel `CFile` obsahující trvalý stav ovládacího prvku. Výchozí hodnota je NULL označující, že ovládací prvek se inicializuje bez obnovení stavu z jakékoli trvalého úložiště. Pokud není NULL, mělo by být ukazatel `CFile`-odvozenému objektu, který obsahuje ovládací prvek trvalá data ve formě datového proudu nebo úložiště. Tato data by byla uložena do předchozí aktivace klienta. `CFile` Může obsahovat další data, ale musí být ukazatel jeho čtení a zápis nastavení do prvního bajtu trvalá data v okamžiku volání `CreateControl`.  
   
  *bStorage*  
- Určuje, zda data v *pPersist* by měl být interpretován jako `IStorage` nebo `IStream` data. Pokud data v *pPersist* je úložiště, *bStorage* by měla být **TRUE**. Pokud data v *pPersist* je datový proud, *bStorage* by měla být **FALSE**. Výchozí hodnota je **FALSE**.  
+ Určuje, zda data v *pPersist* by měl být interpretován jako `IStorage` nebo `IStream` data. Pokud data v *pPersist* je úložiště, *bStorage* by měla být nastavena na možnost PRAVDA. Pokud data v *pPersist* je datový proud, *bStorage* by měl mít hodnotu FALSE. Výchozí hodnota je FALSE.  
   
  *bstrLicKey*  
- Volitelné licence klíčová data. Tato data je potřeba pouze při vytváření ovládacích prvků, které vyžadují spuštění licenční klíč. Pokud ovládací prvek podporuje licencování, je nutné zadat licenční klíč pro vytvoření ovládacího prvku proběhla úspěšně. Výchozí hodnota je **NULL**.  
+ Volitelné licenční klíče data. Tato data je potřeba jenom pro vytváření ovládacích prvků, které vyžadují za běhu licenční klíč. Pokud ovládací prvek podporuje licencování, je nutné zadat licenční klíč pro vytvoření ovládacího prvku na úspěšné. Výchozí hodnota je NULL.  
   
  *ppNewSite*  
- Ukazatele na existující web ovládací prvek, který bude hostitelem ovládacího prvku vytváří. Výchozí hodnota je **NULL**, indikující, nové řízení lokality bude automaticky vytvořen a připojený k nové ovládací prvek.  
+ Ukazatel na existující web ovládací prvek, který bude hostitelem vytváří ovládacího prvku. Výchozí hodnota je NULL, která udává, že nový ovládací prvek webu budou automaticky vytvoří a připojí do nového ovládacího prvku.  
   
  *ppt*  
- Ukazatel **bodu** struktura, která obsahuje levém horním rohu ovládacího prvku. Velikost ovládacího prvku je dáno hodnotu *psize*. *Ppt* a *psize* hodnoty jsou volitelné metodu zadávání velikost a umístění ovládacího prvku.  
+ Ukazatel `POINT` strukturu, která obsahuje levého horního rohu ovládacího prvku. Velikost ovládacího prvku, je určen hodnotou *psize*. *Ppt* a *psize* hodnoty jsou volitelné metodu pro určení velikosti a pozice ovládacího prvku.  
   
  *psize*  
- Ukazatel **velikost** struktura, která obsahuje velikosti ovládacího prvku. Levém horním rohu je dáno hodnotu *ppt*. *Ppt* a *psize* hodnoty jsou volitelné metodu zadávání velikost a umístění ovládacího prvku.  
+ Ukazatel `SIZE` strukturu, která obsahuje velikost ovládacího prvku. Levém horním rohu je určen hodnotou *ppt*. *Ppt* a *psize* hodnoty jsou volitelné metodu pro určení velikosti a pozice ovládacího prvku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Pouze podmnožinu Windows *dwStyle* příznaky podporuje `CreateControl`:  
+ Pouze podmnožinu Windows *dwStyle* nepodporuje příznaky `CreateControl`:  
   
-- **Ws_visible –** vytvoří okno, které je původně viditelná. Vyžaduje, pokud chcete ovládat viditelné okamžitě, stejně jako obyčejnou windows.  
+- WS_VISIBLE vytvoří okno, které je zpočátku viditelné. Povinné, pokud chcete, aby ovládací prvek viditelný okamžitě, stejně jako běžná okna.  
   
-- **Ws_disabled –** vytvoří okno, které je původně zakázána. Okno zakázané nemůže přijímat vstup od uživatele. Můžete nastavit, pokud má vlastnost povoleno ovládacího prvku.  
+- WS_DISABLED vytvoří okno, které je zpočátku zakázáno. Zakázané okno nepřijímá vstup od uživatele. Můžete nastavit, pokud ovládací prvek má vlastnost Enabled.  
   
-- **Ws_border –** vytvoří okno s dynamicky čáry ohraničení. Můžete nastavit, pokud má vlastnost styl okraje na ovládací prvek.  
+- WS_BORDER vytvoří okno s dynamické čáry ohraničení. Můžete nastavit, pokud ovládací prvek má vlastnosti BorderStyle.  
   
-- **Ws_group –** Určuje první prvek skupiny ovládacích prvků. Uživatel může změnit fokus klávesnice z jednoho ovládacího prvku ve skupině na další pomocí klíčů směr. Všechny ovládací prvky, které jsou definované pomocí **ws_group –** styl po první prvek patří do stejné skupiny. Na další ovládací prvek s **ws_group –** styl končí skupině a spustí na další skupinu.  
+- WS_GROUP Určuje první prvek skupiny ovládacích prvků. Uživatel může změnit fokus klávesnice z jednoho ovládacího prvku ve skupině na další pomocí šipkových kláves. Všechny ovládací prvky definované ve stylu WS_GROUP po prvním ovládacím prvku, patří do stejné skupiny. Další ovládací prvek se stylem WS_GROUP končí skupině a začíná další skupinu.  
   
-- **Ws_tabstop –** určuje ovládací prvek, který může získat fokus klávesnice, při stisknutí klávesy TAB. Stisknutím klávesy TAB změní fokus klávesnice na další ovládací prvek z **ws_tabstop –** stylu.  
+- WS_TABSTOP určuje ovládací prvek, který může získat fokus klávesnice, když uživatel stiskne klávesu TAB. Na další ovládací prvek stylu WS_TABSTOP stisknutím klávesy TAB změní fokus klávesnice.  
   
- Chcete-li vytvořit výchozí velikosti ovládacích prvků, použijte druhý přetížení.  
+ Druhé přetížení použijte k vytvoření výchozí velikosti ovládacích prvků.  
   
 ##  <a name="createolefont"></a>  COleControlContainer::CreateOleFont  
- Vytvoří OLE písma.  
+ Vytvoří písmo OLE.  
   
 ```  
 void CreateOleFont(CFont* pFont);
@@ -355,10 +355,10 @@ void CreateOleFont(CFont* pFont);
   
 ### <a name="parameters"></a>Parametry  
  *pFont*  
- Ukazatel na písma, který má být používána kontejneru ovládacího prvku.  
+ Ukazatel na písma pro ovládací prvek kontejneru.  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
- Vyhledá vlastní web, který je hostitelem zadanou položku.  
+ Vyhledá vlastní web, který je hostitelem zadané položky.  
   
 ```  
 virtual COleControlSite* FindItem(UINT nID) const;  
@@ -372,7 +372,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
  Ukazatel na vlastní web zadané položky.  
   
 ##  <a name="freezeallevents"></a>  COleControlContainer::FreezeAllEvents  
- Určuje, zda kontejner bude ignorovat události z připojených řízení webů, nebo přijměte je.  
+ Určuje, zda kontejner bude ignorovat události z lokalit připojeného ovládacího prvku nebo je přijmout.  
   
 ```  
 void FreezeAllEvents(BOOL bFreeze);
@@ -380,15 +380,15 @@ void FreezeAllEvents(BOOL bFreeze);
   
 ### <a name="parameters"></a>Parametry  
  *bFreeze*  
- Nenulové hodnoty v případě, že události budou zpracovány; jinak 0.  
+ Nenulové, pokud události budou zpracovány; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
   
 > [!NOTE]
->  Ovládací prvek není potřeba zastavit aktivaci událostí, pokud požadoval kontejneru ovládacího prvku. Pálení může pokračovat, ale všechny následné události budou ignorovány podle kontejneru ovládacího prvku.  
+>  Ovládací prvek není potřeba zastavit vyvolává události, pokud to vyžaduje kontejnerem ovládacího prvku. Může pokračovat v jeho spuštění, ale budou ignorovány všechny další události kontejnerem ovládacího prvku.  
   
 ##  <a name="getambientprop"></a>  COleControlContainer::GetAmbientProp  
- Načte hodnotu zadaného vedlejším vlastnosti.  
+ Načte hodnotu zadané vlastnosti okolí.  
   
 ```  
 virtual BOOL GetAmbientProp(
@@ -399,19 +399,19 @@ virtual BOOL GetAmbientProp(
   
 ### <a name="parameters"></a>Parametry  
  *pSite*  
- Ukazatel na řízení lokality, ze kterého bude načten vedlejší vlastnost.  
+ Ukazatel na ovládací prvek webu, ze kterého se budou načítat vedlejší vlastnost.  
   
- *dispID*  
- Odesílání ID požadované vedlejší vlastnost.  
+ *identifikátor DISPID*  
+ ID odbavení požadované vedlejší vlastnost.  
   
  *pVarResult*  
- Ukazatel na hodnotu vedlejším vlastnosti.  
+ Ukazatel na hodnotu vedlejší vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0.  
+ Nenulové, pokud je úspěšná. jinak 0.  
   
 ##  <a name="getdlgitem"></a>  COleControlContainer::GetDlgItem  
- Načte ukazatel na vybrané okno nebo podřízený ovládací prvek v dialogovém okně nebo jiné okno.  
+ Načte ukazatel na určené okno, nebo podřízený ovládací prvek v dialogovém okně nebo jiné okno.  
   
 ```  
 virtual CWnd* GetDlgItem(int nID) const;  
@@ -423,16 +423,16 @@ virtual void GetDlgItem(
   
 ### <a name="parameters"></a>Parametry  
  *nID*  
- Identifikátor položky dialogové okno načíst.  
+ Identifikátor položky dialogového okna pro načtení.  
   
  *phWnd*  
- Ukazatel na popisovač objektu okna dialogové okno zadané položky.  
+ Ukazatel na popisovač objektu window položku zadané dialogového okna.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na položce dialogovém okně.  
+ Ukazatel na okno položky dialogového okna.  
   
 ##  <a name="getdlgitemint"></a>  COleControlContainer::GetDlgItemInt  
- Načte hodnotu přeložený text daného ovládacího prvku.  
+ Načte hodnotu přeložený text zadaný ovládací prvek.  
   
 ```  
 virtual UINT GetDlgItemInt(
@@ -446,25 +446,25 @@ virtual UINT GetDlgItemInt(
  Identifikátor ovládacího prvku.  
   
  *lpTrans*  
- Ukazatel na logická hodnota proměnné, která obdrží hodnotu úspěch nebo selhání funkce ( **TRUE** označuje úspěch, **FALSE** označuje selhání).  
+ Ukazatel na logickou hodnotu, která přijímá hodnotu úspěch nebo selhání – funkce (hodnota TRUE označuje úspěch, hodnota FALSE označuje selhání).  
   
  *bSigned*  
- Určuje, zda by měl funkce zkontrolujte text pro znaménkem minus na začátku a vrátit hodnotu číslo se znaménkem, pokud jej nalezne. Pokud *bSigned* parametr **TRUE**, návratovou hodnotu k určení, že je hodnota, která má být načtena hodnota číslo se znaménkem přetypovat **int** typu. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Určuje, zda by měla funkce prozkoumají text pro znaménko mínus na začátku a nenalezne-li vrátit hodnotu se znaménkem. Pokud *bSigned* parametr má hodnotu TRUE, určení, že je hodnota má být načtena hodnota celé číslo se znaménkem, přetypovávat návratovou hodnotu pro **int** typu. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud úspěšné, proměnnou ukazující na *lpTrans* je nastaven na **TRUE**, a návratovou hodnotu je přeložená hodnota ovládací prvek text.  
+ Pokud úspěšné, proměnná ukazuje *lpTrans* nastavena na hodnotu TRUE, a návratová hodnota je hodnota přeložený text ovládacího prvku.  
   
- V případě selhání funkce proměnnou na kterou odkazuje *lpTrans* je nastaven na **FALSE**, a návratovou hodnotu 0. Všimněte si, že možná hodnota přeložený totiž nula návratovou hodnotu nula samostatně neindikuje selhání.  
+ Pokud funkce selže, proměnná ukazuje *lpTrans* je nastavena na hodnotu FALSE, a vrácená hodnota je nula. Všimněte si, že nula je možné přeložené hodnoty, návratová hodnota nula samostatně neznamená selhání.  
   
- Pokud *lpTrans* je **NULL**, funkce vrátí hodnotu žádné informace o úspěchu nebo neúspěchu.  
+ Pokud *lpTrans* má hodnotu NULL, funkce vrátí žádné informace o úspěchu nebo neúspěchu.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce překládá načtený text odstraňování žádné mezery na začátku textu a potom převést desetinných míst. Funkce zastaví překladu, pokud dosáhne konce text nebo zaznamená znak číselného typu.  
+ Funkce přeloží načtený text tak, že odstranění nadbytečné mezery na začátku text a pak převod desítkových číslic. Funkce zastaví překladu při dosažení konce text nebo zaznamená znaku číselného typu.  
   
- Funkce vrátí hodnotu nula. Pokud je přeložená hodnota větší než **INT_MAX** (pro podepsané čísla) nebo **uint_max –** (pro bez znaménka čísla).  
+ Tato funkce vrátí hodnotu 0, pokud přeloženou hodnota je větší než INT_MAX (pro čísla se znaménkem) nebo UINT_MAX (pro čísel bez znaménka).  
   
 ##  <a name="getdlgitemtext"></a>  COleControlContainer::GetDlgItemText  
- Načte text daného ovládacího prvku.  
+ Načte text zadaný ovládací prvek.  
   
 ```  
 virtual int GetDlgItemText(
@@ -481,12 +481,12 @@ virtual int GetDlgItemText(
  Ukazatel na text ovládacího prvku.  
   
  *nMaxCount*  
- Určuje maximální délku znaků řetězce, který se má zkopírovat do vyrovnávací paměti, na kterou odkazuje *lpStr*. Pokud délka řetězce překračuje limit, se zkrátí řetězec.  
+ Určuje maximální délku znaků, řetězec, který má být zkopírován do vyrovnávací paměti, na které odkazuje *lpStr*. Pokud délka řetězce překračuje limit, řetězec je zkrácen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud funkci úspěšné, návratová hodnota určuje počet znaků, které jsou zkopírovány do vyrovnávací paměti není včetně ukončující znak hodnoty null.  
+ Pokud funkce uspěje, vrácená hodnota určuje počet znaků, které jsou zkopírovány do vyrovnávací paměti, bez ukončujícího znaku null.  
   
- Pokud funkce selže, je vrácenou hodnotu nula. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Určuje, pokud kontejner zpracovává WM_SETFOCUS zprávy.  
@@ -496,10 +496,10 @@ virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud kontejner, který zpracovává zprávy WM_SETFOCUS; jinak hodnota nula.  
+ Nenulové, pokud kontejner zpracovává WM_SETFOCUS zprávy. jinak nula.  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
- Zpracuje zprávy okna pro ovládací prvky bez oken.  
+ Zpracovává zprávy okna pro ovládací prvky bez oken.  
   
 ```  
 virtual BOOL HandleWindowlessMessage(
@@ -511,25 +511,25 @@ virtual BOOL HandleWindowlessMessage(
   
 ### <a name="parameters"></a>Parametry  
  *message*  
- Identifikátor pro zpráv oken, obsažené v systému Windows.  
+ Identifikátor zprávy okna, poskytované Windows.  
   
  *wParam*  
- Parametr zprávy; obsažené v systému Windows. Určuje další informace specifické pro zprávy. Obsah tohoto parametru je závislý na hodnotě *zpráva* parametr.  
+ Parametr message; k dispozici ve Windows. Určuje další informace specifické pro zprávy. Obsah tohoto parametru závisí na hodnotě *zpráva* parametru.  
   
  *lParam*  
- Parametr zprávy; obsažené v systému Windows. Určuje další informace specifické pro zprávy. Obsah tohoto parametru je závislý na hodnotě *zpráva* parametr.  
+ Parametr message; k dispozici ve Windows. Určuje další informace specifické pro zprávy. Obsah tohoto parametru závisí na hodnotě *zpráva* parametru.  
   
  *plResult*  
- Kód výsledku systému Windows. Určuje výsledek zpracování zprávy a závisí na zprávy odeslané.  
+ Kód výsledku Windows. Určuje výsledek zpracování zprávy a závisí na zprávy odeslané.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak hodnota nula.  
+ Nenulové, pokud je úspěšná. jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Přepsání této funkci můžete přizpůsobit zpracování zprávy bez oken ovládacího prvku.  
+ Přepsání této funkce můžete přizpůsobit zpracování zprávy pro ovládací prvek bez oken.  
   
 ##  <a name="isdlgbuttonchecked"></a>  COleControlContainer::IsDlgButtonChecked  
- Určuje stav dané tlačítko.  
+ Určuje stav určeného tlačítka.  
   
 ```  
 virtual UINT IsDlgButtonChecked(int nIDButton) const;  
@@ -540,16 +540,16 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
  Identifikátor ovládacího prvku tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrácená hodnota z tlačítko vytvořené pomocí **bs_autocheckbox –**, **bs_autoradiobutton –**, **bs_auto3state –**, **bs_checkbox –**, **Bs_radiobutton –**, nebo **bs_3state –** stylu. Může být jedna z následujících akcí:  
+ Návratová hodnota z vytvořené pomocí BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON nebo BS_3STATE styl tlačítka. Může být jedna z následujících akcí:  
   
-- **BST_CHECKED** zaškrtnutí tlačítka.  
+- Zaškrtnutí BST_CHECKED tlačítka.  
   
-- **BST_INDETERMINATE** neaktivní tlačítko označující neurčitém stavu (platí jenom v případě, že má tlačítko **bs_3state –** nebo **bs_auto3state –** styl).  
+- BST_INDETERMINATE tlačítko nejde aktivovat, určující neurčitém stavu (platí jenom v případě, že tlačítko má BS_3STATE nebo BS_AUTO3STATE style).  
   
-- **BST_UNCHECKED** je tlačítko Vymazat.  
+- Tlačítko BST_UNCHECKED je zrušeno.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud tlačítko ovládacího prvku tří stavů, – členská funkce určuje, zda jej není k dispozici, zaškrtnuto, nebo žádný z nich.  
+ Je-li na tlačítko se třemi stavy ovládacího prvku, členská funkce určuje, zda je zobrazené šedě, zaškrtnuto, nebo ani jedna.  
   
 ##  <a name="m_crback"></a>  COleControlContainer::m_crBack  
  Barva pozadí kontejneru.  
@@ -559,21 +559,21 @@ COLORREF m_crBack;
 ```  
   
 ##  <a name="m_crfore"></a>  COleControlContainer::m_crFore  
- Barvu popředí kontejneru.  
+ Barva popředí kontejneru.  
   
 ```  
 COLORREF m_crFore;  
 ```  
   
 ##  <a name="m_listsitesorwnds"></a>  COleControlContainer::m_listSitesOrWnds  
- Seznam řízení hostovaném službou kontejneru.  
+ Seznam ovládací prvky stránky, který je hostitelem kontejneru.  
   
 ```  
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;  
 ```  
   
 ##  <a name="m_nwindowlesscontrols"></a>  COleControlContainer::m_nWindowlessControls  
- Počet prvků bez oken hostitelem kontejneru ovládacího prvku.  
+ Počet ovládací prvky bez oken hostitelem kontejneru ovládacího prvku.  
   
 ```  
 int m_nWindowlessControls;  
@@ -594,52 +594,52 @@ COleControlSite* m_pSiteCapture;
 ```  
   
 ##  <a name="m_psitefocus"></a>  COleControlContainer::m_pSiteFocus  
- Ukazatel na řízení lokality, která má aktuálně vstupu fokus.  
+ Ukazatel na webu, které aktuálně pro ovládací prvek má vstupní fokus.  
   
 ```  
 COleControlSite* m_pSiteFocus;  
 ```  
   
 ##  <a name="m_psiteuiactive"></a>  COleControlContainer::m_pSiteUIActive  
- Ukazatel na řízení lokality, která je aktivován na místě.  
+ Ukazatel na ovládací prvek webu, který se aktivuje v místě.  
   
 ```  
 COleControlSite* m_pSiteUIActive;  
 ```  
   
 ##  <a name="m_pwnd"></a>  COleControlContainer::m_pWnd  
- Ukazatel na objekt okna přidružené kontejneru.  
+ Ukazatel na objekt okna spojenými s daným kontejnerem.  
   
 ```  
 CWnd* m_pWnd;  
 ```  
   
 ##  <a name="m_sitemap"></a>  COleControlContainer::m_siteMap  
- Mapy webu.  
+ Mapa webu.  
   
 ```  
 CMapPtrToPtr m_siteMap;  
 ```  
   
 ##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
- Voláno rámcem pro zpracování požadavků WM_PAINT.  
+ Volá se rozhraním pro zpracování požadavků WM_PAINT.  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *primárního řadiče domény*  
+ *primární řadič domény*  
  Ukazatel na kontext zařízení používá kontejneru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud bylo zpracováno zprávy; jinak hodnota nula.  
+ Nenulové, pokud zpráva byla zpracována; jinak nula.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkci k přizpůsobení procesu Malování přepište.  
+ Přepsání této funkce můžete přizpůsobit proces vykreslování.  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- Voláno rámcem při řízení lokality, na kterou odkazuje *pSite*, má být aktivována na místě.  
+ Volá se rozhraním, když ovládací prvek webu, na které odkazuje *pSite*, bude zrovna místně aktivuje.  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -647,13 +647,13 @@ virtual void OnUIActivate(COleControlSite* pSite);
   
 ### <a name="parameters"></a>Parametry  
  *pSite*  
- Ukazatel na webu ovládací prvek bude aktivován na místě.  
+ Ukazatel na ovládací prvek webu bude aktivovat na místě.  
   
 ### <a name="remarks"></a>Poznámky  
- Aktivace na místě, znamená to, přejděte z hlavní nabídky kontejneru se nahradí složené nabídky místní.  
+ Aktivace na místě znamená, že hlavní nabídky kontejneru je nahrazena složená nabídka na místě.  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- Voláno rámcem při řízení lokality, na kterou odkazuje *pSite*, je deaktivovat.  
+ Volá se rozhraním, když ovládací prvek webu, na které odkazuje *pSite*, se deaktivuje.  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
@@ -661,13 +661,13 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
   
 ### <a name="parameters"></a>Parametry  
  *pSite*  
- Ukazatel na řízení lokality se deaktivovat.  
+ Ukazatel na ovládací prvek webu se deaktivuje.  
   
 ### <a name="remarks"></a>Poznámky  
- Po přijetí tohoto oznámení by měl kontejner přeinstalujte svoje uživatelské rozhraní a zaměřit.  
+ Po přijetí tohoto oznámení by měl kontejneru přeinstalujte uživatelského rozhraní a být aktivován.  
   
 ##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren  
- Voláno rámcem při přijímání zprávy scroll z podřízeného okna.  
+ Volá se rozhraním při posouvání zprávy byly přijaty z podřízeného okna.  
   
 ```  
 virtual void ScrollChildren(
@@ -676,14 +676,14 @@ virtual void ScrollChildren(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *DirectX*  
- Množství, v pixelech posouvání podél osy x.  
+ *DX*  
+ Velikost, v pixelech, posouvání podél osy x.  
   
  *dy*  
- Množství, v pixelech posouvání podél osy y.  
+ Velikost, v pixelech, posouvání podél osy y.  
   
 ##  <a name="senddlgitemmessage"></a>  COleControlContainer::SendDlgItemMessage  
- Odešle zprávu do zadané ovládacího prvku.  
+ Odešle zprávu pro zadaný ovládací prvek.  
   
 ```  
 virtual LRESULT SendDlgItemMessage(
@@ -695,10 +695,10 @@ virtual LRESULT SendDlgItemMessage(
   
 ### <a name="parameters"></a>Parametry  
  *nID*  
- Určuje identifikátor ovládací prvek, který obdrží zprávu.  
+ Určuje identifikátor ovládacího prvku, který obdrží zprávu.  
   
  *message*  
- Určuje zprávu, která k odeslání.  
+ Určuje zprávu, která má být odeslána.  
   
  *wParam*  
  Určuje další informace specifické pro zprávy.  
@@ -707,7 +707,7 @@ virtual LRESULT SendDlgItemMessage(
  Určuje další informace specifické pro zprávy.  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
- Nastaví text ovládacího prvku v dialogovém okně pro řetězcovou reprezentaci zadané celočíselné hodnoty.  
+ Nastaví text ovládacího prvku v dialogovém okně na řetězcovou reprezentaci zadaného celočíselné hodnoty.  
   
 ```  
 virtual void SetDlgItemInt(
@@ -724,10 +724,10 @@ virtual void SetDlgItemInt(
  Celočíselná hodnota, který se má zobrazit.  
   
  *bSigned*  
- Určuje, zda *nHodnota* parametr je podepsaný nebo bez znaménka. Pokud tento parametr je **TRUE**, *nHodnota* je podepsaný. Pokud tento parametr je **TRUE** a *nHodnota* je menší než nula, minus přihlášení je umístěna před první číslice v řetězci. Pokud tento parametr je **FALSE**, *nHodnota* není podepsaný.  
+ Určuje, zda *nHodnota* parametr je podepsaný nebo nepodepsaný řetězec. Pokud tento parametr má hodnotu TRUE, *nHodnota* je podepsán. Pokud tento parametr má hodnotu TRUE a *nHodnota* je menší než nula, minus přihlášení je umístěn před první číslice v řetězci. Pokud tento parametr má hodnotu FALSE, *nHodnota* je bez znaménka.  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
- Nastaví text zadaný ovládací prvek text součástí s použitím *lpszString*.  
+ Nastaví text zadaný ovládací prvek pomocí textu součástí *lpszString*.  
   
 ```  
 virtual void SetDlgItemText(
@@ -745,5 +745,5 @@ virtual void SetDlgItemText(
 ## <a name="see-also"></a>Viz také  
  [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [COleControlSite – třída](../../mfc/reference/colecontrolsite-class.md)   
+ [Colecontrolsite – třída](../../mfc/reference/colecontrolsite-class.md)   
  [COccManager – třída](../../mfc/reference/coccmanager-class.md)

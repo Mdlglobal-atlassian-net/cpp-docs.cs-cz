@@ -1,5 +1,5 @@
 ---
-title: allocator_chunklist – třída | Microsoft Docs
+title: allocator_chunklist – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa7b01fe4008089cb8a773fc866d62a269ae717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20e601608b1a6b0f076040c10e027f7dc78db17a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955355"
 ---
 # <a name="allocatorchunklist-class"></a>allocator_chunklist – třída
 
-Popisuje objekt, který spravuje přidělení úložiště a uvolnění objektů pomocí mezipaměti typu [cache_chunklist –](../standard-library/cache-chunklist-class.md).
+Popisuje objekt, který spravuje rozdělení úložiště a uvolnění objektů použití mezipaměti typu [cache_chunklist –](../standard-library/cache-chunklist-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,18 +40,18 @@ class allocator_chunklist;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Type`|Typ elementů přidělené pomocí přidělujícího modulu.|
+|*Typ*|Typ prvků přidělaná přidělujícího modulu.|
 
 ## <a name="remarks"></a>Poznámky
 
-[Allocator_decl –](../standard-library/allocators-functions.md#allocator_decl) makro předá tuto třídu jako `name` parametr v následující příkaz: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) – makro předá tuto třídu jako *název* parametr v následujícím příkazu: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Moduly tříd modelu COM (ATL) | Microsoft Docs
+title: Třídy modulů COM (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf5449135bd0220f82400aed5e1c0aba0b90591
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8485f9565c75796cdb7a10f303469c1393b9f55f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354978"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958215"
 ---
-# <a name="com-modules-classes"></a>COM – třídy modulů
-Následující třídy poskytují podporu pro modul COM:  
+# <a name="com-modules-classes"></a>Třídy modulů COM
+Následující třídy poskytují podporu pro některý z modulů COM:  
   
--   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) ve všech projektech ATL vytvoření instance této třídy.  
+-   [Catlbasemodule –](../atl/reference/catlbasemodule-class.md) ve všech projektech ATL je vytvořena instance této třídy.  
   
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) Tato třída implementuje modul COM serveru.  
+-   [Catlcommodule –](../atl/reference/catlcommodule-class.md) Tato třída implementuje modul COM serveru.  
   
--   [CAtlModule](../atl/reference/catlmodule-class.md) Tato třída poskytuje metody používané v několika ATL – třídy modulů.  
+-   [Catlmodule –](../atl/reference/catlmodule-class.md) Tato třída poskytuje metody používané v několika ATL – třídy modulů.  
   
--   [CAtlModuleT](../atl/reference/catlmodulet-class.md) Tato třída implementuje modul ATL.  
+-   [Catlmodulet –](../atl/reference/catlmodulet-class.md) Tato třída implementuje modul knihovny ATL.  
   
--   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) Tato třída představuje modul pro aplikaci.  
+-   [Catlexemodulet –](../atl/reference/catlexemodulet-class.md) Tato třída reprezentuje modulu pro aplikaci.  
   
--   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) Tato třída implementuje služby.  
+-   [Catlservicemodulet –](../atl/reference/catlservicemodulet-class.md) Tato třída implementuje služby.  
   
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) Tato třída poskytuje podporu pro knihovny ATL oddílová součásti.  
+-   [Catlwinmodule –](../atl/reference/catlwinmodule-class.md) Tato třída poskytuje podporu pro komponenty ATL časová okna.  
   
--   [CComModule](../atl/reference/ccommodule-class.md) Tato třída implementuje modulu DLL nebo EXE. Zastaralé v ATL 7.0.  
+-   [Ccommodule –](../atl/reference/ccommodule-class.md) Tato třída implementuje modul knihovny DLL nebo EXE. Zastaralé v ATL 7.0.  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) Tato třída implementuje modul EXE s podporou více Apartment ve fondu vláken. Zastaralé v ATL 7.0.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) Tato třída implementuje modul EXE díky podpoře pro více klientů ve fondu vláken objekty apartment. Zastaralé v ATL 7.0.  
   
 ## <a name="related-articles"></a>Související články  
  [ATL – třídy modulů](../atl/atl-module-classes.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)   
+ [Přehled tříd](../atl/atl-class-overview.md)   
  [Třídy modulů](../atl/atl-module-classes.md)
 

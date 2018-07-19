@@ -1,5 +1,5 @@
 ---
-title: Registrátor ATL a Backus Nauer formuláři syntaxe (BNF) | Microsoft Docs
+title: Registrátor ATL a Backus Nauer tvoří syntaxe (BNF) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf1033007a02ea21e7625068bc23d762c103aa41
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854142"
 ---
-# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Principy Backus Nauer formuláře (BNF) syntaxe
-Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí syntaxe BNF, který používá zápis uvedené v následující tabulce.  
+# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Principy syntaxe (BNF) formuláře Backus Nauer
+Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí syntaxe BNF, který se používá zápis je znázorněno v následující tabulce.  
   
-|Konvence nebo symbol|Význam|  
+|Konvence/symbol|Význam|  
 |------------------------|-------------|  
-|`::=`|Ekvivalent|  
-|`&#124;`|NEBO|  
-|`X+`|Jeden nebo více `X`s.|  
-|`[X]`|`X` je volitelný. Volitelné oddělovače jsou rozlišeny pomocí `[]`.|  
-|Všechny **tučné** textu|Řetězcový literál.|  
-|Všechny *kurzívou* textu|Postup vytvoření řetězcový literál.|  
+|::=|Ekvivalent|  
+|&#124;|NEBO|  
+|X +|Nejmíň jeden Xs.|  
+|[X]|X je volitelné. Volitelné oddělovače jsou rozlišeny pomocí \[].|  
+|Žádné **tučné** text|Řetězcový literál.|  
+|Žádné *kurzívou* text|Jak sestavit řetězcový literál.|  
   
- Jak je uvedeno v předchozí tabulce, skripty registrátora používat řetězcové literály. Tyto hodnoty jsou skutečný text, který musí být ve vašem skriptu. Následující tabulka popisuje textové literály použít ve skriptu Registrátor ATL.  
+ Jak je uvedeno v předchozí tabulce, používat skripty registrátora řetězcové literály. Tyto hodnoty jsou vlastní text, který musí být uvedena ve skriptu. Řetězcové literály, použít ve skriptu Registrátor ATL naleznete v následující tabulce.  
   
 |Řetězcový literál|Akce|  
 |--------------------|------------|  
-|**ForceRemove**|Úplně odebere Další klíč (pokud existuje) a pak znovu vytvoří.|  
-|**NoRemove**|Během Unregister neodebere Další klíč.|  
-|**Val**|Určuje, že `<Key Name>` je ve skutečnosti pojmenované hodnotě.|  
+|**ForceRemove**|Úplně odebere další klíče (pokud existuje) a potom znovu vytvoří.|  
+|**NoRemove**|Další klíče při zrušení registrace neodebere.|  
+|**Val**|Určuje, že `<Key Name>` je ve skutečnosti pojmenovaná hodnota.|  
 |**Odstranit**|Odstraní Další klíč během registrace.|  
-|**s**|Určuje, že další hodnota je řetězec (**REG_SZ**).|  
-|**d**|Určuje, že je další hodnotu **DWORD** (**REG_DWORD**).|  
-|**m**|Určuje, že další hodnotu multistring (**REG_MULTI_SZ**).|  
-|**b**|Určuje, že další hodnotu je binární hodnotu (**REG_BINARY**).|  
+|**s**|Určuje, že je hodnota dalšího řetězce (REG_SZ).|  
+|**d**|Určuje, že následující hodnotu DWORD (REG_DWORD).|  
+|**m**|Určuje, že je hodnota dalšího FixedLength multistring (REG_MULTI_SZ).|  
+|**b**|Určuje, že je hodnota dalšího binární hodnotu (REG_BINARY).|  
   
 ## <a name="bnf-syntax-examples"></a>Příklady syntaxe BNF  
- Tady je několik příkladů syntaxe vám pomohou pochopit, jak fungují literály zápis a řetězec Registrátor ATL skriptu.  
+ Tady je pár příkladů syntaxe, které vám pomohou pochopit, jak fungují zápisu a řetězcovým literálům ve skriptu Registrátor ATL.  
   
 ### <a name="syntax-example-1"></a>Příklad syntaxe 1  
   
@@ -63,7 +64,7 @@ Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí synt
 <registry expression> ::= <Add Key> | <Delete Key>  
 ```  
   
- Určuje, že `registry expression` odpovídá buď `Add Key` nebo `Delete Key`.  
+ Určuje, že `registry expression` je ekvivalentem `Add Key` nebo `Delete Key`.  
   
 ### <a name="syntax-example-3"></a>Příklad syntaxe 3  
   
@@ -71,7 +72,7 @@ Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí synt
 <Key Name> ::= '<AlphaNumeric>+'  
 ```  
   
- Určuje, že `Key Name` je ekvivalentní minimálně jeden `AlphaNumerics`.  
+ Určuje, že `Key Name` je ekvivalentní k jednomu nebo více `AlphaNumerics`.  
   
 ### <a name="syntax-example-4"></a>Příklad syntaxe 4  
   
@@ -79,7 +80,7 @@ Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí synt
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
 ```  
   
- Určuje, že `Add Key` je ekvivalentní `Key Name`a že textové literály `ForceRemove`, `NoRemove`, a `val`, jsou volitelné.  
+ Určuje, že `Add Key` je ekvivalentní `Key Name`a že řetězcové literály `ForceRemove`, `NoRemove`, a `val`, jsou volitelné.  
   
 ### <a name="syntax-example-5"></a>Příklad syntaxe 5  
   
@@ -87,7 +88,7 @@ Skripty používané Registrátor ATL jsou popsané v tomto tématu pomocí synt
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- Určuje, že `AlphaNumeric` je ekvivalentní k jakékoli jiné – znak hodnoty NULL.  
+ Určuje, že `AlphaNumeric` je ekvivalentní k žádné jiné – znak NULL.  
   
 ### <a name="syntax-example-6"></a>Příklad syntaxe 6  
   
@@ -103,7 +104,7 @@ val 'testmulti' = m 'String 1\0String 2\0'
 val 'testhex' = d '&H55'  
 ```  
   
- Určuje, že název klíče `testhex` je **DWORD** hodnota nastavena na hexadecimální 55 (decimal 85). Poznámka: Tento formát dodržuje **& H** zápis jako nalezena ve specifikaci jazyka Visual Basic.  
+ Určuje, že název klíče `testhex` je nastavena hodnotu DWORD hexadecimální 55 (desítková 85). Poznámka: Tento formát odpovídá **& H** notation jako součástí specifikace jazyka Visual Basic.  
   
 ## <a name="see-also"></a>Viz také  
  [Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)

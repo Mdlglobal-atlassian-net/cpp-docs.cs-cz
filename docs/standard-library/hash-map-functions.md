@@ -1,5 +1,5 @@
 ---
-title: '&lt;hash_map –&gt; funkce | Microsoft Docs'
+title: '&lt;hash_map –&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,25 +7,25 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958545"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;hash_map –&gt; funkce
 
 |||
 |-|-|
-|[Swap](#swap)|[swap (hash_map)](#swap_hash_map)|
+|[Prohození](#swap)|[swap (hash_map)](#swap_hash_map)|
 
 ## <a name="swap_hash_map"></a>  swap (hash_map)
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [unordered_map – třída](../standard-library/unordered-map-class.md).
 
-Elementy dvě hash_maps výměny.
+Vymění prvky dvou hash_maps.
 
 ```cpp
 void swap(
@@ -35,20 +35,20 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Hash_map –, jehož elementy jsou k výměně s těmi, která mapy `left`.
+*správné* hash_map, jehož prvky mají být zaměněny mapy *levé*.
 
-`left` Hash_map –, jehož elementy jsou k výměně s těmi, která mapy `right`.
+*levé* hash_map, jehož prvky mají být zaměněny mapy *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony je algoritmus specializuje na hash_map – třída kontejneru pro spuštění funkce člen `left.` [swap](../standard-library/basic-ios-class.md#swap)*(vpravo*). Toto je instance částečné řazení šablon funkce kompilátorem. Když funkce šablon jsou přetížené tak, že na shodu šabloně se volání funkce není jedinečný, kompilátor vybere nejvíc specializovanou verzi funkce šablony. Obecné verzi funkce šablony **šablony \<třída T > void odkládacího souboru (T & T &)**, v algoritmu soubor hlaviček, funguje tak, že přiřazení a je pomalé operace. Specializovanou verzi v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s interního vyjádření třídy kontejneru.
+Funkce šablon je algoritmus specializované na hash_map – třídy kontejnerů ke spuštění funkce člena `left.` [prohození](../standard-library/basic-ios-class.md#swap)*(pravém*). Toto je instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony **šablony \<třída T > void odkládacího souboru (T &, T &)**, v algoritmu souboru hlaviček, funguje tak, že přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  Prohození
 
 > [!NOTE]
 > Toto rozhraní API je zastaralé. Alternativou je [unordered_multimap – třída](../standard-library/unordered-multimap-class.md).
 
-Elementy dvě hash_multimaps výměny.
+Vymění prvky dvou hash_multimaps.
 
 ```cpp
 void swap(
@@ -58,14 +58,14 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Hash_multimap, jehož elementy jsou k výměně s těmi, která mapy `left`.
+*správné* hash_multimap, jehož prvky mají být zaměněny mapy *levé*.
 
-`left` Hash_multimap, jehož elementy jsou k výměně s těmi, která mapy `right`.
+*levé* hash_multimap, jehož prvky mají být zaměněny mapy *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony je algoritmus specializuje na hash_multimap – třída kontejneru pro spuštění funkce člen `left.` [swap](../standard-library/hash-multimap-class.md#swap)*(vpravo*`)`. Toto je instance částečné řazení šablon funkce kompilátorem. Když funkce šablon jsou přetížené tak, že na shodu šabloně se volání funkce není jedinečný, kompilátor vybere nejvíc specializovanou verzi funkce šablony. Obecné verzi funkce šablony **šablony \<třída T > void odkládacího souboru (T & T &)**, v algoritmu soubor hlaviček, funguje tak, že přiřazení a je pomalé operace. Specializovanou verzi v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s interního vyjádření třídy kontejneru.
+Funkce šablon je algoritmus specializované na hash_multimap – třídy kontejnerů ke spuštění funkce člena `left.` [prohození](../standard-library/hash-multimap-class.md#swap)*(pravém*`)`. Toto je instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony **šablony \<třída T > void odkládacího souboru (T &, T &)**, v algoritmu souboru hlaviček, funguje tak, že přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<hash_map>](../standard-library/hash-map.md)<br/>

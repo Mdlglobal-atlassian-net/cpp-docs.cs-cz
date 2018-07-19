@@ -1,5 +1,5 @@
 ---
-title: time_base – třída | Microsoft Docs
+title: time_base – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854493"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957295"
 ---
 # <a name="timebase-class"></a>time_base – třída
 
-Třída slouží jako základní třídu pro omezující vlastnosti time_get – třída šablony, definování právě Výčtový typ **dateorder** a několik konstanty tohoto typu.
+Tato třída slouží jako základní třída pro omezující vlastnosti třídy šablony time_get, definující pouze výčtového typu `dateorder` a několik konstant tohoto typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,24 +46,24 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Každý konstanta charakterizuje jiný způsob, jak pořadí komponenty data. Konstanty jsou:
+Jednotlivých konstantách charakterizuje jiný způsob, jak uspořádat součásti datum. Konstanty jsou:
 
-- **no_order** určuje žádné konkrétní pořadí.
+- `no_order` Určuje bez určitého pořadí.
 
-- **DMY** určuje pořadí den, měsíc a pak roku, stejně jako 2 prosince 1979.
+- `dmy` Určuje pořadí den, měsíc a rok, stejně jako v 2 1979 dne.
 
-- **formát MDR** určuje pořadí měsíc, den, pak roku, stejně jako 2. prosince 1979.
+- `mdy` Určuje pořadí měsíc, den a rok, stejně jako v 2. prosince 1979.
 
-- **RMD** určuje pořadí rok, měsíc a den, stejně jako 1979/12/2.
+- `ymd` Určuje pořadí rok, měsíc a den jako 1979/12/2.
 
-- **rdm** určuje pořadí roku, den, pak měsíc jako Dec 1979:2.
+- `ydm` Určuje pořadí roku, den a měsíc, stejně jako v Dec 1979:2.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: add_cv – třída | Microsoft Docs
+title: add_cv – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840586"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958140"
 ---
 # <a name="addcv-class"></a>add_cv – třída
 
-Díky const volatile typ z typu.
+Díky **const volatile** typ z typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,9 +44,9 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>Poznámky
 
-Instance typu upravené `add_cv<T>` má `type` člen typedef ekvivalentní *T* upraveném obě [add_volatile](../standard-library/add-volatile-class.md) a [add_const](../standard-library/add-const-class.md), pokud *T* už má odchylka nákladů kvalifikátory, je odkaz, nebo je funkce.
+Instance typu upravené `add_cv<T>` má `type` člen **– typedef** ekvivalentní *T* upravil obě [add_volatile –](../standard-library/add-volatile-class.md) a [ add_const –](../standard-library/add-const-class.md), není-li *T* již obsahuje kvalifikátory cv, odkazem nebo je funkce.
 
-`add_cv_t<T>` Pomocná typ je zástupce pro přístup `add_cv<T>` člen typedef `type`.
+`add_cv_t<T>` Pomocné rutiny typ je zkratka pro přístup k `add_cv<T>` definice typu člena `type`.
 
 ## <a name="example"></a>Příklad
 
@@ -95,9 +95,9 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits > **Namespace:** – std
+**Záhlaví:** \<type_traits > **Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_const – třída](../standard-library/remove-const-class.md)<br/>

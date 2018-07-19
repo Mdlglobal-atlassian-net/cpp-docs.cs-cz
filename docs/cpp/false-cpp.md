@@ -1,5 +1,5 @@
 ---
-title: false (C++) | Microsoft Docs
+title: false (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b4015e5bdbb0ad015f3bb5299e888c862567c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a743398b60bc51118045b00e8caf4effde2c68da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947517"
 ---
 # <a name="false-c"></a>false (C++)
-Klíčové slovo je jedním ze dvou hodnot pro proměnnou typu [bool](../cpp/bool-cpp.md) nebo podmíněného výrazu (podmíněného výrazu je teď **true** logický výraz). Například pokud `i` je proměnná typu `bool`, `i = false;` příkaz přiřadí **false** k `i`.  
+Klíčové slovo je jednou ze dvou hodnot proměnné typu [bool](../cpp/bool-cpp.md) nebo podmíněného výrazu (podmíněný výraz je nyní **true** logický výraz). Například pokud `i` je proměnná typu **bool**, `i = false;` příkaz přiřadí **false** k `i`.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // bool_false.cpp  
 #include <stdio.h>  
   

@@ -1,5 +1,5 @@
 ---
-title: Třídy a funkce generované průvodcem MFC DLL | Microsoft Docs
+title: Třídy a funkce generované průvodcem knihovnou MFC DLL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339576"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Třídy a funkce generované průvodcem knihovnou MFC DLL
-Kód, který generuje Průvodce MFC DLL závisí na druhu knihovny DLL, kterou vytváříte a možnosti, které jste vybrali. Průvodce MFC DLL generuje stejný kód pro obě formy regulární MFC – knihovny DLL.  
+Kód, který generuje Průvodce MFC DLL závisí na druhu při vytváření knihovny DLL a možnosti, které jste vybrali. Průvodce MFC DLL vygeneruje stejný kód pro obě formy běžných knihovnách MFC DLL.  
   
 |Druh knihovny DLL|Možnost|Třídy|Funkce|  
 |-----------------|------------|-------------|---------------|  
 |[Rozšíření](../../build/extension-dlls-overview.md)|Žádné|Žádné|`DllMain`|  
-|[Regulární](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Žádné|Aplikační třída odvozená z `CWinApp`|Žádné|  
-|[Regulární](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatizace|Aplikační třída odvozená z `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
+|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Žádné|Aplikace třída odvozená z `CWinApp`|Žádné|  
+|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatizace|Aplikace třída odvozená z `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
 |[Rozšíření](../../build/extension-dlls-overview.md)|Okno Sockets|Žádné|`DllMain`|  
-|[Regulární](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Okno Sockets|Aplikační třída odvozená z `CWinApp`|`InitInstance` obsahuje volání `AfxSocketInit`|  
+|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Okno Sockets|Aplikace třída odvozená z `CWinApp`|`InitInstance` obsahuje volání `AfxSocketInit`|  
   
 ## <a name="see-also"></a>Viz také  
  [MFC DLL – průvodce knihovnou](../../mfc/reference/mfc-dll-wizard.md)

@@ -1,5 +1,5 @@
 ---
-title: Xform – struktura | Microsoft Docs
+title: Xform – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379483"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885881"
 ---
 # <a name="xform-structure"></a>XFORM – struktura
 `XFORM` Struktura má následující formát:  
@@ -40,17 +40,17 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `XFORM` Struktura určuje world místo k transformaci stránky místa. **EDx** a **eDy** členové zadat komponenty vodorovného a svislého posunutí v uvedeném pořadí. Následující tabulka ukazuje, jak se používají další členy, v závislosti na operaci:  
+ `XFORM` Struktura určuje globálním prostoru k transformaci místo stránky. `eDx` a `eDy` členy určete součásti vodorovného a svislého posunutí, v uvedeném pořadí. Následující tabulka ukazuje, jak jsou používána jinými členy, v závislosti na operaci:  
   
 |Operace|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|Kosinus úhlu otočení|Sinus úhlu otočení|Záporné sinus úhlu otočení|Kosinus úhlu otočení|  
-|**Změna měřítka**|Vodorovné škálování součásti|Nothing|Nothing|Svislé škálování součásti|  
-|**Zkosení**|Nothing|Vodorovné úměrnosti konstanta|Svislé úměrnosti konstanta|Nothing|  
-|**Reflexe**|Součást vodorovné reflexe|Nothing|Nothing|Součást svislé reflexe|  
+|`Rotation`|Kosinus úhlu otočení|Sinus úhlu otočení|Záporná sinus úhlu otočení|Kosinus úhlu otočení|  
+|`Scaling`|Horizontální škálování komponenty|Nothing|Nothing|Vertikální škálování komponenty|  
+|`Shear`|Nothing|Vodorovné přiměřenost – konstanta|Svislé přiměřenost – konstanta|Nothing|  
+|`Reflection`|Komponenta vodorovné reflexe|Nothing|Nothing|Komponenta svislé reflexe|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** wingdi.h systému  
+ **Záhlaví:** wingdi.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

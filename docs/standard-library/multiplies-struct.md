@@ -1,5 +1,5 @@
 ---
-title: multiplies – struktura | Microsoft Docs
+title: multiplies – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42d118118a849a841967404bc626ed3b9205ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4405f2ac1615a40f41f5deb9ee4d9baf5b8f8ef7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955270"
 ---
 # <a name="multiplies-struct"></a>multiplies – struktura
 
-Předdefinované funkce objekt, který provede operaci násobení (binární `operator*`) na její argumenty.
+Předdefinovaný objekt funkce, který provádí operace násobení (binární `operator*`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,15 +49,15 @@ struct multiplies<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Typ, který podporuje binární `operator*` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* typ, který podporuje binární soubor `operator*` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand operace násobení. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace násobení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand operace násobení. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace násobení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left * Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator*`.
+Výsledek `Left * Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator*`.
 
 ## <a name="example"></a>Příklad
 
@@ -119,9 +119,9 @@ The element-wise products of vectors V1 & v2
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

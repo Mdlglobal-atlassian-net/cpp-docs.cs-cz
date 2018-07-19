@@ -1,5 +1,5 @@
 ---
-title: cache_freelist – třída | Microsoft Docs
+title: cache_freelist – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845671"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960414"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist – třída
 
-Definuje [blokovat allocator](../standard-library/allocators-header.md) , přiděluje a zruší přidělení bloků paměti jedné velikosti.
+Definuje [blokovat allocator](../standard-library/allocators-header.md) , který přiděluje a zruší přidělení bloků paměti z jednoho velikost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Sz`|Počet prvků v poli, která bude přidělena.|
-|`Max`|Maximální třída představující maximální velikost seznamu volné. To může být [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*Sz*|Počet prvků v poli, které mají být přiděleny.|
+|*Max*|Maximální počet Třída reprezentující maximální velikost seznamu zdarma. To může být [max_fixed_size –](../standard-library/max-fixed-size-class.md), [max_none –](../standard-library/max-none-class.md), [max_unbounded –](../standard-library/max-unbounded-class.md), nebo [max_variable_size –](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Cache_freelist – třída šablony udržuje seznam bloky paměti o velikosti volného `Sz`. Při zaplnění seznamu volné používá `operator delete` se zrušit přidělení paměti blokuje. Volné seznam je prázdný používá `operator new` přidělit nový bloky paměti. Maximální velikost seznamu volné je určen podle třídy maximální třída předaná `Max` parametr.
+Cache_freelist – třída šablony udržuje seznam paměťových bloků velikosti volného *Sz*. Bezplatné seznamu je plná používá **operátor delete** k uvolnění paměti blokuje. Bezplatné seznam je prázdný používá **operátor new** přidělení nové bloky paměti. Maximální velikost seznamu zdarma určuje třídou maximální třídy předaný *maximální* parametru.
 
-Každý blok paměti obsahuje `Sz` bajtů použitelné paměti a data, `operator new` a `operator delete` vyžadují.
+Každý blok paměti obsahuje *Sz* bajtů použitelné paměti a data, která **operátor new** a **operátor delete** vyžadují.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -62,13 +62,13 @@ Každý blok paměti obsahuje `Sz` bajtů použitelné paměti a data, `operator
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přiděluje blok paměti.|
-|[Zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.|
+|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  cache_freelist::allocate
 
@@ -82,11 +82,11 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`count`|Počet prvků v poli, která bude přidělena.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt přidělená.
+Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -102,7 +102,7 @@ cache_freelist();
 
 ## <a name="deallocate"></a>  cache_freelist::deallocate
 
-Uvolní zadaný počet objektů ze začátku úložiště na zadané pozici.
+Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -112,11 +112,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`ptr`|Ukazatel na první objekt, který má být navrácena z úložiště.|
-|`count`|Počet objektů, které chcete být navrácena z úložiště.|
+|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
+|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

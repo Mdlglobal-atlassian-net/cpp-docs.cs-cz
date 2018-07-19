@@ -1,5 +1,5 @@
 ---
-title: Třída CDaoDatabase | Microsoft Docs
+title: CDaoDatabase – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -68,15 +68,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30e6ac1f1ed780415e7f0a10d82175c2b287fb29
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 04e9cd105fd682c1754f4837671151c4b5814326
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339264"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase – třída
-Reprezentuje připojení k databázi, pomocí kterého lze provozovat na data.  
+Představuje připojení k databázi, pomocí které můžete pracovat s daty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,70 +96,70 @@ class CDaoDatabase : public CObject
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDaoDatabase::CanTransact](#cantransact)|Vrátí nenulové hodnoty, pokud databáze podporuje transakce.|  
-|[CDaoDatabase::CanUpdate](#canupdate)|Vrátí nenulové hodnoty, pokud `CDaoDatabase` objekt je v aktualizovatelné (ne jen pro čtení).|  
+|[CDaoDatabase::CanTransact](#cantransact)|Vrátí nenulovou hodnotu, pokud databáze podporuje transakce.|  
+|[CDaoDatabase::CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud `CDaoDatabase` aktualizovatelný objekt (ne jen pro čtení).|  
 |[CDaoDatabase::Close](#close)|Zavře připojení k databázi.|  
-|[CDaoDatabase::Create](#create)|Vytvoří podkladového databázového objektu rozhraní DAO a inicializuje `CDaoDatabase` objektu.|  
+|[CDaoDatabase::Create](#create)|Vytvoří základní objekt databáze rozhraní DAO a inicializuje `CDaoDatabase` objektu.|  
 |[CDaoDatabase::CreateRelation](#createrelation)|Definuje nový vztah mezi tabulkami v databázi.|  
 |[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Odstraní objekt querydef uloží do databáze querydefs – kolekce.|  
 |[CDaoDatabase::DeleteRelation](#deleterelation)|Odstraní existující relace mezi tabulkami v databázi.|  
-|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Odstraní definici tabulky v databázi. To odstraní skutečné tabulky a všem jeho datům.|  
-|[CDaoDatabase::Execute](#execute)|Provede dotaz akce. Volání metody `Execute` pro dotaz, který vrátí výsledky vyvolá výjimku.|  
-|[CDaoDatabase::GetConnect](#getconnect)|Vrátí připojovací řetězec použitý k připojení `CDaoDatabase` objekt do databáze. Použít pro ODBC.|  
-|[CDaoDatabase::GetName](#getname)|Vrací název databáze aktuálně používá.|  
+|[CDaoDatabase::DeleteTableDef](#deletetabledef)|Odstraní definici tabulky v databázi. Tím se odstraní skutečné tabulky a všechna jeho data.|  
+|[CDaoDatabase::Execute](#execute)|Spustí dotaz akce. Volání `Execute` pro dotaz, který vrátí výsledky, dojde k výjimce.|  
+|[CDaoDatabase::GetConnect](#getconnect)|Vrátí připojovací řetězec použitý pro připojení `CDaoDatabase` objektu do databáze. Používá se pro ODBC.|  
+|[CDaoDatabase::GetName](#getname)|Vrátí název databáze aktuálně používá.|  
 |[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Vrátí počet dotazů, které jsou definovány pro databázi.|  
-|[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Vrací informace o zadaný dotaz definované v databázi.|  
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Vrátí počet sekund, po které databázové dotaz operace bude časový limit. Ovlivňuje všechny následné otevřete, přidat nové, aktualizovat a upravit operace a další operace na zdroje dat ODBC (pouze), jako `Execute` volání.|  
-|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Vrátí počet záznamů vliv poslední aktualizace, úprava nebo přidání operace nebo voláním `Execute`.|  
+|[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Vrátí informace o zadaný dotaz definovaný v databázi.|  
+|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Vrátí počet sekund, po kterou databázi dotazovat operace vyprší časový limit. Ovlivňuje všechny následné otevřít, přidat nový, aktualizovat a upravovat operací a dalším operacím nad zdroje dat ODBC (pouze), jako `Execute` volání.|  
+|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Vrátí počet záznamů, které jsou ovlivněny poslední aktualizace, upravit nebo přidat operaci nebo voláním `Execute`.|  
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|Vrátí počet vztahy definované mezi tabulkami v databázi.|  
-|[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Vrací informace o zadaný vztah definované mezi tabulkami v databázi.|  
-|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Vrátí počet tabulek, které jsou definované v databázi.|  
-|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Vrací informace o zadané tabulky v databázi.|  
-|[CDaoDatabase::GetVersion](#getversion)|Vrátí verzi databázový stroj, který je přidružený k databázi.|  
-|[CDaoDatabase::IsOpen](#isopen)|Vrátí nenulové hodnoty, pokud `CDaoDatabase` objektu je aktuálně připojen k databázi.|  
+|[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Vrátí informace o zadaný vztah definované mezi tabulkami v databázi.|  
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Vrátí počet tabulek definovaných v databázi.|  
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Vrátí informace o zadané tabulky v databázi.|  
+|[CDaoDatabase::GetVersion](#getversion)|Vrátí verzi databázového stroje, který je přidružený k databázi.|  
+|[CDaoDatabase::IsOpen](#isopen)|Vrátí nenulovou hodnotu, pokud `CDaoDatabase` objektu je aktuálně připojena k databázi.|  
 |[CDaoDatabase::Open](#open)|Naváže připojení k databázi.|  
-|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Nastaví počet sekund, po které databázové dotaz operací (na zdroje dat ODBC pouze) bude časový limit. Ovlivňuje všechny následné otevřete, přidat nové, aktualizovat a odstranit operace.|  
+|[CDaoDatabase::SetQueryTimeout](#setquerytimeout)|Nastaví počet sekund, po kterou databázi dotazovat operace (v ODBC pouze zdroje dat) vyprší časový limit. Ovlivňuje všechny následné otevřít, přidat nové, aktualizovat a operace odstranění.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Ukazatel na podkladového databázového objektu DAO.|  
-|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Ukazatel [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objekt, který obsahuje databázi a definuje jeho místo transakce.|  
+|[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Ukazatel na základní objekt rozhraní DAO databáze.|  
+|[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Ukazatel [cdaoworkspace –](../../mfc/reference/cdaoworkspace-class.md) objekt, který obsahuje databázi a definuje svého oboru transakce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Informace o formátech databáze podporované, najdete v článku [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) – členská funkce. Může mít jeden nebo více `CDaoDatabase` objekty v každém okamžiku aktivní v dané "pracovního prostoru," reprezentována [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objektu. V pracovním prostoru udržuje kolekci otevřete databázové objekty, názvem databáze kolekce.  
+ Informace o databázi formáty podporované, najdete v článku [GetName](../../mfc/reference/cdaoworkspace-class.md#getname) členskou funkci. Můžete mít jednu nebo více `CDaoDatabase` objekty v každém okamžiku aktivní v daném "pracovní prostor," reprezentován [cdaoworkspace –](../../mfc/reference/cdaoworkspace-class.md) objektu. Pracovním prostoru udržuje kolekci otevřít databázové objekty, názvem databáze kolekce.  
   
 > [!NOTE]
->  Databázové třídy MFC rozhraní DAO se liší od třídami databází MFC založené na rozhraní ODBC. Všechny názvy tříd DAO databáze mít předponu "CDao". Třída `CDaoDatabase` poskytuje rozhraní podobná třídě ODBC [CDatabase](../../mfc/reference/cdatabase-class.md). Hlavní rozdíl je, že `CDatabase` přistupuje databázového systému prostřednictvím připojení ODBC (Open Database) a ovladač ODBC pro tento databázového systému. `CDaoDatabase` získá přístup k datům prostřednictvím objekt DAO (Data Access) podle databázový stroj Microsoft Jet. Obecně platí třídy MFC založené na rozhraní DAO schopné více než třídy MFC založené na rozhraní ODBC; třídy založené na rozhraní DAO přístup k datům, včetně prostřednictvím ovladače ODBC prostřednictvím svých vlastních databázového stroje. Třídy založené na rozhraní DAO také podporují jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy, aniž by museli DAO volat přímo.  
+>  Třídy databází MFC DAO se liší od databázových tříd MFC založených na rozhraní ODBC. Všechny názvy tříd DAO databáze mají předponu "CDao". Třída `CDaoDatabase` poskytuje rozhraní podobný třídě ODBC [CDatabase](../../mfc/reference/cdatabase-class.md). Hlavní rozdíl je, že `CDatabase` DBMS přistupuje prostřednictvím připojení ODBC (Open Database) a ovladač ODBC pro tento systém DBMS. `CDaoDatabase` přistupuje k datům prostřednictvím objekt DAO (Data Access) založená na databázovém stroji Microsoft Jet. Obecně třídy knihovny MFC rozhraní DAO podle podporují více než třídy knihovny MFC založená na rozhraní ODBC; třídy založené na rozhraní DAO můžou přistupovat k datům, včetně prostřednictvím ovladače rozhraní ODBC, prostřednictvím vlastní databázového stroje. Třídy založené na rozhraní DAO také podporu jazyka DDL (Data Definition) operace, jako je například přidávání tabulek prostřednictvím třídy rozhraní, aniž byste museli DAO volat přímo.  
   
 ## <a name="usage"></a>Použití  
- Objekty databáze. můžete vytvořit implicitně, při vytváření objektů sady záznamů. Ale můžete také vytvořit databázové objekty explicitně. Chcete-li použít existující databázi explicitně s `CDaoDatabase`, proveďte jednu z následujících akcí:  
+ Při vytváření záznamů objektů lze implicitně, vytváření databázových objektů. Ale můžete také vytvořit databázové objekty explicitně. Chcete-li použít existující databázi explicitně s `CDaoDatabase`, proveďte jednu z následujících akcí:  
   
--   Vytvořit `CDaoDatabase` objekt, předání ukazatel otevřenou [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objektu.  
+-   Vytvoření `CDaoDatabase` objekt předání ukazatele na otevřený [cdaoworkspace –](../../mfc/reference/cdaoworkspace-class.md) objektu.  
   
--   Nebo vytvořit `CDaoDatabase` objektu bez zadání prostoru (MFC vytvoří objekt dočasného prostoru).  
+-   Nebo vytvořit `CDaoDatabase` objektu bez zadání pracovního prostoru (MFC vytvoří objekt dočasný pracovní prostor).  
   
- Chcete-li vytvořit nové Microsoft Jet (. Databáze MDB), vytvořit `CDaoDatabase` objekt a volání jeho [vytvořit](#create) – členská funkce. Proveďte *není* volání `Open` po `Create`.  
+ Chcete-li vytvořit nový Microsoft Jet (. Databáze MDB), vytvořit `CDaoDatabase` objektu a volání jeho [vytvořit](#create) členskou funkci. Proveďte *není* volání `Open` po `Create`.  
   
- Chcete-li otevřít existující databázi, vytvořit `CDaoDatabase` objekt a volání jeho [otevřete](#open) – členská funkce.  
+ Otevřete existující databázi, vytvoření `CDaoDatabase` objektu a volání jeho [otevřete](#open) členskou funkci.  
   
- Tyto techniky databázový objekt DAO připojí k pracovním prostoru kolekce databází a otevře připojení k datům. Když potom vytvoříte [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), nebo [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objekty pro provoz v připojené databázi, předat konstruktory pro tyto objekty ukazatel na vaše `CDaoDatabase` objektu. Po dokončení práce připojení, volejte [Zavřít](#close) členské funkce a zrušení `CDaoDatabase` objektu. `Close` Zavře všechny sady záznamů, které nebyly dříve uzavřen.  
+ Některé z následujících postupů připojí databázový objekt DAO do kolekce databází pracovní prostor a otevře připojení k datům. Když potom vytvoříte [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md), nebo [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md) objekty pro provozování na připojeném databázovém předat konstruktory pro tyto objekty ukazatel na váš `CDaoDatabase` objektu. Volat po dokončení práce připojení [Zavřít](#close) členské funkce a zničit `CDaoDatabase` objektu. `Close` Zavře všechny sady záznamů, které nebyly uzavřeny dříve.  
   
 ## <a name="transactions"></a>Transakce  
- Zpracování transakcí databáze je dodána na úrovni pracovního prostoru – najdete v článku [metody BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans), [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans), a [vrácení zpět](../../mfc/reference/cdaoworkspace-class.md#rollback) členské funkce třídy `CDaoWorkspace` .  
+ Zpracování transakcí databáze je zadaný na úrovni pracovního prostoru – najdete v článku [BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans), [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans), a [vrácení zpět](../../mfc/reference/cdaoworkspace-class.md#rollback) členské funkce třídy `CDaoWorkspace` .  
   
 ## <a name="odbc-connections"></a>Připojení ODBC  
- Doporučeným způsobem, jak pracovat s zdroje dat ODBC se připojit k Microsoft Jet externí tabulky (. Databáze MDB).  
+ Připojení externí tabulky, které Microsoft Jet je doporučený postup pro práci se zdroji dat rozhraní ODBC (. Databáze MDB).  
   
 ## <a name="collections"></a>Kolekce  
- Každá databáze udržuje vlastní kolekce tabledef, querydef, sady záznamů a objekty relace. Třída `CDaoDatabase` poskytuje členské funkce pro manipulaci s tyto objekty.  
+ Každé databázi udržuje vlastní kolekce tabledef, querydef, záznamů a objekty relace. Třída `CDaoDatabase` poskytuje členské funkce pro manipulaci s těmito objekty.  
   
 > [!NOTE]
->  Objekty jsou uloženy v rozhraní DAO, není v MFC databázový objekt. MFC poskytuje třídy pro objekty tabledef, querydef a sady záznamů, ale není pro objekty relace.  
+>  Objekty jsou uloženy v rozhraní DAO, není v objektu databáze knihovny MFC. Knihovna MFC poskytuje třídy pro objekty tabledef querydef a sady záznamů, ale ne pro objekty relace.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  `CDaoDatabase`  
   
@@ -167,30 +167,30 @@ class CDaoDatabase : public CObject
  **Záhlaví:** afxdao.h  
   
 ##  <a name="cantransact"></a>  CDaoDatabase::CanTransact  
- Volání této funkce člen k určení, zda databáze umožňuje transakce.  
+ Voláním této členské funkce k určení, zda databáze umožňuje transakce.  
   
 ```  
 BOOL CanTransact();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud databáze podporuje transakce; jinak 0.  
+ Nenulové, pokud databáze podporuje transakce; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
- Transakce jsou spravovány v prostoru databáze.  
+ Transakce se spravují v pracovním prostoru vaší databáze.  
   
 ##  <a name="canupdate"></a>  CDaoDatabase::CanUpdate  
- Volání této funkce člen můžete určit, zda `CDaoDatabase` objekt umožňuje aktualizace.  
+ Voláním této členské funkce k určení, zda `CDaoDatabase` objektu umožňuje instalaci aktualizací.  
   
 ```  
 BOOL CanUpdate();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě `CDaoDatabase` aktualizace umožňuje objektu; jinak 0, která buď, které určuje předán **TRUE** v *bReadOnly* při otevření `CDaoDatabase` objekt, nebo že je samotná databáze jen pro čtení. Najdete v článku [otevřete](#open) – členská funkce.  
+ Nenulovou hodnotu, pokud `CDaoDatabase` objektu umožňuje instalaci aktualizací; jinak 0 označující buď, kterou jste předány nastavena hodnota TRUE v *bReadOnly* při otevření `CDaoDatabase` objektu nebo že samotná databáze je jen pro čtení. Zobrazit [otevřít](#open) členskou funkci.  
   
 ### <a name="remarks"></a>Poznámky  
- Informace o databázi aktualizační naleznete v tématu "Aktualizovat vlastnost" v nápovědě rozhraní DAO.  
+ Informace o možnosti aktualizace databáze naleznete v tématu "Aktualizovat vlastnost" v nápovědě k DAO.  
   
 ##  <a name="cdaodatabase"></a>  CDaoDatabase::CDaoDatabase  
  Vytvoří `CDaoDatabase` objektu.  
@@ -201,38 +201,38 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
   
 ### <a name="parameters"></a>Parametry  
  *pWorkspace*  
- Ukazatel `CDaoWorkspace` objekt, který bude obsahovat nový objekt databáze. Pokud přijmete výchozí hodnotu **NULL**, konstruktoru vytvoří dočasný `CDaoWorkspace` objekt, který používá výchozí DAO pracovní prostor. Můžete získat ukazatele na objekt prostoru prostřednictvím [m_pWorkspace](#m_pworkspace) – datový člen.  
+ Ukazatel `CDaoWorkspace` objekt, který bude obsahovat nový objekt databáze. Pokud přijmete výchozí hodnotu NULL, konstruktor vytvoří dočasnou `CDaoWorkspace` objekt, který používá rozhraní DAO výchozího pracovního prostoru. Můžete získat ukazatel objektu pracovního prostoru prostřednictvím [m_pWorkspace](#m_pworkspace) datový člen.  
   
 ### <a name="remarks"></a>Poznámky  
- Poté, co vytvořen objekt, pokud vytváříte novou Microsoft Jet (. MDB) k databázi, volání objektu [vytvořit](#create) – členská funkce. Pokud jste místo toho otevření existující databázi, volání objektu [otevřete](#open) – členská funkce.  
+ Po vytvoření objektu, pokud vytváříte nový Microsoft Jet (. MDB) databáze, volání objektu [vytvořit](#create) členskou funkci. Pokud jste místo toho otevřít existující databáze, volání objektu [otevřít](#open) členskou funkci.  
   
- Až skončíte s daným objektem, by měly volat jeho [Zavřít](#close) členské funkce a pak odstraňte `CDaoDatabase` objektu.  
+ Jakmile skončíte s objektem, byste měli volat jeho [Zavřít](#close) členské funkce a pak zničilo `CDaoDatabase` objektu.  
   
- Vám může být výhodné pro vložení `CDaoDatabase` objekt ve třídě dokumentů.  
+ Možná pro vás bude vhodné vložit `CDaoDatabase` objekt ve své třídě dokumentu.  
   
 > [!NOTE]
->  A `CDaoDatabase` je taky vytvořit objekt implicitně Pokud můžete otevřít [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objektu bez předávání ukazatel na stávající `CDaoDatabase` objektu. Tento objekt databáze je uzavřít, když zavřete objekt sady záznamů.  
+>  A `CDaoDatabase` objekt se vytvoří také implicitně případě otevíráte [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekt bez předání ukazatele na existující `CDaoDatabase` objektu. Tento databázový objekt je zavřený při zavření objektu sady záznamů.  
   
 ##  <a name="close"></a>  CDaoDatabase::Close  
- Volání této funkce člen odpojit z databáze a zavřete všechny otevřené sady záznamů, tabledefs – a querydefs – přidružený k databázi.  
+ Voláním této členské funkce odpojit z databáze a zavřete všechny otevřené sady záznamů, tabledefs – a querydefs – souvisejících s databází.  
   
 ```  
 virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je vhodné zavřít tyto objekty sami volání této funkce člen. Zavřením `CDaoDatabase` objekt odstraní ji z kolekce databází v přidruženém [prostoru](../../mfc/reference/cdaoworkspace-class.md). Protože `Close` nezničí `CDaoDatabase` objekt, můžete opakovaně použít objekt otevřením stejné databáze nebo jinou databázi.  
+ Je vhodné zavřít tyto objekty, sami před voláním této členské funkce. Zavření `CDaoDatabase` objekt ji odebere z kolekce databází v přidruženém [pracovní prostor](../../mfc/reference/cdaoworkspace-class.md). Protože `Close` nezničí `CDaoDatabase` objektu, můžete znovu použít objekt tak, že otevřete stejnou databázi nebo jinou databázi.  
   
 > [!CAUTION]
->  Volání [aktualizace](../../mfc/reference/cdaorecordset-class.md#update) – členská funkce (pokud existují čekající úpravy) a `Close` – členská funkce pro všechny objekty otevřete záznamů před zavřením databáze. Pokud opustíte funkce, který deklaruje [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) nebo `CDaoDatabase` objekty v zásobníku, databázi je uzavřen, veškeré neuložené změny budou ztraceny, všechny čekající transakce vrácena zpět a všechny neuložené úpravy data se ztratí.  
+>  Volání [aktualizace](../../mfc/reference/cdaorecordset-class.md#update) členská funkce (pokud existují čekající změny) a `Close` členskou funkci pro všechny objekty otevřít sadu záznamů před zavřením databázi. Při ukončení funkce, která deklaruje [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) nebo `CDaoDatabase` objekty v zásobníku, databáze je zavřená, všechny neuložené změny budou ztraceny, všechny čekající transakce jsou vrácena zpět a veškeré úpravy čekající na vaše data budou ztracena.  
   
 > [!CAUTION]
->  Pokud se pokusíte zavřít databázového objektu, dokud všechny objekty sady záznamů jsou otevřené nebo pokud se pokusíte zavření objektu pracovního prostoru, zatímco všechny databázové objekty, které patří do této konkrétní pracovního prostoru jsou otevřené, tyto objekty sady záznamů se zavřou a budou všechny čekající aktualizace nebo úpravy vrátit zpět. Když zkusíte zavřít objekt pracovního prostoru, když jsou otevřené žádné databázové objekty, které patří k němu, operace se ukončí všechny databázové objekty, které patří k objektu určitý pracovní prostor, což může vést k objekty uzavřené sady záznamů dochází k uzavření. Pokud jste nezavírejte databázového objektu, MFC hlásí chybu assertion v sestavení pro ladění.  
+>  Když zkusíte zavřít objekt databáze všechny objekty sady záznamů, které jsou otevřené nebo když zkusíte zavřít objekt pracovního prostoru, když jsou otevřené žádné databázové objekty patřící do tohoto konkrétního pracovního prostoru, tyto objekty sady záznamů se zavře a bude žádné čekající aktualizace nebo úpravy vrátit zpět. Když zkusíte zavřít objekt pracovního prostoru, když jsou otevřené žádné databázové objekty, které patří k němu, tato operace ukončí všechny objekty databáze, které patří na tento objekt určitý pracovní prostor, což může vést k objekty neuzavřený sady záznamů se zavírá. Pokud databázový objekt neukončíte, MFC sestavy selhání kontrolního výrazu v sestaveních ladění.  
   
- Pokud objekt databáze je definován v oboru funkce, a ukončete funkce aniž by se zavřel, databázový objekt zůstane otevřené, dokud se explicitně nezavře nebo modul, ve kterém je definovaný je mimo rozsah.  
+ Pokud objekt databáze je definována mimo obor funkce a ukončení funkce bez jeho uzavřením, objekt databáze zůstane otevřený, dokud explicitně nezavře nebo modul, ve kterém je definována sahá nad rámec.  
   
 ##  <a name="create"></a>  CDaoDatabase::Create  
- Chcete-li vytvořit nové Microsoft Jet (. MDB) k databázi, volání této funkce člen, co vytvoříte `CDaoDatabase` objektu.  
+ Chcete-li vytvořit nový Microsoft Jet (. MDB) databáze, poté, co vytvoříte zavolat tuto členskou funkci `CDaoDatabase` objektu.  
   
 ```  
 virtual void Create(
@@ -243,67 +243,67 @@ virtual void Create(
   
 ### <a name="parameters"></a>Parametry  
  *lpszName*  
- Výraz řetězec, který je název souboru databáze, kterou vytváříte. Úplná cesta a název souboru, může být například "C:\\\MYDB. MDB". Je třeba zadat název. Pokud nezadáte příponu názvu souboru. Připojí se MDB. Pokud síť podporuje uniform zásady vytváření názvů (UNC), bude můžete také určit síťovou cestu, například "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB". Pouze Microsoft Jet (. Soubory databáze MDB) lze vytvořit pomocí této funkce člen. (Dvojitá zpětná lomítka jsou potřeba v textové literály, protože "\\" je řídicí znak C++.)  
+ Řetězcový výraz, který je název souboru databáze, kterou vytváříte. Úplná cesta a název souboru, může být například "C:\\\MYDB. MDB". Je nutné zadat název. Pokud nezadáte příponu názvu souboru. Připojí se MDB. Pokud vaše síť podporuje jednotné pojmenování (UNC), můžete taky zadat síťovou cestu jako "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB". Jenom Microsoft Jet (. Databázové soubory MDB) lze vytvořit pomocí tato členská funkce. (Dvojitá zpětná lomítka jsou nutné v řetězcové literály, proto, že "\\" je znak escape jazyka C++.)  
   
  *lpszLocale*  
- Výraz řetězec použitý pro určení pořadí třídění pro vytvoření databáze. Výchozí hodnota je **dbLangGeneral**. Možné hodnoty jsou:  
+ Řetězcový výraz používá k určení pořadí řazení pro vytvoření databáze. Výchozí hodnota je `dbLangGeneral`. Možné hodnoty jsou:  
   
-- **dbLangGeneral** angličtina, němčina, francouzština, portugalština, italština a moderní španělština  
+- `dbLangGeneral` Angličtina, němčina, francouzština, portugalština, italské a moderní španělština  
   
-- **dbLangArabic** arabština  
+- `dbLangArabic` Arabština  
   
-- **dbLangCyrillic** ruština  
+- `dbLangCyrillic` Ruština  
   
-- **dbLangCzech** čeština  
+- `dbLangCzech` Čeština  
   
-- **dbLangDutch** holandština  
+- `dbLangDutch` Holandština  
   
-- **dbLangGreek** řečtina  
+- `dbLangGreek` Řečtina  
   
-- **dbLangHebrew** hebrejština  
+- `dbLangHebrew` Hebrejština  
   
-- **dbLangHungarian** maďarština  
+- `dbLangHungarian` Maďarština  
   
-- **dbLangIcelandic** islandském  
+- `dbLangIcelandic` Islandština  
   
-- **dbLangNordic** skandinávské jazyky (Microsoft databázový stroj Jet verze 1.0 pouze)  
+- `dbLangNordic` Severské jazyky (Microsoft Jet databáze modulu verze 1.0 jenom)  
   
-- **dbLangNorwdan** norština a dánština  
+- `dbLangNorwdan` Norština a dánština  
   
-- **dbLangPolish** polština  
+- `dbLangPolish` Polština  
   
-- **dbLangSpanish** tradiční Španělština  
+- `dbLangSpanish` Tradiční španělština  
   
-- **dbLangSwedfin** švédština a finština  
+- `dbLangSwedfin` Švédština a finština  
   
-- **dbLangTurkish** turečtina  
+- `dbLangTurkish` Turečtina  
   
  *dwOptions*  
  Celé číslo, které určuje jeden nebo více možností. Možné hodnoty jsou:  
   
-- **dbEncrypt** vytvoření šifrované databáze.  
+- `dbEncrypt` Vytvoření databáze šifrovaná.  
   
-- **dbVersion10** vytvoření databáze pomocí Microsoft Jet databáze verze 1.0.  
+- `dbVersion10` Vytvoření databáze pomocí Microsoft Jet databáze verze 1.0.  
   
-- **dbVersion11** vytvoření databáze pomocí Microsoft Jet databáze verze 1.1.  
+- `dbVersion11` Vytvoření databáze pomocí Microsoft Jet databáze verze 1.1.  
   
-- **dbVersion20** vytvoření databáze pomocí Microsoft Jet databáze verze 2.0.  
+- `dbVersion20` Vytvoření databáze pomocí Microsoft Jet databáze verze 2.0.  
   
-- **dbVersion30** vytvoření databáze pomocí Microsoft Jet databáze ve verzi 3.0.  
+- `dbVersion30` Vytvoření databáze pomocí Microsoft Jet databáze verze 3.0.  
   
- Pokud vynecháte konstanta šifrování, se vytvoří nezašifrované databáze. Můžete zadat pouze jednu verzi konstanta. Pokud vynecháte konstanta verze, se vytvoří databáze, která používá Microsoft Jet databáze ve verzi 3.0.  
+ Vynecháte-li konstanta šifrování, se vytvoří databáze nešifrované. Můžete zadat pouze jednu verzi konstanta. Vynecháte-li konstanta verze, se vytvoří databáze s použitím Microsoft Jet databáze ve verzi 3.0.  
   
 > [!CAUTION]
->  Pokud databáze nebude zašifrován, je možné, i v případě, že implementujete zabezpečení uživatele a hesla přímo čtení disku binární soubor, který představuje databázi.  
+>  Pokud databáze není zašifrovaný, je možné, i pokud se rozhodnete implementovat zabezpečení uživatele a hesla k přímému čtení disku binární soubor, který představuje databáze.  
   
 ### <a name="remarks"></a>Poznámky  
- `Create` Vytvoří soubor databáze a podkladového databázového objektu rozhraní DAO a inicializuje objekt C++. Objekt se připojuje k kolekce přidružené prostoru databází. Objekt databáze je v otevřeném stavu; Nevolejte `Open*` po `Create`.  
+ `Create` Vytvoří soubor databáze a podkladový databázový objekt DAO a inicializuje objekt jazyka C++. Objekt se připojí k přidružené pracovní prostor databáze kolekce. Objekt databáze je v otevřeném stavu; Nevolejte `Open*` po `Create`.  
   
 > [!NOTE]
->  S `Create`, můžete vytvořit pouze Microsoft Jet (. Databáze MDB). Nelze vytvořit ISAM databáze nebo databáze ODBC.  
+>  S `Create`, můžete vytvořit pouze Microsoft Jet (. Databáze MDB). Nelze vytvořit databáze ISAM nebo ODBC databází.  
   
 ##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
- Volání této funkce člen se vytvoří vztah mezi minimálně jedno pole v primární tabulce v databázi a jedno či více polí v cizí tabulce (jiné tabulky v databázi).  
+ Voláním této členské funkce k vytvoření vztahu mezi jedno nebo více polí v primární tabulce v databázi a jedno nebo více polí v tabulce cizího (jiné tabulky v databázi).  
   
 ```  
 void CreateRelation(
@@ -319,51 +319,51 @@ void CreateRelation(CDaoRelationInfo& relinfo);
   
 ### <a name="parameters"></a>Parametry  
  *lpszName*  
- Jedinečný název objektu relace. Název musí začínat písmenem a může obsahovat nejvýše 40 znaků. Může obsahovat čísla a podtržítka znaků však nemůže obsahovat interpunkční znaménka nebo mezery.  
+ Jedinečný název objektu relace. Název musí začínat písmenem a může obsahovat nejvýše 40 znaků. Může obsahovat čísla a podtržítka znaků, ale nemůže obsahovat interpunkční znaménka nebo mezery.  
   
  *lpszTable*  
- Název v primární tabulce v vztah. Pokud tabulka neexistuje, MFC vyvolá výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ Název tabulky primární vztah. Pokud tabulka neexistuje, MFC, vyvolá výjimku typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md).  
   
  *lpszForeignTable*  
- Název cizí tabulky vztah. Pokud tabulka neexistuje, MFC vyvolá výjimku typu `CDaoException`.  
+ Název tabulky cizího ve vztahu. Pokud tabulka neexistuje, MFC, vyvolá výjimku typu `CDaoException`.  
   
  *lAttributes*  
- Dlouhou hodnotu, která obsahuje informace o typu relace. Tato hodnota slouží k vynucení referenční integrity, mimo jiné. Můžete použít operátor bitové operace OR ( **&#124;**) kombinovat některý z následujících hodnot (Pokud je kombinace smysl):  
+ Dlouhou hodnotu, která obsahuje informace o typu vztahu. Tato hodnota slouží k vynucení referenční integrity, mimo jiné. Můžete použít operátor bitového operátoru OR ( **&#124;**) ke sloučení některý z následujících hodnot (jako kombinace smysl):  
   
-- **dbRelationUnique** je relace 1: 1.  
+- `dbRelationUnique` Je relace 1: 1.  
   
-- **dbRelationDontEnforce** relace není vynucena (žádné referenční integrity).  
+- `dbRelationDontEnforce` Relace není vynucena (žádná referenční integrita).  
   
-- **dbRelationInherited** existuje relace v fixní databázi, která obsahuje dvě připojené tabulky.  
+- `dbRelationInherited` Existuje relace v databázi fixní, která obsahuje dvě připojené tabulky.  
   
-- **dbRelationUpdateCascade** aktualizace budou přeneseny (Další informace o cascades, najdete v části poznámky).  
+- `dbRelationUpdateCascade` Aktualizace budou přeneseny (Další informace o cascades viz poznámky).  
   
-- **dbRelationDeleteCascade** budou přeneseny odstranění.  
+- `dbRelationDeleteCascade` Odstranění budou přeneseny.  
   
  *lpszField*  
- Ukazatel na řetězec ukončené hodnotou null, který obsahuje název pole v primární tabulce (s názvem podle *lpszTable*).  
+ Ukazatel na řetězec zakončený hodnotou null obsahující název pole v primární tabulce (s názvem podle *lpszTable*).  
   
  *lpszForeignField*  
- Ukazatel na obsahující název pole v tabulce cizího řetězce ukončené hodnotou null (s názvem podle *lpszForeignTable*).  
+ Ukazatel na řetězec zakončený hodnotou null obsahující název pole v tabulce cizího (s názvem podle *lpszForeignTable*).  
   
  *relinfo*  
  Odkaz na [cdaorelationinfo –](../../mfc/reference/cdaorelationinfo-structure.md) objekt, který obsahuje informace o vztahu, kterou chcete vytvořit.  
   
 ### <a name="remarks"></a>Poznámky  
- Relaci nelze zahrnovat dotazu nebo připojené tabulky z externí databáze.  
+ Vztah nemůže zahrnovat dotaz nebo připojené tabulky z externí databáze.  
   
- Vztah součástí je jedno pole v těchto dvou tabulek, použijte první verzi funkce. Druhá verze použijte, když vztah zahrnuje několik polí. Maximální počet polí v vztah je 14.  
+ Používejte první verzi funkce vztah zahrnuje jedno pole v každém z obou tabulek. Používejte druhou verzi vztah zahrnuje více polí. Maximální počet polí v relaci je 14.  
   
- Tato akce vytvoří základní objekt relace rozhraní DAO, ale toto je podrobností implementace MFC, protože je MFC zapouzdření objektů vztah je obsažena v rámci třídy `CDaoDatabase`. MFC neposkytuje třídu pro vztahy.  
+ Tato akce vytvoří objekt vztahu základní rozhraní DAO, ale je to podrobnost implementace MFC, protože MFC zapouzdření objekty relace je obsažena v rámci třídy `CDaoDatabase`. MFC neposkytuje třídu pro vztahy.  
   
- Pokud jste nastavili vztah atributů objektu k aktivaci kaskádovými operacemi, databázový stroj automatické aktualizace nebo odstraní záznamy v jednom nebo několika tabulkách, provedení změn související primární klíč tabulky.  
+ Pokud nastavíte relace atributů objektu k aktivaci operací cascade, databázový stroj automaticky aktualizuje nebo odstraní záznamy v jedné nebo více tabulek při změně související tabulky primární klíče.  
   
- Předpokládejme například, že je vytvořit vztah cascade delete mezi tabulkou Zákazníci a objednávky. Při odstraňování záznamů z tabulky Zákazníci budou odstraněny také záznamy v tabulce objednávky týkající se tohoto zákazníka. Kromě toho pokud vytvoříte cascade odstranit relace mezi tabulkou objednávky a jiné tabulky, záznamy z těchto tabulek jsou automaticky odstraněny při odstraňování záznamů z tabulky zákazníků.  
+ Předpokládejme například, že vytvoříte cascade delete vztah mezi tabulky Zákazníci a objednávky. Při odstraňování záznamů z tabulky Zákazníci budou odstraněny také záznamy v tabulce objednávky týkající se tohoto zákazníka. Kromě toho Pokud zavedete kaskádové odstranění vztahů mezi tabulky objednávky a dalšími tabulkami, záznamů z těchto tabulek se automaticky odstraní při odstranění záznamů z tabulky Zákazníci.  
   
- Související informace naleznete v tématu "CreateRelation způsob" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "CreateRelation metodu" v nápovědě k DAO.  
   
 ##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef  
- Volání této funkce člena odstranit zadaný querydef – uložit dotazu – z `CDaoDatabase` querydefs – kolekce objektu.  
+ Zavolat tuto členskou funkci odstranění zadaného querydef – uloženého dotazu, z `CDaoDatabase` objektu querydefs – kolekce.  
   
 ```  
 void DeleteQueryDef(LPCTSTR lpszName);
@@ -374,12 +374,12 @@ void DeleteQueryDef(LPCTSTR lpszName);
  Název uloženého dotazu, chcete-li odstranit.  
   
 ### <a name="remarks"></a>Poznámky  
- Později tento dotaz již není definováno v databázi.  
+ Potom tento dotaz už není definovaná v databázi.  
   
- Informace o vytváření objektů querydef najdete v tématu třídy [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Objekt querydef se sváže s konkrétní `CDaoDatabase` objektu, když vytvoříte `CDaoQueryDef` objekt, předání ukazatele na objekt databáze.  
+ Informace o vytváření objektů querydef najdete v tématu třídy [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md). Objekt querydef se sváže s konkrétní `CDaoDatabase` objektu při vytváření `CDaoQueryDef` objekt předáním ukazatel na objekt databáze.  
   
 ##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation  
- Volání této funkce člena odstranit stávající relation z kolekce vztahů objekt databáze.  
+ Voláním této členské funkce z kolekce vztahů databázový objekt odstranit existující relace.  
   
 ```  
 void DeleteRelation(LPCTSTR lpszName);
@@ -390,12 +390,12 @@ void DeleteRelation(LPCTSTR lpszName);
  Název relace odstranit.  
   
 ### <a name="remarks"></a>Poznámky  
- Pak se vztah již existuje.  
+ Potom se vztah již existuje.  
   
- Související informace naleznete v tématu "Odstranit metodu" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "Odstranit metodu" v nápovědě k DAO.  
   
 ##  <a name="deletetabledef"></a>  CDaoDatabase::DeleteTableDef  
- Volání této funkce člena odstranit, pokud má zadaná tabulka a všem jeho datům z `CDaoDatabase` tabledefs – kolekce objektu.  
+ Voláním této členské funkce, odstranit, pokud má zadaná tabulka a všechna jeho data z `CDaoDatabase` objektu tabledefs – kolekce.  
   
 ```  
 void DeleteTableDef(LPCTSTR lpszName);
@@ -406,17 +406,17 @@ void DeleteTableDef(LPCTSTR lpszName);
  Název tabledef odstranit.  
   
 ### <a name="remarks"></a>Poznámky  
- Pak se tato tabulka je již definována v databázi.  
+ Potom tato tabulka je již definována v databázi.  
   
 > [!NOTE]
->  Buďte velmi opatrní nechcete odstranit systémové tabulky.  
+>  Buďte velmi opatrní neodstraňovat systémové tabulky.  
   
- Informace o vytváření objektů tabledef najdete v tématu třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Objekt tabledef se sváže s konkrétní `CDaoDatabase` objektu, když vytvoříte `CDaoTableDef` objekt, předání ukazatele na objekt databáze.  
+ Informace o vytváření objektů tabledef najdete v tématu třídy [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md). Objekt tabledef se sváže s konkrétní `CDaoDatabase` objektu při vytváření `CDaoTableDef` objekt předáním ukazatel na objekt databáze.  
   
- Související informace naleznete v tématu "Odstranit metodu" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "Odstranit metodu" v nápovědě k DAO.  
   
 ##  <a name="execute"></a>  CDaoDatabase::Execute  
- Volání této funkce člen spustit dotaz akce nebo spuštění příkazu jazyka SQL v databázi.  
+ Voláním této členské funkce ke spuštění dotazu akce nebo provedení příkazu SQL na databázi.  
   
 ```  
 void Execute(
@@ -425,92 +425,92 @@ void Execute(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *lpszSQL*  
- Ukazatel na ukončené hodnotou null řetězec obsahující platný příkaz SQL k provedení.  
+ *Ipszsql*  
+ Ukazatel na řetězec zakončený hodnotou null obsahující platný příkaz SQL pro spuštění.  
   
  *nOptions*  
- Celé číslo, které určuje možnosti týkající se integrity dotazu. Můžete použít operátor bitové operace OR ( **&#124;**) kombinovat některý z následujících konstant (Zadaná kombinace smysl – například nebude kombinovat **dbInconsistent** s **dbConsistent**):  
+ Celé číslo, které určuje možnosti týkající se integrity dotazu. Můžete použít operátor bitového operátoru OR ( **&#124;**) ke sloučení, některé z následujících konstant (Zadaná kombinace smysl – například nebude kombinovat `dbInconsistent` s `dbConsistent`):  
   
-- **dbDenyWrite** odepřít oprávnění k zápisu do jiných uživatelů.  
+- `dbDenyWrite` Odepřete jiným uživatelům oprávnění k zápisu.  
   
-- **dbInconsistent** nekonzistentní aktualizace (výchozí).  
+- `dbInconsistent` (Výchozí) Nekonzistentní aktualizace.  
   
-- **dbConsistent** konzistentní aktualizace.  
+- `dbConsistent` Konzistentní aktualizace.  
   
-- **dbSQLPassThrough** průchozí SQL. Způsobí, že příkaz jazyka SQL, které mají být předány zdroje dat ODBC pro zpracování.  
+- `dbSQLPassThrough` Předávací SQL. Způsobí, že se mají předat zdroji dat rozhraní ODBC pro zpracování příkaz jazyka SQL.  
   
-- **dbFailOnError** aktualizace vrátit zpět, pokud dojde k chybě.  
+- `dbFailOnError` Vrácení zpět aktualizace, pokud dojde k chybě.  
   
-- **dbSeeChanges** jiného uživatele je změna dat upravujete generovat chybu spuštění.  
+- `dbSeeChanges` Generovat chyb za běhu, pokud jiný uživatel se mění data, která jsou úpravy.  
   
 > [!NOTE]
->  Pokud oba **dbInconsistent** a **dbConsistent** jsou zahrnuty nebo pokud žádná není součástí, výsledkem je výchozí hodnota. Další informace o těchto konstanty naleznete v tématu "Spustit metodu" v nápovědě rozhraní DAO.  
+>  Pokud mají oba `dbInconsistent` a `dbConsistent` budou zahrnuty nebo pokud ani jeden není součástí, výsledek je výchozí hodnota. Vysvětlení těchto konstanty naleznete v tématu "Spustit metodu" v nápovědě k DAO.  
   
 ### <a name="remarks"></a>Poznámky  
- `Execute` platí jenom pro dotazy akce nebo průchozí dotazy SQL, které nevracejí výsledky. Nefunguje pro vyberte dotazy, které vrací záznamy.  
+ `Execute` platí jenom pro akce dotazy nebo předávací dotazy SQL, které nevracejí výsledky. Nefunguje pro vyberte dotazy, které vrací záznamy.  
   
- Definice a informace o dotazech akce najdete v tématech "Dotaz akce" a "Spustit metodu" v nápovědě rozhraní DAO.  
+ Definice a informace o dotazech akce najdete v tématech "Akce dotazu" a "Spustit metodu" v nápovědě k DAO.  
   
 > [!TIP]
->  Zadaná syntakticky správnou příkazu jazyka SQL a příslušná oprávnění, `Execute` – členská funkce nebudou i není-li jeden řádek můžete upravit nebo odstranit. Proto vždy použít **dbFailOnError** možnost při použití `Execute` – členská funkce Spustit aktualizaci nebo odstranění dotazu. Tato možnost způsobí, že MFC má být vyvolána výjimka typu [CDaoException](../../mfc/reference/cdaoexception-class.md) a vrátí zpět všechny změny úspěšné, pokud žádný vliv na záznamy jsou zamčené a nelze aktualizovat ani odstranit. Všimněte si, že můžete vždy volat `GetRecordsAffected` zobrazíte počet záznamů situace měla vliv na.  
+>  Syntakticky správný příkaz SQL a příslušná oprávnění `Execute` členská funkce nebudou ještě není-li jeden řádek může být změněn nebo odstraněn. Proto vždy používat `dbFailOnError` možnost při použití `Execute` členské funkce spuštění aktualizace nebo odstranění dotazu. Tato možnost způsobí, že knihovna MFC má vyvolat výjimku typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md) a vrátí zpět všechny změny úspěšné, pokud žádný vliv na záznamy jsou zamknuté a nejde aktualizovat ani odstranit. Všimněte si, že vždy můžete volat `GetRecordsAffected` zobrazíte vliv na tom, kolik záznamů.  
   
- Volání [GetRecordsAffected](#getrecordsaffected) – členská funkce databázového objektu, můžete určit počet záznamů ovlivněný pomocí nejnovější `Execute` volání. Například `GetRecordsAffected` vrací informace o počet záznamů odstraněny, aktualizaci nebo vložení při provádění dotazu. Vrátí počet nebude projeví změny v související tabulky při cascade aktualizací nebo odstraní jsou platné.  
+ Volání [GetRecordsAffected](#getrecordsaffected) členské funkce objektu databáze k určení počtu záznamy ovlivněny nejnovější `Execute` volání. Například `GetRecordsAffected` vrátí informace o počtu záznamů odstraněny, aktualizaci nebo vložení při provádění dotazu akce. Počet, vrátí se neprojeví, změny v souvisejících tabulkách, když cascade aktualizuje nebo odstraní jsou aktivní.  
   
- `Execute` nevrací sadě záznamů. Pomocí `Execute` v dotazu, který vybere záznamy způsobí, že má být vyvolána výjimka typu MFC `CDaoException`. (Není žádná `ExecuteSQL` – členská funkce podobá `CDatabase::ExecuteSQL`.)  
+ `Execute` nevrací sadu záznamů. Pomocí `Execute` na dotaz, který vybírá záznamy způsobí, že knihovna MFC má vyvolat výjimku typu `CDaoException`. (Neexistuje žádný `ExecuteSQL` členská funkce, které jsou obdobou `CDatabase::ExecuteSQL`.)  
   
 ##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
- Volání této funkce člen načíst připojovací řetězec použitý k připojení `CDaoDatabase` objekt do databáze ODBC nebo ISAM.  
+ Voláním této členské funkce se načíst připojovací řetězec použitý pro připojení `CDaoDatabase` objektu do rozhraní ODBC nebo ISAM databáze.  
   
 ```  
 CString GetConnect();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Připojení řetězci, pokud [otevřete](#open) byl úspěšně na zdroje dat ODBC volané; v opačném prázdný řetězec. Pro Microsoft Jet (. Databáze MDB) řetězec je vždy prázdné, pokud ji nastavíte pro použití s **dbSQLPassThrough** možnost použít s [Execute](#execute) – členská funkce nebo použít v otevírání sadě záznamů.  
+ Připojovací řetězec, pokud [otevřít](#open) byl volaný úspěšně na zdroje dat ODBC; v opačném případě prázdný řetězec. Pro databázový stroj Microsoft Jet (. Databáze MDB), řetězec je vždy prázdné, pokud ji nastavíte pro použití se službou `dbSQLPassThrough` možnost použít s [Execute](#execute) členská funkce nebo při otevření sady záznamů.  
   
 ### <a name="remarks"></a>Poznámky  
- Řetězec obsahuje informace o zdroji této otevřenou databázi nebo databázi použít v předávací dotaz. Připojovací řetězec se skládá z specifikátor typu databáze a nula nebo více parametrů, které jsou oddělené středníky.  
+ Řetězec obsahuje informace o zdroji otevřenou databázi nebo databáze používané předávací dotaz. Připojovací řetězec se skládá z specifikátor typu databáze a nula nebo více parametrů oddělené středníky.  
   
 > [!NOTE]
->  Použití tříd MFC rozhraní DAO pro připojení ke zdroji dat pomocí rozhraní ODBC je míň efektivní než připojování přes připojené tabulky.  
+>  Používání tříd DAO knihovny MFC pro připojení ke zdroji dat prostřednictvím rozhraní ODBC je méně efektivní než připojení přes připojené tabulky.  
   
 > [!NOTE]
->  Připojovací řetězec se používá k předávání Další informace k rozhraní ODBC a určité ovladače databází podle potřeby. Pro se nepoužívá. Databáze MDB. Pro základní tabulky databáze Microsoft Jet připojovací řetězec je prázdný řetězec ("") s výjimkou použijete ji pro průchozí dotaz SQL jak je popsáno v části vrátit hodnotu.  
+>  Připojovací řetězec se používá k předávání dalších informací do rozhraní ODBC a ovladači určité ISAM podle potřeby. Pro se nepoužívá. MDB databází. Pro základní tabulky databáze Microsoft Jet připojovací řetězec je prázdný řetězec ("") s výjimkou případů, kdy ji použijete k předávací dotaz SQL jak je popsáno v části vrátit hodnotu.  
   
- Najdete v článku [otevřete](#open) – členská funkce Popis vytvoření připojovacího řetězce. Jakmile byl v nastaven připojovací řetězec `Open` volání později můžete ho zkontrolovat nastavení k určení typu, cesta, uživatelské ID, heslo nebo ODBC zdroj dat databáze.  
+ Zobrazit [otevřít](#open) členskou funkci pro popis, jak se vytváří připojovací řetězec. Po nastavení připojovacího řetězce `Open` volání, později slouží ke kontrole nastavení k určení typu, cesta, uživatelské ID, heslo nebo ODBC zdroj dat databáze.  
   
 ##  <a name="getname"></a>  CDaoDatabase::GetName  
- Volání této funkce člen načíst název databáze aktuálně otevřené, což je název stávající soubor databáze nebo název registrované zdroje dat ODBC.  
+ Voláním této členské funkce načíst název databáze aktuálně otevřené, což je název existující soubor databáze a název registrované zdroje dat ODBC.  
   
 ```  
 CString GetName();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Úplná cesta a název souboru databáze v případě úspěšného; v opačném prázdnou [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
+ Úplná cesta a název souboru databáze v případě úspěchu; v opačném případě prázdný [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud síť podporuje uniform zásady vytváření názvů (UNC), můžete také zadat síťovou cestu – například "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Dvojitá zpětná lomítka jsou potřeba v textové literály, protože "\\" je řídicí znak C++.)  
+ Pokud sítě podporuje jednotné pojmenování (UNC), můžete taky zadat síťovou cestu, například "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Dvojitá zpětná lomítka jsou nutné v řetězcové literály, proto, že "\\" je znak escape jazyka C++.)  
   
- Můžete například zobrazit tento název v nadpisu. Pokud dojde k chybě při načítání názvu, MFC vyvolá výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ Můžete například zobrazit tento název v záhlaví. Pokud dojde k chybě při načítání názvu, MFC, vyvolá výjimku typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md).  
   
 > [!NOTE]
->  Pro lepší výkon při přistupuje externí databáze, doporučujeme připojení tabulky externí databáze k databázi Microsoft Jet (. MDB) namísto připojení ke zdroji dat přímo.  
+>  Pro zajištění lepšího výkonu při přistupuje externí databáze, doporučujeme připojení k databázi Microsoft Jet externí databázových tabulek (. MDB) místo připojování přímo ke zdroji dat.  
   
- Typ databáze je indikován soubor nebo adresář, který cesta odkazuje na, a to takto:  
+ Typ databáze je indikován soubor nebo adresář, který odkazuje cestu, následujícím způsobem:  
   
-|Název cesty odkazuje na...|Typ databáze|  
+|Cesta odkazuje na...|Typ databáze|  
 |--------------------------|-------------------|  
 |. Soubor MDB|Databáze Microsoft Jet (Microsoft Access)|  
-|Adresář, který obsahuje. Soubory DBF|databáze dBASE|  
+|Adresář, který obsahuje. Soubor DBF není Podporován|dBASE databáze|  
 |Adresář, který obsahuje. Soubor XLS|Databáze aplikace Microsoft Excel|  
-|Adresář, který obsahuje. PDX soubory|Databázový stroj|  
+|Adresář, který obsahuje. Soubory PDX|Databázový stroj|  
 |Adresář, který obsahuje soubory databáze správně formátovaný text|Databáze ve formátu textu|  
   
- Připojovací řetězec databáze pro databáze ODBC, jako je například SQL Server a Oracle, identifikuje název zdroje dat (DSN), která je zaregistrovaná pomocí rozhraní ODBC.  
+ Připojovací řetězec databáze pro ODBC databází, jako je například SQL Server a Oracle, identifikuje název zdroje dat (DSN), který je registrovaný pomocí rozhraní ODBC.  
   
 ##  <a name="getquerydefcount"></a>  CDaoDatabase::GetQueryDefCount  
- Volání této funkce člen načíst počet dotazů, které jsou definované v databáze querydefs – kolekce.  
+ Voláním této členské funkce se načíst počet dotazů, které jsou definované v databáze querydefs – kolekce.  
   
 ```  
 short GetQueryDefCount();
@@ -520,10 +520,10 @@ short GetQueryDefCount();
  Počet dotazů, které jsou definované v databázi.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetQueryDefCount` je užitečné, pokud je třeba projít všechny querydefs – v querydefs – kolekce. Pokud chcete získat informace o daný dotaz v kolekci, najdete v části [GetQueryDefInfo](#getquerydefinfo).  
+ `GetQueryDefCount` je užitečné, pokud budete potřebovat k prosmyčkování všech querydefs – v querydefs – kolekce. Pokud chcete získat informace o daný dotaz v kolekci, najdete v článku [GetQueryDefInfo](#getquerydefinfo).  
   
 ##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo  
- Volání této funkce člen získat různých typů informací o dotazu definované v databázi.  
+ Voláním této členské funkce získat různé druhy informací o dotaz definovaný v databázi.  
   
 ```  
 void GetQueryDefInfo(
@@ -543,27 +543,27 @@ void GetQueryDefInfo(
  Index předdefinovaný dotaz do databáze querydefs – kolekce, pro vyhledávání podle indexu.  
   
  *querydefinfo*  
- Odkaz na [cdaoquerydefinfo –](../../mfc/reference/cdaoquerydefinfo-structure.md) objekt, který vrátí požadované informace.  
+ Odkaz na [cdaoquerydefinfo –](../../mfc/reference/cdaoquerydefinfo-structure.md) objektu, který vrací požadované informace.  
   
  *dwInfoOptions*  
- Možnosti, které určují, které informace o sadě záznamů k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit o sada záznamů:  
+ Možnosti, které určují, jaké informace o sadě záznamů pro načtení. Tady jsou uvedené dostupné možnosti spolu s způsobí funkce vrací informace o sadě záznamů:  
   
-- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, typ  
+- Název AFX_DAO_PRIMARY_INFO (výchozí), zadejte  
   
-- `AFX_DAO_SECONDARY_INFO` Primární informace plus: data vytvořená, datum poslední aktualizace, vrátí záznamy, možností aktualizace  
+- Informace o primárním AFX_DAO_SECONDARY_INFO plus: datum vytvoření, datum poslední aktualizace, vrátí záznamy, možností aktualizace  
   
-- `AFX_DAO_ALL_INFO` Primární a sekundární informace plus: SQL, připojení, odezvy  
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: SQL připojit a odezvy  
   
  *lpszName*  
- Řetězec, který obsahuje název dotazu definované v databázi, pro vyhledávání podle názvu.  
+ Řetězec obsahující název dotaz definovaný v databázi pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
- Dvě verze funkce se zadávají, takže můžete vybrat dotaz podle indexu v querydefs – kolekce databáze nebo název dotazu.  
+ Takže dotaz můžete vybrat podle indexu v databáze querydefs – kolekce nebo podle názvu dotazu jsou k dispozici dvě verze funkce.  
   
- Popis vrácené v informace *querydefinfo*, najdete v článku [cdaoquerydefinfo –](../../mfc/reference/cdaoquerydefinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Jestliže požádáte o jednu úroveň informací, můžete získat žádné předchozí úrovně také informace.  
+ Popis informací, v *querydefinfo*, najdete v článku [cdaoquerydefinfo –](../../mfc/reference/cdaoquerydefinfo-structure.md) struktury. Tato struktura obsahuje členy, které odpovídají položkám informací uvedených v popisu *dwInfoOptions*. Pokud jste požádali o jednu úroveň informací, získáte všech předchozích úrovní také informace.  
   
 ##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
- Volání této funkce člen načíst aktuální počet sekund před následných operací v připojené databázi jsou vypršel časový limit.  
+ Voláním této členské funkce se načíst aktuální počet sekund před následné operace v připojené databázi jsou vypršel časový limit.  
   
 ```  
 short GetQueryTimeout();
@@ -573,14 +573,14 @@ short GetQueryTimeout();
  Krátké celé číslo obsahující hodnotu časového limitu v sekundách.  
   
 ### <a name="remarks"></a>Poznámky  
- Operace může vypršení časového limitu z důvodu problémy se síťovým přístupem, doba zpracování nadměrné dotazu a tak dále. Když nastavení, ovlivňuje všechny otevřené, přidat nové, aktualizovat a odstranit operací na všechny sady záznamů přidružený k tomuto `CDaoDatabase` objektu. Můžete změnit aktuální nastavení časového limitu voláním [SetQueryTimeout](#setquerytimeout). Změna časový limit dotazu pro sadu záznamů po počáteční hodnotu pro sadu záznamů nezmění. Například následující [přesunout](../../mfc/reference/cdaorecordset-class.md#move) operations nepoužívejte novou hodnotu. Výchozí hodnota je nastavena původně při inicializaci databázového stroje.  
+ Operace může časový limit z důvodu problémů s přístupem k síti, doba zpracování nadměrné dotazu a tak dále. Dokud je nastavení, ovlivňuje všechny otevřené, přidávat nové, aktualizace a odstranění týkající se žádné sady záznamů přidružený k tomuto `CDaoDatabase` objektu. Můžete změnit nastavení časového limitu v aktuálním voláním [SetQueryTimeout](#setquerytimeout). Změna časový limit dotazu pro sadu záznamů po otevření nezmění hodnotu pro sady záznamů. Například následující [přesunout](../../mfc/reference/cdaorecordset-class.md#move) operace nepoužívejte novou hodnotu. Výchozí hodnota je zpočátku nastaven při inicializaci modulu databáze.  
   
- Výchozí hodnota pro vypršení časových limitů dotazu je převzat ze registru systému Windows. Pokud neexistuje žádné nastavení registru, výchozí hodnota je 60 sekund. Ne všechny databáze podporují možnost nastavit hodnotu časového limitu dotazu. Pokud nastavíte hodnotu časového limitu dotazu 0, dojde k bez časového limitu; a komunikaci s databází může přestat reagovat. Toto chování může být užitečné při vývoji. Pokud volání selže, MFC vyvolá výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ Výchozí hodnota pro vypršení časového limitu dotazu je převzatý z registru Windows. Pokud neexistuje žádné nastavení registru, výchozí hodnota je 60 sekund. Ne všechny databáze podporují možnost nastavit hodnotu časového limitu dotazu. Pokud nastavíte hodnotu časového limitu dotazu 0, dojde k žádný časový limit; a komunikaci s databází může přestat reagovat. Toto chování může být užitečné během vývoje. Pokud volání selže, MFC, vyvolá výjimku typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md).  
   
- Související informace naleznete v tématu "QueryTimeout vlastnost" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "QueryTimeout vlastnost" v nápovědě k DAO.  
   
 ##  <a name="getrecordsaffected"></a>  CDaoDatabase::GetRecordsAffected  
- Volání této funkce člen můžete určit počet záznamů ovlivněný nejnovější voláním z [Execute](#execute) – členská funkce.  
+ Voláním této členské funkce k určení počtu záznamy ovlivněny posledního volání [Execute](#execute) členskou funkci.  
   
 ```  
 long GetRecordsAffected();
@@ -590,27 +590,27 @@ long GetRecordsAffected();
  Dlouhé celé číslo obsahující počet záznamů ovlivněný.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vrácená obsahuje několik záznamů odstraněny, aktualizaci nebo vložení dotazem akce spustit s `Execute`. Vrátí počet nebude projeví změny v související tabulky při cascade aktualizací nebo odstraní jsou platné.  
+ Vrácená hodnota obsahuje několik záznamů odstraněny, aktualizaci nebo vložení dotazem akci spuštění s `Execute`. Počet, vrátí se neprojeví, změny v souvisejících tabulkách, když cascade aktualizuje nebo odstraní jsou aktivní.  
   
- Související informace naleznete v tématu "RecordsAffected vlastnost" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "RecordsAffected vlastnost" v nápovědě k DAO.  
   
 ##  <a name="getrelationcount"></a>  CDaoDatabase::GetRelationCount  
- Volání této funkce člen získat počet vztahy definované mezi tabulkami v databázi.  
+ Voláním této členské funkce získat počet vztahy definované mezi tabulkami v databázi.  
   
 ```  
 short GetRelationCount();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet vztahy definované mezi tabulkami v databázi.  
+ Počet vztahů, které jsou definované mezi tabulkami v databázi.  
   
 ### <a name="remarks"></a>Poznámky  
- **GetRelationCount** je užitečné, pokud je třeba projít všechny vztahy definované v kolekce vztahů databáze. Pokud chcete získat informace o dané relace v kolekci, najdete v části [GetRelationInfo](#getrelationinfo).  
+ `GetRelationCount` je užitečné, pokud budete muset projít všechny vztahy definované v kolekci Relations vaší databáze. Pokud chcete získat informace o dané relace v kolekci, najdete v článku [GetRelationInfo](#getrelationinfo).  
   
- K objasnění konceptu vztah, zvažte tabulky Dodavatelé a tabulky produktů, které může mít vztah jeden mnoho. V této relaci jednoho dodavatele můžete zadat více než jeden produkt. Další vztahy jsou 1: 1 a m: n.  
+ K objasnění konceptu vztah, vezměte v úvahu dodavatelé tabulku a tabulku produktů, který může mít vztah jeden mnoho. V tomto vztahu jednoho dodavatele, můžete zadat více než jeden produkt. Jiné vztahy jsou 1: 1 a many-to-many.  
   
 ##  <a name="getrelationinfo"></a>  CDaoDatabase::GetRelationInfo  
- Volání této funkce člen získat informace o zadané relace v kolekci vztahy databázi.  
+ Voláním této členské funkce získat informace o zadané relace v kolekci Relations vaší databáze.  
   
 ```  
 void GetRelationInfo(
@@ -627,44 +627,44 @@ void GetRelationInfo(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index objektu relace v kolekci vztahů databáze, pro vyhledávání podle indexu.  
+ Index objektu relace v kolekci relací databáze, pro vyhledávání podle indexu.  
   
  *relinfo*  
- Odkaz na [cdaorelationinfo –](../../mfc/reference/cdaorelationinfo-structure.md) objekt, který vrátí požadované informace.  
+ Odkaz na [cdaorelationinfo –](../../mfc/reference/cdaorelationinfo-structure.md) objektu, který vrací požadované informace.  
   
  *dwInfoOptions*  
- Možnosti, které určují, které informace o vztahu k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit o vztah:  
+ Možnosti, které určují, které informace o vztahu k načtení. Tady jsou uvedené dostupné možnosti spolu s způsobí funkce vrací informace o vztahu:  
   
-- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název tabulky, cizí tabulky  
+- Tabulka cizího název tabulky, AFX_DAO_PRIMARY_INFO (výchozí)  
   
-- `AFX_DAO_SECONDARY_INFO` Atributy pole informace  
+- Atributy AFX_DAO_SECONDARY_INFO, informace z pole  
   
- Informace o pole [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) objekt obsahující pole z účastnících se vztah primární tabulce.  
+ Informace o poli [cdaorelationfieldinfo –](../../mfc/reference/cdaorelationfieldinfo-structure.md) objekt, který obsahuje pole z účastnící se vztahu primární tabulce.  
   
  *lpszName*  
- Řetězec obsahující název objekt relace, pro vyhledávání podle názvu.  
+ Řetězec obsahující název objektu relace, pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
- Dvě verze této funkce poskytnout přístup pomocí indexu nebo podle názvu. Popis vrácené v informace *relinfo*, najdete v článku [cdaorelationinfo –](../../mfc/reference/cdaorelationinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, také získat informace v žádné předchozí úrovně.  
+ Dvě verze této funkce poskytují přístup, index nebo název. Popis informací, v *relinfo*, najdete v článku [cdaorelationinfo –](../../mfc/reference/cdaorelationinfo-structure.md) struktury. Tato struktura obsahuje členy, které odpovídají položkám informací uvedených v popisu *dwInfoOptions*. Pokud jste požádali o informace na jedné úrovni, získáte také informace ve všech předchozích úrovní.  
   
 > [!NOTE]
->  Pokud nastavíte vztah atributů objektu k aktivaci kaskádovými operacemi ( **dbRelationUpdateCascades** nebo **dbRelationDeleteCascades**), databázový stroj Microsoft Jet automaticky aktualizuje nebo Odstraní záznamy v jednom nebo několika tabulkách, provedení změn související primární klíč tabulky. Předpokládejme například, že je vytvořit vztah cascade delete mezi tabulkou Zákazníci a objednávky. Při odstraňování záznamů z tabulky Zákazníci budou odstraněny také záznamy v tabulce objednávky týkající se tohoto zákazníka. Kromě toho pokud vytvoříte cascade odstranit relace mezi tabulkou objednávky a jiné tabulky, záznamy z těchto tabulek jsou automaticky odstraněny při odstraňování záznamů z tabulky zákazníků.  
+>  Pokud nastavíte relace atributů objektu k aktivaci operací cascade (`dbRelationUpdateCascades` nebo `dbRelationDeleteCascades`), databázový stroj Microsoft Jet automaticky aktualizuje nebo odstraní záznamy v jednom nebo více další tabulky, když jsou provedeny změny související s primární klíč tabulky. Předpokládejme například, že vytvoříte cascade delete vztah mezi tabulky Zákazníci a objednávky. Při odstraňování záznamů z tabulky Zákazníci budou odstraněny také záznamy v tabulce objednávky týkající se tohoto zákazníka. Kromě toho Pokud zavedete kaskádové odstranění vztahů mezi tabulky objednávky a dalšími tabulkami, záznamů z těchto tabulek se automaticky odstraní při odstranění záznamů z tabulky Zákazníci.  
   
 ##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount  
- Volání této funkce člen načíst počet tabulek, které jsou definované v databázi.  
+ Voláním této členské funkce se načíst počet tabulek definovaných v databázi.  
   
 ```  
 short GetTableDefCount();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Počet tabledefs – definované v databázi.  
+ Počet tabledefs – definovanými v databázi.  
   
 ### <a name="remarks"></a>Poznámky  
- `GetTableDefCount` je užitečné, pokud je třeba projít všechny tabledefs – v této databáze tabledefs – kolekce. Pokud chcete získat informace o dané tabulce v kolekci, najdete v části [GetTableDefInfo](#gettabledefinfo).  
+ `GetTableDefCount` je užitečné, pokud budete potřebovat k prosmyčkování všech tabledefs – ve vaší databáze tabledefs – kolekce. Pokud chcete získat informace o dané tabulky v kolekci, najdete v článku [GetTableDefInfo](#gettabledefinfo).  
   
 ##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo  
- Volání této funkce člen získat různých typů informací o tabulky definované v databázi.  
+ Voláním této členské funkce získat různé druhy informací o tabulce definovanými v databázi.  
   
 ```  
 void GetTableDefInfo(
@@ -681,74 +681,74 @@ void GetTableDefInfo(
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Index objektu tabledef ve databáze tabledefs – kolekce, pro vyhledávání podle indexu.  
+ Index objektu tabledef v tabledefs – kolekce databáze, pro vyhledávání podle indexu.  
   
  *tabledefinfo*  
- Odkaz na [cdaotabledefinfo –](../../mfc/reference/cdaotabledefinfo-structure.md) objekt, který vrátí požadované informace.  
+ Odkaz na [cdaotabledefinfo –](../../mfc/reference/cdaotabledefinfo-structure.md) objektu, který vrací požadované informace.  
   
  *dwInfoOptions*  
- Možnosti, které určují, které informace o tabulce k načtení. Dostupné možnosti jsou zde uvedeny společně s co způsobí funkce se má vrátit o vztah:  
+ Možnosti, které určují, jaké informace o tabulce k načtení. Tady jsou uvedené dostupné možnosti spolu s způsobí funkce vrací informace o vztahu:  
   
-- `AFX_DAO_PRIMARY_INFO` (Výchozí) Název, aktualizovat, atributy  
+- Atributy název AFX_DAO_PRIMARY_INFO (výchozí), aktualizovat,  
   
-- `AFX_DAO_SECONDARY_INFO` Primární informace plus: data vytvořená, datum poslední aktualizace, názvu zdrojové tabulky Connect  
+- Informace o primárním AFX_DAO_SECONDARY_INFO plus: datum vytvoření, datum poslední aktualizace název zdrojové tabulky, připojit  
   
-- `AFX_DAO_ALL_INFO` Primární a sekundární informace plus: počet záznamů ověřovací pravidlo, Text pro ověření,  
+- AFX_DAO_ALL_INFO primární a sekundární informace plus: ověřovací pravidlo, Text pro ověření, počet záznamů  
   
  *lpszName*  
- Název objektu tabledef, pro vyhledávání podle názvu.  
+ Název objektu tabledef pro vyhledávání podle názvu.  
   
 ### <a name="remarks"></a>Poznámky  
- Dvě verze funkce se zadávají, takže můžete vybrat tabulky indexu v tabledefs – kolekce databáze nebo název tabulky.  
+ Dvě verze funkce jsou dodávány, takže můžete vybrat tabulku indexu v tabledefs – kolekce vaší databáze nebo název tabulky.  
   
- Popis vrácené v informace *tabledefinfo*, najdete v článku [cdaotabledefinfo –](../../mfc/reference/cdaotabledefinfo-structure.md) struktura. Tato struktura má členy, které odpovídají položkám informace uvedené výše v popis *dwInfoOptions*. Pokud budete požadovat informace na jedné úrovni, získáte informace o všech předchozích úrovní.  
+ Popis informací, v *tabledefinfo*, najdete v článku [cdaotabledefinfo –](../../mfc/reference/cdaotabledefinfo-structure.md) struktury. Tato struktura obsahuje členy, které odpovídají položkám informací uvedených v popisu *dwInfoOptions*. Pokud jste požádali o informace na jedné úrovni, můžete získat informace o všech předchozích úrovní.  
   
 > [!NOTE]
->  `AFX_DAO_ALL_INFO` Možnost poskytuje informace, které může být pomalé získat. Počítání záznamy v tabulce v takovém případě může být časově velmi náročné Pokud jsou k dispozici mnoho záznamy.  
+>  Možnost AFX_DAO_ALL_INFO poskytuje informace, které může trvat dlouho. Chcete-li získat. Počítání záznamy v tabulce v takovém případě může být časově velmi náročné Pokud mnoho záznamů.  
   
 ##  <a name="getversion"></a>  CDaoDatabase::GetVersion  
- Volání této funkce člen zjistíte verzi souboru databáze Microsoft Jet.  
+ Voláním této členské funkce se určit verzi databázový soubor Microsoft Jet.  
   
 ```  
 CString GetVersion();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) určující verzi souboru databáze přidružený k objektu.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který určuje verzi souboru databáze, která je přidružená k objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Hodnota vrácená představuje číslo verze ve tvaru "major.minor"; například "3.0". Číslo verze produktu (například 3.0) se skládá z číslo verze (3), tečku a číslo verze (0). Verze k datu jsou 1.0, 1.1, 2.0 a 3.0.  
+ Vrácená hodnota představuje číslo verze ve formátu "hlavní.vedlejší"; například "3.0". Číslo verze produktu (například 3.0) se skládá z číslo verze (3), tečku a číslo verze (0). Verze datum jsou 1.0, 1.1, 2.0 a 3.0.  
   
- Související informace naleznete v tématu "Verze vlastnost" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "Verze vlastnost" v nápovědě k DAO.  
   
 ##  <a name="isopen"></a>  CDaoDatabase::IsOpen  
- Volání této funkce člen můžete určit, zda `CDaoDatabase` objektu je aktuálně otevřený v databázi.  
+ Voláním této členské funkce k určení, zda `CDaoDatabase` objektu je momentálně otevřený na databázi.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud nenulové hodnoty `CDaoDatabase` objekt je aktuálně otevřených; jinak hodnota 0.  
+ Nenulovou hodnotu, pokud `CDaoDatabase` objekt je aktuálně otevřené; jinak 0.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase  
- Obsahuje ukazatel na rozhraní OLE pro základní objekt DAO databáze `CDaoDatabase` objektu.  
+ Obsahuje ukazatel na rozhraní OLE pro podkladové objekt DAO databáze `CDaoDatabase` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud potřebujete získat přímo přístup k rozhraní DAO, použijte tento ukazatel.  
+ Pokud je potřeba získat přímo přístup k rozhraní DAO, použijte tento ukazatel.  
   
- Informace o volání rozhraní DAO přímo, najdete v části [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
+ Informace o volání rozhraní DAO přímo, naleznete v tématu [Technická poznámka 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
 ##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace  
- Obsahuje odkazy [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objekt, který obsahuje objekt databáze.  
+ Obsahuje ukazatel [cdaoworkspace –](../../mfc/reference/cdaoworkspace-class.md) objekt, který obsahuje databázový objekt.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud potřebujete získat přímo přístup k pracovním prostoru, použijte tento ukazatel – například k získání ukazatele na další objekty databáze v pracovním prostoru databáze kolekce.  
+ Použít tento ukazatel, pokud je potřeba získat přímo přístup k pracovnímu prostoru – například k získání ukazatele na ostatních databázových objektů v pracovním prostoru databáze kolekce.  
   
 ##  <a name="open"></a>  CDaoDatabase::Open  
- Musí volání této funkce člen k chybě při inicializaci nově vytvořený `CDaoDatabase` objekt, který představuje existující databázi.  
+ Lze zavolat tuto členskou funkci inicializace nově vytvořeného `CDaoDatabase` objekt, který představuje existující databázi.  
   
 ```  
 virtual void Open(
@@ -760,54 +760,54 @@ virtual void Open(
   
 ### <a name="parameters"></a>Parametry  
  *lpszName*  
- Výraz řetězec, který je název existující Microsoft Jet (. Soubor databáze MDB). Pokud název souboru s příponou, není potřeba. Pokud síť podporuje uniform zásady vytváření názvů (UNC), bude můžete také určit síťovou cestu, například "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Dvojitá zpětná lomítka jsou potřeba v textové literály, protože "\\" je řídicí znak C++.)  
+ Výraz řetězce, který je název existující Microsoft Jet (. Soubor databáze MDB). Pokud název souboru má příponu, je povinný. Pokud vaše síť podporuje jednotné pojmenování (UNC), můžete taky zadat síťovou cestu jako "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Dvojitá zpětná lomítka jsou nutné v řetězcové literály, proto, že "\\" je znak escape jazyka C++.)  
   
- Některé aspekty platí při použití *lpszName*. Pokud ho:  
+ Při použití platí některé aspekty *lpszName*. Pokud ho:  
   
--   Odkazuje na databázi, která je již otevřeno pro výhradní přístup k jiným uživatelem, generuje MFC se výjimka typu [CDaoException](../../mfc/reference/cdaoexception-class.md). Depeše této výjimky, aby mohl váš uživatel vědět, že databáze není k dispozici.  
+-   Odkazuje na databázi, která je již otevřena pro výhradní přístup jiným uživatelem, MFC vyvolává výjimky typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md). Tato výjimka umožňuje uživateli vědět, že databáze je k dispozici pro depeše.  
   
--   Prázdný řetězec ("") a *lpszConnect* je "ODBC", takže uživatel může vybrat databázi, zobrazí se dialogové okno výpis všech registrovaných názvy zdrojů dat ODBC. Neměli byste přímé připojení ke zdrojům dat ODBC; Místo toho použijte připojené tabulky.  
+-   Je prázdný řetězec ("") a *lpszConnect* je "ODBC;", takže uživatel může vybrat databáze, zobrazí se dialogové okno, ve výpisu všech registrovaných názvy zdrojů dat ODBC. Měli byste se vyhnout přímé připojení ke zdrojům dat ODBC; Místo toho použijte připojené tabulky.  
   
--   V opačném případě neodkazuje na existující databázi nebo platný název zdroje dat ODBC, generuje MFC se výjimka typu `CDaoException`.  
+-   V opačném případě neodkazuje na existující databáze nebo platný název zdroje dat ODBC, MFC vyvolává výjimky typu `CDaoException`.  
   
 > [!NOTE]
->  Podrobnosti o chybových kódech DAO najdete v tématu DAOERR. Soubor H. Související informace naleznete v tématu "Zachytitelné chyb přístupu k datům" v nápovědě rozhraní DAO.  
+>  Podrobnosti o rozhraní DAO chybových kódech naleznete v tématu DAOERR. Soubor H. Související informace naleznete v tématu "Zachytitelné chyb přístupu k datům" v nápovědě k DAO.  
   
  *bExclusive*  
- Logická hodnota, která je **TRUE** Pokud databáze má být otevřen pro výhradní (sdíleném) a **FALSE** Pokud má být otevřen pro sdílené databáze. Pokud tento argument vynecháte, je pro přístup ke sdílenému otevřít databázi.  
+ Logická hodnota, která je TRUE, pokud se databáze nachází na Otevřít pro výhradní přístup (nesdílené) a hodnotu FALSE, pokud je databáze otevřít pro sdílený přístup. Pokud tento argument vynecháte, databázi otevřít pro sdílený přístup.  
   
  *bReadOnly*  
- Logická hodnota, která je **TRUE** Pokud databáze má být otevřen pro čtení a **FALSE** Pokud databáze má být otevřen pro čtení a zápis. Pokud vynecháte tento argument, databázi otevřít pro čtení a zápis. Všechny závislé sady záznamů zdědí tento atribut.  
+ Logická hodnota, která je TRUE, pokud se databáze nachází na Otevřít pro přístup jen pro čtení a hodnotu FALSE, pokud má být otevřen pro čtení a zápisu databáze. Pokud tento argument vynecháte, databázi je otevřen pro čtení a zápisu. Všechny závislé sady záznamů zdědí tento atribut.  
   
  *lpszConnect*  
- Použít pro databázi otevřít řetězcového výrazu. Tento řetězec představuje ODBC připojit argumenty. Je třeba zadat argumenty výhradní a jen pro čtení k poskytování zdrojový řetězec. Pokud se databáze nachází databáze Microsoft Jet (. MDB), tento řetězec je prázdný (""). Syntaxe pro výchozí hodnota – **_T**("") – poskytuje přenositelnosti znakové sady Unicode, jakož i ANSI sestavení vaší aplikace.  
+ Řetězcový výraz použitý pro otevření databáze. Tento řetězec představuje rozhraní ODBC připojení argumenty. Je třeba zadat argumenty výhradní a jen pro čtení k poskytování zdrojový řetězec. Pokud se databáze nachází databáze aplikace Microsoft Jet (. MDB), je prázdný řetězec (""). Syntaxe pro výchozí hodnotu – **_T**(""), nabízí přenositelnost pro kódování Unicode, stejně jako ANSI sestavení vaší aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
- **Otevřete** přidruží základní objekt DAO databáze. Databázový objekt nelze použít k vytvoření sady záznamů, tabledef nebo querydef objekty, dokud není inicializována. **Otevřete** připojí databázový objekt do kolekce přidružené pracovní prostor databáze.  
+ `Open` Přidruží databáze základní objekt rozhraní DAO. Databázový objekt nelze použít k vytvoření sady záznamů, tabledef nebo querydef objekty, dokud není inicializován. `Open` Přidá objekt databáze kolekce databází přidružených pracovních prostorů.  
   
- Použití parametrů následujícím způsobem:  
+ Použijte následující parametry:  
   
--   Pokud chcete otevřít Microsoft Jet (. Databáze MDB), použijte *lpszName* parametr a předejte jí prázdnou řetězec *lpszConnect* , nebo parametr předejte heslo řetězec ve formátu "; PWD = heslo "Pokud se databáze nachází chráněný heslem (. MDB pouze pro databáze).  
+-   Pokud otevíráte Microsoft Jet (. Databáze MDB), použijte *lpszName* parametr a předáte prázdný řetězec *lpszConnect* parametr nebo pass heslo řetězec ve tvaru "; PWD = heslo "Pokud se databáze nachází v chráněném heslem (. MDB pouze pro databáze).  
   
--   Pokud chcete otevřít zdroje dat ODBC, předejte platný připojovací řetězec ODBC v *lpszConnect* a prázdný řetězec v *lpszName*.  
+-   Pokud otevíráte zdroji dat rozhraní ODBC, předejte platný připojovací řetězec ODBC v *lpszConnect* a prázdný řetězec v *lpszName*.  
   
- Související informace naleznete v tématu "OpenDatabase způsob" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "OpenDatabase metodu" v nápovědě k DAO.  
   
 > [!NOTE]
->  Pro lepší výkon při přístupu k externí databází, včetně ISAM a zdroje dat ODBC, je doporučeno připojení tabulky externí databáze k databázi Microsoft Jet engine (. MDB) namísto připojení ke zdroji dat přímo.  
+>  Pro zajištění lepšího výkonu při přístupu k externí databází, včetně ISAM a zdroje dat ODBC, doporučujeme připojit externí databázových tabulek pro databázový stroj Microsoft Jet (. MDB) místo připojování přímo ke zdroji dat.  
   
- Je možné pro pokus o připojení k vypršení časového limitu, pokud například hostitel databázového systému nedostupný. Pokud se nezdaří pokus o připojení, `Open` vyvolá výjimku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ Je možné pro pokus o připojení k vypršení časového limitu, pokud je například DBMS hostitele není k dispozici. Pokud se nezdaří pokus o připojení, `Open` vyvolá výjimku typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md).  
   
- Zbývající poznámky platí pouze pro databáze ODBC:  
+ Zbývající poznámky platí pouze pro ODBC databází:  
   
- Pokud databáze je databáze ODBC a parametry ve vaší `Open` volání neobsahují dostatek informací pro připojení, ovladač ODBC otevře dialogové okno se získat potřebné informace od uživatele. Při volání `Open`, připojovací řetězec, *lpszConnect*, je uložen soukromě a je k dispozici při volání [GetConnect](#getconnect) – členská funkce.  
+ Pokud je databáze ODBC a parametry v databáze vaší `Open` volání neobsahují dostatek informací k vytvoření připojení, ovladač ODBC se otevře dialogové okno pro získání potřebných informací od uživatele. Při volání `Open`, připojovací řetězec *lpszConnect*, je uložen soukromou a je k dispozici prostřednictvím volání [GetConnect](#getconnect) členskou funkci.  
   
- Pokud chcete, můžete otevřít dialogové okno Vlastní před voláním `Open` získat informace o od uživatele, jako například heslo, pak přidejte tyto informace do připojovacího řetězce je předat do `Open`. Nebo můžete chtít uložit připojovací řetězec, předáte (třeba v registru systému Windows), takže můžete opakovaně použít ho na další čas voláními aplikace `Open` na `CDaoDatabase` objektu.  
+ Pokud chcete, můžete otevřít dialogové okno Vlastní před voláním `Open` k získání informací od uživatele, jako jsou hesla, zadejte tyto informace na připojovací řetězec můžete předat `Open`. Nebo můžete chtít uložit připojovací řetězec, předáte (ideálně v registru Windows), znovu ho můžete použít další čas volání aplikace `Open` na `CDaoDatabase` objektu.  
   
- Můžete také použít připojovací řetězec pro více úrovní ověřování přihlášení (jednotlivých jiné `CDaoDatabase` objektu) nebo vyjádřit jiné informace specifické pro databázi.  
+ Připojovací řetězec můžete použít také pro několik úrovní autorizace přihlášení (každou pro jiný `CDaoDatabase` objekt) nebo sdělit Další informace o konkrétních databází.  
   
 ##  <a name="setquerytimeout"></a>  CDaoDatabase::SetQueryTimeout  
- Volání této funkce člena přepsat výchozí počet sekund před následných operací v připojené databázi časový limit.  
+ Voláním této členské funkce přepsat výchozí počet sekund před následné operace na připojeném databázovém časový limit.  
   
 ```  
 void SetQueryTimeout(short nSeconds);
@@ -818,18 +818,18 @@ void SetQueryTimeout(short nSeconds);
  Počet sekund před pokusu o dotaz vyprší časový limit.  
   
 ### <a name="remarks"></a>Poznámky  
- Operace může vypršení časového limitu z důvodu problémy se síťovým přístupem, doba zpracování nadměrné dotazu a tak dále. Volání `SetQueryTimeout` před otevřením sady záznamů nebo před voláním sady záznamů [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [aktualizace](../../mfc/reference/cdaorecordset-class.md#update), nebo [odstranit](../../mfc/reference/cdaorecordset-class.md#delete) členské funkce, pokud chcete změnit dotaz Hodnota časového limitu. Toto nastavení ovlivňuje všechny následné [otevřete](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, `Update`, a `Delete` volání všechny sady záznamů přidružený k tomuto `CDaoDatabase` objektu. Změna časový limit dotazu pro sadu záznamů po počáteční hodnotu pro sadu záznamů nezmění. Například následující [přesunout](../../mfc/reference/cdaorecordset-class.md#move) operations nepoužívejte novou hodnotu.  
+ Operace může časový limit z důvodu problémů s přístupem k síti, doba zpracování nadměrné dotazu a tak dále. Volání `SetQueryTimeout` před otevřením sady záznamů nebo před voláním sady záznamů [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [aktualizace](../../mfc/reference/cdaorecordset-class.md#update), nebo [odstranit](../../mfc/reference/cdaorecordset-class.md#delete) členské funkce, pokud chcete změnit dotaz Hodnota časového limitu. Toto nastavení ovlivňuje všechny následné [otevřít](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, `Update`, a `Delete` volání jakékoli sady záznamů přidružený k tomuto `CDaoDatabase` objektu. Změna časový limit dotazu pro sadu záznamů po otevření nezmění hodnotu pro sady záznamů. Například následující [přesunout](../../mfc/reference/cdaorecordset-class.md#move) operace nepoužívejte novou hodnotu.  
   
- Výchozí hodnota pro vypršení časových limitů dotazu je 60 sekund. Ne všechny databáze podporují možnost nastavit hodnotu časového limitu dotazu. Pokud nastavíte hodnotu časového limitu dotazu 0, dojde k bez časového limitu; komunikace s databází může přestat reagovat. Toto chování může být užitečné při vývoji.  
+ Výchozí hodnota pro vypršení časového limitu dotazu je 60 sekund. Ne všechny databáze podporují možnost nastavit hodnotu časového limitu dotazu. Pokud nastavíte hodnotu časového limitu dotazu 0, dojde k žádný časový limit; komunikace s databází může přestat reagovat. Toto chování může být užitečné během vývoje.  
   
- Související informace naleznete v tématu "QueryTimeout vlastnost" v nápovědě rozhraní DAO.  
+ Související informace naleznete v tématu "QueryTimeout vlastnost" v nápovědě k DAO.  
   
 ## <a name="see-also"></a>Viz také  
  [CObject – třída](../../mfc/reference/cobject-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CDaoWorkspace – třída](../../mfc/reference/cdaoworkspace-class.md)   
+ [Cdaoworkspace – třída](../../mfc/reference/cdaoworkspace-class.md)   
  [CDaoRecordset – třída](../../mfc/reference/cdaorecordset-class.md)   
- [CDaoTableDef – třída](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoQueryDef – třída](../../mfc/reference/cdaoquerydef-class.md)   
+ [Cdaotabledef – třída](../../mfc/reference/cdaotabledef-class.md)   
+ [Cdaoquerydef – třída](../../mfc/reference/cdaoquerydef-class.md)   
  [CDatabase – třída](../../mfc/reference/cdatabase-class.md)   
  [CDaoException – třída](../../mfc/reference/cdaoexception-class.md)

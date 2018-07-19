@@ -1,5 +1,5 @@
 ---
-title: Navrhování kolekce a rozhraní pro výčty (ATL) | Microsoft Docs
+title: Návrh rozhraní kolekce a výčtů (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05649cce0e80af6f54327545cef7b663d69babf9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354916"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851324"
 ---
-# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principy návrhu pro sběr a rozhraní pro výčty
-Existují různé zásady za každý typ rozhraní:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principy návrhu rozhraní kolekce a výčtů
+Existují různé MSDL za každý typ rozhraní:  
   
--   Poskytuje rozhraní, které je kolekce *náhodných* přístup k *jeden* položka v kolekci prostřednictvím **položky** metoda, umožňuje klientům zjistit, kolik položek jsou v kolekci prostřednictvím **počet** vlastnost, a často umožňuje klientům přidání a odebrání položek.  
+-   Poskytuje rozhraní kolekce *náhodné* přístup k *jeden* položky v kolekci prostřednictvím `Item` metoda, umožňuje klientům zjistit, kolik položek jsou v kolekci prostřednictvím `Count` vlastnost, a často umožňuje klientům přidávání a odebírání položek.  
   
--   Poskytuje rozhraní enumerátor *sériové* přístup k *více* položek v kolekci, je neumožňuje klienta, které chcete zjistit, kolik položek jsou v kolekci (dokud enumerátor zastaví vrácení položky), a neposkytuje žádné způsob přidání nebo odebrání položky.  
+-   Poskytuje enumerátor rozhraní *sériového portu* přístup k *více* položek v kolekci, je neumožňuje klientům zjistit, kolik položek jsou v kolekci (dokud enumerátor zastaví vrácení položky), a neposkytuje žádným způsobem přidávání nebo odebírání položek.  
   
- Každý typ rozhraní hraje jinou roli při poskytování přístupu k elementů v kolekci.  
+ Každý typ rozhraní hraje různé roli při poskytování přístupu k prvkům v kolekci.  
   
 ## <a name="see-also"></a>Viz také  
  [Kolekce a výčty](../atl/atl-collections-and-enumerators.md)

@@ -1,5 +1,5 @@
 ---
-title: discard_block_engine – třída | Microsoft Docs
+title: discard_block_engine – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b814f64f340577508add6bf3c0f85ffac0786db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b65cfbe156ba462af9e87abf82d63023cfdc44b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843467"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957435"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine – třída
 
-Generuje náhodné pořadí zrušením hodnot vrácených jeho základní modul.
+Generuje náhodné posloupnosti vypuštěním hodnoty vrácené základním modulem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,11 +36,11 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`Engine` Typ základního modulu.
+*Modul* typ základního modulu.
 
-`P` **Velikost bloku**. Počet hodnot v jednotlivých bloků.
+*P* **velikost bloku**. Počet hodnot v každém bloku.
 
-`R` **Použít bloku**. Počet hodnot v jednotlivých bloků, které se používají. Ostatní jsou zahozeny ( `P`  -  `R`). **Předběžnou**: `0 < R ≤ P`
+*R* **používá blok**. Počet hodnot v každém bloku, které se používají. Ostatní jsou zahozeny (`P` - `R`). **Předběžná podmínka**: `0 < R ≤ P`
 
 ## <a name="members"></a>Členové
 
@@ -49,18 +49,18 @@ class discard_block_engine;
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|
 
-Další informace o modulu členy najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o členech modul, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablony Popisuje modul adaptér, který produkuje hodnoty zrušením některé z hodnot vrácených jeho základní modul.
+Tato třída šablony popisuje adaptér modul, který vytváří hodnoty vypuštěním některé z hodnot vrácených základním modulem.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

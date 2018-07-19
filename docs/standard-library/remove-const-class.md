@@ -1,5 +1,5 @@
 ---
-title: remove_const – třída | Microsoft Docs
+title: remove_const – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9aaae690acd372e8482ac8a0e33a14e030e4b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c0eaf8eeab1c5d9c024baa85af025f2294956e8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855328"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959281"
 ---
 # <a name="removeconst-class"></a>remove_const – třída
 
@@ -42,11 +42,11 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_const<T>` obsahuje upravit – typ, který je `T1` při `T` je ve formátu `const T1`, jinak `T`.
+Instance `remove_const<T>` obsahuje změněný typ, který je `T1` při *T* má formu `const T1`, jinak *T*.
 
 ## <a name="example"></a>Příklad
 
@@ -74,9 +74,9 @@ remove_const_t<const int> == int
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [add_const – třída](../standard-library/add-const-class.md)<br/>

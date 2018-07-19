@@ -1,5 +1,5 @@
 ---
-title: messages_byname – třída | Microsoft Docs
+title: messages_byname – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab07f19f9d5025eba1ffe82c7e23066683b6267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1de239e408adf4f66e7868ce9b91d7da574fffde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852976"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958032"
 ---
 # <a name="messagesbyname-class"></a>messages_byname – třída
 
-Třída odvozená šablony popisuje objekt, který může sloužit jako zpráva omezující vlastnosti daného národního prostředí, povolení načtení lokalizované zprávy.
+Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost zprávy daného národního prostředí, který umožňuje načtení lokalizovaných zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,20 +49,20 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` S názvem národní prostředí.
+*_Locname* s názvem národního prostředí.
 
-`_Refs` Počet počáteční odkazů.
+*_Refs* počet počáteční odkazů.
 
 ## <a name="remarks"></a>Poznámky
 
-Její chování je dáno s názvem národní prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [zprávy](../standard-library/messages-class.md#messages)\<CharType > ( `_Refs`).
+Její chování je určeno s názvem národního prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [zprávy](../standard-library/messages-class.md#messages)\<CharType > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

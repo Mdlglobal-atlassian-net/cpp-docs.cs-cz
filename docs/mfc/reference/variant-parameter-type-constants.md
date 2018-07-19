@@ -1,5 +1,5 @@
 ---
-title: Konstanty variantních typů parametrů | Microsoft Docs
+title: Konstanty variantních typů parametrů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,50 +45,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13820ff4fb07c3743f36ba3ebe33ee56a3a79c7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379857"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885946"
 ---
 # <a name="variant-parameter-type-constants"></a>Konstanty variantních typů parametrů
-Toto téma uvádí nové konstanty, které indikují typy variant parametr určený k použití u třídy ovládacích prvků OLE z knihovny Microsoft Foundation Class.  
+Toto téma obsahuje seznam nových konstanty, které označují typy parametr typu variant určený pro použití s OLE – třídy ovládacích prvků z knihovny Microsoft Foundation Class.  
   
- Následuje seznam třída konstant:  
+ Následuje seznam konstant třídy:  
   
 ##  <a name="_mfc_variant_data_constants"></a> Variant – konstanty dat  
   
--   **Vts_color –** A 32bitové celé číslo představující hodnotu barva RGB.  
+-   VTS_COLOR A 32bitové celé číslo představující hodnotu barvy RGB.  
   
--   **Vts_font –** ukazatel **IFontDisp** rozhraní OLE písma objektu.  
+-   VTS_FONT A ukazatel `IFontDisp` rozhraní písmo objektu OLE.  
   
--   **Vts_handle –** A Windows zpracování hodnotu.  
+-   Hodnota popisovače VTS_HANDLE A Windows.  
   
--   **Vts_picture –** ukazatel `IPictureDisp` rozhraní OLE objektu obrázku.  
+-   VTS_PICTURE A ukazatel `IPictureDisp` rozhraní obrázek objektu OLE.  
   
--   **Vts_optexclusive –** A 16bitové hodnoty používané pro ovládací prvek, který je určen pro použití ve skupině ovládacích prvků, jako jsou přepínače. Tento typ informuje kontejneru, pokud jedna kontrolovat v skupinu má **TRUE** hodnota, všechny ostatní musí být **FALSE**.  
+-   VTS_OPTEXCLUSIVE byla použita pro ovládací prvek, který je určen pro použití ve skupině ovládacích prvků, jako je například přepínačů hodnota A 16 bitů. Tento typ sdělí kontejneru, pokud jeden ovládací prvek ve skupině má hodnotu TRUE, všechny ostatní musí mít hodnotu FALSE.  
   
--   **Vts_tristate –** A 16bitové celé číslo se znaménkem používá pro vlastnosti, které může mít jeden ze tří možných hodnot (vybrané, nezaškrtnuté, není k dispozici), například zaškrtávací políčko.  
+-   VTS_TRISTATE A 16bitové celé číslo se znaménkem používají pro vlastnosti, které může mít jednu ze tří možných hodnot (vybrané, nezaškrtnuté, není k dispozici), například zaškrtávací políčko.  
   
--   **Vts_xpos_himetric –** A 32bitové celé číslo bez znaménka používá k reprezentování pozice podél osy x v **HIMETRIC** jednotky.  
+-   VTS_XPOS_HIMETRIC A 32bitové celé číslo bez znaménka představující pozici společně osu x v jednotkách HIMETRIC.  
   
--   **Vts_ypos_himetric –** A 32bitové celé číslo bez znaménka používá k reprezentování pozice podél osy y v **HIMETRIC** jednotky.  
+-   VTS_YPOS_HIMETRIC A 32bitové celé číslo bez znaménka představující umístění podél osy y v jednotkách HIMETRIC.  
   
--   **Vts_xpos_pixels –** A 32bitové celé číslo bez znaménka používá k reprezentování pozice podél osy x v pixelech.  
+-   VTS_XPOS_PIXELS A 32bitové celé číslo bez znaménka představující pozici společně osu x v pixelech.  
   
--   **Vts_ypos_pixels –** A 32bitové celé číslo bez znaménka používá k reprezentování pozice podél osy y v pixelech.  
+-   VTS_YPOS_PIXELS A 32bitové celé číslo bez znaménka představující umístění podél osy y v pixelech.  
   
--   **Vts_xsize_pixels –** A 32bitové celé číslo bez znaménka používá k reprezentování šířku objektu na obrazovce v pixelech.  
+-   VTS_XSIZE_PIXELS A 32bitové celé číslo bez znaménka představující šířku objektu na obrazovce v pixelech.  
   
--   **Vts_ysize_pixels –** A 32bitové celé číslo bez znaménka používá k reprezentování výška objektu na obrazovce v pixelech.  
+-   VTS_YSIZE_PIXELS A 32bitové celé číslo bez znaménka představující výšku objektu na obrazovce v pixelech.  
   
--   **Vts_xsize_himetric –** A 32bitové celé číslo bez znaménka používá k reprezentování šířku objektu obrazovky v **HIMETRIC** jednotky.  
+-   VTS_XSIZE_HIMETRIC A 32bitové celé číslo bez znaménka představující šířku objektu na obrazovce v jednotkách HIMETRIC.  
   
--   **Vts_ysize_himetric –** A 32bitové celé číslo bez znaménka používá k reprezentování výška objektu obrazovky v **HIMETRIC** jednotky.  
+-   VTS_YSIZE_HIMETRIC A 32bitové celé číslo bez znaménka představující výšku objektu na obrazovce v jednotkách HIMETRIC.  
   
     > [!NOTE]
-    >  Další variant konstanty nebyly definovány pro všechny typy variant, s výjimkou produktů **vts_font –** a **vts_picture –**, které poskytují ukazatel na zařízení ve vlastnictví firmy dat variant nstant. Tyto konstanty jsou pojmenované pomocí **VTS_P** `constantname` konvence. Například **VTS_PCOLOR** je ukazatel na **vts_color –** konstantní.  
+    >  Další varianty konstanty byly definovány pro všechny varianty typy, s výjimkou VTS_FONT a VTS_PICTURE, poskytující ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenované pomocí VTS_P`constantname` konvence. Například VTS_PCOLOR je ukazatel na VTS_COLOR – konstanta.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdisp.h  

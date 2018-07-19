@@ -1,5 +1,5 @@
 ---
-title: '&lt;ostream –&gt; | Microsoft Docs'
+title: '&lt;ostream&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7b8bf3015879643728358258cfe4a67536b3ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c84a8fd6b3aacbedf9d624fc750f98da4531e9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863784"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957932"
 ---
-# <a name="ltostreamgt"></a>&lt;ostream –&gt;
+# <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-Definuje třídu šablony [basic_ostream](../standard-library/basic-ostream-class.md), která zprostředkovává vložení pro iostreams. Záhlaví také definuje několik související manipulátory. (Tuto hlavičku je obvykle zahrnuté pro můžete jiným iostreams záhlaví. Je potřeba jen zřídka ho zahrňte přímo.)
+Třída šablony definuje [basic_ostream –](../standard-library/basic-ostream-class.md), která zprostředkovává vložení pro iostreams. Záhlaví také definuje několik souvisejících manipulátory. (Toto záhlaví je obvykle součástí za vás jiným iostreams záhlaví. Zřídka musíte zahrnout přímo.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,17 +40,17 @@ Definuje třídu šablony [basic_ostream](../standard-library/basic-ostream-clas
 
 |Název typu|Popis|
 |-|-|
-|[ostream –](../standard-library/ostream-typedefs.md#ostream)|Umožňuje vytvořit typ z `basic_ostream` který se specializuje na `char` a `char_traits` specializované na `char`.|
-|[wostream –](../standard-library/ostream-typedefs.md#wostream)|Umožňuje vytvořit typ z `basic_ostream` který se specializuje na `wchar_t` a `char_traits` specializované na `wchar_t`.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Vytvoří typ z `basic_ostream` , který se specializuje na **char** a `char_traits` specializované na **char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Vytvoří typ z `basic_ostream` , který se specializuje na **wchar_t** a `char_traits` specializované na **wchar_t**.|
 
 ### <a name="manipulators"></a>Manipulátory
 
 |||
 |-|-|
-|[endl](../standard-library/ostream-functions.md#endl)|Ukončí řádku a vyprázdní vyrovnávací paměť.|
-|[ukončení](../standard-library/ostream-functions.md#ends)|Ukončí řetězec.|
+|[endl](../standard-library/ostream-functions.md#endl)|Ukončení řádku a vyprázdní vyrovnávací paměť.|
+|[končí](../standard-library/ostream-functions.md#ends)|Ukončí řetězec.|
 |[Vyprázdnění](../standard-library/ostream-functions.md#flush)|Vyprázdní vyrovnávací paměť.|
-|[Swap](../standard-library/ostream-functions.md#swap)|Výměny hodnoty doleva `basic_ostream` objektu parametr pro ty právo `basic_ostream` parametru objektu.|
+|[Prohození](../standard-library/ostream-functions.md#swap)|Vymění hodnoty levé straně `basic_ostream` parametru objektu pro ty pravé `basic_ostream` parametru objektu.|
 
 ### <a name="operators"></a>Operátory
 
@@ -62,9 +62,9 @@ Definuje třídu šablony [basic_ostream](../standard-library/basic-ostream-clas
 
 |Třída|Popis|
 |-|-|
-|[basic_ostream –](../standard-library/basic-ostream-class.md)|Šablony třídy popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu.|
+|[basic_ostream –](../standard-library/basic-ostream-class.md)|Třída šablony popisuje objekt, který řídí vkládání prvků a kódovaného objekty do vyrovnávací paměti datového proudu.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

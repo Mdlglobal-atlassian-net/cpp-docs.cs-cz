@@ -1,5 +1,5 @@
 ---
-title: Implementace stránky vlastností | Microsoft Docs
+title: Implementace stránek vlastností | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1db6ca4ea374cd76d5b0e1df8e6c0cd03474fdf2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3474c515b6c1db567c6ac7313624d1a54210d157
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357490"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848559"
 ---
-# <a name="implementing-property-pages"></a>Implementace stránky vlastností
-Stránky vlastností jsou, které implementují objekty COM `IPropertyPage` nebo **IPropertyPage2** rozhraní. ATL poskytuje podporu pro implementaci stránky vlastností prostřednictvím [ATL vlastnost stránky průvodce](../atl/reference/atl-property-page-wizard.md) v [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md).  
+# <a name="implementing-property-pages"></a>Implementace stránek vlastností
+Stránky vlastností jsou objekty COM, které implementují `IPropertyPage` nebo `IPropertyPage2` rozhraní. Knihovna ATL poskytuje podporu pro implementace stránek vlastností prostřednictvím [Průvodce stránkou vlastností ATL](../atl/reference/atl-property-page-wizard.md) v [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md).  
   
- Pokud chcete vytvořit pomocí knihovny ATL stránky vlastností:  
+ Chcete-li vytvořit pomocí knihovny ATL stránky vlastností:  
   
--   Vytvoření nebo otevření projektu knihovny ATL dynamická knihovna (DLL) serveru.  
+-   Vytvořte nebo otevřete projekt knihovny ATL dynamická knihovna (DLL) serveru.  
   
--   Otevřete [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a vyberte **ATL – stránky vlastností**.  
+-   Otevřít [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md) a vyberte **stránka vlastností knihovny ATL**.  
   
--   Zajistěte, aby byl stránky vlastností objektu apartment zařazování (protože má uživatelské rozhraní).  
+-   Ujistěte se, že vaše stránka vlastností objektu apartment vláken (protože má uživatelské rozhraní).  
   
--   Nastavte název, popis (Doc String) a soubor nápovědy, který se má přidružit stránku.  
+-   Nastavte název, popis (řetězec Doc) a soubor nápovědy, který se má přidružit vaše stránky.  
   
--   Přidání ovládacích prvků do prostředku generovaného dialogového okna tak, aby fungoval jako uživatelského rozhraní stránky vlastností.  
+-   Přidání ovládacích prvků do prostředku generované dialogového okna tak, aby fungoval jako uživatelského rozhraní stránky vlastností.  
   
--   Odpověď na změny v uživatelském rozhraní vaší stránky provést ověření, aktualizujte stránku lokalitu nebo aktualizovat objekty přidružené k vaší stránky. Konkrétně volání [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) když uživatel provede změny na stránku vlastností.  
+-   Reakce na změny v uživatelském rozhraní na stránce provést ověření, aktualizujte stránku webu nebo aktualizovat objekty přidružené k vaší stránky. Konkrétně volat [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) když uživatel provede změny na stránku vlastností.  
   
 -   Volitelně můžete přepsat `IPropertyPageImpl` metod pomocí níže uvedených pokynů.  
   
-    |IPropertyPageImpl – metoda|Přepsání, pokud chcete...|Poznámky|  
+    |Ipropertypageimpl – metoda|Přepište, pokud chcete...|Poznámky|  
     |------------------------------|----------------------------------|-----------|  
-    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Proveďte kontrolu základní vhodnosti na počet objektů, které jsou předávány na stránku a rozhraní, které podporují.|Provést vlastní kód před voláním implementaci základní třídy. Pokud probíhá nastavení objekty nevyhovují vašim očekáváním, má volání selhat co nejdříve.|  
-    |[Aktivovat](../atl/reference/ipropertypageimpl-class.md#activate)|Inicializujte vaší stránky uživatelské rozhraní (například nastavit ovládací prvky dialogového okna s aktuální hodnoty vlastností z objektů, ovládací prvky vytvořit dynamicky nebo provádět jiné inicializacích).|Volejte základní třída implementaci před kódu, takže základní třídy možnost vytvoření dialogového okna a všechny ovládací prvky, než se pokusíte je aktualizovat.|  
+    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Proveďte základní vhodnosti kontrol počet objektů, které jsou předávány na vaši stránku a rozhraní, které podporují.|Spuštění vlastního kódu před voláním implementaci základní třídy. Pokud objekty nastavování nevyhovují vašim požadavkům, by volání selhat co nejdřív.|  
+    |[Aktivovat](../atl/reference/ipropertypageimpl-class.md#activate)|Inicializujte na stránce uživatelského rozhraní (třeba nastavit ovládací prvky dialogového okna s aktuální hodnoty vlastností z objektů, dynamicky vytvořit ovládací prvky nebo provést další inicializaci).|Volejte implementaci základní třídy před váš kód tak, aby základní třída má možnost vytvořit dialogové okno a všechny ovládací prvky před pokusem o je aktualizovat.|  
     |[Použít](../atl/reference/ipropertypageimpl-class.md#apply)|Ověřte nastavení vlastností a aktualizovat objekty.|Není nutné volat implementaci základní třídy, protože nedělá nic kromě trasování volání.|  
-    |[Deaktivace](../atl/reference/ipropertypageimpl-class.md#deactivate)|Vymazat všechny položky související s okno.|Základní třída implementace zničí dialogu představující stránku vlastností. Pokud potřebujete vyčištění zničen dialogové okno, měli byste přidat kód před voláním základní třídy.|  
+    |[Deaktivace](../atl/reference/ipropertypageimpl-class.md#deactivate)|Odstraňte položky týkající se oken.|Zničí implementaci základní třídy dialogových oken představující stránku vlastností. Pokud budete potřebovat k vyčištění před jeho zničení dialogových oken, měli byste přidat kódu před voláním metody základní třídy.|  
   
- Příklad implementace vlastností stránky, najdete v části [příklad: implementace stránky vlastností](../atl/example-implementing-a-property-page.md).  
+ Implementace stránky vlastností příklad naleznete v tématu [příklad: implementace stránky vlastností](../atl/example-implementing-a-property-page.md).  
   
 > [!NOTE]
->  Pokud chcete v stránky vlastností hostitelské ovládací prvky ActiveX, musíte změnit odvození vaší třídy generované v průvodci. Nahraďte **CDialogImpl\<CYourClass >** s **CAxDialogImpl\<CYourClass >** v seznamu základní třídy.  
+>  Pokud chcete na stránce vlastností hostitelské ovládací prvky ActiveX, bude nutné změnit odvození třídy generované v průvodci. Nahraďte **CDialogImpl\<CYourClass >** s **CAxDialogImpl\<CYourClass >** v seznamu základních tříd.  
   
 ## <a name="see-also"></a>Viz také  
  [Stránky vlastností](../atl/atl-com-property-pages.md)   

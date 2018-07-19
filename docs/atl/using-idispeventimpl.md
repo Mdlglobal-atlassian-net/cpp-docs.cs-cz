@@ -1,5 +1,5 @@
 ---
-title: Pomocí IDispEventImpl (ATL) | Microsoft Docs
+title: Idispeventimpl – použití (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 520d1129234a26ff6eb4c402154969ad7e166211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361148"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848925"
 ---
-# <a name="using-idispeventimpl"></a>Pomocí IDispEventImpl
-Při použití `IDispEventImpl` ke zpracování událostí, budete muset:  
+# <a name="using-idispeventimpl"></a>Idispeventimpl – použití
+Při použití `IDispEventImpl` zpracování událostí, budete muset:  
   
--   Odvození třídě z [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
+-   Odvodit třídu z [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
--   Přidáte mapu jímky událostí na třídu.  
+-   Přidáte mapu jímky událostí do vaší třídy.  
   
--   Přidání položky do mapy jímek událostí pomocí [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) makro.  
+-   Přidání položky do pomocí mapě událostí jímky [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) – makro.  
   
--   Implementace metody, co vás zajímá zpracování.  
+-   Implementace metody, že máte zájem zpracování.  
   
--   Poradit a unadvise zdroj události.  
+-   Dokáží a zrušíte avízo o zdroji události.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje způsob zpracování **DocumentChange** událost je aktivována po slovech na **aplikace** objektu. Tato událost je definována jako metodu na **ApplicationEvents** dispinterface.  
+ Následující příklad ukazuje, jak zpracovat `DocumentChange` události vyvolané Wordu **aplikace** objektu. Tato událost je definována jako metody na `ApplicationEvents` dispinterface.  
   
- Příkladem je z [ATLEventHandling ukázka](../visual-cpp-samples.md).  
+ Příklad je z [ATLEventHandling ukázka](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -69,11 +69,11 @@ Při použití `IDispEventImpl` ke zpracování událostí, budete muset:
   
  `};`  
   
- Tento příklad používá `#import` generovat požadovaná hlavička soubory z knihovny typů pro Word. Pokud chcete použít tento příklad s jinými verzemi aplikace Word, musíte zadat správný mso soubor knihovny dll. Například Office 2000 poskytuje mso9.dll a OfficeXP poskytuje mso.dll. Tento kód je zjednodušený z stdafx.h:  
+ V příkladu `#import` ke generování požadované záhlaví soubory z knihovny typů Wordu. Pokud chcete použít tento příklad s jinými verzemi aplikace Word, musíte zadat správné mso souboru knihovny dll. Například Office 2000 poskytuje mso9.dll a OfficeXP poskytuje mso.dll. Tento kód je jednodušší z stdafx.h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- Zobrazí se následující kód v NotSoSimple.h. Odpovídající kód je uvedeno ve komentáře:  
+ Následující kód se zobrazí v NotSoSimple.h. Příslušný kód je uvedeno ve komentáře:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   

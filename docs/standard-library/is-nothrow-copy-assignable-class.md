@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_copy_assignable – třída | Microsoft Docs
+title: is_nothrow_copy_assignable – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842934"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957555"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable – třída
 
-Ověřuje, zda má typ operátor přiřazení kopie, který se označuje kompilátoru nechcete výjimku.
+Ověřuje, zda má typ, který je pro kompilátor známým nedochází operátor přiřazení kopie.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,19 +36,19 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ k dotazu.
+*T* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance typu predikátu platí pro kde typ `T` kde `is_nothrow_assignable<T&, const T&>` obsahuje hodnotu true; jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true pro typ označím *T* kde `is_nothrow_assignable<T&, const T&>` obsahuje hodnotu true; v opačném případě obsahuje hodnotu false.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_nothrow_assignable – třída](../standard-library/is-nothrow-assignable-class.md)<br/>

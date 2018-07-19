@@ -1,5 +1,5 @@
 ---
-title: mem_fun_t – třída | Microsoft Docs
+title: mem_fun_t – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32aceae204f50d98e84f1286042854e725917623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852543"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956385"
 ---
 # <a name="memfunt-class"></a>mem_fun_t – třída
 
-Třídu adaptér, který umožňuje **non_const** – členská funkce, které nepřijímá žádné argumenty, která se má volat jako objekt funkce unární při inicializaci s argumentem ukazatele.
+Třída adaptéru umožňující `non_const` členskou funkci, která nepřijímá žádné argumenty, která se má volat jako objekt jednočlenné funkce při inicializaci s argumentem ukazatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,29 +41,29 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-`_Pm` Ukazatel na funkci člena třídy **typ** má být převeden na objekt funkce.
+*_Pm* ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-`_Pleft` Objekt, `_Pm` – členská funkce je volána v.
+*_Pleft* objekt, který *_Pm* členská funkce je volána v.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přizpůsobitelné unární funkce.
+Přizpůsobitelnou jednočlennou funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie `_Pm`, která musí být ukazatel na funkci člena třídy **typu**, v objektu privátního člena. Definuje jeho – členská funkce `operator()` jako vrácení ( `_Pleft` ->*  `_Pm`) ().
+Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( `_Pleft` ->*  `_Pm`) ().
 
 ## <a name="example"></a>Příklad
 
-Konstruktoru `mem_fun_t` se obvykle nepoužívá přímo; pomocné funkce `mem_fun` slouží k přizpůsobení členské funkce. V tématu [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad použití členské funkce adaptéry.
+Konstruktor třídy `mem_fun_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad, jak používat adaptéry členské funkce.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<funkční >](../standard-library/functional.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

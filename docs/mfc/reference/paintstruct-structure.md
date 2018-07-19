@@ -1,5 +1,5 @@
 ---
-title: Paintstruct – struktura | Microsoft Docs
+title: Paintstruct – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfeddfd1ebf0c5c2247b27a0c69a8a6ef33e7766
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338207"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT – struktura
-`PAINTSTRUCT` Struktura obsahuje informace, které lze použít k vyplnění klientské oblasti časového období.  
+`PAINTSTRUCT` Struktura obsahuje informace, které slouží k vykreslení klientské oblasti okna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,22 +41,22 @@ typedef struct tagPAINTSTRUCT {
   
 #### <a name="parameters"></a>Parametry  
  *hDC*  
- Identifikuje kontext zobrazení má být použit pro vykreslování.  
+ Určuje kontext zobrazení má být použit pro kreslení.  
   
  *fErase*  
- Určuje, zda musí být překreslen na pozadí. Není 0, pokud aplikace by ho překreslit na pozadí. Aplikace je zodpovědná za kreslení na pozadí, pokud třídy okna Windows je vytvořen bez štětec pozadí plochy (viz popis **hbrBackground** členem [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v systému Windows SDK).  
+ Určuje, jestli potřebuje překreslit na pozadí. Není 0, pokud aplikace byste ho překreslit na pozadí. Aplikace je zodpovědné za vykreslování na pozadí, pokud se vytvoří okno Windows-třídy bez štětec pozadí (viz popis `hbrBackground` člen [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v sadě Windows SDK).  
   
  *rcPaint*  
- Určuje horní vlevo a pravém dolním rohu obdélníku, ve kterém se požaduje pro malování.  
+ Určuje horní vlevo a pravém dolním rohu obdélníku, ve které je požadováno pro malování.  
   
  *fRestore*  
- Vyhrazené člen. Používá se interně v systému Windows.  
+ Vyhrazeným členem. Používá se interně ve Windows.  
   
  *fIncUpdate*  
- Vyhrazené člen. Používá se interně v systému Windows.  
+ Vyhrazeným členem. Používá se interně ve Windows.  
   
  *rgbReserved [16]*  
- Vyhrazené člen. Blok vyhrazené paměti používaná interně k systému Windows.  
+ Vyhrazeným členem. Vyhrazeným blokem paměť používaná interně ve Windows.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

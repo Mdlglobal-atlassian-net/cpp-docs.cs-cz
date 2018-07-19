@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCAutoHideBar | Microsoft Docs
+title: Cmfcautohidebar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337011"
 ---
-# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar – třída
-`CMFCAutoHideBar` Třída je speciální nástrojů třídu, která implementuje funkce automatického skrytí.  
+# <a name="cmfcautohidebar-class"></a>Cmfcautohidebar – třída
+`CMFCAutoHideBar` Třídy je třída speciální nástrojů, která implementuje funkce automatického skrytí.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Syntaxe  
@@ -78,17 +78,17 @@ class CMFCAutoHideBar : public CPane
 |Název|Popis|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
-|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Přepisuje `CPane::AllowShowOnPaneMenu`.)|  
-|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(Přepisuje [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CMFCAutoHideBar::Create](#create)|Vytvoří ovládacích pruhů a připojí jej k [CPane](../../mfc/reference/cpane-class.md) objektu. (Přepisuje [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
+|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Přepíše `CPane::AllowShowOnPaneMenu`.)|  
+|[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCAutoHideBar::Create](#create)|Ovládací panel vytvoří a připojí ho k [cpane –](../../mfc/reference/cpane-class.md) objektu. (Přepíše [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||  
 |[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||  
-|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|Voláno rámcem, pokud je speciální podokně nabídka se nezobrazí. (Přepisuje [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
+|[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|Volá se rozhraním, speciální nabídky se zobrazí. (Přepíše [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCAutoHideBar::RemoveAutoHideWindow](#removeautohidewindow)||  
-|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(Přepisuje [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).)|  
+|[CMFCAutoHideBar::SetActiveInGroup](#setactiveingroup)|(Přepíše [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).)|  
 |[CMFCAutoHideBar::SetRecentVisibleState](#setrecentvisiblestate)||  
 |[CMFCAutoHideBar::ShowAutoHideWindow](#showautohidewindow)||  
-|[CMFCAutoHideBar::StretchPane](#stretchpane)|Podokno roztahovány vodorovně nebo svisle. (Přepisuje [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
+|[CMFCAutoHideBar::StretchPane](#stretchpane)|Roztáhne podokno svisle nebo vodorovně. (Přepíše [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
 |[CMFCAutoHideBar::UnSetAutoHideMode](#unsetautohidemode)||  
 |[CMFCAutoHideBar::UpdateVisibleState](#updatevisiblestate)||  
   
@@ -96,14 +96,14 @@ class CMFCAutoHideBar : public CPane
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Prodlevu mezi okamžikem, kdy uživatel umístí myší nad [CMFCAutoHideButton třída](../../mfc/reference/cmfcautohidebutton-class.md) a okamžikem, kdy rozhraní ukazuje přidružené okno.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Časovou prodlevu mezi okamžikem, kdy uživatel umístí kurzor myši přes [cmfcautohidebutton – třída](../../mfc/reference/cmfcautohidebutton-class.md) a v okamžiku, kdy rozhraní ukazuje související okno.|  
   
 ## <a name="remarks"></a>Poznámky  
- Když uživatel přejde do režimu automaticky skrýt ukotvení podokně, systém automaticky vytvoří `CMFCAutoHideBar` objektu. Vytvoří také nezbytné [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) a [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objekty. Každý `CAutoHideDockSite` objekt je přidružen k jednotlivcům `CMFCAutoHideButton`.  
+ Když uživatel přejde do režimu automatického skrytí podokně ukotvení, rozhraní automaticky vytvoří `CMFCAutoHideBar` objektu. Také vytvoří nezbytné [cautohidedocksite –](../../mfc/reference/cautohidedocksite-class.md) a [cmfcautohidebutton –](../../mfc/reference/cmfcautohidebutton-class.md) objekty. Každý `CAutoHideDockSite` objekt je přidružený jednotlivec `CMFCAutoHideButton`.  
   
- `CMFCAutoHideBar` Třída implementuje zobrazení `CAutoHideDockSite` při uživatele se ukazatel myši nachází `CMFCAutoHideButton`. Když panelu nástrojů přijme zprávu o WM_MOUSEMOVE `CMFCAutoHideBar` spustí časovač. Po dokončení časovač odešle panelu nástrojů WM_TIMER oznámení události. Panelu nástrojů zpracovává Tato událost kontrolou, jestli je umístěn ukazatel myši nad tlačítko stejné automaticky skrýt, který byl umístěn nad, když se spustí časovač. Pokud se jedná, připojený `CAutoHideDockSite` se zobrazí.  
+ `CMFCAutoHideBar` Třída implementuje zobrazení `CAutoHideDockSite` při uživatele se ukazatel myši nachází `CMFCAutoHideButton`. Když panelu nástrojů obdrží zprávu wm_mousemove a `CMFCAutoHideBar` spustí časovač. Po dokončení časovač odešle panelu nástrojů WM_TIMER oznámení události. Panelu nástrojů zpracovává tuto událost tak, že zkontrolujete, jestli je ukazatel myši umístěn nad stejného automatického skrytí tlačítka, který byl umístěn nad při spuštění časovače. Pokud se jedná, připojeného `CAutoHideDockSite` se zobrazí.  
   
- Délka časovače zpoždění můžete ovládat nastavením `m_nShowAHWndDelay`. Výchozí hodnota je 400 ms.  
+ Délka časovače zpoždění můžete řídit nastavením `m_nShowAHWndDelay`. Výchozí hodnota je 400 ms.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak vytvořit `CMFCAutoHideBar` objektu a použít jeho `GetDockSiteRow` metoda.  
@@ -111,7 +111,7 @@ class CMFCAutoHideBar : public CPane
  [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cmfcautohidebar-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -121,13 +121,13 @@ class CMFCAutoHideBar : public CPane
   
  [CPane](../../mfc/reference/cpane-class.md)  
   
- [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)  
+ [Cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxautohidebar.h  
   
 ##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
- Přidá funkce `CDockablePane` okno, které umožní, aby automaticky skrýt.  
+ Přidá funkce `CDockablePane` okno, které umožňuje automaticky skrýt.  
   
 ```  
 CMFCAutoHideButton* AddAutoHideWindow(
@@ -136,24 +136,24 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pAutoHideWnd*  
- Okno, které chcete skrýt.  
+ [in] *pAutoHideWnd*  
+ V okně, které chcete skrýt.  
   
- [v] *dwAlignment*  
- Hodnota, která určuje zarovnání automaticky skrýt tlačítko s okna aplikace.  
+ [in] *dwAlignment*  
+ Hodnota, která určuje zarovnání automaticky skrýt tlačítko podle okna aplikace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
- *DwAlignment* parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Parametr může být jakýkoli z následujících hodnot:  
+ *DwAlignment* parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Tento parametr může být jedna z následujících hodnot:  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -176,15 +176,15 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bStretch*  
- [v] *bHorz*  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
- Vytvoří objekt CMFCAutoHideBar.  
+ Vytvoří objekt cmfcautohidebar –.  
   
 ```  
 CMFCAutoHideBar();
@@ -207,51 +207,51 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszClassName*  
- [v] *dwStyle*  
- [v] *Rect –*  
- [v] *pParentWnd*  
- [v] *nID*  
- [v] *dwControlBarStyle*  
- [v] *pContext*  
+ [in] *lpszClassName*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
- Vrací ukazatel na první okno automaticky skrýt v aplikaci.  
+ Vrací ukazatel na první okno automatického schovávání v aplikaci.  
   
 ```  
 CDockablePane* GetFirstAHWindow();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- První okno automaticky skrýt v aplikaci nebo hodnota NULL, pokud není k dispozici.  
+ První okno automatického schovávání v aplikaci, nebo hodnota NULL, pokud není k dispozici.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
- Získá počet viditelné automaticky skrýt tlačítka.  
+ Získá počet viditelných automatického skrytí tlačítka.  
   
 ```  
 int GetVisibleCount();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet viditelné automaticky skrýt tlačítka.  
+ Vrátí počet viditelných automatického skrytí tlačítka.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- Prodlevu mezi okamžikem, kdy uživatel umístí myší nad [CMFCAutoHideButton třída](../../mfc/reference/cmfcautohidebutton-class.md) a okamžikem, kdy rozhraní ukazuje přidružené okno.  
+ Časovou prodlevu mezi okamžikem, kdy uživatel umístí kurzor myši přes [cmfcautohidebutton – třída](../../mfc/reference/cmfcautohidebutton-class.md) a v okamžiku, kdy rozhraní ukazuje související okno.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Když uživatel umístí myší nad `CMFCAutoHideButton`, než rozhraní zobrazí okno přidružené k mírnému zpoždění je. Tento parametr určuje délku tohoto zpoždění v milisekundách.  
+ Když uživatel umístí ukazatel myši nad `CMFCAutoHideButton`, existuje dojde k mírnému zpoždění před rozhraní zobrazí související okno. Tento parametr určuje délku tohoto zpoždění v milisekundách.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -261,41 +261,41 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *CPoint*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
- Odebere a zničí automaticky skrýt okna.  
+ Odebere a odstraní okno automatického skrytí.  
   
 ```  
     BOOL RemoveAutoHideWindow(CDockablePane* pAutoHideWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- CDockablePane * *pAutoHideWnd*  
- Automaticky skrýt okna odebrat.  
+ CDockablePane – * *pAutoHideWnd*  
+ V okně automatického schovávání odebrat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je úspěšné; jinak hodnota FALSE.  
+ Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
- Příznaky automaticky skrýt panel jako aktivní.  
+ Příznaky automaticky skrývat panel jako aktivní.  
   
 ```  
 virtual void SetActiveInGroup(BOOL bActive);  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] BOOL *bActive*  
- Hodnota TRUE, mají-li nastavená jako aktivní; jinak hodnota FALSE.  
+ [in] BOOL *bActive*  
+ TRUE, pokud chcete nastavit na aktivní; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- V tématu [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
+ Zobrazit [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
 ##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
@@ -305,12 +305,12 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bState*  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
- Zobrazí okno automaticky skrýt.  
+ Zobrazí okno automatické skrývání.  
   
 ```  
 BOOL ShowAutoHideWindow(
@@ -320,20 +320,20 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] CDockablePane * *pAutoHideWnd*  
- [v] BOOL *bShow*  
- Hodnota TRUE, mají-li zobrazit okno.  
+ [in] CDockablePane – * *pAutoHideWnd*  
+ [in] BOOL *bShow*  
+ TRUE, pokud chcete zobrazit v okně.  
   
- [v] BOOL *bDelay*  
+ [in] BOOL *bDelay*  
  Tento parametr je ignorován.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je úspěšné; jinak hodnota FALSE.  
+ Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
- Změní velikost panelu automaticky skrýt v sbalené stavu podle `CMFCAutoHideButton` objektu.  
+ Změní velikost panelu automatického schovávání ve sbaleném stavu podle `CMFCAutoHideButton` objektu.  
   
 ```  
 virtual CSize StretchPane(
@@ -342,33 +342,33 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nLength*  
- Tato hodnota se nepoužívá v základní implementaci. V odvozených implementace používá se k označení délka podokně změněnou tuto hodnotu.  
+ [in] *nLength*  
+ Hodnota se nepoužívá v základní implementaci. V odvozených implementací používejte tuto hodnotu k označení délka změněnou velikostí stavového řádku.  
   
- [v] *bVert*  
- Tato hodnota se nepoužívá v základní implementaci. V odvozených implementacích použít `TRUE` pro případ, kdy panelu automaticky skrýt sbalena ve svislém směru, zpracování a `FALSE` pro případ, kdy panelu automaticky skrýt sbalena vodorovně.  
+ [in] *bVert*  
+ Hodnota se nepoužívá v základní implementaci. V odvozených implementace, použijte hodnotu PRAVDA, popisovač případ, ve kterém je automatického schovávání panelu svisle sbalený a hodnotu FALSE pro případ, ve kterém je automatického schovávání panelu vodorovně sbalený.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Výsledná velikost změněnou podokně.  
+ Výsledná velikost podokna změněnou velikostí.  
   
 ### <a name="remarks"></a>Poznámky  
- Odvozené třídy mohou přepsat tuto metodu pro přizpůsobení chování.  
+ Odvozené třídy mohou přepsat tuto metodu k úpravě chování.  
   
 ##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
- Zakáže automatické skrytí režimu pro skupinu automaticky skrýt řádky.  
+ Zakáže automatického schovávání režimu pro skupinu automatického schovávání pruhy.  
   
 ```  
 void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [pFirstBarInGroup v]  
- Ukazatel na panelu automaticky skrýt první ve skupině.  
+ [in] pFirstBarInGroup  
+ Ukazatel na první automatického schovávání panelu ve skupině.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
- Voláno rámcem při panelu automaticky skrýt musí být překreslen.  
+ Volá se rozhraním, když potřebuje překreslit automatického schovávání panelu.  
   
 ```  
 void UpdateVisibleState();
@@ -379,6 +379,6 @@ void UpdateVisibleState();
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CPane – třída](../../mfc/reference/cpane-class.md)   
- [CAutoHideDockSite – třída](../../mfc/reference/cautohidedocksite-class.md)   
+ [Cpane – třída](../../mfc/reference/cpane-class.md)   
+ [Cautohidedocksite – třída](../../mfc/reference/cautohidedocksite-class.md)   
  [CMFCAutoHideButton – třída](../../mfc/reference/cmfcautohidebutton-class.md)

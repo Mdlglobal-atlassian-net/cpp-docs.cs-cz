@@ -1,5 +1,5 @@
 ---
-title: Určení stránky vlastností (ATL) | Microsoft Docs
+title: Zadání stránek vlastností (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7119dca24a6b6ec5b66e52d7e2c01cd66985e764
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358922"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848373"
 ---
-# <a name="specifying-property-pages"></a>Určení stránky vlastností
-Když vytvoříte ovládací prvek ActiveX, často můžete přidružit stránky vlastností, které umožňuje nastavit vlastnosti vlastního ovládacího prvku. Řídí použití kontejnery **ISpecifyPropertyPages** rozhraní a zjistěte, které stránky vlastností lze použít k nastavení vlastností ovládacího prvku. Musíte pro toto rozhraní implementovat ovládacího prvku.  
+# <a name="specifying-property-pages"></a>Zadání stránek vlastností
+Při vytváření ovládacího prvku ActiveX se často chcete přidružit stránky vlastností, které lze použít k nastavení vlastností ovládacího prvku. Řízení používání kontejnerů `ISpecifyPropertyPages` rozhraní a zjistěte, jaké stránky vlastností je možné nastavit vlastnosti ovládacího prvku. Je potřeba implementovat toto rozhraní ovládacího prvku.  
   
- K implementaci **ISpecifyPropertyPages** pomocí knihovny ATL, proveďte následující kroky:  
+ K implementaci `ISpecifyPropertyPages` pomocí knihovny ATL, proveďte následující kroky:  
   
-1.  Odvození třídě z [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
+1.  Odvodit třídu z [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
   
-2.  Přidejte záznam pro **ISpecifyPropertyPages** do vaší třídy COM mapy.  
+2.  Přidat položku pro `ISpecifyPropertyPages` do vaší třídy modelu COM mapy.  
   
-3.  Přidat [PROP_PAGE](reference/property-map-macros.md#prop_page) položku pro vlastnost mapy pro každou stránku přidružené vlastního ovládacího prvku.  
+3.  Přidat [PROP_PAGE](reference/property-map-macros.md#prop_page) položku do mapy vlastností pro každou stránku přidružený ovládací prvek.  
   
 > [!NOTE]
->  Při generování standardního ovládacího prvku pomocí [Průvodce ovládacím prvkem ATL](../atl/reference/atl-control-wizard.md), pouze je nutné přidat `PROP_PAGE` položek do mapa vlastností. Průvodce generuje kód nezbytné pro další kroky.  
+>  Při generování standardního ovládacího prvku pomocí [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md), pouze je nutné přidat položky PROP_PAGE do mapy vlastností. Průvodce vygeneruje kód nezbytné pro další kroky.  
   
- Které jsou v pořádku kontejnery Zobrazí zadanou vlastnost stránky ve stejném pořadí jako `PROP_PAGE` položky v mapě vlastností. Obecně byste měli umístit položkách stránky standardní vlastností po položky pro svoje vlastní stránky v mapě vlastností tak, aby uživatelé nejdřív najdete na stránkách, které jsou specifické pro vaše ovládací prvek.  
+ Které jsou v pořádku kontejnery se zobrazí na stránkách vlastností zadané ve stejném pořadí jako PROP_PAGE položky na mapě vlastnost. Obecně byste měli umístit standardní vlastnosti stránky položky po položky pro svoje vlastní stránky v mapě vlastností tak, aby se uživatelům zobrazí na stránkách, které jsou specifické pro váš ovládací prvek nejprve.  
   
 ## <a name="example"></a>Příklad  
- Následující třídy pro kalendář řízení používá **ISpecifyPropertyPages** rozhraní říct kontejnery, které jeho vlastnosti se dá nastavit pomocí vlastní datum stránky a stránky uložených barev.  
+ Následující třídy pro kalendář používá ovládací prvek `ISpecifyPropertyPages` rozhraní říct kontejnerů, které její vlastnosti lze nastavit pomocí vlastní datum stránky a stránky uložených barvu.  
   
  [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   

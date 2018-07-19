@@ -1,5 +1,5 @@
 ---
-title: Třídy (ATL) sdružování vláken | Microsoft Docs
+title: Třídy (ATL) sdružování vláken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb5a43ef9b35d47749ba2c62fa785dc3d910bcd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70254f05dc871a8073d82f1870b30f178e0f7276
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361551"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959001"
 ---
 # <a name="thread-pooling-classes"></a>Třídy sdružování vláken
 Následující třídy podporují sdružování vláken:  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) implementuje modul EXE s podporou více Apartment ve fondu vláken.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) implementuje modul EXE díky podpoře pro více klientů ve fondu vláken objekty apartment.  
   
--   [CComApartment](../atl/reference/ccomapartment-class.md) spravuje v modulu EXE ve fondu vláken typu apartment.  
+-   [Ccomapartment –](../atl/reference/ccomapartment-class.md) spravuje v souboru EXE modulu ve fondu vláken typu apartment.  
   
--   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) spravuje výběr vlákno pro modul EXE.  
+-   [Ccomsimplethreadallocator –](../atl/reference/ccomsimplethreadallocator-class.md) spravuje výběr vlákna pro modul EXE.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

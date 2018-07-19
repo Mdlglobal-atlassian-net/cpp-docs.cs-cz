@@ -1,5 +1,5 @@
 ---
-title: Windowpos – – Struktura1 | Microsoft Docs
+title: WINDOWPOS – Struktura1 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379291"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885959"
 ---
-# <a name="windowpos-structure1"></a>Windowpos – – Struktura1
-`WINDOWPOS` Struktura obsahuje informace o velikosti a pozice časového období.  
+# <a name="windowpos-structure1"></a>WINDOWPOS – Struktura1
+`WINDOWPOS` Struktura obsahuje informace o velikosti a pozice okna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,48 +45,48 @@ typedef struct tagWINDOWPOS { /* wp */
  Identifikuje okna.  
   
  *hwndInsertAfter*  
- Určuje interval, za které je umístěn toto okno.  
+ Identifikuje v okně, za které je umístěn v tomto okně.  
   
  *x*  
  Určuje umístění levého okraje okna.  
   
  *y*  
- Určuje pozici pravému okraji okna.  
+ Určuje pozici pravém okraji okna.  
   
- `cx`  
+ *CX*  
  Určuje šířku okna v pixelech.  
   
- `cy`  
+ *CY*  
  Určuje výšku okna v pixelech.  
   
- `flags`  
- Určuje umístění okno Možnosti. Tento člen může být jedna z následujících hodnot:  
+ *příznaky*  
+ Určuje umístění v okně Možnosti. Tento člen může být jeden z následujících hodnot:  
   
-- **SWP_DRAWFRAME** nevykresluje kolem okna rámečkem (definovanou v popisu třídy pro okno). Okno obdrží `WM_NCCALCSIZE` zprávy.  
+- SWP_DRAWFRAME vykreslí rámec (definované v popisu třídy okna) kolem okna. V okně přijme zprávu WM_NCCALCSIZE.  
   
-- **SWP_FRAMECHANGED** odešle `WM_NCCALCSIZE` zprávy do okna, i když nedojde ke změně velikost okna. Pokud tento příznak není zadán, `WM_NCCALCSIZE` je odeslat pouze v případě, že mění se velikost okna.  
+- Odešle SWP_FRAMECHANGED WM_NCCALCSIZE zprávu do okna, i v případě, že nedojde ke změně velikosti okna. Pokud tento příznak není zadán, je odeslána WM_NCCALCSIZE pouze při změně velikosti okna.  
   
-- **SWP_HIDEWINDOW** skryje okna.  
+- SWP_HIDEWINDOW skryje okno.  
   
-- `SWP_NOACTIVATE` Neaktivuje okna.  
+- SWP_NOACTIVATE neaktivuje okna.  
   
-- **SWP_NOCOPYBITS** zahodí celý obsah klientské oblasti. Pokud tento příznak není zadán, jsou platný obsah klientské oblasti uložit a zkopírovat zpět do klientské oblasti po okna je velikost nebo změnit jejich umístění.  
+- SWP_NOCOPYBITS zahodí celý obsah od klientské oblasti. Pokud tento příznak není zadán, se uloží a zkopíruje zpět do klientské oblasti, poté, co je v okně velikosti nebo změnit umístění platný obsah od klientské oblasti.  
   
-- `SWP_NOMOVE` Zachová aktuální pozici (ignoruje **x** a **y** členy).  
+- SWP_NOMOVE zachová aktuální pozice (ignoruje `x` a `y` členů).  
   
-- **SWP_NOOWNERZORDER** nezmění okno vlastník pozice v pořadí.  
+- SWP_NOOWNERZORDER nemění nadřazenému oknu pozici v pořadí vykreslování.  
   
-- `SWP_NOSIZE` Zachová aktuální velikost (ignoruje **cx** a **cy** členy).  
+- SWP_NOSIZE zachová aktuální velikost (ignoruje `cx` a `cy` členů).  
   
-- **SWP_NOREDRAW** není ho překreslit změny.  
+- SWP_NOREDRAW zůstávají beze změny změny.  
   
-- **SWP_NOREPOSITION** stejné jako **SWP_NOOWNERZORDER**.  
+- SWP_NOREPOSITION stejné jako SWP_NOOWNERZORDER.  
   
-- **SWP_NOSENDCHANGING** přijetí brání okna `WM_WINDOWPOSCHANGING` zprávy.  
+- SWP_NOSENDCHANGING zabraňuje okně WM_WINDOWPOSCHANGING zprávu.  
   
-- `SWP_NOZORDER` Zachová aktuální řazení (ignoruje **hwndInsertAfter** člen).  
+- SWP_NOZORDER zachová aktuální řazení (ignoruje `hwndInsertAfter` člen).  
   
-- **SWP_SHOWWINDOW** zobrazí okno.  
+- SWP_SHOWWINDOW zobrazí okno.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

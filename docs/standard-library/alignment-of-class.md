@@ -1,5 +1,5 @@
 ---
-title: alignment_of – třída | Microsoft Docs
+title: alignment_of – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d9ba59d7f1539f690d7b04c70139c263490368
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b679d4c8807a19c977cd7e59481dc1d78e67ba1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956515"
 ---
 # <a name="alignmentof-class"></a>alignment_of – třída
 
-Získá zarovnání zadaného typu. Tato struktura je implementována z hlediska [alignof](../cpp/alignof-and-alignas-cpp.md). Použití `alignof` přímo při jednoduše je potřeba zadat dotaz na hodnotu zarovnání. Alignment_of používejte, když potřebujete integrální konstanta, například při provádění odesílání značky.
+Získá zarovnání zadaného typu. Tato struktura je implementován z hlediska [alignof](../cpp/alignof-and-alignas-cpp.md). Použití `alignof` přímo kdy stačí jednoduše k dotazování na zarovnání hodnotu. Alignment_of – použijte v případě potřebujete integrální konstantou, například při odbavení značky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,19 +37,19 @@ struct alignment_of;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Typ dotazu obsahuje hodnotu zarovnání typu `Ty`.
+Dotaz typu obsahuje hodnotu zarovnání typu *Ty*.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [aligned_storage – třída](../standard-library/aligned-storage-class.md)<br/>

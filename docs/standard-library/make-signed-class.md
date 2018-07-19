@@ -1,5 +1,5 @@
 ---
-title: make_signed – třída | Microsoft Docs
+title: make_signed – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957344"
 ---
 # <a name="makesigned-class"></a>make_signed – třída
 
-Zadejte díky nebo nejmenší podepsané zadejte větší než nebo roven hodnotě velikost na typ.
+Vytvoří typ nebo nejmenší znaménkem typu větší než nebo rovno velikosti typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,18 +40,18 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance typu modifikátor obsahuje upravit – typ, který je `T` Pokud `is_signed<T>` platí. V opačném případě je nejmenší typu bez znaménka `UT` pro kterou `sizeof (T) <= sizeof (UT)`.
+Instance modifikátoru typu obsahuje změněný typ, který je *T* Pokud `is_signed<T>` platí. V opačném případě je nejmenší typ bez znaménka `UT` pro kterou `sizeof (T) <= sizeof (UT)`.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

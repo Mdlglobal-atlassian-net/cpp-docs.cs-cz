@@ -1,7 +1,7 @@
 ---
-title: Průvodce pro vývojáře C++ pro kanály straně spekulativní provádění | Microsoft Docs
+title: Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 05/21/2018
+ms.date: 07/10/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -18,30 +18,30 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515e2223e67d86da12488d9880a1a0a258fc4bdf
-ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
+ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
+ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34428707"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38102462"
 ---
-# <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Průvodce pro vývojáře C++ pro kanály straně spekulativní provádění
+# <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
-Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifikaci a zmírnění spekulativní provádění straně kanál hardwaru slabá místa zabezpečení v C++ softwaru. Tyto chyby můžete prozrazeny citlivé informace napříč hranicemi vztahů důvěryhodnosti a může ovlivnit software, který běží na procesorů, které podporují spekulativní, se na pořadí provádění pokyny. Tato třída chyb byla první popsané v lednu, 2018 a další informace a pokyny najdete v [informační zpravodaj zabezpečení společnosti Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifikaci a omezení spekulativního spouštění na straně kanálu hardwaru chyby v softwaru C++. Tyto chyby zabezpečení může odhalit citlivé informace napříč hranicemi vztahů důvěryhodnosti a může mít vliv na software, který běží na procesorech podporujících spekulativního, mimo pořadí provádění instrukcí. Tato třída ohrožení zabezpečení byl první je popsáno v lednu 2018 a další informace a pokyny najdete v [informační zpravodaj zabezpečení společnosti Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
 
-V pokynech v tomto článku souvisí s třídy reprezentována ohrožení zabezpečení:
+Pokynů, které jste v tomto článku se vztahuje na třídy reprezentována ohrožení zabezpečení:
 
-1. CVE-2017-5753, také známé jako spektrum variant 1. Tato třída hardwaru ohrožení zabezpečení se týká straně kanály, které mohou nastat z důvodu spekulativní provádění, k níž dojde v důsledku misprediction podmíněného větev. Kompilátor Visual C++ v aplikaci Visual Studio 2017 (počínaje verzí 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně citlivé kódování vzory související s CVE. 2017 5753. V dokumentaci [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití.
+1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. 
 
-2. CVE-2018-3639, také známé jako [spekulativní úložiště alternativní metody komunikace (SSB)](https://aka.ms/sescsrdssb). Tato třída hardwaru ohrožení zabezpečení se týká straně kanály, které mohou nastat z důvodu spekulativní provádění zatížení před závislé úložiště v důsledku misprediction přístup paměti.
+2. CVE-2018-3639, označované také jako [spekulativního jednorázové přihlášení pro Store (SSB)](https://aka.ms/sescsrdssb). Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění zatížení náskok před závislé úložiště jako výsledek misprediction přístupu k paměti.
 
-Přístupné Úvod k ohrožení zabezpečení kanálu straně spekulativní provádění lze nalézt v prezentaci s názvem [případ spektrum a Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) pomocí jedné z research týmy, které zjištěny tyto problémy.
+Přístupné Úvod k ohrožení zabezpečení spekulativního spouštění na straně kanálu lze nalézt v prezentaci s názvem [případ Spectre a Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) pomocí jedné z research týmy, které zjišťují tyto problémy.
 
-## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>Jaké jsou ohrožení zabezpečení hardwaru Speculative provádění straně Channel?
+## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>Co jsou spekulativní provádění na straně kanálu hardwarové ohrožení zabezpečení?
 
-Moderní procesory poskytují vyšší stupňů výkonu tím, že použití spekulativní a na více systémů pořadí provádění pokyny. Například to často provádí predikci cíle větví (podmíněného a nepřímé), umožňující procesoru zahájí speculatively pokyny v cílovém předpokládaných větve a zabránilo místo, dokud cílový skutečné větve je rozpoznat. V případě, že procesoru později zjistí, že došlo k chybě misprediction, všechny stav počítače, který se spočítala speculatively se zahodí. To zajistí, že neexistují žádné z pohledu architektury viditelné důsledky mispredicted spekulativní.
+Moderní procesory poskytují vyšší stupeň výkon tím, že použití spekulativního a mimo pořadí spouštění instrukcí. Například to je často proveden predikce cíl větve (podmíněné a nepřímé), který umožňuje procesoru zahájí speculatively pokyny v cíli předpokládané větev, tedy není zpomalován pozastavení provádění získání, dokud je cíl skutečné větve vyřešené. V případě, že procesoru později zjistí, že došlo k chybě misprediction, se zahodí všechny vypočítaná speculatively stav počítače. Tím se zajistí, že neexistují žádné architektonicky viditelné účinky mispredicted spekulace o.
 
-Při provádění spekulativní nemá vliv na stav z pohledu architektury viditelné, ho můžete nechat zbytkové trasování v jiných architektury stavu, jako je například různé mezipaměti, které jsou používány procesoru. Je toto zbytkové trasování spekulativní spuštění, který může vést k ohrožení zabezpečení kanálu straně. Abyste lépe pochopili, to, vezměte v úvahu následující fragment kódu, který poskytuje příklad CVE 5753 2017 (hranice zkontrolujte obcházení):
+Při spekulativního spouštění nemá vliv na stav architektonicky viditelnosti, ho můžete nechat plyne ze zbytkových trasování ve stavu architektury, jako je například různé mezipaměti, které jsou používány procesoru. Je toto plyne ze zbytkových trasování spekulativního spouštění, který může mít za následek ohrožení zabezpečení na straně kanálu. Chcete-li lépe pochopit, zvažte následující fragment kódu, který poskytuje příklad CVE-2017-5753. (zkontrolujte nepoužívat hranice):
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -55,53 +55,53 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-V tomto příkladu `ReadByte` je zadaný index, vyrovnávací paměť a velikost vyrovnávací paměti do vyrovnávací paměti. Parametr index podle specifikace `untrusted_index`, poskytl méně privilegované kontextu, jako je například procesu bez oprávnění správce. Pokud `untrusted_index` je menší než `buffer_size`, pak znak, od tohoto indexu je pro čtení z `buffer` a slouží jako index do byla sdílená oblast paměti odkazuje `shared_buffer`. 
+V tomto příkladu `ReadByte` je zadané vyrovnávací paměti, velikost vyrovnávací paměti a indexu do vyrovnávací paměti. Index parametru, jak jsou určené `untrusted_index`, získáte ho od méně privilegovaným kontextu, například bez oprávnění správce procesu. Pokud `untrusted_index` je menší než `buffer_size`, znak na pozici indexu je přečten z `buffer` a slouží jako index do oblasti sdílené paměti, na které odkazuje `shared_buffer`. 
 
-Z architektury perspektivy, je toto pořadí kód perfektně bezpečné, protože bylo zaručeno, že `untrusted_index` bude vždy menší než `buffer_size`. Případě spekulativní spuštění, je však možné, že bude procesoru mispredict podmíněného větve a provést text Pokud příkaz i v případě `untrusted_index` je větší než nebo rovno `buffer_size`. V důsledku toho může procesoru speculatively číst bajt from beyond hranice `buffer` (které můžou být tajný klíč) a pak použít tuto hodnotu bajtu k výpočtu adresu následné zatížení prostřednictvím `shared_buffer`. 
+Z architektonického hlediska, toto pořadí kód je zcela bezpečné, protože je zaručeno, že `untrusted_index` bude vždy menší než `buffer_size`. Za přítomnosti spekulativního spouštění, je však možné, že procesor bude nevyplněné předpovědi podmíněná větev a spustit tělo příkazu if – příkaz i v případě `untrusted_index` je větší než nebo rovna hodnotě `buffer_size`. Následkem toho může procesor speculatively číst bajt from beyond hranice `buffer` (která může být tajný klíč) a pak použít tuto hodnotu bajtu pro výpočet adresy následné zatížení prostřednictvím `shared_buffer`. 
 
-Při této misprediction nakonec detekuje, procesoru, se může stát zbytkové vedlejší účinky zůstane v mezipaměti procesoru, které odhalit informace o bajtovou hodnotu, která byla načtena mimo rozsah od `buffer`. Tyto vedlejší účinky může rozpoznat méně privilegované kontextu službou v systému a jak rychle zjišťování každá mezipaměť řádek v `shared_buffer` přistupuje. Kroky, které můžete provést k tomu jsou:
+Zatímco procesoru nakonec zjistí tento misprediction, plyne ze zbytkových vedlejší účinky, může zůstat v mezipaměti procesoru, který zjistí informace o hodnotě bajtů, který byl načten mimo rozsah od `buffer`. Můžete rozpoznat tyto vedlejší účinky less privileged kontext spuštěné v systému, jak rychle zjišťováním každá mezipaměť řádku v `shared_buffer` přistupuje. Kroky, které můžete k tomu jsou:
 
-1. **Vyvolání `ReadByte` vícekrát s `untrusted_index` je menší než `buffer_size`** . Kontext útočící může způsobit postižené kontext, který má vyvolat `ReadByte` (např. přes RPC) tak, aby se předpověď větve je cvičení nebyly použity jako `untrusted_index` je menší než `buffer_size`.
+1. **Vyvolání `ReadByte` vícekrát s `untrusted_index` je menší než `buffer_size`** . Útočící kontextu může způsobit victim kontextu vyvolat `ReadByte` (například prostřednictvím vzdáleného volání Procedur) tak, že je větev prediktivní vyškolit tak, aby se není provedena jako `untrusted_index` je menší než `buffer_size`.
 
-2. **Vyprázdnit všechny řádky mezipaměti v `shared_buffer`** . Kontext útočící musí vyprázdnit všechny řádky mezipaměti ve sdílené oblasti paměti odkazuje `shared_buffer`. Vzhledem k tomu, že je sdílená oblast paměti, to je jednoduchá a dá dosáhnout pomocí vnitřní funkce, jako `_mm_clflush`.
+2. **Vyprázdnit všechny řádky mezipaměti v `shared_buffer`** . Kontext útočící musí vyprázdnění všech řádků mezipaměti v oblasti sdílené paměti, na které odkazuje `shared_buffer`. Protože je sdílený paměťové oblasti, to je jednoduché a můžete to provést pomocí vnitřní objekty, jako `_mm_clflush`.
 
-3. **Vyvolání `ReadByte` s `untrusted_index` větším než `buffer_size`** . Kontext útočící způsobí, že postižené kontext, který má vyvolat `ReadByte` tak, aby nesprávně předpovídá, nesmí být použito větvení. Tato příčiny procesoru speculatively provést text Pokud blokovat s `untrusted_index` větším než `buffer_size`, proto tečka na začátku k out-of-bounds čtení z `buffer`. V důsledku toho `shared_buffer` je indexovaný pomocí potenciálně tajná hodnota, která byla načtena out-of-bounds, což způsobuje příslušných mezipaměti řádku mají být načteny procesoru.
+3. **Vyvolání `ReadByte` s `untrusted_index` větším než `buffer_size`** . Kontext útočící způsobí, že victim kontextu vyvolat `ReadByte` tak, aby nesprávně předpovídá, nesmí být použito větvení. To způsobí procesoru speculatively provádět tělo příkazu if blokovat s `untrusted_index` větším než `buffer_size`, tedy přední na celočíselných čtení z `buffer`. V důsledku toho `shared_buffer` indexován pomocí potenciálně tajná hodnota, která byla načtena celočíselných, což způsobuje příslušných mezipaměti řádku mají být načteny procesoru.
 
-4. **Přečtěte si každý řádek mezipaměti v `shared_buffer` zobrazíte, který je přístupný nejvíce rychle**. Kontext útočící může číst každý řádek mezipaměti v `shared_buffer` a zjistit řádek mezipaměti, který načte výrazně rychlejší než jiné. Toto je řádek mezipaměti, která by mohla znovu kroku 3. Vzhledem k tomu, že je relace 1:1 mezi bajtů hodnota a mezipaměti řádku v tomto příkladu, díky útočník odvodit se skutečnou hodnotou bajtů, která byla načtena out-of-bounds.
+4. **Přečtěte si každý řádek mezipaměti v `shared_buffer` zobrazíte, která je nejvíc rychlý přístup**. Útočící kontextu můžou číst každý řádek mezipaměti v `shared_buffer` a zjistit řádek mezipaměti, který načítá výrazně rychlejší než ostatní. Toto je řádek mezipaměti, která by mohla dali kroku 3. Protože vztah 1:1 mezi bajtové hodnoty a mezipaměti řádku v tomto příkladu, ta umožňuje útočníkovi odvodit skutečnou hodnotu, která byla načtena celočíselných bajtu.
 
-Výše uvedené kroky uveďte příklad použití techniku známou jako VYPRÁZDNĚNÍ + NAČTĚTE ve spojení s zneužitím instanci CVE. 2017 5753.
+Výše uvedené kroky uveďte příklad pomocí techniky označované jako VYPRÁZDNĚNÍ + RELOAD ve spojení s využívajícím instance CVE-2017-5753.
 
-## <a name="what-software-scenarios-can-be-impacted"></a>Ovlivněné můžou být jaké scénáře softwaru?
+## <a name="what-software-scenarios-can-be-impacted"></a>Může mít dopad na jakých situacích softwaru?
 
-Vývoj zabezpečené softwaru pomocí procesu, jako [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) zpravidla vyžaduje, aby vývojáři k identifikaci hranice vztahu důvěryhodnosti, které existují ve svých aplikacích. Hranice vztahu důvěryhodnosti v místech, kde aplikace může komunikovat s daty poskytované kontextu méně důvěryhodný, jako je například jiný proces na serveru nebo proces režimu uživatele bez oprávnění správce v případě ovladač režimu jádra zařízení existuje. Nová třída ohrožení zabezpečení zahrnující spekulativní provádění straně kanály se hodí pro řadu hranicemi důvěryhodnosti v existující modely zabezpečení softwaru, které izolovat kód a data na zařízení. 
+Vývoj pomocí procesu, jako je zabezpečení softwaru [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) obvykle vyžaduje, aby vývojáři k identifikaci hranice vztahu důvěryhodnosti, které existují ve svých aplikacích. Hranice vztahů důvěryhodnosti existuje na místech, kde můžou aplikace pracovat s daty poskytuje kontext, méně důvěryhodnému, například jiný proces v systému nebo proces režimu uživatele bez oprávnění správce v případě ovladač zařízení režimu jádra. Nová třída zahrnující kanály na straně spekulativního spouštění ohrožení zabezpečení je relevantní pro řadu hranicemi vztahů důvěryhodnosti v existujících modelech zabezpečení softwaru, které izolovat kódu a dat na zařízení. 
 
-Následující tabulka obsahuje souhrn modely zabezpečení softwaru, kde mohou vývojáři musí starat o těchto chybách, ke kterým dochází:
+Následující tabulka obsahuje souhrn modely zabezpečení softwaru, kde vývojáři muset mít obavy o těchto chyb, ke kterým došlo:
 
 |Hranice vztahu důvěryhodnosti|Popis|
 |----------------|----------------|
-|Virtuální počítač hranic|Aplikace, které izolují úlohy v samostatných virtuálních počítačů, které přijímat nedůvěryhodné data z jiného virtuálního počítače může být ohrožena.| 
-|Hranice jádra|Ovladač zařízení v režimu jádra, která přijímá nedůvěryhodné data z procesu režimu uživatele bez oprávnění správce může být ohrožena.| 
-|Hranice procesu|Aplikace, která přijímá nedůvěryhodné data z jiný proces, který běží v místním systému, například prostřednictvím vzdálené volání procedur (RPC), sdílené paměti nebo jiných mezi proces komunikace (IPC) mechanismy může být ohrožena.|
-|Enclave hranic|Aplikace, která spustí v rámci zabezpečeného enclave (například Intel SGX), která přijímá nedůvěryhodné data z mimo enclave může být ohrožena.|
-|Jazyk hranic|Aplikace, který interpretuje nebo JIT (JIT) kompiluje a provede nedůvěryhodné kód napsaný v jazyce vyšší úrovně může být ohrožena.|
+|Virtuální počítač hranice|Aplikace, které izolování úloh v samostatných virtuálních počítačů, které přijímají nedůvěryhodná data z jiného virtuálního počítače může být ohrožena.| 
+|Hranice jádra|Ovladač zařízení režimu jádra, která přijímá nedůvěryhodná data z procesu režimu bez oprávnění správce uživatele může být ohrožena.| 
+|Hranice procesu|Aplikace, která přijímá nedůvěryhodná data z jiného procesu spuštění v místním systému, jako je prostřednictvím vzdálené volání procedur (RPC), sdílené paměti nebo jiných mezi proces komunikace (IPC) mechanismy může být ohrožena.|
+|Enklávě hranic|Aplikace, která se spustí v rámci zabezpečeného enklávy (například Intel SGX), která přijímá nedůvěryhodná data z mimo enklávy může být ohrožena.|
+|Jazyky|Aplikace, který interpretuje nebo za běhu (JIT) zkompiluje a spustí nedůvěryhodný kód napsaný v jazyce vyšší úrovně může být ohrožena.|
 
-Aplikace, které mají prostor pro útoky zveřejněné žádnému z výše uvedených důvěřovat, že hranice by si měli projít kódu na prostor pro útoky na zjišťovat a zmírňovat možných výskytů spekulativní provádění straně kanál ohrožení zabezpečení. Je potřeba poznamenat, že hranice vztahů důvěryhodnosti vystavený povrchy vzdáleného útoku, jako je vzdálené síťových protokolech, nebyly prokázal jako hrozí na spekulativní provádění straně kanál slabá místa zabezpečení.
+Aplikace, které mají potenciální oblast útoku zveřejněná ke kterékoli z výše uvedených důvěřovat, že hranice byste si přečíst kód na rovině útoku pro identifikaci a zmírnění možných výskytů spekulativního spouštění na straně kanálu ohrožení zabezpečení. Je třeba poznamenat, že hranicemi vztahů důvěryhodnosti vystaveni rovin útoku vzdálené, jako je vzdálené síťové protokoly, nebyly se prokáže, že být ohrožena na spekulativního spouštění na straně kanálu slabá místa zabezpečení.
 
-## <a name="potentially-vulnerable-coding-patterns"></a>Potenciálně citlivé kódování vzory
+## <a name="potentially-vulnerable-coding-patterns"></a>Potenciálně ohrožená a vzorů psaní kódu
 
-Ohrožení zabezpečení kanálu straně spekulativní provádění mohou nastat v důsledku více kódování vzorů. Tato část popisuje potenciálně citlivé kódování vzory a obsahuje příklady pro každou, ale by měly být rozpoznány, že může existovat varianty těchto motivů. Jako takový vývojáři doporučujeme provést tyto vzory jako příklady a ne jako vyčerpávající seznam všech potenciálně citlivé kódování vzory.
+Spekulativního spouštění na straně kanálu ohrožení zabezpečení můžou nastat v důsledku více vzorce kódování. Tato část popisuje potenciálně ohrožená vzorce kódování a příklady pro každý, ale by měly být rozpoznán, mohou existovat varianty těchto motivů. Vývojáři v důsledku toho doporučujeme provést tyto modely jako příklady a ne jako vyčerpávající seznam všech potenciálně ohrožená vzorce kódování. Stejné třídy ohrožení zabezpečení bezpečný přístup z více paměti, které mohou existovat v softwaru ještě dnes mohou také existovat společně spekulativního a cesty mimo pořadí spuštění, včetně, ale nikoli výhradně přetečení vyrovnávací paměti, pole celočíselných přístupy, použití neinicializované paměti typu nejasnosti a tak dále. Stejné primitivních elementů, které zneužívají ohrožení zabezpečení bezpečnost paměti podél cest architektury použít útočníci se můžou vztahovat taky spekulativního cesty.
 
-Obecně platí spekulativní provádění straně kanály související s podmíněného větve misprediction mohou nastat při podmíněným výrazem pracuje s daty, která se dá řídit nebo ovlivněné kontextu méně důvěryhodný. Například to může zahrnovat podmíněné výrazy použité v `if`, `for`, `while`, `switch`, nebo Ternární příkazy. Pro každou z těchto příkazů kompilátor může generovat struktura, která procesoru může pak předpovědi větve cíle pro za běhu.
+Obecně platí misprediction týkajících se podmíněné větvi kanály na straně spekulativního spouštění mohou vzniknout při podmíněný výraz pracuje s daty, která můžete řídit nebo ovlivněno méně důvěryhodnému kontextu. Například to může zahrnovat podmíněné výrazy použité v `if`, `for`, `while`, `switch`, nebo Ternární příkazy. Pro každou z těchto příkazů může kompilátor generovat podmíněná větev, která procesor může předpovídat pak cíl větve pro za běhu.
 
-Každý například je vložit komentář s frázi "SPEKULATIVNÍ bariéry" vývojář, kde může zanést bariéry jako omezení rizik. To je podrobněji popsána v části na způsoby zmírnění rizik.
+Pro každý příklad je vložen komentář pomocí fráze "SPEKULAČNÍ bariéru", kde vývojáři by mohla zanést barrier jako omezení rizik. Toto je podrobněji v oddílu na zmírnění rizik.
 
-## <a name="speculative-out-of-bounds-load"></a>Out-of-bounds spekulativní zatížení
+## <a name="speculative-out-of-bounds-load"></a>Načíst spekulativní celočíselných
 
-Z kódování vzory této kategorie zahrnuje misprediction podmíněného větve, který vede k spekulativní out-of-bounds přístup do paměti.
+Tato kategorie pravidel psaní kódu zahrnuje misprediction podmíněná větev, který vede k spekulativního celočíselných přístup do paměti.
 
-### <a name="array-out-of-bounds-load-feeding-a-load"></a>Pole out-of-bounds načíst napájení zatížení
+### <a name="array-out-of-bounds-load-feeding-a-load"></a>Pole celočíselných načtení, tak zatížení
 
-Tento vzor kódování je původně popsané citlivé kódování vzor pro CVE 5753 2017 (hranice zkontrolujte obcházení). Tento vzor podrobně vysvětluje, pozadí části tohoto článku.
+Tento vzor kódování je původně popsané zranitelné kódování vzor pro CVE-2017-5753. (zkontrolujte nepoužívat hranice). Tento model podrobně vysvětluje, pozadí části tohoto článku.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -116,7 +116,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-Podobně pole out-of-bounds zatížení může dojít ve spojení s smyčku, která překračuje jeho ukončení podmínky kvůli misprediction. V tomto příkladu podmíněného větev přidružené `x < buffer_size` výraz může mispredict a speculatively provést text `for` cykly při `x` je větší než nebo rovno `buffer_size`, proto spekulativní což Out-of-Bounds načtěte.
+Obdobně podmínky pole celočíselných zatížení může dojít ve spojení s smyčku, která překračuje jeho ukončení z důvodu misprediction. V tomto příkladu přidružené podmíněná větev `x < buffer_size` může nevyplněné předpovědi a speculatively spusťte tělo výrazu `for` smyčky, kdy `x` je větší než nebo rovna hodnotě `buffer_size`tedy výsledkem spekulativního celočíselných načtěte.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -125,17 +125,17 @@ unsigned char *shared_buffer;
 unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
     for (unsigned int x = 0; x < buffer_size; x++) {
         // SPECULATION BARRIER
-        unsigned char value = buffer[untrusted_index];
+        unsigned char value = buffer[x];
         return shared_buffer[value * 4096];
     }
 }
 ```
 
-### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Pole out-of-bounds načíst napájení nepřímých firemní pobočky
+### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Pole celočíselných načíst předáte nepřímé větve
 
-Tento vzor kódování zahrnuje tento případ, kdy misprediction větve podmíněného může vést k out-of-bounds přístup k pole ukazatelé funkcí, které pak vede k větev nepřímých do cílové adresy, které byla načtena out-of-bounds. Následující fragment kódu poskytuje příklad, který ukazuje to. 
+Tento model kódování zahrnuje tento případ, kdy misprediction podmíněná větev může vést k celočíselných přístup k poli z ukazatele funkcí, které pak vede k nepřímé větev do cílové adresy, která byla načtena celočíselných. Následující fragment kódu poskytuje příklad, který ukazuje to. 
 
-V tomto příkladu je zadán identifikátor nedůvěryhodné zpráva pro DispatchMessage prostřednictvím `untrusted_message_id` parametr. Pokud `untrusted_message_id` je menší než `MAX_MESSAGE_ID`, bude použit k indexování do pole ukazatelů na funkce a větvení do odpovídající cílové firemní pobočky. Tento kód je z pohledu architektury bezpečné, ale pokud procesoru mispredicts podmíněného větev, to může způsobit `DispatchTable` se indexovat pomocí `untrusted_message_id` při jeho hodnota může být větší než nebo rovna hodnotě `MAX_MESSAGE_ID`, proto tečka na začátku k out-of-bounds přístup. To může vést ke spekulativní spuštění z cílová adresa firemní pobočky, který je odvozený za hranice pole, které by mohly způsobit zpřístupnění informací v závislosti na kód, který je proveden speculatively.
+V tomto příkladu identifikátor nedůvěryhodné zprávu dostane DispatchMessage prostřednictvím `untrusted_message_id` parametru. Pokud `untrusted_message_id` je menší než `MAX_MESSAGE_ID`, pak se používá k Indexujte pole ukazatelů na funkce a větvit do odpovídající cílové větve. Tento kód je bezpečné architektonicky, ale pokud procesor nevyplněných předpovědí rozvětvení podmíněná větev, může vést `DispatchTable` indexované podle `untrusted_message_id` když její hodnota je větší než nebo rovna hodnotě `MAX_MESSAGE_ID`, tedy vedoucí k celočíselných přístup. To může způsobit spekulativního spouštění z adresy cílové větve, která je odvozena za hranice pole, které by mohlo vést k informacím v závislosti na kód, který je proveden speculatively.
 
 ```cpp
 #define MAX_MESSAGE_ID 16
@@ -152,15 +152,47 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 }
 ```
 
-Jako v případě pole out-of-bounds zatížení napájení jiný zatížení, tento stav může také způsobit ve spojení s smyčku, která překračuje jeho ukončující stavu z důvodu misprediction.
+Jako v případě pole celočíselných načtení, tak další zatížení, k tomuto stavu může také nastat ve spojení s smyčku, která překračuje jeho ukončující stav kvůli misprediction.
 
-## <a name="speculative-type-confusion"></a>Nejasnostem spekulativní typu
+### <a name="array-out-of-bounds-store-feeding-an-indirect-branch"></a>Pole celočíselných ukládat tak nepřímé větve
 
-Tato kategorie se zabývá kódování vzorů, které může vést k záměně spekulativní typu. K tomu dochází při přístupu k paměti pomocí nesprávného typu podél-architektury cesty během spekulativní provádění. Misprediction podmíněného větve a nepoužívat spekulativní úložiště může potenciálně vést k záměně spekulativní typu. 
+Při předchozí příklad ukázal jak spekulativního celočíselných zatížení mohou mít vliv na cíl nepřímé větve, je také možné, ukládání celočíselných změnit cíl nepřímé větev, například ukazatele na funkci nebo zpáteční adresu. To může potenciálně vést k spekulativního spouštění z útočník zadané adresy.
 
-Pro obejití spekulativní úložiště tato situace může nastat ve scénářích, kde kompilátor opětovně používá zásobník umístění pro proměnné více typů. Důvodem je, že do architektury úložiště proměnné typu `A` může obejít, což umožňuje zatížení typu `A` speculatively provést před proměnnou je přiřazen. Pokud dříve uložené proměnná jiného typu, můžete to vytvořit podmínky nedorozuměním spekulativní typu.
+V tomto příkladu se předává nedůvěryhodné indexu `untrusted_index` parametru. Pokud `untrusted_index` je menší než počet prvků `pointers` pole (256 prvky), pak hodnota poskytnutý ukazatel v `ptr` se zapisují do `pointers` pole. Tento kód je bezpečné architektonicky, ale pokud procesor nevyplněných předpovědí rozvětvení podmíněná větev, může vést `ptr` speculatively zapisovaných za hranice zásobníku přidělený `pointers` pole. To může vést k spekulativního poškození zpáteční adresu pro `WriteSlot`. Pokud útočník můžete určit hodnotu `ptr`, mohou být schopni způsobit spekulativního spouštění z libovolnou adresu při `WriteSlot` vrátí spekulativního cestě.
 
-Pro podmíněného větve misprediction následující fragment kódu se použije k popisu různých podmínek, které mohou poskytnout nedorozuměním spekulativní typ vzrůst.
+```cpp
+unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
+    void *pointers[256];
+    if (untrusted_index < 256) {
+        // SPECULATION BARRIER
+        pointers[untrusted_index] = ptr;
+    }
+}
+```
+
+Podobně pokud funkce ukazatele místní proměnné s názvem `func` byly přiděleny v zásobníku, pak je možné speculatively upravit adresu, která `func` odkazuje na, když dojde k misprediction podmíněná větev. To může vést k spekulativního spouštění z libovolné adresy při ukazatel funkce volané prostřednictvím.
+
+```cpp
+unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
+    void *pointers[256];
+    void (*func)() = &callback;
+    if (untrusted_index < 256) {
+        // SPECULATION BARRIER
+        pointers[untrusted_index] = ptr;
+    }
+    func();
+}
+```
+
+Je třeba poznamenat, že oba tyto příklady zahrnují spekulativního úpravy přidělený na zásobník nepřímé větev ukazatelů. Je možné, že spekulativního úpravy by se mohl vyskytnout pro globální proměnné, paměť přidělenou haldě a dokonce i paměti jen pro čtení na některých procesorech. Přidělený na zásobník paměti kompilátor Visual C++ již trvá v zájmu postup znesnadňují speculatively upravit přidělený na zásobník nepřímé větvi cíle, například opětovným uspořádáním lokální proměnné tak, že soubor cookie zabezpečení jako jsou umístěna vyrovnávací paměti součástí [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) kompilátoru bezpečnostní funkce.
+
+## <a name="speculative-type-confusion"></a>Typu spekulativním záměny
+
+Tato kategorie se zabývá vzorů, které můžou vést k záměně typu spekulativním psaní kódu. Vyvolá se při přístupu k paměti pomocí nesprávného typu – architektury cestě během spekulativního spouštění. Misprediction podmíněná větev a obejít spekulativního úložiště může potenciálně vést k typu spekulativním nejasnosti. 
+
+Pro jednorázové přihlášení spekulativního úložiště tato situace může nastat ve scénářích, kde kompilátor opětovně používá umístění zásobníku pro proměnné více typů. Důvodem je, že architektury úložiště proměnné typu `A` může obejít, což umožní načíst typ `A` speculatively běžet, než proměnná přiřazená. Pokud dříve uložené proměnné jiného typu, toto můžete vytvořit podmínky typu spekulativním nejasnostem.
+
+Pro misprediction podmíněná větev se použije následující fragment kódu k popisu různých podmínek, které můžete poskytnout typu spekulativním záměně vzrůst.
 
 ```cpp
 enum TypeName {
@@ -212,21 +244,21 @@ unsigned char ProcessType(CBaseType *obj)
 }
 ```
 
-### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Vedoucí k záměně spekulativní typ out-of-bounds načíst.
+### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Což vede k záměně typu spekulativním celočíselných načíst
 
-Tento vzor kódování zahrnuje tento případ, kde může způsobit nejasnosti spekulativní typ out-of-bounds nebo nerozumíte typ pole přístupu, kde načíst hodnotu kanály adresu dalších zatížení. To se podobá se vzorem out-of-bounds kódování pole ale označované prostřednictvím alternativu kódování pořadí jako v příkladu nahoře. V tomto příkladu by mohlo způsobit kontextu útočící kontext postižené provést `ProcessType` vícekrát s objektem typu `CType1` (`type` pole rovná `Type1`). To bude mít za následek skutečnost podmíněného větve pro první `if` příkaz k předvídání není přijatá. Kontext útočící pak může způsobit kontext postižené provést `ProcessType` s objektem typu `CType2`. To může způsobit nejasnosti spekulativní typ Pokud větev zásad správy pro první `if` příkaz mispredicts a provede text `if` prohlášení, proto přetypování objekt typu `CType2` k `CType1`. Vzhledem k tomu `CType2` je menší než `CType1`, přístup k paměti `CType1::field2` vést spekulativní out-of-bounds načte dat, která může být tajný. Tato hodnota se pak používá v zatížení z `shared_buffer` pozorovatelné vedlejší účinky, které můžete vytvořit stejně jako u pole out-of-bounds příklad popsané.
+Tento model kódování zahrnuje tento případ, ve kterém může způsobit zmatení typu spekulativním celočíselných nebo kde načtená hodnota kanály adresu následné zatížení přístup zaměňovat typ pole. To se podobá celočíselných kódování vzor pole, ale označované prostřednictvím alternativu kódování pořadí, jak je znázorněno výše. V tomto příkladu by mohlo způsobit útočící kontextu kontextu victim ke spuštění `ProcessType` vícekrát s objektem typu `CType1` (`type` pole je rovna `Type1`). To bude mít vliv školení podmíněná větev pro první `if` příkaz k předpovědi není přijatá. Útočící kontextu může způsobit pak victim kontext pro spouštění `ProcessType` s objektem typu `CType2`. To může způsobit zmatení typu spekulativním Pokud podmíněnou větev v první `if` příkaz nevyplněných předpovědí větvení a provádí tělo `if` prohlášení, tedy přetypováním objektu typu `CType2` k `CType1`. Protože `CType2` je menší než `CType1`, přístup k paměti k `CType1::field2` bude výsledkem spekulativního celočíselných načtení dat, která může být tajný. Tato hodnota se pak použije v rámci zátěžového z `shared_buffer` pozorovatelný vedlejší účinky, které můžete vytvořit stejně jako u pole celočíselných příklad je popsáno výše.
 
-### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Spekulativní typ nedorozuměním vedoucí k nepřímé firemní pobočky
+### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Typu spekulativním nejasnosti, což vede k nepřímé větve
 
-Tento vzor kódování zahrnuje tento případ, kde můžete nedorozuměním spekulativní typ výsledkem unsafe nepřímých firemní pobočky během spekulativní provádění. V tomto příkladu by mohlo způsobit kontextu útočící kontext postižené provést `ProcessType` vícekrát s objektem typu `CType2` (`type` pole rovná `Type2`). To bude mít za následek skutečnost podmíněného větve pro první `if` příkaz mají být provedeny a `else if` příkaz nelze provést. Kontext útočící pak může způsobit kontext postižené provést `ProcessType` s objektem typu `CType1`. To může způsobit nejasnosti spekulativní typ Pokud větev zásad správy pro první `if` příkaz předpovídá prováděné a `else if` příkaz předpovídá není přijatá proto provádění text `else if` a objekt typu přetypování`CType1` k `CType2`. Vzhledem k tomu `CType2::dispatch_routine` pole se překrývá s `char` pole `CType1::field1`, výsledkem by mohlo spekulativní nepřímých větev cíl nezamýšleným větev. Pokud kontext útočící můžete řídit bajtových hodnot v `CType1::field1` pole, které mohou být schopné řídit cílová adresa firemní pobočky.
+Tento model kódování zahrnuje tento případ, kde záměny typu spekulativním může způsobit unsafe nepřímé větve během spekulativního spouštění. V tomto příkladu by mohlo způsobit útočící kontextu kontextu victim ke spuštění `ProcessType` vícekrát s objektem typu `CType2` (`type` pole je rovna `Type2`). To bude mít vliv školení podmíněná větev pro první `if` příkaz mají být provedeny a `else if` příkaz nelze provést. Útočící kontextu může způsobit pak victim kontext pro spouštění `ProcessType` s objektem typu `CType1`. To může způsobit zmatení typu spekulativním Pokud podmíněnou větev v první `if` předpovídá příkaz přijata a `else if` příkaz předpovídá není přijatá, tedy provádění těla `else if` a přetypováním objektu typu `CType1` k `CType2`. Protože `CType2::dispatch_routine` pole se překrývá s `char` pole `CType1::field1`, to mohlo způsobit spekulativního nepřímé větve k cíli neúmyslnému větve. Pokud útočící kontextu určit hodnoty bajt `CType1::field1` pole, mohou být schopni řídit adresu cílové větve.
 
-## <a name="speculative-uninitialized-use"></a>Spekulativní Neinicializovaný použití
+## <a name="speculative-uninitialized-use"></a>Spekulativní neinicializované použití
 
-Z kódování vzory této kategorie zahrnuje scénáře, kde může spekulativní provádění přístup k neinicializovanému paměti a použít ho ke kanálu následující zatížení nebo nepřímou větev. Pro tyto kódování vzory pro využitelné útočník musí být schopni řídit nebo srozumitelně ovlivnit obsah paměti, který se používá bez se inicializuje pomocí kontext, který se používá v.
+Tato kategorie pravidel psaní kódu zahrnuje scénáře, kde může spekulativního spouštění přístup k neinicializované paměti a použít ho ke kanálu zatížení následné nebo nepřímé větev. Útočník pro jehož zneužití tyto vzorce kódování, musí být schopný řídit nebo smysluplně ovlivnit obsah, který se používá bez během inicializace podle kontextu, který se používá v paměti.
 
-### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>Spekulativní Neinicializovaný použití vedoucí k out-of-bounds načíst.
+### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>Spekulativní neinicializované použití, což vede k celočíselných načíst.
 
-Spekulativní Neinicializovaný použití může potenciálně vést k out-of-bounds načíst pomocí hodnotou útočník řídí. V příkladu níže hodnotu `index` je přiřazen `trusted_index` u všech cest architektury a `trusted_index` se předpokládá, že být menší než nebo rovno `buffer_size`. V závislosti na kód vytvořený kompilátorem, je však jednorázové přihlášení spekulativní úložiště může dojít k umožňující zatížení z `buffer[index]` a závislé výrazy provést před přiřazení `index`. Pokud k tomu dojde, neinicializovaného hodnotu pro `index` se použije jako posun do `buffer` která by mohla útočníkovi umožnit číst out-of-bounds citlivé informace a předávaným to prostřednictvím kanálu straně prostřednictvím závislé zátěž `shared_buffer` .
+Spekulativní použití neinicializovaného může potenciálně vést k celočíselných načtení pomocí hodnotu útočník řídit. V příkladu níže hodnotu `index` je přiřazena `trusted_index` ve všech cestách architektury a `trusted_index` je považován za menší než nebo rovno `buffer_size`. V závislosti na kód vytvořený kompilátorem, je však možné jednorázové přihlášení spekulativního úložiště může dojít, který umožňuje načtení z `buffer[index]` a závislé výrazy k provedení před přiřazení `index`. Pokud k tomu dojde, neincializované hodnoty pro `index` se použije jako posun do `buffer` která by mohla útočníkovi umožnit čtení celočíselných citlivé informace a sdělit to přes kanál na straně prostřednictvím závislé zatížení `shared_buffer` .
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -247,9 +279,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>Spekulativní Neinicializovaný použití vedoucí k nepřímé firemní pobočky
+### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>Spekulativní neinicializované použít počáteční nepřímé větví
 
-Spekulativní Neinicializovaný použití může potenciálně vést k nepřímé větve kde útočník řídí cíl firemní pobočky. V následujícím příkladu `routine` je přiřazena k buď `DefaultMessageRoutine1` nebo `DefaultMessageRoutine` v závislosti na hodnotě `mode`. V cestě architektury, bude výsledkem `routine` vždy inicializovat před nepřímých větev. Však podle kódu vytvořeného pomocí kompilátoru, jednorázové přihlášení spekulativní úložiště může dojít k umožňující nepřímých větev prostřednictvím `routine` speculatively spouštění před přiřazení `routine`. Pokud k tomu dojde, útočník může být speculatively provést z libovolnou adresu, za předpokladu, že útočník může ovlivnit nebo řídit Neinicializovaný hodnotu `routine`.
+Spekulativní použití neinicializovaného může vést k nepřímé větve ve kterém je řízen cíl větve ze strany útočníka. V následujícím příkladu `routine` přiřazen buď `DefaultMessageRoutine1` nebo `DefaultMessageRoutine` závisí na hodnotě `mode`. Na cestě pro architektury, výsledkem bude `routine` vždy inicializovat náskok před nepřímé větve. Ale v závislosti na kód vytvořený kompilátorem, jednorázové přihlášení spekulativního úložiště může dojít k umožňující nepřímé větev prostřednictvím `routine` speculatively provádět náskok před přiřazení `routine`. V tomto případě útočník může být možné spustit dotaz speculatively z libovolné adresy, za předpokladu, že útočník může ovlivnit nebo řídit neincializované hodnoty z `routine`.
 
 ```cpp
 #define MAX_MESSAGE_ID 16
@@ -278,21 +310,21 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 }
 ```
 
-## <a name="mitigation-options"></a>Zmírnění dopadů možnosti
+## <a name="mitigation-options"></a>Možnosti omezení rizik
 
-Spekulativní provádění straně kanál ohrožení zabezpečení můžete zmírnit tím, že změny ke zdrojovému kódu. Tyto změny mohou zahrnovat zmírnění určité instance ohrožení zabezpečení, například přidáním *spekulativní bariéry*, nebo po provedení změn v návrhu aplikace, aby citlivé informace nepřístupný pro spekulativní provádění.
+Ohrožení zabezpečení spekulativního spouštění na straně kanálu je možné zmírnit tím, že změny zdrojového kódu. Tyto změny mohou zahrnovat snížení rizik souvisejících s konkrétní instance ohrožení zabezpečení, jako například přidávání *spekulační bariéru*, nebo tím, že změny v návrhu aplikace provádět citlivé informace do nedostupný spekulativního pro spuštění.
 
-### <a name="speculation-barrier-via-manual-instrumentation"></a>Barrier spekulativní prostřednictvím ruční instrumentace
+### <a name="speculation-barrier-via-manual-instrumentation"></a>Spekulační bariéru prostřednictvím ručního instrumentace
 
-A *spekulativní bariéry* může ručně vložit vývojáře, aby se zabránilo vykonání spekulativní z pokračováním podél-architektury cesty. Například vývojář bariéry spekulativní před nebezpečná kódování vzor vložit do těla podmíněného blok, buď na začátku bloku (po podmíněného větev) nebo před první zatížení, která bude se jednat o problém. To zabrání misprediction větve podmíněného spuštění nebezpečného kódu-architektury cestou serializací provádění. Pořadí bariéry spekulativní se liší podle hardwarovou architekturou, jak je popsáno v následující tabulce:
+A *spekulační bariéru* lze ručně vložit vývojářem, aby se zabránilo spekulativního spouštění z budete pokračovat bez architektury cestě. Například může vývojář vloží spekulační bariéru před vzoru nebezpečné psaní kódu v těle podmíněný blok, buď na začátku bloku (po podmíněná větev) nebo před prvním načtením, která má problém. To zabrání misprediction podmíněná větev z provádění nebezpečného kódu na cestě architektury pomocí serializace spuštění. Pořadí spekulační bariéru se liší podle architektury hardwaru, jak je popsáno v následující tabulce:
 
-|Architektura|Vnitřní pro CVE. 2017 5753 spekulativní bariéry|Vnitřní pro CVE. 2018 3639 spekulativní bariéry|
+|Architektura|Spekulační bariéru vnitřní pro CVE-2017-5753|Vnitřní pro CVE-2018-3639 spekulační bariéru|
 |----------------|----------------|----------------|
 |x86/x64|_mm_lfence()|_mm_lfence()|
-|ARM|Není aktuálně k dispozici|__dsb(0)|
-|ARM64|Není aktuálně k dispozici|__dsb(0)|
+|ARM|není aktuálně k dispozici|__dsb(0)|
+|ARM64|není aktuálně k dispozici|__dsb(0)|
 
-Například následující kód vzor můžete zmírnit použitím `_mm_lfence` vnitřní, jak je uvedeno níže.
+Například následující vzorek kódu lze zmírnit použitím `_mm_lfence` vnitřní, jak je znázorněno níže.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -307,15 +339,15 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barrier spekulativní prostřednictvím kompilaci instrumentace
+### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Spekulační bariéru prostřednictvím kompilaci instrumentace
 
-Kompilátor Visual C++ v aplikaci Visual Studio 2017 (počínaje verzí 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který automaticky vloží bariéry spekulativní pro omezenou sadu potenciálně citlivé kódování vzory související s CVE. 2017 5753. V dokumentaci [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. Je důležité si uvědomit, že tento příznak nepopisuje všechny vzoru potenciálně citlivé kódování a jako takový vývojáři neměli spoléhat na jako komplexní zmírnění dopadů pro tuto třídu ohrožení zabezpečení.
+Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který automaticky vloží spekulační bariéru pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. Je důležité si uvědomit, že tento příznak nepopisuje všechny potenciálně ohrožená vzorce kódování a jako takový vývojáři by neměl spoléhat jako komplexní omezení rizik pro tuto třídu ohrožení zabezpečení.
 
-## <a name="masking-array-indices"></a>Indexy pole maskování
+### <a name="masking-array-indices"></a>Indexy pole maskování
 
-V případech, kde spekulativní out-of-bounds zatížení může dojít, index pole může být silného ohraničené na cestě architektury a jiné architektury přidávání logiky explicitně vázané index pole. Například pokud pole může být přidělen na velikost, která je zarovnán na zadanou mocninu dva, pak masku jednoduché zavedení. To je znázorněno v ukázce níže, kde se předpokládá, že `buffer_size` je zarovnán na zadanou mocninu dva. To zajistí, že `untrusted_index` je vždy menší než `buffer_size`i v případě, že dojde k misprediction podmíněného větve a `untrusted_index` byl předán pomocí hodnotu větší než nebo rovna hodnotě `buffer_size`.
+V případech, kde spekulativního celočíselných zatížení může dojít, index pole může být důrazně ohraničené v cestě architektury a jiné architektury přidávání logiky explicitně vázaný index pole. Například pokud pole mohou být přiděleny velikostí, která je umístěno na mocninou čísla 2, pak jednoduché maska je možné vytvářet. To je znázorněno v následující ukázce, ve kterém se předpokládá, který `buffer_size` zarovnán mocninou čísla 2. To zajistí, že `untrusted_index` je vždy menší než `buffer_size`i v případě, že dojde k misprediction podmíněná větev a `untrusted_index` byl předán pomocí hodnotu větší než nebo rovna hodnotě `buffer_size`.
 
-Je potřeba poznamenat, maskování indexu provést zde může podléhat nepoužívat spekulativní úložiště v závislosti na kód, který je generován kompilátoru.
+Je třeba poznamenat, že maskování indexu tady provádět může být v souladu s obejít spekulativního úložiště v závislosti na kód, který je generovaný kompilátorem.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -330,11 +362,12 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-## <a name="removing-sensitive-information-from-memory"></a>Odebrání citlivých informací z paměti
+### <a name="removing-sensitive-information-from-memory"></a>Odebrání citlivých informací z paměti
 
-Další postup, který slouží ke zmírnění ohrožení zabezpečení kanálu spekulativní provádění straně je odebrání citlivých informací z paměti. Vývojáři softwaru můžete vyhledat příležitosti Refaktorovat jejich aplikace tak, aby citlivé informace není přístupné během spekulativní zpracování. To můžete udělat refaktoring návrhu aplikace izolovat citlivé informace do samostatné procesy. Aplikace webového prohlížeče může například pokusit izolovat data související s každou původu webového do samostatné procesy, proto nebudete mít přístup k mezi zdroji dat prostřednictvím spekulativní spuštění brání jeden proces.
+Další technikou, který slouží k omezení spekulativního spouštění na straně kanálu ohrožení zabezpečení je odebrání citlivých informací z paměti. Vývojáři softwaru můžete vyhledat příležitosti k refaktorování své aplikace tak, aby citlivých informací není přístupné během spekulativního spouštění. To lze provést refaktoring návrhu aplikace izolovat citlivé informace do samostatné procesy. Například aplikace webového prohlížeče může pokusit o izolovat data související s každou původu webového do samostatné procesy zamezuje tak nebudou mít přístup k datům nepůvodního prostřednictvím spekulativního spouštění jeden proces.
 
 ## <a name="see-also"></a>Viz také
 
-[Pokyny ke zmírnění ohrožení zabezpečení kanálu straně spekulativní provádění](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
-[zmírnění spekulativní provádění straně kanál hardwaru ohrožení zabezpečení](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)
+[Pokyny ke zmírnění chyby zabezpečení na straně kanálu spekulativního spouštění](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+
+[Omezení spekulativního spouštění na straně kanálu hardwarové ohrožení zabezpečení](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

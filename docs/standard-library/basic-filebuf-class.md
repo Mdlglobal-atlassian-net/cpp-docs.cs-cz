@@ -1,5 +1,5 @@
 ---
-title: basic_filebuf – třída | Microsoft Docs
+title: basic_filebuf – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,16 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dc91bebf55c617d5c18d86d308558e57cbd3c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954965"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf – třída
 
-Popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`, do a z pořadí prvků, které jsou uložené v souboru externích.
+Popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky typu *Elem*, jehož vlastnosti znaků určuje třídu *Tr*, do a z pořadí prvků, které jsou uložené v externím souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,22 +70,22 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Základní prvek vyrovnávací paměti souboru.
+*Elem* základního prvku vyrovnávací paměti souboru.
 
-`Tr` Vlastnosti základní elementu vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
+*Tr* osobnostní rysy základního prvku vyrovnávací paměti souboru (obvykle `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`, do a z pořadí prvků, které jsou uložené v souboru externích.
+Třída šablony popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky typu *Elem*, jehož vlastnosti znaků určuje třídu *Tr*, do a z pořadí prvků, které jsou uloženy v externí soubor.
 
 > [!NOTE]
-> Objekty typu `basic_filebuf` jsou vytvořeny pomocí vnitřní vyrovnávací paměť typu `char *` bez ohledu na to `char_type` určeného parametr typu `Elem`. To znamená, že řetězec znaků Unicode (obsahující `wchar_t` znaků) se převede na řetězec ANSI (obsahující `char` znaků) před zápisem na vnitřní vyrovnávací paměť. K ukládání ve vyrovnávací paměti řetězců v kódu Unicode, vytvořit vyrovnávací paměť nového typu `wchar_t` a nastavte ji pomocí [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metoda. Pokud chcete zobrazit příklad, který ukazuje, toto chování, najdete níže.
+> Objekty typu `basic_filebuf` jsou vytvořeny pomocí vnitřní vyrovnávací paměť typu `char *` bez ohledu na to `char_type` určené parametrem typu *Elem*. To znamená, že řetězec znaků Unicode (obsahující **wchar_t** znaků) budou převedeny na řetězec ANSI (obsahující **char** znaků) před zápisem do vnitřní vyrovnávací paměti. K ukládání do vyrovnávací paměti řetězců v kódu Unicode, vytvořte nové vyrovnávací paměti typu **wchar_t** a nastavte ho pomocí [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Pokud chcete zobrazit příklad, který ukazuje toto chování, najdete níže.
 
-Třída objektu `basic_filebuf` <  `Elem`, `Tr`> ukládá ukazatele souboru, který vytváří `FILE` objekt, který řídí datový proud přidružený otevření souboru. Ukládá také ukazatele na dva převod omezující vlastnosti souboru pro použití ve chráněném členské funkce [přetečení](#overflow) a [podtečení](#underflow). Další informace najdete v tématu [basic_filebuf::open](#open).
+Objekt třídy `basic_filebuf` <  `Elem`, `Tr`> ukládá ukazatel souboru, který vytváří `FILE` objekt, který určuje datový proud přidružený k otevření souboru. Také ukládá ukazatele do dvou charakteristiky převod souboru pro použití chráněných členským funkcím [přetečení](#overflow) a [podtečení](#underflow). Další informace najdete v tématu [basic_filebuf::open](#open).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vynutit objekt typu `basic_filebuf<wchar_t>` k uložení znaky kódování Unicode v jeho vnitřní vyrovnávací paměť voláním `pubsetbuf()` metoda.
+Následující příklad ukazuje, jak vynutit objekt typu `basic_filebuf<wchar_t>` k uložení znaky znakové sady Unicode v jeho vnitřní vyrovnávací paměť pomocí volání `pubsetbuf()` metody.
 
 ```cpp
 // unicode_basic_filebuf.cpp
@@ -212,34 +212,34 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 |Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|Přidruží název typu s `Elem` parametr šablony.|
-|[int_type](#int_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
-|[off_type –](#off_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
-|[pos_type](#pos_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
-|[traits_type](#traits_type)|Přidruží název typu s `Tr` parametr šablony.|
+|[char_type](#char_type)|Přidruží název typu se `Elem` parametr šablony.|
+|[int_type](#int_type)|Vytvoří tento typ v rámci `basic_filebuf`společnosti ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
+|[off_type](#off_type)|Vytvoří tento typ v rámci `basic_filebuf`společnosti ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
+|[pos_type](#pos_type)|Vytvoří tento typ v rámci `basic_filebuf`společnosti ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
+|[traits_type](#traits_type)|Přidruží název typu se `Tr` parametr šablony.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[close](#close)|Zavře soubor.|
-|[is_open](#is_open)|Určuje, zda je soubor otevřít.|
-|[open](#open)|Otevře soubor.|
-|[Přetečení](#overflow)|Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|
-|[pbackfail –](#pbackfail)|Chráněný člen virtuální funkce pokusí vrátit zpět element do vstupního datového proudu, ujistěte se, jeho aktuálního elementu (ukazuje další ukazatel).|
-|[seekoff –](#seekoff)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|
-|[seekpos –](#seekpos)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|
-|[setbuf](#setbuf)|Chráněný člen virtuální funkce provádí konkrétní operace do vyrovnávací paměti jednotlivých odvozené datového proudu.|
-|[Swap](#swap)|Obsah této výměny `basic_filebuf` pro obsah ze zadaných `basic_filebuf` parametr.|
-|[sync](#sync)|Chráněné, virtuální funkce se pokusí synchronizovat řízené datové proudy s všechny přidružené externí datové proudy.|
-|[uflow –](../standard-library/basic-streambuf-class.md#uflow)|Chráněný, virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|
-|[podtečení](#underflow)|Chráněný, virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|
+|[close](#close)|Soubor se zavře.|
+|[is_open](#is_open)|Určuje, zda je soubor otevřen.|
+|[open](#open)|Otevře se soubor.|
+|[přetečení](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
+|[pbackfail –](#pbackfail)|Chráněná virtuální členská funkce se pokusí vrátit elementu do vstupního datového proudu a usnadňují aktuálního elementu (ukazuje další ukazatel).|
+|[seekoff –](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[seekpos –](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[setbuf](#setbuf)|Chráněná virtuální členská funkce se provede konkrétní operace pro každou odvozené datový proud vyrovnávací paměti.|
+|[Swap](#swap)|Vymění obsah této `basic_filebuf` obsahu poskytnutého `basic_filebuf` parametru.|
+|[sync](#sync)|Chráněná, virtuální funkce se pokusí o synchronizaci řízené datové proudy s jakékoli přidružené externích datových proudů.|
+|[uflow –](../standard-library/basic-streambuf-class.md#uflow)|Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
+|[podtečení](#underflow)|Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<fstream >
+**Záhlaví:** \<fstream – >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
@@ -253,13 +253,13 @@ basic_filebuf(basic_filebuf&& right);
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor ukládá ukazatele null v následující ukazatele řízení vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Také ukládá ukazatele null v ukazatele souboru.
+První konstruktor uloží ukazatel s hodnotou null v všechny ukazatele řízení vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Také ukládá ukazatel s hodnotou null v ukazatel na soubor.
 
-Druhý konstruktor inicializuje objekt s obsahem `right`, považován za deklarátor odkazu.
+Druhý konstruktor inicializuje objekt s obsahem `right`, považován za odkaz rvalue.
 
 ## <a name="char_type"></a>  basic_filebuf::char_type
 
-Přidruží název typu s **Elem** parametr šablony.
+Přidruží název typu se `Elem` parametr šablony.
 
 ```cpp
 typedef Elem char_type;
@@ -267,7 +267,7 @@ typedef Elem char_type;
 
 ## <a name="close"></a>  basic_filebuf::Close
 
-Zavře soubor.
+Soubor se zavře.
 
 ```cpp
 basic_filebuf<Elem, Tr> *close();
@@ -275,13 +275,13 @@ basic_filebuf<Elem, Tr> *close();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vrátí ukazatel s hodnotou null, pokud je ukazatel souboru ukazatele null.
+Členská funkce vrátí ukazatel s hodnotou null, pokud ukazatel souboru je ukazatel s hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-**Zavřete** volání `fclose`( **fp**). Pokud tento funkce vrátí nenulovou hodnotu, funkce vrátí hodnotu ukazatele null. Funkce **to** indikující, že soubor byl úspěšně zavřel.
+`close` volání `fclose`( **fp**). Pokud tato funkce vrátí nenulovou hodnotu, funkce vrátí ukazatel s hodnotou null. V opačném případě vrátí **to** k označení, že soubor byl úspěšně uzavřen.
 
-Pro celou datového proudu, pokud žádné vložení došlo od datový proud byl otevřen nebo od posledního volání `streampos`, volání funkce [přetečení](#overflow). Také vloží všechny pořadí potřebné k obnovení stavu počáteční převod pomocí omezující vlastnost převod souborů **fac** volat **fac.unshift** podle potřeby. Každý prvek **bajtů** typu `char` proto vytvořeného je zapsán do související datový proud určený hodnotou ukazatele souboru **fp** jako Pokud podle následných voláních formuláře `fputc`( **bajtů**, **fp**). Pokud volání **fac.unshift** nebo žádné zápisu selže, funkce neproběhne úspěšně.
+Pro celou datového proudu, pokud žádné vložení došlo od datový proud byl otevřen nebo od posledního volání `streampos`, volání funkce [přetečení](#overflow). Také vloží jakékoli sekvenci potřebné k obnovení stavu počáteční převod pomocí omezující vlastnost převod souboru `fac` volat `fac.unshift` podle potřeby. Každý prvek `byte` typu **char** tedy vytvořilo se zapisují do přidružené datový proud určený ukazatel na soubor `fp` jako by následných voláních formuláře `fputc`( **bajtů**, **fp**). Pokud volání `fac.unshift` nebo jakékoli zápisu selže, funkce selže.
 
 ### <a name="example"></a>Příklad
 
@@ -334,7 +334,7 @@ s
 
 ## <a name="int_type"></a>  basic_filebuf::int_type
 
-Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.
+Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se stejným názvem v `Tr` oboru.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -342,7 +342,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="is_open"></a>  basic_filebuf::is_open
 
-Určuje, zda je soubor otevřít.
+Určuje, zda je soubor otevřen.
 
 ```cpp
 bool is_open() const;
@@ -350,7 +350,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud ukazatele souboru není nulový ukazatel.
+**Hodnota TRUE** Pokud ukazatel na soubor není ukazatel s hodnotou null.
 
 ### <a name="example"></a>Příklad
 
@@ -378,7 +378,7 @@ true
 
 ## <a name="off_type"></a>  basic_filebuf::off_type
 
-Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.
+Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se stejným názvem v `Tr` oboru.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -386,7 +386,7 @@ typedef typename traits_type::off_type off_type;
 
 ## <a name="open"></a>  basic_filebuf::Open
 
-Otevře soubor.
+Otevře se soubor.
 
 ```cpp
 basic_filebuf<Elem, Tr> *open(
@@ -410,45 +410,45 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parametry
 
-`_Filename` Název souboru, který se otevřít.
+*Náze_v souboru* název souboru, který se otevře.
 
-`_Mode` Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Výchozí soubor otevírání ochrany, odpovídá `shflag` parametr v [_fsopen –, _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* výchozí soubor otevřít ochranu, odpovídá *shflag* parametr [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je ukazatel souboru ukazatele null, funkce vrátí hodnotu ukazatele null. Funkce **to**.
+Pokud ukazatel souboru je ukazatel s hodnotou null, funkce vrátí ukazatel s hodnotou null. V opačném případě vrátí **to**.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce otevře soubor s názvem souboru *filename*, voláním [fopen –](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** se určí na základě **režimu &**~ ( [uje](../standard-library/ios-base-class.md#openmode) & &#124; [binární](../standard-library/ios-base-class.md#openmode)):
+Členská funkce otevře soubor s názvem souboru *filename*, voláním [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). `strmode` se určí na základě **režim &**~ ( [snědli](../standard-library/ios-base-class.md#openmode) & &#124; [binární](../standard-library/ios-base-class.md#openmode)):
 
-- **ios_base::in** stane **"r"** (otevřít existující soubor pro čtení).
+- `ios_base::in` změní **"r"** (otevřít existující soubor pro čtení).
 
-- [ios_base::Out](../standard-library/ios-base-class.md#fmtflags) nebo **ios_base::out &#124; ios_base::trunc** stane **"w"** (zkrátit existující soubor nebo vytvořit pro zápis).
+- [ios_base::Out](../standard-library/ios-base-class.md#fmtflags) nebo **ios_base::out &#124; ios_base::trunc** stane **"w"** (zkrátit existující soubor nebo vytvořte pro zápis).
 
-- **ios_base::Out &#124; aplikace** stane **"a"** (otevřít existující soubor pro připojování všech zápisů).
+- **ios_base::Out &#124; aplikace** stane **"a"** (otevřít existující soubor pro přidávání všechny operace zápisu).
 
 - **ios_base::in &#124; ios_base::out** stane **"r +"** (otevřít existující soubor pro čtení a zápis).
 
-- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** stane **"w +"** (zkrátit existující soubor nebo vytvořit pro čtení a zápis).
+- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** stane **"w +"** (zkrátit existující soubor nebo vytvořte pro čtení a zápis).
 
-- **ios_base::in &#124; ios_base::out &#124; ios_base::app** stane **"+"** (otevřít existující soubor pro čtení a pro připojování všech zápisů).
+- **ios_base::in &#124; ios_base::out &#124; ios_base::app** stane **"a +"** (otevřít existující soubor pro čtení a pro přidávání všechny operace zápisu).
 
-Pokud **režimu & ios_base::binary** je nenulové hodnoty, připojí funkce **b** k **strmode** otevřete binární datový proud místo textu datového proudu. Poté uloží hodnoty vrácené `fopen` v ukazatele souboru **fp**. Pokud **režimu & ios_base::ate** nenulový a ukazatele souboru není ukazatele null volání funkce `fseek`( **fp**, 0, `SEEK_END`) na pozici datový proud na konci souboru. Pokud tento umísťovací operace selže, volání funkce [zavřete](#close)( **fp**) a ukládá ukazatele null v ukazatele souboru.
+Pokud **režim & ios_base::binary** je nenulovou hodnotu, funkce přidá `b` k `strmode` otevřete binárního datového proudu místo textového datového proudu. Pak uloží hodnotu vrácenou příkazem `fopen` v ukazatel na soubor `fp`. Pokud **režim & ios_base::ate** je nenulový ukazatel na soubor není ukazatel s hodnotou null, volání funkce `fseek`( **fp**, 0, `SEEK_END`) na pozici datový proud na konci souboru. Pokud umístění operace selže, volání funkce [zavřete](#close)( `fp`) a ukládá ukazatel s hodnotou null ukazatel na soubor.
 
-Pokud ukazatele souboru není ukazatele null, funkce určuje omezující vlastnost převod souborů: `use_facet` <  `codecvt` <  **Elem**, `char`, **traits_type –::** [ state_type –](../standard-library/char-traits-struct.md#state_type)>> ( [getloc –](../standard-library/basic-streambuf-class.md#getloc)), za účelem použití [podtečení](#underflow) a [přetečení](#overflow).
+Pokud ukazatel na soubor není ukazatel s hodnotou null, funkce určuje omezující vlastnost převod souboru: `use_facet` <  `codecvt` <  **Elem**, `char`, **traits_type::** [ state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc –](../standard-library/basic-streambuf-class.md#getloc)), používají [podtečení](#underflow) a [přetečení](#overflow).
 
-Pokud je ukazatel souboru ukazatele null, funkce vrátí hodnotu ukazatele null. Funkce **to**.
+Pokud ukazatel souboru je ukazatel s hodnotou null, funkce vrátí ukazatel s hodnotou null. V opačném případě vrátí **to**.
 
 ### <a name="example"></a>Příklad
 
-V tématu [basic_filebuf::close](#close) pro příklad, který používá **otevřete**.
+Zobrazit [basic_filebuf::close](#close) příklad, který používá `open`.
 
 ## <a name="op_eq"></a>  basic_filebuf::Operator =
 
-Přiřazení obsahu tohoto objektu vyrovnávací paměti datového proudu. Toto je přiřazení přesunutí zahrnující rvalue kopii nenechává za sebou.
+Přiřazení obsahu tohoto objektu. datový proud vyrovnávací paměti. Toto je přiřazení pro přesun zahrnující rvalue kopii nenechává za sebou.
 
 ```cpp
 basic_filebuf& operator=(basic_filebuf&& right);
@@ -456,7 +456,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Rvalue odkaz na [basic_filebuf](../standard-library/basic-filebuf-class.md) objektu.
+*správné* odkaz rvalue na [basic_filebuf –](../standard-library/basic-filebuf-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -464,11 +464,11 @@ Vrátí * to.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor členů nahradí obsah objektu s použitím obsah `right`, považován za deklarátor odkazu. Další informace najdete v tématu [Rvalue – deklarátor odkazu: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Členský operátor nahradí obsah objektu s použitím obsah *správné*, považován za odkaz rvalue. Další informace najdete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="overflow"></a>  basic_filebuf::Overflow
 
-Volá se při nové znak je vložen do plné vyrovnávací paměti.
+Volá se, když znak nového je vložen do plné vyrovnávací paměti.
 
 ```cpp
 virtual int_type overflow(int_type _Meta = traits_type::eof);
@@ -476,25 +476,25 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak, který má vložit do vyrovnávací paměti nebo **traits_type::eof**.
+*_Meta* znak, který má vložit do vyrovnávací paměti nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof**. Funkce **traits_type –::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Pokud funkce nemůže být úspěšná, vrátí `traits_type::eof`. V opačném případě vrátí **traits_type::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ * Meta ***! = traits_type –::**[eof](../standard-library/char-traits-struct.md#eof), chráněného člena virtuální funkce endeavors vložení prvku **ch = traits_type –::**[to_char_type –](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) do výstupní vyrovnávací paměť. Můžete tak učinit různými způsoby:
+Pokud _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chcete-li vložit element endeavors chráněná virtuální členská funkce **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) do výstupní vyrovnávací paměť. To lze provést různými způsoby:
 
-- Pokud pozice zápisu je k dispozici, může uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
+- Pokud pozici zápisu je k dispozici, můžete uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 
-- K dispozici na pozici zápisu mohl zajistit přidělí nové nebo další úložiště pro výstupní vyrovnávací paměť.
+- To může zpřístupnit pozici zápisu přidělením nové nebo další úložiště pro výstupní vyrovnávací paměť.
 
-- Může převést všechny čekající výstupu v výstupní vyrovnávací paměť, za nímž následuje **ch**, pomocí omezující vlastnost převod souborů **fac** volat **fac.out** podle potřeby. Každý prvek `ch` typu *char* proto vytvořeného je zapsán do související datový proud určený hodnotou ukazatele souboru **fp** jako Pokud podle následných voláních formuláře `fputc`( **ch**, **fp**). Pokud žádné převod nebo zápis selže, funkce úspěšné.
+- Může převést všechny čekající výstup do výstupní vyrovnávací paměť, za nímž následuje `ch`, s použitím omezující vlastnost převod souboru `fac` volat `fac.out` podle potřeby. Každý prvek `ch` typu *char* tedy vytvořilo se zapisují do přidružené datový proud určený ukazatel na soubor `fp` jako by následných voláních formuláře `fputc`( **ch**, **fp**). Pokud se zápis ani převod nezdaří, funkce selže.
 
 ## <a name="pbackfail"></a>  basic_filebuf::pbackfail
 
-Pokusí se vrátit zpět element do vstupního datového proudu, ujistěte se, jeho aktuálního elementu (ukazuje další ukazatel).
+Se pokusí vrátit elementu do vstupního datového proudu a usnadňují aktuálního elementu (ukazuje další ukazatel).
 
 ```cpp
 virtual int_type pbackfail(int_type _Meta = traits_type::eof);
@@ -502,25 +502,25 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak, který má vložit do vyrovnávací paměti, nebo **traits_type::eof**.
+*_Meta* znak, který má vložit do vyrovnávací paměti, nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof**. Funkce **traits_type –::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Pokud funkce nemůže být úspěšná, vrátí `traits_type::eof`. V opačném případě vrátí **traits_type::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněný člen virtuální funkce element vrátí zpět do vstupní vyrovnávací paměť a pak jej aktuálního elementu (ukazuje další ukazatel). Pokud _ *Meta* **== traits_type –::**[eof](../standard-library/char-traits-struct.md#eof), element tak, aby nabízel zpět je efektivně už v datovém proudu před aktuálního elementu. Jinak je nahrazena daný element **ch = traits_type –::**[to_char_type –](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkce může vrátit zpět element různými způsoby:
+Chráněná virtuální členská funkce vrátí zpět elementu do vstupní vyrovnávací paměť a pak jej aktuálního elementu (ukazuje další ukazatel). Pokud _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkci lze vrátit zpět element různými způsoby:
 
-- Pokud je k dispozici na pozici putback – a element v ní uloženy porovná rovna **ch**, ho můžete snížení další ukazatele pro vstupní vyrovnávací paměť.
+- Pokud putback – pozice je k dispozici a element v ní uloženy při porovnání rovna `ch`, je snížení další ukazatele pro vstupní vyrovnávací paměť.
 
-- Pokud je funkce mohou provádět `putback` pozici k dispozici, můžete tak učinit, nastavte na další ukazatel na pozice a ukládání **ch** v této poloze.
+- Pokud funkce můžete vytvářet `putback` umístění k dispozici, můžete udělat, nastavte další ukazatel tak, aby odkazoval na umístění a uložte `ch` na této pozici.
 
-- Pokud funkce můžete umístěn zpět element vstupního datového proudu, ho můžete to udělat, například voláním `ungetc` pro element typu `char`.
+- Pokud funkce lze odeslat zpět element do vstupního datového proudu, je tak učinit, například voláním `ungetc` pro element typu **char**.
 
 ## <a name="pos_type"></a>  basic_filebuf::pos_type
 
-Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.
+Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se stejným názvem v `Tr` oboru.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -528,7 +528,7 @@ typedef typename traits_type::pos_type pos_type;
 
 ## <a name="seekoff"></a>  basic_filebuf::seekoff
 
-Se pokusí změnit aktuální pozice pro řízené datové proudy.
+Se pokusí změnit aktuální pozice řízené datových proudů.
 
 ```cpp
 virtual pos_type seekoff(off_type _Off,
@@ -538,27 +538,27 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Pozice k vyhledání pro vzhledem k `_Way`.
+*_Off* pozice hledání pro relativně *_Way*.
 
-`_Way` Výchozí bod pro posunutí operace. V tématu [seekdir –](../standard-library/ios-base-class.md#seekdir) pro možné hodnoty.
+*_Way* výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-`_Which` Určuje režim pro umístění ukazatele. Ve výchozím nastavení se vám umožní změnit čtení a zápis pozic.
+*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí nový pozici nebo pozice neplatný datový proud.
+Vrátí novou pozici nebo pozice neplatný datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněný člen virtuální funkce endeavors ke změně aktuální pozice pro řízené datové proudy. Pro objekt třídy [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, pozice datového proudu může být reprezentovaný objektem typu `fpos_t`, která ukládá posun a musel žádné informace o stavu analyzovat širokou datového proudu. Posunutí nula označí první prvek datového proudu. (Objekt typu [pos_type –](../standard-library/basic-streambuf-class.md#pos_type) ukládá alespoň k `fpos_t` objektu.)
+Chráněná virtuální členská funkce endeavors ke změně aktuální pozice řízené datových proudů. Pro objekt třídy [basic_filebuf –](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, pozici v datovém proudu lze znázornit v objektu typu `fpos_t`, která ukládá posun a bylo nutné žádné informace o stavu analyzovat širokou datového proudu. Posunutí nula označí první prvek datového proudu. (Objekt typu [pos_type](../standard-library/basic-streambuf-class.md#pos_type) ukládá alespoň `fpos_t` objektu.)
 
-Pro soubor otevřít pro čtení a zápis jsou obě vstupní a výstupní datové proudy umístěný v kombinaci. Přepínat mezi vkládání a extrahování, musí volat buď [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff) nebo [pubseekpos –](../standard-library/basic-streambuf-class.md#pubseekpos). Volání `pubseekoff` (a tím i k `seekoff`) mají různé omezení pro [textové datové proudy](../c-runtime-library/text-and-binary-streams.md), [binární proudy](../c-runtime-library/text-and-binary-streams.md), a [široké proudy](../c-runtime-library/byte-and-wide-streams.md).
+Pro soubor otevřen pro čtení a zápis vstupní a výstupní streamy jsou umístěny v kombinaci. Chcete-li přepnout mezi vkládání a extrahování, musí volat buď [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff) nebo [pubseekpos –](../standard-library/basic-streambuf-class.md#pubseekpos). Volání `pubseekoff` (a tedy do `seekoff`) mají různá omezení pro [textové datové proudy](../c-runtime-library/text-and-binary-streams.md), [binární datové proudy](../c-runtime-library/text-and-binary-streams.md), a [široké proudy](../c-runtime-library/byte-and-wide-streams.md).
 
-Pokud ukazatele souboru **fp** je ukazatel s hodnotou null, funkce selže. Jinak ji endeavors ke změně pozice datového proudu voláním `fseek`( **fp**, `_Off`, `_Way`). Pokud se podaří této funkce a výsledný pozice **fposn** voláním se dá určit `fgetpos`( **fp**, **& fposn**), funkce úspěšné. Pokud funkci úspěšné, vrátí hodnotu typu **pos_type –** obsahující **fposn**. Jinak vrátí pozici neplatný datový proud.
+Pokud se ukazatel na soubor `fp` je ukazatel s hodnotou null, funkce selže. V opačném případě endeavors změnit pozici v datovém proudu voláním `fseek`( **fp**, `_Off`, `_Way`). Pokud funkce uspěje a výsledné umístění `fposn` se dají určit pomocí volání `fgetpos`( **fp**, **& fposn**), funkce úspěšná. Pokud je funkce úspěšná, vrátí hodnotu typu `pos_type` obsahující `fposn`. V opačném případě vrátí pozici neplatný datový proud.
 
 ## <a name="seekpos"></a>  basic_filebuf::seekpos
 
-Se pokusí změnit aktuální pozice pro řízené datové proudy.
+Se pokusí změnit aktuální pozice řízené datových proudů.
 
 ```cpp
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
@@ -566,25 +566,25 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-`_Sp` Pozice k vyhledání pro.
+*_Sp* pozici k vyhledání pro.
 
-`_Which` Určuje režim pro umístění ukazatele. Ve výchozím nastavení se vám umožní změnit čtení a zápis pozic.
+*_Which* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud ukazatele souboru **fp** je ukazatel s hodnotou null, funkce selže. Jinak ji endeavors ke změně pozice datového proudu voláním `fsetpos`( **fp**, **& fposn**), kde **fposn** je `fpos_t` objektu uloženého ve `pos`. Pokud bude úspěšné této funkce, funkce vrátí hodnotu `pos`. Jinak vrátí pozici neplatný datový proud. Pokud chcete zjistit, pokud pozice datový proud je neplatný, porovnat návratovou hodnotu s `pos_type(off_type(-1))`.
+Pokud se ukazatel na soubor `fp` je ukazatel s hodnotou null, funkce selže. V opačném případě endeavors změnit pozici v datovém proudu voláním `fsetpos`( **fp**, **& fposn**), kde `fposn` je `fpos_t` objekt uložený v `pos`. Pokud funkce uspěje, funkce vrátí `pos`. V opačném případě vrátí pozici neplatný datový proud. Chcete-li zjistit, zda pozici v datovém proudu je neplatný, porovnejte návratovou hodnotu s `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněný člen virtuální funkce endeavors ke změně aktuální pozice pro řízené datové proudy. Pro objekt třídy [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>, pozice datového proudu může být reprezentovaný objektem typu `fpos_t`, která ukládá Posun a žádné informace o stavu, který je potřeba analyzovat širokou datového proudu. Posunutí nula označí první prvek datového proudu. (Objekt typu `pos_type` ukládá alespoň k `fpos_t` objektu.)
+Chráněná virtuální členská funkce endeavors ke změně aktuální pozice řízené datových proudů. Pro objekt třídy [basic_filebuf –](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>, pozici v datovém proudu lze znázornit v objektu typu `fpos_t`, které obchody Posun a žádné informace o stavu potřebné analyzovat širokou datového proudu. Posunutí nula označí první prvek datového proudu. (Objekt typu `pos_type` ukládá alespoň `fpos_t` objektu.)
 
-Pro soubor otevřít pro čtení a zápis jsou obě vstupní a výstupní datové proudy umístěný v kombinaci. Přepínat mezi vkládání a extrahování, musí volat buď [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff) nebo [pubseekpos –](../standard-library/basic-streambuf-class.md#pubseekpos). Volání `pubseekoff` (a tím i k `seekoff`) mají různé omezení pro textové datové proudy, binární datové proudy a široké proudy.
+Pro soubor otevřen pro čtení a zápis vstupní a výstupní streamy jsou umístěny v kombinaci. Chcete-li přepnout mezi vkládání a extrahování, musí volat buď [pubseekoff –](../standard-library/basic-streambuf-class.md#pubseekoff) nebo [pubseekpos –](../standard-library/basic-streambuf-class.md#pubseekpos). Volání `pubseekoff` (a tedy na `seekoff`) mají různé omezení pro textové datové proudy, binární datové proudy a široké proudy.
 
-Pro celou datového proudu, pokud žádné vložení došlo od datový proud byl otevřen nebo od posledního volání `streampos`, volání funkce [přetečení](#overflow). Také vloží všechny pořadí potřebné k obnovení stavu počáteční převod pomocí omezující vlastnost převod souborů **fac** volat **fac** `.unshift` podle potřeby. Každý prvek **bajtů** typu `char` proto vytvořeného je zapsán do související datový proud určený hodnotou ukazatele souboru **fp** jako Pokud podle následných voláních formuláře `fputc`( **bajtů**, **fp**). Pokud volání **fac.unshift** nebo žádné zápisu selže, funkce neproběhne úspěšně.
+Pro celou datového proudu, pokud žádné vložení došlo od datový proud byl otevřen nebo od posledního volání `streampos`, volání funkce [přetečení](#overflow). Také vloží jakékoli sekvenci potřebné k obnovení stavu počáteční převod pomocí omezující vlastnost převod souboru `fac` volat **fac** `.unshift` podle potřeby. Každý prvek `byte` typu **char** tedy vytvořilo se zapisují do přidružené datový proud určený ukazatel na soubor `fp` jako by následných voláních formuláře `fputc`( **bajtů**, **fp**). Pokud volání `fac.unshift` nebo jakékoli zápisu selže, funkce selže.
 
 ## <a name="setbuf"></a>  basic_filebuf::setbuf
 
-Provede konkrétní operace do vyrovnávací paměti jednotlivých odvozené datového proudu.
+Provádí konkrétní operace pro každou odvozené datový proud vyrovnávací paměti.
 
 ```cpp
 virtual basic_streambuf<Elem, Tr> *setbuf(
@@ -594,21 +594,21 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-`_Buffer` Ukazatel na vyrovnávací paměti.
+*_Buffer* ukazatel do vyrovnávací paměti.
 
-`count` Velikost vyrovnávací paměti.
+*počet* velikost vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Chráněný člen funkce vrátí hodnotu nula v případě ukazatele souboru `fp` je ukazatel s hodnotou null.
+Chráněná členská funkce vrátí nula, pokud ukazatel na soubor `fp` je ukazatel s hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-`setbuf` volání `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**)) a nabídnout pole z `count` elementy začínající na _ *vyrovnávací paměti* jako vyrovnávací paměť pro datový proud. Pokud tento funkce vrátí nenulovou hodnotu, funkce vrátí hodnotu ukazatele null. Funkce **to** na úspěšné provedení signál.
+`setbuf` volání `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**)) nabízí pole z `count` prvky počínaje _ *vyrovnávací paměti* jako vyrovnávací paměť pro datový proud. Pokud tato funkce vrátí nenulovou hodnotu, funkce vrátí ukazatel s hodnotou null. V opačném případě vrátí **to** na úspěšné provedení signálu.
 
 ## <a name="swap"></a>  basic_filebuf::swap
 
-Obsah tohoto výměny `basic_filebuf` pro obsah ze zadaných `basic_filebuf`.
+Vyměňuje obsahy to `basic_filebuf` pro obsah ze zadaných `basic_filebuf`.
 
 ```cpp
 void swap(basic_filebuf& right);
@@ -616,11 +616,11 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `lvalue` Odkaz na jiný `basic_filebuf`.
+*správné* `lvalue` odkaz na jiný `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::Sync
 
-Pokusí se synchronizovat řízené datové proudy s všechny přidružené externí datové proudy.
+Se pokusí o synchronizaci řízené datové proudy s jakékoli přidružené externích datových proudů.
 
 ```cpp
 virtual int sync();
@@ -628,11 +628,11 @@ virtual int sync();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí nula v případě ukazatele souboru **fp** je ukazatel s hodnotou null. Funkce nula pouze v případě volá na obojí [přetečení](#overflow) a `fflush`( **fp**) nepodaří vyprázdnění žádný výstup čekající na datový proud.
+Nula v případě vrátí ukazatel na soubor `fp` je ukazatel s hodnotou null. V opačném případě vrátí nula, pouze pokud volá i [přetečení](#overflow) a `fflush`( **fp**) podaří vyprázdnění všechny čekající výstup do datového proudu.
 
 ## <a name="traits_type"></a>  basic_filebuf::traits_type
 
-Přidruží název typu s **Tr** parametr šablony.
+Přidruží název typu se `Tr` parametr šablony.
 
 ```cpp
 typedef Tr traits_type;
@@ -648,19 +648,19 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof). Funkce **ch**, převedený, jak je popsáno v části poznámky.
+Pokud funkce nemůže být úspěšná, vrátí **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). V opačném případě vrátí `ch`, převedený, jak je popsáno v oddílu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněný člen virtuální funkce endeavors k extrakci aktuálního elementu **ch** ze vstupu stream a vrátí prvek jako **traits_type –::**[to_int_type –](../standard-library/char-traits-struct.md#to_int_type)() **ch**). Můžete tak učinit různými způsoby:
+Chráněná virtuální členská funkce endeavors extrahovat aktuálního elementu `ch` ze vstupní datový proud stream a vrátí prvek jako **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`). To lze provést různými způsoby:
 
-- Pokud je k dispozici pro čtení pozice, trvá **ch** jako element uložené ve čtení pozici a přejde na další ukazatele pro vstupní vyrovnávací paměť.
+- Pokud je k dispozici pozici pro čtení, trvá `ch` jako element uložené v pozici pro čtení a přejde na další ukazatele pro vstupní vyrovnávací paměť.
 
-- Může zobrazit jeden či více elementů typu `char`, jako kdyby podle následných voláních formuláře `fgetc`(**fp**) a je převést na element **ch** typu **Elem**pomocí fac omezující vlastnost převod souborů k vyvolání **fac.in** podle potřeby. Pokud se všechny pro čtení nebo převod nezdaří, funkce úspěšné.
+- Může zobrazit jeden nebo více prvků typu **char**, jako při následných voláních formuláře `fgetc`(**fp**) a převést je na prvek **ch** typu `Elem`pomocí fac omezující vlastnost převod souboru volat `fac.in` podle potřeby. Pokud se čtení ani převod nezdaří, funkce selže.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<fstream >](../standard-library/fstream.md)<br/>
+[\<fstream – >](../standard-library/fstream.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>
 [iostreams – konvence](../standard-library/iostreams-conventions.md)<br/>

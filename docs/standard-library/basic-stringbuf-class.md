@@ -1,5 +1,5 @@
 ---
-title: basic_stringbuf – třída | Microsoft Docs
+title: basic_stringbuf – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7ec812ffeb50e83d59df764224ed9dcdaf07d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956140"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf – třída
 
-Popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu `Elem`, jehož vlastnosti znak určuje třídu `Tr`, do a z pořadí prvků, které jsou uložené v objektu array.
+Popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky typu `Elem`, jehož vlastnosti znaků určuje třídu `Tr`, do a z pořadí prvků, které jsou uloženy v objektu array.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,21 +61,21 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-`Alloc` Allocator – třída.
+*ALLOC* třídu alokátoru.
 
-`Elem` Typ elementu základní řetězce.
+*Elem* typ základního elementu řetězce.
 
-`Tr` Vlastnosti znak specializované na základní prvek řetězce.
+*Tr* vlastností specializované na základního elementu řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt je přidělené, Rozšířená a vydání podle potřeby pro přizpůsobení změny v pořadí.
+Objekt je přidělené, rozšířit a uvolnění podle potřeby a vyřešit tak změny v pořadí.
 
-Objekt basic_stringbuf – třída < `Elem`, `Tr`, `Alloc`> ukládá kopie `ios_base::` [openmode –](../standard-library/ios-base-class.md#openmode) argument ze svého konstruktoru jako jeho `stringbuf` režimu **režimu** :
+Objekt basic_stringbuf – třída < `Elem`, `Tr`, `Alloc`> ukládá kopie `ios_base::` [openmode](../standard-library/ios-base-class.md#openmode) argument ze svého konstruktoru jako jeho `stringbuf` režimu **režimu** :
 
-- Pokud `mode & ios_base::in` je nenulové hodnoty, vstupní vyrovnávací paměť je přístupný. Další informace najdete v tématu [basic_streambuf – třída](../standard-library/basic-streambuf-class.md).
+- Pokud `mode & ios_base::in` je nenulová, vstupní vyrovnávací paměť je přístupný. Další informace najdete v tématu [basic_streambuf – třída](../standard-library/basic-streambuf-class.md).
 
-- Pokud `mode & ios_base::out` je nenulové hodnoty, výstupní vyrovnávací paměť je přístupný.
+- Pokud `mode & ios_base::out` je nenulová, výstupní vyrovnávací paměť je přístupný.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -87,34 +87,34 @@ Objekt basic_stringbuf – třída < `Elem`, `Tr`, `Alloc`> ukládá kopie `ios_
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type –](#allocator_type)|Typ je synonymum pro parametr šablony `Alloc`.|
-|[char_type](#char_type)|Přidruží název typu s `Elem` parametr šablony.|
-|[int_type](#int_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
-|[off_type –](#off_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
-|[pos_type](#pos_type)|Umožňuje v rámci tohoto typu `basic_filebuf`je ekvivalentem typu se stejným názvem v oboru `Tr` oboru.|
-|[traits_type](#traits_type)|Přidruží název typu s `Tr` parametr šablony.|
+|[allocator_type](#allocator_type)|Typ je synonymum pro parametr šablony *alokační*.|
+|[char_type](#char_type)|Přidruží název typu se *Elem* parametr šablony.|
+|[int_type](#int_type)|Vytvoří tento typ v rámci `basic_filebuf`společnosti ekvivalentem typu se stejným názvem v oboru *Tr* oboru.|
+|[off_type](#off_type)|Vytvoří tento typ v rámci `basic_filebuf`společnosti ekvivalentem typu se stejným názvem v oboru *Tr* oboru.|
+|[pos_type](#pos_type)|Vytvoří tento typ v rámci `basic_filebuf`společnosti ekvivalentem typu se stejným názvem v oboru *Tr* oboru.|
+|[traits_type](#traits_type)|Přidruží název typu se *Tr* parametr šablony.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Přetečení](#overflow)|Chráněné, virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.|
-|[pbackfail –](#pbackfail)|Funkce chráněného člena virtuální se pokusí vrátit zpět element do vstupní vyrovnávací paměť, pak umožňuje aktuálního elementu (ukazuje další ukazatel).|
-|[seekoff –](#seekoff)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|
-|[seekpos –](#seekpos)|Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.|
-|[str –](#str)|Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.|
+|[přetečení](#overflow)|Chráněná, virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
+|[pbackfail –](#pbackfail)|Funkce chráněná virtuální členská se pokusí vrátit elementu do vstupní vyrovnávací paměť, pak díky aktuálního elementu (ukazuje další ukazatel).|
+|[seekoff –](#seekoff)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[seekpos –](#seekpos)|Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.|
+|[str](#str)|Nastaví nebo získá text ve vyrovnávací paměti řetězce beze změny pozici zápisu.|
 |swap||
-|[podtečení](#underflow)|Chráněný člen virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.|
+|[podtečení](#underflow)|Chráněná virtuální členská funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<sstream – >
+**Záhlaví:** \<sstream >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="allocator_type"></a>  basic_stringbuf::allocator_type
 
-Typ je synonymum pro parametr šablony `Alloc`.
+Typ je synonymum pro parametr šablony *alokační*.
 
 ```cpp
 typedef Alloc allocator_type;
@@ -135,19 +135,19 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parametry
 
-`_Mode` Jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m* jeden z výčtů ve [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-`str` Objekt typu [basic_string](../standard-library/basic-string-class.md).
+*Str* objekt typu [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor ukládá ukazatele null v následující ukazatele řízení vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Další informace najdete v části poznámky [basic_streambuf – třída](../standard-library/basic-streambuf-class.md). Ukládá také `_Mode` stringbuf – režim. Další informace najdete v části poznámky [basic_stringbuf – třída](../standard-library/basic-stringbuf-class.md).
+První konstruktor uloží ukazatel s hodnotou null v všechny ukazatele řízení vstupní vyrovnávací paměť a výstupní vyrovnávací paměť. Další informace najdete v části poznámky [basic_streambuf – třída](../standard-library/basic-streambuf-class.md). Také ukládá *reži_m* stringbuf režim. Další informace najdete v části poznámky [basic_stringbuf – třída](../standard-library/basic-stringbuf-class.md).
 
-Druhý konstruktor přiděluje kopii pořadí řízené objekt řetězce `str`. Pokud `_Mode & ios_base::in` je nenulové hodnoty, nastaví vstupní vyrovnávací paměť zahájíte čtení při spuštění pořadí. Pokud `_Mode & ios_base::out` je nenulové hodnoty, nastaví výstupní vyrovnávací paměť má začít zapisovat na začátku pořadí. Ukládá také `_Mode` stringbuf – režim. Další informace najdete v části poznámky [basic_stringbuf – třída](../standard-library/basic-stringbuf-class.md).
+Druhý konstruktor přiděluje kopii sekvence řízenou objektem řetězce *str*. Pokud `_Mode & ios_base::in` je nenulová, nastaví vstupní vyrovnávací paměť čtení na začátek pořadí spuštění. Pokud `_Mode & ios_base::out` je nenulová, nastaví výstupní vyrovnávací paměť má začít zapisovat na začátek pořadí. Také ukládá *reži_m* stringbuf režim. Další informace najdete v části poznámky [basic_stringbuf – třída](../standard-library/basic-stringbuf-class.md).
 
 ## <a name="char_type"></a>  basic_stringbuf::char_type
 
-Přidruží název typu s **Elem** parametr šablony.
+Přidruží název typu se *Elem* parametr šablony.
 
 ```cpp
 typedef Elem char_type;
@@ -155,7 +155,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a>  basic_stringbuf::int_type
 
-Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.
+Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se stejným názvem v `Tr` oboru.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -163,7 +163,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a>  basic_stringbuf::off_type
 
-Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.
+Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se stejným názvem v `Tr` oboru.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -171,7 +171,7 @@ typedef typename traits_type::off_type off_type;
 
 ## <a name="overflow"></a>  basic_stringbuf::Overflow
 
-Chráněné virtuální funkce, která lze volat, když nové znak je vložen do plné vyrovnávací paměti.
+Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.
 
 ```cpp
 virtual int_type overflow(int_type _Meta = traits_type::eof());
@@ -179,23 +179,23 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak, který má vložit do vyrovnávací paměti, nebo **traits_type::eof**.
+*_Meta* znak, který má vložit do vyrovnávací paměti, nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof**. Funkce **traits_type –::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Pokud funkce nemůže být úspěšná, vrátí `traits_type::eof`. V opačném případě vrátí **traits_type::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ *Meta* porovnat není rovno **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof), chráněného člena virtuální funkce pokusí vložit element **traits_type –::** [ to_char_type –](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do výstupní vyrovnávací paměť. Můžete tak učinit různými způsoby:
+Pokud _ *Meta* není výsledkem porovnání **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chráněná virtuální členská funkce se pokusí vložit element **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do výstupní vyrovnávací paměť. To lze provést různými způsoby:
 
-- Pokud pozice zápisu je k dispozici, může uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
+- Pokud pozici zápisu je k dispozici, můžete uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 
-- K dispozici na pozici zápisu mohl zajistit přidělí nové nebo další úložiště pro výstupní vyrovnávací paměť. Rozšíření výstupní vyrovnávací paměť tímto způsobem taky ji rozšiřuje na všechny přidružené vstupní vyrovnávací paměť.
+- To může zpřístupnit pozici zápisu přidělením nové nebo další úložiště pro výstupní vyrovnávací paměť. Rozšíření do vyrovnávací paměti výstupních tímto způsobem rozšiřuje také všechny přidružené vstupní vyrovnávací paměť.
 
 ## <a name="pbackfail"></a>  basic_stringbuf::pbackfail
 
-Chráněný člen virtuální funkce se pokusí vrátit zpět element do vstupní vyrovnávací paměť a proveďte aktuálního elementu (ukazuje další ukazatel).
+Chráněná virtuální členská funkce se pokusí vrátit elementu do vstupní vyrovnávací paměť a nastavte ji aktuálního elementu (ukazuje další ukazatel).
 
 ```cpp
 virtual int_type pbackfail(int_type _Meta = traits_type::eof());
@@ -203,23 +203,23 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-`_Meta` Znak, který má vložit do vyrovnávací paměti, nebo **traits_type::eof**.
+*_Meta* znak, který má vložit do vyrovnávací paměti, nebo `traits_type::eof`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof**. Funkce **traits_type –::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Pokud funkce nemůže být úspěšná, vrátí `traits_type::eof`. V opačném případě vrátí **traits_type::**[not_eof –](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `_Meta` porovná rovno **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof), element tak, aby nabízel zpět je efektivně už v datovém proudu před aktuálního elementu. Jinak je nahrazena daný element **bajtů** = **traits_type –::**[to_char_type –](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). Funkce může vrátit zpět element různými způsoby:
+Pokud *_Meta* porovná rovno **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek **bajtů** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). Funkci lze vrátit zpět element různými způsoby:
 
-- Pokud je k dispozici na pozici putback – a element v ní uloženy porovná rovna bajtů, je snížení další ukazatele pro vstupní vyrovnávací paměť.
+- Pokud putback – pozice je k dispozici a element v ní uloženy při porovnání rovna bajtů, je snížení další ukazatele pro vstupní vyrovnávací paměť.
 
-- Pokud pozice putback – je k dispozici, a pokud stringbuf – režim umožňuje pořadí upravit ( **režimu & ios_base::out** nenulový), můžete ukládat bajtů do pozice putback – a snížení další ukazatele pro vstupní vyrovnávací paměť.
+- Pokud putback – pozice je k dispozici, a pokud stringbuf režim umožňuje sekvence má být změněn ( **režim & ios_base::out** je nenulový), může ukládat bajt na pozici putback – a snížení další ukazatele pro vstupní vyrovnávací paměť.
 
 ## <a name="pos_type"></a>  basic_stringbuf::pos_type
 
-Umožňuje tento typ v rámci oboru basic_filebuf je ekvivalentem typu se stejným názvem v **Tr** oboru.
+Vytvoří tento typ v rámci oboru basic_filebuf – od ekvivalentem typu se stejným názvem v `Tr` oboru.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -227,7 +227,7 @@ typedef typename traits_type::pos_type pos_type;
 
 ## <a name="seekoff"></a>  basic_stringbuf::seekoff
 
-Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.
+Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.
 
 ```cpp
 virtual pos_type seekoff(
@@ -238,35 +238,35 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Pozice k vyhledání pro vzhledem k `_Way`. Další informace najdete v tématu [basic_stringbuf::off_type](#off_type).
+*_Off* pozice hledání pro relativně *_Way*. Další informace najdete v tématu [basic_stringbuf::off_type](#off_type).
 
-`_Way` Výchozí bod pro posunutí operace. V tématu [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) pro možné hodnoty.
+*_Way* výchozí bod pro operace. Zobrazit [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
 
-`_Mode` Určuje režim pro umístění ukazatele. Ve výchozím nastavení se vám umožní změnit čtení a zápis pozic. Další informace najdete v tématu [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Reži_m* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic. Další informace najdete v tématu [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí nový pozici nebo pozice neplatný datový proud.
+Vrátí novou pozici nebo pozice neplatný datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro objekt třídy `basic_stringbuf<Elem, Tr, Alloc>`, pozice datového proudu se skládá výhradně z posun datového proudu. Posunutí nula označí první prvek řízené sekvenci.
+Pro objekt třídy `basic_stringbuf<Elem, Tr, Alloc>`, pozici v datovém proudu se skládá ze čistě posun datového proudu. Posunutí nula označí první prvek řízené sekvence.
 
-Nové místo je stanoven následujícím způsobem:
+Na nové pozici je stanoven následujícím způsobem:
 
-- Pokud `_Way`  ==  `ios_base::beg`, začátku plus datového proudu se nové pozice `_Off`.
+- Pokud `_Way`  ==  `ios_base::beg`, na nové pozici je začátku datového proudu plus *_Off*.
 
-- Pokud `_Way`  ==  `ios_base::cur`, aktuální pozici datového proudu se nové pozice plus `_Off`.
+- Pokud `_Way`  ==  `ios_base::cur`, na nové pozici, je aktuální pozici v datovém proudu plus *_Off*.
 
-- Pokud `_Way`  ==  `ios_base::end`, nové pozice se konec datového proudu plus `_Off`.
+- Pokud `_Way`  ==  `ios_base::end`, na nové pozici je konec datového proudu plus *_Off*.
 
-Pokud `_Mode & ios_base::in` je nenulové hodnoty, funkce mění další pozice číst vstupní vyrovnávací paměti. Pokud `_Mode & ios_base::out` je nenulové hodnoty, funkce mění další pozice se zapisovat do výstupní vyrovnávací paměť. Pro datový proud má pravděpodobně musí existovat jeho vyrovnávací paměti. Umísťovací operace úspěšná výsledný datový proud pozice musí ležet v řízené sekvenci. Pokud funkce ovlivní obě pozice datového proudu `_Way` musí být `ios_base::beg` nebo `ios_base::end` a oba datové proudy, které jsou umístěny v stejného elementu. V opačném případě (nebo pokud je ovlivněno ani pozice), umísťovací operace selže.
+Pokud `_Mode & ios_base::in` je nenulová, změní funkci na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Mode & ios_base::out` je nenulová, změní funkci na další pozici pro zápis do výstupní vyrovnávací paměť. Pro datový proud bude ovlivněná musí existovat vyrovnávací paměti. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu. Pokud funkce ovlivní obě pozice datového proudu *_Way* musí být `ios_base::beg` nebo `ios_base::end` a oba datové proudy jsou umístěny v stejného elementu. V opačném případě (nebo pokud je ovlivněno ani umístění), umístění nezdaří.
 
-Pokud funkci podaří změna jedné nebo obou pozic datového proudu, vrátí pozici výsledné datového proudu. Jinak selže a vrátí pozici neplatný datový proud.
+Pokud je funkce úspěšná v změna jednu nebo obě z pozice datového proudu, vrátí pozici výsledný datový proud. V opačném případě selže a vrátí pozici neplatný datový proud.
 
 ## <a name="seekpos"></a>  basic_stringbuf::seekpos
 
-Chráněný člen virtuální funkce se pokusí změnit aktuální pozice pro řízené datové proudy.
+Chráněná virtuální členská funkce se pokusí změnit aktuální pozice řízené datových proudů.
 
 ```cpp
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in | ios_base::out);
@@ -274,23 +274,23 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Parametry
 
-`_Sp` Pozice k vyhledání pro.
+*_Sp* pozici k vyhledání pro.
 
-`_Mode` Určuje režim pro umístění ukazatele. Ve výchozím nastavení se vám umožní změnit čtení a zápis pozic.
+*Reži_m* Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkci podaří změna jedné nebo obou pozic datového proudu, vrátí pozici výsledné datového proudu. Jinak selže a vrátí pozici neplatný datový proud. Pokud chcete zjistit, pokud pozice datový proud je neplatný, porovnat návratovou hodnotu s `pos_type(off_type(-1))`.
+Pokud je funkce úspěšná v změna jednu nebo obě z pozice datového proudu, vrátí pozici výsledný datový proud. V opačném případě selže a vrátí pozici neplatný datový proud. Chcete-li zjistit, zda pozici v datovém proudu je neplatný, porovnejte návratovou hodnotu s `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro objekt basic_stringbuf – třída < **Elem**, **Tr**, `Alloc`>, pozice datového proudu se skládá výhradně z posun datového proudu. Posunutí nula označí první prvek řízené sekvenci. Nové místo je dáno _ *Sp*.
+Basic_stringbuf – třída objektu < **Elem**, **Tr**, `Alloc`>, pozici v datovém proudu se skládá ze čistě posun datového proudu. Posunutí nula označí první prvek řízené sekvence. Nové umístění je určeno _ *Sp*.
 
-Pokud **režimu & ios_base::in** je nenulové hodnoty, funkce mění další pozice číst vstupní vyrovnávací paměti. Pokud **režimu & ios_base::out** je nenulové hodnoty, funkce mění další pozice se zapisovat do výstupní vyrovnávací paměť. Pro datový proud má pravděpodobně musí existovat jeho vyrovnávací paměti. Umísťovací operace úspěšná výsledný datový proud pozice musí ležet v řízené sekvenci. V opačném případě (nebo pokud je ovlivněno ani pozice), umísťovací operace selže.
+Pokud **režim & ios_base::in** je nenulová, změní funkci na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud **režim & ios_base::out** je nenulová, změní funkci na další pozici pro zápis do výstupní vyrovnávací paměť. Pro datový proud bude ovlivněná musí existovat vyrovnávací paměti. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu. V opačném případě (nebo pokud je ovlivněno ani umístění), umístění nezdaří.
 
 ## <a name="str"></a>  basic_stringbuf::str
 
-Nastaví nebo získá beze změny na pozici zápis textu do vyrovnávací paměti řetězců.
+Nastaví nebo získá text ve vyrovnávací paměti řetězce beze změny pozici zápisu.
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
@@ -300,23 +300,23 @@ void str(
 
 ### <a name="parameters"></a>Parametry
 
-`_Newstr` Nový řetězec.
+*_Newstr* nový řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt třídy [basic_string](../standard-library/basic-string-class.md) \< **Elem**, **Tr**, alokační **>,** jejichž řízené sekvenci je kopie pořadí řízené  **\*to**.
+Vrátí objekt třídy [basic_string](../standard-library/basic-string-class.md) \< **Elem**, **Tr**, alokační **>,** jehož řízené sekvence je kopie řídí pořadí  **\*to**.
 
 ### <a name="remarks"></a>Poznámky
 
-První člen funkce vrátí objekt basic_string – třída < **Elem**, **Tr**, `Alloc`>, jejíž řízené sekvenci je kopii pořadí řízené  **\*to**. Pořadí zkopírovat závisí na režimu uložené stringbuf –:
+První členská funkce vrátí objekt třídy basic_string < **Elem**, **Tr**, `Alloc`>, jehož kopii sekvence řízenou parametrem je řízené sekvence  **\*to**. Pořadí zkopírovat závisí na uložených stringbuf režimu:
 
-- Pokud **režimu & ios_base::out** nenulový a existuje výstupní vyrovnávací paměť, sekvenci celý výstupní vyrovnávací paměť ( [epptr –](../standard-library/basic-streambuf-class.md#epptr) - [pbase –](../standard-library/basic-streambuf-class.md#pbase) elementy od s `pbase`).
+- Pokud **režim & ios_base::out** je nenulová a výstupní mezipaměti existuje, sekvence je celý výstupní vyrovnávací paměť ( [epptr –](../standard-library/basic-streambuf-class.md#epptr) - [pbase –](../standard-library/basic-streambuf-class.md#pbase) prvků od s `pbase`).
 
-- Pokud **režimu & ios_base::in** nenulový a existuje vstupní vyrovnávací paměť, sekvenci celý vstupní vyrovnávací paměť ( [egptr –](../standard-library/basic-streambuf-class.md#egptr) - [eback –](../standard-library/basic-streambuf-class.md#eback) elementy počínaje `eback`).
+- Pokud **režim & ios_base::in** je nenulová a vstupní vyrovnávací paměť existuje, sekvence je celý vstupní vyrovnávací paměť ( [egptr –](../standard-library/basic-streambuf-class.md#egptr) - [eback –](../standard-library/basic-streambuf-class.md#eback) prvky počínaje `eback`).
 
-- Zkopírovaný pořadí, jinak hodnota je prázdná.
+- V opačném případě zkopírovaný pořadí je prázdný.
 
-Druhý členská funkce zruší přidělení žádné pořadí aktuálně řízené  **\*to**. Potom přiděluje kopii pořadí řízené `_Newstr`. Pokud **režimu & ios_base::in** je nenulové hodnoty, nastaví vstupní vyrovnávací paměť k začít číst od začátku pořadí. Pokud **režimu & ios_base::out** je nenulové hodnoty, nastaví výstupní vyrovnávací paměť zahájíte zápis na začátek pořadí.
+Druhá členská funkce uvolní všechny pořadí, v současnosti řízeno  **\*to**. Potom přiděluje kopii sekvence řízenou parametrem *_Newstr*. Pokud **režim & ios_base::in** je nenulová, nastaví vstupní vyrovnávací paměť čtení na začátek pořadí spuštění. Pokud **režim & ios_base::out** je nenulová, nastaví do vyrovnávací paměti výstupních začít psát na začátek pořadí.
 
 ### <a name="example"></a>Příklad
 
@@ -352,7 +352,7 @@ be
 
 ## <a name="traits_type"></a>  basic_stringbuf::traits_type
 
-Přidruží název typu s **Tr** parametr šablony.
+Přidruží název typu se *Tr* parametr šablony.
 
 ```cpp
 typedef Tr traits_type;
@@ -360,11 +360,11 @@ typedef Tr traits_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **Tr**.
+Typ je synonymum pro parametr šablony *Tr*.
 
 ## <a name="underflow"></a>  basic_stringbuf::underflow
 
-Chráněný, virtuální funkce k extrakci aktuálního elementu ze vstupního datového proudu.
+Chráněná, virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.
 
 ```cpp
 virtual int_type underflow();
@@ -372,15 +372,15 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí **traits_type –::**[eof](../standard-library/char-traits-struct.md#eof). Funkce aktuálního elementu ve vstupní datový proud, který se převedou.
+Pokud funkce nemůže být úspěšná, vrátí **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). V opačném případě vrátí aktuálního elementu ve vstupní datový proud, které jsou převedeny.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněný člen virtuální funkce pokusí extrahovat aktuálního elementu **bajtů** ze vstupní vyrovnávací paměť, přechodu na aktuální pozici datového proudu a vrátí prvek jako **traits_type –::**[na _int_type](../standard-library/char-traits-struct.md#to_int_type)( **bajtů**). Je to lze provést jedním způsobem: na pozici pro čtení je k dispozici, pak má **bajtů** jako element uložené ve čtení pozici a přejde na další ukazatele pro vstupní vyrovnávací paměť.
+Chráněná virtuální členská funkce se pokusí extrahovat aktuálního elementu `byte` ze vstupní vyrovnávací paměť, přejděte aktuální pozici v datovém proudu a vrátí prvek jako **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bajtů**). To lze provést jedním ze způsobů: Pokud je k dispozici pozici pro čtení, trvá `byte` jako element uložené v pozici pro čtení a přejde na další ukazatele pro vstupní vyrovnávací paměť.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 
-Zamění obsah této vyrovnávací paměti řetězců s jinou vyrovnávací paměti.
+Zamění obsah této vyrovnávací paměti řetězce s jinou vyrovnávací paměti řetězce.
 
 ```cpp
 void basic_stringbuf<T>::swap(basic_stringbuf& other)
@@ -388,13 +388,13 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parametry
 
-`other` Basic_stringbuf jejichž obsah se vzájemně zaměněny s Tento basic_stringbuf.
+*Další* basic_stringbuf – jehož obsah se Prohodit s této basic_stringbuf –.
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="op_eq"></a>  basic_stringbuf::Operator =
 
-Obsah basic_stringbuf na pravé straně operátoru přiřadí basic_stringbuf na levé straně.
+Přiřadí obsah basic_stringbuf – na pravé straně operátoru basic_stringbuf – na levé straně.
 
 ```cpp
 basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
@@ -402,11 +402,11 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parametry
 
-`other` Basic_stringbuf, jejichž obsah, včetně vlastnosti národního prostředí, budou přiřazeny stringbuf – na levé straně operátoru.
+*Další* basic_stringbuf –, jejichž obsah, včetně vlastnosti národního prostředí, se přiřadí stringbuf na levé straně operátoru.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti – okno ATL | Microsoft Docs
+title: Okno vlastností knihovny ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71fbf5b3c4c3f1aa95070cbc0d30beb9e1321348
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 28336cca8c9dbd808b28575569b7f2bddf97ec58
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362365"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851265"
 ---
-# <a name="understanding-window-traits"></a>Principy vlastnosti – okno
-Třídy vlastností okna zadejte jednoduše standardizace styly využívané pro vytvoření objektu knihovny ATL okno. Okno Vlastnosti, bude přijato jako parametry šablony podle [CWindowImpl](../atl/reference/cwindowimpl-class.md) a dalších tříd oken ATL jako poskytnout výchozí styly oken na úrovni třídy.  
+# <a name="understanding-window-traits"></a>Principy vlastností okna
+Třídy oken s vlastností poskytují jednoduchý způsob pro standardizaci stylů použitých pro vytvoření objektu ATL okna. Okno vlastností jsou přijímány jako parametry šablony podle [CWindowImpl](../atl/reference/cwindowimpl-class.md) a jiných tříd oken ATL a tak poskytuje výchozí styly oken na úrovni třídy.  
   
- Pokud tvůrce instance okno neposkytuje styly explicitně ve volání [vytvořit](../atl/reference/cwindowimpl-class.md#create), můžete použít třídu vlastnosti a ověřte, že je okno stále vytvořen s správné styly. Dokonce můžete zajistit, že určité styly jsou nastavené pro všechny instance této třídy okno při umožňující další styly nastavení na základě instance.  
+ Pokud autor instanci okna neposkytuje styly explicitně při volání funkce [vytvořit](../atl/reference/cwindowimpl-class.md#create), třída vlastností můžete použít k zajištění, že v okně stále vytváření správné styly. Dokonce můžete zajistit, že určité styly jsou nastavené pro všechny instance této třídy okna při povolení další styly nastavení na základě jednotlivé instance.  
   
-## <a name="atl-window-traits-templates"></a>ATL – okno Vlastnosti šablony  
- ATL poskytuje dvě šablony okno Vlastnosti, které vám umožní nastavit výchozí styly v době kompilace pomocí jejich parametrů šablony.  
+## <a name="atl-window-traits-templates"></a>ATL – okno vlastností šablony  
+ Knihovna ATL poskytuje dvě okna Vlastnosti šablony, které umožňují nastavení výchozích stylů v době kompilace pomocí jejich parametry šablony.  
   
 |Třída|Popis|  
 |-----------|-----------------|  
-|[CWinTraits](../atl/reference/cwintraits-class.md)|Tuto šablonu použít, pokud chcete zadat výchozí styly oken, které se použijí jenom v případě, že nejsou zadány žádné jiné styly ve volání **vytvořit**. Styly získanou styly nastavit v době běhu mají přednost doba kompilace.|  
-|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|Tuto třídu používejte, pokud chcete zadat stylů, které musí být vždycky nastavená pro třídu oken. Styly zadaný v době běhu spolu se styly, nastavte v době kompilace pomocí bitový operátor OR.|  
+|[Cwintraits –](../atl/reference/cwintraits-class.md)|Tuto šablonu použít, pokud chcete zadat výchozí styly oken, které budou použity pouze v případě, že žádné další styly jsou zadány při volání funkce `Create`. Styly získanou v době běhu přednost styly nastavit v době kompilace.|  
+|[Cwintraitsor –](../atl/reference/cwintraitsor-class.md)|Tuto třídu používejte, pokud chcete zadat stylů, které musí být vždycky nastavená pro třídu okna. Styly k dispozici v době běhu spolu se styly nastavit v době kompilace pomocí bitového operátoru OR.|  
   
- Kromě těchto šablon ATL poskytuje řadu předdefinovaných specializací `CWinTraits` šablonu pro běžně používané kombinace styly oken. Najdete v článku [CWinTraits](../atl/reference/cwintraits-class.md) referenční dokumentace pro úplné podrobnosti.  
+ Kromě těchto šablon, knihovna ATL poskytuje řadu předdefinovaných specializace `CWinTraits` šablony pro běžně používané kombinací styly oken. Zobrazit [cwintraits –](../atl/reference/cwintraits-class.md) referenční dokumentaci pro všechny podrobnosti.  
   
-## <a name="custom-window-traits"></a>Okno Vlastní vlastnosti  
- V situaci, pravděpodobně není dostatečná že specializing jedna z šablon, které aplikace ATL a je potřeba vytvořit vlastní vlastnosti třídy, stačí vytvořit třídu, která implementuje dvě statické funkce: `GetWndStyle` a **GetWndStyleEx** :  
+## <a name="custom-window-traits"></a>Okno vlastních vlastností  
+ V nepravděpodobné situaci není dostatečná, že specializace jedna z šablony, které poskytuje knihovny ATL a je potřeba vytvořit své vlastní vlastnosti třídy, je třeba pouze vytvořit třídu, která implementuje dvě statické funkce: `GetWndStyle` a `GetWndStyleEx`:  
   
  [!code-cpp[NVC_ATL_Windowing#68](../atl/codesnippet/cpp/understanding-window-traits_1.h)]  
   
- Každá z těchto funkcí v době běhu, který můžete použít k vytvoření nové hodnoty styl předat některé hodnotou style. Pokud třídě vlastnosti okna je používán jako argument šablony třídy oken ATL, se tyto hodnoty styl předaný tyto statické funkce, ať byl předán jako argumenty stylu, které mají [vytvořit](../atl/reference/cwindowimpl-class.md#create).  
+ Každá z těchto funkcí v době běhu, který můžete použít k vytvoření nové hodnoty styl předat některá z hodnot stylu. Pokud vaše třída vlastností okna se používá jako argument šablony pro třídu okna ATL, styl hodnoty předané do těchto statické funkce bude všechno, co byl předán jako argument stylu [vytvořit](../atl/reference/cwindowimpl-class.md#create).  
   
 ## <a name="see-also"></a>Viz také  
  [Třídy oken](../atl/atl-window-classes.md)

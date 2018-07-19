@@ -1,5 +1,5 @@
 ---
-title: regex_traits –&lt;wchar_t&gt; třída | Microsoft Docs
+title: regex_traits&lt;wchar_t&gt; třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958955"
 ---
-# <a name="regextraitsltwchartgt-class"></a>regex_traits –&lt;wchar_t&gt; – třída
+# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; třídy
 
 Specializace regex_traits pro wchar_t.
 
@@ -36,15 +36,15 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>Poznámky
 
-Třída je explicitní specializace šablon třídy [regex_traits](../standard-library/regex-traits-class.md) pro elementy typu `wchar_t` (tak, aby ji můžete využít výhod funkce knihovny, které pracují s objekty tohoto typu).
+Explicitní specializace šablony třídy je třída [regex_traits](../standard-library/regex-traits-class.md) pro prvky typu **wchar_t** (tak, aby ji můžete využít výhod funkce knihovny, které pracují s objekty tohoto typu).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regex >
+**Záhlaví:** \<regulární výraz >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants – třída](../standard-library/regex-constants-class.md)<br/>
@@ -54,4 +54,4 @@ Třída je explicitní specializace šablon třídy [regex_traits](../standard-l
 [\<regulární výraz > operátory](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits – třída](../standard-library/regex-traits-class.md)<br/>
-[\<regulární výraz > Definice TypeDef](../standard-library/regex-typedefs.md)<br/>
+[\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>

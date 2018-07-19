@@ -1,5 +1,5 @@
 ---
-title: is_signed – třída | Microsoft Docs
+title: is_signed – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8452c106c5a4d0d005ec61278c8e0d7cb75723ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b9b58235d404b523629a0e9d24121182d1119c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912677"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960327"
 ---
 # <a name="issigned-class"></a>is_signed – třída
 
-Otestujte, pokud je typ se znaménkem.
+Test, pokud je typ celé číslo se znaménkem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_signed;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je typ se znaménkem integrální nebo `cv-qualified` podepsané integrální typu, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je celočíselný typ se znaménkem nebo `cv-qualified` celočíselný typ se znaménkem, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -83,9 +83,9 @@ is_signed<float> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_unsigned – třída](../standard-library/is-unsigned-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: iterator_traits – struktura | Microsoft Docs
+title: iterator_traits – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959635"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits – struktura
 
-Slouží k zadání všechny kritické typu definice, které by měly mít iterovat struktury šablony pomocné rutiny.
+Struktura pomocné šablony používá k určení všech typ kritický pro definice, které by měly mít iterátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,23 +43,23 @@ struct iterator_traits {
 
 ## <a name="remarks"></a>Poznámky
 
-Struktura Šablona definuje typy členů
+Struktura šablony definuje typy členů
 
-- **iterator_category –**: jedná o synonymum **Iterator::iterator_category**.
+- `iterator_category`: synonymum pro `Iterator::iterator_category`.
 
-- `value_type`: jedná o synonymum **Iterator::value_type**.
+- `value_type`: synonymum pro `Iterator::value_type`.
 
-- `difference_type`: jedná o synonymum **Iterator::difference_type**.
+- `difference_type`: synonymum pro `Iterator::difference_type`.
 
-- `distance_type`: jedná o synonymum **Iterator::difference_type.**
+- `distance_type`: synonymum pro `Iterator::difference_type.`
 
-- **ukazatel**: jedná o synonymum **Iterator::pointer**.
+- `pointer`: synonymum pro `Iterator::pointer`.
 
-- **referenční dokumentace**: jedná o synonymum **Iterator::reference**.
+- `reference`: synonymum pro `Iterator::reference`.
 
-Částečná specializace určení kritické typů, které jsou přidružené ukazatele na objekt typu **typ \***  nebo const **typ \*** .
+Částečné specializace určit kritické typy související s ukazatelem na objekt typu **typ \***  nebo const **typ \*** .
 
-V této implementaci, které můžete také použít několik šablony funkce, které neprovádějte použití částečná specializace:
+V této implementaci, kterou můžete použít také několik šablon funkce, které není vhodné dělat použít částečné specializace:
 
 ```cpp
 template <class Category, class Type, class Diff>
@@ -81,7 +81,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-které určují, řadu stejné typy více nepřímo. Použití těchto funkcí jako argumenty při volání funkce. Jejich jediným účelem je zadat parametr třídy užitečné šablony volané funkci.
+které určují několik stejné typy víc nepřímo. Tyto funkce jako argumenty ve volání funkce. Jejich jediným účelem je poskytnout parametr užitečné šablony třídy pro volanou funkci.
 
 ## <a name="example"></a>Příklad
 
@@ -128,12 +128,12 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<iterator >](../standard-library/iterator.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

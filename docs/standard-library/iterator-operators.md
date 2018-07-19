@@ -1,5 +1,5 @@
 ---
-title: '&lt;iterator&gt; operátory | Microsoft Docs'
+title: '&lt;iterátor&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862046"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954692"
 ---
-# <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; operátory
+# <a name="ltiteratorgt-operators"></a>&lt;iterátor&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operátor +](#op_add)|
-|[Operator –](#operator-)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[Operator +](#op_add)|
+|[Operator-](#operator-)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
 
@@ -53,17 +53,17 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **iterator**.
+*levé* objekt typu `iterator`.
 
-`right` Objekt typu **iterator**.
+*správné* objekt typu `iterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud iterator objekty nejsou stejné; **false** Pokud iterator objekty jsou stejné.
+**Hodnota TRUE** Pokud iterátor objekty nejsou stejné; **false** Pokud iterátor objekty rovnají.
 
 ### <a name="remarks"></a>Poznámky
 
-Jeden objekt iterator se rovná jiné, pokud se adresa stejné prvky v kontejneru. Pokud se dva iterátory bodu na různé elementy v kontejneru, pak nejsou stejné.
+Pokud řeší stejné prvky v kontejneru je roven jinému jeden objekt iterátoru. Pokud se dvěma iterátory, přejděte na různé prvky v kontejneru, pak nejsou stejné.
 
 ### <a name="example"></a>Příklad
 
@@ -155,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu iterator.
+*levé* objekt typu iterátoru.
 
-`right` Objekt typu iterator.
+*správné* objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jsou objekty iterator rovna; `false` Pokud iterator objekty nejsou stejné.
+**Hodnota TRUE** Pokud iterátor objekty rovnají. **false** Pokud iterátor objekty nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Jeden objekt iterator se rovná jiné, pokud se adresa stejné prvky v kontejneru. Pokud se dva iterátory bodu na různé elementy v kontejneru, pak nejsou stejné.
+Pokud řeší stejné prvky v kontejneru je roven jinému jeden objekt iterátoru. Pokud se dvěma iterátory, přejděte na různé prvky v kontejneru, pak nejsou stejné.
 
-První dvě šablony operátory vrátí hodnotu true, pouze pokud obě `left` a `right` ukládání stejné iterator. Vrátí hodnotu true, pouze pokud obě třetí operátor šablony `left` a `right` úložiště stejný datový proud ukazatele. Vrátí čtvrtou operátor šablony ` left.equal ( right)`.
+První dvě šablony operátory vrací hodnotu true, pouze pokud oba *levé* a *správné* ukládání stejným iterátorem. Třetí šablony operátor, který se vrátí hodnota true, pouze pokud *levé* a *správné* ukládání stejný ukazatel streamu. Vrátí operátor čtvrtá šablona ` left.equal ( right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -231,7 +231,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
 Testuje, zda je objekt iterátoru na levé straně operátoru menší než objekt iterátoru na pravé straně.
 
@@ -242,17 +242,17 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **iterator**.
+*levé* objekt typu `iterator`.
 
-`right` Objekt typu **iterator**.
+*správné* objekt typu `iterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud iterator na levé straně výrazu je menší než iterator na pravé straně výrazu; **false** Pokud je větší než nebo rovna hodnotě iterator na pravé straně.
+**Hodnota TRUE** případě iterátoru na levé straně výrazu je nižší než iterátoru na pravé straně výrazu; **false** Pokud je větší než nebo rovna hodnotě iterátoru na pravé straně.
 
 ### <a name="remarks"></a>Poznámky
 
-Jeden objekt iterator je menší než jiné, pokud ho adresy element, který nastane dříve v kontejneru než element používala jiné iterator objektu. Jeden objekt iterator není menší než jiná Pokud zaměřuje se na stejný element jako druhý objekt iterator nebo element, který později v kontejneru než element používala druhý objekt iterator dojde.
+Jeden objekt iterátoru je menší než jiný, když se adresy element, který se nachází výše v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru. Jeden objekt iterátoru není menší než jiný když adresy téhož elementu jako druhý objekt iterátoru nebo prvek, ke které dojde později v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru.
 
 ### <a name="example"></a>Příklad
 
@@ -320,7 +320,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
 Testuje, zda je objekt iterátoru na levé straně operátoru menší než nebo roven objektu iterátoru na pravé straně.
 
@@ -331,17 +331,17 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu iterator.
+*levé* objekt typu iterátoru.
 
-`right` Objekt typu iterator.
+*správné* objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud iterator na levé straně výrazu je menší než nebo rovna iterator na pravé straně výrazu; **false** Pokud je větší než iterator na pravé straně.
+**Hodnota TRUE** Pokud iterátoru na levé straně výrazu je menší nebo rovna iterátoru na pravé straně výrazu; **false** Pokud je větší než iterátoru na pravé straně.
 
 ### <a name="remarks"></a>Poznámky
 
-Jeden objekt iterator je menší než nebo rovna hodnotě jiného, pokud zaměřuje se na stejný element nebo element, který nastane dříve v kontejneru než element používala jiné iterator objektu. Jeden objekt iterator je větší než jiné, pokud ji adresy element, který později v kontejneru než element používala druhý objekt iterator dojde.
+Jeden objekt iterátoru je menší než nebo roven jinému, pokud adresy téhož prvku nebo prvek, který se nachází výše v kontejneru než prvek řešený třídou jako druhý objekt iterátoru. Jeden objekt iterátoru je větší než jiný, když se adresy prvek, ke které dojde později v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru.
 
 ### <a name="example"></a>Příklad
 
@@ -413,7 +413,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
 Testuje, zda je objekt iterátoru na levé straně operátoru větší než objekt iterátoru na pravé straně.
 
@@ -424,17 +424,17 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu iterator.
+*levé* objekt typu iterátoru.
 
-`right` Objekt typu iterator.
+*správné* objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud iterator na levé straně výrazu je větší než iterator na pravé straně výrazu; **false** Pokud je menší než nebo rovna iterator na pravé straně.
+**Hodnota TRUE** Pokud iterátoru na levé straně výrazu je větší než iterátoru na pravé straně výrazu; **false** Pokud je menší nebo rovna iterátoru na pravé straně.
 
 ### <a name="remarks"></a>Poznámky
 
-Jeden objekt iterator je větší než jiné, pokud ji adresy element, který později v kontejneru než element používala druhý objekt iterator dojde. Jeden objekt iterator není větší než jiné, pokud ji adresy stejného elementu jako druhý objekt iterator nebo element, který nastane dříve v kontejneru než element používala jiné iterator objektu.
+Jeden objekt iterátoru je větší než jiný, když se adresy prvek, ke které dojde později v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru. Jeden objekt iterátoru není větší než jiné, když adresy téhož elementu jako druhý objekt iterátoru nebo prvek, který se nachází výše v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru.
 
 ### <a name="example"></a>Příklad
 
@@ -500,7 +500,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
 Testuje, zda je objekt iterátoru na levé straně operátoru větší než nebo roven objektu iterátoru na pravé straně.
 
@@ -511,17 +511,17 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu iterator.
+*levé* objekt typu iterátoru.
 
-`right` Objekt typu iterator.
+*správné* objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud iterator na levé straně výrazu je větší než nebo rovno iterator na pravé straně výrazu; **false** Pokud je menší než iterator na pravé straně.
+**Hodnota TRUE** Pokud iterátoru na levé straně výrazu je větší než nebo rovna hodnotě iterátoru na pravé straně výrazu; **false** případě je nižší než iterátoru na pravé straně.
 
 ### <a name="remarks"></a>Poznámky
 
-Jeden objekt iterator je větší než nebo rovna hodnotě jiného, pokud zaměřuje se na stejný element nebo element, který v kontejneru než element používala jiné iterator objekt dojde později. Jeden objekt iterator je menší než jiné, pokud ho adresy element, který nastane dříve v kontejneru než element používala jiné iterator objektu.
+Jeden objekt iterátoru je větší než nebo roven jinému, když se adresy téhož prvku nebo prvku, ke které dojde později v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru. Jeden objekt iterátoru je menší než jiný, když se adresy element, který se nachází výše v kontejneru, než prvek řešený třídou jako druhý objekt iterátoru.
 
 ### <a name="example"></a>Příklad
 
@@ -593,9 +593,9 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a>  operátor +
+## <a name="op_add"></a>  Operator +
 
-Přidá posun do iterovat a vrátí `move_iterator` nebo `reverse_iterator` adresování vložené element na pozici posunutí nové.
+Přidá posun do iterátoru a vrátí `move_iterator` nebo `reverse_iterator` adresující vložený prvek na nové pozici posunu.
 
 ```cpp
 template <class RandomIterator, class Diff>
@@ -613,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Počet pozic const move_iterator nebo const reverse_iterator – je posunuty.
+*_Off* počet pozic const move_iterator nebo const reverse_iterator má být posun.
 
-`right` Iterator k posunuty.
+*správné* iterátor, který má být posun.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí součet `right`  +  `_Off`.
+Vrátí součet *správné* + *_Off*.
 
 ### <a name="example"></a>Příklad
 
@@ -670,7 +670,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a>  Operator –
+## <a name="operator-"></a>  Operator-
 
 Odečte jeden iterátor od druhého a vrátí rozdíl.
 
@@ -688,9 +688,9 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Iterator.
+*levé* iterátor.
 
-`right` Iterator.
+*správné* iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -700,9 +700,9 @@ Rozdíl mezi dvěma iterátory `.`
 
 Vrátí první operátor šablony `left.base() - right.base()`.
 
-Vrátí druhou šablonu operátor `right.current - left.current`.
+Vrátí druhý operátor šablony `right.current - left.current`.
 
-`Tdiff` je určen podle typ vrácený výrazu. Jinak je `RandomIterator1::difference_type`.
+`Tdiff` se určuje podle typu vráceného výrazu. V opačném případě je `RandomIterator1::difference_type`.
 
 ### <a name="example"></a>Příklad
 
@@ -761,6 +761,6 @@ The iterator rVPOS2 now points to the fifth element
 The difference: rVPOS2 - rVPOS1= 4.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<iterator >](../standard-library/iterator.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)<br/>

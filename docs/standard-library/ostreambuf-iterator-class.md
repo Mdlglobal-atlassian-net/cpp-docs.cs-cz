@@ -1,5 +1,5 @@
 ---
-title: Třída ostreambuf_iterator | Microsoft Docs
+title: ostreambuf_iterator – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861211"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958250"
 ---
 # <a name="ostreambufiterator-class"></a>Třída ostreambuf_iterator
 
-Ostreambuf_iterator – třída šablony popisuje objekt iterator výstup, který zapíše elementy po sobě jdoucích znaků do výstupního datového proudu s extrahování **operátor >>**. `ostreambuf_iterator`s lišit od těch, které [ostream_iterator – třída](../standard-library/ostream-iterator-class.md) v znaků místo obecného typu, které mají při typ objektu vkládání do výstupního datového proudu.
+Třída šablony ostreambuf_iterator popisuje výstupní objekt iterátoru, který zapisuje po sobě jdoucích znaků prvky do výstupního toku s extrakce **operátor >>**. `ostreambuf_iterator`Se liší od těch, které [ostream_iterator – třída](../standard-library/ostream-iterator-class.md) tím, že namísto obecného typu v typu objektu vkládaného do výstupního datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,28 +45,28 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parametry
 
-`CharType` Typ, který představuje typ znaku pro ostreambuf_iterator. Tento argument je volitelný a výchozí hodnota je `char`.
+*CharType* typ, který představuje typ znaku pro ostreambuf_iterator. Tento argument je nepovinný a výchozí hodnota je **char**.
 
-`Traits` Typ, který představuje typ znaku pro ostreambuf_iterator. Tento argument je volitelný a výchozí hodnota je `char_traits` \< *CharType >.*
+*Vlastnosti* typ, který představuje typ znaku pro ostreambuf_iterator. Tento argument je nepovinný a výchozí hodnota je `char_traits` \< *CharType >.*
 
 ## <a name="remarks"></a>Poznámky
 
-Třída ostreambuf_iterator musí splňovat požadavky na výstupní iterátor. Algoritmy lze zapisovat přímo do výstupní datové proudy pomocí `ostreambuf_iterator`. Třída poskytuje iterátor datového proudu na nízké úrovni, který umožňuje přístup k nezpracovanému (neformátovanému) proudu dat ve formě znaků a schopnost obejít ukládání do vyrovnávací paměti a překlady znaků spojené s iterátory datového proudu vysoké úrovně.
+Třída ostreambuf_iterator musí splňovat požadavky na výstupní iterátor. Algoritmy lze zapsat přímo do výstupních toků pomocí `ostreambuf_iterator`. Třída poskytuje iterátor datového proudu na nízké úrovni, který umožňuje přístup k nezpracovanému (neformátovanému) proudu dat ve formě znaků a schopnost obejít ukládání do vyrovnávací paměti a překlady znaků spojené s iterátory datového proudu vysoké úrovně.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Vytvoří `ostreambuf_iterator` , je inicializováno zápis znaků do výstupního datového proudu.|
+|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Vytvoří `ostreambuf_iterator` , který je inicializován pro zápis znaků do výstupního datového proudu.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|Typ, který poskytuje pro typ znak `ostreambuf_iterator`.|
-|[ostream_type](#ostreambuf_iterator_ostream_type)|Typ, který poskytuje pro typ datového proudu `ostream_iterator`.|
-|[streambuf_type](#streambuf_type)|Typ, který poskytuje pro typ datového proudu `ostreambuf_iterator`.|
-|[traits_type](#traits_type)|Typ, který poskytuje pro typ vlastnosti znak `ostream_iterator`.|
+|[char_type](#char_type)|Typ, který poskytuje typ znaku pro `ostreambuf_iterator`.|
+|[ostream_type](#ostreambuf_iterator_ostream_type)|Typ, který poskytuje typ toku pro `ostream_iterator`.|
+|[streambuf_type](#streambuf_type)|Typ, který poskytuje typ toku pro `ostreambuf_iterator`.|
+|[traits_type](#traits_type)|Typ, který poskytuje typ vlastností `ostream_iterator`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -78,19 +78,19 @@ Třída ostreambuf_iterator musí splňovat požadavky na výstupní iterátor. 
 
 |Operátor|Popis|
 |-|-|
-|[operátor *](#op_star)|Při přesměrování operátor použít k implementaci výraz iterator výstup * `i`  =  `x`.|
-|[Operator ++](#op_add_add)|Operátor přírůstku funkční, který vrátí `ostreambuf_iterator` ke stejnému objektu řešit předtím, než byla volána operace.|
+|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru * `i`  =  `x`.|
+|[Operator ++](#op_add_add)|Nefunkční operátor přírůstku, který vrátí `ostreambuf_iterator` na stejný objekt, který adresoval před voláním operace.|
 |[operátor =](#op_eq)|Operátor vloží znak do přidružené vyrovnávací paměti datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="char_type"></a>  ostreambuf_iterator::char_type
 
-Typ, který poskytuje pro typ znak `ostreambuf_iterator`.
+Typ, který poskytuje typ znaku pro `ostreambuf_iterator`.
 
 ```cpp
 typedef CharType char_type;
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **CharType**.
+Typ je synonymum pro parametr šablony `CharType`.
 
 ### <a name="example"></a>Příklad
 
@@ -148,11 +148,11 @@ bool failed() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud žádné vložení do výstupní vyrovnávací paměť datového proudu se nezdařilo dříve; v opačném případě **false**.
+**Hodnota TRUE** Pokud bez vložení do výstupní mezipaměti datového proudu se nezdařilo dříve; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu **true** Pokud v jakékoli předchozí použití člena `operator=`, volání **subf**-> _ `sputc` vrátil **eof**.
+Členská funkce vrátí **true** if, v jakékoli předchozí použití členu `operator=`, volání **subf**-> _ `sputc` vrátil **eof**.
 
 ### <a name="example"></a>Příklad
 
@@ -191,7 +191,7 @@ No insertions failed.
 
 ## <a name="op_star"></a>  ostreambuf_iterator::Operator *
 
-Funkční při přesměrování operátor použít k implementaci výraz iterator výstup \* *i* = *x*.
+Nefunkční operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* *můžu* = *x*.
 
 ```cpp
 ostreambuf_iterator<CharType, Traits>& operator*();
@@ -199,11 +199,11 @@ ostreambuf_iterator<CharType, Traits>& operator*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt iterator ostreambuf.
+Objekt ostreambuf iterátoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor funguje pouze ve výrazu iterator výstup \* *i* = *x* znaků výstup do vyrovnávací paměti datového proudu. Použije k iterovat ostreambuf, vrátí iterator;  **\*iter** vrátí **iter**,
+Tento operátor funguje pouze ve výrazu výstupního iterátoru \* *můžu* = *x* na výstupní znaky do vyrovnávací paměti datového proudu. Použít na iterátor ostreambuf, vrátí iterátor;  **\*iter** vrátí **iter**,
 
 ### <a name="example"></a>Příklad
 
@@ -238,7 +238,7 @@ OUT
 
 ## <a name="op_add_add"></a>  ostreambuf_iterator::Operator ++
 
-Operátor přírůstku funkční, který vrátí iterovat ostream – stejné znaku, který ho řešit před provedením operace byla volána.
+Nefunkční operátor přírůstku, která vrací iterátor ostream stejným znakem, který adresoval před provedením operace byla volána.
 
 ```cpp
 ostreambuf_iterator<CharType, Traits>& operator++();
@@ -247,11 +247,11 @@ ostreambuf_iterator<CharType, Traits>& operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na znak původně řešit nebo definované implementací objekt, který je převést na `ostreambuf_iterator` \< **CharType**, **vlastnosti**>.
+Odkaz na znak, který původně zákazníky a vyřešené nebo definované implementací objektu, který lze převést na `ostreambuf_iterator` \< **CharType**, **osobnostní rysy**>.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor je použít k implementaci výraz iterator výstup \* *i* = *x*.
+Operátor, který se používá k implementaci výrazu výstupního iterátoru \* *můžu* = *x*.
 
 ### <a name="example"></a>Příklad
 
@@ -294,15 +294,15 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parametry
 
-`_Char` Znak, který má být vložen do vyrovnávací paměti datového proudu.
+*_Char* znak, který má být vložen do vyrovnávací paměti datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na znak vložit do vyrovnávací paměti datového proudu.
+Odkaz na znak, který vloží do vyrovnávací paměti datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor přiřazení použít k implementaci výraz iterator výstup \* *i* = *x* k zápisu do výstupního proudu.
+Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru \* *můžu* = *x* pro zápis do výstupního proudu.
 
 ### <a name="example"></a>Příklad
 
@@ -337,7 +337,7 @@ OUT
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator
 
-Vytvoří `ostreambuf_iterator` , je inicializováno zápis znaků do výstupního datového proudu.
+Vytvoří `ostreambuf_iterator` , který je inicializován pro zápis znaků do výstupního datového proudu.
 
 ```cpp
 ostreambuf_iterator(streambuf_type* strbuf) throw();
@@ -346,15 +346,15 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`strbuf` Streambuf – výstupní objekt použitý k inicializaci ukazatele výstupní datový proud-vyrovnávací paměti.
+*strbuf* streambuf – výstupní objekt použitý k inicializaci ukazatele výstupní vyrovnávací paměť datového proudu.
 
-`Ostr` Výstupní datový proud objekt použitý k inicializaci ukazatele výstupní datový proud-vyrovnávací paměti.
+*Ostr* výstupní datový proud objekt použitý k inicializaci ukazatele výstupní vyrovnávací paměť datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje ukazatel výstupní datový proud-vyrovnávací paměti s `strbuf`.
+První konstruktor inicializuje ukazatele výstupní vyrovnávací paměť datového proudu s *strbuf*.
 
-Druhý konstruktor inicializuje ukazatel výstupní datový proud-vyrovnávací paměti s `Ostr`. `rdbuf`. Uložené ukazatele nesmí být nulový ukazatel.
+Druhý konstruktor inicializuje ukazatele výstupní vyrovnávací paměť datového proudu s `Ostr`. `rdbuf`. Uložený ukazatel nesmí být nulový ukazatel.
 
 ### <a name="example"></a>Příklad
 
@@ -391,7 +391,7 @@ These characters are being written to the output stream.
 
 ## <a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type
 
-Typ, který poskytuje pro typ datového proudu `ostream_iterator`.
+Typ, který poskytuje typ toku pro `ostream_iterator`.
 
 ```cpp
 typedef basicOstream<CharType, Traits> ostream_type;
@@ -399,15 +399,15 @@ typedef basicOstream<CharType, Traits> ostream_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `basicOstream` \< **CharType**, **vlastnosti**>
+Typ je synonymum pro `basicOstream` \< **CharType**, **osobnostní rysy**>
 
 ### <a name="example"></a>Příklad
 
-V tématu [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) příklad toho, jak deklarace a používání `ostream_type`.
+Zobrazit [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) příklad toho, jak deklarace a používání `ostream_type`.
 
 ## <a name="streambuf_type"></a>  ostreambuf_iterator::streambuf_type
 
-Typ, který poskytuje pro typ datového proudu `ostreambuf_iterator`.
+Typ, který poskytuje typ toku pro `ostreambuf_iterator`.
 
 ```cpp
 typedef basic_streambuf<CharType, Traits> streambuf_type;
@@ -415,15 +415,15 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `basic_streambuf` \< **CharType**, **vlastnosti**>, třídu datového proudu pro vstupně-výstupní vyrovnávací paměti, který se stane `streambuf` při specializuje na typ znak `char`.
+Typ je synonymum pro `basic_streambuf` \< **CharType**, **osobnostní rysy**>, třída datového proudu pro vstupně-výstupní vyrovnávací paměti, který se stane `streambuf` při zaměřena na typ znaku **char**.
 
 ### <a name="example"></a>Příklad
 
-V tématu [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) příklad toho, jak deklarace a používání `streambuf_type`.
+Zobrazit [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) příklad toho, jak deklarace a používání `streambuf_type`.
 
 ## <a name="traits_type"></a>  ostreambuf_iterator::traits_type
 
-Typ, který poskytuje pro typ vlastnosti znak `ostream_iterator`.
+Typ, který poskytuje typ vlastností `ostream_iterator`.
 
 ```cpp
 typedef Traits traits_type;
@@ -431,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **vlastnosti**.
+Typ je synonymum pro parametr šablony `Traits`.
 
 ### <a name="example"></a>Příklad
 
@@ -471,8 +471,8 @@ The characters written to the output stream
 *\
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<iterator >](../standard-library/iterator.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

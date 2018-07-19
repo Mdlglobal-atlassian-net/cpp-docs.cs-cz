@@ -1,5 +1,5 @@
 ---
-title: Odkazy (C++) | Microsoft Docs
+title: Odkazy (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956590"
 ---
 # <a name="references-c"></a>Odkazy (C++)
-Odkaz, jako je ukazatel, ukládá adresu objektu, který se nachází na jiném místě v paměti. Na rozdíl od ukazatele, nelze vytvořit odkaz po inicializaci k odkazovat na jiný objekt, nebo nastavte na hodnotu null. Existují dva druhy odkazy: lvalue odkazy, které se týkají pojmenované proměnnou a rvalue odkazy, které se vztahují [dočasný objekt](../cpp/temporary-objects.md). & Operátor označuje, že odkazu lvalue a & & – operátor označuje deklarátor odkazu nebo universal odkaz (rvalue nebo lvalue) v závislosti na kontextu.  
+Odkaz, jako je ukazatel, uchovává adresu objektu, který je umístěn kdekoli v paměti. Na rozdíl od ukazatel, odkaz po inicializaci nelze nastavit nebo odkazovat na jiný objekt nebo nastavit na hodnotu null. Existují dva druhy odkazy: odkazy lvalue, které odkazují na pojmenované proměnné a r-hodnoty odkazy, které se vztahují [dočasný objekt](../cpp/temporary-objects.md). & – Operátor označuje, že reference na lvalue a & & – operátor oznamuje odkaz rvalue nebo odkaz univerzální (rvalue nebo l-hodnoty) v závislosti na kontextu.  
   
- Odkazy mohou být deklarován pomocí následující syntaxe:  
+ Odkazy mohou být deklarovány pomocí následující syntaxe:  
   
 ```  
 [storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator [= expression];  
 ```  
   
- Mohou být použity žádné platné deklarátor zadání odkaz. Pokud je odkaz odkaz na typ funkce nebo pole, platí následující zjednodušenou syntaxi:  
+ Žádné platné deklarátoru určující odkaz může být použit. Není-li odkaz na odkaz na funkci nebo typ pole, platí následující zjednodušenou syntaxi:  
   
 ```  
 [storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
@@ -46,46 +47,46 @@ Odkaz, jako je ukazatel, ukládá adresu objektu, který se nachází na jiném 
   
  1. Specifikátory deklarace:  
   
--   Specifikátor třídy úložiště volitelné.  
+-   Volitelný specifikátor paměťové třídy.  
   
--   Volitelné **const** nebo `volatile` kvalifikátory.  
+-   Volitelné **const** a/nebo **volatile** kvalifikátory.  
   
 -   Specifikátor typu: název typu.  
   
 -   2. Deklarátor:  
   
--   Volitelné Microsoft konkrétní modifikátor. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
+-   Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   & Operátor nebo & & – operátor.  
+-   & – Operátor nebo & & – operátor.  
   
--   Volitelné **const** nebo `volatile` qualifers.  
+-   Volitelné **const** a/nebo **volatile** qualifers.  
   
 -   Identifikátor.  
   
- 3. Inicializátoru volitelné.  
+ 3. Volitelný inicializátor.  
   
- Složitější formuláře deklarátor ukazatele na pole a funkce se rovněž vztahují na odkazy na pole a funkce, najdete v části [ukazatele](../cpp/pointers-cpp.md) a [deklarátory](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Složitější forms deklarátoru ukazatele na pole a funkce platí také pro odkazy na pole a funkce, najdete v části [ukazatele](../cpp/pointers-cpp.md).  
   
- Více deklarátor a inicializátory mohou objevit v následujících jediné deklaraci specifikátor čárkami oddělený seznam. Příklad:  
+ Více inicializátory a deklarátory mohou zobrazit v čárkami oddělený seznam po jedné deklaraci specifikátor. Příklad:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
- Odkazy, ukazatelů a objektů může deklarovat společně:  
+ Odkazy, ukazatele a objekty mohou být deklarovány společně:  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
- Odkaz na adresu objektu, ale syntakticky chová jako objekt.  
+ Odkaz na uchovává adresu objektu, ale chová se syntakticky stejně jako objekt.  
   
- V následující program, Všimněte si, že název objektu, `Today`a odkaz na objekt, `TodayRef`, je možné stejně jako v aplikacích:  
+ V následující program, Všimněte si, že název objektu, `Today`a odkaz na objekt, `TodayRef`, můžete použít stejně jako v programech:  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

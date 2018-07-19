@@ -1,5 +1,5 @@
 ---
-title: '&lt;sstream –&gt; | Microsoft Docs'
+title: '&lt;sstream&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9beb54dd241c6987b79db238f033f3d169497
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8801c41b23ab2c33e4c4e2df9cde8155c1eefafb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957765"
 ---
-# <a name="ltsstreamgt"></a>&lt;sstream –&gt;
+# <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-Definuje několik třídy šablony, které podporují operace iostreams v pořadí, které jsou uložené v objektu přidělené array. Takové pořadí se snadno převedou do a z objekty třídy šablony [basic_string](../standard-library/basic-string-class.md).
+Definuje několik tříd šablon, které podporují operace iostreams na pořadí, které jsou uloženy v objektu přiřazeného pole. Tato sekvence jsou snadno převést do a z objektů třídy šablony [basic_string](../standard-library/basic-string-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,48 +82,48 @@ void swap (
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`left`|Odkaz na `sstream` objektu.|
-|`right`|Odkaz na `sstream` objektu.|
+|*doleva*|Odkaz `sstream` objektu.|
+|*doprava*|Odkaz `sstream` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekty typu `char *` můžete použít funkci v [ \<strstream – >](../standard-library/strstream.md) pro streamování. Ale \<strstream – > je zastaralý a využívat \<sstream – > je podporovali.
+Objekty typu `char *` může použít funkci v [ \<strstream – >](../standard-library/strstream.md) pro streamování. Ale \<strstream – > je zastaralá a použití \<sstream > doporučujeme.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[istringstream –](../standard-library/sstream-typedefs.md#istringstream)|Umožňuje vytvořit typ `basic_istringstream` specializované na `char` parametr šablony.|
-|[ostringstream –](../standard-library/sstream-typedefs.md#ostringstream)|Umožňuje vytvořit typ `basic_ostringstream` specializované na `char` parametr šablony.|
-|[stringbuf –](../standard-library/sstream-typedefs.md#stringbuf)|Umožňuje vytvořit typ `basic_stringbuf` specializované na `char` parametr šablony.|
-|[stringstream –](../standard-library/sstream-typedefs.md#stringstream)|Umožňuje vytvořit typ `basic_stringstream` specializované na `char` parametr šablony.|
-|[wistringstream –](../standard-library/sstream-typedefs.md#wistringstream)|Umožňuje vytvořit typ `basic_istringstream` specializované na `wchar_t` parametr šablony.|
-|[wostringstream –](../standard-library/sstream-typedefs.md#wostringstream)|Umožňuje vytvořit typ `basic_ostringstream` specializované na `wchar_t` parametr šablony.|
-|[wstringbuf –](../standard-library/sstream-typedefs.md#wstringbuf)|Umožňuje vytvořit typ `basic_stringbuf` specializované na `wchar_t` parametr šablony.|
-|[wstringstream –](../standard-library/sstream-typedefs.md#wstringstream)|Umožňuje vytvořit typ `basic_stringstream` specializované na `wchar_t` parametr šablony.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Umožňuje vytvořit typ `basic_istringstream` specializované na **char** parametr šablony.|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Umožňuje vytvořit typ `basic_ostringstream` specializované na **char** parametr šablony.|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Umožňuje vytvořit typ `basic_stringbuf` specializované na **char** parametr šablony.|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Umožňuje vytvořit typ `basic_stringstream` specializované na **char** parametr šablony.|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Umožňuje vytvořit typ `basic_istringstream` specializované na **wchar_t** parametr šablony.|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Umožňuje vytvořit typ `basic_ostringstream` specializované na **wchar_t** parametr šablony.|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Umožňuje vytvořit typ `basic_stringbuf` specializované na **wchar_t** parametr šablony.|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Umožňuje vytvořit typ `basic_stringstream` specializované na **wchar_t** parametr šablony.|
 
 ### <a name="manipulators"></a>Manipulátory
 
 |||
 |-|-|
-|[Swap](../standard-library/sstream-functions.md#sstream_swap)|Výměny hodnoty mezi dvěma `sstream` objekty.|
+|[Prohození](../standard-library/sstream-functions.md#sstream_swap)|Vymění hodnoty mezi dvěma `sstream` objekty.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Popisuje datový proud vyrovnávací paměť, která řídí přenos elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**, do a z pořadí prvků, které jsou uložené v objektu array.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměti třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**, a jehož elementy jsou přidělena přidělení třídy `Alloc`.|
-|[basic_ostringstream –](../standard-library/basic-ostringstream-class.md)|Popisuje objekt, který řídí vložení elementů a kódovaného objekty do vyrovnávací paměti datového proudu třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**, a jehož elementy jsou přidělena přidělení třídy `Alloc`.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Popisuje objekt, který řídí vložení a extrakce elementů a kódovaného objekty pomocí datového proudu vyrovnávací paměti třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, elementy typu **Elem**, jehož vlastnosti znak určuje třídu **Tr**, a jehož elementy jsou přidělena přidělení třídy `Alloc`.|
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky typu `Elem`, jehož vlastnosti znaků určuje třídu `Tr`, do a z pořadí prvků, které jsou uloženy v objektu array.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Popisuje objekt, který řídí extrakce prvků a kódovaného objekty z vyrovnávací paměti datového proudu třídy [basic_stringbuf –](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, s prvky typu `Elem`, jehož vlastnosti znaků určuje třídu `Tr`, jehož prvky jsou přiděluje alokátoru třídy `Alloc`.|
+|[basic_ostringstream –](../standard-library/basic-ostringstream-class.md)|Popisuje objekt, který řídí vkládání prvků a kódovaného objekty do vyrovnávací paměti datového proudu třídy [basic_stringbuf –](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, s prvky typu `Elem`, jehož vlastnosti znaků určuje třídu `Tr`, jehož prvky jsou přiděluje alokátoru třídy `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Popisuje objekt, který řídí vkládání a extrakci prvků a kódovaného objektů pomocí vyrovnávací paměť datového proudu třídy [basic_stringbuf –](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, s prvky typu `Elem`, jehož vlastnosti znaků určuje třídu `Tr`, jehož prvky jsou přiděluje alokátoru třídy `Alloc`.|
 
 ## <a name="requirements"></a>Požadavky
 
-- **Záhlaví:** \<sstream – >
+- **Záhlaví:** \<sstream >
 
-- **Namespace:** – std
+- **Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Třída CSimpleMap | Microsoft Docs
+title: Csimplemap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,14 +33,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 415ce3c0d6b060ffc71aa448656cf9ad45a3e7bb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 308d989deeca43001bb85b73c02711bf88d7e14a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365266"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884019"
 ---
-# <a name="csimplemap-class"></a>CSimpleMap – třída
+# <a name="csimplemap-class"></a>Csimplemap – třída
 Tato třída poskytuje podporu pro jednoduché mapování pole.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -51,57 +51,57 @@ class CSimpleMap
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TKey`  
- Typ klíče elementu.  
+ *TKey*  
+ Typ klíče prvku.  
   
- `TVal`  
- Typ elementu hodnotu.  
+ *TVal*  
+ Typ elementu hodnota.  
   
- `TEqual`  
- Objekt znak, který slouží k definování test rovnosti pro elementy typu `T`.  
+ *TEqual*  
+ Objekt vlastností definující test rovnosti pro prvky typu `T`.  
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CSimpleMap::_ArrayElementType](#_arrayelementtype)|TypeDef pro vybraný typ hodnoty.|  
-|[CSimpleMap::_ArrayKeyType](#_arraykeytype)|TypeDef pro typ klíče.|  
+|[CSimpleMap::_ArrayElementType](#_arrayelementtype)|Definice typu pro typ hodnoty.|  
+|[CSimpleMap::_ArrayKeyType](#_arraykeytype)|Definice typu pro typ klíče.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CSimpleMap::CSimpleMap](#csimplemap)|Konstruktor|  
-|[CSimpleMap:: ~ CSimpleMap](#dtor)|Destruktor.|  
+|[Csimplemap –:: ~ csimplemap –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
 |[CSimpleMap::Add](#add)|Přidá klíč a přidružené hodnoty pole mapování.|  
-|[CSimpleMap::FindKey](#findkey)|Vyhledá konkrétního klíče.|  
-|[CSimpleMap::FindVal](#findval)|Vyhledá určitou hodnotu.|  
-|[CSimpleMap::GetKeyAt](#getkeyat)|Načte zadaný klíč.|  
-|[CSimpleMap::GetSize](#getsize)|Vrátí počet položek v poli mapování.|  
+|[CSimpleMap::FindKey](#findkey)|Vyhledá konkrétní klíč.|  
+|[CSimpleMap::FindVal](#findval)|Vyhledá konkrétní hodnotu.|  
+|[CSimpleMap::GetKeyAt](#getkeyat)|Načte se zadaným klíčem.|  
+|[CSimpleMap::GetSize](#getsize)|Vrátí počet položek v mapování pole.|  
 |[CSimpleMap::GetValueAt](#getvalueat)|Načte zadanou hodnotu.|  
-|[CSimpleMap::Lookup](#lookup)|Vrátí hodnotu spojené s daným klíčem.|  
+|[CSimpleMap::Lookup](#lookup)|Vrátí hodnotu přidruženou k danému klíči.|  
 |[CSimpleMap::Remove](#remove)|Odebere klíč a odpovídající hodnotu.|  
 |[CSimpleMap::RemoveAll](#removeall)|Odebere všechny klíče a hodnoty.|  
-|[CSimpleMap::RemoveAt](#removeat)|Odebere konkrétního klíče a odpovídající hodnotu.|  
-|[CSimpleMap::ReverseLookup](#reverselookup)|Vrátí klíč přidružený k dané hodnotě.|  
-|[CSimpleMap::SetAt](#setat)|Nastaví hodnotu spojené s daným klíčem.|  
-|[CSimpleMap::SetAtIndex](#setatindex)|Nastaví konkrétní klíč a hodnotu.|  
+|[CSimpleMap::RemoveAt](#removeat)|Odebere specifický klíč a odpovídající hodnotu.|  
+|[CSimpleMap::ReverseLookup](#reverselookup)|Vrátí klíč přidružený k dané hodnoty hodnotu.|  
+|[CSimpleMap::SetAt](#setat)|Nastaví hodnotu přidruženou k danému klíči.|  
+|[CSimpleMap::SetAtIndex](#setatindex)|Nastaví konkrétní klíče a hodnoty.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CSimpleMap` poskytuje podporu pro jednoduché mapování pole daného typu `T`, Správa neuspořádaný pole klíčové prvky a jejich přidružené hodnoty.  
+ `CSimpleMap` poskytuje podporu pro jednoduché mapování pole daného typu `T`, Správa Neseřazený pole klíčové prvky a jejich přidružené hodnoty.  
   
- Parametr `TEqual` poskytuje způsob definování rovnosti funkce pro dva elementy typu `T`. Vytvořením třídy podobné [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), je možné změnit chování test rovnosti pro jakékoli dané pole. Například při plánování práce s pole ukazatele, může být užitečné k definování rovnosti jako v závislosti na hodnoty, které odkazují ukazatele. Výchozí implementace využívá **operator==()**.  
+ Parametr `TEqual` poskytuje způsob definice funkce protokolem rovnosti dvou prvků typu `T`. Vytvořením třídy podobný [csimplemapequalhelper –](../../atl/reference/csimplemapequalhelper-class.md), je možné změnit chování test rovnosti pro jakékoli dané pole. Například při práci s pole ukazatelů, může být vhodné definovat rovnost jako v závislosti na hodnoty, které odkazují ukazatele. Výchozí implementace využívá **operator==()**.  
   
- Obě `CSimpleMap` a [CSimpleArray](../../atl/reference/csimplearray-class.md) jsou zadaná pro kompatibilitu s předchozí ATL uvolní a dokončení a efektivní implementace kolekce jsou poskytovány [CAtlArray](../../atl/reference/catlarray-class.md) a [ CAtlMap](../../atl/reference/catlmap-class.md).  
+ Obě `CSimpleMap` a [csimplearray –](../../atl/reference/csimplearray-class.md) jsou k dispozici pro kompatibilitu s předchozím ATL uvolní a dokončení a efektivní implementace kolekcí jsou k dispozici v [catlarray –](../../atl/reference/catlarray-class.md) a [ Catlmap –](../../atl/reference/catlmap-class.md).  
   
- Na rozdíl od jiných mapy kolekcí v ATL a MFC Tato třída implementuje pomocí jednoduchých polí a hledání vyhledávání vyžadovat lineárního hledání. `CAtlMap` by měl být použit při pole obsahuje velký počet elementů.  
+ Na rozdíl od jiných kolekcí mapy v ATL a MFC Tato třída implementuje pomocí jednoduchých polí a vyhledávání vyhledávání vyžaduje lineárního hledání. `CAtlMap` je třeba použít, když pole obsahuje velký počet prvků.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlsimpcoll.h  
@@ -117,17 +117,17 @@ BOOL Add(const TKey& key, const TVal& val);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč  
   
  *Val*  
- Přidružené hodnoty.  
+ Přidružená hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud klíč a hodnotu byly úspěšně přidal, FALSE, jinak hodnota.  
+ Vrátí hodnotu TRUE, pokud klíč a hodnotu byly úspěšně přidal, FALSE, jinak.  
   
 ### <a name="remarks"></a>Poznámky  
- Každý pár klíč a hodnotu přidat mapování pole paměti uvolněno a znovu přidělit, aby se zajistilo, že jsou data pro každou vždycky uložena souvisle příčiny. To znamená druhý klíčovým prvkem vždy přímo odpovídá první prvek klíče v paměti a tak dále.  
+ Každý pár klíč a hodnotu přidá mapování pole paměť uvolněno a nevyčerpané, aby se zajistilo, že jsou data pro každou vždy uložena souvisle příčiny. To znamená druhý klíčovým prvkem vždy přímo následuje po první klíče prvku v paměti a tak dále.  
   
 ##  <a name="_arrayelementtype"></a>  CSimpleMap::_ArrayElementType  
  Definice typu pro typ klíče.  
@@ -151,9 +151,9 @@ CSimpleMap();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Inicializuje datových členů.  
+ Inicializuje datové členy.  
   
-##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>  Csimplemap –:: ~ csimplemap –  
  Destruktor.  
   
 ```
@@ -164,21 +164,21 @@ CSimpleMap();
  Uvolní všechny přidělené prostředky.  
   
 ##  <a name="findkey"></a>  CSimpleMap::FindKey  
- Vyhledá konkrétního klíče.  
+ Vyhledá konkrétní klíč.  
   
 ```
 int FindKey(const TKey& key) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč k vyhledání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí index klíče Pokud najde, v opačném případě vrátí hodnotu -1.  
+ Vrátí index klíče if nalezena, jinak vrátí hodnotu -1.  
   
 ##  <a name="findval"></a>  CSimpleMap::FindVal  
- Vyhledá určitou hodnotu.  
+ Vyhledá konkrétní hodnotu.  
   
 ```
 int FindVal(const TVal& val) const;
@@ -186,64 +186,64 @@ int FindVal(const TVal& val) const;
   
 ### <a name="parameters"></a>Parametry  
  *Val*  
- Hodnota, pro které chcete vyhledat.  
+ Hodnota, pro který chcete vyhledat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí že index hodnoty pokud zjistí, v opačném případě vrátí hodnotu -1.  
+ Vrátí že index hodnoty je-li nalezeno, jinak vrátí hodnotu -1.  
   
 ##  <a name="getkeyat"></a>  CSimpleMap::GetKeyAt  
- Načte klíče v zadaném indexu.  
+ Načte klíč v zadaném indexu.  
   
 ```
 TKey& GetKeyAt(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index klíče, který se vrátí.  
+ *nIndex*  
+ Index klíče k vrácení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí klíč odkazuje `nIndex`.  
+ Vrátí klíč odkazuje *nIndex*.  
   
 ### <a name="remarks"></a>Poznámky  
- Index předaná `nIndex` musí být platná pro návratovou hodnotu smysluplné.  
+ Index předávány *nIndex* musí být platná pro návratovou hodnotu smysl.  
   
 ##  <a name="getsize"></a>  CSimpleMap::GetSize  
- Vrátí počet položek v poli mapování.  
+ Vrátí počet položek v mapování pole.  
   
 ```
 int GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet položek (klíče a hodnoty je jedna položka) v poli mapování.  
+ Vrátí počet položek (klíče a hodnoty je jedna položka), které v mapování pole.  
   
 ##  <a name="getvalueat"></a>  CSimpleMap::GetValueAt  
- Načte hodnotu konkrétní indexem.  
+ Načte hodnotu na konkrétní pozici indexu.  
   
 ```
 TVal& GetValueAt(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index hodnota, která má vrátit.  
+ *nIndex*  
+ Index vrácenou hodnotu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu odkazuje `nIndex`.  
+ Vrátí hodnotu odkazuje *nIndex*.  
   
 ### <a name="remarks"></a>Poznámky  
- Index předaná `nIndex` musí být platná pro návratovou hodnotu smysluplné.  
+ Index předávány *nIndex* musí být platná pro návratovou hodnotu smysl.  
   
 ##  <a name="lookup"></a>  CSimpleMap::Lookup  
- Vrátí hodnotu spojené s daným klíčem.  
+ Vrátí hodnotu přidruženou k danému klíči.  
   
 ```
 TVal Lookup(const TKey& key) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč  
   
 ### <a name="return-value"></a>Návratová hodnota  
@@ -257,11 +257,11 @@ BOOL Remove(const TKey& key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud klíč a odpovídající hodnotu, byly úspěšně odebrána, FALSE, jinak hodnota.  
+ Vrátí hodnotu TRUE, pokud klíč a odpovídající hodnotu, byly úspěšně se odebral, FALSE, jinak.  
   
 ##  <a name="removeall"></a>  CSimpleMap::RemoveAll  
  Odebere všechny klíče a hodnoty.  
@@ -274,21 +274,21 @@ void RemoveAll();
  Odebere všechny klíče a hodnoty z objektu mapování pole.  
   
 ##  <a name="removeat"></a>  CSimpleMap::RemoveAt  
- Odebere klíč a přidružené hodnoty v zadaném indexu.  
+ Odebere klíč a přidruženou hodnotu v zadaném indexu.  
   
 ```
 BOOL RemoveAt(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index klíče a přidružené hodnoty. Chcete-li odebrat.  
+ *nIndex*  
+ Index klíč a hodnotu přiřazenou k odebrání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE v případě úspěchu, FALSE, pokud zadaný index je neplatný index.  
+ Vrátí hodnotu TRUE v případě úspěchu; FALSE, pokud zadaný index je neplatný index.  
   
 ##  <a name="reverselookup"></a>  CSimpleMap::ReverseLookup  
- Vrátí klíč přidružený k dané hodnotě.  
+ Vrátí klíč přidružený k dané hodnoty hodnotu.  
   
 ```
 TKey ReverseLookup(const TVal& val) const;
@@ -302,24 +302,24 @@ TKey ReverseLookup(const TVal& val) const;
  Vrátí přidružený klíč. Pokud není žádný odpovídající klíč nalezen, NULL, je vrácena.  
   
 ##  <a name="setat"></a>  CSimpleMap::SetAt  
- Nastaví hodnotu spojené s daným klíčem.  
+ Nastaví hodnotu přidruženou k danému klíči.  
   
 ```
 BOOL SetAt(const TKey& key, const TVal& val);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klíč*  
  Klíč  
   
  *Val*  
- Nová hodnota přiřadit.  
+ Nová hodnota pro přiřazení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, pokud byl nalezen klíč, a hodnota byla úspěšně změnil, FALSE, jinak hodnota.  
+ Pokud byl nalezen klíč a hodnota byla úspěšně změněná, FALSE, v opačném případě vrátí hodnotu TRUE.  
   
 ##  <a name="setatindex"></a>  CSimpleMap::SetAtIndex  
- Nastaví klíč a hodnotu na zadaný index.  
+ Nastaví klíč a hodnotu v zadaném indexu.  
   
 ```
 BOOL SetAtIndex(  
@@ -329,20 +329,20 @@ BOOL SetAtIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Index, odkazy na klíč a hodnotu párování změnit.  
+ *nIndex*  
+ Index, odkazující na klíč a hodnotu párování, díky kterému změnit.  
   
- `key`  
+ *Klíč*  
  Nový klíč.  
   
  *Val*  
  Nová hodnota.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE Pokud úspěšné, FALSE, pokud nebyla platná index.  
+ Vrací TRUE, pokud úspěšné, FALSE, pokud index nebyl platný.  
   
 ### <a name="remarks"></a>Poznámky  
- Aktualizuje klíč a hodnotu, na kterou odkazuje `nIndex`.  
+ Aktualizace klíče a hodnoty, na které odkazuje *nIndex*.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

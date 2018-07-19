@@ -1,5 +1,5 @@
 ---
-title: Třída CDynamicChain | Microsoft Docs
+title: Cdynamicchain – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a279dac7e2a9f4e58954ac6637eaf2b56ad801b2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364257"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884139"
 ---
-# <a name="cdynamicchain-class"></a>CDynamicChain – třída
-Tato třída poskytuje metody podporující dynamické řetězení mapy zpráv.  
+# <a name="cdynamicchain-class"></a>Cdynamicchain – třída
+Tato třída poskytuje metody, které podporuje dynamické řetězení mapy zpráv.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,28 +49,28 @@ class CDynamicChain
 |Název|Popis|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Konstruktor|  
-|[CDynamicChain:: ~ CDynamicChain](#dtor)|Destruktor.|  
+|[Cdynamicchain –:: ~ cdynamicchain –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CDynamicChain::CallChain](#callchain)|Určí, že Windows zprávu, která mapy zpráv jiný objekt.|  
+|[CDynamicChain::CallChain](#callchain)|Přesměruje zpráv Windows do mapy zpráv jiného objektu.|  
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|Odebere položku mapování zpráv z kolekce.|  
-|[CDynamicChain::SetChainEntry](#setchainentry)|Přidá položku mapování zpráv do kolekce nebo upraví existující položku.|  
+|[CDynamicChain::SetChainEntry](#setchainentry)|Přidá položku mapování zpráv do kolekce nebo upraví existující položka.|  
   
 ## <a name="remarks"></a>Poznámky  
- `CDynamicChain` spravuje kolekce mapy zpráv, povolení Windows zprávu, která přesměrováni v době běhu k mapy zpráv jiný objekt.  
+ `CDynamicChain` Spravuje kolekci mapy zpráv, povolení zprávu Windows přejdete v době běhu na jiný objekt mapování zprávy.  
   
  Přidání podpory pro dynamické řetězení mapy zpráv, postupujte takto:  
   
--   Odvození třídě z `CDynamicChain`. Mapy zpráv, zadejte [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makro ke tvoří řetěz k mapy zpráv výchozí jiný objekt.  
+-   Odvodit třídu z `CDynamicChain`. V mapování zprávy, zadejte [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) – makro do řetězce do jiného objektu výchozí zprávu mapy.  
   
--   Odvození každá třída chcete zřetězit z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` Umožňuje objekt vystavit jeho mapy zpráv na jiné objekty.  
+-   Jsou odvozeny všechny třídy, které chcete zřetězit z [cmessagemap –](../../atl/reference/cmessagemap-class.md). `CMessageMap` Umožňuje zobrazit jeho mapy zpráv na jiné objekty.  
   
--   Volání `CDynamicChain::SetChainEntry` k identifikaci, který objekt a mapování zpráv, které chcete řetězce pro.  
+-   Volání `CDynamicChain::SetChainEntry` tím určíte, které objekt a mapování zpráv, které chcete ke sledu k.  
   
- Předpokládejme například, že třídě je definován následujícím způsobem:  
+ Předpokládejme například, že vaše třída je definována takto:  
   
  [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
@@ -78,15 +78,15 @@ class CDynamicChain
   
  [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
- kde `chainedObj` je objekt zřetězené a je instance třídy odvozené od `CMessageMap`. Nyní pokud `myCtl` obdrží zprávu, která není zpracováván `OnPaint` nebo `OnSetFocus`, postup okno přesměruje zprávu, která se `chainedObj`na výchozí mapy zpráv.  
+ kde `chainedObj` zřetězené objekt a instance třídy odvozené od `CMessageMap`. Nyní pokud `myCtl` obdrží zprávu, která není zpracována `OnPaint` nebo `OnSetFocus`, přesměruje zpráva, kterou chcete proceduru okna `chainedObj`na výchozí mapování zprávy.  
   
- Další informace o řetězení mapy zpráv najdete v tématu [mapy zpráv](../../atl/message-maps-atl.md) v článku "Tříd oken ATL."  
+ Další informace o řetězení mapy zpráv, najdete v části [mapy zpráv](../../atl/message-maps-atl.md) v článku "Tříd oken ATL."  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlwin.h  
   
 ##  <a name="callchain"></a>  CDynamicChain::CallChain  
- Určí, že Windows zprávu, která se mapy zpráv jiný objekt.  
+ Přesměruje Windows zpráva, která má jiný objekt mapování zprávy.  
   
 ```
 BOOL CallChain(  
@@ -99,31 +99,31 @@ BOOL CallChain(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwChainID`  
- [v] Jedinečný identifikátor přidružený objekt zřetězené a jeho mapy zpráv.  
+ *dwChainID*  
+ [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy.  
   
- `hWnd`  
- [v] Popisovač okna danou zprávu přijala.  
+ *hWnd*  
+ [in] Popisovač okna příjem zprávy.  
   
- `uMsg`  
- [v] Zpráva odeslaná do okna.  
+ *uMsg*  
+ [in] Zpráva odeslaná do okna.  
   
- `wParam`  
- [v] Další informace specifické pro zprávy.  
+ *wParam*  
+ [in] Další informace specifické pro zprávy.  
   
- `lParam`  
- [v] Další informace specifické pro zprávy.  
+ *lParam*  
+ [in] Další informace specifické pro zprávy.  
   
- `lResult`  
+ *lResult*  
  [out] Výsledek zpracování zprávy.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud zpráva je plně zpracovaná; v opačném **FALSE**.  
+ Hodnota TRUE, pokud zprávy budou plně zpracovány; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Okno postup vyvolání `CallChain`, je nutné zadat [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makro mapy zpráv. Příklad, naleznete v části [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Přehled.  
+ Pro proceduru okna, který má být vyvolán `CallChain`, je nutné zadat [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) – makro v mapě zpráv. Příklad najdete v tématu [cdynamicchain –](../../atl/reference/cdynamicchain-class.md) Přehled.  
   
- `CallChain` vyžaduje předchozí volání [SetChainEntry](#setchainentry) přidružit `dwChainID` hodnotu s objektu a jeho mapy zpráv.  
+ `CallChain` vyžaduje, aby předchozí volání [SetChainEntry](#setchainentry) přidružení *dwChainID* hodnotu objektu a jeho mapování zprávy.  
   
 ##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Konstruktor  
@@ -132,7 +132,7 @@ BOOL CallChain(
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  Cdynamicchain –:: ~ cdynamicchain –  
  Destruktor.  
   
 ```
@@ -143,21 +143,21 @@ CDynamicChain();
  Uvolní všechny přidělené prostředky.  
   
 ##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
- Odebere určenou zprávu mapy z kolekce.  
+ Mapa zadaná zpráva odebere z kolekce.  
   
 ```
 BOOL RemoveChainEntry(DWORD dwChainID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwChainID`  
- [v] Jedinečný identifikátor přidružený objekt zřetězené a jeho mapy zpráv. Původně definovat tuto hodnotu prostřednictvím volání [SetChainEntry](#setchainentry).  
+ *dwChainID*  
+ [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy. Původně definovat tuto hodnotu přímo pomocí volání [SetChainEntry](#setchainentry).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud mapy zpráv se úspěšně odebral z kolekce. V opačném **FALSE**.  
+ TRUE, pokud mapu zpráv se úspěšně odebral z kolekce. V opačném případě hodnota FALSE.  
   
 ##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
- Přidá určenou zprávu mapy do kolekce.  
+ Přidá mapování určenou zprávu do kolekce.  
   
 ```
 BOOL SetChainEntry(  
@@ -167,21 +167,21 @@ BOOL SetChainEntry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwChainID`  
- [v] Jedinečný identifikátor přidružený objekt zřetězené a jeho mapy zpráv.  
+ *dwChainID*  
+ [in] Jedinečný identifikátor přidružený k zřetězené objektu a jeho mapování zprávy.  
   
- `pObject`  
- [v] Ukazatel na objekt zřetězené deklarace mapy zpráv. Tento objekt musí být odvozeny od [CMessageMap](../../atl/reference/cmessagemap-class.md).  
+ *odstraněný objekt*  
+ [in] Ukazatel na objekt zřetězené deklarace mapování zprávy. Tento objekt musí být odvozen od [cmessagemap –](../../atl/reference/cmessagemap-class.md).  
   
- `dwMsgMapID`  
- [v] Identifikátor mapy zpráv v zřetězené objektu. Výchozí hodnota je 0, který identifikuje výchozí mapování zpráv deklarovat s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). K určení mapování alternativní zpráva deklarovat s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), předat `msgMapID`.  
+ *dwMsgMapID*  
+ [in] Identifikátor mapu zpráv ve zřetězených objektů. Výchozí hodnota je 0, což označuje výchozí mapování zpráv deklarována s [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Chcete-li určit mapování alternativních zpráva deklarována s [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), předejte `msgMapID`.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- **Hodnota TRUE,** Pokud mapy zpráv se úspěšně přidal do kolekce. V opačném **FALSE**.  
+ Hodnota TRUE, pokud mapu zpráv je úspěšně přidaný do kolekce. V opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `dwChainID` hodnota již existuje v kolekci, jeho přidružený objekt a mapy zpráv se nahrazují `pObject` a `dwMsgMapID`, v uvedeném pořadí. Jinak je přidat novou položku.  
+ Pokud *dwChainID* hodnota již existuje v kolekci, jeho přidruženého objektu a mapování zpráv se nahrazují *odstraněný objekt* a *dwMsgMapID*v uvedeném pořadí. V opačném případě se přidá nová položka.  
   
 ## <a name="see-also"></a>Viz také  
- [CWindowImpl – třída](../../atl/reference/cwindowimpl-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Cwindowimpl – třída](../../atl/reference/cwindowimpl-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

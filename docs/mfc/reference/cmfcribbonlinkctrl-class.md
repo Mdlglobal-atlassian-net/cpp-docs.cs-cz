@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCRibbonLinkCtrl | Microsoft Docs
+title: Cmfcribbonlinkctrl – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039008"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851493"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl – třída
-Implementuje hypertextový odkaz, který je umístěn na pásu karet. Po kliknutí na tlačítko se otevře hypertextový odkaz na webové stránce.  
+# <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl – třída
+Implementuje hypertextový odkaz, který je umístěn na pásu karet. Hypertextový odkaz otevře webovou stránku, po kliknutí.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -71,32 +71,32 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Přepisuje `CMFCRibbonButton::CopyFrom`.)|  
-|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Přepisuje [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
+|[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Přepíše `CMFCRibbonButton::CopyFrom`.)|  
+|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Přepíše [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonLinkCtrl::GetLink](#getlink)|Vrátí hodnotu hypertextový odkaz.|  
-|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Přepisuje [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
-|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Přepisuje [CMFCRibbonButton::GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|  
-|[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Přepisuje `CMFCRibbonButton::IsDrawTooltipImage`.)|  
-|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Přepisuje [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|  
-|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Přepisuje [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|  
-|[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Přepisuje `CMFCRibbonButton::OnMouseMove`.)|  
+|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Přepíše [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
+|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Přepíše [CMFCRibbonButton::GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|  
+|[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Přepíše `CMFCRibbonButton::IsDrawTooltipImage`.)|  
+|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Přepíše [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|  
+|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Přepíše [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|  
+|[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Přepíše `CMFCRibbonButton::OnMouseMove`.)|  
 |[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||  
-|[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Otevře se webová stránka zadaný v hypertextový odkaz.|  
+|[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Otevře webovou stránku podle hypertextový odkaz.|  
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|Nastaví hodnotu hypertextový odkaz.|  
   
 ## <a name="remarks"></a>Poznámky  
- Jakmile vytvoříte hypertextový odkaz, přidat do panelu voláním [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Po vytvoření hypertextového odkazu, přidejte ho do panelu voláním [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
+ [CObject –](../../mfc/reference/cobject-class.md) [cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
- [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)  
+ [Cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md) [cmfcribbonlinkctrl –](../../mfc/reference/cmfcribbonlinkctrl-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- Vytvoří a inicializuje [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objektu.  
+ Vytvoří a inicializuje [cmfcribbonlinkctrl –](../../mfc/reference/cmfcribbonlinkctrl-class.md) objektu.  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -106,17 +106,17 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nID*  
- Určuje příkaz ID příkazu, který provede, když se po kliknutí na ovládací prvek odkazu.  
+ [in] *nID*  
+ Určuje ID příkazu, který se spustí po kliknutí na ovládací prvek odkazu příkazu.  
   
- [v] *lpszText*  
- Určuje popisek zobrazíte na ovládací prvek odkazu.  
+ [in] *lpszText*  
+ Určuje popisek se zobrazí na ovládací prvek odkazu.  
   
- [v] *lpszLink*  
- Určuje hypertextový odkaz přidružený k ovládacímu prvku odkazu.  
+ [in] *lpszLink*  
+ Určuje hypertextový odkaz přidružený k ovládacímu prvku odkaz.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak pomocí konstruktoru `CMFCRibbonLinkCtrl` třídy. Tento fragment kódu je součástí [pásu karet miniaplikacemi ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití konstruktoru `CMFCRibbonLinkCtrl` třídy. Tento fragment kódu je součástí [miniaplikace na pásu karet ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *src*  
+ [in] *src*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *CDC**  
- [v] *CRect*  
+ [in] *CDC**  
+ [in] *Crect –*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *primárního řadiče domény*  
+ [in] *primárního řadiče domény*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
+ [in] *bodu*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -243,17 +243,17 @@ virtual void OnSetIcon();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink  
- Otevře se webová stránka zadaný v hypertextový odkaz.  
+ Otevře webovou stránku podle hypertextový odkaz.  
   
 ```  
 BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud byl úspěšně; otevřít související webové stránky v opačném `FALSE`.  
+ Hodnota TRUE, pokud přidružené webové stránce byl otevřen úspěšně; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Otevře na webové stránce pomocí přidruženého hypertextového odkazu `CMFCRibbonLinkCtrl` objektu.  
+ Otevře webovou stránku pomocí přidruženého hypertextového odkazu `CMFCRibbonLinkCtrl` objektu.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Nastaví hodnotu hypertextový odkaz.  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszLink*  
- Určuje text hypertextového odkazu.  
+ [in] *lpszLink*  
+ Určuje text, hypertextový odkaz.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

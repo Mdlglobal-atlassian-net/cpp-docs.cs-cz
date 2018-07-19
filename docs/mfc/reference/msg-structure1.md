@@ -1,5 +1,5 @@
 ---
-title: MSG – Struktura1 | Microsoft Docs
+title: MSG – Struktura1 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338809"
 ---
 # <a name="msg-structure1"></a>MSG – Struktura1
-`MSG` Struktura obsahuje informace o zpráv z fronty zpráv vlákno.  
+`MSG` Struktura obsahuje informace o zprávy z fronty zpráv vlákna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,22 +41,22 @@ typedef struct tagMSG {     // msg
   
 #### <a name="parameters"></a>Parametry  
  *hWnd*  
- Identifikuje okno jejichž procedury okna obdrží zprávu.  
+ Identifikuje okno, jehož proceduru okna obdrží zprávu.  
   
- `message`  
+ *message*  
  Určuje číslo zprávy.  
   
- `wParam`  
- Určuje další informace o zprávě. Přesný význam závisí na hodnotu **zpráva** člen.  
+ *wParam*  
+ Určuje další informace o zprávě. Přesné význam závisí na hodnotě `message` člena.  
   
- `lParam`  
- Určuje další informace o zprávě. Přesný význam závisí na hodnotu **zpráva** člen.  
+ *lParam*  
+ Určuje další informace o zprávě. Přesné význam závisí na hodnotě `message` člena.  
   
- `time`  
- Určuje dobu, kdy byla zpráva vystavena.  
+ *čas*  
+ Určuje dobu, kdy byla publikována zpráva.  
   
- `pt`  
- Určuje pozici kurzoru, v souřadnice obrazovky, když zpráva byla vrácena.  
+ *PT*  
+ Určuje pozici kurzoru v souřadnicovém systému obrazovky, když byla publikována zpráva.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

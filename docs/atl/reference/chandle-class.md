@@ -1,5 +1,5 @@
 ---
-title: Třída CHandle | Microsoft Docs
+title: Chandle – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b57aab927380f8801c3b9cab258a695c7d8a59d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd962e32f423baba6cfabb90f1d9f7fa5d69e170
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363068"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880229"
 ---
-# <a name="chandle-class"></a>CHandle – třída
-Tato třída poskytuje metody pro vytváření a používání objekt popisovače.  
+# <a name="chandle-class"></a>Chandle – třída
+Tato třída poskytuje metody pro vytváření a používání popisovač objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +45,15 @@ class CHandle
 |Název|Popis|  
 |----------|-----------------|  
 |[CHandle::CHandle](#chandle)|Konstruktor|  
-|[CHandle:: ~ CHandle](#dtor)|Destruktor.|  
+|[Chandle –:: ~ chandle –](#dtor)|Destruktor.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CHandle::Attach](#attach)|Volat tuto metodu za účelem připojení `CHandle` objekt, který má existující popisovač.|  
-|[CHandle::Close](#close)|Voláním této metody lze zavřít `CHandle` objektu.|  
-|[CHandle::Detach](#detach)|Volat tuto metodu za účelem odpojení popisovač z `CHandle` objektu.|  
+|[CHandle::Attach](#attach)|Voláním této metody lze připojit `CHandle` objektů pro existující popisovač.|  
+|[CHandle::Close](#close)|Volejte tuto metodu za účelem Zavřít `CHandle` objektu.|  
+|[CHandle::Detach](#detach)|Volejte tuto metodu za účelem odpojení popisovač z `CHandle` objektu.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -69,27 +69,27 @@ class CHandle
 |[CHandle::m_h](#m_h)|Členské proměnné, která uloží popisovač.|  
   
 ## <a name="remarks"></a>Poznámky  
- A `CHandle` objekt lze použít vždy, když je požadovaný popisovač: Hlavní rozdíl je, že `CHandle` objektu bude automaticky odstraněna.  
+ A `CHandle` objekt lze použít vždy, když je povinný popisovač: Hlavní rozdíl je, že `CHandle` objekt bude automaticky odstraněno.  
   
 > [!NOTE]
->  Některé funkce rozhraní API použije hodnotu NULL jako prázdný nebo neplatný popisovač, jiné zase INVALID_HANDLE_VALUE. `CHandle` pouze používá hodnotu NULL a bude považovat INVALID_HANDLE_VALUE skutečné popisovač. Při volání rozhraní API, která lze vrátit INVALID_HANDLE_VALUE, byste měli zkontrolovat pro tuto hodnotu před voláním [CHandle::Attach](#attach) nebo předání do `CHandle` konstruktoru a místo toho předat hodnotu NULL.  
+>  Některé funkce rozhraní API budete používat jako prázdný nebo neplatný popisovač, NULL, zatímco v jiných INVALID_HANDLE_VALUE. `CHandle` využívá pouze hodnotu NULL a bude považovat INVALID_HANDLE_VALUE skutečné popisovač. Při volání rozhraní API, která může vrátit INVALID_HANDLE_VALUE, by měla vyhledávat tuto hodnotu před voláním [CHandle::Attach](#attach) nebo jejich předání do `CHandle` konstruktoru a místo toho předat hodnotu NULL.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
   
 ##  <a name="attach"></a>  CHandle::Attach  
- Volat tuto metodu za účelem připojení `CHandle` objekt, který má existující popisovač.  
+ Voláním této metody lze připojit `CHandle` objektů pro existující popisovač.  
   
 ```
 void Attach(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- `CHandle` bude převzít vlastnictví popisovač `h`.  
+ *h*  
+ `CHandle` převezme vlastnictví popisovač *h*.  
   
 ### <a name="remarks"></a>Poznámky  
- Přiřadí `CHandle` do objektu `h` zpracování. V sestavení ladí, bude-li vyvolána ATLASSERT `h` má hodnotu NULL. Není provedena žádná další kontrola o platnosti popisovač.  
+ Přiřazuje `CHandle` objektu *h* zpracovat. V sestaveních ladí, bude-li vyvolána ATLASSERT *h* má hodnotu NULL. Žádné další typové kontroly za jako platnosti popisovače.  
   
 ##  <a name="chandle"></a>  CHandle::CHandle  
  Konstruktor  
@@ -101,13 +101,13 @@ explicit CHandle(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- Popisovač existující nebo `CHandle`.  
+ *h*  
+ Existující popisovač nebo `CHandle`.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří novou `CHandle` objektu, volitelně pomocí existující popisovač nebo `CHandle` objektu.  
+ Vytvoří novou `CHandle` objektu, případně můžete použít existující popisovač nebo `CHandle` objektu.  
   
-##  <a name="dtor"></a>  CHandle:: ~ CHandle  
+##  <a name="dtor"></a>  Chandle –:: ~ chandle –  
  Destruktor.  
   
 ```
@@ -115,30 +115,30 @@ explicit CHandle(HANDLE h) throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní `CHandle` objekt voláním [CHandle::Close](#close).  
+ Uvolňuje `CHandle` objektu voláním [CHandle::Close](#close).  
   
 ##  <a name="close"></a>  CHandle::Close  
- Voláním této metody lze zavřít `CHandle` objektu.  
+ Volejte tuto metodu za účelem Zavřít `CHandle` objektu.  
   
 ```
 void Close() throw();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Zavře otevřený objekt popisovač. Pokud popisovač hodnotu NULL, což bude v případě **Zavřít** již byla volána, ATLASSERT, bude vyvolána v sestavení pro ladění.  
+ Zavře otevřený objekt popisovače. Pokud je popisovač je NULL, což bude v případě, pokud `Close` již byla volána, ATLASSERT, bude vyvolána v sestaveních ladění.  
   
 ##  <a name="detach"></a>  CHandle::Detach  
- Volat tuto metodu za účelem odpojení popisovač z `CHandle` objektu.  
+ Volejte tuto metodu za účelem odpojení popisovač z `CHandle` objektu.  
   
 ```
 HANDLE Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí popisovač odpojuje.  
+ Vrátí popisovač budou tímto odpojeny.  
   
 ### <a name="remarks"></a>Poznámky  
- Uvolní vlastnictví popisovač.  
+ Uvolní vlastnictví objektu popisovač.  
   
 ##  <a name="m_h"></a>  CHandle::m_h  
  Členské proměnné, která uloží popisovač.  
@@ -155,14 +155,14 @@ CHandle& operator=(CHandle& h) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- `CHandle` bude převzít vlastnictví popisovač `h`.  
+ *h*  
+ `CHandle` převezme vlastnictví popisovač *h*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí odkaz na nové `CHandle` objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `CHandle` objekt aktuálně obsahuje popisovač, bude uzavřeno. `CHandle` Objekt, je předaná bude mít odkaz na jeho popisovač nastavena na hodnotu NULL. To zajistí, že dva `CHandle` objekty, nikdy neobsahuje stejné active popisovač.  
+ Pokud `CHandle` objekt aktuálně obsahuje popisovač, bude uzavřeno. `CHandle` Objektu předávaný bude mít odkaz na jeho popisovač nastavena na hodnotu NULL. To zajistí, že dvě `CHandle` objekty, nikdy neobsahuje stejné aktivní zpracování.  
   
 ##  <a name="operator_handle"></a>  CHandle::operator POPISOVAČ  
  Vrací hodnotu uloženou popisovač.  
@@ -175,4 +175,4 @@ operator HANDLE() const throw();
  Vrací hodnotu uloženou v [CHandle::m_h](#m_h).  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

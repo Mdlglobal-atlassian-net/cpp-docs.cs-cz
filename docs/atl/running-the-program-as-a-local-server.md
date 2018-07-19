@@ -1,5 +1,5 @@
 ---
-title: Spuštění programu jako místní Server | Microsoft Docs
+title: Spuštění programu jako místního serveru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b8a79978528493e02ac5a272dafe8da6fdc1d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ae2e44ba51a878d293ad5b497a1638cc9d7dc76
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360440"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848480"
 ---
-# <a name="running-the-program-as-a-local-server"></a>Spuštění programu jako místní Server
-Pokud spuštění programu jako služba nepohodlná, můžete dočasně změnit registr tak, aby spuštění programu jako normální místní server. Jednoduše přejmenovat `LocalService` hodnotu v rámci vaší AppID, který `_LocalService` a ujistěte se, `LocalServer32` klíč v rámci vaší CLSID nastavena správně. (Všimněte si, že vaše aplikace by měla spustit v jiném počítači pomocí DCOMCNFG přejmenuje vaše `LocalServer32` klíče na `_LocalServer32`.) S vaším programem jako místní server využívá několik dalších sekund při spuštění, protože volání **StartServiceCtrlDispatcher** v `CAtlServiceModuleT::Start` trvá několik sekund, než se nezdaří.  
+# <a name="running-the-program-as-a-local-server"></a>Spuštění programu jako místního serveru
+Pokud spuštění programu jako služba je nevhodné, můžete dočasně změnit registr tak, aby program je spuštěn jako normální místní server. Jednoduše přejmenovat `LocalService` hodnoty v rámci vaší AppID, který `_LocalService` a ujistěte `LocalServer32` klíč v rámci vaší CLSID je správně nastavený. (Všimněte si, že použití DCOMCNFG k určení, že vaše aplikace by měl běžet v jiném počítači přejmenuje vaše `LocalServer32` klíč `_LocalServer32`.) Spuštění programu jako místního serveru má několik dalších sekund při spuštění, protože volání `StartServiceCtrlDispatcher` v `CAtlServiceModuleT::Start` trvá několik sekund, než selže.  
   
 ## <a name="see-also"></a>Viz také  
  [Tipy pro ladění](../atl/debugging-tips.md)

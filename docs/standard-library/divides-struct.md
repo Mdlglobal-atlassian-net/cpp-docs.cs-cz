@@ -1,5 +1,5 @@
 ---
-title: divides – struktura | Microsoft Docs
+title: divides – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0580d6e2128a75f7457541cc82caf2fece958b81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfc3f744da2deb804f1a3e3445fbed3da3fac0b5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955783"
 ---
 # <a name="divides-struct"></a>divides – struktura
 
-Předdefinované funkce objekt, který provede operaci dělení ( `operator/`) na její argumenty.
+Předdefinovaný objekt funkce, který provádí operace dělení (`operator/`) na svých argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,15 +49,15 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Typ, který podporuje `operator/` , která má operandy zadán nebo odvozené typy.
+*Typ*, *T*, *U* typ, který podporuje `operator/` , která přebírá operandů zadaný nebo odvozené typy.
 
-`Left` Levý operand operace dělení. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `T`.
+*Vlevo* levý operand operace dělení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-`Right` Pravý operand operace dělení. Unspecialized šablona má argument typu odkazu lvalue `Type`. Specializované šablony ideální předávání lvalue a rvalue odkaz argumenty odvodit typ `U`.
+*Pravé* pravý operand operace dělení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left / Right`. Specializované šablony ideální předávání výsledku, který má typ, který je vrácen rutinou `operator/`.
+Výsledek `Left / Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácen `operator/`.
 
 ## <a name="example"></a>Příklad
 
@@ -119,9 +119,9 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

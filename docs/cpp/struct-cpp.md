@@ -1,5 +1,5 @@
 ---
-title: struct (C++) | Microsoft Docs
+title: struktury (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947511"
 ---
 # <a name="struct-c"></a>struct (C++)
-`struct` – Klíčové slovo definuje typ struktury nebo proměnná typ struktury.  
+**Struktura** – klíčové slovo definuje typ struktury anebo proměnnou typu Struktura.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,46 +37,46 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `template-spec`  
- Volitelné specifikace šablony. Další informace najdete v části [specifikace šablony](templates-cpp.md).  
+ *specifikace šablony*  
+ Volitelné specifikace šablony. Další informace najdete v [specifikace šablony](templates-cpp.md).  
   
- `struct`  
- `struct` – Klíčové slovo.  
+ *struct*  
+ **Struktura** – klíčové slovo.  
   
- `ms-decl-spec`  
- Volitelná specifikace paměťové třídy. Další informace najdete v části [__declspec](../cpp/declspec.md) – klíčové slovo.  
+ *MS-decl-spec*  
+ Volitelná specifikace paměťové třídy. Další informace najdete [__declspec](../cpp/declspec.md) – klíčové slovo.  
   
- `tag`  
+ *Značka*  
  Název typu daný pro strukturu. Značka se změní na vyhrazené slovo v rámci struktury. Značka je volitelná. Pokud je tento argument vynechán, je definována anonymní struktura. Další informace najdete v tématu [anonymní typy třídy](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- Volitelný seznam tříd nebo struktur, ze kterých tato struktura odvodí svoje členy. V tématu [základní třídy](../cpp/base-classes.md) Další informace. Každý název základní třídu nebo strukturu lze předcházet specifikátor přístupu ([veřejné](../cpp/public-cpp.md), [privátní](../cpp/private-cpp.md), [chráněné](../cpp/protected-cpp.md)) a [virtuální](../cpp/virtual-cpp.md) – klíčové slovo. Podívejte se na tabulku přístup ke členu v [řízení přístupu ke členům třídy](member-access-control-cpp.md) Další informace.  
+ *Base-list*  
+ Volitelný seznam tříd nebo struktur, ze kterých tato struktura odvodí svoje členy. Zobrazit [základní třídy](../cpp/base-classes.md) Další informace. Každý název základní třídy nebo struktury může být uvozen specifikátorem přístupu ([veřejné](../cpp/public-cpp.md), [privátní](../cpp/private-cpp.md), [chráněné](../cpp/protected-cpp.md)) a [virtuální](../cpp/virtual-cpp.md) klíčové slovo. Viz tabulka pro přístup ke členu [řízení přístupu ke členům třídy](member-access-control-cpp.md) Další informace.  
   
- `member-list`  
- Seznam členů struktury. Odkazovat na [přehled členů třídy](../cpp/class-member-overview.md) Další informace. Jediným rozdílem je, že `struct` slouží místě `class`.  
+ *seznam členů*  
+ Seznam členů struktury. Odkazovat na [přehled členů třídy](../cpp/class-member-overview.md) Další informace. Jediný rozdíl zde je, že **struktura** je použito místo **třídy**.  
   
- `declarators`  
- Seznam deklarátoru určující názvy třídy. Seznam deklarátoru deklarující jednu nebo více instancí typu struktura. Deklarátory můžou obsahovat inicializační seznamy, pokud jsou všechny datové členy třídy `public`. Inicializační seznamy jsou běžné při struktury, protože jsou datové členy `public` ve výchozím nastavení.  V tématu [přehled Deklarátory](../cpp/overview-of-declarators.md) Další informace.  
+ *deklarátory*  
+ Seznam deklarátoru určující názvy třídy. Seznam deklarátoru deklarující jednu nebo více instancí typu struktura. Deklarátory mohou obsahovat inicializační seznamy, pokud jsou všechny datové členy třídy **veřejné**. Inicializační seznamy jsou běžné ve strukturách, protože datoví členové mají **veřejné** ve výchozím nastavení.  Zobrazit [přehled Deklarátorů](../cpp/overview-of-declarators.md) Další informace.  
   
 ## <a name="remarks"></a>Poznámky  
  Typ struktury je složený typ definovaný uživatelem. Skládá se z polí nebo členů, které mohou mít různé typy.  
   
- V jazyce C++ struktura je stejná jako třída s tím rozdílem, že jeho členové jsou `public` ve výchozím nastavení.  
+ V jazyce C++ je struktura je stejná jako třída s tím rozdílem, že její členy jsou **veřejné** ve výchozím nastavení.  
   
- Informace na spravované třídy a struktury najdete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Informace o spravovaných třídách a strukturách naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="using-a-structure"></a>Používání struktury  
- V jazyce C, je nutné explicitně zadat `struct` – klíčové slovo do definice struktury. V jazyce C++, není nutné používat `struct` – klíčové slovo po definování typu.  
+ V jazyce C, je nutné explicitně zadat **struktura** – klíčové slovo pro deklaraci struktury. V jazyce C++, nepotřebujete k použití **struktura** – klíčové slovo po definování typu.  
   
  Proměnné můžete deklarovat, pokud je typ struktury definován umístěním jednoho nebo více názvů proměnných oddělených čárkami mezi uzavírací závorkou a středníkem.  
   
  Proměnné struktury je možné inicializovat. Inicializace pro každou proměnnou musí být uzavřena do složených závorek.  
   
- Související informace najdete v tématu [třída](../cpp/class-cpp.md), [sjednocení](../cpp/unions.md), a [výčtu](../cpp/enumerations-cpp.md).  
+ Související informace naleznete v tématu [třídy](../cpp/class-cpp.md), [sjednocení](../cpp/unions.md), a [výčtu](../cpp/enumerations-cpp.md).  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

@@ -1,5 +1,5 @@
 ---
-title: třídy (C++) | Microsoft Docs
+title: třídy (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bffa79760e9c597c5a6d736104dc856fc1de16b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bf975a9d64508368ac5d61c82fecc07edda28b5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947505"
 ---
 # <a name="class-c"></a>třída (C++)
-`class` – Klíčové slovo deklaruje typu třídy nebo definuje objekt typu třídy.  
+**Třídy** – klíčové slovo deklaruje typ třídy nebo definuje objekt typu třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-      [template-spec]  
-       class [ms-decl-spec] [tag [: base-list ]]  
+[template-spec]  
+class [ms-decl-spec] [tag [: base-list ]]  
 {  
    member-list  
 } [declarators];  
@@ -39,29 +40,29 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `template-spec`  
- Volitelné specifikace šablony. Další informace najdete v části [šablony](templates-cpp.md).  
+ *specifikace šablony*  
+ Volitelné specifikace šablony. Další informace najdete v [šablony](templates-cpp.md).  
   
- `class`  
- `class` – Klíčové slovo.  
+ *class*  
+ **Třídy** – klíčové slovo.  
   
- `ms-decl-spec`  
- Volitelná specifikace paměťové třídy. Další informace najdete v části [__declspec](../cpp/declspec.md) – klíčové slovo.  
+ *MS-decl-spec*  
+ Volitelná specifikace paměťové třídy. Další informace najdete [__declspec](../cpp/declspec.md) – klíčové slovo.  
   
- `tag`  
- Název typu pro třídu. Značka se stane vyhrazené slovo v rámci oboru třídy. Značka je volitelná. Pokud tento parametr vynechán, je definována třídu anonymní. Další informace najdete v tématu [anonymní typy třídy](../cpp/anonymous-class-types.md).  
+ *Značka*  
+ Název typu daný pro třídu. Značka se změní vyhrazené slovo v rámci oboru třídy. Značka je volitelná. Pokud tento parametr vynechán, je definována anonymní třídy. Další informace najdete v tématu [anonymní typy třídy](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- Tato třída volitelný seznam tříd nebo struktury odvodí její členy z. V tématu [základní třídy](../cpp/base-classes.md) Další informace. Každý název základní třídu nebo strukturu lze předcházet specifikátor přístupu ([veřejné](../cpp/public-cpp.md), [privátní](../cpp/private-cpp.md), [chráněné](../cpp/protected-cpp.md)) a [virtuální](../cpp/virtual-cpp.md) – klíčové slovo. Podívejte se na tabulku přístup ke členu v [řízení přístupu ke členům třídy](member-access-control-cpp.md) Další informace.  
+ *Base-list*  
+ Volitelný seznam tříd nebo struktur, které tato třída odvodí svoje členy z. Zobrazit [základní třídy](../cpp/base-classes.md) Další informace. Každý název základní třídy nebo struktury může být uvozen specifikátorem přístupu ([veřejné](../cpp/public-cpp.md), [privátní](../cpp/private-cpp.md), [chráněné](../cpp/protected-cpp.md)) a [virtuální](../cpp/virtual-cpp.md) klíčové slovo. Viz tabulka pro přístup ke členu [řízení přístupu ke členům třídy](member-access-control-cpp.md) Další informace.  
   
- `member-list`  
- Seznam členy třídy. Odkazovat na [přehled členů třídy](../cpp/class-member-overview.md) Další informace.  
+ *seznam členů*  
+ Seznam členů třídy. Odkazovat na [přehled členů třídy](../cpp/class-member-overview.md) Další informace.  
   
- `declarators`  
- Deklarátor seznam určující názvy jednu nebo více instancí typu třídy. Deklarátory můžou obsahovat inicializační seznamy, pokud jsou všechny datové členy třídy `public`. To je více běžné v struktury, jejíž členové data jsou `public` ve výchozím nastavení, než třídy. V tématu [přehled Deklarátory](../cpp/overview-of-declarators.md) Další informace.  
+ *deklarátory*  
+ Seznam deklarátoru určující názvy jednu nebo více instancí typu třídy. Deklarátory mohou obsahovat inicializační seznamy, pokud jsou všechny datové členy třídy **veřejné**. To je běžné ve strukturách, jehož datové členy **veřejné** ve výchozím nastavení, než v třídách. Zobrazit [přehled Deklarátorů](../cpp/overview-of-declarators.md) Další informace.  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace o třídy obecně platí, podívejte se na jeden z následujících témat:  
+ Další informace o třídách obecně odkazovat na jeden z následujících témat:  
   
 -   [struct](../cpp/struct-cpp.md)  
   
@@ -73,11 +74,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [__virtual_inheritance](../cpp/inheritance-keywords.md)  
   
- Informace na spravované třídy a struktury najdete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)  
+ Informace o spravovaných třídách a strukturách naleznete v tématu [třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // class.cpp  
 // compile with: /EHsc  
 // Example of the class keyword  
@@ -149,5 +150,5 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

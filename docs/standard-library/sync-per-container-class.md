@@ -1,5 +1,5 @@
 ---
-title: sync_per_container – třída | Microsoft Docs
+title: sync_per_container – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1db124d7fa73a9483d2c77f0a1e78349224023
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864517"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957118"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container – třída
 
-Popisuje [filtr synchronizace](../standard-library/allocators-header.md) poskytující objekt samostatné mezipaměti pro každý objekt přidělení.
+Popisuje [filtr synchronizace](../standard-library/allocators-header.md) , který poskytuje objekt samostatné mezipaměti pro každý objekt alokátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,23 +40,23 @@ class sync_per_container
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Cache`|Typ mezipaměti přidružené k filtru synchronizace. To může být [cache_chunklist –](../standard-library/cache-chunklist-class.md), [cache_freelist –](../standard-library/cache-freelist-class.md), nebo [cache_suballoc –](../standard-library/cache-suballoc-class.md).|
+|*mezipaměť*|Typ mezipaměti přidružené k filtru synchronizace. To může být [cache_chunklist –](../standard-library/cache-chunklist-class.md), [cache_freelist –](../standard-library/cache-freelist-class.md), nebo [cache_suballoc –](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[equals](#equals)|Porovná dva mezipamětí rovnosti.|
+|[equals](#equals)|Porovná rovnost dvou mezipamětí.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<alokátorů >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
 ## <a name="equals"></a>  sync_per_container::Equals
 
-Porovná dva mezipamětí rovnosti.
+Porovná rovnost dvou mezipamětí.
 
 ```cpp
 bool equals(const sync_per_container<Cache>& Other) const;
@@ -66,15 +66,15 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Cache`|Objekt mezipaměti filtru synchronizace.|
-|`Other`|Objekt mezipaměti pro porovnání rovnosti.|
+|*mezipaměť*|Objekt mezipaměti filtr synchronizace.|
+|*Jiné*|Mezipaměť objekt k porovnání rovnosti.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vždy vrátí hodnotu `false`.
+Členská funkce vždy vrátí **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<alokátorů >](../standard-library/allocators-header.md)<br/>
+[\<alokátory: >](../standard-library/allocators-header.md)<br/>

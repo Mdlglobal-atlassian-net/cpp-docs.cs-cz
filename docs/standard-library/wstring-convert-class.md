@@ -1,5 +1,5 @@
 ---
-title: wstring_convert – třída | Microsoft Docs
+title: wstring_convert – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e158605deeae859132243ab624d4a1638973b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954848"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert – třída
 
-Šablony třídy `wstring_convert` provádí převody mezi řetězec bajtové a široké řetězec.
+Třída šablony `wstring_convert` provádí převody mezi širokého řetězce a řetězec bajtů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,25 +52,27 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-`Codecvt` [Národního prostředí](../standard-library/locale-class.md) omezující vlastnosti, který představuje objekt převod.
+*codecvt –*  
+ [Národní prostředí](../standard-library/locale-class.md) omezující vlastnost, která představuje objekt převodu.
 
-`Elem` Typ elementu široká charakterová.
+*Elem*  
+ Typ elementu širokého znaku.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje objekt, který řídí převody mezi široké řetězec objekty třídy `std::basic_string<Elem>` a bajtů řetězce objekty třídy `std::basic_string<char>` (také označované jako `std::string`). Šablony třídy definuje typy `wide_string` a `byte_string` jako synonyma pro tyto dva typy. Převod mezi posloupnost `Elem` hodnoty (uložené v `wide_string` objekt) a vícebajtové pořadí (uložené v `byte_string` objektu) se provádí v objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky standardu omezující vlastnost kódu převod `std::codecvt<Elem, char, std::mbstate_t>`.
+Třída šablony popisuje objekt, který řídí převody mezi objekty širokého řetězce třídy `std::basic_string<Elem>` a bajt řetězcových objektů třídy `std::basic_string<char>` (označované také jako `std::string`). Třída šablony definuje typy `wide_string` a `byte_string` jako synonyma pro tyto dva typy. Převod mezi sekvencí `Elem` hodnoty (uložené v `wide_string` objekt) a vícebajtové sekvence (uložené v `byte_string` objektu) se provádí pomocí objektu třídy `Codecvt<Elem, char, std::mbstate_t>`, který splňuje požadavky standardu omezující vlastnost převodu kódu `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Tato třída šablony objektu ukládá:
+Ukládá se objekt této třídy šablony:
 
-- Byte řetězec k zobrazení o chybách
+- Řetězec bajtů se zobrazí na chyby
 
-- Široké řetězec k zobrazení o chybách
+- Široký řetězec k zobrazení chyby
 
-- Ukazatel na objekt přidělené převodu (což je uvolněno při zničena objekt wbuffer_convert)
+- Ukazatel na objekt přidělený převod, (což je uvolněn po zničení objektu wbuffer_convert –)
 
-- Objekt stavu převodu typu [state_type –](#state_type)
+- Objekt stavu převodu typu [state_type](#state_type)
 
-- Počet převod
+- Počet převodu
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -83,7 +85,7 @@ Tato třída šablony objektu ukládá:
 |Název typu|Popis|
 |-|-|
 |[byte_string](#byte_string)|Typ, který představuje řetězec bajtů.|
-|[wide_string](#wide_string)|Typ, který představuje široké řetězec.|
+|[wide_string](#wide_string)|Typ, který představuje širokého řetězce.|
 |[state_type](#state_type)|Typ, který představuje stav převodu.|
 |[int_type](#int_type)|Typ, který představuje celé číslo.|
 
@@ -91,16 +93,16 @@ Tato třída šablony objektu ukládá:
 
 |Členská funkce|Popis|
 |-|-|
-|[from_bytes –](#from_bytes)|Převede řetězec bajtů na řetězec široké.|
-|[to_bytes –](#to_bytes)|Převede široké řetězec na řetězec bajtů.|
-|[převést](#converted)|Vrátí počet úspěšné převody.|
+|[from_bytes –](#from_bytes)|Převede řetězec bajtů na široký řetězec.|
+|[to_bytes –](#to_bytes)|Převede širokého řetězce na řetězec bajtů.|
+|[převést](#converted)|Vrátí počet úspěšných převody.|
 |[Stav](#state)|Vrátí objekt představující stav převodu.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="byte_string"></a>  wstring_convert::byte_string
 
@@ -112,11 +114,11 @@ typedef std::basic_string<char> byte_string;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `std::basic_string<char>`.
+Typ je synonymum pro `std::basic_string<char>`.
 
 ## <a name="converted"></a>  wstring_convert::converted
 
-Vrátí počet úspěšné převody.
+Vrátí počet úspěšných převody.
 
 ```cpp
 size_t converted() const;
@@ -124,15 +126,15 @@ size_t converted() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet úspěšně převody.
+Počet úspěšných převody.
 
 ### <a name="remarks"></a>Poznámky
 
-Počet úspěšně převody jsou uloženy v objektu počet převod.
+Počet úspěšných převody jsou uloženy v objektu počet převodu.
 
 ## <a name="from_bytes"></a>  wstring_convert::from_bytes
 
-Převede řetězec bajtů na řetězec široké.
+Převede řetězec bajtů na široký řetězec.
 
 ```cpp
 wide_string from_bytes(char Byte);
@@ -145,21 +147,21 @@ wide_string from_bytes(const char* first, const char* last);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Byte`|Pořadí bajtů jeden element má být převeden.|
-|`ptr`|C – styl, ukončené hodnotou null posloupnost znaků, který má být převeden.|
-|`Bstr`|[Byte_string –](#byte_string) má být převeden.|
-|`first`|První znak v rozsah znaků, které má být převeden.|
-|`last`|Poslední znak v rozsah znaků, které má být převeden.|
+|*Bajtů*|Sekvence bajtů jedním prvkem, který má být převeden.|
+|*ptr*|Stylu C zakončený hodnotou null posloupnost znaků, které mají být převedeny.|
+|*BSTR*|[Byte_string](#byte_string) má být převeden.|
+|*první*|První znak v rozsahu znaků, které mají být převedeny.|
+|*poslední*|Poslední znak v rozsahu znaků, které mají být převedeny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt string široké vyplývající z převodu.
+Objekt širokého řetězce vyplývající z převodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [převodu stavu](../standard-library/wstring-convert-class.md) objekt byl `not` zkonstruovat s explicitní hodnotu, je nastavený na jeho výchozí hodnota (stav počáteční převod) před zahájením převodu. V opačném případě je ponechán beze změny.
+Pokud [převodu stavu](../standard-library/wstring-convert-class.md) byl objekt *není* vytvořen s explicitní hodnotou, je nastavena na výchozí hodnotu (počáteční převodu stavu) před zahájením převodu. V opačném případě je ponechán beze změny.
 
-Počet úspěšně převést elementy vstupu je uložen v objektu počet převod. Pokud nedojde k žádné chybě převodu, – členská funkce vrátí řetězec převedený široké. Jinak hodnota pokud objekt byl vytvořen pomocí inicializátoru celou řetězec chybové zprávy, – členská funkce vrátí objekt zpráva Chyba celou řetězce. V opačném – členská funkce vyvolá objekt třídy [range_error](../standard-library/range-error-class.md).
+Počet úspěšně převeden vstupních prvků, které jsou uloženy v objektu počet převod. Pokud nenastane žádná chyba převodu, členská funkce vrátí převedený širokého řetězce. Jinak pokud objekt byl vytvořen s inicializátorem širokých řetězců chybové zprávy, členská funkce vrátí objekt širokých řetězců chybové zprávy. V opačném případě má členská funkce vyvolá objekt třídy [range_error –](../standard-library/range-error-class.md).
 
 ## <a name="int_type"></a>  wstring_convert::int_type
 
@@ -171,7 +173,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `wide_string::traits_type::int_type`.
+Typ je synonymum pro `wide_string::traits_type::int_type`.
 
 ## <a name="state"></a>  wstring_convert::State
 
@@ -183,7 +185,7 @@ state_type state() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Převodu stavu](../standard-library/wstring-convert-class.md) objekt, který reprezentuje stav převodu.
+[Převodu stavu](../standard-library/wstring-convert-class.md) objekt, který představuje stav převodu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -197,11 +199,11 @@ typedef typename Codecvt::state_type state_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt, který může představovat převod stavu. Typ se jedná o synonymum `Codecvt::state_type`.
+Typ popisuje objekt, který může představovat převod stavu. Typ je synonymum pro `Codecvt::state_type`.
 
 ## <a name="to_bytes"></a>  wstring_convert::to_bytes
 
-Převede široké řetězec na řetězec bajtů.
+Převede širokého řetězce na řetězec bajtů.
 
 ```cpp
 byte_string to_bytes(Elem Char);
@@ -214,21 +216,21 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`Char`|Široké znak, který má být převeden.|
-|`Wptr`|C – styl, ukončené hodnotou null pořadí, počínaje na `wptr`, má být převeden.|
-|`Wstr`|[Wide_string –](#wide_string) má být převeden.|
-|`first`|Prvním elementem v rozsahu prvků, které má být převeden.|
-|`last`|Posledním prvkem v rozsahu prvků, které má být převeden.|
+|*Char*|Široký znak, který má být převeden.|
+|*Wptr*|Stylu C zakončený hodnotou null pořadí, počínaje `wptr`, má být převeden.|
+|*WSTR.*|[Wide_string](#wide_string) má být převeden.|
+|*první*|První prvek v rozsahu prvků, které mají být převedeny.|
+|*poslední*|Po posledním prvku v rozsahu prvků, které má být převeden.|
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [převodu stavu](../standard-library/wstring-convert-class.md) objekt byl `not` zkonstruovat s explicitní hodnotu, je nastavený na jeho výchozí hodnota (stav počáteční převod) před zahájením převodu. V opačném případě je ponechán beze změny.
+Pokud [převodu stavu](../standard-library/wstring-convert-class.md) byl objekt *není* vytvořen s explicitní hodnotou, je nastavena na výchozí hodnotu (počáteční převodu stavu) před zahájením převodu. V opačném případě je ponechán beze změny.
 
-Počet úspěšně převést elementy vstupu je uložen v objektu počet převod. Pokud nedojde k žádné chybě převodu, – členská funkce vrátí řetězec převedený bajtů. Jinak hodnota pokud objekt byl vytvořen pomocí inicializátoru bajtů řetězec chybové zprávy, – členská funkce vrátí objekt zpráva bajtů řetězec chyby. V opačném – členská funkce vyvolá objekt třídy [range_error](../standard-library/range-error-class.md).
+Počet úspěšně převeden vstupních prvků, které jsou uloženy v objektu počet převod. Pokud nenastane žádná chyba převodu, členská funkce vrátí řetězec převedený bajt. Jinak pokud objekt byl vytvořen s inicializátorem bajtů na řetězec chybové zprávy, členská funkce vrátí objekt – řetězec chybové zprávy. V opačném případě má členská funkce vyvolá objekt třídy [range_error –](../standard-library/range-error-class.md).
 
 ## <a name="wide_string"></a>  wstring_convert::wide_string
 
-Typ, který představuje široké řetězec.
+Typ, který představuje širokého řetězce.
 
 ```cpp
 typedef std::basic_string<Elem> wide_string;
@@ -236,7 +238,7 @@ typedef std::basic_string<Elem> wide_string;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum `std::basic_string<Elem>`.
+Typ je synonymum pro `std::basic_string<Elem>`.
 
 ## <a name="wstring_convert"></a>  wstring_convert::wstring_convert
 
@@ -252,11 +254,11 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`*Pcvt`|Objekt typu `Codecvt` provést převod.|
-|`_State`|Objekt typu [state_type –](#state_type) reprezentující stav převodu.|
-|`_Berr`|[Byte_string –](#byte_string) zobrazíte na chyby.|
-|`Werr`|[Wide_string –](#wide_string) zobrazíte na chyby.|
+|*\*Pcvt*|Objekt typu `Codecvt` k provedení převodu.|
+|*_Stavu*|Objekt typu [state_type](#state_type) představující stav převodu.|
+|*_Berr*|[Byte_string](#byte_string) se zobrazí na chyby.|
+|*Werr*|[Wide_string](#wide_string) se zobrazí na chyby.|
 
 ### <a name="remarks"></a>Poznámky
 
-První úložiště konstruktor *Pcvt_arg* v [převod objektu](../standard-library/wstring-convert-class.md)
+První konstruktor ukládá *Pcvt_arg* v [převodu objektu](../standard-library/wstring-convert-class.md)

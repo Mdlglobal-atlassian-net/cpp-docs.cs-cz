@@ -1,5 +1,5 @@
 ---
-title: Commandhandler – | Microsoft Docs
+title: Commandhandler – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355135"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850638"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` se identifikovanou pomocí třetí parametr funkce `COMMAND_HANDLER` makro mapy zpráv.  
+`CommandHandler` Funkce identifikován třetí parametr makra COMMAND_HANDLER do mapy zpráv.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,26 +40,26 @@ ms.locfileid: "32355135"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `wNotifyCode`  
- Kód oznámení.  
+ *funkci wNotifyCode*  
+ Kód upozornění.  
   
  *wID*  
- Identifikátor položky nabídky, řízení nebo akcelerátoru.  
+ Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.  
   
  *hWndCtl*  
- Obslužná rutina do ovládacího prvku okno.  
+ Popisovač okna ovládacího prvku.  
   
- `bHandled`  
- Nastaví mapy zpráv `bHandled` k **TRUE** před `CommandHandler` je volána. Pokud `CommandHandler` plně nezpracovává zprávy, je potřeba nastavit `bHandled` k **FALSE** k označení zprávy potřebuje další zpracování.  
+ *bHandled*  
+ Mapování sady zpráv *bHandled* na hodnotu TRUE před `CommandHandler` je volána. Pokud `CommandHandler` plně nezpracovává zprávy, měli nastavit *bHandled* na hodnotu FALSE pro označení je zprávu zapotřebí další zpracování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Výsledek zpracování zprávy. 0, pokud bylo úspěšné.  
+ Výsledek zpracování zprávy. 0 v případě úspěchu.  
   
 ## <a name="remarks"></a>Poznámky  
- Příklad použití tento popisovač zpráv v mapy zpráv naleznete v části [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
+ Příklad použití této obslužné rutiny zpráv v mapování zprávy, naleznete v tématu [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
 ## <a name="see-also"></a>Viz také  
- [Implementace okno](../atl/implementing-a-window.md)   
+ [Implementace okna](../atl/implementing-a-window.md)   
  [Mapy zpráv](../atl/message-maps-atl.md)   
  [WM_NOTIFY –](http://msdn.microsoft.com/library/windows/desktop/bb775583)
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;vektor&gt; funkce | Microsoft Docs'
+title: '&lt;vektor&gt; funkce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,19 +8,19 @@ f1_keywords:
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: dbcb2524736bcb99693f3a4b27790c3447d58fe3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29b23ec4afe32d1aa383afd4fdaf3ca280d49161
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856173"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955257"
 ---
 # <a name="ltvectorgt-functions"></a>&lt;vektor&gt; funkce
 
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  Prohození
 
-Výměny elementy dvěma způsoby.
+Vymění prvky dvou vektorů.
 
 ```cpp
 template <class Type, class Allocator>
@@ -29,18 +29,20 @@ void swap(vector<Type, Allocator>& left, vector<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Vektor poskytování elementy pro si místo nebo vektoru, jehož elementy jsou k výměně s těmi, která vektoru `left`.
+*doprava*  
+ Vektor poskytující prvky pro záměnu nebo vektor, jehož prvky mají být zaměněny vektoru *levé*.
 
-`left` Vektor, jehož elementy jsou k výměně s těmi, která vektoru `right`.
+*doleva*  
+ Vektor, jehož prvky mají být zaměněny vektoru *správné*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony je algoritmus specializuje na vektoru třída kontejneru provést – členská funkce `left`. [Vector::swap](../standard-library/vector-class.md) *(vpravo*). Toto jsou instance částečné řazení šablon funkce kompilátorem. Když funkce šablon jsou přetížené tak, že na shodu šabloně se volání funkce není jedinečný, kompilátor vybere nejvíc specializovanou verzi funkce šablony. Obecné verzi funkce šablony **šablony** \< **třída T**> **void swap**( **T &**, **T &**), v algoritmu třídy funguje tak, že přiřazení a je pomalé operace. Specializovanou verzi v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s interního vyjádření třídy kontejneru.
+Funkce šablon je algoritmus specializované na vektoru třídy kontejneru ke spuštění funkce člena `left`. [Vector::swap](../standard-library/vector-class.md) *(pravém*). Toto jsou instance částečné řazení šablon funkcí v kompilátoru. Pokud funkce šablony jsou přetížené tak, že shoda šablony pomocí volání funkce není jedinečný, pak kompilátor zvolit nejvíce specializovanou verzi šablony funkce. Obecné verzi funkce šablony **šablony** \< **třída T**> **void prohození**( **T &**, **T &**), v algoritmu třída pracuje podle přiřazení a je pomalá operace. Specializované verze v jednotlivých kontejnerech je mnohem rychlejší, jak můžete pracovat s vnitřní reprezentaci třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro funkce člen [vector::swap](../standard-library/vector-class.md) pro příklad, který používá verzi šablony služby `swap`.
+Podívejte se na příklad kódu pro členské funkce [vector::swap](../standard-library/vector-class.md) příklad, který používá verzi šablony `swap`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<vektor >](../standard-library/vector.md)<br/>

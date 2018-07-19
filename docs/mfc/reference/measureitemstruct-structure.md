@@ -1,5 +1,5 @@
 ---
-title: Measureitemstruct – struktura | Microsoft Docs
+title: Measureitemstruct – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336956"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT – struktura
-`MEASUREITEMSTRUCT` Struktura informuje Windows dimenzí, nebo nabídky ovládací prvek položky vykreslované uživatelem.  
+`MEASUREITEMSTRUCT` Struktura informuje Windows dimenzí ovládací prvek nebo nabídka položku vykreslovaných vlastníkem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,29 +40,29 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `CtlType`  
- Obsahuje typ ovládacího prvku. Typy ovládacích prvků hodnoty jsou následující:  
+ *CtlType*  
+ Obsahuje typ ovládacího prvku. Hodnoty pro typy ovládacích prvků jsou následující:  
   
-- **ODT_COMBOBOX** vykreslování vlastníka – pole se seznamem  
+- Pole se seznamem ODT_COMBOBOX vykreslené vlastníkem.  
   
-- **ODT_LISTBOX** pole se seznamem kreslení vlastníka  
+- Pole se seznamem ODT_LISTBOX vykreslené vlastníkem.  
   
-- **ODT_MENU** nabídky kreslení vlastníka  
+- ODT_MENU nabídce vykreslené vlastníkem.  
   
- `CtlID`  
- Obsahuje ID ovládacího prvku pole se seznamem, pole se seznamem nebo tlačítko. Tento člen není použit nabídky.  
+ *CtlID*  
+ Obsahuje ID ovládacího prvku pro pole se seznamem, pole se seznamem nebo tlačítka. Tento člen se nepoužívá pro nabídky.  
   
- `itemID`  
- Obsahuje ID položky nabídky nabídky nebo ID položky seznamu pole proměnné výšky pole se seznamem nebo pole se seznamem. Tento člen není použit pro pole se seznamem-height nebo pole se seznamem, nebo pro tlačítko.  
+ *ID položky*  
+ Obsahuje ID položky nabídky nabídky nebo ID položky seznamu pole proměnné výšky pole se seznamem nebo seznamu. Tento člen se nepoužívá pro pevné výšky pole se seznamem nebo seznamu pole nebo tlačítka.  
   
  *itemWidth*  
- Určuje šířku položky nabídky. Vlastník položky nabídky vykreslování vlastníka musí vyplnit tento člen, než vrátí zprávu.  
+ Určuje šířku položky nabídky. Vlastníkem vykreslené vlastníkem. položka nabídky vyplnit tento člen ještě před jeho vrácením ze zprávy.  
   
  *itemHeight*  
- Určuje výšku jednotlivé položky v seznamu nebo nabídky. Předtím, než vrátí zprávu, vlastník pole se seznamem vykreslování vlastníka jsou seznam nebo položka nabídky musíte vyplnit tento člen. Maximální výška položku v seznamu je 255.  
+ Určuje výšku jednotlivých položek v seznamu nebo nabídky. Před vrácením z zprávy, vlastník pole se seznamem vykreslené vlastníkem, seznamu nebo položky nabídky vyplňte tento člen. Maximální výška položky v seznamu je 255.  
   
- `itemData`  
- Pole se seznamem nebo pole se seznamem tento člen obsahuje hodnotu, která byla předána do pole se seznamem pomocí jedné z následujících akcí:  
+ *itemData*  
+ Pro pole se seznamem nebo seznamu tento člen obsahuje hodnotu, která byla předána do seznamu o jednu z následujících akcí:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
@@ -80,7 +80,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- To umožňuje systému Windows správně zpracovat interakce uživatele pomocí ovládacího prvku. Selhání k vyplnění správné členů `MEASUREITEMSTRUCT` struktura může způsobit nesprávnou operaci ovládacího prvku.  
+ To umožňuje Windows správně zpracovat interakce uživatele s ovládacím prvkem. Selhání k vyplnění správné členů `MEASUREITEMSTRUCT` způsobí, že struktura nesprávnou operaci ovládacího prvku.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** winuser  

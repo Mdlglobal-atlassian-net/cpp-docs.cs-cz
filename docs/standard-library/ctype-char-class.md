@@ -1,5 +1,5 @@
 ---
-title: ctype&lt;char&gt; třída | Microsoft Docs
+title: ctype&lt;char&gt; třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960658"
 ---
-# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; – třída
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; třídy
 
-Třída je explicitní specializace šablon třídy **ctype\<CharType**> na typ `char`, popisující objekt, který může sloužit jako omezující vlastnost národního prostředí a charakterizovat různé vlastnosti znaku typu `char`.
+Explicitní specializace šablony třídy je třída `ctype\<CharType>` na typ **char**, popisující objekt, který může sloužit jako omezující vlastnost národního prostředí k charakterizaci různých vlastností znaku typu **char**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -132,17 +132,17 @@ protected:
 
 Explicitní specializace se liší od třídy šablony několika způsoby:
 
-- Objekt ctype – třída < `char`> ukládá ukazatel na první prvek tabulky maska ctype, pole uchar_max – + 1 elementy typu **ctype_base::mask**. Ukládá také objekt logická hodnota určující, zda mají být odstraněny pole (pomocí `operator delete[]`) Pokud ctype\< **Elem**> zničena objektu.
+- Objekt třídy ctype < `char`> uchovává ukazatel na první prvek ctype maska tabulku, pole UCHAR_MAX + 1 prvků typu `ctype_base::mask`. Také ukládá logická objekt, který označuje, zda pole by měla být odstraněna (pomocí `operator delete[]`) při ctype\< **Elem**> objekt zničen.
 
-- Jeho jediný konstruktor public, který umožňuje určit **kartě**, tabulce maska ctype a **del**, logická hodnota objektu, která je hodnota true, pokud by měl být pole odstraněna, když ctype < `char`> zničena objektu , a také parametr počet odkazů, odolný systém souborů.
+- Jeho jediný veřejný konstruktor umožňuje určit `tab`, maska tabulce ctype a `del`, Booleovským objektem, který má hodnotu true, pokud má být pole odstranit, když ctype < `char`> objekt je zničen, a také počet odkazů Parametr odolný systém souborů.
 
-- Chráněný člen funkce **tabulky** vrátí tabulku masky uložená ctype.
+- Chráněný člen funkce `table` vrátí tabulku masky uložená ctype.
 
-- Objekt statický člen **table_size** Určuje minimální počet elementů v tabulce ctype masky.
+- Statický člen objektu `table_size` Určuje minimální počet prvků v tabulce maska ctype.
 
-- Funkce chráněné statický člen **classic_table**(Tabulka maska ctype vrátí vhodné národního prostředí "C".
+- Chráněné statickou členskou funkci `classic_table`(Tabulka maska ctype vrátí odpovídající národní prostředí "C".
 
-- Neexistují žádné chráněné virtuální členské funkce [do_is –](../standard-library/ctype-class.md#do_is), [do_scan_is –](../standard-library/ctype-class.md#do_scan_is), nebo [do_scan_not –](../standard-library/ctype-class.md#do_scan_not). Odpovídající veřejný členské funkce proveďte ekvivalentní operace sami.
+- Neexistují žádné chráněná virtuální členská funkce [do_is –](../standard-library/ctype-class.md#do_is), [do_scan_is –](../standard-library/ctype-class.md#do_scan_is), nebo [do_scan_not –](../standard-library/ctype-class.md#do_scan_not). Odpovídající veřejné členské funkce provádět ekvivalentní operace sami.
 
 Členské funkce [do_narrow –](../standard-library/ctype-class.md#do_narrow) a [do_widen –](../standard-library/ctype-class.md#do_widen) kopírovat prvky v nezměněném stavu.
 
@@ -150,9 +150,9 @@ Explicitní specializace se liší od třídy šablony několika způsoby:
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [facet – třída](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)<br/>
 [ctype_base – třída](../standard-library/ctype-base-class.md)<br/>

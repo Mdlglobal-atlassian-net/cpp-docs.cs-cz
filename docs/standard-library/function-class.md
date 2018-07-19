@@ -1,5 +1,5 @@
 ---
-title: Funkce třída | Microsoft Docs
+title: funkce třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847839"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959926"
 ---
 # <a name="function-class"></a>function – třída
 
-Obálka volatelná aplikacemi objektu.
+Obálka pro volatelný objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,66 +89,66 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Fty` Typ funkce zabalit.
+*Fty* typ funkce zahrnující.
 
-`Ax` Funkce přidělení.
+*AX* funkci alokátoru.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy je volání obálky, jejíž volání podpis je `Ret(T1, T2, ..., TN)`. Použijete jej uzavřete celou řadu s objekty do uniform obálku.
+Třída šablony je obálka volání, jehož signatura volání je `Ret(T1, T2, ..., TN)`. Použijete ji k uzavření širokou škálu volatelných objektů v obálce jednotné.
 
-Některé funkce člen trvat operand názvy požadované cílový objekt. Můžete určit takový operand několika způsoby:
+Některé členské funkce přijímají operand, který označuje požadovaný cílový objekt. Takové operand můžete zadat několika způsoby:
 
-`fn` --objekt s `fn`; po volání `function` objektu obsahuje kopii `fn`
+`fn` --volatelný objekt `fn`; po volání `function` obsahuje kopii `fn`
 
-`fnref` --s objekt s názvem podle `fnref.get()`; po volání `function` má odkaz na objekt `fnref.get()`
+`fnref` --volatelný objekt s názvem podle `fnref.get()`; po volání `function` obsahuje odkaz na objekt `fnref.get()`
 
-`right` --s objekt, pokud existuje, ukládaná společností `function` objektu `right`
+`right` --volatelný objekt, pokud existuje, drží `function` objektu `right`
 
 `npc` – ukazatel s hodnotou null; Po volání `function` objekt je prázdný
 
-Ve všech případech `INVOKE(f, t1, t2, ..., tN)`, kde `f` je možné volat objekt a `t1, t2, ..., tN` jsou hodnoty lvalue typů `T1, T2, ..., TN` , musí být ve správném formátu a pokud `Ret` není void, převést na `Ret`.
+Ve všech případech `INVOKE(f, t1, t2, ..., tN)`, kde `f` je volatelný objekt a `t1, t2, ..., tN` jsou l-hodnoty typů `T1, T2, ..., TN` , musí být ve správném formátu a v případě `Ret` není void, lze převést na `Ret`.
 
-Prázdná `function` objekt nemá s objekt nebo odkaz na objekt volatelná aplikacemi.
+Prázdná `function` objekt neobsahuje volatelného objektu nebo odkazem na volatelný objekt.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[Funkce](#function)|Vytvoří obálku, který je prázdný nebo ukládá objekt s libovolného typu s pevnou podpis.|
+|[– funkce](#function)|Vytvoří obálku, která je prázdná nebo uchovává volatelný objekt libovolného typu s pevnou podpis.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[result_type](#result_type)|Návratový typ objektu uložené volatelná aplikacemi.|
+|[result_type](#result_type)|Návratový typ uložený volatelný objekt.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[přiřazení](#assign)|Objekt s přiřadí k tomuto objektu funkce.|
-|[Swap](#swap)|Prohodit s dva objekty.|
-|[cíl](#target)|Testů, pokud je uložen s objektu je možné volat jako zadaný.|
-|[target_type](#target_type)|Získá typ informace s objektu.|
+|[přiřazení](#assign)|Volatelný objekt přiřadí k tomuto objektu funkce.|
+|[Prohození](#swap)|Zamění dvě volatelných objektů.|
+|[Cíl](#target)|Testuje, zda je uložená volatelný objekt lze volat jako zadaný.|
+|[target_type](#target_type)|Získá typ informací na volatelný objekt.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[Function::Operator neurčené](#op_unspecified)|Testy, pokud je uložen s objekt existuje.|
-|[funkce:: Operator() –](#op_call)|Volání s objektu.|
-|[Function::Operator =](#op_eq)|Nahradí objekt uložené volatelná aplikacemi.|
+|[Tento parametr zadán Function::Operator](#op_unspecified)|Testuje, zda existuje uložené volatelný objekt.|
+|[funkce:: operator()](#op_call)|Volá volatelný objekt.|
+|[Function::Operator =](#op_eq)|Nahradí uloženou volatelný objekt.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="assign"></a>  Function::Assign
 
-Objekt s přiřadí k tomuto objektu funkce.
+Volatelný objekt přiřadí k tomuto objektu funkce.
 
 ```cpp
 template <class Fx, class Alloc>
@@ -164,19 +164,19 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-`_Func` Objekt s.
+*_Func* volatelný objekt.
 
-`_Fnref` Obálka odkaz, který obsahuje objekt s.
+*_Fnref* obálku odkaz, který obsahuje volatelný objekt.
 
-`Ax` Objekt přidělení.
+*AX* objekt alokátoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce každý nahradit `callable object` držené `*this` s s objekt předaný jako `operand`. Obě přidělit úložiště s objektem přidělení `Ax`.
+Členské funkce jednotlivých nahradit `callable object` drží `*this` s volatelný objekt předán jako `operand`. Obě přidělení úložiště s objekt alokátoru, který *Ax*.
 
 ## <a name="function"></a>  Function::Function
 
-Vytvoří obálku, který je prázdný nebo ukládá objekt s libovolného typu s pevnou podpis.
+Vytvoří obálku, která je prázdná nebo uchovává volatelný objekt libovolného typu s pevnou podpis.
 
 ```cpp
 function();
@@ -199,21 +199,21 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-`right` Objekt funkce pro kopírování.
+*správné* objektu funkce pro kopírování.
 
-`Fx` Typ objektu, kterou lze volat.
+*FX* typu volatelný objekt.
 
-`_Func` Objekt s zabalit.
+*_Func* volatelný objekt zabalit.
 
-`Alloc` Typ přidělení.
+*ALLOC* typ alokátoru.
 
-`Ax` Přidělení.
+*AX* přidělujícího modulu.
 
-`_Fnref` Odkaz na objekt s zabalit.
+*_Fnref* odkaz volatelný objekt zabalit.
 
 ### <a name="remarks"></a>Poznámky
 
-První dva konstruktory vytvořit prázdnou `function` objektu. Vytvořit následující tři konstruktory `function` předá objekt, který obsahuje objekt s jako operand. Poslední dva konstruktory přidělit úložiště s objektem přidělení Ax.
+První dva konstruktory vytvořit prázdnou `function` objektu. Vytvořit následující tři konstruktory `function` objekt, který uchovává volatelný objekt předán jako operand. Poslední dva konstruktory přidělení úložiště s objekt alokátoru Ax.
 
 ### <a name="example"></a>Příklad
 
@@ -285,9 +285,9 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  Function::Operator neurčené
+## <a name="op_unspecified"></a>  Tento parametr zadán Function::Operator
 
-Testy, pokud je uložen s objekt existuje.
+Testuje, zda existuje uložené volatelný objekt.
 
 ```cpp
 operator unspecified();
@@ -295,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu, která je převést na operátor `bool` s hodnotou true pouze v případě, že objekt není prázdný. Můžete použít k ověření, zda objekt je prázdný.
+Operátor vrátí hodnotu, která je převoditelná na **bool** s hodnotu true pouze v případě, že objekt není prázdný. Použijete ji k ověření, zda objekt je prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -327,9 +327,9 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  funkce:: Operator() –
+## <a name="op_call"></a>  funkce:: operator()
 
-Volání s objektu.
+Volá volatelný objekt.
 
 ```cpp
 result_type operator()(
@@ -340,13 +340,13 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ n. volání argument.
+*TN* typ argumentu n-tý volání.
 
-`tN` N-tou volání argument.
+*tN* n-tý argument volání.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu `INVOKE(fn, t1, t2, ..., tN, Ret)`, kde `fn` je cílový objekt, který je uložen v `*this`. Můžete využít k volání objekt zabalené volatelná aplikacemi.
+Členská funkce vrátí `INVOKE(fn, t1, t2, ..., tN, Ret)`, kde `fn` je cílový objekt uložený v `*this`. Použít jej k vyvolání zkomprimovaného volatelného objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -378,7 +378,7 @@ val == -3
 
 ## <a name="op_eq"></a>  Function::Operator =
 
-Nahradí objekt uložené volatelná aplikacemi.
+Nahradí uloženou volatelný objekt.
 
 ```cpp
 function& operator=(null_ptr_type npc);
@@ -391,17 +391,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametry
 
-`npc` Toto je konstanta ukazatele null.
+*NPC* konstantu nulového ukazatele.
 
-`right` Objekt funkce pro kopírování.
+*správné* objektu funkce pro kopírování.
 
-`fn` Objekt s zabalit.
+*fn* volatelný objekt zabalit.
 
-`fnref` Odkaz na objekt s zabalit.
+*fnref* odkaz volatelný objekt zabalit.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátory každý nahradit objekt s držené `*this` s objektem předány jako operand.
+Operátory každý nahradit volatelný objekt uchovaný podle `*this` s volatelný objekt předán jako operand.
 
 ### <a name="example"></a>Příklad
 
@@ -456,7 +456,7 @@ val == -3
 
 ## <a name="result_type"></a>  Function::result_type
 
-Návratový typ objektu uložené volatelná aplikacemi.
+Návratový typ uložený volatelný objekt.
 
 ```cpp
 typedef Ret result_type;
@@ -464,7 +464,7 @@ typedef Ret result_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro typ `Ret` v podpisu volání šablony. Použijte k určení návratový typ objektu zabalené volatelná aplikacemi.
+Typedef je synonymum pro typ `Ret` v podpisu volání šablony. To umožňuje určit návratový typ zkomprimovaného volatelného objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -498,7 +498,7 @@ val == -3
 
 ## <a name="swap"></a>  Function::swap
 
-Prohodit s dva objekty.
+Zamění dvě volatelných objektů.
 
 ```cpp
 void swap(function& right);
@@ -506,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Objekt funkce, které chcete Prohodit s.
+*správné* objekt funkce, který chcete Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce prohození cílové objekty mezi `*this` a `right`. Ho probíhá ve konstantní čas a vyvolá žádné výjimky.
+Členská funkce Zamění cílové objektů mezi `*this` a *správné*. Provádí se v konstantním času a vyvolá výjimku žádné výjimky.
 
 ### <a name="example"></a>Příklad
 
@@ -556,7 +556,7 @@ val == -3
 
 ## <a name="target"></a>  Function::target
 
-Testů, pokud je uložen s objektu je možné volat jako zadaný.
+Testuje, zda je uložená volatelný objekt lze volat jako zadaný.
 
 ```cpp
 template <class Fty2>
@@ -567,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametry
 
-`Fty2` Cílový typ objektu s otestovat.
+*Fty2* cílový typ volatelný objekt k testování.
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `Fty2` musí být s typy argumentů `T1, T2, ..., TN` a návratový typ `Ret`. Pokud `target_type() == typeid(Fty2)`, funkce šablony člen vrátí adresu cílového objektu; jinak vrátí hodnotu 0.
+Typ *Fty2* musí být pro typy argumentů `T1, T2, ..., TN` a návratový typ `Ret`. Pokud `target_type() == typeid(Fty2)`, členská funkce šablony vrátí adresu cílového objektu; v opačném případě vrátí hodnotu 0.
 
-Typ `Fty2` lze volat pro typy argumentů `T1, T2, ..., TN` a návratový typ `Ret` Pokud pro hodnoty lvalue `fn, t1, t2, ..., tN` typů `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` je ve správném formátu a pokud `Ret` není `void`, převést na `Ret`.
+Typ *Fty2* lze volat pro typy argumentů `T1, T2, ..., TN` a návratový typ `Ret` po dobu hodnotami lvalues `fn, t1, t2, ..., tN` typů `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` ve správném formátu a v případě `Ret`není **void**, lze převést na `Ret`.
 
 ### <a name="example"></a>Příklad
 
@@ -617,7 +617,7 @@ no target == true
 
 ## <a name="target_type"></a>  Function::target_type
 
-Získá typ informace s objektu.
+Získá typ informací na volatelný objekt.
 
 ```cpp
 const std::type_info& target_type() const;
@@ -625,7 +625,7 @@ const std::type_info& target_type() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu `typeid(void)` Pokud `*this` je prázdný, v opačném případě vrátí `typeid(T)`, kde `T` je typ cílového objektu.
+Členská funkce vrátí `typeid(void)` Pokud `*this` je prázdný, v opačném případě vrátí `typeid(T)`, kde `T` je typ cílového objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -661,7 +661,7 @@ empty == true
 type == void
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
 [reference_wrapper – třída](../standard-library/reference-wrapper-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Změna výchozí objekt pro vytváření tříd a agregace Model | Microsoft Docs
+title: Změna výchozí objekt pro vytváření tříd a agregačního modelu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355236"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850875"
 ---
-# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Změna výchozí objekt pro vytváření tříd a agregace modelu
-ATL používá [CComCoClass](../atl/reference/ccomcoclass-class.md) definovat výchozí třídu objektu pro vytváření a agregaci modelu pro objekt. `CComCoClass` Určuje následující dvě makra:  
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Změna výchozí objekt pro vytváření tříd a agregačního modelu
+ATL – používá [CComCoClass](../atl/reference/ccomcoclass-class.md) definovat výchozí třídy objektu pro vytváření a agregace model objektu. `CComCoClass` Určuje následující dvě makra:  
   
--   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) deklaruje objektu pro vytváření tříd jako [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) deklaruje objekt pro vytváření tříd bude [ccomclassfactory –](../atl/reference/ccomclassfactory-class.md).  
   
--   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) deklaruje, že se dají agregovat objektu.  
+-   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) deklaruje, že objekt se dají agregovat.  
   
- Buď tato výchozí nastavení můžete přepsat zadáním jiného makra v definici vaší třídy. Chcete-li například použít [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) místo `CComClassFactory`, zadejte [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) makro:  
+ Buď tato výchozí nastavení můžete přepsat zadáním jiného makra v definici třídy. Chcete-li například použít [ccomclassfactory2 –](../atl/reference/ccomclassfactory2-class.md) místo `CComClassFactory`, zadejte [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) – makro:  
   
  [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
   
  Jsou dvě makra, které definují objekt pro vytváření tříd [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) a [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
   
- ATL používá také `typedef` mechanismus pro implementaci výchozí chování. Například `DECLARE_AGGREGATABLE` používá makro `typedef` k definování typu s názvem **_CreatorClass**, které se pak odkazuje v rámci ATL. Všimněte si, že v odvozené třídě, `typedef` pomocí stejný název jako základní třída `typedef` výsledkem ATL pomocí vaší definice a přepsání výchozího nastavení.  
+ ATL také používá **typedef** mechanismus pro implementaci výchozí chování. Například používá makro DECLARE_AGGREGATABLE **typedef** definovat typ s názvem `_CreatorClass`, který je pak odkazovat v rámci ATL. Všimněte si, že v odvozené třídě, **– typedef** pomocí stejného názvu jako základní třída **typedef** výsledkem knihovny ATL pomocí vaší definice a přepisuje výchozí chování.  
   
 ## <a name="see-also"></a>Viz také  
- [Základy ATL COM – objekty](../atl/fundamentals-of-atl-com-objects.md)   
+ [Základy ATL – objekty COM](../atl/fundamentals-of-atl-com-objects.md)   
  [Agregační makra a makra objektu pro vytváření tříd](../atl/reference/aggregation-and-class-factory-macros.md)
 

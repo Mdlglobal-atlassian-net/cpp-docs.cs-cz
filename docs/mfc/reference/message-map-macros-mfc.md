@@ -1,5 +1,5 @@
 ---
-title: Zpráva makra mapy (MFC) | Microsoft Docs
+title: Zpráva makra mapy (MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,52 +38,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28b8a6e6e34399cb16ba3ec9e4f25562962c2dd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338363"
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
-Pro podporu mapy zpráv, MFC poskytuje následující makra:  
+Pro podporu mapy zpráv, knihovna MFC poskytuje následující makra:  
   
-### <a name="message-map-declaration-and-demarcation-macros"></a>Mapy zpráv deklarace a Rozhraničení makra  
+### <a name="message-map-declaration-and-demarcation-macros"></a>Mapování zpráv deklarace a Rozhraničení makra  
   
 |||  
 |-|-|  
-|[DECLARE_MESSAGE_MAP –](#declare_message_map)|Deklaruje, že mapy zpráv se použije v třídě k mapování zpráv na funkce (musí používat v deklaraci třídy).|  
-|[BEGIN_MESSAGE_MAP –](#begin_message_map)|Zahájí definici mapy zpráv (musí používat v implementaci třídy).|  
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Zahájí definici mapy zpráv typ třída obsahující jednu šablonu argumentu. |
-|[END_MESSAGE_MAP –](#end_message_map)|Ukončí definici mapy zpráv (musí používat v implementaci třídy).|  
+|[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklaruje, že mapy zpráv se použije ve třídě pro mapování zpráv na funkce (musí se použít v deklaraci třídy).|  
+|[BEGIN_MESSAGE_MAP](#begin_message_map)|Začíná definici mapy zpráv (musí být použitý v implementaci třídy).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Začíná definici mapy zpráv na typ třídy obsahující jednu šablonu argumentu. |
+|[END_MESSAGE_MAP](#end_message_map)|Ukončí definici mapy zpráv (musí být použitý v implementaci třídy).|  
   
 ### <a name="message-mapping-macros"></a>Makra mapování zpráv  
   
 |||  
 |-|-|  
-|[ON_COMMAND –](#on_command)|Určuje, jaké funkce zpracuje zprávu zadaný příkaz.|  
-|[ON_COMMAND_EX –](#on_command_ex)|Určuje, jaké funkce zpracuje zprávu zadaný příkaz.|  
-|[ON_CONTROL –](#on_control)|Určuje, jaké funkce zpracuje zprávu zadaný oznámení ovládacího prvku.|  
-|[ON_MESSAGE –](#on_message)|Označuje, funkci, která bude zpracovávat uživatelem definovaná zpráva.|  
-|[ON_OLECMD –](#on_olecmd)|Určuje, které funkce zpracuje příkaz nabídky z DocObject nebo jejímu kontejneru.|  
-|[ON_REGISTERED_MESSAGE –](#on_registered_message)|Označuje, funkci, která bude zpracovávat registrované uživatelem definovaná zpráva.|  
-|[ON_REGISTERED_THREAD_MESSAGE –](#on_registered_thread_message)|Určuje funkci, která bude zpracovávat registrované uživatelem definovaná zpráva, když máte `CWinThread` třídy.|  
-|[ON_THREAD_MESSAGE –](#on_thread_message)|Určuje funkci, která bude zpracovávat uživatelem definovaná zpráva, když máte `CWinThread` třídy.|  
-|[ON_UPDATE_COMMAND_UI –](#on_update_command_ui)|Označuje, funkci, která bude zpracovávat zprávou příkazu update zadaného uživatelského rozhraní.|  
+|[ON_COMMAND](#on_command)|Určuje funkci, která bude zpracovávat zprávy zadaný příkaz.|  
+|[ON_COMMAND_EX](#on_command_ex)|Určuje funkci, která bude zpracovávat zprávy zadaný příkaz.|  
+|[ON_CONTROL](#on_control)|Určuje funkci, která bude zpracovávat zprávy zadané oznámení ovládacího prvku.|  
+|[ON_MESSAGE](#on_message)|Určuje funkci, která bude zpracovávat uživatelsky definovanou zprávu.|  
+|[ON_OLECMD](#on_olecmd)|Určuje funkci, která zpracuje příkaz nabídky z DocObject nebo svého kontejneru.|  
+|[ON_REGISTERED_MESSAGE](#on_registered_message)|Určuje funkci, která bude zpracovávat registrované uživatelsky definovanou zprávu.|  
+|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Určuje funkci, která bude zpracovávat registrované uživatelsky definovanou zprávu, když máte `CWinThread` třídy.|  
+|[ON_THREAD_MESSAGE](#on_thread_message)|Určuje funkci, která bude zpracovávat uživatelsky definovanou zprávu, když máte `CWinThread` třídy.|  
+|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Určuje funkci, která bude zpracovávat zprávou příkazu update zadaného uživatelského rozhraní.|  
   
 ### <a name="message-map-range-macros"></a>Makra Map zpráv rozsahu  
   
 |||  
 |-|-|  
-|[ON_COMMAND_RANGE –](#on_command_range)|Označuje, funkci, která bude zpracovávat rozsah ID příkazů zadaný v první dva parametry, které chcete makro.|  
-|[ON_UPDATE_COMMAND_UI_RANGE –](#on_update_command_ui_range)|Určuje, které obslužná rutina aktualizace bude zpracovávat rozsah ID příkazů zadaný v první dva pa] rametry do makra.|  
-|[ON_CONTROL_RANGE –](#on_control_range)|Označuje, funkci, která bude zpracovávat upozornění z rozsahu ID zadané v parametrech druhý a třetí makru ovládacích prvků. První parametr je zpráva oznámení ovládacího prvku, jako například **BN_CLICKED**.|  
+|[ON_COMMAND_RANGE](#on_command_range)|Určuje funkci, která bude zpracovávat rozsah ID příkazů zadaný v prvních dvou parametrů do makra.|  
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Určuje, které obslužná rutina aktualizace bude zpracovávat rozsah ID příkazů zadaný v prvních dvou pa] rametry do makra.|  
+|[ON_CONTROL_RANGE](#on_control_range)|Určuje funkci, která bude zpracovávat upozornění z rozsahu ID zadané v druhý a třetí parametry makro ovládacích prvků. První parametr je zpráva oznámení ovládacího prvku, jako je například BN_CLICKED.|  
   
- Další informace o mapy zpráv, map zpráv deklarace a rozhraničení makra a makra mapování zpráv najdete v tématu [mapy zpráv](../../mfc/reference/message-maps-mfc.md) a [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md). Další informace o oblasti map zpráv najdete v tématu [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).  
+ Další informace o mapy zpráv, map zpráv deklarace a rozhraničení makra a makra mapování zpráv, najdete v části [mapy zpráv](../../mfc/reference/message-maps-mfc.md) a [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md). Další informace o oblasti map zpráv najdete v tématu [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).  
 
 
-## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP –
-Zahájí definici mapy zpráv.  
+## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
+Začíná definici mapy zpráv.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -92,14 +92,14 @@ BEGIN_MESSAGE_MAP( theClass, baseClass )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `theClass`  
- Určuje, že je název třídy, jejichž zpráva mapování těchto.  
+ *theClass*  
+ Určuje, že je název třídy namapujte tento parametr jehož zprávy.  
   
- `baseClass`  
- Určuje název základní třídu `theClass`.  
+ *baseClass*  
+ Určuje název základní třídy *theClass*.  
   
 ### <a name="remarks"></a>Poznámky  
- V souboru implementace (sada), který definuje členské funkce pro třídu, spusťte mapy zpráv s `BEGIN_MESSAGE_MAP` makro, potom můžete přidat položky makro pro jednotlivé funkce obslužné rutiny zpráv a dokončení mapy zpráv s `END_MESSAGE_MAP` makro.  
+ V souboru implementace (.cpp), který definuje členské funkce třídy mapu zpráv začínat BEGIN_MESSAGE_MAP – makro pak přidat makro položky pro každý z vašich funkcí obslužná rutina zprávy a mapování zpráv END_MESSAGE_MAP dokončení makra.  
   
  Další informace o mapách zpráv najdete v tématu [mapy zpráv](message-maps-mfc.md)  
   
@@ -114,32 +114,32 @@ END_MESSAGE_MAP()
  **Záhlaví:** afxwin.h 
 
 ##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
-Zahájí definici mapy zpráv typ třída obsahující jednu šablonu argumentu.  
+Začíná definici mapy zpráv na typ třídy obsahující jednu šablonu argumentu.  
    
 ### <a name="syntax"></a>Syntaxe  
   ```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
 ```
 ### <a name="parameters"></a>Parametry  
- `theClass`  
- Určuje, že je název třídy, jejichž zpráva mapování těchto.    
- `type_name`  
- Název šablony parametr zadaný pro třídu.    
- `baseClass`  
- Určuje název základní třídu `theClass`.  
+ *theClass*  
+ Určuje, že je název třídy namapujte tento parametr jehož zprávy.    
+ *type_name*  
+ Název parametru šablony určeného pro třídu.    
+ *baseClass*  
+ Určuje název základní třídy *theClass*.  
    
 ### <a name="remarks"></a>Poznámky  
- Je podobná této makro [begin_message_map –](message-map-macros-mfc.md#begin_message_map) makro; toto makro je však určena pro třídy obsahující jednu šablonu argumentu.  
+ Toto makro je podobný [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) – makro; toto makro je však určena pro třídy obsahující jednu šablonu argumentu.  
   
- V oddíle implementation metoda vaší třídy spuštění mapy zpráv s **BEGIN_TEMPLATE_MESSAGE_MAP** makro; poté přidejte makro položky pro každou z metod vaší obslužné rutiny zpráv, stejně jako na jednu mapu standardní zprávy. Stejně jako u **begin_message_map –** makro, dokončete mapy zpráv šablony s [end_message_map –](message-map-macros-mfc.md#end_message_map) makro.  
+ V části způsob implementace třídy začněte mapu zpráv BEGIN_TEMPLATE_MESSAGE_MAP makra. pak přidejte – makro položky pro každou z metod vaše obslužná rutina zprávy, jako byste to udělali pro mapování standardní zprávy. S BEGIN_MESSAGE_MAP – makro dokončení mapu zpráv šablonu s [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) – makro.  
   
- Další informace o implementaci mapy zpráv pro šablony třídy, najdete v části [postupy: vytvoření mapy zpráv pro třídu šablony](../how-to-create-a-message-map-for-a-template-class.md).  
+ Další informace o implementaci mapy zpráv pro šablony třídy najdete [postupy: vytvoření mapy zpráv pro třídu šablony](../how-to-create-a-message-map-for-a-template-class.md).  
    
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
  
-## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP –
- Deklaruje, že třída definuje mapy zpráv. Každý `CCmdTarget`-odvozené třídy v programu musíte zadat mapy zpráv pro zpracování zprávy.  
+## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
+ Deklaruje, že třída definuje mapy zpráv. Každý `CCmdTarget`-odvozené třídy v aplikaci musíte zadat mapy zpráv pro zpracování zpráv.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -148,12 +148,12 @@ DECLARE_MESSAGE_MAP( )
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Použití `DECLARE_MESSAGE_MAP` makro na konci deklarace třídy. Potom v souboru sada, která definuje členské funkce pro třídu, použijte `BEGIN_MESSAGE_MAP` makro, makro položky pro každý z funkcí popisovač zpráv a `END_MESSAGE_MAP` makro.  
+ Použití DECLARE_MESSAGE_MAP – makro na konec deklarace třídy. Potom v souboru .cpp, který definuje členské funkce třídy, použijte BEGIN_MESSAGE_MAP – makro, makro položky pro každý z vašich funkcí obslužná rutina zprávy a END_MESSAGE_MAP – makro.  
   
 > [!NOTE]
->  Pokud je deklarovat kteréhokoli člena po `DECLARE_MESSAGE_MAP`, je nutné zadat nový typ přístupu (**veřejné**, `private`, nebo `protected`) pro ně.  
+>  Pokud jste po DECLARE_MESSAGE_MAP deklarování jakéhokoli člena, je nutné zadat nový typ přístupu (**veřejné**, **privátní**, nebo **chráněné**) pro ně.  
   
- Další informace o zpráva mapuje a `DECLARE_MESSAGE_MAP` makro, najdete v části [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
+ Další informace o mapy zpráv a DECLARE_MESSAGE_MAP – makro, naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -168,7 +168,7 @@ class CMainFrame : public CMDIFrameWnd
  **Záhlaví:** afxwin.h  
 
 
-## <a name="end_message_map"></a>  END_MESSAGE_MAP –
+## <a name="end_message_map"></a>  END_MESSAGE_MAP
 Ukončí definici mapy zpráv.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -178,13 +178,13 @@ END_MESSAGE_MAP( )
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o zpráva mapuje a `END_MESSAGE_MAP` makro, najdete v části [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
+ Další informace o mapy zpráv a END_MESSAGE_MAP – makro, naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxwin.h  
 
-## <a name="on_command"></a>  ON_COMMAND –
-Toto makro mapuje zprávou příkazu členské funkce.  
+## <a name="on_command"></a>  ON_COMMAND
+Toto makro mapuje zprávou příkazu na členskou funkci.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -193,18 +193,18 @@ ON_COMMAND( id, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id`  
+ *id*  
  ID příkazu.  
   
- `memberFxn`  
- Název funkce popisovač zpráv, na kterou je namapovaná příkaz.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
- Označuje, funkci, která zpracuje zprávu příkaz z objekt příkaz uživatelského rozhraní, například položku nabídky nebo panelu nástrojů tlačítko.  
+ Označuje funkci, která zpracuje příkaz zprávu od objektu uživatelského rozhraní příkaz například položka nabídky nebo panelu nástrojů tlačítko.  
   
- Pokud příkaz cílový objekt obdrží Windows **wm_command –** zprávu se zadaným ID `ON_COMMAND` zavolá funkci člen `memberFxn` pro zpracování zprávy.  
+ Wm_command – Windows zprávu se zadaným ID přijetí příkazu cílový objekt ON_COMMAND bude volat členské funkce `memberFxn` ke zpracování zprávy.  
   
- Použití `ON_COMMAND` mapovat jeden příkaz členské funkce. Použití [on_command_range –](#on_command_range) mapovat rozsah ID příkazů funkce jeden člen. Jenom jedna položka mapování zpráv může odpovídat id daného příkazu. Příkaz nelze tedy mapovat do více než jeden obslužné rutiny. Další informace a příklady naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
+ ON_COMMAND používejte k mapování jediným příkazem na členskou funkci. Použití [ON_COMMAND_RANGE](#on_command_range) mapovat celou řadu ID příkazů na jednu členskou funkci. Pouze jedna položka mapování zpráv může odpovídat id daného příkazu. Příkaz tedy nelze mapovat na více než jednu obslužnou rutinu. Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -216,50 +216,50 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
 
- ## <a name="on_command_ex"></a>  ON_COMMAND_EX –
-Rozšířené funkce člen obslužná rutina příkazu.  
+ ## <a name="on_command_ex"></a>  ON_COMMAND_EX
+Rozšířené obslužná rutina příkazu členskou funkci.  
    
 ### <a name="syntax"></a>Syntaxe  
   ```  
 ON_COMMAND_EX(id, memberFxn);  
 ```
 ### <a name="parameters"></a>Parametry  
- `id`  
+ *id*  
  ID příkazu.  
   
- `memberFxn`  
- Název funkce popisovač zpráv, na kterou je namapovaná příkaz.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.  
    
 ### <a name="remarks"></a>Poznámky 
-Rozšířené formu obslužné rutiny zpráv příkaz je k dispozici pro pokročilé používá. `ON_COMMAND_EX` Makro se používá pro takové obslužné rutiny zpráv a poskytuje nadmnožinou funkci [on_command –] (# on_command –).  Rozšířené obslužná rutina příkazu členské funkce trvat jeden parametr, **Celé_číslo** obsahující ID příkazu a vrátit **BOOL**. Návratová hodnota by měla být hodnota TRUE pro 
+Vyžaduje rozšířený formát obslužné rutiny zpráv příkaz je k dispozici pro rozšířené použití. ON_COMMAND_EX – makro se používá pro tyto obslužné rutiny zpráv a nabízí nadmnožinu funkcí [ON_COMMAND] (#on_command).  Rozšířené obslužná rutina příkazu členské funkce vyžadovat jeden parametr, UINT, obsahující Identifikátor příkazu a vrátit logickou hodnotu. Návratová hodnota by měla být hodnota TRUE pro 
 
-Toto makro mapuje zprávou příkazu funkce Rozšířené člen obslužná rutina příkazu.  
+Toto makro mapuje zprávou příkazu rozšířené obslužná rutina příkazu členské funkce.  
    
 ### <a name="syntax"></a>Syntaxe  
 ```  
 ON_COMMAND_EX(id,  memberFxn);  
 ```
 ### <a name="parameters"></a>Parametry  
- `id`  
+ *id*  
  ID příkazu.  
   
- `memberFxn`  
- Název funkce popisovač zpráv, na kterou je namapovaná příkaz.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.  
    
 ### <a name="remarks"></a>Poznámky  
- Rozšířené formu obslužné rutiny zpráv příkaz je k dispozici pro pokročilé používá. `ON_COMMAND_EX` Makro se používá pro takové obslužné rutiny zpráv a poskytuje nadmnožinou [on_command –](message-map-macros-mfc.md#on_command) funkce. Rozšířené obslužná rutina příkazu členské funkce trvat jeden parametr, **Celé_číslo** obsahující ID příkazu a vrátit **BOOL**. Návratová hodnota by měla být hodnota TRUE, mají-li znamenat, že byla zpracována příkaz; jinak směrování bude pokračovat na další objekty cíl příkazu.  
-Další informace najdete v tématu Technická poznámka [TN006: mapy zpráv] tm006. zpráva maps.md).  
+ Vyžaduje rozšířený formát obslužné rutiny zpráv příkaz je k dispozici pro rozšířené použití. ON_COMMAND_EX – makro se používá pro tyto obslužné rutiny zpráv a nabízí nadmnožinu [ON_COMMAND](message-map-macros-mfc.md#on_command) funkce. Rozšířené obslužná rutina příkazu členské funkce vyžadovat jeden parametr, UINT, obsahující Identifikátor příkazu a vrátit logickou hodnotu. Vrácená hodnota musí být TRUE označuje, že byla zpracována příkazu; jinak směrování bude pokračovat na další příkaz cílové objektů.  
+Další informace viz technická Poznámka [TN006: mapy zpráv] tm006. zpráva maps.md).  
    
 ### <a name="requirements"></a>Požadavky  
  Soubor hlaviček: afxmsg_.h  
    
 ### <a name="see-also"></a>Viz také  
- [ON_COMMAND –](message-map-macros-mfc.md#on_command)   
+ [ON_COMMAND](message-map-macros-mfc.md#on_command)   
  [TN006: mapy zpráv] tm006. zpráva maps.md)
 
   
-## <a name="on_control"></a>  ON_CONTROL –
-Určuje, jaké funkce zpracuje zprávu oznámení vlastní ovládací prvek.  
+## <a name="on_control"></a>  ON_CONTROL
+Určuje funkci, která bude zpracovávat zprávu oznámení na vlastní ovládací prvek.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -268,28 +268,28 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `wNotifyCode`  
- Kód oznámení ovládacího prvku.  
+ *funkci wNotifyCode*  
+ Kód upozornění ovládacího prvku.  
   
- `id`  
+ *id*  
  ID příkazu.  
   
- `memberFxn`  
- Název funkce popisovač zpráv, na kterou je namapovaná příkaz.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.  
   
 ### <a name="remarks"></a>Poznámky  
- Zprávy s oznámením ovládacího prvku jsou odesílána z ovládacího prvku do jeho nadřazeného okna.  
+ Zprávy s oznámením ovládacího prvku jsou odesílána z ovládacího prvku nadřazenému oknu.  
   
- Musí být přesně jeden `ON_CONTROL` makro příkaz na mapě zprávu pro každý ovládací prvek oznámení, které musí být namapovaný na funkce obslužné rutiny zpráv.  
+ Měla by existovat právě jeden příkaz ON_CONTROL – makro v mapy zpráv pro každou zprávu oznámení ovládacího prvku, který musí být namapována na funkci obslužná rutina zprávy.  
   
- Další informace a příklady naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
+ Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
   
 
-## <a name="on_message"></a>  ON_MESSAGE –  
-Označuje, funkci, která bude zpracovávat uživatelem definovaná zpráva.  
+## <a name="on_message"></a>  ON_MESSAGE  
+Určuje funkci, která bude zpracovávat uživatelsky definovanou zprávu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -298,23 +298,23 @@ ON_MESSAGE( message, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `message`  
+ *message*  
  ID zprávy.  
   
- `memberFxn`  
- Název funkce obslužné rutiny zpráv, ke které je mapován zprávy.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke kterému je namapována zprávu.  
   
  Typ funkce musí být `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Poznámky  
- Uživatelem definované zprávy jsou všechny zprávy, které nejsou standardní Windows `WM_MESSAGE` zprávy. Když vyberete ID zprávy, je nutné použít hodnoty v rozsahu `WM_USER` (0x0400) k 0x7FFF nebo `WM_APP` (0x8000) k 0xBFFF. Další informace o ID zpráv najdete v tématu [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ Uživatelem definované zprávy jsou všechny zprávy, které nejsou standardní zprávy Windows WM_MESSAGE. Při výběru ID zprávy, používaly k 0xBFFF hodnot v rámci rozsahu WM_USER (0x0400) 0x7FFF nebo WM_APP (0x8000). Další informace o ID zpráv, najdete v části [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
   
- Musí být přesně jeden `ON_MESSAGE` makro příkaz na mapě zprávu pro každý uživatelem definovaná zpráva, která musí být namapovaný na funkce obslužné rutiny zpráv.  
+ Měla by existovat právě jeden příkaz ON_MESSAGE – makro v mapy zpráv pro každou zprávu definovaný uživatelem, který musí být namapována na funkci obslužné rutiny zprávy.  
   
 > [!NOTE]
->  Kromě zprávy uživatelem definované `ON_MESSAGE` zpracovává méně častých zpráv systému Windows. Další informace najdete v článku znalostní báze [99848: informace: použití ON_MESSAGE() makro na mapu méně běžné zprávy](http://go.microsoft.com/fwlink/p/?linkid=192022).  
+>  Kromě uživatelem definované zprávy zpracovává ON_MESSAGE méně běžné zpráv Windows. Další informace najdete v článku znalostní báze Microsoft Knowledge Base [99848: INFO: použití ON_MESSAGE() makra Map zpráv méně běžné](http://go.microsoft.com/fwlink/p/?linkid=192022).  
   
- Další informace a příklady naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md) a [uživatelem definované obslužné rutiny](user-defined-handlers.md)  
+ Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md) a [uživatelem definované obslužné rutiny](user-defined-handlers.md)  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -341,8 +341,8 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
 
-## <a name="on_olecmd"></a>  ON_OLECMD –  
-Směrování příkazů prostřednictvím rozhraní příkazového odesílání `IOleCommandTarget`.  
+## <a name="on_olecmd"></a>  ON_OLECMD  
+Směrovat příkazy přes rozhraní příkazového řádku odeslání `IOleCommandTarget`.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -351,115 +351,115 @@ ON_OLECMD( pguid, olecmdid, id )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pguid`  
- Identifikátor příkazu skupiny, do které patří příkaz. Použití **NULL** pro standardní skupinu.  
+ *pguid*  
+ Identifikátor příkazu skupiny, ke kterému patří tento příkaz. Použijte hodnotu NULL pro standardní skupiny.  
   
  *olecmdid*  
  Identifikátor příkazu OLE.  
   
- `id`  
- ID nabídky, panelu nástrojů ID, tlačítko ID nebo jiné ID prostředku nebo objekt vydání příkazu.  
+ *id*  
+ ID nabídky, ID nástrojů, tlačítko ID nebo jiné ID prostředku nebo objekt příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
- `IOleCommandTarget` Umožňuje kontejner pro příjem příkazů, které pocházejí v uživatelském rozhraní DocObject a umožňuje kontejneru odeslat stejné příkazy (jako je například nový, otevřít, uložit jako a tisk v nabídce Soubor; a zkopírujte, vkládat, vrátit zpět, a tak dále v nabídce Upravit) k DocObject.  
+ `IOleCommandTarget` Umožňuje kontejner přijímají příkazy, které pocházejí z uživatelského rozhraní DocObject a umožňuje kontejneru odeslat stejné příkazy (jako je například nový, otevřít, uložit jako a tisk v nabídce Soubor; a zkopírujte, vložit, a tak dále zpět v nabídce Úpravy) k DocObject.  
   
- `IOleCommandTarget` je jednodušší než OLE Automation `IDispatch`. `IOleCommandTarget` využívá zcela standardní sadu příkazů to obvykle nemusí argumenty, a je zahrnuta žádné informace o typu (bezpečnost typů dojde ke snížení pro argumenty příkazu také). Pokud potřebujete odesílání příkazů s argumenty, použijte [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
+ `IOleCommandTarget` je jednodušší než OLE Automation `IDispatch`. `IOleCommandTarget` spoléhá výhradně na standardní sadu příkazů, který obvykle nemusí argumenty a nepodílí žádné informace o typu (bezpečnost typů je oslabená a argumentů příkazu). Pokud potřebujete k odeslání příkazů s argumenty, použijte [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
   
- `IOleCommandTarget` Příkazy standardní nabídky je implementovaná v prostředí MFC v makrech následující:  
+ `IOleCommandTarget` Standardní příkazy byly implementovány v prostředí MFC v následující makra:  
   
- **ON_OLECMD_CLEARSELECTION –)**  
+ **ON_OLECMD_CLEARSELECTION)**  
   
- Odešle zprávu příkaz Upravit zrušte. Implementovaný jako:  
+ Odešle příkaz pro vymazání upravit. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`  
   
- **ON_OLECMD_COPY –)**  
+ **ON_OLECMD_COPY)**  
   
- Odešle zprávu příkaz Upravit Copy. Implementovaný jako:  
+ Odešle příkaz Upravit kopii. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`  
   
- **ON_OLECMD_CUT –)**  
+ **ON_OLECMD_CUT)**  
   
- Odešle zprávu příkaz Upravit vyjmout. Implementovaný jako:  
+ Odešle příkaz Upravit vyjmout. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`  
   
- **ON_OLECMD_NEW –)**  
+ **ON_OLECMD_NEW)**  
   
- Odešle zprávu příkaz Nový soubor. Implementovaný jako:  
+ Odešle příkaz Nový soubor. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`  
   
- **ON_OLECMD_OPEN –)**  
+ **ON_OLECMD_OPEN)**  
   
- Odešle zprávu příkazu Otevřít soubor. Implementovaný jako:  
+ Odešle příkaz Otevřít soubor. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`  
   
- **ON_OLECMD_PAGESETUP –)**  
+ **ON_OLECMD_PAGESETUP)**  
   
- Odešle zprávu příkaz vzhledu stránky. Implementovaný jako:  
+ Odešle příkaz souboru nastavení stránky. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`  
   
- **ON_OLECMD_PASTE –)**  
+ **ON_OLECMD_PASTE)**  
   
- Odešle zprávu příkaz Upravit vložit. Implementovaný jako:  
+ Odešle příkaz Upravit vložit. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`  
   
- **ON_OLECMD_PASTESPECIAL –)**  
+ **ON_OLECMD_PASTESPECIAL)**  
   
- Odešle zprávu příkaz Upravit Vložit jinak. Implementovaný jako:  
+ Odešle příkaz Upravit Vložit jinak. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`  
   
- **ON_OLECMD_PRINT –)**  
+ **ON_OLECMD_PRINT)**  
   
- Odešle zprávu příkaz tisku souboru. Implementovaný jako:  
+ Odešle příkaz Tisk souboru. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`  
   
- **ON_OLECMD_PRINTPREVIEW –)**  
+ **ON_OLECMD_PRINTPREVIEW)**  
   
- Odešle zprávu příkaz Náhled souboru. Implementovaný jako:  
+ Odešle příkaz Náhled tisku souboru. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`  
   
- **ON_OLECMD_REDO –)**  
+ **ON_OLECMD_REDO)**  
   
- Odešle zprávu příkaz upravit znovu. Implementovaný jako:  
+ Odešle příkaz upravit znovu. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`  
   
- **ON_OLECMD_SAVE –)**  
+ **ON_OLECMD_SAVE)**  
   
- Odešle zprávu příkaz Soubor uložte. Implementovaný jako:  
+ Odešle zprávu příkazu soubor uložit. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`  
   
- **ON_OLECMD_SAVE_AS –)**  
+ **ON_OLECMD_SAVE_AS)**  
   
- Odešle zprávu příkazu Uložit jako. Implementovaný jako:  
+ Odešle zprávu příkazu Uložit jako. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`  
   
- **ON_OLECMD_SAVE_COPY_AS –)**  
+ **ON_OLECMD_SAVE_COPY_AS)**  
   
- Odešle zprávu příkaz soubor uložit kopii jako. Implementovaný jako:  
+ Odešle zprávu příkazu soubor uložit kopii jako. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`  
   
- **ON_OLECMD_SELECTALL –)**  
+ **ON_OLECMD_SELECTALL)**  
   
- Odešle zprávu příkaz Upravit vybrat vše. Implementovaný jako:  
+ Odešle příkaz Upravit vybrat vše. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`  
   
- **ON_OLECMD_UNDO –)**  
+ **ON_OLECMD_UNDO)**  
   
- Odešle zprávu příkaz Upravit zpět. Implementovaný jako:  
+ Odešle příkaz vrátit zpět úpravy. Implementovat jako:  
   
  `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`  
   
@@ -467,11 +467,11 @@ ON_OLECMD( pguid, olecmdid, id )
  **Záhlaví:** afxdocob.h  
   
 ### <a name="see-also"></a>Viz také  
- [COleCmdUI – třída](colecmdui-class.md)   
+ [Colecmdui – třída](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
-## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE –
-Windows **RegisterWindowMessage** funkce se používá k definování zprávu nové okno, která se musí být jedinečný v celém systému.  
+## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
+Windows `RegisterWindowMessage` funkce se používá k definování novou zprávu okna, která je zaručeně jedinečná v celém systému.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -480,16 +480,16 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMessageVariable`  
- Proměnná ID registrované zpráv oken.  
+ *nMessageVariable*  
+ Proměnná ID registrované zprávy okna.  
   
- `memberFxn`  
- Název funkce obslužné rutiny zpráv, ke které je mapován zprávy.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke kterému je namapována zprávu.  
   
 ### <a name="remarks"></a>Poznámky  
- Toto makro označuje, funkci, která bude zpracovávat registrované zprávy.  
+ Toto makro označuje funkci, která bude zpracovávat registrované zprávy.  
   
- Další informace a příklady naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
+ Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -508,8 +508,8 @@ END_MESSAGE_MAP()
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Uživatelem definované obslužné rutiny](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE –    
-Určuje, které funkce zpracuje zprávu registrovaných funkce Windows RegisterWindowMessage.  
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+Určuje funkci, která bude zpracovávat zprávy registrovaných funkci Windows RegisterWindowMessage.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -518,20 +518,20 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMessageVariable`  
- Proměnná ID registrované zpráv oken.  
+ *nMessageVariable*  
+ Proměnná ID registrované zprávy okna.  
   
- `memberFxn`  
- Název funkce CWinThread popisovač zpráv, ke které je mapován zprávy.  
+ *memberFxn*  
+ Název funkce CWinThread popisovač zpráv, ke kterému je namapována zprávu.  
   
 ### <a name="remarks"></a>Poznámky  
- RegisterWindowMessage se používá k definování zprávu nové okno, která se musí být jedinečný v celém systému. On_registered_thread_message – použije místo on_registered_message – Pokud máte CWinThread – třída. 
+ RegisterWindowMessage slouží k definování novou zprávu okna, která je zaručeně jedinečná v celém systému. ON_REGISTERED_THREAD_MESSAGE musí použít namísto ON_REGISTERED_MESSAGE, když máte CWinThread – třída. 
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE –  
-Označuje, funkci, která bude zpracovávat uživatelem definovaná zpráva.  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+Určuje funkci, která bude zpracovávat uživatelsky definovanou zprávu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -540,19 +540,19 @@ ON_THREAD_MESSAGE( message, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `message`  
+ *message*  
  ID zprávy.  
   
- `memberFxn`  
- Název `CWinThread`– zpráva – obslužná rutina funkce, ke které je mapován zprávy.  
+ *memberFxn*  
+ Název `CWinThread`– zpráva – obslužná rutina funkce, ke kterému je namapována zprávu.  
   
 ### <a name="remarks"></a>Poznámky  
- `ON_THREAD_MESSAGE` musí být použit místo `ON_MESSAGE` Pokud máte `CWinThread` třídy. Uživatelem definované zprávy jsou všechny zprávy, které nejsou standardní Windows **WM_MESSAGE** zprávy. Musí být přesně jeden `ON_THREAD_MESSAGE` makro příkaz na mapě zprávu pro každý uživatelem definovaná zpráva, která musí být namapovaný na funkce obslužné rutiny zpráv.  
+ ON_THREAD_MESSAGE musí použít namísto ON_MESSAGE, když máte `CWinThread` třídy. Uživatelem definované zprávy jsou všechny zprávy, které nejsou standardní zprávy Windows WM_MESSAGE. Měla by existovat právě jeden příkaz ON_THREAD_MESSAGE – makro v mapy zpráv pro každou zprávu definovaný uživatelem, který musí být namapována na funkci obslužné rutiny zprávy.  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI –    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
 Toto makro označuje funkci, která bude zpracovávat zprávou příkazu aktualizace uživatelského rozhraní.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -562,16 +562,16 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id`  
+ *id*  
  ID zprávy.  
   
- `memberFxn`  
- Název funkce obslužné rutiny zpráv, ke které je mapován zprávy.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, ke kterému je namapována zprávu.  
   
 ### <a name="remarks"></a>Poznámky  
- Musí být přesně jeden `ON_UPDATE_COMMAND_UI` makro příkaz na mapě zprávu pro každý příkaz aktualizace uživatelského rozhraní, který musí být namapovaný na funkce obslužné rutiny zpráv.  
+ Měla by existovat právě jeden příkaz ON_UPDATE_COMMAND_UI – makro v mapy zpráv pro každý příkaz aktualizace uživatelského rozhraní, které musí být namapována na funkci obslužná rutina zprávy.  
   
- Další informace a příklady naleznete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
+ Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxole.h  
@@ -579,8 +579,8 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
 ### <a name="see-also"></a>Viz také  
  [CCmdUI – třída](ccmdui-class.md)
 
-## <a name="on_command_range"></a>  ON_COMMAND_RANGE –  
-Pomocí této makro mapovat souvislý rozsah ID příkazů funkci obslužné rutiny jedné zprávy.  
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE  
+Použijte toto makro mapovat souvislý rozsah ID příkazů do jedné zprávy funkce obslužné rutiny.  
   
 ### <a name="syntax"></a>Syntaxe
   
@@ -589,21 +589,21 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id1`  
+ *ID 1*  
  ID příkazu na začátku souvislý rozsah ID příkazů.  
   
- `id2`  
- ID příkazu na konci souvislý rozsah ID příkazů.  
+ *s ID 2*  
+ ID příkazu, na konci souvislý rozsah ID příkazů.  
   
- `memberFxn`  
- Název funkce popisovač zpráv, ke které jsou namapované příkazy.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy, do které jsou mapovány příkazy.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozsah ID začíná `id1` a končí `id2`.  
+ Rozsah ID začíná *id1* a končí *id2*.  
   
- Použití `ON_COMMAND_RANGE` mapovat rozsah ID příkazů funkce jeden člen. Použití [on_command –](#on_command) mapovat jeden příkaz členské funkce. Jenom jedna položka mapování zpráv může odpovídat ID daného příkazu. Příkaz nelze tedy mapovat do více než jeden obslužné rutiny. Další informace o mapování oblasti zpráv najdete v tématu [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).  
+ Umožňuje mapovat rozsah ID příkazů na jednu členskou funkci ON_COMMAND_RANGE. Použití [ON_COMMAND](#on_command) mapování jediným příkazem na členskou funkci. Pouze jedna položka mapování zpráv může odpovídat ID daného příkazu. Příkaz tedy nelze mapovat na více než jednu obslužnou rutinu. Další informace o mapování oblasti zpráv, najdete v části [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).  
   
- Neexistuje žádné automatické podpory pro oblasti map zpráv, proto musíte umístit makro sami.  
+ Neexistuje žádné automatické podpory pro oblasti map zpráv, takže je nutné umístit makro, sami.  
   
 ### <a name="example"></a>Příklad  
 ```cpp  
@@ -629,7 +629,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE –    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
 Mapuje souvislý rozsah ID příkazů funkci obslužné rutiny zpráv jednu aktualizaci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -639,25 +639,25 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `id1`  
+ *ID 1*  
  ID příkazu na začátku souvislý rozsah ID příkazů.  
   
- `id2`  
- ID příkazu na konci souvislý rozsah ID příkazů.  
+ *s ID 2*  
+ ID příkazu, na konci souvislý rozsah ID příkazů.  
   
- `memberFxn`  
- Název funkce aktualizace popisovač zpráv, ke které jsou namapované příkazy.  
+ *memberFxn*  
+ Název funkce obslužná rutina zprávy aktualizace, ke které jsou mapovány příkazy.  
   
 ### <a name="remarks"></a>Poznámky  
- Obslužné rutiny zpráv aktualizace aktualizovat stav položky nabídky a přidružený k příkazu tlačítka panelu nástrojů. Rozsah ID začíná `id1` a končí `id2`.  
+ Obslužné rutiny zpráv aktualizace aktualizovat stav položky nabídky a tlačítka panelu nástrojů, které jsou přidružené k příkazu. Rozsah ID začíná *id1* a končí *id2*.  
   
- Neexistuje žádné automatické podpory pro oblasti map zpráv, proto musíte umístit makro sami.  
+ Neexistuje žádné automatické podpory pro oblasti map zpráv, takže je nutné umístit makro, sami.  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE –     
-Použití tohoto makra k mapování souvislý rozsah ID ovládacích prvků na jedné zprávy funkci obslužné rutiny pro zadané zprávy oznámení Windows, jako například **BN_CLICKED**.  
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE     
+Použijte toto makro pro mapování na obslužnou rutinu jedné zprávy zadané zprávy oznámení Windows, jako je například BN_CLICKED souvislý rozsah ID ovládacích prvků.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -666,27 +666,25 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `wNotifyCode`  
- Kód oznámení, ke kterému odpovídá vaší obslužné rutiny.  
+ *funkci wNotifyCode*  
+ Kód upozornění, ke které je vaše obslužná rutina reagovat.  
   
- `id1`  
+ *ID 1*  
  ID příkazu na začátku souvislý rozsah ID ovládacích prvků.  
   
- `id2`  
- ID příkazu na konci souvislý rozsah ID ovládacích prvků.  
+ *s ID 2*  
+ ID příkazu, na konci souvislý rozsah ID ovládacích prvků.  
   
- `memberFxn`  
- Název funkce popisovač zpráv, ke které jsou namapované ovládací prvky.  
+ *memberFxn*  
+ Název funkce popisovač zpráv, ke které jsou mapovány ovládací prvky.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozsah ID začíná `id1` a končí `id2`. Obslužná rutina se nazývá pro zadaný oznámení z jakékoli namapované ovládací prvky.  
+ Rozsah ID začíná *id1* a končí *id2*. Obslužná rutina se nazývá pro zadaný oznámení pocházející z některého z namapované ovládací prvky.  
   
- Neexistuje žádné automatické podpory pro oblasti map zpráv, proto musíte umístit makro sami.  
+ Neexistuje žádné automatické podpory pro oblasti map zpráv, takže je nutné umístit makro, sami.  
   
- Další informace o implementaci obslužné rutiny funkce pro řadu ID ovládacích prvků, najdete v části [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).  
+ Další informace o implementaci funkce obslužné rutiny pro celou řadu ID ovládacích prvků naleznete [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).  
   
 ### <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxmsg_.h  
   
-
-

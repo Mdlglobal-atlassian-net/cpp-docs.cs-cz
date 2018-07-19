@@ -1,5 +1,5 @@
 ---
-title: Třída CHtmlEditCtrlBase | Microsoft Docs
+title: Chtmleditctrlbase – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -230,15 +230,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9ee202defce08d30f36fb0002bd1477957dd76bc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337564"
 ---
-# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase – třída
-Představuje komponentu úprav HTML.  
+# <a name="chtmleditctrlbase-class"></a>Chtmleditctrlbase – třída
+Představuje součást úprav jazyka HTML.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -252,122 +252,122 @@ template <class T> class CHtmlEditCtrlBase
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Přidá položku do tabulky glyf, který určuje bitové kopie k zobrazení konkrétními značkami v režimu návrhu.|  
-|[CHtmlEditCtrlBase::Bold](#bold)|Přepne stav vybraný text tučně.|  
-|[CHtmlEditCtrlBase::Button](#button)|Přepíše tlačítko – ovládací prvek na aktuální výběr.|  
-|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Přepíše ovládací prvek zaškrtávací políčko v aktuálním výběru.|  
-|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Vymaže aktuální výběr.|  
-|[CHtmlEditCtrlBase::Copy](#copy)|Aktuální výběr zkopíruje do schránky.|  
-|[CHtmlEditCtrlBase::Cut](#cut)|Zkopíruje aktuální výběr do schránky a poté se odstraní.|  
+|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Přidá položku do piktogram tabulku, která určuje Image pro zobrazení konkrétních značek v režimu návrhu.|  
+|[CHtmlEditCtrlBase::Bold](#bold)|Přepíná tučné stav vybraného textu.|  
+|[CHtmlEditCtrlBase::Button](#button)|Přepíše ovládací prvek tlačítko na aktuální výběr.|  
+|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Přepíše ovládací prvek zaškrtávací políčko na aktuální výběr.|  
+|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Zruší aktuální výběr.|  
+|[CHtmlEditCtrlBase::Copy](#copy)|Zkopíruje aktuální výběr do schránky.|  
+|[CHtmlEditCtrlBase::Cut](#cut)|Zkopíruje aktuální výběr do schránky a potom ji odstraní.|  
 |[CHtmlEditCtrlBase::Delete](#delete)|Odstraní aktuální výběr.|  
-|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Přepíše ovládací prvek rozevírací výběr na aktuální výběr.|  
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Odebere všechny položky z tabulky glyf, který skryje všechny Image, které se zobrazí u značky v režimu návrhu.|  
+|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Přepíše ovládacího prvku pro výběr rozevírací seznam na aktuálního výběru.|  
+|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Odebere všechny položky z tabulky piktogram skryje všechny Image, zobrazení značek v režimu návrhu.|  
 |[CHtmlEditCtrlBase::ExecCommand](#execcommand)|Spustí příkaz.|  
-|[CHtmlEditCtrlBase::Font](#font)|Otevře dialogové okno Písmo povolit uživatelům změnit barvy, písma a velikost písma aktuální výběr.|  
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Vrátí, zda je vlastnost pozice elementu "absolutní."|  
-|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Načte aktuální výběr barvu pozadí.|  
-|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Načte aktuální značce Formát bloku.|  
-|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Načte odpovídající značky formátu dostupné blokové řetězce.|  
-|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Načte název anchor záložky.|  
+|[CHtmlEditCtrlBase::Font](#font)|Otevře se dialogové okno písmo, chcete-li povolit uživatelům změnit barvu textu, písem a velikost písma aktuálního výběru.|  
+|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Vrátí, zda je vlastnost umístění prvku "absolutní."|  
+|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Zjišťuje barvu pozadí aktuálního výběru.|  
+|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Načte aktuální formát bloková značka.|  
+|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Získá odpovídající značky dostupné blokové formátu řetězce.|  
+|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Načte název záložky ukotvení.|  
 |[CHtmlEditCtrlBase::GetDocument](#getdocument)|Načte objekt dokumentu.|  
-|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Načte aktuálního dokumentu HTML.|  
+|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Získá kód HTML aktuálního dokumentu.|  
 |[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|Načte název dokumentu.|  
-|[CHtmlEditCtrlBase::GetEvent](#getevent)|Načte ukazatele rozhraní k objektu událostí, který obsahuje informace, které jsou relevantní pro poslední událost.|  
-|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Načte objekt, který je aktivována událost.|  
+|[CHtmlEditCtrlBase::GetEvent](#getevent)|Načte ukazatel rozhraní, který obsahuje informace související s poslední události objektu události.|  
+|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Načte objekt, která vyvolala událost.|  
 |[CHtmlEditCtrlBase::GetFontFace](#getfontface)|Načte název písma pro aktuální výběr.|  
-|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Načte velikost písma pro aktuální výběr.|  
-|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Načte aktuální výběr barvu popředí (text).|  
-|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Vrátí zóny zabezpečení aktuální stránky ve webovém prohlížeči.|  
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Určuje, zda došlo ke změně dokumentu HTML.|  
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Vrátí, zda se má zobrazit glyf pro všechny elementy, které mají **styleFloat** vlastnost.|  
-|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Vrátí, zda se má zobrazit WebBrowser glyfů zobrazíte umístění všechny značky v dokumentu.|  
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Načte, zda WebBrowser zobrazí glyf oblasti značky.|  
-|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Načte, zda WebBrowser zobrazí glyf Brazílie značky.|  
-|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Načte, zda WebBrowser zobrazí glyf značky pro komentáře.|  
-|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Načte, zda WebBrowser zobrazí všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0.|  
-|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Načte, zda WebBrowser zobrazí glyf všechny značky skriptu.|  
-|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Načte, zda WebBrowser zobrazí glyf všechny styl značky.|  
-|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Načte, zda WebBrowser zobrazí glyf všechny neznámé značky.|  
-|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Přepíše na vodorovném řádku na aktuální výběr.|  
+|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Získá velikost písma pro aktuální výběr.|  
+|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Zjišťuje barvu popředí (text) aktuální výběr.|  
+|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Vrátí zónu zabezpečení aktuální stránky ve webovém prohlížeči.|  
+|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Označuje, zda byl změněn dokumentu HTML.|  
+|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Vrátí, zda se pro všechny prvky, které mají zobrazí piktogram `styleFloat` vlastnost.|  
+|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Vrátí, zda ovládací prvek WebBrowser zobrazuje glyfy zobrazíte umístění všechny značky v dokumentu.|  
+|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro oblast značky.|  
+|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazí piktogram br značek.|  
+|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro značky pro komentáře.|  
+|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazuje všechny značky, které jsou zobrazeny v aplikaci Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro všechny značky skriptu.|  
+|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro všechny styl značky.|  
+|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro všechny neznámé značky.|  
+|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Přepíše vodorovnou čáru na aktuální výběr.|  
 |[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Vloží hypertextový odkaz na aktuální výběr.|  
-|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Provede operaci vložení, který je kompatibilní s Microsoft Internet Explorer 5.|  
-|[CHtmlEditCtrlBase::Iframe](#iframe)|Přepíše vloženého rámce na aktuální výběr.|  
-|[CHtmlEditCtrlBase::Image](#image)|Přepíše bitové kopie v aktuálním výběru.|  
-|[CHtmlEditCtrlBase::Indent](#indent)|Zvětší odsazení vybraného textu o jeden odsazení přírůstku.|  
-|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Přepíše pole v aktuálním výběru.|  
-|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Přepíše tlačítko – ovládací prvek na aktuální výběr.|  
+|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Provádí operaci vložení kompatibilní s Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::Iframe](#iframe)|Přepíše vložený rámec na aktuální výběr.|  
+|[CHtmlEditCtrlBase::Image](#image)|Přepíše image na aktuální výběr.|  
+|[CHtmlEditCtrlBase::Indent](#indent)|Zvyšuje odsazení vybraný text v přírůstcích po jedné odsazení.|  
+|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Přepíše pole na aktuální výběr.|  
+|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Přepíše ovládací prvek tlačítko na aktuální výběr.|  
 |[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Vloží skrytý ovládací prvek na aktuální výběr.|  
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Přepíše ovládacího prvku obrázek na aktuální výběr.|  
-|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Přepíše ovládací prvek heslo na aktuální výběr.|  
+|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Přepíše ovládacího prvku pro obrázek na aktuální výběr.|  
+|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Přepíše heslo ovládací prvek na aktuální výběr.|  
 |[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Přepíše resetování ovládací prvek na aktuální výběr.|  
-|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Přepíše odeslání ovládací prvek na aktuální výběr.|  
-|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Přepíše prvek pro uložení souborů na aktuální výběr.|  
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Určuje, pokud je element staticky umístěn.|  
-|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Určuje, pokud je element absolutně umístěn.|  
-|[CHtmlEditCtrlBase::Italic](#italic)|Přepne mezi kurzíva a nonitalic aktuální výběr.|  
-|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Centra Formát bloku v aktuálním výběru nacházející se.|  
-|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Vlevo zarovná Formát bloku v aktuálním výběru nacházející se.|  
-|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Formát bloku zarovná vpravo v aktuálním výběru nacházející se.|  
-|[CHtmlEditCtrlBase::ListBox](#listbox)|Přepíše ovládací prvek seznam výběr na aktuální výběr.|  
-|[CHtmlEditCtrlBase::Marquee](#marquee)|Přepíše prázdný výběr na aktuální výběr.|  
+|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Přepíše odeslat ovládací prvek na aktuální výběr.|  
+|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Přepíše nahrávání souboru ovládací prvek na aktuální výběr.|  
+|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Určuje, pokud je element staticky umístěné.|  
+|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Určuje, pokud prvek je absolutně umístěné.|  
+|[CHtmlEditCtrlBase::Italic](#italic)|Přepíná mezi normálním písmem a kurzívou nonitalic aktuálního výběru.|  
+|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Centra pro formát bloku ve kterém se nachází aktuální výběr.|  
+|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Vlevo zarovná Formát bloku ve kterém se nachází aktuální výběr.|  
+|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Zarovnává doprava Formát bloku ve kterém se nachází aktuální výběr.|  
+|[CHtmlEditCtrlBase::ListBox](#listbox)|Přepíše výběr seznam na aktuálního výběru.|  
+|[CHtmlEditCtrlBase::Marquee](#marquee)|Přepíše prázdný rámeček na aktuální výběr.|  
 |[CHtmlEditCtrlBase::NewDocument](#newdocument)|Vytvoří nový dokument.|  
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|Přepne aktuální výběr až blok normální formátu uspořádaného seznamu.|  
-|[CHtmlEditCtrlBase::Outdent](#outdent)|Zmenší o jednu přírůstek odsazení Formát bloku v aktuálním výběru nacházející se.|  
+|[CHtmlEditCtrlBase::OrderList](#orderlist)|Přepne aktuální výběr až bloku normální formátu uspořádaného seznamu.|  
+|[CHtmlEditCtrlBase::Outdent](#outdent)|Snižuje v přírůstcích po jedné odsazení Formát bloku ve kterém se nachází aktuální výběr.|  
 |[CHtmlEditCtrlBase::Paragraph](#paragraph)|Přepíše konec řádku na aktuální výběr.|  
-|[CHtmlEditCtrlBase::Paste](#paste)|Přepíše obsah ze schránky na aktuální výběr.|  
-|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Vytiskne dokument aktuální.|  
-|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Otevře se okno náhledu tisku v aktuálním dokumentu pomocí výchozí šablony náhledu tisku nebo vlastní šablona.|  
-|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Volejte tuto metodu dotaz na stav příkazy.|  
+|[CHtmlEditCtrlBase::Paste](#paste)|Přepíše obsah schránky na aktuální výběr.|  
+|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Vytiskne aktuální dokument.|  
+|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Otevření okna Náhled pro aktuální dokument pomocí výchozí šablony náhledu tisku nebo vlastní šablony.|  
+|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Voláním této metody lze zadat dotaz na stav příkazy.|  
 |[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Přepíše ovládací prvek přepínač na aktuální výběr.|  
-|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Aktualizuje aktuálním dokumentu.|  
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Odebere z aktuálního výběru formátování značky.|  
+|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Aktualizuje aktuální dokument.|  
+|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Odebere formátování značky z aktuálního výběru.|  
 |[CHtmlEditCtrlBase::SaveAs](#saveas)|Uloží aktuální webové stránky do souboru.|  
 |[CHtmlEditCtrlBase::SelectAll](#selectall)|Vybere celý dokument.|  
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Umožňuje přesunout přetažením absolutně umístěného elementů.|  
-|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Nastaví vlastnost pozice elementu "absolutní" nebo "statická".|  
-|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Nastavit režim atomic výběr.|  
+|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Umožňuje přesunout přetažením absolutně umístěné elementy.|  
+|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Nastaví vlastnost pozice prvku "absolutní" nebo "statická".|  
+|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Nastavení režimu výběru atomické.|  
 |[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|Automatické zjišťování adresy URL vypíná a zapíná.|  
-|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Nastaví barvu pozadí aktuální výběr.|  
-|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Nastaví aktuální značce Formát bloku.|  
-|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Vytvoří záložku ukotvení pro aktuální výběr nebo vložení bod.|  
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Vybere, kterou úroveň šablon stylů CSS (CSS1 nebo CSS2) editoru bude podporovat, pokud existuje.|  
-|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Volání této metody k nastavení výchozího nastavení psaní.|  
+|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Nastaví barvu pozadí aktuálního výběru.|  
+|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Nastaví aktuální formát bloková značka.|  
+|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Vytvoří záložku ukotvení pro aktuální výběr nebo kurzor bod.|  
+|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Vybere jaké úroveň šablon stylů CSS (CSS1 nebo CSS2) editoru bude podporovat, pokud existuje.|  
+|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Volání této metody nastavte výchozí nastavení psaní.|  
 |[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|Nastavení režimu návrhu.|  
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Zakáže šrafované ohraničení a zpracovává kolem úpravy aktivního elementu.|  
-|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Nastaví aktuálního dokumentu HTML.|  
+|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Zakáže šrafované ohraničení a zpracovává kolem element, který má právě fokus upravit.|  
+|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Nastaví HTML aktuálního dokumentu.|  
 |[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Nastaví písmo pro aktuální výběr.|  
 |[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|Nastaví velikost písma pro aktuální výběr.|  
-|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Nastaví barvu popředí (text) aktuální výběr.|  
+|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Nastavuje barvu popředí (text) aktuální výběr.|  
 |[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Nastaví operace vložení, aby byl kompatibilní s Microsoft Internet Explorer 5.|  
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|Způsobí, že WebBrowser aktualizovat vzhled elementu nepřetržitě během operace změny velikosti nebo přesunutí.|  
+|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|Způsobí, že ovládací prvek WebBrowser aktualizovat vzhled elementu průběžně během operace změny velikosti nebo přesunutí.|  
 |[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Umožňuje vícenásobný výběr.|  
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Příkazy WebBrowser nikdy, chcete-li změnit ukazatel myši.|  
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Přepíná mezi režimem zadávání textu vložit a přepsání.|  
+|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Příkazy ovládacím prvkem WebBrowser nikdy změnit umístění ukazatele myši.|  
+|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Přepíná mezi režimem zadání textu, Vložit a přepsání.|  
 |[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|Skryje neviditelné prvky v režimu návrhu.|  
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Zobrazí glyf všechny elementy, které mají **styleFloat** vlastnost.|  
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Zobrazí glyfů zobrazíte umístění všechny značky v dokumentu.|  
-|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Zobrazí glyf pro všechny oblasti značky.|  
-|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Zobrazí všechny značky Brazílie glyf.|  
-|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Zobrazí glyf všechny značky pro komentáře.|  
-|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Zobrazí všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0.|  
-|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Zobrazí glyf všechny značky skriptu.|  
-|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Zobrazí glyf všechny styl značky.|  
-|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Zobrazí glyf všechny neznámé značky.|  
-|[CHtmlEditCtrlBase::TextArea](#textarea)|Přepíše víceřádkový text vstupního ovládacího prvku na aktuální výběr.|  
-|[CHtmlEditCtrlBase::TextBox](#textbox)|Přepíše ovládacího prvku typu textový na aktuální výběr.|  
-|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Odebere všechny záložku z aktuálního výběru.|  
-|[CHtmlEditCtrlBase::Underline](#underline)|Přepne aktuální výběr mezi podtržený a není podtržen.|  
+|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Zobrazí piktogram pro všechny prvky, které mají `styleFloat` vlastnost.|  
+|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Zobrazí glyfů pro zobrazení umístění všechny značky v dokumentu.|  
+|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Zobrazí piktogram pro všechny oblasti značky.|  
+|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Zobrazí piktogram pro všechny značky br.|  
+|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Zobrazí piktogram pro všechny značky pro komentáře.|  
+|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Zobrazí všechny značky, které jsou zobrazeny v aplikaci Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Zobrazí piktogram pro všechny značky skriptu.|  
+|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Zobrazí piktogram pro všechny styl značky.|  
+|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Zobrazí piktogram Neznámý klíčových slov.|  
+|[CHtmlEditCtrlBase::TextArea](#textarea)|Přepíše víceřádkovém textovém vstupní ovládací prvek na aktuální výběr.|  
+|[CHtmlEditCtrlBase::TextBox](#textbox)|Přepíše textový ovládací prvek na aktuální výběr.|  
+|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Odebere všechny záložky z aktuálního výběru.|  
+|[CHtmlEditCtrlBase::Underline](#underline)|Přepne aktuální výběr mezi podtržený a bez podtržení.|  
 |[CHtmlEditCtrlBase::Unlink](#unlink)|Odebere všechny hypertextový odkaz z aktuálního výběru.|  
-|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Přepne aktuální výběr až blok normální formátu uspořádaného seznamu.|  
+|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Přepne aktuální výběr až bloku normální formátu uspořádaného seznamu.|  
   
 #### <a name="parameters"></a>Parametry  
  `T`  
  Název odvozené třídy.  
   
 ## <a name="remarks"></a>Poznámky  
- **CHtmlEditCtrlBase** poskytuje členské funkce pro úpravy příkazy, jako například ve formátu HTML WebBrowser [Bold](#bold). (Alternativně můžete volat [ExecCommand](#execcommand) provést **IDM_BOLD** příkaz.)  
+ `CHtmlEditCtrlBase` Poskytuje členské funkce pro ovládací prvek WebBrowser HTML úpravy příkazy, jako například [tučné](#bold). (Alternativně můžete volat [ExecCommand](#execcommand) ke spuštění příkazu IDM_BOLD.)  
   
- **CHtmlEditCtrlBase** neměla být vlastní. Slouží jako základní třída pro odvozené třídy, které zveřejňují HTML funkcí WebBrowser pro úpravy (viz [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) a [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
+ `CHtmlEditCtrlBase` není určena pro vypovídá sám. Slouží jako základní třída pro odvozené třídy, které poskytují funkce ovládací prvek WebBrowser pro úpravu kódu HTML (viz [chtmleditctrl –](../../mfc/reference/chtmleditctrl-class.md) a [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `CHtmlEditCtrlBase`  
@@ -376,7 +376,7 @@ template <class T> class CHtmlEditCtrlBase
  **Záhlaví:** afxhtml.h  
   
 ##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
- Přidá položku do tabulky glyf, který určuje bitové kopie k zobrazení konkrétními značkami v režimu návrhu.  
+ Přidá položku do piktogram tabulku, která určuje Image pro zobrazení konkrétních značek v režimu návrhu.  
   
 ```  
 HRESULT AddToGlyphTable(
@@ -392,22 +392,22 @@ HRESULT AddToGlyphTable(
   
 ### <a name="parameters"></a>Parametry  
  *szTag*  
- Název značky (například "P" nebo "tabulka").  
+ Název značky (například "P" nebo "table").  
   
  *szImgUrl*  
  Adresa URL obrázku.  
   
  *nTagType*  
- Označení typu: 0 znamená, že bitová kopie je pro pouze počáteční značka. 1 znamená, že bitová kopie je pro pouze ukončovací značku. 2 znamená, že bitová kopie je pro otevírání a ukončovací značky. Jeden značky, jako je například Brazílie a komentář je nutné přidat značky typu nastaven na hodnotu 0.  
+ Označte typ: 0 znamená, že na obrázku je pro počáteční značka pouze. 1 znamená, že na obrázku je pro pouze ukončovací značku. 2 znamená, že na obrázku je pro počátečními a ukončovacími značkami. Jeden značek, například br a komentář musí být přidán s typem značka nastavena na hodnotu 0.  
   
  *nAlignment*  
- Zarovnání (pouze obdélníkovou prvky): Tento parametr znamená, že obrázek je pro element s atributem zarovnání. Vlevo = 0, center = 1, právo = 2 a není definovaná = 3. Levé, pravé nebo center atributy musí být explicitně nastaveny na elementu.  
+ Zarovnání (pouze obdélníkovou elementy): Tento parametr určuje, že na obrázku je pro daný element s atributem zarovnání. Zbyva = 0, center = 1, vpravo = 2 a undefined = 3. Vlevo, vpravo nebo System center atributy musí být explicitně nastaven pro element.  
   
  *nPosInfo*  
- Informace o umístění. Určuje, jaké kaskádových stylů listů (CSS) umísťovací hodnota glyf platí, kde statické umisťování = 0, absolutní umístění = 1, relativní umístění = 2 a všechny = 3. Toto pole umožňuje určit jednu glyfy značky, když není umístěný a jiné glyfy zobrazíte bod ukotvení, když je umístěn značky.  
+ Informace o umístění. Určuje, jaké stylu CSS seznamy (CSS) umístění hodnotu šifra se vztahuje na, kde statické umisťování = 0, absolutní umístění = 1, relativní umístění = 2 a všechny = 3. Toto pole umožňuje určit jednu piktogramu značky, pokud není umístěn a jiné piktogram chcete zobrazit kotevní bod, když je umístěn na značku.  
   
  *nDirection*  
- Směr. Tento parametr určuje bitovou kopii pro značku podle pořadí čtení aktuální jazyk. 0 určuje zleva doprava, 1 určuje zprava doleva, určuje shora dolů, 2, 3 určuje zdola nahoru a 4 určuje všechny. V tomto poli se obvykle nastaveno na 4.  
+ Směr. Tento parametr určuje image pro značky na základě pořadí čtení aktuálního jazyka. 0 určuje zleva doprava, zprava doleva. Určuje 1, 2 určuje shora dolů, 3 určuje zdola nahoru a 4 určuje všechny. Toto pole se obvykle nastaveno na 4.  
   
  *nImgWidth*  
  Šířka obrázku v pixelech.  
@@ -416,28 +416,28 @@ HRESULT AddToGlyphTable(
  Výška obrázku v pixelech.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace o parametrech najdete v části "Glyfy tabulky řetězec formátu" v [pomocí úpravy glyfů](https://msdn.microsoft.com/library/aa969614.aspx).  
+ Další informace o parametrech najdete v části "Piktogram tabulky řetězec formátu" v [pomocí úpravy glyfy](https://msdn.microsoft.com/library/aa969614.aspx).  
   
  Tato metoda odesílá [ID příkazu IDM_ADDTOGLYPHTABLE](https://msdn.microsoft.com/library/aa769891.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
- Přepne stav vybraný text tučně.  
+ Přepíná tučné stav vybraného textu.  
   
 ```  
 HRESULT Bold() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_BOLD](https://msdn.microsoft.com/library/aa769861.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
- Přepíše tlačítko – ovládací prvek na aktuální výběr.  
+ Přepíše ovládací prvek tlačítko na aktuální výběr.  
   
 ```  
 HRESULT Button(LPCTSTR szId = NULL) const;  
@@ -448,13 +448,13 @@ HRESULT Button(LPCTSTR szId = NULL) const;
  ID ovládacího prvku tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_BUTTON](https://msdn.microsoft.com/library/aa769966.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
- Přepíše ovládací prvek zaškrtávací políčko v aktuálním výběru.  
+ Přepíše ovládací prvek zaškrtávací políčko na aktuální výběr.  
   
 ```  
 HRESULT CheckBox(LPCTSTR szId = NULL) const;  
@@ -462,49 +462,49 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID ovládací prvek zaškrtávací políčko.  
+ ID ovládacího prvku zaškrtávací políčko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_CHECKBOX](https://msdn.microsoft.com/library/aa769972.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
- Vymaže aktuální výběr.  
+ Zruší aktuální výběr.  
   
 ```  
 HRESULT ClearSelection() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_CLEARSELECTION](https://msdn.microsoft.com/library/aa770038.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy  
- Aktuální výběr zkopíruje do schránky.  
+ Zkopíruje aktuální výběr do schránky.  
   
 ```  
 HRESULT Copy() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_COPY](https://msdn.microsoft.com/library/aa769872.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut  
- Zkopíruje aktuální výběr do schránky a poté se odstraní.  
+ Zkopíruje aktuální výběr do schránky a potom ji odstraní.  
   
 ```  
 HRESULT Cut() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_CUT](https://msdn.microsoft.com/library/aa769875.aspx) do ovládacího prvku WebBrowser.  
@@ -517,13 +517,13 @@ HRESULT Delete() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_DELETE](https://msdn.microsoft.com/library/aa769876.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
- Přepíše ovládací prvek rozevírací výběr na aktuální výběr.  
+ Přepíše ovládacího prvku pro výběr rozevírací seznam na aktuálního výběru.  
   
 ```  
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;  
@@ -531,23 +531,23 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID ovládacího prvku rozevíracího seznamu výběru.  
+ ID ovládacího prvku pro výběr rozevíracího seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_DROPDOWNBOX](https://msdn.microsoft.com/library/aa769984.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
- Odebere všechny položky z tabulky glyf, který skryje všechny Image, které se zobrazí u značky v režimu návrhu.  
+ Odebere všechny položky z tabulky piktogram skryje všechny Image, zobrazení značek v režimu návrhu.  
   
 ```  
 HRESULT EmptyGlyphTable() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_EMPTYGLYPHTABLE](https://msdn.microsoft.com/library/aa769907.aspx) do ovládacího prvku WebBrowser.  
@@ -572,10 +572,10 @@ HRESULT ExecCommand(
   
 ### <a name="parameters"></a>Parametry  
  *cmdID*  
- ID příkazu, který má být proveden. Seznam najdete v tématu [identifikátory příkazů MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
+ ID příkazu, který se spustí. Seznam najdete v tématu [identifikátory příkazů MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  *cmdExecOpt*  
- Hodnoty, které jsou převzaty z [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) výčtu, které popisují, jak by měla objekt spustit příkaz.  
+ Na základě hodnot [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) výčtu, které popisují, jak objekt by se měl spustit příkaz.  
   
  *pInVar*  
  Vstupní argumenty.  
@@ -584,29 +584,29 @@ HRESULT ExecCommand(
  Výstup příkazu.  
   
  *pGuid*  
- Identifikátor GUID skupina příkazu.  
+ Identifikátor GUID skupiny příkazů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda poskytuje funkci [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
+ Tato metoda poskytuje funkce pro [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
 ##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
- Otevře dialogové okno Písmo povolit uživatelům změnit barvy, písma a velikost písma aktuální výběr.  
+ Otevře se dialogové okno písmo, chcete-li povolit uživatelům změnit barvu textu, písem a velikost písma aktuálního výběru.  
   
 ```  
 HRESULT Font() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_FONT](https://msdn.microsoft.com/library/aa769913.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
- Vrátí, zda je vlastnost pozice elementu "absolutní."  
+ Vrátí, zda je vlastnost umístění prvku "absolutní."  
   
 ```  
 HRESULT GetAbsolutePosition(bool& bCurValue) const;  
@@ -614,16 +614,16 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud je vlastnost pozice elementu nastavena na "absolutní."  
+ Hodnota TRUE, pokud vlastnost pozici prvku je nastavena na "absolutní."  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx).  
   
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
- Načte aktuální výběr barvu pozadí.  
+ Zjišťuje barvu pozadí aktuálního výběru.  
   
 ```  
 HRESULT GetBackColor(int& nColor) const;  
@@ -634,13 +634,13 @@ HRESULT GetBackColor(int& nColor) const;
  Barva pozadí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
- Načte aktuální značce Formát bloku.  
+ Načte aktuální formát bloková značka.  
   
 ```  
 HRESULT GetBlockFormat(CString& strFormat) const;  
@@ -648,33 +648,33 @@ HRESULT GetBlockFormat(CString& strFormat) const;
   
 ### <a name="parameters"></a>Parametry  
  *strFormat*  
- Aktuální značce Formát bloku.  
+ Aktuální blok formát značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_BLOCKFMT](https://msdn.microsoft.com/library/aa769883.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames  
- Načte odpovídající značky formátu dostupné blokové řetězce.  
+ Získá odpovídající značky dostupné blokové formátu řetězce.  
   
 ```  
 HRESULT GetBlockFormatNames(CStringArray& sa) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *přidružení zabezpečení*  
+ *SA*  
  Dostupné blokové značky o formátu, jako pole řetězců.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_GETBLOCKFMTS](https://msdn.microsoft.com/library/aa769884.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
- Načte název anchor záložky.  
+ Načte název záložky ukotvení.  
   
 ```  
 HRESULT GetBookMark(CString& strAnchor) const;  
@@ -682,10 +682,10 @@ HRESULT GetBookMark(CString& strAnchor) const;
   
 ### <a name="parameters"></a>Parametry  
  *strAnchor*  
- Název anchor záložky.  
+ Název záložky ukotvení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx).  
@@ -699,13 +699,13 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppDoc*  
- Objekt dokumentu.  
+ Objekt, který dokument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
- Načte aktuálního dokumentu HTML.  
+ Získá kód HTML aktuálního dokumentu.  
   
 ```  
 HRESULT GetDocumentHTML(CString& szHTML) const;  
@@ -716,7 +716,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
  Kód HTML.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
  Načte název dokumentu.  
@@ -730,10 +730,10 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
  Název dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
- Načte ukazatele rozhraní k objektu událostí, který obsahuje informace, které jsou relevantní pro poslední událost.  
+ Načte ukazatel rozhraní, který obsahuje informace související s poslední události objektu události.  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;  
@@ -741,13 +741,13 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppEventObj*  
- Objekt události.  
+ Objekt, který událost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
- Načte objekt, který je aktivována událost.  
+ Načte objekt, která vyvolala událost.  
   
 ```  
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;  
@@ -755,10 +755,10 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
   
 ### <a name="parameters"></a>Parametry  
  *ppSrcElement*  
- Element, který je aktivována událost.  
+ Element, která vyvolala událost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
  Načte název písma pro aktuální výběr.  
@@ -772,15 +772,15 @@ HRESULT GetFontFace(CString& strFace) const;
  Název písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud aktuální výběr používá více než jeden písma *strFace* bude prázdný řetězec.  
+ Pokud aktuální výběr používá více než jeden písmo *strFace* bude prázdný řetězec.  
   
  Tato metoda odesílá [ID příkazu IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize  
- Načte velikost písma pro aktuální výběr.  
+ Získá velikost písma pro aktuální výběr.  
   
 ```  
 HRESULT GetFontSize(short& nSize) const;  
@@ -791,13 +791,13 @@ HRESULT GetFontSize(short& nSize) const;
  Velikost písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí velikost písma HTML (1-7). Vrátí hodnotu 0, pokud výběr obsahuje více velikosti písem.  
+ Vrátí velikost písma HTML (1-7). Vrátí hodnotu 0, pokud výběr obsahuje více velikostí písma.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
- Načte aktuální výběr barvu popředí (text).  
+ Zjišťuje barvu popředí (text) aktuální výběr.  
   
 ```  
 HRESULT GetForeColor(int& nColor);
@@ -805,16 +805,16 @@ HRESULT GetForeColor(int& nColor);
   
 ### <a name="parameters"></a>Parametry  
  *nColor*  
- Barvu popředí.  
+ Barva popředí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
- Vrátí zóny zabezpečení aktuální stránky ve webovém prohlížeči.  
+ Vrátí zónu zabezpečení aktuální stránky ve webovém prohlížeči.  
   
 ```  
 HRESULT GetFrameZone(short& nZone) const;  
@@ -822,26 +822,26 @@ HRESULT GetFrameZone(short& nZone) const;
   
 ### <a name="parameters"></a>Parametry  
  *nZone*  
- Zóny zabezpečení.  
+ Zóna zabezpečení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_GETFRAMEZONE](https://msdn.microsoft.com/library/aa769916.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
- Určuje, zda došlo ke změně dokumentu HTML.  
+ Označuje, zda byl změněn dokumentu HTML.  
   
 ```  
 HRESULT GetIsDirty() const;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Určuje, zda došlo ke změně dokumentu. `GetIsDirty` Vrátí `HRESULT` z [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+ Označuje, zda byl změněn dokumentu. `GetIsDirty` Vrátí hodnotu HRESULT z [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
 ##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
- Vrátí, zda se má zobrazit glyf pro všechny elementy, které mají **styleFloat** vlastnost.  
+ Vrátí, zda se pro všechny prvky, které mají zobrazí piktogram `styleFloat` vlastnost.  
   
 ```  
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;  
@@ -849,16 +849,16 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud se zobrazí glyf pro všechny elementy, které mají **styleFloat** vlastnost; NEPRAVDA, pokud se zobrazí žádné glyfů.  
+ Hodnota TRUE, pokud se pro všechny prvky, které mají zobrazí piktogram `styleFloat` vlastnosti; FALSE, pokud žádné glyfů se zobrazí.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx).  
   
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
- Vrátí, zda se má zobrazit WebBrowser glyfů zobrazíte umístění všechny značky v dokumentu.  
+ Vrátí, zda ovládací prvek WebBrowser zobrazuje glyfy zobrazíte umístění všechny značky v dokumentu.  
   
 ```  
 HRESULT GetShowAllTags(bool& bCurValue) const;  
@@ -866,16 +866,16 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazuje glyfy zobrazíte umístění všechny značky v dokumentu; hodnotu false, pokud neexistuje.  
+ Hodnota TRUE, pokud ovládací prvek WebBrowser zobrazuje glyfy zobrazíte umístění všechny značky v dokumentu. FALSE, pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx).  
   
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
- Načte, zda WebBrowser zobrazí glyf oblasti značky.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro oblast značky.  
   
 ```  
 HRESULT GetShowAreaTags(bool& bCurValue) const;  
@@ -883,16 +883,16 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazí glyf oblasti značky, false. Pokud není.  
+ TRUE, pokud ovládací prvek WebBrowser zobrazí glyfů pro oblast značky, FALSE, pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx).  
   
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags  
- Načte, zda WebBrowser zobrazí glyf Brazílie značky.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazí piktogram br značek.  
   
 ```  
 HRESULT GetShowBRTags(bool& bCurValue) const;  
@@ -900,16 +900,16 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazí glyf Brazílie značky, false, pokud nepodporuje.  
+ Hodnota TRUE, pokud ovládací prvek WebBrowser zobrazuje glyfů pro značky br FALSE. Pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx).  
   
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags  
- Načte, zda WebBrowser zobrazí glyf značky pro komentáře.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro značky pro komentáře.  
   
 ```  
 HRESULT GetShowCommentTags(bool& bCurValue) const;  
@@ -917,16 +917,16 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazí glyf značky pro komentáře, false, pokud nepodporuje.  
+ Hodnota TRUE, pokud ovládací prvek WebBrowser zobrazuje glyfů pro značky pro komentáře, FALSE. Pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx).  
   
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
- Načte, zda WebBrowser zobrazí všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazuje všechny značky, které jsou zobrazeny v aplikaci Internet Explorer 4.0.  
   
 ```  
 HRESULT GetShowMiscTags(bool& bCurValue) const;  
@@ -934,16 +934,16 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- True, pokud WebBrowser zobrazí všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0, false, pokud neexistuje.  
+ Hodnota TRUE, pokud ovládací prvek WebBrowser zobrazuje všechny značky, které jsou zobrazeny v aplikaci Internet Explorer 4.0, FALSE, pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx).  
   
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags  
- Načte, zda WebBrowser zobrazí glyf všechny značky skriptu.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro všechny značky skriptu.  
   
 ```  
 HRESULT GetShowScriptTags(bool& bCurValue) const;  
@@ -951,16 +951,16 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazí glyf všechny značky skriptu false. Pokud není.  
+ TRUE, pokud ovládací prvek WebBrowser zobrazí glyfů pro všechny značky skriptu, FALSE, pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx).  
   
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags  
- Načte, zda WebBrowser zobrazí glyf všechny styl značky.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro všechny styl značky.  
   
 ```  
 HRESULT GetShowStyleTags(bool& bCurValue) const;  
@@ -968,16 +968,16 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazí glyf všechny styl značky, false, pokud je nepoužívá  
+ Hodnota TRUE, pokud ovládací prvek WebBrowser zobrazí glyfů pro styl značky, FALSE, pokud tomu tak není  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx).  
   
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags  
- Načte, zda WebBrowser zobrazí glyf všechny neznámé značky.  
+ Zjišťuje, zda ovládací prvek WebBrowser zobrazuje glyfů pro všechny neznámé značky.  
   
 ```  
 HRESULT GetShowUnknownTags(bool& bCurValue) const;  
@@ -985,16 +985,16 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bCurValue*  
- Hodnota TRUE, pokud WebBrowser zobrazí glyf všechny neznámé značky, false, pokud je nepoužívá.  
+ TRUE, pokud ovládací prvek WebBrowser zobrazí glyfů pro všechny neznámé značky, FALSE, pokud tomu tak není.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Další informace najdete v tématu [ID příkazu IDM_SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx).  
   
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
- Přepíše na vodorovném řádku na aktuální výběr.  
+ Přepíše vodorovnou čáru na aktuální výběr.  
   
 ```  
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;  
@@ -1002,10 +1002,10 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szID*  
- ID pro vodorovné čáry.  
+ ID pro vodorovnou horizontální čáru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_HORIZONTALLINE](https://msdn.microsoft.com/library/aa769968.aspx) do ovládacího prvku WebBrowser.  
@@ -1019,16 +1019,16 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szUrl*  
- Adresu URL.  
+ Adresa URL hypertextového odkazu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_HYPERLINK](https://msdn.microsoft.com/library/aa769874.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste  
- Provede operaci vložení, který je kompatibilní s Internet Explorer 5.  
+ Provádí operaci vložení, který je kompatibilní s aplikací Internet Explorer 5.  
   
 ```  
 HRESULT IE50Paste(LPCTSTR szData) const;  
@@ -1036,16 +1036,16 @@ HRESULT IE50Paste(LPCTSTR szData) const;
   
 ### <a name="parameters"></a>Parametry  
  *szData*  
- Řetězec, který se má vložit.  
+ Řetězec, který chcete vložit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_IE50_PASTE](https://msdn.microsoft.com/library/aa769922.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
- Přepíše vloženého rámce na aktuální výběr.  
+ Přepíše vložený rámec na aktuální výběr.  
   
 ```  
 HRESULT Iframe(LPCTSTR szId = NULL) const;  
@@ -1056,13 +1056,13 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
  ID pro vložené rámce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_IFRAME](https://msdn.microsoft.com/library/aa769969.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
- Přepíše bitové kopie v aktuálním výběru.  
+ Přepíše image na aktuální výběr.  
   
 ```  
 HRESULT Image(LPCTSTR szUrl = NULL) const;  
@@ -1070,29 +1070,29 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szUrl*  
- Název a cesta k souboru bitové kopie má být vložen.  
+ Název a cesta k souboru obrázku, který má být vložen.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_IMAGE](https://msdn.microsoft.com/library/aa769970.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
- Zvětší odsazení vybraného textu o jeden odsazení přírůstku.  
+ Zvyšuje odsazení vybraný text v přírůstcích po jedné odsazení.  
   
 ```  
 HRESULT Indent() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INDENT](https://msdn.microsoft.com/library/aa769963.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
- Přepíše pole v aktuálním výběru.  
+ Přepíše pole na aktuální výběr.  
   
 ```  
 HRESULT InsFieldSet(LPCTSTR szId = NULL) const;  
@@ -1100,16 +1100,16 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro pole.  
+ ID pole.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSFIELDSET](https://msdn.microsoft.com/library/aa769967.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
- Přepíše tlačítko – ovládací prvek na aktuální výběr.  
+ Přepíše ovládací prvek tlačítko na aktuální výběr.  
   
 ```  
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;  
@@ -1120,7 +1120,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
  ID pro ovládací prvek tlačítko.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTBUTTON](https://msdn.microsoft.com/library/aa769971.aspx) do ovládacího prvku WebBrowser.  
@@ -1134,16 +1134,16 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro skrytý ovládací prvek.  
+ ID skrytý ovládací prvek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTHIDDEN](https://msdn.microsoft.com/library/aa769974.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
- Přepíše ovládacího prvku obrázek na aktuální výběr.  
+ Přepíše ovládacího prvku pro obrázek na aktuální výběr.  
   
 ```  
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;  
@@ -1151,16 +1151,16 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro ovládací prvek bitové kopie.  
+ ID pro tento ovládací prvek obrázku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTIMAGE](https://msdn.microsoft.com/library/aa769975.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
- Přepíše ovládací prvek heslo na aktuální výběr.  
+ Přepíše heslo ovládací prvek na aktuální výběr.  
   
 ```  
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;  
@@ -1171,7 +1171,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
  ID pro ovládací prvek heslo.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTPASSWORD](https://msdn.microsoft.com/library/aa769976.aspx) do ovládacího prvku WebBrowser.  
@@ -1185,16 +1185,16 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro ovládací prvek resetování.  
+ ID ovládacího prvku obnovit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTRESET](https://msdn.microsoft.com/library/aa769978.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
- Přepíše odeslání ovládací prvek na aktuální výběr.  
+ Přepíše odeslat ovládací prvek na aktuální výběr.  
   
 ```  
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;  
@@ -1202,16 +1202,16 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro ovládací prvek odeslání.  
+ ID ovládacího prvku odeslat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTSUBMIT](https://msdn.microsoft.com/library/aa769979.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
- Přepíše prvek pro uložení souborů na aktuální výběr.  
+ Přepíše nahrávání souboru ovládací prvek na aktuální výběr.  
   
 ```  
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;  
@@ -1222,13 +1222,13 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
  ID pro ovládací prvek pro uložení souboru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_INSINPUTUPLOAD](https://msdn.microsoft.com/library/aa769973.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
- Určuje, pokud je element staticky umístěn.  
+ Určuje, pokud je element staticky umístěné.  
   
 ```  
 HRESULT Is1DElement(bool& bValue) const;  
@@ -1236,16 +1236,16 @@ HRESULT Is1DElement(bool& bValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bValue*  
- Hodnota TRUE, pokud se element nachází staticky umístěného, false, jinak hodnota.  
+ TRUE, pokud staticky umisťovanému prvku, FALSE v opačném případě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_1D_ELEMENT](https://msdn.microsoft.com/library/aa769885.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
- Určuje, pokud je element absolutně umístěn.  
+ Určuje, pokud prvek je absolutně umístěné.  
   
 ```  
 HRESULT Is2DElement(bool& bValue) const;  
@@ -1253,68 +1253,68 @@ HRESULT Is2DElement(bool& bValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bValue*  
- Hodnota TRUE, pokud se element nachází absolutně umístěného, false, jinak hodnota.  
+ TRUE, pokud element je absolutně umístěné, FALSE v opačném případě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_2D_ELEMENT](https://msdn.microsoft.com/library/aa769886.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
- Přepne mezi kurzíva a nonitalic aktuální výběr.  
+ Přepíná mezi normálním písmem a kurzívou nonitalic aktuálního výběru.  
   
 ```  
 HRESULT Italic() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_ITALIC](https://msdn.microsoft.com/library/aa769988.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
- Centra Formát bloku v aktuálním výběru nacházející se.  
+ Centra pro formát bloku ve kterém se nachází aktuální výběr.  
   
 ```  
 HRESULT JustifyCenter() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_JUSTIFYCENTER](https://msdn.microsoft.com/library/aa769989.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
- Vlevo zarovná Formát bloku v aktuálním výběru nacházející se.  
+ Vlevo zarovná Formát bloku ve kterém se nachází aktuální výběr.  
   
 ```  
 HRESULT JustifyLeft() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_JUSTIFYLEFT](https://msdn.microsoft.com/library/aa770011.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
- Formát bloku zarovná vpravo v aktuálním výběru nacházející se.  
+ Zarovnává doprava Formát bloku ve kterém se nachází aktuální výběr.  
   
 ```  
 HRESULT JustifyRight() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_JUSTIFYRIGHT](https://msdn.microsoft.com/library/aa770013.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
- Přepíše ovládací prvek seznam výběr na aktuální výběr.  
+ Přepíše výběr seznam na aktuálního výběru.  
   
 ```  
 HRESULT ListBox(LPCTSTR szId = NULL) const;  
@@ -1325,13 +1325,13 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
  ID pro ovládací prvek seznam.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_LISTBOX](https://msdn.microsoft.com/library/aa769985.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
- Přepíše prázdný výběr na aktuální výběr.  
+ Přepíše prázdný rámeček na aktuální výběr.  
   
 ```  
 HRESULT Marquee(LPCTSTR szId = NULL) const;  
@@ -1342,7 +1342,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
  ID pro výběr.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_MARQUEE](https://msdn.microsoft.com/library/aa769981.aspx) do ovládacího prvku WebBrowser.  
@@ -1355,10 +1355,10 @@ HRESULT NewDocument() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
- Přepne aktuální výběr až blok normální formátu uspořádaného seznamu.  
+ Přepne aktuální výběr až bloku normální formátu uspořádaného seznamu.  
   
 ```  
 HRESULT OrderList(LPCTSTR szId = NULL) const;  
@@ -1366,23 +1366,23 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro uspořádaného seznamu.  
+ ID uspořádaného seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_ORDERLIST](https://msdn.microsoft.com/library/aa769982.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
- Zmenší o jednu přírůstek odsazení Formát bloku v aktuálním výběru nacházející se.  
+ Snižuje v přírůstcích po jedné odsazení Formát bloku ve kterém se nachází aktuální výběr.  
   
 ```  
 HRESULT Outdent() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_OUTDENT](https://msdn.microsoft.com/library/aa770015.aspx) do ovládacího prvku WebBrowser.  
@@ -1396,29 +1396,29 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID pro odstavce.  
+ ID odstavce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_PARAGRAPH](https://msdn.microsoft.com/library/aa769983.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste  
- Přepíše obsah ze schránky na aktuální výběr.  
+ Přepíše obsah schránky na aktuální výběr.  
   
 ```  
 HRESULT Paste() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_PASTE](https://msdn.microsoft.com/library/aa770017.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument  
- Vytiskne dokument aktuální.  
+ Vytiskne aktuální dokument.  
   
 ```  
 HRESULT PrintDocument() const;  
@@ -1428,19 +1428,19 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
   
 ### <a name="parameters"></a>Parametry  
  *szPrintTemplate*  
- Cesta k tisku šablonu; Pokud není zadaný žádný, je použita výchozí tiskové šablona.  
+ Cesta k šabloně tisku; Pokud není zadaný žádný, je použita výchozí šablona tisku.  
   
  *bShowPrintDialog*  
- V případě hodnoty true, zobrazuje dialogové okno tisku.  
+ Při hodnotě TRUE se zobrazí dialogové okno Tisk.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_PRINT](https://msdn.microsoft.com/library/aa769937.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
- Otevře se okno náhledu tisku v aktuálním dokumentu pomocí výchozí šablony náhledu tisku nebo vlastní šablona.  
+ Otevření okna Náhled pro aktuální dokument pomocí výchozí šablony náhledu tisku nebo vlastní šablony.  
   
 ```  
 HRESULT PrintPreview() const;  
@@ -1449,16 +1449,16 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
   
 ### <a name="parameters"></a>Parametry  
  *szPrintTemplate*  
- Cesta k tisku šablony.  
+ Cesta k šabloně tisku.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_PRINTPREVIEW](https://msdn.microsoft.com/library/aa769938.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus  
- Volejte tuto metodu dotaz na stav příkazy.  
+ Voláním této metody lze zadat dotaz na stav příkazy.  
   
 ```  
 long QueryStatus(long cmdID) const;  
@@ -1466,7 +1466,7 @@ long QueryStatus(long cmdID) const;
   
 ### <a name="parameters"></a>Parametry  
  *cmdID*  
- ID příkazu. Identifikátory příkazů jsou převzaty z `CGID_MSHTML` skupina příkazu. Tyto příkazy jsou definovány v Mshtmcid.h. Můžete také získat seznamu online [identifikátory příkazů MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
+ ID příkazu. Identifikátory příkazů pocházejí ze skupiny CGID_MSHTML příkazů. Tyto příkazy jsou definovány v Mshtmcid.h. Můžete také vyhledat seznam online na [identifikátory příkazů MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Návratová hodnota  
  Vrátí [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) označující stav *cmdID*, nebo 0 při selhání.  
@@ -1483,33 +1483,33 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
  ID přepínač.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_RADIOBUTTON](https://msdn.microsoft.com/library/aa769977.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument  
- Aktualizuje aktuálním dokumentu.  
+ Aktualizuje aktuální dokument.  
   
 ```  
 HRESULT RefreshDocument() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_REFRESH](https://msdn.microsoft.com/library/aa770020.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
- Odebere z aktuálního výběru formátování značky.  
+ Odebere formátování značky z aktuálního výběru.  
   
 ```  
 HRESULT RemoveFormat() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_REMOVEFORMAT](https://msdn.microsoft.com/library/aa770021.aspx) do ovládacího prvku WebBrowser.  
@@ -1523,10 +1523,10 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szPath*  
- Název a cesta k souboru do kterého se mají uložit webové stránky.  
+ Cesta a název souboru do kterého chcete uložit webové stránky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_SAVEAS](https://msdn.microsoft.com/library/aa770024.aspx) do ovládacího prvku WebBrowser.  
@@ -1539,13 +1539,13 @@ HRESULT SelectAll() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_SELECTALL](https://msdn.microsoft.com/library/aa770025.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
- Umožňuje přesunout přetažením absolutně umístěného elementů.  
+ Umožňuje přesunout přetažením absolutně umístěné elementy.  
   
 ```  
 HRESULT Set2DPosition(bool bNewValue) const;  
@@ -1553,16 +1553,16 @@ HRESULT Set2DPosition(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true absolutně umístěného elementy lze přesunout přetažením.  
+ Při hodnotě TRUE se absolutně umístěné elementy lze přesunout přetažením.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_2D_POSITION](https://msdn.microsoft.com/library/aa769887.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
- Nastaví vlastnost pozice elementu "absolutní" nebo "statická".  
+ Nastaví vlastnost pozice prvku "absolutní" nebo "statická".  
   
 ```  
 HRESULT SetAbsolutePosition(bool bNewValue) const;  
@@ -1570,16 +1570,16 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true, vlastnost pozice elementu je "absolutní;" Pokud je hodnota false, je "statická".  
+ Při hodnotě TRUE je vlastnost umístění prvku "absolutní hodnota"; Pokud má hodnotu FALSE, je "statická".  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection  
- Nastavit režim atomic výběr.  
+ Nastavení režimu výběru atomické.  
   
 ```  
 HRESULT SetAtomicSelection(bool bNewValue) const;  
@@ -1587,10 +1587,10 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true bude lze vybrat pouze jako jednotku libovolný element, který má atribut ATOMICSELECTION nastavit na hodnotu TRUE.  
+ Pokud je hodnota TRUE, bude libovolný element, který má atribut ATOMICSELECTION nastavena na hodnotu TRUE lze vybrat pouze jako celek.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_ATOMICSELECTION](https://msdn.microsoft.com/library/aa769892.aspx) do ovládacího prvku WebBrowser.  
@@ -1604,16 +1604,16 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true je povoleno automatické zjišťování adresy URL.  
+ Při hodnotě TRUE je povolené automatické zjišťování adresy URL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_AUTOURLDETECT_MODE](https://msdn.microsoft.com/library/aa769893.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor  
- Nastaví barvu pozadí aktuální výběr.  
+ Nastaví barvu pozadí aktuálního výběru.  
   
 ```  
 HRESULT SetBackColor(int nColor) const;  
@@ -1622,19 +1622,19 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
   
 ### <a name="parameters"></a>Parametry  
  *nColor*  
- Barva. V tématu *pvaIn* v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ Barva. Zobrazit *pvaIn* v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
  *szColor*  
- Barva. V tématu *pvaIn* v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ Barva. Zobrazit *pvaIn* v [ID příkazu IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_BACKCOLOR_](https://msdn.microsoft.com/library/aa769858.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
- Nastaví aktuální značce Formát bloku.  
+ Nastaví aktuální formát bloková značka.  
   
 ```  
 HRESULT SetBlockFormat(LPCTSTR szFormat) const;  
@@ -1645,13 +1645,13 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
  Formát značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
- Vytvoří záložku ukotvení pro aktuální výběr nebo vložení bod.  
+ Vytvoří záložku ukotvení pro aktuální výběr nebo kurzor bod.  
   
 ```  
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;  
@@ -1659,16 +1659,16 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
   
 ### <a name="parameters"></a>Parametry  
  *szAnchorName*  
- Název anchor.  
+ Ukotvení názvu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
- Vybere, kterou úroveň šablon stylů CSS (CSS1 nebo CSS2) editoru bude podporovat, pokud existuje.  
+ Vybere jaké úroveň šablon stylů CSS (CSS1 nebo CSS2) editoru bude podporovat, pokud existuje.  
   
 ```  
 HRESULT SetCSSEditingLevel(short nLevel) const;  
@@ -1676,16 +1676,16 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
   
 ### <a name="parameters"></a>Parametry  
  *nLevel*  
- Úroveň šablon stylů CSS. Předejte 0, pokud nechcete, aby podporu šablon stylů CSS.  
+ Na úrovni šablony stylů CSS. Předejte 0, pokud nechcete podporu šablon stylů CSS.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_CSSEDITING_LEVEL](https://msdn.microsoft.com/library/aa769903.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
- Volání této metody k nastavení výchozího nastavení psaní.  
+ Volání této metody nastavte výchozí nastavení psaní.  
   
 ```  
 HRESULT SetDefaultComposeSettings(
@@ -1712,16 +1712,16 @@ HRESULT SetDefaultComposeSettings(
  Barva pozadí písma.  
   
  *bBold*  
- Předá hodnotu true pro tučně.  
+ Předejte hodnotu TRUE pro tučným písmem.  
   
  *bItalic*  
- Předá hodnotu true pro text kurzívou.  
+ Předejte hodnotu TRUE pro text kurzívou.  
   
  *bUnderline*  
- Předá hodnotu true pro podtržený text.  
+ Předejte hodnotu TRUE pro podtržený text.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_COMPOSESETTINGS](https://msdn.microsoft.com/library/aa769901.aspx) do ovládacího prvku WebBrowser.  
@@ -1735,13 +1735,13 @@ BOOL SetDesignMode(BOOL bMode) const;
   
 ### <a name="parameters"></a>Parametry  
  *bMode*  
- V případě hodnoty true zapne režimu návrhu.  
+ Při hodnotě TRUE se zapne režim návrhu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu TRUE, v případě úspěchu FALSE při selhání.  
+ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.  
   
 ##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
- Zakáže šrafované ohraničení a zpracovává kolem úpravy aktivního elementu.  
+ Zakáže šrafované ohraničení a zpracovává kolem element, který má právě fokus upravit.  
   
 ```  
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;  
@@ -1749,16 +1749,16 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true, zakáže šrafované ohraničení a zpracovává kolem Volitelný element lokality Pokud element má "upravit fokusu" v režimu návrhu; To znamená, když text nebo obsah elementu se dá upravit.  
+ Pokud je hodnota TRUE, zakáže šrafované ohraničení a popisovače kolem jako volitelný element lokality, pokud je element má "upravit fokus" v režimu návrhu; To znamená, když text nebo obsah elementu, který lze upravovat.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM_DISABLE_EDITFOCUS_UI](https://msdn.microsoft.com/library/aa769905.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML  
- Nastaví aktuálního dokumentu HTML.  
+ Nastaví HTML aktuálního dokumentu.  
   
 ```  
 HRESULT SetDocumentHTML(LPCTSTR szHTML) const;  
@@ -1769,7 +1769,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
  Kód HTML.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
  Nastaví písmo pro aktuální výběr.  
@@ -1783,7 +1783,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
  Název písma.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu název písma IDM](https://msdn.microsoft.com/library/aa769880.aspx) do ovládacího prvku WebBrowser.  
@@ -1797,16 +1797,16 @@ HRESULT SetFontSize(unsigned short size) const;
   
 ### <a name="parameters"></a>Parametry  
  *Velikost*  
- Velikost písma HTML (1-7). Hodnota 0 nastaví velikost písma na 1.  
+ Velikost písma HTML (1-7). Hodnota 0 nastaví velikost písma na hodnotu 1.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [ID příkazu velikost písma IDM](https://msdn.microsoft.com/library/aa769881.aspx) do ovládacího prvku WebBrowser.  
+ Tato metoda odesílá [ID příkazu IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
- Nastaví barvu popředí (text) aktuální výběr.  
+ Nastavuje barvu popředí (text) aktuální výběr.  
   
 ```  
 HRESULT SetForeColor(LPCTSTR szColor) const;  
@@ -1821,7 +1821,7 @@ HRESULT SetForeColor(int nColor) const;
  Barva.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) do ovládacího prvku WebBrowser.  
@@ -1835,16 +1835,16 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true všechny operace vložení jsou kompatibilní s Internet Explorer 5. Pokud je hodnota false, jsou kompatibilní s Internet Explorer 5.5 operace vkládání.  
+ Při hodnotě TRUE se všechny operace vložení jsou kompatibilní s aplikací Internet Explorer 5; Pokud má hodnotu FALSE, jsou kompatibilní s Internet Explorer 5.5 operace vložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
- Způsobí, že WebBrowser aktualizovat vzhled elementu nepřetržitě během operace změny velikosti nebo přesunutí, namísto aktualizace pouze po dokončení přesunu nebo změnit jeho velikost.  
+ Způsobí, že ovládací prvek WebBrowser aktualizovat vzhled elementu průběžně během operace změny velikosti nebo přesunutí místo aktualizace pouze po dokončení přesunutí nebo změně velikosti.  
   
 ```  
 HRESULT SetLiveResize(bool bNewValue) const;  
@@ -1852,10 +1852,10 @@ HRESULT SetLiveResize(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true způsobí, že WebBrowser aktualizovat vzhled elementu nepřetržitě během operace změny velikosti nebo přesunutí; Pokud je hodnota false, aktualizuje jenom po dokončení přesunu nebo změny velikosti.  
+ Pokud je hodnota TRUE, způsobí, že ovládací prvek WebBrowser aktualizovat vzhled elementu průběžně během operace změny velikosti nebo přesunutí; Pokud má hodnotu FALSE, aktualizuje pouze po dokončení přesunutí nebo změny velikosti.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) do ovládacího prvku WebBrowser.  
@@ -1869,16 +1869,16 @@ HRESULT SetMultiSelect(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true umožňuje výběr více než jeden element lze vybrat lokalitu v době, kdy uživatel obsahuje dolů kláves SHIFT nebo CTRL.  
+ Při hodnotě TRUE umožňuje výběr více než jeden element lze vybrat lokalitu v době, kdy uživatel ponechá klávesu SHIFT nebo CTRL.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
- Příkazy WebBrowser nikdy, chcete-li změnit ukazatel myši.  
+ Příkazy ovládacím prvkem WebBrowser nikdy změnit umístění ukazatele myši.  
   
 ```  
 HRESULT SetOverrideCursor(bool bNewValue) const;  
@@ -1886,16 +1886,16 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true WebBrowser nezmění ukazatel myši.  
+ Pokud je hodnota TRUE, nedojde ke změně umístění ukazatele myši ovládacím prvkem WebBrowser.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
- Přepíná mezi režimem zadávání textu vložit a přepsání.  
+ Přepíná mezi režimem zadání textu, Vložit a přepsání.  
   
 ```  
 HRESULT SetOverwriteMode(bool bMode) const;  
@@ -1903,13 +1903,13 @@ HRESULT SetOverwriteMode(bool bMode) const;
   
 ### <a name="parameters"></a>Parametry  
  *bMode*  
- V případě hodnoty true je přepsat režimu zadávání textu; Pokud je hodnota false, režim zadávání textu je insert.  
+ Při hodnotě TRUE je přepsat režim zadávání textu; Pokud má hodnotu FALSE, režim zadávání textu je vložení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [IDM PŘEPSAT ID příkazu](https://msdn.microsoft.com/library/aa770016.aspx) do ovládacího prvku WebBrowser.  
+ Tato metoda odesílá [PŘEPSAT IDM ID příkazu](https://msdn.microsoft.com/library/aa770016.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
  Skryje neviditelné prvky v režimu návrhu.  
@@ -1920,16 +1920,16 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true všechny elementy, které mají viditelnost nastaven na "skrytá" nebo zobrazení vlastností nastavenou na "žádný" se nezobrazí v režimu návrhu a procházecí režim; Když má hodnotu false, zobrazí se pouze v režimu procházení těchto elementů.  
+ Při hodnotě TRUE se nezobrazí všechny prvky, které mají viditelnost nastaven na "skrytá" nebo zobrazení vlastností nastavenou na hodnotu "none" v návrhovém režimu a režimu procházení Pokud má hodnotu FALSE, tyto prvky se zobrazí pouze v režimu procházení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
- Zobrazí glyf všechny elementy, které mají **styleFloat** vlastnost.  
+ Zobrazí piktogram pro všechny prvky, které mají `styleFloat` vlastnost.  
   
 ```  
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;  
@@ -1937,16 +1937,16 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf všechny elementy, které mají **styleFloat** vlastnost.  
+ Při hodnotě TRUE se zobrazí piktogram pro všechny prvky, které mají `styleFloat` vlastnost.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
- Zobrazí glyfů zobrazíte umístění všechny značky v dokumentu.  
+ Zobrazí glyfů pro zobrazení umístění všechny značky v dokumentu.  
   
 ```  
 HRESULT SetShowAllTags(bool bNewValue) const;  
@@ -1954,16 +1954,16 @@ HRESULT SetShowAllTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyfů zobrazíte umístění všechny značky v dokumentu.  
+ Při hodnotě TRUE se zobrazí glyfů pro zobrazení umístění všechny značky v dokumentu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
- Zobrazí glyf pro všechny oblasti značky.  
+ Zobrazí piktogram pro všechny oblasti značky.  
   
 ```  
 HRESULT SetShowAreaTags(bool bNewValue) const;  
@@ -1971,16 +1971,16 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf pro všechny oblasti značky.  
+ Při hodnotě TRUE se zobrazí piktogram pro všechny oblasti značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
- Zobrazí všechny značky Brazílie glyf.  
+ Zobrazí piktogram pro všechny značky br.  
   
 ```  
 HRESULT SetShowBRTags(bool bNewValue) const;  
@@ -1988,16 +1988,16 @@ HRESULT SetShowBRTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf všechny Brazílie značky.  
+ Při hodnotě TRUE se zobrazí piktogram pro všechny značky br.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
- Zobrazí glyf všechny značky pro komentáře.  
+ Zobrazí piktogram pro všechny značky pro komentáře.  
   
 ```  
 HRESULT SetShowCommentTags(bool bNewValue) const;  
@@ -2005,16 +2005,16 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf všechny značky pro komentáře.  
+ Při hodnotě TRUE se zobrazí piktogram pro všechny značky pro komentáře.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
- Zobrazí všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0.  
+ Zobrazí všechny značky, které jsou zobrazeny v aplikaci Internet Explorer 4.0.  
   
 ```  
 HRESULT SetShowMiscTags(bool bNewValue) const;  
@@ -2022,16 +2022,16 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true, zobrazí se všechny značky, které jsou uvedené v aplikaci Internet Explorer 4.0.  
+ Při hodnotě TRUE se zobrazí všechny značky, které jsou zobrazeny v aplikaci Internet Explorer 4.0.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
- Zobrazí glyf všechny značky skriptu.  
+ Zobrazí piktogram pro všechny značky skriptu.  
   
 ```  
 HRESULT SetShowScriptTags(bool bNewValue) const;  
@@ -2039,16 +2039,16 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf všechny značky skriptu.  
+ Při hodnotě TRUE se zobrazí piktogram pro všechny značky skriptu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
- Zobrazí glyf všechny styl značky.  
+ Zobrazí piktogram pro všechny styl značky.  
   
 ```  
 HRESULT SetShowStyleTags(bool bNewValue) const;  
@@ -2056,16 +2056,16 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf všechny styl značky.  
+ Při hodnotě TRUE se zobrazí piktogram pro všechny styl značky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
- Zobrazí glyf všechny neznámé značky.  
+ Zobrazí piktogram Neznámý klíčových slov.  
   
 ```  
 HRESULT SetShowUnknownTags(bool bNewValue) const;  
@@ -2073,16 +2073,16 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Parametry  
  *bNewValue*  
- V případě hodnoty true zobrazí glyf všechny neznámé značky.  
+ Při hodnotě TRUE se zobrazí piktogram Neznámý klíčových slov.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
- Přepíše víceřádkový text vstupního ovládacího prvku na aktuální výběr.  
+ Přepíše víceřádkovém textovém vstupní ovládací prvek na aktuální výběr.  
   
 ```  
 HRESULT TextArea(LPCTSTR szId = NULL) const;  
@@ -2090,16 +2090,16 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID víceřádkový text vstupního ovládacího prvku.  
+ ID ovládacího prvku víceřádkového textového vstupu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
- Přepíše ovládacího prvku typu textový na aktuální výběr.  
+ Přepíše textový ovládací prvek na aktuální výběr.  
   
 ```  
 HRESULT TextBox(LPCTSTR szId = NULL) const;  
@@ -2107,39 +2107,39 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *szId*  
- ID ovládacího prvku text.  
+ ID ovládacího prvku textu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
- Odebere všechny záložku z aktuálního výběru.  
+ Odebere všechny záložky z aktuálního výběru.  
   
 ```  
 HRESULT UnBookmark() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [IDM UNBOOKMARK ID příkazu](https://msdn.microsoft.com/library/aa770034.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
- Přepne aktuální výběr mezi podtržený a není podtržen.  
+ Přepne aktuální výběr mezi podtržený a bez podtržení.  
   
 ```  
 HRESULT Underline() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [IDM UNDERLINE ID příkazu](https://msdn.microsoft.com/library/aa770035.aspx) do ovládacího prvku WebBrowser.  
+ Tato metoda odesílá [PODTRŽENÍ IDM ID příkazu](https://msdn.microsoft.com/library/aa770035.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
  Odebere všechny hypertextový odkaz z aktuálního výběru.  
@@ -2149,13 +2149,13 @@ HRESULT Unlink() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda odesílá [IDM ODPOJIT ID příkazu](https://msdn.microsoft.com/library/aa770037.aspx) do ovládacího prvku WebBrowser.  
+ Tato metoda odesílá [ODPOJIT IDM ID příkazu](https://msdn.microsoft.com/library/aa770037.aspx) do ovládacího prvku WebBrowser.  
   
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
- Přepne aktuální výběr až blok normální formátu uspořádaného seznamu.  
+ Přepne aktuální výběr až bloku normální formátu uspořádaného seznamu.  
   
 ```  
 HRESULT UnorderList(LPCTSTR szId = NULL) const;  
@@ -2166,7 +2166,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
  ID neuspořádaného seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí S_OK v případě úspěchu nebo chybu HRESULT při selhání.  
+ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
  Tato metoda odesílá [ID příkazu IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) do ovládacího prvku WebBrowser.  

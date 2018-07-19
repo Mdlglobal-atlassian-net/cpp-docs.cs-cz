@@ -1,5 +1,5 @@
 ---
-title: unary_negate – třída | Microsoft Docs
+title: unary_negate – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2529a38a7737fc45573f5c151477e0a5754cde50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960889"
 ---
 # <a name="unarynegate-class"></a>unary_negate – třída
 
@@ -42,19 +42,21 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Func` Unární funkce se má být Negované.
+*Func*  
+ Jednočlenné funkce bude negovat.
 
-`left` Operand unární funkce, která má být Negované.
+*doleva*  
+ Operand unárního funkce bude negovat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Negace unární funkce.
+Negace jednočlenné funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy ukládá kopie výraz _ objekt funkce unární *Func.* Definuje jeho – členská funkce `operator()` jako vrácení **!**\_ *Func(LEFT).*
+Třída šablony ukládá jejich kopii výraz _ objekt jednočlenné funkce *Func.* Definuje jeho členskou funkci `operator()` jako vracející **!**\_ *Func(LEFT).*
 
-Konstruktoru `unary_negate` je používána zřídka přímo. Pomocné funkce [not1 –](../standard-library/functional-functions.md#not1) poskytuje snadný způsob, jak deklarace a používání **unary_negator** adaptéru predikátu.
+Konstruktor třídy `unary_negate` je zřídka se používá přímo. Pomocná funkce [not1 –](../standard-library/functional-functions.md#not1) poskytuje snadný způsob, jak deklarovat a použít **unary_negator** adaptér predikátu.
 
 ## <a name="example"></a>Příklad
 
@@ -112,9 +114,9 @@ The number of elements in v1 not greater than 10 is: 3.
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

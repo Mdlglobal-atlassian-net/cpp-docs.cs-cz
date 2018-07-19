@@ -1,5 +1,5 @@
 ---
-title: Coloradjustment – struktura | Microsoft Docs
+title: Coloradjustment – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 03c5346a59ea52ca6b2428652d5da69aacf6ea5b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37077952"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849085"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT – struktura
-`COLORADJUSTMENT` Struktura definuje barvu úpravu hodnoty používané Windows `StretchBlt` a `StretchDIBits` funkce při `StretchBlt` režim je **POLOTÓNOVÁNÍ**.  
+`COLORADJUSTMENT` Struktury definuje barvu úpravy hodnot použitých Windows `StretchBlt` a `StretchDIBits` funkce při `StretchBlt` POLOTÓNOVÁNÍ je režim.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,70 +50,70 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  Určuje velikost struktury v bajtech.  
   
  *caFlags*  
- Určuje, jak je třeba připravit bitovou kopii výstupu. Tento člen může být nastaven na **NULL** nebo libovolnou kombinaci těchto hodnot:  
+ Určuje, jak by měly být připraveny výstupní image. Tento člen lze nastavit na hodnotu NULL nebo libovolnou kombinaci následujícího:  
   
-- **CA_NEGATIVE** Určuje, že se mají zobrazit záporné původní bitové kopie.  
+- CA_NEGATIVE Určuje, zda má být zobrazena záporné hodnoty původní bitové kopie.  
   
-- **CA_LOG_FILTER** Určuje, že hodnota na logaritmické funkce má být použita na konečné hustotu barvy výstup. Tím se zvýší barevný kontrast při nízkém světlostí.  
+- CA_LOG_FILTER určuje logaritmické funkce, se použijí pro hustotu finální výstup barev. Při nízkém jas tím zvýší na barevný kontrast.  
   
  *caIlluminantIndex*  
- Určuje světlostí zdroje světla, pod kterým je zobrazit objekt bitové kopie. Tento člen můžete nastavit na jedno z následujících hodnot:  
+ Určuje světelnost ke zdroji světla pod kterým je objekt obrázek zobrazit. Tento člen můžete nastavit na jedno z následujících hodnot:  
   
-- **ILLUMINANT_EQUAL_ENERGY**  
+- ILLUMINANT_EQUAL_ENERGY  
   
-- **ILLUMINANT_A**  
+- ILLUMINANT_A  
   
-- **ILLUMINANT_B**  
+- ILLUMINANT_B  
   
-- **ILLUMINANT_C**  
+- ILLUMINANT_C  
   
-- **ILLUMINANT_D50**  
+- ILLUMINANT_D50  
   
-- **ILLUMINANT_D55**  
+- ILLUMINANT_D55  
   
-- **ILLUMINANT_D65**  
+- ILLUMINANT_D65  
   
-- **ILLUMINANT_D75**  
+- ILLUMINANT_D75  
   
-- **ILLUMINANT_F2**  
+- ILLUMINANT_F2  
   
-- **ILLUMINANT_TURNGSTEN**  
+- ILLUMINANT_TURNGSTEN  
   
-- **ILLUMINANT_DAYLIGHT**  
+- ILLUMINANT_DAYLIGHT  
   
-- **ILLUMINANT_FLUORESCENT**  
+- ILLUMINANT_FLUORESCENT  
   
-- **ILLUMINANT_NTSC**  
+- ILLUMINANT_NTSC  
   
  *caRedGamma*  
- Určuje hodnotu n-tou power korekce gama red primární zdroj barev. Hodnota musí být v rozsahu od 2 500 do 65,000. Hodnota 10 000 znamená žádné korekce gama.  
+ Určuje hodnotu korekce gama n-tý power red primární zdroj barvy. Hodnota musí být v rozsahu od 2 500 do 65,000. Korekce gama znamená, že hodnota 10 000.  
   
  *caGreenGamma*  
- Určuje hodnotu n-tou power korekce gama zelená primární zdroj barev. Hodnota musí být v rozsahu od 2 500 do 65,000. Hodnota 10 000 znamená žádné korekce gama.  
+ Určuje hodnotu korekce gama n-tý power zelené primární zdroj barvy. Hodnota musí být v rozsahu od 2 500 do 65,000. Korekce gama znamená, že hodnota 10 000.  
   
  *caBlueGamma*  
- Určuje hodnotu korekce gama n-tou napájení blue primární zdroj barev. Hodnota musí být v rozsahu od 2 500 do 65,000. Hodnota 10 000 znamená žádné korekce gama.  
+ Určuje hodnotu korekce gama n-tý power modré primární zdroj barvy. Hodnota musí být v rozsahu od 2 500 do 65,000. Korekce gama znamená, že hodnota 10 000.  
   
  *caReferenceBlack*  
- Určuje černým odkaz pro zdrojové barvy. Všechny barev, které jsou tmavší než to jsou považovány za černé. Hodnota musí být v rozsahu od 0 do 4 000.  
+ Určuje černé odkaz pro zdrojové barvy. Libovolné barvy, které jsou o něco tmavší než to jsou považovány za black. Hodnota musí být v rozsahu od 0 do 4000.  
   
  *caReferenceWhite*  
- Určuje bílé odkaz pro zdrojové barvy. Všechny barev, které jsou písmo, než to jsou považovány za prázdné. Hodnota musí být v rozsahu od 6000 do 10 000.  
+ Určuje bílé odkaz pro zdrojové barvy. Libovolné barvy, které jsou míň než toto jsou považovány za prázdné. Hodnota musí být v rozsahu od 6 000 do 10 000.  
   
  *caContrast*  
- Určuje množství kontrast má být použita ke zdrojovému objektu. Hodnota musí být v rozsahu od -100 do 100. Hodnota 0 znamená bez úpravy kontrastu.  
+ Určuje množství kontrast, použijí se zdrojovým objektem. Hodnota musí být v rozsahu od -100 až 100. Hodnota 0 znamená, že žádné kontrast.  
   
  *caBrightness*  
- Určuje množství také průraznost má být použita ke zdrojovému objektu. Hodnota musí být v rozsahu od -100 do 100. Hodnota 0 znamená bez také průraznost úpravy.  
+ Určuje množství jas uplatňovat se zdrojovým objektem. Hodnota musí být v rozsahu od -100 až 100. Hodnota 0 znamená, že žádná úprava jas.  
   
  *caColorfulness*  
- Určuje množství colorfulness má být použita ke zdrojovému objektu. Hodnota musí být v rozsahu od -100 do 100. Hodnota 0 znamená bez colorfulness úpravy.  
+ Určuje množství colorfulness uplatňovat se zdrojovým objektem. Hodnota musí být v rozsahu od -100 až 100. Hodnota 0 znamená, že žádná úprava colorfulness.  
   
  *caRedGreenTint*  
- Určuje množství červené nebo zelené TINT – úpravy má být použita ke zdrojovému objektu. Hodnota musí být v rozsahu od -100 do 100. Kladná čísla by upravte směrem red a záporná čísla upravit směrem zeleně. 0 znamená bez TINT – úpravy.  
+ Určuje množství úpravy červenou nebo zelenou TINT – použije se zdrojovým objektem. Hodnota musí být v rozsahu od -100 až 100. Kladná čísla by upravte směrem k red a záporná čísla upravit na zelenou. 0 znamená, že žádná úprava odstín.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** wingdi.h systému  
+ **Záhlaví:** wingdi.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

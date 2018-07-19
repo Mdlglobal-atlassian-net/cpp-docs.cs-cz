@@ -1,5 +1,5 @@
 ---
-title: Třída CSocketAddr | Microsoft Docs
+title: Csocketaddr – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e63a464b68267c8202cdf47717fd1cd81db639c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363393"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884034"
 ---
-# <a name="csocketaddr-class"></a>CSocketAddr – třída
-Tato třída poskytuje metody pro převod názvy hostitelů na hostitelské adresy, podpora formátů oba protokoly IPv4 a IPV6.  
+# <a name="csocketaddr-class"></a>Csocketaddr – třída
+Tato třída poskytuje metody pro převod názvy hostitelů na hostitelské adresy podporující formáty IPv4 a IPV6.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,15 +52,15 @@ class CSocketAddr
 |Název|Popis|  
 |----------|-----------------|  
 |[CSocketAddr::FindAddr](#findaddr)|Voláním této metody lze převést zadaný název hostitele na adresu hostitele.|  
-|[CSocketAddr::FindINET4Addr](#findinet4addr)|Voláním této metody lze převést název hostitele IPv4 adresu hostitele.|  
+|[CSocketAddr::FindINET4Addr](#findinet4addr)|Volání této metody k převodu názvu hostitele IPv4 adresa hostitele.|  
 |[CSocketAddr::FindINET6Addr](#findinet6addr)|Voláním této metody lze převést název hostitele IPv6 adresa hostitele.|  
-|[CSocketAddr::GetAddrInfo](#getaddrinfo)|Volání této metody vrátit ukazatel na konkrétní prvek, **addrinfo** seznamu.|  
-|[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|Volání této metody vrátit ukazatel **addrinfo** seznamu.|  
+|[CSocketAddr::GetAddrInfo](#getaddrinfo)|Voláním této metody vrátí ukazatel na konkrétní element v `addrinfo` seznamu.|  
+|[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|Voláním této metody vrátí ukazatel `addrinfo` seznamu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato třída poskytuje IP verze lhostejné přístup pro vyhledávání síťových adres pro použití v systému Windows sockets – funkce rozhraní API a soketu obálky v knihovnách.  
+ Tato třída poskytuje verzi protokolu IP, že bez přístupu pro vyhledávání síťových adres pro použití se službou Windows sockets – funkce rozhraní API a obálky soketu v knihovnách.  
   
- Členy této třídy, které se používají k vyhledání síťové adresy pomocí funkce rozhraní API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Členové této třídy, které se používají k vyhledání síťové adresy používat funkce rozhraní Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
   
  Tato třída podporuje obě adresy IPv4 andIPv6 sítě.  
   
@@ -75,7 +75,7 @@ CSocketAddr();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří nový `CSocketAddr` objektu a inicializuje odkazovaného seznamu obsahující odpovědi informace o hostiteli.  
+ Vytvoří novou `CSocketAddr` objektu a inicializuje propojený seznam, který obsahuje odpověď informace o hostiteli.  
   
 ##  <a name="findaddr"></a>  CSocketAddr::FindAddr  
  Voláním této metody lze převést zadaný název hostitele na adresu hostitele.  
@@ -99,35 +99,35 @@ int FindAddr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szHost`  
- Název hostitele nebo desítkovém IP adresu.  
+ *szHost*  
+ Název hostitele nebo tečkovaná IP adresu.  
   
  *szPortOrServiceName*  
  Číslo portu nebo názvu služby na hostiteli.  
   
- `nPortNo`  
+ *nPortNo*  
  Číslo portu.  
   
- `flags`  
+ *příznaky*  
  0 nebo kombinaci AI_PASSIVE, AI_CANONNAME nebo AI_NUMERICHOST.  
   
  *addr_family*  
  Rodina (například PF_INET) adres.  
   
- `sock_type`  
+ *sock_type*  
  Typ soketu (například SOCK_STREAM).  
   
  *ai_proto*  
  Protokol (například IPPROTO_IP nebo IPPROTO_IPV6).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu adresu se vypočítává úspěšně. Vrátí nenulový kód chyby systému Windows soketu při selhání. Pokud úspěšné, adresu počítané je uložen v odkazovaného seznamu, který se dá odkazovat pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
+ Vrátí hodnotu nula, pokud se úspěšně počítá adresu. Vrátí nenulový kód chyby soketu Windows při selhání. Pokud úspěšné, adresu počítané je uložen v propojeném seznamu, který může být odkazováno pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Parametr název hostitele může být ve formátu protokolu IPv4 nebo IPv6. Tato metoda volá funkce rozhraní Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) provést převod.  
+ Parametr název hostitele může být ve formátu IPv4 nebo IPv6. Tato metoda volá funkci Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) k provedení převodu.  
   
 ##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
- Voláním této metody lze převést název hostitele IPv4 adresu hostitele.  
+ Volání této metody k převodu názvu hostitele IPv4 adresa hostitele.  
   
 ```
 int FindINET4Addr(
@@ -138,23 +138,23 @@ int FindINET4Addr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szHost`  
- Název hostitele nebo desítkovém IP adresu.  
+ *szHost*  
+ Název hostitele nebo tečkovaná IP adresu.  
   
- `nPortNo`  
+ *nPortNo*  
  Číslo portu.  
   
- `flags`  
+ *příznaky*  
  0 nebo kombinaci AI_PASSIVE, AI_CANONNAME nebo AI_NUMERICHOST.  
   
- `sock_type`  
+ *sock_type*  
  Typ soketu (například SOCK_STREAM).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu adresu se vypočítává úspěšně. Vrátí nenulový kód chyby systému Windows soketu při selhání. Pokud úspěšné, adresu počítané je uložen v odkazovaného seznamu, který se dá odkazovat pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
+ Vrátí hodnotu nula, pokud se úspěšně počítá adresu. Vrátí nenulový kód chyby soketu Windows při selhání. Pokud úspěšné, adresu počítané je uložen v propojeném seznamu, který může být odkazováno pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá funkce rozhraní Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) provést převod.  
+ Tato metoda volá funkci Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) k provedení převodu.  
   
 ##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Voláním této metody lze převést název hostitele IPv6 adresa hostitele.  
@@ -168,47 +168,47 @@ int FindINET6Addr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szHost`  
- Název hostitele nebo desítkovém IP adresu.  
+ *szHost*  
+ Název hostitele nebo tečkovaná IP adresu.  
   
- `nPortNo`  
+ *nPortNo*  
  Číslo portu.  
   
- `flags`  
+ *příznaky*  
  0 nebo kombinaci AI_PASSIVE, AI_CANONNAME nebo AI_NUMERICHOST.  
   
- `sock_type`  
+ *sock_type*  
  Typ soketu (například SOCK_STREAM).  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí hodnotu adresu se vypočítává úspěšně. Vrátí nenulový kód chyby systému Windows soketu při selhání. Pokud úspěšné, adresu počítané je uložen v odkazovaného seznamu, který se dá odkazovat pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
+ Vrátí hodnotu nula, pokud se úspěšně počítá adresu. Vrátí nenulový kód chyby soketu Windows při selhání. Pokud úspěšné, adresu počítané je uložen v propojeném seznamu, který může být odkazováno pomocí `CSocketAddr::GetAddrInfoList` a `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda volá funkce rozhraní Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) provést převod.  
+ Tato metoda volá funkci Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) k provedení převodu.  
   
 ##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
- Volání této metody vrátit ukazatel na konkrétní prvek, **addrinfo** seznamu.  
+ Voláním této metody vrátí ukazatel na konkrétní element v `addrinfo` seznamu.  
   
 ```
 addrinfo* const GetAddrInfoint nIndex = 0) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Odkaz na konkrétní prvek, [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) seznamu.  
+ *nIndex*  
+ Odkaz na konkrétní elementu v [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) seznamu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí ukazatel **addrinfo** struktura odkazuje `nIndex` v seznamu propojené obsahující odpovědi informace o hostiteli.  
+ Vrací ukazatel `addrinfo` struktura odkazuje *nIndex* v propojeném seznamu, který obsahuje odpověď informace o hostiteli.  
   
 ##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
- Volání této metody vrátit ukazatel **addrinfo** seznamu.  
+ Voláním této metody vrátí ukazatel `addrinfo` seznamu.  
   
 ```
 addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na odkazovaného seznamu jednoho nebo více `addrinfo` struktury obsahující odpovědi informace o hostiteli. Další informace najdete v tématu [addrinfo struktura](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+ Ukazatel na propojený seznam jednoho nebo více `addrinfo` struktury obsahující odpovědi informace o hostiteli. Další informace najdete v tématu [addrinfo struktura](https://msdn.microsoft.com/library/windows/desktop/ms737530).
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Přehled tříd](../../atl/atl-class-overview.md)

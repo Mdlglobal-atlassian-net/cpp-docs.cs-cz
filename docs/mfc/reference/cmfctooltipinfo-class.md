@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCToolTipInfo | Microsoft Docs
+title: Cmfctooltipinfo – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb5cb4020b851f3522842951030c8155ee68516f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037542"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850888"
 ---
-# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo – třída
-Obsahuje informace o vzhled popisů tlačítek.  
+# <a name="cmfctooltipinfo-class"></a>Cmfctooltipinfo – třída
+Ukládá informace o vzhled popisů tlačítek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -70,53 +70,53 @@ class CMFCToolTipInfo
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Logická hodnota proměnné, která označuje, zda má popisek vzhled bublina.|  
-|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Logická hodnota proměnné, která označuje, zda jsou zobrazeny popisky popisek tučným písmem.|  
-|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|Logická hodnota proměnné, která určuje, zda se popisek obsahuje popis.|  
-|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Logická hodnota proměnné, která určuje, zda se popisek obsahuje ikonu.|  
-|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Logická hodnota proměnné, která označuje, zda oddělovač zobrazuje až popis popisek popisek popisek.|  
-|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Logická hodnota proměnné, která označuje, zda má popisek zaokrouhlené rozích.|  
-|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Logická hodnota proměnné, která označuje, zda visual Správce by měl řídí vzhled popisek (najdete v části [CMFCVisualManager třída](../../mfc/reference/cmfcvisualmanager-class.md)).|  
-|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Barva ohraničení popisku.|  
+|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Proměnné typu Boolean určující, zda má popisek bublinu vzhled.|  
+|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Proměnné typu Boolean označující, zda popisek popisky jsou zobrazeny tučným písmem.|  
+|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|Proměnné typu Boolean označující, zda popisek obsahuje popis.|  
+|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|Proměnné typu Boolean označující, zda popisek obsahuje ikonu.|  
+|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|Proměnné typu Boolean určující, zda je zobrazen oddělovač mezi popiskem popisek a Popis popisku.|  
+|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|Proměnné typu Boolean označující, zda má popisek zaoblené rohy.|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|Proměnné typu Boolean označující, zda by měl vzhled ovládacího prvku tooltip řídí správce vzhledu (viz [cmfcvisualmanager – třída](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|Barva ohraničení popisu tlačítka.|  
 |[CMFCToolTipInfo::m_clrFill](#m_clrfill)|Barva pozadí popisu tlačítka.|  
-|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|Barva výplně přechodu v popisu tlačítka.|  
-|[CMFCToolTipInfo::m_clrText](#m_clrtext)|Barva textu v popisu tlačítka.|  
-|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|Úhel přechod, který v popisu tlačítka.|  
-|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Maximální možné šířka v pixelech popis v popisu tlačítka.|  
+|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|Barva přechodu výplně v popisu.|  
+|[CMFCToolTipInfo::m_clrText](#m_clrtext)|Barva textu v popisku.|  
+|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|Úhel přechodovou výplní v popisu.|  
+|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|Maximální možná šířka v pixelech popis v popisu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Použití [CMFCToolTipCtrl třída](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, a [CTooltipManager třída](../../mfc/reference/ctooltipmanager-class.md) dohromady a implementovat vlastní popisy tlačítek v aplikaci. Příklad použití těchto tříd popis v tématu [CMFCToolTipCtrl třída](../../mfc/reference/cmfctooltipctrl-class.md) tématu.  
+ Použití [cmfctooltipctrl – třída](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, a [ctooltipmanager – třída](../../mfc/reference/ctooltipmanager-class.md) společně k implementaci vlastní popisy ve vaší aplikaci. Příklad použití těchto tříd popisu tlačítka, najdete v článku [cmfctooltipctrl – třída](../../mfc/reference/cmfctooltipctrl-class.md) tématu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak nastavit hodnoty různých členské proměnné v `CMFCToolTipInfo` třídy.  
+ Následující příklad ukazuje, jak nastavit hodnoty různých členské proměnné `CMFCToolTipInfo` třídy.  
   
  [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)  
+ [Cmfctooltipinfo –](../../mfc/reference/cmfctooltipinfo-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxtooltipctrl.h  
   
 ##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
- Určuje styl zobrazení všechny popisy tlačítek.  
+ Určuje styl zobrazení všechny popisky.  
   
 ```  
 BOOL m_bBalloonTooltip;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `TRUE` Označuje, že popisy tlačítek používat styl bublinách `FALSE` označuje, že popisy tlačítek používat styl obdélníkový.  
+ TRUE znamená, že popisky použít stylu bublin, hodnota FALSE označuje, že popisky používat obdélníkové styl.  
   
 ##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
- Určuje, jestli je tučné písmo textu popisku.  
+ Určuje, zda je tučné písmo textu popisku.  
   
 ```  
 BOOL m_bBoldLabel;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen nastavit na `TRUE` zobrazíte text popisu tlačítka s tučným písmem nebo `FALSE` pro zobrazení popisků popisek s-tučné písmo.  
+ Nastavte tento člen na true pro zobrazení popisu tlačítka text tučné písmo, nebo hodnotu NEPRAVDA pro zobrazení popisu tlačítka popisky s tučné písmo.  
   
 ##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
  Určuje, zda každý popisek zobrazí text popisu.  
@@ -126,40 +126,40 @@ BOOL m_bDrawDescription;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen nastavit na `TRUE` zobrazíte popis, nebo `FALSE` ke skrytí popis. Můžete zadat popis na popisek voláním [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+ Nastavte tento člen pro hodnotu PRAVDA, zobrazení popisu, nebo FALSE, chcete-li skrýt popis. Můžete zadat popis v popisu voláním [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
 ##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
- Určuje, zda všechny popisy tlačítek zobrazení ikon.  
+ Určuje, zda všechny popisy zobrazení ikon.  
   
 ```  
 BOOL m_bDrawIcon;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen nastavit na `TRUE` zobrazíte ikonu na každý popisek nebo `FALSE` zobrazíte popisy tlačítek bez ikon.  
+ Tento člen nastavte na TRUE zobrazíte ikonu na každý popisek, nebo FALSE, pokud chcete zobrazit popisy tlačítek bez ikony.  
   
 ##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
- Určuje, zda je každý popisek oddělovač mezi její popisek a její popis.  
+ Určuje, zda má každý popis oddělovač mezi popiskem a jeho popis.  
   
 ```  
 BOOL m_bDrawSeparator;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen nastavit na `TRUE` zobrazíte oddělovače mezi popisek popisek a popis, nebo `FALSE` zobrazíte popisy tlačítek bez oddělovače.  
+ Tento člen nastavena na hodnotu TRUE, chcete-li zobrazit oddělovač mezi popisek popisek a popis nebo FALSE, pokud chcete zobrazit popisy tlačítek s žádný oddělovač.  
   
 ##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
- Určuje, zda mají všechny popisy tlačítek zaokrouhlené rozích.  
+ Určuje, zda všechny popisky mají zaoblené rohy.  
   
 ```  
 BOOL m_bRoundedCorners;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tento člen nastavit na `TRUE` zobrazíte zaoblenými hranami na popisy tlačítek, nebo `FALSE` zobrazíte obdélníková rozích na popisy tlačítek.  
+ Nastavte tento člen pro hodnotu PRAVDA, zobrazení zaoblení rohů popisy tlačítek, nebo hodnotu FALSE pro zobrazení obdélníkové rohů na popisky.  
   
 ##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
- Určuje barvu ohraničení na všechny popisy tlačítek.  
+ Určuje barvu ohraničení na všechny popisky.  
   
 ```  
 COLORREF m_clrBorder;  
@@ -173,7 +173,7 @@ COLORREF m_clrFill;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) je -1, je barvě pozadí `m_clrFill`. V opačném `m_clrFill` Určuje barvu barevného přechodu začátku a `m_clrFillGradient` Určuje barvu konce přechodu. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Určuje směr, barevného přechodu.  
+ Pokud [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) se -1, je barvě pozadí `m_clrFill`. V opačném případě `m_clrFill` Určuje barvu počátek přechodu a `m_clrFillGradient` určuje barvy ukončení přechodu. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Určuje směr přechodu.  
   
 ##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
  Určuje koncovou barvu barevného přechodu pozadí pro popisy tlačítek.  
@@ -183,43 +183,43 @@ COLORREF m_clrFillGradient;
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `m_clrFillGradient` je -1, neexistuje žádný přechodu. Jinak je zadána počáteční barvu barevného přechodu [CMFCToolTipInfo::m_clrFill](#m_clrfill) a je zadána barvu barevného přechodu Dokončit `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Určuje směr, barevného přechodu.  
+ Pokud `m_clrFillGradient` se -1, neexistuje žádný přechod. V opačném případě je určená počáteční barva přechodu [CMFCToolTipInfo::m_clrFill](#m_clrfill) a barvy ukončení přechodu je určená `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) Určuje směr přechodu.  
   
 ##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
- Určuje barvu textu všechny popisy tlačítek.  
+ Určuje barvu textu všechny popisky.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
 ##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
- Určuje úhel, ve kterém se nevykreslí přechod na pozadí popisy tlačítek.  
+ Určuje úhel, ve kterém je přechod vykreslen na pozadí popisy tlačítek.  
   
 ```  
 int m_nGradientAngle;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- `m_nGradientAngle` Určuje, o úhel ve stupních, že je přechodu na pozadí popisy tlačítek UN od vodorovných. Pokud `m_nGradientAngle` je 0, má barevný přechod vykreslením zleva doprava. Pokud `m_nGradientAngle` je mezi 1 a 360, je po směru hodinových ručiček otáčení přechodu počet stupňů. Pokud `m_nGradientAngle` -1, což je výchozí hodnota, se má barevný přechod vykreslením shora dolů. Je to stejné jako nastavení `m_nGradientAngle` a 90.  
+ `m_nGradientAngle` Určuje úhel ve stupních, že přechodu na pozadí popisků je posun od vodorovně. Pokud `m_nGradientAngle` je 0, přechodu vykreslením zleva doprava. Pokud `m_nGradientAngle` je mezi 1 a 360, je po směru hodinových ručiček otáčení přechodu počet stupňů. Pokud `m_nGradientAngle` -1, což je výchozí hodnota je přechodu vykreslením shora dolů. Jedná se o stejné nastavení jako `m_nGradientAngle` na hodnotu 90.  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` Určuje barvu barevného přechodu začátku a [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` Určuje barvu konce přechodu. Pokud `m_clrFillGradient` je -1, neexistuje žádný přechodu.  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` Určuje barvu počátek přechodu a [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` určuje barvy ukončení přechodu. Pokud `m_clrFillGradient` se -1, neexistuje žádný přechod.  
   
 ##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
- Určuje maximální šířku popis, který se zobrazí v každé popisku. Pokud šířku popis překročí zadanou hodnotu, je zabalená text.  
+ Určuje maximální šířku popis, který se zobrazí v každé popisu tlačítka. Pokud šířka popis překročí zadanou hodnotu, je zabalena text.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
 ##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
- Určuje, zda správce visual aplikace řídí vzhled všechny popisy tlačítek.  
+ Určuje, zda správce vzhledu aplikace řídí vzhled všechny popisky.  
   
 ```  
 BOOL m_bVislManagerTheme;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud `m_bVislManagerTheme` je `TRUE`, každý popisek požadavky nové [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) ze visual správce aplikace předtím, než se zobrazí na obrazovce a určit jejich vzhled používá hodnoty v tomto objektu. Ostatní členové vaší [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) jsou ignorovány.  
+ Pokud `m_bVislManagerTheme` má hodnotu TRUE, každý popis požaduje novou [cmfctooltipinfo –](../../mfc/reference/cmfctooltipinfo-class.md) ze Správce vzhledu aplikace předtím, než se zobrazí na obrazovce a používá hodnoty v tomto objektu určit jejich výskytu. Ostatní členové vaší [cmfctooltipinfo –](../../mfc/reference/cmfctooltipinfo-class.md) jsou ignorovány.  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -229,7 +229,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *src*  
+ [in] *src*  
   
 ### <a name="return-value"></a>Návratová hodnota  
   
@@ -238,5 +238,5 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
- [CTooltipManager – třída](../../mfc/reference/ctooltipmanager-class.md)   
+ [Ctooltipmanager – třída](../../mfc/reference/ctooltipmanager-class.md)   
  [CMFCToolTipCtrl – třída](../../mfc/reference/cmfctooltipctrl-class.md)

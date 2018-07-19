@@ -1,5 +1,5 @@
 ---
-title: random_access_iterator_tag – struktura | Microsoft Docs
+title: random_access_iterator_tag – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957370"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag – struktura
 
-Třídu, která poskytuje návratový typ pro **iterator_category –** funkce, která představuje iterator náhodný přístup.
+Třída, která poskytuje návratový typ pro `iterator_category` funkce, která představuje iterátor náhodného přístupu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +36,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy značky kategorie se používají jako zkompilovat značky pro výběr algoritmů. Funkce šablony musí najít nejvíce určitou kategorii její argument iterator tak, aby v době kompilace může použít algoritmus maximální efektivitou. Pro každý iterator typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category –** musí být definován jako nejvíce značky kategorii, která popisuje iteraci chování.
+Kategorie značky tříd se používají při kompilaci značky pro algoritmus výběru. Funkce šablony musí najít nejspecifičtější kategorie svůj argument iterátoru tak, aby ho používat co nejúčinnější algoritmus v době kompilace. Pro každý iterátor typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category** musí být definovány nejspecifičtější značky kategorii, která popisuje chování iterátoru.
 
-Typ je stejný jako **iterator** \< **Iter**> **:: iterator_category –** při **Iter** popisuje objekt, který může sloužit jako iterator náhodný přístup.
+Typ je stejný jako **iterátoru** \< **Iter**> **:: iterator_category** při `Iter` popisuje objekt, který může sloužit jako iterátor s náhodným přístupem.
 
 ## <a name="example"></a>Příklad
 
@@ -91,7 +91,7 @@ int main( )
 
 ## <a name="sample-output"></a>Vzorový výstup
 
-Pro x86 je následující výstup.
+Následující výstup je pro x86.
 
 ```Output
 The type of iterator for vector<int> is identified by the tag:
@@ -108,11 +108,11 @@ The iterators are not the same.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [bidirectional_iterator_tag – struktura](../standard-library/bidirectional-iterator-tag-struct.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

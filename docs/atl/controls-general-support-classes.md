@@ -1,5 +1,5 @@
 ---
-title: 'ATL ovládacích prvků: Třídy pro podporu obecné | Microsoft Docs'
+title: 'ATL – ovládací prvky: Třídy obecné podpory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0aa30487edb3a5998a0b9777017015aeb7b675
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6674bbdc29a6945cb26ea6b2caa03cc8c72be230
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354852"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958514"
 ---
-# <a name="controls-general-support-classes"></a>Prvky: Třídy pro podporu obecné
-Následující třídy poskytují obecné podporu pro ovládací prvky knihovny ATL:  
+# <a name="controls-general-support-classes"></a>Ovládací prvky: Třídy obecné podpory
+Pro ovládací prvky ATL poskytují následující třídy obecné podpory:  
   
--   [CComControl](../atl/reference/ccomcontrol-class.md) se skládá z pomocné funkce a data členů, které jsou nezbytné k ovládacím prvkům ATL.  
+-   [Ccomcontrol –](../atl/reference/ccomcontrol-class.md) pomocné funkce a data členy, které jsou nezbytné pro ovládací prvky ATL se skládá.  
   
--   [IOleControlImpl](../atl/reference/iolecontrolimpl-class.md) poskytuje metody, které jsou nezbytné pro ovládací prvky.  
+-   [Iolecontrolimpl –](../atl/reference/iolecontrolimpl-class.md) poskytuje metody, které jsou nezbytné pro ovládací prvky.  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) poskytuje hlavní metody, pomocí kterých kontejner komunikuje s ovládacím prvkem. Spravuje aktivace a deaktivace ovládacích prvků na místě.  
+-   [Ioleobjectimpl –](../atl/reference/ioleobjectimpl-class.md) poskytuje hlavní metody, pomocí kterých kontejner komunikuje s ovládacím prvkem. Slouží ke správě aktivace a deaktivace ovládacích prvků na místě.  
   
--   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) kombinuje inicializace do jednoho volání pomohou kontejnery vyhnout zpoždění při načítání ovládacích prvků.  
+-   [Iquickactivateimpl –](../atl/reference/iquickactivateimpl-class.md) kombinuje inicializace do jednoho volání umožňující kontejnery vyhnuli prodlevám při načítání ovládacích prvků.  
   
--   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) poskytuje interakce s myší minimální pro ovládací prvek jinak neaktivní.  
+-   [Ipointerinactiveimpl –](../atl/reference/ipointerinactiveimpl-class.md) poskytuje interakce s myší minimální pro ovládací prvek jinak neaktivní.  
   
 ## <a name="sample-program"></a>Ukázkový Program  
  [ATLFire](../visual-cpp-samples.md)  
@@ -44,5 +44,5 @@ Následující třídy poskytují obecné podporu pro ovládací prvky knihovny 
  [ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

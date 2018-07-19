@@ -1,5 +1,5 @@
 ---
-title: Funkce zpětného volání používané v prostředí MFC | Microsoft Docs
+title: Funkce zpětného volání používané v prostředí MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339007"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkce zpětného volání používané v prostředí MFC
-Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. Tyto funkce zpětného volání, které se předávají do [metodu CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [metodu CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), a [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Všimněte si, že všechny funkce zpětného volání musí zachycují výjimky MFC před vrácením Windows, protože nemůže být vyvolány výjimky napříč hranicemi zpětného volání. Další informace o výjimkách, najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).  
+Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. Tyto funkce zpětného volání jsou předány [metodu CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [metodu CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), a [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Všimněte si, že všechny funkce zpětného volání musí zachycují výjimky MFC před vrácením Windows, protože výjimky nejde vyvolat přes hranice zpětného volání. Další informace o výjimkách, najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).  
 
 |Název||  
 |----------|-----------------|  
@@ -39,7 +39,7 @@ Zobrazí tři funkce zpětného volání v knihovny Microsoft Foundation Class. 
  **Záhlaví:** afxwin.h 
 
 ## <a name="enum_objects"></a> Funkce zpětného volání pro metodu CDC::EnumObjects
-*ObjectFunc* název je zástupný symbol pro název funkce zadané aplikace.  
+*ObjectFunc* název je zástupný symbol pro název funkce poskytované aplikací.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -51,19 +51,19 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>Parametry  
  *lpszLogObject*  
- Odkazuje na [logpen –](../../mfc/reference/logpen-structure.md) nebo [logbrush –](../../mfc/reference/logbrush-structure.md) datová struktura, která obsahuje informace o logické atributy objektu.  
+ Odkazuje [logpen –](../../mfc/reference/logpen-structure.md) nebo [logbrush –](../../mfc/reference/logbrush-structure.md) datová struktura, která obsahuje informace o logické atributy objektu.  
   
  *lpData*  
- Předaný body k datům zadané aplikace `EnumObjects` funkce.  
+ Body k datům poskytované aplikací předaný `EnumObjects` funkce.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí funkce zpětného volání **int**. Tato vrátit hodnotu definovaný uživatelem. Pokud funkce zpětného volání, vrátí hodnotu 0, `EnumObjects` zastaví výčtu již v rané fázi.  
+ Funkce zpětného volání vrátí **int**. Tato návratovou hodnotu definovaný uživatelem. Pokud funkce zpětného volání vrátí hodnotu 0, `EnumObjects` zastaví výčet již v rané fázi.  
   
 ### <a name="remarks"></a>Poznámky  
- Musí být exportován skutečný název.  
+ Skutečný název musí být exportován.  
   
 ## <a name="graystring"></a>  Funkce zpětného volání pro metodu CDC::GrayString
-*OutputFunc* je zástupný symbol pro název funkce zpětného volání zadané aplikace.  
+*OutputFunc* je zástupný symbol pro název funkce poskytované aplikací zpětného volání.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -76,22 +76,22 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>Parametry  
  *hDC*  
- Identifikuje kontextu zařízení paměti bitmapa alespoň šířky a výšky určeného *nWindth* a *nHeight* k `GrayString`.  
+ Určuje kontext zařízení paměti s rastrový obrázek alespoň šířku a výšku určené `nWidth` a `nHeight` k `GrayString`.  
   
  *lpData*  
  Odkazuje na řetězec znaků, který chcete kreslit.  
   
  *nCount*  
- Určuje počet znaků, který má výstup.  
+ Určuje počet znaků výstupu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Funkce zpětného volání vrácená hodnota musí být **TRUE** čímž indikuje úspěšné provedení; v opačném případě je **FALSE**.  
+ Návratová hodnota funkce zpětného volání musí být TRUE, čímž indikuje úspěšné provedení; v opačném případě je FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Funkce zpětného volání (*OutputFunc*) musí kreslení obrázku relativně k souřadnice (0,0) místo (*x*, *y*).  
+ Funkce zpětného volání (*OutputFunc*) musí vykreslení obrázku vzhledem k souřadnice (0,0) místo (*x*, *y*).  
 
 ## <a name="setabortproc"></a>  Funkce zpětného volání pro metodu CDC::SetAbortProc
-Název *AbortFunc* je zástupný symbol pro název funkce zadané aplikace.  
+Název *AbortFunc* je zástupný symbol pro název funkce poskytované aplikací.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -103,13 +103,13 @@ BOOL CALLBACK EXPORT AbortFunc(
   
 ### <a name="parameters"></a>Parametry  
  *hPr*  
- Identifikuje kontextu zařízení.  
+ Určuje kontext zařízení.  
   
- *Kód*  
- Určuje, zda došlo k chybě. Pokud nedošlo k žádné chybě je 0. Je **SP_OUTOFDISK** Pokud správce tisku právě nedostatek místa na disku a více místa na disku, bude k dispozici, pokud aplikace čeká. Pokud *kód* je **SP_OUTOFDISK**, aplikace nemá na zrušení tiskové úlohy. Pokud ne, musíte yield správce tisku voláním `PeekMessage` nebo `GetMessage` funkce systému Windows.  
+ *kód*  
+ Určuje, zda došlo k chybě. To je 0, pokud nedojde k žádné chybě. Je SP_OUTOFDISK Pokud správce tisku právě volné místo na disku a bude k dispozici více místa na disku aplikace čeká. Pokud *kód* je SP_OUTOFDISK, aplikace nemusí přerušit tiskové úlohy. Pokud tomu tak není, musí poskytovat správce tisku pomocí volání `PeekMessage` nebo `GetMessage` funkce Windows.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrácená hodnota funkce obslužné rutiny přerušení je nenulové hodnoty, pokud se tisková úloha má pokračovat a 0 Pokud je zrušená.  
+ Návratová hodnota funkce obslužné rutiny přerušení je nenulová, pokud je chcete pokračovat, tiskové úlohy a 0 Pokud bude zrušen.  
   
 ### <a name="remarks"></a>Poznámky  
  Skutečný název musí být exportován, jak je popsáno v části poznámky [metodu CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  

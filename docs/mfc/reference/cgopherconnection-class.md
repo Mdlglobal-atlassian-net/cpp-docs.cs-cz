@@ -1,5 +1,5 @@
 ---
-title: Třída CGopherConnection | Microsoft Docs
+title: Cgopherconnection – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336758"
 ---
-# <a name="cgopherconnection-class"></a>CGopherConnection – třída
-Spravuje vaše připojení k serveru Internet gopher.  
+# <a name="cgopherconnection-class"></a>Cgopherconnection – třída
+Spravuje připojení k gopher serveru Internet.  
   
 > [!NOTE]
->  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členové jsou zastaralé protože nepracují na platformě Windows XP, ale budou i nadále fungovat na starší operační systémy.  
+>  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členy jsou zastaralé, protože nebude fungovat na platformě Windows XP, ale budou i nadále fungovat na starší platformy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,23 +55,23 @@ class CGopherConnection : public CInternetConnection
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CGopherConnection::CreateLocator](#createlocator)|Vytvoří [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objekt, který chcete najít soubory na gopher serveru.|  
+|[CGopherConnection::CreateLocator](#createlocator)|Vytvoří [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objektu k vyhledání souborů na gopher serveru.|  
 |[CGopherConnection::GetAttribute](#getattribute)|Načte informace o atributu o gopher objektu.|  
-|[CGopherConnection::OpenFile](#openfile)|Otevře se soubor gopher.|  
+|[CGopherConnection::OpenFile](#openfile)|Otevře soubor gopher.|  
   
 ## <a name="remarks"></a>Poznámky  
- Službu gopher je jedním ze tří internetové služby rozpoznáno tříd WinInet knihovny MFC.  
+ Služba gopher je jedním z tři služby Internet rozpoznat pomocí tříd WinInet knihovny MFC.  
   
- Třída `CGopherConnection` obsahuje konstruktor a tři další členské funkce, které spravovat službu gopher: [OpenFile](#openfile), [CreateLocator](#createlocator), a [GetAttribute](#getattribute).  
+ Třída `CGopherConnection` obsahuje konstruktor a tři další členské funkce, které spravují službu gopher: [OpenFile](#openfile), [CreateLocator](#createlocator), a [GetAttribute](#getattribute).  
   
- Pro komunikaci se serverem gopher Internet, musíte nejdřív vytvořit instanci [CInternetSession](../../mfc/reference/cinternetsession-class.md)a pak zavolají [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), která vytvoří `CGopherConnection` objekt a vrátí ukazatel na ni. Nikdy vytvoříte `CGopherConnection` objektu přímo.  
+ Ke komunikaci s gopher serveru Internet, musíte nejprve vytvořit instanci [cinternetsession –](../../mfc/reference/cinternetsession-class.md)a pak vyvolejte [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), která vytvoří `CGopherConnection` objekt a vrátí ukazatel na něj. Nikdy nevytvářejte `CGopherConnection` objektu přímo.  
   
- Další informace o tom, `CGopherConnection` funguje s ostatní třídy MFC Internetu najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md). Další informace o použití další dvě podporované internetové služby, FTP a HTTP viz třídy [CHttpConnection](../../mfc/reference/chttpconnection-class.md) a [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
+ Další informace o tom, `CGopherConnection` funguje s jinými třídami MFC Internetu najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md). Další informace o použití další dvě podporované služby sítě Internet, HTTP a FTP zobrazit třídy [chttpconnection –](../../mfc/reference/chttpconnection-class.md) a [cftpconnection –](../../mfc/reference/cftpconnection-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
+ [Cinternetconnection –](../../mfc/reference/cinternetconnection-class.md)  
   
  `CGopherConnection`  
   
@@ -79,7 +79,7 @@ class CGopherConnection : public CInternetConnection
  **Záhlaví:** afxinet.h  
   
 ##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
- Tato funkce člen je volána k sestavení `CGopherConnection` objektu.  
+ Tato členská funkce je volána k sestavení kompletních `CGopherConnection` objektu.  
   
 ```  
 CGopherConnection(
@@ -100,38 +100,38 @@ CGopherConnection(
   
 ### <a name="parameters"></a>Parametry  
  *pSession*  
- Ukazatel na související [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu.  
+ Ukazatel na související [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu.  
   
  *hConnected*  
- Popisovač Windows aktuální relace Internetu.  
+ Popisovač Windows aktuální relace Internet.  
   
  *pstrServer*  
  Ukazatel na řetězec obsahující název serveru FTP.  
   
  *dwContext*  
- Identifikátor kontextu pro danou operaci. *dwContext* identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.  
+ Identifikátor kontextu operace. *dwContext* identifikuje informace o stavu operace vracené [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Výchozí hodnota je nastavená na 1; Můžete však explicitně přiřadit konkrétní kontext ID operace. Objekt a veškerou práci, kterou provádí bude spojená s ID tohoto kontextu.  
   
  *pstrUserName*  
- Ukazatel na řetězec ukončené hodnotou null, který určuje jméno uživatele k přihlášení. Pokud **NULL**, výchozí hodnota je anonymní.  
+ Ukazatel na řetězec zakončený hodnotou null, který určuje jméno uživatele k přihlášení. Pokud má hodnotu NULL, výchozí hodnota je anonymous.  
   
  *pstrPassword*  
- Ukazatel na řetězec ukončené hodnotou null, který určuje heslo pro použití k protokolování. Pokud oba *pstrPassword* a *pstrUserName* jsou **NULL**, výchozí anonymního hesla je uživatelské jméno e-mailu. Pokud *pstrPassword* je **NULL** (nebo prázdný řetězec), ale *pstrUserName* není **NULL**, se používá prázdné heslo. Následující tabulka popisuje chování čtyři možné nastavení *pstrUserName* a *pstrPassword*:  
+ Ukazatel na řetězec zakončený hodnotou null, který určuje heslo pro použití k protokolování. Pokud mají oba *pstrPassword* a *pstrUserName* hodnotu Null, je výchozí heslo anonymní uživatelské jméno e-mailu. Pokud *pstrPassword* má hodnotu NULL (nebo prázdný řetězec), ale *pstrUserName* nemá hodnotu NULL, prázdné heslo se používá. Následující tabulka popisuje chování pro čtyři možných nastavení *pstrUserName* a *pstrPassword*:  
   
-|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslat na FTP server|  
+|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslaných na FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** nebo ""|**NULL** nebo ""|"anonymní"|Uživatelské jméno e-mailu|  
-|Není- **NULL** řetězec|**NULL** nebo ""|*pstrUserName*|" "|  
-|**NULL** jinou hodnotu než **NULL** řetězec|**CHYBA**|**CHYBA**||  
-|Není- **NULL** řetězec|Není- **NULL** řetězec|*pstrUserName*|*pstrPassword*|  
+|Hodnotu NULL nebo ""|Hodnotu NULL nebo ""|"anonymní"|Uživatelské jméno e-mailu|  
+|Řetězec NENULOVÉ|Hodnotu NULL nebo ""|*pstrUserName*|" "|  
+|Řetězec s NENULOVOU hodnotou NULL|CHYBA|CHYBA||  
+|Řetězec NENULOVÉ|Řetězec NENULOVÉ|*pstrUserName*|*pstrPassword*|  
   
  *nPort*  
- Číslo, které identifikuje port TCP/IP použít na serveru.  
+ Číslo, které identifikuje port TCP/IP pro použití na serveru.  
   
 ### <a name="remarks"></a>Poznámky  
- Nikdy vytvoříte `CGopherConnection` přímo. Místo toho volat [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), která vytvoří `CGopherConnection` objektu a vrátí ukazatel na ni.  
+ Nikdy nevytvářejte `CGopherConnection` přímo. Místo toho volat [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), která vytvoří `CGopherConnection` objekt a vrátí ukazatel na něj.  
   
 ##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
- Volání této funkce člen vytvořit lokátor gopher najít nebo soubor na serveru gopher identifikovat.  
+ Voláním této členské funkce, pokud chcete vytvořit lokátor gopher najít nebo identifikovat souborů na gopher serveru.  
   
 ```  
 CGopherLocator CreateLocator(
@@ -152,33 +152,33 @@ static CGopherLocator CreateLocator(
   
 ### <a name="parameters"></a>Parametry  
  *pstrDisplayString*  
- Ukazatel na řetězec, který obsahuje název dokumentu gopher nebo adresáře, které mají být načteny. Pokud *pstrDisplayString* parametr **NULL**, je vrácen výchozí adresář pro gopher server.  
+ Ukazatel na řetězec obsahující název dokumentu gopher nebo adresář, který se má načíst. Pokud *pstrDisplayString* parametr hodnotu NULL, je vrácena výchozí adresář pro gopher serveru.  
   
  *pstrSelectorString*  
- Ukazatel na řetězec selektor k odeslání na server gopher za účelem načtení položku. *pstrSelectorString* může být **NULL**.  
+ Ukazatel na řetězec selektor k odeslání na gopher serveru za účelem načtení položky. *pstrSelectorString* může mít hodnotu NULL.  
   
  *dwGopherType*  
- Tato hodnota určuje, zda *pstrSelectorString* odkazuje na adresář nebo dokumentu, a zda je žádost gopher nebo gopher +. Najdete v části atributy pro strukturu [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) ve Windows SDK.  
+ Toto nastavení určuje, zda *pstrSelectorString* odkazuje na adresář nebo dokument, a zda je požadavek gopher nebo gopher +. Zobrazte atributy, které pro strukturu [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) v sadě Windows SDK.  
   
  *pstrLocator*  
- Ukazatel na řetězec, který určuje soubor otevřete. Obecně platí, tento řetězec je vrácená z volání [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
+ Ukazatel na řetězec, který identifikuje soubor otevřete. Obecně platí, tento řetězec je vrácen z volání [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
   
  *pstrServerName*  
- Ukazatel na řetězec obsahující název serveru gopher.  
+ Ukazatel na řetězec obsahující název gopher serveru.  
   
  *nPort*  
- Číslo identifikující port Internetu pro toto připojení.  
+ Číslo identifikující Internet port pro toto připojení.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- A [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objektu.  
+ A [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- Statické verzi – členská funkce vyžaduje, abyste zadejte server, zatímco verze nestatické používá název serveru z objekt připojení.  
+ Verze statické členské funkce vyžaduje, abyste k určení serveru, zatímco verze nestatické používá název serveru z objekt připojení.  
   
- K načtení informací ze serveru gopher, musíte aplikaci nejprve získat lokátoru gopher. Aplikace musí pak považovat za Lokátor neprůhledného token (to znamená, aplikace můžete použít Lokátor, ale ne přímo pracovat s nebo jejímu porovnání). Za normálních okolností aplikace používá Lokátor pro volání [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) – členská funkce načíst konkrétní informace.  
+ K načtení informací ze serveru gopher, musíte aplikace nejdřív získat gopher lokátoru. Aplikace musí pak považovat za Lokátor neprůhledné token (to znamená, aplikace můžete použít Lokátor, ale ne přímo manipulaci s nebo porovnání). Za normálních okolností aplikace používá Lokátor pro volání [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) členská funkce vyhledat konkrétní informace.  
   
 ##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
- Volání této funkce člen načíst ze serveru gopher konkrétní atribut informace o položce.  
+ Zavolejte tuto členskou funkci ze serveru gopher načíst konkrétní atribut informace o položce.  
   
 ```  
 BOOL GetAttribute(
@@ -188,19 +188,19 @@ BOOL GetAttribute(
   
 ### <a name="parameters"></a>Parametry  
  *refLocator*  
- Odkaz na [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objektu.  
+ Odkaz na [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objektu.  
   
  *strRequestedAttributes*  
- Oddělených mezerami řetězec určující názvy požadované atributy.  
+ Mezerami oddělený řetězec určující názvy požadovaných atributů.  
   
  *strResult*  
- Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) která přijme Typ lokátoru.  
+ Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) , která přijímá Typ lokátoru.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.  
+ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.  
   
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile  
- Volání této funkce člen otevřít soubor na serveru gopher.  
+ Voláním této členské funkce pro otevření souboru na gopher serveru.  
   
 ```  
 CGopherFile* OpenFile(
@@ -212,29 +212,29 @@ CGopherFile* OpenFile(
   
 ### <a name="parameters"></a>Parametry  
  *refLocator*  
- Odkaz na [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objektu.  
+ Odkaz na [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objektu.  
   
  *dwFlags*  
- Libovolnou kombinaci INTERNET_FLAG_ * příznaky. V tématu [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) Další informace o INTERNET_FLAG_\* příznaky.  
+ Jakékoli kombinace příznaků INTERNET_FLAG_ *. Zobrazit [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) Další informace o INTERNET_FLAG_\* příznaky.  
   
  *pstrView*  
- Ukazatel na řetězec zobrazení souboru. Pokud existuje několik zobrazení souboru na serveru, tento parametr určuje zobrazení, které soubor otevřít. Pokud *pstrView* je **NULL**, se používá výchozí zobrazení souboru.  
+ Ukazatel na řetězec zobrazení souboru. Pokud několik zobrazení souboru na serveru, tento parametr určuje, které soubor zobrazení se otevře. Pokud *pstrView* má hodnotu NULL, výchozího zobrazení souboru se používá.  
   
  *dwContext*  
- ID kontextu pro otevíraný soubor. V tématu **poznámky** Další informace o *dwContext*.  
+ ID kontextu pro soubor je otevřený. Zobrazit **poznámky** Další informace o *dwContext*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel [CGopherFile](../../mfc/reference/cgopherfile-class.md) objekt, který chcete otevřít.  
+ Ukazatel [cgopherfile –](../../mfc/reference/cgopherfile-class.md) objektu, který chcete otevřít.  
   
 ### <a name="remarks"></a>Poznámky  
- Přepsání *dwContext* výchozí identifikátor kontextu nastavit na hodnotu dle vlastního výběru. Identifikátor kontextu je přidružen tento konkrétní operace `CGopherConnection` objekt vytvořený jeho [CInternetSession](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota je vrácen do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytovat stav na operace, pomocí kterého se identifikuje. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o kontextu identifikátor.  
+ Přepsat *dwContext* výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu souvisí s tuto konkrétní operaci `CGopherConnection` objekt vytvořený pomocí jeho [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objektu. Hodnota se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) kvůli stavu na operaci, se kterým je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.  
   
 ## <a name="see-also"></a>Viz také  
- [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)   
+ [Cinternetconnection – třída](../../mfc/reference/cinternetconnection-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CFtpConnection – třída](../../mfc/reference/cftpconnection-class.md)   
- [CHttpConnection – třída](../../mfc/reference/chttpconnection-class.md)   
- [CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)   
- [CGopherLocator – třída](../../mfc/reference/cgopherlocator-class.md)   
- [CGopherFile – třída](../../mfc/reference/cgopherfile-class.md)   
+ [Cftpconnection – třída](../../mfc/reference/cftpconnection-class.md)   
+ [Chttpconnection – třída](../../mfc/reference/chttpconnection-class.md)   
+ [Cinternetconnection – třída](../../mfc/reference/cinternetconnection-class.md)   
+ [Cgopherlocator – třída](../../mfc/reference/cgopherlocator-class.md)   
+ [Cgopherfile – třída](../../mfc/reference/cgopherfile-class.md)   
  [CInternetSession – třída](../../mfc/reference/cinternetsession-class.md)

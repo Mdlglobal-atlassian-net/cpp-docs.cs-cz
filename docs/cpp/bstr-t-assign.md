@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Assign | Microsoft Docs
+title: _bstr_t::Assign | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947499"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
-**Konkrétní Microsoft**  
+**Specifické pro Microsoft**  
   
- Kopie `BSTR` do `BSTR` zabalené službou **_**`bstr_t`.  
+ Kopie `BSTR` do `BSTR` uzavřenou **_**`bstr_t`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,15 +37,15 @@ void Assign(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `s`  
- A `BSTR` zkopírovat do `BSTR` zabalené službou `_bstr_t`.  
+ *s*  
+ A `BSTR` zkopírovat do `BSTR` uzavřenou `_bstr_t`.  
   
 ## <a name="remarks"></a>Poznámky  
- `Assign` binární nekopíruje, což znamená, že po celou délku `BSTR` je zkopírovali, a to bez ohledu na obsah.  
+ `Assign` binární soubor nekopíruje, což znamená, že po celou délku `BSTR` zkopírován, bez ohledu na obsah.  
   
 ## <a name="example"></a>Příklad  
   
-```  
+```cpp 
 // _bstr_t_Assign.cpp  
   
 #include <comdef.h>  
@@ -115,7 +116,7 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text  
 ```  
   
-**Konkrétní Microsoft END**  
+**Specifické pro END Microsoft**  
   
 ## <a name="see-also"></a>Viz také  
  [_bstr_t – třída](../cpp/bstr-t-class.md)

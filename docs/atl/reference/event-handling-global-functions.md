@@ -1,5 +1,5 @@
 ---
-title: Globální funkce zpracování událostí | Microsoft Docs
+title: Globální funkce zpracování událostí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85babf3155fdc94dafd5d62c2e67401e5add3663
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358335"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883996"
 ---
 # <a name="event-handling-global-functions"></a>Globální funkce zpracování událostí
 Tato funkce poskytuje obslužné rutiny události.  
   
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 |||  
 |-|-|  
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Čeká na objekt signál, mezitím odeslání zprávy oken podle potřeby.|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Počká na objekt, který má být signalizován, mezitím podle potřeby odbaví zprávy okna.|  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlbase.h  
@@ -41,21 +41,21 @@ Tato funkce poskytuje obslužné rutiny události.
  Počká na objekt, který má být signalizován, a mezitím podle potřeby odbaví zprávy okna.  
   
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hEvent`  
- [v] Popisovač objektu pro čekání.  
+ *hEvent*  
+ [in] Popisovač objektu čekání.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí **TRUE** Pokud nesignalizuje objektu.  
+ Vrátí hodnotu PRAVDA, pokud byl signalizován objektu.  
   
 ### <a name="remarks"></a>Poznámky  
- To je užitečné, pokud chcete čekat na událost objektu dojít a informováni o se děje, ale povolit okno zpráv k odeslání při čekání.  
+ To je užitečné, pokud chcete čekat na událost objektu dojít, a oznámí to děje, ale povolit okna zpráv odeslaných během čekání.  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce](../../atl/reference/atl-functions.md)

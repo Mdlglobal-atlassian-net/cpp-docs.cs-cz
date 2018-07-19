@@ -1,5 +1,5 @@
 ---
-title: basic_regex – třída | Microsoft Docs
+title: basic_regex – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec5ca351f6ac96fd8420ee921ca95b78ee2f487d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848307"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959745"
 ---
 # <a name="basicregex-class"></a>basic_regex – třída
 
@@ -84,39 +84,39 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Typ elementů.
+*Elem* typ prvků tak, aby odpovídaly.
 
-`RXtraits` Třída vlastnosti pro elementy.
+*RXtraits* třída vlastností prvků.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který obsahuje regulární výraz. Objekty třídy této šablony se dá předat do šablony funkce [regex_match –](../standard-library/regex-functions.md#regex_match), [regex_search –](../standard-library/regex-functions.md#regex_search), a [regex_replace –](../standard-library/regex-functions.md#regex_replace), společně s argumenty řetězce vhodné text, Chcete hledat text, který odpovídá regulárnímu výrazu. Existují dvě specializací třídy této šablony, s definic typů [regex](../standard-library/regex-typedefs.md#regex) pro elementy typu `char`, a [wregex –](../standard-library/regex-typedefs.md#wregex) pro elementy typu `wchar_t`.
+Třída šablony popisuje objekt, který obsahuje regulární výraz. Objekty této třídy šablony mohou být předány funkce šablony [regex_match –](../standard-library/regex-functions.md#regex_match), [regex_search –](../standard-library/regex-functions.md#regex_search), a [regex_replace –](../standard-library/regex-functions.md#regex_replace), spolu s vhodnými argumenty textového řetězce, Chcete-li vyhledat text, který odpovídá regulárnímu výrazu. Existují dvě specializace této třídy šablony, s definicemi typu [regulární výraz](../standard-library/regex-typedefs.md#regex) pro prvky typu **char**, a [wregex](../standard-library/regex-typedefs.md#wregex) pro prvky typu  **wchar_t**.
 
-Argument šablony `RXtraits` popisuje různé důležité vlastnosti syntaxe regulárních výrazů, které podporuje šablony třídy. Třída, která určuje vlastnosti těchto regulární výraz musí mít stejné externí rozhraní jako objekt třídy šablony [regex_traits – třída](../standard-library/regex-traits-class.md).
+Argument šablony *RXtraits* popisuje různé důležité vlastnosti syntaxe regulárních výrazů, které třída šablony podporuje. Třída, která určuje tyto vlastnosti regulárního výrazu, musí mít stejné externí rozhraní jako objekt třídy šablony [regex_traits – třída](../standard-library/regex-traits-class.md).
 
 Některé funkce provádějí sekvenci operandu, která definuje regulární výraz. Tuto sekvenci operandů můžete zadat několika způsoby:
 
-`ptr` --sekvenci ukončené hodnotou null (například řetězec C pro `Elem` typu `char`) začínající na `ptr` (které nesmí být ukazatele null), kde ukončující elementu je hodnota `value_type()` a není součástí operand pořadí
+`ptr` --sekvence zakončená hodnotou null (například řetězec C, pro *Elem* typu **char**) začínající na `ptr` (což nesmí být nulový ukazatel), kde ukončující prvek je hodnota `value_type()` a není součástí sekvence operandů
 
-`ptr`, `count` – posloupnost `count` elementy začínající na `ptr` (které nesmí být nulový ukazatel)
+`ptr`, `count` --sekvence `count` prvky počínaje `ptr` (což nesmí být nulový ukazatel)
 
-`str` – pořadí určeného `basic_string` objektu `str`
+`str` --sekvence určená `basic_string` objektu `str`
 
-`first`, `last` – pořadí elementů oddělená iterátory `first` a `last`, v rozsahu `[first, last)`
+`first`, `last` --sekvence prvků oddělená iterátory `first` a `last`, v rozsahu `[first, last)`
 
 `right` – `basic_regex` objektu `right`
 
-Tyto funkce člen také provést argument `flags` určující různé možnosti pro výklad regulární výraz kromě těch, které popsaného `RXtraits` typu.
+Tyto členské funkce také přijímají argument `flags` , který určuje různé možnosti pro výklad regulárního výrazu mimo těch popsaných *RXtraits* typu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regex >
+**Záhlaví:** \<regulární výraz >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="assign"></a>  basic_regex::Assign
 
-Objekt regulárního expressoin přiřazuje hodnotu.
+Přiřadí hodnotu k objektu regulárního expressoin.
 
 ```cpp
 basic_regex& assign(
@@ -148,31 +148,31 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parametry
 
-`STtraits` Třída vlastnosti pro zdrojový řetězec.
+*STtraits* třída vlastností pro zdrojový řetězec.
 
-`STalloc` Allocator – třída zdroje řetězec.
+*STalloc* třídu alokátoru pro zdrojový řetězec.
 
-`InIt` Zadejte typ iterator zdroje rozsahu.
+*InIt* vstupní typ iterátoru rozsahu zdroje.
 
-`right` Regulární výraz zdroj pro kopírování.
+*správné* regulární výraz zdroje ke zkopírování.
 
-`ptr` Ukazatel na začátek pořadí pro kopírování.
+*PTR* ukazatel na začátek pořadí ke kopírování.
 
-`flags` Syntaxe příznaky možnost přidat při kopírování.
+*příznaky* syntaxe příznaky možnost přidat při kopírování.
 
-`len/TD>` Délka pořadí pro kopírování.
+*Len/TD >* délky sekvence ke kopírování.
 
-`str` Řetězec pro kopírování.
+*Str* řetězec zkopírujte.
 
-`first` Začátek pořadí pro kopírování.
+*první* od pořadí ke kopírování.
 
-`last` Konec pořadí pro kopírování.
+*poslední* konec pořadí ke kopírování.
 
-`IList` Initializer_list ke kopírování.
+*IList* initializer_list ke kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce každý nahradit regulární výraz držené `*this` s regulárním výrazem popsané pořadím operand, pak se vraťte `*this`.
+Členské funkce jednotlivých nahrazení regulárních výrazů, které drží `*this` s regulárním výrazem popsal sekvenci operandů, pak se vraťte `*this`.
 
 ### <a name="example"></a>Příklad
 
@@ -258,7 +258,7 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 
 ## <a name="basic_regex"></a>  basic_regex::basic_regex
 
-Vytvořte objekt regulárního výrazu.
+Vytvoření objektu regulárního výrazu.
 
 ```cpp
 basic_regex();
@@ -293,35 +293,35 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parametry
 
-`STtraits` Třída vlastnosti pro zdrojový řetězec.
+*STtraits* třída vlastností pro zdrojový řetězec.
 
-`STalloc` Allocator – třída zdroje řetězec.
+*STalloc* třídu alokátoru pro zdrojový řetězec.
 
-`InIt` Zadejte typ iterator zdroje rozsahu.
+*InIt* vstupní typ iterátoru rozsahu zdroje.
 
-`right` Regulární výraz zdroj pro kopírování.
+*správné* regulární výraz zdroje ke zkopírování.
 
-`ptr` Ukazatel na začátek pořadí pro kopírování.
+*PTR* ukazatel na začátek pořadí ke kopírování.
 
-`flags` Syntaxe příznaky možnost přidat při kopírování.
+*příznaky* syntaxe příznaky možnost přidat při kopírování.
 
-`len/TD>` Délka pořadí pro kopírování.
+*Len/TD >* délky sekvence ke kopírování.
 
-`str` Řetězec pro kopírování.
+*Str* řetězec zkopírujte.
 
-`first` Začátek pořadí pro kopírování.
+*první* od pořadí ke kopírování.
 
-`last` Konec pořadí pro kopírování.
+*poslední* konec pořadí ke kopírování.
 
-`IList` Initializer_list ke kopírování.
+*IList* initializer_list ke kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory ukládání výchozí sestavený objekt typu `RXtraits`.
+Všechny konstruktory ukládají objekt vytvořené s výchozím nastavením typu `RXtraits`.
 
-První konstruktoru vytvoří prázdnou `basic_regex` objektu. Vytvořit další konstruktory `basic_regex` objekt, který obsahuje regulární výraz popsané operand pořadí.
+První konstruktor vytvoří prázdnou `basic_regex` objektu. Vytvořit další konstruktory `basic_regex` objekt, který obsahuje regulární výraz popsal sekvenci operandů.
 
-Prázdná `basic_regex` objektu neodpovídá žádné posloupnost znaků, když předána [regex_match –](../standard-library/regex-functions.md#regex_match), [regex_search –](../standard-library/regex-functions.md#regex_search), nebo [regex_replace –](../standard-library/regex-functions.md#regex_replace).
+Prázdná `basic_regex` objekt neodpovídá žádné sekvence znaků při předání do [regex_match –](../standard-library/regex-functions.md#regex_match), [regex_search –](../standard-library/regex-functions.md#regex_search), nebo [regex_replace –](../standard-library/regex-functions.md#regex_replace).
 
 ### <a name="example"></a>Příklad
 
@@ -407,7 +407,7 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 
 ## <a name="flag_type"></a>  basic_regex::flag_type
 
-Typ příznaky možnost syntaxe.
+Typ syntaxe možnost příznaky.
 
 ```cpp
 typedef regex_constants::syntax_option_type flag_type;
@@ -415,7 +415,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
+Typ je synonymum pro [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
 ### <a name="example"></a>Příklad
 
@@ -504,7 +504,7 @@ getloc == imbued == true
 
 ## <a name="flags"></a>  basic_regex::Flags
 
-Vrátí syntaxe příznaky možnost.
+Vrátí syntaxe možnost příznaky.
 
 ```cpp
 flag_type flags() const;
@@ -512,7 +512,7 @@ flag_type flags() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu `flag_type` argument předaný nejnovější volání mezi [basic_regex::assign](#assign) členské funkce nebo, pokud nebyla provedena žádná taková volání, hodnota předaný konstruktoru.
+Členská funkce vrátí hodnotu `flag_type` argument předaný do posledního volání do jednoho z [basic_regex::assign](#assign) členských funkcí nebo pokud nebyla provedena žádná taková volání, hodnota předaná do konstruktoru.
 
 ### <a name="example"></a>Příklad
 
@@ -601,7 +601,7 @@ getloc == imbued == true
 
 ## <a name="getloc"></a>  basic_regex::getloc
 
-Vrací objekt uložené národního prostředí.
+Vrátí objekt uloženého národního prostředí.
 
 ```cpp
 locale_type getloc() const;
@@ -609,7 +609,7 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí hodnotu `traits.` [regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.
+Členská funkce vrátí `traits.` [regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.
 
 ### <a name="example"></a>Příklad
 
@@ -698,7 +698,7 @@ getloc == imbued == true
 
 ## <a name="imbue"></a>  basic_regex::imbue
 
-Mění objekt uložené národního prostředí.
+Změní objekt uloženého národního prostředí.
 
 ```cpp
 locale_type imbue(locale_type loc);
@@ -706,7 +706,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-`loc` Národní prostředí objekt pro uložení.
+*loc* objekt národního prostředí pro uložení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -799,7 +799,7 @@ getloc == imbued == true
 
 ## <a name="locale_type"></a>  basic_regex::locale_type
 
-Typ objektu uložené národního prostředí.
+Typ objektu uloženého národního prostředí.
 
 ```cpp
 typedef typename RXtraits::locale_type locale_type;
@@ -807,7 +807,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
+Typ je synonymum pro [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
 
 ### <a name="example"></a>Příklad
 
@@ -896,7 +896,7 @@ getloc == imbued == true
 
 ## <a name="mark_count"></a>  basic_regex::mark_count
 
-Vrátí počet podvýrazy odpovídá.
+Vrátí počet dílčích výrazů neodpovídají.
 
 ```cpp
 unsigned mark_count() const;
@@ -993,7 +993,7 @@ getloc == imbued == true
 
 ## <a name="op_eq"></a>  basic_regex::Operator =
 
-Hodnotu přiřadí objekt regulárního výrazu.
+Přiřadí hodnotu k objektu regulárního výrazu.
 
 ```cpp
 basic_regex& operator=(const basic_regex& right);
@@ -1006,17 +1006,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parametry
 
-`STtraits` Třída vlastnosti pro zdrojový řetězec.
+*STtraits* třída vlastností pro zdrojový řetězec.
 
-`STalloc` Allocator – třída zdroje řetězec.
+*STalloc* třídu alokátoru pro zdrojový řetězec.
 
-`right` Regulární výraz zdroj pro kopírování.
+*správné* regulární výraz zdroje ke zkopírování.
 
-`str` Řetězec pro kopírování.
+*Str* řetězec zkopírujte.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátory každý nahradit regulární výraz držené `*this` s regulárním výrazem popsané pořadím operand, pak se vraťte `*this`.
+Operátory každý nahrazení regulárních výrazů, které drží `*this` s regulárním výrazem popsal sekvenci operandů, pak se vraťte `*this`.
 
 ### <a name="example"></a>Příklad
 
@@ -1105,7 +1105,7 @@ getloc == imbued == true
 
 ## <a name="swap"></a>  basic_regex::swap
 
-Zamění dva objekty regulární výraz.
+Prohodí dva objekty regulárních výrazů.
 
 ```cpp
 void swap(basic_regex& right) throw();
@@ -1113,11 +1113,11 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`right` Objekt regulárního výrazu, které chcete Prohodit s.
+*správné* objekt regulárního výrazu, který chcete Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce prohození regulární výrazy mezi `*this` a `right`. Ho probíhá ve konstantní čas a vyvolá žádné výjimky.
+Členská funkce Zamění regulární výrazy mezi `*this` a *správné*. Provádí se v konstantním času a vyvolá výjimku žádné výjimky.
 
 ### <a name="example"></a>Příklad
 
@@ -1214,7 +1214,7 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Elem`.
+Typ je synonymum pro parametr šablony *Elem*.
 
 ### <a name="example"></a>Příklad
 
@@ -1301,7 +1301,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_match](../standard-library/regex-functions.md#regex_match)<br/>

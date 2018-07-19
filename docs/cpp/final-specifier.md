@@ -1,5 +1,5 @@
 ---
-title: final – specifikátor | Microsoft Docs
+title: final – specifikátor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947493"
 ---
 # <a name="final-specifier"></a>final – specifikátor
-Klíčové slovo `final` lze použít pro označení virtuálních funkcí, které nelze v odvozené třídě přepsat. Lze jej také použít k označení tříd, ze kterých nelze dědit.  
+Můžete použít **konečné** – klíčové slovo pro označení virtuálních funkcí, které nelze přepsat v odvozené třídě. Lze jej také použít k označení tříd, ze kterých nelze dědit.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- `final` je kontextové klíčové slovo a má zvláštní význam pouze v případě, že se používá po deklaraci funkce nebo názvu třídy, v ostatních případech to není rezervované klíčové slovo.  
+ **poslední** je kontextový a má zvláštní význam, jen když se používá po deklaraci funkce nebo názvu třídy, jinak, to není rezervované klíčové slovo.  
   
- Když je klíčové slovo `final` použito v deklaracích třídy, je `base-classes` volitelnou částí deklarace.  
+ Když **konečné** se používá v deklaracích třídy `base-classes` volitelnou částí deklarace.  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu je klíčové slovo `final` použito pro určení toho, že virtuální funkci nelze přepsat.  
+ V následujícím příkladu **konečné** – klíčové slovo k určení toho, že virtuální funkci nelze přepsat.  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- Informace o tom, jak určit, že je možné přepsat členské funkce najdete v tématu [override – specifikátor](../cpp/override-specifier.md).  
+ Informace o tom, jak určit, že můžete členské funkce přepsat, naleznete v tématu [specifikátor override](../cpp/override-specifier.md).  
   
- Následující příklad používá klíčové slovo `final` k určení toho, že ze třídy nelze dědit.  
+ Následující příklad používá **konečné** – klíčové slovo k určení, zda třídu nelze zdědit.  
   
 ```cpp  
 class BaseClass final   
@@ -74,5 +71,5 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Klíčová slova](../cpp/keywords-cpp.md)   
+ [klíčová slova](../cpp/keywords-cpp.md)   
  [override – specifikátor](../cpp/override-specifier.md)

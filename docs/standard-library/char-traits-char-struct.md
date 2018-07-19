@@ -1,5 +1,5 @@
 ---
-title: char_traits –&lt;char&gt; struktura | Microsoft Docs
+title: char_traits&lt;char&gt; struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a20e9c1df241feb8dd7f16891f1e2a67068f772
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1150de3c94f8a656d46d54b673cb2d08dc05a7be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840391"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959323"
 ---
-# <a name="chartraitsltchargt-struct"></a>char_traits –&lt;char&gt; – struktura
+# <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; – struktura
 
-Struktura, která je specializace šablony struktura **char_traits –\<CharType >** pro element typu `char`.
+Struktura, která je specializací šablony struktury **char_traits\<CharType >** na prvek typu **char**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,8 +37,8 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>Poznámky
 
-Specializace umožňuje struktura chcete využít výhod funkce knihovny, které pracují s objekty tohoto typu `char`.
+Specializace umožňuje využívat funkce knihovny, které pracují s objekty tohoto typu struktury **char**.
 
 ## <a name="example"></a>Příklad
 
-Viz definice TypeDef a členské funkce třídy šablony [char_traits – třída](../standard-library/char-traits-struct.md)
+Zobrazit – definice TypeDef a členské funkce třídy šablony [char_traits – třída](../standard-library/char-traits-struct.md)

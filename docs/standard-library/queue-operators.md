@@ -1,5 +1,5 @@
 ---
-title: '&lt;fronty&gt; operátory | Microsoft Docs'
+title: '&lt;fronty&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: ddcc5ab787e4eba060960207a5260a571a64ff4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138eddc6704b5e12798ccceacc5b3f37b3df1d96
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859446"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958289"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;fronty&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
 
-Testy, pokud objekt fronty na levé straně operátoru není stejný jako fronty objekt na pravé straně.
+Testuje, zda je objekt fronty na levé straně operátoru není roven objektu fronty na pravé straně.
 
 ```cpp
 bool operator!=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -44,17 +44,17 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **fronty**.
+*levé* objekt typu `queue`.
 
-`right` Objekt typu **fronty**.
+*správné* objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud fronty nejsou stejné; **false** Pokud fronty jsou stejné.
+**Hodnota TRUE** Pokud fronty nejsou stejné; **false** Pokud fronty jsou si rovny.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty fronty je založena na pairwise porovnání jejich součástí. Dvě fronty jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi objekty fronty je založen na pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dvě fronty jsou si rovny. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -99,9 +99,9 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Testy, pokud je objekt fronty na levé straně operátoru menší než fronty objekt na pravé straně.
+Testuje, zda je objekt fronty na levé straně operátoru menší než objekt fronty na pravé straně.
 
 ```cpp
 bool operator<(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -109,17 +109,17 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **fronty**.
+*levé* objekt typu `queue`.
 
-`right` Objekt typu **fronty**.
+*správné* objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud fronty na levé straně operátoru je menší než a není rovno fronty na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud fronty na levé straně operátoru menší než a ne do fronty na pravé straně operátoru jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty fronty je založena na pairwise porovnání jejich součástí. Je menší – než vztah mezi dvěma objekty fronty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi objekty fronty je založen na pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty fronty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -160,9 +160,9 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Pokud fronty objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt fronty na pravé straně.
+Testuje, zda je objekt fronty na levé straně operátoru je menší než nebo rovna hodnotě objekt fronty na pravé straně.
 
 ```cpp
 bool operator<=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -170,17 +170,17 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **fronty**.
+*levé* objekt typu `queue`.
 
-`right` Objekt typu **fronty**.
+*správné* objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud je fronta na levé straně operátoru striktně menší než fronty na pravé straně operátoru; v opačném případě **false**.
+**Hodnota TRUE** Pokud fronta na levé straně operátoru je striktně menší než fronty na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty fronty je založena na pairwise porovnání jejich součástí. Je menší než nebo rovna na relaci mezi dvěma queue – objekty je založena na porovnání první pár nerovné elementů.
+Porovnání mezi objekty fronty je založen na pairwise porovnání jejich prvky. Je menší než nebo rovna vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -225,7 +225,7 @@ The queue q1 is less than or equal to the queue q3.
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Testy, pokud je objekt fronty na levé straně operátoru rovná fronty objekt na pravé straně.
+Testuje, zda je objekt fronty na levé straně operátoru roven objektu fronty na pravé straně.
 
 ```cpp
 bool operator==(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -233,17 +233,17 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **fronty**.
+*levé* objekt typu `queue`.
 
-`right` Objekt typu **fronty**.
+*správné* objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud fronty nejsou stejné; **false** Pokud fronty jsou stejné.
+**Hodnota TRUE** Pokud fronty nejsou stejné; **false** Pokud fronty jsou si rovny.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty fronty je založena na pairwise porovnání jejich součástí. Dvě fronty jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi objekty fronty je založen na pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dvě fronty jsou si rovny. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -287,9 +287,9 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Testy, pokud je objekt fronty na levé straně operátoru větší než fronty objekt na pravé straně.
+Testuje, zda je objekt fronty na levé straně operátoru větší než objekt fronty na pravé straně.
 
 ```cpp
 bool operator>(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -297,17 +297,17 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **fronty**.
+*levé* objekt typu `queue`.
 
-`right` Objekt typu **fronty**.
+*správné* objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud je fronta na levé straně operátoru striktně menší než fronty na pravé straně operátoru; v opačném případě **false**.
+**Hodnota TRUE** Pokud fronta na levé straně operátoru je striktně menší než fronty na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty fronty je založena na pairwise porovnání jejich součástí. Delší – než vztah mezi dvěma objekty fronty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi objekty fronty je založen na pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty fronty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -351,9 +351,9 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Testy, pokud je objekt fronty na levé straně operátoru větší než nebo rovna hodnotě objekt fronty na pravé straně.
+Testuje, zda je objekt fronty na levé straně operátoru větší než nebo rovna hodnotě objekt fronty na pravé straně.
 
 ```cpp
 bool operator>=(const queue <Type, Container>& left, const queue <Type, Container>& right,);
@@ -361,17 +361,17 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu **fronty**.
+*levé* objekt typu `queue`.
 
-`right` Objekt typu **fronty**.
+*správné* objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud je fronta na levé straně operátoru striktně menší než fronty na pravé straně operátoru; v opačném případě **false**.
+**Hodnota TRUE** Pokud fronta na levé straně operátoru je striktně menší než fronty na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty fronty je založena na pairwise porovnání jejich součástí. Dvě fronty jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi objekty fronty je založen na pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dvě fronty jsou si rovny. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -414,6 +414,6 @@ The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<fronty >](../standard-library/queue.md)<br/>

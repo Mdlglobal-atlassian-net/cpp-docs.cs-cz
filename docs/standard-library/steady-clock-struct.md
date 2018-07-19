@@ -1,5 +1,5 @@
 ---
-title: steady_clock – struktura | Microsoft Docs
+title: steady_clock – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 05/22/2018
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569895"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959722"
 ---
 # <a name="steadyclock-struct"></a>steady_clock – struktura
 
-Představuje *konstantní* hodiny.
+Představuje *stabilní* hodiny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,19 +33,19 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Poznámky
 
-V systému Windows `steady_clock` zabalí `QueryPerformanceCounter` funkce.
+Na Windows `steady_clock` zabalí `QueryPerformanceCounter` funkce.
 
-Hodiny, které je *monotónní* Pokud hodnotu, která je vrácen první volání `now` je vždy menší než nebo rovna hodnotu, která je vrácena voláním následné `now`. Hodiny, které je *konstantní* Pokud je *monotónní* a pokud je doba mezi počtu taktů konstantní.
+Hodiny jsou *monotónní* Pokud hodnotu, která je vrácena prvním voláním do `now` je vždy menší než hodnota, která je vrácena následujícím voláním do `now`. Hodiny jsou *stabilní* jde *monotónní* a je-li doba mezi cykly hodin konstantní.
 
-`high_resolution_clock` je typedef pro `steady_clock`.
+`high_resolution_clock` Definice TypeDef pro `steady_clock`.
 
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
 |Název|Popis|
 |----------|-----------------|
-|`steady_clock::duration`|Synonymum pro `nanoseconds`, definované v \<typu chrono >.|
-|`steady_clock::period`|Synonymum pro `nano`, definované v \<poměr >.|
-|`steady_clock::rep`|Synonymum pro **dlouho** **dlouho**, typ, který se používá k reprezentování počet v omezením instance počtu taktů `duration`.|
+|`steady_clock::duration`|Synonymum pro `nanoseconds`definované v \<chrono >.|
+|`steady_clock::period`|Synonymum pro `nano`definované v \<poměr >.|
+|`steady_clock::rep`|Synonymum pro **dlouhé** **dlouhé**, typ, který reprezentuje počet taktů v uzavřeném vytváření instancí `duration`.|
 |`steady_clock::time_point`|Synonymum pro `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Veřejné funkce
@@ -58,11 +58,11 @@ Hodiny, které je *monotónní* Pokud hodnotu, která je vrácen první volání
 
 |Název|Popis|
 |----------|-----------------|
-|`steady_clock::is_steady`|Obsahuje `true`. A `steady_clock` je *konstantní*.|
+|`steady_clock::is_steady`|Obsahuje **true**. A `steady_clock` je *stabilní*.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<typu chrono >
+**Záhlaví:** \<chrono >
 
 **Namespace:** std::chrono
 

@@ -1,5 +1,5 @@
 ---
-title: value_compare – třída | Microsoft Docs
+title: value_compare – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594f3aaa45638ff2ab5d184a771070d87dbeb0bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856580"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957105"
 ---
 # <a name="valuecompare-class"></a>value_compare – třída
 
-Poskytuje objekt funkce, který můžete porovnat elementy hash_map srovnáním jejich klíčů určit jejich relativní pořadí v hash_map.
+Poskytuje objekt funkce, který může porovnat elementy hash_map porovnáním hodnot jejich klíče pro určení jejich relativního pořadí v hash_map –.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,9 +49,9 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Porovnání kritéria poskytované value_compare – mezi **value_types** celou elementů obsažených hash_map je vyvolané z porovnání mezi klíče příslušných elementů ve vytváření pomocná třída. Operátor členské funkce používá objekt **comp** typu `key_compare` uložené v objektu funkce poskytované value_compare – k porovnání klíč řazení součástí dva elementy.
+Porovnání kritérií poskytované value_compare – mezi `value_types` celé elementů obsažených hash_map je vyvolaných z porovnání mezi službou klíče příslušných elementů pomocí vytváření pomocná třída. Objekt používá operátor členské funkce `comp` typu `key_compare` uloženou v objektu funkce poskytované value_compare – pro porovnání dvou prvků komponenty klíč řazení.
 
-Pro hash_sets a hash_multisets, které jsou jednoduché kontejnery, kde jsou identické s hodnotami element hodnoty klíče, je ekvivalentní value_compare – `key_compare`, hash_maps a hash_multimaps nejsou, protože hodnota typu `pair` elementy není identické s hodnotou klíče elementu.
+Pro hash_sets a hash_multisets, které jsou jednoduché kontejnery, ve kterém jsou shodné s hodnoty prvků hodnoty klíče, je ekvivalentní value_compare – `key_compare`; pro hash_maps a hash_multimaps nejsou, protože hodnota typu `pair` prvky není stejný jako hodnotu klíče prvku.
 
 ## <a name="example"></a>Příklad
 
@@ -61,9 +61,9 @@ Podívejte se na příklad pro [hash_map::value_comp](../standard-library/hash-m
 
 **Header:** \<hash_map>
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [binary_function – struktura](../standard-library/binary-function-struct.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

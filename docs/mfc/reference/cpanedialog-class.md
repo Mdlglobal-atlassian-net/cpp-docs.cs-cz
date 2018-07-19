@@ -1,5 +1,5 @@
 ---
-title: Třída CPaneDialog | Microsoft Docs
+title: Cpanedialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: b0edc3a255d3778711b2b8e74bde448dc34c814c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078540"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849084"
 ---
-# <a name="cpanedialog-class"></a>CPaneDialog – třída
-`CPaneDialog` Třída podporuje nemodální, lze ukotvit dialogové okno.  
+# <a name="cpanedialog-class"></a>Cpanedialog – třída
+`CPaneDialog` Podporuje nemodální ukotvitelné dialogové třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,22 +51,22 @@ class CPaneDialog : public CDockablePane
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CPaneDialog::Create](#create)|Dialogové okno lze ukotvit vytvoří a připojí jej k `CPaneDialog` objektu.|  
-|`CPaneDialog::CreateObject`|Rozhraní používá k vytvoření dynamických instance tohoto typu třídy.|  
-|`CPaneDialog::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Zpracovává [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy. (Znovu definuje `CBasePane::HandleInitDialog`.)|  
-|`CPaneDialog::OnEraseBkgnd`|Zpracovává [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zprávy. (Znovu definuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
-|`CPaneDialog::OnLButtonDblClk`|Zpracovává [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy. (Znovu definuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
-|`CPaneDialog::OnLButtonDown`|Zpracovává [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) zprávy. (Znovu definuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Voláno rámcem aktualizace dialogového okna pole. (Přepisuje [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|Zpracovává [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) zprávy. (Znovu definuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
-|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Určuje šablonu pro dialogové okno, které je kontejneru ovládacího prvku OLE.|  
+|[CPaneDialog::Create](#create)|Vytvoří ukotvitelné dialogové okno a připojí ho k `CPaneDialog` objektu.|  
+|`CPaneDialog::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|  
+|`CPaneDialog::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Zpracovává [nezavěsíte](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy. (Předefinuje `CBasePane::HandleInitDialog`.)|  
+|`CPaneDialog::OnEraseBkgnd`|Zpracovává [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) zprávy. (Předefinuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
+|`CPaneDialog::OnLButtonDblClk`|Zpracovává [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) zprávy. (Předefinuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
+|`CPaneDialog::OnLButtonDown`|Zpracovává [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) zprávy. (Předefinuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Volá se rozhraním, chcete-li aktualizovat pole dialogovém okně. (Přepíše [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnWindowPosChanging`|Zpracovává [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) zprávy. (Předefinuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Určuje šablonu pro dialogové okno, které je kontejnerem ovládacího prvku OLE.|  
   
 ## <a name="remarks"></a>Poznámky  
- Vytvořit `CPaneDialog` objektu ve dvou krocích. Nejprve vytvořte objekt v kódu. Za druhé volání [CPaneDialog::Create](#create). Musíte zadat ID platným prostředkem šablony název nebo šablony a předat ukazatel do nadřazeného okna. Proces vytvoření, jinak selže. Dialogové okno musíte zadat ws_child – a ws_visible – styl. Doporučujeme také určit ws_clipchildren – a ws_clipsiblings – styly. Další informace najdete v tématu [styly oken](styles-used-by-mfc.md#window-styles).  
+ Vytvoření `CPaneDialog` objektu ve dvou krocích. Nejprve se vytvoří objekt v kódu. Za druhé volání [CPaneDialog::Create](#create). Je nutné zadat Identifikátor názvu nebo šabloně platný prostředek šablony a předat ukazatel do nadřazeného okna. V opačném případě se nezdaří v procesu vytváření. Dialogové okno musíte zadat WS_CHILD a WS_VISIBLE stylu. Doporučujeme zadat také WS_CLIPCHILDREN a WS_CLIPSIBLINGS styly. Další informace najdete v tématu [styly oken](styles-used-by-mfc.md#window-styles).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -78,13 +78,13 @@ class CPaneDialog : public CDockablePane
   
  [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
- [CPaneDialog](../../mfc/reference/cpanedialog-class.md)  
+ [Cpanedialog –](../../mfc/reference/cpanedialog-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxpanedialog.h  
   
 ##  <a name="create"></a>  CPaneDialog::Create  
- Vytvoří dialogové okno ukotvení a připojí jej k `CPaneDialog` objektu.  
+ Vytvoří ukotvené dialogové okno a připojí ho k `CPaneDialog` objektu.  
   
 ```  
 BOOL Create(
@@ -122,46 +122,46 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *lpszWindowName*  
+ [in] *lpszWindowName*  
  Název dialogového okna ukotvení.  
   
- [v] *pParentWnd*  
+ [in] *pParentWnd*  
  Body do nadřazeného okna.  
   
- [v] *bHasGripper*  
- `TRUE` Chcete-li vytvořit dialogové okno ukotvení s popiskem (úchytu); v opačném `FALSE`.  
+ [in] *bHasGripper*  
+ TRUE, pokud chcete vytvořit dialogové okno ukotvení s popiskem (úchytu); v opačném případě hodnota FALSE.  
   
- [v] *lpszTemplateName*  
- Název šablony dialogového okna prostředků.  
+ [in] *lpszTemplateName*  
+ Název prostředku šablony dialogového okna.  
   
- [v] *nStyle*  
- Styl systému Windows.  
+ [in] *nStyle*  
+ Styl Windows.  
   
- [v] *nID*  
+ [in] *nID*  
  ID ovládacího prvku.  
   
- [v] *nIDTemplate*  
+ [in] *nIDTemplate*  
  ID prostředku šablony dialogového okna.  
   
- [v] *dwTabbedStyle*  
- Styl okna s kartami, který nastane, když uživatel nastavuje tažením jiné podokně ovládacího prvku na titulek v tomto podokně ovládacího prvku. Výchozí hodnota je `AFX_CBRS_REGULAR_TABS`. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metoda.  
+ [in] *dwTabbedStyle*  
+ Styl okna s kartami, která vznikne, když uživatel přetáhne jiného ovládacího prvku podokna na titulek tento ovládací prvek stavového řádku. Výchozí hodnota je AFX_CBRS_REGULAR_TABS. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
- [v] *dwControlBarStyle*  
- Atributy stylu Další. Výchozí hodnota je `AFX_DEFAULT_DOCKING_PANE_STYLE`. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metoda.  
+ [in] *dwControlBarStyle*  
+ Další šablony atributy. Výchozí hodnota je AFX_DEFAULT_DOCKING_PANE_STYLE. Další informace najdete v části poznámky [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tato metoda bude úspěšná; v opačném `FALSE`.  
+ Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `Create` metoda v `CPaneDialog` třídy. Tato ukázka je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje způsob použití `Create` metodu `CPaneDialog` třídy. V tomto příkladu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
 ##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
- Zpracovává [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy.  
+ Zpracovává [nezavěsíte](http://msdn.microsoft.com/library/windows/desktop/ms645428) zprávy.  
   
 ```  
 afx_msg LRESULT HandleInitDialog(
@@ -170,34 +170,34 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *wParam*  
- Popisovač ovládací prvek, který má být vybrán výchozí klávesnice.  
+ [in] *wParam*  
+ Zpracování do ovládacího prvku, který se zobrazí výchozí fokus klávesnice.  
   
- [v] *lParam*  
+ [in] *lParam*  
  Určuje další inicializační data.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud tato metoda je úspěšná. v opačném `FALSE`. Kromě toho `TRUE` nastaví fokus klávesnice do ovládacího prvku určeného *wParam* parametr; `FALSE` brání fokus klávesnice výchozí nastavení.  
+ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE. Kromě toho TRUE nastaví fokus klávesnice pro ovládací prvek určený *wParam* parameter; FALSE brání nastavení výchozí fokus klávesnice.  
   
 ### <a name="remarks"></a>Poznámky  
- Rozhraní používá tato metoda se inicializovat ovládací prvky a vzhled dialogového okna. Tato metoda volá framework předtím, než se zobrazí dialogové okno.  
+ Rozhraní používá tato metoda se inicializovat ovládací prvky a vzhled dialogového okna. Rozhraní volá tuto metodu, než se zobrazí dialogové okno.  
   
 ##  <a name="setoccdialoginfo"></a>  CPaneDialog::SetOccDialogInfo  
- Určuje šablonu pro dialogové okno, které je kontejneru ovládacího prvku OLE.  
+ Určuje šablonu pro dialogové okno, které je kontejnerem ovládacího prvku OLE.  
   
 ```  
 virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pOccDialogInfo*  
- Ukazatel na pole šablony dialogového okna, který se používá k vytvoření objektu pole dialogového okna. Hodnota tohoto parametru je následně předán do [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metoda.  
+ [in] *pOccDialogInfo*  
+ Ukazatel na pole šablony dialogového okna, která se používá k vytvoření objektu pole dialogového okna. Hodnota tohoto parametru je následně předán [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metody.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vždy `TRUE`.  
+ Vždy TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda podporuje [COccManager](../../mfc/reference/coccmanager-class.md) třída, která spravuje OLE řízení lokality a ovládací prvky ActiveX. Struktura _AFX_OCC_DIALOG_INFO je definována v záhlaví souboru afxocc.h.  
+ Tato metoda podporuje [coccmanager –](../../mfc/reference/coccmanager-class.md) třídu, která spravuje OLE ovládací prvky stránky a ovládací prvky ActiveX. Struktura _AFX_OCC_DIALOG_INFO je definována v hlavičkovém souboru afxocc.h.  
   
 ## <a name="see-also"></a>Viz také  
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   

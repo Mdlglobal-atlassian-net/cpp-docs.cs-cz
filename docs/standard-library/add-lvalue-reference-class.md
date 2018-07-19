@@ -1,5 +1,5 @@
 ---
-title: add_lvalue_reference – třída | Microsoft Docs
+title: add_lvalue_reference – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4d91cfdafcbe81d568bdfffa5ee1b7c99d6bf8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 710d7c154477320f7fb65f52f430f4c0666762c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956944"
 ---
 # <a name="addlvaluereference-class"></a>add_lvalue_reference – třída
 
-Díky odkaz na typ z typu.
+Umožňuje odkazovat na typ z typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,11 +39,11 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T* typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance typu modifikátor obsahuje upravit – typ, který je `T` Pokud `T` je odkaz na lvalue, jinak `T&`.
+Instance modifikátoru typu obsahuje změněný typ, který je *T* Pokud *T* je odkaz na lvalue, v opačném případě `T&`.
 
 ## <a name="example"></a>Příklad
 
@@ -72,9 +72,9 @@ add_lvalue_reference_t<int> == int
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [remove_reference – třída](../standard-library/remove-reference-class.md)<br/>

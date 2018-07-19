@@ -1,5 +1,5 @@
 ---
-title: aligned_storage – třída | Microsoft Docs
+title: aligned_storage – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958871"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage – třída
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`Len` Velikost objektu.
+*Len* velikost objektu.
 
-`Align` Zarovnání objektu.
+*Zarovnat* zarovnání objektu.
 
 ## <a name="remarks"></a>Poznámky
 
-Typedef člen šablony `type` se jedná o synonymum typu POD s zarovnání `Align` a velikost `Len`. `Align` musí být roven `alignment_of<T>::value` pro nějaký typ `T`, nebo výchozí zarovnání.
+Definice typu člena šablony `type` je synonymum pro typ POD se zarovnáním *zarovnat* a velikost *Len*. *Zarovnat* musí být rovna `alignment_of<T>::value` pro nějaký typ `T`, nebo výchozí zarovnání.
 
 ## <a name="example"></a>Příklad
 
@@ -77,9 +77,9 @@ aligned to double == 8
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [alignment_of – třída](../standard-library/alignment-of-class.md)<br/>

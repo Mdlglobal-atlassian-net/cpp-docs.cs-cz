@@ -1,5 +1,5 @@
 ---
-title: Třída CInternetSession | Microsoft Docs
+title: Cinternetsession – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -42,16 +42,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337167"
 ---
-# <a name="cinternetsession-class"></a>CInternetSession – třída
+# <a name="cinternetsession-class"></a>Cinternetsession – třída
 
-Vytvoří a inicializuje jeden nebo několik souběžných relací Internetu a v případě potřeby popisuje připojení k proxy serveru.
+Vytvoří a inicializuje jednu nebo několik souběžných relací Internetu a v případě potřeby popisuje připojení k proxy serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,11 +75,11 @@ class CInternetSession : public CObject
 |[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Vytváří rutina zpětného volání stavu.|
 |[CInternetSession::GetContext](#getcontext)|Zavře připojení k Internetu Internet relace je ukončena.|
 |[CInternetSession::GetCookie](#getcookie)|Vrátí soubory cookie pro zadanou adresu URL a všechny jeho nadřazený objekt adresy URL.|
-|[CInternetSession::GetCookieLength](#getcookielength)|Načte proměnnou určující délku souboru cookie uložené ve vyrovnávací paměti.|
-|[CInternetSession::GetFtpConnection](#getftpconnection)|Otevře se relace FTP serveru. Přihlášení uživatele.|
-|[CInternetSession::GetGopherConnection](#getgopherconnection)|Otevře gopher server pro aplikaci, která se pokouší otevřít připojení.|
-|[CInternetSession::GetHttpConnection](#gethttpconnection)|Otevře se server HTTP pro aplikaci, která se pokouší otevřít připojení.|
-|[CInternetSession::OnStatusCallback](#onstatuscallback)|Aktualizuje stav operace, pokud je povoleno stav zpětného volání.|
+|[CInternetSession::GetCookieLength](#getcookielength)|Načte proměnnou určující délku souboru cookie uloženého ve vyrovnávací paměti.|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Otevře se relace FTP se serverem. Přihlášení uživatele.|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|Otevře se gopher serveru pro aplikaci, která se pokouší otevřít připojení.|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Otevře se server HTTP pro aplikace, která se pokouší otevřít připojení.|
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Aktualizuje stav operace, když je povolený stav zpětného volání.|
 |[CInternetSession::OpenURL](#openurl)|Analyzuje a otevře adresu URL.|
 |[CInternetSession::SetCookie](#setcookie)|Nastaví soubor cookie pro zadanou adresu URL.|
 |[CInternetSession::SetOption](#setoption)|Nastaví možnosti pro relaci Internet.|
@@ -88,34 +88,34 @@ class CInternetSession : public CObject
 
 |Název|Popis|
 |----------|-----------------|
-|[CInternetSession::operator HINTERNET](#operator_hinternet)|Popisovač pro aktuální relaci Internet.|
+|[CInternetSession::operator HINTERNET](#operator_hinternet)|Popisovač s aktuální relací Internetu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud po dobu trvání aplikace musí být zachovaná připojení k Internetu, můžete vytvořit `CInternetSession` člena třídy [CWinApp](../../mfc/reference/cwinapp-class.md).
+Pokud vaše připojení k Internetu, musí být zachována po dobu trvání aplikace, můžete vytvořit `CInternetSession` člena třídy [CWinApp](../../mfc/reference/cwinapp-class.md).
 
-Po vytvoření relace Internetu můžete volat [OpenURL](#openurl). `CInternetSession` potom analyzuje adresu URL pro vás voláním globální funkce [afxparseurl –](internet-url-parsing-globals.md#afxparseurl). Bez ohledu na jeho typ protokolu `CInternetSession` interpretuje adresu URL a spravuje za vás. Ho může zpracovávat požadavky pro místní soubory identifikovaný pomocí adresy URL prostředku "file://". `OpenURL` vrátí ukazatel [CStdioFile](../../mfc/reference/cstdiofile-class.md) objekt, pokud název předat je do místního souboru.
+Jakmile ověříte relace k Internetu, můžete volat [OpenURL](#openurl). `CInternetSession` pak analyzuje adresu URL pro vás voláním globální funkce [afxparseurl –](internet-url-parsing-globals.md#afxparseurl). Bez ohledu na její typ protokolu `CInternetSession` interpretuje adresu URL a spravuje za vás. To může zpracovávat požadavky pro místní soubory identifikované pomocí adresy URL prostředku "file://". `OpenURL` vrátí ukazatel [cstdiofile –](../../mfc/reference/cstdiofile-class.md) objektu, pokud název předat je do místního souboru.
 
-Pokud otevřete adresu URL na serveru Internetu pomocí `OpenURL`, si můžete přečíst informace z webu. Pokud chcete provádět akce specifické služby (pro příklad, HTTP, FTP nebo gopher) na soubory umístěné na serveru, je potřeba vytvořit na příslušné připojení s tímto serverem. Chcete-li otevřít konkrétní typ připojení přímo na konkrétní službu, použijte jednu z následujících členské funkce:
+Pokud je otevřít na adresu URL na serveru Internetu pomocí `OpenURL`, si můžete přečíst informace z webu. Pokud chcete provádět konkrétní službu (pro příklad, protokolu HTTP, FTP nebo gopher) na soubory umístěné na serveru, je potřeba vytvořit na příslušné připojení s tímto serverem. Pokud chcete otevřít konkrétní typ připojení přímo do konkrétní služby, použijte jednu z následujících členské funkce:
 
 - [GetGopherConnection](#getgopherconnection) k otevření připojení ke službě gopher.
 
-- [GetHttpConnection](#gethttpconnection) k otevření připojení do služby protokolu HTTP.
+- [GetHttpConnection](#gethttpconnection) k otevření připojení ke službě HTTP.
 
-- [GetFtpConnection](#getftpconnection) k otevření připojení do služby FTP.
+- [GetFtpConnection](#getftpconnection) k otevření připojení ke službě FTP.
 
-[SetOption](#setoption) umožňuje nastavit možnosti dotazu vaší relace, jako je například hodnoty časového limitu, počet opakovaných pokusů a tak dále.
+[SetOption –](#setoption) umožňuje nastavit možnosti dotazu relace, jako jsou hodnoty časového limitu, počet opakovaných pokusů a tak dále.
 
-`CInternetSession` Členské funkce [SetCookie](#setcookie), [GetCookie](#getcookie), a [GetCookieLength](#getcookielength) poskytují způsob, jak spravovat databáze Win32 souboru cookie, pomocí kterého se servery a skripty udržovat informace o klientské pracovní stanice stavu.
+`CInternetSession` Členské funkce [SetCookie](#setcookie), [GetCookie](#getcookie), a [GetCookieLength](#getcookielength) poskytují způsob, jak spravovat databázi souboru cookie Win32, pomocí kterého spravovat servery a skripty informace o klientské pracovní stanice stavu.
 
-Další informace o základních úloh programování Internetu najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md). Obecné informace o používání tříd WinInet knihovny MFC, najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Další informace o základní Internet programovacích úloh, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md). Obecné informace o pomocí tříd WinInet knihovny MFC, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` vyvolá výjimku [afxthrownotsupportedexception –](exception-processing.md#afxthrownotsupportedexception) pro typy nepodporované služby. Aktuálně jsou podporovány pouze následující typy služby: FTP, HTTP, gopher a souboru.
+> `CInternetSession` vyvolá výjimku [afxthrownotsupportedexception –](exception-processing.md#afxthrownotsupportedexception) pro typy nepodporované služeb. Aktuálně jsou podporovány pouze následující typy služeb: FTP, HTTP, gopher a soubor.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)  
+[Třídy CObject](../../mfc/reference/cobject-class.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>Požadavky
@@ -124,7 +124,7 @@ Další informace o základních úloh programování Internetu najdete v člán
 
 ## <a name="cinternetsession"></a> CInternetSession::CInternetSession
 
-Tento člen funkce je volána, když `CInternetSession` je vytvořen objekt.
+Tato členská funkce je volána, když `CInternetSession` je vytvořen objekt.
 
 ```cpp
 CInternetSession(
@@ -139,48 +139,48 @@ CInternetSession(
 ### <a name="parameters"></a>Parametry
 
 *pstrAgent*  
-Ukazatel na řetězec, který identifikuje název aplikace nebo entity volání funkcí Internetu (například "Microsoft internetovém prohlížeči"). Pokud *pstrAgent* je **NULL** volá framework (výchozí), globální funkce [afxgetappname –](application-information-and-management.md#afxgetappname), která vrací řetězec ukončené hodnotou null obsahující aplikace Jméno. Některé protokoly, použijte tento řetězec k identifikaci vaší aplikace na server.
+Ukazatel na řetězec, který určuje název aplikace nebo entity volání funkcí Internetu (například "Microsoft internetovém prohlížeči"). Pokud *pstrAgent* má hodnotu NULL (výchozí), rámec volá funkci globální [afxgetappname –](application-information-and-management.md#afxgetappname), která vrací řetězec zakončený hodnotou null obsahující název aplikace. Některé protokoly použít tento řetězec k identifikaci vaší aplikace na server.
 
 *dwContext*  
-Identifikátor kontextu pro danou operaci. *dwContext* identifikuje vrácené informace o stavu operace [CInternetSession::OnStatusCallback](#onstatuscallback). Ve výchozím nastavení je 1; však můžete explicitně přiřadit konkrétní kontext ID pro operaci. Objekt a všechny práce, kterou dělá bude spojený s ID tohoto kontextu.
+Identifikátor kontextu operace. *dwContext* identifikuje informace o stavu operace vracené [CInternetSession::OnStatusCallback](#onstatuscallback). Výchozí hodnota je nastavená na 1; Můžete však explicitně přiřadit konkrétní kontext ID operace. Objekt a veškerou práci, kterou provádí bude spojená s ID tohoto kontextu.
 
 *dwAccessType*  
-Zadejte přístup požadovaný. Platnými hodnotami, právě jeden z nich může být zadána jsou následující:
+Typ přístupu vyžaduje. Následují platné hodnoty, může být zadána přesně jeden z nich:
 
-- `INTERNET_OPEN_TYPE_PRECONFIG` Připojení pomocí předem nakonfigurovaných nastavení v registru. Tento typ přístupu je nastaven jako výchozí. Chcete-li připojit prostřednictvím proxy serveru TIS, nastavte *dwAccessType* na tuto hodnotu; pak můžete nastavit registru správně.
+- INTERNET_OPEN_TYPE_PRECONFIG připojení pomocí předem nakonfigurovaných nastavení v registru. Tento typ přístupu je nastaven jako výchozí. Připojit přes proxy server je čas nastavit *dwAccessType* na tuto hodnotu; poté nastavíte registru odpovídajícím způsobem.
 
-- `INTERNET_OPEN_TYPE_DIRECT` Připojte přímo k Internetu.
+- INTERNET_OPEN_TYPE_DIRECT připojit přímo k Internetu.
 
-- `INTERNET_OPEN_TYPE_PROXY` Připojte prostřednictvím proxy serveru CERN.
+- Připojte se přes proxy server CERN INTERNET_OPEN_TYPE_PROXY.
 
-Informace o připojení s různými typy proxy najdete v tématu [kroky v typické aplikaci klienta FTP](../../mfc/steps-in-a-typical-ftp-client-application.md).
+Informace o připojení s různými typy proxy serverů najdete v tématu [postup v typické aplikaci klienta FTP](../../mfc/steps-in-a-typical-ftp-client-application.md).
 
 *pstrProxyName*  
-Název upřednostňované proxy CERN Pokud *dwAccessType* je nastaven jako `INTERNET_OPEN_TYPE_PROXY`. Výchozí hodnota je **NULL**.
+Název proxy upřednostňované CERN Pokud *dwAccessType* je nastaven jako INTERNET_OPEN_TYPE_PROXY. Výchozí hodnota je NULL.
 
 *pstrProxyBypass*  
-Ukazatel na řetězec obsahující volitelný seznam adres serveru. Tyto adresy mohou obejít, při použití přístup k proxy. Pokud **NULL** je zadána hodnota, seznam obcházení budou číst z registru. Tento parametr má smysl pouze v případě *dwAccessType* je nastaven na `INTERNET_OPEN_TYPE_PROXY`.
+Ukazatel na řetězec obsahující volitelný seznam adres serveru. Tyto adresy může obejít, při použití proxy serveru přístup. Pokud není zadána hodnota NULL, seznam obcházení bude číst z registru. Tento parametr má smysl pouze v případě *dwAccessType* je nastavena na INTERNET_OPEN_TYPE_PROXY.
 
 *dwFlags*  
-Označuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty patří:
+Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty:
 
-- `INTERNET_FLAG_DONT_CACHE` Neukládat do mezipaměti dat, buď místně nebo v veškeré servery brány.
+- INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
 
-- `INTERNET_FLAG_OFFLINE` Při stahování spokojeni prostřednictvím pouze trvalé mezipaměti. Pokud položka v mezipaměti neexistuje, je vrácena odpovídající chybový kód. Tento příznak mohou být kombinovány s bitové hodnotě `OR` ( **&#124;**) operátor.
+- Stáhnout INTERNET_FLAG_OFFLINE operace jsou splněny prostřednictvím trvalého mezipaměti. Pokud položka v mezipaměti neexistuje, vrátí se odpovídající chybový kód. Tento příznak může kombinované pomocí bitového **nebo** ( **&#124;**) – operátor.
 
 ### <a name="remarks"></a>Poznámky
 
-`CInternetSession` je první funkce Internet volání aplikací. Inicializuje interních datových strukturách se a připraví pro budoucí volání z aplikace.
+`CInternetSession` první funkce Internet volány aplikace. Inicializuje interních datových struktur a připraví pro budoucí volání z aplikace.
 
-Pokud lze otevřít žádné připojení k Internetu, `CInternetSession` vyvolá [afxthrowinternetexception –](internet-url-parsing-globals.md#afxthrowinternetexception).
+Pokud můžete otevřít žádné připojení k Internetu, `CInternetSession` vyvolá [afxthrowinternetexception –](internet-url-parsing-globals.md#afxthrowinternetexception).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
+Podívejte se na příklad pro [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md).
 
 ## <a name="close"></a>  CInternetSession::Close
 
-Volání této funkce člen, když aplikace dokončí, pomocí `CInternetSession` objektu.
+Po dokončení vaší aplikace pomocí zavolat tuto členskou funkci `CInternetSession` objektu.
 
 ```cpp
 virtual void Close();
@@ -188,11 +188,11 @@ virtual void Close();
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
+Podívejte se na příklad pro [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md).
 
 ## <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback
 
-Volání této funkce člen povolit stav zpětného volání.
+Voláním této členské funkce umožňující stav zpětného volání.
 
 ```cpp
 BOOL EnableStatusCallback(BOOL bEnable = TRUE);
@@ -201,25 +201,25 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*  
-Určuje, zda je povoleno zpětného volání. Výchozí hodnota je **TRUE**.
+Určuje, zda je povoleno zpětného volání. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové hodnoty v případě úspěchu; jinak 0. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Při zpracování zpětného volání stav, můžete zadat stav průběh operace (například překladu názvu, připojení k serveru a tak dále) ve stavovém řádku aplikace. Zobrazení stav operace je žádoucí především při dlouhodobé operaci.
+Při zpracovávání zpětného volání stav, můžete zadat informace o průběhu operace (například překladu názvu, připojení k serveru a tak dále) stavu ve stavovém řádku aplikace. Zobrazení stavu operace je žádoucí, zejména v průběhu dlouhodobé operace.
 
-Vzhledem k tomu, že během zpracování žádosti dojde k zpětná volání, musí aplikace tráví co nejméně času v zpětného volání, aby se zabránilo snížení výkonu propustnost dat k síti. Například vložení do dialogového okna v zpětné volání, může být taková časově náročná operace, že server ukončí požadavek.
+Vzhledem k tomu, že zpětná volání, k nimž došlo při zpracování požadavku, by měla aplikace tráví několika času je možné zpětné volání, aby se zabránilo snížení propustnosti dat k síti. Nabízení dialogovému oknu ve zpětném volání může třeba tyto operace může trvat dlouho, že server ukončí žádost.
 
-Stav zpětného volání nelze odebrat, dokud všechny zpětná volání, které čekají na vyřízení.
+Stav zpětného volání nelze odebrat, pokud jsou všechny zpětná volání čekající na vyřízení.
 
-Asynchronně zpracovat žádné operace, musíte vytvořit vlastní vlákno nebo použít funkce WinInet bez MFC.
+Na zpracování jakékoli operace asynchronně, musíte vytvořit vlastní vlákno nebo používají funkce rozhraní WinInet bez knihovny MFC.
 
 ## <a name="getcontext"></a>  CInternetSession::GetContext
 
-Volání této funkce člen má být získána hodnota kontextu pro relaci konkrétní aplikace.
+Voláním této členské funkce má být získána hodnota kontext pro konkrétní aplikaci relace.
 
 ```cpp
 DWORD_PTR GetContext() const;
@@ -227,17 +227,17 @@ DWORD_PTR GetContext() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Definované aplikací kontext identifikátor.
+Definované aplikací kontextu identifikátor.
 
 ### <a name="remarks"></a>Poznámky
 
-[Onstatuscallback –](#onstatuscallback) pomocí ID kontextu vrátila `GetContext` nahlásit stav konkrétní aplikace. Například pokud uživatel aktivuje požadavek na Internetu, která zahrnuje vrací informace o stavu, stav zpětného volání používá ID kontextu odesílat zprávy o stavu tohoto konkrétního požadavku. Pokud uživatel aktivuje dva samostatné Internet požadavky, že obojí zahrnuje vrací informace o stavu `OnStatusCallback` používá identifikátory kontextu vrátit stav o jejich odpovídajících požadavků. V důsledku toho kontextu identifikátor se používá pro všechny operace stav zpětného volání a je přidružená k relaci, dokud relace se ukončí.
+[Onstatuscallback –](#onstatuscallback) používá vrácené ID kontextu `GetContext` informuje o stavu konkrétní aplikaci. Například když uživatel aktivuje požadavek na Internetu, která zahrnuje vracení informací o stavu, stav zpětného volání používá ID kontextu účelem nahlášení stavu tohoto konkrétního požadavku. Pokud uživatel aktivuje dva samostatné Internet požadavků, obojí zahrnuje vracení informací o stavu `OnStatusCallback` pomocí identifikátorů kontextu návratový stav týkající se jejich odpovídajících požadavků. V důsledku toho identifikátor kontextu se používá pro všechny operace stav zpětného volání a je přidružená k relaci, dokud relace se ukončí.
 
 Další informace o asynchronních operací, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-Tato funkce člen implementuje chování funkce Win32 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování funkce Win32 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), jak je popsáno v sadě Windows SDK.
 
 ```cpp
 static BOOL GetCookie(
@@ -256,32 +256,32 @@ static BOOL GetCookie(
 ### <a name="parameters"></a>Parametry
 
 *pstrUrl*  
-Ukazatel na řetězec, který obsahuje adresu URL.
+Ukazatel na řetězec obsahující adresu URL.
 
 *pstrCookieName*  
-Ukazatel na řetězec, který obsahuje název souboru cookie, chcete-li získat pro zadané adrese URL.
+Ukazatel na řetězec obsahující název souboru cookie, chcete-li získat pro zadané adresy URL.
 
 *pstrCookieData*  
-V první přetížení ukazatel na řetězec obsahující adresu vyrovnávací paměti, která přijímá data souboru cookie. Tato hodnota může být **NULL**. V druhé přetížení, odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který chcete přijímat data souboru cookie.
+V první přetížení ukazatel na řetězec obsahující adresu vyrovnávací paměti, která přijímá data souborů cookie. Tato hodnota může být NULL. V druhé přetížení, odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu pro příjem dat souboru cookie.
 
 *dwBufLen*  
-Proměnná určení velikosti *pstrCookieData* vyrovnávací paměti. Pokud funkci úspěšné, vyrovnávací paměť obdrží množství dat, které jsou zkopírovány do *pstrCookieData* vyrovnávací paměti. Pokud *pstrCookieData* je **NULL**, tento parametr obdrží hodnotu, která určuje velikost vyrovnávací paměti nezbytné pro všechna data souboru cookie.
+Proměnná, určení velikosti *pstrCookieData* vyrovnávací paměti. Pokud funkce uspěje, vyrovnávací paměti přijímá množství dat, které jsou zkopírovány do *pstrCookieData* vyrovnávací paměti. Pokud *pstrCookieData* má hodnotu NULL, tento parametr přijímá hodnotu, která určuje velikost vyrovnávací paměti, která je nezbytná pro zkopírování všech dat souboru cookie.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí **TRUE** v případě úspěchu nebo **FALSE** jinak. Pokud volání selže, volání funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) a zjistěte příčinu této chyby. Platí následující hodnoty Chyba:
+V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE. Pokud volání selže, zavolejte funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) a zjistěte příčinu chyby. Platí následující hodnoty Chyba:
 
-- `ERROR_NO_MORE_ITEMS` Neexistuje žádný soubor cookie pro zadanou adresu URL a všech jejích nadřazených tříd.
+- ERROR_NO_MORE_ITEMS neexistuje žádný soubor cookie pro zadanou adresu URL a všech jejích nadřazených tříd.
 
-- `ERROR_INSUFFICIENT_BUFFER` Hodnota předaná *dwBufLen* je nedostatečná pro všechna data souboru cookie. Hodnota vrácená v *dwBufLen* velikost vyrovnávací paměti je nutné získat všechna data.
+- Hodnota předaná v ERROR_INSUFFICIENT_BUFFER *dwBufLen* nepostačuje pro zkopírování všech dat souboru cookie. Hodnota vrácená v *dwBufLen* velikost vyrovnávací paměti je nezbytné získat všechna data.
 
 ### <a name="remarks"></a>Poznámky
 
-V druhé přetížení MFC načte cookie data do zadaných `CString` objektu.
+V druhé přetížení MFC načítá data souborů cookie do zadané `CString` objektu.
 
 ## <a name="getcookielength"></a>  CInternetSession::GetCookieLength
 
-Volání této funkce člen získat délku souboru cookie uložené ve vyrovnávací paměti.
+Voláním této členské funkce získání délky souboru cookie uloženého ve vyrovnávací paměti.
 
 ```cpp
 static DWORD GetCookieLength(
@@ -292,14 +292,14 @@ static DWORD GetCookieLength(
 ### <a name="parameters"></a>Parametry
 
 *pstrUrl*  
-Ukazatel na řetězec, který obsahuje adresu URL
+Ukazatel na řetězec obsahující adresu URL
 
 *pstrCookieName*  
-Ukazatel na řetězec, který obsahuje název souboru cookie.
+Ukazatel na řetězec obsahující název souboru cookie.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `DWORD` hodnotu, která udává délku souboru cookie, uložené ve vyrovnávací paměti. Nula, pokud žádný soubor cookie s názvem indikován *pstrCookieName* existuje.
+Hodnota DWORD identifikující délku souboru cookie, uloženy ve vyrovnávací paměti. Nula, pokud žádný soubor cookie s názvem indikován *pstrCookieName* existuje.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -307,7 +307,7 @@ Tato hodnota se používá ve [GetCookie](#getcookie).
 
 ## <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection
 
-Volání této funkce člen k zahájení připojení FTP a získat ukazatel na `CFtpConnection` objektu.
+Voláním této funkce připojení FTP a získání ukazatele na člena `CFtpConnection` objektu.
 
 ```cpp
 CFtpConnection* GetFtpConnection(
@@ -324,39 +324,39 @@ CFtpConnection* GetFtpConnection(
 Ukazatel na řetězec obsahující název serveru FTP.
 
 *pstrUserName*  
-Ukazatel na řetězec ukončené hodnotou null, který určuje jméno uživatele k přihlášení. Pokud **NULL**, výchozí hodnota je anonymní.
+Ukazatel na řetězec zakončený hodnotou null, který určuje jméno uživatele k přihlášení. Pokud má hodnotu NULL, výchozí hodnota je anonymous.
 
 *pstrPassword*  
-Ukazatel na řetězec ukončené hodnotou null, který určuje heslo pro použití k protokolování. Pokud oba *pstrPassword* a *pstrUserName* jsou **NULL**, výchozí anonymního hesla je uživatelské jméno e-mailu. Pokud *pstrPassword* je **NULL** (nebo prázdný řetězec), ale *pstrUserName* není **NULL**, se používá prázdné heslo. Následující tabulka popisuje chování čtyři možné nastavení *pstrUserName* a *pstrPassword*:
+Ukazatel na řetězec zakončený hodnotou null, který určuje heslo pro použití k protokolování. Pokud mají oba *pstrPassword* a *pstrUserName* hodnotu Null, je výchozí heslo anonymní uživatelské jméno e-mailu. Pokud *pstrPassword* má hodnotu NULL (nebo prázdný řetězec), ale *pstrUserName* nemá hodnotu NULL, prázdné heslo se používá. Následující tabulka popisuje chování pro čtyři možných nastavení *pstrUserName* a *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslat na FTP server|
+|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslaných na FTP server|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|**NULL** nebo ""|**NULL** nebo ""|"anonymní"|Uživatelské jméno e-mailu|
-|Není-**NULL** řetězec|**NULL** nebo ""|*pstrUserName*|" "|
-|**HODNOTU NULL**|Není-**NULL** řetězec|**CHYBA**|**CHYBA**||
-|Není-**NULL** řetězec|Není-**NULL** řetězec|*pstrUserName*|*pstrPassword*|
+|Hodnotu NULL nebo ""|Hodnotu NULL nebo ""|"anonymní"|Uživatelské jméno e-mailu|
+|Řetězec NENULOVÉ|Hodnotu NULL nebo ""|*pstrUserName*|" "|
+|NULL|Řetězec NENULOVÉ|CHYBA|CHYBA||
+|Řetězec NENULOVÉ|Řetězec NENULOVÉ|*pstrUserName*|*pstrPassword*|
 
 *nPort*  
-Číslo, které identifikuje port TCP/IP použít na serveru.
+Číslo, které identifikuje port TCP/IP pro použití na serveru.
 
 *bPassive*  
-Určuje režim pasivní nebo aktivní pro tuto relaci FTP. Pokud nastavena na **TRUE**, nastaví rozhraní API Win32 `dwFlag` k `INTERNET_FLAG_PASSIVE`.
+Určuje režim pasivní nebo aktivní pro tuto relaci serveru FTP. Pokud je nastavena na hodnotu TRUE, nastaví rozhraní API systému Win32 `dwFlag` k INTERNET_FLAG_PASSIVE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CFtpConnection](../../mfc/reference/cftpconnection-class.md) objektu. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.
+Ukazatel [cftpconnection –](../../mfc/reference/cftpconnection-class.md) objektu. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetFtpConnection` připojí k serveru FTP a vytvoří a vrátí ukazatel na `CFTPConnection` objektu. Neprovede žádné konkrétní operaci na serveru. Pokud máte v úmyslu číst nebo zapisovat do souborů, například musíte provést tyto operace jako samostatné kroky. Viz třídy [CFtpConnection](../../mfc/reference/cftpconnection-class.md) a [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) informace o hledání souborů, otevírání souborů a čtení nebo zápis do souborů. Najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md) kroky při provádění běžných úloh připojení FTP.
+`GetFtpConnection` se připojí k serveru FTP a vytvoří a vrátí ukazatel `CFTPConnection` objektu. Neprovede žádné konkrétní operaci na serveru. Pokud máte v úmyslu čtení nebo zápis do souborů, například je nutné provést tyto operace jako samostatné kroky. Zobrazit třídy [cftpconnection –](../../mfc/reference/cftpconnection-class.md) a [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md) informace o vyhledávání souborů, otevírání souborů, čtení a zápis do souborů. Přečtěte si článek [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md) postup při provádění běžných úkolů připojení FTP.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
+Podívejte se na příklad pro [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md).
 
 ## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
-Volání této funkce člen a vytvořit nové připojení gopher získat ukazatel na `CGopherConnection` objektu.
+Voláním této funkce vytvořit nové připojení gopher a získání ukazatele na člena `CGopherConnection` objektu.
 
 ```cpp
 CGopherConnection* GetGopherConnection(
@@ -369,7 +369,7 @@ CGopherConnection* GetGopherConnection(
 ### <a name="parameters"></a>Parametry
 
 *pstrServer*  
-Ukazatel na řetězec obsahující název serveru gopher.
+Ukazatel na řetězec obsahující název gopher serveru.
 
 *pstrUserName*  
 Ukazatel na řetězec obsahující uživatelské jméno.
@@ -378,19 +378,19 @@ Ukazatel na řetězec obsahující uživatelské jméno.
 Ukazatel na řetězec obsahující přístupové heslo.
 
 *nPort*  
-Číslo, které identifikuje port TCP/IP použít na serveru.
+Číslo, které identifikuje port TCP/IP pro použití na serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objektu. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.
+Ukazatel [cgopherconnection –](../../mfc/reference/cgopherconnection-class.md) objektu. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetGopherConnection` připojí k serveru gopher a vytvoří a vrátí ukazatel na `CGopherConnection` objektu. Neprovede žádné konkrétní operaci na serveru. Pokud máte v úmyslu číst nebo zapisovat data, například musíte provést tyto operace jako samostatné kroky. Viz třídy [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), a [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) informace o hledání souborů, otevírání souborů a čtení nebo zápis do souborů. Informace o procházení serveru FTP najdete v tématu – členská funkce [OpenURL](#openurl). Najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md) kroky při provádění běžných úloh gopher připojení.
+`GetGopherConnection` připojí k serveru gopher a vytvoří a vrátí ukazatel `CGopherConnection` objektu. Neprovede žádné konkrétní operaci na serveru. Pokud chcete číst ani zapisovat data, například je nutné provést tyto operace jako samostatné kroky. Zobrazit třídy [cgopherconnection –](../../mfc/reference/cgopherconnection-class.md), [cgopherfile –](../../mfc/reference/cgopherfile-class.md), a [cgopherfilefind –](../../mfc/reference/cgopherfilefind-class.md) informace o vyhledávání souborů, otevírání souborů, čtení a zápis do souborů. Informace o procházení serveru FTP, naleznete v členské funkci [OpenURL](#openurl). Přečtěte si článek [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md) postup při provádění běžných úkolů gopher připojení.
 
 ## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
-Volání této funkce člen k zahájení připojení HTTP a získat ukazatel na `CHttpConnection` objektu.
+Voláním této funkce připojení HTTP a získání ukazatele na člena `CHttpConnection` objektu.
 
 ```cpp
 CHttpConnection* GetHttpConnection(
@@ -410,10 +410,10 @@ CHttpConnection* GetHttpConnection(
 ### <a name="parameters"></a>Parametry
 
 *pstrServer*  
-Ukazatel na řetězec obsahující název serveru protokolu HTTP.
+Ukazatel na řetězec obsahující název serveru HTTP.
 
 *nPort*  
-Číslo, které identifikuje port TCP/IP použít na serveru.
+Číslo, které identifikuje port TCP/IP pro použití na serveru.
 
 *pstrUserName*  
 Ukazatel na řetězec obsahující uživatelské jméno.
@@ -422,19 +422,19 @@ Ukazatel na řetězec obsahující uživatelské jméno.
 Ukazatel na řetězec obsahující přístupové heslo.
 
 *dwFlags*  
-Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Podívejte se na tabulku v **poznámky** části [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) popis *dwFlags* hodnoty.
+Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Viz tabulka **poznámky** část [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) popis *dwFlags* hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CHttpConnection](../../mfc/reference/chttpconnection-class.md) objektu. Pokud volání selže, zjistit příčinu selhání na základě vyvolané [CInternetException](../../mfc/reference/cinternetexception-class.md) objektu.
+Ukazatel [chttpconnection –](../../mfc/reference/chttpconnection-class.md) objektu. Pokud volání selže, zjistěte příčinu selhání tím, že kontroluje, k této výjimce dojde [cinternetexception –](../../mfc/reference/cinternetexception-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetHttpConnection` připojí k serveru HTTP a vytvoří a vrátí ukazatel na `CHttpConnection` objektu. Neprovede žádné konkrétní operaci na serveru. Pokud máte v úmyslu dotaz záhlaví HTTP, například při provádění této operace v samostatném kroku. Viz třídy [CHttpConnection](../../mfc/reference/chttpconnection-class.md) a [CHttpFile](../../mfc/reference/chttpfile-class.md) informace o operacích, které můžete provádět pomocí připojení k serveru HTTP. Informace o procházení serveru HTTP najdete v tématu – členská funkce [OpenURL](#openurl). Najdete v článku [Internet programování s WinInet](../../mfc/win32-internet-extensions-wininet.md) kroky při provádění běžných úloh připojení HTTP.
+`GetHttpConnection` se připojí k serveru HTTP a vytvoří a vrátí ukazatel `CHttpConnection` objektu. Neprovede žádné konkrétní operaci na serveru. Pokud máte v úmyslu dotazování hlavičky protokolu HTTP, například musíte provést tuto operaci jako samostatný krok. Zobrazit třídy [chttpconnection –](../../mfc/reference/chttpconnection-class.md) a [chttpfile –](../../mfc/reference/chttpfile-class.md) informace o operacích, které můžete provést pomocí připojení k serveru HTTP. Informace o procházení serveru HTTP, naleznete v členské funkci [OpenURL](#openurl). Přečtěte si článek [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md) postup při provádění běžných úkolů připojení HTTP.
 
 ## <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback
 
-Tento člen funkce je volána službou framework a aktualizujte stav, když je zapnutý stav zpětného volání a operace čeká na vyřízení.
+Tato členská funkce se volá se rozhraním pro aktualizaci stavu, pokud je zapnuto stav zpětného volání a operace čeká na vyřízení.
 
 ```cpp
 virtual void OnStatusCallback(
@@ -447,42 +447,42 @@ virtual void OnStatusCallback(
 ### <a name="parameters"></a>Parametry
 
 *dwContext*  
-Hodnota kontextu zadaná aplikací.
+Hodnota kontextového poskytnuté aplikací.
 
 *dwInternetStatus*  
-Stavový kód, který označuje, proč je k zpětné volání. V tématu **poznámky** pro tabulku možných hodnot.
+Stavový kód, který označuje, proč je nastaven zpětného volání. Zobrazit **poznámky** pro tabulku možných hodnot.
 
 *lpvStatusInformation*  
-Ukazatel na vyrovnávací paměť obsahující informace týkající se této zpětného volání.
+Ukazatel do vyrovnávací paměti, který obsahuje informace, které jsou relevantní pro toto zpětné volání.
 
 *dwStatusInformationLength*  
 Velikost *lpvStatusInformation*.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejprve je třeba volat [EnableStatusCallback](#enablestatuscallback) využívat výhod stav zpětného volání.
+Nejprve je třeba volat [EnableStatusCallback](#enablestatuscallback) výhod stav zpětného volání.
 
-*DwInternetStatus* parametr označuje prováděnou operaci a určuje, jaké obsah *lpvStatusInformation* bude. *dwStatusInformationLength* udává délku dat obsažených v *lpvStatusInformation*. Hodnoty těchto stavů *dwInternetStatus* jsou definovány takto:
+*DwInternetStatus* parametr označuje právě prováděnou operaci a určuje, jaký obsah *lpvStatusInformation* bude. *dwStatusInformationLength* označuje délku dat zahrnutých v nabídce *lpvStatusInformation*. Následující stav hodnoty *dwInternetStatus* jsou definovány takto:
 
 |Hodnota|Význam|
 |-----------|-------------|
-|`INTERNET_STATUS_RESOLVING_NAME`|Vyhledávání adresu IP názvu obsažené v *lpvStatusInformation*.|
-|`INTERNET_STATUS_NAME_RESOLVED`|Úspěšně najít IP adresu názvu obsažené v *lpvStatusInformation*.|
-|`INTERNET_STATUS_CONNECTING_TO_SERVER`|Připojování k adresu soketu ([sockaddr –](../../mfc/reference/sockaddr-structure.md)) na kterou odkazuje *lpvStatusInformation*.|
-|`INTERNET_STATUS_CONNECTED_TO_SERVER`|Úspěšně připojeno k adresu soketu (`SOCKADDR`) na kterou odkazuje *lpvStatusInformation*.|
-|`INTERNET_STATUS_SENDING_REQUEST`|Odesílání požadavku informace na server. *LpvStatusInformation* parametr **NULL**.|
-|`INTERNET_STATUS_ REQUEST_SENT`|Úspěšně odeslal žádost o informace na server. *LpvStatusInformation* parametr **NULL**.|
-|`INTERNET_STATUS_RECEIVING_RESPONSE`|Čekání na odpověď na žádost o serveru. *LpvStatusInformation* parametr **NULL**.|
-|`INTERNET_STATUS_RESPONSE_RECEIVED`|Úspěšně obdržel odpověď ze serveru. *LpvStatusInformation* parametr **NULL**.|
-|`INTERNET_STATUS_CLOSING_CONNECTION`|Probíhá ukončování připojení k serveru. *LpvStatusInformation* parametr **NULL**.|
-|`INTERNET_STATUS_CONNECTION_CLOSED`|Úspěšně ukončila připojení k serveru. *LpvStatusInformation* parametr **NULL**.|
-|`INTERNET_STATUS_HANDLE_CREATED`|Používá funkce rozhraní Win32 API [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) indikující, že bylo vytvořeno nové popisovač. Díky tomu funkce volání Win32 aplikací [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) z jiného vlákna, pokud připojení trvá příliš dlouho. Další informace o těchto funkcích najdete v části SDKfor systému Windows.|
-|`INTERNET_STATUS_HANDLE_CLOSING`|Tato hodnota popisovač úspěšně ukončil.|
+|INTERNET_STATUS_RESOLVING_NAME|Vyhledávání IP adresu jméno obsažené v *lpvStatusInformation*.|
+|INTERNET_STATUS_NAME_RESOLVED|Úspěšně našli adresu IP názvu součástí *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Připojení k soketu adresu ([sockaddr –](../../mfc/reference/sockaddr-structure.md)) ukazuje *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTED_TO_SERVER|Úspěšně připojeno k adresy soketu (sockaddr –), na které odkazuje *lpvStatusInformation*.|
+|INTERNET_STATUS_SENDING_REQUEST|Žádost o informace se odesílají na server. *LpvStatusInformation* parametr hodnotu NULL.|
+|INTERNET_STATUS_ REQUEST_SENT|Úspěšně se odeslal žádost o informace k serveru. *LpvStatusInformation* parametr hodnotu NULL.|
+|INTERNET_STATUS_RECEIVING_RESPONSE|Čekání na odpověď na žádost o serveru. *LpvStatusInformation* parametr hodnotu NULL.|
+|INTERNET_STATUS_RESPONSE_RECEIVED|Úspěšně obdržel odpověď ze serveru. *LpvStatusInformation* parametr hodnotu NULL.|
+|INTERNET_STATUS_CLOSING_CONNECTION|Probíhá ukončování připojení k serveru. *LpvStatusInformation* parametr hodnotu NULL.|
+|INTERNET_STATUS_CONNECTION_CLOSED|Připojení k serveru se úspěšně zavřelo. *LpvStatusInformation* parametr hodnotu NULL.|
+|INTERNET_STATUS_HANDLE_CREATED|Používá funkce rozhraní Win32 API [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) k označení, že byl vytvořen nový popisovač. Volání rozhraní Win32 funkce aplikací díky tomu [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) z jiného vlákna, pokud připojení trvá moc dlouho. Další informace o těchto funkcích naleznete v tématu Windows SDKfor.|
+|INTERNET_STATUS_HANDLE_CLOSING|Tato hodnota popisovač úspěšně ukončil.|
 
-Člen funkci tak, aby vyžadovala některá z akcí, než se provádí rutina zpětného volání stavu přepište.
+Potlačí tuto členskou funkci tak, aby vyžadovala některé akce před spuštěním rutiny stav zpětného volání.
 
 > [!NOTE]
-> Zpětná volání stav potřebují ochranu stav vlákna. Pokud používáte MFC ve sdílené knihovně, přidejte následující řádek na začátek přepsání:
+> Zpětná volání stav potřeba chránit stav vlákna. Pokud používáte knihovnu MFC ve sdílené knihovně, přidejte následující řádek na začátek přepsání:
 
  [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
@@ -490,7 +490,7 @@ Další informace o asynchronních operací, najdete v článku [první kroky In
 
 ## <a name="openurl"></a>  CInternetSession::OpenURL
 
-Tento člen volání funkce Odeslat zadaný požadavek HTTP serveru a umožňují klientu zadejte další RFC822 MIME nebo hlavičky protokolu HTTP k odeslání společně se žádostí.
+Tento člen volání funkce Odeslat zadaný požadavek HTTP server a povolit klienta k určení dalších RFC822 MIME nebo hlavičky protokolu HTTP k odeslání společně se žádostí.
 
 ```cpp
 CStdioFile* OpenURL(
@@ -504,39 +504,39 @@ CStdioFile* OpenURL(
 ### <a name="parameters"></a>Parametry
 
 *pstrURL*  
-Ukazatel na název adresy URL začínat čtení. Jenom adresy URL počínaje souboru:, ftp:, gopher:, nebo http: jsou podporovány. Vyhodnotí, pokud *pstrURL* je **NULL**.
+Ukazatel na název adresy URL má začínat čtení. Pouze adresy URL začínající souborem:, ftp:, gopher:, nebo http: jsou podporovány. Vyhodnotí, pokud *pstrURL* má hodnotu NULL.
 
 *dwContext*  
-Hodnotu definované aplikací byla dokončena s Vrácený popisovač v zpětného volání.
+Hodnotu definovaného aplikací se dokončila s Vrácený popisovač ve zpětném volání.
 
 *dwFlags*  
-Příznaky popisující, jak zpracovat toto připojení. V tématu **poznámky** Další informace o platný příznaků. Platné příznaky jsou:
+Příznaky popisující, jak zpracovávat toto připojení. Zobrazit **poznámky** Další informace o platné příznaky. Platný příznaky jsou:
 
-- `INTERNET_FLAG_TRANSFER_ASCII` Výchozí hodnota. Přeneste soubor jako ASCII text.
+- INTERNET_FLAG_TRANSFER_ASCII výchozí. Přeneste soubor jako ASCII text.
 
-- `INTERNET_FLAG_TRANSFER_BINARY` Přeneste soubor jako binární soubor.
+- INTERNET_FLAG_TRANSFER_BINARY přenos souboru jako binární soubor.
 
-- `INTERNET_FLAG_RELOAD` Získáte data z drátového připojení i v případě, že je v místní mezipaměti.
+- INTERNET_FLAG_RELOAD získat data z přenosu i v případě, že je v místní mezipaměti.
 
-- `INTERNET_FLAG_DONT_CACHE` Neukládat do mezipaměti dat, buď místně nebo v žádné brány.
+- INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v žádné brány.
 
-- `INTERNET_FLAG_SECURE` Tento příznak se vztahuje na pouze požadavky HTTP. Požaduje zabezpečené transakce v drátové síti s Secure Sockets Layer nebo procento
+- INTERNET_FLAG_SECURE tento příznak se vztahuje pouze na požadavky HTTP. Požadavky zabezpečení transakcí na lince Secure Sockets Layer nebo v PROC.
 
-- `INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT` Pokud je to možné, opakovaně používat existující připojení k serveru pro nové žádosti o generované `OpenUrl` místo vytvoření nové relace pro každý požadavek na připojení.
+- INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT Pokud je to možné, opakovaně používat existující připojení k serveru pro nové požadavkům vygenerovaným rozhraním `OpenUrl` místo vytvoření nové relace pro každý požadavek na připojení.
 
-- `INTERNET_FLAG_PASSIVE` Použít pro server FTP. Používá pasivní sémantiku FTP. Použít s [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) z `OpenURL`.
+- INTERNET_FLAG_PASSIVE použít pro server FTP. Používá sémantiku pasivního protokolu FTP. Použít s [cinternetconnection –](../../mfc/reference/cinternetconnection-class.md) z `OpenURL`.
 
 *pstrHeaders*  
-Ukazatel na řetězec obsahující hlavičky k odeslání do serveru protokolu HTTP.
+Ukazatel na řetězec obsahující hlavičky k odeslání na HTTP server.
 
 *dwHeadersLength*  
-Délka ve znacích další záhlaví. Pokud je to L-1 a *pstrHeaders* jinou hodnotu než**NULL**, pak *pstrHeaders* se předpokládá, že být nula ukončena a délka se počítá.
+Délka ve znacích, další záhlaví. Pokud je to L hodnota-1 a *pstrHeaders* je jiná než NULL, pak *pstrHeaders* se předpokládá, že nulovém ukončena a délka se počítá.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač souboru pro FTP, GOPHER, HTTP a typ souboru internetové služby. Vrátí **NULL** Pokud analýza neúspěšná.
+Vrátí popisovač souboru pro FTP, GOPHER, HTTP a typ souboru internetové služby. Vrátí hodnotu NULL, pokud byla analýza neúspěšných.
 
-Ukazatele, `OpenURL` vrátí závisí na *pstrURL*na typ služby. Následující tabulka znázorňuje možné ukazatele `OpenURL` může vrátit.
+Ukazatel, který `OpenURL` vrátí závisí na *pstrURL*typ služby. Následující tabulka uvádí možné ukazatele `OpenURL` může vrátit.
 
 |Typ adresy URL|Vrací|
 |--------------|-------------|
@@ -547,15 +547,15 @@ Ukazatele, `OpenURL` vrátí závisí na *pstrURL*na typ služby. Následující
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *dwFlags* musí obsahovat buď `INTERNET_FLAG_TRANSFER_ASCII` nebo `INTERNET_FLAG_TRANSFER_BINARY`, ale ne obojí. Zbývající příznaků je možné kombinovat s bitové hodnotě `OR` – operátor ( **&#124;**).
+Parametr *dwFlags* musí obsahovat INTERNET_FLAG_TRANSFER_ASCII nebo INTERNET_FLAG_TRANSFER_BINARY, ale ne obojí. Zbývající příznaků je možné kombinovat s bitový **nebo** – operátor ( **&#124;**).
 
-`OpenURL`, který zabalí funkci Win32 `InternetOpenURL`, umožňuje pouze stahování, načítání a čtení dat z internetového serveru. `OpenURL` Umožňuje zpracování žádný soubor ve vzdáleném umístění, takže vyžaduje ne [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) objektu.
+`OpenURL`, která zabalí funkci Win32 `InternetOpenURL`, umožňuje pouze stahování, načtení a čtení dat z internetového serveru. `OpenURL` umožňuje manipulaci s žádný soubor ve vzdáleném umístění, takže nevyžaduje žádné [cinternetconnection –](../../mfc/reference/cinternetconnection-class.md) objektu.
 
-Použít specifickou pro připojení (to znamená, specifické pro protokol) funkce, jako je například zápis do souboru, je nutné otevřít relaci, pak otevřete konkrétní typ připojení a potom používat toto připojení k otevření souboru v režimu požadované. V tématu `CInternetConnection` pro další informace o funkcích specifickou pro připojení.
+Použít specifickou pro připojení (to znamená, specifické pro protokol) funkce, jako je například zápis do souboru, musíte otevřete relaci, potom otevřete určitého druhu připojení a použít toto připojení k otevření souboru v požadovaného režimu. Zobrazit `CInternetConnection` Další informace o připojení specifické funkce.
 
 ## <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET
 
-Tento operátor. použijte k získání popisovačů systému Windows pro aktuální relaci Internet.
+Tento operátor se získat popisovač Windows pro aktuální relaci Internet.
 
 ```cpp
 operator HINTERNET() const;
@@ -575,25 +575,25 @@ static BOOL SetCookie(
 ### <a name="parameters"></a>Parametry
 
 *pstrUrl*  
-Ukazatel na řetězec ukončené hodnotou null, který určuje adresu URL, u které je třeba nastavit soubor cookie.
+Ukazatel na řetězec zakončený hodnotou null, který určuje adresu URL, u které je třeba nastavit soubor cookie.
 
 *pstrCookieName*  
-Ukazatel na řetězec, který obsahuje název souboru cookie.
+Ukazatel na řetězec obsahující název souboru cookie.
 
 *pstrCookieData*  
-Ukazatel na řetězec obsahující data konkrétní řetězec k přidružení s adresou URL.
+Ukazatel na řetězec obsahující aktuální řetězcovou data k přidružení s adresou URL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí **TRUE** v případě úspěchu nebo **FALSE** jinak. Chcete-li získat kód chyby, volejte **GetLastError.**
+V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE. Chcete-li získat chybový kód, zavolejte `GetLastError.`
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce člen implementuje chování zprávy Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), jak je popsáno v sadě Windows SDK.
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
-Volání této funkce člena pro nastavení možností pro relaci Internet.
+Voláním této členské funkce pro nastavení možností pro relaci Internet.
 
 ```cpp
 BOOL SetOption(
@@ -612,27 +612,27 @@ BOOL SetOption(
 ### <a name="parameters"></a>Parametry
 
 *dwOption*  
-Možnost Internetu nastavit. V tématu [možnost příznaky](http://msdn.microsoft.com/library/windows/desktop/aa385328) v systému Windows SDKfor seznam možných možností.
+Internet možnost nastavit. Zobrazit [možnost příznaky](http://msdn.microsoft.com/library/windows/desktop/aa385328) ve Windows SDKfor seznam dostupných možností.
 
 *lpBuffer.*  
-Vyrovnávací paměť, která obsahuje možnost nastavení.
+Vyrovnávací paměť, která obsahuje nastavení možnosti.
 
 *dwBufferLength*  
 Délka *lpBuffer* nebo velikost *dwValue*.
 
 *dwValue*  
-A `DWORD` obsahující nastavení možnosti.
+DWORD, který obsahuje nastavení možnosti.
 
 *dwFlags*  
-Označuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty patří:
+Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty:
 
-- `INTERNET_FLAG_DONT_CACHE` Neukládat do mezipaměti dat, buď místně nebo v veškeré servery brány.
+- INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
 
-- `INTERNET_FLAG_OFFLINE` Při stahování spokojeni prostřednictvím pouze trvalé mezipaměti. Pokud položka v mezipaměti neexistuje, je vrácena odpovídající chybový kód. Tento příznak mohou být kombinovány s bitové hodnotě `OR` ( **&#124;**) operátor.
+- Stáhnout INTERNET_FLAG_OFFLINE operace jsou splněny prostřednictvím trvalého mezipaměti. Pokud položka v mezipaměti neexistuje, vrátí se odpovídající chybový kód. Tento příznak může kombinované pomocí bitového **nebo** ( **&#124;**) – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud byla operace úspěšná, hodnota **TRUE** je vrácen. Pokud došlo k chybě, hodnota **FALSE** je vrácen. Pokud volání selže, funkce Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu této chyby.
+Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vrátí se hodnota FALSE. Pokud volání selže, funkci Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
 
 ## <a name="see-also"></a>Viz také
 

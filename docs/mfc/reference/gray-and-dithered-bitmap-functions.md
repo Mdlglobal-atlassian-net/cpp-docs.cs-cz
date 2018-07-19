@@ -1,5 +1,5 @@
 ---
-title: Funkce gray a Dithered pro bitové mapy | Microsoft Docs
+title: Funkce gray a dithered pro bitové mapy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339394"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkce Gray a Dithered pro bitové mapy
-**Funkce Gray bitové mapy**  
+**Funkce Gray mapy**  
   
- MFC poskytuje dvě funkce pro poskytnutí rastrový obrázek vzhledu ovládacího prvku zakázané.  
+ Knihovna MFC poskytuje dvě funkce pro poskytování rastrový obrázek vzhledu ovládacího prvku zakázané.  
   
- ![Porovnání ikona šedé a původní verze](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 |||  
 |-|-|  
@@ -40,14 +40,14 @@ ms.locfileid: "33375171"
   
  **Funkce dithered pro bitové mapy**  
   
- MFC také poskytuje dvě funkce pro nahrazení rastrový obrázek pozadí tónovaná vzor.  
+ Knihovna MFC poskytuje dvě funkce také pro nahrazení vzoru dithered pro bitové rastrový obrázek na pozadí.  
   
- ![Porovnání ikona tónovaná a původní verze](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 |||  
 |-|-|  
-|[Afxdrawditheredbitmap –](#afxdrawditheredbitmap)|Nakreslí bitmap s tónovaná pozadí.|  
-|[Afxgetditheredbitmap –](#afxgetditheredbitmap)|Zkopíruje bitmap s tónovaná pozadí.|  
+|[Afxdrawditheredbitmap –](#afxdrawditheredbitmap)|Nakreslí rastrový obrázek s dithered pro bitové na pozadí.|  
+|[Afxgetditheredbitmap –](#afxgetditheredbitmap)|Zkopíruje bitmapu s dithered pro bitové na pozadí.|  
   
 ##  <a name="afxdrawgraybitmap"></a>  Afxdrawgraybitmap –  
  Nakreslí šedé verzi rastrový obrázek.  
@@ -62,25 +62,25 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primární řadič domény*  
  Odkazuje na cílový řadič domény.  
   
  *x*  
- Cílový souřadnici x.  
+ Cílové souřadnice x.  
   
  *y*  
- Cílový souřadnici y.  
+ Cílové souřadnice na ose y.  
   
- `rSrc`  
- Zdroj bitové mapy.  
+ *rSrc*  
+ Zdrojovou bitmapu.  
   
- `crBackground`  
- Nové barvu pozadí (obvykle zašedlé, jako je například COLOR_MENU).  
+ *crBackground*  
+ Nová barva pozadí (obvykle zašedlé, jako je například COLOR_MENU).  
   
 ### <a name="remarks"></a>Poznámky  
- Rastrový obrázek vykreslené s `AfxDrawGrayBitmap` bude mít vzhledu ovládacího prvku zakázané.  
+ Rastrový obrázek nakreslit `AfxDrawGrayBitmap` bude mít vzhled zablokovaný ovládací prvek.  
   
- ![Porovnání ikona šedé a původní verze](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
@@ -99,19 +99,19 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSrc`  
- Zdroj bitové mapy.  
+ *rSrc*  
+ Zdrojovou bitmapu.  
   
- `pDest`  
- Určení bitové mapy.  
+ *pDest*  
+ Cílovou bitmapu.  
   
- `crBackground`  
- Nové barvu pozadí (obvykle zašedlé, jako je například COLOR_MENU).  
+ *crBackground*  
+ Nová barva pozadí (obvykle zašedlé, jako je například COLOR_MENU).  
   
 ### <a name="remarks"></a>Poznámky  
- Rastrový obrázek zkopírován s `AfxGetGrayBitmap` bude mít vzhledu ovládacího prvku zakázané.  
+ Rastrový obrázek zkopírováno spolu s `AfxGetGrayBitmap` bude mít vzhled zablokovaný ovládací prvek.  
   
- ![Porovnání ikona šedé a původní verze](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
@@ -120,7 +120,7 @@ void AFXAPI AfxGetGrayBitmap(
  **Záhlaví:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  Afxdrawditheredbitmap –  
- Nakreslí rastrového obrázku, nahraďte jeho pozadí vzor tónovaná (kontrola).  
+ Nakreslí rastrový obrázek, jeho pozadí nahrazení vzoru dithered pro bitové (kontroly).  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -133,28 +133,28 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *primární řadič domény*  
  Odkazuje na cílový řadič domény.  
   
  *x*  
- Cílový souřadnici x.  
+ Cílové souřadnice x.  
   
  *y*  
- Cílový souřadnici y.  
+ Cílové souřadnice na ose y.  
   
- `rSrc`  
- Zdroj bitové mapy.  
+ *rSrc*  
+ Zdrojovou bitmapu.  
   
- `cr1`  
- Mezi dvěma rozklad barvy, obvykle bílá.  
+ *cr1*  
+ Jednu z dvou tónování barev, obvykle bílou.  
   
- `cr2`  
- Další rozklad barva, obvykle světle šedé (COLOR_MENU).  
+ *CR2*  
+ Další tónování barvu, obvykle světle šedá (COLOR_MENU).  
   
 ### <a name="remarks"></a>Poznámky  
- Zdroj rastrový obrázek se vykresluje v cílovém umístění řadiče domény s dvěma barvami ( `cr1` a `cr2`) šachovnicová mřížka vzor výměna rastrový obrázek na pozadí. Na pozadí rastrový obrázek zdroj je definován jako jeho bílé pixelů a všechny pixelů odpovídající barvu pixelů v levém horním rohu bitmapy.  
+ Zdrojovou bitmapu je vykreslen na cílový řadič domény s dvěma barvami (*cr1* a *cr2*) šachovnicová mřížka vzor nahrazení rastrového obrázku na pozadí. Pozadí zdrojovou bitmapu je definován jako jeho bílé pixelů a všechny obrazové body odpovídající barva pixel v levém horním rohu rastrového obrázku.  
   
- ![Porovnání ikona tónovaná a původní verze](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
@@ -164,7 +164,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 
 ##  <a name="afxgetditheredbitmap"></a>  Afxgetditheredbitmap –  
- Zkopíruje bitové mapy, nahraďte jeho pozadí vzor tónovaná (kontrola).  
+ Zkopíruje bitmapu, jeho pozadí nahrazení vzoru dithered pro bitové (kontroly).  
   
 ```   
 void AFXAPI AfxGetDitheredBitmap(
@@ -175,22 +175,22 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSrc`  
- Zdroj bitové mapy.  
+ *rSrc*  
+ Zdrojovou bitmapu.  
   
- `pDest`  
- Určení bitové mapy.  
+ *pDest*  
+ Cílovou bitmapu.  
   
- `cr1`  
- Mezi dvěma rozklad barvy, obvykle bílá.  
+ *cr1*  
+ Jednu z dvou tónování barev, obvykle bílou.  
   
- `cr2`  
- Další rozklad barva, obvykle světle šedé (COLOR_MENU).  
+ *CR2*  
+ Další tónování barvu, obvykle světle šedá (COLOR_MENU).  
   
 ### <a name="remarks"></a>Poznámky  
- Rastrový obrázek zdroje se zkopíruje na cílový bitmap s dvěma barvami ( `cr1` a `cr2`) šachovnicová mřížka vzor nahrazení zdroj rastrového obrázku pozadí. Na pozadí rastrový obrázek zdroj je definován jako jeho bílé pixelů a všechny pixelů odpovídající barvu pixelů v levém horním rohu bitmapy.  
+ Zdrojová bitmapa nezkopíruje do cílové bitmapy barvou dvou (*cr1* a *cr2*) šachovnicová mřížka vzor nahrazení zdrojovou bitmapu na pozadí. Pozadí zdrojovou bitmapu je definován jako jeho bílé pixelů a všechny obrazové body odpovídající barva pixel v levém horním rohu rastrového obrázku.  
   
- ![Porovnání ikona tónovaná a původní verze](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  

@@ -1,5 +1,5 @@
 ---
-title: Logpen – struktura | Microsoft Docs
+title: Logpen – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0e07ce3a38eaca54e860ebe821924c0f564c69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c677f86a44d24e0d0d2742d47ee1534532001528
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338529"
 ---
 # <a name="logpen-structure"></a>LOGPEN – struktura
-`LOGPEN` Struktura definuje styl, šířku a barvy pera, objektu použitý k vykreslení čar a ohraničení. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) využívá `LOGPEN` struktura.  
+`LOGPEN` Struktury definuje styl, šířku a barvu pera, kreslení objekt použitý k vykreslení čar a ohraničení. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) funkce používá `LOGPEN` struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,37 +38,37 @@ typedef struct tagLOGPEN {  /* lgpn */
   
 #### <a name="parameters"></a>Parametry  
  *lopnStyle*  
- Určuje typ pera. Tento člen může být jedna z následujících hodnot:  
+ Určuje typ pera. Tento člen může být jeden z následujících hodnot:  
   
-- **PS_SOLID** vytvoří pera plnou.  
+- PS_SOLID vytvoří solid pera.  
   
-- **PS_DASH** vytvoří pera přerušovanou. (Platí jenom v případě, že šířku pera je 1.)  
+- PS_DASH vytváří čárkovanou pera. (Platí jenom v případě šířku pera je 1.)  
   
-- **PS_DOT** vytvoří pera s tečkou. (Platí jenom v případě, že šířku pera je 1.)  
+- PS_DOT vytvoří tečkovaná pera. (Platí jenom v případě šířku pera je 1.)  
   
-- **PS_DASHDOT** vytvoří pera s různými pomlčky a tečky. (Platí jenom v případě, že šířku pera je 1.)  
+- Vytvoří PS_DASHDOT pera s různými pomlčky a tečky. (Platí jenom v případě šířku pera je 1.)  
   
-- **PS_DASHDOTDOT** vytvoří pera s různými pomlčky a tečky double. (Platí jenom v případě, že šířku pera je 1.)  
+- PS_DASHDOTDOT vytvoří a psaní perem s různými pomlčky a tečky double. (Platí jenom v případě šířku pera je 1.)  
   
-- **PS_NULL** vytvoří pera hodnotu null.  
+- PS_NULL vytvoří null pera.  
   
-- **PS_INSIDEFRAME** vytvoří pera, který se vykreslí řádku uvnitř rámečku uzavřené obrazce vyprodukované GDI výstup funkce, které zadejte ohraničující obdélník (například **elipsy**, **obdélníku**, `RoundRect`, `Pie`, a `Chord` členské funkce). Pokud je tento styl používá pomocí GDI výstup funkce, které neurčují ohraničující obdélník (například `LineTo` – členská funkce), oblasti výkresu pera není omezeno rámečku.  
+- Funkce, které určují ohraničující obdélník PS_INSIDEFRAME vytvoří vytvořený pera nakreslí čáru uvnitř rámečku uzavřené obrazce v GDI výstup (například `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, a `Chord` člena funkce). Při použití tohoto stylu s GDI výstupních funkcí, které neurčují ohraničující obdélník (například `LineTo` členská funkce), oblasti pro kreslení pera není omezeno rámečkem.  
   
-     Pokud má pera **PS_INSIDEFRAME** stylu a barvy, která neodpovídá barvu v tabulce barev logické pera vykreslením s tónovaná barva. **PS_SOLID** styl pera nelze použít k vytvoření pera s tónovaná barva. **PS_INSIDEFRAME** styl je stejný jako **PS_SOLID** Pokud šířku pera je menší než nebo rovna 1.  
+     Pokud pera PS_INSIDEFRAME styl a barvy, který neodpovídá barvu v tabulce barev logické, pera je vykreslen s tónovaná barva. Styl psaní perem PS_SOLID nelze použít k vytvoření pera dithered pro bitové barvou. Pokud šířka pera je menší než nebo rovno 1 se shoduje s PS_SOLID PS_INSIDEFRAME style.  
   
-     Když **PS_INSIDEFRAME** styl se používá s objekty GDI vyprodukované funkce jiné než **elipsy**, **obdélníku**, a `RoundRect`, řádku nemusí být zcela uvnitř zadaného rámce.  
+     Při použití stylu PS_INSIDEFRAME s objekty GDI vytvořené pomocí funkcí jiné než `Ellipse`, `Rectangle`, a `RoundRect`, řádku nemusí být zcela v zadaném rámci.  
   
  *lopnWidth*  
- Určuje šířku pera v logické jednotky. Pokud **lopnWidth** člen je 0, 1 pixel široká na rastrové zařízení bez ohledu na aktuální režim mapování pera.  
+ Určuje šířku pera v logických jednotkách. Pokud `lopnWidth` člen je 0, pera je 1 pixelu široké rastrové zařízení bez ohledu na aktuální režim mapování.  
   
  *lopnColor*  
  Určuje barvu pera.  
   
 ## <a name="remarks"></a>Poznámky  
- **y** hodnotu [bodu](../../mfc/reference/point-structure1.md) struktury pro **lopnWidth** člen není použit.  
+ `y` Hodnotu [bodu](../../mfc/reference/point-structure1.md) strukturu pro `lopnWidth` člena se nepoužívá.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** wingdi.h systému  
+ **Záhlaví:** wingdi.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

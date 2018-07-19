@@ -1,5 +1,5 @@
 ---
-title: Služba třídy pro podporu zprostředkovatele (ATL) | Microsoft Docs
+title: Třídy podpory poskytovatelů (ATL) služby | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dc0b9b22c35f29da43d17ecd3d6e53d23e562f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1bb3d3436e9e5b1ad20c314817372ab632581f3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361600"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957886"
 ---
-# <a name="service-provider-support-classes"></a>Třídy pro podporu zprostředkovatele služby
-Následující třídy poskytuje podporu pro poskytovatele služeb:  
+# <a name="service-provider-support-classes"></a>Třídy podpory poskytovatelů služeb
+Následující třída poskytuje podporu pro poskytovatele služeb:  
   
--   [IServiceProviderImpl](../atl/reference/iserviceproviderimpl-class.md) vyhledá službu určeného její identifikátor GUID a vrátí ukazatel rozhraní pro požadované rozhraní služby.  
+-   [Iserviceproviderimpl –](../atl/reference/iserviceproviderimpl-class.md) vyhledá službu určené její identifikátor GUID a vrátí ukazatel rozhraní pro požadované rozhraní ve službě.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

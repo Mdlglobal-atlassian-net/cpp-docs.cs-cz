@@ -1,5 +1,5 @@
 ---
-title: '&lt;IStream on Request&gt; | Microsoft Docs'
+title: '&lt;IStream&gt; | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852374"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956551"
 ---
-# <a name="ltistreamgt"></a>&lt;IStream on Request&gt;
+# <a name="ltistreamgt"></a>&lt;IStream&gt;
 
-Definuje basic_istream – třída šablony, která zprostředkovává extrakce pro iostreams, a basic_iostream – třída šablony, která zprostředkovává vložení a extrakce. Záhlaví definuje také související manipulator. Tento soubor záhlaví je obvykle zahrnuté pro můžete pomocí jiné záhlaví iostreams; Máte zřídka se zahrnuje přímo.
+Definuje basic_istream – třída šablony, která zprostředkovává extrakce pro iostreams, a basic_iostream – třída šablony, která zprostředkovává vložení a extrakce. Záhlaví definuje také související manipulátor. Tento soubor hlavičky je obvykle součástí za vás pomocí jiné záhlaví iostreams; obvykle nemusí obsahovat přímo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,8 +40,8 @@ Definuje basic_istream – třída šablony, která zprostředkovává extrakce 
 
 |Název typu|Popis|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specializované na `char`.|
-|[IStream on Request](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specializované na `char`.|
+|[iostream –](../standard-library/istream-typedefs.md#iostream)|Typ `basic_iostream` specializované na **char**.|
+|[IStream](../standard-library/istream-typedefs.md#istream)|Typ `basic_istream` specializované na **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Typ `basic_iostream` specializované na **wchar**.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Typ `basic_istream` specializované na **wchar**.|
 
@@ -49,23 +49,23 @@ Definuje basic_istream – třída šablony, která zprostředkovává extrakce 
 
 |||
 |-|-|
-|[ws](../standard-library/istream-functions.md#ws)|Přeskočí mezer v datovém proudu.|
-|[Swap](../standard-library/istream-functions.md#istream_swap)|Výměny dva objekty datového proudu.|
+|[ws](../standard-library/istream-functions.md#ws)|Přeskočí prázdné místo v datovém proudu.|
+|[Prohození](../standard-library/istream-functions.md#istream_swap)|Vyměňuje dva objekty stream.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor >>](../standard-library/istream-operators.md#op_gt_gt)|Extrahuje znaky a řetězce z datového proudu.|
+|[operátor >>](../standard-library/istream-operators.md#op_gt_gt)|Extrahuje z datového proudu znaků a řetězce.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[basic_iostream](../standard-library/basic-iostream-class.md)|Datový proud třídu, která můžete provést i vstup a výstup.|
-|[basic_istream](../standard-library/basic-istream-class.md)|Šablony třídy popisuje objekt, který řídí extrakce elementů a kódovaného objekty z datového proudu vyrovnávací paměť elementy typu **Elem**, také známé jako [char_type –](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znak jsou Určuje třídu **Tr**, také známé jako [traits_type –](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_iostream](../standard-library/basic-iostream-class.md)|Datový proud třídu, která můžete provést jak vstupu a výstupu.|
+|[basic_istream](../standard-library/basic-istream-class.md)|Třída šablony popisuje objekt, který řídí extrakce prvků a kódovaného objekty z vyrovnávací paměti datového proudu s prvky typu `Elem`, označované také jako [char_type](../standard-library/basic-ios-class.md#char_type), jehož vlastnosti znaků jsou určené třídy `Tr`, označované také jako [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>

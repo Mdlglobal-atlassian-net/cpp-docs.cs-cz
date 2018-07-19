@@ -1,5 +1,5 @@
 ---
-title: is_empty – třída | Microsoft Docs
+title: is_empty – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10fe3f311211e3bbde61aef37c9a152ba2105126
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 040121c192d11a54a6142ff565768ba2bc104c33
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955316"
 ---
 # <a name="isempty-class"></a>is_empty – třída
 
-Testy, pokud je typ prázdné třídy.
+Testuje, zda je typ prázdnou třídu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_empty;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je prázdná třída, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je prázdnou třídu, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -84,8 +84,8 @@ is_empty<int> == false
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

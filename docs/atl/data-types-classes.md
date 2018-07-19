@@ -1,5 +1,5 @@
 ---
-title: Datové typy třídy (ATL) | Microsoft Docs
+title: Datové typy třídy (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab8c9d6839fad12459e65b396878f719a60c6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353855"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851311"
 ---
-# <a name="data-types-classes"></a>Datové typy třídy
-Následující třídy zabalení datové typy C++:  
+# <a name="data-types-classes"></a>Třídy datových typů
+Následující třídy zabalení datových typů jazyka C++:  
   
 -   [CComBSTR](../atl/reference/ccombstr-class.md) zabalí `BSTR` datového typu.  
   
--   [CComVariant](../atl/reference/ccomvariant-class.md) zabalí **VARIANT** datového typu.  
+-   [CComVariant](../atl/reference/ccomvariant-class.md) zabalí `VARIANT` datového typu.  
   
--   [CComCurrency](../atl/reference/ccomcurrency-class.md) obsahuje operátory a metody pro vytváření a správu `CURRENCY` objektu.  
+-   [Ccomcurrency –](../atl/reference/ccomcurrency-class.md) obsahuje operátory a metody pro vytváření a správu `CURRENCY` objektu.  
   
 ## <a name="see-also"></a>Viz také  
- [Přehled třídy](../atl/atl-class-overview.md)
+ [Přehled tříd](../atl/atl-class-overview.md)
 

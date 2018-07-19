@@ -1,5 +1,5 @@
 ---
-title: is_fundamental – třída | Microsoft Docs
+title: is_fundamental – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957357"
 ---
 # <a name="isfundamental-class"></a>is_fundamental – třída
 
-Testy, pokud je typ void nebo aritmetické.
+Testuje, zda je typ void nebo aritmetické.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je základní typ, který je `void`, integrální typu, plovoucí typu, bodu nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je základní typ, to znamená, **void**, celočíselného typu plovoucí typu, bodu nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -83,9 +83,9 @@ is_fundamental<void> == true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_compound – třída](../standard-library/is-compound-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Třída CW2WEX | Microsoft Docs
+title: Cw2wex – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ba1fdf42ea2f00b057d9b95105b34d9eff5a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7710856f05204dbbbc2bc15e2e62056123cd85cc
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362417"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884071"
 ---
-# <a name="cw2wex-class"></a>CW2WEX – třída
-Tato třída se používá ve makra převodů řetězec `CW2TEX` a `CT2WEX`a typedef `CW2W`.  
+# <a name="cw2wex-class"></a>Cw2wex – třída
+Tato třída se používá makra převodu řetězců CW2TEX CT2WEX a definice typedef CW2W.  
   
 > [!IMPORTANT]
->  Tato třída a její členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
+>  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,8 +41,8 @@ class CW2WEX
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_nBufferLength`  
- Velikost vyrovnávací paměti používané v procesu překladu. Výchozí délka je 128 bajtů.  
+ *t_nBufferLength*  
+ Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.  
   
 ## <a name="members"></a>Členové  
   
@@ -51,7 +51,7 @@ class CW2WEX
 |Název|Popis|  
 |----------|-----------------|  
 |[CW2WEX::CW2WEX](#cw2wex)|Konstruktor|  
-|[CW2WEX:: ~ CW2WEX](#dtor)|Destruktor.|  
+|[CW2WEX –:: ~ CW2WEX –](#dtor)|Destruktor.|  
   
 ### <a name="public-operators"></a>Veřejné operátory  
   
@@ -63,32 +63,32 @@ class CW2WEX
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CW2WEX::m_psz](#m_psz)|Data člena, který ukládá zdrojový řetězec.|  
+|[CW2WEX::m_psz](#m_psz)|Datový člen, který ukládá zdrojový řetězec.|  
 |[CW2WEX::m_szBuffer](#m_szbuffer)|Statické vyrovnávací paměť, používá k ukládání převedený řetězec.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je potřeba další funkce, používat `CW2TEX`, `CT2WEX`, nebo `CW2W` ve vašem kódu.  
+ Pokud není vyžadována další funkce, použití CW2TEX, CT2WEX nebo CW2W ve vašem kódu.  
   
- Tato třída obsahuje statické vyrovnávací pevné velikosti, která se používá k ukládání výsledek převodu. Pokud je výsledek příliš velký pro uložení do statických vyrovnávací paměti, třída přiděluje paměti pomocí `malloc`, uvolnění paměti při opuštění oboru. To zajišťuje, že na rozdíl od text makra převodů k dispozici v předchozích verzích nástroje ATL, tato třída je bezpečné pro použití v smyčky a že ji nebude přetečení zásobníku.  
+ Tato třída obsahuje pevné velikosti vyrovnávací paměti statické, která slouží k uložení výsledku převodu. Pokud je výsledek příliš velký a nevejde do statické vyrovnávací paměti, třída přiděluje paměť pomocí **malloc**, uvolnění paměti, když objekt dostane mimo rozsah. To zajišťuje, že na rozdíl od text makra převodů, které jsou k dispozici v předchozích verzích knihovny ATL, tato třída je bezpečné používat ve smyčkách a že nebudou přetečení zásobníku.  
   
- Pokud třída pokusí o přidělení paměti haldy a selže, bude volat `AtlThrow` s argument **E_OUTOFMEMORY**.  
+ Pokud třída pokusí o přidělení paměti v haldě a selže, bude volat `AtlThrow` s argumentem E_OUTOFMEMORY.  
   
- Ve výchozím nastavení používají převod ATL – třídy a makra aktuální vlákno ANSI znaková stránka pro převod.  
+ Ve výchozím nastavení používají převodu třídy ATL a makra znakovou stránku ANSI aktuální vlákno pro převod.  
   
- Následující makra je založena na této třídě:  
+ Následující makra jsou založené na této třídě:  
   
-- `CW2TEX`  
+- CW2TEX  
   
-- `CT2WEX`  
+- CT2WEX  
   
- Následující definice typu je založena na této třídě:  
+ Následující definice typedef je založena na této třídě:  
   
-- `CW2W`  
+- CW2W  
   
- Informace o těchto makra převodů text, najdete v části [ATL a MFC makra převodů řetězec](string-conversion-macros.md).  
+ Informace o těchto makrech převodu textu, naleznete v tématu [knihovny ATL a MFC – makra převodu řetězců](string-conversion-macros.md).  
   
 ## <a name="example"></a>Příklad  
- V tématu [ATL a MFC makra převodů řetězec](string-conversion-macros.md) příklad použití převodních maker tyto řetězce.  
+ Zobrazit [knihovny ATL a MFC – makra převodu řetězců](string-conversion-macros.md) příklad použití převodních maker tyto řetězce.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** atlconv.h  
@@ -102,16 +102,16 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `psz`  
+ *psz*  
  Textový řetězec, který má být převeden.  
   
- `nCodePage`  
- Znaková stránka. Nepoužívá se v této třídě.  
+ *nCodePage*  
+ Znakovou stránku. Nepoužívá se v této třídě.  
   
 ### <a name="remarks"></a>Poznámky  
- Vytvoří vyrovnávací paměti vyžadované pro překlad.  
+ Vytvoří vyrovnávací paměti vyžadované pro převod.  
   
-##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX  
+##  <a name="dtor"></a>  CW2WEX –:: ~ CW2WEX –  
  Destruktor...  
   
 ```
@@ -122,7 +122,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
  Uvolní přidělené vyrovnávací paměti.  
   
 ##  <a name="m_psz"></a>  CW2WEX::m_psz  
- Data člena, který ukládá zdrojový řetězec.  
+ Datový člen, který ukládá zdrojový řetězec.  
   
 ```
 LPWSTR m_psz;
@@ -143,12 +143,12 @@ operator LPWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí textový řetězec jako typ `LPWSTR`.  
+ Vrátí textový řetězec psaní LPWSTR.  
   
 ## <a name="see-also"></a>Viz také  
- [CA2AEX – třída](../../atl/reference/ca2aex-class.md)   
- [CA2CAEX – třída](../../atl/reference/ca2caex-class.md)   
- [CA2WEX – třída](../../atl/reference/ca2wex-class.md)   
- [CW2AEX – třída](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX – třída](../../atl/reference/cw2cwex-class.md)   
- [Přehled třídy](../../atl/atl-class-overview.md)
+ [Ca2aex – třída](../../atl/reference/ca2aex-class.md)   
+ [Ca2caex – třída](../../atl/reference/ca2caex-class.md)   
+ [Ca2wex – třída](../../atl/reference/ca2wex-class.md)   
+ [Cw2aex – třída](../../atl/reference/cw2aex-class.md)   
+ [Cw2cwex – třída](../../atl/reference/cw2cwex-class.md)   
+ [Přehled tříd](../../atl/atl-class-overview.md)

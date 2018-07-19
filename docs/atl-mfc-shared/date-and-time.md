@@ -1,5 +1,5 @@
 ---
-title: Datum a čas | Microsoft Docs
+title: Datum a čas | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355558"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879556"
 ---
 # <a name="date-and-time"></a>Datum a čas
 MFC podporuje několika různými způsoby práce s daty a časy. Mezi ně patří:  
   
--   Třídy pro obecné účely čas. [CTime –](../atl-mfc-shared/reference/ctime-class.md) a [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) třídy zapouzdřují většinu funkcí přidružené ke knihovně čas ANSI standard, který je deklarován v čase. H.  
+-   Pro obecné účely čas třídy. [CTime](../atl-mfc-shared/reference/ctime-class.md) a [ctimespan –](../atl-mfc-shared/reference/ctimespan-class.md) zapouzdřují většinu funkcí, které jsou přidružené ke knihovně čas standardu ANSI, který je deklarován v čase. H.  
   
--   Podpora pro systémové hodiny. MFC verze 3.0, přidala se podpora pro `CTime` pro Win32 `SYSTEMTIME` a `FILETIME` datové typy.  
+-   Podpora pro systémové hodiny. S knihovnou MFC verze 3.0, přidala se podpora pro `CTime` pro Win32 `SYSTEMTIME` a `FILETIME` datové typy.  
   
--   Podpora automatizace [DATE – datový typ](../atl-mfc-shared/date-type.md). **DATUM** podporuje datum, čas a datum a čas hodnoty. [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) a [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) třídy zapouzdřují tuto funkci. Tyto funkce fungují u [COleVariant](../mfc/reference/colevariant-class.md) pomocí podporu automatizace.  
+-   Podpora pro automatizaci [DATE – datový typ](../atl-mfc-shared/date-type.md). Datum podporuje datum, čas a hodnoty data a času. [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) a [coledatetimespan –](../atl-mfc-shared/reference/coledatetimespan-class.md) zapouzdřují tuto funkci. Při práci s [COleVariant](../mfc/reference/colevariant-class.md) pomocí podporu automatizace.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
   
 -   [Datum a čas: Obecné třídy](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

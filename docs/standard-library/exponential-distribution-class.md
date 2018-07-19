@@ -1,5 +1,5 @@
 ---
-title: exponential_distribution – třída | Microsoft Docs
+title: exponential_distribution – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850069"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960193"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution – třída
 
-Generuje exponenciálního rozdělení.
+Generuje exponenciální rozdělení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,26 +77,26 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* použije se výchozí hodnota s plovoucí desetinnou čárkou výsledný typ, `double`. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*RealType* typu s plovoucí desetinnou čárkou výsledku, výchozí hodnota je **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-*URNG* modul generátor náhodných čísel. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*URNG* modul generátor náhodných čísel. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy popisuje distribuce, která vytváří hodnoty integrální se zadán uživatel nebo typu `double` Pokud žádný je k dispozici, distribuovat podle exponenciálního rozdělení. Následující tabulka odkazy na články o jednotlivé členy.
+Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zadaného celočíselný typ nebo typ **double** Pokud se žádný nezadá, které jsou rozděleny podle exponenciální rozdělení. Následující tabulka odkazuje na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
 |`exponential_distribution::operator()`||[param_type](#param_type)|
 
-Členská funkce vlastnost `lambda()` vrací hodnotu pro parametr uložené distribuční `lambda`.
+Vlastnost členskou funkci `lambda()` vrací hodnotu pro parametr uložené distribuce `lambda`.
 
-Členská funkce vlastnost `param()` Nastaví nebo vrátí `param_type` balíček parametr uložené distribuce.
+Vlastnost členskou funkci `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
 
-Další informace o distribučních třídy a jejich členové najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
-Podrobné informace o exponenciálního rozdělení, najdete v článku Wolfram MathWorld [exponenciálního rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401098).
+Podrobné informace o exponenciální rozdělení, najdete v článku Wolfram MathWorld [exponenciální rozdělení](http://go.microsoft.com/fwlink/p/?linkid=401098).
 
 ## <a name="example"></a>Příklad
 
@@ -176,13 +176,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
 
-Vytvoří rozdělení.
+Vytvoří rozložení.
 
 ```cpp
 explicit exponential_distribution(result_type lambda = 1.0);
@@ -191,21 +191,21 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*Lambda* `lambda` distribuční parametr.
+*Lambda* `lambda` parametru distribuce.
 
-*Parametr* balíček parametr použitý k vytvoření distribuce.
+*Parametr* balíček parametru použitý k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou podmínku:** `0.0 < lambda`
+**Předběžné podmínky:** `0.0 < lambda`
 
-První konstruktoru vytvoří objekt jehož uložené `lambda` hodnota obsahuje hodnotu *lambda*.
+První konstruktor vytvoří objekt, jehož uložené `lambda` hodnota obsahuje hodnotu *lambda*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` – členská funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
 
 ## <a name="param_type"></a>  exponential_distribution::param_type
 
-Ukládá parametry rozdělení.
+Ukládá parametry distribuce.
 
 ```cpp
 struct param_type {
@@ -220,16 +220,16 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*Lambda* `lambda` distribuční parametr.
+*Lambda* `lambda` parametru distribuce.
 
-*pravé* `param_type` objekt k porovnání s to.
+*správné* `param_type` objekt k porovnání s tím.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžnou podmínku:** `0.0 < lambda`
+**Předběžné podmínky:** `0.0 < lambda`
 
-Tato struktura mohou být předána do konstruktoru třídy distribuční při vytváření instancí, položky `param()` – členská funkce nastavit uložené parametrů z existující distribuční a to `operator()` má být použit místo uložené parametry.
+Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

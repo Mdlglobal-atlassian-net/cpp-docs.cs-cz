@@ -1,5 +1,5 @@
 ---
-title: virtuální (C++) | Microsoft Docs
+title: virtuální (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 909fd3fde92479b2e5407608026cb01ec17fced2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421793"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939117"
 ---
 # <a name="virtual-c"></a>virtual (C++)
-Klíčové slovo `virtual` deklaruje virtuální funkci nebo virtuální základní třídu.  
+**Virtuální** – klíčové slovo deklaruje virtuální funkci nebo virtuální základní třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,22 +38,22 @@ virtual [access-specifier] base-class-name
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `type-specifiers`  
+ *specifikátory typu*  
  Určuje návratový typ virtuální členské funkce.  
   
- `member-function-declarator`  
+ *deklarátor členské funkce*  
  Deklaruje členskou funkci.  
   
- `access-specifier`  
- Definuje úroveň přístupu k základní třídě, `public`, `protected` nebo `private`. Může se objevit před nebo za klíčovým slovem `virtual`.  
+ *specifikátor přístupu*  
+ Definuje úroveň přístupu na základní třídu **veřejné**, **chráněné** nebo **privátní**. Před nebo po ní se může objevit **virtuální** – klíčové slovo.  
   
- `base-class-name`  
+ *Název třídy Base*  
  Identifikuje dříve deklarovaný typ třídy.  
   
 ## <a name="remarks"></a>Poznámky  
- V tématu [virtuální funkce](../cpp/virtual-functions.md) Další informace.  
+ Zobrazit [virtuální funkce](../cpp/virtual-functions.md) Další informace.  
   
- Viz také následující klíčová slova: [– třída](../cpp/class-cpp.md), [privátní](../cpp/private-cpp.md), [veřejné](../cpp/public-cpp.md), a [chráněné](../cpp/protected-cpp.md).  
+ Viz také následující klíčová slova: [třídy](../cpp/class-cpp.md), [privátní](../cpp/private-cpp.md), [veřejné](../cpp/public-cpp.md), a [chráněné](../cpp/protected-cpp.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Klíčová slova](../cpp/keywords-cpp.md)

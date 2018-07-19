@@ -1,5 +1,5 @@
 ---
-title: Třída COleException | Microsoft Docs
+title: Coleexception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370468"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851389"
 ---
-# <a name="coleexception-class"></a>COleException – třída
-Představuje podmínku výjimky související s operace OLE.  
+# <a name="coleexception-class"></a>Coleexception – třída
+Představuje podmínku výjimky vztahující se k operaci OLE.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ class COleException : public CException
   
 |Název|Popis|  
 |----------|-----------------|  
-|[COleException::Process](#process)|Přeloží Zachycenou výjimku do OLE návratový kód.|  
+|[COleException::Process](#process)|Přeloží zachycené výjimky do návratový kód OLE.|  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -51,16 +51,16 @@ class COleException : public CException
 |[COleException::m_sc](#m_sc)|Obsahuje kód stavu, který označuje důvod výjimky.|  
   
 ## <a name="remarks"></a>Poznámky  
- `COleException` Třída zahrnuje veřejná data člena, který obsahuje stavový kód označující důvod pro výjimku.  
+ `COleException` Třída zahrnuje data veřejného člena, který obsahuje stavový kód označující důvod výjimky.  
   
- Obecně byste je neměli vytvářet `COleException` objekt přímo; místo toho by měly volat [afxthrowoleexception –](exception-processing.md#afxthrowoleexception).  
+ Obecně platí, nevytvářejte `COleException` objektu přímo; místo toho byste měli volat [afxthrowoleexception –](exception-processing.md#afxthrowoleexception).  
   
- Další informace o výjimky, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky OLE](../../mfc/exceptions-ole-exceptions.md).  
+ Další informace o výjimkách, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: výjimky OLE](../../mfc/exceptions-ole-exceptions.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
- [CException](../../mfc/reference/cexception-class.md)  
+ [Cexception –](../../mfc/reference/cexception-class.md)  
   
  `COleException`  
   
@@ -68,22 +68,22 @@ class COleException : public CException
  **Záhlaví:** afxdisp.h  
   
 ##  <a name="m_sc"></a>  COleException::m_sc  
- Tento člen dat obsahuje kód OLE stav, který označuje důvod výjimky.  
+ Tomuto datovému členu obsahuje OLE stavový kód, který označuje důvod výjimky.  
   
 ```  
 SCODE m_sc;  
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Tato proměnná hodnotu nastavuje [afxthrowoleexception –](exception-processing.md#afxthrowoleexception).  
+ Hodnota této proměnné je nastavena [afxthrowoleexception –](exception-processing.md#afxthrowoleexception).  
   
- Další informace o `SCODE`, najdete v části [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
+ Další informace o SCODE najdete v tématu [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
 ##  <a name="process"></a>  COleException::Process  
- Volání **proces** – členská funkce přeložit Zachycenou výjimku do OLE stavový kód.  
+ Volání **procesu** členské funkce pro převod zachycené výjimky do OLE stavový kód.  
   
 ```  
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -91,7 +91,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>Parametry  
  *pAnyException*  
- Ukazatel na Zachycenou výjimku.  
+ Ukazatel na zachycené výjimky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  OLE stavový kód.  
@@ -101,14 +101,14 @@ static SCODE PASCAL Process(const CException* pAnyException);
 > [!NOTE]
 >  Tato funkce je **statické**.  
   
- Další informace o `SCODE`, najdete v části [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) ve Windows SDK.  
+ Další informace o SCODE najdete v tématu [struktura kódy chyb COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) v sadě Windows SDK.  
   
 ### <a name="example"></a>Příklad  
   Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
 ## <a name="see-also"></a>Viz také  
- [Ukázka MFC CALCDRIV](../../visual-cpp-samples.md)   
- [CException – třída](../../mfc/reference/cexception-class.md)   
+ [Ukázky knihovny MFC CALCDRIV](../../visual-cpp-samples.md)   
+ [Cexception – třída](../../mfc/reference/cexception-class.md)   
  [Graf hierarchie](../../mfc/hierarchy-chart.md)
 
 

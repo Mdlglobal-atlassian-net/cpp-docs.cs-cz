@@ -1,5 +1,5 @@
 ---
-title: linear_congruential_engine – třída | Microsoft Docs
+title: linear_congruential_engine – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958276"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine – třída
 
-Generuje náhodné pořadí lineární congruential algoritmem.
+Generuje náhodnou posloupnost pomocí lineárního algoritmu congruential.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parametry
 
-`UIntType` Výsledný typ celé číslo bez znaménka. Možné typy, najdete v části [ \<náhodných >](../standard-library/random.md).
+*UIntType* celé číslo bez znaménka typu výsledku. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
 
-`A` **Násobitel**. **Předběžnou**: oddílu najdete v části poznámky.
+*A* **multiplikátor**. **Předběžná podmínka**: části poznámky v tématu.
 
-`C` **Přírůstek**. **Předběžnou**: oddílu najdete v části poznámky.
+*C* **přírůstek**. **Předběžná podmínka**: části poznámky v tématu.
 
-`M` **MODULUS**. **Předběžnou**: najdete v části poznámky.
+*M* **numerického zbytku**. **Předběžná podmínka**: viz poznámky.
 
 ## <a name="members"></a>Členové
 
@@ -70,42 +70,42 @@ class linear_congruential_engine{
 |`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|
 |`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|
 
-`default_seed` je členem konstantní, definované jako `1u`, použít jako výchozí hodnota parametru pro `linear_congruential_engine::seed` a konstruktor jednu hodnotu.
+`default_seed` je členem konstantní, definované jako `1u`, která se používá jako výchozí hodnota parametru pro `linear_congruential_engine::seed` a konstruktoru jednu hodnotu.
 
-Další informace o modulu členy najdete v tématu [ \<náhodných >](../standard-library/random.md).
+Další informace o členech modul, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-`linear_congruential_engine` Třída šablony je nejjednodušší modul generátor, ale není kvality nejrychlejší nebo nejvyšší. Zlepšení přes tento modul je [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Žádná z těchto modulů není tak rychle, nebo s jako vysoce kvalitního výsledky jako [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+`linear_congruential_engine` Třída šablony je nejjednodušší modul generátor, ale ne nejrychlejší nebo nejvyšší kvality. Vylepšení přes tento modul je [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Ani jeden z těchto modulů je tak rychle, nebo se jako výsledky vysoce kvalitní, jako [mersenne_twister_engine –](../standard-library/mersenne-twister-engine-class.md).
 
-Tento modul vytváří hodnoty typu zadán uživatel nepodepsaných integrálních pomocí vztahu opakování ( *období*) `x(i) = (A * x(i-1) + C) mod M`.
+Tento modul vytváří hodnoty uživatelem zadaného bez znaménka integrálového typu pomocí vztahu opakování ( *období*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Pokud `M` rovná nule, je hodnota používaná pro tuto operaci numerického zbytku `numeric_limits<result_type>::max() + 1`. Stav stroje je poslední hodnota vrácená nebo počáteční hodnoty, pokud žádné volání do `operator()`.
+Pokud *M* je nula, je hodnota používaná pro tuto operaci numerického zbytku `numeric_limits<result_type>::max() + 1`. Stav stroje je poslední vrácená hodnota nebo počáteční hodnoty, pokud žádná volání do `operator()`.
 
-Pokud `M` není nulový hodnoty argumentů šablony `A` a `C` musí být menší než `M`.
+Pokud *M* není nulový hodnoty argumentů šablon *A* a *C* musí být menší než *M*.
 
-Přestože generátor z tento modul můžete vytvořit přímo, můžete také použít jednu z těchto předdefinovaných definice TypeDef.
+Přestože generátor tento modul můžete vytvořit přímo, můžete také použít jednu z těchto předdefinovaných – definice TypeDef.
 
-`minstd_rand0`: 1988 minimální standardní modul (Lewis, Goodman a Lukeš, 1969).
+`minstd_rand0`: 1988 minimální standard (Lewis, Goodman a modul Miller, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: Aktualizovaný minimální standardní modul `minstd_rand0` (parku, Lukeš a Stockmeyer, 1993).
+`minstd_rand`: Aktualizovaný modul ochrany minimální standardní `minstd_rand0` (Park, Miller a Stockmeyer 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
 ```
 
-Podrobné informace o algoritmus lineární congruential modul, najdete v článku Wikipedia [lineární congruential generátor](http://go.microsoft.com/fwlink/p/?linkid=402446).
+Podrobné informace o lineárního algoritmu congruential algoritmus, najdete v článku na wikipedii [lineární congruential generátor](http://go.microsoft.com/fwlink/p/?linkid=402446).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodných >
+**Záhlaví:** \<náhodné >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<náhodné >](../standard-library/random.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: tuple_size – třída; | Microsoft Docs
+title: tuple_size – třída; | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853980"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958263"
 ---
 # <a name="tuplesize-class"></a>tuple_size – třída;
 
-Sestavy počet prvků který `tuple` obsahuje.
+Počet prvků, které `tuple` obsahuje.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,25 +66,31 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parametry
 
-*Řazené kolekce členů* typ řazenou kolekci členů.
+*Řazené kolekce členů*  
+Typ řazené kolekce členů.
 
-*Elem* typ prvků pole.
+*Elem*  
+Typ prvků pole.
 
-*Velikost* velikost pole.
+*Velikost*  
+Velikost pole.
 
-*T1* typ prvního člena, které odpovídá páru.
+*T1*  
+Typ prvního člena, které odpovídá páru licencí.
 
-*T2* typ druhý člen, které odpovídá páru.
+*T2*  
+Typ druhý člen, které odpovídá páru licencí.
 
-*Typy* typy elementů řazené kolekce členů.
+*Typy*  
+Typy elementů řazené kolekce členů.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablony třídy obsahuje člena `value` tedy celočíselné konstantní výraz jehož hodnota je v rozsahu typu řazené kolekce členů `Tuple`.
+Třída šablony má člen `value` , který je celočíselný konstantní výraz jehož hodnota je rozsah typ řazené kolekce členů *řazené kolekce členů*.
 
-Specializace šablony pro pole obsahuje člena `value` tedy celočíselné konstantní výraz jehož hodnota je `Size`, což je velikost pole.
+Specializace šablon pro pole má člen `value` , který je celočíselný konstantní výraz jehož hodnota je *velikost*, což je velikost pole.
 
-Specializace šablony pro dvojici obsahuje člena `value` tedy celočíselné konstantní výraz jehož hodnota je 2.
+Specializace šablony pro dvojici má člen `value` , který je celočíselný konstantní výraz jehož hodnota je 2.
 
 ## <a name="example"></a>Příklad
 
@@ -116,12 +122,12 @@ int main()
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<řazené kolekce členů > **záhlaví:** \<pole > (pro pole specializace) **záhlaví:** \<nástroj > (pro dvojice specializace)
+**Záhlaví:** \<řazené kolekce členů > **hlavičky:** \<pole > (pro specializaci pole) **hlavičky:** \<nástroje > (pro specializaci pár)
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<řazené kolekce členů >](../standard-library/tuple.md)<br/>
-[řazené kolekce členů](../standard-library/tuple-class.md)<br/>
+[Řazené kolekce členů](../standard-library/tuple-class.md)<br/>
 [tuple_element – třída](../standard-library/tuple-element-class-tuple.md)<br/>

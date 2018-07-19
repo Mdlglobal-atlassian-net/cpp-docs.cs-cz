@@ -1,5 +1,5 @@
 ---
-title: is_reference – třída | Microsoft Docs
+title: is_reference – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9e4d9fdc285535860b1cfeb34d664927798cc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7882bdd68d6d35994752c8332329e6a92b74fbfa
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864200"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959791"
 ---
 # <a name="isreference-class"></a>is_reference – třída
 
@@ -37,11 +37,11 @@ struct is_reference;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je odkaz na objekt nebo funkci, jinak má hodnotu false.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je odkaz na objekt nebo na funkci; v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -83,9 +83,9 @@ is_reference<int(&)()> == true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
 [is_pointer – třída](../standard-library/is-pointer-class.md)<br/>

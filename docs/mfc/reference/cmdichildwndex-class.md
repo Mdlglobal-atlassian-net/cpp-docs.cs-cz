@@ -1,5 +1,5 @@
 ---
-title: Třída CMDIChildWndEx | Microsoft Docs
+title: CMDIChildWndEx – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -122,15 +122,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ecefc377c620028b520945c6aaefd8b178d9ff9f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338447"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx – třída
-`CMDIChildWndEx` Třída poskytuje funkci systému Windows více dokumentů (MDI) rozhraní podřízeného okna. Ji rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tato třída, pokud aplikace MDI používá některých tříd MFC.  
+`CMDIChildWndEx` Třída poskytuje funkce pro Windows více dokumentů (MDI) interface podřízené okno. Rozšiřuje funkce [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md). Rozhraní framework vyžaduje tuto třídu, pokud aplikace MDI používá určité třídy MFC.  
  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 
@@ -147,74 +147,74 @@ class CMDIChildWndEx : public CMDIChildWnd
   
 |Název|Popis|  
 |----------|-----------------|  
-|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Volá se interně rámcem aktivovat nejvyšší úrovně rámce, když aplikace by měl být aktivován z panelu karty.|  
+|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Rozhraní volá interně k aktivaci rámce, když aplikace by měl být aktivován z karty hlavním panelu.|  
 |`CMDIChildWndEx::AddDockSite`|Tato metoda není použít nebo implementovat.|  
 |[CMDIChildWndEx::AddPane](#addpane)|Přidá do podokna.|  
-|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|Přidá podokno s kartami.|  
-|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|Upraví rozložení ukotvení.|  
+|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|Přidá podokna s kartami.|  
+|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|Upraví dokovací rozložení.|  
 |[CMDIChildWndEx::CanShowOnMDITabs](#canshowonmditabs)||  
-|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Informuje rozhraní, jestli tento podřízeného MDI mohou být zobrazeny na kartách panelu Windows 7.|  
-|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|Vrátí `TRUE` Pokud název okna MDI podřízené lze zobrazit v [CMFCWindowsManagerDialog třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialogové okno. V opačném případě vrátí `FALSE`.|  
-|`CMDIChildWndEx::CreateObject`|Voláno rámcem k vytvoření dynamických instance tohoto typu třídy.|  
+|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Určuje, zda tento podřízený formulář MDI mohou být zobrazeny na kartách panelu Windows 7 říká rozhraní framework.|  
+|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|Vrátí TRUE, pokud název podřízené okno MDI lze zobrazit v [cmfcwindowsmanagerdialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialogové okno. V opačném případě vrátí hodnotu FALSE.|  
+|`CMDIChildWndEx::CreateObject`|Volá se rozhraním pro vytvoření dynamické instance tohoto typu třídy.|  
 |[CMDIChildWndEx::DockPane](#dockpane)|Ukotvené podokno.|  
-|[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|Ukotvené jeden podokně nalevo od jiného podokna.|  
-|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|Umožňuje automaticky skrýt režim pro podokna při jsou ukotvení v zadané okraje okna.|  
-|[CMDIChildWndEx::EnableDocking](#enabledocking)|Umožňuje ukotvení z podřízeného okna do hlavního rámce.|  
-|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|Povolí nebo zakáže automatický výběr část časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.|  
+|[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|Ukotví panel vlevo od jiného podokna.|  
+|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|Umožňuje automaticky skrýt režim pro podokna doku na zadané okraji okna.|  
+|[CMDIChildWndEx::EnableDocking](#enabledocking)|Umožňuje ukotvení podřízeného okna na hlavní rámec.|  
+|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|Povolí nebo zakáže automatický výběr části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.|  
 |[CMDIChildWndEx::GetDockingManager](#getdockingmanager)||  
-|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|Vrací název dokumentu, který se zobrazí v okně podřízeného MDI.|  
-|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|Voláno rámcem načíst na ikonu podřízených oken MDI.|  
-|[CMDIChildWndEx::GetFrameText](#getframetext)|Voláno rámcem k získání textu pro podřízené okna MDI.|  
-|[CMDIChildWndEx::GetPane](#getpane)|Vyhledá podokně podle ID ovládací prvek.|  
+|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|Vrátí název dokumentu, který se zobrazí v podřízené okno MDI.|  
+|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|Volá se rozhraním, aby se načetla ikona podřízená okna MDI.|  
+|[CMDIChildWndEx::GetFrameText](#getframetext)|Volá se rozhraním, k získání textu pro podřízené okno MDI.|  
+|[CMDIChildWndEx::GetPane](#getpane)|Vyhledá podokně podle ID zadaný ovládací prvek.|  
 |[CMDIChildWndEx::GetRelatedTabGroup](#getrelatedtabgroup)||  
-|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|Vrací ukazatel na vložené ukotvení podokně, který byl převeden na dokumentů s kartami.|  
-|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Vrátí kartě proxy okno, ve skutečnosti registrovány na kartách panelu Windows 7.|  
-|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Voláno rámcem, pokud je potřeba získat podřízeného okna (obvykle okno zobrazení nebo rozdělovače) zobrazený na miniaturu karta hlavního panelu Windows 7.|  
-|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|Voláno rámcem, pokud je nutné vybrat část časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.|  
-|`CMDIChildWndEx::GetThisClass`|Voláno rámcem k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Voláno rámcem načíst popis tlačítka pro tlačítko panelu nástrojů.|  
-|[CMDIChildWndEx::InsertPane](#insertpane)|Zaregistruje zadané podokně se správce ukotvení.|  
-|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|Zruší platnost reprezentace podřízeného MDI ikony rastrového obrázku.|  
-|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|Určuje, zda zadaný bod je téměř webu ukotvení.|  
-|[CMDIChildWndEx::IsReadOnly](#isreadonly)|Vrátí `TRUE` Pokud dokument, který se zobrazí v okně podřízené je jen pro čtení. V opačném případě vrátí `FALSE`.|  
-|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|Vrátí hodnotu TRUE, pokud podřízeného MDI byl úspěšně zaregistrován karty hlavního panelu Windows 7.|  
-|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|Vrátí `TRUE` Pokud podřízeného okna MDI obsahuje ukotvené podokno. V opačném případě vrátí `FALSE`.|  
-|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|Určuje, zda podřízeného MDI můžete zobrazit na kartách panelu Windows 7.|  
-|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|Určuje, zda je povoleno automatické volby část časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.|  
-|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|Kombinace příznaků, která se předá rámcem SetTaskbarTabProperties metodu, když na kartě (podřízeného MDI) registrované s kartami hlavního panelu Windows 7. Kombinace výchozí je STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.|  
-|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|Voláno rámcem, pokud je nutné získat rastrový obrázek živém náhledu podřízeného MDI.|  
-|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|Voláno rámcem, pokud je nutné získat rastrový obrázek ikony miniaturu podřízeného MDI.|  
-|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|Voláno rámcem k přesunutí zkrácená rámce okna.|  
-|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|Voláno rámcem, když uživatel stiskne tlačítko Zavřít na hlavním panelu karta miniaturu...|  
-|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|Voláno rámcem zadejte nebo ukončit režim náhledu tisku.|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Voláno rámcem, pokud by měl zpracovat zprávu WM_ACTIVATE, karta miniaturu panelu.|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Voláno rámcem, pokud by měl zpracovat zprávu WM_MOUSEACTIVATE, karta miniaturu panelu.|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Voláno rámcem, když potřebuje k roztahování rastrový obrázek pro Windows 7 panelu karta náhled této podřízeného MDI.|  
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Voláno rámcem aktualizovat název rámce. (Přepisuje `CMDIChildWnd::OnUpdateFrameTitle`.)|  
-|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Vrátí panel, který obsahuje danému bodu.|  
-|`CMDIChildWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit zprávy oken, než jsou odeslány do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce systému Windows. (Přepisuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|Vrací ukazatel na vložené ukotvené podokno, který byl převeden na dokument s kartami.|  
+|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Vrátí kartě okna proxy ve skutečnosti zaregistrovaného na panelu karet Windows 7.|  
+|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Volá se rozhraním, když je nutné získat podřízené okno (obvykle zobrazení nebo rozdělovač okna), který se má zobrazit na miniaturu kartu hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|Volá se rozhraním, když je nutné vybrat části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.|  
+|`CMDIChildWndEx::GetThisClass`|Volá se rozhraním, aby získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|  
+|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Volá se rozhraním pro načtení popisu tlačítka pro tlačítko toolbar.|  
+|[CMDIChildWndEx::InsertPane](#insertpane)|Zaregistruje zadané podokně dokovací správce.|  
+|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|Zruší platnost ikony rastrového obrázku reprezentace podřízený formulář MDI.|  
+|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|Určuje, zda zadaný bod nachází v dokovacím místě.|  
+|[CMDIChildWndEx::IsReadOnly](#isreadonly)|Vrátí hodnotu PRAVDA, pokud je dokument, který se zobrazí v okně podřízené jen pro čtení. V opačném případě vrátí hodnotu FALSE.|  
+|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|Vrátí hodnotu PRAVDA, pokud podřízený formulář MDI byl úspěšně zaregistrován s kartami hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|Vrátí hodnotu PRAVDA, pokud ukotvené podokno obsahuje podřízené okno MDI. V opačném případě vrátí hodnotu FALSE.|  
+|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|Určuje, zda podřízený formulář MDI mohou objevit na kartách panelu Windows 7.|  
+|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|Určuje, zda je povoleno automatické volby části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.|  
+|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|Kombinace příznaků, které je předáno rozhraním, SetTaskbarTabProperties metodu, když na kartě (podřízený formulář MDI), je registrována s kartami hlavního panelu Windows 7. Kombinace výchozí je STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.|  
+|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|Volá se rozhraním, když je nutné získat rastrového obrázku pro dynamický náhled podřízený formulář MDI.|  
+|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|Volá se rozhraním, když je nutné získat rastrový obrázek pro ikonickým miniaturu podřízený formulář MDI.|  
+|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|Volá se rozhraním, aby přesunout okno s minirámcem.|  
+|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|Volá se rozhraním, když uživatel stiskne tlačítko Zavřít na hlavním panelu kartu miniaturu...|  
+|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|Volá se rozhraním, zadejte nebo ukončit režim náhledu.|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Volá se rozhraním, když na hlavním panelu kartu miniaturu by měl zpracovat WM_ACTIVATE zprávu.|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Volá se rozhraním, když na hlavním panelu kartu miniaturu by měl zpracovat WM_MOUSEACTIVATE zprávu.|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Volá se rozhraním, když je nutné roztáhnout rastrový obrázek pro Windows 7 hlavním karta náhled této podřízený formulář MDI.|  
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Volá se rozhraním, chcete-li aktualizovat název rámce. (Přepíše `CMDIChildWnd::OnUpdateFrameTitle`.)|  
+|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Vrátí podokno obsahující časovém okamžiku.|  
+|`CMDIChildWndEx::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) a [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Přepočítá rozložení okna.|  
-|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Zaregistruje podřízeného MDI karty hlavního panelu Windows 7.|  
-|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Podokno odebere správce ukotvení.|  
+|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Zaregistruje podřízený formulář MDI karty hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Podokno se odebere z dokovací správce.|  
 |[CMDIChildWndEx::SetRelatedTabGroup](#setrelatedtabgroup)||  
-|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|Aktivuje odpovídající kartě hlavního panelu Windows 7.|  
-|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Vloží podřízeného MDI před vybrané okno na kartách panelu Windows 7.|  
-|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Nastaví vlastnosti na kartě hlavního panelu Windows 7.|  
-|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|Volá se interně rámcem nastavit výstřižek obdélníku vybrat části časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.|  
+|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|Aktivuje odpovídající kartu hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Vloží podřízený formulář MDI před určené okno na kartách panelu Windows 7.|  
+|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Nastaví vlastnosti pro kartu hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|Volá se interně rozhraním nastavit obdélník oříznutí vybrat části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.|  
 |[CMDIChildWndEx::ShowPane](#showpane)||  
-|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Odebere podřízeného MDI z karty hlavního panelu Windows 7.|  
-|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Aktualizuje ikonu Karta hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Odebere podřízený formulář MDI z karty hlavního panelu Windows 7.|  
+|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Aktualizuje kartu ikona Windows 7.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud chcete využít výhod funkce Rozšířené ukotvení v aplikace MDI, odvodíte třídu okno podřízeného MDI aplikace `CMDIChildWndEx` místo [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md).  
+ Využívat rozšířenou dokovací funkcí v aplikace MDI, jsou odvozeny podřízené okno MDI třídy vaší aplikace z `CMDIChildWndEx` místo [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md).  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragment kódu pochází z [VisualStudioDemo ukázka: MFC Visual Studio Application](../../visual-cpp-samples.md).  
+ V následujícím příkladu je odvozena z třídy `CMDIChildWndEx`. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Visual Studio aplikace knihovny MFC](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
+ [Třídy CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
@@ -222,9 +222,9 @@ class CMDIChildWndEx : public CMDIChildWnd
   
  [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
- [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)  
+ [CMDIChildWnd –](../../mfc/reference/cmdichildwnd-class.md)  
   
- [CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)  
+ [CMDIChildWndEx –](../../mfc/reference/cmdichildwndex-class.md)  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxMDIChildWndEx.h  
@@ -239,36 +239,36 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- Ukazatel na podokně.  
+ [in] *pControlBar*  
+ Ukazatel do podokna.  
   
- [v] *bTail*  
- `TRUE` Chcete-li přidat v podokně na konec seznamu podokna pro ukotvení správce; v opačném `FALSE`.  
+ [in] *bTail*  
+ TRUE, pokud chcete přidat v podokně na konec seznamu podokna pro ukotvení správce; v opačném případě hodnota FALSE.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud v podokně byl úspěšně zaregistrován pomocí ukotvení správce; v opačném `FALSE`.  
+ Hodnota TRUE, pokud se v podokně byl úspěšně zaregistrován ve službě dokovací správce; v opačném případě hodnota FALSE.  
   
 ##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane  
- Přidá podokno s kartami.  
+ Přidá podokna s kartami.  
   
 ```  
 void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- Ukazatel na podokně.  
+ [in] *pControlBar*  
+ Ukazatel do podokna.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
- Upraví rozložení ukotvení.  
+ Upraví dokovací rozložení.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *hdwp*  
- Popisovač strukturu pozice odložené okna.  
+ [in] *hdwp*  
+ Zpracování na pozici strukturu odložené okna.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -282,17 +282,17 @@ virtual BOOL CanShowOnMDITabs();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList  
- Určuje, zda název podřízeného okna MDI lze zobrazit v [CMFCWindowsManagerDialog třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialogové okno.  
+ Určuje, zda název podřízené okno MDI lze zobrazit v [cmfcwindowsmanagerdialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialogové okno.  
   
 ```  
 virtual BOOL CanShowOnWindowsList();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud okno lze zobrazit v **Windows** dialogové okno, jinak hodnota `FALSE`.  
+ Hodnota TRUE, pokud lze zobrazit v okně **Windows** dialogové okno; jinak hodnota FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v odvozené třídě a vrátit `FALSE` Pokud okno by se neměly zobrazovat v **Windows** dialogové okno. Tato funkce je volána z `CMFCWindowsManagerDialog`.  
+ Potlačí tuto metodu v odvozené třídě a vrátí hodnotu FALSE, pokud v okně, nebude se zobrazovat v **Windows** dialogové okno. Tato funkce je volána z `CMFCWindowsManagerDialog`.  
   
 ##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane  
  Ukotvené podokno.  
@@ -305,20 +305,20 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- Ukazatel na podokně.  
+ [in] *pBar*  
+ Ukazatel do podokna.  
   
- [v] *nDockBarID*  
- ID podokně.  
+ [in] *nDockBarID*  
+ ID v podokně.  
   
- [v] *lprect –*  
+ [in] *lprect –*  
  Ukazatel na obdélník.  
   
 ### <a name="remarks"></a>Poznámky  
  *Lprect –* parametr se nepoužívá.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
- Ukotvené jeden podokně nalevo od jiného podokna.  
+ Ukotví panel vlevo od jiného podokna.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -328,57 +328,57 @@ BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parametry  
  *pBar*  
- Ukazatel na panel, který má být ukotven.  
+ Ukazatel na podokno, které má být ukotveno.  
   
  *pLeftOf*  
- Ukazatel na podokně, která slouží jako bod odkazu.  
+ Ukazatel na podokno, které slouží jako bod odkaz.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` v případě úspěchu `FALSE` při selhání.  
+ Hodnota TRUE v případě úspěchu, FALSE, při selhání.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda přebírá podokně určeného *pBar* a ukotvené v levé části podokna určeného *pLeftOf*.  
+ Tato metoda přebírá podokně určené *pBar* a ukotvené v levé části podokna určené *pLeftOf*.  
   
- Tuto metodu volejte, když chcete ukotvení několika podoken v předdefinované pořadí.  
+ Tuto metodu volejte, když chcete ukotvit několika podoken v předdefinované pořadí.  
   
 ##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes  
- Umožňuje automaticky skrýt režim pro podokna při jsou ukotvení v zadané okraje okna.  
+ Umožňuje automaticky skrýt režim pro podokna doku na zadané okraji okna.  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *dwDockStyle*  
- Určuje postranní okna hlavního rámce, který je povolený. Použijte jeden nebo více z následujících příznaků.  
+ [in] *dwDockStyle*  
+ Určuje strany hlavní okno rámce, který je povolený. Pomocí jedné nebo více z následujících příznaků.  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda úspěšně. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda uspěje; v opačném případě FALSE.  
   
 ##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking  
- Umožňuje ukotvení z podřízeného okna do hlavního rámce.  
+ Umožňuje ukotvení podřízeného okna na hlavní rámec.  
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *dwDockStyle*  
- Určuje zarovnání ukotvení povolit.  
+ [in] *dwDockStyle*  
+ Určuje dokovací zarovnáním, které chcete povolit.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda úspěšně. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud metoda uspěje; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Volejte tuto metodu za účelem povolení ukotvení zarovnání do hlavního rámce. Můžete předat kombinaci CBRS_ALIGN_ příznaky (Další informace najdete v tématu [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
+ Volejte tuto metodu za účelem povolení dokovací zarovnání na hlavní rámec. Můžete předat kombinace příznaků CBRS_ALIGN_ (Další informace najdete v tématu [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager  
 
@@ -392,7 +392,7 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName  
- Vrací název dokumentu, který se zobrazí v okně podřízeného MDI.  
+ Vrátí název dokumentu, který se zobrazí v podřízené okno MDI.  
   
 ```  
 virtual LPCTSTR GetDocumentName(CObject** pObj);
@@ -402,62 +402,62 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
  Ukazatel na řetězec, který obsahuje název dokumentu.  
   
 ### <a name="remarks"></a>Poznámky  
- Dokument je co podřízeného okna MDI zobrazí. Obecně platí v okně se zobrazí data, která je načten z nebo uloží do souboru. Název dokumentu, proto je název souboru. Výchozí implementaci `GetDocumentName` vrátí řetězec získané z `CDocument::GetPathName`.  
+ Dokument je, co zobrazí podřízené okno MDI. Obecně platí v okně se zobrazí data, která je načtena z nebo uložit do souboru. Název dokumentu, tedy název souboru. Výchozí implementace `GetDocumentName` vrátí řetězcem, který jste získali z `CDocument::GetPathName`.  
   
- Pokud v okně se zobrazí dokument, který není načtený ze souboru, přepište tuto metodu v odvozené třídě a vrátí dokumentu jedinečný identifikátor.  
+ Pokud v okně se zobrazí dokument, který není načtena ze souboru, přepište tuto metodu v odvozené třídě a vraťte jedinečný identifikátor dokumentu.  
   
- `GetDocumentName` je voláno rámcem, když ho uloží stav všechny otevřené dokumenty. Vrácený řetězec je zapsán do registru.  
+ `GetDocumentName` je voláno rozhraním, když uloží stav všech otevřených dokumentů. Vrácený řetězec je zapsán do registru.  
   
- Když rozhraní je obnovení novější stavu, je název dokumentu přečíst z registru a předaný [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Potlačí tuto metodu v [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-odvozené třídy a vytvořit nebo otevřít dokument, který má tento název a přečtěte si v souboru, který má tento název. Není-li u souboru dokumentu, vytvoření dokumentu, na základě identifikátoru dokumentu sám sebe. Pouze v případě, že máte v úmyslu uložení a obnovení dokumenty, měli byste udělat předchozí akce.  
+ Když rozhraní framework je obnovení novější stavu, název dokumentu je čtení z registru a předat [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Potlačí tuto metodu v [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-odvozené třídy a vytvořit nebo otevřít dokument, který má tento název a přečíst soubor, který má tento název. Pokud dokument není založen na souboru, vytvořte dokument na základě identifikátoru dokumentů samotného. Předchozí akce, které byste měli dělat jenom v případě, že máte v úmyslu uložení a obnovení dokumenty.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje použití `GetDocumentName` metoda. Tento fragment kódu pochází z [VisualStudioDemo ukázka: MFC Visual Studio Application](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje použití `GetDocumentName` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Visual Studio aplikace knihovny MFC](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
 ##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon  
- Voláno rámcem načíst ikonu podřízeného okna MDI.  
+ Volá se rozhraním na načtení ikony podřízené okno MDI.  
   
 ```  
 virtual HICON GetFrameIcon() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Popisovač pro ikonu okno.  
+ Popisovač na ikonu okna.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána rámcem určit jaké ikonu zobrazíte na kartě MDI obsahující MDI podřízeného rámce okna.  
+ Tato metoda je volána rozhraním, chcete-li zjistit, jaké ikony se zobrazí na kartě MDI, která obsahuje podřízené okno rámce MDI.  
   
- Ve výchozím nastavení tato metoda vrátí ikonu okno. Přepsání `GetFrameIcon` v `CMDIChildWndEx`-odvozené třídy, chcete-li přizpůsobit toto chování.  
+ Ve výchozím nastavení tato metoda vrátí ikonu okna. Přepsat `GetFrameIcon` v `CMDIChildWndEx`-odvozené třídy k přizpůsobení tohoto chování.  
   
 ##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText  
- Voláno rámcem k získání textu pro podřízené okna MDI.  
+ Volá se rozhraním, k získání textu pro podřízené okno MDI.  
   
 ```  
 virtual CString GetFrameText() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Řetězec, který obsahuje text rámce okna.  
+ Řetězec, který obsahuje text okna rámce.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato metoda je volána rámcem rozhodnout, jaký text, který se zobrazí na kartě MDI, který obsahuje podřízeného rámce okna MDI.  
+ Tato metoda je volána rozhraním, chcete-li určit, jaký text se zobrazí na kartě MDI, která obsahuje podřízené okno rámce MDI.  
   
- Ve výchozím nastavení tato metoda vrátí text okna. Přepsání `GetFrameText` v `CMDIChildWndEx`-odvozené třídy, chcete-li přizpůsobit toto chování.  
+ Ve výchozím nastavení tato metoda vrací text okna. Přepsat `GetFrameText` v `CMDIChildWndEx`-odvozené třídy k přizpůsobení tohoto chování.  
   
 ##  <a name="getpane"></a>  CMDIChildWndEx::GetPane  
- Vyhledá podokně podle ID ovládací prvek.  
+ Vyhledá podokně podle ID zadaný ovládací prvek.  
   
 ```  
 CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *nID*  
- ID ovládacího prvku v podokně k vyhledání.  
+ [in] *nID*  
+ ID ovládacího prvku podokna se má najít.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na podokně-li nalezena, jinak `NULL`.  
+ Ukazatel na panelu, je-li nalezena, jinak hodnota NULL.  
   
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup  
 
@@ -471,17 +471,17 @@ CMFCTabCtrl* GetRelatedTabGroup();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane  
- Vrátí – ukazatel na ukotvení podokně, která je součástí skupiny MDI se záložkami dokumenty.  
+ Vrátí ukazatel na ukotvené podokno, který je součástí skupiny MDI dokumenty na kartách.  
   
 ```  
 CDockablePane* GetTabbedPane() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na ukotvení podokně, která je součástí skupiny MDI dokumenty na kartách.  
+ Ukazatel na ukotvené podokno, který je součástí skupiny MDI dokumenty na kartách.  
   
 ##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText  
- Voláno rámcem načíst popis tlačítka pro tlačítko panelu nástrojů.  
+ Volá se rozhraním pro načtení popisu tlačítka pro tlačítko toolbar.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -490,13 +490,13 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je zobrazené v popisku. Výchozí implementace vrací `FALSE`.  
+ TRUE, pokud se zobrazí popisek. Výchozí implementace vrací hodnotu FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu, pokud chcete zobrazit vlastní popisy pro tlačítka panelu nástrojů.  
+ Potlačí tuto metodu, pokud chcete zobrazit vlastní popisy tlačítek pro tlačítka panelu nástrojů.  
   
 ##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane  
- Zaregistruje zadané podokně se správce ukotvení.  
+ Zaregistruje zadané podokně dokovací správce.  
   
 ```  
 BOOL InsertPane(
@@ -506,20 +506,20 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- Ukazatel na podokně Vložit.  
+ [in] *pControlBar*  
+ Ukazatel na podokno pro vložení.  
   
- [v] *pTarget*  
- Ukazatel na sousedících podokně.  
+ [in] *pTarget*  
+ Ukazatel na sousední podokně.  
   
- [v] *bAfter*  
- Pokud `TRUE`, *pControlBar* vkládají *pTarget*. Pokud `FALSE`, *pControlBar* je vložen před *pTarget*.  
+ [in] *bAfter*  
+ Při hodnotě TRUE se *pControlBar* vkládá *pTarget*. Pokud má hodnotu FALSE, *pControlBar* se vloží před *pTarget*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda bude úspěšná, `FALSE` jinak.  
+ Hodnota TRUE, pokud metoda uspěje, FALSE v opačném případě.  
   
 ##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite  
- Určuje, zda zadaný bod je téměř webu ukotvení.  
+ Určuje, zda zadaný bod nachází v dokovacím místě.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -529,65 +529,65 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
+ [in] *bodu*  
  Zadaný bod.  
   
- [v] *dwBarAlignment*  
- Určuje, které hraniční bod je téměř. Možné hodnoty jsou `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, a `CBRS_ALIGN_BOTTOM`  
+ [in] *dwBarAlignment*  
+ Určuje, které edge se bod nachází blízko. Možné hodnoty jsou CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP a CBRS_ALIGN_BOTTOM  
   
- [v] *bOuterEdge*  
- `TRUE` Pokud je bod téměř vnější ohraničení ukotvení serveru. `FALSE` jinak.  
+ [in] *bOuterEdge*  
+ Hodnota TRUE, pokud je bod se blíží vnější okraj dokovacím místě; FALSE v opačném případě.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud je bod téměř webu ukotvení; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud se bod nachází v dokovacím místě; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Bod je blízko ukotvení lokality, pokud je v rámci velkých a malých písmen, nastavte v správce ukotvení. Výchozí citlivosti je 15 pixelů.  
+ Bod je téměř dokovacím místě, pokud je v rámci citlivosti, nastavte ve Správci ukotvení. Citlivost výchozím nastavení je 15 pixelů.  
   
 ##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly  
- Určuje, zda dokument, který se zobrazí v okně podřízené je jen pro čtení.  
+ Určuje, jestli je dokument, který se zobrazí v okně podřízené jen pro čtení.  
   
 ```  
 virtual BOOL IsReadOnly();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud dokument je jen pro čtení; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud dokument je jen pro čtení; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
- Tato funkce se používá při prevenci ukládání dokumentů jen pro čtení.  
+ Tato funkce umožňuje zabránit ukládání dokumentů jen pro čtení.  
   
 ### <a name="example"></a>Příklad  
- Následující příklad ukazuje přepsání `IsReadOnly` metoda. Tento fragment kódu pochází z [VisualStudioDemo ukázka: MFC Visual Studio Application](../../visual-cpp-samples.md).  
+ Následující příklad ukazuje přepsání `IsReadOnly` metody. Tento fragment kódu se segmenty Convenience [VisualStudioDemo vzorku: Visual Studio aplikace knihovny MFC](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
 ##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane  
- Určuje, zda podřízeného okna MDI obsahuje ukotvené podokno.  
+ Určuje, zda obsahuje podřízené okno MDI ukotvené podokno.  
   
 ```  
 BOOL IsTabbedPane() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud podřízeného okna MDI obsahuje ukotvení podokno, v němž byl převeden na záložkách dokumentu. v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud ukotvené podokno, který byl převeden na dokument s kartami; obsahuje podřízené okno MDI. v opačném případě FALSE.  
   
 ##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame  
- Voláno rámcem k přesunutí zkrácená rámce okna.  
+ Volá se rozhraním, aby přesunout okno s minirámcem.  
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pFrame*  
- Ukazatel na zkrácená rámce okna.  
+ [in] *pFrame*  
+ Ukazatel na okno s minirámcem.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud metoda úspěšné, jinak `FALSE`.  
+ Hodnota TRUE, pokud metoda uspěje, jinak hodnota FALSE.  
   
 ##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode  
- Voláno rámcem zadejte nebo ukončit režim náhledu tisku.  
+ Volá se rozhraním, zadejte nebo ukončit režim náhledu.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -596,25 +596,25 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bPreview*  
- Pokud `TRUE`, zadejte režim náhledu. Pokud `FALSE`, ukončit režim náhledu tisku.  
+ [in] *bPreview*  
+ Pokud je hodnota TRUE, přejde do režimu náhledu tisku. Pokud má hodnotu FALSE, ukončit režim náhledu tisku.  
   
- [v] *pState*  
+ [in] *pState*  
  Ukazatel na strukturu stavu náhledu tisku.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
- Voláno rámcem aktualizovat název rámce.  
+ Volá se rozhraním, chcete-li aktualizovat název rámce.  
   
 ```  
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bAddToTitle*  
- Pokud `TRUE`, přidejte název dokumentu na název.  
+ [in] *bAddToTitle*  
+ Při hodnotě TRUE se přidáte název dokumentu na titulek.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
- Vrátí panel, který obsahuje danému bodu.  
+ Vrátí podokno obsahující časovém okamžiku.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -631,28 +631,28 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bodu*  
- Určuje bod, v souřadnice obrazovky ke kontrole.  
+ [in] *bodu*  
+ Určuje bod, v souřadnicovém systému obrazovky, chcete-li zkontrolovat.  
   
- [v] *nSensitivity*  
- Toto množství zvýšit oblasti hledání. Podokno splňuje kritéria hledání, pokud danému bodu spadá do oblasti vyšší.  
+ [in] *nSensitivity*  
+ Tuto hodnotu zvýšit prohledávaná oblast. Podokno splňuje kritéria hledání, pokud daný okamžik v oblasti zvýšení.  
   
- [v] *bExactBar*  
- `TRUE` Ignorovat *nSensitivity* parametr, jinak hodnota `FALSE`.  
+ [in] *bExactBar*  
+ Hodnota TRUE pro ignorování *nSensitivity* parametr; jinak hodnota FALSE.  
   
- [v] *pRTCBarType*  
- Není-li `NULL`, tato metoda vyhledá pouze podokna zadaného typu.  
+ [in] *pRTCBarType*  
+ Pokud není NULL, tato metoda vyhledá pouze podokna zadaného typu.  
   
- [v] *dwAlignment*  
- Pokud podokno se nachází zde zadaný bod, tento parametr obsahuje na straně panelu, který je nejblíže k Zadaný bod. Další informace najdete v části poznámky.  
+ [in] *dwAlignment*  
+ Pokud podokno se nachází zde zadaný bod, tento parametr obsahuje straně podokna, která je nejblíž k určitému bodu. Další informace najdete v části poznámky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel `CBasePane`-odvozené objekt, který obsahuje danému bodu nebo `NULL` Pokud nebyl nalezen žádný podokně.  
+ Ukazatel `CBasePane`-objektu, který obsahuje časovém okamžiku nebo hodnota NULL, pokud nebyla nalezena žádná podokně.  
   
 ### <a name="remarks"></a>Poznámky  
- Voláním této metody lze zjistit, zda podokno obsahuje zadaný bod podle k zadaným podmínkám, jako je například třída runtime a viditelnosti.  
+ Voláním této metody lze zjistit, zda podokno obsahuje zadaný bod podle zadané podmínky, jako jsou třídy modulu runtime a viditelnost.  
   
- Když funkce vrátí hodnotu a byla nalezena podokno, *dwAlignment* obsahuje zarovnání Zadaný bod. Například, pokud byl bod nejblíže k horní části podokna *dwAlignment* je nastaven na `CBRS_ALIGN_TOP`.  
+ Když funkce vrátí hodnotu, ale na stavového řádku se nenašla, *dwAlignment* obsahuje zarovnání Zadaný bod. Například, pokud je bod byl co nejblíže k hornímu okraji v podokně *dwAlignment* je nastavena na CBRS_ALIGN_TOP.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Přepočítá rozložení okna.  
@@ -662,11 +662,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *bNotify*  
- Pokud `TRUE`, aktivní položky na místě pro okno obdrží upozornění na změnu rozložení.  
+ [in] *bNotify*  
+ Při hodnotě TRUE se aktivní položky v místě pro okno obdrží oznámení o změně rozložení.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
- Podokno odebere správce ukotvení.  
+ Podokno se odebere z dokovací správce.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pControlBar*  
- Ukazatel na podokno odebrat.  
+ [in] *pControlBar*  
+ Ukazatel do podokna odebrat.  
   
- [v] *bDestroy*  
- Pokud `TRUE`, odebrané podokně zničena.  
+ [in] *bDestroy*  
+ Při hodnotě TRUE je zničen podokně odebrané.  
   
- [v] *bAdjustLayout*  
- Pokud `TRUE`, upravte ukotvení rozložení okamžitě.  
+ [in] *bAdjustLayout*  
+ Pokud je hodnota TRUE, upravte okamžitě dokovací rozložení.  
   
- [v] *bAutoHide*  
- Pokud `TRUE`, ukotvení rozložení se vztahuje k seznamu autohide – řádky. Pokud `FALSE`, ukotvení rozložení se vztahuje k seznamu regulární podokna.  
+ [in] *bAutoHide*  
+ Při hodnotě TRUE se dokovací rozložení se týká seznamu automatické skrývání pruhy. Pokud má hodnotu FALSE, dokovací rozložení se týká seznam regulární podokna.  
   
- [v] *pBarReplacement*  
- Ukazatel na podokně, který nahrazuje podokně odebrané.  
+ [in] *pBarReplacement*  
+ Ukazatel na stavového řádku, který nahrazuje podokně odebrané.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *p*  
+ [in] *p*  
   
 ### <a name="remarks"></a>Poznámky  
   
@@ -717,15 +717,15 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [v] *pBar*  
- [v] *bShow*  
- [v] *bDelay*  
- [v] *bActivate*  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon  
- Aktualizuje kartu ikona na hlavním panelu Windows 7.  
+ Ikona kartu aktualizace Windows 7.  
   
 ```  
 virtual void UpdateTaskbarTabIcon(HICON hIcon);
@@ -733,12 +733,12 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
   
 ### <a name="parameters"></a>Parametry  
  *hIcon*  
- Popisovač pro ikonu, která se zobrazí na kartě hlavního panelu Windows 7.  
+ Popisovač ikony se zobrazí na kartě hlavního panelu Windows 7.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab  
- Odebere podřízeného MDI z karty hlavního panelu Windows 7.  
+ Odebere podřízený formulář MDI z karty hlavního panelu Windows 7.  
   
 ```  
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
@@ -746,28 +746,28 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bCheckRegisteredMDIChildCount*  
- Určuje, zda tato funkce musí zkontrolovat počet podřízených prvků MDI zaregistrována MDI karty. Pokud toto číslo 0, tato funkce odebere rámeček výstřižek z miniaturu panelu aplikace.  
+ Určuje, zda tato funkce je potřeba zkontrolujte číslo zaregistrované s kartami MDI podřízený objekt MDI. Pokud toto číslo je 0, tato funkce odebere obdélník oříznutí z hlavního panelu miniaturu aplikace.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect  
- Voláno rámcem nastavit rámeček výstřižek vybrat části časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.  
+ Volá se rozhraním, chcete-li nastavit obdélník oříznutí vybrat části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.  
   
 ```  
 virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Rect –*  
- Určuje nové výstřižek rámeček. Pokud rámeček je prázdná nebo null, odeberou se výstřižek.  
+ *Rect*  
+ Určuje novou obdélník oříznutí. Pokud obdélníku je prázdný nebo mít hodnotu null, odeberou se obsah schránky.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` v případě úspěšného; v opačném případě `FALSE`.  
+ Hodnota TRUE v případě úspěchu; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties  
- Nastaví vlastnosti na kartě hlavního panelu Windows 7.  
+ Nastaví vlastnosti pro kartu hlavního panelu Windows 7.  
   
 ```  
 void SetTaskbarTabProperties(DWORD dwFlags);
@@ -780,7 +780,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder  
- Vloží podřízeného MDI před zadané okno na kartách panelu Windows 7.  
+ Vloží podřízený formulář MDI před určené okno na kartách panelu Windows 7.  
   
 ```  
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
@@ -788,12 +788,12 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="parameters"></a>Parametry  
  *pWndBefore*  
- Ukazatel na podřízeného okna MDI, jejichž miniaturu je vložit do levé straně. Toto okno musí být zaregistrována pomocí `RegisterTaskbarTab`. Pokud je tato hodnota `NULL`, nové miniaturu se přidá na konec seznamu.  
+ Ukazatel na podřízené okno MDI, jehož miniaturu se vloží nalevo. Toto okno musí již být zaregistrované přes `RegisterTaskbarTab`. Pokud je tato hodnota NULL, nová miniaturu se přidá na konec seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive  
- Aktivuje odpovídající kartě hlavního panelu Windows 7.  
+ Aktivuje na odpovídající kartu hlavního panelu Windows 7.  
   
 ```  
 void SetTaskbarTabActive();
@@ -802,7 +802,7 @@ void SetTaskbarTabActive();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab  
- Zaregistruje podřízeného MDI karty hlavního panelu Windows 7.  
+ Zaregistruje podřízený formulář MDI karty hlavního panelu Windows 7.  
   
 ```  
 virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
@@ -810,12 +810,12 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="parameters"></a>Parametry  
  *pWndBefore*  
- Ukazatel na podřízeného okna MDI, jejichž miniaturu je vložit do levé straně. Toto okno musí být zaregistrována pomocí `RegisterTaskbarTab`. Pokud je tato hodnota `NULL`, nové miniaturu se přidá na konec seznamu.  
+ Ukazatel na podřízené okno MDI, jehož miniaturu se vloží nalevo. Toto okno musí již být zaregistrované přes `RegisterTaskbarTab`. Pokud je tato hodnota NULL, nová miniaturu se přidá na konec seznamu.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
- Voláno rámcem, když potřebuje k roztahování rastrový obrázek pro Windows 7 panelu karta náhled této podřízeného MDI.  
+ Volá se rozhraním, když je nutné roztáhnout rastrový obrázek pro Windows 7 hlavním karta náhled podřízeného MDI.  
   
 ```  
 virtual BOOL OnTaskbarTabThumbnailStretch(
@@ -827,22 +827,22 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
   
 ### <a name="parameters"></a>Parametry  
  *hBmpDst*  
- Popisovač pro rastrový obrázek cílový.  
+ Popisovač do cílové bitmapy.  
   
  *rectDst*  
- Určuje cílový rámeček.  
+ Určuje cílového obdélníku.  
   
  *hBmpSrc*  
- Popisovač pro rastrový obrázek zdroje.  
+ Popisovač pro zdrojovou bitmapu.  
   
  *rectSrc*  
- Určuje zdroj rámeček.  
+ Určuje zdrojového obdélníku.  
   
 ### <a name="remarks"></a>Poznámky  
- Requirementher nebo mu mu mu mu mu mu mu **:** afxmdichildwndex.h  
+ Požadavek: afxmdichildwndex.h  
   
 ##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
- Voláno rámcem, pokud by měl zpracovat zprávu WM_MOUSEACTIVATE, karta miniaturu panelu.  
+ Volá se rozhraním, když na hlavním panelu kartu miniaturu měl WM_MOUSEACTIVATE zprávu zpracovat.  
   
 ```  
 virtual int OnTaskbarTabThumbnailMouseActivate(
@@ -853,19 +853,19 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
   
 ### <a name="parameters"></a>Parametry  
  *pDesktopWnd*  
- Určuje ukazatel na nejvyšší úrovně nadřazeného okna okna aktivace probíhá. Ukazatele může být v dočasné a by neměly být uloženy.  
+ Určuje ukazatel na nejvyšší úrovni nadřazené okno okna aktivuje. Ukazatel může být dočasné a neměl by být uložen.  
   
  *nHitTest*  
- Určuje kód oblasti vstupů do testu. Testu přístupů je test, který určuje umístění kurzoru.  
+ Určuje kód oblasti spuštění testu. Ověření pozice je test, který určuje umístění kurzoru.  
   
  *message*  
  Určuje číslo zprávy myši.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace aktivuje související rámečku podřízeného MDI.  
+ Výchozí implementace aktivuje související podřízený rámec MDI.  
   
 ##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
- Voláno rámcem, pokud by měl zpracovat zprávu WM_ACTIVATE, karta miniaturu panelu.  
+ Volá se rozhraním, když na hlavním panelu kartu miniaturu měl WM_ACTIVATE zprávu zpracovat.  
   
 ```  
 virtual void OnTaskbarTabThumbnailActivate(
@@ -876,19 +876,19 @@ virtual void OnTaskbarTabThumbnailActivate(
   
 ### <a name="parameters"></a>Parametry  
  *nInformace*  
- Určuje, zda `CWnd` je Probíhá aktivace nebo deaktivace.  
+ Určuje, zda `CWnd` je se aktivuje nebo deaktivuje.  
   
  *pWndOther*  
- Ukazatel `CWnd` Probíhá aktivace nebo deaktivace. Může být ukazatele `NULL`, a může být dočasné.  
+ Ukazatel `CWnd` se aktivuje nebo deaktivuje. Ukazatel může mít hodnotu NULL a může být dočasné.  
   
  *bMinimized*  
- Určuje minimalizovaném okně Stav `CWnd` Probíhá aktivace nebo deaktivace. Hodnota `TRUE` označuje je minimalizován okna.  
+ Určuje minimalizovaném stavu `CWnd` se aktivuje nebo deaktivuje. Hodnota TRUE označuje, že je minimalizované okno.  
   
 ### <a name="remarks"></a>Poznámky  
- Výchozí implementace aktivuje související rámečku podřízeného MDI.  
+ Výchozí implementace aktivuje související podřízený rámec MDI.  
   
 ##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
- Voláno rámcem, když uživatel na kartě miniaturu panelu stiskne tlačítko Zavřít.  
+ Volá se rozhraním, když uživatel stiskne tlačítko Zavřít na miniaturu kartu hlavního panelu.  
   
 ```  
 virtual void OnPressTaskbarThmbnailCloseButton();
@@ -897,7 +897,7 @@ virtual void OnPressTaskbarThmbnailCloseButton();
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail  
- Voláno rámcem, pokud je nutné získat rastrový obrázek ikony miniaturu podřízeného MDI.  
+ Volá se rozhraním, když je nutné získat rastrový obrázek pro ikonickým miniaturu podřízený formulář MDI.  
   
 ```  
 virtual HBITMAP OnGetIconicThumbnail(
@@ -906,16 +906,16 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nWindth*  
- Určuje šířku požadované rastrového obrázku.  
+ *nWidth*  
+ Určuje šířku rastrového obrázku vyžaduje.  
   
  *nHeight*  
- Určuje výšku požadované rastrového obrázku.  
+ Určuje výšku rastrového obrázku vyžaduje.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
- Voláno rámcem, pokud je nutné získat rastrový obrázek živém náhledu podřízeného MDI.  
+ Volá se rozhraním, když je nutné získat rastrového obrázku pro dynamický náhled podřízený formulář MDI.  
   
 ```  
 virtual HBITMAP OnGetIconicLivePreviewBitmap(
@@ -925,19 +925,19 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
   
 ### <a name="parameters"></a>Parametry  
  *bIsMDIChildActive*  
- Tento parametr je `TRUE` Pokud se pro podřízeného MDI požaduje bitovou mapu, která je aktuálně aktivní a hlavní okno není minimalizovaná. Výchozí zpracování v tomto případě pořídí snímek hlavního okna.  
+ Tento parametr má hodnotu TRUE, pokud není minimalizovaný hlavní okno, vyžaduje rastrový obrázek pro podřízený formulář MDI, která je aktuálně aktivní. Výchozí zpracování v tomto případě pořídí snímek hlavního okna.  
   
  *ptLocation*  
- Určuje umístění bitmapy v hlavní (nejvyšší úrovně) souřadnice klienta okno. Tento bod by měl být poskytovaný volaného.  
+ Určuje umístění rastrového obrázku ve funkci main (nejvyšší úrovně) souřadnice klienta okna. Tento bod musí být zadána volaným.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud zpracování popisovač na platný 32bpp bitmapu, v opačném případě vrátí `NULL`.  
+ Pokud zpracována, vrátí popisovač do bitmapy platný 32 bitů na pixel, jinak NULL.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v odvozené třídě a vraťte se platný 32bpp rastrový obrázek živém náhledu podřízeného MDI. Tato metoda je volána, pouze pokud je podřízeného MDI zobrazeny na kartách panelu Windows 7. Pokud vrátíte `NULL`, MFC volá výchozí obslužné rutiny a získá bitmap pomocí `PrintClient` nebo `PrintWindow`.  
+ Potlačí tuto metodu v odvozené třídě a vrátí platný 32 bitů na pixel rastrový obrázek pro živý náhled podřízený formulář MDI. Tato metoda je volána, pouze pokud je podřízený formulář MDI zobrazeny na kartách panelu Windows 7. Pokud se můžete vrátit hodnotu NULL, MFC volá výchozích obslužných rutin a získá rastrové obrázky pomocí `PrintClient` nebo `PrintWindow`.  
   
 ##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
- Kombinace příznaků, je předaná rozhraní k `SetTaskbarTabProperties` metodu, když na kartě (podřízeného MDI) registrované s kartami hlavního panelu Windows 7.  
+ Kombinace příznaků, které je předáno rozhraním, aby `SetTaskbarTabProperties` metodu, když na kartě (podřízený formulář MDI), je registrována s kartami hlavního panelu Windows 7.  
   
 ```  
 AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;  
@@ -947,92 +947,92 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
  Kombinace výchozí je STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.  
   
 ##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
- Určuje, zda je povoleno automatické volby část časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.  
+ Určuje, zda je povoleno automatické volby části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.  
   
 ```  
 BOOL IsTaskbarThumbnailClipRectEnabled() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `TRUE` Pokud automatický výběr část časového období klientské oblasti pro zobrazení je povolené jinak `FALSE`.  
+ Vrátí hodnotu TRUE, pokud automatického výběru části klientské oblasti okna. Chcete-li zobrazit je povoleno; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
- Určuje, zda podřízeného MDI můžete zobrazit na kartách panelu Windows 7.  
+ Určuje, zda podřízený formulář MDI mohou objevit na kartách panelu Windows 7.  
   
 ```  
 BOOL IsTaskbarTabsSupportEnabled();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud se podřízeného MDI objevit na kartách panelu Windows 7; `FALSE` Pokud podřízeného MDI se nemůže vyskytovat na kartách panelu Windows 7.  
+ Hodnota TRUE, pokud na hlavním panelu karet Windows 7; se může objevit podřízený formulář MDI FALSE, pokud na hlavním panelu karet Windows 7 se nemůže objevit podřízený formulář MDI.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
- Vrátí `TRUE` Pokud podřízeného MDI byl úspěšně zaregistrován karty hlavního panelu Windows 7.  
+ Vrátí hodnotu PRAVDA, pokud podřízený formulář MDI byl úspěšně zaregistrován s kartami hlavního panelu Windows 7.  
   
 ```  
 BOOL IsRegisteredWithTaskbarTabs();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud podřízeného MDI je registrován s kartami hlavního panelu Windows 7; v opačném případě `FALSE`.  
+ Hodnota TRUE, pokud podřízený formulář MDI je registrován s Windows 7 hlavního panelu karet; v opačném případě FALSE.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps  
- Zruší platnost reprezentaci ikony rastrový obrázek podřízeného MDI.  
+ Zruší platnost ikony rastrového obrázku reprezentace podřízený formulář MDI.  
   
 ```  
 BOOL InvalidateIconicBitmaps();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Vrátí `FALSE` Pokud podporu hlavního panelu Windows 7 je zakázán nebo podřízeného MDI není registrován u služby Windows 7 panelu karty; v opačném případě vrátí `TRUE`.  
+ Vrátí hodnotu FALSE, pokud je zakázána podpora hlavního panelu Windows 7 nebo podřízený formulář MDI není zaregistrovaný u karty hlavního panelu Windows 7; v opačném případě vrátí hodnotu TRUE.  
   
 ### <a name="remarks"></a>Poznámky  
- By měla být volána, když došlo ke změně živý obsah nebo velikost podřízeného MDI.  
+ By měla být volána, když došlo ke změně živého obsahu nebo velikost podřízeného MDI.  
   
 ##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect  
- Voláno rámcem, pokud je nutné vybrat část časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.  
+ Volá se rozhraním, když je nutné vybrat části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.  
   
 ```  
 virtual CRect GetTaskbarThumbnailClipRect() const;  
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Rámečku v souřadnicích systému windows. Obdélníku, je namapována na klientské oblasti rámečku nejvyšší úrovně. Rámeček by měla být prázdná zrušte výstřižek rámeček.  
+ Rámečku v souřadnicích systému windows. Obdélníku je namapována na klientskou oblast rámce nejvyšší úrovně. Obdélník by měl být prázdný zrušte obdélník oříznutí.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd  
- Voláno rámcem, pokud je potřeba získat podřízeného okna (obvykle okno zobrazení nebo rozdělovače), který se má zobrazit na kartě miniaturu hlavního panelu Windows 7.  
+ Volá se rozhraním, když je nutné získat podřízené okno (obvykle zobrazení nebo rozdělovač okna), který se má zobrazit na kartě miniaturu hlavního panelu Windows 7.  
   
 ```  
 virtual CWnd* GetTaskbarPreviewWnd();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- By měla vrátit platnou ukazatel `CWnd` související objekt, jehož preview se má zobrazit na kartě hlavního panelu Windows 7 se tuto podřízeného MDI. Výchozí implementace vrací podřízeného okna této podřízené jednotky MDI s ID ovládacího prvku AFX_IDW_PANE_FIRST (což je obvykle `CView`-odvozené třídy).  
+ By měla vrátit platný ukazatel `CWnd` související objekt, jehož náhled má zobrazit na kartu hlavního panelu Windows 7 se tento podřízený formulář MDI. Výchozí implementace vrací podřízené okno tento podřízený formulář MDI s ID ovládacího prvku AFX_IDW_PANE_FIRST (což je obvykle `CView`-odvozené třídy).  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd  
- Vrátí proxy okno s kartou registrovány na kartách panelu Windows 7.  
+ Vrátí proxy okno s kartou zaregistrovaného na panelu karet Windows 7.  
   
 ```  
 CMDITabProxyWnd* GetTabProxyWnd();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na `CMDITabProxyWnd` objekt, který je registrován s kartami hlavního panelu Windows 7.  
+ Ukazatel `CMDITabProxyWnd` objektu, který je registrovaný pomocí karty hlavního panelu Windows 7.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
- Povolí nebo zakáže automatický výběr část časového období klientské oblasti zobrazuje jako miniaturu tohoto okna na hlavním panelu.  
+ Povolí nebo zakáže automatický výběr části klientské oblasti okna. Chcete-li zobrazit jako miniatura tohoto okna na hlavním panelu.  
   
 ```  
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
@@ -1040,25 +1040,25 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bEnable*  
- Určuje, jestli se má povolit ( `TRUE`), nebo zakázat ( `FALSE`) automatický výběr část časového období klientské oblasti pro zobrazení.  
+ Určuje, zda chcete povolit (TRUE) nebo zakázat (FALSE) automatický výběr části klientské oblasti okna. Chcete-li zobrazit.  
   
 ### <a name="remarks"></a>Poznámky  
   
 ##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs  
- Informuje rozhraní, jestli tento podřízeného MDI mohou být zobrazeny na kartách panelu Windows 7.  
+ Určuje, zda tento podřízený formulář MDI mohou být zobrazeny na kartách panelu Windows 7 říká rozhraní framework.  
   
 ```  
 virtual BOOL CanShowOnTaskBarTabs();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- `TRUE` Pokud obsah podřízeného MDI lze zobrazit v miniaturách hlavního panelu Windows 7.  
+ TRUE, pokud obsah podřízený formulář MDI lze zobrazit v miniaturách hlavního panelu Windows 7.  
   
 ### <a name="remarks"></a>Poznámky  
- Potlačí tuto metodu v odvozené třídě a vrátit `FALSE` zakázat vzhled tento podřízeného MDI na kartách panelu Windows 7.  
+ Potlačí tuto metodu v odvozené třídě a vrátí hodnotu FALSE, chcete-li zakázat vzhled tento podřízený formulář MDI na kartách panelu Windows 7.  
   
 ##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame  
- Voláno rámcem aktivovat rámečku nejvyšší úrovně aplikace při aktivaci z panelu karty.  
+ Volá se rozhraním, aby aktivace rámce nejvyšší úrovně, pokud je aplikace aktivována na hlavním panelu kartě.  
   
 ```  
 virtual void ActivateTopLevelFrame();
@@ -1070,5 +1070,5 @@ virtual void ActivateTopLevelFrame();
  [Graf hierarchie](../../mfc/hierarchy-chart.md)   
  [Třídy](../../mfc/reference/mfc-classes.md)   
  [CMDIChildWnd – třída](../../mfc/reference/cmdichildwnd-class.md)   
- [CMFCWindowsManagerDialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)   
+ [Cmfcwindowsmanagerdialog – třída](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)   
  [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md)

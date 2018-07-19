@@ -1,5 +1,5 @@
 ---
-title: enable_shared_from_this – třída | Microsoft Docs
+title: enable_shared_from_this – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845749"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956136"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this – třída
 
@@ -46,25 +46,25 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ řízené sdílené ukazatele.
+*Ty* typ řízený sdíleným ukazatelem.
 
 ## <a name="remarks"></a>Poznámky
 
-Odvozené objekty z `enable_shared_from_this` můžete použít `shared_from_this` metody v členské funkce vytvořit [shared_ptr](../standard-library/shared-ptr-class.md) vlastníky instance, které sdílejí vlastnictví s existujícím `shared_ptr` vlastníky. Jinak, pokud vytvoříte novou `shared_ptr` pomocí `this`, se liší od stávající `shared_ptr` vlastníků, což může vést k neplatné odkazy nebo způsobit objekt, který má být odstraněn více než jednou.
+Objekty odvozené z `enable_shared_from_this` můžete použít `shared_from_this` metody v členské funkce k vytvoření [shared_ptr](../standard-library/shared-ptr-class.md) vlastníky instance, které sdílejí vlastnictví s existujícím `shared_ptr` vlastníky. Jinak, pokud vytvoříte nový `shared_ptr` pomocí **to**, se liší od existující `shared_ptr` vlastníky, což může vést k neplatné odkazy nebo způsobit, že objekt, který má být odstraněn více než jednou.
 
-To pomáhá zabránit náhodnému zneužití jsou chráněné konstruktory, destruktor a operátor přiřazení. Typ argumentu šablony `Ty` musí být typu odvozené třídy.
+Aby se zabránilo nechtěnému zneužití jsou chráněné konstruktory, destruktoru a operátor přiřazení. Typ argumentu šablony *Ty* musí být typu odvozené třídy.
 
-Příklad použití, naleznete v části [enable_shared_from_this::shared_from_this](#shared_from_this).
+Příklad použití, naleznete v tématu [enable_shared_from_this::shared_from_this](#shared_from_this).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<paměti >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this
 
-Generuje `shared_ptr` , vlastnictví instance sdílí s existujícím `shared_ptr` vlastníky.
+Generuje `shared_ptr` vlastnictví instance, která sdílí s existujícím `shared_ptr` vlastníky.
 
 ```cpp
 shared_ptr<T> shared_from_this();
@@ -73,7 +73,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud odvozujete objekty z `enable_shared_from_this` základní třídy, `shared_from_this` šablony členské funkce vrátí [shared_ptr – třída](../standard-library/shared-ptr-class.md) objekt, který sdílí vlastnictví této instance s existující `shared_ptr` vlastníky. Jinak, pokud vytvoříte novou `shared_ptr` z `this`, se liší od stávající `shared_ptr` vlastníků, což může vést k neplatné odkazy nebo způsobit objekt, který má být odstraněn více než jednou. Toto chování je definován při volání `shared_from_this` na instanci, která již není vlastníkem `shared_ptr` objektu.
+Pokud odvozujete objekty z `enable_shared_from_this` základní třídy, `shared_from_this` šablony členské funkce vrátit [shared_ptr – třída](../standard-library/shared-ptr-class.md) objekt, který sdílí vlastnictví této instance s existujícím `shared_ptr` vlastníky. Jinak, pokud vytvoříte nový `shared_ptr` z **to**, se liší od existující `shared_ptr` vlastníky, což může vést k neplatné odkazy nebo způsobit, že objekt, který má být odstraněn více než jednou. Chování není definováno, pokud zavoláte `shared_from_this` v instanci, která již není vlastněn aktivitou `shared_ptr` objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -109,7 +109,7 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
 [shared_ptr – třída](../standard-library/shared-ptr-class.md)<br/>

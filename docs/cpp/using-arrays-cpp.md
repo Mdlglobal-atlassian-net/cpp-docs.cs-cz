@@ -1,5 +1,5 @@
 ---
-title: Použití polí (C++) | Microsoft Docs
+title: Použití polí (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2140dbe786a5d2a2a1b86eca17912e5e06b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947510"
 ---
 # <a name="using-arrays-c"></a>Použití polí (C++)
-Máte přístup k jednotlivé prvky pole pomocí operátor dolního indexu pole (`[ ]`). Pokud jednorozměrné pole se používá v výraz, který nemá žádné dolní index, názvu pole se vyhodnotí jako ukazatel na první prvek v poli.  
+Můžete přistupovat k jednotlivým prvkům pole pomocí operátoru dolního indexu pole (`[ ]`). Pokud je jednorozměrné pole použito ve výrazu, který nemá žádný index, název pole vyhodnotí ukazatel na první prvek v poli.  
   
-```  
+```cpp 
 // using_arrays.cpp  
 int main() {  
    char chArray[10];  
@@ -33,9 +34,9 @@ int main() {
 }  
 ```  
   
- Pokud používáte vícerozměrná pole, můžete použít různé kombinace ve výrazech.  
+ Při použití vícedimenzionálních polí můžete použít různé kombinace ve výrazech.  
   
-```  
+```cpp 
 // using_arrays_2.cpp  
 // compile with: /EHsc /W1  
 #include <iostream>  
@@ -54,7 +55,7 @@ int main() {
 }  
 ```  
   
- V předchozí kód `multi` je trojrozměrné typu `double`. `p2multi` Ukazatel ukazuje na pole typu `double` velikosti tři. V tomto příkladu se používá pole s jeden, dva a tři dolní indexy. I když je více společné pro všechny dolní indexy, zadejte jako v `cout` příkaz, je někdy užitečné k výběru určitou podmnožinu elementy pole, jak je znázorněno v příkazech, které následují `cout`.  
+ V předchozím kódu `multi` je trojrozměrné pole typu **double**. `p2multi` Ukazatel odkazuje na pole typu **double** o velikosti tři. V tomto příkladu se používá pole s jeden, dva a třemi dolními indexy. Ačkoli je běžnější určit všechny dolní indexy, stejně jako `cout` příkaz, je někdy užitečné vybrat určitou podmnožinu prvků pole, jak je znázorněno v příkazech, které následují `cout`.  
   
 ## <a name="see-also"></a>Viz také  
  [Pole](../cpp/arrays-cpp.md)

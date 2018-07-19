@@ -1,5 +1,5 @@
 ---
-title: Rozhraní ICommandTarget rozhraní | Microsoft Docs
+title: Icommandtarget – rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32112fbad516b2550da0cc48cb6c287583d396c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 086b0b1d17d32a747802a8c1df783fb6a20a560e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339771"
 ---
-# <a name="icommandtarget-interface"></a>Rozhraní ICommandTarget rozhraní
-Poskytuje uživatelského ovládacího prvku rozhraní přijímají příkazy ke zdrojovému objektu příkazu.  
+# <a name="icommandtarget-interface"></a>Icommandtarget – rozhraní
+Uživatelský ovládací prvek poskytuje rozhraní pro příjem příkazy ze zdrojového objektu příkazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,36 +40,36 @@ interface class ICommandTarget
   
 |Název|Popis|  
 |----------|-----------------|  
-|[ICommandTarget::Initialize](#initialize)|Inicializuje objekt cíl příkazu.|  
+|[ICommandTarget::Initialize](#initialize)|Inicializuje objekt cílového příkazu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je hostitelem uživatelský ovládací prvek v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) příkazy trasy a aktualizace příkaz zprávy uživatelského rozhraní do uživatelského ovládacího prvku tak, aby ji zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací `ICommandTarget`, poskytněte odkaz na uživatelský ovládací prvek [ICommandSource](../../mfc/reference/icommandsource-interface.md) objektu.  
+ Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací `ICommandTarget`, poskytnout odkaz na uživatelský ovládací prvek [rozhraní ICommandSource](../../mfc/reference/icommandsource-interface.md) objektu.  
   
- V tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad použití `ICommandTarget`.  
+ Zobrazit [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.  
   
- Další informace o používání Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxwinforms.h (definovanou v atlmfc\lib\mfcmifc80.dll sestavení)  
+ **Záhlaví:** afxwinforms.h (definované v sestavení atlmfc\lib\mfcmifc80.dll)  
   
 ##  <a name="initialize"></a> ICommandTarget::Initialize  
- Inicializuje objekt cíl příkazu.  
+ Inicializuje objekt cílového příkazu.  
   
 ```  
 void Initialize(ICommandSource^ cmdSource);  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdSource`  
- Popisovač pro příkaz zdrojový objekt.  
+ *cmdSource*  
+ Popisovač do zdrojového objektu příkazu.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud je hostitelem uživatelský ovládací prvek v zobrazení knihovny MFC, CWinFormsView směřuje příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku tak, aby ji zpracovávat příkazy knihovny MFC.  
+ Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC, CWinFormsView směřuje příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC.  
   
- Tato metoda inicializuje cílový objekt příkazu a přidruží ji cmdSource zadaný příkaz zdrojový objekt. By měla být volána v implementaci třídy ovládacího prvku uživatele. Při inicializaci byste měli zaregistrovat ke zdrojovému objektu příkaz pomocí volání ICommandSource::AddCommandHandler implementace inicializace obslužné rutiny příkazů. V tématu Postupy: přidání směrování příkazů do ovládacího prvku Windows Forms příklad toho, jak to udělat pomocí inicializovat.  
+ Tato metoda inicializuje cílový objekt příkazu a přidruží ji k cmdSource zadaný příkaz zdrojového objektu. By měla být volána v implementaci třídy uživatelského ovládacího prvku. Při inicializaci byste měli zaregistrovat pomocí zdrojového objektu příkazu ve volání ICommandSource::AddCommandHandler v implementaci inicializace obslužné rutiny příkazů. V tématu Postupy: přidání směrování příkazů do ovládacího prvku Windows Forms příklad toho, jak k tomu použít inicializace.  
   
 ## <a name="see-also"></a>Viz také  
- [Postupy: Přidání příkaz prvku směrování do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [Postupy: přidání příkazu směrování Windows Forms ovládací prvek](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [ICommandSource – rozhraní](../../mfc/reference/icommandsource-interface.md)
 
 

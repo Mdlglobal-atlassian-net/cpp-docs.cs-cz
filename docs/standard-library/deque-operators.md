@@ -1,5 +1,5 @@
 ---
-title: '&lt;deque&gt; operátory | Microsoft Docs'
+title: '&lt;deque –&gt; operátory | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: d4dfa6963e9c8194bd4ee589a1a0adced1f05d0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21fdf5e624634a29d8ed32e004e7fb0d653b86f1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846841"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955212"
 ---
-# <a name="ltdequegt-operators"></a>&lt;deque&gt; operátory
+# <a name="ltdequegt-operators"></a>&lt;deque –&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
-|[Operátor&lt;](#op_lt)|[Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
+|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  Operator! =
 
-Testy, pokud deque objekt na levé straně operátoru není stejný jako deque objekt na pravé straně.
+Testuje, zda je objekt deque na levé straně operátoru není roven objektu deque na pravé straně.
 
 ```cpp
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -44,17 +44,17 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque objekty nejsou stejné; **false** Pokud deque objekty jsou stejné.
+**Hodnota TRUE** Pokud nejsou stejné; deque – objekty **false** Pokud deque – objekty rovnají.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi deque – objekty je založena na pairwise porovnání jejich součástí. Deque – dva objekty jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi objekty deque vychází pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty jsou deque – objekty rovnocenné. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -82,9 +82,9 @@ The deques are not equal.
 *\
 ```
 
-## <a name="op_lt"></a>  Operátor&lt;
+## <a name="op_lt"></a>  – Operátor&lt;
 
-Testy, pokud deque objekt na levé straně operátor je menší než deque objekt na pravé straně.
+Testuje, zda je objekt deque na levé straně operátoru menší než objekt deque na pravé straně.
 
 ```cpp
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -92,17 +92,17 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque na levé straně operátoru je menší než a není rovno deque na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud deque na levé straně operátoru menší než a není rovno deque na pravé straně operátoru; jinak vrátí **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi deque – objekty je založena na pairwise porovnání jejich součástí. Je menší – než vztah mezi dvěma objekty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi objekty deque vychází pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -134,9 +134,9 @@ Deque c1 is less than deque c2.
 *\
 ```
 
-## <a name="op_lt_eq"></a>  Operátor&lt;=
+## <a name="op_lt_eq"></a>  – Operátor&lt;=
 
-Pokud deque objekt na levé straně operátoru testů je menší než nebo rovna hodnotě deque objekt na pravé straně.
+Testuje, zda je deque objekt na levé straně operátoru je menší než nebo roven objektu deque na pravé straně.
 
 ```cpp
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -144,17 +144,17 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque na levé straně operátoru je menší než nebo rovná deque na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud deque na levé straně operátoru menší než nebo rovna hodnotě deque na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi deque – objekty je založena na pairwise porovnání jejich součástí. Je menší než nebo rovna na relaci mezi dvěma objekty je založena na porovnání první pár nerovné elementů.
+Porovnání mezi objekty deque vychází pairwise porovnání jejich prvky. Je menší než nebo rovna na vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -189,7 +189,7 @@ Deque c1 is less than or equal to deque c2.
 
 ## <a name="op_eq_eq"></a>  Operator ==
 
-Testy, pokud deque objekt na levé straně operátoru rovná deque objekt na pravé straně.
+Testuje, zda objekt deque na levé straně operátoru roven objektu deque na pravé straně.
 
 ```cpp
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -197,17 +197,17 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque na levé straně operátoru rovná deque na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** deque na levé straně operátoru je jinak deque na pravé straně operátoru roven **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi deque – objekty je založena na pairwise porovnání jejich součástí. Dva deques jsou stejné, pokud mají stejný počet elementů a jejich odpovídajících elementy mají stejné hodnoty. Jinak nerovné.
+Porovnání mezi objekty deque vychází pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dvou deques jsou si rovny. V opačném případě nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -243,9 +243,9 @@ The deques are not equal.
 
 ```
 
-## <a name="op_gt"></a>  Operátor&gt;
+## <a name="op_gt"></a>  – Operátor&gt;
 
-Testy, pokud deque objekt na levé straně operátoru je větší než deque objekt na pravé straně.
+Testuje, zda je objekt deque na levé straně operátoru větší než deque objekt na pravé straně.
 
 ```cpp
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -253,17 +253,17 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque na levé straně operátoru je větší než deque na pravé straně operátoru jinak **false**.
+**Hodnota TRUE** Pokud deque na levé straně operátoru větší než deque na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi deque – objekty je založena na pairwise porovnání jejich součástí. Delší – než vztah mezi dvěma objekty je založen na porovnání první pár nerovné elementů.
+Porovnání mezi objekty deque vychází pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -297,9 +297,9 @@ Deque c1 is greater than deque c2.
 
 ```
 
-## <a name="op_gt_eq"></a>  Operátor&gt;=
+## <a name="op_gt_eq"></a>  – Operátor&gt;=
 
-Testy, pokud je deque objekt na levé straně operátoru větší než nebo rovna hodnotě deque objekt na pravé straně.
+Testuje, zda je objekt deque na levé straně operátoru větší než nebo rovna hodnotě deque objekt na pravé straně.
 
 ```cpp
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
@@ -307,17 +307,17 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-`left` Objekt typu `deque`.
+*levé* objekt typu `deque`.
 
-`right` Objekt typu `deque`.
+*správné* objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE,** Pokud deque na levé straně operátoru je větší než nebo rovná deque na pravé straně operátoru; jinak hodnota **false**.
+**Hodnota TRUE** Pokud deque na levé straně operátoru větší než nebo rovna hodnotě deque na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi deque – objekty je založena na pairwise porovnání jejich součástí. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár nerovné elementů.
+Porovnání mezi objekty deque vychází pairwise porovnání jejich prvky. Větší než nebo rovna hodnotě vztah mezi dvěma objekty podle porovnání první pár prvků nerovnost.
 
 ### <a name="example"></a>Příklad
 
@@ -350,6 +350,6 @@ Deque c1 is greater than or equal to deque c2.
 *\
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<deque >](../standard-library/deque.md)<br/>

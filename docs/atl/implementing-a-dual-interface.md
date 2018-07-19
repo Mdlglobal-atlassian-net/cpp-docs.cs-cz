@@ -1,5 +1,5 @@
 ---
-title: Implementace rozhraní Dual (ATL) | Microsoft Docs
+title: Implementace duálního rozhraní (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cc55e4466dba094bf70e734340b40237207f3c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb28b1ce6d98ffd030bbeeca746847b57ed59bc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356729"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957594"
 ---
-# <a name="implementing-a-dual-interface"></a>Implementace duální rozhraní
-Můžete implementovat duální rozhraní pomocí [IDispatchImpl](../atl/reference/idispatchimpl-class.md) třídy, která poskytuje výchozí implementaci třídy `IDispatch` metody duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+# <a name="implementing-a-dual-interface"></a>Implementace duálního rozhraní
+Můžete implementovat duální rozhraní pomocí [třídou IDispatchImpl](../atl/reference/idispatchimpl-class.md) třídu, která poskytuje výchozí implementaci třídy `IDispatch` metody duální rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
- K použití této třídy:  
+ Chcete-li použít tuto třídu:  
   
--   Duální rozhraní definujte v knihovny typů.  
+-   Definujte duální rozhraní v knihovně typů.  
   
--   Vlastní třídy odvozovat specializace z `IDispatchImpl` (předat informace o knihovně rozhraní a typ jako argumenty pro šablony).  
+-   Odvodit třídu z specializací `IDispatchImpl` (předávání informací o knihovně rozhraní a typ jako argumenty šablony).  
   
--   Přidejte položku (nebo položky) do mapy COM vystavení duální rozhraní prostřednictvím `QueryInterface`.  
+-   Přidat položku (nebo položky) do mapy modelu COM vystavení duální rozhraní prostřednictvím `QueryInterface`.  
   
--   Implementujte vtable součástí rozhraní v třídě.  
+-   Implementace vtable součástí rozhraní ve své třídě.  
   
--   Zajistěte, aby byl typ knihovna, která obsahuje definice rozhraní k dispozici k objektům v době běhu.  
+-   Ujistěte se, že knihovnu typů obsahující definice rozhraní dostupná k objektům v době běhu.  
   
-## <a name="atl-simple-object-wizard"></a>Průvodce jednoduchého objektu knihovny ATL  
- Pokud chcete vytvořit nové rozhraní a novou třídu pro implementaci, můžete použít [dialogové okno Přidat třídu ATL](../ide/add-class-dialog-box.md)a potom [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md).  
+## <a name="atl-simple-object-wizard"></a>Průvodce jednoduchým objektem ATL  
+ Pokud chcete vytvořit nové rozhraní a novou třídu pro implementaci, můžete použít [dialogové okno Přidat třídu ATL](../ide/add-class-dialog-box.md)a pak [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md).  
   
 ## <a name="implement-interface-wizard"></a>Průvodce implementací rozhraní  
- Pokud máte existující rozhraní, můžete použít [Průvodce implementací rozhraní](../atl/reference/adding-a-new-interface-in-an-atl-project.md) přidání potřeby základní třídy, položek mapování COM a implementace kostru metoda do existující třídy.  
+ Pokud máte existující rozhraní, můžete použít [Průvodce implementací rozhraní](../atl/reference/adding-a-new-interface-in-an-atl-project.md) přidejte nezbytné základní třídy, položek mapování modelu COM a implementace kostru metody do existující třídy.  
   
 > [!NOTE]
->  Budete muset upravit vygenerované základní třídy tak, aby čísla hlavní verze a podverze knihovny typů jsou předat jako argumenty pro šablony pro vaše `IDispatchImpl` základní třídy. Průvodce implementací rozhraní není zkontrolujte číslo verze knihovny typu.  
+>  Budete muset upravit základní třídy generované tak, aby čísla hlavní verze a podverze knihovny typů jsou předány jako argumenty šablony pro vaše `IDispatchImpl` základní třídy. Průvodce implementací rozhraní není zkontrolujte číslo verze knihovny typů.  
   
-## <a name="implementing-idispatch"></a>Implementace IDispatch  
- Můžete použít `IDispatchImpl` základní třída pro zadejte implementaci dispinterface právě zadáním na příslušnou položku v mapě COM (pomocí [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) nebo [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) makro), dokud máte knihovny typů popisující odpovídající duální rozhraní. Je celkem běžné implementovat `IDispatch` tímto způsobem, například rozhraní. Implementace rozhraní Průvodce obě předpokládá, že máte v úmyslu implementovat a ATL Simple Object Wizard `IDispatch` tímto způsobem, takže se přidá na příslušnou položku do mapy.  
+## <a name="implementing-idispatch"></a>Implementace rozhraní IDispatch  
+ Můžete použít `IDispatchImpl` základní třídu na: zajišťovat implementaci rozhraní dispinterface jenom tak, že zadáte odpovídající položku v objektu map COM (pomocí [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) nebo [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) – makro), dokud máte knihovnu typů popisující odpovídající duální rozhraní. Je celkem běžné k implementaci `IDispatch` tímto způsobem, například rozhraní. Průvodce jednoduchý objekt knihovny ATL a implementovat rozhraní Průvodce obojí se předpokládá, že máte v úmyslu implementovat `IDispatch` tímto způsobem, takže se přidávají na příslušnou položku do mapy.  
   
 > [!NOTE]
->  Nabízí ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md) a [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) třídy, která vám pomůže implementovat odesílající rozhraní bez nutnosti knihovny typů obsahující definice duální rozhraní, které je kompatibilní.  
+>  ATL – nabízí [IDispEventImpl](../atl/reference/idispeventimpl-class.md) a [idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md) třídy, které vám pomůže implementovat odesílacích rozhraních bez nutnosti knihovnu typů obsahující definice kompatibilní duální rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  [Duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md)

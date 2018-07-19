@@ -1,5 +1,5 @@
 ---
-title: Cdaoindexfieldinfo – struktura | Microsoft Docs
+title: Cdaoindexfieldinfo – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759f8e6f9349fdcac61f6aca81d311e3bbc39e1d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 37149e2a4a2780c97cc7c2774c64e9a6037d37a7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337876"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo – struktura
-`CDaoIndexFieldInfo` Struktura obsahuje informace o objektu indexu pole definované pro přístup k objektům dat (DAO).  
+`CDaoIndexFieldInfo` Struktura obsahuje informace o objektu index polí definovaných pro datový přístup k objektům (DAO).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,17 +39,17 @@ struct CDaoIndexFieldInfo
   
 #### <a name="parameters"></a>Parametry  
  *m_strName*  
- Jedinečné názvy objekt index pole. Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě rozhraní DAO.  
+ Index pole objektu jedinečné názvy. Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě k DAO.  
   
  *m_bDescending*  
- Označuje, index řazení objektu indexu definované. **Hodnota TRUE,** Pokud je sestupném pořadí.  
+ Určuje index řazení objektu indexu definované. TRUE, pokud je sestupném pořadí.  
   
 ## <a name="remarks"></a>Poznámky  
- Index objekt může mít několik polí, která určuje, která pole tabledef (nebo záznamů založené na tabulku) je indexovaný na. Odkazy na primární výše označuje, jak se vrátí informace ve `m_pFieldInfos` členem [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) objekt získá voláním `GetIndexInfo` funkce člena třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
+ Objekt indexu může mít počet polí, označující pole, která na indexování tabledef (nebo sadu záznamů na základě tabulky). Odkazy na výše uvedené primární určit, jak vrácené informace v `m_pFieldInfos` členem [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) získán voláním objektu `GetIndexInfo` členské funkce třídy [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md#getindexinfo) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
   
- Index objekty a index pole objekty nejsou reprezentované pomocí třídy knihovny MFC. Místo toho s objektem DAO objekty základní MFC objekty třídy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) obsahovat kolekce objektů index názvem kolekce indexů. Každý objekt index, obsahuje kolekci pole objektů. Členské funkce pro přístup k jednotlivé položky index informace zadat tyto třídy nebo jejich najednou pomocí `CDaoIndexInfo` objekt voláním `GetIndexInfo` členské funkce obsahující objektu. `CDaoIndexInfo` Objekt, pak má datový člen `m_pFieldInfos`, která odkazuje na pole `CDaoIndexFieldInfo` objekty.  
+ Index a index pole objekty nejsou reprezentovány třídy knihovny MFC. Místo toho objektem DAO objekty základní objekty třídy knihovny MFC [cdaotabledef –](../../mfc/reference/cdaotabledef-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) obsahovat kolekce objektů index, volá kolekci indexů. Každý objekt index zase obsahuje kolekci objektů pole. Tyto třídy zadat členské funkce pro přístup k jednotlivým položkám index informace nebo je všechny najednou se dostanete `CDaoIndexInfo` objektu voláním `GetIndexInfo` členské funkce nadřazeného objektu. `CDaoIndexInfo` Objektu, pak má datový člen, `m_pFieldInfos`, který odkazuje na pole `CDaoIndexFieldInfo` objekty.  
   
- Volání `GetIndexInfo` – členská funkce objektu obsahujícího tabledef nebo sady záznamů v jejichž indexy kolekce je uložený objekt index vás zajímá. Potom přístup `m_pFieldInfos` členem [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) objektu. Délka `m_pFieldInfos` pole je uložen v `m_nFields`. `CDaoIndexFieldInfo` také definuje `Dump` – členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoIndexFieldInfo` objektu.  
+ Volání `GetIndexInfo` členské funkce obsahující objektu tabledef nebo sadu záznamů, jejíž indexy kolekce je uložení objektu do indexu se zajímáte. Přejděte k `m_pFieldInfos` člena [cdaoindexinfo –](../../mfc/reference/cdaoindexinfo-structure.md) objektu. Délka `m_pFieldInfos` je pole uloženo v `m_nFields`. `CDaoIndexFieldInfo` Definuje také `Dump` členská funkce ladění sestavení. Můžete použít `Dump` Vypsat obsah `CDaoIndexFieldInfo` objektu.  
   
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** afxdao.h  

@@ -1,5 +1,5 @@
 ---
-title: underlying_type třída | Microsoft Docs
+title: underlying_type – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957578"
 ---
 # <a name="underlyingtype-class"></a>underlying_type – třída
 
-Vytvoří základní integrální typ pro typ výčtu.
+Vytvoří základní celočíselného typu pro typ výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,18 +37,19 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ, který chcete upravit.
+*T*  
+ Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-`type` Typedef člena třídy šablony názvy základní integrální typ `T`, když `T` je typ výčtu jinak neexistuje žádné člen typedef `type`.
+`type` Definice typu člena třídy šablony názvů základního celočíselného typu *T*, když *T* je číselného typu, jinak neexistuje žádný člen typedef `type`.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

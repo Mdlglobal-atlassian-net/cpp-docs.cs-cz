@@ -1,5 +1,5 @@
 ---
-title: Struktura rastrový OBRÁZEK | Microsoft Docs
+title: Rastrový OBRÁZEK strukturu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339344"
 ---
 # <a name="bitmap-structure"></a>BITMAP – struktura
-**Rastrový OBRÁZEK** struktura definuje výška, šířka, formát barvy a bitových hodnot logické rastrový obrázek **.**  
+**Rastrový OBRÁZEK** struktury definuje výšku, šířku, formát barev a bitové hodnoty logického rastrového obrázku **.**  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Určuje výšku rastrového obrázku v rastrových řádcích. Výška musí být větší než 0.  
   
  *bmWidthBytes*  
- Určuje počet bajtů v každém rastrovém řádku. Tato hodnota musí být sudým číslem, protože rozhraní GDI (Graphics Device Interface) předpokládá, že bitové hodnoty rastrového obrázku tvoří pole celočíselných (2bajtových) hodnot. Jinými slovy *bmWidthBytes* \* 8 musí být další násobkem 16 větší než nebo rovna hodnotě získali, když *bmWidth* člen se násobí hodnotou *bmBitsPixel*  člen.  
+ Určuje počet bajtů v každém rastrovém řádku. Tato hodnota musí být sudým číslem, protože rozhraní GDI (Graphics Device Interface) předpokládá, že bitové hodnoty rastrového obrázku tvoří pole celočíselných (2bajtových) hodnot. Jinými slovy *bmWidthBytes* \* 8 musí být dalším násobkem 16 větší než nebo rovna hodnotě získané *bmWidth* členem *bmBitsPixel*  člena.  
   
  *bmPlanes*  
  Určuje počet barevných rovin rastrového obrázku.  
@@ -60,12 +60,12 @@ typedef struct tagBITMAP {  /* bm */
  Určuje, kolik sousedních bitů barev každé roviny je zapotřebí k definování pixelu.  
   
  *bmBits*  
- Ukazuje na umístění bitových hodnot rastrového obrázku. *BmBits* člena musí být dlouhé ukazatel na pole 1bajtový hodnot.  
+ Ukazuje na umístění bitových hodnot rastrového obrázku. *BmBits* člen musí být dlouhým ukazatelem na pole 1bajtových hodnot.  
   
 ## <a name="remarks"></a>Poznámky  
  Aktuálně používané formáty rastrových obrázků jsou monochromatický a barevný. Monochromatický rastrový obrázek používá 1bitový formát s jednou rovinou. Každý průchod je násobkem 16 bitů.  
   
- Kontroly jsou uspořádány takto černobílý rastrového obrázku výšky *n*:  
+ Jsou průchody uspořádány takto pro monochromatický rastrový obrázek výšky *n*:  
   
  `Scan 0`  
   
@@ -83,12 +83,12 @@ typedef struct tagBITMAP {  /* bm */
   
  Pixely monochromatického zařízení jsou buď černé, nebo bílé. Je-li odpovídající bit rastrového obrázku nastaven na hodnotu 1, je pixel zapnut (bílý). Je-li odpovídající bit rastrového obrázku nastaven na hodnotu 0, je pixel vypnut (černý).  
   
- Všechna zařízení podporují rastrové obrázky, které mají **RC_BITBLT** v nastaven bit **RASTERCAPS** index [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) – členská funkce.  
+ Všechna zařízení podporují rastrové obrázky, mít nastavený RC_BITBLT bit RASTERCAPS index [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) členskou funkci.  
   
- Každé zařízení má svůj vlastní jedinečný formát barev. Chcete-li přenášet rastrový obrázek z jednoho zařízení do druhého, použijte [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) a [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funkce systému Windows.  
+ Každé zařízení má svůj vlastní jedinečný formát barev. Chcete-li přenášet rastrové obrázky z jednoho zařízení do druhého, použijte [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) a [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funkce Windows.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** wingdi.h systému  
+ **Záhlaví:** wingdi.h  
   
 ## <a name="see-also"></a>Viz také  
  [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

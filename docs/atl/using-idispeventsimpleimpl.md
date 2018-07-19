@@ -1,5 +1,5 @@
 ---
-title: Pomocí IDispEventSimpleImpl (ATL) | Microsoft Docs
+title: Idispeventsimpleimpl – použití (ATL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cdef5012288b7f5f17040f73dfac5ec1f90d4f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34fad264e222d27c82f8c1cf79f59664f2c3f601
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361944"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850774"
 ---
-# <a name="using-idispeventsimpleimpl"></a>Pomocí IDispEventSimpleImpl
-Při použití `IDispEventSimpleImpl` ke zpracování událostí, budete muset:  
+# <a name="using-idispeventsimpleimpl"></a>Idispeventsimpleimpl – použití
+Při použití `IDispEventSimpleImpl` zpracování událostí, budete muset:  
   
--   Odvození třídě z [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
+-   Odvodit třídu z [idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md).  
   
--   Přidáte mapu jímky událostí na třídu.  
+-   Přidáte mapu jímky událostí do vaší třídy.  
   
--   Definování [_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) struktury popisující události.  
+-   Definování [_atl_func_info –](../atl/reference/atl-func-info-structure.md) struktury popisující události.  
   
--   Přidání položky do mapy jímek událostí pomocí [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) makro.  
+-   Přidání položky do pomocí mapě událostí jímky [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) – makro.  
   
--   Implementace metody, co vás zajímá zpracování.  
+-   Implementace metody, že máte zájem zpracování.  
   
--   Poradit a unadvise zdroj události.  
+-   Dokáží a zrušíte avízo o zdroji události.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak bude zpracováván **DocumentChange** událost je aktivována po slovech na **aplikace** objektu. Tato událost je definována jako metodu na **ApplicationEvents** dispinterface.  
+ Následující příklad ukazuje, jak naložit `DocumentChange` události vyvolané Wordu **aplikace** objektu. Tato událost je definována jako metody na `ApplicationEvents` dispinterface.  
   
- Příkladem je z [ATLEventHandling ukázka](../visual-cpp-samples.md).  
+ Příklad je z [ATLEventHandling ukázka](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -71,13 +71,13 @@ Při použití `IDispEventSimpleImpl` ke zpracování událostí, budete muset:
   
  `};`  
   
- Tento příklad používá `#import` generovat požadovaná hlavička soubory z knihovny typů pro Word. Pokud chcete použít tento příklad s jinými verzemi aplikace Word, musíte zadat správný mso soubor knihovny dll. Například Office 2000 poskytuje mso9.dll a OfficeXP poskytuje mso.dll. Tento kód je zjednodušený z stdafx.h:  
+ V příkladu `#import` ke generování požadované záhlaví soubory z knihovny typů Wordu. Pokud chcete použít tento příklad s jinými verzemi aplikace Word, musíte zadat správné mso souboru knihovny dll. Například Office 2000 poskytuje mso9.dll a OfficeXP poskytuje mso.dll. Tento kód je jednodušší z stdafx.h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- Veškeré informace z knihovny typů ve skutečnosti použité v tomto příkladu je CLSID aplikace Word **aplikace** objekt a identifikátory IID **ApplicationEvents** rozhraní. Tyto informace se používá pouze v době kompilace.  
+ Jediná informace z knihovny typů ve skutečnosti použitý v tomto příkladu je identifikátor CLSID slova `Application` objektu a identifikátor IID `ApplicationEvents` rozhraní. Tyto informace slouží jenom v době kompilace.  
   
- Zobrazí se následující kód v Simple.h. Odpovídající kód je uvedeno ve komentáře:  
+ Následující kód se zobrazí v Simple.h. Příslušný kód je uvedeno ve komentáře:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]  
   

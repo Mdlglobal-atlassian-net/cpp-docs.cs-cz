@@ -1,5 +1,5 @@
 ---
-title: is_copy_assignable třída | Microsoft Docs
+title: is_copy_assignable – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960778"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable – třída
 
-Testy, zda má typ lze zkopírovat na přiřazení.
+Testy, zda má typ je zkopírovat na přiřazení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,18 +36,18 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ k dotazu.
+*Ty* typ dotazu.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátem typu obsahuje hodnotu true, pokud typ `Ty` je třída, která má kopírování operátor přiřazení, jinak má hodnotu false. Ekvivalentní is_assignable\<Ty & const Ty & >.
+Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má operátor přiřazení kopie, jinak má hodnotu false. Ekvivalentní is_assignable –\<Ty & const Ty & >.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

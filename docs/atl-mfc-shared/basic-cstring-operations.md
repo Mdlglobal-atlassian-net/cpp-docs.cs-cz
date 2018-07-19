@@ -1,5 +1,5 @@
 ---
-title: Základní CString Operations | Microsoft Docs
+title: CString – základní operace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,64 +19,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b66b6fc5578960e4b6ec9b392622256b66db9cfa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ccda8d6a1abd51f3463630435a14096edc30439d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359091"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879917"
 ---
-# <a name="basic-cstring-operations"></a>CString základní operace
-Toto téma vysvětluje následující basic [CString](../atl-mfc-shared/reference/cstringt-class.md) operace:  
+# <a name="basic-cstring-operations"></a>CString – základní operace
+Toto téma vysvětluje následující základní [CString](../atl-mfc-shared/reference/cstringt-class.md) operace:  
   
-- [Vytváření CString – objekty z standardní literály jazyka C](#_core_creating_cstring_objects_from_standard_c_literal_strings)  
+- [Vytváření objektů CString ze standardní řetězcové literály jazyka C](#_core_creating_cstring_objects_from_standard_c_literal_strings)  
   
-- [Přístup k jednotlivých znaků v CString](#_core_accessing_individual_characters_in_a_cstring)  
+- [Přístup ke jednotlivým znakům v CString](#_core_accessing_individual_characters_in_a_cstring)  
   
-- [Zřetězení dvě CString – objekty](#_core_concatenating_two_cstring_objects)  
+- [Zřetězení dvou CString – objekty](#_core_concatenating_two_cstring_objects)  
   
 - [Porovnání CString – objekty](#_core_comparing_cstring_objects)  
   
-- [Převádění CString – objekty](#_core_converting_cstring_objects)  
+- [Převod CString – objekty](#_core_converting_cstring_objects)  
   
- `Class CString` je založený na šabloně třída [CStringT třída](../atl-mfc-shared/reference/cstringt-class.md). `CString` je `typedef` z `CStringT`. Více přesně `CString` je `typedef` z *explicitní specializace* z `CStringT`, což je běžný způsob, jak pomocí třídy šablony definice třídy. Podobně definovaných tříd jsou `CStringA` a `CStringW`.  
+ `Class CString` je založen na šabloně třídy [cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md). `CString` je **typedef** z `CStringT`. Více přesně `CString` je **typedef** z *explicitní specializace* z `CStringT`, což je běžný způsob, jak definovat třídu pomocí šablony třídy. Podobně definovaných tříd jsou `CStringA` a `CStringW`.  
   
- `CString`, `CStringA`, a `CStringW` jsou definovány v atlstr.h. `CStringT` je definována v cstringt.h.  
+ `CString`, `CStringA`, a `CStringW` jsou definovány v atlstr.h. `CStringT` je definováno v cstringt.h.  
   
- `CString`, `CStringA`, a `CStringW` každý získat sadu metod a operátory definované `CStringT` pro řetězec dat, které podporují. Některé metody duplicitní a v některých případech se překročí maximální služby řetězec běhové knihovny jazyka C.  
+ `CString`, `CStringA`, a `CStringW` každý získat sadu metod a operátory definované ve `CStringT` pro použití s řetězcovými datovými podporují. Některé metody duplicitní a v některých případech toto služby řetězec běhových knihoven C.  
   
- Poznámka: `CString` je nativních tříd. Pro třídu řetězec, který je určen pro použití v jazyce C + +/ CLI spravovaný projekt, použijte `System.String`.  
+ Poznámka: `CString` je nativních tříd. Pro třídu řetězec, který je určen pro použití v jazyce C + +/ CLI spravovaných projektů, použití `System.String`.  
   
-##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Vytváření CString – objekty z standardní C řetězcové literály  
- Můžete přiřadit stylu jazyka C literály `CString` právě můžete přiřadit jednu `CString` objekt do jiné.  
+##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Vytváření objektů CString z řetězcových literálů Standard jazyka C  
+ Můžete přiřadit literálu řetězce ve stylu jazyka C k `CString` stejně jako můžete přiřadit jednu `CString` objektu na jiný.  
   
--   Přiřadit hodnotu literálu řetězec C tak, aby `CString` objektu.  
+-   Přiřadí hodnotu řetězcový literál na C `CString` objektu.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#183](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_1.cpp)]  
   
--   Přiřazení hodnoty jednoho `CString` do jiného `CString` objektu.  
+-   Přiřadí hodnotu jednoho `CString` do jiného `CString` objektu.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#184](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_2.cpp)]  
   
-     Obsah `CString` objektu se zkopírují, pokud jeden `CString` objekt je přiřazen k jiné. Proto dva řetězce nesdílejí odkaz na skutečnými znaky, které tvoří řetězec. Další informace o tom, jak používat `CString` objekty jako hodnoty, najdete v části [CString sémantiku](../atl-mfc-shared/cstring-semantics.md).  
+     Obsah `CString` objektu jsou zkopírovány v případě, že jedna `CString` je přiřazen objekt do jiné. Proto dva řetězce nesmí ho sdílet odkaz na skutečné znaky, které společně tvoří řetězec. Další informace o tom, jak používat `CString` objekty jako hodnoty, najdete v článku [CString – sémantika](../atl-mfc-shared/cstring-semantics.md).  
   
     > [!NOTE]
-    >  Pro zápis aplikace tak, aby jej bylo možno zkompilovat pro kódování Unicode nebo ANSI, kódu s použitím _T – makro řetězcové literály. Další informace najdete v tématu [Podpora vícebajtových znakovou sadu (MBCS) kódování Unicode a](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
+    >  Při psaní vaší aplikace tak, že mohou být zkompilovány pro kódování Unicode nebo standardu ANSI, řetězcových literálů v kódu s použitím _T – makro. Další informace najdete v tématu [vícebajtové znakové sady (MBCS) Podpora kódování Unicode a](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-##  <a name="_core_accessing_individual_characters_in_a_cstring"></a> Přístup k jednotlivých znaků v CString  
- Dostanete jednotlivých znaků `CString` objekt pomocí `GetAt` a `SetAt` metody. Pole element nebo dolní index, operátor ([]) můžete použít také místo `GetAt` získat jednotlivých znaků. (To se podobá přístupem elementy pole index, stejně jako standardní řetězce stylu jazyka C.) Index hodnoty pro `CString` znaky jsou od nuly.  
+##  <a name="_core_accessing_individual_characters_in_a_cstring"></a> Přístup ke jednotlivým znakům v CString  
+ Dostanete jednotlivé znaky `CString` s použitím `GetAt` a `SetAt` metody. Pole elementu nebo dolní index, operátor ([]) můžete také použít místo `GetAt` zobrazíte jednotlivých znaků. (To se podobá přístup k prvkům pole pomocí indexu jako standardní řetězce C-style.) Index hodnoty `CString` znaky jsou počítány od nuly.  
   
-##  <a name="_core_concatenating_two_cstring_objects"></a> Zřetězení dvě CString – objekty  
- Ke zřetězení dva `CString` objekty, používají operátory řetězení (+ nebo +=), a to takto.  
+##  <a name="_core_concatenating_two_cstring_objects"></a> Zřetězení dvou CString – objekty  
+ Ke zřetězení dvou `CString` objekty, použít operátory řetězení (+ nebo +=), následujícím způsobem.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#185](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_3.cpp)]  
   
- Alespoň jeden argument operátory řetězení (+ nebo +=) musí být `CString` objektu, ale můžete použít řetězec konstantní znaků (například `"big"`) nebo `char` (například "x") v argumentu.  
+ Alespoň jeden argument pro operátory zřetězení (+ nebo +=) musí být `CString` objektu, ale můžete použít textový konstantním znakem (třeba `"big"`) nebo **char** (například "x") pro tento argument.  
   
 ##  <a name="_core_comparing_cstring_objects"></a> Porovnání CString – objekty  
- `Compare` Metoda a == – operátor pro `CString` odpovídají. `Compare`, `operator==`, a `CompareNoCase` víte MBCS a Unicode; `CompareNoCase` je také velká a malá písmena. `Collate` Metodu `CString` národní prostředí – velká a malá písmena a je často nižší než `Compare`. Použití `Collate` pouze kde musíte dodržet toto řazení pravidla uvedeného podle aktuální národní prostředí.  
+ `Compare` Metoda a == – operátor pro `CString` jsou ekvivalentní. `Compare`, **operátor ==**, a `CompareNoCase` vědomi znakové sady MBCS a Unicode; `CompareNoCase` je velká a malá písmena. `Collate` Metoda `CString` je citlivé na národní prostředí a často je pomalejší než `Compare`. Použití `Collate` pouze pokud musíte dodržet při řazení pravidla jako zadané pomocí aktuálního národního prostředí.  
   
- V následující tabulce jsou uvedeny dostupných [CString](../atl-mfc-shared/reference/cstringt-class.md) porovnání funkcí a jejich ekvivalentní Unicode nebo MBCS-přenositelností funkcí v běhové knihovny jazyka C.  
+ V následující tabulce jsou uvedeny dostupné [CString](../atl-mfc-shared/reference/cstringt-class.md) porovnání funkcí a jejich ekvivalentní kódování Unicode a MBCS-portable funkce v knihovně C Runtime.  
   
 |CString – funkce|MBCS – funkce|Unicode – funkce|  
 |----------------------|-------------------|----------------------|  
@@ -84,15 +84,15 @@ Toto téma vysvětluje následující basic [CString](../atl-mfc-shared/referenc
 |`CompareNoCase`|`_mbsicmp`|`_wcsicmp`|  
 |`Collate`|`_mbscoll`|`wcscoll`|  
   
- `CStringT` Šablona třídy definuje relační operátory (<, \<=, > =, >, ==, a! =), které jsou k dispozici pro použití `CString`. Můžete porovnat dva `CStrings` pomocí těchto operátorů, jak je znázorněno v následujícím příkladu.  
+ `CStringT` Třída šablony definuje relační operátory (<, \<=, > =, >, ==, a! =), které jsou k dispozici pro použití `CString`. Můžete porovnat dva `CStrings` pomocí těchto operátorů, jak je znázorněno v následujícím příkladu.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#186](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_4.cpp)]  
   
-##  <a name="_core_converting_cstring_objects"></a> Převádění CString – objekty  
- Informace o převodu CString – objekty na jiný typ řetězce, najdete v tématu [postupy: převod mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md).  
+##  <a name="_core_converting_cstring_objects"></a> Převod CString – objekty  
+ Informace o převádění objektů CString na jiné typy řetězce, naleznete v tématu [postupy: převod mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md).  
   
-## <a name="using-cstring-with-wcout"></a>CString pomocí wcout  
- Použít CString s `wcout` musí explicitně převést objekt, který má `const wchar_t*` jak je znázorněno v následujícím příkladu:  
+## <a name="using-cstring-with-wcout"></a>CString – použití s wcout  
+ Použití CString s `wcout` musí explicitně přetypovat objekt, který má `const wchar_t*` jak je znázorněno v následujícím příkladu:  
   
 ```  
 CString cs("meow");
@@ -101,11 +101,11 @@ CString cs("meow");
  
 ```  
   
- Bez přetypování `cs` je považován za `void*` a `wcout` vytiskne adresu objektu. Toto chování je způsobená jemně interakce mezi šablony argument odvození přetížení rozlišení a které jsou v samotných správné a vyhovující s C++ standard.  
+ Bez přetypování `cs` je považován za `void*` a `wcout` vypíše adresu objektu. Toto chování je způsobené drobné interakce mezi šablony argument odvození přetížení rozlišení a které jsou v samotných správné a splňovala podmínky shody se standardem jazyka C++.  
   
 ## <a name="see-also"></a>Viz také  
- [Řetězce (ATL a MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
- [CStringT – třída](../atl-mfc-shared/reference/cstringt-class.md)   
+ [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [Cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md)   
  [Specializace šablony](../cpp/template-specialization-cpp.md)   
  [Postupy: Převody mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)
 

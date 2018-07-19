@@ -1,5 +1,5 @@
 ---
-title: bad_alloc – třída | Microsoft Docs
+title: bad_alloc – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab496a5de8062f6888b92b318788ff72345bc7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e76bd39477c92d075f1dba8cf14b912c0f616e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850727"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955907"
 ---
 # <a name="badalloc-class"></a>bad_alloc – třída
 
-Třída popisuje výjimka vyvolaná indikující, že žádost o přidělení nebylo úspěšné.
+Tato třída popisuje výjimku vyvolanou k označení, že požadavek na přidělení nebylo úspěšné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ virtual ~bad_alloc();
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené **co** je řetězec definované implementací C. Žádná z členské funkce throw jakékoli výjimky.
+Hodnota vrácená `what` je řetězec C definované implementací. Žádná z členské funkce generovat žádné výjimky.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<nový >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="example"></a>Příklad
 
@@ -80,4 +80,4 @@ bad allocation
 
 ## <a name="see-also"></a>Viz také
 
-[Třída Exception](../standard-library/exception-class.md) [bezpečný přístup z více vláken ve standardní knihovna C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Exception – třída](../standard-library/exception-class.md) [bezpečnost vlákna ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
